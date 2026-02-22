@@ -3759,6 +3759,11 @@ the Paiboon romanization system. Features tone marks, classifiers, and cultural 
 # ROUTES
 # ============================================
 
+@app.route('/hello')
+def hello_world():
+    return 'Hello, World!'
+
+
 @app.route('/')
 def home():
     # Set default gender if not set
