@@ -121,7 +121,7 @@
             Join us and begin your Thai language journey
         </p>
 
-        <form id="signup-form" novalidate>
+        <form id="signup-form">
 
             <div class="form-group">
                 <label for="username">Username</label>
@@ -130,7 +130,8 @@
                        name="username"
                        autocomplete="username"
                        placeholder="e.g. thai_learner_99"
-                       maxlength="20">
+                       maxlength="20"
+                       required>
                 <p class="field-hint">3-20 characters, letters, numbers, and underscores only.</p>
             </div>
 
@@ -140,7 +141,8 @@
                        id="email"
                        name="email"
                        autocomplete="email"
-                       placeholder="you@example.com">
+                       placeholder="you@example.com"
+                       required>
             </div>
 
             <div class="form-group">
@@ -149,7 +151,8 @@
                        id="password"
                        name="password"
                        autocomplete="new-password"
-                       placeholder="At least 8 characters">
+                       placeholder="At least 8 characters"
+                       required>
                 <p class="field-hint">Minimum 8 characters with at least one letter and one number.</p>
                 <div id="password-strength" class="password-strength"></div>
             </div>
@@ -160,7 +163,8 @@
                        id="confirm-password"
                        name="confirm_password"
                        autocomplete="new-password"
-                       placeholder="Repeat your password">
+                       placeholder="Repeat your password"
+                       required>
             </div>
 
             <button type="submit"
