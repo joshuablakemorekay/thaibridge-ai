@@ -255,7 +255,7 @@
         return null;
     }
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', async function (e) {
         e.preventDefault();
         clearMessage();
 
@@ -275,13 +275,14 @@
         submitBtn.disabled    = true;
         submitBtn.textContent = 'Creating account...';
 
-        fetch('/signup', {
-            method:  'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body:    JSON.stringify(data)
-        })
-        .then(function (response) { return response.json(); })
-        .then(function (result) {
+        try {
+            var response = await fetch('/signup', {
+                method:  'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body:    JSON.stringify(data)
+            });
+            var result = await response.json();
+
             if (result.success) {
                 showMessage(result.message, 'success');
                 submitBtn.textContent = 'Account Created!';
@@ -293,12 +294,11 @@
                 submitBtn.disabled    = false;
                 submitBtn.textContent = 'Create My Account';
             }
-        })
-        .catch(function () {
+        } catch (e) {
             showMessage('A network error occurred. Please try again.', 'error');
             submitBtn.disabled    = false;
             submitBtn.textContent = 'Create My Account';
-        });
+        }
     });
 }());
 </script>
