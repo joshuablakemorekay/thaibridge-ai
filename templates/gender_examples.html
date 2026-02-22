@@ -1,0 +1,431 @@
+{% extends "base.html" %}
+
+{% block title %}Gender & Formality Guide{% endblock %}
+
+{% block content %}
+<h1>
+    👤 Gender & Formality Guide
+    <span class="thai">คำสรรพนามตามเพศและความสุภาพ</span>
+</h1>
+
+<p style="text-align: center; color: #666; margin-bottom: 2rem;">
+    In Thai, pronouns and politeness particles change based on the speaker's gender and formality level.
+    <br>Select your gender above to see examples tailored for you!
+</p>
+
+<!-- Current Selection Display -->
+<div class="card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 5px solid var(--royal-purple);">
+    <h3 style="margin-top: 0; color: var(--royal-purple);">
+        Your Current Setting: 
+        {% if gender == 'male' %}
+            <span style="color: #2196F3;">👨 Male</span>
+        {% elif gender == 'female' %}
+            <span style="color: #E91E63;">👩 Female</span>
+        {% else %}
+            <span style="color: #9C27B0;">👤 Show Both (Neutral)</span>
+        {% endif %}
+    </h3>
+    <p>All examples on this page use <strong>{{ gender }}</strong> forms. Change your selection above to see how the language changes!</p>
+</div>
+
+<!-- How Gender Affects Thai -->
+<h2 style="color: var(--saffron); margin-top: 2rem;">🎯 How Gender Affects Thai Language</h2>
+
+<div class="card">
+    <h3>Three Main Changes:</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px;">
+            <h4 style="color: #1976D2;">1️⃣ First-Person Pronouns</h4>
+            <p style="margin-top: 0.5rem;">The word for "I" changes based on your gender and formality:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Male:</strong> ผม (pǒm)</li>
+                <li><strong>Female:</strong> ดิฉัน (dì-chǎn) formal, ฉัน (chǎn) casual</li>
+            </ul>
+        </div>
+        
+        <div style="background: #fce4ec; padding: 1rem; border-radius: 8px;">
+            <h4 style="color: #C2185B;">2️⃣ Politeness Particles</h4>
+            <p style="margin-top: 0.5rem;">Added at the end of sentences for politeness:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Male:</strong> ครับ (kráp)</li>
+                <li><strong>Female:</strong> ค่ะ (kâ) statements, คะ (ká) questions</li>
+            </ul>
+        </div>
+        
+        <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px;">
+            <h4 style="color: #7B1FA2;">3️⃣ Complete Phrases</h4>
+            <p style="margin-top: 0.5rem;">Greetings and common phrases include both:</p>
+            <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li><strong>Male:</strong> สวัสดีครับ (sà-wàt-dii kráp)</li>
+                <li><strong>Female:</strong> สวัสดีค่ะ (sà-wàt-dii kâ)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- First-Person Pronouns -->
+<h2 style="color: var(--royal-purple); margin-top: 2rem;">💬 First-Person Pronouns: "I"</h2>
+
+<div class="card">
+    <p style="margin-bottom: 1.5rem;">The word for "I" changes based on <strong>your gender</strong> and the <strong>formality level</strong>:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Formality</th>
+                {% if gender == 'neutral' %}
+                    <th style="background: #2196F3; color: white;">Male</th>
+                    <th style="background: #E91E63; color: white;">Female</th>
+                {% else %}
+                    <th style="background: {% if gender == 'male' %}#2196F3{% else %}#E91E63{% endif %}; color: white;">Your Form ({{ gender|title }})</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for formality in ['formal', 'polite', 'neutral', 'casual'] %}
+            <tr>
+                <td><strong>{{ formality|title }}</strong></td>
+                {% if gender == 'neutral' %}
+                    <td>
+                        <span class="thai-text">{{ gender_variants.pronouns.first_person.male[formality].thai }}</span><br>
+                        <span class="paiboon">{{ gender_variants.pronouns.first_person.male[formality].paiboon }}</span>
+                    </td>
+                    <td>
+                        <span class="thai-text">{{ gender_variants.pronouns.first_person.female[formality].thai }}</span><br>
+                        <span class="paiboon">{{ gender_variants.pronouns.first_person.female[formality].paiboon }}</span>
+                    </td>
+                {% else %}
+                    <td>
+                        <span class="thai-text">{{ gender_variants.pronouns.first_person[gender][formality].thai }}</span><br>
+                        <span class="paiboon">{{ gender_variants.pronouns.first_person[gender][formality].paiboon }}</span>
+                    </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- Politeness Particles -->
+<h2 style="color: var(--saffron); margin-top: 2rem;">🎭 Politeness Particles</h2>
+
+<div class="card">
+    <p style="margin-bottom: 1.5rem;">Add these at the end of sentences to be polite:</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+        {% if gender == 'male' or gender == 'neutral' %}
+        <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 10px; border: 3px solid #2196F3;">
+            <h4 style="color: #1976D2; text-align: center;">👨 Male Speaker</h4>
+            <div style="margin-top: 1rem; text-align: center;">
+                <div class="thai-text" style="font-size: 2rem;">ครับ</div>
+                <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">kráp</div>
+                <p style="margin-top: 0.5rem; color: #666;">Use for both statements and questions</p>
+            </div>
+        </div>
+        {% endif %}
+        
+        {% if gender == 'female' or gender == 'neutral' %}
+        <div style="background: #fce4ec; padding: 1.5rem; border-radius: 10px; border: 3px solid #E91E63;">
+            <h4 style="color: #C2185B; text-align: center;">👩 Female Speaker</h4>
+            <div style="margin-top: 1rem;">
+                <div style="text-align: center; margin-bottom: 1rem;">
+                    <div class="thai-text" style="font-size: 2rem;">ค่ะ</div>
+                    <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">kâ</div>
+                    <p style="margin-top: 0.5rem; color: #666;">For statements</p>
+                </div>
+                <div style="text-align: center;">
+                    <div class="thai-text" style="font-size: 2rem;">คะ</div>
+                    <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">ká</div>
+                    <p style="margin-top: 0.5rem; color: #666;">For questions</p>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<!-- Common Greetings -->
+<h2 style="color: var(--bodhi-green); margin-top: 2rem;">👋 Common Greetings & Phrases</h2>
+
+{% for greeting_type, greeting_name in [('hello', 'Hello/Goodbye'), ('thank_you', 'Thank You'), ('excuse_me', 'Excuse Me/Sorry')] %}
+<div class="card">
+    <h3 style="color: var(--bodhi-green);">{{ greeting_name }}</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Formality</th>
+                <th>Thai</th>
+                <th>Paiboon</th>
+                <th>English</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for formality in ['formal', 'polite', 'casual'] %}
+            <tr>
+                <td><strong>{{ formality|title }}</strong></td>
+                <td class="thai-text">{{ greetings[greeting_type][formality].thai }}</td>
+                <td class="paiboon">{{ greetings[greeting_type][formality].paiboon }}</td>
+                <td>{{ greetings[greeting_type][formality].english }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endfor %}
+
+<!-- Example Sentences -->
+<h2 style="color: var(--temple-red); margin-top: 2rem;">📝 Complete Sentence Examples</h2>
+
+<div class="card">
+    <p style="margin-bottom: 1.5rem;">See how pronouns and particles work together in complete sentences:</p>
+    
+    {% for formality, sentence_set in examples.items() %}
+    <div style="background: {% if formality == 'formal' %}#e8f5e9{% elif formality == 'polite' %}#e3f2fd{% elif formality == 'neutral' %}#fff3e0{% else %}#fce4ec{% endif %}; padding: 1.5rem; border-radius: 10px; margin-bottom: 1rem;">
+        <h4 style="text-transform: capitalize; margin-bottom: 1rem;">{{ formality }} Level:</h4>
+        
+        {% for example_type, example in sentence_set.items() %}
+        <div style="background: white; padding: 1rem; border-radius: 8px; margin-bottom: {% if not loop.last %}0.75rem{% else %}0{% endif %};">
+            <div class="thai-text" style="font-size: 1.4rem;">{{ example.thai }}</div>
+            <div class="paiboon" style="font-size: 1.2rem; margin-top: 0.5rem; color: #666;">{{ example.paiboon }}</div>
+            <div style="margin-top: 0.5rem; color: #888;">{{ example.english }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Learning Tips -->
+<h2 style="color: var(--lotus-pink); margin-top: 2rem;">💡 Learning Tips</h2>
+
+<div class="card">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 1.5rem; border-radius: 10px;">
+            <h4 style="color: #1976D2;">👨 For Male Learners</h4>
+            <ul style="margin-left: 1.5rem; margin-top: 0.75rem; line-height: 1.8;">
+                <li>Always use <strong>ผม (pǒm)</strong> for "I" when being polite</li>
+                <li>End sentences with <strong>ครับ (kráp)</strong> for politeness</li>
+                <li>In very casual settings with friends, you can use <strong>กู (guu)</strong> for "I"</li>
+                <li>Practice: สวัสดีครับ ผมชื่อ... (sà-wàt-dii kráp, pǒm chûu...)</li>
+            </ul>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); padding: 1.5rem; border-radius: 10px;">
+            <h4 style="color: #C2185B;">👩 For Female Learners</h4>
+            <ul style="margin-left: 1.5rem; margin-top: 0.75rem; line-height: 1.8;">
+                <li>Use <strong>ดิฉัน (dì-chǎn)</strong> in formal settings, <strong>ฉัน (chǎn)</strong> casually</li>
+                <li>End statements with <strong>ค่ะ (kâ)</strong></li>
+                <li>End questions with <strong>คะ (ká)</strong> - note the rising tone!</li>
+                <li>Practice: สวัสดีค่ะ ดิฉันชื่อ... (sà-wàt-dii kâ, dì-chǎn chûu...)</li>
+            </ul>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%); padding: 1.5rem; border-radius: 10px;">
+            <h4 style="color: #7B1FA2;">👤 General Tips</h4>
+            <ul style="margin-left: 1.5rem; margin-top: 0.75rem; line-height: 1.8;">
+                <li>The second-person "you" (<strong>คุณ kun</strong>) is the same for everyone</li>
+                <li>Start with polite forms, then adjust based on context</li>
+                <li>Listen to how Thais speak and match their formality level</li>
+                <li>Using the wrong particle is better than using no particle at all!</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Quick Reference Card -->
+<h2 style="color: var(--royal-purple); margin-top: 2rem;">🎯 Quick Reference Card</h2>
+
+<div class="card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); border: 3px solid var(--saffron);">
+    <h3 style="text-align: center; margin-bottom: 1.5rem;">Your Personalized Quick Reference</h3>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+        <div style="background: white; padding: 1rem; border-radius: 8px;">
+            <h4 style="color: var(--saffron);">How to say "I":</h4>
+            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
+                {{ gender_variants.pronouns.first_person[gender if gender != 'neutral' else 'male'].polite.thai }}
+            </div>
+            <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">
+                {{ gender_variants.pronouns.first_person[gender if gender != 'neutral' else 'male'].polite.paiboon }}
+            </div>
+        </div>
+        
+        <div style="background: white; padding: 1rem; border-radius: 8px;">
+            <h4 style="color: var(--saffron);">Polite ending:</h4>
+            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
+                {{ gender_variants.particles[gender if gender != 'neutral' else 'male'].statement.thai }}
+            </div>
+            <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">
+                {{ gender_variants.particles[gender if gender != 'neutral' else 'male'].statement.paiboon }}
+            </div>
+        </div>
+        
+        <div style="background: white; padding: 1rem; border-radius: 8px;">
+            <h4 style="color: var(--saffron);">Say "Hello":</h4>
+            <div class="thai-text" style="font-size: 1.8rem; margin-top: 0.5rem;">
+                {{ greetings.hello.polite.thai }}
+            </div>
+            <div class="paiboon" style="font-size: 1.3rem; margin-top: 0.5rem;">
+                {{ greetings.hello.polite.paiboon }}
+            </div>
+        </div>
+    </div>
+    
+    <p style="text-align: center; margin-top: 1.5rem; font-size: 1.1rem; color: #666;">
+        💡 Change your gender setting above to see different forms!
+    </p>
+</div>
+
+<!-- Cross-Reference to Grammar -->
+<h2 style="color: var(--bodhi-green); margin-top: 2rem;">📚 Want More Details?</h2>
+
+<div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left: 5px solid var(--bodhi-green);">
+    <h3 style="margin-top: 0; color: var(--bodhi-green);">Complete Pronoun System in Grammar Section</h3>
+    <p style="font-size: 1.05rem; line-height: 1.8;">
+        This Gender Guide shows you <strong>personalized forms for YOUR gender</strong>. For a complete linguistic reference 
+        covering ALL pronouns (I, you, he, she, it, we, they) across all formality levels for both genders, visit the 
+        <strong>Grammar Section</strong>.
+    </p>
+    <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="/grammar#parts-of-speech" class="btn" style="font-size: 1.1rem; padding: 1rem 2rem; background: var(--bodhi-green); color: white;">
+            📖 View Complete Pronoun System in Grammar →
+        </a>
+    </div>
+    <p style="margin-top: 1rem; color: #666;">
+        The Grammar section includes: First person (I/we), Second person (you), Third person (he/she/they/it), 
+        Demonstratives (this/that), plus key insights about Thai pronoun usage.
+    </p>
+</div>
+
+<!-- Comparison Table -->
+<h2 style="color: var(--temple-red); margin-top: 2rem;">📊 Quick Comparison: Male vs Female</h2>
+
+<div class="card">
+    <p style="margin-bottom: 1.5rem;">See the differences side-by-side:</p>
+    
+    <table>
+        <thead>
+            <tr style="background: var(--royal-purple); color: white;">
+                <th>Meaning</th>
+                <th style="background: #2196F3;">Male Form</th>
+                <th style="background: #E91E63;">Female Form</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>I (polite)</strong></td>
+                <td style="background: #e3f2fd;">
+                    <span class="thai-text">ผม</span><br>
+                    <span class="paiboon">pǒm</span>
+                </td>
+                <td style="background: #fce4ec;">
+                    <span class="thai-text">ดิฉัน</span><br>
+                    <span class="paiboon">dì-chǎn</span>
+                </td>
+                <td>Most common polite "I"</td>
+            </tr>
+            <tr>
+                <td><strong>I (casual)</strong></td>
+                <td style="background: #e3f2fd;">
+                    <span class="thai-text">กู</span><br>
+                    <span class="paiboon">guu</span>
+                </td>
+                <td style="background: #fce4ec;">
+                    <span class="thai-text">ฉัน</span><br>
+                    <span class="paiboon">chǎn</span>
+                </td>
+                <td>Informal with friends</td>
+            </tr>
+            <tr>
+                <td><strong>Polite particle (statement)</strong></td>
+                <td style="background: #e3f2fd;">
+                    <span class="thai-text">ครับ</span><br>
+                    <span class="paiboon">kráp</span>
+                </td>
+                <td style="background: #fce4ec;">
+                    <span class="thai-text">ค่ะ</span><br>
+                    <span class="paiboon">kâ</span>
+                </td>
+                <td>End of sentence</td>
+            </tr>
+            <tr>
+                <td><strong>Polite particle (question)</strong></td>
+                <td style="background: #e3f2fd;">
+                    <span class="thai-text">ครับ</span><br>
+                    <span class="paiboon">kráp</span>
+                </td>
+                <td style="background: #fce4ec;">
+                    <span class="thai-text">คะ</span><br>
+                    <span class="paiboon">ká</span>
+                </td>
+                <td>Female form changes tone!</td>
+            </tr>
+            <tr>
+                <td><strong>You (same for all)</strong></td>
+                <td colspan="2" style="background: #f3e5f5; text-align: center;">
+                    <span class="thai-text">คุณ</span><br>
+                    <span class="paiboon">kun</span>
+                </td>
+                <td>No gender difference</td>
+            </tr>
+            <tr>
+                <td><strong>He/She/They (same for all)</strong></td>
+                <td colspan="2" style="background: #f3e5f5; text-align: center;">
+                    <span class="thai-text">เขา</span><br>
+                    <span class="paiboon">kǎo</span>
+                </td>
+                <td>Gender-neutral!</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div style="background: #fffde7; padding: 1rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid #fbc02d;">
+        <strong>⚠️ Important:</strong> Only <strong>first person ("I")</strong> changes based on YOUR gender. 
+        Second person ("you") and third person ("he/she/they") are the SAME for everyone!
+    </div>
+</div>
+
+<!-- Common Mistakes -->
+<h2 style="color: var(--lotus-pink); margin-top: 2rem;">⚠️ Common Mistakes to Avoid</h2>
+
+<div class="card">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+        <div style="background: #ffebee; padding: 1rem; border-radius: 8px; border-left: 4px solid #f44336;">
+            <h4 style="color: #c62828;">❌ Mistake #1: Using Wrong Gender Pronoun</h4>
+            <p style="margin-top: 0.5rem;">Male saying ดิฉัน (dì-chǎn) or female saying ผม (pǒm)</p>
+            <p style="color: #666; margin-top: 0.5rem;"><strong>Fix:</strong> Match pronoun to YOUR gender, not listener's gender!</p>
+        </div>
+        
+        <div style="background: #ffebee; padding: 1rem; border-radius: 8px; border-left: 4px solid #f44336;">
+            <h4 style="color: #c62828;">❌ Mistake #2: Forgetting Particle Tone Change</h4>
+            <p style="margin-top: 0.5rem;">Female using ค่ะ (kâ) for questions instead of คะ (ká)</p>
+            <p style="color: #666; margin-top: 0.5rem;"><strong>Fix:</strong> Statements = ค่ะ (kâ falling), Questions = คะ (ká rising)</p>
+        </div>
+        
+        <div style="background: #ffebee; padding: 1rem; border-radius: 8px; border-left: 4px solid #f44336;">
+            <h4 style="color: #c62828;">❌ Mistake #3: Mixing Formality Levels</h4>
+            <p style="margin-top: 0.5rem;">Using ผม (pǒm) with กู (guu) in same sentence</p>
+            <p style="color: #666; margin-top: 0.5rem;"><strong>Fix:</strong> Stay consistent - don't mix polite and vulgar!</p>
+        </div>
+        
+        <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+            <h4 style="color: #2e7d32;">✅ Pro Tip #1: Start Polite</h4>
+            <p style="margin-top: 0.5rem;">Use ผม/ดิฉัน + ครับ/ค่ะ until you know the person well</p>
+            <p style="color: #666; margin-top: 0.5rem;">You can always become MORE casual, hard to go back!</p>
+        </div>
+        
+        <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+            <h4 style="color: #2e7d32;">✅ Pro Tip #2: Listen & Match</h4>
+            <p style="margin-top: 0.5rem;">Pay attention to which pronouns Thais use with you</p>
+            <p style="color: #666; margin-top: 0.5rem;">Mirror their formality level for best results!</p>
+        </div>
+        
+        <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; border-left: 4px solid #4caf50;">
+            <h4 style="color: #2e7d32;">✅ Pro Tip #3: When In Doubt</h4>
+            <p style="margin-top: 0.5rem;">Use คุณ (kun) for "you" - safe and polite!</p>
+            <p style="color: #666; margin-top: 0.5rem;">Works in almost any situation</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

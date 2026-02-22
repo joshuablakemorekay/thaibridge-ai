@@ -1,0 +1,320 @@
+{% extends "base.html" %}
+
+{% block title %}Theravada Dhamma{% endblock %}
+
+{% block extra_css %}
+<style>
+    .sutta-card {
+        background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+        border-left-color: var(--saffron);
+    }
+    
+    .abhidhamma-card {
+        background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+        border-left-color: var(--bodhi-green);
+    }
+    
+    .vinaya-card {
+        background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD9 100%);
+        border-left-color: var(--lotus-pink);
+    }
+    
+    .pali-text {
+        font-style: italic;
+        color: var(--temple-red);
+    }
+    
+    /* Pra Kru Bob's Writings Section */
+    .bob-writings-section {
+        background: linear-gradient(135deg, #FFF9E6 0%, #FFE7B3 100%);
+        border-radius: 15px;
+        padding: 2.5rem;
+        margin: 3rem 0;
+        border: 3px solid var(--gold);
+        box-shadow: 0 8px 20px rgba(218, 165, 32, 0.25);
+    }
+    
+    .bob-article-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2.5rem;
+        margin: 2rem 0;
+        border-left: 6px solid var(--royal-purple);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        transition: all 0.3s ease;
+    }
+    
+    .bob-article-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+    
+    .bob-article-card.fear {
+        border-left-color: var(--temple-red);
+    }
+    
+    .bob-article-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .bob-article-title {
+        font-size: 2rem;
+        color: var(--royal-purple);
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+    }
+    
+    .bob-article-card.fear .bob-article-title {
+        color: var(--temple-red);
+    }
+    
+    .bob-article-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        font-style: italic;
+        margin: 0 0 1rem 0;
+    }
+    
+    .bob-excerpt {
+        line-height: 1.8;
+        color: #444;
+        margin: 1rem 0 1.5rem 0;
+        text-align: justify;
+    }
+    
+    .bob-read-btn {
+        background: linear-gradient(135deg, var(--gold) 0%, #DAA520 100%);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(218, 165, 32, 0.3);
+    }
+    
+    .bob-read-btn:hover {
+        background: linear-gradient(135deg, var(--royal-purple) 0%, #6B46C1 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(107, 70, 193, 0.4);
+        text-decoration: none;
+        color: white;
+    }
+    
+    .bob-meta {
+        display: flex;
+        gap: 2rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 2px solid #f0f0f0;
+        font-size: 0.95rem;
+        color: #666;
+    }
+    
+    .bob-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .bob-icon {
+        font-size: 1.2rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    ☸️ Theravada Dhamma
+    <span class="thai">พระธรรมเถรวาท</span>
+</h1>
+
+<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+    Essential teachings from the Pali Canon: Key Suttas, Abhidhamma concepts, and Vinaya rules for practitioners and monastics.
+</p>
+
+<!-- Quick Navigation -->
+<div class="card" style="text-align: center;">
+    <strong>Sections:</strong>
+    <p style="margin-top: 0.5rem;">
+        <a href="#suttas" class="btn btn-saffron" style="margin: 0.25rem;">📜 Key Suttas</a>
+        <a href="#abhidhamma" class="btn" style="margin: 0.25rem; background: var(--bodhi-green); color: white;">🧠 Abhidhamma</a>
+        <a href="#vinaya" class="btn" style="margin: 0.25rem; background: var(--lotus-pink); color: white;">📿 Vinaya</a>
+        <a href="#bob-writings" class="btn" style="margin: 0.25rem; background: var(--gold); color: var(--royal-purple); font-weight: bold;">✍️ Pra Kru Bob's Writings</a>
+    </p>
+</div>
+
+<!-- Key Suttas -->
+<h2 id="suttas">📜 Key Suttas (พระสูตร)</h2>
+
+<p style="margin-bottom: 1.5rem;">
+    The Sutta Pitaka contains the Buddha's discourses. These are among the most important for practice:
+</p>
+
+{% for sutta in teachings.key_suttas %}
+<div class="card sutta-card">
+    <h3 class="pali-text" style="margin-bottom: 0.25rem;">{{ sutta.pali }}</h3>
+    <p class="thai-text" style="margin-bottom: 0.5rem;">{{ sutta.thai }}</p>
+    <p style="font-weight: bold; color: var(--royal-purple);">{{ sutta.english }}</p>
+    
+    <p style="margin: 1rem 0; line-height: 1.8;">{{ sutta.description }}</p>
+    
+    <div style="background: white; padding: 1rem; border-radius: 10px; border-left: 4px solid var(--gold);">
+        <strong>🔑 Key Teaching:</strong>
+        <p style="margin-top: 0.5rem; font-style: italic;">{{ sutta.key_teaching }}</p>
+    </div>
+</div>
+{% endfor %}
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- Abhidhamma -->
+<h2 id="abhidhamma">🧠 Key Abhidhamma Concepts (อภิธรรม)</h2>
+
+<p style="margin-bottom: 1.5rem;">
+    The Abhidhamma Pitaka provides detailed analysis of mind and matter. These concepts support deeper meditation practice:
+</p>
+
+{% for concept in teachings.key_abhidhamma %}
+<div class="card abhidhamma-card">
+    <h3 style="margin-bottom: 0.25rem;">{{ concept.topic }}</h3>
+    <p class="thai-text" style="margin-bottom: 0.5rem;">{{ concept.thai }}</p>
+    
+    <p style="margin: 1rem 0; line-height: 1.8;">{{ concept.description }}</p>
+    
+    <div style="background: white; padding: 1rem; border-radius: 10px; border-left: 4px solid var(--bodhi-green);">
+        <strong>🧘 Practical Application:</strong>
+        <p style="margin-top: 0.5rem;">{{ concept.practical }}</p>
+    </div>
+</div>
+{% endfor %}
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- Vinaya -->
+<h2 id="vinaya">📿 Key Vinaya Rules (พระวินัย)</h2>
+
+<p style="margin-bottom: 1.5rem;">
+    The Vinaya Pitaka contains the monastic discipline. Understanding these supports proper conduct and lay-monastic relations:
+</p>
+
+{% for rule in teachings.key_vinaya %}
+<div class="card vinaya-card">
+    <h3 style="margin-bottom: 0.25rem;">{{ rule.rule }}</h3>
+    <p class="thai-text" style="margin-bottom: 0.5rem;">{{ rule.thai }}</p>
+    <p style="font-weight: bold; color: var(--royal-purple);">{{ rule.english }}</p>
+    
+    <p style="margin: 1rem 0; line-height: 1.8;">{{ rule.description }}</p>
+    
+    <div style="background: white; padding: 1rem; border-radius: 10px; border-left: 4px solid var(--lotus-pink);">
+        <strong>📿 Significance:</strong>
+        <p style="margin-top: 0.5rem;">{{ rule.significance }}</p>
+    </div>
+</div>
+{% endfor %}
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- PRA KRU BOB'S WRITINGS SECTION -->
+<section id="bob-writings" class="bob-writings-section">
+    <h2 style="text-align: center; color: var(--royal-purple); font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+        ✍️ Pra Kru Bob's Writings
+    </h2>
+    <p style="text-align: center; color: #555; font-size: 1.2rem; margin-bottom: 2.5rem; font-style: italic;">
+        Thoughtful essays on Buddhism, meditation, and applying the Dhamma to modern life
+    </p>
+
+    <!-- ARTICLE 1: Buddhism Overview -->
+    <div class="bob-article-card">
+        <div class="bob-article-header">
+            <h3 class="bob-article-title">Buddhism: An Overview for Children</h3>
+            <p class="bob-article-subtitle">Understanding the Path to Peace and Wisdom</p>
+        </div>
+        
+        <div class="bob-excerpt">
+            <p>Buddhism is a religion and a way of life that began over 2,500 years ago in India. It is based on the teachings of a wise man named Siddhartha Gautama, who is known as the Buddha. The word "Buddha" means "the Enlightened One" or "the Awakened One".</p>
+            
+            <p>This comprehensive overview explores the Buddha's life journey—from his birth as a prince to his enlightenment under the Bodhi tree—and presents the core teachings including the Four Noble Truths, the Noble Eightfold Path, and practical meditation techniques. Perfect for introducing Buddhism to young learners or anyone new to the Dhamma.</p>
+        </div>
+        
+        <a href="/bob-buddhism-overview" class="bob-read-btn">📖 Read Complete Article</a>
+        
+        <div class="bob-meta">
+            <div class="bob-meta-item">
+                <span class="bob-icon">📄</span>
+                <span>10 pages</span>
+            </div>
+            <div class="bob-meta-item">
+                <span class="bob-icon">⏱️</span>
+                <span>~30 min read</span>
+            </div>
+            <div class="bob-meta-item">
+                <span class="bob-icon">🎯</span>
+                <span>Beginner-friendly</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ARTICLE 2: Fear as Guardian and Tyrant -->
+    <div class="bob-article-card fear">
+        <div class="bob-article-header">
+            <h3 class="bob-article-title">Fear as Guardian and Tyrant</h3>
+            <p class="bob-article-subtitle">Buddhist Wisdom on Fear and Social Control</p>
+        </div>
+        
+        <div class="bob-excerpt">
+            <p>The Buddha taught that fear is built into life itself. From birth to death, humans face fear in countless ways. But the Buddha didn't just diagnose fear—he showed us how to transform it. He saw fear both as a natural response to life's uncertainty and as a doorway to wisdom.</p>
+            
+            <p>This profound essay explores what the Buddha taught about fear, how meditation helps us understand fear's roots, the role of moral conscience (hiri and ottappa), and how societies have learned to use fear as a tool of social control. Includes specific meditation practices for working with fear and developing discernment between protective concern and manufactured anxiety.</p>
+        </div>
+        
+        <a href="/bob-fear-article" class="bob-read-btn">📖 Read Complete Article</a>
+        
+        <div class="bob-meta">
+            <div class="bob-meta-item">
+                <span class="bob-icon">📄</span>
+                <span>12 pages</span>
+            </div>
+            <div class="bob-meta-item">
+                <span class="bob-icon">⏱️</span>
+                <span>~40 min read</span>
+            </div>
+            <div class="bob-meta-item">
+                <span class="bob-icon">🎯</span>
+                <span>Intermediate/Advanced</span>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- Dhamma Vocabulary -->
+<div class="card" style="border-left-color: var(--royal-purple);">
+    <h2 style="margin-top: 0;">📚 Study the Dhamma Vocabulary</h2>
+    <p>
+        Learn the Thai pronunciation of Buddhist terms used in temples and teachings:
+    </p>
+    <p style="margin-top: 1rem;">
+        <a href="/exercise/theravada_dhamma" class="btn btn-saffron">Practice Dhamma Vocabulary →</a>
+        <a href="/exercise/buddhist_formal" class="btn" style="margin-left: 1rem;">Temple Vocabulary →</a>
+    </p>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-left-color: #1976D2;">
+    <h2 style="margin-top: 0; color: #1976D2;">🙏 For Monastics</h2>
+    <p>
+        This section is designed to help foreign monks learn the Thai vocabulary used in daily monastic life. 
+        Common terms for the Patimokkha, alms round, ceremonies, and interactions with lay supporters are 
+        included in the vocabulary sections.
+    </p>
+    <p style="margin-top: 1rem;">
+        <a href="/meditation" class="btn" style="background: #1976D2; color: var(--royal-purple);">Meditation Instructions →</a>
+    </p>
+</div>
+{% endblock %}

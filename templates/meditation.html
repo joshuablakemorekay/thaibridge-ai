@@ -1,0 +1,313 @@
+{% extends "base.html" %}
+
+{% block title %}Meditation Practice{% endblock %}
+
+{% block extra_css %}
+<style>
+    .timer-display {
+        font-size: 4rem;
+        font-family: 'Courier New', monospace;
+        color: var(--royal-purple);
+        text-align: center;
+        padding: 2rem;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        margin: 1rem 0;
+    }
+    
+    .timer-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin: 1rem 0;
+    }
+    
+    .timer-presets {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+    
+    .timer-presets button {
+        padding: 0.5rem 1rem;
+        border: 2px solid var(--gold);
+        background: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .timer-presets button:hover {
+        background: var(--gold);
+        color: var(--dark-text);
+    }
+    
+    .samatha-card {
+        background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+        border-left-color: #1976D2;
+    }
+    
+    .vipassana-card {
+        background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+        border-left-color: var(--saffron);
+    }
+    
+    .instruction-step {
+        display: flex;
+        gap: 1rem;
+        margin: 0.75rem 0;
+        align-items: flex-start;
+    }
+    
+    .step-number {
+        background: var(--royal-purple);
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        flex-shrink: 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    🧘 Meditation Practice
+    <span class="thai">การปฏิบัติสมาธิ</span>
+</h1>
+
+<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+    Samatha (calm) and Vipassana (insight) meditation techniques as taught by the Buddha in the Pali Canon.
+</p>
+
+<!-- Meditation Timer -->
+<div class="card" style="text-align: center; border-left-color: var(--bodhi-green);">
+    <h2 style="margin-top: 0;">⏱️ Meditation Timer</h2>
+    
+    <div class="timer-presets">
+        <button onclick="setTimer(5)">5 min</button>
+        <button onclick="setTimer(10)">10 min</button>
+        <button onclick="setTimer(15)">15 min</button>
+        <button onclick="setTimer(20)">20 min</button>
+        <button onclick="setTimer(30)">30 min</button>
+        <button onclick="setTimer(45)">45 min</button>
+        <button onclick="setTimer(60)">60 min</button>
+    </div>
+    
+    <div class="timer-display" id="timerDisplay">20:00</div>
+    
+    <div class="timer-controls">
+        <button class="btn btn-saffron" onclick="startTimer()" id="startBtn">▶ Start</button>
+        <button class="btn btn-secondary" onclick="pauseTimer()" id="pauseBtn" disabled>⏸ Pause</button>
+        <button class="btn" onclick="resetTimer()">↺ Reset</button>
+    </div>
+    
+    <p style="color: #666; margin-top: 1rem;">
+        🔔 A bell will sound when your session ends
+    </p>
+</div>
+
+<!-- Quick Navigation -->
+<div class="card" style="text-align: center;">
+    <strong>Jump to:</strong>
+    <p style="margin-top: 0.5rem;">
+        <a href="#samatha" class="btn" style="margin: 0.25rem; background: #1976D2; color: white;">🌊 Samatha</a>
+        <a href="#vipassana" class="btn btn-saffron" style="margin: 0.25rem;">👁️ Vipassana</a>
+    </p>
+</div>
+
+<!-- Samatha Section -->
+<h2 id="samatha">🌊 {{ techniques.samatha.name }}</h2>
+
+<div class="card samatha-card">
+    <h3 class="thai-text" style="margin-bottom: 0.25rem;">{{ techniques.samatha.thai }}</h3>
+    <p class="paiboon">{{ techniques.samatha.paiboon }}</p>
+    <p style="margin-top: 1rem; line-height: 1.8;">{{ techniques.samatha.description }}</p>
+</div>
+
+{% for technique in techniques.samatha.techniques %}
+<div class="card">
+    <h3>{{ technique.name }}</h3>
+    <p class="thai-text" style="margin-bottom: 1rem;">{{ technique.thai }}</p>
+    
+    <h4>Instructions:</h4>
+    {% for step in technique.instructions %}
+    <div class="instruction-step">
+        <span class="step-number">{{ loop.index }}</span>
+        <span>{{ step }}</span>
+    </div>
+    {% endfor %}
+    
+    <div style="margin-top: 1rem; padding: 1rem; background: #E3F2FD; border-radius: 10px;">
+        <strong>✨ Benefits:</strong> {{ technique.benefits }}
+    </div>
+</div>
+{% endfor %}
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- Vipassana Section -->
+<h2 id="vipassana">👁️ {{ techniques.vipassana.name }}</h2>
+
+<div class="card vipassana-card">
+    <h3 class="thai-text" style="margin-bottom: 0.25rem;">{{ techniques.vipassana.thai }}</h3>
+    <p class="paiboon">{{ techniques.vipassana.paiboon }}</p>
+    <p style="margin-top: 1rem; line-height: 1.8;">{{ techniques.vipassana.description }}</p>
+</div>
+
+{% for technique in techniques.vipassana.techniques %}
+<div class="card">
+    <h3>{{ technique.name }}</h3>
+    <p class="thai-text" style="margin-bottom: 1rem;">{{ technique.thai }}</p>
+    
+    <h4>Instructions:</h4>
+    {% for step in technique.instructions %}
+    <div class="instruction-step">
+        <span class="step-number" style="background: var(--saffron);">{{ loop.index }}</span>
+        <span>{{ step }}</span>
+    </div>
+    {% endfor %}
+    
+    <div style="margin-top: 1rem; padding: 1rem; background: #FFF3E0; border-radius: 10px;">
+        <strong>✨ Benefits:</strong> {{ technique.benefits }}
+    </div>
+</div>
+{% endfor %}
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- Practice Guidance -->
+<div class="card" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-left-color: var(--bodhi-green);">
+    <h2 style="margin-top: 0;">🌱 Practice Guidance</h2>
+    
+    <h4>For Beginners:</h4>
+    <ul style="margin-left: 1.5rem; line-height: 2;">
+        <li>Start with 10-15 minutes of <strong>Anapanasati</strong> (breath meditation)</li>
+        <li>Focus on establishing stable attention before attempting insight practices</li>
+        <li>Consistency matters more than duration - daily practice is key</li>
+    </ul>
+    
+    <h4 style="margin-top: 1.5rem;">For Intermediate Practitioners:</h4>
+    <ul style="margin-left: 1.5rem; line-height: 2;">
+        <li>Extend sessions to 30-45 minutes</li>
+        <li>Begin with samatha to calm the mind, then shift to vipassana</li>
+        <li>Practice <strong>Metta</strong> (loving-kindness) to overcome ill-will</li>
+    </ul>
+    
+    <h4 style="margin-top: 1.5rem;">For Advanced Practitioners:</h4>
+    <ul style="margin-left: 1.5rem; line-height: 2;">
+        <li>Attend meditation retreats for intensive practice</li>
+        <li>Work with a qualified teacher for personalized guidance</li>
+        <li>Study the <strong>Satipatthana Sutta</strong> in depth</li>
+    </ul>
+</div>
+
+<div class="card">
+    <h2 style="margin-top: 0;">📚 Learn Meditation Vocabulary</h2>
+    <p>Practice the Thai pronunciation of meditation terms:</p>
+    <p style="margin-top: 1rem;">
+        <a href="/exercise/theravada_dhamma" class="btn btn-saffron">Dhamma Vocabulary →</a>
+        <a href="/lesson/15" class="btn" style="margin-left: 1rem;">Meditation Lesson →</a>
+    </p>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+let timerMinutes = 20;
+let timerSeconds = 0;
+let timerInterval = null;
+let isRunning = false;
+
+function updateDisplay() {
+    const mins = String(timerMinutes).padStart(2, '0');
+    const secs = String(timerSeconds).padStart(2, '0');
+    document.getElementById('timerDisplay').textContent = `${mins}:${secs}`;
+}
+
+function setTimer(minutes) {
+    if (isRunning) return;
+    timerMinutes = minutes;
+    timerSeconds = 0;
+    updateDisplay();
+}
+
+function startTimer() {
+    if (isRunning) return;
+    
+    isRunning = true;
+    document.getElementById('startBtn').disabled = true;
+    document.getElementById('pauseBtn').disabled = false;
+    
+    timerInterval = setInterval(() => {
+        if (timerSeconds === 0) {
+            if (timerMinutes === 0) {
+                // Timer complete
+                clearInterval(timerInterval);
+                isRunning = false;
+                playBell();
+                document.getElementById('startBtn').disabled = false;
+                document.getElementById('pauseBtn').disabled = true;
+                alert('🔔 Meditation session complete. สาธุ 🙏');
+                return;
+            }
+            timerMinutes--;
+            timerSeconds = 59;
+        } else {
+            timerSeconds--;
+        }
+        updateDisplay();
+    }, 1000);
+}
+
+function pauseTimer() {
+    if (!isRunning) return;
+    
+    clearInterval(timerInterval);
+    isRunning = false;
+    document.getElementById('startBtn').disabled = false;
+    document.getElementById('pauseBtn').disabled = true;
+}
+
+function resetTimer() {
+    pauseTimer();
+    timerMinutes = 20;
+    timerSeconds = 0;
+    updateDisplay();
+}
+
+function playBell() {
+    // Create a simple bell sound using Web Audio API
+    try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        
+        oscillator.frequency.value = 528; // Solfeggio frequency
+        oscillator.type = 'sine';
+        
+        gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 3);
+        
+        oscillator.start(audioCtx.currentTime);
+        oscillator.stop(audioCtx.currentTime + 3);
+    } catch (e) {
+        console.log('Audio not supported');
+    }
+}
+
+// Initialize display
+updateDisplay();
+</script>
+{% endblock %}

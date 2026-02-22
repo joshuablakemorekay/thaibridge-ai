@@ -1,0 +1,362 @@
+{% extends "base.html" %}
+
+{% block title %}Progress Dashboard - Thai Learning{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>🎯 Your Learning Progress</h1>
+    
+    <!-- Developer Badge -->
+    {% if user.is_developer %}
+    <div class="developer-badge">
+        <h3>👨‍💻 DEVELOPER MODE ACTIVE</h3>
+        <p>You have access to all sections</p>
+        <a href="/developer-logout" class="btn btn-warning">Exit Developer Mode</a>
+    </div>
+    {% endif %}
+    
+    <!-- Level & XP Section -->
+    <div class="progress-section">
+        <div class="level-card">
+            <h2>Level {{ user.level }}</h2>
+            <div class="xp-bar-container">
+                <div class="xp-bar" style="width: {{ progress_to_next }}%"></div>
+            </div>
+            <p class="xp-text">{{ user.xp }} XP 
+                {% if next_level_xp %}
+                    / {{ next_level_xp }} to Level {{ user.level + 1 }}
+                {% else %}
+                    - MAX LEVEL!
+                {% endif %}
+            </p>
+        </div>
+        
+        <!-- Subscription Tier -->
+        <div class="tier-card">
+            <h3>{{ subscription_tiers[user.subscription_tier].name }}</h3>
+            {% if user.subscription_tier != 'free' and user.subscription_expires %}
+            <p class="expires">Expires: {{ user.subscription_expires[:10] }}</p>
+            {% endif %}
+            <a href="#subscriptions" class="btn">
+                {% if user.subscription_tier == 'free' %}
+                    Upgrade Now
+                {% else %}
+                    Manage Subscription
+                {% endif %}
+            </a>
+        </div>
+    </div>
+    
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h4>{{ user.quizzes_completed }}</h4>
+            <p>Quizzes Completed</p>
+        </div>
+        <div class="stat-card">
+            <h4>{{ user.words_learned }}</h4>
+            <p>Words Learned</p>
+        </div>
+        <div class="stat-card">
+            <h4>{% if user.total_answers > 0 %}{{ ((user.correct_answers / user.total_answers) * 100)|round(1) }}%{% else %}0%{% endif %}</h4>
+            <p>Accuracy</p>
+        </div>
+        <div class="stat-card">
+            <h4>{{ user.login_streak }}</h4>
+            <p>Day Streak</p>
+        </div>
+    </div>
+    
+    <!-- Achievements -->
+    <div class="achievements-section">
+        <h2>🏆 Achievements</h2>
+        <div class="achievements-grid">
+            {% for achievement_id, achievement in achievements.items() %}
+            <div class="achievement-card {% if achievement_id in user.achievements_earned %}earned{% endif %}">
+                <span class="achievement-icon">{{ achievement.name.split()[0] }}</span>
+                <h4>{{ achievement.name[2:] }}</h4>
+                <p>{{ achievement.description }}</p>
+                <span class="points">+{{ achievement.points }} XP</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Available Sections -->
+    <div class="sections-overview">
+        <h2>📚 Available Sections</h2>
+        <div class="sections-list">
+            {% for section in available_sections %}
+            <div class="section-card available">
+                <h3>{{ section.name }}</h3>
+                <p>Level {{ section.level_required }} • {{ subscription_tiers[section.tier_required].name }}</p>
+                <span class="reward">+{{ section.points_reward }} XP</span>
+                {% if section.unlocked %}
+                <span class="badge unlocked">✓ Unlocked</span>
+                {% else %}
+                <span class="badge locked">🔓 Available</span>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        
+        <h2 class="locked-header">🔒 Locked Sections</h2>
+        <div class="sections-list">
+            {% for section in locked_sections %}
+            <div class="section-card locked">
+                <h3>{{ section.name }}</h3>
+                <p>{{ section.message }}</p>
+                <span class="requirement">Requires: Level {{ section.level_required }}
+                    {% if section.tier_required != 'free' %}
+                        + {{ subscription_tiers[section.tier_required].name }}
+                    {% endif %}
+                </span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <!-- Subscription Options -->
+    <div id="subscriptions" class="subscriptions-section">
+        <h2>💎 Subscription Plans</h2>
+        <div class="subscription-grid">
+            {% for tier_id, tier_info in subscription_tiers.items() %}
+            <div class="subscription-card {% if user.subscription_tier == tier_id %}current{% endif %}">
+                <h3>{{ tier_info.name }}</h3>
+                <p class="price">
+                    {% if tier_info.price == 0 %}
+                        FREE
+                    {% else %}
+                        ${{ tier_info.price }}/month
+                    {% endif %}
+                </p>
+                <ul class="features">
+                    {% for feature in tier_info.features %}
+                    <li>{{ feature }}</li>
+                    {% endfor %}
+                </ul>
+                {% if user.subscription_tier == tier_id %}
+                <button class="btn btn-current" disabled>Current Plan</button>
+                {% else %}
+                <a href="/subscribe/{{ tier_id }}" class="btn btn-subscribe">
+                    {% if tier_info.price == 0 %}
+                        Downgrade
+                    {% else %}
+                        Subscribe Now
+                    {% endif %}
+                </a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .developer-badge {
+        background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+        border: 3px solid #FF4500;
+        border-radius: 15px;
+        padding: 1.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 20px rgba(255, 69, 0, 0.4);
+    }
+    
+    .developer-badge h3 {
+        color: #8B0000;
+        margin: 0;
+    }
+    
+    .progress-section {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .level-card, .tier-card {
+        background: linear-gradient(135deg, var(--royal-purple) 0%, var(--deep-purple) 100%);
+        border-radius: 15px;
+        padding: 2rem;
+        color: white;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    
+    .xp-bar-container {
+        background: rgba(255,255,255,0.2);
+        height: 30px;
+        border-radius: 15px;
+        overflow: hidden;
+        margin: 1rem 0;
+    }
+    
+    .xp-bar {
+        background: linear-gradient(90deg, var(--royal-gold) 0%, var(--gold-shimmer) 100%);
+        height: 100%;
+        transition: width 0.5s ease;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+    }
+    
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .stat-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-left: 4px solid var(--royal-gold);
+    }
+    
+    .stat-card h4 {
+        font-size: 2.5rem;
+        color: var(--royal-purple);
+        margin: 0;
+    }
+    
+    .achievements-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .achievement-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        opacity: 0.5;
+        transition: all 0.3s ease;
+    }
+    
+    .achievement-card.earned {
+        opacity: 1;
+        border: 2px solid var(--royal-gold);
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4);
+    }
+    
+    .achievement-icon {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .sections-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .section-card {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        position: relative;
+    }
+    
+    .section-card.locked {
+        opacity: 0.6;
+        background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    }
+    
+    .badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+    }
+    
+    .badge.unlocked {
+        background: var(--royal-gold);
+        color: white;
+    }
+    
+    .badge.locked {
+        background: #ccc;
+        color: #666;
+    }
+    
+    .subscription-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 2rem 0;
+    }
+    
+    .subscription-card {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .subscription-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .subscription-card.current {
+        border: 3px solid var(--royal-gold);
+        box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+    }
+    
+    .price {
+        font-size: 2.5rem;
+        color: var(--royal-purple);
+        font-weight: bold;
+        margin: 1rem 0;
+    }
+    
+    .features {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0;
+        text-align: left;
+    }
+    
+    .features li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .btn-subscribe {
+        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--deep-gold) 100%);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-subscribe:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
+    }
+    
+    @media (max-width: 768px) {
+        .progress-section {
+            grid-template-columns: 1fr;
+        }
+        
+        .stats-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
+{% endblock %}

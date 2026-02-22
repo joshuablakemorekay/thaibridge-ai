@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Structured Thai Lessons{% endblock %}
+
+{% block content %}
+<h1>
+    📖 Structured Lessons
+    <span class="thai">บทเรียน</span>
+</h1>
+
+<p style="text-align: center; color: #666; margin-bottom: 2rem;">
+    15 progressive lessons from beginner to advanced. Each includes objectives, vocabulary, grammar points, and example sentences.
+</p>
+
+<!-- Level Filter -->
+<div class="card" style="text-align: center;">
+    <strong>Filter by Level:</strong>
+    <p style="margin-top: 0.5rem;">
+        <button class="btn tag-beginner" onclick="filterLessons('all')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">All</button>
+        <button class="btn tag-beginner" onclick="filterLessons('Beginner')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌱 Beginner</button>
+        <button class="btn tag-intermediate" onclick="filterLessons('Intermediate')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌿 Intermediate</button>
+        <button class="btn tag-advanced" onclick="filterLessons('Advanced')" style="border: none; cursor: pointer; padding: 0.5rem 1rem;">🌳 Advanced</button>
+    </p>
+</div>
+
+<div class="card-grid" id="lessonsGrid">
+    {% for lesson in lessons %}
+    <div class="card lesson-card" data-level="{{ lesson.level }}">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+            <h3 style="margin: 0;">
+                Lesson {{ lesson.id }}: {{ lesson.title }}
+            </h3>
+            <span class="tag tag-{{ lesson.level.lower() }}">{{ lesson.level }}</span>
+        </div>
+        <p class="thai-text" style="font-size: 1.1rem; margin-bottom: 0.75rem;">{{ lesson.thai_title }}</p>
+        
+        <p><strong>Objectives:</strong></p>
+        <ul style="margin: 0.5rem 0 1rem 1.5rem; color: #666;">
+            {% for obj in lesson.objectives %}
+            <li>{{ obj }}</li>
+            {% endfor %}
+        </ul>
+        
+        <p style="margin-top: 1rem;">
+            <a href="/lesson/{{ lesson.id }}" class="btn">Start Lesson →</a>
+        </p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: var(--bodhi-green);">
+    <h3>📚 Learning Path Recommendation</h3>
+    <p style="line-height: 2;">
+        <strong>Week 1-2:</strong> Lessons 1-5 (Greetings, Numbers, Food, Directions, Time)<br>
+        <strong>Week 3-4:</strong> Lessons 6-9 (Shopping, Family, Health, Weather)<br>
+        <strong>Week 5-6:</strong> Lessons 10-11 (Temple Etiquette, Thai Culture)<br>
+        <strong>Week 7-8:</strong> Lessons 12-15 (Buddhist Concepts, Isan, Thai Script, Meditation)
+    </p>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function filterLessons(level) {
+    const cards = document.querySelectorAll('.lesson-card');
+    
+    cards.forEach(card => {
+        if (level === 'all' || card.dataset.level === level) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+</script>
+{% endblock %}

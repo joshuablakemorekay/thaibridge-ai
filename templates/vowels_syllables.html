@@ -1,0 +1,748 @@
+{% extends "base.html" %}
+
+{% block title %}Thai Vowels & Syllables{% endblock %}
+
+{% block extra_css %}
+<style>
+    .vowel-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-left: 5px solid var(--bodhi-green);
+        transition: transform 0.2s ease;
+    }
+    
+    .vowel-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    .vowel-card.long {
+        border-left-color: var(--royal-purple);
+    }
+    
+    .vowel-card.short {
+        border-left-color: var(--saffron);
+    }
+    
+    .vowel-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .vowel-thai {
+        font-size: 3rem;
+        color: var(--royal-purple);
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 1rem;
+    }
+    
+    .vowel-paiboon {
+        font-size: 1.5rem;
+        color: var(--saffron);
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+    }
+    
+    .vowel-number {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--gold);
+        color: white;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    
+    .example-word {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    
+    .meaning-pair {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 1rem;
+        align-items: center;
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .vs-divider {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--temple-red);
+    }
+    
+    .syllable-box {
+        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin: 1rem 0;
+    }
+    
+    .tab-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+        padding: 0.75rem 1.5rem;
+        border: 2px solid var(--royal-purple);
+        background: white;
+        color: var(--royal-purple);
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .tab-btn:hover, .tab-btn.active {
+        background: var(--royal-purple);
+        color: white;
+    }
+    
+    .tab-content {
+        display: none;
+    }
+    
+    .tab-content.active {
+        display: block;
+        animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .type-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-left: 0.5rem;
+    }
+    
+    .type-badge.long {
+        background: var(--royal-purple);
+        color: white;
+    }
+    
+    .type-badge.short {
+        background: var(--saffron);
+        color: white;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    📚 Thai Vowels & Syllables
+    <span class="thai">สระและพยางค์ไทย</span>
+</h1>
+
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
+    <h2 style="margin-top: 0;">🎯 Understanding Thai Vowels</h2>
+    <p style="line-height: 1.8; font-size: 1.1rem;">
+        The Thai alphabet contains <strong>32 distinct vowel sounds</strong> formed from 21 basic vowel symbols.
+        These include <strong style="color: var(--royal-purple);">14 long vowels</strong> and 
+        <strong style="color: var(--saffron);">18 short vowels</strong>.
+    </p>
+    <p style="line-height: 1.8; font-size: 1.1rem; margin-top: 1rem;">
+        <strong>⚠️ CRITICAL:</strong> The <strong>length of the vowel can completely change the meaning</strong> of a word!
+        Learning to hear and produce the correct vowel length is essential for speaking Thai correctly.
+    </p>
+</div>
+
+<!-- Tab Navigation -->
+<div class="tab-buttons">
+    <button class="tab-btn active" onclick="showTab('long')">
+        👑 Long Vowels (14)
+    </button>
+    <button class="tab-btn" onclick="showTab('short')">
+        ⚡ Short Vowels (18)
+    </button>
+    <button class="tab-btn" onclick="showTab('pairs')">
+        🔄 Meaning Pairs
+    </button>
+    <button class="tab-btn" onclick="showTab('syllables')">
+        🏗️ Syllable Structure
+    </button>
+</div>
+
+<!-- Long Vowels Tab -->
+<div id="long" class="tab-content active">
+    <h2>👑 Long Vowels (14 vowels)</h2>
+    <p style="color: #666; margin-bottom: 2rem;">
+        Long vowels are held for approximately twice the duration of short vowels.
+        All Paiboon romanizations use double letters (aa, ii, uu, etc.) or special notation.
+    </p>
+    
+    <div class="vowel-grid">
+        {% for vowel in vowels.long_vowels %}
+        <div class="vowel-card long" style="position: relative;">
+            <div class="vowel-number">{{ vowel.number }}</div>
+            
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <span class="vowel-thai">{{ vowel.thai }}</span>
+                <div>
+                    <div class="vowel-paiboon">
+                        {{ vowel.paiboon }}
+                        <span class="type-badge long">LONG</span>
+                    </div>
+                    <div style="color: #666; margin-top: 0.25rem;">{{ vowel.sound }}</div>
+                </div>
+            </div>
+            
+            <div style="color: #555; font-style: italic; margin-bottom: 1rem;">
+                💡 {{ vowel.length_note }}
+            </div>
+            
+            <div class="example-word">
+                <div style="font-weight: bold; color: var(--royal-purple); margin-bottom: 0.5rem;">
+                    📝 Example Word:
+                </div>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
+                    <span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>
+                    <div>
+                        <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron);">
+                            {{ vowel.example_word.paiboon }}
+                        </div>
+                        <div style="color: #666;">{{ vowel.example_word.english }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Short Vowels Tab -->
+<div id="short" class="tab-content">
+    <h2>⚡ Short Vowels (18 vowels)</h2>
+    <p style="color: #666; margin-bottom: 2rem;">
+        Short vowels are quick and clipped - approximately half the duration of long vowels.
+        Often end with a hard stop (!). Mastering these is crucial for natural Thai pronunciation.
+    </p>
+    
+    <div class="vowel-grid">
+        {% for vowel in vowels.short_vowels %}
+        <div class="vowel-card short" style="position: relative;">
+            <div class="vowel-number">{{ vowel.number }}</div>
+            
+            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                <span class="vowel-thai">{{ vowel.thai }}</span>
+                <div>
+                    <div class="vowel-paiboon">
+                        {{ vowel.paiboon }}
+                        <span class="type-badge short">SHORT</span>
+                    </div>
+                    <div style="color: #666; margin-top: 0.25rem;">{{ vowel.sound }}</div>
+                </div>
+            </div>
+            
+            <div style="color: #555; font-style: italic; margin-bottom: 1rem;">
+                💡 {{ vowel.length_note }}
+            </div>
+            
+            <div class="example-word">
+                <div style="font-weight: bold; color: var(--saffron); margin-bottom: 0.5rem;">
+                    📝 Example Word:
+                </div>
+                <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
+                    <span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>
+                    <div>
+                        <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron);">
+                            {{ vowel.example_word.paiboon }}
+                        </div>
+                        <div style="color: #666;">{{ vowel.example_word.english }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Meaning Pairs Tab -->
+<div id="pairs" class="tab-content">
+    <h2>🔄 How Vowel Length Changes Meaning</h2>
+    <p style="color: #666; margin-bottom: 2rem; font-size: 1.1rem;">
+        These word pairs demonstrate why vowel length is so important in Thai.
+        The <strong>ONLY difference</strong> between these words is the vowel length!
+    </p>
+    
+    {% for pair in vowels.meaning_pairs %}
+    <div class="meaning-pair">
+        <!-- Short Version -->
+        <div style="text-align: center;">
+            <div class="type-badge short" style="display: block; margin-bottom: 0.5rem;">SHORT</div>
+            <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">
+                {{ pair.short.thai }}
+            </div>
+            <div class="paiboon" style="font-size: 1.3rem; color: var(--saffron); margin-bottom: 0.25rem;">
+                {{ pair.short.paiboon }}
+            </div>
+            <div style="color: #666; font-size: 1.1rem;">{{ pair.short.english }}</div>
+            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #888;">
+                Vowel: {{ pair.short.vowel }}
+            </div>
+        </div>
+        
+        <!-- VS Divider -->
+        <div class="vs-divider">
+            ⚡ vs 👑
+        </div>
+        
+        <!-- Long Version -->
+        <div style="text-align: center;">
+            <div class="type-badge long" style="display: block; margin-bottom: 0.5rem;">LONG</div>
+            <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">
+                {{ pair.long.thai }}
+            </div>
+            <div class="paiboon" style="font-size: 1.3rem; color: var(--royal-purple); margin-bottom: 0.25rem;">
+                {{ pair.long.paiboon }}
+            </div>
+            <div style="color: #666; font-size: 1.1rem;">{{ pair.long.english }}</div>
+            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: #888;">
+                Vowel: {{ pair.long.vowel }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="card" style="background: #fff3e0; border-left-color: var(--temple-red); margin-bottom: 2rem;">
+        <strong>💡 Lesson:</strong> {{ pair.lesson }}
+    </div>
+    {% endfor %}
+    
+    <div class="card" style="background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);">
+        <h3 style="margin-top: 0; color: var(--temple-red);">⚠️ Warning for Learners</h3>
+        <p style="line-height: 1.8;">
+            English speakers often struggle with vowel length because English doesn't use it to distinguish meaning.
+            Practice listening and repeating these pairs slowly until you can hear and produce the difference clearly.
+            <strong>Native Thai speakers will immediately notice if you get the vowel length wrong!</strong>
+        </p>
+    </div>
+</div>
+
+<!-- Syllable Structure Tab -->
+<div id="syllables" class="tab-content">
+    <h2>🏗️ Thai Syllable Structure</h2>
+    
+    <div class="syllable-box">
+        <h3 style="margin-top: 0; color: var(--bodhi-green);">Basic Pattern</h3>
+        <div style="font-size: 1.5rem; text-align: center; margin: 1rem 0; font-weight: bold;">
+            {{ vowels.syllable_structure.basic_pattern }}
+        </div>
+        <p style="color: #555; text-align: center;">
+            {{ vowels.syllable_structure.note }}
+        </p>
+    </div>
+    
+    <h3 style="margin-top: 2rem;">📝 Syllable Examples</h3>
+    
+    {% for example in vowels.syllable_structure.examples %}
+    <div class="card" style="margin-bottom: 1.5rem; border-left: 5px solid var(--bodhi-green);">
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: 2rem; align-items: center;">
+            <div style="text-align: center;">
+                <div class="thai-text" style="font-size: 3rem; margin-bottom: 0.5rem;">
+                    {{ example.thai }}
+                </div>
+                <div class="paiboon" style="font-size: 1.5rem; color: var(--saffron);">
+                    {{ example.paiboon }}
+                </div>
+            </div>
+            
+            <div>
+                <div style="font-weight: bold; color: var(--royal-purple); margin-bottom: 0.5rem;">
+                    Structure: {{ example.structure }}
+                </div>
+                <div style="background: #f8f9fa; padding: 0.75rem; border-radius: 5px; margin: 0.5rem 0; font-family: 'Courier New', monospace;">
+                    {{ example.breakdown }}
+                </div>
+                <div style="color: #666;">
+                    <strong>Meaning:</strong> {{ example.english }}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);">
+        <h3 style="margin-top: 0;">💡 Syllable Tips for Learners</h3>
+        <ul style="line-height: 2; margin-left: 1.5rem;">
+            <li>Thai syllables are <strong>timed</strong> - each syllable takes roughly the same duration</li>
+            <li>Vowel length is MORE important than consonant clusters</li>
+            <li>Practice breaking words into syllables: ขอบคุณ = kɔ̀ɔp + kun (2 syllables)</li>
+            <li>Tones are applied to the ENTIRE syllable, not individual sounds</li>
+            <li>Understanding syllable structure helps with reading Thai script</li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SYLLABLE STRESS & FLOW SECTION -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<div class="card" style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); margin-top: 2rem;">
+    <h3 style="margin-top: 0; color: var(--temple-red);">
+        🎵 Syllable Stress & Flow in Natural Thai Speech
+    </h3>
+    
+    <p style="line-height: 1.8; font-size: 1.05rem;">
+        When Thai people speak naturally at conversational speed, not all syllables receive equal emphasis. 
+        Understanding <strong>stressed</strong> and <strong>unstressed</strong> syllables is crucial for sounding natural 
+        and understanding rapid Thai speech.
+    </p>
+</div>
+
+<!-- Stress Markers -->
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 2rem 0;">
+    <div class="card" style="border-left: 5px solid var(--royal-purple);">
+        <h4 style="margin-top: 0; color: var(--royal-purple);">
+            📍 Stressed Syllables (-)
+        </h4>
+        <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0;">
+            <div style="font-size: 1.5rem; font-family: 'Courier New', monospace; text-align: center;">
+                syllable<strong style="color: var(--royal-purple);">-</strong>
+            </div>
+        </div>
+        <p style="line-height: 1.8;">
+            <strong>Pronounced clearly</strong> with full tone and vowel quality. 
+            The final syllable of any Thai word is <strong>ALWAYS</strong> stressed - Thai speakers 
+            will pronounce it exactly as written.
+        </p>
+        <div style="background: #e8eaf6; padding: 0.75rem; border-radius: 5px; margin-top: 0.75rem;">
+            <strong>Example:</strong><br>
+            <span class="thai-text" style="font-size: 1.3rem;">ภาษา</span> 
+            <span class="paiboon" style="color: var(--saffron); font-size: 1.2rem;">paa-sǎa</span><br>
+            <span style="color: #666;">Last syllable "sǎa" is stressed → pronounced clearly with falling tone</span>
+        </div>
+    </div>
+    
+    <div class="card" style="border-left: 5px solid var(--saffron);">
+        <h4 style="margin-top: 0; color: var(--saffron);">
+            💨 Unstressed Syllables (~)
+        </h4>
+        <div style="background: #f8f9fa; padding: 1rem; border-radius: 5px; margin: 1rem 0;">
+            <div style="font-size: 1.5rem; font-family: 'Courier New', monospace; text-align: center;">
+                syllable<strong style="color: var(--saffron);">~</strong>
+            </div>
+        </div>
+        <p style="line-height: 1.8;">
+            <strong>Reduced and softened</strong> at natural speaking speed. 
+            Thais often "slur" or modify these syllables in predictable ways to maintain speech rhythm.
+        </p>
+        <div style="background: #fff8e1; padding: 0.75rem; border-radius: 5px; margin-top: 0.75rem;">
+            <strong>Example:</strong><br>
+            <span class="thai-text" style="font-size: 1.3rem;">กะหนาด</span> 
+            <span class="paiboon" style="color: var(--saffron); font-size: 1.2rem;">gà~nàat</span><br>
+            <span style="color: #666;">First syllable "gà" becomes unstressed → tone and vowel reduce</span>
+        </div>
+    </div>
+</div>
+
+<!-- Live vs Dead Syllables -->
+<h3 style="margin-top: 2rem; color: var(--bodhi-green);">
+    🌱 Live Syllables vs ⚰️ Dead Syllables
+</h3>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+    <div class="syllable-box" style="border: 3px solid var(--bodhi-green);">
+        <h4 style="margin-top: 0; color: var(--bodhi-green);">
+            🌱 Live Syllables (Open)
+        </h4>
+        <p style="line-height: 1.8;">
+            Syllables that end with a <strong>vowel sound</strong> or a <strong>sonorant consonant</strong> 
+            (ง /ng/, น /n/, ม /m/, ย /y/, ว /w/, ล /l/, ร /r/). 
+            The air flows continuously - there's <strong>no abrupt stop</strong>.
+        </p>
+        <div style="background: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
+            <strong>Examples of Live Syllables:</strong><br><br>
+            <div style="margin-bottom: 0.75rem;">
+                <span class="thai-text" style="font-size: 1.3rem;">ที</span> 
+                <span class="paiboon" style="color: var(--bodhi-green);">tee</span> 
+                <span style="color: #666;">→ ends with vowel "ee"</span>
+            </div>
+            <div style="margin-bottom: 0.75rem;">
+                <span class="thai-text" style="font-size: 1.3rem;">สาม</span> 
+                <span class="paiboon" style="color: var(--bodhi-green);">sǎam</span> 
+                <span style="color: #666;">→ ends with "m" (sonorant)</span>
+            </div>
+            <div>
+                <span class="thai-text" style="font-size: 1.3rem;">เล่น</span> 
+                <span class="paiboon" style="color: var(--bodhi-green);">lên</span> 
+                <span style="color: #666;">→ ends with "n" (sonorant)</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; padding: 0.75rem; background: #e8f5e9; border-radius: 5px;">
+            <strong>💡 Key Point:</strong> Live syllables can "flow" into the next syllable smoothly, 
+            especially when unstressed.
+        </div>
+    </div>
+    
+    <div class="syllable-box" style="border: 3px solid var(--temple-red); background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);">
+        <h4 style="margin-top: 0; color: var(--temple-red);">
+            ⚰️ Dead Syllables (Stopped)
+        </h4>
+        <p style="line-height: 1.8;">
+            Syllables that end with a <strong>stop consonant</strong> 
+            (ก /k/, ด /t/, บ /p/) or a <strong>short vowel</strong>. 
+            The air is cut off abruptly by closing the mouth/throat - this is called a <strong>"glottal stop"</strong>.
+        </p>
+        <div style="background: white; padding: 1rem; border-radius: 5px; margin-top: 1rem;">
+            <strong>Examples of Dead Syllables:</strong><br><br>
+            <div style="margin-bottom: 0.75rem;">
+                <span class="thai-text" style="font-size: 1.3rem;">นก</span> 
+                <span class="paiboon" style="color: var(--temple-red);">nók</span> 
+                <span style="color: #666;">→ ends with "k" stop (bird)</span>
+            </div>
+            <div style="margin-bottom: 0.75rem;">
+                <span class="thai-text" style="font-size: 1.3rem;">สบาย</span> 
+                <span class="paiboon" style="color: var(--temple-red);">sà-baai</span> 
+                <span style="color: #666;">→ first syllable "sà" ends with glottal stop</span>
+            </div>
+            <div>
+                <span class="thai-text" style="font-size: 1.3rem;">ดีใจ</span> 
+                <span class="paiboon" style="color: var(--temple-red);">dii-jai</span> 
+                <span style="color: #666;">→ "dii" held, then cut before "jai" (happy)</span>
+            </div>
+        </div>
+        <div style="margin-top: 1rem; padding: 0.75rem; background: #ffebee; border-radius: 5px;">
+            <strong>💡 Key Point:</strong> Dead syllables create a distinct separation - the sound 
+            STOPS before the next syllable begins. Think of English "uh-oh" with the throat closure.
+        </div>
+    </div>
+</div>
+
+<!-- Three Ways Unstressed Syllables Change -->
+<h3 style="margin-top: 2rem; color: var(--royal-purple);">
+    🌊 Three Ways Unstressed Syllables Transform
+</h3>
+
+<p style="color: #666; margin-bottom: 1.5rem; font-size: 1.05rem;">
+    When Thai speakers talk at natural, conversational speed, unstressed syllables undergo predictable changes. 
+    Understanding these patterns helps you both <strong>speak more naturally</strong> and <strong>comprehend rapid speech</strong>.
+</p>
+
+<div style="display: grid; gap: 1.5rem;">
+    <!-- Transformation 1 -->
+    <div class="card" style="border-left: 5px solid #9c27b0;">
+        <h4 style="margin-top: 0; color: #9c27b0;">
+            1️⃣ Tone Neutralization → Mid Tone
+        </h4>
+        <p style="line-height: 1.8;">
+            The original tone (rising, falling, high, low) becomes <strong>mid tone</strong> in unstressed syllables. 
+            This is similar to how English speakers reduce stressed syllables to a neutral "schwa" sound.
+        </p>
+        
+        <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+            <div style="margin-bottom: 1rem;">
+                <strong style="color: #9c27b0;">📖 Written (Careful Speech):</strong><br>
+                <span class="thai-text" style="font-size: 1.4rem;">หนังสือ</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">nǎng-sʉ̌ʉ</span><br>
+                <span style="color: #666;">falling tone + rising tone (book)</span>
+            </div>
+            <div style="border-top: 2px dashed #9c27b0; padding-top: 1rem;">
+                <strong style="color: #9c27b0;">🗣️ Spoken (Natural Speed):</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">nang<span style="color: var(--saffron);">~</span>sʉ̌ʉ</span><br>
+                <span style="color: #666;">First syllable becomes unstressed → tone flattens to mid tone</span>
+            </div>
+        </div>
+        
+        <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px;">
+            <div style="margin-bottom: 1rem;">
+                <strong style="color: #9c27b0;">📖 Written:</strong><br>
+                <span class="thai-text" style="font-size: 1.4rem;">อาหาร</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">aa-hǎan</span><br>
+                <span style="color: #666;">mid tone + rising tone (food)</span>
+            </div>
+            <div style="border-top: 2px dashed #9c27b0; padding-top: 1rem;">
+                <strong style="color: #9c27b0;">🗣️ Spoken:</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">aa<span style="color: var(--saffron);">~</span>hǎan</span><br>
+                <span style="color: #666;">First syllable loses emphasis (though already mid, becomes even flatter)</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Transformation 2 -->
+    <div class="card" style="border-left: 5px solid #ff9800;">
+        <h4 style="margin-top: 0; color: #ff9800;">
+            2️⃣ Vowel Reduction → Schwa (ə)
+        </h4>
+        <p style="line-height: 1.8;">
+            The original vowel sound shifts toward <strong>"ə"</strong> (schwa - the neutral "uh" sound). 
+            Just like English "America" → "A-mer-ə-ca" in fast speech, Thai vowels in unstressed syllables 
+            move toward this lazy, neutral sound.
+        </p>
+        
+        <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+            <div style="margin-bottom: 1rem;">
+                <strong style="color: #ff9800;">📖 Written (Careful Speech):</strong><br>
+                <span class="thai-text" style="font-size: 1.4rem;">มหาวิทยาลัย</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">má-hǎa-wít-tá-yaa-lai</span><br>
+                <span style="color: #666;">university (6 syllables)</span>
+            </div>
+            <div style="border-top: 2px dashed #ff9800; padding-top: 1rem;">
+                <strong style="color: #ff9800;">🗣️ Spoken (Natural Speed):</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">mə<span style="color: var(--saffron);">~</span>hǎa-wit<span style="color: var(--saffron);">~</span>tə<span style="color: var(--saffron);">~</span>yaa-lai</span><br>
+                <span style="color: #666;">"má" → "mə", "tá" → "tə" (vowels reduce to schwa)</span>
+            </div>
+        </div>
+        
+        <div style="background: #fff3e0; padding: 1rem; border-radius: 8px;">
+            <div style="margin-bottom: 1rem;">
+                <strong style="color: #ff9800;">📖 Written:</strong><br>
+                <span class="thai-text" style="font-size: 1.4rem;">ขอบคุณ</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">kɔ̀ɔp-kun</span><br>
+                <span style="color: #666;">thank you (2 syllables)</span>
+            </div>
+            <div style="border-top: 2px dashed #ff9800; padding-top: 1rem;">
+                <strong style="color: #ff9800;">🗣️ Spoken:</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">kɔ̀p<span style="color: var(--saffron);">~</span>kun</span><br>
+                <span style="color: #666;">First syllable shortens; "ɔɔ" → "ɔ" (shortened, slightly reduced)</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Transformation 3 -->
+    <div class="card" style="border-left: 5px solid #4caf50;">
+        <h4 style="margin-top: 0; color: #4caf50;">
+            3️⃣ Syllable Flow → No Glottal Stop
+        </h4>
+        <p style="line-height: 1.8;">
+            When an unstressed syllable with a <strong>short vowel</strong> precedes another syllable, 
+            Thai speakers skip the glottal stop and let the syllables <strong>blend together smoothly</strong>. 
+            This is the opposite of "dead syllables" where you cut the air off sharply.
+        </p>
+        
+        <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+            <div style="margin-bottom: 1rem;">
+                <strong style="color: #4caf50;">📖 Written (Careful Speech):</strong><br>
+                <span class="thai-text" style="font-size: 1.4rem;">แสดง</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">sà-dɛɛng</span><br>
+                <span style="color: #666;">to show/perform</span>
+            </div>
+            <div style="border-top: 2px dashed #4caf50; padding-top: 1rem;">
+                <strong style="color: #4caf50;">🗣️ Spoken (Natural Speed):</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">sa<span style="color: var(--saffron);">~</span>dɛɛng</span><br>
+                <span style="color: #666;">"sà" flows directly into "dɛɛng" - no throat closure</span><br>
+                <span style="color: #4caf50; font-style: italic;">Like English "a dang" said quickly</span>
+            </div>
+        </div>
+        
+        <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px;">
+            <div style="margin-bottom: 1rem;">
+                <strong style="color: #4caf50;">📖 Written:</strong><br>
+                <span class="thai-text" style="font-size: 1.4rem;">กะหนาด</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">gà-nàat</span><br>
+                <span style="color: #666;">like, similar to (size)</span>
+            </div>
+            <div style="border-top: 2px dashed #4caf50; padding-top: 1rem;">
+                <strong style="color: #4caf50;">🗣️ Spoken:</strong><br>
+                <span class="paiboon" style="font-size: 1.3rem;">ga<span style="color: var(--saffron);">~</span>nàat</span><br>
+                <span style="color: #666;">"gà" blends into "nàat" without separation</span>
+            </div>
+        </div>
+        
+        <div style="background: #c8e6c9; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+            <strong style="color: #1b5e20;">⚡ Compare with DEAD SYLLABLE:</strong><br><br>
+            <div style="background: white; padding: 0.75rem; border-radius: 5px;">
+                <span class="thai-text" style="font-size: 1.4rem;">สะใจ</span> 
+                <span class="paiboon" style="font-size: 1.3rem;">sà-jai</span> 
+                <span style="color: #666;">(satisfied)</span><br>
+                <span style="font-size: 0.95rem; color: #d84315;">
+                    ❌ Here "sà" has glottal stop → "sà" [stop] "jai" (like "uh-oh")<br>
+                    The first syllable is <strong>stressed and stopped</strong>, not flowing.
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Practical Application -->
+<div class="card" style="background: linear-gradient(135deg, #e1f5fe 0%, #b3e5fc 100%); margin-top: 2rem;">
+    <h3 style="margin-top: 0; color: #01579b;">
+        🎯 Practical Application for Learners
+    </h3>
+    
+    <div style="line-height: 2;">
+        <strong>When Speaking:</strong>
+        <ul style="margin-left: 1.5rem;">
+            <li>Always stress the <strong>final syllable</strong> clearly with full tone</li>
+            <li>Reduce unstressed syllables naturally - don't over-pronounce them</li>
+            <li>Let live syllables flow together smoothly</li>
+            <li>Practice saying words faster to find natural stress patterns</li>
+        </ul>
+        
+        <strong>When Listening:</strong>
+        <ul style="margin-left: 1.5rem;">
+            <li>Focus on the <strong>stressed syllables</strong> - they carry meaning</li>
+            <li>Expect unstressed syllables to sound "mushy" or unclear</li>
+            <li>Native speakers reduce more than textbooks show</li>
+            <li>The faster the speech, the more reduction occurs</li>
+        </ul>
+        
+        <strong>Golden Rule:</strong>
+        <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 5px solid #01579b;">
+            <strong style="color: #01579b;">The last syllable always tells the story!</strong> 
+            If you miss unstressed syllables, you can still understand the word. 
+            But miss the final stressed syllable, and you'll be lost. 
+            Thai speakers rely on that final syllable for meaning.
+        </div>
+    </div>
+</div>
+
+
+
+<div style="text-align: center; margin-top: 3rem;">
+    <a href="/paiboon" class="btn" style="margin-right: 1rem;">← Paiboon Guide</a>
+    <a href="/lessons" class="btn btn-saffron">Practice with Lessons →</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function showTab(tabName) {
+    // Hide all tabs
+    document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.remove('active');
+    });
+    
+    // Remove active from all buttons
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Show selected tab
+    document.getElementById(tabName).classList.add('active');
+    
+    // Add active to clicked button
+    event.target.classList.add('active');
+    
+    // Scroll to top of content
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+{% endblock %}

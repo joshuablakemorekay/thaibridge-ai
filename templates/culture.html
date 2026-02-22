@@ -1,0 +1,497 @@
+{% extends "base.html" %}
+
+{% block title %}Thai Culture & Etiquette{% endblock %}
+
+{% block content %}
+<h1>
+    🎭 Thai Culture & Etiquette
+    <span class="thai">วัฒนธรรมและมารยาทไทย</span>
+</h1>
+
+<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+    Understanding Thai culture enriches your language learning and helps you connect more deeply with Thai people.
+</p>
+
+<!-- Quick Navigation -->
+<div class="card" style="text-align: center;">
+    <strong>Jump to:</strong>
+    <p style="margin-top: 0.5rem;">
+        <a href="#greetings" class="btn" style="margin: 0.25rem;">👋 Greetings</a>
+        <a href="#wai" class="btn" style="margin: 0.25rem;">🙏 The Wai</a>
+        <a href="#festivals" class="btn btn-saffron" style="margin: 0.25rem;">🎉 Festivals</a>
+        <a href="#stories" class="btn" style="margin: 0.25rem;">📖 Stories</a>
+    </p>
+</div>
+
+<!-- Greetings Section -->
+{% if cultural_info.greetings_hello_goodbye %}
+<div class="collapsible-section">
+    <div class="section-header" id="greetings">
+        <h2>👋 {{ cultural_info.greetings_hello_goodbye.name }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+        <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">
+                {{ cultural_info.greetings_hello_goodbye.description }}
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                    <strong style="color: var(--royal-purple);">Category:</strong>
+                    <p>{{ cultural_info.greetings_hello_goodbye.category }}</p>
+                </div>
+                <div style="background: white; padding: 1rem; border-radius: 8px; text-align: center;">
+                    <strong style="color: var(--temple-red);">Importance:</strong>
+                    <p>{{ cultural_info.greetings_hello_goodbye.importance }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hello Section -->
+        <div class="card" style="border-left: 5px solid var(--bodhi-green);">
+            <h3 style="color: var(--bodhi-green);">{{ cultural_info.greetings_hello_goodbye.hello.title }}</h3>
+            
+            <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                <h4 style="margin-top: 0;">Base Word</h4>
+                <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hello.base_word.thai }}</div>
+                <div class="paiboon" style="font-size: 1.5rem; color: #2e7d32; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hello.base_word.paiboon }}</div>
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Meaning:</strong> {{ cultural_info.greetings_hello_goodbye.hello.base_word.meaning }}</p>
+                <p style="font-size: 0.95rem; color: #666;"><em>{{ cultural_info.greetings_hello_goodbye.hello.base_word.etymology }}</em></p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+                <!-- Male Form -->
+                <div style="background: #e3f2fd; padding: 1.25rem; border-radius: 8px;">
+                    <h4 style="color: #1565c0; margin-top: 0;">👨 Male Form</h4>
+                    <div class="thai-text" style="font-size: 1.8rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hello.male_form.thai }}</div>
+                    <div class="paiboon" style="font-size: 1.2rem; color: #1976d2; margin-bottom: 0.75rem;">{{ cultural_info.greetings_hello_goodbye.hello.male_form.paiboon }}</div>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Breakdown:</strong> {{ cultural_info.greetings_hello_goodbye.hello.male_form.breakdown }}</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Usage:</strong> {{ cultural_info.greetings_hello_goodbye.hello.male_form.usage }}</p>
+                    <div style="background: white; padding: 0.5rem; border-radius: 5px; margin-top: 0.5rem;">
+                        <strong>Formality:</strong> {{ cultural_info.greetings_hello_goodbye.hello.male_form.formality }}
+                    </div>
+                </div>
+
+                <!-- Female Form -->
+                <div style="background: #fce4ec; padding: 1.25rem; border-radius: 8px;">
+                    <h4 style="color: #ad1457; margin-top: 0;">👩 Female Form</h4>
+                    <div class="thai-text" style="font-size: 1.8rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hello.female_form.thai }}</div>
+                    <div class="paiboon" style="font-size: 1.2rem; color: #c2185b; margin-bottom: 0.75rem;">{{ cultural_info.greetings_hello_goodbye.hello.female_form.paiboon }}</div>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Breakdown:</strong> {{ cultural_info.greetings_hello_goodbye.hello.female_form.breakdown }}</p>
+                    <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Usage:</strong> {{ cultural_info.greetings_hello_goodbye.hello.female_form.usage }}</p>
+                    <div style="background: white; padding: 0.5rem; border-radius: 5px; margin-top: 0.5rem;">
+                        <strong>Formality:</strong> {{ cultural_info.greetings_hello_goodbye.hello.female_form.formality }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monk Form -->
+            <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.25rem; border-radius: 8px; margin: 1rem 0; border-left: 4px solid var(--saffron);">
+                <h4 style="color: var(--temple-red); margin-top: 0;">🙏 Greeting Monks</h4>
+                <div class="thai-text" style="font-size: 1.8rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hello.monk_form.thai }}</div>
+                <div class="paiboon" style="font-size: 1.2rem; color: #e65100; margin-bottom: 0.75rem;">{{ cultural_info.greetings_hello_goodbye.hello.monk_form.paiboon }}</div>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Breakdown:</strong> {{ cultural_info.greetings_hello_goodbye.hello.monk_form.breakdown }}</p>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;"><strong>Usage:</strong> {{ cultural_info.greetings_hello_goodbye.hello.monk_form.usage }}</p>
+                <div style="background: white; padding: 0.5rem; border-radius: 5px; margin-top: 0.5rem;">
+                    <strong>Formality:</strong> {{ cultural_info.greetings_hello_goodbye.hello.monk_form.formality }}
+                </div>
+            </div>
+
+            <!-- Key Insight -->
+            <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; border-left: 5px solid var(--royal-purple);">
+                <h4 style="color: var(--royal-purple); margin-top: 0;">💡 {{ cultural_info.greetings_hello_goodbye.hello.key_insight.point }}</h4>
+                <p style="font-size: 1.05rem; line-height: 1.8;">{{ cultural_info.greetings_hello_goodbye.hello.key_insight.explanation }}</p>
+            </div>
+
+            <!-- Cultural Notes -->
+            <div style="background: #fff9e6; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
+                <h4 style="color: var(--temple-red); margin-top: 0;">📝 Cultural Notes</h4>
+                <ul style="line-height: 1.8; padding-left: 1.5rem;">
+                    {% for note in cultural_info.greetings_hello_goodbye.hello.cultural_notes %}
+                    <li>{{ note }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Casual Hi Section -->
+        <div class="card" style="border-left: 5px solid #FF9800;">
+            <h3 style="color: #FF9800;">{{ cultural_info.greetings_hello_goodbye.hi_casual.title }}</h3>
+            
+            <div style="background: #fff3e0; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                <div class="thai-text" style="font-size: 2rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.thai }}</div>
+                <div class="paiboon" style="font-size: 1.3rem; color: #e65100; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.paiboon }}</div>
+                <p style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Meaning:</strong> {{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.meaning }}</p>
+                <p style="font-size: 0.9rem; color: #666;"><em>{{ cultural_info.greetings_hello_goodbye.hi_casual.base_word.origin }}</em></p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px;">
+                    <strong>👨 Male:</strong> <span class="thai-text">{{ cultural_info.greetings_hello_goodbye.hi_casual.male_form.thai }}</span>
+                    <br><span class="paiboon">{{ cultural_info.greetings_hello_goodbye.hi_casual.male_form.paiboon }}</span>
+                </div>
+                <div style="background: #fce4ec; padding: 1rem; border-radius: 8px;">
+                    <strong>👩 Female:</strong> <span class="thai-text">{{ cultural_info.greetings_hello_goodbye.hi_casual.female_form.thai }}</span>
+                    <br><span class="paiboon">{{ cultural_info.greetings_hello_goodbye.hi_casual.female_form.paiboon }}</span>
+                </div>
+            </div>
+
+            <div style="background: #ffebee; padding: 1rem; border-radius: 8px; border-left: 4px solid #c62828;">
+                <strong style="color: #c62828;">⚠️ When to Use:</strong>
+                <p style="margin: 0.5rem 0;">{{ cultural_info.greetings_hello_goodbye.hi_casual.when_to_use }}</p>
+                <p style="margin: 0.5rem 0; font-style: italic;">{{ cultural_info.greetings_hello_goodbye.hi_casual.comparison }}</p>
+            </div>
+        </div>
+
+        <!-- Goodbye Section -->
+        <div class="card" style="border-left: 5px solid #9C27B0;">
+            <h3 style="color: #9C27B0;">{{ cultural_info.greetings_hello_goodbye.goodbye.title }}</h3>
+            
+            <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                <h4 style="margin-top: 0;">Primary Goodbye (Same as Hello!)</h4>
+                <div class="thai-text" style="font-size: 2rem; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.goodbye.primary.thai }}</div>
+                <div class="paiboon" style="font-size: 1.3rem; color: #6a1b9a; margin-bottom: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.goodbye.primary.paiboon }}</div>
+                <p><strong>Male:</strong> {{ cultural_info.greetings_hello_goodbye.goodbye.primary.male }}</p>
+                <p><strong>Female:</strong> {{ cultural_info.greetings_hello_goodbye.goodbye.primary.female }}</p>
+                <p style="font-style: italic; color: #666; margin-top: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.goodbye.primary.note }}</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;">
+                <div style="background: #e8eaf6; padding: 1.25rem; border-radius: 8px;">
+                    <h4 style="color: #3f51b5; margin-top: 0;">Formal Goodbye</h4>
+                    <div class="thai-text" style="font-size: 1.5rem;">{{ cultural_info.greetings_hello_goodbye.goodbye.formal_goodbye.thai }}</div>
+                    <div class="paiboon" style="margin: 0.5rem 0;">{{ cultural_info.greetings_hello_goodbye.goodbye.formal_goodbye.paiboon }}</div>
+                    <p style="font-size: 0.9rem;"><strong>Male:</strong> {{ cultural_info.greetings_hello_goodbye.goodbye.formal_goodbye.male }}</p>
+                    <p style="font-size: 0.9rem;"><strong>Female:</strong> {{ cultural_info.greetings_hello_goodbye.goodbye.formal_goodbye.female }}</p>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.goodbye.formal_goodbye.usage }}</p>
+                </div>
+
+                <div style="background: #e8f5e9; padding: 1.25rem; border-radius: 8px;">
+                    <h4 style="color: #2e7d32; margin-top: 0;">See You Again</h4>
+                    <div class="thai-text" style="font-size: 1.5rem;">{{ cultural_info.greetings_hello_goodbye.goodbye.see_you_again.thai }}</div>
+                    <div class="paiboon" style="margin: 0.5rem 0;">{{ cultural_info.greetings_hello_goodbye.goodbye.see_you_again.paiboon }}</div>
+                    <p style="font-size: 0.9rem;"><strong>Male:</strong> {{ cultural_info.greetings_hello_goodbye.goodbye.see_you_again.male }}</p>
+                    <p style="font-size: 0.9rem;"><strong>Female:</strong> {{ cultural_info.greetings_hello_goodbye.goodbye.see_you_again.female }}</p>
+                    <p style="font-size: 0.85rem; color: #666; margin-top: 0.5rem;">{{ cultural_info.greetings_hello_goodbye.goodbye.see_you_again.usage }}</p>
+                </div>
+            </div>
+
+            <!-- Cultural Notes for Goodbye -->
+            <div style="background: #fff9e6; padding: 1.25rem; border-radius: 8px;">
+                <h4 style="color: var(--temple-red); margin-top: 0;">📝 Cultural Notes</h4>
+                <ul style="line-height: 1.8; padding-left: 1.5rem;">
+                    {% for note in cultural_info.greetings_hello_goodbye.goodbye.cultural_notes %}
+                    <li>{{ note }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Common Mistakes -->
+        <div class="card" style="border-left: 5px solid #c62828;">
+            <h3 style="color: #c62828;">⚠️ Common Mistakes to Avoid</h3>
+            {% for mistake in cultural_info.greetings_hello_goodbye.common_mistakes %}
+            <div style="background: #ffebee; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                <p style="margin: 0; margin-bottom: 0.5rem;"><strong>Mistake:</strong> {{ mistake.mistake }}</p>
+                <p style="margin: 0; color: #c62828;"><strong>❌ Wrong:</strong> {{ mistake.wrong }}</p>
+                <p style="margin: 0; color: #2e7d32;"><strong>✓ Right:</strong> {{ mistake.right }}</p>
+                <p style="margin: 0.5rem 0 0 0; font-style: italic; color: #666;"><strong>Why:</strong> {{ mistake.why }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- Wai Gesture Section -->
+{% if cultural_info.wai_gesture %}
+<div class="collapsible-section">
+    <div class="section-header" id="wai">
+        <h2>🙏 {{ cultural_info.wai_gesture.name }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+        <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; border-left: 5px solid var(--saffron);">
+            <p style="font-size: 1.1rem; line-height: 1.8;">{{ cultural_info.wai_gesture.description }}</p>
+        </div>
+
+        <!-- Basic Concept -->
+        <div class="card" style="border-left: 5px solid var(--royal-purple);">
+            <h3 style="color: var(--royal-purple);">The Wai Gesture</h3>
+            <div style="background: #f3e5f5; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">{{ cultural_info.wai_gesture.basic_concept.thai }}</div>
+                <div class="paiboon" style="font-size: 1.5rem; color: #6a1b9a; margin-bottom: 0.75rem;">{{ cultural_info.wai_gesture.basic_concept.paiboon }}</div>
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>Meaning:</strong> {{ cultural_info.wai_gesture.basic_concept.meaning }}</p>
+                <p style="font-size: 1rem; margin-bottom: 0.5rem;"><strong>Gesture:</strong> {{ cultural_info.wai_gesture.basic_concept.gesture }}</p>
+                <p style="font-size: 0.95rem; color: #666;"><em><strong>Cultural Roots:</strong> {{ cultural_info.wai_gesture.basic_concept.cultural_roots }}</em></p>
+            </div>
+        </div>
+
+        <!-- Three Levels of Wai -->
+        <div class="card" style="border-left: 5px solid var(--bodhi-green);">
+            <h3 style="color: var(--bodhi-green);">Three Levels of Wai</h3>
+            <p style="font-size: 1.05rem; margin-bottom: 1.5rem;">{{ cultural_info.wai_gesture.three_levels.explanation }}</p>
+
+            <!-- Level 1 - Peers -->
+            <div style="background: #e8f5e9; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid #4caf50;">
+                <h4 style="color: #2e7d32; margin-top: 0;">Level 1: {{ cultural_info.wai_gesture.three_levels.level_1_peers.name }}</h4>
+                <div class="paiboon" style="font-size: 1.2rem; color: #388e3c; margin-bottom: 1rem;">{{ cultural_info.wai_gesture.three_levels.level_1_peers.paiboon }}</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="background: white; padding: 0.75rem; border-radius: 5px;">
+                        <strong>Hand Position:</strong> {{ cultural_info.wai_gesture.three_levels.level_1_peers.hand_position }}
+                    </div>
+                    <div style="background: white; padding: 0.75rem; border-radius: 5px;">
+                        <strong>Fingertips:</strong> {{ cultural_info.wai_gesture.three_levels.level_1_peers.fingertips }}
+                    </div>
+                </div>
+                <p style="margin-bottom: 0.5rem;"><strong>Bow:</strong> {{ cultural_info.wai_gesture.three_levels.level_1_peers.bow }}</p>
+                <p style="margin-bottom: 0.75rem;"><strong>Usage:</strong> {{ cultural_info.wai_gesture.three_levels.level_1_peers.usage }}</p>
+                <div style="background: white; padding: 1rem; border-radius: 8px;">
+                    <strong>Examples:</strong>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                        {% for example in cultural_info.wai_gesture.three_levels.level_1_peers.examples %}
+                        <li>{{ example }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p style="margin-top: 0.75rem; font-style: italic; color: #2e7d32;"><strong>Note:</strong> {{ cultural_info.wai_gesture.three_levels.level_1_peers.note }}</p>
+            </div>
+
+            <!-- Level 2 - Respect -->
+            <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid #2196f3;">
+                <h4 style="color: #1565c0; margin-top: 0;">Level 2: {{ cultural_info.wai_gesture.three_levels.level_2_respect.name }}</h4>
+                <div class="paiboon" style="font-size: 1.2rem; color: #1976d2; margin-bottom: 1rem;">{{ cultural_info.wai_gesture.three_levels.level_2_respect.paiboon }}</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="background: white; padding: 0.75rem; border-radius: 5px;">
+                        <strong>Hand Position:</strong> {{ cultural_info.wai_gesture.three_levels.level_2_respect.hand_position }}
+                    </div>
+                    <div style="background: white; padding: 0.75rem; border-radius: 5px;">
+                        <strong>Fingertips:</strong> {{ cultural_info.wai_gesture.three_levels.level_2_respect.fingertips }}
+                    </div>
+                </div>
+                <p style="margin-bottom: 0.5rem;"><strong>Bow:</strong> {{ cultural_info.wai_gesture.three_levels.level_2_respect.bow }}</p>
+                <p style="margin-bottom: 0.75rem;"><strong>Usage:</strong> {{ cultural_info.wai_gesture.three_levels.level_2_respect.usage }}</p>
+                <div style="background: white; padding: 1rem; border-radius: 8px;">
+                    <strong>Examples:</strong>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                        {% for example in cultural_info.wai_gesture.three_levels.level_2_respect.examples %}
+                        <li>{{ example }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <p style="margin-top: 0.75rem; font-style: italic; color: #1565c0;"><strong>Note:</strong> {{ cultural_info.wai_gesture.three_levels.level_2_respect.note }}</p>
+            </div>
+
+            <!-- Level 3 - Highest -->
+            <div style="background: #fff3e0; padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; border-left: 4px solid var(--saffron);">
+                <h4 style="color: var(--temple-red); margin-top: 0;">Level 3: {{ cultural_info.wai_gesture.three_levels.level_3_highest.name }}</h4>
+                <div class="paiboon" style="font-size: 1.2rem; color: #e65100; margin-bottom: 1rem;">{{ cultural_info.wai_gesture.three_levels.level_3_highest.paiboon }}</div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem;">
+                    <div style="background: white; padding: 0.75rem; border-radius: 5px;">
+                        <strong>Hand Position:</strong> {{ cultural_info.wai_gesture.three_levels.level_3_highest.hand_position }}
+                    </div>
+                    <div style="background: white; padding: 0.75rem; border-radius: 5px;">
+                        <strong>Fingertips:</strong> {{ cultural_info.wai_gesture.three_levels.level_3_highest.fingertips }}
+                    </div>
+                </div>
+                <p style="margin-bottom: 0.5rem;"><strong>Bow:</strong> {{ cultural_info.wai_gesture.three_levels.level_3_highest.bow }}</p>
+                <p style="margin-bottom: 0.75rem;"><strong>Usage:</strong> {{ cultural_info.wai_gesture.three_levels.level_3_highest.usage }}</p>
+                <div style="background: white; padding: 1rem; border-radius: 8px;">
+                    <strong>Examples:</strong>
+                    <ul style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                        {% for example in cultural_info.wai_gesture.three_levels.level_3_highest.examples %}
+                        <li>{{ example }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div style="background: #ffebee; padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 3px solid #c62828;">
+                    <strong style="color: #c62828;">⚠️ CRITICAL NOTE:</strong>
+                    <p style="margin: 0.5rem 0 0 0;">{{ cultural_info.wai_gesture.three_levels.level_3_highest.critical_note }}</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Who Wais Whom -->
+        <div class="card" style="border-left: 5px solid #ff9800;">
+            <h3 style="color: #ff9800;">Who Wais Whom?</h3>
+            <p style="font-size: 1.05rem; margin-bottom: 1rem;"><strong>Golden Rule:</strong> {{ cultural_info.wai_gesture.who_wais_whom.rule }}</p>
+            <div style="background: #fff3e0; padding: 1.25rem; border-radius: 8px;">
+                <strong>Social Hierarchy:</strong>
+                <ul style="margin-top: 0.75rem; line-height: 1.8; padding-left: 1.5rem;">
+                    {% for rule in cultural_info.wai_gesture.who_wais_whom.hierarchy %}
+                    <li>{{ rule }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 3px solid var(--bodhi-green);">
+                <strong style="color: var(--bodhi-green);">💡 Key Insight:</strong>
+                <p style="margin: 0.5rem 0 0 0;">{{ cultural_info.wai_gesture.who_wais_whom.key_insight }}</p>
+            </div>
+        </div>
+
+        <!-- Practical Scenarios -->
+        <div class="card" style="border-left: 5px solid #9c27b0;">
+            <h3 style="color: #9c27b0;">Real-World Scenarios</h3>
+            {% for scenario in cultural_info.wai_gesture.practical_scenarios %}
+            <div style="background: #f3e5f5; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
+                <h4 style="color: #6a1b9a; margin-top: 0;">{{ scenario.scenario }}</h4>
+                <p style="margin: 0.5rem 0;"><strong>Action:</strong> {{ scenario.action }}</p>
+                <p style="margin: 0.5rem 0;"><strong>Level:</strong> {{ scenario.level }}</p>
+                <p style="margin: 0.5rem 0;"><strong>Words:</strong> <span class="paiboon">{{ scenario.words }}</span></p>
+                <div style="background: white; padding: 0.75rem; border-radius: 5px; margin-top: 0.5rem;">
+                    <em>{{ scenario.notes }}</em>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Common Mistakes -->
+        <div class="card" style="border-left: 5px solid #c62828;">
+            <h3 style="color: #c62828;">⚠️ Common Wai Mistakes</h3>
+            {% for mistake in cultural_info.wai_gesture.common_mistakes %}
+            <div style="background: #ffebee; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                <p style="margin: 0; margin-bottom: 0.5rem;"><strong>Mistake:</strong> {{ mistake.mistake }}</p>
+                <p style="margin: 0; color: #c62828;"><strong>❌ Wrong:</strong> {{ mistake.wrong }}</p>
+                <p style="margin: 0; color: #2e7d32;"><strong>✓ Right:</strong> {{ mistake.right }}</p>
+                <p style="margin: 0.5rem 0 0 0; font-style: italic; color: #666;"><strong>Why:</strong> {{ mistake.why }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Foreigner Guidelines -->
+        <div class="card" style="border-left: 5px solid #673ab7; background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%);">
+            <h3 style="color: #4527a0;">Guidelines for Foreigners</h3>
+            
+            <div style="background: white; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
+                <h4 style="color: #5e35b1; margin-top: 0;">Should You Wai?</h4>
+                <p><strong>Reciprocation:</strong> {{ cultural_info.wai_gesture.foreigner_guidelines.reciprocation.rule }}</p>
+                <p><strong>How:</strong> {{ cultural_info.wai_gesture.foreigner_guidelines.reciprocation.how }}</p>
+                <p style="font-style: italic; color: #666;"><strong>Exception:</strong> {{ cultural_info.wai_gesture.foreigner_guidelines.reciprocation.exception }}</p>
+            </div>
+
+            <div style="background: white; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
+                <h4 style="color: #5e35b1; margin-top: 0;">Definitely Wai In These Situations:</h4>
+                <ul style="line-height: 1.8; padding-left: 1.5rem;">
+                    {% for situation in cultural_info.wai_gesture.foreigner_guidelines.when_to_definitely_wai %}
+                    <li>{{ situation }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<!-- Festivals Section -->
+<h2 id="festivals">🎉 Major Thai Festivals</h2>
+
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="festivals">🎉 Major Thai Festivals</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+        <div class="card-grid">
+            {% for key, festival in cultural_info.items() %}
+            {% if key not in ['greetings_hello_goodbye', 'wai_gesture'] %}
+            <div class="card">
+                <h3>{{ festival.name }}</h3>
+                <p style="color: var(--saffron); font-weight: bold; margin-bottom: 0.5rem;">
+                    📅 {{ festival.date }}
+                </p>
+                <p style="line-height: 1.8;">{{ festival.description }}</p>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <p>Learn the vocabulary for Thai festivals:</p>
+            <a href="/exercise/festivals" class="btn btn-saffron">Practice Festival Vocabulary →</a>
+        </div>
+    </div>
+</div>
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<!-- Cultural Stories Section -->
+<h2 id="stories">📖 Cultural Stories</h2>
+
+<p style="margin-bottom: 1.5rem;">
+    These stories provide cultural context and teach important Thai values:
+</p>
+
+{% for key, story in stories.items() %}
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
+    <h3 style="color: var(--temple-red);">{{ story.title }}</h3>
+    <p style="color: var(--royal-purple); margin-bottom: 1rem;">
+        Category: <a href="/exercise/{{ key }}">{{ key.replace('_', ' ').title() }}</a>
+    </p>
+    
+    <p style="line-height: 1.8; white-space: pre-line;">{{ story.story }}</p>
+    
+    <div style="margin-top: 1rem; padding: 1rem; background: white; border-radius: 10px; border-left: 4px solid var(--gold);">
+        <strong>✨ Lesson:</strong>
+        <p style="margin-top: 0.5rem;">{{ story.lesson }}</p>
+    </div>
+</div>
+{% endfor %}
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<!-- Cultural Tips -->
+<div class="card" style="border-left-color: var(--bodhi-green);">
+    <h2 style="margin-top: 0;">🙏 Important Cultural Tips</h2>
+    
+    <h4>The Wai (ไหว้)</h4>
+    <p style="margin-bottom: 1rem;">
+        The traditional Thai greeting with palms pressed together. The height of hands and depth of bow 
+        indicates respect level. Higher hands = more respect (for monks, elders, royalty).
+    </p>
+    
+    <h4>Head & Feet</h4>
+    <p style="margin-bottom: 1rem;">
+        The head is the most sacred part of the body; the feet are the lowest. Never touch someone's head, 
+        point your feet at Buddha images or people, or step over someone.
+    </p>
+    
+    <h4>Respect for Monarchy</h4>
+    <p style="margin-bottom: 1rem;">
+        The Thai royal family is deeply revered. Always stand for the royal anthem (played before movies), 
+        and never speak disrespectfully about the monarchy.
+    </p>
+    
+    <h4>Temple Etiquette</h4>
+    <p style="margin-bottom: 1rem;">
+        Dress modestly (cover shoulders and knees), remove shoes before entering buildings, 
+        sit with feet tucked behind you (not pointing at Buddha images), women should never touch monks.
+    </p>
+    
+    <h4>Saving Face (รักษาหน้า)</h4>
+    <p>
+        Thais avoid public confrontation and embarrassment. Stay calm, smile, and handle disagreements 
+        privately. Losing your temper causes everyone to lose face.
+    </p>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-left-color: var(--bodhi-green);">
+    <h2 style="margin-top: 0;">🌾 About Isan Culture</h2>
+    <p style="line-height: 1.8;">
+        The <strong>Isan region</strong> (อีสาน) in northeastern Thailand has a distinct culture influenced 
+        by Lao language and traditions. Many forest monasteries are located here, and the Isan dialect 
+        is commonly spoken among rural communities.
+    </p>
+    <p style="margin-top: 1rem;">
+        Isan is known for:
+    </p>
+    <ul style="margin: 0.5rem 0 1rem 2rem; line-height: 2;">
+        <li><strong>Som Tam</strong> (ส้มตำ) - Spicy papaya salad</li>
+        <li><strong>Mor Lam</strong> (หมอลำ) - Traditional music</li>
+        <li><strong>Bun Bang Fai</strong> - Rocket Festival</li>
+        <li><strong>Warm hospitality</strong> - "คนอีสานมีน้ำใจ"</li>
+    </ul>
+    <a href="/exercise/isan_dialect" class="btn">Learn Isan Vocabulary →</a>
+</div>
+{% endblock %}

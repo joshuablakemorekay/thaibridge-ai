@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Lesson {{ lesson.id }}: {{ lesson.title }}{% endblock %}
+
+{% block content %}
+<div style="margin-bottom: 1rem;">
+    <a href="/lessons" style="color: var(--royal-purple);">← Back to All Lessons</a>
+</div>
+
+<h1>
+    Lesson {{ lesson.id }}: {{ lesson.title }}
+    <span class="thai">{{ lesson.thai_title }}</span>
+</h1>
+
+<div style="text-align: center; margin-bottom: 2rem;">
+    <span class="tag tag-{{ lesson.level.lower() }}" style="font-size: 1rem; padding: 0.5rem 1rem;">
+        {{ lesson.level }}
+    </span>
+</div>
+
+<!-- Objectives -->
+<div class="card">
+    <h2 style="margin-top: 0;">🎯 Learning Objectives</h2>
+    <ul style="margin-left: 1.5rem; line-height: 2;">
+        {% for obj in lesson.objectives %}
+        <li>{{ obj }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- Short Sentences -->
+<div class="card">
+    <h2 style="margin-top: 0;">📝 Short Phrases</h2>
+    <p style="color: #666; margin-bottom: 1rem;">Essential phrases to memorize:</p>
+    
+    {% for sentence in lesson.sentences.short %}
+    <div class="example-box">
+        <p class="thai-text" style="font-size: 1.8rem;">{{ sentence.thai }}</p>
+        <p class="paiboon" style="font-size: 1.2rem;">{{ sentence.paiboon }}</p>
+        <p style="font-size: 1.1rem;">{{ sentence.english }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Long Sentences -->
+<div class="card">
+    <h2 style="margin-top: 0;">📖 Full Sentences</h2>
+    <p style="color: #666; margin-bottom: 1rem;">Practice these complete sentences:</p>
+    
+    {% for sentence in lesson.sentences.long %}
+    <div class="example-box" style="border-left-color: var(--royal-purple);">
+        <p class="thai-text" style="font-size: 1.6rem;">{{ sentence.thai }}</p>
+        <p class="paiboon" style="font-size: 1.1rem;">{{ sentence.paiboon }}</p>
+        <p style="font-size: 1.1rem;">{{ sentence.english }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Practice Tips -->
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); border-left-color: var(--saffron);">
+    <h2 style="margin-top: 0; color: var(--temple-red);">💡 Practice Tips</h2>
+    <ul style="margin-left: 1.5rem; line-height: 2;">
+        <li><strong>Listen first:</strong> If possible, find audio of native speakers saying these phrases</li>
+        <li><strong>Repeat aloud:</strong> Practice speaking each phrase 5-10 times</li>
+        <li><strong>Focus on tones:</strong> Pay attention to the tone marks in Paiboon romanization</li>
+        <li><strong>Use in context:</strong> Try to use at least one phrase in real conversation today</li>
+        <li><strong>Write it down:</strong> Practice writing the Thai script if you're learning to read</li>
+    </ul>
+</div>
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<!-- Navigation -->
+<div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+    {% if lesson.id > 1 %}
+    <a href="/lesson/{{ lesson.id - 1 }}" class="btn btn-secondary">← Previous Lesson</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+    
+    <a href="/lessons" class="btn">All Lessons</a>
+    
+    {% if lesson.id < 15 %}
+    <a href="/lesson/{{ lesson.id + 1 }}" class="btn">Next Lesson →</a>
+    {% else %}
+    <span></span>
+    {% endif %}
+</div>
+{% endblock %}

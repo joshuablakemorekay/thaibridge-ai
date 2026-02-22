@@ -1,0 +1,222 @@
+{% extends "base.html" %}
+
+{% block title %}Developer Mode - Thai Learning{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="developer-login-container">
+        <div class="developer-icon">👨‍💻</div>
+        <h1>Developer Mode</h1>
+        <p>Enter the developer password to access all sections</p>
+        
+        <form id="developer-form">
+            <div class="form-group">
+                <input type="password" 
+                       id="password" 
+                       name="password" 
+                       placeholder="Enter developer password"
+                       class="form-control"
+                       required>
+            </div>
+            
+            <button type="submit" class="btn btn-developer">Activate Developer Mode</button>
+        </form>
+        
+        <div id="message" class="message"></div>
+        
+        <div class="info-box">
+            <h3>Developer Mode Benefits:</h3>
+            <ul>
+                <li>✓ Instant access to ALL sections</li>
+                <li>✓ No level requirements</li>
+                <li>✓ No subscription needed</li>
+                <li>✓ Full content unlock</li>
+                <li>✓ Testing & development access</li>
+            </ul>
+        </div>
+        
+        <a href="/" class="back-link">← Back to Home</a>
+    </div>
+</div>
+
+<style>
+    .developer-login-container {
+        max-width: 500px;
+        margin: 3rem auto;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(45, 27, 78, 0.9) 100%);
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.5);
+        text-align: center;
+        border: 2px solid var(--royal-gold);
+    }
+    
+    .developer-icon {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+    }
+    
+    .developer-login-container h1 {
+        color: var(--royal-gold);
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+    
+    .developer-login-container p {
+        color: #ccc;
+        margin-bottom: 2rem;
+    }
+    
+    .form-group {
+        margin: 2rem 0;
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid var(--royal-gold);
+        border-radius: 10px;
+        font-size: 1.1rem;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .form-control:focus {
+        outline: none;
+        background: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+    }
+    
+    .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+    
+    .btn-developer {
+        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--gold-shimmer) 100%);
+        color: var(--deep-purple);
+        padding: 1rem 2.5rem;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+    }
+    
+    .btn-developer:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.6);
+    }
+    
+    .message {
+        margin-top: 1.5rem;
+        padding: 1rem;
+        border-radius: 10px;
+        font-weight: bold;
+        display: none;
+    }
+    
+    .message.success {
+        background: rgba(34, 139, 34, 0.3);
+        border: 2px solid #228B22;
+        color: #90EE90;
+        display: block;
+    }
+    
+    .message.error {
+        background: rgba(139, 0, 0, 0.3);
+        border: 2px solid #8B0000;
+        color: #FF6B6B;
+        display: block;
+    }
+    
+    .info-box {
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(212, 175, 55, 0.3);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        text-align: left;
+    }
+    
+    .info-box h3 {
+        color: var(--royal-gold);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .info-box ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .info-box li {
+        padding: 0.5rem 0;
+        color: #ccc;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .info-box li:last-child {
+        border-bottom: none;
+    }
+    
+    .back-link {
+        display: inline-block;
+        margin-top: 2rem;
+        color: var(--royal-gold);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .back-link:hover {
+        color: var(--gold-shimmer);
+        transform: translateX(-5px);
+    }
+</style>
+
+<script>
+    document.getElementById('developer-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const password = document.getElementById('password').value;
+        const messageDiv = document.getElementById('message');
+        
+        try {
+            const response = await fetch('/developer-login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `password=${encodeURIComponent(password)}`
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                messageDiv.className = 'message success';
+                messageDiv.textContent = '✓ ' + data.message;
+                
+                setTimeout(() => {
+                    window.location.href = '/progress';
+                }, 1500);
+            } else {
+                messageDiv.className = 'message error';
+                messageDiv.textContent = '✗ ' + data.message;
+                document.getElementById('password').value = '';
+            }
+        } catch (error) {
+            messageDiv.className = 'message error';
+            messageDiv.textContent = '✗ An error occurred';
+        }
+    });
+</script>
+{% endblock %}
