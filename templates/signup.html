@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+
+{% block title %}Create Account - Thai Learning{% endblock %}
+
+{% block extra_css %}
+<style>
+    .signup-wrapper {
+        max-width: 500px;
+        margin: 3rem auto;
+        padding: 2rem;
+    }
+
+    .form-group {
+        margin: 1.25rem 0;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--dark-text);
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: border-color 0.2s ease;
+        font-family: inherit;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border-color: var(--royal-purple);
+        box-shadow: 0 0 0 3px rgba(74, 26, 107, 0.1);
+    }
+
+    .form-group input.input-error {
+        border-color: #8B0000;
+    }
+
+    .field-hint {
+        font-size: 0.8rem;
+        color: #888;
+        margin-top: 0.3rem;
+    }
+
+    #message {
+        display: none;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        margin-top: 1.25rem;
+        font-weight: 500;
+    }
+
+    #message.error {
+        background: rgba(139, 0, 0, 0.3);
+        border: 2px solid #8B0000;
+        color: #FF6B6B;
+        display: block;
+    }
+
+    #message.success {
+        background: rgba(34, 139, 34, 0.3);
+        border: 2px solid #228B22;
+        color: #90EE90;
+        display: block;
+    }
+
+    .signup-submit {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        cursor: pointer;
+        border: none;
+    }
+
+    .login-link {
+        text-align: center;
+        margin-top: 1.5rem;
+        color: #666;
+        font-size: 0.95rem;
+    }
+
+    .login-link a {
+        color: var(--royal-purple);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+
+    .password-strength {
+        margin-top: 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .strength-weak   { color: #c0392b; }
+    .strength-fair   { color: #e67e22; }
+    .strength-good   { color: var(--bodhi-green); }
+    .strength-strong { color: #1a7a2e; font-weight: 600; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="signup-wrapper">
+    <div class="card">
+        <h1 style="text-align: center; color: var(--royal-purple);">
+            Create Account
+            <span class="thai" style="font-size: 1.2rem; display: block; color: var(--deep-gold); margin-top: 0.5rem;">
+                สมัครสมาชิก
+            </span>
+        </h1>
+        <p style="text-align: center; color: #666; margin-bottom: 1.5rem;">
+            Join us and begin your Thai language journey
+        </p>
+
+        <form id="signup-form" novalidate>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text"
+                       id="username"
+                       name="username"
+                       autocomplete="username"
+                       placeholder="e.g. thai_learner_99"
+                       maxlength="20">
+                <p class="field-hint">3-20 characters, letters, numbers, and underscores only.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email"
+                       id="email"
+                       name="email"
+                       autocomplete="email"
+                       placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"
+                       id="password"
+                       name="password"
+                       autocomplete="new-password"
+                       placeholder="At least 8 characters">
+                <p class="field-hint">Minimum 8 characters with at least one letter and one number.</p>
+                <div id="password-strength" class="password-strength"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password"
+                       id="confirm-password"
+                       name="confirm_password"
+                       autocomplete="new-password"
+                       placeholder="Repeat your password">
+            </div>
+
+            <button type="submit"
+                    class="btn btn-saffron signup-submit"
+                    id="submit-btn">
+                Create My Account
+            </button>
+
+        </form>
+
+        <div id="message" role="alert"></div>
+
+        <div class="login-link">
+            Already have an account?
+            <a href="/developer">Sign in as Developer</a>
+        </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="/" class="btn" style="text-decoration: none;">&larr; Back to Home</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+    'use strict';
+
+    var form      = document.getElementById('signup-form');
+    var msgDiv    = document.getElementById('message');
+    var submitBtn = document.getElementById('submit-btn');
+    var pwdInput  = document.getElementById('password');
+    var pwdStrDiv = document.getElementById('password-strength');
+
+    function showMessage(text, type) {
+        msgDiv.textContent = text;
+        msgDiv.className   = 'message ' + type;
+    }
+
+    function clearMessage() {
+        msgDiv.className   = 'message';
+        msgDiv.textContent = '';
+    }
+
+    // Live password strength indicator
+    pwdInput.addEventListener('input', function () {
+        var val = this.value;
+        if (!val) { pwdStrDiv.textContent = ''; return; }
+
+        var strength, cls;
+        if (val.length < 8) {
+            strength = 'Too short'; cls = 'strength-weak';
+        } else if (!/[a-zA-Z]/.test(val) || !/[0-9]/.test(val)) {
+            strength = 'Needs a letter and a number'; cls = 'strength-fair';
+        } else if (val.length < 12) {
+            strength = 'Good'; cls = 'strength-good';
+        } else {
+            strength = 'Strong'; cls = 'strength-strong';
+        }
+
+        pwdStrDiv.textContent = 'Strength: ' + strength;
+        pwdStrDiv.className   = 'password-strength ' + cls;
+    });
+
+    function validateForm(data) {
+        var usernameRe = /^[a-zA-Z0-9_]{3,20}$/;
+        var emailRe    = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+
+        if (!data.username || !data.email || !data.password || !data.confirm_password) {
+            return 'All fields are required.';
+        }
+        if (!usernameRe.test(data.username)) {
+            return 'Username must be 3\u201320 characters: letters, numbers, and underscores only.';
+        }
+        if (!emailRe.test(data.email)) {
+            return 'Please enter a valid email address.';
+        }
+        if (data.password.length < 8) {
+            return 'Password must be at least 8 characters.';
+        }
+        if (!/[a-zA-Z]/.test(data.password) || !/[0-9]/.test(data.password)) {
+            return 'Password must contain at least one letter and one number.';
+        }
+        if (data.password !== data.confirm_password) {
+            return 'Passwords do not match.';
+        }
+        return null;
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearMessage();
+
+        var data = {
+            username:         document.getElementById('username').value.trim(),
+            email:            document.getElementById('email').value.trim(),
+            password:         document.getElementById('password').value,
+            confirm_password: document.getElementById('confirm-password').value
+        };
+
+        var clientError = validateForm(data);
+        if (clientError) {
+            showMessage(clientError, 'error');
+            return;
+        }
+
+        submitBtn.disabled    = true;
+        submitBtn.textContent = 'Creating account...';
+
+        fetch('/signup', {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify(data)
+        })
+        .then(function (response) { return response.json(); })
+        .then(function (result) {
+            if (result.success) {
+                showMessage(result.message, 'success');
+                submitBtn.textContent = 'Account Created!';
+                setTimeout(function () {
+                    window.location.href = result.redirect || '/';
+                }, 1500);
+            } else {
+                showMessage(result.message, 'error');
+                submitBtn.disabled    = false;
+                submitBtn.textContent = 'Create My Account';
+            }
+        })
+        .catch(function () {
+            showMessage('A network error occurred. Please try again.', 'error');
+            submitBtn.disabled    = false;
+            submitBtn.textContent = 'Create My Account';
+        });
+    });
+}());
+</script>
+{% endblock %}

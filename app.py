@@ -11,9 +11,12 @@ Version 3.0 - AI Agent Edition
 import os
 # Set API key BEFORE any other imports
 
-from flask import Flask, render_template, request, jsonify, session, redirect
+from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 import random
 import re
+from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
@@ -28,6 +31,37 @@ app.secret_key = os.environ.get("FLASK_SECRET_KEY")
 
 if not app.secret_key:
     raise ValueError("FLASK_SECRET_KEY is not set. Please set it in your environment.")
+
+# ============================================
+# DATABASE CONFIGURATION
+# ============================================
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), 'thai_app.db'
+)
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+# ============================================
+# USER MODEL
+# ============================================
+
+class User(db.Model):
+    __tablename__ = 'users'
+    id            = db.Column(db.Integer, primary_key=True)
+    username      = db.Column(db.String(20),  unique=True, nullable=False)
+    email         = db.Column(db.String(254), unique=True, nullable=False)
+    password_hash = db.Column(db.String(256), nullable=False)
+    created_at    = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+with app.app_context():
+    db.create_all()
 
 # ============================================
 # AI AGENT INTEGRATION
@@ -49,7 +83,6 @@ except Exception as e:
 
 import hashlib
 from functools import wraps
-from datetime import datetime, timedelta
 
 # Developer password (CHANGE THIS to your own secure password!)
 DEVELOPER_PASSWORD_HASH = hashlib.sha256("buddha2025".encode()).hexdigest()
@@ -4776,6 +4809,57 @@ def developer_logout():
     session['user_progress']['is_developer'] = False
     session.modified = True
     return redirect('/')
+
+# ============================================
+# USER REGISTRATION ROUTE
+# ============================================
+
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'GET':
+        return render_template('signup.html')
+
+    data = request.get_json()
+    if not data:
+        return jsonify({'success': False, 'message': 'Invalid request format.'}), 400
+
+    username         = data.get('username', '').strip()
+    email            = data.get('email', '').strip().lower()
+    password         = data.get('password', '')
+    confirm_password = data.get('confirm_password', '')
+
+    if not all([username, email, password, confirm_password]):
+        return jsonify({'success': False, 'message': 'All fields are required.'})
+    if not re.match(r'^[a-zA-Z0-9_]{3,20}$', username):
+        return jsonify({'success': False, 'message': 'Username must be 3\u201320 characters: letters, numbers, and underscores only.'})
+    if not re.match(r'^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$', email):
+        return jsonify({'success': False, 'message': 'Please enter a valid email address.'})
+    if len(password) < 8:
+        return jsonify({'success': False, 'message': 'Password must be at least 8 characters.'})
+    if not re.search(r'[a-zA-Z]', password) or not re.search(r'[0-9]', password):
+        return jsonify({'success': False, 'message': 'Password must contain at least one letter and one number.'})
+    if password != confirm_password:
+        return jsonify({'success': False, 'message': 'Passwords do not match.'})
+    if User.query.filter_by(username=username).first():
+        return jsonify({'success': False, 'message': 'That username is already taken.'})
+    if User.query.filter_by(email=email).first():
+        return jsonify({'success': False, 'message': 'An account with that email already exists.'})
+
+    new_user = User(username=username, email=email)
+    new_user.set_password(password)
+    db.session.add(new_user)
+    db.session.commit()
+
+    init_user_progress()
+    session['user_progress']['user_id'] = new_user.id
+    session['user_progress']['username'] = new_user.username
+    session.modified = True
+
+    return jsonify({
+        'success': True,
+        'message': f'Welcome, {new_user.username}! Your account has been created.',
+        'redirect': '/'
+    })
 
 @app.route('/subscribe/<tier>')
 def subscribe(tier):
