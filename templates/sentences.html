@@ -1,0 +1,474 @@
+{% extends "base.html" %}
+
+{% block title %}Sentences & Conversations{% endblock %}
+
+{% block extra_css %}
+<style>
+/* Ensure all romanization uses monospace */
+.paiboon, .romanized, .romanization,
+[class*="paiboon"], [class*="romaniz"] {
+    font-family: 'Roboto Mono', 'Consolas', 'Monaco', monospace !important;
+    font-weight: 400 !important;
+    line-height: 2.5 !important;
+    letter-spacing: 0.15em;
+    word-spacing: 0.3em;
+}
+
+/* Ensure IPA characters in sentence examples are consistent */
+.sentence-example .paiboon,
+.card .paiboon {
+    display: inline-block;
+    vertical-align: baseline;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    💬 Sentences & Conversations
+    <span class="thai">รูปประโยคและบทสนทนา</span>
+</h1>
+
+<p style="text-align: center; color: #666; margin-bottom: 2rem;">
+    Master Thai fluency with essential sentence patterns and real-world conversations!
+    <br>Practice progressive (กำลัง), completed (แล้ว), and future (จะ) forms in context.
+</p>
+
+<!-- Quick Navigation -->
+<div style="background: white; padding: 1rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+    <h3 style="margin-top: 0;">Quick Navigation:</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+        <a href="#aspect-markers" class="btn" style="margin: 0;">📊 Aspect Markers</a>
+        <a href="#questions" class="btn" style="margin: 0;">❓ Questions</a>
+        <a href="#verbs-practice" class="btn" style="margin: 0;">🔄 Verb Practice</a>
+        <a href="#conversations" class="btn" style="margin: 0;">💭 Conversations</a>
+    </div>
+</div>
+
+<!-- Current Gender Display -->
+<div class="card" style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); border-left: 5px solid var(--royal-purple);">
+    <h3 style="margin-top: 0; color: var(--royal-purple);">
+        👤 Examples for: 
+        {% if gender == 'male' %}
+            <span style="color: #2196F3;">Male Speaker</span>
+        {% elif gender == 'female' %}
+            <span style="color: #E91E63;">Female Speaker</span>
+        {% else %}
+            <span style="color: #9C27B0;">Both Genders (Comparison)</span>
+        {% endif %}
+    </h3>
+    <p>All sentence examples adapt to your gender selection. Change it above to see different forms!</p>
+</div>
+
+<!-- Aspect Markers -->
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="aspect-markers" style="color: var(--saffron); margin-top: 2rem;">📊 {{ patterns.aspect_markers.title }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card">
+    <p style="font-size: 1.05rem; line-height: 1.8;">{{ patterns.aspect_markers.explanation }}</p>
+    
+    <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 4px solid var(--saffron);">
+        <strong>💡 Key Concept:</strong> English uses verb forms (eat/eating/ate/will eat), but Thai keeps the verb the same and adds PARTICLES to show time!
+    </div>
+</div>
+
+<!-- Progressive -->
+<div class="card" style="border-left: 5px solid #4CAF50;">
+    <h3 style="color: #4CAF50;">{{ patterns.aspect_markers.progressive.name }}</h3>
+    <div style="background: #f1f8e9; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ patterns.aspect_markers.progressive.pattern }}<br>
+        <strong>Usage:</strong> {{ patterns.aspect_markers.progressive.usage }}
+    </div>
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.progressive.male if gender == 'male' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.progressive.female if gender == 'female' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Completed -->
+<div class="card" style="border-left: 5px solid #FF9800;">
+    <h3 style="color: #FF9800;">{{ patterns.aspect_markers.completed.name }}</h3>
+    <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ patterns.aspect_markers.completed.pattern }}<br>
+        <strong>Usage:</strong> {{ patterns.aspect_markers.completed.usage }}
+    </div>
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.completed.male if gender == 'male' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.completed.female if gender == 'female' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Future -->
+<div class="card" style="border-left: 5px solid #2196F3;">
+    <h3 style="color: #2196F3;">{{ patterns.aspect_markers.future.name }}</h3>
+    <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ patterns.aspect_markers.future.pattern }}<br>
+        <strong>Usage:</strong> {{ patterns.aspect_markers.future.usage }}
+    </div>
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.future.male if gender == 'male' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.future.female if gender == 'female' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Combined Patterns -->
+<div class="card" style="border-left: 5px solid #9C27B0;">
+    <h3 style="color: #9C27B0;">{{ patterns.aspect_markers.combined.name }}</h3>
+    <div style="background: #f3e5f5; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ patterns.aspect_markers.combined.pattern }}<br>
+        <strong>Usage:</strong> {{ patterns.aspect_markers.combined.usage }}
+    </div>
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.combined.male if gender == 'male' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
+            <strong style="color: #9C27B0;">Note:</strong> {{ ex.note }}
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+    {% endif %}
+    
+    {% for ex in aspect_examples.combined.female if gender == 'female' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
+            <strong style="color: #9C27B0;">Note:</strong> {{ ex.note }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Question Patterns -->
+    </div>
+</div>
+
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="questions" style="color: var(--temple-red); margin-top: 2rem;">❓ {{ patterns.question_patterns.title }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card">
+    <p style="font-size: 1.05rem; line-height: 1.8;">{{ patterns.question_patterns.explanation }}</p>
+</div>
+
+<!-- Yes/No Questions -->
+<div class="card" style="border-left: 5px solid #FF5722;">
+    <h3 style="color: #FF5722;">{{ patterns.question_patterns.yes_no.name }}</h3>
+    <div style="background: #fbe9e7; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ patterns.question_patterns.yes_no.pattern }}
+    </div>
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+    {% endif %}
+    
+    {% for ex in question_examples.yes_no.male if gender == 'male' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+    {% endif %}
+    
+    {% for ex in question_examples.yes_no.female if gender == 'female' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- WH Questions -->
+<div class="card" style="border-left: 5px solid #795548;">
+    <h3 style="color: #795548;">{{ patterns.question_patterns.wh_questions.name }}</h3>
+    <div style="background: #efebe9; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ patterns.question_patterns.wh_questions.pattern }}
+    </div>
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+    {% endif %}
+    
+    {% for ex in question_examples.wh_questions.male if gender == 'male' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
+            <strong style="color: #795548;">Note:</strong> {{ ex.note }}
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% if gender == 'neutral' %}
+        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+    {% endif %}
+    
+    {% for ex in question_examples.wh_questions.female if gender == 'female' or gender == 'neutral' %}
+    <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+        <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+            <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
+            <strong style="color: #795548;">Note:</strong> {{ ex.note }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Verb Practice Table -->
+    </div>
+</div>
+
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="verbs-practice" style="color: var(--bodhi-green); margin-top: 2rem;">🔄 {{ patterns.common_verbs.title }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card">
+    <p style="font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem;">{{ patterns.common_verbs.explanation }}</p>
+    
+    <div style="overflow-x: auto;">
+        <table>
+            <thead>
+                <tr style="background: var(--bodhi-green); color: white;">
+                    <th>Verb</th>
+                    <th>Progressive<br>(กำลัง...)</th>
+                    <th>Completed<br>(...แล้ว)</th>
+                    <th>Future<br>(จะ...)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for verb in patterns.common_verbs.verbs %}
+                <tr>
+                    <td>
+                        <strong>{{ verb.verb }}</strong><br>
+                        <span class="thai-text">{{ verb.present.thai }}</span><br>
+                        <span class="paiboon">{{ verb.present.paiboon }}</span>
+                    </td>
+                    <td style="background: #e8f5e9;">
+                        <span class="thai-text">{{ verb.progressive.thai }}</span><br>
+                        <span class="paiboon">{{ verb.progressive.paiboon }}</span><br>
+                        <em>{{ verb.progressive.english }}</em>
+                    </td>
+                    <td style="background: #fff3e0;">
+                        <span class="thai-text">{{ verb.completed.thai }}</span><br>
+                        <span class="paiboon">{{ verb.completed.paiboon }}</span><br>
+                        <em>{{ verb.completed.english }}</em>
+                    </td>
+                    <td style="background: #e3f2fd;">
+                        <span class="thai-text">{{ verb.future.thai }}</span><br>
+                        <span class="paiboon">{{ verb.future.paiboon }}</span><br>
+                        <em>{{ verb.future.english }}</em>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 1rem; border-radius: 8px; margin-top: 1.5rem; border-left: 4px solid var(--bodhi-green);">
+        <strong>💡 Practice Tip:</strong> Take any verb from this table and create your own sentences using ผม/ดิฉัน (I), คุณ (you), or เขา (he/she) as the subject!
+    </div>
+</div>
+
+<!-- Real Conversations -->
+    </div>
+</div>
+
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="conversations" style="color: var(--lotus-pink); margin-top: 2rem;">💭 Real-World Conversations</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card">
+    <p style="font-size: 1.05rem; line-height: 1.8;">Practice natural Thai through realistic dialogues. Listen for aspect markers and gender-appropriate language!</p>
+</div>
+
+{% for conv_id, conv in conversations.items() %}
+<div class="card" style="border-left: 5px solid var(--lotus-pink);">
+    <h3 style="color: var(--lotus-pink);">{{ conv.title }}</h3>
+    <p style="color: #666; margin-bottom: 0.5rem;"><strong>Setting:</strong> {{ conv.setting }}</p>
+    <p style="margin-bottom: 1.5rem;">
+        <span style="background: {% if conv.difficulty == 'beginner' %}#4CAF50{% else %}#FF9800{% endif %}; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.9rem;">
+            {{ conv.difficulty|title }}
+        </span>
+    </p>
+    
+    {% for line in conv.dialogue %}
+    <div style="background: {% if 'male' in line.speaker %}#e3f2fd{% elif 'female' in line.speaker %}#fce4ec{% else %}#f5f5f5{% endif %}; padding: 1.25rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid {% if 'male' in line.speaker %}#2196F3{% elif 'female' in line.speaker %}#E91E63{% else %}#757575{% endif %};">
+        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+            <span style="background: {% if 'male' in line.speaker %}#2196F3{% elif 'female' in line.speaker %}#E91E63{% else %}#757575{% endif %}; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">
+                {% if 'male' in line.speaker %}👨{% elif 'female' in line.speaker %}👩{% else %}👤{% endif %} 
+                {{ line.speaker.replace('_', ' ')|title }}
+            </span>
+        </div>
+        <div class="thai-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">{{ line.thai }}</div>
+        <div class="paiboon" style="font-size: 1.2rem; color: #666; margin-bottom: 0.5rem;">{{ line.paiboon }}</div>
+        <div style="font-size: 1rem; color: #333; margin-bottom: 0.5rem;"><strong>English:</strong> {{ line.english }}</div>
+        <div style="background: white; padding: 0.5rem; border-radius: 6px; font-size: 0.9rem; color: #666;">
+            <em>{{ line.note }}</em>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+<!-- Practice Suggestions -->
+    </div>
+</div>
+
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 style="color: var(--saffron); margin-top: 2rem;">🎯 Practice Suggestions</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+        <div style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 1.5rem; border-radius: 10px;">
+            <h4 style="color: var(--bodhi-green);">📝 Writing Practice</h4>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>Write 3 sentences with กำลัง (progressive)</li>
+                <li>Write 3 sentences with แล้ว (completed)</li>
+                <li>Write 3 sentences with จะ (future)</li>
+                <li>Combine them in a short paragraph!</li>
+            </ul>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%); padding: 1.5rem; border-radius: 10px;">
+            <h4 style="color: #1976D2;">🗣️ Speaking Practice</h4>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>Read conversations aloud</li>
+                <li>Record yourself speaking</li>
+                <li>Practice with language exchange partners</li>
+                <li>Use aspect markers in daily practice</li>
+            </ul>
+        </div>
+        
+        <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.5rem; border-radius: 10px;">
+            <h4 style="color: var(--saffron);">🔄 Transformation Practice</h4>
+            <ul style="margin-left: 1.5rem; line-height: 1.8;">
+                <li>Take a present tense sentence</li>
+                <li>Add กำลัง to make it progressive</li>
+                <li>Add แล้ว to make it completed</li>
+                <li>Add จะ to make it future</li>
+            </ul>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+{% endblock %}

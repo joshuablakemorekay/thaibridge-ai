@@ -1,0 +1,225 @@
+{% extends "base.html" %}
+
+{% block title %}Thai Formality System{% endblock %}
+
+{% block extra_css %}
+<style>
+    .formality-card {
+        transition: transform 0.2s ease;
+    }
+    
+    .formality-card:hover {
+        transform: translateY(-3px);
+    }
+    
+    .formality-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+    
+    .formality-box {
+        padding: 1rem;
+        border-radius: 10px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    
+    .usage-section {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin: 1rem 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    🎭 Thai Formality System
+    <span class="thai">ระดับความสุภาพของภาษา</span>
+</h1>
+
+<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+    Understanding Thai formality levels is crucial for appropriate communication. Our unique 10-level system 
+    helps you navigate from monastic to vulgar speech. Every word in this app is labeled!
+</p>
+
+<!-- Quick Legend -->
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
+    <h2 style="margin-top: 0;">🎨 Quick Reference Legend</h2>
+    <div class="formality-grid">
+        {% for key, level in levels.items() %}
+        <div class="formality-box" style="background: {{ level.color }};">
+            <div style="font-size: 2rem;">{{ level.symbol }}</div>
+            <div>{{ level.code }}</div>
+            <div style="font-size: 0.9rem; margin-top: 0.25rem;">{{ level.name }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Detailed Level Descriptions -->
+<h2>📚 Detailed Formality Levels</h2>
+
+{% for key, level in levels.items() %}
+<div class="card formality-card" style="border-left: 5px solid {{ level.color }};">
+    <div style="display: flex; justify-content: space-between; align-items: start;">
+        <h2 style="color: {{ level.color }}; margin: 0;">
+            {{ level.symbol }} {{ level.code }} - {{ level.name }}
+        </h2>
+        <span style="background: {{ level.color }}; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold;">
+            {{ level.code }}
+        </span>
+    </div>
+    
+    <p class="thai-text" style="font-size: 1.2rem; margin: 0.5rem 0;">{{ level.thai }}</p>
+    <p style="line-height: 1.8; margin: 1rem 0; color: #444;">{{ level.description }}</p>
+    
+    <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid {{ level.color }};">
+        <h4 style="margin-top: 0; color: {{ level.color }};">📝 Examples:</h4>
+        <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 2;">
+            {% for example in level.examples %}
+            <li>{{ example }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endfor %}
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<!-- Usage Guide -->
+<div class="card" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-left-color: var(--bodhi-green);">
+    <h2 style="margin-top: 0;">🎯 When to Use Each Level</h2>
+    
+    <div class="usage-section">
+        <h3 style="color: #FF9933;">☸ Monastic (M)</h3>
+        <p><strong>Use:</strong> Only when speaking as a monk, to a monk, or about monastic life</p>
+        <p><strong>Examples:</strong> ฉัน (monk eating), จีวร (robes), บิณฑบาต (alms round)</p>
+        <p><strong>⚠️ Warning:</strong> Never use casually - it's disrespectful to the Sangha</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #D4AF37;">👑 Royal (R)</h3>
+        <p><strong>Use:</strong> Only for Thai royalty and in formal royal contexts</p>
+        <p><strong>Examples:</strong> เสวย (eat-royal), ตรัส (speak-royal), เสด็จ (go-royal)</p>
+        <p><strong>⚠️ Warning:</strong> Even when speaking ABOUT the King/Queen, use royal vocabulary</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #8B4513;">⌛ Obsolete/Archaic (O)</h3>
+        <p><strong>Use:</strong> Historical interest only, reading old texts</p>
+        <p><strong>Examples:</strong> Old pronouns and archaic verb forms</p>
+        <p><strong>⚠️ Warning:</strong> Don't use in modern conversation - people won't understand you!</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #8B008B;">📜 Literary/Poetic (L)</h3>
+        <p><strong>Use:</strong> Poetry, literature, formal writing, artistic expression</p>
+        <p><strong>Examples:</strong> พระจันทร์ (moon-poetic), ดวงตะวัน (sun-literary)</p>
+        <p><strong>⚠️ Warning:</strong> Sounds pretentious in casual speech</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #1E90FF;">🔬 Technical/Specialized (T)</h3>
+        <p><strong>Use:</strong> Academic, scientific, medical, legal contexts</p>
+        <p><strong>Examples:</strong> อนุภาค (particle-physics), เซลล์ (cell-biology)</p>
+        <p><strong>✓ Tip:</strong> Use with professionals in their fields</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #4B0082;">🎩 Formal/Deferential (F)</h3>
+        <p><strong>Use:</strong> Business meetings, official events, speaking to elders/superiors</p>
+        <p><strong>Examples:</strong> ดิฉัน (I-female formal), ท่าน (you-honorific)</p>
+        <p><strong>✓ Tip:</strong> Safe choice when unsure - shows respect</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #228B22;">⚪ Neutral (N)</h3>
+        <p><strong>Use:</strong> Everyday polite speech with ครับ/ค่ะ particles</p>
+        <p><strong>Examples:</strong> ผม/ดิฉัน (I), คุณ (you), กิน (eat)</p>
+        <p><strong>✓ Tip:</strong> Use with strangers, service staff, acquaintances - the default</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #FFA500;">💬 Casual/Colloquial (C)</h3>
+        <p><strong>Use:</strong> Friends, family, peers in informal settings</p>
+        <p><strong>Examples:</strong> เออ (yeah), อ่ะ (ok), เหรอ (really?)</p>
+        <p><strong>⚠️ Warning:</strong> Wait for Thai people to shift to this level first</p>
+    </div>
+    
+    <div class="usage-section">
+        <h3 style="color: #DC143C;">⚠️ Impolite/Rude (I)</h3>
+        <p><strong>Use:</strong> ONLY with very close friends who expect it</p>
+        <p><strong>Examples:</strong> กู (I-rude), มึง (you-rude), ไอ้ (prefix-rude)</p>
+        <p><strong>🚨 DANGER:</strong> Can seriously offend if used with wrong people. Be EXTREMELY careful!</p>
+    </div>
+    
+    <div class="usage-section" style="background: #ffebee; border: 2px solid #8B0000;">
+        <h3 style="color: #8B0000;">🚫 Vulgar/Taboo (V)</h3>
+        <p><strong>Use:</strong> NEVER. AVOID COMPLETELY.</p>
+        <p><strong>Examples:</strong> [Not listed - these words are forbidden]</p>
+        <p><strong>🚨 FORBIDDEN:</strong> These words are obscene and taboo in ALL contexts. Using them will cause serious offense!</p>
+    </div>
+</div>
+
+<!-- Practical Tips -->
+<div class="card" style="border-left-color: var(--saffron);">
+    <h2 style="margin-top: 0;">💡 Practical Tips for Foreigners</h2>
+    
+    <h4>1. Default to Neutral (N)</h4>
+    <p>When in doubt, use neutral formality with ครับ/ค่ะ particles. It's polite and appropriate for 90% of situations.</p>
+    
+    <h4>2. Let Thais Lead on Casual Speech</h4>
+    <p>Don't shift to casual (C) until Thai friends do first. They'll signal when it's appropriate.</p>
+    
+    <h4>3. Respect the Sacred</h4>
+    <p>Never use monastic (M) or royal (R) vocabulary casually. These are deeply respected in Thai culture.</p>
+    
+    <h4>4. Avoid Impolite & Vulgar</h4>
+    <p>Even if you hear Thais using impolite (I) or vulgar (V) words, don't copy them as a foreigner. The rules are different.</p>
+    
+    <h4>5. Context Matters</h4>
+    <p>The same word can be fine in one context and offensive in another. Pay attention to setting and relationships.</p>
+    
+    <h4>6. When at Temples</h4>
+    <p>Use formal (F) vocabulary when speaking to monks or about Buddhist concepts. Show proper respect.</p>
+    
+    <h4>7. Professional Settings</h4>
+    <p>Stick to formal (F) or neutral (N) in business. Technical (T) is appropriate when discussing specialized topics.</p>
+    
+    <h4>8. Literary Words</h4>
+    <p>Literary (L) words are beautiful but sound unnatural in conversation. Save them for writing.</p>
+</div>
+
+<!-- How to Read Badges -->
+<div class="card">
+    <h2 style="margin-top: 0;">🏷️ Reading Formality Badges</h2>
+    <p>Throughout this app, you'll see colored badges next to words:</p>
+    
+    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0;">
+        <span style="background: #FF9933; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">☸ M</span>
+        <span style="background: #D4AF37; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">👑 R</span>
+        <span style="background: #8B4513; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">⌛ O</span>
+        <span style="background: #8B008B; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">📜 L</span>
+        <span style="background: #1E90FF; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">🔬 T</span>
+        <span style="background: #4B0082; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">🎩 F</span>
+        <span style="background: #228B22; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">⚪ N</span>
+        <span style="background: #FFA500; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">💬 C</span>
+        <span style="background: #DC143C; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">⚠️ I</span>
+        <span style="background: #8B0000; color: white; padding: 5px 10px; border-radius: 10px; font-size: 0.9rem;">🚫 V</span>
+    </div>
+    
+    <p><strong>Hover over any badge</strong> to see a tooltip with the full description.</p>
+    <p><strong>Color indicates formality</strong> - warmer colors (orange/red) = less formal; cooler colors (blue/green) = more formal</p>
+</div>
+
+<div style="text-align: center; margin-top: 2rem;">
+    <a href="/learn" class="btn btn-saffron">Practice Vocabulary with Formality →</a>
+    <a href="/lessons" class="btn" style="margin-left: 1rem;">Learn in Context →</a>
+</div>
+{% endblock %}

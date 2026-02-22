@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Practice: {{ category.replace('_', ' ').title() }}{% endblock %}
+
+{% block content %}
+<h1>
+    Practice: {{ category.replace('_', ' ').title() }}
+    <span class="thai">ฝึกฝน</span>
+</h1>
+
+{% if beginner_mode %}
+<div class="card" style="background: #e8f5e9; border-left-color: var(--bodhi-green); text-align: center;">
+    <strong>🌱 Beginner Mode Active</strong> - Final 'i' converted to 'y', final 'o' to 'w'
+    <br><a href="/exercise/{{ category }}">Switch to Standard Mode</a>
+</div>
+{% else %}
+<div style="text-align: center; margin-bottom: 1rem;">
+    <a href="/exercise/{{ category }}?beginner=true" class="btn" style="background: #90EE90; color: #006400;">
+        🌱 Enable Beginner Mode
+    </a>
+</div>
+{% endif %}
+
+<!-- Quiz Section -->
+<div class="card" id="quizSection">
+    <h2>🎯 Quick Quiz</h2>
+    <div id="quizContent">
+        <p style="text-align: center;">
+            <button class="btn btn-saffron" onclick="loadQuiz()">Start Quiz</button>
+        </p>
+    </div>
+</div>
+
+<!-- Vocabulary Table -->
+<h2>📝 Vocabulary List</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Thai</th>
+            <th>Paiboon</th>
+            <th>English</th>
+            <th style="text-align: center;">Formality</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for word in vocab %}
+        <tr>
+            <td class="thai-text">{{ word.thai }}</td>
+            <td class="paiboon">{{ word.paiboon }}</td>
+            <td>{{ word.english }}</td>
+            <td style="text-align: center;">
+                {{ get_formality_badge(word.formality)|safe }}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Cultural Story -->
+{% if story %}
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
+    <h2 style="color: var(--temple-red); border: none; margin-top: 0;">📖 {{ story.title }}</h2>
+    <p style="line-height: 1.8; white-space: pre-line;">{{ story.story }}</p>
+    <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid var(--gold);">
+        <strong>✨ Lesson:</strong> {{ story.lesson }}
+    </div>
+</div>
+{% endif %}
+
+<div style="text-align: center; margin-top: 2rem;">
+    <a href="/learn" class="btn btn-secondary">← Back to Categories</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+const category = "{{ category }}";
+const beginnerMode = {{ 'true' if beginner_mode else 'false' }};
+
+let currentQuestion = null;
+let score = 0;
+let total = 0;
+
+async function loadQuiz() {
+    const url = `/api/quiz/${category}${beginnerMode ? '?beginner=true' : ''}`;
+    
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        currentQuestion = data;
+        
+        let html = `
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <p style="font-size: 0.9rem; color: #666;">Score: ${score}/${total}</p>
+                <p class="thai-text" style="font-size: 2.5rem; margin: 1rem 0;">${data.thai}</p>
+                <p style="font-size: 1.2rem; color: #666;">${data.english}</p>
+                <p style="margin-top: 1rem; color: var(--royal-purple);">Select the correct Paiboon romanization:</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; max-width: 500px; margin: 0 auto;">
+        `;
+        
+        data.options.forEach(option => {
+            html += `
+                <button class="btn" onclick="checkAnswer('${option}')" style="width: 100%;">
+                    ${option}
+                </button>
+            `;
+        });
+        
+        html += '</div>';
+        
+        document.getElementById('quizContent').innerHTML = html;
+    } catch (error) {
+        document.getElementById('quizContent').innerHTML = '<p style="color: red;">Error loading quiz. Please try again.</p>';
+    }
+}
+
+async function checkAnswer(answer) {
+    total++;
+    
+    const response = await fetch('/api/check_answer', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            answer: answer,
+            correct: currentQuestion.correct_answer
+        })
+    });
+    
+    const result = await response.json();
+    
+    if (result.correct) {
+        score++;
+    }
+    
+    const resultColor = result.correct ? 'var(--bodhi-green)' : 'var(--temple-red)';
+    const resultIcon = result.correct ? '✅' : '❌';
+    
+    document.getElementById('quizContent').innerHTML = `
+        <div style="text-align: center;">
+            <p style="font-size: 0.9rem; color: #666;">Score: ${score}/${total}</p>
+            <p style="font-size: 3rem;">${resultIcon}</p>
+            <p style="font-size: 1.5rem; color: ${resultColor}; margin: 1rem 0;">
+                ${result.message}
+            </p>
+            <p class="thai-text" style="font-size: 2rem;">${currentQuestion.thai}</p>
+            <p class="paiboon" style="font-size: 1.3rem;">${currentQuestion.correct_answer}</p>
+            <p style="margin-top: 1.5rem;">
+                <button class="btn btn-saffron" onclick="loadQuiz()">Next Question</button>
+            </p>
+        </div>
+    `;
+}
+</script>
+{% endblock %}

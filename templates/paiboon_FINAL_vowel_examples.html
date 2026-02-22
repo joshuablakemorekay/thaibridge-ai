@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+
+{% block title %}Paiboon Romanization Guide{% endblock %}
+
+{% block content %}
+<h1>
+    🔤 Paiboon Romanization Guide
+    <span class="thai">ระบบถอดเสียงไพบูลย์</span>
+</h1>
+
+<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+    {{ guide.overview.description }}
+</p>
+
+<!-- Audio Resource -->
+{% if guide.overview.audio_resource %}
+<div class="card" style="text-align: center; background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-left-color: var(--bodhi-green);">
+    <h3>🔊 Hear All Thai Sounds</h3>
+    <p>{{ guide.overview.audio_resource.description }}</p>
+    <p style="margin-top: 1rem;">
+        <a href="{{ guide.overview.audio_resource.url }}" target="_blank" class="btn btn-saffron">
+            Visit {{ guide.overview.audio_resource.name }} →
+        </a>
+    </p>
+</div>
+{% endif %}
+
+<!-- Quick Navigation -->
+<div class="card" style="text-align: center;">
+    <strong>Jump to:</strong>
+    <p style="margin-top: 0.5rem;">
+        <a href="#tones" class="btn" style="margin: 0.25rem;">5 Tones</a>
+        <a href="#consonants" class="btn" style="margin: 0.25rem;">Consonants</a>
+        <a href="#vowels" class="btn" style="margin: 0.25rem;">Vowels</a>
+        <a href="#tone-markers" class="btn" style="margin: 0.25rem;">Tone Markers</a>
+    </p>
+</div>
+
+<!-- 5 Tones -->
+<h2 id="tones">🎵 The Five Thai Tones</h2>
+
+<p style="margin-bottom: 1rem;">
+    Thai is a tonal language with 5 distinct tones. The same syllable with different tones can mean completely different things!
+</p>
+
+<div class="card-grid">
+    {% for tone in guide.tones %}
+    <div class="card" style="text-align: center;">
+        <h3 style="color: var(--royal-purple);">{{ tone.name }}</h3>
+        <p style="font-size: 2rem; margin: 0.5rem 0;">
+            {% if tone.symbol == 'no mark' %}
+            <span style="color: #999;">(no mark)</span>
+            {% else %}
+            <span style="color: var(--temple-red);">{{ tone.symbol }}</span>
+            {% endif %}
+        </p>
+        <p class="paiboon" style="font-size: 1.5rem;">{{ tone.example }}</p>
+        <p style="color: #666; margin-top: 0.5rem;">{{ tone.description }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-left-color: var(--bodhi-green);">
+    <h3>💡 Tone Learning Tips</h3>
+    <ul style="margin-left: 1.5rem; line-height: 2;">
+        <li><strong>Mid tone:</strong> Think of saying "hmm" thoughtfully - flat and neutral</li>
+        <li><strong>Low tone:</strong> Like a disappointed "oh" - start low, stay low</li>
+        <li><strong>Falling tone:</strong> Like an emphatic "NO!" - start high, fall sharply</li>
+        <li><strong>High tone:</strong> Like asking "huh?" - higher pitched, slightly rising</li>
+        <li><strong>Rising tone:</strong> Like asking "yeah?" uncertainly - rise from mid to high</li>
+    </ul>
+</div>
+
+<!-- Consonants -->
+<h2 id="consonants">🔠 Consonants</h2>
+
+<p style="margin-bottom: 1rem;">
+    Thai has 44 consonant letters, but many share the same sound. Here are the Paiboon romanizations:
+</p>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Thai</th>
+                <th>Paiboon</th>
+                <th>Sound Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cons in guide.consonants %}
+            <tr>
+                <td class="thai-text">{{ cons.thai }}</td>
+                <td class="paiboon" style="font-size: 1.2rem;"><strong>{{ cons.paiboon }}</strong></td>
+                <td>{{ cons.sound }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="card" style="border-left-color: var(--saffron);">
+    <h3>⚠️ Tricky Consonants</h3>
+    <ul style="margin-left: 1.5rem; line-height: 2;">
+        <li><strong>dt</strong> - Unaspirated, between English 'd' and 't'. No puff of air.</li>
+        <li><strong>bp</strong> - Unaspirated, between English 'b' and 'p'. No puff of air.</li>
+        <li><strong>ng</strong> - Can appear at the start of syllables (unusual for English speakers)</li>
+        <li><strong>r</strong> - Rolled or trilled, often softened to 'l' in casual speech</li>
+    </ul>
+</div>
+
+<!-- Vowels -->
+<h2 id="vowels">🔤 Vowels</h2>
+
+<p style="margin-bottom: 1rem;">
+    Thai has short and long vowel pairs. Length matters - it changes meaning!
+</p>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Thai</th>
+                <th>Paiboon</th>
+                <th>Sound Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for vowel in guide.vowels %}
+            <tr>
+                <td class="thai-text">{{ vowel.thai }}</td>
+                <td class="paiboon" style="font-size: 1.2rem;"><strong>{{ vowel.paiboon }}</strong></td>
+                <td>{{ vowel.sound }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="card" style="border-left-color: var(--lotus-pink);">
+    <h3>📏 Short vs. Long Vowels</h3>
+    <p>In Paiboon, <strong>doubled letters = long vowels</strong>:</p>
+    <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
+        <li><span class="paiboon">a</span> (short) vs. <span class="paiboon">aa</span> (long)</li>
+        <li><span class="paiboon">i</span> (short) vs. <span class="paiboon">ii</span> (long)</li>
+        <li><span class="paiboon">u</span> (short) vs. <span class="paiboon">uu</span> (long)</li>
+        <li><span class="paiboon">e</span> (short) vs. <span class="paiboon">ee</span> (long)</li>
+        <li><span class="paiboon">o</span> (short) vs. <span class="paiboon">oo</span> (long)</li>
+        <li><span class="paiboon">ə</span> (short schwa) vs. <span class="paiboon">əə</span> (long schwa)</li>
+    </ul>
+</div>
+
+{% if guide.vowel_examples %}
+<h2 id="vowel-examples">📝 Vowel Examples with Context</h2>
+<p style="margin-bottom: 1.5rem;">
+    Each vowel pair shown with 3 examples, including context and formality level to help you understand when to use each word.
+</p>
+
+{% for vowel_pair in guide.vowel_examples %}
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); border-left-color: var(--saffron);">
+    <h3 style="color: var(--royal-purple);">
+        Vowel Pair: 
+        <span class="paiboon" style="font-size: 1.3rem; color: var(--temple-red);">{{ vowel_pair.vowel }}</span>
+    </h3>
+    
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; padding: 1rem; background: white; border-radius: 8px;">
+        <div>
+            <strong>Short:</strong> 
+            <span class="thai-text">{{ vowel_pair.short.thai }}</span> 
+            (<span class="paiboon">{{ vowel_pair.short.paiboon }}</span>)
+        </div>
+        <div>
+            <strong>Long:</strong> 
+            <span class="thai-text">{{ vowel_pair.long.thai }}</span> 
+            (<span class="paiboon">{{ vowel_pair.long.paiboon }}</span>)
+        </div>
+    </div>
+    
+    <h4>Examples:</h4>
+    {% for ex in vowel_pair.examples %}
+    <div class="example-box" style="background: white; margin-bottom: 1rem;">
+        <p class="thai-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+        <p class="paiboon" style="font-size: 1.2rem; color: var(--bodhi-green); margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
+        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
+            <span style="background: #e8f5e9; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.9rem;">
+                📍 {{ ex.context }}
+            </span>
+            <span style="background: #e3f2fd; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.9rem;">
+                💬 {{ ex.formality }}
+            </span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+<div style="margin-top: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-radius: 10px; border-left: 4px solid #1976D2;">
+    <h3 style="color: #1976D2; margin-top: 0;">🎧 Practice Pronunciation Online</h3>
+    <p style="margin-bottom: 1rem;">
+        Hear native Thai speakers pronounce all vowel sounds and see more examples with audio.
+    </p>
+    <a href="http://slice-of-thai.com/language" target="_blank" class="btn" style="background: #1976D2; color: white;">
+        🎧 Visit Slice of Thai Sound Guide →
+    </a>
+</div>
+{% endif %}
+
+<!-- Thai Tone Markers -->
+<h2 id="tone-markers">📍 Thai Tone Markers</h2>
+
+<p style="margin-bottom: 1rem;">
+    These marks appear above Thai consonants to modify the tone:
+</p>
+
+<div class="card">
+    <table>
+        <thead>
+            <tr>
+                <th>Marker</th>
+                <th>Name</th>
+                <th>Effect</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for marker in guide.tone_markers %}
+            <tr>
+                <td class="thai-text" style="font-size: 2rem;">{{ marker.thai }}</td>
+                <td>{{ marker.name }}</td>
+                <td>{{ marker.effect }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); border-left-color: var(--gold);">
+    <h3>📚 Reference</h3>
+    <p>
+        The Paiboon system used in this app is based on the 
+        <strong><a href="/dictionary">Thai-English English-Thai Dictionary</a></strong> 
+        by Benjawan Poomsan Becker (Paiboon Publishing).
+    </p>
+    <p style="margin-top: 1rem;">
+        This dictionary is highly recommended for serious learners - it includes tone marks and classifiers for every entry.
+    </p>
+</div>
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<div style="text-align: center;">
+    <a href="/grammar" class="btn">Study Thai Grammar →</a>
+    <a href="/learn" class="btn btn-secondary" style="margin-left: 1rem;">Practice Vocabulary →</a>
+</div>
+{% endblock %}

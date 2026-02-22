@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Thai Language Learning{% endblock %}</title>
+    
+    <!-- Font Imports for Proper Unicode Support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            /* Royal Thai Gold Palette */
+            --royal-gold: #D4AF37;
+            --deep-gold: #B8860B;
+            --antique-gold: #C9B037;
+            --gold-shimmer: #FFD700;
+            
+            /* Royal Purple & Burgundy */
+            --royal-purple: #4A1A6B;
+            --deep-purple: #2D1B4E;
+            --royal-burgundy: #800020;
+            
+            /* Buddhist Saffron & Temple Colors */
+            --monk-saffron: #FF9933;
+            --temple-red: #8B0000;
+            --temple-orange: #FF6B35;
+            
+            /* Lotus & Natural Pinks */
+            --lotus-pink: #E75480;
+            --pale-lotus: #FFE5EC;
+            --lotus-white: #FFF5F7;
+            
+            /* Tropical Green Palette */
+            --bodhi-green: #228B22;
+            --bamboo-green: #6B8E23;
+            --palm-green: #355E3B;
+            --rice-green: #8FBC8F;
+            --jungle-green: #2D5016;
+            
+            /* Isan Earth Tones */
+            --isan-clay: #A0522D;
+            --isan-earth: #8B7355;
+            --terracotta: #CD853F;
+            --sandstone: #D2B48C;
+            
+            /* Sky & Water */
+            --thai-sky: #87CEEB;
+            --mekong-blue: #4682B4;
+            --monsoon-grey: #708090;
+            
+            /* Silk & Fabric */
+            --silk-cream: #FFF8DC;
+            --silk-ivory: #FFFFF0;
+            --raw-silk: #F5E6D3;
+            
+            /* Tropical Accents */
+            --orchid-purple: #9370DB;
+            --hibiscus-red: #DC143C;
+            --frangipani: #FFF9E6;
+            --coconut-white: #FFFEF7;
+            
+            /* Wood & Natural */
+            --teak-wood: #654321;
+            --dark-text: #2C1810;
+            --bamboo-beige: #E3DAC9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Body - Thai script font */
+        body {
+            font-family: 'Noto Serif Thai', 'Cormorant Garamond', 'Sarabun', Georgia, serif;
+            background: 
+                linear-gradient(135deg, rgba(255, 248, 220, 0.9) 0%, rgba(245, 230, 211, 0.9) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="bamboo" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23228B22" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23bamboo)"/></svg>');
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: var(--dark-text);
+            position: relative;
+        }
+        
+        /* Romanization text - FIXED WIDTH SOLUTION */
+        .paiboon, .romanized, .paiboon-text, 
+        [class*="paiboon"], [class*="romaniz"] {
+            font-family: 'Roboto Mono', 'Consolas', 'Monaco', monospace !important;
+            font-weight: 400 !important;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 2.5 !important;
+            display: inline-block;
+            vertical-align: baseline;
+            letter-spacing: 0.15em;
+            word-spacing: 0.3em;
+        }
+        
+        /* Fix for title romanization specifically */
+        .romanized-title {
+            line-height: 2.8 !important;
+            letter-spacing: 0.2em;
+        }
+            background: 
+                linear-gradient(135deg, rgba(255, 248, 220, 0.9) 0%, rgba(245, 230, 211, 0.9) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="bamboo" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23228B22" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23bamboo)"/></svg>');
+            background-attachment: fixed;
+            min-height: 100vh;
+            color: var(--dark-text);
+            position: relative;
+        }
+        
+        /* Tropical Nature Background Elements */
+        body::before {
+            content: '';
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 200px;
+            background: linear-gradient(to top, rgba(107, 142, 35, 0.15) 0%, transparent 100%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        body::after {
+            content: '🌴 🦚 🐘 🌺 🦎 🌿 🍃';
+            position: fixed;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 1.5rem;
+            opacity: 0.2;
+            pointer-events: none;
+            letter-spacing: 2rem;
+            z-index: 0;
+        }
+        
+        /* Navigation - Royal Thai with Gold Filigree */
+        nav {
+            background: linear-gradient(90deg, var(--royal-purple) 0%, var(--royal-burgundy) 50%, var(--deep-purple) 100%);
+            padding: 1rem 2rem;
+            box-shadow: 
+                0 4px 15px rgba(0,0,0,0.3),
+                inset 0 1px 0 rgba(212, 175, 55, 0.3),
+                inset 0 -1px 0 rgba(212, 175, 55, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--royal-gold);
+            background-image: 
+                repeating-linear-gradient(90deg, 
+                    transparent, 
+                    transparent 50px, 
+                    rgba(212, 175, 55, 0.1) 50px, 
+                    rgba(212, 175, 55, 0.1) 51px);
+        }
+
+        
+        nav .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        nav .logo {
+            font-size: 1.6rem;
+            color: var(--royal-gold);
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            /* Simplified text shadow - fewer layers */
+            text-shadow: 
+                0 0 3px var(--deep-purple),
+                0 1px 0 var(--deep-purple),
+                2px 2px 4px rgba(0,0,0,0.5);
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.05em;
+            /* GPU acceleration */
+            transform: translateZ(0);
+        }
+        
+        nav .logo::before {
+            content: '👑';
+            font-size: 1.8rem;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+        }
+        
+        nav .logo span {
+            font-size: 2.2rem;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: #FFFFFF; /* Pure white for maximum contrast */
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother easing */
+            font-size: 0.95rem;
+            font-weight: 600; /* Bolder for visibility */
+            position: relative;
+            border: 1px solid transparent;
+            /* Clear, strong text shadow for readability */
+            text-shadow: 
+                0 1px 3px rgba(0, 0, 0, 0.8),
+                0 0 8px rgba(0, 0, 0, 0.4);
+            /* GPU acceleration */
+            transform: translateZ(0);
+            will-change: transform, background-color;
+            letter-spacing: 0.03em;
+        }
+        
+        nav a:hover {
+            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
+            color: var(--deep-purple);
+            border: 2px solid var(--deep-purple);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            transform: translateY(-3px) translateZ(0);
+            /* Subtle gold glow on hover */
+            text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Dropdown Navigation */
+        .nav-menu {
+            position: relative;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-toggle {
+            background: transparent;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            color: #FFFFFF; /* Pure white for maximum contrast */
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600; /* Bolder for visibility */
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother easing */
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: inherit;
+            /* Clear, strong text shadow for readability */
+            text-shadow: 
+                0 1px 3px rgba(0, 0, 0, 0.8),
+                0 0 8px rgba(0, 0, 0, 0.4);
+            /* GPU acceleration */
+            transform: translateZ(0);
+            will-change: transform, background-color;
+            letter-spacing: 0.03em;
+        }
+        
+        .dropdown-toggle:hover {
+            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
+            color: var(--deep-purple);
+            border: 2px solid var(--deep-purple);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            transform: translateY(-3px) translateZ(0);
+            /* Subtle gold glow on hover */
+            text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+        }
+
+            transform: translateZ(0);
+            will-change: transform, background-color;
+        }
+        
+        .dropdown-toggle:hover {
+            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
+            color: var(--deep-purple);
+            border: 2px solid var(--deep-purple);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+            transform: translateY(-2px) translateZ(0);
+            /* Simple gold glow */
+            text-shadow: 0 0 2px rgba(212, 175, 55, 0.5);
+        }
+        
+        .dropdown-toggle::after {
+            content: '▼';
+            font-size: 0.7em;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .dropdown.active .dropdown-toggle::after {
+            transform: rotate(180deg);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: linear-gradient(135deg, var(--deep-purple) 0%, var(--royal-burgundy) 100%);
+            min-width: 220px;
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.5),
+                inset 0 1px 0 rgba(212, 175, 55, 0.5);
+            border-radius: 10px;
+            z-index: 1001;
+            margin-top: 0.5rem;
+            padding: 0.75rem 0;
+            max-height: 400px;
+            overflow-y: auto;
+            border: 2px solid var(--royal-gold);
+            background-image: 
+                repeating-linear-gradient(90deg, 
+                    transparent, 
+                    transparent 40px, 
+                    rgba(212, 175, 55, 0.08) 40px, 
+                    rgba(212, 175, 55, 0.08) 41px);
+            backdrop-filter: blur(10px);
+        }
+        
+        .dropdown.active .dropdown-content {
+            display: block;
+            animation: dropdownFade 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes dropdownFade {
+            from {
+                opacity: 0;
+                transform: translateY(-15px) translateZ(0);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) translateZ(0);
+            }
+        }
+        
+        .dropdown-content a {
+            color: #FFFFFF; /* Pure white for maximum contrast */
+            padding: 0.85rem 1.5rem;
+            text-decoration: none;
+            display: block;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 0;
+            border-left: 3px solid transparent;
+            font-weight: 600; /* Bolder for visibility */
+            /* Clear, strong text shadow */
+            text-shadow: 
+                0 1px 3px rgba(0, 0, 0, 0.8),
+                0 0 8px rgba(0, 0, 0, 0.4);
+            letter-spacing: 0.02em;
+        }
+        
+        .dropdown-content a:hover {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.4) 0%, rgba(212, 175, 55, 0.15) 100%);
+            color: var(--gold-shimmer);
+            padding-left: 2rem;
+            border-left: 3px solid var(--royal-gold);
+            box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.3);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: rgba(212, 175, 55, 0.4);
+            margin: 0.5rem 0;
+        }
+        
+        /* Collapsible Sections */
+        .collapsible-section {
+            margin-bottom: 1rem;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, var(--royal-purple) 0%, #6B2D5C 100%);
+            color: white;
+            padding: 1rem 1.5rem;
+            cursor: pointer;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+        
+        .section-header:hover {
+            background: linear-gradient(135deg, #5A2480 0%, #7B3D6C 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        .section-header h2,
+        .section-header h3 {
+            margin: 0;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .section-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+            font-weight: bold;
+        }
+        
+        .collapsible-section.active .section-toggle {
+            transform: rotate(180deg);
+        }
+        
+        .section-content {
+            display: none;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: -10px;
+        }
+        
+        .collapsible-section.active .section-content {
+            display: block;
+        }
+        
+        .collapsible-section.active .section-header {
+            border-radius: 10px 10px 0 0;
+        }
+        
+        /* Mobile Navigation Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
+            border: 2px solid var(--deep-purple);
+            color: var(--deep-purple);
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: 700;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .mobile-menu-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+            
+            nav ul.active {
+                display: flex;
+            }
+            
+            nav .dropdown-content {
+                position: static;
+                box-shadow: none;
+                background: rgba(74, 26, 107, 0.95);
+                margin-left: 1rem;
+            }
+            
+            .gender-selector {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        /* Main Content - Silk Fabric Texture */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Decorative Thai Pattern Border */
+        main::before {
+            content: '◆ ❖ ◆ ❖ ◆ ❖ ◆ ❖ ◆ ❖ ◆ ❖ ◆ ❖ ◆';
+            display: block;
+            text-align: center;
+            color: var(--royal-gold);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            opacity: 0.6;
+            letter-spacing: 0.5rem;
+        }
+        
+        /* Headers - Royal Thai Elegance */
+        h1 {
+            color: var(--royal-purple);
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        h1::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+            margin: 1rem auto 0;
+        }
+        
+        h1 .thai {
+            display: block;
+            font-size: 1.8rem;
+            color: var(--deep-gold);
+            margin-top: 0.75rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--temple-red);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            border-bottom: none;
+            padding-bottom: 0.75rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 700;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        h2::before {
+            content: '🌺';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.8rem;
+        }
+        
+        h2::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--royal-gold) 0%, var(--lotus-pink) 50%, transparent 100%);
+            margin-top: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--royal-purple);
+            font-size: 1.5rem;
+            margin: 1.75rem 0 1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+        
+        /* Cards - Isan Clay & Royal Silk Blend */
+        .card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 252, 245, 0.95) 100%);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 
+                0 8px 25px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.8);
+            border: 2px solid transparent;
+            border-image: linear-gradient(135deg, var(--royal-gold) 0%, var(--lotus-pink) 50%, var(--bamboo-green) 100%) 1;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(107, 142, 35, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .card::after {
+            content: '🍃';
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 2rem;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 12px 35px rgba(0,0,0,0.18),
+                inset 0 1px 0 rgba(255,255,255,0.9);
+            border-image: linear-gradient(135deg, var(--gold-shimmer) 0%, var(--orchid-purple) 50%, var(--bodhi-green) 100%) 1;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        
+        /* Tables - Teak Wood & Royal Silk */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 1.5rem 0;
+            background: var(--silk-ivory);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 
+                0 5px 20px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,0.5);
+            border: 2px solid var(--royal-gold);
+        }
+        
+        th {
+            background: linear-gradient(135deg, var(--deep-purple) 0%, var(--royal-burgundy) 100%);
+            color: var(--royal-gold);
+            padding: 1.25rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 3px solid var(--royal-gold);
+            position: relative;
+        }
+        
+        th::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-shimmer), transparent);
+        }
+        
+        td {
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid rgba(107, 142, 35, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        tr {
+            transition: all 0.3s ease;
+        }
+        
+        tbody tr:nth-child(odd) {
+            background: rgba(255, 252, 245, 0.5);
+        }
+        
+        tbody tr:hover {
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(107, 142, 35, 0.08) 100%);
+            transform: scale(1.01);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        }
+        
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #f9f5f0;
+        }
+        
+        .thai-text {
+            font-size: 1.3rem;
+            color: var(--temple-red);
+        }
+        
+        .paiboon {
+            color: var(--bodhi-green);
+            font-style: italic;
+        }
+        
+        /* Buttons - Royal Gold with Tropical Accents */
+        .btn {
+            display: inline-block;
+            padding: 0.85rem 2rem;
+            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
+            color: var(--deep-purple);
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--deep-gold);
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 
+                0 4px 15px rgba(212, 175, 55, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.95rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 8px 25px rgba(212, 175, 55, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            border-color: var(--gold-shimmer);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--deep-purple) 0%, var(--royal-burgundy) 100%);
+            color: var(--silk-cream);
+            border: 2px solid var(--royal-purple);
+            box-shadow: 
+                0 4px 15px rgba(74, 26, 107, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-secondary:hover {
+            box-shadow: 
+                0 8px 25px rgba(74, 26, 107, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-saffron {
+            background: linear-gradient(135deg, var(--monk-saffron) 0%, var(--temple-orange) 100%);
+            color: white;
+            border: 2px solid var(--temple-orange);
+            box-shadow: 
+                0 4px 15px rgba(255, 153, 51, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-saffron:hover {
+            box-shadow: 
+                0 8px 25px rgba(255, 153, 51, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+        }
+
+            color: white;
+        }
+        
+        /* Tags/Badges */
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin: 0.25rem;
+        }
+        
+        .tag-beginner { background: #90EE90; color: #006400; }
+        .tag-intermediate { background: #FFD700; color: #8B4513; }
+        .tag-advanced { background: #FF6B6B; color: white; }
+        
+        /* Example boxes */
+        .example-box {
+            background: #f8f4e8;
+            border-left: 4px solid var(--saffron);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        /* Example boxes - Isan Clay & Bamboo */
+        .example-box {
+            background: linear-gradient(135deg, var(--frangipani) 0%, var(--coconut-white) 100%);
+            border-left: 5px solid var(--monk-saffron);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 15px 15px 0;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .example-box::before {
+            content: '🌾';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2.5rem;
+            opacity: 0.1;
+        }
+        
+        .example-box .thai-text {
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--deep-purple);
+            font-weight: 600;
+        }
+        
+        /* Footer - Royal Thai with Isan Earth */
+        footer {
+            background: linear-gradient(135deg, var(--deep-purple) 0%, var(--royal-burgundy) 50%, var(--isan-clay) 100%);
+            color: var(--silk-cream);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 3px solid var(--royal-gold);
+            box-shadow: 
+                inset 0 1px 0 rgba(212, 175, 55, 0.3),
+                0 -5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        footer::before {
+            content: '🌴 🦚 🐘 🌺 🦎 🌿';
+            display: block;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            opacity: 0.6;
+            letter-spacing: 1.5rem;
+        }
+        
+        footer a {
+            color: var(--gold-shimmer);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--royal-gold);
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--royal-gold);
+            border-bottom: 2px solid var(--royal-gold);
+        }
+        
+        /* Decorative lotus - Enhanced with tropical flair */
+        .lotus-divider {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 3rem 0;
+            color: var(--lotus-pink);
+            position: relative;
+            padding: 1rem 0;
+        }
+        
+        .lotus-divider::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--lotus-pink), transparent);
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        
+        .lotus-divider::after {
+            content: '🌸 🪷 🌸';
+            display: block;
+            background: linear-gradient(135deg, var(--silk-cream) 0%, var(--frangipani) 100%);
+            padding: 0.5rem 2rem;
+            display: inline-block;
+            border-radius: 50px;
+            box-shadow: 0 3px 10px rgba(231, 84, 128, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav .nav-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                justify-content: center;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h1 .thai {
+                font-size: 1.4rem;
+            }
+            
+            main {
+                padding: 1.5rem;
+            }
+            
+            main::before {
+                font-size: 0.7rem;
+                letter-spacing: 0.3rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            body::after {
+                font-size: 1.2rem;
+                letter-spacing: 1.5rem;
+            }
+        }
+        
+        /* Toggle switch for beginner mode */
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+        }
+        
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #ccc;
+            transition: 0.4s;
+            border-radius: 30px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background: var(--bodhi-green);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+        
+        /* Gender Selector */
+        .gender-selector {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+        }
+        
+        .gender-selector label {
+            color: var(--gold);
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        
+        .gender-btn {
+            background: transparent;
+            border: 2px solid var(--cream);
+            color: var(--cream);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .gender-btn:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+        
+        .gender-btn.active {
+            background: var(--gold);
+            color: var(--royal-purple);
+            border-color: var(--gold);
+        }
+        
+        .gender-indicator {
+            font-size: 1.2rem;
+        }
+        
+        /* ============================================
+           FIX: Remove Dark Purple Border on Dropdown Hover
+           ============================================ */
+        
+        /* Remove border from dropdown toggle buttons */
+        .dropdown-toggle {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Remove border on hover state */
+        .dropdown-toggle:hover,
+        .dropdown-toggle:focus,
+        .dropdown-toggle:active {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Remove any borders from dropdown content containers */
+        .dropdown-content {
+            border: none !important;
+            outline: none !important;
+        }
+        
+        /* Remove borders from dropdown menu items */
+        .dropdown-content a {
+            border: none !important;
+            outline: none !important;
+        }
+        
+        /* Remove borders on dropdown item hover */
+        .dropdown-content a:hover,
+        .dropdown-content a:focus {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+        
+        /* Remove purple border from logo and navigation links (Home button, etc.) */
+        nav .logo:hover,
+        nav a:hover {
+            border: none !important;
+        }
+        
+        /* Keep the gold background and other hover effects, just remove border */
+        nav a:hover {
+            background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
+            color: var(--deep-purple);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+            transform: translateY(-3px) translateZ(0);
+            text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
+        }
+        
+        /* Remove black box trim that appears when leaving hover state */
+        nav .logo,
+        nav a {
+            border: none !important;
+            outline: none !important;
+        }
+        
+        /* Ensure no borders in any state - default, hover, focus, active */
+        nav .logo:hover,
+        nav .logo:focus,
+        nav .logo:active,
+        nav a:hover,
+        nav a:focus,
+        nav a:active {
+            border: none !important;
+            outline: none !important;
+        }
+    </style>
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo"><span>🪷</span> Thai Learning</a>
+            
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+            
+            <ul id="main-nav">
+                <li><a href="/">🏠 Home</a></li>
+                <li><a href="/chat">🤖 AI Chat</a></li>
+                
+                <!-- Learning Dropdown -->
+                <li class="dropdown">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                        📚 Learning
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/alphabet">🔤 Thai Alphabet</a>
+                        <a href="/learn">📖 Vocabulary</a>
+                        <a href="/lessons">📝 Lessons</a>
+                        <a href="/sentences">💬 Sentences & Conversations</a>
+                        <a href="/formality">🎭 Formality Levels</a>
+                    </div>
+                </li>
+                
+                <!-- Grammar Dropdown -->
+                <li class="dropdown">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                        ✏️ Grammar
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/grammar">📚 Complete Grammar Guide</a>
+                        <a href="/grammar#parts-of-speech">Parts of Speech</a>
+                        <a href="/grammar#consonant-classes">⭐ Consonant Classes</a>
+                        <a href="/grammar#classifiers">🔢 Classifiers</a>
+                        <a href="/paiboon">🔤 Paiboon Romanization</a>
+                        <a href="/vowels_syllables">🗣️ Vowels & Syllables</a>
+                    </div>
+                </li>
+                
+                <!-- Culture & Spirituality Dropdown -->
+                <li class="dropdown">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                        🙏 Culture & Dharma
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/culture">🎭 Thai Culture</a>
+                        <a href="/theravada">☸️ Buddhist Dharma</a>
+                        <a href="/meditation">🧘 Meditation</a>
+                    </div>
+                </li>
+                
+                <!-- Tools & Reference Dropdown -->
+                <li class="dropdown">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                        🔧 Tools
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="/dictionary">📕 Dictionary</a>
+                        <a href="/gender-examples">👤 Gender Guide</a>
+                        <a href="/beginner-guide">🎓 Beginner Mode</a>
+                    </div>
+                </li>
+            </ul>
+            
+            {% if request.endpoint == 'gender_examples' %}
+            <div class="gender-selector">
+                <label>Your Gender:</label>
+                <button class="gender-btn" id="male-btn" onclick="setGender('male')">
+                    <span class="gender-indicator">👨</span> Male
+                </button>
+                <button class="gender-btn" id="female-btn" onclick="setGender('female')">
+                    <span class="gender-indicator">👩</span> Female
+                </button>
+                <button class="gender-btn active" id="neutral-btn" onclick="setGender('neutral')">
+                    <span class="gender-indicator">👤</span> Show Both
+                </button>
+            </div>
+            {% endif %}
+        </div>
+    </nav>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <footer>
+        <p>🪷 Thai Language & Culture Learning App v2.0</p>
+        <p>Using <a href="/paiboon">Paiboon Romanization</a> • Reference: <a href="/dictionary">Thai-English Dictionary</a></p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
+    </footer>
+    
+    <script>
+        // Dropdown menu functionality
+        function toggleDropdown(button) {
+            const dropdown = button.parentElement;
+            const allDropdowns = document.querySelectorAll('.dropdown');
+            
+            // Close other dropdowns
+            allDropdowns.forEach(d => {
+                if (d !== dropdown) {
+                    d.classList.remove('active');
+                }
+            });
+            
+            // Toggle current dropdown
+            dropdown.classList.toggle('active');
+        }
+        
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown').forEach(d => {
+                    d.classList.remove('active');
+                });
+            }
+        });
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+        
+        // Collapsible section functionality
+        function toggleSection(element) {
+            const section = element.closest('.collapsible-section');
+            section.classList.toggle('active');
+        }
+        
+        // Initialize all collapsible sections
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click handlers to all section headers
+            document.querySelectorAll('.section-header').forEach(header => {
+                header.addEventListener('click', function() {
+                    toggleSection(this);
+                });
+            });
+            
+            // Open first section by default on each page
+            const firstSection = document.querySelector('.collapsible-section');
+            if (firstSection) {
+                firstSection.classList.add('active');
+            }
+        });
+        
+        // Gender selection functionality
+        function setGender(gender) {
+            // Update button states
+            document.querySelectorAll('.gender-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById(gender + '-btn').classList.add('active');
+            
+            // Save to session via AJAX
+            fetch('/set-gender/' + gender)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        // Reload page to update gendered content
+                        location.reload();
+                    }
+                })
+                .catch(error => console.error('Error setting gender:', error));
+        }
+        
+        // Set initial active state based on current gender
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentGender = '{{ current_gender|default("neutral") }}';
+            if (currentGender) {
+                document.querySelectorAll('.gender-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                const activeBtn = document.getElementById(currentGender + '-btn');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                }
+            }
+        });
+    </script>
+    
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

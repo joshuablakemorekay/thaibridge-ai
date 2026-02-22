@@ -1,0 +1,481 @@
+{% extends "base.html" %}
+
+{% block title %}Thai Language Register & Formality{% endblock %}
+
+{% block extra_css %}
+<style>
+    .register-card {
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        border-left: 8px solid;
+    }
+    
+    .level-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .register-icon {
+        font-size: 2.5rem;
+        margin-right: 1rem;
+    }
+    
+    .warning-box {
+        background: #fff3cd;
+        border-left: 4px solid #ffc107;
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 5px;
+    }
+    
+    .example-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .example-item {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        border-left: 3px solid;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    📊 Thai Language Register & Formality
+    <span class="thai">ระดับภาษาและความสุภาพ</span>
+</h1>
+
+<p style="text-align: center; color: #666; max-width: 900px; margin: 0 auto 2rem;">
+    Thai has 9 distinct levels of formality, from sacred monastic language to vulgar slang. Understanding these registers is crucial for appropriate communication and shows cultural awareness.
+</p>
+
+<!-- Overview Card -->
+<div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+    <h2 style="color: white; border: none; margin-top: 0;">🎯 The 9-Level System</h2>
+    <p style="line-height: 2;">
+        <strong>Level 1:</strong> Monastic ☸️ &nbsp;|&nbsp; <strong>Level 2:</strong> Royal 👑 &nbsp;|&nbsp; <strong>Level 3:</strong> Obsolete 📜<br>
+        <strong>Level 4:</strong> Literary 🎭 &nbsp;|&nbsp; <strong>Level 5:</strong> Technical 🔬 &nbsp;|&nbsp; <strong>Level 6:</strong> Formal 🤵<br>
+        <strong>Level 7:</strong> Neutral 💬 &nbsp;|&nbsp; <strong>Level 8:</strong> Casual 😊 &nbsp;|&nbsp; <strong>Level 9:</strong> Vulgar 🚫
+    </p>
+</div>
+
+<div class="card" style="text-align: center;">
+    <strong>Quick Navigation:</strong>
+    <p style="margin-top: 0.5rem;">
+        <a href="#monastic" class="btn" style="margin: 0.25rem; background: #FF9933; color: white;">☸️ Monastic</a>
+        <a href="#royal" class="btn" style="margin: 0.25rem; background: #D4AF37; color: white;">👑 Royal</a>
+        <a href="#obsolete" class="btn" style="margin: 0.25rem; background: #8B7355; color: white;">📜 Obsolete</a>
+        <a href="#literary" class="btn" style="margin: 0.25rem; background: #9B59B6; color: white;">🎭 Literary</a>
+        <a href="#technical" class="btn" style="margin: 0.25rem; background: #3498DB; color: white;">🔬 Technical</a>
+        <a href="#formal" class="btn" style="margin: 0.25rem; background: #2C3E50; color: white;">🤵 Formal</a>
+        <a href="#neutral" class="btn" style="margin: 0.25rem; background: #27AE60; color: white;">💬 Neutral</a>
+        <a href="#casual" class="btn" style="margin: 0.25rem; background: #F39C12; color: white;">😊 Casual</a>
+        <a href="#vulgar" class="btn" style="margin: 0.25rem; background: #E74C3C; color: white;">🚫 Vulgar</a>
+    </p>
+</div>
+
+<!-- Level 1: Monastic -->
+<div class="register-card" id="monastic" style="border-left-color: {{ registers.monastic.color }};">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.monastic.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.monastic.color }}; color: white;">Level {{ registers.monastic.level }}</div>
+            <h2 style="margin: 0;">{{ registers.monastic.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.monastic.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.monastic.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.monastic.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.monastic.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Examples:</h4>
+    <div class="example-grid">
+        {% for ex in registers.monastic.examples %}
+        <div class="example-item" style="border-left-color: {{ registers.monastic.color }};">
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
+            <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
+            <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="warning-box">
+        {{ registers.monastic.warning }}
+    </div>
+</div>
+
+<!-- Level 2: Royal -->
+<div class="register-card" id="royal" style="border-left-color: {{ registers.royal.color }};">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.royal.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.royal.color }}; color: white;">Level {{ registers.royal.level }}</div>
+            <h2 style="margin: 0;">{{ registers.royal.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.royal.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.royal.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.royal.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.royal.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Royal Vocabulary vs. Standard:</h4>
+    <table style="margin-top: 1rem;">
+        <thead>
+            <tr>
+                <th>Royal Thai</th>
+                <th>Paiboon</th>
+                <th>English</th>
+                <th>Standard Thai</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ex in registers.royal.examples %}
+            <tr>
+                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="paiboon">{{ ex.paiboon }}</td>
+                <td>{{ ex.english }}</td>
+                <td class="thai-text">{{ ex.standard }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="warning-box">
+        {{ registers.royal.warning }}
+    </div>
+</div>
+
+<!-- Level 3: Obsolete -->
+<div class="register-card" id="obsolete" style="border-left-color: {{ registers.obsolete.color }};">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.obsolete.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.obsolete.color }}; color: white;">Level {{ registers.obsolete.level }}</div>
+            <h2 style="margin: 0;">{{ registers.obsolete.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.obsolete.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.obsolete.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.obsolete.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.obsolete.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Archaic vs. Modern:</h4>
+    <table style="margin-top: 1rem;">
+        <thead>
+            <tr>
+                <th>Archaic Thai</th>
+                <th>Paiboon</th>
+                <th>English</th>
+                <th>Modern Thai</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ex in registers.obsolete.examples %}
+            <tr>
+                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="paiboon">{{ ex.paiboon }}</td>
+                <td>{{ ex.english }}</td>
+                <td class="thai-text">{{ ex.modern }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="warning-box">
+        {{ registers.obsolete.warning }}
+    </div>
+</div>
+
+<!-- Level 4: Literary -->
+<div class="register-card" id="literary" style="border-left-color: {{ registers.literary.color }};">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.literary.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.literary.color }}; color: white;">Level {{ registers.literary.level }}</div>
+            <h2 style="margin: 0;">{{ registers.literary.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.literary.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.literary.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.literary.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.literary.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Poetic vs. Everyday:</h4>
+    <div class="example-grid">
+        {% for ex in registers.literary.examples %}
+        <div class="example-item" style="border-left-color: {{ registers.literary.color }};">
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
+            <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
+            <p style="font-size: 0.9rem; color: #666;">Everyday: <span class="thai-text">{{ ex.everyday }}</span></p>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="warning-box">
+        {{ registers.literary.warning }}
+    </div>
+</div>
+
+<!-- Level 5: Technical -->
+<div class="register-card" id="technical" style="border-left-color: {{ registers.technical.color }};">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.technical.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.technical.color }}; color: white;">Level {{ registers.technical.level }}</div>
+            <h2 style="margin: 0;">{{ registers.technical.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.technical.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.technical.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.technical.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.technical.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Technical Vocabulary:</h4>
+    <div class="example-grid">
+        {% for ex in registers.technical.examples %}
+        <div class="example-item" style="border-left-color: {{ registers.technical.color }};">
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
+            <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
+            {% if ex.simple %}
+            <p style="font-size: 0.9rem; color: #666;">Simpler: <span class="thai-text">{{ ex.simple }}</span></p>
+            {% elif ex.note %}
+            <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="warning-box">
+        {{ registers.technical.warning }}
+    </div>
+</div>
+
+<!-- Level 6: Formal -->
+<div class="register-card" id="formal" style="border-left-color: {{ registers.formal.color }};">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.formal.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.formal.color }}; color: white;">Level {{ registers.formal.level }}</div>
+            <h2 style="margin: 0;">{{ registers.formal.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.formal.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.formal.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.formal.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.formal.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Formal vs. Casual:</h4>
+    <table style="margin-top: 1rem;">
+        <thead>
+            <tr>
+                <th>Formal Thai</th>
+                <th>Paiboon</th>
+                <th>English</th>
+                <th>Casual</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ex in registers.formal.examples %}
+            <tr>
+                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="paiboon">{{ ex.paiboon }}</td>
+                <td>{{ ex.english }}</td>
+                <td class="thai-text">{{ ex.casual }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <div class="warning-box">
+        {{ registers.formal.warning }}
+    </div>
+</div>
+
+<!-- Level 7: Neutral -->
+<div class="register-card" id="neutral" style="border-left-color: {{ registers.neutral.color }}; background: linear-gradient(135deg, #f5fff5 0%, #e8f5e9 100%);">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.neutral.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.neutral.color }}; color: white;">Level {{ registers.neutral.level }} ⭐ YOUR DEFAULT</div>
+            <h2 style="margin: 0;">{{ registers.neutral.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.neutral.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.neutral.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.neutral.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.neutral.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Essential Neutral Phrases:</h4>
+    <div class="example-grid">
+        {% for ex in registers.neutral.examples %}
+        <div class="example-item" style="border-left-color: {{ registers.neutral.color }};">
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
+            <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
+            <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div style="background: #c8e6c9; border-left: 4px solid #27AE60; padding: 1rem; margin-top: 1rem; border-radius: 5px;">
+        {{ registers.neutral.warning }}
+    </div>
+</div>
+
+<!-- Level 8: Casual -->
+<div class="register-card" id="casual" style="border-left-color: {{ registers.casual.color }};">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.casual.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.casual.color }}; color: white;">Level {{ registers.casual.level }}</div>
+            <h2 style="margin: 0;">{{ registers.casual.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.casual.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem;">{{ registers.casual.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.casual.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.casual.social_notes }}</p>
+    
+    <h4 style="margin-top: 1.5rem;">Casual Examples:</h4>
+    <div class="example-grid">
+        {% for ex in registers.casual.examples %}
+        <div class="example-item" style="border-left-color: {{ registers.casual.color }};">
+            <p class="thai-text" style="font-size: 1.3rem; margin-bottom: 0.5rem;">{{ ex.thai }}</p>
+            <p class="paiboon" style="margin-bottom: 0.5rem;">{{ ex.paiboon }}</p>
+            <p style="margin-bottom: 0.5rem;"><strong>{{ ex.english }}</strong></p>
+            {% if ex.polite %}
+            <p style="font-size: 0.9rem; color: #666;">Polite: <span class="thai-text">{{ ex.polite }}</span></p>
+            {% elif ex.note %}
+            <p style="font-size: 0.9rem; color: #666;">{{ ex.note }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    
+    {% if registers.casual.sub_level_a %}
+    <div style="background: #fff3e0; padding: 1rem; margin-top: 1.5rem; border-radius: 8px; border-left: 4px solid #FF9800;">
+        <h4 style="margin-top: 0;">8A: {{ registers.casual.sub_level_a.name }}</h4>
+        <p>{{ registers.casual.sub_level_a.note }}</p>
+        <p><strong>Examples:</strong> {{ registers.casual.sub_level_a.examples|join(', ') }}</p>
+    </div>
+    {% endif %}
+    
+    {% if registers.casual.sub_level_b %}
+    <div style="background: #ffebee; padding: 1rem; margin-top: 1rem; border-radius: 8px; border-left: 4px solid #F44336;">
+        <h4 style="margin-top: 0;">8B: {{ registers.casual.sub_level_b.name }}</h4>
+        <p>{{ registers.casual.sub_level_b.note }}</p>
+        <p><strong>Examples:</strong> {{ registers.casual.sub_level_b.examples|join(', ') }}</p>
+        <div class="warning-box" style="margin-top: 0.5rem;">
+            {{ registers.casual.sub_level_b.warning }}
+        </div>
+    </div>
+    {% endif %}
+    
+    <div class="warning-box">
+        {{ registers.casual.warning }}
+    </div>
+</div>
+
+<!-- Level 9: Vulgar -->
+<div class="register-card" id="vulgar" style="border-left-color: {{ registers.vulgar.color }}; background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);">
+    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+        <span class="register-icon">{{ registers.vulgar.icon }}</span>
+        <div>
+            <div class="level-badge" style="background: {{ registers.vulgar.color }}; color: white;">Level {{ registers.vulgar.level }} - EXTREME CAUTION</div>
+            <h2 style="margin: 0; color: {{ registers.vulgar.color }};">{{ registers.vulgar.name }}</h2>
+            <p class="thai-text" style="margin: 0;">{{ registers.vulgar.thai }}</p>
+        </div>
+    </div>
+    
+    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1rem; color: #c62828;">{{ registers.vulgar.description }}</p>
+    
+    <p><strong>📍 Usage Context:</strong> {{ registers.vulgar.usage_context }}</p>
+    <p><strong>👥 Social Notes:</strong> {{ registers.vulgar.social_notes }}</p>
+    
+    <div style="background: #b71c1c; color: white; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0;">
+        <h4 style="color: white; margin-top: 0;">🛑 {{ registers.vulgar.warning }}</h4>
+    </div>
+    
+    <h4 style="margin-top: 1.5rem; color: #c62828;">Examples (Educational Purposes Only):</h4>
+    <p style="font-size: 0.9rem; color: #666; margin-bottom: 1rem;">These are shown so you can recognize them if you hear them, NOT to use them.</p>
+    
+    <table style="margin-top: 1rem;">
+        <thead>
+            <tr style="background: #c62828;">
+                <th style="color: white;">Thai</th>
+                <th style="color: white;">Paiboon</th>
+                <th style="color: white;">Meaning</th>
+                <th style="color: white;">Severity</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ex in registers.vulgar.examples %}
+            <tr>
+                <td class="thai-text">{{ ex.thai }}</td>
+                <td class="paiboon">{{ ex.paiboon }}</td>
+                <td>{{ ex.english }}</td>
+                <td><span style="color: #c62828; font-weight: bold;">{{ ex.severity }}</span></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <h4 style="margin-top: 1.5rem; color: #c62828;">Cultural Impact:</h4>
+    <ul style="margin-left: 2rem; line-height: 2;">
+        {% for note in registers.vulgar.cultural_notes %}
+        <li>{{ note }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<!-- Summary Card -->
+<div class="card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+    <h2 style="color: white; border: none; margin-top: 0;">💡 Key Takeaways</h2>
+    <ul style="margin-left: 2rem; line-height: 2.5;">
+        <li><strong>As a foreigner, your default should be Level 7 (Neutral)</strong> with ครับ/ค่ะ particles</li>
+        <li><strong>Levels 1-2 (Monastic, Royal):</strong> Learn to recognize, not use actively</li>
+        <li><strong>Level 3 (Obsolete):</strong> Helpful for reading old texts, avoid in speech</li>
+        <li><strong>Levels 4-5 (Literary, Technical):</strong> Use in appropriate professional/artistic contexts</li>
+        <li><strong>Level 6 (Formal):</strong> Essential for business and hierarchical settings</li>
+        <li><strong>Level 8 (Casual):</strong> Wait for Thais to initiate before using</li>
+        <li><strong>Level 9 (Vulgar):</strong> Learn to recognize, never use as a foreigner</li>
+    </ul>
+</div>
+
+<div style="text-align: center; margin-top: 2rem;">
+    <a href="/grammar" class="btn">Study Grammar →</a>
+    <a href="/learn" class="btn btn-saffron" style="margin-left: 1rem;">Practice Vocabulary →</a>
+</div>
+{% endblock %}

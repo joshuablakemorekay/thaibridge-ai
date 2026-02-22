@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block title %}Vowel Practice with Stories{% endblock %}
+
+{% block extra_css %}
+<style>
+    .vowel-card {
+        background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+        border-left: 5px solid var(--gold);
+        margin-bottom: 2rem;
+    }
+    
+    .example-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .short-vowel {
+        border-left: 4px solid var(--temple-red);
+    }
+    
+    .long-vowel {
+        border-left: 4px solid var(--bodhi-green);
+    }
+    
+    .story-box {
+        background: #f8f4e8;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+        line-height: 1.8;
+        font-style: italic;
+        border-left: 3px solid var(--saffron);
+    }
+    
+    .word-display {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background: #f0f0f0;
+        border-radius: 8px;
+    }
+    
+    .thai-large {
+        font-size: 2.5rem;
+        color: var(--temple-red);
+        font-weight: bold;
+    }
+    
+    .paiboon-large {
+        font-size: 1.8rem;
+        color: var(--bodhi-green);
+        font-style: italic;
+    }
+    
+    .english-large {
+        font-size: 1.3rem;
+        color: var(--royal-purple);
+    }
+    
+    .vowel-header {
+        background: var(--royal-purple);
+        color: white;
+        padding: 1rem;
+        border-radius: 10px 10px 0 0;
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    }
+    
+    .vowel-type-badge {
+        display: inline-block;
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .badge-short {
+        background: #ffcdd2;
+        color: #c62828;
+    }
+    
+    .badge-long {
+        background: #c8e6c9;
+        color: #2e7d32;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    🎭 Vowel Practice with Stories
+    <span class="thai">ฝึกสระด้วยเรื่องราว</span>
+</h1>
+
+<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
+    Learn Thai vowels through creative storytelling! Each vowel pair comes with two examples set in temple life, 
+    helping you remember pronunciation through memorable scenarios.
+</p>
+
+<!-- Navigation -->
+<div class="card" style="text-align: center;">
+    <strong>Jump to Vowel Pair:</strong>
+    <p style="margin-top: 0.5rem;">
+        {% for pair in vowel_examples %}
+        <a href="#{{ pair.vowel_pair }}" class="btn" style="margin: 0.25rem; font-size: 0.9rem;">{{ pair.vowel_pair }}</a>
+        {% endfor %}
+    </p>
+</div>
+
+<!-- Vowel Pairs with Examples -->
+{% for pair in vowel_examples %}
+<div class="vowel-card card" id="{{ pair.vowel_pair }}">
+    <div class="vowel-header">
+        <h2 style="margin: 0; color: white;">{{ pair.vowel_pair }} Pair</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+            <div style="text-align: center; background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px;">
+                <div style="font-size: 2rem;">{{ pair.short.thai }}</div>
+                <div style="font-size: 1.5rem; margin: 0.5rem 0;">{{ pair.short.paiboon }}</div>
+                <div style="font-size: 0.9rem;">{{ pair.short.description }}</div>
+            </div>
+            <div style="text-align: center; background: rgba(255,255,255,0.2); padding: 1rem; border-radius: 8px;">
+                <div style="font-size: 2rem;">{{ pair.long.thai }}</div>
+                <div style="font-size: 1.5rem; margin: 0.5rem 0;">{{ pair.long.paiboon }}</div>
+                <div style="font-size: 0.9rem;">{{ pair.long.description }}</div>
+            </div>
+        </div>
+    </div>
+    
+    {% for example in pair.examples %}
+    <div class="example-card {% if example.vowel_type == 'short' %}short-vowel{% else %}long-vowel{% endif %}">
+        <span class="vowel-type-badge {% if example.vowel_type == 'short' %}badge-short{% else %}badge-long{% endif %}">
+            {% if example.vowel_type == 'short' %}📍 SHORT VOWEL{% else %}📏 LONG VOWEL{% endif %}
+        </span>
+        
+        <div class="word-display">
+            <div class="thai-large">{{ example.word }}</div>
+            <div class="paiboon-large">{{ example.paiboon }}</div>
+            <div class="english-large">{{ example.english }}</div>
+        </div>
+        
+        <div class="story-box">
+            <strong style="color: var(--temple-red); font-size: 1.1rem;">📖 Story:</strong>
+            <p style="margin-top: 0.5rem; color: var(--dark-text);">{{ example.story }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+<div class="lotus-divider">❀ ❀ ❀</div>
+
+<!-- Practice Tips -->
+<div class="card" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-left-color: var(--bodhi-green);">
+    <h2 style="margin-top: 0;">💡 How to Practice with These Stories</h2>
+    
+    <ol style="margin-left: 1.5rem; line-height: 2;">
+        <li><strong>Read the story aloud</strong> - This helps you remember the context</li>
+        <li><strong>Focus on the vowel sound</strong> - Pay attention to short vs. long</li>
+        <li><strong>Say the word 10 times</strong> - Repeat: "กะ-กา-กะ-กา" to feel the difference</li>
+        <li><strong>Visualize the scene</strong> - Imagine yourself in the story</li>
+        <li><strong>Use the word today</strong> - Try to use it in conversation or writing</li>
+    </ol>
+</div>
+
+<div class="card" style="border-left-color: var(--saffron);">
+    <h2 style="margin-top: 0;">🎯 Why Stories Help Learning</h2>
+    <p style="line-height: 1.8;">
+        Research shows that we remember information better when it's connected to stories and emotions. 
+        Each of these examples is set in Thai temple life, providing:
+    </p>
+    <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
+        <li><strong>Cultural context</strong> - Learn about Thai Buddhist culture</li>
+        <li><strong>Memorable scenarios</strong> - Stories stick in your mind better than lists</li>
+        <li><strong>Practical usage</strong> - See how words are used in real situations</li>
+        <li><strong>Emotional connection</strong> - Stories create feelings that aid memory</li>
+    </ul>
+</div>
+
+<!-- Navigation -->
+<div style="text-align: center; margin-top: 2rem;">
+    <a href="/paiboon" class="btn btn-secondary">← Back to Paiboon Guide</a>
+    <a href="/learn" class="btn" style="margin-left: 1rem;">Practice Vocabulary →</a>
+</div>
+{% endblock %}

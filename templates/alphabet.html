@@ -1,0 +1,1443 @@
+{% extends "base.html" %}
+
+{% block title %}Thai Alphabet - Thai Learning{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="alphabet-header">
+        <h1 class="main-title">
+            <span class="thai-title">อักษรไทย</span>
+            <span class="romanized-title">àk-sɔ̌ɔn tai</span>
+            <span class="english-title">Thai Alphabet</span>
+        </h1>
+        <p class="intro">Master the foundation of Thai language! Complete this section to unlock all other learning materials.</p>
+        
+        {% if alphabet_complete %}
+        <div class="completion-badge">
+            <h2>✅ ALPHABET COMPLETED!</h2>
+            <p>You've mastered the Thai alphabet. All sections are now unlocked!</p>
+            <p class="completion-date">Completed: {{ user_progress.alphabet_completion_date[:10] if user_progress.alphabet_completion_date else 'Today' }}</p>
+        </div>
+        {% else %}
+        <div class="progress-prompt">
+            <p>📚 Study all sections below, practice the exercises, then click "Mark as Complete" to unlock vocabulary exercises!</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Practice Exercise Section - IMPROVED -->
+    <div class="exercise-section">
+        <h2>🎯 Practice: Alphabetical Order Challenge</h2>
+        <p class="exercise-intro">Master Thai alphabetical order step by step! Complete each level to progress.</p>
+        
+        <!-- Level Selector -->
+        <div class="level-selector">
+            <div class="level-info">
+                <h3>Current Level: <span id="current-level-display">1</span></h3>
+                <p>Progress: <span id="progress-display">0/5</span> levels completed</p>
+            </div>
+            <div class="level-buttons">
+                <button class="level-btn active" onclick="selectLevel(1)" id="level-1-btn">
+                    <span class="level-num">1</span>
+                    <span class="level-desc">First 5</span>
+                </button>
+                <button class="level-btn locked" onclick="selectLevel(2)" id="level-2-btn">
+                    <span class="level-num">2</span>
+                    <span class="level-desc">Next 5</span>
+                </button>
+                <button class="level-btn locked" onclick="selectLevel(3)" id="level-3-btn">
+                    <span class="level-num">3</span>
+                    <span class="level-desc">Next 10</span>
+                </button>
+                <button class="level-btn locked" onclick="selectLevel(4)" id="level-4-btn">
+                    <span class="level-num">4</span>
+                    <span class="level-desc">Next 10</span>
+                </button>
+                <button class="level-btn locked" onclick="selectLevel(5)" id="level-5-btn">
+                    <span class="level-num">5</span>
+                    <span class="level-desc">All 44!</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Exercise Area -->
+        <div id="exercise-area" class="exercise-content">
+            <div class="exercise-header">
+                <h3 id="exercise-title">Level 1: First 5 Consonants</h3>
+                <p id="exercise-desc">Arrange these 5 letters in alphabetical order</p>
+            </div>
+            
+            <div class="drop-zone" id="drop-zone">
+                <div class="drop-placeholder">Drop letters here in alphabetical order</div>
+            </div>
+            
+            <div class="letter-bank" id="letter-bank">
+                <!-- Letters will be loaded by JavaScript -->
+            </div>
+            
+            <div class="exercise-controls">
+                <button onclick="checkAnswer()" class="btn btn-check">✓ Check Answer</button>
+                <button onclick="resetExercise()" class="btn btn-reset">↻ Reset</button>
+                <button onclick="giveHint()" class="btn btn-hint">💡 Hint (Show Next Letter)</button>
+            </div>
+            
+            <div id="result-message" class="result-message"></div>
+            <div id="hint-message" class="hint-message"></div>
+        </div>
+
+        <!-- Quick Reference -->
+        <div class="quick-reference">
+            <button class="reference-toggle" onclick="toggleReference()">
+                📖 Quick Reference (Click to show/hide)
+            </button>
+            <div id="reference-content" class="reference-content" style="display: none;">
+                <h4>Thai Consonant Order:</h4>
+                <div class="reference-grid">
+                    <div class="ref-item">1. ก (g)</div>
+                    <div class="ref-item">2. ข (k)</div>
+                    <div class="ref-item">3. ฃ (k)</div>
+                    <div class="ref-item">4. ค (k)</div>
+                    <div class="ref-item">5. ฅ (k)</div>
+                    <div class="ref-item">6. ฆ (k)</div>
+                    <div class="ref-item">7. ง (ng)</div>
+                    <div class="ref-item">8. จ (j)</div>
+                    <div class="ref-item">9. ฉ (ch)</div>
+                    <div class="ref-item">10. ช (ch)</div>
+                    <div class="ref-item">11. ซ (s)</div>
+                    <div class="ref-item">12. ฌ (ch)</div>
+                    <div class="ref-item">13. ญ (y)</div>
+                    <div class="ref-item">14. ฎ (d)</div>
+                    <div class="ref-item">15. ฏ (dt)</div>
+                    <div class="ref-item">16. ฐ (t)</div>
+                    <div class="ref-item">17. ฑ (t)</div>
+                    <div class="ref-item">18. ฒ (t)</div>
+                    <div class="ref-item">19. ณ (n)</div>
+                    <div class="ref-item">20. ด (d)</div>
+                    <div class="ref-item">21. ต (dt)</div>
+                    <div class="ref-item">22. ถ (t)</div>
+                    <div class="ref-item">23. ท (t)</div>
+                    <div class="ref-item">24. ธ (t)</div>
+                    <div class="ref-item">25. น (n)</div>
+                    <div class="ref-item">26. บ (b)</div>
+                    <div class="ref-item">27. ป (bp)</div>
+                    <div class="ref-item">28. ผ (p)</div>
+                    <div class="ref-item">29. ฝ (f)</div>
+                    <div class="ref-item">30. พ (p)</div>
+                    <div class="ref-item">31. ฟ (f)</div>
+                    <div class="ref-item">32. ภ (p)</div>
+                    <div class="ref-item">33. ม (m)</div>
+                    <div class="ref-item">34. ย (y)</div>
+                    <div class="ref-item">35. ร (r)</div>
+                    <div class="ref-item">36. ฤ (r)</div>
+                    <div class="ref-item">37. ล (l)</div>
+                    <div class="ref-item">38. ฦ (l)</div>
+                    <div class="ref-item">39. ว (w)</div>
+                    <div class="ref-item">40. ศ (s)</div>
+                    <div class="ref-item">41. ษ (s)</div>
+                    <div class="ref-item">42. ส (s)</div>
+                    <div class="ref-item">43. ห (h)</div>
+                    <div class="ref-item">44. ฬ (l)</div>
+                    <div class="ref-item">45. อ (ʔ)</div>
+                    <div class="ref-item">46. ฮ (h)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Consonants Section -->
+    <div class="alphabet-section">
+        <h2>{{ alphabet.consonants.title }}</h2>
+        <p class="description">{{ alphabet.consonants.description }}</p>
+        
+        {% for group_id, group in alphabet.consonants.groups.items() %}
+        <div class="consonant-group">
+            <h3>{{ group.name }}</h3>
+            <p class="group-description">{{ group.description }}</p>
+            
+            <div class="letters-grid">
+                {% for letter in group.letters %}
+                <div class="letter-card">
+                    <div class="thai-letter">{{ letter.thai }}</div>
+                    <div class="letter-details">
+                        <span class="paiboon">{{ letter.paiboon if letter.paiboon else '(silent)' }}</span>
+                        <span class="letter-name paiboon">{{ letter.name }}</span>
+                        <span class="meaning">{{ letter.meaning }}</span>
+                    </div>
+                    {% if letter.example %}
+                    <div class="example">
+                        <span class="thai-ex">{{ letter.example.thai }}</span>
+                        <span class="paiboon-ex paiboon">{{ letter.example.paiboon }}</span>
+                        <span class="english-ex">{{ letter.example.english }}</span>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Vowels Section -->
+    <div class="alphabet-section">
+        <h2>{{ alphabet.vowels.title }}</h2>
+        <p class="description">{{ alphabet.vowels.description }}</p>
+        
+        <div class="vowel-subsection">
+            <h3>Short Vowels (สระเสียงสั้น)</h3>
+            <div class="vowels-grid">
+                {% for vowel in alphabet.vowels.short_vowels %}
+                <div class="vowel-card">
+                    <div class="thai-vowel">{{ vowel.thai }}</div>
+                    <div class="paiboon-vowel paiboon">{{ vowel.paiboon }}</div>
+                    <div class="vowel-example">
+                        <span class="thai-ex">{{ vowel.example.thai }}</span>
+                        <span class="paiboon-ex paiboon">{{ vowel.example.paiboon }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <div class="vowel-subsection">
+            <h3>Long Vowels (สระเสียงยาว)</h3>
+            <div class="vowels-grid">
+                {% for vowel in alphabet.vowels.long_vowels %}
+                <div class="vowel-card">
+                    <div class="thai-vowel">{{ vowel.thai }}</div>
+                    <div class="paiboon-vowel paiboon">{{ vowel.paiboon }}</div>
+                    <div class="vowel-example">
+                        <span class="thai-ex">{{ vowel.example.thai }}</span>
+                        <span class="paiboon-ex paiboon">{{ vowel.example.paiboon }}</span>
+                        {% if vowel.example.english %}
+                        <span class="english-ex">{{ vowel.example.english }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Tone Marks Section -->
+    <div class="alphabet-section">
+        <h2>{{ alphabet.tone_marks.title }}</h2>
+        <p class="description">{{ alphabet.tone_marks.description }}</p>
+        
+        <div class="tone-marks-grid">
+            {% for mark in alphabet.tone_marks.marks %}
+            <div class="tone-card">
+                <div class="tone-symbol">{{ mark.symbol }}</div>
+                <div class="tone-details">
+                    <span class="tone-name">{{ mark.name }}</span>
+                    <span class="tone-effect paiboon">{{ mark.paiboon }}</span>
+                </div>
+                <div class="tone-example">
+                    <span class="thai-ex">{{ mark.example.thai }}</span>
+                    <span class="paiboon-ex paiboon">{{ mark.example.paiboon }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Special Characters Section -->
+    <div class="alphabet-section">
+        <h2>{{ alphabet.special_characters.title }}</h2>
+        
+        <div class="special-chars-list">
+            {% for char in alphabet.special_characters.characters %}
+            <div class="special-card">
+                <div class="special-symbol">{{ char.symbol }}</div>
+                <div class="special-details">
+                    <h4>{{ char.name }}</h4>
+                    <p class="use">{{ char.use }}</p>
+                    <div class="special-example">
+                        <span class="thai-ex">{{ char.example.thai }}</span>
+                        <span class="paiboon-ex paiboon">{{ char.example.paiboon }}</span>
+                        <span class="english-ex">{{ char.example.english }}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Completion Button -->
+    {% if not alphabet_complete %}
+    <div class="completion-section">
+        <h2>📖 Ready to Continue?</h2>
+        <p>Once you've studied the alphabet and practiced the exercises, mark it as complete to unlock vocabulary exercises and other learning materials!</p>
+        <button id="complete-btn" class="btn btn-complete">✓ Mark Alphabet as Complete</button>
+        <p class="reward-text">+100 XP Reward!</p>
+    </div>
+    {% else %}
+    <div class="next-steps">
+        <h2>🚀 What's Next?</h2>
+        <p>You've completed the alphabet! Now you can access:</p>
+        <ul>
+            <li>✅ Vocabulary exercises (all categories)</li>
+            <li>✅ Grammar lessons</li>
+            <li>✅ Cultural content</li>
+            <li>✅ All other learning materials</li>
+        </ul>
+        <a href="/learn" class="btn btn-primary">Start Learning Vocabulary</a>
+    </div>
+    {% endif %}
+</div>
+
+<style>
+    .alphabet-header {
+        text-align: center;
+        margin: 2rem 0 3rem 0;
+        padding: 2rem;
+        background: linear-gradient(135deg, var(--royal-purple) 0%, var(--deep-purple) 100%);
+        border-radius: 20px;
+        color: white;
+    }
+    
+    .main-title {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .thai-title {
+        font-size: 3.5rem;
+        color: var(--royal-gold);
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        letter-spacing: 0.05em;
+    }
+    
+    .romanized-title {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-style: italic;
+        font-family: 'Noto Sans Mono', 'Courier New', monospace;
+        letter-spacing: 0.15em;
+        line-height: 2.2;
+        display: inline-block;
+        vertical-align: baseline;
+        font-weight: 400;
+    }
+    
+    .english-title {
+        font-size: 2rem;
+        color: white;
+        font-weight: 600;
+    }
+    
+    .intro {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+    
+    .completion-badge {
+        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--gold-shimmer) 100%);
+        color: var(--deep-purple);
+        padding: 2rem;
+        border-radius: 15px;
+        margin-top: 1rem;
+        box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+    }
+    
+    .completion-badge h2 {
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .progress-prompt {
+        background: rgba(255, 255, 255, 0.2);
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+    }
+    
+    /* Exercise Section Styles */
+    .exercise-section {
+        background: linear-gradient(135deg, rgba(34, 139, 34, 0.1) 0%, rgba(107, 142, 35, 0.1) 100%);
+        border-radius: 20px;
+        padding: 2rem;
+        margin: 2rem 0 3rem 0;
+        border: 3px solid var(--bodhi-green);
+    }
+    
+    .exercise-section h2 {
+        color: var(--bodhi-green);
+        margin-bottom: 0.5rem;
+    }
+    
+    .exercise-intro {
+        color: #555;
+        margin-bottom: 1.5rem;
+    }
+    
+    .exercise-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tab-btn {
+        flex: 1;
+        padding: 1rem 2rem;
+        background: white;
+        border: 2px solid var(--bodhi-green);
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .tab-btn:hover {
+        background: rgba(34, 139, 34, 0.1);
+    }
+    
+    .tab-btn.active {
+        background: var(--bodhi-green);
+        color: white;
+    }
+    
+    .exercise-info {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .order-hint {
+        color: var(--royal-gold);
+        font-weight: bold;
+        margin-top: 0.5rem;
+        font-size: 1.1rem;
+    }
+    
+    .drop-zone {
+        background: white;
+        border: 3px dashed var(--bodhi-green);
+        border-radius: 15px;
+        min-height: 300px;
+        max-height: 500px;
+        overflow-y: auto;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+    
+    .drop-zone.drag-over {
+        background: rgba(34, 139, 34, 0.1);
+        border-color: var(--royal-gold);
+    }
+    
+    .drop-placeholder {
+        width: 100%;
+        text-align: center;
+        color: #999;
+        font-style: italic;
+        padding: 2rem;
+    }
+    
+    .letter-bank {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        min-height: 200px;
+        max-height: 400px;
+        overflow-y: auto;
+        margin-bottom: 1.5rem;
+    }
+    
+    .draggable-letter {
+        background: white;
+        border: 2px solid var(--royal-purple);
+        border-radius: 10px;
+        padding: 1rem;
+        min-width: 60px;
+        text-align: center;
+        cursor: move;
+        transition: all 0.3s ease;
+        user-select: none;
+    }
+    
+    .draggable-letter:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(74, 26, 107, 0.3);
+    }
+    
+    .draggable-letter.dragging {
+        opacity: 0.5;
+    }
+    
+    .draggable-letter .thai {
+        font-size: 1.8rem;
+        color: var(--royal-purple);
+        font-weight: bold;
+    }
+    
+    .draggable-letter .romanized {
+        font-size: 0.9rem;
+        color: var(--royal-gold);
+        margin-top: 0.3rem;
+        font-family: 'Noto Sans', Arial, sans-serif;
+        line-height: 2;
+        display: inline-block;
+        vertical-align: baseline;
+        font-weight: 400;
+        text-rendering: geometricPrecision;
+        letter-spacing: 0.02em;
+    }
+    
+    .exercise-controls {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin: 1.5rem 0;
+        flex-wrap: wrap;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+    
+    .btn-check {
+        background: var(--bodhi-green);
+        color: white;
+    }
+    
+    .btn-check:hover {
+        background: var(--bamboo-green);
+        transform: translateY(-2px);
+    }
+    
+    .btn-reset {
+        background: var(--temple-orange);
+        color: white;
+    }
+    
+    .btn-reset:hover {
+        background: var(--monk-saffron);
+        transform: translateY(-2px);
+    }
+    
+    .btn-hint {
+        background: var(--royal-gold);
+        color: white;
+    }
+    
+    .btn-hint:hover {
+        background: var(--gold-shimmer);
+        transform: translateY(-2px);
+    }
+    
+    .result-message {
+        text-align: center;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    
+    .result-message.correct {
+        background: rgba(34, 139, 34, 0.2);
+        color: var(--bodhi-green);
+        border: 2px solid var(--bodhi-green);
+    }
+    
+    .result-message.incorrect {
+        background: rgba(139, 0, 0, 0.1);
+        color: var(--temple-red);
+        border: 2px solid var(--temple-red);
+    }
+    
+    .result-message.hint {
+        background: rgba(212, 175, 55, 0.2);
+        color: var(--royal-gold);
+        border: 2px solid var(--royal-gold);
+    }
+    
+    /* NEW EXERCISE SYSTEM STYLES */
+    .level-selector {
+        background: white;
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .level-info {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .level-info h3 {
+        color: var(--royal-purple);
+        margin-bottom: 0.5rem;
+    }
+    
+    .level-info p {
+        color: #666;
+        font-size: 0.95rem;
+    }
+    
+    .level-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .level-btn {
+        background: white;
+        border: 3px solid var(--bodhi-green);
+        border-radius: 12px;
+        padding: 1rem;
+        min-width: 100px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+    }
+    
+    .level-btn:hover:not(.locked) {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(34, 139, 34, 0.3);
+    }
+    
+    .level-btn.active {
+        background: var(--bodhi-green);
+        color: white;
+        border-color: var(--bodhi-green);
+    }
+    
+    .level-btn.locked {
+        background: #f0f0f0;
+        border-color: #ccc;
+        color: #999;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+    
+    .level-btn.completed {
+        background: var(--royal-gold);
+        color: white;
+        border-color: var(--royal-gold);
+    }
+    
+    .level-num {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .level-desc {
+        font-size: 0.85rem;
+    }
+    
+    .exercise-header {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    
+    .exercise-header h3 {
+        color: var(--royal-purple);
+        margin-bottom: 0.5rem;
+    }
+    
+    .exercise-header p {
+        color: #666;
+    }
+    
+    .hint-message {
+        text-align: center;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+        background: rgba(212, 175, 55, 0.1);
+        color: var(--royal-gold);
+        border: 2px solid var(--royal-gold);
+        font-size: 1.1rem;
+    }
+    
+    .hint-message.hidden {
+        display: none;
+    }
+    
+    .quick-reference {
+        background: white;
+        border-radius: 15px;
+        padding: 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .reference-toggle {
+        width: 100%;
+        background: var(--royal-purple);
+        color: white;
+        border: none;
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+    .reference-toggle:hover {
+        background: var(--deep-purple);
+    }
+    
+    .reference-content {
+        margin-top: 1.5rem;
+    }
+    
+    .reference-content h4 {
+        color: var(--royal-purple);
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    .reference-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.5rem;
+    }
+    
+    .ref-item {
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        font-family: 'Noto Sans', Arial, sans-serif;
+    }
+    
+    @media (max-width: 768px) {
+        .level-buttons {
+            flex-direction: column;
+        }
+        
+        .level-btn {
+            width: 100%;
+        }
+        
+        .reference-grid {
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        }
+    }
+    
+    
+    .alphabet-section {
+        background: white;
+        border-radius: 15px;
+        padding: 2rem;
+        margin: 2rem 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .alphabet-section h2 {
+        color: var(--royal-purple);
+        border-bottom: 3px solid var(--royal-gold);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .description {
+        color: #666;
+        margin-bottom: 2rem;
+    }
+    
+    .consonant-group {
+        margin: 2rem 0;
+    }
+    
+    .consonant-group h3 {
+        color: var(--royal-burgundy);
+        margin-bottom: 0.5rem;
+    }
+    
+    .group-description {
+        color: #888;
+        font-style: italic;
+        margin-bottom: 1.5rem;
+    }
+    
+    .letters-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .letter-card {
+        background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+        border: 2px solid var(--royal-gold);
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .letter-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+    }
+    
+    .thai-letter {
+        font-size: 4rem;
+        color: var(--royal-purple);
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .letter-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin: 0.5rem 0;
+    }
+    
+    .paiboon {
+        font-size: 1.2rem;
+        color: var(--royal-gold);
+        font-weight: 400;
+        font-family: 'Noto Sans', Arial, sans-serif;
+        line-height: 2;
+        display: inline-block;
+        vertical-align: baseline;
+        text-rendering: geometricPrecision;
+        letter-spacing: 0.02em;
+    }
+    
+    .letter-name {
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .meaning {
+        font-size: 0.85rem;
+        color: #999;
+        font-style: italic;
+    }
+    
+    .example {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .thai-ex {
+        font-size: 1.3rem;
+        color: var(--royal-purple);
+    }
+    
+    .paiboon-ex {
+        font-size: 1rem;
+        color: var(--royal-gold);
+        font-family: 'Noto Sans', Arial, sans-serif;
+        line-height: 2;
+        display: inline-block;
+        vertical-align: baseline;
+        font-weight: 400;
+        text-rendering: geometricPrecision;
+        letter-spacing: 0.02em;
+    }
+    
+    .english-ex {
+        font-size: 0.9rem;
+        color: #888;
+    }
+    
+    .vowels-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+    
+    .vowel-card {
+        background: #f9f9f9;
+        border: 2px solid var(--bodhi-green);
+        border-radius: 10px;
+        padding: 1rem;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    
+    .vowel-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 15px rgba(34, 139, 34, 0.2);
+    }
+    
+    .thai-vowel {
+        font-size: 2.5rem;
+        color: var(--royal-purple);
+        font-weight: bold;
+    }
+    
+    .paiboon-vowel {
+        font-size: 1.1rem;
+        color: var(--bodhi-green);
+        font-weight: 400;
+        margin: 0.5rem 0;
+        font-family: 'Noto Sans', Arial, sans-serif;
+        line-height: 2;
+        display: inline-block;
+        vertical-align: baseline;
+        text-rendering: geometricPrecision;
+        letter-spacing: 0.02em;
+    }
+    
+    .vowel-example {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+    
+    .tone-marks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .tone-card {
+        background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+        border: 2px solid var(--temple-orange);
+        border-radius: 12px;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .tone-symbol {
+        font-size: 4rem;
+        color: var(--temple-orange);
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tone-details {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        margin: 1rem 0;
+    }
+    
+    .tone-name {
+        font-weight: bold;
+        color: var(--royal-purple);
+    }
+    
+    .tone-effect {
+        color: var(--temple-orange);
+        font-style: italic;
+    }
+    
+    .special-chars-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .special-card {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        background: #f9f9f9;
+        border: 2px solid var(--lotus-pink);
+        border-radius: 12px;
+        padding: 1.5rem;
+    }
+    
+    .special-symbol {
+        font-size: 3rem;
+        color: var(--lotus-pink);
+        font-weight: bold;
+        min-width: 60px;
+        text-align: center;
+    }
+    
+    .special-details {
+        flex: 1;
+    }
+    
+    .special-details h4 {
+        color: var(--royal-purple);
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .use {
+        color: #666;
+        margin: 0.5rem 0;
+    }
+    
+    .special-example {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+    }
+    
+    .completion-section {
+        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--gold-shimmer) 100%);
+        border-radius: 20px;
+        padding: 3rem;
+        text-align: center;
+        margin: 3rem 0;
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+    }
+    
+    .completion-section h2 {
+        color: var(--deep-purple);
+        margin-bottom: 1rem;
+    }
+    
+    .btn-complete {
+        background: var(--royal-purple);
+        color: white;
+        padding: 1.5rem 3rem;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin: 1rem 0;
+    }
+    
+    .btn-complete:hover {
+        background: var(--deep-purple);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(74, 26, 107, 0.4);
+    }
+    
+    .reward-text {
+        color: var(--temple-red);
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-top: 0.5rem;
+    }
+    
+    .next-steps {
+        background: linear-gradient(135deg, var(--bodhi-green) 0%, var(--bamboo-green) 100%);
+        border-radius: 20px;
+        padding: 2rem;
+        margin: 3rem 0;
+        color: white;
+    }
+    
+    .next-steps h2 {
+        color: white;
+        margin-bottom: 1rem;
+    }
+    
+    .next-steps ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+    
+    .next-steps li {
+        padding: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+    
+    .btn-primary {
+        background: white;
+        color: var(--bodhi-green);
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+        .letters-grid {
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        }
+        
+        .vowels-grid {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        }
+        
+        .special-card {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .exercise-tabs {
+            flex-direction: column;
+        }
+        
+        .exercise-controls {
+            flex-direction: column;
+        }
+        
+        .btn {
+            width: 100%;
+        }
+    }
+</style>
+
+<script>
+// Thai consonants in alphabetical order - ALL 44 with romanization
+const consonantsData = [
+    {thai: 'ก', rom: 'g'}, {thai: 'ข', rom: 'k'}, {thai: 'ฃ', rom: 'k'}, {thai: 'ค', rom: 'k'},
+    {thai: 'ฅ', rom: 'k'}, {thai: 'ฆ', rom: 'k'}, {thai: 'ง', rom: 'ng'}, {thai: 'จ', rom: 'j'},
+    {thai: 'ฉ', rom: 'ch'}, {thai: 'ช', rom: 'ch'}, {thai: 'ซ', rom: 's'}, {thai: 'ฌ', rom: 'ch'},
+    {thai: 'ญ', rom: 'y'}, {thai: 'ฎ', rom: 'd'}, {thai: 'ฏ', rom: 'dt'}, {thai: 'ฐ', rom: 't'},
+    {thai: 'ฑ', rom: 't'}, {thai: 'ฒ', rom: 't'}, {thai: 'ณ', rom: 'n'}, {thai: 'ด', rom: 'd'},
+    {thai: 'ต', rom: 'dt'}, {thai: 'ถ', rom: 't'}, {thai: 'ท', rom: 't'}, {thai: 'ธ', rom: 't'},
+    {thai: 'น', rom: 'n'}, {thai: 'บ', rom: 'b'}, {thai: 'ป', rom: 'bp'}, {thai: 'ผ', rom: 'p'},
+    {thai: 'ฝ', rom: 'f'}, {thai: 'พ', rom: 'p'}, {thai: 'ฟ', rom: 'f'}, {thai: 'ภ', rom: 'p'},
+    {thai: 'ม', rom: 'm'}, {thai: 'ย', rom: 'y'}, {thai: 'ร', rom: 'r'}, {thai: 'ฤ', rom: 'r'},
+    {thai: 'ล', rom: 'l'}, {thai: 'ฦ', rom: 'l'}, {thai: 'ว', rom: 'w'}, {thai: 'ศ', rom: 's'},
+    {thai: 'ษ', rom: 's'}, {thai: 'ส', rom: 's'}, {thai: 'ห', rom: 'h'}, {thai: 'ฬ', rom: 'l'},
+    {thai: 'อ', rom: 'ʔ'}, {thai: 'ฮ', rom: 'h'}
+];
+
+// Level definitions
+const levels = {
+    1: { range: [0, 5], title: 'Level 1: First 5 Consonants', desc: 'ก ข ฃ ค ฅ' },
+    2: { range: [5, 10], title: 'Level 2: Next 5 Consonants', desc: 'ฆ ง จ ฉ ช' },
+    3: { range: [10, 20], title: 'Level 3: Next 10 Consonants', desc: 'ซ through ด' },
+    4: { range: [20, 30], title: 'Level 4: Next 10 Consonants', desc: 'ต through ฟ' },
+    5: { range: [0, 44], title: 'Level 5: ALL 44 Consonants!', desc: 'Complete Thai Alphabet' }
+};
+
+// Global state
+let currentLevel = 1;
+let completedLevels = [];
+let currentLetters = [];
+let correctOrder = [];
+let hintsUsed = 0;
+
+// Shuffle array
+function shuffleArray(array) {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+}
+
+// Create draggable letter with romanization
+function createDraggableLetter(letter) {
+    const div = document.createElement('div');
+    div.className = 'draggable-letter';
+    div.draggable = true;
+    div.dataset.thai = letter.thai;
+    div.dataset.rom = letter.rom;
+    div.innerHTML = `
+        <div class="thai">${letter.thai}</div>
+        <div class="romanized paiboon">${letter.rom}</div>
+    `;
+    
+    div.addEventListener('dragstart', handleDragStart);
+    div.addEventListener('dragend', handleDragEnd);
+    
+    return div;
+}
+
+// Select level
+function selectLevel(level) {
+    if (completedLevels.includes(level - 1) || level === 1 || completedLevels.includes(level)) {
+        currentLevel = level;
+        updateLevelButtons();
+        loadLevel(level);
+    }
+}
+
+// Update level buttons
+function updateLevelButtons() {
+    for (let i = 1; i <= 5; i++) {
+        const btn = document.getElementById(`level-${i}-btn`);
+        btn.classList.remove('active', 'locked', 'completed');
+        
+        if (i === currentLevel) {
+            btn.classList.add('active');
+        } else if (completedLevels.includes(i)) {
+            btn.classList.add('completed');
+        } else if (i > 1 && !completedLevels.includes(i - 1)) {
+            btn.classList.add('locked');
+        }
+    }
+    
+    document.getElementById('current-level-display').textContent = currentLevel;
+    document.getElementById('progress-display').textContent = `${completedLevels.length}/5`;
+}
+
+// Load level
+function loadLevel(level) {
+    const levelData = levels[level];
+    const [start, end] = levelData.range;
+    
+    currentLetters = consonantsData.slice(start, end);
+    correctOrder = currentLetters.map(l => l.thai);
+    hintsUsed = 0;
+    
+    document.getElementById('exercise-title').textContent = levelData.title;
+    document.getElementById('exercise-desc').textContent = `Arrange these ${end - start} letters in alphabetical order`;
+    
+    // Load shuffled letters into bank
+    const bank = document.getElementById('letter-bank');
+    const shuffled = shuffleArray(currentLetters);
+    
+    bank.innerHTML = '';
+    shuffled.forEach(letter => {
+        bank.appendChild(createDraggableLetter(letter));
+    });
+    
+    // Clear drop zone
+    const dropZone = document.getElementById('drop-zone');
+    dropZone.innerHTML = '<div class="drop-placeholder">Drop letters here in alphabetical order</div>';
+    
+    // Clear messages
+    document.getElementById('result-message').textContent = '';
+    document.getElementById('result-message').className = 'result-message';
+    document.getElementById('hint-message').textContent = '';
+    document.getElementById('hint-message').classList.add('hidden');
+}
+
+// Drag and drop handlers
+function handleDragStart(e) {
+    this.classList.add('dragging');
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', this.outerHTML);
+    e.dataTransfer.setData('thai', this.dataset.thai);
+}
+
+function handleDragEnd(e) {
+    this.classList.remove('dragging');
+}
+
+function handleDragOver(e) {
+    if (e.preventDefault) {
+        e.preventDefault();
+    }
+    e.dataTransfer.dropEffect = 'move';
+    return false;
+}
+
+function handleDragEnter(e) {
+    this.classList.add('drag-over');
+}
+
+function handleDragLeave(e) {
+    this.classList.remove('drag-over');
+}
+
+function handleDrop(e) {
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    }
+    
+    this.classList.remove('drag-over');
+    
+    const html = e.dataTransfer.getData('text/html');
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
+    const element = temp.firstChild;
+    
+    // Re-add event listeners
+    element.addEventListener('dragstart', handleDragStart);
+    element.addEventListener('dragend', handleDragEnd);
+    
+    // Remove placeholder if exists
+    const placeholder = this.querySelector('.drop-placeholder');
+    if (placeholder) {
+        placeholder.remove();
+    }
+    
+    this.appendChild(element);
+    
+    // Remove original from bank
+    const dragging = document.querySelector('.dragging');
+    if (dragging && dragging.parentNode.id === 'letter-bank') {
+        dragging.remove();
+    }
+    
+    return false;
+}
+
+// Setup drop zones
+function setupDropZones() {
+    const dropZones = [document.getElementById('drop-zone'), document.getElementById('letter-bank')];
+    dropZones.forEach(zone => {
+        zone.addEventListener('dragover', handleDragOver);
+        zone.addEventListener('dragenter', handleDragEnter);
+        zone.addEventListener('dragleave', handleDragLeave);
+        zone.addEventListener('drop', handleDrop);
+    });
+}
+
+// Check answer
+function checkAnswer() {
+    const dropZone = document.getElementById('drop-zone');
+    const letters = Array.from(dropZone.querySelectorAll('.draggable-letter'));
+    const userOrder = letters.map(l => l.dataset.thai);
+    
+    const resultDiv = document.getElementById('result-message');
+    
+    if (userOrder.length === 0) {
+        resultDiv.className = 'result-message incorrect';
+        resultDiv.textContent = '❌ Please arrange some letters first!';
+        return;
+    }
+    
+    if (userOrder.length < correctOrder.length) {
+        resultDiv.className = 'result-message incorrect';
+        resultDiv.textContent = `❌ You've only placed ${userOrder.length} of ${correctOrder.length} letters. Keep going!`;
+        return;
+    }
+    
+    const isCorrect = JSON.stringify(userOrder) === JSON.stringify(correctOrder);
+    
+    if (isCorrect) {
+        resultDiv.className = 'result-message correct';
+        
+        if (currentLevel === 5) {
+            resultDiv.textContent = '🎉🎉🎉 PERFECT! You\'ve mastered all 44 Thai consonants in alphabetical order! 🎉🎉🎉';
+        } else {
+            resultDiv.textContent = `🎉 Perfect! Level ${currentLevel} complete! Click Level ${currentLevel + 1} to continue.`;
+            
+            // Mark level complete and unlock next
+            if (!completedLevels.includes(currentLevel)) {
+                completedLevels.push(currentLevel);
+            }
+            updateLevelButtons();
+        }
+        
+        // Clear hint
+        document.getElementById('hint-message').classList.add('hidden');
+    } else {
+        // Find first mistake
+        let firstError = -1;
+        for (let i = 0; i < userOrder.length; i++) {
+            if (userOrder[i] !== correctOrder[i]) {
+                firstError = i;
+                break;
+            }
+        }
+        
+        resultDiv.className = 'result-message incorrect';
+        if (firstError >= 0) {
+            resultDiv.textContent = `❌ Not quite! Check position ${firstError + 1}. The letter ${userOrder[firstError]} (${letters[firstError].dataset.rom}) is not in the right place.`;
+        } else {
+            resultDiv.textContent = '❌ Not quite right. Try again!';
+        }
+    }
+}
+
+// Reset exercise
+function resetExercise() {
+    loadLevel(currentLevel);
+}
+
+// Give hint (show next letter in sequence)
+function giveHint() {
+    const dropZone = document.getElementById('drop-zone');
+    const letters = Array.from(dropZone.querySelectorAll('.draggable-letter'));
+    const currentPosition = letters.length;
+    
+    const hintDiv = document.getElementById('hint-message');
+    
+    if (currentPosition >= correctOrder.length) {
+        hintDiv.classList.remove('hidden');
+        hintDiv.textContent = '💡 All letters are placed! Click "Check Answer" to see if they\'re in the correct order.';
+        return;
+    }
+    
+    const nextLetter = correctOrder[currentPosition];
+    const nextRom = currentLetters.find(l => l.thai === nextLetter).rom;
+    
+    hintsUsed++;
+    
+    hintDiv.classList.remove('hidden');
+    hintDiv.textContent = `💡 Hint: The next letter should be ${nextLetter} (${nextRom}). Hints used: ${hintsUsed}`;
+}
+
+// Toggle reference
+function toggleReference() {
+    const ref = document.getElementById('reference-content');
+    if (ref.style.display === 'none') {
+        ref.style.display = 'block';
+    } else {
+        ref.style.display = 'none';
+    }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    setupDropZones();
+    loadLevel(1);
+    updateLevelButtons();
+    
+    // Completion button
+    document.getElementById('complete-btn')?.addEventListener('click', async function() {
+        const btn = this;
+        btn.disabled = true;
+        btn.textContent = 'Processing...';
+        
+        try {
+            const response = await fetch('/api/complete_alphabet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                alert('🎉 Congratulations! Alphabet completed! +100 XP earned!\n\nYou can now access all vocabulary exercises and learning materials!');
+                window.location.reload();
+            } else {
+                alert(data.message);
+                btn.disabled = false;
+                btn.textContent = '✓ Mark Alphabet as Complete';
+            }
+        } catch (error) {
+            alert('Error completing alphabet. Please try again.');
+            btn.disabled = false;
+            btn.textContent = '✓ Mark Alphabet as Complete';
+        }
+    });
+});
+</script>
+{% endblock %}
