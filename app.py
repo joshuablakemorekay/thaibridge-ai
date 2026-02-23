@@ -4829,26 +4829,30 @@ def signup():
     confirm_password = data.get('confirm_password', '')
 
     if not all([username, email, password, confirm_password]):
-        return jsonify({'success': False, 'message': 'All fields are required.'})
+        return jsonify({'success': False, 'message': 'All fields are required.'}), 400
     if not re.match(r'^[a-zA-Z0-9_]{3,20}$', username):
-        return jsonify({'success': False, 'message': 'Username must be 3\u201320 characters: letters, numbers, and underscores only.'})
+        return jsonify({'success': False, 'message': 'Username must be 3\u201320 characters: letters, numbers, and underscores only.'}), 400
     if not re.match(r'^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$', email):
-        return jsonify({'success': False, 'message': 'Please enter a valid email address.'})
+        return jsonify({'success': False, 'message': 'Please enter a valid email address.'}), 400
     if len(password) < 8:
-        return jsonify({'success': False, 'message': 'Password must be at least 8 characters.'})
+        return jsonify({'success': False, 'message': 'Password must be at least 8 characters.'}), 400
     if not re.search(r'[a-zA-Z]', password) or not re.search(r'[0-9]', password):
-        return jsonify({'success': False, 'message': 'Password must contain at least one letter and one number.'})
+        return jsonify({'success': False, 'message': 'Password must contain at least one letter and one number.'}), 400
     if password != confirm_password:
-        return jsonify({'success': False, 'message': 'Passwords do not match.'})
+        return jsonify({'success': False, 'message': 'Passwords do not match.'}), 400
     if User.query.filter_by(username=username).first():
-        return jsonify({'success': False, 'message': 'That username is already taken.'})
+        return jsonify({'success': False, 'message': 'That username is already taken.'}), 400
     if User.query.filter_by(email=email).first():
-        return jsonify({'success': False, 'message': 'An account with that email already exists.'})
+        return jsonify({'success': False, 'message': 'An account with that email already exists.'}), 400
 
     new_user = User(username=username, email=email)
     new_user.set_password(password)
-    db.session.add(new_user)
-    db.session.commit()
+    try:
+        db.session.add(new_user)
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
+        return jsonify({'success': False, 'message': 'Registration failed. Please try again.'}), 500
 
     init_user_progress()
     session['user_progress']['user_id'] = new_user.id
