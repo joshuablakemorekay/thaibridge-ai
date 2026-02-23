@@ -1,4 +1,71 @@
-# ✅ DONE! - EVERYTHING IS READY FOR YOU
+# Thai Language & Culture Learning App
+
+A Flask-based web application for learning Thai through cultural immersion, gamification, and AI-powered conversation practice.
+
+---
+
+## Installation
+
+### Prerequisites
+
+- Python 3.10+
+- An [Anthropic API key](https://console.anthropic.com) (for AI chat features)
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/MungManBaoIsan/Thai-App-NEW.git
+cd Thai-App-NEW
+```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Set environment variables
+
+**Linux / macOS:**
+```bash
+export ANTHROPIC_API_KEY="sk-ant-your-key-here"
+export FLASK_SECRET_KEY="your-secret-key-here"
+```
+
+**Windows (Command Prompt):**
+```cmd
+set ANTHROPIC_API_KEY=sk-ant-your-key-here
+set FLASK_SECRET_KEY=your-secret-key-here
+```
+
+**Windows (PowerShell):**
+```powershell
+$env:ANTHROPIC_API_KEY="sk-ant-your-key-here"
+$env:FLASK_SECRET_KEY="your-secret-key-here"
+```
+
+> `FLASK_SECRET_KEY` can be any long random string. Generate one with:
+> ```bash
+> python -c "import secrets; print(secrets.token_hex(32))"
+> ```
+
+### 4. Run the app
+
+```bash
+python app.py
+```
+
+Visit **http://localhost:5000** in your browser. The SQLite database is created automatically on first run.
+
+### 5. Run the tests
+
+```bash
+python -m pytest test_calculator.py -v
+```
+
+---
+
+## ✅ DONE! - EVERYTHING IS READY FOR YOU
 
 ## 🎉 What I've Built For You
 
