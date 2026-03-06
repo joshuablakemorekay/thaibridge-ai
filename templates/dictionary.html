@@ -1,140 +1,335 @@
 {% extends "base.html" %}
 
-{% block title %}Dictionary Reference{% endblock %}
+{% block title %}Thai-English Dictionary{% endblock %}
 
 {% block content %}
-<h1>
-    📕 Dictionary Reference
-    <span class="thai">พจนานุกรมอ้างอิง</span>
-</h1>
+<div class="container">
+    <h1>📕 Thai-English Dictionary
+        <span class="thai" style="font-size: 1.2rem; display: block; margin-top: 0.3rem;">พจนานุกรมไทย-อังกฤษ</span>
+    </h1>
 
-<div class="card" style="text-align: center; background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); border-left-color: var(--temple-red);">
-    <div style="font-size: 4rem; margin-bottom: 1rem;">📕</div>
-    <h2 style="color: var(--temple-red); margin: 0;">{{ reference.title }}</h2>
-    <p style="font-size: 1.2rem; color: var(--royal-purple); margin: 0.5rem 0;">{{ reference.subtitle }}</p>
-    <p style="color: #666;">by {{ reference.author }}</p>
-    <p style="color: #666;">{{ reference.publisher }}</p>
-</div>
+    <!-- Search Box -->
+    <div class="search-card">
+        <form method="GET" action="/dictionary" id="search-form">
+            <div class="search-row">
+                <input
+                    type="text"
+                    name="q"
+                    id="search-input"
+                    value="{{ query }}"
+                    placeholder="Search in English — e.g. monk, water, heart…"
+                    autocomplete="off"
+                    autofocus
+                >
+                <button type="submit" class="btn-search">Search</button>
+                {% if query %}
+                <a href="/dictionary" class="btn-clear">✕ Clear</a>
+                {% endif %}
+            </div>
+        </form>
+        <p class="entry-count">{{ "{:,}".format(total_entries) }} entries from the LEXiTRON corpus</p>
+    </div>
 
-<div class="card">
-    <h2 style="margin-top: 0;">📖 About This Dictionary</h2>
-    <p style="line-height: 1.8; white-space: pre-line;">{{ reference.description }}</p>
-</div>
+    <!-- Info banner -->
+    <div class="info-banner">
+        💡 Results show Thai script only. To hear Paiboon romanization and pronunciation for any word,
+        ask the AI tutor — try typing <em>"how do I pronounce [word]?"</em> in the
+        <a href="/chat">chat</a>.
+    </div>
 
-<div class="card" style="border-left-color: var(--bodhi-green);">
-    <h2 style="margin-top: 0;">✨ Key Features</h2>
-    <ul style="margin-left: 1.5rem;">
-        {% for feature in reference.features %}
-        <li style="margin: 1rem 0; font-size: 1.1rem;">
-            <span style="color: var(--bodhi-green); margin-right: 0.5rem;">✓</span>
-            {{ feature }}
-        </li>
-        {% endfor %}
-    </ul>
-</div>
-
-<div class="card" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-left-color: #1976D2;">
-    <h2 style="margin-top: 0; color: #1976D2;">🎯 Why Paiboon?</h2>
-    <p style="line-height: 1.8;">
-        The <strong>Paiboon romanization system</strong> is widely considered the best system for English 
-        speakers learning Thai because:
-    </p>
-    <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
-        <li><strong>Consistent tone marking</strong> - Every syllable shows its tone</li>
-        <li><strong>Intuitive for English speakers</strong> - Uses familiar letter combinations</li>
-        <li><strong>Distinguishes similar sounds</strong> - Separates 'dt' from 'd' and 't'</li>
-        <li><strong>Shows vowel length</strong> - Doubled vowels indicate long sounds</li>
-        <li><strong>Widely adopted</strong> - Used in many learning materials and apps</li>
-    </ul>
-</div>
-
-<div class="lotus-divider">❀ ❀ ❀</div>
-
-<div class="card">
-    <h2 style="margin-top: 0;">📚 How to Use with This App</h2>
-    
-    <h4>1. Learn the Paiboon System</h4>
-    <p style="margin-bottom: 1rem;">
-        Start by understanding how Paiboon romanization works. Our guide explains all the symbols and sounds.
-    </p>
-    <a href="/paiboon" class="btn" style="margin-bottom: 1rem;">View Paiboon Guide →</a>
-    
-    <h4>2. Practice Vocabulary</h4>
-    <p style="margin-bottom: 1rem;">
-        Use our vocabulary exercises to learn common words with Paiboon pronunciation.
-    </p>
-    <a href="/learn" class="btn" style="margin-bottom: 1rem;">Practice Vocabulary →</a>
-    
-    <h4>3. Look Up New Words</h4>
-    <p style="margin-bottom: 1rem;">
-        When you encounter new Thai words, use the Paiboon dictionary to find accurate pronunciations 
-        with tone marks and classifiers.
-    </p>
-    
-    <h4>4. Cross-Reference</h4>
-    <p>
-        The romanization in this app matches the dictionary, so you can easily cross-reference 
-        and expand your vocabulary.
-    </p>
-</div>
-
-<div class="card" style="border-left-color: var(--saffron);">
-    <h2 style="margin-top: 0;">🛒 Where to Get It</h2>
-    <p style="line-height: 1.8;">
-        The Thai-English English-Thai Dictionary is available from:
-    </p>
-    <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
-        <li>Paiboon Publishing website (paiboonpublishing.com)</li>
-        <li>Amazon (paperback and Kindle editions)</li>
-        <li>Major bookstores in Thailand (Kinokuniya, Asia Books, SE-ED)</li>
-        <li>Online retailers worldwide</li>
-    </ul>
-    <p style="margin-top: 1rem; color: #666; font-style: italic;">
-        Note: This app is not affiliated with Paiboon Publishing. We recommend their dictionary 
-        as a valuable resource for serious learners.
-    </p>
-</div>
-
-<div class="card" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-left-color: #1976D2;">
-    <h2 style="margin-top: 0;">🔊 Online Audio Resources</h2>
-    {% if reference.online_resources %}
-        {% for key, resource in reference.online_resources.items() %}
-        <div style="margin-bottom: 1.5rem;">
-            <h3 style="color: #1976D2;">{{ resource.name }}</h3>
-            <p style="margin: 0.5rem 0;">{{ resource.description }}</p>
-            <p style="margin-top: 1rem;">
-                <a href="{{ resource.url }}" target="_blank" class="btn" style="background: #1976D2; color: white;">
-                    🎧 Visit {{ resource.name }} →
-                </a>
-            </p>
+    <!-- Results -->
+    {% if query %}
+    <div class="results-section">
+        {% if results %}
+        <h2 class="results-header">
+            {{ results | length }} result{% if results | length != 1 %}s{% endif %}
+            for "<strong>{{ query }}</strong>"
+            {% if results | length == 50 %}<span class="limit-note">(showing top 50)</span>{% endif %}
+        </h2>
+        <div class="results-grid">
+            {% for entry in results %}
+            <div class="result-card">
+                <span class="result-thai">{{ entry.thai }}</span>
+                <span class="result-english">{{ entry.english }}</span>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        {% else %}
+        <div class="no-results">
+            <span style="font-size: 3rem;">🔍</span>
+            <p>No results for "<strong>{{ query }}</strong>"</p>
+            <p class="no-results-hint">Try a simpler word — e.g. "monk" instead of "buddhist monk"</p>
+        </div>
+        {% endif %}
+    </div>
+    {% else %}
+    <!-- Landing state — show example searches -->
+    <div class="examples-section">
+        <h2>Try searching for…</h2>
+        <div class="example-tags">
+            {% for word in ['monk', 'water', 'temple', 'family', 'love', 'food', 'heart', 'peace', 'mountain', 'flower'] %}
+            <a href="/dictionary?q={{ word }}" class="example-tag">{{ word }}</a>
+            {% endfor %}
+        </div>
+    </div>
     {% endif %}
-</div>
 
-{% if reference.online_resources %}
-<div class="card" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); border-left-color: #1976D2;">
-    <h2 style="margin-top: 0; color: #1976D2;">🎧 Online Learning Resources</h2>
-    
-    {% for key, resource in reference.online_resources.items() %}
-    <div style="padding: 1rem; background: white; border-radius: 10px; margin-bottom: 1rem;">
-        <h3 style="color: #1976D2; margin-top: 0;">{{ resource.name }}</h3>
-        <p>{{ resource.description }}</p>
-        <p style="margin-top: 0.5rem;">
-            <a href="{{ resource.url }}" target="_blank" class="btn" style="background: #1976D2; color: white;">
-                🔗 Visit {{ resource.name }} →
-            </a>
+    <!-- Attribution -->
+    <div class="attribution-card">
+        <h3>📖 Data Source</h3>
+        <p>
+            Dictionary data is sourced from <strong>LEXiTRON</strong>, developed by the
+            <strong>National Electronics and Computer Technology Center (NECTEC)</strong>, Thailand.
+            LEXiTRON is Thailand's national Thai-English bilingual dictionary corpus.
+        </p>
+        <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
+            This product is created by the adaptation of LEXiTRON developed by NECTEC
+            (<a href="http://www.nectec.or.th/" target="_blank" rel="noopener">nectec.or.th</a>).
+            English ↔ Thai pairs served from
+            <a href="https://github.com/veer66/Yaitron" target="_blank" rel="noopener">Yaitron</a>
+            by veer66. Paiboon romanization used throughout this app is a separate system
+            by Benjawan Poomsan Becker / Paiboon Publishing.
         </p>
     </div>
-    {% endfor %}
 </div>
-{% endif %}
 
-<div class="card" style="text-align: center; background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);">
-    <h2 style="margin-top: 0;">🌱 Start Learning</h2>
-    <p style="margin-bottom: 1rem;">Ready to begin your Thai language journey?</p>
-    <a href="/lessons" class="btn btn-saffron" style="margin: 0.25rem;">Start Lessons</a>
-    <a href="/learn" class="btn" style="margin: 0.25rem;">Learn Vocabulary</a>
-    <a href="/grammar" class="btn btn-secondary" style="margin: 0.25rem;">Study Grammar</a>
-</div>
+<style>
+    .container {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    /* Search */
+    .search-card {
+        background: linear-gradient(135deg, var(--royal-purple) 0%, var(--deep-purple) 100%);
+        border-radius: 16px;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    .search-row {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    #search-input {
+        flex: 1;
+        padding: 0.85rem 1.2rem;
+        border: none;
+        border-radius: 30px;
+        font-size: 1.05rem;
+        outline: none;
+        box-shadow: inset 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .btn-search {
+        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--deep-gold) 100%);
+        color: white;
+        border: none;
+        padding: 0.85rem 1.8rem;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        white-space: nowrap;
+        transition: transform 0.2s;
+    }
+
+    .btn-search:hover {
+        transform: translateY(-2px);
+    }
+
+    .btn-clear {
+        background: rgba(255,255,255,0.15);
+        color: white;
+        padding: 0.85rem 1.2rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        transition: background 0.2s;
+    }
+
+    .btn-clear:hover {
+        background: rgba(255,255,255,0.25);
+    }
+
+    .entry-count {
+        text-align: center;
+        color: rgba(255,255,255,0.6);
+        font-size: 0.85rem;
+        margin: 0.75rem 0 0;
+    }
+
+    /* Results */
+    .results-header {
+        margin-bottom: 1.25rem;
+        font-size: 1.1rem;
+        color: #555;
+        font-weight: normal;
+    }
+
+    .limit-note {
+        font-size: 0.85rem;
+        color: #999;
+    }
+
+    .results-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+    }
+
+    .result-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border-left: 4px solid var(--royal-gold);
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        transition: transform 0.15s, box-shadow 0.15s;
+    }
+
+    .result-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .result-thai {
+        font-size: 1.4rem;
+        color: var(--royal-purple);
+        font-family: 'Sarabun', sans-serif;
+        line-height: 1.3;
+    }
+
+    .result-english {
+        font-size: 0.88rem;
+        color: #666;
+        text-transform: lowercase;
+    }
+
+    /* No results */
+    .no-results {
+        text-align: center;
+        padding: 3rem 1rem;
+        color: #888;
+    }
+
+    .no-results p {
+        margin: 0.5rem 0;
+        font-size: 1.1rem;
+    }
+
+    .no-results-hint {
+        font-size: 0.9rem !important;
+        color: #aaa !important;
+    }
+
+    /* Example tags */
+    .examples-section {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .examples-section h2 {
+        color: #777;
+        font-weight: normal;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .example-tags {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    .example-tag {
+        background: white;
+        border: 2px solid var(--royal-gold);
+        color: var(--royal-purple);
+        padding: 0.4rem 1rem;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+    }
+
+    .example-tag:hover {
+        background: var(--royal-gold);
+        color: white;
+    }
+
+    /* Attribution */
+    .attribution-card {
+        background: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 1.25rem 1.5rem;
+        margin-top: 2.5rem;
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.7;
+    }
+
+    .attribution-card h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1rem;
+        color: #333;
+    }
+
+    .attribution-card a {
+        color: var(--royal-purple);
+    }
+
+    /* Info banner */
+    .info-banner {
+        background: linear-gradient(135deg, rgba(74, 26, 107, 0.07) 0%, rgba(212, 175, 55, 0.1) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        border-left: 4px solid var(--royal-gold);
+        border-radius: 8px;
+        padding: 0.75rem 1.1rem;
+        margin-bottom: 1.75rem;
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    .info-banner a {
+        color: var(--royal-purple);
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px dotted var(--royal-purple);
+    }
+
+    .info-banner a:hover {
+        border-bottom-style: solid;
+    }
+
+    @media (max-width: 600px) {
+        .search-row {
+            flex-wrap: wrap;
+        }
+
+        #search-input {
+            width: 100%;
+        }
+
+        .results-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 {% endblock %}
