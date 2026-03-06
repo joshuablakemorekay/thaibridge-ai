@@ -1329,6 +1329,8 @@ THAI_ALPHABET = {
                 'letters': [
                     {'thai': 'ก', 'paiboon': 'g', 'name': 'gɔɔ gài', 'meaning': 'chicken', 'example': {'thai': 'กา', 'paiboon': 'gaa', 'english': 'crow'}},
                     {'thai': 'จ', 'paiboon': 'j', 'name': 'jɔɔ jaan', 'meaning': 'plate', 'example': {'thai': 'จาน', 'paiboon': 'jaan', 'english': 'plate'}},
+                    {'thai': 'ฎ', 'paiboon': 'd', 'name': 'dɔɔ chá-daa', 'meaning': 'headdress', 'example': {'thai': 'ชฎา', 'paiboon': 'chá-daa', 'english': 'headdress'}},
+                    {'thai': 'ฏ', 'paiboon': 'dt', 'name': 'dtɔɔ bpà-dtàk', 'meaning': 'goad', 'example': {'thai': 'ปฏัก', 'paiboon': 'bpà-dtàk', 'english': 'goad'}},
                     {'thai': 'ด', 'paiboon': 'd', 'name': 'dɔɔ dèk', 'meaning': 'child', 'example': {'thai': 'เด็ก', 'paiboon': 'dèk', 'english': 'child'}},
                     {'thai': 'ต', 'paiboon': 'dt', 'name': 'dtɔɔ dtào', 'meaning': 'turtle', 'example': {'thai': 'เต่า', 'paiboon': 'dtào', 'english': 'turtle'}},
                     {'thai': 'บ', 'paiboon': 'b', 'name': 'bɔɔ bai-máai', 'meaning': 'leaf', 'example': {'thai': 'ใบไม้', 'paiboon': 'bai máai', 'english': 'leaf'}},
@@ -1341,7 +1343,9 @@ THAI_ALPHABET = {
                 'description': 'Used with rising tone, 11 consonants',
                 'letters': [
                     {'thai': 'ข', 'paiboon': 'k', 'name': 'kɔ̌ɔ kài', 'meaning': 'egg', 'example': {'thai': 'ไข่', 'paiboon': 'kài', 'english': 'egg'}},
+                    {'thai': 'ฃ', 'paiboon': 'k', 'name': 'kɔ̌ɔ kùat', 'meaning': 'bottle', 'example': {'thai': 'ขวด', 'paiboon': 'kùat', 'english': 'bottle'}},
                     {'thai': 'ฉ', 'paiboon': 'ch', 'name': 'chɔ̌ɔ chíng', 'meaning': 'cymbal', 'example': {'thai': 'ฉิ่ง', 'paiboon': 'chìng', 'english': 'cymbal'}},
+                    {'thai': 'ฐ', 'paiboon': 't', 'name': 'tɔ̌ɔ tǎan', 'meaning': 'base', 'example': {'thai': 'ฐาน', 'paiboon': 'tǎan', 'english': 'base'}},
                     {'thai': 'ถ', 'paiboon': 't', 'name': 'tɔ̌ɔ tǔng', 'meaning': 'bag', 'example': {'thai': 'ถุง', 'paiboon': 'tǔng', 'english': 'bag'}},
                     {'thai': 'ผ', 'paiboon': 'p', 'name': 'pɔ̌ɔ pʉ̌ng', 'meaning': 'bee', 'example': {'thai': 'ผึ้ง', 'paiboon': 'pʉ̂ng', 'english': 'bee'}},
                     {'thai': 'ฝ', 'paiboon': 'f', 'name': 'fɔ̌ɔ fǎa', 'meaning': 'lid', 'example': {'thai': 'ฝา', 'paiboon': 'fǎa', 'english': 'lid'}},
@@ -1356,18 +1360,29 @@ THAI_ALPHABET = {
                 'description': 'Used with low/falling tone, 24 consonants',
                 'letters': [
                     {'thai': 'ค', 'paiboon': 'k', 'name': 'kɔɔ kwai', 'meaning': 'buffalo', 'example': {'thai': 'ควาย', 'paiboon': 'kwaai', 'english': 'buffalo'}},
+                    {'thai': 'ฅ', 'paiboon': 'k', 'name': 'kɔɔ kon', 'meaning': 'person', 'example': {'thai': 'คน', 'paiboon': 'kon', 'english': 'person'}},
+                    {'thai': 'ฆ', 'paiboon': 'k', 'name': 'kɔɔ rá-kaang', 'meaning': 'bell', 'example': {'thai': 'ระฆัง', 'paiboon': 'rá-kaang', 'english': 'bell'}},
                     {'thai': 'ง', 'paiboon': 'ng', 'name': 'ngɔɔ nguu', 'meaning': 'snake', 'example': {'thai': 'งู', 'paiboon': 'nguu', 'english': 'snake'}},
                     {'thai': 'ช', 'paiboon': 'ch', 'name': 'chɔɔ cháang', 'meaning': 'elephant', 'example': {'thai': 'ช้าง', 'paiboon': 'cháang', 'english': 'elephant'}},
                     {'thai': 'ซ', 'paiboon': 's', 'name': 'sɔɔ sôo', 'meaning': 'chain', 'example': {'thai': 'โซ่', 'paiboon': 'sôo', 'english': 'chain'}},
+                    {'thai': 'ฌ', 'paiboon': 'ch', 'name': 'chɔɔ chəə', 'meaning': 'tree', 'example': {'thai': 'เฌอ', 'paiboon': 'chəə', 'english': 'tree'}},
+                    {'thai': 'ญ', 'paiboon': 'y', 'name': 'yɔɔ yǐng', 'meaning': 'woman', 'example': {'thai': 'หญิง', 'paiboon': 'yǐng', 'english': 'woman'}},
+                    {'thai': 'ฑ', 'paiboon': 't', 'name': 'tɔɔ mon-too', 'meaning': 'Montho', 'example': {'thai': 'มณโฑ', 'paiboon': 'mon-too', 'english': 'Montho'}},
+                    {'thai': 'ฒ', 'paiboon': 't', 'name': 'tɔɔ pûu-tâo', 'meaning': 'elder', 'example': {'thai': 'ผู้เฒ่า', 'paiboon': 'pûu-tâo', 'english': 'elder'}},
+                    {'thai': 'ณ', 'paiboon': 'n', 'name': 'nɔɔ neen', 'meaning': 'novice monk', 'example': {'thai': 'เณร', 'paiboon': 'neen', 'english': 'novice monk'}},
                     {'thai': 'ท', 'paiboon': 't', 'name': 'tɔɔ tá-hǎan', 'meaning': 'soldier', 'example': {'thai': 'ทหาร', 'paiboon': 'tá-hǎan', 'english': 'soldier'}},
+                    {'thai': 'ธ', 'paiboon': 't', 'name': 'tɔɔ tong', 'meaning': 'flag', 'example': {'thai': 'ธง', 'paiboon': 'tong', 'english': 'flag'}},
                     {'thai': 'น', 'paiboon': 'n', 'name': 'nɔɔ nǔu', 'meaning': 'mouse', 'example': {'thai': 'หนู', 'paiboon': 'nǔu', 'english': 'mouse'}},
                     {'thai': 'พ', 'paiboon': 'p', 'name': 'pɔɔ paan', 'meaning': 'tray', 'example': {'thai': 'พาน', 'paiboon': 'paan', 'english': 'tray'}},
                     {'thai': 'ฟ', 'paiboon': 'f', 'name': 'fɔɔ fan', 'meaning': 'tooth', 'example': {'thai': 'ฟัน', 'paiboon': 'fan', 'english': 'tooth'}},
+                    {'thai': 'ภ', 'paiboon': 'p', 'name': 'pɔɔ sǎm-pao', 'meaning': 'sailboat', 'example': {'thai': 'สำเภา', 'paiboon': 'sǎm-pao', 'english': 'sailboat'}},
                     {'thai': 'ม', 'paiboon': 'm', 'name': 'mɔɔ máa', 'meaning': 'horse', 'example': {'thai': 'ม้า', 'paiboon': 'máa', 'english': 'horse'}},
                     {'thai': 'ย', 'paiboon': 'y', 'name': 'yɔɔ yák', 'meaning': 'giant', 'example': {'thai': 'ยักษ์', 'paiboon': 'yák', 'english': 'giant'}},
                     {'thai': 'ร', 'paiboon': 'r', 'name': 'rɔɔ rʉa', 'meaning': 'boat', 'example': {'thai': 'เรือ', 'paiboon': 'rʉa', 'english': 'boat'}},
                     {'thai': 'ล', 'paiboon': 'l', 'name': 'lɔɔ ling', 'meaning': 'monkey', 'example': {'thai': 'ลิง', 'paiboon': 'ling', 'english': 'monkey'}},
                     {'thai': 'ว', 'paiboon': 'w', 'name': 'wɔɔ wɛ̌ɛn', 'meaning': 'ring', 'example': {'thai': 'แหวน', 'paiboon': 'wɛ̌ɛn', 'english': 'ring'}},
+                    {'thai': 'ฬ', 'paiboon': 'l', 'name': 'lɔɔ jù-laa', 'meaning': 'kite', 'example': {'thai': 'จุฬา', 'paiboon': 'jù-laa', 'english': 'kite'}},
+                    {'thai': 'ฮ', 'paiboon': 'h', 'name': 'hɔɔ nók-hûuk', 'meaning': 'owl', 'example': {'thai': 'นกฮูก', 'paiboon': 'nók-hûuk', 'english': 'owl'}},
                 ]
             }
         }
@@ -4758,7 +4773,17 @@ def progress_dashboard():
     
     for section_id, requirements in SECTION_REQUIREMENTS.items():
         has_access, message = check_section_access(section_id)
-        
+
+        tier = requirements['tier']
+        level = requirements['level']
+        if tier != 'free':
+            tier_info = SUBSCRIPTION_TIERS[tier]
+            requirement_message = f"Requires Level {level} + {tier_info['name']} subscription (${tier_info['price']:.2f}/mo)"
+        elif level > 1:
+            requirement_message = f"Requires Level {level} to unlock"
+        else:
+            requirement_message = "Complete Thai Alphabet first"
+
         section_info = {
             'id': section_id,
             'name': section_id.replace('_', ' ').title(),
@@ -4767,7 +4792,7 @@ def progress_dashboard():
             'points_reward': requirements['points_reward'],
             'unlocked': section_id in user['sections_unlocked'],
             'has_access': has_access,
-            'message': message
+            'message': requirement_message
         }
         
         if has_access or section_id in user['sections_unlocked']:

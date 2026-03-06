@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Thai Language Learning{% endblock %}</title>
-    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
+
     <!-- Font Imports for Proper Unicode Support -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -873,6 +874,49 @@
             color: var(--royal-gold);
             border-bottom: 2px solid var(--royal-gold);
         }
+
+        .footer-locked-link {
+            position: relative;
+            display: inline-block;
+            color: var(--gold-shimmer);
+            border-bottom: 1px dotted rgba(212, 175, 55, 0.5);
+            cursor: not-allowed;
+            opacity: 0.65;
+        }
+
+        .footer-locked-link .footer-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: calc(100% + 8px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(20, 0, 40, 0.92);
+            color: var(--silk-cream);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 0.35rem 0.7rem;
+            border-radius: 6px;
+            white-space: nowrap;
+            font-size: 0.78rem;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            z-index: 10;
+        }
+
+        .footer-locked-link .footer-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 5px solid transparent;
+            border-top-color: rgba(20, 0, 40, 0.92);
+        }
+
+        .footer-locked-link:hover .footer-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
         
         /* Decorative lotus - Enhanced with tropical flair */
         .lotus-divider {
@@ -1202,7 +1246,7 @@
     
     <footer>
         <p>🪷 Thai Language & Culture Learning App v2.0</p>
-        <p>Using <a href="/paiboon">Paiboon Romanization</a> • Reference: <a href="/dictionary">Thai-English Dictionary</a></p>
+        <p>Using <a href="/paiboon">Paiboon Romanization</a> • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master ($19.99/mo)</span></span></p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
     </footer>
     
