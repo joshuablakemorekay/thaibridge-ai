@@ -37,7 +37,7 @@ if not app.secret_key:
 # ============================================
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), 'thai_app.db'
+    os.path.dirname(os.path.abspath(__file__)), 'instance', 'thai_app.db'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
