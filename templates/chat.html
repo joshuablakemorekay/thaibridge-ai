@@ -8,6 +8,8 @@
         max-width: 1200px;
         margin: 2rem auto;
         padding: 0 1rem;
+        position: relative;
+        z-index: 0;
     }
     
     .chat-header {
@@ -317,7 +319,49 @@
         color: var(--royal-purple);
         font-weight: 600;
     }
-    
+
+    #chat-placeholder {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    #chat-placeholder .placeholder-icon {
+        font-size: 2.2rem;
+        display: inline-block;
+        animation: lotusRotate 8s linear infinite, lotusPulse 4s ease-in-out infinite;
+    }
+
+    #chat-placeholder .placeholder-text {
+        font-size: 0.88rem;
+        font-style: italic;
+        letter-spacing: 0.05em;
+        color: rgba(74, 26, 107, 0.4);
+    }
+
+    @keyframes lotusRotate {
+        from { transform: rotate(0deg); }
+        to   { transform: rotate(360deg); }
+    }
+
+    @keyframes lotusPulse {
+        0%, 100% {
+            opacity: 0.3;
+            filter: saturate(0.2) brightness(0.75);
+        }
+        50% {
+            opacity: 1.0;
+            filter: saturate(2) brightness(1.1)
+                    drop-shadow(0 0 10px rgba(231, 84, 128, 0.65))
+                    drop-shadow(0 0 5px rgba(212, 175, 55, 0.45));
+        }
+    }
+
     @media (max-width: 768px) {
         .message-content {
             max-width: 85%;
@@ -399,6 +443,11 @@
             </div>
         </div>
         
+        <div id="chat-placeholder">
+            <span class="placeholder-icon">🪷</span>
+            <span class="placeholder-text">Your conversation will appear here...</span>
+        </div>
+
         <div class="thinking-indicator" id="thinking">
             AI is thinking
         </div>
@@ -476,9 +525,11 @@
         input.disabled = true;
         document.getElementById('send-btn').disabled = true;
         
-        // Remove welcome message if present
+        // Remove welcome message and placeholder if present
         const welcome = document.querySelector('.welcome-message');
         if (welcome) welcome.remove();
+        const placeholder = document.getElementById('chat-placeholder');
+        if (placeholder) placeholder.remove();
         
         // Add user message
         addMessage('user', message);
@@ -575,6 +626,10 @@
             <div class="welcome-message">
                 <h2>🪷 Chat Cleared!</h2>
                 <p>Start a new conversation below.</p>
+            </div>
+            <div id="chat-placeholder">
+                <span class="placeholder-icon">🪷</span>
+                <span class="placeholder-text">Your conversation will appear here...</span>
             </div>
             <div class="thinking-indicator" id="thinking">AI is thinking</div>
         `;
