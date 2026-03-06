@@ -4621,10 +4621,40 @@ def meditation():
     return render_template('meditation.html', techniques=MEDITATION_TECHNIQUES)
 
 
+def _load_yaitron():
+    """Load Yaitron TSV once at startup into a list of (english, thai) tuples."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'yaitron_dictionary.tsv')
+    entries = []
+    seen = set()
+    with open(path, encoding='utf-8') as f:
+        for line in f:
+            parts = line.rstrip('\n').split('\t')
+            if len(parts) == 2:
+                en, th = parts[0].strip(), parts[1].strip()
+                key = (en.lower(), th)
+                if key not in seen:
+                    seen.add(key)
+                    entries.append({'english': en, 'thai': th})
+    return entries
+
+YAITRON_ENTRIES = _load_yaitron()
+
+
 @app.route('/dictionary')
 @require_access('dictionary')
 def dictionary():
-    return render_template('dictionary.html', reference=DICTIONARY_REFERENCE)
+    query = request.args.get('q', '').strip()
+    results = []
+    if query:
+        q = query.lower()
+        results = [e for e in YAITRON_ENTRIES if q in e['english'].lower()][:50]
+    return render_template(
+        'dictionary.html',
+        reference=DICTIONARY_REFERENCE,
+        query=query,
+        results=results,
+        total_entries=len(YAITRON_ENTRIES),
+    )
 
 
 @app.route('/premium')
