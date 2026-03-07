@@ -50,6 +50,9 @@
             {% for entry in results %}
             <div class="result-card">
                 <span class="result-thai">{{ entry.thai }}</span>
+                {% if entry.paiboon %}
+                <span class="result-paiboon">{{ entry.paiboon }}</span>
+                {% endif %}
                 <span class="result-english">{{ entry.english }}</span>
             </div>
             {% endfor %}
@@ -211,6 +214,13 @@
         color: var(--royal-purple);
         font-family: 'Sarabun', sans-serif;
         line-height: 1.3;
+    }
+
+    .result-paiboon {
+        font-size: 0.95rem;
+        color: var(--royal-gold);
+        font-style: italic;
+        letter-spacing: 0.02em;
     }
 
     .result-english {
