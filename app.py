@@ -4622,19 +4622,36 @@ def meditation():
 
 
 def _load_yaitron():
-    """Load Yaitron TSV once at startup into a list of (english, thai) tuples."""
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'yaitron_dictionary.tsv')
+    """Load Yaitron Paiboon TSV once at startup. Falls back to the base TSV if
+    the Paiboon-enriched file does not exist yet (i.e. generate_paiboon.py
+    has not been run)."""
+    paiboon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'yaitron_dictionary_paiboon.tsv')
+    base_path    = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'yaitron_dictionary.tsv')
+    path         = paiboon_path if os.path.exists(paiboon_path) else base_path
+    has_paiboon  = path == paiboon_path
+
     entries = []
     seen = set()
     with open(path, encoding='utf-8') as f:
+        # Skip header row if present
+        first = f.readline().rstrip('\n')
+        if not first.startswith('english\t'):
+            f.seek(0)   # no header — rewind
+
         for line in f:
             parts = line.rstrip('\n').split('\t')
-            if len(parts) == 2:
-                en, th = parts[0].strip(), parts[1].strip()
-                key = (en.lower(), th)
-                if key not in seen:
-                    seen.add(key)
-                    entries.append({'english': en, 'thai': th})
+            if has_paiboon and len(parts) >= 3:
+                en, th, pb = parts[0].strip(), parts[1].strip(), parts[2].strip()
+            elif not has_paiboon and len(parts) == 2:
+                en, th, pb = parts[0].strip(), parts[1].strip(), ''
+            else:
+                continue
+            if not en or not th:
+                continue
+            key = (en.lower(), th)
+            if key not in seen:
+                seen.add(key)
+                entries.append({'english': en, 'thai': th, 'paiboon': pb})
     return entries
 
 YAITRON_ENTRIES = _load_yaitron()
