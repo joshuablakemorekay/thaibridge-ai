@@ -84,8 +84,10 @@ except Exception as e:
 import hashlib
 from functools import wraps
 
-# Developer password (CHANGE THIS to your own secure password!)
-DEVELOPER_PASSWORD_HASH = hashlib.sha256("buddha2025".encode()).hexdigest()
+# Developer password — loaded from environment
+DEVELOPER_PASSWORD_HASH = hashlib.sha256(
+    os.environ.get("DEVELOPER_PASSWORD", "changeme").encode()
+).hexdigest()
 
 # Points required for each level
 XP_LEVELS = {
@@ -5203,7 +5205,7 @@ if __name__ == '__main__':
     print("  • 3 Subscription Tiers")
     print("  • Alphabet Completion Requirement")
     print("  • 🤖 AI Learning Assistant (6 modes)")
-    print("  • Developer Mode (Password: buddha2025)")
+    print("  • Developer Mode (Password: set via DEVELOPER_PASSWORD env var)")
     print("=" * 60)
     if ai_agent:
         print("AI Status: ✅ Active")
