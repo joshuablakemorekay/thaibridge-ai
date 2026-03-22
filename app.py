@@ -4627,7 +4627,7 @@ def _load_yaitron():
     """Load Yaitron Paiboon TSV once at startup. Falls back to the base TSV if
     the Paiboon-enriched file does not exist yet (i.e. generate_paiboon.py
     has not been run)."""
-    paiboon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'yaitron_dictionary_paiboon.tsv')
+    paiboon_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'yaitron_dictionary_paiboon_fixed.tsv')
     base_path    = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'yaitron_dictionary.tsv')
     path         = paiboon_path if os.path.exists(paiboon_path) else base_path
     has_paiboon  = path == paiboon_path
