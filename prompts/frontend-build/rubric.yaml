@@ -1,0 +1,38 @@
+# Evaluation rubric for: Frontend Build
+
+prompt: frontend-build
+version: 1
+criteria:
+  - name: extends_base_template
+    description: A generated page template extends the shared base.html
+    weight: 5
+    pass_condition: '"{% extends" in output and "base.html" in output'
+
+  - name: uses_jinja_blocks
+    description: Template uses Jinja2 block structure for content injection
+    weight: 3
+    pass_condition: "'{% block' in output"
+
+  - name: uses_thai_theme
+    description: Output reflects the Thai colour/visual theme (gold, cream, lotus, royal)
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['gold', 'cream', 'lotus', 'royal', '#d4af37'])"
+
+  - name: has_interactive_hooks
+    description: Output wires up an interactive learning feature (quiz, flashcard, exercise, practice)
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['quiz', 'flashcard', 'exercise', 'practice'])"
+
+  - name: is_substantial
+    description: Output is a real template, not a one-line stub
+    weight: 2
+    pass_condition: "len(output.split()) >= 30"
+
+test_cases:
+  - input:
+      option: "A"
+      component: "homepage template"
+    expected_traits:
+      - extends base.html via Jinja2
+      - uses the deep-red / gold / cream Thai theme
+      - links through to the quiz / learning interface

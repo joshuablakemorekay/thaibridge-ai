@@ -1,0 +1,38 @@
+# Evaluation rubric for: Thai Alphabet Module & Ordering Exercises
+
+prompt: thai-alphabet-exercises
+version: 1
+criteria:
+  - name: covers_consonants
+    description: Output covers Thai consonants
+    weight: 5
+    pass_condition: "'consonant' in output.lower()"
+
+  - name: covers_vowels_or_tones
+    description: Output covers vowels and/or tone marks
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['vowel', 'tone'])"
+
+  - name: shows_romanization
+    description: Output shows romanization alongside the Thai script
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['romaniz', 'paiboon'])"
+
+  - name: no_show_answer_cheat
+    description: The exercise does not expose a 'show answer' shortcut
+    weight: 3
+    pass_condition: "'show answer' not in output.lower()"
+
+  - name: has_progressive_practice
+    description: Practice is staged/levelled rather than all-at-once
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['level', 'progress', 'unlock'])"
+
+test_cases:
+  - input:
+      component: "Thai alphabet page with progressive ordering exercise"
+    expected_traits:
+      - covers consonants, vowels and tone marks
+      - shows romanization on every consonant
+      - has no 'show answer' button
+      - practises the alphabet in unlocking stages

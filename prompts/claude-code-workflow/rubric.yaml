@@ -1,0 +1,35 @@
+# Evaluation rubric for: Claude Code Workflow (Bug Fix, Refactor, Tests, Review)
+#
+# Test case: the empty-form-submission bug fix on the signup form.
+
+prompt: claude-code-workflow
+version: 1
+criteria:
+  - name: removes_novalidate
+    description: The fix removes the novalidate attribute that disabled native validation
+    weight: 4
+    pass_condition: "'novalidate' not in output.lower()"
+
+  - name: adds_required_fields
+    description: The fix adds the required attribute (native HTML5 validation layer)
+    weight: 5
+    pass_condition: "'required' in output.lower()"
+
+  - name: keeps_js_layer
+    description: The JavaScript validation layer is kept (defence in depth)
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['addeventlistener', 'submit', 'preventdefault'])"
+
+  - name: is_a_form
+    description: The output is the signup form being fixed
+    weight: 2
+    pass_condition: "'<form' in output.lower()"
+
+test_cases:
+  - input:
+      task: "fix the empty-form submission bug on the signup form"
+    expected_traits:
+      - removes the novalidate attribute
+      - adds required to each input
+      - keeps the JavaScript submit handler
+      - remains a working form

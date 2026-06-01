@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Home — Thai Language & Culture{% endblock %}
+{% block content %}
+<section class="hero" style="background: var(--royal-gold); color: var(--cream);">
+  <h1 class="lotus-title">🪷 Learn Thai for Temple Life &amp; Travel</h1>
+  <p>Welcome to a Thai language and culture learning app built with a deep-red, gold and cream theme.</p>
+  <div class="cards">
+    <a class="card" href="/alphabet">Start with the Thai Alphabet</a>
+    <a class="card" href="/learn">Vocabulary &amp; Lessons</a>
+    <a class="card" href="/exercise/festivals">Practice with a quiz</a>
+  </div>
+  <p>Earn points as you go and unlock new sections. Try a flashcard or take a practice quiz to begin.</p>
+</section>
+{% endblock %}
