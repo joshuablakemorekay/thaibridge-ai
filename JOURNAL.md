@@ -4,6 +4,29 @@ This is the honest record of building my **first web app** — a Thai language a
 
 ---
 
+## 1 June 2026 — A prompt library, a tidier history, and documenting the codebase
+
+**Type:** Milestone / Decision
+
+**TL;DR:** I added a version-controlled prompt library and build journal to the repo, removed an outdated commit from history, and documented the whole codebase — deliberately using the right Claude tool for each job.
+
+**What I built or did**
+I brought a prompt library, an evaluation harness, a CI check and a new README into the repo (20 files), wrote a developer architecture guide from the real code, and cleaned up git history by removing one old, redundant commit.
+
+**Why I did it this way**
+I split the work by platform on purpose: **Claude.ai chat** for the human narrative (it can see my conversation transcripts), and **Claude Code** for the codebase docs and the git work (it can read my actual files). Right tool, right job.
+
+**How We Did It**
+Backed up the history with a tag → shelved unrelated changes → removed the old commit cleanly → extracted the archive → proved the prompt checks pass → wrote `docs/ARCHITECTURE.md` from the real files → restored a dictionary file I'd deleted by accident.
+
+**What I learned**
+Rewriting *published* history needs a backup and a force-push — handle with care. And **don't trust a stray "exit 0"**: my prompt checks looked like they'd passed when they'd actually crashed, until I checked the real exit code.
+
+**References / Conversations**
+This Claude Code session; the longer narrative journal was authored via Claude.ai.
+
+---
+
 ## March–April 2026 — Researching whether it's worth building
 
 Before building more, I stopped to research the market: who the competitors are, how big the UK audience is, what people would pay, and whether there's a real gap.
