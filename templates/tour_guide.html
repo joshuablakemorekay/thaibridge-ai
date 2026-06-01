@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block title %}Tour Guide Thai{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>🗺️ Tour Guide Thai
+        <span class="thai" style="font-size: 1.2rem; display: block; margin-top: 0.3rem;">ภาษาไทยสำหรับนักท่องเที่ยว</span>
+    </h1>
+
+    <div class="info-banner">
+        💡 Essential Thai for holiday makers and tourists — transport, hotels, temples, shopping, food and emergencies.
+        Click any word to practise pronunciation with the <a href="/chat">AI tutor</a>.
+    </div>
+
+    {% set category_labels = {
+        'transport': '🚕 Transport & Directions',
+        'accommodation': '🏨 Accommodation',
+        'sightseeing': '🏛️ Sightseeing',
+        'shopping': '🛍️ Shopping & Bargaining',
+        'food': '🍜 Food & Ordering',
+        'emergencies': '🚨 Emergencies'
+    } %}
+
+    {% for category, words in vocab.items() %}
+    <div class="vocab-section">
+        <h2 class="section-header">{{ category_labels.get(category, category.title()) }}</h2>
+        <div class="vocab-grid">
+            {% for word in words %}
+            <div class="vocab-card">
+                <span class="vocab-thai">{{ word.thai }}</span>
+                <span class="vocab-paiboon">{{ word.paiboon }}</span>
+                <span class="vocab-english">{{ word.english }}</span>
+                <span class="vocab-note">{{ word.note }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="attribution-card">
+        <h3>🎯 Who is this for?</h3>
+        <p>Holiday makers, backpackers and tourists visiting Thailand who want to communicate
+        beyond "hello" and "thank you". These 25 words cover the most common real-life situations
+        you'll encounter — from flagging a taxi to ordering food without chilli.</p>
+        <p style="margin-top: 0.5rem;">
+            Ready to practise? Try the <a href="/chat">AI conversation partner</a> — ask it to
+            roleplay a market bargaining scene or help you order at a restaurant.
+        </p>
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 960px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+    }
+
+    h1 { text-align: center; margin-bottom: 2rem; }
+
+    .vocab-section { margin-bottom: 2.5rem; }
+
+    .section-header {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #f0f0f0;
+        border-bottom: 2px solid var(--royal-gold);
+        padding-bottom: 0.4rem;
+        margin-bottom: 1rem;
+    }
+
+    .vocab-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .vocab-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1rem 1.25rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border-left: 4px solid var(--royal-gold);
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        transition: transform 0.15s, box-shadow 0.15s;
+        cursor: pointer;
+    }
+
+    .vocab-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .vocab-thai {
+        font-size: 1.5rem;
+        color: var(--royal-purple);
+        font-family: 'Sarabun', sans-serif;
+        line-height: 1.3;
+    }
+
+    .vocab-paiboon {
+        font-size: 1rem;
+        color: var(--royal-gold);
+        font-style: italic;
+        letter-spacing: 0.02em;
+    }
+
+    .vocab-english {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .vocab-note {
+        font-size: 0.78rem;
+        color: #888;
+        margin-top: 0.2rem;
+        line-height: 1.4;
+    }
+
+    .info-banner {
+        background: linear-gradient(135deg, rgba(74,26,107,0.07) 0%, rgba(212,175,55,0.1) 100%);
+        border: 1px solid rgba(212,175,55,0.35);
+        border-left: 4px solid var(--royal-gold);
+        border-radius: 8px;
+        padding: 0.75rem 1.1rem;
+        margin-bottom: 1.75rem;
+        font-size: 0.9rem;
+        color: #555;
+    }
+
+    .info-banner a { color: var(--royal-purple); font-weight: 600; }
+
+    .attribution-card {
+        background: #f9f9f9;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        padding: 1.25rem 1.5rem;
+        margin-top: 2.5rem;
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.7;
+    }
+
+    .attribution-card h3 { margin: 0 0 0.5rem; font-size: 1rem; color: #333; }
+    .attribution-card a { color: var(--royal-purple); }
+
+    @media (max-width: 600px) {
+        .vocab-grid { grid-template-columns: 1fr; }
+    }
+</style>
+{% endblock %}

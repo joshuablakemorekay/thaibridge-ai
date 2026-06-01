@@ -4,18 +4,165 @@
 
 {% block extra_css %}
 <style>
+    /* ── Layout ── */
+    .meditation-hero {
+        text-align: center;
+        padding: 1rem 0 2rem;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        line-height: 1.8;
+    }
+
+    /* ── Session Launcher Buttons ── */
+    .session-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .session-btn {
+        padding: 1.25rem 1rem;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .session-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,0.15); }
+    .session-btn .duration { font-size: 0.8rem; font-weight: 400; opacity: 0.8; }
+
+    .btn-samadhi   { background: linear-gradient(135deg, #1976D2, #42A5F5); color: white; }
+    .btn-vipassana { background: linear-gradient(135deg, #E65100, #FFA726); color: white; }
+    .btn-body-scan { background: linear-gradient(135deg, #2E7D32, #66BB6A); color: white; }
+    .btn-full      { background: linear-gradient(135deg, #4A148C, #9C27B0); color: white; }
+
+    /* ── Timer Card ── */
+    .timer-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        text-align: center;
+        margin-bottom: 2rem;
+        border-left: 5px solid var(--bodhi-green);
+    }
+
+    /* ── Breathing Circle ── */
+    .breathing-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem 0;
+    }
+
+    .breathing-circle {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #E3F2FD 0%, #BBDEFB 60%, #90CAF9 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #1976D2;
+        transition: transform 0.1s ease;
+        box-shadow: 0 0 30px rgba(25, 118, 210, 0.2);
+        position: relative;
+        cursor: default;
+        user-select: none;
+    }
+
+    .breathing-circle.inhale  { animation: inhale 4s ease-in-out forwards; }
+    .breathing-circle.hold    { animation: hold 4s ease-in-out forwards; }
+    .breathing-circle.exhale  { animation: exhale 6s ease-in-out forwards; }
+    .breathing-circle.resting { background: radial-gradient(circle, #F3E5F5 0%, #CE93D8 60%, #AB47BC 100%); color: #4A148C; }
+    .breathing-circle.scanning { background: radial-gradient(circle, #E8F5E9 0%, #A5D6A7 60%, #66BB6A 100%); color: #1B5E20; }
+
+    @keyframes inhale {
+        0%   { transform: scale(1);    box-shadow: 0 0 20px rgba(25,118,210,0.2); }
+        100% { transform: scale(1.35); box-shadow: 0 0 50px rgba(25,118,210,0.4); }
+    }
+    @keyframes hold {
+        0%, 100% { transform: scale(1.35); box-shadow: 0 0 50px rgba(25,118,210,0.4); }
+    }
+    @keyframes exhale {
+        0%   { transform: scale(1.35); box-shadow: 0 0 50px rgba(25,118,210,0.4); }
+        100% { transform: scale(1);    box-shadow: 0 0 20px rgba(25,118,210,0.2); }
+    }
+
+    .breath-label {
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        color: #888;
+        min-height: 1.5rem;
+        font-style: italic;
+    }
+
+    /* ── Timer Display ── */
     .timer-display {
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-family: 'Courier New', monospace;
         color: var(--royal-purple);
-        text-align: center;
-        padding: 2rem;
-        background: white;
+        padding: 1rem 2rem;
+        background: #f8f8f8;
         border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        margin: 1rem 0;
+        margin: 1rem auto;
+        display: inline-block;
+        letter-spacing: 4px;
     }
-    
+
+    /* ── Phase Banner ── */
+    .phase-banner {
+        background: linear-gradient(135deg, var(--royal-purple), #9C27B0);
+        color: white;
+        padding: 0.6rem 1.5rem;
+        border-radius: 25px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0.5rem 0 1rem;
+        min-width: 220px;
+    }
+
+    .phase-instruction {
+        font-size: 0.9rem;
+        color: #555;
+        max-width: 500px;
+        margin: 0 auto 1rem;
+        line-height: 1.6;
+        font-style: italic;
+        min-height: 3rem;
+    }
+
+    /* ── Progress Bar ── */
+    .progress-bar-container {
+        width: 100%;
+        max-width: 500px;
+        height: 8px;
+        background: #eee;
+        border-radius: 10px;
+        margin: 1rem auto;
+        overflow: hidden;
+    }
+    .progress-bar-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--royal-purple), var(--saffron));
+        border-radius: 10px;
+        transition: width 1s linear;
+        width: 0%;
+    }
+
+    /* ── Controls ── */
     .timer-controls {
         display: flex;
         justify-content: center;
@@ -23,7 +170,7 @@
         flex-wrap: wrap;
         margin: 1rem 0;
     }
-    
+
     .timer-presets {
         display: flex;
         justify-content: center;
@@ -31,38 +178,57 @@
         flex-wrap: wrap;
         margin-bottom: 1rem;
     }
-    
+
     .timer-presets button {
-        padding: 0.5rem 1rem;
+        padding: 0.4rem 0.9rem;
         border: 2px solid var(--gold);
         background: white;
         border-radius: 20px;
         cursor: pointer;
+        font-size: 0.85rem;
         transition: all 0.3s ease;
     }
-    
-    .timer-presets button:hover {
-        background: var(--gold);
-        color: var(--dark-text);
+    .timer-presets button:hover { background: var(--gold); color: var(--dark-text); }
+
+    /* ── Body Scan Steps ── */
+    .body-scan-step {
+        display: flex;
+        gap: 1rem;
+        padding: 0.75rem;
+        border-radius: 10px;
+        margin: 0.5rem 0;
+        align-items: flex-start;
+        transition: background 0.3s ease;
     }
-    
-    .samatha-card {
-        background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
-        border-left-color: #1976D2;
+    .body-scan-step.active {
+        background: #E8F5E9;
+        border-left: 4px solid var(--bodhi-green);
     }
-    
-    .vipassana-card {
-        background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
-        border-left-color: var(--saffron);
+    .body-scan-dot {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        transition: background 0.3s ease;
     }
-    
+    .body-scan-step.active .body-scan-dot { background: var(--bodhi-green); color: white; }
+
+    /* ── Technique Cards ── */
+    .samatha-card  { background: linear-gradient(135deg, #E3F2FD, #BBDEFB); border-left-color: #1976D2; }
+    .vipassana-card { background: linear-gradient(135deg, #FFF3E0, #FFE0B2); border-left-color: var(--saffron); }
+    .bodyscan-card  { background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border-left-color: var(--bodhi-green); }
+
     .instruction-step {
         display: flex;
         gap: 1rem;
         margin: 0.75rem 0;
         align-items: flex-start;
     }
-    
     .step-number {
         background: var(--royal-purple);
         color: white;
@@ -75,6 +241,18 @@
         font-weight: bold;
         flex-shrink: 0;
     }
+
+    /* ── Ambient Toggle ── */
+    .ambient-btn {
+        background: none;
+        border: 2px solid #ccc;
+        border-radius: 20px;
+        padding: 0.4rem 1rem;
+        cursor: pointer;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+    }
+    .ambient-btn.active { border-color: var(--bodhi-green); background: #E8F5E9; color: #2E7D32; }
 </style>
 {% endblock %}
 
@@ -84,60 +262,118 @@
     <span class="thai">การปฏิบัติสมาธิ</span>
 </h1>
 
-<p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
-    Samatha (calm) and Vipassana (insight) meditation techniques as taught by the Buddha in the Pali Canon.
-</p>
+<div class="meditation-hero">
+    Samatha (calm) and Vipassana (insight) meditation as taught in the Theravāda tradition.
+    Choose a session below or use the timer freely.
+</div>
 
-<!-- Meditation Timer -->
-<div class="card" style="text-align: center; border-left-color: var(--bodhi-green);">
-    <h2 style="margin-top: 0;">⏱️ Meditation Timer</h2>
-    
-    <div class="timer-presets">
-        <button onclick="setTimer(5)">5 min</button>
-        <button onclick="setTimer(10)">10 min</button>
-        <button onclick="setTimer(15)">15 min</button>
-        <button onclick="setTimer(20)">20 min</button>
-        <button onclick="setTimer(30)">30 min</button>
-        <button onclick="setTimer(45)">45 min</button>
-        <button onclick="setTimer(60)">60 min</button>
+<!-- ── Session Launchers (Prompts) ── -->
+<div class="card" style="border-left-color: var(--royal-purple);">
+    <h2 style="margin-top:0;">🪷 Start a Guided Session</h2>
+    <div class="session-grid">
+        <button class="session-btn btn-samadhi"   onclick="launchSession('samatha')">
+            🌊 Samadhi
+            <span class="duration">30 min · Concentration</span>
+        </button>
+        <button class="session-btn btn-vipassana" onclick="launchSession('vipassana')">
+            👁️ Vipassana
+            <span class="duration">30 min · Insight</span>
+        </button>
+        <button class="session-btn btn-body-scan" onclick="launchSession('body_scan')">
+            🫁 Body Scan
+            <span class="duration">20 min · Awareness</span>
+        </button>
+        <button class="session-btn btn-full"      onclick="launchSession('full')">
+            ☸ Full Session
+            <span class="duration">60 min · Samadhi → Vipassana</span>
+        </button>
     </div>
-    
+</div>
+
+<!-- ── Meditation Timer (Tool) ── -->
+<div class="timer-card">
+    <h2 style="margin-top:0;">⏱️ Meditation Timer</h2>
+
+    <div id="sessionLabel" style="display:none;">
+        <div class="phase-banner" id="phaseBanner">Preparing...</div>
+    </div>
+
+    <div class="breathing-container">
+        <div class="breathing-circle" id="breathCircle">🙏</div>
+        <div class="breath-label" id="breathLabel"></div>
+    </div>
+
     <div class="timer-display" id="timerDisplay">20:00</div>
-    
+
+    <div class="progress-bar-container">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <p class="phase-instruction" id="phaseInstruction">Select a session above or set a custom time below.</p>
+
+    <div class="timer-presets" id="presetButtons">
+        <button onclick="setCustomTimer(5)">5 min</button>
+        <button onclick="setCustomTimer(10)">10 min</button>
+        <button onclick="setCustomTimer(15)">15 min</button>
+        <button onclick="setCustomTimer(20)">20 min</button>
+        <button onclick="setCustomTimer(30)">30 min</button>
+        <button onclick="setCustomTimer(45)">45 min</button>
+        <button onclick="setCustomTimer(60)">60 min</button>
+    </div>
+
     <div class="timer-controls">
         <button class="btn btn-saffron" onclick="startTimer()" id="startBtn">▶ Start</button>
         <button class="btn btn-secondary" onclick="pauseTimer()" id="pauseBtn" disabled>⏸ Pause</button>
         <button class="btn" onclick="resetTimer()">↺ Reset</button>
+        <button class="ambient-btn" id="ambientBtn" onclick="toggleAmbient()">🔔 Bell only</button>
     </div>
-    
-    <p style="color: #666; margin-top: 1rem;">
-        🔔 A bell will sound when your session ends
-    </p>
+
+    <p style="color:#999; font-size:0.85rem; margin-top:0.5rem;">🔔 Bell sounds at phase transitions and session end</p>
+</div>
+
+<!-- ── Body Scan Progress (shown during body scan) ── -->
+<div id="bodyScanPanel" style="display:none;">
+    <div class="card bodyscan-card">
+        <h3 style="margin-top:0;">🫁 Body Scan — Current Focus</h3>
+        <div id="bodyScanSteps">
+            {% for step in techniques.body_scan.steps %}
+            <div class="body-scan-step" id="scan-step-{{ loop.index0 }}">
+                <div class="body-scan-dot">{{ loop.index }}</div>
+                <div>
+                    <strong>{{ step.area }}</strong>
+                    <span class="thai" style="margin-left:0.5rem; font-size:0.85rem;">{{ step.thai }}</span>
+                    <p style="margin:0.25rem 0 0; font-size:0.85rem; color:#555;">{{ step.instruction }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
 
 <!-- Quick Navigation -->
-<div class="card" style="text-align: center;">
-    <strong>Jump to:</strong>
-    <p style="margin-top: 0.5rem;">
-        <a href="#samatha" class="btn" style="margin: 0.25rem; background: #1976D2; color: white;">🌊 Samatha</a>
-        <a href="#vipassana" class="btn btn-saffron" style="margin: 0.25rem;">👁️ Vipassana</a>
+<div class="card" style="text-align:center;">
+    <strong>Jump to technique:</strong>
+    <p style="margin-top:0.5rem;">
+        <a href="#samatha"   class="btn" style="margin:0.25rem; background:#1976D2; color:white;">🌊 Samatha</a>
+        <a href="#vipassana" class="btn btn-saffron" style="margin:0.25rem;">👁️ Vipassana</a>
+        <a href="#bodyscan"  class="btn" style="margin:0.25rem; background:#2E7D32; color:white;">🫁 Body Scan</a>
     </p>
 </div>
 
-<!-- Samatha Section -->
-<h2 id="samatha">🌊 {{ techniques.samatha.name }}</h2>
+<div class="lotus-divider">☸ ☸ ☸</div>
 
+<!-- ── Samatha Section ── -->
+<h2 id="samatha">🌊 {{ techniques.samatha.name }}</h2>
 <div class="card samatha-card">
-    <h3 class="thai-text" style="margin-bottom: 0.25rem;">{{ techniques.samatha.thai }}</h3>
+    <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.samatha.thai }}</h3>
     <p class="paiboon">{{ techniques.samatha.paiboon }}</p>
-    <p style="margin-top: 1rem; line-height: 1.8;">{{ techniques.samatha.description }}</p>
+    <p style="margin-top:1rem; line-height:1.8;">{{ techniques.samatha.description }}</p>
 </div>
 
 {% for technique in techniques.samatha.techniques %}
 <div class="card">
     <h3>{{ technique.name }}</h3>
-    <p class="thai-text" style="margin-bottom: 1rem;">{{ technique.thai }}</p>
-    
+    <p class="thai-text" style="margin-bottom:1rem;">{{ technique.thai }}</p>
     <h4>Instructions:</h4>
     {% for step in technique.instructions %}
     <div class="instruction-step">
@@ -145,8 +381,7 @@
         <span>{{ step }}</span>
     </div>
     {% endfor %}
-    
-    <div style="margin-top: 1rem; padding: 1rem; background: #E3F2FD; border-radius: 10px;">
+    <div style="margin-top:1rem; padding:1rem; background:#E3F2FD; border-radius:10px;">
         <strong>✨ Benefits:</strong> {{ technique.benefits }}
     </div>
 </div>
@@ -154,29 +389,26 @@
 
 <div class="lotus-divider">☸ ☸ ☸</div>
 
-<!-- Vipassana Section -->
+<!-- ── Vipassana Section ── -->
 <h2 id="vipassana">👁️ {{ techniques.vipassana.name }}</h2>
-
 <div class="card vipassana-card">
-    <h3 class="thai-text" style="margin-bottom: 0.25rem;">{{ techniques.vipassana.thai }}</h3>
+    <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.vipassana.thai }}</h3>
     <p class="paiboon">{{ techniques.vipassana.paiboon }}</p>
-    <p style="margin-top: 1rem; line-height: 1.8;">{{ techniques.vipassana.description }}</p>
+    <p style="margin-top:1rem; line-height:1.8;">{{ techniques.vipassana.description }}</p>
 </div>
 
 {% for technique in techniques.vipassana.techniques %}
 <div class="card">
     <h3>{{ technique.name }}</h3>
-    <p class="thai-text" style="margin-bottom: 1rem;">{{ technique.thai }}</p>
-    
+    <p class="thai-text" style="margin-bottom:1rem;">{{ technique.thai }}</p>
     <h4>Instructions:</h4>
     {% for step in technique.instructions %}
     <div class="instruction-step">
-        <span class="step-number" style="background: var(--saffron);">{{ loop.index }}</span>
+        <span class="step-number" style="background:var(--saffron);">{{ loop.index }}</span>
         <span>{{ step }}</span>
     </div>
     {% endfor %}
-    
-    <div style="margin-top: 1rem; padding: 1rem; background: #FFF3E0; border-radius: 10px;">
+    <div style="margin-top:1rem; padding:1rem; background:#FFF3E0; border-radius:10px;">
         <strong>✨ Benefits:</strong> {{ technique.benefits }}
     </div>
 </div>
@@ -184,130 +416,424 @@
 
 <div class="lotus-divider">☸ ☸ ☸</div>
 
-<!-- Practice Guidance -->
-<div class="card" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%); border-left-color: var(--bodhi-green);">
-    <h2 style="margin-top: 0;">🌱 Practice Guidance</h2>
-    
+<!-- ── Body Scan Section ── -->
+<h2 id="bodyscan">🫁 {{ techniques.body_scan.name }}</h2>
+<div class="card bodyscan-card">
+    <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.body_scan.thai }}</h3>
+    <p class="paiboon">{{ techniques.body_scan.paiboon }}</p>
+    <p style="margin-top:1rem; line-height:1.8;">{{ techniques.body_scan.description }}</p>
+</div>
+
+<div class="card">
+    <h3 style="margin-top:0;">📋 How to Do a Body Scan</h3>
+    <p>A body scan is a foundational mindfulness practice that can be very helpful for developing body awareness and relaxation. Here's a step-by-step guide on how to do a basic body scan:</p>
+
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">1</span><div><strong>Posture</strong><p style="margin:0.25rem 0 0;">Sit comfortably or lie down in a relaxed position. Close your eyes if it feels comfortable.</p></div></div>
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">2</span><div><strong>Set intention</strong><p style="margin:0.25rem 0 0;">Take a few deep breaths and set an intention to be present with your body sensations.</p></div></div>
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">3</span><div><strong>Ground yourself</strong><p style="margin:0.25rem 0 0;">Notice the points of contact between your body and the surface supporting you.</p></div></div>
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">4</span><div><strong>Start at the feet</strong><p style="margin:0.25rem 0 0;">Bring your attention to your toes, then the soles of your feet, then the tops of your feet.</p></div></div>
+
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">5</span><div><strong>Move up slowly</strong>
+    <p style="margin:0.25rem 0 0;">Gradually move your attention up through your body:</p>
+    <ul style="margin:0.5rem 0 0 1.5rem; line-height:2;">
+        <li>Ankles</li><li>Calves</li><li>Knees</li><li>Thighs</li><li>Hips</li>
+        <li>Lower back</li><li>Abdomen</li><li>Chest</li><li>Upper back</li>
+        <li>Shoulders</li><li>Arms</li><li>Hands</li><li>Neck</li><li>Face</li><li>Scalp</li>
+    </ul>
+    </div></div>
+
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">6</span><div><strong>For each area</strong>
+    <ul style="margin:0.5rem 0 0 1.5rem; line-height:2;">
+        <li>Notice any sensations present (e.g., warmth, coolness, tingling, pressure)</li>
+        <li>If there's no sensation, simply note the absence of sensation</li>
+        <li>Don't try to change anything, just observe</li>
+    </ul>
+    </div></div>
+
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">7</span><div><strong>Breath awareness</strong><p style="margin:0.25rem 0 0;">You can use your breath as an anchor, returning to it between each body part.</p></div></div>
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">8</span><div><strong>Whole body awareness</strong><p style="margin:0.25rem 0 0;">After scanning individual parts, try to hold an awareness of your entire body as a whole.</p></div></div>
+    <div class="instruction-step"><span class="step-number" style="background:var(--bodhi-green);">9</span><div><strong>Ending the practice</strong><p style="margin:0.25rem 0 0;">Slowly open your eyes and take a moment to notice how you feel.</p></div></div>
+
+    <div style="margin-top:1.5rem; padding:1rem; background:#E8F5E9; border-radius:10px;">
+        <strong>💡 Tips:</strong>
+        <ul style="margin:0.5rem 0 0 1.5rem; line-height:2;">
+            <li>Start with short sessions (5–10 minutes) and gradually increase duration</li>
+            <li>If your mind wanders, gently bring it back to the body part you were focusing on</li>
+            <li>Don't worry about "doing it right" — the practice is about cultivating awareness, not achieving a particular state</li>
+        </ul>
+        <p style="margin-top:1rem;">Remember, like any skill, body scanning improves with regular practice. It's normal for your mind to wander or to have difficulty feeling sensations in some areas at first. With time, your body awareness will likely become more refined.</p>
+    </div>
+</div>
+
+<div class="card">
+    <h3>Step-by-Step Guide</h3>
+    {% for step in techniques.body_scan.steps %}
+    <div class="instruction-step">
+        <span class="step-number" style="background:var(--bodhi-green);">{{ step.number }}</span>
+        <div>
+            <strong>{{ step.title }}</strong>
+            <p style="margin:0.25rem 0 0; color:#555;">{{ step.detail }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="card" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9); border-left-color:var(--bodhi-green);">
+    <h3 style="margin-top:0;">💡 Tips</h3>
+    <ul style="margin-left:1.5rem; line-height:2.2;">
+        {% for tip in techniques.body_scan.tips %}
+        <li>{{ tip }}</li>
+        {% endfor %}
+    </ul>
+    <p style="margin-top:1rem;">{{ techniques.body_scan.closing }}</p>
+</div>
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- ── Practice Guidance ── -->
+<div class="card" style="background:linear-gradient(135deg,#E8F5E9,#C8E6C9); border-left-color:var(--bodhi-green);">
+    <h2 style="margin-top:0;">🌱 Practice Guidance</h2>
     <h4>For Beginners:</h4>
-    <ul style="margin-left: 1.5rem; line-height: 2;">
-        <li>Start with 10-15 minutes of <strong>Anapanasati</strong> (breath meditation)</li>
-        <li>Focus on establishing stable attention before attempting insight practices</li>
-        <li>Consistency matters more than duration - daily practice is key</li>
+    <ul style="margin-left:1.5rem; line-height:2;">
+        <li>Start with 10–15 minutes of <strong>Anapanasati</strong> (breath meditation)</li>
+        <li>Establish stable attention before attempting insight practices</li>
+        <li>Consistency matters more than duration — daily practice is key</li>
     </ul>
-    
-    <h4 style="margin-top: 1.5rem;">For Intermediate Practitioners:</h4>
-    <ul style="margin-left: 1.5rem; line-height: 2;">
-        <li>Extend sessions to 30-45 minutes</li>
+    <h4 style="margin-top:1.5rem;">For Intermediate Practitioners:</h4>
+    <ul style="margin-left:1.5rem; line-height:2;">
+        <li>Extend sessions to 30–45 minutes</li>
         <li>Begin with samatha to calm the mind, then shift to vipassana</li>
-        <li>Practice <strong>Metta</strong> (loving-kindness) to overcome ill-will</li>
+        <li>Practise <strong>Metta</strong> (loving-kindness) to overcome ill-will</li>
     </ul>
-    
-    <h4 style="margin-top: 1.5rem;">For Advanced Practitioners:</h4>
-    <ul style="margin-left: 1.5rem; line-height: 2;">
+    <h4 style="margin-top:1.5rem;">For Advanced Practitioners:</h4>
+    <ul style="margin-left:1.5rem; line-height:2;">
         <li>Attend meditation retreats for intensive practice</li>
-        <li>Work with a qualified teacher for personalized guidance</li>
+        <li>Work with a qualified teacher for personalised guidance</li>
         <li>Study the <strong>Satipatthana Sutta</strong> in depth</li>
     </ul>
 </div>
 
 <div class="card">
-    <h2 style="margin-top: 0;">📚 Learn Meditation Vocabulary</h2>
-    <p>Practice the Thai pronunciation of meditation terms:</p>
-    <p style="margin-top: 1rem;">
+    <h2 style="margin-top:0;">📚 Learn Meditation Vocabulary</h2>
+    <p>Practise the Thai pronunciation of meditation terms:</p>
+    <p style="margin-top:1rem;">
         <a href="/exercise/theravada_dhamma" class="btn btn-saffron">Dhamma Vocabulary →</a>
-        <a href="/lesson/15" class="btn" style="margin-left: 1rem;">Meditation Lesson →</a>
+        <a href="/lesson/15" class="btn" style="margin-left:1rem;">Meditation Lesson →</a>
     </p>
 </div>
 {% endblock %}
 
 {% block extra_js %}
 <script>
-let timerMinutes = 20;
-let timerSeconds = 0;
-let timerInterval = null;
-let isRunning = false;
+// ── Session Definitions ──────────────────────────────────────────────────
+const SESSIONS = {
+    samatha: {
+        label: '🌊 Samadhi — Concentration',
+        totalMinutes: 30,
+        type: 'breathing',
+        phases: [
+            { name: '🌿 Settling',       duration: 5,  instruction: 'Sit comfortably. Let thoughts settle like sediment in still water. Simply be here.' },
+            { name: '🌬️ Anapanasati',   duration: 15, instruction: 'Bring full attention to the breath at the nostrils. Notice in-breath and out-breath without control.' },
+            { name: '🌊 Deepening',      duration: 10, instruction: 'Rest awareness in the breath continuously. If distracted, return gently without judgment.' },
+        ]
+    },
+    vipassana: {
+        label: '👁️ Vipassana — Insight',
+        totalMinutes: 30,
+        type: 'breathing',
+        phases: [
+            { name: '🌿 Settling into Stillness', duration: 5,  instruction: 'Begin with breath awareness. Allow the mind to arrive before turning to investigation.' },
+            { name: '🔍 Noting Practice',          duration: 15, instruction: 'Observe arising phenomena — thoughts, sensations, emotions. Note each: arising, passing, impermanent.' },
+            { name: '🌌 Open Awareness',           duration: 10, instruction: 'Allow awareness to rest openly. Receive whatever arises without clinging or aversion.' },
+        ]
+    },
+    body_scan: {
+        label: '🫁 Body Scan',
+        totalMinutes: 20,
+        type: 'body_scan',
+        phases: [
+            { name: '🌱 Grounding',          duration: 3,  instruction: 'Lie down or sit. Notice the points of contact between your body and the surface supporting you.' },
+            { name: '🫁 Body Scan',          duration: 14, instruction: 'Move attention slowly upward through the body. At each area, simply notice whatever is present.' },
+            { name: '🌟 Whole Body Awareness', duration: 3,  instruction: 'Expand awareness to hold the entire body as a whole. Rest here in open presence.' },
+        ]
+    },
+    full: {
+        label: '☸ Full Session',
+        totalMinutes: 60,
+        type: 'breathing',
+        phases: [
+            { name: '🌿 Settling',             duration: 5,  instruction: 'Sit comfortably. Let thoughts settle. Simply arrive here.' },
+            { name: '🌬️ Anapanasati',         duration: 20, instruction: 'Rest attention on the breath at the nostrils. Establish deep concentration.' },
+            { name: '🌊 Deepening Samadhi',    duration: 5,  instruction: 'Allow the mind to rest in stillness. The breath becomes subtle and fine.' },
+            { name: '🔍 Vipassana — Noting',   duration: 15, instruction: 'Open awareness to all arising phenomena. Note thoughts, sensations, emotions as they arise and pass.' },
+            { name: '🌌 Open Awareness',       duration: 10, instruction: 'Rest in open, choiceless awareness. Receive experience without preference.' },
+            { name: '🪷 Metta Closing',        duration: 5,  instruction: '"May all beings be happy. May all beings be free from suffering." Radiate loving kindness outward.' },
+        ]
+    }
+};
 
-function updateDisplay() {
-    const mins = String(timerMinutes).padStart(2, '0');
-    const secs = String(timerSeconds).padStart(2, '0');
-    document.getElementById('timerDisplay').textContent = `${mins}:${secs}`;
+// ── State ────────────────────────────────────────────────────────────────
+let totalSeconds     = 20 * 60;
+let remainingSeconds = 20 * 60;
+let timerInterval    = null;
+let isRunning        = false;
+let currentSession   = null;
+let currentPhaseIdx  = 0;
+let phaseSecondsLeft = 0;
+let sessionTotalSecs = 0;
+let sessionElapsed   = 0;
+let breathCycle      = null;
+let ambientOn        = false;
+let bodyScanStepIdx  = 0;
+
+// ── Breath Animation ─────────────────────────────────────────────────────
+const BREATH_SEQUENCE = [
+    { phase: 'inhale', label: 'Breathe in...', duration: 4000 },
+    { phase: 'hold',   label: 'Hold...',       duration: 4000 },
+    { phase: 'exhale', label: 'Breathe out...', duration: 6000 },
+];
+let breathIdx = 0;
+
+function runBreathCycle() {
+    const circle = document.getElementById('breathCircle');
+    const label  = document.getElementById('breathLabel');
+    if (!circle || !isRunning) return;
+
+    const step = BREATH_SEQUENCE[breathIdx % BREATH_SEQUENCE.length];
+    circle.className = 'breathing-circle ' + step.phase;
+    label.textContent = step.label;
+    circle.textContent = step.phase === 'inhale' ? '🌬️' : step.phase === 'hold' ? '🙏' : '😮‍💨';
+    breathIdx++;
+    breathCycle = setTimeout(runBreathCycle, step.duration);
 }
 
-function setTimer(minutes) {
-    if (isRunning) return;
-    timerMinutes = minutes;
-    timerSeconds = 0;
+function stopBreathCycle() {
+    if (breathCycle) clearTimeout(breathCycle);
+    breathCycle = null;
+    const circle = document.getElementById('breathCircle');
+    const label  = document.getElementById('breathLabel');
+    circle.className = 'breathing-circle';
+    circle.textContent = '🙏';
+    label.textContent = '';
+}
+
+// ── Body Scan ─────────────────────────────────────────────────────────────
+const BODY_SCAN_STEPS = {{ techniques.body_scan.steps | tojson }};
+
+function highlightBodyScanStep(idx) {
+    document.querySelectorAll('.body-scan-step').forEach((el, i) => {
+        el.classList.toggle('active', i === idx);
+        if (i === idx) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+}
+
+function advanceBodyScan() {
+    if (bodyScanStepIdx < BODY_SCAN_STEPS.length) {
+        highlightBodyScanStep(bodyScanStepIdx);
+        document.getElementById('phaseInstruction').textContent = BODY_SCAN_STEPS[bodyScanStepIdx].instruction;
+        bodyScanStepIdx++;
+    }
+}
+
+// ── Session Launch ────────────────────────────────────────────────────────
+function launchSession(key) {
+    resetTimer();
+    currentSession  = SESSIONS[key];
+    currentPhaseIdx = 0;
+    sessionElapsed  = 0;
+    bodyScanStepIdx = 0;
+
+    sessionTotalSecs = currentSession.totalMinutes * 60;
+    totalSeconds     = sessionTotalSecs;
+    remainingSeconds = sessionTotalSecs;
+    phaseSecondsLeft = currentSession.phases[0].duration * 60;
+
+    // UI
+    document.getElementById('sessionLabel').style.display = 'block';
+    document.getElementById('presetButtons').style.display = 'none';
+    document.getElementById('phaseBanner').textContent = currentSession.phases[0].name;
+    document.getElementById('phaseInstruction').textContent = currentSession.phases[0].instruction;
     updateDisplay();
+
+    // Body scan panel
+    const bsp = document.getElementById('bodyScanPanel');
+    bsp.style.display = currentSession.type === 'body_scan' ? 'block' : 'none';
+
+    // Circle colour
+    const circle = document.getElementById('breathCircle');
+    if (currentSession.type === 'body_scan') {
+        circle.className = 'breathing-circle scanning';
+        circle.textContent = '🫁';
+    } else {
+        circle.className = 'breathing-circle';
+        circle.textContent = '🙏';
+    }
+
+    window.scrollTo({ top: document.querySelector('.timer-card').offsetTop - 20, behavior: 'smooth' });
+    startTimer();
+}
+
+// ── Timer Core ────────────────────────────────────────────────────────────
+function updateDisplay() {
+    const mins = String(Math.floor(remainingSeconds / 60)).padStart(2, '0');
+    const secs = String(remainingSeconds % 60).padStart(2, '0');
+    document.getElementById('timerDisplay').textContent = `${mins}:${secs}`;
+
+    if (sessionTotalSecs > 0) {
+        const pct = (sessionElapsed / sessionTotalSecs) * 100;
+        document.getElementById('progressBar').style.width = pct + '%';
+    }
 }
 
 function startTimer() {
     if (isRunning) return;
-    
     isRunning = true;
     document.getElementById('startBtn').disabled = true;
     document.getElementById('pauseBtn').disabled = false;
-    
-    timerInterval = setInterval(() => {
-        if (timerSeconds === 0) {
-            if (timerMinutes === 0) {
-                // Timer complete
-                clearInterval(timerInterval);
-                isRunning = false;
-                playBell();
-                document.getElementById('startBtn').disabled = false;
-                document.getElementById('pauseBtn').disabled = true;
-                alert('🔔 Meditation session complete. สาธุ 🙏');
-                return;
-            }
-            timerMinutes--;
-            timerSeconds = 59;
-        } else {
-            timerSeconds--;
+
+    if (currentSession && currentSession.type === 'breathing') {
+        breathIdx = 0;
+        runBreathCycle();
+    }
+    if (currentSession && currentSession.type === 'body_scan') {
+        advanceBodyScan();
+    }
+
+    timerInterval = setInterval(tick, 1000);
+}
+
+function tick() {
+    if (remainingSeconds <= 0) {
+        finishSession();
+        return;
+    }
+
+    remainingSeconds--;
+    sessionElapsed++;
+    updateDisplay();
+
+    if (currentSession) {
+        phaseSecondsLeft--;
+        checkPhaseTransition();
+    }
+
+    // Body scan: advance a step every ~76 seconds across 14 min scan phase
+    if (currentSession && currentSession.type === 'body_scan' && sessionElapsed > 180) {
+        const scanElapsed = sessionElapsed - 180;
+        const scanTotal   = 14 * 60;
+        const stepEvery   = Math.floor(scanTotal / BODY_SCAN_STEPS.length);
+        const expectedStep = Math.floor(scanElapsed / stepEvery);
+        if (expectedStep !== bodyScanStepIdx - 1 && expectedStep < BODY_SCAN_STEPS.length) {
+            bodyScanStepIdx = expectedStep;
+            advanceBodyScan();
         }
-        updateDisplay();
-    }, 1000);
+    }
+}
+
+function checkPhaseTransition() {
+    if (phaseSecondsLeft > 0) return;
+    currentPhaseIdx++;
+    if (currentPhaseIdx >= currentSession.phases.length) return;
+
+    const phase = currentSession.phases[currentPhaseIdx];
+    phaseSecondsLeft = phase.duration * 60;
+
+    document.getElementById('phaseBanner').textContent = phase.name;
+    document.getElementById('phaseInstruction').textContent = phase.instruction;
+    playBell(1);
 }
 
 function pauseTimer() {
     if (!isRunning) return;
-    
     clearInterval(timerInterval);
     isRunning = false;
+    stopBreathCycle();
     document.getElementById('startBtn').disabled = false;
     document.getElementById('pauseBtn').disabled = true;
 }
 
 function resetTimer() {
     pauseTimer();
-    timerMinutes = 20;
-    timerSeconds = 0;
+    currentSession  = null;
+    sessionTotalSecs = 0;
+    sessionElapsed  = 0;
+    currentPhaseIdx = 0;
+    bodyScanStepIdx = 0;
+    remainingSeconds = 20 * 60;
+    totalSeconds     = 20 * 60;
+
+    updateDisplay();
+    document.getElementById('progressBar').style.width = '0%';
+    document.getElementById('sessionLabel').style.display   = 'none';
+    document.getElementById('presetButtons').style.display  = 'flex';
+    document.getElementById('bodyScanPanel').style.display  = 'none';
+    document.getElementById('phaseInstruction').textContent = 'Select a session above or set a custom time below.';
+
+    const circle = document.getElementById('breathCircle');
+    circle.className = 'breathing-circle';
+    circle.textContent = '🙏';
+    document.getElementById('breathLabel').textContent = '';
+    document.querySelectorAll('.body-scan-step').forEach(el => el.classList.remove('active'));
+}
+
+function setCustomTimer(minutes) {
+    if (isRunning) return;
+    currentSession   = null;
+    remainingSeconds = minutes * 60;
+    totalSeconds     = minutes * 60;
+    sessionTotalSecs = 0;
+    document.getElementById('progressBar').style.width = '0%';
+    document.getElementById('sessionLabel').style.display = 'none';
     updateDisplay();
 }
 
-function playBell() {
-    // Create a simple bell sound using Web Audio API
-    try {
-        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        const oscillator = audioCtx.createOscillator();
-        const gainNode = audioCtx.createGain();
-        
-        oscillator.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
-        
-        oscillator.frequency.value = 528; // Solfeggio frequency
-        oscillator.type = 'sine';
-        
-        gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 3);
-        
-        oscillator.start(audioCtx.currentTime);
-        oscillator.stop(audioCtx.currentTime + 3);
-    } catch (e) {
-        console.log('Audio not supported');
-    }
+function finishSession() {
+    clearInterval(timerInterval);
+    isRunning = false;
+    stopBreathCycle();
+    remainingSeconds = 0;
+    updateDisplay();
+    document.getElementById('progressBar').style.width = '100%';
+    document.getElementById('startBtn').disabled = false;
+    document.getElementById('pauseBtn').disabled = true;
+    document.getElementById('phaseBanner').textContent = '🪷 Session Complete';
+    document.getElementById('phaseInstruction').textContent = 'Sādhu sādhu sādhu 🙏 Rest in the stillness before returning to activity.';
+    playBell(3);
+    setTimeout(() => alert('🔔 Meditation session complete.\nSādhu sādhu sādhu 🙏'), 500);
 }
 
-// Initialize display
+// ── Bell ──────────────────────────────────────────────────────────────────
+function playBell(times = 1) {
+    try {
+        const ctx  = new (window.AudioContext || window.webkitAudioContext)();
+        let delay  = 0;
+        for (let i = 0; i < times; i++) {
+            setTimeout(() => {
+                const osc  = ctx.createOscillator();
+                const gain = ctx.createGain();
+                osc.connect(gain);
+                gain.connect(ctx.destination);
+                osc.frequency.value = 432;
+                osc.type = 'sine';
+                gain.gain.setValueAtTime(0.6, ctx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 4);
+                osc.start(ctx.currentTime);
+                osc.stop(ctx.currentTime + 4);
+            }, delay);
+            delay += 1500;
+        }
+    } catch(e) { console.log('Audio unavailable'); }
+}
+
+// ── Ambient toggle (placeholder) ─────────────────────────────────────────
+function toggleAmbient() {
+    ambientOn = !ambientOn;
+    const btn = document.getElementById('ambientBtn');
+    btn.textContent = ambientOn ? '🔔 Bell + Ambient' : '🔔 Bell only';
+    btn.classList.toggle('active', ambientOn);
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────
 updateDisplay();
 </script>
 {% endblock %}
