@@ -1,0 +1,16 @@
+# Product Overview
+
+## What the App Does
+A web app that teaches Thai language through the lens of Thai culture and Buddhism, including temple etiquette and business language for people moving to Thailand.
+
+## Who It's For
+Expats settling in Thailand, tourists planning a visit, Thai-heritage learners reconnecting with their roots, Buddhists studying alongside practice, and business professionals relocating for work.
+
+## Key Features
+A full alphabet course, vocabulary by topic, grammar, cultural and temple modules, a meditation timer, and an AI conversation tutor that adapts to the learner.
+
+## Problem It Solves
+Thai feels impossible to beginners because of its script and tones, and existing apps teach words without the cultural context that Thai depends on. This app pairs language with culture so learners can communicate respectfully.
+
+## Monetisation
+A high-level freemium model: a free plan to get started, plus a paid subscription that unlocks the full course and unlimited AI tutoring.

@@ -1,0 +1,40 @@
+# Evaluation rubric for: Product Overview Section
+
+prompt: product-overview-section
+version: 2
+criteria:
+  - name: has_five_sections
+    description: Overview contains all five required parts
+    weight: 5
+    pass_condition: ('what the app does' in output.lower() or 'what it does' in output.lower()) and ("who it" in output.lower()) and ('features' in output.lower()) and ('problem' in output.lower()) and ('monetis' in output.lower() or 'monetiz' in output.lower())
+
+  - name: mentions_audiences
+    description: Names at least three of the target audience segments
+    weight: 4
+    pass_condition: len([s for s in ['expat', 'tourist', 'buddhist', 'heritage', 'business'] if s in output.lower()]) >= 3
+
+  - name: includes_business_model
+    description: States a freemium plus subscription model
+    weight: 4
+    pass_condition: ('freemium' in output.lower()) and ('subscription' in output.lower())
+
+  - name: avoids_empty_hype
+    description: Avoids hollow marketing words
+    weight: 1
+    pass_condition: not any(w in output.lower() for w in ['revolutionary', 'world-class', 'game-changing'])
+
+  - name: is_substantial
+    description: Output is a real section, not a stub
+    weight: 2
+    pass_condition: len(output.split()) >= 80
+
+test_cases:
+  - input:
+      audience_focus: "all segments"
+      emphasis: "all strengths"
+      monetisation_detail: "high-level"
+    expected_traits:
+      - all five sections present
+      - names expats, tourists, Buddhists, heritage learners and business users
+      - high-level freemium plus subscription model
+      - no empty hype words

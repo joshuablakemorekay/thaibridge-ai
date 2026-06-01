@@ -1,0 +1,31 @@
+# Market Research Report — Thai Language & Culture Learning App (UK)
+
+## Executive Summary
+A clear gap exists in the UK market for a Thai learning app that integrates Buddhist culture, temple etiquette, and business language. None of the dominant platforms offer Thai at all.
+
+## Target Market Analysis
+The UK addressable market includes expats, tourists, heritage learners, Buddhists, and business professionals — over 1.4 million people with a Thailand connection. Around 1.1 million UK tourists visit Thailand each year.
+
+## Customer Personas
+Sarah, a relocating professional; David, a Buddhist practitioner; and a Thai-heritage family teaching their children.
+
+## Competitor Analysis
+The largest platforms (Duolingo, Babbel) offer no Thai course. Specialist apps lead the niche: Ling (closest competitor) and ThaiPod101 (largest content library). Neither integrates Buddhist cultural content as a core framework.
+
+## Monetization & Pricing
+A freemium model with paid subscription tiers. A free plan plus subscriptions around £7.99 and £14.99 per month, with a lifetime option. Annual plans are discounted to improve retention.
+
+## Distribution Channels
+Web-first, then mobile apps, with Buddhist community partnerships and seasonal tourism channels.
+
+## Branding & Positioning
+Mission-driven positioning around authentic Thai Buddhist culture; lotus and temple aesthetic.
+
+## Risks & Challenges
+Cultural-sensitivity risk, competition, and free-to-paid conversion are the main risks, each with mitigations.
+
+## Go-To-Market Strategy
+An 18-month phased rollout from temple partnerships to B2B corporate training.
+
+## Feasibility
+Medium-high difficulty, modest startup cost in the UK, break-even at roughly 150 subscribers, high scalability, medium overall risk. Recommendation: validate with real users before committing.
