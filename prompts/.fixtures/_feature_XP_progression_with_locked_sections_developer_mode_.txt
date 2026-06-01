@@ -1,0 +1,18 @@
+XP_LEVELS = {1: 0, 2: 100, 3: 250, 4: 500, 5: 1000}
+
+def add_xp(progress, amount, action=""):
+    """Award XP (multiplied by subscription tier) and detect level-ups."""
+    multiplier = {"free": 1, "basic": 2, "pro": 3}.get(progress.get("subscription", "free"), 1)
+    progress["xp"] = progress.get("xp", 0) + amount * multiplier
+    return progress
+
+SECTION_REQUIREMENTS = {"grammar": {"level": 3}, "theravada": {"level": 6, "subscription": "basic"}}
+
+def require_access(section):
+    """Lock a section behind a level. Developer mode bypasses every lock."""
+    def decorator(fn):
+        return fn
+    return decorator
+
+# Developer mode: password-protected, unlocks (bypasses) all locked sections for the owner.
+# Subscription tiers: Free, Buddhist Scholar (premium), Thai Master (premium) gate advanced content.

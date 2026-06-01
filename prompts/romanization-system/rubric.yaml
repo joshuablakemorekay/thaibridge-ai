@@ -1,0 +1,38 @@
+# Evaluation rubric for: Paiboon+ Romanization System
+
+prompt: romanization-system
+version: 1
+criteria:
+  - name: documents_signature_chars
+    description: Output uses the system's signature vowel characters
+    weight: 5
+    pass_condition: "all(c in output for c in ['ʉ', 'ɛ', 'ɔ', 'ə'])"
+
+  - name: distinguishes_short_long
+    description: Output distinguishes short vs long vowels
+    weight: 4
+    pass_condition: "'short' in output.lower() and 'long' in output.lower()"
+
+  - name: beginner_mode_rule
+    description: Beginner mode swaps final i/o, shown by the example conversions
+    weight: 4
+    pass_condition: "all(s in output.lower() for s in ['bpay', 'gaw'])"
+
+  - name: preserves_vowel_combos
+    description: Beginner mode preserves vowel combos / double vowels rather than converting them
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['combo', 'combination', 'double vowel', 'not'])"
+
+  - name: is_substantial
+    description: Output is a real reference, not a one-line stub
+    weight: 2
+    pass_condition: "len(output.split()) >= 30"
+
+test_cases:
+  - input:
+      system: "Paiboon+ vowel reference and beginner-mode conversion rules"
+    expected_traits:
+      - documents the signature characters (ʉ, ɛ, ɔ, ə)
+      - distinguishes short vs long vowel pairs
+      - swaps final i→y and o→w (bpai→bpay, gao→gaw)
+      - leaves vowel combos and double vowels unchanged

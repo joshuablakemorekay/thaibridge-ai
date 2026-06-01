@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="bob-writing" style="color: var(--royal-purple);">
+<a class="back-link" href="/theravada">&larr; Back to Buddhist Dharma</a>
+<h1>Fear as Guardian and Tyrant</h1>
+
+<p>The Buddha taught that fear is built into life itself. From birth to death, human beings encounter fear in countless forms, and each form shapes the way we think, speak, and act in the world around us every single day.</p>
+
+<p>But the Buddha did not merely diagnose fear. He showed a path by which fear could be understood, faced, and finally transformed, so that it no longer rules the heart as a tyrant ruling over a frightened and unwilling subject.</p>
+
+<p>Fear can act as a guardian. A measured caution keeps us from harm, warns us away from danger, and protects those we love. In this sense a small, wise fear is a friend that walks quietly beside us on the road.</p>
+
+<p>Yet the same fear, when it grows unchecked, becomes a tyrant. It narrows the mind, hardens the heart, and drives people to cruelty, dishonesty, and the endless defence of a self that was never as solid as it seemed to be.</p>
+
+<p>Through mindfulness of the body, of feeling, of mind, and of mental objects, the practitioner learns to watch fear arise and pass away. Seen clearly, fear loses its power to command, and in that clear seeing there is a quiet and durable freedom.</p>
+
+<p>This, then, is the teaching: neither to worship fear nor to pretend it away, but to know it directly, to let it guard where guarding is wise, and to release its grip where it has become a tyrant over the peaceful, awakened heart.</p>
+
+<p>Consider how a society can be governed through fear as surely as a single mind can. When leaders rule by threat, the people obey from anxiety rather than understanding, and the social order that results is brittle, suspicious, and quick to turn upon itself at the slightest sign of weakness or dissent among its members.</p>
+
+<p>The Buddha's answer was not rebellion but clear awareness. A person who has seen through their own fear cannot easily be ruled by the fear of others, for they have already met the worst that the mind can conjure and have found, on the far side of it, a steadiness that no threat can finally disturb or command.</p>
+</article>
+{% endblock %}

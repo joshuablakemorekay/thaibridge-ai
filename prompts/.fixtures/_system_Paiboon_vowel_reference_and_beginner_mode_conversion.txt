@@ -1,0 +1,13 @@
+Paiboon+ vowel reference (custom system, derived from the Paiboon transliteration used by Benjawan Poomsan Becker).
+
+Short and long vowel pairs use dedicated characters so length is unambiguous:
+  a / aa, i / ii, u / uu
+  ʉ (short) and ʉʉ (long) — bite molars, exaggerate "er" / "churrr"
+  e / ee, ɛ (short) / ɛɛ (long, as in mɛɛ)
+  o / oo, ɔ (short "aw") / ɔɔ (long "awwww")
+  ə (short "er", bird) / əə (long "errr", birrrd)
+
+Beginner mode swaps word-final single i and o:
+  bpai -> bpay, nai -> nay, gao -> gaw
+
+It does NOT touch vowel combinations (chái, sǎao) or double vowels (dii) — those are left unchanged.

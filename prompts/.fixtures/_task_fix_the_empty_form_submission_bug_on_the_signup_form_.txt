@@ -1,0 +1,14 @@
+<form id="signup-form">
+  <input type="text" id="username" name="username" placeholder="e.g. thai_learner_99" maxlength="20" required>
+  <input type="email" id="email" name="email" placeholder="you@example.com" required>
+  <input type="password" id="password" name="password" placeholder="At least 8 characters" required>
+  <input type="password" id="confirm-password" name="confirm_password" placeholder="Repeat your password" required>
+  <button type="submit">Create My Account</button>
+</form>
+<script>
+  // JavaScript validation layer kept for the complex rules (defence in depth).
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    // ...format, password strength, and match checks...
+  });
+</script>

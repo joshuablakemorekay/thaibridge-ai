@@ -1,0 +1,38 @@
+# Evaluation rubric for: Buddhist PDF Integration (Pra Kru Bob's Writings)
+
+prompt: buddhist-pdf-integration
+version: 1
+criteria:
+  - name: is_complete_not_truncated
+    description: The reproduced article is full-length, not an abridged summary
+    weight: 5
+    pass_condition: "len(output.split()) >= 300"
+
+  - name: preserves_paragraphs
+    description: Multiple paragraphs are preserved rather than collapsed
+    weight: 4
+    pass_condition: "output.lower().count('<p') >= 5"
+
+  - name: extends_base_template
+    description: The article page extends the shared base template
+    weight: 3
+    pass_condition: '"{% extends" in output and "base.html" in output'
+
+  - name: has_back_navigation
+    description: The page offers a way back to the Dharma page
+    weight: 2
+    pass_condition: "'back' in output.lower()"
+
+  - name: is_styled
+    description: The page applies the Thai theme / styling
+    weight: 2
+    pass_condition: "any(s in output.lower() for s in ['gold', 'royal', 'color', 'style'])"
+
+test_cases:
+  - input:
+      document: "Pra Kru Bob essay reproduced as an HTML article page"
+    expected_traits:
+      - reproduces the full text (not a summary)
+      - preserves every paragraph
+      - extends base.html
+      - has a back link and styled buttons
