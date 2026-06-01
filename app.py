@@ -9,6 +9,8 @@ Version 3.0 - AI Agent Edition
 """
 
 import os
+from dotenv import load_dotenv
+load_dotenv()  # Load .env file before anything else reads environment variables
 # Set API key BEFORE any other imports
 
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
@@ -1172,8 +1174,88 @@ def get_vocab_with_mode(vocab_list, beginner_mode=False):
 
 
 # ============================================
-# VOCABULARY DATA - EXPANDED (20 words per category)
+# VOCABULARY DATA - EXPANDED (20 words per category except Tour/Business_Vocab = 25 words each)
 # ============================================
+
+TOUR_VOCAB = {
+    'transport': [
+        {'english': 'Where?', 'thai': 'ที่ไหน', 'paiboon': 'têe-nǎi', 'note': 'Common question for locations'},
+        {'english': 'Go', 'thai': 'ไป', 'paiboon': 'bpai', 'note': 'Basic movement verb'},
+        {'english': 'Taxi', 'thai': 'แท็กซี่', 'paiboon': 'tɛ́k-sêe', 'note': 'Borrowed from English'},
+        {'english': 'Turn left', 'thai': 'เลี้ยวซ้าย', 'paiboon': 'líao sáai', 'note': 'Essential for giving directions'},
+        {'english': 'Turn right', 'thai': 'เลี้ยวขวา', 'paiboon': 'líao kwǎa', 'note': 'Essential for giving directions'},
+    ],
+    'accommodation': [
+        {'english': 'Hotel', 'thai': 'โรงแรม', 'paiboon': 'roong-rɛɛm', 'note': 'Formal term'},
+        {'english': 'Room', 'thai': 'ห้อง', 'paiboon': 'hɔ̂ɔng', 'note': 'Used for hotel rooms and bathrooms'},
+        {'english': 'Air conditioning', 'thai': 'แอร์', 'paiboon': 'ɛɛ', 'note': 'Shortened from "air"'},
+        {'english': 'Key', 'thai': 'กุญแจ', 'paiboon': 'gun-jɛɛ', 'note': 'For room access'},
+    ],
+    'sightseeing': [
+        {'english': 'Temple', 'thai': 'วัด', 'paiboon': 'wát', 'note': 'Buddhist temples are everywhere in Thailand'},
+        {'english': 'Beautiful', 'thai': 'สวย', 'paiboon': 'sǔai', 'note': 'Common compliment'},
+        {'english': 'Take a photo', 'thai': 'ถ่ายรูป', 'paiboon': 'tàai-rûup', 'note': 'Literally "take picture"'},
+        {'english': 'Entrance fee', 'thai': 'ค่าเข้า', 'paiboon': 'kâa-kâo', 'note': 'Literally "entrance cost"'},
+    ],
+    'shopping': [
+        {'english': 'How much?', 'thai': 'เท่าไหร่', 'paiboon': 'tâo-rài', 'note': 'Essential shopping phrase'},
+        {'english': 'Expensive', 'thai': 'แพง', 'paiboon': 'pɛɛng', 'note': 'For negotiating prices'},
+        {'english': 'Discount / Reduce', 'thai': 'ลด', 'paiboon': 'lót', 'note': 'Verb meaning "reduce"'},
+        {'english': 'Cheap', 'thai': 'ถูก', 'paiboon': 'tùuk', 'note': 'Can also mean "correct"'},
+    ],
+    'food': [
+        {'english': 'Delicious', 'thai': 'อร่อย', 'paiboon': 'à-rɔ̀i', 'note': 'Most useful food adjective'},
+        {'english': 'Spicy', 'thai': 'เผ็ด', 'paiboon': 'pèt', 'note': 'Critical for food preferences'},
+        {'english': 'Not spicy', 'thai': 'ไม่เผ็ด', 'paiboon': 'mâi pèt', 'note': 'Essential for many foreigners'},
+        {'english': 'Water', 'thai': 'น้ำ', 'paiboon': 'náam', 'note': 'Also means liquid in general'},
+        {'english': 'Bill / Check', 'thai': 'เช็คบิล', 'paiboon': 'chék-bin', 'note': 'Used to request the bill'},
+    ],
+    'emergencies': [
+        {'english': 'Help!', 'thai': 'ช่วยด้วย', 'paiboon': 'chûai-dûai', 'note': 'Emergency cry for help'},
+        {'english': 'Hospital', 'thai': 'โรงพยาบาล', 'paiboon': 'roong-pa-yaa-baan', 'note': 'Important for emergencies'},
+        {'english': 'Police', 'thai': 'ตำรวจ', 'paiboon': 'dam-rùat', 'note': 'For reporting issues'},
+    ],
+}
+
+BUSINESS_VOCAB = {
+    'greetings': [
+        {'english': 'Polite greeting', 'thai': 'สวัสดี', 'paiboon': 'sà-wàt-dii', 'note': 'Add ครับ (kráp) male or ค่ะ (kâ) female'},
+        {'english': 'Nice to meet you', 'thai': 'ยินดีที่ได้รู้จัก', 'paiboon': 'yin-dii-têe-dâi-rúu-jàk', 'note': 'Formal introduction phrase'},
+        {'english': 'Business card', 'thai': 'นามบัตร', 'paiboon': 'naam-bàt', 'note': 'Exchange with both hands — essential for networking'},
+        {'english': 'Company', 'thai': 'บริษัท', 'paiboon': 'bɔɔ-rí-sàt', 'note': 'Formal term for company'},
+    ],
+    'meetings': [
+        {'english': 'Meeting', 'thai': 'ประชุม', 'paiboon': 'bpra-chum', 'note': 'Can be used as noun or verb'},
+        {'english': 'Appointment', 'thai': 'นัดหมาย', 'paiboon': 'nát-mǎai', 'note': 'Scheduled meeting'},
+        {'english': 'Discuss (formal)', 'thai': 'หารือ', 'paiboon': 'hǎa-rʉʉ', 'note': 'Formal discussion — more respectful than พูด'},
+        {'english': 'Agree', 'thai': 'เห็นด้วย', 'paiboon': 'hěn-dûai', 'note': 'To agree with something'},
+        {'english': 'Consider', 'thai': 'พิจารณา', 'paiboon': 'pí-jaa-rá-naa', 'note': 'Formal deliberation — used in official contexts'},
+    ],
+    'office': [
+        {'english': 'Document', 'thai': 'เอกสาร', 'paiboon': 'èek-gà-sǎan', 'note': 'Any official paperwork'},
+        {'english': 'Email', 'thai': 'อีเมล', 'paiboon': 'ii-meen', 'note': 'Borrowed from English'},
+        {'english': 'Office', 'thai': 'สำนักงาน', 'paiboon': 'sǎm-nák-ngaan', 'note': 'Formal workplace — สำนักงานใหญ่ = head office'},
+        {'english': 'Schedule / Agenda', 'thai': 'กำหนดการ', 'paiboon': 'gam-nòt-gaan', 'note': 'Timeline or agenda'},
+    ],
+    'banking': [
+        {'english': 'Bank', 'thai': 'ธนาคาร', 'paiboon': 'tá-naa-kaan', 'note': 'Financial institution'},
+        {'english': 'Account', 'thai': 'บัญชี', 'paiboon': 'ban-chii', 'note': 'Bank or financial account'},
+        {'english': 'Transfer', 'thai': 'โอน', 'paiboon': 'oon', 'note': 'Money transfer verb — โอนเงิน = transfer money'},
+        {'english': 'Investment', 'thai': 'การลงทุน', 'paiboon': 'gaan-long-tun', 'note': 'Business investment'},
+        {'english': 'Budget', 'thai': 'งบประมาณ', 'paiboon': 'ngóp-bpra-maan', 'note': 'Financial planning term'},
+    ],
+    'contracts': [
+        {'english': 'Contract', 'thai': 'สัญญา', 'paiboon': 'sǎn-yaa', 'note': 'Legal agreement'},
+        {'english': 'Sign', 'thai': 'เซ็น', 'paiboon': 'sen', 'note': 'To sign documents'},
+        {'english': 'Terms and conditions', 'thai': 'เงื่อนไข', 'paiboon': 'ngʉ̂an-kǎi', 'note': 'Conditions of agreement'},
+        {'english': 'Legal / Law', 'thai': 'กฎหมาย', 'paiboon': 'gòt-mǎai', 'note': 'Literally "law" — used broadly for legal matters'},
+    ],
+    'hierarchy': [
+        {'english': 'Director', 'thai': 'ผู้อำนวยการ', 'paiboon': 'pûu-am-nuai-gaan', 'note': 'Executive director level'},
+        {'english': 'Manager', 'thai': 'ผู้จัดการ', 'paiboon': 'pûu-jàt-gaan', 'note': 'Department manager'},
+        {'english': 'Employee / Staff', 'thai': 'พนักงาน', 'paiboon': 'pá-nák-ngaan', 'note': 'General staff member'},
+    ],
+}
 
 VOCABULARY = {
     'festivals': [
@@ -1702,6 +1784,43 @@ MEDITATION_TECHNIQUES = {
                 'benefits': 'Direct insight into reality'
             },
         ]
+    },
+    'body_scan': {
+        'name': 'Body Scan Meditation',
+        'thai': 'การสแกนร่างกาย',
+        'paiboon': 'gaan sà-gɛɛn râang-gaai',
+        'description': (
+            "A body scan is a foundational mindfulness practice that can be very helpful for developing body awareness and relaxation. "
+            "Here's a step-by-step guide on how to do a basic body scan:"
+        ),
+        'steps': [
+            {'number': 1,  'title': 'Posture',              'detail': 'Sit comfortably or lie down in a relaxed position. Close your eyes if it feels comfortable.'},
+            {'number': 2,  'title': 'Set intention',        'detail': 'Take a few deep breaths and set an intention to be present with your body sensations.'},
+            {'number': 3,  'title': 'Ground yourself',      'detail': 'Notice the points of contact between your body and the surface supporting you.'},
+            {'number': 4,  'title': 'Start at the feet',    'detail': 'Bring your attention to your toes, then the soles of your feet, then the tops of your feet.'},
+            {'number': 5,  'title': 'Move up slowly',       'detail': 'Gradually move your attention up through your body: Ankles, Calves, Knees, Thighs, Hips, Lower back, Abdomen, Chest, Upper back, Shoulders, Arms, Hands, Neck, Face, Scalp.'},
+            {'number': 6,  'title': 'For each area',        'detail': 'Notice any sensations present (e.g., warmth, coolness, tingling, pressure). If there\'s no sensation, simply note the absence of sensation. Don\'t try to change anything, just observe.'},
+            {'number': 7,  'title': 'Breath awareness',     'detail': 'You can use your breath as an anchor, returning to it between each body part.'},
+            {'number': 8,  'title': 'Whole body awareness', 'detail': 'After scanning individual parts, try to hold an awareness of your entire body as a whole.'},
+            {'number': 9,  'title': 'Ending the practice',  'detail': 'Slowly open your eyes and take a moment to notice how you feel.'},
+        ],
+        'tips': [
+            'Start with short sessions (5-10 minutes) and gradually increase duration.',
+            "If your mind wanders, gently bring it back to the body part you were focusing on.",
+            'Don\'t worry about "doing it right" - the practice is about cultivating awareness, not achieving a particular state.',
+        ],
+        'closing': (
+            "Remember, like any skill, body scanning improves with regular practice. "
+            "It's normal for your mind to wander or to have difficulty feeling sensations in some areas at first. "
+            "With time, your body awareness will likely become more refined."
+        ),
+        'body_areas': ['Ankles', 'Calves', 'Knees', 'Thighs', 'Hips', 'Lower back', 'Abdomen', 'Chest', 'Upper back', 'Shoulders', 'Arms', 'Hands', 'Neck', 'Face', 'Scalp'],
+        'duration_minutes': 20,
+        'phases': [
+            {'name': 'Grounding',            'duration': 3,  'instruction': 'Lie down or sit comfortably. Notice the points of contact between your body and the surface supporting you.'},
+            {'name': 'Scanning',             'duration': 14, 'instruction': 'Move attention slowly upward through the body, from feet to scalp. At each area, simply notice whatever is present.'},
+            {'name': 'Whole Body Awareness', 'duration': 3,  'instruction': 'After scanning all parts, expand awareness to hold the entire body as a whole. Rest here.'},
+        ],
     }
 }
 
@@ -4532,6 +4651,18 @@ def lesson_detail(lesson_id):
     return render_template('lesson_detail.html', lesson=lesson)
 
 
+@app.route('/tour-guide')
+def tour_guide():
+    """Thai for tourists and holiday makers"""
+    return render_template('tour_guide.html', vocab=TOUR_VOCAB)
+
+
+@app.route('/business-thai')
+def business_thai():
+    """Business Thai for professionals and expats"""
+    return render_template('business_thai.html', vocab=BUSINESS_VOCAB)
+
+
 @app.route('/paiboon')
 @require_access('paiboon')
 def paiboon_guide():
@@ -5079,13 +5210,14 @@ def ai_chat():
             'alphabet_completed': session.get('alphabet_completed', False),
             'name': session.get('username', 'Student')
         }
-        
-        # Get AI response
+
+        # Get AI response (max_tokens controls API cost)
         response = ai_agent.chat(
             message=message,
             mode=mode,
             session_id=session_id,
-            user_context=user_context
+            user_context=user_context,
+            max_tokens=500
         )
         
         return jsonify(response)
