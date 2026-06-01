@@ -1,0 +1,145 @@
+name: Prompt Lint & Eval
+
+on:
+  push:
+    paths:
+      - 'prompts/**'
+      - 'scripts/eval_runner.py'
+      - '.github/workflows/prompt-eval.yml'
+  pull_request:
+    paths:
+      - 'prompts/**'
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: 'Evaluation provider'
+        required: true
+        default: 'mock'
+        type: choice
+        options:
+          - mock
+          - anthropic
+
+jobs:
+  lint:
+    name: Lint prompt structure
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify required files per prompt
+        run: |
+          set -e
+          missing=0
+          for dir in prompts/*/; do
+            [ -d "$dir" ] || continue
+            name=$(basename "$dir")
+            for required in prompt.md REASONING.md rubric.yaml; do
+              if [ ! -f "$dir$required" ]; then
+                echo "::error file=$dir::Missing required file: $required"
+                missing=$((missing + 1))
+              fi
+            done
+          done
+          if [ "$missing" -gt 0 ]; then
+            echo "::error::$missing required files missing across prompt directories"
+            exit 1
+          fi
+
+      - name: Check for unfilled placeholders
+        run: |
+          if grep -rn '{{[a-z_]*}}' prompts/ 2>/dev/null; then
+            echo "::error::Unfilled {{placeholder}} strings found in prompts/"
+            exit 1
+          fi
+
+      - name: Verify index README references every prompt
+        run: |
+          set -e
+          if [ ! -f prompts/README.md ]; then
+            echo "::error::prompts/README.md is missing"
+            exit 1
+          fi
+          for dir in prompts/*/; do
+            [ -d "$dir" ] || continue
+            name=$(basename "$dir")
+            if ! grep -q "$name" prompts/README.md; then
+              echo "::error::prompts/README.md does not reference prompt '$name'"
+              exit 1
+            fi
+          done
+
+      - name: Validate rubric YAML structure
+        run: |
+          python3 -m pip install pyyaml --quiet
+          python3 -c "
+          import sys, yaml, glob
+          failed = False
+          for f in glob.glob('prompts/*/rubric.yaml'):
+              try:
+                  with open(f) as fh:
+                      data = yaml.safe_load(fh)
+                  if not isinstance(data, dict) or 'criteria' not in data:
+                      print(f'::error file={f}::rubric.yaml must contain a top-level criteria list')
+                      failed = True
+              except yaml.YAMLError as e:
+                  print(f'::error file={f}::Invalid YAML: {e}')
+                  failed = True
+          sys.exit(1 if failed else 0)
+          "
+
+  eval:
+    name: Run prompt evaluations
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install pyyaml
+          # Only install the Anthropic SDK if we're actually going to call it
+          if [ "${{ inputs.provider }}" = "anthropic" ]; then
+            pip install anthropic
+          fi
+
+      - name: Run evaluations
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          PROVIDER="${{ inputs.provider || 'mock' }}"
+          python3 scripts/eval_runner.py \
+            --provider "$PROVIDER" \
+            --fail-under 0.8
+
+      - name: Upload results summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: |
+            prompts/results-summary.md
+            prompts/*/results/run_*.json
+          retention-days: 30
+
+      - name: Comment on PR with summary
+        if: github.event_name == 'pull_request' && always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            try {
+              const summary = fs.readFileSync('prompts/results-summary.md', 'utf8');
+              github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: summary,
+              });
+            } catch (e) {
+              console.log('No summary file to post:', e.message);
+            }

@@ -1,0 +1,39 @@
+# Evaluation rubric for: Market Research Report
+
+prompt: market-research-report
+version: 3
+criteria:
+  - name: has_all_sections
+    description: Report contains all ten required sections
+    weight: 5
+    pass_condition: all(s in output.lower() for s in ['executive summary', 'target market', 'persona', 'competitor', 'pricing', 'distribution', 'positioning', 'risk', 'go-to-market', 'feasibility'])
+
+  - name: names_competitors
+    description: Report names the key real competitors
+    weight: 5
+    pass_condition: all(s in output.lower() for s in ['thaipod101', 'duolingo', 'ling'])
+
+  - name: includes_uk_market_figures
+    description: Report includes concrete UK figures (a pound amount plus UK context)
+    weight: 4
+    pass_condition: re.search(r'£\s*\d', output) and 'uk' in output.lower()
+
+  - name: has_pricing_structure
+    description: Report lays out a freemium / subscription pricing model
+    weight: 3
+    pass_condition: ('freemium' in output.lower()) or ('subscription' in output.lower())
+
+  - name: is_substantial
+    description: Output is a real report, not a one-line stub
+    weight: 2
+    pass_condition: len(output.split()) >= 150
+
+test_cases:
+  - input:
+      app_description: "Thai language and culture learning web app that also teaches Buddhism, temple etiquette, and business language for people moving to Thailand"
+      market: "UK"
+    expected_traits:
+      - covers all ten report sections
+      - names Ling, ThaiPod101, and Duolingo
+      - includes UK audience sizes and pound figures
+      - presents a freemium plus subscription pricing model

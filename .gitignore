@@ -9,3 +9,6 @@ venv/
 instance/
 thai_app.db
 *.log
+
+# Prompt eval check results (timestamped output we don't want to commit)
+prompts/*/results/
