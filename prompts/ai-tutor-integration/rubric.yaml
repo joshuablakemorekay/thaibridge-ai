@@ -1,0 +1,38 @@
+# Evaluation rubric for: AI Tutor Integration (Claude API, 6 Modes)
+
+prompt: ai-tutor-integration
+version: 1
+criteria:
+  - name: defines_multiple_modes
+    description: The agent defines its specialist modes (conversation, tutor, cultural, buddhist, etc.)
+    weight: 5
+    pass_condition: "all(s in output.lower() for s in ['conversation', 'tutor', 'cultural', 'buddhist'])"
+
+  - name: calls_claude_api
+    description: The agent calls the Claude / Anthropic API
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['anthropic', 'claude', 'messages.create'])"
+
+  - name: uses_system_prompts
+    description: The agent uses per-mode system prompts to steer behaviour
+    weight: 3
+    pass_condition: "'system' in output.lower()"
+
+  - name: uses_house_romanization
+    description: The agent is instructed to use the app's Paiboon+ romanization
+    weight: 2
+    pass_condition: "any(s in output.lower() for s in ['paiboon', 'romaniz'])"
+
+  - name: is_substantial
+    description: Output is real code, not a one-line stub
+    weight: 2
+    pass_condition: "len(output.split()) >= 30"
+
+test_cases:
+  - input:
+      feature: "Claude-powered Thai tutor with conversation, tutor, quiz, cultural, buddhist and hint modes"
+    expected_traits:
+      - defines the multiple specialist modes
+      - calls the Anthropic/Claude API
+      - uses per-mode system prompts
+      - responds in the app's Paiboon+ romanization

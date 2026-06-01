@@ -1,0 +1,22 @@
+import anthropic
+
+client = anthropic.Anthropic()  # reads ANTHROPIC_API_KEY
+
+MODES = {
+    "conversation": "Practise natural Thai dialogue with the learner.",
+    "tutor": "Explain Thai grammar and correct mistakes.",
+    "generator": "Generate custom quizzes on a requested topic.",
+    "cultural": "Explain Thai customs and cultural context.",
+    "buddhist": "Discuss Theravada Buddhist teachings in Thai and English.",
+    "helper": "Give adaptive hints without giving the answer away.",
+}
+
+def reply(mode, message):
+    system = MODES[mode] + " Always use the app's Paiboon+ romanization (kâ not khâ, ŋ not ng, tai not thai)."
+    msg = client.messages.create(
+        model="claude-sonnet-4-5",
+        max_tokens=1024,
+        system=system,
+        messages=[{"role": "user", "content": message}],
+    )
+    return msg.content[0].text

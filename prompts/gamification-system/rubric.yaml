@@ -1,0 +1,38 @@
+# Evaluation rubric for: Gamification & Subscription System
+
+prompt: gamification-system
+version: 1
+criteria:
+  - name: defines_xp_or_levels
+    description: Output defines a points/XP or level progression system
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['xp', 'level', 'points'])"
+
+  - name: gates_sections
+    description: Output gates access to sections behind a requirement (lock/unlock)
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['lock', 'unlock', 'require_access', 'access'])"
+
+  - name: has_developer_mode
+    description: Output includes a developer-mode bypass for the owner
+    weight: 4
+    pass_condition: "'developer' in output.lower()"
+
+  - name: has_subscription_tiers
+    description: Output defines subscription tiers for monetisation
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['subscription', 'tier', 'premium'])"
+
+  - name: is_substantial
+    description: Output is real code, not a one-line stub
+    weight: 2
+    pass_condition: "len(output.split()) >= 30"
+
+test_cases:
+  - input:
+      feature: "XP progression with locked sections, developer mode, and subscription tiers"
+    expected_traits:
+      - defines an XP / level system
+      - locks sections behind a level requirement
+      - includes a developer-mode bypass
+      - defines free and paid subscription tiers

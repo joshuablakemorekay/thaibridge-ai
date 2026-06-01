@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>อักษรไทย — Thai Alphabet</h1>
+<p>This page covers all 44 Thai consonants by class, the vowel forms, and the tone marks.</p>
+
+<section class="consonants">
+  <p>Each consonant card shows the Thai letter with its Paiboon romanization underneath, e.g. ก (g), ข (k), ค (k).</p>
+</section>
+
+<section class="vowels">
+  <p>Vowels and tone marks are introduced after the consonants so the sound and length are clear.</p>
+</section>
+
+<section class="practice">
+  <h2>Practice: Alphabetical Order</h2>
+  <p>A progressive, level-by-level drag-and-drop exercise. You unlock the next level only after completing the current one. A hint reveals the next letter, but there is no shortcut to reveal everything.</p>
+</section>
+{% endblock %}

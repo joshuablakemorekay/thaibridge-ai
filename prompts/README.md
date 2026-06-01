@@ -10,6 +10,13 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 
 | Prompt | Category | What it does | Iterated? |
 |---|---|---|---|
+| [`frontend-build`](./frontend-build/) | code-generation | Builds the app's templates, Thai-themed CSS, and interactive JS in stages | Yes (v1 → v3) |
+| [`gamification-system`](./gamification-system/) | code-generation | Adds XP/levels, locked sections, developer mode, and subscription tiers | Yes (v1 → v3) |
+| [`thai-alphabet-exercises`](./thai-alphabet-exercises/) | code-generation | Adds the Thai alphabet module and a progressive, no-cheat ordering exercise | Yes (v1 → v3) |
+| [`romanization-system`](./romanization-system/) | language design | The custom Paiboon+ vowel system, beginner mode, and consistent rendering | Yes (v1 → v3) |
+| [`buddhist-pdf-integration`](./buddhist-pdf-integration/) | content | Reproduces Pra Kru Bob's essays from PDFs faithfully as styled pages | Yes (v1 → v2) |
+| [`ai-tutor-integration`](./ai-tutor-integration/) | agent-workflow | A 6-mode Claude-powered Thai tutor integrated into the app | Yes (v1 → v2) |
+| [`claude-code-workflow`](./claude-code-workflow/) | agent-workflow | Driving Claude Code for a bug fix, refactor, tests, and code review with Git | Yes |
 | [`market-research-report`](./market-research-report/) | analysis / research | Produces a grounded, source-backed market research report for the app | Yes (v1 → v3) |
 | [`product-overview-section`](./product-overview-section/) | content | Generates a structured Product Overview using a clarifying-question loop | Yes (v1 → v2) |
 
@@ -20,6 +27,14 @@ Prompts where the v1 → final journey shows the most learning:
 ### [`market-research-report`](./market-research-report/)
 
 This started as a one-line "research the market" request. v1 gave breadth but no grounding. In v2 I named the real competitors and pointed it at their websites to scrape — and learned that *naming* a tool doesn't mean it runs (one scraping tool was never actually called, which I only caught by checking). v3 pinned a fixed 10-section structure and fed in my own source documents, turning a freeform essay into a consistent, grounded report I could actually make decisions from.
+
+### [`buddhist-pdf-integration`](./buddhist-pdf-integration/)
+
+The first attempt quietly dropped paragraphs and reworded a Buddhist essay I'd asked to be reproduced exactly. The lesson — *faithful means faithful* — is the whole point of this folder: when wording matters, you insist on the complete text and check it against the source rather than trusting a tidy-looking summary.
+
+### [`thai-alphabet-exercises`](./thai-alphabet-exercises/)
+
+The ordering exercise went from "all 44 letters dumped on screen with a Show Answer button" to a progressive, no-cheat 5-level system with romanization on every card. v1 used the wrong alphabet order and let you cheat; the final version makes the learner actually work for it.
 
 ## Skills demonstrated
 
