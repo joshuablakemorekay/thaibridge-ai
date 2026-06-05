@@ -4,6 +4,32 @@ This is the honest record of building my **first web app** — a Thai language a
 
 ---
 
+## 5 June 2026 — Restructuring the frontend: site outline + shared wireframe (Goal #1)
+
+**Type:** Milestone (in progress)
+
+**TL;DR:** I reorganised the frontend in six small phases on the `rebuild-experiment` branch — but a visual check at the end showed the pages looking "all over the place," so this is a mid-fix checkpoint, not a finished job.
+
+**What I built or did**
+Moved the shared CSS and JS out of `base.html` into a new `static/` folder; added an optional wireframe layout (sidebar / main / right column), piloted on the Learn page; realigned the nav to a clean site outline; and added honest About, Contact and Privacy pages plus a "coming soon" login placeholder.
+
+**Why I did it this way**
+I followed the method from my web-design book — content-driven outline first, then a shared wireframe — and worked in tiny phases so each change was easy to check and to undo.
+
+**How We Did It**
+Tagged a restore point → extracted CSS → extracted JS → added empty wireframe blocks → filled them on one pilot page → realigned the nav → added the footer pages. After every phase I ran the app and the 32 tests, and committed each phase on its own.
+
+**What this means for the app**
+The code is much tidier and the structure now matches a real site map — but the layout still needs fixing before it's an improvement a user would actually feel.
+
+**What I learned**
+Passing tests and "200 OK" prove a page *loads*, not that it *looks right*. I only caught the mess by opening it in a browser — a reminder to trust my own eyes, not just green ticks.
+
+**References / Conversations**
+This Claude Code session; the full plan is saved as "Goal #1." Next step: diagnose the visual issue (likely the cramped Learn wireframe) or revert to the `pre-goal1` tag.
+
+---
+
 ## 1 June 2026 — Archiving the verbatim build prompts as a tested library
 
 **Type:** Milestone / Decision
