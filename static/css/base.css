@@ -1141,3 +1141,49 @@
             border: none !important;
             outline: none !important;
         }
+
+/* ============================================
+   WIREFRAME LAYOUT (sidebar | main | right column)
+   The .layout wrapper is a plain block by default, so a page that provides
+   no sidebar/right column keeps <main>'s original centered max-width and
+   looks unchanged. It only becomes a multi-column grid when a page fills
+   the optional .layout-sidebar / .layout-rightcol regions.
+   ============================================ */
+.layout:has(.layout-sidebar):has(.layout-rightcol) {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr) 300px;
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: start;
+}
+.layout:has(.layout-sidebar):not(:has(.layout-rightcol)) {
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+.layout:not(:has(.layout-sidebar)):has(.layout-rightcol) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: start;
+}
+/* Inside the grid, main fills its cell instead of self-centering at 1200px */
+.layout:has(.layout-sidebar) > main,
+.layout:has(.layout-rightcol) > main {
+    max-width: none;
+    margin: 0;
+    width: auto;
+}
+/* Stack to a single column on narrow screens */
+@media (max-width: 900px) {
+    .layout:has(.layout-sidebar),
+    .layout:has(.layout-rightcol) {
+        grid-template-columns: 1fr;
+    }
+}

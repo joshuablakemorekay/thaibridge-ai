@@ -107,9 +107,13 @@
         </div>
     </nav>
     
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    <div class="layout">
+        {% block sidebar %}{% endblock %}
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        {% block rightcol %}{% endblock %}
+    </div>
     
     <footer>
         <p>🪷 Thai Language & Culture Learning App v2.0</p>
