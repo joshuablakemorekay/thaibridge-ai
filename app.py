@@ -4871,7 +4871,11 @@ def dictionary():
 
 @app.route('/premium')
 def premium():
-    return render_template('premium.html')
+    init_user_progress()
+    current_tier = session['user_progress'].get('subscription_tier', 'free')
+    return render_template('premium.html',
+                           tiers=SUBSCRIPTION_TIERS,
+                           current_tier=current_tier)
 
 
 @app.route('/about')
