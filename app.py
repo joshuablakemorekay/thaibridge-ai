@@ -9,6 +9,14 @@ Version 3.0 - AI Agent Edition
 """
 
 import os
+import sys
+
+# On Windows the default console encoding (cp1252) can't print the emoji/Thai
+# characters in our startup messages, which crashes the app on launch. Force
+# UTF-8 output so those print() calls work everywhere.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+
 from dotenv import load_dotenv
 load_dotenv()  # Load .env file before anything else reads environment variables
 # Set API key BEFORE any other imports
