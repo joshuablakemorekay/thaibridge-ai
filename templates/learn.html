@@ -2,6 +2,42 @@
 
 {% block title %}Learn Thai Vocabulary{% endblock %}
 
+{% block sidebar %}
+<aside class="layout-sidebar">
+    <h3 class="sidebar-title">📚 Learn</h3>
+    <nav class="sidebar-nav">
+        <a href="/alphabet">🔤 Alphabet</a>
+        <a href="/vowels_syllables">🗣️ Vowels &amp; Syllables</a>
+        <a href="/paiboon">🔤 Paiboon</a>
+        <a href="/grammar">✏️ Grammar</a>
+        <a href="/lessons">📝 Lessons</a>
+        <a href="/learn" class="active">📖 Vocabulary</a>
+        <a href="/tour-guide">🗺️ Practical Thai</a>
+    </nav>
+</aside>
+{% endblock %}
+
+{% block rightcol %}
+<aside class="layout-rightcol">
+    <div class="card">
+        <h4 style="margin-top:0;">🔍 Search the dictionary</h4>
+        <form action="/dictionary" method="get">
+            <input type="search" name="q" placeholder="Type a Thai or English word…"
+                   style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid #ccc;">
+        </form>
+    </div>
+    <div class="card" style="text-align:center;">
+        <div class="rightcol-visual">🪷</div>
+        <p style="margin:0; color:#666;">Learn Thai through culture &amp; Dharma</p>
+    </div>
+    <div class="card">
+        <h4 style="margin-top:0;">🏆 Your progress</h4>
+        <p style="margin:0 0 0.75rem; color:#666;">Track your level, XP and achievements.</p>
+        <a href="/progress" class="btn">View dashboard</a>
+    </div>
+</aside>
+{% endblock %}
+
 {% block content %}
 <h1>
     📚 Vocabulary Categories

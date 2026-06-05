@@ -1187,3 +1187,40 @@
         grid-template-columns: 1fr;
     }
 }
+/* ============================================
+   WIREFRAME COMPONENTS — sidebar nav + right column
+   Shared, reusable pieces used by any page that fills
+   {% block sidebar %} / {% block rightcol %}.
+   ============================================ */
+.layout-sidebar {
+    position: sticky;
+    top: 90px;
+    align-self: start;
+}
+.sidebar-title {
+    color: var(--royal-purple);
+    margin: 0 0 0.75rem;
+    font-size: 1.1rem;
+}
+.sidebar-nav { display: flex; flex-direction: column; gap: 0.25rem; }
+.sidebar-nav a {
+    display: block;
+    padding: 0.6rem 0.9rem;
+    border-radius: 8px;
+    color: var(--deep-purple);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+}
+.sidebar-nav a:hover { background: rgba(74, 26, 107, 0.07); }
+.sidebar-nav a.active {
+    background: rgba(212, 175, 55, 0.15);
+    border-left-color: var(--royal-gold);
+    font-weight: 600;
+}
+.layout-rightcol { display: flex; flex-direction: column; gap: 1rem; }
+.layout-rightcol .card { margin: 0; }
+.rightcol-visual { font-size: 3.5rem; line-height: 1; padding: 0.5rem 0 1rem; }
+@media (max-width: 900px) {
+    .layout-sidebar { position: static; }
+}
