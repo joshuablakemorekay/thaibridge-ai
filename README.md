@@ -1,4 +1,4 @@
-# Thai Language & Culture Learning App
+# ThaiBridge AI
 
 A web app that teaches Thai through the lens of Thai culture and Buddhism — built as my first web app and a portfolio project.
 
@@ -11,12 +11,14 @@ A web app that teaches Thai through the lens of Thai culture and Buddhism — bu
 - Has an **AI tutor** with several modes — conversation, grammar help, quizzes, culture, and Buddhism — powered by the Claude API (a way for the app to talk to the AI).
 - Keeps learners motivated with **points, levels, and achievements**, plus a meditation timer.
 - Supports **user accounts** (sign-up with a saved profile) and a developer mode for testing.
+- Offers **subscription tiers** with **Stripe & PayPal** checkout (test/sandbox mode — no real money moves).
 
 ## Built With
 
 - **Python (Flask)** — runs the web server and the pages
 - **SQLite** — a simple file-based database for user accounts
 - **Anthropic Claude API** — powers the AI tutor
+- **Stripe & PayPal** (via `httpx`) — handle subscription payments in test mode
 - **HTML, CSS, JavaScript** — the pages and the interactive bits (quizzes, flashcards)
 - **pytest** — runs the automatic tests
 
@@ -53,6 +55,7 @@ You'll need **Python 3.10+** and a free [Anthropic API key](https://console.anth
 
 The build story, newest first. Full version with lessons learned in [`JOURNAL.md`](./JOURNAL.md).
 
+- **5 Jun 2026 — Wireframe layout, rename & payments.** I finished a proper wireframe layout system — four page "shapes" built from a content-first outline — and rolled the 3-column version across the learning pages using reusable partials. I also fixed a database-startup crash, added a Help page, settled the app's display name as **ThaiBridge AI**, and shipped **Stripe + PayPal** subscriptions. **Lesson:** a wireframe is a *planning* tool, not a feature — and "tests pass / 200 OK" proves a page *loads*, not that it *looks right* (eight "broken" pages were actually working paywalls).
 - **Mar–Apr 2026 — Market research.** Researched competitors, UK audience size, and pricing. Learned to ground research in real sources and to **check which tools actually ran**. (The prompts behind this are documented in [`prompts/`](./prompts/).)
 - **Feb 2026 — Version control + workflow.** Set up Git and GitHub, then used Claude Code to add user registration, fix a form-validation bug, add **32 tests**, and fix code-review issues. Learned that version control let me take risks safely — and that an AI's changes still need reviewing.
 - **Feb 2026 — Buddhist writings.** Added Pra Kru Bob's essays as pages. Learned that **faithful means faithful** — I had to check the text against the source, not trust a summary.
@@ -63,6 +66,6 @@ The build story, newest first. Full version with lessons learned in [`JOURNAL.md
 
 ## What's Next
 
-- **Fix the romanization display properly** — the current approach is a workaround, not a real fix.
-- **Decide on accounts** — right now the app works without login (a free, open version); enforcing sign-in is a later step.
 - **Deploy it** — get it online so other people can try it, rather than running only on my machine.
+- **Finish the accounts system** — real login/logout (sign-in isn't wired up yet).
+- **Switch payments to live keys** — Stripe & PayPal currently run in test/sandbox mode.

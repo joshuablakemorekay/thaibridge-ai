@@ -4,6 +4,35 @@ This is the honest record of building my **first web app** — a Thai language a
 
 ---
 
+## 5 June 2026 — Finishing the wireframe layout, a clean rename, and shipping payments
+
+**Type:** Milestone
+
+**TL;DR:**
+- Finished the Goal #1 frontend work: a proper **wireframe layout system** and a Help page.
+- Settled the app's display name as **ThaiBridge AI** across the whole UI (the GitHub repo/handle stays `thaibridge-ai`).
+- Bundled the now-complete **Stripe + PayPal** subscription payments.
+
+**What I built or did**
+I traced a startup crash ("unable to open database file") to a missing `instance/` folder and fixed it in one line, then cleaned up four broken CSS rules left from an earlier file move — the real cause of the "all over the place" look. I wrote a **content-first site outline** (the method from my web-design book: plan what each page says before styling it), which set out four page **wireframes** — *Landing*, *3-column content*, *Simple centered*, and *Full-width tool*. I then built the **3-column wireframe** (menu · content · extras) and rolled it out to the Learn, Culture and Buddhism pages using reusable partials (shared page-pieces), made tables fill-or-scroll at any zoom, added an `/instructions` Help page that explains the wireframe system to users, named the app **ThaiBridge AI** consistently across the UI, and shipped the finished Stripe + PayPal checkout.
+
+**Why I did it this way**
+I followed the **content-first outline → wireframe** method from my web-design book: decide what each page *does*, then give it the layout shape that fits — rather than forcing one layout on every page. Reusable partials mean editing one file, not fourteen. Using **ThaiBridge AI** as the display name while the GitHub repo/handle stays `thaibridge-ai` mirrors my own display-name-vs-handle approach (Joshua Kay / joshuablakemorekay).
+
+**How We Did It**
+Reproduced and fixed the database crash → balanced the broken CSS → wrote the content-first outline and its four wireframes → built shared sidebar/right-column partials and applied the 3-column wireframe page by page → fixed table overflow with a scroll wrapper → wrote the Help page → renamed across ~20 files → installed the missing payment library → committed and pushed.
+
+**What this means for the app**
+The learning pages now share one consistent, responsive wireframe, the name is consistent, and paid subscriptions work.
+
+**What I learned**
+A wireframe is a *planning* tool, not a feature — and each page wants the shape that fits its job. I also re-learned that a green tick and "200 OK" prove a page *loads*, not that it *looks right* (eight "broken" pages turned out to be working paywalls). And on this machine I must run the app with the project's **virtual-environment Python**, not the global one, or it crashes on a missing library.
+
+**References / Conversations**
+This Claude Code session; commit `ac6472a`.
+
+---
+
 ## 5 June 2026 — Restructuring the frontend: site outline + shared wireframe (Goal #1)
 
 **Type:** Milestone (in progress)
