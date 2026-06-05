@@ -26,8 +26,8 @@ You'll need **Python 3.10+** and a free [Anthropic API key](https://console.anth
 
 1. **Get the code** (clone the repo — copy the project folder to your machine):
    ```bash
-   git clone https://github.com/joshuablakemorekay/Thai-App-NEW.git
-   cd Thai-App-NEW
+   git clone https://github.com/joshuablakemorekay/thaibridge-ai.git
+   cd thaibridge-ai
    ```
 2. **Install the dependencies** (the external tools the project relies on):
    ```bash
@@ -46,7 +46,7 @@ You'll need **Python 3.10+** and a free [Anthropic API key](https://console.anth
    Then open **http://localhost:5000** in your browser. The database is created automatically the first time.
 5. **Run the tests** (optional):
    ```bash
-   python -m pytest test_calculator.py -v
+   python -m pytest tests/ -v
    ```
 
 ## My Journey
