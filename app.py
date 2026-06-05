@@ -5219,7 +5219,7 @@ def subscribe_stripe(tier):
                     'unit_amount': int(round(tier_info['price'] * 100)),  # cents
                     'recurring': {'interval': 'month'},
                     'product_data': {
-                        'name': f"thaibridge-ai — {tier_info['name']}",
+                        'name': f"ThaiBridge AI — {tier_info['name']}",
                     },
                 },
                 'quantity': 1,
@@ -5266,11 +5266,11 @@ def subscribe_paypal(tier):
                         "currency_code": "USD",
                         "value": f"{tier_info['price']:.2f}",
                     },
-                    "description": f"thaibridge-ai — {tier_info['name']} (monthly)",
+                    "description": f"ThaiBridge AI — {tier_info['name']} (monthly)",
                     "custom_id": tier,
                 }],
                 "application_context": {
-                    "brand_name": "thaibridge-ai",
+                    "brand_name": "ThaiBridge AI",
                     "user_action": "PAY_NOW",
                     "shipping_preference": "NO_SHIPPING",
                     "return_url": f"{base_url}/paypal/success",
@@ -5657,9 +5657,9 @@ def ai_status():
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("🪷 thaibridge-ai v3.0 GAMIFIED")
+    print("🪷 ThaiBridge AI v3.0 GAMIFIED")
     print("=" * 60)
-    print("🪷 thaibridge-ai v3.0 + AI")
+    print("🪷 ThaiBridge AI v3.0 + AI")
     print("=" * 60)
     print("Features:")
     print("  • Thai Alphabet (44 consonants, 32 vowels)")
