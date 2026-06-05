@@ -1,78 +1,169 @@
 {% extends "base.html" %}
 
-{% block title %}Premium AI Learning{% endblock %}
+{% block title %}Plans & Pricing - ThaiBridge AI{% endblock %}
 
 {% block content %}
-<h1>
-    🌟 Premium AI Learning
-    <span class="thai">ระบบเรียนรู้ AI พรีเมียม</span>
+<h1 style="text-align:center;">
+    ⭐ Plans &amp; Pricing
+    <span class="thai">แผนและราคา</span>
 </h1>
 
-<div class="card" style="text-align: center; background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); border-left-color: var(--gold);">
-    <div style="font-size: 4rem; margin-bottom: 1rem;">🚀</div>
-    <h2 style="color: var(--royal-purple); margin: 0;">Coming Soon</h2>
-    <p style="font-size: 1.2rem; color: #666; margin-top: 0.5rem;">
-        Advanced AI-powered personalized learning
-    </p>
-</div>
+<p style="text-align:center; color:#666; max-width:640px; margin:0 auto 2.5rem;">
+    Start free and upgrade whenever you're ready. Paid plans unlock more content,
+    the AI tools and a points multiplier.
+</p>
 
-<div class="card">
-    <h2 style="margin-top: 0;">🎯 Planned Features</h2>
-    
-    <div class="card-grid">
-        <div style="padding: 1rem; background: #f5f5f5; border-radius: 10px;">
-            <h4>🤖 AI Conversation Partner</h4>
-            <p>Practice conversations with an AI that adapts to your level and provides instant feedback.</p>
+<div class="pricing-grid">
+    {% for key, tier in tiers.items() %}
+    <div class="price-card{% if key == current_tier %} is-current{% endif %}{% if key == 'pro' %} is-featured{% endif %}">
+        {% if key == 'pro' %}<span class="price-flag">Best value</span>{% endif %}
+
+        <h3 class="price-name">{{ tier.name }}</h3>
+
+        <div class="price-amount">
+            {% if tier.price == 0 %}
+                <span class="price-big">Free</span>
+            {% else %}
+                <span class="price-big">${{ tier.price }}</span><span class="price-per">/month</span>
+            {% endif %}
         </div>
-        
-        <div style="padding: 1rem; background: #f5f5f5; border-radius: 10px;">
-            <h4>📊 Personalized Learning Path</h4>
-            <p>IEP-style individualized curriculum based on your goals, progress, and learning style.</p>
-        </div>
-        
-        <div style="padding: 1rem; background: #f5f5f5; border-radius: 10px;">
-            <h4>🎤 Pronunciation Analysis</h4>
-            <p>AI-powered tone and pronunciation feedback to perfect your Thai speaking.</p>
-        </div>
-        
-        <div style="padding: 1rem; background: #f5f5f5; border-radius: 10px;">
-            <h4>📝 Writing Practice</h4>
-            <p>Learn Thai script with guided practice and instant correction.</p>
-        </div>
-        
-        <div style="padding: 1rem; background: #f5f5f5; border-radius: 10px;">
-            <h4>🎧 Listening Exercises</h4>
-            <p>Native speaker audio with comprehension quizzes and speed control.</p>
-        </div>
-        
-        <div style="padding: 1rem; background: #f5f5f5; border-radius: 10px;">
-            <h4>📚 Expanded Content</h4>
-            <p>Thousands of additional vocabulary words, phrases, and cultural lessons.</p>
-        </div>
+
+        <ul class="price-features">
+            {% for feature in tier.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+
+        {% if key == current_tier %}
+            <span class="btn price-btn price-btn-current">✓ Your current plan</span>
+        {% elif tier.price == 0 %}
+            <a href="/learn" class="btn price-btn">Start free</a>
+        {% else %}
+            <a href="/subscribe/{{ key }}" class="btn price-btn price-btn-buy">Subscribe</a>
+        {% endif %}
     </div>
+    {% endfor %}
 </div>
 
-<div class="card" style="border-left-color: var(--bodhi-green);">
-    <h2 style="margin-top: 0;">🌱 For Now, Enjoy Free Features</h2>
-    <p style="margin-bottom: 1rem;">
-        All current features are completely free. Start learning today:
-    </p>
-    <p>
-        <a href="/learn" class="btn" style="margin: 0.25rem;">Vocabulary</a>
-        <a href="/lessons" class="btn" style="margin: 0.25rem;">Lessons</a>
-        <a href="/grammar" class="btn" style="margin: 0.25rem;">Grammar</a>
-        <a href="/meditation" class="btn btn-saffron" style="margin: 0.25rem;">Meditation</a>
-        <a href="/theravada" class="btn btn-saffron" style="margin: 0.25rem;">Dhamma</a>
-    </p>
-</div>
+<p style="text-align:center; color:#888; font-size:0.9rem; margin-top:2rem;">
+    🔒 Payments run in <strong>test / sandbox mode</strong> via Stripe &amp; PayPal —
+    no real money is charged. You'll choose your payment method after picking a plan.
+</p>
 
-<div class="card" style="text-align: center; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);">
-    <h2 style="margin-top: 0; color: #1976D2;">📬 Stay Updated</h2>
-    <p>
-        Premium features are in development. Check back soon for updates!
-    </p>
-    <p style="margin-top: 1rem; color: #666;">
-        This project is designed to help foreign monks and expats learn Thai effectively.
-    </p>
-</div>
+<style>
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+        align-items: stretch;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .price-card {
+        background: var(--silk-ivory, #fffdf7);
+        border: 2px solid #eadfca;
+        border-radius: 18px;
+        padding: 2rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .price-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    /* The highlighted (best value) plan */
+    .price-card.is-featured {
+        border-color: var(--royal-gold);
+        box-shadow: 0 8px 28px rgba(212, 175, 55, 0.3);
+    }
+
+    /* The plan the user is already on */
+    .price-card.is-current {
+        border-color: var(--bodhi-green, #6b8e23);
+        background: rgba(107, 142, 35, 0.06);
+    }
+
+    .price-flag {
+        position: absolute;
+        top: -12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--royal-gold);
+        color: var(--deep-purple);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 0.25rem 0.9rem;
+        border-radius: 12px;
+        white-space: nowrap;
+    }
+
+    .price-name {
+        color: var(--royal-purple);
+        margin: 0.25rem 0 0.75rem;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .price-amount {
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+
+    .price-big {
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: var(--deep-purple);
+    }
+
+    .price-per {
+        color: #888;
+        font-size: 1rem;
+    }
+
+    .price-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1.5rem;
+        flex-grow: 1;
+    }
+
+    .price-features li {
+        padding: 0.45rem 0;
+        border-bottom: 1px solid rgba(0,0,0,0.06);
+        color: #444;
+        font-size: 0.95rem;
+    }
+
+    .price-features li:last-child { border-bottom: none; }
+
+    .price-btn {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Make the buy button stand out */
+    .price-btn-buy {
+        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold, #c9a227) 100%);
+        color: var(--deep-purple);
+        font-weight: 700;
+    }
+
+    /* The "current plan" pill is informational, not a link */
+    .price-btn-current {
+        background: var(--bodhi-green, #6b8e23);
+        color: #fff;
+        cursor: default;
+    }
+
+    @media (max-width: 600px) {
+        .pricing-grid { grid-template-columns: 1fr; }
+    }
+</style>
 {% endblock %}
