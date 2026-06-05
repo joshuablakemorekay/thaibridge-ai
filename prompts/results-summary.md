@@ -1,6 +1,6 @@
 # Eval Results Summary
 
-_Generated: 2026-06-01 11:21 UTC_
+_Generated: 2026-06-05 23:11 UTC_
 
 | Prompt | Cases | Avg Score | Status |
 |---|---|---|---|
@@ -13,5 +13,6 @@ _Generated: 2026-06-01 11:21 UTC_
 | `product-overview-section` | 1 | 100.0% | ✅ pass |
 | `romanization-system` | 1 | 100.0% | ✅ pass |
 | `thai-alphabet-exercises` | 1 | 100.0% | ✅ pass |
+| `wireframe-layout-system` | 1 | 100.0% | ✅ pass |
 
 **Overall:** ✅ all prompts passing

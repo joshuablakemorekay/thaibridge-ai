@@ -11,6 +11,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | Prompt | Category | What it does | Iterated? |
 |---|---|---|---|
 | [`frontend-build`](./frontend-build/) | code-generation | Builds the app's templates, Thai-themed CSS, and interactive JS in stages | Yes (v1 → v3) |
+| [`wireframe-layout-system`](./wireframe-layout-system/) | code-generation | Content-first layout system — site outline, per-page layout templates, reusable partials, responsive tables | Yes (v1 → v3) |
 | [`gamification-system`](./gamification-system/) | code-generation | Adds XP/levels, locked sections, developer mode, and subscription tiers | Yes (v1 → v3) |
 | [`thai-alphabet-exercises`](./thai-alphabet-exercises/) | code-generation | Adds the Thai alphabet module and a progressive, no-cheat ordering exercise | Yes (v1 → v3) |
 | [`romanization-system`](./romanization-system/) | language design | The custom Paiboon+ vowel system, beginner mode, and consistent rendering | Yes (v1 → v3) |
@@ -35,6 +36,10 @@ The first attempt quietly dropped paragraphs and reworded a Buddhist essay I'd a
 ### [`thai-alphabet-exercises`](./thai-alphabet-exercises/)
 
 The ordering exercise went from "all 44 letters dumped on screen with a Show Answer button" to a progressive, no-cheat 5-level system with romanization on every card. v1 used the wrong alphabet order and let you cheat; the final version makes the learner actually work for it.
+
+### [`wireframe-layout-system`](./wireframe-layout-system/)
+
+This started as "should I put the wireframe on *every* page?" and became a small **design system**. The key shift was realising a **wireframe is a planning tool, not a feature** — so instead of forcing one layout everywhere, I wrote a content-first outline and gave each page the shape that fits its job (Landing, 3-column content, Simple centered, Full-width tool), built from reusable partials. It also taught me that "tests pass / 200 OK" proves a page *loads*, not that it *looks right*.
 
 ## Skills demonstrated
 
