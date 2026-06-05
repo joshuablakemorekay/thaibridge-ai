@@ -26,7 +26,7 @@ You'll need **Python 3.10+** and a free [Anthropic API key](https://console.anth
 
 1. **Get the code** (clone the repo — copy the project folder to your machine):
    ```bash
-   git clone https://github.com/MungManBaoIsan/Thai-App-NEW.git
+   git clone https://github.com/joshuablakemorekay/Thai-App-NEW.git
    cd Thai-App-NEW
    ```
 2. **Install the dependencies** (the external tools the project relies on):
