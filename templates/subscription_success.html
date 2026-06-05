@@ -1,8 +1,28 @@
 {% extends "base.html" %}
 
-{% block title %}Subscription Activated - Thai Learning{% endblock %}
+{% block title %}Subscription Activated - thaibridge-ai{% endblock %}
 
 {% block content %}
+{% if stripe_unconfigured or paypal_unconfigured %}
+<div class="container">
+    <div class="success-container">
+        <div class="success-icon">🔧</div>
+        <h1>Payments not set up yet</h1>
+        <p style="font-size:1.1rem; color:#555;">
+            To take a (pretend) payment for <strong>{{ tier_info.name }}</strong>, this demo needs
+            {% if stripe_unconfigured %}
+                Stripe <strong>TEST</strong> keys (<code>STRIPE_SECRET_KEY</code>)
+            {% else %}
+                PayPal <strong>sandbox</strong> keys (<code>PAYPAL_CLIENT_ID</code> + <code>PAYPAL_CLIENT_SECRET</code>)
+            {% endif %}
+            in the <code>.env</code> file. Add them and try again.
+        </p>
+        <div class="action-buttons">
+            <a href="/progress" class="btn btn-primary">Back to plans</a>
+        </div>
+    </div>
+</div>
+{% else %}
 <div class="container">
     <div class="success-container">
         <div class="success-icon">🎉</div>
@@ -34,7 +54,7 @@
             <h3>📅 Subscription Details:</h3>
             <p><strong>Plan:</strong> {{ tier_info.name }}</p>
             <p><strong>Price:</strong> ${{ tier_info.price }}/month</p>
-            <p><strong>Next Billing:</strong> {{ (30 days from now) }}</p>
+            {% if expires %}<p><strong>Next Billing:</strong> {{ expires }}</p>{% endif %}
             <p><strong>Status:</strong> <span class="active-badge">Active</span></p>
         </div>
         {% endif %}
@@ -50,10 +70,11 @@
         </div>
         
         <div class="info-note">
-            <p><strong>Note:</strong> This is a demo subscription system. In production, this would be integrated with Stripe or PayPal for real payments.</p>
+            <p><strong>Test mode:</strong> this used <strong>Stripe Checkout in sandbox mode</strong> — no real money changed hands. Swap in live keys to take real payments.</p>
         </div>
     </div>
 </div>
+{% endif %}
 
 <style>
     .success-container {

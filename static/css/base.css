@@ -92,15 +92,7 @@
             line-height: 2.8 !important;
             letter-spacing: 0.2em;
         }
-            background: 
-                linear-gradient(135deg, rgba(255, 248, 220, 0.9) 0%, rgba(245, 230, 211, 0.9) 100%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="bamboo" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23228B22" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23bamboo)"/></svg>');
-            background-attachment: fixed;
-            min-height: 100vh;
-            color: var(--dark-text);
-            position: relative;
-        }
-        
+
         /* Tropical Nature Background Elements */
         body::before {
             content: '';
@@ -270,10 +262,6 @@
             text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
         }
 
-            transform: translateZ(0);
-            will-change: transform, background-color;
-        }
-        
         .dropdown-toggle:hover {
             background: linear-gradient(135deg, var(--royal-gold) 0%, var(--antique-gold) 100%);
             color: var(--deep-purple);
@@ -677,8 +665,6 @@
             border-bottom: none;
         }
 
-        }
-        
         td {
             padding: 0.75rem 1rem;
             border-bottom: 1px solid #eee;
@@ -773,9 +759,6 @@
                 inset 0 1px 0 rgba(255, 255, 255, 0.4);
         }
 
-            color: white;
-        }
-        
         /* Tags/Badges */
         .tag {
             display: inline-block;
@@ -1151,40 +1134,67 @@
    ============================================ */
 .layout:has(.layout-sidebar):has(.layout-rightcol) {
     display: grid;
-    grid-template-columns: 240px minmax(0, 1fr) 300px;
-    gap: 2rem;
-    max-width: 1500px;
+    grid-template-columns: 210px minmax(0, 1fr) 280px;
+    gap: 1.5rem;
+    max-width: 1600px;
     margin: 0 auto;
     align-items: start;
 }
 .layout:has(.layout-sidebar):not(:has(.layout-rightcol)) {
     display: grid;
-    grid-template-columns: 240px minmax(0, 1fr);
-    gap: 2rem;
-    max-width: 1400px;
+    grid-template-columns: 210px minmax(0, 1fr);
+    gap: 1.5rem;
+    max-width: 1500px;
     margin: 0 auto;
     align-items: start;
 }
 .layout:not(:has(.layout-sidebar)):has(.layout-rightcol) {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) 300px;
-    gap: 2rem;
-    max-width: 1400px;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    gap: 1.5rem;
+    max-width: 1500px;
     margin: 0 auto;
     align-items: start;
 }
-/* Inside the grid, main fills its cell instead of self-centering at 1200px */
+/* Inside the grid, main fills its cell instead of self-centering at 1200px.
+   min-width:0 lets the column shrink so wide children scroll/wrap rather than
+   forcing the whole layout wider. */
 .layout:has(.layout-sidebar) > main,
 .layout:has(.layout-rightcol) > main {
     max-width: none;
     margin: 0;
     width: auto;
+    min-width: 0;
+}
+/* Wide tables sit in a horizontal-scroll wrapper (added by base.js): the table
+   keeps width:100% so it FILLS the column when there's room and adjusts as you
+   zoom, and the wrapper scrolls sideways only when the content is genuinely
+   wider than the column — no clipping, no dead space. */
+.table-scroll { overflow-x: auto; }
+/* Medium screens (laptops): three columns get cramped. Drop the right column
+   to a full-width strip below main — its cards flow in a row — so the main
+   reading area gets the width it needs. */
+@media (max-width: 1200px) {
+    .layout:has(.layout-sidebar):has(.layout-rightcol) {
+        grid-template-columns: 210px minmax(0, 1fr);
+    }
+    .layout:has(.layout-sidebar):has(.layout-rightcol) > .layout-rightcol {
+        grid-column: 1 / -1;
+    }
+    .layout:has(.layout-rightcol) > .layout-rightcol {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .layout-rightcol .card { flex: 1 1 220px; }
 }
 /* Stack to a single column on narrow screens */
 @media (max-width: 900px) {
     .layout:has(.layout-sidebar),
     .layout:has(.layout-rightcol) {
         grid-template-columns: 1fr;
+    }
+    .layout:has(.layout-sidebar):has(.layout-rightcol) > .layout-rightcol {
+        grid-column: auto;
     }
 }
 /* ============================================

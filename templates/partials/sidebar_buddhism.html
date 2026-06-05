@@ -1,0 +1,11 @@
+{# Shared "Buddhism" section sidebar.
+   The current page is highlighted automatically from the URL (request.path). #}
+<aside class="layout-sidebar">
+    <h3 class="sidebar-title">☸️ Buddhism</h3>
+    <nav class="sidebar-nav">
+        <a href="/theravada"{% if request.path == '/theravada' %} class="active"{% endif %}>☸️ Theravada Dharma</a>
+        <a href="/bob-buddhism-overview"{% if request.path == '/bob-buddhism-overview' %} class="active"{% endif %}>📿 Pra Kru Bob: Overview</a>
+        <a href="/bob-fear-article"{% if request.path == '/bob-fear-article' %} class="active"{% endif %}>📿 Pra Kru Bob: On Fear</a>
+        <a href="/meditation"{% if request.path == '/meditation' %} class="active"{% endif %}>🧘 Meditation</a>
+    </nav>
+</aside>

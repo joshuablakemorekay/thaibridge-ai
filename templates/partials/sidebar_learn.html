@@ -1,0 +1,19 @@
+{# Shared "Learn" section sidebar.
+   The current page is highlighted automatically from the URL (request.path),
+   so every Learn page can include this without passing any variables. #}
+<aside class="layout-sidebar">
+    <h3 class="sidebar-title">📚 Learn</h3>
+    <nav class="sidebar-nav">
+        <a href="/alphabet"{% if request.path == '/alphabet' %} class="active"{% endif %}>🔤 Alphabet</a>
+        <a href="/vowels_syllables"{% if request.path == '/vowels_syllables' %} class="active"{% endif %}>🗣️ Vowels &amp; Syllables</a>
+        <a href="/paiboon"{% if request.path == '/paiboon' %} class="active"{% endif %}>🔤 Paiboon</a>
+        <a href="/grammar"{% if request.path == '/grammar' %} class="active"{% endif %}>✏️ Grammar</a>
+        <a href="/formality"{% if request.path == '/formality' %} class="active"{% endif %}>🎭 Formality</a>
+        <a href="/gender-examples"{% if request.path == '/gender-examples' %} class="active"{% endif %}>👤 Gender Guide</a>
+        <a href="/sentences"{% if request.path == '/sentences' %} class="active"{% endif %}>💬 Sentences</a>
+        <a href="/learn"{% if request.path == '/learn' %} class="active"{% endif %}>📖 Vocabulary</a>
+        <a href="/lessons"{% if request.path == '/lessons' %} class="active"{% endif %}>📝 Lessons</a>
+        <a href="/tour-guide"{% if request.path == '/tour-guide' %} class="active"{% endif %}>🗺️ Tour Guide</a>
+        <a href="/business-thai"{% if request.path == '/business-thai' %} class="active"{% endif %}>💼 Business Thai</a>
+    </nav>
+</aside>
