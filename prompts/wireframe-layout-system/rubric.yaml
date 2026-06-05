@@ -1,0 +1,38 @@
+# Evaluation rubric for: Wireframe Layout System
+
+prompt: wireframe-layout-system
+version: 1
+criteria:
+  - name: writes_site_outline
+    description: Response plans content first — a site outline of pages and their purpose
+    weight: 4
+    pass_condition: '"outline" in output.lower() and "page" in output.lower()'
+
+  - name: defines_multiple_layouts
+    description: Defines several distinct layout templates matched to page purpose (not one for all)
+    weight: 5
+    pass_condition: "len([s for s in ['landing', '3-column', 'three-column', 'centered', 'full-width'] if s in output.lower()]) >= 2"
+
+  - name: uses_reusable_partials
+    description: Implements the shared layout via reusable partials / includes / blocks
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['partial', 'include', 'block', 'component'])"
+
+  - name: keeps_content_responsive
+    description: Keeps wide content responsive (fill-or-scroll / overflow) so nothing is clipped
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['scroll', 'overflow', 'responsive', 'fill', 'zoom'])"
+
+  - name: is_substantial
+    description: Output is a real design answer, not a one-line stub
+    weight: 2
+    pass_condition: "len(output.split()) >= 40"
+
+test_cases:
+  - input:
+      task: "design a content-first layout system for a multi-page web app"
+    expected_traits:
+      - writes a content-first site outline of pages and their purpose
+      - defines layout templates matched to each page's job
+      - uses reusable partials / includes
+      - keeps wide content responsive (fill-or-scroll, no clipping)

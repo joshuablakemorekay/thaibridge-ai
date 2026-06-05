@@ -156,4 +156,23 @@ Each entry follows this format:
 **Reason:** Needed a Product Overview section for the market research report.
 **Impact:** Prompted the model to ask three scoping questions before writing.
 
+---
+
+## wireframe-layout-system
+
+### 2026-06-06 — v3 (reusable distillation)
+**Change:** Distilled the layout work into a reusable prompt — outline → per-page layout templates → reusable partials → responsive roll-out.
+**Reason:** Capture the whole workflow in a form reusable on any multi-page project.
+**Impact:** A documented site outline, three Jinja partials, the 3-column layout across Learn/Culture/Buddhism, and fill-or-scroll tables.
+
+### 2026-06-06 — v2 (content-first)
+**Change:** Switched from "stamp a wireframe on every page" to writing a content-first site outline first.
+**Reason:** A wireframe is a planning tool, not a feature — plan content before styling.
+**Impact:** A deliberate per-page plan instead of one forced layout.
+
+### 2026-06-06 — v1 (all pages)
+**Change:** First instinct — apply the wireframe layout to all pages.
+**Reason:** Wanted a consistent look.
+**Impact:** Would have made simple info and full-width pages look wrong; corrected by matching the layout to each page's job.
+
 <!-- Add more entries above as the library grows. -->

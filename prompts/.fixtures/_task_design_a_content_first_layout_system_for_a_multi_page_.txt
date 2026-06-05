@@ -1,0 +1,9 @@
+A content-first layout system, built in four steps.
+
+1. Write a site outline first: list every page and what each one is for (its job and key content) before any styling.
+
+2. Define a small set of layout templates, each matched to a page's job: a Landing page (the front door), a 3-column content layout (reference pages with a sidebar menu and a right-hand extras column), a Simple centered layout (short info pages and forms), and a Full-width tool layout (interactive apps such as a chat or dictionary). Don't force one layout on every page.
+
+3. Implement the shared layout with reusable partials — Jinja includes and named blocks — so each page opts in by filling the sidebar and right-column blocks, with the current page highlighted automatically.
+
+4. Keep it responsive: wide content such as tables should fill the column when there's room and scroll sideways (horizontal overflow) when it doesn't, at any zoom level, so nothing is ever clipped.
