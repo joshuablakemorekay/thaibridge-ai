@@ -1,6 +1,6 @@
 # Prompt Library
 
-[![Prompt Lint & Eval](https://github.com/MungManBaoIsan/Thai-App-NEW/actions/workflows/prompt-eval.yml/badge.svg)](https://github.com/MungManBaoIsan/Thai-App-NEW/actions/workflows/prompt-eval.yml)
+[![Prompt Lint & Eval](https://github.com/joshuablakemorekay/Thai-App-NEW/actions/workflows/prompt-eval.yml/badge.svg)](https://github.com/joshuablakemorekay/Thai-App-NEW/actions/workflows/prompt-eval.yml)
 
 This folder documents the prompts I used while building the Thai Language & Culture Learning App. It exists as **portfolio evidence** of prompt engineering, evaluation, and iteration — not as runtime configuration (settings the app needs to run).
 
