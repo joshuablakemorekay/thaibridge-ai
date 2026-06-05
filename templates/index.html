@@ -8,14 +8,13 @@
     <div class="hero-section">
         <div class="hero-content">
             <h1 class="main-title">
-                <span class="thai-title">ภาษาไทยและวัฒนธรรม</span>
-                <span class="romanized-title">paa-săa tai láe wát-tá-ná-tam</span>
-                <span class="english-title">Thai Language & Culture</span>
+                <span class="brand-title">🪷 ThaiBridge AI</span>
+                <span class="brand-tagline">Thai language &amp; culture · ภาษาไทยและวัฒนธรรม</span>
             </h1>
-            <p class="hero-subtitle">Learn Thai through cultural immersion and authentic context</p>
+            <p class="hero-subtitle">Learn Thai through culture, Theravada Buddhism and a built-in AI tutor.</p>
             <div class="hero-buttons">
-                <a href="/alphabet" class="btn btn-primary">🔤 Start with Alphabet</a>
-                <a href="/learn" class="btn btn-secondary">📖 Explore Vocabulary</a>
+                <a href="/alphabet" class="btn btn-primary">🔤 Start with the Alphabet</a>
+                <a href="/chat" class="btn btn-secondary">🤖 Try the AI Tutor</a>
             </div>
         </div>
     </div>
@@ -31,34 +30,34 @@
                 <span class="card-badge">Start Here!</span>
             </a>
 
+            <a href="/chat" class="feature-card grammar-card">
+                <div class="card-icon">🤖</div>
+                <h3>AI Tutor</h3>
+                <p>Chat with a Claude-powered tutor for explanations, hints and practice</p>
+            </a>
+
             <a href="/learn" class="feature-card vocab-card">
                 <div class="card-icon">📖</div>
                 <h3>Vocabulary</h3>
-                <p>6 categories with cultural context and authentic usage</p>
+                <p>6 themed categories with cultural context and authentic usage</p>
             </a>
 
-            <a href="/grammar" class="feature-card grammar-card">
-                <div class="card-icon">✏️</div>
-                <h3>Grammar</h3>
-                <p>Complete guide to Thai sentence structure and particles</p>
-            </a>
-
-            <a href="/culture" class="feature-card culture-card">
-                <div class="card-icon">🎭</div>
-                <h3>Culture</h3>
-                <p>Festivals, traditions, and Thai social customs</p>
+            <a href="/dictionary" class="feature-card culture-card">
+                <div class="card-icon">📕</div>
+                <h3>Dictionary</h3>
+                <p>Look up any word — Thai ↔ English with Paiboon romanization</p>
             </a>
 
             <a href="/theravada" class="feature-card dharma-card">
                 <div class="card-icon">☸️</div>
-                <h3>Buddhist Dharma</h3>
-                <p>Theravada teachings, suttas, and meditation practices</p>
+                <h3>Buddhism &amp; Meditation</h3>
+                <p>Theravada teachings, suttas, and a Samatha &amp; Vipassana timer</p>
             </a>
 
-            <a href="/progress" class="feature-card progress-card">
-                <div class="card-icon">📊</div>
-                <h3>Your Progress</h3>
-                <p>Track your learning journey and achievements</p>
+            <a href="/premium" class="feature-card progress-card">
+                <div class="card-icon">⭐</div>
+                <h3>Plans &amp; Pricing</h3>
+                <p>Start free, or unlock more content and AI tools with a plan</p>
             </a>
         </div>
     </div>
@@ -175,6 +174,19 @@
         flex-direction: column;
         gap: 0.5rem;
         margin-bottom: 2rem;
+    }
+
+    .brand-title {
+        font-size: 3rem;
+        color: var(--royal-gold);
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .brand-tagline {
+        font-size: 1.35rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 600;
     }
 
     .thai-title {
@@ -440,6 +452,7 @@
     }
 
     @media (max-width: 768px) {
+        .brand-title,
         .thai-title {
             font-size: 2rem;
         }
