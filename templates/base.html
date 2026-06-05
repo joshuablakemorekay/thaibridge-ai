@@ -23,71 +23,57 @@
             
             <ul id="main-nav">
                 <li><a href="/">🏠 Home</a></li>
-                <li><a href="/chat">🤖 AI Chat</a></li>
-                
-                <!-- Learning Dropdown -->
+
+                <!-- Learn -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
-                        📚 Learning
-                    </button>
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">📚 Learn</button>
                     <div class="dropdown-content">
-                        <a href="/alphabet">🔤 Thai Alphabet</a>
+                        <a href="/alphabet">🔤 Alphabet</a>
+                        <a href="/vowels_syllables">🗣️ Vowels & Syllables</a>
+                        <a href="/paiboon">🔤 Paiboon Romanization</a>
+                        <a href="/grammar">✏️ Grammar Guide</a>
+                        <a href="/formality">🎭 Formality Levels</a>
+                        <a href="/gender-examples">👤 Gender Guide</a>
+                        <a href="/sentences">💬 Sentences & Conversations</a>
                         <a href="/learn">📖 Vocabulary</a>
                         <a href="/lessons">📝 Lessons</a>
-                        <a href="/sentences">💬 Sentences & Conversations</a>
-                        <a href="/formality">🎭 Formality Levels</a>
-                    </div>
-                </li>
-                
-                <!-- Real World Thai Dropdown -->
-                <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
-                        🌏 Real World Thai
-                    </button>
-                    <div class="dropdown-content">
                         <a href="/tour-guide">🗺️ Tour Guide Thai</a>
                         <a href="/business-thai">💼 Business Thai</a>
                     </div>
                 </li>
 
-                <!-- Grammar Dropdown -->
+                <!-- Culture -->
+                <li><a href="/culture">🎭 Culture</a></li>
+
+                <!-- Buddhism -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
-                        ✏️ Grammar
-                    </button>
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">☸️ Buddhism</button>
                     <div class="dropdown-content">
-                        <a href="/grammar">📚 Complete Grammar Guide</a>
-                        <a href="/grammar#parts-of-speech">Parts of Speech</a>
-                        <a href="/grammar#consonant-classes">⭐ Consonant Classes</a>
-                        <a href="/grammar#classifiers">🔢 Classifiers</a>
-                        <a href="/paiboon">🔤 Paiboon Romanization</a>
-                        <a href="/vowels_syllables">🗣️ Vowels & Syllables</a>
-                    </div>
-                </li>
-                
-                <!-- Culture & Spirituality Dropdown -->
-                <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
-                        🙏 Culture & Dharma
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="/culture">🎭 Thai Culture</a>
-                        <a href="/theravada">☸️ Buddhist Dharma</a>
+                        <a href="/theravada">☸️ Theravada Dharma</a>
+                        <a href="/bob-buddhism-overview">📿 Pra Kru Bob: Overview</a>
+                        <a href="/bob-fear-article">📿 Pra Kru Bob: On Fear</a>
                         <a href="/meditation">🧘 Meditation</a>
                     </div>
                 </li>
-                
-                <!-- Tools & Reference Dropdown -->
+
+                <!-- Dictionary -->
+                <li><a href="/dictionary">📕 Dictionary</a></li>
+
+                <!-- AI Tutor -->
+                <li><a href="/chat">🤖 AI Tutor</a></li>
+
+                <!-- Account -->
                 <li class="dropdown">
-                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
-                        🔧 Tools
-                    </button>
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)">👤 Account</button>
                     <div class="dropdown-content">
-                        <a href="/dictionary">📕 Dictionary</a>
-                        <a href="/gender-examples">👤 Gender Guide</a>
-                        <a href="/beginner-guide">🎓 Beginner Mode</a>
+                        <a href="/signup">✍️ Sign up</a>
+                        <a href="/signup">🔑 Log in</a>
+                        <a href="/developer-login">🛠️ Developer Login</a>
                     </div>
                 </li>
+
+                <!-- Premium -->
+                <li><a href="/premium">⭐ Premium</a></li>
             </ul>
             
             {% if request.endpoint == 'gender_examples' %}
