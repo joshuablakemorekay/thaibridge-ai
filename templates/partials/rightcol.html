@@ -1,0 +1,20 @@
+{# Shared right-hand column: dictionary search, a small visual, and a progress link.
+   Reusable on any content page that fills {% block rightcol %}. #}
+<aside class="layout-rightcol">
+    <div class="card">
+        <h4 style="margin-top:0;">🔍 Search the dictionary</h4>
+        <form action="/dictionary" method="get">
+            <input type="search" name="q" placeholder="Type a Thai or English word…"
+                   style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid #ccc;">
+        </form>
+    </div>
+    <div class="card" style="text-align:center;">
+        <div class="rightcol-visual">🪷</div>
+        <p style="margin:0; color:#666;">Learn Thai through culture &amp; Dharma</p>
+    </div>
+    <div class="card">
+        <h4 style="margin-top:0;">🏆 Your progress</h4>
+        <p style="margin:0 0 0.75rem; color:#666;">Track your level, XP and achievements.</p>
+        <a href="/progress" class="btn">View dashboard</a>
+    </div>
+</aside>

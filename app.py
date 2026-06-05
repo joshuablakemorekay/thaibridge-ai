@@ -43,11 +43,65 @@ if not app.secret_key:
     raise ValueError("FLASK_SECRET_KEY is not set. Please set it in your environment.")
 
 # ============================================
+# STRIPE PAYMENTS (test / sandbox mode)
+# ============================================
+# All keys come from environment variables (.env locally — never committed).
+# Use TEST keys only (sk_test_... / pk_test_...) so no real money ever moves.
+# If STRIPE_SECRET_KEY isn't set, the paid-subscription buttons show a friendly
+# "not configured yet" message instead of crashing the app.
+import stripe
+stripe.api_key = os.environ.get("STRIPE_SECRET_KEY")
+STRIPE_PUBLISHABLE_KEY = os.environ.get("STRIPE_PUBLISHABLE_KEY", "")
+STRIPE_WEBHOOK_SECRET = os.environ.get("STRIPE_WEBHOOK_SECRET", "")
+
+# ============================================
+# PAYPAL PAYMENTS (sandbox mode)
+# ============================================
+# PayPal is offered as a second payment option. We talk to PayPal's REST API
+# directly with httpx (which already ships with the Anthropic SDK), so there's
+# no extra SDK to learn. Use SANDBOX credentials from
+# https://developer.paypal.com/dashboard/applications/sandbox — keep PAYPAL_MODE
+# as 'sandbox' until you're ready to take real money.
+import httpx
+
+PAYPAL_CLIENT_ID = os.environ.get("PAYPAL_CLIENT_ID", "")
+PAYPAL_CLIENT_SECRET = os.environ.get("PAYPAL_CLIENT_SECRET", "")
+PAYPAL_MODE = os.environ.get("PAYPAL_MODE", "sandbox")
+PAYPAL_API_BASE = (
+    "https://api-m.paypal.com" if PAYPAL_MODE == "live"
+    else "https://api-m.sandbox.paypal.com"
+)
+
+
+def paypal_configured():
+    """True only if both PayPal credentials are present."""
+    return bool(PAYPAL_CLIENT_ID and PAYPAL_CLIENT_SECRET)
+
+
+def _paypal_access_token():
+    """Exchange the client id/secret for a short-lived access token."""
+    resp = httpx.post(
+        f"{PAYPAL_API_BASE}/v1/oauth2/token",
+        data={"grant_type": "client_credentials"},
+        auth=(PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET),
+        timeout=20,
+    )
+    resp.raise_for_status()
+    return resp.json()["access_token"]
+
+# ============================================
 # DATABASE CONFIGURATION
 # ============================================
 
+# The database lives in an 'instance' folder next to this file. SQLite can
+# create the .db file, but NOT the folder it sits in — so we make sure the
+# folder exists first. Without this, running from a fresh copy of the project
+# fails with "unable to open database file".
+db_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'instance')
+os.makedirs(db_dir, exist_ok=True)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), 'instance', 'thai_app.db'
+    db_dir, 'thai_app.db'
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -4835,6 +4889,11 @@ def privacy():
     return render_template('privacy.html')
 
 
+@app.route('/instructions')
+def instructions():
+    return render_template('instructions.html')
+
+
 @app.route('/login')
 def login():
     # Placeholder page. Real authentication (password verification, session
@@ -5102,24 +5161,269 @@ def signup():
 
 @app.route('/subscribe/<tier>')
 def subscribe(tier):
-    """Subscribe to a tier"""
+    """Start a subscription.
+
+    The free tier is applied instantly (no payment needed). For paid tiers we
+    show a small page that lets the user choose Stripe or PayPal — the actual
+    checkout happens at /subscribe/<tier>/stripe or /subscribe/<tier>/paypal.
+    """
     if tier not in SUBSCRIPTION_TIERS:
         return "Invalid tier", 400
-    
+
     init_user_progress()
     user = session['user_progress']
-    user['subscription_tier'] = tier
-    
-    if tier != 'free':
-        user['subscription_expires'] = (datetime.now() + timedelta(days=30)).isoformat()
-    else:
+
+    # Free tier (or "downgrade") needs no payment — apply it straight away.
+    if tier == 'free' or SUBSCRIPTION_TIERS[tier]['price'] == 0:
+        user['subscription_tier'] = 'free'
         user['subscription_expires'] = None
-    
+        session.modified = True
+        return render_template('subscription_success.html',
+                               tier='free',
+                               tier_info=SUBSCRIPTION_TIERS['free'],
+                               expires=None)
+
+    # Paid tier — let the user pick how they want to pay.
+    return render_template('subscribe_choose.html',
+                           tier=tier,
+                           tier_info=SUBSCRIPTION_TIERS[tier],
+                           stripe_enabled=bool(stripe.api_key),
+                           paypal_enabled=paypal_configured())
+
+
+@app.route('/subscribe/<tier>/stripe')
+def subscribe_stripe(tier):
+    """Send the user to Stripe Checkout (TEST mode) for a paid tier."""
+    if tier not in SUBSCRIPTION_TIERS or tier == 'free':
+        return redirect('/progress')
+
+    # We need Stripe configured to take a (test) payment.
+    if not stripe.api_key:
+        return render_template('subscription_success.html',
+                               stripe_unconfigured=True,
+                               tier=tier,
+                               tier_info=SUBSCRIPTION_TIERS[tier],
+                               expires=None), 503
+
+    tier_info = SUBSCRIPTION_TIERS[tier]
+    base_url = request.url_root.rstrip('/')
+
+    try:
+        # We build the price inline ("price_data") rather than pre-creating
+        # Products/Prices in the Stripe dashboard — fewer setup steps for a demo.
+        checkout_session = stripe.checkout.Session.create(
+            mode='subscription',
+            line_items=[{
+                'price_data': {
+                    'currency': 'usd',
+                    'unit_amount': int(round(tier_info['price'] * 100)),  # cents
+                    'recurring': {'interval': 'month'},
+                    'product_data': {
+                        'name': f"thaibridge-ai — {tier_info['name']}",
+                    },
+                },
+                'quantity': 1,
+            }],
+            # Stripe swaps {CHECKOUT_SESSION_ID} for the real id on redirect.
+            success_url=f"{base_url}/subscribe/success?session_id={{CHECKOUT_SESSION_ID}}",
+            cancel_url=f"{base_url}/subscribe/cancel",
+            metadata={'tier': tier},
+        )
+    except Exception as e:
+        app.logger.exception("Stripe checkout session creation failed")
+        return f"Sorry, we couldn't start checkout: {e}", 502
+
+    # 303 = "go look over there with a GET" — the correct redirect for this.
+    return redirect(checkout_session.url, code=303)
+
+
+@app.route('/subscribe/<tier>/paypal')
+def subscribe_paypal(tier):
+    """Create a PayPal order (sandbox) and send the user to PayPal to approve it."""
+    if tier not in SUBSCRIPTION_TIERS or tier == 'free':
+        return redirect('/progress')
+
+    if not paypal_configured():
+        return render_template('subscription_success.html',
+                               paypal_unconfigured=True,
+                               tier=tier,
+                               tier_info=SUBSCRIPTION_TIERS[tier],
+                               expires=None), 503
+
+    tier_info = SUBSCRIPTION_TIERS[tier]
+    base_url = request.url_root.rstrip('/')
+
+    try:
+        token = _paypal_access_token()
+        resp = httpx.post(
+            f"{PAYPAL_API_BASE}/v2/checkout/orders",
+            headers={"Authorization": f"Bearer {token}",
+                     "Content-Type": "application/json"},
+            json={
+                "intent": "CAPTURE",
+                "purchase_units": [{
+                    "amount": {
+                        "currency_code": "USD",
+                        "value": f"{tier_info['price']:.2f}",
+                    },
+                    "description": f"thaibridge-ai — {tier_info['name']} (monthly)",
+                    "custom_id": tier,
+                }],
+                "application_context": {
+                    "brand_name": "thaibridge-ai",
+                    "user_action": "PAY_NOW",
+                    "shipping_preference": "NO_SHIPPING",
+                    "return_url": f"{base_url}/paypal/success",
+                    "cancel_url": f"{base_url}/subscribe/cancel",
+                },
+            },
+            timeout=20,
+        )
+        resp.raise_for_status()
+        order = resp.json()
+    except Exception as e:
+        app.logger.exception("PayPal order creation failed")
+        return f"Sorry, we couldn't start PayPal checkout: {e}", 502
+
+    # Remember which tier this order is for; we re-check the payment with PayPal
+    # before trusting it on the way back.
+    session['pending_paypal_tier'] = tier
     session.modified = True
-    
-    return render_template('subscription_success.html', 
-                         tier=tier, 
-                         tier_info=SUBSCRIPTION_TIERS[tier])
+
+    approve_url = next(
+        (link["href"] for link in order.get("links", [])
+         if link.get("rel") == "approve"),
+        None,
+    )
+    if not approve_url:
+        return "PayPal did not return an approval link", 502
+
+    return redirect(approve_url, code=303)
+
+
+@app.route('/paypal/success')
+def paypal_success():
+    """PayPal redirects here after the user approves the payment.
+
+    Like the Stripe flow, we never trust the browser: we ask PayPal to capture
+    the order and only unlock the tier if PayPal says the status is COMPLETED.
+    """
+    order_id = request.args.get('token')  # PayPal names the order id "token"
+    tier = session.get('pending_paypal_tier')
+    if not order_id or tier not in SUBSCRIPTION_TIERS:
+        return redirect('/progress')
+
+    try:
+        token = _paypal_access_token()
+        resp = httpx.post(
+            f"{PAYPAL_API_BASE}/v2/checkout/orders/{order_id}/capture",
+            headers={"Authorization": f"Bearer {token}",
+                     "Content-Type": "application/json"},
+            timeout=20,
+        )
+        resp.raise_for_status()
+        result = resp.json()
+    except Exception:
+        app.logger.exception("PayPal capture failed")
+        return redirect('/subscribe/cancel')
+
+    if result.get('status') != 'COMPLETED':
+        return redirect('/subscribe/cancel')
+
+    init_user_progress()
+    user = session['user_progress']
+    expires_dt = datetime.now() + timedelta(days=30)
+    user['subscription_tier'] = tier
+    user['subscription_expires'] = expires_dt.isoformat()
+    session.pop('pending_paypal_tier', None)
+    session.modified = True
+
+    return render_template('subscription_success.html',
+                           tier=tier,
+                           tier_info=SUBSCRIPTION_TIERS[tier],
+                           expires=expires_dt.strftime('%d %B %Y'))
+
+
+@app.route('/subscribe/success')
+def subscribe_success():
+    """Stripe redirects here after a successful test payment.
+
+    We never trust the browser: we re-fetch the Checkout Session from Stripe and
+    only activate the tier if Stripe says it's paid. The authoritative tier comes
+    from the session metadata we set when creating it, not from the URL.
+    """
+    session_id = request.args.get('session_id')
+    if not session_id:
+        return redirect('/progress')
+
+    try:
+        checkout_session = stripe.checkout.Session.retrieve(session_id)
+    except Exception:
+        app.logger.exception("Could not retrieve Stripe checkout session")
+        return redirect('/progress')
+
+    # 'paid' for cards; 'no_payment_required' can happen for 100%-off sessions.
+    if checkout_session.payment_status not in ('paid', 'no_payment_required'):
+        return redirect('/subscribe/cancel')
+
+    tier = (checkout_session.metadata or {}).get('tier')
+    if tier not in SUBSCRIPTION_TIERS:
+        return redirect('/progress')
+
+    init_user_progress()
+    user = session['user_progress']
+    expires_dt = datetime.now() + timedelta(days=30)
+    user['subscription_tier'] = tier
+    user['subscription_expires'] = expires_dt.isoformat()
+    session.modified = True
+
+    return render_template('subscription_success.html',
+                           tier=tier,
+                           tier_info=SUBSCRIPTION_TIERS[tier],
+                           expires=expires_dt.strftime('%d %B %Y'))
+
+
+@app.route('/subscribe/cancel')
+def subscribe_cancel():
+    """User backed out of Stripe Checkout — no charge, send them back to plans."""
+    return render_template('subscription_cancel.html')
+
+
+@app.route('/stripe/webhook', methods=['POST'])
+def stripe_webhook():
+    """Receive events from Stripe (server-to-server).
+
+    We verify the signature so we know the event really came from Stripe.
+
+    IMPORTANT: this demo keeps each user's tier in their browser session (a
+    signed cookie), so there's no per-user record this webhook can update — it
+    verifies and logs the confirmed payment. In a production build with
+    database-backed users, THIS would be the source of truth (it can't be
+    spoofed like the success redirect can), and here you'd mark the user paid.
+    """
+    if not STRIPE_WEBHOOK_SECRET:
+        app.logger.warning("Stripe webhook hit but STRIPE_WEBHOOK_SECRET is not set")
+        return '', 400
+
+    payload = request.get_data()
+    sig_header = request.headers.get('Stripe-Signature', '')
+
+    try:
+        event = stripe.Webhook.construct_event(
+            payload, sig_header, STRIPE_WEBHOOK_SECRET
+        )
+    except (ValueError, stripe.error.SignatureVerificationError):
+        app.logger.warning("Invalid Stripe webhook signature — ignoring")
+        return '', 400
+
+    if event['type'] == 'checkout.session.completed':
+        cs = event['data']['object']
+        tier = (cs.get('metadata') or {}).get('tier', 'unknown')
+        app.logger.info(
+            f"Stripe payment confirmed for tier '{tier}' (session {cs.get('id')})"
+        )
+
+    return '', 200
 
 @app.route('/api/award_points', methods=['POST'])
 def award_points():
@@ -5353,9 +5657,9 @@ def ai_status():
 
 if __name__ == '__main__':
     print("=" * 60)
-    print("🪷 Thai Language & Culture Learning App v3.0 GAMIFIED")
+    print("🪷 thaibridge-ai v3.0 GAMIFIED")
     print("=" * 60)
-    print("🪷 Thai Language & Culture Learning App v3.0 + AI")
+    print("🪷 thaibridge-ai v3.0 + AI")
     print("=" * 60)
     print("Features:")
     print("  • Thai Alphabet (44 consonants, 32 vowels)")

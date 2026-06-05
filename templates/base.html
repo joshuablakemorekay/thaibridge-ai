@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Thai Language Learning{% endblock %}</title>
+    <title>{% block title %}thaibridge-ai{% endblock %}</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪷</text></svg>">
 
     <!-- Font Imports for Proper Unicode Support -->
@@ -17,12 +17,13 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo"><span>🪷</span> Thai Learning</a>
+            <a href="/" class="logo"><span>🪷</span> ThaiBridge AI</a>
             
             <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
             
             <ul id="main-nav">
                 <li><a href="/">🏠 Home</a></li>
+                <li><a href="/instructions">ℹ️ Help</a></li>
 
                 <!-- Learn -->
                 <li class="dropdown">
@@ -102,8 +103,8 @@
     </div>
     
     <footer>
-        <p>🪷 Thai Language & Culture Learning App v2.0</p>
-        <p><a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/privacy">Privacy</a></p>
+        <p>🪷 thaibridge-ai</p>
+        <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/privacy">Privacy</a></p>
         <p>Using <a href="/paiboon">Paiboon Romanization</a> • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master ($19.99/mo)</span></span></p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
     </footer>

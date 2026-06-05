@@ -12,3 +12,7 @@ thai_app.db
 
 # Prompt eval check results (timestamped output we don't want to commit)
 prompts/*/results/
+
+# Standalone sandboxes — not part of the rebuild app
+App-Prototype/
+python-practice/

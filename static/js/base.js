@@ -84,3 +84,17 @@
                 }
             }
         });
+
+        // Wrap each content table in a horizontal-scroll container. The table
+        // keeps width:100% so it fills the column when there's room (and grows
+        // to fill as you zoom out); the wrapper only shows a sideways scrollbar
+        // when the content is genuinely wider than the available space.
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('main table').forEach(function(table) {
+                if (table.parentElement.classList.contains('table-scroll')) return;
+                const wrapper = document.createElement('div');
+                wrapper.className = 'table-scroll';
+                table.parentNode.insertBefore(wrapper, table);
+                wrapper.appendChild(table);
+            });
+        });
