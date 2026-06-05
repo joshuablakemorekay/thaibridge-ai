@@ -4820,6 +4820,28 @@ def premium():
     return render_template('premium.html')
 
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
+
+@app.route('/login')
+def login():
+    # Placeholder page. Real authentication (password verification, session
+    # login/logout) is deferred to the accounts rebuild (Goal #2).
+    return render_template('login.html')
+
+
 # ============================================
 # API ROUTES
 # ============================================

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Privacy — ThaiBridge{% endblock %}
+
+{% block content %}
+<h1>
+    🔒 Privacy
+    <span class="thai">ความเป็นส่วนตัว</span>
+</h1>
+
+<div class="card">
+    <p>
+        ThaiBridge is a learning project that currently runs locally. This page is an
+        honest summary of how it handles data — not a formal legal policy.
+    </p>
+    <ul>
+        <li><strong>Accounts:</strong> if you sign up, the app stores your username,
+            email, and a securely <em>hashed</em> password (never the password itself).</li>
+        <li><strong>Learning progress:</strong> your level, XP and unlocked sections are
+            kept in your browser session.</li>
+        <li><strong>AI tutor:</strong> messages you send to the AI tutor are processed by
+            the Anthropic Claude API to generate replies.</li>
+        <li><strong>No tracking or ads:</strong> the app does not use advertising or
+            third-party tracking.</li>
+    </ul>
+    <p style="color:#666;">
+        A full privacy policy will be written before the app is deployed for real users.
+    </p>
+</div>
+{% endblock %}
