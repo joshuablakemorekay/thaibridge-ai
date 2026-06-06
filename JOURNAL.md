@@ -33,6 +33,35 @@ This Claude Code session; the `_subscription_period_end` helper in `app.py`.
 
 ---
 
+## 6 June 2026 — Building the real subscription billing service (login, database-backed plans, premium page, freemium AI)
+
+**Type:** Milestone
+
+**TL;DR:**
+- Replaced the fake "coming soon" login with **real accounts** (sign up, log in, log out).
+- Built a **subscription billing service** where the **database is the source of truth**, not a cookie.
+- Added a **premium/pricing page** and **gated the AI tutor** (free taste vs unlimited on Pro).
+
+**What I built or did**
+I turned the placeholder paywall into a real system. Real login/logout via Flask-Login (a toolkit that tracks "who is logged in"). Each user now stores their plan, status and Stripe ids in the database, with one rule (`effective_tier`) deciding what they can access. Checkout is tied to the logged-in user, and the Stripe webhook — not the browser — is the trusted thing that marks someone paid, renewed or cancelled. I wired checkout for **both Stripe and PayPal**, though only **Stripe is configured and verified so far** (PayPal is scaffolded for a later session). I merged the old feature showcase and pricing into one **Premium page**, and gated the **AI tutor**: free/basic get a daily taste (5 messages), Pro unlocks all modes unlimited.
+
+**Why I did it this way**
+A cookie can be faked; the database can't. Keeping the truth in the database (written only by the signed webhook) means a user can't just edit their browser to unlock Pro. Gating the AI fixed a mismatch — Pro advertised "premium AI" while everyone already got it free.
+
+**How We Did It**
+Added real login → added subscription fields to the User → tied checkout to the user → made the webhook the source of truth → enforced access from the database → merged the premium/pricing page → gated the AI tutor.
+
+**What this means for the app**
+The app now has a genuine, tamper-resistant freemium model: real accounts, plans stored safely, and paid features that are actually locked.
+
+**What I learned**
+"Source of truth" matters — deciding *one* place owns each fact (the database) removes a whole class of bugs and cheats. Keeping the access rule in one method (`effective_tier`) means every part of the app agrees on who gets what.
+
+**References / Conversations**
+Earlier Claude Code sessions today; architecture notes in `docs/` (commit `8bf705f`); commits `b119038`–`e088f0b`.
+
+---
+
 ## 5 June 2026 — Finishing the wireframe layout, a clean rename, and shipping payments
 
 **Type:** Milestone

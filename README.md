@@ -8,17 +8,17 @@ A web app that teaches Thai through the lens of Thai culture and Buddhism — bu
 
 - Teaches the **Thai alphabet** (44 consonants and the vowels) and vocabulary by topic, with **Paiboon-style romanization** (a way of writing Thai sounds in English letters, with tone marks).
 - Includes **lessons, grammar, culture and temple-etiquette modules**, and Theravada Buddhist content.
-- Has an **AI tutor** with several modes — conversation, grammar help, quizzes, culture, and Buddhism — powered by the Claude API (a way for the app to talk to the AI).
+- Has an **AI tutor** with several modes — conversation, grammar help, quizzes, culture, and Buddhism — powered by the Claude API (a way for the app to talk to the AI). It's **freemium-gated**: free and basic users get a daily taste, Pro unlocks all modes unlimited.
 - Keeps learners motivated with **points, levels, and achievements**, plus a meditation timer.
-- Supports **user accounts** (sign-up with a saved profile) and a developer mode for testing.
-- Offers **subscription tiers** with **Stripe & PayPal** checkout (test/sandbox mode — no real money moves).
+- Supports **real user accounts** — sign up, log in and log out (Flask-Login) — plus a developer mode for testing.
+- Offers **subscription tiers** with **Stripe** checkout — verified end-to-end in test mode, with the **database (not the browser cookie) as the source of truth**. PayPal checkout is scaffolded but not yet wired up.
 
 ## Built With
 
 - **Python (Flask)** — runs the web server and the pages
 - **SQLite** — a simple file-based database for user accounts
 - **Anthropic Claude API** — powers the AI tutor
-- **Stripe & PayPal** (via `httpx`) — handle subscription payments in test mode
+- **Stripe** — handles subscription payments (verified in test mode); **PayPal** scaffolded via `httpx` for later
 - **HTML, CSS, JavaScript** — the pages and the interactive bits (quizzes, flashcards)
 - **pytest** — runs the automatic tests
 
@@ -56,6 +56,7 @@ You'll need **Python 3.10+** and a free [Anthropic API key](https://console.anth
 The build story, newest first. Full version with lessons learned in [`JOURNAL.md`](./JOURNAL.md).
 
 - **6 Jun 2026 — Real Stripe test payment + a renewal-date fix.** I took my first real test-card payment all the way through Stripe Checkout and confirmed the webhook (Stripe's server messaging mine) activated a paid subscription in the database, with a real Stripe customer and subscription attached. Along the way I fixed a bug where the renewal date wasn't being saved — Stripe had moved that field onto the subscription *item* in a newer version of their API. **Lesson:** a "200 OK" doesn't prove it worked — checking the actual database caught both the bug and a stale browser tab that had hijacked my first attempt.
+- **6 Jun 2026 — Real subscription billing service.** I replaced the placeholder paywall with a real system: actual login/logout (Flask-Login), subscription plans stored in the **database** (not a cookie) with the Stripe webhook as the trusted source of truth, a merged premium/pricing page, and a freemium-gated AI tutor (free taste, unlimited on Pro). Checkout was built for both Stripe and PayPal, but only Stripe is configured and verified so far. **Lesson:** pick one source of truth (the database) and keep the access rule in one place, so nothing can be faked from the browser.
 - **5 Jun 2026 — Wireframe layout, rename & payments.** I finished a proper wireframe layout system — four page "shapes" built from a content-first outline — and rolled the 3-column version across the learning pages using reusable partials. I also fixed a database-startup crash, added a Help page, settled the app's display name as **ThaiBridge AI**, and shipped **Stripe + PayPal** subscriptions. **Lesson:** a wireframe is a *planning* tool, not a feature — and "tests pass / 200 OK" proves a page *loads*, not that it *looks right* (eight "broken" pages were actually working paywalls).
 - **Mar–Apr 2026 — Market research.** Researched competitors, UK audience size, and pricing. Learned to ground research in real sources and to **check which tools actually ran**. (The prompts behind this are documented in [`prompts/`](./prompts/).)
 - **Feb 2026 — Version control + workflow.** Set up Git and GitHub, then used Claude Code to add user registration, fix a form-validation bug, add **32 tests**, and fix code-review issues. Learned that version control let me take risks safely — and that an AI's changes still need reviewing.
@@ -69,4 +70,5 @@ The build story, newest first. Full version with lessons learned in [`JOURNAL.md
 
 - **Deploy it** — get it online so other people can try it, rather than running only on my machine.
 - **Make it deploy-ready** — add database migrations and move from SQLite to a hosted database (Postgres), so accounts and subscriptions survive on a live server.
-- **Switch payments to live keys** — the full Stripe test flow now works end-to-end; going live just needs the real keys (and the same for PayPal).
+- **Complete & verify PayPal** — add sandbox credentials and run a real sandbox payment, the same way Stripe was verified.
+- **Switch Stripe to live keys** — the full Stripe test flow now works end-to-end; going live just needs the real keys.
