@@ -55,6 +55,7 @@ You'll need **Python 3.10+** and a free [Anthropic API key](https://console.anth
 
 The build story, newest first. Full version with lessons learned in [`JOURNAL.md`](./JOURNAL.md).
 
+- **6 Jun 2026 — Real Stripe test payment + a renewal-date fix.** I took my first real test-card payment all the way through Stripe Checkout and confirmed the webhook (Stripe's server messaging mine) activated a paid subscription in the database, with a real Stripe customer and subscription attached. Along the way I fixed a bug where the renewal date wasn't being saved — Stripe had moved that field onto the subscription *item* in a newer version of their API. **Lesson:** a "200 OK" doesn't prove it worked — checking the actual database caught both the bug and a stale browser tab that had hijacked my first attempt.
 - **5 Jun 2026 — Wireframe layout, rename & payments.** I finished a proper wireframe layout system — four page "shapes" built from a content-first outline — and rolled the 3-column version across the learning pages using reusable partials. I also fixed a database-startup crash, added a Help page, settled the app's display name as **ThaiBridge AI**, and shipped **Stripe + PayPal** subscriptions. **Lesson:** a wireframe is a *planning* tool, not a feature — and "tests pass / 200 OK" proves a page *loads*, not that it *looks right* (eight "broken" pages were actually working paywalls).
 - **Mar–Apr 2026 — Market research.** Researched competitors, UK audience size, and pricing. Learned to ground research in real sources and to **check which tools actually ran**. (The prompts behind this are documented in [`prompts/`](./prompts/).)
 - **Feb 2026 — Version control + workflow.** Set up Git and GitHub, then used Claude Code to add user registration, fix a form-validation bug, add **32 tests**, and fix code-review issues. Learned that version control let me take risks safely — and that an AI's changes still need reviewing.
@@ -67,5 +68,5 @@ The build story, newest first. Full version with lessons learned in [`JOURNAL.md
 ## What's Next
 
 - **Deploy it** — get it online so other people can try it, rather than running only on my machine.
-- **Finish the accounts system** — real login/logout (sign-in isn't wired up yet).
-- **Switch payments to live keys** — Stripe & PayPal currently run in test/sandbox mode.
+- **Make it deploy-ready** — add database migrations and move from SQLite to a hosted database (Postgres), so accounts and subscriptions survive on a live server.
+- **Switch payments to live keys** — the full Stripe test flow now works end-to-end; going live just needs the real keys (and the same for PayPal).
