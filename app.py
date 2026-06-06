@@ -23,6 +23,10 @@ load_dotenv()  # Load .env file before anything else reads environment variables
 
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import (
+    LoginManager, UserMixin, login_user, logout_user,
+    login_required, current_user,
+)
 from werkzeug.security import generate_password_hash, check_password_hash
 import random
 import re
@@ -110,7 +114,7 @@ db = SQLAlchemy(app)
 # USER MODEL
 # ============================================
 
-class User(db.Model):
+class User(UserMixin, db.Model):
     __tablename__ = 'users'
     id            = db.Column(db.Integer, primary_key=True)
     username      = db.Column(db.String(20),  unique=True, nullable=False)
@@ -126,6 +130,21 @@ class User(db.Model):
 
 with app.app_context():
     db.create_all()
+
+# ============================================
+# LOGIN MANAGER (Flask-Login)
+# ============================================
+# Flask-Login keeps track of "who is logged in" across requests. It stores only
+# the user's id in the (signed) session cookie, then uses the loader below to
+# fetch the full User from the database on each request.
+login_manager = LoginManager(app)
+login_manager.login_view = 'login'          # where @login_required sends guests
+login_manager.login_message = "Please log in to continue."
+
+@login_manager.user_loader
+def load_user(user_id):
+    """Given the id stored in the session, return the matching User (or None)."""
+    return db.session.get(User, int(user_id))
 
 # ============================================
 # AI AGENT INTEGRATION
@@ -4898,11 +4917,58 @@ def instructions():
     return render_template('instructions.html')
 
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-    # Placeholder page. Real authentication (password verification, session
-    # login/logout) is deferred to the accounts rebuild (Goal #2).
-    return render_template('login.html')
+    """Real sign-in. GET shows the form; POST verifies the password.
+
+    A returning user can log in with EITHER their username or their email, plus
+    their password. On success we hand the user to Flask-Login (which remembers
+    them across requests) and re-link the gamification progress in the session.
+    """
+    if request.method == 'GET':
+        if current_user.is_authenticated:
+            return redirect('/')
+        return render_template('login.html')
+
+    data = request.get_json()
+    if not data:
+        return jsonify({'success': False, 'message': 'Invalid request format.'}), 400
+
+    identifier = data.get('identifier', '').strip()
+    password   = data.get('password', '')
+
+    if not identifier or not password:
+        return jsonify({'success': False, 'message': 'Please enter your username or email and your password.'}), 400
+
+    # Look the user up by username OR email (email is stored lower-case).
+    user = User.query.filter(
+        (User.username == identifier) | (User.email == identifier.lower())
+    ).first()
+
+    # Same generic message whether the user or the password was wrong — we don't
+    # want to reveal which usernames/emails exist.
+    if user is None or not user.check_password(password):
+        return jsonify({'success': False, 'message': 'Incorrect username/email or password.'}), 401
+
+    login_user(user, remember=True)
+    init_user_progress()
+    session['user_progress']['user_id']  = user.id
+    session['user_progress']['username'] = user.username
+    session.modified = True
+
+    return jsonify({
+        'success': True,
+        'message': f'Welcome back, {user.username}!',
+        'redirect': '/'
+    })
+
+
+@app.route('/logout')
+def logout():
+    """Log the current user out and reset their session progress."""
+    logout_user()
+    session.pop('user_progress', None)   # clear cached progress so it doesn't bleed across logins
+    return redirect('/')
 
 
 # ============================================
@@ -5152,6 +5218,7 @@ def signup():
         db.session.rollback()
         return jsonify({'success': False, 'message': 'Registration failed. Please try again.'}), 500
 
+    login_user(new_user, remember=True)   # creating an account also logs you in
     init_user_progress()
     session['user_progress']['user_id'] = new_user.id
     session['user_progress']['username'] = new_user.username
