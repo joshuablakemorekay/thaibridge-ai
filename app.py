@@ -5255,6 +5255,7 @@ def signup():
     })
 
 @app.route('/subscribe/<tier>')
+@login_required
 def subscribe(tier):
     """Start a subscription.
 
@@ -5287,6 +5288,7 @@ def subscribe(tier):
 
 
 @app.route('/subscribe/<tier>/stripe')
+@login_required
 def subscribe_stripe(tier):
     """Send the user to Stripe Checkout (TEST mode) for a paid tier."""
     if tier not in SUBSCRIPTION_TIERS or tier == 'free':
@@ -5303,27 +5305,45 @@ def subscribe_stripe(tier):
     tier_info = SUBSCRIPTION_TIERS[tier]
     base_url = request.url_root.rstrip('/')
 
+    # Identity tags so the webhook (Phase 3) knows WHOSE payment this is.
+    # We attach the user id in three places: on the Checkout Session (metadata +
+    # client_reference_id) and on the Subscription itself (subscription_data),
+    # so later renewal/cancellation events also carry it.
+    user_meta = {'tier': tier, 'user_id': str(current_user.id)}
+
+    checkout_kwargs = dict(
+        mode='subscription',
+        line_items=[{
+            'price_data': {
+                'currency': 'usd',
+                'unit_amount': int(round(tier_info['price'] * 100)),  # cents
+                'recurring': {'interval': 'month'},
+                'product_data': {
+                    'name': f"ThaiBridge AI — {tier_info['name']}",
+                },
+            },
+            'quantity': 1,
+        }],
+        # Stripe swaps {CHECKOUT_SESSION_ID} for the real id on redirect.
+        success_url=f"{base_url}/subscribe/success?session_id={{CHECKOUT_SESSION_ID}}",
+        cancel_url=f"{base_url}/subscribe/cancel",
+        client_reference_id=str(current_user.id),
+        metadata=user_meta,
+        subscription_data={'metadata': user_meta},
+    )
+
+    # Reuse this user's Stripe customer if we already know it (keeps all their
+    # invoices under one customer); otherwise pre-fill their email and let Stripe
+    # create the customer — we'll capture and store its id in the webhook.
+    if current_user.stripe_customer_id:
+        checkout_kwargs['customer'] = current_user.stripe_customer_id
+    else:
+        checkout_kwargs['customer_email'] = current_user.email
+
     try:
         # We build the price inline ("price_data") rather than pre-creating
         # Products/Prices in the Stripe dashboard — fewer setup steps for a demo.
-        checkout_session = stripe.checkout.Session.create(
-            mode='subscription',
-            line_items=[{
-                'price_data': {
-                    'currency': 'usd',
-                    'unit_amount': int(round(tier_info['price'] * 100)),  # cents
-                    'recurring': {'interval': 'month'},
-                    'product_data': {
-                        'name': f"ThaiBridge AI — {tier_info['name']}",
-                    },
-                },
-                'quantity': 1,
-            }],
-            # Stripe swaps {CHECKOUT_SESSION_ID} for the real id on redirect.
-            success_url=f"{base_url}/subscribe/success?session_id={{CHECKOUT_SESSION_ID}}",
-            cancel_url=f"{base_url}/subscribe/cancel",
-            metadata={'tier': tier},
-        )
+        checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
     except Exception as e:
         app.logger.exception("Stripe checkout session creation failed")
         return f"Sorry, we couldn't start checkout: {e}", 502
@@ -5333,6 +5353,7 @@ def subscribe_stripe(tier):
 
 
 @app.route('/subscribe/<tier>/paypal')
+@login_required
 def subscribe_paypal(tier):
     """Create a PayPal order (sandbox) and send the user to PayPal to approve it."""
     if tier not in SUBSCRIPTION_TIERS or tier == 'free':
@@ -5362,7 +5383,9 @@ def subscribe_paypal(tier):
                         "value": f"{tier_info['price']:.2f}",
                     },
                     "description": f"ThaiBridge AI — {tier_info['name']} (monthly)",
-                    "custom_id": tier,
+                    # Tie the order to the logged-in user (and tier) so the
+                    # return handler can update the right account.
+                    "custom_id": f"{current_user.id}:{tier}",
                 }],
                 "application_context": {
                     "brand_name": "ThaiBridge AI",
