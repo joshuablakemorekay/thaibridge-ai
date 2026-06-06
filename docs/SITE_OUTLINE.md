@@ -42,6 +42,7 @@ A shared **sidebar** lists these sub-pages; a shared **right column** offers dic
 | Paiboon Romanization | `/paiboon` | Your custom Paiboon+ romanization system explained |
 | Grammar Guide | `/grammar` | Core grammar rules and patterns |
 | Formality Levels | `/formality` | How politeness/formality changes word choice |
+| Language Register | `/register` | The levels of Thai speech — casual, polite, formal, royal/monastic — and when each is used. *(Note: this is linguistic "register" — **not** account sign-up.)* |
 | Gender Guide | `/gender-examples` | How the speaker's gender changes speech (with a male/female toggle) |
 | Sentences & Conversations | `/sentences` | Example sentences and dialogues |
 | Vocabulary | `/learn` | 6 themed categories, 20 words each *(✅ wireframe already piloted here)* |
@@ -81,6 +82,7 @@ A shared **sidebar** lists these sub-pages; a shared **right column** offers dic
 
 ### ⭐ Premium  — template **S**
 - **Route:** `/premium` — **Purpose:** explain the 3 subscription tiers (demo pricing).
+- **Checkout flow:** `/subscribe/<tier>` (choose a plan) → Stripe or PayPal → `/subscribe/success` (plan confirmed) **or** `/subscribe/cancel` (user backed out, no charge).
 
 ### 🧩 Practice / Exercises  — template **T**
 - **Route:** `/exercise/<category>` — **Purpose:** interactive quiz for a vocabulary category; full width for the activity.
@@ -88,9 +90,20 @@ A shared **sidebar** lists these sub-pages; a shared **right column** offers dic
 ### 📄 Footer pages  *(template **S** — simple and honest)*
 | Page | Route | Purpose |
 |------|-------|---------|
+| Instructions | `/instructions` | How to use the site — a short "getting started" / how-to guide |
 | About | `/about` | What this project is and who made it |
 | Contact | `/contact` | How to get in touch |
 | Privacy | `/privacy` | What data is (and isn't) collected |
+
+### ⚙️ Helper actions  *(not pages — no template)*
+These routes do a job and redirect or return data; they don't render a page of their own.
+
+| Action | Route | What it does |
+|--------|-------|--------------|
+| Set gender | `/set-gender/<gender>` | Saves the learner's gender preference (male/female/neutral) so gendered Thai shows correctly; used by the toggle on the Gender Guide |
+| Developer logout | `/developer-logout` | Ends the developer test session |
+
+> **Also present:** a layer of **JSON API routes** under `/api/...` (quizzes, answer-checking, points/XP, user stats, and the six AI-tutor endpoints). These feed the interactive pages behind the scenes — they aren't pages a visitor browses to, so they live in `ARCHITECTURE.md` rather than this content outline.
 
 ---
 
@@ -106,3 +119,5 @@ A shared **sidebar** lists these sub-pages; a shared **right column** offers dic
 ---
 
 *This outline is a living document — update it whenever a page's job or content changes.*
+
+*Last reconciled against the live routes in `app.py` on **6 June 2026** — added Language Register, Instructions, the subscribe success/cancel flow, and the helper-actions note.*
