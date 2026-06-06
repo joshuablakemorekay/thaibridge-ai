@@ -5481,6 +5481,20 @@ def _ts_to_dt(unix_ts):
     return datetime.utcfromtimestamp(int(unix_ts))
 
 
+def _subscription_period_end(sub):
+    """Read a subscription's current-period-end as a datetime.
+
+    Newer Stripe API versions moved `current_period_end` OFF the Subscription
+    object and onto each subscription item, so we look on the first item first
+    and fall back to the old top-level field for older API versions.
+    """
+    items = (sub.get('items') or {}).get('data') or []
+    ts = items[0].get('current_period_end') if items else None
+    if not ts:
+        ts = sub.get('current_period_end')
+    return _ts_to_dt(ts)
+
+
 def _find_user_for_stripe(user_id=None, subscription_id=None, customer_id=None):
     """Find the User a Stripe event refers to, trying the most reliable id first."""
     if user_id:
@@ -5556,7 +5570,7 @@ def _sync_checkout_session(cs):
         try:
             sub = stripe.Subscription.retrieve(sub_id)
             status = sub.get('status', 'active')
-            period_end = _ts_to_dt(sub.get('current_period_end'))
+            period_end = _subscription_period_end(sub)
         except Exception:
             app.logger.exception("Could not retrieve subscription %s", sub_id)
 
@@ -5584,7 +5598,7 @@ def _sync_subscription_object(sub):
                         status=sub.get('status', 'canceled'),
                         customer_id=sub.get('customer'),
                         subscription_id=sub.get('id'),
-                        current_period_end=_ts_to_dt(sub.get('current_period_end')))
+                        current_period_end=_subscription_period_end(sub))
     app.logger.info("Subscription %s for user %s -> %s",
                     sub.get('id'), user.id, sub.get('status'))
     return user
@@ -5603,7 +5617,7 @@ def _sync_invoice_paid(invoice):
         try:
             sub = stripe.Subscription.retrieve(sub_id)
             status = sub.get('status', 'active')
-            period_end = _ts_to_dt(sub.get('current_period_end'))
+            period_end = _subscription_period_end(sub)
         except Exception:
             app.logger.exception("Could not retrieve subscription %s", sub_id)
 
