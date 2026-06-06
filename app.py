@@ -122,11 +122,35 @@ class User(UserMixin, db.Model):
     password_hash = db.Column(db.String(256), nullable=False)
     created_at    = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
 
+    # --- Subscription / billing (the database is the source of truth) ---
+    # These are written by the Stripe webhook (Phase 3), NOT by the browser.
+    subscription_tier      = db.Column(db.String(20), default='free', nullable=False)   # 'free' | 'basic' | 'pro'
+    subscription_status    = db.Column(db.String(20), default='inactive', nullable=False)  # Stripe status, e.g. 'active', 'canceled', 'past_due'
+    stripe_customer_id     = db.Column(db.String(64), index=True)   # 'cus_...' — links this user to Stripe
+    stripe_subscription_id = db.Column(db.String(64), index=True)   # 'sub_...' — the active subscription, if any
+    current_period_end     = db.Column(db.DateTime)                 # when the paid period runs out (renewal/expiry)
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+
+    @property
+    def effective_tier(self):
+        """The tier this user should actually get RIGHT NOW.
+
+        A paid tier only counts while the subscription is active and the paid
+        period hasn't run out — otherwise they fall back to 'free'. This is the
+        single rule Phase 4 will use to gate access, so it lives on the model.
+        """
+        if self.subscription_tier == 'free':
+            return 'free'
+        if self.subscription_status not in ('active', 'trialing'):
+            return 'free'
+        if self.current_period_end is not None and self.current_period_end < datetime.utcnow():
+            return 'free'
+        return self.subscription_tier
 
 with app.app_context():
     db.create_all()
