@@ -5715,6 +5715,39 @@ def subscribe_cancel():
     return render_template('subscription_cancel.html')
 
 
+@app.route('/subscribe/cancel-subscription', methods=['POST'])
+@login_required
+def cancel_subscription():
+    """Let a logged-in user cancel their own paid Stripe subscription.
+
+    We cancel it immediately in Stripe. Stripe then fires
+    customer.subscription.deleted, which the webhook turns into a downgrade — but
+    we also write that downgrade to the database here (safe to do twice) so the
+    change shows up straight away, without waiting for the webhook to arrive.
+
+    To instead let the user keep access until the period they've already paid for
+    runs out, swap the cancel call for:
+        stripe.Subscription.modify(sub_id, cancel_at_period_end=True)
+    """
+    sub_id = current_user.stripe_subscription_id
+    if not sub_id or not stripe.api_key:
+        # Nothing to cancel via Stripe (free tier, or a one-off PayPal grant).
+        return redirect('/progress')
+
+    try:
+        stripe.Subscription.cancel(sub_id)
+    except Exception:
+        app.logger.exception("Failed to cancel subscription %s", sub_id)
+        return redirect('/progress')
+
+    # Mark them canceled now (the webhook will also do this — both are idempotent).
+    _apply_subscription(current_user, tier=current_user.subscription_tier,
+                        status='canceled')
+    _mirror_tier_to_session(current_user)
+    app.logger.info("User %s cancelled subscription %s", current_user.id, sub_id)
+    return redirect('/progress')
+
+
 @app.route('/stripe/webhook', methods=['POST'])
 def stripe_webhook():
     """Receive events from Stripe (server-to-server) — the SOURCE OF TRUTH.
