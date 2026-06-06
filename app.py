@@ -386,12 +386,23 @@ def get_xp_for_next_level(current_level):
         return None
     return XP_LEVELS[current_level + 1]
 
+def active_tier():
+    """The subscription tier to enforce RIGHT NOW — the single source of truth.
+
+    For a logged-in user this comes from the DATABASE (User.effective_tier,
+    which already accounts for expiry and cancellation). For an anonymous
+    visitor we fall back to the session (which is 'free' by default).
+    """
+    if current_user.is_authenticated:
+        return current_user.effective_tier
+    return session.get('user_progress', {}).get('subscription_tier', 'free')
+
 def add_xp(points, action_description=""):
     """Add XP to user and check for level up"""
     init_user_progress()
     user = session['user_progress']
-    
-    tier = user['subscription_tier']
+
+    tier = active_tier()
     multiplier = SUBSCRIPTION_TIERS[tier].get('points_multiplier', 1)
     points = int(points * multiplier)
     
@@ -434,10 +445,10 @@ def check_section_access(section_id):
     if user['level'] < requirements['level']:
         return False, f"Requires Level {requirements['level']}"
     
-    # Check subscription tier
+    # Check subscription tier (read from the DB for logged-in users)
     required_tier = requirements['tier']
-    user_tier = user['subscription_tier']
-    
+    user_tier = active_tier()
+
     tier_hierarchy = {'free': 0, 'basic': 1, 'pro': 2}
     
     if tier_hierarchy[user_tier] < tier_hierarchy[required_tier]:
@@ -4915,10 +4926,9 @@ def dictionary():
 @app.route('/premium')
 def premium():
     init_user_progress()
-    current_tier = session['user_progress'].get('subscription_tier', 'free')
     return render_template('premium.html',
                            tiers=SUBSCRIPTION_TIERS,
-                           current_tier=current_tier)
+                           current_tier=active_tier())
 
 
 @app.route('/about')
@@ -5730,7 +5740,7 @@ def user_stats():
     return jsonify({
         'xp': user['xp'],
         'level': user['level'],
-        'tier': user['subscription_tier'],
+        'tier': active_tier(),
         'is_developer': user.get('is_developer', False),
         'quizzes_completed': user['quizzes_completed'],
         'accuracy': round(accuracy, 1),
