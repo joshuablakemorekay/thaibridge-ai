@@ -29,8 +29,11 @@ From `requirements.txt`:
 - **Flask 3.1** — the web framework (the toolkit that gives the project its web-page structure)
 - **Flask-SQLAlchemy** — talks to the database in Python instead of raw SQL
 - **SQLite** — a tiny file-based database (one `.db` file, no separate database server needed)
+- **Flask-Login** — keeps track of who is logged in across requests (real sign-in/sign-out)
 - **Werkzeug** — used here to hash passwords safely (turn a password into scrambled text that can't be reversed)
 - **anthropic** — the official Claude SDK (the library that lets the app talk to Claude)
+- **stripe** — the Stripe SDK for taking subscription payments (test mode)
+- **httpx** — used to talk to PayPal's REST API directly (second payment option)
 - **python-dotenv** — loads secret settings from a `.env` file
 - **pytest** — the testing tool
 
@@ -98,8 +101,12 @@ This single file holds the entire web app. It's organised top-to-bottom roughly 
 
 1. **Setup & secrets** — loads `.env`, creates the Flask app, and *fails fast* if the
    API key or secret key is missing (it raises an error rather than running half-broken).
-2. **Database config + `User` model** — one table, `users`, with `id`, `username`,
-   `email`, `password_hash`, `created_at`, plus helpers to set and check passwords safely.
+2. **Database config + `User` model** — one table, `users`. Identity columns
+   (`id`, `username`, `email`, `password_hash`, `created_at`) plus **subscription
+   columns** (`subscription_tier`, `subscription_status`, `stripe_customer_id`,
+   `stripe_subscription_id`, `current_period_end`). It also has a `effective_tier`
+   property — the one rule that decides what a user gets *right now* (a paid tier
+   only counts while active and not expired). Helpers set/check passwords safely.
 3. **Gamification & subscription rules** — the level thresholds, point rewards,
    achievements, section-unlock requirements, and subscription tiers (all explained below).
 4. **Learning content** — large Python dictionaries holding vocabulary, gendered/formal
@@ -204,11 +211,13 @@ The app is built like a game: you earn points, level up, and unlock content.
   first**. The alphabet is the gateway to the rest of the app.
 - The `require_access()` decorator enforces these rules on protected routes.
 
-**Where progress is stored:** mostly in the **Flask session** (a small bag of data tied
-to the user's browser), under `user_progress` — *not* in the database. The database only
-holds user accounts. This keeps things simple, but it means progress is tied to the
-browser session rather than synced across devices — a known trade-off and a candidate
-for future improvement.
+**Where things are stored:**
+- **Subscriptions live in the database** (on the `User` row) — this is the source of
+  truth, written by the Stripe webhook. A tampered session cookie cannot grant paid
+  access; access is always checked against the DB via `active_tier()`.
+- **Learning progress** (XP, level, unlocked sections) still lives in the **Flask
+  session** (`user_progress`), tied to the browser rather than synced across devices —
+  a known trade-off and the next obvious thing to move into the database.
 
 ## Subscription tiers
 
@@ -220,8 +229,23 @@ Three tiers are defined (`SUBSCRIPTION_TIERS`):
 | `basic` | Buddhist Scholar | $9.99 | + Theravada teachings, meditation timer, Levels 6–7, 2× points |
 | `pro` | Thai Master | $19.99 | + Full dictionary, premium AI tools, Levels 8–10, 3× points |
 
-These power the `/premium` and `/subscribe/<tier>` pages. (Note: this is the *content-
-gating* model — there's no real payment processor wired in.)
+These power the `/premium` and `/subscribe/<tier>` pages.
+
+**How a subscription actually flows (production-style):**
+1. A logged-in user picks a tier → `/subscribe/<tier>/stripe` creates a Stripe
+   Checkout session, tagged with their `user_id` (so we know whose payment it is).
+2. They pay on Stripe (test mode), then Stripe calls our **webhook**
+   (`/stripe/webhook`) server-to-server. The webhook verifies the signature and is
+   the **source of truth** — it writes the tier, status, Stripe ids and the
+   period-end date onto the `User` row.
+3. The webhook also handles **renewals** (`invoice.paid` pushes the period out) and
+   **cancellations** (`customer.subscription.deleted` flips the status, so
+   `effective_tier` drops the user back to free).
+4. PayPal is offered as a second option; since this demo doesn't use PayPal's
+   recurring billing, a PayPal payment is recorded as a 30-day access grant.
+
+(Test mode only — no real money moves. To go live you'd swap in live Stripe/PayPal
+keys and move off SQLite, see the README's deploy notes.)
 
 ## Developer mode
 
@@ -239,6 +263,11 @@ developing. `/developer-logout` ends it.
   code and into an environment variable.)
 - **Passwords are hashed** with Werkzeug before being stored — the raw password is never
   saved.
+- **Sign-in is handled by Flask-Login** — only the user's id is kept in the signed
+  session cookie; the full account is loaded from the database each request.
+- **Subscriptions are verified server-side** — the Stripe webhook checks the event
+  signature, and paid access is read from the database, never from the cookie, so a
+  user can't edit a cookie to unlock paid content.
 - `.env`, the database file, and other local artifacts are kept out of git via `.gitignore`.
 
 ---
@@ -262,5 +291,9 @@ developing. `/developer-logout` ends it.
 
 1. **Split `app.py`** into `models.py`, `content/`, `gamification.py`, and `routes/`.
 2. **Resolve `new_routes.py`** — fold it into `app.py` and delete it, or clearly mark it as a drafting pad.
-3. **Move learning progress into the database** so it survives across devices and sessions.
+3. **Move learning progress into the database** so it survives across devices and sessions
+   (subscriptions already live there — progress is the remaining session-only piece).
 4. **Decide on the deleted `data/yaitron_dictionary.tsv`** before committing that change.
+5. **Before going live:** add Flask-Migrate (so schema changes don't need a DB wipe) and
+   move off SQLite to a persistent database (e.g. Postgres) — Render's free disk is
+   ephemeral, so SQLite there would lose data on redeploy.
