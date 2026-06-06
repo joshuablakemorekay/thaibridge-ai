@@ -1,16 +1,98 @@
 {% extends "base.html" %}
 
-{% block title %}Plans & Pricing - ThaiBridge AI{% endblock %}
+{% block title %}Premium AI Learning - Plans & Pricing{% endblock %}
 
 {% block content %}
 <h1 style="text-align:center;">
-    ⭐ Plans &amp; Pricing
-    <span class="thai">แผนและราคา</span>
+    🌟 Premium AI Learning
+    <span class="thai">ระบบเรียนรู้ AI พรีเมียม</span>
 </h1>
 
 <p style="text-align:center; color:#666; max-width:640px; margin:0 auto 2.5rem;">
-    Start free and upgrade whenever you're ready. Paid plans unlock more content,
-    the AI tools and a points multiplier.
+    Learn Thai with an AI tutor by your side. Start free and upgrade whenever
+    you're ready — paid plans unlock more content, the premium AI tools and a
+    points multiplier.
+</p>
+
+<!-- ============================================================
+     FEATURE SHOWCASE — what you get (live now) + what's coming
+     ============================================================ -->
+<h2 style="text-align:center; color:var(--royal-purple); margin-bottom:0.4rem;">
+    🎯 What you unlock
+</h2>
+<p style="text-align:center; color:#888; font-size:0.92rem; margin:0 auto 1.8rem;">
+    Powered by Claude — built to help foreign monks and expats learn Thai effectively.
+</p>
+
+<div class="feature-grid">
+    <!-- ---- Available now ---- -->
+    <div class="feature-card">
+        <span class="feat-badge is-live">Available now</span>
+        <h4>🤖 AI Conversation Partner</h4>
+        <p>Practise real conversations in Thai with an AI that adapts to your
+           level and gives instant, friendly feedback.</p>
+    </div>
+
+    <div class="feature-card">
+        <span class="feat-badge is-live">Available now</span>
+        <h4>🎓 Personal AI Tutor</h4>
+        <p>Ask anything about Thai — grammar, vocabulary, tones — and get clear,
+           beginner-friendly explanations on demand.</p>
+    </div>
+
+    <div class="feature-card">
+        <span class="feat-badge is-live">Available now</span>
+        <h4>📝 AI Exercise Generator</h4>
+        <p>The AI creates fresh practice exercises tailored to what you're
+           studying, so you never run out of material.</p>
+    </div>
+
+    <div class="feature-card">
+        <span class="feat-badge is-live">Available now</span>
+        <h4>🏯 Culture &amp; Dhamma Q&amp;A</h4>
+        <p>Ask the AI about Thai culture and Theravada Buddhism — context that
+           makes the language make sense.</p>
+    </div>
+
+    <!-- ---- Coming soon ---- -->
+    <div class="feature-card">
+        <span class="feat-badge is-soon">Coming soon</span>
+        <h4>📊 Personalized Learning Path (IEP)</h4>
+        <p>An individualized curriculum built around your goals, progress and
+           learning style — like an IEP for language learning.</p>
+    </div>
+
+    <div class="feature-card">
+        <span class="feat-badge is-soon">Coming soon</span>
+        <h4>🎤 Pronunciation Analysis</h4>
+        <p>AI-powered tone and pronunciation feedback to help you perfect your
+           spoken Thai.</p>
+    </div>
+
+    <div class="feature-card">
+        <span class="feat-badge is-soon">Coming soon</span>
+        <h4>🎧 Listening Exercises</h4>
+        <p>Native-speaker audio with comprehension quizzes and adjustable
+           playback speed.</p>
+    </div>
+
+    <div class="feature-card">
+        <span class="feat-badge is-soon">Coming soon</span>
+        <h4>✍️ Writing Practice</h4>
+        <p>Learn Thai script with guided practice and instant correction as you
+           write.</p>
+    </div>
+</div>
+
+<!-- ============================================================
+     PLANS & PRICING — the working subscription feature
+     ============================================================ -->
+<h2 style="text-align:center; color:var(--royal-purple); margin:3rem 0 0.4rem;">
+    ⭐ Plans &amp; Pricing
+    <span class="thai">แผนและราคา</span>
+</h2>
+<p style="text-align:center; color:#888; font-size:0.92rem; margin:0 auto 1.8rem;">
+    Pick the plan that fits where you are on the path.
 </p>
 
 <div class="pricing-grid">
@@ -50,7 +132,78 @@
     no real money is charged. You'll choose your payment method after picking a plan.
 </p>
 
+<!-- ============================================================
+     MISSION — why this project exists
+     ============================================================ -->
+<div class="card" style="text-align:center; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); margin-top:2.5rem;">
+    <h2 style="margin-top:0; color:#1976D2;">🪷 Our Mission</h2>
+    <p style="max-width:620px; margin:0 auto; color:#444;">
+        ThaiBridge AI is designed to help foreign monks and expats learn Thai
+        effectively — blending language, culture and Dhamma so the words you
+        learn carry real meaning.
+    </p>
+</div>
+
 <style>
+    /* ---- Feature showcase ---- */
+    .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        position: relative;
+        background: var(--silk-ivory, #fffdf7);
+        border: 2px solid #eadfca;
+        border-radius: 16px;
+        padding: 1.5rem 1.25rem 1.25rem;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 9px 26px rgba(0,0,0,0.11);
+    }
+
+    .feature-card h4 {
+        margin: 0.6rem 0 0.4rem;
+        color: var(--royal-purple);
+        font-size: 1.08rem;
+    }
+
+    .feature-card p {
+        margin: 0;
+        color: #555;
+        font-size: 0.92rem;
+        line-height: 1.5;
+    }
+
+    /* Status badges */
+    .feat-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 10px;
+    }
+
+    .feat-badge.is-live {
+        background: var(--bodhi-green, #6b8e23);
+        color: #fff;
+    }
+
+    .feat-badge.is-soon {
+        background: #efe6cc;
+        color: #8a6d1b;
+    }
+
+    /* ---- Pricing grid ---- */
     .pricing-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
