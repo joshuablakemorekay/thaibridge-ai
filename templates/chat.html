@@ -514,6 +514,7 @@
                 </span>
             </button>
         </div>
+        <div id="limit-hint" class="limit-hint" style="display:none;"></div>
     </div>
 
     <div class="chat-body" id="chat-messages">
@@ -574,14 +575,61 @@
     </div>
 </div>
 
+<style>
+    /* Free-taste hint under the mode buttons */
+    .limit-hint {
+        margin: 0.75rem auto 0;
+        padding: 0.5rem 0.9rem;
+        background: #fff8e1;
+        border: 1px solid #e6cf8a;
+        border-radius: 10px;
+        color: #6b5300;
+        font-size: 0.9rem;
+        text-align: center;
+        max-width: 520px;
+    }
+    .limit-hint a { color: #1976D2; font-weight: 700; text-decoration: none; }
+
+    /* Pro-only mode buttons appear locked for free & basic users */
+    .mode-btn.mode-locked { opacity: 0.5; }
+    .mode-btn.mode-locked::after {
+        content: " 🔒";
+        font-size: 0.85em;
+    }
+
+    /* Friendly upgrade prompt shown in the chat when a limit is hit */
+    .upgrade-note {
+        text-align: center;
+        margin: 0.75rem auto;
+        padding: 0.85rem 1rem;
+        max-width: 90%;
+        background: #fff8e1;
+        border: 1px solid #e6cf8a;
+        border-radius: 12px;
+        color: #6b5300;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    .upgrade-note a { color: #1976D2; font-weight: 700; text-decoration: none; }
+</style>
+
 <script>
-    let currentMode = 'conversation';
+    // Injected by the /chat route — tells the UI this visitor's AI access.
+    const AI_LIMITS = {{ ai_limits | tojson }};
+    // Pro starts on Conversation; free & basic start on the one mode they can use.
+    let currentMode = AI_LIMITS.unlimited ? 'conversation' : 'tutor';
     let sessionId = 'session_' + Date.now();
     let totalTokens = 0;
     
     function switchMode(mode) {
+        // Free & Basic can only use the allowed mode(s); the rest are Pro-only.
+        if (!AI_LIMITS.unlimited && !AI_LIMITS.allowed_modes.includes(mode)) {
+            showUpgradeNote("🔒 That AI mode is a Pro feature. Upgrade to unlock "
+                + "Conversation, Culture, Dhamma and the Exercise Generator.");
+            return;
+        }
         currentMode = mode;
-        
+
         // Update button states
         document.querySelectorAll('.mode-btn').forEach(btn => {
             btn.classList.remove('active');
@@ -647,12 +695,24 @@
             
             if (data.success) {
                 addMessage('assistant', data.response);
-                
+
                 // Update token counter
                 if (data.tokens_used) {
                     totalTokens += data.tokens_used.input + data.tokens_used.output;
-                    document.getElementById('token-display').textContent = 
+                    document.getElementById('token-display').textContent =
                         `Session tokens: ${totalTokens.toLocaleString()}`;
+                }
+                // Server tells free/basic users how many messages they have left
+                if (typeof data.remaining === 'number') {
+                    AI_LIMITS.remaining = data.remaining;
+                    updateLimitHint();
+                }
+            } else if (data.gate) {
+                // Hit a freemium limit — show a friendly upgrade prompt, not an error
+                showUpgradeNote(data.message);
+                if (data.gate === 'daily_limit') {
+                    AI_LIMITS.remaining = 0;
+                    updateLimitHint();
                 }
             } else {
                 addMessage('system', `Error: ${data.message}`);
@@ -761,9 +821,49 @@
         URL.revokeObjectURL(url);
     }
     
-    // Focus input on load
+    // ---- Freemium UI helpers ----
+    function updateLimitHint() {
+        const hint = document.getElementById('limit-hint');
+        if (!hint || AI_LIMITS.unlimited) return;
+        const left = AI_LIMITS.remaining;
+        if (left > 0) {
+            hint.innerHTML = `🎁 Free taste: <strong>${left}</strong> AI message${left === 1 ? '' : 's'} left today · `
+                + `<a href="/premium">Go Pro for unlimited →</a>`;
+        } else {
+            hint.innerHTML = `🔒 You’ve used today’s free AI messages · `
+                + `<a href="/premium">Upgrade to Pro for unlimited →</a>`;
+        }
+        hint.style.display = 'block';
+    }
+
+    function showUpgradeNote(text) {
+        const chatBody = document.getElementById('chat-messages');
+        const note = document.createElement('div');
+        note.className = 'upgrade-note';
+        note.innerHTML = `${text} <a href="/premium">See Pro plans →</a>`;
+        chatBody.appendChild(note);
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+
+    function initAiLimits() {
+        if (AI_LIMITS.unlimited) return;
+        // Visually lock the Pro-only mode buttons and activate the allowed one.
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            const m = btn.getAttribute('data-mode');
+            if (AI_LIMITS.allowed_modes.includes(m)) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+                btn.classList.add('mode-locked');
+            }
+        });
+        updateLimitHint();
+    }
+
+    // Focus input on load + apply freemium limits
     window.addEventListener('load', () => {
         document.getElementById('user-input').focus();
+        initAiLimits();
     });
 </script>
 {% endblock %}
