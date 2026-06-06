@@ -397,6 +397,44 @@ def active_tier():
         return current_user.effective_tier
     return session.get('user_progress', {}).get('subscription_tier', 'free')
 
+# ============================================
+# FREEMIUM AI LIMITS
+# ============================================
+# Free & Basic tiers get a "taste" of the AI: the Tutor mode only, capped at a
+# few messages per day. Pro unlocks every mode with no cap. The daily counter
+# lives in the SESSION (not the DB) on purpose — it needs no schema change and
+# also works for logged-out visitors. It's a soft limit (a determined user could
+# clear cookies to reset it), which is fine for a portfolio/demo app.
+FREE_AI_DAILY_LIMIT = 5             # messages/day for free & basic tiers
+FREE_AI_ALLOWED_MODES = {'tutor'}   # the only AI mode free & basic can use
+
+def _ai_usage_today():
+    """Return today's AI-usage record from the session, resetting at midnight."""
+    today = datetime.now().strftime('%Y-%m-%d')
+    usage = session.get('ai_usage')
+    if not usage or usage.get('date') != today:
+        usage = {'date': today, 'count': 0}
+        session['ai_usage'] = usage
+    return usage
+
+def ai_limits_status():
+    """Describe the current visitor's AI access — used by both the template and
+    the API gate so the two never disagree."""
+    tier = active_tier()
+    if tier == 'pro':
+        return {
+            'tier': tier, 'unlimited': True, 'allowed_modes': None,
+            'daily_limit': None, 'used_today': 0, 'remaining': None,
+        }
+    used = _ai_usage_today()['count']
+    return {
+        'tier': tier, 'unlimited': False,
+        'allowed_modes': sorted(FREE_AI_ALLOWED_MODES),
+        'daily_limit': FREE_AI_DAILY_LIMIT,
+        'used_today': used,
+        'remaining': max(0, FREE_AI_DAILY_LIMIT - used),
+    }
+
 def add_xp(points, action_description=""):
     """Add XP to user and check for level up"""
     init_user_progress()
@@ -5803,10 +5841,10 @@ def complete_alphabet():
 def chat():
     """AI Chat interface"""
     if not ai_agent:
-        return render_template('error.html', 
+        return render_template('error.html',
                              message='AI Agent not available',
                              details='Please check setup instructions')
-    return render_template('chat.html')
+    return render_template('chat.html', ai_limits=ai_limits_status())
 
 @app.route('/api/ai/chat', methods=['POST'])
 def ai_chat():
@@ -5821,7 +5859,27 @@ def ai_chat():
         message = data.get('message', '')
         mode = data.get('mode', 'conversation')
         session_id = session.get('session_id', 'session_' + str(datetime.now().timestamp()))
-        
+
+        # --- Freemium gate: Pro is unlimited; free & basic get a taste ---
+        tier = active_tier()
+        if tier != 'pro':
+            if mode not in FREE_AI_ALLOWED_MODES:
+                return jsonify({
+                    'success': False,
+                    'gate': 'mode_locked',
+                    'message': "This AI mode is a Pro feature. Free and Basic plans "
+                               "include the Tutor mode — upgrade to Pro to unlock "
+                               "Conversation, Culture, Dhamma and the Exercise Generator.",
+                })
+            usage = _ai_usage_today()
+            if usage['count'] >= FREE_AI_DAILY_LIMIT:
+                return jsonify({
+                    'success': False,
+                    'gate': 'daily_limit',
+                    'message': f"You’ve used your {FREE_AI_DAILY_LIMIT} free AI messages "
+                               "for today. Upgrade to Pro for unlimited AI, or come back tomorrow.",
+                })
+
         # Get user context from session
         user_context = {
             'level': session.get('level', 1),
@@ -5838,7 +5896,16 @@ def ai_chat():
             user_context=user_context,
             max_tokens=500
         )
-        
+
+        # Count this message against the daily taste for free & basic users,
+        # and tell the UI how many they have left.
+        if tier != 'pro' and isinstance(response, dict) and response.get('success'):
+            usage = _ai_usage_today()
+            usage['count'] += 1
+            session['ai_usage'] = usage
+            session.modified = True
+            response['remaining'] = max(0, FREE_AI_DAILY_LIMIT - usage['count'])
+
         return jsonify(response)
         
     except Exception as e:
