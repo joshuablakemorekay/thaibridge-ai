@@ -4,6 +4,35 @@ This is the honest record of building my **first web app** — a Thai language a
 
 ---
 
+## 6 June 2026 — Taking a real test payment with Stripe (and fixing a renewal-date bug)
+
+**Type:** Milestone
+
+**TL;DR:**
+- Took my **first real test-card payment** through Stripe Checkout, end to end.
+- Confirmed the webhook (Stripe's server messaging mine) flips the user to a paid plan in the database.
+- Fixed a real bug: the subscription's renewal date wasn't being saved.
+
+**What I built or did**
+I set up local Stripe testing — the Stripe command-line tool and its webhook forwarder (which relays Stripe's "payment happened" messages to my app) — then paid with the test card `4242 4242 4242 4242`. It activated a real subscription in my database, with a genuine Stripe customer and subscription id attached.
+
+**Why I did it this way**
+The webhook is the trustworthy source of truth: a browser redirect can be faked, but a signed server-to-server message can't. Testing it locally proves the whole flow before going live.
+
+**How We Did It**
+Confirmed the right folder/branch → fixed an env-var name (`FLASK_SECRET_KEY`) that blocked startup → installed the `stripe` library and command-line tool → forwarded webhook events to `/stripe/webhook` → made a real test payment → verified the database flipped to paid → fixed the renewal-date bug → re-tested.
+
+**What this means for the app**
+Paid subscriptions now genuinely work and are safely recorded — the last blocker before going live.
+
+**What I learned**
+APIs change: Stripe moved the renewal date onto each subscription *item*, so my code was reading an empty field. The bigger lesson — **a "200 OK" doesn't prove it worked**; only checking the actual database caught both the missing date and the fact my browser first hit a stale tab.
+
+**References / Conversations**
+This Claude Code session; the `_subscription_period_end` helper in `app.py`.
+
+---
+
 ## 5 June 2026 — Finishing the wireframe layout, a clean rename, and shipping payments
 
 **Type:** Milestone
