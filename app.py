@@ -5745,7 +5745,15 @@ def cancel_subscription():
                         status='canceled')
     _mirror_tier_to_session(current_user)
     app.logger.info("User %s cancelled subscription %s", current_user.id, sub_id)
-    return redirect('/progress')
+    # Send them to a warm goodbye page (PRG pattern: redirect after the POST).
+    return redirect('/subscription-goodbye')
+
+
+@app.route('/subscription-goodbye')
+@login_required
+def subscription_goodbye():
+    """A friendly 'sorry to see you go' page shown right after cancellation."""
+    return render_template('subscription_goodbye.html')
 
 
 @app.route('/stripe/webhook', methods=['POST'])

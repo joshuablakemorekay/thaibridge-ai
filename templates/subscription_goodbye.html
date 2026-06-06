@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}Subscription Cancelled - ThaiBridge AI{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="goodbye-container">
+        <div class="goodbye-icon">🙏</div>
+        <h1>Sorry to see you go</h1>
+        <p class="lead">
+            Your subscription has been cancelled and you won't be charged again.
+            Thank you so much for supporting ThaiBridge AI — it genuinely means a lot.
+        </p>
+        <p class="metta">May you be happy!</p>
+
+        <div class="action-buttons">
+            <a href="/learn" class="btn btn-primary">Keep learning (free)</a>
+            <a href="/premium" class="btn btn-secondary">View plans</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .goodbye-container {
+        max-width: 600px;
+        margin: 3rem auto;
+        background: white;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+    .goodbye-icon { font-size: 5rem; margin-bottom: 1rem; }
+    .goodbye-container h1 { color: var(--royal-purple); margin-bottom: 0.75rem; }
+    .goodbye-container p { color: #555; font-size: 1.05rem; line-height: 1.6; }
+    .goodbye-container p.lead { font-size: 1.15rem; color: #444; }
+    .goodbye-container p.metta {
+        color: var(--bodhi-green, #6b8e23);
+        font-style: italic;
+        margin-top: 1.5rem;
+    }
+    .action-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+        flex-wrap: wrap;
+    }
+    .btn {
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+    .btn-primary {
+        background: linear-gradient(135deg, var(--royal-purple) 0%, var(--deep-purple) 100%);
+        color: white;
+    }
+    .btn-secondary {
+        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--deep-gold) 100%);
+        color: white;
+    }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+</style>
+{% endblock %}
