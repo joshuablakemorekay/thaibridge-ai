@@ -5267,13 +5267,12 @@ def subscribe(tier):
         return "Invalid tier", 400
 
     init_user_progress()
-    user = session['user_progress']
 
     # Free tier (or "downgrade") needs no payment — apply it straight away.
     if tier == 'free' or SUBSCRIPTION_TIERS[tier]['price'] == 0:
-        user['subscription_tier'] = 'free'
-        user['subscription_expires'] = None
-        session.modified = True
+        _apply_subscription(current_user, tier='free', status='inactive',
+                            current_period_end=None)
+        _mirror_tier_to_session(current_user)
         return render_template('subscription_success.html',
                                tier='free',
                                tier_info=SUBSCRIPTION_TIERS['free'],
@@ -5419,7 +5418,155 @@ def subscribe_paypal(tier):
     return redirect(approve_url, code=303)
 
 
+# ============================================
+# SUBSCRIPTION SYNC HELPERS  (the database is the source of truth)
+# ============================================
+# These translate what Stripe/PayPal tell us into updates on the User row.
+# The Stripe webhook is the authoritative caller (it can't be spoofed); the
+# success-redirect handlers call the same helpers as an idempotent fallback, so
+# things still work in local dev where a webhook may not be wired up.
+
+def _ts_to_dt(unix_ts):
+    """Stripe sends times as unix timestamps; store them as naive UTC datetimes."""
+    if not unix_ts:
+        return None
+    return datetime.utcfromtimestamp(int(unix_ts))
+
+
+def _find_user_for_stripe(user_id=None, subscription_id=None, customer_id=None):
+    """Find the User a Stripe event refers to, trying the most reliable id first."""
+    if user_id:
+        u = db.session.get(User, int(user_id))
+        if u:
+            return u
+    if subscription_id:
+        u = User.query.filter_by(stripe_subscription_id=subscription_id).first()
+        if u:
+            return u
+    if customer_id:
+        u = User.query.filter_by(stripe_customer_id=customer_id).first()
+        if u:
+            return u
+    return None
+
+
+def _mirror_tier_to_session(user):
+    """Keep the session's gamification copy in step with the DB.
+
+    (Phase 4 will make the whole app read the tier straight from the DB; until
+    then we mirror it so points multipliers and unlocks reflect the purchase.)
+    """
+    if 'user_progress' in session:
+        session['user_progress']['subscription_tier'] = user.effective_tier
+        session['user_progress']['subscription_expires'] = (
+            user.current_period_end.isoformat() if user.current_period_end else None
+        )
+        session.modified = True
+
+
+def _apply_subscription(user, *, tier, status, customer_id=None,
+                        subscription_id=None, current_period_end=None):
+    """Write a subscription state onto a user and commit. Safe to call repeatedly."""
+    user.subscription_tier = tier
+    user.subscription_status = status
+    if customer_id:
+        user.stripe_customer_id = customer_id
+    if subscription_id:
+        user.stripe_subscription_id = subscription_id
+    if current_period_end is not None:
+        user.current_period_end = current_period_end
+    try:
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
+        app.logger.exception("Failed to save subscription for user %s", user.id)
+        return False
+    return True
+
+
+def _sync_checkout_session(cs):
+    """A Stripe Checkout finished -> activate the user's tier. Returns the User."""
+    meta = cs.get('metadata') or {}
+    user_id = meta.get('user_id') or cs.get('client_reference_id')
+    tier = meta.get('tier')
+    if not user_id or tier not in SUBSCRIPTION_TIERS:
+        app.logger.warning("Checkout session %s missing user_id/tier", cs.get('id'))
+        return None
+
+    user = _find_user_for_stripe(user_id=user_id,
+                                 customer_id=cs.get('customer'),
+                                 subscription_id=cs.get('subscription'))
+    if not user:
+        app.logger.warning("No user matched checkout session %s", cs.get('id'))
+        return None
+
+    # The Checkout Session doesn't include the period end — read it off the
+    # Subscription it created (this is also where renewals get their dates).
+    status, period_end = 'active', None
+    sub_id = cs.get('subscription')
+    if sub_id and stripe.api_key:
+        try:
+            sub = stripe.Subscription.retrieve(sub_id)
+            status = sub.get('status', 'active')
+            period_end = _ts_to_dt(sub.get('current_period_end'))
+        except Exception:
+            app.logger.exception("Could not retrieve subscription %s", sub_id)
+
+    _apply_subscription(user, tier=tier, status=status,
+                        customer_id=cs.get('customer'),
+                        subscription_id=sub_id, current_period_end=period_end)
+    app.logger.info("Activated tier '%s' for user %s", tier, user.id)
+    return user
+
+
+def _sync_subscription_object(sub):
+    """A customer.subscription.* event -> update status/tier/period (handles
+    cancellations: a deleted/canceled subscription drops the user back to free
+    via User.effective_tier)."""
+    meta = sub.get('metadata') or {}
+    user = _find_user_for_stripe(user_id=meta.get('user_id'),
+                                 subscription_id=sub.get('id'),
+                                 customer_id=sub.get('customer'))
+    if not user:
+        app.logger.warning("No user matched subscription %s", sub.get('id'))
+        return None
+
+    _apply_subscription(user,
+                        tier=meta.get('tier', user.subscription_tier),
+                        status=sub.get('status', 'canceled'),
+                        customer_id=sub.get('customer'),
+                        subscription_id=sub.get('id'),
+                        current_period_end=_ts_to_dt(sub.get('current_period_end')))
+    app.logger.info("Subscription %s for user %s -> %s",
+                    sub.get('id'), user.id, sub.get('status'))
+    return user
+
+
+def _sync_invoice_paid(invoice):
+    """invoice.paid -> a successful monthly renewal. Extend the paid period."""
+    sub_id = invoice.get('subscription')
+    user = _find_user_for_stripe(subscription_id=sub_id,
+                                 customer_id=invoice.get('customer'))
+    if not user:
+        return None
+
+    status, period_end = 'active', None
+    if sub_id and stripe.api_key:
+        try:
+            sub = stripe.Subscription.retrieve(sub_id)
+            status = sub.get('status', 'active')
+            period_end = _ts_to_dt(sub.get('current_period_end'))
+        except Exception:
+            app.logger.exception("Could not retrieve subscription %s", sub_id)
+
+    _apply_subscription(user, tier=user.subscription_tier, status=status,
+                        current_period_end=period_end)
+    app.logger.info("Renewal recorded for user %s (sub %s)", user.id, sub_id)
+    return user
+
+
 @app.route('/paypal/success')
+@login_required
 def paypal_success():
     """PayPal redirects here after the user approves the payment.
 
@@ -5448,11 +5595,13 @@ def paypal_success():
     if result.get('status') != 'COMPLETED':
         return redirect('/subscribe/cancel')
 
-    init_user_progress()
-    user = session['user_progress']
-    expires_dt = datetime.now() + timedelta(days=30)
-    user['subscription_tier'] = tier
-    user['subscription_expires'] = expires_dt.isoformat()
+    # PayPal here is a one-off 30-day access grant (this demo doesn't use PayPal's
+    # recurring billing, so there's no webhook to renew it). We record it on the
+    # user's account — the database, not the cookie, is the source of truth.
+    expires_dt = datetime.utcnow() + timedelta(days=30)
+    _apply_subscription(current_user, tier=tier, status='active',
+                        current_period_end=expires_dt)
+    _mirror_tier_to_session(current_user)
     session.pop('pending_paypal_tier', None)
     session.modified = True
 
@@ -5463,12 +5612,14 @@ def paypal_success():
 
 
 @app.route('/subscribe/success')
+@login_required
 def subscribe_success():
     """Stripe redirects here after a successful test payment.
 
-    We never trust the browser: we re-fetch the Checkout Session from Stripe and
-    only activate the tier if Stripe says it's paid. The authoritative tier comes
-    from the session metadata we set when creating it, not from the URL.
+    The webhook is the real source of truth, but it may not have arrived yet
+    (or may not be configured in local dev), so we also sync here — the sync is
+    idempotent, so running it twice is harmless. We never trust the browser: we
+    re-fetch the Checkout Session from Stripe and only act if Stripe says paid.
     """
     session_id = request.args.get('session_id')
     if not session_id:
@@ -5484,21 +5635,16 @@ def subscribe_success():
     if checkout_session.payment_status not in ('paid', 'no_payment_required'):
         return redirect('/subscribe/cancel')
 
-    tier = (checkout_session.metadata or {}).get('tier')
-    if tier not in SUBSCRIPTION_TIERS:
-        return redirect('/progress')
+    user = _sync_checkout_session(checkout_session) or current_user
+    _mirror_tier_to_session(user)
 
-    init_user_progress()
-    user = session['user_progress']
-    expires_dt = datetime.now() + timedelta(days=30)
-    user['subscription_tier'] = tier
-    user['subscription_expires'] = expires_dt.isoformat()
-    session.modified = True
-
+    expires = (user.current_period_end.strftime('%d %B %Y')
+               if user.current_period_end else None)
     return render_template('subscription_success.html',
-                           tier=tier,
-                           tier_info=SUBSCRIPTION_TIERS[tier],
-                           expires=expires_dt.strftime('%d %B %Y'))
+                           tier=user.subscription_tier,
+                           tier_info=SUBSCRIPTION_TIERS.get(
+                               user.subscription_tier, SUBSCRIPTION_TIERS['free']),
+                           expires=expires)
 
 
 @app.route('/subscribe/cancel')
@@ -5509,15 +5655,18 @@ def subscribe_cancel():
 
 @app.route('/stripe/webhook', methods=['POST'])
 def stripe_webhook():
-    """Receive events from Stripe (server-to-server).
+    """Receive events from Stripe (server-to-server) — the SOURCE OF TRUTH.
 
-    We verify the signature so we know the event really came from Stripe.
+    We verify the signature so we know the event really came from Stripe, then
+    write the result to the database. Unlike the success redirect (which the
+    browser could fake), Stripe calls this directly, so it's the trustworthy
+    place to mark a user paid, renew them, or cancel them.
 
-    IMPORTANT: this demo keeps each user's tier in their browser session (a
-    signed cookie), so there's no per-user record this webhook can update — it
-    verifies and logs the confirmed payment. In a production build with
-    database-backed users, THIS would be the source of truth (it can't be
-    spoofed like the success redirect can), and here you'd mark the user paid.
+    Events handled:
+      • checkout.session.completed     — first payment: activate the tier
+      • invoice.paid                   — monthly renewal: extend the paid period
+      • customer.subscription.updated  — status/plan change
+      • customer.subscription.deleted  — cancellation: drop back to free
     """
     if not STRIPE_WEBHOOK_SECRET:
         app.logger.warning("Stripe webhook hit but STRIPE_WEBHOOK_SECRET is not set")
@@ -5534,13 +5683,21 @@ def stripe_webhook():
         app.logger.warning("Invalid Stripe webhook signature — ignoring")
         return '', 400
 
-    if event['type'] == 'checkout.session.completed':
-        cs = event['data']['object']
-        tier = (cs.get('metadata') or {}).get('tier', 'unknown')
-        app.logger.info(
-            f"Stripe payment confirmed for tier '{tier}' (session {cs.get('id')})"
-        )
+    etype = event['type']
+    obj = event['data']['object']
 
+    if etype == 'checkout.session.completed':
+        _sync_checkout_session(obj)
+    elif etype == 'invoice.paid':
+        _sync_invoice_paid(obj)
+    elif etype in ('customer.subscription.updated',
+                   'customer.subscription.deleted',
+                   'customer.subscription.created'):
+        _sync_subscription_object(obj)
+    else:
+        app.logger.debug("Unhandled Stripe event type: %s", etype)
+
+    # Always 200 so Stripe doesn't keep retrying a handled event.
     return '', 200
 
 @app.route('/api/award_points', methods=['POST'])
