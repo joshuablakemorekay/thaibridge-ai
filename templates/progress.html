@@ -44,6 +44,13 @@
                     Manage Subscription
                 {% endif %}
             </a>
+            {% if current_user.is_authenticated and current_user.stripe_subscription_id and current_user.effective_tier != 'free' %}
+            <form action="/subscribe/cancel-subscription" method="post"
+                  onsubmit="return confirm('Cancel your subscription? You will be moved back to the free plan.');"
+                  style="margin-top:0.75rem;">
+                <button type="submit" class="btn" style="background:#c0392b;color:#fff;">Cancel subscription</button>
+            </form>
+            {% endif %}
         </div>
     </div>
     
