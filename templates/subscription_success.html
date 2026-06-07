@@ -35,7 +35,7 @@
                 {% if tier_info.price == 0 %}
                     Free Forever
                 {% else %}
-                    ${{ tier_info.price }}/month
+                    £{{ tier_info.price }}/month
                 {% endif %}
             </p>
         </div>
@@ -53,7 +53,7 @@
         <div class="subscription-info">
             <h3>📅 Subscription Details:</h3>
             <p><strong>Plan:</strong> {{ tier_info.name }}</p>
-            <p><strong>Price:</strong> ${{ tier_info.price }}/month</p>
+            <p><strong>Price:</strong> £{{ tier_info.price }}/month</p>
             {% if expires %}<p><strong>Next Billing:</strong> {{ expires }}</p>{% endif %}
             <p><strong>Status:</strong> <span class="active-badge">Active</span></p>
         </div>
