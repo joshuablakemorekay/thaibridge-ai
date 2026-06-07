@@ -5193,7 +5193,7 @@ def progress_dashboard():
         level = requirements['level']
         if tier != 'free':
             tier_info = SUBSCRIPTION_TIERS[tier]
-            requirement_message = f"Requires Level {level} + {tier_info['name']} subscription (${tier_info['price']:.2f}/mo)"
+            requirement_message = f"Requires Level {level} + {tier_info['name']} subscription (£{tier_info['price']:.2f}/mo)"
         elif level > 1:
             requirement_message = f"Requires Level {level} to unlock"
         else:
@@ -5366,8 +5366,8 @@ def subscribe_stripe(tier):
         mode='subscription',
         line_items=[{
             'price_data': {
-                'currency': 'usd',
-                'unit_amount': int(round(tier_info['price'] * 100)),  # cents
+                'currency': 'gbp',
+                'unit_amount': int(round(tier_info['price'] * 100)),  # pence
                 'recurring': {'interval': 'month'},
                 'product_data': {
                     'name': f"ThaiBridge AI — {tier_info['name']}",
@@ -5430,7 +5430,7 @@ def subscribe_paypal(tier):
                 "intent": "CAPTURE",
                 "purchase_units": [{
                     "amount": {
-                        "currency_code": "USD",
+                        "currency_code": "GBP",
                         "value": f"{tier_info['price']:.2f}",
                     },
                     "description": f"ThaiBridge AI — {tier_info['name']} (monthly)",
