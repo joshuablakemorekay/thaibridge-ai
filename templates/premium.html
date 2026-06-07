@@ -55,29 +55,29 @@
            makes the language make sense.</p>
     </div>
 
-    <!-- ---- Coming soon ---- -->
-    <div class="feature-card">
+    <!-- ---- Coming soon (display only — greyed out & non-clickable) ---- -->
+    <div class="feature-card is-soon-card">
         <span class="feat-badge is-soon">Coming soon</span>
         <h4>📊 Personalized Learning Path (IEP)</h4>
         <p>An individualized curriculum built around your goals, progress and
            learning style — like an IEP for language learning.</p>
     </div>
 
-    <div class="feature-card">
+    <div class="feature-card is-soon-card">
         <span class="feat-badge is-soon">Coming soon</span>
         <h4>🎤 Pronunciation Analysis</h4>
         <p>AI-powered tone and pronunciation feedback to help you perfect your
            spoken Thai.</p>
     </div>
 
-    <div class="feature-card">
+    <div class="feature-card is-soon-card">
         <span class="feat-badge is-soon">Coming soon</span>
         <h4>🎧 Listening Exercises</h4>
         <p>Native-speaker audio with comprehension quizzes and adjustable
            playback speed.</p>
     </div>
 
-    <div class="feature-card">
+    <div class="feature-card is-soon-card">
         <span class="feat-badge is-soon">Coming soon</span>
         <h4>✍️ Writing Practice</h4>
         <p>Learn Thai script with guided practice and instant correction as you
@@ -134,6 +134,26 @@
 </p>
 
 <!-- ============================================================
+     GENEROSITY — why the Dhamma is free and the AI is Pro
+     ============================================================ -->
+<div class="card" style="text-align:center; background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); margin-top:2.5rem; border-left: 4px solid var(--saffron);">
+    <h2 style="margin-top:0; color:#8a6d1b;">🪷 Why some things are free</h2>
+    <p style="max-width:640px; margin:0 auto; color:#5a4a2a; line-height:1.7;">
+        I value <strong>generosity (<em>dāna</em>)</strong>. The Buddha's teachings were
+        freely given, so the <strong>Theravada Dhamma teachings</strong> and the
+        <strong>meditation timer &amp; techniques</strong> are free for everyone — no
+        account, no subscription, no level required.
+    </p>
+    <p style="max-width:640px; margin:1rem auto 0; color:#5a4a2a; line-height:1.7;">
+        The <strong>AI features</strong> are different: every AI message costs real money
+        to run. So the AI tutoring tools — including the
+        <strong>Culture &amp; Dhamma Q&amp;A</strong> — are a <strong>Pro</strong> product.
+        The teachings are always accessible; the AI assistant is the part you pay for, and
+        it helps keep the whole project running.
+    </p>
+</div>
+
+<!-- ============================================================
      MISSION — why this project exists
      ============================================================ -->
 <div class="card" style="text-align:center; background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%); margin-top:2.5rem;">
@@ -168,6 +188,19 @@
     .feature-card:hover {
         transform: translateY(-3px);
         box-shadow: 0 9px 26px rgba(0,0,0,0.11);
+    }
+
+    /* Coming-soon cards: display only — greyed out, no hover lift, not clickable */
+    .feature-card.is-soon-card {
+        opacity: 0.55;
+        filter: grayscale(35%);
+        pointer-events: none;
+        box-shadow: none;
+    }
+
+    .feature-card.is-soon-card:hover {
+        transform: none;
+        box-shadow: none;
     }
 
     .feature-card h4 {

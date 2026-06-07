@@ -242,9 +242,11 @@ SECTION_REQUIREMENTS = {
     'greetings_wai': {'level': 5, 'tier': 'free', 'points_reward': 30, 'requires_alphabet': True},
     'classifiers': {'level': 5, 'tier': 'free', 'points_reward': 30, 'requires_alphabet': True},
     
-    # Premium Basic sections (Level 6 + Basic subscription) - Requires alphabet
-    'theravada': {'level': 6, 'tier': 'basic', 'points_reward': 40, 'requires_alphabet': True},
-    'meditation': {'level': 6, 'tier': 'basic', 'points_reward': 40, 'requires_alphabet': True},
+    # Buddhist teaching pages - FREE & fully open (the Dhamma is freely given:
+    # no subscription, no level, no alphabet prerequisite). The AI Q&A *about*
+    # the Dhamma stays Pro — that's gated separately in the /api/ai/chat route.
+    'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
+    'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
     
     # Premium Pro sections (Level 8 + Pro subscription) - Requires alphabet
     'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50, 'requires_alphabet': True},
@@ -260,6 +262,8 @@ SUBSCRIPTION_TIERS = {
             '✓ Basic vocabulary (Festivals, Isan, Nature, Formal)',
             '✓ Grammar fundamentals',
             '✓ Cultural information',
+            '✓ Theravada Buddhism teachings',
+            '✓ Meditation timer & techniques',
             '✓ Paiboon romanization guide',
             '✓ Progress tracking',
             '✓ Level 1-5 content',
@@ -271,8 +275,6 @@ SUBSCRIPTION_TIERS = {
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
-            '✓ Theravada Buddhism teachings',
-            '✓ Meditation timer & techniques',
             '✓ Advanced grammar & sentence patterns',
             '✓ Level 6-7 content',
             '✓ 2x points multiplier',
@@ -285,6 +287,8 @@ SUBSCRIPTION_TIERS = {
         'price': 19.99,
         'features': [
             '✓ Everything in Buddhist Scholar',
+            '✓ Unlimited AI chat — all modes',
+            '✓ Culture & Dhamma AI Q&A',
             '✓ Complete dictionary access',
             '✓ Premium AI learning tools',
             '✓ All content unlocked',
