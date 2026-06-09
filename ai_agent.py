@@ -32,7 +32,10 @@ class ThaiLearningAI:
             raise ValueError("ANTHROPIC_API_KEY not found. Please set it in environment or pass to constructor.")
         
         self.client = anthropic.Anthropic(api_key=self.api_key)
-        self.model = "claude-sonnet-4-20250514"  # Latest Sonnet 4
+        # Model is configurable via the AI_MODEL env var. Local dev defaults to
+        # Sonnet (higher quality); the public Render demo sets AI_MODEL to a cheap
+        # Haiku model so visitor messages cost a fraction of a cent (see render.yaml).
+        self.model = os.environ.get("AI_MODEL", "claude-sonnet-4-20250514")
         
         # Conversation history by session
         self.conversations: Dict[str, List[Dict]] = {}

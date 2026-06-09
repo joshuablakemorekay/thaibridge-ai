@@ -29,3 +29,8 @@ services:
       # demo has no guessable "changeme" backdoor.
       - key: DEVELOPER_PASSWORD
         generateValue: true
+
+      # Use the cheap, fast Haiku model on the public demo so visitor AI messages
+      # cost a fraction of a cent. Local dev (no AI_MODEL set) keeps using Sonnet.
+      - key: AI_MODEL
+        value: "claude-haiku-4-5-20251001"
