@@ -251,3 +251,32 @@ The big lesson was spotting that "the teachings" and "the AI about the teachings
 Built in a Claude Code session on 7 June 2026. Tier/teaching changes committed as `ee1f507` on the `rebuild-experiment` branch; the £ currency switch followed.
 
 ---
+
+## 9 June 2026 — Putting ThaiBridge live, with a cost-safe AI link
+
+**Type:** Milestone
+
+**TL;DR:**
+- Put ThaiBridge **live on the public internet** for the first time (Render free tier) — a clickable AI demo for my freelance portfolio.
+- Made the public AI **cost-safe**: cheap Haiku model on the demo, a hard spend ceiling, and the `changeme` backdoor closed.
+- Verified the live AI tutor end-to-end and kept the app warm with a free uptime pinger.
+
+**What I built or did**
+I deployed the `rebuild-experiment` branch to Render with a Blueprint (`render.yaml`), a Linux-safe build script and a pinned Python version, then made the repo public. The public demo runs the cheap Haiku model via an `AI_MODEL` environment variable, while local dev still uses Sonnet. I sent a real message to the live tutor, got a proper Thai answer back, and set UptimeRobot to ping the homepage every 5 minutes so it never sleeps.
+
+**Why I did it this way**
+A live, clickable AI app is far stronger portfolio proof than a private repo. Haiku plus a small prepaid balance with auto-reload off means the public demo can't run up my card.
+
+**How We Did It**
+Checked the app for tracked secrets → wrote the deploy files → smoke-tested the import → pushed and deployed → set a spend limit → switched the public model to Haiku via an env var → tested the live tutor → added the uptime pinger.
+
+**What this means for the app**
+ThaiBridge is now a fast, public, cost-protected demo I can put in front of clients.
+
+**What I learned**
+When the live app flickered with "no-server" errors, the Render logs showed it was just the free tier waking from sleep — not the memory crash I'd feared. Checking the logs beat guessing from outside. And for a public AI demo, "auto-reload off" is the *protective* setting, even though the dashboard nudges you to turn it on.
+
+**References / Conversations**
+This Claude Code session; commits `3ca8fe5` and `72072c4` on `rebuild-experiment`. Live at https://thaibridge-ai.onrender.com.
+
+---
