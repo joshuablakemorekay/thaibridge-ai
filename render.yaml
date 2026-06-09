@@ -1,0 +1,31 @@
+# render.yaml — Render Blueprint for ThaiBridge AI (free tier)
+# Render reads this file automatically when you create a Blueprint from the repo.
+
+services:
+  - type: web
+    name: thaibridge-ai
+    runtime: python
+    plan: free                         # free tier (sleeps after ~15 min idle, wakes in ~30s)
+    region: frankfurt                  # closest region to the UK
+    branch: rebuild-experiment         # the branch where the real app lives
+
+    # Use the helper script so any Windows-only packages can't break the Linux build.
+    buildCommand: "bash ./render-build.sh"
+
+    # app.py contains `app = Flask(__name__)`, so this is correct.
+    startCommand: "gunicorn app:app"
+
+    envVars:
+      # Flask session secret — Render generates a strong random value automatically.
+      - key: FLASK_SECRET_KEY
+        generateValue: true
+
+      # Your Anthropic API key — NOT stored in this file. Render asks you for it
+      # once when you create the Blueprint, then keeps it securely.
+      - key: ANTHROPIC_API_KEY
+        sync: false
+
+      # Developer-mode password — generate a strong random one so the public
+      # demo has no guessable "changeme" backdoor.
+      - key: DEVELOPER_PASSWORD
+        generateValue: true
