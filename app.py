@@ -409,7 +409,7 @@ def active_tier():
 # lives in the SESSION (not the DB) on purpose — it needs no schema change and
 # also works for logged-out visitors. It's a soft limit (a determined user could
 # clear cookies to reset it), which is fine for a portfolio/demo app.
-FREE_AI_DAILY_LIMIT = 5             # messages/day for free & basic tiers
+FREE_AI_DAILY_LIMIT = 15            # messages/day for free & basic tiers
 FREE_AI_ALLOWED_MODES = {'tutor'}   # the only AI mode free & basic can use
 
 def _ai_usage_today():
