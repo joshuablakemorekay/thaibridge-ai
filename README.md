@@ -2,7 +2,7 @@
 
 A web app that teaches Thai through the lens of Thai culture and Buddhism — built as my first web app and a portfolio project.
 
-> **Honest status:** this is a learning project, not a finished product. It runs locally and works, but it isn't deployed or polished for real users yet. The full build story (including the mistakes) is in [`JOURNAL.md`](./JOURNAL.md).
+> **Honest status:** this is a learning project, not a finished product — but it's now **live on the internet** at 👉 **[thaibridge-ai.onrender.com](https://thaibridge-ai.onrender.com)** (hosted free on Render). The full build story (including the mistakes) is in [`JOURNAL.md`](./JOURNAL.md).
 
 ## What It Does
 
@@ -55,6 +55,7 @@ You'll need **Python 3.10+** and a free [Anthropic API key](https://console.anth
 
 The build story, newest first. Full version with lessons learned in [`JOURNAL.md`](./JOURNAL.md).
 
+- **9 Jun 2026 — Live on the internet (with a working AI link).** I deployed ThaiBridge to Render so anyone can visit it at **[thaibridge-ai.onrender.com](https://thaibridge-ai.onrender.com)**, and proved the AI tutor responds live by sending it a real message. I made the public demo **cost-safe** — it runs the cheap **Haiku** model and my Anthropic spend is capped — and added a free uptime pinger so the link loads instantly. **Lesson:** when the live app flickered with errors, the server logs showed it was just the free tier waking from sleep, not the crash I'd feared — checking the logs beat guessing from outside.
 - **6 Jun 2026 — Real Stripe test payment + a renewal-date fix.** I took my first real test-card payment all the way through Stripe Checkout and confirmed the webhook (Stripe's server messaging mine) activated a paid subscription in the database, with a real Stripe customer and subscription attached. Along the way I fixed a bug where the renewal date wasn't being saved — Stripe had moved that field onto the subscription *item* in a newer version of their API. **Lesson:** a "200 OK" doesn't prove it worked — checking the actual database caught both the bug and a stale browser tab that had hijacked my first attempt.
 - **6 Jun 2026 — Real subscription billing service.** I replaced the placeholder paywall with a real system: actual login/logout (Flask-Login), subscription plans stored in the **database** (not a cookie) with the Stripe webhook as the trusted source of truth, a merged premium/pricing page, and a freemium-gated AI tutor (free taste, unlimited on Pro). Checkout was built for both Stripe and PayPal, but only Stripe is configured and verified so far. **Lesson:** pick one source of truth (the database) and keep the access rule in one place, so nothing can be faked from the browser.
 - **5 Jun 2026 — Wireframe layout, rename & payments.** I finished a proper wireframe layout system — four page "shapes" built from a content-first outline — and rolled the 3-column version across the learning pages using reusable partials. I also fixed a database-startup crash, added a Help page, settled the app's display name as **ThaiBridge AI**, and shipped **Stripe + PayPal** subscriptions. **Lesson:** a wireframe is a *planning* tool, not a feature — and "tests pass / 200 OK" proves a page *loads*, not that it *looks right* (eight "broken" pages were actually working paywalls).
@@ -68,7 +69,6 @@ The build story, newest first. Full version with lessons learned in [`JOURNAL.md
 
 ## What's Next
 
-- **Deploy it** — get it online so other people can try it, rather than running only on my machine.
-- **Make it deploy-ready** — add database migrations and move from SQLite to a hosted database (Postgres), so accounts and subscriptions survive on a live server.
+- **Move to a hosted database (Postgres)** — the free host wipes the SQLite file on each restart, so accounts and subscriptions don't survive yet; add database migrations too.
 - **Complete & verify PayPal** — add sandbox credentials and run a real sandbox payment, the same way Stripe was verified.
 - **Switch Stripe to live keys** — the full Stripe test flow now works end-to-end; going live just needs the real keys.
