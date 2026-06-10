@@ -4,6 +4,35 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 10 June 2026 — Polishing the README into a case study and tidying the journal
+
+**Type:** Documentation / Learning
+
+**TL;DR:**
+- Rebuilt the README as a portfolio case study, keeping the screenshots, badges and run steps.
+- Reordered the whole journal into newest-first order without changing a word.
+- Caught myself verifying against a stale local copy — a real lesson in checking the right source.
+
+**What I built or did**
+I reworked the README around a case-study narrative (problem, approach, proof) while keeping the screenshots, badges and run-it-locally steps a repo needs. I reordered JOURNAL.md into newest-first order and rebranded both files to ThaiBridge AI.
+
+**Why I did it this way**
+A case study tells recruiters a stronger story than a plain description, but a README must still show the app and how to run it — so I kept both. I reordered the journal rather than rewriting it, so no honest history was lost.
+
+**How We Did It**
+Compared the two READMEs → verified every number against the code → found my local `main` was 47 commits behind and re-verified against the real code → assembled the case study → reordered the journal with a script → proved the content was identical → renamed throughout.
+
+**What this means for the app**
+The repo now reads as a polished, honest portfolio piece: strong narrative, real screenshots, verified numbers, and a clean chronological build story.
+
+**What I learned**
+Check you're reading the live code, not a stale copy — I "corrected" right numbers into wrong ones until I synced. And reordering beats rewriting: you can tidy a journal without losing the honest record.
+
+**References / Conversations**
+This Claude Code session; PRs #3–#7.
+
+---
+
 ## 10 June 2026 — The rebuild experiment worked: merging it into `main`
 
 **Type:** Milestone
