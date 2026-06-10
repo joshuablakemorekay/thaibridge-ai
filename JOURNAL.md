@@ -1,6 +1,6 @@
 # Build Journal — ThaiBridge AI
 
-This is the honest record of building my **first web app** — a Thai language and culture learning site — mostly with AI help, as a complete beginner. It's a learning project and a portfolio piece, not a finished product. I've kept the wins and the mistakes in, because the mistakes are where I actually learned.
+This is the honest record of building **ThaiBridge AI**, my **first web app** — a Thai language and culture learning site — mostly with AI help, as a complete beginner. It's a learning project and a portfolio piece, not a finished product. I've kept the wins and the mistakes in, because the mistakes are where I actually learned.
 
 ---
 
