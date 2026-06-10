@@ -10,6 +10,8 @@
 ![Stripe](https://img.shields.io/badge/Payments-Stripe-635BFF?logo=stripe&logoColor=white)
 ![Hosted on Render](https://img.shields.io/badge/Hosted_on-Render-46E3B7?logo=render&logoColor=white)
 
+**▶ Try it live: [thaibridge-ai.smoald.com](https://thaibridge-ai.smoald.com)** — or jump straight into the [AI tutor](https://thaibridge-ai.smoald.com/chat). No install needed.
+
 > **Honest status:** this is my **first web app** and a learning project — not a finished commercial product. But it's **live on the internet**, the payments work end-to-end (in test mode), and the AI tutor genuinely teaches. The full build story, mistakes and all, is in [`JOURNAL.md`](./JOURNAL.md).
 
 <p align="center">
@@ -33,8 +35,8 @@
 
 | The learning side | The AI tutor |
 |---|---|
-| <img src="./docs/screenshots/learning-desktop.jpg" alt="The Paiboon Romanization guide with the full learning sidebar" width="100%"> | <img src="./docs/screenshots/ai-tutor.jpg" alt="The AI tutor with its mode buttons and the free-message counter" width="320"> |
-| The Paiboon romanization guide, with the full learning menu down the side. | The AI tutor — pick a mode and chat. Free users see how many messages they have left today. |
+| <img src="./docs/screenshots/learning-desktop.jpg" alt="The Paiboon Romanization guide with the full learning sidebar" width="100%"> | <img src="./docs/screenshots/ai-tutor.jpg" alt="The AI Learning Assistant page with its mode buttons, free-message counter and chat box" width="100%"> |
+| The Paiboon romanization guide, with the full learning menu down the side. | The AI tutor — pick a mode and chat. Free users see how many messages they have left today. **[Try it live →](https://thaibridge-ai.smoald.com/chat)** |
 
 ---
 
