@@ -7,7 +7,7 @@ services:
     runtime: python
     plan: free                         # free tier (sleeps after ~15 min idle, wakes in ~30s)
     region: frankfurt                  # closest region to the UK
-    branch: rebuild-experiment         # the branch where the real app lives
+    branch: main                       # trunk — rebuild-experiment merged into main 2026-06-10
 
     # Use the helper script so any Windows-only packages can't break the Linux build.
     buildCommand: "bash ./render-build.sh"
