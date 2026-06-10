@@ -335,3 +335,24 @@ CSS media queries add no specificity, so a more specific desktop rule beats a mo
 This Claude Code session; sidebar fix committed as `7d90ea0` on `rebuild-experiment`. Live at https://thaibridge-ai.smoald.com.
 
 ---
+
+## 10 June 2026 — The rebuild experiment worked: merging it into `main`
+
+**Type:** Milestone
+
+**What I did**
+**I merged my `rebuild-experiment` branch (a separate copy of the project I'd been working on safely) into `main`.** It had grown to 44 commits ahead — all the big recent work: real login, Stripe billing in £, the free/Pro AI tiers, the live deployment setup, and mobile fixes.
+
+**Why**
+The branch started as a sandbox to try a bigger redesign without risking the original. It's proven itself now, so it's earned its place as the main version.
+
+**How it worked**
+Because `main` had nothing new of its own, git did a clean **fast-forward** (it just slid `main` up to match the rebuild) — no conflicts. I checked afterwards: `main` now matches the rebuild exactly, at commit `31696b0`.
+
+**What it means for the app**
+`main` is the real, current version again. **The live site didn't change** — it still deploys from `rebuild-experiment`, so this was purely tidying up behind the scenes.
+
+**What I learned**
+Merging a long-running branch isn't scary when the target hasn't moved — it's a clean fast-forward. And "merge to main" and "what the server deploys" are two separate switches; I only flipped one.
+
+---
