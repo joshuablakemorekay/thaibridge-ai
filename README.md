@@ -95,6 +95,20 @@ You'll need **Python 3.12** (the live site runs 3.12.8) and a free [Anthropic AP
 
 ---
 
+## 🔍 Results & evidence
+
+This is the part I care about most — not "I built it," but "here's the proof it works."
+
+- **💳 Payments work end-to-end, and I can prove it.** I took a real test-card payment through Stripe Checkout and confirmed the webhook flipped the user to a paid plan **in the database**, with a genuine Stripe customer and subscription ID attached — not just a "success" screen.
+- **🐛 Checking the database caught a real bug.** The payment *looked* fine, but the renewal date was never being saved: Stripe had moved that value onto each subscription *item*, so my code was reading an empty field. I'd never have caught it by trusting the success page — only by inspecting the actual data. Found, fixed, re-tested.
+- **✅ 32 automated tests pass.** The points-and-levels engine is covered by 32 unit tests — level thresholds, the per-plan points multipliers, level-up detection across boundaries, and progress-bar maths. *(Run `python -m pytest tests/ -v` → `32 passed`.)*
+- **📝 The build prompts are tested too.** An evaluation harness checks the ten prompts behind the app's features against written rubrics — **all ten pass at 100%** (see [`prompts/`](./prompts/)).
+- **🔒 It's live, and the AI costs are walled off.** The public demo runs a cheap model, has a hard monthly spend ceiling, a separate API key as a kill switch, a per-visitor daily message cap, and an uptime pinger to keep it warm. A bad day can't run up my card.
+- **📱 It works on any screen.** I audited the layout across seven widths from a 320px phone upward and fixed a CSS specificity bug so every page collapses cleanly to one column — zero sideways scroll, desktop unchanged.
+- **📦 Scale & workflow:** a ~6,100-line Flask app, a ~500-line AI module, 61 routes, ~39 pages, and a real ~5,000-entry English–Thai dictionary. The big recent work landed as a feature branch merged into `main` through a proper pull request with a green automated check.
+
+---
+
 ## 🎓 What I learned
 
 The honest, useful lessons — the full story (newest first) is in [`JOURNAL.md`](./JOURNAL.md):
