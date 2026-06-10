@@ -392,23 +392,47 @@
         .message-content {
             max-width: 85%;
         }
-        
+
         .input-container {
             flex-direction: column;
         }
-        
+
         #send-btn {
             width: 100%;
         }
-        
+
         .mode-selector {
             gap: 0.25rem;
         }
-        
+
         .mode-btn {
             padding: 0.4rem 0.8rem;
             font-size: 0.8rem;
         }
+
+        /* Phones: the purple header was eating most of the first screen and
+           blending into the (same-colour) nav bar. Trim its padding and title,
+           and tighten the welcome block, so the actual chat input is reachable
+           with far less scrolling. */
+        .chat-container { margin: 1rem auto; }
+        .chat-header { padding: 1.1rem 1rem; }
+        .chat-header h1 { font-size: 1.5rem; }
+        .welcome-message { padding: 1.5rem 1rem; }
+        .welcome-message h2 { font-size: 1.4rem; }
+        .welcome-message p {
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: left;        /* centred paragraphs are hard to read on a narrow screen */
+        }
+        .chat-body {
+            min-height: 320px;        /* was 500px — less empty space before the input */
+            padding: 1.25rem;
+        }
+
+        /* Hover tooltips can't be triggered on a touch screen anyway, and a
+           fixed-width one anchored on an edge button pokes off-screen. Hide on
+           phones — the mode buttons are already clearly labelled. */
+        .mode-tooltip { display: none; }
     }
     /* ===== Mode tooltip explanation boxes ===== */
         .mode-btn {
@@ -420,7 +444,8 @@
             top: 120%;
             left: 50%;
             transform: translateX(-50%) translateY(6px);
-            width: 240px;
+            width: max-content;
+            max-width: min(240px, 86vw);   /* never wider than the screen on small phones */
             background: #fdf6e3;          /* cream, matches your theme */
             color: #4a3728;               /* warm brown text */
             border: 2px solid #d4af37;    /* gold trim */

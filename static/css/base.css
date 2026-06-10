@@ -152,13 +152,14 @@
         }
         
         nav .logo {
-            font-size: 1.6rem;
+            font-size: clamp(1.15rem, 0.95rem + 0.9vw, 1.6rem);
             color: var(--royal-gold);
             text-decoration: none;
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 0.5rem;
+            white-space: nowrap;
             /* Simplified text shadow - fewer layers */
             text-shadow: 
                 0 0 3px var(--deep-purple),
@@ -172,12 +173,12 @@
         
         nav .logo::before {
             content: '👑';
-            font-size: 1.8rem;
+            font-size: clamp(1.3rem, 1.0rem + 1.0vw, 1.8rem);
             filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
         }
-        
+
         nav .logo span {
-            font-size: 2.2rem;
+            font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.2rem);
             filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
         }
         
@@ -484,9 +485,13 @@
         }
         
         /* Headers - Royal Thai Elegance */
+        /* Fluid sizing: font scales smoothly with screen width between a
+           phone-friendly minimum and the original desktop maximum, so every
+           device (320px phone → 4K monitor) gets a sensible size with no
+           breakpoint "jumps". Desktop is unchanged (max = original value). */
         h1 {
             color: var(--royal-purple);
-            font-size: 2.8rem;
+            font-size: clamp(1.6rem, 1.05rem + 2.6vw, 2.8rem);
             margin-bottom: 1.5rem;
             text-align: center;
             text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
@@ -517,7 +522,7 @@
         
         h2 {
             color: var(--temple-red);
-            font-size: 2rem;
+            font-size: clamp(1.35rem, 1.0rem + 1.7vw, 2rem);
             margin: 2.5rem 0 1.5rem;
             border-bottom: none;
             padding-bottom: 0.75rem;
@@ -546,7 +551,7 @@
         
         h3 {
             color: var(--royal-purple);
-            font-size: 1.5rem;
+            font-size: clamp(1.15rem, 1.0rem + 0.75vw, 1.5rem);
             margin: 1.75rem 0 1rem;
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
@@ -865,7 +870,11 @@
             border: 1px solid rgba(212, 175, 55, 0.4);
             padding: 0.35rem 0.7rem;
             border-radius: 6px;
-            white-space: nowrap;
+            /* Wrap + cap width to the viewport so the (hidden) tooltip never
+               pokes past the screen edge and creates a sideways scroll. */
+            white-space: normal;
+            width: max-content;
+            max-width: min(260px, 88vw);
             font-size: 0.78rem;
             pointer-events: none;
             transition: opacity 0.2s ease;
@@ -924,19 +933,17 @@
             nav .nav-container {
                 flex-direction: column;
             }
-            
+
             nav ul {
                 justify-content: center;
             }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
+
+            /* h1/h2/h3 sizes are handled fluidly by clamp() above — no fixed
+               overrides here, so there are no size "jumps" at the breakpoint. */
             h1 .thai {
                 font-size: 1.4rem;
             }
-            
+
             main {
                 padding: 1.5rem;
             }
@@ -1263,6 +1270,12 @@ img, svg, video, iframe, canvas {
 body {
     overflow-wrap: break-word;
     word-wrap: break-word;
+    /* Hidden hover-tooltips (footer "locked" tooltip, chat mode tooltips) are
+       absolutely positioned and can poke a few px past the screen edge,
+       creating an unwanted sideways scroll. Clip that horizontal sliver at the
+       page level. overflow-x on <body> (not a height-constrained ancestor)
+       does not break the sticky nav — verified across all device widths. */
+    overflow-x: hidden;
 }
 
 /* 3. Wide tables scroll sideways with a readable minimum width
@@ -1298,7 +1311,6 @@ body {
         font-size: 0.6rem;
         letter-spacing: 0.2rem;
     }
-    h1 { font-size: 1.7rem; }
-    h2 { font-size: 1.4rem; }
+    /* h1/h2 sizing left to the fluid clamp() rules above. */
     nav { padding: 0.85rem 1rem; }
 }

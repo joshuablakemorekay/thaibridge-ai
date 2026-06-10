@@ -306,3 +306,32 @@ I assumed I could cap one workspace's spending — but on my tier, Anthropic onl
 This Claude Code session; message-limit change in commit `908cee8`. Workspace `ThaiBridge Demo`; live demo at https://thaibridge-ai.onrender.com.
 
 ---
+
+## 10 June 2026 — Making ThaiBridge fit every phone and laptop
+
+**Type:** Bug Fix / Learning
+
+**TL;DR:**
+- Made the whole app **responsive** — one link now adapts from a 320px phone to a desktop, so I don't need a separate mobile version.
+- Fixed a sneaky **CSS specificity bug** that stopped sidebar pages collapsing to a single column on phones.
+- Switched headings and the logo to **fluid sizing** and tidied the AI Tutor page on mobile.
+
+**What I built or did**
+On my iPhone, the sidebar pages were crushing content into a one-word-per-line strip, and the AI Tutor (chat) page had an oversized header plus tooltips poking off the screen. I made the layouts collapse to one column on phones, set the headings, logo and chat header to scale with screen width, and capped or hid the stray tooltips.
+
+**Why I did it this way**
+One responsive codebase beats a separate mobile app — half the upkeep and the two can't drift apart. Fluid `clamp()` sizing (a CSS rule that scales a value smoothly between a minimum and maximum) covers every screen width continuously instead of patching one phone size at a time.
+
+**How We Did It**
+Reproduced the breakage in a real browser at iPhone width → traced it to a CSS specificity clash → matched the mobile rules' specificity so they win → added fluid headings → shrank the chat header → ran an overflow audit across seven widths → fixed the last off-screen tooltips → confirmed zero sideways scroll on every page, with desktop unchanged.
+
+**What this means for the app**
+The whole site is now tidy and usable on any phone, tablet or laptop from the same link — much stronger when I show it to clients on a phone.
+
+**What I learned**
+CSS media queries add no specificity, so a more specific desktop rule beats a mobile one no matter the screen size — exactly why the layout refused to collapse. And measuring overflow across several real widths catches bugs that checking a single phone size hides completely.
+
+**References / Conversations**
+This Claude Code session; sidebar fix committed as `7d90ea0` on `rebuild-experiment`. Live at https://thaibridge-ai.smoald.com.
+
+---
