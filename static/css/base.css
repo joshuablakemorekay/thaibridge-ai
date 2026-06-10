@@ -1187,10 +1187,18 @@
     }
     .layout-rightcol .card { flex: 1 1 220px; }
 }
-/* Stack to a single column on narrow screens */
+/* Stack to a single column on narrow screens.
+   IMPORTANT: these selectors must MATCH the specificity of the desktop
+   multi-column rules above (each uses three .layout/:has() classes). A media
+   query adds no specificity of its own, so the lower-specificity selectors
+   `.layout:has(.layout-sidebar)` (2 classes) could NOT override the
+   3-class desktop rules — the grid stayed multi-column on phones. Listing the
+   same three full selectors here gives equal specificity, and because these
+   come later in the file they win. This is what makes pages stack on mobile. */
 @media (max-width: 900px) {
-    .layout:has(.layout-sidebar),
-    .layout:has(.layout-rightcol) {
+    .layout:has(.layout-sidebar):has(.layout-rightcol),
+    .layout:has(.layout-sidebar):not(:has(.layout-rightcol)),
+    .layout:not(:has(.layout-sidebar)):has(.layout-rightcol) {
         grid-template-columns: 1fr;
     }
     .layout:has(.layout-sidebar):has(.layout-rightcol) > .layout-rightcol {
@@ -1233,4 +1241,64 @@
 .rightcol-visual { font-size: 3.5rem; line-height: 1; padding: 0.5rem 0 1rem; }
 @media (max-width: 900px) {
     .layout-sidebar { position: static; }
+}
+
+/* ============================================
+   PHASE 1 — GLOBAL MOBILE HARDENING  (added 2026-06-10)
+   One stylesheet, every device. These rules stop page
+   content from spilling off the side of a phone screen and
+   make wide tables scroll cleanly instead of squashing text
+   into one-word-per-line strips.
+   ============================================ */
+
+/* 1. Media can never be wider than its column — the single
+      most common cause of a page drifting sideways on mobile. */
+img, svg, video, iframe, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 2. Long unbroken words / URLs wrap instead of forcing the
+      whole page wider than the screen. */
+body {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* 3. Wide tables scroll sideways with a readable minimum width
+      rather than cramming columns into unreadable slivers.
+      (base.js already wraps every <main> table in .table-scroll.) */
+.table-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+}
+@media (max-width: 768px) {
+    /* Keep columns legible; the reader swipes to see the rest. */
+    .table-scroll table {
+        min-width: 480px;
+        margin: 1rem 0;
+    }
+    /* Trim the chunky desktop cell padding so more fits on screen. */
+    .table-scroll th,
+    .table-scroll td {
+        padding: 0.85rem 0.9rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* 4. On small phones, trim outer spacing and oversized headings
+      so content isn't crushed into a thin central strip. */
+@media (max-width: 480px) {
+    main {
+        padding: 1.1rem 1rem;
+    }
+    main::before {
+        font-size: 0.6rem;
+        letter-spacing: 0.2rem;
+    }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.4rem; }
+    nav { padding: 0.85rem 1rem; }
 }
