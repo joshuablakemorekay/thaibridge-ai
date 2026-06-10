@@ -4,6 +4,138 @@ This is the honest record of building my **first web app** — a Thai language a
 
 ---
 
+## 10 June 2026 — The rebuild experiment worked: merging it into `main`
+
+**Type:** Milestone
+
+**What I did**
+**I merged my `rebuild-experiment` branch (a separate copy of the project I'd been working on safely) into `main`.** It had grown to 44 commits ahead — all the big recent work: real login, Stripe billing in £, the free/Pro AI tiers, the live deployment setup, and mobile fixes.
+
+**Why**
+The branch started as a sandbox to try a bigger redesign without risking the original. It's proven itself now, so it's earned its place as the main version.
+
+**How it worked**
+Because `main` had nothing new of its own, git did a clean **fast-forward** (it just slid `main` up to match the rebuild) — no conflicts. I checked afterwards: `main` now matches the rebuild exactly, at commit `31696b0`.
+
+**What it means for the app**
+`main` is the real, current version again. **The live site didn't change** — it still deploys from `rebuild-experiment`, so this was purely tidying up behind the scenes.
+
+**What I learned**
+Merging a long-running branch isn't scary when the target hasn't moved — it's a clean fast-forward. And "merge to main" and "what the server deploys" are two separate switches; I only flipped one.
+
+---
+
+## 10 June 2026 — Making ThaiBridge fit every phone and laptop
+
+**Type:** Bug Fix / Learning
+
+**TL;DR:**
+- Made the whole app **responsive** — one link now adapts from a 320px phone to a desktop, so I don't need a separate mobile version.
+- Fixed a sneaky **CSS specificity bug** that stopped sidebar pages collapsing to a single column on phones.
+- Switched headings and the logo to **fluid sizing** and tidied the AI Tutor page on mobile.
+
+**What I built or did**
+On my iPhone, the sidebar pages were crushing content into a one-word-per-line strip, and the AI Tutor (chat) page had an oversized header plus tooltips poking off the screen. I made the layouts collapse to one column on phones, set the headings, logo and chat header to scale with screen width, and capped or hid the stray tooltips.
+
+**Why I did it this way**
+One responsive codebase beats a separate mobile app — half the upkeep and the two can't drift apart. Fluid `clamp()` sizing (a CSS rule that scales a value smoothly between a minimum and maximum) covers every screen width continuously instead of patching one phone size at a time.
+
+**How We Did It**
+Reproduced the breakage in a real browser at iPhone width → traced it to a CSS specificity clash → matched the mobile rules' specificity so they win → added fluid headings → shrank the chat header → ran an overflow audit across seven widths → fixed the last off-screen tooltips → confirmed zero sideways scroll on every page, with desktop unchanged.
+
+**What this means for the app**
+The whole site is now tidy and usable on any phone, tablet or laptop from the same link — much stronger when I show it to clients on a phone.
+
+**What I learned**
+CSS media queries add no specificity, so a more specific desktop rule beats a mobile one no matter the screen size — exactly why the layout refused to collapse. And measuring overflow across several real widths catches bugs that checking a single phone size hides completely.
+
+**References / Conversations**
+This Claude Code session; sidebar fix committed as `7d90ea0` on `rebuild-experiment`. Live at https://thaibridge-ai.smoald.com.
+
+---
+
+## 9 June 2026 — Protecting the public AI demo's costs
+
+**Type:** Decision / Learning
+
+**TL;DR:**
+- Raised the free AI limit from **5 to 15** messages per visitor so clients can properly try the tutor.
+- Walled the public demo off with its **own Anthropic workspace key** (kill switch + separate tracking) and a **$7 hard spend cap**.
+- Learned my account tier only offers an *org-wide* spend limit, not per-workspace — so I isolated by **key**, not by budget.
+
+**What I built or did**
+I gave the public demo its own Anthropic "ThaiBridge Demo" workspace and a dedicated API key, used only on Render, while my laptop keeps its old key. I set a $7 monthly spend cap with an email alert at ~$2, and raised `FREE_AI_DAILY_LIMIT` to 15.
+
+**Why I did it this way**
+A public AI link spends my real credits on every message. I wanted a hard ceiling so a bad day can't surprise me with a bill, and the demo isolated so abuse can't touch my own development work.
+
+**How it works**
+Three layers: cheap Haiku makes each message a fraction of a penny; the 15/day limit stops one person hogging it; the $7 cap is the wall nothing crosses. The separate key lets me revoke just the demo if it's abused, without breaking local dev.
+
+**What I learned**
+I assumed I could cap one workspace's spending — but on my tier, Anthropic only offers an *org-wide* spend limit; per-workspace limits are higher-tier. So I isolated by **key** (a kill switch and clean tracking) rather than by budget. And "free" messages aren't free to *me*: every message spends my credits — the limit caps the *count*, not the charge.
+
+**References / Conversations**
+This Claude Code session; message-limit change in commit `908cee8`. Workspace `ThaiBridge Demo`; live demo at https://thaibridge-ai.onrender.com.
+
+---
+
+## 9 June 2026 — Putting ThaiBridge live, with a cost-safe AI link
+
+**Type:** Milestone
+
+**TL;DR:**
+- Put ThaiBridge **live on the public internet** for the first time (Render free tier) — a clickable AI demo for my freelance portfolio.
+- Made the public AI **cost-safe**: cheap Haiku model on the demo, a hard spend ceiling, and the `changeme` backdoor closed.
+- Verified the live AI tutor end-to-end and kept the app warm with a free uptime pinger.
+
+**What I built or did**
+I deployed the `rebuild-experiment` branch to Render with a Blueprint (`render.yaml`), a Linux-safe build script and a pinned Python version, then made the repo public. The public demo runs the cheap Haiku model via an `AI_MODEL` environment variable, while local dev still uses Sonnet. I sent a real message to the live tutor, got a proper Thai answer back, and set UptimeRobot to ping the homepage every 5 minutes so it never sleeps.
+
+**Why I did it this way**
+A live, clickable AI app is far stronger portfolio proof than a private repo. Haiku plus a small prepaid balance with auto-reload off means the public demo can't run up my card.
+
+**How We Did It**
+Checked the app for tracked secrets → wrote the deploy files → smoke-tested the import → pushed and deployed → set a spend limit → switched the public model to Haiku via an env var → tested the live tutor → added the uptime pinger.
+
+**What this means for the app**
+ThaiBridge is now a fast, public, cost-protected demo I can put in front of clients.
+
+**What I learned**
+When the live app flickered with "no-server" errors, the Render logs showed it was just the free tier waking from sleep — not the memory crash I'd feared. Checking the logs beat guessing from outside. And for a public AI demo, "auto-reload off" is the *protective* setting, even though the dashboard nudges you to turn it on.
+
+**References / Conversations**
+This Claude Code session; commits `3ca8fe5` and `72072c4` on `rebuild-experiment`. Live at https://thaibridge-ai.onrender.com.
+
+---
+
+## 7 June 2026 — Making the Dhamma free, keeping the AI Pro
+
+**Type:** Decision / Feature
+
+**What I built or did**
+I changed how the subscription tiers work so that the **Theravada Dhamma teachings** and the **meditation timer & techniques** are now completely free for everyone — no account, no subscription, no XP/level, and no "finish the alphabet first" gate. At the same time I kept the **AI Culture & Dhamma Q&A** as a Pro-only feature. I added the four "Coming soon" cards to the pricing page (Personalised Learning Path, Pronunciation Analysis, Listening Exercises, Writing Practice) as greyed-out, non-clickable placeholders, and wrote a short "freely given (dāna)" message on the Dhamma page, the meditation page, and the pricing page to explain the reasoning. While I was in there I also switched the whole app's pricing from dollars to **pounds (£9.99 / £19.99)** — both the displayed prices and the actual Stripe/PayPal charge currency (GBP), so they stay consistent.
+
+**Why I did it this way**
+It didn't sit right with me to lock the Buddha's teachings behind a paywall. I value generosity (*dāna*) — the teachings were freely given, so they should be free to read. But the AI features genuinely cost real money every time someone sends a message, so those make sense as a paid product. This gives the app a cleaner, more honest story: **Free** = read and learn everything; **Buddhist Scholar (£9.99)** = practise actively (2× XP, extended content); **Thai Master (£19.99)** = the AI works with you. I changed the charge currency to GBP at the same time so the £ I show isn't a lie about what actually gets billed.
+
+**How it works**
+There are two separate systems, and I was careful not to confuse them:
+1. **Page access** is controlled by a `SECTION_REQUIREMENTS` dictionary in `app.py`. I changed `theravada` and `meditation` to `tier: 'free'`, `level: 1`, and `requires_alphabet: False`, so the access check always passes.
+2. **AI chat modes** are gated separately in the `/api/ai/chat` route by a `FREE_AI_ALLOWED_MODES` set (just `tutor`). The Culture and Dhamma modes (their real internal ids are `cultural` and `buddhist`) were already excluded, so they stay Pro automatically. I left that logic untouched.
+I also updated the tier feature lists so Free lists the teachings, Buddhist Scholar no longer does, and Thai Master names the AI Q&A perk — and changed `currency: 'usd'` → `'gbp'` (Stripe) and `"USD"` → `"GBP"` (PayPal).
+
+**What this means for the app**
+Anyone can now read the Dhamma and use the meditation timer for free, while the genuinely costly AI tools remain the thing people pay for. The pricing page explains *why*, which makes the offer feel honest rather than stingy, and prices are now shown in pounds to match me being UK-based.
+
+**What I learned**
+The big lesson was spotting that "the teachings" and "the AI about the teachings" are two completely different systems — page access vs. AI mode gating. I also learned to verify against the real code instead of trusting my own description: the AI modes were actually called `cultural` and `buddhist`, not `culture` and `dhamma`, and some pieces (the coming-soon cards) already existed. And changing a *displayed* price isn't enough — the billing currency lives separately in the Stripe and PayPal calls, so I had to change both or they'd disagree. I tested everything with Flask's test client before committing.
+
+**References / Conversations**
+Built in a Claude Code session on 7 June 2026. Tier/teaching changes committed as `ee1f507` on the `rebuild-experiment` branch; the £ currency switch followed.
+
+---
+
 ## 6 June 2026 — Taking a real test payment with Stripe (and fixing a renewal-date bug)
 
 **Type:** Milestone
@@ -169,6 +301,8 @@ Before building more, I stopped to research the market: who the competitors are,
 
 **What I learned:** the gap is real — the big apps don't teach Thai at all, and none combine Thai with Buddhist culture. I also learned to *ground* research in real sources and to **check which tools actually ran** — I'd named a web-scraping tool and later found it never fired. (The prompts behind this research are saved in the `/prompts` folder.)
 
+---
+
 ## February 2026 — Version control and a proper workflow
 
 I set up Git (version control — a way to save snapshots of the project) and connected it to GitHub (online backup) one step at a time. Then I started using Claude Code (an AI that edits files in the project directly) for real tasks:
@@ -180,11 +314,15 @@ I set up Git (version control — a way to save snapshots of the project) and co
 
 **What I learned:** once Git was set up, I could make big changes — and let an AI make them — **without fear, because I could always roll back**. I also learned to give the AI small, specific jobs and review every change before accepting it. When Claude Code ran out of credits, I made two of the fixes by hand and understood what they did — which felt like a turning point.
 
+---
+
 ## February 2026 — Adding Pra Kru Bob's Buddhist writings
 
 I added two of Pra Kru Bob's Buddhist essays as new pages, keeping the wording faithful to the originals.
 
 **What I learned:** my first attempt quietly dropped paragraphs. **Faithful means faithful** — I had to insist on the complete text and check it against the source rather than trust a summary.
+
+---
 
 ## December 2025 — Adding the AI tutor
 
@@ -192,17 +330,23 @@ I connected the app to the Claude API (a way for the app to talk to the AI) to b
 
 **What I learned:** this was the hardest setup. Python wasn't installed; then packages weren't installed; then my secret key vanished because I'd only set it for one terminal session; then it broke because I'd **forgotten the quote marks** around the key in Python. It finally worked once I loaded the key right at the top of the file. Biggest lesson: **don't trust "it works" — including from an AI.** I had to correct the claim that the chat worked when it didn't, and test it myself.
 
+---
+
 ## December 2025 — The romanization display problem
 
 Thai romanization uses accent marks, and one vowel combination (`ɔ̌ɔ`) kept rendering with mismatched letters. I tried several fixes — spacing, fonts, rendering tricks — and most didn't fully work.
 
 **What I learned:** some problems are genuinely deeper than they look (this one is about how computers combine accent characters). I learned **when to stop polishing and pick a pragmatic workaround** rather than chase perfection.
 
+---
+
 ## November 2025 — Building the first version (and debugging it)
 
 I built the first working version: the Flask backend, the Thai alphabet and vocabulary content, lessons, a points-and-levels system, and the page styling.
 
 **What I learned:** most of my early errors weren't broken code — they were **files in the wrong place**. "Template not found" meant a page wasn't in the folder Flask looks in. "name 'app' is not defined" meant I'd tried to *run* a file that was only meant to be *imported* into the main app. And two pages sharing the same web address crashed it. **Reading the error message** usually told me exactly what was wrong.
+
+---
 
 ## November 2025 — Planning the app
 
@@ -223,136 +367,3 @@ I planned the app using a describe-then-check method: I told the AI exactly what
 - **Version control is a safety net** — it let me take risks and roll back.
 - **Give AI small, specific jobs** — and review every change before accepting it.
 - **Two AI products, two bills** — Claude Code is billed separately from the Claude.ai subscription.
-
----
-## 7 June 2026 — Making the Dhamma free, keeping the AI Pro
-
-**Type:** Decision / Feature
-
-**What I built or did**
-I changed how the subscription tiers work so that the **Theravada Dhamma teachings** and the **meditation timer & techniques** are now completely free for everyone — no account, no subscription, no XP/level, and no "finish the alphabet first" gate. At the same time I kept the **AI Culture & Dhamma Q&A** as a Pro-only feature. I added the four "Coming soon" cards to the pricing page (Personalised Learning Path, Pronunciation Analysis, Listening Exercises, Writing Practice) as greyed-out, non-clickable placeholders, and wrote a short "freely given (dāna)" message on the Dhamma page, the meditation page, and the pricing page to explain the reasoning. While I was in there I also switched the whole app's pricing from dollars to **pounds (£9.99 / £19.99)** — both the displayed prices and the actual Stripe/PayPal charge currency (GBP), so they stay consistent.
-
-**Why I did it this way**
-It didn't sit right with me to lock the Buddha's teachings behind a paywall. I value generosity (*dāna*) — the teachings were freely given, so they should be free to read. But the AI features genuinely cost real money every time someone sends a message, so those make sense as a paid product. This gives the app a cleaner, more honest story: **Free** = read and learn everything; **Buddhist Scholar (£9.99)** = practise actively (2× XP, extended content); **Thai Master (£19.99)** = the AI works with you. I changed the charge currency to GBP at the same time so the £ I show isn't a lie about what actually gets billed.
-
-**How it works**
-There are two separate systems, and I was careful not to confuse them:
-1. **Page access** is controlled by a `SECTION_REQUIREMENTS` dictionary in `app.py`. I changed `theravada` and `meditation` to `tier: 'free'`, `level: 1`, and `requires_alphabet: False`, so the access check always passes.
-2. **AI chat modes** are gated separately in the `/api/ai/chat` route by a `FREE_AI_ALLOWED_MODES` set (just `tutor`). The Culture and Dhamma modes (their real internal ids are `cultural` and `buddhist`) were already excluded, so they stay Pro automatically. I left that logic untouched.
-I also updated the tier feature lists so Free lists the teachings, Buddhist Scholar no longer does, and Thai Master names the AI Q&A perk — and changed `currency: 'usd'` → `'gbp'` (Stripe) and `"USD"` → `"GBP"` (PayPal).
-
-**What this means for the app**
-Anyone can now read the Dhamma and use the meditation timer for free, while the genuinely costly AI tools remain the thing people pay for. The pricing page explains *why*, which makes the offer feel honest rather than stingy, and prices are now shown in pounds to match me being UK-based.
-
-**What I learned**
-The big lesson was spotting that "the teachings" and "the AI about the teachings" are two completely different systems — page access vs. AI mode gating. I also learned to verify against the real code instead of trusting my own description: the AI modes were actually called `cultural` and `buddhist`, not `culture` and `dhamma`, and some pieces (the coming-soon cards) already existed. And changing a *displayed* price isn't enough — the billing currency lives separately in the Stripe and PayPal calls, so I had to change both or they'd disagree. I tested everything with Flask's test client before committing.
-
-**References / Conversations**
-Built in a Claude Code session on 7 June 2026. Tier/teaching changes committed as `ee1f507` on the `rebuild-experiment` branch; the £ currency switch followed.
-
----
-
-## 9 June 2026 — Putting ThaiBridge live, with a cost-safe AI link
-
-**Type:** Milestone
-
-**TL;DR:**
-- Put ThaiBridge **live on the public internet** for the first time (Render free tier) — a clickable AI demo for my freelance portfolio.
-- Made the public AI **cost-safe**: cheap Haiku model on the demo, a hard spend ceiling, and the `changeme` backdoor closed.
-- Verified the live AI tutor end-to-end and kept the app warm with a free uptime pinger.
-
-**What I built or did**
-I deployed the `rebuild-experiment` branch to Render with a Blueprint (`render.yaml`), a Linux-safe build script and a pinned Python version, then made the repo public. The public demo runs the cheap Haiku model via an `AI_MODEL` environment variable, while local dev still uses Sonnet. I sent a real message to the live tutor, got a proper Thai answer back, and set UptimeRobot to ping the homepage every 5 minutes so it never sleeps.
-
-**Why I did it this way**
-A live, clickable AI app is far stronger portfolio proof than a private repo. Haiku plus a small prepaid balance with auto-reload off means the public demo can't run up my card.
-
-**How We Did It**
-Checked the app for tracked secrets → wrote the deploy files → smoke-tested the import → pushed and deployed → set a spend limit → switched the public model to Haiku via an env var → tested the live tutor → added the uptime pinger.
-
-**What this means for the app**
-ThaiBridge is now a fast, public, cost-protected demo I can put in front of clients.
-
-**What I learned**
-When the live app flickered with "no-server" errors, the Render logs showed it was just the free tier waking from sleep — not the memory crash I'd feared. Checking the logs beat guessing from outside. And for a public AI demo, "auto-reload off" is the *protective* setting, even though the dashboard nudges you to turn it on.
-
-**References / Conversations**
-This Claude Code session; commits `3ca8fe5` and `72072c4` on `rebuild-experiment`. Live at https://thaibridge-ai.onrender.com.
-
----
-
-## 9 June 2026 — Protecting the public AI demo's costs
-
-**Type:** Decision / Learning
-
-**TL;DR:**
-- Raised the free AI limit from **5 to 15** messages per visitor so clients can properly try the tutor.
-- Walled the public demo off with its **own Anthropic workspace key** (kill switch + separate tracking) and a **$7 hard spend cap**.
-- Learned my account tier only offers an *org-wide* spend limit, not per-workspace — so I isolated by **key**, not by budget.
-
-**What I built or did**
-I gave the public demo its own Anthropic "ThaiBridge Demo" workspace and a dedicated API key, used only on Render, while my laptop keeps its old key. I set a $7 monthly spend cap with an email alert at ~$2, and raised `FREE_AI_DAILY_LIMIT` to 15.
-
-**Why I did it this way**
-A public AI link spends my real credits on every message. I wanted a hard ceiling so a bad day can't surprise me with a bill, and the demo isolated so abuse can't touch my own development work.
-
-**How it works**
-Three layers: cheap Haiku makes each message a fraction of a penny; the 15/day limit stops one person hogging it; the $7 cap is the wall nothing crosses. The separate key lets me revoke just the demo if it's abused, without breaking local dev.
-
-**What I learned**
-I assumed I could cap one workspace's spending — but on my tier, Anthropic only offers an *org-wide* spend limit; per-workspace limits are higher-tier. So I isolated by **key** (a kill switch and clean tracking) rather than by budget. And "free" messages aren't free to *me*: every message spends my credits — the limit caps the *count*, not the charge.
-
-**References / Conversations**
-This Claude Code session; message-limit change in commit `908cee8`. Workspace `ThaiBridge Demo`; live demo at https://thaibridge-ai.onrender.com.
-
----
-
-## 10 June 2026 — Making ThaiBridge fit every phone and laptop
-
-**Type:** Bug Fix / Learning
-
-**TL;DR:**
-- Made the whole app **responsive** — one link now adapts from a 320px phone to a desktop, so I don't need a separate mobile version.
-- Fixed a sneaky **CSS specificity bug** that stopped sidebar pages collapsing to a single column on phones.
-- Switched headings and the logo to **fluid sizing** and tidied the AI Tutor page on mobile.
-
-**What I built or did**
-On my iPhone, the sidebar pages were crushing content into a one-word-per-line strip, and the AI Tutor (chat) page had an oversized header plus tooltips poking off the screen. I made the layouts collapse to one column on phones, set the headings, logo and chat header to scale with screen width, and capped or hid the stray tooltips.
-
-**Why I did it this way**
-One responsive codebase beats a separate mobile app — half the upkeep and the two can't drift apart. Fluid `clamp()` sizing (a CSS rule that scales a value smoothly between a minimum and maximum) covers every screen width continuously instead of patching one phone size at a time.
-
-**How We Did It**
-Reproduced the breakage in a real browser at iPhone width → traced it to a CSS specificity clash → matched the mobile rules' specificity so they win → added fluid headings → shrank the chat header → ran an overflow audit across seven widths → fixed the last off-screen tooltips → confirmed zero sideways scroll on every page, with desktop unchanged.
-
-**What this means for the app**
-The whole site is now tidy and usable on any phone, tablet or laptop from the same link — much stronger when I show it to clients on a phone.
-
-**What I learned**
-CSS media queries add no specificity, so a more specific desktop rule beats a mobile one no matter the screen size — exactly why the layout refused to collapse. And measuring overflow across several real widths catches bugs that checking a single phone size hides completely.
-
-**References / Conversations**
-This Claude Code session; sidebar fix committed as `7d90ea0` on `rebuild-experiment`. Live at https://thaibridge-ai.smoald.com.
-
----
-
-## 10 June 2026 — The rebuild experiment worked: merging it into `main`
-
-**Type:** Milestone
-
-**What I did**
-**I merged my `rebuild-experiment` branch (a separate copy of the project I'd been working on safely) into `main`.** It had grown to 44 commits ahead — all the big recent work: real login, Stripe billing in £, the free/Pro AI tiers, the live deployment setup, and mobile fixes.
-
-**Why**
-The branch started as a sandbox to try a bigger redesign without risking the original. It's proven itself now, so it's earned its place as the main version.
-
-**How it worked**
-Because `main` had nothing new of its own, git did a clean **fast-forward** (it just slid `main` up to match the rebuild) — no conflicts. I checked afterwards: `main` now matches the rebuild exactly, at commit `31696b0`.
-
-**What it means for the app**
-`main` is the real, current version again. **The live site didn't change** — it still deploys from `rebuild-experiment`, so this was purely tidying up behind the scenes.
-
-**What I learned**
-Merging a long-running branch isn't scary when the target hasn't moved — it's a clean fast-forward. And "merge to main" and "what the server deploys" are two separate switches; I only flipped one.
-
----
