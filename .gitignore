@@ -16,3 +16,8 @@ prompts/*/results/
 # Standalone sandboxes — not part of the rebuild app
 App-Prototype/
 python-practice/
+
+# Local dev-only mobile-layout tools + their screenshot output (kept on disk, not committed)
+_shots/
+_devshots.py
+_measure_all.py

@@ -110,7 +110,8 @@
     
     .bob-meta {
         display: flex;
-        gap: 2rem;
+        flex-wrap: wrap;        /* let meta items drop to the next line on narrow phones instead of overflowing */
+        gap: 0.75rem 2rem;       /* row-gap when wrapped, column-gap between items */
         margin-top: 1.5rem;
         padding-top: 1.5rem;
         border-top: 2px solid #f0f0f0;
