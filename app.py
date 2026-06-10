@@ -38,6 +38,13 @@ if not app.secret_key:
 # DATABASE CONFIGURATION
 # ============================================
 
+# Make sure the 'instance' folder exists — SQLite won't create a missing
+# parent directory, so a fresh clone would otherwise fail to open the database.
+os.makedirs(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'instance'),
+    exist_ok=True,
+)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(
     os.path.dirname(os.path.abspath(__file__)), 'instance', 'thai_app.db'
 )
