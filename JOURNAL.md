@@ -4,6 +4,35 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 8 July 2026 — Bringing the custom domain back online
+
+**Type:** Bug Fix / Milestone
+
+**TL;DR:**
+- The branded link `thaibridge-ai.smoald.com` had stopped loading ("can't reach this page").
+- The real cause wasn't the app — the subdomain had gone missing when `smoald.com` moved from Namecheap to Cloudflare.
+- Rebuilt the DNS record on Cloudflare, re-added the custom domain in Render, and verified it live with a valid HTTPS padlock.
+
+**What I built or did**
+The pretty address for the app — `https://thaibridge-ai.smoald.com` — had stopped working. I traced it and found the subdomain simply didn't exist in DNS any more: when I moved `smoald.com` onto Cloudflare, the old subdomain record hadn't come across. I added a fresh record on Cloudflare (a CNAME pointing `thaibridge-ai` → `thaibridge-ai.onrender.com`), set to "DNS-only" so Render could still handle its own certificate, then re-added the custom domain inside Render. I also set the repo's Website link to the branded domain.
+
+**Why I did it this way**
+The app itself was never broken — only the address in front of it. So the fix belonged in DNS and hosting settings, not the code. Keeping the app on Render (which runs Flask apps as-is) and using Cloudflare only for the address gives the best of both: no rewrite, plus a professional `smoald.com` link.
+
+**How it works**
+A CNAME record is a signpost: it tells the internet "`thaibridge-ai.smoald.com` actually lives at `thaibridge-ai.onrender.com`." Render sees the matching custom domain on its side, issues a free HTTPS certificate, and serves the app. The old `onrender.com` address still works underneath as a fallback.
+
+**What this means for the app**
+The app is reachable again at a clean, branded address I can put on my CV and portfolio — with a valid HTTPS padlock. The link is permanent; it doesn't expire or need replacing.
+
+**What I learned**
+When a "site is down," it isn't always the app — this was pure DNS. I also learned that moving a domain between providers can silently drop subdomain records, so they need re-creating. And a small but important detail: with Cloudflare in front of Render, the DNS record must be "DNS-only" (grey cloud), or Render can't finish its certificate check.
+
+**References / Conversations**
+This Claude Code session.
+
+---
+
 ## 10 June 2026 — Polishing the README into a case study and tidying the journal
 
 **Type:** Documentation / Learning
