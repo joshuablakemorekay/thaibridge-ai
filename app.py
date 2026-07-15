@@ -417,6 +417,28 @@ def monk_mode_active():
     return session['user_progress'].get('monk_mode', False)
 
 
+def _valid_monk_codes():
+    """The set of currently-valid Monk Mode access codes.
+
+    Codes come from the MONK_MODE_CODES environment variable (comma-separated),
+    so they live outside the source and git history and can be rotated or
+    revoked without a code change. In local development ONLY, if none are
+    configured we fall back to a single obvious test code ('monk-dev') so the
+    feature is easy to try. In production an unset variable means Monk Mode
+    simply can't be unlocked — it fails safe rather than open.
+    """
+    raw = os.environ.get('MONK_MODE_CODES', '')
+    codes = {c.strip().lower() for c in raw.split(',') if c.strip()}
+    if not codes and os.environ.get('FLASK_ENV') == 'development':
+        codes = {'monk-dev'}
+    return codes
+
+
+def is_valid_monk_code(code):
+    """True if `code` matches one of the currently-valid Monk Mode codes."""
+    return (code or '').strip().lower() in _valid_monk_codes()
+
+
 @app.context_processor
 def inject_monk_mode():
     """Expose Monk Mode's on/off state to every template, so the nav toggle and
@@ -4130,18 +4152,40 @@ def set_gender(gender):
     return jsonify({'success': False, 'error': 'Invalid gender'})
 
 
-@app.route('/set-monk-mode/<state>')
-def set_monk_mode(state):
-    """Turn free Monk Mode on or off.
+@app.route('/monk-mode', methods=['GET', 'POST'])
+def monk_mode():
+    """The Monk Mode access page.
 
-    When on, every section is unlocked at no charge — a gift to Buddhist monks
-    and the Thai diaspora learning the language. The state lives in the session,
-    so it works for logged-out visitors too and needs no database change.
+    GET  — explains who Monk Mode is for and shows a code-entry form (or, if
+           it's already on, an 'active' state with a switch-off button).
+    POST — checks the submitted access code. A valid code switches Monk Mode on
+           for this session; an invalid one re-renders the page with a gentle
+           error. Turning it ON always requires a valid code.
     """
     init_user_progress()
-    session['user_progress']['monk_mode'] = (state == 'on')
+    error = None
+    if request.method == 'POST':
+        code = request.form.get('code', '')
+        if is_valid_monk_code(code):
+            session['user_progress']['monk_mode'] = True
+            session.modified = True
+            return redirect(url_for('monk_mode'))
+        error = "That code wasn't recognised. Please check with the temple or teacher who shared it with you."
+    return render_template(
+        'monk_mode.html',
+        active=session['user_progress'].get('monk_mode', False),
+        error=error,
+    )
+
+
+@app.route('/set-monk-mode/off')
+def set_monk_mode_off():
+    """Switch Monk Mode off. No code is needed to turn it off — only to turn it
+    on (see the /monk-mode route)."""
+    init_user_progress()
+    session['user_progress']['monk_mode'] = False
     session.modified = True
-    return jsonify({'success': True, 'monk_mode': session['user_progress']['monk_mode']})
+    return jsonify({'success': True, 'monk_mode': False})
 
 
 @app.route('/gender-examples')

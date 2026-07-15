@@ -1324,6 +1324,8 @@ body {
 .monk-mode-toggle {
     font: inherit;
     cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
     padding: 0.4rem 0.85rem;
     border-radius: 999px;
     border: 2px solid var(--monk-saffron);
@@ -1351,3 +1353,44 @@ body {
     line-height: 1.5;
 }
 .monk-mode-banner strong { font-weight: 700; }
+
+/* The /monk-mode access page */
+.monk-card {
+    border-left: 4px solid var(--monk-saffron);
+    max-width: 640px;
+}
+.monk-card--active {
+    background: rgba(255, 153, 51, 0.08);
+}
+.monk-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 1.25rem 0;
+    max-width: 380px;
+}
+.monk-form label {
+    font-weight: 600;
+}
+.monk-form input {
+    font: inherit;
+    padding: 0.6rem 0.8rem;
+    border: 2px solid var(--sandstone);
+    border-radius: 0.5rem;
+}
+.monk-form input:focus {
+    outline: none;
+    border-color: var(--monk-saffron);
+    box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.2);
+}
+.monk-form .monk-mode-toggle {
+    align-self: flex-start;
+}
+.monk-error {
+    color: var(--temple-red);
+    font-weight: 600;
+}
+.monk-note {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}

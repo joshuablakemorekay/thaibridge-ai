@@ -85,11 +85,17 @@
 
                 <!-- Monk Mode: free, all-content-unlocked mode for monks & the Thai diaspora -->
                 <li>
-                    <button class="monk-mode-toggle{% if monk_mode %} active{% endif %}"
-                            onclick="toggleMonkMode()"
-                            title="Free mode for Buddhist monks & the Thai diaspora — unlocks every lesson at no charge">
-                        🧡 Monk Mode: {% if monk_mode %}ON{% else %}OFF{% endif %}
+                    {% if monk_mode %}
+                    <button class="monk-mode-toggle active" onclick="turnMonkModeOff()"
+                            title="Monk Mode is on — click to switch it off">
+                        🧡 Monk Mode: ON
                     </button>
+                    {% else %}
+                    <a href="/monk-mode" class="monk-mode-toggle"
+                       title="Free mode for Buddhist monks & the Thai diaspora — enter your access code to unlock everything">
+                        🧡 Monk Mode
+                    </a>
+                    {% endif %}
                 </li>
             </ul>
             
@@ -133,11 +139,11 @@
     
     <script>window.CURRENT_GENDER = '{{ current_gender|default("neutral") }}';</script>
     <script>
-        // Monk Mode: flip the free "unlock everything" switch, then reload so
-        // every gate re-evaluates with the new state.
-        window.MONK_MODE = {{ 'true' if monk_mode else 'false' }};
-        function toggleMonkMode() {
-            fetch('/set-monk-mode/' + (window.MONK_MODE ? 'off' : 'on'))
+        // Turning Monk Mode ON needs a code (handled on the /monk-mode page).
+        // Turning it OFF needs no code — flip it and reload so every gate
+        // re-evaluates with the new state.
+        function turnMonkModeOff() {
+            fetch('/set-monk-mode/off')
                 .then(function (r) { return r.json(); })
                 .then(function () { window.location.reload(); })
                 .catch(function () { window.location.reload(); });

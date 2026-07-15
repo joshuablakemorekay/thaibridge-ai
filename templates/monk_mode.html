@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Monk Mode — ThaiBridge AI{% endblock %}
+
+{% block content %}
+<h1>
+    🧡 Monk Mode
+    <span class="thai">โหมดพระ</span>
+</h1>
+
+{% if active %}
+<div class="card monk-card monk-card--active">
+    <h2>Monk Mode is on 🙏</h2>
+    <p>
+        Every lesson is unlocked, free of charge. May your study bring wisdom and peace.
+    </p>
+    <button class="monk-mode-toggle active" onclick="turnMonkModeOff()">
+        Switch Monk Mode off
+    </button>
+</div>
+{% else %}
+<div class="card monk-card">
+    <p>
+        <strong>Monk Mode</strong> is a free, all-content-unlocked way to use ThaiBridge AI.
+        It's offered as a gift to <strong>Buddhist monks</strong> and the
+        <strong>Thai diaspora</strong> — for example, Thai families living abroad who want to
+        learn, or English speakers in robes learning Thai. Our hope is simple: that it teaches
+        you enough that, one day, you won't need it anymore.
+    </p>
+    <p>
+        Access is by a code shared through temples, teachers, and the wider sangha.
+        If you have one, enter it below.
+    </p>
+
+    {% if error %}
+    <p class="monk-error">⚠️ {{ error }}</p>
+    {% endif %}
+
+    <form method="POST" action="/monk-mode" class="monk-form">
+        <label for="monk-code">Access code</label>
+        <input type="text" id="monk-code" name="code" autocomplete="off"
+               placeholder="Enter your Monk Mode code" required autofocus>
+        <button type="submit" class="monk-mode-toggle">Unlock Monk Mode</button>
+    </form>
+
+    <p class="monk-note">
+        Don't have a code? You can still learn the foundations for free without one —
+        just explore the lessons from the menu. 🌿
+    </p>
+</div>
+{% endif %}
+{% endblock %}
