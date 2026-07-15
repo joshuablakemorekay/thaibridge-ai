@@ -1394,3 +1394,103 @@ body {
     font-size: 0.9rem;
     opacity: 0.8;
 }
+
+/* Monk lessons — direction switch */
+.monk-direction-switch {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.monk-dir-btn {
+    font: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.55rem 1rem;
+    border-radius: 0.6rem;
+    border: 2px solid var(--monk-saffron);
+    background: transparent;
+    color: inherit;
+    font-weight: 600;
+}
+.monk-dir-btn .monk-dir-sub {
+    font-weight: 400;
+    font-size: 0.78rem;
+    opacity: 0.75;
+}
+.monk-dir-btn.active {
+    background: var(--monk-saffron);
+    color: #fff;
+}
+.monk-dir-btn.active .monk-dir-sub { opacity: 0.9; }
+
+/* Monk lessons — topic grid */
+.monk-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+.monk-topic-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--sandstone);
+    border-left: 4px solid var(--monk-saffron);
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+.monk-topic-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+.monk-topic-num {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--monk-saffron);
+}
+.monk-topic-title { font-size: 1.1rem; font-weight: 700; }
+.monk-topic-sub { opacity: 0.75; }
+.monk-topic-pali { font-style: italic; opacity: 0.7; font-size: 0.85rem; }
+.monk-topic-count { font-size: 0.8rem; opacity: 0.6; margin-top: 0.25rem; }
+
+/* Monk lessons — entry cards */
+.monk-back { text-decoration: none; opacity: 0.8; }
+.monk-entry-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0.85rem;
+    margin: 1rem 0 2rem;
+}
+.monk-entry {
+    padding: 0.9rem 1rem;
+    border-radius: 0.7rem;
+    border: 1px solid var(--sandstone);
+    background: rgba(255, 153, 51, 0.04);
+}
+.monk-entry-prompt { font-size: 1.15rem; font-weight: 700; }
+.monk-entry-prompt .thai { font-size: 1.5rem; }
+.monk-entry-target { margin-top: 0.35rem; }
+.monk-entry-target .thai { font-size: 1.4rem; font-weight: 600; }
+.monk-entry-word { font-size: 1.15rem; }
+.monk-entry-roman,
+.monk-entry-pron {
+    display: block;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.9rem;
+    color: var(--mekong-blue);
+}
+.monk-entry-meta {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    font-size: 0.82rem;
+}
+.monk-entry-pali { font-style: italic; opacity: 0.8; }
+.monk-entry-note { opacity: 0.7; }

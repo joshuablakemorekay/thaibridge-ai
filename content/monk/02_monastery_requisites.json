@@ -1,0 +1,29 @@
+{
+  "topic": "monastery_requisites",
+  "order": 2,
+  "title": { "en": "The Monastery & Requisites", "th": "วัดและปัจจัยสี่" },
+  "pali": "senāsana / parikkhāra",
+  "description": {
+    "en": "The places of a monastery and the basic requisites of monastic life — robes, alms-food, lodging and medicine. Names a monk uses every day.",
+    "th": "สถานที่ต่าง ๆ ในวัด และปัจจัยสี่ของการเป็นพระ — จีวร บิณฑบาต ที่อยู่ และยา คำที่พระใช้ทุกวัน"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. NOTE: วัด tone — I used high 'wát' (standard for 'temple'); your dictionary showed low 'wàt' in a different compound — please confirm which the app should use.",
+  "vocab": [
+    { "thai": "วัด", "paiboon": "wát", "english": "temple / monastery", "english_ipa": "/ˈmɒnəstri/", "pali": "āvāsa", "note": "A Buddhist temple-monastery." },
+    { "thai": "กุฏิ", "paiboon": "gù-dtì", "english": "a monk's dwelling", "english_ipa": "/mʌŋks ˈdwɛlɪŋ/", "pali": "kuṭi", "note": "The small hut a monk lives in." },
+    { "thai": "โบสถ์", "paiboon": "bòot", "english": "ordination hall", "english_ipa": "/ˌɔːdɪˈneɪʃən hɔːl/", "pali": "uposathāgāra", "note": "Where ordinations and the Pāṭimokkha take place." },
+    { "thai": "ศาลา", "paiboon": "sǎa-laa", "english": "pavilion / hall", "english_ipa": "/pəˈvɪljən/", "pali": "sālā", "note": "An open hall for gatherings and teachings." },
+    { "thai": "เจดีย์", "paiboon": "jà-dii", "english": "pagoda / stupa", "english_ipa": "/ˈstuːpə/", "pali": "cetiya", "note": "A monument, often holding relics." },
+    { "thai": "จีวร", "paiboon": "jii-won", "english": "robe", "english_ipa": "/rəʊb/", "pali": "cīvara", "note": "One of the four requisites." },
+    { "thai": "ยา", "paiboon": "yaa", "english": "medicine", "english_ipa": "/ˈmɛdsn̩/", "pali": "bhesajja", "note": "The requisite of medicine." },
+    { "thai": "เสนาสนะ", "paiboon": "sěe-naa-sà-ná", "english": "lodging", "english_ipa": "/ˈlɒdʒɪŋ/", "pali": "senāsana", "note": "Dwelling place — the requisite of shelter." },
+    { "thai": "ปัจจัย", "paiboon": "bpàt-jai", "english": "requisite", "english_ipa": "/ˈrɛkwɪzɪt/", "pali": "paccaya", "note": "A support of monastic life; the four are robes, food, lodging, medicine." },
+    { "thai": "พระพุทธรูป", "paiboon": "prá-pút-tá-rûup", "english": "Buddha image", "english_ipa": "/ˈbʊdə ˈɪmɪdʒ/", "pali": "buddharūpa", "note": "A statue or image of the Buddha." }
+  ],
+  "phrases": [
+    { "thai": "กุฏิอยู่ที่ไหน", "paiboon": "gù-dtì yùu tîi nǎi", "english": "Where is the dwelling?", "english_ipa": "/wɛər ɪz ðə ˈdwɛlɪŋ/", "pali": "", "context": "Asking directions inside the monastery." },
+    { "thai": "นี่คือปัจจัยสี่", "paiboon": "nîi kʉʉ bpàt-jai sìi", "english": "These are the four requisites.", "english_ipa": "/ðiːz ɑː ðə fɔː ˈrɛkwɪzɪts/", "pali": "cattāro paccayā", "context": "Robes, alms-food, lodging and medicine." },
+    { "thai": "ขอนิมนต์ไปที่ศาลา", "paiboon": "kɔ̌ɔ ní-mon bpai tîi sǎa-laa", "english": "Please come to the hall.", "english_ipa": "/pliːz kʌm tə ðə hɔːl/", "pali": "", "context": "A layperson inviting a monk to the sālā." },
+    { "thai": "อาตมาอยู่ที่วัดนี้", "paiboon": "àat-dtà-maa yùu tîi wát níi", "english": "I live at this monastery.", "english_ipa": "/aɪ lɪv ət ðɪs ˈmɒnəstri/", "pali": "", "context": "อาตมา (àat-dtà-maa) is the first-person word a monk uses when speaking to laypeople." }
+  ]
+}

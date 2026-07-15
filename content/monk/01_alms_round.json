@@ -1,0 +1,29 @@
+{
+  "topic": "alms_round",
+  "order": 1,
+  "title": { "en": "The Alms Round", "th": "การบิณฑบาต" },
+  "pali": "piṇḍapāta",
+  "description": {
+    "en": "The daily alms round — the everyday meeting point between the saṅgha and lay supporters. These are among the first words a monk needs in either language.",
+    "th": "การบิณฑบาตประจำวัน — จุดพบกันระหว่างพระสงฆ์กับญาติโยม เป็นคำพื้นฐานที่พระควรรู้"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization (should match the app's existing system), IPA, Pāli, and monastic register on every line.",
+  "vocab": [
+    { "thai": "บิณฑบาต", "paiboon": "bin-tá-bàat", "english": "alms round", "english_ipa": "/ɑːmz raʊnd/", "pali": "piṇḍapāta", "note": "The daily round to receive food offerings." },
+    { "thai": "บาตร", "paiboon": "bàat", "english": "alms bowl", "english_ipa": "/ɑːmz bəʊl/", "pali": "patta", "note": "One of the monk's requisites." },
+    { "thai": "พระ", "paiboon": "prá", "english": "monk", "english_ipa": "/mʌŋk/", "pali": "bhikkhu", "note": "General respectful word for a monk." },
+    { "thai": "ญาติโยม", "paiboon": "yâat-yohm", "english": "lay supporters", "english_ipa": "/leɪ səˈpɔːtəz/", "pali": "upaṭṭhāka", "note": "Laypeople who support the saṅgha." },
+    { "thai": "ตักบาตร", "paiboon": "dtàk-bàat", "english": "to offer food into the bowl", "english_ipa": "/tə ˈɒfə fuːd/", "pali": "", "note": "The lay act of placing food in the bowl." },
+    { "thai": "ถวาย", "paiboon": "tà-waai", "english": "to offer (respectfully)", "english_ipa": "/tə ˈɒfə/", "pali": "", "note": "Used when giving to a monk or the Triple Gem." },
+    { "thai": "อาหาร", "paiboon": "aa-hǎan", "english": "food", "english_ipa": "/fuːd/", "pali": "āhāra", "note": "" },
+    { "thai": "ข้าว", "paiboon": "kâao", "english": "rice", "english_ipa": "/raɪs/", "pali": "", "note": "Cooked rice." },
+    { "thai": "อนุโมทนา", "paiboon": "à-nú-moo-tá-naa", "english": "to give thanks / rejoice in merit", "english_ipa": "/tə ɡɪv θæŋks/", "pali": "anumodanā", "note": "The monk's blessing in return for an offering." },
+    { "thai": "ทำบุญ", "paiboon": "tam-bun", "english": "to make merit", "english_ipa": "/tə meɪk ˈmɛrɪt/", "pali": "puñña", "note": "" }
+  ],
+  "phrases": [
+    { "thai": "นิมนต์ครับ", "paiboon": "ní-mon kráp", "english": "Please, Venerable (an invitation)", "english_ipa": "/pliːz ˈvɛnərəbl̩/", "pali": "", "context": "A layperson inviting a monk to receive / to come." },
+    { "thai": "ขอถวายอาหารครับ", "paiboon": "kɔ̌ɔ tà-waai aa-hǎan kráp", "english": "I would like to offer food.", "english_ipa": "/aɪ wʊd laɪk tə ˈɒfə fuːd/", "pali": "", "context": "Spoken by a lay supporter at the alms round." },
+    { "thai": "เจริญพร", "paiboon": "jà-rəən-pɔɔn", "english": "Blessings to you (monk speaking to laity)", "english_ipa": "/ˈblɛsɪŋz tə juː/", "pali": "", "context": "A polite word a monk uses when addressing laypeople." },
+    { "thai": "สาธุ", "paiboon": "sǎa-tú", "english": "Sādhu — well said / so be it", "english_ipa": "/ˈsɑːduː/", "pali": "sādhu", "context": "Said to rejoice in and affirm merit." }
+  ]
+}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Monk Lessons — ThaiBridge AI{% endblock %}
+
+{% block content %}
+<h1>
+    🧡 Monk Lessons
+    <span class="thai">บทเรียนสำหรับพระ</span>
+</h1>
+
+<div class="card monk-card">
+    <p>
+        Lessons written for monastics. Choose your direction, then pick a topic.
+    </p>
+
+    {% include "partials/monk_direction_switch.html" %}
+</div>
+
+<div class="monk-topic-grid">
+    {% for t in topics %}
+    <a class="monk-topic-card" href="/monk/lesson/{{ t.topic }}">
+        <span class="monk-topic-num">{{ "%02d"|format(t.order) }}</span>
+        <span class="monk-topic-title">
+            {% if direction == 'learn_english' %}{{ t.title.th }}{% else %}{{ t.title.en }}{% endif %}
+        </span>
+        <span class="monk-topic-sub">
+            {% if direction == 'learn_english' %}{{ t.title.en }}{% else %}{{ t.title.th }}{% endif %}
+        </span>
+        {% if t.pali %}<span class="monk-topic-pali">{{ t.pali }}</span>{% endif %}
+        <span class="monk-topic-count">{{ t.vocab|length }} words · {{ t.phrases|length }} phrases</span>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

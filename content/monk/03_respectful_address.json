@@ -1,0 +1,29 @@
+{
+  "topic": "respectful_address",
+  "order": 3,
+  "title": { "en": "Respectful Address & Register", "th": "การใช้คำสุภาพและคำเรียกขาน" },
+  "pali": "",
+  "description": {
+    "en": "How monks and laypeople address one another — titles, respectful pronouns, and the special register of monastic speech.",
+    "th": "พระกับโยมเรียกขานกันอย่างไร — คำนำหน้า สรรพนามสุภาพ และภาษาที่พระใช้"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register. Tones to double-check: ท่าน (I used falling 'tâan'; your dict showed low 'tàan').",
+  "vocab": [
+    { "thai": "อาตมา", "paiboon": "àat-dtà-maa", "english": "I (a monk's word for 'I')", "english_ipa": "/aɪ/", "pali": "", "note": "Used by a monk when speaking to laypeople." },
+    { "thai": "โยม", "paiboon": "yohm", "english": "you / lay supporter", "english_ipa": "/leɪ ˈpɜːsn̩/", "pali": "", "note": "A monk's word for a layperson." },
+    { "thai": "หลวงพ่อ", "paiboon": "lǔaŋ-pɔ̂ɔ", "english": "Luang Por (venerable father)", "english_ipa": "/ˈvɛnərəbl̩ ˈfɑːðə/", "pali": "", "note": "Title for a respected senior monk." },
+    { "thai": "หลวงปู่", "paiboon": "lǔaŋ-bpùu", "english": "Luang Pu (venerable grandfather)", "english_ipa": "/ˈvɛnərəbl̩ ˈɡrænfɑːðə/", "pali": "", "note": "Title for a very senior, elderly monk." },
+    { "thai": "พระอาจารย์", "paiboon": "prá-aa-jaan", "english": "Ajahn (a teacher-monk)", "english_ipa": "/ˈtiːtʃə mʌŋk/", "pali": "ācariya", "note": "A monk who is a teacher." },
+    { "thai": "ท่าน", "paiboon": "tâan", "english": "venerable sir (respectful pronoun)", "english_ipa": "/ˈvɛnərəbl̩ sɜː/", "pali": "", "note": "Respectful 'he/you' for a monk or elder." },
+    { "thai": "กราบ", "paiboon": "gràap", "english": "to prostrate / bow", "english_ipa": "/tə ˈprɒstreɪt/", "pali": "", "note": "The three-fold bow to the Triple Gem or a monk." },
+    { "thai": "นมัสการ", "paiboon": "ná-mát-sà-gaan", "english": "to pay homage", "english_ipa": "/tə peɪ ˈhɒmɪdʒ/", "pali": "namakkāra", "note": "A respectful greeting to a monk or the Buddha." },
+    { "thai": "ประเคน", "paiboon": "bprà-keen", "english": "to offer by hand (to a monk)", "english_ipa": "/tə ˈɒfə baɪ hænd/", "pali": "", "note": "Formally handing an offering so a monk may receive it." },
+    { "thai": "พระเถระ", "paiboon": "prá-těe-rá", "english": "an elder monk", "english_ipa": "/ən ˈɛldə mʌŋk/", "pali": "thera", "note": "A monk of ten or more years' standing." }
+  ],
+  "phrases": [
+    { "thai": "กราบนมัสการครับ", "paiboon": "gràap ná-mát-sà-gaan kráp", "english": "I pay my respects, Venerable.", "english_ipa": "/aɪ peɪ maɪ rɪˈspɛkts/", "pali": "", "context": "A layman greeting a monk (a woman says 'kâ')." },
+    { "thai": "โยมสบายดีไหม", "paiboon": "yohm sà-baai dii mǎi", "english": "Are you well?", "english_ipa": "/ɑː juː wɛl/", "pali": "", "context": "A monk asking a layperson (โยม = 'you')." },
+    { "thai": "ท่านเป็นพระอาจารย์", "paiboon": "tâan bpen prá-aa-jaan", "english": "He is a teacher-monk (Ajahn).", "english_ipa": "/hiː z ə ˈtiːtʃə mʌŋk/", "pali": "", "context": "Using ท่าน as a respectful 'he'." },
+    { "thai": "ขอกราบหลวงพ่อ", "paiboon": "kɔ̌ɔ gràap lǔaŋ-pɔ̂ɔ", "english": "May I bow to you, Luang Por.", "english_ipa": "/meɪ aɪ baʊ/", "pali": "", "context": "Showing respect to a senior monk." }
+  ]
+}

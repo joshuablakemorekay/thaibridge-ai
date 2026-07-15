@@ -1,0 +1,29 @@
+{
+  "topic": "daily_routine",
+  "order": 4,
+  "title": { "en": "The Daily Routine", "th": "กิจวัตรประจำวัน" },
+  "pali": "",
+  "description": {
+    "en": "The shape of a monastic day — chanting, meditation, sweeping, the meal, and observance days.",
+    "th": "กิจวัตรของพระในแต่ละวัน — สวดมนต์ ทำสมาธิ กวาดวัด ฉันภัตตาหาร และวันพระ"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "vocab": [
+    { "thai": "ทำวัตร", "paiboon": "tam-wát", "english": "daily chanting service", "english_ipa": "/ˈtʃɑːntɪŋ ˈsɜːvɪs/", "pali": "vatta", "note": "Morning and evening chanting." },
+    { "thai": "สวดมนต์", "paiboon": "sùat-mon", "english": "to chant", "english_ipa": "/tə tʃɑːnt/", "pali": "", "note": "Reciting suttas and verses." },
+    { "thai": "นั่งสมาธิ", "paiboon": "nâŋ sà-maa-tí", "english": "to sit in meditation", "english_ipa": "/tə ˈmɛdɪteɪt/", "pali": "samādhi", "note": "Seated meditation practice." },
+    { "thai": "เดินจงกรม", "paiboon": "dəən joŋ-grom", "english": "walking meditation", "english_ipa": "/ˈwɔːkɪŋ ˌmɛdɪˈteɪʃən/", "pali": "caṅkama", "note": "Meditation while pacing a set path." },
+    { "thai": "ภาวนา", "paiboon": "paa-wá-naa", "english": "mental cultivation / meditation", "english_ipa": "/ˌmɛdɪˈteɪʃən/", "pali": "bhāvanā", "note": "Developing the mind — the heart of practice." },
+    { "thai": "กวาด", "paiboon": "gwàat", "english": "to sweep", "english_ipa": "/tə swiːp/", "pali": "", "note": "Sweeping the grounds is a daily monastic duty." },
+    { "thai": "ฉัน", "paiboon": "chǎn", "english": "to eat (a monk's word)", "english_ipa": "/tə iːt/", "pali": "", "note": "The respectful verb 'to eat' used for monks." },
+    { "thai": "ฉันเพล", "paiboon": "chǎn-peen", "english": "the midday meal (before noon)", "english_ipa": "/ˈmɪdeɪ miːl/", "pali": "", "note": "The last meal of the day, taken before noon." },
+    { "thai": "อุโบสถ", "paiboon": "u-boo-sòt", "english": "observance day (Uposatha)", "english_ipa": "/ˌɒbˈzɜːvəns deɪ/", "pali": "uposatha", "note": "The lunar observance day of practice and recitation." },
+    { "thai": "ตื่นนอน", "paiboon": "dtʉ̀ʉn-nɔɔn", "english": "to wake up", "english_ipa": "/tə weɪk ʌp/", "pali": "", "note": "Monks usually rise well before dawn." }
+  ],
+  "phrases": [
+    { "thai": "ได้เวลาทำวัตรเช้า", "paiboon": "dâai wee-laa tam-wát cháo", "english": "It's time for morning chanting.", "english_ipa": "/ɪts taɪm fə ˈmɔːnɪŋ ˈtʃɑːntɪŋ/", "pali": "", "context": "Calling the community to the morning service." },
+    { "thai": "อาตมานั่งสมาธิทุกวัน", "paiboon": "àat-dtà-maa nâŋ sà-maa-tí túk wan", "english": "I meditate every day.", "english_ipa": "/aɪ ˈmɛdɪteɪt ˈɛvri deɪ/", "pali": "", "context": "A monk describing his practice." },
+    { "thai": "วันนี้เป็นวันพระ", "paiboon": "wan-níi bpen wan-prá", "english": "Today is an observance day.", "english_ipa": "/təˈdeɪ z ən ˌɒbˈzɜːvəns deɪ/", "pali": "", "context": "วันพระ = the Buddhist holy day." },
+    { "thai": "พระฉันเพลก่อนเที่ยง", "paiboon": "prá chǎn-peen gɔ̀ɔn tîaŋ", "english": "Monks eat the midday meal before noon.", "english_ipa": "/mʌŋks iːt bɪˈfɔː nuːn/", "pali": "", "context": "The Vinaya rule of not eating after midday." }
+  ]
+}

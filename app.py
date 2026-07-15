@@ -10,6 +10,8 @@ Version 3.0 - AI Agent Edition
 
 import os
 import sys
+import json
+import glob
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -361,7 +363,8 @@ def init_user_progress():
             'subscription_tier': 'free',
             'subscription_expires': None,
             'is_developer': False,
-            'monk_mode': False,   # free, all-content-unlocked mode for monks & the Thai diaspora
+            'monk_mode': False,   # free, monk-tailored track for monastics (code-gated)
+            'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
             'sections_unlocked': ['home', 'paiboon', 'learn', 'alphabet'],
             'sections_visited': [],
             'achievements_earned': [],
@@ -439,12 +442,45 @@ def is_valid_monk_code(code):
     return (code or '').strip().lower() in _valid_monk_codes()
 
 
+# ============================================
+# MONK MODE CONTENT (the monk-specific lesson track)
+# ============================================
+# The monk lessons live as one JSON file per topic in content/monk/, kept apart
+# from the general (paid/freemium) content on purpose. Loaded once at startup.
+MONK_CONTENT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'content', 'monk')
+
+def _load_monk_topics():
+    """Load every content/monk/*.json topic, sorted by its 'order' field."""
+    topics = []
+    for path in sorted(glob.glob(os.path.join(MONK_CONTENT_DIR, '*.json'))):
+        try:
+            with open(path, encoding='utf-8') as f:
+                topics.append(json.load(f))
+        except (json.JSONDecodeError, OSError) as e:
+            app.logger.warning("Skipping monk topic %s: %s", path, e)
+    topics.sort(key=lambda t: t.get('order', 999))
+    return topics
+
+MONK_TOPICS = _load_monk_topics()
+MONK_TOPICS_BY_ID = {t['topic']: t for t in MONK_TOPICS}
+
+# The two learning directions Monk Mode supports.
+MONK_DIRECTIONS = {'learn_thai', 'learn_english'}
+MONK_DIRECTION_DEFAULT = 'learn_thai'   # a Western monk learning Thai
+
+def monk_direction():
+    """The current Monk Mode learning direction for this visitor."""
+    if 'user_progress' not in session:
+        return MONK_DIRECTION_DEFAULT
+    return session['user_progress'].get('monk_direction', MONK_DIRECTION_DEFAULT)
+
+
 @app.context_processor
 def inject_monk_mode():
-    """Expose Monk Mode's on/off state to every template, so the nav toggle and
-    the 'everything unlocked' banner can render on any page without each route
-    having to pass it in."""
-    return {'monk_mode': monk_mode_active()}
+    """Expose Monk Mode's state to every template, so the nav toggle, the
+    'everything unlocked' banner and the direction switch can render on any page
+    without each route having to pass them in."""
+    return {'monk_mode': monk_mode_active(), 'monk_direction': monk_direction()}
 
 # ============================================
 # FREEMIUM AI LIMITS
@@ -4186,6 +4222,36 @@ def set_monk_mode_off():
     session['user_progress']['monk_mode'] = False
     session.modified = True
     return jsonify({'success': True, 'monk_mode': False})
+
+
+@app.route('/set-monk-direction/<direction>')
+def set_monk_direction(direction):
+    """Switch the monk lessons between 'learn_thai' (a Western monk) and
+    'learn_english' (a Thai monk). Flips which language is the prompt."""
+    init_user_progress()
+    if direction in MONK_DIRECTIONS:
+        session['user_progress']['monk_direction'] = direction
+        session.modified = True
+    return jsonify({'success': True, 'direction': monk_direction()})
+
+
+@app.route('/monk/lessons')
+def monk_lessons():
+    """The monk lesson track — a grid of topics. Only available in Monk Mode."""
+    if not monk_mode_active():
+        return redirect(url_for('monk_mode'))
+    return render_template('monk_lessons.html', topics=MONK_TOPICS, direction=monk_direction())
+
+
+@app.route('/monk/lesson/<topic>')
+def monk_lesson_detail(topic):
+    """A single monk topic, rendered in the current learning direction."""
+    if not monk_mode_active():
+        return redirect(url_for('monk_mode'))
+    lesson = MONK_TOPICS_BY_ID.get(topic)
+    if not lesson:
+        return redirect(url_for('monk_lessons'))
+    return render_template('monk_lesson_detail.html', lesson=lesson, direction=monk_direction())
 
 
 @app.route('/gender-examples')

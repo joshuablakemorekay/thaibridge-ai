@@ -1,0 +1,29 @@
+{
+  "topic": "dhamma_teaching",
+  "order": 8,
+  "title": { "en": "Dhamma & Teaching", "th": "ธรรมะและการสอน" },
+  "pali": "dhamma-desanā",
+  "description": {
+    "en": "Core words for teaching and practice — the Dhamma, giving a talk, and key terms a monk uses and explains.",
+    "th": "คำหลักในการสอนและการปฏิบัติ — ธรรมะ การเทศน์ และคำสำคัญที่พระใช้และอธิบาย"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "vocab": [
+    { "thai": "ธรรมะ", "paiboon": "tam-má", "english": "the Dhamma / teaching", "english_ipa": "/ˈdɑːmə/", "pali": "dhamma", "note": "The Buddha's teaching; the truth." },
+    { "thai": "เทศน์", "paiboon": "têet", "english": "to give a Dhamma talk", "english_ipa": "/tə tiːtʃ/", "pali": "desanā", "note": "To preach or expound the Dhamma." },
+    { "thai": "ปฏิบัติ", "paiboon": "bpà-dtì-bàt", "english": "to practise", "english_ipa": "/tə ˈpræktɪs/", "pali": "paṭipatti", "note": "To put the teaching into practice." },
+    { "thai": "ปัญญา", "paiboon": "bpan-yaa", "english": "wisdom", "english_ipa": "/ˈwɪzdəm/", "pali": "paññā", "note": "Insight; the third of the three trainings." },
+    { "thai": "เมตตา", "paiboon": "mêet-dtaa", "english": "loving-kindness", "english_ipa": "/ˈlʌvɪŋ ˈkaɪndnəs/", "pali": "mettā", "note": "Goodwill towards all beings." },
+    { "thai": "สติ", "paiboon": "sà-dtì", "english": "mindfulness", "english_ipa": "/ˈmaɪndfʊlnəs/", "pali": "sati", "note": "Present-moment awareness." },
+    { "thai": "ทุกข์", "paiboon": "túk", "english": "suffering", "english_ipa": "/ˈsʌfərɪŋ/", "pali": "dukkha", "note": "The first Noble Truth." },
+    { "thai": "นิพพาน", "paiboon": "níp-paan", "english": "Nibbāna", "english_ipa": "/nɪˈbɑːnə/", "pali": "nibbāna", "note": "The end of suffering; the goal." },
+    { "thai": "กรรม", "paiboon": "gam", "english": "kamma / action", "english_ipa": "/ˈkɑːmə/", "pali": "kamma", "note": "Intentional action and its fruit." },
+    { "thai": "อริยสัจ", "paiboon": "à-rí-yá-sàt", "english": "the Noble Truths", "english_ipa": "/ˈnəʊbl̩ truːθs/", "pali": "ariyasacca", "note": "The Four Noble Truths." }
+  ],
+  "phrases": [
+    { "thai": "ขอฟังธรรมะ", "paiboon": "kɔ̌ɔ faŋ tam-má", "english": "May I listen to the Dhamma?", "english_ipa": "/meɪ aɪ ˈlɪsn̩ tə ðə ˈdɑːmə/", "pali": "", "context": "A layperson requesting a teaching." },
+    { "thai": "หลวงพ่อเทศน์", "paiboon": "lǔaŋ-pɔ̂ɔ têet", "english": "Luang Por gives a Dhamma talk.", "english_ipa": "/ɡɪvz ə ˈdɑːmə tɔːk/", "pali": "", "context": "" },
+    { "thai": "ปฏิบัติธรรม", "paiboon": "bpà-dtì-bàt tam", "english": "to practise the Dhamma", "english_ipa": "/tə ˈpræktɪs ðə ˈdɑːmə/", "pali": "", "context": "Often used for going on retreat." },
+    { "thai": "ทุกสิ่งไม่เที่ยง", "paiboon": "túk sìŋ mâi tîaŋ", "english": "All things are impermanent.", "english_ipa": "/ɔːl θɪŋz ɑːr ˌɪmˈpɜːmənənt/", "pali": "aniccā", "context": "A core teaching a monk explains often." }
+  ]
+}

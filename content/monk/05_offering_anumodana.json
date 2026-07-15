@@ -1,0 +1,29 @@
+{
+  "topic": "offering_anumodana",
+  "order": 5,
+  "title": { "en": "Offering & Anumodanā", "th": "การถวายทานและการอนุโมทนา" },
+  "pali": "dāna / anumodanā",
+  "description": {
+    "en": "Receiving offerings and giving thanks — generosity, merit, blessings and the dedication of merit that flow between saṅgha and laity.",
+    "th": "การรับของถวายและการอนุโมทนา — ทาน บุญ การให้พร และการอุทิศบุญระหว่างพระกับโยม"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "vocab": [
+    { "thai": "ทาน", "paiboon": "taan", "english": "giving / generosity", "english_ipa": "/ˌdʒɛnəˈrɒsɪti/", "pali": "dāna", "note": "The practice of giving." },
+    { "thai": "ถวายสังฆทาน", "paiboon": "tà-waai sǎŋ-ká-taan", "english": "to offer to the Sangha", "english_ipa": "/tə ˈɒfə tə ðə ˈsæŋɡə/", "pali": "saṅghadāna", "note": "An offering made to the community, not an individual." },
+    { "thai": "บุญ", "paiboon": "bun", "english": "merit", "english_ipa": "/ˈmɛrɪt/", "pali": "puñña", "note": "The wholesome result of good actions." },
+    { "thai": "อนุโมทนา", "paiboon": "à-nú-moo-tá-naa", "english": "to rejoice in merit / give thanks", "english_ipa": "/tə rɪˈdʒɔɪs/", "pali": "anumodanā", "note": "The monk's expression of thanks and shared rejoicing." },
+    { "thai": "พร", "paiboon": "pɔɔn", "english": "blessing", "english_ipa": "/ˈblɛsɪŋ/", "pali": "", "note": "Words of goodwill given by a monk." },
+    { "thai": "ให้พร", "paiboon": "hâi pɔɔn", "english": "to give a blessing", "english_ipa": "/tə ɡɪv ə ˈblɛsɪŋ/", "pali": "", "note": "A monk blessing lay supporters after an offering." },
+    { "thai": "ศรัทธา", "paiboon": "sà-rát-taa", "english": "faith / devotion", "english_ipa": "/feɪθ/", "pali": "saddhā", "note": "Confidence in the Triple Gem." },
+    { "thai": "เจตนา", "paiboon": "jee-dtà-naa", "english": "intention", "english_ipa": "/ɪnˈtɛnʃən/", "pali": "cetanā", "note": "The intention behind an action — what shapes its merit." },
+    { "thai": "อุทิศบุญ", "paiboon": "ù-tít bun", "english": "to dedicate merit", "english_ipa": "/tə ˈdɛdɪkeɪt ˈmɛrɪt/", "pali": "pattidāna", "note": "Sharing the merit of a good deed with others." },
+    { "thai": "กรวดน้ำ", "paiboon": "grùat-náam", "english": "to pour water (dedicating merit)", "english_ipa": "/tə pɔː ˈwɔːtə/", "pali": "", "note": "The custom of pouring water while dedicating merit." }
+  ],
+  "phrases": [
+    { "thai": "ขออนุโมทนาบุญ", "paiboon": "kɔ̌ɔ à-nú-moo-tá-naa bun", "english": "I rejoice in your merit.", "english_ipa": "/aɪ rɪˈdʒɔɪs ɪn jɔː ˈmɛrɪt/", "pali": "", "context": "Affirming and sharing in someone's good deed." },
+    { "thai": "อาตมาขอให้พร", "paiboon": "àat-dtà-maa kɔ̌ɔ hâi pɔɔn", "english": "I will give a blessing.", "english_ipa": "/aɪ wɪl ɡɪv ə ˈblɛsɪŋ/", "pali": "", "context": "A monk about to bless lay supporters." },
+    { "thai": "โยมทำบุญวันนี้", "paiboon": "yohm tam-bun wan-níi", "english": "You have made merit today.", "english_ipa": "/juː həv meɪd ˈmɛrɪt təˈdeɪ/", "pali": "", "context": "A monk acknowledging a lay supporter's giving." },
+    { "thai": "ขอถวายสังฆทาน", "paiboon": "kɔ̌ɔ tà-waai sǎŋ-ká-taan", "english": "I would like to offer to the Sangha.", "english_ipa": "/aɪ wʊd laɪk tə ˈɒfə/", "pali": "", "context": "A layperson presenting an offering to the community." }
+  ]
+}

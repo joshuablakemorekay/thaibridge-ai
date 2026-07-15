@@ -1,0 +1,29 @@
+{
+  "topic": "health_body",
+  "order": 7,
+  "title": { "en": "Health & the Body", "th": "สุขภาพและร่างกาย" },
+  "pali": "gilāna-paccaya",
+  "description": {
+    "en": "Words for illness, the body and care — for seeing a doctor, describing how one feels, and the requisite of medicine.",
+    "th": "คำเกี่ยวกับความเจ็บป่วย ร่างกาย และการรักษา — สำหรับไปหาหมอ บอกอาการ และปัจจัยคือยา"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register (esp. อาพาธ as the monastic word for being ill).",
+  "vocab": [
+    { "thai": "อาพาธ", "paiboon": "aa-pâat", "english": "to be ill (monk's word)", "english_ipa": "/tə biː ɪl/", "pali": "ābādha", "note": "The respectful term for a monk being unwell." },
+    { "thai": "หมอ", "paiboon": "mɔ̌ɔ", "english": "doctor", "english_ipa": "/ˈdɒktə/", "pali": "", "note": "" },
+    { "thai": "โรงพยาบาล", "paiboon": "rooŋ-pá-yaa-baan", "english": "hospital", "english_ipa": "/ˈhɒspɪtl̩/", "pali": "", "note": "" },
+    { "thai": "ยา", "paiboon": "yaa", "english": "medicine", "english_ipa": "/ˈmɛdsn̩/", "pali": "bhesajja", "note": "The requisite of medicine." },
+    { "thai": "ไข้", "paiboon": "kâi", "english": "fever", "english_ipa": "/ˈfiːvə/", "pali": "", "note": "" },
+    { "thai": "ปวด", "paiboon": "bpùat", "english": "to ache", "english_ipa": "/tə eɪk/", "pali": "", "note": "A dull, ongoing pain." },
+    { "thai": "เจ็บ", "paiboon": "jèp", "english": "to hurt / be sore", "english_ipa": "/tə hɜːt/", "pali": "", "note": "A sharp or localised pain." },
+    { "thai": "ป่วย", "paiboon": "bpùai", "english": "to be sick", "english_ipa": "/tə biː sɪk/", "pali": "", "note": "General word for being unwell." },
+    { "thai": "พักผ่อน", "paiboon": "pák-pɔ̀ɔn", "english": "to rest", "english_ipa": "/tə rɛst/", "pali": "", "note": "" },
+    { "thai": "แข็งแรง", "paiboon": "kɛ̌ŋ-rɛɛŋ", "english": "strong / healthy", "english_ipa": "/ˈhɛlθi/", "pali": "", "note": "" }
+  ],
+  "phrases": [
+    { "thai": "อาตมาอาพาธ", "paiboon": "àat-dtà-maa aa-pâat", "english": "I am unwell.", "english_ipa": "/aɪ əm ʌnˈwɛl/", "pali": "", "context": "A monk saying he is ill, in the proper register." },
+    { "thai": "ปวดหัว", "paiboon": "bpùat hǔa", "english": "(I) have a headache.", "english_ipa": "/aɪ həv ə ˈhɛdeɪk/", "pali": "", "context": "Describing a symptom." },
+    { "thai": "ต้องไปหาหมอ", "paiboon": "dtɔ̂ŋ bpai hǎa mɔ̌ɔ", "english": "(I) need to see a doctor.", "english_ipa": "/aɪ niːd tə siː ə ˈdɒktə/", "pali": "", "context": "" },
+    { "thai": "ขอยาหน่อย", "paiboon": "kɔ̌ɔ yaa nɔ̀i", "english": "May I have some medicine?", "english_ipa": "/meɪ aɪ həv sʌm ˈmɛdsn̩/", "pali": "", "context": "Requesting the medicine requisite." }
+  ]
+}

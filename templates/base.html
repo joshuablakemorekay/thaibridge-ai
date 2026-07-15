@@ -83,7 +83,7 @@
                 <!-- Premium -->
                 <li><a href="/premium">⭐ Premium</a></li>
 
-                <!-- Monk Mode: free, all-content-unlocked mode for monks & the Thai diaspora -->
+                <!-- Monk Mode: free, monk-tailored track for Thai monks learning English & Western monks learning Thai -->
                 <li>
                     {% if monk_mode %}
                     <button class="monk-mode-toggle active" onclick="turnMonkModeOff()"
@@ -92,7 +92,7 @@
                     </button>
                     {% else %}
                     <a href="/monk-mode" class="monk-mode-toggle"
-                       title="Free mode for Buddhist monks & the Thai diaspora — enter your access code to unlock everything">
+                       title="Free monk track — for Thai monks learning English & Western monks learning Thai. Enter your access code.">
                         🧡 Monk Mode
                     </a>
                     {% endif %}
@@ -118,7 +118,7 @@
 
     {% if monk_mode %}
     <div class="monk-mode-banner">
-        🧡 <strong>Monk Mode is on.</strong> Every lesson is unlocked, free of charge — a gift for monks &amp; the Thai diaspora. May your study bring wisdom and peace. 🙏
+        🧡 <strong>Monk Mode is on.</strong> A free track written for monastics, unlocked in full. May your study bring wisdom and peace. 🙏
     </div>
     {% endif %}
 
@@ -144,6 +144,13 @@
         // re-evaluates with the new state.
         function turnMonkModeOff() {
             fetch('/set-monk-mode/off')
+                .then(function (r) { return r.json(); })
+                .then(function () { window.location.reload(); })
+                .catch(function () { window.location.reload(); });
+        }
+        // Flip the monk lessons between learning Thai and learning English.
+        function setMonkDirection(dir) {
+            fetch('/set-monk-direction/' + dir)
                 .then(function (r) { return r.json(); })
                 .then(function () { window.location.reload(); })
                 .catch(function () { window.location.reload(); });

@@ -1,0 +1,12 @@
+<div class="monk-direction-switch" role="group" aria-label="Learning direction">
+    <button class="monk-dir-btn{% if direction == 'learn_thai' %} active{% endif %}"
+            onclick="setMonkDirection('learn_thai')">
+        🌏 Learning Thai
+        <span class="monk-dir-sub">for Western monks</span>
+    </button>
+    <button class="monk-dir-btn{% if direction == 'learn_english' %} active{% endif %}"
+            onclick="setMonkDirection('learn_english')">
+        🔤 Learning English
+        <span class="monk-dir-sub">for Thai monks</span>
+    </button>
+</div>

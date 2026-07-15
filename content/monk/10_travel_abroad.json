@@ -1,0 +1,29 @@
+{
+  "topic": "travel_abroad",
+  "order": 10,
+  "title": { "en": "Travel & Life Abroad", "th": "การเดินทางและชีวิตในต่างแดน" },
+  "pali": "",
+  "description": {
+    "en": "Practical words for a monk travelling or living overseas — the airport, immigration, being hosted, and finding a temple.",
+    "th": "คำที่ใช้จริงสำหรับพระที่เดินทางหรืออยู่ต่างประเทศ — สนามบิน ตรวจคนเข้าเมือง การต้อนรับ และการหาวัด"
+  },
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "vocab": [
+    { "thai": "เดินทาง", "paiboon": "dəən-taaŋ", "english": "to travel", "english_ipa": "/tə ˈtrævl̩/", "pali": "", "note": "" },
+    { "thai": "สนามบิน", "paiboon": "sà-nǎam-bin", "english": "airport", "english_ipa": "/ˈeəpɔːt/", "pali": "", "note": "" },
+    { "thai": "เครื่องบิน", "paiboon": "krʉ̂aŋ-bin", "english": "aeroplane", "english_ipa": "/ˈeəpleɪn/", "pali": "", "note": "" },
+    { "thai": "หนังสือเดินทาง", "paiboon": "nǎŋ-sʉ̌ʉ-dəən-taaŋ", "english": "passport", "english_ipa": "/ˈpɑːspɔːt/", "pali": "", "note": "" },
+    { "thai": "วีซ่า", "paiboon": "wii-sâa", "english": "visa", "english_ipa": "/ˈviːzə/", "pali": "", "note": "" },
+    { "thai": "ตรวจคนเข้าเมือง", "paiboon": "dtrùat-kon-kâo-mʉaŋ", "english": "immigration", "english_ipa": "/ˌɪmɪˈɡreɪʃən/", "pali": "", "note": "The immigration checkpoint." },
+    { "thai": "กระเป๋า", "paiboon": "grà-bpǎo", "english": "bag / luggage", "english_ipa": "/ˈlʌɡɪdʒ/", "pali": "", "note": "" },
+    { "thai": "ที่พัก", "paiboon": "tîi-pák", "english": "accommodation / lodging", "english_ipa": "/əˌkɒməˈdeɪʃən/", "pali": "", "note": "Where one stays." },
+    { "thai": "ต้อนรับ", "paiboon": "dtɔ̂ɔn-ráp", "english": "to welcome / host", "english_ipa": "/tə ˈwɛlkəm/", "pali": "", "note": "" },
+    { "thai": "วัดไทย", "paiboon": "wát-tai", "english": "a Thai temple (abroad)", "english_ipa": "/ə taɪ ˈtɛmpl̩/", "pali": "", "note": "Thai monasteries overseas serve the diaspora and locals." }
+  ],
+  "phrases": [
+    { "thai": "อาตมามาจากเมืองไทย", "paiboon": "àat-dtà-maa maa jàak mʉaŋ-tai", "english": "I come from Thailand.", "english_ipa": "/aɪ kʌm frəm ˈtaɪlænd/", "pali": "", "context": "Introducing oneself abroad." },
+    { "thai": "นี่คือหนังสือเดินทางของอาตมา", "paiboon": "nîi kʉʉ nǎŋ-sʉ̌ʉ-dəən-taaŋ kɔ̌ɔŋ àat-dtà-maa", "english": "This is my passport.", "english_ipa": "/ðɪs ɪz maɪ ˈpɑːspɔːt/", "pali": "", "context": "At immigration." },
+    { "thai": "อาตมามาปฏิบัติธรรม", "paiboon": "àat-dtà-maa maa bpà-dtì-bàt tam", "english": "I have come to practise the Dhamma.", "english_ipa": "/aɪ həv kʌm tə ˈpræktɪs ðə ˈdɑːmə/", "pali": "", "context": "Explaining the purpose of a visit." },
+    { "thai": "วัดอยู่ที่ไหน", "paiboon": "wát yùu tîi nǎi", "english": "Where is the temple?", "english_ipa": "/wɛər ɪz ðə ˈtɛmpl̩/", "pali": "", "context": "Finding the monastery on arrival." }
+  ]
+}

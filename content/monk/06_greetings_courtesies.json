@@ -1,0 +1,29 @@
+{
+  "topic": "greetings_courtesies",
+  "order": 6,
+  "title": { "en": "Greetings & Courtesies", "th": "การทักทายและมารยาท" },
+  "pali": "",
+  "description": {
+    "en": "Everyday courtesy — greetings, thanks, apologies and the gestures of respect exchanged between monks and laypeople.",
+    "th": "มารยาทประจำวัน — การทักทาย ขอบคุณ ขอโทษ และการแสดงความเคารพระหว่างพระกับโยม"
+  },
+  "_review_note": "DRAFT — Josh to verify. NOTE: app romanization is inconsistent on aspiration (dict has both kâao and khai); I've used the no-'h' style throughout — please confirm the standard.",
+  "vocab": [
+    { "thai": "สวัสดี", "paiboon": "sà-wàt-dii", "english": "hello", "english_ipa": "/həˈləʊ/", "pali": "", "note": "A lay greeting; monks greet laity with เจริญพร." },
+    { "thai": "ขอบคุณ", "paiboon": "kɔ̀ɔp-kun", "english": "thank you", "english_ipa": "/θæŋk juː/", "pali": "", "note": "" },
+    { "thai": "ขอบใจ", "paiboon": "kɔ̀ɔp-jai", "english": "thanks (to a junior)", "english_ipa": "/θæŋks/", "pali": "", "note": "Said to someone younger or of lower standing." },
+    { "thai": "ขอโทษ", "paiboon": "kɔ̌ɔ-toot", "english": "sorry / excuse me", "english_ipa": "/ˈsɒri/", "pali": "", "note": "" },
+    { "thai": "ไหว้", "paiboon": "wâi", "english": "to make the wai (gesture of respect)", "english_ipa": "/tə weɪ/", "pali": "", "note": "Palms pressed together in greeting or respect." },
+    { "thai": "อัญชลี", "paiboon": "an-chá-lii", "english": "añjali (palms joined)", "english_ipa": "/ˈændʒəli/", "pali": "añjali", "note": "The gesture of palms together at the chest." },
+    { "thai": "เชิญ", "paiboon": "chəən", "english": "please (go ahead) / welcome", "english_ipa": "/pliːz/", "pali": "", "note": "Inviting someone to proceed." },
+    { "thai": "ยินดี", "paiboon": "yin-dii", "english": "glad / pleased", "english_ipa": "/pliːzd/", "pali": "", "note": "" },
+    { "thai": "ลาก่อน", "paiboon": "laa-gɔ̀ɔn", "english": "goodbye", "english_ipa": "/ˌɡʊdˈbaɪ/", "pali": "", "note": "" },
+    { "thai": "สบายดี", "paiboon": "sà-baai-dii", "english": "to be well", "english_ipa": "/tə biː wɛl/", "pali": "", "note": "" }
+  ],
+  "phrases": [
+    { "thai": "สวัสดีครับ", "paiboon": "sà-wàt-dii kráp", "english": "Hello.", "english_ipa": "/həˈləʊ/", "pali": "", "context": "A layman's greeting (a woman says 'kâ')." },
+    { "thai": "ขอบคุณมากครับ", "paiboon": "kɔ̀ɔp-kun mâak kráp", "english": "Thank you very much.", "english_ipa": "/θæŋk juː ˈvɛri mʌtʃ/", "pali": "", "context": "" },
+    { "thai": "ไม่เป็นไร", "paiboon": "mâi bpen rai", "english": "It's all right / never mind.", "english_ipa": "/ɪts ɔːl raɪt/", "pali": "", "context": "A very common courtesy." },
+    { "thai": "เจริญพรโยม", "paiboon": "jà-rəən-pɔɔn yohm", "english": "Blessings, lay supporter.", "english_ipa": "/ˈblɛsɪŋz/", "pali": "", "context": "A monk's greeting to a layperson." }
+  ]
+}

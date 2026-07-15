@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}{{ lesson.title.en }} — Monk Lessons{% endblock %}
+
+{% macro entry_card(e) %}
+<div class="monk-entry">
+    {% if direction == 'learn_english' %}
+    {# Thai monk learning English: prompt = Thai, target = English + IPA #}
+    <div class="monk-entry-prompt">
+        <span class="thai">{{ e.thai }}</span>
+        <span class="monk-entry-roman">{{ e.paiboon }}</span>
+    </div>
+    <div class="monk-entry-target">
+        <span class="monk-entry-word">{{ e.english }}</span>
+        {% if e.english_ipa %}<span class="monk-entry-pron">{{ e.english_ipa }}</span>{% endif %}
+    </div>
+    {% else %}
+    {# Western monk learning Thai: prompt = English, target = Thai + paiboon #}
+    <div class="monk-entry-prompt">
+        <span class="monk-entry-word">{{ e.english }}</span>
+    </div>
+    <div class="monk-entry-target">
+        <span class="thai">{{ e.thai }}</span>
+        {% if e.paiboon %}<span class="monk-entry-pron">{{ e.paiboon }}</span>{% endif %}
+    </div>
+    {% endif %}
+    <div class="monk-entry-meta">
+        {% if e.pali %}<span class="monk-entry-pali">Pāli: {{ e.pali }}</span>{% endif %}
+        {% if e.note %}<span class="monk-entry-note">{{ e.note }}</span>{% endif %}
+        {% if e.context %}<span class="monk-entry-note">{{ e.context }}</span>{% endif %}
+    </div>
+</div>
+{% endmacro %}
+
+{% block content %}
+<p><a href="/monk/lessons" class="monk-back">← All monk lessons</a></p>
+
+<h1>
+    🧡 {% if direction == 'learn_english' %}{{ lesson.title.th }}{% else %}{{ lesson.title.en }}{% endif %}
+    <span class="thai">{% if direction == 'learn_english' %}{{ lesson.title.en }}{% else %}{{ lesson.title.th }}{% endif %}</span>
+</h1>
+
+<div class="card monk-card">
+    <p>{% if direction == 'learn_english' %}{{ lesson.description.th }}{% else %}{{ lesson.description.en }}{% endif %}</p>
+    {% if lesson.pali %}<p class="monk-entry-pali">Pāli: {{ lesson.pali }}</p>{% endif %}
+    {% include "partials/monk_direction_switch.html" %}
+</div>
+
+<h2>Vocabulary</h2>
+<div class="monk-entry-list">
+    {% for e in lesson.vocab %}{{ entry_card(e) }}{% endfor %}
+</div>
+
+{% if lesson.phrases %}
+<h2>Phrases</h2>
+<div class="monk-entry-list">
+    {% for e in lesson.phrases %}{{ entry_card(e) }}{% endfor %}
+</div>
+{% endif %}
+{% endblock %}
