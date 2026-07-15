@@ -1314,3 +1314,40 @@ body {
     /* h1/h2 sizing left to the fluid clamp() rules above. */
     nav { padding: 0.85rem 1rem; }
 }
+
+/* ============================================
+   MONK MODE — free, all-content-unlocked toggle
+   for Buddhist monks & the Thai diaspora.
+   Uses the saffron robe colour so it reads as
+   a warm, welcoming gift rather than a paywall.
+   ============================================ */
+.monk-mode-toggle {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.4rem 0.85rem;
+    border-radius: 999px;
+    border: 2px solid var(--monk-saffron);
+    background: transparent;
+    color: var(--monk-saffron);
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.monk-mode-toggle:hover {
+    background: rgba(255, 153, 51, 0.12);
+}
+.monk-mode-toggle.active {
+    background: var(--monk-saffron);
+    color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.25);
+}
+
+.monk-mode-banner {
+    background: linear-gradient(90deg, var(--monk-saffron), var(--temple-orange));
+    color: #fff;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+.monk-mode-banner strong { font-weight: 700; }

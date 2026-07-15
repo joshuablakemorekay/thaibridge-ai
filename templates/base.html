@@ -82,6 +82,15 @@
 
                 <!-- Premium -->
                 <li><a href="/premium">⭐ Premium</a></li>
+
+                <!-- Monk Mode: free, all-content-unlocked mode for monks & the Thai diaspora -->
+                <li>
+                    <button class="monk-mode-toggle{% if monk_mode %} active{% endif %}"
+                            onclick="toggleMonkMode()"
+                            title="Free mode for Buddhist monks & the Thai diaspora — unlocks every lesson at no charge">
+                        🧡 Monk Mode: {% if monk_mode %}ON{% else %}OFF{% endif %}
+                    </button>
+                </li>
             </ul>
             
             {% if request.endpoint == 'gender_examples' %}
@@ -100,7 +109,13 @@
             {% endif %}
         </div>
     </nav>
-    
+
+    {% if monk_mode %}
+    <div class="monk-mode-banner">
+        🧡 <strong>Monk Mode is on.</strong> Every lesson is unlocked, free of charge — a gift for monks &amp; the Thai diaspora. May your study bring wisdom and peace. 🙏
+    </div>
+    {% endif %}
+
     <div class="layout">
         {% block sidebar %}{% endblock %}
         <main>
@@ -117,6 +132,17 @@
     </footer>
     
     <script>window.CURRENT_GENDER = '{{ current_gender|default("neutral") }}';</script>
+    <script>
+        // Monk Mode: flip the free "unlock everything" switch, then reload so
+        // every gate re-evaluates with the new state.
+        window.MONK_MODE = {{ 'true' if monk_mode else 'false' }};
+        function toggleMonkMode() {
+            fetch('/set-monk-mode/' + (window.MONK_MODE ? 'off' : 'on'))
+                .then(function (r) { return r.json(); })
+                .then(function () { window.location.reload(); })
+                .catch(function () { window.location.reload(); });
+        }
+    </script>
     <script src="{{ url_for('static', filename='js/base.js') }}"></script>
     
     {% block extra_js %}{% endblock %}

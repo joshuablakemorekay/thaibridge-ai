@@ -361,6 +361,7 @@ def init_user_progress():
             'subscription_tier': 'free',
             'subscription_expires': None,
             'is_developer': False,
+            'monk_mode': False,   # free, all-content-unlocked mode for monks & the Thai diaspora
             'sections_unlocked': ['home', 'paiboon', 'learn', 'alphabet'],
             'sections_visited': [],
             'achievements_earned': [],
@@ -400,6 +401,28 @@ def active_tier():
     if current_user.is_authenticated:
         return current_user.effective_tier
     return session.get('user_progress', {}).get('subscription_tier', 'free')
+
+
+def monk_mode_active():
+    """Monk Mode: a free, all-content-unlocked mode offered to Buddhist monks
+    and the Thai diaspora.
+
+    When it's on, every content gate (level, alphabet requirement and
+    subscription tier) is bypassed at no charge. It intentionally does NOT lift
+    the AI daily usage cap, because AI calls cost real money — unlimited free AI
+    is a separate decision, kept out of scope on purpose.
+    """
+    if 'user_progress' not in session:
+        return False
+    return session['user_progress'].get('monk_mode', False)
+
+
+@app.context_processor
+def inject_monk_mode():
+    """Expose Monk Mode's on/off state to every template, so the nav toggle and
+    the 'everything unlocked' banner can render on any page without each route
+    having to pass it in."""
+    return {'monk_mode': monk_mode_active()}
 
 # ============================================
 # FREEMIUM AI LIMITS
@@ -472,7 +495,11 @@ def check_section_access(section_id):
     # Developer mode bypasses everything
     if user.get('is_developer', False):
         return True, "Developer Access"
-    
+
+    # Monk Mode unlocks every section, free of charge
+    if user.get('monk_mode', False):
+        return True, "Monk Mode"
+
     if section_id not in SECTION_REQUIREMENTS:
         return True, "No restrictions"
     
@@ -4101,6 +4128,20 @@ def set_gender(gender):
         session['user_gender'] = gender
         return jsonify({'success': True, 'gender': gender})
     return jsonify({'success': False, 'error': 'Invalid gender'})
+
+
+@app.route('/set-monk-mode/<state>')
+def set_monk_mode(state):
+    """Turn free Monk Mode on or off.
+
+    When on, every section is unlocked at no charge — a gift to Buddhist monks
+    and the Thai diaspora learning the language. The state lives in the session,
+    so it works for logged-out visitors too and needs no database change.
+    """
+    init_user_progress()
+    session['user_progress']['monk_mode'] = (state == 'on')
+    session.modified = True
+    return jsonify({'success': True, 'monk_mode': session['user_progress']['monk_mode']})
 
 
 @app.route('/gender-examples')
