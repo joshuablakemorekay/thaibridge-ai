@@ -371,10 +371,13 @@
     </p>
 </div>
 
-<div class="lotus-divider">☸ ☸ ☸</div>
-
 <!-- ── Samatha Section ── -->
-<h2 id="samatha">🌊 {{ techniques.samatha.name }}</h2>
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="samatha">🌊 {{ techniques.samatha.name }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
 <div class="card samatha-card">
     <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.samatha.thai }}</h3>
     <p class="paiboon">{{ techniques.samatha.paiboon }}</p>
@@ -398,10 +401,16 @@
 </div>
 {% endfor %}
 
-<div class="lotus-divider">☸ ☸ ☸</div>
+    </div>
+</div>
 
 <!-- ── Vipassana Section ── -->
-<h2 id="vipassana">👁️ {{ techniques.vipassana.name }}</h2>
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="vipassana">👁️ {{ techniques.vipassana.name }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
 <div class="card vipassana-card">
     <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.vipassana.thai }}</h3>
     <p class="paiboon">{{ techniques.vipassana.paiboon }}</p>
@@ -425,10 +434,16 @@
 </div>
 {% endfor %}
 
-<div class="lotus-divider">☸ ☸ ☸</div>
+    </div>
+</div>
 
 <!-- ── Body Scan Section ── -->
-<h2 id="bodyscan">🫁 {{ techniques.body_scan.name }}</h2>
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="bodyscan">🫁 {{ techniques.body_scan.name }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
 <div class="card bodyscan-card">
     <h3 class="thai-text" style="margin-bottom:0.25rem;">{{ techniques.body_scan.thai }}</h3>
     <p class="paiboon">{{ techniques.body_scan.paiboon }}</p>
@@ -497,6 +512,9 @@
         {% endfor %}
     </ul>
     <p style="margin-top:1rem;">{{ techniques.body_scan.closing }}</p>
+</div>
+
+    </div>
 </div>
 
 <div class="lotus-divider">☸ ☸ ☸</div>
