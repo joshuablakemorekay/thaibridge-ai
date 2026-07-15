@@ -4,6 +4,43 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 16 July 2026 — Monk Mode: a free lesson track for monastics, plus a redesign start
+
+**Type:** Feature
+
+**TL;DR**
+- Built **Monk Mode** — a free, code-gated lesson track for Buddhist monks, learnable both ways (Thai monks learning English, Western monks learning Thai).
+- Drafted 10 monk-specific topics (140 items) — still to be reviewed.
+- Started fixing the "boring long scroll" by rolling out the app's existing click-to-open sections.
+
+**What I built or did**
+Monk Mode: enter an access code to unlock a dedicated track of monastic lessons (alms round, precepts, daily routine…), each switchable between learning Thai and learning English with the right pronunciation help. I also turned several long pages (Theravada, Meditation, Gender) into collapsible sections. All on a safe `rebuild-experiment` branch (a separate copy to work on) — the live site was never touched.
+
+**Why I did it this way**
+One app, not two — the lessons already hold both languages, so a second app would just double the upkeep. I gated only the free *unlock* with a code, keeping the direction switch open to everyone. Paid value stays in the AI tutor, so giving content away doesn't dent revenue.
+
+**How it works**
+Monk lessons live as plain JSON files, one per topic, loaded when the app starts. A session setting holds the direction, and a small check lets Monk Mode skip the paywall. The redesign reuses an accordion the app *already had* — just applied to more pages.
+
+**What this means for the app**
+Monks and the wider community get genuinely useful, free lessons, and the long pages are far easier to navigate.
+
+**What I learned**
+Check what already exists before building — the accordion was already there. And match the audience: I switched the pronunciation help between IPA and plain respelling and back, learning the "right" choice depends entirely on who's reading.
+
+**How We Did It**
+1. Untangled two duplicate local copies and picked one clean folder.
+2. Made a safe branch so the live site was never at risk.
+3. Built Monk Mode in phases: free unlock → access-code gate → content track + direction switch.
+4. Wrote and checked 10 lesson topics against the app's own romanization.
+5. Found the app already had collapsible sections, and rolled them out to the long pages.
+6. Committed and pushed each verified step.
+
+**References / Conversations**
+Claude Code session, 15–16 July 2026.
+
+---
+
 ## 8 July 2026 — Bringing the custom domain back online
 
 **Type:** Bug Fix / Milestone

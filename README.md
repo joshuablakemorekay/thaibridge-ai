@@ -61,6 +61,7 @@ ThaiBridge AI is a server-rendered Flask app with:
 - 🔐 **Real user accounts** — proper sign-up, log-in and log-out, with passwords stored safely (hashed)
 - 💳 **Freemium subscriptions** (Free · Buddhist Scholar £9.99 · Thai Master £19.99) through Stripe
 - 🏆 **Gamification** — points, levels and achievements, with a learning path that unlocks as you go
+- 🧡 **Monk Mode** *(new — built on the rebuild branch, not live yet)* — a free, code-unlocked lesson track written for Buddhist monks, with a switch between learning Thai and learning English, and its content kept in tidy per-topic files apart from the main app
 
 ## 📸 A look inside
 
@@ -117,9 +118,12 @@ This is the part I care about most — not "I built it," but "here's the proof i
 - **Decide who owns each fact.** "Source of truth" sounds abstract until it quietly deletes a whole class of bugs and cheats for you.
 - **Ship small, then grow.** A small thing that works beats a big thing that doesn't — every time.
 - **Version control turns fear into freedom.** Because I could always roll back, I could take big swings (and let an AI take them) without panic.
+- **Check what's already there before building.** The "click-to-open sections" I set out to add were already in the code — I just hadn't rolled them out. And the best pronunciation guide depends entirely on who's reading it (I switched between IPA and plain spelling and back).
 
 ## What's next
 
+- **Review and polish the new Monk Mode content**, then merge the rebuild branch so it goes live.
+- **Finish the "click-to-open sections" redesign** across the remaining long pages.
 - **Move to a database that survives restarts** (the free host wipes the current one on redeploy) and add proper database migrations.
 - **Finish and verify a second payment option** (PayPal), the same careful, test-it-end-to-end way Stripe was done.
 - **Switch Stripe to live keys** — the full test flow already works, so going live is the last step, not a rebuild.
