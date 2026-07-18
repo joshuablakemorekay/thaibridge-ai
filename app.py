@@ -243,6 +243,8 @@ SECTION_REQUIREMENTS = {
     'sentences': {'level': 5, 'tier': 'basic', 'points_reward': 35, 'requires_alphabet': True},
     'greetings_wai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
     'classifiers': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+    'tour_guide': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'business_thai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
 
     # ── PRO — Thai Master (£19.99) ───────────────────────────────────────
     # The premium power tools. Unlimited AI is enforced separately in the
@@ -257,14 +259,11 @@ SUBSCRIPTION_TIERS = {
         'name': 'Free Explorer',
         'price': 0,
         'features': [
-            '✓ Basic vocabulary (Festivals, Isan, Nature, Formal)',
-            '✓ Grammar fundamentals',
-            '✓ Cultural information',
+            '✓ Full Thai alphabet course (44 consonants, 32 vowels)',
             '✓ Theravada Buddhism teachings',
+            '✓ Pra Kru Bob Dhamma articles',
             '✓ Meditation timer & techniques',
-            '✓ Paiboon romanization guide',
-            '✓ Progress tracking',
-            '✓ Level 1-5 content',
+            '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
     },
@@ -273,8 +272,10 @@ SUBSCRIPTION_TIERS = {
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
-            '✓ Advanced grammar & sentence patterns',
-            '✓ Level 6-7 content',
+            '✓ Vocabulary, grammar & sentence patterns',
+            '✓ Culture, formality, register & classifiers',
+            '✓ Paiboon romanization guide',
+            '✓ Tour Guide & Business Thai',
             '✓ 2x points multiplier',
         ],
         'max_level_access': 7,
@@ -288,9 +289,8 @@ SUBSCRIPTION_TIERS = {
             '✓ Unlimited AI chat — all modes',
             '✓ Culture & Dhamma AI Q&A',
             '✓ Complete dictionary access',
-            '✓ Premium AI learning tools',
-            '✓ All content unlocked',
-            '✓ Level 8-10 content',
+            '✓ Premium learning tools & content',
+            '✓ Every section unlocked',
             '✓ 3x points multiplier',
             '✓ Priority support',
         ],
@@ -4963,12 +4963,14 @@ def lesson_detail(lesson_id):
 
 
 @app.route('/tour-guide')
+@require_access('tour_guide')
 def tour_guide():
     """Thai for tourists and holiday makers"""
     return render_template('tour_guide.html', vocab=TOUR_VOCAB)
 
 
 @app.route('/business-thai')
+@require_access('business_thai')
 def business_thai():
     """Business Thai for professionals and expats"""
     return render_template('business_thai.html', vocab=BUSINESS_VOCAB)
