@@ -4,6 +4,44 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 18 July 2026 — Access model rework + Instant Access Pass, and Monk Mode goes live
+
+**Type:** Milestone
+
+**TL;DR**
+- Reworked who pays for what: only the **Alphabet + Buddhism** section is free now; everything else needs a subscription *and* levelling up.
+- Built the **Instant Access Pass** — an optional one-time £9.99 add-on that unlocks everything instantly.
+- Tested it all and **went live** — Monk Mode and the new model are on the real site.
+
+**What I built or did**
+I shrank the free tier to just the alphabet and the Buddhism section, put the rest behind Basic (Buddhist Scholar) and Pro (Thai Master), and made Monk Mode waive only the payment — monks still level up. I added tier-name brackets (Free/Basic/Pro), gated two pages that were slipping through for free (Tour Guide, Business Thai), and built the Instant Access Pass: a one-time purchase that skips the level-and-alphabet grind.
+
+**Why I did it this way**
+I want the app to stay a fun learning challenge, so paying removes the paywall but never the levelling. The Pass is for people who'd rather skip the grind — an optional extra, not the default.
+
+**How it works**
+One access check runs three gates in order: alphabet, level, then payment. Monk Mode skips the payment gate; the Pass skips the alphabet and level gates. The Pass is a database flag set by a one-time Stripe payment, with a self-healing migration (adds any missing columns on startup).
+
+**What this means for the app**
+A clear, honest paid model with a generous free core — plus Monk Mode now live for the community.
+
+**What I learned**
+Testing caught what I couldn't see: two pages were free by accident, the pricing page still advertised now-paid content, and my local database was quietly missing columns. **The gate can be right while the label lies.** And going live taught me a hosting gotcha: a Blueprint-managed host treats its config file as the source of truth, so a variable added only in the dashboard gets wiped on the next deploy — the fix is to declare it in the config.
+
+**How We Did It**
+1. Tested the existing Monk Mode in the browser; fixed a see-through-navbar bug.
+2. Set real Monk Mode access codes and stored them safely on the host.
+3. Reworked the access rules: free = Alphabet + Buddhism, rest paid, Monk Mode free-but-still-levels.
+4. Closed loose ends testing surfaced: ungated pages, stale pricing copy, a misleading progress page.
+5. Added tier brackets and built the Instant Access Pass add-on end to end.
+6. Verified with test scripts and a real Stripe test call, then merged to `main` and went live.
+7. Hit a deploy gotcha — the host kept wiping the Monk Mode codes — and fixed it by declaring them in the Blueprint config so they persist.
+
+**References / Conversations**
+Built across a single Claude Code session (18 July 2026).
+
+---
+
 ## 16 July 2026 — Monk Mode: a free lesson track for monastics, plus a redesign start
 
 **Type:** Feature

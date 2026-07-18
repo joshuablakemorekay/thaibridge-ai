@@ -57,11 +57,11 @@ ThaiBridge AI is a server-rendered Flask app with:
 
 - 🔤 **Thai alphabet and vocabulary lessons**, written so complete beginners can read straight away
 - 🤖 **An AI tutor with six modes** — conversation, grammar, quiz generation, culture, Buddhism and gentle hints — powered by the Claude API, with a strict shared pronunciation rulebook injected into every prompt so the romanization stays consistent
-- 📚 **Lessons, grammar, culture and temple-etiquette modules**, plus Theravada teachings and a meditation timer (free for all)
+- 📚 **Lessons, grammar, culture and temple-etiquette modules** (paid tiers), with the **Thai alphabet and the full Theravada Buddhism track free for everyone**
 - 🔐 **Real user accounts** — proper sign-up, log-in and log-out, with passwords stored safely (hashed)
-- 💳 **Freemium subscriptions** (Free · Buddhist Scholar £9.99 · Thai Master £19.99) through Stripe
-- 🏆 **Gamification** — points, levels and achievements, with a learning path that unlocks as you go
-- 🧡 **Monk Mode** *(new — built on the rebuild branch, not live yet)* — a free, code-unlocked lesson track written for Buddhist monks, with a switch between learning Thai and learning English, and its content kept in tidy per-topic files apart from the main app
+- 💳 **Freemium subscriptions** (Free · Buddhist Scholar £9.99 · Thai Master £19.99) through Stripe, plus an optional one-time **Instant Access Pass** (£9.99) that unlocks every section at once
+- 🏆 **Gamification** — points, levels and achievements, with a learning path that unlocks as you go (paying opens a tier; you still level up to reach each section)
+- 🧡 **Monk Mode** *(live)* — a free, code-unlocked lesson track written for Buddhist monks, with a switch between learning Thai and learning English, and its content kept in tidy per-topic files apart from the main app. It waives the paywall but keeps the levelling, so monks still learn their way up
 
 ## 📸 A look inside
 
@@ -122,7 +122,7 @@ This is the part I care about most — not "I built it," but "here's the proof i
 
 ## What's next
 
-- **Review and polish the new Monk Mode content**, then merge the rebuild branch so it goes live.
+- **Polish the locked-section pages** to nudge people toward the right plan, and build a proper success page for the Instant Access Pass.
 - **Finish the "click-to-open sections" redesign** across the remaining long pages.
 - **Move to a database that survives restarts** (the free host wipes the current one on redeploy) and add proper database migrations.
 - **Finish and verify a second payment option** (PayPal), the same careful, test-it-end-to-end way Stripe was done.
