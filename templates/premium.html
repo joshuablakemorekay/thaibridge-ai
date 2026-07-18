@@ -128,6 +128,29 @@
     {% endfor %}
 </div>
 
+<!-- ============================================================
+     OPTIONAL ADD-ON — Instant Access Pass (one-time, on top of Pro)
+     ============================================================ -->
+<div class="addon-banner">
+    <div class="addon-banner-body">
+        <span class="addon-badge">Optional extra · Thai Master (Pro)</span>
+        <h3>🗝️ {{ addon.name }}</h3>
+        <p>{{ addon.blurb }}</p>
+    </div>
+    <div class="addon-banner-buy">
+        <div class="addon-price">
+            <span class="addon-price-big">£{{ addon.price }}</span><span class="addon-price-per">one-time</span>
+        </div>
+        {% if has_addon %}
+            <span class="btn price-btn price-btn-current">✓ Unlocked</span>
+        {% elif current_tier == 'pro' %}
+            <a href="/addon/instant-access/stripe" class="btn price-btn price-btn-buy">Get the Pass</a>
+        {% else %}
+            <span class="addon-need-pro">Available with <strong>Thai Master (Pro)</strong></span>
+        {% endif %}
+    </div>
+</div>
+
 <p style="text-align:center; color:#888; font-size:0.9rem; margin-top:2rem;">
     🔒 Payments run in <strong>test / sandbox mode</strong> via Stripe &amp; PayPal —
     no real money is charged. You'll choose your payment method after picking a plan.
@@ -359,8 +382,45 @@
         cursor: default;
     }
 
+    /* ---- Optional add-on banner ---- */
+    .addon-banner {
+        max-width: 1000px;
+        margin: 1.75rem auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        align-items: center;
+        justify-content: space-between;
+        background: linear-gradient(135deg, #2d1b4e 0%, #4a1a6b 100%);
+        color: #fff;
+        border: 2px solid var(--royal-gold);
+        border-radius: 18px;
+        padding: 1.5rem 1.75rem;
+        box-shadow: 0 8px 28px rgba(74, 26, 107, 0.3);
+    }
+    .addon-banner-body { flex: 1 1 320px; }
+    .addon-badge {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 10px;
+        background: var(--royal-gold);
+        color: var(--deep-purple);
+    }
+    .addon-banner h3 { margin: 0.6rem 0 0.4rem; color: #fff; font-size: 1.3rem; }
+    .addon-banner p { margin: 0; color: #e7dcff; font-size: 0.95rem; line-height: 1.55; }
+    .addon-banner-buy { text-align: center; flex: 0 0 auto; }
+    .addon-price { margin-bottom: 0.6rem; }
+    .addon-price-big { font-size: 2rem; font-weight: 700; color: var(--royal-gold); }
+    .addon-price-per { color: #cbb8e6; font-size: 0.9rem; margin-left: 0.25rem; }
+    .addon-need-pro { display: block; font-size: 0.85rem; color: #cbb8e6; max-width: 190px; }
+
     @media (max-width: 600px) {
         .pricing-grid { grid-template-columns: 1fr; }
+        .addon-banner { flex-direction: column; text-align: center; }
     }
 </style>
 {% endblock %}

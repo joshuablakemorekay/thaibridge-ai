@@ -131,6 +131,7 @@ class User(UserMixin, db.Model):
     stripe_customer_id     = db.Column(db.String(64), index=True)   # 'cus_...' — links this user to Stripe
     stripe_subscription_id = db.Column(db.String(64), index=True)   # 'sub_...' — the active subscription, if any
     current_period_end     = db.Column(db.DateTime)                 # when the paid period runs out (renewal/expiry)
+    full_unlock            = db.Column(db.Boolean, default=False, nullable=False)  # one-time "Instant Access Pass" add-on: skips the level/alphabet gates
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -154,8 +155,33 @@ class User(UserMixin, db.Model):
             return 'free'
         return self.subscription_tier
 
+def _ensure_user_columns():
+    """create_all() adds new TABLES but never new COLUMNS to a table that already
+    exists, so add any missing ones by hand. Idempotent — each ALTER is skipped
+    once its column is present — so this keeps an older database (local or live)
+    in step with the current User model."""
+    from sqlalchemy import inspect, text
+    wanted = {
+        'subscription_tier':      "VARCHAR(20) NOT NULL DEFAULT 'free'",
+        'subscription_status':    "VARCHAR(20) NOT NULL DEFAULT 'inactive'",
+        'stripe_customer_id':     "VARCHAR(64)",
+        'stripe_subscription_id': "VARCHAR(64)",
+        'current_period_end':     "DATETIME",
+        'full_unlock':            "BOOLEAN NOT NULL DEFAULT 0",
+    }
+    existing = {c['name'] for c in inspect(db.engine).get_columns('users')}
+    added = False
+    for name, ddl in wanted.items():
+        if name not in existing:
+            db.session.execute(text(f'ALTER TABLE users ADD COLUMN {name} {ddl}'))
+            app.logger.info('Migrated: added users.%s column', name)
+            added = True
+    if added:
+        db.session.commit()
+
 with app.app_context():
     db.create_all()
+    _ensure_user_columns()
 
 # ============================================
 # LOGIN MANAGER (Flask-Login)
@@ -299,6 +325,15 @@ SUBSCRIPTION_TIERS = {
     }
 }
 
+# Optional one-time add-on sold on top of Thai Master (Pro): the Instant Access
+# Pass flips full_unlock, skipping the level + alphabet gates so every section
+# opens instantly. Built with inline Stripe pricing (no dashboard product needed).
+INSTANT_ACCESS_ADDON = {
+    'name': 'Instant Access Pass',
+    'price': 9.99,
+    'blurb': 'A one-time unlock for Thai Master members — open every section instantly, with no levelling and no alphabet prerequisite.',
+}
+
 # Points awarded for different actions
 POINT_REWARDS = {
     'quiz_correct': 10,
@@ -401,6 +436,15 @@ def active_tier():
     if current_user.is_authenticated:
         return current_user.effective_tier
     return session.get('user_progress', {}).get('subscription_tier', 'free')
+
+
+def has_full_unlock():
+    """Whether the current visitor holds the one-time 'Instant Access Pass'
+    add-on. For a logged-in user the DATABASE is the source of truth; anonymous
+    visitors fall back to the session copy."""
+    if current_user.is_authenticated:
+        return bool(getattr(current_user, 'full_unlock', False))
+    return session.get('user_progress', {}).get('full_unlock', False)
 
 
 def monk_mode_active():
@@ -570,7 +614,7 @@ def check_section_access(section_id):
     # removes the progression grind: it skips the alphabet and level gates so
     # everything opens instantly. It never touches the tier gate (it's sold on
     # top of Pro, which already grants tier access) nor the AI usage cap.
-    full_unlock = user.get('full_unlock', False)
+    full_unlock = has_full_unlock()
 
     # Gate 1 — alphabet completion (skipped by the full-unlock add-on)
     if not full_unlock and requirements.get('requires_alphabet', False):
@@ -5132,7 +5176,9 @@ def premium():
     init_user_progress()
     return render_template('premium.html',
                            tiers=SUBSCRIPTION_TIERS,
-                           current_tier=active_tier())
+                           current_tier=active_tier(),
+                           addon=INSTANT_ACCESS_ADDON,
+                           has_addon=has_full_unlock())
 
 
 @app.route('/about')
@@ -5565,6 +5611,54 @@ def subscribe_stripe(tier):
     return redirect(checkout_session.url, code=303)
 
 
+@app.route('/addon/instant-access/stripe')
+@login_required
+def addon_instant_access_stripe():
+    """One-time Stripe Checkout (TEST mode) for the Instant Access Pass.
+
+    Sold on top of Thai Master (Pro): a single payment that sets full_unlock,
+    skipping the level + alphabet gates so every section opens instantly. It
+    requires an active Pro subscription (the add-on removes the grind, not the
+    paywall) and is a no-op if they already own it."""
+    if current_user.effective_tier != 'pro':
+        return redirect('/premium')
+    if current_user.full_unlock:
+        return redirect('/progress')
+    if not stripe.api_key:
+        return render_template('subscription_success.html',
+                               stripe_unconfigured=True, tier='pro',
+                               tier_info=SUBSCRIPTION_TIERS['pro'], expires=None), 503
+
+    base_url = request.url_root.rstrip('/')
+    user_meta = {'addon': 'full_unlock', 'user_id': str(current_user.id)}
+    checkout_kwargs = dict(
+        mode='payment',   # one-time charge, not a subscription
+        line_items=[{
+            'price_data': {
+                'currency': 'gbp',
+                'unit_amount': int(round(INSTANT_ACCESS_ADDON['price'] * 100)),  # pence
+                'product_data': {'name': f"ThaiBridge AI — {INSTANT_ACCESS_ADDON['name']}"},
+            },
+            'quantity': 1,
+        }],
+        success_url=f"{base_url}/addon/success?session_id={{CHECKOUT_SESSION_ID}}",
+        cancel_url=f"{base_url}/subscribe/cancel",
+        client_reference_id=str(current_user.id),
+        metadata=user_meta,
+    )
+    if current_user.stripe_customer_id:
+        checkout_kwargs['customer'] = current_user.stripe_customer_id
+    else:
+        checkout_kwargs['customer_email'] = current_user.email
+
+    try:
+        checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
+    except Exception as e:
+        app.logger.exception("Stripe add-on checkout session creation failed")
+        return f"Sorry, we couldn't start checkout: {e}", 502
+    return redirect(checkout_session.url, code=303)
+
+
 @app.route('/subscribe/<tier>/paypal')
 @login_required
 def subscribe_paypal(tier):
@@ -5689,6 +5783,7 @@ def _mirror_tier_to_session(user):
         session['user_progress']['subscription_expires'] = (
             user.current_period_end.isoformat() if user.current_period_end else None
         )
+        session['user_progress']['full_unlock'] = bool(user.full_unlock)
         session.modified = True
 
 
@@ -5744,6 +5839,30 @@ def _sync_checkout_session(cs):
                         customer_id=cs.get('customer'),
                         subscription_id=sub_id, current_period_end=period_end)
     app.logger.info("Activated tier '%s' for user %s", tier, user.id)
+    return user
+
+
+def _sync_addon_session(cs):
+    """A one-time add-on Checkout finished -> grant the Instant Access Pass
+    (full_unlock). Idempotent. Returns the User."""
+    meta = cs.get('metadata') or {}
+    user_id = meta.get('user_id') or cs.get('client_reference_id')
+    if not user_id:
+        app.logger.warning("Add-on session %s missing user_id", cs.get('id'))
+        return None
+    user = _find_user_for_stripe(user_id=user_id, customer_id=cs.get('customer'))
+    if not user:
+        app.logger.warning("No user matched add-on session %s", cs.get('id'))
+        return None
+    if not user.full_unlock:
+        user.full_unlock = True
+        try:
+            db.session.commit()
+        except Exception:
+            db.session.rollback()
+            app.logger.exception("Failed to grant full_unlock for user %s", user.id)
+            return None
+    app.logger.info("Granted Instant Access Pass (full_unlock) to user %s", user.id)
     return user
 
 
@@ -5875,6 +5994,28 @@ def subscribe_success():
                            expires=expires)
 
 
+@app.route('/addon/success')
+@login_required
+def addon_success():
+    """Stripe redirects here after the Instant Access Pass is paid. The webhook
+    is the real source of truth; we also sync here idempotently so it works in
+    local dev where a webhook may not be wired up. We re-fetch from Stripe and
+    only grant if Stripe says paid."""
+    session_id = request.args.get('session_id')
+    if not session_id:
+        return redirect('/progress')
+    try:
+        checkout_session = stripe.checkout.Session.retrieve(session_id)
+    except Exception:
+        app.logger.exception("Could not retrieve add-on checkout session")
+        return redirect('/progress')
+    if checkout_session.payment_status not in ('paid', 'no_payment_required'):
+        return redirect('/subscribe/cancel')
+    user = _sync_addon_session(checkout_session) or current_user
+    _mirror_tier_to_session(user)
+    return render_template('addon_success.html', addon=INSTANT_ACCESS_ADDON)
+
+
 @app.route('/subscribe/cancel')
 def subscribe_cancel():
     """User backed out of Stripe Checkout — no charge, send them back to plans."""
@@ -5956,7 +6097,10 @@ def stripe_webhook():
     obj = event['data']['object']
 
     if etype == 'checkout.session.completed':
-        _sync_checkout_session(obj)
+        if (obj.get('metadata') or {}).get('addon') == 'full_unlock':
+            _sync_addon_session(obj)
+        else:
+            _sync_checkout_session(obj)
     elif etype == 'invoice.paid':
         _sync_invoice_paid(obj)
     elif etype in ('customer.subscription.updated',
