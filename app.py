@@ -256,7 +256,7 @@ SECTION_REQUIREMENTS = {
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
     'free': {
-        'name': 'Free Explorer',
+        'name': 'Free Explorer (Free)',
         'price': 0,
         'features': [
             '✓ Full Thai alphabet course (44 consonants, 32 vowels)',
@@ -268,7 +268,7 @@ SUBSCRIPTION_TIERS = {
         'max_level_access': 5,
     },
     'basic': {
-        'name': 'Buddhist Scholar',
+        'name': 'Buddhist Scholar (Basic)',
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
@@ -282,7 +282,7 @@ SUBSCRIPTION_TIERS = {
         'points_multiplier': 2,
     },
     'pro': {
-        'name': 'Thai Master',
+        'name': 'Thai Master (Pro)',
         'price': 19.99,
         'features': [
             '✓ Everything in Buddhist Scholar',
@@ -361,6 +361,7 @@ def init_user_progress():
             'is_developer': False,
             'monk_mode': False,   # free, monk-tailored track for monastics (code-gated)
             'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
+            'full_unlock': False,  # optional paid add-on (on top of Pro): skips the level/alphabet grind
             'sections_unlocked': ['home', 'alphabet', 'theravada', 'meditation'],
             'sections_visited': [],
             'achievements_earned': [],
@@ -565,13 +566,19 @@ def check_section_access(section_id):
 
     requirements = SECTION_REQUIREMENTS[section_id]
 
-    # Gate 1 — alphabet completion (applies to everyone, Monk Mode included)
-    if requirements.get('requires_alphabet', False):
+    # The optional "full unlock" add-on (a paid extra on top of Thai Master)
+    # removes the progression grind: it skips the alphabet and level gates so
+    # everything opens instantly. It never touches the tier gate (it's sold on
+    # top of Pro, which already grants tier access) nor the AI usage cap.
+    full_unlock = user.get('full_unlock', False)
+
+    # Gate 1 — alphabet completion (skipped by the full-unlock add-on)
+    if not full_unlock and requirements.get('requires_alphabet', False):
         if not check_alphabet_completion():
             return False, "Complete Thai Alphabet first"
 
-    # Gate 2 — level / XP (applies to everyone, Monk Mode included)
-    if user['level'] < requirements['level']:
+    # Gate 2 — level / XP (skipped by the full-unlock add-on)
+    if not full_unlock and user['level'] < requirements['level']:
         return False, f"Requires Level {requirements['level']}"
 
     # Gate 3 — subscription tier (payment). Monk Mode waives THIS, and only
