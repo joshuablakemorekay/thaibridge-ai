@@ -34,3 +34,10 @@ services:
       # cost a fraction of a cent. Local dev (no AI_MODEL set) keeps using Sonnet.
       - key: AI_MODEL
         value: "claude-haiku-4-5-20251001"
+
+      # Monk Mode access codes (comma-separated). sync:false means the VALUE is
+      # set in the Render dashboard and preserved across deploys — declaring it
+      # here stops the Blueprint re-sync from wiping the dashboard value. Unset =
+      # Monk Mode simply can't be unlocked (fails safe), never a crash.
+      - key: MONK_MODE_CODES
+        sync: false
