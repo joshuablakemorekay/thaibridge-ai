@@ -361,7 +361,7 @@ def init_user_progress():
             'is_developer': False,
             'monk_mode': False,   # free, monk-tailored track for monastics (code-gated)
             'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
-            'sections_unlocked': ['home', 'paiboon', 'learn', 'alphabet'],
+            'sections_unlocked': ['home', 'alphabet', 'theravada', 'meditation'],
             'sections_visited': [],
             'achievements_earned': [],
             'quizzes_completed': 0,
