@@ -132,12 +132,18 @@
             top: 0;
             z-index: 1000;
             border-bottom: 2px solid var(--royal-gold);
-            background-image: 
-                repeating-linear-gradient(90deg, 
-                    transparent, 
-                    transparent 50px, 
-                    rgba(212, 175, 55, 0.1) 50px, 
-                    rgba(212, 175, 55, 0.1) 51px);
+            /* Two layers: the faint gold pinstripes sit ON TOP of the solid
+               royal-purple gradient. Keeping the purple gradient here (rather
+               than only in the `background` shorthand above, which this
+               property would otherwise override) makes the nav fully opaque,
+               so page content no longer shows through when you scroll. */
+            background-image:
+                repeating-linear-gradient(90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(212, 175, 55, 0.1) 50px,
+                    rgba(212, 175, 55, 0.1) 51px),
+                linear-gradient(90deg, var(--royal-purple) 0%, var(--royal-burgundy) 50%, var(--deep-purple) 100%);
         }
 
         
