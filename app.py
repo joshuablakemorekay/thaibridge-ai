@@ -316,7 +316,6 @@ SUBSCRIPTION_TIERS = {
             '✓ Culture & Dhamma AI Q&A',
             '✓ Complete dictionary access',
             '✓ Premium learning tools & content',
-            '✓ Every section unlocked',
             '✓ 3x points multiplier',
             '✓ Priority support',
         ],
