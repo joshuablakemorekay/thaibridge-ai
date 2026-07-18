@@ -214,43 +214,39 @@ XP_LEVELS = {
 
 # Section unlock requirements (level and/or subscription tier)
 SECTION_REQUIREMENTS = {
-    # Level 1 - FREE - No alphabet requirement
+    # ── FREE for everyone (whether Monk Mode is on or off) ────────────────
+    # The free foundation: the alphabet (the gateway that unlocks levelling)
+    # plus the entire Buddhism dropdown — the Dhamma is freely given. Every
+    # other content section now sits behind a paid tier (see below), on TOP of
+    # its level/XP requirement.
     'home': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': False},
-    'paiboon': {'level': 1, 'tier': 'free', 'points_reward': 10, 'requires_alphabet': False},
-    'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},  # NEW!
-    
-    # Level 1 - But REQUIRES alphabet completion
-    'learn': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': True},
-    
-    # Beginner sections (Level 2 - 100 XP) - Requires alphabet
-    'exercise_festivals': {'level': 2, 'tier': 'free', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_isan_dialect': {'level': 2, 'tier': 'free', 'points_reward': 15, 'requires_alphabet': True},
-    'vowels_syllables': {'level': 2, 'tier': 'free', 'points_reward': 20, 'requires_alphabet': True},
-    
-    # Intermediate sections (Level 3 - 250 XP) - Requires alphabet
-    'exercise_nature': {'level': 3, 'tier': 'free', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_formal': {'level': 3, 'tier': 'free', 'points_reward': 15, 'requires_alphabet': True},
-    'grammar': {'level': 3, 'tier': 'free', 'points_reward': 25, 'requires_alphabet': True},
-    'culture': {'level': 3, 'tier': 'free', 'points_reward': 20, 'requires_alphabet': True},
-    
-    # Advanced sections (Level 4 - 500 XP) - Requires alphabet
-    'lessons': {'level': 4, 'tier': 'free', 'points_reward': 30, 'requires_alphabet': True},
-    'register': {'level': 4, 'tier': 'free', 'points_reward': 25, 'requires_alphabet': True},
-    'formality': {'level': 4, 'tier': 'free', 'points_reward': 25, 'requires_alphabet': True},
-    'gender_examples': {'level': 4, 'tier': 'free', 'points_reward': 20, 'requires_alphabet': True},
-    
-    # Expert sections (Level 5 - 1000 XP) - Requires alphabet
-    'sentences': {'level': 5, 'tier': 'free', 'points_reward': 35, 'requires_alphabet': True},
-    'greetings_wai': {'level': 5, 'tier': 'free', 'points_reward': 30, 'requires_alphabet': True},
-    'classifiers': {'level': 5, 'tier': 'free', 'points_reward': 30, 'requires_alphabet': True},
-    
-    # Buddhist teaching pages - FREE & fully open (the Dhamma is freely given:
-    # no subscription, no level, no alphabet prerequisite). The AI Q&A *about*
-    # the Dhamma stays Pro — that's gated separately in the /api/ai/chat route.
+    'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
     'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
     'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
-    
-    # Premium Pro sections (Level 8 + Pro subscription) - Requires alphabet
+
+    # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
+    # The structured language-learning content (the rest of the Learn menu,
+    # Culture, and the exercises). Still gated by level/XP as well as the tier.
+    'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10, 'requires_alphabet': False},
+    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0, 'requires_alphabet': True},
+    'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+    'register': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'formality': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'gender_examples': {'level': 4, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    'sentences': {'level': 5, 'tier': 'basic', 'points_reward': 35, 'requires_alphabet': True},
+    'greetings_wai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+    'classifiers': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+
+    # ── PRO — Thai Master (£19.99) ───────────────────────────────────────
+    # The premium power tools. Unlimited AI is enforced separately in the
+    # /api/ai/chat route, and Monk Mode never lifts the AI cap.
     'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50, 'requires_alphabet': True},
     'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100, 'requires_alphabet': True},
 }
@@ -546,42 +542,48 @@ def add_xp(points, action_description=""):
     }
 
 def check_section_access(section_id):
-    """Check if user can access a section (includes alphabet requirement)"""
+    """Check whether the current user can open a section.
+
+    Three independent gates, checked in order: alphabet completion, level/XP,
+    and subscription tier. Developer mode bypasses all of them.
+
+    Monk Mode waives ONLY the subscription-tier gate — every content section
+    becomes free — while still requiring alphabet completion and the right
+    level. Monks earn their way up by levelling like everyone else; they just
+    never hit the paywall. (The AI usage cap is enforced separately in the
+    chat route, so Monk Mode never makes the costly AI tutor unlimited.)
+    """
     init_user_progress()
     user = session['user_progress']
-    
+
     # Developer mode bypasses everything
     if user.get('is_developer', False):
         return True, "Developer Access"
 
-    # Monk Mode unlocks every section, free of charge
-    if user.get('monk_mode', False):
-        return True, "Monk Mode"
-
     if section_id not in SECTION_REQUIREMENTS:
         return True, "No restrictions"
-    
+
     requirements = SECTION_REQUIREMENTS[section_id]
-    
-    # Check alphabet requirement FIRST (before level check)
+
+    # Gate 1 — alphabet completion (applies to everyone, Monk Mode included)
     if requirements.get('requires_alphabet', False):
         if not check_alphabet_completion():
             return False, "Complete Thai Alphabet first"
-    
-    # Check level requirement
+
+    # Gate 2 — level / XP (applies to everyone, Monk Mode included)
     if user['level'] < requirements['level']:
         return False, f"Requires Level {requirements['level']}"
-    
-    # Check subscription tier (read from the DB for logged-in users)
-    required_tier = requirements['tier']
-    user_tier = active_tier()
 
-    tier_hierarchy = {'free': 0, 'basic': 1, 'pro': 2}
-    
-    if tier_hierarchy[user_tier] < tier_hierarchy[required_tier]:
-        tier_name = SUBSCRIPTION_TIERS[required_tier]['name']
-        return False, f"Requires {tier_name} subscription"
-    
+    # Gate 3 — subscription tier (payment). Monk Mode waives THIS, and only
+    # this, free of charge. Everyone else is held to their real tier.
+    if not user.get('monk_mode', False):
+        required_tier = requirements['tier']
+        user_tier = active_tier()
+        tier_hierarchy = {'free': 0, 'basic': 1, 'pro': 2}
+        if tier_hierarchy[user_tier] < tier_hierarchy[required_tier]:
+            tier_name = SUBSCRIPTION_TIERS[required_tier]['name']
+            return False, f"Requires {tier_name} subscription"
+
     return True, "Access granted"
 
 def unlock_section(section_id):
