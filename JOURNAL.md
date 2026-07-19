@@ -4,6 +4,35 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 19 July 2026 — Making developer login work on the live site
+
+**Type:** Fix / Learning
+
+**TL;DR**
+- Fixed developer-mode login on the live site — it kept rejecting my password.
+- Cause: Render had generated a *random* production password; my own one only worked locally.
+- Switched the setup so a known, dashboard-set password works everywhere.
+
+**What I built or did**
+Got developer mode working on the live site. In `render.yaml` I switched `DEVELOPER_PASSWORD` from `generateValue: true` to `sync: false`, set my chosen password in the Render dashboard, and redeployed. Now the same password logs me in on the live site.
+
+**Why I did it this way**
+`generateValue: true` told Render to invent a random password, so login always failed there — while it worked locally because the app reads my `.env` file. `sync: false` (the same pattern I already use for Monk Mode codes) lets me set a known value in the dashboard that survives redeploys, without ever putting the secret in the public repo.
+
+**How it works**
+The app reads `DEVELOPER_PASSWORD` from the environment — locally from `.env`, and on the live site now from the Render dashboard value. Developer mode bypasses the paywall, so I can test gated sections like Tones & Consonant Classes.
+
+**What this means for the app**
+I can finally log into developer mode on the live site to check gated content — something I couldn't do before.
+
+**What I learned**
+Two things. First, "not updated in PyCharm" was a red herring — the code was fine; I was just hitting the new paywall (the gate doing its job). Second, order matters: set the dashboard value *before* switching to `sync: false`, or the live password briefly falls back to a guessable `"changeme"`.
+
+**References / Conversations**
+This Claude Code session. Live at https://thaibridge-ai.smoald.com.
+
+---
+
 ## 19 July 2026 — Tones & Consonant Classes: built, consolidated, and gated
 
 **Type:** Feature
