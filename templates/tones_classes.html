@@ -272,6 +272,49 @@
         </div>
     </div>
     {% endfor %}
+
+    <!-- Same-sound pairs: identical sound, different class, different tone -->
+    <h2 style="margin-top: 2.5rem;">🔁 {{ data.sound_pairs.title }}</h2>
+    <p style="line-height: 1.8;">{{ data.sound_pairs.note }}</p>
+
+    <div class="pair-card">
+        <div class="pair-side">
+            <span class="class-badge cls-high" style="background: var(--temple-red);">HIGH</span>
+            <div class="p-thai" style="color: var(--temple-red);">{{ data.sound_pairs.demo.high.thai }}</div>
+            <div>{{ data.sound_pairs.demo.high.paiboon }} · <span class="e-tone">{{ data.sound_pairs.demo.high.tone }}</span></div>
+            <div style="color: #666;">“{{ data.sound_pairs.demo.high.english }}”</div>
+        </div>
+        <div class="pair-vs">same “k” sound</div>
+        <div class="pair-side">
+            <span class="class-badge cls-low" style="background: var(--royal-purple);">LOW</span>
+            <div class="p-thai">{{ data.sound_pairs.demo.low.thai }}</div>
+            <div>{{ data.sound_pairs.demo.low.paiboon }} · <span class="e-tone">{{ data.sound_pairs.demo.low.tone }}</span></div>
+            <div style="color: #666;">“{{ data.sound_pairs.demo.low.english }}”</div>
+        </div>
+    </div>
+
+    <div class="chart-wrap">
+        <table class="tone-chart">
+            <thead>
+                <tr>
+                    <th>Sound</th>
+                    <th>HIGH class</th>
+                    <th>LOW class twin</th>
+                    <th>No-mark tones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in data.sound_pairs.pairs %}
+                <tr>
+                    <td><strong>{{ p.sound }}</strong></td>
+                    <td style="font-size: 1.6rem; color: var(--temple-red);">{{ p.high }}</td>
+                    <td style="font-size: 1.6rem; color: var(--royal-purple);">{{ p.low }}</td>
+                    <td>Rising <span style="color:#999;">(high)</span> vs Mid <span style="color:#999;">(low)</span></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <!-- ── TAB 3: Tone Chart ── -->

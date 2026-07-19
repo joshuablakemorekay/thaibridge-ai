@@ -3228,6 +3228,27 @@ TONES_AND_CLASSES = {
         },
     ],
 
+    # Same-sound pairs: consonants that sound identical but sit in different
+    # classes, so the very same syllable comes out as a different tone. This is
+    # the clearest proof that the CLASS — not the letter's sound — drives the tone.
+    'sound_pairs': {
+        'title': 'Same sound, different class → different tone',
+        'note': "Several consonants sound identical but live in different classes. With no tone mark, the HIGH-class letter gives a RISING tone while its LOW-class twin gives a MID tone — same sound, different tone, just because of the class.",
+        'demo': {
+            'high': {'thai': 'ขา', 'paiboon': 'kǎa', 'tone': 'Rising', 'english': 'leg'},
+            'low':  {'thai': 'คา', 'paiboon': 'kaa', 'tone': 'Mid', 'english': 'stuck'},
+        },
+        'pairs': [
+            {'sound': 'k',  'high': 'ข', 'low': 'ค'},
+            {'sound': 'ch', 'high': 'ฉ', 'low': 'ช'},
+            {'sound': 't',  'high': 'ถ', 'low': 'ท'},
+            {'sound': 'p',  'high': 'ผ', 'low': 'พ'},
+            {'sound': 'f',  'high': 'ฝ', 'low': 'ฟ'},
+            {'sound': 's',  'high': 'ส', 'low': 'ซ'},
+            {'sound': 'h',  'high': 'ห', 'low': 'ฮ'},
+        ],
+    },
+
     # LIVE-syllable tone chart. Columns are the five mark states; rows are the
     # three classes. A dash means that combination is not used.
     'tone_chart_live': {
