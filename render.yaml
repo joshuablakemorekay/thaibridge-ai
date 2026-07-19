@@ -25,10 +25,13 @@ services:
       - key: ANTHROPIC_API_KEY
         sync: false
 
-      # Developer-mode password — generate a strong random one so the public
-      # demo has no guessable "changeme" backdoor.
+      # Developer-mode password. sync:false means the VALUE is set in the Render
+      # dashboard and preserved across deploys (same pattern as MONK_MODE_CODES),
+      # so a known password can be used instead of a random generated one.
+      # ⚠️ The value MUST be set in the dashboard — if it's ever left unset, the
+      # code falls back to "changeme", a guessable backdoor on a public demo.
       - key: DEVELOPER_PASSWORD
-        generateValue: true
+        sync: false
 
       # Use the cheap, fast Haiku model on the public demo so visitor AI messages
       # cost a fraction of a cent. Local dev (no AI_MODEL set) keeps using Sonnet.
