@@ -4,39 +4,39 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
-## 19 July 2026 — New free section: Tones & Consonant Classes
+## 19 July 2026 — Tones & Consonant Classes: built, consolidated, and gated
 
 **Type:** Feature
 
 **TL;DR**
-- Built one free section teaching consonant classes and tone rules together — because classes only exist to work out tones.
+- Built one section teaching consonant classes and tone rules together — because classes only exist to work out tones.
 - Reused my existing quiz/XP scoring for four practice drills — no new system invented.
-- Explored the code first and merged scattered content instead of rebuilding it.
+- Explored first and merged scattered content, folded in the old Grammar version, then gated the page behind the Basic tier (same as Grammar) and shipped it live.
 
 **What I built or did**
-A new free "Tones & Consonant Classes" section on a feature branch (a separate copy of the project to work on safely): one data set, a `/tones-classes` page with reference tabs, and four progressive drills — class ID, tone calculation, contrast pairs, and the leading-ห rule.
+A new "Tones & Consonant Classes" section: one data set, a `/tones-classes` page with reference tabs, and four progressive drills — class ID, tone calculation, contrast pairs, and the leading-ห rule. I started it on a feature branch (a separate copy of the project to work on safely), then consolidated: I moved the old "3-Tier Consonant Class System" out of the paid Grammar Guide into this one section (leaving a pointer link behind), added a same-sound consonant-pairs table and a "How to master this" study block, and added a Help-page note about learning tones early. Finally I put the whole page behind the Basic tier — the same paywall Grammar had.
 
 **Why I did it this way**
-Classes and tones belong together — you learn classes only to predict tones. My tone content was scattered across three places (one behind a paywall), so I merged the best of it into one free page.
+Classes and tones belong together — you learn classes only to predict tones, so teaching them in two places was confusing. My tone content was scattered across three places, so I merged the best of it into one page. I first built it free, but since it now holds content that used to be paid (the Grammar consonant-class system), I gated it the same way as Grammar so I'm not giving away paid material.
 
 **How it works**
-The page reads from a single data dictionary. The drills send answers to my existing `/api/check_answer` endpoint, so points and levelling stay consistent. Access is free with no level gate.
+The page reads from a single data dictionary. The drills send answers to my existing `/api/check_answer` endpoint, so points and levelling stay consistent. Access is gated like Grammar: **Basic tier, level 3, alphabet completed first**.
 
 **How We Did It**
 1. Searched `app.py`, data and templates for existing tone/class content.
 2. Recommended merge vs rebuild, then waited for my approval.
-3. Built the data, route, template and menu links.
-4. Verified: page loads logged out, drills award points, Grammar page untouched.
-5. Archived the prompt and updated this journal.
+3. Built the data, route, template and menu links, with four drills.
+4. Merged the old Grammar consonant-class content in and removed the duplicate (left a pointer link).
+5. Gated the page behind the Basic tier, then merged to `main` — it's now live.
 
 **What this means for the app**
-Beginners get a proper, free reading foundation in one place.
+One clear place to learn tones and consonant classes, sitting properly inside the paid learning track instead of being duplicated across two pages.
 
 **What I learned**
-Exploring before editing paid off — I found content I'd otherwise have duplicated. An explore-first, confirm-before-editing approach keeps changes small and safe.
+Exploring before editing paid off — I found content I'd otherwise have duplicated. And access level is a real decision: moving paid content into a "free" section quietly gives it away, so consolidation and pricing have to be thought through together.
 
 **References / Conversations**
-This Claude Code session; prompt archived under `prompts/tones-consonant-classes/`.
+This Claude Code session; prompt archived under `prompts/tones-consonant-classes/`. Merged to `main` and live at https://thaibridge-ai.smoald.com/tones-classes.
 
 ---
 
