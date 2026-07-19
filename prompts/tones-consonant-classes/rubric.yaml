@@ -1,0 +1,43 @@
+# Evaluation rubric for: Unified "Tones & Consonant Classes" Section
+
+prompt: tones-consonant-classes
+version: 1
+criteria:
+  - name: teaches_three_classes
+    description: Output teaches the three consonant classes (mid, high, low)
+    weight: 5
+    pass_condition: "all(s in output.lower() for s in ['mid', 'high', 'low']) and 'class' in output.lower()"
+
+  - name: explains_tone_calculation
+    description: Output explains that tone is calculated from class + syllable + mark
+    weight: 5
+    pass_condition: "'tone' in output.lower() and any(s in output.lower() for s in ['calculat', 'mark', 'determine'])"
+
+  - name: covers_live_dead
+    description: Output covers the live vs dead syllable distinction
+    weight: 4
+    pass_condition: "'live' in output.lower() and 'dead' in output.lower()"
+
+  - name: covers_leading_h
+    description: Output covers the special leading-ห rule
+    weight: 3
+    pass_condition: "'leading' in output.lower() and any(s in output for s in ['ห', 'หมา'])"
+
+  - name: has_progressive_drills
+    description: Output provides progressive/levelled practice drills
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['drill', 'practice']) and any(s in output.lower() for s in ['level', 'progress'])"
+
+  - name: reuses_existing_scoring
+    description: Practice reuses the existing XP/points scoring rather than a new system
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['xp', 'points', 'check_answer'])"
+
+test_cases:
+  - input:
+      component: "unified tones and consonant classes section with progressive drills"
+    expected_traits:
+      - teaches the mid, high and low consonant classes
+      - explains how tone is calculated from class, syllable and mark
+      - covers live vs dead syllables and the leading-ห rule
+      - has progressive drills that reuse the existing XP scoring

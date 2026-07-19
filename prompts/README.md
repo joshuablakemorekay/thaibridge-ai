@@ -20,6 +20,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`claude-code-workflow`](./claude-code-workflow/) | agent-workflow | Driving Claude Code for a bug fix, refactor, tests, and code review with Git | Yes |
 | [`market-research-report`](./market-research-report/) | analysis / research | Produces a grounded, source-backed market research report for the app | Yes (v1 → v3) |
 | [`product-overview-section`](./product-overview-section/) | content | Generates a structured Product Overview using a clarifying-question loop | Yes (v1 → v2) |
+| [`tones-consonant-classes`](./tones-consonant-classes/) | agent-workflow | Explore-first build of one free section teaching tones + consonant classes with progressive drills | No (single version) |
 
 ## Featured iterations
 

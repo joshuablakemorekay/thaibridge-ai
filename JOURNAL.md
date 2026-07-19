@@ -4,6 +4,42 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 19 July 2026 — New free section: Tones & Consonant Classes
+
+**Type:** Feature
+
+**TL;DR**
+- Built one free section teaching consonant classes and tone rules together — because classes only exist to work out tones.
+- Reused my existing quiz/XP scoring for four practice drills — no new system invented.
+- Explored the code first and merged scattered content instead of rebuilding it.
+
+**What I built or did**
+A new free "Tones & Consonant Classes" section on a feature branch (a separate copy of the project to work on safely): one data set, a `/tones-classes` page with reference tabs, and four progressive drills — class ID, tone calculation, contrast pairs, and the leading-ห rule.
+
+**Why I did it this way**
+Classes and tones belong together — you learn classes only to predict tones. My tone content was scattered across three places (one behind a paywall), so I merged the best of it into one free page.
+
+**How it works**
+The page reads from a single data dictionary. The drills send answers to my existing `/api/check_answer` endpoint, so points and levelling stay consistent. Access is free with no level gate.
+
+**How We Did It**
+1. Searched `app.py`, data and templates for existing tone/class content.
+2. Recommended merge vs rebuild, then waited for my approval.
+3. Built the data, route, template and menu links.
+4. Verified: page loads logged out, drills award points, Grammar page untouched.
+5. Archived the prompt and updated this journal.
+
+**What this means for the app**
+Beginners get a proper, free reading foundation in one place.
+
+**What I learned**
+Exploring before editing paid off — I found content I'd otherwise have duplicated. An explore-first, confirm-before-editing approach keeps changes small and safe.
+
+**References / Conversations**
+This Claude Code session; prompt archived under `prompts/tones-consonant-classes/`.
+
+---
+
 ## 18 July 2026 — Access model rework + Instant Access Pass, and Monk Mode goes live
 
 **Type:** Milestone

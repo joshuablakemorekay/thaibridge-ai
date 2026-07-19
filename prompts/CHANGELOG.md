@@ -7,6 +7,15 @@ Each entry follows this format:
 
 ---
 
+## tones-consonant-classes
+
+### 2026-07-19 — v1 (explore-first build)
+**Change:** Added one free, unified "Tones & Consonant Classes" section — a `TONES_AND_CLASSES` data dict, a `/tones-classes` route, a template with reference tabs and four progressive drills, built on the `feature-experiment` branch.
+**Reason:** Consonant classes only exist to determine tones, so teaching them as separate sections was confusing; the content also lived scattered across three places (one paywalled).
+**Impact:** A single free reading skill that reuses the existing `/api/check_answer` XP scoring. Taught me the value of an explore-first gate — surveying the codebase and recommending merge-vs-rebuild *before* editing avoided duplicating content and kept the change from touching unrelated code.
+
+---
+
 ## frontend-build
 
 ### 2025-11-19 — v3 (Option C)

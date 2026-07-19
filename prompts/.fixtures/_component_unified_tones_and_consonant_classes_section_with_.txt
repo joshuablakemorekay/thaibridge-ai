@@ -1,0 +1,23 @@
+Unified "Tones & Consonant Classes" section
+
+Thai tones are not written directly — you calculate the tone from three things:
+the consonant class, whether the syllable is live or dead, and the tone mark.
+The consonant class is the primary factor that determines the tone.
+
+The three consonant classes:
+- MID class (9 letters) — the most regular; the only class that makes all 5 tones.
+- HIGH class (11 letters) — no mark gives a rising tone; only 3 possible tones.
+- LOW class (24 letters) — the tone marks act differently here (the common error).
+
+Live vs dead syllables: a live syllable ends in a long vowel or a sonorant; a
+dead syllable ends in a short vowel or a hard p/t/k stop. Live and dead
+syllables follow different tone rules.
+
+Special rule — the leading ห: a silent leading ห in front of a single low-class
+consonant makes it follow high-class rules, so มา (come, mid tone) becomes
+หมา (dog, rising tone).
+
+Practice drills (progressive, levelled): (1) class identification, (2) tone
+calculation with mid → high → low → mixed levels, (3) contrast pairs, and
+(4) a leading-ห drill. Each correct answer awards XP through the existing
+/api/check_answer scoring, so points stay consistent with the other quizzes.

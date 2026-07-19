@@ -1,0 +1,586 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Thai Tones & Consonant Classes{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ── Tabs (same pattern as the Vowels & Syllables page) ── */
+    .tab-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 2rem 0 1rem;
+    }
+    .tab-btn {
+        padding: 0.75rem 1.25rem;
+        border: 2px solid var(--royal-purple);
+        background: white;
+        color: var(--royal-purple);
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    .tab-btn:hover, .tab-btn.active {
+        background: var(--royal-purple);
+        color: white;
+    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* ── Class colour coding (used everywhere: cards, chart, badges) ── */
+    .cls-mid  { --cls: var(--bodhi-green); }
+    .cls-high { --cls: var(--temple-red); }
+    .cls-low  { --cls: var(--royal-purple); }
+
+    .class-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        border-left: 6px solid var(--cls, var(--royal-purple));
+    }
+    .class-badge {
+        display: inline-block;
+        background: var(--cls, var(--royal-purple));
+        color: white;
+        font-weight: 700;
+        padding: 0.2rem 0.7rem;
+        border-radius: 6px;
+        margin-right: 0.5rem;
+    }
+    .class-thai { font-size: 1.6rem; color: var(--cls); font-weight: 700; }
+
+    .con-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.6rem;
+        margin: 1rem 0;
+    }
+    .con-cell {
+        background: #faf7ff;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 0.6rem;
+        text-align: center;
+    }
+    .con-cell .c-thai { font-size: 2rem; color: var(--cls, var(--royal-purple)); font-weight: 700; }
+    .con-cell .c-name { font-size: 0.72rem; color: #666; display: block; margin-top: 0.2rem; }
+    .con-cell.obsolete { opacity: 0.5; }
+    .con-cell.obsolete .c-thai { text-decoration: line-through; }
+    .obsolete-tag {
+        display: inline-block;
+        font-size: 0.6rem;
+        background: #999;
+        color: white;
+        border-radius: 4px;
+        padding: 0 0.3rem;
+        vertical-align: middle;
+    }
+
+    .example-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: 1rem;
+    }
+    .example-chip {
+        background: #fff8ec;
+        border: 1px solid var(--royal-gold);
+        border-radius: 8px;
+        padding: 0.5rem 0.8rem;
+    }
+    .example-chip .e-thai { font-size: 1.3rem; color: var(--temple-red); font-weight: 700; }
+    .example-chip .e-tone {
+        font-size: 0.7rem;
+        background: var(--royal-purple);
+        color: white;
+        border-radius: 4px;
+        padding: 0 0.35rem;
+        margin-left: 0.3rem;
+    }
+
+    /* ── Tone chart ── */
+    .tone-chart { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    .tone-chart th, .tone-chart td {
+        border: 1px solid #e2dced;
+        padding: 0.6rem;
+        text-align: center;
+    }
+    .tone-chart thead th { background: var(--royal-purple); color: white; }
+    .tone-chart .row-label { color: white; font-weight: 700; }
+    .tone-chart .dash { color: #bbb; }
+    .chart-wrap { overflow-x: auto; }
+
+    /* ── Contrast pairs ── */
+    .pair-card {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        gap: 0.75rem;
+        background: white;
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .pair-side { flex: 1; min-width: 160px; border-radius: 8px; padding: 0.8rem; background: #faf7ff; }
+    .pair-side .p-thai { font-size: 2rem; font-weight: 700; color: var(--royal-purple); }
+    .pair-vs { display: flex; align-items: center; font-weight: 700; color: var(--temple-red); }
+
+    /* ── Drills ── */
+    .drill {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-top: 5px solid var(--monk-saffron);
+    }
+    .drill h3 { margin-top: 0; }
+    .drill-prompt { color: #555; margin-bottom: 1rem; }
+    .drill-question {
+        font-size: 3.5rem;
+        text-align: center;
+        color: var(--royal-purple);
+        font-weight: 700;
+        margin: 1rem 0;
+    }
+    .drill-question small { display: block; font-size: 1rem; color: #888; font-weight: 400; }
+    .drill-options { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+    .opt-btn {
+        padding: 0.7rem 1.4rem;
+        border: 2px solid var(--royal-purple);
+        background: white;
+        color: var(--royal-purple);
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+    .opt-btn:hover:not(:disabled) { background: var(--royal-purple); color: white; }
+    .opt-btn:disabled { cursor: default; }
+    .opt-btn.correct { background: var(--bodhi-green); border-color: var(--bodhi-green); color: white; }
+    .opt-btn.wrong { background: var(--temple-red); border-color: var(--temple-red); color: white; }
+    .drill-feedback { text-align: center; min-height: 1.6rem; margin: 1rem 0; font-weight: 600; }
+    .drill-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+    .drill-score { color: #666; font-weight: 600; }
+    .level-buttons { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+    .level-btn {
+        padding: 0.4rem 0.9rem;
+        border: 2px solid var(--monk-saffron);
+        background: white;
+        color: #a15c00;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.85rem;
+    }
+    .level-btn.active { background: var(--monk-saffron); color: white; }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    🔊 Tones &amp; Consonant Classes
+    <span class="thai">วรรณยุกต์และอักษรสามหมู่</span>
+</h1>
+
+<div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
+    <h2 style="margin-top: 0;">🎯 {{ data.core_concept.title }}</h2>
+    <p style="line-height: 1.8; font-size: 1.1rem;">{{ data.core_concept.summary }}</p>
+    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem; border-left: 5px solid var(--royal-purple); font-size: 1.15rem; font-weight: 600; text-align: center;">
+        {{ data.core_concept.formula }}
+    </div>
+</div>
+
+<!-- Tab Navigation -->
+<div class="tab-buttons">
+    <button class="tab-btn active" onclick="showTab('concept', this)">🧭 How Tones Work</button>
+    <button class="tab-btn" onclick="showTab('classes', this)">🔤 The 3 Classes</button>
+    <button class="tab-btn" onclick="showTab('chart', this)">📊 Tone Chart</button>
+    <button class="tab-btn" onclick="showTab('leadingh', this)">✨ Leading ห &amp; Pairs</button>
+    <button class="tab-btn" onclick="showTab('practice', this)">🎯 Practice</button>
+</div>
+
+<!-- ── TAB 1: How Tones Work ── -->
+<div id="concept" class="tab-content active">
+    <h2>🧭 The one idea to hold onto</h2>
+    <p style="line-height: 1.8;">{{ data.core_concept.summary }}</p>
+
+    <div class="card">
+        <h3 style="margin-top: 0;">Live vs dead syllables</h3>
+        <p style="line-height: 1.8;">{{ data.core_concept.live_dead }}</p>
+    </div>
+
+    <div class="card" style="border-left: 6px solid var(--bodhi-green);">
+        <h3 style="margin-top: 0;">💡 The big shortcut</h3>
+        <p style="line-height: 1.8; font-size: 1.1rem;">{{ data.core_concept.shortcut }}</p>
+    </div>
+
+    <h3>The 5 tones you are aiming for</h3>
+    <div class="example-row">
+        {% for t in data.reference_tones %}
+        <div class="example-chip">
+            <span class="e-thai">{{ t.example }}</span>
+            <span class="e-tone">{{ t.name }}</span>
+            <div style="font-size: 0.8rem; color: #666; margin-top: 0.3rem;">{{ t.description }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- ── TAB 2: The 3 Classes ── -->
+<div id="classes" class="tab-content">
+    {% for cls in data.classes %}
+    <div class="class-card cls-{{ cls.colour }}">
+        <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <span class="class-badge">{{ cls.label }}</span>
+            <span class="class-thai">{{ cls.name }} · {{ cls.thai }}</span>
+            <span style="color: #888;">({{ cls.count }} letters)</span>
+        </div>
+        <p style="font-weight: 600; margin: 0.8rem 0 0.4rem;">{{ cls.headline }}</p>
+        <p style="line-height: 1.7; color: #444;">{{ cls.tone_rules }}</p>
+
+        <div class="con-grid">
+            {% for c in cls.consonants %}
+            <div class="con-cell{% if c.obsolete %} obsolete{% endif %}">
+                <span class="c-thai">{{ c.thai }}</span>
+                {% if c.obsolete %}<span class="obsolete-tag">obsolete</span>{% endif %}
+                <span class="c-name">{{ c.name }}</span>
+            </div>
+            {% endfor %}
+        </div>
+
+        <strong>Worked examples:</strong>
+        <div class="example-row">
+            {% for ex in cls.examples %}
+            <div class="example-chip">
+                <span class="e-thai">{{ ex.thai }}</span>
+                <span class="e-tone">{{ ex.tone }}</span>
+                <div style="font-size: 0.8rem; color: #666; margin-top: 0.3rem;">{{ ex.paiboon }} — {{ ex.english }}</div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div style="background: #f4f0fa; border-radius: 8px; padding: 0.8rem; margin-top: 1rem;">
+            <strong>🧠 Remember:</strong> {{ cls.memory_tip }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- ── TAB 3: Tone Chart ── -->
+<div id="chart" class="tab-content">
+    <h2>📊 {{ data.tone_chart_live.title }}</h2>
+    <p style="line-height: 1.8;">{{ data.tone_chart_live.note }}</p>
+
+    <div class="chart-wrap">
+        <table class="tone-chart">
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    {% for col in data.tone_chart_live.columns %}<th>{{ col }}</th>{% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data.tone_chart_live.rows %}
+                <tr class="cls-{{ row.colour }}">
+                    <td class="row-label" style="background: var(--cls);">{{ row.label }}</td>
+                    {% for tone in row.tones %}
+                    <td>{% if tone == '–' %}<span class="dash">–</span>{% else %}{{ tone }}{% endif %}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="card" style="border-left: 6px solid var(--temple-red);">
+        <h3 style="margin-top: 0;">{{ data.dead_syllables.title }}</h3>
+        <ul style="line-height: 1.9;">
+            {% for r in data.dead_syllables.rules %}
+            <li><strong>{{ r.classes }}</strong> → <strong style="color: var(--temple-red);">{{ r.result }}</strong>
+                — e.g. {{ r.example.thai }} ({{ r.example.paiboon }}) “{{ r.example.english }}”</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <h3>The 4 tone marks</h3>
+    <div class="example-row">
+        {% for m in data.tone_marks %}
+        <div class="example-chip">
+            <span class="e-thai">◌{{ m.thai }}</span>
+            <div style="font-size: 0.85rem; margin-top: 0.3rem;"><strong>{{ m.name }}</strong></div>
+            <div style="font-size: 0.78rem; color: #666;">{{ m.effect }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- ── TAB 4: Leading ห & Pairs ── -->
+<div id="leadingh" class="tab-content">
+    <h2>✨ {{ data.leading_h.title }}</h2>
+    <div class="card" style="border-left: 6px solid var(--monk-saffron);">
+        <p style="line-height: 1.8; font-size: 1.1rem;">{{ data.leading_h.rule }}</p>
+    </div>
+    {% for p in data.leading_h.pairs %}
+    <div class="pair-card">
+        <div class="pair-side">
+            <div class="p-thai">{{ p.plain.thai }}</div>
+            <div>{{ p.plain.paiboon }} · <span class="e-tone">{{ p.plain.tone }}</span></div>
+            <div style="color: #666;">“{{ p.plain.english }}”</div>
+        </div>
+        <div class="pair-vs">→ add ห →</div>
+        <div class="pair-side" style="background: #fff3f3;">
+            <div class="p-thai" style="color: var(--temple-red);">{{ p.led.thai }}</div>
+            <div>{{ p.led.paiboon }} · <span class="e-tone">{{ p.led.tone }}</span></div>
+            <div style="color: #666;">“{{ p.led.english }}”</div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <h2 style="margin-top: 2.5rem;">🔀 {{ data.contrast_pairs.title }}</h2>
+    <p style="line-height: 1.8;">{{ data.contrast_pairs.note }}</p>
+    {% for pair in data.contrast_pairs.pairs %}
+    <div class="pair-card">
+        <div class="pair-side">
+            <div class="p-thai">{{ pair.a.thai }}</div>
+            <div>{{ pair.a.paiboon }} · <span class="e-tone">{{ pair.a.tone }}</span></div>
+            <div style="font-size: 0.85rem; color: #666;">{{ pair.a.class }} · mark: {{ pair.a.mark }}</div>
+            <div style="color: #666;">“{{ pair.a.english }}”</div>
+        </div>
+        <div class="pair-vs">vs</div>
+        <div class="pair-side" style="background: #fff3f3;">
+            <div class="p-thai" style="color: var(--temple-red);">{{ pair.b.thai }}</div>
+            <div>{{ pair.b.paiboon }} · <span class="e-tone">{{ pair.b.tone }}</span></div>
+            <div style="font-size: 0.85rem; color: #666;">{{ pair.b.class }} · mark: {{ pair.b.mark }}</div>
+            <div style="color: #666;">“{{ pair.b.english }}”</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- ── TAB 5: Practice ── -->
+<div id="practice" class="tab-content">
+    <h2>🎯 Practice drills</h2>
+    <p style="line-height: 1.8;">Each correct answer earns you XP, just like the vocabulary quizzes. Work through them in order — they get harder as you go.</p>
+
+    <!-- Drill 1: Class ID -->
+    <div class="drill" id="drill-classid">
+        <h3>1 · Which class is this letter?</h3>
+        <p class="drill-prompt">A consonant appears — tap MID, HIGH or LOW.</p>
+        <div class="drill-question"></div>
+        <div class="drill-options"></div>
+        <div class="drill-feedback"></div>
+        <div class="drill-footer">
+            <span class="drill-score"></span>
+            <button class="btn next-btn" style="display:none;">Next →</button>
+        </div>
+    </div>
+
+    <!-- Drill 2: Tone calculation (with level progression) -->
+    <div class="drill" id="drill-tonecalc">
+        <h3>2 · What tone does this syllable make?</h3>
+        <p class="drill-prompt">Start with mid class, then work up to the mixed set.</p>
+        <div class="level-buttons">
+            <button class="level-btn active" data-level="1">Mid class</button>
+            <button class="level-btn" data-level="2">High class</button>
+            <button class="level-btn" data-level="3">Low class</button>
+            <button class="level-btn" data-level="0">Mixed</button>
+        </div>
+        <div class="drill-question"></div>
+        <div class="drill-options"></div>
+        <div class="drill-feedback"></div>
+        <div class="drill-footer">
+            <span class="drill-score"></span>
+            <button class="btn next-btn" style="display:none;">Next →</button>
+        </div>
+    </div>
+
+    <!-- Drill 3: Contrast pairs -->
+    <div class="drill" id="drill-contrast">
+        <h3>3 · Contrast pairs — pick the tone</h3>
+        <p class="drill-prompt">Same shape, different class. Read carefully!</p>
+        <div class="drill-question"></div>
+        <div class="drill-options"></div>
+        <div class="drill-feedback"></div>
+        <div class="drill-footer">
+            <span class="drill-score"></span>
+            <button class="btn next-btn" style="display:none;">Next →</button>
+        </div>
+    </div>
+
+    <!-- Drill 4: Leading ห -->
+    <div class="drill" id="drill-leadingh">
+        <h3>4 · The leading ห drill</h3>
+        <p class="drill-prompt">If a silent ห leads the word, the tone rises. Pick the tone.</p>
+        <div class="drill-question"></div>
+        <div class="drill-options"></div>
+        <div class="drill-feedback"></div>
+        <div class="drill-footer">
+            <span class="drill-score"></span>
+            <button class="btn next-btn" style="display:none;">Next →</button>
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 3rem;">
+    <a href="/alphabet" class="btn" style="margin-right: 1rem;">← Alphabet</a>
+    <a href="/vowels_syllables" class="btn btn-saffron">Vowels &amp; Syllables →</a>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// ── Tab switching (same behaviour as the Vowels page) ──
+function showTab(tabName, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(tabName).classList.add('active');
+    if (btn) btn.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ── Data handed over from the server ──
+const CLASSES = {{ data.classes | tojson }};
+const POOLS = {
+    tone_calc: {{ data.drills.tone_calc | tojson }},
+    contrast: {{ data.drills.contrast | tojson }},
+    leading_h: {{ data.drills.leading_h | tojson }}
+};
+const TONES = ['Mid', 'Low', 'Falling', 'High', 'Rising'];
+
+// Build the class-ID pool from the class lists, skipping obsolete letters.
+const CLASS_ID_POOL = [];
+CLASSES.forEach(cls => {
+    cls.consonants.forEach(c => {
+        if (!c.obsolete) CLASS_ID_POOL.push({ thai: c.thai, name: c.name, answer: cls.label });
+    });
+});
+
+function randOf(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+/*
+ * Reusable drill widget. Reuses the existing /api/check_answer endpoint so
+ * scoring, XP and quiz stats stay consistent with every other quiz on the site.
+ *  cfg.getPool()      -> array to draw the next question from
+ *  cfg.options        -> array of button labels
+ *  cfg.renderQuestion -> (item) => HTML for the big question area
+ *  cfg.correctOf      -> (item) => the correct option string
+ */
+function makeDrill(rootId, cfg) {
+    const root = document.getElementById(rootId);
+    const qEl = root.querySelector('.drill-question');
+    const optsEl = root.querySelector('.drill-options');
+    const fbEl = root.querySelector('.drill-feedback');
+    const scoreEl = root.querySelector('.drill-score');
+    const nextBtn = root.querySelector('.next-btn');
+    let score = 0, total = 0, current = null, locked = false;
+
+    function updateScore() { scoreEl.textContent = `Score: ${score} / ${total}`; }
+
+    function nextQuestion() {
+        const pool = cfg.getPool();
+        if (!pool || pool.length === 0) { qEl.textContent = 'No questions here yet.'; return; }
+        current = randOf(pool);
+        locked = false;
+        fbEl.textContent = '';
+        nextBtn.style.display = 'none';
+        qEl.innerHTML = cfg.renderQuestion(current);
+        optsEl.innerHTML = '';
+        cfg.options.forEach(opt => {
+            const b = document.createElement('button');
+            b.className = 'opt-btn';
+            b.textContent = opt;
+            b.onclick = () => answer(opt, b);
+            optsEl.appendChild(b);
+        });
+    }
+
+    async function answer(choice, btn) {
+        if (locked) return;
+        locked = true;
+        total++;
+        const correct = cfg.correctOf(current);
+        const buttons = optsEl.querySelectorAll('.opt-btn');
+        buttons.forEach(b => { b.disabled = true; if (b.textContent === correct) b.classList.add('correct'); });
+
+        let xp = 0;
+        try {
+            const res = await fetch('/api/check_answer', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ answer: choice, correct: correct })
+            });
+            const dataRes = await res.json();
+            xp = dataRes.xp_earned || 0;
+        } catch (e) { /* keep the drill usable even if scoring is offline */ }
+
+        if (choice === correct) {
+            score++;
+            fbEl.style.color = 'var(--bodhi-green)';
+            fbEl.textContent = xp ? `✅ Correct!  +${xp} XP` : '✅ Correct!';
+        } else {
+            btn.classList.add('wrong');
+            fbEl.style.color = 'var(--temple-red)';
+            fbEl.textContent = `❌ Not quite — the answer is ${correct}. ` + (current.english ? `(${current.english})` : '');
+        }
+        updateScore();
+        nextBtn.style.display = 'inline-block';
+    }
+
+    nextBtn.addEventListener('click', nextQuestion);
+    updateScore();
+    nextQuestion();
+    return { reset: nextQuestion };
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Drill 1 — class identification
+    makeDrill('drill-classid', {
+        getPool: () => CLASS_ID_POOL,
+        options: ['MID', 'HIGH', 'LOW'],
+        renderQuestion: (it) => `${it.thai}<small>${it.name}</small>`,
+        correctOf: (it) => it.answer
+    });
+
+    // Drill 2 — tone calculation, filtered by the selected level
+    let toneLevel = 1; // 1=mid, 2=high, 3=low, 0=mixed
+    const toneDrill = makeDrill('drill-tonecalc', {
+        getPool: () => toneLevel === 0 ? POOLS.tone_calc : POOLS.tone_calc.filter(q => q.level === toneLevel),
+        options: TONES,
+        renderQuestion: (it) => `${it.thai}<small>${it.class} class</small>`,
+        correctOf: (it) => it.tone
+    });
+    document.querySelectorAll('#drill-tonecalc .level-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            document.querySelectorAll('#drill-tonecalc .level-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            toneLevel = parseInt(this.dataset.level, 10);
+            toneDrill.reset();
+        });
+    });
+
+    // Drill 3 — contrast pairs
+    makeDrill('drill-contrast', {
+        getPool: () => POOLS.contrast,
+        options: TONES,
+        renderQuestion: (it) => `${it.thai}<small>${it.english}</small>`,
+        correctOf: (it) => it.tone
+    });
+
+    // Drill 4 — leading ห
+    makeDrill('drill-leadingh', {
+        getPool: () => POOLS.leading_h,
+        options: TONES,
+        renderQuestion: (it) => `${it.thai}<small>${it.english}</small>`,
+        correctOf: (it) => it.tone
+    });
+});
+</script>
+{% endblock %}
