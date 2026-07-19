@@ -249,9 +249,6 @@ SECTION_REQUIREMENTS = {
     'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
     'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
     'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
-    # Core reading skill: consonant classes + tone rules taught as one unit.
-    # Free, no level/alphabet gate — foundational to reading Thai at all.
-    'tones_classes': {'level': 1, 'tier': 'free', 'points_reward': 20, 'requires_alphabet': False},
 
     # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
@@ -264,6 +261,9 @@ SECTION_REQUIREMENTS = {
     'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    # Consonant classes + tone rules. Its content was moved here from the Grammar
+    # page, so it's gated the same way — Basic tier, level 3, alphabet required.
+    'tones_classes': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
     'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
     'register': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
@@ -2852,143 +2852,6 @@ GRAMMAR = {
         },
     ],
     
-    'consonant_classes': {
-        'explanation': 'Thai consonants are divided into 3 classes that determine tone rules. Each class creates different tones when combined with tone marks and vowel lengths.',
-        'why_important': 'Consonant class + Tone mark + Vowel length = Final tone. Understanding this system is the KEY to reading Thai correctly and predicting pronunciation.',
-        'classes': [
-            {
-                'name': 'Low Class',
-                'thai': 'อักษรต้น',
-                'paiboon': 'àk-sɔ̌ɔn dtôn',
-                'symbol': 'L',
-                'count': 24,
-                'description': 'Start LOW, can rise or fall depending on tone marks',
-                'consonants': [
-                    {'thai': 'ค', 'paiboon': 'k', 'name': 'kɔɔ kwuuai (buffalo)'},
-                    {'thai': 'ฅ', 'paiboon': 'k', 'name': 'kɔɔ kon (person) - obsolete'},
-                    {'thai': 'ฆ', 'paiboon': 'k', 'name': 'kɔɔ rá-kaŋ (bell)'},
-                    {'thai': 'ง', 'paiboon': 'ŋ', 'name': 'ŋɔɔ ŋuu (snake)'},
-                    {'thai': 'ช', 'paiboon': 'ch', 'name': 'chɔɔ cháaŋ (elephant)'},
-                    {'thai': 'ซ', 'paiboon': 's', 'name': 'sɔɔ sôo (chain)'},
-                    {'thai': 'ฌ', 'paiboon': 'ch', 'name': 'chɔɔ chəə (tree)'},
-                    {'thai': 'ญ', 'paiboon': 'y', 'name': 'yɔɔ yǐŋ (woman)'},
-                    {'thai': 'ฑ', 'paiboon': 't', 'name': 'tɔɔ mon-too (Montho)'},
-                    {'thai': 'ฒ', 'paiboon': 't', 'name': 'tɔɔ pûu-tâo (old man)'},
-                    {'thai': 'ณ', 'paiboon': 'n', 'name': 'nɔɔ neen (novice)'},
-                    {'thai': 'ท', 'paiboon': 't', 'name': 'tɔɔ tá-hǎan (soldier)'},
-                    {'thai': 'ธ', 'paiboon': 't', 'name': 'tɔɔ toŋ (flag)'},
-                    {'thai': 'น', 'paiboon': 'n', 'name': 'nɔɔ nǔu (mouse)'},
-                    {'thai': 'พ', 'paiboon': 'p', 'name': 'pɔɔ paan (tray)'},
-                    {'thai': 'ฟ', 'paiboon': 'f', 'name': 'fɔɔ fan (teeth)'},
-                    {'thai': 'ภ', 'paiboon': 'p', 'name': 'pɔɔ sǎm-phao (sailboat)'},
-                    {'thai': 'ม', 'paiboon': 'm', 'name': 'mɔɔ máa (horse)'},
-                    {'thai': 'ย', 'paiboon': 'y', 'name': 'yɔɔ yák (giant)'},
-                    {'thai': 'ร', 'paiboon': 'r', 'name': 'rɔɔ rʉa (boat)'},
-                    {'thai': 'ล', 'paiboon': 'l', 'name': 'lɔɔ liŋ (monkey)'},
-                    {'thai': 'ว', 'paiboon': 'w', 'name': 'wɔɔ wɛɛn (ring)'},
-                    {'thai': 'ฬ', 'paiboon': 'l', 'name': 'lɔɔ jù-laa (kite)'},
-                    {'thai': 'ฮ', 'paiboon': 'h', 'name': 'hɔɔ nók-hûuk (owl)'},
-                ],
-                'tone_rules': 'With no tone mark: MID tone (live syllable) or LOW tone (dead syllable). With tone marks: Creates FALLING, HIGH, or RISING tones.',
-                'examples': [
-                    {'thai': 'คน', 'paiboon': 'kon', 'tone': 'MID', 'english': 'person'},
-                    {'thai': 'ค่า', 'paiboon': 'kâa', 'tone': 'FALLING', 'english': 'value'},
-                    {'thai': 'ค้า', 'paiboon': 'káa', 'tone': 'HIGH', 'english': 'trade'},
-                    {'thai': 'ช้าง', 'paiboon': 'cháaŋ', 'tone': 'HIGH', 'english': 'elephant'},
-                ],
-                'memory_tip': 'LOW class consonants are "weak" - they need help from tone marks to go HIGH or FALL. Think: "starts low, needs a boost"'
-            },
-            {
-                'name': 'Mid Class',
-                'thai': 'อักษรกลาง',
-                'paiboon': 'àk-sɔ̌ɔn glaaŋ',
-                'symbol': 'M',
-                'count': 9,
-                'description': 'Start MID, neutral baseline - most predictable tone behavior',
-                'consonants': [
-                    {'thai': 'ก', 'paiboon': 'g', 'name': 'gɔɔ gài (chicken)'},
-                    {'thai': 'จ', 'paiboon': 'j', 'name': 'jɔɔ jaan (plate)'},
-                    {'thai': 'ฎ', 'paiboon': 'd', 'name': 'dɔɔ chá-daa (headdress)'},
-                    {'thai': 'ฏ', 'paiboon': 'dt', 'name': 'dtɔɔ bpà-dtàk (goad)'},
-                    {'thai': 'ด', 'paiboon': 'd', 'name': 'dɔɔ dèk (child)'},
-                    {'thai': 'ต', 'paiboon': 'dt', 'name': 'dtɔɔ dtào (turtle)'},
-                    {'thai': 'บ', 'paiboon': 'b', 'name': 'bɔɔ bai-mái (leaf)'},
-                    {'thai': 'ป', 'paiboon': 'bp', 'name': 'bpɔɔ bplaa (fish)'},
-                    {'thai': 'อ', 'paiboon': 'ʔ', 'name': 'ʔɔɔ àaŋ (basin)'},
-                ],
-                'tone_rules': 'With no tone mark: MID tone. With tone marks: Creates LOW, FALLING, or HIGH tones. Most regular and predictable.',
-                'examples': [
-                    {'thai': 'ปา', 'paiboon': 'bpaa', 'tone': 'MID', 'english': 'throw'},
-                    {'thai': 'ป่า', 'paiboon': 'bpàa', 'tone': 'LOW', 'english': 'forest'},
-                    {'thai': 'ป้า', 'paiboon': 'bpâa', 'tone': 'FALLING', 'english': 'aunt'},
-                    {'thai': 'ป๊า', 'paiboon': 'bpáa', 'tone': 'HIGH', 'english': 'papa'},
-                ],
-                'memory_tip': 'MID class is the "neutral, normal" baseline. Just 9 consonants - easy to memorize! Think: "middle = standard = predictable"'
-            },
-            {
-                'name': 'High Class',
-                'thai': 'อักษรสูง',
-                'paiboon': 'àk-sɔ̌ɔn sǔuŋ',
-                'symbol': 'H',
-                'count': 11,
-                'description': 'Start HIGH, naturally aspirated sounds',
-                'consonants': [
-                    {'thai': 'ข', 'paiboon': 'k', 'name': 'kɔɔ kài (egg)'},
-                    {'thai': 'ฃ', 'paiboon': 'k', 'name': 'kɔɔ kùuat (bottle) - obsolete'},
-                    {'thai': 'ฉ', 'paiboon': 'ch', 'name': 'chɔɔ chǐŋ (cymbal)'},
-                    {'thai': 'ฐ', 'paiboon': 't', 'name': 'tɔɔ tǎan (base)'},
-                    {'thai': 'ถ', 'paiboon': 't', 'name': 'tɔɔ tǔŋ (bag)'},
-                    {'thai': 'ผ', 'paiboon': 'p', 'name': 'pɔɔ pʉ̌ŋ (bee)'},
-                    {'thai': 'ฝ', 'paiboon': 'f', 'name': 'fɔɔ fǎa (lid)'},
-                    {'thai': 'ศ', 'paiboon': 's', 'name': 'sɔɔ sǎa-laa (pavilion)'},
-                    {'thai': 'ษ', 'paiboon': 's', 'name': 'sɔɔ rʉʉ-sǐi (hermit)'},
-                    {'thai': 'ส', 'paiboon': 's', 'name': 'sɔɔ sʉ̌a (tiger)'},
-                    {'thai': 'ห', 'paiboon': 'h', 'name': 'hɔɔ hìip (chest)'},
-                ],
-                'tone_rules': 'With no tone mark: RISING tone (live syllable) or LOW tone (dead syllable). With tone marks: Creates LOW or FALLING tones only.',
-                'examples': [
-                    {'thai': 'ขา', 'paiboon': 'kǎa', 'tone': 'RISING', 'english': 'leg'},
-                    {'thai': 'ข่า', 'paiboon': 'kàa', 'tone': 'LOW', 'english': 'galangal'},
-                    {'thai': 'ข้า', 'paiboon': 'kâa', 'tone': 'FALLING', 'english': 'I (formal)'},
-                    {'thai': 'สอง', 'paiboon': 'sɔ̌ɔŋ', 'tone': 'RISING', 'english': 'two'},
-                ],
-                'memory_tip': 'HIGH class consonants are "naturally high and breathy" - they start high but can fall. Think: "high start, can only drop or stay low"'
-            },
-        ],
-        'quick_reference': {
-            'title': 'Tone Rules Quick Reference',
-            'explanation': 'This chart shows which tone results from each combination',
-            'table': [
-                {'mark': 'No mark', 'live_vowel': 'Long vowel or sonorant ending', 'dead_vowel': 'Short vowel or stop ending', 'low': 'MID', 'mid': 'MID', 'high': 'RISING', 'low_dead': 'LOW', 'mid_dead': 'LOW', 'high_dead': 'LOW'},
-                {'mark': 'ไม้เอก ่', 'symbol': ' ่', 'low': 'FALLING', 'mid': 'LOW', 'high': 'LOW'},
-                {'mark': 'ไม้โท ้', 'symbol': ' ้', 'low': 'HIGH', 'mid': 'FALLING', 'high': 'FALLING'},
-                {'mark': 'ไม้ตรี ๊', 'symbol': ' ๊', 'low': '(not used)', 'mid': '(not used)', 'high': '(not used)'},
-                {'mark': 'ไม้จัตวา ๋', 'symbol': ' ๋', 'low': 'RISING', 'mid': '(not used)', 'high': '(not used)'},
-            ],
-            'note': 'LOW class has 5 possible tones, MID class has 4, HIGH class has 3. This is why knowing consonant class is ESSENTIAL for reading Thai!'
-        },
-        'learning_strategy': {
-            'title': 'How to Master Consonant Classes',
-            'steps': [
-                {'step': 1, 'action': 'Memorize the 9 MID class consonants first', 'why': "They're the smallest group and most predictable"},
-                {'step': 2, 'action': 'Learn the 11 HIGH class consonants', 'why': 'They have a clear pattern - aspirated sounds'},
-                {'step': 3, 'action': 'Everything else is LOW class (24 consonants)', 'why': 'Largest group, but you can deduce by elimination'},
-                {'step': 4, 'action': 'Practice with real words', 'why': 'See the patterns in action - recognition beats memorization'},
-                {'step': 5, 'action': 'Use mnemonic devices', 'why': 'Create stories or songs to remember the groups'},
-            ],
-            'mnemonic': 'MID = "กจฎฏดตบปอ" (9 letters - make a sentence!), HIGH = mostly aspir ated (breathy h-like sounds), LOW = everything else (the big lazy group)'
-        },
-        'common_patterns': [
-            {'pattern': 'Paired consonants', 'explanation': 'Many consonants come in HIGH/LOW pairs with same sound', 'examples': [
-                {'high': 'ข (k)', 'low': 'ค (k)', 'english': 'Both make "k" sound but different tones'},
-                {'high': 'ถ (t)', 'low': 'ท (t)', 'english': 'Both make "t" sound but different tones'},
-                {'high': 'ผ (p)', 'low': 'พ (p)', 'english': 'Both make "p" sound but different tones'},
-            ]},
-            {'pattern': 'Sonorants', 'explanation': 'ง น ม ย ร ล ว are ALL low class', 'why': 'Sonorant (flowing) sounds are grouped together in LOW class'},
-            {'pattern': 'No MID class sonorants', 'explanation': 'All sonorants (nasal/liquid sounds) are LOW class, never MID', 'why': 'This helps narrow down which consonant to use'},
-        ],
-    },
-    
     'particles': [
         {
             'name': 'Politeness Particles',
@@ -3247,6 +3110,21 @@ TONES_AND_CLASSES = {
             {'sound': 's',  'high': 'ส', 'low': 'ซ'},
             {'sound': 'h',  'high': 'ห', 'low': 'ฮ'},
         ],
+    },
+
+    # How to actually get good at this — the study plan and elimination tricks
+    # that used to live in the Grammar page's consonant-class section.
+    'mastery': {
+        'title': 'How to master this',
+        'steps': [
+            'Memorise the 9 MID consonants first — the smallest and most regular group.',
+            'Learn the 11 HIGH consonants (mostly the breathy, aspirated sounds).',
+            'Everything left over is LOW class (24 letters) — you get it by elimination.',
+            'Practise on real words so you recognise the patterns instead of reciting them.',
+            'Run the drills below until the tone comes out automatically.',
+        ],
+        'mnemonic': 'MID = ก จ ฎ ฏ ด ต บ ป อ (just 9 — make a silly sentence to lock them in). HIGH = the breathy group. LOW = everything else.',
+        'sonorant_tip': 'The flowing sounds — ง ญ ณ น ม ย ร ล ว ฬ — are ALL low class. No nasal or flowing sound is ever mid or high, so that is an instant way to rule classes out.',
     },
 
     # LIVE-syllable tone chart. Columns are the five mark states; rows are the

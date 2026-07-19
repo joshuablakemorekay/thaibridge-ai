@@ -315,6 +315,22 @@
             </tbody>
         </table>
     </div>
+
+    <!-- How to master this -->
+    <div class="card" style="border-left: 6px solid var(--bodhi-green); margin-top: 2rem;">
+        <h3 style="margin-top: 0;">🎓 {{ data.mastery.title }}</h3>
+        <ol style="line-height: 1.9; padding-left: 1.2rem;">
+            {% for step in data.mastery.steps %}
+            <li>{{ step }}</li>
+            {% endfor %}
+        </ol>
+        <div style="background: #eef7ee; border-radius: 8px; padding: 0.9rem; margin-top: 0.8rem;">
+            <strong>🧠 Mnemonic:</strong> {{ data.mastery.mnemonic }}
+        </div>
+        <div style="background: #f4f0fa; border-radius: 8px; padding: 0.9rem; margin-top: 0.8rem;">
+            <strong>💡 Quick trick:</strong> {{ data.mastery.sonorant_tip }}
+        </div>
+    </div>
 </div>
 
 <!-- ── TAB 3: Tone Chart ── -->
