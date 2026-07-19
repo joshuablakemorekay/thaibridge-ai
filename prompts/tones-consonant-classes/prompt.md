@@ -3,7 +3,7 @@
 > **Category:** agent-workflow
 > **Model used:** Claude (Claude Code, Opus)
 > **Project area:** ThaiBridge AI — core reading skills (tones + consonant classes)
-> **Status:** production (built on the `feature-experiment` branch)
+> **Status:** production — merged to `main` and live at https://thaibridge-ai.smoald.com/tones-classes
 > **Last updated:** 2026-07-19
 
 ## What this prompt does
