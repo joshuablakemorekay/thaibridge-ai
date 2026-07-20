@@ -4,6 +4,42 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 20 July 2026 (evening) — My Thai teacher's homework becomes lessons 11 and 12
+
+**Type:** Feature
+
+**TL;DR**
+- My Thai teacher gave me real classroom material: a tongue twister for the **L sound**, fifteen drill sentences for the **R sound**, and three Ajahn Sumedho passages for learning Dhamma-teaching vocabulary in context.
+- It became two new Monk Mode lessons: **11 — Pronunciation Practice: L and R** and **12 — Dhamma Reading: Ajahn Sumedho**, with audio in both accents.
+- The teacher's own idea — "you can get AI to read the text in American or British English" — was something the app could already do, because of the accent toggle built earlier today.
+
+**What I built or did**
+Lesson 11 tackles the classic problem: Thai speakers often turn R into L, so *rice* becomes *lice*. It starts with nine minimal-pair words (rice/lice, right/light, and the flea/fly/flee/flaw/flue family — each with Thai meaning, respelling and audio), then two drill sections: the "flea and a fly in a flue" twister line by line for L, and the fifteen R sentences, every line with a respelling, hidden IPA, a Thai gloss of what it means, and a play button.
+
+Lesson 12 holds the three Ajahn Sumedho readings — *Observing Our Reactions*, *Grasping and Suffering*, *The Body Breathes* — each with a **listen-to-the-whole-passage** button in either accent, plus twelve key teaching words (refuge, grasping, aversion, conditioning…) and four sentences worth memorising, all in the existing lesson format with Pāli where it applies.
+
+**Why I did it this way**
+The lesson files only knew about single words and short phrases, and neither a tongue twister nor a 250-word reading fits that shape. Rather than force them in, I added two new optional sections to the lesson format: `drill_sections` (English-only lines — there is no Thai prompt side because the whole point is saying the English sound) and `passages` (whole readings). Every drill line still carries a Thai meaning, because a tongue twister you understand is far easier to remember than nonsense.
+
+The passages are from a free-distribution Dhamma book, so they sit in the free Monk Mode section with the source credited on every passage — teaching material passed on the way it was meant to be.
+
+**How it works**
+The audio script now collects drill lines like any other entry, and passages get a special key: the file is named after the passage's id (`passage-the-body-breathes.mp3`), never a slug of its 200-word text. The template asks for exactly the same key, so the two sides can't drift apart — the same one-rule-shared-in-one-place idea the audio system was built on. About 47 new MP3 files per accent, generated once on my machine, served as plain static files.
+
+**How We Did It**
+1. Read the teacher's material carefully first — including the correction that the flea/fly twister trains **L**, and the R sentences train **R**.
+2. Explored how the ten existing lessons, the templates and the audio pipeline worked before writing anything.
+3. Drafted both JSON lesson files, then extended the lesson template, the topic-grid counts, the CSS and the audio script.
+4. Smoke-tested both pages in both learning directions, ran the full test suite (32 passing), then generated the audio in both accents.
+
+**What I learned**
+Content from a real teacher beats content I'd invent — the material arrived with its own pedagogy (minimal pairs → twisters → drills → reading in context) and my job was to give it a home, not improve it. And building infrastructure honestly pays off later: the accent toggle from this morning meant the teacher's "read it in British or American" wish cost nothing extra.
+
+**References / Conversations**
+Claude Code session, 20 July 2026 (evening). Material from my Thai teacher; passages from Ajahn Sumedho, *Direct Realization* (Anthology Vol. 3), Amaravati — free distribution. All Thai glosses and Paiboon in the two new files are mine to verify next.
+
+---
+
 ## 20 July 2026 (later) — Two accents for the monk English track
 
 **Type:** Feature + Bug Fix
