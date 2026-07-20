@@ -49,7 +49,7 @@ I worked in public, kept an honest build journal, and made a few deliberate call
 
 **3. I refused to trust "it works."** This became the spine of the whole project. A green "deploy succeeded" or a "200 OK" only means a page *loaded* — not that it did the right thing. So I made a habit of checking the real evidence: the database, the logs, the actual screen. That habit paid off repeatedly (see Results).
 
-**4. I made a values call on pricing.** I kept the Buddhist teachings and meditation timer **completely free** for everyone (no account, no paywall — *dāna*, freely given), and made the genuinely costly AI features the paid product. It gives the app an honest story rather than a stingy one.
+**4. I made a values call on pricing — and then refined where the line sits.** The **Buddhist teachings are completely free** for everyone (no account, no paywall — *dāna*, freely given), and monastics get the entire app free through Monk Mode. My first version put the meditation page on the free side too. As it grew from a bare timer into guided sessions and full technique guides, I moved it to the paid tier: **the teaching stays free, the tooling built on top of it is the product.** That line is easier to defend and easier to explain than "meditation is free but Thai grammar isn't" — and working out *where* a values line actually falls turned out to be harder, and more useful, than declaring one.
 
 ## What I built
 

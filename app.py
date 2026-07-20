@@ -244,17 +244,27 @@ XP_LEVELS = {
 SECTION_REQUIREMENTS = {
     # ── FREE for everyone (whether Monk Mode is on or off) ────────────────
     # The free foundation: the alphabet (the gateway that unlocks levelling)
-    # plus the entire Buddhism dropdown — the Dhamma is freely given. Every
-    # other content section now sits behind a paid tier (see below), on TOP of
-    # its level/XP requirement.
+    # plus the Theravada Dhamma teachings — the Dhamma itself is freely given.
+    # Every other content section sits behind a paid tier (see below), on TOP
+    # of its level/XP requirement.
+    #
+    # Meditation used to sit here too. It moved to 'basic' once the page grew
+    # from a bare timer into guided sessions and full technique guides: the
+    # teachings stay free, the structured practice tooling built on top of them
+    # is part of the paid product.
     'home': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': False},
     'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
     'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
-    'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
 
     # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
-    # Culture, and the exercises). Still gated by level/XP as well as the tier.
+    # Culture, and the exercises), plus the meditation practice tooling.
+    # Still gated by level/XP as well as the tier.
+    #
+    # requires_alphabet stays False for meditation: it is practice tooling, not
+    # Thai-language content, so making it wait on the alphabet would gate it on
+    # something unrelated.
+    'meditation': {'level': 1, 'tier': 'basic', 'points_reward': 40, 'requires_alphabet': False},
     'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10, 'requires_alphabet': False},
     'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0, 'requires_alphabet': True},
     'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
@@ -293,7 +303,6 @@ SUBSCRIPTION_TIERS = {
             '✓ Full Thai alphabet course (44 consonants, 32 vowels)',
             '✓ Theravada Buddhism teachings',
             '✓ Pra Kru Bob Dhamma articles',
-            '✓ Meditation timer & techniques',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
@@ -303,6 +312,7 @@ SUBSCRIPTION_TIERS = {
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
+            '✓ Guided meditation sessions, timer & techniques',
             '✓ Vocabulary, grammar & sentence patterns',
             '✓ Culture, formality, register & classifiers',
             '✓ Paiboon romanization guide',
@@ -402,7 +412,7 @@ def init_user_progress():
             'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
             'monk_accent': MONK_ACCENT_DEFAULT,   # 'uk' or 'us' (English-side accent)
             'full_unlock': False,  # optional paid add-on (on top of Pro): skips the level/alphabet grind
-            'sections_unlocked': ['home', 'alphabet', 'theravada', 'meditation'],
+            'sections_unlocked': ['home', 'alphabet', 'theravada'],
             'sections_visited': [],
             'achievements_earned': [],
             'quizzes_completed': 0,

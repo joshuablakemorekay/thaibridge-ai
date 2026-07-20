@@ -4,6 +4,35 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 20 July 2026 (late) — Where the "freely given" line actually falls
+
+**Type:** Decision
+
+**TL;DR**
+- Moved the **Meditation page** from free to **Buddhist Scholar (£9.99)**.
+- The principle didn't change — the Dhamma is still freely given — but the *line* moved: **the teaching is free, the tooling built on top of it is the product.**
+- Updated all seven places that said otherwise, including the pricing page, both *dāna* notices, and my portfolio case study.
+
+**What I built or did**
+Changed `meditation` from `tier: 'free'` to `tier: 'basic'` and took it out of the sections a brand-new account starts with. Then swept everywhere that advertised it as free: the Free plan's feature list, the pricing page's "why some things are free" panel, the banner on the meditation page itself, the banner on the Theravada page, the architecture doc's tier table (which was badly out of date anyway — still in dollars, still claiming vocab and grammar were free), and the values paragraph in both my README and my portfolio case study.
+
+**Why I did it this way**
+I asked for a second opinion before touching anything, and the pushback was useful: don't gate it, it's weak paywall material, it's a values reversal, and it's advertised as free. Two of those dissolved once I said out loud that **I have no users yet** — nothing is being taken from anyone, and this is still design, not a broken promise. What survived was the values question, and thinking it through is what produced the better line. "Meditation is free but Thai grammar isn't" was never a principle, just where I happened to stop. **"The teaching is free, the tools are paid"** is a rule I can state in one sentence and defend to anyone.
+
+**How it works**
+`SECTION_REQUIREMENTS` in `app.py` drives every gate, so the actual change is one word. Monk Mode waives the tier gate, so **monastics still get everything free** — I made both *dāna* notices say so explicitly, with a link.
+
+**What this means for the app**
+The free tier is now a cleaner offer: the full Thai alphabet plus all the Dhamma teachings and articles, forever, no account needed. Everything built *on top* of that — guided practice, language study, AI — is the paid product.
+
+**What I learned**
+**Working out where a values line falls is harder than declaring one.** I'd made the call once and assumed it was settled, but "free" wasn't a principle until I could say *why* those things and not others. Also: when a decision reverses, the honest move is to make the change the story rather than quietly delete the old one — the case study now reads as judgment developing, which is truer and more interesting than pretending I got it right first time. And a small practical thing: **a one-word gate change had seven downstream places to fix.** Grepping for every mention before editing anything is what stopped the pricing page contradicting the app.
+
+**References / Conversations**
+Claude Code session, 20 July 2026 (late). Verified with a test across all four user types — free (locked), Basic, Pro, and Monk Mode (all open) — plus the full 32-test suite.
+
+---
+
 ## 20 July 2026 (night) — My teacher reviews the lessons, and her feedback becomes features
 
 **Type:** Feature + Fix
