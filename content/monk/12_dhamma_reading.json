@@ -7,7 +7,7 @@
     "en": "Three short readings from Ajahn Sumedho's Direct Realization — real Dhamma in real English, with the key words a monk can use when teaching. Listen in a British or American voice, then read along.",
     "th": "บทอ่านสั้นสามบทจากหนังสือ Direct Realization ของหลวงพ่อสุเมโธ — ธรรมะจริงในภาษาอังกฤษจริง พร้อมคำศัพท์สำคัญที่พระนำไปใช้สอนได้ ฟังเสียงอ่านสำเนียงอังกฤษหรืออเมริกัน แล้วอ่านตาม"
   },
-  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+, IPA, Pāli and register. Passages selected by Josh's Thai teacher (2026-07-20); lightly cleaned from the copied text.",
+  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+, IPA, Pāli and register. Passages selected by Josh's Thai teacher (2026-07-20); lightly cleaned from the copied text. Teacher feedback 2026-07-20 added the reading_guide (read for meaning, pause at the punctuation, vocal variety), the word_choices block (a monk should have more than one word for an idea — 'stress' as well as 'suffering', 'uncertainty' as well as 'impermanence'), and the pause-practice drills. Thai in those additions is an AI draft awaiting native review.",
   "_source_note": "Passages © Ajahn Sumedho / Amaravati Publications, from 'Direct Realization' (The Ajahn Sumedho Anthology, Vol. 3), a free-distribution Dhamma book. Reproduced here with attribution, in the free Monk Mode section, for Dhamma study — not for sale.",
   "vocab": [
     { "thai": "สังเกต", "paiboon": "sǎŋ-gèet", "english": "to observe", "english_respell": "tuh uhb-ZERV", "english_tip_th": "เน้นพยางค์ที่สอง ZERV — Z ก้อง — ท้ายคำ V ฟันบนแตะริมฝีปากล่าง", "english_ipa": "/tu əbˈzɜːv/", "pali": "", "note": "To watch and notice without judging.", "note_th": "เฝ้าดูและรับรู้ตามความเป็นจริง โดยไม่ตัดสิน" },
@@ -21,13 +21,92 @@
     { "thai": "ความอยาก", "paiboon": "kwaam-yàak", "english": "desire", "english_respell": "di-ZAI-uh", "english_respell_us": "di-ZAI-er", "english_tip_th": "เน้นพยางค์ ZAI — Z ก้อง เหมือน ส ที่สั่นที่ลำคอ", "english_ipa": "/dɪˈzaɪə/", "pali": "taṇhā", "note": "Craving; wanting things to be otherwise.", "note_th": "ตัณหา — ความอยากให้เป็นอย่างอื่น" },
     { "thai": "ไม่เที่ยง", "paiboon": "mâi-tîaŋ", "english": "impermanent", "english_respell": "im-PER-muh-nuhnt", "english_tip_th": "เน้นพยางค์ PER — ท้ายคำ -nuhnt มี น-ท ครบ", "english_ipa": "/ɪmˈpɜːmənənt/", "pali": "anicca", "note": "Not lasting; always changing.", "note_th": "ไม่คงอยู่ เปลี่ยนแปลงเสมอ (อนิจจัง)" },
     { "thai": "การปรุงแต่ง", "paiboon": "gaan-bpruŋ-dtɛ̀ŋ", "english": "conditioning", "english_respell": "kuhn-DI-shuh-ning", "english_tip_th": "เน้นพยางค์ DI — SH ห่อลิ้น เสียงลม — ท้ายคำ -NG เหมือน ง", "english_ipa": "/kənˈdɪʃənɪŋ/", "pali": "saṅkhāra", "note": "Habits and reactions shaped by past experience.", "note_th": "สิ่งที่ประสบการณ์เดิมปรุงแต่งจิตไว้ (สังขาร)" },
-    { "thai": "ลมหายใจ", "paiboon": "lom-hǎai-jai", "english": "the breath", "english_respell": "dhuh BRETH", "english_tip_th": "ท้ายคำ TH เอาปลายลิ้นออกมาระหว่างฟัน ไม่ก้อง — ไม่ใช่ ท และไม่ใช่ ส", "english_ipa": "/ðə brɛθ/", "pali": "ānāpāna", "note": "Mindfulness of breathing = ānāpānasati.", "note_th": "อานาปานสติ คือสติที่ระลึกรู้ลมหายใจ" }
+    { "thai": "ลมหายใจ", "paiboon": "lom-hǎai-jai", "english": "the breath", "english_respell": "dhuh BRETH", "english_tip_th": "ท้ายคำ TH เอาปลายลิ้นออกมาระหว่างฟัน ไม่ก้อง — ไม่ใช่ ท และไม่ใช่ ส", "english_ipa": "/ðə brɛθ/", "pali": "ānāpāna", "note": "Mindfulness of breathing = ānāpānasati.", "note_th": "อานาปานสติ คือสติที่ระลึกรู้ลมหายใจ" },
+    { "thai": "ความเครียด", "paiboon": "kwaam-krîat", "english": "stress", "english_respell": "STRES", "english_tip_th": "STR สามเสียงควบกัน — S แล้ว T แล้ว R ห่อลิ้น อย่าเติมสระคั่นกลาง", "english_ipa": "/strɛs/", "pali": "dukkha", "note": "A modern, everyday word for dukkha — often lands better with lay listeners than 'suffering'.", "note_th": "คำร่วมสมัยสำหรับทุกข์ — ผู้ฟังทั่วไปมักเข้าใจง่ายกว่าคำว่า suffering" },
+    { "thai": "ความไม่แน่นอน", "paiboon": "kwaam-mâi-nɛ̂ɛ-nɔɔn", "english": "uncertainty", "english_respell": "uhn-SER-tuhn-tee", "english_tip_th": "เน้นพยางค์ SER — บริติชไม่ออกเสียง R ใน SER / อเมริกันออกเสียง R ห่อลิ้น", "english_ipa": "/ʌnˈsɜːtnti/", "pali": "anicca", "note": "Another way to say impermanence — closer to how it actually feels.", "note_th": "อีกคำหนึ่งสำหรับอนิจจัง — ใกล้กับความรู้สึกจริงของผู้ฟังมากกว่า" },
+    { "thai": "ความไม่จีรัง", "paiboon": "kwaam-mâi-jii-raŋ", "english": "transience", "english_respell": "TRAN-zee-uhns", "english_tip_th": "TR ควบกล้ำ — เน้นพยางค์แรก TRAN — ท้ายคำ -NS มีเสียง S ชัด", "english_ipa": "/ˈtrænziəns/", "pali": "anicca", "note": "A more literary word for impermanence — useful in writing and formal talks.", "note_th": "คำที่เป็นภาษาเขียนมากกว่า เหมาะกับงานเขียนและการแสดงธรรมแบบเป็นทางการ" },
+    { "thai": "เครื่องหมายจุลภาค", "paiboon": "krʉ̂aŋ-mǎai-jun-lá-pâak", "english": "a comma", "english_respell": "uh KO-muh", "english_tip_th": "เน้นพยางค์แรก KO — ท้ายคำ -muh เบา ๆ", "english_ipa": "/ə ˈkɒmə/", "pali": "", "note": "The mark that tells you to take a short breath.", "note_th": "เครื่องหมายที่บอกให้หยุดหายใจสั้น ๆ" },
+    { "thai": "เครื่องหมายมหัพภาค จุด", "paiboon": "krʉ̂aŋ-mǎai-má-hàp-pâak, jùt", "english": "a full stop", "english_respell": "uh FUUL STOP", "english_us": "a period","english_respell_us": "uh PEER-ee-uhd", "english_tip_th": "บริติชเรียก full stop / อเมริกันเรียก period — ท้ายคำ FUUL ตัว L แตะปลายลิ้นหลังฟันบน ไม่ใช่ น", "english_ipa": "/ə fʊl stɒp/", "pali": "", "note": "British 'full stop', American 'period' — the mark that ends a thought.", "note_th": "เครื่องหมายที่จบความคิดหนึ่งความคิด" }
   ],
   "phrases": [
     { "thai": "ความสามารถในการสังเกตนี้แหละคือที่พึ่งของท่าน", "paiboon": "kwaam-sǎa-mâat nai gaan sǎŋ-gèet níi lɛ̀ kʉʉ tîi-pʉ̂ŋ kɔ̌ɔŋ tâan", "english": "This ability to observe is your refuge.", "english_respell": "dhis uh-BI-li-tee tuh uhb-ZERV iz yaw REF-yuuj", "english_respell_us": "dhis uh-BI-li-tee tuh uhb-ZERV iz yor REF-yuuj", "english_tip_th": "เน้น BI ใน ability และ REF ใน refuge — Z ใน iz ก้อง", "english_ipa": "/ðɪs əˈbɪləti tu əbˈzɜːv ɪz jɔː ˈrɛfjuːdʒ/", "pali": "", "context": "From the reading 'Observing Our Reactions'.", "context_th": "จากบทอ่าน 'สังเกตปฏิกิริยาของใจ'" },
     { "thai": "ทุกข์เกิดขึ้นเมื่อใดก็ตามที่มีความยึดมั่น", "paiboon": "túk gə̀ət kʉ̂n mʉ̂a-dai gɔ̂ɔ dtaam tîi mii kwaam-yʉ́t-mân", "english": "Suffering arises whenever there is grasping.", "english_respell": "SUH-fuh-ring uh-RAI-ziz wen-E-vuh dhair iz GRAA-sping", "english_respell_us": "SUH-fuh-ring uh-RAI-ziz wen-E-ver dhair iz GRA-sping", "english_tip_th": "uh-RAI-ziz — Z สองครั้ง ก้องทั้งคู่ — dhair ขึ้นต้น DH ก้อง", "english_ipa": "/ˈsʌfərɪŋ əˈraɪzɪz wɛnˈɛvə ðeər ɪz ˈɡrɑːspɪŋ/", "pali": "", "context": "From the reading 'Grasping and Suffering'.", "context_th": "จากบทอ่าน 'ความยึดมั่นและความทุกข์'" },
     { "thai": "ร่างกายต่างหากที่หายใจ", "paiboon": "râaŋ-gaai dtàaŋ-hàak tîi hǎai-jai", "english": "It is the body that breathes.", "english_respell": "it iz dhuh BO-dee dhat BREEDHZ", "english_tip_th": "BREEDHZ ท้ายคำ DH ก้อง แล้วต่อด้วย Z — ต่างจาก breath (BRETH) ที่ไม่ก้อง", "english_ipa": "/ɪt ɪz ðə ˈbɒdi ðæt briːðz/", "pali": "", "context": "From the reading 'The Body Breathes'.", "context_th": "จากบทอ่าน 'ร่างกายหายใจเอง'" },
     { "thai": "จงหาเวลาอยู่เงียบ ๆ และฟังตัวเอง", "paiboon": "joŋ hǎa wee-laa yùu ŋîap-ŋîap lɛ́ faŋ dtua-eeŋ", "english": "Take time to be silent and listen to yourself.", "english_respell": "tayk TAIM tuh bee SAI-luhnt uhnd LI-suhn tuh yaw-SELF", "english_respell_us": "tayk TAIM tuh bee SAI-luhnt uhnd LI-suhn tuh yor-SELF", "english_tip_th": "SAI-luhnt เน้นพยางค์แรก — LI-suhn ตัว T ไม่ออกเสียง", "english_ipa": "/teɪk taɪm tə bi ˈsaɪlənt ənd ˈlɪsn̩ tə jɔːˈsɛlf/", "pali": "", "context": "From the reading 'The Body Breathes'.", "context_th": "จากบทอ่าน 'ร่างกายหายใจเอง'" }
+  ],
+  "reading_guide": {
+    "title": { "en": "How to read these passages", "th": "วิธีอ่านบทเหล่านี้" },
+    "intro_th": "ครูผู้สอนอธิบายว่า ทำไมจึงให้อ่านข้อความสั้น ๆ แทนการท่องศัพท์และไวยากรณ์: ไม่จำเป็นต้องเข้าใจทุกคำก็ได้ ประโยชน์อยู่ที่ตัวการอ่านเอง",
+    "intro_en": "Why read a short text instead of drilling word lists? You do not need to understand every word. The value is in the reading itself.",
+    "tips": [
+      { "en": "Read for meaning, not just for sound.", "th": "อ่านเพื่อความหมาย ไม่ใช่อ่านเพียงให้จบ — ถ้าอ่านเอาความ ท่านจะรู้เองว่าควรหยุดตรงไหน" },
+      { "en": "Pause briefly at a comma, and fully at a full stop.", "th": "หยุดสั้น ๆ ตรงเครื่องหมายจุลภาค (,) และหยุดเต็มตรงจุด (.) — จังหวะหยุดคือสิ่งที่บอกว่าท่านเข้าใจสิ่งที่อ่านอยู่จริง" },
+      { "en": "Watch the sounds you know are difficult: R, L, V, F and TH.", "th": "จับตาเสียงที่รู้อยู่แล้วว่ายาก — R, L, V, F และ TH คำเดิม ๆ มักสะดุดซ้ำที่เดิม" },
+      { "en": "Notice that one idea can be said with several different words.", "th": "สังเกตว่าความคิดเดียวพูดได้หลายคำ — ท่านไม่จำเป็นต้องใช้คำเดิมตลอดเวลา (ดูหัวข้อ 'เลือกใช้คำได้หลายแบบ' ข้างล่าง)" },
+      { "en": "Read it a second time with vocal variety and a dramatic pause.", "th": "อ่านรอบสองด้วยน้ำเสียงที่มีขึ้นลง และหยุดเว้นจังหวะให้ผู้ฟังได้คิดตาม — นี่คือทักษะเดียวกับที่ใช้ในการแสดงธรรม" },
+      { "en": "The more you read, the more the grammar arrives on its own — no memorising required.", "th": "ยิ่งอ่านมาก ไวยากรณ์จะค่อย ๆ ซึมเข้ามาเอง โดยไม่ต้องท่องจำกฎ" }
+    ]
+  },
+  "word_choices": {
+    "title": { "en": "One idea, several words", "th": "เลือกใช้คำได้หลายแบบ" },
+    "intro_th": "พระไม่จำเป็นต้องใช้คำเดิมทุกครั้ง เมื่ออ่านข้อความจริง ท่านจะเริ่มเห็นว่าความคิดหนึ่งมีคำให้เลือกใช้หลายคำ — เลือกให้เหมาะกับผู้ฟังตรงหน้า",
+    "intro_en": "You do not have to use the same word every time. Reading real texts shows you the choices — pick the one that fits the listener in front of you.",
+    "sets": [
+      {
+        "concept": { "en": "dukkha", "th": "ทุกข์" },
+        "pali": "dukkha",
+        "options": [
+          { "english": "suffering", "english_respell": "SUH-fuh-ring", "english_ipa": "/ˈsʌfərɪŋ/", "nuance_th": "คำมาตรฐานในพระไตรปิฎกแปลอังกฤษ — หนักแน่น เป็นทางการ" },
+          { "english": "stress", "english_respell": "STRES", "english_ipa": "/strɛs/", "nuance_th": "คำร่วมสมัย ผู้ฟังชาวตะวันตกเข้าใจทันทีว่าหมายถึงอะไรในชีวิตประจำวัน" },
+          { "english": "dissatisfaction", "english_respell": "dis-sa-tis-FAK-shuhn", "english_ipa": "/ˌdɪsætɪsˈfækʃən/", "nuance_th": "เน้นแง่ 'ไม่มีอะไรพอ' เหมาะเวลาอธิบายตัณหา" },
+          { "english": "unease", "english_respell": "uhn-EEZ", "english_ipa": "/ʌnˈiːz/", "nuance_th": "เบากว่า เหมาะกับทุกข์ละเอียดที่ยังไม่ถึงกับเจ็บปวด" }
+        ]
+      },
+      {
+        "concept": { "en": "anicca", "th": "อนิจจัง" },
+        "pali": "anicca",
+        "options": [
+          { "english": "impermanence", "english_respell": "im-PER-muh-nuhns", "english_ipa": "/ɪmˈpɜːmənəns/", "nuance_th": "คำมาตรฐาน เป็นทางการ ใช้ได้เสมอ" },
+          { "english": "uncertainty", "english_respell": "uhn-SER-tuhn-tee", "english_ipa": "/ʌnˈsɜːtnti/", "nuance_th": "ใกล้ความรู้สึกจริงของผู้ฟัง — หลวงพ่อชาใช้คำนี้บ่อย" },
+          { "english": "transience", "english_respell": "TRAN-zee-uhns", "english_ipa": "/ˈtrænziəns/", "nuance_th": "ภาษาเขียน สละสลวย เหมาะกับงานเขียน" },
+          { "english": "change", "english_respell": "CHAYNJ", "english_ipa": "/tʃeɪndʒ/", "nuance_th": "คำง่ายที่สุด เด็กก็เข้าใจ — บางครั้งคำง่ายสอนได้ดีที่สุด" }
+        ]
+      },
+      {
+        "concept": { "en": "sati", "th": "สติ" },
+        "pali": "sati",
+        "options": [
+          { "english": "mindfulness", "english_respell": "MAIND-fuul-nuhs", "english_ipa": "/ˈmaɪndfʊlnəs/", "nuance_th": "คำที่คนทั่วโลกรู้จักแล้ว แต่บางครั้งถูกเข้าใจว่าเป็นเพียงเทคนิคผ่อนคลาย" },
+          { "english": "awareness", "english_respell": "uh-WAIR-nuhs", "english_ipa": "/əˈweənəs/", "nuance_th": "กว้างกว่า เน้นการรู้ตัวที่มีอยู่แล้วตามธรรมชาติ" },
+          { "english": "attention", "english_respell": "uh-TEN-shuhn", "english_ipa": "/əˈtɛnʃən/", "nuance_th": "ตรงไปตรงมา เหมาะเวลาสอนวิธีปฏิบัติจริง" },
+          { "english": "recollection", "english_respell": "re-kuh-LEK-shuhn", "english_ipa": "/ˌrɛkəˈlɛkʃən/", "nuance_th": "ใกล้ความหมายเดิมของบาลีที่สุด — การระลึกได้" }
+        ]
+      },
+      {
+        "concept": { "en": "letting go", "th": "การปล่อยวาง" },
+        "pali": "vossagga",
+        "options": [
+          { "english": "letting go", "english_respell": "LE-ting GOH", "english_ipa": "/ˈlɛtɪŋ ɡəʊ/", "nuance_th": "คำที่ใช้บ่อยที่สุดในสายวัดป่า เข้าใจง่าย" },
+          { "english": "releasing", "english_respell": "ri-LEE-sing", "english_ipa": "/rɪˈliːsɪŋ/", "nuance_th": "เน้นการคลายออก เหมาะกับการอธิบายขณะปฏิบัติ" },
+          { "english": "relinquishing", "english_respell": "ri-LING-kwi-shing", "english_ipa": "/rɪˈlɪŋkwɪʃɪŋ/", "nuance_th": "เป็นทางการ ใช้ในงานแปลพระสูตร" },
+          { "english": "not holding on", "english_respell": "not HOHL-ding ON", "english_ipa": "/nɒt ˈhəʊldɪŋ ɒn/", "nuance_th": "อธิบายด้วยคำง่าย ๆ เมื่อผู้ฟังยังไม่คุ้นศัพท์ธรรมะ" }
+        ]
+      }
+    ]
+  },
+  "drill_sections": [
+    {
+      "title": { "en": "Reading with pauses", "th": "อ่านให้ถูกจังหวะ" },
+      "intro_th": "ประโยคเหล่านี้ยกมาจากบทอ่านข้างล่าง เครื่องหมาย | คือจุดที่ควรหยุด — สั้นตรงจุลภาค เต็มตรงจุด อ่านออกเสียงตามจังหวะนั้น แล้วฟังเสียงต้นแบบเทียบดู ถ้าจังหวะหยุดตรงกัน แปลว่าท่านกำลังอ่านเอาความจริง ๆ ไม่ใช่อ่านไปเรื่อย ๆ",
+      "intro_en": "These lines come from the readings below. The | marks show where to pause — short at a comma, full at a full stop. Read them aloud with those pauses, then compare with the audio. Matching pauses means you are reading for meaning, not just reading.",
+      "drills": [
+        { "english": "Observe these things in your own mind.", "english_respell": "uhb-ZERV dheez THINGZ | in yaw OHN MAIND ||", "english_respell_us": "uhb-ZERV dheez THINGZ | in yor OHN MAIND ||", "english_ipa": "/əbˈzɜːv ðiːz θɪŋz ɪn jɔːr əʊn maɪnd/", "english_tip_th": "ประโยคสั้น หยุดเต็มตรงจุดท้ายประโยค — อย่ารีบขึ้นประโยคถัดไปทันที", "meaning_th": "จงสังเกตสิ่งเหล่านี้ในใจของท่านเอง" },
+        { "english": "This ability to observe is your refuge.", "english_respell": "dhis uh-BI-li-tee tuh uhb-ZERV | iz yaw REF-yuuj ||", "english_respell_us": "dhis uh-BI-li-tee tuh uhb-ZERV | iz yor REF-yuuj ||", "english_ipa": "/ðɪs əˈbɪləti tu əbˈzɜːv ɪz jɔː ˈrɛfjuːdʒ/", "english_tip_th": "หยุดเบา ๆ หลัง observe แม้ไม่มีจุลภาค — เพราะประธานยาว การหยุดตรงนี้ทำให้ผู้ฟังตามทัน", "meaning_th": "ความสามารถในการสังเกตนี้แหละคือที่พึ่งของท่าน" },
+        { "english": "Whether things are going well or not so well, if we don't accept the way things are, the mind tends to create some form of misery.", "english_respell": "WE-dhuh THINGZ uh GOH-ing WEL | aw NOT soh WEL, | if wee dohnt uhk-SEPT dhuh WAY THINGZ AA, | dhuh MAIND TENDZ tuh kree-AYT suhm FAWM uhv MI-zuh-ree ||", "english_respell_us": "WE-dher THINGZ uh GOH-ing WEL | or NOT soh WEL, | if wee dohnt uhk-SEPT dhuh WAY THINGZ AR, | dhuh MAIND TENDZ tuh kree-AYT suhm FORM uhv MI-zuh-ree ||", "english_ipa": "/ˈwɛðə θɪŋz ə ˈɡəʊɪŋ wɛl ɔː nɒt səʊ wɛl ɪf wi dəʊnt əkˈsɛpt ðə weɪ θɪŋz ɑː ðə maɪnd tɛndz tə kriˈeɪt sʌm fɔːm əv ˈmɪzəri/", "english_tip_th": "ประโยคยาวที่สุด มีจุลภาคสองแห่ง — หยุดสั้น ๆ ทั้งสองที่ ถ้าอ่านรวดเดียวจนหมดลม แปลว่ายังไม่ได้อ่านเอาความ", "meaning_th": "ไม่ว่าสิ่งต่าง ๆ จะไปได้ดีหรือไม่ดี ถ้าเราไม่ยอมรับตามที่มันเป็น ใจก็จะสร้างความทุกข์ขึ้นมาในรูปแบบใดรูปแบบหนึ่ง" },
+        { "english": "It's not 'my' breathing any more; it's not personal.", "english_respell": "its NOT MAI BREE-dhing e-nee MAW; || its NOT PER-suh-nuhl ||", "english_respell_us": "its NOT MAI BREE-dhing e-nee MOR; || its NOT PER-suh-nuhl ||", "english_ipa": "/ɪts nɒt maɪ ˈbriːðɪŋ ˈɛni mɔː ɪts nɒt ˈpɜːsənl̩/", "english_tip_th": "เครื่องหมายอัฒภาค (;) หยุดยาวกว่าจุลภาค แต่สั้นกว่าจุด — และเน้นคำว่า my ให้หนัก เพราะนั่นคือใจความ", "meaning_th": "มันไม่ใช่ลมหายใจ 'ของฉัน' อีกต่อไป มันไม่ใช่เรื่องส่วนตัว" },
+        { "english": "Take time to be silent, listen to yourself: the breathing, just the natural rhythm of the body.", "english_respell": "tayk TAIM tuh bee SAI-luhnt, | LI-suhn tuh yaw-SELF: || dhuh BREE-dhing, | juhst dhuh NA-chuh-ruhl RI-dhuhm uhv dhuh BO-dee ||", "english_respell_us": "tayk TAIM tuh bee SAI-luhnt, | LI-suhn tuh yor-SELF: || dhuh BREE-dhing, | juhst dhuh NA-chuh-ruhl RI-dhuhm uhv dhuh BO-dee ||", "english_ipa": "/teɪk taɪm tə bi ˈsaɪlənt ˈlɪsn̩ tə jɔːˈsɛlf ðə ˈbriːðɪŋ dʒʌst ðə ˈnætʃərəl ˈrɪðəm əv ðə ˈbɒdi/", "english_tip_th": "ประโยคนี้เหมาะกับการอ่านแบบมีน้ำเสียง — อ่านช้า เบา และหยุดหลังทวิภาค (:) ให้นานพอที่ผู้ฟังจะรู้สึกถึงลมหายใจตัวเองจริง ๆ", "meaning_th": "จงหาเวลาอยู่เงียบ ๆ แล้วฟังตัวเอง — ฟังลมหายใจ ฟังจังหวะธรรมชาติของร่างกาย" }
+      ]
+    }
   ],
   "passages": [
     {

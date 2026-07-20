@@ -110,6 +110,76 @@
 </div>
 {% endif %}
 
+{# ── One idea, several words ───────────────────────────────────────────────
+   A monk who only knows 'suffering' has to say 'suffering' every time. The
+   teacher's point: reading real texts shows you the alternatives, so this block
+   lays them out side by side with the shade of meaning each one carries. #}
+{% if lesson.word_choices %}
+<h2>
+    {% if direction == 'learn_english' %}{{ lesson.word_choices.title.th }}{% else %}{{ lesson.word_choices.title.en }}{% endif %}
+    <span class="thai monk-drill-subtitle">{% if direction == 'learn_english' %}{{ lesson.word_choices.title.en }}{% else %}{{ lesson.word_choices.title.th }}{% endif %}</span>
+</h2>
+<div class="card monk-card">
+    <p class="thai">{{ lesson.word_choices.intro_th }}</p>
+    <p>{{ lesson.word_choices.intro_en }}</p>
+</div>
+{% for set in lesson.word_choices.sets %}
+<div class="card monk-card monk-wordchoice">
+    <h3>
+        {{ set.concept.th }}
+        <span class="monk-wordchoice-pali">{% if set.pali %}Pāli: {{ set.pali }}{% endif %}</span>
+    </h3>
+    <div class="monk-entry-list">
+        {% for o in set.options %}
+        <div class="monk-entry">
+            <div class="monk-entry-target">
+                <span class="monk-entry-word">{{ o.english }}</span>
+                {% set o_audio = monk_audio_url(o.english) %}
+                {% if o_audio %}
+                <button type="button" class="monk-audio-btn" data-audio="{{ o_audio }}"
+                        aria-label="ฟังเสียง — listen">🔊</button>
+                {% if monk_audio_is_fallback(o.english) %}
+                <span class="monk-audio-fallback" title="เสียงอเมริกันยังไม่มี — นี่คือเสียงบริติช">🇬🇧</span>
+                {% endif %}
+                {% endif %}
+                {% set o_respell = monk_respell(o) %}
+                {% if o_respell %}<span class="monk-entry-respell">{{ o_respell }}</span>{% endif %}
+                {% if o.english_ipa %}
+                <span class="monk-entry-pron monk-ipa" hidden>{{ o.english_ipa }}</span>
+                {% endif %}
+            </div>
+            {% if o.nuance_th %}
+            <div class="monk-entry-meta"><span class="monk-entry-note thai">{{ o.nuance_th }}</span></div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{# ── How to read a passage ─────────────────────────────────────────────────
+   Guidance rather than vocabulary: pause at the punctuation, read for meaning,
+   then read it again with some life in the voice. #}
+{% if lesson.reading_guide %}
+<h2>
+    {% if direction == 'learn_english' %}{{ lesson.reading_guide.title.th }}{% else %}{{ lesson.reading_guide.title.en }}{% endif %}
+    <span class="thai monk-drill-subtitle">{% if direction == 'learn_english' %}{{ lesson.reading_guide.title.en }}{% else %}{{ lesson.reading_guide.title.th }}{% endif %}</span>
+</h2>
+<div class="card monk-card monk-reading-guide">
+    <p class="thai">{{ lesson.reading_guide.intro_th }}</p>
+    <p>{{ lesson.reading_guide.intro_en }}</p>
+    <ol class="monk-reading-tips">
+        {% for tip in lesson.reading_guide.tips %}
+        <li>
+            <span class="monk-reading-tip-en">{{ tip.en }}</span>
+            <span class="thai monk-reading-tip-th">{{ tip.th }}</span>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endif %}
+
 {# ── Drill sections (tongue twisters and repeat-after-me practice) ─────────
    English-only by nature: the point is saying the English sound, so there is
    no Thai prompt side. The meaning_th line tells the Thai reader what they are
@@ -136,8 +206,11 @@
             <span class="monk-audio-fallback" title="เสียงอเมริกันยังไม่มี — นี่คือเสียงบริติช">🇬🇧</span>
             {% endif %}
             {% endif %}
-            {% if d.english_respell %}
-            <span class="monk-entry-respell">{{ d.english_respell }}</span>
+            {# Resolved per accent like the vocab cards: a drill sentence can
+               carry an english_respell_us override too (MOR-ning / MAW-ning). #}
+            {% set d_respell = monk_respell(d) %}
+            {% if d_respell %}
+            <span class="monk-entry-respell">{{ d_respell }}</span>
             {% endif %}
             {% if d.english_ipa %}
             <span class="monk-entry-pron monk-ipa" hidden>{{ d.english_ipa }}</span>

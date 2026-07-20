@@ -29,14 +29,29 @@ switch just decides which language is the *prompt* and which is the *answer*.
 | 10 | **Travel & Life Abroad** | — | For Thai monks overseas: airport, immigration, being hosted |
 | 11 | **Pronunciation Practice: L and R** | — | Tongue twisters from Josh's Thai teacher — the rice/lice problem; drills for both sounds |
 | 12 | **Dhamma Reading: Ajahn Sumedho** | — | Three passages from *Direct Realization* with key teaching vocabulary and full-passage audio |
+| 13 | **Pronunciation Practice: V, F and TH** | — | The other sounds the teacher flagged: V→W, final F→P, and TH→T/D/S |
 
-Topics 11–12 add two optional sections beyond `vocab`/`phrases`:
+Topics 11–13 add four optional sections beyond `vocab`/`phrases`:
 
 - `drill_sections` — groups of English-only drill lines (`english`, `english_respell`,
   `english_ipa`, optional `english_tip_th`, `meaning_th`). No Thai prompt side —
   the point is saying the English sound.
 - `passages` — whole readings (`id`, `title`, `intro_th`, `source`, `text`).
   Passage audio is keyed `passage <id>` (see scripts/generate_english_audio.py).
+- `reading_guide` — how to read a passage rather than what to say: pause at the
+  punctuation, read for meaning, then read again with vocal variety.
+  (`title`, `intro_th`, `intro_en`, `tips[{en, th}]`.)
+- `word_choices` — one idea, several English words, each with the shade of
+  meaning it carries. (`title`, `intro_th`, `intro_en`, `sets[{concept, pali,
+  options[{english, english_respell, english_ipa, nuance_th}]}]`.) Options get
+  their own audio like any other entry.
+
+### The teacher's principle behind topics 11–13
+
+A word pronounced perfectly on its own slips straight back to the old habit once
+it sits inside a sentence. So every pronunciation topic ends with a **From word
+to sentence** drill section: the same sounds, now embedded in real sentences, as
+the test of whether the sound is really learned.
 
 ## File format (one JSON file per topic)
 

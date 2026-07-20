@@ -7,7 +7,7 @@
     "en": "Thai speakers often turn R into L — 'rice' becomes 'lice'. These tongue twisters, given by a Thai teacher of English, train the two sounds apart.",
     "th": "คนไทยมักออกเสียง R เป็น L — 'rice' จึงกลายเป็น 'lice' บทฝึกลิ้นชุดนี้มาจากครูสอนภาษาอังกฤษชาวไทย เพื่อฝึกแยกสองเสียงนี้ให้ชัด"
   },
-  "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+, IPA and register. Tongue twisters supplied by Josh's Thai teacher (2026-07-20).",
+  "_review_note": "Tongue twisters supplied by Josh's Thai teacher (2026-07-20). Teacher reviewed the pronunciation teaching 2026-07-20: 'Excellent — very thorough'. The 'From word to sentence' section and the pray/play, glass/grass pairs follow their feedback (words learned alone slip back to old habits in sentences). Thai glosses in those additions are AI drafts awaiting native review.",
   "vocab": [
     { "thai": "ข้าว", "paiboon": "kâao", "english": "rice", "english_respell": "RAIS", "english_tip_th": "R ห่อลิ้น ปลายลิ้นไม่แตะเพดาน — ท้ายคำมีเสียง S ยาว ถ้าตัดทิ้งความหมายจะเปลี่ยน", "english_ipa": "/raɪs/", "pali": "", "note": "Compare with 'lice' — only R and L differ.", "note_th": "เทียบกับ lice (เหา) — ต่างกันแค่เสียงต้นคำ R กับ L" },
     { "thai": "เหา", "paiboon": "hǎo", "english": "lice", "english_respell": "LAIS", "english_tip_th": "L ปลายลิ้นแตะหลังฟันบน — ถ้าพูด rice เป็น lice ความหมายจะกลายเป็น 'เหา'", "english_ipa": "/laɪs/", "pali": "", "note": "The classic mix-up: 'I eat lice every day.'", "note_th": "ตัวอย่างคลาสสิก — ตั้งใจจะพูดว่ากินข้าว แต่กลายเป็นกินเหา" },
@@ -17,7 +17,11 @@
     { "thai": "หมัด", "paiboon": "màt", "english": "a flea", "english_respell": "uh FLEE", "english_tip_th": "FL ควบกล้ำ — สระ EE ยาวเหมือน -ี", "english_ipa": "/ə fliː/", "pali": "", "note": "The tiny biting insect.", "note_th": "แมลงตัวเล็กที่กัด เช่น หมัดหมา หมัดแมว" },
     { "thai": "หนี", "paiboon": "nǐi", "english": "to flee", "english_respell": "tuh FLEE", "english_tip_th": "ออกเสียงเหมือน flea (หมัด) ทุกประการ — รู้ความหมายจากบริบท", "english_ipa": "/tə fliː/", "pali": "", "note": "Sounds exactly like 'flea'!", "note_th": "คำพ้องเสียงกับ flea — นี่คือมุกของบทฝึกลิ้นบทนี้" },
     { "thai": "รอยร้าว", "paiboon": "rɔɔi-ráao", "english": "a flaw", "english_respell": "uh FLAW", "english_tip_th": "สระ AW เหมือน -อ — ท้ายคำไม่มีเสียง R (สำเนียงอังกฤษ)", "english_ipa": "/ə flɔː/", "pali": "", "note": "A small crack or fault.", "note_th": "รอยแตกเล็ก ๆ หรือข้อบกพร่อง" },
-    { "thai": "ปล่องไฟ", "paiboon": "bplɔ̀ŋ-fai", "english": "a flue", "english_respell": "uh FLUU", "english_tip_th": "สระ UU ยาวเหมือน -ู", "english_ipa": "/ə fluː/", "pali": "", "note": "The pipe that carries smoke from a fireplace.", "note_th": "ท่อระบายควันของเตาผิง" }
+    { "thai": "ปล่องไฟ", "paiboon": "bplɔ̀ŋ-fai", "english": "a flue", "english_respell": "uh FLUU", "english_tip_th": "สระ UU ยาวเหมือน -ู", "english_ipa": "/ə fluː/", "pali": "", "note": "The pipe that carries smoke from a fireplace.", "note_th": "ท่อระบายควันของเตาผิง" },
+    { "thai": "สวดมนต์", "paiboon": "sùat-mon", "english": "to pray", "english_respell": "tuh PRAY", "english_tip_th": "PR ควบกล้ำ — R ห่อลิ้นไม่แตะเพดาน — ถ้าเผลอออกเป็น L จะกลายเป็น play (เล่น)", "english_ipa": "/tə preɪ/", "pali": "", "note": "Compare with 'to play' — only R and L differ.", "note_th": "คู่เสียงสำคัญของพระ — pray (สวดมนต์) กับ play (เล่น) ต่างกันแค่ R กับ L" },
+    { "thai": "เล่น", "paiboon": "lên", "english": "to play", "english_respell": "tuh PLAY", "english_tip_th": "PL ควบกล้ำ — L ปลายลิ้นแตะหลังฟันบน — เทียบกับ pray ให้ชัด", "english_ipa": "/tə pleɪ/", "pali": "", "note": "Compare with 'to pray'.", "note_th": "เทียบกับ pray (สวดมนต์)" },
+    { "thai": "แก้ว", "paiboon": "gɛ̂ɛo", "english": "a glass", "english_respell": "uh GLAAS", "english_respell_us": "uh GLAS", "english_tip_th": "GL ควบกล้ำ — L แตะหลังฟันบน — เทียบกับ grass (หญ้า)", "english_ipa": "/ə ɡlɑːs/", "pali": "", "note": "Compare with 'grass'.", "note_th": "เทียบกับ grass (หญ้า) — ต่างกันแค่ L กับ R" },
+    { "thai": "หญ้า", "paiboon": "yâa", "english": "grass", "english_respell": "GRAAS", "english_respell_us": "GRAS", "english_tip_th": "GR ควบกล้ำ — R ห่อลิ้นไม่แตะเพดาน — เทียบกับ glass (แก้ว)", "english_ipa": "/ɡrɑːs/", "pali": "", "note": "Compare with 'a glass'.", "note_th": "เทียบกับ glass (แก้ว)" }
   ],
   "phrases": [],
   "drill_sections": [
@@ -53,6 +57,18 @@
         { "english": "Robby raced a red remote rocket.", "english_respell": "RO-bee RAYST uh RED ri-MOHT RO-kit", "english_ipa": "/ˈrɒbi reɪst ə rɛd rɪˈməʊt ˈrɒkɪt/", "meaning_th": "ร็อบบี้แข่งจรวดบังคับสีแดง" },
         { "english": "Rita's red ribbons rip in the rain.", "english_respell": "REE-tuhz RED RI-buhnz RIP in dhuh RAYN", "english_ipa": "/ˈriːtəz rɛd ˈrɪbənz rɪp ɪn ðə reɪn/", "meaning_th": "ริบบิ้นสีแดงของริต้าขาดกลางสายฝน" },
         { "english": "Rattling rails rang around rural roads.", "english_respell": "RAT-ling RAYLZ RANG uh-ROWND ROO-ruhl ROHDZ", "english_ipa": "/ˈrætlɪŋ reɪlz ræŋ əˈraʊnd ˈrʊərəl rəʊdz/", "english_tip_th": "คำว่า rural ยากแม้แต่เจ้าของภาษา — ROO-ruhl ค่อย ๆ ออก R แล้วตามด้วย L ช้า ๆ", "meaning_th": "รางเหล็กสั่นเสียงดังก้องไปตามถนนชนบท" }
+      ]
+    },
+    {
+      "title": { "en": "From word to sentence", "th": "จากคำสู่ประโยค" },
+      "intro_th": "ครูสอนไว้ว่า: เรียนคำเดี่ยว ๆ จนออกเสียงถูกแล้ว แต่พอคำนั้นไปอยู่ในประโยค ลิ้นมักเผลอกลับไปนิสัยเดิม อ่านประโยคเหล่านี้ช้า ๆ รักษา R และ L ให้ถูกทุกคำ แล้วเทียบกับเสียงต้นแบบ — ถ้ายังถูกอยู่ แปลว่าเสียงนั้นเป็นของเราแล้วจริง ๆ",
+      "intro_en": "A word learned on its own often slips back to the old habit inside a sentence. Read each sentence slowly, keep every R and L correct, then compare with the audio. If it still comes out right, the sound is truly yours.",
+      "drills": [
+        { "english": "We really like fried rice.", "english_respell": "wee REE-uh-lee LAIK FRAID RAIS", "english_ipa": "/wi ˈrɪəli laɪk fraɪd raɪs/", "english_tip_th": "สี่คำติดกันสลับ R กับ L — really (R แล้ว L), like (L), fried (FR ควบ), rice (R)", "meaning_th": "เราชอบข้าวผัดจริง ๆ" },
+        { "english": "Turn right at the red light.", "english_respell": "TERN RAIT uht dhuh RED LAIT", "english_ipa": "/tɜːn raɪt ət ðə rɛd laɪt/", "english_tip_th": "right กับ light อยู่ในประโยคเดียวกัน — อย่าให้กลายเป็น light ทั้งคู่", "meaning_th": "เลี้ยวขวาที่ไฟแดง" },
+        { "english": "The monks pray while the children play.", "english_respell": "dhuh MUHNGKS PRAY wail dhuh CHIL-druhn PLAY", "english_ipa": "/ðə mʌŋks preɪ waɪl ðə ˈtʃɪldrən pleɪ/", "english_tip_th": "pray กับ play ต้องต่างกันชัด — children มีทั้ง L และ R ในคำเดียว", "meaning_th": "พระสวดมนต์ ขณะที่เด็ก ๆ เล่น" },
+        { "english": "The glass fell on the grass.", "english_respell": "dhuh GLAAS FEL on dhuh GRAAS", "english_ipa": "/ðə ɡlɑːs fɛl ɒn ðə ɡrɑːs/", "english_tip_th": "glass กับ grass — L กับ R ต้นคำ — ท้าย fell ตัว L แตะปลายลิ้นหลังฟันบน ไม่ใช่ น", "meaning_th": "แก้วตกลงบนพื้นหญ้า" },
+        { "english": "The monks collect rice in the early morning light.", "english_respell": "dhuh MUHNGKS kuh-LEKT RAIS in dhee ER-lee MAW-ning LAIT", "english_respell_us": "dhuh MUHNGKS kuh-LEKT RAIS in dhee ER-lee MOR-ning LAIT", "english_ipa": "/ðə mʌŋks kəˈlɛkt raɪs ɪn ði ˈɜːli ˈmɔːnɪŋ laɪt/", "english_tip_th": "collect (L) แล้ว rice (R) ติดกัน — บริติชไม่ออกเสียง R ใน early และ morning / อเมริกันออกเสียง R ห่อลิ้น", "meaning_th": "พระออกรับบิณฑบาตข้าวในแสงยามเช้าตรู่" }
       ]
     }
   ]

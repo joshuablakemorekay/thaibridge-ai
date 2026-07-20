@@ -1661,6 +1661,36 @@ body {
 }
 .monk-pron-warn { border-left: 4px solid #c9772f; }
 
+/* ── Word choices & reading guide (lesson 12) ───────────────────────────── */
+.monk-wordchoice h3 {
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.6rem;
+}
+.monk-wordchoice-pali {
+    font-size: 0.82rem;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+/* Numbered so a teacher can say "point 3" out loud in class. */
+.monk-reading-tips {
+    margin: 0.75rem 0 0;
+    padding-left: 1.3rem;
+}
+.monk-reading-tips li { margin-bottom: 0.7rem; }
+/* Thai carries the real instruction here, so it gets the normal size and the
+   English sits above it as the short heading version. */
+.monk-reading-tip-en {
+    display: block;
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+.monk-reading-tip-th { display: block; line-height: 1.7; }
+
 /* Thai leads, English follows as a quieter gloss — the reader here is Thai, and
    equal weight made the two languages run into each other. */
 .monk-pron-guide .card p.thai { margin-bottom: 0.5rem; }

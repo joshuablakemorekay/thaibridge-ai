@@ -97,7 +97,18 @@ def collect_entries(topic_filter=None, accent=DEFAULT_ACCENT):
             for d in sec.get("drills", [])
         ]
 
-        for entry in lesson.get("vocab", []) + lesson.get("phrases", []) + drills:
+        # The alternative wordings in 'one idea, several words' are ordinary
+        # single entries too — a monk choosing between 'suffering' and 'stress'
+        # needs to hear both, not just read them.
+        choices = [
+            o
+            for s in lesson.get("word_choices", {}).get("sets", [])
+            for o in s.get("options", [])
+        ]
+
+        for entry in (
+            lesson.get("vocab", []) + lesson.get("phrases", []) + drills + choices
+        ):
             english = (entry.get("english") or "").strip()
             if not english:
                 continue
