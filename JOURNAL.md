@@ -4,6 +4,43 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 20 July 2026 — A pronunciation system for Thai monks learning English
+
+**Type:** Feature
+
+**TL;DR**
+- Built a three-part pronunciation system for the English side of Monk Mode — a plain respelling, a tip written in Thai, and optional IPA.
+- Left the Western-monk side (learning Thai) exactly as it was, and checked all ten topics to be sure the two directions don't bleed into each other.
+- Not live — it's on a branch, and every Thai line still needs my review.
+
+**What I built or did**
+Monk Mode serves two readers from one set of lesson files: **Western monks learning Thai**, and **Thai monks learning English**. The Thai-learning side was already in good shape — English prompt, Thai script, Paiboon romanization to help a Westerner say the Thai. The English-learning side was the weak half: the only pronunciation help was IPA — symbols most learners can't read — sitting beside Paiboon and English notes that were written for the *other* reader. I replaced that with a respelling (CAPITALS mark the stressed syllable), a tip in Thai, and IPA behind a toggle, across all 140 items in 10 topics.
+
+**Why I did it this way**
+Paiboon exists to write *Thai* sounds and has no symbols for th, v, z or sh — the exact distinctions an English learner needs. It's the right tool for the Western monk and the wrong one for the Thai monk, so the app got its own system for English rather than stretching one never built for it.
+
+**How it works**
+Sounds Thai already has are anchored to Thai script (`ai` = ไ). Sounds Thai lacks get mouth instructions instead, because no script can carry them. Each direction now shows only what its reader needs — Paiboon and English notes for the Western monk, respellings and Thai notes for the Thai monk.
+
+**What this means for the app**
+Thai monks can actually use the English lessons now, not just look at them — and Western monks learning Thai get the same experience as before, untouched.
+
+**What I learned**
+My first attempt was circular — explaining English with roman letters to someone whose main reference for roman letters *is* English. And I'd written the tips in English, for people learning English. Both only surfaced by testing properly and pushing back. Also: I saw the IPA had a "hidden" tag and called it fixed, but a CSS rule was quietly overriding it. **Test what the user sees, not what the code says.**
+
+**How We Did It**
+1. Read the existing Monk Mode code to see what was already there.
+2. Designed a respelling system, then scrapped the first version when it didn't hold up.
+3. Rewrote the tips in Thai and gave them one clear job.
+4. Piloted on one topic, checked it in a real browser, then rolled out to all ten.
+5. Built a guide page teaching both notations.
+6. Checked all 140 entries in both directions before committing.
+
+**References / Conversations**
+Claude Code session, 20 July 2026. Branch `feature/monk-english-pronunciation` — pushed, not merged.
+
+---
+
 ## 19 July 2026 — Making developer login work on the live site
 
 **Type:** Fix / Learning

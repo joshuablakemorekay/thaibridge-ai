@@ -119,10 +119,13 @@ This is the part I care about most — not "I built it," but "here's the proof i
 - **Decide who owns each fact.** "Source of truth" sounds abstract until it quietly deletes a whole class of bugs and cheats for you.
 - **Ship small, then grow.** A small thing that works beats a big thing that doesn't — every time.
 - **Version control turns fear into freedom.** Because I could always roll back, I could take big swings (and let an AI take them) without panic.
-- **Check what's already there before building.** The "click-to-open sections" I set out to add were already in the code — I just hadn't rolled them out. And the best pronunciation guide depends entirely on who's reading it (I switched between IPA and plain spelling and back).
+- **Check what's already there before building.** The "click-to-open sections" I set out to add were already in the code — I just hadn't rolled them out.
+- **Match the guide to the reader, not the language.** Monk Mode teaches two people from one set of lessons: a Western monk learning Thai, and a Thai monk learning English. I'd been showing both of them the same help. The Thai side was fine (Paiboon romanization does its job), but Paiboon has no symbols for *th*, *v* or *z* — so for English I built a separate system, with tips written in Thai. My first attempt was circular: I explained English using roman letters, to readers whose main reference for roman letters *is* English. Getting it wrong twice is what taught me the rule.
 
 ## What's next
 
+- **Review and merge the Monk Mode pronunciation system** (on `feature/monk-english-pronunciation`) — 140 items now carry a plain respelling and a Thai-language pronunciation tip, but every Thai line still needs checking by a native speaker before it goes live.
+- **Add native English audio** to the monk lessons — the respelling is a memory aid, and audio is meant to be the thing it hangs on.
 - **Polish the locked-section pages** to nudge people toward the right plan, and build a proper success page for the Instant Access Pass.
 - **Finish the "click-to-open sections" redesign** across the remaining long pages.
 - **Move to a database that survives restarts** (the free host wipes the current one on redeploy) and add proper database migrations.
