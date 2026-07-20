@@ -69,11 +69,17 @@ sys.path.insert(0, REPO_ROOT)
 from monk_audio import slugify  # noqa: E402
 
 
-def collect_entries(topic_filter=None):
-    """Every (english_text, slug) pair across the monk lesson files.
+def collect_entries(topic_filter=None, accent=DEFAULT_ACCENT):
+    """Every (slug, spoken_text) pair across the monk lesson files.
 
     Deduplicated — 'food' appears in more than one lesson but only needs one
     audio file.
+
+    The slug always comes from the BASE english text, even when the accent has
+    its own wording. So 'aeroplane' and 'airplane' share the filename
+    aeroplane.mp3, one in the uk folder and one in the us folder, and the app
+    can look up either with a single key. What changes per accent is the text
+    that gets SPOKEN, not the name of the file it lands in.
     """
     seen = {}
     for path in sorted(glob.glob(os.path.join(CONTENT_DIR, "*.json"))):
@@ -87,9 +93,15 @@ def collect_entries(topic_filter=None):
             english = (entry.get("english") or "").strip()
             if not english:
                 continue
+            # Filename comes from the base wording; the voice says the wording
+            # for THIS accent, so the American file for 'aeroplane' actually
+            # says 'airplane'.
+            source = english
+            if accent == "us" and entry.get("english_us"):
+                source = entry["english_us"].strip()
             # Strip a parenthetical gloss — '(respectfully)' is a note to the
             # reader, not something we want the voice to read aloud.
-            spoken = re.sub(r"\s*\([^)]*\)", "", english).strip()
+            spoken = re.sub(r"\s*\([^)]*\)", "", source).strip()
             # An entry like 'to give thanks / rejoice in merit' offers two
             # wordings; speak the first.
             spoken = spoken.split("/")[0].strip()
@@ -114,15 +126,17 @@ async def main_async(args):
         print("edge-tts is not installed. Run:  pip install edge-tts")
         return 1
 
-    entries = collect_entries(args.topic)
-    if not entries:
-        print("No entries found. Check --topic matches a 'topic' field.")
-        return 1
-
     accents = list(VOICES) if args.accent == "all" else [args.accent]
 
     total_failed = 0
     for accent in accents:
+        # Collected per accent, not once up front: the spoken text differs
+        # where an entry has its own english_us wording.
+        entries = collect_entries(args.topic, accent)
+        if not entries:
+            print("No entries found. Check --topic matches a 'topic' field.")
+            return 1
+
         voice = VOICES[accent]
         audio_dir = audio_dir_for(accent)
         os.makedirs(audio_dir, exist_ok=True)

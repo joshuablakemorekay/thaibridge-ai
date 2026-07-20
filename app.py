@@ -586,6 +586,24 @@ def monk_accent():
     return session['user_progress'].get('monk_accent', MONK_ACCENT_DEFAULT)
 
 
+def monk_english(entry, accent=None):
+    """The English wording to show for one entry in the given accent.
+
+    A handful of entries are different WORDS, not just different sounds:
+    aeroplane/airplane, and practise/practice. Those carry an 'english_us'.
+    Everything else is one shared spelling, so the fallback is the norm.
+
+    Note practise/practice is not a plain swap. British uses 'practise' for
+    the verb and 'practice' for the noun; American uses 'practice' for both.
+    These entries are all verbs, so the American column is correct here, but
+    a future noun entry must NOT be given the same treatment blindly.
+    """
+    accent = accent or monk_accent()
+    if accent == 'us':
+        return entry.get('english_us') or entry.get('english', '')
+    return entry.get('english', '')
+
+
 def monk_respell(entry, accent=None):
     """The respelling to show for one vocab/phrase entry in the given accent.
 
@@ -630,6 +648,7 @@ def inject_monk_mode():
         'monk_direction': monk_direction(),
         'monk_accent': monk_accent(),
         'monk_respell': monk_respell,
+        'monk_english': monk_english,
     }
 
 # ============================================
