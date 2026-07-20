@@ -13,6 +13,8 @@ import sys
 import json
 import glob
 
+import monk_audio  # shared MP3 filename rules, also used by the build script
+
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
 # UTF-8 output so those print() calls work everywhere.
@@ -510,6 +512,22 @@ MONK_TOPICS_BY_ID = {t['topic']: t for t in MONK_TOPICS}
 # The two learning directions Monk Mode supports.
 MONK_DIRECTIONS = {'learn_thai', 'learn_english'}
 MONK_DIRECTION_DEFAULT = 'learn_thai'   # a Western monk learning Thai
+
+@app.context_processor
+def inject_monk_audio():
+    """Give templates monk_audio_url(english) -> URL, or None if not generated.
+
+    Native audio is the anchor of the English pronunciation system, but it is
+    generated topic by topic, so most entries have no MP3 yet. Returning None
+    lets the template simply leave the play button out for those, instead of
+    rendering a button that 404s.
+    """
+    def monk_audio_url(english):
+        if not monk_audio.audio_exists(app.static_folder, english):
+            return None
+        return url_for('static', filename=monk_audio.audio_static_path(english))
+    return {'monk_audio_url': monk_audio_url}
+
 
 def monk_direction():
     """The current Monk Mode learning direction for this visitor."""

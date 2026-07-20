@@ -15,6 +15,14 @@
     </div>
     <div class="monk-entry-target">
         <span class="monk-entry-word">{{ e.english }}</span>
+        {% set audio_url = monk_audio_url(e.english) %}
+        {% if audio_url %}
+        {# Native audio is the anchor — hearing it beats reading any notation.
+           Only drawn when the MP3 exists, so half-generated topics look tidy
+           rather than broken. #}
+        <button type="button" class="monk-audio-btn" data-audio="{{ audio_url }}"
+                aria-label="ฟังเสียง — listen">🔊</button>
+        {% endif %}
         {% if e.english_respell %}
         <span class="monk-entry-respell">{{ e.english_respell }}</span>
         {% endif %}
@@ -96,6 +104,28 @@
     toggle.addEventListener('change', function () {
         document.querySelectorAll('.monk-ipa').forEach(function (el) {
             el.hidden = !toggle.checked;
+        });
+    });
+})();
+
+(function () {
+    // One Audio object reused for every button. Tapping a second word while the
+    // first is still playing should replace it, not talk over it — and a page
+    // with 20 separate <audio> elements is needlessly heavy on a phone.
+    var player = null;
+
+    document.querySelectorAll('.monk-audio-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            if (player) { player.pause(); }
+            player = new Audio(btn.dataset.audio);
+
+            btn.classList.add('is-playing');
+            var clear = function () { btn.classList.remove('is-playing'); };
+            player.addEventListener('ended', clear);
+            // If the file is missing or the browser blocks playback, drop the
+            // highlight rather than leaving the button stuck mid-play.
+            player.addEventListener('error', clear);
+            player.play().catch(clear);
         });
     });
 })();

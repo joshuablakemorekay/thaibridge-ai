@@ -1524,6 +1524,28 @@ body {
     line-height: 1.6;
     opacity: 0.9;
 }
+/* The play button sits inline next to the English word, so it reads as part of
+   the word rather than as a separate control to hunt for. */
+.monk-audio-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.05rem;
+    line-height: 1;
+    padding: 0.15rem 0.3rem;
+    border-radius: 6px;
+    /* Comfortably tappable on a phone without making the row taller. */
+    min-width: 2rem;
+    min-height: 2rem;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+.monk-audio-btn:hover { background: var(--bamboo-beige); }
+.monk-audio-btn:focus-visible { outline: 2px solid var(--monk-saffron); }
+.monk-audio-btn.is-playing {
+    background: var(--monk-saffron);
+    transform: scale(1.1);
+}
+
 .monk-ipa-toggle {
     display: flex;
     align-items: center;
