@@ -400,6 +400,7 @@ def init_user_progress():
             'is_developer': False,
             'monk_mode': False,   # free, monk-tailored track for monastics (code-gated)
             'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
+            'monk_accent': MONK_ACCENT_DEFAULT,   # 'uk' or 'us' (English-side accent)
             'full_unlock': False,  # optional paid add-on (on top of Pro): skips the level/alphabet grind
             'sections_unlocked': ['home', 'alphabet', 'theravada', 'meditation'],
             'sections_visited': [],
@@ -513,6 +514,18 @@ MONK_TOPICS_BY_ID = {t['topic']: t for t in MONK_TOPICS}
 MONK_DIRECTIONS = {'learn_thai', 'learn_english'}
 MONK_DIRECTION_DEFAULT = 'learn_thai'   # a Western monk learning Thai
 
+# The two English accents the learn_english side can be shown in.
+# British is the default because the whole existing system was built to it: the
+# IPA, the respellings and every generated MP3 (en-GB-SoniaNeural) are RP. The
+# American column is an addition on top, not a replacement.
+#
+# Most entries sound the same in both accents, so content stores ONE respelling
+# plus an override ONLY where they actually differ (see monk_respell below).
+# That keeps ~100 of the 140 entries single-valued and, more importantly, keeps
+# the number of lines Josh has to review down to the ones that genuinely change.
+MONK_ACCENTS = {'uk', 'us'}
+MONK_ACCENT_DEFAULT = 'uk'
+
 @app.context_processor
 def inject_monk_audio():
     """Give templates monk_audio_url(english) -> URL, or None if not generated.
@@ -522,11 +535,41 @@ def inject_monk_audio():
     lets the template simply leave the play button out for those, instead of
     rendering a button that 404s.
     """
-    def monk_audio_url(english):
-        if not monk_audio.audio_exists(app.static_folder, english):
-            return None
-        return url_for('static', filename=monk_audio.audio_static_path(english))
-    return {'monk_audio_url': monk_audio_url}
+    def monk_audio_url(english, accent=None):
+        """URL for this entry's MP3 in the visitor's accent, or None.
+
+        Falls back to the British file when the American one has not been
+        generated yet. That is deliberate: a missing US file should still give
+        the learner something to listen to, because audio is the anchor of the
+        whole system. Use monk_audio_is_fallback() to label it honestly in the
+        UI rather than passing British audio off as American.
+        """
+        accent = accent or monk_accent()
+        if monk_audio.audio_exists(app.static_folder, english, accent):
+            return url_for(
+                'static',
+                filename=monk_audio.audio_static_path(english, accent))
+        if accent != monk_audio.AUDIO_ACCENT_DEFAULT and monk_audio.audio_exists(
+                app.static_folder, english, monk_audio.AUDIO_ACCENT_DEFAULT):
+            return url_for(
+                'static',
+                filename=monk_audio.audio_static_path(
+                    english, monk_audio.AUDIO_ACCENT_DEFAULT))
+        return None
+
+    def monk_audio_is_fallback(english, accent=None):
+        """True when we are about to play British audio to a US-accent learner."""
+        accent = accent or monk_accent()
+        if accent == monk_audio.AUDIO_ACCENT_DEFAULT:
+            return False
+        return (not monk_audio.audio_exists(app.static_folder, english, accent)
+                and monk_audio.audio_exists(
+                    app.static_folder, english, monk_audio.AUDIO_ACCENT_DEFAULT))
+
+    return {
+        'monk_audio_url': monk_audio_url,
+        'monk_audio_is_fallback': monk_audio_is_fallback,
+    }
 
 
 def monk_direction():
@@ -534,6 +577,28 @@ def monk_direction():
     if 'user_progress' not in session:
         return MONK_DIRECTION_DEFAULT
     return session['user_progress'].get('monk_direction', MONK_DIRECTION_DEFAULT)
+
+
+def monk_accent():
+    """The current English accent (British or American) for this visitor."""
+    if 'user_progress' not in session:
+        return MONK_ACCENT_DEFAULT
+    return session['user_progress'].get('monk_accent', MONK_ACCENT_DEFAULT)
+
+
+def monk_respell(entry, accent=None):
+    """The respelling to show for one vocab/phrase entry in the given accent.
+
+    Content stores the British form in 'english_respell' and adds
+    'english_respell_us' ONLY on entries that actually differ (mostly words
+    where American pronounces an R that RP drops: MOR-ning vs MAW-ning). So an
+    entry with no override is simply the same in both accents, which is the
+    common case — falling back to the British form is correct, not a gap.
+    """
+    accent = accent or monk_accent()
+    if accent == 'us':
+        return entry.get('english_respell_us') or entry.get('english_respell', '')
+    return entry.get('english_respell', '')
 
 
 @app.context_processor
@@ -560,7 +625,12 @@ def inject_monk_mode():
     """Expose Monk Mode's state to every template, so the nav toggle, the
     'everything unlocked' banner and the direction switch can render on any page
     without each route having to pass them in."""
-    return {'monk_mode': monk_mode_active(), 'monk_direction': monk_direction()}
+    return {
+        'monk_mode': monk_mode_active(),
+        'monk_direction': monk_direction(),
+        'monk_accent': monk_accent(),
+        'monk_respell': monk_respell,
+    }
 
 # ============================================
 # FREEMIUM AI LIMITS
@@ -4452,6 +4522,19 @@ def set_monk_direction(direction):
         session['user_progress']['monk_direction'] = direction
         session.modified = True
     return jsonify({'success': True, 'direction': monk_direction()})
+
+
+@app.route('/set-monk-accent/<accent>')
+def set_monk_accent(accent):
+    """Switch the English side between British ('uk') and American ('us').
+
+    Open to everyone, like the direction switch — it changes how the lesson is
+    presented, not what is unlocked."""
+    init_user_progress()
+    if accent in MONK_ACCENTS:
+        session['user_progress']['monk_accent'] = accent
+        session.modified = True
+    return jsonify({'success': True, 'accent': monk_accent()})
 
 
 @app.route('/monk/lessons')

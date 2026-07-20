@@ -156,6 +156,13 @@
                 .then(function () { window.location.reload(); })
                 .catch(function () { window.location.reload(); });
         }
+        // Flip the English side between British and American.
+        function setMonkAccent(accent) {
+            fetch('/set-monk-accent/' + accent)
+                .then(function (r) { return r.json(); })
+                .then(function () { window.location.reload(); })
+                .catch(function () { window.location.reload(); });
+        }
     </script>
     <script src="{{ static_v('js/base.js') }}"></script>
     
