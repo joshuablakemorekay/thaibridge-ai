@@ -4,6 +4,38 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 20 July 2026 (later) — Two accents for the monk English track
+
+**Type:** Feature + Bug Fix
+
+**TL;DR**
+- A friend who teaches Thai questioned the Ls and Rs in the respellings — that one question became a full **British/American accent toggle**.
+- Fixed 15 tips that were teaching the *Thai* rolled ร for the English R, plus a British word (`aeroplane`) that had been carrying the American pronunciation all along.
+- All merged and live. The new Thai wording still needs a native speaker's review.
+
+**What I built or did**
+Thai monks learning English can now choose 🇬🇧 or 🇺🇸, and the whole lesson follows: the word (aeroplane/airplane, practise/practice), the respelling (MAW-ning/MOR-ning), and the voice — 138 audio files per accent. I also rewrote 21 tips so they teach the L sounds Thai speakers actually struggle with (final L becoming น, so "bowl" turns into "bone") and say honestly which accent pronounces an R.
+
+**Why I did it this way**
+Only 14 entries store a US spelling override — everything else is identical in both accents, so most of the system stays single-valued and easy to review. British stayed the default because all the existing audio and IPA were built to it.
+
+**How it works**
+The toggle is a session setting (remembered per visitor), mirroring the existing direction switch. Audio lives in per-accent folders sharing one filename rule, so one voice can never overwrite the other.
+
+**How We Did It**
+1. Audited all 140 entries with a script before forming an opinion — the "44 broken entries" I first estimated turned out to be 14.
+2. Fixed the rolled-ร bug first, on its own branch, because it was live and needed no decisions.
+3. Scaffolded the toggle (state, routes, audio folders), then content (respellings, tips), then the words themselves — each phase committed and verified separately.
+4. Merged each branch into `main` (a saved snapshot going live) and deleted it, keeping one clean trunk.
+
+**What I learned**
+I initially rewrote the wrong layer — the Thai tip boxes instead of the respelling system — because I treated a question as an instruction. And my friend's "wrong" suggestion (AALMZ) pointed at a real design gap even though the specific fix wasn't right. **Listen to the question behind the question.**
+
+**References / Conversations**
+Claude Code session, 20 July 2026. Known gap logged: the pronunciation guide page has no accent section yet and its British-only footnote is now stale.
+
+---
+
 ## 20 July 2026 — A pronunciation system for Thai monks learning English
 
 **Type:** Feature
