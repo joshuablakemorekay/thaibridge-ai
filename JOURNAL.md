@@ -4,6 +4,39 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 20 July 2026 (night) — My teacher reviews the lessons, and her feedback becomes features
+
+**Type:** Feature + Fix
+
+**TL;DR**
+- My Thai teacher reviewed the pronunciation lessons and gave four specific pieces of feedback — each one became something in the app.
+- Her sharpest point: a word pronounced perfectly on its own gets mispronounced again once it sits inside a sentence. That changed the **structure** of every pronunciation lesson, not just the content.
+- I'd only applied her V/F/TH feedback to the new lesson. Being asked whether it had reached the older ones turned up 15 entries with the same gap.
+
+**What I built or did**
+A new **lesson 13 — Pronunciation Practice: V, F and TH**, covering the sounds she named: V collapsing into W, a final F becoming P, and TH (which doesn't exist in Thai at all) landing as T, D or S. Both pronunciation lessons now end with a **"From word to sentence"** section — the same sounds embedded in real sentences, as the test of whether a sound is truly learned. Lesson 12 gained a **reading guide** (pause at the comma, stop at the full stop, then read again with vocal variety) and a **"one idea, several words"** block — *stress* as well as *suffering*, *uncertainty* as well as *impermanence*. 134 new audio files, both accents.
+
+**Why I did it this way**
+She made the case that reading a short Dhamma text out loud does more than drilling word lists: it exposes the same stumbles every time, and it teaches punctuation as meaning rather than decoration. So I built what she described rather than inventing my own version of it.
+
+**How it works**
+Two new optional blocks in the lesson format (`reading_guide` and `word_choices`), rendered by the template and picked up by the audio generator, so an alternative wording is never a silent one. I also wrote `scripts/make_review_sheet.py`, which diffs the lesson files against an older commit (compares them to see what changed) and produces a printable Thai review sheet — so she only ever gets asked about material she hasn't already corrected.
+
+**How We Did It**
+1. Read her feedback carefully and mapped each of the four points to a concrete change before writing anything.
+2. Built lesson 13, the sentence-transfer drills, the reading guide and the word-choice block; generated audio in both accents.
+3. Asked whether the fix had reached the *existing* lessons — it hadn't. Audited all 140 entries in lessons 01–10.
+4. Found TH already covered (14 of 14) but **V and F missing in 15 entries** — plus a real bug where one phrase's respelling stopped halfway through the sentence.
+5. Regenerated the review sheet so the corrected tips reach her too.
+
+**What I learned**
+**A fix isn't finished until it's applied everywhere the problem exists.** I built the lesson named after the problem and called it done — but the same sounds appear in `food`, `faith`, `mindfulness` and every `venerable` across the older lessons. "Did you apply it to the others?" was the most useful question of the session. Also a practical one: rewriting JSON with `json.dump` reformatted every file and turned a 15-line change into 1,119 lines. I reverted and edited the raw text instead — **matching a file's existing layout matters as much as getting its content right.**
+
+**References / Conversations**
+Claude Code session, 20 July 2026 (night). Feedback from my Thai teacher. All new Thai is AI-drafted and awaiting her review — that's what the generated sheet is for.
+
+---
+
 ## 20 July 2026 (evening) — My Thai teacher's homework becomes lessons 11 and 12
 
 **Type:** Feature
