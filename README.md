@@ -63,6 +63,7 @@ ThaiBridge AI is a server-rendered Flask app with:
 - 💳 **Freemium subscriptions** (Free · Buddhist Scholar £9.99 · Thai Master £19.99) through Stripe, plus an optional one-time **Instant Access Pass** (£9.99) that unlocks every section at once
 - 🏆 **Gamification** — points, levels and achievements, with a learning path that unlocks as you go (paying opens a tier; you still level up to reach each section)
 - 🧡 **Monk Mode** *(live)* — a free, code-unlocked lesson track written for Buddhist monks, with a switch between learning Thai and learning English, and its content kept in tidy per-topic files apart from the main app. It waives the paywall but keeps the levelling, so monks still learn their way up
+- 🔊 **A pronunciation system built for each reader** *(live)* — the English side of Monk Mode carries native audio on all 140 items, a plain respelling with the stressed syllable in capitals, a tip written in Thai, and IPA behind a toggle for anyone who wants it. The audio is generated once and committed as ordinary files, so the live site needs no speech service, no API key and no per-play cost
 
 ## 📸 A look inside
 
@@ -121,11 +122,11 @@ This is the part I care about most — not "I built it," but "here's the proof i
 - **Version control turns fear into freedom.** Because I could always roll back, I could take big swings (and let an AI take them) without panic.
 - **Check what's already there before building.** The "click-to-open sections" I set out to add were already in the code — I just hadn't rolled them out.
 - **Match the guide to the reader, not the language.** Monk Mode teaches two people from one set of lessons: a Western monk learning Thai, and a Thai monk learning English. I'd been showing both of them the same help. The Thai side was fine (Paiboon romanization does its job), but Paiboon has no symbols for *th*, *v* or *z* — so for English I built a separate system, with tips written in Thai. My first attempt was circular: I explained English using roman letters, to readers whose main reference for roman letters *is* English. Getting it wrong twice is what taught me the rule.
+- **When the code looks right, check what's actually running.** Building the audio, three bugs in a row wore the same disguise: a CSS rule silently overrode the "hidden" tag I'd just added; two audio files "failed" when really the *success message* had crashed and the error handler deleted the good file it had just written; and a `NameError` sent me through correct code because an old copy of the app was still running from earlier. The code was right every time and the thing in front of me was lying. **Trust what you can observe, and make sure you're observing the thing you think you are.**
 
 ## What's next
 
-- **Review and merge the Monk Mode pronunciation system** (on `feature/monk-english-pronunciation`) — 140 items now carry a plain respelling and a Thai-language pronunciation tip, but every Thai line still needs checking by a native speaker before it goes live.
-- **Add native English audio** to the monk lessons — the respelling is a memory aid, and audio is meant to be the thing it hangs on.
+- **Review the 140 Thai pronunciation tips** now live in Monk Mode — the system is shipped, but every Thai line still wants a careful read, and the two Pāli terms are spoken by an English voice that may not do them justice.
 - **Polish the locked-section pages** to nudge people toward the right plan, and build a proper success page for the Instant Access Pass.
 - **Finish the "click-to-open sections" redesign** across the remaining long pages.
 - **Move to a database that survives restarts** (the free host wipes the current one on redeploy) and add proper database migrations.
