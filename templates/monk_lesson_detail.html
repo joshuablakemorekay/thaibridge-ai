@@ -14,7 +14,12 @@
         <span class="thai">{{ e.thai }}</span>
     </div>
     <div class="monk-entry-target">
-        <span class="monk-entry-word">{{ e.english }}</span>
+        {# A few entries are different words per accent (aeroplane/airplane), so
+           the English shown follows the toggle too — otherwise a learner on the
+           American setting reads one word and hears another. The audio lookup
+           still uses e.english, because the filename is keyed to the base
+           wording and the two accents' files sit in separate folders. #}
+        <span class="monk-entry-word">{{ monk_english(e) }}</span>
         {% set audio_url = monk_audio_url(e.english) %}
         {% if audio_url %}
         {# Native audio is the anchor — hearing it beats reading any notation.
