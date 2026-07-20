@@ -1,0 +1,15 @@
+{# Only meaningful on the English-learning side — a Western monk learning Thai
+   is reading Paiboon, not English respellings, so the switch would be noise. #}
+{% if monk_direction == 'learn_english' %}
+<div class="monk-accent-switch" role="group" aria-label="English accent">
+    <span class="monk-accent-label thai">สำเนียง / Accent</span>
+    <button class="monk-accent-btn{% if monk_accent == 'uk' %} active{% endif %}"
+            onclick="setMonkAccent('uk')">
+        🇬🇧 British
+    </button>
+    <button class="monk-accent-btn{% if monk_accent == 'us' %} active{% endif %}"
+            onclick="setMonkAccent('us')">
+        🇺🇸 American
+    </button>
+</div>
+{% endif %}

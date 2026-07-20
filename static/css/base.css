@@ -1432,6 +1432,46 @@ body {
 }
 .monk-dir-btn.active .monk-dir-sub { opacity: 0.9; }
 
+/* Monk lessons — English accent switch (British / American).
+   Deliberately lighter than the direction switch above it: direction changes
+   which language you are learning, accent only changes how one side is shown,
+   so it should read as the smaller of the two choices. */
+.monk-accent-switch {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-top: 0.6rem;
+}
+.monk-accent-label {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-right: 0.15rem;
+}
+.monk-accent-btn {
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid var(--monk-saffron);
+    background: transparent;
+    color: inherit;
+}
+.monk-accent-btn.active {
+    background: var(--monk-saffron);
+    color: #fff;
+    font-weight: 600;
+}
+/* Marks a play button that is about to sound British audio to a learner who
+   asked for American, because that US file has not been generated yet. */
+.monk-audio-fallback {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    margin-left: 0.15rem;
+    cursor: help;
+}
+
 /* Monk lessons — topic grid */
 .monk-topic-grid {
     display: grid;

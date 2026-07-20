@@ -17,7 +17,25 @@ import re
 
 # Where the generated MP3s live, relative to the Flask static folder. Kept as a
 # posix-style path because it ends up in a URL, not on disk.
-AUDIO_URL_DIR = "audio/en"
+#
+# The accent is a SUBFOLDER rather than part of the filename ('audio/en/uk/x.mp3'
+# not 'audio/en/x.uk.mp3') so that the two voices stay physically separate: a
+# regeneration of one accent can never half-overwrite the other, and 'how many
+# US files am I missing?' is answerable with a directory listing.
+AUDIO_URL_ROOT = "audio/en"
+AUDIO_ACCENTS = ("uk", "us")
+AUDIO_ACCENT_DEFAULT = "uk"
+
+
+def _accent_dir(accent):
+    """Validate an accent and return its URL-style directory.
+
+    Falls back to British rather than raising: an unknown accent should show
+    the default audio, not 500 a lesson page.
+    """
+    if accent not in AUDIO_ACCENTS:
+        accent = AUDIO_ACCENT_DEFAULT
+    return "{}/{}".format(AUDIO_URL_ROOT, accent)
 
 
 def slugify(text):
@@ -40,19 +58,28 @@ def audio_filename(english):
     return slugify(english) + ".mp3"
 
 
-def audio_static_path(english):
+def audio_static_path(english, accent=AUDIO_ACCENT_DEFAULT):
     """The path to hand to Flask's url_for('static', filename=...)."""
-    return "{}/{}".format(AUDIO_URL_DIR, audio_filename(english))
+    return "{}/{}".format(_accent_dir(accent), audio_filename(english))
 
 
-def audio_exists(static_folder, english):
-    """Has this entry's MP3 actually been generated yet?
+def audio_disk_path(static_folder, english, accent=AUDIO_ACCENT_DEFAULT):
+    """Where this entry's MP3 sits on disk."""
+    if accent not in AUDIO_ACCENTS:
+        accent = AUDIO_ACCENT_DEFAULT
+    return os.path.join(
+        static_folder, "audio", "en", accent, audio_filename(english)
+    )
 
-    Only 1 of the 10 topics has audio so far, so the template asks this before
-    drawing a play button — better to show nothing than a button that fails.
+
+def audio_exists(static_folder, english, accent=AUDIO_ACCENT_DEFAULT):
+    """Has this entry's MP3 actually been generated yet, in this accent?
+
+    The template asks before drawing a play button — better to show nothing
+    than a button that 404s. This matters more now than it did with one accent:
+    the US set is generated separately, so a US file can legitimately be missing
+    while its UK twin exists.
     """
     if not english:
         return False
-    return os.path.isfile(
-        os.path.join(static_folder, "audio", "en", audio_filename(english))
-    )
+    return os.path.isfile(audio_disk_path(static_folder, english, accent))

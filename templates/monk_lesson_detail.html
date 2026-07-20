@@ -19,12 +19,20 @@
         {% if audio_url %}
         {# Native audio is the anchor — hearing it beats reading any notation.
            Only drawn when the MP3 exists, so half-generated topics look tidy
-           rather than broken. #}
+           rather than broken. When a US file is missing we play the UK one, but
+           say so rather than passing British audio off as American. #}
         <button type="button" class="monk-audio-btn" data-audio="{{ audio_url }}"
                 aria-label="ฟังเสียง — listen">🔊</button>
+        {% if monk_audio_is_fallback(e.english) %}
+        <span class="monk-audio-fallback" title="เสียงอเมริกันยังไม่มี — นี่คือเสียงบริติช">🇬🇧</span>
         {% endif %}
-        {% if e.english_respell %}
-        <span class="monk-entry-respell">{{ e.english_respell }}</span>
+        {% endif %}
+        {% set respell = monk_respell(e) %}
+        {% if respell %}
+        {# Resolved per accent: most entries are identical in both, so this is
+           usually just english_respell. Words where American says an R that RP
+           drops (MOR-ning / MAW-ning) carry an english_respell_us override. #}
+        <span class="monk-entry-respell">{{ respell }}</span>
         {% endif %}
         {% if e.english_ipa %}
         <span class="monk-entry-pron monk-ipa" hidden>{{ e.english_ipa }}</span>
@@ -70,6 +78,7 @@
     <p>{% if direction == 'learn_english' %}{{ lesson.description.th }}{% else %}{{ lesson.description.en }}{% endif %}</p>
     {% if lesson.pali %}<p class="monk-entry-pali">Pāli: {{ lesson.pali }}</p>{% endif %}
     {% include "partials/monk_direction_switch.html" %}
+    {% include "partials/monk_accent_switch.html" %}
 
     {% if direction == 'learn_english' %}
     {# Optional phonetic detail, for advanced learners and for teachers. Off by
