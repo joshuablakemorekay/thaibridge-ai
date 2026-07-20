@@ -89,7 +89,15 @@ def collect_entries(topic_filter=None, accent=DEFAULT_ACCENT):
         if topic_filter and lesson.get("topic") != topic_filter:
             continue
 
-        for entry in lesson.get("vocab", []) + lesson.get("phrases", []):
+        # Drill lines (tongue twisters) sit inside drill_sections but carry the
+        # same 'english' field, so they join the normal entry flow.
+        drills = [
+            d
+            for sec in lesson.get("drill_sections", [])
+            for d in sec.get("drills", [])
+        ]
+
+        for entry in lesson.get("vocab", []) + lesson.get("phrases", []) + drills:
             english = (entry.get("english") or "").strip()
             if not english:
                 continue
@@ -108,6 +116,17 @@ def collect_entries(topic_filter=None, accent=DEFAULT_ACCENT):
             if not spoken:
                 continue
             seen.setdefault(slugify(english), spoken)
+
+        # Whole reading passages. Keyed off the passage id, never its text —
+        # the slug of a 200-word passage would be meaningless, and the template
+        # asks for exactly the same key: monk_audio_url('passage ' ~ p.id).
+        # The gloss/slash stripping above is for single entries and must NOT
+        # run here: a passage's parentheses and slashes are real prose.
+        for p in lesson.get("passages", []):
+            pid = (p.get("id") or "").strip()
+            text = (p.get("text") or "").strip()
+            if pid and text:
+                seen.setdefault(slugify("passage " + pid), text)
 
     return seen
 

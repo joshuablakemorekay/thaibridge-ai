@@ -34,7 +34,9 @@
             {% if direction == 'learn_english' %}{{ t.title.en }}{% else %}{{ t.title.th }}{% endif %}
         </span>
         {% if t.pali %}<span class="monk-topic-pali">{{ t.pali }}</span>{% endif %}
-        <span class="monk-topic-count">{{ t.vocab|length }} words · {{ t.phrases|length }} phrases</span>
+        {# Only count what a topic actually has — a drills topic with '0 phrases'
+           would look broken rather than deliberate. #}
+        <span class="monk-topic-count">{{ t.vocab|length }} words{% if t.phrases %} · {{ t.phrases|length }} phrases{% endif %}{% if t.drill_sections %} · {{ t.drill_sections|map(attribute='drills')|map('length')|sum }} drills{% endif %}{% if t.passages %} · {{ t.passages|length }} readings{% endif %}</span>
     </a>
     {% endfor %}
 </div>

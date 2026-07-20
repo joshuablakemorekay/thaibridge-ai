@@ -110,6 +110,83 @@
 </div>
 {% endif %}
 
+{# ── Drill sections (tongue twisters and repeat-after-me practice) ─────────
+   English-only by nature: the point is saying the English sound, so there is
+   no Thai prompt side. The meaning_th line tells the Thai reader what they are
+   actually saying — a tongue twister you understand is far easier to remember. #}
+{% for sec in lesson.drill_sections %}
+<h2>
+    {% if direction == 'learn_english' %}{{ sec.title.th }}{% else %}{{ sec.title.en }}{% endif %}
+    <span class="thai monk-drill-subtitle">{% if direction == 'learn_english' %}{{ sec.title.en }}{% else %}{{ sec.title.th }}{% endif %}</span>
+</h2>
+<div class="card monk-card">
+    <p class="thai">{{ sec.intro_th }}</p>
+    <p>{{ sec.intro_en }}</p>
+</div>
+<div class="monk-entry-list">
+    {% for d in sec.drills %}
+    <div class="monk-entry">
+        <div class="monk-entry-target">
+            <span class="monk-entry-word">{{ d.english }}</span>
+            {% set audio_url = monk_audio_url(d.english) %}
+            {% if audio_url %}
+            <button type="button" class="monk-audio-btn" data-audio="{{ audio_url }}"
+                    aria-label="ฟังเสียง — listen">🔊</button>
+            {% if monk_audio_is_fallback(d.english) %}
+            <span class="monk-audio-fallback" title="เสียงอเมริกันยังไม่มี — นี่คือเสียงบริติช">🇬🇧</span>
+            {% endif %}
+            {% endif %}
+            {% if d.english_respell %}
+            <span class="monk-entry-respell">{{ d.english_respell }}</span>
+            {% endif %}
+            {% if d.english_ipa %}
+            <span class="monk-entry-pron monk-ipa" hidden>{{ d.english_ipa }}</span>
+            {% endif %}
+        </div>
+        {% if d.english_tip_th %}
+        <p class="monk-entry-tip thai">{{ d.english_tip_th }}</p>
+        {% endif %}
+        {% if d.meaning_th %}
+        <div class="monk-entry-meta"><span class="monk-entry-note thai">{{ d.meaning_th }}</span></div>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endfor %}
+
+{# ── Reading passages ──────────────────────────────────────────────────────
+   Whole texts rather than single phrases: listen first, read along, then read
+   aloud. The audio file is keyed off the passage id ('passage <id>'), not off
+   its 200-word text — see scripts/generate_english_audio.py. #}
+{% if lesson.passages %}
+<h2>{% if direction == 'learn_english' %}บทอ่าน<span class="thai monk-drill-subtitle">Readings</span>{% else %}Readings{% endif %}</h2>
+{% for p in lesson.passages %}
+<div class="card monk-card monk-passage">
+    <h3>
+        {{ p.title.en }}
+        <span class="thai monk-passage-title-th">{{ p.title.th }}</span>
+    </h3>
+    {% if p.intro_th %}<p class="monk-entry-tip thai">{{ p.intro_th }}</p>{% endif %}
+    {% set p_key = 'passage ' ~ p.id %}
+    {% set p_audio = monk_audio_url(p_key) %}
+    {% if p_audio %}
+    <p>
+        <button type="button" class="monk-audio-btn monk-passage-audio" data-audio="{{ p_audio }}">
+            🔊 <span class="thai">ฟังทั้งบท</span> — Listen to the whole passage
+        </button>
+        {% if monk_audio_is_fallback(p_key) %}
+        <span class="monk-audio-fallback" title="เสียงอเมริกันยังไม่มี — นี่คือเสียงบริติช">🇬🇧</span>
+        {% endif %}
+    </p>
+    {% endif %}
+    {% for para in p.text.split('\n\n') %}
+    <p class="monk-passage-text">{{ para }}</p>
+    {% endfor %}
+    <p class="monk-passage-source">— {{ p.source }}</p>
+</div>
+{% endfor %}
+{% endif %}
+
 {% if direction == 'learn_english' %}
 <script>
 (function () {
@@ -121,7 +198,12 @@
         });
     });
 })();
+</script>
+{% endif %}
 
+{# Outside the direction guard: drills and passages keep their play buttons in
+   BOTH directions, so the player must always be wired up. #}
+<script>
 (function () {
     // One Audio object reused for every button. Tapping a second word while the
     // first is still playing should replace it, not talk over it — and a page
@@ -144,5 +226,4 @@
     });
 })();
 </script>
-{% endif %}
 {% endblock %}

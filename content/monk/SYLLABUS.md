@@ -27,6 +27,16 @@ switch just decides which language is the *prompt* and which is the *answer*.
 | 08 | **Dhamma & Teaching** | dhamma-desanā | Giving and receiving teachings; core Dhamma vocabulary |
 | 09 | **Precepts & Allowables** | sīla / kappiya | Talking about precepts; what is offered and made allowable |
 | 10 | **Travel & Life Abroad** | — | For Thai monks overseas: airport, immigration, being hosted |
+| 11 | **Pronunciation Practice: L and R** | — | Tongue twisters from Josh's Thai teacher — the rice/lice problem; drills for both sounds |
+| 12 | **Dhamma Reading: Ajahn Sumedho** | — | Three passages from *Direct Realization* with key teaching vocabulary and full-passage audio |
+
+Topics 11–12 add two optional sections beyond `vocab`/`phrases`:
+
+- `drill_sections` — groups of English-only drill lines (`english`, `english_respell`,
+  `english_ipa`, optional `english_tip_th`, `meaning_th`). No Thai prompt side —
+  the point is saying the English sound.
+- `passages` — whole readings (`id`, `title`, `intro_th`, `source`, `text`).
+  Passage audio is keyed `passage <id>` (see scripts/generate_english_audio.py).
 
 ## File format (one JSON file per topic)
 
