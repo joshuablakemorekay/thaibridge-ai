@@ -519,6 +519,25 @@ def monk_direction():
 
 
 @app.context_processor
+def inject_static_version():
+    """Give templates static_v(filename) for cache-busting CSS and JS.
+
+    Without this, a browser that has cached base.css keeps using the old copy
+    after a deploy, so style fixes appear not to work. Appending the file's
+    modification time makes each edit a new URL, so the browser refetches.
+    """
+    def static_v(filename):
+        url = url_for('static', filename=filename)
+        try:
+            mtime = int(os.path.getmtime(
+                os.path.join(app.static_folder, filename.replace('/', os.sep))))
+        except OSError:
+            return url
+        return '{}?v={}'.format(url, mtime)
+    return {'static_v': static_v}
+
+
+@app.context_processor
 def inject_monk_mode():
     """Expose Monk Mode's state to every template, so the nav toggle, the
     'everything unlocked' banner and the direction switch can render on any page
@@ -4434,6 +4453,19 @@ def monk_lesson_detail(topic):
     if not lesson:
         return redirect(url_for('monk_lessons'))
     return render_template('monk_lesson_detail.html', lesson=lesson, direction=monk_direction())
+
+
+@app.route('/monk/pronunciation')
+def monk_pronunciation_guide():
+    """Teaches the two pronunciation notations used on the English side.
+
+    The respelling is what every learner sees by default, so it is taught first
+    and at length. IPA is the optional layer, taught second for those who want
+    it (or for teachers). Mirrors what /paiboon does for the Thai side.
+    """
+    if not monk_mode_active():
+        return redirect(url_for('monk_mode'))
+    return render_template('monk_pronunciation.html', direction=monk_direction())
 
 
 @app.route('/gender-examples')

@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block title %}การอ่านคำอ่าน — Pronunciation Guide{% endblock %}
+
+{#
+  Written in Thai first, English second, throughout. The reader is a Thai monk
+  learning English — explaining an English notation in English would be no use
+  to them. English is kept alongside for Western monks and for teachers.
+#}
+
+{% block content %}
+<div class="monk-pron-guide">
+<p><a href="/monk/lessons" class="monk-back">← บทเรียนทั้งหมด / All monk lessons</a></p>
+
+<h1>
+    🔤 วิธีอ่านคำอ่าน
+    <span class="thai">How to read the pronunciation guides</span>
+</h1>
+
+<div class="card monk-card">
+    <p class="thai">
+        ในบทเรียนภาษาอังกฤษ ท่านจะเห็นคำอ่านสองแบบ —
+        <strong>คำอ่านแบบง่าย</strong> ซึ่งแสดงอยู่เสมอ
+        และ <strong>สัทอักษร IPA</strong> ซึ่งซ่อนไว้ ต้องติ๊กเปิดเอง
+    </p>
+    <p>
+        Two notations appear in the English lessons: a <strong>simple respelling</strong>,
+        always shown, and <strong>IPA</strong>, hidden until you switch it on.
+    </p>
+</div>
+
+<h2>1. คำอ่านแบบง่าย / The simple respelling</h2>
+
+<div class="card monk-card">
+    <p class="thai">
+        เขียนด้วยตัวอักษรโรมัน หนึ่งสัญลักษณ์ = หนึ่งเสียงเสมอ
+        ไม่เหมือนการสะกดภาษาอังกฤษจริงที่ตัวเดียวออกได้หลายเสียง
+    </p>
+    <p class="thai">
+        <strong>ตัวพิมพ์ใหญ่คือพยางค์ที่เน้นเสียง</strong> —
+        เช่น <code>ME-rit</code> เน้นที่ ME.
+        เรื่องนี้สำคัญมาก เพราะภาษาไทยเน้นเสียงเท่ากันทุกพยางค์
+        แต่ภาษาอังกฤษถ้าเน้นผิดพยางค์ ฝรั่งอาจฟังไม่เข้าใจเลย
+    </p>
+    <p>
+        Roman letters, one symbol per sound. <strong>CAPITALS mark the stressed
+        syllable</strong> — English stress is the single biggest barrier to being
+        understood, and Thai gives every syllable equal weight, so it is marked
+        explicitly here.
+    </p>
+</div>
+
+<h3>สระ / Vowels</h3>
+<div class="monk-pron-table-wrap">
+<table class="monk-pron-table">
+    <thead><tr><th>คำอ่าน</th><th>ตัวอย่าง</th><th>เทียบเสียงไทย</th></tr></thead>
+    <tbody>
+        <tr><td><code>a</code></td><td>c<b>a</b>t</td><td class="thai">แ-ะ</td></tr>
+        <tr><td><code>aa</code></td><td>f<b>a</b>ther</td><td class="thai">-า</td></tr>
+        <tr><td><code>e</code></td><td>b<b>e</b>d</td><td class="thai">เ-ะ</td></tr>
+        <tr><td><code>ee</code></td><td>s<b>ee</b></td><td class="thai">-ี</td></tr>
+        <tr><td><code>i</code></td><td>s<b>i</b>t</td><td class="thai">-ิ</td></tr>
+        <tr><td><code>o</code></td><td>h<b>o</b>t</td><td class="thai">เ-าะ</td></tr>
+        <tr><td><code>aw</code></td><td>s<b>aw</b></td><td class="thai">-อ</td></tr>
+        <tr><td><code>u</code></td><td>b<b>oo</b>k</td><td class="thai">-ุ</td></tr>
+        <tr><td><code>uu</code></td><td>b<b>oo</b>t</td><td class="thai">-ู</td></tr>
+        <tr><td><code>uh</code></td><td>c<b>u</b>p</td><td class="thai">-ะ (เสียงสั้น)</td></tr>
+        <tr><td><code>er</code></td><td>h<b>er</b></td><td class="thai">เ-อ</td></tr>
+        <tr><td><code>ai</code></td><td>pr<b>i</b>ce</td><td class="thai">ไ-</td></tr>
+        <tr><td><code>ay</code></td><td>f<b>a</b>ce</td><td class="thai">เ-</td></tr>
+        <tr><td><code>oh</code></td><td>g<b>oa</b>t</td><td class="thai">โ-</td></tr>
+        <tr><td><code>ow</code></td><td>m<b>ou</b>th</td><td class="thai">เ-า</td></tr>
+        <tr><td><code>oy</code></td><td>ch<b>oi</b>ce</td><td class="thai">-อย</td></tr>
+    </tbody>
+</table>
+</div>
+
+<h3>พยัญชนะที่ไทยไม่มี / Consonants Thai does not have</h3>
+
+<div class="card monk-card">
+    <p class="thai">
+        เสียงเหล่านี้ไม่มีในภาษาไทย จึงไม่มีตัวอักษรไทยเทียบได้
+        ต้องอาศัยการวางลิ้นและริมฝีปากตามคำอธิบาย
+    </p>
+</div>
+
+<div class="monk-pron-table-wrap">
+<table class="monk-pron-table">
+    <thead><tr><th>คำอ่าน</th><th>ตัวอย่าง</th><th>วิธีออกเสียง</th></tr></thead>
+    <tbody>
+        <tr><td><code>th</code></td><td><b>th</b>ink</td><td class="thai">เอาปลายลิ้นออกมาระหว่างฟัน ไม่มีเสียงก้อง — <strong>ไม่ใช่ ท</strong></td></tr>
+        <tr><td><code>dh</code></td><td><b>th</b>is</td><td class="thai">เหมือน th แต่มีเสียงก้อง — <strong>ไม่ใช่ ด</strong></td></tr>
+        <tr><td><code>v</code></td><td><b>v</b>an</td><td class="thai">ฟันบนแตะริมฝีปากล่าง มีเสียงก้อง — <strong>ไม่ใช่ ว</strong></td></tr>
+        <tr><td><code>z</code></td><td><b>z</b>oo</td><td class="thai">เหมือน ส แต่มีเสียงก้องสั่นที่ลำคอ</td></tr>
+        <tr><td><code>sh</code></td><td><b>sh</b>ip</td><td class="thai">ห่อลิ้นไปด้านหลังเล็กน้อย เสียงลมยาว</td></tr>
+        <tr><td><code>ch</code></td><td><b>ch</b>urch</td><td class="thai">คล้าย ช แต่หนักและสั้นกว่า</td></tr>
+        <tr><td><code>j</code></td><td><b>j</b>udge</td><td class="thai">เหมือน ch แต่มีเสียงก้อง — <strong>ไม่ใช่ จ</strong></td></tr>
+        <tr><td><code>r</code></td><td><b>r</b>ed</td><td class="thai">ห่อลิ้นไม่แตะเพดาน — <strong>ไม่ใช่ ล</strong></td></tr>
+    </tbody>
+</table>
+</div>
+
+<h3>เสียงท้ายคำ / Final consonants</h3>
+
+<div class="card monk-card monk-pron-warn">
+    <p class="thai">
+        <strong>นี่คือจุดที่คนไทยพลาดบ่อยที่สุด</strong>
+        ภาษาไทยมีเสียงท้ายคำเพียงไม่กี่เสียง และไม่ปล่อยลมออก
+        แต่ภาษาอังกฤษต้องออกเสียงท้ายคำให้ครบและได้ยินชัด
+    </p>
+    <p class="thai">
+        เช่น <code>RAIS</code> (rice) ต้องมีเสียง S ยาวท้ายคำ —
+        ถ้าตัดทิ้งจะกลายเป็นคำอื่น
+        และ <code>THANGKS</code> (thanks) ต้องออกครบทั้ง -NG -K -S
+    </p>
+    <p>
+        This is the most common difficulty. Thai allows only a few final sounds
+        and does not release them; English requires every final consonant to be
+        audible, including clusters.
+    </p>
+</div>
+
+<h2>2. สัทอักษร IPA / The IPA</h2>
+
+<div class="card monk-card">
+    <p class="thai">
+        IPA (International Phonetic Alphabet) คือระบบสัทอักษรสากล
+        ใช้เขียนเสียงของทุกภาษาในโลกได้อย่างแม่นยำ
+        พจนานุกรมภาษาอังกฤษเกือบทุกเล่มใช้ระบบนี้
+    </p>
+    <p class="thai">
+        <strong>ท่านไม่จำเป็นต้องใช้ IPA</strong> —
+        คำอ่านแบบง่ายข้างบนเพียงพอสำหรับการเรียนแล้ว
+        แต่ถ้าท่านต้องการความแม่นยำมากขึ้น หรือต้องการเปิดพจนานุกรมเอง
+        การอ่าน IPA เป็นจะช่วยได้มาก
+    </p>
+    <p>
+        IPA is the international standard, used by nearly every English
+        dictionary. You do not need it — the respelling above is enough to learn
+        from. It is here for precision, for dictionary use, and for teachers.
+    </p>
+    <p class="thai monk-pron-howto">
+        <strong>วิธีเปิด:</strong> ในหน้าบทเรียน ให้ติ๊กช่อง
+        <em>แสดงสัทอักษร IPA</em> ที่อยู่ด้านบน
+    </p>
+</div>
+
+<h3>สัญลักษณ์ที่ควรรู้ / Symbols worth knowing</h3>
+<div class="monk-pron-table-wrap">
+<table class="monk-pron-table">
+    <thead><tr><th>IPA</th><th>คำอ่านแบบง่าย</th><th>ตัวอย่าง</th></tr></thead>
+    <tbody>
+        <tr><td><code>ː</code></td><td class="thai">เสียงยาว</td><td>/fuːd/ = FUUD</td></tr>
+        <tr><td><code>ˈ</code></td><td class="thai">พยางค์ที่เน้น (อยู่หน้าพยางค์)</td><td>/ˈmɛrɪt/ = ME-rit</td></tr>
+        <tr><td><code>ə</code></td><td><code>uh</code></td><td>/əˈbaʊt/ = uh-BOWT</td></tr>
+        <tr><td><code>ʌ</code></td><td><code>uh</code></td><td>/mʌŋk/ = MUHNK</td></tr>
+        <tr><td><code>θ</code></td><td><code>th</code></td><td>/θæŋks/ = THANGKS</td></tr>
+        <tr><td><code>ð</code></td><td><code>dh</code></td><td>/ðə/ = dhuh</td></tr>
+        <tr><td><code>ŋ</code></td><td><code>ng</code></td><td>/mʌŋk/ = MUHNK</td></tr>
+        <tr><td><code>ʃ</code></td><td><code>sh</code></td><td>/ʃɪp/ = SHIP</td></tr>
+        <tr><td><code>aɪ</code></td><td><code>ai</code></td><td>/raɪs/ = RAIS</td></tr>
+        <tr><td><code>aʊ</code></td><td><code>ow</code></td><td>/raʊnd/ = ROWND</td></tr>
+        <tr><td><code>eɪ</code></td><td><code>ay</code></td><td>/meɪk/ = MAYK</td></tr>
+        <tr><td><code>əʊ</code></td><td><code>oh</code></td><td>/bəʊl/ = BOHL</td></tr>
+    </tbody>
+</table>
+</div>
+
+<div class="card monk-card">
+    <p class="thai">
+        <strong>หมายเหตุ:</strong> IPA ในบทเรียนนี้ใช้สำเนียงอังกฤษ (British RP)
+        สำเนียงอเมริกันจะต่างออกไปบ้าง โดยเฉพาะเสียง R ท้ายคำ
+    </p>
+    <p>The IPA here is British RP. American English differs, notably in final R.</p>
+</div>
+
+<p><a href="/monk/lessons" class="monk-back">← กลับไปที่บทเรียน / Back to lessons</a></p>
+</div>
+{% endblock %}

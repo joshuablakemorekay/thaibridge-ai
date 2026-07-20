@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ static_v('css/base.css') }}">
     {% block extra_css %}{% endblock %}
 </head>
 <body>
@@ -157,7 +157,7 @@
                 .catch(function () { window.location.reload(); });
         }
     </script>
-    <script src="{{ url_for('static', filename='js/base.js') }}"></script>
+    <script src="{{ static_v('js/base.js') }}"></script>
     
     {% block extra_js %}{% endblock %}
 </body>
