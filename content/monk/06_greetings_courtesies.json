@@ -8,22 +8,23 @@
     "th": "มารยาทประจำวัน — การทักทาย ขอบคุณ ขอโทษ และการแสดงความเคารพระหว่างพระกับโยม"
   },
   "_review_note": "DRAFT — Josh to verify. NOTE: app romanization is inconsistent on aspiration (dict has both kâao and khai); I've used the no-'h' style throughout — please confirm the standard.",
+  "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
-    { "thai": "สวัสดี", "paiboon": "sà-wàt-dii", "english": "hello", "english_ipa": "/həˈləʊ/", "pali": "", "note": "A lay greeting; monks greet laity with เจริญพร." },
-    { "thai": "ขอบคุณ", "paiboon": "kɔ̀ɔp-kun", "english": "thank you", "english_ipa": "/θæŋk juː/", "pali": "", "note": "" },
-    { "thai": "ขอบใจ", "paiboon": "kɔ̀ɔp-jai", "english": "thanks (to a junior)", "english_ipa": "/θæŋks/", "pali": "", "note": "Said to someone younger or of lower standing." },
-    { "thai": "ขอโทษ", "paiboon": "kɔ̌ɔ-toot", "english": "sorry / excuse me", "english_ipa": "/ˈsɒri/", "pali": "", "note": "" },
-    { "thai": "ไหว้", "paiboon": "wâi", "english": "to make the wai (gesture of respect)", "english_ipa": "/tə weɪ/", "pali": "", "note": "Palms pressed together in greeting or respect." },
-    { "thai": "อัญชลี", "paiboon": "an-chá-lii", "english": "añjali (palms joined)", "english_ipa": "/ˈændʒəli/", "pali": "añjali", "note": "The gesture of palms together at the chest." },
-    { "thai": "เชิญ", "paiboon": "chəən", "english": "please (go ahead) / welcome", "english_ipa": "/pliːz/", "pali": "", "note": "Inviting someone to proceed." },
-    { "thai": "ยินดี", "paiboon": "yin-dii", "english": "glad / pleased", "english_ipa": "/pliːzd/", "pali": "", "note": "" },
-    { "thai": "ลาก่อน", "paiboon": "laa-gɔ̀ɔn", "english": "goodbye", "english_ipa": "/ˌɡʊdˈbaɪ/", "pali": "", "note": "" },
-    { "thai": "สบายดี", "paiboon": "sà-baai-dii", "english": "to be well", "english_ipa": "/tə biː wɛl/", "pali": "", "note": "" }
+    { "thai": "สวัสดี", "paiboon": "sà-wàt-dii", "english": "hello", "english_respell": "huh-LOH", "english_tip_th": "เน้นพยางค์หลัง LOH — สระ OH เหมือน โ- — L แตะปลายลิ้นหลังฟันบน", "english_ipa": "/həˈləʊ/", "pali": "", "note": "A lay greeting; monks greet laity with เจริญพร.", "note_th": "คำทักทายของโยม พระใช้ เจริญพร แทน" },
+    { "thai": "ขอบคุณ", "paiboon": "kɔ̀ɔp-kun", "english": "thank you", "english_respell": "THANGK yuu", "english_tip_th": "TH เอาปลายลิ้นออกมาระหว่างฟัน ไม่ใช่ ท — ท้ายคำ -NGK ออกให้ครบ", "english_ipa": "/θæŋk juː/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "ขอบใจ", "paiboon": "kɔ̀ɔp-jai", "english": "thanks (to a junior)", "english_respell": "THANGKS", "english_tip_th": "TH ลิ้นระหว่างฟัน — ท้ายคำ -NGKS สามเสียงติดกัน ต้องออกให้ครบ", "english_ipa": "/θæŋks/", "pali": "", "note": "Said to someone younger or of lower standing.", "note_th": "ภาษาอังกฤษไม่แยกตามอาวุโส ใช้ thanks กับทุกคน" },
+    { "thai": "ขอโทษ", "paiboon": "kɔ̌ɔ-toot", "english": "sorry / excuse me", "english_respell": "SO-ree", "english_tip_th": "เน้นพยางค์แรก SO — R กระดกลิ้น ไม่ใช่ ล", "english_ipa": "/ˈsɒri/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "ไหว้", "paiboon": "wâi", "english": "to make the wai (gesture of respect)", "english_respell": "tuh WAY", "english_tip_th": "W ห่อปาก ไม่ใช่ ว กัดฟัน — สระ AY เหมือน เ-", "english_ipa": "/tə weɪ/", "pali": "", "note": "Palms pressed together in greeting or respect.", "note_th": "พนมมือแสดงความเคารพ" },
+    { "thai": "อัญชลี", "paiboon": "an-chá-lii", "english": "añjali (palms joined)", "english_respell": "AN-juh-lee", "english_tip_th": "J ก้อง ไม่ใช่ จ — เน้นพยางค์แรก AN — สระ EE ยาวเหมือน -ี", "english_ipa": "/ˈændʒəli/", "pali": "añjali", "note": "The gesture of palms together at the chest.", "note_th": "การพนมมือระดับอก" },
+    { "thai": "เชิญ", "paiboon": "chəən", "english": "please (go ahead) / welcome", "english_respell": "PLEEZ", "english_tip_th": "PL ควบกล้ำ ออกติดกัน — ท้ายคำเป็น Z ก้อง ไม่ใช่ ส", "english_ipa": "/pliːz/", "pali": "", "note": "Inviting someone to proceed.", "note_th": "เชิญให้ทำหรือให้ไปก่อน" },
+    { "thai": "ยินดี", "paiboon": "yin-dii", "english": "glad / pleased", "english_respell": "PLEEZD", "english_tip_th": "ท้ายคำมีทั้ง Z และ D ก้องติดกัน — อย่าออกเป็น \"พลีส\"", "english_ipa": "/pliːzd/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "ลาก่อน", "paiboon": "laa-gɔ̀ɔn", "english": "goodbye", "english_respell": "gud-BAI", "english_tip_th": "เน้นพยางค์หลัง BAI — สระ AI เหมือน ไ — GUD ท้ายเป็น D ก้อง ไม่ใช่ ต", "english_ipa": "/ˌɡʊdˈbaɪ/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "สบายดี", "paiboon": "sà-baai-dii", "english": "to be well", "english_respell": "tuh bee WEL", "english_tip_th": "W ห่อปาก ไม่ใช่ ว กัดฟัน — WEL ท้ายคำ L แตะปลายลิ้นหลังฟันบน", "english_ipa": "/tə biː wɛl/", "pali": "", "note": "", "note_th": "" }
   ],
   "phrases": [
-    { "thai": "สวัสดีครับ", "paiboon": "sà-wàt-dii kráp", "english": "Hello.", "english_ipa": "/həˈləʊ/", "pali": "", "context": "A layman's greeting (a woman says 'kâ')." },
-    { "thai": "ขอบคุณมากครับ", "paiboon": "kɔ̀ɔp-kun mâak kráp", "english": "Thank you very much.", "english_ipa": "/θæŋk juː ˈvɛri mʌtʃ/", "pali": "", "context": "" },
-    { "thai": "ไม่เป็นไร", "paiboon": "mâi bpen rai", "english": "It's all right / never mind.", "english_ipa": "/ɪts ɔːl raɪt/", "pali": "", "context": "A very common courtesy." },
-    { "thai": "เจริญพรโยม", "paiboon": "jà-rəən-pɔɔn yohm", "english": "Blessings, lay supporter.", "english_ipa": "/ˈblɛsɪŋz/", "pali": "", "context": "A monk's greeting to a layperson." }
+    { "thai": "สวัสดีครับ", "paiboon": "sà-wàt-dii kráp", "english": "Hello.", "english_respell": "huh-LOH", "english_tip_th": "เน้นพยางค์หลัง — ภาษาอังกฤษไม่มีคำลงท้ายแบบ ครับ/ค่ะ ใช้ hello เฉย ๆ", "english_ipa": "/həˈləʊ/", "pali": "", "context": "A layman's greeting (a woman says 'kâ').", "context_th": "คำทักทายของโยมผู้ชาย (ผู้หญิงใช้ ค่ะ)" },
+    { "thai": "ขอบคุณมากครับ", "paiboon": "kɔ̀ɔp-kun mâak kráp", "english": "Thank you very much.", "english_respell": "THANGK yuu VE-ree muhch", "english_tip_th": "TH ลิ้นระหว่างฟัน — V ฟันบนแตะริมฝีปากล่าง ไม่ใช่ ว — CH หนักกว่า ช", "english_ipa": "/θæŋk juː ˈvɛri mʌtʃ/", "pali": "", "context": "", "context_th": "" },
+    { "thai": "ไม่เป็นไร", "paiboon": "mâi bpen rai", "english": "It's all right / never mind.", "english_respell": "its awl RAIT", "english_tip_th": "AWL ท้ายคำ L แตะลิ้นหลังฟันบน — สระ AI เหมือน ไ — ท้าย RAIT ปล่อยลม T", "english_ipa": "/ɪts ɔːl raɪt/", "pali": "", "context": "A very common courtesy.", "context_th": "คำสุภาพที่ใช้บ่อยมาก" },
+    { "thai": "เจริญพรโยม", "paiboon": "jà-rəən-pɔɔn yohm", "english": "Blessings, lay supporter.", "english_respell": "BLE-singz", "english_tip_th": "BL ควบกล้ำ — ท้ายคำ -NGZ มีเสียงก้อง ไม่ใช่ ส", "english_ipa": "/ˈblɛsɪŋz/", "pali": "", "context": "A monk's greeting to a layperson.", "context_th": "คำที่พระใช้ทักทายโยม" }
   ]
 }

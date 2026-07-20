@@ -8,22 +8,23 @@
     "th": "คำเกี่ยวกับความเจ็บป่วย ร่างกาย และการรักษา — สำหรับไปหาหมอ บอกอาการ และปัจจัยคือยา"
   },
   "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register (esp. อาพาธ as the monastic word for being ill).",
+  "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
-    { "thai": "อาพาธ", "paiboon": "aa-pâat", "english": "to be ill (monk's word)", "english_ipa": "/tə biː ɪl/", "pali": "ābādha", "note": "The respectful term for a monk being unwell." },
-    { "thai": "หมอ", "paiboon": "mɔ̌ɔ", "english": "doctor", "english_ipa": "/ˈdɒktə/", "pali": "", "note": "" },
-    { "thai": "โรงพยาบาล", "paiboon": "rooŋ-pá-yaa-baan", "english": "hospital", "english_ipa": "/ˈhɒspɪtl̩/", "pali": "", "note": "" },
-    { "thai": "ยา", "paiboon": "yaa", "english": "medicine", "english_ipa": "/ˈmɛdsn̩/", "pali": "bhesajja", "note": "The requisite of medicine." },
-    { "thai": "ไข้", "paiboon": "kâi", "english": "fever", "english_ipa": "/ˈfiːvə/", "pali": "", "note": "" },
-    { "thai": "ปวด", "paiboon": "bpùat", "english": "to ache", "english_ipa": "/tə eɪk/", "pali": "", "note": "A dull, ongoing pain." },
-    { "thai": "เจ็บ", "paiboon": "jèp", "english": "to hurt / be sore", "english_ipa": "/tə hɜːt/", "pali": "", "note": "A sharp or localised pain." },
-    { "thai": "ป่วย", "paiboon": "bpùai", "english": "to be sick", "english_ipa": "/tə biː sɪk/", "pali": "", "note": "General word for being unwell." },
-    { "thai": "พักผ่อน", "paiboon": "pák-pɔ̀ɔn", "english": "to rest", "english_ipa": "/tə rɛst/", "pali": "", "note": "" },
-    { "thai": "แข็งแรง", "paiboon": "kɛ̌ŋ-rɛɛŋ", "english": "strong / healthy", "english_ipa": "/ˈhɛlθi/", "pali": "", "note": "" }
+    { "thai": "อาพาธ", "paiboon": "aa-pâat", "english": "to be ill (monk's word)", "english_respell": "tuh bee IL", "english_tip_th": "IL ท้ายคำ L แตะปลายลิ้นหลังฟันบน ไม่ใช่ ว — สระ I สั้นเหมือน -ิ", "english_ipa": "/tə biː ɪl/", "pali": "ābādha", "note": "The respectful term for a monk being unwell.", "note_th": "ภาษาอังกฤษไม่มีคำเฉพาะสำหรับพระอาพาธ ใช้ ill เหมือนกันทุกคน" },
+    { "thai": "หมอ", "paiboon": "mɔ̌ɔ", "english": "doctor", "english_respell": "DOK-ter", "english_tip_th": "เน้นพยางค์แรก DOK — ท้าย -ter ไม่มีเสียง R ชัด (สำเนียงอังกฤษ)", "english_ipa": "/ˈdɒktə/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "โรงพยาบาล", "paiboon": "rooŋ-pá-yaa-baan", "english": "hospital", "english_respell": "HOS-pi-tuhl", "english_tip_th": "เน้นพยางค์แรก HOS — ท้ายคำ L แตะปลายลิ้นหลังฟันบน", "english_ipa": "/ˈhɒspɪtl̩/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "ยา", "paiboon": "yaa", "english": "medicine", "english_respell": "MED-sin", "english_tip_th": "สองพยางค์ ไม่ใช่สาม (ไม่ใช่ เม-ดิ-ซิน) — เน้นพยางค์แรก MED", "english_ipa": "/ˈmɛdsn̩/", "pali": "bhesajja", "note": "The requisite of medicine.", "note_th": "ปัจจัยข้อยา" },
+    { "thai": "ไข้", "paiboon": "kâi", "english": "fever", "english_respell": "FEE-ver", "english_tip_th": "F ฟันบนแตะริมฝีปากล่าง — V ก็ฟันบนแตะริมฝีปากล่างแต่มีเสียงก้อง ไม่ใช่ ว", "english_ipa": "/ˈfiːvə/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "ปวด", "paiboon": "bpùat", "english": "to ache", "english_respell": "tuh AYK", "english_tip_th": "สระ AY เหมือน เ- — ท้ายคำ K ปล่อยลมออกให้ได้ยิน — สะกด ache แต่ไม่ออกเสียง CH", "english_ipa": "/tə eɪk/", "pali": "", "note": "A dull, ongoing pain.", "note_th": "อาการปวดตื้อ ๆ ต่อเนื่อง" },
+    { "thai": "เจ็บ", "paiboon": "jèp", "english": "to hurt / be sore", "english_respell": "tuh HERT", "english_tip_th": "สระ ER เหมือน เ-อ — R กระดกลิ้น — ท้ายคำ T ปล่อยลม", "english_ipa": "/tə hɜːt/", "pali": "", "note": "A sharp or localised pain.", "note_th": "อาการเจ็บแปลบหรือเจ็บเฉพาะที่" },
+    { "thai": "ป่วย", "paiboon": "bpùai", "english": "to be sick", "english_respell": "tuh bee SIK", "english_tip_th": "สระ I สั้นเหมือน -ิ — ท้ายคำ K ปล่อยลมออกให้ได้ยิน", "english_ipa": "/tə biː sɪk/", "pali": "", "note": "General word for being unwell.", "note_th": "คำทั่วไปสำหรับความเจ็บป่วย" },
+    { "thai": "พักผ่อน", "paiboon": "pák-pɔ̀ɔn", "english": "to rest", "english_respell": "tuh REST", "english_tip_th": "R กระดกลิ้น ไม่ใช่ ล — ท้ายคำ -ST สองเสียงติดกัน ต้องออกให้ครบ", "english_ipa": "/tə rɛst/", "pali": "", "note": "", "note_th": "" },
+    { "thai": "แข็งแรง", "paiboon": "kɛ̌ŋ-rɛɛŋ", "english": "strong / healthy", "english_respell": "HEL-thee", "english_tip_th": "TH เอาปลายลิ้นออกมาระหว่างฟัน ไม่ใช่ ท — HEL ท้ายพยางค์ L แตะลิ้นหลังฟันบน", "english_ipa": "/ˈhɛlθi/", "pali": "", "note": "", "note_th": "" }
   ],
   "phrases": [
-    { "thai": "อาตมาอาพาธ", "paiboon": "àat-dtà-maa aa-pâat", "english": "I am unwell.", "english_ipa": "/aɪ əm ʌnˈwɛl/", "pali": "", "context": "A monk saying he is ill, in the proper register." },
-    { "thai": "ปวดหัว", "paiboon": "bpùat hǔa", "english": "(I) have a headache.", "english_ipa": "/aɪ həv ə ˈhɛdeɪk/", "pali": "", "context": "Describing a symptom." },
-    { "thai": "ต้องไปหาหมอ", "paiboon": "dtɔ̂ŋ bpai hǎa mɔ̌ɔ", "english": "(I) need to see a doctor.", "english_ipa": "/aɪ niːd tə siː ə ˈdɒktə/", "pali": "", "context": "" },
-    { "thai": "ขอยาหน่อย", "paiboon": "kɔ̌ɔ yaa nɔ̀i", "english": "May I have some medicine?", "english_ipa": "/meɪ aɪ həv sʌm ˈmɛdsn̩/", "pali": "", "context": "Requesting the medicine requisite." }
+    { "thai": "อาตมาอาพาธ", "paiboon": "àat-dtà-maa aa-pâat", "english": "I am unwell.", "english_respell": "ai uhm uhn-WEL", "english_tip_th": "เน้นพยางค์ WEL — W ห่อปาก — ท้ายคำ L แตะปลายลิ้นหลังฟันบน", "english_ipa": "/aɪ əm ʌnˈwɛl/", "pali": "", "context": "A monk saying he is ill, in the proper register.", "context_th": "พระบอกว่าอาพาธ" },
+    { "thai": "ปวดหัว", "paiboon": "bpùat hǔa", "english": "(I) have a headache.", "english_respell": "ai huhv uh HED-ayk", "english_tip_th": "HUHV ท้ายเป็น V ก้อง — HED-ayk ท้ายคำ K ปล่อยลม อย่าตัดทิ้ง", "english_ipa": "/aɪ həv ə ˈhɛdeɪk/", "pali": "", "context": "Describing a symptom.", "context_th": "การบอกอาการ" },
+    { "thai": "ต้องไปหาหมอ", "paiboon": "dtɔ̂ŋ bpai hǎa mɔ̌ɔ", "english": "(I) need to see a doctor.", "english_respell": "ai NEED tuh see uh DOK-ter", "english_tip_th": "NEED สระ EE ยาว ท้ายเป็น D ก้อง ไม่ใช่ ต — SEE สระ EE ยาวเหมือน -ี", "english_ipa": "/aɪ niːd tə siː ə ˈdɒktə/", "pali": "", "context": "", "context_th": "" },
+    { "thai": "ขอยาหน่อย", "paiboon": "kɔ̌ɔ yaa nɔ̀i", "english": "May I have some medicine?", "english_respell": "may ai huhv suhm MED-sin", "english_tip_th": "HUHV ท้ายเป็น V ก้อง ไม่ใช่ ฟ — เสียงขึ้นท้ายประโยคเพราะเป็นคำถาม", "english_ipa": "/meɪ aɪ həv sʌm ˈmɛdsn̩/", "pali": "", "context": "Requesting the medicine requisite.", "context_th": "การขอปัจจัยคือยา" }
   ]
 }

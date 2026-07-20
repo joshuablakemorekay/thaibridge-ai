@@ -8,22 +8,23 @@
     "th": "คำหลักในการสอนและการปฏิบัติ — ธรรมะ การเทศน์ และคำสำคัญที่พระใช้และอธิบาย"
   },
   "_review_note": "DRAFT — Josh to verify Thai script, Paiboon+ romanization, IPA, Pāli and register.",
+  "_english_pron_note": "English-side fields (english_respell / english_tip_th / note_th) follow the system piloted in 01_alms_round.json. Josh to verify all Thai.",
   "vocab": [
-    { "thai": "ธรรมะ", "paiboon": "tam-má", "english": "the Dhamma / teaching", "english_ipa": "/ˈdɑːmə/", "pali": "dhamma", "note": "The Buddha's teaching; the truth." },
-    { "thai": "เทศน์", "paiboon": "têet", "english": "to give a Dhamma talk", "english_ipa": "/tə tiːtʃ/", "pali": "desanā", "note": "To preach or expound the Dhamma." },
-    { "thai": "ปฏิบัติ", "paiboon": "bpà-dtì-bàt", "english": "to practise", "english_ipa": "/tə ˈpræktɪs/", "pali": "paṭipatti", "note": "To put the teaching into practice." },
-    { "thai": "ปัญญา", "paiboon": "bpan-yaa", "english": "wisdom", "english_ipa": "/ˈwɪzdəm/", "pali": "paññā", "note": "Insight; the third of the three trainings." },
-    { "thai": "เมตตา", "paiboon": "mêet-dtaa", "english": "loving-kindness", "english_ipa": "/ˈlʌvɪŋ ˈkaɪndnəs/", "pali": "mettā", "note": "Goodwill towards all beings." },
-    { "thai": "สติ", "paiboon": "sà-dtì", "english": "mindfulness", "english_ipa": "/ˈmaɪndfʊlnəs/", "pali": "sati", "note": "Present-moment awareness." },
-    { "thai": "ทุกข์", "paiboon": "túk", "english": "suffering", "english_ipa": "/ˈsʌfərɪŋ/", "pali": "dukkha", "note": "The first Noble Truth." },
-    { "thai": "นิพพาน", "paiboon": "níp-paan", "english": "Nibbāna", "english_ipa": "/nɪˈbɑːnə/", "pali": "nibbāna", "note": "The end of suffering; the goal." },
-    { "thai": "กรรม", "paiboon": "gam", "english": "kamma / action", "english_ipa": "/ˈkɑːmə/", "pali": "kamma", "note": "Intentional action and its fruit." },
-    { "thai": "อริยสัจ", "paiboon": "à-rí-yá-sàt", "english": "the Noble Truths", "english_ipa": "/ˈnəʊbl̩ truːθs/", "pali": "ariyasacca", "note": "The Four Noble Truths." }
+    { "thai": "ธรรมะ", "paiboon": "tam-má", "english": "the Dhamma / teaching", "english_respell": "DAA-muh", "english_tip_th": "ในภาษาอังกฤษออกเป็น D ธรรมดา ไม่ใช่ TH — เน้นพยางค์แรก สระ AA ยาวเหมือน -า", "english_ipa": "/ˈdɑːmə/", "pali": "dhamma", "note": "The Buddha's teaching; the truth.", "note_th": "คำสอนของพระพุทธเจ้า" },
+    { "thai": "เทศน์", "paiboon": "têet", "english": "to give a Dhamma talk", "english_respell": "tuh TEECH", "english_tip_th": "สระ EE ยาวเหมือน -ี — ท้ายคำ CH หนักกว่า ช และต้องออกให้ได้ยิน", "english_ipa": "/tə tiːtʃ/", "pali": "desanā", "note": "To preach or expound the Dhamma.", "note_th": "การเทศน์หรือแสดงธรรม" },
+    { "thai": "ปฏิบัติ", "paiboon": "bpà-dtì-bàt", "english": "to practise", "english_respell": "tuh PRAK-tis", "english_tip_th": "PR ควบกล้ำ ออกติดกัน อย่าเติมสระ — เน้นพยางค์แรก PRAK", "english_ipa": "/tə ˈpræktɪs/", "pali": "paṭipatti", "note": "To put the teaching into practice.", "note_th": "การนำคำสอนมาปฏิบัติ" },
+    { "thai": "ปัญญา", "paiboon": "bpan-yaa", "english": "wisdom", "english_respell": "WIZ-duhm", "english_tip_th": "W ห่อปาก ไม่ใช่ ว กัดฟัน — Z ก้อง ไม่ใช่ ส — เน้นพยางค์แรก", "english_ipa": "/ˈwɪzdəm/", "pali": "paññā", "note": "Insight; the third of the three trainings.", "note_th": "ปัญญา — ข้อที่สามของไตรสิกขา" },
+    { "thai": "เมตตา", "paiboon": "mêet-dtaa", "english": "loving-kindness", "english_respell": "LUH-ving KAIND-nuhs", "english_tip_th": "V ก้อง ฟันบนแตะริมฝีปากล่าง ไม่ใช่ ว — KAIND ท้ายมี -ND สองเสียง", "english_ipa": "/ˈlʌvɪŋ ˈkaɪndnəs/", "pali": "mettā", "note": "Goodwill towards all beings.", "note_th": "ความปรารถนาดีต่อสรรพสัตว์" },
+    { "thai": "สติ", "paiboon": "sà-dtì", "english": "mindfulness", "english_respell": "MAIND-fuhl-nuhs", "english_tip_th": "สระ AI เหมือน ไ — MAIND ท้ายมี -ND ครบสองเสียง — L แตะลิ้นหลังฟันบน", "english_ipa": "/ˈmaɪndfʊlnəs/", "pali": "sati", "note": "Present-moment awareness.", "note_th": "ความระลึกรู้ในปัจจุบัน" },
+    { "thai": "ทุกข์", "paiboon": "túk", "english": "suffering", "english_respell": "SUH-fuh-ring", "english_tip_th": "F ฟันบนแตะริมฝีปากล่าง ไม่ใช่ พ — R กระดกลิ้น — ท้ายคำ -NG เหมือน ง สะกด", "english_ipa": "/ˈsʌfərɪŋ/", "pali": "dukkha", "note": "The first Noble Truth.", "note_th": "อริยสัจข้อที่หนึ่ง" },
+    { "thai": "นิพพาน", "paiboon": "níp-paan", "english": "Nibbāna", "english_respell": "ni-BAA-nuh", "english_tip_th": "เน้นพยางค์กลาง BAA — สระ AA ยาวเหมือน -า", "english_ipa": "/nɪˈbɑːnə/", "pali": "nibbāna", "note": "The end of suffering; the goal.", "note_th": "ความดับทุกข์ — จุดหมายสูงสุด" },
+    { "thai": "กรรม", "paiboon": "gam", "english": "kamma / action", "english_respell": "KAA-muh", "english_tip_th": "สระ AA ยาวเหมือน -า — เน้นพยางค์แรก — ท้ายคำเบา ๆ", "english_ipa": "/ˈkɑːmə/", "pali": "kamma", "note": "Intentional action and its fruit.", "note_th": "การกระทำที่มีเจตนาและผลของมัน" },
+    { "thai": "อริยสัจ", "paiboon": "à-rí-yá-sàt", "english": "the Noble Truths", "english_respell": "NOH-buhl TRUUTHS", "english_tip_th": "TRUUTHS ท้ายคำมี TH แล้วต่อด้วย S — ยากมาก ต้องเอาลิ้นออกระหว่างฟันแล้วต่อเสียง ส", "english_ipa": "/ˈnəʊbl̩ truːθs/", "pali": "ariyasacca", "note": "The Four Noble Truths.", "note_th": "อริยสัจสี่" }
   ],
   "phrases": [
-    { "thai": "ขอฟังธรรมะ", "paiboon": "kɔ̌ɔ faŋ tam-má", "english": "May I listen to the Dhamma?", "english_ipa": "/meɪ aɪ ˈlɪsn̩ tə ðə ˈdɑːmə/", "pali": "", "context": "A layperson requesting a teaching." },
-    { "thai": "หลวงพ่อเทศน์", "paiboon": "lǔaŋ-pɔ̂ɔ têet", "english": "Luang Por gives a Dhamma talk.", "english_ipa": "/ɡɪvz ə ˈdɑːmə tɔːk/", "pali": "", "context": "" },
-    { "thai": "ปฏิบัติธรรม", "paiboon": "bpà-dtì-bàt tam", "english": "to practise the Dhamma", "english_ipa": "/tə ˈpræktɪs ðə ˈdɑːmə/", "pali": "", "context": "Often used for going on retreat." },
-    { "thai": "ทุกสิ่งไม่เที่ยง", "paiboon": "túk sìŋ mâi tîaŋ", "english": "All things are impermanent.", "english_ipa": "/ɔːl θɪŋz ɑːr ˌɪmˈpɜːmənənt/", "pali": "aniccā", "context": "A core teaching a monk explains often." }
+    { "thai": "ขอฟังธรรมะ", "paiboon": "kɔ̌ɔ faŋ tam-má", "english": "May I listen to the Dhamma?", "english_respell": "may ai LI-suhn tuh dhuh DAA-muh", "english_tip_th": "LI-suhn ตัว T ไม่ออกเสียง — DH ใน \"the\" ก้อง ลิ้นแตะฟันบน", "english_ipa": "/meɪ aɪ ˈlɪsn̩ tə ðə ˈdɑːmə/", "pali": "", "context": "A layperson requesting a teaching.", "context_th": "โยมขอฟังธรรม" },
+    { "thai": "หลวงพ่อเทศน์", "paiboon": "lǔaŋ-pɔ̂ɔ têet", "english": "Luang Por gives a Dhamma talk.", "english_respell": "givz uh DAA-muh TAWK", "english_tip_th": "GIVZ มี V ก้อง แล้วต่อด้วย Z ก้อง — TAWK ตัว L ไม่ออกเสียง", "english_ipa": "/ɡɪvz ə ˈdɑːmə tɔːk/", "pali": "", "context": "", "context_th": "" },
+    { "thai": "ปฏิบัติธรรม", "paiboon": "bpà-dtì-bàt tam", "english": "to practise the Dhamma", "english_respell": "tuh PRAK-tis dhuh DAA-muh", "english_tip_th": "PR ควบกล้ำ — DH ก้อง ลิ้นแตะฟันบน ไม่ใช่ ด", "english_ipa": "/tə ˈpræktɪs ðə ˈdɑːmə/", "pali": "", "context": "Often used for going on retreat.", "context_th": "มักใช้หมายถึงการไปปฏิบัติธรรม" },
+    { "thai": "ทุกสิ่งไม่เที่ยง", "paiboon": "túk sìŋ mâi tîaŋ", "english": "All things are impermanent.", "english_respell": "awl THINGZ aa im-PER-muh-nuhnt", "english_tip_th": "THINGZ ขึ้นต้น TH ลิ้นระหว่างฟัน ลงท้าย Z ก้อง — เน้นพยางค์ PER", "english_ipa": "/ɔːl θɪŋz ɑːr ˌɪmˈpɜːmənənt/", "pali": "aniccā", "context": "A core teaching a monk explains often.", "context_th": "หลักธรรมสำคัญที่พระอธิบายบ่อย" }
   ]
 }

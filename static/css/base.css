@@ -1484,7 +1484,6 @@ body {
 .monk-entry-target { margin-top: 0.35rem; }
 .monk-entry-target .thai { font-size: 1.4rem; font-weight: 600; }
 .monk-entry-word { font-size: 1.15rem; }
-.monk-entry-roman,
 .monk-entry-pron {
     display: block;
     font-family: "Roboto Mono", monospace;
@@ -1493,7 +1492,6 @@ body {
 }
 /* Must come after the display:block above, or it loses to it and the browser's
    own [hidden] rule never gets a look in. */
-.monk-entry-roman[hidden],
 .monk-entry-pron[hidden] { display: none; }
 .monk-entry-meta {
     margin-top: 0.5rem;
