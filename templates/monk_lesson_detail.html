@@ -5,15 +5,34 @@
 {% macro entry_card(e) %}
 <div class="monk-entry">
     {% if direction == 'learn_english' %}
-    {# Thai monk learning English: prompt = Thai, target = English + IPA #}
+    {# Thai monk learning English: prompt = Thai, target = English.
+       Audio is the anchor, the respelling is a memory aid, the Thai tip is the
+       instruction. IPA is for advanced learners and hides by default. #}
+    {# No Paiboon here on purpose: it exists to help a Westerner pronounce Thai,
+       and this reader already reads Thai. #}
     <div class="monk-entry-prompt">
         <span class="thai">{{ e.thai }}</span>
-        <span class="monk-entry-roman">{{ e.paiboon }}</span>
     </div>
     <div class="monk-entry-target">
         <span class="monk-entry-word">{{ e.english }}</span>
-        {% if e.english_ipa %}<span class="monk-entry-pron">{{ e.english_ipa }}</span>{% endif %}
+        {% set audio_url = monk_audio_url(e.english) %}
+        {% if audio_url %}
+        {# Native audio is the anchor — hearing it beats reading any notation.
+           Only drawn when the MP3 exists, so half-generated topics look tidy
+           rather than broken. #}
+        <button type="button" class="monk-audio-btn" data-audio="{{ audio_url }}"
+                aria-label="ฟังเสียง — listen">🔊</button>
+        {% endif %}
+        {% if e.english_respell %}
+        <span class="monk-entry-respell">{{ e.english_respell }}</span>
+        {% endif %}
+        {% if e.english_ipa %}
+        <span class="monk-entry-pron monk-ipa" hidden>{{ e.english_ipa }}</span>
+        {% endif %}
     </div>
+    {% if e.english_tip_th %}
+    <p class="monk-entry-tip thai">{{ e.english_tip_th }}</p>
+    {% endif %}
     {% else %}
     {# Western monk learning Thai: prompt = English, target = Thai + paiboon #}
     <div class="monk-entry-prompt">
@@ -26,8 +45,15 @@
     {% endif %}
     <div class="monk-entry-meta">
         {% if e.pali %}<span class="monk-entry-pali">Pāli: {{ e.pali }}</span>{% endif %}
+        {% if direction == 'learn_english' %}
+        {# Show the Thai gloss, never the English one — an English note is no use
+           to someone who is here to learn English. #}
+        {% if e.note_th %}<span class="monk-entry-note thai">{{ e.note_th }}</span>{% endif %}
+        {% if e.context_th %}<span class="monk-entry-note thai">{{ e.context_th }}</span>{% endif %}
+        {% else %}
         {% if e.note %}<span class="monk-entry-note">{{ e.note }}</span>{% endif %}
         {% if e.context %}<span class="monk-entry-note">{{ e.context }}</span>{% endif %}
+        {% endif %}
     </div>
 </div>
 {% endmacro %}
@@ -44,6 +70,18 @@
     <p>{% if direction == 'learn_english' %}{{ lesson.description.th }}{% else %}{{ lesson.description.en }}{% endif %}</p>
     {% if lesson.pali %}<p class="monk-entry-pali">Pāli: {{ lesson.pali }}</p>{% endif %}
     {% include "partials/monk_direction_switch.html" %}
+
+    {% if direction == 'learn_english' %}
+    {# Optional phonetic detail, for advanced learners and for teachers. Off by
+       default so the ordinary learner is never shown symbols they can't read. #}
+    <label class="monk-ipa-toggle">
+        <input type="checkbox" id="monkIpaToggle"> แสดงสัทอักษร IPA
+        <span class="monk-ipa-toggle-sub">Show IPA (advanced)</span>
+    </label>
+    <a class="monk-pron-link thai" href="/monk/pronunciation">
+        🔤 วิธีอ่านคำอ่าน — How to read the pronunciation
+    </a>
+    {% endif %}
 </div>
 
 <h2>Vocabulary</h2>
@@ -56,5 +94,41 @@
 <div class="monk-entry-list">
     {% for e in lesson.phrases %}{{ entry_card(e) }}{% endfor %}
 </div>
+{% endif %}
+
+{% if direction == 'learn_english' %}
+<script>
+(function () {
+    var toggle = document.getElementById('monkIpaToggle');
+    if (!toggle) return;
+    toggle.addEventListener('change', function () {
+        document.querySelectorAll('.monk-ipa').forEach(function (el) {
+            el.hidden = !toggle.checked;
+        });
+    });
+})();
+
+(function () {
+    // One Audio object reused for every button. Tapping a second word while the
+    // first is still playing should replace it, not talk over it — and a page
+    // with 20 separate <audio> elements is needlessly heavy on a phone.
+    var player = null;
+
+    document.querySelectorAll('.monk-audio-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            if (player) { player.pause(); }
+            player = new Audio(btn.dataset.audio);
+
+            btn.classList.add('is-playing');
+            var clear = function () { btn.classList.remove('is-playing'); };
+            player.addEventListener('ended', clear);
+            // If the file is missing or the browser blocks playback, drop the
+            // highlight rather than leaving the button stuck mid-play.
+            player.addEventListener('error', clear);
+            player.play().catch(clear);
+        });
+    });
+})();
+</script>
 {% endif %}
 {% endblock %}

@@ -4,6 +4,54 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 20 July 2026 — A pronunciation system for Thai monks learning English
+
+**Type:** Feature
+
+**TL;DR**
+- Gave the English side of Monk Mode a proper pronunciation system: **native audio**, a plain respelling, a tip written in Thai, and optional IPA.
+- Left the Western-monk side (learning Thai) exactly as it was, and checked all ten topics to be sure the two directions don't bleed into each other.
+- **Merged and live.** The 140 Thai tips and the Pāli audio are mine to review next — shipped honestly, not perfectly.
+
+**What I built or did**
+Monk Mode serves two readers from one set of lesson files: **Western monks learning Thai**, and **Thai monks learning English**. The Thai-learning side was already in good shape. The English-learning side was the weak half: the only pronunciation help was IPA — symbols most learners can't read — sitting beside Paiboon and English notes that were written for the *other* reader.
+
+I replaced that with four things working together, across all 140 items in 10 topics: **native audio** on every word, a respelling (CAPITALS mark the stressed syllable), a tip in Thai, and IPA behind a toggle. Audio is the anchor — hearing a word beats any way of writing it down — and the rest are memory aids for when the sound has faded.
+
+**Why I did it this way**
+Paiboon exists to write *Thai* sounds and has no symbols for th, v, z or sh — the exact distinctions an English learner needs. It's the right tool for the Western monk and the wrong one for the Thai monk, so the app got its own system for English rather than stretching one never built for it.
+
+The audio is generated once on my machine and the MP3 files are committed — 138 of them, 1.5 MB. The live site just serves them as ordinary files. That means no speech service to pay for per play, no API key to keep safe on the host, and if the tool I used to make them ever disappears, the website doesn't notice.
+
+**How it works**
+Sounds Thai already has are anchored to Thai script (`ai` = ไ). Sounds Thai lacks get mouth instructions instead, because no script can carry them. Each direction shows only what its reader needs. A play button appears next to a word only when its audio file actually exists, so a half-finished topic looks tidy rather than broken.
+
+**What this means for the app**
+Thai monks can now *hear* the English they're learning, not just read a description of it — and Western monks learning Thai get the same experience as before, untouched.
+
+**What I learned**
+My first attempt at the respelling was circular — explaining English with roman letters to someone whose main reference for roman letters *is* English. And I'd written the tips in English, for people learning English. Both only surfaced by testing properly and pushing back.
+
+Three more, all the same shape — **the code was right and the thing in front of me was lying**:
+- I saw the IPA had a "hidden" tag and called it fixed, but a CSS rule was quietly overriding it. **Test what the user sees, not what the code says.**
+- Two audio files "failed" to generate. They hadn't — the *success message* had crashed, because a Windows console can't print the ā in "nibbāna", and the error handler then deleted the perfectly good file it had just made. **Only let the risky step count as a failure.**
+- A `NameError` sent me hunting through correct code. An old copy of the app was still running from earlier and serving the previous version. **Check what's actually running before you debug what's written.**
+
+**How We Did It**
+1. Read the existing Monk Mode code to see what was already there.
+2. Designed a respelling system, then scrapped the first version when it didn't hold up.
+3. Rewrote the tips in Thai and gave them one clear job.
+4. Piloted on one topic, checked it in a real browser, then rolled out to all ten.
+5. Built a guide page teaching both notations.
+6. Generated native audio for all 140 entries and added a play button to each.
+7. Put the filename rule in one shared file, so the script that *writes* the audio and the page that *links* to it can never drift apart and quietly 404.
+8. Checked all 140 entries in both directions, then merged to `main` and went live.
+
+**References / Conversations**
+Claude Code sessions, 20 July 2026. Built on branch `feature/monk-english-pronunciation`, merged to `main` and deployed.
+
+---
+
 ## 19 July 2026 — Making developer login work on the live site
 
 **Type:** Fix / Learning
@@ -88,7 +136,7 @@ I want the app to stay a fun learning challenge, so paying removes the paywall b
 One access check runs three gates in order: alphabet, level, then payment. Monk Mode skips the payment gate; the Pass skips the alphabet and level gates. The Pass is a database flag set by a one-time Stripe payment, with a self-healing migration (adds any missing columns on startup).
 
 **What this means for the app**
-A clear, honest paid model with a generous free core — plus Monk Mode now live for the community.
+A clear, honest paid model with a generous free core — and Monk Mode, built two days earlier, is now reachable by real monks rather than sitting on a branch. Today was about *access*: the lessons themselves didn't change.
 
 **What I learned**
 Testing caught what I couldn't see: two pages were free by accident, the pricing page still advertised now-paid content, and my local database was quietly missing columns. **The gate can be right while the label lies.** And going live taught me a hosting gotcha: a Blueprint-managed host treats its config file as the source of truth, so a variable added only in the dashboard gets wiped on the next deploy — the fix is to declare it in the config.
@@ -129,7 +177,7 @@ Monk lessons live as plain JSON files, one per topic, loaded when the app starts
 Monks and the wider community get genuinely useful, free lessons, and the long pages are far easier to navigate.
 
 **What I learned**
-Check what already exists before building — the accordion was already there. And match the audience: I switched the pronunciation help between IPA and plain respelling and back, learning the "right" choice depends entirely on who's reading.
+Check what already exists before building — the accordion was already there, and I nearly wrote a second one. I also left the English side leaning on IPA, which I already suspected was wrong for the reader but couldn't yet say what should replace it. **Naming a weak spot is worth doing even when you can't fix it yet** — it's what I came back to on the 20th.
 
 **How We Did It**
 1. Untangled two duplicate local copies and picked one clean folder.

@@ -1484,13 +1484,15 @@ body {
 .monk-entry-target { margin-top: 0.35rem; }
 .monk-entry-target .thai { font-size: 1.4rem; font-weight: 600; }
 .monk-entry-word { font-size: 1.15rem; }
-.monk-entry-roman,
 .monk-entry-pron {
     display: block;
     font-family: "Roboto Mono", monospace;
     font-size: 0.9rem;
     color: var(--mekong-blue);
 }
+/* Must come after the display:block above, or it loses to it and the browser's
+   own [hidden] rule never gets a look in. */
+.monk-entry-pron[hidden] { display: none; }
 .monk-entry-meta {
     margin-top: 0.5rem;
     display: flex;
@@ -1500,3 +1502,106 @@ body {
 }
 .monk-entry-pali { font-style: italic; opacity: 0.8; }
 .monk-entry-note { opacity: 0.7; }
+
+/* ── English pronunciation (direction = learn_english) ────────────────────
+   Read the respelling, then the Thai instruction. IPA sits below both and only
+   appears when the learner asks for it. (Audio to follow later — it is meant to
+   be the real anchor, with the respelling as the memory aid.) */
+.monk-entry-respell {
+    display: block;
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--mekong-blue);
+}
+.monk-entry-tip {
+    margin: 0.45rem 0 0;
+    padding: 0.4rem 0.6rem;
+    border-left: 3px solid var(--mekong-blue);
+    background: rgba(0, 0, 0, 0.03);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+/* The play button sits inline next to the English word, so it reads as part of
+   the word rather than as a separate control to hunt for. */
+.monk-audio-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1.05rem;
+    line-height: 1;
+    padding: 0.15rem 0.3rem;
+    border-radius: 6px;
+    /* Comfortably tappable on a phone without making the row taller. */
+    min-width: 2rem;
+    min-height: 2rem;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+.monk-audio-btn:hover { background: var(--bamboo-beige); }
+.monk-audio-btn:focus-visible { outline: 2px solid var(--monk-saffron); }
+.monk-audio-btn.is-playing {
+    background: var(--monk-saffron);
+    transform: scale(1.1);
+}
+
+.monk-ipa-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.monk-ipa-toggle-sub { opacity: 0.6; font-size: 0.8rem; }
+
+.monk-pron-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Tables scroll inside their own box so the page never scrolls sideways on a
+   phone, which is how most of these learners will read it. */
+.monk-pron-table-wrap { overflow-x: auto; margin-bottom: 1.5rem; }
+.monk-pron-table {
+    width: 100%;
+    min-width: 340px;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+}
+.monk-pron-table th,
+.monk-pron-table td {
+    text-align: left;
+    padding: 0.5rem 0.7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    vertical-align: top;
+}
+.monk-pron-table th {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+}
+.monk-pron-table code {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 600;
+    color: var(--mekong-blue);
+}
+.monk-pron-table td.thai { line-height: 1.7; }
+.monk-pron-warn { border-left: 4px solid #c9772f; }
+
+/* Thai leads, English follows as a quieter gloss — the reader here is Thai, and
+   equal weight made the two languages run into each other. */
+.monk-pron-guide .card p.thai { margin-bottom: 0.5rem; }
+.monk-pron-guide .card p:not(.thai) {
+    font-size: 0.88rem;
+    opacity: 0.7;
+    line-height: 1.55;
+}
+.monk-pron-howto {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}

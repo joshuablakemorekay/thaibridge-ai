@@ -13,6 +13,8 @@ import sys
 import json
 import glob
 
+import monk_audio  # shared MP3 filename rules, also used by the build script
+
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
 # UTF-8 output so those print() calls work everywhere.
@@ -511,11 +513,46 @@ MONK_TOPICS_BY_ID = {t['topic']: t for t in MONK_TOPICS}
 MONK_DIRECTIONS = {'learn_thai', 'learn_english'}
 MONK_DIRECTION_DEFAULT = 'learn_thai'   # a Western monk learning Thai
 
+@app.context_processor
+def inject_monk_audio():
+    """Give templates monk_audio_url(english) -> URL, or None if not generated.
+
+    Native audio is the anchor of the English pronunciation system, but it is
+    generated topic by topic, so most entries have no MP3 yet. Returning None
+    lets the template simply leave the play button out for those, instead of
+    rendering a button that 404s.
+    """
+    def monk_audio_url(english):
+        if not monk_audio.audio_exists(app.static_folder, english):
+            return None
+        return url_for('static', filename=monk_audio.audio_static_path(english))
+    return {'monk_audio_url': monk_audio_url}
+
+
 def monk_direction():
     """The current Monk Mode learning direction for this visitor."""
     if 'user_progress' not in session:
         return MONK_DIRECTION_DEFAULT
     return session['user_progress'].get('monk_direction', MONK_DIRECTION_DEFAULT)
+
+
+@app.context_processor
+def inject_static_version():
+    """Give templates static_v(filename) for cache-busting CSS and JS.
+
+    Without this, a browser that has cached base.css keeps using the old copy
+    after a deploy, so style fixes appear not to work. Appending the file's
+    modification time makes each edit a new URL, so the browser refetches.
+    """
+    def static_v(filename):
+        url = url_for('static', filename=filename)
+        try:
+            mtime = int(os.path.getmtime(
+                os.path.join(app.static_folder, filename.replace('/', os.sep))))
+        except OSError:
+            return url
+        return '{}?v={}'.format(url, mtime)
+    return {'static_v': static_v}
 
 
 @app.context_processor
@@ -4434,6 +4471,19 @@ def monk_lesson_detail(topic):
     if not lesson:
         return redirect(url_for('monk_lessons'))
     return render_template('monk_lesson_detail.html', lesson=lesson, direction=monk_direction())
+
+
+@app.route('/monk/pronunciation')
+def monk_pronunciation_guide():
+    """Teaches the two pronunciation notations used on the English side.
+
+    The respelling is what every learner sees by default, so it is taught first
+    and at length. IPA is the optional layer, taught second for those who want
+    it (or for teachers). Mirrors what /paiboon does for the Thai side.
+    """
+    if not monk_mode_active():
+        return redirect(url_for('monk_mode'))
+    return render_template('monk_pronunciation.html', direction=monk_direction())
 
 
 @app.route('/gender-examples')

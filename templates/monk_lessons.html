@@ -14,6 +14,12 @@
     </p>
 
     {% include "partials/monk_direction_switch.html" %}
+
+    {% if direction == 'learn_english' %}
+    <a class="monk-pron-link thai" href="/monk/pronunciation">
+        🔤 วิธีอ่านคำอ่าน — How to read the pronunciation
+    </a>
+    {% endif %}
 </div>
 
 <div class="monk-topic-grid">
