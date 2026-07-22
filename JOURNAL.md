@@ -4,6 +4,51 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## 22 July 2026 — The Alphabet page that was never broken
+
+**Type:** Feature + Bug Fix + Learning
+
+**TL;DR**
+- Rebuilt the **Thai Alphabet page from scratch** — a 44-letter chart, flashcards and a 44-question quiz, all with Thai audio. It's free, and passing it (35/44) unlocks the rest of the site.
+- The "won't open on my iPhone" bug **was never the Alphabet page**. It was three lines of CSS in the shared layout that stacked a 644px sidebar on top of the page content on phones.
+- I rebuilt the same page twice before I thought to ask the phone what was actually happening.
+
+**What I built or did**
+A new Alphabet page with three study modes — a chart of all 44 consonants grouped by class, flashcards, and a quiz — plus 44 Thai audio recordings generated with edge-tts. Passing the quiz stores completion on the user's database row and unlocks 20 other sections. Then I found and fixed the real bug: on a phone the layout collapsed to one column but stacked in source order, putting the sidebar first.
+
+**Why I did it this way**
+The alphabet is the prerequisite for everything else, so it had to be **free** — charging for it would put the whole site behind the paywall with no way in. Completion had to live in the database, not a cookie, or clearing cookies would re-lock the entire site for someone who'd already earned their way in.
+
+**How it works**
+`order` on the mobile breakpoint moves `<main>` above the sidebar visually while leaving the HTML order alone, so screen readers still get nav-then-content:
+
+```css
+.layout > main { order: -1; }
+.layout-sidebar { order: 1; }
+```
+
+**How We Did It**
+1. Deleted 20 commits from GitHub and force-pushed — which silently took an old iOS fix with them.
+2. Built a new Alphabet page. Still "wouldn't open" on the iPhone.
+3. Deleted it entirely and purged it from git history, to rebuild from nothing.
+4. Rebuilt it again from scratch. **Same symptom.**
+5. Checked the backend and frontend properly — both clean, no errors.
+6. Added a temporary beacon so the phone could report back.
+7. The phone said the page loaded **perfectly, six times, all 44 letters**. That killed the whole theory.
+8. Measured the layout at 390px: the heading was 1.4 screens down, the first letter 2.6 screens down.
+9. Three lines of CSS. Fixed.
+
+**What this means for the app**
+Every page with a sidebar is now usable on a phone, not just this one.
+
+**What I learned**
+**When a rebuilt-from-scratch component fails identically, stop rebuilding it.** Two identical failures were telling me the cause was somewhere else, and I didn't listen. The fix that mattered took twenty minutes once I stopped guessing and made the broken device report what it was actually doing — measuring beats theorising, and I should have reached for it far sooner.
+
+**References / Conversations**
+Claude Code session, 22 July 2026. Confirmed working on iPhone (iOS 18.7 / Safari 26.5.2). Full 32-test suite passing.
+
+---
+
 ## 20 July 2026 (late) — Where the "freely given" line actually falls
 
 **Type:** Decision
