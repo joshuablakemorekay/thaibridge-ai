@@ -14,6 +14,7 @@ import json
 import glob
 
 import monk_audio  # shared MP3 filename rules, also used by the build script
+import thai_consonants  # the 44 consonants + their recordings (Alphabet page)
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -135,6 +136,15 @@ class User(UserMixin, db.Model):
     current_period_end     = db.Column(db.DateTime)                 # when the paid period runs out (renewal/expiry)
     full_unlock            = db.Column(db.Boolean, default=False, nullable=False)  # one-time "Instant Access Pass" add-on: skips the level gates
 
+    # --- Alphabet gate ---
+    # The alphabet is the prerequisite for every other content section, so
+    # "have they passed it?" cannot live in the session cookie alone: clearing
+    # cookies or opening the site on a second device would re-lock the whole
+    # site for someone who has already earned their way in. The database is the
+    # source of truth for logged-in users; the session is only a cache of it.
+    alphabet_completed     = db.Column(db.Boolean, default=False, nullable=False)
+    alphabet_completed_at  = db.Column(db.DateTime)
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -170,6 +180,8 @@ def _ensure_user_columns():
         'stripe_subscription_id': "VARCHAR(64)",
         'current_period_end':     "DATETIME",
         'full_unlock':            "BOOLEAN NOT NULL DEFAULT 0",
+        'alphabet_completed':     "BOOLEAN NOT NULL DEFAULT 0",
+        'alphabet_completed_at':  "DATETIME",
     }
     existing = {c['name'] for c in inspect(db.engine).get_columns('users')}
     added = False
@@ -253,6 +265,10 @@ SECTION_REQUIREMENTS = {
     # teachings stay free, the structured practice tooling built on top of them
     # is part of the paid product.
     'home': {'level': 1, 'tier': 'free', 'points_reward': 0},
+    # The alphabet is free on purpose. It is the prerequisite for every
+    # section below, so charging for it would put the whole site behind the
+    # paywall with no way in.
+    'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
     'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40},
 
     # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
@@ -261,32 +277,32 @@ SECTION_REQUIREMENTS = {
     # Still gated by level/XP as well as the tier.
     'meditation': {'level': 1, 'tier': 'basic', 'points_reward': 40},
     'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10},
-    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0},
-    'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15},
-    'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15},
-    'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20},
-    'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15},
-    'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15},
-    'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25},
+    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0, 'requires_alphabet': True},
+    'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
+    'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     # Consonant classes + tone rules. Its content was moved here from the Grammar
     # page, so it's gated the same way — Basic tier, level 3.
-    'tones_classes': {'level': 3, 'tier': 'basic', 'points_reward': 25},
-    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20},
-    'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30},
-    'register': {'level': 4, 'tier': 'basic', 'points_reward': 25},
-    'formality': {'level': 4, 'tier': 'basic', 'points_reward': 25},
-    'gender_examples': {'level': 4, 'tier': 'basic', 'points_reward': 20},
-    'sentences': {'level': 5, 'tier': 'basic', 'points_reward': 35},
-    'greetings_wai': {'level': 5, 'tier': 'basic', 'points_reward': 30},
-    'classifiers': {'level': 5, 'tier': 'basic', 'points_reward': 30},
-    'tour_guide': {'level': 4, 'tier': 'basic', 'points_reward': 25},
-    'business_thai': {'level': 5, 'tier': 'basic', 'points_reward': 30},
+    'tones_classes': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+    'register': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'formality': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'gender_examples': {'level': 4, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    'sentences': {'level': 5, 'tier': 'basic', 'points_reward': 35, 'requires_alphabet': True},
+    'greetings_wai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+    'classifiers': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+    'tour_guide': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'business_thai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
 
     # ── PRO — Thai Master (£19.99) ───────────────────────────────────────
     # The premium power tools. Unlimited AI is enforced separately in the
     # /api/ai/chat route, and Monk Mode never lifts the AI cap.
-    'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50},
-    'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100},
+    'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50, 'requires_alphabet': True},
+    'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100, 'requires_alphabet': True},
 }
 
 # Subscription tiers
@@ -406,7 +422,7 @@ def init_user_progress():
             'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
             'monk_accent': MONK_ACCENT_DEFAULT,   # 'uk' or 'us' (English-side accent)
             'full_unlock': False,  # optional paid add-on (on top of Pro): skips the level grind
-            'sections_unlocked': ['home', 'theravada'],
+            'sections_unlocked': ['home', 'alphabet', 'theravada'],
             'sections_visited': [],
             'achievements_earned': [],
             'quizzes_completed': 0,
@@ -417,6 +433,8 @@ def init_user_progress():
             'login_streak': 1,
             'last_login': datetime.now().isoformat(),
             'daily_points_earned': 0,
+            'alphabet_completed': False,
+            'alphabet_completed_at': None,
         }
         session.modified = True
 
@@ -719,19 +737,14 @@ def add_xp(points, action_description=""):
 def check_section_access(section_id):
     """Check whether the current user can open a section.
 
-    Two independent gates, checked in order: level/XP and subscription tier.
-    Developer mode bypasses both.
+    Three independent gates, checked in order: alphabet completion, level/XP,
+    and subscription tier. Developer mode bypasses all of them.
 
     Monk Mode waives ONLY the subscription-tier gate — every content section
-    becomes free — while still requiring the right level. Monks earn their way
-    up by levelling like everyone else; they just never hit the paywall. (The
-    AI usage cap is enforced separately in the chat route, so Monk Mode never
-    makes the costly AI tutor unlimited.)
-
-    There was once a third gate here requiring the Thai Alphabet page to be
-    completed before anything else opened. The alphabet page was withdrawn, so
-    that gate went with it — leaving it in place would have locked every user
-    out of the whole site with no way to satisfy it.
+    becomes free — while still requiring alphabet completion and the right
+    level. Monks earn their way up by levelling like everyone else; they just
+    never hit the paywall. (The AI usage cap is enforced separately in the
+    chat route, so Monk Mode never makes the costly AI tutor unlimited.)
     """
     init_user_progress()
     user = session['user_progress']
@@ -746,16 +759,21 @@ def check_section_access(section_id):
     requirements = SECTION_REQUIREMENTS[section_id]
 
     # The optional "full unlock" add-on (a paid extra on top of Thai Master)
-    # removes the progression grind: it skips the level gate so everything opens
-    # instantly. It never touches the tier gate (it's sold on top of Pro, which
-    # already grants tier access) nor the AI usage cap.
+    # removes the progression grind: it skips the alphabet and level gates so
+    # everything opens instantly. It never touches the tier gate (it's sold on
+    # top of Pro, which already grants tier access) nor the AI usage cap.
     full_unlock = has_full_unlock()
 
-    # Gate 1 — level / XP (skipped by the full-unlock add-on)
+    # Gate 1 — alphabet completion (skipped by the full-unlock add-on)
+    if not full_unlock and requirements.get('requires_alphabet', False):
+        if not check_alphabet_completion():
+            return False, "Complete Thai Alphabet first"
+
+    # Gate 2 — level / XP (skipped by the full-unlock add-on)
     if not full_unlock and user['level'] < requirements['level']:
         return False, f"Requires Level {requirements['level']}"
 
-    # Gate 2 — subscription tier (payment). Monk Mode waives THIS, and only
+    # Gate 3 — subscription tier (payment). Monk Mode waives THIS, and only
     # this, free of charge. Everyone else is held to their real tier.
     if not user.get('monk_mode', False):
         required_tier = requirements['tier']
@@ -1856,6 +1874,74 @@ def fix_romanization_spacing(text):
     result = ' '.join(result.split())
     
     return result
+
+# ============================================
+# THAI ALPHABET — COMPLETION TRACKING
+# ============================================
+
+# How many of the 44 must be right to pass the quiz and unlock the rest of the
+# site. 80% — high enough to mean something, forgiving enough that a couple of
+# slips on the obsolete letters don't send you back to the start.
+ALPHABET_QUIZ_TOTAL = 44
+ALPHABET_QUIZ_PASS_MARK = 35
+
+
+def check_alphabet_completion():
+    """Has this visitor passed the alphabet?
+
+    Same split as active_tier() and has_full_unlock(): for a logged-in user the
+    DATABASE is the source of truth, because the alphabet gates every other
+    section and must survive a cleared cookie or a move to another device.
+    Anonymous visitors have nowhere to persist it, so they fall back to the
+    session and lose it when the cookie goes.
+
+    A logged-in user's session copy is refreshed on the way past, so anything
+    reading session['user_progress'] directly sees the truth too.
+    """
+    init_user_progress()
+    user = session['user_progress']
+
+    if current_user.is_authenticated:
+        done = bool(getattr(current_user, 'alphabet_completed', False))
+        if user.get('alphabet_completed') != done:
+            user['alphabet_completed'] = done
+            session.modified = True
+        return done
+
+    return user.get('alphabet_completed', False)
+
+
+def mark_alphabet_complete():
+    """Record a pass. True the first time only, False if already done.
+
+    Writes to the database for logged-in users so the unlock is permanent, and
+    always updates the session so the current page reacts immediately.
+    """
+    init_user_progress()
+    user = session['user_progress']
+
+    if check_alphabet_completion():
+        return False
+
+    user['alphabet_completed'] = True
+    user['alphabet_completed_at'] = datetime.now().isoformat()
+
+    if current_user.is_authenticated:
+        current_user.alphabet_completed = True
+        current_user.alphabet_completed_at = datetime.utcnow()
+        try:
+            db.session.commit()
+        except Exception:                              # noqa: BLE001
+            # A failed write must not cost the user the unlock they just earned;
+            # they keep it for this session and re-earn the permanent record next
+            # time if it never lands.
+            db.session.rollback()
+            app.logger.exception('Could not persist alphabet completion')
+
+    add_xp(100, 'Completed Thai Alphabet')
+    session.modified = True
+    return True
+
 
 # ============================================
 # THERAVADA TEACHINGS
@@ -5550,7 +5636,7 @@ def progress_dashboard():
         elif level > 1:
             requirement_message = f"Requires Level {level} to unlock"
         else:
-            requirement_message = "Available now"
+            requirement_message = "Complete Thai Alphabet first"
 
         section_info = {
             'id': section_id,
@@ -6307,6 +6393,73 @@ def user_stats():
 def formality_guide():
     """Display formality system guide"""
     return render_template('formality.html', levels=FORMALITY_LEVELS)
+
+
+# ============================================
+# THAI ALPHABET ROUTES
+# ============================================
+
+@app.route('/alphabet')
+def thai_alphabet():
+    """The Thai Alphabet page — the free gateway to the rest of the site.
+
+    Deliberately NOT wrapped in @require_access: this is the one page a brand
+    new visitor must always be able to open, because passing it is what unlocks
+    everything else.
+    """
+    init_user_progress()
+    return render_template(
+        'alphabet.html',
+        consonants=thai_consonants.CONSONANTS,
+        class_labels=thai_consonants.CLASS_LABELS,
+        alphabet_complete=check_alphabet_completion(),
+        quiz_total=ALPHABET_QUIZ_TOTAL,
+        quiz_pass_mark=ALPHABET_QUIZ_PASS_MARK,
+        user_progress=session['user_progress'])
+
+
+@app.route('/api/complete_alphabet', methods=['POST'])
+def complete_alphabet():
+    """Record a quiz result and, if it is a pass, unlock the rest of the site.
+
+    The score is re-checked here rather than taken on trust. The browser can
+    claim anything; this endpoint is what actually opens 20 gated sections, so
+    it does its own arithmetic.
+    """
+    data = request.get_json(silent=True) or {}
+
+    try:
+        score = int(data.get('score', -1))
+    except (TypeError, ValueError):
+        score = -1
+
+    if not 0 <= score <= ALPHABET_QUIZ_TOTAL:
+        return jsonify({
+            'success': False,
+            'message': 'That score does not look right. Please take the quiz again.'
+        }), 400
+
+    if score < ALPHABET_QUIZ_PASS_MARK:
+        return jsonify({
+            'success': False,
+            'passed': False,
+            'score': score,
+            'pass_mark': ALPHABET_QUIZ_PASS_MARK,
+            'message': 'You need {} out of {} to pass. Have another go.'.format(
+                ALPHABET_QUIZ_PASS_MARK, ALPHABET_QUIZ_TOTAL)
+        })
+
+    first_time = mark_alphabet_complete()
+    return jsonify({
+        'success': True,
+        'passed': True,
+        'score': score,
+        'first_time': first_time,
+        'xp_earned': 100 if first_time else 0,
+        'message': ('Alphabet complete! +100 XP — every section is now open.'
+                    if first_time else
+                    'Passed again — you had already unlocked the site.')
+    })
 
 
 # ============================================

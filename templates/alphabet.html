@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Thai Alphabet - ThaiBridge AI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ static_v('css/alphabet.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>🔤 Thai Alphabet</h1>
+    <p>The 44 Thai consonants — the foundation everything else on this site is
+       built on. Study the chart, drill them with flashcards, then pass the quiz
+       to unlock the rest of ThaiBridge AI. It's free, and you can retake the
+       quiz as many times as you like.</p>
+
+    {% if alphabet_complete %}
+    <p class="abc-status">✅ You've completed the Thai Alphabet — every section
+       is unlocked. Come back any time to revise.</p>
+    {% else %}
+    <p class="abc-status abc-status--todo">🔓 Score {{ quiz_pass_mark }} out of
+       {{ quiz_total }} on the quiz to unlock the rest of the site and earn
+       100 XP.</p>
+    {% endif %}
+
+    {# Three study modes as tabs, not one long page. Only one panel is in the
+       document at a time, which keeps the page short — page height was the
+       trigger for the iOS renderer crash this page suffered before. #}
+    <div class="abc-tabs" role="tablist" aria-label="Study modes">
+        <button class="abc-tab" role="tab" id="tab-chart"
+                aria-controls="panel-chart" aria-selected="true">📋 Chart</button>
+        <button class="abc-tab" role="tab" id="tab-cards"
+                aria-controls="panel-cards" aria-selected="false">🃏 Flashcards</button>
+        <button class="abc-tab" role="tab" id="tab-quiz"
+                aria-controls="panel-quiz" aria-selected="false">✏️ Quiz</button>
+    </div>
+
+    <!-- ── Chart ────────────────────────────────────────────── -->
+    <section class="abc-panel" id="panel-chart" role="tabpanel"
+             aria-labelledby="tab-chart">
+        <p>Tap any letter to hear it and see its name, meaning and class.</p>
+        <div id="chart-groups"></div>
+    </section>
+
+    <!-- ── Flashcards ───────────────────────────────────────── -->
+    <section class="abc-panel" id="panel-cards" role="tabpanel"
+             aria-labelledby="tab-cards" hidden>
+        <p>Look at the letter, say its name out loud, then reveal to check.</p>
+
+        <div class="abc-card" id="flashcard">
+            <div class="abc-card-letter" id="card-letter" lang="th"></div>
+            {# No [hidden] here — the back is hidden with CSS visibility, so
+               revealing needs no animation frame and no transition. #}
+            <div class="abc-card-back" id="card-back">
+                <div class="abc-card-name" id="card-name"></div>
+                <div class="abc-card-thai" id="card-thai" lang="th"></div>
+                <div class="abc-card-meaning" id="card-meaning"></div>
+            </div>
+        </div>
+
+        <div class="abc-controls">
+            <button class="abc-btn" id="card-reveal">Reveal</button>
+            <button class="abc-audio" id="card-audio">🔊 Listen</button>
+        </div>
+        <div class="abc-controls">
+            <button class="abc-btn abc-btn--ghost" id="card-prev">← Back</button>
+            <span class="abc-counter" id="card-counter" aria-live="polite"></span>
+            <button class="abc-btn abc-btn--ghost" id="card-next">Next →</button>
+        </div>
+        <div class="abc-controls">
+            <button class="abc-btn abc-btn--ghost" id="card-shuffle">🔀 Shuffle</button>
+        </div>
+    </section>
+
+    <!-- ── Quiz ─────────────────────────────────────────────── -->
+    <section class="abc-panel" id="panel-quiz" role="tabpanel"
+             aria-labelledby="tab-quiz" hidden>
+
+        <div id="quiz-intro">
+            <p>{{ quiz_total }} questions, one for every consonant. You need
+               <strong>{{ quiz_pass_mark }} correct</strong> to pass. Some
+               questions show you a letter, others play its sound.</p>
+            <div class="abc-controls">
+                <button class="abc-btn" id="quiz-start">Start the quiz</button>
+            </div>
+        </div>
+
+        <div id="quiz-play" hidden>
+            <div class="abc-progress">
+                <div class="abc-progress-bar" id="quiz-bar"></div>
+            </div>
+            <p class="abc-counter" id="quiz-counter" aria-live="polite"></p>
+
+            <div class="abc-question">
+                <p class="abc-question-prompt" id="quiz-prompt"></p>
+                <div class="abc-question-letter" id="quiz-letter" lang="th"></div>
+                <button class="abc-audio" id="quiz-audio" hidden>🔊 Play sound</button>
+            </div>
+
+            <div class="abc-options" id="quiz-options"></div>
+            <p class="abc-feedback" id="quiz-feedback" role="status" aria-live="polite"></p>
+
+            <div class="abc-controls">
+                <button class="abc-btn" id="quiz-next" hidden>Next question →</button>
+            </div>
+        </div>
+
+        <div id="quiz-result" class="abc-result" hidden>
+            <div class="abc-result-score" id="result-score"></div>
+            <p class="abc-result-verdict" id="result-verdict"></p>
+            <p id="result-message"></p>
+            <div class="abc-controls">
+                <button class="abc-btn" id="quiz-retry">Try again</button>
+                <a class="abc-btn abc-btn--ghost" href="/tones-classes"
+                   id="result-continue" hidden>Continue to Tones →</a>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+{# The letters are handed over as one JSON block rather than being written into
+   the markup 44 times. Jinja's tojson escapes it safely for a script tag. #}
+<script id="abc-data" type="application/json">{{ consonants|tojson }}</script>
+<script>
+    window.ABC_CONFIG = {
+        passMark: {{ quiz_pass_mark }},
+        classLabels: {{ class_labels|tojson }},
+        staticBase: "{{ url_for('static', filename='') }}"
+    };
+</script>
+<script src="{{ static_v('js/alphabet.js') }}"></script>
+{% endblock %}

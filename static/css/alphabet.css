@@ -1,0 +1,333 @@
+/* Thai Alphabet page
+   ==================
+   Mobile-first. The base rules describe a phone; media queries add room as the
+   screen grows.
+
+   THREE THINGS ARE BANNED IN THIS FILE. All three have broken this page before:
+
+     1. 3D transforms — rotateY / preserve-3d / backface-visibility / perspective.
+        The original flashcard "flip" used them and crashed iOS Safari's
+        renderer. The flip here is a plain show/hide.
+     2. background-attachment: fixed. Same crash, different cause — it forces
+        the whole background to re-composite over the full scroll height every
+        frame. (It lives in base.css, where it has been removed twice now.)
+     3. Making content legible only at the END of a transition. A CSS transition
+        does not advance in a throttled or backgrounded tab, which once left a
+        revealed answer stuck at opacity:0 after the user had already tapped
+        Reveal. Show/hide is instant here, on purpose.
+
+   Height matters too: the crash threshold was a tall page. The three study
+   modes are tabs rather than one long scroll so only one is ever in the
+   document at a time. */
+
+/* ── Mode tabs ─────────────────────────────────────────────── */
+
+.abc-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1.5rem 0 1rem;
+    flex-wrap: wrap;
+}
+
+.abc-tab {
+    flex: 1 1 auto;
+    min-height: 44px;                 /* comfortable tap target */
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--royal-purple);
+    background: #fff;
+    color: var(--royal-purple);
+    border-radius: 8px;
+    font: 600 1rem inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.abc-tab[aria-selected="true"] {
+    background: var(--royal-purple);
+    color: #fff;
+}
+
+.abc-tab:focus-visible,
+.abc-btn:focus-visible,
+.abc-audio:focus-visible,
+.abc-cell:focus-visible,
+.abc-option:focus-visible {
+    outline: 3px solid var(--royal-gold);
+    outline-offset: 2px;
+}
+
+.abc-panel[hidden] { display: none; }
+
+/* ── Status banner ─────────────────────────────────────────── */
+
+.abc-status {
+    padding: 1rem 1.25rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    border: 2px solid var(--bodhi-green);
+    background: #e8f5e9;
+    color: var(--palm-green);
+    font-weight: 600;
+}
+
+.abc-status--todo {
+    border-color: var(--royal-gold);
+    background: var(--frangipani);
+    color: var(--teak-wood);
+}
+
+/* ── Buttons ───────────────────────────────────────────────── */
+
+.abc-btn {
+    min-height: 44px;
+    padding: 0.7rem 1.25rem;
+    border: 2px solid var(--royal-purple);
+    background: var(--royal-purple);
+    color: #fff;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.abc-btn--ghost { background: #fff; color: var(--royal-purple); }
+.abc-btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+.abc-audio {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0.5rem 0.9rem;
+    border: 2px solid var(--bodhi-green);
+    background: #fff;
+    color: var(--bodhi-green);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.abc-audio.is-playing { background: var(--bodhi-green); color: #fff; }
+
+.abc-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Chart ─────────────────────────────────────────────────── */
+
+.abc-class-heading {
+    margin: 1.5rem 0 0.75rem;
+    color: var(--royal-purple);
+    font-size: 1.15rem;
+}
+
+.abc-grid {
+    display: grid;
+    /* auto-fill means the chart reflows from 3 columns on a small phone to 8 on
+       a desktop without a single media query. */
+    grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+    gap: 0.5rem;
+}
+
+.abc-cell {
+    min-height: 78px;
+    padding: 0.5rem 0.25rem;
+    border: 2px solid var(--bamboo-beige);
+    border-radius: 10px;
+    background: var(--coconut-white);
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    text-align: center;
+}
+
+.abc-cell[aria-expanded="true"] {
+    border-color: var(--royal-gold);
+    background: var(--frangipani);
+}
+
+.abc-cell-letter {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    color: var(--dark-text);
+}
+
+.abc-cell-name {
+    font-size: 0.7rem;
+    color: var(--monsoon-grey);
+    overflow-wrap: anywhere;      /* keep cells square; names are long */
+}
+
+/* The detail strip is a SIBLING of the grid, not a child of a cell, so opening
+   it can never reflow the grid into a different number of columns mid-tap. */
+.abc-detail {
+    margin-top: 0.75rem;
+    padding: 1rem;
+    border: 2px solid var(--royal-gold);
+    border-radius: 10px;
+    background: var(--frangipani);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+}
+
+.abc-detail[hidden] { display: none; }
+
+.abc-detail-letter {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--royal-purple);
+}
+
+.abc-detail-text { flex: 1 1 12rem; }
+.abc-detail-name { font-weight: 700; color: var(--dark-text); font-size: 1.05rem; }
+.abc-detail-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.15rem; color: var(--teak-wood); }
+.abc-detail-meta { font-size: 0.9rem; color: var(--monsoon-grey); }
+
+/* ── Flashcards ────────────────────────────────────────────── */
+
+.abc-card {
+    border: 2px solid var(--royal-gold);
+    border-radius: 15px;
+    background: var(--coconut-white);
+    padding: 2rem 1rem;
+    text-align: center;
+    /* A fixed minimum stops the card changing height between front and back,
+       which on a phone shunts the buttons out from under your thumb mid-tap. */
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.abc-card-letter {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 5.5rem;
+    line-height: 1;
+    color: var(--royal-purple);
+}
+
+/* The "flip": instant, no transition. See the header note. visibility rather
+   than display keeps the space reserved (no height jump) and keeps the answer
+   out of the screen-reader tree until it is revealed. */
+.abc-card-back { visibility: hidden; }
+.abc-card.is-revealed .abc-card-back { visibility: visible; }
+
+.abc-card-name { font-size: 1.4rem; font-weight: 700; color: var(--dark-text); }
+.abc-card-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.5rem; color: var(--teak-wood); }
+.abc-card-meaning { color: var(--monsoon-grey); }
+
+.abc-counter {
+    font-size: 0.95rem;
+    color: var(--monsoon-grey);
+    min-width: 6rem;
+    text-align: center;
+}
+
+/* ── Quiz ──────────────────────────────────────────────────── */
+
+.abc-progress {
+    height: 10px;
+    border-radius: 5px;
+    background: var(--bamboo-beige);
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+/* Width is set directly in JS. No transition: the bar is information, and
+   information should not depend on frames being painted. */
+.abc-progress-bar { height: 100%; width: 0; background: var(--bodhi-green); }
+
+.abc-question {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border: 2px solid var(--bamboo-beige);
+    border-radius: 12px;
+    background: var(--coconut-white);
+}
+
+.abc-question-prompt { color: var(--monsoon-grey); margin-bottom: 0.5rem; }
+
+.abc-question-letter {
+    font-family: 'Noto Serif Thai', serif;
+    font-size: 5rem;
+    line-height: 1;
+    color: var(--royal-purple);
+}
+
+.abc-options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.abc-option {
+    min-height: 48px;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--royal-purple);
+    background: #fff;
+    color: var(--dark-text);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.abc-option-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.6rem; }
+
+/* Right and wrong are never signalled by colour alone — the JS also writes a
+   ✓ or ✗ into the label, so the answer still reads if you cannot tell the two
+   colours apart. */
+.abc-option.is-correct { border-color: var(--bodhi-green); background: #e8f5e9; font-weight: 700; }
+.abc-option.is-wrong   { border-color: var(--hibiscus-red); background: #fdecea; font-weight: 700; }
+.abc-option[disabled]  { cursor: default; }
+
+.abc-feedback {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.abc-feedback:empty { display: none; }
+.abc-feedback.is-correct { background: #e8f5e9; color: var(--palm-green); }
+.abc-feedback.is-wrong   { background: #fdecea; color: var(--temple-red); }
+
+.abc-result { text-align: center; padding: 1rem 0; }
+
+.abc-result-score {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--royal-purple);
+    line-height: 1.1;
+}
+
+.abc-result-verdict { font-size: 1.2rem; margin: 0.5rem 0 1rem; }
+.abc-result-verdict.is-pass { color: var(--palm-green); }
+.abc-result-verdict.is-fail { color: var(--temple-red); }
+
+/* ── Bigger screens ────────────────────────────────────────── */
+
+@media (min-width: 640px) {
+    .abc-tab { flex: 0 0 auto; }
+    .abc-options { grid-template-columns: 1fr 1fr; }
+    .abc-card-letter { font-size: 7rem; }
+}
