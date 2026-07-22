@@ -6463,59 +6463,6 @@ def complete_alphabet():
 
 
 # ============================================
-# TEMPORARY CLIENT DIAGNOSTICS
-# ============================================
-# Remove this whole section once the iPhone problem is solved. It exists
-# because the Alphabet page will not open on one specific phone while every
-# desktop check says it is healthy — so the only way forward is to have the
-# device itself report what happened.
-#
-# Kept in memory rather than in a file or the database: this is throwaway
-# debugging data, it must not survive a restart, and it must not need a
-# migration to remove. A bounded deque means it cannot grow without limit even
-# if something starts posting in a loop.
-
-from collections import deque
-
-CLIENT_LOG = deque(maxlen=200)
-
-
-@app.route('/api/client-log', methods=['POST'])
-def client_log():
-    """Receive one diagnostic report from a browser. Always returns 204."""
-    try:
-        data = request.get_json(silent=True) or {}
-        # Only keep the fields we asked for, capped in size — this endpoint is
-        # open to the internet and should not become a way to fill memory.
-        entry = {
-            'at': datetime.now().isoformat(timespec='seconds'),
-            'ip_hint': (request.headers.get('X-Forwarded-For', '') or '?')[:20],
-        }
-        for key in ('page', 'kind', 'detail', 'ua', 'screen', 'viewport', 'dpr'):
-            value = data.get(key)
-            entry[key] = str(value)[:300] if value is not None else None
-        marks = data.get('marks')
-        entry['marks'] = [str(m)[:40] for m in marks[:20]] if isinstance(marks, list) else None
-        CLIENT_LOG.append(entry)
-    except Exception:                                  # noqa: BLE001
-        pass
-    return ('', 204)
-
-
-@app.route('/api/client-log/dump')
-def client_log_dump():
-    """Read the reports back. Newest first.
-
-    Diagnostic data only — page path, browser version, screen size and any
-    error message. No user content and nothing personal.
-    """
-    return jsonify({
-        'count': len(CLIENT_LOG),
-        'entries': list(CLIENT_LOG)[::-1],
-    })
-
-
-# ============================================
 # AI CHAT ROUTES
 # ============================================
 

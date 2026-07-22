@@ -37,6 +37,7 @@ A shared **sidebar** lists these sub-pages; a shared **right column** offers dic
 
 | Page | Route | Purpose / key content |
 |------|-------|------------------------|
+| Alphabet | `/alphabet` | The 44 consonants — chart, flashcards and quiz, with audio. Free; passing the quiz (35/44) unlocks the other sections |
 | Vowels & Syllables | `/vowels_syllables` | How Thai vowels and syllables work |
 | Paiboon Romanization | `/paiboon` | Your custom Paiboon+ romanization system explained |
 | Grammar Guide | `/grammar` | Core grammar rules and patterns |

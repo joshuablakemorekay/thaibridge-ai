@@ -55,10 +55,11 @@ I worked in public, kept an honest build journal, and made a few deliberate call
 
 ThaiBridge AI is a server-rendered Flask app with:
 
+- 🔤 **[Thai Alphabet](https://thaibridge-ai.onrender.com/alphabet)** *(free)* — all 44 consonants with a tap-to-hear chart, flashcards and a 44-question quiz, each letter recorded in Thai. Passing it (35/44) unlocks the rest of the site
 - 🔤 **Vocabulary lessons**, written so complete beginners can read straight away
 - 🔊 **[Tones & Consonant Classes](https://thaibridge-ai.smoald.com/tones-classes)** *(new · Basic tier)* — a unified section that teaches the three consonant classes and the tone rules together (they're really one skill), with four progressive practice drills that plug into the same points-and-levels engine as everything else
 - 🤖 **An AI tutor with six modes** — conversation, grammar, quiz generation, culture, Buddhism and gentle hints — powered by the Claude API, with a strict shared pronunciation rulebook injected into every prompt so the romanization stays consistent
-- 📚 **Lessons, grammar, culture and temple-etiquette modules** (paid tiers), with the **full Theravada Buddhism track free for everyone**
+- 📚 **Lessons, grammar, culture and temple-etiquette modules** (paid tiers), with the **Thai alphabet and the full Theravada Buddhism track free for everyone**
 - 🔐 **Real user accounts** — proper sign-up, log-in and log-out, with passwords stored safely (hashed)
 - 💳 **Freemium subscriptions** (Free · Buddhist Scholar £9.99 · Thai Master £19.99) through Stripe, plus an optional one-time **Instant Access Pass** (£9.99) that unlocks every section at once
 - 🏆 **Gamification** — points, levels and achievements, with a learning path that unlocks as you go (paying opens a tier; you still level up to reach each section)
