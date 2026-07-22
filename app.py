@@ -133,7 +133,7 @@ class User(UserMixin, db.Model):
     stripe_customer_id     = db.Column(db.String(64), index=True)   # 'cus_...' — links this user to Stripe
     stripe_subscription_id = db.Column(db.String(64), index=True)   # 'sub_...' — the active subscription, if any
     current_period_end     = db.Column(db.DateTime)                 # when the paid period runs out (renewal/expiry)
-    full_unlock            = db.Column(db.Boolean, default=False, nullable=False)  # one-time "Instant Access Pass" add-on: skips the level/alphabet gates
+    full_unlock            = db.Column(db.Boolean, default=False, nullable=False)  # one-time "Instant Access Pass" add-on: skips the level gates
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -243,8 +243,8 @@ XP_LEVELS = {
 # Section unlock requirements (level and/or subscription tier)
 SECTION_REQUIREMENTS = {
     # ── FREE for everyone (whether Monk Mode is on or off) ────────────────
-    # The free foundation: the alphabet (the gateway that unlocks levelling)
-    # plus the Theravada Dhamma teachings — the Dhamma itself is freely given.
+    # The free foundation: the Theravada Dhamma teachings — the Dhamma itself
+    # is freely given.
     # Every other content section sits behind a paid tier (see below), on TOP
     # of its level/XP requirement.
     #
@@ -252,46 +252,41 @@ SECTION_REQUIREMENTS = {
     # from a bare timer into guided sessions and full technique guides: the
     # teachings stay free, the structured practice tooling built on top of them
     # is part of the paid product.
-    'home': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': False},
-    'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
-    'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40, 'requires_alphabet': False},
+    'home': {'level': 1, 'tier': 'free', 'points_reward': 0},
+    'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40},
 
     # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
     # Culture, and the exercises), plus the meditation practice tooling.
     # Still gated by level/XP as well as the tier.
-    #
-    # requires_alphabet stays False for meditation: it is practice tooling, not
-    # Thai-language content, so making it wait on the alphabet would gate it on
-    # something unrelated.
-    'meditation': {'level': 1, 'tier': 'basic', 'points_reward': 40, 'requires_alphabet': False},
-    'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10, 'requires_alphabet': False},
-    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0, 'requires_alphabet': True},
-    'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
-    'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
-    'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
+    'meditation': {'level': 1, 'tier': 'basic', 'points_reward': 40},
+    'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10},
+    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0},
+    'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15},
+    'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15},
+    'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20},
+    'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15},
+    'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15},
+    'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25},
     # Consonant classes + tone rules. Its content was moved here from the Grammar
-    # page, so it's gated the same way — Basic tier, level 3, alphabet required.
-    'tones_classes': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
-    'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
-    'register': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'formality': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'gender_examples': {'level': 4, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
-    'sentences': {'level': 5, 'tier': 'basic', 'points_reward': 35, 'requires_alphabet': True},
-    'greetings_wai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
-    'classifiers': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
-    'tour_guide': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'business_thai': {'level': 5, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
+    # page, so it's gated the same way — Basic tier, level 3.
+    'tones_classes': {'level': 3, 'tier': 'basic', 'points_reward': 25},
+    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20},
+    'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30},
+    'register': {'level': 4, 'tier': 'basic', 'points_reward': 25},
+    'formality': {'level': 4, 'tier': 'basic', 'points_reward': 25},
+    'gender_examples': {'level': 4, 'tier': 'basic', 'points_reward': 20},
+    'sentences': {'level': 5, 'tier': 'basic', 'points_reward': 35},
+    'greetings_wai': {'level': 5, 'tier': 'basic', 'points_reward': 30},
+    'classifiers': {'level': 5, 'tier': 'basic', 'points_reward': 30},
+    'tour_guide': {'level': 4, 'tier': 'basic', 'points_reward': 25},
+    'business_thai': {'level': 5, 'tier': 'basic', 'points_reward': 30},
 
     # ── PRO — Thai Master (£19.99) ───────────────────────────────────────
     # The premium power tools. Unlimited AI is enforced separately in the
     # /api/ai/chat route, and Monk Mode never lifts the AI cap.
-    'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50, 'requires_alphabet': True},
-    'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100, 'requires_alphabet': True},
+    'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50},
+    'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100},
 }
 
 # Subscription tiers
@@ -300,7 +295,6 @@ SUBSCRIPTION_TIERS = {
         'name': 'Free Explorer (Free)',
         'price': 0,
         'features': [
-            '✓ Full Thai alphabet course (44 consonants, 32 vowels)',
             '✓ Theravada Buddhism teachings',
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Progress tracking & levelling',
@@ -340,12 +334,12 @@ SUBSCRIPTION_TIERS = {
 }
 
 # Optional one-time add-on sold on top of Thai Master (Pro): the Instant Access
-# Pass flips full_unlock, skipping the level + alphabet gates so every section
+# Pass flips full_unlock, skipping the level gates so every section
 # opens instantly. Built with inline Stripe pricing (no dashboard product needed).
 INSTANT_ACCESS_ADDON = {
     'name': 'Instant Access Pass',
     'price': 9.99,
-    'blurb': 'A one-time unlock for Thai Master members — open every section instantly, with no levelling and no alphabet prerequisite.',
+    'blurb': 'A one-time unlock for Thai Master members — open every section instantly, with no levelling.',
 }
 
 # Points awarded for different actions
@@ -411,8 +405,8 @@ def init_user_progress():
             'monk_mode': False,   # free, monk-tailored track for monastics (code-gated)
             'monk_direction': MONK_DIRECTION_DEFAULT,   # 'learn_thai' or 'learn_english'
             'monk_accent': MONK_ACCENT_DEFAULT,   # 'uk' or 'us' (English-side accent)
-            'full_unlock': False,  # optional paid add-on (on top of Pro): skips the level/alphabet grind
-            'sections_unlocked': ['home', 'alphabet', 'theravada'],
+            'full_unlock': False,  # optional paid add-on (on top of Pro): skips the level grind
+            'sections_unlocked': ['home', 'theravada'],
             'sections_visited': [],
             'achievements_earned': [],
             'quizzes_completed': 0,
@@ -423,8 +417,6 @@ def init_user_progress():
             'login_streak': 1,
             'last_login': datetime.now().isoformat(),
             'daily_points_earned': 0,
-            'alphabet_completed': False,
-            'alphabet_completion_date': None,
         }
         session.modified = True
 
@@ -466,7 +458,7 @@ def monk_mode_active():
     """Monk Mode: a free, all-content-unlocked mode offered to Buddhist monks
     and the Thai diaspora.
 
-    When it's on, every content gate (level, alphabet requirement and
+    When it's on, every content gate (level and
     subscription tier) is bypassed at no charge. It intentionally does NOT lift
     the AI daily usage cap, because AI calls cost real money — unlimited free AI
     is a separate decision, kept out of scope on purpose.
@@ -727,14 +719,19 @@ def add_xp(points, action_description=""):
 def check_section_access(section_id):
     """Check whether the current user can open a section.
 
-    Three independent gates, checked in order: alphabet completion, level/XP,
-    and subscription tier. Developer mode bypasses all of them.
+    Two independent gates, checked in order: level/XP and subscription tier.
+    Developer mode bypasses both.
 
     Monk Mode waives ONLY the subscription-tier gate — every content section
-    becomes free — while still requiring alphabet completion and the right
-    level. Monks earn their way up by levelling like everyone else; they just
-    never hit the paywall. (The AI usage cap is enforced separately in the
-    chat route, so Monk Mode never makes the costly AI tutor unlimited.)
+    becomes free — while still requiring the right level. Monks earn their way
+    up by levelling like everyone else; they just never hit the paywall. (The
+    AI usage cap is enforced separately in the chat route, so Monk Mode never
+    makes the costly AI tutor unlimited.)
+
+    There was once a third gate here requiring the Thai Alphabet page to be
+    completed before anything else opened. The alphabet page was withdrawn, so
+    that gate went with it — leaving it in place would have locked every user
+    out of the whole site with no way to satisfy it.
     """
     init_user_progress()
     user = session['user_progress']
@@ -749,21 +746,16 @@ def check_section_access(section_id):
     requirements = SECTION_REQUIREMENTS[section_id]
 
     # The optional "full unlock" add-on (a paid extra on top of Thai Master)
-    # removes the progression grind: it skips the alphabet and level gates so
-    # everything opens instantly. It never touches the tier gate (it's sold on
-    # top of Pro, which already grants tier access) nor the AI usage cap.
+    # removes the progression grind: it skips the level gate so everything opens
+    # instantly. It never touches the tier gate (it's sold on top of Pro, which
+    # already grants tier access) nor the AI usage cap.
     full_unlock = has_full_unlock()
 
-    # Gate 1 — alphabet completion (skipped by the full-unlock add-on)
-    if not full_unlock and requirements.get('requires_alphabet', False):
-        if not check_alphabet_completion():
-            return False, "Complete Thai Alphabet first"
-
-    # Gate 2 — level / XP (skipped by the full-unlock add-on)
+    # Gate 1 — level / XP (skipped by the full-unlock add-on)
     if not full_unlock and user['level'] < requirements['level']:
         return False, f"Requires Level {requirements['level']}"
 
-    # Gate 3 — subscription tier (payment). Monk Mode waives THIS, and only
+    # Gate 2 — subscription tier (payment). Monk Mode waives THIS, and only
     # this, free of charge. Everyone else is held to their real tier.
     if not user.get('monk_mode', False):
         required_tier = requirements['tier']
@@ -1832,127 +1824,6 @@ VOCABULARY = {
 }
 
 
-# ============================================
-# THAI ALPHABET - COMPLETE SYSTEM
-# ============================================
-
-THAI_ALPHABET = {
-    'consonants': {
-        'title': 'Thai Consonants (พยัญชนะ)',
-        'description': 'There are 44 consonant letters in Thai, representing 21 distinct sounds.',
-        'groups': {
-            'middle_class': {
-                'name': 'Middle Class Consonants (อักษรกลาง)',
-                'description': 'Used with mid tone, 9 consonants',
-                'letters': [
-                    {'thai': 'ก', 'paiboon': 'g', 'name': 'gɔɔ gài', 'meaning': 'chicken', 'example': {'thai': 'กา', 'paiboon': 'gaa', 'english': 'crow'}},
-                    {'thai': 'จ', 'paiboon': 'j', 'name': 'jɔɔ jaan', 'meaning': 'plate', 'example': {'thai': 'จาน', 'paiboon': 'jaan', 'english': 'plate'}},
-                    {'thai': 'ฎ', 'paiboon': 'd', 'name': 'dɔɔ chá-daa', 'meaning': 'headdress', 'example': {'thai': 'ชฎา', 'paiboon': 'chá-daa', 'english': 'headdress'}},
-                    {'thai': 'ฏ', 'paiboon': 'dt', 'name': 'dtɔɔ bpà-dtàk', 'meaning': 'goad', 'example': {'thai': 'ปฏัก', 'paiboon': 'bpà-dtàk', 'english': 'goad'}},
-                    {'thai': 'ด', 'paiboon': 'd', 'name': 'dɔɔ dèk', 'meaning': 'child', 'example': {'thai': 'เด็ก', 'paiboon': 'dèk', 'english': 'child'}},
-                    {'thai': 'ต', 'paiboon': 'dt', 'name': 'dtɔɔ dtào', 'meaning': 'turtle', 'example': {'thai': 'เต่า', 'paiboon': 'dtào', 'english': 'turtle'}},
-                    {'thai': 'บ', 'paiboon': 'b', 'name': 'bɔɔ bai-máai', 'meaning': 'leaf', 'example': {'thai': 'ใบไม้', 'paiboon': 'bai máai', 'english': 'leaf'}},
-                    {'thai': 'ป', 'paiboon': 'bp', 'name': 'bpɔɔ bplaa', 'meaning': 'fish', 'example': {'thai': 'ปลา', 'paiboon': 'bplaa', 'english': 'fish'}},
-                    {'thai': 'อ', 'paiboon': '', 'name': 'ɔɔ àang', 'meaning': 'basin', 'example': {'thai': 'อ่าง', 'paiboon': 'àang', 'english': 'basin'}},
-                ]
-            },
-            'high_class': {
-                'name': 'High Class Consonants (อักษรสูง)',
-                'description': 'Used with rising tone, 11 consonants',
-                'letters': [
-                    {'thai': 'ข', 'paiboon': 'k', 'name': 'kɔ̌ɔ kài', 'meaning': 'egg', 'example': {'thai': 'ไข่', 'paiboon': 'kài', 'english': 'egg'}},
-                    {'thai': 'ฃ', 'paiboon': 'k', 'name': 'kɔ̌ɔ kùat', 'meaning': 'bottle', 'example': {'thai': 'ขวด', 'paiboon': 'kùat', 'english': 'bottle'}},
-                    {'thai': 'ฉ', 'paiboon': 'ch', 'name': 'chɔ̌ɔ chíng', 'meaning': 'cymbal', 'example': {'thai': 'ฉิ่ง', 'paiboon': 'chìng', 'english': 'cymbal'}},
-                    {'thai': 'ฐ', 'paiboon': 't', 'name': 'tɔ̌ɔ tǎan', 'meaning': 'base', 'example': {'thai': 'ฐาน', 'paiboon': 'tǎan', 'english': 'base'}},
-                    {'thai': 'ถ', 'paiboon': 't', 'name': 'tɔ̌ɔ tǔng', 'meaning': 'bag', 'example': {'thai': 'ถุง', 'paiboon': 'tǔng', 'english': 'bag'}},
-                    {'thai': 'ผ', 'paiboon': 'p', 'name': 'pɔ̌ɔ pʉ̌ng', 'meaning': 'bee', 'example': {'thai': 'ผึ้ง', 'paiboon': 'pʉ̂ng', 'english': 'bee'}},
-                    {'thai': 'ฝ', 'paiboon': 'f', 'name': 'fɔ̌ɔ fǎa', 'meaning': 'lid', 'example': {'thai': 'ฝา', 'paiboon': 'fǎa', 'english': 'lid'}},
-                    {'thai': 'ศ', 'paiboon': 's', 'name': 'sɔ̌ɔ sǎa-laa', 'meaning': 'pavilion', 'example': {'thai': 'ศาลา', 'paiboon': 'sǎa-laa', 'english': 'pavilion'}},
-                    {'thai': 'ษ', 'paiboon': 's', 'name': 'sɔ̌ɔ rʉ̌-sǐi', 'meaning': 'hermit', 'example': {'thai': 'ฤๅษี', 'paiboon': 'rʉ-sǐi', 'english': 'hermit'}},
-                    {'thai': 'ส', 'paiboon': 's', 'name': 'sɔ̌ɔ sʉ̌a', 'meaning': 'tiger', 'example': {'thai': 'เสือ', 'paiboon': 'sʉ̌a', 'english': 'tiger'}},
-                    {'thai': 'ห', 'paiboon': 'h', 'name': 'hɔ̌ɔ hìip', 'meaning': 'chest', 'example': {'thai': 'หีบ', 'paiboon': 'hìip', 'english': 'chest'}},
-                ]
-            },
-            'low_class': {
-                'name': 'Low Class Consonants (อักษรต่ำ)',
-                'description': 'Used with low/falling tone, 24 consonants',
-                'letters': [
-                    {'thai': 'ค', 'paiboon': 'k', 'name': 'kɔɔ kwai', 'meaning': 'buffalo', 'example': {'thai': 'ควาย', 'paiboon': 'kwaai', 'english': 'buffalo'}},
-                    {'thai': 'ฅ', 'paiboon': 'k', 'name': 'kɔɔ kon', 'meaning': 'person', 'example': {'thai': 'คน', 'paiboon': 'kon', 'english': 'person'}},
-                    {'thai': 'ฆ', 'paiboon': 'k', 'name': 'kɔɔ rá-kaang', 'meaning': 'bell', 'example': {'thai': 'ระฆัง', 'paiboon': 'rá-kaang', 'english': 'bell'}},
-                    {'thai': 'ง', 'paiboon': 'ng', 'name': 'ngɔɔ nguu', 'meaning': 'snake', 'example': {'thai': 'งู', 'paiboon': 'nguu', 'english': 'snake'}},
-                    {'thai': 'ช', 'paiboon': 'ch', 'name': 'chɔɔ cháang', 'meaning': 'elephant', 'example': {'thai': 'ช้าง', 'paiboon': 'cháang', 'english': 'elephant'}},
-                    {'thai': 'ซ', 'paiboon': 's', 'name': 'sɔɔ sôo', 'meaning': 'chain', 'example': {'thai': 'โซ่', 'paiboon': 'sôo', 'english': 'chain'}},
-                    {'thai': 'ฌ', 'paiboon': 'ch', 'name': 'chɔɔ chəə', 'meaning': 'tree', 'example': {'thai': 'เฌอ', 'paiboon': 'chəə', 'english': 'tree'}},
-                    {'thai': 'ญ', 'paiboon': 'y', 'name': 'yɔɔ yǐng', 'meaning': 'woman', 'example': {'thai': 'หญิง', 'paiboon': 'yǐng', 'english': 'woman'}},
-                    {'thai': 'ฑ', 'paiboon': 't', 'name': 'tɔɔ mon-too', 'meaning': 'Montho', 'example': {'thai': 'มณโฑ', 'paiboon': 'mon-too', 'english': 'Montho'}},
-                    {'thai': 'ฒ', 'paiboon': 't', 'name': 'tɔɔ pûu-tâo', 'meaning': 'elder', 'example': {'thai': 'ผู้เฒ่า', 'paiboon': 'pûu-tâo', 'english': 'elder'}},
-                    {'thai': 'ณ', 'paiboon': 'n', 'name': 'nɔɔ neen', 'meaning': 'novice monk', 'example': {'thai': 'เณร', 'paiboon': 'neen', 'english': 'novice monk'}},
-                    {'thai': 'ท', 'paiboon': 't', 'name': 'tɔɔ tá-hǎan', 'meaning': 'soldier', 'example': {'thai': 'ทหาร', 'paiboon': 'tá-hǎan', 'english': 'soldier'}},
-                    {'thai': 'ธ', 'paiboon': 't', 'name': 'tɔɔ tong', 'meaning': 'flag', 'example': {'thai': 'ธง', 'paiboon': 'tong', 'english': 'flag'}},
-                    {'thai': 'น', 'paiboon': 'n', 'name': 'nɔɔ nǔu', 'meaning': 'mouse', 'example': {'thai': 'หนู', 'paiboon': 'nǔu', 'english': 'mouse'}},
-                    {'thai': 'พ', 'paiboon': 'p', 'name': 'pɔɔ paan', 'meaning': 'tray', 'example': {'thai': 'พาน', 'paiboon': 'paan', 'english': 'tray'}},
-                    {'thai': 'ฟ', 'paiboon': 'f', 'name': 'fɔɔ fan', 'meaning': 'tooth', 'example': {'thai': 'ฟัน', 'paiboon': 'fan', 'english': 'tooth'}},
-                    {'thai': 'ภ', 'paiboon': 'p', 'name': 'pɔɔ sǎm-pao', 'meaning': 'sailboat', 'example': {'thai': 'สำเภา', 'paiboon': 'sǎm-pao', 'english': 'sailboat'}},
-                    {'thai': 'ม', 'paiboon': 'm', 'name': 'mɔɔ máa', 'meaning': 'horse', 'example': {'thai': 'ม้า', 'paiboon': 'máa', 'english': 'horse'}},
-                    {'thai': 'ย', 'paiboon': 'y', 'name': 'yɔɔ yák', 'meaning': 'giant', 'example': {'thai': 'ยักษ์', 'paiboon': 'yák', 'english': 'giant'}},
-                    {'thai': 'ร', 'paiboon': 'r', 'name': 'rɔɔ rʉa', 'meaning': 'boat', 'example': {'thai': 'เรือ', 'paiboon': 'rʉa', 'english': 'boat'}},
-                    {'thai': 'ล', 'paiboon': 'l', 'name': 'lɔɔ ling', 'meaning': 'monkey', 'example': {'thai': 'ลิง', 'paiboon': 'ling', 'english': 'monkey'}},
-                    {'thai': 'ว', 'paiboon': 'w', 'name': 'wɔɔ wɛ̌ɛn', 'meaning': 'ring', 'example': {'thai': 'แหวน', 'paiboon': 'wɛ̌ɛn', 'english': 'ring'}},
-                    {'thai': 'ฬ', 'paiboon': 'l', 'name': 'lɔɔ jù-laa', 'meaning': 'kite', 'example': {'thai': 'จุฬา', 'paiboon': 'jù-laa', 'english': 'kite'}},
-                    {'thai': 'ฮ', 'paiboon': 'h', 'name': 'hɔɔ nók-hûuk', 'meaning': 'owl', 'example': {'thai': 'นกฮูก', 'paiboon': 'nók-hûuk', 'english': 'owl'}},
-                ]
-            }
-        }
-    },
-    
-    'vowels': {
-        'title': 'Thai Vowels (สระ)',
-        'description': 'Thai has 32 vowel forms (including combinations) representing 18 distinct vowel sounds.',
-        'short_vowels': [
-            {'thai': 'อะ', 'paiboon': 'à', 'example': {'thai': 'กะ', 'paiboon': 'gà'}},
-            {'thai': 'อิ', 'paiboon': 'ì', 'example': {'thai': 'กิ', 'paiboon': 'gì'}},
-            {'thai': 'อึ', 'paiboon': 'ʉ̀', 'example': {'thai': 'กึ', 'paiboon': 'gʉ̀'}},
-            {'thai': 'อุ', 'paiboon': 'ù', 'example': {'thai': 'กุ', 'paiboon': 'gù'}},
-            {'thai': 'เอะ', 'paiboon': 'è', 'example': {'thai': 'เกะ', 'paiboon': 'gè'}},
-            {'thai': 'แอะ', 'paiboon': 'ɛ̀', 'example': {'thai': 'แกะ', 'paiboon': 'gɛ̀'}},
-            {'thai': 'โอะ', 'paiboon': 'ò', 'example': {'thai': 'โกะ', 'paiboon': 'gò'}},
-            {'thai': 'เอาะ', 'paiboon': 'ɔ̀', 'example': {'thai': 'เกาะ', 'paiboon': 'gɔ̀'}},
-            {'thai': 'เอิ', 'paiboon': 'ə̀', 'example': {'thai': 'เกิ', 'paiboon': 'gə̀'}},
-        ],
-        'long_vowels': [
-            {'thai': 'อา', 'paiboon': 'aa', 'example': {'thai': 'กา', 'paiboon': 'gaa', 'english': 'crow'}},
-            {'thai': 'อี', 'paiboon': 'ii', 'example': {'thai': 'กี', 'paiboon': 'gii'}},
-            {'thai': 'อือ', 'paiboon': 'ʉʉ', 'example': {'thai': 'กือ', 'paiboon': 'gʉʉ'}},
-            {'thai': 'อู', 'paiboon': 'uu', 'example': {'thai': 'กู', 'paiboon': 'guu'}},
-            {'thai': 'เอ', 'paiboon': 'ee', 'example': {'thai': 'เก', 'paiboon': 'gee'}},
-            {'thai': 'แอ', 'paiboon': 'ɛɛ', 'example': {'thai': 'แก', 'paiboon': 'gɛɛ'}},
-            {'thai': 'โอ', 'paiboon': 'oo', 'example': {'thai': 'โก', 'paiboon': 'goo'}},
-            {'thai': 'ออ', 'paiboon': 'ɔɔ', 'example': {'thai': 'กอ', 'paiboon': 'gɔɔ'}},
-            {'thai': 'เออ', 'paiboon': 'əə', 'example': {'thai': 'เกอ', 'paiboon': 'gəə'}},
-        ],
-    },
-    
-    'tone_marks': {
-        'title': 'Tone Marks (วรรณยุกต์)',
-        'description': 'Thai has 4 tone marks that modify the inherent tone.',
-        'marks': [
-            {'symbol': '่', 'name': 'mái èek', 'paiboon': 'falling (à)', 'example': {'thai': 'ก่า', 'paiboon': 'gàa'}},
-            {'symbol': '้', 'name': 'mái tôo', 'paiboon': 'high (â)', 'example': {'thai': 'ก้า', 'paiboon': 'gâa'}},
-            {'symbol': '๊', 'name': 'mái dtrii', 'paiboon': 'low (ǎ)', 'example': {'thai': 'ก๊า', 'paiboon': 'gǎa'}},
-            {'symbol': '๋', 'name': 'mái jàt-dtà-waa', 'paiboon': 'rising (ǎ)', 'example': {'thai': 'ก๋า', 'paiboon': 'gǎa'}},
-        ]
-    },
-    
-    'special_characters': {
-        'title': 'Special Characters',
-        'characters': [
-            {'symbol': 'ๆ', 'name': 'mai yamok', 'use': 'Repetition mark', 'example': {'thai': 'เด็กๆ', 'paiboon': 'dèk dèk', 'english': 'children'}},
-            {'symbol': '์', 'name': 'gaaran', 'use': 'Silent letter marker', 'example': {'thai': 'จันทร์', 'paiboon': 'jan', 'english': 'moon'}},
-            {'symbol': 'ฯ', 'name': 'paiyannoi', 'use': 'Abbreviation mark', 'example': {'thai': 'กทม.', 'paiboon': 'Bangkok', 'english': 'Bangkok'}},
-        ]
-    }
-}
 
 # Spacing fix function
 def fix_romanization_spacing(text):
@@ -1985,30 +1856,6 @@ def fix_romanization_spacing(text):
     result = ' '.join(result.split())
     
     return result
-
-# Alphabet completion tracking
-def check_alphabet_completion():
-    """Check if user has completed Thai alphabet"""
-    init_user_progress()
-    user = session['user_progress']
-    return user.get('alphabet_completed', False)
-
-def mark_alphabet_complete():
-    """Mark alphabet as completed"""
-    init_user_progress()
-    user = session['user_progress']
-    
-    if not user.get('alphabet_completed', False):
-        user['alphabet_completed'] = True
-        user['alphabet_completion_date'] = datetime.now().isoformat()
-        
-        # Award XP for completion
-        add_xp(100, 'Completed Thai Alphabet')
-        
-        session.modified = True
-        return True
-    return False
-
 
 # ============================================
 # THERAVADA TEACHINGS
@@ -5703,7 +5550,7 @@ def progress_dashboard():
         elif level > 1:
             requirement_message = f"Requires Level {level} to unlock"
         else:
-            requirement_message = "Complete Thai Alphabet first"
+            requirement_message = "Available now"
 
         section_info = {
             'id': section_id,
@@ -5915,7 +5762,7 @@ def addon_instant_access_stripe():
     """One-time Stripe Checkout (TEST mode) for the Instant Access Pass.
 
     Sold on top of Thai Master (Pro): a single payment that sets full_unlock,
-    skipping the level + alphabet gates so every section opens instantly. It
+    skipping the level gates so every section opens instantly. It
     requires an active Pro subscription (the add-on removes the grind, not the
     paywall) and is a no-op if they already own it."""
     if current_user.effective_tier != 'pro':
@@ -6463,40 +6310,6 @@ def formality_guide():
 
 
 # ============================================
-# THAI ALPHABET ROUTES
-# ============================================
-
-@app.route('/alphabet')
-def thai_alphabet():
-    """Thai Alphabet learning page"""
-    init_user_progress()
-    user = session['user_progress']
-    alphabet_complete = check_alphabet_completion()
-    
-    return render_template('alphabet.html',
-                         alphabet=THAI_ALPHABET,
-                         alphabet_complete=alphabet_complete,
-                         user_progress=user)
-
-@app.route('/api/complete_alphabet', methods=['POST'])
-def complete_alphabet():
-    """Mark alphabet as completed"""
-    result = mark_alphabet_complete()
-    
-    if result:
-        return jsonify({
-            'success': True,
-            'message': 'Alphabet completed! +100 XP earned!',
-            'xp_earned': 100
-        })
-    else:
-        return jsonify({
-            'success': False,
-            'message': 'Alphabet already completed'
-        })
-
-
-# ============================================
 # AI CHAT ROUTES
 # ============================================
 
@@ -6547,7 +6360,6 @@ def ai_chat():
         user_context = {
             'level': session.get('level', 1),
             'xp': session.get('xp', 0),
-            'alphabet_completed': session.get('alphabet_completed', False),
             'name': session.get('username', 'Student')
         }
 
@@ -6677,14 +6489,12 @@ if __name__ == '__main__':
     print("🪷 ThaiBridge AI v3.0 + AI")
     print("=" * 60)
     print("Features:")
-    print("  • Thai Alphabet (44 consonants, 32 vowels)")
     print("  • 6 Vocabulary Categories (20 words each)")
     print("  • Theravada Buddhism: Suttas, Abhidhamma, Vinaya")
     print("  • Meditation Timer: Samatha & Vipassana")
     print("  • 10-Level Progression System")
     print("  • XP & Achievements")
     print("  • 3 Subscription Tiers")
-    print("  • Alphabet Completion Requirement")
     print("  • 🤖 AI Learning Assistant (6 modes)")
     print("  • Developer Mode (Password: set via DEVELOPER_PASSWORD env var)")
     print("=" * 60)

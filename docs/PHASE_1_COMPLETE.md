@@ -133,7 +133,6 @@ AI: [Gives gentle hint pointing to rule,
 The AI knows:
 - Your current level (1-10)
 - Your total XP
-- If you've completed the alphabet
 - Your learning progress
 
 It automatically:

@@ -27,7 +27,7 @@ def make_user(tier="free", xp=0, level=1):
         "subscription_tier": tier,
         "subscription_expires": None,
         "is_developer": False,
-        "sections_unlocked": ["home", "paiboon", "learn", "alphabet"],
+        "sections_unlocked": ["home", "paiboon", "learn"],
         "sections_visited": [],
         "achievements_earned": [],
         "quizzes_completed": 0,
@@ -38,8 +38,6 @@ def make_user(tier="free", xp=0, level=1):
         "login_streak": 1,
         "last_login": "2026-01-01T00:00:00",
         "daily_points_earned": 0,
-        "alphabet_completed": False,
-        "alphabet_completion_date": None,
     }
 
 

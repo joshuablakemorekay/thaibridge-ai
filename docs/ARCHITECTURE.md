@@ -114,7 +114,7 @@ This single file holds the entire web app. It's organised top-to-bottom roughly 
 5. **Helper functions** — things like `add_xp()`, `get_user_level()`,
    `check_section_access()`, `check_achievements()`, and a `require_access()` decorator
    that locks a page behind a level/tier requirement.
-6. **Routes** — about 60 of them: page routes (`/`, `/alphabet`, `/chat`, `/dictionary`…)
+6. **Routes** — about 60 of them: page routes (`/`, `/chat`, `/dictionary`…)
    and JSON API routes (`/api/...`) that the front-end calls for quizzes, points, and AI.
 
 **Design note:** keeping everything in one file makes the app very easy to run and read
@@ -181,7 +181,7 @@ file, removes duplicates, and falls back gracefully if the enriched file isn't t
 ### `templates/` — the actual web pages (~30 files)
 
 Standard Jinja2 templates (HTML with placeholders Flask fills in). They all extend
-`base.html` for shared layout. There's one template per feature — `alphabet.html`,
+`base.html` for shared layout. There's one template per feature —
 `dictionary.html`, `chat.html`, `meditation.html`, `progress.html`, and so on.
 
 ### `tests/` and `test_api.py`
@@ -207,8 +207,7 @@ The app is built like a game: you earn points, level up, and unlock content.
 - **Six achievements** (`ACHIEVEMENTS`) — badges like *First Steps*, *Word Learner*, and
   *Enlightened*, each unlocked by meeting a condition.
 - **Every section has an unlock rule** (`SECTION_REQUIREMENTS`): a minimum level, a
-  subscription tier, and — for most learning sections — **completing the Thai alphabet
-  first**. The alphabet is the gateway to the rest of the app.
+  subscription tier.
 - The `require_access()` decorator enforces these rules on protected routes.
 
 **Where things are stored:**
@@ -225,7 +224,7 @@ Three tiers are defined (`SUBSCRIPTION_TIERS`):
 
 | Tier | Name | Price | Unlocks |
 |------|------|-------|---------|
-| `free` | Free Explorer | £0 | Levels 1–5, full Thai alphabet, Theravada Dhamma teachings & articles, progress tracking |
+| `free` | Free Explorer | £0 | Levels 1–5, Theravada Dhamma teachings & articles, progress tracking |
 | `basic` | Buddhist Scholar | £9.99 | + Guided meditation sessions/timer/techniques, the Learn menu (vocab, grammar, sentences), culture, formality, register, Paiboon guide, Tour Guide & Business Thai, Levels 6–7, 2× points |
 | `pro` | Thai Master | £19.99 | + Unlimited AI chat (all modes), Culture & Dhamma AI Q&A, full dictionary, Levels 8–10, 3× points |
 

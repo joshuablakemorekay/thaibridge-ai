@@ -264,7 +264,6 @@ pip install anthropic --break-system-packages
 - Build personal reference library
 
 ### 5. Combine with App Features
-- Learn alphabet first (structured)
 - Use AI for questions (flexible)
 - Practice with quizzes (assessment)
 - Chat with AI (real application)

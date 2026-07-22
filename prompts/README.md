@@ -13,7 +13,6 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`frontend-build`](./frontend-build/) | code-generation | Builds the app's templates, Thai-themed CSS, and interactive JS in stages | Yes (v1 → v3) |
 | [`wireframe-layout-system`](./wireframe-layout-system/) | code-generation | Content-first layout system — site outline, per-page layout templates, reusable partials, responsive tables | Yes (v1 → v3) |
 | [`gamification-system`](./gamification-system/) | code-generation | Adds XP/levels, locked sections, developer mode, and subscription tiers | Yes (v1 → v3) |
-| [`thai-alphabet-exercises`](./thai-alphabet-exercises/) | code-generation | Adds the Thai alphabet module and a progressive, no-cheat ordering exercise | Yes (v1 → v3) |
 | [`romanization-system`](./romanization-system/) | language design | The custom Paiboon+ vowel system, beginner mode, and consistent rendering | Yes (v1 → v3) |
 | [`buddhist-pdf-integration`](./buddhist-pdf-integration/) | content | Reproduces Pra Kru Bob's essays from PDFs faithfully as styled pages | Yes (v1 → v2) |
 | [`ai-tutor-integration`](./ai-tutor-integration/) | agent-workflow | A 6-mode Claude-powered Thai tutor integrated into the app | Yes (v1 → v2) |
@@ -33,10 +32,6 @@ This started as a one-line "research the market" request. v1 gave breadth but no
 ### [`buddhist-pdf-integration`](./buddhist-pdf-integration/)
 
 The first attempt quietly dropped paragraphs and reworded a Buddhist essay I'd asked to be reproduced exactly. The lesson — *faithful means faithful* — is the whole point of this folder: when wording matters, you insist on the complete text and check it against the source rather than trusting a tidy-looking summary.
-
-### [`thai-alphabet-exercises`](./thai-alphabet-exercises/)
-
-The ordering exercise went from "all 44 letters dumped on screen with a Show Answer button" to a progressive, no-cheat 5-level system with romanization on every card. v1 used the wrong alphabet order and let you cheat; the final version makes the learner actually work for it.
 
 ### [`wireframe-layout-system`](./wireframe-layout-system/)
 

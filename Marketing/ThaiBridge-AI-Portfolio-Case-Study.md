@@ -43,7 +43,7 @@ I worked in public, kept an honest build journal, and made a few deliberate call
 
 ThaiBridge AI is a server-rendered Flask app with:
 
-- 🔤 **Thai alphabet and vocabulary lessons**, written so complete beginners can read straight away
+- 🔤 **Vocabulary lessons**, written so complete beginners can read straight away
 - 🤖 **An AI tutor with six modes** — conversation, grammar, quiz generation, culture, Buddhism and gentle hints — powered by the Claude API, with a strict shared pronunciation rulebook injected into every prompt so the romanization stays consistent
 - 📚 **Lessons, grammar, culture and temple-etiquette modules**, plus Theravada teachings (free for all) and guided meditation sessions
 - 🔐 **Real user accounts** — proper sign-up, log-in and log-out, with passwords stored safely (hashed)

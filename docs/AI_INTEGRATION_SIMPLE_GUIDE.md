@@ -68,7 +68,7 @@ Then visit: **http://localhost:5000/chat**
 
 ### Features Working:
 ✅ 6 AI modes (conversation, tutor, generator, cultural, buddhist, helper)  
-✅ Context-aware (knows your level, XP, alphabet completion)  
+✅ Context-aware (knows your level and XP)  
 ✅ Proper Paiboon+ romanization  
 ✅ Token tracking  
 ✅ Session-based conversations  

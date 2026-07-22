@@ -12,7 +12,6 @@ _Generated: 2026-07-19 20:34 UTC_
 | `market-research-report` | 1 | 100.0% | ✅ pass |
 | `product-overview-section` | 1 | 100.0% | ✅ pass |
 | `romanization-system` | 1 | 100.0% | ✅ pass |
-| `thai-alphabet-exercises` | 1 | 100.0% | ✅ pass |
 | `tones-consonant-classes` | 1 | 100.0% | ✅ pass |
 | `wireframe-layout-system` | 1 | 100.0% | ✅ pass |
 

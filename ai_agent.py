@@ -52,7 +52,6 @@ class ThaiLearningAI:
         # Base context about user
         level = user_context.get('level', 1)
         xp = user_context.get('xp', 0)
-        alphabet_complete = user_context.get('alphabet_completed', False)
         user_name = user_context.get('name', 'Student')
         
         # Common foundation for all modes
@@ -61,7 +60,6 @@ class ThaiLearningAI:
 STUDENT CONTEXT:
 - Current Level: {level}/10
 - Total XP: {xp}
-- Thai Alphabet Completed: {'Yes ✅' if alphabet_complete else 'Not yet'}
 - Learning System: Paiboon+ Romanization (IPA-based, linguistically accurate)
 
 ROMANIZATION RULES (Paiboon+ System) - CRITICAL - FOLLOW EXACTLY:
@@ -263,7 +261,6 @@ example help, or should I show part of the answer?" Celebrate genuine effort:
             user_context = {
                 'level': 1,
                 'xp': 0,
-                'alphabet_completed': False,
                 'name': 'Student'
             }
         

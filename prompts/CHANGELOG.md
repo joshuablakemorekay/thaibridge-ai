@@ -54,25 +54,6 @@ Each entry follows this format:
 
 ---
 
-## thai-alphabet-exercises
-
-### 2025-12-04 — v3 (progressive, no-cheat)
-**Change:** Removed the "Show Answer" button, added romanization to every consonant, and split the exercise into an unlocking 5-level system.
-**Reason:** The old exercise could be cheated and was overwhelming.
-**Impact:** Learners now work for it, in manageable stages.
-
-### 2025-12-04 — v2 (correct full order)
-**Change:** Fixed the exercise to all 44 consonants in true Thai dictionary order.
-**Reason:** v1 used only the first 10 and the wrong order.
-**Impact:** The exercise teaches the real alphabet sequence.
-
-### 2025-12-04 — v1 (alphabet + first exercise)
-**Change:** Added the alphabet module (Level 1, required first) and a drag-and-drop ordering exercise.
-**Reason:** Mastering the alphabet first is how you start learning Thai.
-**Impact:** A gated first step, though the first exercise was incomplete.
-
----
-
 ## romanization-system
 
 ### 2025-12-09 — v3 (AI tutor match)

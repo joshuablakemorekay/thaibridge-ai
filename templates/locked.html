@@ -13,20 +13,9 @@
             <p class="requirement">{{ message }}</p>
         </div>
         
-        {% if message == "Complete Thai Alphabet first" %}
-        <div class="alphabet-requirement-box">
-            <h3>📖 Complete the Thai Alphabet First!</h3>
-            <p>Before you can access vocabulary and other learning materials, you must first complete the Thai Alphabet.</p>
-            <p>This ensures you have a strong foundation to build upon.</p>
-            <a href="/alphabet" class="btn btn-alphabet">Go to Thai Alphabet</a>
-        </div>
-        {% else %}
         <div class="requirements-box">
             <h3>Requirements to Unlock:</h3>
             <ul>
-                {% if requirements.requires_alphabet %}
-                <li><strong>✓ Thai Alphabet:</strong> Must be completed</li>
-                {% endif %}
                 <li><strong>Level Required:</strong> {{ requirements.level }}</li>
                 {% if requirements.tier != 'free' %}
                 <li><strong>Subscription:</strong> {{ requirements.tier|title }}</li>
@@ -38,10 +27,6 @@
         <div class="current-progress">
             <h3>Your Current Progress:</h3>
             <div class="progress-info">
-                <div class="progress-item">
-                    <span class="label">Alphabet:</span>
-                    <span class="value">{{ '✓ Complete' if user_progress.alphabet_completed else '✗ Incomplete' }}</span>
-                </div>
                 <div class="progress-item">
                     <span class="label">Level:</span>
                     <span class="value">{{ user_progress.level }}</span>
@@ -56,17 +41,12 @@
                 </div>
             </div>
         </div>
-        {% endif %}
-        
+
         <div class="action-buttons">
-            {% if message == "Complete Thai Alphabet first" %}
-            <a href="/alphabet" class="btn btn-gold">Start Alphabet</a>
-            {% else %}
             <a href="/progress" class="btn btn-primary">View Progress Dashboard</a>
             <a href="/learn" class="btn btn-secondary">Practice More</a>
             {% if requirements.tier != 'free' and user_progress.subscription_tier == 'free' %}
             <a href="/progress#subscriptions" class="btn btn-gold">Upgrade Subscription</a>
-            {% endif %}
             {% endif %}
         </div>
         
@@ -122,41 +102,6 @@
         font-weight: bold;
         color: var(--temple-red);
         margin: 0;
-    }
-    
-    .alphabet-requirement-box {
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(255, 215, 0, 0.2) 100%);
-        border: 3px solid var(--royal-gold);
-        border-radius: 15px;
-        padding: 2rem;
-        margin: 2rem 0;
-    }
-    
-    .alphabet-requirement-box h3 {
-        color: var(--royal-purple);
-        margin-bottom: 1rem;
-    }
-    
-    .alphabet-requirement-box p {
-        color: #333;
-        margin: 0.5rem 0;
-    }
-    
-    .btn-alphabet {
-        background: linear-gradient(135deg, var(--royal-gold) 0%, var(--gold-shimmer) 100%);
-        color: white;
-        padding: 1rem 2rem;
-        border-radius: 25px;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: bold;
-        margin-top: 1rem;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-alphabet:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(212, 175, 55, 0.5);
     }
     
     .requirements-box {
