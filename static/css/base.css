@@ -1225,6 +1225,23 @@
     .layout:has(.layout-sidebar):has(.layout-rightcol) > .layout-rightcol {
         grid-column: auto;
     }
+
+    /* CONTENT FIRST ON A PHONE.
+
+       Stacking in source order put the sidebar above <main>, and the Learn
+       sidebar is 644px of links. On a 390px-wide iPhone that pushed the page's
+       own heading 1.4 screens down and the first piece of real content 2.6
+       screens down — so opening a Learn page showed nothing but a column of
+       navigation. It reads exactly like a page that failed to load, and it is
+       what made the Alphabet page look broken on mobile through three separate
+       rebuilds of a page that was never the problem.
+
+       `order` only affects the visual order of grid items; the DOM keeps
+       nav-before-content, which is the conventional document order and what a
+       screen reader will still follow. */
+    .layout > main { order: -1; }
+    .layout-sidebar { order: 1; }
+    .layout-rightcol { order: 2; }
 }
 /* ============================================
    WIREFRAME COMPONENTS — sidebar nav + right column
