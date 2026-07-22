@@ -331,3 +331,26 @@
     .abc-options { grid-template-columns: 1fr 1fr; }
     .abc-card-letter { font-size: 7rem; }
 }
+
+/* ── Keeping the letters near the top ──────────────────────
+   On a 390px phone every line above the tabs costs a chunk of the first
+   screen, and the letters are what the page is for. The heading and status
+   banner are tightened up; the fuller explanation sits below the chart. */
+
+.abc-hint {
+    font-size: 0.9rem;
+    color: var(--monsoon-grey);
+    margin: 0 0 0.5rem;
+}
+
+.abc-footnote {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--monsoon-grey);
+}
+
+@media (max-width: 640px) {
+    .abc-status { padding: 0.7rem 0.9rem; margin: 0.75rem 0; font-size: 0.95rem; }
+    .abc-tabs { margin: 0.75rem 0 0.75rem; }
+    .abc-panel > p { margin-bottom: 0.5rem; }
+}

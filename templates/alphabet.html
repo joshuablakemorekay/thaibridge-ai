@@ -12,18 +12,15 @@
 {% block content %}
 <div class="card">
     <h1>🔤 Thai Alphabet</h1>
-    <p>The 44 Thai consonants — the foundation everything else on this site is
-       built on. Study the chart, drill them with flashcards, then pass the quiz
-       to unlock the rest of ThaiBridge AI. It's free, and you can retake the
-       quiz as many times as you like.</p>
 
+    {# Kept deliberately short. On a phone every line above the tabs pushes the
+       letters further down the screen, and the letters are the point of the
+       page. The longer explanation lives under the chart instead. #}
     {% if alphabet_complete %}
-    <p class="abc-status">✅ You've completed the Thai Alphabet — every section
-       is unlocked. Come back any time to revise.</p>
+    <p class="abc-status">✅ Alphabet complete — every section is unlocked.</p>
     {% else %}
-    <p class="abc-status abc-status--todo">🔓 Score {{ quiz_pass_mark }} out of
-       {{ quiz_total }} on the quiz to unlock the rest of the site and earn
-       100 XP.</p>
+    <p class="abc-status abc-status--todo">🔓 Score {{ quiz_pass_mark }}/{{ quiz_total }}
+       on the quiz to unlock the rest of the site and earn 100 XP.</p>
     {% endif %}
 
     {# Three study modes as tabs, not one long page. Only one panel is in the
@@ -41,8 +38,12 @@
     <!-- ── Chart ────────────────────────────────────────────── -->
     <section class="abc-panel" id="panel-chart" role="tabpanel"
              aria-labelledby="tab-chart">
-        <p>Tap any letter to hear it and see its name, meaning and class.</p>
+        <p class="abc-hint">Tap any letter to hear it and see its name, meaning and class.</p>
         <div id="chart-groups"></div>
+        <p class="abc-footnote">The 44 Thai consonants are the foundation everything
+           else on this site is built on. Study them here, drill them with the
+           flashcards, then pass the quiz to unlock the rest of ThaiBridge AI.
+           It's free, and you can retake the quiz as many times as you like.</p>
     </section>
 
     <!-- ── Flashcards ───────────────────────────────────────── -->
