@@ -96,7 +96,9 @@
             {% for section in available_sections %}
             <div class="section-card available">
                 <h3>{{ section.name }}</h3>
-                <p>Level {{ section.level_required }} • {{ subscription_tiers[section.tier_required].name }}</p>
+                {# Monk Mode waives payment, so show "Free" rather than a plan
+                   name a monastic will never be charged for. #}
+                <p>Level {{ section.level_required }} • {% if monk_mode %}<span class="monk-free">Free</span> <span title="Free while Monk Mode is on">🧡</span>{% else %}{{ subscription_tiers[section.tier_required].name }}{% endif %}</p>
                 <span class="reward">+{{ section.points_reward }} XP</span>
                 {% if section.unlocked %}
                 <span class="badge unlocked">✓ Unlocked</span>
@@ -114,7 +116,7 @@
                 <h3>{{ section.name }}</h3>
                 <p>{{ section.message }}</p>
                 <span class="requirement">Requires: Level {{ section.level_required }}
-                    {% if section.tier_required != 'free' %}
+                    {% if section.tier_required != 'free' and not monk_mode %}
                         + {{ subscription_tiers[section.tier_required].name }}
                     {% endif %}
                 </span>

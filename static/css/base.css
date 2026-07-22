@@ -1375,6 +1375,13 @@ body {
     box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.25);
 }
 
+/* "Free" on the progress dashboard while Monk Mode is on, in place of a plan
+   name a monastic will never be charged for. */
+.monk-free {
+    color: var(--palm-green);
+    font-weight: 700;
+}
+
 .monk-mode-banner {
     background: linear-gradient(90deg, var(--monk-saffron), var(--temple-orange));
     color: #fff;

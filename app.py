@@ -5622,15 +5622,18 @@ def progress_dashboard():
     
     new_achievements = check_achievements(user)
     
+    monk_on = user.get('monk_mode', False)
     available_sections = []
     locked_sections = []
-    
+
     for section_id, requirements in SECTION_REQUIREMENTS.items():
         has_access, message = check_section_access(section_id)
 
         tier = requirements['tier']
         level = requirements['level']
-        if tier != 'free':
+        # Monk Mode waives payment, so a monk only ever needs the level — never a
+        # subscription. Don't quote them a "£/mo" requirement they don't owe.
+        if tier != 'free' and not monk_on:
             tier_info = SUBSCRIPTION_TIERS[tier]
             requirement_message = f"Requires Level {level} + {tier_info['name']} subscription (£{tier_info['price']:.2f}/mo)"
         elif level > 1:
