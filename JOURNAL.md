@@ -788,3 +788,31 @@ I planned the app using a describe-then-check method: I told the AI exactly what
 - **Version control is a safety net** — it let me take risks and roll back.
 - **Give AI small, specific jobs** — and review every change before accepting it.
 - **Two AI products, two bills** — Claude Code is billed separately from the Claude.ai subscription.
+
+---
+
+## 23 July 2026 — Giving the app a voice, and a conversation partner
+
+**Type:** Feature + Bug Fix + Learning
+
+**TL;DR**
+- Built a **reusable Thai audio system** — tap any Thai word to hear a native voice — and shipped it on the Vowels and Sentences pages.
+- Turned the Sentences page into a **fluency tool**: practice mode, expanded conversations (including Dharma dialogues), everyday phrases, and an **AI roleplay partner**.
+- Announced two deploys as "live" before the server actually had them. Learned to check the live server first, every time.
+
+**What I built or did**
+A shared audio helper (`thai_audio.py`) plus one page-wide player, so any page can get 🔊 buttons cheaply. Then a three-phase upgrade to the Sentences page: line-by-line audio + a hide-and-reveal practice mode; five new conversations (taxi, market, and three temple/monastic ones) and an "everyday phrases" section; and a roleplay mode where the AI plays a waiter, vendor or taxi driver and stays in character. Also fixed a real bug — the AI's default model had been retired and was returning a 404 for local dev.
+
+**Why I did it this way**
+Fluency comes from hearing and speaking, not reading, so the audio and practice mode matter more than more content. Audio is pre-generated once and served as files — free, and it sounds identical on every device.
+
+**How We Did It**
+1. Built the reusable audio core and proved it on the Vowels page.
+2. Rolled audio onto Sentences, then added practice mode.
+3. Wrote new conversations + phrases; had the Dharma ones checked before shipping.
+4. Added AI roleplay scenarios to the existing chat tutor.
+5. Dropped the "talk to a monk" roleplay — the cheap live model wouldn't hold monastic register.
+6. Found and fixed the retired-model 404.
+
+**What I learned**
+**A push is not a deploy.** I told myself it was live twice before the server caught up — now I confirm on the real URL before saying the word. And an AI is only as good as the model behind it: the cheap live model couldn't be trusted with a monk's speech, so that scenario waited.
