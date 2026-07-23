@@ -110,72 +110,77 @@
 
     function describe(letter) {
         return letter.cls.charAt(0).toUpperCase() + letter.cls.slice(1)
-            + ' class · sounds like "' + letter.sound + '"';
+            + ' class · sounds like "' + letter.sound + '"'
+            + (letter.obsolete ? ' · obsolete' : '');
     }
 
     function buildChart() {
+        // One grid, all 44 letters in the order the data holds them — the
+        // traditional dictionary order (ก ข ฃ ค …). Class is no longer a heading;
+        // it lives in each letter's detail strip instead, so the tone
+        // information is still one tap away.
         var host = byId('chart-groups');
-        var labels = CONFIG.classLabels || {};
 
-        ['middle', 'high', 'low'].forEach(function (cls) {
-            var members = LETTERS.filter(function (l) { return l.cls === cls; });
-            if (!members.length) { return; }
+        var grid = document.createElement('div');
+        grid.className = 'abc-grid';
 
-            var heading = document.createElement('h2');
-            heading.className = 'abc-class-heading';
-            heading.textContent = (labels[cls] || cls) + ' — ' + members.length + ' letters';
-            host.appendChild(heading);
+        // A single detail strip, shared by every cell and kept as a SIBLING of
+        // the grid, so opening it can never reflow the grid mid-tap.
+        var detail = document.createElement('div');
+        detail.className = 'abc-detail';
+        detail.hidden = true;
 
-            var grid = document.createElement('div');
-            grid.className = 'abc-grid';
+        LETTERS.forEach(function (letter) {
+            var cell = document.createElement('button');
+            cell.type = 'button';
+            cell.className = 'abc-cell';
+            cell.setAttribute('aria-expanded', 'false');
+            cell.setAttribute('aria-label',
+                letter.char + ', ' + letter.name + ', ' + letter.meaning
+                + (letter.obsolete ? ', obsolete' : ''));
 
-            var detail = document.createElement('div');
-            detail.className = 'abc-detail';
-            detail.hidden = true;
+            var glyph = document.createElement('span');
+            glyph.className = 'abc-cell-letter';
+            glyph.lang = 'th';
+            glyph.textContent = letter.char;
 
-            members.forEach(function (letter) {
-                var cell = document.createElement('button');
-                cell.type = 'button';
-                cell.className = 'abc-cell';
-                cell.setAttribute('aria-expanded', 'false');
-                cell.setAttribute('aria-label',
-                    letter.char + ', ' + letter.name + ', ' + letter.meaning);
+            var name = document.createElement('span');
+            name.className = 'abc-cell-name';
+            name.textContent = letter.name;
 
-                var glyph = document.createElement('span');
-                glyph.className = 'abc-cell-letter';
-                glyph.lang = 'th';
-                glyph.textContent = letter.char;
+            cell.appendChild(glyph);
+            cell.appendChild(name);
 
-                var name = document.createElement('span');
-                name.className = 'abc-cell-name';
-                name.textContent = letter.name;
+            if (letter.obsolete) {
+                cell.classList.add('abc-cell--obsolete');
+                var tag = document.createElement('span');
+                tag.className = 'abc-cell-tag';
+                tag.textContent = 'obsolete';
+                cell.appendChild(tag);
+            }
 
-                cell.appendChild(glyph);
-                cell.appendChild(name);
+            cell.addEventListener('click', function () {
+                var wasOpen = cell.getAttribute('aria-expanded') === 'true';
 
-                cell.addEventListener('click', function () {
-                    var wasOpen = cell.getAttribute('aria-expanded') === 'true';
+                Array.prototype.forEach.call(
+                    grid.querySelectorAll('.abc-cell'),
+                    function (other) { other.setAttribute('aria-expanded', 'false'); });
 
-                    Array.prototype.forEach.call(
-                        grid.querySelectorAll('.abc-cell'),
-                        function (other) { other.setAttribute('aria-expanded', 'false'); });
+                if (wasOpen) {
+                    detail.hidden = true;
+                    return;
+                }
 
-                    if (wasOpen) {
-                        detail.hidden = true;
-                        return;
-                    }
-
-                    cell.setAttribute('aria-expanded', 'true');
-                    showDetail(detail, letter);
-                    play(letter, detail.querySelector('.abc-audio'));
-                });
-
-                grid.appendChild(cell);
+                cell.setAttribute('aria-expanded', 'true');
+                showDetail(detail, letter);
+                play(letter, detail.querySelector('.abc-audio'));
             });
 
-            host.appendChild(grid);
-            host.appendChild(detail);
+            grid.appendChild(cell);
         });
+
+        host.appendChild(grid);
+        host.appendChild(detail);
     }
 
     function showDetail(detail, letter) {

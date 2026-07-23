@@ -197,6 +197,19 @@
 .abc-detail-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.15rem; color: var(--teak-wood); }
 .abc-detail-meta { font-size: 0.9rem; color: var(--monsoon-grey); }
 
+/* The two obsolete letters (ฃ, ฅ) are still shown in the grid — they are part
+   of the 44 — but marked so they read as different: a dashed border and a small
+   caption. The full explanation is in the footnote under the grid. */
+.abc-cell--obsolete { border-style: dashed; }
+
+.abc-cell-tag {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: var(--teak-wood);
+}
+
 /* ── Flashcards ────────────────────────────────────────────── */
 
 .abc-card {

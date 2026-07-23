@@ -42,7 +42,7 @@ AUDIO_DIR = 'audio/th'
 AUDIO_VOICE = 'th-TH-PremwadeeNeural'
 
 
-def _c(char, name_thai, name, meaning, sound, cls, slug):
+def _c(char, name_thai, name, meaning, sound, cls, slug, obsolete=False):
     return {
         'char': char,           # the letter itself
         'name_thai': name_thai, # e.g. 'กอ ไก่' — what the recording says
@@ -50,6 +50,7 @@ def _c(char, name_thai, name, meaning, sound, cls, slug):
         'meaning': meaning,     # e.g. 'chicken'
         'sound': sound,         # initial-consonant sound, Paiboon
         'cls': cls,
+        'obsolete': obsolete,   # ฃ and ฅ only — still taught, no longer written
         'audio': '{}/{}.mp3'.format(AUDIO_DIR, slug),
     }
 
@@ -57,9 +58,9 @@ def _c(char, name_thai, name, meaning, sound, cls, slug):
 CONSONANTS = [
     _c('ก', 'กอ ไก่',    'gɔɔ gài',      'chicken',     'g',  CLASS_MIDDLE, 'kor-kai'),
     _c('ข', 'ขอ ไข่',    'kɔ̌ɔ kài',      'egg',         'k',  CLASS_HIGH,   'khor-khai'),
-    _c('ฃ', 'ขอ ขวด',   'kɔ̌ɔ kùat',     'bottle',      'k',  CLASS_HIGH,   'khor-khuat'),
+    _c('ฃ', 'ขอ ขวด',   'kɔ̌ɔ kùat',     'bottle',      'k',  CLASS_HIGH,   'khor-khuat', obsolete=True),
     _c('ค', 'คอ ควาย',  'kɔɔ kwaai',    'buffalo',     'k',  CLASS_LOW,    'khor-khwai'),
-    _c('ฅ', 'คอ คน',    'kɔɔ kon',      'person',      'k',  CLASS_LOW,    'khor-khon'),
+    _c('ฅ', 'คอ คน',    'kɔɔ kon',      'person',      'k',  CLASS_LOW,    'khor-khon', obsolete=True),
     _c('ฆ', 'ฆอ ระฆัง',  'kɔɔ rá-kang',  'bell',        'k',  CLASS_LOW,    'khor-rakhang'),
     _c('ง', 'งอ งู',     'ngɔɔ nguu',    'snake',       'ng', CLASS_LOW,    'ngor-ngu'),
     _c('จ', 'จอ จาน',   'jɔɔ jaan',     'plate',       'j',  CLASS_MIDDLE, 'chor-chan'),
