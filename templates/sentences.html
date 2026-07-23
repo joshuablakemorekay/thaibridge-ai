@@ -23,6 +23,46 @@
     display: inline-block;
     vertical-align: baseline;
 }
+
+/* ── Conversation practice mode ──────────────────────────────
+   A per-conversation toggle. When on, each line's Thai + Paiboon are redacted
+   (transparent text on a grey bar, so the layout does not jump) until the
+   learner taps to reveal — active recall instead of passive reading. The
+   English stays visible as the prompt, and the 🔊 button stays usable so they
+   can hear a line before checking themselves. Reveal is an instant class
+   toggle: no transition, nothing gated behind an animation frame. */
+.practice-toggle {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.55rem 1rem;
+    border: 2px solid var(--lotus-pink);
+    background: #fff;
+    color: var(--lotus-pink);
+    border-radius: 8px;
+    font: 600 0.95rem inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+.conv-card.practice-on .practice-toggle {
+    background: var(--lotus-pink);
+    color: #fff;
+}
+.practice-hint {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 0 1rem;
+}
+.conv-card.practice-on .answer { cursor: pointer; }
+.conv-card.practice-on .answer:not(.revealed) {
+    background: #dcdcdc;
+    border-radius: 6px;
+}
+/* !important is needed because the Thai/Paiboon carry inline colours, which
+   would otherwise win over a class selector. */
+.conv-card.practice-on .answer:not(.revealed) .thai-text,
+.conv-card.practice-on .answer:not(.revealed) .paiboon {
+    color: transparent !important;
+}
 </style>
 {% endblock %}
 
@@ -92,7 +132,7 @@
     
     {% for ex in aspect_examples.progressive.male if gender == 'male' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -107,7 +147,7 @@
     
     {% for ex in aspect_examples.progressive.female if gender == 'female' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -131,7 +171,7 @@
     
     {% for ex in aspect_examples.completed.male if gender == 'male' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -146,7 +186,7 @@
     
     {% for ex in aspect_examples.completed.female if gender == 'female' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -170,7 +210,7 @@
     
     {% for ex in aspect_examples.future.male if gender == 'male' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -185,7 +225,7 @@
     
     {% for ex in aspect_examples.future.female if gender == 'female' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -209,7 +249,7 @@
     
     {% for ex in aspect_examples.combined.male if gender == 'male' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -225,7 +265,7 @@
     
     {% for ex in aspect_examples.combined.female if gender == 'female' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -263,7 +303,7 @@
     
     {% for ex in question_examples.yes_no.male if gender == 'male' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -278,7 +318,7 @@
     
     {% for ex in question_examples.yes_no.female if gender == 'female' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -301,7 +341,7 @@
     
     {% for ex in question_examples.wh_questions.male if gender == 'male' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -317,7 +357,7 @@
     
     {% for ex in question_examples.wh_questions.female if gender == 'female' or gender == 'neutral' %}
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
-        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }}</div>
+        <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
@@ -400,25 +440,33 @@
 </div>
 
 {% for conv_id, conv in conversations.items() %}
-<div class="card" style="border-left: 5px solid var(--lotus-pink);">
+<div class="card conv-card" style="border-left: 5px solid var(--lotus-pink);">
     <h3 style="color: var(--lotus-pink);">{{ conv.title }}</h3>
     <p style="color: #666; margin-bottom: 0.5rem;"><strong>Setting:</strong> {{ conv.setting }}</p>
-    <p style="margin-bottom: 1.5rem;">
+    <p style="margin-bottom: 1rem;">
         <span style="background: {% if conv.difficulty == 'beginner' %}#4CAF50{% else %}#FF9800{% endif %}; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.9rem;">
             {{ conv.difficulty|title }}
         </span>
     </p>
-    
+
+    <button type="button" class="practice-toggle" onclick="toggleConvPractice(this)">
+        🎭 Practice mode: <span class="practice-state">off</span>
+    </button>
+    <p class="practice-hint" hidden>Read the English, say the Thai out loud, then tap the grey bar to check yourself. Use 🔊 to hear the line any time.</p>
+
     {% for line in conv.dialogue %}
     <div style="background: {% if 'male' in line.speaker %}#e3f2fd{% elif 'female' in line.speaker %}#fce4ec{% else %}#f5f5f5{% endif %}; padding: 1.25rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid {% if 'male' in line.speaker %}#2196F3{% elif 'female' in line.speaker %}#E91E63{% else %}#757575{% endif %};">
-        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
             <span style="background: {% if 'male' in line.speaker %}#2196F3{% elif 'female' in line.speaker %}#E91E63{% else %}#757575{% endif %}; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.85rem; font-weight: 600;">
-                {% if 'male' in line.speaker %}👨{% elif 'female' in line.speaker %}👩{% else %}👤{% endif %} 
+                {% if 'male' in line.speaker %}👨{% elif 'female' in line.speaker %}👩{% else %}👤{% endif %}
                 {{ line.speaker.replace('_', ' ')|title }}
             </span>
+            {% if thai_audio_url(line.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(line.thai) }}" aria-label="Play this line">🔊</button>{% endif %}
         </div>
-        <div class="thai-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">{{ line.thai }}</div>
-        <div class="paiboon" style="font-size: 1.2rem; color: #666; margin-bottom: 0.5rem;">{{ line.paiboon }}</div>
+        <div class="answer" onclick="revealAnswer(this)">
+            <div class="thai-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">{{ line.thai }}</div>
+            <div class="paiboon" style="font-size: 1.2rem; color: #666; margin-bottom: 0.5rem;">{{ line.paiboon }}</div>
+        </div>
         <div style="font-size: 1rem; color: #333; margin-bottom: 0.5rem;"><strong>English:</strong> {{ line.english }}</div>
         <div style="background: white; padding: 0.5rem; border-radius: 6px; font-size: 0.9rem; color: #666;">
             <em>{{ line.note }}</em>
@@ -474,4 +522,31 @@
     </div>
 </div>
 
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Conversation practice mode. Toggling a conversation redacts its Thai lines
+    // so the learner produces them from the English prompt; tapping a line
+    // reveals it to check. Global functions because the buttons use inline
+    // onclick, the same pattern as the rest of this app's pages.
+    function toggleConvPractice(button) {
+        var card = button.closest('.conv-card');
+        var on = card.classList.toggle('practice-on');
+        card.querySelector('.practice-state').textContent = on ? 'on' : 'off';
+        var hint = card.querySelector('.practice-hint');
+        if (hint) { hint.hidden = !on; }
+        // Turning practice off (or back on) starts every line hidden again.
+        card.querySelectorAll('.answer.revealed').forEach(function (a) {
+            a.classList.remove('revealed');
+        });
+    }
+
+    function revealAnswer(answer) {
+        // Only meaningful while practising; a plain read-through ignores taps.
+        if (answer.closest('.conv-card').classList.contains('practice-on')) {
+            answer.classList.add('revealed');
+        }
+    }
+</script>
 {% endblock %}

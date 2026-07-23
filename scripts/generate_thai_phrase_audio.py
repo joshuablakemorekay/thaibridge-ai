@@ -57,9 +57,20 @@ def collect_vowels():
     return found
 
 
+def collect_sentences():
+    """Every Thai string on the Sentences page — the conversation dialogues and
+    the sentence-pattern examples (which are nested per gender)."""
+    import app
+    found = []
+    _walk_thai(app.CONVERSATIONS, found)
+    _walk_thai(app.SENTENCE_PATTERNS, found)
+    return found
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
+    'sentences': collect_sentences,
 }
 
 
