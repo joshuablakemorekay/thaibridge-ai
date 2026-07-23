@@ -15,6 +15,7 @@ import glob
 
 import monk_audio  # shared MP3 filename rules, also used by the build script
 import thai_consonants  # the 44 consonants + their recordings (Alphabet page)
+import thai_audio  # general Thai-phrase MP3 filename rule, shared with build script
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -590,6 +591,24 @@ def inject_monk_audio():
         'monk_audio_url': monk_audio_url,
         'monk_audio_is_fallback': monk_audio_is_fallback,
     }
+
+
+@app.context_processor
+def inject_thai_audio():
+    """Give every template thai_audio_url(thai) -> URL for the phrase's MP3, or
+    None if it has not been generated yet.
+
+    Clips are made page by page (see scripts/generate_thai_phrase_audio.py), so
+    most Thai on the site has no recording. Returning None lets a template leave
+    the play button out rather than render one that 404s.
+    """
+    def thai_audio_url(thai_text):
+        if thai_audio.audio_exists(app.static_folder, thai_text):
+            return url_for(
+                'static', filename=thai_audio.audio_static_path(thai_text))
+        return None
+
+    return {'thai_audio_url': thai_audio_url}
 
 
 def monk_direction():

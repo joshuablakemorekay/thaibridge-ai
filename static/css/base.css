@@ -1736,3 +1736,32 @@ body {
     padding-top: 0.75rem;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
+
+/* Site-wide 🔊 audio button (paired with the .th-audio handler in base.js).
+   Small, round, and unobtrusive so it can sit beside any Thai word without
+   dominating it. Turns green while its clip is playing. */
+.th-audio {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0.3rem 0.55rem;
+    border: 2px solid var(--bodhi-green);
+    background: #fff;
+    color: var(--bodhi-green);
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1;
+    font-family: inherit;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.th-audio:hover { background: var(--frangipani); }
+.th-audio.is-playing { background: var(--bodhi-green); color: #fff; }
+
+.th-audio:focus-visible {
+    outline: 3px solid var(--royal-gold);
+    outline-offset: 2px;
+}

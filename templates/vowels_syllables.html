@@ -208,6 +208,7 @@
             
             <div style="display: flex; align-items: center; margin-bottom: 1rem;">
                 <span class="vowel-thai">{{ vowel.thai }}</span>
+                {% if thai_audio_url(vowel.thai) %}<button type="button" class="th-audio" style="margin-right: 0.75rem;" data-audio="{{ thai_audio_url(vowel.thai) }}" aria-label="Play the vowel {{ vowel.paiboon }}">🔊</button>{% endif %}
                 <div>
                     <div class="vowel-paiboon">
                         {{ vowel.paiboon }}
@@ -226,7 +227,7 @@
                     📝 Example Word:
                 </div>
                 <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
-                    <span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
                     <div>
                         <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron);">
                             {{ vowel.example_word.paiboon }}
@@ -255,6 +256,7 @@
             
             <div style="display: flex; align-items: center; margin-bottom: 1rem;">
                 <span class="vowel-thai">{{ vowel.thai }}</span>
+                {% if thai_audio_url(vowel.thai) %}<button type="button" class="th-audio" style="margin-right: 0.75rem;" data-audio="{{ thai_audio_url(vowel.thai) }}" aria-label="Play the vowel {{ vowel.paiboon }}">🔊</button>{% endif %}
                 <div>
                     <div class="vowel-paiboon">
                         {{ vowel.paiboon }}
@@ -273,7 +275,7 @@
                     📝 Example Word:
                 </div>
                 <div style="display: grid; grid-template-columns: auto 1fr; gap: 1rem;">
-                    <span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>
+                    <span style="display: inline-flex; align-items: center; gap: 0.5rem;"><span class="thai-text" style="font-size: 1.8rem;">{{ vowel.example_word.thai }}</span>{% if thai_audio_url(vowel.example_word.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(vowel.example_word.thai) }}" aria-label="Play {{ vowel.example_word.paiboon }}">🔊</button>{% endif %}</span>
                     <div>
                         <div class="paiboon" style="font-size: 1.2rem; color: var(--saffron);">
                             {{ vowel.example_word.paiboon }}
@@ -303,6 +305,7 @@
             <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">
                 {{ pair.short.thai }}
             </div>
+            {% if thai_audio_url(pair.short.thai) %}<button type="button" class="th-audio" style="margin-bottom: 0.5rem;" data-audio="{{ thai_audio_url(pair.short.thai) }}" aria-label="Play {{ pair.short.paiboon }}">🔊</button>{% endif %}
             <div class="paiboon" style="font-size: 1.3rem; color: var(--saffron); margin-bottom: 0.25rem;">
                 {{ pair.short.paiboon }}
             </div>
@@ -323,6 +326,7 @@
             <div class="thai-text" style="font-size: 2.5rem; margin-bottom: 0.5rem;">
                 {{ pair.long.thai }}
             </div>
+            {% if thai_audio_url(pair.long.thai) %}<button type="button" class="th-audio" style="margin-bottom: 0.5rem;" data-audio="{{ thai_audio_url(pair.long.thai) }}" aria-label="Play {{ pair.long.paiboon }}">🔊</button>{% endif %}
             <div class="paiboon" style="font-size: 1.3rem; color: var(--royal-purple); margin-bottom: 0.25rem;">
                 {{ pair.long.paiboon }}
             </div>
@@ -374,6 +378,7 @@
                 <div class="paiboon" style="font-size: 1.5rem; color: var(--saffron);">
                     {{ example.paiboon }}
                 </div>
+                {% if thai_audio_url(example.thai) %}<button type="button" class="th-audio" style="margin-top: 0.5rem;" data-audio="{{ thai_audio_url(example.thai) }}" aria-label="Play {{ example.paiboon }}">🔊</button>{% endif %}
             </div>
             
             <div>

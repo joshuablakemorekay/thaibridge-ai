@@ -98,3 +98,53 @@
                 wrapper.appendChild(table);
             });
         });
+
+        // Site-wide 🔊 audio buttons.
+        // =============================
+        // Any element with class "th-audio" and a data-audio="<url>" plays that
+        // clip when tapped. This is delegated on the document, so it works for
+        // buttons added to any page (present now or rendered later) without each
+        // page wiring up its own player.
+        //
+        // Rules borrowed from the alphabet page, each learned from a real iOS
+        // failure: ONE Audio object for the whole page (a fresh one per play
+        // leaks decoders on iOS until sound dies), and every play follows a tap
+        // (iOS refuses to play sound nobody asked for). A rejected play() is
+        // swallowed — a quiet button beats an unhandled console error.
+        (function () {
+            var player = null;            // created on first tap, then reused
+            var playingButton = null;
+
+            function clearPlaying() {
+                if (playingButton) {
+                    playingButton.classList.remove('is-playing');
+                    playingButton = null;
+                }
+            }
+
+            document.addEventListener('click', function (event) {
+                var button = event.target.closest('.th-audio');
+                if (!button) return;
+
+                var url = button.getAttribute('data-audio');
+                if (!url) return;
+
+                event.preventDefault();
+
+                if (!player) {
+                    player = new Audio();
+                    player.addEventListener('ended', clearPlaying);
+                    player.addEventListener('error', clearPlaying);
+                }
+
+                clearPlaying();
+                button.classList.add('is-playing');
+                playingButton = button;
+
+                player.src = url;
+                var attempt = player.play();
+                if (attempt && typeof attempt.catch === 'function') {
+                    attempt.catch(clearPlaying);
+                }
+            });
+        })();
