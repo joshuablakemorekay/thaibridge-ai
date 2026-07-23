@@ -64,6 +64,7 @@ def collect_sentences():
     found = []
     _walk_thai(app.CONVERSATIONS, found)
     _walk_thai(app.SENTENCE_PATTERNS, found)
+    _walk_thai(app.CONVERSATIONAL_PHRASES, found)
     return found
 
 

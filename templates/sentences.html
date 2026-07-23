@@ -480,6 +480,36 @@
     </div>
 </div>
 
+<!-- Conversational Glue Phrases -->
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="glue-phrases" style="color: var(--lotus-pink); margin-top: 2rem;">🗣️ Everyday Conversation Phrases</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+        <div class="card">
+            <p style="font-size: 1.05rem; line-height: 1.8;">The little phrases that keep a real conversation moving — asking someone to repeat, buying yourself time, reacting, and staying polite. Tap 🔊 to hear any of them.</p>
+        </div>
+
+        {% for group in conversational_phrases %}
+        <div class="card" style="border-left: 5px solid var(--lotus-pink);">
+            <h3 style="color: var(--lotus-pink);">{{ group.icon }} {{ group.title }}</h3>
+            <p style="color: #666; margin-bottom: 1rem;">{{ group.intro }}</p>
+            {% for p in group.phrases %}
+            <div style="padding: 0.9rem 1rem; border-radius: 8px; margin-bottom: 0.75rem; background: #faf7fb; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <div style="flex: 1;">
+                    <div class="thai-text" style="font-size: 1.4rem;">{{ p.thai }}</div>
+                    <div class="paiboon" style="font-size: 1.1rem; color: #666;">{{ p.paiboon }}</div>
+                    <div style="color: #333;">{{ p.english }}</div>
+                </div>
+                {% if thai_audio_url(p.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(p.thai) }}" aria-label="Play {{ p.english }}">🔊</button>{% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 <div class="collapsible-section">
     <div class="section-header">
         <h2 style="color: var(--saffron); margin-top: 2rem;">🎯 Practice Suggestions</h2>

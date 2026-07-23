@@ -5226,8 +5226,136 @@ CONVERSATIONS = {
                 'note': 'Accepting + suggesting action'
             }
         ]
+    },
+
+    # ── Phase 2 additions (2026-07-23) — DRAFT Thai, pending native-speaker
+    # review (esp. the Dharma dialogues' monastic register). ────────────────
+    'taxi': {
+        'title': 'Taking a Taxi (นั่งแท็กซี่)',
+        'setting': 'Getting a taxi to a destination and paying by the meter',
+        'difficulty': 'beginner',
+        'dialogue': [
+            {'speaker': 'passenger_male', 'thai': 'ไปสยามพารากอนครับ', 'paiboon': 'bpai sà-yǎam paa-raa-gɔɔn kráp', 'english': 'To Siam Paragon, please.', 'note': 'Stating the destination'},
+            {'speaker': 'driver_male', 'thai': 'ได้ครับ เชิญขึ้นเลยครับ', 'paiboon': 'dâi kráp, chəən kʉ̂n ləəi kráp', 'english': 'Sure, please get in.', 'note': 'เชิญ = please (inviting)'},
+            {'speaker': 'passenger_male', 'thai': 'ใช้มิเตอร์ได้ไหมครับ', 'paiboon': 'chái mí-təə dâi mǎi kráp', 'english': 'Can you use the meter?', 'note': 'Helps get a fair fare'},
+            {'speaker': 'driver_male', 'thai': 'ได้ครับ รถติดนิดหน่อยนะครับ', 'paiboon': 'dâi kráp, rót tìt nít-nɔ̀i ná kráp', 'english': "Sure. There's a bit of traffic.", 'note': 'รถติด = traffic jam'},
+            {'speaker': 'passenger_male', 'thai': 'ไม่เป็นไรครับ จอดตรงนี้ได้ไหมครับ', 'paiboon': 'mâi bpen rai kráp, jɔ̀ɔt troŋ níi dâi mǎi kráp', 'english': "It's fine. Can you stop right here?", 'note': 'จอด = to stop/park'},
+            {'speaker': 'passenger_male', 'thai': 'เท่าไหร่ครับ', 'paiboon': 'tâo-rài kráp', 'english': 'How much is it?', 'note': ''},
+            {'speaker': 'driver_male', 'thai': 'เก้าสิบบาทครับ', 'paiboon': 'gâo-sìp bàat kráp', 'english': 'Ninety baht.', 'note': ''}
+        ]
+    },
+
+    'market': {
+        'title': 'Bargaining at the Market (ต่อราคาที่ตลาด)',
+        'setting': 'Haggling politely for a better price',
+        'difficulty': 'intermediate',
+        'dialogue': [
+            {'speaker': 'customer_female', 'thai': 'อันนี้เท่าไหร่คะ', 'paiboon': 'an níi tâo-rài ká', 'english': 'How much is this one?', 'note': 'อันนี้ = this one'},
+            {'speaker': 'vendor_male', 'thai': 'สองร้อยบาทครับ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔi bàat kráp', 'english': 'Two hundred baht.', 'note': ''},
+            {'speaker': 'customer_female', 'thai': 'แพงไปหน่อยค่ะ ลดได้ไหมคะ', 'paiboon': 'pɛɛŋ bpai nɔ̀i kâ, lót dâi mǎi ká', 'english': "It's a bit expensive. Can you lower it?", 'note': 'ลด = to reduce the price'},
+            {'speaker': 'vendor_male', 'thai': 'ลดให้ห้าสิบ เหลือร้อยห้าสิบครับ', 'paiboon': 'lót hâi hâa-sìp, lʉ̌a rɔ́ɔi hâa-sìp kráp', 'english': "I'll take off fifty — a hundred and fifty.", 'note': 'เหลือ = leaving (remaining)'},
+            {'speaker': 'customer_female', 'thai': 'ร้อยยี่สิบได้ไหมคะ', 'paiboon': 'rɔ́ɔi yîi-sìp dâi mǎi ká', 'english': 'Could you do a hundred and twenty?', 'note': 'A counter-offer'},
+            {'speaker': 'vendor_male', 'thai': 'ได้ครับ เอาไปเลย', 'paiboon': 'dâi kráp, ao bpai ləəi', 'english': "Alright, it's yours.", 'note': 'Agreeing to the deal'}
+        ]
+    },
+
+    'temple_visit': {
+        'title': 'Visiting a Temple (ไปวัด)',
+        'setting': 'Asking about temple etiquette before going in',
+        'difficulty': 'beginner',
+        'dialogue': [
+            {'speaker': 'visitor_female', 'thai': 'ขอโทษค่ะ ต้องถอดรองเท้าไหมคะ', 'paiboon': 'kɔ̌ɔ-tôot kâ, tɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mǎi ká', 'english': 'Excuse me, do I need to take off my shoes?', 'note': 'ถอดรองเท้า = remove shoes'},
+            {'speaker': 'attendant_male', 'thai': 'ต้องถอดครับ ก่อนเข้าในโบสถ์', 'paiboon': 'tɔ̂ŋ tɔ̀ɔt kráp, gɔ̀ɔn kâo nai bòot', 'english': 'Yes, before entering the ordination hall.', 'note': 'โบสถ์ = the ubosot (ordination hall)'},
+            {'speaker': 'visitor_female', 'thai': 'แต่งตัวแบบนี้เข้าได้ไหมคะ', 'paiboon': 'tɛ̀ŋ-tua bɛ̀ɛp níi kâo dâi mǎi ká', 'english': 'Is it ok to go in dressed like this?', 'note': 'Asking about the dress code'},
+            {'speaker': 'attendant_male', 'thai': 'ควรปิดไหล่กับหัวเข่าครับ', 'paiboon': 'kuan bpìt lài gàp hǔa-kào kráp', 'english': 'You should cover your shoulders and knees.', 'note': 'Temple dress etiquette'},
+            {'speaker': 'visitor_female', 'thai': 'ถ่ายรูปได้ไหมคะ', 'paiboon': 'tàai-rûup dâi mǎi ká', 'english': 'Can I take photos?', 'note': ''},
+            {'speaker': 'attendant_male', 'thai': 'ได้ครับ แต่อย่าหันหลังให้พระพุทธรูป', 'paiboon': 'dâi kráp, tɛ̀ɛ yàa hǎn lǎŋ hâi prá-pút-tá-rûup', 'english': "Yes, but don't turn your back to the Buddha image.", 'note': 'Showing respect to the Buddha image'}
+        ]
+    },
+
+    'offering_alms': {
+        'title': 'Offering Alms (ตักบาตร)',
+        'setting': 'Offering food to a monk on his morning alms round',
+        'difficulty': 'beginner',
+        'dialogue': [
+            {'speaker': 'layperson_female', 'thai': 'นิมนต์ค่ะ', 'paiboon': 'ní-mon kâ', 'english': 'Please receive (inviting the monk).', 'note': 'นิมนต์ = the respectful word for inviting a monk'},
+            {'speaker': 'layperson_female', 'thai': 'ดิฉันขอถวายอาหารค่ะ', 'paiboon': 'dì-chǎn kɔ̌ɔ tà-wǎai aa-hǎan kâ', 'english': 'I would like to offer food.', 'note': 'ถวาย = to offer (to a monk)'},
+            {'speaker': 'monk', 'thai': 'เจริญพร', 'paiboon': 'jà-rəən pɔɔn', 'english': 'Blessings.', 'note': 'A monk answers with เจริญพร, not ครับ/ค่ะ'},
+            {'speaker': 'layperson_female', 'thai': 'ขอให้พระอาจารย์สุขภาพแข็งแรงค่ะ', 'paiboon': 'kɔ̌ɔ hâi prá aa-jaan sùk-kà-pâap kɛ̌ŋ-rɛɛŋ kâ', 'english': 'May you be in good health, Ajahn.', 'note': 'A good wish while offering'},
+            {'speaker': 'monk', 'thai': 'ขอให้โยมมีความสุข มีอายุยืน', 'paiboon': 'kɔ̌ɔ hâi yoom mii kwaam-sùk, mii aa-yú yʉʉn', 'english': 'May you be happy and live long.', 'note': "The monk's blessing in return; โยม = layperson"}
+        ]
+    },
+
+    'learning_meditation': {
+        'title': 'Learning Meditation from a Monk (เรียนสมาธิกับพระ)',
+        'setting': 'A layperson respectfully asks a monk how to begin meditating',
+        'difficulty': 'intermediate',
+        'dialogue': [
+            {'speaker': 'layperson_male', 'thai': 'กราบนมัสการครับ พระอาจารย์', 'paiboon': 'gràap ná-mát-sà-gaan kráp, prá aa-jaan', 'english': 'I pay respect, Ajahn.', 'note': 'Greeting a monk — not สวัสดี'},
+            {'speaker': 'monk', 'thai': 'เจริญพร โยม', 'paiboon': 'jà-rəən pɔɔn, yoom', 'english': 'Blessings, layperson.', 'note': 'โยม = how a monk addresses a lay person'},
+            {'speaker': 'layperson_male', 'thai': 'ผมอยากเริ่มนั่งสมาธิครับ ควรเริ่มยังไงดีครับ', 'paiboon': 'pǒm yàak rə̂əm nâŋ sà-maa-tí kráp, kuan rə̂əm yaŋ-ŋai dii kráp', 'english': 'I would like to start meditating. How should I begin?', 'note': 'นั่งสมาธิ = to meditate'},
+            {'speaker': 'monk', 'thai': 'เริ่มจากลมหายใจ หายใจเข้าก็รู้ หายใจออกก็รู้', 'paiboon': 'rə̂əm jàak lom hǎai-jai, hǎai-jai kâo gɔ̂ɔ rúu, hǎai-jai ɔ̀ɔk gɔ̂ɔ rúu', 'english': 'Begin with the breath. Breathing in, know it; breathing out, know it.', 'note': 'Mindfulness of breathing (ānāpānasati)'},
+            {'speaker': 'layperson_male', 'thai': 'ต้องนั่งนานไหมครับ', 'paiboon': 'tɔ̂ŋ nâŋ naan mǎi kráp', 'english': 'Do I need to sit for long?', 'note': 'Yes/no question'},
+            {'speaker': 'monk', 'thai': 'เริ่มจากสิบนาทีก่อน แล้วค่อยๆ เพิ่มขึ้น', 'paiboon': 'rə̂əm jàak sìp naa-tii gɔ̀ɔn, lɛ́ɛo kɔ̂i-kɔ̂i pə̂əm kʉ̂n', 'english': 'Start with ten minutes, then gradually increase.', 'note': 'ค่อยๆ = gradually'}
+        ]
     }
 }
+
+
+# The "glue" of real conversation — the phrases textbooks skip that keep talk
+# moving when you don't catch every word. Grouped for the Sentences page.
+# DRAFT Thai (2026-07-23), pending native-speaker review. Particles shown with
+# ครับ (male speaker); a female speaker swaps ครับ -> ค่ะ, as the first group notes.
+CONVERSATIONAL_PHRASES = [
+    {
+        'title': 'Keep the conversation going',
+        'icon': '💬',
+        'intro': "When you miss something, these keep you in the conversation instead of freezing up.",
+        'phrases': [
+            {'thai': 'พูดอีกทีได้ไหมครับ', 'paiboon': 'pûut ìik tii dâi mǎi kráp', 'english': 'Could you say that again?'},
+            {'thai': 'พูดช้าๆ ได้ไหมครับ', 'paiboon': 'pûut cháa-cháa dâi mǎi kráp', 'english': 'Could you speak slowly?'},
+            {'thai': 'ผมยังไม่เข้าใจครับ', 'paiboon': 'pǒm yaŋ mâi kâo-jai kráp', 'english': "I don't understand yet."},
+            {'thai': 'อ๋อ เข้าใจแล้วครับ', 'paiboon': 'ɔ̌ɔ, kâo-jai lɛ́ɛo kráp', 'english': 'Oh, I understand now.'},
+            {'thai': 'อันนี้ภาษาไทยพูดว่าอะไรครับ', 'paiboon': 'an níi paa-sǎa tai pûut wâa à-rai kráp', 'english': 'How do you say this in Thai?'},
+            {'thai': 'คำนี้แปลว่าอะไรครับ', 'paiboon': 'kam níi bplɛɛ wâa à-rai kráp', 'english': 'What does this word mean?'}
+        ]
+    },
+    {
+        'title': 'Buying a little time',
+        'icon': '⏳',
+        'intro': 'Natural fillers give you a moment to think — they sound far less awkward than silence.',
+        'phrases': [
+            {'thai': 'เอ่อ...', 'paiboon': 'ə̀ə...', 'english': 'Er… / Um…'},
+            {'thai': 'คือว่า...', 'paiboon': 'kʉʉ wâa...', 'english': 'The thing is… / Well…'},
+            {'thai': 'แบบว่า...', 'paiboon': 'bɛ̀ɛp wâa...', 'english': 'Like… / Sort of…'},
+            {'thai': 'เดี๋ยวนะครับ', 'paiboon': 'dǐao ná kráp', 'english': 'Hold on a second.'},
+            {'thai': 'ขอคิดแป๊บนึงครับ', 'paiboon': 'kɔ̌ɔ kít bpáep nʉ̀ŋ kráp', 'english': 'Let me think for a moment.'}
+        ]
+    },
+    {
+        'title': 'Reacting & agreeing',
+        'icon': '👍',
+        'intro': 'Small responses that show you are listening and keep the other person talking.',
+        'phrases': [
+            {'thai': 'จริงเหรอครับ', 'paiboon': 'jiŋ rə̌ə kráp', 'english': 'Really?'},
+            {'thai': 'โอเคครับ', 'paiboon': 'oo-kee kráp', 'english': 'Ok.'},
+            {'thai': 'ได้เลยครับ', 'paiboon': 'dâi ləəi kráp', 'english': 'Sure / No problem.'},
+            {'thai': 'เยี่ยมเลยครับ', 'paiboon': 'yîam ləəi kráp', 'english': 'Great!'},
+            {'thai': 'น่าสนใจนะครับ', 'paiboon': 'nâa-sǒn-jai ná kráp', 'english': "That's interesting."}
+        ]
+    },
+    {
+        'title': 'Being polite',
+        'icon': '🙏',
+        'intro': 'The particle ครับ (men) / ค่ะ (women) ends almost every polite sentence; these soften any request.',
+        'phrases': [
+            {'thai': 'ขอโทษครับ', 'paiboon': 'kɔ̌ɔ-tôot kráp', 'english': 'Excuse me / Sorry.'},
+            {'thai': 'ไม่เป็นไรครับ', 'paiboon': 'mâi bpen rai kráp', 'english': "It's ok / No worries."},
+            {'thai': 'ขอบคุณมากครับ', 'paiboon': 'kɔ̀ɔp-kun mâak kráp', 'english': 'Thank you very much.'},
+            {'thai': 'รบกวนหน่อยครับ', 'paiboon': 'róp-guan nɔ̀i kráp', 'english': 'Sorry to trouble you… (before a request)'}
+        ]
+    }
+]
 
 
 @app.route('/grammar')
@@ -5359,7 +5487,8 @@ def sentences():
                          patterns=SENTENCE_PATTERNS,
                          aspect_examples=aspect_examples,
                          question_examples=question_examples,
-                         conversations=CONVERSATIONS)
+                         conversations=CONVERSATIONS,
+                         conversational_phrases=CONVERSATIONAL_PHRASES)
 
 
 @app.route('/meditation')
