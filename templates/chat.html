@@ -542,6 +542,42 @@
         <div id="limit-hint" class="limit-hint" style="display:none;"></div>
     </div>
 
+    {% if roleplay_scenarios %}
+    <style>
+        .scenario-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+            margin: 0 0 1rem;
+        }
+        .scenario-label { font-weight: 600; color: var(--royal-purple); margin-right: 0.25rem; }
+        .scenario-chip {
+            padding: 0.45rem 0.9rem;
+            border: 2px solid var(--bodhi-green);
+            background: #fff;
+            color: var(--bodhi-green);
+            border-radius: 20px;
+            font: 600 0.9rem inherit;
+            font-family: inherit;
+            cursor: pointer;
+        }
+        .scenario-chip:hover { background: #e8f5e9; }
+        .scenario-chip.active { background: var(--bodhi-green); color: #fff; }
+        .scenario-chip--exit { border-color: var(--hibiscus-red, #c62828); color: var(--hibiscus-red, #c62828); }
+        .scenario-chip--exit:hover { background: #fdecea; }
+    </style>
+    <div id="scenario-bar" class="scenario-bar">
+        <span class="scenario-label">🎭 Roleplay a scene:</span>
+        {% for sid, sc in roleplay_scenarios.items() %}
+        <button type="button" class="scenario-chip" data-scenario="{{ sid }}"
+                onclick="startScenario('{{ sid }}', '{{ sc.title }}')">{{ sc.icon }} {{ sc.title }}</button>
+        {% endfor %}
+        <button type="button" class="scenario-chip scenario-chip--exit" id="scenario-exit"
+                onclick="exitScenario()" hidden>✕ End roleplay</button>
+    </div>
+    {% endif %}
+
     <div class="chat-body" id="chat-messages">
         <div class="welcome-message">
             <h2>🪷 Welcome to Your AI Thai Learning Partner!</h2>
@@ -645,7 +681,8 @@
     let currentMode = AI_LIMITS.unlimited ? 'conversation' : 'tutor';
     let sessionId = 'session_' + Date.now();
     let totalTokens = 0;
-    
+    let currentScenario = null;   // active roleplay scenario id, or null
+
     function switchMode(mode) {
         // Free & Basic can only use the allowed mode(s); the rest are Pro-only.
         if (!AI_LIMITS.unlimited && !AI_LIMITS.allowed_modes.includes(mode)) {
@@ -653,6 +690,8 @@
                 + "Conversation, Culture, Dhamma and the Exercise Generator.");
             return;
         }
+        // Leaving conversation mode ends any roleplay in progress.
+        if (mode !== 'conversation' && currentScenario) { exitScenario(); }
         currentMode = mode;
 
         // Update button states
@@ -682,58 +721,59 @@
     async function sendMessage() {
         const input = document.getElementById('user-input');
         const message = input.value.trim();
-        
         if (!message) return;
-        
-        // Clear input and disable
         input.value = '';
+        await callAI(message, { showUser: true });
+    }
+
+    // Shared network + response handling. Used by a typed message (showUser
+    // true) and by a scenario kickoff, which sends a hidden control message
+    // (showUser false) so the AI opens the scene without a stray user bubble.
+    async function callAI(message, opts) {
+        opts = opts || {};
+        const showUser = opts.showUser !== false;
+
+        const input = document.getElementById('user-input');
         input.disabled = true;
         document.getElementById('send-btn').disabled = true;
-        
+
         // Remove welcome message and placeholder if present
         const welcome = document.querySelector('.welcome-message');
         if (welcome) welcome.remove();
         const placeholder = document.getElementById('chat-placeholder');
         if (placeholder) placeholder.remove();
-        
-        // Add user message
-        addMessage('user', message);
-        
-        // Show thinking indicator
+
+        if (showUser) addMessage('user', message);
+
         document.getElementById('thinking').classList.add('active');
-        
+
         try {
-            // Send to API
             const response = await fetch('/api/ai/chat', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     message: message,
                     mode: currentMode,
-                    session_id: sessionId
+                    session_id: sessionId,
+                    scenario: currentScenario
                 })
             });
-            
+
             const data = await response.json();
-            
+
             if (data.success) {
                 addMessage('assistant', data.response);
 
-                // Update token counter
                 if (data.tokens_used) {
                     totalTokens += data.tokens_used.input + data.tokens_used.output;
                     document.getElementById('token-display').textContent =
                         `Session tokens: ${totalTokens.toLocaleString()}`;
                 }
-                // Server tells free/basic users how many messages they have left
                 if (typeof data.remaining === 'number') {
                     AI_LIMITS.remaining = data.remaining;
                     updateLimitHint();
                 }
             } else if (data.gate) {
-                // Hit a freemium limit — show a friendly upgrade prompt, not an error
                 showUpgradeNote(data.message);
                 if (data.gate === 'daily_limit') {
                     AI_LIMITS.remaining = 0;
@@ -742,16 +782,52 @@
             } else {
                 addMessage('system', `Error: ${data.message}`);
             }
-            
         } catch (error) {
             addMessage('system', `Error: ${error.message}`);
         } finally {
-            // Re-enable input
             input.disabled = false;
             document.getElementById('send-btn').disabled = false;
             document.getElementById('thinking').classList.remove('active');
             input.focus();
         }
+    }
+
+    // ── Roleplay scenarios (conversation partner) ───────────────
+    function startScenario(id, title) {
+        if (!AI_LIMITS.unlimited) {
+            showUpgradeNote("🔒 Roleplay is part of Conversation mode, a Pro feature. "
+                + "Upgrade to practise real Thai conversations with the AI partner.");
+            return;
+        }
+        // Roleplay runs in conversation mode; select it and reset for a fresh scene.
+        currentMode = 'conversation';
+        document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
+        const convBtn = document.querySelector('[data-mode="conversation"]');
+        if (convBtn) convBtn.classList.add('active');
+
+        currentScenario = id;
+        sessionId = 'session_' + Date.now();   // fresh history per scene
+
+        document.querySelectorAll('.scenario-chip').forEach(c => c.classList.remove('active'));
+        const chip = document.querySelector(`.scenario-chip[data-scenario="${id}"]`);
+        if (chip) chip.classList.add('active');
+        const exit = document.getElementById('scenario-exit');
+        if (exit) exit.hidden = false;
+
+        const welcome = document.querySelector('.welcome-message');
+        if (welcome) welcome.remove();
+        addMessage('system', `🎭 Roleplay started: ${title}. Reply in Thai — the other person will begin.`);
+
+        // Let the AI open the scene in character (hidden control message).
+        callAI('(The learner is ready. Please begin the scene in character.)', { showUser: false });
+    }
+
+    function exitScenario() {
+        currentScenario = null;
+        document.querySelectorAll('.scenario-chip').forEach(c => c.classList.remove('active'));
+        const exit = document.getElementById('scenario-exit');
+        if (exit) exit.hidden = true;
+        addMessage('system', '🎭 Roleplay ended. Back to open conversation.');
     }
     
     function addMessage(type, content) {

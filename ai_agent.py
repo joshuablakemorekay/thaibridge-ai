@@ -19,6 +19,34 @@ import json
 from datetime import datetime
 
 
+# Roleplay scenarios for the conversation partner. Each puts the AI in a fixed
+# role so the learner can practise a real, bounded situation instead of an open
+# blank chat. Shown as chips on the chat page (title + icon) and looked up here
+# by id when a message arrives, so the roleplay framing is authored server-side
+# and never trusted from the browser.
+ROLEPLAY_SCENARIOS = {
+    'restaurant': {'title': 'Order at a restaurant', 'icon': '🍜',
+                   'ai_role': 'a friendly waiter at a Thai restaurant',
+                   'setting': 'The student has just sat down and is ready to order.'},
+    'market': {'title': 'Haggle at the market', 'icon': '🛍️',
+               'ai_role': 'a cheerful market vendor selling clothes and souvenirs',
+               'setting': 'The student is browsing your stall and may want to bargain on the price.'},
+    'taxi': {'title': 'Take a taxi', 'icon': '🚕',
+             'ai_role': 'a Bangkok taxi driver',
+             'setting': 'The student has just got in and needs to tell you where to go.'},
+    'directions': {'title': 'Ask for directions', 'icon': '🗺️',
+                   'ai_role': 'a friendly local on the street',
+                   'setting': 'The student looks a little lost and needs directions somewhere.'},
+    'meeting': {'title': 'Meet someone new', 'icon': '👋',
+                'ai_role': 'a friendly Thai person meeting the student for the first time',
+                'setting': 'You have just been introduced at a social gathering.'},
+    # A monk/temple roleplay was deliberately left out: on the cheap live model
+    # the AI does not hold monastic register reliably (slips ครับ, ท่าน vs โยม),
+    # which would misteach it. The monastic-register handling below is kept so it
+    # can be re-added on a stronger model. (Josh's call, 2026-07-23.)
+}
+
+
 class ThaiLearningAI:
     """
     Core AI Agent for Thai Language Learning
@@ -40,13 +68,15 @@ class ThaiLearningAI:
         # Conversation history by session
         self.conversations: Dict[str, List[Dict]] = {}
         
-    def get_system_prompt(self, mode: str, user_context: Dict) -> str:
+    def get_system_prompt(self, mode: str, user_context: Dict,
+                          scenario: Optional[str] = None) -> str:
         """
         Generate system prompt based on mode and user context
-        
+
         Args:
             mode: AI mode (conversation, tutor, generator, cultural, buddhist, helper)
             user_context: User's learning progress, level, preferences
+            scenario: optional roleplay scenario id (conversation mode only)
         """
         
         # Base context about user
@@ -227,8 +257,31 @@ example help, or should I show part of the answer?" Celebrate genuine effort:
         
         # Get the mode-specific prompt or default to tutor
         mode_prompt = mode_prompts.get(mode, mode_prompts['tutor'])
-        
-        return base_prompt + mode_prompt
+
+        # In conversation mode, an optional scenario turns the partner into a
+        # fixed role for a bounded, realistic practice situation.
+        roleplay = ''
+        if mode == 'conversation' and scenario in ROLEPLAY_SCENARIOS:
+            sc = ROLEPLAY_SCENARIOS[scenario]
+            roleplay = f"""
+
+ACTIVE ROLEPLAY — STAY IN CHARACTER
+You are role-playing as {sc['ai_role']}. {sc['setting']}
+Remain fully in character as this Thai person for the whole conversation. Do NOT
+switch into being a teacher or narrator. Speak the way this person really would.
+Every line: Thai script, then Paiboon romanisation, then a short English gloss in
+brackets. Keep replies short and realistic — one or two sentences, like real speech.
+When the student slips, model the correct Thai naturally in your own reply rather
+than stopping to lecture. If they seem stuck, ask a simple question to keep the
+scene moving. Open the scene yourself with a natural first line in character.
+"""
+            if sc.get('monastic'):
+                roleplay += ("Use proper monastic register: refer to yourself as อาตมา, "
+                             "address the lay visitor as โยม, and greet with เจริญพร. A monk "
+                             "does NOT use the lay politeness particles ครับ or ค่ะ at all — "
+                             "use เจริญพร in their place.\n")
+
+        return base_prompt + mode_prompt + roleplay
     
     def chat(
         self,
@@ -236,7 +289,8 @@ example help, or should I show part of the answer?" Celebrate genuine effort:
         message: str,
         mode: str = 'conversation',
         user_context: Optional[Dict] = None,
-        max_tokens: int = 2000
+        max_tokens: int = 2000,
+        scenario: Optional[str] = None
     ) -> Dict:
         """
         Send a message and get AI response
@@ -264,8 +318,8 @@ example help, or should I show part of the answer?" Celebrate genuine effort:
                 'name': 'Student'
             }
         
-        # Get system prompt for this mode
-        system_prompt = self.get_system_prompt(mode, user_context)
+        # Get system prompt for this mode (with any active roleplay scenario)
+        system_prompt = self.get_system_prompt(mode, user_context, scenario)
         
         # Add user message to history
         self.conversations[session_id].append({

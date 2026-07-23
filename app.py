@@ -6624,7 +6624,12 @@ def chat():
         return render_template('error.html',
                              message='AI Agent not available',
                              details='Please check setup instructions')
-    return render_template('chat.html', ai_limits=ai_limits_status())
+    try:
+        from ai_agent import ROLEPLAY_SCENARIOS
+    except Exception:
+        ROLEPLAY_SCENARIOS = {}
+    return render_template('chat.html', ai_limits=ai_limits_status(),
+                           roleplay_scenarios=ROLEPLAY_SCENARIOS)
 
 @app.route('/api/ai/chat', methods=['POST'])
 def ai_chat():
@@ -6638,6 +6643,7 @@ def ai_chat():
         data = request.json
         message = data.get('message', '')
         mode = data.get('mode', 'conversation')
+        scenario = data.get('scenario') or None
         session_id = session.get('session_id', 'session_' + str(datetime.now().timestamp()))
 
         # --- Freemium gate: Pro is unlimited; free & basic get a taste ---
@@ -6673,7 +6679,8 @@ def ai_chat():
             mode=mode,
             session_id=session_id,
             user_context=user_context,
-            max_tokens=500
+            max_tokens=500,
+            scenario=scenario
         )
 
         # Count this message against the daily taste for free & basic users,
