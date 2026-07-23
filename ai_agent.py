@@ -60,10 +60,17 @@ class ThaiLearningAI:
             raise ValueError("ANTHROPIC_API_KEY not found. Please set it in environment or pass to constructor.")
         
         self.client = anthropic.Anthropic(api_key=self.api_key)
-        # Model is configurable via the AI_MODEL env var. Local dev defaults to
-        # Sonnet (higher quality); the public Render demo sets AI_MODEL to a cheap
-        # Haiku model so visitor messages cost a fraction of a cent (see render.yaml).
-        self.model = os.environ.get("AI_MODEL", "claude-sonnet-4-20250514")
+        # Model is configurable via the AI_MODEL env var. The public Render demo
+        # sets AI_MODEL to a cheap Haiku model so visitor messages cost a fraction
+        # of a cent (see render.yaml); this default is the fallback for local dev.
+        #
+        # The old default (claude-sonnet-4-20250514) was retired and now returns a
+        # 404, which silently broke local AI. The default is Haiku 4.5 — the same
+        # model the live demo runs, verified working with this code path. It does
+        # NOT think-by-default, so the small max_tokens budget below all goes to
+        # the reply (a newer thinking-by-default model like Sonnet 5 would need
+        # thinking disabled here first). Set AI_MODEL to override.
+        self.model = os.environ.get("AI_MODEL", "claude-haiku-4-5-20251001")
         
         # Conversation history by session
         self.conversations: Dict[str, List[Dict]] = {}
