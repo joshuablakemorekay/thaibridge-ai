@@ -1765,3 +1765,147 @@ body {
     outline: 3px solid var(--royal-gold);
     outline-offset: 2px;
 }
+
+/* ==========================================================================
+   Reading Support (accessibility)
+   ==========================================================================
+   Four independent, learner-controlled toggles that make text easier to read
+   for people who find reading harder (e.g. dyslexia). Each is switched on by an
+   "rs-<name>" class added to the <html> element by base.js. The panel markup is
+   in base.html's nav; the button reuses the site's .dropdown pattern.
+
+   Design note: the easy-read font only replaces the LATIN text. Thai script and
+   Paiboon romanization keep their own fonts (Thai needs Noto Serif Thai to
+   render its stacked vowels/tones; romanization stays monospace via its own
+   !important rule earlier in this file), so switching fonts never breaks them.
+   ------------------------------------------------------------------------- */
+
+/* --- The panel (dropdown contents) --- */
+.reading-support-panel {
+    min-width: 240px;
+    padding: 0.5rem 0.4rem;
+}
+.reading-support-panel .rs-heading {
+    margin: 0;
+    padding: 0.2rem 0.6rem 0.15rem;
+    font-weight: 700;
+    color: var(--royal-purple);
+}
+.reading-support-panel .rs-intro {
+    margin: 0;
+    padding: 0 0.6rem 0.5rem;
+    max-width: 15rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    white-space: normal;
+    opacity: 0.85;
+}
+.reading-support-panel .rs-option {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.45rem 0.6rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    white-space: nowrap;
+    font: inherit;
+}
+.reading-support-panel .rs-option:hover {
+    background: rgba(74, 26, 107, 0.08);
+}
+.reading-support-panel .rs-option input {
+    width: 1.1rem;
+    height: 1.1rem;
+    accent-color: var(--royal-purple);
+    cursor: pointer;
+    flex: none;
+}
+.reading-support-panel .rs-reset {
+    display: block;
+    width: calc(100% - 1.2rem);
+    margin: 0.5rem 0.6rem 0.2rem;
+    padding: 0.4rem 0.6rem;
+    font: inherit;
+    font-size: 0.85rem;
+    color: var(--royal-purple);
+    background: transparent;
+    border: 1px solid var(--sandstone);
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.reading-support-panel .rs-reset:hover {
+    background: rgba(74, 26, 107, 0.08);
+}
+.reading-support-panel .rs-note {
+    margin: 0;
+    padding: 0.35rem 0.6rem 0.2rem;
+    font-size: 0.78rem;
+    opacity: 0.7;
+}
+
+/* --- Effect 1: easy-to-read font ---
+   Swap the decorative serif for Atkinson Hyperlegible (designed for maximum
+   legibility). Thai glyphs fall through to Noto Serif Thai automatically. No
+   !important, so the earlier monospace romanization rule still wins. */
+html.rs-font body,
+html.rs-font h1, html.rs-font h2, html.rs-font h3,
+html.rs-font h4, html.rs-font h5, html.rs-font h6 {
+    font-family: 'Atkinson Hyperlegible', 'Noto Serif Thai', Georgia, sans-serif;
+}
+
+/* --- Effect 2: bigger text ---
+   Scale the root font size up. Everything sized in rem/em grows with it. */
+html.rs-large {
+    font-size: 115%;
+}
+
+/* --- Effect 3: extra spacing ---
+   Loosen line height and word/letter spacing — the best-evidenced change for
+   dyslexic readers. Kept gentle so Thai's stacked marks stay attached. */
+html.rs-spacing body {
+    line-height: 1.9;
+    letter-spacing: 0.05em;
+    word-spacing: 0.16em;
+}
+html.rs-spacing p,
+html.rs-spacing li {
+    margin-bottom: 0.8em;
+}
+
+/* --- Effect 4: reduce motion & distractions ---
+   Near-instant transitions/animations and no decorative floating emoji or
+   gradient. Helps learners with ADHD, autism or visual stress focus on the
+   lesson instead of the movement around it. */
+html.rs-calm body::before,
+html.rs-calm body::after {
+    display: none;
+}
+html.rs-calm *,
+html.rs-calm *::before,
+html.rs-calm *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+}
+
+/* --- Read aloud button (inside the panel) --- */
+.reading-support-panel .rs-read {
+    display: block;
+    width: calc(100% - 1.2rem);
+    margin: 0.5rem 0.6rem 0;
+    padding: 0.45rem 0.6rem;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--royal-purple);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.reading-support-panel .rs-read:hover {
+    background: var(--deep-purple);
+}
+.reading-support-panel .rs-read.is-speaking {
+    background: var(--temple-red);
+}

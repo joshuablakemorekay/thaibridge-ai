@@ -10,10 +10,26 @@
     <!-- Font Imports for Proper Unicode Support -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@400;500&family=Noto+Sans:wght@400;500;600;700&family=Noto+Serif+Thai:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="{{ static_v('css/base.css') }}">
     {% block extra_css %}{% endblock %}
+
+    <!-- Reading Support: apply the user's saved accessibility choices before the
+         page paints, so switching pages never flashes the old style first. The
+         matching checkboxes and full logic live in base.js. -->
+    <script>
+        (function () {
+            try {
+                var s = JSON.parse(localStorage.getItem('tb-reading-support') || '{}');
+                var el = document.documentElement;
+                if (s.font)    el.classList.add('rs-font');
+                if (s.large)   el.classList.add('rs-large');
+                if (s.spacing) el.classList.add('rs-spacing');
+                if (s.calm)    el.classList.add('rs-calm');
+            } catch (e) { /* private mode / storage off: just skip */ }
+        })();
+    </script>
 </head>
 <body>
     <nav>
@@ -25,6 +41,27 @@
             <ul id="main-nav">
                 <li><a href="/">🏠 Home</a></li>
                 <li><a href="/instructions">ℹ️ Help</a></li>
+
+                <!-- Learning Support: accessibility toggles for learners who find
+                     studying harder (e.g. dyslexia, ADHD, autism). Pure front-end —
+                     choices are saved in the browser, nothing is sent to the server. -->
+                <li class="dropdown reading-support">
+                    <button class="dropdown-toggle" onclick="toggleDropdown(this)"
+                            title="Learning support — easier-to-read font, bigger text, more spacing, reduce motion, read aloud">
+                        ♿ Learning Support
+                    </button>
+                    <div class="dropdown-content reading-support-panel">
+                        <p class="rs-heading">Learning Support</p>
+                        <p class="rs-intro">Tools that make studying easier &mdash; helpful if you have dyslexia, ADHD, autism, low vision, or find reading tiring. Mix and match whatever works for you. These settings only change how the site looks for you.</p>
+                        <label class="rs-option"><input type="checkbox" id="rs-font"> Easy-to-read font</label>
+                        <label class="rs-option"><input type="checkbox" id="rs-large"> Bigger text</label>
+                        <label class="rs-option"><input type="checkbox" id="rs-spacing"> Extra letter &amp; line spacing</label>
+                        <label class="rs-option"><input type="checkbox" id="rs-calm"> Reduce motion &amp; distractions</label>
+                        <button type="button" class="rs-read" id="rs-read" title="Reads the English text aloud. Highlight some text first to hear just that part.">🔊 Read aloud</button>
+                        <button type="button" class="rs-reset" id="rs-reset">Turn all off</button>
+                        <p class="rs-note">Saved on this device.</p>
+                    </div>
+                </li>
 
                 <!-- Learn -->
                 <li class="dropdown">
