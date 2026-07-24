@@ -5554,7 +5554,9 @@ def tour_guide():
 @require_access('business_thai')
 def business_thai():
     """Business Thai for professionals and expats"""
-    return render_template('business_thai.html', vocab=BUSINESS_VOCAB)
+    audio_map = _audio_map_for(
+        w['thai'] for words in BUSINESS_VOCAB.values() for w in words)
+    return render_template('business_thai.html', vocab=BUSINESS_VOCAB, audio_map=audio_map)
 
 
 @app.route('/paiboon')
