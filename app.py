@@ -4688,9 +4688,20 @@ def exercise(category):
     session['current_vocab'] = vocab_list
     session['current_category'] = category
     session['beginner_mode'] = beginner_mode
-    
-    return render_template('exercise.html', category=category, vocab=vocab_list, 
-                         story=story, beginner_mode=beginner_mode)
+
+    # thai -> MP3 URL for every word in this category (only ones with a clip).
+    # Covers both the vocab table and the JS quiz, which draw the same words.
+    # Keyed on the raw VOCABULARY word, whose 'thai' is unchanged by beginner
+    # mode (that only rewrites the romanisation), so the keys stay stable.
+    audio_map = {
+        w['thai']: url_for('static', filename=thai_audio.audio_static_path(w['thai']))
+        for w in VOCABULARY[category]
+        if thai_audio.audio_exists(app.static_folder, w['thai'])
+    }
+
+    return render_template('exercise.html', category=category, vocab=vocab_list,
+                         story=story, beginner_mode=beginner_mode,
+                         audio_map=audio_map)
 
 
 
