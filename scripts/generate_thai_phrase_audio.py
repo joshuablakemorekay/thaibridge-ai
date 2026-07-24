@@ -112,6 +112,16 @@ def collect_paiboon():
     return [v['thai'] for v in app.PAIBOON_GUIDE['vowels']]
 
 
+def collect_grammar():
+    """The Grammar guide — every pronounceable Thai string in GRAMMAR.
+
+    The route and this collector share app.grammar_thai_strings(), which already
+    de-dupes and drops Latin notation ('คุณ + name'), so there is nothing to
+    filter here."""
+    import app
+    return app.grammar_thai_strings()
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -119,6 +129,7 @@ PAGES = {
     'read_write': collect_read_write,
     'tones_classes': collect_tones_classes,
     'paiboon': collect_paiboon,
+    'grammar': collect_grammar,
 }
 
 
