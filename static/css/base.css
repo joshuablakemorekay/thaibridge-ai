@@ -1769,8 +1769,9 @@ body {
 /* ==========================================================================
    Reading Support (accessibility)
    ==========================================================================
-   Four independent, learner-controlled toggles that make text easier to read
-   for people who find reading harder (e.g. dyslexia). Each is switched on by an
+   Three independent, learner-controlled toggles that make text easier to read
+   for people who find reading harder (e.g. dyslexia), plus a read-aloud tool
+   where the learner picks what gets spoken. Each toggle is switched on by an
    "rs-<name>" class added to the <html> element by base.js. The panel markup is
    in base.html's nav; the button reuses the site's .dropdown pattern.
 
@@ -1780,10 +1781,13 @@ body {
    !important rule earlier in this file), so switching fonts never breaks them.
    ------------------------------------------------------------------------- */
 
-/* --- The panel (dropdown contents) --- */
+/* --- The panel (dropdown contents) ---
+   Taller than a normal dropdown so the "who this is for" note at the bottom is
+   visible without scrolling; still capped so it can't run off a short screen. */
 .reading-support-panel {
     min-width: 240px;
     padding: 0.5rem 0.4rem;
+    max-height: min(85vh, 560px);
 }
 .reading-support-panel .rs-heading {
     margin: 0;
@@ -1879,28 +1883,46 @@ html.rs-spacing li {
     margin-bottom: 0.8em;
 }
 
-/* --- Effect 4: reduce motion & distractions ---
-   Near-instant transitions/animations and no decorative floating emoji or
-   gradient. Helps learners with ADHD, autism or visual stress focus on the
-   lesson instead of the movement around it. */
-html.rs-calm body::before,
-html.rs-calm body::after {
-    display: none;
+/* --- Read aloud (inside the panel) ---
+   A chooser ("what should I read?") sits above the button so the learner
+   decides what gets spoken before starting. */
+.reading-support-panel .rs-read-group {
+    margin-top: 0.55rem;
+    padding-top: 0.55rem;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
 }
-html.rs-calm *,
-html.rs-calm *::before,
-html.rs-calm *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+.reading-support-panel .rs-read-label {
+    display: block;
+    padding: 0 0.6rem 0.3rem;
+    max-width: 15rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.35;
+    white-space: normal;
+    color: rgba(255, 255, 255, 0.9);
 }
-
-/* --- Read aloud button (inside the panel) --- */
+.reading-support-panel .rs-read-scope {
+    display: block;
+    width: calc(100% - 1.2rem);
+    margin: 0 0.6rem;
+    padding: 0.35rem 0.4rem;
+    font: inherit;
+    font-size: 0.85rem;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--royal-gold);
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+/* Native dropdown lists render on the OS layer, so force readable colours. */
+.reading-support-panel .rs-read-scope option {
+    color: #1a1a1a;
+    background: #FFFFFF;
+}
 .reading-support-panel .rs-read {
     display: block;
     width: calc(100% - 1.2rem);
-    margin: 0.5rem 0.6rem 0;
+    margin: 0.4rem 0.6rem 0;
     padding: 0.45rem 0.6rem;
     font: inherit;
     font-weight: 600;
@@ -1915,4 +1937,36 @@ html.rs-calm *::after {
 }
 .reading-support-panel .rs-read.is-speaking {
     background: var(--temple-red);
+}
+.reading-support-panel .rs-read-hint {
+    margin: 0;
+    padding: 0.3rem 0.6rem 0;
+    max-width: 15rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    white-space: normal;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* --- "Pick a part to read" mode ---
+   While the learner is choosing, every readable block highlights on hover so
+   it is obvious what will be spoken when they click. */
+html.rs-picking main p:hover,
+html.rs-picking main li:hover,
+html.rs-picking main h1:hover,
+html.rs-picking main h2:hover,
+html.rs-picking main h3:hover,
+html.rs-picking main h4:hover,
+html.rs-picking main h5:hover,
+html.rs-picking main h6:hover,
+html.rs-picking main blockquote:hover,
+html.rs-picking main td:hover,
+html.rs-picking main th:hover,
+html.rs-picking main dd:hover,
+html.rs-picking main dt:hover,
+html.rs-picking main figcaption:hover {
+    outline: 2px dashed var(--royal-gold);
+    outline-offset: 2px;
+    background: rgba(212, 175, 55, 0.15);
+    cursor: pointer;
 }

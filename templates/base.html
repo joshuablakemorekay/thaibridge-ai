@@ -26,7 +26,6 @@
                 if (s.font)    el.classList.add('rs-font');
                 if (s.large)   el.classList.add('rs-large');
                 if (s.spacing) el.classList.add('rs-spacing');
-                if (s.calm)    el.classList.add('rs-calm');
             } catch (e) { /* private mode / storage off: just skip */ }
         })();
     </script>
@@ -47,19 +46,32 @@
                      choices are saved in the browser, nothing is sent to the server. -->
                 <li class="dropdown reading-support">
                     <button class="dropdown-toggle" onclick="toggleDropdown(this)"
-                            title="Learning support — easier-to-read font, bigger text, more spacing, reduce motion, read aloud">
+                            title="Learning support — easier-to-read font, bigger text, more spacing, and read aloud">
                         ♿ Learning Support
                     </button>
                     <div class="dropdown-content reading-support-panel">
                         <p class="rs-heading">Learning Support</p>
-                        <p class="rs-intro">Tools that make studying easier &mdash; helpful if you have dyslexia, ADHD, autism, low vision, or find reading tiring. Mix and match whatever works for you. These settings only change how the site looks for you.</p>
+                        <p class="rs-intro">Mix and match whatever makes studying easier.</p>
                         <label class="rs-option"><input type="checkbox" id="rs-font"> Easy-to-read font</label>
                         <label class="rs-option"><input type="checkbox" id="rs-large"> Bigger text</label>
                         <label class="rs-option"><input type="checkbox" id="rs-spacing"> Extra letter &amp; line spacing</label>
-                        <label class="rs-option"><input type="checkbox" id="rs-calm"> Reduce motion &amp; distractions</label>
-                        <button type="button" class="rs-read" id="rs-read" title="Reads the English text aloud. Highlight some text first to hear just that part.">🔊 Read aloud</button>
+
+                        <!-- Read aloud: the learner chooses WHAT gets read before
+                             pressing the button, instead of always getting the
+                             whole page. Logic lives in base.js. -->
+                        <div class="rs-read-group">
+                            <label class="rs-read-label" for="rs-read-scope">Read aloud &mdash; what should I read?</label>
+                            <select class="rs-read-scope" id="rs-read-scope">
+                                <option value="page">The whole page</option>
+                                <option value="section">A part I click on</option>
+                                <option value="selection">Text I have highlighted</option>
+                            </select>
+                            <button type="button" class="rs-read" id="rs-read">🔊 Read aloud</button>
+                            <p class="rs-read-hint" id="rs-read-hint">Pick what you want, then press the button. English only &mdash; Thai has its own audio buttons.</p>
+                        </div>
+
                         <button type="button" class="rs-reset" id="rs-reset">Turn all off</button>
-                        <p class="rs-note">Saved on this device.</p>
+                        <p class="rs-note">Built for learners with dyslexia, ADHD, autism, low vision or visual stress &mdash; and anyone who finds long English text tiring. Your choices are saved on this device only and never sent to us. <a href="/instructions#learning-support">Full guide &rarr;</a></p>
                     </div>
                 </li>
 
