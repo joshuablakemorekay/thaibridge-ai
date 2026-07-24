@@ -161,6 +161,12 @@ def collect_lessons():
     return app.lessons_thai_strings()
 
 
+def collect_tour():
+    """The Tour Guide — every tourist word/phrase across all categories."""
+    import app
+    return [w['thai'] for words in app.TOUR_VOCAB.values() for w in words]
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -173,6 +179,7 @@ PAGES = {
     'gender': collect_gender,
     'vocabulary': collect_vocabulary,
     'lessons': collect_lessons,
+    'tour': collect_tour,
 }
 
 
