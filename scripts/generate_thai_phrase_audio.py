@@ -142,6 +142,18 @@ def collect_gender():
     return app.gender_thai_strings()
 
 
+def collect_vocabulary():
+    """The Vocabulary exercises — every word across all categories. These show
+    on the /exercise/<category> pages (the vocab table and the quiz), not on the
+    /learn landing, which only lists category names."""
+    import app
+    found = []
+    for words in app.VOCABULARY.values():
+        for w in words:
+            found.append(w['thai'])
+    return found
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -152,6 +164,7 @@ PAGES = {
     'grammar': collect_grammar,
     'formality': collect_formality,
     'gender': collect_gender,
+    'vocabulary': collect_vocabulary,
 }
 
 

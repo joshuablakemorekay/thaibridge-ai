@@ -2,6 +2,26 @@
 
 {% block title %}Practice: {{ category.replace('_', ' ').title() }}{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* Tap-to-hear button — appended to each Thai word (table + quiz card). */
+    .ex-listen {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 0.85rem;
+        line-height: 1;
+        padding: 0.1rem 0.3rem;
+        margin-left: 0.2rem;
+        border-radius: 6px;
+        vertical-align: middle;
+        opacity: 0.7;
+    }
+    .ex-listen:hover, .ex-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
+    .ex-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+</style>
+{% endblock %}
+
 {% block content %}
 <h1>
     Practice: {{ category.replace('_', ' ').title() }}
@@ -79,6 +99,28 @@
 const category = "{{ category }}";
 const beginnerMode = {{ 'true' if beginner_mode else 'false' }};
 
+// Tap-to-hear: thai -> MP3 URL for this category's words. wireAudio appends a
+// 🔊 (the site-wide .th-audio player) to every .thai-text in `root` that has a
+// clip. Called on load for the vocab table, and after each quiz render for the
+// dynamically-built card. Guarded so a word is only wired once.
+const EXERCISE_AUDIO = {{ audio_map|tojson }};
+function wireAudio(root) {
+    (root || document).querySelectorAll('.thai-text').forEach(function (el) {
+        if (el.dataset.audioWired) { return; }
+        var url = EXERCISE_AUDIO[el.textContent.trim()];
+        if (!url) { return; }
+        el.dataset.audioWired = '1';
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'th-audio ex-listen';
+        b.setAttribute('data-audio', url);
+        b.setAttribute('aria-label', 'Listen');
+        b.textContent = '🔊';
+        el.appendChild(b);
+    });
+}
+document.addEventListener('DOMContentLoaded', function () { wireAudio(document); });
+
 let currentQuestion = null;
 let score = 0;
 let total = 0;
@@ -112,6 +154,7 @@ async function loadQuiz() {
         html += '</div>';
         
         document.getElementById('quizContent').innerHTML = html;
+        wireAudio(document.getElementById('quizContent'));
     } catch (error) {
         document.getElementById('quizContent').innerHTML = '<p style="color: red;">Error loading quiz. Please try again.</p>';
     }
@@ -152,6 +195,7 @@ async function checkAnswer(answer) {
             </p>
         </div>
     `;
+    wireAudio(document.getElementById('quizContent'));
 }
 </script>
 {% endblock %}
