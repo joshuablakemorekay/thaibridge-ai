@@ -7,6 +7,22 @@
 
 {% block extra_css %}
 <style>
+/* Tap-to-hear button — appended to each Thai phrase by the script at the foot
+   of this page. Small and unobtrusive so it never competes with the Thai. */
+.gr-listen {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.8rem;
+    line-height: 1;
+    padding: 0.1rem 0.25rem;
+    margin-left: 0.15rem;
+    border-radius: 6px;
+    vertical-align: middle;
+    opacity: 0.65;
+}
+.gr-listen:hover, .gr-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
+.gr-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
 /* Ensure all romanization uses monospace for consistent IPA rendering */
 .paiboon, .romanized, .romanization,
 [class*="paiboon"], [class*="romaniz"] {
@@ -827,5 +843,29 @@
 </div>
     </div>
 </div>
+
+{# Tap-to-hear: rather than edit ~40 render sites, append a 🔊 to every Thai
+   phrase that has a recording. The map is thai -> MP3 URL (only phrases that
+   actually have a clip). The button uses the site-wide .th-audio player in
+   base.js, so no per-page audio code is needed. #}
+<script id="gr-audio-map" type="application/json">{{ audio_map|tojson }}</script>
+<script>
+  (function () {
+    var map = JSON.parse(document.getElementById('gr-audio-map').textContent);
+    document.querySelectorAll('.thai-text').forEach(function (el) {
+      if (el.dataset.audioWired) { return; }
+      var url = map[el.textContent.trim()];   // exact match — pure-Thai cells only
+      if (!url) { return; }
+      el.dataset.audioWired = '1';
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'th-audio gr-listen';
+      b.setAttribute('data-audio', url);
+      b.setAttribute('aria-label', 'Listen');
+      b.textContent = '🔊';
+      el.appendChild(b);
+    });
+  })();
+</script>
 
 {% endblock %}

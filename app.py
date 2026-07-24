@@ -5360,15 +5360,57 @@ CONVERSATIONAL_PHRASES = [
 ]
 
 
+def grammar_thai_strings():
+    """Every pronounceable Thai string in GRAMMAR, de-duplicated in order.
+
+    Shared by the /grammar route (to build its audio map) and the audio build
+    script (to know what to record), so the two never drift.
+
+    Matches on CONTENT, not on the key name: the page renders Thai from several
+    different keys ('thai', 'example', 'sample_sentence' …) into .thai-text
+    cells, and a key-name filter missed the example sentences (e.g. 'นี่คืออะไร'
+    lives under 'example'). So we take any string that has Thai letters and no
+    Latin — that keeps the real Thai and drops paiboon/English (which carry
+    Latin) and notation like 'คุณ + name'.
+    """
+    out, seen = [], set()
+    has_thai = re.compile('[฀-๿]')  # the Thai Unicode block
+
+    def walk(obj):
+        if isinstance(obj, dict):
+            for value in obj.values():
+                walk(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                walk(item)
+        elif isinstance(obj, str):
+            text = obj.strip()
+            if text and has_thai.search(text) and not re.search(r'[A-Za-z]', text) and text not in seen:
+                seen.add(text)
+                out.append(text)
+
+    walk(GRAMMAR)
+    return out
+
+
 @app.route('/grammar')
 @require_access('grammar')
 def grammar():
     gender = session.get('user_gender', 'neutral')
     gendered_examples = build_sentence(gender, 'polite', True)
-    return render_template('grammar.html', 
-                         grammar=GRAMMAR, 
+    # thai -> MP3 URL for every phrase that actually has a recording. A small
+    # script on the page appends a 🔊 to each .thai-text element whose text is a
+    # key here, so all ~175 Thai spots get audio without editing 40 templates.
+    audio_map = {
+        text: url_for('static', filename=thai_audio.audio_static_path(text))
+        for text in grammar_thai_strings()
+        if thai_audio.audio_exists(app.static_folder, text)
+    }
+    return render_template('grammar.html',
+                         grammar=GRAMMAR,
                          gender=gender,
-                         gendered_examples=gendered_examples)
+                         gendered_examples=gendered_examples,
+                         audio_map=audio_map)
 
 
 
