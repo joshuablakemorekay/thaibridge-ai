@@ -7,6 +7,24 @@
 
 {% block extra_css %}
 <style>
+    /* Tap-to-hear button — small, unobtrusive, beside a Thai phrase. */
+    .fm-listen {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 0.85rem;
+        line-height: 1;
+        padding: 0.1rem 0.25rem;
+        margin-left: 0.15rem;
+        border-radius: 6px;
+        vertical-align: middle;
+        opacity: 0.7;
+    }
+    .fm-listen:hover, .fm-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
+    .fm-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+    .fm-example-thai { font-weight: 700; }
+    .fm-example-paiboon { color: #2e7d32; margin: 0 0.35rem; }
+    .fm-example-english { color: #666; }
     .formality-card {
         transition: transform 0.2s ease;
     }
@@ -41,6 +59,9 @@
 {% endblock %}
 
 {% block content %}
+{# Tap-to-hear helper (same pattern as the other Learn pages): renders a 🔊
+   button only when a recording exists for the phrase. #}
+{% macro listen(thai) %}{% set url = thai_audio_url(thai) %}{% if url %}<button type="button" class="th-audio fm-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
 <h1>
     🎭 Thai Formality System
     <span class="thai">ระดับความสุภาพของภาษา</span>
@@ -79,14 +100,18 @@
         </span>
     </div>
     
-    <p class="thai-text" style="font-size: 1.2rem; margin: 0.5rem 0;">{{ level.thai }}</p>
+    <p class="thai-text" style="font-size: 1.2rem; margin: 0.5rem 0;">{{ level.thai }}{{ listen(level.thai) }}</p>
     <p style="line-height: 1.8; margin: 1rem 0; color: #444;">{{ level.description }}</p>
     
     <div style="background: #f8f9fa; padding: 1rem; border-radius: 8px; border-left: 4px solid {{ level.color }};">
         <h4 style="margin-top: 0; color: {{ level.color }};">📝 Examples:</h4>
         <ul style="margin: 0.5rem 0 0 1.5rem; line-height: 2;">
             {% for example in level.examples %}
-            <li>{{ example }}</li>
+            <li>
+                <span class="fm-example-thai thai-text">{{ example.thai }}</span>{{ listen(example.thai) }}
+                <span class="fm-example-paiboon">{{ example.paiboon }}</span>
+                <span class="fm-example-english">— {{ example.english }}</span>
+            </li>
             {% endfor %}
         </ul>
     </div>
