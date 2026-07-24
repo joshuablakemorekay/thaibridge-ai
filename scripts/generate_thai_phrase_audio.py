@@ -167,6 +167,12 @@ def collect_tour():
     return [w['thai'] for words in app.TOUR_VOCAB.values() for w in words]
 
 
+def collect_business():
+    """The Business Thai guide — every word/phrase across all categories."""
+    import app
+    return [w['thai'] for words in app.BUSINESS_VOCAB.values() for w in words]
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -180,6 +186,7 @@ PAGES = {
     'vocabulary': collect_vocabulary,
     'lessons': collect_lessons,
     'tour': collect_tour,
+    'business': collect_business,
 }
 
 
