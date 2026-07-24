@@ -134,6 +134,14 @@ def collect_formality():
     return found
 
 
+def collect_gender():
+    """The Gender guide — the pronoun/particle/greeting tables plus the gender-
+    specific example sentences. app.gender_thai_strings() already enumerates
+    both genders and filters the un-speakable combined/template forms."""
+    import app
+    return app.gender_thai_strings()
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -143,6 +151,7 @@ PAGES = {
     'paiboon': collect_paiboon,
     'grammar': collect_grammar,
     'formality': collect_formality,
+    'gender': collect_gender,
 }
 
 

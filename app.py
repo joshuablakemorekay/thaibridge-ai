@@ -4552,6 +4552,69 @@ def monk_pronunciation_guide():
     return render_template('monk_pronunciation.html', direction=monk_direction())
 
 
+def gender_thai_strings():
+    """Every clean, speakable Thai string the Gender guide can render.
+
+    Shared by the /gender-examples route (to build its audio map) and the audio
+    build script. The page mixes static GENDER_VARIANTS tables with sentences
+    built per visitor gender, so this enumerates BOTH male and female variants
+    (every visitor's render is then covered) across all formality levels, plus
+    the greetings.
+
+    Filters out anything that is not one clean phrase to speak: values with
+    Latin (romanisation/English), a '/' (the neutral view's combined
+    'ผม/ดิฉัน…' forms), or a '...'/'…' gap (request templates like 'กรุณา...ครับ').
+    """
+    has_thai = re.compile('[฀-๿]')
+
+    def speakable(text):
+        text = (text or '').strip()
+        return bool(text) and bool(has_thai.search(text)) and \
+            not re.search(r'[A-Za-z]', text) and '/' not in text and \
+            '...' not in text and '…' not in text
+
+    def walk(obj):
+        if isinstance(obj, dict):
+            for value in obj.values():
+                yield from walk(value)
+        elif isinstance(obj, list):
+            for item in obj:
+                yield from walk(item)
+        elif isinstance(obj, str):
+            yield obj
+
+    found, seen = [], set()
+
+    def add(text):
+        text = (text or '').strip()
+        if speakable(text) and text not in seen:
+            seen.add(text)
+            found.append(text)
+
+    for text in walk(GENDER_VARIANTS):
+        add(text)
+    # Shared pronouns shown inline in the template's summary table (not in the
+    # data): 'you' and 'he/she/they', which are the same for every gender.
+    for text in ('คุณ', 'เขา'):
+        add(text)
+    # All three genders, both the with-particle (True) and without (False)
+    # forms — the route renders formal/polite with particles and neutral/casual
+    # without (build_sentence(g, 'casual', False) is what yields 'ฉันกินข้าว').
+    # 'neutral' gender's combined 'ผม/ดิฉัน…' forms are dropped by the '/' filter.
+    for g in ('male', 'female', 'neutral'):
+        for f in ('formal', 'polite', 'neutral', 'casual'):
+            for particle in (True, False):
+                for text in walk(build_sentence(g, f, particle)):
+                    add(text)
+    for greeting in ('hello', 'thank_you', 'goodbye', 'excuse_me'):
+        for f in ('formal', 'polite', 'casual'):
+            for g in ('male', 'female', 'neutral'):
+                got = get_gendered_text('greetings', greeting, f, g)
+                for text in ([got] if isinstance(got, str) else walk(got)):
+                    add(text)
+    return found
+
+
 @app.route('/gender-examples')
 @require_access('gender_examples')
 def gender_examples():
@@ -4573,11 +4636,21 @@ def gender_examples():
         for formality in ['formal', 'polite', 'casual']:
             greetings[greeting_type][formality] = get_gendered_text('greetings', greeting_type, formality, gender)
     
-    return render_template('gender_examples.html', 
-                         gender=gender, 
-                         examples=examples, 
+    # thai -> MP3 URL for every speakable phrase that has a recording. A small
+    # script on the page appends a 🔊 to each .thai-text element whose text is a
+    # key here (same approach as the Grammar page), so the pronoun/particle/
+    # greeting tables and the gender-specific example sentences all get audio.
+    audio_map = {
+        text: url_for('static', filename=thai_audio.audio_static_path(text))
+        for text in gender_thai_strings()
+        if thai_audio.audio_exists(app.static_folder, text)
+    }
+    return render_template('gender_examples.html',
+                         gender=gender,
+                         examples=examples,
                          greetings=greetings,
-                         gender_variants=GENDER_VARIANTS)
+                         gender_variants=GENDER_VARIANTS,
+                         audio_map=audio_map)
 
 
 @app.route('/learn')
