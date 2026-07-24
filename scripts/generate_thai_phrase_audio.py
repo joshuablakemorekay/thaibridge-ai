@@ -68,10 +68,19 @@ def collect_sentences():
     return found
 
 
+def collect_read_write():
+    """Every Thai string on the Read & Write Thai Script page — the syllables,
+    the dharma words and every word of the Jataka story. thai_reading already
+    lists these in one place, so this just hands that list over."""
+    import thai_reading
+    return thai_reading.all_thai_strings()
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
     'sentences': collect_sentences,
+    'read_write': collect_read_write,
 }
 
 
