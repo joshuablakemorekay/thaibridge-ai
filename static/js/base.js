@@ -164,7 +164,7 @@
         // changes as the user toggles them.
         (function () {
             var KEY = 'tb-reading-support';
-            var OPTIONS = ['font', 'large', 'spacing', 'cream'];
+            var OPTIONS = ['font', 'large', 'spacing', 'calm'];
 
             function load() {
                 try { return JSON.parse(localStorage.getItem(KEY) || '{}'); }
@@ -208,5 +208,78 @@
                         });
                     });
                 }
+            });
+        })();
+
+        // Read aloud (text-to-speech)
+        // ===========================
+        // Reads the page's ENGLISH text aloud using the browser's built-in voice
+        // (the Web Speech API) — no server, no cost. Helps dyslexic, low-vision
+        // and tired readers. If the user has highlighted some text, only that is
+        // read; otherwise the main content is read from the top.
+        //
+        // Two deliberate choices:
+        //  - Thai characters are stripped out before speaking. Browser voices
+        //    read Thai poorly, and Thai already has its own native-recorded
+        //    audio buttons elsewhere, so we keep this to clean English.
+        //  - Text is split into sentence-sized chunks and queued. Chrome cuts a
+        //    single long utterance off after a few seconds; short queued chunks
+        //    are the standard way around that.
+        (function () {
+            var synth = window.speechSynthesis;
+            var button = null;
+
+            function setSpeaking(on) {
+                if (!button) return;
+                button.textContent = on ? '⏹ Stop reading' : '🔊 Read aloud';
+                button.classList.toggle('is-speaking', on);
+            }
+            function stripThai(text) {
+                return text.replace(/[฀-๿]+/g, ' ').replace(/\s+/g, ' ').trim();
+            }
+            function stop() {
+                if (synth) synth.cancel();
+                setSpeaking(false);
+            }
+            function readAloud() {
+                if (!synth) return;                 // very old browser: no voice
+                if (synth.speaking || synth.pending) { stop(); return; }
+
+                var selected = window.getSelection ? String(window.getSelection()) : '';
+                var main = document.querySelector('main');
+                var source = (selected && selected.trim())
+                    ? selected
+                    : (main ? main.innerText : document.body.innerText);
+
+                var text = stripThai(source);
+                if (!text) return;
+
+                var chunks = text.match(/[^.!?]+[.!?]*/g) || [text];
+                setSpeaking(true);
+                chunks.forEach(function (chunk, i) {
+                    var part = chunk.trim();
+                    if (!part) return;
+                    var u = new SpeechSynthesisUtterance(part);
+                    u.lang = 'en-GB';
+                    u.rate = 0.95;
+                    if (i === chunks.length - 1) u.onend = function () { setSpeaking(false); };
+                    u.onerror = function () { setSpeaking(false); };
+                    synth.speak(u);
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                button = document.getElementById('rs-read');
+                if (!button) return;
+                if (!window.speechSynthesis) {       // no support: hide the button
+                    button.style.display = 'none';
+                    return;
+                }
+                button.addEventListener('click', readAloud);
+            });
+
+            // Never keep talking after the user leaves the page.
+            window.addEventListener('beforeunload', function () {
+                if (synth) synth.cancel();
             });
         })();

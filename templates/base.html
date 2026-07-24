@@ -26,7 +26,7 @@
                 if (s.font)    el.classList.add('rs-font');
                 if (s.large)   el.classList.add('rs-large');
                 if (s.spacing) el.classList.add('rs-spacing');
-                if (s.cream)   el.classList.add('rs-cream');
+                if (s.calm)    el.classList.add('rs-calm');
             } catch (e) { /* private mode / storage off: just skip */ }
         })();
     </script>
@@ -42,20 +42,22 @@
                 <li><a href="/">🏠 Home</a></li>
                 <li><a href="/instructions">ℹ️ Help</a></li>
 
-                <!-- Reading Support: accessibility toggles for learners who find
-                     reading harder (e.g. dyslexia). Pure front-end — choices are
-                     saved in the browser, nothing is sent to the server. -->
+                <!-- Learning Support: accessibility toggles for learners who find
+                     studying harder (e.g. dyslexia, ADHD, autism). Pure front-end —
+                     choices are saved in the browser, nothing is sent to the server. -->
                 <li class="dropdown reading-support">
                     <button class="dropdown-toggle" onclick="toggleDropdown(this)"
-                            title="Reading support — easier-to-read font, bigger text, more spacing, calmer background">
-                        ♿ Reading Support
+                            title="Learning support — easier-to-read font, bigger text, more spacing, reduce motion, read aloud">
+                        ♿ Learning Support
                     </button>
                     <div class="dropdown-content reading-support-panel">
-                        <p class="rs-heading">Make reading easier</p>
+                        <p class="rs-heading">Learning Support</p>
+                        <p class="rs-intro">Tools that make studying easier &mdash; helpful if you have dyslexia, ADHD, autism, or just find reading tiring. Mix and match whatever works for you.</p>
                         <label class="rs-option"><input type="checkbox" id="rs-font"> Easy-to-read font</label>
                         <label class="rs-option"><input type="checkbox" id="rs-large"> Bigger text</label>
                         <label class="rs-option"><input type="checkbox" id="rs-spacing"> Extra letter &amp; line spacing</label>
-                        <label class="rs-option"><input type="checkbox" id="rs-cream"> Calm cream background</label>
+                        <label class="rs-option"><input type="checkbox" id="rs-calm"> Reduce motion &amp; distractions</label>
+                        <button type="button" class="rs-read" id="rs-read" title="Reads the English text aloud. Highlight some text first to hear just that part.">🔊 Read aloud</button>
                         <button type="button" class="rs-reset" id="rs-reset">Turn all off</button>
                         <p class="rs-note">Saved on this device.</p>
                     </div>

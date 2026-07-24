@@ -1787,9 +1787,18 @@ body {
 }
 .reading-support-panel .rs-heading {
     margin: 0;
-    padding: 0.2rem 0.6rem 0.5rem;
+    padding: 0.2rem 0.6rem 0.15rem;
     font-weight: 700;
     color: var(--royal-purple);
+}
+.reading-support-panel .rs-intro {
+    margin: 0;
+    padding: 0 0.6rem 0.5rem;
+    max-width: 15rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+    white-space: normal;
+    opacity: 0.85;
 }
 .reading-support-panel .rs-option {
     display: flex;
@@ -1863,13 +1872,40 @@ html.rs-spacing li {
     margin-bottom: 0.8em;
 }
 
-/* --- Effect 4: calm cream background ---
-   Replace the patterned gradient with a flat, soft cream to cut glare, and hide
-   the decorative bottom emoji strip to reduce visual distraction. */
-html.rs-cream body {
-    background: #FBF3E0;
-}
-html.rs-cream body::before,
-html.rs-cream body::after {
+/* --- Effect 4: reduce motion & distractions ---
+   Near-instant transitions/animations and no decorative floating emoji or
+   gradient. Helps learners with ADHD, autism or visual stress focus on the
+   lesson instead of the movement around it. */
+html.rs-calm body::before,
+html.rs-calm body::after {
     display: none;
+}
+html.rs-calm *,
+html.rs-calm *::before,
+html.rs-calm *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+}
+
+/* --- Read aloud button (inside the panel) --- */
+.reading-support-panel .rs-read {
+    display: block;
+    width: calc(100% - 1.2rem);
+    margin: 0.5rem 0.6rem 0;
+    padding: 0.45rem 0.6rem;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--royal-purple);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+.reading-support-panel .rs-read:hover {
+    background: var(--deep-purple);
+}
+.reading-support-panel .rs-read.is-speaking {
+    background: var(--temple-red);
 }
