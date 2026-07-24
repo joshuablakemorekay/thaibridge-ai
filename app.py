@@ -5498,10 +5498,38 @@ def grammar():
 
 
 
+def lesson_thai_strings(lesson):
+    """Every Thai string in one lesson: its title and all its sentences."""
+    out = [lesson['thai_title']]
+    for kind in ('short', 'long'):
+        for sentence in lesson['sentences'].get(kind, []):
+            out.append(sentence['thai'])
+    return out
+
+
+def lessons_thai_strings():
+    """Every Thai string across all lessons — for the audio build script."""
+    out = []
+    for lesson in LESSONS:
+        out.extend(lesson_thai_strings(lesson))
+    return out
+
+
+def _audio_map_for(strings):
+    """thai -> MP3 URL for the given strings, skipping any without a clip."""
+    return {
+        text: url_for('static', filename=thai_audio.audio_static_path(text))
+        for text in strings
+        if text and thai_audio.audio_exists(app.static_folder, text)
+    }
+
+
 @app.route('/lessons')
 @require_access('lessons')
 def lessons():
-    return render_template('lessons.html', lessons=LESSONS)
+    # The list page shows each lesson's Thai title in a .thai-text card.
+    audio_map = _audio_map_for(l['thai_title'] for l in LESSONS)
+    return render_template('lessons.html', lessons=LESSONS, audio_map=audio_map)
 
 
 @app.route('/lesson/<int:lesson_id>')
@@ -5509,7 +5537,8 @@ def lesson_detail(lesson_id):
     lesson = next((l for l in LESSONS if l['id'] == lesson_id), None)
     if not lesson:
         return "Lesson not found. <a href='/lessons'>Back</a>", 404
-    return render_template('lesson_detail.html', lesson=lesson)
+    audio_map = _audio_map_for(lesson_thai_strings(lesson))
+    return render_template('lesson_detail.html', lesson=lesson, audio_map=audio_map)
 
 
 @app.route('/tour-guide')
