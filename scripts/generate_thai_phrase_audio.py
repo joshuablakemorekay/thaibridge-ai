@@ -99,12 +99,26 @@ def collect_tones_classes():
     return found
 
 
+def collect_paiboon():
+    """The Paiboon Romanization guide.
+
+    Only the vowel forms (อะ, อา, อี …) need new clips — they are clean,
+    pronounceable อ-carrier forms shown in the vowels table. The consonant rows
+    reuse the Alphabet recordings (the template splits the ข/ค-style groups and
+    looks each letter up), the tone markers are bare combining marks with
+    nothing to say, and the tones table is romanisation only. The
+    vowel_examples data is not rendered on the page, so it is left out too."""
+    import app
+    return [v['thai'] for v in app.PAIBOON_GUIDE['vowels']]
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
     'sentences': collect_sentences,
     'read_write': collect_read_write,
     'tones_classes': collect_tones_classes,
+    'paiboon': collect_paiboon,
 }
 
 

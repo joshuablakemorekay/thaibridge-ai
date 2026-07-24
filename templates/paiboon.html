@@ -5,7 +5,32 @@
 
 {% block title %}Paiboon Romanization Guide{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* Tap-to-hear button — small, unobtrusive, sits beside a Thai letter/vowel. */
+    .pb-listen {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 0.95rem;
+        line-height: 1;
+        padding: 0.1rem 0.25rem;
+        border-radius: 6px;
+        vertical-align: middle;
+        opacity: 0.7;
+    }
+    .pb-listen:hover, .pb-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
+    .pb-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+</style>
+{% endblock %}
+
 {% block content %}
+{# Tap-to-hear helpers (same pattern as the Tones page). `listen` renders a 🔊
+   button only when a phrase recording exists (thai_audio_url returns None
+   otherwise); `listen_url` takes a ready-made URL, used for the consonant
+   letters, which reuse the Alphabet page's recordings. #}
+{% macro listen_url(url) %}{% if url %}<button type="button" class="th-audio pb-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
+{% macro listen(thai) %}{{ listen_url(thai_audio_url(thai)) }}{% endmacro %}
 <h1>
     🔤 Paiboon Romanization Guide
     <span class="thai">ระบบถอดเสียงไพบูลย์</span>
@@ -93,7 +118,7 @@
         <tbody>
             {% for cons in guide.consonants %}
             <tr>
-                <td class="thai-text">{{ cons.thai }}</td>
+                <td class="thai-text">{{ cons.thai }}{% for letter in cons.thai.split('/') %}{{ listen_url(consonant_audio.get(letter.strip())) }}{% endfor %}</td>
                 <td class="paiboon" style="font-size: 1.2rem;"><strong>{{ cons.paiboon }}</strong></td>
                 <td>{{ cons.sound }}</td>
             </tr>
@@ -131,7 +156,7 @@
         <tbody>
             {% for vowel in guide.vowels %}
             <tr>
-                <td class="thai-text">{{ vowel.thai }}</td>
+                <td class="thai-text">{{ vowel.thai }}{{ listen(vowel.thai) }}</td>
                 <td class="paiboon" style="font-size: 1.2rem;"><strong>{{ vowel.paiboon }}</strong></td>
                 <td>{{ vowel.sound }}</td>
             </tr>
