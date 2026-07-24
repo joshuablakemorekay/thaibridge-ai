@@ -5403,7 +5403,15 @@ def business_thai():
 @app.route('/paiboon')
 @require_access('paiboon')
 def paiboon_guide():
-    return render_template('paiboon.html', guide=PAIBOON_GUIDE)
+    # Reuse the Alphabet recordings for the consonant letters (the table groups
+    # letters that share a sound, e.g. ข/ค — the template splits the group and
+    # looks each letter up here). The vowel forms get their own phrase clips.
+    consonant_audio = {
+        c['char']: url_for('static', filename=c['audio'])
+        for c in thai_consonants.CONSONANTS
+    }
+    return render_template('paiboon.html', guide=PAIBOON_GUIDE,
+                           consonant_audio=consonant_audio)
 
 
 
