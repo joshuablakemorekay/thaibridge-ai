@@ -5,6 +5,27 @@
 
 {% block title %}Gender & Formality Guide{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* Tap-to-hear button — appended to each Thai phrase by the script at the
+       foot of the page. Small and unobtrusive. */
+    .gd-listen {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 0.8rem;
+        line-height: 1;
+        padding: 0.1rem 0.25rem;
+        margin-left: 0.15rem;
+        border-radius: 6px;
+        vertical-align: middle;
+        opacity: 0.65;
+    }
+    .gd-listen:hover, .gd-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
+    .gd-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+</style>
+{% endblock %}
+
 {% block content %}
 <h1>
     👤 Gender & Formality Guide
@@ -46,8 +67,8 @@
             <h4 style="color: #1976D2;">1️⃣ First-Person Pronouns</h4>
             <p style="margin-top: 0.5rem;">The word for "I" changes based on your gender and formality:</p>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li><strong>Male:</strong> ผม (pǒm)</li>
-                <li><strong>Female:</strong> ดิฉัน (dì-chǎn) formal, ฉัน (chǎn) casual</li>
+                <li><strong>Male:</strong> <span class="thai-text">ผม</span> (pǒm)</li>
+                <li><strong>Female:</strong> <span class="thai-text">ดิฉัน</span> (dì-chǎn) formal, <span class="thai-text">ฉัน</span> (chǎn) casual</li>
             </ul>
         </div>
         
@@ -55,8 +76,8 @@
             <h4 style="color: #C2185B;">2️⃣ Politeness Particles</h4>
             <p style="margin-top: 0.5rem;">Added at the end of sentences for politeness:</p>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li><strong>Male:</strong> ครับ (kráp)</li>
-                <li><strong>Female:</strong> ค่ะ (kâ) statements, คะ (ká) questions</li>
+                <li><strong>Male:</strong> <span class="thai-text">ครับ</span> (kráp)</li>
+                <li><strong>Female:</strong> <span class="thai-text">ค่ะ</span> (kâ) statements, <span class="thai-text">คะ</span> (ká) questions</li>
             </ul>
         </div>
         
@@ -64,8 +85,8 @@
             <h4 style="color: #7B1FA2;">3️⃣ Complete Phrases</h4>
             <p style="margin-top: 0.5rem;">Greetings and common phrases include both:</p>
             <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li><strong>Male:</strong> สวัสดีครับ (sà-wàt-dii kráp)</li>
-                <li><strong>Female:</strong> สวัสดีค่ะ (sà-wàt-dii kâ)</li>
+                <li><strong>Male:</strong> <span class="thai-text">สวัสดีครับ</span> (sà-wàt-dii kráp)</li>
+                <li><strong>Female:</strong> <span class="thai-text">สวัสดีค่ะ</span> (sà-wàt-dii kâ)</li>
             </ul>
         </div>
     </div>
@@ -509,5 +530,28 @@
 </div>
     </div>
 </div>
+
+{# Tap-to-hear: append a 🔊 to every Thai phrase that has a recording, rather
+   than editing each table cell. The map is thai -> MP3 URL (only phrases with a
+   clip). Uses the site-wide .th-audio player in base.js. #}
+<script id="gd-audio-map" type="application/json">{{ audio_map|tojson }}</script>
+<script>
+  (function () {
+    var map = JSON.parse(document.getElementById('gd-audio-map').textContent);
+    document.querySelectorAll('.thai-text').forEach(function (el) {
+      if (el.dataset.audioWired) { return; }
+      var url = map[el.textContent.trim()];   // exact match — pure-Thai cells only
+      if (!url) { return; }
+      el.dataset.audioWired = '1';
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'th-audio gd-listen';
+      b.setAttribute('data-audio', url);
+      b.setAttribute('aria-label', 'Listen');
+      b.textContent = '🔊';
+      el.appendChild(b);
+    });
+  })();
+</script>
 
 {% endblock %}
