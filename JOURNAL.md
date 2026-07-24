@@ -843,3 +843,37 @@ Reading and writing are the two skills the app never taught directly, and hearin
 
 **What I learned**
 When a job repeats, stop and build the tool — the reusable partial turned a slog into a stamp. And check the rendered page, not just the data: the Formality bug was invisible until I actually looked at what users saw.
+
+---
+
+## 24 July 2026 — Learning Support: an accessibility panel for every page
+
+**Type:** Feature
+
+**TL;DR:** I added a site-wide "Learning Support" menu so learners can switch on an easy-to-read font, bigger text, extra spacing, reduced motion, or read-aloud — all saved in their own browser, no login needed.
+
+**What I built or did**
+A dropdown in the top menu with toggles for a dyslexia-friendly font (Atkinson Hyperlegible), bigger text, extra letter/line spacing, reduce motion & distractions, and a 🔊 Read aloud button. It carries a note saying who it helps — dyslexia, ADHD, autism, low vision, or reading fatigue.
+
+**Why I did it this way**
+I kept it purely front-end so it never touches login or payments. Because different people need different help, I used separate toggles instead of one on/off switch.
+
+**How it works**
+Each toggle adds a class to the page and saves the choice in the browser (localStorage — the browser's own small storage). Read-aloud uses the browser's built-in voice and deliberately skips Thai, which those voices read poorly.
+
+**What this means for the app**
+More learners — including those who find reading hard — can now study comfortably.
+
+**What I learned**
+The spacing option has the strongest research behind it, and "dyslexia fonts" don't actually beat a plain, clean one. Also a sharp reminder: always check text colour against its *real* background — my panel text was invisible on the dark menu until I fixed it.
+
+**How We Did It**
+1. Explored the app's shared layout and styles.
+2. Agreed the design: separate toggles + Atkinson Hyperlegible font.
+3. Built it on a branch and tested every toggle live in the browser.
+4. Refined after review — dropped a cream-background idea, added read-aloud and reduce-motion, renamed it to "Learning Support", added the who-it-helps note.
+5. Merged to `main` and confirmed it live.
+6. Hotfixed the panel text colour so it reads on the dark menu.
+
+**References / Conversations**
+Claude Code session, 24 July 2026 (Pull Request #19).
