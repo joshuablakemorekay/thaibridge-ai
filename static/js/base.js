@@ -148,3 +148,65 @@
                 }
             });
         })();
+
+        // Reading Support (accessibility settings)
+        // ========================================
+        // Four independent toggles that make text easier to read for learners
+        // who struggle with it (e.g. dyslexia): an easy-to-read font, bigger
+        // text, extra spacing, and a calm cream background. Each just adds or
+        // removes an "rs-<name>" class on the <html> element, which the CSS
+        // reacts to. Choices are stored in localStorage so they persist across
+        // pages and visits on this device — no server, no login needed.
+        //
+        // Note: the <head> script in base.html already applies saved choices
+        // before first paint (to avoid a flash). This block handles the
+        // interactive part: reflecting saved state in the checkboxes and saving
+        // changes as the user toggles them.
+        (function () {
+            var KEY = 'tb-reading-support';
+            var OPTIONS = ['font', 'large', 'spacing', 'cream'];
+
+            function load() {
+                try { return JSON.parse(localStorage.getItem(KEY) || '{}'); }
+                catch (e) { return {}; }
+            }
+            function save(settings) {
+                try { localStorage.setItem(KEY, JSON.stringify(settings)); }
+                catch (e) { /* storage off: choices just won't persist */ }
+            }
+            function apply(settings) {
+                var el = document.documentElement;
+                OPTIONS.forEach(function (name) {
+                    el.classList.toggle('rs-' + name, !!settings[name]);
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var settings = load();
+                apply(settings);
+
+                OPTIONS.forEach(function (name) {
+                    var box = document.getElementById('rs-' + name);
+                    if (!box) return;
+                    box.checked = !!settings[name];
+                    box.addEventListener('change', function () {
+                        settings[name] = box.checked;
+                        save(settings);
+                        apply(settings);
+                    });
+                });
+
+                var reset = document.getElementById('rs-reset');
+                if (reset) {
+                    reset.addEventListener('click', function () {
+                        settings = {};
+                        save(settings);
+                        apply(settings);
+                        OPTIONS.forEach(function (name) {
+                            var box = document.getElementById('rs-' + name);
+                            if (box) box.checked = false;
+                        });
+                    });
+                }
+            });
+        })();
