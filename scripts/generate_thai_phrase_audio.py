@@ -173,6 +173,25 @@ def collect_business():
     return [w['thai'] for words in app.BUSINESS_VOCAB.values() for w in words]
 
 
+def collect_culture():
+    """The Culture page — every speakable Thai string in its info + stories."""
+    import app
+    return app.pure_thai_strings(app.CULTURAL_INFO) + \
+        app.pure_thai_strings(app.CULTURAL_STORIES)
+
+
+def collect_theravada():
+    """The Theravada Dharma page — every speakable Thai string in its teachings."""
+    import app
+    return app.pure_thai_strings(app.THERAVADA_TEACHINGS)
+
+
+def collect_meditation():
+    """The Meditation page — every speakable Thai string in its techniques."""
+    import app
+    return app.pure_thai_strings(app.MEDITATION_TECHNIQUES)
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -187,6 +206,9 @@ PAGES = {
     'lessons': collect_lessons,
     'tour': collect_tour,
     'business': collect_business,
+    'culture': collect_culture,
+    'theravada': collect_theravada,
+    'meditation': collect_meditation,
 }
 
 

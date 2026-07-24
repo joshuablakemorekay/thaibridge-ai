@@ -4663,7 +4663,10 @@ def learn():
 @app.route('/culture')
 @require_access('culture')
 def culture():
-    return render_template('culture.html', cultural_info=CULTURAL_INFO, stories=CULTURAL_STORIES)
+    audio_map = _audio_map_for(
+        pure_thai_strings(CULTURAL_INFO) + pure_thai_strings(CULTURAL_STORIES))
+    return render_template('culture.html', cultural_info=CULTURAL_INFO,
+                           stories=CULTURAL_STORIES, audio_map=audio_map)
 
 
 @app.route('/exercise/<category>')
@@ -5524,6 +5527,37 @@ def _audio_map_for(strings):
     }
 
 
+_HAS_THAI = re.compile('[฀-๿]')
+
+
+def pure_thai_strings(obj):
+    """Every speakable Thai string anywhere in a nested data structure.
+
+    Matches on content, not key name: any string that has Thai letters and no
+    Latin (which drops romanisation, English and 'X + name'-style notation).
+    Used by the prose-ish culture pages, where Thai appears under many keys.
+    De-duplicated, in first-seen order.
+    """
+    out, seen = [], set()
+
+    def walk(node):
+        if isinstance(node, dict):
+            for value in node.values():
+                walk(value)
+        elif isinstance(node, (list, tuple)):
+            for item in node:
+                walk(item)
+        elif isinstance(node, str):
+            text = node.strip()
+            if text and _HAS_THAI.search(text) and not re.search(r'[A-Za-z]', text) \
+                    and text not in seen:
+                seen.add(text)
+                out.append(text)
+
+    walk(obj)
+    return out
+
+
 @app.route('/lessons')
 @require_access('lessons')
 def lessons():
@@ -5642,7 +5676,9 @@ def register_guide():
 @app.route('/theravada')
 @require_access('theravada')
 def theravada():
-    return render_template('theravada.html', teachings=THERAVADA_TEACHINGS)
+    audio_map = _audio_map_for(pure_thai_strings(THERAVADA_TEACHINGS))
+    return render_template('theravada.html', teachings=THERAVADA_TEACHINGS,
+                           audio_map=audio_map)
 
 @app.route('/bob-buddhism-overview')
 def bob_buddhism_overview():
@@ -5709,7 +5745,9 @@ def sentences():
 @app.route('/meditation')
 @require_access('meditation')
 def meditation():
-    return render_template('meditation.html', techniques=MEDITATION_TECHNIQUES)
+    audio_map = _audio_map_for(pure_thai_strings(MEDITATION_TECHNIQUES))
+    return render_template('meditation.html', techniques=MEDITATION_TECHNIQUES,
+                           audio_map=audio_map)
 
 
 def _load_yaitron():
