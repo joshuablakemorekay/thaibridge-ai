@@ -866,6 +866,39 @@ Claude Code session, 24 July 2026 (Pull Request #19).
 
 ---
 
+## 24 July 2026 — Learning Support, part two: you choose what gets read aloud
+
+**Type:** Feature
+
+**TL;DR:** I cut a toggle that wasn't earning its place, and rebuilt Read aloud so the learner picks what gets spoken — the whole page, one part they click, or text they've highlighted.
+
+**What I built or did**
+Removed "Reduce motion & distractions", added a "what should I read?" chooser above the Read aloud button, rewrote the panel note to name exactly who the feature is for, and wrote a step-by-step guide on the Help page.
+
+**Why I did it this way**
+Reading a whole page aloud is no use to someone who wanted one paragraph. And the reduce-motion toggle barely changed anything — clutter in a menu whose whole job is removing clutter.
+
+**How it works**
+"A part I click on" puts the page into a pick mode: hovering outlines each paragraph, clicking reads just that one, Esc cancels. The hint line under the button changes with your choice, so it always says what to do next.
+
+**What this means for the app**
+Learners get control instead of an all-or-nothing button, and a plain-English guide telling them how to use it.
+
+**What I learned**
+Browsers wipe your highlight the moment you click a button — so the code has to remember the last highlight *as it happens*, not read it afterwards.
+
+**How We Did It**
+1. Traced the feature through the shared layout, script and stylesheet.
+2. Removed the reduce-motion toggle from all four places it touched.
+3. Rebuilt Read aloud around the chooser, including click-to-pick mode.
+4. Tested every path in a real browser — pick mode, empty highlight, Esc, links.
+5. Raised the panel height when the new note landed below a scrollbar, then wrote the Help page section.
+
+**References / Conversations**
+Claude Code session, 24 July 2026.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
