@@ -16,6 +16,7 @@ import glob
 import monk_audio  # shared MP3 filename rules, also used by the build script
 import thai_consonants  # the 44 consonants + their recordings (Alphabet page)
 import thai_audio  # general Thai-phrase MP3 filename rule, shared with build script
+import thai_reading  # reading content for the Read & Write Thai Script page
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -282,6 +283,7 @@ SECTION_REQUIREMENTS = {
     'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    'read_write': {'level': 2, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     'exercise_nature': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'exercise_formal': {'level': 3, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'grammar': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
@@ -5410,6 +5412,41 @@ def paiboon_guide():
 def vowels_syllables():
     """Display comprehensive 32-vowel system with syllable structure"""
     return render_template('vowels_syllables.html', vowels=THAI_VOWELS_32)
+
+
+@app.route('/read_write')
+@require_access('read_write')
+def read_write():
+    """Read & Write Thai Script — the bridge from knowing the letters to using them.
+
+    Two halves on one tabbed page:
+      * Read  — decode syllables (grouped by where the vowel sits), then real
+                dharma words, then a short Jataka tale read one word at a time.
+      * Write — the stroke principles plus a trace-over-guide canvas for all 44
+                consonants (reusing the Alphabet page's recordings).
+
+    Data comes from thai_reading.py (reading) and thai_consonants.py (writing),
+    each the single source of truth for its half, so this route only assembles.
+
+    audio_map is Thai-string -> MP3 URL (or None) for every phrase on the page.
+    Clips are generated page by page and most do not exist yet; building the map
+    once here lets both the server-rendered cards and the JS story reader show a
+    play button only where a real recording exists, and light up automatically
+    the moment the build script (Phase 5) creates the files — no code change.
+    """
+    audio_map = {
+        text: (url_for('static', filename=thai_audio.audio_static_path(text))
+               if thai_audio.audio_exists(app.static_folder, text) else None)
+        for text in thai_reading.all_thai_strings()
+    }
+    return render_template(
+        'read_write.html',
+        vowel_positions=thai_reading.VOWEL_POSITIONS,
+        dharma_words=thai_reading.DHARMA_WORDS,
+        stories=thai_reading.STORIES,
+        consonants=thai_consonants.CONSONANTS,
+        class_labels=thai_consonants.CLASS_LABELS,
+        audio_map=audio_map)
 
 
 @app.route('/tones-classes')
