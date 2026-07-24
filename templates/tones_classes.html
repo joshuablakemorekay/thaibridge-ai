@@ -95,6 +95,21 @@
         padding: 0.5rem 0.8rem;
     }
     .example-chip .e-thai { font-size: 1.3rem; color: var(--temple-red); font-weight: 700; }
+    /* Tap-to-hear button — small, unobtrusive, sits beside a Thai syllable. */
+    .tc-listen {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 1rem;
+        line-height: 1;
+        padding: 0.15rem 0.3rem;
+        border-radius: 6px;
+        vertical-align: middle;
+        opacity: 0.75;
+    }
+    .tc-listen:hover, .tc-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
+    .tc-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+    .con-cell .tc-listen { font-size: 0.85rem; }
     .example-chip .e-tone {
         font-size: 0.7rem;
         background: var(--royal-purple);
@@ -185,6 +200,12 @@
 {% endblock %}
 
 {% block content %}
+{# Tap-to-hear helpers. `listen` looks up a phrase recording for a Thai string
+   and renders a 🔊 button only if the clip exists (thai_audio_url returns None
+   otherwise, so no dead buttons). `listen_url` takes a ready-made URL — used
+   for the consonant letters, which reuse the Alphabet page's own recordings. #}
+{% macro listen_url(url) %}{% if url %}<button type="button" class="th-audio tc-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
+{% macro listen(thai) %}{{ listen_url(thai_audio_url(thai)) }}{% endmacro %}
 <h1>
     🔊 Tones &amp; Consonant Classes
     <span class="thai">วรรณยุกต์และอักษรสามหมู่</span>
@@ -240,7 +261,7 @@
     <div class="class-card cls-{{ cls.colour }}">
         <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
             <span class="class-badge">{{ cls.label }}</span>
-            <span class="class-thai">{{ cls.name }} · {{ cls.thai }}</span>
+            <span class="class-thai">{{ cls.name }} · {{ cls.thai }}</span>{{ listen(cls.thai) }}
             <span style="color: #888;">({{ cls.count }} letters)</span>
         </div>
         <p style="font-weight: 600; margin: 0.8rem 0 0.4rem;">{{ cls.headline }}</p>
@@ -252,6 +273,7 @@
                 <span class="c-thai">{{ c.thai }}</span>
                 {% if c.obsolete %}<span class="obsolete-tag">obsolete</span>{% endif %}
                 <span class="c-name">{{ c.name }}</span>
+                {% if not c.obsolete %}{{ listen_url(consonant_audio.get(c.thai)) }}{% endif %}
             </div>
             {% endfor %}
         </div>
@@ -260,7 +282,7 @@
         <div class="example-row">
             {% for ex in cls.examples %}
             <div class="example-chip">
-                <span class="e-thai">{{ ex.thai }}</span>
+                <span class="e-thai">{{ ex.thai }}</span>{{ listen(ex.thai) }}
                 <span class="e-tone">{{ ex.tone }}</span>
                 <div style="font-size: 0.8rem; color: #666; margin-top: 0.3rem;">{{ ex.paiboon }} — {{ ex.english }}</div>
             </div>
@@ -280,14 +302,14 @@
     <div class="pair-card">
         <div class="pair-side">
             <span class="class-badge cls-high" style="background: var(--temple-red);">HIGH</span>
-            <div class="p-thai" style="color: var(--temple-red);">{{ data.sound_pairs.demo.high.thai }}</div>
+            <div class="p-thai" style="color: var(--temple-red);">{{ data.sound_pairs.demo.high.thai }}{{ listen(data.sound_pairs.demo.high.thai) }}</div>
             <div>{{ data.sound_pairs.demo.high.paiboon }} · <span class="e-tone">{{ data.sound_pairs.demo.high.tone }}</span></div>
             <div style="color: #666;">“{{ data.sound_pairs.demo.high.english }}”</div>
         </div>
         <div class="pair-vs">same “k” sound</div>
         <div class="pair-side">
             <span class="class-badge cls-low" style="background: var(--royal-purple);">LOW</span>
-            <div class="p-thai">{{ data.sound_pairs.demo.low.thai }}</div>
+            <div class="p-thai">{{ data.sound_pairs.demo.low.thai }}{{ listen(data.sound_pairs.demo.low.thai) }}</div>
             <div>{{ data.sound_pairs.demo.low.paiboon }} · <span class="e-tone">{{ data.sound_pairs.demo.low.tone }}</span></div>
             <div style="color: #666;">“{{ data.sound_pairs.demo.low.english }}”</div>
         </div>
@@ -364,7 +386,7 @@
         <ul style="line-height: 1.9;">
             {% for r in data.dead_syllables.rules %}
             <li><strong>{{ r.classes }}</strong> → <strong style="color: var(--temple-red);">{{ r.result }}</strong>
-                — e.g. {{ r.example.thai }} ({{ r.example.paiboon }}) “{{ r.example.english }}”</li>
+                — e.g. {{ r.example.thai }}{{ listen(r.example.thai) }} ({{ r.example.paiboon }}) “{{ r.example.english }}”</li>
             {% endfor %}
         </ul>
     </div>
@@ -390,13 +412,13 @@
     {% for p in data.leading_h.pairs %}
     <div class="pair-card">
         <div class="pair-side">
-            <div class="p-thai">{{ p.plain.thai }}</div>
+            <div class="p-thai">{{ p.plain.thai }}{{ listen(p.plain.thai) }}</div>
             <div>{{ p.plain.paiboon }} · <span class="e-tone">{{ p.plain.tone }}</span></div>
             <div style="color: #666;">“{{ p.plain.english }}”</div>
         </div>
         <div class="pair-vs">→ add ห →</div>
         <div class="pair-side" style="background: #fff3f3;">
-            <div class="p-thai" style="color: var(--temple-red);">{{ p.led.thai }}</div>
+            <div class="p-thai" style="color: var(--temple-red);">{{ p.led.thai }}{{ listen(p.led.thai) }}</div>
             <div>{{ p.led.paiboon }} · <span class="e-tone">{{ p.led.tone }}</span></div>
             <div style="color: #666;">“{{ p.led.english }}”</div>
         </div>
@@ -408,14 +430,14 @@
     {% for pair in data.contrast_pairs.pairs %}
     <div class="pair-card">
         <div class="pair-side">
-            <div class="p-thai">{{ pair.a.thai }}</div>
+            <div class="p-thai">{{ pair.a.thai }}{{ listen(pair.a.thai) }}</div>
             <div>{{ pair.a.paiboon }} · <span class="e-tone">{{ pair.a.tone }}</span></div>
             <div style="font-size: 0.85rem; color: #666;">{{ pair.a.class }} · mark: {{ pair.a.mark }}</div>
             <div style="color: #666;">“{{ pair.a.english }}”</div>
         </div>
         <div class="pair-vs">vs</div>
         <div class="pair-side" style="background: #fff3f3;">
-            <div class="p-thai" style="color: var(--temple-red);">{{ pair.b.thai }}</div>
+            <div class="p-thai" style="color: var(--temple-red);">{{ pair.b.thai }}{{ listen(pair.b.thai) }}</div>
             <div>{{ pair.b.paiboon }} · <span class="e-tone">{{ pair.b.tone }}</span></div>
             <div style="font-size: 0.85rem; color: #666;">{{ pair.b.class }} · mark: {{ pair.b.mark }}</div>
             <div style="color: #666;">“{{ pair.b.english }}”</div>
