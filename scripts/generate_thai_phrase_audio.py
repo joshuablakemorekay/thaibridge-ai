@@ -154,6 +154,13 @@ def collect_vocabulary():
     return found
 
 
+def collect_lessons():
+    """The Lessons — every lesson's Thai title (list page) plus its short and
+    long example sentences (detail pages)."""
+    import app
+    return app.lessons_thai_strings()
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -165,6 +172,7 @@ PAGES = {
     'formality': collect_formality,
     'gender': collect_gender,
     'vocabulary': collect_vocabulary,
+    'lessons': collect_lessons,
 }
 
 

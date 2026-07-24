@@ -1,0 +1,45 @@
+{# Reusable tap-to-hear wiring.
+   Requires `audio_map` (a thai -> MP3 URL dict) in the template context.
+   Appends a 🔊 button (the site-wide .th-audio player in base.js) to every
+   .thai-text element whose trimmed text is a key in the map. Include once near
+   the end of a page's content block. For pages that add .thai-text after load
+   (a JS quiz, say), call window.wireThaiAudio(container) after each render. #}
+<style>
+    .ta-listen {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 0.8rem;
+        line-height: 1;
+        padding: 0.1rem 0.3rem;
+        margin-left: 0.15rem;
+        border-radius: 6px;
+        vertical-align: middle;
+        opacity: 0.7;
+    }
+    .ta-listen:hover, .ta-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
+    .ta-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+</style>
+<script id="ta-audio-map" type="application/json">{{ audio_map|tojson }}</script>
+<script>
+  (function () {
+    var map = JSON.parse(document.getElementById('ta-audio-map').textContent);
+    function wire(root) {
+      (root || document).querySelectorAll('.thai-text').forEach(function (el) {
+        if (el.dataset.audioWired) { return; }
+        var url = map[el.textContent.trim()];   // exact match — pure-Thai cells only
+        if (!url) { return; }
+        el.dataset.audioWired = '1';
+        var b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'th-audio ta-listen';
+        b.setAttribute('data-audio', url);
+        b.setAttribute('aria-label', 'Listen');
+        b.textContent = '🔊';
+        el.appendChild(b);
+      });
+    }
+    window.wireThaiAudio = wire;   // for pages that add .thai-text after load
+    document.addEventListener('DOMContentLoaded', function () { wire(document); });
+  })();
+</script>
