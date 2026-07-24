@@ -122,6 +122,18 @@ def collect_grammar():
     return app.grammar_thai_strings()
 
 
+def collect_formality():
+    """The Formality guide — the register names plus every example word/phrase
+    across all eight registers (monastic, royal, literary …)."""
+    import app
+    found = []
+    for level in app.FORMALITY_LEVELS.values():
+        found.append(level['thai'])
+        for ex in level.get('examples', []):
+            found.append(ex['thai'])
+    return found
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
@@ -130,6 +142,7 @@ PAGES = {
     'tones_classes': collect_tones_classes,
     'paiboon': collect_paiboon,
     'grammar': collect_grammar,
+    'formality': collect_formality,
 }
 
 
