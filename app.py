@@ -5545,7 +5545,9 @@ def lesson_detail(lesson_id):
 @require_access('tour_guide')
 def tour_guide():
     """Thai for tourists and holiday makers"""
-    return render_template('tour_guide.html', vocab=TOUR_VOCAB)
+    audio_map = _audio_map_for(
+        w['thai'] for words in TOUR_VOCAB.values() for w in words)
+    return render_template('tour_guide.html', vocab=TOUR_VOCAB, audio_map=audio_map)
 
 
 @app.route('/business-thai')

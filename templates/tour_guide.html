@@ -31,7 +31,7 @@
         <div class="vocab-grid">
             {% for word in words %}
             <div class="vocab-card">
-                <span class="vocab-thai">{{ word.thai }}</span>
+                <span class="vocab-thai thai-text">{{ word.thai }}</span>
                 <span class="vocab-paiboon">{{ word.paiboon }}</span>
                 <span class="vocab-english">{{ word.english }}</span>
                 <span class="vocab-note">{{ word.note }}</span>
@@ -155,4 +155,6 @@
         .vocab-grid { grid-template-columns: 1fr; }
     }
 </style>
+
+{% include 'partials/thai_audio_wiring.html' %}
 {% endblock %}
