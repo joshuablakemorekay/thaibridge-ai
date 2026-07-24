@@ -5452,8 +5452,19 @@ def read_write():
 @app.route('/tones-classes')
 @require_access('tones_classes')
 def tones_classes():
-    """Unified free section: consonant classes + tone rules taught together."""
-    return render_template('tones_classes.html', data=TONES_AND_CLASSES)
+    """Unified free section: consonant classes + tone rules taught together.
+
+    consonant_audio maps each letter to its Alphabet-page recording (the one
+    that says the full name, e.g. 'กอ ไก่'). The class lists here show the same
+    44 letters, so we reuse those clips rather than synthesize lone letters —
+    the example syllables get their own phrase clips via thai_audio_url instead.
+    """
+    consonant_audio = {
+        c['char']: url_for('static', filename=c['audio'])
+        for c in thai_consonants.CONSONANTS
+    }
+    return render_template('tones_classes.html', data=TONES_AND_CLASSES,
+                           consonant_audio=consonant_audio)
 
 @app.route('/register')
 @require_access('register')

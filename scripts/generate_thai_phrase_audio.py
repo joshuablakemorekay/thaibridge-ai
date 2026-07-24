@@ -76,11 +76,35 @@ def collect_read_write():
     return thai_reading.all_thai_strings()
 
 
+def collect_tones_classes():
+    """The Tones & Consonant Classes page.
+
+    Deliberately NOT a blanket walk of TONES_AND_CLASSES: two kinds of 'thai'
+    values there must be skipped —
+      * the 44 bare consonant letters (they reuse the Alphabet's own name
+        recordings on the page, so a lone-letter clip would be redundant), and
+      * the tone marks, which are bare combining marks (' ่') with nothing to
+        pronounce.
+    So we collect only the class names and the example/drill SYLLABLES, which
+    are what the page's play buttons actually point at."""
+    import app
+    d = app.TONES_AND_CLASSES
+    found = []
+    for cls in d['classes']:
+        found.append(cls['thai'])          # the class name, e.g. อักษรกลาง
+        _walk_thai(cls['examples'], found)  # its worked-example syllables
+    for key in ('sound_pairs', 'dead_syllables', 'leading_h', 'contrast_pairs'):
+        _walk_thai(d[key], found)          # demo/example syllables only (marks live elsewhere)
+    _walk_thai(d['drills'], found)          # the practice-drill syllables
+    return found
+
+
 # The registry of wired-up pages. Add a line here to bring a new page online.
 PAGES = {
     'vowels': collect_vowels,
     'sentences': collect_sentences,
     'read_write': collect_read_write,
+    'tones_classes': collect_tones_classes,
 }
 
 
