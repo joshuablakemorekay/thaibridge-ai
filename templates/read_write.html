@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Read & Write Thai Script - ThaiBridge AI{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ static_v('css/read_write.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="card">
+    <h1>✍️ Read &amp; Write Thai Script</h1>
+    <p class="rw-lead">You know the letters. This is where they start working for
+       you — sounding out real syllables, reading a short dharma story, and
+       forming the letters with your own hand.</p>
+
+    {# Every Thai string in the Words and Story panels is an unreviewed draft.
+       Said plainly so no learner treats it as authoritative before Josh and
+       teacher Paiboon have checked it. #}
+    <p class="rw-draft" role="note">📝 <strong>Draft content:</strong> the Thai in
+       the Words and Story sections is awaiting a teacher's review. Use it to
+       practise reading, but expect small corrections.</p>
+
+    <div class="rw-tabs" role="tablist" aria-label="Reading and writing modes">
+        <button class="rw-tab" role="tab" id="tab-syllables"
+                aria-controls="panel-syllables" aria-selected="true">🔡 Syllables</button>
+        <button class="rw-tab" role="tab" id="tab-words"
+                aria-controls="panel-words" aria-selected="false">📿 Words</button>
+        <button class="rw-tab" role="tab" id="tab-story"
+                aria-controls="panel-story" aria-selected="false">📖 Story</button>
+        <button class="rw-tab" role="tab" id="tab-write"
+                aria-controls="panel-write" aria-selected="false">✍️ Write</button>
+    </div>
+
+    <!-- ── READ ▸ Syllables ─────────────────────────────────── -->
+    <section class="rw-panel" id="panel-syllables" role="tabpanel"
+             aria-labelledby="tab-syllables">
+        <p class="rw-hint">The big idea: <strong>a Thai vowel is not always
+           written after its consonant.</strong> It can sit before, above, below,
+           or wrap around the letter — but you always <em>say</em> the consonant
+           first. Each syllable below is a mini test: read it, then tap to check.</p>
+
+        {% for group in vowel_positions %}
+        <div class="rw-group">
+            <h2 class="rw-group-title">{{ group.label }}
+                <span class="rw-term" lang="th">{{ group.thai_term }}</span></h2>
+            <p class="rw-rule">{{ group.rule }}</p>
+            <div class="rw-syl-grid">
+                {% for s in group.syllables %}
+                <button class="rw-syl" type="button" aria-expanded="false">
+                    <span class="rw-syl-thai" lang="th">{{ s.thai }}</span>
+                    <span class="rw-syl-answer" hidden>
+                        <span class="rw-syl-paiboon">{{ s.paiboon }}</span>
+                        <span class="rw-syl-english">{{ s.english }}</span>
+                        <span class="rw-syl-break">
+                            <span lang="th">{{ s.consonant }}</span> +
+                            <span lang="th">{{ s.vowel_form }}</span>
+                        </span>
+                        <span class="rw-syl-note">{{ s.note }}</span>
+                        {% if audio_map.get(s.thai) %}
+                        <span class="th-audio rw-listen" role="button" tabindex="0"
+                              data-audio="{{ audio_map.get(s.thai) }}">🔊 Listen</span>
+                        {% endif %}
+                    </span>
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+    <!-- ── READ ▸ Words ─────────────────────────────────────── -->
+    <section class="rw-panel" id="panel-words" role="tabpanel"
+             aria-labelledby="tab-words" hidden>
+        <p class="rw-hint">Real words worth knowing — the vocabulary of the
+           Dhamma. Read each one, then tap to reveal its sound and meaning.</p>
+        <div class="rw-word-grid">
+            {% for w in dharma_words %}
+            <button class="rw-word" type="button" aria-expanded="false">
+                <span class="rw-word-thai" lang="th">{{ w.thai }}</span>
+                <span class="rw-word-answer" hidden>
+                    <span class="rw-word-paiboon">{{ w.paiboon }}</span>
+                    <span class="rw-word-english">{{ w.english }}</span>
+                    {% if audio_map.get(w.thai) %}
+                    <span class="th-audio rw-listen" role="button" tabindex="0"
+                          data-audio="{{ audio_map.get(w.thai) }}">🔊 Listen</span>
+                    {% endif %}
+                </span>
+            </button>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- ── READ ▸ Story ─────────────────────────────────────── -->
+    <section class="rw-panel" id="panel-story" role="tabpanel"
+             aria-labelledby="tab-story" hidden>
+        <p class="rw-hint">The payoff: real connected Thai. Tap any word to see
+           its sound and meaning. Read it once with the glosses, then try again
+           without.</p>
+        <div id="rw-story-mount"></div>
+    </section>
+
+    <!-- ── WRITE ───────────────────────────────────────────── -->
+    <section class="rw-panel" id="panel-write" role="tabpanel"
+             aria-labelledby="tab-write" hidden>
+        <div class="rw-principles">
+            <h2>How Thai letters are formed</h2>
+            <ol class="rw-principle-list">
+                <li><strong>Start at the head (หัว).</strong> Almost every letter
+                    begins with a small loop or circle. Find it, and start there —
+                    it tells you where the pen goes down.</li>
+                <li><strong>One continuous stroke.</strong> Most letters are drawn
+                    without lifting the pen, in a single flowing movement out of
+                    that loop.</li>
+                <li><strong>Loop first, then the body.</strong> Draw the little
+                    circle, then carry straight on into the tall lines and curves.</li>
+                <li><strong>Left to right, top to bottom.</strong> When a letter
+                    has separate parts, work left-to-right and top-to-bottom, the
+                    same direction you read.</li>
+            </ol>
+            <p class="rw-principle-tip">Pick a letter below, then trace over the
+               faded guide with your finger or mouse. Start at its loop and keep
+               the pen moving.</p>
+        </div>
+
+        <div class="rw-trace">
+            <div class="rw-trace-stage">
+                <div class="rw-trace-guide" id="rw-guide" lang="th" aria-hidden="true"></div>
+                <canvas id="rw-canvas" class="rw-trace-canvas"
+                        aria-label="Tracing area"></canvas>
+            </div>
+            <div class="rw-trace-meta">
+                <span class="rw-trace-name" id="rw-trace-name" lang="th"></span>
+                <span class="rw-trace-sound" id="rw-trace-sound"></span>
+            </div>
+            <div class="rw-trace-controls">
+                <button class="rw-btn rw-btn--ghost" id="rw-prev" type="button">← Back</button>
+                <span class="rw-trace-counter" id="rw-counter" aria-live="polite"></span>
+                <button class="rw-btn rw-btn--ghost" id="rw-next" type="button">Next →</button>
+            </div>
+            <div class="rw-trace-controls">
+                <button class="rw-btn" id="rw-clear" type="button">🧽 Clear</button>
+                <button class="rw-btn rw-btn--ghost" id="rw-toggle-guide" type="button"
+                        aria-pressed="true">👁️ Hide guide</button>
+                <button class="rw-audio th-audio" id="rw-listen" type="button">🔊 Listen</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+{# Data for the JS: the story tokens (rendered on the client so each word is a
+   tappable gloss) and the consonants for the trace picker. tojson escapes the
+   Thai safely for a script tag, the same way the Alphabet page does it. #}
+<script id="rw-stories" type="application/json">{{ stories|tojson }}</script>
+<script id="rw-consonants" type="application/json">{{ consonants|tojson }}</script>
+<script id="rw-audio-map" type="application/json">{{ audio_map|tojson }}</script>
+<script>
+  window.RW_CONFIG = {
+    consonantAudioBase: "{{ url_for('static', filename='audio/th/') }}"
+  };
+</script>
+<script src="{{ static_v('js/read_write.js') }}" defer></script>
+{% endblock %}

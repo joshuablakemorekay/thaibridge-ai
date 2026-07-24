@@ -1,0 +1,399 @@
+/* Read & Write Thai Script
+   ========================
+   Mobile-first, same house rules as alphabet.css: only one tab panel is in the
+   document at a time (keeps the page short), nothing is made legible only at
+   the END of a transition (throttled tabs stall transitions), and no 3D
+   transforms or background-attachment:fixed (both have crashed iOS here).
+
+   Thai glyphs are set large and given `lang="th"` in the markup so the browser
+   picks a Thai-capable font. */
+
+.rw-lead {
+    color: var(--isan-earth, #8B7355);
+    margin: 0.25rem 0 1rem;
+}
+
+.rw-draft {
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 2px dashed var(--deep-gold, #B8860B);
+    background: #fffaf0;
+    color: var(--isan-clay, #A0522D);
+    font-size: 0.95rem;
+    margin: 0 0 1.25rem;
+}
+
+/* ── Tabs ──────────────────────────────────────────────────── */
+
+.rw-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+}
+
+.rw-tab {
+    flex: 1 1 auto;
+    min-height: 44px;                 /* comfortable tap target */
+    padding: 0.7rem 0.9rem;
+    border: 2px solid var(--royal-purple, #4A1A6B);
+    background: #fff;
+    color: var(--royal-purple, #4A1A6B);
+    border-radius: 8px;
+    font: 600 1rem inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.rw-tab[aria-selected="true"] {
+    background: var(--royal-purple, #4A1A6B);
+    color: #fff;
+}
+
+.rw-tab:focus-visible,
+.rw-syl:focus-visible,
+.rw-word:focus-visible,
+.rw-btn:focus-visible,
+.rw-audio:focus-visible,
+.rw-token:focus-visible,
+.rw-cell:focus-visible {
+    outline: 3px solid var(--royal-gold, #D4AF37);
+    outline-offset: 2px;
+}
+
+.rw-panel[hidden] { display: none; }
+
+.rw-hint {
+    background: var(--pale-lotus, #FFE5EC);
+    border-left: 4px solid var(--lotus-pink, #E75480);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin: 0.5rem 0 1.25rem;
+    font-size: 0.95rem;
+}
+
+/* ── Syllables ─────────────────────────────────────────────── */
+
+.rw-group { margin-bottom: 1.75rem; }
+
+.rw-group-title {
+    font-size: 1.1rem;
+    color: var(--royal-purple, #4A1A6B);
+    margin: 0 0 0.25rem;
+}
+
+.rw-term {
+    font-weight: 500;
+    color: var(--deep-gold, #B8860B);
+    margin-left: 0.4rem;
+}
+
+.rw-rule {
+    margin: 0 0 0.75rem;
+    color: var(--palm-green, #355E3B);
+    font-size: 0.95rem;
+}
+
+.rw-syl-grid,
+.rw-word-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.rw-syl,
+.rw-word {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem 0.75rem;
+    border: 2px solid var(--rice-green, #8FBC8F);
+    border-radius: 12px;
+    background: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-family: inherit;
+    transition: border-color 0.15s ease;
+}
+
+.rw-syl[aria-expanded="true"],
+.rw-word[aria-expanded="true"] {
+    border-color: var(--bodhi-green, #228B22);
+    background: #f2fbf2;
+}
+
+.rw-syl-thai,
+.rw-word-thai {
+    font-size: 2.4rem;
+    line-height: 1.1;
+    color: var(--deep-purple, #2D1B4E);
+}
+
+.rw-syl-answer,
+.rw-word-answer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+/* The reveal cards start with the answer hidden ("read it, then tap to check").
+   The [hidden] attribute alone loses to the display:flex above, so restate it
+   with higher specificity so a hidden answer really is hidden. */
+.rw-syl-answer[hidden],
+.rw-word-answer[hidden] { display: none; }
+
+.rw-syl-paiboon,
+.rw-word-paiboon {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--bodhi-green, #228B22);
+}
+
+.rw-syl-english,
+.rw-word-english {
+    font-size: 0.95rem;
+    color: var(--isan-earth, #8B7355);
+}
+
+.rw-syl-break {
+    font-size: 1.1rem;
+    color: var(--royal-purple, #4A1A6B);
+    margin-top: 0.2rem;
+}
+
+.rw-syl-note {
+    font-size: 0.85rem;
+    color: var(--monsoon-grey, #708090);
+    margin-top: 0.25rem;
+}
+
+.rw-listen {
+    margin-top: 0.4rem;
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: var(--royal-gold, #D4AF37);
+    color: var(--deep-purple, #2D1B4E);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.rw-listen.is-playing { background: var(--gold-shimmer, #FFD700); }
+
+/* ── Story reader ──────────────────────────────────────────── */
+
+.rw-story-head { margin-bottom: 1rem; }
+
+.rw-story-title-th {
+    font-size: 1.6rem;
+    color: var(--deep-purple, #2D1B4E);
+    margin: 0;
+}
+
+.rw-story-title-en {
+    color: var(--isan-earth, #8B7355);
+    font-style: italic;
+    margin: 0.1rem 0 0;
+}
+
+.rw-sentence {
+    line-height: 2.6;
+    margin: 0.6rem 0;
+}
+
+.rw-token {
+    display: inline-block;
+    font-size: 1.7rem;
+    padding: 0.05rem 0.2rem;
+    margin: 0 0.05rem;
+    border-radius: 6px;
+    border: none;
+    background: transparent;
+    color: var(--deep-purple, #2D1B4E);
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.3;
+}
+
+.rw-token:hover,
+.rw-token.is-active {
+    background: var(--pale-lotus, #FFE5EC);
+    box-shadow: inset 0 -3px 0 var(--lotus-pink, #E75480);
+}
+
+.rw-gloss {
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    border: 2px solid var(--royal-gold, #D4AF37);
+    background: var(--lotus-white, #FFF5F7);
+    min-height: 3.5rem;
+}
+
+.rw-gloss-empty { color: var(--monsoon-grey, #708090); }
+
+.rw-gloss-thai {
+    font-size: 2rem;
+    color: var(--deep-purple, #2D1B4E);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.rw-gloss-paiboon {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--bodhi-green, #228B22);
+}
+
+.rw-gloss-english {
+    display: block;
+    margin-top: 0.25rem;
+    color: var(--isan-earth, #8B7355);
+}
+
+.rw-moral {
+    margin-top: 1.5rem;
+    padding: 0.9rem 1.1rem;
+    border-left: 4px solid var(--bodhi-green, #228B22);
+    background: #f2fbf2;
+    border-radius: 6px;
+    font-style: italic;
+    color: var(--palm-green, #355E3B);
+}
+
+.rw-source {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: var(--monsoon-grey, #708090);
+}
+
+/* ── Write / trace ─────────────────────────────────────────── */
+
+.rw-principles { margin-bottom: 1.5rem; }
+
+.rw-principles h2 {
+    font-size: 1.15rem;
+    color: var(--royal-purple, #4A1A6B);
+    margin: 0 0 0.6rem;
+}
+
+.rw-principle-list {
+    margin: 0 0 0.75rem;
+    padding-left: 1.25rem;
+    line-height: 1.6;
+}
+
+.rw-principle-list li { margin-bottom: 0.5rem; }
+
+.rw-principle-tip {
+    background: var(--pale-lotus, #FFE5EC);
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.rw-trace-stage {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    border: 2px dashed var(--sandstone, #D2B48C);
+    border-radius: 16px;
+    background:
+        linear-gradient(var(--sandstone, #D2B48C) 1px, transparent 1px) 0 50% / 100% 50% no-repeat,
+        linear-gradient(90deg, var(--sandstone, #D2B48C) 1px, transparent 1px) 50% 0 / 50% 100% no-repeat;
+    background-color: #fffdf7;
+    overflow: hidden;
+    touch-action: none;               /* let the canvas own touch drags */
+}
+
+.rw-trace-guide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14rem;
+    line-height: 1;
+    color: rgba(74, 26, 107, 0.18);   /* faint royal purple guide */
+    user-select: none;
+    pointer-events: none;
+}
+
+.rw-trace-guide.is-hidden { opacity: 0; }
+
+.rw-trace-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.rw-trace-meta {
+    text-align: center;
+    margin: 0.75rem 0 0.25rem;
+}
+
+.rw-trace-name {
+    font-size: 1.3rem;
+    color: var(--deep-purple, #2D1B4E);
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.rw-trace-sound { color: var(--bodhi-green, #228B22); font-weight: 600; }
+
+.rw-trace-controls {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 0.6rem;
+}
+
+.rw-btn,
+.rw-audio {
+    min-height: 44px;
+    padding: 0.55rem 1.1rem;
+    border-radius: 8px;
+    border: 2px solid var(--royal-purple, #4A1A6B);
+    background: var(--royal-purple, #4A1A6B);
+    color: #fff;
+    font: 600 0.95rem inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.rw-btn--ghost {
+    background: #fff;
+    color: var(--royal-purple, #4A1A6B);
+}
+
+.rw-audio {
+    background: var(--royal-gold, #D4AF37);
+    border-color: var(--deep-gold, #B8860B);
+    color: var(--deep-purple, #2D1B4E);
+}
+
+.rw-audio.is-playing { background: var(--gold-shimmer, #FFD700); }
+
+.rw-trace-counter {
+    font-size: 0.9rem;
+    color: var(--monsoon-grey, #708090);
+    min-width: 4rem;
+    text-align: center;
+}
+
+/* ── Wider screens ─────────────────────────────────────────── */
+
+@media (min-width: 700px) {
+    .rw-trace-stage { max-width: 360px; }
+    .rw-trace-guide { font-size: 16rem; }
+}
