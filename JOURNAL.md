@@ -816,3 +816,30 @@ Fluency comes from hearing and speaking, not reading, so the audio and practice 
 
 **What I learned**
 **A push is not a deploy.** I told myself it was live twice before the server caught up — now I confirm on the real URL before saying the word. And an AI is only as good as the model behind it: the cheap live model couldn't be trusted with a monk's speech, so that scenario waited.
+
+---
+
+## 24 July 2026 — Everything can be heard, and read & written
+
+**Type:** Feature + Bug Fix + Learning
+
+**TL;DR**
+- Built a new **Read & Write Thai Script** section — sound-out-the-syllable reading, a trace-the-letter writing canvas, and a tappable Jataka-tale reader.
+- Rolled tap-to-hear audio across **every remaining page** — all 13 Learn pages plus Culture, Theravada and Meditation. The whole app can now be heard.
+- Extracted the audio wiring into a reusable partial partway through, which made the last pages near-instant.
+
+**What I built or did**
+First, a two-part "Read & Write" page: a reading trainer that teaches how Thai vowels sit before/above/below/around a consonant, and a canvas to trace all 42 written letters by hand, capped with a short Jataka story you read one tapped word at a time. Then the big push — tap-to-hear 🔊 buttons on every page that holds learnable Thai, ~500 native-voice clips in one consistent system. Also fixed a live bug on the Formality page: examples were showing as raw code (`{'thai': ...}`) to real users.
+
+**Why I did it this way**
+Reading and writing are the two skills the app never taught directly, and hearing a word matters more than reading its romanisation. One shared audio helper meant each new page cost almost nothing.
+
+**How We Did It**
+1. Built the Read & Write section (data file, reading trainer, trace canvas, Jataka reader) and shipped it.
+2. Added audio page by page: check if the Thai is structured data or hidden in prose, wire it, generate clips, verify on the *live* server.
+3. Hit a wall on the big Grammar page (~190 phrases) — switched from hand-editing to a map-plus-script that auto-tags every Thai cell.
+4. Pulled that pattern into a reusable partial, so the final pages were a one-line include.
+5. Marked all draft Thai and unverified audio for the teacher's review.
+
+**What I learned**
+When a job repeats, stop and build the tool — the reusable partial turned a slog into a stamp. And check the rendered page, not just the data: the Formality bug was invisible until I actually looked at what users saw.
