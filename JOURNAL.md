@@ -945,124 +945,49 @@ Claude Code session, 25 July 2026. Commit `962ec7b`.
 
 **Type:** Feature
 
-**TL;DR:** All 44 consonants now show the thing they're named after — ก is "gɔɔ gài, chicken", so ก gets a chicken.
+**TL;DR:** Every one of the 44 consonants now shows the thing it's named after — ก is "gɔɔ gài, chicken", so ก gets a chicken — with a new quiz round built on it, and 44 icons I drew myself.
 
 **What I built or did**
-Added a picture to every letter in four places: the chart tiles, the detail strip, the flashcard's reveal side, and a new quiz round that asks *"which letter is this the picture for?"*
+Gave every letter a picture in four places: the chart tiles, the detail strip, the flashcard's reveal side, and a new quiz round that asks *"which letter is this the picture for?"* Then replaced the stand-in emoji with a hand-drawn icon set — 44 SVGs in the site's own colours, 30 KB for the whole lot.
 
 **Why I did it this way**
-Two kinds of picture, chosen by context. The chart shows 44 tiles at once, so that uses emoji — no downloads, and page weight is exactly what crashed this page's renderer before. The strip, flashcard and quiz show one letter at a time, so those can afford a real image.
+Two kinds of picture, chosen by how many are on screen at once. The chart shows 44 tiles together, so it uses emoji: they cost nothing to load, and page weight is exactly what crashed this page's renderer before. The strip, flashcard and quiz show one letter at a time, so they can afford a real image.
+
+I wanted photographs and couldn't have them. Every stock photo needs a licence that holds up in a public repo, and 44 downloads is weight this page can't carry. Drawing them solved both: nothing to license, and all 44 together are smaller than a single photograph. SVGs are shapes described in code, so they stay sharp at any size.
 
 **How it works**
-Pictures are drop-in: name a file after the letter's slug (`kor-kai.webp`), drop it in `static/img/consonants/`, and it appears. No code to edit — the same trick the phrase audio already uses. Until a file exists, the emoji stands in.
+Pictures are drop-in: name a file after the letter's slug (`kor-kai.svg`), put it in `static/img/consonants/`, and it appears — no code to edit, the same trick the phrase audio already uses. Where no file exists the letter falls back to its emoji, so the page is complete whether the folder is empty or full.
 
 **What this means for the app**
-A picture is a memory hook. Recognising a chicken is far easier than recalling "gɔɔ gài" cold.
+A picture is a memory hook: recognising a chicken is far easier than recalling "gɔɔ gài" cold. And one payoff I didn't have to build — twelve letters whose emoji was only approximate (a pot lid, a cattle goad, Montho) got unambiguous drawings, so they rejoined the quiz's picture round on their own. Picture questions went from about 9 a quiz to 14.
 
 **What I learned**
-Twelve meanings have no honest emoji — a cattle goad, a pot lid, Montho from the Ramakien. Rather than fudge it, I flagged those and kept them out of the picture round: guessing a letter from a vaguely-right picture is an unfair question. Add a real photo later and the letter rejoins automatically.
+Four things, three of them from getting something wrong first.
 
-I also broke something and caught it by testing. I'd set the images to "lazy load" — a trick for pictures far down a long page. But here exactly one image is built at the moment it's shown, so lazy could only ever delay the thing being looked at. In a background tab it never loaded at all. **The fix for a slow page isn't always right for a fast one.**
+*The right technique in one place is the wrong one in another.* I set the pictures to "lazy load" — the standard trick for images far down a long page. But here exactly one image is built at the moment it's shown, so lazy could only ever delay the very thing being looked at; in a background tab it never appeared at all. I only found it because a test of mine hung waiting for a load event that never fired.
+
+*When you can't source it, make it* — and the constraint often picks the better answer anyway. Vectors beat photographs here on every measure that mattered.
+
+*Judging your own work is part of the work.* I laid all 44 icons out side by side and four were plainly bad: the plate read as a target, the cymbals as leaves, the horse as a blob. I only saw it because I viewed them together, at the size they would really be used.
+
+*When a rule expires, replace it with a narrower one — not with nothing.* Two letters were stuck showing a drum and a trophy, because Unicode has no cymbals character and no offering-tray character, so no emoji swap could ever fix them. My move was to put the drawings on all 44 chart tiles, reasoning that vectors weigh nothing so the old page-weight rule no longer applied. Too broad, and I was pulled up on it: emoji are *designed* to be legible at 32px and a shrunk drawing is not. Only those two letters actually needed one. The rule's reason had half-expired and I had thrown out the half that still held. The exception now lives in the data as a `no_emoji` flag rather than two letter names buried in the code.
+
+**The eight I can't check myself**
+Eight of the drawings are culturally specific — the ชฎา headdress, Montho, a เณร novice, a ยักษ์ giant, a ฤๅษี hermit, a ศาลา pavilion, the จุฬา kite and a พาน offering tray. I drew them from description rather than from knowing them, and they want a Thai eye. Any that miss get redrawn or simply deleted: with no file present, that letter falls back to its emoji with no code change.
 
 **How We Did It**
 1. Read how the page was built first — one table, `thai_consonants.py`, feeding chart, flashcards and quiz alike.
 2. Chose emoji vs real images per place, based on how many appear on screen at once.
-3. Added an emoji to all 44 letters, marking the twelve that are only approximate.
-4. Built the drop-in folder so pictures can be added later without touching code.
-5. Added the quiz's picture round, excluding the approximate twelve.
-6. Tested in a real browser — including with a deliberately wrong-shaped image, which is how I caught the lazy-loading mistake.
-7. Pushed, then confirmed the live site was actually serving the new version.
+3. Built the drop-in folder so pictures could be added later without touching code.
+4. Added the quiz's picture round, leaving out letters whose emoji was too vague to make a fair question.
+5. Ruled out stock photos on licensing and page weight, then drew six easy objects and looked at them before committing to the idea.
+6. Tested the hard case next — animals — because that is what would decide it, then drew the remaining 35.
+7. Laid all 44 on one page at real size and redrew the five that failed.
+8. Over-applied the icons to the whole chart, then narrowed it back to the two letters emoji genuinely cannot express.
+9. Checked the live site returned 404 before pushing and 200 after, so "live" meant something.
 
 **References / Conversations**
-Claude Code session, 25 July 2026. Commits `c9a2bc9`, `c9cd015`.
-
----
-
-## 25 July 2026 — Drawing 44 letters instead of downloading them
-
-**Type:** Feature
-
-**TL;DR:** The alphabet pictures are real drawings now, not emoji — 44 SVG icons in the site's own colours, 30 KB for the whole set.
-
-**What I built or did**
-Replaced the emoji fallback with a hand-drawn icon set on the flashcards, the chart's detail strip and the quiz's picture round. The chart's 44 tiles still use emoji, on purpose.
-
-**Why I did it this way**
-I wanted photographs and couldn't have them. Every stock photo needs a licence that holds up in a public repo, and 44 downloads is page weight this page can't afford. Drawing them solved both at once: nothing to license, and the whole set is smaller than a single photograph. SVGs are shapes described in code, so they stay sharp at any size.
-
-**How it works**
-No code changed at all. The drop-in lookup I built earlier finds a picture by filename, so adding 44 files *was* the whole job.
-
-**What this means for the app**
-A side effect I didn't have to build: the twelve letters whose emoji was only approximate — a pot lid, a cattle goad, Montho — now have unambiguous pictures, so they rejoined the quiz's picture round by themselves. Picture questions went from about 9 a quiz to 14.
-
-**What I learned**
-When you can't source something, make it — and the constraint often picks the better answer anyway. Vectors beat photos here on every measure that mattered.
-
-Also: judging your own work is part of the work. I laid all 44 out side by side and four were bad — the plate read as a target, the cymbals as leaves, the horse as a blob. I only saw it because I viewed them together at the size they'd really be used.
-
-**How We Did It**
-1. Ruled out stock photos on licensing and page weight.
-2. Drew six easy objects first and looked at them before committing to the idea.
-3. Tested the hard case next — animals — because that's what would decide it.
-4. Drew the remaining 35, flagging eight culturally specific ones for review.
-5. Laid all 44 on one page at real size and redrew the five that failed.
-6. Checked the live site returned 404 before pushing and 200 after, so "live" meant something.
-
-**References / Conversations**
-Claude Code session, 25 July 2026. Commit `0c398ac`.
-
----
-
-## 25 July 2026 — When the reason for a rule expires
-
-**Type:** Decision
-
-**TL;DR:** The chart tiles now show the drawn icons too — because the reason they didn't had quietly stopped being true.
-
-**What I built or did**
-Switched the 44 chart tiles from emoji to the same drawn icons the rest of the page uses. The trigger: I spotted that ฉ (cymbals) was showing a drum and พ (a footed offering tray) a trophy.
-
-**Why I did it this way**
-No emoji swap could have fixed those two — Unicode has no cymbals character and no offering-tray character. They can't be said in emoji at all. The drawings say them exactly.
-
-And the chart's emoji rule had expired without anyone noticing. It existed because 44 pictures at once was the page weight that crashed this page's iOS renderer — but that was a rule about *photographs*. The drawn set is vector art: 30 KB for all 44, less than one photo.
-
-**How it works**
-One line in `buildChart`. Every tile's picture sits in a fixed 32px slot shared by the icon and the emoji fallback, so a missing or slow icon can't reflow a 44-cell grid.
-
-**What I learned**
-A design rule is only as good as the fact underneath it, and facts change. The dangerous part is that a rule outlives its reason **silently** — nobody re-checks. So I wrote the condition into the code and the folder README: if these ever become photographs, the chart goes back to emoji. A rule worth keeping is worth writing down with its expiry condition.
-
-**How We Did It**
-1. Checked where emoji still appeared — only the chart tiles.
-2. Established that no exact emoji exists, so the drawings had to be the fix.
-3. Measured the real cost: 30 KB for 44 vectors, against a rule written for photos.
-4. Gave every tile a fixed 32px slot so nothing can reflow the grid.
-5. Deleted an icon and reloaded, proving the emoji fallback still catches it.
-6. Verified live before calling it done.
-
-**Amended later the same day**
-I looked at the result and narrowed it. Emoji are the right default for that
-chart: 44 are on screen at once, they cost nothing to load, and they are
-*designed* to be legible at small sizes — which a drawing shrunk to 32px is
-not. So the chart went back to emoji, keeping the drawing only for the two
-letters emoji genuinely cannot express: ฉ ฉิ่ง and พ พาน.
-
-I had swung from one blanket rule to the opposite one. The real answer was
-narrower than either: **emoji unless no emoji exists.** That now lives in the
-data as a `no_emoji` flag rather than a list of letters buried in the code, so
-marking another letter later is a one-line change.
-
-So there are two lessons here, not one. The first still stands — a rule outlives
-its reason silently. The second is the corrective: **noticing that a rule has
-expired is not a licence to throw it out.** The reason the chart used emoji (44
-things on screen at once) had not gone away; only the part about file size had.
-Replace an expired rule with a narrower one, not with nothing.
-
-**References / Conversations**
-Claude Code session, 25 July 2026. Commit `8ab1cbe`, then `c229e0b` for the
-correction.
+Claude Code session, 25 July 2026. Commits `c9a2bc9`, `c9cd015`, `0c398ac`, `8ab1cbe`, `c229e0b`.
 
 ---
 
