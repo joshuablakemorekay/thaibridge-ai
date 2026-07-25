@@ -899,6 +899,48 @@ Claude Code session, 24 July 2026.
 
 ---
 
+## 25 July 2026 — Three letters the robot voice couldn't read
+
+**Type:** Bug Fix
+
+**TL;DR:** Three of the 44 consonants were being mispronounced by the text-to-speech voice. The spellings were right all along — the voice just couldn't read them — so I taught the recording script to say something different from what the page shows.
+
+**What I built or did**
+Fixed the spoken names of ณ, ผ and ย. ณ was saying "nɔɔ **een**" and swallowing the n. ผ was slipping an extra **ɔɔ** into the middle. ย was adding a **yai** on the end that shouldn't be there. Only those three recordings were remade; the other 41 weren't touched.
+
+**Why I did it this way**
+My first instinct was to change the spelling in the table until the voice got it right. But that spelling is what learners *see* on the Alphabet page — "fixing" it would have put wrong Thai in front of people trying to learn Thai. So I split the two jobs apart: `name_thai` is what you see, a new optional `speak` field is what the voice hears. They only differ where the voice genuinely can't cope, which right now is three letters out of forty-four.
+
+**How it works**
+The recording script now reads `speak` instead of `name_thai`, falling back to the spelling when no respelling is set — so 41 letters carry no extra baggage at all.
+
+```python
+'speak': speak or name_thai,  # what the voice is fed
+```
+
+Working out *why* the voice tripped up mattered more than the fix itself. ขอ ไข่ comes out perfectly because ขอ is a real Thai word. ผอ isn't a word, so the voice gave up and read it as two separate letters — ผ then อ — which is exactly where the spare ɔɔ was coming from. Once I understood that, the fix was obvious: give it a real word.
+
+**What this means for the app**
+Learners hear the right thing on a page whose entire job is teaching pronunciation. A wrong recording on an alphabet page isn't a cosmetic bug — it teaches the mistake.
+
+**What I learned**
+Two things. First, when a computer gets something wrong, find out *why* before patching it — the "extra ɔɔ" looked random until I spotted that the broken ones weren't real words. Second, I can't hear audio through Claude, so Claude generated a dozen candidate pronunciations and built me a little web page to click through and compare. That turned a guessing game into a five-minute listening test. Worth remembering: when an AI can't judge something, get it to lay the options out so *you* can.
+
+I also made a judgement call I want on record. The best-sounding fix for ผ uses พอ, which is a real word and comes out as one clean syllable — but it's mid tone where the letter should be rising. I chose slightly-flat over a whole spare syllable. It's a compromise, not a perfect fix, and it's flagged for Paiboon to check.
+
+**How We Did It**
+1. Traced the recordings back to their source — one table, `thai_consonants.py`, feeding both the page and the audio script.
+2. Generated candidate respellings and compared them in the browser, rather than guessing.
+3. Worked out the pattern behind the failures (real words read fine, non-words get split up).
+4. Added the `speak` field so the spelling on screen stayed correct, with a comment on each fix saying what went wrong — so nobody "tidies" it back into the bug later.
+5. Re-recorded just the three affected clips and checked the other 41 were untouched.
+6. Pushed, then confirmed the live site was actually serving the new files by comparing checksums — not just trusting that the push worked.
+
+**References / Conversations**
+Claude Code session, 25 July 2026. Commit `962ec7b`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
