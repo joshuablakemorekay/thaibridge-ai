@@ -941,6 +941,43 @@ Claude Code session, 25 July 2026. Commit `962ec7b`.
 
 ---
 
+## 25 July 2026 — A picture for every letter
+
+**Type:** Feature
+
+**TL;DR:** All 44 consonants now show the thing they're named after — ก is "gɔɔ gài, chicken", so ก gets a chicken.
+
+**What I built or did**
+Added a picture to every letter in four places: the chart tiles, the detail strip, the flashcard's reveal side, and a new quiz round that asks *"which letter is this the picture for?"*
+
+**Why I did it this way**
+Two kinds of picture, chosen by context. The chart shows 44 tiles at once, so that uses emoji — no downloads, and page weight is exactly what crashed this page's renderer before. The strip, flashcard and quiz show one letter at a time, so those can afford a real image.
+
+**How it works**
+Pictures are drop-in: name a file after the letter's slug (`kor-kai.webp`), drop it in `static/img/consonants/`, and it appears. No code to edit — the same trick the phrase audio already uses. Until a file exists, the emoji stands in.
+
+**What this means for the app**
+A picture is a memory hook. Recognising a chicken is far easier than recalling "gɔɔ gài" cold.
+
+**What I learned**
+Twelve meanings have no honest emoji — a cattle goad, a pot lid, Montho from the Ramakien. Rather than fudge it, I flagged those and kept them out of the picture round: guessing a letter from a vaguely-right picture is an unfair question. Add a real photo later and the letter rejoins automatically.
+
+I also broke something and caught it by testing. I'd set the images to "lazy load" — a trick for pictures far down a long page. But here exactly one image is built at the moment it's shown, so lazy could only ever delay the thing being looked at. In a background tab it never loaded at all. **The fix for a slow page isn't always right for a fast one.**
+
+**How We Did It**
+1. Read how the page was built first — one table, `thai_consonants.py`, feeding chart, flashcards and quiz alike.
+2. Chose emoji vs real images per place, based on how many appear on screen at once.
+3. Added an emoji to all 44 letters, marking the twelve that are only approximate.
+4. Built the drop-in folder so pictures can be added later without touching code.
+5. Added the quiz's picture round, excluding the approximate twelve.
+6. Tested in a real browser — including with a deliberately wrong-shaped image, which is how I caught the lazy-loading mistake.
+7. Pushed, then confirmed the live site was actually serving the new version.
+
+**References / Conversations**
+Claude Code session, 25 July 2026. Commits `c9a2bc9`, `c9cd015`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
