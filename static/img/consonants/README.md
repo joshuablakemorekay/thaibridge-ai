@@ -1,7 +1,12 @@
 # Consonant pictures
 
 Optional pictures for the 44 Thai consonants, used on the **Alphabet** page —
-on the flashcard's reveal side and in the quiz's picture round.
+in the detail strip under the chart, on the flashcard's reveal side, and in the
+quiz's picture round.
+
+(The 44 chart tiles themselves always use the emoji, never a picture from here.
+They are all on screen at once, and 44 image downloads is exactly the page
+weight this page has to stay clear of.)
 
 Nothing in here is required. Every letter already has an emoji in
 `thai_consonants.py`, and that emoji is what shows when there is no picture

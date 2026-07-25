@@ -202,8 +202,20 @@
     color: var(--royal-purple);
 }
 
-.abc-detail-emoji {
-    font-size: 2.5rem;
+/* Fixed width AND height, not a max: the strip reopens on every tap of the
+   chart, so a picture that sized itself to its own dimensions would shift the
+   grid above it each time a different letter loaded. */
+.abc-detail-picture {
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abc-detail-pic {
+    font-size: 2.5rem;            /* the emoji fallback */
     line-height: 1;
 }
 
@@ -345,6 +357,7 @@
     border-radius: 10px;
 }
 
+.abc-detail-picture .abc-pic--photo   { max-height: 56px; }
 .abc-card-picture .abc-pic--photo     { max-height: 96px; }
 .abc-question-picture .abc-pic--photo { max-height: 8rem; }
 

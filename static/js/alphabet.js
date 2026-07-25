@@ -155,8 +155,10 @@
         img.className = className + ' abc-pic--photo';
         img.src = CONFIG.staticBase + letter.picture;
         img.alt = announce ? letter.meaning : '';   // '' = decorative
-        // Never let a slow picture hold up the letter, which is the point.
-        img.loading = 'lazy';
+        // Deliberately NOT loading="lazy". Lazy loading is for images sitting
+        // far down a long page; here exactly one image is built at the moment
+        // it is shown, so lazy can only ever delay the thing being looked at —
+        // and in a background tab it defers it indefinitely.
         img.decoding = 'async';
         // A picture that 404s must not leave a broken-image icon on the card,
         // so swap in the emoji if it fails to load.
@@ -247,10 +249,13 @@
         detail.innerHTML = '';
         detail.hidden = false;
 
-        // Emoji here rather than a real picture: the strip sits inside the
-        // 44-tile chart, and swapping in an image on every tap would make the
-        // strip's height jump as each one loads.
-        var picture = emojiSpan(letter, 'abc-detail-emoji');
+        // Real picture where there is one, emoji otherwise. The host box is a
+        // FIXED size (see the CSS), which matters more here than anywhere else:
+        // the strip sits under the 44-tile chart and reopens on every tap, so a
+        // picture that sized itself would shift the whole grid as it loaded.
+        var picture = document.createElement('div');
+        picture.className = 'abc-detail-picture';
+        picture.appendChild(pictureEl(letter, 'abc-detail-pic'));
 
         var glyph = document.createElement('div');
         glyph.className = 'abc-detail-letter';
