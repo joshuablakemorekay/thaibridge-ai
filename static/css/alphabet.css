@@ -169,14 +169,24 @@
     overflow-wrap: anywhere;      /* keep cells square; names are long */
 }
 
-/* The meaning as one glyph, above the letter, like a Thai children's alphabet
+/* The meaning as a picture, above the letter, like a Thai children's alphabet
    chart. Kept small on purpose: it is a memory hook, not the subject. 44 of
    these are on screen at once, so every pixel of height here is 6 rows' worth
    of extra page on a phone — and page height is what crashed the iOS renderer
-   on this page once before. */
-.abc-cell-emoji {
-    font-size: 1.3rem;
-    line-height: 1;
+   on this page once before.
+
+   A FIXED 32px slot, used by both the drawn icon and the emoji fallback, so
+   every tile is the same height whichever it gets and the grid cannot reflow
+   as the icons load. line-height does the vertical centring for the emoji. */
+.abc-cell-pic {
+    height: 32px;
+    line-height: 32px;
+    font-size: 1.4rem;
+}
+
+.abc-cell-pic.abc-pic--photo {
+    width: 32px;
+    display: block;
 }
 
 /* The detail strip is a SIBLING of the grid, not a child of a cell, so opening

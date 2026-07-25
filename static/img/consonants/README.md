@@ -1,12 +1,15 @@
 # Consonant pictures
 
-Optional pictures for the 44 Thai consonants, used on the **Alphabet** page —
-in the detail strip under the chart, on the flashcard's reveal side, and in the
-quiz's picture round.
+Optional pictures for the 44 Thai consonants, used **everywhere** on the
+**Alphabet** page — the 44 chart tiles, the detail strip under the chart, the
+flashcard's reveal side, and the quiz's picture round.
 
-(The 44 chart tiles themselves always use the emoji, never a picture from here.
-They are all on screen at once, and 44 image downloads is exactly the page
-weight this page has to stay clear of.)
+⚠️ **Keep them small and keep them vectors if you can.** All 44 chart tiles are
+on screen at once, and page weight is what crashed this page's renderer before.
+The current set is SVG at roughly 700 bytes each — about 30 KB for all 44, less
+than one photograph. **If you ever replace these with photographs, the chart
+tiles must go back to emoji** (one line in `static/js/alphabet.js`, in
+`buildChart`), or the page will pull down 44 images at once on a phone.
 
 Nothing in here is required. Every letter already has an emoji in
 `thai_consonants.py`, and that emoji is what shows when there is no picture

@@ -118,11 +118,21 @@
        Every letter is taught as a word — ก is "gɔɔ gài, chicken" — so every
        letter gets a picture of that word to hang the memory on.
 
-       Two kinds, on purpose. The chart shows 44 tiles at once, so there it is an
-       emoji: no downloads, no page weight, and page weight is what crashed the
-       iOS renderer on this page before. The flashcard and the quiz show ONE
-       letter at a time, so those can afford a real image, and use one when the
-       file exists (see thai_consonants.picture_static_path).
+       Every one of the four places — chart tile, detail strip, flashcard and
+       quiz — shows the letter's real picture when the file exists, and falls
+       back to its emoji when it does not.
+
+       The chart originally used emoji whatever happened, because 44 pictures
+       loading at once is the kind of page weight that crashed the iOS renderer
+       on this page before. That reasoning was about PHOTOGRAPHS. The drawn set
+       that replaced them is vector art: 44 files, ~700 bytes each, about 30 KB
+       for the lot — less than one photo — so the chart can now show the real
+       thing too. If anyone ever swaps these for photographs, the chart must go
+       back to emoji.
+
+       That change also fixed two letters the emoji simply could not express:
+       Unicode has no cymbals (ฉ ฉิ่ง) and no offering tray (พ พาน), so the chart
+       had been showing a drum and a trophy.
 
        `announce` decides how screen readers treat it, and the two cases are
        genuinely different. In the chart and on the flashcard the picture sits
@@ -196,10 +206,10 @@
                 letter.char + ', ' + letter.name + ', ' + letter.meaning
                 + (letter.obsolete ? ', obsolete' : ''));
 
-            // Emoji above the letter, as on a Thai children's alphabet chart.
-            // The aria-label above already reads the meaning aloud, so the
-            // glyph itself stays hidden from screen readers.
-            cell.appendChild(emojiSpan(letter, 'abc-cell-emoji'));
+            // The picture above the letter, as on a Thai children's alphabet
+            // chart. The aria-label above already reads the meaning aloud, so
+            // the picture itself stays hidden from screen readers.
+            cell.appendChild(pictureEl(letter, 'abc-cell-pic'));
 
             var glyph = document.createElement('span');
             glyph.className = 'abc-cell-letter';
