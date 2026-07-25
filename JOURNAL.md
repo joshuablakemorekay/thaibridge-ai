@@ -978,6 +978,42 @@ Claude Code session, 25 July 2026. Commits `c9a2bc9`, `c9cd015`.
 
 ---
 
+## 25 July 2026 — Drawing 44 letters instead of downloading them
+
+**Type:** Feature
+
+**TL;DR:** The alphabet pictures are real drawings now, not emoji — 44 SVG icons in the site's own colours, 30 KB for the whole set.
+
+**What I built or did**
+Replaced the emoji fallback with a hand-drawn icon set on the flashcards, the chart's detail strip and the quiz's picture round. The chart's 44 tiles still use emoji, on purpose.
+
+**Why I did it this way**
+I wanted photographs and couldn't have them. Every stock photo needs a licence that holds up in a public repo, and 44 downloads is page weight this page can't afford. Drawing them solved both at once: nothing to license, and the whole set is smaller than a single photograph. SVGs are shapes described in code, so they stay sharp at any size.
+
+**How it works**
+No code changed at all. The drop-in lookup I built earlier finds a picture by filename, so adding 44 files *was* the whole job.
+
+**What this means for the app**
+A side effect I didn't have to build: the twelve letters whose emoji was only approximate — a pot lid, a cattle goad, Montho — now have unambiguous pictures, so they rejoined the quiz's picture round by themselves. Picture questions went from about 9 a quiz to 14.
+
+**What I learned**
+When you can't source something, make it — and the constraint often picks the better answer anyway. Vectors beat photos here on every measure that mattered.
+
+Also: judging your own work is part of the work. I laid all 44 out side by side and four were bad — the plate read as a target, the cymbals as leaves, the horse as a blob. I only saw it because I viewed them together at the size they'd really be used.
+
+**How We Did It**
+1. Ruled out stock photos on licensing and page weight.
+2. Drew six easy objects first and looked at them before committing to the idea.
+3. Tested the hard case next — animals — because that's what would decide it.
+4. Drew the remaining 35, flagging eight culturally specific ones for review.
+5. Laid all 44 on one page at real size and redrew the five that failed.
+6. Checked the live site returned 404 before pushing and 200 after, so "live" meant something.
+
+**References / Conversations**
+Claude Code session, 25 July 2026. Commit `0c398ac`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
