@@ -1014,6 +1014,39 @@ Claude Code session, 25 July 2026. Commit `0c398ac`.
 
 ---
 
+## 25 July 2026 — When the reason for a rule expires
+
+**Type:** Decision
+
+**TL;DR:** The chart tiles now show the drawn icons too — because the reason they didn't had quietly stopped being true.
+
+**What I built or did**
+Switched the 44 chart tiles from emoji to the same drawn icons the rest of the page uses. The trigger: I spotted that ฉ (cymbals) was showing a drum and พ (a footed offering tray) a trophy.
+
+**Why I did it this way**
+No emoji swap could have fixed those two — Unicode has no cymbals character and no offering-tray character. They can't be said in emoji at all. The drawings say them exactly.
+
+And the chart's emoji rule had expired without anyone noticing. It existed because 44 pictures at once was the page weight that crashed this page's iOS renderer — but that was a rule about *photographs*. The drawn set is vector art: 30 KB for all 44, less than one photo.
+
+**How it works**
+One line in `buildChart`. Every tile's picture sits in a fixed 32px slot shared by the icon and the emoji fallback, so a missing or slow icon can't reflow a 44-cell grid.
+
+**What I learned**
+A design rule is only as good as the fact underneath it, and facts change. The dangerous part is that a rule outlives its reason **silently** — nobody re-checks. So I wrote the condition into the code and the folder README: if these ever become photographs, the chart goes back to emoji. A rule worth keeping is worth writing down with its expiry condition.
+
+**How We Did It**
+1. Checked where emoji still appeared — only the chart tiles.
+2. Established that no exact emoji exists, so the drawings had to be the fix.
+3. Measured the real cost: 30 KB for 44 vectors, against a rule written for photos.
+4. Gave every tile a fixed 32px slot so nothing can reflow the grid.
+5. Deleted an icon and reloaded, proving the emoji fallback still catches it.
+6. Verified live before calling it done.
+
+**References / Conversations**
+Claude Code session, 25 July 2026. Commit `8ab1cbe`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
