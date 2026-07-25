@@ -1042,8 +1042,27 @@ A design rule is only as good as the fact underneath it, and facts change. The d
 5. Deleted an icon and reloaded, proving the emoji fallback still catches it.
 6. Verified live before calling it done.
 
+**Amended later the same day**
+I looked at the result and narrowed it. Emoji are the right default for that
+chart: 44 are on screen at once, they cost nothing to load, and they are
+*designed* to be legible at small sizes — which a drawing shrunk to 32px is
+not. So the chart went back to emoji, keeping the drawing only for the two
+letters emoji genuinely cannot express: ฉ ฉิ่ง and พ พาน.
+
+I had swung from one blanket rule to the opposite one. The real answer was
+narrower than either: **emoji unless no emoji exists.** That now lives in the
+data as a `no_emoji` flag rather than a list of letters buried in the code, so
+marking another letter later is a one-line change.
+
+So there are two lessons here, not one. The first still stands — a rule outlives
+its reason silently. The second is the corrective: **noticing that a rule has
+expired is not a licence to throw it out.** The reason the chart used emoji (44
+things on screen at once) had not gone away; only the part about file size had.
+Replace an expired rule with a narrower one, not with nothing.
+
 **References / Conversations**
-Claude Code session, 25 July 2026. Commit `8ab1cbe`.
+Claude Code session, 25 July 2026. Commit `8ab1cbe`, then `c229e0b` for the
+correction.
 
 ---
 
