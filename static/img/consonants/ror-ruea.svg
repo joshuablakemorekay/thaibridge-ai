@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="boat">
+  <title>boat</title>
+  <g stroke="#4A2E14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10 50 C 24 46, 72 46, 86 50 C 82 68, 70 78, 48 78
+             C 26 78, 14 68, 10 50 Z" fill="#8B5A2B"/>
+    <path d="M14 56 L82 56" stroke-width="3" opacity=".5"/>
+    <path d="M58 20 L58 46 M58 22 L76 40 L58 40" fill="#D4AF37"/>
+    <path d="M8 84 C 20 80, 32 88, 44 84 C 56 80, 68 88, 88 84"
+          fill="none" stroke="#4A93BF" stroke-width="4"/>
+  </g>
+</svg>

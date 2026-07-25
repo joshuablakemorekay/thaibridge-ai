@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="ceremonial headdress">
+  <title>ceremonial headdress (chada)</title>
+  <g stroke="#8A6D1F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 4 C 50 14, 53 22, 56 30 L62 48 L70 68 L26 68 L34 48 L40 30
+             C 43 22, 46 14, 48 4 Z" fill="#D4AF37"/>
+    <path d="M36 50 L60 50 M32 60 L64 60" stroke="#8A6D1F" stroke-width="3"/>
+    <rect x="22" y="68" width="52" height="12" rx="4" fill="#E0C25E"/>
+    <path d="M26 80 C 22 86, 20 90, 20 92 M70 80 C 74 86, 76 90, 76 92"
+          fill="none" stroke="#D4AF37" stroke-width="4"/>
+    <circle cx="48" cy="40" r="4" fill="#4A1A6B" stroke="#4A1A6B"/>
+  </g>
+</svg>

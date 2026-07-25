@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="sailboat">
+  <title>sailboat</title>
+  <g stroke="#4A2E14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 8 L48 62" />
+    <path d="M44 14 C 30 22, 24 40, 24 58 L44 58 Z" fill="#C0392B"/>
+    <path d="M52 20 C 64 28, 70 42, 70 58 L52 58 Z" fill="#D4AF37"/>
+    <path d="M12 62 L84 62 C 80 76, 68 84, 48 84 C 28 84, 16 76, 12 62 Z" fill="#8B5A2B"/>
+    <path d="M8 88 C 22 84, 34 90, 48 87 C 62 84, 74 90, 88 87"
+          fill="none" stroke="#4A93BF" stroke-width="3"/>
+  </g>
+</svg>

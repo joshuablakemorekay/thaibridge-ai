@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="owl">
+  <title>owl</title>
+  <g stroke="#4A2E14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 30 L26 16 L40 22 M66 30 L70 16 L56 22" fill="#8B5A2B"/>
+    <path d="M22 46 C 22 28, 34 18, 48 18 C 62 18, 74 28, 74 46
+             L74 60 C 74 76, 62 84, 48 84 C 34 84, 22 76, 22 60 Z" fill="#8B5A2B"/>
+    <circle cx="37" cy="44" r="12" fill="#FFF9E6"/>
+    <circle cx="59" cy="44" r="12" fill="#FFF9E6"/>
+    <circle cx="37" cy="44" r="5" fill="#2C1810" stroke="none"/>
+    <circle cx="59" cy="44" r="5" fill="#2C1810" stroke="none"/>
+    <path d="M48 52 L42 60 L54 60 Z" fill="#D4AF37"/>
+    <path d="M40 84 L38 90 M56 84 L58 90" stroke="#D4AF37"/>
+    <path d="M34 70 C 40 76, 56 76, 62 70" fill="none" stroke-width="3" opacity=".6"/>
+  </g>
+</svg>

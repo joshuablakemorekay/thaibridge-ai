@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="hand cymbals">
+  <title>hand cymbals (ching)</title>
+  <g stroke="#8A6D1F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 26 C 38 30, 44 38, 44 46" fill="none" stroke="#654321" stroke-width="3"/>
+    <path d="M66 26 C 58 30, 52 38, 52 46" fill="none" stroke="#654321" stroke-width="3"/>
+    <path d="M8 52 C 8 38, 18 30, 30 30 C 38 30, 42 36, 42 44 L42 52
+             C 42 58, 34 62, 24 62 C 14 62, 8 58, 8 52 Z" fill="#D4AF37"/>
+    <ellipse cx="25" cy="52" rx="17" ry="8" fill="#E0C25E"/>
+    <path d="M88 52 C 88 38, 78 30, 66 30 C 58 30, 54 36, 54 44 L54 52
+             C 54 58, 62 62, 72 62 C 82 62, 88 58, 88 52 Z" fill="#D4AF37"/>
+    <ellipse cx="71" cy="52" rx="17" ry="8" fill="#E0C25E"/>
+    <path d="M46 74 L50 74 M40 80 L36 84 M56 80 L60 84"
+          fill="none" stroke="#708090" stroke-width="3"/>
+  </g>
+</svg>

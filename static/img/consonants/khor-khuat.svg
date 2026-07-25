@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="bottle">
+  <title>bottle</title>
+  <g stroke="#2F6B57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="40" y="10" width="16" height="8" rx="2" fill="#8A6D1F"/>
+    <path d="M41 18 L41 34 C 41 40, 32 46, 32 56 L32 80 C 32 85, 35 88, 40 88
+             L56 88 C 61 88, 64 85, 64 80 L64 56 C 64 46, 55 40, 55 34 L55 18 Z"
+          fill="#7FB8A4"/>
+    <rect x="34" y="56" width="28" height="16" rx="2" fill="#FFF9E6"/>
+  </g>
+</svg>

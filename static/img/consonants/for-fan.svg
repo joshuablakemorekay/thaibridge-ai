@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="tooth">
+  <title>tooth</title>
+  <g stroke="#8A8478" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M26 30 C 26 18, 38 12, 48 18 C 58 12, 70 18, 70 30
+             C 70 44, 65 52, 62 66 C 60 78, 51 78, 51 66 L51 54
+             C 51 48, 45 48, 45 54 L45 66 C 45 78, 36 78, 34 66
+             C 31 52, 26 44, 26 30 Z" fill="#FFFEF7"/>
+    <path d="M36 28 C 40 24, 46 24, 50 27" fill="none" stroke-width="3" opacity=".5"/>
+  </g>
+</svg>

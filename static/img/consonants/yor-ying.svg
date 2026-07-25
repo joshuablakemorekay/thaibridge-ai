@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="woman">
+  <title>woman</title>
+  <g stroke="#4A2E14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 30 C 28 14, 38 8, 48 8 C 58 8, 68 14, 68 30
+             C 68 44, 64 50, 62 56 L34 56 C 32 50, 28 44, 28 30 Z" fill="#3E3A36"/>
+    <circle cx="48" cy="30" r="15" fill="#D8B98C"/>
+    <path d="M33 26 C 33 14, 40 10, 48 10 C 56 10, 63 14, 63 26
+             C 60 20, 54 18, 48 18 C 42 18, 36 20, 33 26 Z" fill="#3E3A36" stroke="none"/>
+    <path d="M22 86 C 22 64, 34 50, 48 50 C 62 50, 74 64, 74 86 Z"
+          fill="#C0392B" stroke="#8E2A20"/>
+  </g>
+</svg>

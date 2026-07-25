@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="open pavilion">
+  <title>open pavilion (sala)</title>
+  <g stroke="#8E2A20" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 6 L78 34 L18 34 Z" fill="#C0392B"/>
+    <path d="M48 26 L86 54 L10 54 Z" fill="#C0392B"/>
+    <path d="M18 34 C 12 32, 10 26, 12 22 M78 34 C 84 32, 86 26, 84 22"
+          fill="none" stroke="#D4AF37" stroke-width="4"/>
+    <path d="M10 54 C 4 52, 2 46, 4 42 M86 54 C 92 52, 94 46, 92 42"
+          fill="none" stroke="#D4AF37" stroke-width="4"/>
+    <path d="M22 54 L22 80 M74 54 L74 80 M40 54 L40 80 M56 54 L56 80"
+          fill="none" stroke="#8B5A2B" stroke-width="5"/>
+    <rect x="12" y="80" width="72" height="10" rx="3" fill="#8B5A2B" stroke="#4A2E14"/>
+  </g>
+</svg>

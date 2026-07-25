@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="monkey">
+  <title>monkey</title>
+  <g stroke="#4A2E14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="18" cy="48" r="11" fill="#8B5A2B"/>
+    <circle cx="78" cy="48" r="11" fill="#8B5A2B"/>
+    <circle cx="48" cy="48" r="26" fill="#8B5A2B"/>
+    <path d="M28 46 C 28 32, 38 26, 48 26 C 58 26, 68 32, 68 46
+             C 68 44, 64 40, 48 40 C 32 40, 28 44, 28 46 Z" fill="#A9743F" stroke="none"/>
+    <ellipse cx="48" cy="60" rx="17" ry="13" fill="#D8B98C"/>
+    <circle cx="40" cy="47" r="3.5" fill="#2C1810" stroke="none"/>
+    <circle cx="56" cy="47" r="3.5" fill="#2C1810" stroke="none"/>
+    <circle cx="43" cy="57" r="2" fill="#2C1810" stroke="none"/>
+    <circle cx="53" cy="57" r="2" fill="#2C1810" stroke="none"/>
+    <path d="M41 65 C 45 69, 51 69, 55 65" fill="none" stroke-width="3"/>
+  </g>
+</svg>

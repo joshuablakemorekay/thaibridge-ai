@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="novice monk">
+  <title>novice monk (samanera)</title>
+  <g stroke="#A9601F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="48" cy="28" r="15" fill="#D8B98C" stroke="#8A6438"/>
+    <path d="M20 88 C 20 64, 32 48, 48 48 C 64 48, 76 64, 76 88 Z" fill="#E8862A"/>
+    <path d="M48 48 L34 88" fill="none" stroke="#C4701A" stroke-width="4"/>
+    <path d="M44 40 C 44 44, 52 44, 52 40" fill="none" stroke="#8A6438" stroke-width="3"/>
+    <circle cx="43" cy="28" r="2" fill="#2C1810" stroke="none"/>
+    <circle cx="53" cy="28" r="2" fill="#2C1810" stroke="none"/>
+  </g>
+</svg>

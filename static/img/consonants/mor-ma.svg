@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="horse">
+  <title>horse</title>
+  <g stroke="#4A2E14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M24 42 C 17 46, 19 54, 27 54 L40 54
+             C 45 60, 48 66, 48 74 L48 88 L72 88 L72 62
+             C 72 44, 63 33, 52 27 L55 10 L43 23
+             C 36 26, 28 33, 24 42 Z" fill="#8B5A2B"/>
+    <path d="M52 27 C 60 36, 66 48, 68 62 L68 84
+             C 74 76, 76 62, 74 50 C 72 38, 63 30, 55 26 Z" fill="#4A2E14" stroke="none"/>
+    <circle cx="42" cy="38" r="3" fill="#2C1810" stroke="none"/>
+    <circle cx="27" cy="47" r="2.5" fill="#2C1810" stroke="none"/>
+    <path d="M27 54 L38 54" stroke="#4A2E14" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="bell">
+  <title>bell</title>
+  <g fill="none" stroke="#8A6D1F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M44 20 A 6 6 0 0 1 52 20" />
+    <path d="M26 68 C 26 42, 34 24, 48 24 C 62 24, 70 42, 70 68 Z" fill="#D4AF37"/>
+    <path d="M20 68 L76 68"/>
+    <circle cx="48" cy="78" r="6" fill="#654321" stroke="#654321"/>
+  </g>
+</svg>

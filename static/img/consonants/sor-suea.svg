@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="tiger">
+  <title>tiger</title>
+  <g stroke="#7A3E10" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="24" cy="28" r="10" fill="#E8862A"/>
+    <circle cx="72" cy="28" r="10" fill="#E8862A"/>
+    <circle cx="48" cy="50" r="27" fill="#E8862A"/>
+    <path d="M40 26 L38 36 M48 24 L48 35 M56 26 L58 36" stroke="#3E3A36" stroke-width="4"/>
+    <path d="M22 46 L30 48 M74 46 L66 48" stroke="#3E3A36" stroke-width="4"/>
+    <ellipse cx="48" cy="60" rx="16" ry="12" fill="#FFF3E0"/>
+    <circle cx="39" cy="48" r="3.5" fill="#2C1810" stroke="none"/>
+    <circle cx="57" cy="48" r="3.5" fill="#2C1810" stroke="none"/>
+    <path d="M43 57 L53 57 L48 62 Z" fill="#C0392B" stroke="none"/>
+    <path d="M48 62 L48 66 M48 66 C 44 70, 40 68, 39 65 M48 66 C 52 70, 56 68, 57 65"
+          fill="none" stroke="#2C1810" stroke-width="3"/>
+  </g>
+</svg>

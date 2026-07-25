@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="cattle goad">
+  <title>cattle goad (patak)</title>
+  <g stroke="#4A2E14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M28 88 L56 32" stroke="#8B5A2B" stroke-width="10"/>
+    <path d="M22 84 C 18 88, 20 92, 26 92 L34 90" fill="#654321"/>
+    <path d="M56 32 L60 20 L66 6 L70 20 L68 34 Z" fill="#B9BCC2" stroke="#5C6270"/>
+    <path d="M68 30 C 78 28, 82 20, 80 14" fill="none" stroke="#5C6270" stroke-width="4"/>
+    <path d="M52 40 L44 36 M48 50 L40 46" stroke="#654321" stroke-width="3" opacity=".6"/>
+  </g>
+</svg>

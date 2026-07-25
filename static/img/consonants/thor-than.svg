@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="pedestal base">
+  <title>pedestal base</title>
+  <g stroke="#8A6D1F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="12" y="72" width="72" height="14" rx="4" fill="#D4AF37"/>
+    <rect x="22" y="60" width="52" height="12" rx="3" fill="#E0C25E"/>
+    <path d="M32 60 C 34 46, 34 34, 32 24 L64 24 C 62 34, 62 46, 64 60 Z" fill="#D4AF37"/>
+    <rect x="24" y="14" width="48" height="12" rx="3" fill="#E0C25E"/>
+  </g>
+</svg>

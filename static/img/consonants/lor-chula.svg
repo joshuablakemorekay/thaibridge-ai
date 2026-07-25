@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="Thai star kite">
+  <title>Thai star kite (chula)</title>
+  <g stroke="#8A6D1F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 4 L59 28 L84 40 L59 52 L48 76 L37 52 L12 40 L37 28 Z" fill="#D4AF37"/>
+    <path d="M48 4 L48 76 M12 40 L84 40" stroke="#8A6D1F" stroke-width="3"/>
+    <path d="M37 28 L59 52 M59 28 L37 52" stroke="#8A6D1F" stroke-width="2" opacity=".6"/>
+    <path d="M48 76 C 44 82, 52 86, 48 92" fill="none" stroke="#654321" stroke-width="3"/>
+  </g>
+</svg>

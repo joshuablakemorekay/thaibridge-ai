@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="bee">
+  <title>bee</title>
+  <g stroke="#5A4A10" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="40" cy="30" rx="14" ry="9" transform="rotate(-24 40 30)" fill="#EAF4FA"/>
+    <ellipse cx="62" cy="30" rx="14" ry="9" transform="rotate(24 62 30)" fill="#EAF4FA"/>
+    <ellipse cx="52" cy="56" rx="24" ry="17" fill="#D4AF37"/>
+    <path d="M46 40 C 44 48, 44 64, 46 72 M60 41 C 58 49, 58 63, 60 71"
+          stroke="#3E3A36" stroke-width="7" fill="none"/>
+    <path d="M76 56 L86 56" stroke-width="5"/>
+    <circle cx="26" cy="52" r="10" fill="#3E3A36"/>
+    <path d="M22 42 L16 34 M30 42 L34 33" stroke-width="3"/>
+  </g>
+</svg>

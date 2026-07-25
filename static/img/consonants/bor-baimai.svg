@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="leaf">
+  <title>leaf</title>
+  <g fill="none" stroke="#1B6B1B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M48 86 C 18 68, 14 32, 48 10 C 82 32, 78 68, 48 86 Z" fill="#228B22"/>
+    <path d="M48 84 L48 22" stroke="#FFF9E6" stroke-width="4"/>
+    <path d="M48 40 L34 32 M48 40 L62 32 M48 58 L32 50 M48 58 L64 50"
+          stroke="#FFF9E6" stroke-width="3"/>
+  </g>
+</svg>

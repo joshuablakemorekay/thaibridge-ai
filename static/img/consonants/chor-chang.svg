@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" width="96" height="96" role="img" aria-label="elephant">
+  <title>elephant</title>
+  <g stroke="#4A4A55" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="42" y="66" width="10" height="18" rx="4" fill="#708090"/>
+    <rect x="62" y="66" width="10" height="18" rx="4" fill="#708090"/>
+    <path d="M78 50 C 86 52, 86 62, 81 64" fill="none"/>
+    <ellipse cx="56" cy="54" rx="25" ry="20" fill="#708090"/>
+    <circle cx="30" cy="50" r="17" fill="#708090"/>
+    <path d="M18 56 C 11 66, 15 80, 25 80" fill="none" stroke-width="8" stroke="#708090"/>
+    <path d="M18 56 C 11 66, 15 80, 25 80" fill="none" stroke-width="4" stroke="#4A4A55" opacity=".45"/>
+    <ellipse cx="35" cy="46" rx="10" ry="12" fill="#5F6B76"/>
+    <path d="M23 64 C 20 69, 23 73, 27 72" fill="none" stroke="#FFFEF7" stroke-width="3"/>
+    <circle cx="25" cy="45" r="2.5" fill="#2C1810" stroke="none"/>
+  </g>
+</svg>
