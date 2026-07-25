@@ -68,7 +68,7 @@ PICTURE_EXTENSIONS = ('.webp', '.png', '.jpg', '.jpeg', '.svg')
 
 
 def _c(char, name_thai, name, meaning, sound, cls, slug, emoji,
-       obsolete=False, speak=None, emoji_approx=False):
+       obsolete=False, speak=None, emoji_approx=False, no_emoji=False):
     return {
         'char': char,           # the letter itself
         'name_thai': name_thai, # e.g. 'กอ ไก่' — the correct spelling, shown on screen
@@ -82,6 +82,10 @@ def _c(char, name_thai, name, meaning, sound, cls, slug, emoji,
         'slug': slug,           # also the picture filename — see PICTURE_DIR
         'emoji': emoji,         # e.g. '🐔' — the letter's meaning as one glyph
         'emoji_approx': emoji_approx,  # emoji is only close, not exact
+        # No emoji exists for this meaning AT ALL, so the one above is actively
+        # misleading rather than merely rough. The chart, which is otherwise all
+        # emoji, shows the drawn picture for these — see buildChart.
+        'no_emoji': no_emoji,
     }
 
 
@@ -95,8 +99,11 @@ CONSONANTS = [
     _c('ฆ', 'ฆอ ระฆัง',  'kɔɔ rá-kang',  'bell',        'k',  CLASS_LOW,    'khor-rakhang','🔔'),
     _c('ง', 'งอ งู',     'ngɔɔ nguu',    'snake',       'ng', CLASS_LOW,    'ngor-ngu',    '🐍'),
     _c('จ', 'จอ จาน',   'jɔɔ jaan',     'plate',       'j',  CLASS_MIDDLE, 'chor-chan',   '🍽️'),
-    # ฉิ่ง are small hand cymbals; Unicode has no cymbals, so a drum stands in.
-    _c('ฉ', 'ฉอ ฉิ่ง',    'chɔ̌ɔ chìng',   'cymbals',     'ch', CLASS_HIGH,   'chor-ching',  '🥁', emoji_approx=True),
+    # ฉิ่ง are small hand cymbals. Unicode has NO cymbals character, and a drum
+    # is a different instrument, not a near miss — so the chart shows the drawn
+    # picture here. 🥁 survives only as the fallback if that file goes missing.
+    _c('ฉ', 'ฉอ ฉิ่ง',    'chɔ̌ɔ chìng',   'cymbals',     'ch', CLASS_HIGH,   'chor-ching',  '🥁',
+       emoji_approx=True, no_emoji=True),
     _c('ช', 'ชอ ช้าง',   'chɔɔ cháang',  'elephant',    'ch', CLASS_LOW,    'chor-chang',  '🐘'),
     _c('ซ', 'ซอ โซ่',    'sɔɔ sôo',      'chain',       's',  CLASS_LOW,    'sor-so',      '⛓️'),
     _c('ฌ', 'ฌอ เฌอ',  'chɔɔ chəə',    'tree',        'ch', CLASS_LOW,    'chor-choe',   '🌳'),
@@ -130,8 +137,11 @@ CONSONANTS = [
        speak='พอ ผึ้ง'),
     # ฝา is a pot lid. No lid emoji exists, so the pot itself stands in.
     _c('ฝ', 'ฝอ ฝา',     'fɔ̌ɔ fǎa',      'lid',         'f',  CLASS_HIGH,   'for-fa',      '🍲', emoji_approx=True),
-    # A พาน is a footed ceremonial offering tray — trophy-shaped, roughly.
-    _c('พ', 'พอ พาน',   'pɔɔ paan',     'tray',        'p',  CLASS_LOW,    'phor-phan',   '🏆', emoji_approx=True),
+    # A พาน is a footed ceremonial offering tray. Unicode has NO tray character;
+    # 🏆 matches only the silhouette and reads as a prize, which is the wrong
+    # idea entirely for an offering vessel — so the chart shows the drawing.
+    _c('พ', 'พอ พาน',   'pɔɔ paan',     'tray',        'p',  CLASS_LOW,    'phor-phan',   '🏆',
+       emoji_approx=True, no_emoji=True),
     _c('ฟ', 'ฟอ ฟัน',    'fɔɔ fan',      'tooth',       'f',  CLASS_LOW,    'for-fan',     '🦷'),
     _c('ภ', 'ภอ สำเภา',  'pɔɔ sǎm-pao',  'sailboat',    'p',  CLASS_LOW,    'phor-samphao','⛵'),
     _c('ม', 'มอ ม้า',    'mɔɔ máa',      'horse',       'm',  CLASS_LOW,    'mor-ma',      '🐴'),
@@ -211,3 +221,8 @@ assert all(c['emoji'] for c in CONSONANTS), 'a consonant is missing its emoji'
 # there have to be enough of them to fill a third of a 44-question quiz.
 assert len([c for c in CONSONANTS if not c['emoji_approx']]) >= 15, \
     'too few exact emoji left to build the picture round'
+
+# "No emoji exists for this" is a stronger claim than "the emoji is only close",
+# so it cannot be true of a letter whose emoji is marked exact.
+assert all(c['emoji_approx'] for c in CONSONANTS if c['no_emoji']), \
+    'a letter is flagged no_emoji but its emoji is marked exact'

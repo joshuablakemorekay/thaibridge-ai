@@ -1,15 +1,21 @@
 # Consonant pictures
 
-Optional pictures for the 44 Thai consonants, used **everywhere** on the
-**Alphabet** page — the 44 chart tiles, the detail strip under the chart, the
-flashcard's reveal side, and the quiz's picture round.
+Pictures for the 44 Thai consonants, used on the **Alphabet** page — the detail
+strip under the chart, the flashcard's reveal side, and the quiz's picture round.
 
-⚠️ **Keep them small and keep them vectors if you can.** All 44 chart tiles are
-on screen at once, and page weight is what crashed this page's renderer before.
-The current set is SVG at roughly 700 bytes each — about 30 KB for all 44, less
-than one photograph. **If you ever replace these with photographs, the chart
-tiles must go back to emoji** (one line in `static/js/alphabet.js`, in
-`buildChart`), or the page will pull down 44 images at once on a phone.
+**The 44-tile chart uses emoji, not these** — all 44 are on screen at once,
+emoji cost nothing to load, and they are built to be legible at that size.
+
+The exception is any letter flagged **`no_emoji`** in `thai_consonants.py`,
+where no emoji exists for the meaning at all and the nearest one says something
+actively wrong. Those tiles show the drawing instead. Currently two:
+
+| Letter | Meaning | Why |
+|--------|---------|-----|
+| ฉ | ฉิ่ง hand cymbals | Unicode has no cymbals — 🥁 is a different instrument |
+| พ | พาน offering tray | Unicode has no tray — 🏆 reads as a prize |
+
+To add another, set `no_emoji=True` on that letter. No JavaScript to change.
 
 Nothing in here is required. Every letter already has an emoji in
 `thai_consonants.py`, and that emoji is what shows when there is no picture

@@ -118,21 +118,19 @@
        Every letter is taught as a word — ก is "gɔɔ gài, chicken" — so every
        letter gets a picture of that word to hang the memory on.
 
-       Every one of the four places — chart tile, detail strip, flashcard and
-       quiz — shows the letter's real picture when the file exists, and falls
-       back to its emoji when it does not.
+       The detail strip, the flashcard and the quiz all show the letter's real
+       picture when the file exists, falling back to its emoji if it does not.
 
-       The chart originally used emoji whatever happened, because 44 pictures
-       loading at once is the kind of page weight that crashed the iOS renderer
-       on this page before. That reasoning was about PHOTOGRAPHS. The drawn set
-       that replaced them is vector art: 44 files, ~700 bytes each, about 30 KB
-       for the lot — less than one photo — so the chart can now show the real
-       thing too. If anyone ever swaps these for photographs, the chart must go
-       back to emoji.
+       The CHART is the exception, and stays emoji. 44 of them are on screen at
+       once, emoji cost nothing to load, and they are designed to be legible at
+       exactly this size — a drawn icon shrunk to 32px has no such guarantee.
 
-       That change also fixed two letters the emoji simply could not express:
-       Unicode has no cymbals (ฉ ฉิ่ง) and no offering tray (พ พาน), so the chart
-       had been showing a drum and a trophy.
+       The one carve-out is letters flagged `no_emoji` in thai_consonants.py:
+       Unicode has no cymbals character (ฉ ฉิ่ง) and no offering-tray character
+       (พ พาน), so those tiles were showing a drum and a trophy — not rough
+       approximations but the wrong objects. Those two show the drawing. It is a
+       data flag rather than a list of slugs here, so marking another letter is
+       a one-line change to the data and nothing in this file.
 
        `announce` decides how screen readers treat it, and the two cases are
        genuinely different. In the chart and on the flashcard the picture sits
@@ -207,9 +205,14 @@
                 + (letter.obsolete ? ', obsolete' : ''));
 
             // The picture above the letter, as on a Thai children's alphabet
-            // chart. The aria-label above already reads the meaning aloud, so
-            // the picture itself stays hidden from screen readers.
-            cell.appendChild(pictureEl(letter, 'abc-cell-pic'));
+            // chart. Emoji here, except for the handful of letters flagged
+            // no_emoji, where no emoji exists for the meaning at all and the
+            // nearest one says something actively wrong — see the note above.
+            // The aria-label already reads the meaning aloud, so either way the
+            // picture stays hidden from screen readers.
+            cell.appendChild(letter.no_emoji
+                ? pictureEl(letter, 'abc-cell-pic')
+                : emojiSpan(letter, 'abc-cell-pic'));
 
             var glyph = document.createElement('span');
             glyph.className = 'abc-cell-letter';
