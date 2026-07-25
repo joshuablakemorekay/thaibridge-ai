@@ -6810,11 +6810,16 @@ def thai_alphabet():
     Deliberately NOT wrapped in @require_access: this is the one page a brand
     new visitor must always be able to open, because passing it is what unlocks
     everything else.
+
+    with_pictures() looks on disk for an optional picture per letter, exactly as
+    read_write() does for its phrase recordings. Letters without one fall back
+    to their emoji, so the page is complete whether the folder is empty or full,
+    and adding a picture later needs no code change here.
     """
     init_user_progress()
     return render_template(
         'alphabet.html',
-        consonants=thai_consonants.CONSONANTS,
+        consonants=thai_consonants.with_pictures(app.static_folder),
         class_labels=thai_consonants.CLASS_LABELS,
         alphabet_complete=check_alphabet_completion(),
         quiz_total=ALPHABET_QUIZ_TOTAL,

@@ -114,6 +114,61 @@
             + (letter.obsolete ? ' · obsolete' : '');
     }
 
+    /* ── Pictures ──────────────────────────────────────────────
+       Every letter is taught as a word — ก is "gɔɔ gài, chicken" — so every
+       letter gets a picture of that word to hang the memory on.
+
+       Two kinds, on purpose. The chart shows 44 tiles at once, so there it is an
+       emoji: no downloads, no page weight, and page weight is what crashed the
+       iOS renderer on this page before. The flashcard and the quiz show ONE
+       letter at a time, so those can afford a real image, and use one when the
+       file exists (see thai_consonants.picture_static_path).
+
+       `announce` decides how screen readers treat it, and the two cases are
+       genuinely different. In the chart and on the flashcard the picture sits
+       beside text that already says "chicken", so announcing it would just say
+       everything twice — it is decoration there. In a picture QUESTION the
+       picture is the only thing being asked about, so it has to be announced or
+       the question is unanswerable without sight. It gives nothing away: the
+       answer is the letter, and "which letter means chicken?" is a fair
+       question however you receive it. */
+
+    function emojiSpan(letter, className, announce) {
+        var span = document.createElement('span');
+        span.className = className;
+        span.textContent = letter.emoji;
+        if (announce) {
+            span.setAttribute('role', 'img');
+            span.setAttribute('aria-label', letter.meaning);
+        } else {
+            span.setAttribute('aria-hidden', 'true');
+        }
+        return span;
+    }
+
+    // A real image if this letter has one, otherwise its emoji. Callers do not
+    // need to know which they got.
+    function pictureEl(letter, className, announce) {
+        if (!letter.picture) { return emojiSpan(letter, className, announce); }
+
+        var img = document.createElement('img');
+        img.className = className + ' abc-pic--photo';
+        img.src = CONFIG.staticBase + letter.picture;
+        img.alt = announce ? letter.meaning : '';   // '' = decorative
+        // Never let a slow picture hold up the letter, which is the point.
+        img.loading = 'lazy';
+        img.decoding = 'async';
+        // A picture that 404s must not leave a broken-image icon on the card,
+        // so swap in the emoji if it fails to load.
+        img.addEventListener('error', function () {
+            if (img.parentNode) {
+                img.parentNode.replaceChild(
+                    emojiSpan(letter, className, announce), img);
+            }
+        });
+        return img;
+    }
+
     function buildChart() {
         // One grid, all 44 letters in the order the data holds them — the
         // traditional dictionary order (ก ข ฃ ค …). Class is no longer a heading;
@@ -138,6 +193,11 @@
             cell.setAttribute('aria-label',
                 letter.char + ', ' + letter.name + ', ' + letter.meaning
                 + (letter.obsolete ? ', obsolete' : ''));
+
+            // Emoji above the letter, as on a Thai children's alphabet chart.
+            // The aria-label above already reads the meaning aloud, so the
+            // glyph itself stays hidden from screen readers.
+            cell.appendChild(emojiSpan(letter, 'abc-cell-emoji'));
 
             var glyph = document.createElement('span');
             glyph.className = 'abc-cell-letter';
@@ -187,6 +247,11 @@
         detail.innerHTML = '';
         detail.hidden = false;
 
+        // Emoji here rather than a real picture: the strip sits inside the
+        // 44-tile chart, and swapping in an image on every tap would make the
+        // strip's height jump as each one loads.
+        var picture = emojiSpan(letter, 'abc-detail-emoji');
+
         var glyph = document.createElement('div');
         glyph.className = 'abc-detail-letter';
         glyph.lang = 'th';
@@ -219,6 +284,7 @@
         audioBtn.setAttribute('aria-label', 'Play ' + letter.name);
         audioBtn.addEventListener('click', function () { play(letter, audioBtn); });
 
+        detail.appendChild(picture);
         detail.appendChild(glyph);
         detail.appendChild(text);
         detail.appendChild(audioBtn);
@@ -237,6 +303,14 @@
         var letter = deck[cardIndex];
 
         byId('card-letter').textContent = letter.char;
+
+        // Rebuilt per card rather than one <img> whose src changes, so a
+        // failed load can fall back to the emoji without stranding the next
+        // card with the previous letter's picture.
+        var pictureHost = byId('card-picture');
+        pictureHost.innerHTML = '';
+        pictureHost.appendChild(pictureEl(letter, 'abc-card-pic'));
+
         byId('card-name').textContent = letter.name + ' — ' + letter.meaning;
         byId('card-thai').textContent = letter.name_thai;
         byId('card-meaning').textContent = describe(letter);
@@ -295,13 +369,28 @@
     var quizNext     = byId('quiz-next');
     var quizAudioBtn = byId('quiz-audio');
 
+    // A letter can be asked as a picture question only if its picture says the
+    // meaning unambiguously. A real photograph always does. An emoji does only
+    // where it is exact: nobody could fairly name ฝ ("lid") from 🍲, so the
+    // twelve approximate ones are asked by letter or by sound instead. Drop a
+    // real picture in for one of them and it becomes eligible automatically.
+    function canBeAskedAsPicture(letter) {
+        return Boolean(letter.picture) || !letter.emoji_approx;
+    }
+
     function buildQuestions() {
         // One question per letter, so every consonant is tested exactly once
         // and the pass mark means what it says.
         return shuffled(LETTERS).map(function (letter, i) {
-            // Alternate the two question types rather than randomising them,
-            // so nobody gets a run of twenty listening questions.
-            var mode = (i % 2 === 0) ? 'see' : 'hear';
+            // Rotate the three question types rather than randomising them, so
+            // nobody gets a run of twenty listening questions.
+            var mode = ['see', 'hear', 'picture'][i % 3];
+
+            // A letter with no fair picture falls back to one of the other two,
+            // which keeps the quiz at exactly one question per letter.
+            if (mode === 'picture' && !canBeAskedAsPicture(letter)) {
+                mode = (i % 2 === 0) ? 'see' : 'hear';
+            }
 
             // Wrong answers prefer letters of the SAME class, so the question
             // cannot be solved by elimination.
@@ -346,11 +435,26 @@
             ((qIndex / questions.length) * 100) + '%';
 
         var letterEl = byId('quiz-letter');
+        var picHost = byId('quiz-picture');
+
+        // Every mode starts from the same blank slate, so nothing from the
+        // previous question can linger on screen.
+        picHost.innerHTML = '';
+        picHost.hidden = true;
+        letterEl.hidden = false;
+        quizAudioBtn.hidden = true;
 
         if (q.mode === 'see') {
             byId('quiz-prompt').textContent = 'Which name belongs to this letter?';
             letterEl.textContent = q.letter.char;
-            quizAudioBtn.hidden = true;
+        } else if (q.mode === 'picture') {
+            byId('quiz-prompt').textContent = 'Which letter is this the picture for?';
+            // The letter itself is the answer, so it must not be on screen.
+            letterEl.textContent = '';
+            letterEl.hidden = true;
+            picHost.hidden = false;
+            // announce = true: the picture IS the question here.
+            picHost.appendChild(pictureEl(q.letter, 'abc-question-pic', true));
         } else {
             byId('quiz-prompt').textContent = 'Listen, then choose the letter you heard.';
             letterEl.textContent = '🔊';
@@ -369,6 +473,7 @@
             if (q.mode === 'see') {
                 btn.textContent = option.name + ' (' + option.meaning + ')';
             } else {
+                // 'hear' and 'picture' both answer with the letter itself.
                 btn.className += ' abc-option-thai';
                 btn.lang = 'th';
                 btn.textContent = option.char;

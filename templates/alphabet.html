@@ -62,6 +62,10 @@
             {# No [hidden] here — the back is hidden with CSS visibility, so
                revealing needs no animation frame and no transition. #}
             <div class="abc-card-back" id="card-back">
+                {# The picture lives on the REVEAL side on purpose: it rewards
+                   the recall instead of giving the answer away. Filled by JS —
+                   a real image where one exists, the letter's emoji if not. #}
+                <div class="abc-card-picture" id="card-picture"></div>
                 <div class="abc-card-name" id="card-name"></div>
                 <div class="abc-card-thai" id="card-thai" lang="th"></div>
                 <div class="abc-card-meaning" id="card-meaning"></div>
@@ -104,6 +108,9 @@
             <div class="abc-question">
                 <p class="abc-question-prompt" id="quiz-prompt"></p>
                 <div class="abc-question-letter" id="quiz-letter" lang="th"></div>
+                {# Picture questions only. Kept separate from #quiz-letter so a
+                   real image can be sized as an image, not as a font glyph. #}
+                <div class="abc-question-picture" id="quiz-picture" hidden></div>
                 <button class="abc-audio" id="quiz-audio" hidden>🔊 Play sound</button>
             </div>
 

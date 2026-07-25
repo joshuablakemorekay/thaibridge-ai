@@ -169,6 +169,16 @@
     overflow-wrap: anywhere;      /* keep cells square; names are long */
 }
 
+/* The meaning as one glyph, above the letter, like a Thai children's alphabet
+   chart. Kept small on purpose: it is a memory hook, not the subject. 44 of
+   these are on screen at once, so every pixel of height here is 6 rows' worth
+   of extra page on a phone — and page height is what crashed the iOS renderer
+   on this page once before. */
+.abc-cell-emoji {
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
 /* The detail strip is a SIBLING of the grid, not a child of a cell, so opening
    it can never reflow the grid into a different number of columns mid-tap. */
 .abc-detail {
@@ -190,6 +200,11 @@
     font-size: 3rem;
     line-height: 1;
     color: var(--royal-purple);
+}
+
+.abc-detail-emoji {
+    font-size: 2.5rem;
+    line-height: 1;
 }
 
 .abc-detail-text { flex: 1 1 12rem; }
@@ -241,6 +256,22 @@
 .abc-card-back { visibility: hidden; }
 .abc-card.is-revealed .abc-card-back { visibility: visible; }
 
+/* The picture on the reveal side. A FIXED height, not a max, so the card is the
+   same height whether this letter has a real photograph or falls back to its
+   emoji — otherwise the buttons underneath would move as you flick through the
+   deck, which is the same thumb-shunting problem min-height above solves. */
+.abc-card-picture {
+    height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abc-card-pic {
+    font-size: 3.5rem;            /* the emoji fallback */
+    line-height: 1;
+}
+
 .abc-card-name { font-size: 1.4rem; font-weight: 700; color: var(--dark-text); }
 .abc-card-thai { font-family: 'Noto Serif Thai', serif; font-size: 1.5rem; color: var(--teak-wood); }
 .abc-card-meaning { color: var(--monsoon-grey); }
@@ -282,6 +313,40 @@
     line-height: 1;
     color: var(--royal-purple);
 }
+
+/* Picture questions. Sized to match .abc-question-letter above so the question
+   box does not resize as the quiz rotates between letter, sound and picture. */
+.abc-question-picture {
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Needed because the rule above sets display; without it the hidden attribute
+   would be overridden and the picture would show on every question. */
+.abc-question-picture[hidden] { display: none; }
+
+.abc-question-pic {
+    font-size: 4.5rem;            /* the emoji fallback */
+    line-height: 1;
+}
+
+/* Shared by every real image, wherever it appears. `contain` because these are
+   pictures of things (a chicken, an egg) — cropping one to fill a box could cut
+   the recognisable part off, and recognising it is the whole job.
+
+   The height ceiling is set per context below rather than as max-height:100%
+   here: that only resolves against a container with a definite height, and the
+   quiz box is sized with min-height, so a large image would escape it. */
+.abc-pic--photo {
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.abc-card-picture .abc-pic--photo     { max-height: 96px; }
+.abc-question-picture .abc-pic--photo { max-height: 8rem; }
 
 .abc-options {
     display: grid;
