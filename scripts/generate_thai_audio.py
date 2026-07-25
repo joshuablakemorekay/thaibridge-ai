@@ -60,7 +60,9 @@ async def main(force):
 
         slug = os.path.splitext(os.path.basename(out_path))[0]
         try:
-            await synthesize(letter['name_thai'], out_path)
+            # 'speak', not 'name_thai' — a few letters are respelled because the
+            # voice misreads the correct spelling. See thai_consonants.py.
+            await synthesize(letter['speak'], out_path)
             made += 1
             # ASCII only in the log. A Windows console is cp1252 by default and
             # raises UnicodeEncodeError the moment a Thai character reaches

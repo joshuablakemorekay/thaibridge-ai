@@ -8,13 +8,18 @@ all read from this one list, so they cannot drift apart.
 Order is the traditional alphabetical order (ก ข ฃ ค …), which is the order the
 letters are taught and the order they appear in a Thai dictionary.
 
-Two notes on the data:
+Three notes on the data:
 
   * ฃ (kor khuat) and ฅ (kor khon) are obsolete — no longer used in modern
     written Thai — but they are still taught as part of the 44, so they stay.
   * `sound` is the Paiboon romanisation of the letter as an INITIAL consonant.
     Several letters share a sound (ท ธ ฑ ฒ ถ ฐ are all "t"); that is a real
     feature of Thai, not a mistake in the table.
+  * `speak` is a pronunciation respelling for the text-to-speech voice, and is
+    set on only the handful of letters where the voice misreads the correct
+    spelling. `name_thai` is always what the learner SEES; `speak` is only what
+    the voice HEARS. They differ on purpose — do not "tidy" one to match the
+    other. Each one carries a comment saying what the voice got wrong.
 
 `slug` is plain ASCII on purpose. Thai characters survive fine on disk but turn
 into percent-encoded soup in a URL, and have caused Windows-to-Linux deployment
@@ -42,16 +47,17 @@ AUDIO_DIR = 'audio/th'
 AUDIO_VOICE = 'th-TH-PremwadeeNeural'
 
 
-def _c(char, name_thai, name, meaning, sound, cls, slug, obsolete=False):
+def _c(char, name_thai, name, meaning, sound, cls, slug, obsolete=False, speak=None):
     return {
         'char': char,           # the letter itself
-        'name_thai': name_thai, # e.g. 'กอ ไก่' — what the recording says
+        'name_thai': name_thai, # e.g. 'กอ ไก่' — the correct spelling, shown on screen
         'name': name,           # e.g. 'gɔɔ gài' — Paiboon romanisation
         'meaning': meaning,     # e.g. 'chicken'
         'sound': sound,         # initial-consonant sound, Paiboon
         'cls': cls,
         'obsolete': obsolete,   # ฃ and ฅ only — still taught, no longer written
         'audio': '{}/{}.mp3'.format(AUDIO_DIR, slug),
+        'speak': speak or name_thai,  # what the voice is fed — see note below
     }
 
 
@@ -74,7 +80,9 @@ CONSONANTS = [
     _c('ฐ', 'ฐอ ฐาน',   'tɔ̌ɔ tǎan',     'base',        't',  CLASS_HIGH,   'thor-than'),
     _c('ฑ', 'ฑอ มณโฑ', 'tɔɔ mon-too',  'Montho',      't',  CLASS_LOW,    'thor-montho'),
     _c('ฒ', 'ฒอ ผู้เฒ่า',  'tɔɔ pûu-tâo',  'elder',       't',  CLASS_LOW,    'thor-phuthao'),
-    _c('ณ', 'ณอ เณร',   'nɔɔ neen',     'novice monk', 'n',  CLASS_LOW,    'nor-nen'),
+    # Voice dropped the n of เณร ("nɔɔ een"); plain spelling restores it.
+    _c('ณ', 'ณอ เณร',   'nɔɔ neen',     'novice monk', 'n',  CLASS_LOW,    'nor-nen',
+       speak='นอ เนน'),
     _c('ด', 'ดอ เด็ก',   'dɔɔ dèk',      'child',       'd',  CLASS_MIDDLE, 'dor-dek'),
     _c('ต', 'ตอ เต่า',   'dtɔɔ dtào',    'turtle',      'dt', CLASS_MIDDLE, 'tor-tao'),
     _c('ถ', 'ถอ ถุง',    'tɔ̌ɔ tǔng',     'bag',         't',  CLASS_HIGH,   'thor-thung'),
@@ -83,13 +91,20 @@ CONSONANTS = [
     _c('น', 'นอ หนู',    'nɔɔ nǔu',      'mouse',       'n',  CLASS_LOW,    'nor-nu'),
     _c('บ', 'บอ ใบไม้',  'bɔɔ bai-máai', 'leaf',        'b',  CLASS_MIDDLE, 'bor-baimai'),
     _c('ป', 'ปอ ปลา',   'bpɔɔ bplaa',   'fish',        'bp', CLASS_MIDDLE, 'por-pla'),
-    _c('ผ', 'ผอ ผึ้ง',    'pɔ̌ɔ pʉ̂ng',     'bee',         'p',  CLASS_HIGH,   'phor-phueng'),
+    # ผอ is not a real word, so the voice read it as two letters, ผ + อ
+    # ("pɔ̌ɔ ɔɔ pʉ̂ng"). พอ IS a word, so it comes out as one syllable. The
+    # trade-off, chosen deliberately by Josh after listening: พอ is mid tone,
+    # not the rising tone of ผอ. Slightly flat beats a whole spare syllable.
+    _c('ผ', 'ผอ ผึ้ง',    'pɔ̌ɔ pʉ̂ng',     'bee',         'p',  CLASS_HIGH,   'phor-phueng',
+       speak='พอ ผึ้ง'),
     _c('ฝ', 'ฝอ ฝา',     'fɔ̌ɔ fǎa',      'lid',         'f',  CLASS_HIGH,   'for-fa'),
     _c('พ', 'พอ พาน',   'pɔɔ paan',     'tray',        'p',  CLASS_LOW,    'phor-phan'),
     _c('ฟ', 'ฟอ ฟัน',    'fɔɔ fan',      'tooth',       'f',  CLASS_LOW,    'for-fan'),
     _c('ภ', 'ภอ สำเภา',  'pɔɔ sǎm-pao',  'sailboat',    'p',  CLASS_LOW,    'phor-samphao'),
     _c('ม', 'มอ ม้า',    'mɔɔ máa',      'horse',       'm',  CLASS_LOW,    'mor-ma'),
-    _c('ย', 'ยอ ยักษ์',   'yɔɔ yák',      'giant',       'y',  CLASS_LOW,    'yor-yak'),
+    # Voice sounded out the silent ษ์ of ยักษ์ ("yɔɔ yák yai"); ยัก drops it.
+    _c('ย', 'ยอ ยักษ์',   'yɔɔ yák',      'giant',       'y',  CLASS_LOW,    'yor-yak',
+       speak='ยอ ยัก'),
     _c('ร', 'รอ เรือ',    'rɔɔ rʉa',      'boat',        'r',  CLASS_LOW,    'ror-ruea'),
     _c('ล', 'ลอ ลิง',    'lɔɔ ling',     'monkey',      'l',  CLASS_LOW,    'lor-ling'),
     _c('ว', 'วอ แหวน',  'wɔɔ wɛ̌ɛn',     'ring',        'w',  CLASS_LOW,    'wor-waen'),
