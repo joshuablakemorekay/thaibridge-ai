@@ -1028,6 +1028,42 @@ Claude Code session, 27 July 2026. Jataka No. 455, Khuddaka Nikaya.
 
 ---
 
+## 27 July 2026 — Giving the Jataka a voice
+
+**Type:** Feature
+
+**TL;DR:** All 13 Thai paragraphs are now read aloud, plus the 11 vocabulary clips the pages were missing. Adding a 19-second clip exposed something I hadn't noticed: the site's audio player had no way to stop.
+
+**What I built or did**
+Recorded every Thai string on the Read & Write and Culture pages — 24 new clips, 1.75 MB. Eleven are single words (มาตุโปสกชาดก, พระโพธิสัตว์, มารดา…); thirteen are whole paragraphs of the Jataka read straight through, 165 seconds in all. Each paragraph now has a "Listen to this paragraph" button beside "Check the English".
+
+**Why I did it this way**
+The readings got their own build page rather than joining the word clips. Recording a paragraph and recording a word are different jobs with different costs — now the readings can be redone without re-running 700 word clips, and the reverse.
+
+**How it works**
+Clips are generated once on my machine and committed as ordinary files, so the live site needs no speech service and pays nothing per play. Filenames are a hash of the Thai itself, which is why 61 of the 72 strings needed no work at all: a word recorded for one page is reused everywhere it appears.
+
+**What this means for the app**
+A learner facing real, unsimplified Thai can hear it read properly first, or read it themselves and check against the recording. That's a lot of what makes a hard text usable at all.
+
+**What I learned**
+*A new requirement doesn't entitle you to change behaviour for everyone.* The player restarts a clip when you tap it twice — right for a one-second word you're drilling, useless for a 19-second paragraph you want to stop. The lazy fix was to make every button stop on a second tap, which would have quietly broken every existing word button on the site. So stopping is opt-in: a button asks for it, and the several hundred others are untouched.
+
+*Check long recordings by proportion, not by presence.* A speech request that dies halfway still writes a perfectly valid, playable MP3 — it's just short, and nothing looks broken. So I measured seconds-per-character across all 13 paragraphs, where a truncated one would stand out as an outlier. All consistent at ~0.045.
+
+**How We Did It**
+1. Ran the generator for both pages — 11 made, 61 already existed and were skipped.
+2. Checked the files were really audio, and found my own check was wrong before the files were.
+3. Gave the paragraph readings their own build page, separate from the word clips.
+4. Found the player had no stop, and made stopping opt-in rather than universal.
+5. Tested both directions — word buttons must still restart, passage buttons must stop.
+6. Verified against truncation by timing, then confirmed every clip live on the real site.
+
+**References / Conversations**
+Claude Code session, 27 July 2026. Commits `61cb2db`, `2b8114a`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
