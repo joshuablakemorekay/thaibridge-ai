@@ -297,6 +297,39 @@
     font-weight: 700;
 }
 
+.rw-passage-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.rw-passage-audio {
+    min-height: 44px;                 /* comfortable tap target */
+    padding: 0.4rem 0.9rem;
+    border: 2px solid var(--royal-purple, #4A1A6B);
+    background: #fff;
+    color: var(--royal-purple, #4A1A6B);
+    border-radius: 8px;
+    font: 600 0.95rem inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.rw-passage-audio.is-playing {
+    background: var(--royal-purple, #4A1A6B);
+    color: #fff;
+}
+
+/* A paragraph reading runs for tens of seconds, so say plainly how to stop it
+   — the site's one-second word buttons never needed telling. */
+.rw-passage-audio.is-playing::after { content: ' — tap to stop'; }
+
+.rw-passage-audio:focus-visible {
+    outline: 3px solid var(--royal-gold, #D4AF37);
+    outline-offset: 2px;
+}
+
 .rw-passage-toggle {
     min-height: 44px;                 /* comfortable tap target */
     padding: 0.4rem 0.9rem;

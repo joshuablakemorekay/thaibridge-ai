@@ -533,10 +533,9 @@ def all_thai_strings():
     for story in STORIES:
         add(story.get('title_th'))
         # Token stories: every word is its own play button, so every word needs
-        # a clip. Passage stories: the paragraphs are far too long for the phrase
-        # audio system, so only the teaching vocabulary and virtue terms are
-        # collected — whole-passage recordings would be a separate job, the way
-        # monk lesson 12 handles its readings.
+        # a clip. Passage stories: only the teaching vocabulary and virtue terms
+        # belong here — the paragraphs themselves are recorded too, but as their
+        # own kind of clip via all_passage_strings() below.
         for sentence in story.get('sentences', []):
             for tok in sentence:
                 add(tok['thai'])
@@ -544,4 +543,25 @@ def all_thai_strings():
             add(virtue.get('thai'))
         for word in story.get('vocabulary', []):
             add(word['thai'])
+    return out
+
+
+def all_passage_strings():
+    """The full text of every paragraph in a 'passages' story.
+
+    Kept apart from all_thai_strings() because these are a different KIND of
+    recording: a whole paragraph read straight through, tens of seconds long and
+    a few hundred KB, rather than a one-second word. The build script exposes
+    them as their own page so they can be regenerated on their own, and the
+    player gives their buttons a stop (see data-audio-toggle in base.js) —
+    nobody needs to stop a one-second word, but they do need to stop a paragraph.
+    """
+    seen = set()
+    out = []
+    for story in STORIES:
+        for passage in story.get('passages', []):
+            text = (passage.get('thai') or '').strip()
+            if text and text not in seen:
+                seen.add(text)
+                out.append(text)
     return out

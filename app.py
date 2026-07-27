@@ -5840,7 +5840,8 @@ def read_write():
     audio_map = {
         text: (url_for('static', filename=thai_audio.audio_static_path(text))
                if thai_audio.audio_exists(app.static_folder, text) else None)
-        for text in thai_reading.all_thai_strings()
+        for text in (thai_reading.all_thai_strings()
+                     + thai_reading.all_passage_strings())
     }
     return render_template(
         'read_write.html',

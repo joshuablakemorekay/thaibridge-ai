@@ -137,6 +137,19 @@
                     player.addEventListener('error', clearPlaying);
                 }
 
+                // A second tap on the button that is already playing.
+                // Default stays RESTART: for a one-second word you are drilling,
+                // tapping again means "say it again". Buttons that opt in with
+                // data-audio-toggle STOP instead, which is the only sane answer
+                // for a clip tens of seconds long (a whole read-aloud paragraph)
+                // — otherwise there is no way to stop it but to leave the page.
+                if (button === playingButton &&
+                    button.hasAttribute('data-audio-toggle')) {
+                    player.pause();
+                    clearPlaying();
+                    return;
+                }
+
                 clearPlaying();
                 button.classList.add('is-playing');
                 playingButton = button;

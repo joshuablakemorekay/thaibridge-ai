@@ -235,7 +235,24 @@
                     english.hidden = open;
                 });
 
-                wrap.appendChild(toggle);
+                var controls = el('div', 'rw-passage-controls');
+
+                // The whole paragraph read aloud — a model to read along with,
+                // or to check your own reading against. Only drawn once the clip
+                // exists, the same rule as every other play button on the site.
+                var url = audioMap[(passage.thai || '').trim()];
+                if (url) {
+                    var play = el('button', 'th-audio rw-passage-audio',
+                                  '🔊 Listen to this paragraph');
+                    play.type = 'button';
+                    play.setAttribute('data-audio', url);
+                    // Long clip: tapping again must STOP it, not restart it.
+                    play.setAttribute('data-audio-toggle', '');
+                    controls.appendChild(play);
+                }
+
+                controls.appendChild(toggle);
+                wrap.appendChild(controls);
                 wrap.appendChild(english);
                 body.appendChild(wrap);
             });

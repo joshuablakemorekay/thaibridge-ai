@@ -76,6 +76,18 @@ def collect_read_write():
     return thai_reading.all_thai_strings()
 
 
+def collect_read_write_passages():
+    """The whole-paragraph readings on the Read & Write Story tab.
+
+    Its own page rather than part of collect_read_write() because these are a
+    different kind of clip: ~13 paragraphs read straight through, tens of
+    seconds and a few hundred KB each, against the one-second word clips
+    everywhere else. Separating them means you can re-record the readings
+    without re-running every word, and vice versa."""
+    import thai_reading
+    return thai_reading.all_passage_strings()
+
+
 def collect_tones_classes():
     """The Tones & Consonant Classes page.
 
@@ -202,6 +214,7 @@ PAGES = {
     'vowels': collect_vowels,
     'sentences': collect_sentences,
     'read_write': collect_read_write,
+    'read_write_passages': collect_read_write_passages,
     'tones_classes': collect_tones_classes,
     'paiboon': collect_paiboon,
     'grammar': collect_grammar,
