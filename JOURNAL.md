@@ -1064,6 +1064,44 @@ Claude Code session, 27 July 2026. Commits `61cb2db`, `2b8114a`.
 
 ---
 
+## 27 July 2026 — The broken link that raised no error
+
+**Type:** Bug Fix
+
+**TL;DR:** One of the five cultural stories linked to a page that doesn't exist. Nothing in the code looked wrong — the page loaded, the link rendered, no exception anywhere. It was only findable by clicking.
+
+**What I built or did**
+Fixed the "Modern Thailand" story on the Culture page, whose practice link went to a 404. Each story now says where its link goes, instead of the page working it out. Added a check that runs when the app starts and refuses to boot if any story link is dead.
+
+**Why I did it this way**
+The page had been building the link by guessing: it took each story's ID and turned it into `/exercise/<id>`. That works for four of the five, because their IDs happen to double as vocabulary categories. The fifth is about loanword pronunciation and has no vocabulary — so its link pointed at nothing.
+
+I could have written a vocabulary category to make the guess true. But that means inventing Thai, and the story isn't really about vocabulary — it's about the ə/əə sound. So it now points at the Paiboon guide, which actually teaches that.
+
+**How it works**
+`_assert_story_links_resolve()` runs at import, the same way the alphabet locks its counts. An `/exercise/` link is only valid if that category really exists; a story with no link at all fails too. The app won't start if either is wrong.
+
+**What this means for the app**
+Five out of five links land somewhere real, and the sixth story someone adds can't quietly repeat the mistake.
+
+**What I learned**
+*The worst bugs raise no error.* This one had every sign of health: a 200 page, a rendered link, nothing in any log. The only way to find it was to click. Anything derived by convention rather than declared — an ID quietly doubling as something else — can drift apart without a single thing looking broken.
+
+*Verify the thing you're claiming to verify.* My first check that the fix had gone live returned "healthy" on the very first attempt, which meant it was measuring "the site is up", not "the new code is running". A check that would pass before you did the work is not a check. I said so rather than let it stand.
+
+**How We Did It**
+1. Looked up why the link 404'd instead of assuming, and found the page was guessing the URL.
+2. Ruled out inventing Thai vocabulary to make the guess correct.
+3. Made every story declare its own destination.
+4. Sent the odd one out to the page that actually teaches its subject.
+5. Added a startup check and deliberately fed it broken data to prove it bites.
+6. Followed all five links for real, rather than reading the code and calling it done.
+
+**References / Conversations**
+Claude Code session, 27 July 2026. Commit `cc03769`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
