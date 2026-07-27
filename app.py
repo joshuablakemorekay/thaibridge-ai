@@ -3909,8 +3909,21 @@ LESSONS = [
 # CULTURAL STORIES
 # ============================================
 
+# Short cultural stories, each pointing at somewhere you can practise what it
+# teaches.
+#
+# ⚠️ `practice` is EXPLICIT on purpose. The Culture page used to build that link
+# by guessing — it treated the dict key as a vocabulary category and rendered
+# "/exercise/<key>". That silently broke for 'schwa_words', which is about
+# loanword pronunciation and has no vocabulary category, so the link led
+# straight to the 404 in the /exercise route. Saying where each story goes,
+# rather than inferring it from a key that means two things at once, removes the
+# whole class of bug — and lets a story point somewhere that isn't an exercise.
+# `_assert_story_links_resolve()` below checks every one of these at startup.
+
 CULTURAL_STORIES = {
     'festivals': {
+        'practice': {'href': '/exercise/festivals', 'label': 'Festival vocabulary'},
         'title': 'The Legend of Loy Krathong',
         'story': '''Long ago in Sukhothai, Nang Noppamas crafted a floating vessel from banana leaves, 
 decorated with flowers and candles. She set it on the water as an offering to the Water Goddess.
@@ -3918,6 +3931,7 @@ The King declared it an annual tradition. Today, Thai people release krathongs t
         'lesson': 'Gratitude for nature, forgiveness, and letting go.',
     },
     'nature': {
+        'practice': {'href': '/exercise/nature', 'label': 'Nature vocabulary'},
         'title': 'The Elephant and the Bodhi Tree',
         'story': '''A wise elephant found a struggling Bodhi sapling during drought. Every day he carried 
 water to nourish it. Years later, when the elephant grew old, the tree provided shade and its roots 
@@ -3925,6 +3939,8 @@ found water for a spring. The elephant spent his final days in peace beneath the
         'lesson': 'Kindness returns to us. All beings are interconnected.',
     },
     'buddhist_formal': {
+        'practice': {'href': '/exercise/buddhist_formal',
+                     'label': 'Buddhist formal vocabulary'},
         'title': 'The First Sermon at Deer Park',
         'story': '''After enlightenment, the Buddha walked to Deer Park to teach his five former companions.
 He delivered the Dhammacakkappavattana Sutta, teaching the Middle Way and Four Noble Truths.
@@ -3932,6 +3948,8 @@ Kondanna immediately understood and became the first enlightened disciple.''',
         'lesson': 'The Middle Way, Four Noble Truths, and the Dharma is available to all.',
     },
     'theravada_dhamma': {
+        'practice': {'href': '/exercise/theravada_dhamma',
+                     'label': 'Theravada Dhamma vocabulary'},
         'title': "Angulimala's Transformation",
         'story': '''Angulimala was a terrifying bandit who had killed 999 people. The Buddha intercepted him,
 walking calmly though Angulimala could not catch him. "I have stopped harming beings. It is you 
@@ -3940,6 +3958,11 @@ eventually attaining enlightenment.''',
         'lesson': 'Transformation is possible for anyone through the power of compassion.',
     },
     'schwa_words': {
+        # No vocabulary category exists for loanwords, and inventing one would
+        # be inventing Thai. The story is really about the ə / əə vowels, so it
+        # points at the page that actually teaches them.
+        'practice': {'href': '/paiboon',
+                     'label': 'The Paiboon guide — the ə / əə vowels'},
         'title': 'Modern Thailand and Global Connection',
         'story': '''Modern Thai has absorbed many English loanwords, especially in technology, business, and 
 education. These words often use the schwa sound (ə/əə) - that "uh" sound from English. When foreign monks 
@@ -3949,6 +3972,31 @@ Thailand's openness to the world while preserving cultural identity.''',
         'lesson': 'Language evolves through cultural exchange. Learning both traditional and modern vocabulary shows respect for Thai culture.',
     },
 }
+
+def _assert_story_links_resolve():
+    """Every cultural story's practice link must actually go somewhere.
+
+    Runs at import, the same way thai_consonants.py locks its counts. An
+    /exercise/<category> link is only valid if that category exists in
+    VOCABULARY — otherwise the route returns its 404 and the reader hits a dead
+    end that nothing in the code looks wrong about. This is exactly how the
+    'schwa_words' link stayed broken: a real page, a real link, no error
+    anywhere until someone clicked it.
+    """
+    for key, story in CULTURAL_STORIES.items():
+        practice = story.get('practice')
+        assert practice and practice.get('href'), \
+            "cultural story '{}' has no practice link".format(key)
+        href = practice['href']
+        if href.startswith('/exercise/'):
+            category = href[len('/exercise/'):]
+            assert category in VOCABULARY, (
+                "cultural story '{}' links to /exercise/{}, which is not a "
+                "VOCABULARY category — that link would 404".format(key, category))
+
+
+_assert_story_links_resolve()
+
 
 # Full-length tales for the Culture page's Stories section.
 #

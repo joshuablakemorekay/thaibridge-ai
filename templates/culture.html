@@ -658,8 +658,11 @@
 {% for key, story in stories.items() %}
 <div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">
     <h3 style="color: var(--temple-red);">{{ story.title }}</h3>
+    {# The destination comes from the story data, never from the dict key —
+       see the note on CULTURAL_STORIES. Guessing it from the key is what sent
+       the schwa_words story to a 404. #}
     <p style="color: var(--royal-purple); margin-bottom: 1rem;">
-        Category: <a href="/exercise/{{ key }}">{{ key.replace('_', ' ').title() }}</a>
+        Practise this: <a href="{{ story.practice.href }}">{{ story.practice.label }}</a>
     </p>
     
     <p style="line-height: 1.8; white-space: pre-line;">{{ story.story }}</p>
