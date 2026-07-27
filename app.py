@@ -3950,6 +3950,204 @@ Thailand's openness to the world while preserving cultural identity.''',
     },
 }
 
+# Full-length tales for the Culture page's Stories section.
+#
+# Kept separate from CULTURAL_STORIES above, which is NOT just a list of stories:
+# each of its keys doubles as a vocabulary category, and the page renders it as
+# a "/exercise/<key>" link. A tale with no matching category would render a link
+# straight to the 404 in the /exercise route. These have no category, and they
+# are a different shape besides — prose to sit and read, with the virtues they
+# teach and the vocabulary worth keeping.
+#
+# `paragraphs` and `cultural_note` are authored HTML: only <strong>, <em> and
+# <span lang="th"> appear in them, every byte hand-written here, and the template
+# renders them with |safe. Nothing from a user must ever reach these fields.
+#
+# The Thai script version of this same tale is a graded reader on the Read &
+# Write page (thai_reading.STORIES), which is what `thai_version` links to.
+
+CULTURAL_FEATURE_STORIES = [
+    {
+        'key': 'matuposaka',
+        'emoji': '🐘',
+        'title_th': 'มาตุโปสกชาดก',
+        'title_paiboon': 'mâa-dtù-bpoo-sà-gà chaa-dòk',
+        'title_en': 'The Matuposaka Jataka — "The Elephant Who Fed His Mother"',
+        'subtitle': 'Jataka Tale No. 455, from the Buddhist Pali Canon '
+                    '(Khuddaka Nikaya) — a past-life story of the Buddha',
+        'thai_version': {
+            'href': '/read_write#story',
+            'label': 'Read this story in Thai script, paragraph by paragraph',
+        },
+
+        'paragraphs': [
+            'Long ago, in the mountain forests of the Himalayas, there lived a '
+            'magnificent white elephant, leader of a herd eighty thousand '
+            'strong. Every elephant in that forest deferred to him — not out of '
+            'fear, but because of who he was: patient, fair, and quick to share '
+            'whatever sweetness the jungle gave up. Wild fruit, tender shoots, '
+            'the coolest water from the deepest pools — he found the best of it '
+            'and never kept it for himself.',
+
+            'But his mother, old and gentle, had lost her sight years before, '
+            'and could no longer forage on her own. Each day the elephant king '
+            'gathered the ripest fruit he could find and sent it back to her '
+            'with members of the herd — a small kindness, he thought, easily '
+            'done by eighty thousand trunks.',
+
+            'It wasn\'t easy. Each time, the fruit-bearers grew hungry on the '
+            'long walk back, told themselves <em>just one bite</em>, and arrived '
+            'at the mother\'s cave with nothing left to give her. Night after '
+            'night, she went without.',
+
+            'When the elephant king learned the truth — that his own herd had '
+            'been quietly eating his mother\'s share for who knows how long — he '
+            'made no announcement, no accusation. In the stillness of night, '
+            'while the herd slept, he simply took his mother by the trunk and '
+            'led her away, deep into the forest, to a hidden cave near Mount '
+            'Caṇḍoraṇa, beside a clear lake ringed with lotus. There, away from '
+            'eighty thousand well-meaning but unreliable helpers, he cared for '
+            'her himself — foraging every day, bringing water in the curl of his '
+            'trunk, never again trusting the task to anyone else.',
+
+            'One day, in that same wilderness, he heard a sound he didn\'t '
+            'expect: a human voice, hoarse with exhaustion, calling out. A '
+            'forester from the city of Bārāṇasī had wandered off the trade paths '
+            'and been lost in the jungle for seven days, certain by now that he '
+            'would die there. The elephant king thought only: <em>here is '
+            'someone in distress, and it is not right that harm should come to '
+            'him while I am able to help.</em> He knelt low, let the man take '
+            'hold of him, and carried him safely out of the forest to where the '
+            'road home began.',
+
+            'The forester did not repay this with gratitude. Word had spread '
+            'that the King of Bārāṇasī had lost his royal elephant and was '
+            'seeking a new one fit to carry a king — and a white elephant of '
+            'this size and bearing was rarer than anything else in the land. '
+            'Rather than staying silent, the forester went straight to the '
+            'palace and told the king exactly where to find him.',
+
+            'The king\'s hunters returned to the lotus lake and found the '
+            'elephant king exactly where the forester said he\'d be. True to his '
+            'nature, he did not fight them — he had never been a creature of '
+            'violence, and would not become one now, even to save himself. He '
+            'allowed himself to be led away, decked in festival garlands as '
+            'though this capture were an honour rather than a theft, all the way '
+            'back to the royal stables of Bārāṇasī.',
+
+            'There, the king himself brought the finest food in the kingdom — '
+            'rich rice, sweet cane, water from silver basins — and offered it '
+            'with his own hands. The elephant touched none of it. Days passed. '
+            'He grew thinner, and still refused every dish set before him.',
+
+            'Puzzled and increasingly moved by such quiet, dignified suffering, '
+            'the king finally asked him directly why he would not eat.',
+
+            '"Without my mother," the elephant said, "I will not eat." He '
+            'explained: she was blind, alone now in the forest, with no one to '
+            'guide her steps or bring her water — and every day he remained here '
+            'was a day she went without.',
+
+            'The king sat with this a long moment. He had sought the rarest '
+            'elephant in his kingdom to serve as his own mount and symbol of '
+            'power. He now understood he had very nearly stolen something far '
+            'more valuable than a rare and beautiful animal — a son\'s entire '
+            'devotion to his mother, and hers to him.',
+
+            '"Let this elephant go," the king finally ordered. "Let him return '
+            'to his mother, and to all his kin." Freed from every chain, the '
+            'elephant king made his way back to the hills — and, reaching the '
+            'cool lake near her cave, drew up water in his trunk and sprinkled '
+            'it gently over her, exactly as he always had.',
+
+            'The story is told that the king did not simply let him go and '
+            'forget him — he had a town built near the elephant\'s forest home, '
+            'and continued to honour him from then on.',
+        ],
+
+        # Why the tale is scripture rather than folklore. This replaced a plain
+        # "cultural note": the frame is the point of a Jataka, so it gets the
+        # three identifications as their own list rather than buried in prose.
+        'scripture_note': {
+            'heading': 'Why this story is in the Buddhist scriptures',
+            'intro': [
+                'This isn\'t only a folk tale about kindness — it\'s a '
+                '<strong>Jataka</strong> (<span lang="th">ชาดก</span>), one of '
+                'the canonical "birth stories" of the Buddha, meaning it is told '
+                'as a real past life of the Buddha himself, long before his '
+                'final enlightened birth as Siddhattha Gotama. In the '
+                'traditional frame:',
+            ],
+            'identifications': [
+                'The elephant king is the <strong>Bodhisatta</strong> — the '
+                'being who would eventually become the Buddha',
+                'The king of Bārāṇasī is identified as an earlier birth of '
+                '<strong>Ānanda</strong>, who would become the Buddha\'s closest '
+                'attendant',
+                'The blind mother is identified as an earlier birth of '
+                '<strong>Mahāmāyā</strong>, the woman who would become the '
+                'Buddha\'s own birth-mother',
+            ],
+            'closing': [
+                'The Buddha is said to have told this story to explain why a '
+                'monk who shared his alms food with his own parents deserved '
+                'praise rather than reproach — even renunciants, the teaching '
+                'goes, do not abandon devotion to family.',
+
+                'That\'s the frame the story sits inside: not "here\'s a nice '
+                'moral," but "even in a former life, before enlightenment, this '
+                'quality of unwavering devotion was already present."',
+            ],
+        },
+
+        'virtues': [
+            {
+                'name_en': 'Compassion',
+                'thai': 'เมตตา',
+                'paiboon': 'mêet-dtaa',
+                'in_story': 'He rescues the lost forester expecting nothing '
+                            'in return.',
+            },
+            {
+                'name_en': 'Filial devotion',
+                'thai': 'กตัญญู',
+                'paiboon': 'gà-dtan-yuu',
+                'in_story': 'He leaves his entire herd and status to personally '
+                            'care for his mother.',
+            },
+            {
+                'name_en': 'Non-violence',
+                'thai': 'อหิงสา',
+                'paiboon': 'à-hǐng-sǎa',
+                'in_story': 'He allows himself to be captured rather than harm '
+                            'the king\'s men.',
+            },
+            {
+                'name_en': 'Wise rule',
+                'thai': '',
+                'paiboon': '',
+                'in_story': 'The king listens before he claims, and values '
+                            'devotion over possessing a rare treasure.',
+            },
+        ],
+
+        'vocabulary': [
+            {'thai': 'ช้างเผือก', 'paiboon': 'cháang pʉ̀ak',
+             'english': 'white elephant'},
+            {'thai': 'กตัญญู', 'paiboon': 'gà-dtan-yuu',
+             'english': 'gratitude, filial devotion'},
+            {'thai': 'เมตตา', 'paiboon': 'mêet-dtaa',
+             'english': 'loving-kindness, compassion'},
+            {'thai': 'ชาดก', 'paiboon': 'chaa-dòk',
+             'english': 'Jataka, a past-life story of the Buddha'},
+            {'thai': 'พระโพธิสัตว์', 'paiboon': 'phrá-poo-thí-sàt',
+             'english': 'Bodhisatta, a being on the path to Buddhahood'},
+            {'thai': 'ป่าหิมพานต์', 'paiboon': 'bpàa hǐm-má-phaan',
+             'english': 'the Himalayan forest of Buddhist legend'},
+        ],
+    },
+]
+
 
 # ============================================
 # CULTURAL INFO
@@ -4664,9 +4862,13 @@ def learn():
 @require_access('culture')
 def culture():
     audio_map = _audio_map_for(
-        pure_thai_strings(CULTURAL_INFO) + pure_thai_strings(CULTURAL_STORIES))
+        pure_thai_strings(CULTURAL_INFO)
+        + pure_thai_strings(CULTURAL_STORIES)
+        + pure_thai_strings(CULTURAL_FEATURE_STORIES))
     return render_template('culture.html', cultural_info=CULTURAL_INFO,
-                           stories=CULTURAL_STORIES, audio_map=audio_map)
+                           stories=CULTURAL_STORIES,
+                           feature_stories=CULTURAL_FEATURE_STORIES,
+                           audio_map=audio_map)
 
 
 @app.route('/exercise/<category>')
@@ -5622,7 +5824,7 @@ def read_write():
 
     Two halves on one tabbed page:
       * Read  — decode syllables (grouped by where the vowel sits), then real
-                dharma words, then a short Jataka tale read one word at a time.
+                dharma words, then short graded tales read one word at a time.
       * Write — the stroke principles plus a trace-over-guide canvas for all 44
                 consonants (reusing the Alphabet page's recordings).
 

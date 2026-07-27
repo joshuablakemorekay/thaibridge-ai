@@ -69,9 +69,13 @@
     }
 
     /* ── Story reader ──────────────────────────────────────────
-       Render the first story as tappable word tokens. Tapping a word fills the
-       gloss panel with its Thai, romanisation and meaning, and (if a recording
-       exists) turns the gloss into a play button via the shared th-audio class. */
+       Render a story as tappable word tokens. Tapping a word fills the gloss
+       panel with its Thai, romanisation and meaning, and (if a recording exists)
+       turns the gloss into a play button via the shared th-audio class.
+
+       thai_reading.STORIES holds more than one tale, so a picker sits above the
+       text and re-renders on switch. With only one story the picker is left out
+       entirely rather than shown as a single dead button. */
 
     function setupStory() {
         var stories = readJSON('rw-stories') || [];
@@ -79,71 +83,251 @@
         var mount = byId('rw-story-mount');
         if (!mount || !stories.length) { return; }
 
-        var story = stories[0];
-        var activeToken = null;
+        // Two containers: the picker is built once, the story is rebuilt on
+        // every switch. Keeping them apart means a switch cannot wipe the picker.
+        var picker = null;
+        if (stories.length > 1) {
+            picker = document.createElement('div');
+            picker.className = 'rw-story-picker';
+            picker.setAttribute('role', 'tablist');
+            picker.setAttribute('aria-label', 'Choose a story');
+            mount.appendChild(picker);
+        }
 
-        var head = document.createElement('div');
-        head.className = 'rw-story-head';
-        head.innerHTML =
-            '<h2 class="rw-story-title-th" lang="th"></h2>' +
-            '<p class="rw-story-title-en"></p>';
-        head.querySelector('.rw-story-title-th').textContent = story.title_th || '';
-        head.querySelector('.rw-story-title-en').textContent = story.title_en || '';
-        mount.appendChild(head);
+        var body = document.createElement('div');
+        mount.appendChild(body);
 
-        (story.sentences || []).forEach(function (sentence) {
-            var p = document.createElement('p');
-            p.className = 'rw-sentence';
-            p.setAttribute('lang', 'th');
-            sentence.forEach(function (tok) {
+        var buttons = [];
+        if (picker) {
+            stories.forEach(function (story, i) {
                 var btn = document.createElement('button');
                 btn.type = 'button';
-                btn.className = 'rw-token';
-                btn.textContent = tok.thai;
-                btn.addEventListener('click', function () {
-                    if (activeToken) { activeToken.classList.remove('is-active'); }
-                    activeToken = btn;
-                    btn.classList.add('is-active');
-                    showGloss(tok);
-                });
-                p.appendChild(btn);
+                btn.className = 'rw-story-choice';
+                btn.setAttribute('role', 'tab');
+                btn.innerHTML =
+                    '<span class="rw-story-choice-th" lang="th"></span>' +
+                    '<span class="rw-story-choice-en"></span>' +
+                    '<span class="rw-story-choice-len"></span>';
+                btn.querySelector('.rw-story-choice-th').textContent = story.title_th || '';
+                btn.querySelector('.rw-story-choice-en').textContent = story.title_en || '';
+                btn.querySelector('.rw-story-choice-len').textContent =
+                    (story.sentences || []).length + ' sentences';
+                btn.addEventListener('click', function () { select(i); });
+                buttons.push(btn);
+                picker.appendChild(btn);
             });
-            mount.appendChild(p);
-        });
-
-        var gloss = document.createElement('div');
-        gloss.className = 'rw-gloss';
-        gloss.setAttribute('aria-live', 'polite');
-        gloss.innerHTML = '<span class="rw-gloss-empty">Tap any word above to read it.</span>';
-        mount.appendChild(gloss);
-
-        if (story.moral_en) {
-            var moral = document.createElement('p');
-            moral.className = 'rw-moral';
-            moral.textContent = '☸️ ' + story.moral_en;
-            mount.appendChild(moral);
-        }
-        if (story.source) {
-            var src = document.createElement('p');
-            src.className = 'rw-source';
-            src.textContent = story.source;
-            mount.appendChild(src);
         }
 
-        function showGloss(tok) {
-            var url = audioMap[tok.thai];
-            var listen = url
-                ? ' <span class="th-audio rw-listen" role="button" tabindex="0"' +
-                  ' data-audio="' + url + '">🔊 Listen</span>'
-                : '';
-            gloss.innerHTML =
-                '<span class="rw-gloss-thai" lang="th"></span>' +
-                '<span class="rw-gloss-paiboon"></span>' + listen +
-                '<span class="rw-gloss-english"></span>';
-            gloss.querySelector('.rw-gloss-thai').textContent = tok.thai;
-            gloss.querySelector('.rw-gloss-paiboon').textContent = tok.paiboon;
-            gloss.querySelector('.rw-gloss-english').textContent = tok.english;
+        function select(index) {
+            buttons.forEach(function (b, i) {
+                b.setAttribute('aria-selected', i === index ? 'true' : 'false');
+            });
+            renderStory(stories[index]);
         }
+
+        function renderStory(story) {
+            body.textContent = '';               // clear the previous story
+            var activeToken = null;
+
+            var head = document.createElement('div');
+            head.className = 'rw-story-head';
+            head.innerHTML =
+                '<h2 class="rw-story-title-th" lang="th"></h2>' +
+                '<p class="rw-story-subtitle-th" lang="th"></p>' +
+                '<p class="rw-story-title-en"></p>' +
+                '<p class="rw-story-instruction"></p>';
+            head.querySelector('.rw-story-title-th').textContent = story.title_th || '';
+            head.querySelector('.rw-story-title-en').textContent = story.title_en || '';
+            setOrHide(head, '.rw-story-subtitle-th', story.subtitle_th);
+            setOrHide(head, '.rw-story-instruction', story.instruction);
+            body.appendChild(head);
+
+            // Real-Thai stories read as whole paragraphs with the English hidden
+            // underneath; graded stories read one tappable word at a time.
+            if (story.format === 'passages') {
+                renderPassages(story);
+                renderExtras(story);
+                return;
+            }
+
+            (story.sentences || []).forEach(function (sentence) {
+                var p = document.createElement('p');
+                p.className = 'rw-sentence';
+                p.setAttribute('lang', 'th');
+                sentence.forEach(function (tok) {
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'rw-token';
+                    btn.textContent = tok.thai;
+                    btn.addEventListener('click', function () {
+                        if (activeToken) { activeToken.classList.remove('is-active'); }
+                        activeToken = btn;
+                        btn.classList.add('is-active');
+                        showGloss(tok);
+                    });
+                    p.appendChild(btn);
+                });
+                body.appendChild(p);
+            });
+
+            var gloss = document.createElement('div');
+            gloss.className = 'rw-gloss';
+            gloss.setAttribute('aria-live', 'polite');
+            gloss.innerHTML = '<span class="rw-gloss-empty">Tap any word above to read it.</span>';
+            body.appendChild(gloss);
+
+            renderExtras(story);
+
+            function showGloss(tok) {
+                var url = audioMap[tok.thai];
+                var listen = url
+                    ? ' <span class="th-audio rw-listen" role="button" tabindex="0"' +
+                      ' data-audio="' + url + '">🔊 Listen</span>'
+                    : '';
+                gloss.innerHTML =
+                    '<span class="rw-gloss-thai" lang="th"></span>' +
+                    '<span class="rw-gloss-paiboon"></span>' + listen +
+                    '<span class="rw-gloss-english"></span>';
+                gloss.querySelector('.rw-gloss-thai').textContent = tok.thai;
+                gloss.querySelector('.rw-gloss-paiboon').textContent = tok.paiboon;
+                gloss.querySelector('.rw-gloss-english').textContent = tok.english;
+            }
+        }
+
+        /* Fill an element's text, or remove it entirely when there is nothing to
+           say — so a story without a subtitle leaves no empty gap behind. */
+        function setOrHide(root, selector, text) {
+            var el = root.querySelector(selector);
+            if (!el) { return; }
+            if (text) { el.textContent = text; } else { el.remove(); }
+        }
+
+        function el(tag, className, text) {
+            var node = document.createElement(tag);
+            if (className) { node.className = className; }
+            if (text) { node.textContent = text; }
+            return node;
+        }
+
+        /* Real-Thai passages: a numbered Thai paragraph, then the English behind
+           a button. Hidden by default on purpose — the whole instruction is to
+           read the Thai aloud FIRST and only then check yourself. */
+        function renderPassages(story) {
+            (story.passages || []).forEach(function (passage) {
+                var wrap = el('div', 'rw-passage');
+
+                var thai = el('p', 'rw-passage-thai');
+                thai.setAttribute('lang', 'th');
+                thai.appendChild(el('span', 'rw-passage-number', passage.number || ''));
+                thai.appendChild(document.createTextNode(passage.thai || ''));
+                wrap.appendChild(thai);
+
+                var english = el('p', 'rw-passage-en', passage.english || '');
+                english.hidden = true;
+
+                var toggle = el('button', 'rw-passage-toggle', 'Check the English');
+                toggle.type = 'button';
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.addEventListener('click', function () {
+                    var open = toggle.getAttribute('aria-expanded') === 'true';
+                    toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+                    toggle.textContent = open ? 'Check the English' : 'Hide the English';
+                    english.hidden = open;
+                });
+
+                wrap.appendChild(toggle);
+                wrap.appendChild(english);
+                body.appendChild(wrap);
+            });
+        }
+
+        /* Everything that sits under the story itself: the scripture note, the
+           virtues table, the vocabulary list, the moral and the source. Shared by
+           both formats — each part renders only if that story carries it. */
+        function renderExtras(story) {
+            var note = story.scripture_note;
+            if (note) {
+                var box = el('section', 'rw-note');
+                var h = el('h3', 'rw-note-head');
+                h.appendChild(el('span', 'rw-note-head-th', note.heading_th || ''));
+                h.appendChild(el('span', 'rw-note-head-en', note.heading_en || ''));
+                box.appendChild(h);
+                var nt = el('p', 'rw-note-thai', note.thai || '');
+                nt.setAttribute('lang', 'th');
+                box.appendChild(nt);
+                box.appendChild(el('p', 'rw-note-en', note.english || ''));
+
+                var list = el('ul', 'rw-note-list');
+                (note.identifications || []).forEach(function (item) {
+                    var li = el('li');
+                    var t = el('span', 'rw-note-item-th', item.thai || '');
+                    t.setAttribute('lang', 'th');
+                    li.appendChild(t);
+                    li.appendChild(el('span', 'rw-note-item-en', item.english || ''));
+                    list.appendChild(li);
+                });
+                box.appendChild(list);
+                body.appendChild(box);
+            }
+
+            if ((story.virtues || []).length) {
+                var vsec = el('section', 'rw-virtues');
+                vsec.appendChild(el('h3', 'rw-note-head', '☸️ คุณธรรมในเรื่องนี้ — the virtues in this story'));
+                var ul = el('ul', 'rw-virtue-list');
+                story.virtues.forEach(function (v) {
+                    var li = el('li', 'rw-virtue');
+                    var term = el('div', 'rw-virtue-term');
+                    var vth = el('span', 'thai-text rw-virtue-th', v.thai || '');
+                    vth.setAttribute('lang', 'th');
+                    term.appendChild(vth);
+                    term.appendChild(el('span', 'rw-virtue-paiboon', v.paiboon || ''));
+                    term.appendChild(el('span', 'rw-virtue-en', v.english || ''));
+                    li.appendChild(term);
+                    var wth = el('p', 'rw-virtue-story-th', v.in_story_th || '');
+                    wth.setAttribute('lang', 'th');
+                    li.appendChild(wth);
+                    li.appendChild(el('p', 'rw-virtue-story-en', v.in_story_en || ''));
+                    ul.appendChild(li);
+                });
+                vsec.appendChild(ul);
+                body.appendChild(vsec);
+            }
+
+            if ((story.vocabulary || []).length) {
+                var vocab = el('section', 'rw-vocab');
+                vocab.appendChild(el('h3', 'rw-note-head', '📕 คำศัพท์ — vocabulary'));
+                var vlist = el('ul', 'rw-vocab-list');
+                story.vocabulary.forEach(function (w) {
+                    var li = el('li', 'rw-vocab-item');
+                    var wt = el('span', 'thai-text rw-vocab-thai', w.thai);
+                    wt.setAttribute('lang', 'th');
+                    li.appendChild(wt);
+                    var url = audioMap[w.thai];
+                    if (url) {
+                        var play = el('span', 'th-audio rw-listen', '🔊');
+                        play.setAttribute('role', 'button');
+                        play.setAttribute('tabindex', '0');
+                        play.setAttribute('data-audio', url);
+                        play.setAttribute('aria-label', 'Listen');
+                        li.appendChild(play);
+                    }
+                    li.appendChild(el('span', 'rw-vocab-paiboon', w.paiboon));
+                    li.appendChild(el('span', 'rw-vocab-en', '— ' + w.english));
+                    vlist.appendChild(li);
+                });
+                vocab.appendChild(vlist);
+                body.appendChild(vocab);
+            }
+
+            if (story.moral_en) {
+                body.appendChild(el('p', 'rw-moral', '☸️ ' + story.moral_en));
+            }
+            if (story.source) {
+                body.appendChild(el('p', 'rw-source', story.source));
+            }
+        }
+
+        select(0);
     }
 
     /* ── Trace canvas ──────────────────────────────────────────

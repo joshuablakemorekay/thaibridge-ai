@@ -5,6 +5,148 @@
 
 {% block title %}Thai Culture & Etiquette{% endblock %}
 
+{% block extra_css %}
+<style>
+    /* Full-length feature tales in the Stories section. Styled to read like a
+       story rather than a reference card: capped measure, generous line-height,
+       a drop cap on the opening paragraph. */
+
+    .feature-tale {
+        background: linear-gradient(135deg, #FFF8DC 0%, #FFF3D6 100%);
+        margin-top: 1rem;
+    }
+
+    .feature-tale-head {
+        text-align: center;
+        padding-bottom: 1.25rem;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid rgba(212, 175, 55, 0.4);
+    }
+
+    .feature-tale-th {
+        font-size: 1.9rem;
+        color: var(--temple-red);
+        margin: 0 0 0.2rem 0;
+    }
+
+    .feature-tale-paiboon {
+        color: var(--bodhi-green);
+        font-style: italic;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .feature-tale-sub {
+        font-style: italic;
+        color: #5a5a5a;
+        margin: 0;
+    }
+
+    .feature-tale-link {
+        display: inline-block;
+        margin-top: 1rem;
+        font-weight: 600;
+        color: var(--royal-purple);
+    }
+
+    .feature-tale-prose { max-width: 68ch; margin: 0 auto; }
+
+    .feature-tale-prose p {
+        line-height: 1.9;
+        font-size: 1.05rem;
+        margin: 0 0 1.4rem 0;
+    }
+
+    .feature-tale-prose p:first-child::first-letter {
+        float: left;
+        font-size: 3.4rem;
+        line-height: 0.85;
+        padding: 0.1rem 0.55rem 0 0;
+        color: var(--temple-red);
+        font-weight: 700;
+    }
+
+    .feature-tale-prose em { color: var(--royal-purple); }
+
+    .feature-tale-heading {
+        margin: 2rem 0 0.5rem 0;
+        color: var(--royal-purple);
+        font-size: 1.25rem;
+    }
+
+    /* A table is the clearest way to show virtue-against-example, so it stays a
+       table — but it must scroll inside itself rather than push the page wide. */
+    .feature-tale-table-wrap { overflow-x: auto; }
+
+    .feature-tale-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 30rem;
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+    }
+
+    .feature-tale-table th,
+    .feature-tale-table td {
+        text-align: left;
+        padding: 0.85rem 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        vertical-align: top;
+        line-height: 1.65;
+    }
+
+    .feature-tale-table th {
+        background: rgba(74, 26, 107, 0.08);
+        color: var(--royal-purple);
+    }
+
+    .feature-tale-note {
+        border-left: 5px solid var(--lotus-pink);
+        background: var(--lotus-white);
+        border-radius: 0 10px 10px 0;
+        padding: 1.25rem 1.5rem;
+    }
+
+    .feature-tale-note p { line-height: 1.8; margin: 0 0 1rem 0; }
+    .feature-tale-note p:last-child { margin-bottom: 0; }
+
+    /* The three "who this character really is" identifications in a Jataka. */
+    .feature-tale-ids {
+        margin: 0 0 1rem 0;
+        padding-left: 1.25rem;
+        display: grid;
+        gap: 0.5rem;
+    }
+
+    .feature-tale-ids li { line-height: 1.75; }
+
+    .feature-tale-vocab {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 0.6rem;
+    }
+
+    .feature-tale-vocab li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 0.4rem 0.85rem;
+        background: rgba(255, 255, 255, 0.75);
+        border-left: 4px solid var(--bodhi-green);
+        border-radius: 8px;
+        padding: 0.7rem 1rem;
+    }
+
+    .feature-tale-vocab-en { color: #444; }
+
+    @media (max-width: 600px) {
+        .feature-tale-th { font-size: 1.5rem; }
+        .feature-tale-prose p { font-size: 1rem; }
+    }
+</style>
+{% endblock %}
+
 {% block content %}
 <h1>
     🎭 Thai Culture & Etiquette
@@ -425,6 +567,93 @@
 <p style="margin-bottom: 1.5rem;">
     These stories provide cultural context and teach important Thai values:
 </p>
+
+{# ── Full-length feature tales ──────────────────────────────────────────
+   Collapsible, and closed on load, so a story this long doesn't bury the
+   short ones underneath it. base.js wires .section-header for us. #}
+{% for tale in feature_stories %}
+<div class="collapsible-section">
+    <div class="section-header">
+        <h3>{{ tale.emoji }} {{ tale.title_en }}</h3>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+        <div class="card feature-tale">
+            <div class="feature-tale-head">
+                <h3 class="feature-tale-th thai-text" lang="th">{{ tale.title_th }}</h3>
+                <p class="feature-tale-paiboon">{{ tale.title_paiboon }}</p>
+                <p class="feature-tale-sub">{{ tale.subtitle }}</p>
+                {% if tale.thai_version %}
+                <a class="feature-tale-link" href="{{ tale.thai_version.href }}">
+                    ✍️ {{ tale.thai_version.label }} &rarr;
+                </a>
+                {% endif %}
+            </div>
+
+            {# Authored HTML from CULTURAL_FEATURE_STORIES — never user input. #}
+            <div class="feature-tale-prose">
+                {% for paragraph in tale.paragraphs %}
+                <p>{{ paragraph|safe }}</p>
+                {% endfor %}
+            </div>
+
+            <h4 class="feature-tale-heading">☸️ What this story teaches</h4>
+            <div class="feature-tale-table-wrap">
+                <table class="feature-tale-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Virtue</th>
+                            <th scope="col">In the story</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for virtue in tale.virtues %}
+                        <tr>
+                            <td>
+                                <strong>{{ virtue.name_en }}</strong>
+                                {% if virtue.thai %}
+                                <div class="thai-text" lang="th" style="font-size: 1.15rem;">{{ virtue.thai }}</div>
+                                <div class="paiboon" style="font-size: 0.9rem;">{{ virtue.paiboon }}</div>
+                                {% endif %}
+                            </td>
+                            <td>{{ virtue.in_story }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            {% if tale.scripture_note %}
+            <h4 class="feature-tale-heading">📜 {{ tale.scripture_note.heading }}</h4>
+            <div class="feature-tale-note">
+                {% for paragraph in tale.scripture_note.intro %}
+                <p>{{ paragraph|safe }}</p>
+                {% endfor %}
+                <ul class="feature-tale-ids">
+                    {% for item in tale.scripture_note.identifications %}
+                    <li>{{ item|safe }}</li>
+                    {% endfor %}
+                </ul>
+                {% for paragraph in tale.scripture_note.closing %}
+                <p>{{ paragraph|safe }}</p>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <h4 class="feature-tale-heading">📕 Vocabulary highlights</h4>
+            <ul class="feature-tale-vocab">
+                {% for word in tale.vocabulary %}
+                <li>
+                    <span class="thai-text" lang="th">{{ word.thai }}</span>
+                    <span class="paiboon">{{ word.paiboon }}</span>
+                    <span class="feature-tale-vocab-en">&mdash; {{ word.english }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endfor %}
 
 {% for key, story in stories.items() %}
 <div class="card" style="background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);">

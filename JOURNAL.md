@@ -991,6 +991,43 @@ Claude Code session, 25 July 2026. Commits `c9a2bc9`, `c9cd015`, `0c398ac`, `8ab
 
 ---
 
+## 27 July 2026 — One Jataka, two ways to read it
+
+**Type:** Feature
+
+**TL;DR:** The Matuposaka Jataka — the elephant who wouldn't eat while his blind mother went hungry — is now in the app twice: the full English telling on the Culture page, and the real Thai, unsimplified, on Read & Write. Getting there took three rewrites, and each one was me being told no.
+
+**What I built or did**
+Added *มาตุโปสกชาดก* in two forms that link to each other. On Culture it's the English story with the scripture framing — a Jataka isn't folklore, so the page names who each character really is (the Bodhisatta, Ānanda, the Buddha's own mother). On Read & Write it's thirteen numbered paragraphs of genuine Thai, each with the English hidden behind a button until you've read the Thai aloud.
+
+**Why I did it this way**
+Three attempts. First I built a whole new "Thai Stories" section — undone, because stories already lived in two places and a third home split them further. Then I wrote a *graded* Thai retelling, three-to-six words a sentence — replaced, because plain Thai wasn't what was wanted. Then a folk-tale version — replaced by the canonical Jataka. Each round moved the same way: toward the real thing, in the place that already did that job.
+
+**How it works**
+The Story tab now supports two shapes, set by a `format` key. `tokens` is the old word-by-word reader for a beginner still decoding. `passages` is real Thai read whole, with the English hidden by default — because the instruction is to read it aloud *first*. The Monkey King stays as the beginner option, so the tab now spans both stages. On Culture the tale sits in its own list, not the short-stories dict, whose keys double as `/exercise/` links.
+
+**What this means for the app**
+A learner can meet the same story at whatever level they're at: in English to understand it, or in unsimplified Thai — royal register and all — to actually read it.
+
+**What I learned**
+*When the text is too hard, don't simplify the text — change the interaction.* My instinct was to grade the Thai down until a beginner could tap through it word by word. But the answer was to keep the Thai exactly as hard as real Thai is, and change what the page asks you to do with it: read a whole paragraph aloud, then check yourself. Same words, different job for the reader.
+
+*A new section is rarely the answer.* Content that already has a home usually needs pointing at, not moving.
+
+**How We Did It**
+1. Read how the page already worked before adding anything.
+2. Built a standalone Stories section — and undid every file when it was the wrong call.
+3. Put a graded Thai retelling in the existing Story tab instead.
+4. Found the tab only ever rendered one story, so built a picker.
+5. Swapped the graded retelling for real Thai passages, and the folk tale for the canonical Jataka.
+6. Gave the reader a second format rather than forcing the new text into the old one.
+7. Drove the page in the browser and read the DOM directly when the screenshots flaked.
+
+**References / Conversations**
+Claude Code session, 27 July 2026. Jataka No. 455, Khuddaka Nikaya.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.

@@ -174,10 +174,15 @@ def collect_business():
 
 
 def collect_culture():
-    """The Culture page — every speakable Thai string in its info + stories."""
+    """The Culture page — every speakable Thai string in its info + stories.
+
+    Includes the full-length feature tales, whose vocabulary lists and virtue
+    terms are the Thai the page shows (their prose is English with the Thai
+    inline, which pure_thai_strings correctly skips)."""
     import app
     return app.pure_thai_strings(app.CULTURAL_INFO) + \
-        app.pure_thai_strings(app.CULTURAL_STORIES)
+        app.pure_thai_strings(app.CULTURAL_STORIES) + \
+        app.pure_thai_strings(app.CULTURAL_FEATURE_STORIES)
 
 
 def collect_theravada():

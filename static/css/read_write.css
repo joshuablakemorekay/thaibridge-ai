@@ -186,6 +186,61 @@
 
 /* ── Story reader ──────────────────────────────────────────── */
 
+/* Story picker — only rendered when there is more than one tale. Deliberately
+   NOT styled like .rw-tab: these sit inside the Story panel, and looking like
+   the page's main tabs would read as a second row of the same thing. */
+
+.rw-story-picker {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.rw-story-choice {
+    flex: 1 1 14rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    min-height: 44px;                 /* comfortable tap target */
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    border: 2px solid var(--sandstone, #D2B48C);
+    background: #fffdf7;
+    border-radius: 10px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.rw-story-choice:hover { border-color: var(--royal-gold, #D4AF37); }
+
+.rw-story-choice[aria-selected="true"] {
+    border-color: var(--royal-purple, #4A1A6B);
+    background: #f6f2fa;
+}
+
+.rw-story-choice:focus-visible {
+    outline: 3px solid var(--royal-gold, #D4AF37);
+    outline-offset: 2px;
+}
+
+.rw-story-choice-th {
+    font-size: 1.25rem;
+    color: var(--deep-purple, #2D1B4E);
+}
+
+.rw-story-choice-en {
+    font-size: 0.95rem;
+    color: var(--isan-earth, #8B7355);
+    font-style: italic;
+}
+
+.rw-story-choice-len {
+    font-size: 0.8rem;
+    color: var(--monsoon-grey, #708090);
+}
+
 .rw-story-head { margin-bottom: 1rem; }
 
 .rw-story-title-th {
@@ -198,6 +253,161 @@
     color: var(--isan-earth, #8B7355);
     font-style: italic;
     margin: 0.1rem 0 0;
+}
+
+.rw-story-subtitle-th {
+    font-size: 1.15rem;
+    color: var(--temple-red, #8B0000);
+    margin: 0.15rem 0 0;
+}
+
+.rw-story-instruction {
+    margin: 0.6rem 0 0;
+    padding: 0.6rem 0.9rem;
+    background: #fffdf3;
+    border-left: 4px solid var(--royal-gold, #D4AF37);
+    border-radius: 0 6px 6px 0;
+    font-style: italic;
+    color: #5a5a5a;
+}
+
+/* ── Real-Thai passages ────────────────────────────────────
+   Bigger line-height than the token sentences: this is a block of unbroken
+   Thai to be read aloud, not a row of tappable chips. */
+
+.rw-passage {
+    margin: 0 0 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
+}
+
+.rw-passage:last-of-type { border-bottom: none; }
+
+.rw-passage-thai {
+    font-size: 1.45rem;
+    line-height: 2.1;
+    margin: 0 0 0.75rem;
+    color: var(--deep-purple, #2D1B4E);
+}
+
+.rw-passage-number {
+    display: inline-block;
+    margin-right: 0.5rem;
+    color: var(--royal-gold, #D4AF37);
+    font-weight: 700;
+}
+
+.rw-passage-toggle {
+    min-height: 44px;                 /* comfortable tap target */
+    padding: 0.4rem 0.9rem;
+    border: 2px solid var(--bodhi-green, #228B22);
+    background: #fff;
+    color: var(--bodhi-green, #228B22);
+    border-radius: 8px;
+    font: 600 0.95rem inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.rw-passage-toggle[aria-expanded="true"] {
+    background: var(--bodhi-green, #228B22);
+    color: #fff;
+}
+
+.rw-passage-toggle:focus-visible {
+    outline: 3px solid var(--royal-gold, #D4AF37);
+    outline-offset: 2px;
+}
+
+.rw-passage-en {
+    margin: 0.75rem 0 0;
+    padding: 0.75rem 1rem;
+    background: #f6f6fb;
+    border-left: 4px solid var(--royal-purple, #4A1A6B);
+    border-radius: 0 8px 8px 0;
+    line-height: 1.75;
+    font-style: italic;
+    color: #444;
+}
+
+/* ── Notes under a story: scripture, virtues, vocabulary ───── */
+
+.rw-note, .rw-virtues, .rw-vocab { margin-top: 2rem; }
+
+.rw-note-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.6rem;
+    align-items: baseline;
+    margin: 0 0 0.75rem;
+    color: var(--royal-purple, #4A1A6B);
+    font-size: 1.2rem;
+}
+
+.rw-note-head-th { color: var(--temple-red, #8B0000); }
+.rw-note-head-en { font-size: 0.95rem; color: var(--isan-earth, #8B7355); font-weight: 400; }
+
+.rw-note-thai { font-size: 1.2rem; line-height: 1.95; margin: 0 0 0.5rem; }
+.rw-note-en { font-style: italic; color: #555; line-height: 1.7; margin: 0 0 0.75rem; }
+
+.rw-note-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+
+.rw-note-list li {
+    background: #fffdf7;
+    border-left: 4px solid var(--royal-gold, #D4AF37);
+    border-radius: 0 8px 8px 0;
+    padding: 0.7rem 1rem;
+}
+
+.rw-note-item-th { display: block; font-size: 1.15rem; line-height: 1.85; }
+.rw-note-item-en { display: block; font-style: italic; color: #555; font-size: 0.95rem; }
+
+.rw-virtue-list, .rw-vocab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.rw-virtue {
+    background: #f7fbf7;
+    border-left: 4px solid var(--bodhi-green, #228B22);
+    border-radius: 0 8px 8px 0;
+    padding: 0.8rem 1rem;
+}
+
+.rw-virtue-term {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 0.7rem;
+    align-items: baseline;
+    margin-bottom: 0.35rem;
+}
+
+.rw-virtue-th { font-size: 1.3rem; color: var(--temple-red, #8B0000); }
+.rw-virtue-paiboon { color: var(--bodhi-green, #228B22); font-style: italic; }
+.rw-virtue-en { color: var(--royal-purple, #4A1A6B); font-weight: 600; }
+.rw-virtue-story-th { margin: 0; font-size: 1.1rem; line-height: 1.8; }
+.rw-virtue-story-en { margin: 0.1rem 0 0; font-style: italic; color: #555; font-size: 0.95rem; }
+
+.rw-vocab-item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.8rem;
+    background: #fffdf7;
+    border-left: 4px solid var(--lotus-pink, #E75480);
+    border-radius: 0 8px 8px 0;
+    padding: 0.7rem 1rem;
+}
+
+.rw-vocab-thai { font-size: 1.35rem; color: var(--temple-red, #8B0000); }
+.rw-vocab-paiboon { color: var(--bodhi-green, #228B22); font-style: italic; }
+.rw-vocab-en { color: #444; }
+
+@media (max-width: 600px) {
+    .rw-passage-thai { font-size: 1.3rem; line-height: 2; }
 }
 
 .rw-sentence {
