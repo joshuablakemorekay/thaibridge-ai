@@ -91,8 +91,11 @@
     }
 
     .talk-read-btn {
-        background: linear-gradient(135deg, var(--saffron) 0%, #E07B00 100%);
-        color: white;
+        /* --monk-saffron, not --saffron: the short name isn't defined anywhere,
+           which kills the whole gradient and leaves the label unreadable.
+           Dark purple on saffron reads far better than white did (~6:1 vs ~2:1). */
+        background: linear-gradient(135deg, var(--monk-saffron) 0%, #E07B00 100%);
+        color: var(--royal-purple);
         border: none;
         padding: 1rem 2rem;
         border-radius: 25px;
@@ -204,8 +207,9 @@
     }
     
     .bob-read-btn {
-        background: linear-gradient(135deg, var(--gold) 0%, #DAA520 100%);
-        color: white;
+        /* Same fix as .talk-read-btn above: --royal-gold is the real variable. */
+        background: linear-gradient(135deg, var(--royal-gold) 0%, #DAA520 100%);
+        color: var(--royal-purple);
         border: none;
         padding: 1rem 2rem;
         border-radius: 25px;

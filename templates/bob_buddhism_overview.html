@@ -106,12 +106,15 @@
         text-align: center;
         margin: 3rem 0 0 0;
         padding-top: 2rem;
-        border-top: 2px solid var(--gold);
+        border-top: 2px solid var(--royal-gold);
     }
     
     .back-btn {
-        background: linear-gradient(135deg, var(--gold) 0%, #DAA520 100%);
-        color: white;
+        /* --royal-gold, not --gold: the short name isn't defined anywhere, so
+           the gradient was discarded and the white label vanished against the
+           page. Dark purple on gold also reads far better than white did. */
+        background: linear-gradient(135deg, var(--royal-gold) 0%, #DAA520 100%);
+        color: var(--royal-purple);
         padding: 1rem 2.5rem;
         border-radius: 25px;
         text-decoration: none;
