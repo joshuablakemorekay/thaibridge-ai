@@ -1060,7 +1060,7 @@ A learner facing real, unsimplified Thai can hear it read properly first, or rea
 6. Verified against truncation by timing, then confirmed every clip live on the real site.
 
 **References / Conversations**
-Claude Code session, 27 July 2026. Commits `61cb2db`, `2b8114a`.
+Claude Code session, 27 July 2026. Commits `ff6be28`, `8e51589`.
 
 ---
 
@@ -1098,7 +1098,7 @@ Five out of five links land somewhere real, and the sixth story someone adds can
 6. Followed all five links for real, rather than reading the code and calling it done.
 
 **References / Conversations**
-Claude Code session, 27 July 2026. Commit `cc03769`.
+Claude Code session, 27 July 2026. Commit `63135bd`.
 
 ---
 
@@ -1136,7 +1136,7 @@ The free tier gains content that can keep growing, instead of a fixed set of pag
 6. Checked the live site served the new page before calling it done.
 
 **References / Conversations**
-Claude Code session, 28 July 2026. Commit `da6712a`.
+Claude Code session, 28 July 2026. Commit `44f115f`.
 
 ---
 
