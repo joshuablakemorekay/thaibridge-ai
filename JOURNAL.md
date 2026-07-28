@@ -1109,7 +1109,7 @@ Claude Code session, 27 July 2026. Commit `cc03769`.
 **TL;DR:** A free Dhamma Talks section, first talk in Thai and English. I copied the content pattern from a different part of the codebase rather than the one sitting on the same page, so the next talk costs a file instead of a page.
 
 **What I built or did**
-A Dhamma Talks section on the Theravada page, and a reading page for each talk showing the Thai passage with its English underneath. First talk: "Happiness, Like Wealth", translation by Phra Ajahn Sujano.
+A Dhamma Talks section on the Theravada page, and a reading page for each talk showing the Thai passage with its English underneath. First talk: "Happiness, Like Wealth", translation by Super Pra Ajahn Sujan.
 
 **Why I did it this way**
 Two patterns for long-form writing already existed. Pra Kru Bob's articles are hand-built — a route and a 500-line template each. Monk Mode loads a folder of JSON files at startup. Two articles suit the first; a series of talks doesn't.
