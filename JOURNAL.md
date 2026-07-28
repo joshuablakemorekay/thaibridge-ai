@@ -1102,6 +1102,44 @@ Claude Code session, 27 July 2026. Commit `cc03769`.
 
 ---
 
+## 28 July 2026 — Dhamma talks, published free
+
+**Type:** Feature
+
+**TL;DR:** A free Dhamma Talks section, first talk in Thai and English. I copied the content pattern from a different part of the codebase rather than the one sitting on the same page, so the next talk costs a file instead of a page.
+
+**What I built or did**
+A Dhamma Talks section on the Theravada page, and a reading page for each talk showing the Thai passage with its English underneath. First talk: "Happiness, Like Wealth", translation by Phra Ajahn Sujano.
+
+**Why I did it this way**
+Two patterns for long-form writing already existed. Pra Kru Bob's articles are hand-built — a route and a 500-line template each. Monk Mode loads a folder of JSON files at startup. Two articles suit the first; a series of talks doesn't.
+
+Free wasn't really a decision. Theravada is already the one free section, on the stated principle that the Dhamma is freely given, so the route carries no access check at all.
+
+**How it works**
+`_load_dhamma_talks()` reads `content/talks/*.json`, sorts by an `order` field, and `/dhamma-talk/<slug>` looks one up. The section hides itself while the folder is empty.
+
+**What this means for the app**
+The free tier gains content that can keep growing, instead of a fixed set of pages.
+
+**What I learned**
+*Ask where content belongs before asking how to build it.* The useful question wasn't which template to write — it was which page already does this job. The answer settled the paywall question too, because that page's free status already came with a reason attached.
+
+*Copy the pattern that fits the future, not the one nearest to hand.* The closest example was Bob's hardcoded articles, sitting on the very page I was adding to. The right model was in a different folder entirely.
+
+**How We Did It**
+1. Asked which page owned this content before writing anything, instead of reaching for a new `/talks` route.
+2. Read the free/paid table and found the reasoning already in a comment.
+3. Compared the two existing content patterns and picked folder-of-JSON.
+4. Kept the Thai and English exactly as written, translator credited in the header.
+5. Ran the app and loaded both pages logged out, to prove "free" meant free.
+6. Checked the live site served the new page before calling it done.
+
+**References / Conversations**
+Claude Code session, 28 July 2026. Commit `da6712a`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
