@@ -262,22 +262,22 @@ SECTION_REQUIREMENTS = {
     # Every other content section sits behind a paid tier (see below), on TOP
     # of its level/XP requirement.
     #
-    # Meditation used to sit here too. It moved to 'basic' once the page grew
-    # from a bare timer into guided sessions and full technique guides: the
-    # teachings stay free, the structured practice tooling built on top of them
-    # is part of the paid product.
+    # Meditation moved to 'basic' for a while, on the reasoning that the page had
+    # grown from a bare timer into practice *tooling*. It is back here now: sitting
+    # in meditation is not tooling, it is the practice the teachings are for, and
+    # splitting "the Dhamma is free but learning to practise it costs £9.99" was a
+    # line that could not be defended. Dhamma Talks sit here for the same reason.
     'home': {'level': 1, 'tier': 'free', 'points_reward': 0},
     # The alphabet is free on purpose. It is the prerequisite for every
     # section below, so charging for it would put the whole site behind the
     # paywall with no way in.
     'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
     'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40},
+    'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40},
 
     # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
-    # Culture, and the exercises), plus the meditation practice tooling.
-    # Still gated by level/XP as well as the tier.
-    'meditation': {'level': 1, 'tier': 'basic', 'points_reward': 40},
+    # Culture, and the exercises). Still gated by level/XP as well as the tier.
     'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10},
     'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0, 'requires_alphabet': True},
     'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
@@ -315,7 +315,9 @@ SUBSCRIPTION_TIERS = {
         'price': 0,
         'features': [
             '✓ Theravada Buddhism teachings',
+            '✓ Dhamma talks in Thai & English',
             '✓ Pra Kru Bob Dhamma articles',
+            '✓ Guided meditation sessions, timer & techniques',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
@@ -325,7 +327,6 @@ SUBSCRIPTION_TIERS = {
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
-            '✓ Guided meditation sessions, timer & techniques',
             '✓ Vocabulary, grammar & sentence patterns',
             '✓ Culture, formality, register & classifiers',
             '✓ Paiboon romanization guide',
@@ -5957,16 +5958,27 @@ def theravada():
     return render_template('theravada.html', teachings=THERAVADA_TEACHINGS,
                            audio_map=audio_map, talks=DHAMMA_TALKS)
 
+@app.route('/bob-writings')
+def bob_writings():
+    """Pra Kru Bob's Writings — both essays on one page.
+
+    They used to be two routes. Merged so the Buddhism menu has one entry for
+    him instead of two, with in-page anchors (#overview, #fear) doing the job
+    the separate URLs used to.
+    """
+    return render_template('bob_writings.html')
+
+
+# The old one-essay URLs are public and may have been shared, so they redirect
+# to the matching anchor rather than 404.
 @app.route('/bob-buddhism-overview')
 def bob_buddhism_overview():
-    """Pra Kru Bob's Buddhism: An Overview for Children article"""
-    return render_template('bob_buddhism_overview.html')
+    return redirect('/bob-writings#overview', code=301)
 
 
 @app.route('/bob-fear-article')
 def bob_fear_article():
-    """Pra Kru Bob's Fear as Guardian and Tyrant article"""
-    return render_template('bob_fear_article.html')
+    return redirect('/bob-writings#fear', code=301)
 
 
 @app.route('/dhamma-talk/<slug>')

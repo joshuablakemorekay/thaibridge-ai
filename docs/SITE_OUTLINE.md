@@ -58,8 +58,7 @@ A shared **sidebar** lists these sub-pages; a shared **right column** offers dic
 | Page | Route | Purpose / key content |
 |------|-------|------------------------|
 | Theravada Dharma | `/theravada` | Suttas, Abhidhamma, Vinaya — core teachings |
-| Pra Kru Bob: Overview | `/bob-buddhism-overview` | Introduction to the teacher's perspective |
-| Pra Kru Bob: On Fear | `/bob-fear-article` | A longer-form article |
+| Pra Kru Bob's Writings | `/bob-writings` | Both essays on one page: an introduction to the teacher's perspective (`#overview`) and a longer-form article on fear (`#fear`) |
 | Meditation | `/meditation` | **template T** — Samatha & Vipassana timer (needs full width) |
 
 ### 📕 Dictionary  — template **T**
