@@ -1140,6 +1140,43 @@ Claude Code session, 28 July 2026. Commit `44f115f`.
 
 ---
 
+## 28 July 2026 — One Writings page, and a values line moved back
+
+**Type:** Feature / Decision
+
+**TL;DR:** Merged Pra Kru Bob's two essays into one page, put meditation back on the free side, and found four buttons that had been invisible because of a CSS variable that doesn't exist.
+
+**What I built or did**
+Pra Kru Bob's two essays now share one page at `/bob-writings`, with the old URLs redirecting to anchors. Meditation moved from the Basic tier back to Free. Also fixed four buttons whose labels were invisible, and squashed the 27 July commits so the log only shows what's in the app.
+
+**Why I did it this way**
+Meditation went to Basic on the reasoning that the page had become practice *tooling* rather than teaching. That didn't hold up. Sitting in meditation isn't tooling — it's the practice the teachings exist for, and "the Dhamma is free but learning to practise it costs £9.99" isn't a line I could defend. So the Buddhism side is free, and the Thai language course is the product.
+
+**How it works**
+The essays became one template with in-page anchors; the two old routes now 301 to them, so anything already shared still lands right. The tier change is one word in `SECTION_REQUIREMENTS` — but three other places had the old decision written into them.
+
+**What this means for the app**
+One menu entry for Pra Kru Bob instead of two, and everything Buddhist — teachings, talks, articles, meditation — is free to anyone, no account.
+
+**What I learned**
+*An undefined CSS variable deletes the whole line it sits in.* Four buttons used `var(--gold)`, which isn't defined anywhere — the real name is `--royal-gold`. So the background was discarded and white text sat on a pale page. They appeared on hover, because the hover rule used a variable that does exist. **Those two dead names are used about 90 times across 16 templates** — colours that have never once rendered as written.
+
+*A decision lives in more places than the code that enforces it.* Changing meditation's tier was one word. But the dāna banner named meditation as the paid part, the pricing page sold it under Basic, and the README argued the old position at length. **Change the rule and you have to change every place you argued for it, or the app contradicts itself in public.**
+
+*Mixed answers across two URLs during a deploy mean it's still deploying.* One page served the new build while another still 404'd, and I called it a broken route. It was a half-finished swap. I was wrong for about two minutes.
+
+**How We Did It**
+1. Merged the two essays by extracting their bodies programmatically, then checked the text was byte-identical rather than eyeballing 800 lines.
+2. Redirected the old URLs instead of deleting them.
+3. Traced the meditation decision to all four places it was written down.
+4. Tested the gate logged out — and found gated pages return 200 with a locked screen, so checking status codes proves nothing. Checked content.
+5. Squashed the 27 July commits, verifying the file tree came out identical.
+
+**References / Conversations**
+Claude Code session, 28 July 2026. Commits `b373c9d`, `58ffba7`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
