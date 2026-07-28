@@ -533,6 +533,32 @@ def _load_monk_topics():
 MONK_TOPICS = _load_monk_topics()
 MONK_TOPICS_BY_ID = {t['topic']: t for t in MONK_TOPICS}
 
+
+# ============================================
+# DHAMMA TALKS (free, public)
+# ============================================
+# Talks given by the monks behind the site, published in Thai and English side
+# by side. One JSON file per talk in content/talks/, same shape of loader as the
+# monk topics above, so adding a talk is "write a file, drop it in" — no code
+# change. They are deliberately ungated: see the 'theravada' note in
+# SECTION_REQUIREMENTS — the Dhamma is freely given.
+TALKS_CONTENT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'content', 'talks')
+
+def _load_dhamma_talks():
+    """Load every content/talks/*.json talk, sorted by its 'order' field."""
+    talks = []
+    for path in sorted(glob.glob(os.path.join(TALKS_CONTENT_DIR, '*.json'))):
+        try:
+            with open(path, encoding='utf-8') as f:
+                talks.append(json.load(f))
+        except (json.JSONDecodeError, OSError) as e:
+            app.logger.warning("Skipping dhamma talk %s: %s", path, e)
+    talks.sort(key=lambda t: t.get('order', 999))
+    return talks
+
+DHAMMA_TALKS = _load_dhamma_talks()
+DHAMMA_TALKS_BY_SLUG = {t['slug']: t for t in DHAMMA_TALKS}
+
 # The two learning directions Monk Mode supports.
 MONK_DIRECTIONS = {'learn_thai', 'learn_english'}
 MONK_DIRECTION_DEFAULT = 'learn_thai'   # a Western monk learning Thai
@@ -5929,7 +5955,7 @@ def register_guide():
 def theravada():
     audio_map = _audio_map_for(pure_thai_strings(THERAVADA_TEACHINGS))
     return render_template('theravada.html', teachings=THERAVADA_TEACHINGS,
-                           audio_map=audio_map)
+                           audio_map=audio_map, talks=DHAMMA_TALKS)
 
 @app.route('/bob-buddhism-overview')
 def bob_buddhism_overview():
@@ -5941,6 +5967,19 @@ def bob_buddhism_overview():
 def bob_fear_article():
     """Pra Kru Bob's Fear as Guardian and Tyrant article"""
     return render_template('bob_fear_article.html')
+
+
+@app.route('/dhamma-talk/<slug>')
+def dhamma_talk(slug):
+    """A single Dhamma talk, Thai and English side by side.
+
+    No @require_access on purpose — the talks are free to everyone, logged in
+    or not, exactly like Pra Kru Bob's articles above.
+    """
+    talk = DHAMMA_TALKS_BY_SLUG.get(slug)
+    if not talk:
+        return "Talk not found. <a href='/theravada#dhamma-talks'>Back to Theravada Dhamma</a>", 404
+    return render_template('dhamma_talk.html', talk=talk)
 
 
 @app.route('/sentences')

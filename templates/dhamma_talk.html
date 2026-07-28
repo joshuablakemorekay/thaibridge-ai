@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_buddhism.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}{{ talk.title.en }} - Dhamma Talk{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background: linear-gradient(135deg, #FFF9E6 0%, #FFE7B3 100%);
+    }
+
+    .talk-container {
+        max-width: 900px;
+        margin: 2rem auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border-top: 6px solid var(--saffron);
+    }
+
+    .talk-header {
+        text-align: center;
+        border-bottom: 3px solid var(--gold);
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .talk-lotus {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .talk-title-th {
+        font-size: 2.1rem;
+        color: var(--saffron);
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    .talk-title-en {
+        font-size: 2.5rem;
+        color: var(--royal-purple);
+        margin: 0 0 1rem 0;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .talk-subtitle {
+        font-size: 1.35rem;
+        color: #666;
+        font-style: italic;
+        margin: 0;
+    }
+
+    .talk-byline {
+        margin-top: 1.5rem;
+        font-size: 1.05rem;
+        color: #555;
+    }
+
+    .talk-byline .speaker {
+        font-weight: bold;
+        color: var(--royal-purple);
+    }
+
+    /* The translator credit. Josh asked for the translation to be thanked
+       properly rather than buried in small print, so it gets its own line. */
+    .talk-credit {
+        margin-top: 0.6rem;
+        font-size: 1rem;
+        color: #6a6a6a;
+    }
+
+    /* Each paragraph is one pair: the Thai above, the English below.
+       Reading them stacked (rather than in two columns) keeps it readable on a
+       phone, which is where most people will read this. */
+    .talk-passage {
+        margin: 0 0 2.5rem 0;
+        padding-left: 1.5rem;
+        border-left: 4px solid #F0E0C0;
+    }
+
+    .talk-passage:hover {
+        border-left-color: var(--saffron);
+    }
+
+    .talk-th {
+        font-size: 1.3rem;
+        line-height: 2.1;
+        color: #2b2b2b;
+        margin: 0 0 1rem 0;
+    }
+
+    .talk-en {
+        font-size: 1.1rem;
+        line-height: 1.9;
+        color: #444;
+        margin: 0;
+    }
+
+    .talk-footer {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px solid #eee;
+        text-align: center;
+        color: #777;
+        font-size: 0.98rem;
+        line-height: 1.8;
+    }
+
+    .back-link {
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .back-btn {
+        display: inline-block;
+        background: var(--royal-purple);
+        color: white;
+        padding: 0.9rem 2rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 700px) {
+        .talk-container {
+            padding: 1.5rem;
+            margin: 1rem auto;
+        }
+
+        .talk-title-en {
+            font-size: 1.8rem;
+        }
+
+        .talk-title-th {
+            font-size: 1.5rem;
+        }
+
+        .talk-passage {
+            padding-left: 1rem;
+        }
+
+        .talk-th {
+            font-size: 1.15rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="talk-container">
+
+    <div class="talk-header">
+        <div class="talk-lotus">🪷 🪷 🪷</div>
+        <h1 class="talk-title-th">{{ talk.title.th }}</h1>
+        <h2 class="talk-title-en">{{ talk.title.en }}</h2>
+        {% if talk.subtitle %}
+        <p class="talk-subtitle">{{ talk.subtitle.en }}</p>
+        {% endif %}
+
+        <div class="talk-byline">
+            A Dhamma talk by <span class="speaker">{{ talk.speaker }}</span>
+        </div>
+        {% if talk.translation_credit %}
+        <div class="talk-credit">🙏 {{ talk.translation_credit }}</div>
+        {% endif %}
+    </div>
+
+    {% for passage in talk.paragraphs %}
+    <div class="talk-passage">
+        <p class="talk-th">{{ passage.th }}</p>
+        <p class="talk-en">{{ passage.en }}</p>
+    </div>
+    {% endfor %}
+
+    <div class="talk-footer">
+        ☸<br>
+        Freely given, freely shared.<br>
+        <em>Sabbadānaṃ dhammadānaṃ jināti</em> — the gift of Dhamma surpasses all gifts.
+    </div>
+
+    <div class="back-link">
+        <a href="/theravada#dhamma-talks" class="back-btn">← Back to Theravada Dhamma</a>
+    </div>
+</div>
+{% endblock %}

@@ -27,6 +27,124 @@
         color: var(--temple-red);
     }
     
+    /* Dhamma Talks Section — saffron, to sit apart from Bob's purple/gold
+       writings section below it while still feeling like the same page. */
+    .talks-section {
+        background: linear-gradient(135deg, #FFF4E0 0%, #FFE0B3 100%);
+        border-radius: 15px;
+        padding: 2.5rem;
+        margin: 3rem 0;
+        border: 3px solid var(--saffron);
+        box-shadow: 0 8px 20px rgba(255, 153, 51, 0.25);
+    }
+
+    .talk-card {
+        background: white;
+        border-radius: 12px;
+        padding: 2.5rem;
+        margin: 2rem 0;
+        border-left: 6px solid var(--saffron);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+        transition: all 0.3s ease;
+    }
+
+    .talk-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+
+    .talk-card-header {
+        margin-bottom: 1.5rem;
+    }
+
+    .talk-card-title-th {
+        font-size: 1.6rem;
+        color: var(--saffron);
+        margin: 0 0 0.35rem 0;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+
+    .talk-card-title {
+        font-size: 2rem;
+        color: var(--royal-purple);
+        margin: 0 0 0.5rem 0;
+        font-weight: bold;
+    }
+
+    .talk-card-subtitle {
+        font-size: 1.2rem;
+        color: #666;
+        font-style: italic;
+        margin: 0;
+    }
+
+    .talk-card-excerpt {
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 1.5rem;
+    }
+
+    .talk-card-excerpt p:first-child {
+        font-size: 1.2rem;
+        color: #2b2b2b;
+    }
+
+    .talk-read-btn {
+        background: linear-gradient(135deg, var(--saffron) 0%, #E07B00 100%);
+        color: white;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-block;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(255, 153, 51, 0.35);
+    }
+
+    .talk-read-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(255, 153, 51, 0.45);
+    }
+
+    .talk-card-meta {
+        display: flex;
+        flex-wrap: wrap;        /* same wrapping fix as the Bob cards, for narrow phones */
+        gap: 0.75rem 2rem;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+        border-top: 2px solid #f0f0f0;
+        font-size: 0.95rem;
+        color: #666;
+    }
+
+    .talk-meta-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    @media (max-width: 700px) {
+        .talks-section {
+            padding: 1.25rem;
+        }
+
+        .talk-card {
+            padding: 1.5rem;
+        }
+
+        .talk-card-title {
+            font-size: 1.5rem;
+        }
+
+        .talk-card-title-th {
+            font-size: 1.3rem;
+        }
+    }
+
     /* Pra Kru Bob's Writings Section */
     .bob-writings-section {
         background: linear-gradient(135deg, #FFF9E6 0%, #FFE7B3 100%);
@@ -255,6 +373,60 @@
 </div>
 
 <div class="lotus-divider">☸ ☸ ☸</div>
+
+<!-- DHAMMA TALKS SECTION
+     Data-driven from content/talks/*.json — the whole section simply does not
+     render until there is at least one talk file. -->
+{% if talks %}
+<section id="dhamma-talks" class="talks-section">
+    <h2 style="text-align: center; color: var(--saffron); font-size: 2.5rem; margin-bottom: 1rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
+        🪷 Dhamma Talks
+    </h2>
+    <p style="text-align: center; color: #555; font-size: 1.2rem; margin-bottom: 2.5rem; font-style: italic;">
+        Talks given freely by our monks, in Thai and English side by side
+    </p>
+
+    {% for talk in talks %}
+    <div class="talk-card">
+        <div class="talk-card-header">
+            <h3 class="talk-card-title-th">{{ talk.title.th }}</h3>
+            <h3 class="talk-card-title">{{ talk.title.en }}</h3>
+            {% if talk.subtitle %}
+            <p class="talk-card-subtitle">{{ talk.subtitle.en }}</p>
+            {% endif %}
+        </div>
+
+        {% if talk.paragraphs %}
+        <div class="talk-card-excerpt">
+            <p>{{ talk.paragraphs[0].th }}</p>
+            <p><em>{{ talk.paragraphs[0].en }}</em></p>
+        </div>
+        {% endif %}
+
+        <a href="/dhamma-talk/{{ talk.slug }}" class="talk-read-btn">🪷 Read the Full Talk</a>
+
+        <div class="talk-card-meta">
+            <div class="talk-meta-item">
+                <span>🧎</span>
+                <span>{{ talk.speaker }}</span>
+            </div>
+            {% if talk.translation_credit %}
+            <div class="talk-meta-item">
+                <span>🙏</span>
+                <span>{{ talk.translation_credit }}</span>
+            </div>
+            {% endif %}
+            <div class="talk-meta-item">
+                <span>🆓</span>
+                <span>Free to all</span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+
+<div class="lotus-divider">☸ ☸ ☸</div>
+{% endif %}
 
 <!-- PRA KRU BOB'S WRITINGS SECTION -->
 <section id="bob-writings" class="bob-writings-section">
