@@ -278,8 +278,12 @@ SECTION_REQUIREMENTS = {
     # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
     # Culture, and the exercises). Still gated by level/XP as well as the tier.
-    'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10},
-    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 0, 'requires_alphabet': True},
+    # Paiboon and Vocabulary sit in the Learn menu alongside the sections below, so
+    # they carry the same alphabet prerequisite. Vocabulary also earns XP on unlock
+    # like every one of its siblings — a 0 reward made its locked page read
+    # "+0 XP upon unlock" while the rest promised something.
+    'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10, 'requires_alphabet': True},
+    'learn': {'level': 1, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
     'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'vowels_syllables': {'level': 2, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
@@ -308,16 +312,28 @@ SECTION_REQUIREMENTS = {
     'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100, 'requires_alphabet': True},
 }
 
+# Freemium AI limits. Free & Basic tiers get a "taste" of the AI: the Tutor mode
+# only, capped at a few messages per day. Pro unlocks every mode with no cap. The
+# daily counter lives in the SESSION (not the DB) on purpose — it needs no schema
+# change and also works for logged-out visitors. It's a soft limit (a determined
+# user could clear cookies to reset it), which is fine for a portfolio/demo app.
+# Defined here, above SUBSCRIPTION_TIERS, so the Free tier's feature list can
+# quote the real number instead of a hardcoded one that goes stale.
+FREE_AI_DAILY_LIMIT = 15            # messages/day for free & basic tiers
+FREE_AI_ALLOWED_MODES = {'tutor'}   # the only AI mode free & basic can use
+
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
     'free': {
         'name': 'Free Explorer (Free)',
         'price': 0,
         'features': [
+            '✓ Thai alphabet — chart, flashcards & quiz',
             '✓ Theravada Buddhism teachings',
             '✓ Dhamma talks in Thai & English',
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Guided meditation sessions, timer & techniques',
+            f'✓ AI Tutor — {FREE_AI_DAILY_LIMIT} messages a day',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
@@ -327,9 +343,13 @@ SUBSCRIPTION_TIERS = {
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
-            '✓ Vocabulary, grammar & sentence patterns',
-            '✓ Culture, formality, register & classifiers',
+            '✓ Vowels, syllables & reading the script',
+            '✓ Tones & consonant classes',
             '✓ Paiboon romanization guide',
+            '✓ Vocabulary, grammar & lessons',
+            '✓ Sentences & conversations, with audio',
+            '✓ Culture, formality, register & gender guides',
+            '✓ Themed exercise sets',
             '✓ Tour Guide & Business Thai',
             '✓ 2x points multiplier',
         ],
@@ -341,10 +361,11 @@ SUBSCRIPTION_TIERS = {
         'price': 19.99,
         'features': [
             '✓ Everything in Buddhist Scholar',
-            '✓ Unlimited AI chat — all modes',
+            '✓ Unlimited AI chat — every mode, no daily cap',
+            '✓ AI conversation partner with roleplay scenarios',
             '✓ Culture & Dhamma AI Q&A',
-            '✓ Complete dictionary access',
-            '✓ Premium learning tools & content',
+            '✓ AI exercise generator',
+            '✓ Thai–English dictionary',
             '✓ 3x points multiplier',
             '✓ Priority support',
         ],
@@ -722,13 +743,9 @@ def inject_monk_mode():
 # ============================================
 # FREEMIUM AI LIMITS
 # ============================================
-# Free & Basic tiers get a "taste" of the AI: the Tutor mode only, capped at a
-# few messages per day. Pro unlocks every mode with no cap. The daily counter
-# lives in the SESSION (not the DB) on purpose — it needs no schema change and
-# also works for logged-out visitors. It's a soft limit (a determined user could
-# clear cookies to reset it), which is fine for a portfolio/demo app.
-FREE_AI_DAILY_LIMIT = 15            # messages/day for free & basic tiers
-FREE_AI_ALLOWED_MODES = {'tutor'}   # the only AI mode free & basic can use
+# The two constants live further up, just above SUBSCRIPTION_TIERS, because the
+# Free tier's feature list quotes the daily limit and would otherwise drift out
+# of step with what the API actually enforces.
 
 def _ai_usage_today():
     """Return today's AI-usage record from the session, resetting at midnight."""
@@ -4927,6 +4944,7 @@ def gender_examples():
 
 
 @app.route('/learn')
+@require_access('learn')
 def learn():
     categories = [{'id': k, 'name': k.replace('_', ' ').title(), 'word_count': len(v)} 
                   for k, v in VOCABULARY.items()]
@@ -6112,7 +6130,8 @@ def premium():
                            tiers=SUBSCRIPTION_TIERS,
                            current_tier=active_tier(),
                            addon=INSTANT_ACCESS_ADDON,
-                           has_addon=has_full_unlock())
+                           has_addon=has_full_unlock(),
+                           free_ai_daily_limit=FREE_AI_DAILY_LIMIT)
 
 
 @app.route('/about')
