@@ -17,6 +17,7 @@ import monk_audio  # shared MP3 filename rules, also used by the build script
 import thai_consonants  # the 44 consonants + their recordings (Alphabet page)
 import thai_audio  # general Thai-phrase MP3 filename rule, shared with build script
 import thai_reading  # reading content for the Read & Write Thai Script page
+import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -274,6 +275,10 @@ SECTION_REQUIREMENTS = {
     'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
     'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40},
     'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40},
+    # Chanting sits with the other Dhamma pages: the chants and their
+    # translations are not ours to sell, and there is no alphabet
+    # prerequisite — you do not need to read Thai to chant along.
+    'chanting': {'level': 1, 'tier': 'free', 'points_reward': 40},
 
     # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
@@ -5975,6 +5980,19 @@ def theravada():
     audio_map = _audio_map_for(pure_thai_strings(THERAVADA_TEACHINGS))
     return render_template('theravada.html', teachings=THERAVADA_TEACHINGS,
                            audio_map=audio_map, talks=DHAMMA_TALKS)
+
+@app.route('/chanting')
+@require_access('chanting')
+def chanting_book():
+    """The chanting book — Pali, Thai, Paiboon and English, verse by verse.
+
+    Content comes from chanting.py so the same data can generate a printed
+    book later. Adding a chant means appending to CHANTS; this route and the
+    template never change.
+    """
+    return render_template('chanting.html',
+                           chants=chanting.CHANTS,
+                           layers=chanting.CHANT_LAYERS)
 
 @app.route('/bob-writings')
 def bob_writings():

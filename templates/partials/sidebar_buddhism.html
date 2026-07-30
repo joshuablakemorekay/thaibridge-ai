@@ -5,6 +5,7 @@
     <nav class="sidebar-nav">
         <a href="/theravada"{% if request.path == '/theravada' %} class="active"{% endif %}>☸️ Theravada Dharma</a>
         <a href="/theravada#dhamma-talks"{% if request.path.startswith('/dhamma-talk') %} class="active"{% endif %}>🪷 Dhamma Talks</a>
+        <a href="/chanting"{% if request.path == '/chanting' %} class="active"{% endif %}>📿 Chanting Book</a>
         <a href="/bob-writings"{% if request.path == '/bob-writings' %} class="active"{% endif %}>📿 Pra Kru Bob's Writings</a>
         <a href="/meditation"{% if request.path == '/meditation' %} class="active"{% endif %}>🧘 Meditation</a>
     </nav>
