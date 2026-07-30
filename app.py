@@ -343,7 +343,7 @@ SUBSCRIPTION_TIERS = {
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
-            '✓ Vowels, syllables & reading the script',
+            '✓ Vowels, syllables & Read & Write Script',
             '✓ Tones & consonant classes',
             '✓ Paiboon romanization guide',
             '✓ Vocabulary, grammar & lessons',
