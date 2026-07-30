@@ -114,35 +114,63 @@
     .layer { margin: 0 0 0.7rem; }
     .layer:last-child { margin-bottom: 0; }
 
+    /* Each layer carries a colour and a matching left rule, so you can find
+       the line you want without reading it. The colours are the ones listed
+       in CHANT_LAYERS, so the swatch on the toggle always matches the text. */
+    .layer { border-left: 3px solid transparent; padding-left: 0.75rem; }
+
     .layer-pali {
         font-size: 1.35rem;
         line-height: 2.1;
         color: var(--deep-purple);
+        border-left-color: var(--deep-purple);
         font-weight: 600;
         white-space: pre-line;   /* the data keeps the couplet's line break */
+    }
+    .layer-pali_roman {
+        font-size: 1.1rem;
+        line-height: 1.85;
+        color: var(--temple-red);
+        border-left-color: var(--temple-red);
+        font-style: italic;
+        white-space: pre-line;   /* breaks in the same place as the Thai script */
     }
     .layer-thai {
         font-size: 1.1rem;
         line-height: 1.9;
-        color: #333;
+        color: var(--isan-clay);
+        border-left-color: var(--isan-clay);
     }
     .layer-paiboon {
         font-style: italic;
         color: var(--bodhi-green);
+        border-left-color: var(--bodhi-green);
         font-size: 1rem;
         line-height: 1.7;
     }
     .layer-english {
         color: #555;
+        border-left-color: #999;
         font-size: 1rem;
         line-height: 1.6;
     }
 
+    /* Colour swatch beside each toggle, tinted inline from CHANT_LAYERS. */
+    .layer-swatch {
+        display: inline-block;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-radius: 2px;
+        margin-right: 0.35rem;
+        vertical-align: baseline;
+    }
+
     /* Toggled-off layers. The body class is set by the script below. */
-    .chant-book.hide-pali    .layer-pali,
-    .chant-book.hide-thai    .layer-thai,
-    .chant-book.hide-paiboon .layer-paiboon,
-    .chant-book.hide-english .layer-english { display: none; }
+    .chant-book.hide-pali       .layer-pali,
+    .chant-book.hide-pali_roman .layer-pali_roman,
+    .chant-book.hide-thai       .layer-thai,
+    .chant-book.hide-paiboon    .layer-paiboon,
+    .chant-book.hide-english    .layer-english { display: none; }
 
     @media (max-width: 600px) {
         .layer-pali { font-size: 1.2rem; line-height: 1.95; }
@@ -174,7 +202,7 @@
         <label class="layer-option">
             <input type="checkbox" class="layer-toggle" data-layer="{{ layer.key }}" checked>
             <span>
-                {{ layer.label }}
+                <span class="layer-swatch" style="background: {{ layer.colour }};"></span>{{ layer.label }}
                 <span class="layer-note">{{ layer.note }}</span>
             </span>
         </label>
@@ -200,6 +228,7 @@
         <div class="verse invitation">
             <span class="invitation-label">Invitation</span>
             <p class="layer layer-pali">{{ chant.invitation.pali }}</p>
+            {% if chant.invitation.pali_roman %}<p class="layer layer-pali_roman">{{ chant.invitation.pali_roman }}</p>{% endif %}
             {% if chant.invitation.thai %}<p class="layer layer-thai">{{ chant.invitation.thai }}</p>{% endif %}
             {% if chant.invitation.paiboon %}<p class="layer layer-paiboon">{{ chant.invitation.paiboon }}</p>{% endif %}
             {% if chant.invitation.english %}<p class="layer layer-english">{{ chant.invitation.english }}</p>{% endif %}
@@ -210,6 +239,7 @@
         <div class="verse">
             <span class="verse-number">{{ verse.number }}</span>
             <p class="layer layer-pali">{{ verse.pali }}</p>
+            {% if verse.pali_roman %}<p class="layer layer-pali_roman">{{ verse.pali_roman }}</p>{% endif %}
             {% if verse.thai %}<p class="layer layer-thai">{{ verse.thai }}</p>{% endif %}
             {% if verse.paiboon %}<p class="layer layer-paiboon">{{ verse.paiboon }}</p>{% endif %}
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}

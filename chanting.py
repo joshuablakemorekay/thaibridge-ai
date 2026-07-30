@@ -4,24 +4,35 @@ The data lives here rather than in a template on purpose: the same structure
 renders the web page today and can generate a printed chanting book later.
 Adding a chant means appending one dict to CHANTS — nothing else changes.
 
-Each verse carries up to four layers, and they are NOT interchangeable:
+Each verse carries up to five layers, and they are NOT interchangeable:
 
-  * `pali`    — the Pali, written in THAI SCRIPT. This is what is actually
-                chanted, and it is what Thai chanting books print. It is Pali,
-                not Thai: do NOT run it through Paiboon.
-  * `thai`    — the THAI TRANSLATION of that Pali. This is ordinary Thai and
-                is never chanted; it is there for meaning.
-  * `paiboon` — Paiboon romanisation of `thai` ONLY. It helps an English
-                speaker read the Thai translation aloud. It is a
-                ThaiBridge addition, not a standard chanting-book layer.
-  * `english` — the meaning in English.
+  * `pali`       — the Pali, written in THAI SCRIPT. This is what is actually
+                   chanted, and it is what Thai chanting books print. It is
+                   Pali, not Thai: do NOT run it through Paiboon.
+  * `pali_roman` — the SAME Pali in Latin script with Pali diacritics (IAST:
+                   ā ī ū ṃ ṅ ñ ṭ ḍ ṇ ḷ). This is how a non-Thai reader chants
+                   it. It is romanised Pali, NOT Paiboon — the two systems
+                   share no conventions and must never be mixed.
+  * `thai`       — the THAI TRANSLATION of that Pali. This is ordinary Thai
+                   and is never chanted; it is there for meaning.
+  * `paiboon`    — Paiboon romanisation of `thai` ONLY. It helps an English
+                   speaker read the Thai translation aloud. It is a
+                   ThaiBridge addition, not a standard chanting-book layer.
+  * `english`    — the meaning in English.
 
-`pali_roman` (IAST, e.g. "Bahuṃ ve saraṇaṃ yanti") is deliberately left empty:
-Josh's call, 2026-07-30 — the Thai-script Pali is what everyone chants from.
-The key is kept so the layer can be filled in later without a schema change.
+Both chanted layers (`pali`, `pali_roman`) keep their couplet line break as a
+literal "\\n"; the template renders it with `white-space: pre-line` so the two
+scripts break in the same place and can be read side by side down the page.
 
-⚠️ The `paiboon` values below are UNREVIEWED DRAFTS generated from the Thai.
-Josh to check before this is used for a printed book.
+⚠️ The `paiboon` AND `pali_roman` values below are UNREVIEWED DRAFTS. Josh to
+check both against the physical chanting book before any printed use.
+
+Where the romanised Pali could go either way it follows THIS book rather than a
+standard edition — e.g. `cetiyāni` (not `cetyāni`), and `ariyañca aṭṭhaṅgikaṃ`
+as two words rather than the sandhi form `ariyañcaṭṭhaṅgikaṃ` — because that is
+how the Thai script reads once Josh's OCR corrections were applied. The layers
+have to agree with each other line for line, which matters more here than
+matching any one printed edition.
 """
 
 CHANTS = [
@@ -40,13 +51,16 @@ CHANTS = [
             "Noble Truths."
         ),
 
-        # The leader's invitation. Pali, so it carries no Paiboon.
+        # The leader's invitation. Pali, so it carries no Thai and no Paiboon.
         'invitation': {
             'pali': 'หันทะ มะยัง เขมาเขมะสะระณะทีปิกาคาถาโย ภะณามะ เส',
-            'pali_roman': '',
+            'pali_roman': 'Handa mayaṃ khemākhemasaraṇadīpikāgāthāyo bhaṇāma se',
             'thai': '',
             'paiboon': '',
-            'english': 'Now let us recite the verses illuminating the secure and insecure refuges.',
+            'english': (
+                'Now let us recite the verses illuminating the secure and '
+                'insecure refuges.'
+            ),
         },
 
         'verses': [
@@ -56,7 +70,10 @@ CHANTS = [
                     'พะหุง เว สะระณัง ยันติ ปัพพะตานิ วะนานิ จะ\n'
                     'อารามะรุกขะเจติยานิ มะนุสสา ภะยะตัชชิตา'
                 ),
-                'pali_roman': '',
+                'pali_roman': (
+                    'Bahuṃ ve saraṇaṃ yanti, pabbatāni vanāni ca\n'
+                    'Ārāmarukkhacetiyāni, manussā bhayatajjitā'
+                ),
                 'thai': (
                     'มนุษย์เป็นอันมาก เมื่อเกิดมีภัยคุกคามแล้ว ก็ถือเอาภูเขาบ้าง '
                     'ป่าไม้บ้าง อาราม และรุกขเจดีย์บ้าง เป็นสรณะ'
@@ -77,7 +94,10 @@ CHANTS = [
                     'เนตัง โข สะระณัง เขมัง เนตัง สะระณะมุตตะมัง\n'
                     'เนตัง สะระณะมาคัมมะ สัพพะทุกขา ปะมุจจะติ'
                 ),
-                'pali_roman': '',
+                'pali_roman': (
+                    'Netaṃ kho saraṇaṃ khemaṃ, netaṃ saraṇamuttamaṃ\n'
+                    'Netaṃ saraṇamāgamma, sabbadukkhā pamuccati'
+                ),
                 'thai': (
                     'นั่นมิใช่สรณะอันเกษมเลย นั่นมิใช่สรณะอันสูงสุด '
                     'เขาอาศัยสรณะนั่นแล้ว ย่อมไม่พ้นจากทุกข์ทั้งปวงได้'
@@ -99,7 +119,10 @@ CHANTS = [
                     'โย จะ พุทธัญจะ ธัมมัญจะ สังฆัญจะ สะระณัง คะโต\n'
                     'จัตตาริ อะริยะสัจจานิ สัมมัปปัญญายะ ปัสสะติ'
                 ),
-                'pali_roman': '',
+                'pali_roman': (
+                    'Yo ca buddhañca dhammañca, saṅghañca saraṇaṃ gato\n'
+                    'Cattāri ariyasaccāni, sammappaññāya passati'
+                ),
                 'thai': (
                     'ส่วนผู้ใดถือเอาพระพุทธ พระธรรม พระสงฆ์ เป็นสรณะแล้ว '
                     'เห็นอริยสัจ คือความจริงอันประเสริฐสี่ ด้วยปัญญาอันชอบ'
@@ -121,7 +144,10 @@ CHANTS = [
                     'ทุกขัง ทุกขะสะมุปปาทัง ทุกขัสสะ จะ อะติกกะมัง\n'
                     'อะริยัญจะ อัฏฐังคิกัง มัคคัง ทุกขูปะสะมะคามินัง'
                 ),
-                'pali_roman': '',
+                'pali_roman': (
+                    'Dukkhaṃ dukkhasamuppādaṃ, dukkhassa ca atikkamaṃ\n'
+                    'Ariyañca aṭṭhaṅgikaṃ maggaṃ, dukkhūpasamagāminaṃ'
+                ),
                 'thai': (
                     'คือเห็นความทุกข์ เหตุให้เกิดทุกข์ ความก้าวล่วงทุกข์เสียได้ '
                     'และหนทางมีองค์แปดอันประเสริฐ เครื่องถึงความระงับทุกข์'
@@ -143,7 +169,10 @@ CHANTS = [
                     'เอตัง โข สะระณัง เขมัง เอตัง สะระณะมุตตะมัง\n'
                     'เอตัง สะระณะมาคัมมะ สัพพะทุกขา ปะมุจจะติ ฯ'
                 ),
-                'pali_roman': '',
+                'pali_roman': (
+                    'Etaṃ kho saraṇaṃ khemaṃ, etaṃ saraṇamuttamaṃ\n'
+                    'Etaṃ saraṇamāgamma, sabbadukkhā pamuccati'
+                ),
                 'thai': (
                     'นั่นแหละเป็นสรณะอันเกษม นั่นเป็นสรณะอันสูงสุด '
                     'เขาอาศัยสรณะนั่นแล้ว ย่อมพ้นจากทุกข์ทั้งปวงได้'
@@ -165,13 +194,15 @@ CHANTS = [
 
 
 # The layers a reader can switch on and off, in the order they appear on the
-# page. `key` matches the verse dict; `default` decides what a first-time
-# visitor sees (everything, so nobody has to discover the toggles to read it).
+# page. `key` matches the verse dict; `colour` is the CSS custom property the
+# template uses to tint that layer, so the swatch beside each toggle and the
+# text itself can never drift apart.
 CHANT_LAYERS = [
-    {'key': 'pali',    'label': 'Pali (Thai script)', 'note': 'What is chanted'},
-    {'key': 'thai',    'label': 'Thai translation',   'note': 'The meaning, in Thai'},
-    {'key': 'paiboon', 'label': 'Paiboon',            'note': 'Read the Thai aloud'},
-    {'key': 'english', 'label': 'English',            'note': 'The meaning, in English'},
+    {'key': 'pali',       'label': 'Pali (Thai script)', 'note': 'What is chanted',        'colour': 'var(--deep-purple)'},
+    {'key': 'pali_roman', 'label': 'Pali (romanised)',   'note': 'The same, in our script', 'colour': 'var(--temple-red)'},
+    {'key': 'thai',       'label': 'Thai translation',   'note': 'The meaning, in Thai',    'colour': 'var(--isan-clay)'},
+    {'key': 'paiboon',    'label': 'Paiboon',            'note': 'Read the Thai aloud',     'colour': 'var(--bodhi-green)'},
+    {'key': 'english',    'label': 'English',            'note': 'The meaning, in English', 'colour': '#555555'},
 ]
 
 
