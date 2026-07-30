@@ -33,6 +33,13 @@
         
         <!-- Subscription Tier -->
         <div class="tier-card">
+            {# Monk Mode waives payment on every section, so a monk is shown their
+               real status — free, in full — instead of a plan name and an upgrade
+               button for a tier they never need to buy. #}
+            {% if monk_mode %}
+            <h3><span class="monk-free">Free</span> 🧡</h3>
+            <p class="expires">Monk Mode — every section free of charge</p>
+            {% else %}
             <h3>{{ subscription_tiers[user.subscription_tier].name }}</h3>
             {% if user.subscription_tier != 'free' and user.subscription_expires %}
             <p class="expires">Expires: {{ user.subscription_expires[:10] }}</p>
@@ -44,6 +51,7 @@
                     Manage Subscription
                 {% endif %}
             </a>
+            {% endif %}
             {% if current_user.is_authenticated and current_user.stripe_subscription_id and current_user.effective_tier != 'free' %}
             <form action="/subscribe/cancel-subscription" method="post"
                   onsubmit="return confirm('Cancel your subscription? You will be moved back to the free plan.');"
@@ -126,6 +134,19 @@
     </div>
     
     <!-- Subscription Options -->
+    {# Monk Mode removes the tiers entirely: no plan names, no prices, no buy
+       buttons. Sections stay gated by level and the alphabet, never by payment. #}
+    {% if monk_mode %}
+    <div id="subscriptions" class="subscriptions-section">
+        <h2>🧡 Monk Mode — no subscription needed</h2>
+        <p style="max-width:640px; margin:0 auto; text-align:center; line-height:1.7;">
+            Every section of ThaiBridge is <span class="monk-free">free of charge</span> while
+            Monk Mode is on. There is no Basic or Pro tier to buy and nothing to pay.
+            Sections still open as you level up and finish the Thai alphabet — that
+            gate is about progress, not money.
+        </p>
+    </div>
+    {% else %}
     <div id="subscriptions" class="subscriptions-section">
         <h2>💎 Subscription Plans</h2>
         <div class="subscription-grid">
@@ -159,6 +180,7 @@
             {% endfor %}
         </div>
     </div>
+    {% endif %}
 </div>
 
 <style>

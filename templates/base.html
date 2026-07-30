@@ -184,7 +184,9 @@
     <footer>
         <p>🪷 ThaiBridge AI</p>
         <p><a href="/instructions">How to use</a> • <a href="/about">About</a> • <a href="/contact">Contact</a> • <a href="/privacy">Privacy</a></p>
-        <p>Using <a href="/paiboon">Paiboon Romanization</a> • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">Requires Level 8 + Thai Master (£19.99/mo)</span></span></p>
+        {# The dictionary is Level 8 + Pro. Monk Mode waives the payment, so a monk
+           is quoted the level only — never a price they will not be charged. #}
+        <p>Using <a href="/paiboon">Paiboon Romanization</a> • Reference: <span class="footer-locked-link">🔒 Thai-English Dictionary<span class="footer-tooltip">{% if monk_mode %}Requires Level 8 — free with Monk Mode 🧡{% else %}Requires Level 8 + Thai Master (£19.99/mo){% endif %}</span></span></p>
         <p style="margin-top: 1rem; font-size: 0.9rem;">สาธุ 🙏 May your practice bring wisdom and peace</p>
     </footer>
     

@@ -8,11 +8,21 @@
     <span class="thai">ระบบเรียนรู้ AI พรีเมียม</span>
 </h1>
 
+{# For a monk there are no "paid plans unlocking more content" — the content is
+   already theirs. The AI tools are the one thing Monk Mode does not cover. #}
+{% if monk_mode %}
+<p style="text-align:center; color:#666; max-width:640px; margin:0 auto 2.5rem;">
+    Learn Thai with an AI tutor by your side. Monk Mode already gives you every
+    section of the site free of charge — the AI tools below are the one part it
+    doesn't cover, because each AI reply costs real money to run.
+</p>
+{% else %}
 <p style="text-align:center; color:#666; max-width:640px; margin:0 auto 2.5rem;">
     Learn Thai with an AI tutor by your side. Start free and upgrade whenever
     you're ready — paid plans unlock more content, the premium AI tools and a
     points multiplier.
 </p>
+{% endif %}
 
 <!-- ============================================================
      FEATURE SHOWCASE — what you get (live now) + what's coming
@@ -87,7 +97,19 @@
 
 <!-- ============================================================
      PLANS & PRICING — the working subscription feature
+     Monk Mode replaces this whole block: no tiers, no prices, nothing to buy.
      ============================================================ -->
+{% if monk_mode %}
+<h2 style="text-align:center; color:var(--royal-purple); margin:3rem 0 0.4rem;">
+    🧡 Monk Mode — nothing to buy
+    <span class="thai">ไม่มีค่าใช้จ่าย</span>
+</h2>
+<p style="text-align:center; max-width:640px; margin:0 auto 2rem; line-height:1.7;">
+    Every section is <span class="monk-free">free of charge</span> while Monk Mode is
+    on — there is no Basic or Pro tier for you to buy. Sections still open as you
+    level up and finish the Thai alphabet, which is about progress, not payment.
+</p>
+{% else %}
 <h2 style="text-align:center; color:var(--royal-purple); margin:3rem 0 0.4rem;">
     ⭐ Plans &amp; Pricing
     <span class="thai">แผนและราคา</span>
@@ -155,6 +177,7 @@
     🔒 Payments run in <strong>test / sandbox mode</strong> via Stripe &amp; PayPal —
     no real money is charged. You'll choose your payment method after picking a plan.
 </p>
+{% endif %}
 
 <!-- ============================================================
      GENEROSITY — why the Dhamma is free and the AI is Pro
@@ -167,6 +190,17 @@
         <strong>Dhamma articles</strong> are free for everyone — no account, no
         subscription, no level required. The teaching itself is never behind a paywall.
     </p>
+    {# A monk owes no tier, so naming the paid plans here would contradict the rest
+       of the page. The AI is the only limit that still applies to them. #}
+    {% if monk_mode %}
+    <p style="max-width:640px; margin:1rem auto 0; color:#5a4a2a; line-height:1.7;">
+        With <strong>Monk Mode</strong> on, that generosity extends to the whole site:
+        every section is <span class="monk-free">free of charge</span> to you, with no
+        plan to buy. The one exception is the <strong>AI features</strong>, where every
+        message costs real money to run — so those stay limited. The teachings stay
+        open; the AI tools are what keep the project running.
+    </p>
+    {% else %}
     <p style="max-width:640px; margin:1rem auto 0; color:#5a4a2a; line-height:1.7;">
         What you pay for is the <strong>tooling built on top</strong>: the guided
         meditation sessions and technique guides (<strong>Buddhist Scholar</strong>), and
@@ -175,6 +209,7 @@
         <strong>Culture &amp; Dhamma Q&amp;A</strong>, are <strong>Thai Master</strong>.
         The teachings stay open; the study tools are what keep the project running.
     </p>
+    {% endif %}
 </div>
 
 <!-- ============================================================
