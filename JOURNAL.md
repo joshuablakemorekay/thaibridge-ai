@@ -1230,6 +1230,46 @@ Claude Code session, 30 July 2026. Commits `f999bf3`, `6141ca5`.
 
 ---
 
+## 30 July 2026 — A chanting book, and the tone-mark bug it uncovered
+
+**Type:** Feature + Bug Fix
+
+**TL;DR:** Built the first page of a chanting book — Pali, Thai, Paiboon and English, line by line. Building it uncovered a bug that had been quietly wrong in every AI reply the app has ever sent: three of my five Paiboon tone marks were mapped to the wrong tones.
+
+**What I achieved**
+- A new **Chanting Book** page, on the free tier alongside the other Dhamma pages — the chants aren't mine to sell
+- Every verse carries four layers: **Pali in Thai script** (what's actually chanted), the same **Pali romanised**, the **Thai translation**, **Paiboon** for reading that Thai aloud, and the **English** meaning
+- Layers are colour-coded and can be **switched on and off** — a Thai chanter hides the Paiboon and English, an English reader hides the Thai script. One page, two books.
+- Chants sit in a **grid of cards** that expand on click, ready for the dozens still to come
+- First chant in: **Khemākhema-saraṇadīpikā-gāthā** (Dhammapada 188–192)
+- Fixed the Paiboon tone marks across the whole app
+
+**How it works**
+The chants live as data in `chanting.py` rather than as page markup, because the end goal is a printed book — same source, different renderer. Adding a chant means appending one dictionary. The cards are plain `<details>` elements, so they open without JavaScript and print properly.
+
+**What this means for the app**
+Anyone can chant along in whichever script they read, and hide the rest. And every AI reply now romanises tones correctly.
+
+**What I learned**
+
+*When a spec contradicts its own examples, trust the examples.* My AI prompt defined `à` as falling and `ǎ` as low. Its own examples used them the standard way — `sà-wàt-dii`, `rʉ̌ʉ`. **The examples were right and the rules had been wrong for months.**
+
+*Pali is not Thai.* Both sit in Thai script on the same page, and I nearly ran my Thai romanisation system over the Pali. **Same letters, different language, different rules.**
+
+*A scan is not a source.* The OCR read ทั้ง for ทัง and merged two words into one. I only caught it against the physical book — which is the division of labour worth keeping: I verify the Pali, the AI does the structure.
+
+**How We Did It**
+1. Worked out the layer structure first — spotted that "Thai script" meant two different things (the Pali *and* the translation) before writing any code.
+2. Pasted the chant from a scanned book, then checked it against the physical copy and corrected four OCR errors.
+3. Found the tone-mark bug while generating the Paiboon, and fixed the prompt rather than working around it.
+4. Went through all five verses of Paiboon line by line before committing anything.
+5. Rebuilt the single-scroll page into a grid of cards once it was clear the book would hold dozens of chants.
+
+**References / Conversations**
+Claude Code session, 30 July 2026. Commits `5944994`, `3b077bb`, `198d045`, `73db735`, `88e20de`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
