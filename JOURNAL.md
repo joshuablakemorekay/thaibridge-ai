@@ -1177,6 +1177,59 @@ Claude Code session, 28 July 2026. Commits `b373c9d`, `58ffba7`.
 
 ---
 
+## 30 July 2026 — Fixed the Monk Mode ON and Monk Mode OFF pages
+
+**Type:** Bug Fix
+
+**TL;DR:** Monk Mode already waived payment in the access code, but every page still quoted monks a price. Fixed that across the whole site, and found the Vocabulary page had never been gated at all.
+
+**What I achieved**
+
+*Monk Mode ON — no way to pay, anywhere:*
+- No pay or upgrade button on any page. Locked pages now read **"Free 🧡 — no payment needed, just reach the level"**
+- No prices and no "Basic"/"Pro" tier names anywhere on the site
+- **Progress** — tier card shows "Free 🧡"; the £9.99/£19.99 plans table is replaced by "no subscription needed"
+- **Premium** — "🧡 Monk Mode — nothing to buy"; plans grid and the £9.99 Instant Access Pass both gone
+- **Footer** (on all 26 pages) — "Requires Level 8 — free with Monk Mode" instead of "£19.99/mo"
+- **Meditation** — the generosity note no longer names a paid tier
+- **Vocabulary and the Paiboon Guide** — now gated by progress only, free of charge, and their Requirements to Unlock box looks identical to every other Learn page
+
+*Monk Mode OFF — the paid product, corrected:*
+- **The pay button and all prices stay exactly as they were** — checked page by page so nothing about the paid experience drifted
+- **Vocabulary is now gated at Basic.** It had been open to everyone — its rules were written down but never enforced
+- **Paiboon now requires the alphabet first**, like every other Learn page
+- **Subscription tiers rewritten to say what you actually get:** Free gains the Thai alphabet and the AI Tutor allowance; Basic gains vowels & syllables, reading the script, tones & consonant classes, sentences with audio, the gender guide and the exercise sets; Pro gains the roleplay conversation partner and the exercise generator
+- **Premium advertised 5 free AI messages a day while the code allowed 15** — both now read the same value, so they can't disagree again
+
+*The known exception — AI Chat:*
+- **AI Chat is the one thing Monk Mode still doesn't make free.** Monks get 15 messages a day and Tutor mode only, and the other modes still say "upgrade to Pro". That's deliberate: every AI reply costs real money to run, so unlimited free AI is a separate decision I've kept out of scope. Everything else on the site is free to a monk; this one isn't, and the entry says so rather than claiming otherwise.
+
+**How it works**
+`monk_mode` was already passed to every template, so the display fixes needed no route changes — each sits behind `{% if monk_mode %}` with the original markup kept in the else branch. Vocabulary needed a real fix: `@require_access('learn')` was missing from the route.
+
+**What this means for the app**
+A monk sees one consistent story — free of charge, still gated by progress. Paying visitors can no longer read the entire Vocabulary section for nothing.
+
+**What I learned**
+
+*A keyword search is not proof.* My audit called the AI chat page "clean" for monks. It wasn't — its upgrade prompts live in JavaScript strings my patterns never looked at. **The scan answered what I asked, not what was true.**
+
+*Defining a rule isn't enforcing it.* `SECTION_REQUIREMENTS` held a complete entry for Vocabulary — level, tier, alphabet — and none of it did anything, because the route was never decorated.
+
+*A flag is only as good as every place that reads it.* `monk_mode` was right in the access function and ignored by five templates.
+
+**How We Did It**
+1. Read the access code first and separated what actually charges monks from what only *says* it does.
+2. Fixed the locked page, then swept every other template instead of stopping at the reported symptom.
+3. Verified by rendering 28 routes twice — Monk Mode on and off — rather than clicking around.
+4. Checked the paid experience in the same pass, so the fix couldn't quietly break the product.
+5. Broke the local server with a `NameError` moving a constant, and caught it because it crashed loudly.
+
+**References / Conversations**
+Claude Code session, 30 July 2026. Commits `f999bf3`, `6141ca5`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
