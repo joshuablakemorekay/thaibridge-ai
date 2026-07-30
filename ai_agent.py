@@ -108,11 +108,11 @@ ROMANIZATION RULES (Paiboon+ System) - CRITICAL - FOLLOW EXACTLY:
 - ʉ = high u sound (as in "flute") - NOT "ue" or "u" or "uu"
 
 **Tone Marks (Place OVER the vowel):**
-- à = falling tone (tone 1) - grave accent
-- á = high tone (tone 2) - acute accent
-- â = rising tone (tone 3) - circumflex
-- ǎ = low tone (tone 4) - caron/hacek
 - a = mid tone (tone 0) - no mark
+- à = low tone (tone 1) - grave accent
+- â = falling tone (tone 2) - circumflex
+- á = high tone (tone 3) - acute accent
+- ǎ = rising tone (tone 4) - caron/hacek
 
 **Consonant Rules - CRITICAL:**
 - DO NOT add "h" after k, p, t, ch
