@@ -44,36 +44,86 @@
         color: #6b6b6b;
     }
 
-    /* ── The chant itself ────────────────────────────────────────────
-       Each verse is one block with the layers stacked, never side by side:
-       five columns die on a phone, and the layers are rarely the same
-       number of lines. */
-    .chant-header { margin-bottom: 0.5rem; }
-    .chant-header .title-thai {
-        font-size: 1.9rem;
+    /* ── The index: a grid of chant cards ────────────────────────────
+       Closed, each chant is a small box you can scan; opened, it spans the
+       full width of the grid so there is room to read it. Sized so a phone
+       gets one column, a tablet two, a desktop three or more. */
+    .chant-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.25rem;
+        align-items: start;
+    }
+    .chant-card {
+        background: #fff;
+        border: 2px solid #EADFC8;
+        border-left: 5px solid var(--royal-gold);
+        border-radius: 12px;
+        padding: 1.1rem 1.25rem;
+        transition: box-shadow 0.15s, transform 0.15s;
+    }
+    .chant-card:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.10); transform: translateY(-2px); }
+    .chant-card[open] {
+        grid-column: 1 / -1;      /* an open chant takes the whole row */
+        transform: none;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+        border-left-color: var(--monk-saffron);
+    }
+
+    .chant-card summary {
+        cursor: pointer;
+        list-style: none;          /* hide the default triangle */
+        display: block;
+    }
+    .chant-card summary::-webkit-details-marker { display: none; }
+    .chant-card summary::after {
+        content: '▸ open';
+        display: block;
+        margin-top: 0.6rem;
+        font-size: 0.8rem;
+        color: var(--monk-saffron);
+        font-weight: bold;
+    }
+    .chant-card[open] summary::after { content: '▾ close'; }
+
+    .card-thai {
+        display: block;
+        font-size: 1.35rem;
         color: var(--royal-purple);
-        margin: 0 0 0.3rem;
         line-height: 1.5;
     }
-    .chant-header .title-pali {
+    .card-pali {
+        display: block;
         font-style: italic;
         color: var(--temple-red);
-        font-size: 1.15rem;
-        margin: 0 0 0.2rem;
+        font-size: 0.95rem;
+        margin-top: 0.2rem;
     }
-    .chant-header .title-english {
+    .card-english {
+        display: block;
         color: #555;
-        font-size: 1.05rem;
-        margin: 0;
+        font-size: 0.9rem;
+        margin-top: 0.2rem;
     }
+    .card-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        align-items: center;
+        margin-top: 0.7rem;
+    }
+    .card-count {
+        font-size: 0.8rem;
+        color: #777;
+    }
+
     .chant-source {
         display: inline-block;
         background: var(--royal-purple);
         color: #fff;
         border-radius: 999px;
-        padding: 0.2rem 0.85rem;
-        font-size: 0.85rem;
-        margin-top: 0.75rem;
+        padding: 0.15rem 0.75rem;
+        font-size: 0.8rem;
     }
 
     .verse {
@@ -171,6 +221,12 @@
     @media print {
         .layer-panel { display: none; }
         .verse { break-inside: avoid; }
+        /* Print what is open, one chant per page, and drop the grid so a
+           chant is never squeezed into a column. */
+        .chant-grid { display: block; }
+        .chant-card { border: none; box-shadow: none; padding: 0; }
+        .chant-card + .chant-card[open] { break-before: page; }
+        .chant-card summary::after { display: none; }
     }
 </style>
 {% endblock %}
@@ -178,10 +234,10 @@
 {% block content %}
 <h1>📿 Chanting Book <span class="thai">บทสวดมนต์</span></h1>
 
-<p style="color:#555; max-width: 60ch;">
-    Each chant is laid out line by line: the Pali as it is chanted, the Thai
-    translation, Paiboon romanisation to read the Thai aloud, and the English
-    meaning. Switch off whichever layers you don't need.
+<p style="color:#555; max-width: 62ch;">
+    Tap a chant to open it. Each one is laid out line by line: the Pali as it
+    is chanted, the Thai translation, Paiboon romanisation to read the Thai
+    aloud, and the English meaning. Switch off whichever layers you don't need.
 </p>
 
 <!-- Layer toggles -->
@@ -200,15 +256,21 @@
     </div>
 </div>
 
-<div class="chant-book" id="chant-book">
+<div class="chant-book chant-grid" id="chant-book">
     {% for chant in chants %}
-    <div class="card">
-        <div class="chant-header">
-            <h2 class="title-thai">{{ chant.title_thai }}</h2>
-            <p class="title-pali">{{ chant.title_pali }}</p>
-            <p class="title-english">{{ chant.title_english }}</p>
-            {% if chant.source %}<span class="chant-source">{{ chant.source }}</span>{% endif %}
-        </div>
+    <!-- <details> rather than a JS panel: it opens on click or Enter, works
+         with a screen reader, survives JavaScript being off, and an open
+         chant spans the full grid width so there is room to read it. -->
+    <details class="chant-card" id="{{ chant.id }}">
+        <summary>
+            <span class="card-thai">{{ chant.title_thai }}</span>
+            <span class="card-pali">{{ chant.title_pali }}</span>
+            <span class="card-english">{{ chant.title_english }}</span>
+            <span class="card-meta">
+                {% if chant.source %}<span class="chant-source">{{ chant.source }}</span>{% endif %}
+                <span class="card-count">{{ chant.verses|length }} verses</span>
+            </span>
+        </summary>
 
         {% if chant.note %}
         <p style="color:#555; margin-top:1rem; max-width: 65ch;">{{ chant.note }}</p>
@@ -235,7 +297,7 @@
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
         </div>
         {% endfor %}
-    </div>
+    </details>
     {% endfor %}
 </div>
 
