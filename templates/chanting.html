@@ -115,45 +115,35 @@
     .layer:last-child { margin-bottom: 0; }
 
     /* Each layer carries a colour and a matching left rule, so you can find
-       the line you want without reading it. The colours are the ones listed
-       in CHANT_LAYERS, so the swatch on the toggle always matches the text. */
+       the line you want without reading it. Size and style live here; the
+       COLOURS are generated from CHANT_LAYERS below, so the text, its rule
+       and the swatch on its toggle all come from one value in chanting.py. */
     .layer { border-left: 3px solid transparent; padding-left: 0.75rem; }
 
     .layer-pali {
         font-size: 1.35rem;
         line-height: 2.1;
-        color: var(--deep-purple);
-        border-left-color: var(--deep-purple);
         font-weight: 600;
         white-space: pre-line;   /* the data keeps the couplet's line break */
     }
     .layer-pali_roman {
         font-size: 1.1rem;
         line-height: 1.85;
-        color: var(--temple-red);
-        border-left-color: var(--temple-red);
         font-style: italic;
         white-space: pre-line;   /* breaks in the same place as the Thai script */
     }
-    .layer-thai {
-        font-size: 1.1rem;
-        line-height: 1.9;
-        color: var(--isan-clay);
-        border-left-color: var(--isan-clay);
+    .layer-thai   { font-size: 1.1rem; line-height: 1.9; }
+    .layer-paiboon { font-style: italic; font-size: 1rem; line-height: 1.7; }
+    .layer-english { font-size: 1rem; line-height: 1.6; }
+
+    /* One colour per layer, straight from CHANT_LAYERS — never edit these
+       here, change the `colour` value in chanting.py instead. */
+    {% for layer in layers %}
+    .layer-{{ layer.key }} {
+        color: {{ layer.colour }};
+        border-left-color: {{ layer.colour }};
     }
-    .layer-paiboon {
-        font-style: italic;
-        color: var(--bodhi-green);
-        border-left-color: var(--bodhi-green);
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-    .layer-english {
-        color: #555;
-        border-left-color: #999;
-        font-size: 1rem;
-        line-height: 1.6;
-    }
+    {% endfor %}
 
     /* Colour swatch beside each toggle, tinted inline from CHANT_LAYERS. */
     .layer-swatch {

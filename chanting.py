@@ -194,13 +194,19 @@ CHANTS = [
 
 
 # The layers a reader can switch on and off, in the order they appear on the
-# page. `key` matches the verse dict; `colour` is the CSS custom property the
-# template uses to tint that layer, so the swatch beside each toggle and the
-# text itself can never drift apart.
+# page. `key` matches the verse dict.
+#
+# `colour` is the SINGLE source of truth for that layer's colour: the template
+# generates the text colour, the left rule and the toggle swatch from this one
+# value, so they cannot drift apart. To recolour a layer, change it here only.
+#
+# The two chanted layers sit in a warm family (they are the same Pali in two
+# scripts); the three meaning layers are cool or neutral, so a glance tells you
+# whether you are looking at something to chant or something to understand.
 CHANT_LAYERS = [
-    {'key': 'pali',       'label': 'Pali (Thai script)', 'note': 'What is chanted',        'colour': 'var(--deep-purple)'},
-    {'key': 'pali_roman', 'label': 'Pali (romanised)',   'note': 'The same, in our script', 'colour': 'var(--temple-red)'},
-    {'key': 'thai',       'label': 'Thai translation',   'note': 'The meaning, in Thai',    'colour': 'var(--isan-clay)'},
+    {'key': 'pali',       'label': 'Pali (Thai script)', 'note': 'What is chanted',         'colour': 'var(--royal-burgundy)'},
+    {'key': 'pali_roman', 'label': 'Pali (romanised)',   'note': 'The same, in our script', 'colour': 'var(--isan-clay)'},
+    {'key': 'thai',       'label': 'Thai translation',   'note': 'The meaning, in Thai',    'colour': 'var(--deep-purple)'},
     {'key': 'paiboon',    'label': 'Paiboon',            'note': 'Read the Thai aloud',     'colour': 'var(--bodhi-green)'},
     {'key': 'english',    'label': 'English',            'note': 'The meaning, in English', 'colour': '#555555'},
 ]
