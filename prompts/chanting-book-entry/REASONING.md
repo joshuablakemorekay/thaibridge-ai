@@ -45,11 +45,49 @@ verification against the physical book actually happens.
 
 > *"Make it like a book users can read/chant from and break it down verse by
 > verse. The verses need to be broken down correctly like in the official
-> book."*
+> book. Use what I pasted as an example of exactly how it should look."*
 
-> *"Each Pali verse stands alone, followed immediately by its Thai meaning in
-> Paiboon romanization, making it easy to chant the Pali and then read the
-> meaning without any Thai script."*
+> *"This layout follows the style of a traditional Thai chanting book: each Pali
+> verse stands alone, followed immediately by its Thai meaning in Paiboon
+> romanization, making it easy to chant the Pali and then read the meaning
+> without any Thai script."*
+
+## The layers, as specified
+
+> *"Each chant is presented in five optional layers to support both learning and
+> practice. Pali (Thai script) — the original chant as recited in Thai Theravāda
+> temples. Pali (Romanised) — the same Pali written in the Latin alphabet to aid
+> pronunciation. Thai translation — the meaning in Thai. In many Thai temples,
+> this is also recited after the Pali. Thai (Paiboon) — the Thai translation
+> romanised for readers who cannot yet read Thai script. English translation —
+> the meaning in English."*
+
+> *"Show only the layers you need. As your confidence grows, try chanting
+> directly from the Pali while using the translations to deepen your
+> understanding."*
+
+## The standard section order, as specified
+
+> *"Standard Layout for Every Chant. Each chant follows the same format. Title.
+> Pali Source — the original source of the chant, such as the Dhammapada,
+> Khuddakapāṭha, Suttanipāta or another canonical text. When Chanted — when the
+> chant is traditionally recited in Theravāda practice. Historical Background —
+> a brief explanation of the historical setting or occasion in which the Buddha
+> taught the verses, or the origin of the chant if composed later. Meaning and
+> Purpose — a concise explanation of the teaching and why Buddhists continue to
+> chant it today. The Chant."*
+
+## The questions that found the bugs
+
+Two questions that were not reporting faults each turned one up, and the pattern
+is worth recording as much as the fixes:
+
+> *"Does the JSON from Stage 1 mean the Stage 1 output? Is it the same thing?"*
+
+> *"Is the JSON object and it's closing sentence contained in the whole Stage 1
+> reply? Or do I get it from elsewhere?"*
+
+> *"Did you update the Stage 2 prompt in GitHub? I can't see any changes."*
 
 ## Iteration — four versions in one day
 
@@ -100,24 +138,22 @@ Stage 1 was run in **both Claude.ai and ChatGPT against the same page of the
 official chanting book**, and the two outputs compared side by side. Claude.ai
 was clearly better for this job, so the workflow is built around it.
 
-**The decisive difference was process, not polish.** Claude.ai returned working
-notes and a list of flagged issues alongside the entry; ChatGPT returned the
-entry only. On a task whose whole premise is *never invent canonical Pali*, a
-tool that tells you what it was unsure about is doing the job, and a tool that
-hands over a clean-looking answer with nothing flagged is hiding the thing you
-most need to see. Claude.ai was better on the two criteria the spec says matter
-most — source fidelity and flagging — so the workflow is built around it.
+The verdict, in full:
 
-**The most serious single difference was not romanisation.** It was a *meaning*
-error in ChatGPT's verses 4–5. That is worth recording precisely because
-romanisation is the difference that shows up first when you skim two outputs
-side by side: it is visible, it is everywhere, and it is comparatively harmless
-— a reader mispronounces a word. A wrong translation is invisible on a skim and
-teaches the wrong Dhamma. **The obvious difference and the important difference
-were not the same difference.**
+> *"Claude.ai gave the working notes and flagged issues, ChatGPT just gave
+> output. The Claude output is better on the things your spec says matter most —
+> source fidelity and flagging — and ChatGPT is better in two specific places I
+> got wrong. The single most serious difference isn't romanisation at all; it's
+> a meaning error in ChatGPT's verses 4–5."*
 
-ChatGPT was better in two specific places. Neither verdict was one-sided, and
-recording that matters more than a clean win would.
+Two things in that are worth holding onto. **The obvious difference and the
+important difference were not the same difference** — romanisation is what shows
+up first when two outputs sit side by side, and it is the more harmless of the
+two; a reader mispronounces a word. A wrong translation is invisible on a skim
+and teaches the wrong Dhamma.
+
+And the verdict was not one-sided. Recording where the losing tool was better
+matters more than a clean win would.
 
 > TODO — Josh to fill in: what exactly was wrong in ChatGPT's verses 4–5, and
 > which two places did ChatGPT handle better? Both belong here in his own words
