@@ -39,13 +39,14 @@ script. Confusing them corrupts the whole entry, so read this twice:
 4. paiboon     — Paiboon+ romanisation of layer 3 ONLY. Never of layer 1.
 5. english     — the meaning in English.
 
-## Verse breakdown — one Pali line per verse
+## Verse breakdown — make it a book people can read and chant from
 
-Break the chant the way the book breaks it: ONE Pali line per verse, with its
-own Thai translation directly under it. A reader must be able to chant one
-line, read what it means, and move to the next. Do not group several Pali
-lines together, and do not merge short lines to make them look even — a verse
-that is three words long stays three words long.
+Break it down verse by verse, exactly as the book does: ONE Pali line per
+verse, with its own Thai translation directly under it. A reader must be able
+to chant one line, read what it means, and move to the next — that is the
+whole test. Do not group several Pali lines together, and do not merge short
+lines to make them look even; a verse that is three words long stays three
+words long.
 
 Where the source runs several Pali lines together before giving all their
 translations, pair them up by MEANING and keep the Pali in the order the book
@@ -131,72 +132,89 @@ If the source has a missing space, a doubled comma, an unusual spacing or an
 inconsistent particle, reproduce it exactly and add a ⚠️ CHECK saying what
 looks odd. Silent tidying is the failure this whole prompt exists to prevent.
 
-## Where the ⚠️ CHECK notes go
+## Where the checks go
 
-Put each one **immediately under the verse it concerns**, not collected at the
-top. A flag three screens away from its verse gets skipped.
+Every one goes in the top-level `checks` array, and every one names the verse
+it belongs to via its `verse` number — or `null` if it concerns the chant as a
+whole (a missing invitation, an uncertain title). A check that does not say
+which verse it is about cannot be acted on.
 
-Then finish the whole entry with one closing line that counts them:
+Raise a check for: anything OCR-garbled or possibly mistyped, a spelling that
+differs from standard editions, Pali and Thai running out of step, a missing
+invitation or title, an inferred line break, an attributed source, and any
+typographic oddity you reproduced rather than tidied.
 
-  "Six things need your eye against the physical book: <list them>.
-   Everything else is your text unchanged."
+The closing sentence counting them is the most useful line in the reply — it
+tells me how much verifying this chant needs before it goes in the app.
 
-That closing count is the most useful line in the reply — it tells me exactly
-how much checking this chant needs before I put it in the app.
+## Output format — one JSON object
 
-## Output format — use exactly these labels
+After the working notes, output ONE JSON object and nothing else. No markdown
+fences, no commentary after it. This gets pasted straight into a tool that
+writes it into the app, so it has to parse.
 
-TITLE_THAI: <the chant's title in Thai script>
-TITLE_PALI: <the title in IAST — omit entirely if the book gives none>
-TITLE_ENGLISH: <the traditional English title>
-SOURCE: <canonical source. If the chant is compiled from several places, write
-  "Composite." and then say which verses come from where. Omit the whole field
-  if you are not certain — do not guess.>
-WHEN_CHANTED: <one sentence on when it is recited>
+Two formatting rules that matter more than they look:
 
-SUMMARY: <one sentence, max 30 words, for the index card>
+- **Every value on ONE line.** Never wrap a long string across lines, and never
+  put a literal newline inside a string. Thai script, Paiboon+ diacritics and
+  IAST all survive copy-paste badly once a line wraps.
+- **The checks go in their own top-level array**, not inline. Each one names
+  the verse it belongs to so nothing floats free.
 
-BACKGROUND:
-<1–2 paragraphs: the historical setting or occasion, or the chant's origin if
-composed later. Blank line between paragraphs.>
+{
+  "working_notes": {
+    "invitation": "<present, or absent and therefore not written>",
+    "units": "<how many Pali units, and how you grouped them>",
+    "ordering": "<any place the Pali and Thai do not run in step, or none>",
+    "conventions": "<any romanisation conflict in what I pasted, or none>"
+  },
+  "title_thai": "<the chant's title in Thai script>",
+  "title_pali": "<the title in IAST, or \"\" if the book gives none>",
+  "title_english": "<the traditional English title>",
+  "source": "<canonical source. If compiled from several places, start with \"Composite.\" and say which verses come from where. Use \"\" if you are not certain — do not guess.>",
+  "when_chanted": "<one sentence on when it is recited>",
+  "summary": "<one sentence, max 30 words, for the index card>",
+  "background": ["<paragraph>", "<paragraph>"],
+  "meaning": ["<paragraph>", "<paragraph>", "<paragraph>"],
+  "invitation": {
+    "pali": "<Thai script, or \"\" if the book gives none>",
+    "pali_roman": "<IAST, or \"\">",
+    "english": "<meaning, or \"\">"
+  },
+  "verses": [
+    {
+      "number": 1,
+      "section": "<สังขาร: The Three Characteristics — only on the FIRST verse of a section; omit the key otherwise>",
+      "pali": "<ONE Pali line, Thai script>",
+      "pali_roman": "<the same line, IAST>",
+      "thai": "<its Thai translation>",
+      "paiboon": "<Paiboon+ of the thai line only>",
+      "english": "<its meaning>"
+    }
+  ],
+  "checks": [
+    {"verse": 6, "issue": "<what looks wrong and what to compare it against>"},
+    {"verse": null, "issue": "<a check about the chant as a whole>"}
+  ]
+}
 
-MEANING:
-<2–3 paragraphs: what it teaches and why Buddhists still chant it.>
+`background` and `meaning` are arrays — one string per paragraph. `checks` is
+empty (`[]`) only if genuinely nothing needs verifying, which is rare.
 
-INVITATION            <omit this block entirely if the book gives none>
-  pali: <Thai script>
-  pali_roman: <IAST>
-  english: <meaning>
+After the JSON, add nothing except one plain sentence counting the checks:
 
-SECTION 1 — <Thai or Pali name in Thai script>: <English name>
-
-VERSE 1
-  pali: <ONE Pali line, Thai script>
-  pali_roman: <the same line, IAST>
-  thai: <its Thai translation>
-  paiboon: <Paiboon+ of the thai line only>
-  english: <its meaning>
-
-  ⚠️ CHECK: <anything odd about THIS verse, directly underneath it>
-
-VERSE 2
-  ...
-
-SECTION 2 — <Thai or Pali name in Thai script>: <English name>
-
-VERSE 5
-  ...
-
-<closing line counting everything that needs checking>
+  "Six things need your eye against the physical book."
 
 ## Sections — name them the way the book thinks
 
-Sections are numbered and carry BOTH names: the Thai or Pali name in Thai
-script, then the English. So:
+A `section` value carries BOTH names: the Thai or Pali name in Thai script,
+then the English. So:
 
-  SECTION 1 — สังขาร: The Three Characteristics
-  SECTION 2 — มะระณัสสะติ: The Recollection of Death
-  SECTION 3 — กายะคะตาสะติ: Reflection on the Body
+  "section": "สังขาร: The Three Characteristics"
+  "section": "มะระณัสสะติ: The Recollection of Death"
+  "section": "กายะคะตาสะติ: Reflection on the Body"
+
+Only the FIRST verse of each section carries the key; leave it off the rest.
 
 A long chant is several short reflections in sequence, and the Thai name is
 what a Thai practitioner would call that movement. If the book prints section
@@ -227,19 +245,19 @@ The data lives in chanting.py, in the CHANTS list. Append one dict following
 the EXACT shape of the existing chants — same keys, same order, same comment
 style. Do not touch the route; adding a chant should need no other changes.
 
-Field mapping from the block I'm pasting:
-  TITLE_THAI    → title_thai        SOURCE       → source
-  TITLE_PALI    → title_pali        WHEN_CHANTED → when_chanted
-  TITLE_ENGLISH → title_english     SUMMARY      → summary
-  BACKGROUND    → background  (LIST of paragraph strings, one per paragraph)
-  MEANING       → meaning    (LIST of paragraph strings, one per paragraph)
-  INVITATION    → invitation dict (thai and paiboon stay as empty strings '')
-  SECTION n     → a 'section' key on the verse that follows it, carrying the
-                  heading text exactly as written, both names included
-                  (e.g. 'สังขาร: The Three Characteristics')
-  VERSE n       → an entry in verses, with 'number': n
-  ⚠️ CHECK      → a code comment above the verse it belongs to. Never drop one
-                  silently — they are the things Josh still has to verify.
+I'm pasting a JSON object. Its keys already match the dict keys one for one —
+title_thai, title_pali, title_english, source, when_chanted, summary,
+background, meaning, invitation, verses — so map them straight across. Each
+verse keeps its 'number', and its 'section' where it has one.
+
+Two keys do NOT go in as-is:
+  working_notes  → ignore. It is Josh's reading aid, not data.
+  checks         → turn each entry into a ⚠️ code comment. A check with a
+                   "verse" number goes directly above that verse; a check with
+                   "verse": null goes at the top of the chant dict. NEVER drop
+                   one silently — they are what Josh still has to verify
+                   against the physical book. Tell me how many you carried
+                   across when you report back.
 
 Structure rules:
 - ONE Pali line per verse, exactly as the block gives them. Never merge verses

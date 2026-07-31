@@ -1,80 +1,88 @@
 # Evaluation rubric for: Chanting Book Entry (stage 1 output)
 #
-# These check the SHAPE of the stage 1 output — the thing stage 2 has to parse.
+# These check the SHAPE of the stage 1 output — the JSON stage 2 has to parse.
 # They cannot check whether the Pali is correct; only the physical book can do
 # that, which is why a human checkpoint sits between the two stages.
+#
+# `output` is the whole reply. The JSON object is extracted from the first {
+# to the last }, so the trailing count sentence does not break parsing.
 
 prompt: chanting-book-entry
-version: 3
+version: 4
 criteria:
-  - name: opens_with_working_notes
-    description: The reply shows its splitting/pairing working before the entry
-    weight: 4
-    pass_condition: "'orking note' in output or 'Splitting' in output"
-
-  - name: sections_are_numbered_and_bilingual
-    description: Section headings carry a number and both the Thai and English name
-    weight: 4
-    pass_condition: "not re.search(r'SECTION', output) or re.search(r'SECTION\\s+\\d+\\s+—.*[฀-๿].*:', output) is not None"
-
-  - name: closes_with_a_check_count
-    description: The reply ends by counting what still needs checking against the book
-    weight: 4
-    pass_condition: "not re.search(r'⚠️|CHECK', output) or re.search(r'(need|needs) your eye|need checking|against the physical book', output) is not None"
-
-  - name: uses_the_fixed_field_labels
-    description: The entry carries the labels stage 2 maps from
+  - name: emits_parseable_json
+    description: The reply contains one JSON object that actually parses
     weight: 5
-    pass_condition: "all(k in output for k in ['TITLE_THAI:', 'TITLE_ENGLISH:', 'WHEN_CHANTED:', 'SUMMARY:', 'BACKGROUND:', 'MEANING:'])"
+    pass_condition: "json.loads(output[output.index('{'):output.rindex('}') + 1]) is not None"
 
-  - name: has_numbered_verses
-    description: Verses are numbered and labelled, not run together as prose
+  - name: has_every_required_key
+    description: The object carries the keys stage 2 maps straight across
     weight: 5
-    pass_condition: "len(re.findall(r'VERSE\\s+\\d+', output)) >= 1"
+    pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1]) for k in ['working_notes', 'title_thai', 'title_english', 'when_chanted', 'summary', 'background', 'meaning', 'verses', 'checks'])"
+
+  # The evaluator's sandbox has no `list`, so an array is identified as
+  # "not a string, indexable, holding strings" — which a bare blob fails.
+  - name: background_and_meaning_are_arrays
+    description: Paragraph fields are arrays of strings, not one blob
+    weight: 4
+    pass_condition: "all(type(json.loads(output[output.index('{'):output.rindex('}') + 1])[k]) is not str and type(json.loads(output[output.index('{'):output.rindex('}') + 1])[k][0]) is str for k in ['background', 'meaning'])"
+
+  - name: values_are_single_line
+    description: No string value contains a literal newline
+    weight: 5
+    pass_condition: "all('\\n' not in v for v in json.loads(output[output.index('{'):output.rindex('}') + 1]).values() if type(v) is str)"
+
+  - name: verses_are_single_line_too
+    description: Every verse layer is one unwrapped line
+    weight: 5
+    pass_condition: "all('\\n' not in v for verse in json.loads(output[output.index('{'):output.rindex('}') + 1])['verses'] for v in verse.values() if type(v) is str)"
 
   - name: every_verse_carries_its_layers
-    description: Each verse block names the pali, thai and english layers
+    description: Each verse has all five layers plus its number
     weight: 5
-    pass_condition: "all(output.count(k + ':') >= len(re.findall(r'VERSE\\s+\\d+', output)) for k in ['pali', 'thai', 'english'])"
+    pass_condition: "all(all(k in verse for k in ['number', 'pali', 'pali_roman', 'thai', 'paiboon', 'english']) for verse in json.loads(output[output.index('{'):output.rindex('}') + 1])['verses'])"
 
-  - name: one_pali_line_per_verse
-    description: Verses are broken per line, not grouped several Pali lines at a time
+  - name: checks_name_their_verse
+    description: Every check says which verse it belongs to, or null for the whole chant
     weight: 4
-    pass_condition: "len(re.findall(r'VERSE\\s+\\d+', output)) >= output.count('pali_roman:')"
+    pass_condition: "all('verse' in c and 'issue' in c for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['checks'])"
 
-  # Only the paiboon lines are in scope: English prose is full of "th" and
-  # "ph" ("thing", "phenomena") and would otherwise trip this.
+  - name: sections_are_bilingual
+    description: Section labels carry the Thai/Pali name as well as the English
+    weight: 4
+    pass_condition: "all(re.search(r'[฀-๿]', verse['section']) for verse in json.loads(output[output.index('{'):output.rindex('}') + 1])['verses'] if 'section' in verse)"
+
   - name: paiboon_not_rtgs
     description: The Paiboon+ layer avoids RTGS aspiration spellings
     weight: 5
-    pass_condition: "not any(re.search(r'(kh|th|ph)[aeiouɛɔəʉ]', l) for l in lines if l.strip().startswith('paiboon:'))"
+    pass_condition: "not any(re.search(r'(kh|th|ph)[aeiouɛɔəʉ]', verse['paiboon']) for verse in json.loads(output[output.index('{'):output.rindex('}') + 1])['verses'])"
 
   - name: uses_eng_not_ng
     description: ง is written ŋ throughout the Paiboon+ layer, never ng
     weight: 4
-    pass_condition: "'ŋ' in output"
-
-  - name: flags_uncertainty_rather_than_guessing
-    description: Anything unclear is surfaced as a CHECK note rather than silently filled
-    weight: 4
-    pass_condition: "'⚠️' in output or 'CHECK' in output or 'omit' not in output"
+    pass_condition: "not any('ng' in verse['paiboon'] for verse in json.loads(output[output.index('{'):output.rindex('}') + 1])['verses'])"
 
   - name: pali_roman_uses_iast_diacritics
     description: Romanised Pali carries proper IAST diacritics
     weight: 3
     pass_condition: "any(c in output for c in ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ'])"
 
-  - name: background_and_meaning_are_prose
-    description: The context sections are written, not left as placeholders
+  - name: working_notes_are_filled_in
+    description: The working notes report on invitation, units, ordering and conventions
+    weight: 4
+    pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1])['working_notes'] for k in ['invitation', 'units', 'ordering', 'conventions'])"
+
+  - name: closes_with_a_check_count
+    description: The reply ends by counting what still needs checking against the book
     weight: 3
-    pass_condition: "len(output.split('BACKGROUND:')[-1].split('MEANING:')[0].split()) >= 30 if 'BACKGROUND:' in output else False"
+    pass_condition: "re.search(r'(need|needs) your eye|need checking|against the physical book', output) is not None"
 
 test_cases:
   - input:
       document: "A page copied from a Thai chanting book — Pali in Thai script interleaved with its Thai translation, no line breaks"
     expected_traits:
-      - splits Pali-in-Thai-script from the Thai translation correctly
+      - one parseable JSON object, every value on a single line
       - one Pali line per verse, in the book's order
-      - flags anything it could not confidently pair
-      - omits the Pali title entirely when the book gives none
+      - checks in their own array, each naming its verse
+      - empty string for a Pali title the book does not give
       - Paiboon+ throughout, ŋ never ng

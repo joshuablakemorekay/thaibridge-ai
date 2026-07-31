@@ -1,102 +1,101 @@
-Working notes first, then the entry.
+{
+  "working_notes": {
+    "invitation": "Absent. There is no หันทะ มะยัง … ภะณามะ เส in the paste, so I have not written one.",
+    "units": "13 Pali units, grouped into the book's three natural movements.",
+    "ordering": "Two places where the Thai does not run in step with the Pali; kept as pasted and flagged.",
+    "conventions": "The sample you pasted uses RTGS spellings (sangkhaan, phrɔ́, thîang). I have used your Paiboon+ table instead."
+  },
+  "title_thai": "บทพิจารณาสังขาร",
+  "title_pali": "",
+  "title_english": "The Reflection on Conditioned Things",
+  "source": "Composite. Verses 1–3 correspond to Dhammapada 277–279; verses 10–13 to Dhammapada 41; verses 4–9 are the death-recollection formulas.",
+  "when_chanted": "At morning chanting and again before sleeping, as the book's own heading directs.",
+  "summary": "Thirteen short reflections on impermanence, unsatisfactoriness and not-self, on the certainty of death, and on the body as a discarded log.",
+  "background": [
+    "This passage is not a single discourse. It is a reflection compiled by Thai monastic editors from several places in the Pali tradition and arranged for daily recitation.",
+    "The Buddha spoke the verse on the body after seeing a corpse cast aside, unclaimed and of no further use to anyone."
+  ],
+  "meaning": [
+    "The chant moves inward in three stages. It begins with what is true of all conditioned things, then narrows to the chanter: life is not lasting, death is lasting, and death is certain for me.",
+    "It closes with the body itself, the thing most easily mistaken for one's own.",
+    "Chanted at the start of the day and again at its end, it places every ordinary activity between two rememberings of death."
+  ],
+  "invitation": {
+    "pali": "",
+    "pali_roman": "",
+    "english": ""
+  },
+  "verses": [
+    {
+      "number": 1,
+      "section": "สังขาร: The Three Characteristics",
+      "pali": "สัพเพ สังขารา อะนิจจา",
+      "pali_roman": "Sabbe saṅkhārā aniccā",
+      "thai": "สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง",
+      "paiboon": "sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man mâi tîaŋ",
+      "english": "Conditioned things — the body and the mind — are impermanent."
+    },
+    {
+      "number": 2,
+      "pali": "สัพเพ สังขารา ทุกขา",
+      "pali_roman": "Sabbe saṅkhārā dukkhā",
+      "thai": "สังขารคือร่างกายจิตใจ, มันเป็นทุกข์ทนได้ยาก",
+      "paiboon": "sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, man bpen túk ton dâai yâak",
+      "english": "Conditioned things are suffering, hard to bear."
+    },
+    {
+      "number": 3,
+      "pali": "สัพเพ ธัมมา อะนัตตา",
+      "pali_roman": "Sabbe dhammā anattā",
+      "thai": "สิ่งทั้งหลายทั้งปวง, ไม่ใช่ตัวไม่ใช่ตน",
+      "paiboon": "sìŋ táŋ-lǎai táŋ-bpuaŋ, mâi châi dtua mâi châi dton",
+      "english": "All things whatsoever are not a self."
+    },
+    {
+      "number": 4,
+      "section": "มะระณัสสะติ: The Recollection of Death",
+      "pali": "อะธุวัง ชีวิตัง",
+      "pali_roman": "Adhuvaṃ jīvitaṃ",
+      "thai": "ชีวิตเป็นของไม่ยั่งยืน",
+      "paiboon": "chii-wít bpen kɔ̌ɔŋ mâi yâŋ-yʉʉn",
+      "english": "Life is not enduring."
+    },
+    {
+      "number": 5,
+      "pali": "ธุวัง มะระณัง",
+      "pali_roman": "Dhuvaṃ maraṇaṃ",
+      "thai": "ความตายเป็นของยั่งยืน",
+      "paiboon": "kwaam dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn",
+      "english": "Death is enduring."
+    },
+    {
+      "number": 6,
+      "section": "กายะคะตาสะติ: Reflection on the Body",
+      "pali": "อะจิรัง วะตะ อะยัง กาโย",
+      "pali_roman": "Aciraṃ vata ayaṃ kāyo",
+      "thai": "ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย",
+      "paiboon": "râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi",
+      "english": "Alas, this body will not remain standing for long."
+    }
+  ],
+  "checks": [
+    {
+      "verse": null,
+      "issue": "The paste contains no invitation line. Confirm whether the book prints one."
+    },
+    {
+      "verse": null,
+      "issue": "No Pali title in the paste, so title_pali is empty. Confirm whether the book prints one."
+    },
+    {
+      "verse": 2,
+      "issue": "The paste has no space after the comma in \"แล้ว,แก่\". Reproduced as given."
+    },
+    {
+      "verse": 6,
+      "issue": "In the paste this Thai line appears before its Pali rather than after. Verify the printed order."
+    }
+  ]
+}
 
-Splitting the paste
-
-No invitation line. There is no หันทะ มะยัง … ภะณามะ เส anywhere in what you
-pasted, so I have not written one.
-
-13 Pali units identified, grouped into the book's three natural movements.
-
-Two ordering problems in the paste, flagged inline below with ⚠️ CHECK — I have
-kept your text as pasted and only noted the mismatch.
-
-One convention note: the sample you pasted uses kh / ph / th (RTGS-style
-aspiration) — sangkhaan, phrɔ́, thîang. That contradicts your Paiboon+ table.
-I have used your table throughout: sǎŋ-kǎan, prɔ́, tîaŋ, ŋ for ง.
-
-TITLE_THAI: บทพิจารณาสังขาร
-TITLE_ENGLISH: The Reflection on Conditioned Things
-SOURCE: Composite. Verses 1–3 correspond to Dhammapada 277–279; verses 10–13 to
-Dhammapada 41; verses 4–9 are the death-recollection formulas.
-WHEN_CHANTED: At morning chanting and again before sleeping, as the book's own
-heading directs.
-
-SUMMARY: Thirteen short reflections on impermanence, unsatisfactoriness and
-not-self, on the certainty of death, and on the body as a discarded log.
-
-BACKGROUND:
-This passage is not a single discourse. It is a reflection compiled by Thai
-monastic editors from several places in the Pali tradition and arranged for
-daily recitation: the three verses on the characteristics of existence, the
-standard formulas for the recollection of death, and the Buddha's verse on the
-body abandoned upon the ground.
-
-The Buddha spoke the verse on the body after seeing a corpse cast aside,
-unclaimed and of no further use to anyone.
-
-MEANING:
-The chant moves inward in three stages. It begins with what is true of all
-conditioned things, then narrows to the chanter: life is not lasting, death is
-lasting, and death is certain for me.
-
-It closes with the body itself, the thing most easily mistaken for one's own.
-The reflection does not ask the practitioner to despise the body but to see
-plainly what will become of it, so that clinging loosens of its own accord.
-
-SECTION 1 — สังขาร: The Three Characteristics
-
-VERSE 1
-  pali: สัพเพ สังขารา อะนิจจา
-  pali_roman: Sabbe saṅkhārā aniccā
-  thai: สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง
-  paiboon: sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man mâi tîaŋ
-  english: Conditioned things — the body and the mind — are impermanent.
-
-VERSE 2
-  pali: สัพเพ สังขารา ทุกขา
-  pali_roman: Sabbe saṅkhārā dukkhā
-  thai: สังขารคือร่างกายจิตใจ, มันเป็นทุกข์ทนได้ยาก
-  paiboon: sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, man bpen túk ton dâai yâak
-  english: Conditioned things are suffering, hard to bear.
-
-  ⚠️ CHECK: the paste has no space after the comma in "แล้ว,แก่". Reproduced as
-  given.
-
-VERSE 3
-  pali: สัพเพ ธัมมา อะนัตตา
-  pali_roman: Sabbe dhammā anattā
-  thai: สิ่งทั้งหลายทั้งปวง, ไม่ใช่ตัวไม่ใช่ตน
-  paiboon: sìŋ táŋ-lǎai táŋ-bpuaŋ, mâi châi dtua mâi châi dton
-  english: All things whatsoever are not a self.
-
-SECTION 2 — มะระณัสสะติ: The Recollection of Death
-
-VERSE 4
-  pali: อะธุวัง ชีวิตัง
-  pali_roman: Adhuvaṃ jīvitaṃ
-  thai: ชีวิตเป็นของไม่ยั่งยืน
-  paiboon: chii-wít bpen kɔ̌ɔŋ mâi yâŋ-yʉʉn
-  english: Life is not enduring.
-
-VERSE 5
-  pali: ธุวัง มะระณัง
-  pali_roman: Dhuvaṃ maraṇaṃ
-  thai: ความตายเป็นของยั่งยืน
-  paiboon: kwaam dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn
-  english: Death is enduring.
-
-SECTION 3 — กายะคะตาสะติ: Reflection on the Body
-
-VERSE 6
-  pali: อะจิรัง วะตะ อะยัง กาโย
-  pali_roman: Aciraṃ vata ayaṃ kāyo
-  thai: ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย
-  paiboon: râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi
-  english: Alas, this body will not remain standing for long.
-
-  ⚠️ CHECK: in the paste this Thai line appears before its Pali rather than
-  after. Verify the printed order.
-
-Three things need your eye against the physical book: the missing invitation
-line, the ordering swap at verse 6, and the spacing in "แล้ว,แก่". Everything
-else is your text unchanged.
+Four things need your eye against the physical book.
