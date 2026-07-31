@@ -20,6 +20,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`market-research-report`](./market-research-report/) | analysis / research | Produces a grounded, source-backed market research report for the app | Yes (v1 → v3) |
 | [`product-overview-section`](./product-overview-section/) | content | Generates a structured Product Overview using a clarifying-question loop | Yes (v1 → v2) |
 | [`tones-consonant-classes`](./tones-consonant-classes/) | agent-workflow | Explore-first build of one free section teaching tones + consonant classes with progressive drills | No (single version) |
+| [`chanting-book-entry`](./chanting-book-entry/) | content | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v2) |
 
 ## Featured iterations
 

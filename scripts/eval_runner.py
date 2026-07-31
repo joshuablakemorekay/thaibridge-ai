@@ -67,7 +67,7 @@ class MockProvider(Provider):
             fingerprint = self._fingerprint(inputs)
             fixture_path = self.fixtures_dir / f"{fingerprint}.txt"
             if fixture_path.exists():
-                return fixture_path.read_text()
+                return fixture_path.read_text(encoding='utf-8')
         # Fallback: produce something plausibly shaped
         return "MOCK_OUTPUT\nthis is a mock response\nGet started"
 
@@ -206,8 +206,8 @@ def load_prompt_dir(prompt_dir: Path) -> dict | None:
     if not prompt_file.exists() or not rubric_file.exists():
         return None
 
-    prompt_text = extract_prompt_text(prompt_file.read_text())
-    rubric = yaml.safe_load(rubric_file.read_text())
+    prompt_text = extract_prompt_text(prompt_file.read_text(encoding='utf-8'))
+    rubric = yaml.safe_load(rubric_file.read_text(encoding='utf-8'))
 
     return {
         'name': prompt_dir.name,
@@ -289,7 +289,7 @@ def write_summary(results: list[dict], output_path: Path) -> None:
 
     overall_pass = all(r['all_passed'] for r in results)
     lines += ['', f'**Overall:** {"✅ all prompts passing" if overall_pass else "❌ failures present"}']
-    output_path.write_text('\n'.join(lines))
+    output_path.write_text('\n'.join(lines), encoding='utf-8')
 
 
 def main():
@@ -347,7 +347,7 @@ def main():
         results_dir.mkdir(exist_ok=True)
         ts = result['timestamp'].replace(':', '-').split('.')[0]
         out_file = results_dir / f'run_{ts}.json'
-        out_file.write_text(json.dumps(result, indent=2))
+        out_file.write_text(json.dumps(result, indent=2), encoding='utf-8')
 
         status = '✓' if result['all_passed'] else '✗'
         print(f'{status} {result["avg_score"]:.1%}  ({result["cases_run"]} cases)')

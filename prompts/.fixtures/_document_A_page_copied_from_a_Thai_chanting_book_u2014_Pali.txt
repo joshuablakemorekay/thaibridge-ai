@@ -1,0 +1,83 @@
+Splitting first: the paste is one continuous comma-separated run, with the Pali
+in Thai script and the Thai translation alternating. I split it into 13
+Pali/Thai pairs and paired them by meaning where the source grouped them.
+
+TITLE_THAI: บทพิจารณาสังขาร
+TITLE_ENGLISH: Verses on the Contemplation of Conditioned Things
+WHEN_CHANTED: At every morning chanting service and before sleeping.
+
+SUMMARY: Reflections on impermanence, unsatisfactoriness and not-self, ending
+with the body laid on the ground like a discarded log.
+
+BACKGROUND:
+These verses gather three teachings the Buddha returned to throughout his life.
+The first lines are the summary of the three characteristics — that all
+conditioned things are impermanent, unsatisfactory, and that all things without
+exception are not-self.
+
+The closing verse comes from a different occasion, when the Buddha spoke of the
+body's fate once consciousness has departed: it lies on the ground as useless as
+a discarded piece of firewood.
+
+MEANING:
+The chant walks deliberately from the abstract to the personal. It begins with
+all conditioned things, narrows to the certainty of death, and ends with this
+body, on this ground.
+
+The middle verses are recited in the first person on purpose — my life is
+uncertain, my death is certain — because the teaching is not that people die but
+that I will.
+
+⚠️ CHECK — the source gives no Pali title, so TITLE_PALI is omitted rather than
+invented. It also gives no invitation line, so that block is omitted.
+
+⚠️ CHECK — ฉุฑโท transliterates letter-for-letter as chuḍdo. Standard editions
+read chuddho. Please check this one character against the book.
+
+SECTION: Reflection on impermanence
+
+VERSE 1
+  pali: สัพเพ สังขารา อะนิจจา
+  pali_roman: Sabbe saṅkhārā aniccā
+  thai: สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง
+  paiboon: sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man mâi tîaŋ
+  english: All conditioned things — body and mind — are impermanent.
+
+VERSE 2
+  pali: สัพเพ สังขารา ทุกขา
+  pali_roman: Sabbe saṅkhārā dukkhā
+  thai: สังขารคือร่างกายจิตใจ, มันเป็นทุกข์ทนได้ยาก
+  paiboon: sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, man bpen túk ton dâai yâak
+  english: All conditioned things are suffering, hard to bear.
+
+VERSE 3
+  pali: สัพเพ ธัมมา อะนัตตา
+  pali_roman: Sabbe dhammā anattā
+  thai: สิ่งทั้งหลายทั้งปวง, ไม่ใช่ตัวไม่ใช่ตน
+  paiboon: sìŋ táŋ-lǎai táŋ-bpuaŋ, mâi-châi dtua mâi-châi dton
+  english: All things whatsoever are not self.
+
+SECTION: Reflection on life and death
+
+VERSE 4
+  pali: อะธุวัง ชีวิตัง
+  pali_roman: Adhuvaṃ jīvitaṃ
+  thai: ชีวิตเป็นของไม่ยั่งยืน
+  paiboon: chii-wít bpen kɔ̌ɔŋ mâi yâŋ-yʉʉn
+  english: Life is not enduring.
+
+VERSE 5
+  pali: ธุวัง มะระณัง
+  pali_roman: Dhuvaṃ maraṇaṃ
+  thai: ความตายเป็นของยั่งยืน
+  paiboon: kwaam-dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn
+  english: Death is enduring.
+
+SECTION: Reflection on the body
+
+VERSE 6
+  pali: อะจิรัง วะตะ อะยัง กาโย
+  pali_roman: Aciraṃ vata ayaṃ kāyo
+  thai: ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย
+  paiboon: râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi
+  english: This body, alas, is a thing that does not remain long.

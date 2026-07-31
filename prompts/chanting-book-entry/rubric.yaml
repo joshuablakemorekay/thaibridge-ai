@@ -1,0 +1,65 @@
+# Evaluation rubric for: Chanting Book Entry (stage 1 output)
+#
+# These check the SHAPE of the stage 1 output — the thing stage 2 has to parse.
+# They cannot check whether the Pali is correct; only the physical book can do
+# that, which is why a human checkpoint sits between the two stages.
+
+prompt: chanting-book-entry
+version: 2
+criteria:
+  - name: uses_the_fixed_field_labels
+    description: The entry carries the labels stage 2 maps from
+    weight: 5
+    pass_condition: "all(k in output for k in ['TITLE_THAI:', 'TITLE_ENGLISH:', 'WHEN_CHANTED:', 'SUMMARY:', 'BACKGROUND:', 'MEANING:'])"
+
+  - name: has_numbered_verses
+    description: Verses are numbered and labelled, not run together as prose
+    weight: 5
+    pass_condition: "len(re.findall(r'VERSE\\s+\\d+', output)) >= 1"
+
+  - name: every_verse_carries_its_layers
+    description: Each verse block names the pali, thai and english layers
+    weight: 5
+    pass_condition: "all(output.count(k + ':') >= len(re.findall(r'VERSE\\s+\\d+', output)) for k in ['pali', 'thai', 'english'])"
+
+  - name: one_pali_line_per_verse
+    description: Verses are broken per line, not grouped several Pali lines at a time
+    weight: 4
+    pass_condition: "len(re.findall(r'VERSE\\s+\\d+', output)) >= output.count('pali_roman:')"
+
+  # Only the paiboon lines are in scope: English prose is full of "th" and
+  # "ph" ("thing", "phenomena") and would otherwise trip this.
+  - name: paiboon_not_rtgs
+    description: The Paiboon+ layer avoids RTGS aspiration spellings
+    weight: 5
+    pass_condition: "not any(re.search(r'(kh|th|ph)[aeiouɛɔəʉ]', l) for l in lines if l.strip().startswith('paiboon:'))"
+
+  - name: uses_eng_not_ng
+    description: ง is written ŋ throughout the Paiboon+ layer, never ng
+    weight: 4
+    pass_condition: "'ŋ' in output"
+
+  - name: flags_uncertainty_rather_than_guessing
+    description: Anything unclear is surfaced as a CHECK note rather than silently filled
+    weight: 4
+    pass_condition: "'⚠️' in output or 'CHECK' in output or 'omit' not in output"
+
+  - name: pali_roman_uses_iast_diacritics
+    description: Romanised Pali carries proper IAST diacritics
+    weight: 3
+    pass_condition: "any(c in output for c in ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ'])"
+
+  - name: background_and_meaning_are_prose
+    description: The context sections are written, not left as placeholders
+    weight: 3
+    pass_condition: "len(output.split('BACKGROUND:')[-1].split('MEANING:')[0].split()) >= 30 if 'BACKGROUND:' in output else False"
+
+test_cases:
+  - input:
+      document: "A page copied from a Thai chanting book — Pali in Thai script interleaved with its Thai translation, no line breaks"
+    expected_traits:
+      - splits Pali-in-Thai-script from the Thai translation correctly
+      - one Pali line per verse, in the book's order
+      - flags anything it could not confidently pair
+      - omits the Pali title entirely when the book gives none
+      - Paiboon+ throughout, ŋ never ng
