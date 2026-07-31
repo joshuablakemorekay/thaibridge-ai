@@ -1284,6 +1284,8 @@ Claude Code session, 30 July 2026. Commits `5944994`, `3b077bb`, `198d045`, `73d
 
 > "Every chant answers six questions: What is this chant? Where does it come from? When is it chanted? Why was it taught? What does it mean? How do I chant it? That makes the Digital Chanting Book suitable for complete beginners while remaining useful to experienced practitioners who want to deepen their understanding."
 
+**Why that way round.** Print a thousand copies and *then* discover a translation reads badly, and it's an expensive lesson. Build it digitally, let people use it, and print what has survived contact with readers — but only if the digital version already holds everything the printed one needs, in the same order, from day one.
+
 I specified the layers and the layout too:
 
 > "Welcome to the Digital Chanting Book. Each chant is presented in five optional layers to support both learning and practice. Pali (Thai script) — the original chant as recited in Thai Theravāda temples. Pali (Romanised) — the same Pali written in the Latin alphabet to aid pronunciation. Thai translation — the meaning in Thai. In many Thai temples, this is also recited after the Pali. Thai (Paiboon) — the Thai translation romanised for readers who cannot yet read Thai script. English translation — the meaning in English."
@@ -1303,6 +1305,9 @@ And the constraint on the rebuild:
 
 **How it works**
 Chants live as **data** in `chanting.py`, never page markup — one source, two renderers.
+
+**What this means for the app**
+A reader can chant from it now. A publisher could set from it later. Neither needs the content rewritten.
 
 **What I learned**
 
@@ -1361,6 +1366,9 @@ Claude Code session, 31 July 2026. Commit `7bdc618`.
 **Type:** Feature
 
 **TL;DR:** Added บทพิจารณาสังขาร (13 verses) and used it to pin down exactly what a finished chant looks like.
+
+**Why this chant mattered**
+It was the first chant added *after* deciding the book had to be print-ready, so it doubled as the specification — everything I wanted future chants to look like had to be true of this one first. That's what made it the right test case for the prompts.
 
 **The instructions that shaped it**
 
@@ -1424,12 +1432,27 @@ And the format decision that made the handover reliable:
 
 > "For Prompt 1 can we add this instruction: JSON with unwrapped single-line values and the checks as a separate array."
 
+**Why build the tool instead of adding chants**
+There are dozens of chants still to add. Doing each by hand is **slow**, it **drifts** (chant 9 ends up shaped slightly differently from chant 2), and it's **error-prone** in the one place errors matter most — the Pali. A book with inconsistent structure is a book you re-edit before printing. So I spent the day building the *thing that adds chants*. Four aims, all pulling the same way:
+
+- **Speed** — a pasted page becomes a structured entry in minutes
+- **Efficiency** — two tools, each doing what it's actually good at
+- **Accuracy** — the AI never invents Pali; it flags what I must check
+- **Consistency** — the same six sections, five layers and romanisation, every time
+
+That last one is the print preparation. Consistency is cheap to enforce with a prompt and expensive to fix in a typeset book.
+
 **The process, start to finish**
 1. **Copy from the official chanting book** — the Pali in Thai script and its Thai translation
 2. **Paste into Claude.ai under Prompt 1** — returns one JSON object: five layers, background, meaning, section headings, plus everything it wasn't sure about
 3. **Check the flagged items against the physical book** — the step nothing can do for me
 4. **Paste Prompt 2 plus that JSON into Claude Code** — writes it into `chanting.py`, counts every Thai character both ways, renders the page
 5. **Review, commit, push** — live in the app
+
+**What I achieved**
+- Both prompts written, tested on a real chant, and refined through **four versions in one day** — each caused by a real failure, not a hunch
+- Archived with reasoning, version history, an automatic scoring rubric and a check that runs on every push
+- A 7-page PDF built from the prompt file itself, so the sheet can't drift
 
 **Choosing the tool by testing it**
 I ran Prompt 1 in **both Claude.ai and ChatGPT with the same page of Thai** from the official book, and compared:
