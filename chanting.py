@@ -7,8 +7,13 @@ Adding a chant means appending one dict to CHANTS — nothing else changes.
 Every chant follows the SAME shape, so that between them the six questions a
 reader actually has are always answered in the same order:
 
-  * `title_thai` / `title_pali` / `title_english`
-                        — what is this chant?
+  * `title_thai` / `title_pali` / `title_roman` / `title_english`
+                        — what is this chant? `title_pali` is the title in
+                          IAST and is empty where the book prints none;
+                          `title_roman` is the THAI title romanised, so a
+                          reader who cannot read Thai script can still find
+                          the chant in a printed book. A chant whose title is
+                          Pali-in-Thai-script needs only `title_pali`.
   * `source`            — where does it come from? (Dhammapada, Khuddakapāṭha,
                           Suttanipāta or another canonical text)
   * `when_chanted`      — when is it chanted in Theravāda practice?
@@ -243,7 +248,12 @@ CHANTS = [
         # Josh's source prints no Pali title for this chant, so there is none
         # here. The template skips the line rather than showing a blank.
         'title_pali': '',
-        'title_english': 'Verses on the Contemplation of Conditioned Things',
+        # The Thai title romanised, so a reader who cannot read Thai script can
+        # still find this chant in a printed book. Josh's own romanisation,
+        # kept verbatim — it is neither Pali IAST nor Paiboon+, and does not
+        # need to be either: its whole job is to be findable.
+        'title_roman': 'Botpijārana Saṅkhāra',
+        'title_english': 'Reflection on Conditioned Phenomena (Saṅkhāra)',
         # ⚠️ UNVERIFIED: attributed by Claude, not taken from Josh's book.
         # Verses 1–3 answer to Dhammapada 277–279 and the closing verse to
         # Dhammapada 41; the middle lines are the traditional death-recollection

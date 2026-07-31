@@ -123,6 +123,14 @@
         font-size: 0.9rem;
         margin-top: 0.2rem;
     }
+    /* When it is chanted, on the closed card. Someone scanning the index for
+       "the one we do before sleep" should not have to open anything. */
+    .card-when {
+        display: block;
+        color: var(--monk-saffron);
+        font-size: 0.82rem;
+        margin-top: 0.35rem;
+    }
     .card-meta {
         display: flex;
         flex-wrap: wrap;
@@ -390,8 +398,14 @@
     <details class="chant-card" id="{{ chant.id }}">
         <summary>
             <span class="card-thai">{{ chant.title_thai }}</span>
-            {% if chant.title_pali %}<span class="card-pali">{{ chant.title_pali }}</span>{% endif %}
+            {# The romanised title: title_pali where the title is Pali, or
+               title_roman where it is Thai. Either way it is the line that
+               lets someone who cannot read Thai script find this chant in a
+               printed book, so it sits directly under the Thai. #}
+            {% if chant.title_pali %}<span class="card-pali">{{ chant.title_pali }}</span>
+            {% elif chant.title_roman %}<span class="card-pali">{{ chant.title_roman }}</span>{% endif %}
             <span class="card-english">{{ chant.title_english }}</span>
+            {% if chant.when_chanted %}<span class="card-when">{{ chant.when_chanted }}</span>{% endif %}
             <span class="card-meta">
                 {% if chant.source %}<span class="chant-source">{{ chant.source }}</span>{% endif %}
                 <span class="card-count">{{ chant.verses|length }} verses</span>
