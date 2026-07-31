@@ -172,6 +172,7 @@ Two formatting rules that matter more than they look:
   },
   "title_thai": "<the chant's title in Thai script>",
   "title_pali": "<the title in IAST, or \"\" if the book gives none>",
+  "title_roman": "<the THAI title romanised so a non-Thai reader can find the chant in a printed book. Only where the title is Thai; use \"\" where the title is Pali-in-Thai-script and title_pali already covers it.>",
   "title_english": "<the traditional English title>",
   "source": "<canonical source. If compiled from several places, start with \"Composite.\" and say which verses come from where. Use \"\" if you are not certain — do not guess.>",
   "when_chanted": "<one sentence on when it is recited>",
@@ -251,7 +252,8 @@ I'm pasting the JSON object from stage 1 — the whole reply is fine, the
 trailing sentence after the closing brace is just a note to me; ignore it.
 
 Its keys already match the dict keys one for one —
-title_thai, title_pali, title_english, source, when_chanted, summary,
+title_thai, title_pali, title_roman, title_english, source, when_chanted,
+summary,
 background, meaning, invitation, verses — so map them straight across. Each
 verse keeps its 'number', and its 'section' where it has one.
 
