@@ -1425,7 +1425,13 @@ Two of my own instructions shaped them most:
 **Choosing the tool by testing it, not by guessing**
 Before settling on this workflow I ran **Prompt 1 in both Claude.ai and ChatGPT with the same page of Thai from the official chanting book**, and compared the two outputs side by side. **Claude.ai was clearly better for this particular job**, so that is the tool the workflow is built around.
 
-That comparison is worth more than the conclusion. Feeding one prompt the same input in two tools shows you what the *prompt* is doing versus what the *model* is doing — and the differences it exposed fed straight back into the prompt. The clearest was romanisation: one output used RTGS-style spellings (`sangkhaan`, `khɔ̌ɔng`, `thîang`) where my app uses Paiboon+ (`sǎŋ-kǎan`, `kɔ̌ɔŋ`, `tîaŋ`), and one dropped the Pali-in-Thai-script layer altogether. Both became explicit rules in the final prompt.
+**What decided it was process, not polish.** Claude.ai gave me working notes and a list of flagged issues alongside the entry. ChatGPT gave me the entry. On a job whose whole point is *never invent canonical Pali*, a tool that tells me what it wasn't sure about is doing the work — a tool that hands over a tidy answer with nothing flagged is hiding the exact thing I need to see.
+
+**The most serious difference wasn't romanisation at all — it was a meaning error in ChatGPT's verses 4–5.** That's the lesson I want to keep, because romanisation is the difference you notice *first* when two outputs sit side by side: it's visible, it's on every line, and honestly it's the least harmful of the two — a reader mispronounces a word. A wrong translation is invisible on a skim and teaches the wrong Dhamma. **The obvious difference and the important one were not the same difference.**
+
+It wasn't one-sided: ChatGPT was better in two specific places. Worth recording, because a comparison that comes out 10–0 usually means I wasn't looking properly.
+
+The romanisation gap fed into the prompt anyway — one output used RTGS-style spellings (`sangkhaan`, `khɔ̌ɔng`, `thîang`) where my app uses Paiboon+ (`sǎŋ-kǎan`, `kɔ̌ɔŋ`, `tîaŋ`), and one dropped the Pali-in-Thai-script layer altogether. Both are now explicit rules.
 
 **How We Did It**
 1. Wrote both prompts, then tested them on a real chant rather than a hypothetical one.

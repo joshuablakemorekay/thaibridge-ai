@@ -100,16 +100,34 @@ Stage 1 was run in **both Claude.ai and ChatGPT against the same page of the
 official chanting book**, and the two outputs compared side by side. Claude.ai
 was clearly better for this job, so the workflow is built around it.
 
-The comparison earned its keep beyond the verdict. Running one prompt on
-identical input in two tools separates what the *prompt* is doing from what the
-*model* is doing, and the gaps it exposed became rules in the final version:
+**The decisive difference was process, not polish.** Claude.ai returned working
+notes and a list of flagged issues alongside the entry; ChatGPT returned the
+entry only. On a task whose whole premise is *never invent canonical Pali*, a
+tool that tells you what it was unsure about is doing the job, and a tool that
+hands over a clean-looking answer with nothing flagged is hiding the thing you
+most need to see. Claude.ai was better on the two criteria the spec says matter
+most — source fidelity and flagging — so the workflow is built around it.
 
-- One output used RTGS spellings (`sangkhaan`, `khɔ̌ɔng`, `thîang`) where this
-  app uses Paiboon+ (`sǎŋ-kǎan`, `kɔ̌ɔŋ`, `tîaŋ`) — now pinned by an explicit
-  consonant table, with a note that a pasted sample is a *layout* example and
-  never a romanisation one.
-- One dropped the Pali-in-Thai-script layer entirely — now the first thing the
-  prompt establishes, twice over.
+**The most serious single difference was not romanisation.** It was a *meaning*
+error in ChatGPT's verses 4–5. That is worth recording precisely because
+romanisation is the difference that shows up first when you skim two outputs
+side by side: it is visible, it is everywhere, and it is comparatively harmless
+— a reader mispronounces a word. A wrong translation is invisible on a skim and
+teaches the wrong Dhamma. **The obvious difference and the important difference
+were not the same difference.**
+
+ChatGPT was better in two specific places. Neither verdict was one-sided, and
+recording that matters more than a clean win would.
+
+> TODO — Josh to fill in: what exactly was wrong in ChatGPT's verses 4–5, and
+> which two places did ChatGPT handle better? Both belong here in his own words
+> rather than reconstructed.
+
+A secondary finding, since it fed straight into the prompt: one output used RTGS
+spellings (`sangkhaan`, `khɔ̌ɔng`, `thîang`) where this app uses Paiboon+
+(`sǎŋ-kǎan`, `kɔ̌ɔŋ`, `tîaŋ`), and one dropped the Pali-in-Thai-script layer
+entirely. Both are now explicit rules — the consonant table is pinned, and a
+pasted sample is declared a *layout* example, never a romanisation one.
 
 ## What I'd change next
 
