@@ -1,6 +1,6 @@
 # Prompt Library
 
-[![Prompt Lint & Eval](https://github.com/joshuablakemorekay/Thai-App-NEW/actions/workflows/prompt-eval.yml/badge.svg)](https://github.com/joshuablakemorekay/Thai-App-NEW/actions/workflows/prompt-eval.yml)
+[![Prompt Lint & Eval](https://github.com/joshuablakemorekay/thaibridge-ai/actions/workflows/prompt-eval.yml/badge.svg)](https://github.com/joshuablakemorekay/thaibridge-ai/actions/workflows/prompt-eval.yml)
 
 This folder documents the prompts I used while building the Thai Language & Culture Learning App. It exists as **portfolio evidence** of prompt engineering, evaluation, and iteration — not as runtime configuration (settings the app needs to run).
 
@@ -57,7 +57,7 @@ This library is structured to show:
 ## How to read this folder
 
 - **90 seconds:** read this index and skim the featured iteration above.
-- **5 minutes:** read this index plus the two `REASONING.md` files.
+- **5 minutes:** read this index plus the `REASONING.md` of any prompt above that interests you.
 - **Longer:** read the [CHANGELOG](./CHANGELOG.md), then run the checks yourself (below).
 
 ## Running the evaluations locally
