@@ -1700,8 +1700,8 @@ TOUR_VOCAB = {
         {'english': 'Turn right', 'thai': 'เลี้ยวขวา', 'paiboon': 'líao kwǎa', 'note': 'Essential for giving directions'},
     ],
     'accommodation': [
-        {'english': 'Hotel', 'thai': 'โรงแรม', 'paiboon': 'roong-rɛɛm', 'note': 'Formal term'},
-        {'english': 'Room', 'thai': 'ห้อง', 'paiboon': 'hɔ̂ɔng', 'note': 'Used for hotel rooms and bathrooms'},
+        {'english': 'Hotel', 'thai': 'โรงแรม', 'paiboon': 'rooŋ-rɛɛm', 'note': 'Formal term'},
+        {'english': 'Room', 'thai': 'ห้อง', 'paiboon': 'hɔ̂ɔŋ', 'note': 'Used for hotel rooms and bathrooms'},
         {'english': 'Air conditioning', 'thai': 'แอร์', 'paiboon': 'ɛɛ', 'note': 'Shortened from "air"'},
         {'english': 'Key', 'thai': 'กุญแจ', 'paiboon': 'gun-jɛɛ', 'note': 'For room access'},
     ],
@@ -1713,7 +1713,7 @@ TOUR_VOCAB = {
     ],
     'shopping': [
         {'english': 'How much?', 'thai': 'เท่าไหร่', 'paiboon': 'tâo-rài', 'note': 'Essential shopping phrase'},
-        {'english': 'Expensive', 'thai': 'แพง', 'paiboon': 'pɛɛng', 'note': 'For negotiating prices'},
+        {'english': 'Expensive', 'thai': 'แพง', 'paiboon': 'pɛɛŋ', 'note': 'For negotiating prices'},
         {'english': 'Discount / Reduce', 'thai': 'ลด', 'paiboon': 'lót', 'note': 'Verb meaning "reduce"'},
         {'english': 'Cheap', 'thai': 'ถูก', 'paiboon': 'tùuk', 'note': 'Can also mean "correct"'},
     ],
@@ -1726,7 +1726,7 @@ TOUR_VOCAB = {
     ],
     'emergencies': [
         {'english': 'Help!', 'thai': 'ช่วยด้วย', 'paiboon': 'chûai-dûai', 'note': 'Emergency cry for help'},
-        {'english': 'Hospital', 'thai': 'โรงพยาบาล', 'paiboon': 'roong-pa-yaa-baan', 'note': 'Important for emergencies'},
+        {'english': 'Hospital', 'thai': 'โรงพยาบาล', 'paiboon': 'rooŋ-pa-yaa-baan', 'note': 'Important for emergencies'},
         {'english': 'Police', 'thai': 'ตำรวจ', 'paiboon': 'dam-rùat', 'note': 'For reporting issues'},
     ],
 }
@@ -1748,26 +1748,26 @@ BUSINESS_VOCAB = {
     'office': [
         {'english': 'Document', 'thai': 'เอกสาร', 'paiboon': 'èek-gà-sǎan', 'note': 'Any official paperwork'},
         {'english': 'Email', 'thai': 'อีเมล', 'paiboon': 'ii-meen', 'note': 'Borrowed from English'},
-        {'english': 'Office', 'thai': 'สำนักงาน', 'paiboon': 'sǎm-nák-ngaan', 'note': 'Formal workplace — สำนักงานใหญ่ = head office'},
+        {'english': 'Office', 'thai': 'สำนักงาน', 'paiboon': 'sǎm-nák-ŋaan', 'note': 'Formal workplace — สำนักงานใหญ่ = head office'},
         {'english': 'Schedule / Agenda', 'thai': 'กำหนดการ', 'paiboon': 'gam-nòt-gaan', 'note': 'Timeline or agenda'},
     ],
     'banking': [
         {'english': 'Bank', 'thai': 'ธนาคาร', 'paiboon': 'tá-naa-kaan', 'note': 'Financial institution'},
         {'english': 'Account', 'thai': 'บัญชี', 'paiboon': 'ban-chii', 'note': 'Bank or financial account'},
         {'english': 'Transfer', 'thai': 'โอน', 'paiboon': 'oon', 'note': 'Money transfer verb — โอนเงิน = transfer money'},
-        {'english': 'Investment', 'thai': 'การลงทุน', 'paiboon': 'gaan-long-tun', 'note': 'Business investment'},
-        {'english': 'Budget', 'thai': 'งบประมาณ', 'paiboon': 'ngóp-bpra-maan', 'note': 'Financial planning term'},
+        {'english': 'Investment', 'thai': 'การลงทุน', 'paiboon': 'gaan-loŋ-tun', 'note': 'Business investment'},
+        {'english': 'Budget', 'thai': 'งบประมาณ', 'paiboon': 'ŋóp-bpra-maan', 'note': 'Financial planning term'},
     ],
     'contracts': [
         {'english': 'Contract', 'thai': 'สัญญา', 'paiboon': 'sǎn-yaa', 'note': 'Legal agreement'},
         {'english': 'Sign', 'thai': 'เซ็น', 'paiboon': 'sen', 'note': 'To sign documents'},
-        {'english': 'Terms and conditions', 'thai': 'เงื่อนไข', 'paiboon': 'ngʉ̂an-kǎi', 'note': 'Conditions of agreement'},
+        {'english': 'Terms and conditions', 'thai': 'เงื่อนไข', 'paiboon': 'ŋʉ̂an-kǎi', 'note': 'Conditions of agreement'},
         {'english': 'Legal / Law', 'thai': 'กฎหมาย', 'paiboon': 'gòt-mǎai', 'note': 'Literally "law" — used broadly for legal matters'},
     ],
     'hierarchy': [
         {'english': 'Director', 'thai': 'ผู้อำนวยการ', 'paiboon': 'pûu-am-nuai-gaan', 'note': 'Executive director level'},
         {'english': 'Manager', 'thai': 'ผู้จัดการ', 'paiboon': 'pûu-jàt-gaan', 'note': 'Department manager'},
-        {'english': 'Employee / Staff', 'thai': 'พนักงาน', 'paiboon': 'pá-nák-ngaan', 'note': 'General staff member'},
+        {'english': 'Employee / Staff', 'thai': 'พนักงาน', 'paiboon': 'pá-nák-ŋaan', 'note': 'General staff member'},
     ],
 }
 
@@ -2225,7 +2225,7 @@ MEDITATION_TECHNIQUES = {
     'body_scan': {
         'name': 'Body Scan Meditation',
         'thai': 'การสแกนร่างกาย',
-        'paiboon': 'gaan sà-gɛɛn râang-gaai',
+        'paiboon': 'gaan sà-gɛɛn râaŋ-gaai',
         'description': (
             "A body scan is a foundational mindfulness practice that can be very helpful for developing body awareness and relaxation. "
             "Here's a step-by-step guide on how to do a basic body scan:"
@@ -4215,7 +4215,7 @@ CULTURAL_FEATURE_STORIES = [
             {
                 'name_en': 'Non-violence',
                 'thai': 'อหิงสา',
-                'paiboon': 'à-hǐng-sǎa',
+                'paiboon': 'à-hǐŋ-sǎa',
                 'in_story': 'He allows himself to be captured rather than harm '
                             'the king\'s men.',
             },
@@ -4229,7 +4229,7 @@ CULTURAL_FEATURE_STORIES = [
         ],
 
         'vocabulary': [
-            {'thai': 'ช้างเผือก', 'paiboon': 'cháang pʉ̀ak',
+            {'thai': 'ช้างเผือก', 'paiboon': 'cháaŋ pʉ̀ak',
              'english': 'white elephant'},
             {'thai': 'กตัญญู', 'paiboon': 'gà-dtan-yuu',
              'english': 'gratitude, filial devotion'},

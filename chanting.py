@@ -126,8 +126,8 @@ CHANTS = [
                 ),
                 'paiboon': (
                     'má-nút bpen an mâak, mʉ̂a gə̀ət mii pai kúk-kaam lɛ́ɛo, '
-                    'gɔ̂ tʉ̌ʉ ao puu-kǎo bâang, bpàa máai bâang, aa-raam '
-                    'lɛ́ rúk-kà-jee-dii bâang, bpen sà-rá-ná'
+                    'gɔ̂ tʉ̌ʉ ao puu-kǎo bâaŋ, bpàa máai bâaŋ, aa-raam '
+                    'lɛ́ rúk-kà-jee-dii bâaŋ, bpen sà-rá-ná'
                 ),
                 'english': (
                     'Many people, when threatened by fear, go for refuge to '

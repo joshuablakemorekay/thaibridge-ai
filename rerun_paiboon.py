@@ -38,11 +38,11 @@ You are an expert in Paiboon Thai romanization. Convert the Thai word or phrase 
 into Paiboon romanization using EXACTLY these rules — no exceptions, no alternatives.
 
 CONSONANTS:
-  ก → g   ข/ค/ฅ/ฆ → k   ง → ng   จ → j   ช/ฉ/ฌ → ch
+  ก → g   ข/ค/ฅ/ฆ → k   ง → ŋ   จ → j   ช/ฉ/ฌ → ch
   ซ/ส/ศ/ษ → s   ด/ฎ → d   ต/ฏ → dt   ท/ธ/ถ/ฐ/ฑ/ฒ → t
   น/ณ → n   บ → b   ป → bp   พ/ผ/ภ → p   ฟ/ฝ → f
   ม → m   ย/ญ → y   ร → r   ล/ฬ → l   ว → w   ห/ฮ → h
-  Final ง → ng
+  Final ง → ŋ
 
 VOWELS (short / long — double the letter for long):
   อะ/อา → a / aa     อิ/อี → i / ii     อึ/อือ → ʉ / ʉʉ
@@ -76,7 +76,7 @@ SPECIAL CASES:
 
 EXAMPLES:
   กา → gaa          ปลา → bplaa        ขอบคุณ → kɔ̀ɔp-kun
-  สวัสดี → sà-wàt-dii   เด็ก → dèk      ผึ้ง → pʉ̂ng
+  สวัสดี → sà-wàt-dii   เด็ก → dèk      ผึ้ง → pʉ̂ŋ
   ทหาร → tá-hǎan    ภิกษุ → pík-sù    เสือ → sʉ̌a
   ม้า → máa          หนู → nǔu          ระวัง → rá-waŋ
   มวน → muan → CORRECT OUTPUT: muan (mid-class ม, short vowel, no final = mid tone)
