@@ -106,23 +106,24 @@ Vowels use ɛ ɔ ə ʉ (แ, อ, เออ, อึ). Tones: mid unmarked, low �
 high á, rising ǎ. EVERY syllable carries its tone. Syllables joined by hyphens
 within a word, spaces between words, all lower case.
 
-## Working notes — always come first
+## Working notes — inside the JSON, not around it
 
-Open every reply with a short "Working notes" section, before the entry. Keep
-it to a few lines. Cover, in this order:
+Show your working, but put it in the `working_notes` object of the JSON rather
+than as prose before or after it. That keeps the whole reply one pasteable
+thing. Keep each note to a sentence or two:
 
-1. **Invitation** — present or absent. If absent, say so explicitly and say you
+1. **invitation** — present or absent. If absent, say so explicitly and say you
    have not written one.
-2. **Count** — how many Pali units you identified, and how you grouped them
+2. **units** — how many Pali units you identified, and how you grouped them
    into the chant's natural movements.
-3. **Ordering problems** — anywhere the Pali and Thai do not run in step, or a
+3. **ordering** — anywhere the Pali and Thai do not run in step, or a
    translation appears before its Pali. Say you have kept my text as pasted and
    only noted the mismatch.
-4. **Convention conflicts** — if anything I pasted uses a different
-   romanisation from the Paiboon+ table above (RTGS spellings such as
-   `sangkhaan`, `phrɔ́`, `thîang`), say so and confirm you have used the table,
-   not my sample. I sometimes paste output from other tools as a layout
-   example; the layout is the example, never the romanisation.
+4. **conventions** — if anything I pasted uses a different romanisation from
+   the Paiboon+ table above (RTGS spellings such as `sangkhaan`, `phrɔ́`,
+   `thîang`), say so and confirm you have used the table, not my sample. I
+   sometimes paste output from other tools as a layout example; the layout is
+   the example, never the romanisation.
 
 Then produce the entry.
 
@@ -149,9 +150,10 @@ tells me how much verifying this chant needs before it goes in the app.
 
 ## Output format — one JSON object
 
-After the working notes, output ONE JSON object and nothing else. No markdown
-fences, no commentary after it. This gets pasted straight into a tool that
-writes it into the app, so it has to parse.
+Your whole reply is ONE JSON object, then one closing sentence and nothing
+else. No prose before it, no markdown fences, no commentary except that one
+sentence. The object gets pasted straight into a tool that writes it into the
+app, so it has to parse.
 
 Two formatting rules that matter more than they look:
 
@@ -245,7 +247,10 @@ The data lives in chanting.py, in the CHANTS list. Append one dict following
 the EXACT shape of the existing chants — same keys, same order, same comment
 style. Do not touch the route; adding a chant should need no other changes.
 
-I'm pasting a JSON object. Its keys already match the dict keys one for one —
+I'm pasting the JSON object from stage 1 — the whole reply is fine, the
+trailing sentence after the closing brace is just a note to me; ignore it.
+
+Its keys already match the dict keys one for one —
 title_thai, title_pali, title_english, source, when_chanted, summary,
 background, meaning, invitation, verses — so map them straight across. Each
 verse keeps its 'number', and its 'section' where it has one.
