@@ -1270,6 +1270,172 @@ Claude Code session, 30 July 2026. Commits `5944994`, `3b077bb`, `198d045`, `73d
 
 ---
 
+## 31 July 2026 — From a chanting page to a Digital Chanting Book
+
+**Type:** Feature / Strategy
+
+**TL;DR:** Stopped thinking of this as a "chanting page" and started treating it as a **book that happens to be digital first**. The web app is now where the content gets tested by real readers; the printed edition later becomes a typesetting job, not a rewrite.
+
+**The aim behind it**
+I want to publish a physical chanting book. The risk with that is obvious — you print a thousand copies and *then* discover a translation reads badly or a layer is confusing. So the plan is deliberately the other way round: **build it digitally, let people actually use it, and print what has survived contact with readers.** For that to work, the digital version has to hold everything the printed one will need, in the same order, from day one. As I put it at the start of the session:
+
+> "Rather than thinking of it as a 'chanting page,' think of it as a Digital Chanting Book. Then, when you publish the printed edition, you're polishing and typesetting content that has already been tested by users."
+
+**What I achieved**
+- Every chant answers the same six questions, in the same order: what it is, where it comes from, when it's chanted, why it was taught, what it means, and how to chant it
+- Split the old catch-all note field into `when_chanted`, `background`, `meaning` and a one-line `summary`
+- Background and meaning collapse, so someone who came only to chant isn't scrolling past history
+- Renamed it in the menu and sidebar to match
+
+**How it works**
+The chants live as **data** in `chanting.py`, never as page markup. That's the whole strategy in one decision: one source of truth, two renderers. Today a web template renders it; later a typesetter renders the same data onto a printed page. Section headings live in one list, so adding a section adds it to every chant at once — the kind of consistency a printed book needs and a hand-built page never keeps.
+
+**What this means for the app**
+A reader can chant from it now. A publisher could set from it later. Neither needs the content rewritten.
+
+**What I learned**
+
+*A closed section prints as just its heading.* Background and meaning would have come out blank on paper — which for a project aimed at print is exactly the bug you don't want to find at the printers. They now open before printing and close again after.
+
+**How We Did It**
+1. Wrote the six questions down before touching any code.
+2. Split one overloaded field into four honest ones.
+3. Verified every line of chant content was byte-for-byte unchanged.
+4. Tested printing, found the blank-section bug, fixed it.
+
+**References / Conversations**
+Claude Code session, 31 July 2026. Commits `ab1d0e3`, `55727c6`.
+
+---
+
+## 31 July 2026 — One romanisation system, not two
+
+**Type:** Bug Fix / Consistency
+
+**TL;DR:** My Paiboon spelled the Thai letter ง two ways — `ŋ` and `ng` — in roughly a 65/35 split. Fixed 904 dictionary entries, the app's built-in phrases, chant 1, and the prompts that caused it.
+
+**Why this mattered more than it looks**
+On a website an inconsistency is a small annoyance you patch next week. **In a printed book it's permanent.** If `พระ` is `prá` on page 12 and `phrá` on page 40, a learner can't work out whether `k` means a puff of air or not — and the pronunciation guide stops teaching. Since the whole point of the digital-first approach is that the printed edition inherits clean content, this had to be settled now, at two chants, rather than at thirty.
+
+It surfaced because I stopped to question a single spelling:
+
+> "Which one is actually correct? Which one does the official chanting book with Thai script use? They both have different pronunciations."
+
+**What I achieved**
+- Normalised ง to `ŋ` everywhere the app romanises Thai
+- Fixed both Paiboon generator prompts, which were the actual cause
+
+**What I learned**
+
+*A prompt that contradicts itself doesn't fail — it splits the difference.* My generator said `ง → ng` on one line and showed `waŋ not wang` on the next. Given a rule that disagrees with its own example, the AI picked one at random each time. That's why the data was a *mix* rather than consistently wrong, and why it looked like flakiness rather than a bug with a cause.
+
+*Fix the source, not the symptom.* Cleaning 904 cells without fixing the generator would have meant the next batch quietly reintroduced the mess.
+
+**How We Did It**
+1. Checked all 186 tokens containing "ng" for ambiguity first — `g` is a real Paiboon letter, so a blind find-and-replace could have broken real words.
+2. Changed only the romanisation column, then proved row by row that the English and Thai columns were untouched.
+3. Traced it back to the generator prompt and fixed that too, so a rerun wouldn't undo the work.
+
+**References / Conversations**
+Claude Code session, 31 July 2026. Commit `7bdc618`.
+
+---
+
+## 31 July 2026 — The second chant, and what "done" looks like
+
+**Type:** Feature
+
+**TL;DR:** Added บทพิจารณาสังขาร (Reflection on Conditioned Phenomena) — 13 verses — and used it to pin down exactly what a finished chant should look like in the app.
+
+**Why this chant mattered**
+This was the first chant added *after* deciding the book had to be print-ready, so it doubled as the specification. Everything I wanted future chants to look like had to be true of this one first — which is what made it the right test case for the prompts in the next entry.
+
+**What I achieved**
+- The chant broken **one Pali line per verse**, the way the official book breaks it — so you chant a line, read what it means, and move on
+- Three section headings inside the chant: impermanence, life and death, the body
+- Index cards that identify a chant at a glance: Thai title, romanised title, English name with its opening line, and when it's chanted
+
+**How it works**
+A verse can carry a `section` label rendered as a heading above it. Cards show a romanised title so a reader who can't read Thai script can still match the chant to a page in a printed book — it gets its own field rather than borrowing the Pali one, because mixing Pali romanisation with Thai romanisation is the exact confusion this whole project guards against.
+
+**What I learned**
+
+*Faithful means faithful, even when the source looks wrong.* My book prints `ฉุฑโท` where standard editions have `chuddho`. I kept what my book says and flagged it for checking, rather than quietly correcting my own source into someone else's. My instruction at the time was blunt on purpose:
+
+> "Just do it without changing anything from the book i.e. don't change what I pasted."
+
+*Name things the way people look for them.* I first called it "(Saṅkhāra)" — but that's a *topic* several chants touch. Renaming it by its opening line, "(Sabbe saṅkhārā aniccā)", names *this* chant, which is what you'd actually scan a contents page for.
+
+**How We Did It**
+1. Pasted the Thai straight from the official book.
+2. Had every Thai character counted in both directions — 869 in, 869 out, nothing added or dropped.
+3. Rebuilt the verse split once I saw it didn't read like a chanting book.
+4. Added the card identifiers so the index is scannable.
+
+**References / Conversations**
+Claude Code session, 31 July 2026. Commits `efd8f6b`, `b8eb4b1`, `4fc20b1`, `859bc8c`.
+
+---
+
+## 31 July 2026 — A repeatable process for adding a chant
+
+**Type:** Tooling / Strategy
+
+**TL;DR:** Built a **two-stage prompt workflow** so every future chant arrives in the app the same shape, in minutes rather than an afternoon — and printed it as a reference sheet to keep beside the chanting book.
+
+**Why I did this — the strategic bit**
+There are dozens of chants still to add. Doing each one by hand has three problems: it's **slow**, it **drifts** (chant 9 ends up structured slightly differently from chant 2), and it's **error-prone** in the one place errors matter most — the Pali. A book with inconsistent structure is a book you have to re-edit before printing.
+
+So instead of adding chants one at a time, I spent the day building the *thing that adds chants*. Four aims, all pulling the same way:
+
+- **Speed** — a pasted page becomes a structured entry in minutes
+- **Efficiency** — two tools, each doing what it is actually good at
+- **Accuracy** — the AI never invents Pali; it flags what I must check
+- **Consistency** — the same six sections, five layers and romanisation, every single time
+
+That last one is the print preparation. Consistency is cheap to enforce with a prompt and expensive to fix in a typeset book.
+
+**The process, start to finish**
+1. **Copy from the official chanting book** — the Pali in Thai script and its Thai translation
+2. **Paste into Claude.ai under Prompt 1** — it returns one JSON object: all five layers, background, meaning, section headings, plus a list of everything it wasn't sure about
+3. **Check the flagged items against the physical book** — the step nothing can do for me, and the reason the workflow has a human in the middle
+4. **Paste Prompt 2 plus that JSON into Claude Code** — it writes the chant into `chanting.py`, counts every Thai character both ways, and renders the page
+5. **Review, commit, push** — live in the app
+
+**What I achieved**
+- Both prompts written, tested on a real chant, and refined through **four versions in one day** — each caused by a real failure, not a hunch
+- Archived with reasoning, version history, an automatic scoring rubric and a check that runs on every push
+- A 7-page PDF built from the prompt file itself, so the sheet cannot drift out of date
+
+**The prompts themselves**
+Both live in [`prompts/chanting-book-entry/`](prompts/chanting-book-entry/) with their reasoning and version history, and as a printable sheet at [`chanting-book-prompts.pdf`](prompts/chanting-book-entry/chanting-book-prompts.pdf). They are not copied here on purpose — they changed four times in a day, and a journal entry can't be kept up to date the way a source file can.
+
+Two of my own instructions shaped them most:
+
+> "Make it like a book users can read/chant from and break it down verse by verse. The verses need to be broken down correctly like in the official book."
+
+> "JSON with unwrapped single-line values and the checks as a separate array."
+
+**What I learned**
+
+*Questions that aren't reporting bugs still find them.* Asking "is the JSON the same as the output?" revealed the prompt asked for the same thing twice. Asking "did that actually reach GitHub?" — it had — revealed three rules pointing at labels that no longer existed. Both were leftovers from a format change: sitting there looking authoritative, producing no error at all.
+
+*Fonts are a real constraint when you're aiming at print.* Only one font on my machine covers Thai, Pali diacritics and Paiboon at once. The warning symbol printed as empty boxes until I checked every character against the font.
+
+**Honest status**
+The prompts have been tested inside Claude Code, but **Prompt 1 has not yet been run in Claude.ai itself**, which is where it is meant to live. The first true end-to-end run is still ahead of me.
+
+**How We Did It**
+1. Wrote both prompts, then tested them on a real chant rather than a hypothetical one.
+2. Rewrote them when the output didn't read like a chanting book.
+3. Switched the handover to JSON so Thai and Paiboon can't get mangled between tools.
+4. Built the PDF from the prompt file itself so it regenerates whenever the prompts change.
+
+**References / Conversations**
+Claude Code session, 31 July 2026. Commits `2e3dc45`, `1fbe2ad`, `ca1fff3`, `a2f1964`, `40148d7`, `09de131`, `1b59559`, `9561e97`.
+
+---
+
 ## Lessons learned (the short version)
 
 - **Where files live matters** — pasting code into a chat isn't the same as putting it in your project.
