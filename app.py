@@ -5984,7 +5984,7 @@ def theravada():
 @app.route('/chanting')
 @require_access('chanting')
 def chanting_book():
-    """The chanting book — Pali, Thai, Paiboon and English, verse by verse.
+    """The Digital Chanting Book — Pali, Thai, Paiboon and English, verse by verse.
 
     Content comes from chanting.py so the same data can generate a printed
     book later. Adding a chant means appending to CHANTS; this route and the
@@ -5992,7 +5992,9 @@ def chanting_book():
     """
     return render_template('chanting.html',
                            chants=chanting.CHANTS,
-                           layers=chanting.CHANT_LAYERS)
+                           layers=chanting.CHANT_LAYERS,
+                           sections=chanting.CHANT_SECTIONS,
+                           how_to_use=chanting.HOW_TO_USE)
 
 @app.route('/bob-writings')
 def bob_writings():

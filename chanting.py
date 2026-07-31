@@ -1,8 +1,26 @@
-"""Chanting book — Pali, Thai, Paiboon and English, verse by verse.
+"""The Digital Chanting Book — Pali, Thai, Paiboon and English, verse by verse.
 
 The data lives here rather than in a template on purpose: the same structure
 renders the web page today and can generate a printed chanting book later.
 Adding a chant means appending one dict to CHANTS — nothing else changes.
+
+Every chant follows the SAME shape, so that between them the six questions a
+reader actually has are always answered in the same order:
+
+  * `title_thai` / `title_pali` / `title_english`
+                        — what is this chant?
+  * `source`            — where does it come from? (Dhammapada, Khuddakapāṭha,
+                          Suttanipāta or another canonical text)
+  * `when_chanted`      — when is it chanted in Theravāda practice?
+  * `background`        — why was it taught? The historical setting, or the
+                          origin of the chant if it was composed later.
+  * `meaning`           — what does it mean, and why is it still chanted?
+  * `invitation` + `verses`
+                        — how do I chant it?
+
+`background` and `meaning` are LISTS of paragraphs rather than one long string,
+so the page and a printed edition can space them the same way without either
+one having to split text apart.
 
 Each verse carries up to five layers, and they are NOT interchangeable:
 
@@ -43,13 +61,41 @@ CHANTS = [
         'title_english': 'Verses on the Secure and Insecure Refuge',
         'source': 'Dhammapada 188–192',
         'group': 'General chanting',
-        'note': (
-            "Chanted after the recollections. The five verses contrast the "
-            "refuges people run to when frightened — mountains, forests, "
-            "shrines — with the only refuge that actually ends suffering: "
-            "the Buddha, the Dhamma and the Sangha, seen through the Four "
-            "Noble Truths."
+
+        # The one-line summary that shows on the closed card in the index.
+        'summary': (
+            "Five verses contrasting the refuges people run to when "
+            "frightened — mountains, forests, shrines — with the only refuge "
+            "that actually ends suffering."
         ),
+
+        'when_chanted': 'After the Recollection Verses.',
+
+        'background': [
+            "During the Buddha's lifetime, many people believed that "
+            "mountains, forests, sacred trees and shrines could protect them "
+            "from danger. Observing this, the Buddha taught that although "
+            "such places may provide temporary comfort or a sense of "
+            "security, they cannot bring lasting freedom from suffering.",
+
+            "These verses were spoken to show that true refuge is not found "
+            "in external places, but in understanding and practising the "
+            "Dhamma.",
+        ],
+
+        'meaning': [
+            "The verses contrast ordinary refuges with the Triple Gem — the "
+            "Buddha, the Dhamma and the Sangha.",
+
+            "The Buddha explains that genuine refuge is found by "
+            "understanding the Four Noble Truths and following the Noble "
+            "Eightfold Path, which lead beyond suffering.",
+
+            "These verses are traditionally chanted to reaffirm confidence in "
+            "the Triple Gem and to remind practitioners that lasting safety "
+            "is found through wisdom, ethical conduct and mental cultivation "
+            "rather than external places or objects.",
+        ],
 
         # The leader's invitation. Pali, so it carries no Thai and no Paiboon.
         'invitation': {
@@ -203,12 +249,74 @@ CHANTS = [
 # The two chanted layers sit in a warm family (they are the same Pali in two
 # scripts); the three meaning layers are cool or neutral, so a glance tells you
 # whether you are looking at something to chant or something to understand.
+#
+# `note` is the short label under each toggle; `description` is the fuller
+# sentence used in "How to use this chanting book" and in the printed edition's
+# front matter.
 CHANT_LAYERS = [
-    {'key': 'pali',       'label': 'Pali (Thai script)', 'note': 'What is chanted',         'colour': 'var(--royal-burgundy)'},
-    {'key': 'pali_roman', 'label': 'Pali (romanised)',   'note': 'The same, in our script', 'colour': 'var(--isan-clay)'},
-    {'key': 'thai',       'label': 'Thai translation',   'note': 'The meaning, in Thai',    'colour': 'var(--deep-purple)'},
-    {'key': 'paiboon',    'label': 'Paiboon',            'note': 'Read the Thai aloud',     'colour': 'var(--bodhi-green)'},
-    {'key': 'english',    'label': 'English',            'note': 'The meaning, in English', 'colour': '#555555'},
+    {
+        'key': 'pali', 'label': 'Pali (Thai script)',
+        'note': 'What is chanted', 'colour': 'var(--royal-burgundy)',
+        'description': 'The original chant as recited in Thai Theravāda temples.',
+    },
+    {
+        'key': 'pali_roman', 'label': 'Pali (Romanised)',
+        'note': 'The same, in our script', 'colour': 'var(--isan-clay)',
+        'description': 'The same Pali written in the Latin alphabet to aid pronunciation.',
+    },
+    {
+        'key': 'thai', 'label': 'Thai translation',
+        'note': 'The meaning, in Thai', 'colour': 'var(--deep-purple)',
+        'description': (
+            'The meaning in Thai. In many Thai temples, this is also recited '
+            'after the Pali.'
+        ),
+    },
+    {
+        'key': 'paiboon', 'label': 'Thai (Paiboon)',
+        'note': 'Read the Thai aloud', 'colour': 'var(--bodhi-green)',
+        'description': (
+            'The Thai translation romanised for readers who cannot yet read '
+            'Thai script.'
+        ),
+    },
+    {
+        'key': 'english', 'label': 'English translation',
+        'note': 'The meaning, in English', 'colour': '#555555',
+        'description': 'The meaning in English.',
+    },
+]
+
+
+# Front matter. It opens the web page and will open the printed edition too,
+# which is the point: one book, two formats.
+HOW_TO_USE = {
+    'welcome': (
+        'Welcome to the Digital Chanting Book. Each chant is presented in '
+        'five optional layers to support both learning and practice.'
+    ),
+    'closing': (
+        'Show only the layers you need. As your confidence grows, try '
+        'chanting directly from the Pali while using the translations to '
+        'deepen your understanding.'
+    ),
+    'layout': (
+        'where it comes from, when it is chanted, its historical background, '
+        'its meaning and purpose, and then the chant itself.'
+    ),
+}
+
+
+# The standard sections every chant carries, in the order they are shown. The
+# template loops over this rather than hard-coding each heading, so a new
+# section is added in one place and appears on every chant at once.
+#
+# `collapsible` sections open on a tap: they keep the chant itself close to the
+# top for someone who just wants to chant, without hiding the context from
+# someone who wants to understand it.
+CHANT_SECTIONS = [
+    {'key': 'background', 'heading': 'Historical background', 'collapsible': True},
+    {'key': 'meaning',    'heading': 'Meaning and purpose',   'collapsible': True},
 ]
 
 

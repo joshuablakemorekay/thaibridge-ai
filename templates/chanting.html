@@ -3,11 +3,16 @@
 {% block sidebar %}{% include 'partials/sidebar_buddhism.html' %}{% endblock %}
 {% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
 
-{% block title %}Chanting Book{% endblock %}
+{% block title %}Digital Chanting Book{% endblock %}
 
 {% block extra_css %}
 <style>
-    /* ── Layer toggles ───────────────────────────────────────────────
+    /* ── Front matter: how to use the book ───────────────────────────
+       This panel is the book's opening page and its control panel at the
+       same time. The five checkboxes ARE the explanation of the five
+       layers, so a reader never meets the same list twice: reading about
+       a layer and switching it off happen in one place.
+
        A Thai chanter switches off Paiboon and English and is left with a
        clean Thai chanting book; an English chanter switches off the Thai
        script. Same page, two different books. Choices are saved in the
@@ -21,13 +26,25 @@
     }
     .layer-panel h2 {
         font-size: 1.05rem;
-        margin: 0 0 0.85rem;
+        margin: 0 0 0.6rem;
         color: var(--royal-purple);
     }
+    .panel-intro, .panel-closing {
+        color: #55483a;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        max-width: 68ch;
+        margin: 0 0 1rem;
+    }
+    .panel-closing { margin: 1rem 0 0; }
+    .panel-closing strong { color: var(--royal-purple); }
+
+    /* Two columns on a wide screen, one on a phone — enough room for each
+       layer's description to sit under its own label. */
     .layer-options {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0.75rem 1.75rem;
     }
     .layer-option {
         display: flex;
@@ -35,13 +52,14 @@
         gap: 0.5rem;
         cursor: pointer;
         font-size: 0.95rem;
-        line-height: 1.3;
+        line-height: 1.35;
     }
-    .layer-option input { margin-top: 0.2rem; flex-shrink: 0; }
+    .layer-option input { margin-top: 0.25rem; flex-shrink: 0; }
     .layer-option .layer-note {
         display: block;
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         color: #6b6b6b;
+        line-height: 1.45;
     }
 
     /* ── The index: a grid of chant cards ────────────────────────────
@@ -124,6 +142,74 @@
         border-radius: 999px;
         padding: 0.15rem 0.75rem;
         font-size: 0.8rem;
+    }
+    .card-summary {
+        display: block;
+        color: #5a5a5a;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-top: 0.6rem;
+    }
+
+    /* ── The standard layout every chant follows ─────────────────────
+       Source and occasion first as a plain two-column list, then the two
+       collapsible context sections, then the chant itself. Every chant is
+       laid out this way, so once you have read one you know where to look
+       in all the others. */
+    .chant-body { margin-top: 1.25rem; }
+
+    .chant-facts {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 0.35rem 1rem;
+        margin: 0 0 1.25rem;
+        font-size: 0.95rem;
+        max-width: 70ch;
+    }
+    .chant-facts dt {
+        color: var(--royal-purple);
+        font-weight: bold;
+    }
+    .chant-facts dd { margin: 0; color: #4a4a4a; }
+
+    /* Context sections: closed by default so the chant stays within reach
+       for someone who only came to chant, one tap away for someone who
+       came to understand. */
+    .chant-section {
+        border: 1px solid #EADFC8;
+        border-radius: 10px;
+        margin-bottom: 0.75rem;
+        background: #FFFDF8;
+        max-width: 70ch;
+    }
+    .chant-section > summary {
+        cursor: pointer;
+        padding: 0.7rem 1rem;
+        font-weight: bold;
+        color: var(--royal-purple);
+        font-size: 0.95rem;
+        list-style: none;
+    }
+    .chant-section > summary::-webkit-details-marker { display: none; }
+    .chant-section > summary::before {
+        content: '▸ ';
+        color: var(--monk-saffron);
+    }
+    .chant-section[open] > summary::before { content: '▾ '; }
+    .chant-section p {
+        margin: 0 1rem 0.9rem;
+        color: #4a4a4a;
+        line-height: 1.7;
+    }
+    .chant-section p:first-of-type { margin-top: 0.2rem; }
+
+    .chant-heading {
+        font-size: 1.1rem;
+        color: var(--royal-purple);
+        margin: 2rem 0 0;
+        padding-bottom: 0.4rem;
+        border-bottom: 2px solid var(--royal-gold);
+        max-width: 70ch;
     }
 
     .verse {
@@ -215,7 +301,11 @@
     @media (max-width: 600px) {
         .layer-pali { font-size: 1.2rem; line-height: 1.95; }
         .chant-header .title-thai { font-size: 1.5rem; }
-        .layer-options { flex-direction: column; gap: 0.6rem; }
+        /* The grid already collapses to one column here; just tighten it. */
+        .layer-options { gap: 0.85rem; }
+        /* Stack the source/occasion list rather than squeezing two columns. */
+        .chant-facts { grid-template-columns: 1fr; gap: 0.15rem; }
+        .chant-facts dd { margin-bottom: 0.5rem; }
     }
 
     @media print {
@@ -227,34 +317,54 @@
         .chant-card { border: none; box-shadow: none; padding: 0; }
         .chant-card + .chant-card[open] { break-before: page; }
         .chant-card summary::after { display: none; }
+        /* A printed page has no tap: the context sections are opened by the
+           beforeprint handler below, and here they lose their on-screen box
+           so they read as ordinary book sections. */
+        .chant-section {
+            border: none;
+            background: none;
+            margin-bottom: 1.25rem;
+            break-inside: avoid;
+        }
+        .chant-section > summary { padding: 0 0 0.3rem; }
+        .chant-section > summary::before { content: none; }
+        .chant-section p { margin-left: 0; margin-right: 0; }
+        .chant-heading { break-after: avoid; }
     }
 </style>
 {% endblock %}
 
 {% block content %}
-<h1>📿 Chanting Book <span class="thai">บทสวดมนต์</span></h1>
+<h1>📿 Digital Chanting Book <span class="thai">บทสวดมนต์</span></h1>
 
-<p style="color:#555; max-width: 62ch;">
-    Tap a chant to open it. Each one is laid out line by line: the Pali as it
-    is chanted, the Thai translation, Paiboon romanisation to read the Thai
-    aloud, and the English meaning. Switch off whichever layers you don't need.
-</p>
-
-<!-- Layer toggles -->
+<!-- Front matter. Doubles as the layer control — see the CSS note above. -->
 <div class="layer-panel">
-    <h2>Show these layers</h2>
+    <h2>How to use this chanting book</h2>
+
+    <p class="panel-intro">{{ how_to_use.welcome }}</p>
+
     <div class="layer-options">
         {% for layer in layers %}
         <label class="layer-option">
             <input type="checkbox" class="layer-toggle" data-layer="{{ layer.key }}" checked>
             <span>
                 <span class="layer-swatch" style="background: {{ layer.colour }};"></span>{{ layer.label }}
-                <span class="layer-note">{{ layer.note }}</span>
+                <span class="layer-note">{{ layer.description or layer.note }}</span>
             </span>
         </label>
         {% endfor %}
     </div>
+
+    <p class="panel-closing">{{ how_to_use.closing }}</p>
+    <p class="panel-closing">
+        <strong>Every chant follows the same layout:</strong> {{ how_to_use.layout }}
+    </p>
 </div>
+
+<h2 style="color: var(--royal-purple); margin-bottom: 0.3rem;">The chants</h2>
+<p style="color:#555; max-width: 62ch; margin-top: 0;">
+    Tap a chant to open it.
+</p>
 
 <div class="chant-book chant-grid" id="chant-book">
     {% for chant in chants %}
@@ -270,11 +380,38 @@
                 {% if chant.source %}<span class="chant-source">{{ chant.source }}</span>{% endif %}
                 <span class="card-count">{{ chant.verses|length }} verses</span>
             </span>
+            {% if chant.summary %}<span class="card-summary">{{ chant.summary }}</span>{% endif %}
         </summary>
 
-        {% if chant.note %}
-        <p style="color:#555; margin-top:1rem; max-width: 65ch;">{{ chant.note }}</p>
-        {% endif %}
+        <div class="chant-body">
+            <!-- Where it comes from, and when it is chanted. -->
+            <dl class="chant-facts">
+                {% if chant.source %}
+                <dt>Pali source</dt>
+                <dd>{{ chant.source }}</dd>
+                {% endif %}
+                {% if chant.when_chanted %}
+                <dt>When chanted</dt>
+                <dd>{{ chant.when_chanted }}</dd>
+                {% endif %}
+            </dl>
+
+            <!-- Why it was taught, and what it means. Headings come from
+                 CHANT_SECTIONS so every chant shows the same ones in the
+                 same order. -->
+            {% for section in sections %}
+            {% set paragraphs = chant.get(section.key) %}
+            {% if paragraphs %}
+            <details class="chant-section">
+                <summary>{{ section.heading }}</summary>
+                {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+            </details>
+            {% endif %}
+            {% endfor %}
+
+            <!-- How to chant it. Everything below is the chant itself,
+                 rendered layer by layer exactly as it is stored. -->
+            <h3 class="chant-heading">The chant</h3>
 
         {% if chant.invitation and chant.invitation.pali %}
         <div class="verse invitation">
@@ -297,6 +434,7 @@
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
         </div>
         {% endfor %}
+        </div><!-- /.chant-body -->
     </details>
     {% endfor %}
 </div>
@@ -348,6 +486,43 @@
     });
 
     apply();
+})();
+
+// A closed <details> prints as just its heading, which would leave the
+// background and meaning missing from a printed chant. So open every context
+// section before printing, and put them back afterwards — the printed page and
+// the screen stay the same book. Chants themselves are left alone: printing
+// only what you opened is deliberate.
+(function () {
+    var reopened = [];
+
+    function expand() {
+        reopened = [];
+        document.querySelectorAll('.chant-section:not([open])').forEach(function (section) {
+            section.open = true;
+            reopened.push(section);
+        });
+    }
+
+    function restore() {
+        reopened.forEach(function (section) { section.open = false; });
+        reopened = [];
+    }
+
+    window.addEventListener('beforeprint', expand);
+    window.addEventListener('afterprint', restore);
+
+    // Safari and older browsers fire no print events, but they do flip this
+    // media query around the print dialogue.
+    if (window.matchMedia) {
+        var printing = window.matchMedia('print');
+        var onChange = function (event) { event.matches ? expand() : restore(); };
+        if (printing.addEventListener) {
+            printing.addEventListener('change', onChange);
+        } else if (printing.addListener) {
+            printing.addListener(onChange);
+        }
+    }
 })();
 </script>
 {% endblock %}
