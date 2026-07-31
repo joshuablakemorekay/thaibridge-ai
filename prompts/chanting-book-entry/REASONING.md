@@ -2,90 +2,105 @@
 
 ## Goal
 
-Turn a page from a physical Thai chanting book into a finished entry in the
-app's Digital Chanting Book — five layers per verse, plus the background and
-meaning sections — **without the model ever inventing canonical text.**
+> *"Rather than thinking of it as a 'chanting page,' think of it as a Digital
+> Chanting Book. Then, when you publish the printed edition, you're polishing
+> and typesetting content that has already been tested by users."*
 
-That last clause is the whole design. Pali chants are exactly the kind of text
-a language model half-remembers. Ask it to fill a gap and it will produce
-something that scans beautifully, reads plausibly, and is not what the book
-says. In a chanting book destined for print, that is the worst possible failure
-mode, because nothing about the output looks wrong.
+> *"When you later publish the printed edition, very little content will need
+> changing. The web app becomes the interactive version — with collapsible
+> sections and optional text layers — while the physical book presents the same
+> material in a carefully typeset, permanent format. This gives your project a
+> consistent identity across both digital and print, rather than treating them
+> as two separate resources."*
+
+Every chant answers the same six questions: *"What is this chant? Where does it
+come from? When is it chanted? Why was it taught? What does it mean? How do I
+chant it?"*
+
+The prompt exists so that *"everytime I decide to add a new chant to the app
+Digital Chanting Book, what gets added to the app ends up looking exactly as I
+want it thanks to Prompt 1 and 2 plus my pasted Thai script."*
 
 ## Why two stages on two surfaces
 
 | Stage | Surface | Why there |
 |---|---|---|
-| 1 | Claude.ai chat | Language work — transliteration, romanisation, translation, writing the background. It needs reading and correcting, which suits a chat window. |
+| 1 | Claude.ai chat | Language work — transliteration, romanisation, translation, background. It needs reading and correcting, which suits a chat window. |
 | 2 | Claude Code | File work — writing a Python dict into `chanting.py` and proving it renders. Needs an agent that can run the app. |
 
 Splitting them also puts a human checkpoint in the middle, which is where the
 verification against the physical book actually happens.
 
-## The techniques doing the work
+## The register the prompt has to preserve
 
-**Context and examples.** Stage 1 carries a full worked chant. One example
-teaches format, register and romanisation together, far more reliably than
-description alone.
+> *"It's mostly Central Thai, but it uses a formal literary register that is
+> traditional in Buddhist scriptures and chanting books. It is not Royal Thai,
+> and it is not a separate 'monk language.'"*
 
-**Output constraints.** Fixed field labels (`TITLE_THAI:`, `VERSE 1`, `pali:`)
-so stage 2 can map them mechanically. Free-form prose here would mean guessing
-at stage 2, and guessing is the thing being designed out.
+> *"Think of it as the Thai equivalent of the language used in an English Bible
+> or the Book of Common Prayer — recognizably modern English, but more formal,
+> traditional, and rich in religious vocabulary."*
 
-**Think-first.** Stage 1 splits and pairs the text and reports what it could
-not resolve *before* producing anything, so the uncertainty surfaces instead of
-being smoothed over.
+## What the layout has to be
 
-**Role.** "I am the editor; you are the typist and translator" sets the
-relationship: the model does not get a vote on what the text says.
+> *"Make it like a book users can read/chant from and break it down verse by
+> verse. The verses need to be broken down correctly like in the official
+> book."*
 
-## The rules that came from real failures
+> *"Each Pali verse stands alone, followed immediately by its Thai meaning in
+> Paiboon romanization, making it easy to chant the Pali and then read the
+> meaning without any Thai script."*
 
-Each of these was added after something went wrong.
+## Iteration — four versions in one day
 
-**"Never reconstruct from memory."** On the first chant, four OCR errors were
-caught by reading against the physical book. A model asked to tidy those would
-have silently corrected them into a different text.
+| | Change | Cause |
+|---|---|---|
+| [v1](versions/v1-labelled-text.md) | Two stages, labelled-text output | First working version |
+| [v2](versions/v2-book-layout.md) | Working notes, bilingual sections, inline flags, closing count | A good run and a poor run differed only by luck. The good run became the spec. |
+| [v3](versions/v3-json-output.md) | JSON, single-line values, checks as an array | *"JSON with unwrapped single-line values and the checks as a separate array."* |
+| [v4](versions/v4-migration-complete.md) | Migration finished; notes moved inside the JSON; `title_roman` added | Asking whether "the JSON" and "the output" were the same thing showed they weren't. Reading stage 2 to prove it had shipped exposed three rules pointing at labels that no longer existed. |
 
-**"Add ⚠️ CHECK rather than guess."** Turns a silent corruption into a visible
-question. On the second chant this produced four flags in one pass — a missing
-Pali title, an uncertain source, a crossed Pali/Thai order, and a probable
-one-character slip (ฉุฑโท where standard editions read chuddho). None of those
-would have been visible otherwise.
+## Failure modes the final version handles
 
-**"One Pali line per verse."** The first attempt at the second chant grouped
-several Pali lines into one verse where the source ran them together. It was
-faithful, but it did not read like a chanting book — you could not chant a line
-and then read what it meant. A chanting book breaks per line, and the prompt
-now says so.
+**Reconstruction from memory.** Four OCR errors were caught against the physical
+book on chant 1. A model asked to tidy those would have rewritten the text into
+something that reads perfectly and isn't the book.
 
-**"Never invent a title, source or invitation."** The second chant had no Pali
-title and no invitation line. The instinct to fill every field is strong and
-has to be explicitly disabled; the template was changed to skip empty fields
-instead.
+**Silent tidying.** *"Just do it without changing anything from the book i.e.
+don't change what I pasted."*
 
-**"Do not convert the Paiboon."** The romanisation layer uses Paiboon+, the
-custom system described in [`romanization-system`](../romanization-system/).
-Draft outputs kept drifting into RTGS (`khɔ̌ɔng`, `thîang`, `phrá`) which,
-mixed into the same book as `kɔ̌ɔŋ`, `tîaŋ`, `prá`, stops the layer teaching
-anything. One book, one system.
+**Grouped verses.** One Pali line per verse, never merged, however short.
 
-## What "good" looks like
+**Filling gaps to look complete.** *"Forget the Pali title here because there is
+none for the pasted script."* No Pali title, no invitation, no certain source —
+leave them empty and say so.
 
-The stage 2 verification is the honest test, and it is a character count in
-both directions: every Thai and Pali character in the source appears in the
-file, and no character appears that was not in the source. On the second chant
-that came out 869 in, 869 out, nothing added or dropped.
+**Romanisation drift.** A self-contradicting instruction does not error; it
+splits the difference. `generate_paiboon.py` said `ง → ng` on one line and
+showed `waŋ not wang` on the next, producing roughly a 65/35 mix across 900
+dictionary cells. Found by asking:
 
-"It imports and the page returns 200" proves the file parses. It does not prove
-the text is right.
+> *"Which one is actually correct? Which one does the official chanting book
+> with Thai script use? They both have different pronunciations."*
 
-## Known limits
+This is the sharpest prompt-engineering lesson in the folder. The fix lived in
+another script, but the cause was a prompt that disagreed with its own example.
 
-- Stage 1 has been dry-run in Claude Code rather than in Claude.ai itself.
-  Running it in its real surface is still outstanding.
-- The `paiboon` and `pali_roman` layers remain **unreviewed drafts** until
-  checked against the physical book — flagged in the `chanting.py` docstring.
-- Attribution of a canonical source is the weakest part. The prompt tells the
-  model to omit it rather than guess, and stage 2 marks any inferred source
-  with a ⚠️ UNVERIFIED comment.
+## How fidelity is verified
+
+Compare every Thai and Pali character against the source **in both directions** —
+every character present, and no character present that was not in the source.
+Chant 2 came out 869 in, 869 out.
+
+That the file imports and the page returns 200 proves neither.
+
+## What I'd change next
+
+- Stage 1 has only been dry-run in Claude Code, which is the wrong surface.
+  Running it in Claude.ai is outstanding.
+- The rubric checks the *shape* of the output. Only the physical book can check
+  whether the Pali is right.
+- Source attribution is the weakest field, which is why an inferred one is
+  marked `⚠️ UNVERIFIED` in the data.
+
+**Tags:** `content` `agent-workflow`

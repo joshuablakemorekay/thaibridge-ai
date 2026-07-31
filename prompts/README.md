@@ -20,7 +20,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`market-research-report`](./market-research-report/) | analysis / research | Produces a grounded, source-backed market research report for the app | Yes (v1 → v3) |
 | [`product-overview-section`](./product-overview-section/) | content | Generates a structured Product Overview using a clarifying-question loop | Yes (v1 → v2) |
 | [`tones-consonant-classes`](./tones-consonant-classes/) | agent-workflow | Explore-first build of one free section teaching tones + consonant classes with progressive drills | No (single version) |
-| [`chanting-book-entry`](./chanting-book-entry/) | content | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v2) |
+| [`chanting-book-entry`](./chanting-book-entry/) | content / agent-workflow | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v4) |
 
 ## Featured iterations
 
@@ -29,6 +29,10 @@ Prompts where the v1 → final journey shows the most learning:
 ### [`market-research-report`](./market-research-report/)
 
 This started as a one-line "research the market" request. v1 gave breadth but no grounding. In v2 I named the real competitors and pointed it at their websites to scrape — and learned that *naming* a tool doesn't mean it runs (one scraping tool was never actually called, which I only caught by checking). v3 pinned a fixed 10-section structure and fed in my own source documents, turning a freeform essay into a consistent, grounded report I could actually make decisions from.
+
+### [`chanting-book-entry`](./chanting-book-entry/)
+
+Four versions in a single day, each caused by a specific failure rather than a hunch. v1 worked but produced the right content in an unreliable shape — a good run and a poor run differed by luck. v2 made the good run the spec. v3 switched to JSON because long Thai and Paiboon+ values were being mangled by line wrapping in transit. v4 was the interesting one: two questions that were not reporting bugs each found one, both migration debris — rules written for a replaced format, still sitting there looking authoritative, neither producing an error. The lesson the folder records is that **a self-contradicting instruction does not fail loudly, it splits the difference** — a rule saying `ง → ng` beside an example showing `waŋ not wang` produced roughly a 65/35 mix across 900 dictionary cells.
 
 ### [`buddhist-pdf-integration`](./buddhist-pdf-integration/)
 

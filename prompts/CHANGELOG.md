@@ -7,6 +7,30 @@ Each entry follows this format:
 
 ---
 
+## chanting-book-entry
+
+### 2026-07-31 — v4 (migration complete)
+**Change:** Moved the working notes inside the JSON object, renamed the note headings to match the keys they feed, rewrote the three stage-2 rules that still looked for the old `TITLE_PALI` / `INVITATION` / `SOURCE` labels, and added `title_roman` so a chant with a Thai title is findable by a reader who cannot read Thai script.
+**Reason:** Two questions found two bugs. Asking whether "the JSON" and "the stage 1 output" were the same thing showed they were not — the prompt asked for the notes twice, in two places. Reading stage 2 to prove it had reached GitHub showed three rules pointing at labels stage 1 stopped emitting at v3; they guarded exactly the "never invent a title, source or invitation" behaviour, and were silently dead.
+**Impact:** Removed a live hazard — the JSON is found by taking the first `{` to the last `}`, so any prose above it was one stray curly bracket away from breaking the parse. Both bugs were migration debris: rules written for a replaced format, still sitting there looking authoritative, neither producing an error.
+
+### 2026-07-31 — v3 (JSON output)
+**Change:** Stage 1 now emits one JSON object whose keys match the dict keys in `chanting.py`, every value on a single line, with the `⚠️ CHECK` flags moved into their own top-level array that names the verse each belongs to.
+**Reason:** Long values wrapped on the way through the clipboard, and Thai script, Paiboon+ diacritics and IAST all survive a wrapped line badly. Inline flags read well but were easy to lose moving text between two tools.
+**Impact:** Stage 2 maps keys straight across instead of parsing by eye, and reports how many checks it carried. Rubric rewritten to cover both newline failure modes. Found two evaluator sandbox traps on the way: no `bool` and no `list` in the pass-condition namespace.
+
+### 2026-07-31 — v2 (book layout)
+**Change:** Working notes in a fixed order, one Pali line per verse, sections numbered and bilingual (`SECTION 1 — สังขาร: The Three Characteristics`), flags beside the verse they concern, and a closing sentence counting them.
+**Reason:** v1 produced the right content but not reliably the right shape — a good run and a poor run differed by luck. Making the good run the spec removed the luck.
+**Impact:** Four `⚠️ CHECK` flags on the first real chant — a missing Pali title, a composite source, a crossed Pali/Thai order, and a probable one-character slip in `ฉุฑโท`. None would have been visible otherwise.
+
+### 2026-07-31 — v1 (two-stage workflow)
+**Change:** A two-surface prompt pair — stage 1 in Claude.ai does transliteration, romanisation, translation and background; stage 2 in Claude Code writes it into `chanting.py` and verifies it renders.
+**Reason:** Turning a page of a physical Thai chanting book into an app entry needs both language work and file work, and they suit different tools. Splitting them also puts a human checkpoint in the middle, which is where the Pali gets verified against the book.
+**Impact:** Established the rules every later version kept — the five layers are not interchangeable, never reconstruct Pali from memory, flag rather than guess, and hold the formal literary register. Chant 2 shipped from it: 13 verses, 869 Thai characters in, 869 out.
+
+---
+
 ## tones-consonant-classes
 
 ### 2026-07-19 — v1 (explore-first build)
