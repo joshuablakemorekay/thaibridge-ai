@@ -265,17 +265,18 @@ Two keys do NOT go in as-is:
                    across when you report back.
 
 Structure rules:
-- ONE Pali line per verse, exactly as the block gives them. Never merge verses
+- ONE Pali line per verse, exactly as the JSON gives them. Never merge verses
   together and never split one. Short verses stay short — a chant is read
   straight down the page, one line chanted then understood.
 - 'section' marks where a new titled movement begins. Only the first verse of
   a section carries it; the template renders it as a heading above that verse.
-- If the block has no TITLE_PALI, set 'title_pali' to an empty string '' and
-  slug the id from the English or Thai title instead. Never invent a title.
-- If the block has no INVITATION, still include the invitation dict with every
-  field set to '' — the template checks it and skips it.
-- If the block has no SOURCE, set 'source' to ''. If you attribute one
-  yourself, mark it with a ⚠️ UNVERIFIED comment saying so.
+- Empty strings are meaningful, not missing data. If 'title_pali' is "", leave
+  it "" and slug the id from the English or Thai title instead — never invent
+  a title. If every field of 'invitation' is "", keep the dict with its empty
+  fields; the template checks it and skips it. If 'source' is "", leave it "".
+  Do not fill any of them in to look complete.
+- If you attribute a source yourself, mark it with a ⚠️ UNVERIFIED comment
+  saying so.
 - Set 'group': 'General chanting' unless I say otherwise.
 
 Fidelity rules — these matter more than tidiness:
@@ -301,5 +302,5 @@ Do not commit. I'll review it first.
 
 Here is the chant:
 
-[paste the stage 1 output here]
+[paste the whole stage 1 reply here — the JSON object and its closing sentence]
 ```
