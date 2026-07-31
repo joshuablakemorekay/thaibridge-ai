@@ -212,6 +212,22 @@
         max-width: 70ch;
     }
 
+    /* A heading inside a chant, marking a new movement — "Reflection on the
+       Body" and so on. A long chant is really several short reflections, and
+       a chanting book prints those breaks; a verse carrying a `section` key
+       starts one. */
+    .verse-section {
+        font-size: 1rem;
+        color: var(--royal-purple);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 2.25rem 0 0;
+        padding-bottom: 0.35rem;
+        border-bottom: 1px dashed var(--royal-gold);
+        max-width: 70ch;
+    }
+    .verse-section:first-of-type { margin-top: 1.25rem; }
+
     .verse {
         border-left: 4px solid var(--royal-gold);
         padding: 1.1rem 0 1.1rem 1.25rem;
@@ -374,7 +390,7 @@
     <details class="chant-card" id="{{ chant.id }}">
         <summary>
             <span class="card-thai">{{ chant.title_thai }}</span>
-            <span class="card-pali">{{ chant.title_pali }}</span>
+            {% if chant.title_pali %}<span class="card-pali">{{ chant.title_pali }}</span>{% endif %}
             <span class="card-english">{{ chant.title_english }}</span>
             <span class="card-meta">
                 {% if chant.source %}<span class="chant-source">{{ chant.source }}</span>{% endif %}
@@ -425,6 +441,7 @@
         {% endif %}
 
         {% for verse in chant.verses %}
+        {% if verse.section %}<h4 class="verse-section">{{ verse.section }}</h4>{% endif %}
         <div class="verse">
             <span class="verse-number">{{ verse.number }}</span>
             <p class="layer layer-pali">{{ verse.pali }}</p>

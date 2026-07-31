@@ -236,6 +236,182 @@ CHANTS = [
             },
         ],
     },
+
+    {
+        'id': 'sankhara-contemplation',
+        'title_thai': 'บทพิจารณาสังขาร',
+        # Josh's source prints no Pali title for this chant, so there is none
+        # here. The template skips the line rather than showing a blank.
+        'title_pali': '',
+        'title_english': 'Verses on the Contemplation of Conditioned Things',
+        # ⚠️ UNVERIFIED: attributed by Claude, not taken from Josh's book.
+        # Verses 1–3 answer to Dhammapada 277–279 and the closing verse to
+        # Dhammapada 41; the middle lines are the traditional death-recollection
+        # formula. Josh to confirm what his book prints, or clear this field.
+        'source': 'Dhammapada 277–279, 41',
+        'group': 'General chanting',
+
+        'summary': (
+            "Reflections on impermanence, unsatisfactoriness and not-self, "
+            "ending with the body laid on the ground like a discarded log."
+        ),
+
+        # Taken from the heading Josh pasted: ทุกเวลาทำวัตรเช้าและเข้านอน
+        'when_chanted': 'At every morning chanting service and before sleeping.',
+
+        'background': [
+            "These verses gather three teachings the Buddha returned to "
+            "throughout his life. The first lines are the summary of the three "
+            "characteristics — that all conditioned things are impermanent, "
+            "unsatisfactory, and that all things without exception are "
+            "not-self.",
+
+            "The closing verse comes from a different occasion, when the "
+            "Buddha spoke of the body's fate once consciousness has departed: "
+            "it lies on the ground as useless as a discarded piece of "
+            "firewood. Thai temples place these together so that the "
+            "reflection moves from a general truth to the practitioner's own "
+            "body.",
+        ],
+
+        'meaning': [
+            "The chant walks deliberately from the abstract to the personal. "
+            "It begins with all conditioned things, narrows to the certainty "
+            "of death, and ends with this body, on this ground.",
+
+            "The middle verses are recited in the first person on purpose — my "
+            "life is uncertain, my death is certain — because the teaching is "
+            "not that people die but that I will.",
+
+            "It is chanted morning and night rather than at funerals, so that "
+            "the reflection becomes ordinary rather than reserved for grief. "
+            "The intention is not gloom but urgency: a life seen as short is a "
+            "life less easily wasted.",
+        ],
+
+        # Josh's source carries no invitation line, so there is none.
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+
+        # One Pali line per verse, so the chant can be read straight down
+        # the page the way it is chanted. `section` starts a new movement.
+        'verses': [
+            {
+                'section': 'Reflection on impermanence',
+                'number': 1,
+                'pali': 'สัพเพ สังขารา อะนิจจา',
+                'pali_roman': 'Sabbe saṅkhārā aniccā',
+                'thai': 'สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง, เกิดขึ้นแล้วดับไป มีแล้ว หายไป',
+                'paiboon': 'sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man mâi tîaŋ, gə̀ət-kʉ̂n lɛ́ɛo dàp bpai mii lɛ́ɛo hǎai bpai',
+                'english': 'All conditioned things — body and mind, and all material and mental phenomena without exception — are impermanent. Having arisen they cease; having been, they vanish.',
+            },
+            {
+                'number': 2,
+                'pali': 'สัพเพ สังขารา ทุกขา',
+                'pali_roman': 'Sabbe saṅkhārā dukkhā',
+                'thai': 'สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันเป็นทุกข์ทนได้ยากเพราะเกิดขึ้นแล้ว, แก่ เจ็บ ตายไป',
+                'paiboon': 'sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man bpen túk ton dâai yâak prɔ́ gə̀ət-kʉ̂n lɛ́ɛo, gɛ̀ɛ jèp dtaai bpai',
+                'english': 'All conditioned things — body and mind, and all material and mental phenomena without exception — are suffering, hard to bear, because having arisen they age, sicken and die.',
+            },
+            {
+                'number': 3,
+                'pali': 'สัพเพ ธัมมา อะนัตตา',
+                'pali_roman': 'Sabbe dhammā anattā',
+                'thai': 'สิ่งทั้งหลายทั้งปวง, ทั้งที่เป็นสังขารและมิใช่สังขาร ทั้งหมดทั้งสิ้น, ไม่ใช่ตัวไม่ใช่ตน, ไม่ควรถือว่าเรา ว่า ของเรา ว่าตัวว่าตนของเรา',
+                'paiboon': 'sìŋ táŋ-lǎai táŋ-bpuaŋ, táŋ tîi bpen sǎŋ-kǎan lɛ́ mí-châi sǎŋ-kǎan táŋ-mòt táŋ-sîn, mâi-châi dtua mâi-châi dton, mâi kuan tʉ̌ʉ wâa rao wâa kɔ̌ɔŋ rao wâa dtua wâa dton kɔ̌ɔŋ rao',
+                'english': 'All things whatsoever, conditioned and unconditioned alike, are not self. They should not be held to as "I", as "mine", or as "my self".',
+            },
+            {
+                'section': 'Reflection on life and death',
+                'number': 4,
+                'pali': 'อะธุวัง ชีวิตัง',
+                'pali_roman': 'Adhuvaṃ jīvitaṃ',
+                'thai': 'ชีวิตเป็นของไม่ยั่งยืน',
+                'paiboon': 'chii-wít bpen kɔ̌ɔŋ mâi yâŋ-yʉʉn',
+                'english': 'Life is not enduring.',
+            },
+            {
+                'number': 5,
+                'pali': 'ธุวัง มะระณัง',
+                'pali_roman': 'Dhuvaṃ maraṇaṃ',
+                'thai': 'ความตายเป็นของยั่งยืน',
+                'paiboon': 'kwaam-dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn',
+                'english': 'Death is enduring.',
+            },
+            {
+                'number': 6,
+                'pali': 'อะวัสสัง มะยา มะริตัพพัง',
+                'pali_roman': 'Avassaṃ mayā maritabbaṃ',
+                'thai': 'อันเราจะพึงตายเป็นแน่',
+                'paiboon': 'an rao jà pʉŋ dtaai bpen nɛ̂ɛ',
+                'english': 'It is certain that I must die.',
+            },
+            {
+                'number': 7,
+                'pali': 'ชีวิตัง เม อะนิยะตัง',
+                'pali_roman': 'Jīvitaṃ me aniyataṃ',
+                'thai': 'ชีวิตของเรา เป็นของไม่เที่ยง',
+                'paiboon': 'chii-wít kɔ̌ɔŋ rao bpen kɔ̌ɔŋ mâi tîaŋ',
+                'english': 'My life is uncertain.',
+            },
+            {
+                'number': 8,
+                'pali': 'มะระณะปะริโยสานัง เม ชีวิตัง',
+                'pali_roman': 'Maraṇapariyosānaṃ me jīvitaṃ',
+                'thai': 'ชีวิตของเรา มีความตายเป็นที่สุดรอบ',
+                'paiboon': 'chii-wít kɔ̌ɔŋ rao mii kwaam-dtaai bpen tîi-sùt rɔ̂ɔp',
+                'english': 'My life has death as its end.',
+            },
+            {
+                'number': 9,
+                'pali': 'มะระณัง เม นิยะตัง',
+                'pali_roman': 'Maraṇaṃ me niyataṃ',
+                'thai': 'ความตายของเรา เป็นของเที่ยง',
+                'paiboon': 'kwaam-dtaai kɔ̌ɔŋ rao bpen kɔ̌ɔŋ tîaŋ',
+                'english': 'My death is certain.',
+            },
+            {
+                'section': 'Reflection on the body',
+                'number': 10,
+                'pali': 'อะจิรัง วะตะ อะยัง กาโย',
+                'pali_roman': 'Aciraṃ vata ayaṃ kāyo',
+                'thai': 'ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย',
+                'paiboon': 'râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi',
+                'english': 'This body, alas, is a thing that does not remain long.',
+            },
+            {
+                'number': 11,
+                'pali': 'ปะฐะวิง อะธิเสสสะติ',
+                'pali_roman': 'Paṭhaviṃ adhisessati',
+                'thai': 'จักนอนทับบนแผ่นดิน',
+                'paiboon': 'jàk nɔɔn táp bon pɛ̀n-din',
+                'english': 'It will lie upon the earth.',
+            },
+            {
+                'number': 12,
+                # ฉุฑโท exactly as Josh's source prints it, so the
+                # romanisation follows it letter for letter.
+                'pali': 'ฉุฑโท อะเปตะวิญญาโณ',
+                'pali_roman': 'Chuḍdo apetaviññāṇo',
+                'thai': 'ครั้นปราศจากวิญญาณ, อันเขาทิ้งเสียแล้ว',
+                'paiboon': 'krán bpràat-sà-jàak win-yaan, an kǎo tíŋ sǐa lɛ́ɛo',
+                'english': 'Once bereft of consciousness, cast aside.',
+            },
+            {
+                'number': 13,
+                'pali': 'นิรัตถัง วะ กะลิงคะรัง',
+                'pali_roman': 'Niratthaṃ va kaliṅgaraṃ',
+                'thai': 'ประดุจดังว่าท่อนไม้และท่อนฟืน ซึ่งไร้ประโยชน์ แล้วนั้นแล',
+                'paiboon': 'bprà-dùt daŋ wâa tɔ̂n-máai lɛ́ tɔ̂n-fʉʉn sʉ̂ŋ rái bprà-yòot lɛ́ɛo nán-lɛɛ',
+                'english': 'Just like a log of wood or firewood, which is without use.',
+            },
+        ],
+    },
 ]
 
 
