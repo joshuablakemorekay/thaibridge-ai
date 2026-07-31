@@ -94,10 +94,25 @@ Chant 2 came out 869 in, 869 out.
 
 That the file imports and the page returns 200 proves neither.
 
+## How the surface was chosen
+
+Stage 1 was run in **both Claude.ai and ChatGPT against the same page of the
+official chanting book**, and the two outputs compared side by side. Claude.ai
+was clearly better for this job, so the workflow is built around it.
+
+The comparison earned its keep beyond the verdict. Running one prompt on
+identical input in two tools separates what the *prompt* is doing from what the
+*model* is doing, and the gaps it exposed became rules in the final version:
+
+- One output used RTGS spellings (`sangkhaan`, `khɔ̌ɔng`, `thîang`) where this
+  app uses Paiboon+ (`sǎŋ-kǎan`, `kɔ̌ɔŋ`, `tîaŋ`) — now pinned by an explicit
+  consonant table, with a note that a pasted sample is a *layout* example and
+  never a romanisation one.
+- One dropped the Pali-in-Thai-script layer entirely — now the first thing the
+  prompt establishes, twice over.
+
 ## What I'd change next
 
-- Stage 1 has only been dry-run in Claude Code, which is the wrong surface.
-  Running it in Claude.ai is outstanding.
 - The rubric checks the *shape* of the output. Only the physical book can check
   whether the Pali is right.
 - Source attribution is the weakest field, which is why an inferred one is

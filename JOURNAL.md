@@ -1422,8 +1422,10 @@ Two of my own instructions shaped them most:
 
 *Fonts are a real constraint when you're aiming at print.* Only one font on my machine covers Thai, Pali diacritics and Paiboon at once. The warning symbol printed as empty boxes until I checked every character against the font.
 
-**Honest status**
-The prompts have been tested inside Claude Code, but **Prompt 1 has not yet been run in Claude.ai itself**, which is where it is meant to live. The first true end-to-end run is still ahead of me.
+**Choosing the tool by testing it, not by guessing**
+Before settling on this workflow I ran **Prompt 1 in both Claude.ai and ChatGPT with the same page of Thai from the official chanting book**, and compared the two outputs side by side. **Claude.ai was clearly better for this particular job**, so that is the tool the workflow is built around.
+
+That comparison is worth more than the conclusion. Feeding one prompt the same input in two tools shows you what the *prompt* is doing versus what the *model* is doing — and the differences it exposed fed straight back into the prompt. The clearest was romanisation: one output used RTGS-style spellings (`sangkhaan`, `khɔ̌ɔng`, `thîang`) where my app uses Paiboon+ (`sǎŋ-kǎan`, `kɔ̌ɔŋ`, `tîaŋ`), and one dropped the Pali-in-Thai-script layer altogether. Both became explicit rules in the final prompt.
 
 **How We Did It**
 1. Wrote both prompts, then tested them on a real chant rather than a hypothetical one.
