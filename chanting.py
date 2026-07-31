@@ -253,7 +253,9 @@ CHANTS = [
         # kept verbatim — it is neither Pali IAST nor Paiboon+, and does not
         # need to be either: its whole job is to be findable.
         'title_roman': 'Botpijārana Saṅkhāra',
-        'title_english': 'Reflection on Conditioned Phenomena (Saṅkhāra)',
+        # Named by its opening line, the way chants are traditionally
+        # identified. It matches verse 1's `pali_roman` exactly.
+        'title_english': 'Reflection on Conditioned Phenomena (Sabbe saṅkhārā aniccā)',
         # ⚠️ UNVERIFIED: attributed by Claude, not taken from Josh's book.
         # Verses 1–3 answer to Dhammapada 277–279 and the closing verse to
         # Dhammapada 41; the middle lines are the traditional death-recollection
