@@ -1,63 +1,75 @@
-Splitting first: the paste is one continuous comma-separated run, with the Pali
-in Thai script and the Thai translation alternating. I split it into 13
-Pali/Thai pairs and paired them by meaning where the source grouped them.
+Working notes first, then the entry.
+
+Splitting the paste
+
+No invitation line. There is no หันทะ มะยัง … ภะณามะ เส anywhere in what you
+pasted, so I have not written one.
+
+13 Pali units identified, grouped into the book's three natural movements.
+
+Two ordering problems in the paste, flagged inline below with ⚠️ CHECK — I have
+kept your text as pasted and only noted the mismatch.
+
+One convention note: the sample you pasted uses kh / ph / th (RTGS-style
+aspiration) — sangkhaan, phrɔ́, thîang. That contradicts your Paiboon+ table.
+I have used your table throughout: sǎŋ-kǎan, prɔ́, tîaŋ, ŋ for ง.
 
 TITLE_THAI: บทพิจารณาสังขาร
-TITLE_ENGLISH: Verses on the Contemplation of Conditioned Things
-WHEN_CHANTED: At every morning chanting service and before sleeping.
+TITLE_ENGLISH: The Reflection on Conditioned Things
+SOURCE: Composite. Verses 1–3 correspond to Dhammapada 277–279; verses 10–13 to
+Dhammapada 41; verses 4–9 are the death-recollection formulas.
+WHEN_CHANTED: At morning chanting and again before sleeping, as the book's own
+heading directs.
 
-SUMMARY: Reflections on impermanence, unsatisfactoriness and not-self, ending
-with the body laid on the ground like a discarded log.
+SUMMARY: Thirteen short reflections on impermanence, unsatisfactoriness and
+not-self, on the certainty of death, and on the body as a discarded log.
 
 BACKGROUND:
-These verses gather three teachings the Buddha returned to throughout his life.
-The first lines are the summary of the three characteristics — that all
-conditioned things are impermanent, unsatisfactory, and that all things without
-exception are not-self.
+This passage is not a single discourse. It is a reflection compiled by Thai
+monastic editors from several places in the Pali tradition and arranged for
+daily recitation: the three verses on the characteristics of existence, the
+standard formulas for the recollection of death, and the Buddha's verse on the
+body abandoned upon the ground.
 
-The closing verse comes from a different occasion, when the Buddha spoke of the
-body's fate once consciousness has departed: it lies on the ground as useless as
-a discarded piece of firewood.
+The Buddha spoke the verse on the body after seeing a corpse cast aside,
+unclaimed and of no further use to anyone.
 
 MEANING:
-The chant walks deliberately from the abstract to the personal. It begins with
-all conditioned things, narrows to the certainty of death, and ends with this
-body, on this ground.
+The chant moves inward in three stages. It begins with what is true of all
+conditioned things, then narrows to the chanter: life is not lasting, death is
+lasting, and death is certain for me.
 
-The middle verses are recited in the first person on purpose — my life is
-uncertain, my death is certain — because the teaching is not that people die but
-that I will.
+It closes with the body itself, the thing most easily mistaken for one's own.
+The reflection does not ask the practitioner to despise the body but to see
+plainly what will become of it, so that clinging loosens of its own accord.
 
-⚠️ CHECK — the source gives no Pali title, so TITLE_PALI is omitted rather than
-invented. It also gives no invitation line, so that block is omitted.
-
-⚠️ CHECK — ฉุฑโท transliterates letter-for-letter as chuḍdo. Standard editions
-read chuddho. Please check this one character against the book.
-
-SECTION: Reflection on impermanence
+SECTION 1 — สังขาร: The Three Characteristics
 
 VERSE 1
   pali: สัพเพ สังขารา อะนิจจา
   pali_roman: Sabbe saṅkhārā aniccā
   thai: สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง
   paiboon: sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man mâi tîaŋ
-  english: All conditioned things — body and mind — are impermanent.
+  english: Conditioned things — the body and the mind — are impermanent.
 
 VERSE 2
   pali: สัพเพ สังขารา ทุกขา
   pali_roman: Sabbe saṅkhārā dukkhā
   thai: สังขารคือร่างกายจิตใจ, มันเป็นทุกข์ทนได้ยาก
   paiboon: sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, man bpen túk ton dâai yâak
-  english: All conditioned things are suffering, hard to bear.
+  english: Conditioned things are suffering, hard to bear.
+
+  ⚠️ CHECK: the paste has no space after the comma in "แล้ว,แก่". Reproduced as
+  given.
 
 VERSE 3
   pali: สัพเพ ธัมมา อะนัตตา
   pali_roman: Sabbe dhammā anattā
   thai: สิ่งทั้งหลายทั้งปวง, ไม่ใช่ตัวไม่ใช่ตน
-  paiboon: sìŋ táŋ-lǎai táŋ-bpuaŋ, mâi-châi dtua mâi-châi dton
-  english: All things whatsoever are not self.
+  paiboon: sìŋ táŋ-lǎai táŋ-bpuaŋ, mâi châi dtua mâi châi dton
+  english: All things whatsoever are not a self.
 
-SECTION: Reflection on life and death
+SECTION 2 — มะระณัสสะติ: The Recollection of Death
 
 VERSE 4
   pali: อะธุวัง ชีวิตัง
@@ -70,14 +82,21 @@ VERSE 5
   pali: ธุวัง มะระณัง
   pali_roman: Dhuvaṃ maraṇaṃ
   thai: ความตายเป็นของยั่งยืน
-  paiboon: kwaam-dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn
+  paiboon: kwaam dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn
   english: Death is enduring.
 
-SECTION: Reflection on the body
+SECTION 3 — กายะคะตาสะติ: Reflection on the Body
 
 VERSE 6
   pali: อะจิรัง วะตะ อะยัง กาโย
   pali_roman: Aciraṃ vata ayaṃ kāyo
   thai: ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย
   paiboon: râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi
-  english: This body, alas, is a thing that does not remain long.
+  english: Alas, this body will not remain standing for long.
+
+  ⚠️ CHECK: in the paste this Thai line appears before its Pali rather than
+  after. Verify the printed order.
+
+Three things need your eye against the physical book: the missing invitation
+line, the ordering swap at verse 6, and the spacing in "แล้ว,แก่". Everything
+else is your text unchanged.

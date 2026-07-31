@@ -5,8 +5,23 @@
 # that, which is why a human checkpoint sits between the two stages.
 
 prompt: chanting-book-entry
-version: 2
+version: 3
 criteria:
+  - name: opens_with_working_notes
+    description: The reply shows its splitting/pairing working before the entry
+    weight: 4
+    pass_condition: "'orking note' in output or 'Splitting' in output"
+
+  - name: sections_are_numbered_and_bilingual
+    description: Section headings carry a number and both the Thai and English name
+    weight: 4
+    pass_condition: "not re.search(r'SECTION', output) or re.search(r'SECTION\\s+\\d+\\s+—.*[฀-๿].*:', output) is not None"
+
+  - name: closes_with_a_check_count
+    description: The reply ends by counting what still needs checking against the book
+    weight: 4
+    pass_condition: "not re.search(r'⚠️|CHECK', output) or re.search(r'(need|needs) your eye|need checking|against the physical book', output) is not None"
+
   - name: uses_the_fixed_field_labels
     description: The entry carries the labels stage 2 maps from
     weight: 5

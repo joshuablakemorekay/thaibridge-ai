@@ -105,22 +105,53 @@ Vowels use ɛ ɔ ə ʉ (แ, อ, เออ, อึ). Tones: mid unmarked, low �
 high á, rising ǎ. EVERY syllable carries its tone. Syllables joined by hyphens
 within a word, spaces between words, all lower case.
 
-## Steps
+## Working notes — always come first
 
-Before writing anything, work through this and show your working briefly:
-1. Split what I pasted into: the invitation line (if any), the Pali in Thai
-   script, and the Thai translation.
-2. Pair each Pali line with its Thai translation line.
-3. Note anything you could not confidently split or pair, and say where you
-   inferred a line break rather than reading one.
+Open every reply with a short "Working notes" section, before the entry. Keep
+it to a few lines. Cover, in this order:
+
+1. **Invitation** — present or absent. If absent, say so explicitly and say you
+   have not written one.
+2. **Count** — how many Pali units you identified, and how you grouped them
+   into the chant's natural movements.
+3. **Ordering problems** — anywhere the Pali and Thai do not run in step, or a
+   translation appears before its Pali. Say you have kept my text as pasted and
+   only noted the mismatch.
+4. **Convention conflicts** — if anything I pasted uses a different
+   romanisation from the Paiboon+ table above (RTGS spellings such as
+   `sangkhaan`, `phrɔ́`, `thîang`), say so and confirm you have used the table,
+   not my sample. I sometimes paste output from other tools as a layout
+   example; the layout is the example, never the romanisation.
+
 Then produce the entry.
+
+## Reproduce oddities, don't tidy them
+
+If the source has a missing space, a doubled comma, an unusual spacing or an
+inconsistent particle, reproduce it exactly and add a ⚠️ CHECK saying what
+looks odd. Silent tidying is the failure this whole prompt exists to prevent.
+
+## Where the ⚠️ CHECK notes go
+
+Put each one **immediately under the verse it concerns**, not collected at the
+top. A flag three screens away from its verse gets skipped.
+
+Then finish the whole entry with one closing line that counts them:
+
+  "Six things need your eye against the physical book: <list them>.
+   Everything else is your text unchanged."
+
+That closing count is the most useful line in the reply — it tells me exactly
+how much checking this chant needs before I put it in the app.
 
 ## Output format — use exactly these labels
 
 TITLE_THAI: <the chant's title in Thai script>
 TITLE_PALI: <the title in IAST — omit entirely if the book gives none>
 TITLE_ENGLISH: <the traditional English title>
-SOURCE: <canonical source — omit if you are not certain, do not guess>
+SOURCE: <canonical source. If the chant is compiled from several places, write
+  "Composite." and then say which verses come from where. Omit the whole field
+  if you are not certain — do not guess.>
 WHEN_CHANTED: <one sentence on when it is recited>
 
 SUMMARY: <one sentence, max 30 words, for the index card>
@@ -137,7 +168,7 @@ INVITATION            <omit this block entirely if the book gives none>
   pali_roman: <IAST>
   english: <meaning>
 
-SECTION: <heading>    <only where a new titled section begins>
+SECTION 1 — <Thai or Pali name in Thai script>: <English name>
 
 VERSE 1
   pali: <ONE Pali line, Thai script>
@@ -146,8 +177,39 @@ VERSE 1
   paiboon: <Paiboon+ of the thai line only>
   english: <its meaning>
 
+  ⚠️ CHECK: <anything odd about THIS verse, directly underneath it>
+
 VERSE 2
   ...
+
+SECTION 2 — <Thai or Pali name in Thai script>: <English name>
+
+VERSE 5
+  ...
+
+<closing line counting everything that needs checking>
+
+## Sections — name them the way the book thinks
+
+Sections are numbered and carry BOTH names: the Thai or Pali name in Thai
+script, then the English. So:
+
+  SECTION 1 — สังขาร: The Three Characteristics
+  SECTION 2 — มะระณัสสะติ: The Recollection of Death
+  SECTION 3 — กายะคะตาสะติ: Reflection on the Body
+
+A long chant is several short reflections in sequence, and the Thai name is
+what a Thai practitioner would call that movement. If the book prints section
+headings, use those. If it does not, group by subject and say in your working
+notes that the grouping is yours, not the book's.
+
+## Romanised Pali follows the Thai script beside it
+
+`pali_roman` must transliterate the `pali` line as printed, letter for letter.
+If that produces something a standard edition spells differently, keep the
+faithful transliteration and say so in the ⚠️ CHECK — do not quietly substitute
+the standard form. The two chanted layers have to agree with each other, and a
+reader comparing them must not find them disagreeing without explanation.
 
 Confirm you understand, then wait. I will paste the first chant.
 ```
@@ -172,8 +234,12 @@ Field mapping from the block I'm pasting:
   BACKGROUND    → background  (LIST of paragraph strings, one per paragraph)
   MEANING       → meaning    (LIST of paragraph strings, one per paragraph)
   INVITATION    → invitation dict (thai and paiboon stay as empty strings '')
-  SECTION       → a 'section' key on the verse that follows it
+  SECTION n     → a 'section' key on the verse that follows it, carrying the
+                  heading text exactly as written, both names included
+                  (e.g. 'สังขาร: The Three Characteristics')
   VERSE n       → an entry in verses, with 'number': n
+  ⚠️ CHECK      → a code comment above the verse it belongs to. Never drop one
+                  silently — they are the things Josh still has to verify.
 
 Structure rules:
 - ONE Pali line per verse, exactly as the block gives them. Never merge verses
