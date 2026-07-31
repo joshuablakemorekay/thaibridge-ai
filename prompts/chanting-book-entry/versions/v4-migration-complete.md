@@ -1,8 +1,8 @@
-# v4 — Finishing the migration two questions exposed
+# v4 — Finishing the migration three questions exposed
 
 > **Status:** verbatim from the Claude Code session, 2026-07-31.
 
-Two questions, neither of which was reporting a bug, each of which found one.
+Three questions, none of them reporting a bug. Each found one.
 
 ## Question 1
 
@@ -10,41 +10,42 @@ Two questions, neither of which was reporting a bug, each of which found one.
 Does the JSON from Stage 1 mean the Stage 1 output? Is it the same thing?
 ```
 
-They were not. The prompt still told stage 1 to write working notes as a prose
-section *before* the entry, while the JSON schema also carried a
-`working_notes` key — two instructions for one thing, left over from the v3
-switch. A reply could carry the notes twice, once, or in either place depending
-on the run. That reads as the prompt being flaky rather than as a bug with a
-cause, which is the worst kind to have.
-
-**Fixed:** the whole reply is now one JSON object plus a single closing
-sentence, and the notes live in `working_notes`. The four note headings were
-renamed to match the keys they feed — `Count` → `units`, `Ordering problems` →
-`ordering` — because having the same field under two names in the same prompt is
-how the duplication got past review in the first place.
-
-**It also removed a live hazard.** The JSON is located by taking the first `{`
-to the last `}`, so any prose above it was one stray curly bracket away from
-breaking the parse — fine on nine chants, broken on the tenth, for no visible
-reason.
+They were not. The prompt asked for working notes as prose *before* the entry,
+while the schema also carried a `working_notes` key — two instructions for one
+thing, left from v3. A reply could carry the notes twice, once, or either, run
+to run. That reads as flakiness rather than a bug with a cause.
 
 ## Question 2
+
+```
+Is the JSON object and it's closing sentence contained in the whole Stage 1
+reply? Or do I get it from elsewhere?
+```
+
+Yes — but nowhere did either prompt say so. Undocumented is fine until someone
+else reads it.
+
+**Fixed by both:** the reply is now one JSON object plus a closing sentence, and
+the note headings renamed to match the keys they feed (`Count` → `units`) —
+having one field under two names is how the duplication survived review.
+
+**It removed a live hazard too.** The JSON is found by taking the first `{` to
+the last `}`, so prose above it was one stray bracket from breaking the parse —
+fine on nine chants, broken on the tenth.
+
+## Question 3
 
 ```
 Did you update the Stage 2 prompt in GitHub? I can't see any changes.
 ```
 
-It had. Reading it line by line to *prove* it had is what exposed the rest of
-the problem: three rules in stage 2 still looked for `TITLE_PALI`, `INVITATION`
-and `SOURCE` — uppercase labels of the text format stage 1 stopped emitting at
-v3. Those keys could never arrive, so those three rules could never fire.
+It had. Reading it to *prove* it exposed the rest: three rules still looked for
+`TITLE_PALI`, `INVITATION` and `SOURCE`, labels stage 1 stopped emitting at v3.
+They could never fire — and they guarded **do not invent a title, a source or an
+invitation the book does not give.** Silently dead.
 
-They guarded exactly the behaviour that matters most here: **do not invent a
-title, a source or an invitation the book does not give.** The protection was
-silently dead.
-
-**Fixed:** rewritten around what stage 1 actually sends, with the principle
-stated plainly — *an empty string is meaningful, not missing data.*
+**Fixed:** rewritten around what stage 1 sends — *an empty string is meaningful,
+not missing data.*
 
 ## Also in v4
 
@@ -53,13 +54,22 @@ Add this to chant 2 card in app Digital Chanting Book so users can quickly and
 easily identify which chant to look for in the book.
 ```
 
-Added `title_roman`: the Thai title romanised, so a reader who cannot read Thai
-script can still find the chant in a printed book. It gets its own field rather
-than borrowing `title_pali`, because mixing Pali romanisation with Thai
-romanisation is the one confusion this whole workflow is built to prevent.
+```
+Can we add Reflection on Conditioned Phenomena (Sabbe saṅkhārā aniccā) rather
+than Reflection on Conditioned Phenomena (Saṅkhāra)
+```
+
+Added `title_roman` — the Thai title romanised, so a reader who cannot read Thai
+script can find the chant in a printed book. Its own field, not `title_pali`,
+because mixing Pali and Thai romanisation is the confusion this workflow exists
+to prevent.
+
+The rename works the same way: *Saṅkhāra* is a topic several chants touch;
+*Sabbe saṅkhārā aniccā* is this chant's opening line, and opening lines are how
+chants are found.
 
 ## The lesson v4 records
 
-Both bugs were migration debris — rules written for a format that had been
-replaced, still sitting there looking authoritative. Neither produced an error.
-Both were found by a question that assumed nothing.
+All three bugs were migration debris — rules written for a format that had been
+replaced, still sitting there looking authoritative. **None produced an error.**
+All three were found by questions that assumed nothing.

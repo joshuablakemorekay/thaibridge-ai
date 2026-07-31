@@ -2,38 +2,36 @@
 
 > **Status:** verbatim from the Claude Code session, 2026-07-31.
 
+## The instruction
+
 ```
 For Prompt 1 can we add this instruction: JSON with unwrapped single-line values
 and the checks as a separate array.
 ```
 
-**Why it mattered.** Stage 1 was emitting labelled text that stage 2 had to
-parse by eye. Two things went wrong with that:
+One sentence, three decisions in it — the format, the line handling, and where
+the flags live. Each solved a different problem.
 
-- **Wrapped lines.** Long values folded across lines on the way through the
-  clipboard, and Thai script, Paiboon+ diacritics and IAST all survive a wrapped
-  line badly.
-- **Flags in transit.** Inline `⚠️ CHECK` notes read well on screen but were
-  easy to lose when moving the text between two tools.
+Asked in the same breath, and kept because it is a check rather than a request:
 
-**What v3 changed.** Stage 1 now emits one JSON object whose keys already match
-the dict keys in `chanting.py`, so stage 2 maps them straight across instead of
-interpreting them.
+```
+Also did we add this: Make it like a book users can read/chant from and break it
+down verse by verse.
+```
 
-Two rules carry the weight:
+It had been, at v2. Verifying rather than assuming is the habit that found two
+real bugs at v4.
 
-- **Every value on one line.** No wrapping, no literal newline inside a string.
-- **Checks in their own top-level array**, each naming the verse it belongs to,
-  or `null` where it concerns the whole chant. An array cannot be
-  half-carried, and stage 2 reports how many it moved across.
+## What changed and why
 
-`working_notes` stays inside the object as a reading aid; stage 2 ignores it.
+Labelled text had to be parsed by eye, and long values folded in the clipboard —
+Thai, Paiboon+ and IAST all survive a wrapped line badly. Inline flags were easy
+to lose between tools.
 
-**Rubric rewritten to match (v4 of the rubric).** Both newline failure modes are
-covered — a genuinely wrapped value stops the object parsing at all, and an
-escaped `\n` inside a value is caught by a separate criterion.
+Stage 1 now emits one JSON object whose keys already match `chanting.py`, so
+stage 2 maps rather than interprets. Every value stays on one line. Checks move
+to their own array, each naming its verse — an array cannot be half-carried.
 
-**Two sandbox traps found while writing it:** the evaluator runs pass conditions
-in a restricted namespace with no `bool` and no `list`. An array is now
-identified as "not a string, indexable, holding strings", which still catches a
-bare blob.
+Rubric rewritten to match. **Two sandbox traps found doing it:** the evaluator
+has no `bool` and no `list`, so an array is identified as "not a string,
+indexable, holding strings".
