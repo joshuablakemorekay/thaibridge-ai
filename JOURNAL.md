@@ -1576,3 +1576,54 @@ Possibly the Tipitaka itself. I want the direct teachings of the Buddha from sou
 **References / Conversations**
 
 Commit `29d9abc`. Verified live on `/bob-writings` and `/dhamma-talk/happiness-like-wealth`. SuttaCentral considered as a future source.
+
+---
+
+## 3 August 2026 — Four more chants, and a fragment that had to say so
+
+**Type:** Milestone
+
+**TL;DR:**
+- The Digital Chanting Book went from 9 chants to 12 — 186 verses to 263.
+- One chant arrived in two halves, sat on the live page as a fragment pretending to be whole, and now there's a way for a part-set chant to say so.
+- Removed the second ติลักขะณาทิคาถา. It wasn't a mistake — it was a question I'd deliberately left open, and this is me answering it.
+- One chant came from photographs rather than typed text, which is a different and larger kind of risk.
+
+**What I built**
+
+Four chants, added one at a time: เมตตานิสังสะสุตตัง (24 verses, the eleven benefits of loving-kindness in prose), เมตตานิสังสะคาถา (41 verses, the ten-stanza refrain form), ท์วัตติงสาการะปาโฐ (39 verses, all thirty-two parts of the body) and ภาระสุตตะคาถา (8 verses, on the burden of the aggregates).
+
+Also a `partial` field, which prints a notice above any chant whose text is only part-set — "An incomplete chant. Only the preamble and the first ten of the thirty-two parts are set here."
+
+**Why I did it this way**
+
+The `partial` notice holds its own sentence in `chanting.py` rather than in the template. The first sketch put the wording in the markup, which would have meant one chant's specifics baked into a block shared by every chant. Keeping the sentence beside the chant it describes means the next fragment needs no template edit at all — and it's the same rule this file has followed from the start: the data lives here, not in the page.
+
+For ท์วัตติงสาการะปาโฐ I merged the second half into the existing entry rather than appending a new one. Two entries with the same title is exactly the thing I'd just spent the morning cleaning up, and the chant's own section heading, opened at verse 6, has to span the whole enumeration to make sense.
+
+**How it works**
+
+Same pipeline as the last seven chants — transcribe once, generate the Python from that file rather than typing it, then count every Thai and Pali character both ways. Delta was 0 on all four chants. The merge worked the same way: it rebuilt the whole entry from source rather than patching it by hand.
+
+**What this means for the app**
+
+263 verses live at `/chanting`, one card per chant instead of a duplicate showing twice, and a fragment can no longer pass itself off as a finished chant.
+
+**What I learned**
+
+*A fragment that looks complete is worse than one that's obviously missing.* Ten of thirty-two parts rendered as a perfectly ordinary chant, with nothing on the page saying otherwise. Nobody reading it would have known to doubt it.
+
+*Count the thing, not the container.* Several verses name two body parts at once, so verse count isn't part count. Counting verses said 28 and looked wrong; counting parts said 32 and matched the title. The check only works if you count what you're actually claiming.
+
+*The text can settle its own arguments.* The first half printed อะโฮ where the second printed อะโธ — the same line, two ways, in one chant. I'd flagged the first as suspect; the second half proved it. The book disagreeing with itself was the evidence.
+
+*A flag is only as good as what it actually tracks.* `english_unverified` marks chants where the book prints no Thai and the English is ours. Two of these chants do print Thai, so setting it out of habit would have put a false notice on the page. Worth checking what a flag means before reaching for it.
+
+*I got a word wrong in the git history.* My commit and merge messages call the removed ติลักขะณาทิคาถา an "accidental duplicate". It wasn't. Commit `c349807` added it deliberately, on my instruction that it was a distinct chant, and flagged itself `FOR REVIEW` with the right question attached: if the book prints this chant twice, this is correct; if not, deleting it is a clean revert. Today's deletion was me answering that, not fixing a slip. The commits are pushed and I'm not rewriting them, so this is where the record gets put straight.
+
+**Still open**
+
+157 `‼ CHECK` notes now sit in `chanting.py`. ภาระสุตตะคาถา is the one to read first — its Pali and Thai were transcribed from photographs rather than typed out, so the whole entry needs reading against the book rather than spot-checking. It's live, and it's the least verified thing in the file.
+
+**References / Conversations**
+Stage-1 chant sessions; commit `c349807` for the duplicate's original open question; 157 `‼ CHECK` notes in `chanting.py`.
