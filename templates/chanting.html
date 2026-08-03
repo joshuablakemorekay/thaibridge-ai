@@ -452,6 +452,16 @@
             </p>
             {% endif %}
 
+            {# Some chants have only been set in part so far. Saying so here
+               keeps a fragment from reading as the whole chant. The sentence
+               itself lives in chanting.py beside the chant it describes, so
+               this block stays general and needs no editing per chant. #}
+            {% if chant.partial %}
+            <p class="chant-unverified">
+                <strong>An incomplete chant.</strong> {{ chant.partial }}
+            </p>
+            {% endif %}
+
             <!-- Why it was taught, and what it means. Headings come from
                  CHANT_SECTIONS so every chant shows the same ones in the
                  same order. -->
