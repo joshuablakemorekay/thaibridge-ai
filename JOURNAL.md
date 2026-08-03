@@ -1539,3 +1539,40 @@ Hand-typing Thai and Pali is exactly where a chanting book goes wrong — a lost
 
 **References / Conversations**
 Stage-1 chant sessions; 127 `‼` verification notes left in `chanting.py`.
+
+---
+
+## 3 August 2026 — Crediting two senior monks properly
+
+**Type:** Decision
+
+**TL;DR:**
+- Both essays and the Dhamma talk now name the monks behind them in full, rather than by a short name alone.
+- Ajahn Sujan's Thai isn't word-for-word, and the page now says so — which matters on a site people use to learn Thai.
+- The whole thing started from wondering how I'd credit the Pali Canon if I add it.
+
+**What I did**
+
+Added a source note to Pra Kru Bob's Writings giving his full monastic name, **Pra Kru Samu Panya Vajiro**, the Level 3 Advanced Buddhist Studies examination, his Doctorate of Science and psychology background, and the fact that he is the monk who first guided me toward AI. Upgraded the Dhamma talk credit to name **Super Pra Ajahn Sujan (Dr. Sujan), PhD in Buddhist Psychology**, and added a line explaining how he worked on the talk.
+
+**Why I did it this way**
+
+This began while I was considering adding the full 44-volume Tipitaka (the Pali Canon) from SuttaCentral to the app — the original Pali with accurate English translations. Thinking about how I would credit a body of work that size made me look at how I was crediting the two monks already on my site. I already had "By Pra Kru Bob" on both essays and a short translation credit on the talk. Both were true, but both were thin. These are senior monks who gave real work to this site, and a short name undervalues them.
+
+**What this means for the app**
+
+Ajahn Sujan didn't translate my talk literally — he reworked the wording to sharpen the points, bringing his scholarship to it. The page shows Thai and English stacked as pairs, so a learner who found they didn't match would assume they'd misread the Thai. Now the page tells them the two genuinely differ.
+
+**What I learned**
+
+*Credit is worth more when it's specific.* "By Pra Kru Bob" is a name. "Pra Kru Samu Panya Vajiro, who passed the Level 3 Advanced examination and first guided me toward AI" is a person, and tells the reader why his writing is worth their time.
+
+*Relevance isn't only about the subject.* A Computer Science degree says nothing about essays on Buddhism — but it explains why he is connected to this site at all. That earned its place.
+
+**What's next**
+
+Possibly the Tipitaka itself. I want the direct teachings of the Buddha from sources that are accurate and factual, without opinion or bias layered on top — which is exactly why SuttaCentral appeals to me, and why getting the crediting right matters before I start.
+
+**References / Conversations**
+
+Commit `29d9abc`. Verified live on `/bob-writings` and `/dhamma-talk/happiness-like-wealth`. SuttaCentral considered as a future source.
