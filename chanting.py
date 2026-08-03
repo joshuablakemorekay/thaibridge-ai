@@ -2542,6 +2542,321 @@ CHANTS = [
             },
         ],
     },
+
+    {
+        # ‼ CHECK: The Thai is printed as one continuous block after each group
+        #          of Pali lines, not line by line. Every division of a Thai
+        #          block into verse-sized portions in this entry is my
+        #          inference, not the book's layout. This affects all sixteen
+        #          verses and is the single most important thing to check
+        #          against the page.
+        # ‼ CHECK: source left empty. The book text you pasted gives no
+        #          attribution and I have not supplied one. The title names a
+        #          king victorious in the three worlds, but I have not inferred
+        #          a canonical reference from that.
+        # ‼ CHECK: The Thai translation is expansive rather than literal
+        #          throughout — three-word Pali lines receive full sentences.
+        #          My English renders the Pali line, with the Thai's additions
+        #          folded in where they clearly belong to that line. Where the
+        #          two differ in scope, the Pali governs.
+
+        'id': 'tilokavijaya-pattidana',
+        'title_thai': 'ติโลกะวิชะยะราชะปัตติทานะคาถา',
+        'title_pali': 'Tilokavijayarājapattidānagāthā',
+        # The book prints no separate romanised Thai title, so this
+        # stays empty and the template falls back to `title_pali`.
+        'title_roman': '',
+        'title_english': (
+            "The Verses on Dedicating Merit, of the King Victorious in the "
+            "Three Worlds"
+        ),
+        # Left empty on purpose: the book text gives no canonical
+        # attribution and none has been supplied from memory.
+        'source': '',
+        'group': 'General chanting',
+
+        'summary': (
+            "A dedication of all merit done by body, speech and mind to every "
+            "being, percipient or not, with the wish that all obtain excellent "
+            "food."
+        ),
+
+        'when_chanted': (
+            "Recited as a dedication of merit, sharing the fruit of one's good "
+            "actions with all beings whether they know of it or not."
+        ),
+
+        'background': [
+            "Pattidāna verses give away what has just been gained. Where an "
+            "anumodanā rejoices in another's gift, this chant assigns the "
+            "reciter's own accumulated merit outward, and does so without "
+            "reserving any portion. The title attributes the verses to a king "
+            "victorious in the three worlds, though no canonical source is "
+            "printed alongside them here.",
+
+            "The Thai translation here is expansive rather than literal, a "
+            "common feature of older Thai chanting books. A three-word Pali "
+            "line such as ติทะเส สุคะตัง กะตัง receives a full sentence naming "
+            "the Tāvatiṃsa heaven and the potency of its rewards. This means "
+            "the Thai and Pali do not run in step line by line, and the two "
+            "are paired here by meaning rather than by position.",
+        ],
+
+        'meaning': [
+            "The opening movement gathers everything eligible for dedication: "
+            "whatever wholesome action is to be done, done by body, speech and "
+            "mind, and done such that it leads to the realm of the thirty. "
+            "Nothing is set aside as too small or too private. The Thai adds "
+            "that the reciter has already accumulated and fulfilled these, so "
+            "what follows is the disposal of something actually possessed.",
+
+            "The recipients are then defined as widely as the cosmology "
+            "permits. Beings without perception and beings with perception — "
+            "the Thai glosses the first as those existing as mere form alone — "
+            "together exhaust the categories. May they all be sharers in the "
+            "fruit of the merit I have made. The formula deliberately leaves "
+            "no class of being outside the gift.",
+
+            "A practical difficulty follows, and the verses meet it directly. "
+            "Merit dedicated to those who do not know of it might seem to fall "
+            "idle, so the chant asks the devas to announce it to them. This is "
+            "why pattidāna verses are so often chanted aloud: the giving is "
+            "completed by its being made known, and where human speech cannot "
+            "reach, the devas are asked to carry it.",
+
+            "The closing movement narrows to a single, concrete wish. All "
+            "beings in the world subsist by nutriment; may they all obtain "
+            "food that is agreeable. Having dedicated merit in the largest "
+            "possible terms, the chant ends by asking for the plainest "
+            "possible good, and the Thai adds that this is done according to "
+            "the reciter's own intention, in support of their welfare and "
+            "happiness.",
+        ],
+
+        'invitation': {
+            'pali': 'หันทะ มะยัง ติโลกะวิชะยะราชะปัตติทานะคาถาโย ภะณามะ เส.',
+            'pali_roman': (
+                "handa mayaṃ tilokavijayarājapattidānagāthāyo bhaṇāma se."
+            ),
+            'thai': '',
+            'paiboon': '',
+            'english': (
+                "Now let us recite the verses on dedicating merit, of the king "
+                "victorious in the three worlds."
+            ),
+        },
+
+        'verses': [
+            {
+                'section': 'ปัตติทานะ: The Dedication of Merit',
+                'number': 1,
+                'pali': 'กัตตัพพัง กิริยัง มะมะ,',
+                'pali_roman': 'kattabbaṃ kiriyaṃ mama,',
+                'thai': 'กิจที่ควรจะกระทำ,',
+                'paiboon': 'gìt tîi kuan jà grà-tam,',
+                'english': 'The deed that is to be done by me,',
+            },
+            # ‼ CORRECTED: pali  กุละลัง → กุสะลัง. กุละลัง is a slip for
+            #              กุสะลัง (kusalaṃ); the Thai gloss กุศลกรรม on the
+            #              same line requires it. Verify against the printed
+            #              page.
+            # ‼ CORRECTED: pali_roman  kulalaṃ → kusalaṃ. Follows the กุสะลัง
+            #              correction. Verify against the printed page.
+            {
+                'number': 2,
+                'pali': 'ยังกิญจิ กุสะลัง กัมมัง,',
+                'pali_roman': 'yaṅkiñci kusalaṃ kammaṃ,',
+                'thai': 'คือกุศลกรรมสิ่งใดสิ่งหนึ่ง,',
+                'paiboon': 'kʉʉ gù-sǒn-lá-gam sìŋ dai sìŋ nʉ̀ŋ,',
+                'english': 'that is to say, whatever wholesome action there may be,',
+            },
+            # ‼ CHECK: The Thai for this line and for verse 4 are printed in
+            #          the reverse order from their Pali: the block gives the
+            #          กาย วาจา ใจ sense first and the ไตรทศ sense last. I kept
+            #          your Pali order and paired by meaning.
+            {
+                'number': 3,
+                'pali': 'ติทะเส สุคะตัง กะตัง,',
+                'pali_roman': 'tidase sugataṃ kataṃ,',
+                'thai': 'ให้เป็นไป ในเหล่าไตรทศเทพยดาทั้งหลาย, คือมีอานุภาพ วิบากสมบัติกล้า, ควรจะนำให้อุบัติบังเกิดในดาวดึงสาลัยทิพยสถาน,',
+                'paiboon': 'hâi bpen bpai nai lào dtrai-tót têep-pá-yá-daa táŋ-lǎai, kʉʉ mii aa-nú-pâap wí-bàak sǒm-bàt glâa, kuan jà nam hâi ù-bàt baŋ-gə̀ət nai daao-dʉŋ-sǎa-lai típ-pá-yá-sà-tǎan,',
+                'english': 'done such that it leads well among the thirty devas — that is, having such power and strength of resultant fortune as should bring about rebirth in the heavenly abode of Tāvatiṃsa,',
+            },
+            # ‼ CHECK: Thai reads เป็นของของตนนั้น with ของ doubled. This may
+            #          be correct (a possession of one's own) or a doubling
+            #          error. Reproduced as pasted.
+            # ‼ CORRECTED: thai  ทังปวง → ทั้งปวง. Missing mai tho; ทั้งปวง is
+            #              printed correctly at verse 7 of this chant. Verify
+            #              against the printed page.
+            # ‼ CORRECTED: paiboon  taŋ bpuaŋ → táŋ-bpuaŋ. Follows the ทั้งปวง
+            #              correction, matching the romanisation at verse 7.
+            #              Verify against the printed page.
+            # ‼ CORRECTED: paiboon  gɔ̂ɔ → gɔ̂. House style: matches the
+            #              romanisation already used elsewhere in this chanting
+            #              book. Verify against the printed page.
+            {
+                'number': 4,
+                'pali': 'กาเยนะ วาจา มะนะสา,',
+                'pali_roman': 'kāyena vācā manasā,',
+                'thai': 'อันสัตว์พึงกระทำด้วยกาย วาจาใจ เป็นของของตนนั้น ข้าพเจ้าก็ได้สะสมบำเพ็ญแล้ว มีอยู่ กุศลกรรม ทั้งปวงเหล่านั้น ข้าพเจ้าก็ได้กระทำแล้ว,',
+                'paiboon': 'an sàt pʉŋ grà-tam dûay gaai waa-jaa jai bpen kɔ̌ɔŋ kɔ̌ɔŋ dton nán kâa-pá-jâao gɔ̂ dâai sà-sǒm bam-pen lɛ́ɛo mii yùu gù-sǒn-lá-gam táŋ-bpuaŋ lào nán kâa-pá-jâao gɔ̂ dâai grà-tam lɛ́ɛo,',
+                'english': 'by body, by speech and by mind — such as a being should do and hold as their own: these I have gathered and fulfilled, and all those wholesome actions I have indeed performed,',
+            },
+            # ‼ CHECK: The source breaks the Thai as ดำรง / อยู่ across two
+            #          lines. I joined it with a single space; confirm the book
+            #          prints it as one line.
+            # ‼ CHECK: The Thai names those with saññā before those without,
+            #          the reverse of the Pali order (อะสัญญิโน then สัญญิโน).
+            #          I kept the Pali as the book prints it and paired the
+            #          Thai portions by meaning, so the Thai blocks appear here
+            #          in swapped order.
+            # ‼ CORRECTED: paiboon  gɔ̂ɔ → gɔ̂. House style: matches the
+            #              romanisation already used elsewhere in this chanting
+            #              book. Verify against the printed page.
+            {
+                'section': 'สัพเพ สัตตา: The Sharing with All Beings',
+                'number': 5,
+                'pali': 'เย จะ สัตตา อะสัญญิโน,',
+                'pali_roman': 'ye ca sattā asaññino,',
+                'thai': 'สัตว์ทั้งหลายเหล่าใดที่มิใช่สัตว์มีสัญญา ดำรง อยู่สักว่ารูปอย่างเดียวก็ดี,',
+                'paiboon': 'sàt táŋ-lǎai lào dai tîi mí-châi sàt mii sǎn-yaa dam-roŋ yùu sàk wâa rûup yàaŋ diao gɔ̂ dii,',
+                'english': 'and whatever beings are without perception, subsisting as mere form alone,',
+            },
+            # ‼ CORRECTED: paiboon  gɔ̂ɔ → gɔ̂. House style: matches the
+            #              romanisation already used elsewhere in this chanting
+            #              book. Verify against the printed page.
+            {
+                'number': 6,
+                'pali': 'เย สัตตา สัญญิโน อัตถิ,',
+                'pali_roman': 'ye sattā saññino atthi,',
+                'thai': 'สัตว์ทั้งหลายเหล่าใดที่มีสัญญาก็ดี,',
+                'paiboon': 'sàt táŋ-lǎai lào dai tîi mii sǎn-yaa gɔ̂ dii,',
+                'english': 'and whatever beings there are that possess perception,',
+            },
+            # ‼ CORRECTED: thai   6, → ,. Stray "6" removed — a footnote marker
+            #              or page number caught by OCR, not part of the text.
+            #              Only the digit is removed; the comma is kept. Verify
+            #              against the printed page.
+            # ‼ CORRECTED: paiboon   6, → ,. Follows the stray-digit removal.
+            #              Verify against the printed page.
+            {
+                'number': 7,
+                'pali': 'กะตัง ปุญญะผะลัง มัยหัง,',
+                'pali_roman': 'kataṃ puññaphalaṃ mayhaṃ,',
+                'thai': 'ผลแห่งบุญที่ข้าพเจ้าได้ก่อสร้างแล้วทั้งปวงเหล่านี้,',
+                'paiboon': 'pǒn hɛ̀ŋ bun tîi kâa-pá-jâao dâai gɔ̀ɔ-sâaŋ lɛ́ɛo táŋ-bpuaŋ lào níi,',
+                'english': 'all this fruit of merit that I have built up,',
+            },
+            # ‼ CHECK: The source breaks the Thai as ครบ / ถ้วน across two
+            #          lines. I joined it with a single space; confirm the book
+            #          prints ครบถ้วน as one word.
+            # ‼ CHECK: Thai ends with นั้น ๆ, using the mai yamok repetition
+            #          mark. The Paiboon+ renders the repetition in full as nán
+            #          nán. Confirm this is how you want yamok handled.
+            {
+                'number': 8,
+                'pali': 'สัพเพ ภาคี ภะวันตุ เต.',
+                'pali_roman': 'sabbe bhāgī bhavantu te.',
+                'thai': 'ขอสัตว์ทั้งหลายทั้งหมดครบ ถ้วนทุกหมู่เหล่า, จงเป็นผู้มีส่วนได้เสวยซึ่งผลแห่งบุญนั้น ๆ,',
+                'paiboon': 'kɔ̌ɔ sàt táŋ-lǎai táŋ-mòt króp tûan túk mùu lào, joŋ bpen pûu mii sùan dâai sà-wə̌əy sʉ̂ŋ pǒn hɛ̀ŋ bun nán nán,',
+                'english': 'may all beings, every group of them complete, be sharers in that fruit of merit.',
+            },
+            {
+                'section': 'นิเวทะนา: The Making Known',
+                'number': 9,
+                'pali': 'เย ตัง กะตัง สุวิทิตัง,',
+                'pali_roman': 'ye taṃ kataṃ suviditaṃ,',
+                'thai': 'บุญที่ข้าพเจ้าได้กระทำแล้วนั้น, สัตว์ทั้งหลายเหล่าใดได้รู้แจ้งแล้ว,',
+                'paiboon': 'bun tîi kâa-pá-jâao dâai grà-tam lɛ́ɛo nán, sàt táŋ-lǎai lào dai dâai rúu jɛ̂ɛŋ lɛ́ɛo,',
+                'english': 'Those who have come to know well what has been done —',
+            },
+            # ‼ CHECK: The source breaks the Thai as อัน / ข้าพเจ้า across two
+            #          lines. I joined it with a single space.
+            # ‼ CHECK: The Thai line ends with no punctuation, where the
+            #          surrounding Thai lines end with a comma. Reproduced as
+            #          pasted.
+            {
+                'number': 10,
+                'pali': 'ทินนัง ปุญญะผะลัง มะยา,',
+                'pali_roman': 'dinnaṃ puññaphalaṃ mayā,',
+                'thai': 'ผลแห่งบุญอัน ข้าพเจ้าได้ให้แล้วแก่สัตว์ทั้งหลายเหล่านั้น',
+                'paiboon': 'pǒn hɛ̀ŋ bun an kâa-pá-jâao dâai hâi lɛ́ɛo gɛ̀ɛ sàt táŋ-lǎai lào nán',
+                'english': 'to them the fruit of merit has been given by me.',
+            },
+            {
+                'number': 11,
+                'pali': 'เย จะ ตัตถะ นะ ชานันติ,',
+                'pali_roman': 'ye ca tattha na jānanti,',
+                'thai': 'สัตว์ทั้งหลายเหล่าใดที่ยังไม่รู้ซึ่งผลแห่งบุญนั้น มีอยู่แล้วไซร้,',
+                'paiboon': 'sàt táŋ-lǎai lào dai tîi yaŋ mâi rúu sʉ̂ŋ pǒn hɛ̀ŋ bun nán mii yùu lɛ́ɛo sái,',
+                'english': 'And if there be those who do not know of it,',
+            },
+            # ‼ CHECK: Thai ends with อนุโมทนาเกิด, which reads oddly. เถิด
+            #          would be expected in this position as a hortative.
+            #          Reproduced as pasted; compare the page.
+            # ‼ CHECK: The source breaks the Thai as ผู้ทรง / เทวฤทธานุภาพ
+            #          across two lines. I joined it with a single space.
+            # ‼ CORRECTED: thai  สัตว์เล่านั้น → สัตว์เหล่านั้น. เล่า is a slip
+            #              for เหล่า, which is printed correctly at verses 5,
+            #              6, 9, 11 and 15 of this chant. Verify against the
+            #              printed page.
+            # ‼ CORRECTED: paiboon  sàt lâo nán → sàt lào nán. Follows the
+            #              เหล่า correction, matching the romanisation
+            #              elsewhere. Verify against the printed page.
+            {
+                'number': 12,
+                'pali': 'เทวา เตสัง นิเวทะยุง.',
+                'pali_roman': 'devā tesaṃ nivedayuṃ.',
+                'thai': 'ขอเทพเจ้าผู้ทรง เทวฤทธานุภาพทั้งหลาย พึงบอกแก่สัตว์เหล่านั้น ให้รู้แล้วและอนุโมทนาเกิด,',
+                'paiboon': 'kɔ̌ɔ têep-pá-jâao pûu soŋ tee-wá-rít-taa-nú-pâap táŋ-lǎai pʉŋ bɔ̀ɔk gɛ̀ɛ sàt lào nán hâi rúu lɛ́ɛo lɛ́ à-nú-moo-tá-naa gə̀ət,',
+                'english': 'may the devas, bearing their divine might, announce it to those beings, that they may know and rejoice.',
+            },
+            {
+                'section': 'อาหาระ: The Wish for Sustenance',
+                'number': 13,
+                'pali': 'สัพเพ โลกัมหิ เย สัตตา,',
+                'pali_roman': 'sabbe lokamhi ye sattā,',
+                'thai': 'สัตว์ทั้งหลายในโลกสันนิวาส บรรดาที่มีอาหารเป็นเหตุ,',
+                'paiboon': 'sàt táŋ-lǎai nai lôok sǎn-ní-wâat ban-daa tîi mii aa-hǎan bpen hèet,',
+                'english': 'All beings in this world of dwelling together, all who have nutriment as their cause,',
+            },
+            # ‼ CHECK: The source breaks the Thai as ดำรงอยู่ / ด้วยอาหาร
+            #          across two lines. I joined it with a single space.
+            # ‼ CORRECTED: paiboon  yɔ̂ɔm → yɔ̂m. House style: matches the
+            #              romanisation already used elsewhere in this chanting
+            #              book. Verify against the printed page.
+            {
+                'number': 14,
+                'pali': 'ชีวันตาหาระเหตุกา,',
+                'pali_roman': 'jīvantāhārahetukā,',
+                'thai': 'ย่อมเป็นอยู่และดำรงอยู่ ด้วยอาหาร เป็นเครื่องหล่อเลี้ยงรูปกายนี้แล้ว,',
+                'paiboon': 'yɔ̂m bpen yùu lɛ́ dam-roŋ yùu dûay aa-hǎan bpen krʉ̂aŋ lɔ̀ɔ líaŋ rûup-bpà-gaai níi lɛ́ɛo,',
+                'english': 'who live and are sustained by food as that which nourishes this bodily form,',
+            },
+            {
+                'number': 15,
+                'pali': 'มะนุญญัง โภชะนัง สัพเพ,',
+                'pali_roman': 'manuññaṃ bhojanaṃ sabbe,',
+                'thai': 'สัตว์ทั้งหลายทั้งหมดเหล่านั้น, จงเป็นผู้ได้ซึ่งโภชนะอันอุดมประณีต,',
+                'paiboon': 'sàt táŋ-lǎai táŋ-mòt lào nán, joŋ bpen pûu dâai sʉ̂ŋ poo-chá-ná an ù-dom bprà-nîit,',
+                'english': 'may all those beings obtain food that is excellent and refined,',
+            },
+            # ‼ CHECK: The Pali ends with ติ (…เจตะสาติ.), the quotative marker
+            #          closing the whole chant, and there is no ฯ. Reproduced
+            #          as pasted; confirm no ฯ appears on the page.
+            # ‼ CHECK: The final Thai line ends with no punctuation after แล,
+            #          unlike the comma-terminated lines throughout. Reproduced
+            #          as pasted.
+            {
+                'number': 16,
+                'pali': 'ละภันตุ มะมะ เจตะสาติ.',
+                'pali_roman': 'labhantu mama cetasāti.',
+                'thai': 'เป็นที่เจริญแห่งจิต สำเร็จด้วยบุญฤทธิ์ ตามจิตของข้าพเจ้าจำนงเกื้อหนุนซึ่งความสุขประโยชน์ ด้วยประการฉะนี้แล',
+                'paiboon': 'bpen tîi jà-rəən hɛ̀ŋ jìt sǎm-rèt dûay bun-yá-rít dtaam jìt kɔ̌ɔŋ kâa-pá-jâao jam-noŋ gʉ̂a-nǔn sʉ̂ŋ kwaam sùk bprà-yòot dûay bprà-gaan chà-níi lɛɛ',
+                'english': 'food that gladdens the mind, accomplished by the power of merit, according to my own intention in support of their welfare and happiness. So it is.',
+            },
+        ],
+    },
 ]
 
 
