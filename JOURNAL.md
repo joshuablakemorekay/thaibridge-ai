@@ -1504,3 +1504,38 @@ Claude Code session, 31 July 2026. Commits `2e3dc45`, `1fbe2ad`, `ca1fff3`, `a2f
 - **Version control is a safety net** — it let me take risks and roll back.
 - **Give AI small, specific jobs** — and review every change before accepting it.
 - **Two AI products, two bills** — Claude Code is billed separately from the Claude.ai subscription.
+
+---
+
+## 3 August 2026 — Seven chants in, and a pipeline that proves nothing was lost
+
+**Type:** Milestone
+
+**TL;DR:**
+- The Digital Chanting Book went from 2 chants to 9 — 18 verses to 186.
+- I stopped hand-typing chants and had them generated mechanically from the source, so no Pali could be quietly altered on the way in.
+- Every correction now keeps the original reading next to it, so I can still check it against my physical book.
+
+**What I built**
+Seven new chants, each one added, verified and committed on its own before the next was started. Two of them are printed Pali-only, so the app now says on the page that their English is a working translation, not the book's own words.
+
+**Why I did it this way**
+Hand-typing Thai and Pali is exactly where a chanting book goes wrong — a lost space or a swapped tone mark is invisible on screen and wrong forever in print. So each chant was transcribed once, then the Python was *generated* from that file. Every Pali, Thai and Paiboon line is written as one unwrapped line, so the code that wraps text physically can't reach them.
+
+**What I learned**
+
+*A correction that hides the evidence is worse than the error.* When I authorised fixing the Thai, the fix had to keep the original reading in a note beside it. Correcting silently would have removed the very thing I need to check against the book.
+
+*Only correct what the text itself proves.* `เล่า` → `เหล่า` is fair when the same chant spells it correctly five times. `เกิด` → `เถิด` only *reads* better — that one stays flagged.
+
+*A denylist only catches what you've already seen.* A stray key kept arriving under new names — `note`, `stanza_note`, `line_break_note`. Listing the bad names failed; listing the *good* ones caught it every time.
+
+**How We Did It**
+1. Transcribed each chant once into a plain data file.
+2. Generated the Python from it, rather than typing it out.
+3. Counted every Thai and Pali character both ways — delta 0, every chant.
+4. Rendered the real page to confirm verse counts, headings and layers.
+5. Committed one chant at a time, so any problem stays isolated.
+
+**References / Conversations**
+Stage-1 chant sessions; 127 `‼` verification notes left in `chanting.py`.
