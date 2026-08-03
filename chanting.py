@@ -253,9 +253,11 @@ CHANTS = [
         # kept verbatim — it is neither Pali IAST nor Paiboon+, and does not
         # need to be either: its whole job is to be findable.
         'title_roman': 'Botpijārana Saṅkhāra',
-        # Named by its opening line, the way chants are traditionally
-        # identified. It matches verse 1's `pali_roman` exactly.
-        'title_english': 'Reflection on Conditioned Phenomena (Sabbe saṅkhārā aniccā)',
+        # Named by the first word of its opening line, the way chants are
+        # traditionally identified. Shortened to `Sabbe` on Josh's instruction;
+        # verse 1 opens `Sabbe saṅkhārā aniccā`, so this is the opening word
+        # rather than the whole opening line.
+        'title_english': 'Reflection on Conditioned Phenomena (Sabbe)',
         # ⚠️ UNVERIFIED: attributed by Claude, not taken from Josh's book.
         # Verses 1–3 answer to Dhammapada 277–279 and the closing verse to
         # Dhammapada 41; the middle lines are the traditional death-recollection
