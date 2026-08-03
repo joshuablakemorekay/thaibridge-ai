@@ -1321,6 +1321,272 @@ CHANTS = [
             },
         ],
     },
+
+    {
+        # ‼ CHECK: No invitation line is present in what you pasted. I have not
+        #          written one. Confirm the book prints none.
+        # ‼ CHECK: The book prints no section headings. The three sections and
+        #          their names are my grouping by subject, not the book's; the
+        #          third is a single line and could equally be run on to the
+        #          second.
+        # ‼ CHECK: source left empty. The book text you pasted gives no
+        #          attribution and I have not supplied one. If the book prints
+        #          a source line it needs adding by hand.
+        # ‼ CHECK: The Thai line ธรรมที่ควรพิจารณาเนืองๆ under the heading is a
+        #          subtitle, not part of the chant, so I placed it nowhere in
+        #          the verses. Confirm the book sets it as a subtitle and not
+        #          as a first line.
+        # ‼ CHECK: The parenthesised forms อะนะตีตา, ทายาทา are the feminine
+        #          alternatives, printed for a female reciter. I reproduced the
+        #          parentheses in both the pali and pali_roman layers rather
+        #          than resolving them. Check this is how you want alternatives
+        #          handled in the app.
+
+        'id': 'abhinha-paccavekkhana',
+        'title_thai': 'อะภิณหะปัจจะเวกขะณะ',
+        'title_pali': 'Abhiṇhapaccavekkhaṇa',
+        # The book prints no separate romanised Thai title, so this
+        # stays empty and the template falls back to `title_pali`.
+        'title_roman': '',
+        'title_english': 'The Subjects for Frequent Recollection',
+        # Left empty on purpose: the book text gives no canonical
+        # attribution and none has been supplied from memory.
+        'source': '',
+        'group': 'General chanting',
+
+        'summary': (
+            "Five things to be recollected constantly — ageing, sickness, "
+            "death, separation from all that is dear, and ownership of one's "
+            "own kamma."
+        ),
+
+        'when_chanted': (
+            "Recited as part of the daily reflections, commonly in the evening "
+            "chanting and by lay and monastic alike."
+        ),
+
+        'background': [
+            "This is among the best known of the short reflections, given "
+            "equally to lay people and to monastics, and the book gives it a "
+            "Thai subtitle — ธรรมที่ควรพิจารณาเนืองๆ, the teachings that "
+            "should be reflected upon frequently — which states its purpose "
+            "plainly. The last line makes the instruction explicit: these are "
+            "to be reflected upon in just this way, and often.",
+
+            "The text carries a feature rare in a chanting book: alternative "
+            "forms printed in parentheses. อะนะตีโต is the masculine form and "
+            "อะนะตีตา the feminine, and likewise ทายาโท and ทายาทา. A reciter "
+            "says whichever agrees with themselves. Their presence in the "
+            "printed page is a sign that this reflection is meant to be spoken "
+            "in the first person and meant honestly, not merely read.",
+        ],
+
+        'meaning': [
+            "The first five subjects proceed by a single repeated "
+            "construction: I am of such a nature, and I have not gone beyond "
+            "it. Ageing, sickness and death are not presented as misfortunes "
+            "that may arrive but as ธรรมดา — the ordinary way of things, what "
+            "is normal. The Thai word does the same work as the Pali dhamma "
+            "here: it names these not as intrusions upon life but as the "
+            "constitution of it.",
+
+            "The fifth subject shifts from the body to what surrounds it. "
+            "นานาภาโว วินาภาโว — becoming otherwise, becoming separate — is "
+            "rendered by the Thai as พลัดพรากจาก, to be parted from all that "
+            "is loved and pleasing. The reflection does not ask the reciter to "
+            "love less; it asks them to hold what they love in the knowledge "
+            "that parting is already contained in the having.",
+
+            "The sixth subject answers the first five. Where they describe "
+            "what cannot be escaped, this one names what remains one's own: "
+            "kamma as possession, inheritance, origin, kin and refuge. The "
+            "construction is deliberate — each is a relationship one might "
+            "otherwise claim with property, family or a protector, and each is "
+            "here assigned to one's own action instead. The closing lines draw "
+            "the consequence: whatever deed I do, fair or foul, of that I "
+            "shall be the heir.",
+        ],
+
+        # The book prints no invitation line, so every field stays
+        # empty; the template checks `invitation.pali` and skips it.
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+
+        'verses': [
+            # ‼ CHECK: The Thai line ends with no punctuation, where the Pali
+            #          ends with a comma. The same holds for every Thai line in
+            #          this chant except verse 16. Reproduced as pasted.
+            {
+                'section': 'อะภิณหะปัจจะเวกขะณะ: The Five Recollections',
+                'number': 1,
+                'pali': 'ชะราธัมโมมหิ,',
+                'pali_roman': 'jarādhammomhi,',
+                'thai': 'เรามีความแก่เป็นธรรมดา',
+                'paiboon': 'rao mii kwaam gɛ̀ɛ bpen tam-má-daa',
+                'english': 'I am of the nature to age,',
+            },
+            {
+                'number': 2,
+                'pali': 'ชะรัง อะนะตีโต (อะนะตีตา),',
+                'pali_roman': 'jaraṃ anatīto (anatītā),',
+                'thai': 'จักล่วงพ้นความแก่ไปไม่ได้',
+                'paiboon': 'jàk lûaŋ pón kwaam gɛ̀ɛ bpai mâi dâai',
+                'english': 'I have not gone beyond ageing,',
+            },
+            # ‼ CHECK: Pali reads พ์ยาธิธัมโมมหิ with a thanthakhat over พ์. I
+            #          transliterated faithfully as byādhi-; standard editions
+            #          read byādhi with no such mark in Thai script. Same at
+            #          verse 4.
+            {
+                'number': 3,
+                'pali': 'พ์ยาธิธัมโมมหิ,',
+                'pali_roman': 'byādhidhammomhi,',
+                'thai': 'เรามีความเจ็บไข้เป็นธรรมดา',
+                'paiboon': 'rao mii kwaam jèp kâi bpen tam-má-daa',
+                'english': 'I am of the nature to sicken,',
+            },
+            {
+                'number': 4,
+                'pali': 'พ์ยาธิง อะนะตีโต (อะนะตีตา),',
+                'pali_roman': 'byādhiṃ anatīto (anatītā),',
+                'thai': 'จักล่วงพ้นความเจ็บไข้ไปไม่ได้',
+                'paiboon': 'jàk lûaŋ pón kwaam jèp kâi bpai mâi dâai',
+                'english': 'I have not gone beyond sickness,',
+            },
+            {
+                'number': 5,
+                'pali': 'มะระณะธัมโมมหิ,',
+                'pali_roman': 'maraṇadhammomhi,',
+                'thai': 'เรามีความตายเป็นธรรมดา',
+                'paiboon': 'rao mii kwaam dtaai bpen tam-má-daa',
+                'english': 'I am of the nature to die,',
+            },
+            {
+                'number': 6,
+                'pali': 'มะระณัง อะนะตีโต (อะนะตีตา),',
+                'pali_roman': 'maraṇaṃ anatīto (anatītā),',
+                'thai': 'จักล่วงพ้นความตายไปไม่ได้',
+                'paiboon': 'jàk lûaŋ pón kwaam dtaai bpai mâi dâai',
+                'english': 'I have not gone beyond death,',
+            },
+            # ‼ CHECK: Pali ends with a full stop, unlike the comma-terminated
+            #          lines around it. This is the fifth recollection and may
+            #          mark the end of a group in the book's own layout.
+            # ‼ CORRECTED: thai  ทั้งหลาย ทั้งปวง → ทั้งหลายทั้งปวง. Stray
+            #              space closed up in the fixed compound
+            #              ทั้งหลายทั้งปวง, which บทพิจารณาสังขาร already
+            #              prints solid. Verify against the printed page.
+            {
+                'number': 7,
+                'pali': 'สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.',
+                'pali_roman': 'sabbehi me piyehi manāpehi nānābhāvo vinābhāvo.',
+                'thai': 'เราจักต้องพลัดพรากจากของรักของชอบใจทั้งหลายทั้งปวง',
+                'paiboon': 'rao jàk dtɔ̂ŋ plát prâak jàak kɔ̌ɔŋ rák kɔ̌ɔŋ chɔ̂ɔp jai táŋ-lǎai táŋ-bpuaŋ',
+                'english': 'I must be parted and separated from all that is dear and pleasing to me.',
+            },
+            # ‼ CHECK: Thai reads เป็นของๆ ตน with a doubled mai yamok and a
+            #          space before ตน. Reproduced as pasted; the Paiboon+
+            #          renders the repetition as kɔ̌ɔŋ kɔ̌ɔŋ.
+            {
+                'section': 'กรรม: The Reflection on Kamma',
+                'number': 8,
+                'pali': 'กัมมัสสะโกมหิ,',
+                'pali_roman': 'kammassakomhi,',
+                'thai': 'เราเป็นผู้มีกรรมเป็นของๆ ตน',
+                'paiboon': 'rao bpen pûu mii gam bpen kɔ̌ɔŋ kɔ̌ɔŋ dton',
+                'english': 'I am the owner of my kamma,',
+            },
+            # ‼ CHECK: Thai reads เรามีกรรมเป็นทายาท without ผู้, where verses
+            #          8, 10, 11 and 12 all read เราเป็นผู้มีกรรมเป็น.
+            #          Reproduced as pasted; check whether ผู้ is dropped in
+            #          the book.
+            {
+                'number': 9,
+                'pali': 'กัมมะทายาโท,',
+                'pali_roman': 'kammadāyādo,',
+                'thai': 'เรามีกรรมเป็นทายาท',
+                'paiboon': 'rao mii gam bpen taa-yâat',
+                'english': 'I am the heir to my kamma,',
+            },
+            {
+                'number': 10,
+                'pali': 'กัมมะโยนิ,',
+                'pali_roman': 'kammayoni,',
+                'thai': 'เราเป็นผู้มีกรรมเป็นกำเนิด',
+                'paiboon': 'rao bpen pûu mii gam bpen gam-nə̀ət',
+                'english': 'I am born of my kamma,',
+            },
+            # ‼ CHECK: Pali reads กัมมะพันธุ with no closing comma visible in
+            #          what you pasted — the comma is present. Disregard if the
+            #          printed line matches; flagged because the preceding line
+            #          กัมมะทายาโท, and this one differ in no other respect.
+            {
+                'number': 11,
+                'pali': 'กัมมะพันธุ,',
+                'pali_roman': 'kammabandhu,',
+                'thai': 'เราเป็นผู้มีกรรมเป็นเผ่าพันธุ์',
+                'paiboon': 'rao bpen pûu mii gam bpen pào-pan',
+                'english': 'I am kin to my kamma,',
+            },
+            {
+                'number': 12,
+                'pali': 'กัมมะปะฏิสะระโณ,',
+                'pali_roman': 'kammapaṭisaraṇo,',
+                'thai': 'เราเป็นผู้มีกรรมเป็นที่พึ่งอาศัย',
+                'paiboon': 'rao bpen pûu mii gam bpen tîi pʉ̂ŋ aa-sǎi',
+                'english': 'I abide supported by my kamma,',
+            },
+            {
+                'number': 13,
+                'pali': 'ยัง กัมมัง กะริสสามิ,',
+                'pali_roman': 'yaṃ kammaṃ karissāmi,',
+                'thai': 'เราจักทำกรรมอันใดไว้',
+                'paiboon': 'rao jàk tam gam an dai wái',
+                'english': 'Whatever kamma I shall do,',
+            },
+            # ‼ CORRECTED: paiboon  gɔ̂ɔ → gɔ̂. House style: matches the
+            #              romanisation already used elsewhere in this chanting
+            #              book. Verify against the printed page.
+            {
+                'number': 14,
+                'pali': 'กัล์ยาณัง วา ปาปะกัง วา,',
+                'pali_roman': 'kalyāṇaṃ vā pāpakaṃ vā,',
+                'thai': 'ดีก็ตาม ชั่วก็ตาม',
+                'paiboon': 'dii gɔ̂ dtaam chûa gɔ̂ dtaam',
+                'english': 'whether fair or foul,',
+            },
+            # ‼ CHECK: The Thai of this verse runs straight into the Pali of
+            #          verse 16 with no break: …ของกรรมอันนั้นเอวัง อัมเหหิ…. I
+            #          split them at อันนั้น / เอวัง. Verify the split point
+            #          against the page.
+            {
+                'number': 15,
+                'pali': 'ตัสสะ ทายาโท (ทายาทา) ภะวิสสามิ.',
+                'pali_roman': 'tassa dāyādo (dāyādā) bhavissāmi.',
+                'thai': 'เราจักเป็นผู้รับผลของกรรมอันนั้น',
+                'paiboon': 'rao jàk bpen pûu ráp pǒn kɔ̌ɔŋ gam an nán',
+                'english': 'of that I shall be the heir.',
+            },
+            # ‼ CHECK: The source breaks the Thai as อย่างนี้ / แล. across two
+            #          lines, with แล. alone on the final line. I joined it
+            #          with a single space; confirm the book prints it as one
+            #          line.
+            {
+                'section': 'เอวัง: The Closing Exhortation',
+                'number': 16,
+                'pali': 'เอวัง อัมเหหิ อะภิณหัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'evaṃ amhehi abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': 'เราทั้งหลาย พึงพิจารณาเนืองๆ อย่างนี้ แล.',
+                'paiboon': 'rao táŋ-lǎai pʉŋ pí-jaa-rá-naa nʉaŋ nʉaŋ yàaŋ níi lɛɛ.',
+                'english': 'Thus should we reflect, frequently and in this way.',
+            },
+        ],
+    },
 ]
 
 
