@@ -1831,6 +1831,284 @@ CHANTS = [
             },
         ],
     },
+
+    {
+        # ‼ CHECK: No Thai translation layer exists anywhere in what you pasted
+        #          — this chant is printed in Pali only. Every thai and paiboon
+        #          field is empty. I have not supplied a translation from
+        #          memory. Check whether the book prints one on a facing page;
+        #          if not, the entry stands at two layers, as with chant 7.
+        # ‼ CHECK: The English throughout is my own rendering of the Pali, not
+        #          a translation of anything the book prints. It has no
+        #          authority from the source and should be treated as
+        #          provisional.
+        # ‼ CHECK: No invitation line is present. I have not written one.
+        #          Confirm the book prints none.
+        # ‼ CHECK: source left empty. Chant 7 carried a footnote giving วิ.
+        #          มหา. and ที. มหา. references, but nothing comparable appears
+        #          here in what you pasted. Check the foot of the page for a
+        #          footnote that may not have been copied.
+        # ‼ CHECK: The book prints no section headings. All four sections and
+        #          their names are my grouping by subject, not the book's.
+        # ‼ CHECK: The heading is numbered 8. in the source. As with chant 7, I
+        #          have taken this as the book's chant number and left it out
+        #          of title_thai.
+
+        'id': 'devatabhisammantana',
+        'title_thai': 'เทวะตาภิสัมมันตะนะคาถา',
+        'title_pali': 'Devatābhisammantanagāthā',
+        # The book prints no separate romanised Thai title, so this
+        # stays empty and the template falls back to `title_pali`.
+        'title_roman': '',
+        'title_english': 'The Verses of Address to the Devas',
+        # Left empty on purpose: the book text gives no canonical
+        # attribution and none has been supplied from memory.
+        'source': '',
+        'group': 'General chanting',
+
+        # The book prints Pali only for this chant — no Thai
+        # translation layer exists. The English below was written for
+        # this edition rather than taken from the book, so the page
+        # says so plainly instead of letting it pass as the source's.
+        'english_unverified': True,
+
+        'summary': (
+            "An address to all beings gathered, earthbound or in the air: hear "
+            "this well-spoken word, be kindly to humankind, and guard those "
+            "who make offerings."
+        ),
+
+        'when_chanted': (
+            "Chanted as an address to the unseen beings present at a place, "
+            "commonly at the opening of a blessing ceremony or the "
+            "consecration of a site."
+        ),
+
+        'background': [
+            "This chant belongs with the preceding one and follows it in the "
+            "book's numbering, but its posture is different. The last set "
+            "dedicated merit to the devas; this one speaks to them directly. "
+            "It opens by naming who is being addressed — beings gathered here, "
+            "whether of the earth or of the intermediate space — and asks "
+            "first for their attention rather than their favour.",
+
+            "The preceding chant carried a canonical footnote; this one is "
+            "printed with no attribution at all, and none has been supplied in "
+            "its place. No Thai rendering appears beneath it either, so the "
+            "chant is given here with its Pali and an English translation "
+            "only.",
+        ],
+
+        'meaning': [
+            "The opening stanza is an address, not a request. It calls upon "
+            "whatever beings have assembled, ภุมมานิ or อันตะลิกเข — of the "
+            "earth or of the air — and asks two things of them: that they be "
+            "glad in mind, and that they listen respectfully to what is about "
+            "to be said. The order matters. Nothing is asked of these beings "
+            "until they have been greeted and their goodwill sought.",
+
+            "The second movement states what is being offered them: a "
+            "well-spoken word, something that gives rise to mindfulness in "
+            "merit, free of evil, an instruction in Dhamma for those who would "
+            "follow it. The gift to the devas is the teaching itself. Only "
+            "after this does the verse turn, with ตัส์มา หิ, therefore — and "
+            "the request follows.",
+
+            "The request is for loving-kindness towards the human race, and "
+            "specifically towards those who bear strong devotion to these "
+            "beings and who carry offerings by day and by night. The final "
+            "stanza gives the reason with unusual candour: human beings are of "
+            "slender power, while these beings are unseen and of great might. "
+            "The asymmetry is stated plainly, and the closing line draws its "
+            "conclusion — therefore guard them, being heedful.",
+        ],
+
+        # The book prints no invitation line, so every field stays
+        # empty; the template checks `invitation.pali` and skips it.
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+
+        'verses': [
+            {
+                'section': 'ยานีธะ ภูตานิ: The Address to the Assembled Beings',
+                'number': 1,
+                'pali': 'ยานีธะ ภูตานิ สะมาคะตานิ',
+                'pali_roman': 'yānīdha bhūtāni samāgatāni',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever beings are here assembled,',
+            },
+            {
+                'number': 2,
+                'pali': 'ภุมมานิ วา ยานิ วะ อันตะลิกเข',
+                'pali_roman': 'bhummāni vā yāni va antalikkhe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whether of the earth or those in the air,',
+            },
+            # ‼ CHECK: สัพเพ วะ is printed as two words. Some editions set this
+            #          solid as สัพเพวะ (sabbeva). I kept the printed spacing
+            #          and transliterated it as printed rather than
+            #          substituting.
+            {
+                'number': 3,
+                'pali': 'สัพเพ วะ ภูตา สุมะนา ภะวันตุ',
+                'pali_roman': 'sabbe va bhūtā sumanā bhavantu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may all those beings be glad of mind,',
+            },
+            {
+                'number': 4,
+                'pali': 'อะโถปิ สักกัจจะ สุณันตุ ภาสิตัง.',
+                'pali_roman': 'athopi sakkacca suṇantu bhāsitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and moreover let them listen respectfully to what is spoken.',
+            },
+            {
+                'section': 'สุภาสิตัง: The Offering of the Well-Spoken Word',
+                'number': 5,
+                'pali': 'สุภาสิตัง กิญจิปิ โว ภะเณมุ',
+                'pali_roman': 'subhāsitaṃ kiñcipi vo bhaṇemu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Some little that is well spoken we would utter to you,',
+            },
+            {
+                'number': 6,
+                'pali': 'ปุญเญ สะตุปปาทะกะรัง อะปาปัง',
+                'pali_roman': 'puññe satuppādakaraṃ apāpaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'giving rise to mindfulness in merit, free of evil,',
+            },
+            {
+                'number': 7,
+                'pali': 'ธัมมูปะเทสัง อะนุการะกานัง',
+                'pali_roman': 'dhammūpadesaṃ anukārakānaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'an instruction in Dhamma for those who would follow it.',
+            },
+            # ‼ CHECK: This line ends with no terminal punctuation, where
+            #          verses 4, 12 and 16 each close their stanza with a full
+            #          stop. Its sense also runs straight into verse 9, so the
+            #          second and third stanzas may be a single eight-line
+            #          stanza in the book. My section break here is an
+            #          inference; verify the stanza division.
+            # ‼ CORRECTED: pali  ตัสมา → ตัส์มา. The same word is spelled two
+            #              ways in one chant: ตัสมา here, ตัส์มา at verse 16.
+            #              The thanthakhat form matches the book's own
+            #              convention for a Pali consonant cluster (พาฬ์หัง in
+            #              verse 10, ยัส์มิง in the preceding chant), so verse
+            #              16 is taken as correct. Both already transliterate
+            #              identically as tasmā, so pali_roman is unchanged.
+            #              Verify against the printed page.
+            {
+                'number': 8,
+                'pali': 'ตัส์มา หิ ภูตานิ สะเมนตุ สัพเพ',
+                'pali_roman': 'tasmā hi bhūtāni samentu sabbe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Therefore let all beings assemble.',
+            },
+            {
+                'section': 'เมตตา: The Exhortation to Loving-Kindness',
+                'number': 9,
+                'pali': 'เมตตัง กะโรถะ มานุสิยา ปะชายะ',
+                'pali_roman': 'mettaṃ karotha mānusiyā pajāya',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Show loving-kindness towards the race of men,',
+            },
+            # ‼ CHECK: พาฬ์หัง carries thanthakhat over ฬ์. Transliterated
+            #          faithfully as bāḷhaṃ; confirm the mark placement, since
+            #          ฬ with thanthakhat is unusual.
+            {
+                'number': 10,
+                'pali': 'ภูเตสุ พาฬ์หัง กะตะภัตติกายะ',
+                'pali_roman': 'bhūtesu bāḷhaṃ katabhattikāya',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who bear strong devotion towards the beings,',
+            },
+            # ‼ CHECK: This line runs to eleven syllables against the ten or
+            #          eleven of its neighbours, and เย sits between the verb
+            #          and its object. Reproduced as pasted; worth checking the
+            #          word order against the page in case a word has been
+            #          transposed.
+            {
+                'number': 11,
+                'pali': 'ทิวา จะ รัตโต จะ หะรันติ เย พะลิง',
+                'pali_roman': 'divā ca ratto ca haranti ye baliṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who by day and by night bring their offerings,',
+            },
+            {
+                'number': 12,
+                'pali': 'ปัจโจปะการัง อะภิกังขะมานา.',
+                'pali_roman': 'paccopakāraṃ abhikaṅkhamānā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'hoping for help in return.',
+            },
+            {
+                'section': 'รักขะถะ: The Request for Protection',
+                'number': 13,
+                'pali': 'เต โข มะนุสสา ตะนุกานุภาวา',
+                'pali_roman': 'te kho manussā tanukānubhāvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those human beings are of slender power,',
+            },
+            {
+                'number': 14,
+                'pali': 'ภูตา วิเสเสนะ มะหิทธิกา จะ',
+                'pali_roman': 'bhūtā visesena mahiddhikā ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'while the beings are of especially great might,',
+            },
+            {
+                'number': 15,
+                'pali': 'อะทิสสะมานา มะนุเชหิ ญาตา',
+                'pali_roman': 'adissamānā manujehi ñātā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'unseen, though known to men.',
+            },
+            # ‼ CORRECTED: pali  อัปปะมัตตา.' → อัปปะมัตตา.. Stray apostrophe
+            #              after the full stop removed (an OCR artefact); the
+            #              same artefact was removed from ติลักขะณาทิคาถา.
+            #              Verify against the printed page.
+            # ‼ CORRECTED: pali_roman  appamattā.' → appamattā.. Follows the
+            #              apostrophe removal. Verify against the printed page.
+            {
+                'number': 16,
+                'pali': 'ตัส์มา หิ เน รักขะถะ อัปปะมัตตา.',
+                'pali_roman': 'tasmā hi ne rakkhatha appamattā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Therefore guard them, being heedful.',
+            },
+            {
+                'section': 'นิฏฐิตา: The Closing Formula',
+                'number': 17,
+                'pali': 'เทวะตาภิสัมมันตะนะคาถา นิฏฐิตา.',
+                'pali_roman': 'devatābhisammantanagāthā niṭṭhitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The verses of address to the devas are ended.',
+            },
+        ],
+    },
 ]
 
 
