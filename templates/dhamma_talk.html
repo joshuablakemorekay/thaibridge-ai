@@ -76,6 +76,17 @@
         color: #6a6a6a;
     }
 
+    /* Sits under the credit: quieter than the credit itself, but still readable
+       rather than small print, because it changes how the Thai should be read. */
+    .talk-translation-note {
+        max-width: 640px;
+        margin: 0.75rem auto 0;
+        font-size: 0.9rem;
+        line-height: 1.55;
+        color: #7a7a7a;
+        font-style: italic;
+    }
+
     /* Each paragraph is one pair: the Thai above, the English below.
        Reading them stacked (rather than in two columns) keeps it readable on a
        phone, which is where most people will read this. */
@@ -175,6 +186,13 @@
         </div>
         {% if talk.translation_credit %}
         <div class="talk-credit">🙏 {{ talk.translation_credit }}</div>
+        {% endif %}
+        {# The Thai below is not a literal rendering of the English. On a Thai-learning
+           site that matters: without this line a learner who compares the pair and
+           finds they do not line up will assume they have misread the Thai, when in
+           fact the two genuinely differ. #}
+        {% if talk.translation_note %}
+        <div class="talk-translation-note">{{ talk.translation_note }}</div>
         {% endif %}
     </div>
 

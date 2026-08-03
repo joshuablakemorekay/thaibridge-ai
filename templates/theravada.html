@@ -417,7 +417,10 @@
             {% if talk.translation_credit %}
             <div class="talk-meta-item">
                 <span>🙏</span>
-                <span>{{ talk.translation_credit }}</span>
+                {# The card is a small meta chip, so it takes the short form of the
+                   credit. The full one, with the translator's title and doctorate,
+                   is on the talk page itself where there is room to read it. #}
+                <span>{{ talk.translation_credit_short or talk.translation_credit }}</span>
             </div>
             {% endif %}
             <div class="talk-meta-item">
