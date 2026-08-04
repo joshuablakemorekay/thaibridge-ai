@@ -103,6 +103,26 @@ criteria:
     weight: 4
     pass_condition: "not any('ng' in verse['paiboon'] for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'])"
 
+  # Page numbers are bare integers, never strings. A monk calls out a page, so
+  # these are load-bearing for finding a chant in the room — and "47" instead of
+  # 47 would quietly break any later sort or page search. Both keys are optional
+  # (a chant with no marked page omits them), so these check the type of what is
+  # present rather than demanding presence.
+  - name: chant_page_is_an_integer
+    description: page_start, where present, is a bare number not a string
+    weight: 4
+    pass_condition: "all(type(c['page_start']) is int for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'page_start' in c)"
+
+  - name: verse_page_is_an_integer
+    description: A verse page marker, where present, is a bare number not a string
+    weight: 4
+    pass_condition: "all(type(verse['page']) is int for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'] if 'page' in verse)"
+
+  - name: chant_starts_on_its_first_marked_page
+    description: page_start agrees with the first page marker inside the chant
+    weight: 3
+    pass_condition: "all(c['page_start'] <= verse['page'] for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'page_start' in c and 'verses' in c for verse in c['verses'] if 'page' in verse)"
+
   - name: sections_are_bilingual
     description: Section labels carry the Thai/Pali name as well as the English
     weight: 4

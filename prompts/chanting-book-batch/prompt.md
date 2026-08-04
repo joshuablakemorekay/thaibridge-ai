@@ -158,6 +158,38 @@ prints. Say in that chant's notes that you did this so I can check it.
 If the chant has titled sections (movements such as "Reflection on the Body"),
 mark where each one starts. They are part of how the book reads.
 
+## Page numbers — treat these as carefully as the Pali
+
+The monk calls out a page number, and everyone chants from that page. A chant
+whose page number is missing or wrong is one a person cannot find in the room,
+so these are not decoration — they are how the book is used.
+
+I mark pages in my paste with a line of its own:
+
+    [p.47]
+
+Everything after that marker is on page 47, until the next marker. So:
+
+- `page_start` on the chant is the page it BEGINS on — the marker in force when
+  its title appears.
+- `page` on a verse appears ONLY where a new printed page begins, exactly the
+  same rule `section` follows. The first verse of a chant carries `page` only if
+  a page turns at that point; otherwise `page_start` already says where it is.
+- Where several verses sit on one page, only the first of them carries `page`.
+
+Two rules that matter as much as any fidelity rule in this prompt:
+
+- NEVER infer, estimate or continue a page number. If I did not mark it, you do
+  not know it. A page number that looks plausible and is wrong sends a reader to
+  the wrong page while everyone else is chanting.
+- If a chant has no `[p.…]` marker at all, leave `page_start` out entirely and
+  raise a check saying the page is unmarked. Do not guess from the chant before
+  it, and do not carry a number forward from a previous batch.
+
+Page numbers are digits as the book prints them. If my book numbers a page in
+Thai numerals (๔๗) reproduce what I pasted and raise a check rather than
+converting it.
+
 ## Ground rules — the important ones
 
 - Work ONLY from the text I paste. Never reconstruct, complete or "correct" Pali
@@ -246,6 +278,11 @@ invitation or title, an inferred line break, an attributed source, a chant that
 resembles an earlier one without matching it, and any typographic oddity you
 reproduced rather than tidied.
 
+Raise one for page numbers too: a chant with no `[p.…]` marker at all, a page
+number that runs backwards or skips several at once, a marker landing
+mid-sentence, or a page written in Thai numerals. A wrong page number is one of
+the few errors in this book that a reader meets in public, mid-chant.
+
 ## Ids
 
 Propose the `id` yourself: the Pali title slugged — lower case, hyphens, no
@@ -286,6 +323,7 @@ Two formatting rules that matter more than they look:
       "title_pali": "<the title in IAST, or \"\" if the book gives none>",
       "title_roman": "<the THAI title romanised so a non-Thai reader can find the chant in a printed book. Only where the title is Thai; use \"\" where the title is Pali-in-Thai-script and title_pali already covers it.>",
       "title_english": "<the traditional English title>",
+      "page_start": <the page number this chant BEGINS on, as a bare number. Omit the key entirely if I did not mark one — never infer it.>,
       "source": "<canonical source. If compiled from several places, start with \"Composite.\" and say which verses come from where. Use \"\" if you are not certain — do not guess. Omit at DATA-ONLY.>",
       "when_chanted": "<one sentence on when it is recited. Omit at DATA-ONLY.>",
       "summary": "<one sentence, max 30 words, for the index card. Omit at DATA-ONLY.>",
@@ -302,6 +340,7 @@ Two formatting rules that matter more than they look:
       "verses": [
         {
           "number": 1,
+          "page": <the page number, ONLY on the first verse of a new printed page; omit the key otherwise. Never inferred.>,
           "section": "<สังขาร: The Three Characteristics — only on the FIRST verse of a section; omit the key otherwise>",
           "pali": "<ONE Pali line, Thai script>",
           "pali_roman": "<the same line, IAST>",
@@ -406,20 +445,58 @@ Say "manifest reconciled: N of N" and then proceed.
 ## Ids and repeats — this book has 286 chants and they overlap
 
 - Stage 1 proposes an `id`. Check every one against the ids already in CHANTS.
-  On a collision, do NOT overwrite and do NOT silently suffix a number. Stop and
-  show me both chants so I can decide whether it is a genuine repeat, a
-  different printing of the same chant, or two chants that just slug alike.
 - An entry with `repeat_of` set is a chant stage 1 recognised as one already
-  done. Do not add it. List it in your report so I can confirm the skip.
+  done in this session. Do not add it. List it in your report so I can confirm.
 - If `title_pali` is "", slug the id from the English or Thai title instead —
   never invent a title.
+
+## When a chant is ALREADY in the file — merge, never replace
+
+Seventeen chants were set before this workflow existed. As I work down the book
+I will reach their pages and paste them again like any other. That is
+deliberate: it is how they get their page numbers, and it is the only chance to
+check them against the book a second time. It must NOT produce a duplicate.
+
+So when an id already exists in CHANTS:
+
+1. Do NOT append a second dict, and do NOT suffix the id with a number.
+2. ADD only what is genuinely missing — normally `page_start` and the per-verse
+   `page` keys, sometimes a field that did not exist when the chant was set.
+3. KEEP THE EXISTING CHANT'S TEXT. Every `pali`, `pali_roman`, `thai`,
+   `paiboon`, `english`, title, section and invitation already in the file stays
+   exactly as it is. The file wins. My pasted text does not overwrite it.
+4. COMPARE the two anyway, character for character, and REPORT every difference
+   you find — which verse, what the file says, what my paste says. Show both.
+   Change nothing on the strength of it.
+5. If a difference is more than whitespace, also leave a comment above that
+   verse so it is findable later:
+
+       # ⚠️ PASTE DIFFERS: file kept. Re-paste on <date> read: <what mine said>
+
+Report merges separately from additions. A line saying "3 added, 2 merged" is
+the one I read first, because a merge silently becoming an append is how this
+book ends up with the same chant twice.
+
+The only thing that overrides rule 3 is me saying so explicitly, chant by chant.
+"Use the new text for verse 4" is an instruction; my paste differing from the
+file is not.
+
+## Page numbers
+
+- `page_start` goes on the chant dict, near the title fields, as a bare integer.
+- `page` goes on a verse ONLY where stage 1 put one — the first verse of each
+  new printed page. Do not add it to every verse, and do not fill in the gaps.
+- If stage 1 omitted a page number, leave it omitted. Never infer one from the
+  chant before or after it. The template guards both with `{% if %}`, so a chant
+  without page numbers renders exactly as it does today.
 
 ## Mapping
 
 Keys map straight across: title_thai, title_pali, title_roman, title_english,
-source, when_chanted, summary, english_unverified, background, meaning,
-invitation, verses. Each verse keeps its 'number', and its 'section' where it
-has one. Set 'group': 'General chanting' unless I say otherwise.
+page_start, source, when_chanted, summary, english_unverified, background,
+meaning, invitation, verses. Each verse keeps its 'number', its 'page' where it
+has one, and its 'section' where it has one. Set 'group': 'General chanting'
+unless I say otherwise.
 
 Two keys do NOT go in as data:
   working_notes  → ignore. It is Josh's reading aid.
@@ -481,18 +558,32 @@ depth setting. Stop and tell me rather than writing it.
 Run these with PYTHONIOENCODING=utf-8 set, or Thai output will crash on Windows.
 
 1. `python -c "import chanting"` — it must import cleanly.
-2. Confirm len(CHANTS) grew by exactly the number of entries you added, and that
-   every id is unique.
-3. For EACH chant, compare the Thai and Pali you wrote against my pasted block
+2. Confirm len(CHANTS) grew by exactly the number of NEW chants — not the number
+   of entries in the batch. A merge must not change the count. If the count
+   moved by more than that, a merge became an append and there is now a
+   duplicate: stop and tell me.
+3. Confirm every id is unique. Two dicts with the same id is the failure this
+   whole merge rule exists to prevent, so check it explicitly rather than
+   assuming.
+4. For EACH chant, compare the Thai and Pali you wrote against my pasted block
    and report character counts both ways. Per chant, not summed — a batch total
    can balance while two chants are individually wrong.
-4. Re-scan the written file for "kh", "th", "ph" and "ng" inside paiboon values
+5. For each MERGED chant, prove the existing text is untouched: dump its verses,
+   titles and invitation before and after, and report the diff as empty. The
+   only permitted change is keys being added.
+6. Re-scan the written file for "kh", "th", "ph" and "ng" inside paiboon values
    only, and report the count. Stage 1 checks itself; this checks stage 1.
-5. Render the page and confirm each new chant shows the right verse count, its
-   section headings and its layers, and that existing chants are unchanged.
+7. Check the page numbers read sensibly: within a chant they must not go
+   backwards, and `page_start` must match the first `page` if the chant has one.
+   Report anything odd rather than adjusting it.
+8. Render the page and confirm each new chant shows the right verse count, its
+   section headings, its page markers and its layers, and that existing chants
+   are unchanged.
 
-Report as a table: id, verses in, verses written, checks carried, char match
-y/n. One row per chant. I read the table, not the prose.
+Report TWO tables. Added chants: id, page_start, verses in, verses written,
+checks carried, char match y/n. Merged chants: id, what you added, how many
+differences you found, and whether the existing text was left intact. I read the
+tables, not the prose.
 
 Do not commit. I'll review the batch first.
 
@@ -526,9 +617,14 @@ Work through them in file order so we can go straight down the book.
 DO NOT TOUCH A SINGLE CHARACTER OF ANY VERSE.
 
 `pali`, `pali_roman`, `thai`, `paiboon` and `english`, the titles, the
-invitation, the sections, the verse numbers and the existing ⚠️ check comments
-have all been verified against a physical book already. They are finished work.
-You are adding keys to a dict, not editing one.
+invitation, the sections, the verse numbers, `page_start`, the per-verse `page`
+keys and the existing ⚠️ check comments have all been verified against a
+physical book already. They are finished work. You are adding keys to a dict,
+not editing one.
+
+The page numbers deserve a line of their own: they are the only field a reader
+meets in public, mid-chant, with a monk calling out a page. A page number you
+"corrected" is worse than one left alone, whatever it looks like from here.
 
 This is not a style preference. Verified Pali that quietly changes is the single
 worst outcome this whole workflow is built to prevent, and it would not look

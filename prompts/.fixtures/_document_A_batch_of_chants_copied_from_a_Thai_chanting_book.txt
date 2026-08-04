@@ -29,6 +29,7 @@
         "paiboon": "",
         "english": ""
       },
+      "page_start": 47,
       "verses": [
         {
           "section": "อะริยะธะนะ: The Noble Wealth",
@@ -37,7 +38,8 @@
           "pali_roman": "yassa saddhā tathāgate acalā supatiṭṭhitā",
           "thai": "",
           "paiboon": "",
-          "english": "Whose faith in the Tathāgata is unshaken and well established,"
+          "english": "Whose faith in the Tathāgata is unshaken and well established,",
+          "page": 47
         },
         {
           "number": 2,
@@ -70,7 +72,8 @@
           "pali_roman": "tasmā saddhañca sīlañca pasādaṃ dhammadassanaṃ",
           "thai": "",
           "paiboon": "",
-          "english": "Therefore faith and virtue, confidence and the vision of Dhamma —"
+          "english": "Therefore faith and virtue, confidence and the vision of Dhamma —",
+          "page": 48
         },
         {
           "number": 6,
@@ -120,6 +123,7 @@
         "paiboon": "",
         "english": "Now let us recite the verses of the discourse on the burden."
       },
+      "page_start": 48,
       "verses": [
         {
           "section": "ภาระ: The Burden",
@@ -128,7 +132,8 @@
           "pali_roman": "bhārā have pañcakkhandhā,",
           "thai": "ขันธ์ทั้งห้า เป็นของหนักเน้อ,",
           "paiboon": "kǎn táŋ hâa bpen kɔ̌ɔŋ nàk nə́ə,",
-          "english": "The five aggregates are indeed a burden,"
+          "english": "The five aggregates are indeed a burden,",
+          "page": 48
         },
         {
           "number": 2,
@@ -169,7 +174,8 @@
           "pali_roman": "aññaṃ bhāraṃ anādiya,",
           "thai": "ทั้งไม่หยิบฉวยเอาของหนักอันอื่น ขึ้นมาอีก,",
           "paiboon": "táŋ mâi yìp chǔay ao kɔ̌ɔŋ nàk an ʉ̀ʉn kʉ̂n maa ìik,",
-          "english": "and taking up no other burden again,"
+          "english": "and taking up no other burden again,",
+          "page": 49
         },
         {
           "number": 7,
