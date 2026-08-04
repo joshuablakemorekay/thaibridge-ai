@@ -29,15 +29,16 @@ in one reply. So the batch version lets you trade commentary for chants:
 
 | Depth | What you get | Realistic per reply |
 |---|---|---|
-| `FULL` | Everything the single-chant prompt produces | 2–3 chants |
+| `FULL` | Everything, including background and meaning | 2–4 chants |
 | `COMPACT` | `background` 1 paragraph, `meaning` 2 | 4–6 chants |
-| `DATA-ONLY` | Book content and structure only — no commentary, no English | 8–12 chants |
+| `DATA-ONLY` | All five layers verse by verse, no chant-level commentary | 6–9 chants |
 
-`DATA-ONLY` is the one that hits 5–10 chants a message. It works because
-commentary — `background`, `meaning`, `summary`, `when_chanted` and the
-per-verse `english` — is about 58% of a finished entry and *none of it is book
-content*. Skipping it costs you nothing you have to verify against the physical
-book, and it can be written later, per chant, once the text is confirmed.
+**All three depths give you all five layers, verse by verse.** What `DATA-ONLY`
+drops is the prose written *about* the chant — `background`, `meaning`,
+`summary`, `when_chanted` and `source` — which is about 32% of a finished entry
+and none of which needs checking against the physical book. Stage 3 adds it
+later, reading the chant straight out of `chanting.py`, so you never re-paste
+anything.
 
 Say the depth on the first line of your paste. If you don't, it uses `COMPACT`.
 
@@ -89,10 +90,14 @@ I put one of these on the first line of my paste:
 
   FULL       — every field, as the single-chant prompt produces.
   COMPACT    — background 1 paragraph, meaning 2. Everything else in full.
-  DATA-ONLY  — omit background, meaning, summary, when_chanted, source, and the
-               per-verse "english". Keep pali, pali_roman, thai, paiboon,
-               sections, titles, invitation and checks. This is the fidelity
-               half of the job; the commentary comes later.
+  DATA-ONLY  — omit background, meaning, summary, when_chanted and source.
+               Keep EVERYTHING else, including all five layers of every verse:
+               pali, pali_roman, thai, paiboon AND english, plus sections,
+               titles, invitation and checks. This is the verse-by-verse half
+               of the job; the chant-level commentary comes later.
+
+Every depth gives all five layers on every verse. `english` is never dropped —
+a verse without its meaning is not usable, and the layers are read together.
 
 If I give no depth, use COMPACT. Never quietly change depth mid-batch. If you
 switch — because entries are running longer than expected — say so in
@@ -302,7 +307,7 @@ Two formatting rules that matter more than they look:
           "pali_roman": "<the same line, IAST>",
           "thai": "<its Thai translation>",
           "paiboon": "<Paiboon+ of the thai line only>",
-          "english": "<its meaning. Omit at DATA-ONLY.>"
+          "english": "<its meaning. Present at EVERY depth — never omitted.>"
         }
       ],
       "checks": [
@@ -322,8 +327,9 @@ Two formatting rules that matter more than they look:
 }
 
 `background` and `meaning` are arrays — one string per paragraph, omitted
-entirely at DATA-ONLY. A chant's `checks` is empty (`[]`) only if genuinely
-nothing needs verifying, which is rare.
+entirely at DATA-ONLY along with `summary`, `when_chanted` and `source`. The
+verses are never reduced: all five layers, every depth. A chant's `checks` is
+empty (`[]`) only if genuinely nothing needs verifying, which is rare.
 
 ## Sections — name them the way the book thinks
 
@@ -431,17 +437,21 @@ Read `batch.depth`.
 
 - FULL / COMPACT — every field should be present. If one is missing, say so
   rather than writing the chant without it.
-- DATA-ONLY — background, meaning, summary, when_chanted, source and the
-  per-verse english are absent ON PURPOSE. Do NOT write them yourself, do not
-  leave a placeholder, and do not flag them as errors. Write the chant without
-  them and put one comment at the top of the dict:
+- DATA-ONLY — background, meaning, summary, when_chanted and source are absent
+  ON PURPOSE. Do NOT write them yourself, do not leave a placeholder, and do not
+  flag them as errors. Write the chant without them and put one comment at the
+  top of the dict:
 
       # ⚠️ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-      # when_chanted, source and per-verse english still to be written.
+      # when_chanted and source still to be written. Verses are complete.
 
   The template guards each of those with `{% if %}`, so the chant renders fine
-  without them — it just reads as text only until the commentary is added. Grep
-  for COMMENTARY PENDING to find them all later.
+  without them — every verse still shows all five layers, and only the chant's
+  context is missing. Grep for COMMENTARY PENDING to find them all later.
+
+At EVERY depth, every verse must carry all five layers — pali, pali_roman, thai,
+paiboon and english. A verse missing its english is a fault at any depth, not a
+depth setting. Stop and tell me rather than writing it.
 
 ## Structure rules
 
@@ -489,4 +499,138 @@ Do not commit. I'll review the batch first.
 Here is the batch:
 
 [paste the whole stage 1 reply here — the JSON object and its closing sentence]
+```
+
+---
+
+## Stage 3 — Claude Code, the commentary pass
+
+Run this after a `DATA-ONLY` run, once the verses are in and verified. It needs
+nothing pasted: the chants are already in `chanting.py`, so it reads them from
+there. Give it a number of chants to do, or it will pick a sensible few.
+
+```
+Write the missing commentary for chants in the Digital Chanting Book in
+~/thaibridge-ai.
+
+Some chants were set at DATA-ONLY depth: their verses are complete and verified,
+but the chant-level prose was deferred. They are marked with a comment reading
+"⚠️ COMMENTARY PENDING" at the top of the dict. Your job is to fill in what that
+comment lists, and nothing else.
+
+Do the first N you find, N being the number I gave you — or 5 if I gave none.
+Work through them in file order so we can go straight down the book.
+
+## The one rule that outranks everything else here
+
+DO NOT TOUCH A SINGLE CHARACTER OF ANY VERSE.
+
+`pali`, `pali_roman`, `thai`, `paiboon` and `english`, the titles, the
+invitation, the sections, the verse numbers and the existing ⚠️ check comments
+have all been verified against a physical book already. They are finished work.
+You are adding keys to a dict, not editing one.
+
+This is not a style preference. Verified Pali that quietly changes is the single
+worst outcome this whole workflow is built to prevent, and it would not look
+wrong afterwards. If you think a verse is mistaken, say so in your report and
+leave it exactly as it is.
+
+## What to write
+
+For each chant, add these five keys, in this position and this order — matching
+the existing chants in the file, which are the shape to copy:
+
+  summary       — ONE sentence, max 30 words, for the closed index card. What
+                  this chant is, plainly, to someone who has not met it.
+  when_chanted  — ONE sentence on when it is recited in Theravāda practice.
+  source        — the canonical source. Read the rules below before writing it.
+  background    — a LIST of paragraphs. Why was it taught? The historical
+                  setting, or the origin of the chant if composed later.
+  meaning       — a LIST of paragraphs. What does it mean, and why is it still
+                  chanted?
+
+`background` and `meaning` are lists of strings, one per paragraph, never one
+long string — the page and a printed edition space them from that structure.
+Two or three paragraphs each is right. Do not pad them to look thorough.
+
+## Where your material comes from
+
+Work from the chant that is in front of you in the file. It has the Pali, the
+Thai and the English of every verse, which is what the commentary is about.
+
+You may use general knowledge of Theravāda practice and of the Pali canon for
+context — that is what `background` is for, and it is why this pass is a writing
+job rather than a transcription one. But there is a hard line:
+
+- NEVER quote, reconstruct or "restore" any Pali or Thai that is not already in
+  the file. Not a line, not a phrase, not a word. If a point would need a verse
+  the chant does not contain, make the point without it or leave it out.
+- NEVER contradict the chant in front of you because a standard edition differs.
+  The file follows Josh's physical book. Where they disagree, the book wins, and
+  you say so in your report rather than editing anything.
+
+## `source` — the field most likely to go wrong
+
+Attributing a canonical source is exactly where a confident invention slips
+through, because a plausible reference looks identical to a real one.
+
+- If you are certain, write it (`Dhammapada 188–192`, `Khuddakapāṭha 5`).
+- If it is assembled from several places, start with `Composite.` and say which
+  parts come from where.
+- If you are NOT certain, write `""`. An empty source is honest and the template
+  simply omits it. A wrong one is a false citation in a book about the Dhamma.
+- Any source YOU attribute, rather than one already in the file, gets a comment
+  directly above it:
+
+      # ⚠️ UNVERIFIED SOURCE: attributed by Claude, not taken from Josh's book.
+
+  Never write that comment above a source that was already there.
+
+## Register — this is the part that has to match
+
+The app's existing chants set the register, so read two or three finished ones
+before you write anything. Dignified and plain. Closer to "Having gone to such a
+refuge, one is freed from all suffering" than "Once you take this refuge you
+won't suffer". No devotional inflation, no self-help framing, no exclamation
+marks, and no addressing the reader as "you".
+
+Write for someone intelligent who does not know Buddhism. Explain a Pali term
+the first time it appears in that chant's prose, then use it.
+
+## When you are done with each chant
+
+Replace the whole COMMENTARY PENDING comment — do not leave it sitting above a
+chant that now has its commentary. That marker is how Josh finds the remaining
+work, so a stale one is worse than none.
+
+If you could only do part of a chant — say the source is genuinely unknowable —
+leave a narrowed marker instead of removing it:
+
+    # ⚠️ COMMENTARY PENDING: source only. Could not attribute with confidence.
+
+## Then verify before telling me it's done
+
+Run with PYTHONIOENCODING=utf-8 set, or Thai output will crash on Windows.
+
+1. `python -c "import chanting"` — it must import cleanly.
+2. PROVE the verses are untouched. Before you edit, dump every verse of every
+   chant to a file; after you edit, dump them again and diff the two. Report the
+   diff as empty. Do the same for the titles and the invitation. If ANYTHING
+   shows up in that diff, stop and show me — do not tidy it away.
+3. Confirm len(CHANTS) is unchanged and every id is unchanged.
+4. Confirm background and meaning are lists of strings for every chant you
+   touched, not bare strings.
+5. Count COMMENTARY PENDING markers before and after, and report both numbers.
+   The drop should equal the number of chants you completed.
+6. Render the page and confirm each chant now shows its context sections, and
+   that the chants you did NOT touch look exactly as they did.
+
+Report as a table: id, paragraphs written for background, paragraphs for
+meaning, source written or left empty, marker cleared y/n.
+
+Then tell me, separately from the table, anything you noticed but did not act
+on — a verse that looks wrong, a chant whose source you could not place, a
+duplicate of one earlier in the file.
+
+Do not commit. I'll read the prose before it goes in.
 ```

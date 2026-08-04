@@ -57,20 +57,45 @@ book** — it is not the book's words.
 
 So the batch prompt trades commentary for chants, via a depth setting:
 
-- `FULL` — 2–3 chants a reply
+- `FULL` — 2–4 chants a reply
 - `COMPACT` — 4–6
-- `DATA-ONLY` — 8–12, and this is what makes 5–10 achievable
+- `DATA-ONLY` — 6–9, and this is what makes 5–10 achievable
 
-`DATA-ONLY` is not a degraded mode so much as a reordering. It captures the
-half of the work that has to happen with the book open, and defers the half
-that doesn't. It also means Josh verifies a short block of pure book content
-instead of hunting for it inside a 7,247-character entry — and that re-running
-the commentary later never puts verified text at risk.
+**All five layers are written at every depth.** The first draft dropped the
+per-verse `english` at `DATA-ONLY` too, which bought 8–12 chants a reply instead
+of 6–9. That was the wrong trade: a verse without its meaning is not usable, the
+five layers are read together down the page, and a second pass over 286 chants
+just to add one layer per verse costs more than it saves. So the depth setting
+now only ever varies the prose written *about* a chant, never the chant itself.
+
+That prose is ~32% of a finished entry. `DATA-ONLY` is not a degraded mode so
+much as a reordering: it captures everything that has to happen with the book
+open, and defers only what doesn't. Re-running the commentary later cannot put
+verified text at risk, because it only adds keys.
 
 Checked before recommending it: the template guards `background`, `meaning`,
 `summary`, `when_chanted` and `source` with `{% if %}`, and already has a
-`partial` idiom for incomplete chants. A data-only chant renders correctly; it
-just reads as text only.
+`partial` idiom for incomplete chants. A `DATA-ONLY` chant renders correctly —
+every verse shows all five layers, and only the chant's context is missing.
+
+## Stage 3
+
+The commentary pass is a third stage rather than a variant of stage 1, because
+by the time it runs the chants are already in `chanting.py` — so it reads them
+from the file and nothing is pasted at all. That is the real payoff of splitting
+the depths: the deferred half stops being a copy-paste job.
+
+Its governing rule is narrow and absolute: **do not touch a single character of
+any verse.** It adds five keys to a dict that has been verified against a
+physical book. So its verification step is a before-and-after dump of every
+verse, title and invitation, diffed to prove the diff is empty — evidence rather
+than assurance, since verified Pali that quietly changes would not look wrong
+afterwards.
+
+`source` gets its own rules for the same reason it does in stage 1: a plausible
+citation is indistinguishable from a real one, so an uncertain source is written
+`""`, and any source Claude attributes itself carries a `⚠️ UNVERIFIED SOURCE`
+comment.
 
 ## The manifest-first design
 

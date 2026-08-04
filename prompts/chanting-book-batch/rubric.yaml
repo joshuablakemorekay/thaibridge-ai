@@ -78,10 +78,14 @@ criteria:
     weight: 5
     pass_condition: "all('\\n' not in v for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'] for v in verse.values() if type(v) is str)"
 
-  - name: every_verse_carries_the_book_layers
-    description: Each verse has its number and the four layers taken from the book
+  # All five layers, at every depth. `english` used to be dropped at DATA-ONLY;
+  # it no longer is, because a verse without its meaning is not usable and the
+  # layers are read together down the page. So this check covers all five rather
+  # than having to know which depth produced the batch.
+  - name: every_verse_carries_all_five_layers
+    description: Each verse has its number and all five layers, whatever the depth
     weight: 5
-    pass_condition: "all(all(k in verse for k in ['number', 'pali', 'pali_roman', 'thai', 'paiboon']) for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'])"
+    pass_condition: "all(all(k in verse for k in ['number', 'pali', 'pali_roman', 'thai', 'paiboon', 'english']) for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'])"
 
   # The digraphs are matched BARE, with no following-vowel class. An earlier
   # version of this check required a plain vowel after them — but every

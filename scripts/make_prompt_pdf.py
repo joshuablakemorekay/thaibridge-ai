@@ -64,9 +64,13 @@ VARIANTS = {
              'chant into chanting.py and verifies it renders.'),
         ],
         'depth': None,
-        'stage1_intro': 'Paste this once at the start of a session, then paste '
-                        'chants one at a time. It returns one JSON object.',
-        'stage2_intro': 'Paste this, then the JSON from Stage 1 underneath it.',
+        'stages': [
+            ('Stage 1 — paste into Claude.ai',
+             'Paste this once at the start of a session, then paste chants one '
+             'at a time. It returns one JSON object.'),
+            ('Stage 2 — paste into Claude Code',
+             'Paste this, then the JSON from Stage 1 underneath it.'),
+        ],
     },
     'chanting-book-batch': {
         'folder': 'chanting-book-batch',
@@ -97,23 +101,37 @@ VARIANTS = {
              'reconciles the manifest before it writes anything.'),
         ],
         'depth': [
-            ('FULL', 'Everything the one-chant sheet produces. '
-                     '<b>2–3 chants</b> per reply.'),
+            ('FULL', 'Everything, including background and meaning. '
+                     '<b>2–4 chants</b> per reply.'),
             ('COMPACT', 'background 1 paragraph, meaning 2. Everything else in '
                         'full. <b>4–6 chants</b> per reply.'),
-            ('DATA-ONLY', 'Book content and structure only — no background, '
-                          'meaning, summary, when_chanted, source or per-verse '
-                          'english. <b>8–12 chants</b> per reply.'),
-            ('Why it works', 'About 58% of a finished entry is commentary '
-                             'written <i>about</i> the chant, and none of it '
-                             'needs checking against the physical book. '
-                             'DATA-ONLY defers that half and captures the half '
-                             'that needs the book open.'),
+            ('DATA-ONLY', 'All five layers verse by verse, but no chant-level '
+                          'commentary — no background, meaning, summary, '
+                          'when_chanted or source. <b>6–9 chants</b> per reply.'),
+            ('All five layers,<br/>every depth',
+             'pali, pali_roman, thai, paiboon <i>and</i> english are written on '
+             'every verse at every depth. A verse without its meaning is not '
+             'usable, so english is never traded away.'),
+            ('Why it works', 'About 32% of a finished entry is prose written '
+                             '<i>about</i> the chant, and none of it needs '
+                             'checking against the physical book. DATA-ONLY '
+                             'defers that and captures everything that needs '
+                             'the book open. Stage 3 adds it back later, '
+                             'reading the chant out of chanting.py — so you '
+                             'never re-paste anything.'),
         ],
-        'stage1_intro': 'Paste this once at the start of a session, then paste '
-                        'batches of chants. It returns one JSON object holding '
-                        'a manifest, an array of entries, and a status.',
-        'stage2_intro': 'Paste this, then the whole Stage 1 reply underneath it.',
+        'stages': [
+            ('Stage 1 — paste into Claude.ai',
+             'Paste this once at the start of a session, then paste batches of '
+             'chants. It returns one JSON object holding a manifest, an array '
+             'of entries, and a status.'),
+            ('Stage 2 — paste into Claude Code',
+             'Paste this, then the whole Stage 1 reply underneath it.'),
+            ('Stage 3 — paste into Claude Code, later',
+             'The commentary pass, run after a DATA-ONLY batch is in and '
+             'verified. Nothing to paste with it: the chants are already in '
+             'chanting.py, so it reads them from there.'),
+        ],
     },
 }
 
@@ -165,14 +183,20 @@ def styles():
     }
 
 
-def extract_prompts(md_path):
-    """Pull the two fenced blocks out of prompt.md: stage 1, then stage 2."""
+def extract_prompts(md_path, expected):
+    """Pull the fenced blocks out of prompt.md, in stage order.
+
+    The count is asserted rather than inferred: a sheet that silently prints two
+    stages when the prompt now has three is worse than one that refuses to
+    build, because the missing stage is invisible on the printed page.
+    """
     md = open(md_path, encoding='utf-8').read()
     blocks = re.findall(r'```\n(.*?)\n```', md, re.DOTALL)
-    if len(blocks) != 2:
-        sys.exit(f'Expected 2 fenced blocks in {md_path}, found {len(blocks)}. '
-                 'The PDF builder needs exactly stage 1 then stage 2.')
-    return blocks[0], blocks[1]
+    if len(blocks) != expected:
+        sys.exit(f'Expected {expected} fenced blocks in {md_path}, found '
+                 f'{len(blocks)}. Update the variant\'s "stages" list if a '
+                 'stage was added or removed.')
+    return blocks
 
 
 # Tahoma carries no emoji at all — not the warning sign, not the variation
@@ -261,7 +285,7 @@ def build(variant='chanting-book-entry'):
 
     register_fonts()
     st = styles()
-    stage1, stage2 = extract_prompts(prompt_md)
+    blocks = extract_prompts(prompt_md, len(cfg['stages']))
 
     doc = BaseDocTemplate(out_pdf, pagesize=A4,
                           leftMargin=2 * cm, rightMargin=2 * cm,
@@ -317,15 +341,11 @@ def build(variant='chanting-book-entry'):
          'ขันธ์ → kǎn <i>not</i> khǎn &nbsp;•&nbsp; ของ → kɔ̌ɔŋ <i>not</i> khǎaw'),
     ], st))
 
-    s.append(PageBreak())
-    s.append(Paragraph('Stage 1 — paste into Claude.ai', st['h2']))
-    s.append(Paragraph(cfg['stage1_intro'], st['body']))
-    s.append(prompt_box(stage1, st, doc.width))
-
-    s.append(PageBreak())
-    s.append(Paragraph('Stage 2 — paste into Claude Code', st['h2']))
-    s.append(Paragraph(cfg['stage2_intro'], st['body']))
-    s.append(prompt_box(stage2, st, doc.width))
+    for (heading, intro), block in zip(cfg['stages'], blocks):
+        s.append(PageBreak())
+        s.append(Paragraph(heading, st['h2']))
+        s.append(Paragraph(intro, st['body']))
+        s.append(prompt_box(block, st, doc.width))
 
     s.append(Spacer(1, 10))
     s.append(Paragraph('Before you say it is done', st['h3']))

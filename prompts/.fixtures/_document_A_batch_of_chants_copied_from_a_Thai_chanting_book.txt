@@ -36,28 +36,32 @@
           "pali": "ยัสสะ สัทธา ตะถาคะเต อะจะลา สุปะติฏฐิตา",
           "pali_roman": "yassa saddhā tathāgate acalā supatiṭṭhitā",
           "thai": "",
-          "paiboon": ""
+          "paiboon": "",
+          "english": "Whose faith in the Tathāgata is unshaken and well established,"
         },
         {
           "number": 2,
           "pali": "สีลัญจะ ยัสสะ กัล์ยาณัง อะริยะกันตัง ปะสังสิตัง,",
           "pali_roman": "sīlañca yassa kalyāṇaṃ ariyakantaṃ pasaṃsitaṃ,",
           "thai": "",
-          "paiboon": ""
+          "paiboon": "",
+          "english": "and whose virtue is good, dear to the noble ones and praised,"
         },
         {
           "number": 3,
           "pali": "สังเฆ ปะสาโท ยัสสัตถิ อุชุภูตัญจะ ทัสสะนัง",
           "pali_roman": "saṅghe pasādo yassatthi ujubhūtañca dassanaṃ",
           "thai": "",
-          "paiboon": ""
+          "paiboon": "",
+          "english": "who has confidence in the Saṅgha, and whose seeing is upright —"
         },
         {
           "number": 4,
           "pali": "อะทะลิทโทติ ตัง อาหุ อะโมฆันตัสสะ ชีวิตัง.",
           "pali_roman": "adaliddoti taṃ āhu amoghantassa jīvitaṃ.",
           "thai": "",
-          "paiboon": ""
+          "paiboon": "",
+          "english": "him they call not poor, and his life is not in vain."
         },
         {
           "section": "อะนุยุญเชถะ: The Exhortation",
@@ -65,14 +69,16 @@
           "pali": "ตัส์มา สัทธัญจะ สีลัญจะ ปะสาทัง ธัมมะทัสสะนัง",
           "pali_roman": "tasmā saddhañca sīlañca pasādaṃ dhammadassanaṃ",
           "thai": "",
-          "paiboon": ""
+          "paiboon": "",
+          "english": "Therefore faith and virtue, confidence and the vision of Dhamma —"
         },
         {
           "number": 6,
           "pali": "อะนุยุญเชถะ เมธาวี สะรัง พุทธานะ สาสะนันติ.",
           "pali_roman": "anuyuñjetha medhāvī saraṃ buddhāna sāsananti.",
           "thai": "",
-          "paiboon": ""
+          "paiboon": "",
+          "english": "let the wise one pursue them, remembering the teaching of the Buddhas."
         },
         {
           "section": "นิฏฐิตา: The Closing Formula",
@@ -80,7 +86,8 @@
           "pali": "อะริยะธะนะคาถา นิฏฐิตา",
           "pali_roman": "ariyadhanagāthā niṭṭhitā",
           "thai": "",
-          "paiboon": ""
+          "paiboon": "",
+          "english": "The verses on the noble wealth are ended."
         }
       ],
       "checks": [
@@ -120,28 +127,32 @@
           "pali": "ภารา หะเว ปัญจักขันธา,",
           "pali_roman": "bhārā have pañcakkhandhā,",
           "thai": "ขันธ์ทั้งห้า เป็นของหนักเน้อ,",
-          "paiboon": "kǎn táŋ hâa bpen kɔ̌ɔŋ nàk nə́ə,"
+          "paiboon": "kǎn táŋ hâa bpen kɔ̌ɔŋ nàk nə́ə,",
+          "english": "The five aggregates are indeed a burden,"
         },
         {
           "number": 2,
           "pali": "ภาระหาโร จะ ปุคคะโล,",
           "pali_roman": "bhārahāro ca puggalo,",
           "thai": "บุคคลแหละ เป็นผู้แบกของหนักพาไป,",
-          "paiboon": "bùk-kon lɛ̀ bpen pûu bɛ̀ɛk kɔ̌ɔŋ nàk paa bpai,"
+          "paiboon": "bùk-kon lɛ̀ bpen pûu bɛ̀ɛk kɔ̌ɔŋ nàk paa bpai,",
+          "english": "and the person is the bearer who carries that burden along,"
         },
         {
           "number": 3,
           "pali": "ภาราทานัง ทุกขัง โลเก,",
           "pali_roman": "bhārādānaṃ dukkhaṃ loke,",
           "thai": "การแบกถือของหนัก เป็นความทุกข์ในโลก,",
-          "paiboon": "gaan bɛ̀ɛk tʉ̌ʉ kɔ̌ɔŋ nàk bpen kwaam túk nai lôok,"
+          "paiboon": "gaan bɛ̀ɛk tʉ̌ʉ kɔ̌ɔŋ nàk bpen kwaam túk nai lôok,",
+          "english": "The taking up of the burden is suffering in the world,"
         },
         {
           "number": 4,
           "pali": "ภาระนิกเขปะนัง สุขัง,",
           "pali_roman": "bhāranikkhepanaṃ sukhaṃ,",
           "thai": "การสลัดของหนักทิ้งลงเสีย เป็นความสุข,",
-          "paiboon": "gaan sà-làt kɔ̌ɔŋ nàk tíŋ loŋ sǐa bpen kwaam sùk,"
+          "paiboon": "gaan sà-làt kɔ̌ɔŋ nàk tíŋ loŋ sǐa bpen kwaam sùk,",
+          "english": "and the setting down of the burden is happiness."
         },
         {
           "section": "นิกขิปิต์วา: The Laying Down",
@@ -149,28 +160,32 @@
           "pali": "นิกขิปิต์วา คะรุง ภารัง,",
           "pali_roman": "nikkhipitvā garuṃ bhāraṃ,",
           "thai": "พระอริยเจ้า สลัดทิ้งของหนัก ลงเสียแล้ว,",
-          "paiboon": "prá à-rí-yá-jâo sà-làt tíŋ kɔ̌ɔŋ nàk loŋ sǐa lɛ́ɛo,"
+          "paiboon": "prá à-rí-yá-jâo sà-làt tíŋ kɔ̌ɔŋ nàk loŋ sǐa lɛ́ɛo,",
+          "english": "Having set down the heavy burden,"
         },
         {
           "number": 6,
           "pali": "อัญญัง ภารัง อะนาทิยะ,",
           "pali_roman": "aññaṃ bhāraṃ anādiya,",
           "thai": "ทั้งไม่หยิบฉวยเอาของหนักอันอื่น ขึ้นมาอีก,",
-          "paiboon": "táŋ mâi yìp chǔay ao kɔ̌ɔŋ nàk an ʉ̀ʉn kʉ̂n maa ìik,"
+          "paiboon": "táŋ mâi yìp chǔay ao kɔ̌ɔŋ nàk an ʉ̀ʉn kʉ̂n maa ìik,",
+          "english": "and taking up no other burden again,"
         },
         {
           "number": 7,
           "pali": "สะมูลัง ตัณหัง อัพพุยหะ,",
           "pali_roman": "samūlaṃ taṇhaṃ abbuyha,",
           "thai": "ก็เป็นผู้ถอนตัณหาขึ้นได้ กระทั่งราก,",
-          "paiboon": "gɔ̂ɔ bpen pûu tɔ̌ɔn dtan-hǎa kʉ̂n dâai grà-tâŋ râak,"
+          "paiboon": "gɔ̂ɔ bpen pûu tɔ̌ɔn dtan-hǎa kʉ̂n dâai grà-tâŋ râak,",
+          "english": "having drawn out craving together with its root,"
         },
         {
           "number": 8,
           "pali": "นิจฉาโต ปะรินิพพุโต.",
           "pali_roman": "nicchāto parinibbuto.",
           "thai": "เป็นผู้หมดสิ่งปรารถนา ดับสนิทไม่มีส่วนเหลือ.",
-          "paiboon": "bpen pûu mòt sìŋ bpràat-tà-nǎa dàp sà-nìt mâi mii sùan lʉ̌a."
+          "paiboon": "bpen pûu mòt sìŋ bpràat-tà-nǎa dàp sà-nìt mâi mii sùan lʉ̌a.",
+          "english": "he is without hunger, wholly quenched."
         }
       ],
       "checks": [
