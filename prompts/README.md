@@ -21,7 +21,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`product-overview-section`](./product-overview-section/) | content | Generates a structured Product Overview using a clarifying-question loop | Yes (v1 → v2) |
 | [`tones-consonant-classes`](./tones-consonant-classes/) | agent-workflow | Explore-first build of one free section teaching tones + consonant classes with progressive drills | No (single version) |
 | [`chanting-book-entry`](./chanting-book-entry/) | content / agent-workflow | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v4) |
-| [`chanting-book-batch`](./chanting-book-batch/) | content / agent-workflow | The same workflow rebuilt for volume — several chants per message across a 286-chant book, with truncation made detectable | No (v1, forked from `chanting-book-entry` v4) |
+| [`chanting-book-batch`](./chanting-book-batch/) | content / agent-workflow | The same workflow rebuilt for volume — several chants per message across a 286-chant book, with truncation made detectable | Yes (v1 → v3, forked from `chanting-book-entry` v4) |
 
 ## Featured iterations
 

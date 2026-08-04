@@ -1627,3 +1627,40 @@ Same pipeline as the last seven chants — transcribe once, generate the Python 
 
 **References / Conversations**
 Stage-1 chant sessions; commit `c349807` for the duplicate's original open question; 157 `‼ CHECK` notes in `chanting.py`.
+
+---
+
+## 4 August 2026 — A pipeline for 286 chants, and a page number that has to be right
+
+**Type:** Milestone
+
+**TL;DR:**
+- Built a three-stage batch workflow so 286 chants can go in without pasting one at a time.
+- Added the physical book's page numbers to the app — the monk calls out a page, so the app has to answer.
+- Measuring before rewriting changed the design; negative-testing found a check that had never worked.
+
+**What I built**
+
+A batch variant of the chanting prompt. Stage 1 takes 6–9 chants at once, Stage 2 writes them into `chanting.py` and merges repeats instead of duplicating them, Stage 3 adds the commentary later. Page numbers now show on each index card and at every page turn.
+
+**Why I did it this way**
+
+I measured before rewriting. A finished entry is **9.1× the size of what I paste in**, and Thai script tokenises about twice as expensively as English — so chants-per-reply is arithmetic, not wording. That killed my "10–20 pages a message" idea before I built anything on top of it.
+
+**How We Did It**
+
+Measured the real data → found the true ceiling → split the work by depth → built a manifest that makes truncation detectable → negative-tested every check → added page numbers → two commits, pushed, verified live on Render.
+
+**What I learned**
+
+*A green tick is a claim, not evidence.* All 17 checks passed at 100% — until I fed them deliberately broken input. That exposed a check that had never caught a real error: it only matched unaccented spellings, and every Paiboon+ syllable carries a tone mark.
+
+*Cheaper isn't better.* Dropping the English layer bought more chants per reply, but would have forced Stage 3 to edit ~5,800 verses instead of adding keys — destroying the one guarantee protecting verified Pali.
+
+**Still open**
+
+269 chants to go. Search and A–Z browse deferred until there's enough to browse.
+
+**References / Conversations**
+
+Commits `38fb244`, `a3e609d`, `6fd2369`, `ca295bd`.
