@@ -16,6 +16,11 @@ reader actually has are always answered in the same order:
                           Pali-in-Thai-script needs only `title_pali`.
   * `source`            — where does it come from? (Dhammapada, Khuddakapāṭha,
                           Suttanipāta or another canonical text)
+  * `page_start`        — the page this chant begins on in the physical book.
+                          A monk calls out a page number, so this is how a
+                          reader finds the chant he means; it shows on the
+                          closed index card. Optional: a chant without it
+                          renders exactly as before.
   * `when_chanted`      — when is it chanted in Theravāda practice?
   * `background`        — why was it taught? The historical setting, or the
                           origin of the chant if it was composed later.
