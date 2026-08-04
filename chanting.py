@@ -367,19 +367,19 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'ชีวิตัง เม อะนิยะตัง',
-                'pali_roman': 'Jīvitaṃ me aniyataṃ',
-                'thai': 'ชีวิตของเรา เป็นของไม่เที่ยง',
-                'paiboon': 'chii-wít kɔ̌ɔŋ rao bpen kɔ̌ɔŋ mâi tîaŋ',
-                'english': 'My life is uncertain.',
-            },
-            {
-                'number': 8,
                 'pali': 'มะระณะปะริโยสานัง เม ชีวิตัง',
                 'pali_roman': 'Maraṇapariyosānaṃ me jīvitaṃ',
                 'thai': 'ชีวิตของเรา มีความตายเป็นที่สุดรอบ',
                 'paiboon': 'chii-wít kɔ̌ɔŋ rao mii kwaam-dtaai bpen tîi-sùt rɔ̂ɔp',
                 'english': 'My life has death as its end.',
+            },
+            {
+                'number': 8,
+                'pali': 'ชีวิตัง เม อะนิยะตัง',
+                'pali_roman': 'Jīvitaṃ me aniyataṃ',
+                'thai': 'ชีวิตของเรา เป็นของไม่เที่ยง',
+                'paiboon': 'chii-wít kɔ̌ɔŋ rao bpen kɔ̌ɔŋ mâi tîaŋ',
+                'english': 'My life is uncertain.',
             },
             {
                 'number': 9,
