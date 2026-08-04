@@ -1,11 +1,12 @@
 # Eval Results Summary
 
-_Generated: 2026-07-31 20:49 UTC_
+_Generated: 2026-08-04 15:37 UTC_
 
 | Prompt | Cases | Avg Score | Status |
 |---|---|---|---|
 | `ai-tutor-integration` | 1 | 100.0% | ✅ pass |
 | `buddhist-pdf-integration` | 1 | 100.0% | ✅ pass |
+| `chanting-book-batch` | 1 | 100.0% | ✅ pass |
 | `chanting-book-entry` | 1 | 100.0% | ✅ pass |
 | `claude-code-workflow` | 1 | 100.0% | ✅ pass |
 | `frontend-build` | 1 | 100.0% | ✅ pass |

@@ -21,6 +21,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`product-overview-section`](./product-overview-section/) | content | Generates a structured Product Overview using a clarifying-question loop | Yes (v1 → v2) |
 | [`tones-consonant-classes`](./tones-consonant-classes/) | agent-workflow | Explore-first build of one free section teaching tones + consonant classes with progressive drills | No (single version) |
 | [`chanting-book-entry`](./chanting-book-entry/) | content / agent-workflow | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v4) |
+| [`chanting-book-batch`](./chanting-book-batch/) | content / agent-workflow | The same workflow rebuilt for volume — several chants per message across a 286-chant book, with truncation made detectable | No (v1, forked from `chanting-book-entry` v4) |
 
 ## Featured iterations
 
@@ -33,6 +34,14 @@ This started as a one-line "research the market" request. v1 gave breadth but no
 ### [`chanting-book-entry`](./chanting-book-entry/)
 
 Four versions in a single day, each caused by a specific failure rather than a hunch. v1 worked but produced the right content in an unreliable shape — a good run and a poor run differed by luck. v2 made the good run the spec. v3 switched to JSON because long Thai and Paiboon+ values were being mangled by line wrapping in transit. v4 was the interesting one: two questions that were not reporting bugs each found one, both migration debris — rules written for a replaced format, still sitting there looking authoritative, neither producing an error. The lesson the folder records is that **a self-contradicting instruction does not fail loudly, it splits the difference** — a rule saying `ง → ng` beside an example showing `waŋ not wang` produced roughly a 65/35 mix across 900 dictionary cells.
+
+### [`chanting-book-batch`](./chanting-book-batch/)
+
+Forked from `chanting-book-entry` when the job went from one chant at a time to a 286-chant book. The useful part was measuring before rewriting: a finished entry is **×9.1** the size of what gets pasted in, and Thai script, IAST and Paiboon+ all tokenise at about **1.91 chars/token** — roughly half as efficiently as English. So the limit on chants-per-message was arithmetic, not wording, and no amount of rewriting would have moved it. What *did* move it was noticing that ~58% of an entry is commentary written **about** the chant, none of which needs checking against the physical book — so a `DATA-ONLY` depth defers it and fits 8–12 chants instead of 2–3.
+
+The design lesson is about **where a failure report can live**. Batching's real risk is a reply cut off mid-array, which at eight chants is invisible because truncated JSON still parses. Nothing written at the *end* of a reply can report that, since in a truncated reply the end is precisely what is missing — so the manifest is declared **first**, and the count that proves nothing was lost survives the very failure it exists to catch.
+
+It also produced the folder's best argument for negative-testing a rubric. All 17 criteria passed at 100%, which proved nothing until the checks were fed deliberately broken batches. That exposed an inherited condition, `(kh|th|ph)[aeiouɛɔəʉ]`, that had been quietly useless: every Paiboon+ syllable carries a tone mark, so it matched only unaccented spellings — the ones that never occur — while `thâng`, `khǎn` and `phrá` sailed through. **A green check mark is a claim, not evidence.**
 
 ### [`buddhist-pdf-integration`](./buddhist-pdf-integration/)
 

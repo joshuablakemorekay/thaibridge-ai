@@ -7,6 +7,20 @@ Each entry follows this format:
 
 ---
 
+## chanting-book-batch
+
+### 2026-08-04 — v1 (batch variant, forked from chanting-book-entry v4)
+**Change:** A second copy of the two-stage workflow, rebuilt to take several chants per message instead of one. `chanting-book-entry` is unchanged and stays the prompt for setting a single chant carefully. New in the batch version: a depth setting (`FULL` / `COMPACT` / `DATA-ONLY`), a manifest declared ahead of the entries, per-chant `checks` instead of one pooled array, repeat detection, and a Paiboon+ self-scan before the batch closes.
+**Reason:** The book is 286 chants. Measured against the 17 already set, a finished entry is ×9.1 the size of what gets pasted in, and Thai, IAST and Paiboon+ tokenise at 1.91 chars/token — about half as efficiently as English. That puts the whole book at ~1.09M output tokens and the honest ceiling at 2–3 chants a reply, which is arithmetic rather than anything wording can fix. Breaking an entry down by field showed the way through: ~58% of it is commentary written *about* the chant, and none of that needs checking against the physical book. `DATA-ONLY` defers it and gets 8–12 chants a reply.
+**Impact:** The failure batching introduces is a reply cut off mid-array — at one chant a message you would see it, at eight you would not, because truncated JSON still parses. Nothing written at the end of a reply can report this, since in a truncated reply the end is what is missing. So the manifest goes first and stage 2 refuses to write anything until it reconciles. Two bugs found while building it: the v1 `invitation` template showed three layers where the dicts in `chanting.py` hold five, and `english_unverified` — live on 10 of 17 chants — was never mentioned, so it had been added by hand every time.
+
+### 2026-08-04 — rubric fix (inherited RTGS check was nearly dead)
+**Change:** The `paiboon_not_rtgs` condition now matches `kh`/`th`/`ph` bare, instead of requiring a plain vowel after them.
+**Reason:** Found by negative-testing the new rubric rather than by it failing. The inherited regex was `(kh|th|ph)[aeiouɛɔəʉ]`, but every Paiboon+ syllable carries a tone mark — so `thâng`, `khǎn` and `phrá` all slipped through, which is to say every RTGS slip that would realistically occur. It only ever caught unaccented spellings, which are the ones that do not happen.
+**Impact:** Checked against the 133 paiboon lines already in `chanting.py`: bare `kh`/`th`/`ph` appears zero times, so matching bare is safe as well as effective. The same weakness is still present in `chanting-book-entry`'s rubric and has been left alone, since that prompt is deliberately frozen. Worth noting separately: each criterion catches exactly its own failure, but one failing criterion only moves the weighted score from 100% to ~94%, so `--fail-under 0.8` will not trip on a single fault. The rubric names the failure; it does not gate on it.
+
+---
+
 ## chanting-book-entry
 
 ### 2026-07-31 — v4 (migration complete)

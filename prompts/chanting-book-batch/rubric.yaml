@@ -1,0 +1,126 @@
+# Evaluation rubric for: Chanting Book Batch (stage 1 output)
+#
+# Same job as chanting-book-entry's rubric — check the SHAPE of the stage 1
+# output, since only the physical book can check whether the Pali is right.
+#
+# What is new here is the batch envelope. The criteria that matter most are the
+# manifest ones: at one chant a message a truncated reply is obvious, at eight
+# it is not, because truncated JSON still parses. The manifest is what makes
+# truncation detectable, so these checks guard it directly.
+#
+# `output` is the whole reply. The JSON object is extracted from the first {
+# to the last }, so the trailing count sentence does not break parsing.
+#
+# Entries carrying `repeat_of` are stubs for chants already set earlier in the
+# session — they have no verses or checks by design, so the per-chant criteria
+# skip them.
+
+prompt: chanting-book-batch
+version: 1
+criteria:
+  - name: emits_parseable_json
+    description: The reply contains one JSON object that actually parses
+    weight: 5
+    pass_condition: "json.loads(output[output.index('{'):output.rindex('}') + 1]) is not None"
+
+  - name: has_the_batch_envelope
+    description: The object carries batch, chants and batch_status
+    weight: 5
+    pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1]) for k in ['batch', 'chants', 'batch_status'])"
+
+  - name: manifest_is_declared_before_the_entries
+    description: The manifest appears ahead of the chants, so truncation stays detectable
+    weight: 5
+    pass_condition: "output.index('\"batch\"') < output.index('\"chants\"')"
+
+  - name: manifest_matches_the_declared_count
+    description: batch.manifest lists exactly as many ids as batch.received
+    weight: 5
+    pass_condition: "len(json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['manifest']) == json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['received']"
+
+  - name: every_entry_appears_in_the_manifest
+    description: No chant is returned that was not declared up front
+    weight: 5
+    pass_condition: "all(c['id'] in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['manifest'] for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'])"
+
+  - name: entries_never_outnumber_the_manifest
+    description: The manifest is never trimmed to match what was completed
+    weight: 5
+    pass_condition: "len(json.loads(output[output.index('{'):output.rindex('}') + 1])['chants']) <= len(json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['manifest'])"
+
+  - name: batch_status_can_resume_the_run
+    description: The status says what finished, what did not, and where to resume
+    weight: 5
+    pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'] for k in ['completed', 'not_started', 'resume_from', 'paiboon_scan'])"
+
+  - name: depth_is_declared
+    description: The batch says which depth produced it, so stage 2 knows what to expect
+    weight: 4
+    pass_condition: "json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['depth'] in ['FULL', 'COMPACT', 'DATA-ONLY']"
+
+  - name: every_entry_carries_an_id
+    description: Each chant proposes its own slug, which the manifest is keyed on
+    weight: 4
+    pass_condition: "all('id' in c and type(c['id']) is str and len(c['id']) > 0 for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'])"
+
+  - name: checks_are_per_chant_and_name_their_verse
+    description: Each chant owns its checks, and each check says which verse it belongs to
+    weight: 5
+    pass_condition: "all('checks' in c and all('verse' in k and 'issue' in k for k in c['checks']) for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'repeat_of' not in c)"
+
+  - name: values_are_single_line
+    description: No string value in any chant contains a literal newline
+    weight: 5
+    pass_condition: "all('\\n' not in v for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] for v in c.values() if type(v) is str)"
+
+  - name: verses_are_single_line_too
+    description: Every verse layer is one unwrapped line
+    weight: 5
+    pass_condition: "all('\\n' not in v for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'] for v in verse.values() if type(v) is str)"
+
+  - name: every_verse_carries_the_book_layers
+    description: Each verse has its number and the four layers taken from the book
+    weight: 5
+    pass_condition: "all(all(k in verse for k in ['number', 'pali', 'pali_roman', 'thai', 'paiboon']) for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'])"
+
+  # The digraphs are matched BARE, with no following-vowel class. An earlier
+  # version of this check required a plain vowel after them — but every
+  # Paiboon+ syllable carries a tone mark, so `thâng`, `khǎn` and `phrá` all
+  # slipped through it, which is to say every RTGS slip that would actually
+  # occur. Verified against the 133 paiboon lines already in chanting.py:
+  # bare kh/th/ph appears zero times, so matching them bare is safe.
+  - name: paiboon_not_rtgs
+    description: The Paiboon+ layer avoids RTGS aspiration spellings across the whole batch
+    weight: 5
+    pass_condition: "not any(re.search(r'(kh|th|ph)', verse['paiboon']) for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'])"
+
+  - name: uses_eng_not_ng
+    description: ง is written ŋ throughout the Paiboon+ layer, never ng
+    weight: 4
+    pass_condition: "not any('ng' in verse['paiboon'] for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'])"
+
+  - name: sections_are_bilingual
+    description: Section labels carry the Thai/Pali name as well as the English
+    weight: 4
+    pass_condition: "all(re.search(r'[฀-๿]', verse['section']) for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'verses' in c for verse in c['verses'] if 'section' in verse)"
+
+  - name: pali_roman_uses_iast_diacritics
+    description: Romanised Pali carries proper IAST diacritics
+    weight: 3
+    pass_condition: "any(c in output for c in ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ'])"
+
+  - name: closes_with_completed_and_check_counts
+    description: The closing sentence gives both numbers — how many finished, how much needs checking
+    weight: 3
+    pass_condition: "re.search(r'(complete|completed)', output) is not None and re.search(r'(need|needs) your eye|need checking|against the physical book', output) is not None"
+
+test_cases:
+  - input:
+      document: "A batch of chants copied from a Thai chanting book, several at once, DATA-ONLY depth"
+    expected_traits:
+      - one parseable JSON object with batch, chants and batch_status
+      - the manifest declared before any entry, listing every chant pasted
+      - the manifest never trimmed to match what was completed
+      - checks held per chant, each naming its verse
+      - Paiboon+ throughout, ŋ never ng
+      - a resume point so the next batch picks up where this one stopped

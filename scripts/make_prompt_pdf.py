@@ -1,8 +1,13 @@
-"""Build the Chanting Book Prompts reference PDF.
+"""Build the Chanting Book Prompts reference PDFs.
 
-The two prompts are read straight out of prompts/chanting-book-entry/prompt.md,
-so the PDF cannot drift away from the prompts that are actually in use. Change
-the prompt, re-run this, and the sheet is current again.
+Two sheets, one script: the one-chant-at-a-time workflow and the batch variant.
+Each reads its two prompts straight out of its own prompt.md, so a sheet cannot
+drift away from the prompt actually in use. Change the prompt, re-run this, and
+the sheet is current again.
+
+    python scripts/make_prompt_pdf.py                      # the one-chant sheet
+    python scripts/make_prompt_pdf.py chanting-book-batch  # the batch sheet
+    python scripts/make_prompt_pdf.py all                  # both
 
 Font note: Tahoma is the only font on a stock Windows machine that covers all
 three character sets this project needs at once — Thai script, IAST diacritics
@@ -29,9 +34,88 @@ from reportlab.platypus import (BaseDocTemplate, Frame, PageBreak, PageTemplate,
                                 XPreformatted)
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROMPT_MD = os.path.join(HERE, 'prompts', 'chanting-book-entry', 'prompt.md')
-OUT_PDF = os.path.join(HERE, 'prompts', 'chanting-book-entry',
-                       'chanting-book-prompts.pdf')
+
+# Two sheets are built from this one script, because they are the same workflow
+# at two scales and their print furniture should not drift apart. Everything
+# below the "How to use this sheet" table — the one rule, the Paiboon+ table,
+# the prompt blocks themselves — is shared. Only the framing differs.
+VARIANTS = {
+    'chanting-book-entry': {
+        'folder': 'chanting-book-entry',
+        'pdf': 'chanting-book-prompts.pdf',
+        'title': 'Chanting Book Prompts',
+        'subtitle': 'A two-stage workflow for turning a page of a physical Thai '
+                    'chanting book into an entry in the Digital Chanting Book.',
+        'howto': [
+            ('1. Open Claude.ai',
+             'Paste <b>Stage 1</b> once at the start of a session. It sets the '
+             'rules for the whole conversation.'),
+            ('2. Paste your chant',
+             'Copy the Thai from the chanting book — the Pali in Thai script and '
+             'its Thai translation — and paste it in. One chant at a time.'),
+            ('3. Read the working notes',
+             'The reply opens by saying what it split, what it grouped, and what '
+             'it could not resolve. Read this before the JSON.'),
+            ('4. Check against the book',
+             'The reply ends by counting what needs verifying. Do that with the '
+             'book open. This is the step nothing else can do for you.'),
+            ('5. Open Claude Code',
+             'Paste <b>Stage 2</b>, then the JSON underneath it. It writes the '
+             'chant into chanting.py and verifies it renders.'),
+        ],
+        'depth': None,
+        'stage1_intro': 'Paste this once at the start of a session, then paste '
+                        'chants one at a time. It returns one JSON object.',
+        'stage2_intro': 'Paste this, then the JSON from Stage 1 underneath it.',
+    },
+    'chanting-book-batch': {
+        'folder': 'chanting-book-batch',
+        'pdf': 'chanting-book-batch-prompts.pdf',
+        'title': 'Chanting Book Prompts — Batch',
+        'subtitle': 'The same two-stage workflow rebuilt for volume: several '
+                    'chants per message, across a 286-chant book.',
+        'howto': [
+            ('1. Open Claude.ai',
+             'Paste <b>Stage 1</b> once at the start of a session. It sets the '
+             'rules for the whole conversation.'),
+            ('2. Choose a depth',
+             'Put <b>FULL</b>, <b>COMPACT</b> or <b>DATA-ONLY</b> on the first '
+             'line of your paste. See the table below. If you say nothing it '
+             'uses COMPACT.'),
+            ('3. Paste a batch',
+             'Several chants at once, numbered. The reply lists every one it '
+             'received <i>before</i> it writes any of them.'),
+            ('4. Count the manifest',
+             'Check the manifest against how many entries actually arrived. If '
+             'they differ, the reply was cut off — re-paste from the id in '
+             '<b>resume_from</b>. This is the check batching exists to need.'),
+            ('5. Check against the book',
+             'The closing sentence counts what needs verifying. Do that with the '
+             'book open. This is the step nothing else can do for you.'),
+            ('6. Open Claude Code',
+             'Paste <b>Stage 2</b>, then the whole reply underneath it. It '
+             'reconciles the manifest before it writes anything.'),
+        ],
+        'depth': [
+            ('FULL', 'Everything the one-chant sheet produces. '
+                     '<b>2–3 chants</b> per reply.'),
+            ('COMPACT', 'background 1 paragraph, meaning 2. Everything else in '
+                        'full. <b>4–6 chants</b> per reply.'),
+            ('DATA-ONLY', 'Book content and structure only — no background, '
+                          'meaning, summary, when_chanted, source or per-verse '
+                          'english. <b>8–12 chants</b> per reply.'),
+            ('Why it works', 'About 58% of a finished entry is commentary '
+                             'written <i>about</i> the chant, and none of it '
+                             'needs checking against the physical book. '
+                             'DATA-ONLY defers that half and captures the half '
+                             'that needs the book open.'),
+        ],
+        'stage1_intro': 'Paste this once at the start of a session, then paste '
+                        'batches of chants. It returns one JSON object holding '
+                        'a manifest, an array of entries, and a status.',
+        'stage2_intro': 'Paste this, then the whole Stage 1 reply underneath it.',
+    },
+}
 
 PURPLE = HexColor('#4A1E5C')
 GOLD = HexColor('#B8860B')
@@ -170,15 +254,19 @@ def footer(canvas, doc):
     canvas.restoreState()
 
 
-def build():
+def build(variant='chanting-book-entry'):
+    cfg = VARIANTS[variant]
+    prompt_md = os.path.join(HERE, 'prompts', cfg['folder'], 'prompt.md')
+    out_pdf = os.path.join(HERE, 'prompts', cfg['folder'], cfg['pdf'])
+
     register_fonts()
     st = styles()
-    stage1, stage2 = extract_prompts(PROMPT_MD)
+    stage1, stage2 = extract_prompts(prompt_md)
 
-    doc = BaseDocTemplate(OUT_PDF, pagesize=A4,
+    doc = BaseDocTemplate(out_pdf, pagesize=A4,
                           leftMargin=2 * cm, rightMargin=2 * cm,
                           topMargin=1.8 * cm, bottomMargin=1.8 * cm,
-                          title='Chanting Book Prompts',
+                          title=cfg['title'],
                           author='Joshua Kay')
     frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height,
                   id='main')
@@ -186,29 +274,21 @@ def build():
                                        onPage=footer)])
 
     s = []
-    s.append(Paragraph('Chanting Book Prompts', st['title']))
-    s.append(Paragraph(
-        'A two-stage workflow for turning a page of a physical Thai chanting '
-        'book into an entry in the Digital Chanting Book.', st['subtitle']))
+    s.append(Paragraph(cfg['title'], st['title']))
+    s.append(Paragraph(cfg['subtitle'], st['subtitle']))
 
     s.append(Paragraph('How to use this sheet', st['h2']))
-    s.append(kv_table([
-        ('1. Open Claude.ai',
-         'Paste <b>Stage 1</b> once at the start of a session. It sets the '
-         'rules for the whole conversation.'),
-        ('2. Paste your chant',
-         'Copy the Thai from the chanting book — the Pali in Thai script and '
-         'its Thai translation — and paste it in. One chant at a time.'),
-        ('3. Read the working notes',
-         'The reply opens by saying what it split, what it grouped, and what '
-         'it could not resolve. Read this before the JSON.'),
-        ('4. Check against the book',
-         'The reply ends by counting what needs verifying. Do that with the '
-         'book open. This is the step nothing else can do for you.'),
-        ('5. Open Claude Code',
-         'Paste <b>Stage 2</b>, then the JSON underneath it. It writes the '
-         'chant into chanting.py and verifies it renders.'),
-    ], st))
+    s.append(kv_table(cfg['howto'], st))
+
+    if cfg['depth']:
+        s.append(Paragraph('Choose a depth before you start', st['h2']))
+        s.append(Paragraph(
+            'A finished entry is about nine times the size of what you paste '
+            'in, and Thai script, IAST and Paiboon+ all tokenise about twice '
+            'as expensively as English. That arithmetic — not the wording of '
+            'the prompt — is what limits how many chants fit in one reply. So '
+            'the batch sheet lets you trade commentary for chants.', st['body']))
+        s.append(kv_table(cfg['depth'], st))
 
     s.append(Paragraph('The one rule that matters most', st['h2']))
     s.append(Paragraph(
@@ -239,23 +319,28 @@ def build():
 
     s.append(PageBreak())
     s.append(Paragraph('Stage 1 — paste into Claude.ai', st['h2']))
-    s.append(Paragraph(
-        'Paste this once at the start of a session, then paste chants one at a '
-        'time. It returns one JSON object.', st['body']))
+    s.append(Paragraph(cfg['stage1_intro'], st['body']))
     s.append(prompt_box(stage1, st, doc.width))
 
     s.append(PageBreak())
     s.append(Paragraph('Stage 2 — paste into Claude Code', st['h2']))
-    s.append(Paragraph(
-        'Paste this, then the JSON from Stage 1 underneath it.', st['body']))
+    s.append(Paragraph(cfg['stage2_intro'], st['body']))
     s.append(prompt_box(stage2, st, doc.width))
 
     s.append(Spacer(1, 10))
     s.append(Paragraph('Before you say it is done', st['h3']))
     s.append(Paragraph(
-        'The canonical copy of both prompts is prompts/chanting-book-entry/prompt.md '
+        f'The canonical copy of both prompts is prompts/{cfg["folder"]}/prompt.md '
         'in the repo — copy from there, not from this sheet, which folds long lines '
         'to fit the page and prints ‼ where the prompt uses the warning emoji.', st['body']))
+    if cfg['depth']:
+        s.append(Paragraph(
+            'Count the manifest against the entries that actually arrived. A '
+            'reply cut off mid-array still parses as JSON, so nothing '
+            'downstream will notice on your behalf — and nothing written at '
+            'the end of a reply can report it, because in a truncated reply '
+            'the end is exactly what is missing. That is why the manifest '
+            'comes first.', st['body']))
     s.append(Paragraph(
         'Check the character counts Stage 2 reports, both ways: every Thai and '
         'Pali character from your paste should appear in the file, and none '
@@ -263,9 +348,16 @@ def build():
         'file imports proves neither.', st['body']))
 
     doc.build(s)
-    return OUT_PDF
+    return out_pdf
 
 
 if __name__ == '__main__':
-    path = build()
-    print(f'Wrote {path} ({os.path.getsize(path):,} bytes)')
+    targets = sys.argv[1:] or ['chanting-book-entry']
+    if targets == ['all']:
+        targets = list(VARIANTS)
+    for name in targets:
+        if name not in VARIANTS:
+            sys.exit(f'Unknown sheet: {name}. Choose from: '
+                     f'{", ".join(VARIANTS)} — or "all".')
+        path = build(name)
+        print(f'Wrote {path} ({os.path.getsize(path):,} bytes)')

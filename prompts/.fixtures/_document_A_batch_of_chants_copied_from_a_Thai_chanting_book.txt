@@ -1,0 +1,206 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "received": 3,
+    "manifest": [
+      "ariyadhana-gatha",
+      "bharasutta-gatha",
+      "ariyadhana-gatha"
+    ]
+  },
+  "chants": [
+    {
+      "id": "ariyadhana-gatha",
+      "working_notes": {
+        "invitation": "Absent in the book; none written.",
+        "units": "7 Pali units, kept in the book's order.",
+        "ordering": "Pali and Thai run in step throughout.",
+        "conventions": "None; the Paiboon+ table above was used."
+      },
+      "title_thai": "อะริยะธะนะคาถา",
+      "title_pali": "Ariyadhanagāthā",
+      "title_roman": "",
+      "title_english": "The Verses on the Noble Wealth",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "section": "อะริยะธะนะ: The Noble Wealth",
+          "number": 1,
+          "pali": "ยัสสะ สัทธา ตะถาคะเต อะจะลา สุปะติฏฐิตา",
+          "pali_roman": "yassa saddhā tathāgate acalā supatiṭṭhitā",
+          "thai": "",
+          "paiboon": ""
+        },
+        {
+          "number": 2,
+          "pali": "สีลัญจะ ยัสสะ กัล์ยาณัง อะริยะกันตัง ปะสังสิตัง,",
+          "pali_roman": "sīlañca yassa kalyāṇaṃ ariyakantaṃ pasaṃsitaṃ,",
+          "thai": "",
+          "paiboon": ""
+        },
+        {
+          "number": 3,
+          "pali": "สังเฆ ปะสาโท ยัสสัตถิ อุชุภูตัญจะ ทัสสะนัง",
+          "pali_roman": "saṅghe pasādo yassatthi ujubhūtañca dassanaṃ",
+          "thai": "",
+          "paiboon": ""
+        },
+        {
+          "number": 4,
+          "pali": "อะทะลิทโทติ ตัง อาหุ อะโมฆันตัสสะ ชีวิตัง.",
+          "pali_roman": "adaliddoti taṃ āhu amoghantassa jīvitaṃ.",
+          "thai": "",
+          "paiboon": ""
+        },
+        {
+          "section": "อะนุยุญเชถะ: The Exhortation",
+          "number": 5,
+          "pali": "ตัส์มา สัทธัญจะ สีลัญจะ ปะสาทัง ธัมมะทัสสะนัง",
+          "pali_roman": "tasmā saddhañca sīlañca pasādaṃ dhammadassanaṃ",
+          "thai": "",
+          "paiboon": ""
+        },
+        {
+          "number": 6,
+          "pali": "อะนุยุญเชถะ เมธาวี สะรัง พุทธานะ สาสะนันติ.",
+          "pali_roman": "anuyuñjetha medhāvī saraṃ buddhāna sāsananti.",
+          "thai": "",
+          "paiboon": ""
+        },
+        {
+          "section": "นิฏฐิตา: The Closing Formula",
+          "number": 7,
+          "pali": "อะริยะธะนะคาถา นิฏฐิตา",
+          "pali_roman": "ariyadhanagāthā niṭṭhitā",
+          "thai": "",
+          "paiboon": ""
+        }
+      ],
+      "checks": [
+        {
+          "verse": 1,
+          "issue": "Opening line spacing differs from the standard edition; reproduced as printed."
+        },
+        {
+          "verse": null,
+          "issue": "The book gives no invitation line for this chant; none has been written."
+        }
+      ]
+    },
+    {
+      "id": "bharasutta-gatha",
+      "working_notes": {
+        "invitation": "Absent in the book; none written.",
+        "units": "8 Pali units, kept in the book's order.",
+        "ordering": "Pali and Thai run in step throughout.",
+        "conventions": "None; the Paiboon+ table above was used."
+      },
+      "title_thai": "ภาระสุตตะคาถา",
+      "title_pali": "Bhārasuttagāthā",
+      "title_roman": "",
+      "title_english": "The Verses of the Discourse on the Burden",
+      "invitation": {
+        "pali": "(หันทะ มะยัง ภาระสุตตะคาถาโย ภะณามะ เส.)",
+        "pali_roman": "handa mayaṃ bhārasuttagāthāyo bhaṇāma se.",
+        "thai": "",
+        "paiboon": "",
+        "english": "Now let us recite the verses of the discourse on the burden."
+      },
+      "verses": [
+        {
+          "section": "ภาระ: The Burden",
+          "number": 1,
+          "pali": "ภารา หะเว ปัญจักขันธา,",
+          "pali_roman": "bhārā have pañcakkhandhā,",
+          "thai": "ขันธ์ทั้งห้า เป็นของหนักเน้อ,",
+          "paiboon": "kǎn táŋ hâa bpen kɔ̌ɔŋ nàk nə́ə,"
+        },
+        {
+          "number": 2,
+          "pali": "ภาระหาโร จะ ปุคคะโล,",
+          "pali_roman": "bhārahāro ca puggalo,",
+          "thai": "บุคคลแหละ เป็นผู้แบกของหนักพาไป,",
+          "paiboon": "bùk-kon lɛ̀ bpen pûu bɛ̀ɛk kɔ̌ɔŋ nàk paa bpai,"
+        },
+        {
+          "number": 3,
+          "pali": "ภาราทานัง ทุกขัง โลเก,",
+          "pali_roman": "bhārādānaṃ dukkhaṃ loke,",
+          "thai": "การแบกถือของหนัก เป็นความทุกข์ในโลก,",
+          "paiboon": "gaan bɛ̀ɛk tʉ̌ʉ kɔ̌ɔŋ nàk bpen kwaam túk nai lôok,"
+        },
+        {
+          "number": 4,
+          "pali": "ภาระนิกเขปะนัง สุขัง,",
+          "pali_roman": "bhāranikkhepanaṃ sukhaṃ,",
+          "thai": "การสลัดของหนักทิ้งลงเสีย เป็นความสุข,",
+          "paiboon": "gaan sà-làt kɔ̌ɔŋ nàk tíŋ loŋ sǐa bpen kwaam sùk,"
+        },
+        {
+          "section": "นิกขิปิต์วา: The Laying Down",
+          "number": 5,
+          "pali": "นิกขิปิต์วา คะรุง ภารัง,",
+          "pali_roman": "nikkhipitvā garuṃ bhāraṃ,",
+          "thai": "พระอริยเจ้า สลัดทิ้งของหนัก ลงเสียแล้ว,",
+          "paiboon": "prá à-rí-yá-jâo sà-làt tíŋ kɔ̌ɔŋ nàk loŋ sǐa lɛ́ɛo,"
+        },
+        {
+          "number": 6,
+          "pali": "อัญญัง ภารัง อะนาทิยะ,",
+          "pali_roman": "aññaṃ bhāraṃ anādiya,",
+          "thai": "ทั้งไม่หยิบฉวยเอาของหนักอันอื่น ขึ้นมาอีก,",
+          "paiboon": "táŋ mâi yìp chǔay ao kɔ̌ɔŋ nàk an ʉ̀ʉn kʉ̂n maa ìik,"
+        },
+        {
+          "number": 7,
+          "pali": "สะมูลัง ตัณหัง อัพพุยหะ,",
+          "pali_roman": "samūlaṃ taṇhaṃ abbuyha,",
+          "thai": "ก็เป็นผู้ถอนตัณหาขึ้นได้ กระทั่งราก,",
+          "paiboon": "gɔ̂ɔ bpen pûu tɔ̌ɔn dtan-hǎa kʉ̂n dâai grà-tâŋ râak,"
+        },
+        {
+          "number": 8,
+          "pali": "นิจฉาโต ปะรินิพพุโต.",
+          "pali_roman": "nicchāto parinibbuto.",
+          "thai": "เป็นผู้หมดสิ่งปรารถนา ดับสนิทไม่มีส่วนเหลือ.",
+          "paiboon": "bpen pûu mòt sìŋ bpràat-tà-nǎa dàp sà-nìt mâi mii sùan lʉ̌a."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 1,
+          "issue": "Opening line spacing differs from the standard edition; reproduced as printed."
+        },
+        {
+          "verse": null,
+          "issue": "The book gives no invitation line for this chant; none has been written."
+        }
+      ]
+    },
+    {
+      "id": "ariyadhana-gatha",
+      "repeat_of": "ariyadhana-gatha",
+      "note": "Printed again in the evening service, identically. Not set twice."
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "ariyadhana-gatha",
+      "bharasutta-gatha"
+    ],
+    "not_started": [],
+    "resume_from": "",
+    "paiboon_scan": "clean — no kh/th/ph/ng found in any paiboon value",
+    "pali_untouched": "confirmed; no pali value was romanised with Paiboon+",
+    "notes": "One repeat skipped and stubbed. Depth held at DATA-ONLY throughout."
+  }
+}
+
+Two of the three are complete, one was a repeat; four things need your eye against the physical book; nothing to resume.
