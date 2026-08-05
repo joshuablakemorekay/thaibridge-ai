@@ -6,62 +6,10 @@
 {% block title %}Digital Chanting Book{% endblock %}
 
 {% block extra_css %}
+{# The verse and layer styles live in a partial because the page-by-page
+   reading view shows the same verses and must not style them differently. #}
+{% include 'partials/chanting_book_css.html' %}
 <style>
-    /* ── Front matter: how to use the book ───────────────────────────
-       This panel is the book's opening page and its control panel at the
-       same time. The five checkboxes ARE the explanation of the five
-       layers, so a reader never meets the same list twice: reading about
-       a layer and switching it off happen in one place.
-
-       A Thai chanter switches off Paiboon and English and is left with a
-       clean Thai chanting book; an English chanter switches off the Thai
-       script. Same page, two different books. Choices are saved in the
-       browser, same as the Learning Support panel. */
-    .layer-panel {
-        background: linear-gradient(135deg, #FFF4E0 0%, #FFE8CC 100%);
-        border: 2px solid var(--monk-saffron);
-        border-radius: 12px;
-        padding: 1.25rem 1.5rem;
-        margin: 1.5rem 0 2.5rem;
-    }
-    .layer-panel h2 {
-        font-size: 1.05rem;
-        margin: 0 0 0.6rem;
-        color: var(--royal-purple);
-    }
-    .panel-intro, .panel-closing {
-        color: #55483a;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        max-width: 68ch;
-        margin: 0 0 1rem;
-    }
-    .panel-closing { margin: 1rem 0 0; }
-    .panel-closing strong { color: var(--royal-purple); }
-
-    /* Two columns on a wide screen, one on a phone — enough room for each
-       layer's description to sit under its own label. */
-    .layer-options {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 0.75rem 1.75rem;
-    }
-    .layer-option {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.5rem;
-        cursor: pointer;
-        font-size: 0.95rem;
-        line-height: 1.35;
-    }
-    .layer-option input { margin-top: 0.25rem; flex-shrink: 0; }
-    .layer-option .layer-note {
-        display: block;
-        font-size: 0.85rem;
-        color: #6b6b6b;
-        line-height: 1.45;
-    }
-
     /* ── The index: a grid of chant cards ────────────────────────────
        Closed, each chant is a small box you can scan; opened, it spans the
        full width of the grid so there is room to read it. Sized so a phone
@@ -184,218 +132,18 @@
         color: #5a4a2a;
     }
 
-    /* ── The standard layout every chant follows ─────────────────────
-       Source and occasion first as a plain two-column list, then the two
-       collapsible context sections, then the chant itself. Every chant is
-       laid out this way, so once you have read one you know where to look
-       in all the others. */
-    .chant-body { margin-top: 1.25rem; }
-
-    .chant-facts {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 0.35rem 1rem;
-        margin: 0 0 1.25rem;
-        font-size: 0.95rem;
-        max-width: 70ch;
-    }
-    .chant-facts dt {
-        color: var(--royal-purple);
-        font-weight: bold;
-    }
-    .chant-facts dd { margin: 0; color: #4a4a4a; }
-
-    /* Context sections: closed by default so the chant stays within reach
-       for someone who only came to chant, one tap away for someone who
-       came to understand. */
-    .chant-section {
-        border: 1px solid #EADFC8;
-        border-radius: 10px;
-        margin-bottom: 0.75rem;
-        background: #FFFDF8;
-        max-width: 70ch;
-    }
-    .chant-section > summary {
-        cursor: pointer;
-        padding: 0.7rem 1rem;
-        font-weight: bold;
-        color: var(--royal-purple);
-        font-size: 0.95rem;
-        list-style: none;
-    }
-    .chant-section > summary::-webkit-details-marker { display: none; }
-    .chant-section > summary::before {
-        content: '▸ ';
-        color: var(--monk-saffron);
-    }
-    .chant-section[open] > summary::before { content: '▾ '; }
-    .chant-section p {
-        margin: 0 1rem 0.9rem;
-        color: #4a4a4a;
-        line-height: 1.7;
-    }
-    .chant-section p:first-of-type { margin-top: 0.2rem; }
-
-    .chant-heading {
-        font-size: 1.1rem;
-        color: var(--royal-purple);
-        margin: 2rem 0 0;
-        padding-bottom: 0.4rem;
-        border-bottom: 2px solid var(--royal-gold);
-        max-width: 70ch;
-    }
-
-    /* A heading inside a chant, marking a new movement — "Reflection on the
-       Body" and so on. A long chant is really several short reflections, and
-       a chanting book prints those breaks; a verse carrying a `section` key
-       starts one. */
-    .verse-section {
-        font-size: 1rem;
-        color: var(--royal-purple);
-        text-transform: uppercase;
-        letter-spacing: 0.08em;
-        margin: 2.25rem 0 0;
-        padding-bottom: 0.35rem;
-        border-bottom: 1px dashed var(--royal-gold);
-        max-width: 70ch;
-    }
-    .verse-section:first-of-type { margin-top: 1.25rem; }
-
-    /* Where a new page begins in the physical book. Deliberately quiet — it is
-       a wayfinding mark, not a heading, and it must not compete with a section
-       title or break the read down the page. A verse carries `page` only where
-       the printed page turns, the same rule `section` follows. */
-    .verse-page {
-        display: block;
-        margin: 1.5rem 0 0;
-        font-size: 0.75rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #999;
-        max-width: 70ch;
-        border-top: 1px dotted #d8d0bd;
-        padding-top: 0.4rem;
-    }
-    .verse-page:first-of-type { margin-top: 0.5rem; }
-
-    .verse {
-        border-left: 4px solid var(--royal-gold);
-        padding: 1.1rem 0 1.1rem 1.25rem;
-        margin: 1.75rem 0;
-    }
-    .verse-number {
-        display: inline-block;
-        min-width: 1.9rem;
-        height: 1.9rem;
-        line-height: 1.9rem;
-        text-align: center;
-        border-radius: 50%;
-        background: var(--royal-gold);
-        color: var(--deep-purple);
-        font-weight: bold;
-        font-size: 0.9rem;
-        margin-bottom: 0.6rem;
-    }
-    .verse.invitation {
-        border-left-color: var(--monk-saffron);
-        background: #FFFBF4;
-        border-radius: 0 10px 10px 0;
-    }
-    .verse.invitation .invitation-label {
-        font-size: 0.8rem;
-        text-transform: uppercase;
-        letter-spacing: 0.06em;
-        color: var(--monk-saffron);
-        font-weight: bold;
-        display: block;
-        margin-bottom: 0.5rem;
-    }
-
-    /* One visual treatment per layer, so the eye can lock onto the line
-       you are chanting from without reading the others. */
-    .layer { margin: 0 0 0.7rem; }
-    .layer:last-child { margin-bottom: 0; }
-
-    /* Each layer carries a colour and a matching left rule, so you can find
-       the line you want without reading it. Size and style live here; the
-       COLOURS are generated from CHANT_LAYERS below, so the text, its rule
-       and the swatch on its toggle all come from one value in chanting.py. */
-    .layer { border-left: 3px solid transparent; padding-left: 0.75rem; }
-
-    .layer-pali {
-        font-size: 1.35rem;
-        line-height: 2.1;
-        font-weight: 600;
-        white-space: pre-line;   /* the data keeps the couplet's line break */
-    }
-    .layer-pali_roman {
-        font-size: 1.1rem;
-        line-height: 1.85;
-        font-style: italic;
-        white-space: pre-line;   /* breaks in the same place as the Thai script */
-    }
-    .layer-thai   { font-size: 1.1rem; line-height: 1.9; }
-    .layer-paiboon { font-style: italic; font-size: 1rem; line-height: 1.7; }
-    .layer-english { font-size: 1rem; line-height: 1.6; }
-
-    /* One colour per layer, straight from CHANT_LAYERS — never edit these
-       here, change the `colour` value in chanting.py instead. */
-    {% for layer in layers %}
-    .layer-{{ layer.key }} {
-        color: {{ layer.colour }};
-        border-left-color: {{ layer.colour }};
-    }
-    {% endfor %}
-
-    /* Colour swatch beside each toggle, tinted inline from CHANT_LAYERS. */
-    .layer-swatch {
-        display: inline-block;
-        width: 0.7rem;
-        height: 0.7rem;
-        border-radius: 2px;
-        margin-right: 0.35rem;
-        vertical-align: baseline;
-    }
-
-    /* Toggled-off layers. The body class is set by the script below. */
-    .chant-book.hide-pali       .layer-pali,
-    .chant-book.hide-pali_roman .layer-pali_roman,
-    .chant-book.hide-thai       .layer-thai,
-    .chant-book.hide-paiboon    .layer-paiboon,
-    .chant-book.hide-english    .layer-english { display: none; }
 
     @media (max-width: 600px) {
-        .layer-pali { font-size: 1.2rem; line-height: 1.95; }
         .chant-header .title-thai { font-size: 1.5rem; }
-        /* The grid already collapses to one column here; just tighten it. */
-        .layer-options { gap: 0.85rem; }
-        /* Stack the source/occasion list rather than squeezing two columns. */
-        .chant-facts { grid-template-columns: 1fr; gap: 0.15rem; }
-        .chant-facts dd { margin-bottom: 0.5rem; }
     }
 
     @media print {
-        .layer-panel { display: none; }
-        .verse { break-inside: avoid; }
         /* Print what is open, one chant per page, and drop the grid so a
            chant is never squeezed into a column. */
         .chant-grid { display: block; }
         .chant-card { border: none; box-shadow: none; padding: 0; }
         .chant-card + .chant-card[open] { break-before: page; }
         .chant-card summary::after { display: none; }
-        /* A printed page has no tap: the context sections are opened by the
-           beforeprint handler below, and here they lose their on-screen box
-           so they read as ordinary book sections. */
-        .chant-section {
-            border: none;
-            background: none;
-            margin-bottom: 1.25rem;
-            break-inside: avoid;
-        }
-        .chant-section > summary { padding: 0 0 0.3rem; }
-        .chant-section > summary::before { content: none; }
-        .chant-section p { margin-left: 0; margin-right: 0; }
-        .chant-heading { break-after: avoid; }
     }
 </style>
 {% endblock %}
@@ -426,6 +174,7 @@
         <strong>Every chant follows the same layout:</strong> {{ how_to_use.layout }}
     </p>
 </div>
+
 
 <h2 style="color: var(--royal-purple); margin-bottom: 0.3rem;">The chants</h2>
 <p style="color:#555; max-width: 62ch; margin-top: 0;">
@@ -544,48 +293,8 @@
 {% endblock %}
 
 {% block extra_js %}
+{% include 'partials/chanting_layers_js.html' %}
 <script>
-// Layer toggles. Pure front-end — the choice is remembered in this browser
-// only, nothing is sent to the server. Same approach as Learning Support.
-(function () {
-    var STORAGE_KEY = 'chanting-hidden-layers';
-    var book = document.getElementById('chant-book');
-    if (!book) return;
-
-    var hidden;
-    try {
-        hidden = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
-    } catch (e) {
-        hidden = [];
-    }
-
-    function apply() {
-        document.querySelectorAll('.layer-toggle').forEach(function (box) {
-            var on = hidden.indexOf(box.dataset.layer) === -1;
-            box.checked = on;
-            book.classList.toggle('hide-' + box.dataset.layer, !on);
-        });
-        try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(hidden));
-        } catch (e) { /* private browsing — the page still works */ }
-    }
-
-    document.querySelectorAll('.layer-toggle').forEach(function (box) {
-        box.addEventListener('change', function () {
-            var layer = box.dataset.layer;
-            var at = hidden.indexOf(layer);
-            if (box.checked) {
-                if (at !== -1) hidden.splice(at, 1);
-            } else if (at === -1) {
-                hidden.push(layer);
-            }
-            apply();
-        });
-    });
-
-    apply();
-})();
-
 // A closed <details> prints as just its heading, which would leave the
 // background and meaning missing from a printed chant. So open every context
 // section before printing, and put them back afterwards — the printed page and

@@ -1,0 +1,50 @@
+{# The five layer toggles, shared by the index and the page-by-page view.
+
+   One script and one storage key, so switching Paiboon off on the index keeps
+   it off when you jump to a page. A reader who has made the book into a Thai
+   chanting book expects it to stay one.
+
+   Both surfaces put id="chant-book" on the element wrapping their verses; the
+   hide-<layer> classes go there. #}
+<script>
+// Layer toggles. Pure front-end — the choice is remembered in this browser
+// only, nothing is sent to the server. Same approach as Learning Support.
+(function () {
+    var STORAGE_KEY = 'chanting-hidden-layers';
+    var book = document.getElementById('chant-book');
+    if (!book) return;
+
+    var hidden;
+    try {
+        hidden = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch (e) {
+        hidden = [];
+    }
+
+    function apply() {
+        document.querySelectorAll('.layer-toggle').forEach(function (box) {
+            var on = hidden.indexOf(box.dataset.layer) === -1;
+            box.checked = on;
+            book.classList.toggle('hide-' + box.dataset.layer, !on);
+        });
+        try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(hidden));
+        } catch (e) { /* private browsing — the page still works */ }
+    }
+
+    document.querySelectorAll('.layer-toggle').forEach(function (box) {
+        box.addEventListener('change', function () {
+            var layer = box.dataset.layer;
+            var at = hidden.indexOf(layer);
+            if (box.checked) {
+                if (at !== -1) hidden.splice(at, 1);
+            } else if (at === -1) {
+                hidden.push(layer);
+            }
+            apply();
+        });
+    });
+
+    apply();
+})();
+</script>
