@@ -44,7 +44,9 @@
         "chant": "bharasutta-gatha",
         "verses": "6-8",
         "starts_here": false,
-        "note": "Lower third of the page is the printed instruction to bow three times."
+        "note": "Lower third of the page is the printed instruction to bow three times.",
+        "columns": 2,
+        "service_closing": "จบพระมะหาปัฏฐาน"
       }
     ]
   },

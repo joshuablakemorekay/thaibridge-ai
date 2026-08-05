@@ -31,7 +31,7 @@
 # the physical book.
 
 prompt: chanting-book-batch
-version: 3
+version: 4
 criteria:
   - name: emits_parseable_json
     description: The reply contains one JSON object that actually parses
@@ -242,6 +242,24 @@ criteria:
     description: A front-matter row has a null page and keeps the printed form
     weight: 4
     pass_condition: "all(r['page'] is None and 'page_printed' in r for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'] if r.get('front_matter'))"
+
+  # v6. Two columns turned out to appear in BOTH scripts and to start half way
+  # down a page with no heading — first found in the roman-script section, then
+  # again mid-chant on page 7 in Thai script. Reading down a column instead of
+  # across a row yields fluent, wrong Pali that looks nothing like an error
+  # afterwards, so the page map has to say which pages were set that way.
+  - name: two_column_pages_are_declared
+    description: A columns value, where present, says 2 or where it changes
+    weight: 5
+    pass_condition: "all(r['columns'] in [2, '1 then 2'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'] if 'columns' in r)"
+
+  # A closing that ends a whole SERVICE rather than one chant — จบพิธีทำวัตรเช้า,
+  # จบสวดแจงเท่านี้. Belongs to the page, because attaching it to the chant above
+  # would say that chant ends twice.
+  - name: service_closings_are_recorded_on_the_page
+    description: A service_closing, where present, is a non-empty printed line
+    weight: 3
+    pass_condition: "all(type(r['service_closing']) is str and len(r['service_closing']) > 0 for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'] if 'service_closing' in r)"
 
   - name: closes_with_completed_and_check_counts
     description: The closing sentence gives both numbers — how many finished, how much needs checking

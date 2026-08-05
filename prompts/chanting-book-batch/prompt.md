@@ -356,11 +356,20 @@ of labour, so read it twice:
 Say which script the page uses in that chant's `working_notes.pages`, so I can
 see at a glance which half of the book an entry came from.
 
-### Two columns, and why they are dangerous
+## Two columns, and why they are the most dangerous thing in this book
 
-Those roman-script pages are set in TWO COLUMNS, and one printed line runs
-ACROSS both — the left column holds the first half of the line and the right
-column the second:
+**This can happen on ANY page, in either script, and it can start half way
+down a page with no heading and no blank line to announce it.** It was first
+found in the roman-script section from page 319, and then again on page 7 in
+the middle of a Thai-script chant — ปัตติทานะคาถา runs in one column for twelve
+lines and then switches to two for the rest. The change of layout was the only
+signal that anything had changed.
+
+So check the column structure of every page before reading a word of it, and
+check it again at every point the line lengths change.
+
+When a page is set in two columns, one printed line runs ACROSS both — the left
+column holds the first half of the line and the right column the second:
 
     Sātāgirā tisahassā          yakkhā nānattavaṇṇino,
     Iddhimanto jutimanto        vaṇṇavanto yasassino.
@@ -378,6 +387,17 @@ afterwards, which makes it the worst failure available on these pages. So:
 - If you cannot tell whether a page is one column or two — the gutter is faint,
   or a short line makes it ambiguous — STOP on that page, raise a check naming
   the file, and leave the page out of the batch. Do not decide by feel.
+- Say so in the page map row: `"columns": 2`. Leave the key off for an ordinary
+  single-column page. Where a chant CHANGES from one to two part way through,
+  put `"columns": "1 then 2"` and name the verse it changes at.
+- Raise a check on every chant that used two columns, showing the first pairing
+  you made. That check is how the reading gets confirmed against the book, and
+  it is the only way anyone will ever catch a column read the wrong way.
+
+There is one honest test you can apply yourself: read the left column alone,
+straight down. If it makes continuous sense as Pali, you have probably got a
+single-column page. If it reads as a series of unfinished half-lines, it is two
+columns and the right side completes them.
 
 ## Verse breakdown — make it a book people can read and chant from
 
@@ -556,16 +576,63 @@ the book prints. Leave the key out entirely where the chant has no closing line.
 The app shows it only on the page where the chant actually ends, so a closing
 belongs to the chant even when its verses ran across several pages.
 
-## Footnotes — the book cites itself, so let it
+### A closing that ends a SERVICE, not a chant
 
-Many pages carry references at the foot, under a short rule, keyed to a
-superscript in the text: `1. อภิ.ยม. 38/1   2. อภิ.ป. 40/1`. These are the
-book's own canonical citations, and they are worth more than anything either of
-us could work out, because they are not attributions — they are the source.
+Some closings sit one level up. They come after the last chant of a whole
+service and close the service itself:
 
-Record the reference on the chant it belongs to, EXACTLY as printed:
+    จบพิธีทำวัตรเช้า      ("here ends the morning service", page 8)
+    จบสวดแจงเท่านี้        ("the Suat Jaeng ends here", page 41)
+
+These are NOT the `closing` of the chant above them. That chant usually has its
+own จบ line already, and attaching a second one would say the chant ends twice —
+and would follow it anywhere else in the book it is reprinted.
+
+They belong to the PAGE. Put them on the page map row:
+
+  "service_closing": "จบพิธีทำวัตรเช้า"
+
+Leave the key off where the page has none, which is most pages. Reproduce the
+line exactly and raise a check saying what it appears to close, without deciding
+how far back it reaches — that is a question about the book's structure, and it
+is answered by reading the service, not this page.
+
+Told apart easily enough: a chant closing names the chant (จบพระยะมะกะ closes
+พระยะมะกะ). A service closing names the service or occasion, and follows a chant
+that has already closed itself.
+
+## Footnotes — read what the footnote actually IS before filing it
+
+Many pages carry notes at the foot, under a short rule, keyed to a superscript
+in the text. They come in at least two kinds, and they are not interchangeable:
+
+**A canonical citation** — a reference to where the text comes from in the
+canon, in the book's own abbreviations:
+
+    1. อภิ.ยม. 38/1        ๑. นัย ม. มู ๑๒/๑๓-๘
+
+**An editorial note** — the book talking to the reader about how to chant:
+
+    1. คะโต สำหรับอุบาสก ถ้าอุบาสิกา ใช้ คะตา
+       ("use คะโต if you are a layman; if a laywoman, use คะตา")
+
+Only the FIRST kind goes in `source_printed`:
 
   "source_printed": "อภิ.ยม. 38/1"
+
+An editorial note is not a source and must never be filed as one — it would put
+a sentence of Thai instruction into a field the app prints as a citation. Record
+it in a check on the verse its marker sits on, quoting it in full, and leave
+`source_printed` off.
+
+If you cannot tell which kind it is, treat it as an editorial note and raise a
+check. A missing citation costs nothing; a false one is a wrong reference in a
+book about the Dhamma.
+
+**Numerals vary and mean nothing.** Page 7's footnote is numbered ๑ in Thai
+numerals; page 8's is numbered 1 in Arabic. Both are the first footnote on their
+page. Do not read anything into which numerals a page uses, and do not convert
+them — reproduce what is printed.
 
 Rules that matter:
 
@@ -746,7 +813,7 @@ Three rules that matter more than they look:
     "received": <how many chants appear across those pages>,
     "manifest": ["<id of chant 1>", "<id of chant 2>", "<...every chant on the pages>"],
     "pages": [
-      {"page": <top-centre number, or null for a front-matter page or one you could not read>, "page_printed": "<only where the page is numbered as something other than plain Arabic digits, e.g. \"(๓๗)\" — omit otherwise>", "front_matter": <true only on a bracketed-Thai-numeral front-matter page; omit otherwise>, "file": "<IMG_0304.PNG — the actual filename>", "script": "<thai | roman — which script the Pali is printed in on this page>", "chant": "<the id whose text is on this page, or \"\" if none>", "verses": "<the verse numbers on this page as a range, e.g. \"1-6\", or \"7\" for one, or \"none\" for a page holding only a title, an invitation or no chant text>", "starts_here": <true if the chant's TITLE appears on this page>, "note": "<anything on the page that is not chant text: a divider, an illustration, a blank half, an instruction to the chanter, a closing line that belongs to a whole service rather than one chant. \"\" if the page is only chant text.>"}
+      {"page": <top-centre number, or null for a front-matter page or one you could not read>, "page_printed": "<only where the page is numbered as something other than plain Arabic digits, e.g. \"(๓๗)\" — omit otherwise>", "front_matter": <true only on a bracketed-Thai-numeral front-matter page; omit otherwise>, "file": "<IMG_0304.PNG — the actual filename>", "script": "<thai | roman — which script the Pali is printed in on this page>", "columns": <2 where the page is set in two columns, or "1 then 2" where it changes part way; omit on an ordinary single-column page>, "service_closing": "<a จบ… line closing a whole SERVICE rather than one chant, exactly as printed; omit where there is none>", "chant": "<the id whose text is on this page, or \"\" if none>", "verses": "<the verse numbers on this page as a range, e.g. \"1-6\", or \"7\" for one, or \"none\" for a page holding only a title, an invitation or no chant text>", "starts_here": <true if the chant's TITLE appears on this page>, "note": "<anything else on the page that is not chant text: a divider, an illustration, a blank half, an instruction to the chanter. \"\" if the page is only chant text.>"}
     ]
   },
   "chants": [
@@ -979,6 +1046,37 @@ CHANTS. So:
    report it: an overlap would duplicate a line and a gap would lose one, and
    neither is visible once it is in.
 4. Remove the `# ⚠️ CONTINUES` comment from that chant, since it no longer does.
+   Then CHECK that you removed it — count the markers in the file before and
+   after and report both numbers. A stale CONTINUES is worse than none, because
+   it is what Josh greps for to find the work still outstanding, and a script
+   that reports success without doing anything is a real and easy failure here.
+
+### When a continuation COMPLETES a line rather than adding one
+
+A page break can fall mid-sentence, so the last verse of the earlier half may be
+a partial line ending `[…]`. The continuation then carries that SAME verse
+number again, with the line whole.
+
+That is the one and only case where incoming text overwrites what is in the
+file. Everywhere else the file wins; here it cannot, because what is in the file
+is a line the book does not contain.
+
+So when a continuation's first verse number matches the last verse already
+present:
+
+1. Confirm the existing line ends in `[…]`. If it does NOT, stop — you are
+   looking at an overlap, which means the batches double up and something is
+   wrong with the numbering.
+2. Confirm the incoming line STARTS with the existing line minus its `[…]`. If
+   it does not, stop and show me both. A completion extends a line; it does not
+   replace it with a different one.
+3. Replace the verse, and leave a comment recording it:
+
+       # ⚠️ COMPLETED FROM p<N>: this line was cut by the page break and is
+       #   now whole. Was: <the partial text>
+
+4. Report it separately from added and merged verses. "1 line completed" is a
+   different event from "12 verses added" and should not hide inside it.
 
 An entry with `continues: true` is the FIRST half of a chant whose remaining
 pages are in a batch I have not sent yet. Write it normally, then put a comment
