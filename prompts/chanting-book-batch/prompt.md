@@ -1,24 +1,41 @@
 # Chanting Book Batch (two-stage)
 
 **Category:** content
-**Surfaces:** Claude.ai chat (stage 1) → Claude Code (stage 2)
+**Surfaces:** Claude Code (all three stages)
 **Sibling:** `../chanting-book-entry/` — the one-chant-at-a-time version. Unchanged. Use that one when you are setting a single chant carefully.
 
 This is the same job as `chanting-book-entry`, rebuilt for volume: a 286-chant
-book, several pages per message, across many sessions.
+book across roughly 330 photographed pages.
 
-**The source is photographs.** Josh pastes images of the book's pages — nine at
-a time — rather than text he has typed. Stage 1 reads the page and returns it.
-That is what makes page fidelity possible at all: the model can see where the
-page turns, so nobody has to mark it by hand.
+**The source is photographs, read from disk.** The whole book is already
+photographed — one image per page, in
+`~/OneDrive/Pictures/Digital Chanting Book/`. Stage 1 opens those files, reads
+the pages and writes what it read to a JSON file. Stage 2 reads that file and
+writes the chants into the app. Nothing is pasted between them.
+
+That matters more than it sounds. The earlier version of this prompt ran stage 1
+in a chat, which meant every batch made a round trip through the clipboard —
+and Thai script, IAST diacritics and Paiboon+ vowels are exactly the characters
+that copy-paste damages quietly. It also meant the whole thing was bounded by
+what fits in one chat reply, which is why depth settings existed. Reading files
+and writing files removes both problems at once.
+
+**Both stages still exist, and that is deliberate.** One pass that reads a
+photograph and writes the chant in the same breath would be marking its own
+homework, and the failure being guarded against — a verse placed on a plausible
+but wrong page — leaves no trace afterwards. Stage 1 declares what it saw;
+stage 2 checks the app against that declaration before writing a line. The JSON
+file between them is also the only permanent record of what each photograph
+actually said.
 
 Everything that made the single-chant prompt safe is still here word for word —
 the five layers, the Paiboon+ table, the register rules, "never reconstruct from
 memory". Batching does not relax any of them. What batching adds is the
 machinery for the four failure modes that only appear at volume:
 
-1. **A reply that gets cut off mid-chant.** At one chant a message you would see
-   it. At eight you will not, because the JSON still looks like JSON.
+1. **A batch that stops short without saying so.** Writing to a file rather than
+   a chat reply removes the hard ceiling, but not the failure: a run can still
+   end early, and a JSON file holding six of nine pages parses perfectly.
 2. **Drift.** Paiboon+ adherence decays over a long session. That is the exact
    failure the whole prompt exists to prevent, so the batch version checks
    itself before it closes.
@@ -35,44 +52,75 @@ machinery for the four failure modes that only appear at volume:
 
 ## Choose a depth before you start
 
-The output is roughly nine times the size of the text on the page, and Thai
-script, IAST and Paiboon+ all tokenise about twice as expensively as English.
-That arithmetic — not the wording of the prompt — is what limits how much fits
-in one reply. So the batch version lets you trade commentary for pages:
+Depth used to be a ceiling. It is now a budget.
 
-| Depth | What you get | Realistic per reply |
+In the chat version, everything had to fit in one reply, and a finished entry is
+roughly nine times the size of the text on the page — with Thai script, IAST and
+Paiboon+ all tokenising about twice as expensively as English. That arithmetic
+capped a batch at a handful of chants no matter how the prompt was worded.
+
+Writing to a file removes the cap: stage 1 can work through a batch page by page
+and append as it goes. What does not change is the cost, and the fact that a
+long run drifts. So the depths remain, as a choice about what you are paying for:
+
+| Depth | What you get | Sensible batch |
 |---|---|---|
-| `FULL` | Everything, including background and meaning | 2–4 chants |
-| `COMPACT` | `background` 1 paragraph, `meaning` 2 | 4–6 chants |
-| `DATA-ONLY` | All five layers verse by verse, no chant-level commentary | 6–9 chants |
+| `FULL` | Everything, including background and meaning | a few pages |
+| `COMPACT` | `background` 1 paragraph, `meaning` 2 | 6–8 pages |
+| `DATA-ONLY` | All five layers verse by verse, no chant-level commentary | 8–12 pages |
 
-**Use `DATA-ONLY` for a nine-image batch.** A page of this book runs roughly
-6–12 Pali lines, so nine pages is somewhere between 55 and 100 verses — past
-what one reply holds at any other depth. Nine images is a photographing rhythm,
-not a promise about the reply: stopping part-way through the batch is normal,
-and the only rule is that it stops at a **page boundary** and says which page to
-resume from. Half a page is the one thing that must never come back.
+**Use `DATA-ONLY` unless you have a reason not to.** The commentary is the
+expensive third of an entry, none of it needs checking against the physical
+book, and stage 3 writes it later by reading the chants straight out of
+`chanting.py`. Deferring it means the pass that needs the book open stays short,
+which is the pass that must not drift.
 
-**All three depths give you all five layers, verse by verse.** What `DATA-ONLY`
-drops is the prose written *about* the chant — `background`, `meaning`,
-`summary`, `when_chanted` and `source` — which is about 32% of a finished entry
-and none of which needs checking against the physical book. Stage 3 adds it
-later, reading the chant straight out of `chanting.py`, so you never re-paste
-anything.
+**All three depths give all five layers, verse by verse.** `DATA-ONLY` drops
+only the prose written *about* a chant — `background`, `meaning`, `summary`,
+`when_chanted` and `source`.
 
-Say the depth on the first line of your paste. If you don't, it uses `COMPACT`.
+Say the depth when you start the batch. If you don't, it uses `COMPACT`.
+
+Stopping part-way is still fine, and still must happen at a **page boundary**.
+A page half-written is worse than a page not written, because a page you never
+started shows as a gap in the map and a page you abandoned shows as nothing at
+all.
 
 ---
 
-## Stage 1 — Claude.ai chat
+## Stage 1 — Claude Code: read the photographs
 
-Paste this once at the start of a session, then paste batches of page images.
+Give it a range of image files and a depth. It reads them and writes one JSON
+file. It does not touch the app.
 
 ```
+Read a batch of pages from my chanting book and write down what is printed on
+them.
+
 You are helping compile a Theravāda chanting book. I am the editor; you are the
-typist and translator. I will paste PHOTOGRAPHS of pages from an official Thai
-chanting book — up to NINE images at a time, in book order — and you will return
-what is printed on them in a fixed five-layer format, as one JSON object.
+typist and translator. The whole book is photographed, one image per page, in:
+
+    ~/OneDrive/Pictures/Digital Chanting Book/
+
+I will tell you which files to read and at what depth. Open each one, read the
+page, and write what is printed on it into a JSON file at:
+
+    prompts/chanting-book-batch/batches/batch-<first page>-<last page>.json
+
+Name it by PAGE, not by filename — batch-041-049.json — because pages are what
+I think in and what the app is built on. If you could not read the first or last
+page number, name it by the filenames instead and say so.
+
+## Two things you must not do in this stage
+
+1. **Do not touch chanting.py, the templates, or anything else in the app.**
+   Stage 2 does that, reading the file you write. The separation is the point:
+   the file you produce is a claim about what the photographs say, and something
+   other than you has to check the app against it. A pass that read a page and
+   wrote the chant in one motion would be marking its own homework, and the
+   error being guarded against leaves no trace once it is in.
+2. **Do not modify, move, rename or re-save any image.** They are the source.
+   Open them read-only. If one is unusable, say so and leave it alone.
 
 ## What I am actually building — read this before the rules
 
@@ -91,14 +139,21 @@ saying plainly:
 
 ## Batch mode — read this section twice
 
-I am working through a book of 286 chants. I will paste batches of page images,
-with a depth on the first line. You return ONE JSON object per batch.
+I am working through a book of 286 chants across about 330 photographs. I give
+you a batch of files and a depth. You write ONE JSON file per batch.
 
-Number my images 1, 2, 3… in the order I pasted them, and refer to them by that
-number whenever you raise a check. It is how I find the photograph again.
+**Refer to every image by its FILENAME — `IMG_0304.PNG` — in every check you
+raise.** Not "image 3". The filename is what lets me find the photograph and
+retake it.
+
+**Filename order is not page order, and must never be trusted as one.** The
+files run IMG_0250 to IMG_0594 with gaps where retakes were deleted, so the
+numbers do not line up with pages and never will. The page number comes off the
+page itself, every time. If a file's page number does not follow the one before
+it, say so in a check rather than assuming you misread.
 
 Three rules govern everything else in this section, and they outrank speed,
-tidiness and the number of images I sent:
+tidiness and how many files I gave you:
 
   READ EVERY IMAGE BEFORE YOU WRITE ANYTHING.  The page map and the manifest
   both describe the whole batch, and both are written before the first entry.
@@ -163,7 +218,7 @@ When the FIRST image of a batch is the middle of a chant I sent you last time:
 
 ### Depth
 
-I put one of these on the first line of my paste:
+I give you one of these when I start the batch:
 
   FULL       — every field, as the single-chant prompt produces.
   COMPACT    — background 1 paragraph, meaning 2. Everything else in full.
@@ -278,6 +333,52 @@ A page holding both kinds is normal and needs no special handling — the layers
 belong to the verse, not the page. What must never happen is a Thai line
 appearing in the app that is not in the book.
 
+### When the book prints the Pali in ROMAN letters
+
+Part of this book — pages 319 onward, at least — prints its Pali in Latin script
+with IAST diacritics instead of Thai script:
+
+    Sātāgirā tisahassā     yakkhā nānattavaṇṇino,
+
+There is no Thai script on those pages at all. This inverts the usual division
+of labour, so read it twice:
+
+- `pali_roman` is now REPRODUCED, character for character, exactly like `pali`
+  normally is. It is the book's text, not your transliteration. Every rule about
+  never correcting, completing or tidying now applies to it.
+- `pali` is "" on those verses. **Never transliterate the roman Pali back into
+  Thai script to fill it.** That would be you writing a chanted layer, which is
+  the one thing this whole prompt exists to prevent — and it would look entirely
+  convincing.
+- `thai` and `paiboon` are "" unless the page prints a Thai translation.
+- `english` is yours, so set `english_unverified: true`.
+
+Say which script the page uses in that chant's `working_notes.pages`, so I can
+see at a glance which half of the book an entry came from.
+
+### Two columns, and why they are dangerous
+
+Those roman-script pages are set in TWO COLUMNS, and one printed line runs
+ACROSS both — the left column holds the first half of the line and the right
+column the second:
+
+    Sātāgirā tisahassā          yakkhā nānattavaṇṇino,
+    Iddhimanto jutimanto        vaṇṇavanto yasassino.
+
+That is ONE verse: `Sātāgirā tisahassā yakkhā nānattavaṇṇino,` — left half then
+right half, joined.
+
+Reading down the whole left column and then down the whole right column produces
+fluent, plausible, completely wrong Pali. It would not look like an error
+afterwards, which makes it the worst failure available on these pages. So:
+
+- Read across the row, never down the column.
+- Where the two halves are printed as one line spanning the columns, keep them
+  as one verse and preserve the gap as a single space.
+- If you cannot tell whether a page is one column or two — the gutter is faint,
+  or a short line makes it ambiguous — STOP on that page, raise a check naming
+  the file, and leave the page out of the batch. Do not decide by feel.
+
 ## Verse breakdown — make it a book people can read and chant from
 
 Break it down verse by verse, exactly as the book does: ONE Pali line per verse,
@@ -365,8 +466,34 @@ Two rules that matter as much as any fidelity rule in this prompt:
   A missing page number costs me one photograph. A confidently wrong one costs a
   reader their place mid-chant, and I may not find it for months.
 
+### The front matter is numbered separately, and the numbers collide
+
+The book has TWO page-number sequences. The front matter — contents, preface,
+whatever comes before the chanting proper — is numbered in Thai numerals inside
+brackets:
+
+    (๓๗)   (๓๘)
+
+The body is numbered in plain Arabic: 30, 31, 73, 320. So the book contains a
+page `(๓๗)` *and* a page `37`, and they are different pages. Recording both as
+`37` would merge them, and a reader asking for page 37 would get whichever came
+first.
+
+So on a front-matter page:
+
+  "page": null,
+  "page_printed": "(๓๗)",
+  "front_matter": true
+
+`page` stays null because it is not a body page number and must never enter the
+page index. `page_printed` keeps exactly what is on the paper.
+
+The front matter is contents and preface, so it should hold no chants at all. If
+you find one there, do NOT quietly place it — set it with `front_matter: true`
+and raise a check saying a chant appears in the front matter, and I will decide.
+
 If a number I have not accounted for turns out to sit at the top centre — a
-running head, a section number, a page number in Thai numerals — reproduce what
+running head, a section number, an Arabic number in brackets — reproduce what
 you see, raise a check, and do not convert it. Tell me what the book is doing
 rather than deciding for it.
 
@@ -487,9 +614,9 @@ do not treat a footnote marker or a verse number as one either.
 - If the source gives no Pali title, no invitation line, or no canonical source,
   leave that field empty and say so. Never fill a gap to look complete.
 - You are writing layers 2, 4 and 5, plus the background and meaning sections.
-- If I paste TEXT instead of images, everything above still holds, and I will
-  mark each page turn on a line of its own as `[p.47]` — everything after that
-  marker is on page 47 until the next one.
+- You are writing the layers the book does NOT print, and reproducing the ones
+  it does. Which is which depends on the page: on a Thai-script page you write
+  `pali_roman`, and on a roman-script page you reproduce it.
 
 ## Register — keep it, don't modernise it
 
@@ -587,29 +714,39 @@ diacritics (`ariyadhana-gatha`, `mettanisamsa-sutta`). Where the book gives no
 Pali title, slug the English. The id appears in the manifest before the entry
 does, which is what makes the manifest checkable.
 
-## Output format — one JSON object
+## Output format — one JSON file
 
-Your whole reply is ONE JSON object, then one closing sentence and nothing else.
-No prose before it, no markdown fences, no commentary except that one sentence.
-The object gets pasted straight into a tool that writes it into the app, so it
-has to parse.
+Write ONE JSON file per batch, at the path given above. It must parse: stage 2
+reads it with `json.load` and will refuse to write anything if it does not.
 
-Two formatting rules that matter more than they look:
+Write it with `ensure_ascii=False` and UTF-8, so the Thai script, the IAST
+diacritics and the Paiboon+ vowels are stored as themselves rather than as
+escape sequences. Set `PYTHONIOENCODING=utf-8` before any script that prints
+them, or Windows will crash on the first Thai character.
 
-- **Every value on ONE line.** Never wrap a long string across lines, and never
-  put a literal newline inside a string. Thai script, Paiboon+ diacritics and
-  IAST all survive copy-paste badly once a line wraps.
-- **Manifest and page map first, entries second, status last.**
+Three rules that matter more than they look:
+
+- **Never put a literal newline inside a string value.** Line breaks that belong
+  to the text — a couplet break in `pali` or `pali_roman` — are written `\n` as
+  an escape, exactly as `chanting.py` stores them. A raw newline inside a value
+  is a different thing and is always wrong.
+- **Manifest and page map first, entries second, status last.** The order is
+  load-bearing: if a run ends early, what was written last is what is missing,
+  so nothing written at the end can report a problem. A list written at the
+  START survives and disagrees with what followed it.
+- **Write the file once, at the end.** Do not append to it page by page, because
+  a half-written file is exactly what neither of us can spot afterwards. Hold the
+  batch and write it complete, or write fewer pages.
 
 {
   "batch": {
     "depth": "<FULL | COMPACT | DATA-ONLY>",
-    "images_received": <how many photographs I sent>,
-    "images_read": <how many of them you actually worked through>,
-    "received": <how many chants appear across those images>,
+    "files_given": <how many image files I asked for>,
+    "files_read": <how many you actually worked through>,
+    "received": <how many chants appear across those pages>,
     "manifest": ["<id of chant 1>", "<id of chant 2>", "<...every chant on the pages>"],
     "pages": [
-      {"page": <top-centre number, or null if you could not read it>, "image": <which photograph>, "chant": "<the id whose text is on this page, or \"\" if none>", "verses": "<the verse numbers on this page as a range, e.g. \"1-6\", or \"7\" for one, or \"none\" for a page holding only a title, an invitation or no chant text>", "starts_here": <true if the chant's TITLE appears on this page>, "note": "<anything on the page that is not chant text: a divider, an illustration, a blank half, an instruction to the chanter. \"\" if the page is only chant text.>"}
+      {"page": <top-centre number, or null for a front-matter page or one you could not read>, "page_printed": "<only where the page is numbered as something other than plain Arabic digits, e.g. \"(๓๗)\" — omit otherwise>", "front_matter": <true only on a bracketed-Thai-numeral front-matter page; omit otherwise>, "file": "<IMG_0304.PNG — the actual filename>", "script": "<thai | roman — which script the Pali is printed in on this page>", "chant": "<the id whose text is on this page, or \"\" if none>", "verses": "<the verse numbers on this page as a range, e.g. \"1-6\", or \"7\" for one, or \"none\" for a page holding only a title, an invitation or no chant text>", "starts_here": <true if the chant's TITLE appears on this page>, "note": "<anything on the page that is not chant text: a divider, an illustration, a blank half, an instruction to the chanter, a closing line that belongs to a whole service rather than one chant. \"\" if the page is only chant text.>"}
     ]
   },
   "chants": [
@@ -666,8 +803,8 @@ Two formatting rules that matter more than they look:
         }
       ],
       "checks": [
-        {"verse": 6, "issue": "<what looks wrong and what to compare it against>"},
-        {"verse": null, "issue": "<a check about the chant as a whole>"}
+        {"verse": 6, "file": "IMG_0304.PNG", "issue": "<what looks wrong and what to compare it against>"},
+        {"verse": null, "file": "IMG_0304.PNG", "issue": "<a check about the chant as a whole>"}
       ]
     }
   ],
@@ -675,9 +812,10 @@ Two formatting rules that matter more than they look:
     "completed": ["<ids you finished, meaning every line of them that these images show>"],
     "not_started": ["<ids from the manifest you did not begin>"],
     "continues": ["<ids the BOOK carries onto a page you were not given — these are complete for this batch, not unfinished>"],
-    "resume_from_page": <the page number I should photograph from next, as a bare number>,
-    "resume_from": "<the id I should re-send from next, or \"\" if you finished them all>",
-    "unreadable": ["<image N: what you could not read, and what I should re-photograph>"],
+    "resume_from_page": <the page number the next batch should start at, as a bare number>,
+    "resume_from_file": "<the filename the next batch should start at, e.g. IMG_0305.PNG>",
+    "resume_from": "<the id the next batch picks up, or \"\" if you finished them all>",
+    "unreadable": ["<IMG_0304.PNG: what you could not read, and what I should re-photograph>"],
     "paiboon_scan": "<count of kh/th/ph/ng hits found in your own paiboon values, and that you fixed them — or 'clean'>",
     "pali_untouched": "<confirm no pali value was romanised with Paiboon+>",
     "page_scan": "<'agrees', or the disagreement between your page map and your entries in plain words. Never edited to agree.>",
@@ -694,7 +832,7 @@ The page map has ONE ROW PER PAGE PER CHANT, not one row per page. Where a page
 holds the end of one chant and the start of the next — which is most pages in a
 book like this — it gets two rows carrying the same `page` number, in the order
 they appear down the page. Where a chant runs across three pages it appears in
-three rows. Every image I sent has at least one row, including an image you could
+three rows. Every file I gave you has at least one row, including one you could
 not read and a page with no chant text on it at all; a page missing from the map
 is a page missing from the book.
 
@@ -722,28 +860,36 @@ faithful transliteration and raise a check saying so — do not quietly substitu
 the standard form. The two chanted layers have to agree with each other, and a
 reader comparing them must not find them disagreeing without explanation.
 
-## The closing sentence
+## When the file is written, report in one paragraph
 
-After the JSON, add nothing except one plain sentence giving the numbers I need
-to decide what to do next — how many of my images you read, how many chants came
-back complete, how many things need my eye, and which page to photograph from
-next:
+Tell me where the file is, then give the numbers I need to decide what happens
+next — how many files you read, how many chants are complete, how many things
+need my eye, and where the next batch starts:
 
-  "Seven of the nine images read; six chants complete and one continues onto
-  page 54; twenty-one things need your eye against the physical book; photograph
-  from page 53."
+  "Written to batch-041-049.json. Seven of the nine files read; six chants
+  complete and one continues onto page 54; twenty-one things need your eye
+  against the physical book; next batch starts at page 53, IMG_0311.PNG."
 
-Confirm you understand, then wait. I will send the first batch of images.
+Then list, separately, any photograph you want retaken and why. That is the only
+part of this I cannot fix from my desk, and it gets harder the longer it waits —
+the book goes back on its shelf.
+
+Do not summarise the chants themselves. I read the file and the checks.
+
+Do not commit anything.
 ```
 
 ---
 
-## Stage 2 — Claude Code
+## Stage 2 — Claude Code: write the chants into the app
 
-Paste the whole Stage 1 reply underneath this.
+Give it the batch file stage 1 wrote. It reads that and nothing else.
 
 ```
-Add a BATCH of chants to the Digital Chanting Book in ~/thaibridge-ai.
+Add a batch of chants to the Digital Chanting Book in ~/thaibridge-ai, from the
+batch file stage 1 wrote:
+
+    prompts/chanting-book-batch/batches/batch-<pages>.json
 
 The data lives in chanting.py, in the CHANTS list. Append one dict per chant,
 following the EXACT shape of the existing chants — same keys, same order, same
@@ -751,14 +897,15 @@ comment style. Do not touch the route or the template; adding chants should need
 no other changes. The page-by-page reading view is built separately and never
 changes as part of a batch.
 
-I'm pasting a JSON object from stage 1. It holds `batch` (a manifest AND a page
-map), `chants` (an array of entries) and `batch_status`. The trailing sentence
-after the closing brace is a note to me; ignore it.
+The file holds `batch` (a manifest AND a page map), `chants` (an array of
+entries) and `batch_status`. Load it with `json.load`. If it does not parse,
+stop and tell me — do not repair it, because a batch file that needs repairing
+is one whose contents I have no reason to trust.
 
-Stage 1 read this from PHOTOGRAPHS of the book, which I do not have here. So
-this JSON is the only record of what the pages said, and you cannot re-check it
-against a source — which is exactly why the page map exists and why you
-reconcile against it before writing anything.
+**Do not open the photographs.** Stage 1 read them; you check the app against
+what stage 1 wrote down. If you re-read the images you become the same pass that
+produced the claim, and the reconciliation below stops meaning anything. Where
+the batch file looks wrong, say so — do not go and look.
 
 The whole point of the page numbers: a reader opens page 47 in the app and sees
 what page 47 shows in the book, because a monk calls out a page and the room
@@ -941,6 +1088,26 @@ translate the Pali into Thai, do not romanise the Pali into the paiboon field,
 and do not flag it as missing data. A chant can be Pali-only, and a page can
 carry one chant of each kind.
 
+**An empty `pali` is also a fact.** Part of this book prints its Pali in roman
+letters instead of Thai script, so on those chants `pali` is "" and
+`pali_roman` carries the book's own text. Write both through exactly as they
+came. Never back-transliterate roman Pali into Thai script to fill `pali` — that
+would be inventing a chanted layer, which is the worst thing that can happen to
+this book, and it would look completely convincing afterwards. The page map's
+`script` field says which kind each page was.
+
+## Front matter
+
+A page map row carrying `front_matter: true` is a preliminary page, numbered in
+brackets with Thai numerals — `(๓๗)` — in a sequence that runs separately from
+the body. Its `page` is null on purpose.
+
+- Do NOT give a chant from such a page a `page_start`. The body has its own
+  page 37, and merging the two would send a reader to the wrong one.
+- If a chant appears there at all, stage 1 will have raised a check about it.
+  Add the chant, leave it without a page, and report it to me clearly rather
+  than deciding where it belongs.
+
 Four keys do NOT go in as data:
   working_notes   → ignore. It is Josh's reading aid.
   continues       → becomes the ⚠️ CONTINUES comment, not a field.
@@ -1016,7 +1183,7 @@ Run these with PYTHONIOENCODING=utf-8 set, or Thai output will crash on Windows.
 3. Confirm every id is unique. Two dicts with the same id is the failure this
    whole merge rule exists to prevent, so check it explicitly rather than
    assuming.
-4. For EACH chant, compare the Thai and Pali you wrote against the JSON I pasted
+4. For EACH chant, compare the Thai and Pali you wrote against the batch file
    and report character counts both ways. Per chant, not summed — a batch total
    can balance while two chants are individually wrong.
 5. For each MERGED chant, prove the existing text is untouched: dump its verses,
@@ -1058,10 +1225,6 @@ one thing here that gets harder the longer it waits — the book will be back on
 its shelf.
 
 Do not commit. I'll review the batch first.
-
-Here is the batch:
-
-[paste the whole stage 1 reply here — the JSON object and its closing sentence]
 ```
 
 ---
