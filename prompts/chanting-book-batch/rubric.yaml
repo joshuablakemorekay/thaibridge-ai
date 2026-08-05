@@ -14,9 +14,24 @@
 # Entries carrying `repeat_of` are stubs for chants already set earlier in the
 # session — they have no verses or checks by design, so the per-chant criteria
 # skip them.
+#
+# v2 adds the PAGE MAP criteria. Stage 1 now reads photographs of the book and
+# the app reproduces it page by page, so where a line sits is as load-bearing as
+# the line itself — a monk calls out a page and the room turns to it. The page
+# map is a second manifest doing for pages what the first does for chants, and
+# these criteria check it can do that job: declared before the entries, covering
+# every image, naming only chants that were declared, and never renumbering
+# itself to agree with the output.
+#
+# Two v2 criteria pass vacuously against the mock fixture — continuation verse
+# numbering and `book_number`'s type — because the only honest way to exercise
+# them would be to invent Pali for a half-chant, which is the exact failure the
+# prompt exists to prevent. They guard live runs. `book_number` is exercised by
+# an illustrative value in the fixture; it is canned test data, not a reading of
+# the physical book.
 
 prompt: chanting-book-batch
-version: 1
+version: 2
 criteria:
   - name: emits_parseable_json
     description: The reply contains one JSON object that actually parses
@@ -52,6 +67,22 @@ criteria:
     description: The status says what finished, what did not, and where to resume
     weight: 5
     pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'] for k in ['completed', 'not_started', 'resume_from', 'paiboon_scan'])"
+
+  # Resuming is now by PAGE, because Josh photographs pages rather than pasting
+  # chants — "re-send from ariyadhana-gatha" is not an instruction he can act on
+  # with a book and a camera, but "photograph from page 50" is. `continues` sits
+  # beside it so a chant the BOOK carries onto an unphotographed page is never
+  # mistaken for a chant the REPLY cut off. Those two look identical in the
+  # output and mean opposite things.
+  - name: batch_status_can_resume_by_page
+    description: The status says which page to photograph next and which chants run on past the batch
+    weight: 5
+    pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'] for k in ['resume_from_page', 'continues'])"
+
+  - name: batch_status_reports_the_page_scan
+    description: Stage 1 says whether its own page map agrees with the entries it wrote
+    weight: 4
+    pass_condition: "'page_scan' in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status']"
 
   - name: depth_is_declared
     description: The batch says which depth produced it, so stage 2 knows what to expect
@@ -123,6 +154,62 @@ criteria:
     weight: 3
     pass_condition: "all(c['page_start'] <= verse['page'] for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'page_start' in c and 'verses' in c for verse in c['verses'] if 'page' in verse)"
 
+  # The page map is the promise stage 2 verifies the written data against. Like
+  # the chant manifest it only works if it is written BEFORE the entries: in a
+  # truncated reply the end is exactly what is missing, so anything written last
+  # cannot report that something went wrong.
+  - name: page_map_declared_before_the_entries
+    description: The page map appears ahead of the chants, so it can be checked against them
+    weight: 5
+    pass_condition: "output.index('\"pages\"') < output.index('\"chants\"')"
+
+  - name: page_map_rows_are_complete
+    description: Every page row says which page, which image, which chant and which verses
+    weight: 5
+    pass_condition: "all(all(k in r for k in ['page', 'image', 'chant', 'verses', 'starts_here']) for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'])"
+
+  # A page number is null where the photograph did not show it legibly — that is
+  # a raised check, not an error. What must never appear is a string: "47" would
+  # sort and compare wrongly in the page view, and silently.
+  - name: page_map_numbers_are_integers_or_null
+    description: A mapped page number is a bare integer, or null where it could not be read
+    weight: 5
+    pass_condition: "all(r['page'] is None or type(r['page']) is int for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'])"
+
+  # Every photograph Josh sent has a row, including one that was unreadable and
+  # one holding no chant text. A page with no row is a page missing from the
+  # book, and it would not look like anything at all downstream.
+  - name: page_map_covers_every_image
+    description: Every image sent appears somewhere in the page map
+    weight: 5
+    pass_condition: "len({r['image'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages']}) == json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['images_received']"
+
+  - name: page_map_only_names_declared_chants
+    description: A page row points at a chant from the manifest, or at no chant at all
+    weight: 5
+    pass_condition: "all(r['chant'] == '' or r['chant'] in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['manifest'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'])"
+
+  # Pages run forwards. Backwards or jumping means a photograph out of order or
+  # a misread number, and both send a reader to the wrong page mid-chant.
+  - name: page_map_runs_forwards
+    description: Page numbers never go backwards down the map
+    weight: 4
+    pass_condition: "[r['page'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'] if r['page'] is not None] == sorted([r['page'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'] if r['page'] is not None])"
+
+  # A continuation is the second half of a chant whose pages crossed a batch
+  # boundary. Restarting its verses at 1 is how one chant quietly becomes two.
+  - name: continuation_never_restarts_verse_numbering
+    description: A chant continued from an earlier batch carries on its verse numbers
+    weight: 5
+    pass_condition: "all(c['verses'][0]['number'] > 1 for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'continuation_of' in c and c.get('verses'))"
+
+  # The book's own chant numbers. Kept as digits for searching, and kept apart
+  # from page numbers — the two must never be derived from each other.
+  - name: book_number_is_an_integer
+    description: A chant number, where present, is a bare number not a string
+    weight: 3
+    pass_condition: "all(type(c['book_number']) is int for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'book_number' in c)"
+
   - name: sections_are_bilingual
     description: Section labels carry the Thai/Pali name as well as the English
     weight: 4
@@ -140,11 +227,13 @@ criteria:
 
 test_cases:
   - input:
-      document: "A batch of chants copied from a Thai chanting book, several at once, DATA-ONLY depth"
+      document: "Nine photographed pages from a Thai chanting book, DATA-ONLY depth"
     expected_traits:
       - one parseable JSON object with batch, chants and batch_status
-      - the manifest declared before any entry, listing every chant pasted
+      - the manifest declared before any entry, listing every chant on the pages
       - the manifest never trimmed to match what was completed
-      - checks held per chant, each naming its verse
+      - a page map declared alongside it, one row per page per chant
+      - every image accounted for, and page numbers running forwards
+      - checks held per chant, each naming its verse and its image
       - Paiboon+ throughout, ŋ never ng
-      - a resume point so the next batch picks up where this one stopped
+      - a resume point, by page, so the next batch picks up where this one stopped

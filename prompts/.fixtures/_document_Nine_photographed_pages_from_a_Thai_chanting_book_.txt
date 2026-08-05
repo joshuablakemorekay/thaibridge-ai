@@ -1,11 +1,47 @@
 {
   "batch": {
     "depth": "DATA-ONLY",
+    "images_received": 3,
+    "images_read": 3,
     "received": 3,
     "manifest": [
       "ariyadhana-gatha",
       "bharasutta-gatha",
       "ariyadhana-gatha"
+    ],
+    "pages": [
+      {
+        "page": 47,
+        "image": 1,
+        "chant": "ariyadhana-gatha",
+        "verses": "1-4",
+        "starts_here": true,
+        "note": ""
+      },
+      {
+        "page": 48,
+        "image": 2,
+        "chant": "ariyadhana-gatha",
+        "verses": "5-7",
+        "starts_here": false,
+        "note": ""
+      },
+      {
+        "page": 48,
+        "image": 2,
+        "chant": "bharasutta-gatha",
+        "verses": "1-5",
+        "starts_here": true,
+        "note": ""
+      },
+      {
+        "page": 49,
+        "image": 3,
+        "chant": "bharasutta-gatha",
+        "verses": "6-8",
+        "starts_here": false,
+        "note": "Lower third of the page is the printed instruction to bow three times."
+      }
     ]
   },
   "chants": [
@@ -15,12 +51,14 @@
         "invitation": "Absent in the book; none written.",
         "units": "7 Pali units, kept in the book's order.",
         "ordering": "Pali and Thai run in step throughout.",
-        "conventions": "None; the Paiboon+ table above was used."
+        "conventions": "None; the Paiboon+ table above was used.",
+        "pages": "Images 1-2; the page turns between verse 4 and verse 5."
       },
       "title_thai": "อะริยะธะนะคาถา",
       "title_pali": "Ariyadhanagāthā",
       "title_roman": "",
       "title_english": "The Verses on the Noble Wealth",
+      "book_number": 12,
       "english_unverified": true,
       "invitation": {
         "pali": "",
@@ -110,7 +148,8 @@
         "invitation": "Absent in the book; none written.",
         "units": "8 Pali units, kept in the book's order.",
         "ordering": "Pali and Thai run in step throughout.",
-        "conventions": "None; the Paiboon+ table above was used."
+        "conventions": "None; the Paiboon+ table above was used.",
+        "pages": "Images 2-3; the page turns between verse 5 and verse 6."
       },
       "title_thai": "ภาระสุตตะคาถา",
       "title_pali": "Bhārasuttagāthā",
@@ -217,11 +256,15 @@
       "bharasutta-gatha"
     ],
     "not_started": [],
+    "continues": [],
+    "resume_from_page": 50,
     "resume_from": "",
+    "unreadable": [],
     "paiboon_scan": "clean — no kh/th/ph/ng found in any paiboon value",
     "pali_untouched": "confirmed; no pali value was romanised with Paiboon+",
+    "page_scan": "agrees — 15 verses across 3 pages, none orphaned or double-claimed",
     "notes": "One repeat skipped and stubbed. Depth held at DATA-ONLY throughout."
   }
 }
 
-Two of the three are complete, one was a repeat; four things need your eye against the physical book; nothing to resume.
+Three of the three images read; two chants complete, one was a repeat; four things need your eye against the physical book; photograph from page 50.
