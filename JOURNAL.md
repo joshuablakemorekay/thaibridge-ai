@@ -1664,3 +1664,79 @@ Measured the real data → found the true ceiling → split the work by depth �
 **References / Conversations**
 
 Commits `38fb244`, `a3e609d`, `6fd2369`, `ca295bd`.
+
+---
+
+## 2026-08-05 — The chanting book starts reading like a book
+
+**TL;DR:**
+- The batch workflow left Claude.ai chat for Claude Code — it reads the photographs off disk now, and nothing crosses a clipboard.
+- The Digital Chanting Book has real pages for the first time: 29 chants, 491 verses, pages 2–8 live.
+- Three of my prompt's rules turned out to be wrong, and only running it on real pages showed which three.
+
+**What I built**
+
+A page-by-page reading view with two modes — as the book prints it, or verse by verse with all five layers — and the workflow that fills it.
+
+**Why I did it this way**
+
+> "As we work through the chants, adding them to the app in batches, I want all chants added to the app Digital Chanting Book to be laid out like the actual book... This is important for accuracy when a monk calls out a page number, users go to that called-out page number and find the exact chant as to follow along chanting with the monk."
+
+A wrong page number isn't untidy — it's someone lost mid-chant in a silent room.
+
+Then a constraint changed the architecture:
+
+> "Claude.ai chat is unable to handle 9 pasted images from the chanting book. Would it be better to adapt Stage 1 to Claude Code as I'm sure Claude Code can do this entire job on it's own?"
+
+It could. I kept two stages anyway — one pass that reads a photograph and writes the chant is marking its own homework.
+
+**How We Did It**
+
+Photograph the pages → Stage 1 reads them into a JSON batch file → Stage 2 reconciles the page map before writing a line → verify → commit.
+
+**What I learned**
+
+*My own answer was worth more than my question.* I asked how the book numbers its pages and got:
+
+> "There is alwyas a page number at the top centre in English. All other numbers contained within some pages are numbers for chants or something else; either in Thai or English?"
+
+That became a hard rule: a chant number read as a page number looks reasonable and is wrong for every page after it.
+
+*Two options were both worse than a third:*
+
+> "Should we add a button which opens 1. One verse per item (Recommended) so we get the option of seeing original image (Book) lay out and also a button which opens the 5 layers of translations in verse by verse mode?"
+
+*Don't design for the page in front of you:*
+
+> "It's just an example of a page. Can you adapt to a page whether it contains Thai translations, Pali only or a mixture?"
+
+*Checking that something is present is not checking that the old thing is gone.* The rebuilt PDF still told readers to open a chat:
+
+> "This has not yet been updated it still appears as the old one saying Claude.ai"
+
+The prompts were right; the sheet's own instructions were hardcoded in the PDF builder. I verified the new rules were in it and never verified the old ones weren't.
+
+**Still open**
+
+8 pages of roughly 330 are in — the whole morning service. 37 checks to verify against the physical book — starting with `สวากขาโต`, which I read two different ways on two pages, so one of them is wrong.
+
+**Engineering Contribution**
+
+*Decisions made:*
+- Kept Stage 1 and Stage 2 apart when one pass would have been simpler. Stage 1 may not touch the app; Stage 2 may not open the photographs. The failure being guarded — a verse on a plausible but wrong page — leaves no trace afterwards, so the pass that makes the claim must not be the pass that checks it.
+- Dropped a sticky page bar after building it. The site nav is already sticky at 202px; a second one left almost no room for the verses, which are the point of the page.
+- Measured `build_page_index` instead of caching it — 0.02 ms now, 0.34 ms projected at 286 chants. Rejected the optimisation and recorded the number.
+- Committed the batch JSON files. They are the only record of what each photograph said; `chanting.py` holds what reached the app, and the book is on a shelf.
+
+*Improvements made to generated code:*
+- Extracted `scripts/apply_batch.py` with 24 tests, after hand-writing the same Stage 2 step three times — one copy reported "CONTINUES marker removed" without removing it. Dry-running the new script against the real batches then found a gap in it: no duplicate-id guard, so re-applying batch 1–3 would have appended eight duplicate chants.
+- Moved the "this English is ours, not the book's" notice out of the `starts_here` branch. Page 5 was showing our translation with no notice at all.
+- Aligned the comment marker: the prompt said `⚠️`, the file uses `‼` 336 times.
+- Added a markup guard asserting *absence* after an unclosed `</style>` rendered a blank page while the server returned 200 with correct HTML.
+
+*Roughly how much was accepted as-is:*
+About half. The page view's structure and the batch prompt's fidelity rules went in close to first draft. The two-stage split, the sticky-bar removal, the page-map reconciliation and everything in `apply_batch.py` came out of rework — most of it prompted by things going wrong in front of me rather than by review.
+
+**References / Conversations**
+
+Commits `5b33172` through `dcb6eb6`. Prompt archive: `prompts/chanting-book-batch/` (v4, v5, v6 under `versions/`). Batch records: `prompts/chanting-book-batch/batches/`.
