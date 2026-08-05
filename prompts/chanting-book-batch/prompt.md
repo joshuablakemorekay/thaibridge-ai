@@ -1045,7 +1045,7 @@ CHANTS. So:
    at 14, the continuation starts at 15. If it starts at 14 or 16, stop and
    report it: an overlap would duplicate a line and a gap would lose one, and
    neither is visible once it is in.
-4. Remove the `# ⚠️ CONTINUES` comment from that chant, since it no longer does.
+4. Remove the `# ‼ CONTINUES` comment from that chant, since it no longer does.
    Then CHECK that you removed it — count the markers in the file before and
    after and report both numbers. A stale CONTINUES is worse than none, because
    it is what Josh greps for to find the work still outstanding, and a script
@@ -1072,7 +1072,7 @@ present:
    replace it with a different one.
 3. Replace the verse, and leave a comment recording it:
 
-       # ⚠️ COMPLETED FROM p<N>: this line was cut by the page break and is
+       # ‼ COMPLETED FROM p<N>: this line was cut by the page break and is
        #   now whole. Was: <the partial text>
 
 4. Report it separately from added and merged verses. "1 line completed" is a
@@ -1082,7 +1082,7 @@ An entry with `continues: true` is the FIRST half of a chant whose remaining
 pages are in a batch I have not sent yet. Write it normally, then put a comment
 at the top of its dict so I can find it:
 
-    # ⚠️ CONTINUES: last verse here is N, from page P. Rest of the chant is on
+    # ‼ CONTINUES: last verse here is N, from page P. Rest of the chant is on
     # page P+1 onward and has not been added yet.
 
 That chant is incomplete on purpose. Do not write the missing verses, do not
@@ -1121,7 +1121,7 @@ So when an id already exists in CHANTS:
 5. If a difference is more than whitespace, also leave a comment above that
    verse so it is findable later:
 
-       # ⚠️ PHOTO DIFFERS: file kept. Read from p.<page> on <date>: <what it said>
+       # ‼ PHOTO DIFFERS: file kept. Read from p.<page> on <date>: <what it said>
 
 Report merges separately from additions. A line saying "3 added, 2 merged" is
 the one I read first, because a merge silently becoming an append is how this
@@ -1208,9 +1208,9 @@ the body. Its `page` is null on purpose.
 
 Four keys do NOT go in as data:
   working_notes   → ignore. It is Josh's reading aid.
-  continues       → becomes the ⚠️ CONTINUES comment, not a field.
+  continues       → becomes the ‼ CONTINUES comment, not a field.
   continuation_of → tells you to append to an existing chant, not a field.
-  checks          → turn each entry into a ⚠️ code comment. A check with a
+  checks          → turn each entry into a ‼ code comment. A check with a
                     "verse" number goes directly above that verse; a check with
                     "verse": null goes at the top of that chant's dict. NEVER
                     drop one silently — they are what Josh still has to verify
@@ -1230,7 +1230,7 @@ Read `batch.depth`.
   flag them as errors. Write the chant without them and put one comment at the
   top of the dict:
 
-      # ⚠️ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+      # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
       # when_chanted and source still to be written. Verses are complete.
 
   The template guards each of those with `{% if %}`, so the chant renders fine
@@ -1257,7 +1257,7 @@ fill one.
   is "", keep the dict with its empty fields; the template checks it and skips
   it. If 'source' is "", leave it "". Do not fill any of them in to look
   complete.
-- If you attribute a source yourself, mark it with a ⚠️ UNVERIFIED comment.
+- If you attribute a source yourself, mark it with a ‼ UNVERIFIED comment.
 
 ## Fidelity rules — these matter more than tidiness
 
@@ -1315,7 +1315,7 @@ Report THREE tables. I read the tables, not the prose.
   Merged chants:   id, what you added, how many differences you found, and
                    whether the existing text was left intact.
   Continued/open:  id, verses before, verses added, joined range, and whether
-                   the chant is now complete or still carries ⚠️ CONTINUES.
+                   the chant is now complete or still carries ‼ CONTINUES.
 
 Then, separately from the tables, list every page whose number stage 1 could not
 read and every image it asked me to retake. That is my next job, and it is the
@@ -1339,13 +1339,13 @@ Write the missing commentary for chants in the Digital Chanting Book in
 
 Some chants were set at DATA-ONLY depth: their verses are complete and verified,
 but the chant-level prose was deferred. They are marked with a comment reading
-"⚠️ COMMENTARY PENDING" at the top of the dict. Your job is to fill in what that
+"‼ COMMENTARY PENDING" at the top of the dict. Your job is to fill in what that
 comment lists, and nothing else.
 
 Do the first N you find, N being the number I gave you — or 5 if I gave none.
 Work through them in file order so we can go straight down the book.
 
-SKIP any chant also carrying a `⚠️ CONTINUES` comment, however many are left.
+SKIP any chant also carrying a `‼ CONTINUES` comment, however many are left.
 That chant is only half in the app: the rest of its verses are on pages I have
 not photographed yet. Commentary written about half a chant would describe a
 thing that does not exist, and it would look finished. List the ones you skipped
@@ -1357,7 +1357,7 @@ DO NOT TOUCH A SINGLE CHARACTER OF ANY VERSE.
 
 `pali`, `pali_roman`, `thai`, `paiboon` and `english`, the titles, the
 invitation, the sections, the verse numbers, `page_start`, the per-verse `page`
-keys, `book_number` and the existing ⚠️ comments have all been verified against a
+keys, `book_number` and the existing ‼ comments have all been verified against a
 physical book already. They are finished work. You are adding keys to a dict,
 not editing one.
 
@@ -1417,7 +1417,7 @@ through, because a plausible reference looks identical to a real one.
 - Any source YOU attribute, rather than one already in the file, gets a comment
   directly above it:
 
-      # ⚠️ UNVERIFIED SOURCE: attributed by Claude, not taken from Josh's book.
+      # ‼ UNVERIFIED SOURCE: attributed by Claude, not taken from Josh's book.
 
   Never write that comment above a source that was already there.
 
@@ -1441,7 +1441,7 @@ work, so a stale one is worse than none.
 If you could only do part of a chant — say the source is genuinely unknowable —
 leave a narrowed marker instead of removing it:
 
-    # ⚠️ COMMENTARY PENDING: source only. Could not attribute with confidence.
+    # ‼ COMMENTARY PENDING: source only. Could not attribute with confidence.
 
 ## Then verify before telling me it's done
 
