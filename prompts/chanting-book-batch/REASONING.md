@@ -97,6 +97,81 @@ citation is indistinguishable from a real one, so an uncertain source is written
 `""`, and any source Claude attributes itself carries a `⚠️ UNVERIFIED SOURCE`
 comment.
 
+## Reading the book instead of retyping it
+
+v4 changed where the text comes from: Josh photographs nine pages and pastes the
+images, rather than transcribing them and marking each page turn by hand. That is
+a smaller change to the prompt than it sounds and a much larger one to the
+guarantees.
+
+What it buys is page fidelity for free. The page turn no longer has to be
+remembered and typed — it is visible in the image, because one photograph is one
+page. Marking 286 chants' worth of page breaks by hand was the part of v3 most
+likely to decay quietly around batch forty.
+
+What it costs is the ability to say "reproduce exactly what I pasted". A
+photograph has glare, a curved gutter, a cropped last line, a thumb. Every one of
+those produces a partial line, and a partial line is exactly what a language
+model is best at completing convincingly. So the fidelity rules were re-pointed at
+the specific thing that goes wrong: reproduce what is legible, mark the gap
+`[…]`, name the image so it can be re-photographed. Knowing the chant is not
+permission to finish it — this book's printing sometimes differs from a standard
+edition, and recording those differences is part of the point.
+
+## The page map, and why a second manifest
+
+The prompt's oldest good idea is the manifest: declare what should arrive before
+writing any of it, so a truncated reply is detectable. v4 applies it to pages.
+
+It is needed because per-verse pages are stored sparsely. A verse carries `page`
+only where the printed page turns; everything after it is carried forward. That
+is compact and it matches how `section` already works — but it means **one
+missing marker moves every following verse onto the wrong page**, and produces
+data that looks entirely well-formed. There is no internal contradiction for
+anything downstream to catch.
+
+So stage 1 declares a page map — one row per page per chant, with the verse range
+— before it writes the entries, and stage 2 rebuilds the pages by carrying forward
+and compares the two verse by verse. Neither side may be edited to agree with the
+other; a disagreement stops the write and gets shown. One side is what the
+photograph said and the other is what would have gone into the app, and which one
+is wrong is not stage 2's call to make.
+
+This is the same shape as the paiboon scan: stage 1 checks itself, stage 2 checks
+stage 1, and the failure being guarded is one that leaves no trace.
+
+## Continuations, which "finish or don't start" got wrong
+
+Nine images is a photographing rhythm, not a unit of meaning. A chant runs off the
+last page most batches. v3 had one rule for an entry that stopped early — *finish
+or don't start* — and it was built for truncated replies, where stopping early
+means something went wrong.
+
+Here it means the book carried on. Treated as truncation it would be re-sent and
+duplicated; treated as completion it would be silently short. The two look
+identical in the output, so v4 makes the model say which it is: `continues: true`
+on a chant the book carries onward, listed separately in `batch_status.continues`
+from `not_started`. The other half arrives next batch carrying `continuation_of`,
+keeps counting verses from where the first stopped, and is appended to the same
+dict.
+
+Stage 2 prints the seam — the last two verses from before, the first two from
+after — because a gap or an overlap at the join is invisible afterwards and is
+the one way one chant becomes two. Stage 3 skips anything still marked
+`⚠️ CONTINUES`: commentary about half a chant describes something that does not
+exist, and unlike the half-chant itself, it would look finished.
+
+## Why the page view is not built by the batch prompts
+
+Stage 2 still may not touch the route or the template, even though every page rule
+in v4 exists to serve a page-by-page reading view.
+
+Keeping them apart is the point. A batch prompt runs thirty-odd times against
+verified text, and its diffs have to stay boring enough that Josh can actually
+read them. A prompt that could also alter how the whole book renders would
+produce diffs nobody checks — and the failure it exists to prevent is precisely
+the one that hides in a diff nobody checks.
+
 ## The manifest-first design
 
 The failure that batching introduces is a reply cut off mid-array. At one chant
