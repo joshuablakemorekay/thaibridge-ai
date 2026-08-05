@@ -458,17 +458,6 @@
             {% if chant.title_english and chant.title_thai or chant.title_english and chant.title_pali %}<span class="page-chant-english">{{ chant.title_english }}</span>{% endif %}
         </h2>
 
-        {# Said plainly, on the page itself: where the book prints Pali only,
-           the English below it was made for this app and has not been checked
-           against the book — because there is nothing in the book to check it
-           against. #}
-        {% if chant.english_unverified %}
-        <p class="chant-unverified-note">
-            The book prints this chant in Pali only. The English here is a
-            working translation made for this edition, not the book's.
-        </p>
-        {% endif %}
-
         {% if chant.invitation and chant.invitation.pali %}
         <div class="verse invitation">
             <span class="invitation-label">Invitation</span>
@@ -481,6 +470,23 @@
         {% endif %}
         {% else %}
         <p class="page-continued">{{ chant.title_english or chant.title_thai }}, continued</p>
+        {% endif %}
+
+        {# OUTSIDE the starts_here branch on purpose. Said plainly, on every
+           page the chant appears on: where the book prints Pali only, the
+           English below it was made for this app and has never been checked
+           against the book, because there is nothing in the book to check it
+           against.
+
+           It sat inside starts_here until page 5 went live and showed our
+           English with no notice at all — a reader landing mid-chant got the
+           translation without being told whose it was. A disclaimer that only
+           appears on the page you did not open is not a disclaimer. #}
+        {% if chant.english_unverified %}
+        <p class="chant-unverified-note">
+            The book prints this chant in Pali only. The English here is a
+            working translation made for this edition, not the book's.
+        </p>
         {% endif %}
 
         {# Wrapped so a prose chant can flow back into one justified block in
