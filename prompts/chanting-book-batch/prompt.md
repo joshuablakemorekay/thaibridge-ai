@@ -257,6 +257,27 @@ script. Confusing them corrupts the whole entry, so read this twice:
 4. paiboon     — Paiboon+ romanisation of layer 3 ONLY. Never of layer 1.
 5. english     — the meaning in English.
 
+### Write the layers the book gives you, and no others
+
+Not every page carries all of them. Some pages print Pali with a Thai
+translation under it. Some print Pali alone, with no translation anywhere. Some
+carry one chant of each kind, on the same page.
+
+So decide this PER CHANT, from what is actually printed:
+
+- No Thai translation printed → `thai` is "", and therefore `paiboon` is ""
+  too, because Paiboon+ romanises the Thai and there is no Thai to romanise.
+  Do not translate the Pali into Thai yourself to fill the gap.
+- Where the book prints Pali only, set `english_unverified: true` on that chant.
+  The English is then a working translation made for this edition, and it is
+  labelled as one.
+- `pali_roman` you always write, because it transliterates the Pali that IS
+  printed. It is not a gap being filled.
+
+A page holding both kinds is normal and needs no special handling — the layers
+belong to the verse, not the page. What must never happen is a Thai line
+appearing in the app that is not in the book.
+
 ## Verse breakdown — make it a book people can read and chant from
 
 Break it down verse by verse, exactly as the book does: ONE Pali line per verse,
@@ -285,7 +306,11 @@ Never complete, restore or infer text that is:
 - cut off by the edge of the photograph,
 - hidden behind a finger, a bookmark or a shadow,
 - half-visible from the FACING page, which is a different page and is not yours
-  to read unless I sent it as its own image.
+  to read unless I sent it as its own image,
+- **showing through from the REVERSE of the sheet.** This book is printed on
+  thin paper and the back of the page ghosts through, mirrored and faint. It
+  looks like text because it is text — just not this page's. Never read it, and
+  never let it talk you out of what is printed on the side facing you.
 
 In every one of those cases, reproduce as much as is legible, mark the gap with
 `[…]`, and raise a check naming the image number and what is obscured. I will
@@ -345,21 +370,103 @@ running head, a section number, a page number in Thai numerals — reproduce wha
 you see, raise a check, and do not convert it. Tell me what the book is doing
 rather than deciding for it.
 
+## How the book SETS a chant — lines or a run-on passage
+
+Some chants are printed as a set of lines, one unit to a line, the way verse is
+set. Others run together as continuous justified prose — a list of terms or an
+Abhidhamma mātikā, filling the measure and wrapping wherever it happens to.
+
+Say which on the chant:
+
+  "layout": "prose"    <- only where the book runs it together
+                          Leave the key out for the ordinary line-set chant.
+
+This matters because the app shows a page two ways: as the book prints it, and
+verse by verse for study. `prose` is what lets the first one put the passage
+back into a single justified block instead of a stack of short lines, which
+would look nothing like the page.
+
+Break a prose passage into verses ANYWAY, one unit per verse — one term, one
+clause, whatever the passage is a list of. You are not deciding how it looks;
+you are recording what it is made of, and the app reassembles it. Number them
+as normal.
+
+A run-on passage usually has no Thai translation printed with it. If you meet
+one that DOES — the Pali run together AND its translation run together — set it
+as normal and raise a check saying so, naming the page. The app currently flows
+the Pali back into a block and sets the translation under it as ordinary lines,
+which is close but may not be how your page prints it. I would rather see the
+page and fix it properly than have you bend the entry to fit.
+
+### Line breaks inside a run-on passage are not data
+
+A justified passage breaks wherever the measure runs out, often mid-word with a
+hyphen: `นิสสะยะ-` at the end of one line and `ปัจจะโย` at the start of the next.
+
+**Rejoin the word and drop the hyphen.** That hyphen is typesetting, not
+spelling — it would not be there if the book were set in another size, and
+carried into the data it corrupts a Pali word into two. This is the one place
+where "reproduce exactly what is printed" is the wrong instinct, so it is
+written down: reproduce the WORDS as printed, not the line breaks.
+
+Raise a check naming any word you rejoined, so it can be looked at.
+
+Do not carry the visual line breaks over in any other way either. Where the book
+sets a chant as lines, the line break IS meaningful and you keep it. Where it
+runs the text on, the breaks are the typesetter's and you drop them.
+
+## Closing formulas — the book prints them, so record them
+
+A chant often ends with a closing line, centred under it: จบ… ("here ends…").
+It is printed, so it goes in. Put it on the chant, not in the verses:
+
+  "closing": {"pali": "<Thai script, or \"\">", "pali_roman": "<IAST, or \"\">",
+              "thai": "", "paiboon": "", "english": "<meaning, or \"\">"}
+
+Same five-layer shape as a verse, and the same rule about gaps: fill only what
+the book prints. Leave the key out entirely where the chant has no closing line.
+
+The app shows it only on the page where the chant actually ends, so a closing
+belongs to the chant even when its verses ran across several pages.
+
+## Footnotes — the book cites itself, so let it
+
+Many pages carry references at the foot, under a short rule, keyed to a
+superscript in the text: `1. อภิ.ยม. 38/1   2. อภิ.ป. 40/1`. These are the
+book's own canonical citations, and they are worth more than anything either of
+us could work out, because they are not attributions — they are the source.
+
+Record the reference on the chant it belongs to, EXACTLY as printed:
+
+  "source_printed": "อภิ.ยม. 38/1"
+
+Rules that matter:
+
+- Reproduce the reference verbatim, abbreviations and all. Do not expand
+  `อภิ.ยม.` into a full title, do not convert numerals, do not reformat it.
+  If you can say what it abbreviates, put that in a check, not in the field.
+- **Footnote numbers restart at 1 on every page.** A superscript ² means "the
+  second footnote on THIS page" and nothing else. Never match a marker to a
+  footnote on a different page, and never carry a number between pages or
+  batches.
+- Match by the superscript, not by guesswork. If a marker has no matching
+  footnote on its page, or a footnote has no marker, say so in a check and
+  leave `source_printed` out rather than pairing them hopefully.
+- `source_printed` is separate from `source` and never overwrites it. One is
+  what the book says; the other may have been written for the app.
+
 ## Chant numbers — record them, don't interpret them
 
-Where a number clearly labels a chant — printed with its title, the way an item
-number is — record it on that chant:
+The book numbers its chants, printed immediately before the title on the same
+line, in Arabic digits and followed by a full stop: `22. ธัมมะสังคะณีมาติกาปาโฐ`.
+Where you see that, record it on that chant:
 
   "book_number": 47,          <- the value in Arabic digits, for searching
   "book_number_printed": "๔๗" <- exactly as printed, ONLY if not Arabic digits
 
 Leave both out where the book prints no such number. Never derive one by
-counting chants yourself, and never reuse a page number as a chant number.
-
-On the FIRST batch, raise one check describing what these numbers appear to be —
-where they sit, what they count, whether they run continuously through the book
-or restart per section. I have not confirmed what they are yet, and I would
-rather you describe them accurately than file them confidently.
+counting chants yourself, and never reuse a page number as a chant number, and
+do not treat a footnote marker or a verse number as one either.
 
 ## Ground rules — the important ones
 
@@ -524,6 +631,8 @@ Two formatting rules that matter more than they look:
       "book_number": <the number printed with the title, in Arabic digits. Omit the key entirely if the book prints none — never count them yourself.>,
       "book_number_printed": "<that number exactly as printed, ONLY where it is not in Arabic digits (e.g. \"๔๗\"). Omit otherwise.>",
       "page_start": <the page this chant's TITLE appears on, as a bare number. Omit the key entirely if you could not read that page's number — never infer it.>,
+      "layout": "prose",
+      "source_printed": "<the reference from the page's footnote, exactly as printed. Omit the key where the page gives none — never attribute one yourself.>",
       "source": "<canonical source. If compiled from several places, start with \"Composite.\" and say which verses come from where. Use \"\" if you are not certain — do not guess. Omit at DATA-ONLY.>",
       "when_chanted": "<one sentence on when it is recited. Omit at DATA-ONLY.>",
       "summary": "<one sentence, max 30 words, for the index card. Omit at DATA-ONLY.>",
@@ -534,6 +643,13 @@ Two formatting rules that matter more than they look:
         "pali": "<Thai script, or \"\">",
         "pali_roman": "<IAST, or \"\">",
         "thai": "<the Thai translation of the invitation, or \"\">",
+        "paiboon": "<Paiboon+ of that thai line, or \"\">",
+        "english": "<meaning, or \"\">"
+      },
+      "closing": {
+        "pali": "<the closing formula in Thai script — จบ… — or omit the whole key where the book prints none>",
+        "pali_roman": "<IAST, or \"\">",
+        "thai": "<only if the book prints one, else \"\">",
         "paiboon": "<Paiboon+ of that thai line, or \"\">",
         "english": "<meaning, or \"\">"
       },
@@ -803,10 +919,27 @@ and moving verified Pali around is the risk this whole workflow avoids.
 ## Mapping
 
 Keys map straight across: title_thai, title_pali, title_roman, title_english,
-book_number, book_number_printed, page_start, source, when_chanted, summary,
-english_unverified, background, meaning, invitation, verses. Each verse keeps
-its 'number', its 'page' where it has one, and its 'section' where it has one.
-Set 'group': 'General chanting' unless I say otherwise.
+book_number, book_number_printed, page_start, layout, source, source_printed,
+when_chanted, summary, english_unverified, background, meaning, invitation,
+closing, verses. Each verse keeps its 'number', its 'page' where it has one, and
+its 'section' where it has one. Set 'group': 'General chanting' unless I say
+otherwise.
+
+Four of those describe how the PRINTED page is set, and the template guards each
+with `{% if %}`, so a chant without them renders exactly as chants do today:
+
+  layout          — 'prose' only. Anything else, leave the key off.
+  closing         — the จบ formula, same five-layer shape as a verse.
+  source_printed  — the book's own footnote reference. NEVER write this
+                    yourself and never copy `source` into it. It exists to be
+                    the one citation nobody in this pipeline composed.
+  book_number     — the book's chant number.
+
+An empty `thai` or `paiboon` on a verse is a FACT, not a gap: the book printed
+that chant in Pali only. Write the empty string through as it came. Do not
+translate the Pali into Thai, do not romanise the Pali into the paiboon field,
+and do not flag it as missing data. A chant can be Pali-only, and a page can
+carry one chant of each kind.
 
 Four keys do NOT go in as data:
   working_notes   → ignore. It is Josh's reading aid.
@@ -839,9 +972,14 @@ Read `batch.depth`.
   without them — every verse still shows all five layers, and only the chant's
   context is missing. Grep for COMMENTARY PENDING to find them all later.
 
-At EVERY depth, every verse must carry all five layers — pali, pali_roman, thai,
-paiboon and english. A verse missing its english is a fault at any depth, not a
-depth setting. Stop and tell me rather than writing it.
+At EVERY depth, every verse must carry all five layer KEYS — pali, pali_roman,
+thai, paiboon and english. A verse missing its english is a fault at any depth,
+not a depth setting. Stop and tell me rather than writing it.
+
+Carrying the key is not the same as carrying a value. On a Pali-only chant
+`thai` and `paiboon` are "" because the book prints no Thai, and that is
+correct and finished. What is a fault is a MISSING key, or a value invented to
+fill one.
 
 ## Structure rules
 
