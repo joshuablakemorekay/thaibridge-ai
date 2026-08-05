@@ -5994,7 +5994,70 @@ def chanting_book():
                            chants=chanting.CHANTS,
                            layers=chanting.CHANT_LAYERS,
                            sections=chanting.CHANT_SECTIONS,
-                           how_to_use=chanting.HOW_TO_USE)
+                           how_to_use=chanting.HOW_TO_USE,
+                           page_count=len(chanting.build_page_index()[0]))
+
+
+@app.route('/chanting/pages')
+@require_access('chanting')
+def chanting_pages():
+    """Entry point for the page-by-page view, and the jump box's target.
+
+    `?p=47` is what the jump box submits, so a reader can type the number the
+    monk called out and press Enter. Without it, open the book at its first
+    page — or show the empty state, if no chant has a page number yet.
+    """
+    wanted = (request.args.get('p') or '').strip()
+    if wanted.isdigit():
+        return redirect(url_for('chanting_page', page=int(wanted)))
+
+    pages, unpaginated = chanting.build_page_index()
+    if pages:
+        return redirect(url_for('chanting_page', page=pages[0]['page']))
+
+    return render_template('chanting_page.html', page=None, entries=[],
+                           pages=pages, unpaginated=unpaginated,
+                           prev_page=None, next_page=None, nearest=None,
+                           layers=chanting.CHANT_LAYERS)
+
+
+@app.route('/chanting/page/<int:page>')
+@require_access('chanting')
+def chanting_page(page):
+    """One page of the physical book, exactly as it is printed.
+
+    A monk calls out a page number and the room turns to it, so this shows
+    whatever the book prints on that page — which is often the end of one chant
+    followed by the beginning of the next, not a whole chant.
+
+    Next and previous move to the next page the app actually HAS, skipping any
+    the book has that have not been entered yet. Stepping into a gap and finding
+    nothing would be worse than stepping over it, and the gap is named on the
+    page so the jump is never silent.
+    """
+    pages, unpaginated = chanting.build_page_index()
+    numbers = [p['page'] for p in pages]
+
+    if page not in numbers:
+        # Not a 404: the reader typed the number they were given, and being told
+        # "that page is not in yet, here are the nearest ones" is far more use
+        # than an error page.
+        before = [n for n in numbers if n < page]
+        after = [n for n in numbers if n > page]
+        return render_template(
+            'chanting_page.html', page=page, entries=None, pages=pages,
+            unpaginated=unpaginated, prev_page=None, next_page=None,
+            nearest={'before': before[-1] if before else None,
+                     'after': after[0] if after else None},
+            layers=chanting.CHANT_LAYERS)
+
+    at = numbers.index(page)
+    return render_template(
+        'chanting_page.html', page=page, entries=pages[at]['entries'],
+        pages=pages, unpaginated=unpaginated,
+        prev_page=numbers[at - 1] if at > 0 else None,
+        next_page=numbers[at + 1] if at < len(numbers) - 1 else None,
+        nearest=None, layers=chanting.CHANT_LAYERS)
 
 @app.route('/bob-writings')
 def bob_writings():

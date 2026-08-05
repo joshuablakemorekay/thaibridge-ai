@@ -10,6 +10,58 @@
    reading view shows the same verses and must not style them differently. #}
 {% include 'partials/chanting_book_css.html' %}
 <style>
+    /* ── Way in to the page-by-page view ─────────────────────────────
+       Reading a chant and chanting along with a monk are two different jobs.
+       This is the second one, and it is the one done in a hurry, so it sits
+       above the index rather than inside it. */
+    .open-at-page {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem 1.5rem;
+        flex-wrap: wrap;
+        background: #FFFDF8;
+        border: 2px solid var(--royal-gold);
+        border-radius: 12px;
+        padding: 0.9rem 1.2rem;
+        margin: 0 0 0.75rem;
+    }
+    .open-at-page strong { color: var(--royal-purple); }
+    .open-at-page span { color: #55483a; font-size: 0.95rem; }
+    .open-at-page form { display: flex; align-items: center; gap: 0.4rem; }
+    .open-at-page label { font-size: 0.85rem; color: #55483a; }
+    .open-at-page input {
+        width: 5rem;
+        padding: 0.5rem 0.6rem;
+        border: 2px solid var(--royal-gold);
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+    }
+    .open-at-page button {
+        padding: 0.5rem 0.85rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--royal-purple);
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.95rem;
+        cursor: pointer;
+        font-family: inherit;
+    }
+    .open-at-page-note {
+        font-size: 0.85rem;
+        color: #8a7a5e;
+        max-width: 62ch;
+        margin: 0 0 1.75rem;
+    }
+    .chant-open-at-page { margin: 0 0 1rem; font-size: 0.9rem; }
+
+    @media (max-width: 600px) {
+        .open-at-page form { width: 100%; }
+        .open-at-page input { flex: 1; width: auto; }
+    }
+
     /* ── The index: a grid of chant cards ────────────────────────────
        Closed, each chant is a small box you can scan; opened, it spans the
        full width of the grid so there is room to read it. Sized so a phone
@@ -175,6 +227,27 @@
     </p>
 </div>
 
+{# Chanting along with a monk is a different job from reading a chant, and it
+   is the one with no time in it: a page number is called and the room turns
+   to it. So the page view gets its own way in, above the index rather than
+   buried in it. #}
+<div class="open-at-page">
+    <div>
+        <strong>Chanting along?</strong>
+        <span>Open the book at the page number the monk called out.</span>
+    </div>
+    <form action="{{ url_for('chanting_pages') }}" method="get">
+        <label for="open-page">Page</label>
+        <input type="number" id="open-page" name="p" min="1" inputmode="numeric">
+        <button type="submit">Open</button>
+    </form>
+</div>
+{% if not page_count %}
+<p class="open-at-page-note">
+    No chant has a page number yet — they arrive as the book is added from
+    photographs of the printed pages. Until then, everything is here by title.
+</p>
+{% endif %}
 
 <h2 style="color: var(--royal-purple); margin-bottom: 0.3rem;">The chants</h2>
 <p style="color:#555; max-width: 62ch; margin-top: 0;">
@@ -257,6 +330,12 @@
             <!-- How to chant it. Everything below is the chant itself,
                  rendered layer by layer exactly as it is stored. -->
             <h3 class="chant-heading">The chant</h3>
+
+            {% if chant.page_start %}
+            <p class="chant-open-at-page">
+                <a href="{{ url_for('chanting_page', page=chant.page_start) }}">Open at page {{ chant.page_start }}, as the book prints it →</a>
+            </p>
+            {% endif %}
 
         {% if chant.invitation and chant.invitation.pali %}
         <div class="verse invitation">

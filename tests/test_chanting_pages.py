@@ -1,0 +1,447 @@
+"""Tests for build_page_index — turning chants back into printed pages.
+
+These matter more than most tests in this project because there is no data to
+eyeball yet: every chant currently in the book predates page numbers, so the
+page view is exercised only by what is written here until the first photographed
+batch lands.
+
+The thing being protected: a verse records a page number ONLY where the page
+turns, and everything after it is carried forward. So a single mistake in the
+carry-forward silently moves every following verse onto the wrong page, and the
+result still looks like perfectly good data. A monk calls out a page, the room
+turns to it, and the person on their phone is reading the wrong words.
+"""
+import os
+import sys
+
+import pytest
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from chanting import build_page_index  # noqa: E402
+
+
+def verse(number, page=None):
+    """A verse with only the keys the page index looks at."""
+    v = {'number': number, 'pali': f'line {number}', 'english': f'meaning {number}'}
+    if page:
+        v['page'] = page
+    return v
+
+
+def chant(chant_id, page_start, verses):
+    return {'id': chant_id, 'title_english': chant_id, 'page_start': page_start,
+            'verses': verses}
+
+
+def test_a_chant_on_a_single_page():
+    pages, unpaginated = build_page_index([
+        chant('metta', 47, [verse(1), verse(2), verse(3)]),
+    ])
+
+    assert unpaginated == []
+    assert [p['page'] for p in pages] == [47]
+    entry = pages[0]['entries'][0]
+    assert entry['starts_here'] is True
+    assert [v['number'] for v in entry['verses']] == [1, 2, 3]
+
+
+def test_verses_carry_forward_until_the_page_turns():
+    """Only verse 4 records a page, so 1-3 stay on 47 and 4-5 move to 48."""
+    pages, _ = build_page_index([
+        chant('metta', 47, [verse(1), verse(2), verse(3), verse(4, page=48), verse(5)]),
+    ])
+
+    assert [p['page'] for p in pages] == [47, 48]
+    assert [v['number'] for v in pages[0]['entries'][0]['verses']] == [1, 2, 3]
+    assert [v['number'] for v in pages[1]['entries'][0]['verses']] == [4, 5]
+
+
+def test_a_continued_page_does_not_repeat_the_title():
+    """The title is printed once, on the page the chant opens on."""
+    pages, _ = build_page_index([
+        chant('metta', 47, [verse(1), verse(2, page=48)]),
+    ])
+
+    assert pages[0]['entries'][0]['starts_here'] is True
+    assert pages[1]['entries'][0]['starts_here'] is False
+
+
+def test_one_page_holding_the_end_of_one_chant_and_the_start_of_the_next():
+    """The commonest page in a chanting book, and the reason a page is not a chant."""
+    pages, _ = build_page_index([
+        chant('metta', 47, [verse(1), verse(2, page=48)]),
+        chant('karaniya', 48, [verse(1), verse(2)]),
+    ])
+
+    assert [p['page'] for p in pages] == [47, 48]
+    shared = pages[1]['entries']
+    assert len(shared) == 2
+    # In the order they appear down the page: the chant ending, then the one
+    # beginning. A page that listed them the other way round would not match
+    # the book a reader is holding.
+    assert shared[0]['chant']['id'] == 'metta'
+    assert shared[0]['starts_here'] is False
+    assert shared[1]['chant']['id'] == 'karaniya'
+    assert shared[1]['starts_here'] is True
+
+
+def test_a_title_at_the_foot_of_a_page_with_its_verses_overleaf():
+    """The chant still occupies its opening page, showing a title and nothing else."""
+    pages, _ = build_page_index([
+        chant('metta', 47, [verse(1, page=48), verse(2)]),
+    ])
+
+    assert [p['page'] for p in pages] == [47, 48]
+    assert pages[0]['entries'][0]['verses'] == []
+    assert pages[0]['entries'][0]['starts_here'] is True
+    assert [v['number'] for v in pages[1]['entries'][0]['verses']] == [1, 2]
+
+
+def test_chants_without_a_page_are_returned_not_guessed():
+    """A plausible page is worse than no page: it is wrong in public, mid-chant."""
+    pages, unpaginated = build_page_index([
+        chant('metta', 47, [verse(1)]),
+        {'id': 'older', 'title_english': 'older', 'verses': [verse(1)]},
+    ])
+
+    assert [p['page'] for p in pages] == [47]
+    assert [c['id'] for c in unpaginated] == ['older']
+
+
+def test_pages_come_back_in_book_order_whatever_order_the_file_is_in():
+    """File order is not book order — page_start is what places a chant."""
+    pages, _ = build_page_index([
+        chant('third', 90, [verse(1)]),
+        chant('first', 12, [verse(1)]),
+        chant('second', 47, [verse(1)]),
+    ])
+
+    assert [p['page'] for p in pages] == [12, 47, 90]
+
+
+def test_a_gap_in_the_book_is_left_as_a_gap():
+    """Pages 48-52 are simply not there yet; nothing invents them."""
+    pages, _ = build_page_index([
+        chant('metta', 47, [verse(1)]),
+        chant('karaniya', 53, [verse(1)]),
+    ])
+
+    assert [p['page'] for p in pages] == [47, 53]
+
+
+def test_the_real_book_still_builds():
+    """Whatever is in chanting.py today must not raise. It has no pages yet."""
+    pages, unpaginated = build_page_index()
+
+    assert isinstance(pages, list)
+    assert isinstance(unpaginated, list)
+    # Every placed page holds at least one chant, or the view would render blank.
+    for page in pages:
+        assert page['entries']
+
+
+class TestTheMarkupHoldsTogether:
+    """Both chanting pages must close every <style> and <script> they open.
+
+    Written because they did not. Moving the shared CSS into a partial dropped
+    one closing </style>, and the effect was brutally disproportionate: the
+    browser read the whole rest of the document as CSS text and rendered a
+    blank page. The server still returned 200 with 305KB of correct HTML, every
+    other test still passed, and the page was simply empty.
+
+    An unclosed tag is invisible to anything that checks status codes or
+    substrings, which is most of what a test suite does. So check the tags.
+    """
+
+    def rendered(self, path):
+        import app as flask_app
+        return flask_app.app.test_client().get(path, follow_redirects=True).get_data(as_text=True)
+
+    @pytest.mark.parametrize('path', ['/chanting', '/chanting/pages'])
+    def test_every_style_and_script_tag_is_closed(self, path):
+        page = self.rendered(path)
+
+        assert page.count('<style') == page.count('</style>'), \
+            f'{path}: unclosed <style> — the browser will eat the page as CSS'
+        assert page.count('<script') == page.count('</script>'), \
+            f'{path}: unclosed <script> — the browser will eat the page as code'
+
+    @pytest.mark.parametrize('path', ['/chanting', '/chanting/pages'])
+    def test_the_body_actually_has_the_page_in_it(self, path):
+        """The blank page still returned 200. Status codes prove nothing here."""
+        page = self.rendered(path)
+
+        assert 'Digital Chanting Book' in page
+        # Content that lives AFTER the style blocks, so it is missing exactly
+        # when a stylesheet has swallowed the document.
+        assert 'Chanting along' in page or 'no page numbers yet' in page
+
+
+class TestHowThePageIsSet:
+    """The book does not print every page the same way, so neither can we.
+
+    Shaped after a real page: a chant the book runs together as continuous
+    prose, printed in Pali with no Thai translation, closed by a จบ formula,
+    with its canonical reference in a footnote at the foot of the page.
+    """
+
+    @pytest.fixture()
+    def client(self, monkeypatch):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        prose = copy.deepcopy(chanting_module.CHANTS[0])
+        prose['id'] = 'mahapatthana'
+        prose['page_start'] = 41
+        prose['layout'] = 'prose'
+        prose['source_printed'] = 'อภิ.ป. 40/1'
+        prose['closing'] = {'pali': 'จบ' + prose['title_thai'], 'pali_roman': '',
+                            'thai': '', 'paiboon': '', 'english': ''}
+        # Pali only, as that page prints it: no Thai, so no Paiboon either.
+        for verse in prose['verses']:
+            verse['thai'] = ''
+            verse['paiboon'] = ''
+
+        # A second chant starting on the same page and running past it, so the
+        # closing and the footnote must NOT appear for it here.
+        runs_on = copy.deepcopy(chanting_module.CHANTS[1])
+        runs_on['id'] = 'runs-on'
+        runs_on['page_start'] = 41
+        runs_on['source_printed'] = 'อภิ.ยม. 38/1'
+        runs_on['closing'] = {'pali': 'จบ' + runs_on['title_thai'], 'pali_roman': '',
+                              'thai': '', 'paiboon': '', 'english': ''}
+        runs_on['verses'][1]['page'] = 42
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [prose, runs_on])
+        return flask_app.app.test_client()
+
+    def read(self, client, url):
+        return client.get(url, follow_redirects=True).get_data(as_text=True)
+
+    def test_both_ways_of_seeing_the_page_are_offered(self, client):
+        page = self.read(client, '/chanting/page/41')
+        assert 'As the book prints it' in page
+        assert 'Verse by verse' in page
+
+    def test_book_layout_is_what_you_land_on(self, client):
+        """The page exists for chanting along, so it opens as the book."""
+        assert 'page-body view-book' in self.read(client, '/chanting/page/41')
+
+    def test_a_prose_chant_is_marked_so_it_can_flow_back_together(self, client):
+        page = self.read(client, '/chanting/page/41')
+        assert 'page-chant is-prose' in page
+
+    def test_a_page_can_mix_a_pali_only_chant_with_a_translated_one(self, client):
+        """The commonest way to corrupt this book is to fill in a gap.
+
+        Page 41 carries both kinds: a Pali-only chant and one verse of a chant
+        that does have a Thai translation. Counting the rendered layers is what
+        proves the Pali-only chant contributed none of them — a substring check
+        cannot, because the layer names also appear in the stylesheet.
+        """
+        page = self.read(client, '/chanting/page/41')
+
+        assert page.count('class="layer layer-pali"') == 8   # 7 prose + 1 translated
+        # Exactly the one verse that has a translation, and not a line more.
+        assert page.count('class="layer layer-thai"') == 1
+        assert page.count('class="layer layer-paiboon"') == 1
+
+    def test_the_closing_formula_shows_where_the_chant_ends(self, client):
+        page = self.read(client, '/chanting/page/41')
+        assert 'chant-closing' in page
+
+    def test_a_chant_running_onto_the_next_page_is_not_closed_early(self, client):
+        """Its จบ belongs on page 42, where it actually finishes."""
+        import chanting as chanting_module
+        runs_on = chanting_module.CHANTS[1]
+
+        assert runs_on['closing']['pali'] not in self.read(client, '/chanting/page/41')
+        assert runs_on['closing']['pali'] in self.read(client, '/chanting/page/42')
+
+    def test_the_books_own_reference_is_shown_as_a_footnote(self, client):
+        page = self.read(client, '/chanting/page/41')
+        assert 'page-footnotes' in page
+        assert 'อภิ.ป. 40/1' in page
+
+    def test_a_reference_belongs_to_the_page_the_chant_ends_on(self, client):
+        """Footnote numbering restarts per page in the book, so it cannot roam."""
+        assert 'อภิ.ยม. 38/1' not in self.read(client, '/chanting/page/41')
+        assert 'อภิ.ยม. 38/1' in self.read(client, '/chanting/page/42')
+
+
+class TestItAdaptsToWhateverThePagePrints:
+    """A page carries whatever the book put on it, and the app follows.
+
+    Pali with a Thai translation, Pali alone, a mixture on one page, a chant
+    titled only in Pali — none of these is a special case to be handled, and
+    none of them may cause the app to invent the missing half.
+    """
+
+    def build(self, monkeypatch, mutate):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        chant = copy.deepcopy(chanting_module.CHANTS[0])
+        chant['page_start'] = 60
+        mutate(chant)
+        monkeypatch.setattr(chanting_module, 'CHANTS', [chant])
+        return flask_app.app.test_client().get(
+            '/chanting/page/60', follow_redirects=True).get_data(as_text=True)
+
+    def test_a_translated_chant_shows_both_scripts(self, monkeypatch):
+        page = self.build(monkeypatch, lambda c: None)
+        assert 'class="layer layer-pali"' in page
+        assert 'class="layer layer-thai"' in page
+
+    def test_a_pali_only_chant_shows_no_thai_at_all(self, monkeypatch):
+        def strip_thai(chant):
+            for verse in chant['verses']:
+                verse['thai'] = ''
+                verse['paiboon'] = ''
+            chant['invitation'] = {'pali': '', 'pali_roman': '', 'thai': '',
+                                   'paiboon': '', 'english': ''}
+
+        page = self.build(monkeypatch, strip_thai)
+        assert 'class="layer layer-pali"' in page
+        assert 'class="layer layer-thai"' not in page
+        assert 'class="layer layer-paiboon"' not in page
+
+    def test_a_pali_only_chant_says_whose_english_it_is(self, monkeypatch):
+        """Not a disclaimer for its own sake — the book has nothing to check
+        that English against, and the reader should know which is which."""
+        def pali_only(chant):
+            for verse in chant['verses']:
+                verse['thai'] = ''
+            chant['english_unverified'] = True
+
+        assert 'working translation made for this edition' in self.build(monkeypatch, pali_only)
+
+    def test_a_chant_titled_only_in_pali_gets_no_empty_heading(self, monkeypatch):
+        def pali_title(chant):
+            chant['title_thai'] = ''
+            chant['title_pali'] = 'Khemākhema-gāthā'
+
+        page = self.build(monkeypatch, pali_title)
+        assert 'Khemākhema-gāthā' in page
+        # The Pali title is promoted into the heading rather than repeated
+        # underneath an empty line where the Thai title would have been.
+        assert page.count('Khemākhema-gāthā') == 1
+
+    def test_a_prose_chant_with_a_translation_keeps_its_thai_out_of_the_flow(self, monkeypatch):
+        """Only the Pali flows back into a block.
+
+        If the Thai flowed too, the two scripts would interleave a unit at a
+        time inside one paragraph. The rule that does the flowing must name
+        the Pali layer and nothing else.
+        """
+        import pathlib
+
+        template = pathlib.Path('templates/chanting_page.html').read_text(encoding='utf-8')
+        flow_rule = template[template.index('.is-prose .verse-body .verse .layer-pali'):]
+        flow_rule = flow_rule[:flow_rule.index('}')]
+
+        assert 'layer-thai' not in flow_rule
+
+        # And the markup still carries both layers, so verse-by-verse is whole.
+        page = self.build(monkeypatch, lambda c: c.update(layout='prose'))
+        assert 'page-chant is-prose' in page
+        assert 'class="layer layer-thai"' in page
+
+
+class TestThePageRoutes:
+    """The reading view itself: what a reader gets when they type a number.
+
+    Uses two real chants out of the book with page numbers added, so the view
+    is exercised against actual Pali and Thai rather than stubs.
+    """
+
+    @pytest.fixture()
+    def client(self, monkeypatch):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        first = copy.deepcopy(chanting_module.CHANTS[0])
+        second = copy.deepcopy(chanting_module.CHANTS[1])
+        third = copy.deepcopy(chanting_module.CHANTS[2])
+
+        # 47 -> 48 mid-chant, a second chant starting on 48, then a jump to 53.
+        # That covers a page turn, a shared page and a gap in one book.
+        first['page_start'] = 47
+        first['verses'][2]['page'] = 48
+        second['page_start'] = 48
+        third['page_start'] = 53
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [first, second, third])
+        return flask_app.app.test_client()
+
+    def read(self, client, url):
+        return client.get(url, follow_redirects=True).get_data(as_text=True)
+
+    def test_the_entry_point_opens_the_book_at_its_first_page(self, client):
+        assert client.get('/chanting/pages').headers['Location'].endswith('/chanting/page/47')
+
+    def test_the_jump_box_opens_the_page_asked_for(self, client):
+        assert client.get('/chanting/pages?p=48').headers['Location'].endswith('/chanting/page/48')
+
+    def test_a_page_shows_the_chant_printed_on_it(self, client):
+        import chanting as chanting_module
+        assert chanting_module.CHANTS[0]['title_thai'] in self.read(client, '/chanting/page/47')
+
+    def test_a_shared_page_shows_both_chants_and_repeats_neither_title(self, client):
+        page = self.read(client, '/chanting/page/48')
+        assert page.count('page-chant"') == 2
+        # The chant carried over from 47 is marked as continued rather than
+        # given a second title, because the printed page does not repeat it.
+        assert 'continued' in page
+
+    def test_next_and_previous_reach_the_pages_either_side(self, client):
+        page = self.read(client, '/chanting/page/48')
+        assert '/chanting/page/47' in page
+        assert '/chanting/page/53' in page
+
+    def test_the_first_and_last_pages_do_not_offer_a_way_off_the_end(self, client):
+        assert 'First page' in self.read(client, '/chanting/page/47')
+        assert 'Last page' in self.read(client, '/chanting/page/53')
+
+    def test_skipping_a_gap_says_so(self, client):
+        """Next goes 48 -> 53, and the reader is told rather than left to assume."""
+        assert 'are not in the app yet' in self.read(client, '/chanting/page/48')
+
+    def test_a_page_not_entered_yet_helps_rather_than_404s(self, client):
+        """The reader typed the number they were given. An error page is no use."""
+        response = client.get('/chanting/page/50')
+        assert response.status_code == 200
+
+        page = response.get_data(as_text=True)
+        assert 'has not been added yet' in page
+        # Offers the nearest pages either side of the one asked for.
+        assert '/chanting/page/48' in page
+        assert '/chanting/page/53' in page
+
+    def test_a_page_beyond_the_book_still_helps(self, client):
+        page = self.read(client, '/chanting/page/999')
+        assert 'has not been added yet' in page
+        assert '/chanting/page/53' in page
+
+    def test_the_empty_book_says_so_instead_of_breaking(self, monkeypatch):
+        """Today's real state: every chant predates page numbers."""
+        import app as flask_app
+        import chanting as chanting_module
+
+        monkeypatch.setattr(chanting_module, 'CHANTS',
+                            [{'id': 'x', 'title_english': 'x', 'verses': []}])
+        page = flask_app.app.test_client().get(
+            '/chanting/pages', follow_redirects=True).get_data(as_text=True)
+
+        assert 'no page numbers yet' in page
+
+
+if __name__ == '__main__':
+    sys.exit(pytest.main([__file__, '-v']))

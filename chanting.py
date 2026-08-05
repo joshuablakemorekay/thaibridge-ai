@@ -32,6 +32,31 @@ reader actually has are always answered in the same order:
 so the page and a printed edition can space them the same way without either
 one having to split text apart.
 
+Four keys are optional and describe how the PRINTED page sets a chant. They
+exist so the page-by-page view can show a page as the book prints it, and they
+are all absent from the chants entered before that view existed:
+
+  * `page_start`      — see above.
+  * `layout`          — 'prose' where the book runs the chant together as a
+                        continuous passage rather than a set of lines (an
+                        Abhidhamma mātikā, say). Absent means lines, which is
+                        what every chant here is so far. In book layout a
+                        'prose' chant flows back into one justified block; in
+                        verse-by-verse it reads as numbered units like any
+                        other, which is the point of having both.
+  * `closing`         — the formula the book prints under a finished chant
+                        (จบ…, "here ends…"), same five layers as a verse.
+  * `source_printed`  — the canonical reference AS THE BOOK PRINTS IT, from
+                        the page's own footnotes (e.g. 'อภิ.ยม. ๓๘/๑'). This
+                        is the book citing itself, and it is worth keeping
+                        separate from `source`: `source` may have been written
+                        for this app, `source_printed` never is.
+
+A page may print a chant with a Thai translation, in Pali only, or mix chants
+of both kinds — so every layer below is written ONLY where the book gives it.
+A Pali-only chant simply has no `thai`, and therefore no `paiboon`. Nothing
+fills those in.
+
 Each verse carries up to five layers, and they are NOT interchangeable:
 
   * `pali`       — the Pali, written in THAI SCRIPT. This is what is actually
@@ -5644,3 +5669,74 @@ CHANT_SECTIONS = [
 def get_chant(chant_id):
     """Return one chant by id, or None."""
     return next((c for c in CHANTS if c['id'] == chant_id), None)
+
+
+def build_page_index(chants=None):
+    """Regroup the book's verses by the printed page they appear on.
+
+    The chants are stored chant by chant, which is how you read one. A monk
+    calls out a page, which is how you chant along with everyone else — so the
+    same data has to be readable both ways round, and this turns one into the
+    other.
+
+    A verse carries `page` ONLY where the printed page turns, exactly as
+    `section` marks only where a movement begins. So a verse without one is on
+    the same page as the verse before it, and the first is on the chant's
+    `page_start`. Carrying that forward reproduces the printed page: whatever
+    the book prints there, which is often the end of one chant followed by the
+    beginning of the next.
+
+    Returns (pages, unpaginated):
+
+      pages       — ordered list of {'page': int, 'entries': [...]}, one entry
+                    per chant appearing on that page, in the order they appear
+                    down the page. An entry is {'chant', 'starts_here',
+                    'verses'} — `starts_here` meaning the chant's title is
+                    printed on this page, so the title and invitation belong
+                    here and not on the pages it continues onto.
+      unpaginated — chants with no `page_start`, which cannot be placed.
+
+    Chants without a page number are RETURNED rather than guessed at. Putting
+    one on a plausible page would send a reader to the wrong words in a silent
+    room, which is the one error in this book that is met in public.
+    """
+    if chants is None:
+        chants = CHANTS
+
+    placed = [c for c in chants if c.get('page_start')]
+    unpaginated = [c for c in chants if not c.get('page_start')]
+
+    pages = {}      # page number -> {chant id -> entry}, insertion-ordered
+    for chant in sorted(placed, key=lambda c: c['page_start']):
+        current = chant['page_start']
+
+        def entry_for(page):
+            """The entry this chant owns on `page`, created on first use."""
+            page_entries = pages.setdefault(page, {})
+            if chant['id'] not in page_entries:
+                page_entries[chant['id']] = {
+                    'chant': chant,
+                    # The title page is the one the chant starts on. Every
+                    # other page it runs across is a continuation, and repeating
+                    # the title on those would be a thing the book does not do.
+                    'starts_here': page == chant['page_start'],
+                    'verses': [],
+                }
+            return page_entries[chant['id']]
+
+        # Claim the opening page before walking the verses. A chant whose title
+        # sits at the foot of a page with its first verse overleaf still has to
+        # appear on that page — with its title and nothing else, which is
+        # exactly what the book shows.
+        entry_for(current)
+
+        for verse in chant['verses']:
+            if verse.get('page'):
+                current = verse['page']
+            entry_for(current)['verses'].append(verse)
+
+    return (
+        [{'page': page, 'entries': list(pages[page].values())}
+         for page in sorted(pages)],
+        unpaginated,
+    )

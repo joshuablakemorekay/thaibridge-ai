@@ -1,0 +1,647 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_buddhism.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}{% if page %}Page {{ page }} — {% endif %}Digital Chanting Book{% endblock %}
+
+{% block extra_css %}
+{# The verses are styled by the same partial the index uses. A page that styled
+   a verse differently would read as a different book. #}
+{% include 'partials/chanting_book_css.html' %}
+<style>
+    /* ── The page-by-page reading view ───────────────────────────────
+       This exists for one moment: a monk calls out a page number, and
+       everyone opens the book there and chants together. The reader on a
+       phone has seconds and no time to search, so the page number is the
+       biggest thing on the screen and the controls never move. */
+
+    .page-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        background: linear-gradient(135deg, #FFF4E0 0%, #FFE8CC 100%);
+        border: 2px solid var(--monk-saffron);
+        border-radius: 12px;
+        padding: 0.9rem 1.1rem;
+        margin: 1.25rem 0 1.75rem;
+    }
+    /* Deliberately NOT sticky. It was, and it was wrong twice over: the site
+       nav is itself sticky and 200px tall, so a second stuck bar left barely
+       any room for the verses — which are the whole point of the page — and
+       sitting it below the nav needs the nav's height measured at runtime,
+       which is a fragile thing to put between a chanter and their page.
+
+       The turn buttons are repeated at the foot instead. That is where a
+       reader arrives anyway, having chanted down the page, so the control is
+       waiting where the page ends rather than following them down it. */
+
+    .page-now {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: var(--royal-purple);
+        line-height: 1.1;
+    }
+    .page-now small {
+        display: block;
+        font-size: 0.75rem;
+        font-weight: normal;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #8a7a5e;
+    }
+
+    .page-turn { display: flex; align-items: center; gap: 0.5rem; }
+    .page-turn a, .page-turn span {
+        display: inline-block;
+        padding: 0.55rem 0.9rem;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: bold;
+        text-decoration: none;
+        border: 2px solid var(--royal-gold);
+        color: var(--royal-purple);
+        background: #fff;
+        /* Comfortably tappable with a book in the other hand. */
+        min-width: 3rem;
+        text-align: center;
+    }
+    .page-turn a:hover { background: var(--royal-gold); }
+    /* The end of the book, or the start. Shown rather than hidden so the
+       controls never shift position under a thumb. */
+    .page-turn span {
+        opacity: 0.4;
+        border-style: dashed;
+        cursor: default;
+    }
+
+    .page-jump { display: flex; align-items: center; gap: 0.4rem; }
+    .page-jump label {
+        font-size: 0.85rem;
+        color: #55483a;
+    }
+    .page-jump input {
+        width: 5rem;
+        padding: 0.5rem 0.6rem;
+        border: 2px solid var(--royal-gold);
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+    }
+    .page-jump button {
+        padding: 0.5rem 0.85rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--royal-purple);
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.95rem;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    /* Where the app skips over pages the book has but we have not entered. */
+    .page-gap {
+        font-size: 0.8rem;
+        color: #8a7a5e;
+        margin: -1.25rem 0 1.5rem;
+    }
+
+    /* The chant heading on a page. Quieter than the index's card, because on
+       a page the verses are the thing and the title is a signpost. */
+    .page-chant-title {
+        margin: 0 0 0.35rem;
+        font-size: 1.45rem;
+        color: var(--royal-purple);
+        line-height: 1.3;
+    }
+    .page-chant-roman {
+        display: block;
+        font-size: 1rem;
+        font-style: italic;
+        color: #6b5b45;
+        font-weight: normal;
+    }
+    .page-chant-english {
+        display: block;
+        font-size: 0.95rem;
+        color: #6b6b6b;
+        font-weight: normal;
+    }
+    .page-chant-number {
+        display: inline-block;
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8a7a5e;
+        margin-bottom: 0.3rem;
+    }
+    /* A chant carried over from the previous page. The book gives no title
+       here, so neither do we — this says where you are without inventing a
+       heading the printed page does not have. */
+    .page-continued {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #8a7a5e;
+        border-top: 1px dotted #d8d0bd;
+        padding-top: 0.5rem;
+        margin: 0 0 0.75rem;
+    }
+    .page-chant + .page-chant { margin-top: 2.5rem; }
+
+    /* Title on the page but no verses: the chant opens at the foot of the
+       page and its first line is overleaf. The book does this and so do we. */
+    .page-overleaf {
+        font-size: 0.9rem;
+        color: #6b6b6b;
+        font-style: italic;
+        margin: 0.75rem 0 0;
+    }
+
+    /* ── Two ways to look at the same page ───────────────────────────
+       The book layout is for chanting along: it shows what the printed page
+       shows and nothing else. Verse by verse is for studying: numbered units
+       with all five layers. Same data underneath — the difference is only
+       what is shown and how it is set. */
+    .view-switch {
+        display: inline-flex;
+        border: 2px solid var(--royal-gold);
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 0 1.25rem;
+    }
+    .view-switch button {
+        padding: 0.55rem 1rem;
+        border: none;
+        background: #fff;
+        color: var(--royal-purple);
+        font-family: inherit;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .view-switch button + button { border-left: 2px solid var(--royal-gold); }
+    .view-switch button[aria-pressed="true"] {
+        background: var(--royal-purple);
+        color: #fff;
+    }
+
+    /* Book mode shows exactly the layers the printed page carries, whatever
+       the study-mode toggles are set to. The !important is deliberate and is
+       the point of the mode: this is the book, not your preferences. The
+       toggles come back the moment you switch to verse by verse. */
+    .page-body.view-book .layer-pali,
+    .page-body.view-book .layer-thai { display: block !important; }
+    .page-body.view-book .layer-pali_roman,
+    .page-body.view-book .layer-paiboon,
+    .page-body.view-book .layer-english { display: none !important; }
+
+    /* No numbers and no rules in book mode — the book has neither. */
+    .page-body.view-book .verse-number { display: none; }
+    .page-body.view-book .verse {
+        border-left: none;
+        padding: 0;
+        margin: 0 0 0.9rem;
+    }
+    .page-body.view-book .layer { border-left: none; padding-left: 0; }
+    .page-body.view-book .layer-panel { display: none; }
+
+    /* A chant the book sets as continuous prose — a run-on list rather than
+       a set of couplets. In book mode its units flow back into one justified
+       block, which is how the page prints it. The line breaks in the book
+       come from justification, not from meaning, so they are not reproduced;
+       the browser makes its own. */
+    /* Scoped to .verse-body so the closing formula, which sits outside it,
+       stays a centred block the way the book sets it rather than being pulled
+       into the run of text. */
+    .page-body.view-book .page-chant.is-prose .verse-body .verse { display: inline; }
+    /* Only the two layers the book actually prints flow inline. Naming them
+       matters: a blanket `.layer` here outranks the hide rules above — same
+       !important weight, longer selector — and would drag the romanised Pali
+       and the English back into the block, run together with the Pali. The
+       !important is needed because the show rule above is itself !important. */
+    /* ONLY the Pali flows. If the Thai flowed too, a prose chant that has a
+       translation would run pali-thai-pali-thai into one paragraph, with the
+       two scripts interleaved a unit at a time — unreadable, and nothing like
+       the book, which sets a translation as its own block.
+
+       So a prose chant with a translation keeps its Thai as blocks under the
+       flowed Pali. If a real page turns up where the book runs the TRANSLATION
+       together as prose as well, stage 1 raises a check and we do it properly
+       against that page rather than guessing at it now. */
+    .page-body.view-book .page-chant.is-prose .verse-body .verse .layer-pali {
+        display: inline !important;
+        margin: 0;
+    }
+
+    /* App-only affordances are hidden in book mode. The point of the mode is
+       that the screen shows what the page shows — a link the printed book
+       does not have breaks that, and the foot of the page still carries the
+       way out. They come back in verse-by-verse, which is the studying mode
+       and is allowed to look like an app. */
+    .page-body.view-book .page-app-link { display: none; }
+    .page-body.view-book .page-chant.is-prose .verse-body {
+        text-align: justify;
+        max-width: 70ch;
+    }
+    /* In verse mode a prose chant reads as numbered units like any other, so
+       nothing here applies. That is the whole point of having both. */
+
+    /* The closing formula the book prints under a chant — จบ… . Centred and
+       quiet, as printed. */
+    .chant-closing {
+        text-align: center;
+        margin: 1.25rem 0 0;
+        max-width: 70ch;
+    }
+    .chant-closing .layer { border-left: none; padding-left: 0; }
+
+    /* Footnotes, as the book sets them: a short rule and the references that
+       belong to the chants ending on this page. */
+    .page-footnotes {
+        margin-top: 2.5rem;
+        max-width: 70ch;
+        font-size: 0.9rem;
+        color: #55483a;
+    }
+    .page-footnotes hr {
+        border: none;
+        border-top: 1px solid #8a7a5e;
+        width: 40%;
+        margin: 0 auto 0 0;
+    }
+    .page-footnotes p { margin: 0.5rem 0 0; }
+    .page-footnotes .fn-mark { font-weight: bold; }
+
+    /* The honesty note for a Pali-only chant. Quiet, but present in BOTH
+       modes — it is true of the book, not of the app's presentation of it. */
+    .chant-unverified-note {
+        font-size: 0.85rem;
+        color: #6b5b45;
+        font-style: italic;
+        background: #FFFBF4;
+        border-left: 3px solid var(--monk-saffron);
+        padding: 0.5rem 0.75rem;
+        margin: 0 0 1rem;
+        max-width: 62ch;
+    }
+
+    .page-empty {
+        background: #FFFDF8;
+        border: 1px solid #EADFC8;
+        border-radius: 12px;
+        padding: 1.5rem;
+        max-width: 70ch;
+    }
+    .page-empty h2 { margin-top: 0; color: var(--royal-purple); font-size: 1.15rem; }
+    .page-empty p { color: #55483a; line-height: 1.7; max-width: 62ch; }
+
+    /* The layer toggles, compact. The index carries the full explanation of
+       what the five layers are; someone who has jumped to a page mid-service
+       wants the switches, not the essay. */
+    .layer-panel.is-compact { padding: 0.85rem 1.1rem; margin: 0 0 1.75rem; }
+    .layer-panel.is-compact .layer-options { gap: 0.4rem 1.5rem; }
+
+    .page-foot {
+        margin-top: 2.5rem;
+        padding-top: 1.25rem;
+        border-top: 1px solid #EADFC8;
+    }
+
+    @media (max-width: 600px) {
+        .page-bar { gap: 0.75rem; }
+        .page-now { font-size: 1.35rem; }
+        /* The jump box drops to its own row rather than squeezing the
+           turn buttons, which are the ones used mid-chant. */
+        .page-jump { width: 100%; }
+        .page-jump input { flex: 1; width: auto; }
+    }
+
+    @media print {
+        /* Print the page as a page: the controls are not part of the book. */
+        .page-bar, .page-jump, .page-foot, .page-gap { display: none; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>📿 Digital Chanting Book <span class="thai">บทสวดมนต์</span></h1>
+
+{# ─── No page numbers anywhere in the book yet ─────────────────────── #}
+{% if page is none %}
+<div class="page-empty">
+    <h2>The page view is ready, but the book has no page numbers yet</h2>
+    <p>
+        Every chant currently in the app was added before page numbers were
+        being recorded, so there is nothing to open at a page number yet.
+        As chants are added from photographs of the printed book they arrive
+        with their page numbers, and they will appear here automatically.
+    </p>
+    <p>
+        <a href="{{ url_for('chanting_book') }}">Read the chants by title instead →</a>
+    </p>
+</div>
+
+{# ─── A page number that is not in the app yet ─────────────────────── #}
+{% elif entries is none %}
+<div class="page-bar">
+    <span class="page-now">Page {{ page }}<small>not added yet</small></span>
+    <form class="page-jump" action="{{ url_for('chanting_pages') }}" method="get">
+        <label for="jump-to">Go to page</label>
+        <input type="number" id="jump-to" name="p" min="1" inputmode="numeric">
+        <button type="submit">Open</button>
+    </form>
+</div>
+
+<div class="page-empty">
+    <h2>Page {{ page }} has not been added yet</h2>
+    <p>
+        The book is being entered a batch of pages at a time, so there are
+        gaps. Nothing is guessed: a page appears here only once it has been
+        read from a photograph of the printed book, because a page showing
+        roughly the right words would be worse than one showing none.
+    </p>
+    <p>
+        {% if nearest.before and nearest.after %}
+        The nearest pages that are in are
+        <a href="{{ url_for('chanting_page', page=nearest.before) }}">{{ nearest.before }}</a>
+        and
+        <a href="{{ url_for('chanting_page', page=nearest.after) }}">{{ nearest.after }}</a>.
+        {% elif nearest.before %}
+        The last page in the app is
+        <a href="{{ url_for('chanting_page', page=nearest.before) }}">{{ nearest.before }}</a>.
+        {% elif nearest.after %}
+        The book so far starts at page
+        <a href="{{ url_for('chanting_page', page=nearest.after) }}">{{ nearest.after }}</a>.
+        {% endif %}
+        <a href="{{ url_for('chanting_book') }}">Or find the chant by its title →</a>
+    </p>
+</div>
+
+{# ─── A real page of the book ──────────────────────────────────────── #}
+{% else %}
+<div class="page-bar">
+    <span class="page-now">Page {{ page }}<small>of the chanting book</small></span>
+
+    <span class="page-turn">
+        {% if prev_page %}
+        <a href="{{ url_for('chanting_page', page=prev_page) }}" rel="prev"
+           title="Previous page ({{ prev_page }})">← {{ prev_page }}</a>
+        {% else %}
+        <span title="This is the first page in the app">←</span>
+        {% endif %}
+        {% if next_page %}
+        <a href="{{ url_for('chanting_page', page=next_page) }}" rel="next"
+           title="Next page ({{ next_page }})">{{ next_page }} →</a>
+        {% else %}
+        <span title="This is the last page in the app">→</span>
+        {% endif %}
+    </span>
+
+    <form class="page-jump" action="{{ url_for('chanting_pages') }}" method="get">
+        <label for="jump-to">Go to page</label>
+        <input type="number" id="jump-to" name="p" min="1" inputmode="numeric"
+               placeholder="{{ page }}">
+        <button type="submit">Open</button>
+    </form>
+</div>
+
+{# Say so when next or previous steps over pages that are not in yet, so the
+   jump is never silent — a reader must not think the book runs 47, 53. #}
+{% if next_page and next_page != page + 1 %}
+<p class="page-gap">Pages {{ page + 1 }}–{{ next_page - 1 }} are not in the app yet, so “next” goes to {{ next_page }}.</p>
+{% endif %}
+
+{# Two readings of one page. Book layout is the default because the page
+   exists for chanting along: what a monk called out, as the book prints it.
+   Verse by verse is a step away from the book and towards studying it, so it
+   is the one you choose rather than the one you land on. #}
+<div class="view-switch" role="group" aria-label="How to show this page">
+    <button type="button" data-view="book" aria-pressed="true">As the book prints it</button>
+    <button type="button" data-view="study" aria-pressed="false">Verse by verse</button>
+</div>
+
+<div class="page-body view-book" id="page-body">
+<div class="layer-panel is-compact">
+    <div class="layer-options">
+        {% for layer in layers %}
+        <label class="layer-option">
+            <input type="checkbox" class="layer-toggle" data-layer="{{ layer.key }}" checked>
+            <span><span class="layer-swatch" style="background: {{ layer.colour }};"></span>{{ layer.label }}</span>
+        </label>
+        {% endfor %}
+    </div>
+</div>
+
+{# id="chant-book" is what the shared layer-toggle script looks for. #}
+<div class="chant-book" id="chant-book">
+    {% for entry in entries %}
+    {% set chant = entry.chant %}
+    {# `layout` says how the BOOK sets this chant: 'prose' for a run-on
+       passage, otherwise a set of lines. Absent means lines, which is what
+       every chant entered so far is. #}
+    <div class="page-chant{% if chant.layout == 'prose' %} is-prose{% endif %}">
+        {% if entry.starts_here %}
+        {% if chant.book_number %}
+        <span class="page-chant-number">Chant {{ chant.book_number_printed or chant.book_number }}</span>
+        {% endif %}
+        {# Every title line is optional. A chant may be titled in Thai script,
+           in Pali, in both or in neither, and the book decides — so nothing
+           here assumes one is present. #}
+        <h2 class="page-chant-title">
+            {% if chant.title_thai %}{{ chant.title_thai }}{% elif chant.title_pali %}{{ chant.title_pali }}{% else %}{{ chant.title_english }}{% endif %}
+            {% if chant.title_thai and chant.title_pali %}<span class="page-chant-roman">{{ chant.title_pali }}</span>
+            {% elif chant.title_thai and chant.title_roman %}<span class="page-chant-roman">{{ chant.title_roman }}</span>{% endif %}
+            {% if chant.title_english and chant.title_thai or chant.title_english and chant.title_pali %}<span class="page-chant-english">{{ chant.title_english }}</span>{% endif %}
+        </h2>
+
+        {# Said plainly, on the page itself: where the book prints Pali only,
+           the English below it was made for this app and has not been checked
+           against the book — because there is nothing in the book to check it
+           against. #}
+        {% if chant.english_unverified %}
+        <p class="chant-unverified-note">
+            The book prints this chant in Pali only. The English here is a
+            working translation made for this edition, not the book's.
+        </p>
+        {% endif %}
+
+        {% if chant.invitation and chant.invitation.pali %}
+        <div class="verse invitation">
+            <span class="invitation-label">Invitation</span>
+            <p class="layer layer-pali">{{ chant.invitation.pali }}</p>
+            {% if chant.invitation.pali_roman %}<p class="layer layer-pali_roman">{{ chant.invitation.pali_roman }}</p>{% endif %}
+            {% if chant.invitation.thai %}<p class="layer layer-thai">{{ chant.invitation.thai }}</p>{% endif %}
+            {% if chant.invitation.paiboon %}<p class="layer layer-paiboon">{{ chant.invitation.paiboon }}</p>{% endif %}
+            {% if chant.invitation.english %}<p class="layer layer-english">{{ chant.invitation.english }}</p>{% endif %}
+        </div>
+        {% endif %}
+        {% else %}
+        <p class="page-continued">{{ chant.title_english or chant.title_thai }}, continued</p>
+        {% endif %}
+
+        {# Wrapped so a prose chant can flow back into one justified block in
+           book mode. A verse chant is unaffected by the wrapper. #}
+        <div class="verse-body">
+        {% for verse in entry.verses %}
+        {% if verse.section %}<h4 class="verse-section">{{ verse.section }}</h4>{% endif %}
+        <div class="verse">
+            <span class="verse-number">{{ verse.number }}</span>
+            {# Only the layers the book actually prints are ever guaranteed.
+               A Pali-only page has no `thai`, and therefore no `paiboon`;
+               nothing here fills that in. #}
+            {% if verse.pali %}<p class="layer layer-pali">{{ verse.pali }}</p>{% endif %}
+            {% if verse.pali_roman %}<p class="layer layer-pali_roman">{{ verse.pali_roman }}</p>{% endif %}
+            {% if verse.thai %}<p class="layer layer-thai">{{ verse.thai }}</p>{% endif %}
+            {% if verse.paiboon %}<p class="layer layer-paiboon">{{ verse.paiboon }}</p>{% endif %}
+            {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
+        </div>
+        {% endfor %}
+        </div>
+
+        {# The closing formula the book prints under a finished chant — จบ… .
+           Shown only where the chant actually ENDS on this page. #}
+        {% if chant.closing and chant.closing.pali and entry.verses
+              and entry.verses[-1].number == chant.verses[-1].number %}
+        <div class="verse chant-closing">
+            <p class="layer layer-pali">{{ chant.closing.pali }}</p>
+            {% if chant.closing.pali_roman %}<p class="layer layer-pali_roman">{{ chant.closing.pali_roman }}</p>{% endif %}
+            {% if chant.closing.thai %}<p class="layer layer-thai">{{ chant.closing.thai }}</p>{% endif %}
+            {% if chant.closing.paiboon %}<p class="layer layer-paiboon">{{ chant.closing.paiboon }}</p>{% endif %}
+            {% if chant.closing.english %}<p class="layer layer-english">{{ chant.closing.english }}</p>{% endif %}
+        </div>
+        {% endif %}
+
+        {% if entry.starts_here and not entry.verses %}
+        <p class="page-overleaf">
+            This chant begins at the foot of this page; its first verse is
+            {% if next_page %}
+            <a href="{{ url_for('chanting_page', page=next_page) }}">overleaf on page {{ next_page }}</a>.
+            {% else %}overleaf.{% endif %}
+        </p>
+        {% endif %}
+
+        {# An app affordance, not something the book prints — so it is hidden
+           in book layout and shown in verse-by-verse. #}
+        {% if entry.starts_here %}
+        <p class="page-overleaf page-app-link">
+            <a href="{{ url_for('chanting_book') }}#{{ chant.id }}">Read this chant in full, with its background and meaning →</a>
+        </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
+{# The book prints its canonical references as footnotes at the foot of the
+   page, keyed by a superscript and RENUMBERED from 1 on every page. Here they
+   are labelled with the chant instead: a superscript is a convention for a
+   page you can see whole, and this one scrolls. The reference itself is
+   reproduced exactly as the book prints it — these are the book's own
+   citations, not attributions made for the app. #}
+{% set noted = [] %}
+{% for entry in entries %}
+{% if entry.chant.source_printed and entry.verses
+      and entry.verses[-1].number == entry.chant.verses[-1].number %}
+{% set _ = noted.append(entry.chant) %}
+{% endif %}
+{% endfor %}
+{% if noted %}
+<div class="page-footnotes">
+    <hr>
+    {% for chant in noted %}
+    <p>
+        <span class="fn-mark">{{ chant.title_english or chant.title_thai }}</span>
+        — {{ chant.source_printed }}
+    </p>
+    {% endfor %}
+</div>
+{% endif %}
+</div>{# /page-body #}
+
+<div class="page-foot page-bar">
+    <span class="page-turn">
+        {% if prev_page %}
+        <a href="{{ url_for('chanting_page', page=prev_page) }}" rel="prev">← Page {{ prev_page }}</a>
+        {% else %}<span>← First page</span>{% endif %}
+        {% if next_page %}
+        <a href="{{ url_for('chanting_page', page=next_page) }}" rel="next">Page {{ next_page }} →</a>
+        {% else %}<span>Last page →</span>{% endif %}
+    </span>
+    <a href="{{ url_for('chanting_book') }}">All chants by title →</a>
+</div>
+{% endif %}
+
+{% if unpaginated %}
+<p class="page-gap" style="margin-top: 2rem;">
+    {{ unpaginated|length }} chant{{ 's' if unpaginated|length != 1 }} in the app
+    {{ 'have' if unpaginated|length != 1 else 'has' }} no page number yet and can only be
+    reached <a href="{{ url_for('chanting_book') }}">by title</a>.
+</p>
+{% endif %}
+{% endblock %}
+
+{% block extra_js %}
+{% include 'partials/chanting_layers_js.html' %}
+<script>
+// Book layout or verse by verse. Remembered in this browser, because it is a
+// standing preference — someone who chants along wants the book every time,
+// and someone studying wants the layers every time. Nothing is sent anywhere.
+(function () {
+    var STORAGE_KEY = 'chanting-page-view';
+    var body = document.getElementById('page-body');
+    var buttons = document.querySelectorAll('.view-switch button');
+    if (!body || !buttons.length) return;
+
+    function show(view) {
+        body.classList.toggle('view-book', view === 'book');
+        body.classList.toggle('view-study', view === 'study');
+        buttons.forEach(function (button) {
+            button.setAttribute('aria-pressed', String(button.dataset.view === view));
+        });
+        try {
+            localStorage.setItem(STORAGE_KEY, view);
+        } catch (e) { /* private browsing — the page still works */ }
+    }
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () { show(button.dataset.view); });
+    });
+
+    var saved;
+    try {
+        saved = localStorage.getItem(STORAGE_KEY);
+    } catch (e) {
+        saved = null;
+    }
+    // Book layout is the default: the page exists for chanting along.
+    show(saved === 'study' ? 'study' : 'book');
+})();
+
+// Arrow keys turn the page, the way they would in any reader. Ignored while
+// typing in the jump box, so a reader entering "47" is not thrown to another
+// page by the arrows on their own keyboard.
+(function () {
+    var prev = document.querySelector('.page-bar a[rel="prev"]');
+    var next = document.querySelector('.page-bar a[rel="next"]');
+    if (!prev && !next) return;
+
+    document.addEventListener('keydown', function (event) {
+        if (event.metaKey || event.ctrlKey || event.altKey) return;
+
+        var el = document.activeElement;
+        var typing = el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA'
+                            || el.isContentEditable);
+        if (typing) return;
+
+        if (event.key === 'ArrowLeft' && prev) {
+            window.location.href = prev.href;
+        } else if (event.key === 'ArrowRight' && next) {
+            window.location.href = next.href;
+        }
+    });
+})();
+</script>
+{% endblock %}
