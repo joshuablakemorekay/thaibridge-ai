@@ -76,60 +76,68 @@ VARIANTS = {
         'folder': 'chanting-book-batch',
         'pdf': 'chanting-book-batch-prompts.pdf',
         'title': 'Chanting Book Prompts — Batch',
-        'subtitle': 'The same two-stage workflow rebuilt for volume: several '
-                    'chants per message, across a 286-chant book.',
+        'subtitle': 'The same workflow rebuilt for volume and moved into Claude '
+                    'Code: it reads the photographed pages from disk, a batch '
+                    'at a time, across a 286-chant book.',
         'howto': [
-            ('1. Open Claude.ai',
-             'Paste <b>Stage 1</b> once at the start of a session. It sets the '
-             'rules for the whole conversation.'),
+            ('1. Open Claude Code',
+             'In <b>~/thaibridge-ai</b>. Both stages run here now — nothing is '
+             'pasted between them, so the Thai script and the diacritics never '
+             'go near a clipboard.'),
             ('2. Choose a depth',
-             'Put <b>FULL</b>, <b>COMPACT</b> or <b>DATA-ONLY</b> on the first '
-             'line of your paste. See the table below. If you say nothing it '
-             'uses COMPACT.'),
-            ('3. Paste a batch',
-             'Several chants at once, numbered. The reply lists every one it '
-             'received <i>before</i> it writes any of them.'),
-            ('4. Count the manifest',
-             'Check the manifest against how many entries actually arrived. If '
-             'they differ, the reply was cut off — re-paste from the id in '
-             '<b>resume_from</b>. This is the check batching exists to need.'),
-            ('5. Check against the book',
-             'The closing sentence counts what needs verifying. Do that with the '
+             'Say <b>FULL</b>, <b>COMPACT</b> or <b>DATA-ONLY</b> when you start '
+             'the batch. See the table below. If you say nothing it uses '
+             'COMPACT.'),
+            ('3. Run Stage 1',
+             'Give it the image files to read and the depth. It opens the '
+             'photographs, reads the pages and writes one JSON batch file into '
+             '<b>batches/</b>. It does not touch the app.'),
+            ('4. Read the report',
+             'How many files it read, how many chants are complete, where the '
+             'next batch starts — and any photograph it wants retaken. That '
+             'last one is the only repair you cannot make from your desk.'),
+            ('5. Run Stage 2',
+             'Give it the batch file. It reconciles the manifest and the page '
+             'map against what it is about to write, and refuses to write '
+             'anything if they disagree.'),
+            ('6. Check against the book',
+             'Every doubt Stage 1 had is now a ⚠️ comment in chanting.py, each '
+             'naming the photograph it came from. Work through them with the '
              'book open. This is the step nothing else can do for you.'),
-            ('6. Open Claude Code',
-             'Paste <b>Stage 2</b>, then the whole reply underneath it. It '
-             'reconciles the manifest before it writes anything.'),
         ],
         'depth': [
             ('FULL', 'Everything, including background and meaning. '
-                     '<b>2–4 chants</b> per reply.'),
+                     '<b>A few pages</b> per batch.'),
             ('COMPACT', 'background 1 paragraph, meaning 2. Everything else in '
-                        'full. <b>4–6 chants</b> per reply.'),
+                        'full. <b>6–8 pages</b> per batch.'),
             ('DATA-ONLY', 'All five layers verse by verse, but no chant-level '
                           'commentary — no background, meaning, summary, '
-                          'when_chanted or source. <b>6–9 chants</b> per reply.'),
+                          'when_chanted or source. <b>8–12 pages</b> per batch.'),
             ('All five layers,<br/>every depth',
              'pali, pali_roman, thai, paiboon <i>and</i> english are written on '
-             'every verse at every depth. A verse without its meaning is not '
-             'usable, so english is never traded away.'),
+             'every verse at every depth — where the book gives them. A page '
+             'printed in Pali only has no thai and no paiboon, and nothing '
+             'fills them in.'),
             ('Why it works', 'About 32% of a finished entry is prose written '
                              '<i>about</i> the chant, and none of it needs '
                              'checking against the physical book. DATA-ONLY '
-                             'defers that and captures everything that needs '
-                             'the book open. Stage 3 adds it back later, '
-                             'reading the chant out of chanting.py — so you '
-                             'never re-paste anything.'),
+                             'defers that, so the pass that needs the book open '
+                             'stays short — and that is the pass that must not '
+                             'drift. Stage 3 adds it back later by reading the '
+                             'chants out of chanting.py.'),
         ],
         'stages': [
-            ('Stage 1 — paste into Claude.ai',
-             'Paste this once at the start of a session, then paste batches of '
-             'chants. It returns one JSON object holding a manifest, an array '
-             'of entries, and a status.'),
-            ('Stage 2 — paste into Claude Code',
-             'Paste this, then the whole Stage 1 reply underneath it.'),
-            ('Stage 3 — paste into Claude Code, later',
+            ('Stage 1 — run in Claude Code',
+             'Give it a range of image files and a depth. It reads the '
+             'photographs and writes one JSON batch file holding a manifest, a '
+             'page map, the entries and a status. It may not touch the app.'),
+            ('Stage 2 — run in Claude Code',
+             'Give it the batch file Stage 1 wrote. It may not open the '
+             'photographs: it checks the app against what Stage 1 wrote down, '
+             'which is only a check while the two stay separate.'),
+            ('Stage 3 — run in Claude Code, later',
              'The commentary pass, run after a DATA-ONLY batch is in and '
-             'verified. Nothing to paste with it: the chants are already in '
+             'verified. Nothing to give it: the chants are already in '
              'chanting.py, so it reads them from there.'),
         ],
     },
