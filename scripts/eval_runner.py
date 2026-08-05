@@ -148,6 +148,22 @@ def evaluate_criterion(criterion: dict, output: str) -> dict:
         'int': int,
         'float': float,
         'type': type,
+        # Ordering and collection builtins. Added for the chanting-book page-map
+        # criteria, which have to check that page numbers run forwards — there is
+        # no way to express "this list is in order" without one of these, and
+        # contorting the rubric around a missing name makes the criterion harder
+        # to read than the rule it is checking. All pure and side-effect free,
+        # and adding names cannot change how an existing condition evaluates.
+        'sorted': sorted,
+        'set': set,
+        'list': list,
+        'bool': bool,
+        'min': min,
+        'max': max,
+        'sum': sum,
+        'zip': zip,
+        'enumerate': enumerate,
+        'range': range,
     }
 
     # Pass context as globals (not locals) so generator expressions and
