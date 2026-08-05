@@ -169,13 +169,23 @@ class TestTheMarkupHoldsTogether:
 
     @pytest.mark.parametrize('path', ['/chanting', '/chanting/pages'])
     def test_the_body_actually_has_the_page_in_it(self, path):
-        """The blank page still returned 200. Status codes prove nothing here."""
+        """The blank page still returned 200. Status codes prove nothing here.
+
+        The three alternatives are the three states /chanting/pages can be in,
+        and it has now been in two of them: it showed the empty state while no
+        chant had a page number, and now redirects to a real page since the
+        first batch landed. The test asserted only the first two and failed the
+        day real pages arrived — which is the assertion being too specific
+        about a passing phase, not the page breaking.
+        """
         page = self.rendered(path)
 
         assert 'Digital Chanting Book' in page
         # Content that lives AFTER the style blocks, so it is missing exactly
         # when a stylesheet has swallowed the document.
-        assert 'Chanting along' in page or 'no page numbers yet' in page
+        assert ('Chanting along' in page              # the index's way in
+                or 'no page numbers yet' in page      # the empty state
+                or 'of the chanting book' in page)    # a real page
 
 
 class TestHowThePageIsSet:

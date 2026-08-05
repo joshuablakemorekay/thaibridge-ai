@@ -1,0 +1,887 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 6,
+    "files_read": 6,
+    "received": 8,
+    "manifest": [
+      "kham-bucha-phra-ratanattaya",
+      "kham-namatsakan-phra-ratanattaya",
+      "kham-choen-bucha-lae-suat-namo",
+      "pubbabhaga-namakara",
+      "buddhabhithuti",
+      "dhammabhithuti",
+      "sanghabhithuti",
+      "ratanattayappanamagatha"
+    ],
+    "pages": [
+      {
+        "page": null,
+        "file": "IMG_0264.PNG",
+        "script": "thai",
+        "chant": "kham-bucha-phra-ratanattaya",
+        "verses": "1-9",
+        "starts_here": true,
+        "note": "No page number is printed on this page at all. It carries the book's opening headings — ระเบียบ / ทำวัตร - สวดมนต์ / ทำวัตรเช้า — above the first chant, and closes with an instruction line to the leader: ประธานกล่าวเชิญบูชาพระรัตนตรัยและสวด นะโม หยุดตามจุดลูกน้ำดังนี้."
+      },
+      {
+        "page": null,
+        "file": "IMG_0264.PNG",
+        "script": "thai",
+        "chant": "kham-namatsakan-phra-ratanattaya",
+        "verses": "1-3",
+        "starts_here": true,
+        "note": "Each of the three lines is followed by the printed rubric (กราบพร้อมกัน)."
+      },
+      {
+        "page": 2,
+        "file": "IMG_0265.PNG",
+        "script": "thai",
+        "chant": "kham-choen-bucha-lae-suat-namo",
+        "verses": "1-7",
+        "starts_here": true,
+        "note": ""
+      },
+      {
+        "page": 2,
+        "file": "IMG_0265.PNG",
+        "script": "thai",
+        "chant": "pubbabhaga-namakara",
+        "verses": "1-3",
+        "starts_here": true,
+        "note": "Preceded by the instruction that the deputy leader begins and the rest join, three times through, with one breath between."
+      },
+      {
+        "page": 2,
+        "file": "IMG_0265.PNG",
+        "script": "thai",
+        "chant": "buddhabhithuti",
+        "verses": "1-9",
+        "starts_here": true,
+        "note": "Verse range CORRECTED from 1-12 after a re-read of IMG_0265.PNG on 2026-08-05. The passage runs in nine comma-separated clauses; the original 12 was a miscount when the map was drafted, not a reading of the page."
+      },
+      {
+        "page": 2,
+        "file": "IMG_0265.PNG",
+        "script": "thai",
+        "chant": "dhammabhithuti",
+        "verses": "none",
+        "starts_here": true,
+        "note": "Only the leader's invitation appears on this page; the verses are overleaf on page 3."
+      },
+      {
+        "page": 3,
+        "file": "IMG_0266.PNG",
+        "script": "thai",
+        "chant": "dhammabhithuti",
+        "verses": "1-3",
+        "starts_here": false,
+        "note": ""
+      },
+      {
+        "page": 3,
+        "file": "IMG_0266.PNG",
+        "script": "thai",
+        "chant": "sanghabhithuti",
+        "verses": "1-9",
+        "starts_here": true,
+        "note": "Closes with the rubric (กราบพร้อมกัน แล้วนั่งพับเพียบทั้งหมด), then a long instruction naming the two chants that follow."
+      },
+      {
+        "page": 3,
+        "file": "IMG_0266.PNG",
+        "script": "thai",
+        "chant": "ratanattayappanamagatha",
+        "verses": "1-4",
+        "starts_here": true,
+        "note": ""
+      },
+      {
+        "page": 4,
+        "file": "IMG_0267.PNG",
+        "script": "thai",
+        "chant": "ratanattayappanamagatha",
+        "verses": "5-16",
+        "starts_here": false,
+        "note": "NOT WRITTEN — this batch stopped after page 3. The page also carries the printed title สังเวคะปะริกิตตะนะปาฐะ and the start of that chant, which is set as continuous prose."
+      },
+      {
+        "page": 5,
+        "file": "IMG_0268.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "note": "NOT WRITTEN. The Saṃvega passage ends here at สังวัตตะตูติ. Most of this page is ordinary Thai instruction about the เสขิยวัตร — four categories, how many training rules in each, and how they are chanted across three days — not chant text. It also carries three leader's invitations.",
+        "starts_here": false
+      },
+      {
+        "page": 6,
+        "file": "IMG_0269.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "note": "NOT WRITTEN. More Thai instruction, then the printed title ตังขะณิกะปัจจะเวกขะณะปาโฐ and the first three of its four reflections. The fourth runs past page 6, so that chant continues into the next batch.",
+        "starts_here": false
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "kham-bucha-phra-ratanattaya",
+      "working_notes": {
+        "invitation": "Absent. The book prints no invitation before this chant; none written.",
+        "units": "9 units, split at the commas the book prints, which are also the pausing points the page tells the chanters to observe.",
+        "ordering": "No Thai translation is printed anywhere on this page, so there is nothing to run out of step with.",
+        "conventions": "None. The book prints no romanisation of its own.",
+        "pages": "IMG_0264.PNG only. That page carries no printed page number at all."
+      },
+      "title_thai": "คำบูชาพระรัตนตรัย",
+      "title_pali": "",
+      "title_roman": "Kham Bucha Phra Ratanattaya",
+      "title_english": "Words of Offering to the Triple Gem",
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "section": "คำบูชาพระรัตนตรัย: Offering to the Triple Gem",
+          "pali": "โย โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,",
+          "pali_roman": "Yo so bhagavā arahaṃ sammāsambuddho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "That Blessed One, the Worthy One, perfectly enlightened by himself,"
+        },
+        {
+          "number": 2,
+          "pali": "สวากขาโต เยนะ ภะคะวะตา ธัมโม,",
+          "pali_roman": "Svākkhāto yena bhagavatā dhammo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Dhamma well proclaimed by that Blessed One,"
+        },
+        {
+          "number": 3,
+          "pali": "สุปะฏิปันโน ยัสสะ ภะคะวะโต สาวะกะสังโฆ,",
+          "pali_roman": "Supaṭipanno yassa bhagavato sāvakasaṅgho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Sangha of that Blessed One's disciples who have practised well,"
+        },
+        {
+          "number": 4,
+          "pali": "ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง,",
+          "pali_roman": "Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "to that Blessed One, with his Dhamma and his Sangha,"
+        },
+        {
+          "number": 5,
+          "pali": "อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยามะ,",
+          "pali_roman": "Imehi sakkārehi yathārahaṃ āropitehi abhipūjayāma,",
+          "thai": "",
+          "paiboon": "",
+          "english": "we make offering with these gifts, set out as befits them."
+        },
+        {
+          "number": 6,
+          "pali": "สาธุ โน ภันเต ภะคะวา สุจิระปะรินิพพุโตปิ,",
+          "pali_roman": "Sādhu no bhante bhagavā sucira-parinibbutopi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Venerable sir, though the Blessed One long ago attained final Nibbāna,"
+        },
+        {
+          "number": 7,
+          "pali": "ปัจฉิมาชะนะตานุกัมปะมานะสา,",
+          "pali_roman": "Pacchimā-janatānukampa-mānasā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "out of compassion in mind for later generations,"
+        },
+        {
+          "number": 8,
+          "pali": "อิเม สักกาเร ทุคคะตะปัณณาการะภูเต ปะฏิคคัณหาตุ,",
+          "pali_roman": "Ime sakkāre duggata-paṇṇākāra-bhūte paṭiggaṇhātu,",
+          "thai": "",
+          "paiboon": "",
+          "english": "may he accept these offerings, poor gifts though they are,"
+        },
+        {
+          "number": 9,
+          "pali": "อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ ฯ",
+          "pali_roman": "Amhākaṃ dīgharattaṃ hitāya sukhāya.",
+          "thai": "",
+          "paiboon": "",
+          "english": "for our lasting welfare and happiness."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0264.PNG",
+          "issue": "This page carries NO printed page number. From the file sequence it precedes page 2 (IMG_0265.PNG), but that is inference, so page_start has been left off entirely. Please confirm whether the book prints a number here."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0264.PNG",
+          "issue": "The book prints three headings above this chant — ระเบียบ, ทำวัตร - สวดมนต์, ทำวัตรเช้า — which are section titles for the whole morning service, not titles of this chant. They have no field and are recorded in the page note only."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0264.PNG",
+          "issue": "The page ends with an instruction to the leader: ประธานกล่าวเชิญบูชาพระรัตนตรัยและสวด นะโม หยุดตามจุดลูกน้ำดังนี้. Reproduced in the page note; it is a rubric, not chant text."
+        },
+        {
+          "verse": 2,
+          "file": "IMG_0264.PNG",
+          "issue": "Read as สวากขาโต. The printed form appeared to carry a mark above the ส that I could not resolve at this resolution — please check the exact spelling against the book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0264.PNG",
+          "issue": "No Thai translation is printed for this chant, so thai and paiboon are empty and the English is a working translation. english_unverified is set."
+        }
+      ]
+    },
+    {
+      "id": "kham-namatsakan-phra-ratanattaya",
+      "working_notes": {
+        "invitation": "Absent; none written.",
+        "units": "3 units, one per printed line, each a salutation to one of the Three Gems.",
+        "ordering": "In step; nothing printed out of order.",
+        "conventions": "None.",
+        "pages": "IMG_0264.PNG, the unnumbered opening page."
+      },
+      "title_thai": "คำนมัสการพระรัตนตรัย",
+      "title_pali": "",
+      "title_roman": "Kham Namatsakan Phra Ratanattaya",
+      "title_english": "Words of Salutation to the Triple Gem",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "อะระหัง สัมมาสัมพุทโธ ภะคะวา, พุทธัง ภะคะวันตัง อะภิวาเทมิ.",
+          "pali_roman": "Arahaṃ sammāsambuddho bhagavā, buddhaṃ bhagavantaṃ abhivādemi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Blessed One is Worthy and perfectly enlightened by himself; I bow to the Buddha, the Blessed One."
+        },
+        {
+          "number": 2,
+          "pali": "สวากขาโต ภะคะวะตา ธัมโม, ธัมมัง นะมัสสามิ.",
+          "pali_roman": "Svākkhāto bhagavatā dhammo, dhammaṃ namassāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Dhamma is well proclaimed by the Blessed One; I pay homage to the Dhamma."
+        },
+        {
+          "number": 3,
+          "pali": "สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, สังฆัง นะมามิ.",
+          "pali_roman": "Supaṭipanno bhagavato sāvakasaṅgho, saṅghaṃ namāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Sangha of the Blessed One's disciples has practised well; I bow to the Sangha."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0264.PNG",
+          "issue": "Each of the three lines is followed by the printed rubric (กราบพร้อมกัน) — 'bow together' — on its own centred line. It is an instruction to the chanters rather than chanted text, so it is recorded here and in the page note rather than inside a verse. Tell me if you would rather see it on the page."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0264.PNG",
+          "issue": "No printed page number on this page; page_start omitted. Same page as the previous chant."
+        }
+      ]
+    },
+    {
+      "id": "kham-choen-bucha-lae-suat-namo",
+      "working_notes": {
+        "invitation": "Absent as a separate line; this chant IS the leader's invitation to the Namo.",
+        "units": "7 units, split at the book's commas.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "IMG_0265.PNG, page 2."
+      },
+      "title_thai": "คำเชิญบูชาและสวดนะโม",
+      "title_pali": "",
+      "title_roman": "Kham Choen Bucha lae Suat Namo",
+      "title_english": "The Invitation to Make Offering and Chant the Namo",
+      "page_start": 2,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ยะมัมหะ โข มะยัง ภะคะวันตัง สะระณัง คะตา, อุททิสสะ ปัพพะชิตา",
+          "pali_roman": "Yamamha kho mayaṃ bhagavantaṃ saraṇaṃ gatā, uddissa pabbajitā",
+          "thai": "",
+          "paiboon": "",
+          "english": "That Blessed One to whom we have gone for refuge, for whose sake we have gone forth,"
+        },
+        {
+          "number": 2,
+          "pali": "โย โน ภะคะวา สัตถา, ยัส์มิง ภะคะวะติ พ์รัห์มะจะริยัง จะรามะ,",
+          "pali_roman": "Yo no bhagavā satthā, yasmiṃ bhagavati brahmacariyaṃ carāma,",
+          "thai": "",
+          "paiboon": "",
+          "english": "who is our Blessed Teacher, under whom we live the holy life,"
+        },
+        {
+          "number": 3,
+          "pali": "ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง,",
+          "pali_roman": "Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "to that Blessed One, with his Dhamma and his Sangha,"
+        },
+        {
+          "number": 4,
+          "pali": "อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยิต์วา",
+          "pali_roman": "Imehi sakkārehi yathārahaṃ āropitehi abhipūjayitvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "having made offering with these gifts, set out as befits them,"
+        },
+        {
+          "number": 5,
+          "pali": "อะภิวาทะนัง กะริมหา,",
+          "pali_roman": "Abhivādanaṃ karimhā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and having paid our respects,"
+        },
+        {
+          "number": 6,
+          "pali": "หันทะทานิ มะยัง ตัง ภะคะวันตัง วาจายะ อะภิถุตุง,",
+          "pali_roman": "Handadāni mayaṃ taṃ bhagavantaṃ vācāya abhithutuṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "let us now, in words, extol that Blessed One,"
+        },
+        {
+          "number": 7,
+          "pali": "ปุพพะภาคะนะมะการัง กะโรมะ เส.",
+          "pali_roman": "Pubbabhāga-namakāraṃ karoma se.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and make the preliminary salutation."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 2,
+          "file": "IMG_0265.PNG",
+          "issue": "The book writes ยัส์มิง and พ์รัห์มะจะริยัง with the mark ์ inside the word, marking a consonant cluster. Reproduced exactly as printed rather than normalised to ยัสมิง / พรัหมะจะริยัง. Please confirm the marks are where I have put them."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0265.PNG",
+          "issue": "Same convention in อะภิปูชะยิต์วา. Reproduced as printed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "No Thai translation printed; english_unverified set."
+        }
+      ]
+    },
+    {
+      "id": "pubbabhaga-namakara",
+      "working_notes": {
+        "invitation": "The preceding chant serves as its invitation; no separate invitation line is printed.",
+        "units": "3 units — the same line printed three times, as the book prints it.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "IMG_0265.PNG, page 2."
+      },
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "The Preliminary Salutation",
+      "page_start": 2,
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.",
+          "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Homage to the Blessed One, the Worthy One, perfectly enlightened by himself."
+        },
+        {
+          "number": 2,
+          "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.",
+          "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Homage to the Blessed One, the Worthy One, perfectly enlightened by himself."
+        },
+        {
+          "number": 3,
+          "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.",
+          "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Homage to the Blessed One, the Worthy One, perfectly enlightened by himself."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "The book prints NO title for this chant. The id and English title are mine, taken from the phrase ปุพพะภาคะนะมะการัง in the invitation above it. title_thai and title_pali are left empty rather than invented."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "The line is printed three times in full rather than marked as a repeat, so it is entered three times. Preceded by the instruction that the deputy leader begins and the others join, three times, pausing for one breath after each."
+        }
+      ]
+    },
+    {
+      "id": "buddhabhithuti",
+      "working_notes": {
+        "invitation": "Present: หันทะ มะยัง พุทธาภิถุติง กะโรมะ เส.",
+        "units": "9 units, split at the book's commas. An earlier draft of this note said 12; corrected after re-reading the page.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "IMG_0265.PNG, page 2. The whole chant sits on that page."
+      },
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "In Praise of the Buddha",
+      "page_start": 2,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "หันทะ มะยัง พุทธาภิถุติง กะโรมะ เส.",
+        "pali_roman": "Handa mayaṃ buddhābhithutiṃ karoma se.",
+        "thai": "",
+        "paiboon": "",
+        "english": "Now let us give praise to the Buddha."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "โย โส ตะถาคะโต อะระหัง สัมมาสัมพุทโธ,",
+          "pali_roman": "Yo so tathāgato arahaṃ sammāsambuddho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "That Tathāgata, the Worthy One, perfectly enlightened by himself,"
+        },
+        {
+          "number": 2,
+          "pali": "วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู,",
+          "pali_roman": "Vijjācaraṇa-sampanno sugato lokavidū,",
+          "thai": "",
+          "paiboon": "",
+          "english": "accomplished in knowledge and conduct, well-gone, knower of worlds,"
+        },
+        {
+          "number": 3,
+          "pali": "อะนุตตะโร ปุริสะทัมมะสาระถิ สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวา,",
+          "pali_roman": "Anuttaro purisadamma-sārathi satthā deva-manussānaṃ buddho bhagavā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "unexcelled trainer of those who can be taught, teacher of gods and men, awakened, blessed;"
+        },
+        {
+          "number": 4,
+          "pali": "โย อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ์รัห์มะกัง,",
+          "pali_roman": "Yo imaṃ lokaṃ sadevakaṃ samārakaṃ sabrahmakaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "who made known this world with its gods, its Māras and its Brahmās,"
+        },
+        {
+          "number": 5,
+          "pali": "สัสสะมะณะพ์ราห์มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต์วา ปะเวเทสิ,",
+          "pali_roman": "Sassamaṇa-brāhmaṇiṃ pajaṃ sadeva-manussaṃ sayaṃ abhiññā sacchikatvā pavedesi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "this generation with its contemplatives and priests, its rulers and common people, having realised it himself through direct knowledge;"
+        },
+        {
+          "number": 6,
+          "pali": "โย ธัมมัง เทเสสิ อาทิกัล๎ยาณัง มัชเฌกัล๎ยาณัง ปะริโยสานะกัล๎ยาณัง,",
+          "pali_roman": "Yo dhammaṃ desesi ādikalyāṇaṃ majjhekalyāṇaṃ pariyosāna-kalyāṇaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "who taught the Dhamma admirable in its beginning, admirable in its middle, admirable in its end;"
+        },
+        {
+          "number": 7,
+          "pali": "สาตถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง ปะกาเสสิ,",
+          "pali_roman": "Sātthaṃ sabyañjanaṃ kevala-paripuṇṇaṃ parisuddhaṃ brahmacariyaṃ pakāsesi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "who proclaimed the holy life in its meaning and its letter, entirely complete and pure;"
+        },
+        {
+          "number": 8,
+          "pali": "ตะมะหัง ภะคะวันตัง อะภิปูชะยามิ,",
+          "pali_roman": "Tamahaṃ bhagavantaṃ abhipūjayāmi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "to that Blessed One I make offering,"
+        },
+        {
+          "number": 9,
+          "pali": "ตะมะหัง ภะคะวันตัง สิระสา นะมามิ.",
+          "pali_roman": "Tamahaṃ bhagavantaṃ sirasā namāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "to that Blessed One I bow my head."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "RESOLVED: the page map claimed verses 1-12 while this entry had 9. Stage 2 refused to write on that disagreement. Re-read from the photograph confirms nine clauses, so the map was corrected to match the page — not to match the entry. Please still confirm the count against the physical book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "The book prints no title for this chant. The name is taken from the word พุทธาภิถุติง in its own invitation line; title_thai and title_pali are left empty rather than invented."
+        },
+        {
+          "verse": 6,
+          "file": "IMG_0265.PNG",
+          "issue": "อาทิกัล๎ยาณัง and its two companions carry the ๎ mark over the ล. Reproduced as printed; please confirm the character is ๎ (yamakkan) rather than ์."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "The chant is followed by the printed rubric (กราบพร้อมกัน). Not entered as a verse."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "Two fingers appear at the bottom edge of this photograph. They do not cover any text, but the last line sits close to them — worth a glance."
+        }
+      ]
+    },
+    {
+      "id": "dhammabhithuti",
+      "working_notes": {
+        "invitation": "Present: หันทะ มะยัง ธัมมาภิถุติง กะโรมะ เส. It is printed at the FOOT of page 2; the verses are overleaf on page 3.",
+        "units": "3 units, split at the book's commas.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "Starts on IMG_0265.PNG (page 2) with its invitation only; verses are on IMG_0266.PNG (page 3). The page turns between the invitation and verse 1."
+      },
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "In Praise of the Dhamma",
+      "page_start": 2,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "หันทะ มะยัง ธัมมาภิถุติง กะโรมะ เส.",
+        "pali_roman": "Handa mayaṃ dhammābhithutiṃ karoma se.",
+        "thai": "",
+        "paiboon": "",
+        "english": "Now let us give praise to the Dhamma."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "page": 3,
+          "pali": "โย โส ส๎วากขาโต ภะคะวะตา ธัมโม, สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก โอปะนะยิโก,",
+          "pali_roman": "Yo so svākkhāto bhagavatā dhammo, sandiṭṭhiko akāliko ehipassiko opanayiko,",
+          "thai": "",
+          "paiboon": "",
+          "english": "That Dhamma, well proclaimed by the Blessed One, visible here and now, timeless, inviting all to come and see, leading onwards,"
+        },
+        {
+          "number": 2,
+          "pali": "ปัจจัตตัง เวทิตัพโพ วิญญูหิ,",
+          "pali_roman": "Paccattaṃ veditabbo viññūhi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "to be known each for himself by the wise,"
+        },
+        {
+          "number": 3,
+          "pali": "ตะมะหัง ธัมมัง อะภิปูชะยามิ, ตะมะหัง ธัมมัง สิระสา นะมามิ.",
+          "pali_roman": "Tamahaṃ dhammaṃ abhipūjayāmi, tamahaṃ dhammaṃ sirasā namāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "to that Dhamma I make offering; to that Dhamma I bow my head."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0265.PNG",
+          "issue": "The book prints no title. The name is taken from ธัมมาภิถุติง in the invitation."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0266.PNG",
+          "issue": "Read as ส๎วากขาโต with the ๎ mark over the ส. This is the same word I read WITHOUT that mark on the unnumbered first page (verse 2 of kham-bucha-phra-ratanattaya). One of the two readings is wrong, or the book genuinely prints it both ways — please compare the two pages."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0266.PNG",
+          "issue": "Followed by the printed rubric (กราบพร้อมกัน). Not entered as a verse."
+        }
+      ]
+    },
+    {
+      "id": "sanghabhithuti",
+      "working_notes": {
+        "invitation": "Present: หันทะ มะยัง สังฆาภิถุติง กะโรมะ เส.",
+        "units": "9 units, split at the book's commas.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "IMG_0266.PNG, page 3. Whole chant on one page."
+      },
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "In Praise of the Sangha",
+      "page_start": 3,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "หันทะ มะยัง สังฆาภิถุติง กะโรมะ เส.",
+        "pali_roman": "Handa mayaṃ saṅghābhithutiṃ karoma se.",
+        "thai": "",
+        "paiboon": "",
+        "english": "Now let us give praise to the Sangha."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "โย โส สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+          "pali_roman": "Yo so supaṭipanno bhagavato sāvakasaṅgho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "That Sangha of the Blessed One's disciples who have practised well,"
+        },
+        {
+          "number": 2,
+          "pali": "อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+          "pali_roman": "Ujupaṭipanno bhagavato sāvakasaṅgho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "who have practised straightforwardly,"
+        },
+        {
+          "number": 3,
+          "pali": "ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+          "pali_roman": "Ñāyapaṭipanno bhagavato sāvakasaṅgho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "who have practised methodically,"
+        },
+        {
+          "number": 4,
+          "pali": "สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+          "pali_roman": "Sāmīcipaṭipanno bhagavato sāvakasaṅgho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "who have practised masterfully,"
+        },
+        {
+          "number": 5,
+          "pali": "ยะทิทัง จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,",
+          "pali_roman": "Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that is, the four pairs, the eight types of noble ones —"
+        },
+        {
+          "number": 6,
+          "pali": "เอสะ ภะคะวะโต สาวะกะสังโฆ,",
+          "pali_roman": "Esa bhagavato sāvakasaṅgho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that is the Sangha of the Blessed One's disciples,"
+        },
+        {
+          "number": 7,
+          "pali": "อาหุเนยโย ปาหุเนยโย ทักขิเณยโย อัญชะลีกะระณีโย,",
+          "pali_roman": "Āhuneyyo pāhuneyyo dakkhiṇeyyo añjalīkaraṇīyo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "worthy of gifts, worthy of hospitality, worthy of offerings, worthy of respect,"
+        },
+        {
+          "number": 8,
+          "pali": "อะนุตตะรัง ปุญญักเขตตัง โลกัสสะ,",
+          "pali_roman": "Anuttaraṃ puññakkhettaṃ lokassa,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the unexcelled field of merit for the world;"
+        },
+        {
+          "number": 9,
+          "pali": "ตะมะหัง สังฆัง อะภิปูชะยามิ ตะมะหัง สังฆัง สิระสา นะมามิ.",
+          "pali_roman": "Tamahaṃ saṅghaṃ abhipūjayāmi, tamahaṃ saṅghaṃ sirasā namāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "to that Sangha I make offering; to that Sangha I bow my head."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0266.PNG",
+          "issue": "The book prints no title. The name is taken from สังฆาภิถุติง in the invitation."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0266.PNG",
+          "issue": "The book appears to print no comma between อะภิปูชะยามิ and ตะมะหัง here, where the two preceding chants both have one. Reproduced without it as printed rather than tidied — please confirm."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0266.PNG",
+          "issue": "Followed by the rubric (กราบพร้อมกัน แล้วนั่งพับเพียบทั้งหมด) — bow together, then all sit in the side-resting posture. Not entered as a verse."
+        }
+      ]
+    },
+    {
+      "id": "ratanattayappanamagatha",
+      "continues": true,
+      "working_notes": {
+        "invitation": "Present, but printed as part of a long Thai instruction rather than on its own line: หันทะ มะยัง ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส.",
+        "units": "4 units on this page — one stanza of four lines. The chant continues onto page 4.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "Starts on IMG_0266.PNG (page 3). The rest is on IMG_0267.PNG (page 4), which this batch did not write."
+      },
+      "title_thai": "ระตะนัตตะยัปปะณามะคาถา",
+      "title_pali": "",
+      "title_roman": "Ratanattayappanamagatha",
+      "title_english": "Verses in Salutation to the Triple Gem",
+      "page_start": 3,
+      "english_unverified": true,
+      "invitation": {
+        "pali": "หันทะ มะยัง ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส.",
+        "pali_roman": "Handa mayaṃ ratanattayappaṇāma-gāthāyo ceva saṃvega-parikittana-pāṭhañca bhaṇāma se.",
+        "thai": "",
+        "paiboon": "",
+        "english": "Now let us recite the verses in salutation to the Triple Gem, and the passage on spiritual urgency."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "section": "พุทโธ: Salutation to the Buddha",
+          "pali": "พุทโธ สุสุทโธ กะรุณามะหัณณะโว,",
+          "pali_roman": "Buddho susuddho karuṇā-mahaṇṇavo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Buddha, utterly pure, a great ocean of compassion,"
+        },
+        {
+          "number": 2,
+          "pali": "โยจจันตะสุทธัพพะระญาณะโลจะโน,",
+          "pali_roman": "Yoccanta-suddhabbara-ñāṇa-locano,",
+          "thai": "",
+          "paiboon": "",
+          "english": "whose eye of knowledge is wholly purified,"
+        },
+        {
+          "number": 3,
+          "pali": "โลกัสสะ ปาปูปะกิเลสะฆาตะโก,",
+          "pali_roman": "Lokassa pāpūpakilesa-ghātako,",
+          "thai": "",
+          "paiboon": "",
+          "english": "destroyer of the world's evil and defilement:"
+        },
+        {
+          "number": 4,
+          "pali": "วันทามิ พุทธัง อะหะมาทะเรนะ ตัง.",
+          "pali_roman": "Vandāmi buddhaṃ ahamādarena taṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I revere that Buddha with devotion."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0266.PNG",
+          "issue": "This chant CONTINUES past this batch. Only the first stanza is on page 3; the remaining stanzas are on page 4 (IMG_0267.PNG), which this batch did not write. It must be picked up rather than started again."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0266.PNG",
+          "issue": "This is the first chant in the batch whose title the book actually prints, centred and in bold: ระตะนัตตะยัปปะณามะคาถา."
+        },
+        {
+          "verse": 2,
+          "file": "IMG_0266.PNG",
+          "issue": "โยจจันตะสุทธัพพะระญาณะโลจะโน is printed as one unbroken word and is long; please check my reading of it letter by letter, particularly ทธัพพะระ."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0266.PNG",
+          "issue": "The section label on verse 1 is MINE, not the book's — the book prints no heading inside this chant. Say if you would rather it were dropped."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "kham-bucha-phra-ratanattaya",
+      "kham-namatsakan-phra-ratanattaya",
+      "kham-choen-bucha-lae-suat-namo",
+      "pubbabhaga-namakara",
+      "buddhabhithuti",
+      "dhammabhithuti",
+      "sanghabhithuti"
+    ],
+    "not_started": [],
+    "continues": [
+      "ratanattayappanamagatha"
+    ],
+    "resume_from_page": 4,
+    "resume_from_file": "IMG_0267.PNG",
+    "resume_from": "ratanattayappanamagatha",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values were written at all, because no page in this batch prints a Thai translation. Nothing to scan.",
+    "pali_untouched": "confirmed; no pali value was run through Paiboon+, and none was altered from what is printed.",
+    "page_scan": "agrees, after one correction. The map originally claimed buddhabhithuti verses 1-12 against an entry of 9; stage 2 stopped on it and the page was re-read, confirming nine clauses. The map now reads 1-9. 47 verses across pages 1-3, none orphaned or claimed twice. Pages 4-6 are declared with NOT WRITTEN notes and have no entries, which is a deliberate stop rather than a disagreement.",
+    "notes": "Stopped after page 3 of six, at a page boundary. Six files were read and all six are described in the page map, but only pages 1-3 were written, because this is the first live run of the workflow and a first batch is worth being small enough to verify cheaply against the book. Pages 4-6 hold: the rest of ratanattayappanamagatha, the whole of the prose passage สังเวคะปะริกิตตะนะปาฐะ, roughly a page and a half of ordinary Thai instruction about the เสขิยวัตร which is not chant text, and the opening of ตังขะณิกะปัจจะเวกขะณะปาโฐ which itself runs past page 6. No page in this batch prints a Thai translation, so thai and paiboon are empty throughout and every chant carries english_unverified."
+  }
+}

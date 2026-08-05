@@ -1,0 +1,182 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 3,
+    "files_read": 3,
+    "received": 3,
+    "manifest": [
+      "ratanattayappanamagatha",
+      "samvega-parikittana-patha",
+      "tangkhanika-paccavekkhana-patho"
+    ],
+    "pages": [
+      {"page": 4, "file": "IMG_0267.PNG", "script": "thai", "chant": "ratanattayappanamagatha", "verses": "5-16", "starts_here": false, "note": "The chant finishes on this page. Its title and first stanza are on page 3, in batch-001-003."},
+      {"page": 4, "file": "IMG_0267.PNG", "script": "thai", "chant": "samvega-parikittana-patha", "verses": "1-30", "starts_here": true, "note": ""},
+      {"page": 5, "file": "IMG_0268.PNG", "script": "thai", "chant": "samvega-parikittana-patha", "verses": "31-40", "starts_here": false, "note": "The chant ends a third of the way down. The rest of the page is ordinary Thai instruction about the เสขิยวัตร — that it falls into four groups of 26, 30, 16 and 3 training rules, that groups 1 and 2 are chanted one per day and groups 3 and 4 together, so the cycle takes three days — followed by three leader's invitations. None of that is chant text and none of the เสขิยวัตร themselves are printed here; the instruction says they are set out after the morning service."},
+      {"page": 6, "file": "IMG_0269.PNG", "script": "thai", "chant": "", "verses": "none", "starts_here": false, "note": "The top two thirds are more Thai instruction: how a sutta may be chanted in either ทำนองสังโยค or ทำนองมคธ, who begins, and that the leader's invitation is skipped where a sutta has its own opening. It ends by naming the chant that follows."},
+      {"page": 6, "file": "IMG_0269.PNG", "script": "thai", "chant": "tangkhanika-paccavekkhana-patho", "verses": "1-14", "starts_here": true, "note": "Printed title, then the first three of the four reflections. The third is cut off by the foot of the page and continues overleaf."}
+    ]
+  },
+  "chants": [
+    {
+      "id": "ratanattayappanamagatha",
+      "continuation_of": "ratanattayappanamagatha",
+      "working_notes": {
+        "invitation": "Already given in the previous batch, on page 3. Not repeated.",
+        "units": "12 units on this page — three stanzas of four lines, completing the chant. Numbering carries on from verse 4, which was the last written in batch-001-003.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "IMG_0267.PNG, page 4. The chant began on page 3."
+      },
+      "verses": [
+        {"number": 5, "page": 4, "section": "ธัมโม: Salutation to the Dhamma", "pali": "ธัมโม ปะทีโป วิยะ ตัสสะ สัตถุโน,", "pali_roman": "Dhammo padīpo viya tassa satthuno,", "thai": "", "paiboon": "", "english": "The Dhamma, like a lamp of that Teacher,"},
+        {"number": 6, "pali": "โย มัคคะปากามะตะเภทะภินนะโก,", "pali_roman": "Yo maggapākāmata-bheda-bhinnako,", "thai": "", "paiboon": "", "english": "divided into path, fruit and the Deathless,"},
+        {"number": 7, "pali": "โลกุตตะโร โย จะ ตะทัตถะทีปะโน,", "pali_roman": "Lokuttaro yo ca tadattha-dīpano,", "thai": "", "paiboon": "", "english": "transcendent, and that which points to its meaning:"},
+        {"number": 8, "pali": "วันทามิ ธัมมัง อะหะมาทะเรนะ ตัง.", "pali_roman": "Vandāmi dhammaṃ ahamādarena taṃ.", "thai": "", "paiboon": "", "english": "I revere that Dhamma with devotion."},
+        {"number": 9, "section": "สังโฆ: Salutation to the Sangha", "pali": "สังโฆ สุเขตตาภ๎ยะติเขตตะสัญญิโต,", "pali_roman": "Saṅgho sukhettābhyatikhetta-saññito,", "thai": "", "paiboon": "", "english": "The Sangha, called a field of merit surpassing all fields,"},
+        {"number": 10, "pali": "โย ทิฏฐะสันโต สุคะตานุโพธะโก,", "pali_roman": "Yo diṭṭhasanto sugatānubodhako,", "thai": "", "paiboon": "", "english": "who have seen peace, awakening after the Well-Gone One,"},
+        {"number": 11, "pali": "โลลัปปะหีโน อะริโย สุเมธะโส,", "pali_roman": "Lolappahīno ariyo sumedhaso,", "thai": "", "paiboon": "", "english": "free of craving, noble and wise:"},
+        {"number": 12, "pali": "วันทามิ สังฆัง อะหะมาทะเรนะ ตัง.", "pali_roman": "Vandāmi saṅghaṃ ahamādarena taṃ.", "thai": "", "paiboon": "", "english": "I revere that Sangha with devotion."},
+        {"number": 13, "section": "อิจเจวะมะ: The Dedication", "pali": "อิจเจวะเมกันตะภิปูชะเนยยะกัง,", "pali_roman": "Iccevamekantabhipūjaneyyakaṃ,", "thai": "", "paiboon": "", "english": "Thus this triple object, wholly worthy of offering,"},
+        {"number": 14, "pali": "วัตถุตตะยัง วันทะยะตาภิสังขะตัง,", "pali_roman": "Vatthuttayaṃ vandayatābhisaṅkhataṃ,", "thai": "", "paiboon": "", "english": "which I have honoured with reverence —"},
+        {"number": 15, "pali": "ปุญญัง มะยา ยัง มะมะ สัพพุปัททะวา,", "pali_roman": "Puññaṃ mayā yaṃ mama sabbupaddavā,", "thai": "", "paiboon": "", "english": "by whatever merit I have made, may all my obstacles"},
+        {"number": 16, "pali": "มา โหนตุ เว ตัสสะ ปะภาวะสิทธิยา.", "pali_roman": "Mā hontu ve tassa pabhāva-siddhiyā.", "thai": "", "paiboon": "", "english": "be no more, through the power of its accomplishment."}
+      ],
+      "checks": [
+        {"verse": null, "file": "IMG_0267.PNG", "issue": "This entry CONTINUES the chant begun on page 3 in batch-001-003. Verse numbering resumes at 5, so the joined chant should run 1-16 with no gap and no repeat. Stage 2 must append these to the existing dict, not create a second one."},
+        {"verse": 9, "file": "IMG_0267.PNG", "issue": "สุเขตตาภ๎ยะติเขตตะสัญญิโต is a long compound with the ๎ mark over the ภ. Please check my reading letter by letter — this is the least certain line on the page."},
+        {"verse": 13, "file": "IMG_0267.PNG", "issue": "The section labels on verses 5, 9 and 13 are MINE, not the book's. The book prints no headings inside this chant; the stanzas are separated only by their opening words. Say if you would rather they were dropped."},
+        {"verse": 6, "file": "IMG_0267.PNG", "issue": "มัคคะปากามะตะเภทะภินนะโก is printed as one unbroken word. Reproduced as one; please confirm there is no space in it."}
+      ]
+    },
+    {
+      "id": "samvega-parikittana-patha",
+      "working_notes": {
+        "invitation": "Shares the invitation given on page 3 with the previous chant — หันทะ มะยัง ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส. One invitation covers both, so none is repeated here.",
+        "units": "40 units, split at the book's commas. 30 on page 4 and 10 on page 5.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "Starts IMG_0267.PNG (page 4), ends a third of the way down IMG_0268.PNG (page 5). The page turns between verse 30 and verse 31."
+      },
+      "title_thai": "สังเวคะปะริกิตตะนะปาฐะ",
+      "title_pali": "",
+      "title_roman": "Samvega-parikittana-patha",
+      "title_english": "The Passage on Spiritual Urgency",
+      "page_start": 4,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {"pali": "", "pali_roman": "", "thai": "", "paiboon": "", "english": ""},
+      "verses": [
+        {"number": 1, "pali": "อิธะ ตะถาคะโต โลเก อุปปันโน อะระหัง สัมมาสัมพุทโธ,", "pali_roman": "Idha tathāgato loke uppanno arahaṃ sammāsambuddho,", "thai": "", "paiboon": "", "english": "Here a Tathāgata has arisen in the world, worthy and perfectly enlightened by himself,"},
+        {"number": 2, "pali": "ธัมโม จะ เทสิโต นิยยานิโก อุปะสะมิโก ปะรินิพพานิโก สัมโพธะคามี สุคะตัปปะเวทิโต,", "pali_roman": "Dhammo ca desito niyyāniko upasamiko parinibbāniko sambodhagāmī sugatappavedito,", "thai": "", "paiboon": "", "english": "and a Dhamma has been taught that leads out, brings peace, leads to final Nibbāna and to awakening, made known by the Well-Gone One."},
+        {"number": 3, "pali": "มะยันตัง ธัมมัง สุต๎วา เอวัง ชานามะ,", "pali_roman": "Mayantaṃ dhammaṃ sutvā evaṃ jānāma,", "thai": "", "paiboon": "", "english": "Having heard that Dhamma, we know this:"},
+        {"number": 4, "pali": "ชาติปิ ทุกขา ชะราปิ ทุกขา มะระณัมปิ ทุกขัง,", "pali_roman": "Jātipi dukkhā jarāpi dukkhā maraṇampi dukkhaṃ,", "thai": "", "paiboon": "", "english": "birth is suffering, ageing is suffering, death is suffering,"},
+        {"number": 5, "pali": "โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา,", "pali_roman": "Soka-parideva-dukkha-domanassupāyāsāpi dukkhā,", "thai": "", "paiboon": "", "english": "sorrow, lamentation, pain, grief and despair are suffering,"},
+        {"number": 6, "pali": "อัปปิเยหิ สัมปะโยโค ทุกโข ปิเยหิ วิปปะโยโค ทุกโข ยัมปิจฉัง นะ ละภะติ ตัมปิ ทุกขัง,", "pali_roman": "Appiyehi sampayogo dukkho piyehi vippayogo dukkho yampicchaṃ na labhati tampi dukkhaṃ,", "thai": "", "paiboon": "", "english": "union with what is disliked is suffering, separation from what is liked is suffering, not getting what one wants is suffering,"},
+        {"number": 7, "pali": "สังขิตเตนะ ปัญจุปาทานักขันธา ทุกขา,", "pali_roman": "Saṅkhittena pañcupādānakkhandhā dukkhā,", "thai": "", "paiboon": "", "english": "in short, the five aggregates of clinging are suffering,"},
+        {"number": 8, "pali": "เสยยะถีทัง,", "pali_roman": "Seyyathīdaṃ,", "thai": "", "paiboon": "", "english": "namely:"},
+        {"number": 9, "pali": "รูปูปาทานักขันโธ,", "pali_roman": "Rūpūpādānakkhandho,", "thai": "", "paiboon": "", "english": "the form aggregate of clinging,"},
+        {"number": 10, "pali": "เวทะนูปาทานักขันโธ,", "pali_roman": "Vedanūpādānakkhandho,", "thai": "", "paiboon": "", "english": "the feeling aggregate of clinging,"},
+        {"number": 11, "pali": "สัญญูปาทานักขันโธ,", "pali_roman": "Saññūpādānakkhandho,", "thai": "", "paiboon": "", "english": "the perception aggregate of clinging,"},
+        {"number": 12, "pali": "สังขารูปาทานักขันโธ,", "pali_roman": "Saṅkhārūpādānakkhandho,", "thai": "", "paiboon": "", "english": "the formations aggregate of clinging,"},
+        {"number": 13, "pali": "วิญญาณูปาทานักขันโธ,", "pali_roman": "Viññāṇūpādānakkhandho,", "thai": "", "paiboon": "", "english": "the consciousness aggregate of clinging."},
+        {"number": 14, "pali": "เยสัง ปะริญญายะ,", "pali_roman": "Yesaṃ pariññāya,", "thai": "", "paiboon": "", "english": "For the full understanding of these,"},
+        {"number": 15, "pali": "ธะระมาโน โส ภะคะวา,", "pali_roman": "Dharamāno so bhagavā,", "thai": "", "paiboon": "", "english": "the Blessed One, while still living,"},
+        {"number": 16, "pali": "เอวัง พะหุลัง สาวะเก วิเนติ,", "pali_roman": "Evaṃ bahulaṃ sāvake vineti,", "thai": "", "paiboon": "", "english": "often instructed his disciples in this way,"},
+        {"number": 17, "pali": "เอวัง ภาคา จะ ปะนัสสะ ภะคะวะโต สาวะเกสุ อะนุสาสะนี, พะหุลา ปะวัตตะติ,", "pali_roman": "Evaṃ bhāgā ca panassa bhagavato sāvakesu anusāsanī, bahulā pavattati,", "thai": "", "paiboon": "", "english": "and this was the greater part of his teaching among his disciples:"},
+        {"number": 18, "pali": "รูปัง อะนิจจัง,", "pali_roman": "Rūpaṃ aniccaṃ,", "thai": "", "paiboon": "", "english": "form is impermanent,"},
+        {"number": 19, "pali": "เวทะนา อะนิจจา,", "pali_roman": "Vedanā aniccā,", "thai": "", "paiboon": "", "english": "feeling is impermanent,"},
+        {"number": 20, "pali": "สัญญา อะนิจจา,", "pali_roman": "Saññā aniccā,", "thai": "", "paiboon": "", "english": "perception is impermanent,"},
+        {"number": 21, "pali": "สังขารา อะนิจจา,", "pali_roman": "Saṅkhārā aniccā,", "thai": "", "paiboon": "", "english": "formations are impermanent,"},
+        {"number": 22, "pali": "วิญญาณัง อะนิจจัง,", "pali_roman": "Viññāṇaṃ aniccaṃ,", "thai": "", "paiboon": "", "english": "consciousness is impermanent;"},
+        {"number": 23, "pali": "รูปัง อะนัตตา,", "pali_roman": "Rūpaṃ anattā,", "thai": "", "paiboon": "", "english": "form is not-self,"},
+        {"number": 24, "pali": "เวทะนา อะนัตตา,", "pali_roman": "Vedanā anattā,", "thai": "", "paiboon": "", "english": "feeling is not-self,"},
+        {"number": 25, "pali": "สัญญา อะนัตตา,", "pali_roman": "Saññā anattā,", "thai": "", "paiboon": "", "english": "perception is not-self,"},
+        {"number": 26, "pali": "สังขารา อะนัตตา,", "pali_roman": "Saṅkhārā anattā,", "thai": "", "paiboon": "", "english": "formations are not-self,"},
+        {"number": 27, "pali": "วิญญาณัง อะนัตตา,", "pali_roman": "Viññāṇaṃ anattā,", "thai": "", "paiboon": "", "english": "consciousness is not-self;"},
+        {"number": 28, "pali": "สัพเพ สังขารา อะนิจจา,", "pali_roman": "Sabbe saṅkhārā aniccā,", "thai": "", "paiboon": "", "english": "all formations are impermanent,"},
+        {"number": 29, "pali": "สัพเพ ธัมมา อะนัตตาติ,", "pali_roman": "Sabbe dhammā anattāti,", "thai": "", "paiboon": "", "english": "all things are not-self."},
+        {"number": 30, "pali": "เต มะยัง,", "pali_roman": "Te mayaṃ,", "thai": "", "paiboon": "", "english": "All of us,"},
+        {"number": 31, "page": 5, "pali": "โอติณณาม๎หะ ชาติยา ชะรามะระเณนะ,", "pali_roman": "Otiṇṇāmha jātiyā jarāmaraṇena,", "thai": "", "paiboon": "", "english": "are beset by birth, by ageing and death,"},
+        {"number": 32, "pali": "โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ,", "pali_roman": "Sokehi paridevehi dukkhehi domanassehi upāyāsehi,", "thai": "", "paiboon": "", "english": "by sorrow, lamentation, pain, grief and despair,"},
+        {"number": 33, "pali": "ทุกโขติณณา ทุกขะปะเรตา,", "pali_roman": "Dukkhotiṇṇā dukkhaparetā,", "thai": "", "paiboon": "", "english": "beset by suffering, overcome by suffering."},
+        {"number": 34, "pali": "อัปเปวะ นามิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยา ปัญญาเยถาติ,", "pali_roman": "Appeva nāmimassa kevalassa dukkhakkhandhassa antakiriyā paññāyethāti,", "thai": "", "paiboon": "", "english": "Perhaps an end to this whole mass of suffering might be found."},
+        {"number": 35, "pali": "จิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง อุททิสสะ อะระหันตัง สัมมาสัมพุทธัง,", "pali_roman": "Cira-parinibbutampi taṃ bhagavantaṃ uddissa arahantaṃ sammāsambuddhaṃ,", "thai": "", "paiboon": "", "english": "Dedicated to that Blessed One, worthy and perfectly enlightened, though long since attained to final Nibbāna,"},
+        {"number": 36, "pali": "สัทธา อะคารัส๎มา อะนะคาริยัง ปัพพะชิตา,", "pali_roman": "Saddhā agārasmā anagāriyaṃ pabbajitā,", "thai": "", "paiboon": "", "english": "we have gone forth in faith from home into homelessness,"},
+        {"number": 37, "pali": "ตัส๎มิง ภะคะวะติ พ๎รัห๎มะจะริยัง จะรามะ,", "pali_roman": "Tasmiṃ bhagavati brahmacariyaṃ carāma,", "thai": "", "paiboon": "", "english": "and live the holy life under that Blessed One,"},
+        {"number": 38, "pali": "ภิกขูนัง สิกขาสาชีวะสะมาปันนา,", "pali_roman": "Bhikkhūnaṃ sikkhāsājīva-samāpannā,", "thai": "", "paiboon": "", "english": "having taken up the training and livelihood of the bhikkhus."},
+        {"number": 39, "pali": "ตัง โน พ๎รัห๎มะจะริยัง,", "pali_roman": "Taṃ no brahmacariyaṃ,", "thai": "", "paiboon": "", "english": "May this holy life of ours"},
+        {"number": 40, "pali": "อิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยายะ สังวัตตะตูติ.", "pali_roman": "Imassa kevalassa dukkhakkhandhassa antakiriyāya saṃvattatūti.", "thai": "", "paiboon": "", "english": "lead to the ending of this whole mass of suffering."}
+      ],
+      "checks": [
+        {"verse": null, "file": "IMG_0267.PNG", "issue": "The title is printed, centred and bold. The chant shares its invitation with ratanattayappanamagatha — one invitation on page 3 covers both — so invitation is left empty here rather than duplicated."},
+        {"verse": 17, "file": "IMG_0267.PNG", "issue": "I read a comma between อะนุสาสะนี and พะหุลา, and a space in พะหุลา ปะวัตตะติ. The line sits close to the gutter and I am not certain of either. Please check."},
+        {"verse": 3, "file": "IMG_0267.PNG", "issue": "สุต๎วา carries the ๎ mark over the ต. Same convention appears in verses 31, 36, 37 and 39 (โอติณณาม๎หะ, อะคารัส๎มา, ตัส๎มิง, พ๎รัห๎มะจะริยัง). Reproduced as printed throughout; please confirm the mark is ๎ and not ์."},
+        {"verse": 29, "file": "IMG_0267.PNG", "issue": "Note the asymmetry the book prints and I have kept: verse 28 says สัพเพ สังขารา อะนิจจา (all formations impermanent) but there is no matching สัพเพ สังขารา ทุกขา line before verse 29. If the book prints one and I missed it, this is where it would be."},
+        {"verse": null, "file": "IMG_0268.PNG", "issue": "Two fingers appear at the foot of IMG_0268.PNG. They do not cover text."},
+        {"verse": null, "file": "IMG_0268.PNG", "issue": "Below this chant, page 5 carries about half a page of Thai instruction and three leader's invitations for the เสขิยวัตร — ฉัพพีสะติ สารุปปาสิกขาโย, สะมะติงสะ โภชะนะปะฏิสังยุตตาสิกขาโย, and โสฬะสะ ธัมมะเทสะนาปะฏิสังยุตตาสิกขาโย เจวะ ติสโส ปะกิณณะกาสิกขาโย. The เสขิยวัตร themselves are NOT printed here; the instruction says they are set out after the morning service. Recorded in the page note; no chant entered for them."}
+      ]
+    },
+    {
+      "id": "tangkhanika-paccavekkhana-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "Present, but printed inside the Thai instruction above it rather than on its own line: หันทะ มะยัง ตังขะณิกะปัจจะเวกขะณะปาฐัง ภะณามะ เส.",
+        "units": "14 units on this page — the reflection on the robe, the reflection on almsfood, and the beginning of the reflection on lodging. The fourth reflection and the end of the third are overleaf.",
+        "ordering": "In step.",
+        "conventions": "None.",
+        "pages": "IMG_0269.PNG, page 6. The chant runs past the foot of the page."
+      },
+      "title_thai": "ตังขะณิกะปัจจะเวกขะณะปาโฐ",
+      "title_pali": "",
+      "title_roman": "Tangkhanika-paccavekkhana-patho",
+      "title_english": "The Reflection at the Moment of Use",
+      "page_start": 6,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "หันทะ มะยัง ตังขะณิกะปัจจะเวกขะณะปาฐัง ภะณามะ เส.",
+        "pali_roman": "Handa mayaṃ taṅkhaṇika-paccavekkhaṇa-pāṭhaṃ bhaṇāma se.",
+        "thai": "",
+        "paiboon": "",
+        "english": "Now let us recite the reflection made at the moment of use."
+      },
+      "verses": [
+        {"number": 1, "section": "จีวะรัง: The Robe", "pali": "ปะฏิสังขา โยนิโส จีวะรัง ปะฏิเสวามิ,", "pali_roman": "Paṭisaṅkhā yoniso cīvaraṃ paṭisevāmi,", "thai": "", "paiboon": "", "english": "Reflecting wisely, I use the robe:"},
+        {"number": 2, "pali": "ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,", "pali_roman": "Yāvadeva sītassa paṭighātāya,", "thai": "", "paiboon": "", "english": "only to ward off cold,"},
+        {"number": 3, "pali": "อุณ๎หัสสะ ปะฏิฆาตายะ,", "pali_roman": "Uṇhassa paṭighātāya,", "thai": "", "paiboon": "", "english": "to ward off heat,"},
+        {"number": 4, "pali": "ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,", "pali_roman": "Ḍaṃsa-makasa-vātātapa-siriṃsapa-samphassānaṃ paṭighātāya,", "thai": "", "paiboon": "", "english": "to ward off the touch of gadflies, mosquitoes, wind, sun and creeping things,"},
+        {"number": 5, "pali": "ยาวะเทวะ หิริโกปินะปะฏิจฉาทะนัตถัง", "pali_roman": "Yāvadeva hirikopina-paṭicchādanatthaṃ", "thai": "", "paiboon": "", "english": "and only for the sake of modesty."},
+        {"number": 6, "section": "ปิณฑะปาตัง: The Almsfood", "pali": "ปะฏิสังขา โยนิโส ปิณฑะปาตัง ปะฏิเสวามิ,", "pali_roman": "Paṭisaṅkhā yoniso piṇḍapātaṃ paṭisevāmi,", "thai": "", "paiboon": "", "english": "Reflecting wisely, I use the almsfood:"},
+        {"number": 7, "pali": "เนวะ ท๎วายะ นะ มะทายะ นะ มัณฑะนายะ นะ วิภูสะนายะ,", "pali_roman": "Neva davāya na madāya na maṇḍanāya na vibhūsanāya,", "thai": "", "paiboon": "", "english": "not for fun, not for indulgence, not for beautifying, not for adornment,"},
+        {"number": 8, "pali": "ยาวะเทวะ อิมัสสะ กายัสสะ ฐิติยา ยาปะนายะ วิหิงสุปะระติยา พ๎รัห๎มะจะริยานุคคะหายะ,", "pali_roman": "Yāvadeva imassa kāyassa ṭhitiyā yāpanāya vihiṃsuparatiyā brahmacariyānuggahāya,", "thai": "", "paiboon": "", "english": "but only for the maintenance and nourishment of this body, to keep it from harm, and to support the holy life,"},
+        {"number": 9, "pali": "อิติ ปุราณัญจะ เวทะนัง ปะฏิหังขามิ นะวัญจะ เวทะนัง นะ อุปปาเทสสามิ,", "pali_roman": "Iti purāṇañca vedanaṃ paṭihaṅkhāmi navañca vedanaṃ na uppādessāmi,", "thai": "", "paiboon": "", "english": "thinking: thus I shall put an end to old feeling and not give rise to new,"},
+        {"number": 10, "pali": "ยาต๎รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.", "pali_roman": "Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti.", "thai": "", "paiboon": "", "english": "and I shall have sustenance, blamelessness and a comfortable abiding."},
+        {"number": 11, "section": "เสนาสะนัง: The Lodging", "pali": "ปะฏิสังขา โยนิโส เสนาสะนัง ปะฏิเสวามิ,", "pali_roman": "Paṭisaṅkhā yoniso senāsanaṃ paṭisevāmi,", "thai": "", "paiboon": "", "english": "Reflecting wisely, I use the lodging:"},
+        {"number": 12, "pali": "ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,", "pali_roman": "Yāvadeva sītassa paṭighātāya,", "thai": "", "paiboon": "", "english": "only to ward off cold,"},
+        {"number": 13, "pali": "อุณ๎หัสสะ ปะฏิฆาตายะ,", "pali_roman": "Uṇhassa paṭighātāya,", "thai": "", "paiboon": "", "english": "to ward off heat,"},
+        {"number": 14, "pali": "ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง […]", "pali_roman": "Ḍaṃsa-makasa-vātātapa-siriṃsapa-samphassānaṃ […]", "thai": "", "paiboon": "", "english": "to ward off the touch of gadflies, mosquitoes, wind, sun and creeping things […]"}
+      ],
+      "checks": [
+        {"verse": 14, "file": "IMG_0269.PNG", "issue": "INCOMPLETE LINE. Verse 14 is the last thing printed on page 6 and its sentence runs over onto page 7, which was not in this batch. What is on page 6 has been reproduced and the gap marked […]. The verse belongs to the page it starts on, per the page rules. It must be completed from page 7 rather than left as it stands."},
+        {"verse": null, "file": "IMG_0269.PNG", "issue": "This chant CONTINUES past the batch. The rest of the reflection on lodging and the whole fourth reflection, on medicine, are on page 7 onward. Pick it up rather than starting it again — verse numbering resumes at 15, and verse 14 needs finishing."},
+        {"verse": 5, "file": "IMG_0269.PNG", "issue": "Verse 5 appears to end with no full stop and no comma, unlike the other reflections which close with จาติ. Reproduced as printed rather than tidied. Please confirm."},
+        {"verse": null, "file": "IMG_0269.PNG", "issue": "The section labels on verses 1, 6 and 11 are MINE. The book separates the reflections by a blank line only, with no printed headings."},
+        {"verse": 7, "file": "IMG_0269.PNG", "issue": "Read as ท๎วายะ. Standard editions have davāya; the Thai script here could also be read ท๎ะวายะ at this resolution. Please check."}
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": ["ratanattayappanamagatha", "samvega-parikittana-patha"],
+    "not_started": [],
+    "continues": ["tangkhanika-paccavekkhana-patho"],
+    "resume_from_page": 7,
+    "resume_from_file": "IMG_0270.PNG",
+    "resume_from": "tangkhanika-paccavekkhana-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values were written at all, because no page in this batch prints a Thai translation. Nothing to scan.",
+    "pali_untouched": "confirmed; no pali value was run through Paiboon+, and none was altered from what is printed.",
+    "page_scan": "agrees. 66 verses across pages 4-6: ratanattayappanamagatha 5-16 on page 4, samvega-parikittana-patha 1-30 on page 4 and 31-40 on page 5, tangkhanika-paccavekkhana-patho 1-14 on page 6. None orphaned, none claimed twice. Page 6 carries a second row with no chant, for the Thai instruction filling its top two thirds.",
+    "notes": "Completes the six pages begun in batch-001-003. ratanattayappanamagatha arrives here as a continuation and must be APPENDED to the chant already in the app, not added again — its verses run 5-16 and join 1-4 from the previous batch. tangkhanika-paccavekkhana-patho runs off the foot of page 6 with verse 14 cut mid-sentence, so it is left incomplete and marked, not guessed at. Pages 5 and 6 are between them about a page and a half of ordinary Thai instruction rather than chant text; that is recorded in the page notes. No Thai translation appears anywhere in these three pages, so thai and paiboon are empty throughout."
+  }
+}
