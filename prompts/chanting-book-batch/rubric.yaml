@@ -31,7 +31,7 @@
 # the physical book.
 
 prompt: chanting-book-batch
-version: 2
+version: 3
 criteria:
   - name: emits_parseable_json
     description: The reply contains one JSON object that actually parses
@@ -77,7 +77,7 @@ criteria:
   - name: batch_status_can_resume_by_page
     description: The status says which page to photograph next and which chants run on past the batch
     weight: 5
-    pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'] for k in ['resume_from_page', 'continues'])"
+    pass_condition: "all(k in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'] for k in ['resume_from_page', 'resume_from_file', 'continues'])"
 
   - name: batch_status_reports_the_page_scan
     description: Stage 1 says whether its own page map agrees with the entries it wrote
@@ -166,7 +166,7 @@ criteria:
   - name: page_map_rows_are_complete
     description: Every page row says which page, which image, which chant and which verses
     weight: 5
-    pass_condition: "all(all(k in r for k in ['page', 'image', 'chant', 'verses', 'starts_here']) for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'])"
+    pass_condition: "all(all(k in r for k in ['page', 'file', 'script', 'chant', 'verses', 'starts_here']) for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'])"
 
   # A page number is null where the photograph did not show it legibly — that is
   # a raised check, not an error. What must never appear is a string: "47" would
@@ -179,10 +179,10 @@ criteria:
   # Every photograph Josh sent has a row, including one that was unreadable and
   # one holding no chant text. A page with no row is a page missing from the
   # book, and it would not look like anything at all downstream.
-  - name: page_map_covers_every_image
-    description: Every image sent appears somewhere in the page map
+  - name: page_map_covers_every_file
+    description: Every image file given appears somewhere in the page map
     weight: 5
-    pass_condition: "len({r['image'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages']}) == json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['images_received']"
+    pass_condition: "len({r['file'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages']}) == json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['files_given']"
 
   - name: page_map_only_names_declared_chants
     description: A page row points at a chant from the manifest, or at no chant at all
@@ -219,6 +219,29 @@ criteria:
     description: Romanised Pali carries proper IAST diacritics
     weight: 3
     pass_condition: "any(c in output for c in ['ā', 'ī', 'ū', 'ṃ', 'ṅ', 'ñ', 'ṭ', 'ḍ', 'ṇ', 'ḷ'])"
+
+  # v5. A page is one of three shapes now — Thai-script Pali, Pali only, or
+  # roman-script Pali in two columns — and which one decides whether pali_roman
+  # is reproduced from the book or written by the model. The page map has to say
+  # which, because nothing downstream can tell by looking.
+  - name: page_map_says_which_script
+    description: Every page row records whether its Pali is in Thai or roman script
+    weight: 5
+    pass_condition: "all(r['script'] in ['thai', 'roman'] for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'])"
+
+  # Checks name the photograph, not "image 3". Retaking a page is the one repair
+  # that cannot be done from the desk, and it gets harder once the book is shelved.
+  - name: checks_name_the_photograph
+    description: Every check says which image file it came from
+    weight: 4
+    pass_condition: "all('file' in k for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] if 'checks' in c for k in c['checks'])"
+
+  # Front matter is numbered (๓๗) in a sequence that collides with the body's
+  # own page 37, so it must never carry an integer page.
+  - name: front_matter_never_claims_a_body_page
+    description: A front-matter row has a null page and keeps the printed form
+    weight: 4
+    pass_condition: "all(r['page'] is None and 'page_printed' in r for r in json.loads(output[output.index('{'):output.rindex('}') + 1])['batch']['pages'] if r.get('front_matter'))"
 
   - name: closes_with_completed_and_check_counts
     description: The closing sentence gives both numbers — how many finished, how much needs checking

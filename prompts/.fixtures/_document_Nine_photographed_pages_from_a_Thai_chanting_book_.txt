@@ -1,8 +1,8 @@
 {
   "batch": {
     "depth": "DATA-ONLY",
-    "images_received": 3,
-    "images_read": 3,
+    "files_given": 3,
+    "files_read": 3,
     "received": 3,
     "manifest": [
       "ariyadhana-gatha",
@@ -12,7 +12,8 @@
     "pages": [
       {
         "page": 47,
-        "image": 1,
+        "file": "IMG_0301.PNG",
+        "script": "thai",
         "chant": "ariyadhana-gatha",
         "verses": "1-4",
         "starts_here": true,
@@ -20,7 +21,8 @@
       },
       {
         "page": 48,
-        "image": 2,
+        "file": "IMG_0302.PNG",
+        "script": "thai",
         "chant": "ariyadhana-gatha",
         "verses": "5-7",
         "starts_here": false,
@@ -28,7 +30,8 @@
       },
       {
         "page": 48,
-        "image": 2,
+        "file": "IMG_0302.PNG",
+        "script": "thai",
         "chant": "bharasutta-gatha",
         "verses": "1-5",
         "starts_here": true,
@@ -36,7 +39,8 @@
       },
       {
         "page": 49,
-        "image": 3,
+        "file": "IMG_0303.PNG",
+        "script": "thai",
         "chant": "bharasutta-gatha",
         "verses": "6-8",
         "starts_here": false,
@@ -134,11 +138,13 @@
       "checks": [
         {
           "verse": 1,
-          "issue": "Opening line spacing differs from the standard edition; reproduced as printed."
+          "issue": "Opening line spacing differs from the standard edition; reproduced as printed.",
+          "file": "IMG_0301.PNG"
         },
         {
           "verse": null,
-          "issue": "The book gives no invitation line for this chant; none has been written."
+          "issue": "The book gives no invitation line for this chant; none has been written.",
+          "file": "IMG_0301.PNG"
         }
       ]
     },
@@ -236,11 +242,13 @@
       "checks": [
         {
           "verse": 1,
-          "issue": "Opening line spacing differs from the standard edition; reproduced as printed."
+          "issue": "Opening line spacing differs from the standard edition; reproduced as printed.",
+          "file": "IMG_0301.PNG"
         },
         {
           "verse": null,
-          "issue": "The book gives no invitation line for this chant; none has been written."
+          "issue": "The book gives no invitation line for this chant; none has been written.",
+          "file": "IMG_0301.PNG"
         }
       ]
     },
@@ -258,6 +266,7 @@
     "not_started": [],
     "continues": [],
     "resume_from_page": 50,
+    "resume_from_file": "IMG_0304.PNG",
     "resume_from": "",
     "unreadable": [],
     "paiboon_scan": "clean — no kh/th/ph/ng found in any paiboon value",
