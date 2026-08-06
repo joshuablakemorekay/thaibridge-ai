@@ -5601,6 +5601,7 @@ CHANTS = [
         #   chant, so thai and paiboon are empty and the English is a working
         #   translation. english_unverified is set.
         'id': 'kham-bucha-phra-ratanattaya',
+        'page_start': 1,
         'title_thai': 'คำบูชาพระรัตนตรัย',
         'title_pali': '',
         'title_roman': 'Kham Bucha Phra Ratanattaya',
@@ -5707,6 +5708,7 @@ CHANTS = [
         # ‼ CHECK [IMG_0264.PNG]: No printed page number on this page;
         #   page_start omitted. Same page as the previous chant.
         'id': 'kham-namatsakan-phra-ratanattaya',
+        'page_start': 1,
         'title_thai': 'คำนมัสการพระรัตนตรัย',
         'title_pali': '',
         'title_roman': 'Kham Namatsakan Phra Ratanattaya',
@@ -5724,6 +5726,7 @@ CHANTS = [
             {
                 'number': 1,
                 'pali': 'อะระหัง สัมมาสัมพุทโธ ภะคะวา, พุทธัง ภะคะวันตัง อะภิวาเทมิ.',
+                'rubric': '(กราบพร้อมกัน)',
                 'pali_roman': 'Arahaṃ sammāsambuddho bhagavā, buddhaṃ bhagavantaṃ abhivādemi.',
                 'thai': '',
                 'paiboon': '',
@@ -5732,6 +5735,7 @@ CHANTS = [
             {
                 'number': 2,
                 'pali': 'สวากขาโต ภะคะวะตา ธัมโม, ธัมมัง นะมัสสามิ.',
+                'rubric': '(กราบพร้อมกัน)',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo, dhammaṃ namassāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -5740,6 +5744,7 @@ CHANTS = [
             {
                 'number': 3,
                 'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, สังฆัง นะมามิ.',
+                'rubric': '(กราบพร้อมกัน)',
                 'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho, saṅghaṃ namāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -7551,6 +7556,56 @@ CHANT_SECTIONS = [
 # `english_unverified` exactly as an app-written chant translation is — and the
 # reader is told, on every page it appears on.
 PAGE_BLOCKS = [
+    # ── Page 1 ──────────────────────────────────────────────────────────
+    # The book opens here. Three headings stacked above the first chant: the
+    # book's own running head, then the section, then the service.
+    #
+    # ‼ CHECK [IMG_0264.PNG]: page 1 prints NO page number at all — the top of
+    #   the page is blank, as books do on a page carrying a major heading. Its
+    #   number comes from the สารบัญ, which lists คำบูชาพระรัตนตรัย at ๑, and
+    #   from the sequence. Worth confirming against the physical book.
+    {
+        'page': 1,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'ระเบียบ',
+                'english': 'The Order of Service',
+                'english_unverified': True,
+            },
+            {
+                'type': 'heading',
+                'thai': 'ทำวัตร - สวดมนต์',
+                'english': 'Devotions and Chanting',
+                'english_unverified': True,
+            },
+            {
+                'type': 'heading',
+                'thai': 'ทำวัตรเช้า',
+                'english': 'The Morning Service',
+                'english_unverified': True,
+            },
+        ],
+    },
+    {
+        'page': 1,
+        'after': 'kham-namatsakan-phra-ratanattaya',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'ประธานกล่าวเชิญบูชาพระรัตนตรัยและสวด นะโม '
+                    'หยุดตามจุดลูกน้ำดังนี้.'
+                ),
+                'english': (
+                    'The leader gives the invitation to revere the Triple Gem '
+                    'and to chant the Namo, pausing at the commas, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+
     # ── Page 2 ──────────────────────────────────────────────────────────
     # The morning service opens, and the book's pattern for the whole service
     # starts here: the leader invites, the deputy begins the first words, the

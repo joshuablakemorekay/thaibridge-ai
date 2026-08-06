@@ -413,6 +413,9 @@
         padding-top: 1.25rem;
         border-top: 1px solid #EADFC8;
     }
+    /* Two ways back, side by side: the book's own contents, and the app's
+       index by title. They answer different questions. */
+    .page-foot-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     @media (max-width: 600px) {
         .page-bar { gap: 0.75rem; }
@@ -700,6 +703,13 @@
             {% if verse.paiboon %}<p class="layer layer-paiboon">{{ verse.paiboon }}</p>{% endif %}
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
         </div>
+        {# A direction printed BETWEEN the lines rather than after the chant —
+           (กราบพร้อมกัน) under each of the three salutations on page 1. It
+           belongs to the verse above it, so it lives on that verse rather than
+           in the page's blocks, which can only sit between whole chants. #}
+        {% if verse.rubric %}
+        <p class="block-rubric verse-rubric">{{ verse.rubric }}</p>
+        {% endif %}
         {% endfor %}
         </div>
 
@@ -774,7 +784,13 @@
         <a href="{{ url_for('chanting_page', page=next_page) }}" rel="next">Page {{ next_page }} →</a>
         {% else %}<span>Last page →</span>{% endif %}
     </span>
-    <a href="{{ url_for('chanting_book') }}">All chants by title →</a>
+    {# Back to where most readers arrived from. The contents is the book's own
+       way of finding a chant, so it belongs beside the title index rather than
+       leaving the page view as a one-way trip. #}
+    <span class="page-foot-links">
+        <a href="{{ url_for('chanting_contents') }}">📑 Contents (สารบัญ)</a>
+        <a href="{{ url_for('chanting_book') }}">All chants by title →</a>
+    </span>
 </div>
 {% endif %}
 

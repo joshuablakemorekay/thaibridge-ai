@@ -405,6 +405,42 @@ class TestTheInvitationIsPrintedOnce:
         assert any('neither names a chant nor prints a line' in p
                    for p in problems)
 
+    def test_a_rubric_printed_between_verses_shows_between_them(self, monkeypatch):
+        """Page 1 sets (กราบพร้อมกัน) under EACH of the three salutations.
+
+        A block can only sit between whole chants, so a direction printed
+        between two lines of one chant has nowhere to go — it lives on the
+        verse above it instead. Recorded in the data from the first batch with
+        a note asking whether it should be shown, and it should.
+        """
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        chant = copy.deepcopy(chanting_module.CHANTS[0])
+        chant['id'] = 'bows'
+        chant['page_start'] = 70
+        for verse in chant['verses'][:3]:
+            verse['rubric'] = '(กราบพร้อมกัน)'
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [chant])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
+        page = flask_app.app.test_client().get(
+            '/chanting/page/70', follow_redirects=True).get_data(as_text=True)
+
+        assert page.count('(กราบพร้อมกัน)') == 3
+        assert 'verse-rubric' in page
+
+    def test_a_page_offers_a_way_back_to_the_contents(self):
+        """The page view was a one-way trip: you could reach a page from the
+        contents and had no way back to it."""
+        import app as flask_app
+        page = flask_app.app.test_client().get(
+            '/chanting/page/2', follow_redirects=True).get_data(as_text=True)
+
+        assert '/chanting/contents' in page
+
     def test_a_rubric_reaches_the_page(self, monkeypatch):
         """(กราบพร้อมกัน) — bow together. Recorded in the data from the start
         with a note asking whether it should be shown. It should."""
