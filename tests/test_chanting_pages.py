@@ -519,6 +519,48 @@ class TestTheBooksOwnContents:
         assert 'สารบัญ' in self.read(p='999')
         assert 'สารบัญ' in self.read(p='not-a-number')
 
+    def test_the_contents_runs_forwards(self):
+        """A book's contents never goes backwards.
+
+        This is the cheapest check there is on 301 hand-transcribed page
+        numbers: a misread Thai numeral almost always lands out of order, and
+        out of order is something a machine can see even though it cannot read
+        the page. It caught nothing on the first run, which is the result you
+        want and is only meaningful because the check would have caught it.
+        """
+        rows = chanting_module().CONTENTS
+        backwards = [(a['title'], a['page'], b['title'], b['page'])
+                     for a, b in zip(rows, rows[1:]) if b['page'] < a['page']]
+
+        assert not backwards, f'contents goes backwards at: {backwards[:3]}'
+
+    def test_the_linked_page_is_derived_from_the_printed_one(self):
+        """The Thai numeral is what the book prints and the only source of
+        truth; the integer exists to be followed. An earlier draft carried
+        both by hand, which across 301 rows is a disagreement waiting."""
+        chanting = chanting_module()
+        for row in chanting.CONTENTS:
+            assert row['page'] == chanting.thai_number(row['page_printed'])
+
+    def test_thai_numerals_convert(self):
+        thai_number = chanting_module().thai_number
+        assert thai_number('๑') == 1
+        assert thai_number('๒๘') == 28
+        assert thai_number('๓๐๘') == 308
+
+    def test_a_number_that_is_not_thai_raises_rather_than_guessing(self):
+        with pytest.raises(ValueError):
+            chanting_module().thai_number('28')
+
+    def test_every_contents_page_renders(self):
+        chanting = chanting_module()
+        for front in chanting.FRONT_MATTER:
+            if front['kind'] != 'contents':
+                continue
+            page = self.read(p=front['number'])
+            assert 'สารบัญ' in page
+            assert 'toc-row' in page, f"front page {front['number']} rendered no lines"
+
     def test_the_contents_is_reachable_from_the_index(self):
         import app as flask_app
         index = flask_app.app.test_client().get(
