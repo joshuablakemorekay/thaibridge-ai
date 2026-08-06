@@ -1779,3 +1779,40 @@ Claude checked the data, the local render and the live site, found the chant tex
 - *Decisions made:* Page material kept separate from chants rather than bolted on as more chant fields — `จบพิธีทำวัตรเช้า` closes the morning *service*, so attaching it to the chant above would state something false about the book. The anchor check was moved out of `build_page_index` into a validator after the first version 500'd the whole chanting book over a single typo.
 - *Improvements made to generated code:* A self-review of this session's own code found four real defects: dead code, two `O(n×m)` dict rebuilds (~93,000 needless constructions across the full book), and a test docstring that had quietly become untrue. Five new rubric criteria, each negative-tested before being trusted.
 - *Roughly how much was accepted as-is vs engineered on:* Direction and review, not code. I wrote none of it — but I found the defect, set the standard, and made it prove v7 hadn't quietly removed anything. Evidence: `prompts/chanting-book-batch/REASONING.md`.
+
+---
+
+## 2026-08-06 (later) — The index that knows what's missing
+
+**TL;DR:**
+- The book's front matter is in: cover, title pages, and all ten pages of `สารบัญ` — 301 lines naming every chant across 325 pages.
+- Built from data rather than reproduced as a picture, so it doubles as an honest progress map — entering a page turns its index lines into links on its own.
+- Page 1 completed, so the book now runs 1–9 unbroken.
+
+**What I built**
+
+A contents page at `/chanting/contents` that reproduces the book's index *and* navigates it: each line carries English, the page in both `๑ / 1`, and buttons to the chant or the page.
+
+**Why I did it this way**
+
+Front matter is numbered `(๓๖)` in its own bracketed sequence — and the body has its own page 36. They're different pages of the same book, so they never share a route: a monk calling out a number always means the body.
+
+The part worth keeping is what the data bought. I asked for it plainly:
+
+> "Can we add button links for each chant in index so whe user clicks it directs them to the chant selected?"
+
+Then when I completed page 1, **three more index lines became links with no work at all**. A picture of a list can't do that. Lines whose page isn't entered stay grey — because a link that goes nowhere is a worse lie than a visible gap.
+
+**How We Did It**
+
+1. Modelled front matter with its own numbering so `(๓๖)` and page 36 can't collide.
+2. Transcribed all ten `สารบัญ` pages — 301 lines, 15 sections.
+3. Stored **only** the printed Thai numeral and derived the integer from it, so the two can't drift across 300 rows.
+4. Added English to every line, taking it from the chant itself wherever one exists.
+5. Completed page 1 — which needed rubrics to sit *between* verses for the first time.
+
+**Engineering Contribution**
+
+- *Decisions made:* Front matter got its own sequence rather than negative page numbers — a number meaning something different from what's printed is the exact class of bug we'd spent the morning removing. The page and the chant are offered as **separate** buttons rather than one link, because sending someone to the page when they wanted the chant matters when a chant starts half way down.
+- *Improvements made to generated code:* Two checks a machine *can* run on a hand-transcribed index: a contents never runs backwards (zero violations across 301 rows), and the middle pages each hold exactly 31 lines. Then an engineering pass found `_english_for` scanning every chant for every row — ~86,000 comparisons once the book's full — and the contents route rebuilding the whole page index twice per request. Both fixed; per-page build 0.8 ms → 0.1 ms.
+- *Roughly how much was accepted as-is vs engineered on:* Direction and review. I specified the buttons, the English, and the back navigation, and asked for a live link to check it actually worked rather than taking "it's pushed" for done.
