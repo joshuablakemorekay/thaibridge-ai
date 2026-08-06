@@ -6021,14 +6021,19 @@ def chanting_contents():
     numbers = [f['number'] for f in pages]
     at = numbers.index(number) if number in numbers else -1
 
+    # One call, both answers. It used to build the whole page index twice per
+    # request — once for the rows and once for the list of pages that are in.
+    rows, entered = (chanting.contents_for_front_page(number) if number
+                     else ([], []))
+
     return render_template(
         'chanting_contents.html',
         book=chanting.BOOK,
         front=here,
-        rows=chanting.contents_for_front_page(number) if number else [],
+        rows=rows,
         prev_page=numbers[at - 1] if at > 0 else None,
         next_page=numbers[at + 1] if 0 <= at < len(numbers) - 1 else None,
-        entered=sorted(p['page'] for p in chanting.build_page_index()[0]),
+        entered=entered,
     )
 
 

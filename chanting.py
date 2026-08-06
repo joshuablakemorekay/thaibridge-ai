@@ -9170,43 +9170,49 @@ def thai_number(printed):
     return int(''.join(str(THAI_DIGITS.index(ch)) for ch in printed))
 
 
-def _english_for(title, chants):
-    """The English name for a contents line.
-
-    A chant's own `title_english` wins wherever there is one, so the index and
-    the chant page cannot end up calling the same thing two different names.
-    Only where no chant carries the title does the gloss written for the index
-    get used.
-    """
-    for chant in chants:
-        if chant.get('title_thai') == title and chant.get('title_english'):
-            return chant['title_english']
-    return _CONTENTS_ENGLISH.get(title, '')
-
-
-def build_contents(chants=None):
+def build_contents(chants=None, front_page=None):
     """The contents as the app uses it.
 
     Each printed line gains three things the book does not print: the page as
     an integer so a link can be built, an English name, and the id of the chant
     it names where that chant is in the app — which is what lets a reader go
     straight to the chant rather than to the page it happens to start on.
+
+    `front_page` narrows it to one printed page of the contents, which is what
+    the reading view ever wants.
+
+    A chant's own `title_english` wins wherever there is one, so the index and
+    the chant page cannot end up calling the same thing two different names.
+    Both lookups are built once here rather than searched per row: at 301 rows
+    against a book heading for 286 chants, a linear scan per row is ~86,000
+    comparisons to answer a question a dict answers outright.
     """
     if chants is None:
         chants = CHANTS
-    by_title = {c['title_thai']: c['id'] for c in chants if c.get('title_thai')}
+
+    chant_id_by_title = {}
+    english_by_title = {}
+    for chant in chants:
+        title = chant.get('title_thai')
+        if not title:
+            continue
+        chant_id_by_title.setdefault(title, chant['id'])
+        if chant.get('title_english'):
+            english_by_title.setdefault(title, chant['title_english'])
 
     return [
         {
             'front_page': front,
             'level': level,
             'title': title,
-            'title_english': _english_for(title, chants),
+            'title_english': english_by_title.get(
+                title, _CONTENTS_ENGLISH.get(title, '')),
             'page_printed': printed,
             'page': thai_number(printed),
-            'chant_id': by_title.get(title),
+            'chant_id': chant_id_by_title.get(title),
         }
         for front, level, title, printed in _CONTENTS_LINES
+        if front_page is None or front == front_page
     ]
 
 
@@ -9221,12 +9227,15 @@ def contents_for_front_page(number, chants=None, page_blocks=None):
     a page of the book that is not in the app yet, and saying so plainly is the
     point. A contents entry that looked like a link and went nowhere would be a
     worse lie than one that is honestly plain text.
+
+    Returns (rows, entered) — the lines, and the body pages that are in, so a
+    caller that wants both does not rebuild the page index to get the second.
     """
     pages, _ = build_page_index(chants, page_blocks)
-    have = {page['page'] for page in pages}
-    rows = build_contents(chants) if chants is not None else CONTENTS
-    return [dict(row, in_app=row['page'] in have)
-            for row in rows if row['front_page'] == number]
+    entered = sorted(page['page'] for page in pages)
+    have = set(entered)
+    rows = build_contents(chants, front_page=number)
+    return [dict(row, in_app=row['page'] in have) for row in rows], entered
 
 
 def get_chant(chant_id):
