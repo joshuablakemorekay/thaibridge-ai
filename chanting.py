@@ -7357,6 +7357,380 @@ CHANT_SECTIONS = [
 # `english_unverified` exactly as an app-written chant translation is — and the
 # reader is told, on every page it appears on.
 PAGE_BLOCKS = [
+    # ── Page 2 ──────────────────────────────────────────────────────────
+    # The morning service opens, and the book's pattern for the whole service
+    # starts here: the leader invites, the deputy begins the first words, the
+    # rest join. Four of the chants on pages 2-3 are given no printed title at
+    # all — they are identified by their invitation and nothing else.
+    {
+        'page': 2,
+        'after': 'kham-choen-bucha-lae-suat-namo',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้น บทว่า นะโม นอกนั้นรับต่อพร้อมกันไปจนครบ 3 หน '
+                    'จบหนึ่งหยุดหายใจครั้งหนึ่ง ดังนี้'
+                ),
+                'english': (
+                    'The deputy leader begins the word namo, and the rest join '
+                    'together for three rounds, pausing for one breath at the '
+                    'end of each, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    {
+        'page': 2,
+        'after': 'pubbabhaga-namakara',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'ประธานกล่าวเชิญสวดสรรเสริญ พระพุทธคุณ ว่า',
+                'english': (
+                    'The leader gives the invitation to chant the praise of '
+                    'the Buddha:'
+                ),
+                'english_unverified': True,
+            },
+            {'type': 'invitation', 'chant': 'buddhabhithuti'},
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้นบทว่า โย โส นอกนั้นรับต่อพร้อมกันไป '
+                    'หยุดตามจุดลูกน้ำ ดังนี้.'
+                ),
+                'english': (
+                    'The deputy leader begins the line yo so, and the rest '
+                    'join together, pausing at the commas, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    {
+        'page': 2,
+        'after': 'buddhabhithuti',
+        'blocks': [
+            {
+                'type': 'rubric',
+                'thai': '(กราบพร้อมกัน)',
+                'english': '(bow together)',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'ประธานกล่าวเชิญสวดสรรเสริญ พระธรรมคุณ ว่า',
+                'english': (
+                    'The leader gives the invitation to chant the praise of '
+                    'the Dhamma:'
+                ),
+                'english_unverified': True,
+            },
+            {'type': 'invitation', 'chant': 'dhammabhithuti'},
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้นบทว่า โย โส นอกนั้นรับต่อพร้อมกันไป '
+                    'หยุดตามจุดลูกน้ำ ดังนี้.'
+                ),
+                'english': (
+                    'The deputy leader begins the line yo so, and the rest '
+                    'join together, pausing at the commas, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+
+    # ── Page 3 ──────────────────────────────────────────────────────────
+    {
+        'page': 3,
+        'after': 'dhammabhithuti',
+        'blocks': [
+            {
+                'type': 'rubric',
+                'thai': '(กราบพร้อมกัน)',
+                'english': '(bow together)',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'ประธานกล่าวเชิญสวดสรรเสริญ พระสังฆคุณ ว่า',
+                'english': (
+                    'The leader gives the invitation to chant the praise of '
+                    'the Sangha:'
+                ),
+                'english_unverified': True,
+            },
+            {'type': 'invitation', 'chant': 'sanghabhithuti'},
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้นบทว่า โย โส นอกนั้นรับต่อพร้อมกันไป '
+                    'หยุดตามจุดลูกน้ำ ดังนี้.'
+                ),
+                'english': (
+                    'The deputy leader begins the line yo so, and the rest '
+                    'join together, pausing at the commas, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    {
+        'page': 3,
+        'after': 'sanghabhithuti',
+        # The one invitation covers BOTH chants — ระตะนัตตะยัปปะณามะคาถา and
+        # สังเวคะปะริกิตตะนะปาฐะ — and the book prints it inside the sentence.
+        # It is held on ระตะนัตตะยัปปะณามะคาถา, which is the chant that follows
+        # it here; สังเวคะปะริกิตตะนะปาฐะ has none of its own and is not on
+        # this page.
+        'invitation_printed_here': ['ratanattayappanamagatha'],
+        'blocks': [
+            {
+                'type': 'rubric',
+                'thai': '(กราบพร้อมกัน แล้วนั่งพับเพียบทั้งหมด)',
+                'english': (
+                    '(bow together, then all sit in the side-resting posture)'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'ประธานกล่าวเชิญสวด ระตะนัตตะยัปปะณามะคาถา คือคำไหว้ พระรัตนตรัย '
+                    'และสังเวคะปะริกิตตะนะปาฐะ คือบทประกาศความสลดสังเวชต่อไปว่า หันทะ มะยัง '
+                    'ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส.'
+                ),
+                'english': (
+                    'The leader gives the invitation to chant the '
+                    'Ratanattayappanamagatha, which is the salutation to the '
+                    'Triple Gem, and the Saṃvega-parikittana-patha, which is '
+                    'the passage declaring spiritual urgency, saying: handa '
+                    'mayaṃ ratanattayappaṇāmagāthāyo ceva '
+                    'saṃvegaparikittanapāṭhañca bhaṇāma se.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้นบทว่า พุทโธ นอกนั้นรับต่อพร้อมกันไป '
+                    'หยุดตามจุดลูกน้ำ ดังนี้.'
+                ),
+                'english': (
+                    'The deputy leader begins the line buddho, and the rest '
+                    'join together, pausing at the commas, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+
+    # ── Page 4 ──────────────────────────────────────────────────────────
+    # Nothing to add. The page carries the end of ระตะนัตตะยัปปะณามะคาถา, the
+    # printed title สังเวคะปะริกิตตะนะปาฐะ and that passage — no instruction,
+    # no rubric, no footnote. Recorded here so a later reader knows the page
+    # was checked and found to need nothing, rather than skipped.
+
+    # ── Page 5 ──────────────────────────────────────────────────────────
+    # The service proper ends a third of the way down and the rest of the page
+    # is instruction: how the เสขิยวัตร are divided and chanted across three
+    # days, and the invitation for each section. Those three invitations are
+    # written out rather than read off a chant, because the sections they
+    # invite are set much later in the book.
+    {
+        'page': 5,
+        'after': 'samvega-parikittana-patha',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'ต่อไปนี้สวด เสขิยวัตร เสขิยวัตรจัดเป็น 4 หมวด คือ หมวดที่ 1 เรียกว่า '
+                    'จีวะระปะฏิสังยุต มี 26 สิกขาบท หมวดที่ 2 เรียกว่า ปิณฑะปาตะปะฏิสังยุต มี 30 '
+                    'สิกขาบท หมวดที่ 3 เรียกว่า ธัมมะเทสะนาปะฏิสังยุต มี 16 สิกขาบท หมวดที่ 4 '
+                    'เรียกว่า ปะกิณณะกะ มี 3 สิกขาบท หมวดที่ 1 ที่ 2 สวดวันละหมวด หมวดที่ 3 ที่ 4 '
+                    'มีน้อยสิกขาบท สวดรวมกันในวันเดียว ตกลงสวด 3 วัน เวียนมาขึ้นหมวดต้นครั้งหนึ่ง '
+                    'บทสวดจักเรียงไว้ต่อท้ายทำวัตรเช้า ในที่นี้พึงทราบระเบียบดังต่อไปนี้'
+                ),
+                'english': (
+                    'Next the Sekhiyavatta are chanted. They are arranged in '
+                    'four sections: the first, called Cīvara-paṭisaṃyutta, has '
+                    '26 training rules; the second, Piṇḍapāta-paṭisaṃyutta, '
+                    'has 30; the third, Dhammadesanā-paṭisaṃyutta, has 16; the '
+                    'fourth, Pakiṇṇaka, has 3. The first and second are '
+                    'chanted one section a day; the third and fourth, having '
+                    'few rules, are chanted together on one day. So they are '
+                    'chanted over three days and then come round to the first '
+                    'section again. The passages are set out after the morning '
+                    'service; here the order is to be understood as follows.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'เมื่อจะสวดเสขิยวัตรหมวดที่ 1 ประธานกล่าวเชิญว่า',
+                'english': (
+                    'When the first section of the Sekhiyavatta is to be '
+                    'chanted, the leader gives the invitation:'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'invitation',
+                'pali': 'หันทะ มะยัง ฉัพพีสะติ สารุปปาสิกขาโย ภะณามะ เส.',
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้นบทว่า ปะริมัณฑะลัง นอกนั้นรับต่อพร้อมกันไป'
+                    'หยุดตามจุดลูกน้ำ'
+                ),
+                'english': (
+                    'The deputy leader begins the line parimaṇḍalaṃ, and the '
+                    'rest join together, pausing at the commas.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'เมื่อจะสวดเสขิยวัตรหมวดที่ 2 ประธานกล่าวเชิญว่า',
+                'english': (
+                    'When the second section is to be chanted, the leader '
+                    'gives the invitation:'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'invitation',
+                'pali': (
+                    'หันทะ มะยัง สะมะติงสะ โภชะนะปะฏิสังยุตตาสิกขาโย ภะณามะ เส.'
+                ),
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้นบทว่า สักกัจจัง นอกนั้นรับต่อพร้อมกันไป '
+                    'หยุดตามจุดลูกน้ำ'
+                ),
+                'english': (
+                    'The deputy leader begins the line sakkaccaṃ, and the rest '
+                    'join together, pausing at the commas.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'เมื่อจะสวดเสขิยวัตร หมวดที่ 3-4 ควบกัน ประธานกล่าวเชิญว่า',
+                'english': (
+                    'When the third and fourth sections are to be chanted '
+                    'together, the leader gives the invitation:'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'invitation',
+                'pali': (
+                    'หันทะ มะยัง โสฬะสะ ธัมมะเทสะนาปะฏิสังยุตตาสิกขาโย เจวะ ติสโส '
+                    'ปะกิณณะกาสิกขาโย จะ ภะณามะ เส.'
+                ),
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'รองประธานขึ้นต้นบทว่า นะ ฉัตตะปาณิสสะ นอกนั้นรับต่อพร้อมกันไป '
+                    'หยุดตามจุดลูกน้ำ'
+                ),
+                'english': (
+                    'The deputy leader begins the line na chattapāṇissa, and '
+                    'the rest join together, pausing at the commas.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'ต่อจากเสขิยวัตรสวด พระสูตร หรือปาฐะ หรือคาถา ต่างๆ '
+                    'ตามที่กำหนดไว้'
+                ),
+                'english': (
+                    'After the Sekhiyavatta, a sutta, a passage or a set of '
+                    'verses is chanted, according to what has been appointed'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+
+    # ── Page 6 ──────────────────────────────────────────────────────────
+    # The top two thirds carry on the instruction from page 5 — the sentence
+    # that ends page 5 is finished by the one that opens page 6 — and then the
+    # printed title of ตังขะณิกะปัจจะเวกขะณะปาโฐ. Both runs are above the only
+    # chant on the page, so neither is anchored.
+    {
+        'page': 6,
+        'invitation_printed_here': ['tangkhanika-paccavekkhana-patho'],
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'วันละ 1 สูตร หรือ 1 ปาฐะ หรือ 1 คาถา ดังที่เรียงลำดับไว้ท้ายเสขิยวัตร '
+                    'มี ทะสะธัมมะสุตตะ เป็นต้น จนถึงบทสุดท้ายแล้วเวียนมาสวด ทะสะธัมมะสุตตะ '
+                    'ตั้งต้นไปใหม่อีก อนึ่งการสวดพระสูตรหรือปาฐะ หรือคาถานั้น บางครั้งสวดเป็น '
+                    'ทำนองสังโยค บางครั้งสวดเป็น ทำนองมคธ สุดแต่ผู้เป็นประธานจะนำสวด '
+                    'ทั้งนี้เพื่อให้พระภิกษุสามเณรชำนาญทำนองสวดทั้ง 2 อย่าง ตัวอย่างเมื่อจะสวด '
+                    'ทะสะธัมมะสุตตะ เป็นทำนองสังโยค ประธานขึ้นต้นบทว่า เอวัมเม สุตัง นอกนั้นรับ '
+                    'เอกังสะมะยัง ฯเปฯ พร้อมกันไป เมื่อจะสวดทำนองมคธ ประธานกล่าวเชิญว่า '
+                    'หันทะ มะยัง ทะสะธัมมะสุตตัง ภะณามะ เส รองประธานขึ้นต้นบทว่า เอวัมเม สุตัง '
+                    'นอกนั้นรับต่อพร้อมกันไป หยุดตามจุดลูกน้ำ แต่เมื่อจะสวดพระสูตรหรือปาฐะใด '
+                    'ถ้ามีสวดบทขัดของพระสูตร หรือปาฐะนั้นแล้ว ประธานไม่ต้องกล่าวคำเชิญ คือ '
+                    'หันทะ มะยัง นำขึ้นต้นบทของพระสูตรหรือปาฐะนั้น ๆ เลยทีเดียว'
+                ),
+                'english': (
+                    'One sutta, one passage or one set of verses a day, in the '
+                    'order set out after the Sekhiyavatta, beginning with the '
+                    'Dasadhamma-sutta and running to the last, then coming '
+                    'round to the Dasadhamma-sutta and starting again. '
+                    'Further, a sutta, passage or verses may be chanted '
+                    'sometimes in the saṃyoga manner and sometimes in the '
+                    'Magadha manner, as the leader chooses, so that bhikkhus '
+                    'and sāmaṇeras become practised in both. For example, when '
+                    'the Dasadhamma-sutta is to be chanted in the saṃyoga '
+                    'manner, the leader begins evaṃ me sutaṃ and the rest take '
+                    'up ekaṃ samayaṃ and so on together. When it is to be '
+                    'chanted in the Magadha manner, the leader gives the '
+                    'invitation handa mayaṃ dasadhammasuttaṃ bhaṇāma se, the '
+                    'deputy begins evaṃ me sutaṃ, and the rest join, pausing '
+                    'at the commas. But where a sutta or passage has its own '
+                    'preparatory verses, the leader does not give the handa '
+                    'mayaṃ invitation, and simply begins that sutta or passage '
+                    'directly.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'ต่อจากพระสูตร หรือปาฐะหรือคาถา สวด ตังขะณิกะปัจจะเวกขะณะปาฐะ '
+                    'ประธานกล่าวเชิญว่า หันทะ มะยัง ตังขะณิกะปัจจะเวกขะณะปาฐัง ภะณามะ เส '
+                    'รองประธานขึ้นต้นบทว่า ปะฏิสังขา นอกนั้นรับ โยนิโส ฯเปฯ พร้อมกันไป '
+                    'หยุดตามจุดลูกน้ำดังนี้.'
+                ),
+                'english': (
+                    'After the sutta, passage or verses, the '
+                    'Tangkhanika-paccavekkhana-patha is chanted. The leader '
+                    'gives the invitation handa mayaṃ '
+                    'taṅkhaṇikapaccavekkhaṇapāṭhaṃ bhaṇāma se; the deputy '
+                    'begins the line paṭisaṅkhā, and the rest take up yoniso '
+                    'and so on together, pausing at the commas, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+
     # ── Page 7 ──────────────────────────────────────────────────────────
     # Printed between the end of ตังขะณิกะปัจจะเวกขะณะปาโฐ and the title of
     # ปัตติทานะคาถา. The page's footnote (๑. นัย ม. มู ๑๒/๑๓-๘) is NOT repeated
@@ -7543,8 +7917,35 @@ def check_page_blocks(chants=None, page_blocks=None):
                     f"page {page}: invitation_printed_here names '{named}', "
                     f"which is not printed on that page"
                 )
+        by_id = {chant['id']: chant for chant in chants}
         for index, block in enumerate(group.get('blocks', [])):
             where = f"page {page}, block {index} ({block.get('type')})"
+
+            # An invitation block carries no text of its own — it names a
+            # chant and the words are read back off it. So what has to be
+            # true is that the chant exists, is on this page, and has an
+            # invitation to show; otherwise the block renders as nothing and
+            # the page silently loses the line that starts the chant.
+            if block.get('type') == 'invitation':
+                named = block.get('chant')
+                if not named:
+                    # Written out in full because the chant it invites is not
+                    # on this page to read it off.
+                    if not block.get('pali'):
+                        problems.append(
+                            f'{where}: neither names a chant nor prints a line')
+                    continue
+                source = by_id.get(named)
+                if source is None:
+                    problems.append(f'{where}: names no chant that exists')
+                elif not (source.get('invitation') or {}).get('pali'):
+                    problems.append(
+                        f"{where}: '{named}' has no invitation to print")
+                elif named not in chants_on_page.get(page, set()):
+                    problems.append(
+                        f"{where}: '{named}' is not printed on that page")
+                continue
+
             if not block.get('thai'):
                 problems.append(f'{where}: no `thai`, so it renders as nothing')
             if block.get('type') == 'item' and block.get('number') is None:
@@ -7658,27 +8059,65 @@ def build_page_index(chants=None, page_blocks=None):
                     if group.get('after') is not None
                     and group.get('after') not in on_this_page]
 
-        # A chant whose invitation the book prints INSIDE a paragraph rather
-        # than on its own line above the verses. The invitation is still on the
-        # chant, because the by-title view needs it and a printed edition will
-        # too — but showing it again here would put it on the page twice, once
-        # in the sentence that introduces it and once in a box the book does
-        # not have.
+        # A chant whose invitation the book does not print where the app puts
+        # it. Two ways that happens, and both mean the same thing here: do not
+        # show it a second time under the title.
+        #
+        #   'invitation_printed_here' — the invitation is inside a sentence,
+        #       part of the prose rather than a line of its own (page 7).
+        #   an 'invitation' block — the book prints it on its own line, but
+        #       with an instruction either side of it, so it has to sit in the
+        #       run of blocks to keep the printed order (pages 2-3).
+        #
+        # The invitation stays on the chant either way: the by-title view needs
+        # it, and a printed edition will. An invitation block names the chant
+        # and the text is read back off it, so there is only ever one copy.
         invitation_in_prose = set()
         for group in groups:
             invitation_in_prose.update(group.get('invitation_printed_here', ()))
+            for block in group.get('blocks', ()):
+                if block.get('type') == 'invitation' and block.get('chant'):
+                    invitation_in_prose.add(block['chant'])
+
+        by_id = {chant['id']: chant for chant in chants}
+
+        def resolved(blocks):
+            """Fill an invitation block from the chant it names.
+
+            Copied rather than written back, so PAGE_BLOCKS stays the data as
+            authored and repeated renders cannot accumulate anything.
+            """
+            out = []
+            for block in blocks:
+                if block.get('type') == 'invitation':
+                    if block.get('chant'):
+                        source = by_id.get(block['chant']) or {}
+                        invitation = source.get('invitation') or {}
+                    else:
+                        # An invitation for a chant that is NOT on this page —
+                        # page 5 gives the ones for the เสขิยวัตร sections,
+                        # which the book sets much later. There is nothing to
+                        # read it off, so the line is written out here.
+                        invitation = {
+                            key: block.get(key, '')
+                            for key in ('pali', 'pali_roman', 'thai',
+                                        'paiboon', 'english')
+                        }
+                    block = dict(block, invitation=invitation)
+                out.append(block)
+            return out
 
         entries = []
         # Printed above every chant on the page.
-        entries.extend({'kind': 'blocks', 'blocks': group['blocks']}
+        entries.extend({'kind': 'blocks', 'blocks': resolved(group['blocks'])}
                        for group in groups if group.get('after') is None)
         for entry in chant_entries:
             entry['kind'] = 'chant'
             entry['invitation_in_block'] = entry['chant']['id'] in invitation_in_prose
             entries.append(entry)
-            entries.extend({'kind': 'blocks', 'blocks': group['blocks']}
+            entries.extend({'kind': 'blocks', 'blocks': resolved(group['blocks'])}
                            for group in groups if group.get('after') == entry['chant']['id'])
-        entries.extend({'kind': 'blocks', 'blocks': group['blocks']}
+        entries.extend({'kind': 'blocks', 'blocks': resolved(group['blocks'])}
                        for group in orphaned)
 
         built.append({'page': page, 'entries': entries})

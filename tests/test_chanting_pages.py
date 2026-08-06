@@ -333,6 +333,123 @@ class TestThePagesOwnMaterialOnScreen:
         assert 'of the chanting book' in page
 
 
+class TestTheInvitationIsPrintedOnce:
+    """The line that starts a chant, and the two places the book puts it.
+
+    The app has always shown an invitation under the chant's title. The book
+    mostly does not: it sets an instruction, then the invitation, then another
+    instruction, then the verses — so reproducing the page means the
+    invitation has to sit in the run of blocks. Showing it in both places puts
+    it on the page twice, which is the bug this guards.
+
+    The words themselves are never copied into PAGE_BLOCKS. A block names the
+    chant and the invitation is read back off it, so there is one copy and it
+    cannot drift.
+    """
+
+    def build(self, monkeypatch, blocks, page=47):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        only = copy.deepcopy(chanting_module.CHANTS[0])
+        only['id'] = 'only'
+        only['page_start'] = page
+        only['invitation'] = {'pali': 'หันทะ มะยัง อิทัง ภะณามะ เส.',
+                              'pali_roman': '', 'thai': '', 'paiboon': '',
+                              'english': ''}
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [only])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS',
+                            [{'page': page, 'after': 'only', 'blocks': blocks}])
+        return flask_app.app.test_client().get(
+            f'/chanting/page/{page}', follow_redirects=True).get_data(as_text=True)
+
+    def test_an_invitation_block_is_filled_from_the_chant_it_names(self, monkeypatch):
+        page = self.build(monkeypatch, [{'type': 'invitation', 'chant': 'only'}])
+        assert 'หันทะ มะยัง อิทัง ภะณามะ เส.' in page
+
+    def test_and_then_it_is_not_also_shown_under_the_title(self, monkeypatch):
+        page = self.build(monkeypatch, [{'type': 'invitation', 'chant': 'only'}])
+        assert page.count('หันทะ มะยัง อิทัง ภะณามะ เส.') == 1
+
+    def test_without_a_block_it_still_shows_under_the_title(self, monkeypatch):
+        """The ordinary case, and proof the suppression is not unconditional."""
+        page = self.build(monkeypatch, [{'type': 'prose', 'thai': 'ข้อความ'}])
+        assert page.count('หันทะ มะยัง อิทัง ภะณามะ เส.') == 1
+
+    def test_an_invitation_for_a_chant_set_elsewhere_is_written_out(self, monkeypatch):
+        """Page 5 gives the invitations for the เสขิยวัตร sections, which the
+        book sets far later. There is no chant on the page to read them off."""
+        page = self.build(monkeypatch, [
+            {'type': 'invitation', 'pali': 'หันทะ มะยัง ฉัพพีสะติ ภะณามะ เส.'},
+        ])
+
+        assert 'หันทะ มะยัง ฉัพพีสะติ ภะณามะ เส.' in page
+        # And it does not suppress the page's own chant invitation.
+        assert 'หันทะ มะยัง อิทัง ภะณามะ เส.' in page
+
+    def test_a_block_that_neither_names_nor_prints_is_caught(self):
+        problems = check_page_blocks(
+            [chant('metta', 47, [verse(1)])],
+            [{'page': 47, 'after': 'metta',
+              'blocks': [{'type': 'invitation'}]}],
+        )
+
+        assert any('neither names a chant nor prints a line' in p
+                   for p in problems)
+
+    def test_a_rubric_reaches_the_page(self, monkeypatch):
+        """(กราบพร้อมกัน) — bow together. Recorded in the data from the start
+        with a note asking whether it should be shown. It should."""
+        page = self.build(monkeypatch, [
+            {'type': 'rubric', 'thai': '(กราบพร้อมกัน)'},
+        ])
+
+        assert '(กราบพร้อมกัน)' in page
+        assert 'block-rubric' in page
+
+
+class TestTheHeadingsAreTheBooksOwn:
+    """Four chants in the morning service are given no printed title at all.
+
+    The book names them only by their invitation. The app needs to call them
+    something in the index and in verse-by-verse, so it falls back to the
+    English title — but printing that as a heading in book layout invents a
+    line the page does not have.
+    """
+
+    def build(self, monkeypatch, mutate):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        chant = copy.deepcopy(chanting_module.CHANTS[0])
+        chant['page_start'] = 60
+        chant['title_english'] = 'In Praise of the Buddha'
+        mutate(chant)
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [chant])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
+        return flask_app.app.test_client().get(
+            '/chanting/page/60', follow_redirects=True).get_data(as_text=True)
+
+    def test_an_untitled_chant_gets_a_heading_book_layout_can_drop(self, monkeypatch):
+        def untitled(chant):
+            chant['title_thai'] = ''
+            chant['title_pali'] = ''
+
+        page = self.build(monkeypatch, untitled)
+        assert 'In Praise of the Buddha' in page      # still there to study by
+        assert 'page-app-title' in page               # and marked as ours
+
+    def test_a_title_the_book_does_print_is_not_marked(self, monkeypatch):
+        page = self.build(monkeypatch, lambda c: None)
+        assert 'page-chant-title page-app-title' not in page
+
+
 class TestTheMarkupHoldsTogether:
     """Both chanting pages must close every <style> and <script> they open.
 

@@ -175,6 +175,16 @@
        paragraphs apart, so this does the same. */
     .block-prose { margin: 0 0 0.6rem; text-indent: 2.5em; }
 
+    /* A direction to the chanters, printed in brackets and centred: bow
+       together, then sit. Quieter than the chant and lighter than an
+       instruction paragraph, because it is read at a glance mid-service. */
+    .block-rubric {
+        text-align: center;
+        font-style: italic;
+        color: #55483a;
+        margin: 1rem 0;
+    }
+
     /* A numbered instruction, hanging so the number sits clear of the text
        the way the printed list does. */
     .block-item {
@@ -218,8 +228,16 @@
        <p> and stacks for free. Without it the Thai and the English run
        together on one line. Kept at two selectors' worth of specificity so the
        hide-<layer> toggles, which are three, still win and can switch a layer
-       off. */
-    .page-blocks .layer { display: block; border-left: none; padding-left: 0; }
+       off.
+
+       `:not(.verse)` keeps it away from an invitation printed among the
+       blocks — that IS a verse and should keep the coloured rule it has
+       everywhere else in the book. */
+    .page-blocks > *:not(.verse) .layer {
+        display: block;
+        border-left: none;
+        padding-left: 0;
+    }
 
     /* Title on the page but no verses: the chant opens at the foot of the
        page and its first line is overleaf. The book does this and so do we. */
@@ -305,6 +323,22 @@
         display: inline !important;
         margin: 0;
     }
+
+    /* A heading the book does not print. Four chants in the morning service —
+       the นะโม, and the praises of Buddha, Dhamma and Sangha — are given no
+       title at all on the page; the book identifies them by their invitation
+       and nothing else. The app still needs something to call them in the
+       index and in verse-by-verse, so the English title stays there and goes
+       here, where the page is meant to be the page.
+
+       The romanised and English lines under a title the book DOES print go
+       the same way and for the same reason: the printed heading is Thai
+       alone. It is the treatment the verses already get, where book layout
+       shows the Pali and the Thai and hides the three layers written for
+       this app. */
+    .page-body.view-book .page-app-title,
+    .page-body.view-book .page-chant-roman,
+    .page-body.view-book .page-chant-english { display: none; }
 
     /* App-only affordances are hidden in book mode. The point of the mode is
        that the screen shows what the page shows — a link the printed book
@@ -542,6 +576,14 @@
             {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
         </p>
 
+        {# A direction to the chanters — (กราบพร้อมกัน) and the like. The book
+           sets these centred and in brackets, and they are not chanted. #}
+        {% elif block.type == 'rubric' %}
+        <p class="block-rubric">
+            <span class="layer layer-thai">{{ block.thai }}</span>
+            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+        </p>
+
         {% elif block.type == 'item' %}
         <div class="block-item">
             <span class="block-item-number">{{ block.number }}.</span>
@@ -549,6 +591,19 @@
                 <span class="layer layer-thai">{{ block.thai }}</span>
                 {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
             </span>
+        </div>
+
+        {# The invitation, printed in the run of blocks because the book sets an
+           instruction either side of it. Same markup as the invitation under a
+           title, so it reads as the same thing wherever it falls. #}
+        {% elif block.type == 'invitation' %}
+        <div class="verse invitation">
+            <span class="invitation-label">Invitation</span>
+            {% if block.invitation.pali %}<p class="layer layer-pali">{{ block.invitation.pali }}</p>{% endif %}
+            {% if block.invitation.pali_roman %}<p class="layer layer-pali_roman">{{ block.invitation.pali_roman }}</p>{% endif %}
+            {% if block.invitation.thai %}<p class="layer layer-thai">{{ block.invitation.thai }}</p>{% endif %}
+            {% if block.invitation.paiboon %}<p class="layer layer-paiboon">{{ block.invitation.paiboon }}</p>{% endif %}
+            {% if block.invitation.english %}<p class="layer layer-english">{{ block.invitation.english }}</p>{% endif %}
         </div>
 
         {% elif block.type == 'footnote' %}
@@ -584,7 +639,11 @@
         {# Every title line is optional. A chant may be titled in Thai script,
            in Pali, in both or in neither, and the book decides — so nothing
            here assumes one is present. #}
-        <h2 class="page-chant-title">
+        {# Where the book prints NO title, the heading below is the app's own:
+           these chants are identified on the page only by their invitation.
+           It is marked so book layout can drop it, because a heading the
+           printed page does not have is not what the page shows. #}
+        <h2 class="page-chant-title{% if not chant.title_thai and not chant.title_pali %} page-app-title{% endif %}">
             {% if chant.title_thai %}{{ chant.title_thai }}{% elif chant.title_pali %}{{ chant.title_pali }}{% else %}{{ chant.title_english }}{% endif %}
             {% if chant.title_thai and chant.title_pali %}<span class="page-chant-roman">{{ chant.title_pali }}</span>
             {% elif chant.title_thai and chant.title_roman %}<span class="page-chant-roman">{{ chant.title_roman }}</span>{% endif %}
