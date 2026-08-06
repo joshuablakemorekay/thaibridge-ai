@@ -8560,6 +8560,547 @@ _CONTENTS_LINES = [
 
 
 
+# The English name for each contents line, keyed by the Thai title and
+# deduplicated — the book lists several chants more than once, in the
+# morning service, again in the evening, and again in the translated
+# section, and one gloss serves all of them.
+#
+# Titles belonging to a chant already in CHANTS are deliberately ABSENT:
+# the builder reads title_english off the chant itself, so the index and
+# the chant page can never give a reader two different names for the same
+# thing. Everything here is written for this app, never taken from the
+# book, which prints no English at all.
+_CONTENTS_ENGLISH = {
+    'ทำวัตรเช้า':
+        'The Morning Service',
+    'คำอธิบายประกอบทำวัตรเช้า':
+        'Notes on the morning service',
+    'คำประกาศอุโบสถ':
+        'The Uposatha Announcement',
+    'คำอาราธนาอุโบสถศีล':
+        'Requesting the Uposatha precepts',
+    'อุโบสถศีล':
+        'The Uposatha Precepts',
+    'สะระณะคะมะนานุสสะระณะคาถา':
+        'Verses recollecting the going for refuge',
+    'คำขอขมาพระรัตนตรัย':
+        'Asking pardon of the Triple Gem',
+    'เสขิยวัตร':
+        'The Sekhiya Training Rules',
+    'สารุปปะ ๒๖ สิกขาบท':
+        'Proper conduct — 26 training rules',
+    'โภชชะนะปะฏิสังยุต ๓๐ สิกขาบท':
+        'Concerning almsfood — 30 training rules',
+    'ธัมมะเทสะนาปะฏิสังยุต ๑๖ สิกขาบท':
+        'Concerning teaching the Dhamma — 16 training rules',
+    'ปะกิณณะกะ ๓ สิกขาบท':
+        'Miscellaneous — 3 training rules',
+    'พระสูตร ปาฐะ และคาถาที่กำหนดสวดในภาคเช้า':
+        'Suttas, passages and verses appointed for the morning',
+    'ทะสะธัมมะสุตตัง':
+        'The Ten Dhammas Sutta',
+    'ปะริตตะกะระณะปาโฐ':
+        'The passage for making a protection chant',
+    'นิธิกัณฑะคาถา':
+        'Verses on the Hidden Treasure',
+    'ธัมมะคาระวาทิคาถา':
+        'Verses on reverence for the Dhamma',
+    'เขมาเขมะสะระณะคะมะนะปะริทีปิกาคาถา':
+        'Verses showing the secure and the insecure refuge',
+    'วิหาระทานะคาถา':
+        'Verses on the gift of a dwelling',
+    'สัจจะปานะวิธ์ยานุรูปะคาถา':
+        'Verses befitting a pledge of truth',
+    'อาทิยะสุตตะคาถา':
+        'Verses from the Ādiya Sutta — the right use of wealth',
+    'อริยะธะนะคาถา':
+        'Verses on the noble treasures',
+    'มะหากัสสะปะโพชฌังคะสุตตัง':
+        'The Mahākassapa Bojjhaṅga Sutta',
+    'มะหาโมคคัลลานะโพชฌังคะสุตตัง':
+        'The Mahāmoggallāna Bojjhaṅga Sutta',
+    'มะหาจุนทะโพชฌังคะสุตตัง':
+        'The Mahācunda Bojjhaṅga Sutta',
+    'สวดแจง':
+        'The Suat Jaeng — chanting the summary of the Canon',
+    'พระวินัยสังเขป':
+        'The Vinaya in summary',
+    'พระสูตรสังเขป':
+        'The Suttas in summary',
+    'พระอภิธรรมสังเขป':
+        'The Abhidhamma in summary',
+    'พระสังคะณี':
+        'The Dhammasaṅgaṇī',
+    'พระวิภังค์':
+        'The Vibhaṅga',
+    'พระธาตุกะถา':
+        'The Dhātukathā',
+    'พระปุคคะละบัญญัติ':
+        'The Puggalapaññatti',
+    'พระกะถาวัตถุ':
+        'The Kathāvatthu',
+    'พระยะมะกะ':
+        'The Yamaka',
+    'พระมะหาปัฏฐาน':
+        'The Mahāpaṭṭhāna',
+    'ธัมมะสังคะณีมาติกาปาโฐ':
+        'The Dhammasaṅgaṇī mātikā passage',
+    'วิปัสสะนาภูมิปาโฐ':
+        'The passage on the ground of insight',
+    'ถวายพรพระ':
+        'Offering blessings to the Buddha',
+    'ชะยะมังคะลัฏฐะกะคาถา':
+        'The Eight Verses of Victory and Blessing',
+    'ชะยะปะริตตะคาถา':
+        'The Victory Protection verses',
+    'มงคลจักรวาฬน้อย':
+        'The Lesser Universal Blessing',
+    'กาละทานะสุตตะคาถา':
+        'Verses from the Kāladāna Sutta — giving at the right time',
+    'สังคะหะวัตถุคาถา':
+        'Verses on the grounds of kindness',
+    'โมกขุปายะคาถา':
+        'Verses on the way to liberation',
+    'ระตะนัตตะยัปปะภาวะสิทธิคาถา':
+        'Verses on the accomplishing power of the Triple Gem',
+    'ทำวัตรเย็น':
+        'The Evening Service',
+    'ระเบียบทำวัตรสวดมนต์ ภาคเย็น':
+        'The order of the evening service',
+    'คาถาบูชาพระรัตนตรัย':
+        'Verses of homage to the Triple Gem',
+    'คำเชิญบูชาสวดนะโม และพระพุทธคุณ':
+        'The invitation to revere, chant the Namo, and praise the Buddha',
+    'พุทธะมังคะละคาถา':
+        'The Buddha Blessing verses',
+    'สีลุทเทสะปาโฐ':
+        'The passage setting out the precepts',
+    'บทขัดสิกขาบท ๑๐':
+        'Preparatory verses for the ten training rules',
+    'สิกขาบท ๑๐':
+        'The ten training rules',
+    'บทขัดนาสะนังคะ':
+        'Preparatory verses for the Nāsanaṅga',
+    'นาสะนังคะ ๑๐ สิกขาบท':
+        'The Nāsanaṅga — ten grounds for expulsion',
+    'บทขัดทัณฑะกรรม':
+        'Preparatory verses for the Daṇḍakamma',
+    'ทัณฑะกรรม ๕ สิกขาบท':
+        'The Daṇḍakamma — five grounds for penalty',
+    'อะตีตะปัจจะเวกขะณะปาโฐ':
+        'The passage reflecting on requisites already used',
+    'อุทิสสะนาธิฏฐานะคาถา':
+        'Verses dedicating merit and making a resolve',
+    'คำอธิบายประกอบทำวัตรเย็น':
+        'Notes on the evening service',
+    'คำเชิญบูชาพระรัตนตรัยพิเศษ':
+        'The special invitation to revere the Triple Gem',
+    'คาถาอาราธนาธรรม':
+        'Verses requesting a Dhamma teaching',
+    'คำถวายดอกไม้ ธูป เทียน ในวันวิสาขบูชา':
+        'Offering flowers, incense and candles on Visākha Pūjā',
+    'สะระภัญญะคาถา สำหรับสวดในวันวิสาขบูชา':
+        'Saraphañña verses for chanting on Visākha Pūjā',
+    'คำถวายดอกไม้ ธูป เทียน ในวันอัฏฐมีบูชา':
+        'Offering flowers, incense and candles on Aṭṭhamī Pūjā',
+    'สะระภัญญะคาถา สำหรับสวดในวันอัฏฐมีบูชา':
+        'Saraphañña verses for chanting on Aṭṭhamī Pūjā',
+    'คำถวายดอกไม้ ธูป เทียน ในวันมาฆบูชา':
+        'Offering flowers, incense and candles on Māgha Pūjā',
+    'สะระภัญญะคาถา สำหรับสวดในวันมาฆบูชา':
+        'Saraphañña verses for chanting on Māgha Pūjā',
+    'บทขัดโอวาทะปาติโมกขาทิปาฐะ':
+        'Preparatory verses for the Ovāda-pāṭimokkha passage',
+    'โอวาทะปาติโมกขาทิปาโฐ':
+        'The Ovāda-pāṭimokkha — the Buddha’s summary exhortation',
+    'คำถวายดอกไม้ ธูป เทียน ในวันอาสาฬหบูชา':
+        'Offering flowers, incense and candles on Āsāḷha Pūjā',
+    'พระสูตร พระปริตร ปาฐะ และคาถาที่กำหนดสวดในภาคเย็น':
+        'Suttas, protection chants, passages and verses appointed for the evening',
+    'บทขัดชุมนุมเทวดา':
+        'Preparatory verses inviting the devas to assemble',
+    'ปุพพะภาคะนะมะการะปาโฐ':
+        'The preliminary passage of homage',
+    'สะระณะคะมะนะปาโฐ':
+        'The passage of going for refuge',
+    'นะมะการะสิทธิคาถา':
+        'Verses on the power of paying homage',
+    'นะโมการะอัฏฐะกะคาถา':
+        'The Eight Verses of the Namo',
+    'บทขัดต้นตำนาน':
+        'Preparatory verses opening the Tamnan sequence',
+    'บทขัดมังคะละสุตตัง':
+        'Preparatory verses for the Maṅgala Sutta',
+    'มังคะละสุตตัง ปะฐะมัง':
+        'The Maṅgala Sutta — the first',
+    'บทขัดระตะนะสุตตัง':
+        'Preparatory verses for the Ratana Sutta',
+    'ระตะนะสุตตัง ทุติยัง':
+        'The Ratana Sutta — the second',
+    'บทขัดกะระณียะเมตตะสุตตัง':
+        'Preparatory verses for the Karaṇīya Mettā Sutta',
+    'กะระณียะเมตตะสุตตัง ตะติยัง':
+        'The Karaṇīya Mettā Sutta — the third',
+    'บทขัดขันธะปะริตตัง ฉัททันตะปะริตัง':
+        'Preparatory verses for the Khandha and Chaddanta protections',
+    'ขันธะปะริตตัง จะตุตถัง':
+        'The Khandha Paritta — the fourth',
+    'ฉัททันตะปะริตตัง':
+        'The Chaddanta Paritta',
+    'บทขัดโมระปะริตตัง':
+        'Preparatory verses for the Mora Paritta',
+    'โมระปะริตตัง ปัญจะมัง':
+        'The Mora Paritta — the fifth',
+    'บทขัดวัฏฏะกะปะริตตัง':
+        'Preparatory verses for the Vaṭṭaka Paritta',
+    'วัฏฏะกะปะริตตัง ฉัฏฐัง':
+        'The Vaṭṭaka Paritta — the sixth',
+    'บทขัดธะชัคคะสุตตัง':
+        'Preparatory verses for the Dhajagga Sutta',
+    'ธะชัคคะปะริตตัง ธะชัคคะสุตตัง สัตตะมัง':
+        'The Dhajagga Paritta, the Dhajagga Sutta — the seventh',
+    'บทขัดอาฏานาฏิยะปะริตตัง':
+        'Preparatory verses for the Āṭānāṭiya Paritta',
+    'อาฏานาฏิยะปะริตตัง อัฏฐะมัง':
+        'The Āṭānāṭiya Paritta — the eighth',
+    'บทขัดอังคุลิมาละปะริตตัง':
+        'Preparatory verses for the Aṅgulimāla Paritta',
+    'อังคุลิมาละปะริตตัง นะวะมัง':
+        'The Aṅgulimāla Paritta — the ninth',
+    'บทขัดโพชฌังคะปะริตตัง':
+        'Preparatory verses for the Bojjhaṅga Paritta',
+    'โพชฌังคะปะริตตัง ทะสะมัง':
+        'The Bojjhaṅga Paritta — the tenth',
+    'บทขัดอะภะยะปะริตตัง':
+        'Preparatory verses for the Abhaya Paritta',
+    'อะภะยะปะริตตัง เอกาทะสะมัง':
+        'The Abhaya Paritta — the eleventh',
+    'เทวะตาอุยโยชะนะคาถา':
+        'Verses taking leave of the devas',
+    'บทขัดชะยะปะริตตัง':
+        'Preparatory verses for the Jaya Paritta',
+    'ชะยะปะริตตัง ท์วาทะสะมัง':
+        'The Jaya Paritta — the twelfth',
+    'ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา':
+        'Verses appealing to the power of the Triple Gem',
+    'สุขาภิยาจะนะคาถา':
+        'Verses appealing for happiness',
+    'มงคลจักรวาฬใหญ่':
+        'The Greater Universal Blessing',
+    'บทขัดทะสะนาถะกะระณะธัมมะสุตตัง':
+        'Preparatory verses for the Dasanāthakaraṇadhamma Sutta',
+    'ทะสะนาถะกะระณะธัมมะสุตตัง':
+        'The Sutta on the ten qualities that make a refuge',
+    'บทขัดอะภิณ์หะปัจจะเวกขะณะปาฐะ':
+        'Preparatory verses for the passage of frequent recollection',
+    'อะภิณ์หะปัจจะเวกขะณะปาโฐ':
+        'The passage of frequent recollection',
+    'บทขัดมัคคะวิภังคะสุตตัง':
+        'Preparatory verses for the Maggavibhaṅga Sutta',
+    'มัคคะวิภังคะสุตตัง':
+        'The Maggavibhaṅga Sutta — the path analysed',
+    'อัฏฐังคิกะมัคคะคาถา':
+        'Verses on the Noble Eightfold Path',
+    'บทขัดกะระณียากะระณียะสุตตัง':
+        'Preparatory verses for the Karaṇīyākaraṇīya Sutta',
+    'กะระณียากะระณียะสุตตัง':
+        'The Sutta on what should and should not be done',
+    'บทขัดอัคคัปปะสาทะสุตตัง':
+        'Preparatory verses for the Aggappasāda Sutta',
+    'อัคคัปปะสาทะสุตตัง':
+        'The Sutta on the highest confidence',
+    'บทขัดฉะสาราณียะธัมมะสุตตัง':
+        'Preparatory verses for the Chasāraṇīyadhamma Sutta',
+    'ฉะสาราณียะธัมมะสุตตัง':
+        'The Sutta on the six memorable qualities',
+    'บทขัดภิกขุอะปะริหานิยะธัมมะสุตตัง':
+        'Preparatory verses for the Bhikkhu-aparihāniyadhamma Sutta',
+    'ภิกขุอะปะริหานิยะธัมมะสุตตัง':
+        'The Sutta on the conditions of a bhikkhu’s non-decline',
+    'บทขัดปะหานะภาวะนาสุตตัง':
+        'Preparatory verses for the Pahānabhāvanā Sutta',
+    'ปะหานะภาวะนาสุตตัง':
+        'The Sutta on abandoning and developing',
+    'บทขัดจะตุรัปปะมัญญาปาฐะ':
+        'Preparatory verses for the four boundless states',
+    'จะตุรัปปะมัญญาปาโฐ':
+        'The passage on the four boundless states',
+    'บทขัดธัมมะนิยามะสุตตัง':
+        'Preparatory verses for the Dhammaniyāma Sutta',
+    'ธัมมะนิยามะสุตตัง':
+        'The Sutta on the certainty of the Dhamma',
+    'บทขัดอะนัตตะลักขะณะสุตตัง':
+        'Preparatory verses for the Anattalakkhaṇa Sutta',
+    'อะนัตตะลักขะณะสุตตัง':
+        'The Sutta on the characteristic of not-self',
+    'บทขัดอาทิตตะปะริยายะสุตตัง':
+        'Preparatory verses for the Ādittapariyāya Sutta',
+    'อาทิตตะปะริยายะสุตตัง':
+        'The Fire Sermon',
+    'บทขัดสะติปัฏฐานะปาฐะ':
+        'Preparatory verses for the Satipaṭṭhāna passage',
+    'สะติปัฏฐานะปาโฐ':
+        'The passage on the foundations of mindfulness',
+    'มะหาสะติปัฏฐานะสุตตะปาโฐ':
+        'The Mahāsatipaṭṭhāna Sutta passage',
+    'พระสูตร พระปริตร พระปาฐะที่กำหนดสวดในวันโกน วันพระ เวลาเย็น':
+        'Suttas, protections and passages appointed for the eve of the observance day and the observance day itself, in the evening',
+    'บทขัดธัมมะจักกัปปะวัตตะนะสุตตัง':
+        'Preparatory verses for the Dhammacakkappavattana Sutta',
+    'ธัมมะจักกัปปะวัตตะนะสุตตัง':
+        'The Setting in Motion of the Wheel of the Dhamma',
+    'พระสูตร พระปริตร พระปาฐะที่กำหนดสวดในวันขึ้นหรือแรม ๘ ค่ำ เวลาเย็น':
+        'Suttas, protections and passages appointed for the eighth day of the waxing or waning moon, in the evening',
+    'ปุพพะภาคะมะนะการะปาโฐ':
+        'The preliminary passage of homage',
+    'มังคะละสุตตัง':
+        'The Maṅgala Sutta',
+    'ระตะนะสุตตัง':
+        'The Ratana Sutta',
+    'กะระณียะเมตตะสุตตัง':
+        'The Karaṇīya Mettā Sutta',
+    'ขันธะปะริตตัง':
+        'The Khandha Paritta',
+    'ธะชัคคะปะริตตัง (แบบย่อ)':
+        'The Dhajagga Paritta — short form',
+    'อาฏานาฏิยะปะริตตัง':
+        'The Āṭānāṭiya Paritta',
+    'อังคุลิมาละปะริตตัง':
+        'The Aṅgulimāla Paritta',
+    'โพชฌังคะปะริตตัง':
+        'The Bojjhaṅga Paritta',
+    'อะภะยะปะริตตัง':
+        'The Abhaya Paritta',
+    'ชะยะปะริตตัง':
+        'The Jaya Paritta',
+    'พระสูตรที่กำหนดสวดในวันขึ้น ๑๔ ค่ำ เวลาเย็น':
+        'The Sutta appointed for the fourteenth day of the waxing moon, in the evening',
+    'บทขัดมะหาสะมะยะสุตตัง':
+        'Preparatory verses for the Mahāsamaya Sutta',
+    'มะหาสะมะยะสุตตัง':
+        'The Mahāsamaya Sutta — the great assembly',
+    'พระสูตรที่กำหนดสวดในวันแรม ๗ ค่ำ เวลาเย็น':
+        'The Sutta appointed for the seventh day of the waning moon, in the evening',
+    'คิริมานันทะสุตตัง':
+        'The Girimānanda Sutta',
+    'พระสูตรที่กำหนดสวดในวันแรม ๑๓ ค่ำหรือ ๑๔ ค่ำ เวลาเย็น':
+        'The Sutta appointed for the thirteenth or fourteenth day of the waning moon, in the evening',
+    'บทขัดโลกะธัมมะสุตตัง':
+        'Preparatory verses for the Lokadhamma Sutta',
+    'โลกะธัมมะสุตตัง':
+        'The Sutta on the worldly conditions',
+    'บทสวดมนต์ ทำวัตรเช้า-เย็น แปล':
+        'The morning and evening services, with translation',
+    'ทำวัตรเช้า แปล':
+        'The Morning Service, translated',
+    'ปุพพะภาคะนะมะการ':
+        'The preliminary homage',
+    'พุทธาภิถุติ':
+        'In praise of the Buddha',
+    'ธัมมาภิถุติ':
+        'In praise of the Dhamma',
+    'สังฆาภิถุติ':
+        'In praise of the Sangha',
+    'พุทธชัยมงคลคาถา (ถวายพรพระ)':
+        'The Buddha’s Victory Blessing verses — offering blessings',
+    'สัพพะปัตติทานะคาถา':
+        'Verses dedicating merit to all beings',
+    'ปัฏฐะนะฐะปะนะคาถา':
+        'Verses establishing an aspiration',
+    'เขมาเขมะสะระณะทีปิกะคาถา':
+        'Verses showing the secure and the insecure refuge',
+    'อะภิณหะปัจจะเวกขะณะ ๕':
+        'The five subjects for frequent recollection',
+    'คาถาโพธิบาท':
+        'Verses at the foot of the Bodhi tree',
+    'คาถามงคลจักรวาฬแปดทิศ':
+        'Verses of universal blessing in the eight directions',
+    'คำแผ่เมตตาให้แก่ตนเอง':
+        'Spreading loving-kindness to oneself',
+    'คำแผ่เมตตาให้ผู้อื่น':
+        'Spreading loving-kindness to others',
+    'ทำวัตรเย็นแปล':
+        'The Evening Service, translated',
+    'พุทธานุสสะติ':
+        'Recollection of the Buddha',
+    'พุทธาภิคีติ':
+        'The chant in praise of the Buddha',
+    'ธัมมานุสสะติ':
+        'Recollection of the Dhamma',
+    'ธัมมาภิคีติ':
+        'The chant in praise of the Dhamma',
+    'สังฆานุสสะติ':
+        'Recollection of the Sangha',
+    'สังฆาภิคีติ':
+        'The chant in praise of the Sangha',
+    'นมัสการพระอรหันต์ ๘ ทิศ':
+        'Homage to the arahants of the eight directions',
+    'อุณ์หิสสะวิชะยะคาถา':
+        'The Uṇhissavijaya verses',
+    'พระคาถาชินบัญชร':
+        'The Jinapañjara — the Victor’s Armour',
+    'ยอดพระกัณฑ์ไตรปิฎก':
+        'The Crown Section of the Tipiṭaka',
+    'ภาคปกิณกะ':
+        'Miscellaneous section',
+    'คำอาราธนาศีล ๕ ปรกติ':
+        'Requesting the ordinary five precepts',
+    'คำอาราธนาศีล ๕ พิเศษ คือ นิจศีล':
+        'Requesting the special five precepts, kept permanently',
+    'คำอาราธนาศีล ๘ ปรกติ':
+        'Requesting the ordinary eight precepts',
+    'คำอาราธนาศีล ๘ พิเศษ คืออุโบสถศีล':
+        'Requesting the special eight precepts, the Uposatha precepts',
+    'คำอาราธนาสวดพระปริตร':
+        'Requesting the chanting of the protection verses',
+    'คำอาราธนาแสดงธรรม':
+        'Requesting a Dhamma talk',
+    'คำอาราธนาแสดงธรรมอย่างพิสดาร':
+        'Requesting a Dhamma talk, elaborate form',
+    'คำบังสุกุลศพหรืออัฐิ':
+        'The paṃsukūla for a body or relics',
+    'คำบังสุกุลคนเป็น':
+        'The paṃsukūla for the living',
+    'คำขอขมาโทษพระรัตนตรัย':
+        'Asking pardon of the Triple Gem',
+    'คำขอขมาโทษแด่พระมหาเถระ':
+        'Asking pardon of a senior elder',
+    'คำรับขมาโทษของพระมหาเถระ':
+        'A senior elder’s acceptance of the apology',
+    'คำอนุโมทนาของพระมหาเถระ':
+        'A senior elder’s expression of rejoicing',
+    'คาถาจุดเทียนชัย':
+        'Verses for lighting the victory candle',
+    'คาถาดับเทียนชัย':
+        'Verses for extinguishing the victory candle',
+    'อธิบายระเบียบสวดมนต์ในพิธีต่าง ๆ':
+        'Notes on the order of chanting at the various ceremonies',
+    'ระเบียบสวดมนต์งานพิธีมงคล':
+        'The order of chanting at auspicious ceremonies',
+    'ระเบียบสวดมนต์งานพิธีมงคลอื่น ๆ':
+        'The order of chanting at other auspicious ceremonies',
+    'ระเบียบสวดเจ็ดตำนานอย่างเต็มที่':
+        'The Seven Tamnan in full',
+    'ระเบียบสวดเจ็ดตำนานอย่างปานกลาง':
+        'The Seven Tamnan, middle length',
+    'ระเบียบสวดเจ็ดตำนานอย่างย่อ':
+        'The Seven Tamnan in brief',
+    'ระเบียบสวดถวายพรพระก่อนฉัน':
+        'The order of offering blessings before the meal',
+    'ระเบียบสวดในงานพิธีอวมงคล':
+        'The order of chanting at funeral ceremonies',
+    'อธิบายระเบียบสวดมนต์พิเศษ':
+        'Notes on the special chanting orders',
+    'ระเบียบสวดมนต์นพเคราะห์':
+        'The order of chanting for the nine planets',
+    'ระเบียบถวายพรพระ':
+        'The order of offering blessings',
+    'ระเบียบอนุโมทนา':
+        'The order of rejoicing in merit',
+    'อนุโมทนาวิธี':
+        'The method of rejoicing in merit',
+    'มงคลจักรวาฬน้อย (ย่อ)':
+        'The Lesser Universal Blessing — short form',
+    'อัคคัปปะสาทะสุตตะคาถา':
+        'Verses from the Aggappasāda Sutta',
+    'ติโรกุฑฑะกัณฑะปัจฉิมภาค':
+        'The Tirokuḍḍa Kaṇḍa — closing portion',
+    'โภชะนะทานุโมทะนาคาถา':
+        'Verses rejoicing in the gift of food',
+    'อาฏานาฏิยะปะริตตัง (ย่อ)':
+        'The Āṭānāṭiya Paritta — short form',
+    'ระเบียบบังสุกุล':
+        'The order of the paṃsukūla',
+    'คาถาศราทธพรต':
+        'Verses for the memorial offering',
+    'คำอธิบายประกอบ':
+        'Accompanying notes',
+    'ภาคผนวก':
+        'Appendix',
+    'วิธีบรรพชาอุปสมบทแบบอุกาสะ':
+        'The going forth and ordination — the Ukāsa form',
+    'วิธีบรรพชาอุปสมบทแบบเอสาหัง':
+        'The going forth and ordination — the Esāhaṃ form',
+    'คำขอบรรพชานาคคู่':
+        'Requesting the going forth — for a pair of candidates',
+    'คำขอนิสสัยนาคคู่':
+        'Requesting dependence — for a pair of candidates',
+    'คำขออุปสมบทพร้อมกัน':
+        'Requesting ordination together',
+    'คำบอกอนุศาสน์':
+        'Delivering the admonition',
+    'แบบสวดกรรมวาจาในอุปสมบทกรรม สำหรับนาคเดี่ยว':
+        'The formal act of ordination — for a single candidate',
+    'คำสมมติตนเพื่อสอนซ้อม':
+        'Appointing oneself to instruct the candidate',
+    'คำสอนซ้อม':
+        'Instructing the candidate',
+    'คำเรียกอุปสัมปทาเปกขะเข้ามา':
+        'Calling the candidate forward',
+    'คำพระอุปัชฌายะกล่าวเผดียงสงฆ์':
+        'The preceptor’s announcement to the Sangha',
+    'คำสมมติตนเพื่อถามอันตรายิกธรรม':
+        'Appointing oneself to ask the disqualifying questions',
+    'คำถามอันตรายิกธรรม':
+        'The disqualifying questions',
+    'กรรมวาจาอุปสมบท':
+        'The formal act of ordination',
+    'คำสวดสมมติและคำสอนซ้อม (นาคคู่)':
+        'The appointment and instruction — for a pair of candidates',
+    'คำขอเรียกอุปสัมปทาเปกขะเข้ามา':
+        'Asking to call the candidates forward',
+    'คำสมมติตนและคำถามอันตรายิกธรรม':
+        'The appointment and the disqualifying questions',
+    'คำพระอุปัชฌาย์กล่าวเผดียงสงฆ์':
+        'The preceptor’s announcement to the Sangha',
+    'คำสวดกรรมวาจาอุปสมบท':
+        'Chanting the formal act of ordination',
+    'คำขอบวชชี':
+        'Requesting ordination as a nun',
+    'คำอาราธนาศีล ๘':
+        'Requesting the eight precepts',
+    'คำนมัสการพระพุทธเจ้า':
+        'Homage to the Buddha',
+    'คำสมาทานศีล':
+        'Undertaking the precepts',
+    'วิธีแสดงอาบัติ':
+        'The method of confessing an offence',
+    'คำพินทุผ้า':
+        'Marking a robe',
+    'คำอธิษฐาน':
+        'Words of determination',
+    'คำเสียสละ':
+        'Words of relinquishment',
+    'คำคืน':
+        'Words of returning',
+    'คำวิกัปป์':
+        'Words of shared ownership',
+    'คำถอน':
+        'Words of withdrawal',
+    'คำอธิษฐานเข้าพรรษา':
+        'Determining to enter the Rains Retreat',
+    'คำปวารณาออกพรรษา':
+        'The invitation at the end of the Rains Retreat',
+    'คำสัตตาหะ':
+        'The seven-day leave',
+    'คำอนุโมทนากฐิน':
+        'Rejoicing in the Kaṭhina',
+    'คำลาสิกขา':
+        'Words of disrobing',
+    'คำแสดงตนเป็นอุบาสก':
+        'Declaring oneself a lay follower',
+    'กิจวัตร ๑๐ อย่าง':
+        'The ten regular duties',
+    'คำอปโลกน์กฐิน แบบ ๒ รูป':
+        'Announcing the Kaṭhina — the form for two bhikkhus',
+    'คำอปโลกน์กฐิน แบบ ๔ รูป':
+        'Announcing the Kaṭhina — the form for four bhikkhus',
+    'แบบกรรมวาจาสวดให้ผ้ากฐิน':
+        'The formal act for bestowing the Kaṭhina cloth',
+    'คำอธิษฐานผ้ากฐิน':
+        'Determining the Kaṭhina cloth',
+}
+
 THAI_DIGITS = '๐๑๒๓๔๕๖๗๘๙'
 
 
@@ -8574,13 +9115,48 @@ def thai_number(printed):
     return int(''.join(str(THAI_DIGITS.index(ch)) for ch in printed))
 
 
-# The contents as the app uses it: the printed line, plus the integer page
-# derived from the numeral so a link can be built.
-CONTENTS = [
-    {'front_page': front, 'level': level, 'title': title,
-     'page_printed': printed, 'page': thai_number(printed)}
-    for front, level, title, printed in _CONTENTS_LINES
-]
+def _english_for(title, chants):
+    """The English name for a contents line.
+
+    A chant's own `title_english` wins wherever there is one, so the index and
+    the chant page cannot end up calling the same thing two different names.
+    Only where no chant carries the title does the gloss written for the index
+    get used.
+    """
+    for chant in chants:
+        if chant.get('title_thai') == title and chant.get('title_english'):
+            return chant['title_english']
+    return _CONTENTS_ENGLISH.get(title, '')
+
+
+def build_contents(chants=None):
+    """The contents as the app uses it.
+
+    Each printed line gains three things the book does not print: the page as
+    an integer so a link can be built, an English name, and the id of the chant
+    it names where that chant is in the app — which is what lets a reader go
+    straight to the chant rather than to the page it happens to start on.
+    """
+    if chants is None:
+        chants = CHANTS
+    by_title = {c['title_thai']: c['id'] for c in chants if c.get('title_thai')}
+
+    return [
+        {
+            'front_page': front,
+            'level': level,
+            'title': title,
+            'title_english': _english_for(title, chants),
+            'page_printed': printed,
+            'page': thai_number(printed),
+            'chant_id': by_title.get(title),
+        }
+        for front, level, title, printed in _CONTENTS_LINES
+    ]
+
+
+CONTENTS = build_contents()
+
 
 def contents_for_front_page(number, chants=None, page_blocks=None):
     """The contents lines printed on one front-matter page, ready to render.
@@ -8593,8 +9169,9 @@ def contents_for_front_page(number, chants=None, page_blocks=None):
     """
     pages, _ = build_page_index(chants, page_blocks)
     have = {page['page'] for page in pages}
+    rows = build_contents(chants) if chants is not None else CONTENTS
     return [dict(row, in_app=row['page'] in have)
-            for row in CONTENTS if row['front_page'] == number]
+            for row in rows if row['front_page'] == number]
 
 
 def get_chant(chant_id):

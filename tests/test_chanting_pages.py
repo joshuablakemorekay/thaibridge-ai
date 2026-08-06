@@ -490,9 +490,50 @@ class TestTheBooksOwnContents:
         # The body route answers about the BODY page, whatever front matter exists.
         assert 'สารบัญ' not in body
 
-    def test_a_page_that_is_in_the_app_becomes_a_link(self):
+    def test_a_page_that_is_in_the_app_gets_a_button(self):
         page = self.read()
-        assert 'a class="toc-title"' in page
+        assert 'toc-btn' in page
+        assert '/chanting/page/' in page
+
+    def test_a_chant_that_is_in_the_app_can_be_opened_directly(self):
+        """The page and the chant are different destinations.
+
+        A page is for chanting along when a number is called out; the chant is
+        for reading it. Sending someone to the page when they wanted the chant
+        is not a small thing when the chant starts half way down.
+        """
+        page = self.read()
+        assert 'Open chant' in page
+
+        chanting = chanting_module()
+        linked = {r['chant_id'] for r in chanting.CONTENTS if r['chant_id']}
+        assert linked, 'no contents line resolves to a chant'
+        for chant_id in linked:
+            assert chanting.get_chant(chant_id), f'{chant_id} does not exist'
+
+    def test_every_line_carries_an_english_name(self):
+        """The index is unreadable to a non-Thai reader without it."""
+        missing = [r['title'] for r in chanting_module().CONTENTS
+                   if not r['title_english']]
+        assert not missing, f'{len(missing)} lines have no English: {missing[:3]}'
+
+    def test_the_english_never_disagrees_with_the_chant_page(self):
+        """A chant's own title_english wins wherever there is one, so the index
+        and the chant page cannot call the same thing two different names."""
+        chanting = chanting_module()
+        for row in chanting.CONTENTS:
+            if not row['chant_id']:
+                continue
+            chant = chanting.get_chant(row['chant_id'])
+            if chant.get('title_english'):
+                assert row['title_english'] == chant['title_english']
+
+    def test_the_page_number_is_shown_in_both_scripts(self):
+        """A reader who cannot read Thai numerals still has to find the page a
+        monk just called out."""
+        page = self.read()
+        assert 'toc-page-thai' in page
+        assert 'toc-page-arabic' in page
 
     def test_a_page_not_entered_yet_stays_plain_text(self):
         """The whole value of the page: it says what is missing."""

@@ -53,7 +53,38 @@
     .toc-row.is-section .toc-title { font-weight: bold; color: var(--royal-purple); }
     .toc-row.is-entry .toc-title { padding-left: 1.6rem; }
 
-    .toc-title { flex: 0 1 auto; }
+    .toc-names { flex: 0 1 auto; display: flex; flex-direction: column; }
+    .toc-title { display: block; }
+    /* Written for this app — the book prints no English anywhere. Set quieter
+       than the Thai so the printed line stays the line, and the gloss reads as
+       help rather than as what the book says. */
+    .toc-english {
+        display: block;
+        font-size: 0.82rem;
+        color: #6b5b45;
+        line-height: 1.35;
+    }
+
+    /* The buttons. Two destinations that are genuinely different: the chant
+       is for reading, the page is for chanting along. */
+    .toc-go { flex: 0 0 auto; display: flex; gap: 0.35rem; }
+    .toc-btn {
+        display: inline-block;
+        padding: 0.2rem 0.55rem;
+        border: 1px solid var(--royal-gold);
+        border-radius: 6px;
+        font-size: 0.78rem;
+        text-decoration: none;
+        color: var(--royal-purple);
+        background: #fff;
+        white-space: nowrap;
+    }
+    .toc-btn:hover { background: var(--royal-gold); }
+    .toc-btn.is-chant { background: #FFF7E6; }
+
+    .toc-page-thai { font-weight: bold; }
+    .toc-page-arabic { color: #8a7a5e; font-size: 0.85em; }
+    .toc-page-arabic::before { content: '\00a0/\00a0'; }
     /* The leader dots. Decoration in print; here they are what lets the eye
        cross a wide screen from a title to its number without losing the row. */
     .toc-dots {
@@ -134,16 +165,38 @@
     <div class="toc-colhead">หน้า</div>
 
     {% for row in rows %}
-    <div class="toc-row is-{{ row.level }}{% if not row.in_app %} not-in-app{% endif %}">
-        {% if row.in_app %}
-        <a class="toc-title" href="{{ url_for('chanting_page', page=row.page) }}">{{ row.title }}</a>
+    <div class="toc-row is-{{ row.level }}{% if not row.in_app and not row.chant_id %} not-in-app{% endif %}">
+        <div class="toc-names">
+            <span class="toc-title">{{ row.title }}</span>
+            {% if row.title_english %}
+            <span class="toc-english">{{ row.title_english }}</span>
+            {% endif %}
+        </div>
+
         <span class="toc-dots"></span>
-        <a class="toc-page" href="{{ url_for('chanting_page', page=row.page) }}">{{ row.page_printed }}</a>
-        {% else %}
-        <span class="toc-title">{{ row.title }}</span>
-        <span class="toc-dots"></span>
-        <span class="toc-page">{{ row.page_printed }}</span>
-        {% endif %}
+
+        {# The number as the book prints it, with the everyday one beside it.
+           A reader who cannot read Thai numerals still has to be able to find
+           the page a monk just called out. #}
+        <span class="toc-page">
+            <span class="toc-page-thai">{{ row.page_printed }}</span>
+            <span class="toc-page-arabic">{{ row.page }}</span>
+        </span>
+
+        {# Two different destinations, and they are not the same thing. The
+           chant is for reading and understanding; the page is for chanting
+           along when a number has been called out. Offered separately so the
+           reader picks, rather than being sent somewhere they did not mean. #}
+        <span class="toc-go">
+            {% if row.chant_id %}
+            <a class="toc-btn is-chant"
+               href="{{ url_for('chanting_book') }}#{{ row.chant_id }}">Open chant</a>
+            {% endif %}
+            {% if row.in_app %}
+            <a class="toc-btn"
+               href="{{ url_for('chanting_page', page=row.page) }}">Page {{ row.page }}</a>
+            {% endif %}
+        </span>
     </div>
     {% else %}
     <p>This page of the contents has not been entered yet.</p>
@@ -151,10 +204,19 @@
 </div>
 
 <p class="toc-key">
-    A title you can tap is a page that is in the app. A title in grey is a page
-    of the book that has not been entered yet — the line is printed here because
-    the book prints it, and it will become a link when that page arrives.
+    <strong>Open chant</strong> goes to the chant itself, to read it with its
+    meaning. <strong>Page</strong> opens the book at that page, as the book
+    prints it — which is the one you want when a number has been called out
+    mid-service. A line with no buttons is a page of the book that has not been
+    entered yet; the line is printed here because the book prints it, and the
+    buttons appear when that page arrives.
     {% if entered %}Pages in so far: {{ entered|join(', ') }}.{% endif %}
+</p>
+
+<p class="toc-key">
+    The English under each title was written for this app. The book prints no
+    English at all, so there is nothing in it to check these against — they are
+    a way in, not the book's own words.
 </p>
 
 <div class="toc-turn">
