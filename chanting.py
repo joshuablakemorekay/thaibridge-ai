@@ -7357,14 +7357,204 @@ CHANT_SECTIONS = [
 # `english_unverified` exactly as an app-written chant translation is — and the
 # reader is told, on every page it appears on.
 PAGE_BLOCKS = [
-    # Filled in page by page as the batches are read. Empty is a truthful
-    # state: it means no page has had its non-chant material entered yet.
+    # ── Page 7 ──────────────────────────────────────────────────────────
+    # Printed between the end of ตังขะณิกะปัจจะเวกขะณะปาโฐ and the title of
+    # ปัตติทานะคาถา. The page's footnote (๑. นัย ม. มู ๑๒/๑๓-๘) is NOT repeated
+    # here — it is already on the chant as `source_printed` and renders in the
+    # page's citation footnotes.
+    {
+        'page': 7,
+        'after': 'tangkhanika-paccavekkhana-patho',
+        # This paragraph contains ปัตติทานะคาถา's invitation, so the chant's
+        # own invitation line is not shown again below its title.
+        'invitation_printed_here': ['pattidana-gatha'],
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'ต่อจาก ตังขะณิกะปัจจะเวกขะณะปาฐะ สวด ปัตติทานะคาถา ซึ่งเป็น'
+                    'บทแผ่ส่วนบุญ ประธานกล่าวเชิญว่า หันทะ มะยัง ปัตติทานะคาถาโย '
+                    'ภะณามะ เส. รองประธานขึ้นต้นบทว่า ยา เทวะตา นอกนั้นรับ สันติ '
+                    'วิหาระวาสินี ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.'
+                ),
+                'english': (
+                    'After the Tangkhanika-paccavekkhana-patho, chant the '
+                    'Pattidana-gatha, which is the passage for sharing merit. '
+                    'The leader gives the invitation: handa mayaṃ '
+                    'pattidāna-gāthāyo bhaṇāma se. The deputy begins the line '
+                    'yā devatā, and the rest join with santi vihāravāsinī and '
+                    'so on, together, pausing at the commas as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+
+    # ── Page 8 ──────────────────────────────────────────────────────────
+    # Below the end of ปัตติทานะคาถา: the closing of the whole morning service,
+    # then the explanatory section, whose numbered items run on to page 9.
+    {
+        'page': 8,
+        'after': 'pattidana-gatha',
+        'blocks': [
+            {
+                'type': 'service_closing',
+                'thai': 'จบพิธีทำวัตรเช้า',
+                'english': 'Here ends the morning chanting service',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'เมื่อสวดบท ปัตติทานะคาถา จบลงแล้ว พึงนั่งสงบแผ่ส่วนกุศลแด่ท่าน'
+                    'บรรพบุรุษบุรพาจารย์ และท่านผู้มีพระคุณอื่น ๆ ตลอดถึงสรรพสัตว์ทุกชั้นชาติ '
+                    'สักครู่หนึ่ง แล้วนั่งคุกเข่ากราบพระด้วยเบญจางคประดิษฐ์ ๓ หน พร้อม ๆ กัน '
+                    'ประธานสั่งเลิกประชุม เป็นอันเสร็จพิธีทำวัตรสวดมนต์ภาคเช้าเท่านี้.'
+                ),
+                'english': (
+                    'When the Pattidana-gatha has ended, sit quietly for a '
+                    'short while and share the merit with forebears and '
+                    'former teachers, with others to whom gratitude is owed, '
+                    'and with all beings of every kind. Then kneel and bow to '
+                    'the Buddha with the fivefold prostration three times, all '
+                    'together. The leader closes the assembly, and the morning '
+                    'chanting service is complete.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'heading',
+                'thai': 'คำอธิบายประกอบทำวัตรเช้า',
+                'english': 'Notes on the morning service',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'พิธีทำวัตรเช้านี้ใช้ได้ทั้งภิกษุสามเณร ทั้งอุบาสกอุบาสิกา แต่มีถ้อยคำที่จะพึง'
+                    'เปลี่ยน ให้ถูกต้องตามเพศภาวะของตน ๆ ดังนี้'
+                ),
+                'english': (
+                    'This morning service may be used by bhikkhus and '
+                    'sāmaṇeras and by laymen and laywomen alike, but there are '
+                    'words that should be changed to suit one\'s own standing, '
+                    'as follows.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'item',
+                'number': 1,
+                'thai': (
+                    'ในบท สังเวคะปะริกิตตะนะปาฐะ คำว่า เต ในประโยคว่า เต มะยัง '
+                    'โอติณณาม์หะ ชาติยา ชะรามะระเณนะ สำหรับภิกษุสามเณรและอุบาสก ถ้าอุบาสิกา'
+                    'สวด ให้เปลี่ยนเป็น ตา เข้าประโยคว่า ตา มะยัง'
+                ),
+                'english': (
+                    'In the Saṃvega-parikittana-patha, the word te in the '
+                    'phrase te mayaṃ otiṇṇāmha jātiyā jarāmaraṇena is for '
+                    'bhikkhus, sāmaṇeras and laymen. If a laywoman is '
+                    'chanting, change it to tā, giving the phrase tā mayaṃ.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'item',
+                'number': 2,
+                'thai': (
+                    'ตั้งแต่ประโยคว่า จิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง อุททิสสะ อะระ'
+                    'หันตัง สัมมาสัมพุทธัง ไปจนจบนั้น สำหรับภิกษุสามเณรสวด ถ้าเป็นอุบาสกอุบาสิกา '
+                    'ให้เปลี่ยนเป็นดังนี้.'
+                ),
+                'english': (
+                    'From the phrase ciraparinibbutampi taṃ bhagavantaṃ '
+                    'uddissa arahantaṃ sammāsambuddhaṃ to the end is for '
+                    'bhikkhus and sāmaṇeras to chant. For laymen and laywomen '
+                    'it is changed as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    {
+        'page': 8,
+        'after': 'samvega-parikittana-patha-lay-variant',
+        'blocks': [
+            # NOT a citation, so it cannot live in `source_printed`. The book
+            # numbers it 1 in Arabic while page 7's is ๑ in Thai — both are the
+            # first footnote on their own page, and the numerals mean nothing
+            # beyond that.
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'คะโต สำหรับอุบาสก ถ้าอุบาสิกา ใช้ คะตา',
+                'english': (
+                    'gato is for a layman; a laywoman uses gatā.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
 ]
 
 
 def get_chant(chant_id):
     """Return one chant by id, or None."""
     return next((c for c in CHANTS if c['id'] == chant_id), None)
+
+
+def check_page_blocks(chants=None, page_blocks=None):
+    """Return a list of problems with PAGE_BLOCKS, empty when it is sound.
+
+    This is where a bad anchor is caught. `build_page_index` deliberately does
+    not raise — a typo must not be able to take the chanting book down at
+    request time — so the strictness lives here instead, and a test runs it
+    over the real data. That keeps the guarantee (nothing is placed on a page
+    it was not printed on) without making every reader depend on it.
+
+    Checks that every `after` names a chant actually printed on that page, and
+    that every block carries the keys its type is rendered from. A block whose
+    `thai` is missing would render as an empty line: present in the data,
+    invisible on the page, and impossible to spot by reading the file.
+    """
+    if chants is None:
+        chants = CHANTS
+    if page_blocks is None:
+        page_blocks = PAGE_BLOCKS
+
+    pages, _ = build_page_index(chants, page_blocks=[])
+    chants_on_page = {
+        page['page']: {entry['chant']['id'] for entry in page['entries']}
+        for page in pages
+    }
+
+    problems = []
+    for group in page_blocks:
+        page = group.get('page')
+        anchor = group.get('after')
+        if anchor is not None and anchor not in chants_on_page.get(page, set()):
+            problems.append(
+                f"page {page}: blocks anchored after '{anchor}', which is not "
+                f"printed on that page"
+            )
+        for named in group.get('invitation_printed_here', ()):
+            if named not in chants_on_page.get(page, set()):
+                problems.append(
+                    f"page {page}: invitation_printed_here names '{named}', "
+                    f"which is not printed on that page"
+                )
+        for index, block in enumerate(group.get('blocks', [])):
+            where = f"page {page}, block {index} ({block.get('type')})"
+            if not block.get('thai'):
+                problems.append(f'{where}: no `thai`, so it renders as nothing')
+            if block.get('type') == 'item' and block.get('number') is None:
+                problems.append(f'{where}: a numbered item with no number')
+            if block.get('english') and not block.get('english_unverified'):
+                problems.append(
+                    f'{where}: English that does not say it was written for '
+                    f'this app'
+                )
+    return problems
 
 
 def build_page_index(chants=None, page_blocks=None):
@@ -7455,19 +7645,28 @@ def build_page_index(chants=None, page_blocks=None):
         chant_entries = list(pages.get(page, {}).values())
         groups = groups_by_page.get(page, [])
 
-        # An anchor naming a chant that is not on this page cannot be placed.
-        # Raising is deliberate: the alternative is putting an instruction
-        # somewhere plausible, and a chanter reads what is on the page as
-        # belonging to the page. This is hand-written data checked by tests, so
-        # a bad anchor is caught before it is ever deployed.
+        # An anchor naming a chant that is not on this page has nowhere exact
+        # to go, so it falls to the foot of the page rather than vanishing.
+        # This is NOT the place that error gets caught — `check_page_blocks`
+        # is, and a test runs it over the real data. Raising here instead
+        # would take the whole chanting book down at request time over a typo
+        # in one anchor, which is a far worse failure than one run of prose
+        # sitting low on one page.
         on_this_page = {entry['chant']['id'] for entry in chant_entries}
+        placed_after = {group.get('after') for group in groups} & on_this_page
+        orphaned = [group for group in groups
+                    if group.get('after') is not None
+                    and group.get('after') not in on_this_page]
+
+        # A chant whose invitation the book prints INSIDE a paragraph rather
+        # than on its own line above the verses. The invitation is still on the
+        # chant, because the by-title view needs it and a printed edition will
+        # too — but showing it again here would put it on the page twice, once
+        # in the sentence that introduces it and once in a box the book does
+        # not have.
+        invitation_in_prose = set()
         for group in groups:
-            anchor = group.get('after')
-            if anchor is not None and anchor not in on_this_page:
-                raise ValueError(
-                    f"page {page}: blocks anchored after '{anchor}', which is "
-                    f"not printed on that page"
-                )
+            invitation_in_prose.update(group.get('invitation_printed_here', ()))
 
         entries = []
         # Printed above every chant on the page.
@@ -7475,9 +7674,12 @@ def build_page_index(chants=None, page_blocks=None):
                        for group in groups if group.get('after') is None)
         for entry in chant_entries:
             entry['kind'] = 'chant'
+            entry['invitation_in_block'] = entry['chant']['id'] in invitation_in_prose
             entries.append(entry)
             entries.extend({'kind': 'blocks', 'blocks': group['blocks']}
                            for group in groups if group.get('after') == entry['chant']['id'])
+        entries.extend({'kind': 'blocks', 'blocks': group['blocks']}
+                       for group in orphaned)
 
         built.append({'page': page, 'entries': entries})
 

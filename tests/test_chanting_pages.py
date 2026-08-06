@@ -18,7 +18,7 @@ import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from chanting import build_page_index  # noqa: E402
+from chanting import build_page_index, check_page_blocks  # noqa: E402
 
 
 def verse(number, page=None):
@@ -34,8 +34,18 @@ def chant(chant_id, page_start, verses):
             'verses': verses}
 
 
+def index(chants):
+    """The page index for these chants and no page blocks.
+
+    Explicit because the two halves of the data describe each other: asking
+    for the index of a handful of test chants while the real PAGE_BLOCKS is
+    still in scope builds a book that is half fixture and half chanting.py.
+    """
+    return build_page_index(chants, [])
+
+
 def test_a_chant_on_a_single_page():
-    pages, unpaginated = build_page_index([
+    pages, unpaginated = index([
         chant('metta', 47, [verse(1), verse(2), verse(3)]),
     ])
 
@@ -48,7 +58,7 @@ def test_a_chant_on_a_single_page():
 
 def test_verses_carry_forward_until_the_page_turns():
     """Only verse 4 records a page, so 1-3 stay on 47 and 4-5 move to 48."""
-    pages, _ = build_page_index([
+    pages, _ = index([
         chant('metta', 47, [verse(1), verse(2), verse(3), verse(4, page=48), verse(5)]),
     ])
 
@@ -59,7 +69,7 @@ def test_verses_carry_forward_until_the_page_turns():
 
 def test_a_continued_page_does_not_repeat_the_title():
     """The title is printed once, on the page the chant opens on."""
-    pages, _ = build_page_index([
+    pages, _ = index([
         chant('metta', 47, [verse(1), verse(2, page=48)]),
     ])
 
@@ -69,7 +79,7 @@ def test_a_continued_page_does_not_repeat_the_title():
 
 def test_one_page_holding_the_end_of_one_chant_and_the_start_of_the_next():
     """The commonest page in a chanting book, and the reason a page is not a chant."""
-    pages, _ = build_page_index([
+    pages, _ = index([
         chant('metta', 47, [verse(1), verse(2, page=48)]),
         chant('karaniya', 48, [verse(1), verse(2)]),
     ])
@@ -88,7 +98,7 @@ def test_one_page_holding_the_end_of_one_chant_and_the_start_of_the_next():
 
 def test_a_title_at_the_foot_of_a_page_with_its_verses_overleaf():
     """The chant still occupies its opening page, showing a title and nothing else."""
-    pages, _ = build_page_index([
+    pages, _ = index([
         chant('metta', 47, [verse(1, page=48), verse(2)]),
     ])
 
@@ -100,7 +110,7 @@ def test_a_title_at_the_foot_of_a_page_with_its_verses_overleaf():
 
 def test_chants_without_a_page_are_returned_not_guessed():
     """A plausible page is worse than no page: it is wrong in public, mid-chant."""
-    pages, unpaginated = build_page_index([
+    pages, unpaginated = index([
         chant('metta', 47, [verse(1)]),
         {'id': 'older', 'title_english': 'older', 'verses': [verse(1)]},
     ])
@@ -111,7 +121,7 @@ def test_chants_without_a_page_are_returned_not_guessed():
 
 def test_pages_come_back_in_book_order_whatever_order_the_file_is_in():
     """File order is not book order — page_start is what places a chant."""
-    pages, _ = build_page_index([
+    pages, _ = index([
         chant('third', 90, [verse(1)]),
         chant('first', 12, [verse(1)]),
         chant('second', 47, [verse(1)]),
@@ -122,7 +132,7 @@ def test_pages_come_back_in_book_order_whatever_order_the_file_is_in():
 
 def test_a_gap_in_the_book_is_left_as_a_gap():
     """Pages 48-52 are simply not there yet; nothing invents them."""
-    pages, _ = build_page_index([
+    pages, _ = index([
         chant('metta', 47, [verse(1)]),
         chant('karaniya', 53, [verse(1)]),
     ])
@@ -206,18 +216,41 @@ class TestThePagesOwnMaterial:
         assert [p['page'] for p in pages] == [47, 48]
         assert [e['kind'] for e in pages[1]['entries']] == ['blocks']
 
-    def test_an_anchor_that_matches_no_chant_on_the_page_raises(self):
+    def test_an_anchor_that_matches_no_chant_on_the_page_is_caught(self):
         """The whole point of the anchor is WHERE on the page it goes.
 
-        Placing it somewhere plausible instead would be the same failure as a
-        guessed page number: a chanter reads what is on the page as belonging
-        to the page, and there is nothing afterwards to show it was misplaced.
+        Caught by the checker rather than by raising mid-render. Raising there
+        was the first attempt and it was wrong: PAGE_BLOCKS and CHANTS
+        describe each other, so any disagreement between them — a renamed
+        chant id, a fixture holding one and not the other — took the entire
+        chanting book down with a 500. One typo should not cost every reader
+        the whole book, so the strictness moved to a check that runs over the
+        real data in the suite, where a typo costs a red build instead.
         """
-        with pytest.raises(ValueError, match='not printed on that page'):
-            build_page_index(
-                [chant('metta', 47, [verse(1)])],
-                [self.blocks(47, after='karaniya')],
-            )
+        problems = check_page_blocks(
+            [chant('metta', 47, [verse(1)])],
+            [self.blocks(47, after='karaniya')],
+        )
+
+        assert len(problems) == 1
+        assert 'not printed on that page' in problems[0]
+
+    def test_a_stranded_anchor_still_renders_rather_than_vanishing(self):
+        """Belt and braces for the case the checker is meant to prevent.
+
+        If it ever does happen live, the words go to the foot of the page they
+        were assigned to. Wrong place on the right page beats gone.
+        """
+        pages, _ = build_page_index(
+            [chant('metta', 47, [verse(1)])],
+            [self.blocks(47, after='karaniya')],
+        )
+
+        assert [e['kind'] for e in pages[0]['entries']] == ['chant', 'blocks']
+
+    def test_the_real_page_blocks_are_sound(self):
+        """The check that actually protects the book, run on the book."""
+        assert check_page_blocks() == []
 
     def test_the_book_still_builds_with_whatever_blocks_are_in_it_today(self):
         pages, _ = build_page_index()
@@ -385,6 +418,7 @@ class TestHowThePageIsSet:
         runs_on['verses'][1]['page'] = 42
 
         monkeypatch.setattr(chanting_module, 'CHANTS', [prose, runs_on])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
         return flask_app.app.test_client()
 
     def read(self, client, url):
@@ -459,6 +493,7 @@ class TestItAdaptsToWhateverThePagePrints:
         chant['page_start'] = 60
         mutate(chant)
         monkeypatch.setattr(chanting_module, 'CHANTS', [chant])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
         return flask_app.app.test_client().get(
             '/chanting/page/60', follow_redirects=True).get_data(as_text=True)
 
@@ -507,6 +542,7 @@ class TestItAdaptsToWhateverThePagePrints:
         chant['english_unverified'] = True
         chant['verses'][2]['page'] = 61          # the chant runs onto page 61
         monkeypatch.setattr(chanting_module, 'CHANTS', [chant])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
         client = flask_app.app.test_client()
 
         opening = client.get('/chanting/page/60', follow_redirects=True).get_data(as_text=True)
@@ -573,6 +609,7 @@ class TestThePageRoutes:
         third['page_start'] = 53
 
         monkeypatch.setattr(chanting_module, 'CHANTS', [first, second, third])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
         return flask_app.app.test_client()
 
     def read(self, client, url):
@@ -631,6 +668,7 @@ class TestThePageRoutes:
 
         monkeypatch.setattr(chanting_module, 'CHANTS',
                             [{'id': 'x', 'title_english': 'x', 'verses': []}])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
         page = flask_app.app.test_client().get(
             '/chanting/pages', follow_redirects=True).get_data(as_text=True)
 

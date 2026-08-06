@@ -591,7 +591,10 @@
             {% if chant.title_english and chant.title_thai or chant.title_english and chant.title_pali %}<span class="page-chant-english">{{ chant.title_english }}</span>{% endif %}
         </h2>
 
-        {% if chant.invitation and chant.invitation.pali %}
+        {# Suppressed where the page prints the invitation inside a paragraph
+           instead of on its own line — showing both puts it on the page
+           twice. It stays on the chant for the by-title view. #}
+        {% if chant.invitation and chant.invitation.pali and not entry.invitation_in_block %}
         <div class="verse invitation">
             <span class="invitation-label">Invitation</span>
             <p class="layer layer-pali">{{ chant.invitation.pali }}</p>
