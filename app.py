@@ -5998,6 +5998,40 @@ def chanting_book():
                            page_count=len(chanting.build_page_index()[0]))
 
 
+@app.route('/chanting/contents')
+@require_access('chanting')
+def chanting_contents():
+    """The book's own สารบัญ, page by page as the book sets it.
+
+    Deliberately NOT part of /chanting/page/<n>. Front matter is numbered in
+    its own sequence — (๓๖) is not page 36 — and a monk calling out a number
+    means the body's page, so the two must not share a route.
+    """
+    wanted = request.args.get('p', '')
+    pages = [f for f in chanting.FRONT_MATTER
+             if f['kind'] == 'contents' and f['number']]
+
+    number = None
+    if wanted.isdigit():
+        number = int(wanted)
+    if number not in {f['number'] for f in pages}:
+        number = pages[0]['number'] if pages else None
+
+    here = next((f for f in pages if f['number'] == number), None)
+    numbers = [f['number'] for f in pages]
+    at = numbers.index(number) if number in numbers else -1
+
+    return render_template(
+        'chanting_contents.html',
+        book=chanting.BOOK,
+        front=here,
+        rows=chanting.contents_for_front_page(number) if number else [],
+        prev_page=numbers[at - 1] if at > 0 else None,
+        next_page=numbers[at + 1] if 0 <= at < len(numbers) - 1 else None,
+        entered=sorted(p['page'] for p in chanting.build_page_index()[0]),
+    )
+
+
 @app.route('/chanting/pages')
 @require_access('chanting')
 def chanting_pages():

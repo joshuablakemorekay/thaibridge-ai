@@ -8155,6 +8155,125 @@ PAGE_BLOCKS = [
 ]
 
 
+# ── The book itself: what is printed on its cover and title pages ──────────
+#
+# The words only. The cover carries the ม.ธ.ส. emblem — a stupa in rays over
+# the temple's initials — which is an image and is not reproduced here; the
+# photographs are on file and can be added once there is somewhere to put them.
+#
+# `revision` appears on the title page and the half-title but NOT on the cover,
+# so it is kept separate rather than folded into the edition line.
+BOOK = {
+    'title_thai': 'สวดมนต์ ทำวัตร เช้า เย็น',
+    'title_english': 'Chanting Book: Morning and Evening Service',
+    'edition_thai': 'ฉบับวัดมหาธาตุ สหราชอาณาจักร',
+    'edition_english': 'The Wat Mahathat United Kingdom edition',
+    'revision_thai': 'ฉบับปรับปรุง',
+    'revision_english': 'Revised edition',
+    'emblem_initials': 'ม.ธ.ส.',
+    'english_unverified': True,
+}
+
+
+# ── Front matter — the pages before page 1 ─────────────────────────────────
+#
+# These are numbered in their OWN sequence, in Thai numerals inside brackets:
+# (๓๕), (๓๖), (๓๗). The body has its own page 36, and the two are different
+# pages of the same book. So front matter is never mixed into `page`, and the
+# reading view reaches it by a separate route — a reader who types 36 gets the
+# body's page 36, which is what a monk calling out a number means.
+#
+# `number` is the front-matter page as an integer, for ordering and routing.
+# `printed` is exactly what the page shows, or None where the page carries no
+# number at all — which the opening pages do not.
+FRONT_MATTER = [
+    {'number': None, 'printed': None, 'kind': 'cover', 'file': 'IMG_0250.PNG'},
+    {'number': None, 'printed': None, 'kind': 'title', 'file': 'IMG_0251.PNG'},
+    {'number': None, 'printed': None, 'kind': 'half_title', 'file': 'IMG_0263.PNG'},
+    # ‼ CHECK [IMG_0252.PNG]: the first สารบัญ page prints NO number. The pages
+    #   after it run (๓๖)…(๔๔), so this is almost certainly (๓๕) — but almost
+    #   certainly is not printed, so `printed` stays None and the number is
+    #   inferred only for ordering. Worth a glance at the physical book.
+    {'number': 35, 'printed': None, 'kind': 'contents', 'file': 'IMG_0252.PNG'},
+    {'number': 36, 'printed': '(๓๖)', 'kind': 'contents', 'file': 'IMG_0253.PNG'},
+    {'number': 37, 'printed': '(๓๗)', 'kind': 'contents', 'file': 'IMG_0254.PNG'},
+    {'number': 38, 'printed': '(๓๘)', 'kind': 'contents', 'file': 'IMG_0256.PNG'},
+    {'number': 39, 'printed': '(๓๙)', 'kind': 'contents', 'file': 'IMG_0257.PNG'},
+    {'number': 40, 'printed': '(๔๐)', 'kind': 'contents', 'file': 'IMG_0258.PNG'},
+    {'number': 41, 'printed': '(๔๑)', 'kind': 'contents', 'file': 'IMG_0259.PNG'},
+    {'number': 42, 'printed': '(๔๒)', 'kind': 'contents', 'file': 'IMG_0260.PNG'},
+    {'number': 43, 'printed': '(๔๓)', 'kind': 'contents', 'file': 'IMG_0261.PNG'},
+    {'number': 44, 'printed': '(๔๔)', 'kind': 'contents', 'file': 'IMG_0262.PNG'},
+]
+
+
+# ── The contents (สารบัญ), as the book prints it ───────────────────────────
+#
+# One row per printed line, in printed order. `level` is 'section' for the bold
+# headings the book sets flush left and 'entry' for the titles indented under
+# them — that is the only distinction the page makes, and it is enough to set
+# the page the way the book sets it.
+#
+# `page` is the BODY page the line points at, as an integer, so the app can turn
+# it into a link. `page_printed` is the Thai numeral the book actually shows, and
+# it is what a reader sees — the integer exists to be followed, not read.
+#
+# `front_page` is which front-matter page the line is printed on, so a page of
+# the contents can be rendered as its own page rather than as one long list.
+#
+# This is the most useful single table in the book: it names every chant across
+# all 325 pages and where each one is. Entries whose page is not in the app yet
+# render as plain text rather than links, which makes the contents an honest map
+# of how much of the book has been entered.
+CONTENTS = [
+    # ── (๓๕) ────────────────────────────────────────────────────────────
+    {'front_page': 35, 'level': 'section', 'title': 'ทำวัตรเช้า', 'page': 1, 'page_printed': '๑'},
+    {'front_page': 35, 'level': 'entry', 'title': 'คำบูชาพระรัตนตรัย', 'page': 1, 'page_printed': '๑'},
+    {'front_page': 35, 'level': 'entry', 'title': 'คำนมัสการพระรัตนตรัย', 'page': 1, 'page_printed': '๑'},
+    {'front_page': 35, 'level': 'entry', 'title': 'คำเชิญบูชาและสวดนะโม', 'page': 2, 'page_printed': '๒'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ระตะนัตตะยัปปะณามะคาถา', 'page': 3, 'page_printed': '๓'},
+    {'front_page': 35, 'level': 'entry', 'title': 'สังเวคะปะริกิตตะนะปาฐะ', 'page': 4, 'page_printed': '๔'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ตังขะณิกะปัจจะเวกขะณะปาโฐ', 'page': 6, 'page_printed': '๖'},
+    {'front_page': 35, 'level': 'entry', 'title': 'คำอธิบายประกอบทำวัตรเช้า', 'page': 8, 'page_printed': '๘'},
+    {'front_page': 35, 'level': 'entry', 'title': 'คำประกาศอุโบสถ', 'page': 10, 'page_printed': '๑๐'},
+    {'front_page': 35, 'level': 'entry', 'title': 'คำอาราธนาอุโบสถศีล', 'page': 11, 'page_printed': '๑๑'},
+    {'front_page': 35, 'level': 'entry', 'title': 'อุโบสถศีล', 'page': 12, 'page_printed': '๑๒'},
+    {'front_page': 35, 'level': 'entry', 'title': 'สะระณะคะมะนานุสสะระณะคาถา', 'page': 13, 'page_printed': '๑๓'},
+    {'front_page': 35, 'level': 'entry', 'title': 'คำขอขมาพระรัตนตรัย', 'page': 14, 'page_printed': '๑๔'},
+    {'front_page': 35, 'level': 'section', 'title': 'เสขิยวัตร', 'page': 15, 'page_printed': '๑๕'},
+    {'front_page': 35, 'level': 'entry', 'title': 'สารุปปะ ๒๖ สิกขาบท', 'page': 15, 'page_printed': '๑๕'},
+    {'front_page': 35, 'level': 'entry', 'title': 'โภชชะนะปะฏิสังยุต ๓๐ สิกขาบท', 'page': 16, 'page_printed': '๑๖'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ธัมมะเทสะนาปะฏิสังยุต ๑๖ สิกขาบท', 'page': 17, 'page_printed': '๑๗'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ปะกิณณะกะ ๓ สิกขาบท', 'page': 18, 'page_printed': '๑๘'},
+    {'front_page': 35, 'level': 'section', 'title': 'พระสูตร ปาฐะ และคาถาที่กำหนดสวดในภาคเช้า', 'page': 19, 'page_printed': '๑๙'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ทะสะธัมมะสุตตัง', 'page': 19, 'page_printed': '๑๙'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ปะริตตะกะระณะปาโฐ', 'page': 20, 'page_printed': '๒๐'},
+    {'front_page': 35, 'level': 'entry', 'title': 'เมตตานิสังสะสุตตัง', 'page': 22, 'page_printed': '๒๒'},
+    {'front_page': 35, 'level': 'entry', 'title': 'เมตตานิสังสะคาถา', 'page': 23, 'page_printed': '๒๓'},
+    {'front_page': 35, 'level': 'entry', 'title': 'นิธิกัณฑะคาถา', 'page': 24, 'page_printed': '๒๔'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ธัมมะคาระวาทิคาถา', 'page': 25, 'page_printed': '๒๕'},
+    {'front_page': 35, 'level': 'entry', 'title': 'เทวะตาทิสสะทักขิณานุโมทะนาคาถา', 'page': 26, 'page_printed': '๒๖'},
+    {'front_page': 35, 'level': 'entry', 'title': 'เทวะตาภิสัมมันตะนะคาถา', 'page': 27, 'page_printed': '๒๗'},
+    {'front_page': 35, 'level': 'entry', 'title': 'ติลักขะณาทิคาถา', 'page': 27, 'page_printed': '๒๗'},
+    {'front_page': 35, 'level': 'entry', 'title': 'เขมาเขมะสะระณะคะมะนะปะริทีปิกาคาถา', 'page': 28, 'page_printed': '๒๘'},
+]
+
+
+def contents_for_front_page(number, chants=None, page_blocks=None):
+    """The contents lines printed on one front-matter page, ready to render.
+
+    Each line gains `in_app`: True where the body page it points at has been
+    entered and can therefore be linked. False is not a gap in the book — it is
+    a page of the book that is not in the app yet, and saying so plainly is the
+    point. A contents entry that looked like a link and went nowhere would be a
+    worse lie than one that is honestly plain text.
+    """
+    pages, _ = build_page_index(chants, page_blocks)
+    have = {page['page'] for page in pages}
+    return [dict(row, in_app=row['page'] in have)
+            for row in CONTENTS if row['front_page'] == number]
+
+
 def get_chant(chant_id):
     """Return one chant by id, or None."""
     return next((c for c in CHANTS if c['id'] == chant_id), None)

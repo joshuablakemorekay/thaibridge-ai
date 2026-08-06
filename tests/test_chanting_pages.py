@@ -455,6 +455,82 @@ class TestTheHeadingsAreTheBooksOwn:
         assert 'page-chant-title page-app-title' not in page
 
 
+class TestTheBooksOwnContents:
+    """สารบัญ — the book's index, reproduced and made navigable.
+
+    Two things are being protected. The first is the numbering: front matter
+    runs (๓๕)…(๔๔) in its OWN sequence, and the body has a page 36 of its own.
+    A monk calls out a number meaning the body, so the two must never share a
+    route or a reader ends up on a contents page mid-service.
+
+    The second is honesty. A contents line whose page is not in the app yet is
+    printed as plain text rather than as a link, because a link that goes
+    nowhere is a worse lie than a visible gap — and it makes this page a true
+    map of how much of the book has been entered.
+    """
+
+    def read(self, **params):
+        import app as flask_app
+        return flask_app.app.test_client().get(
+            '/chanting/contents', query_string=params,
+            follow_redirects=True).get_data(as_text=True)
+
+    def test_the_contents_page_renders(self):
+        page = self.read()
+        assert 'สารบัญ' in page
+        assert chanting_module().BOOK['title_thai'] in page
+
+    def test_front_matter_numbering_is_not_the_body_numbering(self):
+        """(๓๖) and page 36 are different pages of the same book."""
+        import app as flask_app
+
+        client = flask_app.app.test_client()
+        body = client.get('/chanting/page/36', follow_redirects=True).get_data(as_text=True)
+
+        # The body route answers about the BODY page, whatever front matter exists.
+        assert 'สารบัญ' not in body
+
+    def test_a_page_that_is_in_the_app_becomes_a_link(self):
+        page = self.read()
+        assert 'a class="toc-title"' in page
+
+    def test_a_page_not_entered_yet_stays_plain_text(self):
+        """The whole value of the page: it says what is missing."""
+        page = self.read()
+        assert 'not-in-app' in page
+
+    def test_every_link_points_at_a_page_that_actually_exists(self):
+        """A contents entry linking to a page that 404s would be the one bug
+        this page could plausibly ship with."""
+        import re
+
+        import app as flask_app
+
+        client = flask_app.app.test_client()
+        page = self.read()
+        targets = set(re.findall(r'href="/chanting/page/(\d+)"', page))
+        assert targets, 'no links at all — the linking is not working'
+
+        entered = {p['page'] for p in chanting_module().build_page_index()[0]}
+        for target in targets:
+            assert int(target) in entered, f'contents links to page {target}, which is not in'
+
+    def test_an_unknown_front_page_falls_back_rather_than_erroring(self):
+        assert 'สารบัญ' in self.read(p='999')
+        assert 'สารบัญ' in self.read(p='not-a-number')
+
+    def test_the_contents_is_reachable_from_the_index(self):
+        import app as flask_app
+        index = flask_app.app.test_client().get(
+            '/chanting', follow_redirects=True).get_data(as_text=True)
+        assert '/chanting/contents' in index
+
+
+def chanting_module():
+    import chanting
+    return chanting
+
+
 class TestTheMarkupHoldsTogether:
     """Both chanting pages must close every <style> and <script> they open.
 

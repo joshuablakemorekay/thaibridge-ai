@@ -247,6 +247,15 @@
     No chant has a page number yet — they arrive as the book is added from
     photographs of the printed pages. Until then, everything is here by title.
 </p>
+{% else %}
+{# The book's own contents. Worth offering here because it answers a question
+   the title index cannot: what else is in this book, and how much of it is in
+   yet. #}
+<p class="open-at-page-note">
+    Or read <a href="{{ url_for('chanting_contents') }}">the book's own contents
+    page (สารบัญ)</a> — every chant the printed book holds, with the ones already
+    entered as links.
+</p>
 {% endif %}
 
 <h2 style="color: var(--royal-purple); margin-bottom: 0.3rem;">The chants</h2>
