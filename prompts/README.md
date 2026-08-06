@@ -21,7 +21,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`product-overview-section`](./product-overview-section/) | content | Generates a structured Product Overview using a clarifying-question loop | Yes (v1 → v2) |
 | [`tones-consonant-classes`](./tones-consonant-classes/) | agent-workflow | Explore-first build of one free section teaching tones + consonant classes with progressive drills | No (single version) |
 | [`chanting-book-entry`](./chanting-book-entry/) | content / agent-workflow | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v4) |
-| [`chanting-book-batch`](./chanting-book-batch/) | content / agent-workflow | The same workflow rebuilt for volume — several chants per message across a 286-chant book, with truncation made detectable | Yes (v1 → v3, forked from `chanting-book-entry` v4) |
+| [`chanting-book-batch`](./chanting-book-batch/) | content / agent-workflow | The same workflow rebuilt for volume — a 286-chant book read from photographs, page by page, as a digital edition rather than a translation | Yes (v1 → v7, forked from `chanting-book-entry` v4) |
 
 ## Featured iterations
 
@@ -42,6 +42,10 @@ Forked from `chanting-book-entry` when the job went from one chant at a time to 
 The design lesson is about **where a failure report can live**. Batching's real risk is a reply cut off mid-array, which at eight chants is invisible because truncated JSON still parses. Nothing written at the *end* of a reply can report that, since in a truncated reply the end is precisely what is missing — so the manifest is declared **first**, and the count that proves nothing was lost survives the very failure it exists to catch.
 
 It also produced the folder's best argument for negative-testing a rubric. All 17 criteria passed at 100%, which proved nothing until the checks were fed deliberately broken batches. That exposed an inherited condition, `(kh|th|ph)[aeiouɛɔəʉ]`, that had been quietly useless: every Paiboon+ syllable carries a tone mark, so it matched only unaccented spellings — the ones that never occur — while `thâng`, `khǎn` and `phrá` sailed through. **A green check mark is a claim, not evidence.**
+
+**v7** is where the prompt stopped being about reproduction. Two pages went live showing about 40% of what the printed page shows — stage 1 had read the rest correctly and written it into the batch file, and stage 2 had no field for it and let it go. Nothing raised and no test failed; it was found by a human reading the app beside the book. The gap was structural: reconciliation compared chants against the manifest, and *nothing compared the leftovers against anything*. So v7 adds the rule that **everything stage 1 recorded must land somewhere, or the batch does not close** — "there is no field for it" is now a finding that stops the run, not a reason to drop content. Its mirror sits beside it: never write data the app cannot render, or you get a second copy of the truth that nothing tests and nobody reads.
+
+The same release reframed the job — a digital **publication**, not a translation — with a seven-step lifecycle in which two steps, human review and approval, are marked as the developer's and explicitly not delegable. A machine can prove two layers have the same number of units; it cannot know that a line of Pali is the one the tradition actually chants. The five criteria added for v7 were each negative-tested before being trusted, on the same principle the paragraph above learned the hard way.
 
 ### [`buddhist-pdf-integration`](./buddhist-pdf-integration/)
 

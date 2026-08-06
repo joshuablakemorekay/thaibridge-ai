@@ -238,3 +238,95 @@ the API from Claude Code would remove the reply ceiling and the drift entirely,
 since each chant would get a clean context. That was costed at roughly £10–15
 for the whole book. Left as a fallback rather than built, because the manual
 route keeps Josh's eye on every chant — which is the point.
+
+## v7 — a publication, not a translation
+
+Josh reframed what the project is:
+
+> "A good approach is to treat the project like a digital publication, not just
+> a translation."
+
+The workflow reproduced the book accurately and had no account of two things:
+the value beyond the original text, and — more urgently — any step where
+something checked that what stage 1 read actually reached the app.
+
+### What found it
+
+Not a test. A question:
+
+> "What about Page 7 & 8 which are both empty?"
+
+I checked the data, the local render and the live site, found the chant text
+present in all three, and reported no problem. That was the wrong answer to the
+wrong question. Josh corrected it:
+
+> "I checked them in the app against the book and they don't appear to contain
+> everything so make it exactly the same as the book."
+
+"Empty" meant *incomplete against the book*, not blank. Page 8 was serving about
+40% of what its printed page shows — the service closing, the explanatory
+section, its numbered items and a footnote were all missing. Stage 1 had read
+every one of them correctly and written them into the batch file; stage 2 had no
+field for them and let them go. Nothing raised, no test failed, and it was found
+weeks later by a human reading the app beside the book.
+
+### The failure mode v7 handles
+
+The batch file and the app were never compared. Reconciliation checked chants
+against the manifest; nothing checked the leftovers against anything.
+
+So v7 adds a gate: every key of the batch file must be shown to have landed
+somewhere — a chant field, a `PAGE_BLOCKS` entry, a check comment, or a stated
+decision to defer — and **"there is no field for it" now stops the batch** rather
+than losing the content. Its mirror is written down beside it: never write data
+the app cannot render, or you get a second copy of the truth that nothing tests
+and nobody reads, drifting from the batch file it came from.
+
+The rest follows from the same framing. Stage 1 checks itself while the
+photograph is still open, because stage 2 may not open the images and that is
+therefore the last moment the page is visible. Stage 2 ends with a QA pass on
+the rendered page rather than the data. Steps 4 and 7 of the seven — human
+review and approval — are marked as Josh's and not delegable, because a machine
+can prove two layers have the same number of units and cannot know that a line
+of Pali is the one the tradition actually chants.
+
+### Outcome
+
+Shipped. Josh then set the constraint that made it provable:
+
+> "It should still do everthing it did before such as complete app pages to look
+> exactly the same as physical book images, except with the additional
+> improvements added"
+
+Verified rather than asserted: 229 lines added and **0 removed**; 45 → 49
+sections with all 45 originals still present; all 11 page-fidelity rules intact.
+
+### Engineering on the output
+
+- *Accepted as-is:* the bulk of the prompt text and the block-model code went in
+  as generated.
+- *Reworked, and why:* Josh wrote no code this session. His contribution was
+  direction and review, and it changed the work substantially. He found the
+  defect by reading the app beside the physical book, which no test could have
+  done. He set the standard — "exactly the same as the book" — that turned a
+  content gap into an architecture change. He specified the v7 workflow. He
+  rejected the first framing of the problem, and demanded proof that v7 was
+  additive rather than accepting the claim.
+- *Also caught:* two process failures — commits made to `main` without asking,
+  and commits carrying a `Co-Authored-By` trailer his own skill forbids. Found
+  by a question rather than a review:
+
+  > "Is push part of commit-message-pro?"
+
+  Both are now enforced by tooling rather than by memory.
+- *Roughly:* direction and review, not code. The discovery was the highest-value
+  act in the session and none of it was the AI's.
+
+### What I'd change next
+
+`vocabulary` and `references` are collected but unwritable — the app has no field
+for either, and the prompt says so twice rather than letting them be written
+somewhere useless. That is the next piece of work, and until it exists the
+enrichment half of the publication framing is only half-built.
+
+**Tags:** `content` `agent-workflow` `quality-assurance` `claude-code`
