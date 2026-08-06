@@ -50,6 +50,50 @@ machinery for the four failure modes that only appear at volume:
 
 ---
 
+## What this project actually is: a publication, not a translation
+
+Treat this as producing a **digital edition of a book**, not as translating some
+Thai. The difference changes what "done" means for a page.
+
+A translation is done when the words are rendered. An edition is done when a
+reader can *use* the page: find it when a monk calls the number, chant along
+from it, understand what they are saying, and know where it comes from. That is
+a higher bar, and it is the bar this book is held to.
+
+Seven steps take a photograph to a finished page. Stages 1–3 are the machine
+parts; two of the seven are Josh's and cannot be delegated:
+
+| # | Step | Who | Where |
+|---|---|---|---|
+| 1 | **Read the page** — the photograph becomes text, exactly as printed | Claude | Stage 1 |
+| 2 | **Write the layers** — the five layers, consistently | Claude | Stage 1 |
+| 3 | **Quality check** — layers agree with each other and with the page | Claude | Stage 1 self-check, then Stage 2 |
+| 4 | **Human review** — doctrine, liturgy, and the Pali itself | **Josh** | with the book open |
+| 5 | **Enrich** — what the chant is, means, is for, comes from | Claude | Stage 3 |
+| 6 | **Final QA** — it renders, it navigates, the layers still line up | Claude | Stage 2 close-out |
+| 7 | **Approve** — this page is fit to be chanted from | **Josh** | — |
+
+Steps 4 and 7 are not a formality. Claude can check that the layers agree with
+each other; it cannot check that a line of Pali is the line the Buddha's
+followers have chanted for two thousand years, or that a translation carries the
+doctrine rather than a plausible paraphrase. That judgement is Josh's, and the
+whole workflow exists to hand him a page where the mechanical work is already
+right so his attention goes where only his attention will do.
+
+**What this adds up to.** A page that is only the book's words is a photocopy
+with a search box. A page that also carries its meaning, its purpose, its
+sources and its vocabulary is a way to learn the chant rather than just recite
+it — and that is the thing worth building at 325 pages.
+
+**The trap this framing exists to prevent.** Enrichment is the most enjoyable
+part of the job and the easiest to do badly, because nothing checks it. Steps 1
+and 2 are reproduction and can be verified against a photograph. Step 5 is
+composition, and a fluent paragraph of invented history reads exactly like a
+researched one. So enrichment NEVER guesses; where it does not know, it says so
+and the field stays empty.
+
+---
+
 ## Choose a depth before you start
 
 Depth used to be a ceiling. It is now a budget.
@@ -136,6 +180,25 @@ saying plainly:
   wrong page is not a tidy-up issue; it is a person lost mid-chant in a room.
 - Nothing printed on a page may be silently left out. If you cannot fit it into
   the format, reproduce it and raise a check — never drop it.
+
+This is a PUBLICATION, not a translation. A translation is finished when the
+words are rendered; an edition is finished when a reader can use the page — find
+it when it is called, chant from it, understand it, and know where it came from.
+Seven steps get a photograph there, and you are three of them:
+
+  1. Read the page          you, now
+  2. Write the five layers  you, now
+  3. Quality check          you, before you close the batch
+  4. Human review           Josh, with the book open — doctrine and liturgy
+  5. Enrich                 stage 3
+  6. Final QA               stage 2 close-out
+  7. Approve                Josh
+
+Steps 4 and 7 are Josh's and cannot be delegated. You can prove the layers agree
+with each other; you cannot know that a line of Pali is the one this tradition
+has chanted for two thousand years. The point of doing steps 1–3 properly is
+that his attention lands on the things only his attention can settle, instead of
+being spent on spelling.
 
 ## Batch mode — read this section twice
 
@@ -927,6 +990,69 @@ faithful transliteration and raise a check saying so — do not quietly substitu
 the standard form. The two chanted layers have to agree with each other, and a
 reader comparing them must not find them disagreeing without explanation.
 
+## Check your own work before you close the batch
+
+This is step 3 of the seven, and it happens HERE rather than in stage 2 because
+it needs the photograph. Stage 2 cannot open the images — that separation is the
+point of having two stages — so anything that has to be checked against the page
+must be checked while the page is still in front of you.
+
+Run these over everything you have written, and report the result of each in the
+batch status. "Clean" is a finding; so is a list of exceptions.
+
+**1. The layers line up with each other.** For every verse:
+
+- `pali` and `pali_roman` are the SAME words in two scripts. Same number of
+  units, same order, breaking at the same commas. Read one against the other —
+  a romanisation that has drifted a word is invisible in isolation and obvious
+  side by side.
+- `thai` and `paiboon` likewise, where the book gives a Thai translation.
+- `english` says what `thai` says, where there is a `thai` to say it.
+- A layer the book does not print is EMPTY, not filled in from the other side.
+
+**2. The diacritics are consistent across the batch.** The same Pali word
+romanised two ways in one book is the commonest quality failure in editions like
+this, and it compounds: nobody notices at three pages and nobody can fix it at
+three hundred. Collect the distinct romanised words you produced, and report any
+word that appears with more than one spelling of the same syllable — `ṃ` vs `ṅ`,
+`ā` vs `a`, `ṭ` vs `t`. Where the book itself is inconsistent, follow the book
+and say so; where you were inconsistent, fix it.
+
+**3. Paiboon+ has not drifted.** The existing self-scan, unchanged: adherence
+decays over a long session, so check the last chant against the convention as
+carefully as the first.
+
+**4. Nothing on the page is unaccounted for.** Walk the photograph top to bottom
+and confirm every printed thing is either in a chant, in the page map, in the
+page's own blocks, or in a check. A heading, an instruction, a footnote, a
+rubric in brackets — these belong to the page and the app now has somewhere to
+keep them, so "it is not chant text" is no longer a reason to drop it. This is
+the check that would have caught two pages going live showing half of what the
+book prints on them.
+
+## Vocabulary — collect it while the page is open
+
+Note the key Pali terms on the page as you read: the words a learner would need
+before they could follow what they are chanting. `vocabulary` on the chant:
+
+      "vocabulary": [
+        {"pali": "อะระหัง", "pali_roman": "arahaṃ",
+         "meaning": "one who is worthy; a fully awakened being"}
+      ],
+
+Six to ten a chant is plenty — the doctrinal load-bearing words, not every noun.
+Give the meaning as this book and this tradition use it, not a dictionary gloss:
+`saṅkhāra` is not "formation" to someone trying to understand what they just
+chanted.
+
+This is collected in stage 1 rather than stage 3 because the page is open and
+the surrounding words are visible, which is exactly the context a gloss needs.
+It costs almost nothing here and would cost a re-read later.
+
+**It goes in the batch file only.** Stage 2 does NOT write it into the app until
+the app has a field to show it in — see the rule in stage 2 about never writing
+data with nowhere to render.
+
 ## When the file is written, report in one paragraph
 
 Tell me where the file is, then give the numbers I need to decide what happens
@@ -977,6 +1103,19 @@ the batch file looks wrong, say so — do not go and look.
 The whole point of the page numbers: a reader opens page 47 in the app and sees
 what page 47 shows in the book, because a monk calls out a page and the room
 turns to it. Every rule below about pages is serving that.
+
+This is a PUBLICATION, not a translation, and you own two steps of the seven
+that get a photograph to a finished page:
+
+  3. Quality check   the app against what stage 1 recorded — everything it
+                     recorded, not just the chants
+  6. Final QA        the rendered page as a reader meets it, not just the data
+
+Both are near the end of this prompt and both are the point of stage 2 existing
+separately from stage 1. Steps 4 and 7 — doctrine, liturgy, approval — are
+Josh's, and the whole of your job is to hand him a page where everything
+mechanical is already settled so his reading time goes on what only he can
+judge.
 
 ## Reconcile the manifest BEFORE you write anything
 
@@ -1259,6 +1398,43 @@ fill one.
   complete.
 - If you attribute a source yourself, mark it with a ‼ UNVERIFIED comment.
 
+## Everything stage 1 recorded must land somewhere — or the batch does not close
+
+This rule exists because the workflow already lost content once, silently, and
+nothing failed.
+
+Stage 1 read pages 7 and 8 correctly. It recorded the service closing
+`จบพิธีทำวัตรเช้า`, the explanatory section, its numbered items and a footnote —
+all of it, accurately, in the batch file. Stage 2 had no field for any of it, so
+it wrote the chants and let the rest go. No error was raised, no test failed,
+and both pages went live showing roughly half of what the printed page shows.
+It was found weeks later by Josh reading the app beside the book.
+
+The failure was not carelessness. It was that **nothing compared the batch file
+to what got written.** Reconciliation checked the chants against the manifest;
+nothing checked the leftovers against anything.
+
+So, before you report done:
+
+- Walk EVERY key of the batch file, including `batch.pages` notes,
+  `service_closing`, footnotes, headings, instructions, rubrics and vocabulary.
+- For each, say where it landed: a chant field, a `PAGE_BLOCKS` entry, a ⚠️
+  check comment, or a stated decision not to write it yet.
+- **"There is no field for it" is not a landing place.** It is a finding, and it
+  stops the batch. Report it and let Josh decide whether to add the field or
+  defer the content — deferring is fine, losing it is not.
+
+### Never write data the app cannot render
+
+The mirror of the same rule. If stage 1 collected something the app has nowhere
+to display — `vocabulary` and `references` today — do NOT write it into
+`chanting.py` "ready for later". It looks like progress and is actually a second
+copy of the truth that nothing renders, nothing tests and nobody reads, which
+will drift from the batch file it came from.
+
+Leave it in the batch file, which is the permanent record, and say plainly:
+"vocabulary collected for N chants, not written — the app has no field for it."
+
 ## Fidelity rules — these matter more than tidiness
 
 - Copy every Pali, Thai, Paiboon and English string across CHARACTER FOR
@@ -1307,6 +1483,34 @@ Run these with PYTHONIOENCODING=utf-8 set, or Thai output will crash on Windows.
 10. Render the page and confirm each new chant shows the right verse count, its
     section headings, its page markers and its layers, and that existing chants
     are unchanged.
+
+### The final QA pass — the page as a reader meets it
+
+Steps 1–10 prove the DATA is right. This proves the PAGE is right, which is a
+different question: correct data renders badly often enough to be worth ten
+minutes. This is step 6 of the seven.
+
+11. `python -m pytest tests/ -q` — the whole suite, not just the chanting
+    tests. A data change that breaks a route breaks it for every reader.
+12. `python -c "import chanting; print(chanting.check_page_blocks())"` must
+    print `[]`. A page block anchored to a chant that is not on its page is
+    placed at the foot of the page rather than where the book prints it.
+13. Fetch each page you touched and confirm, for every new chant AND every
+    block: the text is present, and present exactly ONCE. Duplication is the
+    failure mode here — an invitation printed both in a prose block and under
+    the title appears twice, and reads as a mistake in the book rather than in
+    the app. Where the same words genuinely repeat on the printed page, say so.
+14. Confirm the five layers still line up ON THE RENDERED PAGE, not just in the
+    data: same number of lines in `pali` and `pali_roman` down the page, and
+    the couplet breaks falling in the same place in both scripts.
+15. Check book layout shows what the book shows and nothing else: no heading
+    where the page prints no title, no romanisation or English under a title
+    that the book sets in Thai alone, no app-only links.
+16. Confirm the page turn works both ways — previous and next reach the pages
+    either side, and a gap is announced rather than silently skipped.
+
+Anything the app cannot check itself — audio, search, how it reads on a phone —
+goes in the report as something for Josh, not as something assumed fine.
 
 Report THREE tables. I read the tables, not the prose.
 
@@ -1387,6 +1591,31 @@ the existing chants in the file, which are the shape to copy:
 `background` and `meaning` are lists of strings, one per paragraph, never one
 long string — the page and a printed edition space them from that structure.
 Two or three paragraphs each is right. Do not pad them to look thorough.
+
+Between them these five answer the questions a learner actually arrives with:
+
+| The reader asks | The field that answers it |
+|---|---|
+| What is this? | `summary` |
+| When would I chant it? | `when_chanted` |
+| What does it mean? | `meaning` |
+| Why do people chant it? | `meaning`, second half — the practical point |
+| Where does it come from? | `source` and `background` |
+
+If a chant's `meaning` explains the words but never says why anyone recites it,
+it is half written. The purpose is the part a learner cannot get from a
+translation, and it is usually the reason the chant survived.
+
+### Two more, once the app can show them
+
+`vocabulary` (collected by stage 1, sitting in the batch files) and
+`references` — pointers to the sutta or commentary a reader could go and read —
+are the next things this book should carry. They are NOT to be written yet.
+
+`chanting.py` has no field for either and the templates render neither, and
+writing data the app cannot display is how this project already lost a page's
+worth of content once. When the app grows the fields, this section gets the
+rules for filling them. Until then, leave them in the batch files and say so.
 
 ## Where your material comes from
 

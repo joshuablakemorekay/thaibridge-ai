@@ -104,6 +104,11 @@ VARIANTS = {
              'Every doubt Stage 1 had is now a ⚠️ comment in chanting.py, each '
              'naming the photograph it came from. Work through them with the '
              'book open. This is the step nothing else can do for you.'),
+            ('7. Approve the page',
+             'The last word on doctrine and liturgy is yours. Claude can prove '
+             'the layers agree with each other; it cannot tell you a line is the '
+             'one the tradition actually chants. Steps 6 and 7 are the two of '
+             'the seven that are not delegable.'),
         ],
         'depth': [
             ('FULL', 'Everything, including background and meaning. '
@@ -130,15 +135,22 @@ VARIANTS = {
             ('Stage 1 — run in Claude Code',
              'Give it a range of image files and a depth. It reads the '
              'photographs and writes one JSON batch file holding a manifest, a '
-             'page map, the entries and a status. It may not touch the app.'),
+             'page map, the entries, the vocabulary and a status. It checks its '
+             'own layers against each other before it closes, because that is '
+             'the last moment the photograph is open. It may not touch the app.'),
             ('Stage 2 — run in Claude Code',
              'Give it the batch file Stage 1 wrote. It may not open the '
              'photographs: it checks the app against what Stage 1 wrote down, '
-             'which is only a check while the two stay separate.'),
+             'which is only a check while the two stay separate. Nothing Stage 1 '
+             'recorded may be dropped — "there is no field for it" stops the '
+             'batch rather than losing the content. Ends with a QA pass on the '
+             'rendered page, not just the data.'),
             ('Stage 3 — run in Claude Code, later',
-             'The commentary pass, run after a DATA-ONLY batch is in and '
+             'The enrichment pass, run after a DATA-ONLY batch is in and '
              'verified. Nothing to give it: the chants are already in '
-             'chanting.py, so it reads them from there.'),
+             'chanting.py, so it reads them from there. Writes what a learner '
+             'arrives asking — what this is, when it is chanted, what it means, '
+             'why anyone recites it, and where it comes from.'),
         ],
     },
 }
