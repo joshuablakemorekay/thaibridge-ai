@@ -141,7 +141,12 @@ def test_a_gap_in_the_book_is_left_as_a_gap():
 
 
 def test_the_real_book_still_builds():
-    """Whatever is in chanting.py today must not raise. It has no pages yet."""
+    """Whatever is in chanting.py today must not raise.
+
+    The docstring used to say the book had no pages yet. That stopped being
+    true the day the first photographed batch landed, which is exactly the
+    kind of comment that quietly turns into a lie about the code.
+    """
     pages, unpaginated = build_page_index()
 
     assert isinstance(pages, list)

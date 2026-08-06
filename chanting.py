@@ -8184,6 +8184,9 @@ def check_page_blocks(chants=None, page_blocks=None):
         page['page']: {entry['chant']['id'] for entry in page['entries']}
         for page in pages
     }
+    # Built once. It was inside the group loop, which is invisible at thirty
+    # chants and is a rebuild per group across a 286-chant book.
+    by_id = {chant['id']: chant for chant in chants}
 
     problems = []
     for group in page_blocks:
@@ -8200,7 +8203,6 @@ def check_page_blocks(chants=None, page_blocks=None):
                     f"page {page}: invitation_printed_here names '{named}', "
                     f"which is not printed on that page"
                 )
-        by_id = {chant['id']: chant for chant in chants}
         for index, block in enumerate(group.get('blocks', [])):
             where = f"page {page}, block {index} ({block.get('type')})"
 
@@ -8324,6 +8326,11 @@ def build_page_index(chants=None, page_blocks=None):
     for group in page_blocks:
         groups_by_page.setdefault(group['page'], []).append(group)
 
+    # Built once for the whole book rather than once per page. Only invitation
+    # blocks read it, so at thirty chants the difference is nothing — across 286
+    # chants and 325 pages it is the same dict built ninety thousand times.
+    by_id = {chant['id']: chant for chant in chants}
+
     built = []
     for page in sorted(set(pages) | set(groups_by_page)):
         chant_entries = list(pages.get(page, {}).values())
@@ -8337,7 +8344,6 @@ def build_page_index(chants=None, page_blocks=None):
         # in one anchor, which is a far worse failure than one run of prose
         # sitting low on one page.
         on_this_page = {entry['chant']['id'] for entry in chant_entries}
-        placed_after = {group.get('after') for group in groups} & on_this_page
         orphaned = [group for group in groups
                     if group.get('after') is not None
                     and group.get('after') not in on_this_page]
