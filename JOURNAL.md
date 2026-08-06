@@ -1740,3 +1740,42 @@ About half. The page view's structure and the batch prompt's fidelity rules went
 **References / Conversations**
 
 Commits `5b33172` through `dcb6eb6`. Prompt archive: `prompts/chanting-book-batch/` (v4, v5, v6 under `versions/`). Batch records: `prompts/chanting-book-batch/batches/`.
+
+---
+
+## 2026-08-06 — The page that looked finished and wasn't
+
+**TL;DR:**
+- Pages 7 and 8 were live showing about 40% of what the printed page shows. No test failed.
+- The data model was chant-shaped; the book isn't. Built `PAGE_BLOCKS` so a page can hold what belongs to the page.
+- Prompt v7: the project is a digital publication, not a translation — and a batch now can't close while anything it read is unaccounted for.
+
+**What I built**
+
+A page-level content model — headings, instruction paragraphs, service closings, numbered items, rubrics, footnotes and invitations — woven into the chants in printed order. Pages 2–9 now match the book. Tests 101 → 123.
+
+**Why I did it this way**
+
+I found it by reading the app beside the book, not by running anything:
+
+> "What about Page 7 & 8 which are both empty?"
+
+Claude checked the data, the local render and the live site, found the chant text in all three, and told me there was no problem. It had answered the wrong question:
+
+> "I checked them in the app against the book and they don't appear to contain everything so make it exactly the same as the book."
+
+"Empty" meant incomplete, not blank. Stage 1 had read the missing material correctly and written it into the batch file; stage 2 had nowhere to put it and dropped it silently. **The bug wasn't carelessness — it was that nothing compared the batch file to what got written.**
+
+**How We Did It**
+
+1. Diffed the printed page against the app, block by block, and listed exactly what was missing.
+2. Built `PAGE_BLOCKS` + `check_page_blocks()`, reworked `build_page_index` and the template. No content yet — model first, so the diff stayed readable.
+3. Retro-filled pages 2–8 from the photographs. Found the app was *inventing* headings on four chants the book gives no title.
+4. Rewrote the prompt to v7 and proved it additive: 229 lines added, **0 removed**.
+5. Entered page 9 under v7 — the first page where the new gates ran.
+
+**Engineering Contribution**
+
+- *Decisions made:* Page material kept separate from chants rather than bolted on as more chant fields — `จบพิธีทำวัตรเช้า` closes the morning *service*, so attaching it to the chant above would state something false about the book. The anchor check was moved out of `build_page_index` into a validator after the first version 500'd the whole chanting book over a single typo.
+- *Improvements made to generated code:* A self-review of this session's own code found four real defects: dead code, two `O(n×m)` dict rebuilds (~93,000 needless constructions across the full book), and a test docstring that had quietly become untrue. Five new rubric criteria, each negative-tested before being trusted.
+- *Roughly how much was accepted as-is vs engineered on:* Direction and review, not code. I wrote none of it — but I found the defect, set the standard, and made it prove v7 hadn't quietly removed anything. Evidence: `prompts/chanting-book-batch/REASONING.md`.
