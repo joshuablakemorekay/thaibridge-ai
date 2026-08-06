@@ -141,6 +141,165 @@ def test_the_real_book_still_builds():
         assert page['entries']
 
 
+class TestThePagesOwnMaterial:
+    """A printed page carries more than chants, and the app has to carry it too.
+
+    Written after pages 7 and 8 went live showing their chant text and about
+    half of what the book actually prints there. The missing half was never
+    lost by accident: stage 1 read it off the photographs correctly and wrote
+    it into the batch file, and stage 2 had no field to put it in. Nothing
+    raised, no test failed, and the pages looked finished.
+
+    So these tests are about the material that belongs to the PAGE rather than
+    to any chant — a heading, an instruction, a closing that ends a whole
+    service, a numbered note — and about it landing in the right place among
+    the chants, which is the only place it means anything.
+    """
+
+    def blocks(self, page, after=None, blocks=None):
+        group = {'page': page, 'blocks': blocks or [
+            {'type': 'prose', 'thai': 'ข้อความ'},
+        ]}
+        if after is not None:
+            group['after'] = after
+        return group
+
+    def test_material_printed_above_the_chant_comes_first(self):
+        pages, _ = build_page_index(
+            [chant('metta', 47, [verse(1)])],
+            [self.blocks(47)],
+        )
+
+        assert [e['kind'] for e in pages[0]['entries']] == ['blocks', 'chant']
+
+    def test_material_printed_below_a_chant_follows_it(self):
+        pages, _ = build_page_index(
+            [chant('metta', 47, [verse(1)])],
+            [self.blocks(47, after='metta')],
+        )
+
+        assert [e['kind'] for e in pages[0]['entries']] == ['chant', 'blocks']
+
+    def test_it_lands_after_the_right_chant_on_a_shared_page(self):
+        """The commonest page in this book holds two chants. An instruction
+        printed between them belongs between them, not at the foot."""
+        pages, _ = build_page_index(
+            [chant('metta', 47, [verse(1)]), chant('karaniya', 47, [verse(1)])],
+            [self.blocks(47, after='metta')],
+        )
+
+        assert [e['kind'] for e in pages[0]['entries']] == ['chant', 'blocks', 'chant']
+        assert pages[0]['entries'][0]['chant']['id'] == 'metta'
+        assert pages[0]['entries'][2]['chant']['id'] == 'karaniya'
+
+    def test_a_page_of_pure_instruction_is_still_a_page(self):
+        """A reader who turns to it should find what is printed there.
+
+        Pages 9 and 10 are mostly instruction, so a page holding no chant at
+        all is ordinary rather than a special case.
+        """
+        pages, _ = build_page_index(
+            [chant('metta', 47, [verse(1)])],
+            [self.blocks(48)],
+        )
+
+        assert [p['page'] for p in pages] == [47, 48]
+        assert [e['kind'] for e in pages[1]['entries']] == ['blocks']
+
+    def test_an_anchor_that_matches_no_chant_on_the_page_raises(self):
+        """The whole point of the anchor is WHERE on the page it goes.
+
+        Placing it somewhere plausible instead would be the same failure as a
+        guessed page number: a chanter reads what is on the page as belonging
+        to the page, and there is nothing afterwards to show it was misplaced.
+        """
+        with pytest.raises(ValueError, match='not printed on that page'):
+            build_page_index(
+                [chant('metta', 47, [verse(1)])],
+                [self.blocks(47, after='karaniya')],
+            )
+
+    def test_the_book_still_builds_with_whatever_blocks_are_in_it_today(self):
+        pages, _ = build_page_index()
+        for page in pages:
+            assert page['entries']
+            for entry in page['entries']:
+                assert entry['kind'] in ('chant', 'blocks')
+
+
+class TestThePagesOwnMaterialOnScreen:
+    """The same material, rendered. Every block type the book actually uses."""
+
+    PAGE = [
+        {'type': 'service_closing', 'thai': 'จบพิธีทำวัตรเช้า',
+         'english': 'Here ends the morning service', 'english_unverified': True},
+        {'type': 'prose', 'thai': 'เมื่อสวดบทจบลงแล้ว',
+         'english': 'When the chant has ended', 'english_unverified': True},
+        {'type': 'heading', 'thai': 'คำอธิบายประกอบทำวัตรเช้า',
+         'english': 'Notes on the morning service'},
+        {'type': 'item', 'number': 3, 'thai': 'บทว่า ภิกขูนัง',
+         'english': 'The line beginning bhikkhūnaṃ', 'english_unverified': True},
+        {'type': 'footnote', 'marker': '1', 'thai': 'คะโต สำหรับอุบาสก'},
+    ]
+
+    @pytest.fixture()
+    def page(self, monkeypatch):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        only = copy.deepcopy(chanting_module.CHANTS[0])
+        only['id'] = 'only'
+        only['page_start'] = 8
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [only])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS',
+                            [{'page': 8, 'after': 'only', 'blocks': self.PAGE}])
+        return flask_app.app.test_client().get(
+            '/chanting/page/8', follow_redirects=True).get_data(as_text=True)
+
+    def test_every_block_reaches_the_page(self, page):
+        for block in self.PAGE:
+            assert block['thai'] in page, f"{block['type']} was dropped"
+
+    def test_the_service_closing_is_not_lost_this_time(self, page):
+        """The one that was already being read correctly and thrown away."""
+        assert 'จบพิธีทำวัตรเช้า' in page
+        assert 'block-service-closing' in page
+
+    def test_a_numbered_item_keeps_the_books_own_number(self, page):
+        """Items 1-2 are on page 8 and 3-5 on page 9: one list across a page
+        turn. Renumbering per page would make it two lists starting at 1."""
+        assert '>3.<' in page.replace(' ', '').replace('\n', '')
+
+    def test_the_thai_and_english_are_layered_like_everything_else(self, page):
+        """So the layer toggles work on them, and book mode shows the Thai
+        alone — which is exactly what the printed page carries."""
+        assert 'layer layer-thai' in page
+        assert 'layer layer-english' in page
+
+    def test_whose_english_this_is_gets_said(self, page):
+        assert 'working translation made for this edition' in page
+
+    def test_it_gets_said_once_and_not_above_every_paragraph(self, page):
+        """Three of the five blocks carry unverified English. Saying it three
+        times would bury the page the notice is meant to caveat."""
+        assert page.count('The book prints this part of the page in Thai only') == 1
+
+    def test_a_footnote_that_is_not_a_citation_still_has_somewhere_to_go(self, page):
+        """source_printed holds canonical references. Page 8's footnote is an
+        editorial note about a word substitution, and would be a lie there."""
+        assert 'คะโต สำหรับอุบาสก' in page
+        assert 'block-footnote' in page
+
+    def test_the_citation_footnotes_still_work_alongside_blocks(self, page):
+        """A blocks entry has no `chant`, and the footnote loop reads through
+        one. It raised UndefinedError before the loop was guarded."""
+        assert 'Digital Chanting Book' in page
+        assert 'of the chanting book' in page
+
+
 class TestTheMarkupHoldsTogether:
     """Both chanting pages must close every <style> and <script> they open.
 

@@ -152,6 +152,75 @@
     }
     .page-chant + .page-chant { margin-top: 2.5rem; }
 
+    /* ── What the page prints that is not a chant ────────────────────
+       Headings, instruction paragraphs, numbered notes, a service closing.
+       Set quieter than the chant text on purpose: on a printed page this
+       material is plainly subordinate to the words being chanted, and a
+       chanter scanning for their line must not have to read past it. */
+    .page-blocks {
+        max-width: 70ch;
+        margin: 1.5rem 0;
+    }
+    .page-chant + .page-blocks,
+    .page-blocks + .page-chant { margin-top: 2rem; }
+
+    .block-heading {
+        text-align: center;
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: var(--royal-purple);
+        margin: 1.75rem 0 0.75rem;
+    }
+    /* The book indents the first line of a paragraph rather than spacing
+       paragraphs apart, so this does the same. */
+    .block-prose { margin: 0 0 0.6rem; text-indent: 2.5em; }
+
+    /* A numbered instruction, hanging so the number sits clear of the text
+       the way the printed list does. */
+    .block-item {
+        display: grid;
+        grid-template-columns: 2.2em 1fr;
+        gap: 0 0.3em;
+        margin: 0 0 0.7rem;
+    }
+    .block-item-number { text-align: right; font-weight: bold; }
+
+    /* A จบ… closing a whole service. Centred and bold as printed, and given
+       room above it, because it is the end of something. */
+    .block-service-closing {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: var(--royal-purple);
+        margin: 1.75rem 0 0.5rem;
+    }
+
+    /* A foot-of-page note. Shares the look of the citation footnotes below,
+       because on the page they are the same thing in the same place — the
+       difference is only that this one may not be a citation at all. */
+    .block-footnote {
+        font-size: 0.9rem;
+        color: #55483a;
+        margin: 0.4rem 0 0;
+    }
+    .block-footnote-rule {
+        border: none;
+        border-top: 1px solid #8a7a5e;
+        width: 40%;
+        margin: 1.5rem auto 0 0;
+    }
+
+    /* The layers inside a block carry no left rule — they are prose, not a
+       verse, and the verse rule would set them as something to chant.
+
+       `display: block` because these layers are SPANS here, sitting inside a
+       paragraph or a heading, where every other layer in the book is its own
+       <p> and stacks for free. Without it the Thai and the English run
+       together on one line. Kept at two selectors' worth of specificity so the
+       hide-<layer> toggles, which are three, still win and can switch a layer
+       off. */
+    .page-blocks .layer { display: block; border-left: none; padding-left: 0; }
+
     /* Title on the page but no verses: the chant opens at the foot of the
        page and its first line is overleaf. The book does this and so do we. */
     .page-overleaf {
@@ -438,7 +507,71 @@
 
 {# id="chant-book" is what the shared layer-toggle script looks for. #}
 <div class="chant-book" id="chant-book">
+    {# Said once per page rather than once per block: the notice is about whose
+       English this is, and repeating it above every paragraph would bury the
+       page it is meant to caveat. #}
+    {% set shown = namespace(block_english=False) %}
     {% for entry in entries %}
+
+    {# ─── What the page prints that is not a chant ─────────────────── #}
+    {% if entry.kind == 'blocks' %}
+    <div class="page-blocks">
+        {% if not shown.block_english %}
+        {% for block in entry.blocks if block.english_unverified %}
+        {% if loop.first %}
+        {% set shown.block_english = true %}
+        <p class="chant-unverified-note">
+            The book prints this part of the page in Thai only. The English
+            here is a working translation made for this edition, not the
+            book's.
+        </p>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        {% for block in entry.blocks %}
+        {% if block.type == 'heading' %}
+        <h3 class="block-heading">
+            <span class="layer layer-thai">{{ block.thai }}</span>
+            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+        </h3>
+
+        {% elif block.type == 'service_closing' %}
+        <p class="block-service-closing">
+            <span class="layer layer-thai">{{ block.thai }}</span>
+            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+        </p>
+
+        {% elif block.type == 'item' %}
+        <div class="block-item">
+            <span class="block-item-number">{{ block.number }}.</span>
+            <span>
+                <span class="layer layer-thai">{{ block.thai }}</span>
+                {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+            </span>
+        </div>
+
+        {% elif block.type == 'footnote' %}
+        {% if loop.first or entry.blocks[loop.index0 - 1].type != 'footnote' %}
+        <hr class="block-footnote-rule">
+        {% endif %}
+        <p class="block-footnote">
+            {% if block.marker %}<span class="fn-mark">{{ block.marker }}.</span> {% endif %}
+            <span class="layer layer-thai">{{ block.thai }}</span>
+            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+        </p>
+
+        {% else %}
+        <p class="block-prose">
+            <span class="layer layer-thai">{{ block.thai }}</span>
+            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+        </p>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    {# ─── A chant ──────────────────────────────────────────────────── #}
+    {% else %}
     {% set chant = entry.chant %}
     {# `layout` says how the BOOK sets this chant: 'prose' for a run-on
        passage, otherwise a set of lines. Absent means lines, which is what
@@ -538,6 +671,7 @@
         </p>
         {% endif %}
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 
@@ -547,8 +681,10 @@
    page you can see whole, and this one scrolls. The reference itself is
    reproduced exactly as the book prints it — these are the book's own
    citations, not attributions made for the app. #}
+{# `kind` is checked FIRST because a blocks entry has no `chant` at all, and
+   reading through a missing key raises rather than coming back empty. #}
 {% set noted = [] %}
-{% for entry in entries %}
+{% for entry in entries if entry.kind == 'chant' %}
 {% if entry.chant.source_printed and entry.verses
       and entry.verses[-1].number == entry.chant.verses[-1].number %}
 {% set _ = noted.append(entry.chant) %}

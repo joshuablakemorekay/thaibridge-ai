@@ -7306,12 +7306,68 @@ CHANT_SECTIONS = [
 ]
 
 
+# ── What the page prints that is not a chant ────────────────────────────────
+#
+# Everything above hangs off a chant, because that is how you READ this book.
+# But a printed page carries material that belongs to no chant at all: a
+# heading, a paragraph telling the chanter what to do next, a closing that ends
+# the whole morning service rather than the chant above it, a numbered note
+# about which word a layperson substitutes.
+#
+# That material had nowhere to live, so it was dropped. Stage 1 read it off the
+# photographs and wrote it into the batch files faithfully; stage 2 had no field
+# to put it in and quietly let it go. Nothing failed, and pages 7 and 8 went live
+# showing their chants and about half of what the book actually prints there.
+#
+# It is kept separate from CHANTS rather than added as more chant fields because
+# it genuinely is not part of any chant. จบพิธีทำวัตรเช้า closes the morning
+# SERVICE — attaching it to ปัตติทานะคาถา above it would say that chant ends
+# twice, and would be a false statement about the book.
+#
+# One group = a run of blocks sitting at one point on one page:
+#
+#   'page'   — the printed page it appears on.
+#   'after'  — the id of the chant whose text it FOLLOWS down the page. Omit it
+#              (or None) for material printed above every chant on the page.
+#   'blocks' — what is printed there, in printed order.
+#
+# `after` names a chant that must actually appear on that page; an anchor that
+# matches nothing raises rather than being placed somewhere plausible. This is
+# the same rule the page numbers follow, for the same reason — material shown in
+# the wrong place on a page is read as though it belonged there.
+#
+# A block is one of five things the book does, and carries only what is printed:
+#
+#   'heading'         — a centred section heading (คำอธิบายประกอบทำวัตรเช้า).
+#   'prose'           — a paragraph of Thai. Also how the book's OWN translation
+#                       of a chant is set, where it prints one as a passage
+#                       under a คำแปล heading rather than line by line.
+#   'item'            — a numbered instruction. `number` is as PRINTED, so it
+#                       keeps the book's own numbering across a page turn: items
+#                       1-2 are on page 8 and 3-5 on page 9, and they are one
+#                       list, not two lists starting at 1.
+#   'service_closing' — a จบ… line ending a whole service.
+#   'footnote'        — a foot-of-page note. `marker` is as printed, in whatever
+#                       numerals the page uses. Unlike `source_printed` this is
+#                       not necessarily a citation: page 8's footnote is an
+#                       editorial note about a word substitution.
+#
+# `thai` is what the book prints, character for character. `english` is written
+# for this app and never comes from the book, so it is flagged
+# `english_unverified` exactly as an app-written chant translation is — and the
+# reader is told, on every page it appears on.
+PAGE_BLOCKS = [
+    # Filled in page by page as the batches are read. Empty is a truthful
+    # state: it means no page has had its non-chant material entered yet.
+]
+
+
 def get_chant(chant_id):
     """Return one chant by id, or None."""
     return next((c for c in CHANTS if c['id'] == chant_id), None)
 
 
-def build_page_index(chants=None):
+def build_page_index(chants=None, page_blocks=None):
     """Regroup the book's verses by the printed page they appear on.
 
     The chants are stored chant by chant, which is how you read one. A monk
@@ -7328,20 +7384,33 @@ def build_page_index(chants=None):
 
     Returns (pages, unpaginated):
 
-      pages       — ordered list of {'page': int, 'entries': [...]}, one entry
-                    per chant appearing on that page, in the order they appear
-                    down the page. An entry is {'chant', 'starts_here',
-                    'verses'} — `starts_here` meaning the chant's title is
-                    printed on this page, so the title and invitation belong
-                    here and not on the pages it continues onto.
+      pages       — ordered list of {'page': int, 'entries': [...]}, in the
+                    order they appear down the page. An entry is one of two
+                    kinds, told apart by `kind`:
+
+                      'chant'  — {'chant', 'starts_here', 'verses'};
+                                 `starts_here` meaning the chant's title is
+                                 printed on this page, so the title and
+                                 invitation belong here and not on the pages
+                                 it continues onto.
+                      'blocks' — {'blocks': [...]}, the page's own material:
+                                 headings, instruction paragraphs, numbered
+                                 items, a service closing, footnotes.
+
       unpaginated — chants with no `page_start`, which cannot be placed.
 
     Chants without a page number are RETURNED rather than guessed at. Putting
     one on a plausible page would send a reader to the wrong words in a silent
     room, which is the one error in this book that is met in public.
+
+    A page may hold blocks and no chant at all — a page of instruction between
+    two services is a real page of the book, and a reader who turns to it should
+    find what is printed there rather than a gap.
     """
     if chants is None:
         chants = CHANTS
+    if page_blocks is None:
+        page_blocks = PAGE_BLOCKS
 
     placed = [c for c in chants if c.get('page_start')]
     unpaginated = [c for c in chants if not c.get('page_start')]
@@ -7375,8 +7444,41 @@ def build_page_index(chants=None):
                 current = verse['page']
             entry_for(current)['verses'].append(verse)
 
-    return (
-        [{'page': page, 'entries': list(pages[page].values())}
-         for page in sorted(pages)],
-        unpaginated,
-    )
+    # Group the page's own material by the page it is printed on, so each page
+    # can be assembled in one pass below.
+    groups_by_page = {}
+    for group in page_blocks:
+        groups_by_page.setdefault(group['page'], []).append(group)
+
+    built = []
+    for page in sorted(set(pages) | set(groups_by_page)):
+        chant_entries = list(pages.get(page, {}).values())
+        groups = groups_by_page.get(page, [])
+
+        # An anchor naming a chant that is not on this page cannot be placed.
+        # Raising is deliberate: the alternative is putting an instruction
+        # somewhere plausible, and a chanter reads what is on the page as
+        # belonging to the page. This is hand-written data checked by tests, so
+        # a bad anchor is caught before it is ever deployed.
+        on_this_page = {entry['chant']['id'] for entry in chant_entries}
+        for group in groups:
+            anchor = group.get('after')
+            if anchor is not None and anchor not in on_this_page:
+                raise ValueError(
+                    f"page {page}: blocks anchored after '{anchor}', which is "
+                    f"not printed on that page"
+                )
+
+        entries = []
+        # Printed above every chant on the page.
+        entries.extend({'kind': 'blocks', 'blocks': group['blocks']}
+                       for group in groups if group.get('after') is None)
+        for entry in chant_entries:
+            entry['kind'] = 'chant'
+            entries.append(entry)
+            entries.extend({'kind': 'blocks', 'blocks': group['blocks']}
+                           for group in groups if group.get('after') == entry['chant']['id'])
+
+        built.append({'page': page, 'entries': entries})
+
+    return built, unpaginated
