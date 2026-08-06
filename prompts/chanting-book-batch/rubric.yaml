@@ -31,7 +31,7 @@
 # the physical book.
 
 prompt: chanting-book-batch
-version: 4
+version: 7
 criteria:
   - name: emits_parseable_json
     description: The reply contains one JSON object that actually parses
@@ -265,6 +265,38 @@ criteria:
     description: The closing sentence gives both numbers — how many finished, how much needs checking
     weight: 3
     pass_condition: "re.search(r'(complete|completed)', output) is not None and re.search(r'(need|needs) your eye|need checking|against the physical book', output) is not None"
+
+  # ── v7: a publication, not a translation ────────────────────────────
+  # Added after pages 7 and 8 went live showing about 40% of what the printed
+  # page shows. Stage 1 had read the rest correctly; nothing checked that its
+  # own self-checks had been run, so nothing downstream could tell whether the
+  # batch had been closed honestly. These check the FIELDS that record those
+  # checks — a self-check nobody records is a self-check nobody ran.
+
+  - name: reports_that_the_layers_were_aligned
+    description: batch_status records the stage 1 cross-layer check, not just Paiboon drift
+    weight: 4
+    pass_condition: "len(str(json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'].get('layers_aligned', ''))) > 0"
+
+  - name: reports_that_diacritics_were_scanned
+    description: The romanised Pali was checked for one word spelled two ways across the batch
+    weight: 4
+    pass_condition: "len(str(json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'].get('diacritics_consistent', ''))) > 0"
+
+  - name: reports_that_the_whole_page_was_accounted_for
+    description: Every printed thing on the page landed somewhere — the check that pages 7 and 8 needed
+    weight: 5
+    pass_condition: "len(str(json.loads(output[output.index('{'):output.rindex('}') + 1])['batch_status'].get('page_fully_accounted', ''))) > 0"
+
+  - name: vocabulary_is_a_list_of_glossed_terms
+    description: Where vocabulary is collected, each entry carries the Pali and what it means
+    weight: 3
+    pass_condition: "all(all(k in v for k in ['pali', 'pali_roman', 'meaning']) for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'] for v in c.get('vocabulary', []))"
+
+  - name: vocabulary_is_not_padded_out
+    description: Six to ten load-bearing terms a chant, not every noun on the page
+    weight: 2
+    pass_condition: "all(len(c.get('vocabulary', [])) <= 12 for c in json.loads(output[output.index('{'):output.rindex('}') + 1])['chants'])"
 
 test_cases:
   - input:

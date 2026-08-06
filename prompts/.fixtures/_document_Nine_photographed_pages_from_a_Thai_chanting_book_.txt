@@ -148,6 +148,23 @@
           "issue": "The book gives no invitation line for this chant; none has been written.",
           "file": "IMG_0301.PNG"
         }
+      ],
+      "vocabulary": [
+        {
+          "pali": "อะระหัง",
+          "pali_roman": "arahaṃ",
+          "meaning": "one who is worthy; a fully awakened being"
+        },
+        {
+          "pali": "สะระณัง",
+          "pali_roman": "saraṇaṃ",
+          "meaning": "refuge; what one turns to for safety"
+        },
+        {
+          "pali": "สังเวคะ",
+          "pali_roman": "saṃvega",
+          "meaning": "urgency; the shock of seeing things as they are"
+        }
       ]
     },
     {
@@ -274,7 +291,10 @@
     "paiboon_scan": "clean — no kh/th/ph/ng found in any paiboon value",
     "pali_untouched": "confirmed; no pali value was romanised with Paiboon+",
     "page_scan": "agrees — 15 verses across 3 pages, none orphaned or double-claimed",
-    "notes": "One repeat skipped and stubbed. Depth held at DATA-ONLY throughout."
+    "notes": "One repeat skipped and stubbed. Depth held at DATA-ONLY throughout.",
+    "layers_aligned": "checked. pali and pali_roman carry the same number of units in the same order for every verse, breaking at the same commas; thai and paiboon likewise where the book prints a translation. No layer the book does not print was filled in from the other side.",
+    "diacritics_consistent": "checked across the batch. bhagava- declined consistently, pati- retains its retroflex throughout, and no word appears with two spellings of the same syllable.",
+    "page_fully_accounted": "yes. Walked every photograph top to bottom: headings, instruction paragraphs, numbered items, rubrics, footnotes and the service closing are each in a chant, in the page map or in a check. Nothing printed is unaccounted for."
   }
 }
 
