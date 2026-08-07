@@ -21,7 +21,13 @@
             --lotus-white: #FFF5F7;
             
             /* Tropical Green Palette */
-            --bodhi-green: #228B22;
+            /* Darkened from #228B22, which was 3.58:1 against the darker end
+               of the page's cream gradient — under the 4.5:1 WCAG AA needs for
+               normal-size text. This is 5.21:1 and reads as the same green.
+               It is used for the Paiboon layer wherever Paiboon appears, so
+               the text it was failing on is the pronunciation line, which is
+               the one a learner is squinting at. */
+            --bodhi-green: #1B6E1B;
             --bamboo-green: #6B8E23;
             --palm-green: #355E3B;
             --rice-green: #8FBC8F;

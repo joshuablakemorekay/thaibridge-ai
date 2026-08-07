@@ -119,7 +119,7 @@
 
 .rw-syl[aria-expanded="true"],
 .rw-word[aria-expanded="true"] {
-    border-color: var(--bodhi-green, #228B22);
+    border-color: var(--bodhi-green, #1B6E1B);
     background: #f2fbf2;
 }
 
@@ -148,7 +148,7 @@
 .rw-word-paiboon {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--bodhi-green, #228B22);
+    color: var(--bodhi-green, #1B6E1B);
 }
 
 .rw-syl-english,
@@ -333,9 +333,9 @@
 .rw-passage-toggle {
     min-height: 44px;                 /* comfortable tap target */
     padding: 0.4rem 0.9rem;
-    border: 2px solid var(--bodhi-green, #228B22);
+    border: 2px solid var(--bodhi-green, #1B6E1B);
     background: #fff;
-    color: var(--bodhi-green, #228B22);
+    color: var(--bodhi-green, #1B6E1B);
     border-radius: 8px;
     font: 600 0.95rem inherit;
     font-family: inherit;
@@ -343,7 +343,7 @@
 }
 
 .rw-passage-toggle[aria-expanded="true"] {
-    background: var(--bodhi-green, #228B22);
+    background: var(--bodhi-green, #1B6E1B);
     color: #fff;
 }
 
@@ -405,7 +405,7 @@
 
 .rw-virtue {
     background: #f7fbf7;
-    border-left: 4px solid var(--bodhi-green, #228B22);
+    border-left: 4px solid var(--bodhi-green, #1B6E1B);
     border-radius: 0 8px 8px 0;
     padding: 0.8rem 1rem;
 }
@@ -419,7 +419,7 @@
 }
 
 .rw-virtue-th { font-size: 1.3rem; color: var(--temple-red, #8B0000); }
-.rw-virtue-paiboon { color: var(--bodhi-green, #228B22); font-style: italic; }
+.rw-virtue-paiboon { color: var(--bodhi-green, #1B6E1B); font-style: italic; }
 .rw-virtue-en { color: var(--royal-purple, #4A1A6B); font-weight: 600; }
 .rw-virtue-story-th { margin: 0; font-size: 1.1rem; line-height: 1.8; }
 .rw-virtue-story-en { margin: 0.1rem 0 0; font-style: italic; color: #555; font-size: 0.95rem; }
@@ -436,7 +436,7 @@
 }
 
 .rw-vocab-thai { font-size: 1.35rem; color: var(--temple-red, #8B0000); }
-.rw-vocab-paiboon { color: var(--bodhi-green, #228B22); font-style: italic; }
+.rw-vocab-paiboon { color: var(--bodhi-green, #1B6E1B); font-style: italic; }
 .rw-vocab-en { color: #444; }
 
 @media (max-width: 600px) {
@@ -489,7 +489,7 @@
 .rw-gloss-paiboon {
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--bodhi-green, #228B22);
+    color: var(--bodhi-green, #1B6E1B);
 }
 
 .rw-gloss-english {
@@ -501,7 +501,7 @@
 .rw-moral {
     margin-top: 1.5rem;
     padding: 0.9rem 1.1rem;
-    border-left: 4px solid var(--bodhi-green, #228B22);
+    border-left: 4px solid var(--bodhi-green, #1B6E1B);
     background: #f2fbf2;
     border-radius: 6px;
     font-style: italic;
@@ -590,7 +590,7 @@
     margin-right: 0.5rem;
 }
 
-.rw-trace-sound { color: var(--bodhi-green, #228B22); font-weight: 600; }
+.rw-trace-sound { color: var(--bodhi-green, #1B6E1B); font-weight: 600; }
 
 .rw-trace-controls {
     display: flex;
