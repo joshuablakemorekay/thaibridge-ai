@@ -8139,7 +8139,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 23; the rest is not in the app yet.
         # ‼ CHECK [IMG_0278.PNG]: CONTINUES. The heading reads สารุปปะ 26
         #   สิกขาบท but only 23 are printed on this page, so rules 24-26 are
         #   on page 16 and have NOT been written from memory. Rule 23 is the
@@ -8361,6 +8360,242 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "'I will go among the houses not with the head covered': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0279.PNG]: The chant is now COMPLETE at twenty-six,
+            #   matching the heading สารุปปะ 26 สิกขาบท on page 15. The
+            #   CONTINUES marker should come off.
+            {
+                'number': 24,
+                'page': 16,
+                'pali': 'นะ โอคุณฐิโต อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not sit among the houses with the head covered': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0279.PNG]: อุกกุฏิกายะ (ukkuṭikāya) and
+            #   ปัลลัตถิกายะ (pallatthikāya) in rule 26 are both technical
+            #   postures. The English is a working translation; worth checking
+            #   against a Vinaya translation before print, along with the four
+            #   flagged on page 15.
+            {
+                'number': 25,
+                'pali': 'นะ อุกกุฏิกายะ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not go among the houses walking on the heels or on tiptoe': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0279.PNG]: Footnote marker 1 sits at the end of
+            #   this rule, and its footnote 'วิ. มหา 2/531-542' is printed at
+            #   the FOOT of the page, below the Bhojana rules. It is carried
+            #   as a page footnote block there, where the book prints it, not
+            #   as source_printed on this chant — see the check on the Bhojana
+            #   entry.
+            {
+                'number': 26,
+                'pali': 'นะ ปัลลัตถิกายะ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not sit among the houses lolling or clasping the knees': this is a training to be observed.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 18; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0279.PNG]: The book prints NO title for this group,
+        #   only the heading โภชะนะปะฏิสังยุต 30 สิกขาบท, which is carried as
+        #   the section on verse 1. title_thai and title_pali are left empty;
+        #   title_english is the app's own.
+        # ‼ CHECK [IMG_0279.PNG]: CONTINUES. The heading says 30 and 18 are
+        #   printed here, so rules 19-30 are on page 17 and have not been
+        #   written from memory.
+        # ‼ CHECK [IMG_0279.PNG]: Rules 1-8 were generated from a table of
+        #   four stems paired with receiving and eating, as page 15's were;
+        #   9-18 were transcribed individually because each differs. Spot-
+        #   check 1-8 against the page.
+        'id': 'sekhiya-bhojanapatisamyutta',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Sekhiya Rules — Bhojanapaṭisaṃyutta',
+        'page_start': 16,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0279.PNG]: DECISION NEEDED — WHY THIS IS A SEPARATE
+            #   CHANT. The book prints เสขิยวัตร once as a title on page 15
+            #   and then group headings under it, so structurally the Sekhiyas
+            #   are ONE chant in four groups. But the NUMBERING RESTARTS at 1
+            #   for each group, and a chant dict numbers its verses uniquely.
+            #   Kept as one chant, this rule would render as verse 27 where
+            #   the book prints 1 — and the printed number is what a reader
+            #   follows. So each group is its own chant, numbered as the book
+            #   numbers it. The cost is that เสขิยวัตร appears in the index as
+            #   several entries rather than one. Please confirm.
+            {
+                'number': 1,
+                'section': 'โภชะนะปะฏิสังยุต 30 สิกขาบท: Bhojanapaṭisaṃyutta — the thirty training rules on receiving and eating almsfood',
+                'pali': 'สักกัจจัง ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'sakkaccaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will receive almsfood attentively': this is a training to be observed.",
+            },
+            {
+                'number': 2,
+                'pali': 'ปัตตะสัญญี ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'pattasaññī piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will receive almsfood with attention on the bowl': this is a training to be observed.",
+            },
+            {
+                'number': 3,
+                'pali': 'สะมะสูปะกัง ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'samasūpakaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will receive almsfood with a due proportion of curry': this is a training to be observed.",
+            },
+            {
+                'number': 4,
+                'pali': 'สะมะติตติกัง ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'samatittikaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will receive almsfood level with the rim': this is a training to be observed.",
+            },
+            {
+                'number': 5,
+                'pali': 'สักกัจจัง ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'sakkaccaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will eat almsfood attentively': this is a training to be observed.",
+            },
+            {
+                'number': 6,
+                'pali': 'ปัตตะสัญญี ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'pattasaññī piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will eat almsfood with attention on the bowl': this is a training to be observed.",
+            },
+            {
+                'number': 7,
+                'pali': 'สะปะทานัง ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'sapadānaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will eat almsfood in order, without picking and choosing': this is a training to be observed.",
+            },
+            {
+                'number': 8,
+                'pali': 'สะมะสูปะกัง ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'samasūpakaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will eat almsfood with a due proportion of curry': this is a training to be observed.",
+            },
+            {
+                'number': 9,
+                'pali': 'นะ ถูปะโต โอมัททิต๎วา ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na thūpato omadditvā piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat almsfood having pressed it down from the top': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0279.PNG]: Rules 10 and 11 run onto a second
+            #   printed line through justification only, not as couplets. Kept
+            #   as one verse each. The yamakkan appears in พ์ยัญชะนัง and
+            #   ภิยโยกัม๎ยะตัง here, and in วิญญาเปต๎วา (11), โอมัททิต๎วา (9),
+            #   มุขะท๎วารัง (15) and พ์ยาหะริสสามีติ (17) — all reproduced as
+            #   printed.
+            {
+                'number': 10,
+                'pali': 'นะ สูปัง วา พ์ยัญชะนัง วา โอทะเนนะ ปะฏิจฉาเทสสามิ ภิยโยกัม๎ยะตัง อุปาทายาติ สิกขา กะระณียา.',
+                'pali_roman': 'na sūpaṃ vā byañjanaṃ vā odanena paṭicchādessāmi bhiyyokamyataṃ upādāyāti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not cover up curry or condiment with rice out of a wish for more': this is a training to be observed.",
+            },
+            {
+                'number': 11,
+                'pali': 'นะ สูปัง วา โอทะนัง วา อะคิลาโน อัตตะโน อัตถายะ วิญญาเปต๎วา ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na sūpaṃ vā odanaṃ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I, not being ill, will not eat curry or rice having asked for it for myself': this is a training to be observed.",
+            },
+            {
+                'number': 12,
+                'pali': 'นะ อุชฌานะสัญญี ปะเรสัง ปัตตัง โอโลเกสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na ujjhānasaññī paresaṃ pattaṃ olokessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not look at others' bowls finding fault': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0279.PNG]: กะวะฬัง (13) and กะวะเฬ (15) use ฬ,
+            #   romanised kabaḷaṃ / kabaḷe with the retroflex ḷ, following the
+            #   Thai letter rather than the kavaḷa spelling some editions use.
+            {
+                'number': 13,
+                'pali': 'นาติมะหันตัง กะวะฬัง กะริสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'nātimahantaṃ kabaḷaṃ karissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not make too large a mouthful': this is a training to be observed.",
+            },
+            {
+                'number': 14,
+                'pali': 'ปะริมัณฑะลัง อาโลปัง กะริสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'parimaṇḍalaṃ ālopaṃ karissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will make the morsel round': this is a training to be observed.",
+            },
+            {
+                'number': 15,
+                'pali': 'นะ อะนาหะเฏ กะวะเฬ มุขะท๎วารัง วิวะริสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na anāhaṭe kabaḷe mukhadvāraṃ vivarissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not open the mouth before the morsel is brought to it': this is a training to be observed.",
+            },
+            {
+                'number': 16,
+                'pali': 'นะ ภุญชะมาโน สัพพัง หัตถัง มุเข ปักขิปิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na bhuñjamāno sabbaṃ hatthaṃ mukhe pakkhipissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not put the whole hand into the mouth while eating': this is a training to be observed.",
+            },
+            {
+                'number': 17,
+                'pali': 'นะ สะกะวะเฬนะ มุเขนะ พ์ยาหะริสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not speak with a mouthful in the mouth': this is a training to be observed.",
+            },
+            {
+                'number': 18,
+                'pali': 'นะ ปิณฑุกเขปะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na piṇḍukkhepakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat tossing up balls of food': this is a training to be observed.",
             },
         ],
     },
@@ -9492,6 +9727,28 @@ PAGE_BLOCKS = [
                     'is complete.'
                 ),
                 'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 16 ─────────────────────────────────────────────────────────
+    # The page's only footnote, printed below the Bhojana rules although its
+    # marker belongs to Saruppa rule 26 above them. Anchored where the book
+    # prints it, not where the marker sits.
+    #
+    # A canonical citation, so it would normally be `source_printed` on the
+    # chant. It is a footnote block instead, for the same reason page 12's
+    # was: `source_printed` renders as a line labelled with the chant's
+    # title, and the book prints '1. วิ. มหา 2/531-542'. No english — a
+    # reference is reproduced, never translated or expanded.
+    {
+        'page': 16,
+        'after': 'sekhiya-bhojanapatisamyutta',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'วิ. มหา 2/531-542',
+                'english': '',
             },
         ],
     },
