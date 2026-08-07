@@ -1,0 +1,418 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "tisarana-gamana-ubosot",
+      "ubosot-sila"
+    ],
+    "pages": [
+      {
+        "page": 12,
+        "file": "IMG_0275.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "พระเถระที่จะแสดงธรรมตั้งพัดให้อุโบสถศีล อุบาสกอุบาสิกาตั้งใจสมาทาน คือว่าตามพระโดยเคารพดังนี้",
+            "english": "The elder who is to give the Dhamma talk sets up his fan to give the Uposatha precepts. The laymen and laywomen set their minds on undertaking them, repeating after the monk respectfully, as follows.",
+            "english_unverified": true
+          }
+        ],
+        "note": "The page opens with a prose instruction: the elder sets up his fan to give the precepts and the laypeople repeat after him. No heading above it."
+      },
+      {
+        "page": 12,
+        "file": "IMG_0275.PNG",
+        "script": "thai",
+        "chant": "tisarana-gamana-ubosot",
+        "verses": "1-6",
+        "starts_here": true,
+        "note": "The นะโม three times, then the refuge-going in three rounds. The book prints NO title over any of it. Footnote marker 1 on the last line."
+      },
+      {
+        "page": 12,
+        "file": "IMG_0275.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "พระเถระว่า ติสะระณะคะมะนัง นิฏฐิตัง. อุบาสกอุบาสิการับพร้อมกันว่า อามะ ภันเต. พระเถระว่านำต่อไปดังนี้.",
+            "english": "The elder says tisaraṇagamanaṃ niṭṭhitaṃ — 'the going to the three refuges is completed'. The laymen and laywomen answer together āma bhante — 'yes, venerable sir'. The elder then leads on as follows.",
+            "english_unverified": true
+          }
+        ],
+        "note": "Between the two chants: the elder declares the refuge-going completed, the assembly answers อามะ ภันเต, and the elder leads on."
+      },
+      {
+        "page": 12,
+        "file": "IMG_0275.PNG",
+        "script": "thai",
+        "chant": "ubosot-sila",
+        "verses": "1-9",
+        "starts_here": true,
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "ขุ.ขุ. 25/1-2",
+            "english": "",
+            "note": "A canonical citation, reproduced exactly as printed and NOT expanded. It is carried as a page footnote block rather than as source_printed on the chants, because ONE printed footnote serves TWO markers on this page and source_printed can only attach per chant — which would print the citation twice where the book prints it once."
+          }
+        ],
+        "note": "Heading อุโบสถศีล, the eight numbered precepts, then the unnumbered closing undertaking. Footnote marker 1 on precept 8. Below the rule at the foot, the page's only footnote: '1. ขุ.ขุ. 25/1-2'."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "tisarana-gamana-ubosot",
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "The Going to the Three Refuges, for the Uposatha",
+      "group": "General chanting",
+      "page_start": 12,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent. The passage is introduced by the prose instruction above it, not by a หันทะ มะยัง… line.",
+        "units": "Six units: the นะโม printed three times in full, then the refuge-going in three rounds, each round set as one printed line running Buddha, Dhamma, Saṅgha. Grouping the นะโม together with the refuges as ONE chant is my reading — see the check.",
+        "ordering": "Pali only throughout; the book prints no Thai translation on this page at all.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0275.PNG (page 12) only. Single column, Thai script. Begins and ends on this page. Footnote marker 1 sits on the last refuge line."
+      },
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ",
+          "pali_roman": "namo tassa bhagavato arahato sammāsambuddhassa",
+          "thai": "",
+          "paiboon": "",
+          "english": "Homage to the Blessed One, the Worthy One, the Perfectly Self-Awakened One."
+        },
+        {
+          "number": 2,
+          "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ",
+          "pali_roman": "namo tassa bhagavato arahato sammāsambuddhassa",
+          "thai": "",
+          "paiboon": "",
+          "english": "Homage to the Blessed One, the Worthy One, the Perfectly Self-Awakened One."
+        },
+        {
+          "number": 3,
+          "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ",
+          "pali_roman": "namo tassa bhagavato arahato sammāsambuddhassa",
+          "thai": "",
+          "paiboon": "",
+          "english": "Homage to the Blessed One, the Worthy One, the Perfectly Self-Awakened One."
+        },
+        {
+          "number": 4,
+          "pali": "พุทธัง สะระณัง คัจฉามิ, ธัมมัง สะระณัง คัจฉามิ, สังฆัง สะระณัง คัจฉามิ,",
+          "pali_roman": "buddhaṃ saraṇaṃ gacchāmi, dhammaṃ saraṇaṃ gacchāmi, saṅghaṃ saraṇaṃ gacchāmi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "I go to the Buddha as refuge, I go to the Dhamma as refuge, I go to the Saṅgha as refuge,"
+        },
+        {
+          "number": 5,
+          "pali": "ทุติยัมปิ พุทธัง สะระณัง คัจฉามิ, ทุติยัมปิ ธัมมัง สะระณัง คัจฉามิ, ทุติยัมปิ สังฆัง สะระณัง คัจฉามิ,",
+          "pali_roman": "dutiyampi buddhaṃ saraṇaṃ gacchāmi, dutiyampi dhammaṃ saraṇaṃ gacchāmi, dutiyampi saṅghaṃ saraṇaṃ gacchāmi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "For a second time I go to the Buddha as refuge, for a second time I go to the Dhamma as refuge, for a second time I go to the Saṅgha as refuge,"
+        },
+        {
+          "number": 6,
+          "pali": "ตะติยัมปิ พุทธัง สะระณัง คัจฉามิ, ตะติยัมปิ ธัมมัง สะระณัง คัจฉามิ, ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+          "pali_roman": "tatiyampi buddhaṃ saraṇaṃ gacchāmi, tatiyampi dhammaṃ saraṇaṃ gacchāmi, tatiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "For a third time I go to the Buddha as refuge, for a third time I go to the Dhamma as refuge, for a third time I go to the Saṅgha as refuge."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 1,
+          "file": "IMG_0275.PNG",
+          "issue": "DECISION NEEDED. Verses 1-3 are the same นะโม line already in the app as 'pubbabhaga-namakara' on page 2. I have NOT treated this as a repeat, because the prompt's rule is that a printing which DIFFERS is not a repeat, and this one differs twice over: page 2 prints it with a closing full stop and page 12 does not, and here it runs straight on into the refuges as one act led by the elder rather than standing alone after its own invitation. A chant dict also carries only ONE page_start, so making it a repeat would leave page 12 in the app without the นะโม the book prints on it. Please confirm this is the right call — it will recur constantly across a book whose services overlap."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0275.PNG",
+          "issue": "The book prints NO title for this passage. The id and the English title are mine; title_thai and title_pali are left empty rather than invented. Same treatment as 'pubbabhaga-namakara' on page 2."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0275.PNG",
+          "issue": "Grouping the นะโม (verses 1-3) together with the refuge-going (verses 4-6) as ONE chant is my reading. The book separates them only by a line break, and closes the whole with ติสะระณะคะมะนัง นิฏฐิตัง, which names only the refuge-going. Splitting them into two chants is defensible and is your call."
+        },
+        {
+          "verse": 6,
+          "file": "IMG_0275.PNG",
+          "issue": "FOOTNOTE, ONE SERVING TWO MARKERS. Page 12 prints a single footnote '1. ขุ.ขุ. 25/1-2' but TWO superscript 1 markers: one here on the last refuge line, one on precept 8 of อุโบสถศีล. The range fits both halves — Khuddakapāṭha 1 is the Saraṇattaya and 2 the Sikkhāpada. It is therefore carried as ONE page footnote block, not as source_printed on each chant, which would have printed the citation twice where the book prints it once. Neither chant carries source_printed as a result — say if you would rather the citation also hung off the chants for the study view."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0275.PNG",
+          "issue": "ขุ.ขุ. abbreviates ขุททกนิกาย ขุททกปาฐะ — Khuddaka-nikāya, Khuddakapāṭha. Recorded here rather than in the field, because the reference is reproduced exactly as printed and never expanded."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0275.PNG",
+          "issue": "Each refuge round is set as ONE printed line running Buddha, Dhamma, Saṅgha, so it is kept as one verse rather than split into three. Rounds 2 and 3 wrap onto a second line through justification only."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "นะโม",
+          "pali_roman": "namo",
+          "meaning": "homage, veneration — the word the whole salutation is named after"
+        },
+        {
+          "pali": "ภะคะวะโต",
+          "pali_roman": "bhagavato",
+          "meaning": "of the Blessed One; the most common respectful title for the Buddha in the liturgy"
+        },
+        {
+          "pali": "อะระหะโต",
+          "pali_roman": "arahato",
+          "meaning": "of the Worthy One — one in whom the defilements are gone and who is worthy of offerings"
+        },
+        {
+          "pali": "สัมมาสัมพุทธัสสะ",
+          "pali_roman": "sammāsambuddhassa",
+          "meaning": "of the Perfectly Self-Awakened One — awakened fully, and by himself, without a teacher"
+        },
+        {
+          "pali": "สะระณัง",
+          "pali_roman": "saraṇaṃ",
+          "meaning": "refuge, shelter — not a place of hiding but what one takes one's direction and safety from"
+        },
+        {
+          "pali": "คัจฉามิ",
+          "pali_roman": "gacchāmi",
+          "meaning": "I go. The refuge is something one GOES to, an act repeated, not a state one is placed in"
+        },
+        {
+          "pali": "ติสะระณะคะมะนัง",
+          "pali_roman": "tisaraṇagamanaṃ",
+          "meaning": "the going to the three refuges, taken as one completed act — the phrase the elder uses to close it"
+        },
+        {
+          "pali": "อามะ ภันเต",
+          "pali_roman": "āma bhante",
+          "meaning": "yes, venerable sir — the assembly's assent, spoken together"
+        }
+      ]
+    },
+    {
+      "id": "ubosot-sila",
+      "title_thai": "อุโบสถศีล",
+      "title_pali": "",
+      "title_roman": "Ubosot Sila",
+      "title_english": "The Eight Uposatha Precepts",
+      "group": "General chanting",
+      "page_start": 12,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent. Introduced by the prose instruction above it.",
+        "units": "Nine units: the eight numbered precepts as the book numbers them 1-8, then the concluding undertaking beginning อิมัง อัฏฐังคะสะมันนาคะตัง, which the book prints unnumbered immediately after precept 8.",
+        "ordering": "Pali only; no Thai translation printed anywhere on this page.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0275.PNG (page 12) only. Single column, Thai script. Begins and ends on this page. Footnote marker 1 on precept 8."
+      },
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ปาณาติปาตา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from taking life."
+        },
+        {
+          "number": 2,
+          "pali": "อะทินนาทานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "adinnādānā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from taking what is not given."
+        },
+        {
+          "number": 3,
+          "pali": "อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from unchastity."
+        },
+        {
+          "number": 4,
+          "pali": "มุสาวาทา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "musāvādā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from false speech."
+        },
+        {
+          "number": 5,
+          "pali": "สุราเมระยะมัชชะปะมาทัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "surāmerayamajjapamādaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from distilled and fermented drink, which is the basis of heedlessness."
+        },
+        {
+          "number": 6,
+          "pali": "วิกาละโภชะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "vikālabhojanā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from eating at the wrong time."
+        },
+        {
+          "number": 7,
+          "pali": "นัจจะคีตะวาทิตะวิสูกะทัสสะนะมาลาคันธะวิเลปะนะธาระณะมัณฑะนะวิภูสะนัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "naccagītavāditavisūkadassanamālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from dancing, singing, music and unseemly shows, and from wearing garlands, scents and cosmetics, and from adornment and beautifying."
+        },
+        {
+          "number": 8,
+          "pali": "อุจจาสะยะนะมะหาสะยะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+          "pali_roman": "uccāsayanamahāsayanā veramaṇī sikkhāpadaṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake the training rule to abstain from a high bed and a large bed."
+        },
+        {
+          "number": 9,
+          "pali": "อิมัง อัฏฐังคะสะมันนาคะตัง, พุทธะปัญญัตตัง อุโปสะถัง, อิมัญจะ รัตติง อิมัญจะ ทิวะสัง, สัมมะเทวะ อะภิรักขิตุง สะมาทิยามิ.",
+          "pali_roman": "imaṃ aṭṭhaṅgasamannāgataṃ, buddhapaññattaṃ uposathaṃ, imañca rattiṃ imañca divasaṃ, sammadeva abhirakkhituṃ samādiyāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "I undertake to guard well, for this night and this day, this Uposatha endowed with eight factors and appointed by the Buddha."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0275.PNG",
+          "issue": "Pali only — the book prints no Thai translation anywhere on page 12, so `thai` and `paiboon` are empty on every verse and english_unverified is set."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0275.PNG",
+          "issue": "The book numbers the precepts 1-8 but prints this closing undertaking UNNUMBERED, immediately after precept 8. It is entered as verse 9 so it is not lost; say if you would rather it were set apart from the numbered eight."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0275.PNG",
+          "issue": "Footnote marker 1 sits here, and a second marker 1 sits on the last refuge line of the chant above. One printed footnote serves both, so it is carried once as a page footnote block and neither chant carries source_printed."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0275.PNG",
+          "issue": "'อะพ์รัห์มะจะริยา' carries the yamakkan mark ๎ on both พ์ and ห์, reproduced as printed rather than normalised to อะพรัหมะจะริยา."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0275.PNG",
+          "issue": "The seventh precept is a single unbroken compound running to 71 Thai characters, wrapping across two printed lines mid-word. Rejoined with the hyphenation dropped, per the run-on rule. Worth a careful look — it is the longest single word in the book so far."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "เวระมะณี",
+          "pali_roman": "veramaṇī",
+          "meaning": "abstention — what the precept actually is: the refraining itself, undertaken, not a rule imposed from outside"
+        },
+        {
+          "pali": "สิกขาปะทัง",
+          "pali_roman": "sikkhāpadaṃ",
+          "meaning": "a training rule; literally a 'step of training', one part of a path being learned"
+        },
+        {
+          "pali": "สะมาทิยามิ",
+          "pali_roman": "samādiyāmi",
+          "meaning": "I undertake, I take upon myself — the first person of the act each precept consists of"
+        },
+        {
+          "pali": "ปาณาติปาตา",
+          "pali_roman": "pāṇātipātā",
+          "meaning": "from the destruction of breathing beings — the first precept, wider than 'killing people'"
+        },
+        {
+          "pali": "อะทินนาทานา",
+          "pali_roman": "adinnādānā",
+          "meaning": "from taking what is not given — the phrasing is broader than theft and covers anything not freely offered"
+        },
+        {
+          "pali": "อะพ์รัห์มะจะริยา",
+          "pali_roman": "abrahmacariyā",
+          "meaning": "from unchastity. On an Uposatha day the lay precept tightens from 'sexual misconduct' to full celibacy"
+        },
+        {
+          "pali": "วิกาละโภชะนา",
+          "pali_roman": "vikālabhojanā",
+          "meaning": "from eating at the wrong time — after midday until dawn, the monastic timing a layperson takes on for the day"
+        },
+        {
+          "pali": "อุจจาสะยะนะมะหาสะยะนา",
+          "pali_roman": "uccāsayanamahāsayanā",
+          "meaning": "from high and large beds — luxurious sleeping places, the eighth factor"
+        },
+        {
+          "pali": "พุทธะปัญญัตตัง",
+          "pali_roman": "buddhapaññattaṃ",
+          "meaning": "appointed by the Buddha — said of the Uposatha to mark it as laid down, not devised locally"
+        },
+        {
+          "pali": "อัฏฐังคะสะมันนาคะตัง",
+          "pali_roman": "aṭṭhaṅgasamannāgataṃ",
+          "meaning": "endowed with eight factors — the Uposatha is complete only with all eight, not most of them"
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "tisarana-gamana-ubosot",
+      "ubosot-sila"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 13,
+    "resume_from_file": "IMG_0276.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values exist in this batch at all. The book prints no Thai translation on page 12, so every `thai` and `paiboon` is the empty string.",
+    "pali_untouched": "Confirmed. Every `pali` is the book's Thai script as printed; every `pali_roman` is IAST transliteration of it.",
+    "page_scan": "agrees — page 12 carries verses 1-6 of tisarana-gamana-ubosot and 1-9 of ubosot-sila. Every verse falls in exactly one row. One page, one image.",
+    "notes": "ONE page this time, not two or three. Page 12 is a complete liturgical unit that begins and ends on the page, and it raises a structural question (see the DECISION NEEDED check on verse 1) that is better answered on one page than three. The นะโม on this page is the same line already in the app on page 2 as 'pubbabhaga-namakara'; it is entered again rather than stubbed as a repeat, because a repeat stub would leave page 12 in the app missing text the book prints on it, and because the two printings differ. Josh approved this on condition the app page still matches the book exactly, which is why the page's single footnote is carried as ONE footnote block rather than as source_printed on each of the two chants it serves."
+  }
+}

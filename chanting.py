@@ -7580,6 +7580,227 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0275.PNG]: The book prints NO title for this passage.
+        #   The id and the English title are mine; title_thai and title_pali
+        #   are left empty rather than invented. Same treatment as
+        #   'pubbabhaga-namakara' on page 2.
+        # ‼ CHECK [IMG_0275.PNG]: Grouping the นะโม (verses 1-3) together with
+        #   the refuge-going (verses 4-6) as ONE chant is my reading. The book
+        #   separates them only by a line break, and closes the whole with
+        #   ติสะระณะคะมะนัง นิฏฐิตัง, which names only the refuge-going.
+        #   Splitting them into two chants is defensible and is your call.
+        # ‼ CHECK [IMG_0275.PNG]: ขุ.ขุ. abbreviates ขุททกนิกาย ขุททกปาฐะ —
+        #   Khuddaka-nikāya, Khuddakapāṭha. Recorded here rather than in the
+        #   field, because the reference is reproduced exactly as printed and
+        #   never expanded.
+        'id': 'tisarana-gamana-ubosot',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Going to the Three Refuges, for the Uposatha',
+        'page_start': 12,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0275.PNG]: DECISION NEEDED. Verses 1-3 are the same
+            #   นะโม line already in the app as 'pubbabhaga-namakara' on page
+            #   2. I have NOT treated this as a repeat, because the prompt's
+            #   rule is that a printing which DIFFERS is not a repeat, and
+            #   this one differs twice over: page 2 prints it with a closing
+            #   full stop and page 12 does not, and here it runs straight on
+            #   into the refuges as one act led by the elder rather than
+            #   standing alone after its own invitation. A chant dict also
+            #   carries only ONE page_start, so making it a repeat would leave
+            #   page 12 in the app without the นะโม the book prints on it.
+            #   Please confirm this is the right call — it will recur
+            #   constantly across a book whose services overlap.
+            {
+                'number': 1,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ',
+                'pali_roman': 'namo tassa bhagavato arahato sammāsambuddhassa',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Perfectly Self-Awakened One.',
+            },
+            {
+                'number': 2,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ',
+                'pali_roman': 'namo tassa bhagavato arahato sammāsambuddhassa',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Perfectly Self-Awakened One.',
+            },
+            {
+                'number': 3,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ',
+                'pali_roman': 'namo tassa bhagavato arahato sammāsambuddhassa',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Perfectly Self-Awakened One.',
+            },
+            # ‼ CHECK [IMG_0275.PNG]: Each refuge round is set as ONE printed
+            #   line running Buddha, Dhamma, Saṅgha, so it is kept as one
+            #   verse rather than split into three. Rounds 2 and 3 wrap onto a
+            #   second line through justification only.
+            {
+                'number': 4,
+                'pali': 'พุทธัง สะระณัง คัจฉามิ, ธัมมัง สะระณัง คัจฉามิ, สังฆัง สะระณัง คัจฉามิ,',
+                'pali_roman': 'buddhaṃ saraṇaṃ gacchāmi, dhammaṃ saraṇaṃ gacchāmi, saṅghaṃ saraṇaṃ gacchāmi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I go to the Buddha as refuge, I go to the Dhamma as refuge, I go to the Saṅgha as refuge,',
+            },
+            {
+                'number': 5,
+                'pali': 'ทุติยัมปิ พุทธัง สะระณัง คัจฉามิ, ทุติยัมปิ ธัมมัง สะระณัง คัจฉามิ, ทุติยัมปิ สังฆัง สะระณัง คัจฉามิ,',
+                'pali_roman': 'dutiyampi buddhaṃ saraṇaṃ gacchāmi, dutiyampi dhammaṃ saraṇaṃ gacchāmi, dutiyampi saṅghaṃ saraṇaṃ gacchāmi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time I go to the Buddha as refuge, for a second time I go to the Dhamma as refuge, for a second time I go to the Saṅgha as refuge,',
+            },
+            # ‼ CHECK [IMG_0275.PNG]: FOOTNOTE, ONE SERVING TWO MARKERS. Page
+            #   12 prints a single footnote '1. ขุ.ขุ. 25/1-2' but TWO
+            #   superscript 1 markers: one here on the last refuge line, one
+            #   on precept 8 of อุโบสถศีล. The range fits both halves —
+            #   Khuddakapāṭha 1 is the Saraṇattaya and 2 the Sikkhāpada. It is
+            #   therefore carried as ONE page footnote block, not as
+            #   source_printed on each chant, which would have printed the
+            #   citation twice where the book prints it once. Neither chant
+            #   carries source_printed as a result — say if you would rather
+            #   the citation also hung off the chants for the study view.
+            {
+                'number': 6,
+                'pali': 'ตะติยัมปิ พุทธัง สะระณัง คัจฉามิ, ตะติยัมปิ ธัมมัง สะระณัง คัจฉามิ, ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'tatiyampi buddhaṃ saraṇaṃ gacchāmi, tatiyampi dhammaṃ saraṇaṃ gacchāmi, tatiyampi saṅghaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time I go to the Buddha as refuge, for a third time I go to the Dhamma as refuge, for a third time I go to the Saṅgha as refuge.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0275.PNG]: Pali only — the book prints no Thai
+        #   translation anywhere on page 12, so `thai` and `paiboon` are empty
+        #   on every verse and english_unverified is set.
+        'id': 'ubosot-sila',
+        'title_thai': 'อุโบสถศีล',
+        'title_pali': '',
+        'title_roman': 'Ubosot Sila',
+        'title_english': 'The Eight Uposatha Precepts',
+        'page_start': 12,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'ปาณาติปาตา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from taking life.',
+            },
+            {
+                'number': 2,
+                'pali': 'อะทินนาทานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'adinnādānā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from taking what is not given.',
+            },
+            # ‼ CHECK [IMG_0275.PNG]: 'อะพ์รัห์มะจะริยา' carries the yamakkan
+            #   mark ๎ on both พ์ and ห์, reproduced as printed rather than
+            #   normalised to อะพรัหมะจะริยา.
+            {
+                'number': 3,
+                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from unchastity.',
+            },
+            {
+                'number': 4,
+                'pali': 'มุสาวาทา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'musāvādā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from false speech.',
+            },
+            {
+                'number': 5,
+                'pali': 'สุราเมระยะมัชชะปะมาทัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'surāmerayamajjapamādaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from distilled and fermented drink, which is the basis of heedlessness.',
+            },
+            {
+                'number': 6,
+                'pali': 'วิกาละโภชะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'vikālabhojanā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from eating at the wrong time.',
+            },
+            # ‼ CHECK [IMG_0275.PNG]: The seventh precept is a single unbroken
+            #   compound running to 71 Thai characters, wrapping across two
+            #   printed lines mid-word. Rejoined with the hyphenation dropped,
+            #   per the run-on rule. Worth a careful look — it is the longest
+            #   single word in the book so far.
+            {
+                'number': 7,
+                'pali': 'นัจจะคีตะวาทิตะวิสูกะทัสสะนะมาลาคันธะวิเลปะนะธาระณะมัณฑะนะวิภูสะนัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'naccagītavāditavisūkadassanamālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from dancing, singing, music and unseemly shows, and from wearing garlands, scents and cosmetics, and from adornment and beautifying.',
+            },
+            # ‼ CHECK [IMG_0275.PNG]: Footnote marker 1 sits here, and a
+            #   second marker 1 sits on the last refuge line of the chant
+            #   above. One printed footnote serves both, so it is carried once
+            #   as a page footnote block and neither chant carries
+            #   source_printed.
+            {
+                'number': 8,
+                'pali': 'อุจจาสะยะนะมะหาสะยะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'uccāsayanamahāsayanā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from a high bed and a large bed.',
+            },
+            # ‼ CHECK [IMG_0275.PNG]: The book numbers the precepts 1-8 but
+            #   prints this closing undertaking UNNUMBERED, immediately after
+            #   precept 8. It is entered as verse 9 so it is not lost; say if
+            #   you would rather it were set apart from the numbered eight.
+            {
+                'number': 9,
+                'pali': 'อิมัง อัฏฐังคะสะมันนาคะตัง, พุทธะปัญญัตตัง อุโปสะถัง, อิมัญจะ รัตติง อิมัญจะ ทิวะสัง, สัมมะเทวะ อะภิรักขิตุง สะมาทิยามิ.',
+                'pali_roman': 'imaṃ aṭṭhaṅgasamannāgataṃ, buddhapaññattaṃ uposathaṃ, imañca rattiṃ imañca divasaṃ, sammadeva abhirakkhituṃ samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake to guard well, for this night and this day, this Uposatha endowed with eight factors and appointed by the Buddha.',
+            },
+        ],
+    },
 ]
 
 
@@ -8493,6 +8714,70 @@ PAGE_BLOCKS = [
                     'together request the Uposatha precepts, as follows.'
                 ),
                 'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 12 ─────────────────────────────────────────────────────────
+    # The instruction that opens the page, above both chants on it.
+    {
+        'page': 12,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'พระเถระที่จะแสดงธรรมตั้งพัดให้อุโบสถศีล อุบาสกอุบาสิกาตั้งใจสมาทาน '
+                    'คือว่าตามพระโดยเคารพดังนี้'
+                ),
+                'english': (
+                    'The elder who is to give the Dhamma talk sets up his fan '
+                    'to give the Uposatha precepts. The laymen and laywomen '
+                    'set their minds on undertaking them, repeating after the '
+                    'monk respectfully, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    # Between the two chants: the elder closes the refuge-going and the
+    # assembly answers. Not part of either chant — it is the book telling the
+    # room what happens between them.
+    {
+        'page': 12,
+        'after': 'tisarana-gamana-ubosot',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'พระเถระว่า ติสะระณะคะมะนัง นิฏฐิตัง. อุบาสกอุบาสิการับพร้อมกันว่า '
+                    'อามะ ภันเต. พระเถระว่านำต่อไปดังนี้.'
+                ),
+                'english': (
+                    'The elder says tisaraṇagamanaṃ niṭṭhitaṃ — \'the going '
+                    'to the three refuges is completed\'. The laymen and '
+                    'laywomen answer together āma bhante — \'yes, venerable '
+                    'sir\'. The elder then leads on as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    # The page's only footnote. It is a canonical citation, so it would
+    # normally be `source_printed` on the chant — but ONE printed footnote
+    # serves TWO markers here, one on the last refuge line and one on precept
+    # 8, and `source_printed` attaches per chant. Setting it on both would
+    # print the citation twice on a page that prints it once. So it is kept
+    # as the page's own footnote, which is also how the book sets it: a rule,
+    # then the marker, then the reference. No english: a reference is
+    # reproduced, never translated or expanded.
+    {
+        'page': 12,
+        'after': 'ubosot-sila',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'ขุ.ขุ. 25/1-2',
+                'english': '',
             },
         ],
     },
