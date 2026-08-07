@@ -1,0 +1,260 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "kham-kho-khama-phra-rattanatrai"
+    ],
+    "pages": [
+      {
+        "page": 14,
+        "file": "IMG_0277.PNG",
+        "script": "thai",
+        "chant": "kham-kho-khama-phra-rattanatrai",
+        "verses": "1-12",
+        "starts_here": true,
+        "note": "The page opens with the heading คำขอขมาพระรัตนตรัย and the whole chant — three stanzas of four lines, single column, centred. No footnote on this page."
+      },
+      {
+        "page": 14,
+        "file": "IMG_0277.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "พระเถระที่แสดงพระธรรมเทศนา ลงจากธรรมาสน์ นั่ง ณ เถราสนะรออยู่จน อุบาสกอุบาสิกา สวด สะระณะคะมะนานุสสะระณะคาถา จบ เมื่อสวดจบแล้ว พระภิกษุ สามเณรทั้งหมด นั่งคุกเข่าท่าพรหมประนมมือกราบพระรัตนตรัย ด้วยเบญจางคประดิษฐ์ 3 หน อุบาสกอุบาสิกาก็กราบพระรัตนตรัย 3 หน เช่นเดียวกัน เป็นอันเสร็จพิธีในภาคเช้าในวันธรรมสวนะเพียงเท่านี้.",
+            "english": "The elder who gave the Dhamma talk comes down from the Dhamma seat and sits on the elders' seat, waiting until the laymen and laywomen have finished chanting the Saraṇagamanānussaraṇagāthā. When the chanting is done, all the bhikkhus and sāmaṇeras kneel in the brahma posture with palms joined and bow to the Triple Gem with the fivefold prostration three times. The laymen and laywomen likewise bow to the Triple Gem three times. With this the morning observance on a Dhamma-hearing day is complete.",
+            "english_unverified": true
+          }
+        ],
+        "note": "Below the chant, a closing paragraph describing the elder leaving the Dhamma seat, the prostrations, and the end of the morning observance on a Dhamma-hearing day. It closes the whole service but is prose, not a จบ… line, so it is a page block and NOT a service_closing."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "kham-kho-khama-phra-rattanatrai",
+      "title_thai": "คำขอขมาพระรัตนตรัย",
+      "title_pali": "",
+      "title_roman": "Kham Kho Khama Phra Rattanatrai",
+      "title_english": "The Request for Forgiveness from the Triple Gem",
+      "group": "General chanting",
+      "page_start": 14,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent. The book prints no หันทะ มะยัง… line for this chant, and none has been written.",
+        "units": "Twelve units — three stanzas of four lines, one stanza to each of the Three Gems. The stanzas are identical but for the Gem named, and each opens with the same line 'กาเยนะ วาจายะ วะ เจตะสา วา', which is therefore printed three times and entered three times. No section headings have been added — see the check.",
+        "ordering": "Pali only; no Thai translation is printed on this page.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0277.PNG (page 14). SINGLE column — unlike page 13, whose gathas were both set in two. The lines here are centred full lines, not column halves; the left-hand text reads as complete Pali on its own, which is the test for single-column setting. Begins and ends on this page. No footnote."
+      },
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "กาเยนะ วาจายะ วะ เจตะสา วา",
+          "pali_roman": "kāyena vācāya va cetasā vā",
+          "thai": "",
+          "paiboon": "",
+          "english": "By body, by speech, or by mind,"
+        },
+        {
+          "number": 2,
+          "pali": "พุทเธ กุกัมมัง ปะกะตัง มะยา ยัง",
+          "pali_roman": "buddhe kukammaṃ pakataṃ mayā yaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "whatever wrong has been done by me towards the Buddha —"
+        },
+        {
+          "number": 3,
+          "pali": "พุทโธ ปะฏิคคัณหะตุ อัจจะยันตัง",
+          "pali_roman": "buddho paṭiggaṇhatu accayantaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "may the Buddha accept that transgression,"
+        },
+        {
+          "number": 4,
+          "pali": "กาลันตะเร สังวะริตุง วะ พุทเธ.",
+          "pali_roman": "kālantare saṃvarituṃ va buddhe.",
+          "thai": "",
+          "paiboon": "",
+          "english": "that in time to come I may be restrained towards the Buddha."
+        },
+        {
+          "number": 5,
+          "pali": "กาเยนะ วาจายะ วะ เจตะสา วา",
+          "pali_roman": "kāyena vācāya va cetasā vā",
+          "thai": "",
+          "paiboon": "",
+          "english": "By body, by speech, or by mind,"
+        },
+        {
+          "number": 6,
+          "pali": "ธัมเม กุกัมมัง ปะกะตัง มะยา ยัง",
+          "pali_roman": "dhamme kukammaṃ pakataṃ mayā yaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "whatever wrong has been done by me towards the Dhamma —"
+        },
+        {
+          "number": 7,
+          "pali": "ธัมโม ปะฏิคคัณหะตุ อัจจะยันตัง",
+          "pali_roman": "dhammo paṭiggaṇhatu accayantaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "may the Dhamma accept that transgression,"
+        },
+        {
+          "number": 8,
+          "pali": "กาลันตะเร สังวะริตุง วะ ธัมเม.",
+          "pali_roman": "kālantare saṃvarituṃ va dhamme.",
+          "thai": "",
+          "paiboon": "",
+          "english": "that in time to come I may be restrained towards the Dhamma."
+        },
+        {
+          "number": 9,
+          "pali": "กาเยนะ วาจายะ วะ เจตะสา วา",
+          "pali_roman": "kāyena vācāya va cetasā vā",
+          "thai": "",
+          "paiboon": "",
+          "english": "By body, by speech, or by mind,"
+        },
+        {
+          "number": 10,
+          "pali": "สังเฆ กุกัมมัง ปะกะตัง มะยา ยัง",
+          "pali_roman": "saṅghe kukammaṃ pakataṃ mayā yaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "whatever wrong has been done by me towards the Saṅgha —"
+        },
+        {
+          "number": 11,
+          "pali": "สังโฆ ปะฏิคคัณหะตุ อัจจะยันตัง",
+          "pali_roman": "saṅgho paṭiggaṇhatu accayantaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "may the Saṅgha accept that transgression,"
+        },
+        {
+          "number": 12,
+          "pali": "กาลันตะเร สังวะริตุง วะ สังเฆ.",
+          "pali_roman": "kālantare saṃvarituṃ va saṅghe.",
+          "thai": "",
+          "paiboon": "",
+          "english": "that in time to come I may be restrained towards the Saṅgha."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0277.PNG",
+          "issue": "SINGLE COLUMN, checked deliberately because page 13 was two-column throughout and the switch is exactly the kind that goes unnoticed. Each line here is a complete centred line: 'กาเยนะ วาจายะ วะ เจตะสา วา' is a whole clause, not a half one, and reading straight down gives continuous sensible Pali. Confirm against the page."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0277.PNG",
+          "issue": "NO SECTION HEADINGS ADDED. The chant divides naturally into three stanzas — one for the Buddha, one for the Dhamma, one for the Saṅgha, beginning at verses 1, 5 and 9. The book prints no headings over them, only a space, so none have been written; adding them would put words on the page that the book does not print. Say if you would rather have them for the study view."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0277.PNG",
+          "issue": "The opening line 'กาเยนะ วาจายะ วะ เจตะสา วา' is printed three times in full, once at the head of each stanza, and is entered three times as verses 1, 5 and 9 rather than marked as a repeat. Same treatment as the นะโม on page 2."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0277.PNG",
+          "issue": "The title คำขอขมาพระรัตนตรัย is THAI, not Pali in Thai script, so title_pali is empty and title_roman carries the romanised Thai for findability. This is the same treatment as คำประกาศอุโบสถ on page 10."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0277.PNG",
+          "issue": "Pali only — no Thai translation printed, so thai and paiboon are empty on every verse and english_unverified is set. The English is a working translation for this edition."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0277.PNG",
+          "issue": "WORD REJOINED ACROSS A HYPHEN, in the closing prose block below this chant rather than in the chant itself. The book breaks 'เบญจางคประดิษฐ์' as 'ด้วยเบญจางค-' at the end of one line and 'ประดิษฐ์' at the start of the next. That hyphen is justification, not spelling, so the word is recorded whole and the hyphen dropped."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ขะมา",
+          "pali_roman": "khamā",
+          "meaning": "forgiveness, patient bearing — what is asked for here, and the same root as the Thai ขอขมา"
+        },
+        {
+          "pali": "กาเยนะ",
+          "pali_roman": "kāyena",
+          "meaning": "by body — the first of the three doors of action"
+        },
+        {
+          "pali": "วาจายะ",
+          "pali_roman": "vācāya",
+          "meaning": "by speech — the second door"
+        },
+        {
+          "pali": "เจตะสา",
+          "pali_roman": "cetasā",
+          "meaning": "by mind, by intention — the third door, and the one that makes an act kamma at all"
+        },
+        {
+          "pali": "กุกัมมัง",
+          "pali_roman": "kukammaṃ",
+          "meaning": "bad action, wrongdoing — ku- is the prefix of badness, as in kusala's opposite"
+        },
+        {
+          "pali": "ปะฏิคคัณหะตุ",
+          "pali_roman": "paṭiggaṇhatu",
+          "meaning": "may he accept, may he receive — an imperative addressed to the Gem being asked"
+        },
+        {
+          "pali": "อัจจะยันตัง",
+          "pali_roman": "accayantaṃ",
+          "meaning": "the transgression, the offence — literally a going-past, an overstepping"
+        },
+        {
+          "pali": "กาลันตะเร",
+          "pali_roman": "kālantare",
+          "meaning": "in the interval of time to come; hereafter"
+        },
+        {
+          "pali": "สังวะริตุง",
+          "pali_roman": "saṃvarituṃ",
+          "meaning": "to restrain oneself — the same saṃvara as in sense restraint, so the asking is paired with an undertaking"
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "kham-kho-khama-phra-rattanatrai"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 15,
+    "resume_from_file": "IMG_0278.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values exist in this batch. The book prints no Thai translation on page 14, so every thai and paiboon is the empty string.",
+    "pali_untouched": "Confirmed. Every pali is the book's Thai script as printed; every pali_roman is IAST transliteration of it.",
+    "diacritic_exceptions": [
+      "va/vā — NOT one word romanised two ways. They are two different Pali words, both meaning 'or', and both appear in the same printed line: 'กาเยนะ วาจายะ วะ เจตะสา วา'. The Thai script distinguishes them, วะ being short and วา long, and every roman va sits where the book has วะ and every vā where it has วา, verified verse by verse across all twelve."
+    ],
+    "page_scan": "agrees — page 14 carries verses 1-12 of kham-kho-khama-phra-rattanatrai, and one block row claiming no verses. One page, one image.",
+    "notes": "SINGLE COLUMN, and checked on purpose: page 13 was two-column on both its gathas, so the layout changing back is exactly the sort of thing that slips past. Each line here is a complete centred clause and the page reads straight down. One word was rejoined across a justification hyphen — 'ด้วยเบญจางค-' at the end of a line and 'ประดิษฐ์' at the start of the next, recorded as เบญจางคประดิษฐ์ per the run-on rule. This page ends the morning Dhamma-day service, so page 15 is expected to begin something new."
+  }
+}

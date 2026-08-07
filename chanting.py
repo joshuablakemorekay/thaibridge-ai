@@ -7988,6 +7988,154 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0277.PNG]: SINGLE COLUMN, checked deliberately because
+        #   page 13 was two-column throughout and the switch is exactly the
+        #   kind that goes unnoticed. Each line here is a complete centred
+        #   line: 'กาเยนะ วาจายะ วะ เจตะสา วา' is a whole clause, not a half
+        #   one, and reading straight down gives continuous sensible Pali.
+        #   Confirm against the page.
+        # ‼ CHECK [IMG_0277.PNG]: NO SECTION HEADINGS ADDED. The chant divides
+        #   naturally into three stanzas — one for the Buddha, one for the
+        #   Dhamma, one for the Saṅgha, beginning at verses 1, 5 and 9. The
+        #   book prints no headings over them, only a space, so none have been
+        #   written; adding them would put words on the page that the book
+        #   does not print. Say if you would rather have them for the study
+        #   view.
+        # ‼ CHECK [IMG_0277.PNG]: The title คำขอขมาพระรัตนตรัย is THAI, not
+        #   Pali in Thai script, so title_pali is empty and title_roman
+        #   carries the romanised Thai for findability. This is the same
+        #   treatment as คำประกาศอุโบสถ on page 10.
+        # ‼ CHECK [IMG_0277.PNG]: Pali only — no Thai translation printed, so
+        #   thai and paiboon are empty on every verse and english_unverified
+        #   is set. The English is a working translation for this edition.
+        # ‼ CHECK [IMG_0277.PNG]: WORD REJOINED ACROSS A HYPHEN, in the
+        #   closing prose block below this chant rather than in the chant
+        #   itself. The book breaks 'เบญจางคประดิษฐ์' as 'ด้วยเบญจางค-' at the
+        #   end of one line and 'ประดิษฐ์' at the start of the next. That
+        #   hyphen is justification, not spelling, so the word is recorded
+        #   whole and the hyphen dropped.
+        'id': 'kham-kho-khama-phra-rattanatrai',
+        'title_thai': 'คำขอขมาพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': 'Kham Kho Khama Phra Rattanatrai',
+        'title_english': 'The Request for Forgiveness from the Triple Gem',
+        'page_start': 14,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0277.PNG]: The opening line 'กาเยนะ วาจายะ วะ
+            #   เจตะสา วา' is printed three times in full, once at the head of
+            #   each stanza, and is entered three times as verses 1, 5 and 9
+            #   rather than marked as a repeat. Same treatment as the นะโม on
+            #   page 2.
+            {
+                'number': 1,
+                'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา',
+                'pali_roman': 'kāyena vācāya va cetasā vā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By body, by speech, or by mind,',
+            },
+            {
+                'number': 2,
+                'pali': 'พุทเธ กุกัมมัง ปะกะตัง มะยา ยัง',
+                'pali_roman': 'buddhe kukammaṃ pakataṃ mayā yaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever wrong has been done by me towards the Buddha —',
+            },
+            {
+                'number': 3,
+                'pali': 'พุทโธ ปะฏิคคัณหะตุ อัจจะยันตัง',
+                'pali_roman': 'buddho paṭiggaṇhatu accayantaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the Buddha accept that transgression,',
+            },
+            {
+                'number': 4,
+                'pali': 'กาลันตะเร สังวะริตุง วะ พุทเธ.',
+                'pali_roman': 'kālantare saṃvarituṃ va buddhe.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that in time to come I may be restrained towards the Buddha.',
+            },
+            {
+                'number': 5,
+                'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา',
+                'pali_roman': 'kāyena vācāya va cetasā vā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By body, by speech, or by mind,',
+            },
+            {
+                'number': 6,
+                'pali': 'ธัมเม กุกัมมัง ปะกะตัง มะยา ยัง',
+                'pali_roman': 'dhamme kukammaṃ pakataṃ mayā yaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever wrong has been done by me towards the Dhamma —',
+            },
+            {
+                'number': 7,
+                'pali': 'ธัมโม ปะฏิคคัณหะตุ อัจจะยันตัง',
+                'pali_roman': 'dhammo paṭiggaṇhatu accayantaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the Dhamma accept that transgression,',
+            },
+            {
+                'number': 8,
+                'pali': 'กาลันตะเร สังวะริตุง วะ ธัมเม.',
+                'pali_roman': 'kālantare saṃvarituṃ va dhamme.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that in time to come I may be restrained towards the Dhamma.',
+            },
+            {
+                'number': 9,
+                'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา',
+                'pali_roman': 'kāyena vācāya va cetasā vā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By body, by speech, or by mind,',
+            },
+            {
+                'number': 10,
+                'pali': 'สังเฆ กุกัมมัง ปะกะตัง มะยา ยัง',
+                'pali_roman': 'saṅghe kukammaṃ pakataṃ mayā yaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever wrong has been done by me towards the Saṅgha —',
+            },
+            {
+                'number': 11,
+                'pali': 'สังโฆ ปะฏิคคัณหะตุ อัจจะยันตัง',
+                'pali_roman': 'saṅgho paṭiggaṇhatu accayantaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the Saṅgha accept that transgression,',
+            },
+            {
+                'number': 12,
+                'pali': 'กาลันตะเร สังวะริตุง วะ สังเฆ.',
+                'pali_roman': 'kālantare saṃvarituṃ va saṅghe.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that in time to come I may be restrained towards the Saṅgha.',
+            },
+        ],
+    },
 ]
 
 
@@ -9074,6 +9222,46 @@ PAGE_BLOCKS = [
                 'english': (
                     'upāsakattaṃ is for a layman; a laywoman uses '
                     'upāsikattaṃ.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 14 ─────────────────────────────────────────────────────────
+    # One paragraph under the chant, closing the whole morning observance
+    # for a Dhamma-hearing day. It ends a SERVICE, but it is prose rather
+    # than a จบ… line, so it is an ordinary block and not a
+    # `service_closing` — that key is for the centred จบ formula.
+    #
+    # ‼ CHECK [IMG_0277.PNG]: 'เบญจางคประดิษฐ์' is printed broken across a
+    #   line as 'ด้วยเบญจางค-' / 'ประดิษฐ์'. The hyphen is justification and
+    #   not spelling, so the word is recorded whole.
+    {
+        'page': 14,
+        'after': 'kham-kho-khama-phra-rattanatrai',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'พระเถระที่แสดงพระธรรมเทศนา ลงจากธรรมาสน์ นั่ง ณ '
+                    'เถราสนะรออยู่จน อุบาสกอุบาสิกา สวด '
+                    'สะระณะคะมะนานุสสะระณะคาถา จบ เมื่อสวดจบแล้ว พระภิกษุ '
+                    'สามเณรทั้งหมด นั่งคุกเข่าท่าพรหมประนมมือกราบพระรัตนตรัย '
+                    'ด้วยเบญจางคประดิษฐ์ 3 หน อุบาสกอุบาสิกาก็กราบพระรัตนตรัย '
+                    '3 หน เช่นเดียวกัน '
+                    'เป็นอันเสร็จพิธีในภาคเช้าในวันธรรมสวนะเพียงเท่านี้.'
+                ),
+                'english': (
+                    'The elder who gave the Dhamma talk comes down from the '
+                    'Dhamma seat and sits on the elders\' seat, waiting until '
+                    'the laymen and laywomen have finished chanting the '
+                    'Saraṇagamanānussaraṇagāthā. When the chanting is done, '
+                    'all the bhikkhus and sāmaṇeras kneel in the brahma '
+                    'posture with palms joined and bow to the Triple Gem with '
+                    'the fivefold prostration three times. The laymen and '
+                    'laywomen likewise bow to the Triple Gem three times. '
+                    'With this the morning observance on a Dhamma-hearing day '
+                    'is complete.'
                 ),
                 'english_unverified': True,
             },
