@@ -8971,6 +8971,145 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 10; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0282.PNG]: FIRST CHANT WITH A BOOK NUMBER. The book
+        #   prints '1.' before the title, so book_number is 1. This is the
+        #   book's own chant numbering, not a page number and not a verse
+        #   number, and it has not been derived by counting.
+        # ‼ CHECK [IMG_0282.PNG]: CONTINUES. Reflections 9 and 10 are on page
+        #   20 and have not been written from memory of the canon.
+        # ‼ CHECK [IMG_0282.PNG]: Pali only — no Thai translation printed on
+        #   this page, so thai and paiboon are empty and english_unverified is
+        #   set. Worth watching whether page 20 prints a คำแปล for it, as page
+        #   10 did for the Uposatha announcement.
+        'id': 'dasadhamma-sutta',
+        'title_thai': 'ทะสะธัมมะสุตตัง',
+        'title_pali': 'Dasadhammasuttaṃ',
+        'title_roman': '',
+        'title_english': 'The Discourse on the Ten Things',
+        'book_number': 1,
+        'page_start': 19,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0282.PNG]: The nidana is the standard Savatthi
+            #   opening. Reproduced as printed, including ตัต๎ระ with the
+            #   yamakkan and the commas the book sets, rather than normalised
+            #   to a standard edition's punctuation.
+            {
+                'number': 1,
+                'pali': 'เอวัมเม สุตัง, เอกัง สะมะยัง ภะคะวา, สาวัตถิยัง วิหะระติ, เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม, ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ, ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง, ภะคะวา เอตะทะโวจะ.',
+                'pali_roman': 'evamme sutaṃ, ekaṃ samayaṃ bhagavā, sāvatthiyaṃ viharati, jetavane anāthapiṇḍikassa ārāme, tatra kho bhagavā bhikkhū āmantesi bhikkhavoti, bhadanteti te bhikkhū bhagavato paccassosuṃ, bhagavā etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was dwelling at Savatthi, in Jeta's Grove, Anathapindika's park. There the Blessed One addressed the bhikkhus: 'Bhikkhus.' 'Venerable sir,' those bhikkhus replied. The Blessed One said this:",
+            },
+            {
+                'number': 2,
+                'pali': 'ทะสะ อิเม ภิกขะเว ธัมมา ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพา. กะตะเม ทะสะ.',
+                'pali_roman': 'dasa ime bhikkhave dhammā pabbajitena abhiṇhaṃ paccavekkhitabbā. katame dasa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There are these ten things, bhikkhus, that one who has gone forth should reflect on again and again. What ten?',
+            },
+            # ‼ CHECK [IMG_0282.PNG]: NUMBERING OFFSET, worth a decision. The
+            #   book numbers the ten reflections 1-10, but the sutta opens
+            #   with two unnumbered lines — the nidana and 'katame dasa' —
+            #   which are chanted and so must be verses. That makes the book's
+            #   item 1 into verse 3, and every item is offset by two. Book
+            #   view hides verse numbers so nothing shows there, but the
+            #   verse-by-verse study view prints them and they will not match
+            #   the page. The same offset will hit every numbered list that
+            #   follows a preamble.
+            {
+                'number': 3,
+                'printed_number': 1,
+                'pali': 'เววัณณิยัมหิ อัชฌูปะคะโตติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'vevaṇṇiyamhi ajjhūpagatoti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I have come to a state of being without caste': this should be reflected on again and again by one who has gone forth.",
+            },
+            {
+                'number': 4,
+                'printed_number': 2,
+                'pali': 'ปะระปะฏิพัทธา เม ชีวิกาติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'parapaṭibaddhā me jīvikāti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'My life is dependent on others': this should be reflected on again and again by one who has gone forth.",
+            },
+            # ‼ CHECK [IMG_0282.PNG]: WORDS REJOINED ACROSS HYPHENS, two of
+            #   them. Item 3 breaks ปัจจะเวกขิตัพพัง as 'ปัจจะเวก-' /
+            #   'ขิตัพพัง', and item 7 breaks กัมมะปะฏิสะระโณ as 'กัมมะปะฏิ-'
+            #   / 'สะระโณ'. Both hyphens are justification, not spelling, so
+            #   both words are recorded whole.
+            {
+                'number': 5,
+                'printed_number': 3,
+                'pali': 'อัญโญ เม อากัปโป กะระณีโยติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'añño me ākappo karaṇīyoti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'My bearing should be other than it was': this should be reflected on again and again by one who has gone forth.",
+            },
+            {
+                'number': 6,
+                'printed_number': 4,
+                'pali': 'กัจจิ นุ โข เม อัตตา สีละโต นะ อุปะวะทะตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'kacci nu kho me attā sīlato na upavadatīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Does my own conscience reproach me as to virtue?': this should be reflected on again and again by one who has gone forth.",
+            },
+            {
+                'number': 7,
+                'printed_number': 5,
+                'pali': 'กัจจิ นุ โข มัง อะนุวิจจะ วิญญู สะพ์รัห์มะจารี สีละโต นะ อุปะวะทันตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'kacci nu kho maṃ anuvicca viññū sabrahmacārī sīlato na upavadantīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Do my wise companions in the holy life, having examined me, reproach me as to virtue?': this should be reflected on again and again by one who has gone forth.",
+            },
+            {
+                'number': 8,
+                'printed_number': 6,
+                'pali': 'สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโวติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'sabbehi me piyehi manāpehi nānābhāvo vinābhāvoti, pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'There is a parting and a separation from all that is dear and pleasing to me': this should be reflected on again and again by one who has gone forth.",
+            },
+            {
+                'number': 9,
+                'printed_number': 7,
+                'pali': 'กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล๎ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามีติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmīti, pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I am the owner of my kamma, heir to my kamma, born of my kamma, kindred to my kamma, abide supported by my kamma; whatever kamma I shall do, good or bad, of that I shall be the heir': this should be reflected on again and again by one who has gone forth.",
+            },
+            {
+                'number': 10,
+                'printed_number': 8,
+                'pali': 'กะถัมภูตัสสะ เม รัตตินทิวา วีติปะตันตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'kathaṃbhūtassa me rattindivā vītipatantīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'How do the days and nights pass for me?': this should be reflected on again and again by one who has gone forth.",
+            },
+        ],
+    },
 ]
 
 
@@ -10171,6 +10310,30 @@ PAGE_BLOCKS = [
                 'marker': '1',
                 'thai': 'วิ. มหา 2/558-570',
                 'english': '',
+            },
+        ],
+    },
+    # ── Page 19 ─────────────────────────────────────────────────────────
+    # A new DIVISION of the book opens here. Pages 1-18 were the services
+    # themselves; from here the book gives the suttas and passages chanted
+    # within them, and starts numbering its chants.
+    #
+    # Both headings belong to the division, not to the chant below them,
+    # which is why they are page blocks rather than the chant's title.
+    {
+        'page': 19,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'พระสูตร ปาฐะ และคาถา',
+                'english': 'Suttas, Passages and Verses',
+                'english_unverified': True,
+            },
+            {
+                'type': 'heading',
+                'thai': 'ที่กำหนดสวดในภาคเช้า',
+                'english': 'appointed for chanting in the morning',
+                'english_unverified': True,
             },
         ],
     },

@@ -191,6 +191,24 @@ class TestWhatItPlansAndWrites:
         assert '# ‼ CHECK [IMG_1.PNG]' in out
         assert '⚠' not in out
 
+    def test_the_books_own_verse_number_is_carried_through(self):
+        """`printed_number` is what the BOOK sets beside the line.
+
+        It is not always `number`: the Dasadhamma Sutta's nidana and its
+        'katame dasa' line are chanted, and so are verses, but the book leaves
+        them unnumbered — which pushes its item 1 to verse 3. Dropping the key
+        would render a numbered list as an unnumbered one.
+        """
+        out = render_chant(chant('a', [verse(3, printed_number=1)]))
+
+        assert "'printed_number': 1," in out
+
+    def test_a_verse_the_book_does_not_number_carries_no_printed_number(self):
+        """Most verses have none, and nothing may be invented for them."""
+        out = render_chant(chant('a', [verse(1)]))
+
+        assert 'printed_number' not in out
+
     def test_empty_layers_are_written_through_as_facts(self):
         """A Pali-only chant has no thai and no paiboon. That is data, not a gap."""
         out = render_chant(chant('a', [verse(1)]))

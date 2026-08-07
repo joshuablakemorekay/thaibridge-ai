@@ -186,7 +186,12 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
     out = "".join(note(f"CHECK [{k['file']}]: {k['issue']}", indent)
                   for k in checks.get(verse["number"], []))
     out += f"{indent}{{\n{indent}{INDENT}'number': {verse['number']},\n"
-    for key in ("page", "section"):
+    # `printed_number` is the number the BOOK sets beside the line, which is
+    # not always `number` — a numbered list preceded by unnumbered chanted
+    # lines offsets the two. It has to be listed here or it is dropped on the
+    # way in, which is the failure mode the "everything must land somewhere"
+    # rule exists for.
+    for key in ("page", "section", "printed_number"):
         if key in verse:
             out += f"{indent}{INDENT}'{key}': {verse[key]!r},\n"
     for layer in LAYERS:

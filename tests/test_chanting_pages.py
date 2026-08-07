@@ -650,6 +650,75 @@ def chanting_module():
     return chanting
 
 
+class TestTheNumbersTheBookPrints:
+    """The book numbers some lines and not others, and the app must agree.
+
+    Book layout used to show no numbers at all, so a numbered list in the book
+    — the eight precepts, the seventy-five sekhiyas, the ten reflections —
+    rendered as an unnumbered one on exactly the pages where the number is how
+    a chanter keeps their place.
+
+    Two numbers exist and they are not the same thing. `number` is the app's
+    own identity for a line, shown in verse-by-verse. `printed_number` is what
+    the BOOK sets beside it, shown in book layout. They differ wherever a
+    numbered list follows unnumbered chanted lines.
+    """
+
+    def test_the_two_numbers_are_allowed_to_disagree(self):
+        """The Dasadhamma Sutta's nidana pushes the book's item 1 to verse 3."""
+        from chanting import CHANTS
+        chant = next(c for c in CHANTS if c['id'] == 'dasadhamma-sutta')
+
+        numbered = [(v['number'], v.get('printed_number')) for v in chant['verses']]
+
+        assert numbered[0] == (1, None), 'the nidana is not numbered in the book'
+        assert numbered[1] == (2, None), "'katame dasa' is not numbered either"
+        assert numbered[2] == (3, 1), "the book's item 1 is the app's verse 3"
+        assert numbered[-1] == (10, 8)
+
+    @staticmethod
+    def page(number):
+        import app as flask_app
+        return flask_app.app.test_client().get(
+            f'/chanting/page/{number}', follow_redirects=True).get_data(as_text=True)
+
+    def test_book_layout_shows_the_books_number_and_hides_the_apps(self):
+        html = self.page(19)
+
+        # Both are in the markup; CSS decides which one a reader sees.
+        assert 'class="verse-number-printed"' in html
+        assert '.page-body.view-book .verse-number { display: none; }' in html
+        assert '.verse-number-printed { display: none; }' in html
+        assert '.page-body.view-book .verse-number-printed {' in html
+
+    def test_a_verse_the_book_does_not_number_shows_nothing(self):
+        """Nothing may be printed where the page prints nothing."""
+        import re
+        verses = re.findall(r'<div class="verse">(.*?)</div>', self.page(19), re.S)
+
+        assert 'verse-number-printed' not in verses[0]
+        assert 'verse-number-printed' not in verses[1]
+        assert '<span class="verse-number-printed">1.</span>' in verses[2]
+
+    def test_the_chant_number_is_on_the_title_line_as_the_book_sets_it(self):
+        """The book prints '1. ทะสะธัมมะสุตตัง'; CHANT 1 is the app's own label."""
+        html = self.page(19)
+
+        assert '<span class="chant-number-printed">1.</span>' in html
+        assert '.page-body.view-book .page-chant-number { display: none; }' in html
+
+    def test_a_chant_the_book_does_not_number_gets_no_number(self):
+        """Most chants have no book_number, and none may be invented.
+
+        Checked against the markup rather than the whole document: the CSS
+        rule that hides the class lives in the <style> block, so the class
+        NAME is on every page whether or not anything uses it.
+        """
+        markup = self.page(14).split('</style>')[-1]
+
+        assert '<span class="chant-number-printed">' not in markup
+
+
 class TestTheMarkupHoldsTogether:
     """Both chanting pages must close every <style> and <script> they open.
 

@@ -287,7 +287,32 @@
     .page-body.view-book .layer-english { display: none !important; }
 
     /* No numbers and no rules in book mode — the book has neither. */
+    /* Two different numbers, and only one of them belongs on the page.
+       `.verse-number` is the app's own count, shown in verse-by-verse so a
+       reader can refer to a line; the book does not print it, so book layout
+       drops it. `.verse-number-printed` is the number the BOOK sets beside
+       the line — the eight precepts, the seventy-five sekhiyas, the ten
+       reflections — and it is the reverse: hidden in study mode, where the
+       app's own count is already there, and shown in book layout, where the
+       page has it.
+
+       Before this, book layout showed neither, so a numbered list in the book
+       rendered as an unnumbered one in the app — on exactly the pages where
+       the number is how a chanter keeps their place. */
     .page-body.view-book .verse-number { display: none; }
+    .verse-number-printed { display: none; }
+    .page-body.view-book .verse-number-printed {
+        display: inline;
+        grid-column: 1;
+        text-align: right;
+        font-weight: bold;
+        color: #6b6b6b;
+    }
+    /* Same division for the chant's own number: 'CHANT 1' is the app's label
+       and 'Chant 1.' inline is what the book prints. Never both. */
+    .chant-number-printed { display: none; }
+    .page-body.view-book .chant-number-printed { display: inline; }
+    .page-body.view-book .page-chant-number { display: none; }
     .page-body.view-book .verse {
         border-left: none;
         padding: 0;
@@ -647,6 +672,11 @@
            It is marked so book layout can drop it, because a heading the
            printed page does not have is not what the page shows. #}
         <h2 class="page-chant-title{% if not chant.title_thai and not chant.title_pali %} page-app-title{% endif %}">
+            {# The book prints its chant number on the title line — '1. ทะสะ…'
+               — so book layout does too. The CHANT 1 label above is the app's
+               own way of saying the same thing and is hidden there instead;
+               showing both would print the number twice. #}
+            {% if chant.book_number %}<span class="chant-number-printed">{{ chant.book_number_printed or chant.book_number }}.</span> {% endif %}
             {% if chant.title_thai %}{{ chant.title_thai }}{% elif chant.title_pali %}{{ chant.title_pali }}{% else %}{{ chant.title_english }}{% endif %}
             {% if chant.title_thai and chant.title_pali %}<span class="page-chant-roman">{{ chant.title_pali }}</span>
             {% elif chant.title_thai and chant.title_roman %}<span class="page-chant-roman">{{ chant.title_roman }}</span>{% endif %}
@@ -694,6 +724,14 @@
         {% if verse.section %}<h4 class="verse-section">{{ verse.section }}</h4>{% endif %}
         <div class="verse">
             <span class="verse-number">{{ verse.number }}</span>
+            {# The number the BOOK prints beside this line, where it prints
+               one. It is separate from `verse.number`, which is the app's own
+               identity for the line and does not always agree: a numbered
+               list preceded by unnumbered chanted lines — the Dasadhamma
+               Sutta's nidana, for one — pushes the book's item 1 to verse 3.
+               Absent on every verse the book leaves unnumbered, which is most
+               of them, so nothing is printed where the page prints nothing. #}
+            {% if verse.printed_number %}<span class="verse-number-printed">{{ verse.printed_number }}.</span>{% endif %}
             {# Only the layers the book actually prints are ever guaranteed.
                A Pali-only page has no `thai`, and therefore no `paiboon`;
                nothing here fills that in. #}

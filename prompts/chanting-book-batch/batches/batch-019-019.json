@@ -1,0 +1,252 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "dasadhamma-sutta"
+    ],
+    "pages": [
+      {
+        "page": 19,
+        "file": "IMG_0282.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "heading",
+            "thai": "พระสูตร ปาฐะ และคาถา",
+            "english": "Suttas, Passages and Verses",
+            "english_unverified": true
+          },
+          {
+            "type": "heading",
+            "thai": "ที่กำหนดสวดในภาคเช้า",
+            "english": "appointed for chanting in the morning",
+            "english_unverified": true
+          }
+        ],
+        "note": "The page opens a NEW DIVISION of the book with two centred headings, one above the other: พระสูตร ปาฐะ และคาถา, then ที่กำหนดสวดในภาคเช้า in smaller type. These head the whole division, not this chant, which is why they are page blocks and not the chant's title."
+      },
+      {
+        "page": 19,
+        "file": "IMG_0282.PNG",
+        "script": "thai",
+        "chant": "dasadhamma-sutta",
+        "verses": "1-10",
+        "starts_here": true,
+        "note": "Then '1. ทะสะธัมมะสุตตัง' — the first chant in the book to carry a printed number — the nidana, the 'what ten?' line, and the first eight of the ten reflections. Single column, no footnote."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "dasadhamma-sutta",
+      "continues": true,
+      "title_thai": "ทะสะธัมมะสุตตัง",
+      "title_pali": "Dasadhammasuttaṃ",
+      "title_roman": "",
+      "title_english": "The Discourse on the Ten Things",
+      "book_number": 1,
+      "group": "General chanting",
+      "page_start": 19,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent on this page. The book prints no หันทะ มะยัง… line above the title.",
+        "units": "Ten on this page: the nidana, the 'what ten?' line, and the first eight of the ten reflections. The sutta says ten and eight are printed, so it carries `continues`.",
+        "ordering": "Pali only; no Thai translation printed on this page.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0282.PNG (page 19). Single column. The page opens a new division of the book — see the page blocks. No footnote."
+      },
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "เอวัมเม สุตัง, เอกัง สะมะยัง ภะคะวา, สาวัตถิยัง วิหะระติ, เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม, ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ, ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง, ภะคะวา เอตะทะโวจะ.",
+          "pali_roman": "evamme sutaṃ, ekaṃ samayaṃ bhagavā, sāvatthiyaṃ viharati, jetavane anāthapiṇḍikassa ārāme, tatra kho bhagavā bhikkhū āmantesi bhikkhavoti, bhadanteti te bhikkhū bhagavato paccassosuṃ, bhagavā etadavoca.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thus have I heard. At one time the Blessed One was dwelling at Savatthi, in Jeta's Grove, Anathapindika's park. There the Blessed One addressed the bhikkhus: 'Bhikkhus.' 'Venerable sir,' those bhikkhus replied. The Blessed One said this:"
+        },
+        {
+          "number": 2,
+          "pali": "ทะสะ อิเม ภิกขะเว ธัมมา ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพา. กะตะเม ทะสะ.",
+          "pali_roman": "dasa ime bhikkhave dhammā pabbajitena abhiṇhaṃ paccavekkhitabbā. katame dasa.",
+          "thai": "",
+          "paiboon": "",
+          "english": "There are these ten things, bhikkhus, that one who has gone forth should reflect on again and again. What ten?"
+        },
+        {
+          "number": 3,
+          "pali": "เววัณณิยัมหิ อัชฌูปะคะโตติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "vevaṇṇiyamhi ajjhūpagatoti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I have come to a state of being without caste': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 1
+        },
+        {
+          "number": 4,
+          "pali": "ปะระปะฏิพัทธา เม ชีวิกาติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "parapaṭibaddhā me jīvikāti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'My life is dependent on others': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 2
+        },
+        {
+          "number": 5,
+          "pali": "อัญโญ เม อากัปโป กะระณีโยติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "añño me ākappo karaṇīyoti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'My bearing should be other than it was': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 3
+        },
+        {
+          "number": 6,
+          "pali": "กัจจิ นุ โข เม อัตตา สีละโต นะ อุปะวะทะตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "kacci nu kho me attā sīlato na upavadatīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'Does my own conscience reproach me as to virtue?': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 4
+        },
+        {
+          "number": 7,
+          "pali": "กัจจิ นุ โข มัง อะนุวิจจะ วิญญู สะพ์รัห์มะจารี สีละโต นะ อุปะวะทันตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "kacci nu kho maṃ anuvicca viññū sabrahmacārī sīlato na upavadantīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'Do my wise companions in the holy life, having examined me, reproach me as to virtue?': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 5
+        },
+        {
+          "number": 8,
+          "pali": "สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโวติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "sabbehi me piyehi manāpehi nānābhāvo vinābhāvoti, pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'There is a parting and a separation from all that is dear and pleasing to me': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 6
+        },
+        {
+          "number": 9,
+          "pali": "กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล๎ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามีติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmīti, pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I am the owner of my kamma, heir to my kamma, born of my kamma, kindred to my kamma, abide supported by my kamma; whatever kamma I shall do, good or bad, of that I shall be the heir': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 7
+        },
+        {
+          "number": 10,
+          "pali": "กะถัมภูตัสสะ เม รัตตินทิวา วีติปะตันตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "kathaṃbhūtassa me rattindivā vītipatantīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'How do the days and nights pass for me?': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 8
+        }
+      ],
+      "checks": [
+        {
+          "verse": 3,
+          "file": "IMG_0282.PNG",
+          "issue": "NUMBERING OFFSET, worth a decision. The book numbers the ten reflections 1-10, but the sutta opens with two unnumbered lines — the nidana and 'katame dasa' — which are chanted and so must be verses. That makes the book's item 1 into verse 3, and every item is offset by two. Book view hides verse numbers so nothing shows there, but the verse-by-verse study view prints them and they will not match the page. The same offset will hit every numbered list that follows a preamble."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0282.PNG",
+          "issue": "FIRST CHANT WITH A BOOK NUMBER. The book prints '1.' before the title, so book_number is 1. This is the book's own chant numbering, not a page number and not a verse number, and it has not been derived by counting."
+        },
+        {
+          "verse": 5,
+          "file": "IMG_0282.PNG",
+          "issue": "WORDS REJOINED ACROSS HYPHENS, two of them. Item 3 breaks ปัจจะเวกขิตัพพัง as 'ปัจจะเวก-' / 'ขิตัพพัง', and item 7 breaks กัมมะปะฏิสะระโณ as 'กัมมะปะฏิ-' / 'สะระโณ'. Both hyphens are justification, not spelling, so both words are recorded whole."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0282.PNG",
+          "issue": "The nidana is the standard Savatthi opening. Reproduced as printed, including ตัต๎ระ with the yamakkan and the commas the book sets, rather than normalised to a standard edition's punctuation."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0282.PNG",
+          "issue": "CONTINUES. Reflections 9 and 10 are on page 20 and have not been written from memory of the canon."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0282.PNG",
+          "issue": "Pali only — no Thai translation printed on this page, so thai and paiboon are empty and english_unverified is set. Worth watching whether page 20 prints a คำแปล for it, as page 10 did for the Uposatha announcement."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ปัพพะชิตะ",
+          "pali_roman": "pabbajita",
+          "meaning": "one gone forth — a monastic, as distinct from a householder"
+        },
+        {
+          "pali": "อะภิณ๎หัง",
+          "pali_roman": "abhiṇhaṃ",
+          "meaning": "again and again, constantly — the point of the discourse is repetition, not a single reflection"
+        },
+        {
+          "pali": "ปัจจะเวกขิตัพพัง",
+          "pali_roman": "paccavekkhitabbaṃ",
+          "meaning": "should be reflected upon, reviewed — looking back over one's own condition"
+        },
+        {
+          "pali": "เววัณณิยะ",
+          "pali_roman": "vevaṇṇiya",
+          "meaning": "difference of appearance, loss of caste — the shaven head and ochre robe that set a monastic outside the ordinary social order"
+        },
+        {
+          "pali": "สะพ์รัห์มะจารี",
+          "pali_roman": "sabrahmacārī",
+          "meaning": "a companion in the holy life — a fellow monastic, one who lives the same brahmacariya"
+        },
+        {
+          "pali": "กัมมัสสะโก",
+          "pali_roman": "kammassako",
+          "meaning": "owner of one's kamma — the first of the five phrases in reflection 7, which together are chanted daily"
+        },
+        {
+          "pali": "ทายาโท",
+          "pali_roman": "dāyādo",
+          "meaning": "heir — one who inherits, here of one's own actions"
+        },
+        {
+          "pali": "รัตตินทิวา",
+          "pali_roman": "rattindivā",
+          "meaning": "nights and days — the pair taken together as the passing of time"
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "dasadhamma-sutta"
+    ],
+    "resume_from_page": 20,
+    "resume_from_file": "IMG_0283.PNG",
+    "resume_from": "dasadhamma-sutta",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values exist in this batch. The book prints no Thai translation on page 19.",
+    "pali_untouched": "Confirmed. Every pali is the book's Thai script as printed; every pali_roman is IAST transliteration of it.",
+    "page_scan": "agrees — page 19 carries verses 1-10 of dasadhamma-sutta plus one block row claiming no verses. One page, one image.",
+    "notes": "A NEW DIVISION of the book opens here: พระสูตร ปาฐะ และคาถา, the suttas and passages appointed for morning chanting. Pages 1-18 were the services themselves; this is the material chanted within them. It also brings the first printed CHANT NUMBER — '1.' before the title — so book_number is populated for the first time and later pages should be watched for 2., 3. and so on. The numbering-offset check on verse 3 is the one worth a decision: a numbered list preceded by unnumbered chanted lines cannot keep the book's item numbers as its verse numbers, and this will recur."
+  }
+}
