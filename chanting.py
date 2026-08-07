@@ -7421,6 +7421,165 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0273.PNG]: THE MOST IMPORTANT CHECK ON THIS PAGE. The
+        #   book prints the whole Pali passage as one prose block, then the
+        #   whole คำแปล as another. The Thai is a free, expanded rendering,
+        #   not a unit-for-unit translation — verse 1's Thai opens with a
+        #   preamble ('ข้าพเจ้าขอประกาศเริ่มเรื่อง…') that has no Pali behind
+        #   it. The 5-to-5 pairing of Pali units to Thai chunks is mine, made
+        #   by meaning. Please read it against the page.
+        # ‼ CHECK [IMG_0273.PNG]: The book prints no Pali title and no
+        #   romanised title for this passage — only the Thai heading
+        #   คำประกาศอุโบสถ. title_pali is left empty rather than invented;
+        #   title_english is the app's own.
+        # ‼ CHECK [IMG_0273.PNG]: No invitation (หันทะ มะยัง…) is printed for
+        #   this passage. None has been written.
+        # ‼ CHECK [IMG_0274.PNG]: PAGE FIDELITY: all five Pali units are on
+        #   page 10, but the คำแปล block begins on page 10 and finishes on
+        #   page 11. So the `thai` layer of verses 3, 4 and 5 is physically
+        #   printed on page 11 while their `pali` is on page 10. The page map
+        #   assigns all five verses to page 10 (the page the Pali starts on)
+        #   and gives page 11 a `verses: none` row rather than claiming them
+        #   twice.
+        'id': 'kham-prakat-ubosot',
+        'title_thai': 'คำประกาศอุโบสถ',
+        'title_pali': '',
+        'title_roman': 'Kham Prakat Ubosot',
+        'title_english': 'The Announcement of the Uposatha',
+        'page_start': 10,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0273.PNG]: The numeral '15' in the Thai layer is
+            #   printed in Arabic digits, not Thai numerals. Reproduced as
+            #   printed. Same for '8' in verses 2 and 3 and the '1' repeated
+            #   after each abstention in verse 4 (which is the book's way of
+            #   counting items, not a footnote marker).
+            {
+                'number': 1,
+                'pali': 'อัชชะ โภนโต ปักขัสสะ ปัณณะระสี ทิวะโส',
+                'pali_roman': 'ajja bhonto pakkhassa paṇṇarasī divaso',
+                'thai': 'ข้าพเจ้าขอประกาศเริ่มเรื่อง ในการที่จะได้รักษาอุโบสถ ให้สาธุชนทราบทั่วกัน ก่อนแต่สมาทาน ณ บัดนี้ วันนี้เป็นปัณณรสีดิถีที่ 15 แห่งปักษ์',
+                'paiboon': 'kâa-pá-jâo kɔ̌ɔ bprà-gàat rə̂əm rʉ̂aŋ nai gaan tîi jà dâai rák-sǎa ù-boo-sòt hâi sǎa-tú-chon sâap tûa-gan gɔ̀ɔn dtɛ̀ɛ sà-maa-taan ná bàt-níi wan-níi bpen bpan-ná-rá-sǐi dì-tǐi tîi sìp-hâa hɛ̀ŋ bpàk',
+                'english': 'Venerable sirs, today is the fifteenth day of the lunar fortnight.',
+            },
+            # ‼ CHECK [IMG_0273.PNG]: 'อุปาสะกะอุปาสิกานัง' is printed as one
+            #   unbroken run. I have romanised it 'upāsaka-upāsikānaṃ' with a
+            #   hyphen for legibility, which the Thai does not have. Say if
+            #   you would rather it were unhyphenated.
+            {
+                'number': 2,
+                'pali': 'เอวะรูโป โข โภนโต ทิวะโส, พุทเธนะ ภะคะวะตา ปัญญัตตัสสะ ธัมมัสสะวะนัสสะ เจวะ ตะทัตถายะ อุปาสะกะอุปาสิกานัง อุโปสะถัสสะ จะ กาโล โหติ,',
+                'pali_roman': 'evarūpo kho bhonto divaso, buddhena bhagavatā paññattassa dhammassavanassa ceva tadatthāya upāsaka-upāsikānaṃ uposathassa ca kālo hoti,',
+                'thai': 'ก็แลมีนิยมเช่นนี้ เป็นกาลที่สาธุชนทั้งอุบาสกอุบาสิกาจะได้ฟังธรรม และรักษาอุโบสถพร้อมด้วยองค์ 8 ประการ เพื่อประโยชน์แก่การฟังธรรมนั้น',
+                'paiboon': 'gɔ̂ɔ lɛɛ mii ní-yom chên-níi bpen gaan tîi sǎa-tú-chon táŋ ù-baa-sòk ù-baa-sì-gaa jà dâai faŋ tam lɛ́ rák-sǎa ù-boo-sòt prɔ́ɔm dûai oŋ bpɛ̀ɛt bprà-gaan pʉ̂a bprà-yòot gɛ̀ɛ gaan faŋ tam nán',
+                'english': 'Such a day as this, venerable sirs, is the time appointed by the Buddha, the Blessed One, for the hearing of the Dhamma, and for that same purpose the time of the Uposatha for laymen and laywomen.',
+            },
+            {
+                'number': 3,
+                'pali': 'หันทะ มะยัง โภนโต สัพเพ อิธะ สะมาคะตา ตัสสะ ภะคะวะโต ธัมมานุธัมมะปะฏิปัตติยา ปูชะนัตถายะ อิมัญจะ รัตติง อิมัญจะ ทิวะสัง อุโปสะถัง อุปะวะสิสสามาติ,',
+                'pali_roman': 'handa mayaṃ bhonto sabbe idha samāgatā tassa bhagavato dhammānudhammapaṭipattiyā pūjanatthāya imañca rattiṃ imañca divasaṃ uposathaṃ upavasissāmāti,',
+                'thai': 'บัดนี้ ขอกุศลอันยิ่งใหญ่ คือ ตั้งจิตสมาทานองค์ 8 ประการแห่งอุโบสถนั้น จงเกิดมีแก่สาธุชนทั้งหลายซึ่งมาประชุมพร้อมกัน ณ ที่นี้',
+                'paiboon': 'bàt-níi kɔ̌ɔ gù-sǒn an yîŋ-yài kʉʉ dtâŋ jìt sà-maa-taan oŋ bpɛ̀ɛt bprà-gaan hɛ̀ŋ ù-boo-sòt nán joŋ gə̀ət mii gɛ̀ɛ sǎa-tú-chon táŋ-lǎai sʉ̂ŋ maa bprà-chum prɔ́ɔm-gan ná tîi-níi',
+                'english': 'Come then, venerable sirs, let all of us gathered here, in honour of that Blessed One and by practice in accordance with the Dhamma, keep the Uposatha for this night and this day.',
+            },
+            # ‼ CHECK [IMG_0274.PNG]: The Thai near the end of this verse
+            #   reads 'จงสมาทานองค์ 5 ประการนั้นโดยเคารพ' — FIVE factors —
+            #   where the same passage says eight everywhere else (องค์ 8
+            #   ประการ in verses 2 and 3, and the eight abstentions are listed
+            #   out in this very verse). Reproduced exactly as printed. This
+            #   is either a misprint in the book or my misreading of the
+            #   digit, and it needs the physical page. Do not let me 'correct'
+            #   it.
+            # ‼ CHECK [IMG_0273.PNG]: The yamakkan mark ๎ appears in กัต๎วา,
+            #   กะริต๎วา and หุต๎วา, marking the consonant cluster. Reproduced
+            #   as printed rather than normalised to กัตวา / กะริตวา / หุตวา.
+            {
+                'number': 4,
+                'pali': 'กาละปะริจเฉทัง กัต๎วา ตัง ตัง เวระมะณิง อารัมมะณัง กะริต๎วา อะวิกขิตตะจิตตา หุต๎วา สักกัจจัง อุโปสะถัง สะมาทิเยยยามะ.',
+                'pali_roman': 'kālaparicchedaṃ katvā taṃ taṃ veramaṇiṃ ārammaṇaṃ karitvā avikkhittacittā hutvā sakkaccaṃ uposathaṃ samādiyeyyāma.',
+                'thai': 'จงตั้งจิตคิดกำหนดกาลว่า จะรักษาอุโบสถสิ้นราตรีและวันนี้ จงทำความเว้นจากโทษนั้น ๆ ให้เป็นอารมณ์ คือ เว้นจากการฆ่าสัตว์ 1 เว้นจากลักทรัพย์ 1 เว้นจากกรรมอันเป็นข้าศึกแก่พรหมจรรย์ 1 เว้นจากพูดเท็จ 1 เว้นจากดื่มน้ำเมาคือสุราและเมรัย 1 เว้นจากบริโภคอาหารในเวลาวิกาล ตั้งแต่เที่ยงแล้วไป 1 เว้นจากฟ้อนรำขับร้องประโคมดนตรีและดูการเล่นอันเป็นข้าศึกแก่กุศล และทัดทรงประดับตกแต่งร่างกายด้วยระเบียบดอกไม้ของหอมเครื่องย้อมเครื่องทา 1 เว้นจากที่นอนสูงและที่นอนใหญ่ ภายในยัดด้วยนุ่นและสำลี 1 ฉะนี้ อย่าให้จิตฟุ้งซ่านส่งไปที่อื่น จงสมาทานองค์ 5 ประการนั้นโดยเคารพ เพื่อจะบูชาสมเด็จพระผู้มีพระภาคเจ้าพระองค์นั้น ด้วยธรรมานุธรรมปฏิบัติ ตามกำลังของคฤหัสถ์ทั้งหลาย',
+                'paiboon': 'joŋ dtâŋ jìt kít gam-nòt gaan wâa jà rák-sǎa ù-boo-sòt sîn raa-dtrii lɛ́ wan-níi joŋ tam kwaam wén jàak tôot nán-nán hâi bpen aa-rom kʉʉ wén jàak gaan kâa sàt nʉ̀ŋ wén jàak lák sáp nʉ̀ŋ wén jàak gam an bpen kâa-sʉ̀k gɛ̀ɛ prom-má-jan nʉ̀ŋ wén jàak pûut tét nʉ̀ŋ wén jàak dʉ̀ʉm nám-mao kʉʉ sù-raa lɛ́ mee-rai nʉ̀ŋ wén jàak bɔɔ-rí-pôok aa-hǎan nai wee-laa wí-gaan dtâŋ-dtɛ̀ɛ tîaŋ lɛ́ɛo bpai nʉ̀ŋ wén jàak fɔ́ɔn-ram kàp-rɔ́ɔŋ bprà-koom don-dtrii lɛ́ duu gaan-lên an bpen kâa-sʉ̀k gɛ̀ɛ gù-sǒn lɛ́ tát-soŋ bprà-dàp dtòk-dtɛ̀ŋ râaŋ-gaai dûai rá-bìap dɔ̀ɔk-máai kɔ̌ɔŋ-hɔ̌ɔm krʉ̂aŋ-yɔ́ɔm krʉ̂aŋ-taa nʉ̀ŋ wén jàak tîi-nɔɔn sǔuŋ lɛ́ tîi-nɔɔn yài paai-nai yát dûai nûn lɛ́ sǎm-lii nʉ̀ŋ chà-níi yàa hâi jìt fúŋ-sâan sòŋ bpai tîi-ʉ̀ʉn joŋ sà-maa-taan oŋ hâa bprà-gaan nán dooi kao-róp pʉ̂a jà buu-chaa sǒm-dèt prá-pûu-mii-prá-pâak-jâo prá-oŋ nán dûai tam-maa-nú-tam-bpà-dtì-bàt dtaam gam-laŋ kɔ̌ɔŋ ká-rʉ́-hàt táŋ-lǎai',
+                'english': 'Having marked out the period of time, and having made each several abstention the object of the mind, with minds undistracted let us respectfully undertake the Uposatha.',
+            },
+            {
+                'number': 5,
+                'pali': 'อีทิสัง หิ อุโปสะถัง สัมปัตตานัง อัมหากัง ชีวิตัง มา นิรัตถะกัง โหตุ.',
+                'pali_roman': 'īdisaṃ hi uposathaṃ sampattānaṃ amhākaṃ jīvitaṃ mā niratthakaṃ hotu.',
+                'thai': 'ชีวิตของเราทั้งหลายที่ได้ดำรงมาจนถึงวันอุโบสถเช่นนี้ อย่าให้ล่วงไปเปล่าปราศจากประโยชน์เลย',
+                'paiboon': 'chii-wít kɔ̌ɔŋ rao táŋ-lǎai tîi dâai dam-roŋ maa jon-tʉ̌ŋ wan ù-boo-sòt chên-níi yàa hâi lûaŋ bpai bplàao bpràat-sà-jàak bprà-yòot ləəi',
+                'english': 'For to us who have reached such an Uposatha as this, may our life not be barren of fruit.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0274.PNG]: The book prints this in Pali only, with no
+        #   Thai translation, so `thai` and `paiboon` are empty and
+        #   english_unverified is set — the English is a working translation
+        #   made for this edition, not the book's.
+        # ‼ CHECK [IMG_0274.PNG]: No Pali title is printed, only the Thai
+        #   heading คำอาราธนาอุโบสถศีล. title_pali left empty.
+        # ‼ CHECK [IMG_0274.PNG]: All three repetitions are printed in full
+        #   and are recorded in full. The book does not abbreviate the second
+        #   and third with ฯเปฯ, so neither do I.
+        'id': 'kham-aradhana-ubosot-sila',
+        'title_thai': 'คำอาราธนาอุโบสถศีล',
+        'title_pali': '',
+        'title_roman': 'Kham Aradhana Ubosot Sila',
+        'title_english': 'The Request for the Uposatha Precepts',
+        'page_start': 11,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0274.PNG]: The comma placement — 'มะยัง ภันเต,
+            #   ติสะระเณนะ สะหะ,' — is reproduced as printed, including the
+            #   comma after สะหะ.
+            {
+                'number': 1,
+                'pali': 'มะยัง ภันเต, ติสะระเณนะ สะหะ, อัฏฐังคะสะมันนาคะตัง อุโปสะถัง ยาจามะ.',
+                'pali_roman': 'mayaṃ bhante, tisaraṇena saha, aṭṭhaṅgasamannāgataṃ uposathaṃ yācāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, we ask for the Uposatha endowed with eight factors, together with the Three Refuges.',
+            },
+            {
+                'number': 2,
+                'pali': 'ทุติยัมปิ มะยัง ภันเต, ติสะระเณนะ สะหะ, อัฏฐังคะสะมันนาคะตัง อุโปสะถัง ยาจามะ.',
+                'pali_roman': 'dutiyampi mayaṃ bhante, tisaraṇena saha, aṭṭhaṅgasamannāgataṃ uposathaṃ yācāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time, venerable sir, we ask for the Uposatha endowed with eight factors, together with the Three Refuges.',
+            },
+            {
+                'number': 3,
+                'pali': 'ตะติยัมปิ มะยัง ภันเต, ติสะระเณนะ สะหะ, อัฏฐังคะสะมันนาคะตัง อุโปสะถัง ยาจามะ.',
+                'pali_roman': 'tatiyampi mayaṃ bhante, tisaraṇena saha, aṭṭhaṅgasamannāgataṃ uposathaṃ yācāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time, venerable sir, we ask for the Uposatha endowed with eight factors, together with the Three Refuges.',
+            },
+        ],
+    },
 ]
 
 
@@ -8202,6 +8361,136 @@ PAGE_BLOCKS = [
                     'Rachawang Bowon Maha Surasinghanat. Used anywhere else, '
                     'they should be changed to the name of whoever established '
                     'that principal image'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 10 ─────────────────────────────────────────────────────────
+    # Almost all of this page is instruction rather than chant text. It OPENS
+    # mid-sentence: the editorial note that begins at the foot of page 9
+    # finishes here, and each page carries only the half printed on it — the
+    # same rule page 9's group follows from the other side. Then item 6,
+    # continuing the numbered list that runs 1-2 on page 8 and 3-5 on page 9.
+    {
+        'page': 10,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'หรือใช้ศัพท์สาธารณะสามัญว่า มะหาชะเน พุทธะสาสะนิเกนะ ก็ได้ เมื่อเข้า'
+                    'ประโยคแล้วเป็นดังนี้ อะยัง ปะฏิมา มะหาชะเนนะ พุทธะสาสะนิเกนะ ตัง '
+                    'ภะคะวันตัง อุททิสสะ กะตา ปะติฏฐาปิตา.'
+                ),
+                'english': (
+                    'Or the ordinary general expression mahājane '
+                    'buddhasāsanikena may be used instead. Put into the '
+                    'sentence it runs thus: ayaṃ paṭimā mahājanena '
+                    'buddhasāsanikena taṃ bhagavantaṃ uddissa katā '
+                    'patiṭṭhāpitā.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'item',
+                'number': 6,
+                'thai': (
+                    'การทำวัตรเช้าวันธรรมสวนะ ไม่มีสวดมนต์ต่อท้าย มีระเบียบปฏิบัติดังนี้ '
+                    'เมื่อได้เวลา 09.00 น. ตรง ประธานนำจุดธูปเทียน นำทำวัตรเช้าเหมือน'
+                    'วันปกติทุกประการ จบลงเพียง ตัง โน พ์รัห์มะจะริยัง อิมัสสะ เกวะลัสสะ '
+                    'ทุกขักขันธัสสะ อันตะกิริยายะ สังวัตตะตูติ ต่อจากนั้นสามเณรสวด'
+                    'สามเณรานุสิกขาทั้ง 3 บท ไม่สวดบทขัด เมื่อสามเณรสวดสามเณรานุสิกขา'
+                    'จบแล้ว อุบาสกอุบาสิกาทำวัตรเช้าจบลงที่ สังเวคะปะริกิตตะนะปาฐะ '
+                    'เช่นเดียวกัน'
+                ),
+                'english': (
+                    'The morning service on a Dhamma-hearing day has no '
+                    'chanting appended after it, and is conducted thus. At '
+                    'exactly 09.00 the leader lights the incense and candles '
+                    'and leads the morning service just as on an ordinary day, '
+                    'ending only at taṃ no brahmacariyaṃ imassa kevalassa '
+                    'dukkhakkhandhassa antakiriyāya saṃvattatūti. After that '
+                    'the sāmaṇeras chant the three Sāmaṇerānusikkhā passages, '
+                    'without the preparatory verse. When the sāmaṇeras have '
+                    'finished the Sāmaṇerānusikkhā, the laymen and laywomen '
+                    'likewise end their morning service at the '
+                    'Saṃvega-parikittana-patha.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'เมื่ออุบาสกอุบาสิกาทำวัตรเช้าจบลงแล้ว หัวหน้าอุบาสกนั่งคุกเข่าท่าพรหม'
+                    'ประนมมือ ประกาศอุโบสถเป็นลำดับต่อไป ดังนี้.'
+                ),
+                'english': (
+                    'When the laymen and laywomen have finished the morning '
+                    'service, the leading layman kneels in the brahma posture '
+                    'with palms joined and makes the announcement of the '
+                    'Uposatha, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    # The book sets this chant's translation as a passage under its own คำแปล
+    # heading, so the heading is printed and belongs to the page. Only the
+    # heading is kept here: the words under it are the chant's `thai` layer,
+    # and repeating them as a prose block would print the translation twice.
+    {
+        'page': 10,
+        'after': 'kham-prakat-ubosot',
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'คำแปล',
+                'english': 'Translation',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 11 ─────────────────────────────────────────────────────────
+    # Both blocks sit above the only chant printed on this page, so the group
+    # carries no `after`. What page 11 ALSO prints, and the app does not show
+    # here, is the tail of the คำแปล begun on page 10 — that translation is
+    # the `thai` layer of a chant whose Pali is all on page 10, so the app
+    # shows the whole of it there. See the page-fidelity check on the chant.
+    {
+        'page': 11,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'คำบาลีว่า ปัณณะระสี ทิวะโส และคำไทยว่า วันนี้เป็นวันปัณณรสีดิถีที่ 15 '
+                    'นั้น สำหรับวัน 15 ค่ำ ถ้าเป็นวัน 14 ค่ำ ให้เปลี่ยนเป็น จาตุททะสี ทิวะโส '
+                    'และคำไทยว่า วันนี้เป็นวันจาตุททสีดิถีที่ 14 ถ้าเป็นวัน 8 ค่ำ ให้เปลี่ยน'
+                    'เป็น อัฏฐะมี ทิวะโส คำไทยว่า วันนี้เป็นวันอัฏฐมีดิถีที่ 8'
+                ),
+                'english': (
+                    'The Pali paṇṇarasī divaso, and the Thai "today is the '
+                    'fifteenth lunar day", are for the fifteenth day of the '
+                    'fortnight. On a fourteenth day they are changed to '
+                    'cātuddasī divaso, and the Thai to "today is the '
+                    'fourteenth lunar day". On an eighth day they are changed '
+                    'to aṭṭhamī divaso, and the Thai to "today is the eighth '
+                    'lunar day".'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': (
+                    'เมื่อหัวหน้าอุบาสกประกาศอุโบสถจวนจะจบ พระเถระผู้เป็นประธานที่จะแสดง'
+                    'ธรรมขึ้นสู่ธรรมาสน์ เมื่อหัวหน้าอุบาสกประกาศอุโบสถจบลงแล้ว '
+                    'อุบาสกอุบาสิกาทั้งนั้น อาราธนาอุโบสถศีลพร้อมกันดังนี้.'
+                ),
+                'english': (
+                    "As the leading layman's announcement of the Uposatha "
+                    'nears its end, the presiding elder who is to give the '
+                    'Dhamma talk ascends the Dhamma seat. When the '
+                    'announcement is finished, all the laymen and laywomen '
+                    'together request the Uposatha precepts, as follows.'
                 ),
                 'english_unverified': True,
             },
