@@ -28,8 +28,9 @@ from check_batch import (check_blocks, check_checks_are_readable,  # noqa: E402
                          check_depth, check_diacritics, check_layer_keys,
                          check_layers_not_invented, check_line_breaks_agree,
                          check_manifest, check_page_map, check_pages_ascend,
-                         check_paiboon, check_pali_untouched, check_shape,
-                         skeleton, validate, verse_range)
+                         check_paiboon, check_pali_untouched,
+                         check_printed_numbers, check_shape, skeleton,
+                         validate, verse_range)
 
 
 def verse(n=1, **kw):
@@ -251,6 +252,63 @@ class TestDiacriticConsistency:
     def test_skeleton_strips_diacritics_for_comparison(self):
         assert skeleton('paṇṇarasī') == skeleton('pannarasi')
         assert skeleton('vā') == skeleton('va')
+
+
+class TestTheNumbersTheBookPrints:
+    """`printed_number` went in with no guard, which is the gap this closes.
+
+    It is not `number`: one is the app's identity for a line, the other is
+    what the page shows beside it, and they part company wherever a numbered
+    list follows unnumbered chanted lines.
+    """
+
+    def test_a_list_numbered_as_the_book_numbers_it_passes(self):
+        b = batch([chant(verses=[verse(1), verse(2),
+                                 verse(3, printed_number=1),
+                                 verse(4, printed_number=2)])])
+
+        assert check_printed_numbers(b) == []
+
+    def test_a_continuation_starting_part_way_through_passes(self):
+        """Bhojana rules 19-30 arrive with the first eighteen already in."""
+        b = batch([chant(verses=[verse(19, printed_number=19),
+                                 verse(20, printed_number=20)])])
+
+        assert check_printed_numbers(b) == []
+
+    def test_the_same_number_twice_is_caught(self):
+        """Both lines would render as 7, and the page shows each once."""
+        b = batch([chant(verses=[verse(1, printed_number=7),
+                                 verse(2, printed_number=7)])])
+
+        assert any('same number twice' in p for p in check_printed_numbers(b))
+
+    def test_numbers_going_backwards_are_caught(self):
+        """A list running 5, 4, 6 is a pair transcribed the wrong way round."""
+        b = batch([chant(verses=[verse(1, printed_number=5),
+                                 verse(2, printed_number=4)])])
+
+        assert any('ascend' in p for p in check_printed_numbers(b))
+
+    @pytest.mark.parametrize('bad', [0, -1, '3', 3.0, None])
+    def test_anything_that_is_not_a_positive_whole_number_is_caught(self, bad):
+        b = batch([chant(verses=[verse(1, printed_number=bad)])])
+
+        assert any('positive whole number' in p
+                   for p in check_printed_numbers(b))
+
+    def test_true_is_not_accepted_as_the_number_one(self):
+        """bool is a subclass of int in Python, so this needs saying."""
+        b = batch([chant(verses=[verse(1, printed_number=True)])])
+
+        assert any('positive whole number' in p
+                   for p in check_printed_numbers(b))
+
+    def test_verses_the_book_does_not_number_are_skipped(self):
+        """The nidana and a closing sentence carry none, and that is correct."""
+        b = batch([chant(verses=[verse(1), verse(2), verse(3)])])
+
+        assert check_printed_numbers(b) == []
 
 
 class TestLineBreaksAgree:

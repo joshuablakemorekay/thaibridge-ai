@@ -233,6 +233,55 @@ def check_layers_not_invented(batch: dict) -> list[str]:
     return problems
 
 
+def check_printed_numbers(batch: dict) -> list[str]:
+    """The numbers the BOOK prints beside its lines are sane.
+
+    `printed_number` is separate from `number`: the app's own identity for a
+    line versus what the page shows beside it. They part company wherever a
+    numbered list follows unnumbered chanted lines — the Dasadhamma Sutta's
+    nidana makes the book's item 1 into verse 3.
+
+    It went in with no guard at all, which is the same gap this whole script
+    exists to close: a key nothing validates is a key that can be quietly
+    wrong. Three things must hold, and each has a way of going wrong that the
+    page would not make obvious:
+
+      * a positive whole number — the book numbers from 1, never 0 or a string;
+      * no repeats inside one chant — two lines printed '7.' means one of them
+        was mis-transcribed, and both would render as 7;
+      * ascending in verse order — a list that runs 5, 4, 6 is a pair swapped.
+
+    Not checked: that the numbers start at 1. A continuation legitimately
+    arrives carrying 19-30, because the first eighteen went in with the
+    previous page.
+    """
+    problems = []
+    for chant in batch["chants"]:
+        seen, previous = {}, None
+        for verse in chant["verses"]:
+            if "printed_number" not in verse:
+                continue
+            n, where = verse["printed_number"], verse.get("number")
+
+            if not isinstance(n, int) or isinstance(n, bool) or n < 1:
+                problems.append(
+                    f"{chant['id']} verse {where}: printed_number is {n!r} — "
+                    f"it must be a positive whole number")
+                continue
+            if n in seen:
+                problems.append(
+                    f"{chant['id']}: verses {seen[n]} and {where} both carry "
+                    f"printed_number {n} — the book cannot print the same "
+                    f"number twice in one list")
+            seen[n] = where
+            if previous is not None and n <= previous:
+                problems.append(
+                    f"{chant['id']} verse {where}: printed_number {n} follows "
+                    f"{previous} — the book's numbers ascend down the page")
+            previous = n
+    return problems
+
+
 def check_manifest(batch: dict) -> list[str]:
     """The manifest describes what is on the pages, and must match what arrived."""
     problems = []
@@ -473,6 +522,7 @@ CHECKS = (
     ("pali untouched", check_pali_untouched),
     ("five layer keys", check_layer_keys),
     ("layers not invented", check_layers_not_invented),
+    ("printed numbers", check_printed_numbers),
     ("manifest", check_manifest),
     ("page map", check_page_map),
     ("pages ascend", check_pages_ascend),
