@@ -186,6 +186,39 @@ def test_the_thai_readings_use_the_paiboon_alphabet():
         assert 'ng' not in reading, f'{title} → {reading} (Paiboon writes ŋ)'
 
 
+def test_each_row_says_which_system_its_reading_is_in():
+    """The contents colours the romanised line by system, so a row that names
+    the wrong one is a row shown in the wrong colour — which would say Pali
+    where the words are Thai, to a reader who cannot tell the difference.
+
+    Taken from which table the title sits in, never sniffed from the reading:
+    Sekhiyavatta is IAST and carries no diacritic at all, so a string check
+    would file it as Paiboon.
+    """
+    for row in chanting.build_contents():
+        assert row['roman_system'] in ('pali_roman', 'paiboon'), row['title']
+        if row['roman_system'] == 'paiboon':
+            assert not paiboon_faults(row['title_roman']), row['title']
+
+
+def test_the_two_tables_do_not_overlap():
+    """One title, one system. A title in both would take whichever dict merged
+    last, and the colour would be decided by dict ordering."""
+    both = set(chanting._CONTENTS_PALI_ROMAN) & set(chanting._CONTENTS_PAIBOON)
+    assert not both, f'titles in both tables: {both}'
+    assert (len(chanting._CONTENTS_ROMAN)
+            == len(chanting._CONTENTS_PALI_ROMAN)
+            + len(chanting._CONTENTS_PAIBOON))
+
+
+def test_the_colours_come_from_the_chant_layers():
+    """The point of the colouring is that it matches the chant page. If these
+    keys ever stop being layer keys, the template's loop quietly matches
+    nothing and the lines render with no colour at all."""
+    keys = {layer['key'] for layer in chanting.CHANT_LAYERS}
+    assert {'pali_roman', 'paiboon'} <= keys
+
+
 def test_every_romanised_line_reaches_the_page():
     rows = chanting.build_contents()
     romanised = [r for r in rows if r['title_roman']]

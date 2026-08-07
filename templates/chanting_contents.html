@@ -58,15 +58,34 @@
     /* How the title is SAID. Sits directly under the Thai it romanises, and
        is set in italics so the eye can tell at a glance which line is the
        sound and which is the meaning — the two are stacked and would
-       otherwise read as one run-on note. Kept a shade darker than the English
-       because a chanter uses this line, where the gloss is only for orienting. */
+       otherwise read as one run-on note. */
     .toc-roman {
         display: block;
         font-size: 0.85rem;
         font-style: italic;
-        color: #55483a;
         line-height: 1.35;
     }
+
+    /* Coloured by WHICH system the reading is in, from the same CHANT_LAYERS
+       values the chant page colours its layers with — so romanised Pali is
+       the same colour here as the pali_roman layer there, and Paiboon the
+       same as the paiboon layer. That split is the one thing on this page a
+       reader cannot see for themselves: telling Pali-in-Thai-script from
+       ordinary Thai is exactly the skill they do not have, which is why the
+       line is there at all.
+
+       Only this line is coloured. The title and the English gloss keep their
+       own treatment: the contents already spends --royal-purple on section
+       headings and on links, where it means "section" and "clickable", and
+       colouring the titles too would blur a distinction that is doing work. */
+    {% for layer in layers if layer.key in ('pali_roman', 'paiboon') %}
+    .toc-roman-{{ layer.key }} { color: {{ layer.colour }}; }
+    {% endfor %}
+
+    /* The same two classes are used inline in the key below, to show the
+       colours rather than describe them. There they are part of a sentence,
+       so they drop the block display that stacks them under a title. */
+    .toc-key .toc-roman { display: inline; font-size: inherit; }
 
     /* Written for this app — the book prints no English anywhere. Set quieter
        than the Thai so the printed line stays the line, and the gloss reads as
@@ -185,7 +204,7 @@
                SAID, and it belongs next to the Thai it romanises. The English
                is what it means, which is a different question. #}
             {% if row.title_roman %}
-            <span class="toc-roman">{{ row.title_roman }}</span>
+            <span class="toc-roman toc-roman-{{ row.roman_system }}">{{ row.title_roman }}</span>
             {% endif %}
             {% if row.title_english %}
             <span class="toc-english">{{ row.title_english }}</span>
@@ -236,9 +255,11 @@
     Under each title, the <em>italic line</em> is how it is said and the line
     under that is what it means. Most of these titles are Pali written in Thai
     script, and those are romanised in the standard Pali way
-    (<em>Ratanattayappaṇāmagāthā</em>); the ones that are ordinary Thai rather
-    than Pali are romanised in Paiboon, the system used elsewhere in this app,
-    which marks the tones. Both, and the English with them, were written for
+    (<span class="toc-roman toc-roman-pali_roman">Ratanattayappaṇāmagāthā</span>);
+    the ones that are ordinary Thai rather than Pali are romanised in Paiboon
+    (<span class="toc-roman toc-roman-paiboon">kam buu-chaa</span>), the system
+    used elsewhere in this app, which marks the tones. The colours are the
+    same ones the chant pages use for those two layers. Both, and the English with them, were written for
     this app: the book prints no Latin script and no English at all, so there
     is nothing in it to check them against — they are a way in, not the book's
     own words.
