@@ -8720,7 +8720,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
         # ‼ CHECK [IMG_0280.PNG]: CONTINUES. The heading says 16 and 7 are
         #   printed here, so rules 8-16 are on page 18 and have not been
         #   written from memory.
@@ -8816,6 +8815,159 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "'I will not teach Dhamma to someone who is not ill and who is in a vehicle': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0281.PNG]: The chant is now COMPLETE at sixteen,
+            #   matching the heading ธัมมะเทสะนาปะฏิสังยุต 16 สิกขาบท on page
+            #   17. The CONTINUES marker should come off.
+            {
+                'number': 8,
+                'page': 18,
+                'pali': 'นะ สะยะนะคะตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na sayanagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is lying down': this is a training to be observed.",
+            },
+            {
+                'number': 9,
+                'pali': 'นะ ปัลลัตถิกายะ นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na pallatthikāya nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is sitting clasping the knees': this is a training to be observed.",
+            },
+            {
+                'number': 10,
+                'pali': 'นะ เวฐิตะสีสัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na veṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is with the head wrapped': this is a training to be observed.",
+            },
+            {
+                'number': 11,
+                'pali': 'นะ โอคุณฐิตะสีสัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na oguṇṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is with the head covered': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0281.PNG]: WORD REJOINED ACROSS A HYPHEN. The book
+            #   breaks เทเสสสามีติ as 'เทเสส-' at the end of one line and
+            #   'สามีติ' at the start of the next. That hyphen is
+            #   justification, not spelling, so the word is recorded whole.
+            # ‼ CHECK [IMG_0281.PNG]: Rules 12, 13, 15 and 16 each contrast
+            #   two positions — ground against seat, low against high, behind
+            #   against in front, off the path against on it. The second half
+            #   is always the person being taught. Check the pairs read the
+            #   right way round.
+            {
+                'number': 12,
+                'pali': 'นะ ฉะมายัง นิสีทิต๎วา อาสะเน นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na chamāyaṃ nisīditvā āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not, sitting on the ground, teach Dhamma to someone who is not ill and is sitting on a seat': this is a training to be observed.",
+            },
+            {
+                'number': 13,
+                'pali': 'นะ นีเจ อาสะเน นิสีทิต๎วา อุจเจ อาสะเน นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not, sitting on a low seat, teach Dhamma to someone who is not ill and is sitting on a high seat': this is a training to be observed.",
+            },
+            {
+                'number': 14,
+                'pali': 'นะ ฐิโต นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na ṭhito nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not, standing, teach Dhamma to someone who is not ill and is sitting': this is a training to be observed.",
+            },
+            {
+                'number': 15,
+                'pali': 'นะ ปัจฉะโต คัจฉันโต ปุระโต คัจฉันตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na pacchato gacchanto purato gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not, walking behind, teach Dhamma to someone who is not ill and is walking in front': this is a training to be observed.",
+            },
+            {
+                'number': 16,
+                'pali': 'นะ อุปปะเถนะ คัจฉันโต ปะเถนะ คัจฉันตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na uppathena gacchanto pathena gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not, walking off the path, teach Dhamma to someone who is not ill and is walking on the path': this is a training to be observed.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0281.PNG]: The book prints no Thai translation anywhere
+        #   on page 18, so thai and paiboon are empty and english_unverified
+        #   is set.
+        'id': 'sekhiya-pakinnaka',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Sekhiya Rules — Pakiṇṇaka',
+        'page_start': 18,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0281.PNG]: The fourth and last Sekhiya group, and
+            #   the one that closes the set: 26 + 30 + 16 + 3 = 75, the
+            #   standard count. Separate chant for the same reason as the
+            #   second and third — the book restarts its numbering at each
+            #   group. No chant title is printed, only the heading ปกิณณะกะ 3
+            #   สิกขาบท, carried as the section here.
+            {
+                'number': 1,
+                'section': 'ปกิณณะกะ 3 สิกขาบท: Pakiṇṇaka — the three miscellaneous training rules',
+                'pali': 'นะ ฐิโต อะคิลาโน อุจจารัง วา ปัสสาวัง วา กะริสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na ṭhito agilāno uccāraṃ vā passāvaṃ vā karissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I, not being ill, will not defecate or urinate standing': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0281.PNG]: ฬ or พ, twice more — 'เขฬัง' (kheḷaṃ,
+            #   spittle) in rules 2 and 3. Read as ฬ on the same grounds as
+            #   the three on page 17. That makes FIVE instances of this glyph
+            #   across two pages, all in positions where ฬ is expected and
+            #   never one where พ would make sense, which is itself evidence
+            #   that this book's ฬ simply photographs like พ. One retake would
+            #   settle all five.
+            {
+                'number': 2,
+                'pali': 'นะ หะริเต อะคิลาโน อุจจารัง วา ปัสสาวัง วา เขฬัง วา กะริสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na harite agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I, not being ill, will not defecate, urinate or spit on living greenery': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0281.PNG]: Footnote 1 on this page reads 'วิ. มหา
+            #   2/558-570' — with the slash and volume number, exactly the
+            #   form page 16's footnote used. That makes page 17's 'วิ. มหา.
+            #   252-557' look more likely to be a misreading of '2/543-557' on
+            #   my part than something the book prints. Worth checking both at
+            #   once.
+            {
+                'number': 3,
+                'pali': 'นะ อุทะเก อะคิลาโน อุจจารัง วา ปัสสาวัง วา เขฬัง วา กะริสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na udake agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I, not being ill, will not defecate, urinate or spit in water': this is a training to be observed.",
             },
         ],
     },
@@ -10001,6 +10153,24 @@ PAGE_BLOCKS = [
                     'word desissāmīti in place of the printed desessāmīti.'
                 ),
                 'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 18 ─────────────────────────────────────────────────────────
+    # The Sekhiya set closes on this page: 26 + 30 + 16 + 3 = 75.
+    #
+    # This footnote prints '2/558-570', with the slash and volume number,
+    # exactly as page 16's did — which is why page 17's '252-557' is more
+    # likely a misreading of '2/543-557' than something the book prints.
+    {
+        'page': 18,
+        'after': 'sekhiya-pakinnaka',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'วิ. มหา 2/558-570',
+                'english': '',
             },
         ],
     },

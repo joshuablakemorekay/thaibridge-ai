@@ -1,0 +1,293 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "sekhiya-dhammadesanapatisamyutta",
+      "sekhiya-pakinnaka"
+    ],
+    "pages": [
+      {
+        "page": 18,
+        "file": "IMG_0281.PNG",
+        "script": "thai",
+        "chant": "sekhiya-dhammadesanapatisamyutta",
+        "verses": "8-16",
+        "starts_here": false,
+        "note": "The page opens with the last nine Dhammadesana rules, completing the sixteen begun on page 17."
+      },
+      {
+        "page": 18,
+        "file": "IMG_0281.PNG",
+        "script": "thai",
+        "chant": "sekhiya-pakinnaka",
+        "verses": "1-3",
+        "starts_here": true,
+        "note": "Then the group heading ปกิณณะกะ 3 สิกขาบท and all three rules, which close the Sekhiya set. Footnote marker 1 at the end of rule 3."
+      },
+      {
+        "page": 18,
+        "file": "IMG_0281.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "วิ. มหา 2/558-570",
+            "english": "",
+            "note": "A canonical citation, reproduced exactly as printed. Carried as a footnote block rather than source_printed so the foot of the page reads as the book sets it."
+          }
+        ],
+        "note": "Below the rule at the foot: '1. วิ. มหา 2/558-570'."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "sekhiya-dhammadesanapatisamyutta",
+      "continuation_of": "sekhiya-dhammadesanapatisamyutta",
+      "working_notes": {
+        "invitation": "Not repeated — a continuation carries none by design.",
+        "units": "Nine, completing the sixteen the heading on page 17 promised. Rules 8-11 share the short frame and were generated from a table; 12-16 each differ and were transcribed individually.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0281.PNG (page 18). Verse 8 carries `page: 18` as the first verse of a new printed page."
+      },
+      "verses": [
+        {
+          "number": 8,
+          "pali": "นะ สะยะนะคะตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na sayanagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not teach Dhamma to someone who is not ill and who is lying down': this is a training to be observed.",
+          "page": 18
+        },
+        {
+          "number": 9,
+          "pali": "นะ ปัลลัตถิกายะ นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na pallatthikāya nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not teach Dhamma to someone who is not ill and who is sitting clasping the knees': this is a training to be observed."
+        },
+        {
+          "number": 10,
+          "pali": "นะ เวฐิตะสีสัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na veṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not teach Dhamma to someone who is not ill and who is with the head wrapped': this is a training to be observed."
+        },
+        {
+          "number": 11,
+          "pali": "นะ โอคุณฐิตะสีสัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na oguṇṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not teach Dhamma to someone who is not ill and who is with the head covered': this is a training to be observed."
+        },
+        {
+          "number": 12,
+          "pali": "นะ ฉะมายัง นิสีทิต๎วา อาสะเน นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na chamāyaṃ nisīditvā āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not, sitting on the ground, teach Dhamma to someone who is not ill and is sitting on a seat': this is a training to be observed."
+        },
+        {
+          "number": 13,
+          "pali": "นะ นีเจ อาสะเน นิสีทิต๎วา อุจเจ อาสะเน นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not, sitting on a low seat, teach Dhamma to someone who is not ill and is sitting on a high seat': this is a training to be observed."
+        },
+        {
+          "number": 14,
+          "pali": "นะ ฐิโต นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na ṭhito nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not, standing, teach Dhamma to someone who is not ill and is sitting': this is a training to be observed."
+        },
+        {
+          "number": 15,
+          "pali": "นะ ปัจฉะโต คัจฉันโต ปุระโต คัจฉันตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na pacchato gacchanto purato gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not, walking behind, teach Dhamma to someone who is not ill and is walking in front': this is a training to be observed."
+        },
+        {
+          "number": 16,
+          "pali": "นะ อุปปะเถนะ คัจฉันโต ปะเถนะ คัจฉันตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na uppathena gacchanto pathena gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will not, walking off the path, teach Dhamma to someone who is not ill and is walking on the path': this is a training to be observed."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 8,
+          "file": "IMG_0281.PNG",
+          "issue": "The chant is now COMPLETE at sixteen, matching the heading ธัมมะเทสะนาปะฏิสังยุต 16 สิกขาบท on page 17. The CONTINUES marker should come off."
+        },
+        {
+          "verse": 12,
+          "file": "IMG_0281.PNG",
+          "issue": "WORD REJOINED ACROSS A HYPHEN. The book breaks เทเสสสามีติ as 'เทเสส-' at the end of one line and 'สามีติ' at the start of the next. That hyphen is justification, not spelling, so the word is recorded whole."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0281.PNG",
+          "issue": "Rules 8-11 were generated from a table of stems sharing the frame 'นะ … อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา'. Rules 10 and 11 differ only in เวฐิตะ / โอคุณฐิตะ — worth a look against the page."
+        },
+        {
+          "verse": 12,
+          "file": "IMG_0281.PNG",
+          "issue": "Rules 12, 13, 15 and 16 each contrast two positions — ground against seat, low against high, behind against in front, off the path against on it. The second half is always the person being taught. Check the pairs read the right way round."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ฉะมายัง",
+          "pali_roman": "chamāyaṃ",
+          "meaning": "on the ground — as against on a seat, āsane"
+        },
+        {
+          "pali": "นีเจ / อุจเจ",
+          "pali_roman": "nīce / ucce",
+          "meaning": "low / high — of seats, and the whole point of rules 12 and 13 is the relative height of teacher and hearer"
+        },
+        {
+          "pali": "อุปปะถะ",
+          "pali_roman": "uppatha",
+          "meaning": "off the path, the wrong road — as against patha, the path"
+        },
+        {
+          "pali": "เวฐิตะสีสะ",
+          "pali_roman": "veṭhitasīsa",
+          "meaning": "with the head wrapped or turbaned"
+        }
+      ]
+    },
+    {
+      "id": "sekhiya-pakinnaka",
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "The Sekhiya Rules — Pakiṇṇaka",
+      "group": "General chanting",
+      "page_start": 18,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent. The book prints none.",
+        "units": "Three, and the heading says three, so the group is COMPLETE on this page. With it the whole Sekhiya set closes: 26 + 30 + 16 + 3 = 75.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0281.PNG (page 18). Footnote marker 1 at the end of rule 3."
+      },
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "นะ ฐิโต อะคิลาโน อุจจารัง วา ปัสสาวัง วา กะริสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na ṭhito agilāno uccāraṃ vā passāvaṃ vā karissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I, not being ill, will not defecate or urinate standing': this is a training to be observed.",
+          "section": "ปกิณณะกะ 3 สิกขาบท: Pakiṇṇaka — the three miscellaneous training rules"
+        },
+        {
+          "number": 2,
+          "pali": "นะ หะริเต อะคิลาโน อุจจารัง วา ปัสสาวัง วา เขฬัง วา กะริสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na harite agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I, not being ill, will not defecate, urinate or spit on living greenery': this is a training to be observed."
+        },
+        {
+          "number": 3,
+          "pali": "นะ อุทะเก อะคิลาโน อุจจารัง วา ปัสสาวัง วา เขฬัง วา กะริสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na udake agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I, not being ill, will not defecate, urinate or spit in water': this is a training to be observed."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 1,
+          "file": "IMG_0281.PNG",
+          "issue": "The fourth and last Sekhiya group, and the one that closes the set: 26 + 30 + 16 + 3 = 75, the standard count. Separate chant for the same reason as the second and third — the book restarts its numbering at each group. No chant title is printed, only the heading ปกิณณะกะ 3 สิกขาบท, carried as the section here."
+        },
+        {
+          "verse": 2,
+          "file": "IMG_0281.PNG",
+          "issue": "ฬ or พ, twice more — 'เขฬัง' (kheḷaṃ, spittle) in rules 2 and 3. Read as ฬ on the same grounds as the three on page 17. That makes FIVE instances of this glyph across two pages, all in positions where ฬ is expected and never one where พ would make sense, which is itself evidence that this book's ฬ simply photographs like พ. One retake would settle all five."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0281.PNG",
+          "issue": "Footnote 1 on this page reads 'วิ. มหา 2/558-570' — with the slash and volume number, exactly the form page 16's footnote used. That makes page 17's 'วิ. มหา. 252-557' look more likely to be a misreading of '2/543-557' on my part than something the book prints. Worth checking both at once."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0281.PNG",
+          "issue": "The book prints no Thai translation anywhere on page 18, so thai and paiboon are empty and english_unverified is set."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ปกิณณะกะ",
+          "pali_roman": "pakiṇṇaka",
+          "meaning": "miscellaneous, scattered — the name of the last group, which collects what fits no other"
+        },
+        {
+          "pali": "หะริเต",
+          "pali_roman": "harite",
+          "meaning": "on green things — living plants and crops, which the rule protects"
+        },
+        {
+          "pali": "เขฬัง",
+          "pali_roman": "kheḷaṃ",
+          "meaning": "spittle, saliva"
+        },
+        {
+          "pali": "อุจจาระ / ปัสสาวะ",
+          "pali_roman": "uccāra / passāva",
+          "meaning": "excrement / urine — named plainly, as the Vinaya does"
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "sekhiya-dhammadesanapatisamyutta",
+      "sekhiya-pakinnaka"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 19,
+    "resume_from_file": "IMG_0282.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values exist in this batch. The book prints no Thai translation on page 18.",
+    "pali_untouched": "Confirmed. Every pali is the book's Thai script as printed; every pali_roman is IAST transliteration of it.",
+    "page_scan": "agrees — page 18 carries verses 8-16 of sekhiya-dhammadesanapatisamyutta and 1-3 of sekhiya-pakinnaka, plus one block row claiming no verses. One page, one image.",
+    "notes": "THE SEKHIYA SET CLOSES HERE. Four groups across four pages: Saruppa 26 (pp. 15-16), Bhojana 30 (pp. 16-17), Dhammadesana 16 (pp. 17-18) and Pakinnaka 3 (p. 18) — 75 in all, the standard count, and no CONTINUES marker is left behind. Page 19 begins something new. The ฬ/พ glyph appears twice more here in เขฬัง, making five instances over two pages, every one in a position where ฬ is expected and none where พ would make sense. Page 18's footnote also prints the '2/558-570' form with the slash, which suggests page 17's '252-557' is my misreading of '2/543-557' rather than the book's own oddity. One retake of pages 17-18 settles both."
+  }
+}
