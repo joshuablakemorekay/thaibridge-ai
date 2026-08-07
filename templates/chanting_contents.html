@@ -55,6 +55,19 @@
 
     .toc-names { flex: 0 1 auto; display: flex; flex-direction: column; }
     .toc-title { display: block; }
+    /* How the title is SAID. Sits directly under the Thai it romanises, and
+       is set in italics so the eye can tell at a glance which line is the
+       sound and which is the meaning — the two are stacked and would
+       otherwise read as one run-on note. Kept a shade darker than the English
+       because a chanter uses this line, where the gloss is only for orienting. */
+    .toc-roman {
+        display: block;
+        font-size: 0.85rem;
+        font-style: italic;
+        color: #55483a;
+        line-height: 1.35;
+    }
+
     /* Written for this app — the book prints no English anywhere. Set quieter
        than the Thai so the printed line stays the line, and the gloss reads as
        help rather than as what the book says. */
@@ -168,6 +181,12 @@
     <div class="toc-row is-{{ row.level }}{% if not row.in_app and not row.chant_id %} not-in-app{% endif %}">
         <div class="toc-names">
             <span class="toc-title">{{ row.title }}</span>
+            {# Romanised first, English second: this line is how the title is
+               SAID, and it belongs next to the Thai it romanises. The English
+               is what it means, which is a different question. #}
+            {% if row.title_roman %}
+            <span class="toc-roman">{{ row.title_roman }}</span>
+            {% endif %}
             {% if row.title_english %}
             <span class="toc-english">{{ row.title_english }}</span>
             {% endif %}
@@ -214,9 +233,15 @@
 </p>
 
 <p class="toc-key">
-    The English under each title was written for this app. The book prints no
-    English at all, so there is nothing in it to check these against — they are
-    a way in, not the book's own words.
+    Under each title, the <em>italic line</em> is how it is said and the line
+    under that is what it means. Most of these titles are Pali written in Thai
+    script, and those are romanised in the standard Pali way
+    (<em>Ratanattayappaṇāmagāthā</em>); the ones that are ordinary Thai rather
+    than Pali are romanised in Paiboon, the system used elsewhere in this app,
+    which marks the tones. Both, and the English with them, were written for
+    this app: the book prints no Latin script and no English at all, so there
+    is nothing in it to check them against — they are a way in, not the book's
+    own words.
 </p>
 
 <div class="toc-turn">
