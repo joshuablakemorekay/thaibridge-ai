@@ -1,0 +1,320 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "sekhiyavatta"
+    ],
+    "pages": [
+      {
+        "page": 15,
+        "file": "IMG_0278.PNG",
+        "script": "thai",
+        "chant": "sekhiyavatta",
+        "verses": "1-23",
+        "starts_here": true,
+        "note": "The whole page is this one chant: the title เสขิยวัตร, the book's own section heading สารุปปะ 26 สิกขาบท, then rules 1-23 as a numbered list. Single column. No footnote, no prose instruction, nothing else printed."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "sekhiyavatta",
+      "continues": true,
+      "title_thai": "เสขิยวัตร",
+      "title_pali": "Sekhiyavatta",
+      "title_roman": "",
+      "title_english": "The Sekhiya Rules of Training",
+      "group": "General chanting",
+      "page_start": 15,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent. The book prints no invitation for this chant.",
+        "units": "Twenty-three on this page. The printed heading says 26, so three more are on page 16 and this entry carries `continues`. Rules 1-2 concern the robes; 3 onward pair up, the same stem said once for going among the houses and once for sitting. Rule 23 is the GOING half of a pair whose sitting half is rule 24, overleaf.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0278.PNG (page 15). Single column, numbered list, Thai script. No footnote."
+      },
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ปะริมัณฑะลัง นิวาเสสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "parimaṇḍalaṃ nivāsessāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will wear the lower robe wrapped evenly all round': this is a training to be observed.",
+          "section": "สารุปปะ 26 สิกขาบท: Sāruppa — the twenty-six training rules on proper deportment"
+        },
+        {
+          "number": 2,
+          "pali": "ปะริมัณฑะลัง ปารุปิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "parimaṇḍalaṃ pārupissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will put on the upper robe wrapped evenly all round': this is a training to be observed."
+        },
+        {
+          "number": 3,
+          "pali": "สุปะฏิจฉันโน อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "supaṭicchanno antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses well covered': this is a training to be observed."
+        },
+        {
+          "number": 4,
+          "pali": "สุปะฏิจฉันโน อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "supaṭicchanno antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses well covered': this is a training to be observed."
+        },
+        {
+          "number": 5,
+          "pali": "สุสังวุโต อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "susaṃvuto antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses well restrained': this is a training to be observed."
+        },
+        {
+          "number": 6,
+          "pali": "สุสังวุโต อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "susaṃvuto antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses well restrained': this is a training to be observed."
+        },
+        {
+          "number": 7,
+          "pali": "โอกขิตตะจักขุ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "okkhittacakkhu antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses with eyes lowered': this is a training to be observed."
+        },
+        {
+          "number": 8,
+          "pali": "โอกขิตตะจักขุ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "okkhittacakkhu antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses with eyes lowered': this is a training to be observed."
+        },
+        {
+          "number": 9,
+          "pali": "นะ อุกขิตตะกายะ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na ukkhittakāya antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses not with the robes hitched up': this is a training to be observed."
+        },
+        {
+          "number": 10,
+          "pali": "นะ อุกขิตตะกายะ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses not with the robes hitched up': this is a training to be observed."
+        },
+        {
+          "number": 11,
+          "pali": "นะ อุชชัคฆิกายะ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses not laughing loudly': this is a training to be observed."
+        },
+        {
+          "number": 12,
+          "pali": "นะ อุชชัคฆิกายะ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses not laughing loudly': this is a training to be observed."
+        },
+        {
+          "number": 13,
+          "pali": "อัปปะสัทโท อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "appasaddo antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses making little noise': this is a training to be observed."
+        },
+        {
+          "number": 14,
+          "pali": "อัปปะสัทโท อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses making little noise': this is a training to be observed."
+        },
+        {
+          "number": 15,
+          "pali": "นะ กายัปปะจาละกัง อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na kāyappacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses not swaying the body': this is a training to be observed."
+        },
+        {
+          "number": 16,
+          "pali": "นะ กายัปปะจาละกัง อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na kāyappacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses not swaying the body': this is a training to be observed."
+        },
+        {
+          "number": 17,
+          "pali": "นะ พาหุปปะจาละกัง อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na bāhuppacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses not swinging the arms': this is a training to be observed."
+        },
+        {
+          "number": 18,
+          "pali": "นะ พาหุปปะจาละกัง อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na bāhuppacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses not swinging the arms': this is a training to be observed."
+        },
+        {
+          "number": 19,
+          "pali": "นะ สีสัปปะจาละกัง อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na sīsappacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses not wagging the head': this is a training to be observed."
+        },
+        {
+          "number": 20,
+          "pali": "นะ สีสัปปะจาละกัง อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na sīsappacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses not wagging the head': this is a training to be observed."
+        },
+        {
+          "number": 21,
+          "pali": "นะ ขัมภะกะโต อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses not with arms akimbo': this is a training to be observed."
+        },
+        {
+          "number": 22,
+          "pali": "นะ ขัมภะกะโต อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will sit among the houses not with arms akimbo': this is a training to be observed."
+        },
+        {
+          "number": 23,
+          "pali": "นะ โอคุณฐิโต อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.",
+          "pali_roman": "na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'I will go among the houses not with the head covered': this is a training to be observed."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0278.PNG",
+          "issue": "CONTINUES. The heading reads สารุปปะ 26 สิกขาบท but only 23 are printed on this page, so rules 24-26 are on page 16 and have NOT been written from memory. Rule 23 is the going half of a pair; its sitting half should be rule 24."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0278.PNG",
+          "issue": "ENGLISH NEEDS A VINAYA CHECK. These are Pali-only, so the English is a working translation for this edition. Four terms carry established renderings I would not want to guess at: อุกขิตตะกายะ (ukkhittakāya), อุชชัคฆิกายะ (ujjagghikāya), ขัมภะกะโต (khambhakato) and โอคุณฐิโต (oguṇṭhito). Worth comparing against a Vinaya translation before print."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0278.PNG",
+          "issue": "The section heading สารุปปะ 26 สิกขาบท is the BOOK's own, printed under the title, not one I have grouped. It is set on verse 1 only, per the section rule."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0278.PNG",
+          "issue": "The numbers 1-23 are the book's own numbering of the rules and match the verse numbers exactly. They are not chant numbers and not footnote markers."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0278.PNG",
+          "issue": "Built from a table of stems rather than transcribed twenty-three times, because every rule ends in the same อันตะระฆะเร … สิกขา กะระณียา and a typo in the twentieth repetition is what nobody spots. Verify a few at random against the page, especially 9-12 and 21-23."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "เสขิยะ",
+          "pali_roman": "sekhiya",
+          "meaning": "to be trained in — the last and lightest class of monastic rule, about deportment rather than offence"
+        },
+        {
+          "pali": "สารุปปะ",
+          "pali_roman": "sāruppa",
+          "meaning": "what is fitting, seemly — the name of this first group of twenty-six"
+        },
+        {
+          "pali": "สิกขา กะระณียา",
+          "pali_roman": "sikkhā karaṇīyā",
+          "meaning": "a training to be done — the closing of every sekhiya, which is why all seventy-five end alike"
+        },
+        {
+          "pali": "อันตะระฆะเร",
+          "pali_roman": "antaraghare",
+          "meaning": "among the houses — in the village or town, where a monk is seen by laypeople"
+        },
+        {
+          "pali": "ปะริมัณฑะลัง",
+          "pali_roman": "parimaṇḍalaṃ",
+          "meaning": "evenly all round — of the robe, hanging level"
+        },
+        {
+          "pali": "โอกขิตตะจักขุ",
+          "pali_roman": "okkhittacakkhu",
+          "meaning": "with the eyes cast down — the downward gaze of a monk on alms round"
+        },
+        {
+          "pali": "อัปปะสัทโท",
+          "pali_roman": "appasaddo",
+          "meaning": "of little sound, quiet"
+        },
+        {
+          "pali": "สุสังวุโต",
+          "pali_roman": "susaṃvuto",
+          "meaning": "well restrained, well composed — the same saṃvara as in sense restraint"
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "sekhiyavatta"
+    ],
+    "resume_from_page": 16,
+    "resume_from_file": "IMG_0279.PNG",
+    "resume_from": "sekhiyavatta",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values exist in this batch. The book prints no Thai translation on page 15.",
+    "pali_untouched": "Confirmed. Every pali is the book's Thai script as printed; every pali_roman is IAST transliteration of it.",
+    "page_scan": "agrees — page 15 carries verses 1-23 of sekhiyavatta and nothing else. One page, one image, one row.",
+    "notes": "FIRST CONTINUATION of this run. The chant is complete for this batch but not complete in the book: the heading says 26 rules and 23 are printed, so `continues` is set and rules 24-26 wait for page 16. They have NOT been written from memory of the Vinaya. The next batch must carry `continuation_of: sekhiyavatta` and start numbering at 24."
+  }
+}
