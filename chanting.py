@@ -7712,6 +7712,7 @@ CHANTS = [
         'verses': [
             {
                 'number': 1,
+                'printed_number': 1,
                 'pali': 'ปาณาติปาตา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -7720,6 +7721,7 @@ CHANTS = [
             },
             {
                 'number': 2,
+                'printed_number': 2,
                 'pali': 'อะทินนาทานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'adinnādānā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -7731,6 +7733,7 @@ CHANTS = [
             #   normalised to อะพรัหมะจะริยา.
             {
                 'number': 3,
+                'printed_number': 3,
                 'pali': 'อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -7739,6 +7742,7 @@ CHANTS = [
             },
             {
                 'number': 4,
+                'printed_number': 4,
                 'pali': 'มุสาวาทา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'musāvādā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -7747,6 +7751,7 @@ CHANTS = [
             },
             {
                 'number': 5,
+                'printed_number': 5,
                 'pali': 'สุราเมระยะมัชชะปะมาทัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'surāmerayamajjapamādaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -7755,6 +7760,7 @@ CHANTS = [
             },
             {
                 'number': 6,
+                'printed_number': 6,
                 'pali': 'วิกาละโภชะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'vikālabhojanā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -7768,6 +7774,7 @@ CHANTS = [
             #   single word in the book so far.
             {
                 'number': 7,
+                'printed_number': 7,
                 'pali': 'นัจจะคีตะวาทิตะวิสูกะทัสสะนะมาลาคันธะวิเลปะนะธาระณะมัณฑะนะวิภูสะนัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'naccagītavāditavisūkadassanamālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -7781,6 +7788,7 @@ CHANTS = [
             #   source_printed.
             {
                 'number': 8,
+                'printed_number': 8,
                 'pali': 'อุจจาสะยะนะมะหาสะยะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'uccāsayanamahāsayanā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
@@ -8179,6 +8187,7 @@ CHANTS = [
             {
                 'number': 1,
                 'section': 'สารุปปะ 26 สิกขาบท: Sāruppa — the twenty-six training rules on proper deportment',
+                'printed_number': 1,
                 'pali': 'ปะริมัณฑะลัง นิวาเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'parimaṇḍalaṃ nivāsessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8187,6 +8196,7 @@ CHANTS = [
             },
             {
                 'number': 2,
+                'printed_number': 2,
                 'pali': 'ปะริมัณฑะลัง ปารุปิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'parimaṇḍalaṃ pārupissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8195,6 +8205,7 @@ CHANTS = [
             },
             {
                 'number': 3,
+                'printed_number': 3,
                 'pali': 'สุปะฏิจฉันโน อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'supaṭicchanno antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8203,6 +8214,7 @@ CHANTS = [
             },
             {
                 'number': 4,
+                'printed_number': 4,
                 'pali': 'สุปะฏิจฉันโน อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'supaṭicchanno antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8211,6 +8223,7 @@ CHANTS = [
             },
             {
                 'number': 5,
+                'printed_number': 5,
                 'pali': 'สุสังวุโต อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'susaṃvuto antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8219,6 +8232,7 @@ CHANTS = [
             },
             {
                 'number': 6,
+                'printed_number': 6,
                 'pali': 'สุสังวุโต อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'susaṃvuto antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8227,6 +8241,7 @@ CHANTS = [
             },
             {
                 'number': 7,
+                'printed_number': 7,
                 'pali': 'โอกขิตตะจักขุ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'okkhittacakkhu antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8235,6 +8250,7 @@ CHANTS = [
             },
             {
                 'number': 8,
+                'printed_number': 8,
                 'pali': 'โอกขิตตะจักขุ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'okkhittacakkhu antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8243,6 +8259,7 @@ CHANTS = [
             },
             {
                 'number': 9,
+                'printed_number': 9,
                 'pali': 'นะ อุกขิตตะกายะ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ukkhittakāya antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8251,6 +8268,7 @@ CHANTS = [
             },
             {
                 'number': 10,
+                'printed_number': 10,
                 'pali': 'นะ อุกขิตตะกายะ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ukkhittakāya antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8259,6 +8277,7 @@ CHANTS = [
             },
             {
                 'number': 11,
+                'printed_number': 11,
                 'pali': 'นะ อุชชัคฆิกายะ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ujjagghikāya antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8267,6 +8286,7 @@ CHANTS = [
             },
             {
                 'number': 12,
+                'printed_number': 12,
                 'pali': 'นะ อุชชัคฆิกายะ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ujjagghikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8275,6 +8295,7 @@ CHANTS = [
             },
             {
                 'number': 13,
+                'printed_number': 13,
                 'pali': 'อัปปะสัทโท อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'appasaddo antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8283,6 +8304,7 @@ CHANTS = [
             },
             {
                 'number': 14,
+                'printed_number': 14,
                 'pali': 'อัปปะสัทโท อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'appasaddo antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8291,6 +8313,7 @@ CHANTS = [
             },
             {
                 'number': 15,
+                'printed_number': 15,
                 'pali': 'นะ กายัปปะจาละกัง อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na kāyappacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8299,6 +8322,7 @@ CHANTS = [
             },
             {
                 'number': 16,
+                'printed_number': 16,
                 'pali': 'นะ กายัปปะจาละกัง อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na kāyappacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8307,6 +8331,7 @@ CHANTS = [
             },
             {
                 'number': 17,
+                'printed_number': 17,
                 'pali': 'นะ พาหุปปะจาละกัง อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na bāhuppacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8315,6 +8340,7 @@ CHANTS = [
             },
             {
                 'number': 18,
+                'printed_number': 18,
                 'pali': 'นะ พาหุปปะจาละกัง อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na bāhuppacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8323,6 +8349,7 @@ CHANTS = [
             },
             {
                 'number': 19,
+                'printed_number': 19,
                 'pali': 'นะ สีสัปปะจาละกัง อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sīsappacālakaṃ antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8331,6 +8358,7 @@ CHANTS = [
             },
             {
                 'number': 20,
+                'printed_number': 20,
                 'pali': 'นะ สีสัปปะจาละกัง อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sīsappacālakaṃ antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8339,6 +8367,7 @@ CHANTS = [
             },
             {
                 'number': 21,
+                'printed_number': 21,
                 'pali': 'นะ ขัมภะกะโต อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na khambhakato antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8347,6 +8376,7 @@ CHANTS = [
             },
             {
                 'number': 22,
+                'printed_number': 22,
                 'pali': 'นะ ขัมภะกะโต อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na khambhakato antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8355,6 +8385,7 @@ CHANTS = [
             },
             {
                 'number': 23,
+                'printed_number': 23,
                 'pali': 'นะ โอคุณฐิโต อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na oguṇṭhito antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8367,6 +8398,7 @@ CHANTS = [
             {
                 'number': 24,
                 'page': 16,
+                'printed_number': 24,
                 'pali': 'นะ โอคุณฐิโต อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na oguṇṭhito antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8380,6 +8412,7 @@ CHANTS = [
             #   flagged on page 15.
             {
                 'number': 25,
+                'printed_number': 25,
                 'pali': 'นะ อุกกุฏิกายะ อันตะระฆะเร คะมิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8394,6 +8427,7 @@ CHANTS = [
             #   entry.
             {
                 'number': 26,
+                'printed_number': 26,
                 'pali': 'นะ ปัลลัตถิกายะ อันตะระฆะเร นิสีทิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8445,6 +8479,7 @@ CHANTS = [
             {
                 'number': 1,
                 'section': 'โภชะนะปะฏิสังยุต 30 สิกขาบท: Bhojanapaṭisaṃyutta — the thirty training rules on receiving and eating almsfood',
+                'printed_number': 1,
                 'pali': 'สักกัจจัง ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'sakkaccaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8453,6 +8488,7 @@ CHANTS = [
             },
             {
                 'number': 2,
+                'printed_number': 2,
                 'pali': 'ปัตตะสัญญี ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'pattasaññī piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8461,6 +8497,7 @@ CHANTS = [
             },
             {
                 'number': 3,
+                'printed_number': 3,
                 'pali': 'สะมะสูปะกัง ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'samasūpakaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8469,6 +8506,7 @@ CHANTS = [
             },
             {
                 'number': 4,
+                'printed_number': 4,
                 'pali': 'สะมะติตติกัง ปิณฑะปาตัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'samatittikaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8477,6 +8515,7 @@ CHANTS = [
             },
             {
                 'number': 5,
+                'printed_number': 5,
                 'pali': 'สักกัจจัง ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'sakkaccaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8485,6 +8524,7 @@ CHANTS = [
             },
             {
                 'number': 6,
+                'printed_number': 6,
                 'pali': 'ปัตตะสัญญี ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'pattasaññī piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8493,6 +8533,7 @@ CHANTS = [
             },
             {
                 'number': 7,
+                'printed_number': 7,
                 'pali': 'สะปะทานัง ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'sapadānaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8501,6 +8542,7 @@ CHANTS = [
             },
             {
                 'number': 8,
+                'printed_number': 8,
                 'pali': 'สะมะสูปะกัง ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'samasūpakaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8509,6 +8551,7 @@ CHANTS = [
             },
             {
                 'number': 9,
+                'printed_number': 9,
                 'pali': 'นะ ถูปะโต โอมัททิต๎วา ปิณฑะปาตัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na thūpato omadditvā piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8523,6 +8566,7 @@ CHANTS = [
             #   printed.
             {
                 'number': 10,
+                'printed_number': 10,
                 'pali': 'นะ สูปัง วา พ์ยัญชะนัง วา โอทะเนนะ ปะฏิจฉาเทสสามิ ภิยโยกัม๎ยะตัง อุปาทายาติ สิกขา กะระณียา.',
                 'pali_roman': 'na sūpaṃ vā byañjanaṃ vā odanena paṭicchādessāmi bhiyyokamyataṃ upādāyāti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8531,6 +8575,7 @@ CHANTS = [
             },
             {
                 'number': 11,
+                'printed_number': 11,
                 'pali': 'นะ สูปัง วา โอทะนัง วา อะคิลาโน อัตตะโน อัตถายะ วิญญาเปต๎วา ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sūpaṃ vā odanaṃ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8539,6 +8584,7 @@ CHANTS = [
             },
             {
                 'number': 12,
+                'printed_number': 12,
                 'pali': 'นะ อุชฌานะสัญญี ปะเรสัง ปัตตัง โอโลเกสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ujjhānasaññī paresaṃ pattaṃ olokessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8550,6 +8596,7 @@ CHANTS = [
             #   Thai letter rather than the kavaḷa spelling some editions use.
             {
                 'number': 13,
+                'printed_number': 13,
                 'pali': 'นาติมะหันตัง กะวะฬัง กะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'nātimahantaṃ kabaḷaṃ karissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8558,6 +8605,7 @@ CHANTS = [
             },
             {
                 'number': 14,
+                'printed_number': 14,
                 'pali': 'ปะริมัณฑะลัง อาโลปัง กะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'parimaṇḍalaṃ ālopaṃ karissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8566,6 +8614,7 @@ CHANTS = [
             },
             {
                 'number': 15,
+                'printed_number': 15,
                 'pali': 'นะ อะนาหะเฏ กะวะเฬ มุขะท๎วารัง วิวะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na anāhaṭe kabaḷe mukhadvāraṃ vivarissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8574,6 +8623,7 @@ CHANTS = [
             },
             {
                 'number': 16,
+                'printed_number': 16,
                 'pali': 'นะ ภุญชะมาโน สัพพัง หัตถัง มุเข ปักขิปิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na bhuñjamāno sabbaṃ hatthaṃ mukhe pakkhipissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8582,6 +8632,7 @@ CHANTS = [
             },
             {
                 'number': 17,
+                'printed_number': 17,
                 'pali': 'นะ สะกะวะเฬนะ มุเขนะ พ์ยาหะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8590,6 +8641,7 @@ CHANTS = [
             },
             {
                 'number': 18,
+                'printed_number': 18,
                 'pali': 'นะ ปิณฑุกเขปะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na piṇḍukkhepakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8609,6 +8661,7 @@ CHANTS = [
             {
                 'number': 19,
                 'page': 17,
+                'printed_number': 19,
                 'pali': 'นะ กะวะฬาวัจเฉทะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na kabaḷāvacchedakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8617,6 +8670,7 @@ CHANTS = [
             },
             {
                 'number': 20,
+                'printed_number': 20,
                 'pali': 'นะ อะวะคัณฑะการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na avagaṇḍakārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8625,6 +8679,7 @@ CHANTS = [
             },
             {
                 'number': 21,
+                'printed_number': 21,
                 'pali': 'นะ หัตถะนิทธูนะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na hatthaniddhūnakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8633,6 +8688,7 @@ CHANTS = [
             },
             {
                 'number': 22,
+                'printed_number': 22,
                 'pali': 'นะ สิตถาวะการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sitthāvakārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8641,6 +8697,7 @@ CHANTS = [
             },
             {
                 'number': 23,
+                'printed_number': 23,
                 'pali': 'นะ ชิวหานิจฉาระกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na jivhānicchārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8649,6 +8706,7 @@ CHANTS = [
             },
             {
                 'number': 24,
+                'printed_number': 24,
                 'pali': 'นะ จะปุจะปุการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na capucapukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8657,6 +8715,7 @@ CHANTS = [
             },
             {
                 'number': 25,
+                'printed_number': 25,
                 'pali': 'นะ สุรุสุรุการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na surusurukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8665,6 +8724,7 @@ CHANTS = [
             },
             {
                 'number': 26,
+                'printed_number': 26,
                 'pali': 'นะ หัตถะนิลเลหะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na hatthanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8673,6 +8733,7 @@ CHANTS = [
             },
             {
                 'number': 27,
+                'printed_number': 27,
                 'pali': 'นะ ปัตตะนิลเลหะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na pattanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8681,6 +8742,7 @@ CHANTS = [
             },
             {
                 'number': 28,
+                'printed_number': 28,
                 'pali': 'นะ โอฏฐะนิลเลหะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na oṭṭhanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8689,6 +8751,7 @@ CHANTS = [
             },
             {
                 'number': 29,
+                'printed_number': 29,
                 'pali': 'นะ สามิเสนะ หัตเถนะ ปานียะถาละกัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sāmisena hatthena pānīyathālakaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8709,6 +8772,7 @@ CHANTS = [
             #   question would settle this.
             {
                 'number': 30,
+                'printed_number': 30,
                 'pali': 'นะ สะสิตถะกัง ปัตตะโธวะนัง อันตะระฆะเร ฉัฑเฑสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sasitthakaṃ pattadhovanaṃ antaraghare chaḍḍessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8758,6 +8822,7 @@ CHANTS = [
             {
                 'number': 1,
                 'section': 'ธัมมะเทสะนาปะฏิสังยุต 16 สิกขาบท: Dhammadesanāpaṭisaṃyutta — the sixteen training rules on teaching the Dhamma',
+                'printed_number': 1,
                 'pali': 'นะ ฉัตตะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na chattapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8766,6 +8831,7 @@ CHANTS = [
             },
             {
                 'number': 2,
+                'printed_number': 2,
                 'pali': 'นะ ทัณฑะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na daṇḍapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8774,6 +8840,7 @@ CHANTS = [
             },
             {
                 'number': 3,
+                'printed_number': 3,
                 'pali': 'นะ สัตถะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na satthapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8782,6 +8849,7 @@ CHANTS = [
             },
             {
                 'number': 4,
+                'printed_number': 4,
                 'pali': 'นะ อาวุธะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na āvudhapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8794,6 +8862,7 @@ CHANTS = [
             #   readings on this page stand or fall together.
             {
                 'number': 5,
+                'printed_number': 5,
                 'pali': 'นะ ปาทุการูฬ๎หัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na pādukārūḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8802,6 +8871,7 @@ CHANTS = [
             },
             {
                 'number': 6,
+                'printed_number': 6,
                 'pali': 'นะ อุปาหะนารูฬ๎หัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na upāhanārūḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8810,6 +8880,7 @@ CHANTS = [
             },
             {
                 'number': 7,
+                'printed_number': 7,
                 'pali': 'นะ ยานะคะตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na yānagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8822,6 +8893,7 @@ CHANTS = [
             {
                 'number': 8,
                 'page': 18,
+                'printed_number': 8,
                 'pali': 'นะ สะยะนะคะตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sayanagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8830,6 +8902,7 @@ CHANTS = [
             },
             {
                 'number': 9,
+                'printed_number': 9,
                 'pali': 'นะ ปัลลัตถิกายะ นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na pallatthikāya nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8838,6 +8911,7 @@ CHANTS = [
             },
             {
                 'number': 10,
+                'printed_number': 10,
                 'pali': 'นะ เวฐิตะสีสัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na veṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8846,6 +8920,7 @@ CHANTS = [
             },
             {
                 'number': 11,
+                'printed_number': 11,
                 'pali': 'นะ โอคุณฐิตะสีสัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na oguṇṭhitasīsassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8863,6 +8938,7 @@ CHANTS = [
             #   right way round.
             {
                 'number': 12,
+                'printed_number': 12,
                 'pali': 'นะ ฉะมายัง นิสีทิต๎วา อาสะเน นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na chamāyaṃ nisīditvā āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8871,6 +8947,7 @@ CHANTS = [
             },
             {
                 'number': 13,
+                'printed_number': 13,
                 'pali': 'นะ นีเจ อาสะเน นิสีทิต๎วา อุจเจ อาสะเน นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na nīce āsane nisīditvā ucce āsane nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8879,6 +8956,7 @@ CHANTS = [
             },
             {
                 'number': 14,
+                'printed_number': 14,
                 'pali': 'นะ ฐิโต นิสินนัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ṭhito nisinnassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8887,6 +8965,7 @@ CHANTS = [
             },
             {
                 'number': 15,
+                'printed_number': 15,
                 'pali': 'นะ ปัจฉะโต คัจฉันโต ปุระโต คัจฉันตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na pacchato gacchanto purato gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8895,6 +8974,7 @@ CHANTS = [
             },
             {
                 'number': 16,
+                'printed_number': 16,
                 'pali': 'นะ อุปปะเถนะ คัจฉันโต ปะเถนะ คัจฉันตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na uppathena gacchanto pathena gacchantassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8934,6 +9014,7 @@ CHANTS = [
             {
                 'number': 1,
                 'section': 'ปกิณณะกะ 3 สิกขาบท: Pakiṇṇaka — the three miscellaneous training rules',
+                'printed_number': 1,
                 'pali': 'นะ ฐิโต อะคิลาโน อุจจารัง วา ปัสสาวัง วา กะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na ṭhito agilāno uccāraṃ vā passāvaṃ vā karissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8949,6 +9030,7 @@ CHANTS = [
             #   settle all five.
             {
                 'number': 2,
+                'printed_number': 2,
                 'pali': 'นะ หะริเต อะคิลาโน อุจจารัง วา ปัสสาวัง วา เขฬัง วา กะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na harite agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.',
                 'thai': '',
@@ -8963,6 +9045,7 @@ CHANTS = [
             #   once.
             {
                 'number': 3,
+                'printed_number': 3,
                 'pali': 'นะ อุทะเก อะคิลาโน อุจจารัง วา ปัสสาวัง วา เขฬัง วา กะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na udake agilāno uccāraṃ vā passāvaṃ vā kheḷaṃ vā karissāmīti sikkhā karaṇīyā.',
                 'thai': '',

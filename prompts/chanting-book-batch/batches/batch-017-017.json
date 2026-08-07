@@ -74,7 +74,8 @@
           "thai": "",
           "paiboon": "",
           "english": "'I will not eat biting off mouthfuls': this is a training to be observed.",
-          "page": 17
+          "page": 17,
+          "printed_number": 19
         },
         {
           "number": 20,
@@ -82,7 +83,8 @@
           "pali_roman": "na avagaṇḍakārakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat stuffing out the cheeks': this is a training to be observed."
+          "english": "'I will not eat stuffing out the cheeks': this is a training to be observed.",
+          "printed_number": 20
         },
         {
           "number": 21,
@@ -90,7 +92,8 @@
           "pali_roman": "na hatthaniddhūnakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat shaking the hand about': this is a training to be observed."
+          "english": "'I will not eat shaking the hand about': this is a training to be observed.",
+          "printed_number": 21
         },
         {
           "number": 22,
@@ -98,7 +101,8 @@
           "pali_roman": "na sitthāvakārakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat scattering rice grains': this is a training to be observed."
+          "english": "'I will not eat scattering rice grains': this is a training to be observed.",
+          "printed_number": 22
         },
         {
           "number": 23,
@@ -106,7 +110,8 @@
           "pali_roman": "na jivhānicchārakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat putting out the tongue': this is a training to be observed."
+          "english": "'I will not eat putting out the tongue': this is a training to be observed.",
+          "printed_number": 23
         },
         {
           "number": 24,
@@ -114,7 +119,8 @@
           "pali_roman": "na capucapukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat making a chomping sound': this is a training to be observed."
+          "english": "'I will not eat making a chomping sound': this is a training to be observed.",
+          "printed_number": 24
         },
         {
           "number": 25,
@@ -122,7 +128,8 @@
           "pali_roman": "na surusurukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat making a slurping sound': this is a training to be observed."
+          "english": "'I will not eat making a slurping sound': this is a training to be observed.",
+          "printed_number": 25
         },
         {
           "number": 26,
@@ -130,7 +137,8 @@
           "pali_roman": "na hatthanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat licking the hands': this is a training to be observed."
+          "english": "'I will not eat licking the hands': this is a training to be observed.",
+          "printed_number": 26
         },
         {
           "number": 27,
@@ -138,7 +146,8 @@
           "pali_roman": "na pattanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat licking the bowl': this is a training to be observed."
+          "english": "'I will not eat licking the bowl': this is a training to be observed.",
+          "printed_number": 27
         },
         {
           "number": 28,
@@ -146,7 +155,8 @@
           "pali_roman": "na oṭṭhanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat licking the lips': this is a training to be observed."
+          "english": "'I will not eat licking the lips': this is a training to be observed.",
+          "printed_number": 28
         },
         {
           "number": 29,
@@ -154,7 +164,8 @@
           "pali_roman": "na sāmisena hatthena pānīyathālakaṃ paṭiggahessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not accept a drinking-water vessel with a hand soiled by food': this is a training to be observed."
+          "english": "'I will not accept a drinking-water vessel with a hand soiled by food': this is a training to be observed.",
+          "printed_number": 29
         },
         {
           "number": 30,
@@ -162,7 +173,8 @@
           "pali_roman": "na sasitthakaṃ pattadhovanaṃ antaraghare chaḍḍessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not throw out bowl-rinsing water containing rice grains among the houses': this is a training to be observed."
+          "english": "'I will not throw out bowl-rinsing water containing rice grains among the houses': this is a training to be observed.",
+          "printed_number": 30
         }
       ],
       "checks": [
@@ -237,7 +249,8 @@
           "thai": "",
           "paiboon": "",
           "english": "'I will not teach Dhamma to someone who is not ill and who is with a sunshade in hand': this is a training to be observed.",
-          "section": "ธัมมะเทสะนาปะฏิสังยุต 16 สิกขาบท: Dhammadesanāpaṭisaṃyutta — the sixteen training rules on teaching the Dhamma"
+          "section": "ธัมมะเทสะนาปะฏิสังยุต 16 สิกขาบท: Dhammadesanāpaṭisaṃyutta — the sixteen training rules on teaching the Dhamma",
+          "printed_number": 1
         },
         {
           "number": 2,
@@ -245,7 +258,8 @@
           "pali_roman": "na daṇḍapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not teach Dhamma to someone who is not ill and who is with a staff in hand': this is a training to be observed."
+          "english": "'I will not teach Dhamma to someone who is not ill and who is with a staff in hand': this is a training to be observed.",
+          "printed_number": 2
         },
         {
           "number": 3,
@@ -253,7 +267,8 @@
           "pali_roman": "na satthapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not teach Dhamma to someone who is not ill and who is with a knife in hand': this is a training to be observed."
+          "english": "'I will not teach Dhamma to someone who is not ill and who is with a knife in hand': this is a training to be observed.",
+          "printed_number": 3
         },
         {
           "number": 4,
@@ -261,7 +276,8 @@
           "pali_roman": "na āvudhapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not teach Dhamma to someone who is not ill and who is with a weapon in hand': this is a training to be observed."
+          "english": "'I will not teach Dhamma to someone who is not ill and who is with a weapon in hand': this is a training to be observed.",
+          "printed_number": 4
         },
         {
           "number": 5,
@@ -269,7 +285,8 @@
           "pali_roman": "na pādukārūḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not teach Dhamma to someone who is not ill and who is wearing wooden sandals': this is a training to be observed."
+          "english": "'I will not teach Dhamma to someone who is not ill and who is wearing wooden sandals': this is a training to be observed.",
+          "printed_number": 5
         },
         {
           "number": 6,
@@ -277,7 +294,8 @@
           "pali_roman": "na upāhanārūḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not teach Dhamma to someone who is not ill and who is wearing shoes': this is a training to be observed."
+          "english": "'I will not teach Dhamma to someone who is not ill and who is wearing shoes': this is a training to be observed.",
+          "printed_number": 6
         },
         {
           "number": 7,
@@ -285,7 +303,8 @@
           "pali_roman": "na yānagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not teach Dhamma to someone who is not ill and who is in a vehicle': this is a training to be observed."
+          "english": "'I will not teach Dhamma to someone who is not ill and who is in a vehicle': this is a training to be observed.",
+          "printed_number": 7
         }
       ],
       "checks": [

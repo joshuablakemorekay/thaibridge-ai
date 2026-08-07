@@ -66,7 +66,8 @@
           "thai": "",
           "paiboon": "",
           "english": "'I will not sit among the houses with the head covered': this is a training to be observed.",
-          "page": 16
+          "page": 16,
+          "printed_number": 24
         },
         {
           "number": 25,
@@ -74,7 +75,8 @@
           "pali_roman": "na ukkuṭikāya antaraghare gamissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not go among the houses walking on the heels or on tiptoe': this is a training to be observed."
+          "english": "'I will not go among the houses walking on the heels or on tiptoe': this is a training to be observed.",
+          "printed_number": 25
         },
         {
           "number": 26,
@@ -82,7 +84,8 @@
           "pali_roman": "na pallatthikāya antaraghare nisīdissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not sit among the houses lolling or clasping the knees': this is a training to be observed."
+          "english": "'I will not sit among the houses lolling or clasping the knees': this is a training to be observed.",
+          "printed_number": 26
         }
       ],
       "checks": [
@@ -147,7 +150,8 @@
           "thai": "",
           "paiboon": "",
           "english": "'I will receive almsfood attentively': this is a training to be observed.",
-          "section": "โภชะนะปะฏิสังยุต 30 สิกขาบท: Bhojanapaṭisaṃyutta — the thirty training rules on receiving and eating almsfood"
+          "section": "โภชะนะปะฏิสังยุต 30 สิกขาบท: Bhojanapaṭisaṃyutta — the thirty training rules on receiving and eating almsfood",
+          "printed_number": 1
         },
         {
           "number": 2,
@@ -155,7 +159,8 @@
           "pali_roman": "pattasaññī piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will receive almsfood with attention on the bowl': this is a training to be observed."
+          "english": "'I will receive almsfood with attention on the bowl': this is a training to be observed.",
+          "printed_number": 2
         },
         {
           "number": 3,
@@ -163,7 +168,8 @@
           "pali_roman": "samasūpakaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will receive almsfood with a due proportion of curry': this is a training to be observed."
+          "english": "'I will receive almsfood with a due proportion of curry': this is a training to be observed.",
+          "printed_number": 3
         },
         {
           "number": 4,
@@ -171,7 +177,8 @@
           "pali_roman": "samatittikaṃ piṇḍapātaṃ paṭiggahessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will receive almsfood level with the rim': this is a training to be observed."
+          "english": "'I will receive almsfood level with the rim': this is a training to be observed.",
+          "printed_number": 4
         },
         {
           "number": 5,
@@ -179,7 +186,8 @@
           "pali_roman": "sakkaccaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will eat almsfood attentively': this is a training to be observed."
+          "english": "'I will eat almsfood attentively': this is a training to be observed.",
+          "printed_number": 5
         },
         {
           "number": 6,
@@ -187,7 +195,8 @@
           "pali_roman": "pattasaññī piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will eat almsfood with attention on the bowl': this is a training to be observed."
+          "english": "'I will eat almsfood with attention on the bowl': this is a training to be observed.",
+          "printed_number": 6
         },
         {
           "number": 7,
@@ -195,7 +204,8 @@
           "pali_roman": "sapadānaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will eat almsfood in order, without picking and choosing': this is a training to be observed."
+          "english": "'I will eat almsfood in order, without picking and choosing': this is a training to be observed.",
+          "printed_number": 7
         },
         {
           "number": 8,
@@ -203,7 +213,8 @@
           "pali_roman": "samasūpakaṃ piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will eat almsfood with a due proportion of curry': this is a training to be observed."
+          "english": "'I will eat almsfood with a due proportion of curry': this is a training to be observed.",
+          "printed_number": 8
         },
         {
           "number": 9,
@@ -211,7 +222,8 @@
           "pali_roman": "na thūpato omadditvā piṇḍapātaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat almsfood having pressed it down from the top': this is a training to be observed."
+          "english": "'I will not eat almsfood having pressed it down from the top': this is a training to be observed.",
+          "printed_number": 9
         },
         {
           "number": 10,
@@ -219,7 +231,8 @@
           "pali_roman": "na sūpaṃ vā byañjanaṃ vā odanena paṭicchādessāmi bhiyyokamyataṃ upādāyāti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not cover up curry or condiment with rice out of a wish for more': this is a training to be observed."
+          "english": "'I will not cover up curry or condiment with rice out of a wish for more': this is a training to be observed.",
+          "printed_number": 10
         },
         {
           "number": 11,
@@ -227,7 +240,8 @@
           "pali_roman": "na sūpaṃ vā odanaṃ vā agilāno attano atthāya viññāpetvā bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I, not being ill, will not eat curry or rice having asked for it for myself': this is a training to be observed."
+          "english": "'I, not being ill, will not eat curry or rice having asked for it for myself': this is a training to be observed.",
+          "printed_number": 11
         },
         {
           "number": 12,
@@ -235,7 +249,8 @@
           "pali_roman": "na ujjhānasaññī paresaṃ pattaṃ olokessāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not look at others' bowls finding fault': this is a training to be observed."
+          "english": "'I will not look at others' bowls finding fault': this is a training to be observed.",
+          "printed_number": 12
         },
         {
           "number": 13,
@@ -243,7 +258,8 @@
           "pali_roman": "nātimahantaṃ kabaḷaṃ karissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not make too large a mouthful': this is a training to be observed."
+          "english": "'I will not make too large a mouthful': this is a training to be observed.",
+          "printed_number": 13
         },
         {
           "number": 14,
@@ -251,7 +267,8 @@
           "pali_roman": "parimaṇḍalaṃ ālopaṃ karissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will make the morsel round': this is a training to be observed."
+          "english": "'I will make the morsel round': this is a training to be observed.",
+          "printed_number": 14
         },
         {
           "number": 15,
@@ -259,7 +276,8 @@
           "pali_roman": "na anāhaṭe kabaḷe mukhadvāraṃ vivarissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not open the mouth before the morsel is brought to it': this is a training to be observed."
+          "english": "'I will not open the mouth before the morsel is brought to it': this is a training to be observed.",
+          "printed_number": 15
         },
         {
           "number": 16,
@@ -267,7 +285,8 @@
           "pali_roman": "na bhuñjamāno sabbaṃ hatthaṃ mukhe pakkhipissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not put the whole hand into the mouth while eating': this is a training to be observed."
+          "english": "'I will not put the whole hand into the mouth while eating': this is a training to be observed.",
+          "printed_number": 16
         },
         {
           "number": 17,
@@ -275,7 +294,8 @@
           "pali_roman": "na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not speak with a mouthful in the mouth': this is a training to be observed."
+          "english": "'I will not speak with a mouthful in the mouth': this is a training to be observed.",
+          "printed_number": 17
         },
         {
           "number": 18,
@@ -283,7 +303,8 @@
           "pali_roman": "na piṇḍukkhepakaṃ bhuñjissāmīti sikkhā karaṇīyā.",
           "thai": "",
           "paiboon": "",
-          "english": "'I will not eat tossing up balls of food': this is a training to be observed."
+          "english": "'I will not eat tossing up balls of food': this is a training to be observed.",
+          "printed_number": 18
         }
       ],
       "checks": [
