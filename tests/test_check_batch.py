@@ -26,10 +26,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 
 from check_batch import (check_blocks, check_checks_are_readable,  # noqa: E402
                          check_depth, check_diacritics, check_layer_keys,
-                         check_layers_not_invented, check_manifest,
-                         check_page_map, check_pages_ascend, check_paiboon,
-                         check_pali_untouched, check_shape, skeleton,
-                         validate, verse_range)
+                         check_layers_not_invented, check_line_breaks_agree,
+                         check_manifest, check_page_map, check_pages_ascend,
+                         check_paiboon, check_pali_untouched, check_shape,
+                         skeleton, validate, verse_range)
 
 
 def verse(n=1, **kw):
@@ -251,6 +251,40 @@ class TestDiacriticConsistency:
     def test_skeleton_strips_diacritics_for_comparison(self):
         assert skeleton('paṇṇarasī') == skeleton('pannarasi')
         assert skeleton('vā') == skeleton('va')
+
+
+class TestLineBreaksAgree:
+    """A couplet break in one chanted layer is a break in the other.
+
+    This replaced a check for "raw newlines inside string values". That check
+    could never fire on what it named — JSON cannot hold a literal newline
+    inside a string, so json.load raises first — and it fired on every
+    legitimate couplet break instead, including the five-line ratana stanza
+    on page 20, stored exactly as chanting.py has stored such breaks since
+    the first chant.
+    """
+
+    def test_a_stanza_broken_the_same_way_in_both_layers_passes(self):
+        b = batch([chant(verses=[verse(1, pali='อะ\nบะ\nคะ',
+                                       pali_roman='a\nb\nc')])])
+
+        assert check_line_breaks_agree(b) == []
+
+    def test_a_break_in_one_layer_only_is_caught(self):
+        """One layer typed from something other than the page."""
+        b = batch([chant(verses=[verse(1, pali='อะ\nบะ', pali_roman='a b')])])
+
+        assert any('break in the same places' in p
+                   for p in check_line_breaks_agree(b))
+
+    def test_a_verse_with_no_breaks_at_all_passes(self):
+        assert check_line_breaks_agree(batch()) == []
+
+    def test_a_roman_only_page_is_not_compared(self):
+        """Part of the book prints its Pali in roman letters, so pali is ''."""
+        b = batch([chant(verses=[verse(1, pali='', pali_roman='a\nb')])])
+
+        assert check_line_breaks_agree(b) == []
 
 
 class TestDepth:

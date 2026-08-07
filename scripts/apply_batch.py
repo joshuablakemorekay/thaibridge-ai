@@ -199,6 +199,21 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
     return out + f"{indent}}},\n"
 
 
+def render_closing(closing: dict) -> str:
+    """The จบ… formula the book prints under a finished chant.
+
+    Its own function because it is needed in two places. A closing arrives
+    with the LAST page of a chant, and a chant that runs across pages reaches
+    its last page as a CONTINUATION — so the continuation path needs this as
+    much as the path that writes a new chant. Without it the formula is read
+    correctly by stage 1, has nowhere to go in stage 2, and is lost.
+    """
+    out = f"{INDENT * 2}'closing': {{\n"
+    for layer in LAYERS:
+        out += f"{INDENT * 3}'{layer}': {closing.get(layer, '')!r},\n"
+    return out + f"{INDENT * 2}}},\n"
+
+
 def render_chant(chant: dict) -> str:
     per_verse: dict[int, list] = {}
     for k in chant.get("checks", []):
@@ -226,7 +241,12 @@ def render_chant(chant: dict) -> str:
     out += f"{INDENT * 2}'invitation': {{\n"
     for layer in LAYERS:
         out += f"{INDENT * 3}'{layer}': {invitation.get(layer, '')!r},\n"
-    out += f"{INDENT * 2}}},\n{INDENT * 2}'verses': [\n"
+    out += f"{INDENT * 2}}},\n"
+    # Only where the book prints one. The key is left off entirely otherwise,
+    # so an empty closing never renders as a blank centred line.
+    if chant.get("closing") and chant["closing"].get("pali"):
+        out += render_closing(chant["closing"])
+    out += f"{INDENT * 2}'verses': [\n"
     for verse in chant["verses"]:
         out += render_verse(verse, per_verse, INDENT * 3)
     return out + f"{INDENT * 2}],\n{INDENT}}},\n"
@@ -266,6 +286,35 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
             continue
         target = chant["continuation_of"]
         anchor = source.index(f"'id': {target!r},")
+
+        # Some things arrive with a chant's LAST page, not its first, so a
+        # chant spanning pages meets them on a CONTINUATION: the จบ formula
+        # printed beneath it, and the footnote citation keyed to its final
+        # line. Both are ADDED where absent and never overwritten — the
+        # earlier page's reading wins on anything it already recorded.
+        #
+        # Titles, page_start and book_number are deliberately NOT here. They
+        # belong to the page the chant STARTS on, and a continuation carries
+        # none of them by design.
+        head_end = source.index("'verses': [", anchor)
+        head = source[anchor:head_end]
+
+        if chant.get("source_printed") and "'source_printed':" not in head:
+            source = (source[:head_end]
+                      + f"'source_printed': {chant['source_printed']!r},\n"
+                      + f"{INDENT * 2}" + source[head_end:])
+            report["source_printed"] = report.get("source_printed", []) + [target]
+            head_end = source.index("'verses': [", anchor)
+            head = source[anchor:head_end]
+
+        if chant.get("closing") and chant["closing"].get("pali"):
+            if "'closing':" not in head:
+                source = (source[:head_end]
+                          + render_closing(chant["closing"]).lstrip()
+                          + f"{INDENT * 2}"
+                          + source[head_end:])
+                report["closings"] = report.get("closings", []) + [target]
+
         v_open = source.index("'verses': [", anchor)
         v_close = source.index("\n        ],\n", v_open)
         block = source[v_open:v_close]

@@ -1,0 +1,291 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "dasadhamma-sutta",
+      "parittakarana-patha"
+    ],
+    "pages": [
+      {
+        "page": 20,
+        "file": "IMG_0283.PNG",
+        "script": "thai",
+        "chant": "dasadhamma-sutta",
+        "verses": "11-13",
+        "starts_here": false,
+        "note": "The page opens with reflections 9 and 10, the sutta's closing sentence, and then the จบ line 'ทะสะธัมมะสุตตัง นิฏฐิตัง.' centred beneath it. Footnote marker 1 at the end of the closing sentence."
+      },
+      {
+        "page": 20,
+        "file": "IMG_0283.PNG",
+        "script": "thai",
+        "chant": "parittakarana-patha",
+        "verses": "1-3",
+        "starts_here": true,
+        "note": "Then '2. ปะริตตะกะระณะปาฐะ': a prose passage, a centred five-line stanza, and a second prose passage. The chant does not finish on this page."
+      },
+      {
+        "page": 20,
+        "file": "IMG_0283.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "อง ทสก. 24/24-5",
+            "english": "",
+            "note": "A canonical citation, reproduced exactly as printed and never expanded. Its marker sits on verse 13 of dasadhamma-sutta above."
+          }
+        ],
+        "note": "Below the rule at the foot: '1. อง ทสก. 24/24-5'."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "dasadhamma-sutta",
+      "continuation_of": "dasadhamma-sutta",
+      "closing": {
+        "pali": "ทะสะธัมมะสุตตัง นิฏฐิตัง.",
+        "pali_roman": "dasadhammasuttaṃ niṭṭhitaṃ.",
+        "thai": "",
+        "paiboon": "",
+        "english": "The Discourse on the Ten Things is ended."
+      },
+      "working_notes": {
+        "invitation": "Not repeated — a continuation carries none by design.",
+        "units": "Three: reflections 9 and 10, then the sutta's own closing sentence, which the book prints unnumbered. Plus the จบ line beneath it, which is the chant's `closing` and not a verse.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0283.PNG (page 20). Verse 11 carries `page: 20`. Footnote marker 1 sits at the end of verse 13."
+      },
+      "verses": [
+        {
+          "number": 11,
+          "pali": "กัจจิ นุ โขหัง สุญญาคาเร อะภิระมามีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "kacci nu khohaṃ suññāgāre abhiramāmīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'Do I delight in empty dwellings?': this should be reflected on again and again by one who has gone forth.",
+          "page": 20,
+          "printed_number": 9
+        },
+        {
+          "number": 12,
+          "pali": "อัตถิ นุ โข เม อุตตะริมะนุสสะธัมมา อะละมะริยะญาณะทัสสะนะวิเสโส, อะธิคะโต โสหัง ปัจฉิเม กาเล สะพ์รัห์มะจารีหิ ปุฏโฐ นะ มังกุ ภะวิสสามีติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.",
+          "pali_roman": "atthi nu kho me uttarimanussadhammā alamariyañāṇadassanaviseso, adhigato sohaṃ pacchime kāle sabrahmacārīhi puṭṭho na maṅku bhavissāmīti, pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'Have I attained any superior human state, any distinction of knowledge and vision worthy of the noble ones, such that in my last days, when questioned by my companions in the holy life, I shall not be embarrassed?': this should be reflected on again and again by one who has gone forth.",
+          "printed_number": 10
+        },
+        {
+          "number": 13,
+          "pali": "อิเม โข ภิกขะเว ทะสะ ธัมมา, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพาติ, อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.",
+          "pali_roman": "ime kho bhikkhave dasa dhammā, pabbajitena abhiṇhaṃ paccavekkhitabbāti, idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "These, bhikkhus, are the ten things that one who has gone forth should reflect on again and again. This is what the Blessed One said. Gladdened, those bhikkhus delighted in the Blessed One's words."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 11,
+          "file": "IMG_0283.PNG",
+          "issue": "The sutta is now COMPLETE at ten reflections, matching 'กะตะเม ทะสะ' on page 19. The CONTINUES marker should come off. Verses 11 and 12 carry printed_number 9 and 10 — the book's own numbers — while verse 13 carries none, because the closing sentence is printed unnumbered."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0283.PNG",
+          "issue": "FIRST CLOSING FORMULA IN THE BOOK SO FAR. The book prints 'ทะสะธัมมะสุตตัง นิฏฐิตัง.' centred beneath the sutta. It is the chant's `closing`, not a verse and not a page block: it names the chant it ends, so it belongs to the chant and would follow it anywhere the book reprints it."
+        },
+        {
+          "verse": 13,
+          "file": "IMG_0283.PNG",
+          "issue": "Footnote marker 1 sits here, and the footnote reads 'อง ทสก. 24/24-5' — Aṅguttara-nikāya, Dasaka-nipāta. The marker is unambiguous, so the prompt would put it in `source_printed`; it is carried as a page footnote block instead, because the template renders source_printed as a line labelled with the chant's title and the book prints '1. อง ทสก. 24/24-5' under a rule. Same treatment as pages 12 and 16-18. NOTE: page 6's chant still uses source_printed and so still renders the app's form — the one page left inconsistent."
+        },
+        {
+          "verse": 12,
+          "file": "IMG_0283.PNG",
+          "issue": "WORDS REJOINED ACROSS HYPHENS, two of them: อะละมะริยะญาณะทัสสะนะวิเสโส breaks as '…ทัสสะนะ-' / 'วิเสโส' in verse 12, and ปัจจะเวกขิตัพพาติ breaks as 'ปัจจะเวก-' / 'ขิตัพพาติ' in verse 13. Both hyphens are justification, not spelling."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0283.PNG",
+          "issue": "PHOTOGRAPH QUALITY. This image is a screenshot of a photo viewer rather than a clean scan — it carries '22 of 22' across the top and an Adjust/Filters/Rotate/Delete toolbar across the foot, and the page is at a slight angle. The text is legible and nothing is obscured, but a clean retake would be better for the record."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สุญญาคาระ",
+          "pali_roman": "suññāgāra",
+          "meaning": "an empty dwelling — a hut, a cave, a quiet place; the standard phrase for solitary practice"
+        },
+        {
+          "pali": "อุตตะริมะนุสสะธัมมะ",
+          "pali_roman": "uttarimanussadhamma",
+          "meaning": "a state beyond the human — jhana or a stage of awakening. Falsely claiming one is a parajika offence, which is why the reflection is put as a question"
+        },
+        {
+          "pali": "มังกุ",
+          "pali_roman": "maṅku",
+          "meaning": "embarrassed, crestfallen — the discomfort of being asked and having nothing to show"
+        },
+        {
+          "pali": "อัตตะมะนา",
+          "pali_roman": "attamanā",
+          "meaning": "gladdened, uplifted in mind — the formula that closes many suttas"
+        },
+        {
+          "pali": "นิฏฐิตัง",
+          "pali_roman": "niṭṭhitaṃ",
+          "meaning": "finished, completed — the word the closing line turns on"
+        }
+      ]
+    },
+    {
+      "id": "parittakarana-patha",
+      "continues": true,
+      "title_thai": "ปะริตตะกะระณะปาฐะ",
+      "title_pali": "Parittakaraṇapāṭha",
+      "title_roman": "",
+      "title_english": "The Passage for Making a Protection",
+      "book_number": 2,
+      "group": "General chanting",
+      "page_start": 20,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent on this page.",
+        "units": "Three on this page: a prose passage on the Buddha as foremost of beings, the five-line ratana verse, and a prose passage on dispassion as foremost of dhammas. The passage plainly continues — the parallel for the Sangha has not appeared yet — so it carries `continues`.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed by the book.",
+        "pages": "IMG_0283.PNG (page 20). Single column throughout, including the centred five-line verse."
+      },
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ยาวะตา สัตตา อะปะทา วา ท๎วิปะทา วา จะตุปปะทา วา พะหุปปะทา วา, รูปิโน วา อะรูปิโน วา, สัญญิโน วา อะสัญญิโน วา, เนวะสัญญีนาสัญญิโน วา, ตะถาคะโต เตสัง อัคคะมักขายะติ อะระหัง สัมมาสัมพุทโธ, เย โข พุทเธ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก.",
+          "pali_roman": "yāvatā sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā, rūpino vā arūpino vā, saññino vā asaññino vā, nevasaññīnāsaññino vā, tathāgato tesaṃ aggamakkhāyati arahaṃ sammāsambuddho, ye kho buddhe pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko.",
+          "thai": "",
+          "paiboon": "",
+          "english": "As far as there are beings — footless, two-footed, four-footed or many-footed, with form or formless, percipient or non-percipient or neither-percipient-nor-non-percipient — the Tathagata, the Worthy One, the Perfectly Self-Awakened One, is declared the foremost of them. Those who have confidence in the Buddha have confidence in the foremost, and for those with confidence in the foremost the result is foremost."
+        },
+        {
+          "number": 2,
+          "pali": "ยังกิญจิ วิตตัง อิธะ วา หุรัง วา\nสัคเคสุ วา ยัง ระตะนัง ปะณีตัง\nนะ โน สะมัง อัตถิ ตะถาคะเตนะ\nอิทัมปิ พุทเธ ระตะนัง ปะณีตัง\nเอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+          "pali_roman": "yaṅkiñci vittaṃ idha vā huraṃ vā\nsaggesu vā yaṃ ratanaṃ paṇītaṃ\nna no samaṃ atthi tathāgatena\nidampi buddhe ratanaṃ paṇītaṃ\netena saccena suvatthi hotu.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever wealth there is here or beyond, or whatever excellent treasure is in the heavens, there is none equal to the Tathagata. This too is an excellent treasure in the Buddha. By this truth may there be well-being."
+        },
+        {
+          "number": 3,
+          "pali": "ยาวะตา ธัมมา สังขะตา วา อะสังขะตา วา, วิราโค เตสัง อัคคะมักขายะติ, ยะทิทัง มะทะนิมมะทะโน ปิปาสะวินะโย อาละยะสะมุคฆาโต วัฏฏูปัจเฉโท ตัณหักขะโย วิราโค นิโรโธ นิพพานัง, เย โข วิราคะธัมเม ปะสันนา, อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก.",
+          "pali_roman": "yāvatā dhammā saṅkhatā vā asaṅkhatā vā, virāgo tesaṃ aggamakkhāyati, yadidaṃ madanimmadano pipāsavinayo ālayasamugghāto vaṭṭūpacchedo taṇhakkhayo virāgo nirodho nibbānaṃ, ye kho virāgadhamme pasannā, agge te pasannā, agge kho pana pasannānaṃ aggo vipāko.",
+          "thai": "",
+          "paiboon": "",
+          "english": "As far as there are things conditioned or unconditioned, dispassion is declared the foremost of them — that is, the crushing of pride, the removal of thirst, the uprooting of clinging, the cutting off of the round, the destruction of craving, dispassion, cessation, nibbana. Those who have confidence in the Dhamma of dispassion have confidence in the foremost, and for those with confidence in the foremost the result is foremost."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 2,
+          "file": "IMG_0283.PNG",
+          "issue": "FIVE PRINTED LINES KEPT AS ONE VERSE, with the line breaks written as \\n. The book sets this as a centred five-line stanza between two prose paragraphs, and the breaks are the verse's own, not justification. Say if you would rather have five verses — it would change the numbering of everything after it."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0283.PNG",
+          "issue": "SINGLE COLUMN, checked deliberately. The centred stanza at verse 2 has short lines that could be mistaken for column halves, but each is a complete pada and the surrounding prose runs the full measure."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0283.PNG",
+          "issue": "CONTINUES. The passage sets out the Buddha as foremost of beings and dispassion as foremost of dhammas; the parallel for the Sangha is not on this page, so the rest is on page 21 and has not been written from memory."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0283.PNG",
+          "issue": "Book number 2, printed as '2.' before the title. The second numbered chant in the book."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0283.PNG",
+          "issue": "WORD REJOINED ACROSS A HYPHEN: อัคคะมักขายะติ breaks as 'อัคคะมัก-' / 'ขายะติ'. Justification, not spelling."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ปะริตตะ",
+          "pali_roman": "paritta",
+          "meaning": "a protection, a safeguard — the class of chants recited for wellbeing"
+        },
+        {
+          "pali": "อัคคะมักขายะติ",
+          "pali_roman": "aggamakkhāyati",
+          "meaning": "is declared foremost — the refrain the whole passage turns on"
+        },
+        {
+          "pali": "อะปะทา / ท๎วิปะทา / จะตุปปะทา",
+          "pali_roman": "apadā / dvipadā / catuppadā",
+          "meaning": "footless, two-footed, four-footed — the standard way of counting all creatures"
+        },
+        {
+          "pali": "วิราคะ",
+          "pali_roman": "virāga",
+          "meaning": "dispassion, fading away — named here as the foremost of all dhammas and then unpacked as nibbana"
+        },
+        {
+          "pali": "มะทะนิมมะทะโน",
+          "pali_roman": "madanimmadano",
+          "meaning": "the crushing of pride or intoxication"
+        },
+        {
+          "pali": "อาละยะสะมุคฆาโต",
+          "pali_roman": "ālayasamugghāto",
+          "meaning": "the uprooting of clinging — ālaya is what the mind settles into and will not leave"
+        },
+        {
+          "pali": "วัฏฏูปัจเฉโท",
+          "pali_roman": "vaṭṭūpacchedo",
+          "meaning": "the cutting off of the round — of saṃsāra"
+        },
+        {
+          "pali": "ระตะนัง ปะณีตัง",
+          "pali_roman": "ratanaṃ paṇītaṃ",
+          "meaning": "an excellent treasure — the refrain of the Ratana Sutta, quoted here"
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "dasadhamma-sutta"
+    ],
+    "not_started": [],
+    "continues": [
+      "parittakarana-patha"
+    ],
+    "resume_from_page": 21,
+    "resume_from_file": "IMG_0284.PNG",
+    "resume_from": "parittakarana-patha",
+    "unreadable": [],
+    "paiboon_scan": "clean — no paiboon values exist in this batch. The book prints no Thai translation on page 20.",
+    "pali_untouched": "Confirmed. Every pali is the book's Thai script as printed; every pali_roman is IAST transliteration of it.",
+    "page_scan": "agrees — page 20 carries verses 11-13 of dasadhamma-sutta and 1-3 of parittakarana-patha, plus one row claiming no verses for the footnote. One page, one image.",
+    "notes": "TWO FIRSTS ON THIS PAGE. The book prints its first จบ line, 'ทะสะธัมมะสุตตัง นิฏฐิตัง.', which is the chant's `closing` — and it arrives on a CONTINUATION, as a closing always will for a chant that spans pages. And the first footnote citation with a single unambiguous marker, so it goes in `source_printed` rather than as a footnote block, unlike pages 12 and 16-18 where one footnote served two markers or carried instruction. Also worth a note: this photograph is a screenshot of a photo viewer rather than a clean scan, with UI chrome top and bottom. Nothing is obscured."
+  }
+}

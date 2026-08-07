@@ -369,21 +369,34 @@ def check_depth(batch: dict) -> list[str]:
     return problems
 
 
-def check_no_raw_newlines(batch: dict) -> list[str]:
-    """A line break belonging to the text is written \\n, never a real newline."""
+def check_line_breaks_agree(batch: dict) -> list[str]:
+    """A couplet break in `pali` is a couplet break in `pali_roman` too.
+
+    This replaced a check for "raw newlines inside string values", which was
+    unfalsifiable in both directions: JSON cannot hold a literal newline
+    inside a string at all — `json.load` raises before any check runs — so it
+    could never catch what it named, and it fired on every legitimate couplet
+    break instead. It flagged the five-line ratana stanza on page 20, which
+    is stored exactly as `chanting.py` has stored such breaks since the first
+    chant.
+
+    What IS worth checking is that the two chanted layers break in the same
+    places. They are the same words in two scripts, so a break present in one
+    and missing from the other means one of them was typed from something
+    other than the page.
+    """
     problems = []
-
-    def walk(node, path=""):
-        if isinstance(node, dict):
-            for key, value in node.items():
-                walk(value, f"{path}/{key}")
-        elif isinstance(node, list):
-            for i, value in enumerate(node):
-                walk(value, f"{path}[{i}]")
-        elif isinstance(node, str) and "\n" in node:
-            problems.append(f"raw newline inside a string value at {path}")
-
-    walk(batch)
+    for chant in batch["chants"]:
+        for verse in chant["verses"]:
+            pali, roman = verse.get("pali", ""), verse.get("pali_roman", "")
+            if not pali or not roman:
+                continue
+            if pali.count("\n") != roman.count("\n"):
+                problems.append(
+                    f"{chant['id']} verse {verse.get('number')}: pali breaks "
+                    f"into {pali.count(chr(10)) + 1} lines but pali_roman "
+                    f"into {roman.count(chr(10)) + 1} — the two chanted "
+                    f"layers must break in the same places")
     return problems
 
 
@@ -465,7 +478,7 @@ CHECKS = (
     ("pages ascend", check_pages_ascend),
     ("diacritics", check_diacritics),
     ("depth", check_depth),
-    ("no raw newlines", check_no_raw_newlines),
+    ("line breaks agree", check_line_breaks_agree),
     ("page blocks", check_blocks),
     ("checks readable", check_checks_are_readable),
 )

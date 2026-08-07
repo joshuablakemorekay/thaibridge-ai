@@ -155,6 +155,94 @@ class TestCompletingALineCutByAPageBreak:
         assert any('does not extend' in p for p in check_join(incoming, present))
 
 
+class TestAClosingArrivingWithTheLastPage:
+    """A chant spanning pages reaches its closing as a CONTINUATION.
+
+    So the continuation path has to place it, not just the path that writes a
+    new chant — otherwise the จบ… line is read correctly by stage 1 and lost
+    on the way in, which is the failure the everything-must-land-somewhere
+    rule exists for.
+    """
+
+    # Carries a CONTINUES marker, because that is the state a chant is in
+    # when its next page arrives — and apply() removes it as part of the same
+    # step, refusing to report success if it cannot.
+    PRESENT = ("[\n    {\n"
+               "        # ‼ CONTINUES: last verse here is 1.\n"
+               "        'id': 'a',\n"
+               "        'invitation': {\n        },\n"
+               "        'verses': [\n"
+               "            {\n                'number': 1,\n            },\n"
+               "        ],\n    },\n]\n")
+    CLOSING = {'pali': 'จบ.', 'pali_roman': 'jba.', 'thai': '',
+               'paiboon': '', 'english': 'here it ends'}
+
+    def test_it_is_placed_on_the_chant_it_continues(self):
+        b = batch([chant('a', [verse(2)], continuation_of='a',
+                         closing=self.CLOSING)])
+
+        out, report = apply(b, self.PRESENT)
+
+        assert "'closing': {" in out
+        assert 'จบ.' in out
+        assert report['closings'] == ['a']
+
+    def test_a_chant_that_already_has_one_does_not_get_a_second(self):
+        """Re-running a batch must not stack two closings on one chant."""
+        already = self.PRESENT.replace(
+            "        'verses': [",
+            "        'closing': {\n            'pali': 'จบ.',\n        },\n"
+            "        'verses': [")
+        b = batch([chant('a', [verse(2)], continuation_of='a',
+                         closing=self.CLOSING)])
+
+        out, report = apply(b, already)
+
+        assert out.count("'closing': {") == 1
+        assert 'closings' not in report
+
+    def test_a_continuation_without_one_leaves_the_chant_alone(self):
+        b = batch([chant('a', [verse(2)], continuation_of='a')])
+
+        out, report = apply(b, self.PRESENT)
+
+        assert "'closing'" not in out
+        assert 'closings' not in report
+
+    def test_the_footnote_citation_also_arrives_with_the_last_page(self):
+        """A footnote keyed to a chant's final line comes on the continuation."""
+        b = batch([chant('a', [verse(2)], continuation_of='a',
+                         source_printed='อง ทสก. 24/24-5')])
+
+        out, report = apply(b, self.PRESENT)
+
+        assert "'source_printed': 'อง ทสก. 24/24-5'," in out
+        assert report['source_printed'] == ['a']
+
+    def test_an_existing_citation_is_never_overwritten(self):
+        """The earlier page's reading wins on anything it already recorded."""
+        already = self.PRESENT.replace(
+            "        'verses': [",
+            "        'source_printed': 'the first reading',\n        'verses': [")
+        b = batch([chant('a', [verse(2)], continuation_of='a',
+                         source_printed='a different reading')])
+
+        out, _ = apply(b, already)
+
+        assert 'the first reading' in out
+        assert 'a different reading' not in out
+
+    def test_a_continuation_never_rewrites_the_title_or_page_start(self):
+        """Those belong to the page the chant STARTS on."""
+        b = batch([chant('a', [verse(2)], continuation_of='a',
+                         title_thai='a new title', page_start=99)])
+
+        out, _ = apply(b, self.PRESENT)
+
+        assert 'a new title' not in out
+        assert '99' not in out
+
+
 class TestItNeverClaimsWhatItHasNotDone:
     """The bug this script was written to stop."""
 
@@ -190,6 +278,19 @@ class TestWhatItPlansAndWrites:
 
         assert '# ‼ CHECK [IMG_1.PNG]' in out
         assert '⚠' not in out
+
+    def test_a_closing_formula_is_carried_through(self):
+        """The จบ… line the book prints under a finished chant."""
+        out = render_chant(chant('a', closing={
+            'pali': 'ทะสะธัมมะสุตตัง นิฏฐิตัง.', 'pali_roman': 'x',
+            'thai': '', 'paiboon': '', 'english': 'here it ends'}))
+
+        assert "'closing': {" in out
+        assert 'ทะสะธัมมะสุตตัง นิฏฐิตัง.' in out
+
+    def test_a_chant_with_no_closing_gets_no_key(self):
+        """An empty closing would render as a blank centred line."""
+        assert "'closing'" not in render_chant(chant('a'))
 
     def test_the_books_own_verse_number_is_carried_through(self):
         """`printed_number` is what the BOOK sets beside the line.

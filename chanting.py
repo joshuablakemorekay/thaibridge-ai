@@ -9057,7 +9057,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 10; the rest is not in the app yet.
         # ‼ CHECK [IMG_0282.PNG]: FIRST CHANT WITH A BOOK NUMBER. The book
         #   prints '1.' before the title, so book_number is 1. This is the
         #   book's own chant numbering, not a page number and not a verse
@@ -9083,6 +9082,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'ทะสะธัมมะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'dasadhammasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'The Discourse on the Ten Things is ended.',
         },
         'verses': [
             # ‼ CHECK [IMG_0282.PNG]: The nidana is the standard Savatthi
@@ -9190,6 +9196,118 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "'How do the days and nights pass for me?': this should be reflected on again and again by one who has gone forth.",
+            },
+            # ‼ CHECK [IMG_0283.PNG]: The sutta is now COMPLETE at ten
+            #   reflections, matching 'กะตะเม ทะสะ' on page 19. The CONTINUES
+            #   marker should come off. Verses 11 and 12 carry printed_number
+            #   9 and 10 — the book's own numbers — while verse 13 carries
+            #   none, because the closing sentence is printed unnumbered.
+            {
+                'number': 11,
+                'page': 20,
+                'printed_number': 9,
+                'pali': 'กัจจิ นุ โขหัง สุญญาคาเร อะภิระมามีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'kacci nu khohaṃ suññāgāre abhiramāmīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Do I delight in empty dwellings?': this should be reflected on again and again by one who has gone forth.",
+            },
+            # ‼ CHECK [IMG_0283.PNG]: WORDS REJOINED ACROSS HYPHENS, two of
+            #   them: อะละมะริยะญาณะทัสสะนะวิเสโส breaks as '…ทัสสะนะ-' /
+            #   'วิเสโส' in verse 12, and ปัจจะเวกขิตัพพาติ breaks as
+            #   'ปัจจะเวก-' / 'ขิตัพพาติ' in verse 13. Both hyphens are
+            #   justification, not spelling.
+            {
+                'number': 12,
+                'printed_number': 10,
+                'pali': 'อัตถิ นุ โข เม อุตตะริมะนุสสะธัมมา อะละมะริยะญาณะทัสสะนะวิเสโส, อะธิคะโต โสหัง ปัจฉิเม กาเล สะพ์รัห์มะจารีหิ ปุฏโฐ นะ มังกุ ภะวิสสามีติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'atthi nu kho me uttarimanussadhammā alamariyañāṇadassanaviseso, adhigato sohaṃ pacchime kāle sabrahmacārīhi puṭṭho na maṅku bhavissāmīti, pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Have I attained any superior human state, any distinction of knowledge and vision worthy of the noble ones, such that in my last days, when questioned by my companions in the holy life, I shall not be embarrassed?': this should be reflected on again and again by one who has gone forth.",
+            },
+            # ‼ CHECK [IMG_0283.PNG]: Footnote marker 1 sits here, and the
+            #   footnote reads 'อง ทสก. 24/24-5' — Aṅguttara-nikāya, Dasaka-
+            #   nipāta. The marker is unambiguous, so the prompt would put it
+            #   in `source_printed`; it is carried as a page footnote block
+            #   instead, because the template renders source_printed as a line
+            #   labelled with the chant's title and the book prints '1. อง
+            #   ทสก. 24/24-5' under a rule. Same treatment as pages 12 and
+            #   16-18. NOTE: page 6's chant still uses source_printed and so
+            #   still renders the app's form — the one page left inconsistent.
+            {
+                'number': 13,
+                'pali': 'อิเม โข ภิกขะเว ทะสะ ธัมมา, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพาติ, อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.',
+                'pali_roman': 'ime kho bhikkhave dasa dhammā, pabbajitena abhiṇhaṃ paccavekkhitabbāti, idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "These, bhikkhus, are the ten things that one who has gone forth should reflect on again and again. This is what the Blessed One said. Gladdened, those bhikkhus delighted in the Blessed One's words.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0283.PNG]: CONTINUES. The passage sets out the Buddha
+        #   as foremost of beings and dispassion as foremost of dhammas; the
+        #   parallel for the Sangha is not on this page, so the rest is on
+        #   page 21 and has not been written from memory.
+        # ‼ CHECK [IMG_0283.PNG]: Book number 2, printed as '2.' before the
+        #   title. The second numbered chant in the book.
+        'id': 'parittakarana-patha',
+        'title_thai': 'ปะริตตะกะระณะปาฐะ',
+        'title_pali': 'Parittakaraṇapāṭha',
+        'title_roman': '',
+        'title_english': 'The Passage for Making a Protection',
+        'book_number': 2,
+        'page_start': 20,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0283.PNG]: SINGLE COLUMN, checked deliberately. The
+            #   centred stanza at verse 2 has short lines that could be
+            #   mistaken for column halves, but each is a complete pada and
+            #   the surrounding prose runs the full measure.
+            {
+                'number': 1,
+                'pali': 'ยาวะตา สัตตา อะปะทา วา ท๎วิปะทา วา จะตุปปะทา วา พะหุปปะทา วา, รูปิโน วา อะรูปิโน วา, สัญญิโน วา อะสัญญิโน วา, เนวะสัญญีนาสัญญิโน วา, ตะถาคะโต เตสัง อัคคะมักขายะติ อะระหัง สัมมาสัมพุทโธ, เย โข พุทเธ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก.',
+                'pali_roman': 'yāvatā sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā, rūpino vā arūpino vā, saññino vā asaññino vā, nevasaññīnāsaññino vā, tathāgato tesaṃ aggamakkhāyati arahaṃ sammāsambuddho, ye kho buddhe pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'As far as there are beings — footless, two-footed, four-footed or many-footed, with form or formless, percipient or non-percipient or neither-percipient-nor-non-percipient — the Tathagata, the Worthy One, the Perfectly Self-Awakened One, is declared the foremost of them. Those who have confidence in the Buddha have confidence in the foremost, and for those with confidence in the foremost the result is foremost.',
+            },
+            # ‼ CHECK [IMG_0283.PNG]: FIVE PRINTED LINES KEPT AS ONE VERSE,
+            #   with the line breaks written as \n. The book sets this as a
+            #   centred five-line stanza between two prose paragraphs, and the
+            #   breaks are the verse's own, not justification. Say if you
+            #   would rather have five verses — it would change the numbering
+            #   of everything after it.
+            {
+                'number': 2,
+                'pali': 'ยังกิญจิ วิตตัง อิธะ วา หุรัง วา\nสัคเคสุ วา ยัง ระตะนัง ปะณีตัง\nนะ โน สะมัง อัตถิ ตะถาคะเตนะ\nอิทัมปิ พุทเธ ระตะนัง ปะณีตัง\nเอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'yaṅkiñci vittaṃ idha vā huraṃ vā\nsaggesu vā yaṃ ratanaṃ paṇītaṃ\nna no samaṃ atthi tathāgatena\nidampi buddhe ratanaṃ paṇītaṃ\netena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever wealth there is here or beyond, or whatever excellent treasure is in the heavens, there is none equal to the Tathagata. This too is an excellent treasure in the Buddha. By this truth may there be well-being.',
+            },
+            # ‼ CHECK [IMG_0283.PNG]: WORD REJOINED ACROSS A HYPHEN:
+            #   อัคคะมักขายะติ breaks as 'อัคคะมัก-' / 'ขายะติ'.
+            #   Justification, not spelling.
+            {
+                'number': 3,
+                'pali': 'ยาวะตา ธัมมา สังขะตา วา อะสังขะตา วา, วิราโค เตสัง อัคคะมักขายะติ, ยะทิทัง มะทะนิมมะทะโน ปิปาสะวินะโย อาละยะสะมุคฆาโต วัฏฏูปัจเฉโท ตัณหักขะโย วิราโค นิโรโธ นิพพานัง, เย โข วิราคะธัมเม ปะสันนา, อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก.',
+                'pali_roman': 'yāvatā dhammā saṅkhatā vā asaṅkhatā vā, virāgo tesaṃ aggamakkhāyati, yadidaṃ madanimmadano pipāsavinayo ālayasamugghāto vaṭṭūpacchedo taṇhakkhayo virāgo nirodho nibbānaṃ, ye kho virāgadhamme pasannā, agge te pasannā, agge kho pana pasannānaṃ aggo vipāko.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'As far as there are things conditioned or unconditioned, dispassion is declared the foremost of them — that is, the crushing of pride, the removal of thirst, the uprooting of clinging, the cutting off of the round, the destruction of craving, dispassion, cessation, nibbana. Those who have confidence in the Dhamma of dispassion have confidence in the foremost, and for those with confidence in the foremost the result is foremost.',
             },
         ],
     },
@@ -10392,6 +10510,24 @@ PAGE_BLOCKS = [
                 'type': 'footnote',
                 'marker': '1',
                 'thai': 'วิ. มหา 2/558-570',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 20 ─────────────────────────────────────────────────────────
+    # The citation keyed to the Dasadhamma Sutta's last line. Its marker is
+    # unambiguous, so the prompt would put it in `source_printed` — but the
+    # template renders that as a line labelled with the chant's title, and
+    # the book prints '1. อง ทสก. 24/24-5' under a rule. Same treatment as
+    # pages 12 and 16-18.
+    {
+        'page': 20,
+        'after': 'parittakarana-patha',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'อง ทสก. 24/24-5',
                 'english': '',
             },
         ],

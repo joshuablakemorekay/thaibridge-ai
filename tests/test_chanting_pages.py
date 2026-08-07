@@ -665,16 +665,25 @@ class TestTheNumbersTheBookPrints:
     """
 
     def test_the_two_numbers_are_allowed_to_disagree(self):
-        """The Dasadhamma Sutta's nidana pushes the book's item 1 to verse 3."""
+        """The Dasadhamma Sutta's nidana pushes the book's item 1 to verse 3.
+
+        Asserted as a RELATIONSHIP rather than a snapshot of the verses: an
+        earlier version pinned the last verse to (10, 8) and failed the
+        moment page 20 legitimately extended the chant to thirteen.
+        """
         from chanting import CHANTS
         chant = next(c for c in CHANTS if c['id'] == 'dasadhamma-sutta')
+        numbered = {v['number']: v.get('printed_number') for v in chant['verses']}
 
-        numbered = [(v['number'], v.get('printed_number')) for v in chant['verses']]
+        assert numbered[1] is None, 'the nidana is not numbered in the book'
+        assert numbered[2] is None, "'katame dasa' is not numbered either"
 
-        assert numbered[0] == (1, None), 'the nidana is not numbered in the book'
-        assert numbered[1] == (2, None), "'katame dasa' is not numbered either"
-        assert numbered[2] == (3, 1), "the book's item 1 is the app's verse 3"
-        assert numbered[-1] == (10, 8)
+        # The ten reflections are verses 3-12, offset by two throughout.
+        for verse_number in range(3, 13):
+            assert numbered[verse_number] == verse_number - 2
+
+        # The sutta's closing sentence is printed without a number.
+        assert numbered[13] is None
 
     @staticmethod
     def page(number):
