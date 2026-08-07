@@ -8405,7 +8405,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 18; the rest is not in the app yet.
         # ‼ CHECK [IMG_0279.PNG]: The book prints NO title for this group,
         #   only the heading โภชะนะปะฏิสังยุต 30 สิกขาบท, which is carried as
         #   the section on verse 1. title_thai and title_pali are left empty;
@@ -8596,6 +8595,227 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "'I will not eat tossing up balls of food': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0280.PNG]: READING CALL, PLEASE CONFIRM — ฬ or พ. I
+            #   have read this as 'กะวะฬาวัจเฉทะกัง' with ฬ. At this
+            #   resolution the book's ฬ is hard to tell from พ, and my first
+            #   reading of the glyph was พ. Three things decided it for ฬ: the
+            #   same root is printed กะวะฬัง in rule 13 on page 16, where the
+            #   letter is clear; standard editions read kabaḷāvacchedakaṃ; and
+            #   the SAME ambiguous glyph appears twice more on this page, in
+            #   รูฬ๎หัสสะ at Dhammadesana rules 5 and 6, both places where ฬ
+            #   is expected. If the book really prints พ, all three are wrong
+            #   together. Worth a retake of this page at higher magnification.
+            {
+                'number': 19,
+                'page': 17,
+                'pali': 'นะ กะวะฬาวัจเฉทะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na kabaḷāvacchedakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat biting off mouthfuls': this is a training to be observed.",
+            },
+            {
+                'number': 20,
+                'pali': 'นะ อะวะคัณฑะการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na avagaṇḍakārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat stuffing out the cheeks': this is a training to be observed.",
+            },
+            {
+                'number': 21,
+                'pali': 'นะ หัตถะนิทธูนะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na hatthaniddhūnakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat shaking the hand about': this is a training to be observed.",
+            },
+            {
+                'number': 22,
+                'pali': 'นะ สิตถาวะการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na sitthāvakārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat scattering rice grains': this is a training to be observed.",
+            },
+            {
+                'number': 23,
+                'pali': 'นะ ชิวหานิจฉาระกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na jivhānicchārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat putting out the tongue': this is a training to be observed.",
+            },
+            {
+                'number': 24,
+                'pali': 'นะ จะปุจะปุการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na capucapukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat making a chomping sound': this is a training to be observed.",
+            },
+            {
+                'number': 25,
+                'pali': 'นะ สุรุสุรุการะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na surusurukārakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat making a slurping sound': this is a training to be observed.",
+            },
+            {
+                'number': 26,
+                'pali': 'นะ หัตถะนิลเลหะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na hatthanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat licking the hands': this is a training to be observed.",
+            },
+            {
+                'number': 27,
+                'pali': 'นะ ปัตตะนิลเลหะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na pattanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat licking the bowl': this is a training to be observed.",
+            },
+            {
+                'number': 28,
+                'pali': 'นะ โอฏฐะนิลเลหะกัง ภุญชิสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na oṭṭhanillehakaṃ bhuñjissāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not eat licking the lips': this is a training to be observed.",
+            },
+            {
+                'number': 29,
+                'pali': 'นะ สามิเสนะ หัตเถนะ ปานียะถาละกัง ปะฏิคคะเหสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na sāmisena hatthena pānīyathālakaṃ paṭiggahessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not accept a drinking-water vessel with a hand soiled by food': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0280.PNG]: The chant is now COMPLETE at thirty,
+            #   matching the heading โภชะนะปะฏิสังยุต 30 สิกขาบท on page 16.
+            #   The CONTINUES marker should come off. Footnote marker 1 sits
+            #   here.
+            # ‼ CHECK [IMG_0280.PNG]: THE FOOTNOTE REFERENCE LOOKS ODD.
+            #   Footnote 1 on this page reads 'วิ. มหา. 252-557'. Page 16's
+            #   footnote read 'วิ. มหา 2/531-542' — volume 2, sections 531-542
+            #   — so a reference continuing from it would be expected to read
+            #   '2/543-557'. The printed form has been reproduced exactly and
+            #   NOT normalised. Either the book prints it this way or I have
+            #   misread the slash; the same retake that settles the ฬ/พ
+            #   question would settle this.
+            {
+                'number': 30,
+                'pali': 'นะ สะสิตถะกัง ปัตตะโธวะนัง อันตะระฆะเร ฉัฑเฑสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na sasitthakaṃ pattadhovanaṃ antaraghare chaḍḍessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not throw out bowl-rinsing water containing rice grains among the houses': this is a training to be observed.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0280.PNG]: CONTINUES. The heading says 16 and 7 are
+        #   printed here, so rules 8-16 are on page 18 and have not been
+        #   written from memory.
+        'id': 'sekhiya-dhammadesanapatisamyutta',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Sekhiya Rules — Dhammadesanāpaṭisaṃyutta',
+        'page_start': 17,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0280.PNG]: Separate chant for the same reason as
+            #   the Bhojana group on page 16: the book RESTARTS its numbering
+            #   at each Sekhiya group, and a chant numbers its verses
+            #   uniquely. This is the third of four groups. No chant title is
+            #   printed, only the heading ธัมมะเทสะนาปะฏิสังยุต 16 สิกขาบท,
+            #   carried as the section on this verse.
+            # ‼ CHECK [IMG_0280.PNG]: Footnote marker 2 sits on the word สิกขา
+            #   in this rule, not at the end of the line. Its footnote is
+            #   partly a citation and partly an editorial note — it says most
+            #   chanters use เทสิสสามีติ in place of the printed เทเสสสามีติ.
+            #   Because it carries instruction it is kept as a page footnote
+            #   block rather than source_printed, per the rule that an
+            #   editorial note is never filed as a citation.
+            # ‼ CHECK [IMG_0280.PNG]: The book prints เทเสสสามีติ
+            #   (desessāmīti). Reproduced as printed; the variant เทสิสสามีติ
+            #   mentioned in footnote 2 is NOT substituted.
+            {
+                'number': 1,
+                'section': 'ธัมมะเทสะนาปะฏิสังยุต 16 สิกขาบท: Dhammadesanāpaṭisaṃyutta — the sixteen training rules on teaching the Dhamma',
+                'pali': 'นะ ฉัตตะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na chattapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is with a sunshade in hand': this is a training to be observed.",
+            },
+            {
+                'number': 2,
+                'pali': 'นะ ทัณฑะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na daṇḍapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is with a staff in hand': this is a training to be observed.",
+            },
+            {
+                'number': 3,
+                'pali': 'นะ สัตถะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na satthapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is with a knife in hand': this is a training to be observed.",
+            },
+            {
+                'number': 4,
+                'pali': 'นะ อาวุธะปาณิสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na āvudhapāṇissa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is with a weapon in hand': this is a training to be observed.",
+            },
+            # ‼ CHECK [IMG_0280.PNG]: ฬ or พ again — 'ปาทุการูฬ๎หัสสะ' here
+            #   and 'อุปาหะนารูฬ๎หัสสะ' in rule 6. Read as ฬ๎ห for the same
+            #   reasons given on the Bhojana entry's verse 19 check. All three
+            #   readings on this page stand or fall together.
+            {
+                'number': 5,
+                'pali': 'นะ ปาทุการูฬ๎หัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na pādukārūḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is wearing wooden sandals': this is a training to be observed.",
+            },
+            {
+                'number': 6,
+                'pali': 'นะ อุปาหะนารูฬ๎หัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na upāhanārūḷhassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is wearing shoes': this is a training to be observed.",
+            },
+            {
+                'number': 7,
+                'pali': 'นะ ยานะคะตัสสะ อะคิลานัสสะ ธัมมัง เทเสสสามีติ สิกขา กะระณียา.',
+                'pali_roman': 'na yānagatassa agilānassa dhammaṃ desessāmīti sikkhā karaṇīyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'I will not teach Dhamma to someone who is not ill and who is in a vehicle': this is a training to be observed.",
             },
         ],
     },
@@ -9749,6 +9969,38 @@ PAGE_BLOCKS = [
                 'marker': '1',
                 'thai': 'วิ. มหา 2/531-542',
                 'english': '',
+            },
+        ],
+    },
+    # ── Page 17 ─────────────────────────────────────────────────────────
+    # Two footnotes. The first is a plain citation. The SECOND is mixed —
+    # it cites, and then tells the chanter that most people say เทสิสสามีติ
+    # where the book prints เทเสสสามีติ. Because it carries instruction it
+    # is a footnote block and never `source_printed`, which the app prints
+    # as a bare citation.
+    #
+    # ‼ CHECK [IMG_0280.PNG]: footnote 1 reads 'วิ. มหา. 252-557' where
+    #   page 16's read 'วิ. มหา 2/531-542'. A reference continuing from 542
+    #   would be expected to read '2/543-557'. Reproduced as printed.
+    {
+        'page': 17,
+        'after': 'sekhiya-dhammadesanapatisamyutta',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'วิ. มหา. 252-557',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '2',
+                'thai': 'วิ. มหา. เล่ม 2 558 ส่วนมากสวดใช้คำว่า เทสิสสามีติ',
+                'english': (
+                    'Vinaya, Mahavagga, volume 2, 558. Most chanters use the '
+                    'word desissāmīti in place of the printed desessāmīti.'
+                ),
+                'english_unverified': True,
             },
         ],
     },
