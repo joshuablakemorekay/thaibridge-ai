@@ -7801,6 +7801,193 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0276.PNG]: The book prints NO title for this line. The
+        #   id and English title are mine; title_thai and title_pali are left
+        #   empty rather than invented. It is set as its own chant because the
+        #   book separates it from what follows with a prose instruction, and
+        #   because Pali cannot live in a page block — blocks carry Thai and
+        #   English only.
+        # ‼ CHECK [IMG_0276.PNG]: Pali only — no Thai translation is printed
+        #   anywhere on page 13, so thai and paiboon are empty throughout and
+        #   english_unverified is set.
+        'id': 'imani-attha-sikkhapadani',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Charge to Guard the Eight Precepts',
+        'page_start': 13,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0276.PNG]: 'กัต๎วา' carries the yamakkan mark ๎,
+            #   reproduced as printed rather than normalised to กัตวา. Same
+            #   word and same treatment as on page 10.
+            {
+                'number': 1,
+                'pali': 'อิมานิ อัฏฐะ สิกขาปะทานิ อุโปสะถะสีละวะเสนะ สาธุกัง กัต๎วา อัปปะมาเทนะ รักขิตัพพานิ.',
+                'pali_roman': 'imāni aṭṭha sikkhāpadāni uposathasīlavasena sādhukaṃ katvā appamādena rakkhitabbāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These eight training rules, well undertaken as the virtue of the Uposatha, are to be guarded with heedfulness.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0276.PNG]: The book prints no title. The id and English
+        #   title are mine. This is the well-known two-line gatha on sila,
+        #   spoken by the elder after the assembly's āma bhante.
+        'id': 'silena-sugatim-yanti',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Verse on Virtue',
+        'page_start': 13,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0276.PNG]: TWO COLUMNS — first pairing, for you to
+            #   confirm against the page. Left half 'สีเลนะ สุคะติง ยันติ'
+            #   joined to right half 'สีเลนะ โภคะสัมปะทา' as ONE verse. The
+            #   honest test passes: the left column alone reads as unfinished
+            #   half-lines, so the right column completes them.
+            {
+                'number': 1,
+                'pali': 'สีเลนะ สุคะติง ยันติ สีเลนะ โภคะสัมปะทา',
+                'pali_roman': 'sīlena sugatiṃ yanti sīlena bhogasampadā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By virtue beings go to a good destination; by virtue is prosperity attained;',
+            },
+            # ‼ CHECK [IMG_0276.PNG]: 'ตัส๎มา' carries the yamakkan mark ๎,
+            #   reproduced as printed rather than normalised to ตัสมา.
+            {
+                'number': 2,
+                'pali': 'สีเลนะ นิพพุติง ยันติ ตัส๎มา สีลัง วิโสธะเย.',
+                'pali_roman': 'sīlena nibbutiṃ yanti tasmā sīlaṃ visodhaye.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by virtue they go to peace. Therefore let virtue be purified.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0276.PNG]: The invitation 'หันทะ มะยัง
+        #   สะระณะคะมะนานุสสะระณะคาถาโย ภะณามะ เส.' IS printed, but inside the
+        #   prose paragraph above rather than on its own line. It is left in
+        #   that block and the invitation field left empty, so the page does
+        #   not print it twice. Say if you would rather it were lifted into
+        #   the field.
+        # ‼ CHECK [IMG_0276.PNG]: The book prints the title in Thai script
+        #   only. title_pali carries the IAST form and title_roman is left
+        #   empty, per the rule for a title that is Pali written in Thai
+        #   script.
+        'id': 'sarana-gamananussarana-gatha',
+        'title_thai': 'สะระณะคะมะนานุสสะระณะคาถา',
+        'title_pali': 'Saraṇagamanānussaraṇagāthā',
+        'title_roman': '',
+        'title_english': 'Verses Recollecting the Going for Refuge',
+        'page_start': 13,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0276.PNG]: TWO COLUMNS — first pairing, for you to
+            #   confirm against the page. Left half 'อะหัง พุทธัญจะ ธัมมัญจะ'
+            #   joined to right half 'สังฆัญจะ สะระณัง คะโต' as ONE verse. The
+            #   honest test passes: the left column alone reads as unfinished
+            #   half-lines. All six verses are read the same way.
+            # ‼ CHECK [IMG_0276.PNG]: Footnote marker 1 sits on คะโต at the
+            #   end of this verse. The footnote is an EDITORIAL note about the
+            #   gendered form (คะโต for a layman, คะตา for a laywoman), not a
+            #   citation, so it is carried as a page footnote block and NOT as
+            #   source_printed.
+            {
+                'number': 1,
+                'pali': 'อะหัง พุทธัญจะ ธัมมัญจะ สังฆัญจะ สะระณัง คะโต',
+                'pali_roman': 'ahaṃ buddhañca dhammañca saṅghañca saraṇaṃ gato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have gone to the Buddha, the Dhamma and the Saṅgha as refuge,',
+            },
+            # ‼ CHECK [IMG_0276.PNG]: Footnote marker 2 sits on อุปาสะกัตตัง
+            #   at the start of this verse — the second footnote on the page,
+            #   also an editorial note about the gendered form.
+            {
+                'number': 2,
+                'pali': 'อุปาสะกัตตัง เทเสสิง ภิกขุสังฆัสสะ สัมมุขา.',
+                'pali_roman': 'upāsakattaṃ desesiṃ bhikkhusaṅghassa sammukhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and declared myself a lay follower in the presence of the Saṅgha of bhikkhus.',
+            },
+            {
+                'number': 3,
+                'pali': 'เอตัง เม สะระณัง เขมัง เอตัง สะระณะมุตตะมัง',
+                'pali_roman': 'etaṃ me saraṇaṃ khemaṃ etaṃ saraṇamuttamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is my safe refuge, this is the supreme refuge;',
+            },
+            {
+                'number': 4,
+                'pali': 'เอตัง สะระณะมาคัมมะ สัพพะทุกขา ปะมุจจะเย',
+                'pali_roman': 'etaṃ saraṇamāgamma sabbadukkhā pamuccaye',
+                'thai': '',
+                'paiboon': '',
+                'english': 'coming to this refuge, one is freed from all suffering.',
+            },
+            {
+                'number': 5,
+                'pali': 'ยะถาพะลัง จะเรยยาหัง สัมมาสัมพุทธะสาสะนัง',
+                'pali_roman': 'yathābalaṃ careyyāhaṃ sammāsambuddhasāsanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'As far as my strength allows, may I practise the teaching of the Perfectly Self-Awakened One,',
+            },
+            # ‼ CHECK [IMG_0276.PNG]: SPELLING, needs the physical page. The
+            #   book appears to print 'ทุกะนิสสะระณัสเสวะ' where standard
+            #   editions read 'ทุกขะนิสสะระณัสเสวะ' (dukkha-, with the doubled
+            #   kh). I have reproduced what I read and romanised it faithfully
+            #   as 'dukanissaraṇasseva' rather than silently correcting it to
+            #   the standard form. Either the book differs here or I have
+            #   misread the photograph — please check.
+            {
+                'number': 6,
+                'pali': 'ทุกะนิสสะระณัสเสวะ ภาคี อัสสัง อะนาคะเต.',
+                'pali_roman': 'dukanissaraṇasseva bhāgī assaṃ anāgate.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may I share in the escape from suffering in time to come.',
+            },
+        ],
+    },
 ]
 
 
@@ -8778,6 +8965,117 @@ PAGE_BLOCKS = [
                 'marker': '1',
                 'thai': 'ขุ.ขุ. 25/1-2',
                 'english': '',
+            },
+        ],
+    },
+    # ── Page 13 ─────────────────────────────────────────────────────────
+    # The page alternates instruction and Pali all the way down: the elder
+    # speaks, the assembly answers, the elder speaks again. Each instruction
+    # is anchored after the chant it follows, so the alternation survives.
+    {
+        'page': 13,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'พระเถระว่าต่อไปแต่ลำพังดังนี้.',
+                'english': 'The elder continues alone, as follows.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    {
+        'page': 13,
+        'after': 'imani-attha-sikkhapadani',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'อุบาสกอุบาสิการับพร้อมกันว่า อามะ ภันเต.',
+                'english': (
+                    'The laymen and laywomen answer together: āma bhante — '
+                    '\'yes, venerable sir\'.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'พระเถระว่าต่อไปแต่ลำพังดังนี้.',
+                'english': 'The elder continues alone, as follows.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # The invitation to the closing gatha is printed INSIDE this paragraph
+    # rather than on a line of its own, so it stays here and the chant's
+    # `invitation` field is left empty. Lifting it out would print it twice.
+    {
+        'page': 13,
+        'after': 'silena-sugatim-yanti',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': (
+                    'เป็นอันเสร็จพิธีสมาทานอุโบสถศีลเท่านี้ ต่อจากนี้ พระเถระ '
+                    'เริ่มแสดงพระธรรมเทศนา พุทธบริษัททั้งบรรพชิตและคฤหัสถ์ '
+                    'ตั้งใจฟังโดยเคารพ เพื่อให้สำเร็จเป็นกุศลส่วนธรรมสวนมัยต่อไป '
+                    'พอแสดงพระธรรมเทศนาจบลง หัวหน้าอุบาสกกล่าวเชิญแสดงสาธุการว่า '
+                    'หันทะ มะยัง สาธุการัง กะโรมะ เส. อุบาสกอุบาสิกา '
+                    'นอกนี้รับพร้อมกันว่า สาธุ สาธุ สาธุ 3 หน '
+                    'แล้วหัวหน้าอุบาสกกล่าวเชิญสวด สะระณะคะมะนานุสสะระณะคาถา '
+                    'ต่อท้ายดังนี้ หันทะ มะยัง สะระณะคะมะนานุสสะระณะคาถาโย '
+                    'ภะณามะ เส.'
+                ),
+                'english': (
+                    'With this the ceremony of undertaking the Uposatha '
+                    'precepts is complete. After it the elder begins the '
+                    'Dhamma talk, and the Buddhist assembly, both those gone '
+                    'forth and the householders, listen attentively and '
+                    'respectfully, so that the merit of hearing the Dhamma '
+                    'may be accomplished. When the talk has ended, the '
+                    'leading layman gives the invitation to make the '
+                    'acclamation: handa mayaṃ sādhukāraṃ karoma se. The other '
+                    'laymen and laywomen answer together sādhu, sādhu, sādhu '
+                    'three times. Then the leading layman gives the '
+                    'invitation to chant the Saraṇagamanānussaraṇagāthā as a '
+                    'closing, thus: handa mayaṃ saraṇagamanānussaraṇagāthāyo '
+                    'bhaṇāma se.'
+                ),
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'อุบาสกอุบาสิกานอกนี้สวดพร้อมกัน หยุดตามจุดลูกน้ำดังนี้.',
+                'english': (
+                    'The other laymen and laywomen chant together, pausing at '
+                    'the commas, as follows.'
+                ),
+                'english_unverified': True,
+            },
+        ],
+    },
+    # Both footnotes are EDITORIAL — which word a laywoman substitutes — and
+    # neither is a citation, so neither goes in `source_printed`. Page 8
+    # carries an identical note about คะโต/คะตา; footnote numbers restart on
+    # every page, so these are page 13's own 1 and 2.
+    {
+        'page': 13,
+        'after': 'sarana-gamananussarana-gatha',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'คะโต สำหรับอุบาสก ถ้าอุบาสิกาใช้ คะตา',
+                'english': 'gato is for a layman; a laywoman uses gatā.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'footnote',
+                'marker': '2',
+                'thai': 'อุปาสะกัตตัง สำหรับอุบาสก ถ้าอุบาสิกาใช้ อุปาสิกัตตัง',
+                'english': (
+                    'upāsakattaṃ is for a layman; a laywoman uses '
+                    'upāsikattaṃ.'
+                ),
+                'english_unverified': True,
             },
         ],
     },
