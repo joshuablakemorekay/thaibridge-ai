@@ -1816,3 +1816,47 @@ Then when I completed page 1, **three more index lines became links with no work
 - *Decisions made:* Front matter got its own sequence rather than negative page numbers — a number meaning something different from what's printed is the exact class of bug we'd spent the morning removing. The page and the chant are offered as **separate** buttons rather than one link, because sending someone to the page when they wanted the chant matters when a chant starts half way down.
 - *Improvements made to generated code:* Two checks a machine *can* run on a hand-transcribed index: a contents never runs backwards (zero violations across 301 rows), and the middle pages each hold exactly 31 lines. Then an engineering pass found `_english_for` scanning every chant for every row — ~86,000 comparisons once the book's full — and the contents route rebuilding the whole page index twice per request. Both fixed; per-page build 0.8 ms → 0.1 ms.
 - *Roughly how much was accepted as-is vs engineered on:* Direction and review. I specified the buttons, the English, and the back navigation, and asked for a live link to check it actually worked rather than taking "it's pushed" for done.
+
+## 2026-08-07 — Exactly the same as the book
+
+**TL;DR:**
+- Pages 10–20 in: 30 → 44 chants, 509 → 644 verses, all 75 Sekhiya rules.
+- One sentence of mine, said three times, settled three different arguments.
+- Stage 1 finally has a tested validator. It found a defect in work already shipped.
+
+**What I built**
+
+Eleven pages. `check_batch.py` — Stage 1's counterpart to `apply_batch.py`, 14 checks, 57 tests. A `printed_number` layer so a list the book numbers renders numbered. Tests 141 → 217.
+
+**Why I did it this way**
+
+> "Should we carry on adding batches to the Digital Chanting Book? How many can we do at a time in this session?"
+
+One standard, repeated, decided three different things:
+
+> "Keep it all exactly as it is in the book"
+
+> "Do 1. as recommended as long as in the app it remains exactly the same as in the book."
+
+> "as long as it's exactly the same as in the physical book image then it is good"
+
+Enter the นะโม twice rather than stub it. Move footnotes out of `source_printed`. Show the numbers the book prints — book layout was hiding every one. Then:
+
+> "build the stage 1 validator"
+
+> "Is there a way to make Claude code sessions short, simple and less technical so I don't get bogged down with all the text whilst developing projects?"
+
+**How We Did It**
+
+1. One page per batch: photograph, batch file, dry-run, apply, verify, commit, confirm live.
+2. Built `check_batch.py` after three throwaway checkers gave false results in one afternoon.
+3. Added `printed_number`; backfilled 83 verses across pages 12 and 15–18.
+4. Brevity rule into `CLAUDE.md`, not a skill — a skill must be invoked; a standing instruction needn't be.
+
+**Engineering Contribution**
+
+- *Decisions made:* Split the four Sekhiya groups into separate chants rather than one — the book restarts its numbering at each group, and a chant numbers its verses uniquely. I later found the reasoning I'd been given was overstated (book view hides verse numbers, so only the study view was ever affected) and had it corrected rather than left standing. Kept `printed_number` separate from `number` instead of renumbering verses to match the book: the Dasadhamma Sutta opens with two unnumbered chanted lines, so the book's item 1 *is* the app's verse 3, and forcing them to agree would mean lying about one or the other.
+- *Improvements made to generated code:* Three silent-data-loss gaps found in `apply_batch` by checking every key of the batch file had landed rather than trusting "it applied cleanly" — `printed_number`, `closing`, and `source_printed` on a continuation. One of my own checks was deleted as unfalsifiable: it hunted raw newlines inside JSON strings, which `json.load` makes impossible, so it could only ever fire on legitimate couplet breaks. Replaced with one that earns its place — `pali` and `pali_roman` must break in the same places. The new `printed_number` check was negative-tested against four realistic mis-transcriptions before being trusted.
+- *Roughly how much was accepted as-is vs engineered on:* Direction, standard and review; I wrote none of the code. The standard was mine and it reshaped three separate mechanisms. Clearest evidence for why review matters: a backfill that stripped the indentation off 83 lines still imported cleanly and passed all 194 tests, because Python doesn't care about indentation inside a dict literal. Only the diff caught it.
+
+---
