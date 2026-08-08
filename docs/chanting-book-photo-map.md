@@ -25,6 +25,7 @@ photograph.
 | 18 | IMG_0281 | 263 |
 | 19 | IMG_0282 | 263 |
 | 20 | IMG_0283 | 263 |
+| 21 | **IMG_0283a** | — (re-shot; suffixed to sort in place) |
 | 22 | IMG_0284 | 262 |
 | 23 | IMG_0285 | 262 |
 | 26 | IMG_0288 | 262 |
@@ -50,14 +51,27 @@ photograph.
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
 somewhere between 68 and 207 were shot twice. Those stretches are unmapped.
 
-## ⚠ Page 21 was never photographed
+## Page 21 was re-shot — `IMG_0283a.PNG`
 
-`IMG_0283` is page 20 and `IMG_0284` is page 22. There is no photograph of page
-21. It needs re-shooting before the page pass can get past page 20.
+Page 21 was missed in the original pass (`IMG_0283` is page 20, `IMG_0284` is
+page 22) and was re-shot on 2026-08-08. It arrived as `IMG_0600.PNG` at the end
+of the folder and has been **renamed `IMG_0283a.PNG` so it sorts into its right
+place** between pages 20 and 22. Folder order is page order again.
+
+The suffix was used rather than renumbering: there is no free integer between
+0283 and 0284, and shifting everything from 0284 up would invalidate every
+`IMG_xxxx` reference already written into `chanting.py` and this document.
+
+**⚠ One trap it introduces.** A naive `re.search(r'(\d+)', name)` reads
+`IMG_0283a` as **283**, colliding with page 20. Any script that maps filenames
+to pages must sort on the full stem and not assume one file per integer. Do the
+same for future re-shoots: give them the previous page's number plus a letter.
 
 Missing file numbers elsewhere (255, 293, 337, 350, 394–396, 398–399, 450,
 587–588) are deleted duplicate shots, not missing pages — page 30 is present as
-`IMG_0292` despite `IMG_0293` being absent.
+`IMG_0292` despite `IMG_0293` being absent. **A filename gap does not mean a
+missing page, and a missing page leaves no gap** — page 21 was invisible in the
+gap list. Only reading the page numbers finds this class of miss.
 
 ## The 17 chants entered before the page pass
 
@@ -70,8 +84,8 @@ own สารบัญ (already in `CONTENTS`) and the photos are the verified m
 | mettanisamsa-sutta | 22 | IMG_0284 | to verify |
 | mettanisamsa-gatha | 23 | IMG_0285 | ✅ verified 2026-08-08 |
 | devatadissa-dakkhinanumodana | 26 | IMG_0288 | ✅ verified 2026-08-08 |
-| tilakkhanadi-gatha | 27 | IMG_0289 | to verify |
-| devatabhisammantana | 27 | IMG_0289 | to verify |
+| tilakkhanadi-gatha | 27–28 | IMG_0289 / IMG_0290 | ✅ verified 2026-08-08 |
+| devatabhisammantana | 27 | IMG_0289 | ✅ verified 2026-08-08 |
 | khemakhema-saranadipika | 28 **or** 215 | IMG_0290 / IMG_0485 | ambiguous — two similar titles |
 | pabbatopama-gatha | 30 | IMG_0292 | to verify |
 | ariyadhana-gatha | 31 | IMG_0294 | to verify |
@@ -87,11 +101,14 @@ own สารบัญ (already in `CONTENTS`) and the photos are the verified m
 
 ### Two to settle by eye
 
-- **khemakhema-saranadipika** — the สารบัญ lists
-  `เขมาเขมะสะระณะทีปิกะคาถา` at page 215 and
-  `เขมาเขมะสะระณะคะมะนะปะริทีปิกาคาถา` at page 28. The entry's title matches
-  the shorter one more closely, but page 28 sits in the same run as the other
-  early chants. Check both photos.
+- **khemakhema-saranadipika** — page 28 has been read and is **Dhammapada
+  188–192**, the same text as the entry, but printed under the LONG title
+  `เขมาเขมะสะระณะคะมะนะปะริทีปิกาคาถา` and set as **ten lines of two pādas**.
+  The entry carries the SHORT title (matching the สารบัญ's page-215 listing) and
+  groups **four pādas per verse**, i.e. half as many lines. So the entry most
+  likely came from the page-215 printing, not page 28. **`IMG_0485` (p215) must
+  be read before touching this chant** — it decides both the title and the line
+  division, and getting it wrong would reshape a chant to the wrong printing.
 - **dhatupatikula-paccavekkhana** — genuinely printed twice, at 61 and 207.
   Decide which printing the entry represents, or whether it needs two.
 
@@ -147,3 +164,25 @@ So the remaining five early chants (Khemākhemasaraṇadīpikā, Saṅkhāra
 contemplation, Dhātupaṭikūla, Tilakkhaṇādi, Abhiṇhapaccavekkhaṇa) need reading
 against their pages like every other chant. Being entered early is not evidence
 of being right.
+
+## A third fault class: footnotes attributed to the wrong chant
+
+Page 27 carries one footnote, `ขุ.ขุ. 25/89, ขุ.อุ. 25/221`, and its superscript
+marker sits on the **last line of the chant above** (Devatābhisammantana). The
+entry for Tilakkhaṇādi — which merely *starts* on the same page — had taken it
+as its own source. Tilakkhaṇādi's real marker is on its last line, on page 28,
+pointing at that page's footnote `ขุ.ขุ. 25/51`.
+
+**A footnote belongs to the line its marker sits on, not to the chant that
+happens to be nearest the foot of the page.** Two chants sharing a page will
+each have their own. Check the marker, not the proximity.
+
+## Both chants on page 27 — and they disagree
+
+Page 27 is the clearest proof that layout cannot be inferred. It carries two
+chants, one above the other:
+
+- **Devatābhisammantana** — single column, one pāda to a line. Already correct.
+- **Tilakkhaṇādi** — two columns, two pādas to a line. Needed joining, 35 → 18.
+
+Same page, same book, opposite settings.
