@@ -954,8 +954,10 @@ CHANTS = [
         # stays empty and the template falls back to `title_pali`.
         'title_roman': '',
         'title_english': 'The Verses on the Three Characteristics and Others',
-        'source': 'ขุ.ขุ. 25/89, ขุ.อุ. 25/221',
+        # Footnote 1 at the foot of page 28.
+        'source': 'ขุ.ขุ. 25/51',
         'group': 'General chanting',
+        'page_start': 27,
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -1037,327 +1039,218 @@ CHANTS = [
         },
 
         'verses': [
-            # ‼ CHECK: The first three stanzas are printed with blank lines
-            #          after their first and third lines, so each four-line
-            #          stanza appears as two pairs. This spacing does not occur
-            #          in stanzas 4 onward. Reproduced by keeping the lines as
-            #          separate verses; check whether the book sets these
-            #          stanzas differently from the rest.
+            # Verified against IMG_0289.PNG (page 27) and IMG_0290.PNG (page
+            # 28) on 2026-08-08. Two columns, two pādas to a printed line, read
+            # left column then right. Seventeen lines and the นิฏฐิตา formula.
+            #
+            # ‼ CORRECTED: the thirty-four pādas were entered one to a line;
+            #              the page prints seventeen lines of two. Only the line
+            #              division changed — no word or mark was altered.
+            # ‼ CORRECTED: source was ขุ.ขุ. 25/89, ขุ.อุ. 25/221 — that is page
+            #              27's footnote, whose marker sits on the last line of
+            #              the Devatābhisammantanagāthā above, not on this chant.
+            #              This chant's own marker is on its last line and points
+            #              to page 28's footnote 1, ขุ.ขุ. 25/51.
+            # ‼ RESOLVED: the six section headings previously here were my
+            #             grouping. Neither page prints any; they are removed.
             {
-                'section': 'ติลักขะณะ: The Three Characteristics',
                 'number': 1,
-                'pali': 'สัพเพ สังขารา อะนิจจาติ',
-                'pali_roman': 'sabbe saṅkhārā aniccāti',
+                'pali': 'สัพเพ สังขารา อะนิจจาติ ยะทา ปัญญายะ ปัสสะติ',
+                'pali_roman': 'sabbe saṅkhārā aniccāti yadā paññāya passati',
                 'thai': '',
                 'paiboon': '',
-                'english': 'All conditioned things are impermanent —',
+                'english': (
+                    "All conditioned things are impermanent — when one sees "
+                    "this with wisdom,"
+                ),
             },
             {
                 'number': 2,
-                'pali': 'ยะทา ปัญญายะ ปัสสะติ',
-                'pali_roman': 'yadā paññāya passati',
+                'pali': 'อะถะ นิพพินทะติ ทุกเข เอสะ มัคโค วิสุทธิยา.',
+                'pali_roman': 'atha nibbindati dukkhe esa maggo visuddhiyā.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'when one sees this with wisdom,',
+                'english': (
+                    "then one turns away from suffering. This is the path to "
+                    "purity."
+                ),
             },
             {
                 'number': 3,
-                'pali': 'อะถะ นิพพินทะติ ทุกเข',
-                'pali_roman': 'atha nibbindati dukkhe',
+                'pali': 'สัพเพ สังขารา ทุกขาติ ยะทา ปัญญายะ ปัสสะติ',
+                'pali_roman': 'sabbe saṅkhārā dukkhāti yadā paññāya passati',
                 'thai': '',
                 'paiboon': '',
-                'english': 'then one turns away from suffering.',
+                'english': (
+                    "All conditioned things are suffering — when one sees "
+                    "this with wisdom,"
+                ),
             },
             {
                 'number': 4,
-                'pali': 'เอสะ มัคโค วิสุทธิยา.',
-                'pali_roman': 'esa maggo visuddhiyā.',
+                'pali': 'อะถะ นิพพินทะติ ทุกเข เอสะ มัคโค วิสุทธิยา.',
+                'pali_roman': 'atha nibbindati dukkhe esa maggo visuddhiyā.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'This is the path to purity.',
+                'english': (
+                    "then one turns away from suffering. This is the path to "
+                    "purity."
+                ),
             },
             {
                 'number': 5,
-                'pali': 'สัพเพ สังขารา ทุกขาติ',
-                'pali_roman': 'sabbe saṅkhārā dukkhāti',
+                'pali': 'สัพเพ ธัมมา อะนัตตาติ ยะทา ปัญญายะ ปัสสะติ',
+                'pali_roman': 'sabbe dhammā anattāti yadā paññāya passati',
                 'thai': '',
                 'paiboon': '',
-                'english': 'All conditioned things are suffering —',
+                'english': (
+                    "All things are not-self — when one sees this with "
+                    "wisdom,"
+                ),
             },
             {
                 'number': 6,
-                'pali': 'ยะทา ปัญญายะ ปัสสะติ',
-                'pali_roman': 'yadā paññāya passati',
+                'page': 28,
+                'pali': 'อะถะ นิพพินทะติ ทุกเข เอสะ มัคโค วิสุทธิยา.',
+                'pali_roman': 'atha nibbindati dukkhe esa maggo visuddhiyā.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'when one sees this with wisdom,',
+                'english': (
+                    "then one turns away from suffering. This is the path to "
+                    "purity."
+                ),
             },
             {
                 'number': 7,
-                'pali': 'อะถะ นิพพินทะติ ทุกเข',
-                'pali_roman': 'atha nibbindati dukkhe',
+                'pali': 'อัปปะกา เต มะนุสเสสุ เย ชะนา ปาระคามิโน',
+                'pali_roman': 'appakā te manussesu ye janā pāragāmino',
                 'thai': '',
                 'paiboon': '',
-                'english': 'then one turns away from suffering.',
+                'english': (
+                    "Few are they among men, those people who go to the far "
+                    "shore;"
+                ),
             },
             {
                 'number': 8,
-                'pali': 'เอสะ มัคโค วิสุทธิยา.',
-                'pali_roman': 'esa maggo visuddhiyā.',
+                'pali': 'อะถายัง อิตะรา ปะชา ตีระเมวานุธาวะติ.',
+                'pali_roman': 'athāyaṃ itarā pajā tīramevānudhāvati.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'This is the path to purity.',
+                'english': (
+                    "while the rest of this generation runs up and down "
+                    "along the near bank."
+                ),
             },
             {
                 'number': 9,
-                'pali': 'สัพเพ ธัมมา อะนัตตาติ',
-                'pali_roman': 'sabbe dhammā anattāti',
+                'pali': 'เย จะ โข สัมมะทักขาเต ธัมเม ธัมมานุวัตติโน',
+                'pali_roman': 'ye ca kho sammadakkhāte dhamme dhammānuvattino',
                 'thai': '',
                 'paiboon': '',
-                'english': 'All things are not-self —',
+                'english': (
+                    "But those who, in the Dhamma rightly declared, live in "
+                    "accordance with that Dhamma —"
+                ),
             },
-            # ‼ CHECK: The footnote 1. ขุ.ขุ. 25/89, ขุ.อุ. 25/221 is printed
-            #          between this line and the next, in the middle of the
-            #          third stanza. I read it as a page-foot footnote falling
-            #          at a page break and kept it out of the verses, placing
-            #          it in the source field. Verify that it belongs to this
-            #          chant and not to a neighbouring one, and check which
-            #          line carries the footnote marker.
             {
                 'number': 10,
-                'pali': 'ยะทา ปัญญายะ ปัสสะติ',
-                'pali_roman': 'yadā paññāya passati',
+                'pali': 'เต ชะนา ปาระเมสสันติ มัจจุเธยยัง สุทุตตะรัง.',
+                'pali_roman': 'te janā pāramessanti maccudheyyaṃ suduttaraṃ.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'when one sees this with wisdom,',
+                'english': (
+                    "those people will reach the far shore, crossing the "
+                    "realm of death, so hard to cross."
+                ),
             },
-            # ‼ CHECK: The refrain reads ทุกเข in all three stanzas, including
-            #          the anattā stanza. Consistent within this text and
-            #          standard, but worth confirming against the page since it
-            #          is the line most often mis-set.
             {
                 'number': 11,
-                'pali': 'อะถะ นิพพินทะติ ทุกเข',
-                'pali_roman': 'atha nibbindati dukkhe',
+                'pali': 'กัณหัง ธัมมัง วิปปะหายะ สุกกัง ภาเวถะ ปัณฑิโต',
+                'pali_roman': 'kaṇhaṃ dhammaṃ vippahāya sukkaṃ bhāvetha paṇḍito',
                 'thai': '',
                 'paiboon': '',
-                'english': 'then one turns away from suffering.',
+                'english': (
+                    "Abandoning the dark state, let the wise one develop the "
+                    "bright;"
+                ),
             },
             {
                 'number': 12,
-                'pali': 'เอสะ มัคโค วิสุทธิยา.',
-                'pali_roman': 'esa maggo visuddhiyā.',
+                'pali': 'โอกา อะโนกะมาคัมมะ วิเวเก ยัตถะ ทูระมัง.',
+                'pali_roman': 'okā anokamāgamma viveke yattha dūramaṃ.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'This is the path to purity.',
+                'english': (
+                    "coming from home to homelessness, into seclusion, where "
+                    "delight is hard to find."
+                ),
             },
             {
-                'section': 'ปาระคามิโน: Those Who Go Beyond',
                 'number': 13,
-                'pali': 'อัปปะกา เต มะนุสเสสุ',
-                'pali_roman': 'appakā te manussesu',
+                'pali': 'ตัตราภิระติมิจเฉยยะ หิต์วา กาเม อะกิญจะโน',
+                'pali_roman': 'tatrābhiratimiccheyya hitvā kāme akiñcano',
                 'thai': '',
                 'paiboon': '',
-                'english': 'Few are they among men,',
+                'english': (
+                    "There let him seek his delight, having left sensual "
+                    "pleasures, owning nothing;"
+                ),
             },
             {
                 'number': 14,
-                'pali': 'เย ชะนา ปาระคามิโน',
-                'pali_roman': 'ye janā pāragāmino',
+                'pali': 'ปะริโยทะเปยยะ อัตตานัง จิตตักเลเสหิ ปัณฑิโต.',
+                'pali_roman': 'pariyodapeyya attānaṃ cittaklesehi paṇḍito.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'those people who go to the far shore;',
+                'english': (
+                    "let the wise one cleanse himself of the defilements of "
+                    "the mind."
+                ),
             },
             {
                 'number': 15,
-                'pali': 'อะถายัง อิตะรา ปะชา',
-                'pali_roman': 'athāyaṃ itarā pajā',
+                'pali': 'เยสัง สัมโพธิยังเคสุ สัมมา จิตตัง สุภาวิตัง',
+                'pali_roman': 'yesaṃ sambodhiyaṅgesu sammā cittaṃ subhāvitaṃ',
                 'thai': '',
                 'paiboon': '',
-                'english': 'while the rest of this generation',
+                'english': (
+                    "Those whose minds, in the factors of awakening, are "
+                    "rightly and well developed;"
+                ),
             },
             {
                 'number': 16,
-                'pali': 'ตีระเมวานุธาวะติ.',
-                'pali_roman': 'tīramevānudhāvati.',
+                'pali': 'อาทานะปะฏินิสสัคเค อะนุปาทายะ เย ระตา',
+                'pali_roman': 'ādānapaṭinissagge anupādāya ye ratā',
                 'thai': '',
                 'paiboon': '',
-                'english': 'runs up and down along the near bank.',
+                'english': (
+                    "who in the relinquishing of grasping, without clinging, "
+                    "take delight —"
+                ),
             },
             {
                 'number': 17,
-                'pali': 'เย จะ โข สัมมะทักขาเต',
-                'pali_roman': 'ye ca kho sammadakkhāte',
+                'pali': 'ขีณาสะวา ชุติมันโต เต โลเก ปะรินิพพุตาติ.',
+                'pali_roman': 'khīṇāsavā jutimanto te loke parinibbutāti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'But those who, in the Dhamma rightly declared,',
+                'english': (
+                    "with taints destroyed, radiant, they are wholly "
+                    "quenched in the world."
+                ),
             },
             {
                 'number': 18,
-                'pali': 'ธัมเม ธัมมานุวัตติโน',
-                'pali_roman': 'dhamme dhammānuvattino',
-                'thai': '',
-                'paiboon': '',
-                'english': 'live in accordance with that Dhamma —',
-            },
-            {
-                'number': 19,
-                'pali': 'เต ชะนา ปาระเมสสันติ',
-                'pali_roman': 'te janā pāramessanti',
-                'thai': '',
-                'paiboon': '',
-                'english': 'those people will reach the far shore,',
-            },
-            {
-                'number': 20,
-                'pali': 'มัจจุเธยยัง สุทุตตะรัง.',
-                'pali_roman': 'maccudheyyaṃ suduttaraṃ.',
-                'thai': '',
-                'paiboon': '',
-                'english': 'crossing the realm of death, so hard to cross.',
-            },
-            {
-                'section': 'กัณหัง ธัมมัง: The Dark and the Bright',
-                'number': 21,
-                'pali': 'กัณหัง ธัมมัง วิปปะหายะ',
-                'pali_roman': 'kaṇhaṃ dhammaṃ vippahāya',
-                'thai': '',
-                'paiboon': '',
-                'english': 'Abandoning the dark state,',
-            },
-            {
-                'number': 22,
-                'pali': 'สุกกัง ภาเวถะ ปัณฑิโต',
-                'pali_roman': 'sukkaṃ bhāvetha paṇḍito',
-                'thai': '',
-                'paiboon': '',
-                'english': 'let the wise one develop the bright;',
-            },
-            {
-                'number': 23,
-                'pali': 'โอกา อะโนกะมาคัมมะ',
-                'pali_roman': 'okā anokamāgamma',
-                'thai': '',
-                'paiboon': '',
-                'english': 'coming from home to homelessness,',
-            },
-            # ‼ CHECK: วิเวเก ยัตถะ ทูระมัง — ทูระมัง transliterated faithfully
-            #          as dūramaṃ. Some editions read ทูระมา or set the word
-            #          differently. I kept the printed form rather than
-            #          substituting.
-            {
-                'number': 24,
-                'pali': 'วิเวเก ยัตถะ ทูระมัง.',
-                'pali_roman': 'viveke yattha dūramaṃ.',
-                'thai': '',
-                'paiboon': '',
-                'english': 'into seclusion, where delight is hard to find.',
-            },
-            {
-                'section': 'ปะริโยทะเปยยะ อัตตานัง: The Cleansing of the Mind',
-                'number': 25,
-                'pali': 'ตัตราภิระติมิจเฉยยะ',
-                'pali_roman': 'tatrābhiratimiccheyya',
-                'thai': '',
-                'paiboon': '',
-                'english': 'There let him seek his delight,',
-            },
-            # ‼ CHECK: หิต์วา carries thanthakhat over ต์. Transliterated
-            #          faithfully as hitvā.
-            {
-                'number': 26,
-                'pali': 'หิต์วา กาเม อะกิญจะโน',
-                'pali_roman': 'hitvā kāme akiñcano',
-                'thai': '',
-                'paiboon': '',
-                'english': 'having left sensual pleasures, owning nothing;',
-            },
-            {
-                'number': 27,
-                'pali': 'ปะริโยทะเปยยะ อัตตานัง',
-                'pali_roman': 'pariyodapeyya attānaṃ',
-                'thai': '',
-                'paiboon': '',
-                'english': 'let the wise one cleanse himself',
-            },
-            # ‼ CHECK: จิตตักเลเสหิ transliterated faithfully as cittaklesehi.
-            #          Some editions read cittakilesehi with the vowel present.
-            #          I kept the printed form.
-            {
-                'number': 28,
-                'pali': 'จิตตักเลเสหิ ปัณฑิโต.',
-                'pali_roman': 'cittaklesehi paṇḍito.',
-                'thai': '',
-                'paiboon': '',
-                'english': 'of the defilements of the mind.',
-            },
-            {
-                'section': 'สัมโพธิยังคะ: The Factors of Awakening',
-                'number': 29,
-                'pali': 'เยสัง สัมโพธิยังเคสุ',
-                'pali_roman': 'yesaṃ sambodhiyaṅgesu',
-                'thai': '',
-                'paiboon': '',
-                'english': 'Those whose minds, in the factors of awakening,',
-            },
-            {
-                'number': 30,
-                'pali': 'สัมมา จิตตัง สุภาวิตัง',
-                'pali_roman': 'sammā cittaṃ subhāvitaṃ',
-                'thai': '',
-                'paiboon': '',
-                'english': 'are rightly and well developed;',
-            },
-            {
-                'number': 31,
-                'pali': 'อาทานะปะฏินิสสัคเค',
-                'pali_roman': 'ādānapaṭinissagge',
-                'thai': '',
-                'paiboon': '',
-                'english': 'who in the relinquishing of grasping,',
-            },
-            # ‼ CHECK: The final stanza runs to six lines where every other
-            #          stanza in the chant has four. Reproduced as pasted; this
-            #          may be two stanzas set without a break, or a genuine
-            #          six-line unit. My section covers all six.
-            {
-                'number': 32,
-                'pali': 'อะนุปาทายะ เย ระตา',
-                'pali_roman': 'anupādāya ye ratā',
-                'thai': '',
-                'paiboon': '',
-                'english': 'without clinging, take delight —',
-            },
-            {
-                'number': 33,
-                'pali': 'ขีณาสะวา ชุติมันโต',
-                'pali_roman': 'khīṇāsavā jutimanto',
-                'thai': '',
-                'paiboon': '',
-                'english': 'with taints destroyed, radiant,',
-            },
-            # ‼ CORRECTED: pali  ปะรินิพพุตาติ.' → ปะรินิพพุตาติ.. Stray
-            #              apostrophe after the full stop removed (an OCR
-            #              artefact). Verify against the printed page.
-            # ‼ CORRECTED: pali_roman  parinibbutāti.' → parinibbutāti..
-            #              Follows the apostrophe removal. Verify against the
-            #              printed page.
-            {
-                'number': 34,
-                'pali': 'เต โลเก ปะรินิพพุตาติ.',
-                'pali_roman': 'te loke parinibbutāti.',
-                'thai': '',
-                'paiboon': '',
-                'english': 'they are wholly quenched in the world.',
-            },
-            {
-                'section': 'นิฏฐิตา: The Closing Formula',
-                'number': 35,
                 'pali': 'ติลักขะณาทิคาถา นิฏฐิตา.',
                 'pali_roman': 'tilakkhaṇādigāthā niṭṭhitā.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'The verses on the three characteristics and others are ended.',
+                'english': (
+                    "The verses on the three characteristics and others are "
+                    "ended."
+                ),
             },
         ],
     },
@@ -1866,8 +1759,11 @@ CHANTS = [
         'title_english': 'The Verses of Address to the Devas',
         # Left empty on purpose: the book text gives no canonical
         # attribution and none has been supplied from memory.
-        'source': '',
+        # Footnote 1 at the foot of page 27. Its marker sits on this
+        # chant's last line, อัปปะมัตตา.
+        'source': 'ขุ.ขุ. 25/89, ขุ.อุ. 25/221',
         'group': 'General chanting',
+        'page_start': 27,
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -1937,8 +1833,14 @@ CHANTS = [
         },
 
         'verses': [
+            # Verified against IMG_0289.PNG (page 27) on 2026-08-08. Printed in
+            # a SINGLE column, one pāda to a line — unlike the Tilakkhaṇādi
+            # gāthā directly below it on the same page. The line division here
+            # was already right and is unchanged.
+            #
+            # ‼ RESOLVED: the five section headings previously here were my
+            #             grouping. The page prints none; they are removed.
             {
-                'section': 'ยานีธะ ภูตานิ: The Address to the Assembled Beings',
                 'number': 1,
                 'pali': 'ยานีธะ ภูตานิ สะมาคะตานิ',
                 'pali_roman': 'yānīdha bhūtāni samāgatāni',
@@ -1975,7 +1877,6 @@ CHANTS = [
                 'english': 'and moreover let them listen respectfully to what is spoken.',
             },
             {
-                'section': 'สุภาสิตัง: The Offering of the Well-Spoken Word',
                 'number': 5,
                 'pali': 'สุภาสิตัง กิญจิปิ โว ภะเณมุ',
                 'pali_roman': 'subhāsitaṃ kiñcipi vo bhaṇemu',
@@ -2022,7 +1923,6 @@ CHANTS = [
                 'english': 'Therefore let all beings assemble.',
             },
             {
-                'section': 'เมตตา: The Exhortation to Loving-Kindness',
                 'number': 9,
                 'pali': 'เมตตัง กะโรถะ มานุสิยา ปะชายะ',
                 'pali_roman': 'mettaṃ karotha mānusiyā pajāya',
@@ -2063,7 +1963,6 @@ CHANTS = [
                 'english': 'hoping for help in return.',
             },
             {
-                'section': 'รักขะถะ: The Request for Protection',
                 'number': 13,
                 'pali': 'เต โข มะนุสสา ตะนุกานุภาวา',
                 'pali_roman': 'te kho manussā tanukānubhāvā',
@@ -2102,7 +2001,6 @@ CHANTS = [
                 'english': 'Therefore guard them, being heedful.',
             },
             {
-                'section': 'นิฏฐิตา: The Closing Formula',
                 'number': 17,
                 'pali': 'เทวะตาภิสัมมันตะนะคาถา นิฏฐิตา.',
                 'pali_roman': 'devatābhisammantanagāthā niṭṭhitā.',
