@@ -2671,10 +2671,11 @@ CHANTS = [
         # ‼ CORRECTED: pali นิโครระมิวะ → นิโค์รธะมิวะ (nigorraramiva →
         #              nigrodhamiva). The page prints นิโค์รธะมิวะ, giving
         #              'like a banyan tree' — which the simile requires.
-        # ‼ CHECK: the page appears to print วิรุพหะมูละสันตานัง with พห
-        #          where this entry has วิรุฬหะ (viruḷha-). At photo
-        #          resolution I cannot tell พ from ฬ with confidence, so the
-        #          entry is left as it was. Worth one look at the book.
+        # ‼ RESOLVED: วิรุฬหะ, not วิรุพหะ. The photograph could not separate
+        #             พ from ฬ at that size; Josh read it off the physical book
+        #             on 2026-08-08 and confirmed ฬ, which is what the entry
+        #             already had. Nothing changed — the line is now settled
+        #             rather than merely unchallenged.
         # ‼ CHECK: I have made this one section rather than several, since
         #          every stanza closes with the same refrain and the chant does
         #          not divide by subject. The section name simply repeats the
@@ -2991,16 +2992,15 @@ CHANTS = [
                 ),
             },
             # ‼ CHECK: วิรุฬหะมูละสันตานัง and its simile run across verses
-            #          37–38, but the Pali order places the banyan's roots
+            #          19–20, but the Pali order places the banyan's roots
             #          first and the wind second, while my English inverts them
             #          for sense. The pairing is by meaning; the Pali order is
-            #          the book's.
-            # ‼ CHECK: นิโครระมิวะ transliterated faithfully as nigorraramiva.
-            #          Standard editions read นิโคฺรธะมิวะ (nigrodhamiva), the
-            #          banyan tree. The printed form has ร ระ where ธ is
-            #          expected, which looks like an OCR error. Kept as printed
-            #          rather than substituted; this is the least secure line
-            #          in the chant.
+            #          the book's. (The verse numbers read 37–38 here until the
+            #          pādas were joined two to a line; the note itself stands.)
+            # ‼ RESOLVED: Josh read this line off the physical book on
+            #             2026-08-08. It is วิรุฬหะ with ฬ — the พ the
+            #             photograph seemed to show was the camera, not the
+            #             page. The reading below was already right.
             {
                 'number': 19,
                 'pali': 'วิรุฬหะมูละสันตานัง นิโค์รธะมิวะ มาลุโต',
@@ -3012,11 +3012,10 @@ CHANTS = [
                     "roots have grown,"
                 ),
             },
-            # ‼ CHECK: A stray double quotation mark follows the full stop:
-            #          ทุพภะตีติ.". The same artefact has now appeared at the
-            #          close of chants 8, 9 and the Mettānisaṃsasuttaṃ. Four
-            #          occurrences across four pages; reproduced as pasted
-            #          rather than tidied.
+            # ‼ RESOLVED: the 'stray double quotation mark' after ทุพภะตีติ.
+            #             was a superscript footnote marker, not punctuation —
+            #             see the chant-level note. It has been removed and the
+            #             footnote it pointed at is this chant's `source`.
             {
                 'number': 20,
                 'pali': 'อะมิตตา นัปปะสะหันติ โย มิตตานัง นะ ทุพภะตีติ.',
