@@ -740,6 +740,19 @@
             {% if verse.thai %}<p class="layer layer-thai">{{ verse.thai }}</p>{% endif %}
             {% if verse.paiboon %}<p class="layer layer-paiboon">{{ verse.paiboon }}</p>{% endif %}
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
+            {# The book's own footnote offering another reading of one word in
+               this line. Inside the verse, because that is what it is about,
+               and after the layers so it never comes between a line and its
+               meaning. It is a note, not something to chant. #}
+            {% for variant in verse.variants %}
+            <p class="verse-variant">
+                <span class="variant-marker">{{ variant.marker }}</span>
+                <span class="variant-word">{{ variant.word }}</span>
+                — the book's footnote gives another reading:
+                <span class="variant-reading">{{ variant.reading }}</span>{% if variant.reading_roman %}
+                <span class="variant-reading-roman">({{ variant.reading_roman }})</span>{% endif %}
+            </p>
+            {% endfor %}
         </div>
         {# A direction printed BETWEEN the lines rather than after the chant —
            (กราบพร้อมกัน) under each of the three salutations on page 1. It

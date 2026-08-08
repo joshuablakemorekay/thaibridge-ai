@@ -18,7 +18,8 @@ import pytest
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from chanting import build_page_index, check_page_blocks  # noqa: E402
+from chanting import (  # noqa: E402
+    build_page_index, check_page_blocks, check_variants)
 
 
 def verse(number, page=None):
@@ -1068,6 +1069,125 @@ class TestThePageRoutes:
             '/chanting/pages', follow_redirects=True).get_data(as_text=True)
 
         assert 'no page numbers yet' in page
+
+
+class TestVariantReadings:
+    """The book's footnotes offering another spelling of one word.
+
+    The thing being protected is not the rendering — it is the ATTACHMENT. A
+    variant filed against the wrong verse renders as a note about a word that
+    is not on the line, and this book has already made that mistake twice by
+    hand: once by giving a chant the footnote of the chant above it, and once
+    by pointing page 26's footnote at verse 4 when it belongs to verse 2.
+    Neither looked wrong afterwards.
+    """
+
+    def verse_with(self, variant, pali='สัญญะเต พ์รัห์มะจาริโน.'):
+        return {'number': 2, 'pali': pali, 'pali_roman': 'saññate brahmacārino.',
+                'english': 'the farers in the holy life,',
+                'variants': [variant]}
+
+    def book(self, verse_dict):
+        return [{'id': 'devata', 'title_english': 'devata', 'page_start': 26,
+                 'verses': [verse_dict]}]
+
+    SOUND = {'marker': '๒', 'word': 'พ์รัห์มะจาริโน',
+             'reading': 'พ์รัห์มจาระโย', 'reading_roman': ''}
+
+    def test_a_sound_variant_passes(self):
+        assert check_variants(self.book(self.verse_with(self.SOUND))) == []
+
+    def test_the_real_book_is_sound(self):
+        assert check_variants() == []
+
+    def test_a_variant_on_the_wrong_verse_is_caught(self):
+        """The failure this check exists for: the note is real, the word is
+        not on this line, and the reader is left hunting."""
+        problems = check_variants(self.book(
+            self.verse_with(self.SOUND, pali='ยา ตัตถะ เทวะตา อาสุง')))
+
+        assert len(problems) == 1
+        assert 'filed against the wrong line' in problems[0]
+
+    def test_a_variant_found_in_the_roman_layer_passes(self):
+        """Part of this book prints its Pali in roman letters, leaving `pali`
+        empty. A variant there is on `pali_roman` and is not misfiled."""
+        verse_dict = self.verse_with(
+            dict(self.SOUND, word='brahmacārino'), pali='')
+
+        assert check_variants(self.book(verse_dict)) == []
+
+    def test_a_reading_that_repeats_the_word_is_caught(self):
+        """A footnote that changes nothing is a transcription slip, not a
+        variant — the book would not print one."""
+        problems = check_variants(self.book(self.verse_with(
+            dict(self.SOUND, reading='พ์รัห์มะจาริโน'))))
+
+        assert any('repeats `word`' in p for p in problems)
+
+    def test_an_empty_reading_is_caught(self):
+        problems = check_variants(self.book(self.verse_with(
+            dict(self.SOUND, reading=''))))
+
+        assert any('says nothing' in p for p in problems)
+
+    def test_a_missing_marker_is_caught(self):
+        """The marker is what ties the note to the page it was printed on;
+        footnote numbers restart at 1 on every page."""
+        problems = check_variants(self.book(self.verse_with(
+            dict(self.SOUND, marker=''))))
+
+        assert any('no printed marker' in p for p in problems)
+
+
+class TestVariantReadingsOnScreen:
+    """Rendered — in both views, because a reader arrives by either."""
+
+    @pytest.fixture()
+    def views(self, monkeypatch):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        only = copy.deepcopy(chanting_module.CHANTS[0])
+        only['id'] = 'only'
+        only['page_start'] = 26
+        only['verses'][0]['variants'] = [
+            {'marker': '๒', 'word': only['verses'][0]['pali'],
+             'reading': 'อีกอย่างหนึ่ง', 'reading_roman': 'aññathā'},
+        ]
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [only])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
+        client = flask_app.app.test_client()
+        return {
+            'page': client.get('/chanting/page/26',
+                               follow_redirects=True).get_data(as_text=True),
+            'chant': client.get('/chanting',
+                                follow_redirects=True).get_data(as_text=True),
+        }
+
+    def test_the_reading_reaches_the_page_view(self, views):
+        assert 'อีกอย่างหนึ่ง' in views['page']
+        assert 'verse-variant' in views['page']
+
+    def test_the_reading_reaches_the_chant_view(self, views):
+        assert 'อีกอย่างหนึ่ง' in views['chant']
+        assert 'verse-variant' in views['chant']
+
+    def test_the_printed_marker_is_shown_as_the_book_prints_it(self, views):
+        """Thai numerals on a page that uses them; never converted."""
+        assert '๒' in views['page']
+
+    def test_the_romanisation_is_shown_where_there_is_one(self, views):
+        assert 'aññathā' in views['page']
+
+    def test_it_is_not_dressed_as_a_sixth_layer(self, views):
+        """Nobody chants a variant. If it ever picks up a `layer-` class it
+        joins the layer toggles and starts reading as a line of the chant."""
+        marked = views['page'].split('verse-variant')[1].split('</p>')[0]
+        assert 'layer-' not in marked
 
 
 if __name__ == '__main__':

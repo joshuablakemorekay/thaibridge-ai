@@ -367,6 +367,18 @@
             {% if verse.thai %}<p class="layer layer-thai">{{ verse.thai }}</p>{% endif %}
             {% if verse.paiboon %}<p class="layer layer-paiboon">{{ verse.paiboon }}</p>{% endif %}
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
+            {# A variant reading from the book's own footnotes. Same markup as
+               the page-by-page view, so one word spelt two ways looks the same
+               whichever way the reader came in. #}
+            {% for variant in verse.variants %}
+            <p class="verse-variant">
+                <span class="variant-marker">{{ variant.marker }}</span>
+                <span class="variant-word">{{ variant.word }}</span>
+                — the book's footnote gives another reading:
+                <span class="variant-reading">{{ variant.reading }}</span>{% if variant.reading_roman %}
+                <span class="variant-reading-roman">({{ variant.reading_roman }})</span>{% endif %}
+            </p>
+            {% endfor %}
         </div>
         {% endfor %}
         </div><!-- /.chant-body -->

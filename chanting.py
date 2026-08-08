@@ -85,6 +85,44 @@ Both chanted layers (`pali`, `pali_roman`) keep their couplet line break as a
 literal "\\n"; the template renders it with `white-space: pre-line` so the two
 scripts break in the same place and can be read side by side down the page.
 
+A verse may also carry `variants` — a list, and almost always absent. This is
+the book's own footnote offering a DIFFERENT READING of one word in that line,
+which is a thing a scholarly chanting book does and a thing nothing else in
+this file could hold. Page 26 prints ...พ์รัห์มะจาริโน. with a superscript ๒,
+and the note at the foot of the page reads พ์รัห์มจาระโย: the same word, spelt
+another way, offered as an alternative. Until this field existed there was
+nowhere to put it, so it was recorded in a comment and shown to nobody.
+
+It sits on the VERSE and not on the chant, for the reason the photo map gives
+about footnotes generally: a footnote belongs to the line its marker sits on.
+Two chants can share a page and each have their own, and a variant filed
+against the chant rather than the line would leave a reader hunting for which
+word it meant.
+
+Each entry carries four keys, and the split between them is the usual one —
+what the book prints, and what this app added:
+
+  * `marker`        — the superscript as PRINTED, in whatever numerals the page
+                      uses (๒ on page 26). Footnote numbers restart at 1 on
+                      every page, so this is only ever meaningful beside its
+                      own page.
+  * `word`          — the word in this verse's `pali` that the marker sits on,
+                      copied from it character for character. It is checked:
+                      `check_variants` refuses a `word` that is not in the line,
+                      because a variant pointing at the wrong word is the same
+                      class of error as a chant on the wrong page.
+  * `reading`       — what the footnote prints, character for character. The
+                      book's text, never tidied to look more like `word`. On
+                      page 26 the two do not even carry the same marks, and
+                      that disagreement is the fact being recorded.
+  * `reading_roman` — IAST of `reading`, written HERE and not by the book,
+                      exactly as `pali_roman` is. Optional: leave it out rather
+                      than guess at a form you cannot read confidently.
+
+A variant is NOT a correction and must never be applied to the line. `pali`
+stays exactly as the page prints it; the variant sits beside it and says the
+book knows of another reading.
+
 ⚠️ The `paiboon` AND `pali_roman` values below are UNREVIEWED DRAFTS. Josh to
 check both against the physical chanting book before any printed use.
 
@@ -1543,12 +1581,13 @@ CHANTS = [
         # ‼ CHECK: The heading is numbered 7. in the source, which I have taken
         #          as the book's chant number and left out of title_thai.
         #          Confirm you want chant numbers dropped.
-        # ‼ CHECK: Footnote 2 reads พร้ห์มจาระโย and is a variant reading,
-        #          presumably for พ์รัห์มะจาริโน in verse 4. Its spelling is
-        #          itself odd — พร้ห์ม carries mai tho where the verse has
-        #          พ์รัห์ม with thanthakhat over พ์ — and the two forms do not
-        #          match each other. I have kept the footnote out of the
-        #          verses; check both spellings against the page.
+        # ‼ RESOLVED: footnote 2 IS a variant reading, and it is now on the
+        #             verse whose marker it belongs to — verse 2, in
+        #             `variants`. The verse it was guessed at here ("verse 4")
+        #             was the old one-pāda-to-a-line numbering, before the
+        #             pādas were joined to match the page. The disagreement
+        #             between the two transcriptions of the footnote is carried
+        #             as a ‼ CHECK down beside the verses.
 
         'id': 'devatadissa-dakkhinanumodana',
         'title_thai': 'เทวะตาทิสสะทักขิณานุโมทะนาคาถา',
@@ -1644,10 +1683,18 @@ CHANTS = [
             #              paste dropped.
             # ‼ RESOLVED: the two section headings previously here were my
             #             grouping. The page prints none; they have been removed.
-            # ‼ CHECK: a superscript 2 follows พ์รัห์มะจาริโน. on the page,
-            #          pointing to a footnote that reads พ์รัห์มจาระโย — a
-            #          variant of the same word. Not stored anywhere yet; the
-            #          entry has no place for a per-line variant reading.
+            # ‼ RESOLVED: the superscript ๒ after พ์รัห์มะจาริโน. on page 26
+            #             now has somewhere to live. It is on verse 2 below, in
+            #             `variants`, where the marker actually sits.
+            # ‼ CHECK [IMG_0288.PNG]: the footnote has been written down twice
+            #         in this file and the two do not agree. The chant-level
+            #         note, taken from the pasted text, reads พร้ห์มจาระโย with
+            #         mai tho. The verified page read of 2026-08-08 reads
+            #         พ์รัห์มจาระโย with thanthakhat, matching the verse above
+            #         it. `variants` carries the page read, because that one
+            #         came from the photograph — but ONE of the two is a
+            #         mistranscription of a single mark, and only the book
+            #         settles which. Worth a look while page 26 is open.
             {
                 'number': 1,
                 'pali': 'ยัส์มิง ปะเทเส กัปเปติ วาสัง ปัณฑิตะชาติโย',
@@ -1669,6 +1716,21 @@ CHANTS = [
                     "having fed there the virtuous, the restrained, the "
                     "farers in the holy life,"
                 ),
+                # The book's own footnote ๒, keyed to the last word of this
+                # line. It offers another reading; it does not correct this
+                # one, so the line above stands exactly as page 26 prints it.
+                'variants': [
+                    {
+                        'marker': '๒',
+                        'word': 'พ์รัห์มะจาริโน',
+                        'reading': 'พ์รัห์มจาระโย',
+                        # -jāro is not a form this reader can vouch for, and a
+                        # guessed romanisation of a variant would be a second
+                        # invention on top of a disputed transcription. Left
+                        # out until the word is settled against the book.
+                        'reading_roman': '',
+                    },
+                ],
             },
             {
                 'number': 3,
@@ -11979,6 +12041,57 @@ def check_page_blocks(chants=None, page_blocks=None):
                     f'{where}: English that does not say it was written for '
                     f'this app'
                 )
+    return problems
+
+
+def check_variants(chants=None):
+    """Return a list of problems with the verse `variants`, empty when sound.
+
+    A variant reading is a footnote about ONE WORD on ONE LINE, and the only
+    thing that makes it readable is that the reader can see which word. So the
+    check that matters is that `word` actually occurs in the line it is filed
+    against — a variant hung on the wrong verse would render as a note about a
+    word that is not there, which is a puzzle rather than a note.
+
+    That is the same fault the photo map records twice over: a footnote taken
+    by the chant nearest the foot of the page rather than the one its marker
+    sits on, and this very footnote filed against verse 4 when the pādas were
+    one to a line. Both were caught by eye, months apart. This catches them on
+    import.
+
+    `reading` is checked only for being present and different from `word`. A
+    variant that repeats the word it varies is a transcription slip — it says
+    the book printed a footnote to tell you nothing.
+    """
+    if chants is None:
+        chants = CHANTS
+
+    problems = []
+    for chant in chants:
+        for verse in chant['verses']:
+            for index, variant in enumerate(verse.get('variants', ())):
+                where = (f"{chant['id']} verse {verse.get('number')}, "
+                         f"variant {index}")
+                word = variant.get('word')
+                if not word:
+                    problems.append(f'{where}: names no word')
+                # Either chanted layer may be the one the book printed — part
+                # of this book sets its Pali in roman letters and leaves `pali`
+                # empty — so the word is looked for in both rather than in
+                # whichever one this half of the book happens to use.
+                elif word not in (verse.get('pali') or '') and \
+                        word not in (verse.get('pali_roman') or ''):
+                    problems.append(
+                        f"{where}: '{word}' is not in this verse, so the "
+                        f"variant is filed against the wrong line"
+                    )
+                if not variant.get('reading'):
+                    problems.append(f'{where}: no `reading`, so it says nothing')
+                elif variant.get('reading') == word:
+                    problems.append(
+                        f'{where}: `reading` repeats `word` unchanged')
+                if not variant.get('marker'):
+                    problems.append(f'{where}: no printed marker')
     return problems
 
 

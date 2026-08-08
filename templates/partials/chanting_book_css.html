@@ -198,6 +198,35 @@
         margin-bottom: 0.5rem;
     }
 
+    /* A variant reading — the book's own footnote saying one word of the line
+       above has another spelling. Set quietly and OUTSIDE the layer colours on
+       purpose: it is not a sixth layer and must never look like one, because
+       nobody chants it. It is a note about the line, so it reads like a note.
+
+       The book keys it with a superscript at the foot of the page. This page
+       scrolls, so the marker is reproduced beside the note instead — the same
+       decision, and for the same reason, as the citation footnotes lower down
+       the page template. */
+    .verse-variant {
+        font-size: 0.85rem;
+        color: #55483a;
+        margin: 0.6rem 0 0;
+        padding-left: 0.75rem;
+        border-left: 3px dotted #d8d0bd;
+        max-width: 70ch;
+    }
+    .verse-variant .variant-marker {
+        font-weight: bold;
+        margin-right: 0.35rem;
+    }
+    /* Both words are Pali in Thai script, so they get the Pali layer's size
+       rather than the note's — a variant you cannot read the letters of is no
+       use, and the whole point of this footnote is one mark's difference. */
+    .verse-variant .variant-word,
+    .verse-variant .variant-reading { font-size: 1.05rem; }
+    .verse-variant .variant-reading { font-weight: 600; }
+    .verse-variant .variant-reading-roman { font-style: italic; }
+
     /* One visual treatment per layer, so the eye can lock onto the line
        you are chanting from without reading the others. */
     .layer { margin: 0 0 0.7rem; }
