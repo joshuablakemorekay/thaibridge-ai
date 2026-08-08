@@ -69,7 +69,7 @@ own สารบัญ (already in `CONTENTS`) and the photos are the verified m
 |---|---:|---|---|
 | mettanisamsa-sutta | 22 | IMG_0284 | to verify |
 | mettanisamsa-gatha | 23 | IMG_0285 | ✅ verified 2026-08-08 |
-| devatadissa-dakkhinanumodana | 26 | IMG_0288 | to verify |
+| devatadissa-dakkhinanumodana | 26 | IMG_0288 | ✅ verified 2026-08-08 |
 | tilakkhanadi-gatha | 27 | IMG_0289 | to verify |
 | devatabhisammantana | 27 | IMG_0289 | to verify |
 | khemakhema-saranadipika | 28 **or** 215 | IMG_0290 / IMG_0485 | ambiguous — two similar titles |
@@ -116,7 +116,7 @@ and there is no way to tell but to look:
 
 - **Two Pali pādas to a line**, Thai as a block beneath or absent —
   Tilokavijaya (220), Mettānisaṃsagāthā (23), Bhaddekaratta (33),
-  Pabbatopama (30).
+  Pabbatopama (30), Devatādissadakkhiṇānumodanā (26).
 - **One Pali pāda to a line, Thai alongside in the right column** —
   Bhārasutta (218–219).
 - **A two-column list, one item per cell, read left cell then right cell** —
@@ -134,3 +134,16 @@ turned up in three chants so far (Tilokavijaya lines 1–3, Dvattiṃsākāra
 throughout, and it is what the old "kept as printed, standard editions differ"
 notes were actually seeing). Suspect it in any chant whose order disagrees with
 the canonical text.
+
+## The first six chants are not exempt
+
+The pāda-pairing pass deliberately left the six earliest chants alone, on the
+understanding that they had already been checked. Page 26 shows that
+**Devatādissadakkhiṇānumodanāgāthā — the sixth — had the same fault**: twelve
+pādas entered one to a line where the book prints six lines of two. It has been
+joined.
+
+So the remaining five early chants (Khemākhemasaraṇadīpikā, Saṅkhāra
+contemplation, Dhātupaṭikūla, Tilakkhaṇādi, Abhiṇhapaccavekkhaṇa) need reading
+against their pages like every other chant. Being entered early is not evidence
+of being right.

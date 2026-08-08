@@ -1668,6 +1668,7 @@ CHANTS = [
         ),
         'source': 'วิ. มหา. 5/92 ที. มหา. 10/105',
         'group': 'General chanting',
+        'page_start': 26,
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -1737,137 +1738,99 @@ CHANTS = [
         },
 
         'verses': [
-            # ‼ CHECK: ยัส์มิง carries thanthakhat over ส์. Transliterated
-            #          faithfully as yasmiṃ, which is the standard form; noted
-            #          only because the mark placement should be confirmed.
+            # Verified against IMG_0288.PNG (page 26) on 2026-08-08. The page
+            # sets this chant in two columns, two pādas to a printed line, read
+            # left column then right. It occupies the foot of page 26 under the
+            # heading 7. เทวะตาทิสสะทักขิณานุโมทะนาคาถา and closes there.
+            #
+            # ‼ CORRECTED: the twelve pādas were entered one to a line. The page
+            #              prints six lines of two pādas each. Only the line
+            #              division changed — no word or mark was altered.
+            # ‼ CORRECTED: pali พ์รัห์มะจาริโน → พ์รัห์มะจาริโน. — the page
+            #              closes the second line with a full stop, which the
+            #              paste dropped.
+            # ‼ RESOLVED: the two section headings previously here were my
+            #             grouping. The page prints none; they have been removed.
+            # ‼ CHECK: a superscript 2 follows พ์รัห์มะจาริโน. on the page,
+            #          pointing to a footnote that reads พ์รัห์มจาระโย — a
+            #          variant of the same word. Not stored anywhere yet; the
+            #          entry has no place for a per-line variant reading.
             {
-                'section': 'เทวะตาทิสสะทักขิณานุโมทะนาคาถา: The Verses of Dedication',
                 'number': 1,
-                'pali': 'ยัส์มิง ปะเทเส กัปเปติ',
-                'pali_roman': 'yasmiṃ padese kappeti',
+                'pali': 'ยัส์มิง ปะเทเส กัปเปติ วาสัง ปัณฑิตะชาติโย',
+                'pali_roman': 'yasmiṃ padese kappeti vāsaṃ paṇḍitajātiyo',
                 'thai': '',
                 'paiboon': '',
-                'english': 'In whatever place he makes',
+                'english': (
+                    "In whatever place he makes his dwelling, one of wise "
+                    "nature,"
+                ),
             },
             {
                 'number': 2,
-                'pali': 'วาสัง ปัณฑิตะชาติโย',
-                'pali_roman': 'vāsaṃ paṇḍitajātiyo',
+                'pali': 'สีละวันเตตถะ โภเชต์วา สัญญะเต พ์รัห์มะจาริโน.',
+                'pali_roman': 'sīlavantettha bhojetvā saññate brahmacārino.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'his dwelling, one of wise nature,',
+                'english': (
+                    "having fed there the virtuous, the restrained, the "
+                    "farers in the holy life,"
+                ),
             },
-            # ‼ CHECK: โภเชต์วา carries thanthakhat over ต์. Transliterated
-            #          faithfully as bhojetvā.
             {
                 'number': 3,
-                'pali': 'สีละวันเตตถะ โภเชต์วา',
-                'pali_roman': 'sīlavantettha bhojetvā',
+                'pali': 'ยา ตัตถะ เทวะตา อาสุง ตาสัง ทักขิณะมาทิเส',
+                'pali_roman': 'yā tattha devatā āsuṃ tāsaṃ dakkhiṇamādise',
                 'thai': '',
                 'paiboon': '',
-                'english': 'having fed there the virtuous,',
+                'english': (
+                    "whatever devas there may be in that place, to them let "
+                    "him dedicate the offering."
+                ),
             },
-            # ‼ CORRECTED: pali  พ์รัห์มะจาริโน? → พ์รัห์มะจาริโน. Stray
-            #              question mark removed — an OCR misreading of the
-            #              superscript footnote marker ๒ pointing to footnote
-            #              2, not punctuation. Pali chanting lines carry no
-            #              question marks. Verify against the printed page.
-            # ‼ CORRECTED: pali_roman  brahmacārino? → brahmacārino. Follows
-            #              the question-mark removal. Verify against the
-            #              printed page.
             {
                 'number': 4,
-                'pali': 'สัญญะเต พ์รัห์มะจาริโน',
-                'pali_roman': 'saññate brahmacārino',
+                'pali': 'ตา ปูชิตา ปูชะยันติ มานิตา มานะยันติ นัง',
+                'pali_roman': 'tā pūjitā pūjayanti mānitā mānayanti naṃ',
                 'thai': '',
                 'paiboon': '',
-                'english': 'the restrained, the farers in the holy life,',
+                'english': (
+                    "They, being honoured, give honour in return; being held "
+                    "in regard, they hold him in regard."
+                ),
             },
             {
                 'number': 5,
-                'pali': 'ยา ตัตถะ เทวะตา อาสุง',
-                'pali_roman': 'yā tattha devatā āsuṃ',
+                'pali': 'ตะโต นัง อะนุกัมปันติ มาตา ปุตตังวะ โอระสัง',
+                'pali_roman': 'tato naṃ anukampanti mātā puttaṃva orasaṃ',
                 'thai': '',
                 'paiboon': '',
-                'english': 'whatever devas there may be in that place,',
+                'english': (
+                    "Thereafter they show him compassion, as a mother "
+                    "towards her own-born son."
+                ),
             },
-            # ‼ CHECK: Lines 1–6 are printed with no terminal punctuation until
-            #          ทักขิณะมาทิเส, which also has none. I have supplied no
-            #          punctuation of my own; the full stop shown at verse 12
-            #          is the book's.
             {
                 'number': 6,
-                'pali': 'ตาสัง ทักขิณะมาทิเส',
-                'pali_roman': 'tāsaṃ dakkhiṇamādise',
+                'pali': 'เทวะตานุกัมปิโต โปโส สะทา ภัท์รานิ ปัสสะติ.',
+                'pali_roman': 'devatānukampito poso sadā bhadrāni passati.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'to them let him dedicate the offering.',
+                'english': (
+                    "The person to whom the devas are compassionate sees "
+                    "always what is auspicious."
+                ),
             },
             {
                 'number': 7,
-                'pali': 'ตา ปูชิตา ปูชะยันติ',
-                'pali_roman': 'tā pūjitā pūjayanti',
-                'thai': '',
-                'paiboon': '',
-                'english': 'They, being honoured, give honour in return;',
-            },
-            {
-                'number': 8,
-                'pali': 'มานิตา มานะยันติ นัง',
-                'pali_roman': 'mānitā mānayanti naṃ',
-                'thai': '',
-                'paiboon': '',
-                'english': 'being held in regard, they hold him in regard.',
-            },
-            {
-                'number': 9,
-                'pali': 'ตะโต นัง อะนุกัมปันติ',
-                'pali_roman': 'tato naṃ anukampanti',
-                'thai': '',
-                'paiboon': '',
-                'english': 'Thereafter they show him compassion,',
-            },
-            {
-                'number': 10,
-                'pali': 'มาตา ปุตตังวะ โอระสัง',
-                'pali_roman': 'mātā puttaṃva orasaṃ',
-                'thai': '',
-                'paiboon': '',
-                'english': 'as a mother towards her own-born son.',
-            },
-            # ‼ CHECK: โปโส is spelled with ป (unaspirated p). Standard
-            #          editions read poso, so the transliteration agrees;
-            #          flagged only because ผ/พ and ป are easily confused in
-            #          reprints and this word governs the sense of the final
-            #          couplet.
-            {
-                'number': 11,
-                'pali': 'เทวะตานุกัมปิโต โปโส',
-                'pali_roman': 'devatānukampito poso',
-                'thai': '',
-                'paiboon': '',
-                'english': 'The person to whom the devas are compassionate',
-            },
-            # ‼ CHECK: ภัท์รานิ carries thanthakhat over ท์. Transliterated
-            #          faithfully as bhadrāni. Some editions read ภัททานิ
-            #          (bhaddāni); I have kept the printed form rather than
-            #          substituting.
-            {
-                'number': 12,
-                'pali': 'สะทา ภัท์รานิ ปัสสะติ.',
-                'pali_roman': 'sadā bhadrāni passati.',
-                'thai': '',
-                'paiboon': '',
-                'english': 'sees always what is auspicious.',
-            },
-            {
-                'section': 'นิฏฐิตา: The Closing Formula',
-                'number': 13,
                 'pali': 'เทวะตาทิสสะทักขิณานุโมทะนาคาถา นิฏฐิตา.',
                 'pali_roman': 'devatādissadakkhiṇānumodanāgāthā niṭṭhitā.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'The verses of rejoicing in offerings dedicated to the devas are ended.',
+                'english': (
+                    "The verses of rejoicing in offerings dedicated to the "
+                    "devas are ended."
+                ),
             },
         ],
     },
