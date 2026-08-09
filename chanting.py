@@ -12937,8 +12937,40 @@ def contents_for_front_page(number, chants=None, page_blocks=None):
     pages, _ = build_page_index(chants, page_blocks)
     entered = sorted(page['page'] for page in pages)
     have = set(entered)
+    stretches = contents_stretches(chants)
     rows = build_contents(chants, front_page=number)
-    return [dict(row, in_app=row['page'] in have) for row in rows], entered
+    return [dict(row,
+                 in_app=row['page'] in have,
+                 pages=[p for p in stretches.get(row['page'], [row['page']])
+                        if p in have])
+            for row in rows], entered
+
+
+def contents_stretches(chants=None):
+    """Every page a contents line covers, keyed by the page it starts on.
+
+    The สารบัญ names where each chant BEGINS, so a page it merely continues
+    onto is named nowhere in the book's own contents. Pages 5 and 21 are both
+    like this: entered, openable, and invisible on the contents page, which
+    is how a reader ends up believing they are missing.
+
+    A line's stretch runs from its own page up to where the NEXT line begins,
+    which is the book's own structure rather than an assumption about chants —
+    it works even where a line could not be matched to a chant in the app, as
+    Parittakaraṇapāṭho on page 20 could not.
+
+    This adds no line the book does not print. The สารบัญ text, its order and
+    its numbers are untouched; only the app's own navigation beside a line
+    learns about the pages that line runs across.
+    """
+    listed = sorted({row['page'] for row in build_contents(chants)
+                     if row['page']})
+    stretches = {}
+    for position, page in enumerate(listed):
+        following = listed[position + 1] if position + 1 < len(listed) else None
+        stretches[page] = (list(range(page, following)) if following
+                           else [page])
+    return stretches
 
 
 #: The last page the book's own สารบัญ names. Used only to say how far the

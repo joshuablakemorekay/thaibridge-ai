@@ -20,7 +20,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from chanting import (  # noqa: E402
     build_page_index, chant_page_spans, check_page_blocks, check_variants,
-    describe_coverage, describe_pages, page_coverage)
+    contents_for_front_page, contents_stretches, describe_coverage,
+    describe_pages, page_coverage)
 
 
 def verse(number, page=None):
@@ -140,6 +141,55 @@ def test_a_gap_in_the_book_is_left_as_a_gap():
     ])
 
     assert [p['page'] for p in pages] == [47, 53]
+
+
+class TestTheContentsReachesContinuationPages:
+    """A สารบัญ line offers every page it runs across, not just its first.
+
+    The book's contents names where a chant BEGINS. Pages 5 and 21 are second
+    halves, so the book names them nowhere — and the app, faithfully
+    reproducing the contents, offered no way to them either. They were
+    entered, openable by number, and invisible on the one page whose whole job
+    is saying what is in.
+
+    The fix must not add a line the book does not print. It adds buttons
+    beside lines that are already there, which is app navigation and not the
+    book's text.
+    """
+
+    def test_a_lines_stretch_runs_to_where_the_next_line_starts(self):
+        stretches = contents_stretches()
+        assert stretches[4] == [4, 5]
+        assert stretches[20] == [20, 21]
+
+    def test_a_line_whose_next_starts_immediately_covers_one_page(self):
+        stretches = contents_stretches()
+        assert stretches[22] == [22]
+
+    def test_every_entered_page_is_reachable_from_some_contents_line(self):
+        """The whole point, checked against the real book.
+
+        A page the app serves but no contents line reaches is a page a reader
+        can only find by guessing its number.
+        """
+        entered = {page['page'] for page in build_page_index()[0]}
+        reachable = set()
+        for front in (35, 36, 37, 38, 39, 40, 41, 42, 43, 44):
+            rows, _ = contents_for_front_page(front)
+            reachable |= {p for row in rows for p in row['pages']}
+        assert not entered - reachable
+
+    def test_a_button_is_never_offered_for_a_page_that_is_not_in(self):
+        """The honesty rule the contents page already had, kept.
+
+        A stretch is arithmetic over the book's numbering and happily spans
+        pages nobody has entered. Only the ones actually served may appear.
+        """
+        entered = {page['page'] for page in build_page_index()[0]}
+        for front in (35, 36, 37, 38, 39, 40, 41, 42, 43, 44):
+            rows, _ = contents_for_front_page(front)
+            for row in rows:
+                assert set(row['pages']) <= entered
 
 
 class TestAChantShowsEveryPageItCovers:

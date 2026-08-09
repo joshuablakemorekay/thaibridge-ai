@@ -230,10 +230,14 @@
             <a class="toc-btn is-chant"
                href="{{ url_for('chanting_book') }}#{{ row.chant_id }}">Open chant</a>
             {% endif %}
-            {% if row.in_app %}
+            {# One button per page this line runs across, not just the page it
+               starts on. The สารบัญ names only where a chant begins, so a page
+               it continues onto — 5 and 21 among them — was named nowhere in
+               the book's own contents and looked missing from the app. #}
+            {% for page in row.pages %}
             <a class="toc-btn"
-               href="{{ url_for('chanting_page', page=row.page) }}">Page {{ row.page }}</a>
-            {% endif %}
+               href="{{ url_for('chanting_page', page=page) }}">Page {{ page }}</a>
+            {% endfor %}
         </span>
     </div>
     {% else %}
@@ -245,10 +249,13 @@
     <strong>Open chant</strong> goes to the chant itself, to read it with its
     meaning. <strong>Page</strong> opens the book at that page, as the book
     prints it — which is the one you want when a number has been called out
-    mid-service. A line with no buttons is a page of the book that has not been
+    mid-service. A line shows <em>every</em> page it runs across, so a chant
+    printed over a page turn offers both: the สารบัญ names only where a chant
+    begins, and the page it continues onto is named nowhere in the book.
+    A line with no buttons is a page of the book that has not been
     entered yet; the line is printed here because the book prints it, and the
     buttons appear when that page arrives.
-    {% if entered %}Pages in so far: {{ entered|join(', ') }}.{% endif %}
+    {% if entered_described %}Pages in so far: {{ entered_described }}.{% endif %}
 </p>
 
 <p class="toc-key">

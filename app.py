@@ -6044,6 +6044,10 @@ def chanting_contents():
         prev_page=numbers[at - 1] if at > 0 else None,
         next_page=numbers[at + 1] if 0 <= at < len(numbers) - 1 else None,
         entered=entered,
+        # As runs rather than 34 comma-separated numbers. The list was already
+        # long enough to skim past, and it is about to get much longer.
+        entered_described=chanting.describe_coverage(
+            chanting.page_coverage()),
         # The contents colours its romanised line to match the chant layer it
         # corresponds to, so it reads the colours from the same place the chant
         # page does rather than keeping its own copy of them.
