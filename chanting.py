@@ -12941,6 +12941,55 @@ def contents_for_front_page(number, chants=None, page_blocks=None):
     return [dict(row, in_app=row['page'] in have) for row in rows], entered
 
 
+#: The last page the book's own สารบัญ names. Used only to say how far the
+#: printed book runs; the app never derives a page's existence from it.
+BOOK_LAST_PAGE = 308
+
+
+def page_coverage(chants=None, page_blocks=None):
+    """Which body pages are in, as runs of consecutive pages.
+
+    [1, 2, 3, 7, 8] -> [(1, 3), (7, 8)].
+
+    The landing page invites a reader to type any page number the monk calls
+    out, and until this existed it said nothing about which numbers would
+    work. Most would not: 34 pages of 308 are in. Someone mid-service typing
+    112 and getting "not added yet" learns that at the worst possible moment.
+
+    Runs rather than a count, because a count cannot say the one thing that
+    matters here. "34 pages" reads as 1 to 34 and is wrong twice over: the
+    app's pages stop at 29 and then resume in the two-hundreds. Only the runs
+    say where the book actually opens.
+
+    Derived from the page index every time rather than recorded anywhere, so
+    it cannot drift from what the app will really serve — the failure a
+    hand-maintained "pages 1-20 so far" line makes certain.
+    """
+    pages, _ = build_page_index(chants, page_blocks)
+    runs = []
+    for number in sorted(page['page'] for page in pages):
+        if runs and number == runs[-1][1] + 1:
+            runs[-1][1] = number
+        else:
+            runs.append([number, number])
+    return [(first, last) for first, last in runs]
+
+
+def describe_coverage(runs):
+    """The runs as English: '1-29 and 217-221'. Empty string for none.
+
+    A single-page run prints as one number, not '5-5', because the book is
+    read by people and that is how a page is named.
+    """
+    parts = [str(first) if first == last else f"{first}–{last}"
+             for first, last in runs]
+    if not parts:
+        return ""
+    if len(parts) == 1:
+        return parts[0]
+    return f"{', '.join(parts[:-1])} and {parts[-1]}"
+
+
 def get_chant(chant_id):
     """Return one chant by id, or None."""
     return next((c for c in CHANTS if c['id'] == chant_id), None)

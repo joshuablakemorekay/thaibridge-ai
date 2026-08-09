@@ -49,6 +49,19 @@
         cursor: pointer;
         font-family: inherit;
     }
+    /* Full-width inside the flex box, so it reads as a line under the form
+       rather than a third column squeezed beside it. #55483a on #FFFDF8 is
+       9.1:1, well clear of AA — this line is the small print, and small print
+       is exactly what must not be faint. */
+    .open-at-page-coverage {
+        flex-basis: 100%;
+        margin: 0.15rem 0 0;
+        padding-top: 0.6rem;
+        border-top: 1px solid #F0E7D3;
+        font-size: 0.85rem;
+        color: #55483a;
+        max-width: 62ch;
+    }
     .open-at-page-note {
         font-size: 0.85rem;
         color: #8a7a5e;
@@ -241,6 +254,17 @@
         <input type="number" id="open-page" name="p" min="1" inputmode="numeric">
         <button type="submit">Open</button>
     </form>
+    {# Said BEFORE the box is used, not after. The box invites any number the
+       monk calls out, and most numbers are not in yet — finding that out by
+       typing one mid-service is the wrong moment. Runs rather than a count,
+       because "34 pages" reads as 1 to 34 and the pages are in two groups. #}
+    {% if coverage %}
+    <p class="open-at-page-coverage">
+        Pages <strong>{{ coverage }}</strong> are in so far — {{ page_count }} of
+        the book's {{ book_last_page }}. Any other number will say so rather
+        than guess.
+    </p>
+    {% endif %}
 </div>
 {% if not page_count %}
 <p class="open-at-page-note">

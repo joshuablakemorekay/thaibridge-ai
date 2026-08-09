@@ -19,7 +19,8 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from chanting import (  # noqa: E402
-    build_page_index, check_page_blocks, check_variants)
+    build_page_index, check_page_blocks, check_variants, describe_coverage,
+    page_coverage)
 
 
 def verse(number, page=None):
@@ -139,6 +140,66 @@ def test_a_gap_in_the_book_is_left_as_a_gap():
     ])
 
     assert [p['page'] for p in pages] == [47, 53]
+
+
+class TestSayingHowMuchOfTheBookIsIn:
+    """The landing page tells a reader which numbers will work.
+
+    It invites any page the monk called out, and most are not in yet. The
+    danger is not the gap — it is a summary that sounds continuous when it is
+    not, because someone acts on it mid-service.
+    """
+
+    def test_consecutive_pages_collapse_into_one_run(self):
+        runs = page_coverage([
+            chant('a', 1, [verse(1)]),
+            chant('b', 2, [verse(1)]),
+            chant('c', 3, [verse(1)]),
+        ], [])
+        assert runs == [(1, 3)]
+
+    def test_a_gap_starts_a_new_run(self):
+        """The whole point: 1-3 and 9 must never render as 1-9."""
+        runs = page_coverage([
+            chant('a', 1, [verse(1)]),
+            chant('b', 2, [verse(1)]),
+            chant('c', 3, [verse(1)]),
+            chant('d', 9, [verse(1)]),
+        ], [])
+        assert runs == [(1, 3), (9, 9)]
+
+    def test_a_chant_with_no_page_is_not_counted_as_coverage(self):
+        """An unpaginated chant is in the app but on no page of the book."""
+        runs = page_coverage([
+            chant('a', 1, [verse(1)]),
+            {'id': 'b', 'title_english': 'b', 'verses': [verse(1)]},
+        ], [])
+        assert runs == [(1, 1)]
+
+    def test_a_single_page_is_named_not_ranged(self):
+        assert describe_coverage([(5, 5)]) == '5'
+
+    def test_two_runs_read_as_english(self):
+        assert describe_coverage([(1, 29), (217, 221)]) == '1–29 and 217–221'
+
+    def test_three_runs_keep_the_final_and(self):
+        assert describe_coverage([(1, 2), (7, 8), (20, 20)]) == '1–2, 7–8 and 20'
+
+    def test_nothing_in_says_nothing_rather_than_an_empty_range(self):
+        assert describe_coverage([]) == ''
+
+    def test_the_real_book_reports_runs_that_actually_open(self):
+        """Every run's endpoints must be pages the app will really serve.
+
+        A summary is only worth printing if it is true of the thing it
+        summarises, so this checks it against the page index rather than
+        against a hand-written expectation that would need editing every
+        time a page lands.
+        """
+        served = {page['page'] for page in build_page_index()[0]}
+        for first, last in page_coverage():
+            assert first in served and last in served
+            assert set(range(first, last + 1)) <= served
 
 
 def test_the_real_book_still_builds():

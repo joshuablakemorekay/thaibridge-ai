@@ -5990,12 +5990,16 @@ def chanting_book():
     book later. Adding a chant means appending to CHANTS; this route and the
     template never change.
     """
+    coverage = chanting.page_coverage()
     return render_template('chanting.html',
                            chants=chanting.CHANTS,
                            layers=chanting.CHANT_LAYERS,
                            sections=chanting.CHANT_SECTIONS,
                            how_to_use=chanting.HOW_TO_USE,
-                           page_count=len(chanting.build_page_index()[0]))
+                           page_count=sum(last - first + 1
+                                          for first, last in coverage),
+                           coverage=chanting.describe_coverage(coverage),
+                           book_last_page=chanting.BOOK_LAST_PAGE)
 
 
 @app.route('/chanting/contents')
