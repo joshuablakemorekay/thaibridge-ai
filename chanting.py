@@ -3890,8 +3890,11 @@ CHANTS = [
         # stays empty and the template falls back to `title_pali`.
         'title_roman': '',
         'title_english': 'The Verses on the Simile of the Mountain',
-        'source': 'ขุ.สุ. 25/360-361, ส.ส. 15/315-6 — printed as footnotes 1 and 2 in the book, appearing mid-text in what you pasted. See checks.',
+        'source': '',
         'group': 'General chanting',
+        'book_number': 14,
+        'page_start': 30,
+        'source_printed': 'ส.ส. 15/148',
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -3973,8 +3976,8 @@ CHANTS = [
             {
                 'section': 'เสลา วิปุลา: The Simile of the Mountains',
                 'number': 1,
-                'pali': 'ยะถาปี เสลา วิปุลา นะภัง อาหัจจะ ปัพพะตา',
-                'pali_roman': 'yathāpī selā vipulā nabhaṃ āhacca pabbatā',
+                'pali': 'ยะถาปิ เสลา วิปุลา นะภัง อาหัจจะ ปัพพะตา',
+                'pali_roman': 'yathāpi selā vipulā nabhaṃ āhacca pabbatā',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4049,7 +4052,7 @@ CHANTS = [
             #          to this chant.
             {
                 'number': 6,
-                'pali': 'นะ ตัตถะ หัตถี่นัง ภูมิ นะ ระถานัง นะ ปัตติยา.',
+                'pali': 'นะ ตัตถะ หัตถีนัง ภูมิ นะ ระถานัง นะ ปัตติยา.',
                 'pali_roman': 'na tattha hatthīnaṃ bhūmi na rathānaṃ na pattiyā.',
                 'thai': '',
                 'paiboon': '',
@@ -4076,8 +4079,9 @@ CHANTS = [
             #          substituted. Clear mistyping.
             {
                 'number': 7,
-                'pali': 'นะ จาปิ มันตะยุทเธนะ สักกา เชตุง ธะเนนะ ว่า',
-                'pali_roman': 'na cāpi mantayuddhena sakkā jetuṃ dhanena vàa',
+                'page': 31,
+                'pali': 'นะ จาปิ มันตะยุทเธนะ สักกา เชตุง ธะเนนะ วา',
+                'pali_roman': 'na cāpi mantayuddhena sakkā jetuṃ dhanena vā',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4096,7 +4100,7 @@ CHANTS = [
             {
                 'section': 'สัทธัง นิเวสะเย: Where Faith Is Placed',
                 'number': 8,
-                'pali': 'ตัสมา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.',
+                'pali': 'ตัส์มา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.',
                 'pali_roman': 'tasmā hi paṇḍito poso sampassaṃ atthamattano.',
                 'thai': '',
                 'paiboon': '',
@@ -4121,8 +4125,8 @@ CHANTS = [
             #          as dhammacāri.
             {
                 'number': 10,
-                'pali': 'โย ธัมมะจาริ กาเยนะ วาจายะ อุทะ เจตะสา',
-                'pali_roman': 'yo dhammacāri kāyena vācāya uda cetasā',
+                'pali': 'โย ธัมมะจารี กาเยนะ วาจายะ อุทะ เจตะสา',
+                'pali_roman': 'yo dhammacārī kāyena vācāya uda cetasā',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4136,8 +4140,8 @@ CHANTS = [
             #          pasted rather than tidied.
             {
                 'number': 11,
-                'pali': "อิเธวะ นัง ปะสังสันติ เปจจะ สัคเค ปะโมทะติ.'",
-                'pali_roman': "idheva naṃ pasaṃsanti pecca sagge pamodati.'",
+                'pali': 'อิเธวะ นัง ปะสังสันติ เปจจะ สัคเค ปะโมทะติ.',
+                'pali_roman': 'idheva naṃ pasaṃsanti pecca sagge pamodati.',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4201,6 +4205,8 @@ CHANTS = [
         # on the verse carrying the marker.
         'source': '',
         'group': 'General chanting',
+        'page_start': 31,
+        'source_printed': 'อง. จตุกุก. 21/74 อง. ปัญจก. 22/59',
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -9886,7 +9892,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 10; the rest is not in the app yet.
         # ‼ CHECK [IMG_0291.PNG]: CONTINUES. The chant runs off the foot of
         #   page 29 and is NOT finished here. Verse 10 is the last complete
         #   line on the page. Do not write the rest.
@@ -9910,6 +9915,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'ขุ.สุ. 25/360-361',
+        'closing': {
+            'pali': 'สัจจะปานะวิธ์ยานุรูปะคาถา นิฏฐิตา',
+            'pali_roman': 'saccapānavidhyānurūpagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses Befitting the Drinking of Truth.',
         },
         'verses': [
             {
@@ -10000,6 +10013,141 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'by truth one wins renown; by giving one binds friends.',
+            },
+            {
+                'number': 11,
+                'page': 30,
+                'pali': 'ยัสเสเต จะตุโร ธัมมา สัทธัสสะ ฆะระเมสิโน',
+                'pali_roman': 'yassete caturo dhammā saddhassa gharamesino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In the faithful householder in whom these four things are found —',
+            },
+            {
+                'number': 12,
+                'pali': 'สัจจัง ธัมโม ธิติ จาโค สะ เว เปจจะ นะ โสจะติ.',
+                'pali_roman': 'saccaṃ dhammo dhiti cāgo sa ve pecca na socati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'truth, Dhamma, steadfastness, generosity — he indeed does not grieve when he has passed on.',
+            },
+            {
+                'number': 13,
+                'pali': 'อิงฆะ อัญเญปิ ปุจฉัสสุ ปุถู สะมะณะพ์ราห์มะเณ',
+                'pali_roman': 'iṅgha aññepi pucchassu puthū samaṇabrāhmaṇe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Come now, ask others also, the many ascetics and brahmins,',
+            },
+            # ‼ CHECK [IMG_0292.PNG]: Superscript 1 sits on this last line and
+            #   points at the page's footnote ขุ.สุ. 25/360-361, now
+            #   source_printed. The marker is on THIS chant's line, not on the
+            #   chant below.
+            {
+                'number': 14,
+                'pali': 'ยะทิ สัจจา ทะมา จาคา ขันต์ยา ภิยโยธะ วิชชะตีติ.',
+                'pali_roman': 'yadi saccā damā cāgā khantyā bhiyyodha vijjatīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whether anything greater than truth, self-control, generosity and patience is found here.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0292.PNG]: NEW CHANT, not previously in the app.
+        #   Numbered 13 in the book, printed between Saccapanavidhyanurupa and
+        #   Pabbatopama.
+        # ‼ CHECK [IMG_0292.PNG]: TWO COLUMNS. First pairing read as ภุตตา
+        #   โภคา ภะฏา ภัจจา (left) + วิติณณา อาปะทาสุ เม (right).
+        # ‼ CHECK [IMG_0292.PNG]: English is a working translation made for
+        #   this edition — the book prints none — so english_unverified is
+        #   set. The title especially wants your eye: Adiya is rendered here
+        #   as 'what is to be taken up', which is the sense of the sutta
+        #   rather than a settled English title.
+        'id': 'adiyasutta-gatha',
+        'title_thai': 'อาทิยะสุตตะคาถา',
+        'title_pali': 'Ādiyasuttagāthā',
+        'title_roman': '',
+        'title_english': 'The Verses of the Discourse on What is to be Taken Up',
+        'book_number': 13,
+        'page_start': 30,
+        'source_printed': 'ส.ส. 15/315-6',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'อาทิยะสุตตะคาถา นิฏฐิตา',
+            'pali_roman': 'ādiyasuttagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses of the Ādiya Sutta.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'ภุตตา โภคา ภะฏา ภัจจา วิติณณา อาปะทาสุ เม',
+                'pali_roman': 'bhuttā bhogā bhaṭā bhaccā vitiṇṇā āpadāsu me',
+                'thai': '',
+                'paiboon': '',
+                'english': 'My wealth has been enjoyed, my dependants supported, adversities have been overcome by me;',
+            },
+            {
+                'number': 2,
+                'pali': 'อุทธัคคา ทักขิณา ทินนา อะโธ ปัญจะ พะลี กะตา.',
+                'pali_roman': 'uddhaggā dakkhiṇā dinnā atho pañca balī katā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'offerings leading upward have been given, and the five oblations made.',
+            },
+            {
+                'number': 3,
+                'pali': 'อุปัฏฐิตา สีละวันโต สัญญะตา พ์รัห์มะจาริโน',
+                'pali_roman': 'upaṭṭhitā sīlavanto saññatā brahmacārino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The virtuous have been waited upon, the restrained who live the holy life.',
+            },
+            {
+                'number': 4,
+                'pali': 'ยะทัตถัง โภคะมิจเฉยยะ ปัณฑิโต ฆะระมาวะสัง.',
+                'pali_roman': 'yadatthaṃ bhogamiccheyya paṇḍito gharamāvasaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That purpose for which a wise man dwelling at home would wish for wealth —',
+            },
+            {
+                'number': 5,
+                'pali': 'โส เม อัตโถ อะนุปปัตโต กะตัง อะนะนุตาปิยัง',
+                'pali_roman': 'so me attho anuppatto kataṃ ananutāpiyaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that purpose I have attained; what I have done brings no remorse.',
+            },
+            {
+                'number': 6,
+                'pali': 'เอตัง อะนุสสะรัง มัจโจ อะริยะธัมเม ฐิโต นะโร,',
+                'pali_roman': 'etaṃ anussaraṃ macco ariyadhamme ṭhito naro,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'A mortal who recalls this, a man standing firm in the noble Dhamma,',
+            },
+            # ‼ CHECK [IMG_0292.PNG]: Superscript 2 on this last line points
+            #   at the page's footnote ส.ส. 15/315-6, now source_printed.
+            {
+                'number': 7,
+                'pali': 'อิเธวะ นัง ปะสังสันติ เปจจะ สัคเค ปะโมทะตีติ.',
+                'pali_roman': 'idheva naṃ pasaṃsanti pecca sagge pamodatīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'him they praise here and now, and hereafter he rejoices in heaven.',
             },
         ],
     },

@@ -1,0 +1,485 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 2,
+    "files_read": 2,
+    "received": 4,
+    "manifest": [
+      "saccapanavidhyanurupa-gatha",
+      "adiyasutta-gatha",
+      "pabbatopama-gatha",
+      "ariyadhana-gatha"
+    ],
+    "pages": [
+      {
+        "page": 30,
+        "file": "IMG_0292.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "saccapanavidhyanurupa-gatha",
+        "verses": "11-14",
+        "starts_here": false,
+        "note": "The chant finishes at the top of the page, four two-pada lines set in two columns, then prints its closing and an editorial note. Footnote 1 belongs to its last line.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "6 คาถา สวดวันถือน้ำพระพิพัฒน์สัตยาธิษฐาน เมื่อเวลาเชิญพระแสงลงจรดน้ำ",
+            "english": "Six verses, chanted on the day of the Water of Allegiance ceremony, at the time the royal sword is lowered to the water.",
+            "english_unverified": true
+          },
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "ขุ.สุ. 25/360-361",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 30,
+        "file": "IMG_0292.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "adiyasutta-gatha",
+        "verses": "1-7",
+        "starts_here": true,
+        "note": "Printed complete on this page under the number 13, two columns, two padas to a line, followed by its closing and an editorial note. Footnote 2 belongs to its last line.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "3 คาถากึ่ง อนุโมทนาในการทำบุญปีตามที่เคยทำมา",
+            "english": "Three and a half verses, in rejoicing at the yearly merit-making as it has been done before.",
+            "english_unverified": true
+          },
+          {
+            "type": "footnote",
+            "marker": "2",
+            "thai": "ส.ส. 15/315-6",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 30,
+        "file": "IMG_0292.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "pabbatopama-gatha",
+        "verses": "1-6",
+        "starts_here": true,
+        "note": "Opens under the number 14 and runs to the foot of the page. Six two-pada lines here; the chant continues on page 31."
+      },
+      {
+        "page": 31,
+        "file": "IMG_0294.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "pabbatopama-gatha",
+        "verses": "7-12",
+        "starts_here": false,
+        "note": "Five more two-pada lines complete the chant, then its closing. Footnote 1 of THIS page belongs to its last line and is the chant's real citation.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "ส.ส. 15/148",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 31,
+        "file": "IMG_0294.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "ariyadhana-gatha",
+        "verses": "1-7",
+        "starts_here": true,
+        "note": "Printed complete on this page. The heading carries NO chant number, unlike 13, 14 and 15 around it. Footnote 2 belongs to its last line.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "2",
+            "thai": "อง. จตุกุก. 21/74 อง. ปัญจก. 22/59",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 31,
+        "file": "IMG_0294.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "",
+        "verses": "none",
+        "note": "NOT WRITTEN. 15. ปะฏิจจะสะมุปปาทะปาโฐ opens at the foot of page 31 under the sub-heading สมุทะยะวาระ, set as continuous justified prose, and runs onto page 32. It is deliberately left out of this batch: the chant is already in the app with 24 verses covering BOTH วาระ, and its samudaya half (verses 1-12) is what page 31 prints. Giving it page_start 31 without knowing where verse 13 turns would put all 24 on page 31, showing twice what the book prints there. Page 32 must be read first. Footnote 3 on this page, ขุ.อุ. 25/73-4 วิ. มหา. 4/1, is its citation.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "3",
+            "thai": "ขุ.อุ. 25/73-4 วิ. มหา. 4/1",
+            "english": ""
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "saccapanavidhyanurupa-gatha",
+      "continuation_of": "saccapanavidhyanurupa-gatha",
+      "working_notes": {
+        "invitation": "Absent, and none written. The chant's opening is on page 29.",
+        "units": "Four more two-pada lines, numbered 11-14 carrying on from the ten entered with page 29.",
+        "ordering": "Pali only; the page prints no Thai translation.",
+        "conventions": "No romanisation printed in the book.",
+        "pages": "IMG_0292.PNG, the top of page 30. Thai script, two columns."
+      },
+      "source_printed": "ขุ.สุ. 25/360-361",
+      "closing": {
+        "pali": "สัจจะปานะวิธ์ยานุรูปะคาถา นิฏฐิตา",
+        "pali_roman": "saccapānavidhyānurūpagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses Befitting the Drinking of Truth."
+      },
+      "verses": [
+        {
+          "number": 11,
+          "pali": "ยัสเสเต จะตุโร ธัมมา สัทธัสสะ ฆะระเมสิโน",
+          "pali_roman": "yassete caturo dhammā saddhassa gharamesino",
+          "thai": "",
+          "paiboon": "",
+          "english": "In the faithful householder in whom these four things are found —",
+          "page": 30
+        },
+        {
+          "number": 12,
+          "pali": "สัจจัง ธัมโม ธิติ จาโค สะ เว เปจจะ นะ โสจะติ.",
+          "pali_roman": "saccaṃ dhammo dhiti cāgo sa ve pecca na socati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "truth, Dhamma, steadfastness, generosity — he indeed does not grieve when he has passed on."
+        },
+        {
+          "number": 13,
+          "pali": "อิงฆะ อัญเญปิ ปุจฉัสสุ ปุถู สะมะณะพ์ราห์มะเณ",
+          "pali_roman": "iṅgha aññepi pucchassu puthū samaṇabrāhmaṇe",
+          "thai": "",
+          "paiboon": "",
+          "english": "Come now, ask others also, the many ascetics and brahmins,"
+        },
+        {
+          "number": 14,
+          "pali": "ยะทิ สัจจา ทะมา จาคา ขันต์ยา ภิยโยธะ วิชชะตีติ.",
+          "pali_roman": "yadi saccā damā cāgā khantyā bhiyyodha vijjatīti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "whether anything greater than truth, self-control, generosity and patience is found here."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0292.PNG",
+          "issue": "TWO COLUMNS. First pairing read as ยัสเสเต จะตุโร ธัมมา (left) + สัทธัสสะ ฆะระเมสิโน (right). Reading the left column straight down gives unfinished half-lines, which is the test for two columns."
+        },
+        {
+          "verse": 14,
+          "file": "IMG_0292.PNG",
+          "issue": "Superscript 1 sits on this last line and points at the page's footnote ขุ.สุ. 25/360-361, now source_printed. The marker is on THIS chant's line, not on the chant below."
+        },
+        {
+          "verse": 11,
+          "file": "IMG_0292.PNG",
+          "issue": "PAGE TURN. Verse 11 is the first line printed on page 30; verses 1-10 are on page 29. Omitted from the first write of this batch, which left all fourteen on page 29 and page 30 without its top chant."
+        }
+      ]
+    },
+    {
+      "id": "adiyasutta-gatha",
+      "working_notes": {
+        "invitation": "Absent. The page prints none and none has been written.",
+        "units": "Seven two-pada lines, one movement, no titled sections.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed in the book.",
+        "pages": "IMG_0292.PNG, the middle of page 30. Thai script, two columns, complete on this page."
+      },
+      "title_thai": "อาทิยะสุตตะคาถา",
+      "title_pali": "Ādiyasuttagāthā",
+      "title_roman": "",
+      "title_english": "The Verses of the Discourse on What is to be Taken Up",
+      "book_number": 13,
+      "page_start": 30,
+      "source_printed": "ส.ส. 15/315-6",
+      "english_unverified": true,
+      "closing": {
+        "pali": "อาทิยะสุตตะคาถา นิฏฐิตา",
+        "pali_roman": "ādiyasuttagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses of the Ādiya Sutta."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ภุตตา โภคา ภะฏา ภัจจา วิติณณา อาปะทาสุ เม",
+          "pali_roman": "bhuttā bhogā bhaṭā bhaccā vitiṇṇā āpadāsu me",
+          "thai": "",
+          "paiboon": "",
+          "english": "My wealth has been enjoyed, my dependants supported, adversities have been overcome by me;"
+        },
+        {
+          "number": 2,
+          "pali": "อุทธัคคา ทักขิณา ทินนา อะโธ ปัญจะ พะลี กะตา.",
+          "pali_roman": "uddhaggā dakkhiṇā dinnā atho pañca balī katā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "offerings leading upward have been given, and the five oblations made."
+        },
+        {
+          "number": 3,
+          "pali": "อุปัฏฐิตา สีละวันโต สัญญะตา พ์รัห์มะจาริโน",
+          "pali_roman": "upaṭṭhitā sīlavanto saññatā brahmacārino",
+          "thai": "",
+          "paiboon": "",
+          "english": "The virtuous have been waited upon, the restrained who live the holy life."
+        },
+        {
+          "number": 4,
+          "pali": "ยะทัตถัง โภคะมิจเฉยยะ ปัณฑิโต ฆะระมาวะสัง.",
+          "pali_roman": "yadatthaṃ bhogamiccheyya paṇḍito gharamāvasaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "That purpose for which a wise man dwelling at home would wish for wealth —"
+        },
+        {
+          "number": 5,
+          "pali": "โส เม อัตโถ อะนุปปัตโต กะตัง อะนะนุตาปิยัง",
+          "pali_roman": "so me attho anuppatto kataṃ ananutāpiyaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "that purpose I have attained; what I have done brings no remorse."
+        },
+        {
+          "number": 6,
+          "pali": "เอตัง อะนุสสะรัง มัจโจ อะริยะธัมเม ฐิโต นะโร,",
+          "pali_roman": "etaṃ anussaraṃ macco ariyadhamme ṭhito naro,",
+          "thai": "",
+          "paiboon": "",
+          "english": "A mortal who recalls this, a man standing firm in the noble Dhamma,"
+        },
+        {
+          "number": 7,
+          "pali": "อิเธวะ นัง ปะสังสันติ เปจจะ สัคเค ปะโมทะตีติ.",
+          "pali_roman": "idheva naṃ pasaṃsanti pecca sagge pamodatīti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "him they praise here and now, and hereafter he rejoices in heaven."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0292.PNG",
+          "issue": "NEW CHANT, not previously in the app. Numbered 13 in the book, printed between Saccapanavidhyanurupa and Pabbatopama."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0292.PNG",
+          "issue": "TWO COLUMNS. First pairing read as ภุตตา โภคา ภะฏา ภัจจา (left) + วิติณณา อาปะทาสุ เม (right)."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0292.PNG",
+          "issue": "English is a working translation made for this edition — the book prints none — so english_unverified is set. The title especially wants your eye: Adiya is rendered here as 'what is to be taken up', which is the sense of the sutta rather than a settled English title."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0292.PNG",
+          "issue": "Superscript 2 on this last line points at the page's footnote ส.ส. 15/315-6, now source_printed."
+        }
+      ]
+    },
+    {
+      "id": "pabbatopama-gatha",
+      "merge_only": true,
+      "working_notes": {
+        "invitation": "Absent, as already recorded in the app.",
+        "units": "Not re-divided, and none needed. The eleven lines in the app are already two padas each and match the book line for line — six on page 30, five on page 31. Verse 12 is the closing formula standing as a verse.",
+        "ordering": "Pali only across both pages.",
+        "conventions": "No romanisation printed.",
+        "pages": "IMG_0292.PNG page 30 (title and verses 1-6) and IMG_0294.PNG page 31 (verses 7-11 and the closing). Thai script, two columns on both."
+      },
+      "book_number": 14,
+      "page_start": 30,
+      "source_printed": "ส.ส. 15/148",
+      "page_markers": {
+        "7": 31
+      },
+      "closing": {
+        "pali": "ปัพพะโตปะมะคาถา นิฏฐิตา",
+        "pali_roman": "pabbatopamagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses on the Simile of the Mountain."
+      },
+      "corrections": [
+        {
+          "verse": 1,
+          "field": "pali",
+          "from": "ยะถาปี เสลา วิปุลา นะภัง อาหัจจะ ปัพพะตา",
+          "to": "ยะถาปิ เสลา วิปุลา นะภัง อาหัจจะ ปัพพะตา",
+          "reason": "The page prints the short i. The long vowel in the file is paste damage, not a reading."
+        },
+        {
+          "verse": 1,
+          "field": "pali_roman",
+          "from": "yathāpī selā vipulā nabhaṃ āhacca pabbatā",
+          "to": "yathāpi selā vipulā nabhaṃ āhacca pabbatā",
+          "reason": "Follows the pali above; yathapi is also the standard form."
+        },
+        {
+          "verse": 6,
+          "field": "pali",
+          "from": "นะ ตัตถะ หัตถี่นัง ภูมิ นะ ระถานัง นะ ปัตติยา.",
+          "to": "นะ ตัตถะ หัตถีนัง ภูมิ นะ ระถานัง นะ ปัตติยา.",
+          "reason": "The file carries a mai ek the page does not print and that Pali has no use for. Paste damage."
+        },
+        {
+          "verse": 7,
+          "field": "pali",
+          "from": "นะ จาปิ มันตะยุทเธนะ สักกา เชตุง ธะเนนะ ว่า",
+          "to": "นะ จาปิ มันตะยุทเธนะ สักกา เชตุง ธะเนนะ วา",
+          "reason": "Same fault: the page prints the plain vowel, the file has a mai ek."
+        },
+        {
+          "verse": 7,
+          "field": "pali_roman",
+          "from": "na cāpi mantayuddhena sakkā jetuṃ dhanena vàa",
+          "to": "na cāpi mantayuddhena sakkā jetuṃ dhanena vā",
+          "reason": "The romanisation had transliterated the mai ek as a grave accent, producing a form that is not IAST at all."
+        },
+        {
+          "verse": 8,
+          "field": "pali",
+          "from": "ตัสมา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.",
+          "to": "ตัส์มา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.",
+          "reason": "The page prints thanthakhat here, as Ariyadhana verse 5 already does in the app. The file dropped it."
+        },
+        {
+          "verse": 10,
+          "field": "pali",
+          "from": "โย ธัมมะจาริ กาเยนะ วาจายะ อุทะ เจตะสา",
+          "to": "โย ธัมมะจารี กาเยนะ วาจายะ อุทะ เจตะสา",
+          "reason": "The page prints the long i."
+        },
+        {
+          "verse": 10,
+          "field": "pali_roman",
+          "from": "yo dhammacāri kāyena vācāya uda cetasā",
+          "to": "yo dhammacārī kāyena vācāya uda cetasā",
+          "reason": "Follows the pali above."
+        },
+        {
+          "verse": 11,
+          "field": "pali",
+          "from": "อิเธวะ นัง ปะสังสันติ เปจจะ สัคเค ปะโมทะติ.'",
+          "to": "อิเธวะ นัง ปะสังสันติ เปจจะ สัคเค ปะโมทะติ.",
+          "reason": "The trailing apostrophe is the superscript footnote marker flattened by the paste. It is a reference, not text."
+        },
+        {
+          "verse": 11,
+          "field": "pali_roman",
+          "from": "idheva naṃ pasaṃsanti pecca sagge pamodati.'",
+          "to": "idheva naṃ pasaṃsanti pecca sagge pamodati.",
+          "reason": "Same marker, same removal."
+        },
+        {
+          "verse": null,
+          "field": "source",
+          "from": "ขุ.สุ. 25/360-361, ส.ส. 15/315-6 — printed as footnotes 1 and 2 in the book, appearing mid-text in what you pasted. See checks.",
+          "to": "",
+          "reason": "WRONG CHANT. Those two references are page 30 footnotes 1 and 2, and they belong to Saccapanavidhyanurupa and Adiyasutta, the two chants ABOVE this one. This chant own citation is footnote 1 of page 31, now in source_printed. Cleared rather than rewritten, because `source` may have been written for the app while source_printed is what the book says."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0292.PNG",
+          "issue": "MERGE WITH CORRECTIONS. This chant is one of the seventeen entered from pasted text before page numbers existed. The instruction for this batch is that the PHOTOGRAPH WINS where the file is damaged, which reverses the usual merge rule — that rule protects text typed with the book open, and this text was pasted and never checked."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0294.PNG",
+          "issue": "TWO COLUMNS on both pages. The line division already in the app matches the pairing and was NOT changed. First pairing on page 30 is the left half ending vipula joined to the right half beginning nabhang; on page 31 the left half ending mantayuddhena joined to the right half beginning sakka."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0292.PNG",
+          "issue": "The page prints a full stop after pukkuse and the file has none. NOT corrected: a missing full stop is the one difference here that could as easily be the photograph as the file, and it changes nothing chanted. Left for your eye."
+        },
+        {
+          "verse": 12,
+          "file": "IMG_0294.PNG",
+          "issue": "Verse 12 IS the closing formula standing as a verse — the same fault found in Mettanisamsa and Devatadissa. A closing is offered above and stage 2 must refuse to write it while verse 12 stands, or the page will print it twice."
+        }
+      ]
+    },
+    {
+      "id": "ariyadhana-gatha",
+      "merge_only": true,
+      "working_notes": {
+        "invitation": "Absent, as already recorded.",
+        "units": "Not re-divided. The six two-pada lines in the app match the page exactly, line for line; verse 7 is the closing formula.",
+        "ordering": "Pali only.",
+        "conventions": "No romanisation printed.",
+        "pages": "IMG_0294.PNG, the middle of page 31. Thai script, two columns, complete on this page."
+      },
+      "page_start": 31,
+      "source_printed": "อง. จตุกุก. 21/74 อง. ปัญจก. 22/59",
+      "closing": {
+        "pali": "อะริยะธะนะคาถา นิฏฐิตา",
+        "pali_roman": "ariyadhanagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses on the Noble Treasure."
+      },
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0294.PNG",
+          "issue": "MERGE, and a clean one. Every one of the six lines in the app matches the page character for character, including both words carrying thanthakhat. Nothing was corrected because nothing needed it. Only page_start and source_printed are new."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0294.PNG",
+          "issue": "NO CHANT NUMBER. The heading carries nothing before the title, where 13, 14 and 15 around it are all numbered. book_number is therefore omitted rather than arrived at by counting chants."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0294.PNG",
+          "issue": "Verse 7 IS the closing formula standing as a verse, as in Pabbatopama above. The closing offered here must not be written while it stands."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "saccapanavidhyanurupa-gatha",
+      "adiyasutta-gatha",
+      "pabbatopama-gatha",
+      "ariyadhana-gatha"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 32,
+    "resume_from_file": "IMG_0295.PNG",
+    "resume_from": "paticcasamuppada-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — not applicable. Both pages are Pali only, so no chant here carries a `thai` layer and there is no `paiboon` value anywhere in the batch to scan.",
+    "pali_untouched": "Confirmed. No `pali` value has been run through Paiboon+. Every `pali_roman` is IAST transliterating the Thai-script Pali beside it.",
+    "page_scan": "agrees. Every verse falls inside exactly one page row and the page numbers ascend 30, 30, 30, 31, 31, 31. Pabbatopama is the only chant crossing the turn, six lines on 30 and five on 31, recorded as `page_markers` rather than as new verses because the app already holds them.",
+    "notes": "PAGE 31 THIRD CHANT IS DELIBERATELY NOT WRITTEN. Chant 15, the Paticcasamuppada-patho, opens at the foot of page 31 as justified prose under a sub-heading and runs onto page 32. It is already in the app with 24 verses covering both vara, and page 31 prints only the first twelve. Giving it page_start 31 without reading page 32 would place all 24 verses on page 31 — twice what the book prints there — and a page number may never be inferred. Page 32 must be read first, which is why resume_from_page is 32.\n\nSECOND FINDING, and it needs Josh. The app Paticcasamuppada prints the sense-bases word with a pho at verses 4, 5, 16 and 17, and the photograph appears to agree. Standard Pali is salayatana, with a lo chula. This is the same lo-chula/pho hazard proven twice on pages 22 and 23: this typeface renders lo chula so that it photographs as pho, so the photograph CANNOT settle it, and the instruction to let the photo win must NOT be applied here — doing so would fix four wrong readings in place. Left untouched pending the physical book.\n\nTHIRD: the Pabbatopama `source` field in the app cited page 30 two footnotes, which belong to the two chants above it. Its real citation is page 31 footnote 1. The pasted text had run the pages together. Worth suspecting wherever a pre-page chant carries a `source` naming more than one reference.\n\nFOURTH: Adiyasutta is a genuinely new chant, not one of the seventeen. It brings the app to 49."
+  }
+}
