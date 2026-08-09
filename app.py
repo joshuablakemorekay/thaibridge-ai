@@ -5991,6 +5991,7 @@ def chanting_book():
     template never change.
     """
     coverage = chanting.page_coverage()
+    spans = chanting.chant_page_spans()
     return render_template('chanting.html',
                            chants=chanting.CHANTS,
                            layers=chanting.CHANT_LAYERS,
@@ -5999,7 +6000,12 @@ def chanting_book():
                            page_count=sum(last - first + 1
                                           for first, last in coverage),
                            coverage=chanting.describe_coverage(coverage),
-                           book_last_page=chanting.BOOK_LAST_PAGE)
+                           book_last_page=chanting.BOOK_LAST_PAGE,
+                           spans=spans,
+                           # The span as printed text, worked out once here
+                           # rather than in a loop over 48 cards in Jinja.
+                           span_text={cid: chanting.describe_pages(pages)
+                                      for cid, pages in spans.items()})
 
 
 @app.route('/chanting/contents')

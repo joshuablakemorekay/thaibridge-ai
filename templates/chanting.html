@@ -304,7 +304,12 @@
             <span class="card-english">{{ chant.title_english }}</span>
             {% if chant.when_chanted %}<span class="card-when">{{ chant.when_chanted }}</span>{% endif %}
             <span class="card-meta">
-                {% if chant.page_start %}<span class="card-page">page {{ chant.page_start }}</span>{% endif %}
+                {# The pages the chant RUNS ACROSS, not just the one it starts
+                   on. A chant continuing overleaf left its later pages
+                   invisible here — page 5 and page 21 are both second halves,
+                   and neither appeared anywhere on this index. #}
+                {% if span_text.get(chant.id) %}<span class="card-page">{% if chant.id in spans and spans[chant.id]|length > 1 %}pages{% else %}page{% endif %} {{ span_text[chant.id] }}</span>
+                {% elif chant.page_start %}<span class="card-page">page {{ chant.page_start }}</span>{% endif %}
                 {% if chant.source %}<span class="chant-source">{{ chant.source }}</span>{% endif %}
                 <span class="card-count">{{ chant.verses|length }} verses</span>
             </span>
@@ -364,7 +369,15 @@
                  rendered layer by layer exactly as it is stored. -->
             <h3 class="chant-heading">The chant</h3>
 
-            {% if chant.page_start %}
+            {# One link per page the chant covers. A chant running across a
+               page turn is read from both, and offering only the first left
+               the second reachable solely by typing its number. #}
+            {% if spans.get(chant.id) %}
+            <p class="chant-open-at-page">
+                As the book prints it:
+                {% for page in spans[chant.id] %}<a href="{{ url_for('chanting_page', page=page) }}">page {{ page }}</a>{% if not loop.last %}{{ ', ' if loop.revindex0 > 1 else ' and ' }}{% endif %}{% endfor %} →
+            </p>
+            {% elif chant.page_start %}
             <p class="chant-open-at-page">
                 <a href="{{ url_for('chanting_page', page=chant.page_start) }}">Open at page {{ chant.page_start }}, as the book prints it →</a>
             </p>

@@ -12946,6 +12946,44 @@ def contents_for_front_page(number, chants=None, page_blocks=None):
 BOOK_LAST_PAGE = 308
 
 
+def _runs(numbers):
+    """Consecutive numbers collapsed into (first, last) pairs.
+
+    [1, 2, 3, 7, 8] -> [(1, 3), (7, 8)]. Shared so that a chant's span and the
+    book's coverage are described by the same rule and cannot disagree.
+    """
+    runs = []
+    for number in sorted(set(numbers)):
+        if runs and number == runs[-1][1] + 1:
+            runs[-1][1] = number
+        else:
+            runs.append([number, number])
+    return [(first, last) for first, last in runs]
+
+
+def chant_page_spans(chants=None, page_blocks=None):
+    """Every page each chant is printed on, in order.
+
+    The index card shows where a chant BEGINS, which is not the same as where
+    it is. Parittakaraṇapāṭha starts on page 20 and runs to 22, so pages 21 and
+    22 appeared nowhere on the index even though both are entered and both
+    open — and page 5 was invisible the same way, being the second half of a
+    chant that starts on 4. A reader could only reach them by typing the number
+    and hoping.
+
+    Read out of the page index rather than from `page_start` plus an
+    assumption, so a chant is listed on exactly the pages it was really placed
+    on and cannot claim one it does not reach.
+    """
+    pages, _ = build_page_index(chants, page_blocks)
+    spans = {}
+    for page in pages:
+        for entry in page['entries']:
+            if entry['kind'] == 'chant':
+                spans.setdefault(entry['chant']['id'], []).append(page['page'])
+    return spans
+
+
 def page_coverage(chants=None, page_blocks=None):
     """Which body pages are in, as runs of consecutive pages.
 
@@ -12966,13 +13004,16 @@ def page_coverage(chants=None, page_blocks=None):
     hand-maintained "pages 1-20 so far" line makes certain.
     """
     pages, _ = build_page_index(chants, page_blocks)
-    runs = []
-    for number in sorted(page['page'] for page in pages):
-        if runs and number == runs[-1][1] + 1:
-            runs[-1][1] = number
-        else:
-            runs.append([number, number])
-    return [(first, last) for first, last in runs]
+    return _runs(page['page'] for page in pages)
+
+
+def describe_pages(numbers):
+    """A chant's pages as English: '4–5', '20–22', or '27' for one.
+
+    Takes the numbers rather than runs, because that is what a caller holding
+    a chant's span has.
+    """
+    return describe_coverage(_runs(numbers))
 
 
 def describe_coverage(runs):

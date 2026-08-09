@@ -19,8 +19,8 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from chanting import (  # noqa: E402
-    build_page_index, check_page_blocks, check_variants, describe_coverage,
-    page_coverage)
+    build_page_index, chant_page_spans, check_page_blocks, check_variants,
+    describe_coverage, describe_pages, page_coverage)
 
 
 def verse(number, page=None):
@@ -140,6 +140,55 @@ def test_a_gap_in_the_book_is_left_as_a_gap():
     ])
 
     assert [p['page'] for p in pages] == [47, 53]
+
+
+class TestAChantShowsEveryPageItCovers:
+    """The index must not hide a page just because no chant starts on it.
+
+    Pages 5 and 21 are both the second half of a chant that begins on the page
+    before. Listing only `page_start` made them invisible on the index while
+    being perfectly openable by number — which is the mismatch Josh found.
+    """
+
+    def test_a_chant_on_one_page_lists_that_page(self):
+        spans = chant_page_spans([chant('metta', 47, [verse(1)])], [])
+        assert spans['metta'] == [47]
+
+    def test_a_chant_running_over_a_page_turn_lists_both(self):
+        spans = chant_page_spans(
+            [chant('metta', 47, [verse(1), verse(2, page=48)])], [])
+        assert spans['metta'] == [47, 48]
+
+    def test_a_chant_crossing_two_turns_lists_all_three(self):
+        """Parittakaraṇapāṭha's real shape: starts 20, ends 22."""
+        spans = chant_page_spans([chant('paritta', 20, [
+            verse(1), verse(2, page=21), verse(3, page=22)])], [])
+        assert spans['paritta'] == [20, 21, 22]
+
+    def test_an_unpaginated_chant_has_no_span(self):
+        spans = chant_page_spans(
+            [{'id': 'x', 'title_english': 'x', 'verses': [verse(1)]}], [])
+        assert 'x' not in spans
+
+    def test_a_span_reads_as_a_range(self):
+        assert describe_pages([4, 5]) == '4–5'
+        assert describe_pages([20, 21, 22]) == '20–22'
+        assert describe_pages([27]) == '27'
+
+    def test_every_entered_page_is_reachable_from_some_chant_or_block(self):
+        """The point of the change, checked against the real book.
+
+        Every page the app serves must be findable on the index — either a
+        chant is printed across it, or it is a page of the book's own material.
+        A page reachable only by guessing its number is the fault this closes.
+        """
+        pages, _ = build_page_index()
+        covered = {p for span in chant_page_spans().values() for p in span}
+        blocks_only = {page['page'] for page in pages
+                       if not any(e['kind'] == 'chant' for e in page['entries'])}
+        for page in pages:
+            assert page['page'] in covered or page['page'] in blocks_only, (
+                f"page {page['page']} is served but appears on no chant card")
 
 
 class TestSayingHowMuchOfTheBookIsIn:
