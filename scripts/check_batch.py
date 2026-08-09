@@ -49,6 +49,10 @@ tested against a case that is known to break it:
     the pair, with its reason, in `batch_status.diacritic_exceptions`.
   * A DATA-ONLY batch does not carry the commentary it is meant to defer.
   * Nothing has a raw newline inside a string value.
+  * A `merge_only` entry — one that only hands stage 2 the header fields a
+    chant already in the app is missing — brings something, and brings no
+    verses. Every verse-walking check above skips it, because there are
+    legitimately none to walk.
 
 Every problem names the chant and verse it belongs to, so it can be found.
 """
@@ -70,6 +74,10 @@ LAYERS = ("pali", "pali_roman", "thai", "paiboon", "english")
 RTGS_TELLS = ("kh", "th", "ph", "ng")
 # Fields a DATA-ONLY batch defers to stage 3 rather than writing now.
 COMMENTARY = ("background", "meaning", "summary", "when_chanted", "source")
+# What a merge entry is allowed to bring. A merge carrying none of these adds
+# nothing, and belongs out of the batch rather than in it.
+MERGEABLE = ("page_start", "book_number", "book_number_printed", "layout",
+             "source_printed", "closing")
 
 THAI = re.compile(r"[฀-๿]")
 LATIN = re.compile(r"[A-Za-z]")
@@ -96,6 +104,29 @@ def skeleton(word: str) -> str:
     """
     return "".join(ch for ch in unicodedata.normalize("NFD", word.lower())
                    if not unicodedata.combining(ch))
+
+
+def merge_only(chant: dict) -> bool:
+    """True where the entry ADDS to a chant already in the app.
+
+    Seventeen chants were set before page numbers existed. When the page pass
+    reaches one of their pages, the batch's job is to hand stage 2 the few
+    things the app is missing — `page_start`, `book_number`, `source_printed`,
+    a `closing` — and nothing else. Restating the verses would be worse than
+    useless: the merge rule says the file's text wins, so a second copy could
+    only ever be ignored or, if anyone got the rule wrong, overwrite text Josh
+    typed with the book in front of him.
+
+    So a merge entry legitimately has no `verses`, and every check below that
+    walks verses has to know that. Without this the validator demanded a copy
+    of exactly the text the workflow exists to protect.
+    """
+    return bool(chant.get("merge_only"))
+
+
+def verses_of(chant: dict) -> list:
+    """The entry's verses, or none for a merge. Never raises."""
+    return chant.get("verses") or []
 
 
 def paiboon_values(chant: dict):
@@ -138,11 +169,25 @@ def check_shape(batch: dict) -> list[str]:
             problems.append(
                 f"{cid}: id is not a slug — lower case, digits and hyphens "
                 f"only, no diacritics")
-        for key in ("verses", "checks"):
-            if key not in chant:
-                problems.append(f"{cid}: has no {key!r} array")
-        if not chant.get("verses"):
-            problems.append(f"{cid}: has no verses")
+        if "checks" not in chant:
+            problems.append(f"{cid}: has no 'checks' array")
+
+        if merge_only(chant):
+            if not any(chant.get(key) for key in MERGEABLE):
+                problems.append(
+                    f"{cid}: merge_only but carries none of {list(MERGEABLE)} "
+                    f"— a merge that adds nothing to the app has no reason to "
+                    f"be in the batch")
+            if chant.get("verses"):
+                problems.append(
+                    f"{cid}: merge_only but carries verses — on a merge the "
+                    f"file's text wins, so these could only be ignored, or "
+                    f"overwrite text typed from the book")
+        else:
+            if "verses" not in chant:
+                problems.append(f"{cid}: has no 'verses' array")
+            if not chant.get("verses"):
+                problems.append(f"{cid}: has no verses")
 
     for row in batch["batch"].get("pages", []):
         for key in ("page", "file", "chant", "verses"):
@@ -178,7 +223,7 @@ def check_pali_untouched(batch: dict) -> list[str]:
     """
     problems = []
     for chant in batch["chants"]:
-        for verse in chant["verses"]:
+        for verse in verses_of(chant):
             n, pali, roman = verse.get("number"), verse.get("pali", ""), verse.get("pali_roman", "")
             if pali and not THAI.search(pali):
                 problems.append(
@@ -202,7 +247,7 @@ def check_layer_keys(batch: dict) -> list[str]:
     """
     problems = []
     for chant in batch["chants"]:
-        for verse in chant["verses"]:
+        for verse in verses_of(chant):
             missing = [layer for layer in LAYERS if layer not in verse]
             if missing:
                 problems.append(
@@ -224,7 +269,7 @@ def check_layers_not_invented(batch: dict) -> list[str]:
     """
     problems = []
     for chant in batch["chants"]:
-        for verse in chant["verses"]:
+        for verse in verses_of(chant):
             if verse.get("paiboon") and not verse.get("thai"):
                 problems.append(
                     f"{chant['id']} verse {verse.get('number')}: paiboon is "
@@ -258,7 +303,7 @@ def check_printed_numbers(batch: dict) -> list[str]:
     problems = []
     for chant in batch["chants"]:
         seen, previous = {}, None
-        for verse in chant["verses"]:
+        for verse in verses_of(chant):
             if "printed_number" not in verse:
                 continue
             n, where = verse["printed_number"], verse.get("number")
@@ -336,6 +381,12 @@ def check_page_map(batch: dict) -> list[str]:
             problems.append(
                 f"page {row.get('page')} names {cid}, which never arrived")
             continue
+        # A merge's page row describes verses that are already in the app, not
+        # in the batch. There is nothing here to check them against, and
+        # demanding they be present would demand the copy merge_only exists to
+        # avoid. The row still stands as the record of what the page prints.
+        if merge_only(by_id[cid]):
+            continue
         have = {v["number"] for v in by_id[cid]["verses"]}
         for n in sorted(verse_range(spec)):
             if n not in have:
@@ -350,7 +401,7 @@ def check_page_map(batch: dict) -> list[str]:
                 f"{cid} verse {n} is claimed by pages {pages} — a verse "
                 f"belongs to exactly one page")
     for chant in batch["chants"]:
-        for verse in chant["verses"]:
+        for verse in verses_of(chant):
             if (chant["id"], verse["number"]) not in claimed:
                 problems.append(
                     f"{chant['id']} verse {verse['number']} is on no page in "
@@ -385,7 +436,7 @@ def check_diacritics(batch: dict) -> list[str]:
 
     spellings: dict[str, set] = {}
     for chant in batch["chants"]:
-        for verse in chant["verses"]:
+        for verse in verses_of(chant):
             text = unicodedata.normalize("NFC", verse.get("pali_roman", ""))
             for word in re.findall(r"[^\s,.;:!?()\[\]]+", text):
                 spellings.setdefault(skeleton(word), set()).add(word.lower())
@@ -436,7 +487,7 @@ def check_line_breaks_agree(batch: dict) -> list[str]:
     """
     problems = []
     for chant in batch["chants"]:
-        for verse in chant["verses"]:
+        for verse in verses_of(chant):
             pali, roman = verse.get("pali", ""), verse.get("pali_roman", "")
             if not pali or not roman:
                 continue
@@ -571,6 +622,14 @@ def report(path: pathlib.Path, results: dict[str, list[str]]) -> bool:
 
 
 def main(argv=None) -> int:
+    # Every problem this script reports may contain IAST or Thai, and a Windows
+    # console is cp1252 by default — so the report crashed on the first line
+    # carrying a macron, taking the exit code with it. A checker that dies while
+    # naming a fault is worse than one that finds nothing.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
+
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     ap.add_argument("batch", nargs="*", type=pathlib.Path)
     ap.add_argument("--all", action="store_true",

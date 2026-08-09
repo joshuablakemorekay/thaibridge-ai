@@ -32,10 +32,25 @@ Nothing is written until reconciliation passes. The rules come from the prompt:
     and it is an overlap, not a completion, and nothing is written.
 
 Every claim it makes about what it did is checked before it is printed.
+
+The third kind of entry: a merge
+--------------------------------
+Seventeen chants were entered before page numbers existed. When the page pass
+reaches one of their pages there is nothing to add and nothing to append — the
+words are already there, typed from the book — and the only thing missing is
+the handful of header fields the page supplies: `page_start`, `book_number`,
+`layout`, `source_printed`, a `closing`.
+
+Such an entry is marked `merge_only` and carries NO verses, because on a merge
+the file's text wins; a second copy could only be ignored, or overwrite text
+read from the book by someone holding it. Merging ADDS what is absent and
+overwrites nothing — the page a chant was first read from keeps the last word
+on anything it already recorded.
 """
 from __future__ import annotations
 
 import argparse
+import difflib
 import json
 import pathlib
 import re
@@ -54,6 +69,15 @@ CHANT_KEYS = ("id", "title_thai", "title_pali", "title_roman", "title_english",
               "book_number", "book_number_printed", "page_start", "layout",
               "source_printed")
 LAYERS = ("pali", "pali_roman", "thai", "paiboon", "english")
+# What a merge may bring. Scalars first, in the order CHANT_KEYS writes them;
+# `closing` is separate because it renders as a block rather than a line.
+MERGE_SCALARS = ("book_number", "book_number_printed", "page_start", "layout",
+                 "source_printed")
+
+
+def merge_only(chant: dict) -> bool:
+    """True where the entry only adds header fields to a chant already in."""
+    return bool(chant.get("merge_only"))
 
 
 # ---------------------------------------------------------------------------
@@ -86,6 +110,11 @@ def reconcile(batch: dict, existing: dict) -> list[str]:
         if cid not in by_id:
             problems.append(f"page {row.get('page')} names {cid}, which never arrived")
             continue
+        # A merge's page row describes verses that live in the app, not in the
+        # batch, so there is nothing here to reconcile it against. The row is
+        # still the record of what the page prints and stays as it is.
+        if merge_only(by_id[cid]):
+            continue
         have = {v["number"] for v in by_id[cid]["verses"]}
         missing = sorted(verse_range(spec) - have)
         if missing:
@@ -100,13 +129,40 @@ def reconcile(batch: dict, existing: dict) -> list[str]:
     # against batch-001-003 after it had already been applied by hand: the
     # continuation guards refused it, and this one did not exist to.
     for c in entries:
-        if "continuation_of" in c or "repeat_of" in c:
+        if merge_only(c) or "continuation_of" in c or "repeat_of" in c:
             continue
         if c["id"] in existing:
             problems.append(
                 f"{c['id']} is already in the app — this batch has been applied "
                 f"before, or the chant is a reprint that needs merging rather "
                 f"than appending")
+
+    # A merge is the mirror image of the guard above, and needs its own: the
+    # one thing that must be true of it is the one thing that must NOT be true
+    # of an addition. Marking a chant merge_only when it is not in the app
+    # would silently write nothing at all and report success.
+    for c in entries:
+        if not merge_only(c):
+            continue
+        if c["id"] not in existing:
+            problems.append(
+                f"{c['id']} is marked merge_only but is not in the app — a "
+                f"merge fills gaps in a chant that is already there, so this "
+                f"one would need entering in full instead")
+        if "continuation_of" in c:
+            problems.append(
+                f"{c['id']} is both merge_only and a continuation — a "
+                f"continuation brings verses and a merge brings none, so one "
+                f"of the two is wrong")
+        if c.get("verses"):
+            problems.append(
+                f"{c['id']} is merge_only but carries verses — on a merge the "
+                f"file's text wins, so these could only be ignored, or "
+                f"overwrite text typed from the book")
+        if not any(c.get(k) for k in MERGE_SCALARS) and not c.get("closing"):
+            problems.append(
+                f"{c['id']} is merge_only but brings none of "
+                f"{list(MERGE_SCALARS)} or a closing — there is nothing to merge")
 
     for c in entries:
         if "continuation_of" not in c:
@@ -161,8 +217,14 @@ def check_join(incoming: dict, present: dict) -> list[str]:
 
 def plan(batch: dict, existing: dict) -> dict:
     """What applying this batch would do. Safe to call before writing."""
-    added, appended, completed = [], [], []
+    added, appended, completed, merged = [], [], [], []
     for c in batch["chants"]:
+        if merge_only(c):
+            fields = [k for k in MERGE_SCALARS if c.get(k)]
+            if c.get("closing", {}).get("pali"):
+                fields.append("closing")
+            merged.append(f"{c['id']} ({', '.join(fields)})")
+            continue
         if "continuation_of" not in c:
             added.append(c["id"])
             continue
@@ -170,7 +232,8 @@ def plan(batch: dict, existing: dict) -> dict:
         here = {v["number"] for v in existing[target]["verses"]}
         for v in c["verses"]:
             (completed if v["number"] in here else appended).append((target, v["number"]))
-    return {"added": added, "appended": appended, "completed": completed}
+    return {"added": added, "appended": appended, "completed": completed,
+            "merged": merged}
 
 
 # ---------------------------------------------------------------------------
@@ -277,12 +340,81 @@ def drop_marker(source: str, chant_id: str, word: str) -> str:
     return source[:start] + "\n".join(kept) + rest
 
 
+def closing_is_already_a_verse(source: str, anchor: int, pali: str) -> bool:
+    """True where the chant's last verse IS the closing formula.
+
+    The จบ line is set in the same measure as the text above it, so a chant
+    transcribed before closings had a field of their own took it as one more
+    line. Writing the closing as well would print it twice on the page.
+
+    The match has to tolerate a character or two. Mettānisaṃsasutta is the
+    case in hand: its verse 24 reads เมตตานิสังสะสุดตัง with ด where the book
+    prints สุตตัง with ต — the same line, one letter out, and an exact
+    comparison would miss it and duplicate the formula.
+    """
+    v_open = source.index("'verses': [", anchor)
+    v_close = source.index("\n        ],\n", v_open)
+    lines = re.findall(r"'pali': '(.*?)',", source[v_open:v_close])
+    if not lines:
+        return False
+    return difflib.SequenceMatcher(None, lines[-1], pali).ratio() >= 0.85
+
+
+def merge_into(source: str, chant: dict, report: dict) -> str:
+    """Add the header fields a chant already in the app is missing.
+
+    ADDS ONLY. Every write below is guarded by "is this absent?", so a merge
+    can never overwrite: the page a chant was first read from keeps the last
+    word on anything it already recorded, and this fills the gaps around it.
+
+    The scalars go immediately after `'group'`, which is where `render_chant`
+    puts them and where `page_start` already sits on the chants that have one,
+    so a merged chant reads the same as one entered whole.
+    """
+    cid = chant["id"]
+    anchor = source.index(f"'id': {cid!r},")
+    head = source[anchor:source.index("'verses': [", anchor)]
+
+    # Reversed, because each one is inserted at the SAME point — the line
+    # after `'group'` — so the last written ends up first. Walking backwards
+    # leaves them in CHANT_KEYS order the right way up.
+    for key in reversed(MERGE_SCALARS):
+        if chant.get(key) is None or f"'{key}':" in head:
+            continue
+        at = source.index("'group': ", anchor)
+        line_end = source.index("\n", at) + 1
+        source = (source[:line_end]
+                  + f"{INDENT * 2}'{key}': {chant[key]!r},\n"
+                  + source[line_end:])
+        report.setdefault("merged", []).append(f"{cid}.{key}")
+        anchor = source.index(f"'id': {cid!r},")
+        head = source[anchor:source.index("'verses': [", anchor)]
+
+    closing = chant.get("closing") or {}
+    if closing.get("pali") and "'closing':" not in head:
+        if closing_is_already_a_verse(source, anchor, closing["pali"]):
+            report.setdefault("closings_skipped", []).append(cid)
+        else:
+            head_end = source.index("'verses': [", anchor)
+            source = (source[:head_end]
+                      + render_closing(closing).lstrip()
+                      + f"{INDENT * 2}"
+                      + source[head_end:])
+            report.setdefault("merged", []).append(f"{cid}.closing")
+
+    return source
+
+
 def apply(batch: dict, source: str) -> tuple[str, dict]:
     """Return the new chanting.py source and a report of what was done."""
     report = {"added": [], "appended": 0, "completed": [], "markers": {}}
 
     for chant in batch["chants"]:
-        if "continuation_of" not in chant:
+        if merge_only(chant):
+            source = merge_into(source, chant, report)
+
+    for chant in batch["chants"]:
+        if merge_only(chant) or "continuation_of" not in chant:
             continue
         target = chant["continuation_of"]
         anchor = source.index(f"'id': {target!r},")
@@ -356,7 +488,12 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
                     f"failed to remove the CONTINUES marker from {target}: "
                     f"count went {before} -> {after}. Refusing to report success.")
 
-    new = [c for c in batch["chants"] if "continuation_of" not in c]
+    # A merge is neither an addition nor a continuation, and must be excluded
+    # here explicitly. Without the first clause it would fall through to this
+    # line and be appended as a SECOND copy of a chant already in the file —
+    # exactly the one-chant-becomes-two failure the script exists to prevent.
+    new = [c for c in batch["chants"]
+           if not merge_only(c) and "continuation_of" not in c]
     if new:
         lines = source.split("\n")
         close = next(i for i, l in enumerate(lines) if l == "]")
@@ -392,6 +529,7 @@ def main(argv=None) -> int:
     print(f"  add      : {steps['added'] or 'none'}")
     print(f"  append   : {len(steps['appended'])} verses")
     print(f"  complete : {steps['completed'] or 'none'}")
+    print(f"  merge    : {steps['merged'] or 'none'}")
     if args.dry_run:
         print("\ndry run — nothing written")
         return 0
@@ -399,7 +537,16 @@ def main(argv=None) -> int:
     source, report = apply(batch, CHANTING.read_text(encoding="utf-8"))
     CHANTING.write_text(source, encoding="utf-8")
     print(f"\nwritten. added {len(report['added'])}, appended {report['appended']} "
-          f"verses, completed {len(report['completed'])} line(s)")
+          f"verses, completed {len(report['completed'])} line(s), merged "
+          f"{len(report.get('merged', []))} field(s)")
+    for field in report.get("merged", []):
+        print(f"  merged {field}")
+    # Reported rather than passed over. A closing that was offered and not
+    # written is a thing the batch believed and the file overruled, and it
+    # should be visible without reading the diff.
+    for cid in report.get("closings_skipped", []):
+        print(f"  closing NOT written for {cid}: its last verse already is the "
+              f"formula, and writing it would print it twice")
     for word, (before, after) in report["markers"].items():
         print(f"  {word} markers: {before} -> {after}")
     return 0
