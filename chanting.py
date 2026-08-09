@@ -13441,6 +13441,22 @@ def build_page_index(chants=None, page_blocks=None):
     built = []
     for page in sorted(set(pages) | set(groups_by_page)):
         chant_entries = list(pages.get(page, {}).values())
+
+        # Down-page order, where the book itself settles it. Entries arrive in
+        # the order the chants sit in CHANTS, which is book order right up
+        # until a chant is ADDED later than its neighbours — a new chant is
+        # appended to the end of the file, so it lands at the bottom of its
+        # page however early in the book it is printed. Ādiyasutta, numbered
+        # 13, rendered beneath Pabbatopama, numbered 14, on page 30.
+        #
+        # The book's own numbering is the answer where every chant on the page
+        # carries one, because a book does not print its chants out of numeric
+        # order. Where any of them does not — most of the morning service is
+        # unnumbered — nothing is known that beats the existing order, so it
+        # is left exactly as it was.
+        numbers = [entry['chant'].get('book_number') for entry in chant_entries]
+        if len(chant_entries) > 1 and all(n is not None for n in numbers):
+            chant_entries.sort(key=lambda entry: entry['chant']['book_number'])
         groups = groups_by_page.get(page, [])
 
         # An anchor naming a chant that is not on this page has nowhere exact

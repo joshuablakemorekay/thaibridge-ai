@@ -143,6 +143,65 @@ def test_a_gap_in_the_book_is_left_as_a_gap():
     assert [p['page'] for p in pages] == [47, 53]
 
 
+class TestChantsAreInTheOrderThePagePrintsThem:
+    """Two chants on one page must appear the way down the page they are set.
+
+    Entries arrive in the order chants sit in CHANTS, which is book order
+    right up until a chant is ADDED after its neighbours — apply_batch appends
+    a new chant to the end of the file, so it lands at the foot of its page
+    however early in the book it is printed. Ādiyasutta, numbered 13, rendered
+    beneath Pabbatopama, numbered 14, on page 30.
+
+    A reader following a service reads down the page. Two chants the wrong way
+    round is the same class of error as a wrong page number, just quieter.
+    """
+
+    def numbered(self, chant_id, page_start, book_number, verses):
+        return {'id': chant_id, 'title_english': chant_id,
+                'page_start': page_start, 'book_number': book_number,
+                'verses': verses}
+
+    def test_the_books_numbering_settles_the_order(self):
+        pages, _ = build_page_index([
+            self.numbered('later', 30, 14, [verse(1)]),
+            self.numbered('earlier', 30, 13, [verse(1)]),
+        ], [])
+        assert [e['chant']['id'] for e in pages[0]['entries']] == ['earlier', 'later']
+
+    def test_a_chant_continuing_onto_the_page_still_comes_first(self):
+        """It is the top of the page, and its number is lower anyway."""
+        pages, _ = build_page_index([
+            self.numbered('runs-on', 29, 12, [verse(1), verse(2, page=30)]),
+            self.numbered('starts-here', 30, 13, [verse(1)]),
+        ], [])
+        page30 = next(p for p in pages if p['page'] == 30)
+        assert [e['chant']['id'] for e in page30['entries']] == ['runs-on', 'starts-here']
+
+    def test_without_numbers_the_existing_order_is_left_alone(self):
+        """Most of the morning service is unnumbered; nothing beats file order."""
+        pages, _ = build_page_index([
+            chant('second-in-file', 30, [verse(1)]),
+            chant('first-in-file', 30, [verse(1)]),
+        ], [])
+        assert [e['chant']['id'] for e in pages[0]['entries']] == [
+            'second-in-file', 'first-in-file']
+
+    def test_one_chant_missing_its_number_leaves_the_page_untouched(self):
+        """Sorting on a partial signal would be worse than not sorting."""
+        pages, _ = build_page_index([
+            self.numbered('numbered', 31, 14, [verse(1)]),
+            chant('unnumbered', 31, [verse(1)]),
+        ], [])
+        assert [e['chant']['id'] for e in pages[0]['entries']] == [
+            'numbered', 'unnumbered']
+
+    def test_the_real_page_30_reads_as_the_book_sets_it(self):
+        pages, _ = build_page_index()
+        page30 = next(p for p in pages if p['page'] == 30)
+        assert [e['chant']['id'] for e in page30['entries'] if e['kind'] == 'chant'] == [
+            'saccapanavidhyanurupa-gatha', 'adiyasutta-gatha', 'pabbatopama-gatha']
+
+
 class TestTheContentsReachesContinuationPages:
     """A สารบัญ line offers every page it runs across, not just its first.
 
