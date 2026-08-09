@@ -50,6 +50,7 @@ on anything it already recorded.
 from __future__ import annotations
 
 import argparse
+import ast
 import difflib
 import json
 import pathlib
@@ -80,16 +81,73 @@ def merge_only(chant: dict) -> bool:
     return bool(chant.get("merge_only"))
 
 
-def literal(field: str, value: str) -> str:
-    """The exact source text `chanting.py` holds for one field's value.
+def value_span(text: str, after: int) -> tuple[int, int]:
+    """Where the value expression starting at or after `after` ends.
 
-    Corrections are matched on this rather than on a verse's position in the
-    file. The seventeen pre-page chants were written by hand and do not agree
-    on key order — Pabbatopama puts `section` before `number`, which is enough
-    to defeat any regex that assumes the shape render_verse produces. A whole
-    line of Pali, on the other hand, is unmistakable.
+    `chanting.py` writes a field's value two ways. Short ones are a single
+    quoted string; long ones are a parenthesised run of adjacent strings that
+    the reader joins:
+
+        'pali_roman': (
+            "jātipaccayā jarāmaraṇaṃ "
+            "sambhavantī,"
+        ),
+
+    Both are one Python expression, which is the only description that covers
+    them. Scanning for the end of the expression rather than the end of the
+    line is what lets a correction reach a wrapped value at all.
     """
-    return f"'{field}': {value!r},"
+    i = after
+    while text[i] not in "('\"":
+        i += 1
+    start = i
+
+    if text[i] != "(":
+        return start, skip_string(text, i)
+
+    depth = 0
+    while True:
+        if text[i] in "'\"":
+            i = skip_string(text, i)      # a bracket inside a string is text
+            continue
+        if text[i] == "(":
+            depth += 1
+        elif text[i] == ")":
+            depth -= 1
+            if depth == 0:
+                return start, i + 1
+        i += 1
+
+
+def skip_string(text: str, i: int) -> int:
+    """The index just past the string literal beginning at `i`."""
+    quote = text[i]
+    i += 1
+    while True:
+        if text[i] == "\\":
+            i += 2
+            continue
+        if text[i] == quote:
+            return i + 1
+        i += 1
+
+
+def field_matches(window: str, field: str, value: str) -> list[tuple[int, int]]:
+    """Every span in `window` where `field` currently holds exactly `value`.
+
+    Compared by VALUE, not by source text. A correction says what the field
+    reads, and how that reading happens to be laid out across lines is not
+    something stage 1 can see from a photograph — nor should it have to.
+    """
+    spans = []
+    for match in re.finditer(rf"'{re.escape(field)}':\s*", window):
+        try:
+            start, end = value_span(window, match.end())
+            if ast.literal_eval(window[start:end]) == value:
+                spans.append((start, end))
+        except (SyntaxError, ValueError, IndexError):
+            continue
+    return spans
 
 
 # ---------------------------------------------------------------------------
@@ -458,17 +516,17 @@ def apply_corrections(source: str, chant: dict, report: dict) -> str:
     for fix in chant.get("corrections", []):
         start, end = chant_bounds(source, cid)
         window = source[start:end]
-        old = literal(fix["field"], fix["from"])
-        new = literal(fix["field"], fix["to"])
+        spans = field_matches(window, fix["field"], fix["from"])
 
-        found = window.count(old)
-        if found != 1:
+        if len(spans) != 1:
             raise RuntimeError(
-                f"{cid} verse {fix.get('verse')} {fix['field']}: expected to "
-                f"find the old value exactly once inside this chant, found "
-                f"{found}. Nothing written. Looked for: {old}")
+                f"{cid} verse {fix.get('verse')} {fix['field']}: expected the "
+                f"old value exactly once inside this chant, found "
+                f"{len(spans)}. Nothing written. Looked for: {fix['from']!r}")
 
-        source = source[:start] + window.replace(old, new, 1) + source[end:]
+        at, to = spans[0]
+        window = window[:at] + repr(fix["to"]) + window[to:]
+        source = source[:start] + window + source[end:]
         report.setdefault("corrected", []).append(
             f"{cid} v{fix.get('verse')} {fix['field']}")
     return source
