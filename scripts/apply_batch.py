@@ -80,6 +80,18 @@ def merge_only(chant: dict) -> bool:
     return bool(chant.get("merge_only"))
 
 
+def literal(field: str, value: str) -> str:
+    """The exact source text `chanting.py` holds for one field's value.
+
+    Corrections are matched on this rather than on a verse's position in the
+    file. The seventeen pre-page chants were written by hand and do not agree
+    on key order — Pabbatopama puts `section` before `number`, which is enough
+    to defeat any regex that assumes the shape render_verse produces. A whole
+    line of Pali, on the other hand, is unmistakable.
+    """
+    return f"'{field}': {value!r},"
+
+
 # ---------------------------------------------------------------------------
 # Reconciliation — nothing is written until all of this passes
 # ---------------------------------------------------------------------------
@@ -159,10 +171,13 @@ def reconcile(batch: dict, existing: dict) -> list[str]:
                 f"{c['id']} is merge_only but carries verses — on a merge the "
                 f"file's text wins, so these could only be ignored, or "
                 f"overwrite text typed from the book")
-        if not any(c.get(k) for k in MERGE_SCALARS) and not c.get("closing"):
+        if not any(c.get(k) for k in MERGE_SCALARS) and not any(
+                c.get(k) for k in ("closing", "corrections", "page_markers")):
             problems.append(
                 f"{c['id']} is merge_only but brings none of "
-                f"{list(MERGE_SCALARS)} or a closing — there is nothing to merge")
+                f"{list(MERGE_SCALARS)}, a closing, corrections or page "
+                f"markers — there is nothing to merge")
+        problems += check_corrections(c, existing.get(c["id"]))
 
     for c in entries:
         if "continuation_of" not in c:
@@ -175,6 +190,59 @@ def reconcile(batch: dict, existing: dict) -> list[str]:
             continue
         problems += check_join(c, existing[target])
 
+    return problems
+
+
+def check_corrections(chant: dict, present: dict | None) -> list[str]:
+    """Every correction must describe the text that is actually there.
+
+    A correction says "this field currently reads X, and the page shows Y".
+    If X is not what the file holds, the entry is describing a version of the
+    chant that no longer exists — the batch was written against older data, or
+    someone has edited it since — and applying it would either do nothing
+    silently or overwrite the wrong thing. Both are worse than refusing.
+
+    Checked against the parsed chant here, and again against the source text
+    at write time, because the two can disagree: a value can be present in the
+    data and written in the file in a form no literal match will find.
+    """
+    problems = []
+    if present is None:
+        return problems
+
+    for fix in chant.get("corrections", []):
+        where, field = fix.get("verse"), fix.get("field")
+        for key in ("field", "from", "to", "reason"):
+            if key not in fix:
+                problems.append(
+                    f"{chant['id']}: a correction has no {key!r} — a "
+                    f"correction without its reason is unreviewable")
+        if "field" not in fix:
+            continue
+
+        if where is None:
+            actual = present.get(field)
+        else:
+            verse = next((v for v in present["verses"]
+                          if v["number"] == where), None)
+            if verse is None:
+                problems.append(
+                    f"{chant['id']}: correction names verse {where}, which "
+                    f"the chant does not have")
+                continue
+            actual = verse.get(field)
+
+        if actual != fix.get("from"):
+            problems.append(
+                f"{chant['id']} verse {where} {field}: the file does not hold "
+                f"the text this correction says it does. Expected "
+                f"{fix.get('from')!r}, found {actual!r}")
+
+    for number in chant.get("page_markers", {}):
+        if not any(v["number"] == int(number) for v in present["verses"]):
+            problems.append(
+                f"{chant['id']}: a page marker names verse {number}, which "
+                f"the chant does not have")
     return problems
 
 
@@ -223,6 +291,10 @@ def plan(batch: dict, existing: dict) -> dict:
             fields = [k for k in MERGE_SCALARS if c.get(k)]
             if c.get("closing", {}).get("pali"):
                 fields.append("closing")
+            if c.get("corrections"):
+                fields.append(f"{len(c['corrections'])} corrections")
+            if c.get("page_markers"):
+                fields.append(f"{len(c['page_markers'])} page markers")
             merged.append(f"{c['id']} ({', '.join(fields)})")
             continue
         if "continuation_of" not in c:
@@ -360,6 +432,80 @@ def closing_is_already_a_verse(source: str, anchor: int, pali: str) -> bool:
     return difflib.SequenceMatcher(None, lines[-1], pali).ratio() >= 0.85
 
 
+def chant_bounds(source: str, cid: str) -> tuple[int, int]:
+    """Where one chant's dict starts and ends in the source.
+
+    Every replacement below is confined to this window. A line of Pali is
+    distinctive, but the book repeats whole formulas across chants — the จบ
+    line, the ratana refrain — and a correction that escaped its chant would
+    be almost impossible to spot afterwards.
+    """
+    start = source.index(f"'id': {cid!r},")
+    following = source.find("\n    {\n", start)
+    return start, (following if following != -1 else len(source))
+
+
+def apply_corrections(source: str, chant: dict, report: dict) -> str:
+    """Replace exact field values, refusing anything ambiguous.
+
+    Matched as whole literals — `'pali': '<the line>',` — and required to
+    appear EXACTLY ONCE inside the chant. Zero means the file is written in a
+    form this cannot see, and more than one means it could hit either. Both
+    raise rather than guess, because a correction applied to the wrong line
+    would be a silent corruption of a chanted layer.
+    """
+    cid = chant["id"]
+    for fix in chant.get("corrections", []):
+        start, end = chant_bounds(source, cid)
+        window = source[start:end]
+        old = literal(fix["field"], fix["from"])
+        new = literal(fix["field"], fix["to"])
+
+        found = window.count(old)
+        if found != 1:
+            raise RuntimeError(
+                f"{cid} verse {fix.get('verse')} {fix['field']}: expected to "
+                f"find the old value exactly once inside this chant, found "
+                f"{found}. Nothing written. Looked for: {old}")
+
+        source = source[:start] + window.replace(old, new, 1) + source[end:]
+        report.setdefault("corrected", []).append(
+            f"{cid} v{fix.get('verse')} {fix['field']}")
+    return source
+
+
+def apply_page_markers(source: str, chant: dict, report: dict) -> str:
+    """Mark the verse where the printed page turns.
+
+    A chant already in the app has its verses but no record of where its page
+    break falls, so `build_page_index` would put every one of them on
+    `page_start`. Pabbatopama would then show eleven lines on page 30 where
+    the book prints six.
+    """
+    cid = chant["id"]
+    for number, page in sorted(chant.get("page_markers", {}).items(),
+                               key=lambda kv: int(kv[0])):
+        start, end = chant_bounds(source, cid)
+        window = source[start:end]
+        marker = f"'number': {int(number)},"
+
+        if window.count(marker) != 1:
+            raise RuntimeError(
+                f"{cid}: cannot place a page marker on verse {number} — found "
+                f"{window.count(marker)} matches for {marker}. Nothing written.")
+        if f"'page': {page}," in window:
+            continue
+
+        at = window.index(marker)
+        line_start = window.rindex("\n", 0, at) + 1
+        indent = window[line_start:at]
+        window = (window[:at + len(marker)] + f"\n{indent}'page': {page},"
+                  + window[at + len(marker):])
+        source = source[:start] + window + source[end:]
+        report.setdefault("page_markers", []).append(f"{cid} v{number} -> p{page}")
+    return source
+
+
 def merge_into(source: str, chant: dict, report: dict) -> str:
     """Add the header fields a chant already in the app is missing.
 
@@ -389,6 +535,11 @@ def merge_into(source: str, chant: dict, report: dict) -> str:
         report.setdefault("merged", []).append(f"{cid}.{key}")
         anchor = source.index(f"'id': {cid!r},")
         head = source[anchor:source.index("'verses': [", anchor)]
+
+    source = apply_corrections(source, chant, report)
+    source = apply_page_markers(source, chant, report)
+    anchor = source.index(f"'id': {cid!r},")
+    head = source[anchor:source.index("'verses': [", anchor)]
 
     closing = chant.get("closing") or {}
     if closing.get("pali") and "'closing':" not in head:
@@ -541,6 +692,10 @@ def main(argv=None) -> int:
           f"{len(report.get('merged', []))} field(s)")
     for field in report.get("merged", []):
         print(f"  merged {field}")
+    for field in report.get("corrected", []):
+        print(f"  corrected {field}")
+    for marker in report.get("page_markers", []):
+        print(f"  page marker {marker}")
     # Reported rather than passed over. A closing that was offered and not
     # written is a thing the batch believed and the file overruled, and it
     # should be visible without reading the diff.

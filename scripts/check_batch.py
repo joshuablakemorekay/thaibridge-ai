@@ -77,7 +77,7 @@ COMMENTARY = ("background", "meaning", "summary", "when_chanted", "source")
 # What a merge entry is allowed to bring. A merge carrying none of these adds
 # nothing, and belongs out of the batch rather than in it.
 MERGEABLE = ("page_start", "book_number", "book_number_printed", "layout",
-             "source_printed", "closing")
+             "source_printed", "closing", "corrections", "page_markers")
 
 THAI = re.compile(r"[฀-๿]")
 LATIN = re.compile(r"[A-Za-z]")
@@ -526,6 +526,53 @@ def check_blocks(batch: dict) -> list[str]:
     return problems
 
 
+def check_corrections_are_reviewable(batch: dict) -> list[str]:
+    """A correction says what it changes, to what, and why.
+
+    Corrections overwrite a chanted layer that is already in the app, which
+    makes them the most dangerous thing a batch can carry. The guard against
+    misuse is not machinery — stage 2 already refuses anything ambiguous — it
+    is that every one arrives with its reason attached and can be read back
+    later by someone holding the book.
+
+    A correction that changes nothing is caught here too. It means the batch
+    was written against a copy of the file that has since moved on, and the
+    rest of that entry should be distrusted.
+    """
+    problems = []
+    for chant in batch["chants"]:
+        for fix in chant.get("corrections", []):
+            if not isinstance(fix, dict):
+                problems.append(
+                    f"{chant['id']}: a correction is {type(fix).__name__}, "
+                    f"not an object")
+                continue
+            for key in ("verse", "field", "from", "to", "reason"):
+                if key not in fix:
+                    problems.append(
+                        f"{chant['id']}: a correction has no {key!r}")
+            if fix.get("from") == fix.get("to"):
+                problems.append(
+                    f"{chant['id']} verse {fix.get('verse')} "
+                    f"{fix.get('field')}: the correction changes nothing — "
+                    f"'from' and 'to' are identical")
+            if not str(fix.get("reason", "")).strip():
+                problems.append(
+                    f"{chant['id']} verse {fix.get('verse')}: a correction "
+                    f"has an empty reason, so nobody can review it")
+
+        for number, page in (chant.get("page_markers") or {}).items():
+            if not str(number).isdigit():
+                problems.append(
+                    f"{chant['id']}: page marker key {number!r} is not a "
+                    f"verse number")
+            if not isinstance(page, int) or page < 1:
+                problems.append(
+                    f"{chant['id']}: page marker for verse {number} is "
+                    f"{page!r} — a page is a positive whole number")
+    return problems
+
+
 def check_checks_are_readable(batch: dict) -> list[str]:
     """Checks are objects stage 2 can read, and each names its photograph.
 
@@ -582,6 +629,7 @@ CHECKS = (
     ("line breaks agree", check_line_breaks_agree),
     ("page blocks", check_blocks),
     ("checks readable", check_checks_are_readable),
+    ("corrections reviewable", check_corrections_are_reviewable),
 )
 
 
