@@ -1,0 +1,251 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "paticcasamuppada-patho",
+      "buddhaudana-gatha"
+    ],
+    "pages": [
+      {
+        "page": 32,
+        "file": "IMG_0295.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "paticcasamuppada-patho",
+        "verses": "13-24",
+        "starts_here": false,
+        "note": "The chant finishes at the top of the page. Its second half is printed under its own sub-heading นิโรธะวาระ and set as continuous justified prose, exactly as the first half is on page 31. Footnote 1 of this page belongs to its last line.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "ขุ.อุ. 25/74-5-6, วิ. มหา. 4/2-3-4",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 32,
+        "file": "IMG_0295.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "buddhaudana-gatha",
+        "verses": "1-13",
+        "starts_here": true,
+        "note": "Printed complete on this page. SINGLE column, one pada to a line, three stanzas of four — not the two-column setting of the chants around it. Read the left edge straight down and every line is complete, which is the test. The heading carries no chant number.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "4",
+            "thai": "ขุ.อุ. 25/74-5-6, วิ. มหา. 4/2-3-4",
+            "english": ""
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "paticcasamuppada-patho",
+      "merge_only": true,
+      "working_notes": {
+        "invitation": "Absent, as already recorded in the app.",
+        "units": "Not re-divided. The 24 units in the app match the two passages exactly, twelve to each vara. The book runs both together as prose; the units are the clauses it is made of.",
+        "ordering": "Pali only across both pages; no Thai translation printed.",
+        "conventions": "No romanisation printed.",
+        "pages": "IMG_0294.PNG page 31 (title, sub-heading สมุทะยะวาระ, verses 1-12) and IMG_0295.PNG page 32 (sub-heading นิโรธะวาระ, verses 13-24 and the end). Thai script, single column, justified prose on both."
+      },
+      "book_number": 15,
+      "page_start": 31,
+      "layout": "prose",
+      "source_printed": "ขุ.อุ. 25/74-5-6, วิ. มหา. 4/2-3-4",
+      "page_markers": {
+        "13": 32
+      },
+      "corrections": [
+        {
+          "verse": 11,
+          "field": "pali",
+          "from": "ชาติปัจจะยา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา สัมภะวันตี,",
+          "to": "ชาติปัจจะยา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา สัมภะวันติ,",
+          "reason": "Page 31 prints the short i. The long vowel in the file is paste damage."
+        },
+        {
+          "verse": 11,
+          "field": "pali_roman",
+          "from": "jātipaccayā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā sambhavantī,",
+          "to": "jātipaccayā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā sambhavanti,",
+          "reason": "Follows the pali above; sambhavanti is also the standard form."
+        },
+        {
+          "verse": 12,
+          "field": "pali",
+          "from": "เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ สะมุทะโย โหติ.\"",
+          "to": "เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ สะมุทะโย โหติ.",
+          "reason": "The trailing quotation mark is page 31 superscript footnote marker 3 flattened by the paste. It is a reference, not text."
+        },
+        {
+          "verse": 12,
+          "field": "pali_roman",
+          "from": "evametassa kevalassa dukkhakkhandhassa samudayo hoti.\"",
+          "to": "evametassa kevalassa dukkhakkhandhassa samudayo hoti.",
+          "reason": "Same marker, same removal."
+        },
+        {
+          "verse": 13,
+          "field": "pali",
+          "from": "อะวิชชายะเต็ววะ อะเสสะวิราคะนิโรธา สังขาระนิโรโธ,",
+          "to": "อะวิชชายะเต์ววะ อะเสสะวิราคะนิโรธา สังขาระนิโรโธ,",
+          "reason": "The page prints thanthakhat here, not mai taikhu. The two marks are similar in outline and the paste took the wrong one."
+        },
+        {
+          "verse": 18,
+          "field": "pali",
+          "from": "ผัสสะนิโรธา เวทะนานิโรโฮ,",
+          "to": "ผัสสะนิโรธา เวทะนานิโรโธ,",
+          "reason": "The page prints tho thong, giving nirodho as every other clause in the passage does. The file has ho hip, which is not a word."
+        },
+        {
+          "verse": 18,
+          "field": "pali_roman",
+          "from": "phassanirodhā vedanāniroho,",
+          "to": "phassanirodhā vedanānirodho,",
+          "reason": "Follows the pali above."
+        },
+        {
+          "verse": 23,
+          "field": "pali",
+          "from": "ชาตินิโรธา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา นิรุชมันติ,",
+          "to": "ชาตินิโรธา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา นิรุชฌันติ,",
+          "reason": "The page prints cho choe, giving nirujjhanti. The file had dropped it to mo ma."
+        },
+        {
+          "verse": 23,
+          "field": "pali_roman",
+          "from": "jātinirodhā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā nirujamanti,",
+          "to": "jātinirodhā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā nirujjhanti,",
+          "reason": "Follows the pali above; nirujjhanti is the standard form and the counterpart of sambhavanti in the first half."
+        },
+        {
+          "verse": 24,
+          "field": "pali",
+          "from": "เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ นิโรโธ โหติ.\"",
+          "to": "เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ นิโรโธ โหติ.",
+          "reason": "Page 32 superscript footnote marker 1, flattened by the paste."
+        },
+        {
+          "verse": 24,
+          "field": "pali_roman",
+          "from": "evametassa kevalassa dukkhakkhandhassa nirodho hoti.\"",
+          "to": "evametassa kevalassa dukkhakkhandhassa nirodho hoti.",
+          "reason": "Same marker, same removal."
+        },
+        {
+          "verse": null,
+          "field": "source",
+          "from": "ส.ส. 15/148, อง. จตุกก. 21/74 อง. ปญฺจก. 22/59, ขุ.อุ. 25/73-4 วิ. มหา. 4/1 — printed as footnotes 1, 2 and 3, though they appear on the page in the order 1, 3, 2. See checks.",
+          "to": "",
+          "reason": "WRONG CHANT, the same fault found in Pabbatopama. The first two of those three references are page 31 footnotes 1 and 2, which belong to Pabbatopama and Ariyadhana above it; only the third is this chant, and only for its first half. The note about them appearing 'in the order 1, 3, 2' was the pasted text seeing three footnotes on one page and assuming all three were its own. Cleared; source_printed now carries what the book prints."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0295.PNG",
+          "issue": "MERGE WITH CORRECTIONS AND A PAGE MARKER. The chant was already in the app in full, covering both vara, with no page number at all. Verse 13 is where page 32 begins; without that marker every one of the 24 verses would sit on page 31, twice what that page prints."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0295.PNG",
+          "issue": "TWO CITATIONS, one per vara. Page 31 footnote 3 is the samudaya half and page 32 footnote 1 is the nirodha half. source_printed carries the page-32 one, following the rule that a citation arrives with the chant LAST page. The page-31 reference is recorded here rather than dropped."
+        },
+        {
+          "verse": 16,
+          "file": "IMG_0295.PNG",
+          "issue": "READING HAZARD, NOT CORRECTED. The sense-bases word is written with pho at verses 4, 5, 16 and 17, and the photograph appears to agree. Standard Pali is salayatana, with lo chula. This is the same hazard proven twice on pages 22 and 23: this typeface renders lo chula so that it photographs as pho. The photograph therefore CANNOT settle it, and the instruction to let the photo win must not be applied here — doing so would fix four wrong readings in place. Needs the physical book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0295.PNG",
+          "issue": "layout is set to prose. Both halves are printed as continuous justified text filling the measure, not as lines, so book mode must flow them back into a block. The clause division stays as the record of what the passage is made of."
+        }
+      ]
+    },
+    {
+      "id": "buddhaudana-gatha",
+      "merge_only": true,
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Not re-divided. The twelve lines in the app match the page one pada to a line, in three stanzas of four; verse 13 is the closing formula.",
+        "ordering": "Pali only.",
+        "conventions": "No romanisation printed.",
+        "pages": "IMG_0295.PNG, the lower half of page 32. Thai script, SINGLE column, complete on this page."
+      },
+      "page_start": 32,
+      "closing": {
+        "pali": "พุทธะอุทานะคาถา นิฏฐิตา",
+        "pali_roman": "buddhaudānagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses of the Buddha's Utterance."
+      },
+      "corrections": [
+        {
+          "verse": 12,
+          "field": "pali",
+          "from": "สูโรวะ โอภาสะยะมันตะลิกขันติ?",
+          "to": "สูโรวะ โอภาสะยะมันตะลิกขันติ.",
+          "reason": "The page prints a full stop and a superscript 2. The question mark is the marker flattened by the paste, and the line is not a question."
+        },
+        {
+          "verse": 12,
+          "field": "pali_roman",
+          "from": "sūrova obhāsayamantalikkhanti?",
+          "to": "sūrova obhāsayamantalikkhanti.",
+          "reason": "Same marker, same removal."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0295.PNG",
+          "issue": "SINGLE COLUMN, and worth saying so. Every chant around it on pages 29 to 31 is set in two columns; this one is not. Read the left edge straight down and each line is a complete pada, which is the test the prompt gives. The app line division already matches and was not changed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0295.PNG",
+          "issue": "NO CHANT NUMBER. The heading carries nothing before the title, as Ariyadhana on page 31 does not. book_number omitted rather than arrived at by counting."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0295.PNG",
+          "issue": "FOOTNOTE MARKERS AND FOOTNOTES DO NOT MATCH ON THIS PAGE, so source_printed is deliberately LEFT OUT. The page carries markers 1 and 2 in the text, but the two footnotes at the foot are numbered 1 and 4, with identical content. Marker 2 — this chant's — has no footnote 2, and footnote 4 has no marker. The 4 may well be a misprint for 2, which would make it this chant's citation, but pairing them on that assumption is exactly what the prompt forbids. The existing `source` field already holds that reference and is left alone. Needs your eye on the page."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0295.PNG",
+          "issue": "The three stanzas repeat their first two lines verbatim, and the third stanza changes at line 3 rather than line 4. Read carefully rather than assumed: stanzas 1 and 2 differ only at their fourth line, stanza 3 at its third and fourth."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "paticcasamuppada-patho",
+      "buddhaudana-gatha"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 33,
+    "resume_from_file": "IMG_0296.PNG",
+    "resume_from": "bhaddekaratta-gatha",
+    "unreadable": [],
+    "paiboon_scan": "clean — not applicable. The page is Pali only, so no chant here carries a `thai` layer and there is no `paiboon` value in the batch to scan.",
+    "pali_untouched": "Confirmed. No `pali` value has been run through Paiboon+. Every `pali_roman` is IAST transliterating the Thai-script Pali beside it.",
+    "page_scan": "agrees. Both page rows are page 32 and every verse they claim exists in the entry it points at. Paticcasamuppada crosses the 31/32 turn at verse 13, recorded as a page marker rather than as new verses because the app already holds them.",
+    "notes": "This batch paginates the chant deliberately left out of pages 30-31. Page 31 printed only its samudaya half and the app held all 24 verses, so it could not be placed until page 32 showed where verse 13 begins. It is placed now.\n\nTHE LO-CHULA/PHO HAZARD IS STILL OPEN and now covers four verses of this chant — 4, 5, 16 and 17 — on top of the three words already flagged on pages 22, 24 and 29. Every one of them is a chanted line and one character decides each. This is the largest single thing waiting on the physical book.\n\nSECOND: page 32 footnote numbering does not match its markers. Markers 1 and 2 in the text, footnotes numbered 1 and 4 at the foot, with the same content in both. Buddhaudana source_printed is left out rather than paired on a guess.\n\nTHIRD: the wrong-source fault found in Pabbatopama repeats here. This chant `source` named three references, two of which belong to the chants above it on page 31. That is now twice, so it is a pattern rather than a one-off: check the `source` of every remaining pre-page chant."
+  }
+}

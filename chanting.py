@@ -4422,8 +4422,12 @@ CHANTS = [
         # stays empty and the template falls back to `title_pali`.
         'title_roman': '',
         'title_english': 'The Passage on Dependent Origination',
-        'source': 'ส.ส. 15/148, อง. จตุกก. 21/74 อง. ปญฺจก. 22/59, ขุ.อุ. 25/73-4 วิ. มหา. 4/1 — printed as footnotes 1, 2 and 3, though they appear on the page in the order 1, 3, 2. See checks.',
+        'source': '',
         'group': 'General chanting',
+        'book_number': 15,
+        'page_start': 31,
+        'layout': 'prose',
+        'source_printed': 'ขุ.อุ. 25/74-5-6, วิ. มหา. 4/2-3-4',
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -4593,11 +4597,8 @@ CHANTS = [
             #          the long vowel.
             {
                 'number': 11,
-                'pali': 'ชาติปัจจะยา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา สัมภะวันตี,',
-                'pali_roman': (
-                    "jātipaccayā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā "
-                    "sambhavantī,"
-                ),
+                'pali': 'ชาติปัจจะยา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา สัมภะวันติ,',
+                'pali_roman': 'jātipaccayā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā sambhavanti,',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4611,10 +4612,8 @@ CHANTS = [
             #          Reproduced as pasted rather than tidied.
             {
                 'number': 12,
-                'pali': 'เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ สะมุทะโย โหติ."',
-                'pali_roman': (
-                    'evametassa kevalassa dukkhakkhandhassa samudayo hoti."'
-                ),
+                'pali': 'เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ สะมุทะโย โหติ.',
+                'pali_roman': 'evametassa kevalassa dukkhakkhandhassa samudayo hoti.',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4635,7 +4634,8 @@ CHANTS = [
             {
                 'section': 'นิโรธะวาระ: The Section on Cessation',
                 'number': 13,
-                'pali': 'อะวิชชายะเต็ววะ อะเสสะวิราคะนิโรธา สังขาระนิโรโธ,',
+                'page': 32,
+                'pali': 'อะวิชชายะเต์ววะ อะเสสะวิราคะนิโรธา สังขาระนิโรโธ,',
                 'pali_roman': (
                     "avijjāyatevva asesavirāganirodhā saṅkhāranirodho,"
                 ),
@@ -4706,8 +4706,8 @@ CHANTS = [
             #              checking against the printed page.
             {
                 'number': 18,
-                'pali': 'ผัสสะนิโรธา เวทะนานิโรโฮ,',
-                'pali_roman': 'phassanirodhā vedanāniroho,',
+                'pali': 'ผัสสะนิโรธา เวทะนานิโรโธ,',
+                'pali_roman': 'phassanirodhā vedanānirodho,',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4762,11 +4762,8 @@ CHANTS = [
             #          printed form.
             {
                 'number': 23,
-                'pali': 'ชาตินิโรธา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา นิรุชมันติ,',
-                'pali_roman': (
-                    "jātinirodhā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā "
-                    "nirujamanti,"
-                ),
+                'pali': 'ชาตินิโรธา ชะรามะระณัง โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา นิรุชฌันติ,',
+                'pali_roman': 'jātinirodhā jarāmaraṇaṃ sokaparidevadukkhadomanassupāyāsā nirujjhanti,',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4776,10 +4773,8 @@ CHANTS = [
             },
             {
                 'number': 24,
-                'pali': 'เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ นิโรโธ โหติ."',
-                'pali_roman': (
-                    'evametassa kevalassa dukkhakkhandhassa nirodho hoti."'
-                ),
+                'pali': 'เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ นิโรโธ โหติ.',
+                'pali_roman': 'evametassa kevalassa dukkhakkhandhassa nirodho hoti.',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4834,6 +4829,7 @@ CHANTS = [
         'title_english': "The Verses of the Buddha's Utterance of Joy",
         'source': 'ขุ.อุ. 25/74-5-6, วิ. มหา. 4/2-3-4',
         'group': 'General chanting',
+        'page_start': 32,
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -5033,8 +5029,8 @@ CHANTS = [
             #          rather than splitting it.
             {
                 'number': 12,
-                'pali': 'สูโรวะ โอภาสะยะมันตะลิกขันติ?',
-                'pali_roman': 'sūrova obhāsayamantalikkhanti?',
+                'pali': 'สูโรวะ โอภาสะยะมันตะลิกขันติ.',
+                'pali_roman': 'sūrova obhāsayamantalikkhanti.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'like the sun illuminating the sky.',
