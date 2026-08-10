@@ -744,7 +744,12 @@ class TestTheBooksOwnContents:
         body = client.get('/chanting/page/36', follow_redirects=True).get_data(as_text=True)
 
         # The body route answers about the BODY page, whatever front matter exists.
-        assert 'สารบัญ' not in body
+        # Checked against the front matter's own bracketed number rather than the
+        # word สารบัญ: every page carries a nav link reading "Contents (สารบัญ)",
+        # so the old assertion only held while page 36 was missing and the route
+        # served nothing. It would have gone on passing for that reason alone.
+        assert '(๓๖)' not in body
+        assert 'มะหาจุนทะโพชฌังคะสุตตัง' in body
 
     def test_a_page_that_is_in_the_app_gets_a_button(self):
         page = self.read()
