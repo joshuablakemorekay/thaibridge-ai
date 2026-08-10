@@ -10153,7 +10153,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 15; the rest is not in the app yet.
         # ‼ CHECK [IMG_0296.PNG]: NEW CHANT, and NOT FINISHED. The page prints
         #   it as far as the question katame satta and the answer runs onto
         #   page 34, so `continues` is set. Nothing beyond what the photograph
@@ -10192,6 +10191,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'มะหากัสสะปะโพชฌังคะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'mahākassapabojjhaṅgasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on the Factors of Awakening, to Mahākassapa.',
         },
         'verses': [
             {
@@ -10323,6 +10329,195 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Which seven?"',
+            },
+            # ‼ CHECK [IMG_0297.PNG]: Item 1 ends with ฯ where items 2 to 7
+            #   all end with a full stop, though the wording is identical.
+            #   Reproduced as printed rather than made uniform. Worth a glance
+            #   at the page to confirm the book really does differ here.
+            # ‼ CHECK [IMG_0297.PNG]: Each numbered item is one verse, so the
+            #   formula mayā sammadakkhāto ... saṃvattati sits whole inside
+            #   verse 16. On page 33 the same formula was split across verses
+            #   13 and 14 at the comma. The two pages therefore break the same
+            #   words differently. Nothing is missing either way, but if you
+            #   want them consistent it is verses 13-14 that would need
+            #   rejoining, and that is your call, not mine.
+            {
+                'number': 16,
+                'page': 34,
+                'printed_number': 1,
+                'pali': 'สะติสัมโพชฌังโค โข กัสสะปะ มะยา สัมมะทักขาโต ภาวิโต พะหุลีกะโต, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ ฯ',
+                'pali_roman': 'satisambojjhaṅgo kho kassapa mayā sammadakkhāto bhāvito bahulīkato, abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': '"The factor of awakening that is mindfulness, Kassapa, rightly declared by me, developed and made much of, leads to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 17,
+                'printed_number': 2,
+                'pali': 'ธัมมะวิจะยะสัมโพชฌังโค โข กัสสะปะ มะยา สัมมะทักขาโต ภาวิโต พะหุลีกะโต, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.',
+                'pali_roman': 'dhammavicayasambojjhaṅgo kho kassapa mayā sammadakkhāto bhāvito bahulīkato, abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening that is investigation of states, Kassapa, rightly declared by me, developed and made much of, leads to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 18,
+                'printed_number': 3,
+                'pali': 'วิริยะสัมโพชฌังโค โข กัสสะปะ มะยา สัมมะทักขาโต ภาวิโต พะหุลีกะโต, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.',
+                'pali_roman': 'vīriyasambojjhaṅgo kho kassapa mayā sammadakkhāto bhāvito bahulīkato, abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening that is energy, Kassapa, rightly declared by me, developed and made much of, leads to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 19,
+                'printed_number': 4,
+                'pali': 'ปีติสัมโพชฌังโค โข กัสสะปะ มะยา สัมมะทักขาโต ภาวิโต พะหุลีกะโต, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.',
+                'pali_roman': 'pītisambojjhaṅgo kho kassapa mayā sammadakkhāto bhāvito bahulīkato, abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening that is rapture, Kassapa, rightly declared by me, developed and made much of, leads to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 20,
+                'printed_number': 5,
+                'pali': 'ปัสสัทธิสัมโพชฌังโค โข กัสสะปะ มะยา สัมมะทักขาโต ภาวิโต พะหุลีกะโต, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.',
+                'pali_roman': 'passaddhisambojjhaṅgo kho kassapa mayā sammadakkhāto bhāvito bahulīkato, abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening that is tranquillity, Kassapa, rightly declared by me, developed and made much of, leads to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 21,
+                'printed_number': 6,
+                'pali': 'สะมาธิสัมโพชฌังโค โข กัสสะปะ มะยา สัมมะทักขาโต ภาวิโต พะหุลีกะโต, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.',
+                'pali_roman': 'samādhisambojjhaṅgo kho kassapa mayā sammadakkhāto bhāvito bahulīkato, abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening that is concentration, Kassapa, rightly declared by me, developed and made much of, leads to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 22,
+                'printed_number': 7,
+                'pali': 'อุเปกขาสัมโพชฌังโค โข กัสสะปะ มะยา สัมมะทักขาโต ภาวิโต พะหุลีกะโต, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.',
+                'pali_roman': 'upekkhāsambojjhaṅgo kho kassapa mayā sammadakkhāto bhāvito bahulīkato, abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening that is equanimity, Kassapa, rightly declared by me, developed and made much of, leads to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 23,
+                'pali': 'อิเม โข กัสสะปะ สัตตะ โพชฌังคา มะยา สัมมะทักขาตา ภาวิตา พะหุลีกะตา, อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตันตีติ.',
+                'pali_roman': 'ime kho kassapa satta bojjhaṅgā mayā sammadakkhātā bhāvitā bahulīkatā, abhiññāya sambodhāya nibbānāya saṃvattantīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These seven factors of awakening, Kassapa, rightly declared by me, developed and made much of, lead to direct knowledge, to full awakening, to Nibbāna."',
+            },
+            {
+                'number': 24,
+                'pali': 'ตัคฆะ ภะคะวา โพชฌังคา ตัคฆะ สุคะตะ โพชฌังคาติ.',
+                'pali_roman': 'taggha bhagavā bojjhaṅgā taggha sugata bojjhaṅgāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': '"Assuredly, Blessed One, they are factors of awakening; assuredly, Well-Farer, they are factors of awakening."',
+            },
+            {
+                'number': 25,
+                'pali': 'อิทะมะโวจะ ภะคะวา.',
+                'pali_roman': 'idamavoca bhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This the Blessed One said.',
+            },
+            {
+                'number': 26,
+                'pali': 'อัตตะมะโน อายัส์มา มะหากัสสะโป ภะคะวะโต ภาสิตัง อะภินันทิ.',
+                'pali_roman': 'attamano āyasmā mahākassapo bhagavato bhāsitaṃ abhinandi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Gladdened, the venerable Mahākassapa delighted in the words of the Blessed One.',
+            },
+            # ‼ CHECK [IMG_0297.PNG]: (ลากเสียง) — "draw the sound out" — is
+            #   an instruction to the chanter printed inline in brackets, not
+            #   part of the Pali. Kept inline exactly where the book prints
+            #   it, as the prompt requires. It means this verse's pali line
+            #   contains a Thai word, so pali_roman renders that bracket in
+            #   Paiboon+ rather than IAST. If you would rather it were carried
+            #   some other way, say so and I will move it.
+            {
+                'number': 27,
+                'pali': 'วุฏฐะหิ จายัส์มา มะหากัสสะโป ตัมหา อาพาธา, ตะถาปะหีโน จายัส์มะโต มะหากัสสะปัสสะ โส (ลากเสียง) อาพาโธ อะโหสีติ.',
+                'pali_roman': 'vuṭṭhahi cāyasmā mahākassapo tamhā ābādhā, tathāpahīno cāyasmato mahākassapassa so (lâak sǐiaŋ) ābādho ahosīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And the venerable Mahākassapa rose up from that illness, and in that way the venerable Mahākassapa's illness was abandoned.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0297.PNG]: This discourse and the Mahākassapa one on
+        #   page 33 share almost all their wording, differing in the elder's
+        #   name and the place. It is NOT a repeat — the book prints it as its
+        #   own chant under its own number 18 — so it is set in full.
+        # ‼ CHECK [IMG_0297.PNG]: No Thai translation is printed, so
+        #   english_unverified is true and the English is a working
+        #   translation made for this edition.
+        'id': 'mahamoggallana-bojjhanga-suttam',
+        'title_thai': 'มะหาโมคคัลลานะโพชฌังคะสุตตัง',
+        'title_pali': 'Mahāmoggallānabojjhaṅgasuttaṃ',
+        'title_roman': '',
+        'title_english': 'The Discourse on the Factors of Awakening, to Mahāmoggallāna',
+        'book_number': 18,
+        'page_start': 34,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'เอวัมเม สุตัง.',
+                'pali_roman': 'evamme sutaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus have I heard.',
+            },
+            {
+                'number': 2,
+                'pali': 'เอกัง สะมะยัง ภะคะวา, ราชะคะเห วิหะระติ, เวฬุวะเน กะลันทะกะนิวาเป.',
+                'pali_roman': 'ekaṃ samayaṃ bhagavā, rājagahe viharati, veḷuvane kalandakanivāpe.',
+                'thai': '',
+                'paiboon': '',
+                'english': "At one time the Blessed One was dwelling at Rājagaha, in the Bamboo Grove, the squirrels' feeding place.",
+            },
+            {
+                'number': 3,
+                'pali': 'เตนะ โข ปะนะ สะมะเยนะ, อายัส์มา มะหาโมคคัลลาโน คิชฌะกูเฏ ปัพพะเต วิหะระติ, อาพาธิโก ทุกขิโต พาฬ์หะคิลาโน.',
+                'pali_roman': 'tena kho pana samayena, āyasmā mahāmoggallāno gijjhakūṭe pabbate viharati, ābādhiko dukkhito bāḷhagilāno.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Now at that time the venerable Mahāmoggallāna was dwelling on the Vulture's Peak, afflicted, suffering, gravely ill.",
+            },
+            # ‼ CHECK [IMG_0297.PNG]: The page ends mid-sentence after อะถะโข,
+            #   so verse 4 belongs to page 34 where it starts and is marked
+            #   with the gap marker. Page 35 completes it; the next batch
+            #   supplies verse 4 in full rather than starting a new verse.
+            {
+                'number': 4,
+                'pali': 'อะถะโข […]',
+                'pali_roman': 'athakho […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then […]',
             },
         ],
     },
