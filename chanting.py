@@ -12420,6 +12420,505 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0307.PNG]: No number is printed with this title, where
+        #   the chant below it carries 24. book_number is therefore omitted
+        #   rather than guessed. The book's contents lists ถวายพรพระ at page
+        #   ๔๔ as an entry, which is why it is set as a chant in its own right
+        #   rather than as a heading over the one below.
+        # ‼ CHECK [IMG_0307.PNG]: No closing line is printed for this chant —
+        #   the next chant's numbered title follows straight on. The closing
+        #   key is therefore left off rather than filled in.
+        # ‼ CHECK [IMG_0307.PNG]: No Thai translation is printed, so
+        #   english_unverified is true and the English is a working
+        #   translation.
+        'id': 'thawai-phon-phra',
+        'title_thai': 'ถวายพรพระ',
+        'title_pali': '',
+        'title_roman': 'tà-wǎai pɔɔn prá',
+        'title_english': 'Offering blessings to the Buddha',
+        'page_start': 44,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'อิติปิ โส ภะคะวา, อะระหัง สัมมาสัมพุทโธ, วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู อะนุตตะโร ปุริสะทัมมะสาระถิ, สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวาติ.',
+                'pali_roman': 'itipi so bhagavā, arahaṃ sammāsambuddho, vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi, satthā devamanussānaṃ buddho bhagavāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such indeed is the Blessed One: worthy, perfectly enlightened by himself, accomplished in knowledge and conduct, well-farer, knower of the worlds, unsurpassed trainer of those to be tamed, teacher of gods and humans, the Awakened One, the Blessed One.',
+            },
+            {
+                'number': 2,
+                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม, สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก, โอปะนะยิโก ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.',
+                'pali_roman': 'svākkhāto bhagavatā dhammo, sandiṭṭhiko akāliko ehipassiko, opanayiko paccattaṃ veditabbo viññūhīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Well proclaimed by the Blessed One is the Dhamma: visible here and now, timeless, inviting one to come and see, leading onward, to be known for themselves by the wise.',
+            },
+            {
+                'number': 3,
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, ยะทิทัง: จัตตาริ ปุริสะยุคานิ, อัฏฐะ ปุริสะปุคคะลา, เอสะ ภะคะวะโต สาวะกะสังโฆ, อาหุเนยโย, ปาหุเนยโย, ทักขิเณยโย, อัญชะลีกะระณีโย, อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.',
+                'pali_roman': 'supaṭipanno bhagavato sāvakasaṅgho, ujupaṭipanno bhagavato sāvakasaṅgho, ñāyapaṭipanno bhagavato sāvakasaṅgho, sāmīcipaṭipanno bhagavato sāvakasaṅgho, yadidaṃ: cattāri purisayugāni, aṭṭha purisapuggalā, esa bhagavato sāvakasaṅgho, āhuneyyo, pāhuneyyo, dakkhiṇeyyo, añjalīkaraṇīyo, anuttaraṃ puññakkhettaṃ lokassāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "The Sangha of the Blessed One's disciples has practised well, has practised uprightly, has practised rightly, has practised properly — that is, the four pairs of persons, the eight kinds of individuals. This Sangha of the Blessed One's disciples is worthy of gifts, worthy of hospitality, worthy of offerings, worthy of reverent salutation, the unsurpassed field of merit for the world.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0307.PNG]: Each verse here is one printed STANZA of
+        #   four lines, not one printed line. The four lines are kept inside
+        #   the verse as escaped line breaks so the page reproduces exactly,
+        #   and pali and pali_roman break in the same four places. The
+        #   alternative — one verse per printed line — would give thirty-six
+        #   verses and split a refrain off from the stanza it closes. Flagging
+        #   it because it differs from the one-line-per-verse rule used for
+        #   the prose chants earlier in the book.
+        # ‼ CHECK [IMG_0308.PNG]: Below the closing line the book prints a
+        #   bold centred colophon, ชะยะมังคะลัฏฐะกะ 8 คาถา อานิสังสะคาถา 1. It
+        #   counts the stanzas rather than being part of the chant, so it is
+        #   recorded as a page block. Its English is mine and unverified.
+        # ‼ CHECK [IMG_0307.PNG]: No Thai translation is printed, so
+        #   english_unverified is true. These stanzas each compress a whole
+        #   story into four lines, so the English is fuller than a word-for-
+        #   word rendering would be — worth your eye on whether that is the
+        #   right register for this book.
+        'id': 'jayamangala-atthaka-gatha',
+        'title_thai': 'ชะยะมังคะลัฏฐะกะคาถา',
+        'title_pali': 'Jayamaṅgalaṭṭhakagāthā',
+        'title_roman': '',
+        'title_english': 'The Eight Verses of Victory and Blessing',
+        'book_number': 24,
+        'page_start': 44,
+        'layout': '',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'ชะยะมังคะลัฏฐะกะคาถา นิฏฐิตา',
+            'pali_roman': 'jayamaṅgalaṭṭhakagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Eight Verses of Victory and Blessing.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง\nค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง\nทานาทิธัมมะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'bāhuṃ sahassamabhinimmitasāvudhantaṃ\ngirimekhalaṃ uditaghorasasenamāraṃ\ndānādidhammavidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Creating a thousand arms, each with a weapon, Māra rode the elephant Girimekhala with his shrieking host. The Lord of Sages conquered him by the way of giving and the rest — by that power may victory and blessing be yours.',
+            },
+            {
+                'number': 2,
+                'pali': 'มาราติเรกะมะภิยุชฌิตะสัพพะรัตติง\nโฆรัมปะนาฬะวะกะมักขะมะถัทธะยักขัง\nขันตีสุทันตะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'mārātirekamabhiyujjhitasabbarattiṃ\nghorampanāḷavakamakkhamathaddhayakkhaṃ\nkhantīsudantavidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'More relentless than Māra, battling all night long, the fierce and unyielding yakkha Āḷavaka — the Lord of Sages conquered him by the way of patience and self-taming; by that power may victory and blessing be yours.',
+            },
+            {
+                'number': 3,
+                'pali': 'นาฬาคิริง คะชะวะรัง อะติมัตตะภูตัง\nทาวัคคิจักกะมะสะนีวะ สุทารุณันตัง\nเมตตัมพุเสกะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'nāḷāgiriṃ gajavaraṃ atimattabhūtaṃ\ndāvaggicakkamasanīva sudāruṇantaṃ\nmettambusekavidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Nāḷāgiri, the great elephant crazed with drink, terrible as a forest fire, a wheel, a thunderbolt — the Lord of Sages conquered him by sprinkling the water of loving-kindness; by that power may victory and blessing be yours.',
+            },
+            {
+                'number': 4,
+                'page': 45,
+                'pali': 'อุกขิตตะขัคคะมะติหัตถะสุทารุณันตัง\nธาวันติโยชะนะปะถังคุลิมาละวันตัง\nอิทธีภิสังขะตะมะโน ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'ukkhittakhaggamatihatthasudāruṇantaṃ\ndhāvantiyojanapathaṅgulimālavantaṃ\niddhībhisaṅkhatamano jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sword raised in his skilled and terrible hand, Aṅgulimāla ran three leagues in pursuit — the Lord of Sages conquered him with a mind of psychic power; by that power may victory and blessing be yours.',
+            },
+            {
+                'number': 5,
+                'pali': 'กัต์วานะ กัฏฐะมุทะรัง อิวะ คัพภินียา\nจิญจายะ ทุฏฐะวะจะนัง ชะนะกายะมัชเฌ\nสันเตนะ โสมะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'katvāna kaṭṭhamudaraṃ iva gabbhinīyā\nciñcāya duṭṭhavacanaṃ janakāyamajjhe\nsantena somavidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having tied a block of wood to her belly as though with child, Ciñcā spoke her slander in the midst of the crowd — the Lord of Sages conquered her by the peaceful and gentle way; by that power may victory and blessing be yours.',
+            },
+            {
+                'number': 6,
+                'pali': 'สัจจัง วิหายะ มะติสัจจะกะวาทะเกตุง\nวาทาภิโรปิตะมะนัง อะติอันธะภูตัง\nปัญญาปะทีปะชะลิโต ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'saccaṃ vihāya matisaccakavādaketuṃ\nvādābhiropitamanaṃ atiandhabhūtaṃ\npaññāpadīpajalito jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Abandoning truth, Saccaka raised his banner of debate, his mind set on argument and utterly blind — the Lord of Sages conquered him, ablaze with the lamp of wisdom; by that power may victory and blessing be yours.',
+            },
+            {
+                'number': 7,
+                'pali': 'นันโทปะนันทะภุชะคัง วิพุธัง มะหิทธิง\nปุตเตนะ เถระภุชะเคนะ ทะมาปะยันโต\nอิทธูปะเทสะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'nandopanandabhujagaṃ vibudhaṃ mahiddhiṃ\nputtena therabhujagena damāpayanto\niddhūpadesavidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': "The nāga Nandopananda, learned and of great power — the Lord of Sages had him tamed by his son, the elder who took a nāga's form, by the way of instruction in psychic power; by that power may victory and blessing be yours.",
+            },
+            {
+                'number': 8,
+                'pali': 'ทุคคาหะทิฏฐิภุชะเคนะ สุทัฏฐะหัตถัง\nพ์รัห์มัง วิสุทธิชุติมิทธิพะกาภิธานัง\nญาณาคะเทนะ วิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'duggāhadiṭṭhibhujagena sudaṭṭhahatthaṃ\nbrahmaṃ visuddhijutimiddhibakābhidhānaṃ\nñāṇāgadena vidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Brahmā named Baka, of pure radiance and power, his hand bitten deep by the serpent of wrong view — the Lord of Sages conquered him with the medicine of knowledge; by that power may victory and blessing be yours.',
+            },
+            # ‼ CHECK [IMG_0308.PNG]: The ninth stanza is not one of the eight
+            #   victories — it is the anisamsa stanza, saying what reciting
+            #   them brings, and the colophon under the closing counts it
+            #   separately as อานิสังสะคาถา 1. Kept as verse 9 of the same
+            #   chant because the book prints it inside the chant, above its
+            #   closing line.
+            {
+                'number': 9,
+                'pali': 'เอตาปิ พุทธะชะยะมังคะละอัฏฐะคาถา\nโย วาจะโน ทินะทิเน สะระเต มะตันที\nหิต์วานะเนกะวิวิธานิ จุปัททะวานิ\nโมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.',
+                'pali_roman': 'etāpi buddhajayamaṅgalaaṭṭhagāthā\nyo vācano dinadine sarate matandī\nhitvānanekavividhāni cupaddavāni\nmokkhaṃ sukhaṃ adhigameyya naro sapañño.',
+                'thai': '',
+                'paiboon': '',
+                'english': "These eight verses of the Buddha's victory and blessing — whoever recites and recalls them day by day without slackness, that wise person, leaving behind manifold misfortunes, may attain release and happiness.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0309.PNG]: The two-column setting stops at this chant's
+        #   closing line and the page returns to a single column for chant 26
+        #   below. Recorded on the page map as columns 2 for this chant's row
+        #   and left off the next.
+        # ‼ CHECK [IMG_0309.PNG]: No Thai translation is printed, so
+        #   english_unverified is true and the English is a working
+        #   translation.
+        'id': 'jayaparitta-gatha',
+        'title_thai': 'ชะยะปะริตตะคาถา',
+        'title_pali': 'Jayaparittagāthā',
+        'title_roman': '',
+        'title_english': 'The Victory Protection verses',
+        'book_number': 25,
+        'page_start': 46,
+        'layout': '',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'ชะยะปะริตตะคาถา นิฏฐิตา',
+            'pali_roman': 'jayaparittagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Victory Protection verses.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0309.PNG]: TWO COLUMNS, and this is the first
+            #   pairing I made, shown so the reading can be confirmed: left
+            #   column มะหาการุณิโก นาโถ joined to right column หิตายะ
+            #   สัพพะปาณินัง. Read down the left column alone it gives a run
+            #   of unfinished half-lines, which is the test the prompt sets
+            #   for a two-column page. Every verse in this chant is built the
+            #   same way, left half then right half, joined by one space.
+            {
+                'number': 1,
+                'pali': 'มะหาการุณิโก นาโถ หิตายะ สัพพะปาณินัง',
+                'pali_roman': 'mahākāruṇiko nātho hitāya sabbapāṇinaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Protector of great compassion, for the welfare of all living beings,',
+            },
+            {
+                'number': 2,
+                'pali': 'ปูเรต์วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง.',
+                'pali_roman': 'pūretvā pāramī sabbā patto sambodhimuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having fulfilled all the perfections, attained the highest full awakening.',
+            },
+            {
+                'number': 3,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may victory and blessing be yours.',
+            },
+            {
+                'number': 4,
+                'pali': 'ชะยันโต โพธิยา มูเล สัก์ยานัง นันทิวัฑฒะโน',
+                'pali_roman': 'jayanto bodhiyā mūle sakyānaṃ nandivaḍḍhano',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Victorious at the foot of the Bodhi tree, increasing the joy of the Sakyans,',
+            },
+            {
+                'number': 5,
+                'pali': 'เอวัง ต์วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล',
+                'pali_roman': 'evaṃ tvaṃ vijayo hohi jayassu jayamaṅgale',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so may you too be victorious; may you win the blessing of victory,',
+            },
+            {
+                'number': 6,
+                'pali': 'อะปะราชิตะปัลลังเก สีเส ปะฐะวิโปกขะเร',
+                'pali_roman': 'aparājitapallaṅke sīse paṭhavipokkhare',
+                'thai': '',
+                'paiboon': '',
+                'english': "on the undefeated seat, on the crown of the earth's lotus,",
+            },
+            {
+                'number': 7,
+                'pali': 'อะภิเสเก สัพพะพุทธานัง อัคคัปปัตโต ปะโมทะติ.',
+                'pali_roman': 'abhiseke sabbabuddhānaṃ aggappatto pamodati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'at the consecration of all the Buddhas, where one who has reached the summit rejoices.',
+            },
+            {
+                'number': 8,
+                'pali': 'สุนักขัตตัง สุมังคะลัง สุปะภาตัง สุหุฏฐิตัง',
+                'pali_roman': 'sunakkhattaṃ sumaṅgalaṃ supabhātaṃ suhuṭṭhitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'A good star, a good blessing, a good dawn, a good rising,',
+            },
+            {
+                'number': 9,
+                'pali': 'สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ์รัห์มะจาริสุ',
+                'pali_roman': 'sukhaṇo sumuhutto ca suyiṭṭhaṃ brahmacārisu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'a good moment, a good instant, and a good offering to those who live the holy life.',
+            },
+            {
+                'number': 10,
+                'pali': 'ปะทักขิณัง กายะกัมมัง วาจากัมมัง ปะทักขิณัง',
+                'pali_roman': 'padakkhiṇaṃ kāyakammaṃ vācākammaṃ padakkhiṇaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Auspicious the act of body, auspicious the act of speech,',
+            },
+            {
+                'number': 11,
+                'pali': 'ปะทักขิณัง มะโนกัมมัง ปะณิธี เต ปะทักขิณา',
+                'pali_roman': 'padakkhiṇaṃ manokammaṃ paṇidhī te padakkhiṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'auspicious the act of mind, auspicious your aspirations.',
+            },
+            {
+                'number': 12,
+                'pali': 'ปะทักขิณานิ กัต์วานะ ละภันตัตเถ ปะทักขิเณ.',
+                'pali_roman': 'padakkhiṇāni katvāna labhantatthe padakkhiṇe.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having done what is auspicious, may you gain auspicious benefits.',
+            },
+            # ‼ CHECK [IMG_0309.PNG]: Verses 13, 15 and 17 are identical to
+            #   each other, as are the shapes of 14, 16 and 18 — the refrain
+            #   repeats three times, changing only Buddha, Dhamma, Sangha.
+            #   Reproduced in full each time because the book prints it in
+            #   full each time.
+            {
+                'number': 13,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be, may all the devas protect you;',
+            },
+            {
+                'number': 14,
+                'pali': 'สัพพะพุทธานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'sabbabuddhānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Buddhas, may you always be well.',
+            },
+            {
+                'number': 15,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be, may all the devas protect you;',
+            },
+            {
+                'number': 16,
+                'pali': 'สัพพะธัมมานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'sabbadhammānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the whole Dhamma, may you always be well.',
+            },
+            {
+                'number': 17,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be, may all the devas protect you;',
+            },
+            {
+                'number': 18,
+                'pali': 'สัพพะสังฆานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'sabbasaṅghānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the whole Sangha, may you always be well.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 11; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0309.PNG]: No Thai translation is printed, so
+        #   english_unverified is true and the English is a working
+        #   translation.
+        'id': 'mongkhon-chakkrawan-noi',
+        'title_thai': 'มงคลจักรวาฬน้อย',
+        'title_pali': '',
+        'title_roman': 'moŋ-kon jàk-grà-waan nɔ́ɔi',
+        'title_english': 'The Lesser Universal Blessing',
+        'book_number': 26,
+        'page_start': 46,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'สัพพะพุทธานุภาเวนะ,',
+                'pali_roman': 'sabbabuddhānubhāvena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of all the Buddhas,',
+            },
+            {
+                'number': 2,
+                'pali': 'สัพพะธัมมานุภาเวนะ,',
+                'pali_roman': 'sabbadhammānubhāvena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the whole Dhamma,',
+            },
+            {
+                'number': 3,
+                'pali': 'สัพพะสังฆานุภาเวนะ,',
+                'pali_roman': 'sabbasaṅghānubhāvena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the whole Sangha,',
+            },
+            {
+                'number': 4,
+                'pali': 'พุทธะระตะนัง, ธัมมะระตะนัง, สังฆะระตะนัง, ติณณัง ระตะนานัง อานุภาเวนะ,',
+                'pali_roman': 'buddharatanaṃ, dhammaratanaṃ, saṅgharatanaṃ, tiṇṇaṃ ratanānaṃ ānubhāvena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the jewel of the Buddha, the jewel of the Dhamma, the jewel of the Sangha — by the power of the three jewels,',
+            },
+            {
+                'number': 5,
+                'pali': 'จะตุราสีติสะหัสสะธัมมักขันธานุภาเวนะ,',
+                'pali_roman': 'caturāsītisahassadhammakkhandhānubhāvena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the eighty-four thousand divisions of the Dhamma,',
+            },
+            {
+                'number': 6,
+                'pali': 'ปิฏะกัตตะยานุภาเวนะ,',
+                'pali_roman': 'piṭakattayānubhāvena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the three baskets,',
+            },
+            # ‼ CHECK [IMG_0309.PNG]: ชินะสาวะกา-นุภาเวนะ is broken across a
+            #   line with a hyphen. Rejoined to ชินะสาวะกานุภาเวนะ, matching
+            #   the -านุภาเวนะ ending printed whole on the six items before
+            #   it.
+            {
+                'number': 7,
+                'pali': 'ชินะสาวะกานุภาเวนะ,',
+                'pali_roman': 'jinasāvakānubhāvena,',
+                'thai': '',
+                'paiboon': '',
+                'english': "by the power of the Conqueror's disciples,",
+            },
+            {
+                'number': 8,
+                'pali': 'สัพเพ เต โรคา,',
+                'pali_roman': 'sabbe te rogā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may all your illnesses,',
+            },
+            {
+                'number': 9,
+                'pali': 'สัพเพ เต ภะยา,',
+                'pali_roman': 'sabbe te bhayā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all your fears,',
+            },
+            {
+                'number': 10,
+                'pali': 'สัพเพ เต อันตะรายา,',
+                'pali_roman': 'sabbe te antarāyā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all your dangers,',
+            },
+            # ‼ CHECK [IMG_0309.PNG]: The page ends mid-list after สัพเพ เต,
+            #   so verse 11 belongs to page 46 where it starts and carries the
+            #   gap marker. Page 47 completes it; the next batch supplies
+            #   verse 11 in full rather than starting a new verse.
+            {
+                'number': 11,
+                'pali': 'สัพเพ เต […]',
+                'pali_roman': 'sabbe te […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all your […]',
+            },
+        ],
+    },
 ]
 
 
@@ -13910,6 +14409,19 @@ PAGE_BLOCKS = [
                 'marker': '1',
                 'thai': 'อภิ.สํ. 34/1-2',
                 'english': '',
+            },
+        ],
+    },
+    # ── Page 45 ────────────────────────────────────────────────────
+    # Written from batch-044-046.json.
+    {
+        'page': 45,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'ชะยะมังคะลัฏฐะกะ 8 คาถา อานิสังสะคาถา 1',
+                'english': 'The Jayamangala Atthaka: eight verses, and one verse of its benefits.',
+                'english_unverified': True,
             },
         ],
     },
