@@ -36,6 +36,7 @@ photograph.
 | 32 | IMG_0295 | 263 |
 | 33 | IMG_0296 | 263 |
 | 34 | IMG_0297 | 263 |
+| 51 | IMG_0314 | 263 |
 | 61 | IMG_0324 | 263 |
 | 68 | IMG_0331 | 263 |
 | 207 | IMG_0477 | 270 |
@@ -50,6 +51,11 @@ photograph.
 
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
 somewhere between 68 and 207 were shot twice. Those stretches are unmapped.
+
+Pages 35–50 went in without being added here, and they all sat at offset 263 —
+the same as pages 31–34 and 51. So the offset holds unbroken from 31 to 51 at
+least. That is a reason to expect the next filename, never a reason to trust it:
+read the page number off the top of the photograph as always.
 
 ## Page 21 was re-shot — `IMG_0283a.PNG`
 
