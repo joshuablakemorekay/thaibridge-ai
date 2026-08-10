@@ -13218,6 +13218,264 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0311.PNG]: The Thai line under the title —
+        #   อนุโมทนาในวันทรงเริ่มเบี้ยหวัดแลสังคหมัยบุญสมัยอื่น — says WHEN
+        #   the chant is used; it is not a translation of the verses. Recorded
+        #   as a page block. Note that a block placed before the page's first
+        #   chant renders ABOVE the title, whereas the book prints this line
+        #   BETWEEN the title and the first verse. The words are all there and
+        #   on the right page, but the position is one line out; there is no
+        #   'between title and verses' slot in the page-block model.
+        # ‼ CHECK [IMG_0311.PNG]: No Thai translation of the verses is
+        #   printed, so english_unverified is true and the English is a
+        #   working translation.
+        'id': 'sangahavatthu-gatha',
+        'title_thai': 'สังคะหะวัตถุคาถา',
+        'title_pali': 'Saṅgahavatthugāthā',
+        'title_roman': '',
+        'title_english': 'Verses on the grounds of kindness',
+        'book_number': 28,
+        'page_start': 48,
+        'layout': '',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'สังคะหะวัตถุคาถา นิฏฐิตา',
+            'pali_roman': 'saṅgahavatthugāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses on the grounds of kindness.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0311.PNG]: TWO COLUMNS. First pairing shown so the
+            #   reading can be confirmed: left ทานัญจะ เปยยะวัชชัญจะ joined to
+            #   right อัตถะจะริยา จะ ยา อิธะ. Every verse in this chant is
+            #   built the same way.
+            {
+                'number': 1,
+                'pali': 'ทานัญจะ เปยยะวัชชัญจะ อัตถะจะริยา จะ ยา อิธะ',
+                'pali_roman': 'dānañca peyyavajjañca atthacariyā ca yā idha',
+                'thai': '',
+                'paiboon': '',
+                'english': "Giving, and kindly speech, and whatever conduct is for others' good,",
+            },
+            {
+                'number': 2,
+                'pali': 'สะมานัตตะตา จะ ธัมเมสุ ตัตถะ ตัตถะ ยะถาระหัง.',
+                'pali_roman': 'samānattatā ca dhammesu tattha tattha yathārahaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and treating all alike in these things, each as is fitting.',
+            },
+            {
+                'number': 3,
+                'pali': 'เอเต โข สังคะหา โลเก ระถัสสาณีวะ ยายะโต',
+                'pali_roman': 'ete kho saṅgahā loke rathassāṇīva yāyato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These are the grounds of kindness in the world, like the linchpin of a moving chariot.',
+            },
+            {
+                'number': 4,
+                'pali': 'เอเต จะ สังคะหา นาสสุ นะ มาตา ปุตตะการะณา',
+                'pali_roman': 'ete ca saṅgahā nāssu na mātā puttakāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': "And were these grounds of kindness not to be, no mother, for her child's sake,",
+            },
+            {
+                'number': 5,
+                'pali': 'ละเภถะ มานัง ปูชัง วา ปิตา วา ปุตตะการะณา',
+                'pali_roman': 'labhetha mānaṃ pūjaṃ vā pitā vā puttakāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': "would gain honour or respect, nor a father for his child's sake.",
+            },
+            {
+                'number': 6,
+                'pali': 'ยัส์มา จะ สังคะหา เอเต สะมะเวกขันติ ปัณฑิตา',
+                'pali_roman': 'yasmā ca saṅgahā ete samavekkhanti paṇḍitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Because the wise consider these grounds of kindness well,',
+            },
+            # ‼ CHECK [IMG_0311.PNG]: The book prints ปัปโปนติ, transliterated
+            #   faithfully as papponti. A standard edition reads pappenti.
+            #   Kept the book's spelling in both chanted layers so they agree
+            #   with each other, and raised here rather than corrected — this
+            #   book's printing differing from a standard edition is one of
+            #   the things being recorded.
+            {
+                'number': 7,
+                'pali': 'ตัส์มา มะหัตตัง ปัปโปนติ ปาสังสา จะ ภะวันติ เตติ.',
+                'pali_roman': 'tasmā mahattaṃ papponti pāsaṃsā ca bhavanti teti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'therefore they attain greatness and become worthy of praise.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 14; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0311.PNG]: The chant runs on to page 49 with no closing
+        #   line on this page, so continues is set and no closing key is
+        #   written.
+        # ‼ CHECK [IMG_0311.PNG]: No Thai translation is printed, so
+        #   english_unverified is true and the English is a working
+        #   translation.
+        'id': 'mokkhupaya-gatha',
+        'title_thai': 'โมกขุปายะคาถา',
+        'title_pali': 'Mokkhupāyagāthā',
+        'title_roman': '',
+        'title_english': 'Verses on the way to liberation',
+        'book_number': 29,
+        'page_start': 48,
+        'layout': '',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0311.PNG]: TWO COLUMNS. First pairing shown so the
+            #   reading can be confirmed: left สัพพะวัตถุตตะมัง นัต์วา joined
+            #   to right พุทธะธัมมะคะณัตตะยัง.
+            {
+                'number': 1,
+                'pali': 'สัพพะวัตถุตตะมัง นัต์วา พุทธะธัมมะคะณัตตะยัง',
+                'pali_roman': 'sabbavatthuttamaṃ natvā buddhadhammagaṇattayaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having bowed to the threefold Buddha, Dhamma and Sangha, highest of all things,',
+            },
+            {
+                'number': 2,
+                'pali': 'เชคุจฉกายะมัจจานัง โมกขุปายัง วะทามิหัง.',
+                'pali_roman': 'jegucchakāyamaccānaṃ mokkhupāyaṃ vadāmihaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall tell the way to liberation for mortals of this foul body.',
+            },
+            {
+                'number': 3,
+                'pali': 'ปาฏิโมกขัง ปูเรตัพพัง อะโถ อินท์ริยะสังวะโร',
+                'pali_roman': 'pāṭimokkhaṃ pūretabbaṃ atho indriyasaṃvaro',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Patimokkha is to be fulfilled, and restraint of the faculties,',
+            },
+            {
+                'number': 4,
+                'pali': 'อาชีวัสสะ อะโถ สุทธิ อะโถ ปัจจะยะนิสสิตัง.',
+                'pali_roman': 'ājīvassa atho suddhi atho paccayanissitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and purity of livelihood, and reflection on the requisites.',
+            },
+            {
+                'number': 5,
+                'pali': 'จาตุปาริสุทธิสีลัง กาตัพพัง วะ สุนิมมะลัง',
+                'pali_roman': 'cātupārisuddhisīlaṃ kātabbaṃ va sunimmalaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The fourfold purity of virtue is to be made spotless,',
+            },
+            {
+                'number': 6,
+                'pali': 'การะณากะระเณเหวะ ภิกขุนา โมกขะเมสินา.',
+                'pali_roman': 'kāraṇākaraṇeheva bhikkhunā mokkhamesinā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by doing and not doing, by the monk who seeks liberation.',
+            },
+            {
+                'number': 7,
+                'pali': 'พุทธานุสสะติ เมตตา จะ อะสุภัง มะระณัสสะติ',
+                'pali_roman': 'buddhānussati mettā ca asubhaṃ maraṇassati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Recollection of the Buddha, loving-kindness, the foul, mindfulness of death —',
+            },
+            {
+                'number': 8,
+                'pali': 'อิจจิมา จะตุรารักขา กาตัพพา จะ วิปัสสะนา.',
+                'pali_roman': 'iccimā caturārakkhā kātabbā ca vipassanā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these four protections are to be developed, and insight too.',
+            },
+            {
+                'number': 9,
+                'pali': 'วิสุทธะธัมมะสันตาโน อะนุตตะรายะ โพธิยา',
+                'pali_roman': 'visuddhadhammasantāno anuttarāya bodhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He whose stream of states is purified, by unsurpassed awakening,',
+            },
+            {
+                'number': 10,
+                'pali': 'โยคะโต จะ ปะโพธา จะ พุทโธ พุทโธติ ญายะเต.',
+                'pali_roman': 'yogato ca pabodhā ca buddho buddhoti ñāyate.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by application and by awakening, is known as Buddha, the Awakened One.',
+            },
+            # ‼ CHECK [IMG_0311.PNG]: The book breaks นะรานะระติรัจฉานะ / เภทา
+            #   across the column gutter, so the compound
+            #   narānaratiracchānabhedā is split between the two halves of the
+            #   row. Reproduced with the gutter as a single space, as the two-
+            #   column rule requires, rather than joined into one word — but
+            #   worth confirming that is how the book means it to read.
+            {
+                'number': 11,
+                'pali': 'นะรานะระติรัจฉานะ เภทา สัตตา สุเขสิโน',
+                'pali_roman': 'narānaratiracchāna bhedā sattā sukhesino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Beings of every kind — human, non-human and animal — seeking happiness:',
+            },
+            {
+                'number': 12,
+                'pali': 'สัพเพปิ สุขิโน โหนตุ สุขิตัตตา จะ เขมิโน',
+                'pali_roman': 'sabbepi sukhino hontu sukhitattā ca khemino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they all be happy, and happy in themselves, and safe.',
+            },
+            {
+                'number': 13,
+                'pali': 'เกสะโลมาทิฉะวานัง อะยะเมวะ สะมุสสะโย,',
+                'pali_roman': 'kesalomādichavānaṃ ayameva samussayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This heap is nothing but hair of the head, hair of the body and the rest of the corpse,',
+            },
+            {
+                'number': 14,
+                'pali': 'กาโย สัพโพปิ เชคุจโฉ วัณณาทิโต ปะฏิกกุโล.',
+                'pali_roman': 'kāyo sabbopi jeguccho vaṇṇādito paṭikkulo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the whole body is foul, repulsive in its colour and the rest.',
+            },
+        ],
+    },
 ]
 
 
@@ -14720,6 +14978,19 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'ชะยะมังคะลัฏฐะกะ 8 คาถา อานิสังสะคาถา 1',
                 'english': 'The Jayamangala Atthaka: eight verses, and one verse of its benefits.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 48 ────────────────────────────────────────────────────
+    # Written from batch-048-048.json.
+    {
+        'page': 48,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'อนุโมทนาในวันทรงเริ่มเบี้ยหวัดแลสังคหมัยบุญสมัยอื่น',
+                'english': 'For the anumodana on the day the annual allowances begin, and on other occasions of merit through kindness.',
                 'english_unverified': True,
             },
         ],
