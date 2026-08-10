@@ -384,7 +384,13 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
     # lines offsets the two. It has to be listed here or it is dropped on the
     # way in, which is the failure mode the "everything must land somewhere"
     # rule exists for.
-    for key in ("page", "section", "printed_number"):
+    #
+    # `rubric` is the same story, found on page 51: the book prints
+    # (กราบพร้อมกัน) after each of the three salutation lines, the template has
+    # rendered `verse.rubric` since page 1 was entered by hand, and this loop
+    # was the only thing between the two. A batch declaring one got a silent
+    # drop — the page would have gone live missing three printed lines.
+    for key in ("page", "section", "printed_number", "rubric"):
         if key in verse:
             out += f"{indent}{INDENT}'{key}': {verse[key]!r},\n"
     for layer in LAYERS:

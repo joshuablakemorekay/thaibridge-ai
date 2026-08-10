@@ -310,6 +310,23 @@ class TestWhatItPlansAndWrites:
 
         assert 'printed_number' not in out
 
+    def test_a_printed_rubric_is_carried_through(self):
+        """(กราบพร้อมกัน) is printed, so it is part of what the page shows.
+
+        Page 51 sets the rubric after each of the three salutation lines. The
+        template has rendered `verse.rubric` since page 1 was entered by hand,
+        so the app could always show it — this loop was the only thing between
+        the batch and the page, and without the key the page would go live
+        missing three printed lines.
+        """
+        out = render_chant(chant('a', [verse(1, rubric='(กราบพร้อมกัน)')]))
+
+        assert "'rubric': '(กราบพร้อมกัน)'," in out
+
+    def test_a_verse_with_no_rubric_carries_no_key(self):
+        """Most verses have none, and an empty one would render a blank line."""
+        assert 'rubric' not in render_chant(chant('a', [verse(1)]))
+
     def test_empty_layers_are_written_through_as_facts(self):
         """A Pali-only chant has no thai and no paiboon. That is data, not a gap."""
         out = render_chant(chant('a', [verse(1)]))
