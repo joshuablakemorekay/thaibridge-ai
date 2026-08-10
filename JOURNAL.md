@@ -4,32 +4,6 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
-## How I'm working — AI agents and agentic workflows
-
-*A standing note, not a dated entry. This is the way of working that sits behind every session below.*
-
-During this project, I have been using Claude Code with an **agentic development workflow** instead of simply asking AI questions and copying the answers.
-
-Claude Code can explore the project files, plan tasks, edit code, use development tools, run tests, check the results, and find problems. I then review the work and make important decisions where human judgement is needed.
-
-I have also been learning how **multiple AI agents or sub-agents** can be used to work on different parts of a project. For example, one agent can investigate a problem, another can make changes, and another can test and review the work.
-
-Through this project, I have gained practical experience with:
-
-- AI coding agents
-- Multi-agent and sub-agent workflows
-- AI working with existing code repositories
-- Tool use and automation
-- Planning tasks with AI
-- Testing and reviewing AI-generated work
-- Human approval and oversight
-
-My role is to give the project direction, make important decisions, review the AI's work, and approve major changes. The AI handles much of the repetitive coding and testing work.
-
-This has helped me understand how AI agents can be used to make software development faster and more organised, while still keeping a human involved to make important decisions.
-
----
-
 ## November 2025 — Planning the app
 
 I planned the app using a describe-then-check method: I told the AI exactly what I wanted (the format, the approach, how to work with me), then judged what came back and refined it.
@@ -1884,5 +1858,31 @@ Enter the นะโม twice rather than stub it. Move footnotes out of `source_
 - *Decisions made:* Split the four Sekhiya groups into separate chants rather than one — the book restarts its numbering at each group, and a chant numbers its verses uniquely. I later found the reasoning I'd been given was overstated (book view hides verse numbers, so only the study view was ever affected) and had it corrected rather than left standing. Kept `printed_number` separate from `number` instead of renumbering verses to match the book: the Dasadhamma Sutta opens with two unnumbered chanted lines, so the book's item 1 *is* the app's verse 3, and forcing them to agree would mean lying about one or the other.
 - *Improvements made to generated code:* Three silent-data-loss gaps found in `apply_batch` by checking every key of the batch file had landed rather than trusting "it applied cleanly" — `printed_number`, `closing`, and `source_printed` on a continuation. One of my own checks was deleted as unfalsifiable: it hunted raw newlines inside JSON strings, which `json.load` makes impossible, so it could only ever fire on legitimate couplet breaks. Replaced with one that earns its place — `pali` and `pali_roman` must break in the same places. The new `printed_number` check was negative-tested against four realistic mis-transcriptions before being trusted.
 - *Roughly how much was accepted as-is vs engineered on:* Direction, standard and review; I wrote none of the code. The standard was mine and it reshaped three separate mechanisms. Clearest evidence for why review matters: a backfill that stripped the indentation off 83 lines still imported cleanly and passed all 194 tests, because Python doesn't care about indentation inside a dict literal. Only the diff caught it.
+
+---
+
+## 2026-08-10 — How I'm working: AI agents and agentic workflows
+
+*Not a build entry — a note to myself about the way of working that sits behind every session above.*
+
+During this project, I have been using Claude Code with an **agentic development workflow** instead of simply asking AI questions and copying the answers.
+
+Claude Code can explore the project files, plan tasks, edit code, use development tools, run tests, check the results, and find problems. I then review the work and make important decisions where human judgement is needed.
+
+I have also been learning how **multiple AI agents or sub-agents** can be used to work on different parts of a project. For example, one agent can investigate a problem, another can make changes, and another can test and review the work.
+
+Through this project, I have gained practical experience with:
+
+- AI coding agents
+- Multi-agent and sub-agent workflows
+- AI working with existing code repositories
+- Tool use and automation
+- Planning tasks with AI
+- Testing and reviewing AI-generated work
+- Human approval and oversight
+
+My role is to give the project direction, make important decisions, review the AI's work, and approve major changes. The AI handles much of the repetitive coding and testing work.
+
+This has helped me understand how AI agents can be used to make software development faster and more organised, while still keeping a human involved to make important decisions.
 
 ---
