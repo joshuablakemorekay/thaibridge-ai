@@ -1,0 +1,314 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "mokkhupaya-gatha",
+      "ratanattayappabhavasiddhi-gatha"
+    ],
+    "pages": [
+      {
+        "page": 49,
+        "file": "IMG_0312.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "mokkhupaya-gatha",
+        "verses": "15-30",
+        "starts_here": false,
+        "note": "Picks the chant up from page 48. Sixteen more rows in TWO COLUMNS, then its closing line. No footnotes."
+      },
+      {
+        "page": 49,
+        "file": "IMG_0312.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "ratanattayappabhavasiddhi-gatha",
+        "verses": "1-7",
+        "starts_here": true,
+        "note": "Opens under the number 30 at the foot of the page, also in TWO COLUMNS. Seven rows here; it runs on to page 50."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mokkhupaya-gatha",
+      "continuation_of": "mokkhupaya-gatha",
+      "layout": "",
+      "working_notes": {
+        "invitation": "Absent, and none written. The chant's opening is on page 48.",
+        "units": "Sixteen units, one printed ROW each, left half joined to right half by a single space.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Pali title in Thai script; the title fields were set on page 48 and are not repeated here.",
+        "pages": "All from IMG_0312.PNG, page 49. The chant began on page 48 and ends here."
+      },
+      "closing": {
+        "pali": "โมกขุปายะคาถา นิฏฐิตา",
+        "pali_roman": "mokkhupāyagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses on the way to liberation."
+      },
+      "verses": [
+        {
+          "number": 15,
+          "page": 49,
+          "pali": "ชีวิตินท์ริยุปัจเฉทะ สังขาตะมะระณัง สิยา",
+          "pali_roman": "jīvitindriyupaccheda saṅkhātamaraṇaṃ siyā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Death is reckoned the cutting off of the life faculty;"
+        },
+        {
+          "number": 16,
+          "pali": "สัพเพสังปีธะ ปาณีนัง ตัญหิ ธุวัง นะ ชีวิตัง.",
+          "pali_roman": "sabbesaṃpīdha pāṇīnaṃ tañhi dhuvaṃ na jīvitaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "for all living beings here that is certain, and life is not."
+        },
+        {
+          "number": 17,
+          "pali": "อะวิชชาทีหี สัมภูตา รูปัญจะ เวทะนา ตะถา",
+          "pali_roman": "avijjādīhī sambhūtā rūpañca vedanā tathā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Arisen from ignorance and the rest are form, and feeling too,"
+        },
+        {
+          "number": 18,
+          "pali": "อะโถ สัญญา จะ สังขารา วิญญาณัญจาติ ปัญจิเม.",
+          "pali_roman": "atho saññā ca saṅkhārā viññāṇañcāti pañcime.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and perception, and formations, and consciousness — these five."
+        },
+        {
+          "number": 19,
+          "pali": "อุปปัชชันติ นิรุชฌันติ เอวัง หุต์วา อะภาวะโต",
+          "pali_roman": "uppajjanti nirujjhanti evaṃ hutvā abhāvato",
+          "thai": "",
+          "paiboon": "",
+          "english": "They arise and they cease; having been thus, they are no more,"
+        },
+        {
+          "number": 20,
+          "pali": "เอเต ธัมมา อะนิจจาจะ ตาวะกาลิกะตาทิโต.",
+          "pali_roman": "ete dhammā aniccāca tāvakālikatādito.",
+          "thai": "",
+          "paiboon": "",
+          "english": "so these states are impermanent, being temporary and the rest."
+        },
+        {
+          "number": 21,
+          "pali": "ปุนัปปุนัง ปีฬิตัตตา อุปปาเทนะ วะเยนะ จะ",
+          "pali_roman": "punappunaṃ pīḷitattā uppādena vayena ca",
+          "thai": "",
+          "paiboon": "",
+          "english": "Because they are oppressed again and again by arising and by passing away,"
+        },
+        {
+          "number": 22,
+          "pali": "เต ทุกขาวะ อะนิจจา เย อะถะ สันตัตตะตาทิโต.",
+          "pali_roman": "te dukkhāva aniccā ye atha santattatādito.",
+          "thai": "",
+          "paiboon": "",
+          "english": "those that are impermanent are suffering, being continually burned and the rest."
+        },
+        {
+          "number": 23,
+          "pali": "วะเส อะวัตตะนาเยวะ อัตตะวิปักขะภาวะโต",
+          "pali_roman": "vase avattanāyeva attavipakkhabhāvato",
+          "thai": "",
+          "paiboon": "",
+          "english": "Because they do not bend to one's will, being opposed to a self,"
+        },
+        {
+          "number": 24,
+          "pali": "สุญญัตตัสสามิกัตตา จะ เต อะนัตตาติ ญายะเร.",
+          "pali_roman": "suññattassāmikattā ca te anattāti ñāyare.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and because they are empty and ownerless, they are known as not-self."
+        },
+        {
+          "number": 25,
+          "pali": "เอวัง สันเต จะ เต ธัมมา นิพพินทิตัพพะภาวะโต",
+          "pali_roman": "evaṃ sante ca te dhammā nibbinditabbabhāvato",
+          "thai": "",
+          "paiboon": "",
+          "english": "This being so, those states, being fit to be turned away from,"
+        },
+        {
+          "number": 26,
+          "pali": "ทัฑฒะเคหะสะมาเยวะ อะลัง โมกขัง คะเวสิตุง.",
+          "pali_roman": "daḍḍhagehasamāyeva alaṃ mokkhaṃ gavesituṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "are like a house on fire — enough to make one seek release."
+        },
+        {
+          "number": 27,
+          "pali": "ปัญจักขันธะมิมัง ทุกขัง ตัณหา สะมุทะโย ภะเว",
+          "pali_roman": "pañcakkhandhamimaṃ dukkhaṃ taṇhā samudayo bhave",
+          "thai": "",
+          "paiboon": "",
+          "english": "These five aggregates are suffering; craving is its origin;"
+        },
+        {
+          "number": 28,
+          "pali": "ตัสสา นิโรโธ นิพพานัง มัคโค อัฏฐังคิการิโย.",
+          "pali_roman": "tassā nirodho nibbānaṃ maggo aṭṭhaṅgikāriyo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "its cessation is Nibbāna; the path is the noble eightfold way."
+        },
+        {
+          "number": 29,
+          "pali": "เอตตะกานังปิ ปาฐานัง อัตถัง ญัต์วา ยะถาระหัง",
+          "pali_roman": "ettakānaṃpi pāṭhānaṃ atthaṃ ñatvā yathārahaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "Knowing the meaning of even these few passages as is fitting,"
+        },
+        {
+          "number": 30,
+          "pali": "ปะฏิปัชเชถะ เมธาวี ปัตตุง สังขาระนิพพุตินติ.",
+          "pali_roman": "paṭipajjetha medhāvī pattuṃ saṅkhāranibbutinti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "let the wise one practise, to reach the stilling of formations."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 15,
+          "file": "IMG_0312.PNG",
+          "issue": "TWO COLUMNS, continuing from page 48. First pairing on this page shown so the reading can be confirmed: left ชีวิตินท์ริยุปัจเฉทะ joined to right สังขาตะมะระณัง สิยา."
+        },
+        {
+          "verse": 20,
+          "file": "IMG_0312.PNG",
+          "issue": "The book prints อะนิจจาจะ as one word, where the sense wants อะนิจจา จะ as two. Reproduced as printed rather than split."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0312.PNG",
+          "issue": "No Thai translation is printed, so english_unverified stays true. These verses compress the three characteristics and the four truths very tightly, and the English is a working translation."
+        }
+      ]
+    },
+    {
+      "id": "ratanattayappabhavasiddhi-gatha",
+      "continues": true,
+      "layout": "",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Seven units so far, one printed ROW each, left half joined to right half by a single space.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Pali title in Thai script, so title_pali carries the IAST from the book's own contents and title_roman is empty.",
+        "pages": "Title and verses 1-7 from IMG_0312.PNG, page 49. The chant runs on to page 50, which I was not given."
+      },
+      "title_thai": "ระตะนัตตะยัปปะภาวะสิทธิคาถา",
+      "title_pali": "Ratanattayappabhāvasiddhigāthā",
+      "title_roman": "",
+      "title_english": "Verses on the accomplishing power of the Triple Gem",
+      "book_number": 30,
+      "page_start": 49,
+      "english_unverified": true,
+      "verses": [
+        {
+          "number": 1,
+          "pali": "อะระหัง สัมมาสัมพุทโธ โลกานัง อะนุกัมปะโก",
+          "pali_roman": "arahaṃ sammāsambuddho lokānaṃ anukampako",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Worthy One, perfectly enlightened by himself, compassionate towards the worlds,"
+        },
+        {
+          "number": 2,
+          "pali": "เวเนยยานัง ปะโพเธตา สันติมัคคานุสาสะโก.",
+          "pali_roman": "veneyyānaṃ pabodhetā santimaggānusāsako.",
+          "thai": "",
+          "paiboon": "",
+          "english": "awakener of those ready to be trained, teacher of the path to peace."
+        },
+        {
+          "number": 3,
+          "pali": "ส์วากขาโต อุตตะโม ธัมโม โลกานัง ตะมะทาละโก",
+          "pali_roman": "svākkhāto uttamo dhammo lokānaṃ tamadālako",
+          "thai": "",
+          "paiboon": "",
+          "english": "Well proclaimed, the highest Dhamma, render of the worlds' darkness,"
+        },
+        {
+          "number": 4,
+          "pali": "นิยยานิโก จะ ทุกขัส์มา ธัมมะจารีนุปาละโก.",
+          "pali_roman": "niyyāniko ca dukkhasmā dhammacārīnupālako.",
+          "thai": "",
+          "paiboon": "",
+          "english": "leading out from suffering, protector of those who walk in Dhamma."
+        },
+        {
+          "number": 5,
+          "pali": "สุปะฏิปันโน มะหาสังโฆ โลกานัง ปุญญะมากะโร",
+          "pali_roman": "supaṭipanno mahāsaṅgho lokānaṃ puññamākaro",
+          "thai": "",
+          "paiboon": "",
+          "english": "The great Sangha, practising well, a mine of merit for the worlds,"
+        },
+        {
+          "number": 6,
+          "pali": "สีละทิฏฐีหิ สังสุทโธ สันติมัคคะนิโยชะโก.",
+          "pali_roman": "sīladiṭṭhīhi saṃsuddho santimagganiyojako.",
+          "thai": "",
+          "paiboon": "",
+          "english": "purified in virtue and in view, joining others to the path of peace."
+        },
+        {
+          "number": 7,
+          "pali": "อิจเจตัง ระตะนัง เสฏฐัง โลเก สะระณะมุตตะมัง",
+          "pali_roman": "iccetaṃ ratanaṃ seṭṭhaṃ loke saraṇamuttamaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "So this jewel is the finest, the highest refuge in the world,"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 1,
+          "file": "IMG_0312.PNG",
+          "issue": "TWO COLUMNS. First pairing shown so the reading can be confirmed: left อะระหัง สัมมาสัมพุทโธ joined to right โลกานัง อะนุกัมปะโก."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0312.PNG",
+          "issue": "The page ends after this row with the sentence unfinished — verse 7 has no closing stop and the thought continues. Page 50 carries on; the next batch starts at verse 8 rather than completing this one, because the ROW itself is whole and it is the sentence that runs over."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0312.PNG",
+          "issue": "No Thai translation is printed, so english_unverified is true and the English is a working translation."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "mokkhupaya-gatha"
+    ],
+    "not_started": [],
+    "continues": [
+      "ratanattayappabhavasiddhi-gatha"
+    ],
+    "resume_from_page": 50,
+    "resume_from_file": "IMG_0313.PNG",
+    "resume_from": "ratanattayappabhavasiddhi-gatha",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. No Thai translations on this page, so there are no paiboon values at all.",
+    "pali_untouched": "Confirmed. Every pali value is the Thai script exactly as printed; every pali_roman is IAST.",
+    "page_scan": "agrees — two rows, verses 15-30 and 1-7, and each entry holds exactly those.",
+    "notes": "One page, two chants, both in two columns throughout. The first finishes here; the second runs on to page 50."
+  }
+}
