@@ -13919,6 +13919,248 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0314.PNG]: This is the same nine-unit text the app
+        #   already holds from page 1 as kham-bucha-phra-ratanattaya, but the
+        #   book prints it here under a DIFFERENT title — คาถาบูชาพระรัตนตรัย,
+        #   against page 1's คำบูชาพระรัตนตรัย. Under the rule that a chant
+        #   reprinted elsewhere is entered again so the app page matches the
+        #   book, it is entered as its own chant rather than stubbed as a
+        #   repeat. The book's own contents lists it at page ๕๑ under this
+        #   title too.
+        # ‼ CHECK [IMG_0314.PNG]: No Thai translation is printed anywhere on
+        #   this page, so thai and paiboon are empty on every verse and
+        #   english_unverified is set. No footnotes on the page either, so no
+        #   source_printed.
+        'id': 'khatha-bucha-phra-ratanattaya',
+        'title_thai': 'คาถาบูชาพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': 'kaa-tǎa buu-chaa prá-rát-dtà-ná-dtrai',
+        'title_english': 'The Verse of Offering to the Triple Gem',
+        'page_start': 51,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'โย โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Yo so bhagavā arahaṃ sammāsambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That Blessed One, the Worthy One, perfectly enlightened by himself,',
+            },
+            # ‼ CHECK [IMG_0314.PNG]: ส์วากขาโต is printed with a mark above
+            #   ส. Compared at high magnification against ประดิษฐ์ in the same
+            #   face and size on this same page, the mark is THANTHAKHAT (์),
+            #   not yamakkan (๎) — read as ส์วากขาโต. Worth your eye because
+            #   the app currently holds this one word three ways: plain
+            #   สวากขาโต (page 1, and the page-1 นมัสการ), ส์วากขาโต and
+            #   ส๎วากขาโต. One decision would settle all of them.
+            {
+                'number': 2,
+                'pali': 'ส์วากขาโต เยนะ ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto yena bhagavatā dhammo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Dhamma well proclaimed by that Blessed One,',
+            },
+            {
+                'number': 3,
+                'pali': 'สุปะฏิปันโน ยัสสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno yassa bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "the Sangha of that Blessed One's disciples who have practised well,",
+            },
+            {
+                'number': 4,
+                'pali': 'ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง,',
+                'pali_roman': 'Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to that Blessed One, with his Dhamma and his Sangha,',
+            },
+            {
+                'number': 5,
+                'pali': 'อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยามะ,',
+                'pali_roman': 'Imehi sakkārehi yathārahaṃ āropitehi abhipūjayāma,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'we make offering with these gifts, set out as befits them.',
+            },
+            {
+                'number': 6,
+                'pali': 'สาธุ โน ภันเต ภะคะวา สุจิระปะรินิพพุโตปิ,',
+                'pali_roman': 'Sādhu no bhante bhagavā sucira-parinibbutopi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, though the Blessed One long ago attained final nibbāna,',
+            },
+            {
+                'number': 7,
+                'pali': 'ปัจฉิมาชะนะตานุกัมปะมานะสา,',
+                'pali_roman': 'Pacchimā-janatānukampa-mānasā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'out of compassion in mind for later generations,',
+            },
+            {
+                'number': 8,
+                'pali': 'อิเม สักกาเร ทุคคะตะปัณณาการะภูเต ปะฏิคคัณหาตุ,',
+                'pali_roman': 'Ime sakkāre duggata-paṇṇākāra-bhūte paṭiggaṇhātu,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may he accept these offerings, poor gifts though they are,',
+            },
+            # ‼ CHECK [IMG_0314.PNG]: This printing closes สุขายะ. with a full
+            #   stop. Page 1's printing of the same line closes สุขายะ ฯ with
+            #   paiyannoi. Kept as printed here; the page-1 entry is
+            #   untouched.
+            {
+                'number': 9,
+                'pali': 'อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ.',
+                'pali_roman': 'Amhākaṃ dīgharattaṃ hitāya sukhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for our lasting welfare and happiness.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0314.PNG]: The book prints this under the SAME title as
+        #   the page-1 chant the app already holds (kham-namatsakan-phra-
+        #   ratanattaya), so it is entered with an -evening suffix on its id
+        #   rather than merged: this is the evening service's printing, page
+        #   51, and it has its own page_start.
+        # ‼ CHECK [IMG_0314.PNG]: Punctuation differs from the app's page-1
+        #   entry of the same three lines: page 51 closes lines 1 and 2 with a
+        #   COMMA and line 3 with ฯ, where the page-1 entry has a full stop on
+        #   all three. Recorded as printed here; nothing on page 1 touched.
+        #   Worth checking page 1 against the book while you are looking.
+        'id': 'kham-namatsakan-phra-ratanattaya-evening',
+        'title_thai': 'คำนมัสการพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': 'kam ná-mát-sà-gaan prá-rát-dtà-ná-dtrai',
+        'title_english': 'Words of Salutation to the Triple Gem',
+        'page_start': 51,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0314.PNG]: The rubric (กราบพร้อมกัน) after this
+            #   line is printed on its OWN line, at the left margin, unlike
+            #   lines 2 and 3 where it sits inline at the end of the line.
+            #   Recorded as the verse's rubric in all three cases; if the app
+            #   should show the first one on its own line, that is a template
+            #   question rather than a data one.
+            {
+                'number': 1,
+                'rubric': '(กราบพร้อมกัน)',
+                'pali': 'อะระหัง สัมมาสัมพุทโธ ภะคะวา, พุทธัง ภะคะวันตัง อะภิวาเทมิ,',
+                'pali_roman': 'Arahaṃ sammāsambuddho bhagavā, buddhaṃ bhagavantaṃ abhivādemi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Blessed One is Worthy and perfectly enlightened by himself; I bow to the Buddha, the Blessed One.',
+            },
+            # ‼ CHECK [IMG_0314.PNG]: ส์วากขาโต again, with the same
+            #   thanthakhat mark as in the chant above. See the check on that
+            #   chant's verse 2.
+            {
+                'number': 2,
+                'rubric': '(กราบพร้อมกัน)',
+                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม, ธัมมัง นะมัสสามิ,',
+                'pali_roman': 'Svākkhāto bhagavatā dhammo, dhammaṃ namassāmi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Dhamma is well proclaimed by the Blessed One; I pay homage to the Dhamma.',
+            },
+            # ‼ CHECK [IMG_0314.PNG]: Line 3 closes นะมามิ ฯ with paiyannoi
+            #   before the rubric. Romanised as a full stop, which is how the
+            #   app romanises ฯ at the end of a chanted line elsewhere.
+            {
+                'number': 3,
+                'rubric': '(กราบพร้อมกัน)',
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, สังฆัง นะมามิ ฯ',
+                'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho, saṅghaṃ namāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': "The Sangha of the Blessed One's disciples has practised well; I bow to the Sangha.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0314.PNG]: The title is taken from the PAGE:
+        #   คำเชิญบูชาและสวดนะโมและพระพุทธคุณ. The book's own contents lists
+        #   the same item at page ๕๑ as คำเชิญบูชาสวดนะโม และพระพุทธคุณ — no
+        #   และ after บูชา, and a space before และ. The two disagree in the
+        #   book itself; the page wins here.
+        # ‼ CHECK [IMG_0314.PNG]: This is the evening printing of the text the
+        #   app holds from page 2 as kham-choen-bucha-lae-suat-namo, whose
+        #   title has no และพระพุทธคุณ. Entered as its own chant, not a
+        #   repeat. Whether the two printings are word for word identical
+        #   cannot be told from this page — only the first unit is on it.
+        'id': 'kham-choen-bucha-lae-suat-namo-lae-phra-phuttakhun',
+        'title_thai': 'คำเชิญบูชาและสวดนะโมและพระพุทธคุณ',
+        'title_pali': '',
+        'title_roman': 'kam chəən buu-chaa lɛ́ sùat ná-moo lɛ́ prá-pút-tá-kun',
+        'title_english': 'The Invitation to Make Offering and Chant the Namo and the Qualities of the Buddha',
+        'page_start': 51,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'ยะมัมหะ โข มะยัง ภะคะวันตัง สะระณัง คะตา, อุททิสสะ ปัพพะชิตา',
+                'pali_roman': 'Yamamha kho mayaṃ bhagavantaṃ saraṇaṃ gatā, uddissa pabbajitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That Blessed One to whom we have gone for refuge, for whose sake we have gone forth,',
+            },
+            # ‼ CHECK [IMG_0314.PNG]: The last printed line of page 51 ends
+            #   with the single word โย, which begins the next unit. Written
+            #   as a PARTIAL verse ending […] so that page 51 shows every word
+            #   the page prints, and page 52's batch completes verse 2 rather
+            #   than adding a verse 3. Its english is a partial gloss for the
+            #   same reason.
+            {
+                'number': 2,
+                'pali': 'โย […]',
+                'pali_roman': 'Yo […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who […]',
+            },
+        ],
+    },
 ]
 
 
@@ -15434,6 +15676,45 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'อนุโมทนาในวันทรงเริ่มเบี้ยหวัดแลสังคหมัยบุญสมัยอื่น',
                 'english': 'For the anumodana on the day the annual allowances begin, and on other occasions of merit through kindness.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 51 ────────────────────────────────────────────────────
+    # Written from batch-051-051.json.
+    {
+        'page': 51,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'ทำวัตรเย็น',
+                'english': 'The Evening Service',
+                'english_unverified': True,
+            },
+            {
+                'type': 'heading',
+                'thai': 'ระเบียบทำวัตรสวดมนต์ ภาคเย็น',
+                'english': 'The Order of Devotions and Chanting: the Evening Part',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'เมื่อเจ้าหน้าที่ตีสัญญาระฆัง พระภิกษุ สามเณร ลงประชุมพร้อมกันในโรงพระอุโบสถ กราบพระด้วยเบญจางคประดิษฐ์ 3 หน แล้วนั่งเรียงแถวตามลำดับอย่างเป็นระเบียบ ครั้นได้เวลา 18.00 น. ประธานลุกขึ้นไปจุดธูปเทียนที่โต๊ะหมู่บูชา นอกนั้นนั่งคุกเข่าท่าพรหมประนมมือพร้อมกัน ประธานกลับมายังอาสนะนั่งคุกเข่าท่าพรหมประนมมือ กล่าวคำบูชาและคำนมัสการพระรัตนตรัย นอกนั้นว่าตามพร้อม ๆ กัน หยุดตามจุดลูกน้ำดังนี้.',
+                'english': 'When the officer strikes the bell, the monks and novices assemble together in the uposatha hall, pay homage with the fivefold prostration three times, and then sit in rows in due order. When the time reaches 18.00, the leader rises and goes to light the incense and candles at the shrine table, while the rest kneel together in the brahma posture with hands raised in salutation. The leader returns to his seat, kneels in the brahma posture with hands raised in salutation, and speaks the words of offering and the words of salutation to the Triple Gem, the rest saying them after him together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 51 ────────────────────────────────────────────────────
+    # Written from batch-051-051.json.
+    {
+        'page': 51,
+        'after': 'kham-namatsakan-phra-ratanattaya-evening',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'ประธานกล่าวเชิญชวนบูชาพระรัตนตรัยสวด นะโม และพระพุทธคุณ หยุดตามจุดลูกน้ำดังนี้.',
+                'english': 'The leader gives the invitation to revere the Triple Gem and to chant the Namo and the qualities of the Buddha, pausing at each comma, thus.',
                 'english_unverified': True,
             },
         ],
