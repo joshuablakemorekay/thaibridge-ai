@@ -1,0 +1,778 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 2,
+    "files_read": 2,
+    "received": 6,
+    "manifest": [
+      "phra-sut-sangkhep",
+      "phra-sangkhani",
+      "phra-wiphang",
+      "phra-thatukatha",
+      "phra-pukkhalabanyat",
+      "phra-kathawatthu"
+    ],
+    "pages": [
+      {
+        "page": 39,
+        "file": "IMG_0302.PNG",
+        "script": "thai",
+        "chant": "phra-sut-sangkhep",
+        "verses": "1-4",
+        "starts_here": true,
+        "note": "The second of the three Sangkhep. Its centred title carries NO chant number — the book numbers the Vinaya one 20 and the Abhidhamma one 21, and leaves this one unnumbered. Justified prose, one footnote at the foot of the page keyed to its last word. SINGLE column.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "ที. สี. 9/1",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 39,
+        "file": "IMG_0302.PNG",
+        "script": "thai",
+        "chant": "phra-sangkhani",
+        "verses": "1-8",
+        "starts_here": true,
+        "note": "Below the closing of the Sutta section the book sets a numbered SECTION heading, 21. พระอภิธรรมสังเขป, and then the first of the Abhidhamma books under its own centred heading. The number 21 belongs to the section, not to this chant.",
+        "blocks": [
+          {
+            "type": "heading",
+            "thai": "21. พระอภิธรรมสังเขป",
+            "english": "21. The Abhidhamma in summary",
+            "english_unverified": true
+          }
+        ]
+      },
+      {
+        "page": 40,
+        "file": "IMG_0303.PNG",
+        "script": "thai",
+        "chant": "phra-wiphang",
+        "verses": "1-9",
+        "starts_here": true,
+        "note": "The page opens straight into the second Abhidhamma book under its centred heading, with no page-level heading above it. Justified prose, own closing line. SINGLE column throughout the page."
+      },
+      {
+        "page": 40,
+        "file": "IMG_0303.PNG",
+        "script": "thai",
+        "chant": "phra-thatukatha",
+        "verses": "1-8",
+        "starts_here": true,
+        "note": "Third Abhidhamma book, centred heading, short prose passage of paired terms, own closing line."
+      },
+      {
+        "page": 40,
+        "file": "IMG_0303.PNG",
+        "script": "thai",
+        "chant": "phra-pukkhalabanyat",
+        "verses": "1-18",
+        "starts_here": true,
+        "note": "Fourth Abhidhamma book, centred heading, a long run-on list of terms and paired terms, own closing line. One footnote at the foot of the page keyed to its last word.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "อภิ.ปุ. 36/1-2-3",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 40,
+        "file": "IMG_0303.PNG",
+        "script": "thai",
+        "chant": "phra-kathawatthu",
+        "verses": "1-3",
+        "starts_here": true,
+        "note": "Fifth Abhidhamma book, centred heading at the foot of the page. Two sentences and then the page turns mid-sentence after นะ. Runs on to page 41."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "phra-sut-sangkhep",
+      "layout": "prose",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Four units, split at the printed full stops.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed, so thai and paiboon are empty and the English is a working translation.",
+        "conventions": "Thai title, so title_roman carries the Paiboon+ form and title_pali is empty. Both title fields are taken from the book's own contents so the index and the chant cannot spell it two ways.",
+        "pages": "All from IMG_0302.PNG, page 39. Two words were rejoined across line breaks — see the checks."
+      },
+      "title_thai": "พระสูตรสังเขป",
+      "title_pali": "",
+      "title_roman": "prá-sùut sǎŋ-kèep",
+      "title_english": "The Suttas in summary",
+      "page_start": 39,
+      "source_printed": "ที. สี. 9/1",
+      "english_unverified": true,
+      "closing": {
+        "pali": "จบพระสูตร",
+        "pali_roman": "",
+        "thai": "จบพระสูตร",
+        "paiboon": "jòp prá-sùut",
+        "english": "Here ends the Sutta."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "เอวัมเม สุตัง ฯ เอกัง สะมะยัง ภะคะวา, อันตะรา จะ ราชะคะหัง อันตะรา จะ นาลันทัง อัทธานะมัคคะปะฏิปันโน โหติ มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ.",
+          "pali_roman": "evamme sutaṃ. ekaṃ samayaṃ bhagavā, antarā ca rājagahaṃ antarā ca nāḷandaṃ addhānamaggapaṭipanno hoti mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thus have I heard. At one time the Blessed One was travelling along the high road between Rājagaha and Nāḷandā, together with a great Sangha of some five hundred monks."
+        },
+        {
+          "number": 2,
+          "pali": "สุปปิโยปิ โข ปะริพพาชะโก อันตะรา จะ ราชะคะหัง อันตะรา จะ นาลันทัง อัทธานะมัคคะปะฏิปันโน โหติ สัทธิง อันเตวาสินา พ์รัห์มะทัตเตนะ มาณะเวนะ.",
+          "pali_roman": "suppiyopi kho paribbājako antarā ca rājagahaṃ antarā ca nāḷandaṃ addhānamaggapaṭipanno hoti saddhiṃ antevāsinā brahmadattena māṇavena.",
+          "thai": "",
+          "paiboon": "",
+          "english": "The wanderer Suppiya too was travelling along the high road between Rājagaha and Nāḷandā, together with his pupil, the youth Brahmadatta."
+        },
+        {
+          "number": 3,
+          "pali": "ตัต์ระ สุทัง, สุปปิโย ปะริพพาชะโก อะเนกะปะริยาเยนะ พุทธัสสะ อะวัณณัง ภาสะติ, ธัมมัสสะ อะวัณณัง ภาสะติ, สังฆัสสะ อะวัณณัง ภาสะติ, สุปปิยัสสะ ปะนะ ปะริพพาชะกัสสะ อันเตวาสี พ์รัห์มะทัตโต มาณะโว อะเนกะปะริยาเยนะ พุทธัสสะ วัณณัง ภาสะติ, ธัมมัสสะ วัณณัง ภาสะติ, สังฆัสสะ วัณณัง ภาสะติ.",
+          "pali_roman": "tatra sudaṃ, suppiyo paribbājako anekapariyāyena buddhassa avaṇṇaṃ bhāsati, dhammassa avaṇṇaṃ bhāsati, saṅghassa avaṇṇaṃ bhāsati, suppiyassa pana paribbājakassa antevāsī brahmadatto māṇavo anekapariyāyena buddhassa vaṇṇaṃ bhāsati, dhammassa vaṇṇaṃ bhāsati, saṅghassa vaṇṇaṃ bhāsati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "There the wanderer Suppiya spoke in many ways in dispraise of the Buddha, in dispraise of the Dhamma, in dispraise of the Sangha; while Suppiya's pupil, the youth Brahmadatta, spoke in many ways in praise of the Buddha, in praise of the Dhamma, in praise of the Sangha."
+        },
+        {
+          "number": 4,
+          "pali": "อิติหะ เต อุโภ อาจะริยันเตวาสี อัญญะมัญญัสสะ อุชุวิปัจจะนิกะวาทา ภะคะวันตัง ปิฏฐิโต ปิฏฐิโต อะนุพันธา โหนติ ภิกขุสังฆัญจะ.",
+          "pali_roman": "itiha te ubho ācariyantevāsī aññamaññassa ujuvipaccanikavādā bhagavantaṃ piṭṭhito piṭṭhito anubandhā honti bhikkhusaṅghañca.",
+          "thai": "",
+          "paiboon": "",
+          "english": "So these two, teacher and pupil, contradicting each other outright, followed close behind the Blessed One and the Sangha of monks."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 1,
+          "file": "IMG_0302.PNG",
+          "issue": "The book ends เอวัมเม สุตัง with ฯ here, where the three Bojjhanga discourses on pages 33 to 36 print a full stop. Reproduced as printed."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0302.PNG",
+          "issue": "อะเนกะ-ปะริยาเยนะ is broken across a line with a hyphen. Rejoined to อะเนกะปะริยาเยนะ and the hyphen dropped — confirmed by its second occurrence later in the same verse, printed whole within one line."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0302.PNG",
+          "issue": "อัญญะ-มัญญัสสะ is broken across a line with a hyphen. Rejoined to อัญญะมัญญัสสะ. Unlike the word above there is no second occurrence to confirm it against, so this one is worth checking."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0302.PNG",
+          "issue": "This chant's title carries NO number, where the chants either side of it are numbered 20 and 21. book_number is therefore omitted rather than guessed. The book's own contents lists it as an entry in its own right, which is why it is set as a chant and not as part of chant 20."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0302.PNG",
+          "issue": "The footnote marker 1 sits on the last word of verse 4 and reads ที. สี. 9/1 — a canonical citation, so filed as source_printed. Reproduced verbatim including the spacing."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0302.PNG",
+          "issue": "No Thai translation is printed, so english_unverified is true and the English is a working translation made for this edition."
+        }
+      ]
+    },
+    {
+      "id": "phra-sangkhani",
+      "layout": "prose",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Eight units. The passage is one long run-on sentence with only one full stop, at the very end, so the units are its clauses: the three-fold matika, the question, and the answer in stages. The grouping is mine, not the book's.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Thai title, romanised from the book's own contents.",
+        "pages": "All from IMG_0302.PNG, page 39."
+      },
+      "title_thai": "พระสังคะณี",
+      "title_pali": "",
+      "title_roman": "prá-sǎŋ-ká-nii",
+      "title_english": "The Dhammasaṅgaṇī",
+      "page_start": 39,
+      "english_unverified": true,
+      "closing": {
+        "pali": "จบพระสังคะณี",
+        "pali_roman": "",
+        "thai": "จบพระสังคะณี",
+        "paiboon": "jòp prá-sǎŋ-ká-nii",
+        "english": "Here ends the Dhammasaṅgaṇī."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "กุสะลา ธัมมา,",
+          "pali_roman": "kusalā dhammā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Wholesome states,"
+        },
+        {
+          "number": 2,
+          "pali": "อะกุสะลา ธัมมา,",
+          "pali_roman": "akusalā dhammā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "unwholesome states,"
+        },
+        {
+          "number": 3,
+          "pali": "อัพ์ยากะตา ธัมมา,",
+          "pali_roman": "abyākatā dhammā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "indeterminate states."
+        },
+        {
+          "number": 4,
+          "pali": "กะตะเม ธัมมา กุสะลา,",
+          "pali_roman": "katame dhammā kusalā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Which states are wholesome?"
+        },
+        {
+          "number": 5,
+          "pali": "ยัส์มิง สะมะเย กามาวะจะรัง กุสะลัง จิตตัง อุปปันนัง โหติ โสมะนัสสะสะหะคะตัง ญาณะสัมปะยุตตัง,",
+          "pali_roman": "yasmiṃ samaye kāmāvacaraṃ kusalaṃ cittaṃ uppannaṃ hoti somanassasahagataṃ ñāṇasampayuttaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "On an occasion when a wholesome state of consciousness of the sense sphere has arisen, accompanied by gladness and associated with knowledge,"
+        },
+        {
+          "number": 6,
+          "pali": "รูปารัมมะณัง วา สัททารัมมะณัง วา คันธารัมมะณัง วา ระสารัมมะณัง วา โผฏฐัพพารัมมะณัง วา ธัมมารัมมะณัง วา ยัง ยัง วา ปะนารัพภะ ตัส์มิง สะมะเย ผัสโส โหติ อะวิกเขโป โหติ เย วา ปะนะ ตัส์มิง สะมะเย,",
+          "pali_roman": "rūpārammaṇaṃ vā saddārammaṇaṃ vā gandhārammaṇaṃ vā rasārammaṇaṃ vā phoṭṭhabbārammaṇaṃ vā dhammārammaṇaṃ vā yaṃ yaṃ vā panārabbha tasmiṃ samaye phasso hoti avikkhepo hoti ye vā pana tasmiṃ samaye,",
+          "thai": "",
+          "paiboon": "",
+          "english": "having as its object a form, or a sound, or an odour, or a taste, or a tangible, or a mental object, or whatever else it may be — on that occasion there is contact, there is undistractedness, and whatever else there is on that occasion,"
+        },
+        {
+          "number": 7,
+          "pali": "อัญเญปิ อัตถิ ปะฏิจจะสะมุปปันนา, อะรูปิโน ธัมมา,",
+          "pali_roman": "aññepi atthi paṭiccasamuppannā, arūpino dhammā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "other dependently arisen immaterial states —"
+        },
+        {
+          "number": 8,
+          "pali": "อิเม ธัมมา กุสะลา.",
+          "pali_roman": "ime dhammā kusalā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "these are wholesome states."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0302.PNG",
+          "issue": "The whole passage carries ONE full stop, at the very end. Every other break in it is a comma, so the eight verses here are my clause divisions, not the book's punctuation. The book view reflows them into the single justified block the page prints, so the page is unaffected; the study view is where the division shows."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0302.PNG",
+          "issue": "The centred 21. พระอภิธรรมสังเขป above this chant is a SECTION heading covering all seven Abhidhamma books, not this chant's title — the book's own contents lists it as a section and lists พระสังคะณี separately as an entry. It is therefore a page block and this chant carries no book_number."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0302.PNG",
+          "issue": "No Thai translation is printed, so english_unverified is true and the English is a working translation."
+        }
+      ]
+    },
+    {
+      "id": "phra-wiphang",
+      "layout": "prose",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Nine units: the five aggregates named one per verse as the book lists them, then the question and its answer.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Thai title, romanised from the book's own contents.",
+        "pages": "All from IMG_0303.PNG, page 40."
+      },
+      "title_thai": "พระวิภังค์",
+      "title_pali": "",
+      "title_roman": "prá-wí-paŋ",
+      "title_english": "The Vibhaṅga",
+      "page_start": 40,
+      "english_unverified": true,
+      "closing": {
+        "pali": "จบพระวิภังค์",
+        "pali_roman": "",
+        "thai": "จบพระวิภังค์",
+        "paiboon": "jòp prá-wí-paŋ",
+        "english": "Here ends the Vibhaṅga."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ปัญจักขันธา",
+          "pali_roman": "pañcakkhandhā",
+          "thai": "",
+          "paiboon": "",
+          "english": "The five aggregates:"
+        },
+        {
+          "number": 2,
+          "pali": "รูปักขันโธ,",
+          "pali_roman": "rūpakkhandho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the aggregate of form,"
+        },
+        {
+          "number": 3,
+          "pali": "เวทะนากขันโธ,",
+          "pali_roman": "vedanākkhandho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the aggregate of feeling,"
+        },
+        {
+          "number": 4,
+          "pali": "สัญญากขันโธ,",
+          "pali_roman": "saññākkhandho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the aggregate of perception,"
+        },
+        {
+          "number": 5,
+          "pali": "สังขารักขันโธ,",
+          "pali_roman": "saṅkhārakkhandho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the aggregate of formations,"
+        },
+        {
+          "number": 6,
+          "pali": "วิญญาณักขันโธ.",
+          "pali_roman": "viññāṇakkhandho.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the aggregate of consciousness."
+        },
+        {
+          "number": 7,
+          "pali": "ตัตถะ กะตะโม รูปักขันโธ",
+          "pali_roman": "tattha katamo rūpakkhandho",
+          "thai": "",
+          "paiboon": "",
+          "english": "Therein, which is the aggregate of form?"
+        },
+        {
+          "number": 8,
+          "pali": "ยังกิญจิ รูปัง อะตีตานาคะตะปัจจุปปันนัง, อัชฌัตตัง วา พะหิทธา วา, โอฬาริกัง วา สุขุมัง วา, หีนัง วา ปะณีตัง วา, ยัง ทูเร วา สันติเก วา,",
+          "pali_roman": "yaṅkiñci rūpaṃ atītānāgatapaccuppannaṃ, ajjhattaṃ vā bahiddhā vā, oḷārikaṃ vā sukhumaṃ vā, hīnaṃ vā paṇītaṃ vā, yaṃ dūre vā santike vā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever form there is, past, future or present, internal or external, gross or subtle, inferior or superior, far or near —"
+        },
+        {
+          "number": 9,
+          "pali": "ตะเทกัชฌัง อะภิสัญญูหิต์วา อะภิสังขิปิต์วา อะยัง วุจจะติ รูปักขันโธ.",
+          "pali_roman": "tadekajjhaṃ abhisaññūhitvā abhisaṅkhipitvā ayaṃ vuccati rūpakkhandho.",
+          "thai": "",
+          "paiboon": "",
+          "english": "gathering all this together and comprising it as one, this is called the aggregate of form."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 7,
+          "file": "IMG_0303.PNG",
+          "issue": "The question ตัตถะ กะตะโม รูปักขันโธ is printed with no punctuation at all — no full stop, no comma — running straight into the answer. Reproduced as printed; the verse break is mine, at the question."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0303.PNG",
+          "issue": "No Thai translation is printed, so english_unverified is true and the English is a working translation."
+        }
+      ]
+    },
+    {
+      "id": "phra-thatukatha",
+      "layout": "prose",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Eight units, following the printed commas — the passage is a list of paired terms and the pairs are the units.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Thai title, romanised from the book's own contents.",
+        "pages": "All from IMG_0303.PNG, page 40."
+      },
+      "title_thai": "พระธาตุกะถา",
+      "title_pali": "",
+      "title_roman": "prá-tâat-gà-tǎa",
+      "title_english": "The Dhātukathā",
+      "page_start": 40,
+      "english_unverified": true,
+      "closing": {
+        "pali": "จบพระธาตุกะถา",
+        "pali_roman": "",
+        "thai": "จบพระธาตุกะถา",
+        "paiboon": "jòp prá-tâat-gà-tǎa",
+        "english": "Here ends the Dhātukathā."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "สังคะโห อะสังคะโห.",
+          "pali_roman": "saṅgaho asaṅgaho.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Included, not included."
+        },
+        {
+          "number": 2,
+          "pali": "สังคะหิเตนะ อะสังคะหิตัง,",
+          "pali_roman": "saṅgahitena asaṅgahitaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Not included by what is included,"
+        },
+        {
+          "number": 3,
+          "pali": "อะสังคะหิเตนะ สังคะหิตัง,",
+          "pali_roman": "asaṅgahitena saṅgahitaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "included by what is not included,"
+        },
+        {
+          "number": 4,
+          "pali": "สังคะหิเตนะ สังคะหิตัง,",
+          "pali_roman": "saṅgahitena saṅgahitaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "included by what is included,"
+        },
+        {
+          "number": 5,
+          "pali": "อะสังคะหิเตนะ อะสังคะหิตัง,",
+          "pali_roman": "asaṅgahitena asaṅgahitaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "not included by what is not included,"
+        },
+        {
+          "number": 6,
+          "pali": "สัมปะโยโค วิปปะโยโค,",
+          "pali_roman": "sampayogo vippayogo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "association, dissociation,"
+        },
+        {
+          "number": 7,
+          "pali": "สัมปะยุตเตนะ วิปปะยุตตัง,",
+          "pali_roman": "sampayuttena vippayuttaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "dissociated from what is associated,"
+        },
+        {
+          "number": 8,
+          "pali": "วิปปะยุตเตนะ สัมปะยุตตัง อะสังคะหิตัง.",
+          "pali_roman": "vippayuttena sampayuttaṃ asaṅgahitaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "associated with what is dissociated, not included."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 8,
+          "file": "IMG_0303.PNG",
+          "issue": "The last three words run together with no comma between สัมปะยุตตัง and อะสังคะหิตัง, unlike every pair before them. Kept as one verse because that is how the book runs them; if อะสังคะหิตัง is meant as a separate item the comma is missing from the printing."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0303.PNG",
+          "issue": "No Thai translation is printed, so english_unverified is true and the English is a working translation. The paired terms here are technical Abhidhamma vocabulary and the English is a literal rendering, not a gloss of what the pairs mean."
+        }
+      ]
+    },
+    {
+      "id": "phra-pukkhalabanyat",
+      "layout": "prose",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Eighteen units, following the printed commas and full stops — a list of six concepts, then a run of paired person-types.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Thai title, romanised from the book's own contents.",
+        "pages": "All from IMG_0303.PNG, page 40."
+      },
+      "title_thai": "พระปุคคะละบัญญัติ",
+      "title_pali": "",
+      "title_roman": "prá-púk-ká-lá-ban-yàt",
+      "title_english": "The Puggalapaññatti",
+      "page_start": 40,
+      "source_printed": "อภิ.ปุ. 36/1-2-3",
+      "english_unverified": true,
+      "closing": {
+        "pali": "จบพระปุคคะละบัญญัติ",
+        "pali_roman": "",
+        "thai": "จบพระปุคคะละบัญญัติ",
+        "paiboon": "jòp prá-púk-ká-lá-ban-yàt",
+        "english": "Here ends the Puggalapaññatti."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ฉะ ปัญญัตติโย",
+          "pali_roman": "cha paññattiyo",
+          "thai": "",
+          "paiboon": "",
+          "english": "Six designations:"
+        },
+        {
+          "number": 2,
+          "pali": "ขันธะปัญญัตติ,",
+          "pali_roman": "khandhapaññatti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the designation of aggregates,"
+        },
+        {
+          "number": 3,
+          "pali": "อายะตะนะปัญญัตติ,",
+          "pali_roman": "āyatanapaññatti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the designation of sense bases,"
+        },
+        {
+          "number": 4,
+          "pali": "ธาตุปัญญัตติ,",
+          "pali_roman": "dhātupaññatti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the designation of elements,"
+        },
+        {
+          "number": 5,
+          "pali": "สัจจะปัญญัตติ,",
+          "pali_roman": "saccapaññatti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the designation of truths,"
+        },
+        {
+          "number": 6,
+          "pali": "อินท์ริยะปัญญัตติ,",
+          "pali_roman": "indriyapaññatti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the designation of faculties,"
+        },
+        {
+          "number": 7,
+          "pali": "ปุคคะละปัญญัตติ,",
+          "pali_roman": "puggalapaññatti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the designation of persons."
+        },
+        {
+          "number": 8,
+          "pali": "กิตตาวะตา ปุคคะลานัง ปุคคะละปัญญัตติ,",
+          "pali_roman": "kittāvatā puggalānaṃ puggalapaññatti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "To what extent is there a designation of persons?"
+        },
+        {
+          "number": 9,
+          "pali": "สะมะยะวิมุตโต อะสะมะยะวิมุตโต,",
+          "pali_roman": "samayavimutto asamayavimutto,",
+          "thai": "",
+          "paiboon": "",
+          "english": "One liberated on occasion, one not liberated on occasion,"
+        },
+        {
+          "number": 10,
+          "pali": "กุปปะธัมโม, อะกุปปะธัมโม,",
+          "pali_roman": "kuppadhammo, akuppadhammo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "one liable to fall away, one not liable to fall away,"
+        },
+        {
+          "number": 11,
+          "pali": "ปะริหานะธัมโม อะปะริหานะธัมโม,",
+          "pali_roman": "parihānadhammo aparihānadhammo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "one subject to decline, one not subject to decline,"
+        },
+        {
+          "number": 12,
+          "pali": "เจตะนาภัพโพ อะนุรักขะนาภัพโพ,",
+          "pali_roman": "cetanābhabbo anurakkhaṇābhabbo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "one capable through volition, one capable through guarding,"
+        },
+        {
+          "number": 13,
+          "pali": "ปุถุชชะโน โคต์ระภู,",
+          "pali_roman": "puthujjano gotrabhū,",
+          "thai": "",
+          "paiboon": "",
+          "english": "the ordinary person, one of the change of lineage,"
+        },
+        {
+          "number": 14,
+          "pali": "ภะยูปะระโต อะภะยูปะระโต.",
+          "pali_roman": "bhayūparato abhayūparato.",
+          "thai": "",
+          "paiboon": "",
+          "english": "one who abstains through fear, one who abstains not through fear."
+        },
+        {
+          "number": 15,
+          "pali": "ภัพพาคะมะโน อะภัพพาคะมะโน.",
+          "pali_roman": "bhabbāgamano abhabbāgamano.",
+          "thai": "",
+          "paiboon": "",
+          "english": "One capable of arriving, one incapable of arriving."
+        },
+        {
+          "number": 16,
+          "pali": "นิยะโต อะนิยะโต,",
+          "pali_roman": "niyato aniyato,",
+          "thai": "",
+          "paiboon": "",
+          "english": "One fixed in destiny, one not fixed in destiny,"
+        },
+        {
+          "number": 17,
+          "pali": "ปะฏิปันนะโก ผะเลฏฐิโต,",
+          "pali_roman": "paṭipannako phaleṭṭhito,",
+          "thai": "",
+          "paiboon": "",
+          "english": "one practising the way, one established in the fruit,"
+        },
+        {
+          "number": 18,
+          "pali": "อะระหา อะระหัตตายะ ปะฏิปันโน.",
+          "pali_roman": "arahā arahattāya paṭipanno.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Worthy One, and one practising for Worthiness."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 10,
+          "file": "IMG_0303.PNG",
+          "issue": "This pair is printed with a comma BETWEEN its two halves — กุปปะธัมโม, อะกุปปะธัมโม — where every other pair in the list runs its two halves together with no comma. Reproduced as printed rather than made uniform."
+        },
+        {
+          "verse": 14,
+          "file": "IMG_0303.PNG",
+          "issue": "Verses 14 and 15 each end with a full stop where the surrounding items end with commas, which is why the list is broken into three runs here. Reproduced as printed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0303.PNG",
+          "issue": "The footnote marker 1 sits on the last word of verse 18 and reads อภิ.ปุ. 36/1-2-3 — a canonical citation, so filed as source_printed. Reproduced verbatim, including the 1-2-3 form, which is not expanded."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0303.PNG",
+          "issue": "No Thai translation is printed, so english_unverified is true. These are technical person-types and the English is a literal rendering rather than a settled translation."
+        }
+      ]
+    },
+    {
+      "id": "phra-kathawatthu",
+      "continues": true,
+      "layout": "prose",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Three units. The third is the single word นะ before the page turns.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Thai title, romanised from the book's own contents.",
+        "pages": "Title and opening from IMG_0303.PNG, page 40, at the foot of the page. The text runs on to page 41, which I was not given."
+      },
+      "title_thai": "พระกะถาวัตถุ",
+      "title_pali": "",
+      "title_roman": "prá-gà-tǎa-wát-tù",
+      "title_english": "The Kathāvatthu",
+      "page_start": 40,
+      "english_unverified": true,
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ปุคคะโล อุปะลัพภะติ, สัจฉิกัตถะปะระมัตเถนาติ อามันตา.",
+          "pali_roman": "puggalo upalabbhati, sacchikatthaparamatthenāti āmantā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"Is the person apprehended as a real and ultimate fact?\" \"Yes.\""
+        },
+        {
+          "number": 2,
+          "pali": "โย สัจฉิกัตโถ ปะระมัตโถ, ตะโต โส ปุคคะโล อุปะลัพภะติ, สัจฉิกัตถะปะระมัตเถนาติ.",
+          "pali_roman": "yo sacchikattho paramattho, tato so puggalo upalabbhati, sacchikatthaparamatthenāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"Is the person apprehended in the same way as that which is a real and ultimate fact?\""
+        },
+        {
+          "number": 3,
+          "pali": "นะ […]",
+          "pali_roman": "na […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"No […]"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 3,
+          "file": "IMG_0303.PNG",
+          "issue": "The page ends mid-sentence after นะ, so verse 3 belongs to page 40 where it starts and carries the gap marker. Page 41 completes it; the next batch supplies verse 3 in full rather than starting a new verse."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0303.PNG",
+          "issue": "No Thai translation is printed, so english_unverified is true. The Kathavatthu is set as a debate in question and answer, and the English marks the speakers with quotation marks that the book does not print — that is an editorial reading of the form, so it is worth your eye."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "phra-sut-sangkhep",
+      "phra-sangkhani",
+      "phra-wiphang",
+      "phra-thatukatha",
+      "phra-pukkhalabanyat"
+    ],
+    "not_started": [],
+    "continues": [
+      "phra-kathawatthu"
+    ],
+    "resume_from_page": 41,
+    "resume_from_file": "IMG_0304.PNG",
+    "resume_from": "phra-kathawatthu",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. The Paiboon+ values here are the six title romanisations and their closings, all taken from or checked against the book's own contents table.",
+    "pali_untouched": "Confirmed. Every pali value is the Thai script exactly as printed; every pali_roman is IAST.",
+    "page_scan": "agrees — page 39 carries two rows, verses 1-4 and 1-8, and both entries hold exactly those; page 40 carries four rows, 1-9, 1-8, 1-18 and 1-3, and all four entries hold exactly those. No verse is orphaned or claimed twice.",
+    "notes": "Six chants across two pages, five complete and one running on to page 41. The structure follows the book's own contents, which lists สวดแจง and พระอภิธรรมสังเขป as SECTIONS and the seven Abhidhamma books as separate entries — so the number 21 sits on a page heading, not on a chant."
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "phra-winai-sangkhep"
+    ],
+    "pages": [
+      {
+        "page": 38,
+        "file": "IMG_0301.PNG",
+        "script": "thai",
+        "chant": "phra-winai-sangkhep",
+        "verses": "1-9",
+        "starts_here": true,
+        "note": "A new service opens here: the centred heading สวดแจง sits above the chant number, and the chant itself is the first of the three Sangkhep. Set as justified prose in five paragraphs. Two footnotes under a rule at the foot, keyed to markers in the first and last paragraphs. SINGLE column.",
+        "blocks": [
+          {
+            "type": "heading",
+            "thai": "สวดแจง",
+            "english": "The Suat Jaeng",
+            "english_unverified": true
+          },
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "สํ. มหา. 19/117-8",
+            "english": ""
+          },
+          {
+            "type": "footnote",
+            "marker": "2",
+            "thai": "วิ. มหา. 1/1",
+            "english": ""
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "phra-winai-sangkhep",
+      "layout": "prose",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Nine units, split at the printed full stops. The book runs the whole chant on as justified prose in five paragraphs, so the paragraphing is the typesetter's and the sentence is the unit.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed, so thai and paiboon are empty and the English is a working translation.",
+        "conventions": "The title is Thai rather than Pali, so title_roman carries its Paiboon+ romanisation and title_pali is empty. The chant text itself is Pali in Thai script.",
+        "pages": "All from IMG_0301.PNG, page 38. The chant begins and ends on this page. Two words were rejoined across line breaks — see the checks."
+      },
+      "title_thai": "พระวินัยสังเขป",
+      "title_pali": "",
+      "title_roman": "prá-wí-nai sǎŋ-kèep",
+      "title_english": "The Vinaya in summary",
+      "book_number": 20,
+      "page_start": 38,
+      "english_unverified": true,
+      "closing": {
+        "pali": "จบพระวินัย",
+        "pali_roman": "",
+        "thai": "จบพระวินัย",
+        "paiboon": "jòp prá-wí-nai",
+        "english": "Here ends the Vinaya."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ยันเตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ, ปะฐะมัง ปาราชิกัง กัตถะ ปัญญัตตันติ, เวสาลิยัง ปัญญัตตันติ.",
+          "pali_roman": "yantena bhagavatā jānatā passatā arahatā sammāsambuddhena, paṭhamaṃ pārājikaṃ kattha paññattanti, vesāliyaṃ paññattanti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "By the Blessed One who knows and sees, the Worthy One, perfectly enlightened by himself — where was the first pārājika laid down? It was laid down at Vesālī."
+        },
+        {
+          "number": 2,
+          "pali": "กัง อารัพภาติ, สุทินนัง กะลันทะปุตตัง อารัพภาติ.",
+          "pali_roman": "kaṃ ārabbhāti, sudinnaṃ kalandaputtaṃ ārabbhāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Concerning whom? Concerning Sudinna, son of Kalanda."
+        },
+        {
+          "number": 3,
+          "pali": "กิส์มิง วัตถุส์มินติ สุทินโน กะลันทะปุตโต ปุราณะทุติยิกายะ เมถุนัง ธัมมัง ปะฏิเสวิ ตัส์มิง วัตถุส์มินติ.",
+          "pali_roman": "kismiṃ vatthusminti sudinno kalandaputto purāṇadutiyikāya methunaṃ dhammaṃ paṭisevi tasmiṃ vatthusminti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "In what matter? In the matter of Sudinna, son of Kalanda, having engaged in sexual intercourse with his former wife."
+        },
+        {
+          "number": 4,
+          "pali": "เตนะ สะมะเยนะ พุทโธ ภะคะวา เวรัญชายัง วิหะระติ นะเพรุปุจิมันทะมูเล มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ.",
+          "pali_roman": "tena samayena buddho bhagavā verañjāyaṃ viharati naḷerupucimandamūle mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "At that time the Buddha, the Blessed One, was dwelling at Verañjā at the foot of Naḷeru's nimba tree, together with a great Sangha of some five hundred monks."
+        },
+        {
+          "number": 5,
+          "pali": "อัสโสสิ โข เวรัญโช พ์ราห์มะโณ สะมะโณ ขะลุ โภ โคตะโม สัก์ยะปุตโต สัก์ยะกุลา ปัพพะชิโต, เวรัญชายัง วิหะระติ นะเพรุปุจิมันทะมูเล มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ.",
+          "pali_roman": "assosi kho verañjo brāhmaṇo samaṇo khalu bho gotamo sakyaputto sakyakulā pabbajito, verañjāyaṃ viharati naḷerupucimandamūle mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "The brahmin of Verañjā heard: \"The ascetic Gotama, sir, the Sakyan son gone forth from the Sakyan clan, is dwelling at Verañjā at the foot of Naḷeru's nimba tree, together with a great Sangha of some five hundred monks.\""
+        },
+        {
+          "number": 6,
+          "pali": "ตัง โข ปะนะ ภะวันตัง โคตะมัง เอวัง กัล์ยาโณ กิตติสัทโท อัพภุคคะโต, อิติปิ โส ภะคะวา อะระหัง สัมมาสัมพุทโธ, วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู, อะนุตตะโร ปุริสะทัมมะสาระถิ สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวาติ.",
+          "pali_roman": "taṃ kho pana bhavantaṃ gotamaṃ evaṃ kalyāṇo kittisaddo abbhuggato, itipi so bhagavā arahaṃ sammāsambuddho, vijjācaraṇasampanno sugato lokavidū, anuttaro purisadammasārathi satthā devamanussānaṃ buddho bhagavāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And this good report had gone abroad about Master Gotama: \"So indeed is the Blessed One — worthy, perfectly enlightened by himself, accomplished in knowledge and conduct, well-farer, knower of the worlds, unsurpassed trainer of those to be tamed, teacher of gods and humans, the Awakened One, the Blessed One.\""
+        },
+        {
+          "number": 7,
+          "pali": "โส อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ์รัห์มะกัง, สัสสะมะณะพ์ราห์มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต์วา ปะเวเทติ.",
+          "pali_roman": "so imaṃ lokaṃ sadevakaṃ samārakaṃ sabrahmakaṃ, sassamaṇabrāhmaṇiṃ pajaṃ sadevamanussaṃ sayaṃ abhiññā sacchikatvā pavedeti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "He makes known this world with its gods, its Māras and its Brahmās, this generation with its ascetics and brahmins, its gods and humans, having realised it himself by direct knowledge."
+        },
+        {
+          "number": 8,
+          "pali": "โส ธัมมัง เทเสติ อาทิกัล์ยาณัง มัชเฌกัล์ยาณัง ปะริโย-สานะกัล์ยาณัง สาตถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง ปะกาเสติ.",
+          "pali_roman": "so dhammaṃ deseti ādikalyāṇaṃ majjhekalyāṇaṃ pariyo-sānakalyāṇaṃ sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ pakāseti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "He teaches the Dhamma that is good in the beginning, good in the middle, good in the end, with its meaning and its wording; he makes known the holy life, complete and pure in its entirety."
+        },
+        {
+          "number": 9,
+          "pali": "สาธุ โข ปะนะ ตะถารูปานัง อะระหะตัง ทัสสะนัง โหตีติ.",
+          "pali_roman": "sādhu kho pana tathārūpānaṃ arahataṃ dassanaṃ hotīti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And good indeed it is to see such Worthy Ones."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 4,
+          "file": "IMG_0301.PNG",
+          "issue": "The book breaks นะเพรุปุจิมันทะ-มูเล across a line with a hyphen. Rejoined to นะเพรุปุจิมันทะมูเล and the hyphen dropped, because it is typesetting rather than spelling — confirmed by verse 5, where the same word is printed whole and unhyphenated within one line."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0301.PNG",
+          "issue": "สัสสะมะณะพ์ราห์ / มะณิง is broken across a line with NO hyphen at all. Rejoined to สัสสะมะณะพ์ราห์มะณิง. Worth confirming against the page, since a break with no hyphen is easier to mis-join than one with."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0301.PNG",
+          "issue": "ปะริโย-สานะกัล์ยาณัง carries a hyphen in the MIDDLE of a line, not at a line break, so it has been kept. That makes it different in kind from the two rejoined words above. If the book means it as one word throughout, this hyphen should come out — but that is a call about the printing, so it is reproduced as it stands."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0301.PNG",
+          "issue": "TWO footnotes on this page, so source_printed is deliberately left off — a chant carries one printed source and neither of these is obviously it. Both are recorded as page blocks instead. Marker 1 sits on วัตถุส์มินติ at the end of verse 3 and reads สํ. มหา. 19/117-8; marker 2 sits on โหตีติ at the end of verse 9 and reads วิ. มหา. 1/1. Marker 2 matches its passage (the Verañja opening of the Vinaya Mahāvagga). Marker 1 reads as a Saṃyutta reference against a pārājika text, which looks odd — reproduced verbatim, not corrected, and worth your eye."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0301.PNG",
+          "issue": "The centred heading สวดแจง names the whole service, not this chant, so it is a page block rather than part of the chant. The English given for it is mine and unverified."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0301.PNG",
+          "issue": "The closing จบพระวินัย is Thai, not Pali, so it is filed in the thai and paiboon fields with pali_roman empty — unlike the Pali จบ formulas earlier in the book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0301.PNG",
+          "issue": "No Thai translation of the chant is printed, so english_unverified is true and every english line is a working translation made for this edition."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "phra-winai-sangkhep"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 39,
+    "resume_from_file": "IMG_0302.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. The only Paiboon+ values are the title romanisation and the closing, both checked against the table.",
+    "pali_untouched": "Confirmed. Every pali value is the Thai script exactly as printed; every pali_roman is IAST.",
+    "page_scan": "agrees — one row, one chant, verses 1-9, and the entry holds exactly those.",
+    "notes": "One page, one chant, complete. This page opens the สวดแจง service, whose remaining chants run from page 39."
+  }
+}
