@@ -666,8 +666,13 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
                 per_verse.setdefault(k["verse"], []).append(k)
 
         for verse in chant["verses"]:
+            # The trailing newline is optional. `block` is sliced to stop at the
+            # verses list's own closing bracket, so the LAST verse's `},` sits at
+            # the very end with no newline after it — and a page-break stub is
+            # always the last verse, which made this branch unreachable exactly
+            # when it was needed. It appended a second verse 4 instead.
             existing = re.search(
-                rf"\{{\n\s*'number': {verse['number']},.*?\n\s*\}},\n",
+                rf"\{{\n\s*'number': {verse['number']},.*?\n\s*\}},(?:\n|\Z)",
                 block, re.DOTALL)
             is_completion = existing and GAP in existing.group(0)
             if is_completion:
@@ -681,6 +686,18 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
             else:
                 block = block.rstrip("\n") + "\n" + render_verse(verse, per_verse, INDENT * 3).rstrip("\n")
                 report["appended"] += 1
+
+        # A verse number identifies a verse, so the same one twice is never a
+        # thing the book can mean. Checked here rather than trusted, because the
+        # duplicate this catches imported cleanly and passed the whole suite:
+        # nothing downstream reads verse numbers strictly enough to notice.
+        written = re.findall(r"\n\s*'number': (\d+),", block)
+        repeated = sorted({n for n in written if written.count(n) > 1}, key=int)
+        if repeated:
+            raise RuntimeError(
+                f"{target}: verse number(s) {', '.join(repeated)} appear twice "
+                f"after writing. A completion was appended instead of replacing "
+                f"the line it completes. Nothing has been saved.")
 
         source = source[:v_open] + block + source[v_close:]
 
