@@ -648,9 +648,28 @@ def block_groups(batch: dict) -> list[tuple[int, str | None, list[dict]]]:
         chants = [r.get("chant") for r in rows if r.get("chant")]
         last = chants[-1] if chants else None
         for index, row in enumerate(rows):
-            for block in row.get("blocks") or []:
+            # A service closing arrives as a page-map KEY, not a block, because
+            # that is how stage 1 is asked to record it. The app keeps it as a
+            # block like any other page material, so it is translated here —
+            # otherwise it goes the way the blocks went, recorded by stage 1
+            # and shown nowhere. It closes the service, so it sits at the page
+            # foot with the footnotes.
+            extra = []
+            if row.get("service_closing"):
+                extra.append({"type": "service_closing",
+                              "thai": row["service_closing"]})
+
+            for block in list(row.get("blocks") or []) + extra:
                 if block.get("type") == "footnote":
                     anchor = last
+                elif block.get("type") == "service_closing":
+                    # NOT the page foot. A footnote is printed down there; a
+                    # service closing is printed inline, right where the
+                    # service ends. On page 41 จบสวดแจงเท่านี้ sits under the
+                    # Mahapatthana and ABOVE the next chant's heading, so
+                    # anchoring it to the page's last chant put it a whole
+                    # chant too low.
+                    anchor = row.get("chant")
                 else:
                     before = [r.get("chant") for r in rows[:index] if r.get("chant")]
                     anchor = before[-1] if before else None
