@@ -1777,18 +1777,24 @@ CHANTS = [
                     "always what is auspicious."
                 ),
             },
-            {
-                'number': 7,
-                'pali': 'เทวะตาทิสสะทักขิณานุโมทะนาคาถา นิฏฐิตา.',
-                'pali_roman': 'devatādissadakkhiṇānumodanāgāthā niṭṭhitā.',
-                'thai': '',
-                'paiboon': '',
-                'english': (
-                    "The verses of rejoicing in offerings dedicated to the "
-                    "devas are ended."
-                ),
-            },
         ],
+        # ‼ CORRECTED 2026-08-10 [IMG_0288.PNG]: this line was verse 7 of the
+        #   chant. Page 26 prints it as a CENTRED closing colophon under the
+        #   six two-column verses — identical in setting to
+        #   ธัมมะคาระวาทิคาถา นิฏฐิตา. four lines above it, which the app
+        #   already holds as that chant's `closing`. As a verse it rendered
+        #   with a number, in the verse list, as though it were chanted. The
+        #   five strings are unchanged, only moved. Was: a seventh verse.
+        'closing': {
+            'pali': 'เทวะตาทิสสะทักขิณานุโมทะนาคาถา นิฏฐิตา.',
+            'pali_roman': 'devatādissadakkhiṇānumodanāgāthā niṭṭhitā.',
+            'thai': '',
+            'paiboon': '',
+            'english': (
+                "The verses of rejoicing in offerings dedicated to the "
+                "devas are ended."
+            ),
+        },
     },
 
     {
@@ -6591,9 +6597,16 @@ CHANTS = [
             #   finishing with ปะฏิฆาตายะ, so the whole verse should REPLACE
             #   what is there. This is the one place in this batch where the
             #   incoming text must win over the file.
+            # ‼ CORRECTED 2026-08-10: this verse carried 'page': 7, which put a
+            #   line the book STARTS on page 6 onto page 7 — so app page 6
+            #   ended a line earlier than printed page 6. The page marker has
+            #   moved to verse 15, the first line page 7 begins. Was:
+            #   'page': 7 on verse 14, no page key on verse 15. The rule is
+            #   the one the comment above already states, and the three other
+            #   lines cut by a page break (p34/35, p40/41, p46/47) all follow
+            #   it; this was the only one that did not.
             {
                 'number': 14,
-                'page': 7,
                 'pali': 'ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,',
                 'pali_roman': 'Ḍaṃsa-makasa-vātātapa-siriṃsapa-samphassānaṃ paṭighātāya,',
                 'thai': '',
@@ -6605,6 +6618,7 @@ CHANTS = [
             #   joined chant runs 1-18.
             {
                 'number': 15,
+                'page': 7,
                 'pali': 'ยาวะเทวะ อุตุปะริสสะยะวิโนทะนัง ปะฏิสัลลานารามัตถัง.',
                 'pali_roman': 'Yāvadeva utuparissaya-vinodanaṃ paṭisallānārāmatthaṃ.',
                 'thai': '',
