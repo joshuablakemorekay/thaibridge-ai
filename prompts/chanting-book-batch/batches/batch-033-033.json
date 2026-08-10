@@ -1,0 +1,293 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "bhaddekaratta-gatha",
+      "mahakassapa-bojjhanga-suttam"
+    ],
+    "pages": [
+      {
+        "page": 33,
+        "file": "IMG_0296.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "bhaddekaratta-gatha",
+        "verses": "1-9",
+        "starts_here": true,
+        "note": "Printed complete at the top of the page under the number 16, two columns, two padas to a line, then its closing. Footnote 1 belongs to its last line.",
+        "blocks": [
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "ม.อุ. 14/348",
+            "english": ""
+          }
+        ]
+      },
+      {
+        "page": 33,
+        "file": "IMG_0296.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahakassapa-bojjhanga-suttam",
+        "verses": "1-15",
+        "starts_here": true,
+        "note": "Opens under the number 17 and fills the lower two thirds of the page as justified prose. SINGLE column. Stops mid-discourse at katame satta and runs onto page 34."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "bhaddekaratta-gatha",
+      "merge_only": true,
+      "working_notes": {
+        "invitation": "Absent, as already recorded in the app.",
+        "units": "Not re-divided. The eight lines in the app are already two padas each and match the page line for line; verse 9 is the closing formula.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed.",
+        "pages": "IMG_0296.PNG, the top of page 33. Thai script, two columns, complete on this page."
+      },
+      "book_number": 16,
+      "page_start": 33,
+      "source_printed": "ม.อุ. 14/348",
+      "closing": {
+        "pali": "ภัทเทกะรัตตะคาถา นิฏฐิตา",
+        "pali_roman": "bhaddekarattagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses on the Auspicious Single Night."
+      },
+      "corrections": [
+        {
+          "verse": 4,
+          "field": "pali",
+          "from": "อะสังหรัง อะสังกุปปัง ตัง วิทธา มะนุพ์รูหะเย",
+          "to": "อะสังหิรัง อะสังกุปปัง ตัง วิทธา มะนุพ์รูหะเย.",
+          "reason": "Two things on one line. The page prints asanghiran with the sara i the file had dropped, and it ends the line with a full stop where the file has none."
+        },
+        {
+          "verse": 8,
+          "field": "pali",
+          "from": "ตัง เว ภัทเทกะรัตโตติ สันโต อาจิกขะเต มุนีติ.'",
+          "to": "ตัง เว ภัทเทกะรัตโตติ สันโต อาจิกขะเต มุนีติ.",
+          "reason": "The trailing apostrophe is the superscript footnote marker 1 flattened by the paste. It is a reference, not text."
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0296.PNG",
+          "issue": "MERGE. One of the seventeen entered before page numbers existed, and a close match: eight lines agreeing with the page except for the two corrections above. Only page_start, book_number and source_printed are new."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0296.PNG",
+          "issue": "TWO COLUMNS. First pairing read as the left half ending naanvaakameyya joined to the right half beginning nappatikangkhe. The line division already in the app matches and was not changed."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0296.PNG",
+          "issue": "Check the sara i in asanghiran against the book. It is the one correction here that changes a syllable rather than punctuation, and the standard reading is asamhiram — worth your eye on which the book actually sets."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0296.PNG",
+          "issue": "Verse 9 IS the closing formula standing as a verse, as in the last four chants. The closing offered here must not be written while it stands."
+        }
+      ]
+    },
+    {
+      "id": "mahakassapa-bojjhanga-suttam",
+      "continues": true,
+      "working_notes": {
+        "invitation": "Absent. The page prints none and none has been written.",
+        "units": "Fifteen units on this page, broken at the clauses the passage is made of, as Paticcasamuppada is. The chant is NOT finished here — it runs onto page 34, stopping at the question katame satta.",
+        "ordering": "Pali only; no Thai translation printed.",
+        "conventions": "No romanisation printed in the book.",
+        "pages": "IMG_0296.PNG, the lower two thirds of page 33. Thai script, single column, continuous justified prose."
+      },
+      "title_thai": "มะหากัสสะปะโพชฌังคะสุตตัง",
+      "title_pali": "Mahākassapabojjhaṅgasuttaṃ",
+      "title_roman": "",
+      "title_english": "The Discourse on the Factors of Awakening, to Mahākassapa",
+      "book_number": 17,
+      "page_start": 33,
+      "layout": "prose",
+      "english_unverified": true,
+      "verses": [
+        {
+          "number": 1,
+          "pali": "เอวัมเม สุตัง.",
+          "pali_roman": "evamme sutaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thus have I heard."
+        },
+        {
+          "number": 2,
+          "pali": "เอกัง สะมะยัง ภะคะวา, ราชะคะเห วิหะระติ, เวฬุวะเน กะลันทะกะนิวาเป.",
+          "pali_roman": "ekaṃ samayaṃ bhagavā, rājagahe viharati, veḷuvane kalandakanivāpe.",
+          "thai": "",
+          "paiboon": "",
+          "english": "At one time the Blessed One was dwelling at Rājagaha, in the Bamboo Grove, the squirrels' feeding place."
+        },
+        {
+          "number": 3,
+          "pali": "เตนะ โข ปะนะ สะมะเยนะ, อายัส์มา มะหากัสสะโป ปิปผะลิคุหายัง วิหะระติ, อาพาธิโก ทุกขิโต พาฬ์หะคิลาโน.",
+          "pali_roman": "tena kho pana samayena, āyasmā mahākassapo pipphaliguhāyaṃ viharati, ābādhiko dukkhito bāḷhagilāno.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now at that time the venerable Mahākassapa was dwelling in the Pipphali Cave, afflicted, suffering, gravely ill."
+        },
+        {
+          "number": 4,
+          "pali": "อะถะโข ภะคะวา สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต, เยนายัส์มา มะหากัสสะโป, เตนุปะสังกะมิ,",
+          "pali_roman": "athakho bhagavā sāyaṇhasamayaṃ paṭisallānā vuṭṭhito, yenāyasmā mahākassapo, tenupasaṅkami,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Then the Blessed One, rising from seclusion towards evening, went to where the venerable Mahākassapa was;"
+        },
+        {
+          "number": 5,
+          "pali": "อุปะสังกะมิต์วา ปัญญัตเต อาสะเน นิสีทิ,",
+          "pali_roman": "upasaṅkamitvā paññatte āsane nisīdi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "having approached, he sat down on the seat made ready,"
+        },
+        {
+          "number": 6,
+          "pali": "นิสัชชะ โข ภะคะวา อายัส์มันตัง มะหากัสสะปัง เอตะทะโวจะ.",
+          "pali_roman": "nisajja kho bhagavā āyasmantaṃ mahākassapaṃ etadavoca.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and seated, the Blessed One said this to the venerable Mahākassapa:"
+        },
+        {
+          "number": 7,
+          "pali": "กัจจิ เต กัสสะปะ ขะมะนียัง, กัจจิ ยาปะนียัง,",
+          "pali_roman": "kacci te kassapa khamanīyaṃ, kacci yāpanīyaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"I hope you are bearing up, Kassapa; I hope you are keeping going;"
+        },
+        {
+          "number": 8,
+          "pali": "กัจจิ ทุกขา เวทะนา ปะฏิกกะมันติ, โน อะภิกกะมันติ,",
+          "pali_roman": "kacci dukkhā vedanā paṭikkamanti, no abhikkamanti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "I hope your painful feelings are subsiding and not increasing,"
+        },
+        {
+          "number": 9,
+          "pali": "ปะฏิกกะโมสานัง ปัญญายะติ, โน อะภิกกะโมติ.",
+          "pali_roman": "paṭikkamosānaṃ paññāyati, no abhikkamoti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and that their subsiding, not their increase, is apparent.\""
+        },
+        {
+          "number": 10,
+          "pali": "นะ เม ภันเต ขะมะนียัง, นะ ยาปะนียัง,",
+          "pali_roman": "na me bhante khamanīyaṃ, na yāpanīyaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"I am not bearing up, venerable sir; I am not keeping going;"
+        },
+        {
+          "number": 11,
+          "pali": "พาฬ์หา เม ทุกขา เวทะนา อะภิกกะมันติ, โน ปะฏิกกะมันติ,",
+          "pali_roman": "bāḷhā me dukkhā vedanā abhikkamanti, no paṭikkamanti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "my painful feelings are severe and increasing, not subsiding,"
+        },
+        {
+          "number": 12,
+          "pali": "อะภิกกะโมสานัง ปัญญายะติ, โน ปะฏิกกะโมติ.",
+          "pali_roman": "abhikkamosānaṃ paññāyati, no paṭikkamoti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and their increase, not their subsiding, is apparent.\""
+        },
+        {
+          "number": 13,
+          "pali": "สัตติเม กัสสะปะ โพชฌังคา, มะยา สัมมะทักขาตา ภาวิตา พะหุลีกะตา,",
+          "pali_roman": "sattime kassapa bojjhaṅgā, mayā sammadakkhātā bhāvitā bahulīkatā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"Kassapa, these seven factors of awakening, rightly declared by me, developed and made much of,"
+        },
+        {
+          "number": 14,
+          "pali": "อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตันติ ฯ",
+          "pali_roman": "abhiññāya sambodhāya nibbānāya saṃvattanti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "lead to direct knowledge, to full awakening, to Nibbāna."
+        },
+        {
+          "number": 15,
+          "pali": "กะตะเม สัตตะ.",
+          "pali_roman": "katame satta.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Which seven?\""
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0296.PNG",
+          "issue": "NEW CHANT, and NOT FINISHED. The page prints it as far as the question katame satta and the answer runs onto page 34, so `continues` is set. Nothing beyond what the photograph shows has been written, however well known the seven factors are."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0296.PNG",
+          "issue": "READING HAZARD, AND WORSE HERE THAN ANYWHERE SO FAR. Four words in this chant turn on the lo-chula/pho distinction this typeface cannot photograph: veluvane at verse 2, balhagilano at verse 3, and balha at verse 11. Every earlier instance had the app's own text as a second witness; this chant is NEW, so the photograph is the ONLY source and there is nothing to check it against. They are written with lo chula because standard Pali requires it — Veluvana is the Bamboo Grove and balha means severe — but each is a JUDGEMENT, not a reading. Needs the physical book before this chant can be trusted."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0296.PNG",
+          "issue": "layout is prose. The passage is set as continuous justified text filling the measure, not as lines. The clause division records what it is made of; the app reassembles it into a block."
+        },
+        {
+          "verse": 14,
+          "file": "IMG_0296.PNG",
+          "issue": "The page prints the paiyannoi character after sangvattanti, which marks an abbreviation or a pause in Thai typesetting. Reproduced as printed in `pali`; the romanisation renders it as a full stop, since IAST has no equivalent. Worth confirming what the book intends by it."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0296.PNG",
+          "issue": "The exchange is a dialogue and the book prints no quotation marks at all — the Buddha asks at verses 7 to 9 and Mahakassapa answers at 10 to 12. The English adds quotation marks to make that readable, which is an editorial decision and not in the book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0296.PNG",
+          "issue": "English is a working translation made for this edition and english_unverified is set. The title especially: the book gives no English, and this is the standard name for the discourse rather than a settled rendering."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "bhaddekaratta-gatha"
+    ],
+    "not_started": [],
+    "continues": [
+      "mahakassapa-bojjhanga-suttam"
+    ],
+    "resume_from_page": 34,
+    "resume_from_file": "IMG_0297.PNG",
+    "resume_from": "mahakassapa-bojjhanga-suttam",
+    "unreadable": [],
+    "paiboon_scan": "clean — not applicable. The page is Pali only, so neither chant carries a `thai` layer and there is no `paiboon` value in the batch to scan.",
+    "pali_untouched": "Confirmed. No `pali` value has been run through Paiboon+. Every `pali_roman` is IAST transliterating the Thai-script Pali beside it.",
+    "page_scan": "agrees. Both rows are page 33, every verse claimed exists in the entry it points at, and no verse is claimed twice. Mahakassapa is declared in `continues` rather than `completed` — the book carries it onto a page not given, which is complete for this batch and not unfinished work.",
+    "notes": "THE LO-CHULA/PHO HAZARD HAS CHANGED CHARACTER AND THIS IS THE ENTRY THAT SHOWS IT. Every earlier instance sat in a chant already in the app, so the file was a second witness and the question was only which of the two to believe. Mahakassapa is NEW. The photograph is the only source, and it is the one source that provably cannot render lo chula in this typeface. Three words here — veluvane, balhagilano, balha — are therefore written from what Pali requires rather than from what can be seen, which is exactly the substitution this whole workflow exists to prevent. They are flagged rather than quietly written, but they should not be trusted until the book is opened.\n\nThat now makes ten chanted words across six pages waiting on one character.\n\nSECOND: bhaddekaratta verse 4 correction changes a syllable, not punctuation. The page appears to print asanghiran where the file had asanghran, but the standard reading of this verse is asamhiram. Two of the three differ, so this one wants checking rather than accepting.\n\nTHIRD: the page prints no quotation marks anywhere in the Mahakassapa dialogue. The English supplies them so the exchange can be followed; that is an editorial addition and is declared."
+  }
+}

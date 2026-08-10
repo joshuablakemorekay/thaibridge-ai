@@ -5086,6 +5086,9 @@ CHANTS = [
         # attribution and none has been supplied from memory.
         'source': '',
         'group': 'General chanting',
+        'book_number': 16,
+        'page_start': 33,
+        'source_printed': 'ม.อุ. 14/348',
 
         # The book prints Pali only for this chant — no Thai
         # translation layer exists. The English below was written for
@@ -5215,7 +5218,7 @@ CHANTS = [
             #          manubrūhaye, following the printed form.
             {
                 'number': 4,
-                'pali': 'อะสังหรัง อะสังกุปปัง ตัง วิทธา มะนุพ์รูหะเย',
+                'pali': 'อะสังหิรัง อะสังกุปปัง ตัง วิทธา มะนุพ์รูหะเย.',
                 'pali_roman': 'asaṃharaṃ asaṃkuppaṃ taṃ viddhā manubrūhaye',
                 'thai': '',
                 'paiboon': '',
@@ -5272,7 +5275,7 @@ CHANTS = [
             #          in this run. Reproduced as pasted rather than tidied.
             {
                 'number': 8,
-                'pali': "ตัง เว ภัทเทกะรัตโตติ สันโต อาจิกขะเต มุนีติ.'",
+                'pali': 'ตัง เว ภัทเทกะรัตโตติ สันโต อาจิกขะเต มุนีติ.',
                 'pali_roman': "taṃ ve bhaddekarattoti santo ācikkhate munīti.'",
                 'thai': '',
                 'paiboon': '',
@@ -10144,6 +10147,182 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'him they praise here and now, and hereafter he rejoices in heaven.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 15; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0296.PNG]: NEW CHANT, and NOT FINISHED. The page prints
+        #   it as far as the question katame satta and the answer runs onto
+        #   page 34, so `continues` is set. Nothing beyond what the photograph
+        #   shows has been written, however well known the seven factors are.
+        # ‼ CHECK [IMG_0296.PNG]: READING HAZARD, AND WORSE HERE THAN ANYWHERE
+        #   SO FAR. Four words in this chant turn on the lo-chula/pho
+        #   distinction this typeface cannot photograph: veluvane at verse 2,
+        #   balhagilano at verse 3, and balha at verse 11. Every earlier
+        #   instance had the app's own text as a second witness; this chant is
+        #   NEW, so the photograph is the ONLY source and there is nothing to
+        #   check it against. They are written with lo chula because standard
+        #   Pali requires it — Veluvana is the Bamboo Grove and balha means
+        #   severe — but each is a JUDGEMENT, not a reading. Needs the
+        #   physical book before this chant can be trusted.
+        # ‼ CHECK [IMG_0296.PNG]: layout is prose. The passage is set as
+        #   continuous justified text filling the measure, not as lines. The
+        #   clause division records what it is made of; the app reassembles it
+        #   into a block.
+        # ‼ CHECK [IMG_0296.PNG]: English is a working translation made for
+        #   this edition and english_unverified is set. The title especially:
+        #   the book gives no English, and this is the standard name for the
+        #   discourse rather than a settled rendering.
+        'id': 'mahakassapa-bojjhanga-suttam',
+        'title_thai': 'มะหากัสสะปะโพชฌังคะสุตตัง',
+        'title_pali': 'Mahākassapabojjhaṅgasuttaṃ',
+        'title_roman': '',
+        'title_english': 'The Discourse on the Factors of Awakening, to Mahākassapa',
+        'book_number': 17,
+        'page_start': 33,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'เอวัมเม สุตัง.',
+                'pali_roman': 'evamme sutaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus have I heard.',
+            },
+            {
+                'number': 2,
+                'pali': 'เอกัง สะมะยัง ภะคะวา, ราชะคะเห วิหะระติ, เวฬุวะเน กะลันทะกะนิวาเป.',
+                'pali_roman': 'ekaṃ samayaṃ bhagavā, rājagahe viharati, veḷuvane kalandakanivāpe.',
+                'thai': '',
+                'paiboon': '',
+                'english': "At one time the Blessed One was dwelling at Rājagaha, in the Bamboo Grove, the squirrels' feeding place.",
+            },
+            {
+                'number': 3,
+                'pali': 'เตนะ โข ปะนะ สะมะเยนะ, อายัส์มา มะหากัสสะโป ปิปผะลิคุหายัง วิหะระติ, อาพาธิโก ทุกขิโต พาฬ์หะคิลาโน.',
+                'pali_roman': 'tena kho pana samayena, āyasmā mahākassapo pipphaliguhāyaṃ viharati, ābādhiko dukkhito bāḷhagilāno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Now at that time the venerable Mahākassapa was dwelling in the Pipphali Cave, afflicted, suffering, gravely ill.',
+            },
+            {
+                'number': 4,
+                'pali': 'อะถะโข ภะคะวา สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต, เยนายัส์มา มะหากัสสะโป, เตนุปะสังกะมิ,',
+                'pali_roman': 'athakho bhagavā sāyaṇhasamayaṃ paṭisallānā vuṭṭhito, yenāyasmā mahākassapo, tenupasaṅkami,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then the Blessed One, rising from seclusion towards evening, went to where the venerable Mahākassapa was;',
+            },
+            {
+                'number': 5,
+                'pali': 'อุปะสังกะมิต์วา ปัญญัตเต อาสะเน นิสีทิ,',
+                'pali_roman': 'upasaṅkamitvā paññatte āsane nisīdi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having approached, he sat down on the seat made ready,',
+            },
+            {
+                'number': 6,
+                'pali': 'นิสัชชะ โข ภะคะวา อายัส์มันตัง มะหากัสสะปัง เอตะทะโวจะ.',
+                'pali_roman': 'nisajja kho bhagavā āyasmantaṃ mahākassapaṃ etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and seated, the Blessed One said this to the venerable Mahākassapa:',
+            },
+            # ‼ CHECK [IMG_0296.PNG]: The exchange is a dialogue and the book
+            #   prints no quotation marks at all — the Buddha asks at verses 7
+            #   to 9 and Mahakassapa answers at 10 to 12. The English adds
+            #   quotation marks to make that readable, which is an editorial
+            #   decision and not in the book.
+            {
+                'number': 7,
+                'pali': 'กัจจิ เต กัสสะปะ ขะมะนียัง, กัจจิ ยาปะนียัง,',
+                'pali_roman': 'kacci te kassapa khamanīyaṃ, kacci yāpanīyaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': '"I hope you are bearing up, Kassapa; I hope you are keeping going;',
+            },
+            {
+                'number': 8,
+                'pali': 'กัจจิ ทุกขา เวทะนา ปะฏิกกะมันติ, โน อะภิกกะมันติ,',
+                'pali_roman': 'kacci dukkhā vedanā paṭikkamanti, no abhikkamanti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I hope your painful feelings are subsiding and not increasing,',
+            },
+            {
+                'number': 9,
+                'pali': 'ปะฏิกกะโมสานัง ปัญญายะติ, โน อะภิกกะโมติ.',
+                'pali_roman': 'paṭikkamosānaṃ paññāyati, no abhikkamoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and that their subsiding, not their increase, is apparent."',
+            },
+            {
+                'number': 10,
+                'pali': 'นะ เม ภันเต ขะมะนียัง, นะ ยาปะนียัง,',
+                'pali_roman': 'na me bhante khamanīyaṃ, na yāpanīyaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': '"I am not bearing up, venerable sir; I am not keeping going;',
+            },
+            {
+                'number': 11,
+                'pali': 'พาฬ์หา เม ทุกขา เวทะนา อะภิกกะมันติ, โน ปะฏิกกะมันติ,',
+                'pali_roman': 'bāḷhā me dukkhā vedanā abhikkamanti, no paṭikkamanti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'my painful feelings are severe and increasing, not subsiding,',
+            },
+            {
+                'number': 12,
+                'pali': 'อะภิกกะโมสานัง ปัญญายะติ, โน ปะฏิกกะโมติ.',
+                'pali_roman': 'abhikkamosānaṃ paññāyati, no paṭikkamoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and their increase, not their subsiding, is apparent."',
+            },
+            {
+                'number': 13,
+                'pali': 'สัตติเม กัสสะปะ โพชฌังคา, มะยา สัมมะทักขาตา ภาวิตา พะหุลีกะตา,',
+                'pali_roman': 'sattime kassapa bojjhaṅgā, mayā sammadakkhātā bhāvitā bahulīkatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': '"Kassapa, these seven factors of awakening, rightly declared by me, developed and made much of,',
+            },
+            # ‼ CHECK [IMG_0296.PNG]: The page prints the paiyannoi character
+            #   after sangvattanti, which marks an abbreviation or a pause in
+            #   Thai typesetting. Reproduced as printed in `pali`; the
+            #   romanisation renders it as a full stop, since IAST has no
+            #   equivalent. Worth confirming what the book intends by it.
+            {
+                'number': 14,
+                'pali': 'อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตันติ ฯ',
+                'pali_roman': 'abhiññāya sambodhāya nibbānāya saṃvattanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'lead to direct knowledge, to full awakening, to Nibbāna.',
+            },
+            {
+                'number': 15,
+                'pali': 'กะตะเม สัตตะ.',
+                'pali_roman': 'katame satta.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Which seven?"',
             },
         ],
     },
