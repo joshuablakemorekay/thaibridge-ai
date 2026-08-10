@@ -214,6 +214,37 @@ def check_paiboon(batch: dict) -> list[str]:
     return problems
 
 
+def check_latin_only(batch: dict) -> list[str]:
+    """A romanised layer holds Latin letters and nothing that merely looks Latin.
+
+    Cyrillic а, о, е and с are pixel-identical to their Latin twins in most
+    fonts. One in a `pali_roman` value is invisible on screen, survives every
+    other check here, breaks any search for the word, and stays in the data
+    for good. Two got in during one session — jīvitindriyupacchedа and
+    jegucchо, on consecutive pages — and only a scan for the character class
+    found them.
+
+    Checked on the romanised layers only. `pali` and `thai` are Thai script by
+    design, and `paiboon` carries ɔ ɛ ə ʉ ŋ, which are Latin letters proper.
+    """
+    problems = []
+    for chant in batch["chants"]:
+        for verse in verses_of(chant):
+            for field in ("pali_roman", "paiboon"):
+                for char in verse.get(field, ""):
+                    if not char.isalpha():
+                        continue
+                    if "LATIN" in unicodedata.name(char, ""):
+                        continue
+                    problems.append(
+                        f"{chant['id']} verse {verse.get('number')}: {field} "
+                        f"contains {char!r} (U+{ord(char):04X}, "
+                        f"{unicodedata.name(char, 'unnamed')}), which is not a "
+                        f"Latin letter — it only looks like one"
+                    )
+    return problems
+
+
 def check_pali_untouched(batch: dict) -> list[str]:
     """`pali` is the book's Thai script; `pali_roman` is IAST. Neither leaks.
 
@@ -618,6 +649,7 @@ CHECKS = (
     ("shape", check_shape),
     ("paiboon drift", check_paiboon),
     ("pali untouched", check_pali_untouched),
+    ("latin only", check_latin_only),
     ("five layer keys", check_layer_keys),
     ("layers not invented", check_layers_not_invented),
     ("printed numbers", check_printed_numbers),
