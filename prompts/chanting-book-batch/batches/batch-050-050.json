@@ -1,0 +1,273 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "ratanattayappabhavasiddhi-gatha"
+    ],
+    "pages": [
+      {
+        "page": 50,
+        "file": "IMG_0313.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "ratanattayappabhavasiddhi-gatha",
+        "verses": "8-30",
+        "starts_here": false,
+        "note": "Picks the chant up from page 49. Twenty-three rows in TWO COLUMNS, then its closing line. Two rows are indented from the left margin where a new movement of the chant begins. No footnotes."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "ratanattayappabhavasiddhi-gatha",
+      "continuation_of": "ratanattayappabhavasiddhi-gatha",
+      "layout": "",
+      "working_notes": {
+        "invitation": "Absent, and none written. The chant's opening is on page 49.",
+        "units": "Twenty-three units, one printed ROW each, left half joined to right half by a single space — except verse 17, where the halves join with no space because the book hyphenates a word across the gutter.",
+        "ordering": "Pali only, in printed order. No Thai translation is printed.",
+        "conventions": "Pali title in Thai script; the title fields were set on page 49 and are not repeated here.",
+        "pages": "All from IMG_0313.PNG, page 50. The chant began on page 49 and ends here."
+      },
+      "closing": {
+        "pali": "ระตะนัตตะยัปปะภาวะสิทธิคาถา นิฏฐิตา",
+        "pali_roman": "ratanattayappabhāvasiddhigāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Verses on the accomplishing power of the Triple Gem."
+      },
+      "verses": [
+        {
+          "number": 8,
+          "page": 50,
+          "pali": "ปะริกขะกานะ ธีรานัง ญาณะสัญจาระณักขะมัง.",
+          "pali_roman": "parikkhakāna dhīrānaṃ ñāṇasañcāraṇakkhamaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "fit for the ranging of the knowledge of wise examiners."
+        },
+        {
+          "number": 9,
+          "pali": "ยัสสะ โลกัง ปะภาเสติ อาตะโปวะ ตะโมนุโท",
+          "pali_roman": "yassa lokaṃ pabhāseti ātapova tamonudo",
+          "thai": "",
+          "paiboon": "",
+          "english": "whose light shines upon the world like the sun dispelling darkness,"
+        },
+        {
+          "number": 10,
+          "pali": "ทัยยะเทโส อิมาคัมมะ เขมะมัคคัปปะโชตะนัง.",
+          "pali_roman": "dayyadeso imāgamma khemamaggappajotanaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Thai land, having come to this, illuminating the path of safety."
+        },
+        {
+          "number": 11,
+          "pali": "สันติสุเข ปะติฏฐาติ อิสสะโร สาตะตัง ฐิโต",
+          "pali_roman": "santisukhe patiṭṭhāti issaro sātataṃ ṭhito",
+          "thai": "",
+          "paiboon": "",
+          "english": "stands established in the happiness of peace, sovereign and constant,"
+        },
+        {
+          "number": 12,
+          "pali": "อัคคะเมตัง ติระตะนัง คะรุง กัต์วานะ รักขิตัง.",
+          "pali_roman": "aggametaṃ tiratanaṃ garuṃ katvāna rakkhitaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "having honoured and guarded this foremost Triple Gem."
+        },
+        {
+          "number": 13,
+          "pali": "ธะชัง กัต์วา ปะเทสัสสะ ทัยยะเทเสนะ อุทธะตัง",
+          "pali_roman": "dhajaṃ katvā padesassa dayyadesena uddhataṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "having made it the banner of the realm, raised up by the Thai land,"
+        },
+        {
+          "number": 14,
+          "pali": "นีติปัญญัตติการายะ สะทิฏฐิยา ปะกุพพะเน.",
+          "pali_roman": "nītipaññattikārāya sadiṭṭhiyā pakubbane.",
+          "thai": "",
+          "paiboon": "",
+          "english": "for the making of law and ordinance, acting according to right view."
+        },
+        {
+          "number": 15,
+          "pali": "ธัมมะนุญญัง วะ รัฏฐัสสะ รัฏฐานัง สิทธิทายะกัง",
+          "pali_roman": "dhammanuññaṃ va raṭṭhassa raṭṭhānaṃ siddhidāyakaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "as the Dhamma's sanction for the realm, giver of success to the realms,"
+        },
+        {
+          "number": 16,
+          "pali": "เอวัง สาสะนะกิจเจสุ สังฆัง กัต์วานะธิสสะรัง.",
+          "pali_roman": "evaṃ sāsanakiccesu saṅghaṃ katvānadhissaraṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and having so made the Sangha sovereign in the affairs of the dispensation."
+        },
+        {
+          "number": 17,
+          "pali": "ปะสิชฌะนันติทัง พุทธะสาสะนัสสะ ปะสาสะนัง",
+          "pali_roman": "pasijjhanantidaṃ buddhasāsanassa pasāsanaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "these succeed — this governance of the Buddha's dispensation —"
+        },
+        {
+          "number": 18,
+          "pali": "เอวัง ปะสาสะนุปาเยนะ ถิรัง ติฏฐะติ สาสะนัง.",
+          "pali_roman": "evaṃ pasāsanupāyena thiraṃ tiṭṭhati sāsanaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and by such means of governance the dispensation stands firm."
+        },
+        {
+          "number": 19,
+          "pali": "ระตะนัตตะยานุภาเวนะ ระตะนัตตะยะเตชะสา",
+          "pali_roman": "ratanattayānubhāvena ratanattayatejasā",
+          "thai": "",
+          "paiboon": "",
+          "english": "By the power of the Triple Gem, by the majesty of the Triple Gem,"
+        },
+        {
+          "number": 20,
+          "pali": "ทัยยะชาติ วิโรเจตุ สัพพะสัมปัตติสิทธิยา.",
+          "pali_roman": "dayyajāti virocetu sabbasampattisiddhiyā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "may the Thai nation shine with the attainment of every good fortune."
+        },
+        {
+          "number": 21,
+          "pali": "อิทธิง ปัปโปตุ เวปุลลัง วิรุฬหิง จุตตะริง สะทา",
+          "pali_roman": "iddhiṃ pappotu vepullaṃ viruḷhiṃ cuttariṃ sadā",
+          "thai": "",
+          "paiboon": "",
+          "english": "May it reach success, abundance, growth and advancement always,"
+        },
+        {
+          "number": 22,
+          "pali": "จิรัง ติฏฐะตุ โลกัส์มิง สัมมาสัมพุทธะสาสะนัง.",
+          "pali_roman": "ciraṃ tiṭṭhatu lokasmiṃ sammāsambuddhasāsanaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and long may the dispensation of the Perfectly Enlightened One stand in the world."
+        },
+        {
+          "number": 23,
+          "pali": "ทัสเสนตัง ภัพพะสัตตานัง อัญชะสัง วะ วิสุทธิยา",
+          "pali_roman": "dassentaṃ bhabbasattānaṃ añjasaṃ va visuddhiyā",
+          "thai": "",
+          "paiboon": "",
+          "english": "showing to beings capable of it the straight way to purity."
+        },
+        {
+          "number": 24,
+          "pali": "จิรัญชีวะตุ ทีฆายุ ทัยยานัง ธัมมะขัตติโย.",
+          "pali_roman": "cirañjīvatu dīghāyu dayyānaṃ dhammakhattiyo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Long may he live, of long life, the Thais' righteous sovereign."
+        },
+        {
+          "number": 25,
+          "pali": "วัณณะวา พะละสัมปันโน นิรามะโย จะ นิพภะโย.",
+          "pali_roman": "vaṇṇavā balasampanno nirāmayo ca nibbhayo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Fair of form, endowed with strength, free from illness and from fear."
+        },
+        {
+          "number": 26,
+          "pali": "รัฏฐัสสะ ธัมมะนุญญัญจะ จิรัง ติฏฐะตุ โสตถินา.",
+          "pali_roman": "raṭṭhassa dhammanuññañca ciraṃ tiṭṭhatu sotthinā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And long may the Dhamma's sanction for the realm stand in safety."
+        },
+        {
+          "number": 27,
+          "pali": "ระตะนัตตะยัปปะภาเวนะ วุฑฒิยาสา สะมิชฌะตุ",
+          "pali_roman": "ratanattayappabhāvena vuḍḍhiyāsā samijjhatu",
+          "thai": "",
+          "paiboon": "",
+          "english": "By the power of the Triple Gem may the hope of growth be fulfilled,"
+        },
+        {
+          "number": 28,
+          "pali": "ทัยยานัง รัฏฐะปาลีนัง สัพพะสิทธิ สะทา ถิรัง.",
+          "pali_roman": "dayyānaṃ raṭṭhapālīnaṃ sabbasiddhi sadā thiraṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and for the Thais who guard the realm, may every success be lasting."
+        },
+        {
+          "number": 29,
+          "pali": "ชะยะมัตถุ จะ ทัยยานัง วุฑฒิ สันติ นิรันตะรัง",
+          "pali_roman": "jayamatthu ca dayyānaṃ vuḍḍhi santi nirantaraṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "May there be victory for the Thais, growth and peace unbroken,"
+        },
+        {
+          "number": 30,
+          "pali": "ปะวัฑฒะตัง จะ ภิยโยโส ธะนุฏฐาเนนะ สัมปะทาติ.",
+          "pali_roman": "pavaḍḍhataṃ ca bhiyyoso dhanuṭṭhānena sampadāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and may prosperity increase yet further through wealth and endeavour."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 17,
+          "file": "IMG_0313.PNG",
+          "issue": "THE ONE ROW ON THIS PAGE THAT IS NOT JOINED BY A SPACE. The left column ends พุทธะ- with a hyphen and the right column begins สาสะนัสสะ, so the word พุทธะสาสะนัสสะ is broken across the GUTTER rather than across a line. The two halves are joined with no space and the hyphen dropped, because it is typesetting; every other row on this page joins with a single space. Worth confirming, since it is the only place the two-column rule and the rejoin-a-hyphen rule meet."
+        },
+        {
+          "verse": 19,
+          "file": "IMG_0313.PNG",
+          "issue": "Verses 19 and 27 are printed INDENTED from the left margin, where every other row starts flush. The indent marks a new movement of the chant — both begin ระตะนัตตะย… and turn from the dispensation to a wish for the nation. Recorded here because the indent is not carried in the data; there is no field for it, and nothing is lost from the words themselves."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0313.PNG",
+          "issue": "TWO COLUMNS, continuing from page 49. First pairing on this page: left ปะริกขะกานะ ธีรานัง joined to right ญาณะสัญจาระณักขะมัง."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0313.PNG",
+          "issue": "This chant is unusual in the book: from verse 19 onward it prays explicitly for the Thai nation and its sovereign — ทัยยะชาติ, ทัยยานัง ธัมมะขัตติโย. The English is a working translation and this register in particular is worth your eye, since rendering a royal petition is not the same job as rendering a canonical verse."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0313.PNG",
+          "issue": "No Thai translation is printed, so english_unverified stays true."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "ratanattayappabhavasiddhi-gatha"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 51,
+    "resume_from_file": "IMG_0314.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. No Thai translations on this page, so there are no paiboon values at all.",
+    "pali_untouched": "Confirmed. Every pali value is the Thai script exactly as printed; every pali_roman is IAST.",
+    "page_scan": "agrees — one row, verses 8-30, and the entry holds exactly those.",
+    "notes": "One page, one chant, finished. The only row not joined by a space is verse 17, where a word is hyphenated across the gutter."
+  }
+}
