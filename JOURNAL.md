@@ -1886,3 +1886,44 @@ My role is to give the project direction, make important decisions, review the A
 This has helped me understand how AI agents can be used to make software development faster and more organised, while still keeping a human involved to make important decisions.
 
 ---
+
+## 2026-08-10 (later) — Seventeen pages, and three bugs that passed every test
+
+**TL;DR:**
+- Pages 34–50 in; the book runs 1–50 unbroken — 71 chants, 1,007 verses.
+- Three silent-data bugs in the batch tooling, each of which imported cleanly and passed the whole suite.
+- One sentence of mine set the standard for the session.
+
+**What I built**
+
+Seventeen pages — **21 new chants, 312 new verses**. Pages 34–37 finish the three Bojjhaṅga discourses to Mahākassapa, Mahāmoggallāna and Mahācunda. Pages 38–41 are the whole **Suat Jaeng** service: the Vinaya and Sutta in brief, then all seven Abhidhamma books — Saṅgaṇī, Vibhaṅga, Dhātukathā, Puggalapaññatti, Kathāvatthu, Yamaka, Mahāpaṭṭhāna — closing with จบสวดแจงเท่านี้. Then the Dhammasaṅgaṇī Mātikā's twenty-two triads (22) and the Vipassanābhūmi (23). Pages 44–50 turn to the blessing chants: Thawai Phon Phra, the eight **Jayamaṅgala** victory stanzas (24), Jayaparitta (25), Mongkhon Chakkrawan Noi (26), Kāladāna (27), Saṅgahavatthu (28), Mokkhupāya (29) and Ratanattayappabhāvasiddhi (30).
+
+Also three fixes to `apply_batch.py`, a backfill of seventeen missing page blocks, and two new guards.
+
+**Why I did it this way**
+
+I gave the standard once and it kept deciding things:
+
+> "as long as the app chanting pages are all exactly the same as the book then keep going, do pages 35 to 40"
+
+It settled whether (ลากเสียง) stays inline, and how the Abhidhamma books split. When the app turned out to be showing less than the book prints, it decided that too:
+
+> "yes do the PAGE_BLOCKS fix and backfill"
+
+**How We Did It**
+
+1. One page per batch: photograph, batch file, validate, dry-run, apply, test, render, commit, confirm live.
+2. Found the page-break completion was appending duplicates instead of completing lines.
+3. Found page blocks were never written at all — seventeen of them, on pages already shipped.
+4. Fixed both, backfilled, added a regression test holding the app to the batch files.
+5. Added a non-Latin scan last, on one condition:
+
+> "only if it makes it better"
+
+**Engineering Contribution**
+
+- *Decisions made:* A footnote anchors at the page foot but a service closing anchors inline — my first version treated them alike and put page 41's จบสวดแจงเท่านี้ a whole chant too low. Structure for the Suat Jaeng came from the book's own contents rather than my reading of the page: it lists สวดแจง and พระอภิธรรมสังเขป as sections and each Abhidhamma book as an entry. Chant 27's footnote marker was left unpaired rather than matched to a plausible citation — a false reference in a book about the Dhamma costs more than a gap.
+- *Improvements made to generated code:* Three bugs whose output passed everything — a completion regex that could never match the last verse (and a page-break stub is always the last verse), page blocks silently dropped, and a service closing skipped for the same reason. Each fix carries a guard: a duplicate-verse check that refuses to write, and a test that holds the app to what the photographs recorded. Both negative-tested. Two more caught mid-build: matching against raw source text called five pages "missing" because long blocks are stored as adjacent string literals, and keying on text alone would have dropped one of page 32's two footnotes. Also corrected a test that only passed because page 36 didn't exist.
+- *Roughly how much was accepted as-is vs engineered on:* Direction, standard and review — I wrote none of the transcription. The clearest evidence for why review matters is that all three bugs shipped green: 473 tests passed with a verse present twice, and seventeen printed lines were missing from live pages with nothing anywhere reporting it.
+
+---
