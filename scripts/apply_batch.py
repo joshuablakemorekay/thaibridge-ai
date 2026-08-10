@@ -614,6 +614,128 @@ def merge_into(source: str, chant: dict, report: dict) -> str:
     return source
 
 
+def block_groups(batch: dict) -> list[tuple[int, str | None, list[dict]]]:
+    """Work out where each page block the batch declares belongs on its page.
+
+    Stage 1 hangs blocks off a page-map ROW, which is enough to say what was
+    printed but not where. `build_page_index` offers two placements — before
+    every chant on the page (`after` absent), or immediately after a named one
+    — so the row has to be turned into an anchor. Two rules do it, and both
+    follow what the book prints rather than what the row says:
+
+      footnote  -> the page FOOT, so it anchors after the LAST chant on the
+                   page, not the chant whose marker points at it. That is the
+                   convention page 16 already set, where the only footnote is
+                   printed below the Bhojana rules although its marker sits on
+                   a Saruppa rule above them.
+      otherwise -> a heading or caption stands ABOVE the chant it introduces,
+                   so it anchors after the PREVIOUS chant on the page, or
+                   before everything if its row is the page's first.
+
+    The second rule is why the anchor cannot just be the row's own chant. On
+    page 39 the heading `21. พระอภิธรรมสังเขป` is declared on the Sangkhani
+    row, and it has to render after the Sutta chant above it — anchoring it to
+    Sangkhani would print it in the wrong place, and anchoring it to nothing
+    would lift it to the top of the page, above a chant it does not head.
+    """
+    rows_by_page: dict[int, list[dict]] = {}
+    for row in batch["batch"]["pages"]:
+        if row.get("page") is not None:
+            rows_by_page.setdefault(row["page"], []).append(row)
+
+    groups: dict[tuple[int, str | None], list[dict]] = {}
+    for page, rows in rows_by_page.items():
+        chants = [r.get("chant") for r in rows if r.get("chant")]
+        last = chants[-1] if chants else None
+        for index, row in enumerate(rows):
+            for block in row.get("blocks") or []:
+                if block.get("type") == "footnote":
+                    anchor = last
+                else:
+                    before = [r.get("chant") for r in rows[:index] if r.get("chant")]
+                    anchor = before[-1] if before else None
+                groups.setdefault((page, anchor), []).append(block)
+    return [(page, anchor, blocks)
+            for (page, anchor), blocks in sorted(
+                groups.items(), key=lambda kv: (kv[0][0], kv[0][1] or ""))]
+
+
+def render_block(block: dict, indent: str) -> str:
+    """One block, in the shape and key order PAGE_BLOCKS already uses."""
+    keys = ["type", "marker", "number", "chant", "thai", "english",
+            "english_unverified"]
+    lines = [f"{indent}{{"]
+    for key in keys:
+        if key not in block:
+            continue
+        lines.append(f"{indent}{INDENT}{key!r}: {block[key]!r},")
+    lines.append(f"{indent}}},")
+    return "\n".join(lines) + "\n"
+
+
+def render_block_group(page: int, anchor: str | None, blocks: list[dict],
+                       source_batch: str) -> str:
+    out = [f"{INDENT}# ── Page {page} "
+           f"{'─' * max(0, 54 - len(str(page)))}",
+           f"{INDENT}# Written from {source_batch}.",
+           f"{INDENT}{{",
+           f"{INDENT * 2}'page': {page},"]
+    if anchor is not None:
+        out.append(f"{INDENT * 2}'after': {anchor!r},")
+    out.append(f"{INDENT * 2}'blocks': [")
+    for block in blocks:
+        out.append(render_block(block, INDENT * 3).rstrip("\n"))
+    out.append(f"{INDENT * 2}],")
+    out.append(f"{INDENT}}},")
+    return "\n".join(out) + "\n"
+
+
+def apply_blocks(batch: dict, source: str, source_batch: str,
+                 report: dict) -> str:
+    """Append this batch's page blocks to PAGE_BLOCKS, skipping any already in.
+
+    Until this existed the blocks went nowhere at all: stage 1 recorded every
+    heading and footnote, `check_batch` passed them, and stage 2 dropped them
+    silently. Seventeen of them across pages 30 to 40 were declared in batch
+    files and printed in the book while the app showed neither.
+    """
+    open_at = source.index("PAGE_BLOCKS = [")
+    close_at = source.index("\n]\n", open_at)
+
+    # Compared against the PARSED data, never the source text. A long block is
+    # stored as a parenthesised run of adjacent string literals, so its text
+    # never appears contiguously in the file — a substring test called every
+    # one of pages 10 to 14 missing and would have written a second copy of
+    # each on top of the ones already there.
+    sys.path.insert(0, str(REPO))
+    import chanting
+    # The marker is part of the identity. Page 32 prints the same citation
+    # under two different markers, 1 and 4, and they are two printed footnotes
+    # rather than one recorded twice — keying on the text alone would drop one.
+    already = {(g.get("page"), b.get("type"), b.get("marker"), b.get("thai"))
+               for g in chanting.PAGE_BLOCKS for b in g.get("blocks", [])}
+
+    written = []
+    addition = ""
+    for page, anchor, blocks in block_groups(batch):
+        fresh = []
+        for b in blocks:
+            key = (page, b.get("type"), b.get("marker"), b.get("thai"))
+            if not b.get("thai") or key in already:
+                continue
+            already.add(key)          # also stops a batch repeating itself
+            fresh.append(b)
+        if not fresh:
+            continue
+        addition += render_block_group(page, anchor, fresh, source_batch)
+        written.extend((page, b.get("type"), b.get("thai")) for b in fresh)
+
+    if not addition:
+        return source
+    report["blocks"] = report.get("blocks", []) + written
+    return source[:close_at] + "\n" + addition.rstrip("\n") + source[close_at:]
+
+
 def apply(batch: dict, source: str) -> tuple[str, dict]:
     """Return the new chanting.py source and a report of what was done."""
     report = {"added": [], "appended": 0, "completed": [], "markers": {}}
@@ -735,6 +857,9 @@ def main(argv=None) -> int:
     ap.add_argument("batch", type=pathlib.Path)
     ap.add_argument("--dry-run", action="store_true",
                     help="reconcile and show the plan, write nothing")
+    ap.add_argument("--blocks-only", action="store_true",
+                    help="write only the page blocks, leaving the chants "
+                         "alone — for backfilling batches already applied")
     args = ap.parse_args(argv)
 
     sys.path.insert(0, str(REPO))
@@ -742,6 +867,24 @@ def main(argv=None) -> int:
 
     batch = json.loads(args.batch.read_text(encoding="utf-8"))
     existing = {c["id"]: c for c in chanting.CHANTS}
+
+    if args.blocks_only:
+        report: dict = {}
+        source = apply_blocks(batch, CHANTING.read_text(encoding="utf-8"),
+                              args.batch.name, report)
+        added = report.get("blocks", [])
+        if not added:
+            print("no new page blocks — everything this batch declares is "
+                  "already in PAGE_BLOCKS")
+            return 0
+        if args.dry_run:
+            print(f"would write {len(added)} block(s):")
+        else:
+            CHANTING.write_text(source, encoding="utf-8")
+            print(f"written. {len(added)} page block(s):")
+        for page, kind, thai in added:
+            print(f"  page {page:>3}  {kind:<9} {thai}")
+        return 0
 
     problems = reconcile(batch, existing)
     if problems:
@@ -761,6 +904,7 @@ def main(argv=None) -> int:
         return 0
 
     source, report = apply(batch, CHANTING.read_text(encoding="utf-8"))
+    source = apply_blocks(batch, source, args.batch.name, report)
     CHANTING.write_text(source, encoding="utf-8")
     print(f"\nwritten. added {len(report['added'])}, appended {report['appended']} "
           f"verses, completed {len(report['completed'])} line(s), merged "
@@ -771,6 +915,8 @@ def main(argv=None) -> int:
         print(f"  corrected {field}")
     for marker in report.get("page_markers", []):
         print(f"  page marker {marker}")
+    for page, kind, thai in report.get("blocks", []):
+        print(f"  page block  {page:>3}  {kind:<9} {thai}")
     # Reported rather than passed over. A closing that was offered and not
     # written is a thing the batch believed and the file overruled, and it
     # should be visible without reading the diff.
