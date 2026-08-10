@@ -13002,6 +13002,202 @@ PAGE_BLOCKS = [
             },
         ],
     },
+    # ── Page 30 ────────────────────────────────────────────────────
+    # Written from batch-030-031.json.
+    {
+        'page': 30,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': '6 คาถา สวดวันถือน้ำพระพิพัฒน์สัตยาธิษฐาน เมื่อเวลาเชิญพระแสงลงจรดน้ำ',
+                'english': 'Six verses, chanted on the day of the Water of Allegiance ceremony, at the time the royal sword is lowered to the water.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 30 ────────────────────────────────────────────────────
+    # Written from batch-030-031.json.
+    {
+        'page': 30,
+        'after': 'pabbatopama-gatha',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'ขุ.สุ. 25/360-361',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '2',
+                'thai': 'ส.ส. 15/315-6',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 30 ────────────────────────────────────────────────────
+    # Written from batch-030-031.json.
+    {
+        'page': 30,
+        'after': 'saccapanavidhyanurupa-gatha',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': '3 คาถากึ่ง อนุโมทนาในการทำบุญปีตามที่เคยทำมา',
+                'english': 'Three and a half verses, in rejoicing at the yearly merit-making as it has been done before.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 31 ────────────────────────────────────────────────────
+    # Written from batch-030-031.json.
+    {
+        'page': 31,
+        'after': 'ariyadhana-gatha',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'ส.ส. 15/148',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '2',
+                'thai': 'อง. จตุกุก. 21/74 อง. ปัญจก. 22/59',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '3',
+                'thai': 'ขุ.อุ. 25/73-4 วิ. มหา. 4/1',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 32 ────────────────────────────────────────────────────
+    # Written from batch-032-032.json.
+    {
+        'page': 32,
+        'after': 'buddhaudana-gatha',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'ขุ.อุ. 25/74-5-6, วิ. มหา. 4/2-3-4',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '4',
+                'thai': 'ขุ.อุ. 25/74-5-6, วิ. มหา. 4/2-3-4',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 33 ────────────────────────────────────────────────────
+    # Written from batch-033-033.json.
+    {
+        'page': 33,
+        'after': 'mahakassapa-bojjhanga-suttam',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'ม.อุ. 14/348',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 37 ────────────────────────────────────────────────────
+    # Written from batch-035-037.json.
+    {
+        'page': 37,
+        'after': 'mahacunda-bojjhanga-suttam',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'ที.ปา 11/209',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 38 ────────────────────────────────────────────────────
+    # Written from batch-038-038.json.
+    {
+        'page': 38,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'สวดแจง',
+                'english': 'The Suat Jaeng',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 38 ────────────────────────────────────────────────────
+    # Written from batch-038-038.json.
+    {
+        'page': 38,
+        'after': 'phra-winai-sangkhep',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'สํ. มหา. 19/117-8',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '2',
+                'thai': 'วิ. มหา. 1/1',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 39 ────────────────────────────────────────────────────
+    # Written from batch-039-040.json.
+    {
+        'page': 39,
+        'after': 'phra-sangkhani',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'ที. สี. 9/1',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 39 ────────────────────────────────────────────────────
+    # Written from batch-039-040.json.
+    {
+        'page': 39,
+        'after': 'phra-sut-sangkhep',
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': '21. พระอภิธรรมสังเขป',
+                'english': '21. The Abhidhamma in summary',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 40 ────────────────────────────────────────────────────
+    # Written from batch-039-040.json.
+    {
+        'page': 40,
+        'after': 'phra-kathawatthu',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'อภิ.ปุ. 36/1-2-3',
+                'english': '',
+            },
+        ],
+    },
 ]
 
 

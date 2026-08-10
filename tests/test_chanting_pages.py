@@ -1414,5 +1414,58 @@ class TestVariantReadingsOnScreen:
         assert 'layer-' not in marked
 
 
+class TestEveryDeclaredBlockReachedThePage:
+    """A block stage 1 recorded must actually be on the page it belongs to.
+
+    This is the check that was missing when `apply_batch` silently dropped
+    every page block it was given. Stage 1 read the headings and footnotes off
+    the photographs, `check_batch` passed them, the batch files recorded them —
+    and seventeen of them across pages 30 to 40 were printed in the book and
+    absent from the app, with nothing anywhere reporting a problem.
+
+    The batch files are the record of what each photograph said, so they are
+    the right thing to hold the app to.
+    """
+
+    def declared(self):
+        import json
+        import pathlib
+
+        found = []
+        folder = pathlib.Path('prompts/chanting-book-batch/batches')
+        for path in sorted(folder.glob('*.json')):
+            batch = json.loads(path.read_text(encoding='utf-8'))
+            for row in batch['batch']['pages']:
+                if row.get('page') is None:
+                    continue
+                for block in row.get('blocks') or []:
+                    if block.get('thai'):
+                        found.append((row['page'], block.get('type'),
+                                      block.get('marker'), block['thai'],
+                                      path.name))
+        return found
+
+    def test_the_batches_declare_blocks_at_all(self):
+        """Guards the guard: an empty sweep would pass the test below."""
+        assert len(self.declared()) > 20
+
+    def test_every_declared_block_is_in_the_app(self):
+        in_app = {
+            (group.get('page'), block.get('type'), block.get('marker'),
+             block.get('thai'))
+            for group in chanting_module().PAGE_BLOCKS
+            for block in group.get('blocks', [])
+        }
+        missing = [
+            f"page {page} ({source}): {kind} {thai[:40]}"
+            for page, kind, marker, thai, source in self.declared()
+            if (page, kind, marker, thai) not in in_app
+        ]
+        assert not missing, (
+            'blocks recorded from the photographs but never written into '
+            'PAGE_BLOCKS, so the page shows less than the book prints:\n  '
+            + '\n  '.join(missing))
+
+
 if __name__ == '__main__':
     sys.exit(pytest.main([__file__, '-v']))
