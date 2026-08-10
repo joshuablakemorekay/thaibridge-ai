@@ -11704,7 +11704,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
         # ‼ CHECK [IMG_0303.PNG]: No Thai translation is printed, so
         #   english_unverified is true. The Kathavatthu is set as a debate in
         #   question and answer, and the English marks the speakers with
@@ -11725,6 +11724,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'อภิ.ยม. 38/1',
+        'closing': {
+            'pali': 'จบพระกะถาวัตถุ',
+            'pali_roman': '',
+            'thai': 'จบพระกะถาวัตถุ',
+            'paiboon': 'jòp prá-gà-tǎa-wát-tù',
+            'english': 'Here ends the Kathāvatthu.',
         },
         'verses': [
             {
@@ -11747,13 +11754,669 @@ CHANTS = [
             #   verse 3 belongs to page 40 where it starts and carries the gap
             #   marker. Page 41 completes it; the next batch supplies verse 3
             #   in full rather than starting a new verse.
+                        # ‼ COMPLETED FROM p?: this line was cut by the page break and is
+            #   now whole. Was: นะ […]
+            # ‼ CHECK [IMG_0304.PNG]: Verse 3 is completed from page 41 and
+            #   now reads whole — the word นะ at the foot of page 40 joins
+            #   เหวัง วัตตัพเพ. at the head of this one.
             {
                 'number': 3,
-                'pali': 'นะ […]',
-                'pali_roman': 'na […]',
+                'pali': 'นะ เหวัง วัตตัพเพ.',
+                'pali_roman': 'na hevaṃ vattabbe.',
                 'thai': '',
                 'paiboon': '',
-                'english': '"No […]',
+                'english': '"It should not be said so."',
+            },
+            {
+                'number': 4,
+                'page': 41,
+                'pali': 'อาชานาหิ นิคคะหัง, หัญจิ ปุคคะโล อุปะลัพภะติ, สัจฉิกัตถะปะระมัตเถนะ เตนะ, วะตะ เร วัตตัพเพ.',
+                'pali_roman': 'ājānāhi niggahaṃ, hañci puggalo upalabbhati, sacchikatthaparamatthena tena, vata re vattabbe.',
+                'thai': '',
+                'paiboon': '',
+                'english': '"Acknowledge the refutation. If the person is apprehended as a real and ultimate fact, then indeed it should be said,',
+            },
+            {
+                'number': 5,
+                'pali': 'โย สัจฉิกัตโถ ปะระมัตโถ, ตะโต โส ปุคคะโล อุปะลัพภะติ สัจฉิกัตถะปะระมัตเถนาติ มิจฉา.',
+                'pali_roman': 'yo sacchikattho paramattho, tato so puggalo upalabbhati sacchikatthaparamatthenāti micchā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that the person is apprehended in the same way as that which is a real and ultimate fact. That is wrong."',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0304.PNG]: source_printed is อภิ.ป. 40/1 from marker 2
+        #   — a Patthana reference on the Yamaka. See the check on the
+        #   Kathavatthu above: the three citations on this page look shifted
+        #   by one against their texts.
+        'id': 'phra-yamaka',
+        'title_thai': 'พระยะมะกะ',
+        'title_pali': '',
+        'title_roman': 'prá-yá-má-gà',
+        'title_english': 'The Yamaka',
+        'page_start': 41,
+        'layout': 'prose',
+        'source_printed': 'อภิ.ป. 40/1',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'จบพระยะมะกะ',
+            'pali_roman': '',
+            'thai': 'จบพระยะมะกะ',
+            'paiboon': 'jòp prá-yá-má-gà',
+            'english': 'Here ends the Yamaka.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0304.PNG]: The book prints NO space after the full
+            #   stop between verses 1 and 2 — it reads กุสะละมูลา.เย วา ปะนะ
+            #   run together. The verse split is at the stop, which is where
+            #   the sentence ends, so the missing space does not survive into
+            #   the data. Recorded here because it is a typographic oddity in
+            #   the printing rather than something the app has done.
+            {
+                'number': 1,
+                'pali': 'เย เกจิ กุสะลา ธัมมา, สัพเพ เต กุสะละมูลา.',
+                'pali_roman': 'ye keci kusalā dhammā, sabbe te kusalamūlā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever states are wholesome, all of them have wholesome roots.',
+            },
+            {
+                'number': 2,
+                'pali': 'เย วา ปะนะ กุสะละมูลา, สัพเพ เต ธัมมา กุสะลา.',
+                'pali_roman': 'ye vā pana kusalamūlā, sabbe te dhammā kusalā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Or whatever have wholesome roots, all those states are wholesome.',
+            },
+            {
+                'number': 3,
+                'pali': 'เย เกจิ กุสะลา ธัมมา, สัพเพ เต กุสะละมูเลนะ เอกะมูลา.',
+                'pali_roman': 'ye keci kusalā dhammā, sabbe te kusalamūlena ekamūlā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever states are wholesome, all of them share one root with the wholesome root.',
+            },
+            {
+                'number': 4,
+                'pali': 'เย วา ปะนะ กุสะละมูเลนะ เอกะมูลา, สัพเพ เต ธัมมา กุสะลา.',
+                'pali_roman': 'ye vā pana kusalamūlena ekamūlā, sabbe te dhammā kusalā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Or whatever share one root with the wholesome root, all those states are wholesome.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0304.PNG]: The service closing จบสวดแจงเท่านี้ is
+        #   printed centred below this chant's own closing. It closes the
+        #   whole Suat Jaeng service rather than this chant, so it is recorded
+        #   on the page row as a service_closing and NOT as a second closing
+        #   on this chant.
+        # ‼ CHECK [IMG_0304.PNG]: source_printed is อภิ.ป. 40/1 from marker 3,
+        #   the same text as marker 2 on the Yamaka above. Two markers, two
+        #   printed footnotes, identical wording. See the shifted-citation
+        #   check on the Kathavatthu.
+        'id': 'phra-mahapatthan',
+        'title_thai': 'พระมะหาปัฏฐาน',
+        'title_pali': '',
+        'title_roman': 'prá-má-hǎa-bpàt-tǎan',
+        'title_english': 'The Mahāpaṭṭhāna',
+        'page_start': 41,
+        'layout': 'prose',
+        'source_printed': 'อภิ.ป. 40/1',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'จบพระมะหาปัฏฐาน',
+            'pali_roman': '',
+            'thai': 'จบพระมะหาปัฏฐาน',
+            'paiboon': 'jòp prá-má-hǎa-bpàt-tǎan',
+            'english': 'Here ends the Mahāpaṭṭhāna.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'เหตุปัจจะโย,',
+                'pali_roman': 'hetupaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the root condition,',
+            },
+            {
+                'number': 2,
+                'pali': 'อารัมมะณะปัจจะโย,',
+                'pali_roman': 'ārammaṇapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the object condition,',
+            },
+            {
+                'number': 3,
+                'pali': 'อะธิปะติปัจจะโย,',
+                'pali_roman': 'adhipatipaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the predominance condition,',
+            },
+            {
+                'number': 4,
+                'pali': 'อะนันตะระปัจจะโย,',
+                'pali_roman': 'anantarapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the proximity condition,',
+            },
+            {
+                'number': 5,
+                'pali': 'สะมะนันตะระปัจจะโย,',
+                'pali_roman': 'samanantarapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the contiguity condition,',
+            },
+            {
+                'number': 6,
+                'pali': 'สะหะชาตะปัจจะโย,',
+                'pali_roman': 'sahajātapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the conascence condition,',
+            },
+            {
+                'number': 7,
+                'pali': 'อัญญะมัญญะปัจจะโย,',
+                'pali_roman': 'aññamaññapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the mutuality condition,',
+            },
+            # ‼ CHECK [IMG_0304.PNG]: นิสสะยะ-ปัจจะโย is broken across a line
+            #   with a hyphen. Rejoined to นิสสะยะปัจจะโย and the hyphen
+            #   dropped — confirmed by อุปะนิสสะยะปัจจะโย on the next line,
+            #   which prints the same ending whole.
+            {
+                'number': 8,
+                'pali': 'นิสสะยะปัจจะโย,',
+                'pali_roman': 'nissayapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the support condition,',
+            },
+            {
+                'number': 9,
+                'pali': 'อุปะนิสสะยะปัจจะโย,',
+                'pali_roman': 'upanissayapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the decisive support condition,',
+            },
+            {
+                'number': 10,
+                'pali': 'ปุเรชาตะปัจจะโย,',
+                'pali_roman': 'purejātapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the prenascence condition,',
+            },
+            {
+                'number': 11,
+                'pali': 'ปัจฉาชาตะปัจจะโย,',
+                'pali_roman': 'pacchājātapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the postnascence condition,',
+            },
+            # ‼ CHECK [IMG_0304.PNG]: อาเสวะ-นะปัจจะโย is broken across a line
+            #   with a hyphen. Rejoined to อาเสวะนะปัจจะโย.
+            {
+                'number': 12,
+                'pali': 'อาเสวะนะปัจจะโย,',
+                'pali_roman': 'āsevanapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the repetition condition,',
+            },
+            {
+                'number': 13,
+                'pali': 'กัมมะปัจจะโย,',
+                'pali_roman': 'kammapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the kamma condition,',
+            },
+            {
+                'number': 14,
+                'pali': 'วิปากะปัจจะโย,',
+                'pali_roman': 'vipākapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the result condition,',
+            },
+            {
+                'number': 15,
+                'pali': 'อาหาระปัจจะโย,',
+                'pali_roman': 'āhārapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the nutriment condition,',
+            },
+            {
+                'number': 16,
+                'pali': 'อินท์ริยะปัจจะโย,',
+                'pali_roman': 'indriyapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the faculty condition,',
+            },
+            {
+                'number': 17,
+                'pali': 'ฌานะปัจจะโย,',
+                'pali_roman': 'jhānapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the jhāna condition,',
+            },
+            {
+                'number': 18,
+                'pali': 'มัคคะปัจจะโย,',
+                'pali_roman': 'maggapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the path condition,',
+            },
+            {
+                'number': 19,
+                'pali': 'สัมปะยุตตะปัจจะโย,',
+                'pali_roman': 'sampayuttapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the association condition,',
+            },
+            {
+                'number': 20,
+                'pali': 'วิปปะยุตตะปัจจะโย,',
+                'pali_roman': 'vippayuttapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the dissociation condition,',
+            },
+            {
+                'number': 21,
+                'pali': 'อัตถิปัจจะโย,',
+                'pali_roman': 'atthipaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the presence condition,',
+            },
+            {
+                'number': 22,
+                'pali': 'นัตถิปัจจะโย,',
+                'pali_roman': 'natthipaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the absence condition,',
+            },
+            {
+                'number': 23,
+                'pali': 'วิคะตะปัจจะโย,',
+                'pali_roman': 'vigatapaccayo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the disappearance condition,',
+            },
+            {
+                'number': 24,
+                'pali': 'อะวิคะตะปัจจะโย.',
+                'pali_roman': 'avigatapaccayo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the non-disappearance condition.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0306.PNG]: The closing line prints จบ AND นิฏฐิโต
+        #   together — จบธัมมะสังคะณีมาติกาปาโฐ นิฏฐิโต — where the closings
+        #   earlier in this service use จบ alone and the Bojjhanga discourses
+        #   use นิฏฐิตัง alone. Reproduced as printed.
+        # ‼ CHECK [IMG_0306.PNG]: No Thai translation is printed, so
+        #   english_unverified is true. These are the Abhidhamma triads and
+        #   the English is a literal rendering of each term, not a gloss of
+        #   what the triad means.
+        'id': 'thammasangkhani-matika-patho',
+        'title_thai': 'ธัมมะสังคะณีมาติกาปาโฐ',
+        'title_pali': 'Dhammasaṅgaṇīmātikāpāṭho',
+        'title_roman': '',
+        'title_english': 'The Matika of the Dhammasaṅgaṇī',
+        'book_number': 22,
+        'page_start': 41,
+        'layout': 'prose',
+        'source_printed': 'อภิ.สํ. 34/1-2',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'จบธัมมะสังคะณีมาติกาปาโฐ นิฏฐิโต',
+            'pali_roman': '',
+            'thai': 'จบธัมมะสังคะณีมาติกาปาโฐ นิฏฐิโต',
+            'paiboon': 'jòp tam-má-sǎŋ-ká-nii-maa-dtì-gaa-bpaa-tǒo nít-tì-dtoo',
+            'english': 'Here ends the Matika of the Dhammasaṅgaṇī.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'กุสะลา ธัมมา, อะกุสะลา ธัมมา, อัพ์ยากะตา ธัมมา.',
+                'pali_roman': 'kusalā dhammā, akusalā dhammā, abyākatā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Wholesome states, unwholesome states, indeterminate states.',
+            },
+            {
+                'number': 2,
+                'pali': 'สุขายะ เวทะนายะ สัมปะยุตตา ธัมมา, ทุกขายะ เวทะนายะ สัมปะยุตตา ธัมมา, อะทุกขะมะสุขายะ เวทะนายะ สัมปะยุตตา ธัมมา.',
+                'pali_roman': 'sukhāya vedanāya sampayuttā dhammā, dukkhāya vedanāya sampayuttā dhammā, adukkhamasukhāya vedanāya sampayuttā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States associated with pleasant feeling, states associated with painful feeling, states associated with neither-painful-nor-pleasant feeling.',
+            },
+            {
+                'number': 3,
+                'pali': 'วิปากา ธัมมา, วิปากะธัมมะธัมมา, เนวะวิปากะนะวิปากะธัมมะธัมมา.',
+                'pali_roman': 'vipākā dhammā, vipākadhammadhammā, nevavipākanavipākadhammadhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States that are results, states whose nature is to give results, states that are neither results nor of a nature to give results.',
+            },
+            # ‼ CHECK [IMG_0305.PNG]: อะนุปาทินนา-นุปาทานิยา is broken across
+            #   a line with a hyphen. Rejoined to อะนุปาทินนานุปาทานิยา.
+            {
+                'number': 4,
+                'page': 42,
+                'pali': 'อุปาทินนุปาทานิยา ธัมมา, อะนุปาทินนุปาทานิยา ธัมมา, อะนุปาทินนานุปาทานิยา ธัมมา.',
+                'pali_roman': 'upādinnupādāniyā dhammā, anupādinnupādāniyā dhammā, anupādinnānupādāniyā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States clung to and subject to clinging, states not clung to but subject to clinging, states neither clung to nor subject to clinging.',
+            },
+            # ‼ CHECK [IMG_0305.PNG]: อะสังกิลิฏ-ฐาสังกิเลสิกา is broken
+            #   across a line with a hyphen, splitting the cluster ฏฐ.
+            #   Rejoined to อะสังกิลิฏฐาสังกิเลสิกา. Worth a look — a break
+            #   inside a consonant cluster is the easiest kind to rejoin
+            #   wrongly.
+            {
+                'number': 5,
+                'pali': 'สังกิลิฏฐะสังกิเลสิกา ธัมมา, อะสังกิลิฏฐะสังกิเลสิกา ธัมมา, อะสังกิลิฏฐาสังกิเลสิกา ธัมมา.',
+                'pali_roman': 'saṅkiliṭṭhasaṅkilesikā dhammā, asaṅkiliṭṭhasaṅkilesikā dhammā, asaṅkiliṭṭhāsaṅkilesikā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States defiled and subject to defilement, states undefiled but subject to defilement, states neither defiled nor subject to defilement.',
+            },
+            {
+                'number': 6,
+                'pali': 'สะวิตักกะสะวิจารา ธัมมา, อะวิตักกะวิจาระมัตตา ธัมมา, อะวิตักกาวิจารา ธัมมา.',
+                'pali_roman': 'savitakkasavicārā dhammā, avitakkavicāramattā dhammā, avitakkāvicārā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States with applied and sustained thought, states without applied thought but with sustained thought only, states with neither.',
+            },
+            {
+                'number': 7,
+                'pali': 'ปีติสะหะคะตา ธัมมา, สุขะสะหะคะตา ธัมมา, อุเปกขาสะหะคะตา ธัมมา.',
+                'pali_roman': 'pītisahagatā dhammā, sukhasahagatā dhammā, upekkhāsahagatā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States accompanied by rapture, states accompanied by pleasure, states accompanied by equanimity.',
+            },
+            # ‼ CHECK [IMG_0305.PNG]: เนวะทัส-สะเนนะ is broken across a line
+            #   with a hyphen. Rejoined to เนวะทัสสะเนนะ, confirmed by verse 9
+            #   which prints the same word whole.
+            {
+                'number': 8,
+                'pali': 'ทัสสะเนนะ ปะหาตัพพา ธัมมา, ภาวะนายะ ปะหาตัพพา ธัมมา, เนวะทัสสะเนนะ นะภาวะนายะ ปะหาตัพพา ธัมมา.',
+                'pali_roman': 'dassanena pahātabbā dhammā, bhāvanāya pahātabbā dhammā, nevadassanena nabhāvanāya pahātabbā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States to be abandoned by seeing, states to be abandoned by development, states to be abandoned by neither.',
+            },
+            {
+                'number': 9,
+                'pali': 'ทัสสะเนนะ ปะหาตัพพะเหตุกา ธัมมา, ภาวะนายะ ปะหาตัพพะเหตุกา ธัมมา, เนวะทัสสะเนนะ นะภาวะนายะ ปะหาตัพพะเหตุกา ธัมมา.',
+                'pali_roman': 'dassanena pahātabbahetukā dhammā, bhāvanāya pahātabbahetukā dhammā, nevadassanena nabhāvanāya pahātabbahetukā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States with roots to be abandoned by seeing, states with roots to be abandoned by development, states with roots to be abandoned by neither.',
+            },
+            {
+                'number': 10,
+                'pali': 'อาจะยะคามิโน ธัมมา, อะปะจะยะคามิโน ธัมมา, เนวาจะยะคามิโนนาปะจะยะคามิโน ธัมมา.',
+                'pali_roman': 'ācayagāmino dhammā, apacayagāmino dhammā, nevācayagāminonāpacayagāmino dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States leading to accumulation, states leading to dispersion, states leading to neither.',
+            },
+            {
+                'number': 11,
+                'pali': 'เสกขา ธัมมา, อะเสกขา ธัมมา, เนวะเสกขานาเสกขา ธัมมา.',
+                'pali_roman': 'sekkhā dhammā, asekkhā dhammā, nevasekkhānāsekkhā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States of the trainee, states of the adept, states of neither.',
+            },
+            {
+                'number': 12,
+                'pali': 'ปะริตตา ธัมมา, มะหัคคะตา ธัมมา, อัปปะมาณา ธัมมา.',
+                'pali_roman': 'parittā dhammā, mahaggatā dhammā, appamāṇā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Limited states, exalted states, measureless states.',
+            },
+            # ‼ CHECK [IMG_0305.PNG]: อัปปะมาณา-รัมมะณา is broken across a
+            #   line with a hyphen. Rejoined to อัปปะมาณารัมมะณา.
+            {
+                'number': 13,
+                'pali': 'ปะริตตารัมมะณา ธัมมา, มะหัคคะตารัมมะณา ธัมมา, อัปปะมาณารัมมะณา ธัมมา.',
+                'pali_roman': 'parittārammaṇā dhammā, mahaggatārammaṇā dhammā, appamāṇārammaṇā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States with a limited object, states with an exalted object, states with a measureless object.',
+            },
+            {
+                'number': 14,
+                'pali': 'หีนา ธัมมา, มัชฌิมา ธัมมา, ปะณีตา ธัมมา.',
+                'pali_roman': 'hīnā dhammā, majjhimā dhammā, paṇītā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Inferior states, middling states, superior states.',
+            },
+            {
+                'number': 15,
+                'pali': 'มิจฉัตตะนิยะตา ธัมมา, สัมมัตตะนิยะตา ธัมมา, อะนิยะตา ธัมมา.',
+                'pali_roman': 'micchattaniyatā dhammā, sammattaniyatā dhammā, aniyatā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States fixed in wrongness, states fixed in rightness, states not fixed.',
+            },
+            {
+                'number': 16,
+                'pali': 'มัคคารัมมะณา ธัมมา, มัคคะเหตุกา ธัมมา, มัคคาธิปะติโน ธัมมา.',
+                'pali_roman': 'maggārammaṇā dhammā, maggahetukā dhammā, maggādhipatino dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States with the path as object, states with the path as root, states with the path as predominant.',
+            },
+            {
+                'number': 17,
+                'pali': 'อุปปันนา ธัมมา, อะนุปปันนา ธัมมา, อุปปาทิโน ธัมมา.',
+                'pali_roman': 'uppannā dhammā, anuppannā dhammā, uppādino dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States that have arisen, states that have not arisen, states bound to arise.',
+            },
+            {
+                'number': 18,
+                'pali': 'อะตีตา ธัมมา, อะนาคะตา ธัมมา, ปัจจุปปันนา ธัมมา.',
+                'pali_roman': 'atītā dhammā, anāgatā dhammā, paccuppannā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Past states, future states, present states.',
+            },
+            {
+                'number': 19,
+                'pali': 'อะตีตารัมมะณา ธัมมา, อะนาคะตารัมมะณา ธัมมา, ปัจจุปปันนารัมมะณา ธัมมา.',
+                'pali_roman': 'atītārammaṇā dhammā, anāgatārammaṇā dhammā, paccuppannārammaṇā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States with a past object, states with a future object, states with a present object.',
+            },
+            {
+                'number': 20,
+                'pali': 'อัชฌัตตา ธัมมา, พะหิทธา ธัมมา, อัชฌัตตะพะหิทธา ธัมมา.',
+                'pali_roman': 'ajjhattā dhammā, bahiddhā dhammā, ajjhattabahiddhā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Internal states, external states, both internal and external states.',
+            },
+            # ‼ CHECK [IMG_0306.PNG]: อัชฌัตตะพะหิทธา-รัมมะณา is broken across
+            #   the page's first line with a hyphen. Rejoined to
+            #   อัชฌัตตะพะหิทธารัมมะณา.
+            {
+                'number': 21,
+                'page': 43,
+                'pali': 'อัชฌัตตารัมมะณา ธัมมา, พะหิทธารัมมะณา ธัมมา, อัชฌัตตะพะหิทธารัมมะณา ธัมมา.',
+                'pali_roman': 'ajjhattārammaṇā dhammā, bahiddhārammaṇā dhammā, ajjhattabahiddhārammaṇā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States with an internal object, states with an external object, states with both as object.',
+            },
+            {
+                'number': 22,
+                'pali': 'สะนิทัสสะนะสัปปะฏิฆา ธัมมา, อะนิทัสสะนะสัปปะฏิฆา ธัมมา, อะนิทัสสะนาปปะฏิฆา ธัมมา.',
+                'pali_roman': 'sanidassanasappaṭighā dhammā, anidassanasappaṭighā dhammā, anidassanāppaṭighā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'States visible and impinging, states invisible and impinging, states invisible and non-impinging.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0306.PNG]: This chant's closing prints NO จบ — it reads
+        #   วิปัสสะนาภูมิปาโฐ นิฏฐิโต, where the chant above it on the same
+        #   page prints จบ…นิฏฐิโต. Reproduced as printed on each.
+        # ‼ CHECK [IMG_0306.PNG]: No Thai translation is printed, so
+        #   english_unverified is true and the English is a working
+        #   translation.
+        'id': 'wipassanaphumi-patho',
+        'title_thai': 'วิปัสสะนาภูมิปาโฐ',
+        'title_pali': 'Vipassanābhūmipāṭho',
+        'title_roman': '',
+        'title_english': 'The Passage on the Grounds of Insight',
+        'book_number': 23,
+        'page_start': 43,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'วิปัสสะนาภูมิปาโฐ นิฏฐิโต',
+            'pali_roman': 'vipassanābhūmipāṭho niṭṭhito',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Passage on the Grounds of Insight.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'ปัญจักขันธา: รูปักขันโธ, เวทะนากขันโธ, สัญญากขันโธ, สังขารักขันโธ, วิญญาณักขันโธ',
+                'pali_roman': 'pañcakkhandhā: rūpakkhandho, vedanākkhandho, saññākkhandho, saṅkhārakkhandho, viññāṇakkhandho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The five aggregates: form, feeling, perception, formations, consciousness',
+            },
+            # ‼ CHECK [IMG_0306.PNG]: This paragraph's count ท์วาทะสายะตะนานิ
+            #   is followed by a wide SPACE where verses 1, 3 and 4 print a
+            #   colon after theirs. Reproduced as printed rather than made
+            #   uniform, but it looks like a dropped colon and is worth a
+            #   glance.
+            # ‼ CHECK [IMG_0306.PNG]: This paragraph ends with a COMMA, not a
+            #   full stop, where the other four end with one. Reproduced as
+            #   printed.
+            {
+                'number': 2,
+                'pali': 'ท์วาทะสายะตะนานิ จักข์วายะตะนัง รูปายะตะนัง, โสตายะตะนัง สัททายะตะนัง, ฆานายะตะนัง คันธายะตะนัง, ชิวหายะตะนัง ระสายะตะนัง, กายายะตะนัง โผฏฐัพพายะตะนัง, มะนายะตะนัง ธัมมายะตะนัง,',
+                'pali_roman': 'dvādasāyatanāni cakkhvāyatanaṃ rūpāyatanaṃ, sotāyatanaṃ saddāyatanaṃ, ghānāyatanaṃ gandhāyatanaṃ, jivhāyatanaṃ rasāyatanaṃ, kāyāyatanaṃ phoṭṭhabbāyatanaṃ, manāyatanaṃ dhammāyatanaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The twelve sense bases: the eye base and the form base, the ear base and the sound base, the nose base and the odour base, the tongue base and the taste base, the body base and the tangible base, the mind base and the mental-object base,',
+            },
+            {
+                'number': 3,
+                'pali': 'อัฏฐาระสะ ธาตุโย: จักขุธาตุ รูปะธาตุ จักขุวิญญาณะธาตุ, โสตะธาตุ สัททะธาตุ โสตะวิญญาณะธาตุ, ฆานะธาตุ คันธะธาตุ ฆานะวิญญาณะธาตุ, ชิวหาธาตุ ระสะธาตุ ชิวหาวิญญาณะธาตุ, กายะธาตุ โผฏฐัพพะธาตุ กายะวิญญาณะธาตุ, มะโนธาตุ ธัมมะธาตุ มะโนวิญญาณะธาตุ.',
+                'pali_roman': 'aṭṭhārasa dhātuyo: cakkhudhātu rūpadhātu cakkhuviññāṇadhātu, sotadhātu saddadhātu sotaviññāṇadhātu, ghānadhātu gandhadhātu ghānaviññāṇadhātu, jivhādhātu rasadhātu jivhāviññāṇadhātu, kāyadhātu phoṭṭhabbadhātu kāyaviññāṇadhātu, manodhātu dhammadhātu manoviññāṇadhātu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The eighteen elements: the eye element, the form element, the eye-consciousness element; the ear, sound and ear-consciousness elements; the nose, odour and nose-consciousness elements; the tongue, taste and tongue-consciousness elements; the body, tangible and body-consciousness elements; the mind, mental-object and mind-consciousness elements.',
+            },
+            # ‼ CHECK [IMG_0306.PNG]: อะนัญญะตัญญัสสามี-ตินท์ริยัง is broken
+            #   across a line with a hyphen. Rejoined to
+            #   อะนัญญะตัญญัสสามีตินท์ริยัง.
+            # ‼ CHECK [IMG_0306.PNG]: The book prints สมาธินท์ริยัง here with
+            #   สม-, not the สะมาธิ- spelling it uses elsewhere in the book.
+            #   Reproduced as printed.
+            {
+                'number': 4,
+                'pali': 'พาวีสะตินท์ริยานิ: จักขุนท์ริยัง, โสตินท์ริยัง, ฆานินท์ริยัง, ชิวหินท์ริยัง, กายินท์ริยัง, มะนินท์ริยัง, อิตถินท์ริยัง, ปุริสินท์ริยัง, ชีวิตินท์ริยัง, สุขินท์ริยัง, ทุกขินท์ริยัง, โสมะนัสสินท์ริยัง, โทมะนัสสินท์ริยัง, อุเปกขินท์ริยัง, สัทธินท์ริยัง, วิริยินท์ริยัง, สะตินท์ริยัง, สมาธินท์ริยัง, ปัญญินท์ริยัง, อะนัญญะตัญญัสสามีตินท์ริยัง, อัญญินท์ริยัง, อัญญาตาวินท์ริยัง.',
+                'pali_roman': 'bāvīsatindriyāni: cakkhundriyaṃ, sotindriyaṃ, ghānindriyaṃ, jivhindriyaṃ, kāyindriyaṃ, manindriyaṃ, itthindriyaṃ, purisindriyaṃ, jīvitindriyaṃ, sukhindriyaṃ, dukkhindriyaṃ, somanassindriyaṃ, domanassindriyaṃ, upekkhindriyaṃ, saddhindriyaṃ, vīriyindriyaṃ, satindriyaṃ, samādhindriyaṃ, paññindriyaṃ, anaññatañassāmītindriyaṃ, aññindriyaṃ, aññātāvindriyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The twenty-two faculties: the eye, ear, nose, tongue, body and mind faculties; the femininity, masculinity and life faculties; the faculties of pleasure, pain, joy, grief and equanimity; the faculties of faith, energy, mindfulness, concentration and wisdom; the faculty "I shall come to know the unknown", the faculty of final knowledge, and the faculty of one who has final knowledge.',
+            },
+            # ‼ CHECK [IMG_0306.PNG]: The count จัตตาริ อะริยะสัจจานิ has
+            #   neither colon nor comma after it — it runs straight into
+            #   ทุกขัง. Reproduced as printed.
+            {
+                'number': 5,
+                'pali': 'จัตตาริ อะริยะสัจจานิ ทุกขัง อะริยะสัจจัง, ทุกขะสะมุทะโย อะริยะสัจจัง, ทุกขะนิโรโธ อะริยะสัจจัง, ทุกขะนิโรธะคามินีปะฏิปะทา อะริยะสัจจัง.',
+                'pali_roman': 'cattāri ariyasaccāni dukkhaṃ ariyasaccaṃ, dukkhasamudayo ariyasaccaṃ, dukkhanirodho ariyasaccaṃ, dukkhanirodhagāminīpaṭipadā ariyasaccaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The four noble truths: suffering is a noble truth, the origin of suffering is a noble truth, the cessation of suffering is a noble truth, the way leading to the cessation of suffering is a noble truth.',
             },
         ],
     },
@@ -13194,6 +13857,58 @@ PAGE_BLOCKS = [
                 'type': 'footnote',
                 'marker': '1',
                 'thai': 'อภิ.ปุ. 36/1-2-3',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 41 ────────────────────────────────────────────────────
+    # Written from batch-041-043.json.
+    {
+        'page': 41,
+        'after': 'phra-mahapatthan',
+        'blocks': [
+            {
+                'type': 'service_closing',
+                'thai': 'จบสวดแจงเท่านี้',
+            },
+        ],
+    },
+    # ── Page 41 ────────────────────────────────────────────────────
+    # Written from batch-041-043.json.
+    {
+        'page': 41,
+        'after': 'thammasangkhani-matika-patho',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'อภิ.ยม. 38/1',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '2',
+                'thai': 'อภิ.ป. 40/1',
+                'english': '',
+            },
+            {
+                'type': 'footnote',
+                'marker': '3',
+                'thai': 'อภิ.ป. 40/1',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 43 ────────────────────────────────────────────────────
+    # Written from batch-041-043.json.
+    {
+        'page': 43,
+        'after': 'wipassanaphumi-patho',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'อภิ.สํ. 34/1-2',
                 'english': '',
             },
         ],

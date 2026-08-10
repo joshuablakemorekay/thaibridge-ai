@@ -1443,6 +1443,13 @@ class TestEveryDeclaredBlockReachedThePage:
                         found.append((row['page'], block.get('type'),
                                       block.get('marker'), block['thai'],
                                       path.name))
+                # A service closing is recorded as a page-map KEY rather than
+                # a block, so a sweep that only read `blocks` would have the
+                # same blind spot the applier had, and miss it for the same
+                # reason. Page 41's จบสวดแจงเท่านี้ was exactly that case.
+                if row.get('service_closing'):
+                    found.append((row['page'], 'service_closing', None,
+                                  row['service_closing'], path.name))
         return found
 
     def test_the_batches_declare_blocks_at_all(self):
