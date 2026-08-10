@@ -12799,7 +12799,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 11; the rest is not in the app yet.
         # ‼ CHECK [IMG_0309.PNG]: No Thai translation is printed, so
         #   english_unverified is true and the English is a working
         #   translation.
@@ -12819,6 +12818,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'มงคลจักรวาฬน้อย จบ',
+            'pali_roman': '',
+            'thai': 'มงคลจักรวาฬน้อย จบ',
+            'paiboon': 'moŋ-kon jàk-grà-waan nɔ́ɔi jòp',
+            'english': 'Here ends the Lesser Universal Blessing.',
         },
         'verses': [
             {
@@ -12909,13 +12915,306 @@ CHANTS = [
             #   so verse 11 belongs to page 46 where it starts and carries the
             #   gap marker. Page 47 completes it; the next batch supplies
             #   verse 11 in full rather than starting a new verse.
+                        # ‼ COMPLETED FROM p?: this line was cut by the page break and is
+            #   now whole. Was: สัพเพ เต […]
+            # ‼ CHECK [IMG_0310.PNG]: Verse 11 is completed from page 47 and
+            #   now reads whole — สัพเพ เต at the foot of page 46 joins
+            #   อุปัททะวา, at the head of this one.
             {
                 'number': 11,
-                'pali': 'สัพเพ เต […]',
-                'pali_roman': 'sabbe te […]',
+                'pali': 'สัพเพ เต อุปัททะวา,',
+                'pali_roman': 'sabbe te upaddavā,',
                 'thai': '',
                 'paiboon': '',
-                'english': 'all your […]',
+                'english': 'all your misfortunes,',
+            },
+            {
+                'number': 12,
+                'page': 47,
+                'pali': 'สัพเพ เต ทุนนิมิตตา,',
+                'pali_roman': 'sabbe te dunnimittā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all your ill omens,',
+            },
+            {
+                'number': 13,
+                'pali': 'สัพเพ เต อะวะมังคะลา วินัสสันตุ,',
+                'pali_roman': 'sabbe te avamaṅgalā vinassantu,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all your inauspicious things be destroyed;',
+            },
+            {
+                'number': 14,
+                'pali': 'อายุวัฑฒะโก,',
+                'pali_roman': 'āyuvaḍḍhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may there be growth in long life,',
+            },
+            {
+                'number': 15,
+                'pali': 'ธะนะวัฑฒะโก,',
+                'pali_roman': 'dhanavaḍḍhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'growth in wealth,',
+            },
+            {
+                'number': 16,
+                'pali': 'สิริวัฑฒะโก,',
+                'pali_roman': 'sirivaḍḍhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'growth in good fortune,',
+            },
+            {
+                'number': 17,
+                'pali': 'ยะสะวัฑฒะโก,',
+                'pali_roman': 'yasavaḍḍhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'growth in renown,',
+            },
+            {
+                'number': 18,
+                'pali': 'พะละวัฑฒะโก,',
+                'pali_roman': 'balavaḍḍhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'growth in strength,',
+            },
+            {
+                'number': 19,
+                'pali': 'วัณณะวัฑฒะโก,',
+                'pali_roman': 'vaṇṇavaḍḍhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'growth in beauty,',
+            },
+            {
+                'number': 20,
+                'pali': 'สุขะวัฑฒะโก,',
+                'pali_roman': 'sukhavaḍḍhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'growth in happiness —',
+            },
+            {
+                'number': 21,
+                'pali': 'โหตุ สัพพะทา.',
+                'pali_roman': 'hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may it be so always.',
+            },
+            # ‼ CHECK [IMG_0310.PNG]: THE COLUMN LAYOUT CHANGES HERE, part way
+            #   through the chant and with no heading to announce it. Verses
+            #   11-21 are single-column prose; from verse 22 the page is set
+            #   in TWO COLUMNS and a printed line runs across both. This is
+            #   the first pairing, shown so it can be confirmed: left
+            #   ทุกขะโรคะภะยา เวรา joined to right โสกา สัตตุ จุปัททะวา. Read
+            #   down the left column alone it gives unfinished half-lines,
+            #   which is the test for a two-column page.
+            {
+                'number': 22,
+                'pali': 'ทุกขะโรคะภะยา เวรา โสกา สัตตุ จุปัททะวา',
+                'pali_roman': 'dukkharogabhayā verā sokā sattu cupaddavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Suffering, disease, danger, enmity, sorrow, foes and misfortunes,',
+            },
+            {
+                'number': 23,
+                'pali': 'อะเนกา อันตะรายาปิ วินัสสันตุ จะ เตชะสา.',
+                'pali_roman': 'anekā antarāyāpi vinassantu ca tejasā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and manifold obstacles — may they be destroyed by this power.',
+            },
+            {
+                'number': 24,
+                'pali': 'ชะยะสิทธิ ธะนัง ลาภัง โสตถิ ภาค์ยัง สุขัง พะลัง',
+                'pali_roman': 'jayasiddhi dhanaṃ lābhaṃ sotthi bhāgyaṃ sukhaṃ balaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Success in victory, wealth, gain, wellbeing, good fortune, happiness, strength,',
+            },
+            {
+                'number': 25,
+                'pali': 'สิริ อายุ จะ วัณโณ จะ โภคัง วุฑฒี จะ ยะสะวา',
+                'pali_roman': 'siri āyu ca vaṇṇo ca bhogaṃ vuḍḍhī ca yasavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'splendour, long life, beauty, possessions, increase and renown,',
+            },
+            {
+                'number': 26,
+                'pali': 'สะตะวัสสา จะ อายู จะ ชีวะสิทธี ภะวันตุ เต.',
+                'pali_roman': 'satavassā ca āyū ca jīvasiddhī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'a hundred years of life, and success in living — may these be yours.',
+            },
+            # ‼ CHECK [IMG_0310.PNG]: Verses 27-32 are the same three-fold
+            #   refrain that closes the Jayaparitta Gatha on page 46, word for
+            #   word. Reproduced in full here because the book prints it in
+            #   full in both places; it is NOT a repeat of that chant, only a
+            #   shared closing.
+            {
+                'number': 27,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be, may all the devas protect you;',
+            },
+            {
+                'number': 28,
+                'pali': 'สัพพะพุทธานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'sabbabuddhānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Buddhas, may you always be well.',
+            },
+            {
+                'number': 29,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be, may all the devas protect you;',
+            },
+            {
+                'number': 30,
+                'pali': 'สัพพะธัมมานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'sabbadhammānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the whole Dhamma, may you always be well.',
+            },
+            {
+                'number': 31,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be, may all the devas protect you;',
+            },
+            {
+                'number': 32,
+                'pali': 'สัพพะสังฆานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'sabbasaṅghānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the whole Sangha, may you always be well.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0310.PNG]: No Thai translation is printed, so
+        #   english_unverified is true and the English is a working
+        #   translation.
+        'id': 'kaladana-sutta-gatha',
+        'title_thai': 'กาละทานะสุตตะคาถา',
+        'title_pali': 'Kāladānasuttagāthā',
+        'title_roman': '',
+        'title_english': 'Verses from the Kāladāna Sutta — giving at the right time',
+        'book_number': 27,
+        'page_start': 47,
+        'layout': '',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'กาละทานะสุตตะคาถา นิฏฐิตา',
+            'pali_roman': 'kāladānasuttagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the verses from the Kāladāna Sutta.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0310.PNG]: TWO COLUMNS throughout. This is the
+            #   first pairing, shown so the reading can be confirmed: left
+            #   กาเล ทะทันติ สะปัญญา joined to right วะทัญญู วีตะมัจฉะรา.
+            #   Every verse in this chant is built the same way.
+            {
+                'number': 1,
+                'pali': 'กาเล ทะทันติ สะปัญญา วะทัญญู วีตะมัจฉะรา',
+                'pali_roman': 'kāle dadanti sapaññā vadaññū vītamaccharā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The wise give at the right time — responsive, free from meanness.',
+            },
+            {
+                'number': 2,
+                'pali': 'กาเลนะ ทินนัง อะริเยสุ อุชุภูเตสุ ตาทิสุ.',
+                'pali_roman': 'kālena dinnaṃ ariyesu ujubhūtesu tādisu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Given at the right time to the noble ones, upright and unshaken,',
+            },
+            {
+                'number': 3,
+                'pali': 'วิปปะสันนะมะนา ตัสสะ วิปุลา โหติ ทักขิณา',
+                'pali_roman': 'vippasannamanā tassa vipulā hoti dakkhiṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the gift of one whose mind is clear and bright becomes abundant.',
+            },
+            {
+                'number': 4,
+                'pali': 'เย ตัตถะ อะนุโมทันติ เวยยาวัจจัง กะโรนติ วา.',
+                'pali_roman': 'ye tattha anumodanti veyyāvaccaṃ karonti vā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those who rejoice in it there, or who lend their service,',
+            },
+            {
+                'number': 5,
+                'pali': 'นะ เตนะ ทักขิณา โอนา เตปิ ปุญญัสสะ ภาคิโน',
+                'pali_roman': 'na tena dakkhiṇā onā tepi puññassa bhāgino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'do not thereby lessen the gift; they too share in the merit.',
+            },
+            {
+                'number': 6,
+                'pali': 'ตัส์มา ทะเท อัปปะฏิวานะจิตโต ยัตถะ ทินนัง มะหัปผะลัง',
+                'pali_roman': 'tasmā dade appaṭivānacitto yattha dinnaṃ mahapphalaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So let one give with an unhesitating mind, where what is given bears great fruit.',
+            },
+            # ‼ CHECK [IMG_0310.PNG]: A superscript footnote marker 1 sits on
+            #   the last word, ปาณินันติ. — but NO footnote is printed
+            #   anywhere on this page. The foot of IMG_0310.PNG below the
+            #   closing line is blank margin down to the page edge: no rule,
+            #   no citation. source_printed is therefore left off rather than
+            #   paired with a footnote from another page, since footnote
+            #   numbers restart on every page. Josh has a crop reading 1.
+            #   ขุ.ขุ. 25/89, ขุ.อุ. 25/221 which may belong here, but it is
+            #   not on this photograph and those are Khuddakapatha and Udana
+            #   references against an Anguttara text, so it is not assumed.
+            #   Either the page really prints a marker with no note, or
+            #   IMG_0310.PNG needs retaking with the foot of the page in
+            #   frame.
+            {
+                'number': 7,
+                'pali': 'ปุญญานิ ปะระโลกัส์มิง ปะติฏฐา โหนติ ปาณินันติ.',
+                'pali_roman': 'puññāni paralokasmiṃ patiṭṭhā honti pāṇinanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Merits are a support for living beings in the world beyond.',
             },
         ],
     },
