@@ -4,6 +4,32 @@ This is the honest record of building **ThaiBridge AI**, my **first web app** �
 
 ---
 
+## How I'm working — AI agents and agentic workflows
+
+*A standing note, not a dated entry. This is the way of working that sits behind every session below.*
+
+During this project, I have been using Claude Code with an **agentic development workflow** instead of simply asking AI questions and copying the answers.
+
+Claude Code can explore the project files, plan tasks, edit code, use development tools, run tests, check the results, and find problems. I then review the work and make important decisions where human judgement is needed.
+
+I have also been learning how **multiple AI agents or sub-agents** can be used to work on different parts of a project. For example, one agent can investigate a problem, another can make changes, and another can test and review the work.
+
+Through this project, I have gained practical experience with:
+
+- AI coding agents
+- Multi-agent and sub-agent workflows
+- AI working with existing code repositories
+- Tool use and automation
+- Planning tasks with AI
+- Testing and reviewing AI-generated work
+- Human approval and oversight
+
+My role is to give the project direction, make important decisions, review the AI's work, and approve major changes. The AI handles much of the repetitive coding and testing work.
+
+This has helped me understand how AI agents can be used to make software development faster and more organised, while still keeping a human involved to make important decisions.
+
+---
+
 ## November 2025 — Planning the app
 
 I planned the app using a describe-then-check method: I told the AI exactly what I wanted (the format, the approach, how to work with me), then judged what came back and refined it.
