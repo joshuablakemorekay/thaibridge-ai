@@ -1,0 +1,336 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "buddhamangala-gatha",
+      "siluddesa-patho"
+    ],
+    "pages": [
+      {
+        "page": 56,
+        "file": "IMG_0319.PNG",
+        "script": "thai",
+        "columns": "2 then 1",
+        "chant": "buddhamangala-gatha",
+        "verses": "8-12",
+        "starts_here": false,
+        "note": "The top of the page finishes พุทธะมังคะละคาถา. Verse 8 is the last two-column row, carrying on page 55's setting; verses 9-12 are four long lines, centred, single column. Under them the book prints the colophon พุทธะมังคะละคาถา นิฏฐิตา, centred and bold — recorded as the chant's closing, NOT as a verse."
+      },
+      {
+        "page": 56,
+        "file": "IMG_0319.PNG",
+        "script": "thai",
+        "chant": "siluddesa-patho",
+        "verses": "1-9",
+        "starts_here": true,
+        "note": "The middle of the page, under its own printed title สีลุทเทสะปาโฐ. Run-on justified prose, nine printed lines, single column. Two words are broken across lines with a hyphen and rejoined. Under it the book prints the colophon สีลุทเทสะปาโฐ นิฏฐิโต, recorded as the chant's closing.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "การสวด พุทธะมังคะละคาถา นี้ บางครั้งสวดเป็นทำนองมคธ บางครั้งสวดเป็นทำนอง สรภัญญวิธี แล้วแต่ผู้เป็นประธาน ถ้าจะสวดเป็นทำนอง สรภัญญวิธี ประธานกล่าวเชิญว่า หันทะ มะยัง สะระภัญเญนะ พุทธะมังคะละคาถาโย ภะณามะ เส. ภิกษุรูปหนึ่งที่มีเสียงดี ขึ้นเป็นทำนองสรภัญญวิธีว่า สัมพุทโธ ทิปะทัง เสฏโฐ นอกนั้นรับพร้อมกันว่า นิสินโน เจวะ มัชฌิเม ฯเปฯ เป็นลำดับไปจนจบ",
+            "english": "These Buddhamaṅgala verses are sometimes chanted in the Magadha manner and sometimes in the sarabhañña manner, as the leader decides. If they are to be chanted in the sarabhañña manner, the leader gives the invitation: Handa mayaṃ sarabhaññena buddhamaṅgalagāthāyo bhaṇāma se. One monk with a good voice raises the sarabhañña tune with Sambuddho dipadaṃ seṭṭho, and the rest take it up together with Nisinno ceva majjhime and so on, in order, through to the end.",
+            "english_unverified": true
+          },
+          {
+            "type": "prose",
+            "thai": "ต่อจากนี้ ประธานกล่าวเชิญชวนสวด สีลุทเทสะปาฐะ ว่า หันทะ มะยัง สีลุทเทสะปาฐัง ภะณามะ เส. รองประธานขึ้นต้นบทว่า ภาสิตะมิทัง นอกนั้นรับต่อ เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.",
+            "english": "After this the leader gives the invitation to chant the Sīluddesapāṭha, saying: Handa mayaṃ sīluddesapāṭhaṃ bhaṇāma se. The deputy leader begins the passage with Bhāsitamidaṃ, and the rest take it up from Tena bhagavatā jānatā passatā arahatā sammāsambuddhena and so on, going on together, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      },
+      {
+        "page": 56,
+        "file": "IMG_0319.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "note": "The page CLOSES with an instruction, not chant text: the Sīluddesapāṭha is for bhikkhus only, sāmaṇeras stop and do not chant it, and once the bhikkhus have finished, a sāmaṇera chants the introductory verse to the ten training rules. That next chant is on page 57.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "การสวด สีลุทเทสะปาฐะ นี้ สวดเฉพาะภิกษุ สามเณรให้หยุดเสียไม่ต้องสวด เมื่อภิกษุสวด สีลุทเทสะปาฐะ จบแล้ว สามเณรสวด สามเณรสิกขาต่อไป ตามระเบียบดังนี้ สามเณรรูปหนึ่ง สวดบทขัด สิกขาบท 10 คือ คำเชิญเป็นทำนองสรภัญญวิธี หยุดตามจุดลูกน้ำดังนี้.",
+            "english": "This Sīluddesapāṭha is chanted by bhikkhus only; sāmaṇeras are to stop and not chant it. When the bhikkhus have finished the Sīluddesapāṭha, the sāmaṇeras go on to chant the Sāmaṇerasikkhā, in this order: one sāmaṇera chants the introductory verse to the ten training rules, that is, the invitation in the sarabhañña manner, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "buddhamangala-gatha",
+      "continuation_of": "buddhamangala-gatha",
+      "working_notes": {
+        "invitation": "absent on this page — the invitation was printed in the rubric above the chant on page 55 and is recorded there.",
+        "units": "Five, numbered 8-12, carrying on from page 55's verse 7. Verse 8 completes the two-column setting; verses 9-12 are one long line each in a single centred column, a closing stanza in a different metre from the eight-direction list above it.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0319.PNG (page 56), Thai script, the top of the page. The chant ends here with a printed colophon, so the ‼ CONTINUES marker page 55 left on it comes off."
+      },
+      "closing": {
+        "pali": "พุทธะมังคะละคาถา นิฏฐิตา",
+        "pali_roman": "Buddhamaṅgalagāthā niṭṭhitā",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here end the Auspicious Verses of the Buddha."
+      },
+      "verses": [
+        {
+          "number": 8,
+          "page": 56,
+          "pali": "เอเตสัง อานุภาเวนะ สัพพะโสตถี ภะวันตุ โน.",
+          "pali_roman": "Etesaṃ ānubhāvena sabbasotthī bhavantu no.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and by their power, may every blessing be ours."
+        },
+        {
+          "number": 9,
+          "pali": "อิจเจวะมัจจันตะนะมัสสะเนยยัง,",
+          "pali_roman": "Iccevamaccantanamassaneyyaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thus, that which is supremely worthy of salutation —"
+        },
+        {
+          "number": 10,
+          "pali": "นะมัสสะมาโน ระตะนัตตะยัง ยัง,",
+          "pali_roman": "Namassamāno ratanattayaṃ yaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "saluting that Triple Gem,"
+        },
+        {
+          "number": 11,
+          "pali": "ปุญญาภิสันทัง วิปุลัง อะลัตถัง,",
+          "pali_roman": "Puññābhisandaṃ vipulaṃ alatthaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "I have gained an abundant stream of merit;"
+        },
+        {
+          "number": 12,
+          "pali": "ตัสสานุภาเวนะ หะตันตะราโย.",
+          "pali_roman": "Tassānubhāvena hatantarāyo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "by the power of that, may my obstacles be destroyed."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สัพพะโสตถี",
+          "pali_roman": "sabbasotthī",
+          "meaning": "every blessing, every safety — the word behind the Thai สวัสดี"
+        },
+        {
+          "pali": "ปุญญาภิสันทัง",
+          "pali_roman": "puññābhisandaṃ",
+          "meaning": "a stream or inflow of merit; merit pictured as water gathering rather than as a total"
+        },
+        {
+          "pali": "หะตันตะราโย",
+          "pali_roman": "hatantarāyo",
+          "meaning": "with obstacles destroyed — hata, struck down, plus antarāya, an obstacle"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0319.PNG",
+          "issue": "The book prints the colophon พุทธะมังคะละคาถา นิฏฐิตา centred and bold beneath the chant. It is recorded in the closing field, NOT as a verse, so the app sets it as a colophon rather than numbering it as a line to be chanted. No full stop is printed after นิฏฐิตา."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0319.PNG",
+          "issue": "Verses 9-12 are a closing stanza in a different metre from the eight-direction list above, and they read as one sentence across all four lines. The English is split to follow the Pali line by line, so no single line's gloss stands on its own — worth reading as a whole."
+        },
+        {
+          "verse": 11,
+          "file": "IMG_0319.PNG",
+          "issue": "ปุญญาภิสันทัง transliterated puññābhisandaṃ, reading นท as nd as Thai-script Pali does. Standard editions agree, but it is worth one look because the Thai spelling could also be read santaṃ."
+        }
+      ]
+    },
+    {
+      "id": "siluddesa-patho",
+      "working_notes": {
+        "invitation": "printed inside the prose rubric above the title — หันทะ มะยัง สีลุทเทสะปาฐัง ภะณามะ เส. — and recorded there, not in the invitation field, so the page shows it once.",
+        "units": "Nine, divided at the printed commas and full stops, as the rubric directs (หยุดตามจุดลูกน้ำ). The passage is run-on justified prose, so layout is prose and the app reflows it as a block.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0319.PNG (page 56), Thai script, single column, the middle of the page. No page turn inside it; it begins and ends on this page."
+      },
+      "title_thai": "สีลุทเทสะปาโฐ",
+      "title_pali": "Sīluddesapāṭho",
+      "title_roman": "",
+      "title_english": "The Summary of Virtue",
+      "page_start": 56,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "closing": {
+        "pali": "สีลุทเทสะปาโฐ นิฏฐิโต",
+        "pali_roman": "Sīluddesapāṭho niṭṭhito",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here ends the Summary of Virtue."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ภาสิตะมิทัง เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ,",
+          "pali_roman": "Bhāsitamidaṃ tena bhagavatā jānatā passatā arahatā sammāsambuddhena,",
+          "thai": "",
+          "paiboon": "",
+          "english": "This was said by the Blessed One, who knows and sees, the Worthy One, perfectly enlightened by himself:"
+        },
+        {
+          "number": 2,
+          "pali": "สัมปันนะสีลา ภิกขะเว วิหะระถะ สัมปันนะปาฏิโมกขา,",
+          "pali_roman": "Sampannasīlā bhikkhave viharatha sampannapāṭimokkhā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"Dwell, monks, accomplished in virtue, accomplished in the Pāṭimokkha;"
+        },
+        {
+          "number": 3,
+          "pali": "ปาฏิโมกขะสังวะระสังวุตา วิหะระถะ อาจาระโคจะระสัมปันนา,",
+          "pali_roman": "Pāṭimokkhasaṃvarasaṃvutā viharatha ācāragocarasampannā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "dwell restrained by the restraint of the Pāṭimokkha, accomplished in conduct and in resort;"
+        },
+        {
+          "number": 4,
+          "pali": "อะณุมัตเตสุ วัชเชสุ ภะยะทัสสาวี สะมาทายะ สิกขะถะ สิกขาปะเทสูติ.",
+          "pali_roman": "Aṇumattesu vajjesu bhayadassāvī samādāya sikkhatha sikkhāpadesūti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "seeing danger in the slightest fault, train yourselves in the rules of training you have undertaken.\""
+        },
+        {
+          "number": 5,
+          "pali": "ตัส์มาติหัมเหหิ สิกขิตัพพัง,",
+          "pali_roman": "Tasmātihamhehi sikkhitabbaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Therefore we should train ourselves thus:"
+        },
+        {
+          "number": 6,
+          "pali": "สัมปันนะสีลา วิหะริสสามะ สัมปันนะปาฏิโมกขา,",
+          "pali_roman": "Sampannasīlā viharissāma sampannapāṭimokkhā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "\"We shall dwell accomplished in virtue, accomplished in the Pāṭimokkha;"
+        },
+        {
+          "number": 7,
+          "pali": "ปาฏิโมกขะสังวะระสังวุตา วิหะริสสามะ อาจาระโคจะระสัมปันนา,",
+          "pali_roman": "Pāṭimokkhasaṃvarasaṃvutā viharissāma ācāragocarasampannā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "we shall dwell restrained by the restraint of the Pāṭimokkha, accomplished in conduct and in resort;"
+        },
+        {
+          "number": 8,
+          "pali": "อะณุมัตเตสุ วัชเชสุ ภะยะทัสสาวี สะมาทายะ สิกขิสสามะ สิกขาปะเทสูติ.",
+          "pali_roman": "Aṇumattesu vajjesu bhayadassāvī samādāya sikkhissāma sikkhāpadesūti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "seeing danger in the slightest fault, we shall train ourselves in the rules of training we have undertaken.\""
+        },
+        {
+          "number": 9,
+          "pali": "เอวัญหิ โน สิกขิตัพพัง.",
+          "pali_roman": "Evañhi no sikkhitabbaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thus indeed should we train ourselves."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สัมปันนะสีลา",
+          "pali_roman": "sampannasīlā",
+          "meaning": "accomplished in virtue — not merely keeping the precepts but complete in them"
+        },
+        {
+          "pali": "ปาฏิโมกขะสังวะระสังวุตา",
+          "pali_roman": "pāṭimokkhasaṃvarasaṃvutā",
+          "meaning": "restrained by the restraint of the Pāṭimokkha, the code of monastic training rules"
+        },
+        {
+          "pali": "อาจาระโคจะระสัมปันนา",
+          "pali_roman": "ācāragocarasampannā",
+          "meaning": "complete in conduct and in resort — how one behaves, and where one goes and among whom"
+        },
+        {
+          "pali": "อะณุมัตเตสุ วัชเชสุ ภะยะทัสสาวี",
+          "pali_roman": "aṇumattesu vajjesu bhayadassāvī",
+          "meaning": "seeing danger in the slightest fault — the attitude the training asks for, rather than a list of what is forbidden"
+        },
+        {
+          "pali": "สิกขาปะเทสุ",
+          "pali_roman": "sikkhāpadesu",
+          "meaning": "in the training rules; sikkhā, training, plus pada, a step or item"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0319.PNG",
+          "issue": "The book prints the colophon สีลุทเทสะปาโฐ นิฏฐิโต centred and bold beneath the chant. Recorded in the closing field, not as a verse. No full stop is printed after นิฏฐิโต."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0319.PNG",
+          "issue": "สัมมา-สัมพุทเธนะ is printed broken across a line with a hyphen. Rejoined to สัมมาสัมพุทเธนะ, as the rule for typesetter's line breaks requires. The hyphen is not reproduced."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0319.PNG",
+          "issue": "ปาฏิโมกขะ-สังวะระสังวุตา is printed broken across a line with a hyphen. Rejoined to ปาฏิโมกขะสังวะระสังวุตา. The hyphen is not reproduced."
+        },
+        {
+          "verse": 5,
+          "file": "IMG_0319.PNG",
+          "issue": "ตัส์มาติหัมเหหิ carries the same small mark over the ส as ส์วากขาโต and กัล์ยาโณ elsewhere in this stretch, and is transliterated tasmātihamhehi. Part of the open question about which of the two marks this printer uses."
+        },
+        {
+          "verse": 2,
+          "file": "IMG_0319.PNG",
+          "issue": "Verses 2-4 are the Buddha's words quoted, and verses 6-8 are the same sentence turned into the community's own resolve — sikkhatha (train yourselves) becoming sikkhissāma (we shall train). The English uses quotation marks to mark the two speeches, which the book does not print. If Josh would rather the page carried no punctuation the book does not have, they can come out."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "buddhamangala-gatha",
+      "siluddesa-patho"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 57,
+    "resume_from_file": "IMG_0320.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. Page 56 prints no Thai translation for either chant, so every paiboon value is the empty string.",
+    "pali_untouched": "Confirmed. Every pali value is the page's Thai script as printed; every pali_roman is IAST; no pali value has been run through Paiboon+.",
+    "page_scan": "agrees — three rows for one page, in the order they appear down it. The third row carries no chant text, only the closing instruction, which is what a blocks-only row is for. Every verse falls in exactly one row.",
+    "notes": "One page, two chants, and BOTH of them end on it — the first page in this stretch where nothing carries over, so the batch leaves no ‼ CONTINUES behind. Two printed colophons, พุทธะมังคะละคาถา นิฏฐิตา and สีลุทเทสะปาโฐ นิฏฐิโต, both recorded in the closing field rather than as chanted verses, which is the fault eight of the pre-page chants still have. สีลุทเทสะปาโฐ is the second chant in a row with a printed title, so the stretch of untitled chants that ran from page 52 has ended. Three prose blocks, one of which is the note that this passage is for bhikkhus only. Nothing on the page was left unaccounted for: page number, two chants, two colophons, three instruction blocks, no footnotes."
+  }
+}
