@@ -1927,3 +1927,48 @@ It settled whether (ลากเสียง) stays inline, and how the Abhidham
 - *Roughly how much was accepted as-is vs engineered on:* Direction, standard and review — I wrote none of the transcription. The clearest evidence for why review matters is that all three bugs shipped green: 473 tests passed with a verse present twice, and seventeen printed lines were missing from live pages with nothing anywhere reporting it.
 
 ---
+
+## 2026-08-11 — Seven pages, and the difference between a verse and a colophon
+
+**TL;DR:**
+- Pages 52–58 in; the book runs 1–58 unbroken — 88 chants, 1,155 verses.
+- Eight chants were inviting readers to chant "here end the verses on…" as a numbered line.
+- My own migration script deleted five real verses before I caught it. The fix is now a test.
+
+**What I built**
+
+Seven pages. Pages 52–55 are one shape repeated three times, once per member of
+the Triple Gem: a recollection as run-on prose, then an *abhigīti* hymn.
+Page 55 gives the first printed title since 51 — พุทธะมังคะละคาถา, homage to the
+arahants of the eight directions. Page 56 turns to สีลุทเทสะปาโฐ, and 57–58 hand
+the service from the bhikkhus to the sāmaṇeras: the ten training rules, then the
+ten grounds for expulsion.
+
+Then the fidelity pass.
+
+**Why I did it this way**
+
+One sentence set the standard and then decided everything:
+
+> "fix any issues so app chanting pages are exactly same as book pages then continue adding batches."
+
+That is what sent me back to seven photographs rather than trusting the data. And
+earlier, on punctuation the book does not print:
+
+> "Keep app chanting pages exactly same as book pages."
+
+**How We Did It**
+
+1. One page per batch: photograph, batch file, validate, dry-run, apply, test, render against the photo, commit, push.
+2. Audited every chant for a colophon held as a chanted verse — found eight.
+3. Re-read all seven pages to place each colophon on the page the book prints it on.
+4. Wrote the migration, checked the verse numbers, found it had deleted the wrong lines, reverted.
+5. Rewrote it anchored on text instead of position, then pinned the cause with a test.
+
+**Engineering Contribution**
+
+- *Decisions made:* Pabbatopama's colophon goes on page 31, not 30 — its verses run to the foot of 30, and only the photograph could say. A footnote marker on page 57 with no footnote, and a footnote on page 58 with no marker, were left **unpaired** despite obviously belonging together: footnote numbers restart every page, and a false citation in a book about the Dhamma costs more than a gap. On page 56 I had used quotation marks to mark the Buddha's speech; the book prints none, so they came out — the shift from "train yourselves" to "we shall train" is the Pali's own signal and needed no help.
+- *Improvements made to generated code:* Two `apply_batch` bugs that misreported rather than miswrote — `COMPLETED FROM p?` read a key that deliberately does not exist, and the `CONTINUES` count was taken around the removal only, so a batch that closed one chant and opened another reported `1 -> 0` of a file still holding one. Both now correct, and the second was verified in anger on page 55. Made the page-9 batch readable by the tool for the first time; the pin that recorded the defect became the general claim that no batch on disk is unreadable. Normalised 27 verse dicts that led with `'section'` where 1,128 lead with `'number'` — two shapes in one file, provably identical output, now one shape and a test.
+- *Roughly how much was accepted as-is vs engineered on:* I wrote none of the transcription. The evidence for why review matters is my own migration: it imported cleanly, and left the numbering reading 21, 22, 24 with a chanted line gone. Nothing failed — I caught it by reading the numbers before rendering anything.
+
+---
