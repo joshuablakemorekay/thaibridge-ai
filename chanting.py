@@ -15361,17 +15361,18 @@ CHANTS = [
             # ‼ CHECK [IMG_0319.PNG]: Verses 2-4 are the Buddha's words
             #   quoted, and verses 6-8 are the same sentence turned into the
             #   community's own resolve — sikkhatha (train yourselves)
-            #   becoming sikkhissāma (we shall train). The English uses
-            #   quotation marks to mark the two speeches, which the book does
-            #   not print. If Josh would rather the page carried no
-            #   punctuation the book does not have, they can come out.
+            #   becoming sikkhissāma (we shall train). The English first
+            #   carried quotation marks to mark the two speeches; Josh's call
+            #   was that the page must not show punctuation the book does not
+            #   print, so they were REMOVED on 2026-08-11. The shift from
+            #   train yourselves to we shall train now marks the speaker.
             {
                 'number': 2,
                 'pali': 'สัมปันนะสีลา ภิกขะเว วิหะระถะ สัมปันนะปาฏิโมกขา,',
                 'pali_roman': 'Sampannasīlā bhikkhave viharatha sampannapāṭimokkhā,',
                 'thai': '',
                 'paiboon': '',
-                'english': '"Dwell, monks, accomplished in virtue, accomplished in the Pāṭimokkha;',
+                'english': 'Dwell, monks, accomplished in virtue, accomplished in the Pāṭimokkha;',
             },
             # ‼ CHECK [IMG_0319.PNG]: ปาฏิโมกขะ-สังวะระสังวุตา is printed
             #   broken across a line with a hyphen. Rejoined to
@@ -15390,7 +15391,7 @@ CHANTS = [
                 'pali_roman': 'Aṇumattesu vajjesu bhayadassāvī samādāya sikkhatha sikkhāpadesūti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'seeing danger in the slightest fault, train yourselves in the rules of training you have undertaken."',
+                'english': 'seeing danger in the slightest fault, train yourselves in the rules of training you have undertaken.',
             },
             # ‼ CHECK [IMG_0319.PNG]: ตัส์มาติหัมเหหิ carries the same small
             #   mark over the ส as ส์วากขาโต and กัล์ยาโณ elsewhere in this
@@ -15410,7 +15411,7 @@ CHANTS = [
                 'pali_roman': 'Sampannasīlā viharissāma sampannapāṭimokkhā,',
                 'thai': '',
                 'paiboon': '',
-                'english': '"We shall dwell accomplished in virtue, accomplished in the Pāṭimokkha;',
+                'english': 'We shall dwell accomplished in virtue, accomplished in the Pāṭimokkha;',
             },
             {
                 'number': 7,
@@ -15426,7 +15427,7 @@ CHANTS = [
                 'pali_roman': 'Aṇumattesu vajjesu bhayadassāvī samādāya sikkhissāma sikkhāpadesūti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'seeing danger in the slightest fault, we shall train ourselves in the rules of training we have undertaken."',
+                'english': 'seeing danger in the slightest fault, we shall train ourselves in the rules of training we have undertaken.',
             },
             {
                 'number': 9,
