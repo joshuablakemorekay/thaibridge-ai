@@ -1,0 +1,469 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 3,
+    "manifest": [
+      "bot-khat-nasananga",
+      "nasananga-10-sikkhabot",
+      "bot-khat-thanthakam"
+    ],
+    "pages": [
+      {
+        "page": 58,
+        "file": "IMG_0321.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "bot-khat-nasananga",
+        "verses": "1-5",
+        "starts_here": true,
+        "note": "The top of the page, under its own printed title บทขัดนาสะนังคะ — which, unlike the two titles on page 57, carries no number. Two columns of one pāda each, five rows, read across. Verse 5 is broken by a hyphen ACROSS THE COLUMN GUTTER: the left cell ends นาสะนะ- and the right cell begins การะณังคัง."
+      },
+      {
+        "page": 58,
+        "file": "IMG_0321.PNG",
+        "script": "thai",
+        "columns": "1 then 2 then 1",
+        "chant": "nasananga-10-sikkhabot",
+        "verses": "1-16",
+        "starts_here": true,
+        "note": "The middle of the page, under its own printed title นาสะนังคะ 10 สิกขาบท. Verses 1-4 are run-on prose in a single column; verses 5-14 are the ten grounds set as a two-column LIST, one ground per cell; verses 15-16 return to run-on prose in a single column.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "สามเณรผู้เป็นหัวหน้าขึ้นต้นบทว่า อะนุญญาสิ โข นอกนั้นรับต่อ โส ภะคะวา ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.",
+            "english": "The senior sāmaṇera begins the passage with Anuññāsi kho, and the rest take it up from So bhagavā and so on, going on together, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      },
+      {
+        "page": 58,
+        "file": "IMG_0321.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "bot-khat-thanthakam",
+        "verses": "1-2",
+        "starts_here": true,
+        "note": "The foot of the page, under its own printed title บทขัดทัณฑะกรรม. Two columns, and only two rows fit before the page ends, so the chant runs on to page 59. Verse 2 is broken by a hyphen across the column gutter, as verse 5 of the first chant was: the left cell ends เจ- and the right cell begins วะ. The page also carries the only footnote in this stretch, under a rule at the foot.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "สามเณรอีกรูปหนึ่งขัดบททัณฑกรรม 5 ต่อไป หยุดตามจุดลูกน้ำ ดังนี้.",
+            "english": "Another sāmaṇera goes on to chant the introductory verse to the five penalties, pausing at each comma, thus.",
+            "english_unverified": true
+          },
+          {
+            "type": "footnote",
+            "marker": "1",
+            "thai": "วิ.มหา. 4/170",
+            "english": ""
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "bot-khat-nasananga",
+      "working_notes": {
+        "invitation": "absent here. The invitation belongs to the instruction at the foot of page 57, which sets this chant up, and is recorded there.",
+        "units": "Five, each one printed row read across two columns, left cell then right cell, joined with a single space. The last line is itself an invitation to recite the chant that follows.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0321.PNG (page 58), Thai script, the top of the page. Two columns throughout. The chant begins and ends on this page."
+      },
+      "title_thai": "บทขัดนาสะนังคะ",
+      "title_pali": "",
+      "title_roman": "bòt-kàt naa-sà-naŋ-ká",
+      "title_english": "The Introductory Verse to the Grounds of Expulsion",
+      "page_start": 58,
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "เตนะ โข ปะนะ สะมะเยนะ สัก์ยะปุตโต ปะนันทะสะ,",
+          "pali_roman": "Tena kho pana samayena sakyaputto panandassa,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now at that time, belonging to Upananda the Sakyan son,"
+        },
+        {
+          "number": 2,
+          "pali": "สามะเณโร กัณฏะโก นามะ กัณฏะกิง ภิกขุนิง ทุสิ.",
+          "pali_roman": "Sāmaṇero kaṇṭako nāma kaṇṭakiṃ bhikkhuniṃ dusi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "a novice named Kaṇṭaka seduced the nun Kaṇṭakī."
+        },
+        {
+          "number": 3,
+          "pali": "ญัต์วา ตะมัตถัง ภะคะวา ภิกขูนัญเญวะ สันติกา,",
+          "pali_roman": "Ñatvā tamatthaṃ bhagavā bhikkhūnaññeva santikā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Blessed One, having learnt of that matter from the monks themselves,"
+        },
+        {
+          "number": 4,
+          "pali": "อะนุญญาสิ โข นาเสตุง สามะเณรัง ทะสังคิกัง,",
+          "pali_roman": "Anuññāsi kho nāsetuṃ sāmaṇeraṃ dasaṅgikaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "allowed the expulsion of a novice on ten grounds;"
+        },
+        {
+          "number": 5,
+          "pali": "สามะเณรานัง นาสะนะการะณังคัง ภะณามะ เส.",
+          "pali_roman": "Sāmaṇerānaṃ nāsanakāraṇaṅgaṃ bhaṇāma se.",
+          "thai": "",
+          "paiboon": "",
+          "english": "let us now recite the grounds that cause a novice's expulsion."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "นาเสตุง",
+          "pali_roman": "nāsetuṃ",
+          "meaning": "to expel, to make disappear from the community — the formal act, not a punishment within it"
+        },
+        {
+          "pali": "ทะสังคิกัง",
+          "pali_roman": "dasaṅgikaṃ",
+          "meaning": "having ten factors; the novice is expelled for any one of the ten, not for all together"
+        },
+        {
+          "pali": "สันติกา",
+          "pali_roman": "santikā",
+          "meaning": "from the presence of, from among — here, learning of the matter from the monks directly"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 5,
+          "file": "IMG_0321.PNG",
+          "issue": "The word นาสะนะการะณังคัง is broken by a hyphen ACROSS THE COLUMN GUTTER — the left cell ends นาสะนะ- and the right cell begins การะณังคัง. Rejoined and the hyphen dropped, as the rule for typesetter's line breaks requires. Worth naming because a hyphen at a column edge is easy to read as a word ending rather than a break."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0321.PNG",
+          "issue": "The book prints สัก์ยะปุตโต ปะนันทะสะ as two words, transliterated sakyaputto panandassa. The canonical passage (Vin Mahāvagga) has sakyaputtassa upanandassa — \"of Upananda the Sakyan son\" — so the printed form looks like a compression of sakyaputt' upanandassa. Reproduced AS PRINTED and not corrected; the English follows the canonical sense, which is a reading and not a transcription."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0321.PNG",
+          "issue": "TWO-COLUMN READING, please confirm. The whole chant is set in two columns and has been read ACROSS the row. The first pairing made is verse 1: left cell เตนะ โข ปะนะ สะมะเยนะ + right cell สัก์ยะปุตโต ปะนันทะสะ."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0321.PNG",
+          "issue": "This title carries NO number, where both titles on page 57 end in an Arabic 10 and the chant below this one is นาสะนังคะ 10 สิกขาบท. Reproduced as printed — the book is not consistent about numbering these headings."
+        },
+        {
+          "verse": 2,
+          "file": "IMG_0321.PNG",
+          "issue": "ทุสิ is transliterated dusi, following the page. Canonical editions have dūsesi. Kept as printed."
+        }
+      ]
+    },
+    {
+      "id": "nasananga-10-sikkhabot",
+      "working_notes": {
+        "invitation": "printed inside the prose rubric above the title, and recorded there rather than in the invitation field. The chant is also invited by the last line of บทขัดนาสะนังคะ above it.",
+        "units": "Sixteen. Verses 1-4 divide the opening sentence at its printed commas; verses 5-14 are the ten grounds, one to a cell; verses 15-16 divide the closing sentence the same way as the opening.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0321.PNG (page 58), Thai script, the middle of the page. The column setting changes twice inside the chant. It begins and ends on this page."
+      },
+      "title_thai": "นาสะนังคะ 10 สิกขาบท",
+      "title_pali": "",
+      "title_roman": "naa-sà-naŋ-ká sìp sìk-kǎa-bòt",
+      "title_english": "The Ten Grounds for Expelling a Novice",
+      "page_start": 58,
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "อะนุญญาสิ โข,",
+          "pali_roman": "Anuññāsi kho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "He allowed —"
+        },
+        {
+          "number": 2,
+          "pali": "โส ภะคะวา,",
+          "pali_roman": "So bhagavā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that Blessed One —"
+        },
+        {
+          "number": 3,
+          "pali": "ทะสะหิ อังเคหิ สะมันนาคะตัง สามะเณรัง นาเสตุง,",
+          "pali_roman": "Dasahi aṅgehi samannāgataṃ sāmaṇeraṃ nāsetuṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that a novice possessed of ten factors be expelled."
+        },
+        {
+          "number": 4,
+          "pali": "กะตะเมหิ ทะสะหิ,",
+          "pali_roman": "Katamehi dasahi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Which ten?"
+        },
+        {
+          "number": 5,
+          "pali": "ปาณาติปาตี โหติ,",
+          "pali_roman": "Pāṇātipātī hoti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "He is one who kills living beings,"
+        },
+        {
+          "number": 6,
+          "pali": "อะทินนาทายี โหติ,",
+          "pali_roman": "Adinnādāyī hoti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he is one who takes what is not given,"
+        },
+        {
+          "number": 7,
+          "pali": "อะพ์รัห์มะจารี โหติ,",
+          "pali_roman": "Abrahmacārī hoti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he is one who is unchaste,"
+        },
+        {
+          "number": 8,
+          "pali": "มุสาวาที โหติ,",
+          "pali_roman": "Musāvādī hoti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he is one who speaks falsely,"
+        },
+        {
+          "number": 9,
+          "pali": "มัชชะปายี โหติ,",
+          "pali_roman": "Majjapāyī hoti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he is one who drinks intoxicants,"
+        },
+        {
+          "number": 10,
+          "pali": "พุทธัสสะ อะวัณณัง ภาสะติ,",
+          "pali_roman": "Buddhassa avaṇṇaṃ bhāsati,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he speaks in dispraise of the Buddha,"
+        },
+        {
+          "number": 11,
+          "pali": "ธัมมัสสะ อะวัณณัง ภาสะติ,",
+          "pali_roman": "Dhammassa avaṇṇaṃ bhāsati,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he speaks in dispraise of the Dhamma,"
+        },
+        {
+          "number": 12,
+          "pali": "สังฆัสสะ อะวัณณัง ภาสะติ,",
+          "pali_roman": "Saṅghassa avaṇṇaṃ bhāsati,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he speaks in dispraise of the Sangha,"
+        },
+        {
+          "number": 13,
+          "pali": "มิจฉาทิฏฐิโก โหติ,",
+          "pali_roman": "Micchādiṭṭhiko hoti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he is of wrong view,"
+        },
+        {
+          "number": 14,
+          "pali": "ภิกขุนี ทูสะโก โหติ.",
+          "pali_roman": "Bhikkhunī dūsako hoti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "he is a seducer of nuns."
+        },
+        {
+          "number": 15,
+          "pali": "อะนุญญาสิ โข โส ภะคะวา,",
+          "pali_roman": "Anuññāsi kho so bhagavā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "That Blessed One allowed"
+        },
+        {
+          "number": 16,
+          "pali": "อิเมหิ ทะสะหิ อังเคหิ สะมันนาคะตัง สามะเณรัง นาเสตุนติ.",
+          "pali_roman": "Imehi dasahi aṅgehi samannāgataṃ sāmaṇeraṃ nāsetunti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "that a novice possessed of these ten factors be expelled."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "อะวัณณัง ภาสะติ",
+          "pali_roman": "avaṇṇaṃ bhāsati",
+          "meaning": "speaks in dispraise; avaṇṇa is the opposite of vaṇṇa, praise or good repute"
+        },
+        {
+          "pali": "มิจฉาทิฏฐิโก",
+          "pali_roman": "micchādiṭṭhiko",
+          "meaning": "one of wrong view — here the view that denies kamma and its fruit, not merely a mistaken opinion"
+        },
+        {
+          "pali": "สะมันนาคะตัง",
+          "pali_roman": "samannāgataṃ",
+          "meaning": "possessed of, endowed with — the standard formula for listing what makes a case"
+        },
+        {
+          "pali": "กะตะเมหิ ทะสะหิ",
+          "pali_roman": "katamehi dasahi",
+          "meaning": "\"which ten?\" — the question the canon asks itself before every numbered list"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0321.PNG",
+          "issue": "TWO-COLUMN LIST, please confirm — and note this is the OTHER kind of two-column setting. Verses 5-14 are one ground PER CELL, not one line read across two cells, so each cell is its own verse. Read left cell then right cell down the rows, which gives the ten in their canonical order: killing, taking what is not given, unchastity, false speech, drink, then dispraise of Buddha, Dhamma and Sangha, wrong view, seducing a nun. Both readings would give the same sequence here, so the check is on the verse DIVISION rather than the order."
+        },
+        {
+          "verse": 14,
+          "file": "IMG_0321.PNG",
+          "issue": "The book prints ภิกขุนี ทูสะโก as TWO words with a space, so it is transliterated Bhikkhunī dūsako. Canonical editions write it as one compound, bhikkhunīdūsako. Kept as printed."
+        },
+        {
+          "verse": 15,
+          "file": "IMG_0321.PNG",
+          "issue": "The closing sentence prints อะนุญญาสิ โข โส ภะคะวา with NO comma after โข, where the opening sentence at verse 1 prints อะนุญญาสิ โข, with one. Both reproduced as printed, which is why verse 15 is one unit and verses 1-2 are two."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0321.PNG",
+          "issue": "LAYOUT is mixed three ways and the layout key is deliberately left OFF, as on page 57's สิกขาบท 10. Prose, then a two-column list, then prose again. No single layout value can describe it, and leaving the key off keeps the ten grounds as ten lines, which is the part that matters most."
+        }
+      ]
+    },
+    {
+      "id": "bot-khat-thanthakam",
+      "continues": true,
+      "working_notes": {
+        "invitation": "printed inside the prose rubric above the title, and recorded there.",
+        "units": "Two on this page, each one printed row read across two columns, left cell then right cell.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0321.PNG (page 58), Thai script, the foot of the page. Two columns. Only two rows fit before the page ends, so the chant runs on to page 59, which has not been read yet."
+      },
+      "title_thai": "บทขัดทัณฑะกรรม",
+      "title_pali": "",
+      "title_roman": "bòt-kàt tan-tá-gam",
+      "title_english": "The Introductory Verse to the Penalties",
+      "page_start": 58,
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "เตนะ โข ปะนะ สะมะเยนะ สามะเณรา อะคาระวา,",
+          "pali_roman": "Tena kho pana samayena sāmaṇerā agāravā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now at that time the novices were without respect,"
+        },
+        {
+          "number": 2,
+          "pali": "ภิกขูสุ อัปปะติสสา เจวะ อะสะภาคะวุตติกา.",
+          "pali_roman": "Bhikkhūsu appatissā ceva asabhāgavuttikā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "undeferential towards the monks, and behaving unbecomingly towards them."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "อะคาระวา",
+          "pali_roman": "agāravā",
+          "meaning": "without respect; gārava is the weight or seriousness one gives to what deserves it"
+        },
+        {
+          "pali": "อัปปะติสสา",
+          "pali_roman": "appatissā",
+          "meaning": "undeferential, not amenable to correction"
+        },
+        {
+          "pali": "ทัณฑะกรรม",
+          "pali_roman": "daṇḍakamma",
+          "meaning": "a penalty imposed on a novice — a corrective within the community, short of expulsion"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 2,
+          "file": "IMG_0321.PNG",
+          "issue": "The word เจวะ is broken by a hyphen ACROSS THE COLUMN GUTTER — the left cell ends เจ- and the right cell begins วะ. Rejoined and the hyphen dropped. Second time on this page, after verse 5 of บทขัดนาสะนังคะ."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0321.PNG",
+          "issue": "TWO-COLUMN READING, please confirm. The first pairing made is verse 1: left cell เตนะ โข ปะนะ สะมะเยนะ + right cell สามะเณรา อะคาระวา."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0321.PNG",
+          "issue": "The chant is cut off by the end of the page after two rows, so it is marked as continuing. The rubric above it says the next chant is ทัณฑกรรม 5, the five penalties, so this introductory verse should run a few rows more on page 59 before that chant begins."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "bot-khat-nasananga",
+      "nasananga-10-sikkhabot"
+    ],
+    "not_started": [],
+    "continues": [
+      "bot-khat-thanthakam"
+    ],
+    "resume_from_page": 59,
+    "resume_from_file": "IMG_0322.PNG",
+    "resume_from": "bot-khat-thanthakam",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. The only paiboon values are the three title_roman fields; no verse carries a Thai translation, so every verse paiboon is the empty string. ง is written ŋ in naa-sà-naŋ-ká.",
+    "pali_untouched": "Confirmed. Every pali value is the page's Thai script as printed; every pali_roman is IAST; no pali value has been run through Paiboon+.",
+    "page_scan": "agrees — three rows for one page, in the order they appear down it, and the verses in each row are exactly the verses in that entry. No verse is claimed twice and none is orphaned.",
+    "notes": "PAGE 57'S OPEN QUESTION IS HALF ANSWERED. Page 58 carries a footnote under a rule at its foot, 1. วิ.มหา. 4/170, a canonical citation. But there is NO marker anywhere in page 58's body — every line end was checked at 3x — and page 57 had a marker ๑ with no footnote. The two almost certainly belong together, with the note carried over to the next page's foot, but footnote numbers restart on every page and the rule is not to pair across pages, so they are NOT paired. The footnote is recorded as a page-58 block, source_printed is left off every chant on both pages, and Josh can settle it with the book in one look. Otherwise: three chants, two of them complete, and the same hyphen-across-the-column-gutter trick twice on one page."
+  }
+}
