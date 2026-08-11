@@ -15439,6 +15439,270 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0320.PNG]: The 10 in the title บทขัดสิกขาบท 10 is part
+        #   of the TITLE — the ten training rules — and not a chant number.
+        #   The book's chant numbers are printed before the title and followed
+        #   by a full stop; this one comes after the title words with no full
+        #   stop. No book_number recorded.
+        # ‼ CHECK [IMG_0320.PNG]: TWO-COLUMN READING, please confirm. The
+        #   whole chant is set in two columns and has been read ACROSS the
+        #   row. The first pairing made is verse 1: left cell สัมพุทโธ โลเก
+        #   อุปปันโน + right cell มะหาการุณิโก มุน.
+        'id': 'bot-khat-sikkhabot-10',
+        'title_thai': 'บทขัดสิกขาบท 10',
+        'title_pali': '',
+        'title_roman': 'bòt kàt sìk-kǎa-bòt sìp',
+        'title_english': 'The Introductory Verse to the Ten Training Rules',
+        'page_start': 57,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0320.PNG]: The book prints มุน, not มุนี. Checked
+            #   at 6x: the น carries no vowel sign at all, and the ณิ of
+            #   การุณิโก two words earlier on the same line shows its ิ
+            #   perfectly clearly at that size, so the absence is real and not
+            #   lost in the printing. Standard editions have munī, "the Sage".
+            #   Reproduced AS PRINTED and transliterated mun to match. This
+            #   looks like a slip in this edition, but only the physical book
+            #   can say.
+            {
+                'number': 1,
+                'pali': 'สัมพุทโธ โลเก อุปปันโน มะหาการุณิโก มุน,',
+                'pali_roman': 'Sambuddho loke uppanno mahākāruṇiko mun,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Perfectly Awakened One, the greatly compassionate Sage, arose in the world,',
+            },
+            {
+                'number': 2,
+                'pali': 'ธัมมะจักกัง ปะวัตเตต์วา โลเก อัปปะฏิวัตติยัง.',
+                'pali_roman': 'Dhammacakkaṃ pavattetvā loke appaṭivattiyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and set rolling in the world the Wheel of Dhamma that none can turn back.',
+            },
+            {
+                'number': 3,
+                'pali': 'โลกัสสะ สังคะหัง กาตุง จะริต์วา โลกะจาริกัง,',
+                'pali_roman': 'Lokassa saṅgahaṃ kātuṃ caritvā lokacārikaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To show kindness to the world he walked the world on his journeys,',
+            },
+            {
+                'number': 4,
+                'pali': 'ติวิธัง โลเก สัทธัมมัง สัมมะเทวะ ปะวัตติยัง.',
+                'pali_roman': 'Tividhaṃ loke saddhammaṃ sammadeva pavattiyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'setting the threefold true Dhamma rightly going in the world.',
+            },
+            {
+                'number': 5,
+                'pali': 'อะนุปุพเพนะ สาวัตถิง ปัต์วา เชตะวะเน วะสัง,',
+                'pali_roman': 'Anupubbena sāvatthiṃ patvā jetavane vasaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Coming in due course to Sāvatthī and dwelling in the Jeta Grove,',
+            },
+            # ‼ CHECK [IMG_0320.PNG]: จิตตัง กะถานุสิกขิตุง is printed as one
+            #   word from กะถา onward and the syntax of the whole row is not
+            #   straightforward. The English given is a working reading —
+            #   "having regard for the novices' minds, and for how they were
+            #   to train" — taking กะถานุสิกขิตุง as kathā + anusikkhituṃ.
+            #   This line is worth Josh's eye more than any other in the
+            #   chant.
+            {
+                'number': 6,
+                'pali': 'สามะเณรานัง นิสสายะ จิตตัง กะถานุสิกขิตุง.',
+                'pali_roman': 'Sāmaṇerānaṃ nissāya cittaṃ kathānusikkhituṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "and having regard for the novices' minds, and for how they were to train,",
+            },
+            {
+                'number': 7,
+                'pali': 'อะนุญญาสิ ทะสะ สิกขา สามะเณเรหิ สิกขิตุง,',
+                'pali_roman': 'Anuññāsi dasa sikkhā sāmaṇerehi sikkhituṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he allowed ten trainings for novices to train in;',
+            },
+            {
+                'number': 8,
+                'pali': 'สามะเณรานัง ทะสังคัง สิกขาปะทัง ภะณามะ เส.',
+                'pali_roman': 'Sāmaṇerānaṃ dasaṅgaṃ sikkhāpadaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let us now recite the tenfold training rule of the novices.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0320.PNG]: The 10 in the title สิกขาบท 10 is part of
+        #   the TITLE, not a chant number, on the same reasoning as the chant
+        #   above. No book_number recorded.
+        # ‼ CHECK [IMG_0320.PNG]: LAYOUT is mixed and the layout key is
+        #   deliberately left OFF. Verses 1-4 are run-on justified prose;
+        #   verses 5-14 are set one precept to a line. Setting layout to prose
+        #   would flow the ten precepts into a block, which is further from
+        #   the page than leaving them as lines, so the lines win. The only
+        #   loss is that verses 1-4 show as four lines where the book runs
+        #   them together. If Josh wants that exact, the app needs a layout
+        #   that can change part way through a chant.
+        'id': 'sikkhabot-10',
+        'title_thai': 'สิกขาบท 10',
+        'title_pali': '',
+        'title_roman': 'sìk-kǎa-bòt sìp',
+        'title_english': 'The Ten Training Rules',
+        'page_start': 57,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'อะนุญญาสิ โข,',
+                'pali_roman': 'Anuññāsi kho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He allowed —',
+            },
+            {
+                'number': 2,
+                'pali': 'โส ภะคะวา,',
+                'pali_roman': 'So bhagavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that Blessed One —',
+            },
+            {
+                'number': 3,
+                'pali': 'สามะเณรานัง ทะสะ สิกขาปะทานิ,',
+                'pali_roman': 'Sāmaṇerānaṃ dasa sikkhāpadāni,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'ten training rules for novices,',
+            },
+            # ‼ CHECK [IMG_0320.PNG]: The book prints a COLON at the end of
+            #   this verse, not a comma or a full stop — เตสุ จะ สามะเณเรหิ
+            #   สิกขิตุง: — introducing the list. Reproduced as printed.
+            {
+                'number': 4,
+                'pali': 'เตสุ จะ สามะเณเรหิ สิกขิตุง:',
+                'pali_roman': 'Tesu ca sāmaṇerehi sikkhituṃ:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and that novices should train in them:',
+            },
+            {
+                'number': 5,
+                'pali': 'ปาณาติปาตา เวระมะณี,',
+                'pali_roman': 'Pāṇātipātā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from killing living beings,',
+            },
+            {
+                'number': 6,
+                'pali': 'อะทินนาทานา เวระมะณี,',
+                'pali_roman': 'Adinnādānā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from taking what is not given,',
+            },
+            {
+                'number': 7,
+                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี,',
+                'pali_roman': 'Abrahmacariyā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from unchaste conduct,',
+            },
+            {
+                'number': 8,
+                'pali': 'มุสาวาทา เวระมะณี,',
+                'pali_roman': 'Musāvādā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from false speech,',
+            },
+            {
+                'number': 9,
+                'pali': 'สุราเมระยะมัชชะปะมาทัฏฐานา เวระมะณี,',
+                'pali_roman': 'Surāmerayamajjapamādaṭṭhānā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from liquor, wine and intoxicants, which are the ground of heedlessness,',
+            },
+            {
+                'number': 10,
+                'pali': 'วิกาละโภชะนา เวระมะณี,',
+                'pali_roman': 'Vikālabhojanā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from eating at the wrong time,',
+            },
+            {
+                'number': 11,
+                'pali': 'นัจจะคีตะวาทิตะวิสูกะทัสสะนา เวระมะณี,',
+                'pali_roman': 'Naccagītavāditavisūkadassanā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from dancing, singing, music and unseemly shows,',
+            },
+            {
+                'number': 12,
+                'pali': 'มาลาคันธะวิเลปะนะธาระณะมัณฑะนะวิภูสะนัฏฐานา เวระมะณี,',
+                'pali_roman': 'Mālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from wearing garlands, scents and cosmetics, and from adorning and beautifying the body,',
+            },
+            {
+                'number': 13,
+                'pali': 'อุจจาสะยะนะมะหาสะยะนา เวระมะณี,',
+                'pali_roman': 'Uccāsayanamahāsayanā veramaṇī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from high and large beds,',
+            },
+            # ‼ CHECK [IMG_0320.PNG]: A superscript ๑ is printed after
+            #   เวระมะณีติ. — and there is NO footnote anywhere on page 57.
+            #   The foot of the page holds only the instruction line, with
+            #   clear white paper below it. Footnote numbers restart on every
+            #   page, so the note is not to be matched to one on another page.
+            #   source_printed is deliberately left out. Please check whether
+            #   the book prints the note on page 58 or whether the marker is
+            #   an artefact of this edition.
+            {
+                'number': 14,
+                'pali': 'ชาตะรูปะระชะตะปะฏิคคะหะณา เวระมะณีติ.',
+                'pali_roman': 'Jātarūparajatapaṭiggahaṇā veramaṇīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'refraining from accepting gold and silver.',
+            },
+        ],
+    },
 ]
 
 
@@ -17125,6 +17389,34 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'การสวด สีลุทเทสะปาฐะ นี้ สวดเฉพาะภิกษุ สามเณรให้หยุดเสียไม่ต้องสวด เมื่อภิกษุสวด สีลุทเทสะปาฐะ จบแล้ว สามเณรสวด สามเณรสิกขาต่อไป ตามระเบียบดังนี้ สามเณรรูปหนึ่ง สวดบทขัด สิกขาบท 10 คือ คำเชิญเป็นทำนองสรภัญญวิธี หยุดตามจุดลูกน้ำดังนี้.',
                 'english': 'This Sīluddesapāṭha is chanted by bhikkhus only; sāmaṇeras are to stop and not chant it. When the bhikkhus have finished the Sīluddesapāṭha, the sāmaṇeras go on to chant the Sāmaṇerasikkhā, in this order: one sāmaṇera chants the introductory verse to the ten training rules, that is, the invitation in the sarabhañña manner, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 57 ────────────────────────────────────────────────────
+    # Written from batch-057-057.json.
+    {
+        'page': 57,
+        'after': 'bot-khat-sikkhabot-10',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'สามเณรผู้เป็นหัวหน้าขึ้นต้นบทว่า อะนุญญาสิ โข นอกนั้นรับต่อ โส ภะคะวา ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.',
+                'english': 'The senior sāmaṇera begins the passage with Anuññāsi kho, and the rest take it up from So bhagavā and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 57 ────────────────────────────────────────────────────
+    # Written from batch-057-057.json.
+    {
+        'page': 57,
+        'after': 'sikkhabot-10',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'สามเณรอีกรูปหนึ่งขัดบทนาสะนังคะ 10 ต่อไป หยุดตามจุดลูกน้ำดังนี้.',
+                'english': 'Another sāmaṇera goes on to chant the introductory verse to the ten grounds of expulsion, pausing at each comma, thus.',
                 'english_unverified': True,
             },
         ],
