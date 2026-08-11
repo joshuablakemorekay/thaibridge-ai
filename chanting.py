@@ -1279,18 +1279,14 @@ CHANTS = [
                     "quenched in the world."
                 ),
             },
-            {
-                'number': 18,
-                'pali': 'ติลักขะณาทิคาถา นิฏฐิตา.',
-                'pali_roman': 'tilakkhaṇādigāthā niṭṭhitā.',
-                'thai': '',
-                'paiboon': '',
-                'english': (
-                    "The verses on the three characteristics and others are "
-                    "ended."
-                ),
-            },
         ],
+        'closing': {
+            'pali': 'ติลักขะณาทิคาถา นิฏฐิตา.',
+            'pali_roman': 'tilakkhaṇādigāthā niṭṭhitā.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses on the Three Characteristics and the rest.',
+        },
     },
 
     {
@@ -2069,15 +2065,14 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'Therefore guard them, being heedful.',
             },
-            {
-                'number': 17,
-                'pali': 'เทวะตาภิสัมมันตะนะคาถา นิฏฐิตา.',
-                'pali_roman': 'devatābhisammantanagāthā niṭṭhitā.',
-                'thai': '',
-                'paiboon': '',
-                'english': 'The verses of address to the devas are ended.',
-            },
         ],
+        'closing': {
+            'pali': 'เทวะตาภิสัมมันตะนะคาถา นิฏฐิตา.',
+            'pali_roman': 'devatābhisammantanagāthā niṭṭhitā.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses of Address to the Devas.',
+        },
     },
 
     {
@@ -2696,17 +2691,15 @@ CHANTS = [
             #          where the heading reads เมตตานิสังสะสุตตัง with ต. The
             #          same title is spelled two ways on one page.
             #          Transliterated faithfully as sudtaṃ; the heading form is
-            #          the one used in title_thai.
-            {
-                'section': 'นิฏฐิตัง: The Closing Formula',
-                'number': 24,
-                'pali': 'เมตตานิสังสะสุดตัง นิฏฐิตัง.',
-                'pali_roman': 'mettānisaṃsasudtaṃ niṭṭhitaṃ.',
-                'thai': '',
-                'paiboon': '',
-                'english': 'The discourse on the benefits of loving-kindness is ended.',
-            },
+            #          the one used in title_thai.,
         ],
+        'closing': {
+            'pali': 'เมตตานิสังสะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'mettānisaṃsasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on the Benefits of Loving-Kindness.',
+        },
     },
 
     {
@@ -3100,18 +3093,14 @@ CHANTS = [
                     "betray his friends."
                 ),
             },
-            {
-                'number': 21,
-                'pali': 'เมตตานิสังสะคาถา นิฏฐิตา.',
-                'pali_roman': 'mettānisaṃsagāthā niṭṭhitā.',
-                'thai': '',
-                'paiboon': '',
-                'english': (
-                    "The verses on the benefits of loving-kindness are "
-                    "ended."
-                ),
-            },
         ],
+        'closing': {
+            'pali': 'เมตตานิสังสะคาถา นิฏฐิตา.',
+            'pali_roman': 'mettānisaṃsagāthā niṭṭhitā.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses on the Benefits of Loving-Kindness.',
+        },
     },
 
     {
@@ -4157,19 +4146,15 @@ CHANTS = [
             },
             # ‼ CHECK: The closing formula ends with no full stop, where every
             #          other นิฏฐิตา line in the book has one. Reproduced as
-            #          pasted.
-            {
-                'section': 'นิฏฐิตา: The Closing Formula',
-                'number': 12,
-                'pali': 'ปัพพะโตปะมะคาถา นิฏฐิตา',
-                'pali_roman': 'pabbatopamagāthā niṭṭhitā',
-                'thai': '',
-                'paiboon': '',
-                'english': (
-                    "The verses on the simile of the mountain are ended."
-                ),
-            },
+            #          pasted.,
         ],
+        'closing': {
+            'pali': 'ปัพพะโตปะมะคาถา นิฏฐิตา',
+            'pali_roman': 'pabbatopamagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses on the Simile of the Mountain.',
+        },
     },
 
     {
@@ -4379,17 +4364,15 @@ CHANTS = [
                 ),
             },
             # ‼ CHECK: The closing formula ends with no full stop, as did the
-            #          นิฏฐิตา line of chant 14. Reproduced as transcribed.
-            {
-                'section': 'นิฏฐิตา: The Closing Formula',
-                'number': 7,
-                'pali': 'อะริยะธะนะคาถา นิฏฐิตา',
-                'pali_roman': 'ariyadhanagāthā niṭṭhitā',
-                'thai': '',
-                'paiboon': '',
-                'english': 'The verses on the noble wealth are ended.',
-            },
+            #          นิฏฐิตา line of chant 14. Reproduced as transcribed.,
         ],
+        'closing': {
+            'pali': 'อะริยะธะนะคาถา นิฏฐิตา',
+            'pali_roman': 'ariyadhanagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses on the Noble Treasure.',
+        },
     },
 
     {
@@ -5043,19 +5026,15 @@ CHANTS = [
             },
             # ‼ CHECK: The closing formula ends with no full stop, matching the
             #          นิฏฐิตา lines of the Pabbatopamagāthā and the
-            #          Ariyadhanagāthā. Reproduced as pasted.
-            {
-                'section': 'นิฏฐิตา: The Closing Formula',
-                'number': 13,
-                'pali': 'พุทธะอุทานะคาถา นิฏฐิตา',
-                'pali_roman': 'buddhaudānagāthā niṭṭhitā',
-                'thai': '',
-                'paiboon': '',
-                'english': (
-                    "The verses of the Buddha's utterance of joy are ended."
-                ),
-            },
+            #          Ariyadhanagāthā. Reproduced as pasted.,
         ],
+        'closing': {
+            'pali': 'พุทธะอุทานะคาถา นิฏฐิตา',
+            'pali_roman': 'buddhaudānagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': "Here end the Verses of the Buddha's Utterance.",
+        },
     },
 
     {
@@ -5291,19 +5270,15 @@ CHANTS = [
                 ),
             },
             # ‼ CHECK: The closing formula ends with no full stop, as with
-            #          chants 14 and 15. Reproduced as pasted.
-            {
-                'section': 'นิฏฐิตา: The Closing Formula',
-                'number': 9,
-                'pali': 'ภัทเทกะรัตตะคาถา นิฏฐิตา',
-                'pali_roman': 'bhaddekarattagāthā niṭṭhitā',
-                'thai': '',
-                'paiboon': '',
-                'english': (
-                    "The verses on the auspicious single night are ended."
-                ),
-            },
+            #          chants 14 and 15. Reproduced as pasted.,
         ],
+        'closing': {
+            'pali': 'ภัทเทกะรัตตะคาถา นิฏฐิตา',
+            'pali_roman': 'bhaddekarattagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses on the Auspicious Single Night.',
+        },
     },
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
