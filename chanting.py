@@ -14365,7 +14365,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
         # ‼ CHECK [IMG_0315.PNG]: TWO-COLUMN READING, please confirm. From
         #   verse 5 the page is set in two columns and has been read ACROSS
         #   the row, not down the column. The first pairing made is verse 5:
@@ -14482,6 +14481,267 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Buddha I surrender this body and this life,',
+            },
+            # ‼ CHECK [IMG_0316.PNG]: The book prints an alternative INSIDE
+            #   the line, in brackets: วันทันโตหัง (ตีหัง). It is not a
+            #   footnote and has no marker, so it is reproduced inline exactly
+            #   as printed rather than put in the variants field. It looks
+            #   like the feminine form — vandantī'haṃ for a woman where
+            #   vandanto'haṃ is for a man — but nothing on the page says so,
+            #   and Josh should confirm what the brackets are offering before
+            #   anything is built on it.
+            {
+                'number': 10,
+                'page': 53,
+                'pali': 'วันทันโตหัง (ตีหัง) จะริสสามิ พุทธัสเสวะ สุโพธิตัง.',
+                'pali_roman': 'Vandantohaṃ (tīhaṃ) carissāmi buddhasseva subodhitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Revering him, I shall walk on by the Buddha's own true awakening.",
+            },
+            {
+                'number': 11,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For me there is no other refuge; the Buddha is my refuge, the best of them.',
+            },
+            {
+                'number': 12,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน.',
+                'pali_roman': 'Etena saccavajjena vaḍḍheyyaṃ satthusāsane.',
+                'thai': '',
+                'paiboon': '',
+                'english': "By the speaking of this truth, may I grow in the Teacher's dispensation.",
+            },
+            {
+                'number': 13,
+                'pali': 'พุทธัง เม วันทะมาเนนะ ยัง ปุญญัง ปะสุตัง อิธะ',
+                'pali_roman': 'Buddhaṃ me vandamānena yaṃ puññaṃ pasutaṃ idha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever merit I have gained here in revering the Buddha —',
+            },
+            # ‼ CHECK [IMG_0316.PNG]: The rubric
+            #   หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง ดังนี้. is printed between
+            #   verse 14 and verse 15, inside the chant. It is carried on
+            #   verse 14 as its rubric, which the template renders under that
+            #   line — the same way page 1 handles (กราบพร้อมกัน). A page
+            #   block could not be used: those can only sit between whole
+            #   chants.
+            {
+                'number': 14,
+                'rubric': 'หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง ดังนี้.',
+                'pali': 'สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.',
+                'pali_roman': 'Sabbepi antarāyā me māhesuṃ tassa tejasā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of it, may all obstacles for me come to nothing.',
+            },
+            # ‼ CHECK [IMG_0316.PNG]: Verses 15-18 are the same four lines the
+            #   app already holds on page 14 as kham-kho-khama-phra-
+            #   rattanatrai verses 1-4, but page 53 prints a COMMA at the end
+            #   of each of the first three and page 14's entry has none. Both
+            #   are entered as their page prints them. Worth one look at page
+            #   14 in the book to see whether the difference is the book's or
+            #   the app's.
+            {
+                'number': 15,
+                'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา,',
+                'pali_roman': 'Kāyena vācāya va cetasā vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By body, by speech, or by mind,',
+            },
+            {
+                'number': 16,
+                'pali': 'พุทเธ กุกัมมัง ปะกะตัง มะยา ยัง,',
+                'pali_roman': 'Buddhe kukammaṃ pakataṃ mayā yaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever wrong has been done by me towards the Buddha —',
+            },
+            {
+                'number': 17,
+                'pali': 'พุทโธ ปะฏิคคัณหะตุ อัจจะยันตัง,',
+                'pali_roman': 'Buddho paṭiggaṇhatu accayantaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the Buddha accept that transgression,',
+            },
+            {
+                'number': 18,
+                'pali': 'กาลันตะเร สังวะริตุง วะ พุทเธ.',
+                'pali_roman': 'Kālantare saṃvarituṃ va buddhe.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that in time to come I may be restrained towards the Buddha.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0316.PNG]: The book prints NO title for this passage.
+        #   The id and the English title come from the name the rubric above
+        #   it gives it — พระธรรมคุณ, the qualities of the Dhamma. Same
+        #   treatment as page 52's พระพุทธคุณ.
+        # ‼ CHECK [IMG_0316.PNG]: This is not the same text as the app's
+        #   dhammabhithuti (page 2), which opens โย โส ส๎วากขาโต and runs to
+        #   ตะมะหัง ธัมมัง สิระสา นะมามิ. Page 53's passage is the plain
+        #   recollection of the Dhamma's qualities, with no โย โส and no
+        #   closing salutation. Entered as its own chant.
+        'id': 'phra-thammakhun',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Qualities of the Dhamma',
+        'page_start': 53,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0316.PNG]: ส์วากขาโต again, and this is now the
+            #   FOURTH place the app holds this word: plain สวากขาโต on page
+            #   1, ส์วากขาโต here and on page 51, and ส๎วากขาโต with U+0E4E in
+            #   dhammabhithuti on page 2. Page 53 prints the same small mark
+            #   over the ส that page 51 does, so it is entered the same way.
+            #   One look at the book settles all four at once, and this is a
+            #   chanted line.
+            {
+                'number': 1,
+                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto bhagavatā dhammo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Dhamma is well proclaimed by the Blessed One,',
+            },
+            {
+                'number': 2,
+                'pali': 'สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก,',
+                'pali_roman': 'Sandiṭṭhiko akāliko ehipassiko,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'visible here and now, timeless, inviting all to come and see,',
+            },
+            {
+                'number': 3,
+                'pali': 'โอปะนะยิโก ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.',
+                'pali_roman': 'Opanayiko paccattaṃ veditabbo viññūhīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'leading onwards, to be known each for himself by the wise.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0316.PNG]: TWO-COLUMN READING, please confirm. From
+        #   verse 5 the page is set in two columns and has been read ACROSS
+        #   the row. The first pairing made is verse 5: left cell ธัมโม โย
+        #   สัพพะปาณีนัง + right cell สะระณัง เขมะมุตตะมัง.
+        # ‼ CHECK [IMG_0316.PNG]: The book prints NO title for this chant. The
+        #   rubric above it names it ธัมมาภิคีติ (Dhammābhigīti), and that is
+        #   where the id comes from. Same treatment as พุทธาภิคีติ on page 52.
+        # ‼ CHECK [IMG_0316.PNG]: The chant's invitation หันทะ มะยัง
+        #   ธัมมาภิคีติง กะโรมะ เส. is printed inside the prose rubric, not as
+        #   a line of its own. Kept in the page block only, so it prints once.
+        #   Same decision as พุทธาภิคีติ on page 52 — if Josh wants it in the
+        #   invitation field as well, that is a choice, not a fix.
+        'id': 'dhammabhigiti',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Hymn to the Dhamma',
+        'page_start': 53,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0316.PNG]: ส์วากขาตะตาทิ- is transliterated
+            #   svākkhātatādi-, following the mark the book prints over the ส.
+            #   Same open question as ส์วากขาโต above.
+            {
+                'number': 1,
+                'pali': 'ส์วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย',
+                'pali_roman': 'Svākkhātatādiguṇayogavasena seyyo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Better than all else, by reason of its being well proclaimed and the other qualities that go with it,',
+            },
+            {
+                'number': 2,
+                'pali': 'โย มัคคะปากะปะริยัตติวิโมกขะเภโท',
+                'pali_roman': 'Yo maggapākapariyattivimokkhabhedo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'divided into path, fruit, scripture and release,',
+            },
+            # ‼ CHECK [IMG_0316.PNG]: ตะทะธาริธารี is an unusual compound and
+            #   the English given for it — "holds up those who hold to it" —
+            #   is a working reading, not a settled one. Standard editions
+            #   have tadadhāridhārī with the same sense, but this line is
+            #   worth Josh's eye more than most on the page.
+            {
+                'number': 3,
+                'pali': 'ธัมโม กุโลกะปะตะนา ตะทะธาริธารี',
+                'pali_roman': 'Dhammo kulokapatanā tadadhāridhārī',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Dhamma, which holds up those who hold to it and keeps them from falling into the wretched worlds —',
+            },
+            {
+                'number': 4,
+                'pali': 'วันทามะหัง ตะมะหะรัง วะระธัมมะเมตัง.',
+                'pali_roman': 'Vandāmahaṃ tamaharaṃ varadhammametaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that excellent Dhamma, dispeller of darkness, I salute with my head.',
+            },
+            {
+                'number': 5,
+                'pali': 'ธัมโม โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง',
+                'pali_roman': 'Dhammo yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Dhamma, which is for all breathing things the refuge, safe and supreme,',
+            },
+            {
+                'number': 6,
+                'pali': 'ทุติยานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง.',
+                'pali_roman': 'Dutiyānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the second of the objects of recollection — it I revere with my head.',
+            },
+            # ‼ CHECK [IMG_0316.PNG]: The last line on the page. It is a
+            #   COMPLETE two-pāda line, not a cut one, but ends without
+            #   punctuation because the sentence finishes on page 54. The
+            #   chant is marked as continuing; page 54's batch adds verse 8
+            #   onward and does NOT complete verse 7.
+            {
+                'number': 7,
+                'pali': 'ธัมมัสสาหัส์มิ ทาโส วะ ธัมโม เม สามิกิสสะโร',
+                'pali_roman': 'Dhammassāhasmi dāso va dhammo me sāmikissaro',
+                'thai': '',
+                'paiboon': '',
+                'english': "I am the Dhamma's servant; the Dhamma is my lord and master.",
             },
         ],
     },
@@ -16067,6 +16327,34 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'หยุดระลึกถึงพระพุทธคุณสักครู่น้อยหนึ่ง แล้วประธานกล่าวเชิญชวนสวดสรรเสริญพระพุทธคุณต่อไปว่า หันทะ มะยัง พุทธาภิคีติง กะโรมะ เส. รองประธานขึ้นต้นบทว่า พุทธ์วา นอกนั้นรับต่อ ระหันตะวะระตาทิคุณาภิยุตโต ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.',
                 'english': 'Pause a little while to recollect the qualities of the Buddha. Then the leader gives the invitation to go on and chant the praise of those qualities, saying: Handa mayaṃ buddhābhigītiṃ karoma se. The deputy leader begins the passage with Buddhvā, and the rest take it up from Rahantavaratādiguṇābhiyutto and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 53 ────────────────────────────────────────────────────
+    # Written from batch-053-053.json.
+    {
+        'page': 53,
+        'after': 'buddhabhigiti',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'เงยขึ้นพร้อมกัน แล้วประธานกล่าวเชิญชวนสวดพระธรรมคุณ ว่า หันทะ มะยัง ธัมมานุสสะตินะยัง กะโรมะ เส. รองประธานขึ้นต้นบทว่า ส์วากขาโต นอกนั้นรับต่อ ภะคะวะตา ธัมโม ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.',
+                'english': 'Raise the head, together. Then the leader gives the invitation to chant the qualities of the Dhamma, saying: Handa mayaṃ dhammānussatinayaṃ karoma se. The deputy leader begins the passage with Svākkhāto, and the rest take it up from Bhagavatā dhammo and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 53 ────────────────────────────────────────────────────
+    # Written from batch-053-053.json.
+    {
+        'page': 53,
+        'after': 'phra-thammakhun',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'หยุดระลึกถึงพระธรรมคุณสักครู่น้อยหนึ่ง แล้วประธานกล่าวเชิญชวนสวดสรรเสริญพระธรรมคุณต่อไปว่า หันทะ มะยัง ธัมมาภิคีติง กะโรมะ เส. รองประธานขึ้นต้นบทว่า ส์วากขาตะตา นอกนั้นรับต่อ ทิคุณะโยคะวะเสนะ เสยโย ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.',
+                'english': 'Pause a little while to recollect the qualities of the Dhamma. Then the leader gives the invitation to go on and chant the praise of those qualities, saying: Handa mayaṃ dhammābhigītiṃ karoma se. The deputy leader begins the passage with Svākkhātatā, and the rest take it up from Diguṇayogavasena seyyo and so on, going on together, pausing at each comma, thus.',
                 'english_unverified': True,
             },
         ],

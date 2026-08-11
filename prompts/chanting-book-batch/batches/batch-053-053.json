@@ -1,0 +1,449 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 3,
+    "manifest": [
+      "buddhabhigiti",
+      "phra-thammakhun",
+      "dhammabhigiti"
+    ],
+    "pages": [
+      {
+        "page": 53,
+        "file": "IMG_0316.PNG",
+        "script": "thai",
+        "columns": "2 then 1",
+        "chant": "buddhabhigiti",
+        "verses": "10-18",
+        "starts_here": false,
+        "note": "The top of the page finishes พุทธาภิคีติ. Verses 10-14 are two columns of one pāda each, read across the row, carrying straight on from page 52's setting. After verse 14 the book prints a one-line rubric telling the chanters to bow down and drop their voices, and the setting reverts to a single centred column for verses 15-18, the four lines asking the Buddha's pardon. The chant ends here — there is no จบ line."
+      },
+      {
+        "page": 53,
+        "file": "IMG_0316.PNG",
+        "script": "thai",
+        "chant": "phra-thammakhun",
+        "verses": "1-3",
+        "starts_here": true,
+        "note": "The middle of the page. Run-on justified prose, two printed lines, indented at the start like a paragraph, under no title of its own. Single column.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "เงยขึ้นพร้อมกัน แล้วประธานกล่าวเชิญชวนสวดพระธรรมคุณ ว่า หันทะ มะยัง ธัมมานุสสะตินะยัง กะโรมะ เส. รองประธานขึ้นต้นบทว่า ส์วากขาโต นอกนั้นรับต่อ ภะคะวะตา ธัมโม ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.",
+            "english": "Raise the head, together. Then the leader gives the invitation to chant the qualities of the Dhamma, saying: Handa mayaṃ dhammānussatinayaṃ karoma se. The deputy leader begins the passage with Svākkhāto, and the rest take it up from Bhagavatā dhammo and so on, going on together, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      },
+      {
+        "page": 53,
+        "file": "IMG_0316.PNG",
+        "script": "thai",
+        "columns": "1 then 2",
+        "chant": "dhammabhigiti",
+        "verses": "1-7",
+        "starts_here": true,
+        "note": "The foot of the page, set exactly as พุทธาภิคีติ was on page 52 and changing layout in the same place: verses 1-4 one long line each, centred, single column; from verse 5 two columns of one pāda each, read across. No title printed — the rubric above names it ธัมมาภิคีติ. The page ends after verse 7 and the chant runs on to page 54.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "หยุดระลึกถึงพระธรรมคุณสักครู่น้อยหนึ่ง แล้วประธานกล่าวเชิญชวนสวดสรรเสริญพระธรรมคุณต่อไปว่า หันทะ มะยัง ธัมมาภิคีติง กะโรมะ เส. รองประธานขึ้นต้นบทว่า ส์วากขาตะตา นอกนั้นรับต่อ ทิคุณะโยคะวะเสนะ เสยโย ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.",
+            "english": "Pause a little while to recollect the qualities of the Dhamma. Then the leader gives the invitation to go on and chant the praise of those qualities, saying: Handa mayaṃ dhammābhigītiṃ karoma se. The deputy leader begins the passage with Svākkhātatā, and the rest take it up from Diguṇayogavasena seyyo and so on, going on together, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "buddhabhigiti",
+      "continuation_of": "buddhabhigiti",
+      "working_notes": {
+        "invitation": "absent on this page — the invitation was printed in the rubric above the chant on page 52 and is recorded there.",
+        "units": "Nine, numbered 10-18, carrying straight on from page 52's verse 9. Verses 10-14 are two columns read across the row; verses 15-18 are one long line each in a single centred column. The rubric printed between verse 14 and verse 15 is carried on verse 14 as its rubric, because the app can only put a page block between whole chants and this one is printed inside a chant.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0316.PNG (page 53), Thai script, the top half of the page. The chant ends here, so the ‼ CONTINUES marker page 52 left on it comes off."
+      },
+      "verses": [
+        {
+          "number": 10,
+          "page": 53,
+          "pali": "วันทันโตหัง (ตีหัง) จะริสสามิ พุทธัสเสวะ สุโพธิตัง.",
+          "pali_roman": "Vandantohaṃ (tīhaṃ) carissāmi buddhasseva subodhitaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Revering him, I shall walk on by the Buddha's own true awakening."
+        },
+        {
+          "number": 11,
+          "pali": "นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง",
+          "pali_roman": "Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "For me there is no other refuge; the Buddha is my refuge, the best of them."
+        },
+        {
+          "number": 12,
+          "pali": "เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน.",
+          "pali_roman": "Etena saccavajjena vaḍḍheyyaṃ satthusāsane.",
+          "thai": "",
+          "paiboon": "",
+          "english": "By the speaking of this truth, may I grow in the Teacher's dispensation."
+        },
+        {
+          "number": 13,
+          "pali": "พุทธัง เม วันทะมาเนนะ ยัง ปุญญัง ปะสุตัง อิธะ",
+          "pali_roman": "Buddhaṃ me vandamānena yaṃ puññaṃ pasutaṃ idha",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever merit I have gained here in revering the Buddha —"
+        },
+        {
+          "number": 14,
+          "rubric": "หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง ดังนี้.",
+          "pali": "สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.",
+          "pali_roman": "Sabbepi antarāyā me māhesuṃ tassa tejasā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "by the power of it, may all obstacles for me come to nothing."
+        },
+        {
+          "number": 15,
+          "pali": "กาเยนะ วาจายะ วะ เจตะสา วา,",
+          "pali_roman": "Kāyena vācāya va cetasā vā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "By body, by speech, or by mind,"
+        },
+        {
+          "number": 16,
+          "pali": "พุทเธ กุกัมมัง ปะกะตัง มะยา ยัง,",
+          "pali_roman": "Buddhe kukammaṃ pakataṃ mayā yaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "whatever wrong has been done by me towards the Buddha —"
+        },
+        {
+          "number": 17,
+          "pali": "พุทโธ ปะฏิคคัณหะตุ อัจจะยันตัง,",
+          "pali_roman": "Buddho paṭiggaṇhatu accayantaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "may the Buddha accept that transgression,"
+        },
+        {
+          "number": 18,
+          "pali": "กาลันตะเร สังวะริตุง วะ พุทเธ.",
+          "pali_roman": "Kālantare saṃvarituṃ va buddhe.",
+          "thai": "",
+          "paiboon": "",
+          "english": "that in time to come I may be restrained towards the Buddha."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สัจจะวัชเชนะ",
+          "pali_roman": "saccavajjena",
+          "meaning": "by the speaking of truth — an act of truth, where a true statement is made the ground of a blessing"
+        },
+        {
+          "pali": "อันตะรายา",
+          "pali_roman": "antarāyā",
+          "meaning": "obstacles; the things that come between a person and what they are set on"
+        },
+        {
+          "pali": "อัจจะยันตัง",
+          "pali_roman": "accayantaṃ",
+          "meaning": "a transgression, an overstepping — the word used when asking to be pardoned for one"
+        },
+        {
+          "pali": "สังวะริตุง",
+          "pali_roman": "saṃvarituṃ",
+          "meaning": "to be restrained, to keep guard over oneself in future"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 10,
+          "file": "IMG_0316.PNG",
+          "issue": "The book prints an alternative INSIDE the line, in brackets: วันทันโตหัง (ตีหัง). It is not a footnote and has no marker, so it is reproduced inline exactly as printed rather than put in the variants field. It looks like the feminine form — vandantī'haṃ for a woman where vandanto'haṃ is for a man — but nothing on the page says so, and Josh should confirm what the brackets are offering before anything is built on it."
+        },
+        {
+          "verse": 14,
+          "file": "IMG_0316.PNG",
+          "issue": "The rubric หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง ดังนี้. is printed between verse 14 and verse 15, inside the chant. It is carried on verse 14 as its rubric, which the template renders under that line — the same way page 1 handles (กราบพร้อมกัน). A page block could not be used: those can only sit between whole chants."
+        },
+        {
+          "verse": 15,
+          "file": "IMG_0316.PNG",
+          "issue": "Verses 15-18 are the same four lines the app already holds on page 14 as kham-kho-khama-phra-rattanatrai verses 1-4, but page 53 prints a COMMA at the end of each of the first three and page 14's entry has none. Both are entered as their page prints them. Worth one look at page 14 in the book to see whether the difference is the book's or the app's."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0316.PNG",
+          "issue": "TWO-COLUMN READING, please confirm. Verses 10-14 are set in two columns and have been read ACROSS the row. The first pairing made is verse 10: left cell วันทันโตหัง (ตีหัง) จะริสสามิ + right cell พุทธัสเสวะ สุโพธิตัง."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0316.PNG",
+          "issue": "IMG_0316.PNG is a screen capture of the Photos app rather than a clean photograph of the page — it carries a back arrow, a \"4 of 4\" caption and an Adjust/Filters/Rotate/Delete toolbar. The toolbar covers the blank lower margin only: the left column beside it is clear and holds no ink, so the page really does end at ธัมมัสสาหัส์มิ ทาโส วะ. Nothing is hidden, but a clean re-shot would remove the doubt."
+        }
+      ]
+    },
+    {
+      "id": "phra-thammakhun",
+      "working_notes": {
+        "invitation": "printed, but inside the prose rubric above the chant: หันทะ มะยัง ธัมมานุสสะตินะยัง กะโรมะ เส. Recorded in that page block and left out of the invitation field so the page shows it once.",
+        "units": "Three, divided at the printed commas, the same way page 52's พระพุทธคุณ was divided and for the same reason — the rubric tells the chanters to pause at the commas. Run-on justified prose, so layout is prose.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0316.PNG (page 53), Thai script, single column, the middle of the page. No page turn inside it."
+      },
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "The Qualities of the Dhamma",
+      "page_start": 53,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ส์วากขาโต ภะคะวะตา ธัมโม,",
+          "pali_roman": "Svākkhāto bhagavatā dhammo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Dhamma is well proclaimed by the Blessed One,"
+        },
+        {
+          "number": 2,
+          "pali": "สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก,",
+          "pali_roman": "Sandiṭṭhiko akāliko ehipassiko,",
+          "thai": "",
+          "paiboon": "",
+          "english": "visible here and now, timeless, inviting all to come and see,"
+        },
+        {
+          "number": 3,
+          "pali": "โอปะนะยิโก ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.",
+          "pali_roman": "Opanayiko paccattaṃ veditabbo viññūhīti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "leading onwards, to be known each for himself by the wise."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สันทิฏฐิโก",
+          "pali_roman": "sandiṭṭhiko",
+          "meaning": "to be seen here and now, in this life, not somewhere else or afterwards"
+        },
+        {
+          "pali": "อะกาลิโก",
+          "pali_roman": "akāliko",
+          "meaning": "not a matter of time — it does not have to wait to bear its fruit"
+        },
+        {
+          "pali": "เอหิปัสสิโก",
+          "pali_roman": "ehipassiko",
+          "meaning": "\"come and see\" — it invites inspection rather than asking to be believed"
+        },
+        {
+          "pali": "โอปะนะยิโก",
+          "pali_roman": "opanayiko",
+          "meaning": "leading onwards, to be brought into oneself and applied"
+        },
+        {
+          "pali": "ปัจจัตตัง เวทิตัพโพ วิญญูหิ",
+          "pali_roman": "paccattaṃ veditabbo viññūhi",
+          "meaning": "to be known by the wise each for himself — nobody can know it on your behalf"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0316.PNG",
+          "issue": "The book prints NO title for this passage. The id and the English title come from the name the rubric above it gives it — พระธรรมคุณ, the qualities of the Dhamma. Same treatment as page 52's พระพุทธคุณ."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0316.PNG",
+          "issue": "ส์วากขาโต again, and this is now the FOURTH place the app holds this word: plain สวากขาโต on page 1, ส์วากขาโต here and on page 51, and ส๎วากขาโต with U+0E4E in dhammabhithuti on page 2. Page 53 prints the same small mark over the ส that page 51 does, so it is entered the same way. One look at the book settles all four at once, and this is a chanted line."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0316.PNG",
+          "issue": "This is not the same text as the app's dhammabhithuti (page 2), which opens โย โส ส๎วากขาโต and runs to ตะมะหัง ธัมมัง สิระสา นะมามิ. Page 53's passage is the plain recollection of the Dhamma's qualities, with no โย โส and no closing salutation. Entered as its own chant."
+        }
+      ]
+    },
+    {
+      "id": "dhammabhigiti",
+      "continues": true,
+      "working_notes": {
+        "invitation": "printed inside the prose rubric above the chant — หันทะ มะยัง ธัมมาภิคีติง กะโรมะ เส. — and recorded there, not in the invitation field, so the page does not print it twice.",
+        "units": "Seven on this page. Verses 1-4 are one long line each, centred, single column. Verses 5-7 are two columns of one pāda each, read left cell then right cell across the row, joined with a single space.",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "none.",
+        "pages": "IMG_0316.PNG (page 53), Thai script, the foot of the page. The column setting changes at verse 5. The chant runs on to page 54, which has not been read yet."
+      },
+      "title_thai": "",
+      "title_pali": "",
+      "title_roman": "",
+      "title_english": "The Hymn to the Dhamma",
+      "page_start": 53,
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ส์วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย",
+          "pali_roman": "Svākkhātatādiguṇayogavasena seyyo",
+          "thai": "",
+          "paiboon": "",
+          "english": "Better than all else, by reason of its being well proclaimed and the other qualities that go with it,"
+        },
+        {
+          "number": 2,
+          "pali": "โย มัคคะปากะปะริยัตติวิโมกขะเภโท",
+          "pali_roman": "Yo maggapākapariyattivimokkhabhedo",
+          "thai": "",
+          "paiboon": "",
+          "english": "divided into path, fruit, scripture and release,"
+        },
+        {
+          "number": 3,
+          "pali": "ธัมโม กุโลกะปะตะนา ตะทะธาริธารี",
+          "pali_roman": "Dhammo kulokapatanā tadadhāridhārī",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Dhamma, which holds up those who hold to it and keeps them from falling into the wretched worlds —"
+        },
+        {
+          "number": 4,
+          "pali": "วันทามะหัง ตะมะหะรัง วะระธัมมะเมตัง.",
+          "pali_roman": "Vandāmahaṃ tamaharaṃ varadhammametaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "that excellent Dhamma, dispeller of darkness, I salute with my head."
+        },
+        {
+          "number": 5,
+          "pali": "ธัมโม โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง",
+          "pali_roman": "Dhammo yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Dhamma, which is for all breathing things the refuge, safe and supreme,"
+        },
+        {
+          "number": 6,
+          "pali": "ทุติยานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง.",
+          "pali_roman": "Dutiyānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the second of the objects of recollection — it I revere with my head."
+        },
+        {
+          "number": 7,
+          "pali": "ธัมมัสสาหัส์มิ ทาโส วะ ธัมโม เม สามิกิสสะโร",
+          "pali_roman": "Dhammassāhasmi dāso va dhammo me sāmikissaro",
+          "thai": "",
+          "paiboon": "",
+          "english": "I am the Dhamma's servant; the Dhamma is my lord and master."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "มัคคะปากะปะริยัตติวิโมกขะเภโท",
+          "pali_roman": "maggapākapariyattivimokkhabhedo",
+          "meaning": "divided into path, fruit, scripture and release — the four things the word Dhamma covers in this tradition"
+        },
+        {
+          "pali": "กุโลกะปะตะนา",
+          "pali_roman": "kulokapatanā",
+          "meaning": "from falling into the wretched worlds — the low rebirths the Dhamma holds a person back from"
+        },
+        {
+          "pali": "ตะมะหะรัง",
+          "pali_roman": "tamaharaṃ",
+          "meaning": "dispeller of darkness — the darkness meant is not knowing"
+        },
+        {
+          "pali": "ทุติยานุสสะติฏฐานัง",
+          "pali_roman": "dutiyānussatiṭṭhānaṃ",
+          "meaning": "the second object of recollection — the Buddha is the first, the Dhamma the second, the Sangha the third"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0316.PNG",
+          "issue": "TWO-COLUMN READING, please confirm. From verse 5 the page is set in two columns and has been read ACROSS the row. The first pairing made is verse 5: left cell ธัมโม โย สัพพะปาณีนัง + right cell สะระณัง เขมะมุตตะมัง."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0316.PNG",
+          "issue": "The book prints NO title for this chant. The rubric above it names it ธัมมาภิคีติ (Dhammābhigīti), and that is where the id comes from. Same treatment as พุทธาภิคีติ on page 52."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0316.PNG",
+          "issue": "The chant's invitation หันทะ มะยัง ธัมมาภิคีติง กะโรมะ เส. is printed inside the prose rubric, not as a line of its own. Kept in the page block only, so it prints once. Same decision as พุทธาภิคีติ on page 52 — if Josh wants it in the invitation field as well, that is a choice, not a fix."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0316.PNG",
+          "issue": "ส์วากขาตะตาทิ- is transliterated svākkhātatādi-, following the mark the book prints over the ส. Same open question as ส์วากขาโต above."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0316.PNG",
+          "issue": "ตะทะธาริธารี is an unusual compound and the English given for it — \"holds up those who hold to it\" — is a working reading, not a settled one. Standard editions have tadadhāridhārī with the same sense, but this line is worth Josh's eye more than most on the page."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0316.PNG",
+          "issue": "The last line on the page. It is a COMPLETE two-pāda line, not a cut one, but ends without punctuation because the sentence finishes on page 54. The chant is marked as continuing; page 54's batch adds verse 8 onward and does NOT complete verse 7."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "buddhabhigiti",
+      "phra-thammakhun"
+    ],
+    "not_started": [],
+    "continues": [
+      "dhammabhigiti"
+    ],
+    "resume_from_page": 54,
+    "resume_from_file": "IMG_0317.PNG",
+    "resume_from": "dhammabhigiti",
+    "unreadable": [],
+    "diacritic_exceptions": [
+      "va/vā — two different words in the same line, กาเยนะ วาจายะ วะ เจตะสา วา (verse 15). The first วะ is the short enclitic va, \"or\"; the second วา is the long vā, closing the list. The book spells them differently too, and the app already holds the pair this way on page 14."
+    ],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. Page 53 prints no Thai translation for any of its three chants, so every paiboon value is the empty string.",
+    "pali_untouched": "Confirmed. Every pali value is the page's Thai script as printed; every pali_roman is IAST; no pali value has been run through Paiboon+.",
+    "page_scan": "agrees — three rows for one page, in the order they appear down it, and the verses in each row are exactly the verses in that entry. No verse is claimed twice and none is orphaned.",
+    "notes": "One page, one chant finished and two new ones. พุทธาภิคีติ ends here, so its ‼ CONTINUES marker comes off. The page changes column setting twice — two columns to one inside พุทธาภิคีติ, one to two inside ธัมมาภิคีติ — and both changes are named in the page map and in a check. Three rubrics: two are page blocks between chants, and the third is printed INSIDE พุทธาภิคีติ and is carried on verse 14 as a verse rubric, because a page block can only sit between whole chants. Nothing on the page was left unaccounted for: page number, three chants, three rubrics, no footnotes, no service closing. The photograph is a Photos-app screen capture with a toolbar over the lower margin; it was checked and hides nothing."
+  }
+}
