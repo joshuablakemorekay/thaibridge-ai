@@ -11,6 +11,7 @@ carry-forward silently moves every following verse onto the wrong page, and the
 result still looks like perfectly good data. A monk calls out a page, the room
 turns to it, and the person on their phone is reading the wrong words.
 """
+import collections
 import os
 import sys
 
@@ -1412,6 +1413,55 @@ class TestVariantReadingsOnScreen:
         joins the layer toggles and starts reading as a line of the chant."""
         marked = views['page'].split('verse-variant')[1].split('</p>')[0]
         assert 'layer-' not in marked
+
+
+class TestEveryVerseDictIsTheSameShape:
+    """A verse dict must lead with `'number'`, however it was written.
+
+    This is a file-format test rather than a behaviour test, and it earned its
+    place the hard way. Twenty-seven verse dicts were written by hand before
+    `apply_batch` existed and led with `'section'`; the 1,128 the tool has
+    written since lead with `'number'`. Both parse, both render identically, and
+    nothing in the app can tell the difference.
+
+    What could not tell the difference was a migration that matched verse dicts
+    by position — moving eight colophons out of the verses and into `closing`.
+    It assumed `'number'` came first, so on five chants it matched the wrong
+    dict and deleted a real chanted line, leaving the numbering reading
+    21, 22, 24. Nothing failed; it was caught by reading the numbers.
+
+    So the shape is pinned. One order means a tool may key on the first line of
+    a verse dict, and the class of silent, invisible edit that caused goes away.
+    """
+
+    def source(self):
+        here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        with open(os.path.join(here, 'chanting.py'), encoding='utf-8') as f:
+            return f.read()
+
+    def test_no_verse_dict_leads_with_a_key_other_than_number(self):
+        import re
+
+        leads = collections.Counter(
+            re.findall(r"\n            \{\n                '(\w+)':", self.source()))
+        wrong = {k: n for k, n in leads.items() if k not in ('number', 'type')}
+
+        assert not wrong, (
+            "verse dicts leading with something other than 'number': "
+            f"{wrong}. render_verse writes 'number' first, so a dict that "
+            "does not is a second shape in one file — and a tool matching on "
+            "position will silently pick the wrong verse.")
+
+    def test_section_always_follows_the_number_it_belongs_to(self):
+        import re
+
+        src = self.source()
+
+        assert not re.findall(r"'section':[^\n]*\n                'number':", src), \
+            "a 'section' key sits above its own 'number'"
+        assert re.findall(r"'number': \d+,\n                'section':", src), \
+            "no 'section' found after a 'number' at all — the pattern this " \
+            "test relies on has changed, so it is no longer checking anything"
 
 
 class TestEveryDeclaredBlockReachedThePage:

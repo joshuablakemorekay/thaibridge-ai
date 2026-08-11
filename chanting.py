@@ -392,8 +392,8 @@ CHANTS = [
         # the page the way it is chanted. `section` starts a new movement.
         'verses': [
             {
-                'section': 'Reflection on impermanence',
                 'number': 1,
+                'section': 'Reflection on impermanence',
                 'pali': 'สัพเพ สังขารา อะนิจจา',
                 'pali_roman': 'Sabbe saṅkhārā aniccā',
                 'thai': 'สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง, เกิดขึ้นแล้วดับไป มีแล้ว หายไป',
@@ -417,8 +417,8 @@ CHANTS = [
                 'english': 'All things whatsoever, conditioned and unconditioned alike, are not self. They should not be held to as "I", as "mine", or as "my self".',
             },
             {
-                'section': 'Reflection on life and death',
                 'number': 4,
+                'section': 'Reflection on life and death',
                 'pali': 'อะธุวัง ชีวิตัง',
                 'pali_roman': 'Adhuvaṃ jīvitaṃ',
                 'thai': 'ชีวิตเป็นของไม่ยั่งยืน',
@@ -466,8 +466,8 @@ CHANTS = [
                 'english': 'My death is certain.',
             },
             {
-                'section': 'Reflection on the body',
                 'number': 10,
+                'section': 'Reflection on the body',
                 'pali': 'อะจิรัง วะตะ อะยัง กาโย',
                 'pali_roman': 'Aciraṃ vata ayaṃ kāyo',
                 'thai': 'ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย',
@@ -609,8 +609,8 @@ CHANTS = [
             # ‼ CORRECTED: paiboon  nʉ̂aŋ nít → nʉaŋ nít. Follows the เนืองนิจ
             #              correction. Verify against the printed page.
             {
-                'section': 'ขณะรับจีวร: While Receiving the Robe',
                 'number': 1,
+                'section': 'ขณะรับจีวร: While Receiving the Robe',
                 'pali': 'ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,',
                 'pali_roman': 'yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,',
                 'thai': 'สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,',
@@ -699,8 +699,8 @@ CHANTS = [
             # ‼ CHECK: Thai ends with a full stop (เนืองนิจ.) where the
             #          parallel lines end with a comma. Reproduced as pasted.
             {
-                'section': 'ขณะรับบิณฑบาต: While Receiving Almsfood',
                 'number': 10,
+                'section': 'ขณะรับบิณฑบาต: While Receiving Almsfood',
                 'pali': 'ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,',
                 'pali_roman': 'yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,',
                 'thai': 'สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ.',
@@ -784,8 +784,8 @@ CHANTS = [
             #          punctuation at all, unlike the parallel lines at verses
             #          1, 10 and 28. Reproduced as pasted.
             {
-                'section': 'ขณะรับเสนาสนะ: While Receiving Lodging',
                 'number': 19,
+                'section': 'ขณะรับเสนาสนะ: While Receiving Lodging',
                 'pali': 'ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,',
                 'pali_roman': 'yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,',
                 'thai': 'สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ',
@@ -874,8 +874,8 @@ CHANTS = [
             # ‼ CORRECTED: paiboon  nʉ̂aŋ nít → nʉaŋ nít. Follows the เนืองนิจ
             #              correction. Verify against the printed page.
             {
-                'section': 'ขณะรับคิลานเภสัช: While Receiving Medicinal Support',
                 'number': 28,
+                'section': 'ขณะรับคิลานเภสัช: While Receiving Medicinal Support',
                 'pali': 'ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,',
                 'pali_roman': 'yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,',
                 'thai': 'สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,',
@@ -1389,8 +1389,8 @@ CHANTS = [
             #          ends with a comma. The same holds for every Thai line in
             #          this chant except verse 16. Reproduced as pasted.
             {
-                'section': 'อะภิณหะปัจจะเวกขะณะ: The Five Recollections',
                 'number': 1,
+                'section': 'อะภิณหะปัจจะเวกขะณะ: The Five Recollections',
                 'pali': 'ชะราธัมโมมหิ,',
                 'pali_roman': 'jarādhammomhi,',
                 'thai': 'เรามีความแก่เป็นธรรมดา',
@@ -1460,8 +1460,8 @@ CHANTS = [
             #          space before ตน. Reproduced as pasted; the Paiboon+
             #          renders the repetition as kɔ̌ɔŋ kɔ̌ɔŋ.
             {
-                'section': 'กรรม: The Reflection on Kamma',
                 'number': 8,
+                'section': 'กรรม: The Reflection on Kamma',
                 'pali': 'กัมมัสสะโกมหิ,',
                 'pali_roman': 'kammassakomhi,',
                 'thai': 'เราเป็นผู้มีกรรมเป็นของๆ ตน',
@@ -1544,8 +1544,8 @@ CHANTS = [
             #          with a single space; confirm the book prints it as one
             #          line.
             {
-                'section': 'เอวัง: The Closing Exhortation',
                 'number': 16,
+                'section': 'เอวัง: The Closing Exhortation',
                 'pali': 'เอวัง อัมเหหิ อะภิณหัง ปัจจะเวกขิตัพพัง.',
                 'pali_roman': 'evaṃ amhehi abhiṇhaṃ paccavekkhitabbaṃ.',
                 'thai': 'เราทั้งหลาย พึงพิจารณาเนืองๆ อย่างนี้ แล.',
@@ -2456,8 +2456,8 @@ CHANTS = [
 
         'verses': [
             {
-                'section': 'นิทานะ: The Setting',
                 'number': 1,
+                'section': 'นิทานะ: The Setting',
                 'pali': 'เอวัมเม สุตัง,',
                 'pali_roman': 'evamme sutaṃ,',
                 'thai': '',
@@ -2514,8 +2514,8 @@ CHANTS = [
             #          book punctuates after เอตะทะโวจะ, this should become two
             #          verses.
             {
-                'section': 'เอกาทะสานิสังสา: The Eleven Benefits',
                 'number': 7,
+                'section': 'เอกาทะสานิสังสา: The Eleven Benefits',
                 'pali': 'ภะคะวา เอตะทะโวจะ เมตตายะ ภิกขะเว เจโตวิมุตติยา อาเสวิตายะ ภาวิตายะ พะหุลีกะตายะ ยานีกะตายะ วัตถุกะตายะ อะนุฏฐิตายะ ปะริจิตายะ สุสะมารัทธายะ,',
                 'pali_roman': 'bhagavā etadavoca mettāya bhikkhave cetovimuttiyā āsevitāya bhāvitāya bahulīkatāya yānīkatāya vatthukatāya anuṭṭhitāya paricitāya susamāraddhāya,',
                 'thai': '',
@@ -2654,8 +2654,8 @@ CHANTS = [
             #          points to a line-wrapping artefact rather than the
             #          book's spelling. Both reproduced as pasted.
             {
-                'section': 'นิคะมะนะ: The Conclusion',
                 'number': 21,
+                'section': 'นิคะมะนะ: The Conclusion',
                 'pali': 'เมตตายะ ภิกขะเว เจโตวิมุตติยา อาเสวิตายะ ภาวิตายะ พะหุลีกะตายะ ยานีกะตายะ วัตถุกะตายะ อะนุฏฐิตายะ ปะริจิตายะ สุสะมารัทธายะ อิเม เอกา ทะสานิสังสา ปาฏิกังขาติ.',
                 'pali_roman': 'mettāya bhikkhave cetovimuttiyā āsevitāya bhāvitāya bahulīkatāya yānīkatāya vatthukatāya anuṭṭhitāya paricitāya susamāraddhāya ime ekā dasānisaṃsā pāṭikaṅkhāti.',
                 'thai': '',
@@ -3969,8 +3969,8 @@ CHANTS = [
             #          (yathāpi). Transliterated faithfully as yathāpī rather
             #          than substituted.
             {
-                'section': 'เสลา วิปุลา: The Simile of the Mountains',
                 'number': 1,
+                'section': 'เสลา วิปุลา: The Simile of the Mountains',
                 'pali': 'ยะถาปิ เสลา วิปุลา นะภัง อาหัจจะ ปัพพะตา',
                 'pali_roman': 'yathāpi selā vipulā nabhaṃ āhacca pabbatā',
                 'thai': '',
@@ -3996,8 +3996,8 @@ CHANTS = [
                 ),
             },
             {
-                'section': 'ชะรา จะ มัจจุ จะ: Ageing and Death',
                 'number': 3,
+                'section': 'ชะรา จะ มัจจุ จะ: Ageing and Death',
                 'pali': 'เอวัง ชะรา จะ มัจจุ จะ อะธิวัตตันติ ปาณิโน',
                 'pali_roman': 'evaṃ jarā ca maccu ca adhivattanti pāṇino',
                 'thai': '',
@@ -4093,8 +4093,8 @@ CHANTS = [
             #          expected; if not, it may indicate my ordering is wrong.
             #          Worth checking alongside the ordering question.
             {
-                'section': 'สัทธัง นิเวสะเย: Where Faith Is Placed',
                 'number': 8,
+                'section': 'สัทธัง นิเวสะเย: Where Faith Is Placed',
                 'pali': 'ตัส์มา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.',
                 'pali_roman': 'tasmā hi paṇḍito poso sampassaṃ atthamattano.',
                 'thai': '',
@@ -4272,8 +4272,8 @@ CHANTS = [
             #          noted in case the indent carries meaning in the book's
             #          typography.
             {
-                'section': 'อะริยะธะนะ: The Noble Wealth',
                 'number': 1,
+                'section': 'อะริยะธะนะ: The Noble Wealth',
                 'pali': 'ยัสสะ สัทธา ตะถาคะเต อะจะลา สุปะติฏฐิตา',
                 'pali_roman': 'yassa saddhā tathāgate acalā supatiṭṭhitā',
                 'thai': '',
@@ -4331,8 +4331,8 @@ CHANTS = [
             #          14 printed it without. Three settings of one word across
             #          the book; transliterated as tasmā in all cases.
             {
-                'section': 'อะนุยุญเชถะ: The Exhortation',
                 'number': 5,
+                'section': 'อะนุยุญเชถะ: The Exhortation',
                 'pali': 'ตัส์มา สัทธัญจะ สีลัญจะ ปะสาทัง ธัมมะทัสสะนัง',
                 'pali_roman': 'tasmā saddhañca sīlañca pasādaṃ dhammadassanaṃ',
                 'thai': '',
@@ -4493,8 +4493,8 @@ CHANTS = [
             #          ปัพพะโตปะมะคาถา. Taken as the book's chant number and
             #          left out of title_thai.
             {
-                'section': 'สมุทะยะวาระ: The Section on Origination',
                 'number': 1,
+                'section': 'สมุทะยะวาระ: The Section on Origination',
                 'pali': 'อะวิชชาปัจจะยา สังขารา,',
                 'pali_roman': 'avijjāpaccayā saṅkhārā,',
                 'thai': '',
@@ -4621,8 +4621,8 @@ CHANTS = [
             #          values pair each with an English rendering per your
             #          convention.
             {
-                'section': 'นิโรธะวาระ: The Section on Cessation',
                 'number': 13,
+                'section': 'นิโรธะวาระ: The Section on Cessation',
                 'page': 32,
                 'pali': 'อะวิชชายะเต์ววะ อะเสสะวิราคะนิโรธา สังขาระนิโรโธ,',
                 'pali_roman': (
@@ -4898,8 +4898,8 @@ CHANTS = [
             #          Buddhudānagāthā. Following the book rather than the
             #          standard, as with cetiyāni elsewhere in this collection.
             {
-                'section': 'สะเหตุธัมมัง: Things Together With Their Causes',
                 'number': 1,
+                'section': 'สะเหตุธัมมัง: Things Together With Their Causes',
                 'pali': 'ยะทา หะเว ปาตุภะวันติ ธัมมา',
                 'pali_roman': 'yadā have pātubhavanti dhammā',
                 'thai': '',
@@ -4944,8 +4944,8 @@ CHANTS = [
             #          verses 5, 6, 9 and 10 are not printed as they stand
             #          here.
             {
-                'section': 'ขะยัง ปัจจะยานัง: The Destruction of Conditions',
                 'number': 5,
+                'section': 'ขะยัง ปัจจะยานัง: The Destruction of Conditions',
                 'pali': 'ยะทา หะเว ปาตุภะวันติ ธัมมา',
                 'pali_roman': 'yadā have pātubhavanti dhammā',
                 'thai': '',
@@ -4977,8 +4977,8 @@ CHANTS = [
                 'english': 'since he has known the destruction of conditions.',
             },
             {
-                'section': 'มาระเสนัง: The Host of Māra Scattered',
                 'number': 9,
+                'section': 'มาระเสนัง: The Host of Māra Scattered',
                 'pali': 'ยะทา หะเว ปาตุภะวันติ ธัมมา',
                 'pali_roman': 'yadā have pātubhavanti dhammā',
                 'thai': '',
@@ -5154,8 +5154,8 @@ CHANTS = [
             #          Transliterated as nānvāgameyya, following the printed
             #          form.
             {
-                'section': 'อะตีตัง นาน์วาคะเมยยะ: Neither Past nor Future',
                 'number': 1,
+                'section': 'อะตีตัง นาน์วาคะเมยยะ: Neither Past nor Future',
                 'pali': 'อะตีตัง นาน์วาคะเมยยะ นัปปะฏิกังเข อะนาคะตัง',
                 'pali_roman': 'atītaṃ nānvāgameyya nappaṭikaṅkhe anāgataṃ',
                 'thai': '',
@@ -5180,8 +5180,8 @@ CHANTS = [
                 ),
             },
             {
-                'section': 'ปัจจุปปันนัง: Seeing the Present',
                 'number': 3,
+                'section': 'ปัจจุปปันนัง: Seeing the Present',
                 'pali': 'ปัจจุปปันนัญจะ โย ธัมมัง ตัตถะ ตัตถะ วิปัสสะติ',
                 'pali_roman': 'paccuppannañca yo dhammaṃ tattha tattha vipassati',
                 'thai': '',
@@ -5213,8 +5213,8 @@ CHANTS = [
                 ),
             },
             {
-                'section': 'อัชเชวะ กิจจะมาตัปปัง: The Urgency of Today',
                 'number': 5,
+                'section': 'อัชเชวะ กิจจะมาตัปปัง: The Urgency of Today',
                 'pali': 'อัชเชวะ กิจจะมาตัปปัง โก ชัญญา มะระณัง สุเว',
                 'pali_roman': 'ajjeva kiccamātappaṃ ko jaññā maraṇaṃ suve',
                 'thai': '',
@@ -5244,8 +5244,8 @@ CHANTS = [
             #          read วิหารึ (vihāriṃ) with nikkhahit; the printed form
             #          is retained.
             {
-                'section': 'ภัทเทกะรัตโต: The Auspicious Single Night',
                 'number': 7,
+                'section': 'ภัทเทกะรัตโต: The Auspicious Single Night',
                 'pali': 'เอวัง วิหาริมาตาปิง อะโหรัตตะมะตันทิตัง',
                 'pali_roman': 'evaṃ vihārimātāpiṃ ahorattamatanditaṃ',
                 'thai': '',
