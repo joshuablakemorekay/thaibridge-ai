@@ -14123,7 +14123,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
         # ‼ CHECK [IMG_0314.PNG]: The title is taken from the PAGE:
         #   คำเชิญบูชาและสวดนะโมและพระพุทธคุณ. The book's own contents lists
         #   the same item at page ๕๑ as คำเชิญบูชาสวดนะโม และพระพุทธคุณ — no
@@ -14165,13 +14164,324 @@ CHANTS = [
             #   the page prints, and page 52's batch completes verse 2 rather
             #   than adding a verse 3. Its english is a partial gloss for the
             #   same reason.
+                        # ‼ COMPLETED FROM p?: this line was cut by the page break and is
+            #   now whole. Was: โย […]
+            # ‼ CHECK [IMG_0315.PNG]: This verse COMPLETES the partial line
+            #   page 51 recorded as โย […]. The whole line as printed across
+            #   the two pages is โย โน ภะคะวา สัตถา, ยัส์มิง ภะคะวะติ
+            #   พ์รัห์มะจะริยัง จะรามะ, — โย at the foot of 51 and the rest at
+            #   the head of 52. It is entered against verse 2, not as a new
+            #   verse 3, and it stays on page 51 because that is where the
+            #   line starts.
             {
                 'number': 2,
-                'pali': 'โย […]',
-                'pali_roman': 'Yo […]',
+                'pali': 'โย โน ภะคะวา สัตถา, ยัส์มิง ภะคะวะติ พ์รัห์มะจะริยัง จะรามะ,',
+                'pali_roman': 'Yo no bhagavā satthā, yasmiṃ bhagavati brahmacariyaṃ carāma,',
                 'thai': '',
                 'paiboon': '',
-                'english': 'who […]',
+                'english': 'who is our Blessed Teacher, under whom we live the holy life,',
+            },
+            {
+                'number': 3,
+                'page': 52,
+                'pali': 'ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง,',
+                'pali_roman': 'Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to that Blessed One, with his Dhamma and his Sangha,',
+            },
+            {
+                'number': 4,
+                'pali': 'อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยิต์วา',
+                'pali_roman': 'Imehi sakkārehi yathārahaṃ āropitehi abhipūjayitvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having made offering with these gifts, set out as befits them,',
+            },
+            # ‼ CHECK [IMG_0315.PNG]: Page 52 prints อะภิวาทะนัง กะริมหา with
+            #   a FULL STOP and with no mark over the ม. The app's morning
+            #   printing of the same text (kham-choen-bucha-lae-suat-namo,
+            #   page 2, verse 5) has อะภิวาทะนัง กะริมหา with a COMMA. Page 52
+            #   is entered as printed. Worth one look at both pages in the
+            #   book: if page 2 really prints a comma, the two printings
+            #   differ in punctuation only, which is the sort of thing this
+            #   edition exists to record.
+            {
+                'number': 5,
+                'pali': 'อะภิวาทะนัง กะริมหา.',
+                'pali_roman': 'Abhivādanaṃ karimhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and having paid our respects,',
+            },
+            {
+                'number': 6,
+                'pali': 'หันทะทานิ มะยัง ตัง ภะคะวันตัง วาจายะ อะภิถุตุง,',
+                'pali_roman': 'Handadāni mayaṃ taṃ bhagavantaṃ vācāya abhithutuṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let us now, in words, extol that Blessed One,',
+            },
+            {
+                'number': 7,
+                'pali': 'ปุพพะภาคะนะมะการัง กะโรมะ เส.',
+                'pali_roman': 'Pubbabhāga-namakāraṃ karoma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and make the preliminary salutation.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0315.PNG]: The book prints NO title for this passage on
+        #   page 52 — the rubric above it is the only thing that names it.
+        #   title_thai is therefore empty, matching how the app already holds
+        #   the morning printing (pubbabhaga-namakara, page 2), which is also
+        #   titleless.
+        # ‼ CHECK [IMG_0315.PNG]: This is the evening printing of the same
+        #   three lines the app holds from page 2 as pubbabhaga-namakara.
+        #   Entered again with an -evening id rather than stubbed as a repeat,
+        #   per the settled rule that a page must show what the book prints on
+        #   it. The three lines are character for character the same as page
+        #   2's.
+        'id': 'pubbabhaga-namakara-evening',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Preliminary Salutation',
+        'page_start': 52,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, perfectly enlightened by himself.',
+            },
+            {
+                'number': 2,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, perfectly enlightened by himself.',
+            },
+            {
+                'number': 3,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, perfectly enlightened by himself.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0315.PNG]: The book prints NO title for this passage.
+        #   The id and the English title come from the name the page 51 rubric
+        #   gives it — พระพุทธคุณ, the qualities of the Buddha. Josh may want
+        #   a different id; nothing on the page settles it.
+        'id': 'phra-phuttakhun',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Qualities of the Buddha',
+        'page_start': 52,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0315.PNG]: กัล์ยาโณ is written here with the mark
+            #   over the ล, the same small mark the book puts over the ส of
+            #   ส์วากขาโต on page 51 and over the พ and ห of พ์รัห์มะจะริยัง.
+            #   The app already holds this word BOTH ways — กัล๎ยาณัง with
+            #   U+0E4E (yamakkan) in buddhabhithuti on page 2, and this form
+            #   with U+0E4C (thanthakhat). One look at the book settles which
+            #   mark the printer used, and it settles สวากขาโต at the same
+            #   time.
+            {
+                'number': 1,
+                'pali': 'ตัง โข ปะนะ ภะคะวันตัง เอวัง กัล์ยาโณ กิตติสัทโท อัพภุคคะโต,',
+                'pali_roman': 'Taṃ kho pana bhagavantaṃ evaṃ kalyāṇo kittisaddo abbhuggato,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And this good report has gone abroad concerning that Blessed One:',
+            },
+            {
+                'number': 2,
+                'pali': 'อิติปิ โส ภะคะวา,',
+                'pali_roman': 'Itipi so bhagavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So indeed is he, the Blessed One —',
+            },
+            {
+                'number': 3,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Arahaṃ sammāsambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy, perfectly enlightened by himself,',
+            },
+            # ‼ CHECK [IMG_0315.PNG]: Page 52 prints no comma after โลกะวิทู.
+            #   The app's page-38 printing of the same formula (phra-winai-
+            #   sangkhep verse 6) has one: ...สุคะโต โลกะวิทู, อะนุตตะโร...
+            #   Page 52 is entered as printed. The two printings also differ
+            #   in their opening — page 38 has ภะวันตัง โคตะมัง (Master
+            #   Gotama), page 52 has ภะคะวันตัง (the Blessed One) — which is a
+            #   real difference between two settings of the same passage, not
+            #   a misreading.
+            {
+                'number': 4,
+                'pali': 'วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู อะนุตตะโร ปุริสะทัมมะสาระถิ สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวาติ.',
+                'pali_roman': 'Vijjācaraṇa-sampanno sugato lokavidū anuttaro purisadamma-sārathi satthā deva-manussānaṃ buddho bhagavāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'accomplished in knowledge and conduct, well-farer, knower of the worlds, unsurpassed trainer of those who can be trained, teacher of gods and humans, the Awakened One, the Blessed One.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0315.PNG]: TWO-COLUMN READING, please confirm. From
+        #   verse 5 the page is set in two columns and has been read ACROSS
+        #   the row, not down the column. The first pairing made is verse 5:
+        #   left cell พุทโธ โย สัพพะปาณีนัง + right cell สะระณัง เขมะมุตตะมัง.
+        #   Reading down the columns instead would produce fluent, wrong Pali,
+        #   so this is the pairing to check first.
+        # ‼ CHECK [IMG_0315.PNG]: The book prints NO title for this chant. The
+        #   rubric above it names it พุทธาภิคีติ (Buddhābhigīti), and that is
+        #   where the id comes from. title_thai is left empty because nothing
+        #   is printed as a heading.
+        # ‼ CHECK [IMG_0315.PNG]: The chant's invitation หันทะ มะยัง
+        #   พุทธาภิคีติง กะโรมะ เส. is printed INSIDE the prose rubric, not as
+        #   a line of its own. It is kept in the page block only and the
+        #   invitation field is left empty, so the page shows it once, where
+        #   the book shows it. If Josh would rather it also appeared as the
+        #   chant's invitation, that is a decision, not a fix — it would print
+        #   twice on page 52.
+        'id': 'buddhabhigiti',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Hymn to the Buddha',
+        'page_start': 52,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0315.PNG]: พุทธ์วา is transliterated Buddhvā,
+            #   following the mark the book prints over the ธ rather than the
+            #   standard edition's Buddhavā. Same open question as กัล์ยาโณ
+            #   above.
+            {
+                'number': 1,
+                'pali': 'พุทธ์วาระหันตะวะระตาทิคุณาภิยุตโต,',
+                'pali_roman': 'Buddhvārahanta-varatādiguṇābhiyutto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha, joined to the highest qualities, arahantship foremost among them,',
+            },
+            # ‼ CHECK [IMG_0315.PNG]: The book prints สุทธาภิญาณะ with a
+            #   single ญ, so it is transliterated suddhābhiñāṇa. Standard
+            #   editions have abhiññāṇa with a double ñ. Kept as printed.
+            {
+                'number': 2,
+                'pali': 'สุทธาภิญาณะกะรุณาหิ สะมาคะตัตโต,',
+                'pali_roman': 'Suddhābhiñāṇa-karuṇāhi samāgatatto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in whose being purity, higher knowing and compassion have come together,',
+            },
+            {
+                'number': 3,
+                'pali': 'โพเธสิ โย สุชะนะตัง กะมะลังวะ สูโร,',
+                'pali_roman': 'Bodhesi yo sujanataṃ kamalaṃva sūro,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who awakened the good folk as the sun awakens the lotus,',
+            },
+            {
+                'number': 4,
+                'pali': 'วันทามะหัง ตะมะระณัง สิระสา ชิเนนทัง.',
+                'pali_roman': 'Vandāmahaṃ tamaraṇaṃ sirasā jinendaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that Peaceful One, Lord of Conquerors, I salute with my head.',
+            },
+            {
+                'number': 5,
+                'pali': 'พุทโธ โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง',
+                'pali_roman': 'Buddho yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha, who is for all breathing things the refuge, safe and supreme,',
+            },
+            {
+                'number': 6,
+                'pali': 'ปะฐะมานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง.',
+                'pali_roman': 'Paṭhamānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the first of the objects of recollection — him I revere with my head.',
+            },
+            {
+                'number': 7,
+                'pali': 'พุทธัสสาหัส์มิ ทาโส วะ พุทโธ เม สามิกิสสะโร',
+                'pali_roman': 'Buddhassāhasmi dāso va buddho me sāmikissaro',
+                'thai': '',
+                'paiboon': '',
+                'english': "I am the Buddha's servant; the Buddha is my lord and master.",
+            },
+            {
+                'number': 8,
+                'pali': 'พุทโธ ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม.',
+                'pali_roman': 'Buddho dukkhassa ghātā ca vidhātā ca hitassa me.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha destroys suffering, and brings about what is for my welfare.',
+            },
+            # ‼ CHECK [IMG_0315.PNG]: The last line on the page. It is a
+            #   COMPLETE two-pāda line, not a cut one, but it ends without
+            #   punctuation because the sentence finishes on page 53. The
+            #   chant is marked as continuing, and page 53's batch adds verse
+            #   10 onward — it does NOT complete verse 9.
+            {
+                'number': 9,
+                'pali': 'พุทธัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง',
+                'pali_roman': 'Buddhassāhaṃ niyyādemi sarīrañjīvitañcidaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Buddha I surrender this body and this life,',
             },
         ],
     },
@@ -15729,6 +16039,34 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'ประธานกล่าวเชิญชวนบูชาพระรัตนตรัยสวด นะโม และพระพุทธคุณ หยุดตามจุดลูกน้ำดังนี้.',
                 'english': 'The leader gives the invitation to revere the Triple Gem and to chant the Namo and the qualities of the Buddha, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 52 ────────────────────────────────────────────────────
+    # Written from batch-052-052.json.
+    {
+        'page': 52,
+        'after': 'kham-choen-bucha-lae-suat-namo-lae-phra-phuttakhun',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'รองประธานขึ้นต้นบทว่า นะโม นอกนั้นรับต่อ ตัสสะ ภะคะวะโต ฯเปฯ พร้อมกันไปตามจุดลูกน้ำดังนี้.',
+                'english': 'The deputy leader begins the passage with Namo, and the rest take it up from Tassa bhagavato and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 52 ────────────────────────────────────────────────────
+    # Written from batch-052-052.json.
+    {
+        'page': 52,
+        'after': 'phra-phuttakhun',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'หยุดระลึกถึงพระพุทธคุณสักครู่น้อยหนึ่ง แล้วประธานกล่าวเชิญชวนสวดสรรเสริญพระพุทธคุณต่อไปว่า หันทะ มะยัง พุทธาภิคีติง กะโรมะ เส. รองประธานขึ้นต้นบทว่า พุทธ์วา นอกนั้นรับต่อ ระหันตะวะระตาทิคุณาภิยุตโต ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.',
+                'english': 'Pause a little while to recollect the qualities of the Buddha. Then the leader gives the invitation to go on and chant the praise of those qualities, saying: Handa mayaṃ buddhābhigītiṃ karoma se. The deputy leader begins the passage with Buddhvā, and the rest take it up from Rahantavaratādiguṇābhiyutto and so on, going on together, pausing at each comma, thus.',
                 'english_unverified': True,
             },
         ],
