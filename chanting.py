@@ -14645,7 +14645,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
         # ‼ CHECK [IMG_0316.PNG]: TWO-COLUMN READING, please confirm. From
         #   verse 5 the page is set in two columns and has been read ACROSS
         #   the row. The first pairing made is verse 5: left cell ธัมโม โย
@@ -14742,6 +14741,285 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "I am the Dhamma's servant; the Dhamma is my lord and master.",
+            },
+            {
+                'number': 8,
+                'page': 54,
+                'pali': 'ธัมโม ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม.',
+                'pali_roman': 'Dhammo dukkhassa ghātā ca vidhātā ca hitassa me.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Dhamma destroys suffering, and brings about what is for my welfare.',
+            },
+            {
+                'number': 9,
+                'pali': 'ธัมมัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง',
+                'pali_roman': 'Dhammassāhaṃ niyyādemi sarīrañjīvitañcidaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Dhamma I surrender this body and this life,',
+            },
+            # ‼ CHECK [IMG_0317.PNG]: Page 54 prints วันทันโตหัง WITHOUT the
+            #   bracketed alternative that page 53 prints beside the same word
+            #   in พุทธาภิคีติ — page 53 has วันทันโตหัง (ตีหัง) and this page
+            #   has none. Reproduced as each page prints it. The right cell
+            #   ธัมมัสเสวะ สุธัมมะตัง also ends without a full stop where page
+            #   53's พุทธัสเสวะ สุโพธิตัง. has one.
+            {
+                'number': 10,
+                'pali': 'วันทันโตหัง จะริสสามิ ธัมมัสเสวะ สุธัมมะตัง',
+                'pali_roman': 'Vandantohaṃ carissāmi dhammasseva sudhammataṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': "Revering it, I shall walk on by the Dhamma's own true excellence.",
+            },
+            {
+                'number': 11,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For me there is no other refuge; the Dhamma is my refuge, the best of them.',
+            },
+            {
+                'number': 12,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน.',
+                'pali_roman': 'Etena saccavajjena vaḍḍheyyaṃ satthusāsane.',
+                'thai': '',
+                'paiboon': '',
+                'english': "By the speaking of this truth, may I grow in the Teacher's dispensation.",
+            },
+            {
+                'number': 13,
+                'pali': 'ธัมมัง เม วันทะมาเนนะ ยัง ปุญญัง ปะสุตัง อิธะ',
+                'pali_roman': 'Dhammaṃ me vandamānena yaṃ puññaṃ pasutaṃ idha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever merit I have gained here in revering the Dhamma —',
+            },
+            # ‼ CHECK [IMG_0317.PNG]: The rubric here reads หมอบลงพร้อมกัน
+            #   แล้วสวดลดเสียงเบาลง ดังนี้. — with a space after พร้อมกัน.
+            #   Page 53's matching rubric reads
+            #   หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง ดังนี้. with no space. Both
+            #   reproduced as printed; the difference is the book's, not a
+            #   transcription slip.
+            {
+                'number': 14,
+                'rubric': 'หมอบลงพร้อมกัน แล้วสวดลดเสียงเบาลง ดังนี้.',
+                'pali': 'สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.',
+                'pali_roman': 'Sabbepi antarāyā me māhesuṃ tassa tejasā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of it, may all obstacles for me come to nothing.',
+            },
+            {
+                'number': 15,
+                'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา,',
+                'pali_roman': 'Kāyena vācāya va cetasā vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By body, by speech, or by mind,',
+            },
+            {
+                'number': 16,
+                'pali': 'ธัมเม กุกัมมัง ปะกะตัง มะยา ยัง,',
+                'pali_roman': 'Dhamme kukammaṃ pakataṃ mayā yaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever wrong has been done by me towards the Dhamma —',
+            },
+            {
+                'number': 17,
+                'pali': 'ธัมโม ปะฏิคคัณหะตุ อัจจะยันตัง,',
+                'pali_roman': 'Dhammo paṭiggaṇhatu accayantaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the Dhamma accept that transgression,',
+            },
+            {
+                'number': 18,
+                'pali': 'กาลันตะเร สังวะริตุง วะ ธัมเม.',
+                'pali_roman': 'Kālantare saṃvarituṃ va dhamme.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that in time to come I may be restrained towards the Dhamma.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0317.PNG]: The book prints NO title for this passage.
+        #   The id and the English title come from the name the rubric above
+        #   it gives it — พระสังฆคุณ. Same treatment as พระพุทธคุณ on page 52
+        #   and พระธรรมคุณ on page 53.
+        'id': 'phra-sangkhakhun',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Qualities of the Sangha',
+        'page_start': 54,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0317.PNG]: This is not the same text as the app's
+            #   sanghabhithuti (page 3), which opens โย โส สุปะฏิปันโน and
+            #   adds a ninth line, ตะมะหัง สังฆัง อะภิปูชะยามิ.... Page 54 has
+            #   no โย โส and no closing salutation, and its last unit ends
+            #   โลกัสสาติ where page 3 has โลกัสสะ. Entered as its own chant,
+            #   and the English of verses 2-7 is kept word for word the same
+            #   as page 3's so the two printings can be read against each
+            #   other.
+            {
+                'number': 1,
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "The Sangha of the Blessed One's disciples has practised well,",
+            },
+            {
+                'number': 2,
+                'pali': 'อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ujupaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who have practised straightforwardly,',
+            },
+            {
+                'number': 3,
+                'pali': 'ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ñāyapaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who have practised methodically,',
+            },
+            {
+                'number': 4,
+                'pali': 'สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Sāmīcipaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who have practised masterfully,',
+            },
+            {
+                'number': 5,
+                'pali': 'ยะทิทัง จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,',
+                'pali_roman': 'Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that is, the four pairs, the eight types of noble ones —',
+            },
+            {
+                'number': 6,
+                'pali': 'เอสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Esa bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "that is the Sangha of the Blessed One's disciples,",
+            },
+            # ‼ CHECK [IMG_0317.PNG]: อัญชะลีกะระณีโย is printed across a line
+            #   break with no hyphen and has been rejoined into one word. It
+            #   is transliterated añjalīkaraṇīyo with a long ī, following the
+            #   ลี the book prints — standard editions have añjali- with a
+            #   short i. The app already spells it this way on page 3.
+            {
+                'number': 7,
+                'pali': 'อาหุเนยโย ปาหุเนยโย ทักขิเณยโย อัญชะลีกะระณีโย,',
+                'pali_roman': 'Āhuneyyo pāhuneyyo dakkhiṇeyyo añjalīkaraṇīyo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy of gifts, worthy of hospitality, worthy of offerings, worthy of respect,',
+            },
+            {
+                'number': 8,
+                'pali': 'อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.',
+                'pali_roman': 'Anuttaraṃ puññakkhettaṃ lokassāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the unexcelled field of merit for the world.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0317.PNG]: The book prints NO title for this chant. The
+        #   rubric above it names it สังฆาภิคีติ (Saṅghābhigīti), and that is
+        #   where the id comes from. Same treatment as the other two abhigīti
+        #   hymns.
+        # ‼ CHECK [IMG_0317.PNG]: The chant's invitation หันทะ มะยัง
+        #   สังฆาภิคีติง กะโรมะ เส. is printed inside the prose rubric, not as
+        #   a line of its own. Kept in the page block only, so it prints once.
+        #   Same decision as the other two hymns.
+        'id': 'sanghabhigiti',
+        'title_thai': '',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Hymn to the Sangha',
+        'page_start': 54,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'สัทธัมมะโช สุปะฏิปัตติคุณาทิยุตโต',
+                'pali_roman': 'Saddhammajo supaṭipattiguṇādiyutto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Born of the true Dhamma, endowed with the quality of practising well and the rest,',
+            },
+            # ‼ CHECK [IMG_0317.PNG]: โยฏฐัพพิโธ is transliterated
+            #   yoṭṭhabbidho, following the page. The sense taken is yo +
+            #   aṭṭhabbidho, "which is of eight kinds" — the eight kinds of
+            #   noble person named in the passage above. That reading is a
+            #   working one and is the line on this page most worth Josh's
+            #   eye.
+            {
+                'number': 2,
+                'pali': 'โยฏฐัพพิโธ อะริยะปุคคะละสังฆะเสฏโฐ',
+                'pali_roman': 'Yoṭṭhabbidho ariyapuggalasaṅghaseṭṭho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the supreme Sangha of noble persons, which is of eight kinds,',
+            },
+            {
+                'number': 3,
+                'pali': 'สีลาทิธัมมะปะวะราสะยะกายะจิตโต',
+                'pali_roman': 'Sīlādidhammapavarāsayakāyacitto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whose body and mind are the dwelling place of virtue and the other excellent qualities —',
+            },
+            # ‼ CHECK [IMG_0317.PNG]: The last line on the page, and it ends
+            #   with a full stop. The chant is still marked as continuing:
+            #   พุทธาภิคีติ and ธัมมาภิคีติ both carry on past their fourth
+            #   line into a two-column half, and the contents puts the next
+            #   entry at page ๕๕, so this hymn is expected to continue on page
+            #   55 rather than end here. Page 55's batch will settle it.
+            {
+                'number': 4,
+                'pali': 'วันทามะหัง ตะมะริยานะคะณัง สุสุทธัง.',
+                'pali_roman': 'Vandāmahaṃ tamariyānagaṇaṃ susuddhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that wholly pure company of the noble ones I salute with my head.',
             },
         ],
     },
@@ -16355,6 +16633,34 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'หยุดระลึกถึงพระธรรมคุณสักครู่น้อยหนึ่ง แล้วประธานกล่าวเชิญชวนสวดสรรเสริญพระธรรมคุณต่อไปว่า หันทะ มะยัง ธัมมาภิคีติง กะโรมะ เส. รองประธานขึ้นต้นบทว่า ส์วากขาตะตา นอกนั้นรับต่อ ทิคุณะโยคะวะเสนะ เสยโย ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.',
                 'english': 'Pause a little while to recollect the qualities of the Dhamma. Then the leader gives the invitation to go on and chant the praise of those qualities, saying: Handa mayaṃ dhammābhigītiṃ karoma se. The deputy leader begins the passage with Svākkhātatā, and the rest take it up from Diguṇayogavasena seyyo and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 54 ────────────────────────────────────────────────────
+    # Written from batch-054-054.json.
+    {
+        'page': 54,
+        'after': 'dhammabhigiti',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'เงยขึ้นพร้อมกัน แล้วประธานกล่าวเชิญชวนสวดพระสังฆคุณ ว่า หันทะ มะยัง สังฆานุสสะตินะยัง กะโรมะ เส. รองประธานขึ้นต้นบทว่า สุปะฏิปันโน นอกนั้นรับต่อ ภะคะวะโต สาวะกะสังโฆ ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.',
+                'english': 'Raise the head, together. Then the leader gives the invitation to chant the qualities of the Sangha, saying: Handa mayaṃ saṅghānussatinayaṃ karoma se. The deputy leader begins the passage with Supaṭipanno, and the rest take it up from Bhagavato sāvakasaṅgho and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 54 ────────────────────────────────────────────────────
+    # Written from batch-054-054.json.
+    {
+        'page': 54,
+        'after': 'phra-sangkhakhun',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'หยุดระลึกถึงพระสังฆคุณสักครู่น้อยหนึ่งแล้วประธานกล่าวเชิญชวนสวดสรรเสริญพระสังฆคุณต่อไปว่า หันทะ มะยัง สังฆาภิคีติง กะโรมะ เส. รองประธานขึ้นต้นบทว่า สัทธัมมะโช นอกนั้นรับต่อ สุปะฏิปัตติคุณาทิยุตโต ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.',
+                'english': 'Pause a little while to recollect the qualities of the Sangha. Then the leader gives the invitation to go on and chant the praise of those qualities, saying: Handa mayaṃ saṅghābhigītiṃ karoma se. The deputy leader begins the passage with Saddhammajo, and the rest take it up from Supaṭipattiguṇādiyutto and so on, going on together, pausing at each comma, thus.',
                 'english_unverified': True,
             },
         ],
