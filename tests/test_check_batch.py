@@ -432,7 +432,7 @@ class TestAgainstTheRealBatchFiles:
     BATCHES = pathlib.Path(__file__).parent.parent / 'prompts/chanting-book-batch/batches'
 
     @pytest.mark.parametrize('name', [
-        'batch-001-003', 'batch-004-006', 'batch-007-008',
+        'batch-001-003', 'batch-004-006', 'batch-007-008', 'batch-009-009',
         'batch-010-011', 'batch-012-012', 'batch-013-013', 'batch-014-014'])
     def test_a_shipped_batch_passes_every_check(self, name):
         b = json.loads((self.BATCHES / f'{name}.json').read_text(encoding='utf-8'))
@@ -441,19 +441,24 @@ class TestAgainstTheRealBatchFiles:
 
         assert failed == {}, f'{name}: {failed}'
 
-    def test_batch_009_is_known_to_be_unreadable_by_stage_2(self):
-        """Not a bug in the checker — a real defect in a file already shipped.
+    def test_every_batch_on_disk_passes_every_check(self):
+        """The pin that used to sit here has been redeemed.
 
-        Page 9 is live, so it went in another way, but the file kept as the
-        permanent record of what those photographs said is in a shape
-        apply_batch cannot read. Pinned here so that fixing the file makes this
-        test fail loudly rather than passing silently.
+        Batch 9's checks were written as plain strings before that shape was
+        settled, so apply_batch could not read the one file kept as the
+        permanent record of what those photographs said. A test pinned the
+        defect so that fixing it would fail loudly rather than pass silently;
+        it has been fixed, so the pin becomes the general claim it was always
+        standing in for — no batch on disk is unreadable.
         """
-        b = json.loads((self.BATCHES / 'batch-009-009.json').read_text(encoding='utf-8'))
+        broken = {}
+        for path in sorted(self.BATCHES.glob('batch-*.json')):
+            b = json.loads(path.read_text(encoding='utf-8'))
+            failed = {n: p for n, p in validate(b).items() if p}
+            if failed:
+                broken[path.name] = failed
 
-        failed = {n: p for n, p in validate(b).items() if p}
-
-        assert list(failed) == ['checks readable']
+        assert broken == {}
 
 
 if __name__ == '__main__':

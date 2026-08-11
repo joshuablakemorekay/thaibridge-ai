@@ -204,7 +204,24 @@ survived so long — the data was right every time.
   that still held one. It is now counted over the whole run. The guard that
   refuses to claim a removal it did not make is unchanged and still local.
 
-One unrelated failure is still open and is NOT from this: `check_batch --all`
-reports `kham-choen-bucha-phitsadan: 7 of 7 checks are str, not objects`. That
-is the page-9 batch, whose checks were written as plain strings before the shape
-was settled. It cannot be re-applied by the tool as it stands.
+## Batch 9 is readable again — and what it turned up
+
+`check_batch --all` used to fail on one file: the page-9 batch, whose checks
+were written as plain strings before the shape was settled. Its six checks are
+now objects, the seventh was dropped (it was a `‼ COMMENTARY PENDING` marker,
+which `apply_batch` writes from `depth` and is not a check at all), and the
+three that name a verse have been moved in `chanting.py` to sit above the verse
+they are about instead of floating at the top of an eighteen-verse chant.
+
+**Page 9 renders byte for byte identically** — proved by hashing it before and
+after — and it already matches the book: instruction items 3, 4 and 5, then the
+eighteen verses, then the closing editorial note, in that order, each once.
+
+**But "readable" is not "safe to re-apply".** Diffing the file against what
+`render_chant` would now produce turned up one real difference beyond the
+comments: `kham-choen-bucha-phitsadan` carries `'group': 'Morning chanting'` and
+the renderer hard-codes `'General chanting'`. Re-applying would quietly
+downgrade it. Nothing reads `group` today — it is the only chant of 81 that does
+not say `General chanting`, so it is an outlier rather than a treasure — but the
+lesson generalises: **before re-applying any batch, diff it against the file
+first.** The file wins, and the renderer does not know that.

@@ -6959,21 +6959,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ CHECK [IMG_0272.PNG] VERSE 5: the book prints สัพพะทุกขูกะสะมะ -
-        #   with ก. Checked at 6x magnification: the glyph has no ascender
-        #   and is plainly ก, not ป, unlike the ป two syllables later on the
-        #   same line. The expected Pali here is sabbadukkhūpasama
-        #   (สัพพะทุกขูปะสะมะ), 'the stilling of all suffering'. Reproduced
-        #   AS PRINTED and not corrected. Please look at this line in the
-        #   physical book: either this edition prints it so, or it is a typo
-        #   in this printing, and I cannot tell which.
-        # ‼ CHECK [IMG_0272.PNG] VERSE 8: the book breaks
-        #   ปัจฉิมาชะนะ-ตานุกัมปัง across a line with a hyphen. Rejoined to
-        #   ปัจฉิมาชะนะตานุกัมปัง, as the rule for typesetter's line breaks
-        #   requires. The hyphen is not reproduced.
-        # ‼ CHECK [IMG_0272.PNG] VERSE 6: อานิยะติ read with a long อา. Worth
-        #   a glance - อะนิยะติ would also be a plausible reading at this
-        #   print size and the two differ in meaning.
         # ‼ CHECK [IMG_0272.PNG] TITLE: the book prints no title for this
         #   passage at all; it is introduced only by instruction item 5.
         #   title_thai and title_pali left EMPTY rather than invented.
@@ -7038,6 +7023,14 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'that Blessed One, being the supreme teacher in the world,',
             },
+            # ‼ CHECK [IMG_0272.PNG]: the book prints สัพพะทุกขูกะสะมะ - with
+            #   ก. Checked at 6x magnification: the glyph has no ascender and
+            #   is plainly ก, not ป, unlike the ป two syllables later on the
+            #   same line. The expected Pali here is sabbadukkhūpasama
+            #   (สัพพะทุกขูปะสะมะ), 'the stilling of all suffering'.
+            #   Reproduced AS PRINTED and not corrected. Please look at this
+            #   line in the physical book: either this edition prints it so,
+            #   or it is a typo in this printing, and I cannot tell which.
             {
                 'number': 5,
                 'pali': 'สัพพะทุกขูกะสะมะปะรินิพพานายะ ธัมมัง เทสะยะโต,',
@@ -7046,6 +7039,9 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'who taught the Dhamma for the stilling of all suffering and for final liberation -',
             },
+            # ‼ CHECK [IMG_0272.PNG]: อานิยะติ read with a long อา. Worth a
+            #   glance - อะนิยะติ would also be a plausible reading at this
+            #   print size and the two differ in meaning.
             {
                 'number': 6,
                 'pali': 'อะยัง ธัมมะวินะโย ยาวัชชะตะนาปิ ยะถากะถัญจิ อานิยะติ ปะวัตติยะติ,',
@@ -7062,6 +7058,10 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'For the growing of confidence in such a Dhamma,',
             },
+            # ‼ CHECK [IMG_0272.PNG]: the book breaks ปัจฉิมาชะนะ-ตานุกัมปัง
+            #   across a line with a hyphen. Rejoined to
+            #   ปัจฉิมาชะนะตานุกัมปัง, as the rule for typesetter's line
+            #   breaks requires. The hyphen is not reproduced.
             {
                 'number': 8,
                 'pali': 'เตนะ ภะคะวะตา ปัจฉิมาชะนะตานุกัมปัง ปะฏิจจะ อัตตะโน อัจจะเยนะ ถูปะปะติฏฐาปะนัง อะนุมะตัง,',

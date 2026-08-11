@@ -143,13 +143,18 @@
          "english": "let us make the preliminary salutation."}
       ],
       "checks": [
-        "‼ CHECK [IMG_0272.PNG] VERSE 5: the book prints สัพพะทุกขูกะสะมะ - with ก. Checked at 6x magnification: the glyph has no ascender and is plainly ก, not ป, unlike the ป two syllables later on the same line. The expected Pali here is sabbadukkhūpasama (สัพพะทุกขูปะสะมะ), 'the stilling of all suffering'. Reproduced AS PRINTED and not corrected. Please look at this line in the physical book: either this edition prints it so, or it is a typo in this printing, and I cannot tell which.",
-        "‼ CHECK [IMG_0272.PNG] VERSE 8: the book breaks ปัจฉิมาชะนะ-ตานุกัมปัง across a line with a hyphen. Rejoined to ปัจฉิมาชะนะตานุกัมปัง, as the rule for typesetter's line breaks requires. The hyphen is not reproduced.",
-        "‼ CHECK [IMG_0272.PNG] VERSE 6: อานิยะติ read with a long อา. Worth a glance - อะนิยะติ would also be a plausible reading at this print size and the two differ in meaning.",
-        "‼ CHECK [IMG_0272.PNG] TITLE: the book prints no title for this passage at all; it is introduced only by instruction item 5. title_thai and title_pali left EMPTY rather than invented. title_english is the app's own and will be hidden in book layout.",
-        "‼ CHECK [IMG_0272.PNG] VERSE SEGMENTATION: split at the printed commas, following the book's own instruction elsewhere to หยุดตามจุดลูกน้ำ (stop at the commas). 18 units.",
-        "‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary, when_chanted and source still to be written by stage 3. Verses are complete.",
-        "‼ CHECK [IMG_0272.PNG] RELATION TO PAGE 2: this is the พิสดาร (elaborate) form of the invitation, used on วันธรรมสวนะ and Sundays. The ordinary form is kham-choen-bucha-lae-suat-namo on page 2. They open with the same words and then diverge - do not merge them."
+        {"verse": 5, "file": "IMG_0272.PNG",
+         "issue": "the book prints สัพพะทุกขูกะสะมะ - with ก. Checked at 6x magnification: the glyph has no ascender and is plainly ก, not ป, unlike the ป two syllables later on the same line. The expected Pali here is sabbadukkhūpasama (สัพพะทุกขูปะสะมะ), 'the stilling of all suffering'. Reproduced AS PRINTED and not corrected. Please look at this line in the physical book: either this edition prints it so, or it is a typo in this printing, and I cannot tell which."},
+        {"verse": 8, "file": "IMG_0272.PNG",
+         "issue": "the book breaks ปัจฉิมาชะนะ-ตานุกัมปัง across a line with a hyphen. Rejoined to ปัจฉิมาชะนะตานุกัมปัง, as the rule for typesetter's line breaks requires. The hyphen is not reproduced."},
+        {"verse": 6, "file": "IMG_0272.PNG",
+         "issue": "อานิยะติ read with a long อา. Worth a glance - อะนิยะติ would also be a plausible reading at this print size and the two differ in meaning."},
+        {"verse": null, "file": "IMG_0272.PNG",
+         "issue": "TITLE: the book prints no title for this passage at all; it is introduced only by instruction item 5. title_thai and title_pali left EMPTY rather than invented. title_english is the app's own and will be hidden in book layout."},
+        {"verse": null, "file": "IMG_0272.PNG",
+         "issue": "VERSE SEGMENTATION: split at the printed commas, following the book's own instruction elsewhere to หยุดตามจุดลูกน้ำ (stop at the commas). 18 units."},
+        {"verse": null, "file": "IMG_0272.PNG",
+         "issue": "RELATION TO PAGE 2: this is the พิสดาร (elaborate) form of the invitation, used on วันธรรมสวนะ and Sundays. The ordinary form is kham-choen-bucha-lae-suat-namo on page 2. They open with the same words and then diverge - do not merge them."}
       ],
       "vocabulary": [
         {"pali": "สะระณัง", "pali_roman": "saraṇaṃ", "meaning": "refuge; what one turns to for safety"},
