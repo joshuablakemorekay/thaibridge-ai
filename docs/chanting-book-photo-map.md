@@ -37,6 +37,9 @@ photograph.
 | 33 | IMG_0296 | 263 |
 | 34 | IMG_0297 | 263 |
 | 51 | IMG_0314 | 263 |
+| 52 | IMG_0315 | 263 |
+| 53 | **IMG_0316** | 263 (a Photos-app screen capture — see below) |
+| 54 | IMG_0317 | 263 |
 | 61 | IMG_0324 | 263 |
 | 68 | IMG_0331 | 263 |
 | 207 | IMG_0477 | 270 |
@@ -53,9 +56,21 @@ The offset is 262–263 through the low pages and 270 by page 207, so seven page
 somewhere between 68 and 207 were shot twice. Those stretches are unmapped.
 
 Pages 35–50 went in without being added here, and they all sat at offset 263 —
-the same as pages 31–34 and 51. So the offset holds unbroken from 31 to 51 at
+the same as pages 31–34 and 51. So the offset holds unbroken from 31 to 54 at
 least. That is a reason to expect the next filename, never a reason to trust it:
 read the page number off the top of the photograph as always.
+
+## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
+
+It is a picture of the Photos app rather than of the page: a back arrow, a
+"4 of 4" caption and an Adjust / Filters / Rotate / Delete toolbar are all in
+the frame, and the toolbar sits over the foot of the sheet.
+
+**It was checked and it hides nothing.** The toolbar covers only the blank lower
+margin, and the left column beside it is clear and holds no ink, so page 53
+really does end at ธัมมัสสาหัส์มิ ทาโส วะ. Recorded here so nobody has to prove
+that twice — but a clean re-shot would remove the doubt, and it is the one
+photograph in this stretch worth retaking.
 
 ## Page 21 was re-shot — `IMG_0283a.PNG`
 

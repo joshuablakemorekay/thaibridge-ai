@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-10 after page
-51 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-11 after pages
+52, 53 and 54 went in.
 
 ## Read first, in this order
 
@@ -12,10 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-10 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–51 are in and unbroken**, plus 217–221. **74 chants, 1,021 verses.**
+- **Pages 1–54 are in and unbroken**, plus 217–221. **81 chants, 1,083 verses.**
   `/chanting` derives that line itself, so it is never stale.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Page 51 was applied on 2026-08-10; pages 32–50 landed the day before.
+- Pages 52, 53 and 54 were applied on 2026-08-11, one commit each; page 51
+  landed the day before.
 
 ## How to work — this matters more than the tasks
 
@@ -28,27 +29,42 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 52, `IMG_0315`
+## Next: page 55, `IMG_0318`
 
-It continues **คำเชิญบูชาและสวดนะโมและพระพุทธคุณ**, which opens at the foot of
-page 51 and — going by the contents, whose next entry is at page ๕๕ — runs to
-page 54.
+It continues **สังฆาภิคีติ**, whose first four lines are at the foot of page 54.
+Verse 4 there ends with a full stop, but that is not the chant ending: both of
+the other two hymns run past their fourth line into a **two-column half** read
+across the row, and the contents puts the next entry at page ๕๕. So expect
+verse 5 onward in two columns, and expect the hymn to close the way the other
+two did — a bow-down rubric, then four lines of กาเยนะ วาจายะ… asking pardon.
 
-**Its verse 2 is a PARTIAL line, `โย […]`.** Page 51's last printed line ends
-with that single word, which begins the next unit. So page 52's batch is a
-`continuation_of` that carries **verse 2 again, whole** — not a verse 3. That is
-the one case where incoming text overwrites what is in the file; the rule and the
-`# ‼ COMPLETED FROM p<N>` comment it requires are in the stage 2 prompt.
+**Pages 52–54 are one shape repeated three times**, once for each of the Triple
+Gem, and page 55 should be the tail of the third:
 
-The evening service reprints the morning one's opening: page 51 holds the same
-offering, salutation and invitation as pages 1–2, under titles the book prints
-differently. They were entered again rather than stubbed as repeats, so page 51
-shows what the book prints on it. Expect more of the same down this stretch —
-and expect to have to check each printing against the earlier one word by word,
-because the differences are real but small (punctuation, one title in three).
+  rubric → the recollection as run-on prose (พระพุทธคุณ / พระธรรมคุณ /
+  พระสังฆคุณ) → rubric → the abhigīti hymn, four long centred lines then a
+  two-column half → bow-down rubric → four lines of pardon.
+
+Two things that shape brought up, and both will recur on 55:
+
+- **None of these chants has a printed title.** The rubric above each one names
+  it, and that is where every id and English title in this stretch came from.
+- **Each hymn's invitation is printed INSIDE the rubric**, not as a line of its
+  own. It is kept in the page block and the `invitation` field is left empty, so
+  the page prints it once. Keep doing that unless Josh says otherwise.
 
 Pages 222 and 223 sit beside 217–221 which are already in, so they are a cheap
 excursion whenever wanted.
+
+## A rubric printed inside a chant goes on the VERSE
+
+Pages 53 and 54 both print หมอบลงพร้อมกัน… between verse 14 and verse 15 of a
+hymn. A page block cannot go there — `build_page_index` can only put blocks
+between whole chants — so it rides on verse 14 as `'rubric'`, which the template
+renders under that line. Same mechanism as page 1's (กราบพร้อมกัน).
+
+`apply_batch` carries a verse `rubric` through, so declare it on the verse in
+the batch file and it lands. Do not try to force it into `batch.pages.blocks`.
 
 ## The tooling, and what it will and won't do
 
@@ -95,6 +111,14 @@ thanthakhat in ประดิษฐ์ four lines above it, in the same face an
 plain `สวากขาโต` (page 1, and the page-1 นมัสการ), `ส์วากขาโต` and `ส๎วากขาโต`.
 Two of the three must be wrong. One look at the book settles the whole word
 everywhere, and it is a chanted line, so it is worth doing early.
+
+Pages 52–53 widened it from one word to a **class**. The same small mark turns
+up over the ล of กัล์ยาโณ, the ธ of พุทธ์วา, the ส of พุทธัสสาหัส์มิ and the ส of
+ส์วากขาตะตา — and the app already holds the first of those the other way, as
+กัล๎ยาณัง with U+0E4E in `buddhabhithuti`. So the question is not "which mark on
+this word" but **which of the two marks this book's printer uses**, U+0E4C
+(thanthakhat ์) or U+0E4E (yamakkan ๎). One answer fixes every one of them, and
+they are all chanted lines. Everything entered on pages 51–54 uses ์.
 
 **The ฬ/พ hazard.** These photographs cannot tell ฬ from พ at body-text size.
 Proven twice against Josh's own readings from the book: page 23 line 19, and
@@ -158,3 +182,23 @@ on 30. Fix them as each page is read, not in a sweep.
 - **A Render deploy usually takes about a minute but has taken 15.** Check with
   `render deploys list srv-d8k5ucm7r5hc738qhcb0 -o json --confirm` rather than
   polling the live page and guessing.
+- **The English of a reprinted text is copied from the earlier printing**, not
+  written again. The evening service reprints a great deal of the morning one,
+  and two glosses of the same Pali that differ in wording read as two different
+  lines. Pages 52 and 54 take their English straight from the app's pages 2 and
+  3 wherever the Pali matches, and note in a check where it does not.
+
+## Two faults in the tooling, neither fixed
+
+Both are cosmetic, both are in `apply_batch.py`, and both are worth knowing
+before they mislead someone.
+
+- **`# ‼ COMPLETED FROM p?`** — the page number is written as a literal `?`. The
+  code reads `verse.get('page', '?')`, but a completing verse correctly has no
+  `page` key: the line belongs to the page it STARTS on, which is the earlier
+  one. So the comment loses the one fact it exists to record. Four entries have
+  it, from pages 35, 41, 47 and 52; only the hand-written p7 one is right.
+- **The `CONTINUES markers: n -> n` report is counted too early.** Page 53's run
+  printed `1 -> 0` while correctly leaving a fresh marker on `dhammabhigiti`.
+  The file was right and the report was wrong. Grep the file rather than trust
+  that line.
