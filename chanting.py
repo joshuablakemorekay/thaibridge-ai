@@ -10531,7 +10531,7 @@ CHANTS = [
             #   so verse 4 belongs to page 34 where it starts and is marked
             #   with the gap marker. Page 35 completes it; the next batch
             #   supplies verse 4 in full rather than starting a new verse.
-                        # ‼ COMPLETED FROM p?: this line was cut by the page break and is
+            # ‼ COMPLETED FROM p35: this line was cut by the page break and is
             #   now whole. Was: อะถะโข […]
             # ‼ CHECK [IMG_0298.PNG]: Verse 4 is completed from page 35 and
             #   now reads whole. The book prints no comma after วุฏฐิโต here,
@@ -11768,7 +11768,7 @@ CHANTS = [
             #   verse 3 belongs to page 40 where it starts and carries the gap
             #   marker. Page 41 completes it; the next batch supplies verse 3
             #   in full rather than starting a new verse.
-                        # ‼ COMPLETED FROM p?: this line was cut by the page break and is
+            # ‼ COMPLETED FROM p41: this line was cut by the page break and is
             #   now whole. Was: นะ […]
             # ‼ CHECK [IMG_0304.PNG]: Verse 3 is completed from page 41 and
             #   now reads whole — the word นะ at the foot of page 40 joins
@@ -12929,7 +12929,7 @@ CHANTS = [
             #   so verse 11 belongs to page 46 where it starts and carries the
             #   gap marker. Page 47 completes it; the next batch supplies
             #   verse 11 in full rather than starting a new verse.
-                        # ‼ COMPLETED FROM p?: this line was cut by the page break and is
+            # ‼ COMPLETED FROM p47: this line was cut by the page break and is
             #   now whole. Was: สัพเพ เต […]
             # ‼ CHECK [IMG_0310.PNG]: Verse 11 is completed from page 47 and
             #   now reads whole — สัพเพ เต at the foot of page 46 joins
@@ -14164,7 +14164,7 @@ CHANTS = [
             #   the page prints, and page 52's batch completes verse 2 rather
             #   than adding a verse 3. Its english is a partial gloss for the
             #   same reason.
-                        # ‼ COMPLETED FROM p?: this line was cut by the page break and is
+            # ‼ COMPLETED FROM p52: this line was cut by the page break and is
             #   now whole. Was: โย […]
             # ‼ CHECK [IMG_0315.PNG]: This verse COMPLETES the partial line
             #   page 51 recorded as โย […]. The whole line as printed across

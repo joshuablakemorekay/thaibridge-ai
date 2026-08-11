@@ -310,6 +310,25 @@ def verse_range(spec: str) -> set[int]:
     return set(range(int(lo), int(hi or lo) + 1))
 
 
+def page_of(batch: dict, chant_id: str, number: int) -> int | None:
+    """Which page of THIS batch prints a given verse, per the page map.
+
+    Needed because a completing verse deliberately carries no `page` key: a
+    line cut by a page break belongs to the page it STARTS on, which is the
+    earlier one, so the key would put it on the wrong page. The page it
+    arrived FROM is still a fact worth recording in the ‼ comment, and the
+    page map is the only place that holds it.
+
+    Where a verse is claimed by two rows — which is exactly the page-break
+    case — the LATER page is the one that completed it.
+    """
+    pages = [row["page"] for row in batch["batch"]["pages"]
+             if row.get("chant") == chant_id and row.get("page") is not None
+             and row.get("verses") not in (None, "none")
+             and number in verse_range(row["verses"])]
+    return max(pages) if pages else None
+
+
 def check_join(incoming: dict, present: dict) -> list[str]:
     """Verify a continuation joins on cleanly, and classify verse 1 of it."""
     here = [v["number"] for v in present["verses"]]
@@ -764,6 +783,11 @@ def apply_blocks(batch: dict, source: str, source_batch: str,
 def apply(batch: dict, source: str) -> tuple[str, dict]:
     """Return the new chanting.py source and a report of what was done."""
     report = {"added": [], "appended": 0, "completed": [], "markers": {}}
+    # Counted over the WHOLE run, not just the removal below. A batch that
+    # finishes one chant and opens another removes a marker and adds one, and
+    # reporting only the removal said "1 -> 0" of a file that still held one.
+    # The report is what a reader trusts, so it has to describe the file.
+    continues_before = count_markers(source, "CONTINUES")
 
     for chant in batch["chants"]:
         if merge_only(chant):
@@ -824,10 +848,19 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
             is_completion = existing and GAP in existing.group(0)
             if is_completion:
                 was = re.search(r"'pali': '(.*?)',", existing.group(0)).group(1)
+                # NOT verse['page'] — a completing verse has none, by design,
+                # so reading one there wrote a literal "p?" and lost the fact
+                # the comment exists to record. `page_of` asks the page map.
+                from_page = page_of(batch, target, verse["number"])
+                # `.lstrip(' ')` because the match starts at the verse's own
+                # `{`, so the indentation before it is already in `block`.
+                # Without it the first line landed at column 24 and the rest
+                # of the comment at 12.
                 block = block.replace(
                     existing.group(0),
-                    note(f"COMPLETED FROM p{verse.get('page', '?')}: this line was cut "
-                         f"by the page break and is now whole. Was: {was}", INDENT * 3)
+                    note(f"COMPLETED FROM p{from_page if from_page else '?'}: this "
+                         f"line was cut by the page break and is now whole. "
+                         f"Was: {was}", INDENT * 3).lstrip(" ")
                     + render_verse(verse, per_verse, INDENT * 3))
                 report["completed"].append((target, verse["number"]))
             else:
@@ -854,8 +887,8 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
             after = count_markers(source, "CONTINUES")
             # The claim is checked before it is made. This is the bug that
             # prompted the whole script: the hand-written version said it had
-            # removed the marker and had not.
-            report["markers"]["CONTINUES"] = (before, after)
+            # removed the marker and had not. These two counts stay LOCAL to
+            # the removal — they are the guard, not the report.
             if after >= before:
                 raise RuntimeError(
                     f"failed to remove the CONTINUES marker from {target}: "
@@ -873,6 +906,10 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
         body = "".join(render_chant(c) for c in new).rstrip("\n")
         source = "\n".join(lines[:close] + [body] + lines[close:])
         report["added"] = [c["id"] for c in new]
+
+    continues_after = count_markers(source, "CONTINUES")
+    if (continues_before, continues_after) != (0, 0):
+        report["markers"]["CONTINUES"] = (continues_before, continues_after)
 
     return source, report
 

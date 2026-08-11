@@ -188,17 +188,23 @@ on 30. Fix them as each page is read, not in a sweep.
   lines. Pages 52 and 54 take their English straight from the app's pages 2 and
   3 wherever the Pali matches, and note in a check where it does not.
 
-## Two faults in the tooling, neither fixed
+## Two faults in `apply_batch`, fixed 2026-08-11
 
-Both are cosmetic, both are in `apply_batch.py`, and both are worth knowing
-before they mislead someone.
+Both were cosmetic and both misreported rather than miswrote, which is why they
+survived so long — the data was right every time.
 
-- **`# ‼ COMPLETED FROM p?`** — the page number is written as a literal `?`. The
-  code reads `verse.get('page', '?')`, but a completing verse correctly has no
-  `page` key: the line belongs to the page it STARTS on, which is the earlier
-  one. So the comment loses the one fact it exists to record. Four entries have
-  it, from pages 35, 41, 47 and 52; only the hand-written p7 one is right.
-- **The `CONTINUES markers: n -> n` report is counted too early.** Page 53's run
-  printed `1 -> 0` while correctly leaving a fresh marker on `dhammabhigiti`.
-  The file was right and the report was wrong. Grep the file rather than trust
-  that line.
+- **`# ‼ COMPLETED FROM p?`** wrote a literal `?`. It read `verse['page']`, but
+  a completing verse correctly has no `page` key: the line belongs to the page
+  it STARTS on, which is the earlier one. The page it arrived FROM now comes
+  from `page_of()`, which asks the batch's own page map and takes the later of
+  the two rows claiming that verse. The four existing comments were backfilled
+  to p35, p41, p47 and p52, each confirmed against the comment beside it.
+- **`CONTINUES markers: n -> n` was counted around the removal only**, so a
+  batch that finished one chant and opened another reported `1 -> 0` of a file
+  that still held one. It is now counted over the whole run. The guard that
+  refuses to claim a removal it did not make is unchanged and still local.
+
+One unrelated failure is still open and is NOT from this: `check_batch --all`
+reports `kham-choen-bucha-phitsadan: 7 of 7 checks are str, not objects`. That
+is the page-9 batch, whose checks were written as plain strings before the shape
+was settled. It cannot be re-applied by the tool as it stands.
