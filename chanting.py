@@ -14952,7 +14952,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
         # ‼ CHECK [IMG_0317.PNG]: The book prints NO title for this chant. The
         #   rubric above it names it สังฆาภิคีติ (Saṅghābhigīti), and that is
         #   where the id comes from. Same treatment as the other two abhigīti
@@ -15020,6 +15019,243 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'that wholly pure company of the noble ones I salute with my head.',
+            },
+            {
+                'number': 5,
+                'page': 55,
+                'pali': 'สังโฆ โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง',
+                'pali_roman': 'Saṅgho yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Sangha, which is for all breathing things the refuge, safe and supreme,',
+            },
+            {
+                'number': 6,
+                'pali': 'ตะติยานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง.',
+                'pali_roman': 'Tatiyānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the third of the objects of recollection — it I revere with my head.',
+            },
+            # ‼ CHECK [IMG_0318.PNG]: IMPORTANT for the diacritic question.
+            #   Page 55 prints สังฆัสสาหัสมิ with NO mark over the ส of สมิ.
+            #   Pages 52 and 53 print the matching word in the other two hymns
+            #   WITH one — พุทธัสสาหัส์มิ and ธัมมัสสาหัส์มิ. All three were
+            #   checked at 4x on their own photographs and the difference is
+            #   real, not a print-size artefact. So the book is inconsistent
+            #   with itself across three parallel lines, which is evidence
+            #   that the mark is the printer's inconsistency rather than a
+            #   misreading. All three are entered as printed.
+            {
+                'number': 7,
+                'pali': 'สังฆัสสาหัสมิ ทาโส วะ สังโฆ เม สามิกิสสะโร',
+                'pali_roman': 'Saṅghassāhasmi dāso va saṅgho me sāmikissaro',
+                'thai': '',
+                'paiboon': '',
+                'english': "I am the Sangha's servant; the Sangha is my lord and master.",
+            },
+            {
+                'number': 8,
+                'pali': 'สังโฆ ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม.',
+                'pali_roman': 'Saṅgho dukkhassa ghātā ca vidhātā ca hitassa me.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Sangha destroys suffering, and brings about what is for my welfare.',
+            },
+            {
+                'number': 9,
+                'pali': 'สังฆัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง',
+                'pali_roman': 'Saṅghassāhaṃ niyyādemi sarīrañjīvitañcidaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Sangha I surrender this body and this life,',
+            },
+            {
+                'number': 10,
+                'pali': 'วันทันโตหัง จะริสสามิ สังฆัสโสปะฏิปันนะตัง.',
+                'pali_roman': 'Vandantohaṃ carissāmi saṅghassopaṭipannataṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Revering it, I shall walk on by the Sangha's own good practice.",
+            },
+            {
+                'number': 11,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For me there is no other refuge; the Sangha is my refuge, the best of them.',
+            },
+            {
+                'number': 12,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน.',
+                'pali_roman': 'Etena saccavajjena vaḍḍheyyaṃ satthusāsane.',
+                'thai': '',
+                'paiboon': '',
+                'english': "By the speaking of this truth, may I grow in the Teacher's dispensation.",
+            },
+            {
+                'number': 13,
+                'pali': 'สังฆัง เม วันทะมาเนนะ ยัง ปุญญัง ปะสุตัง อิธะ',
+                'pali_roman': 'Saṅghaṃ me vandamānena yaṃ puññaṃ pasutaṃ idha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever merit I have gained here in revering the Sangha —',
+            },
+            # ‼ CHECK [IMG_0318.PNG]: The bow-down rubric here reads
+            #   หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง ดังนี้. with NO space after
+            #   พร้อมกัน, matching page 53 and differing from page 54, which
+            #   prints one. Three printings, two spellings. Reproduced as
+            #   printed.
+            {
+                'number': 14,
+                'rubric': 'หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง ดังนี้.',
+                'pali': 'สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.',
+                'pali_roman': 'Sabbepi antarāyā me māhesuṃ tassa tejasā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of it, may all obstacles for me come to nothing.',
+            },
+            {
+                'number': 15,
+                'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา,',
+                'pali_roman': 'Kāyena vācāya va cetasā vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By body, by speech, or by mind,',
+            },
+            {
+                'number': 16,
+                'pali': 'สังเฆ กุกัมมัง ปะกะตัง มะยา ยัง,',
+                'pali_roman': 'Saṅghe kukammaṃ pakataṃ mayā yaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever wrong has been done by me towards the Sangha —',
+            },
+            # ‼ CHECK [IMG_0318.PNG]: Page 55 ends this line with a FULL STOP
+            #   — สังโฆ ปะฏิคคัณหะตุ อัจจะยันตัง. — where pages 53 and 54
+            #   print a comma at the same point in the matching line. Entered
+            #   as printed. The English keeps the comma sense because the
+            #   sentence plainly runs on into verse 18.
+            {
+                'number': 17,
+                'pali': 'สังโฆ ปะฏิคคัณหะตุ อัจจะยันตัง.',
+                'pali_roman': 'Saṅgho paṭiggaṇhatu accayantaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the Sangha accept that transgression,',
+            },
+            {
+                'number': 18,
+                'pali': 'กาลันตะเร สังวะริตุง วะ สังเฆ.',
+                'pali_roman': 'Kālantare saṃvarituṃ va saṅghe.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that in time to come I may be restrained towards the Sangha.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0318.PNG]: The FIRST chant since page 51 that the book
+        #   gives a printed title — พุทธะมังคะละคาถา, centred and bold above
+        #   the verses. Everything on pages 52 to 54 had to take its name from
+        #   the rubric above it. No chant number is printed with it.
+        # ‼ CHECK [IMG_0318.PNG]: TWO-COLUMN READING, please confirm. The
+        #   whole chant is set in two columns and has been read ACROSS the
+        #   row. The first pairing made is verse 1: left cell สัมพุทโธ ทิปะทัง
+        #   เสฏโฐ + right cell นิสินโน เจวะ มัชฌิเม. The content supports the
+        #   reading — each row names one disciple and one direction — but it
+        #   should still be confirmed.
+        # ‼ CHECK [IMG_0318.PNG]: The invitation uses ภะณามะ เส ("let us
+        #   recite") where the three abhigīti hymns on pages 52-54 all used
+        #   กะโรมะ เส. Reproduced as printed; it is a real difference, not a
+        #   slip.
+        # ‼ CHECK [IMG_0318.PNG]: The rubric prints พุทธะมังคะละ-คาถาโย broken
+        #   across a line with a hyphen. Rejoined to พุทธะมังคะละคาถาโย, as
+        #   the rule for typesetter's line breaks requires. The hyphen is not
+        #   reproduced.
+        'id': 'buddhamangala-gatha',
+        'title_thai': 'พุทธะมังคะละคาถา',
+        'title_pali': 'Buddhamaṅgalagāthā',
+        'title_roman': '',
+        'title_english': 'The Auspicious Verses of the Buddha',
+        'page_start': 55,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'สัมพุทโธ ทิปะทัง เสฏโฐ นิสินโน เจวะ มัชฌิเม,',
+                'pali_roman': 'Sambuddho dipadaṃ seṭṭho nisinno ceva majjhime,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Perfectly Awakened One, best of those who go on two feet, is seated in the middle;',
+            },
+            {
+                'number': 2,
+                'pali': 'โกณฑัญโญ ปุพพะภาเค จะ อาคะเณยเย จะ กัสสะโป,',
+                'pali_roman': 'Koṇḍañño pubbabhāge ca āgaṇeyye ca kassapo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Koṇḍañña in the eastern quarter, and Kassapa in the south-east,',
+            },
+            # ‼ CHECK [IMG_0318.PNG]: อุปาลี is printed with a long ลี and
+            #   transliterated upālī. Standard editions have Upāli with a
+            #   short final i. Kept as printed.
+            {
+                'number': 3,
+                'pali': 'สารีปุตโต จะ ทักขิเณ หะระติเย อุปาลี จะ,',
+                'pali_roman': 'Sāriputto ca dakkhiṇe haratiye upālī ca,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sāriputta in the south, and Upāli in the south-west,',
+            },
+            {
+                'number': 4,
+                'pali': 'ปัจฉิเมปิ จะ อานันโท พายัพเพ จะ คะวัมปะติ.',
+                'pali_roman': 'Pacchimepi ca ānando pāyabbe ca gavampati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Ānanda in the west also, and Gavampati in the north-west.',
+            },
+            {
+                'number': 5,
+                'pali': 'โมคคัลลาโน จะ อุตตะเร อีสาเนปิ จะ ราหุโล',
+                'pali_roman': 'Moggallāno ca uttare īsānepi ca rāhulo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Moggallāna in the north, and Rāhula in the north-east —',
+            },
+            {
+                'number': 6,
+                'pali': 'อิเม โข มังคะลา พุทธา สัพเพ อิธะ ปะติฏฐิตา,',
+                'pali_roman': 'Ime kho maṅgalā buddhā sabbe idha patiṭṭhitā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these auspicious enlightened ones are all established here,',
+            },
+            # ‼ CHECK [IMG_0318.PNG]: The last line on the page. It is a
+            #   complete two-pāda line but ends on a COMMA, so the sentence
+            #   plainly runs on to page 56. The chant is marked as continuing;
+            #   page 56's batch adds verse 8 onward and does NOT complete
+            #   verse 7.
+            {
+                'number': 7,
+                'pali': 'วันทิตา เต จะ อัมเหหิ สักกาเรหิ จะ ปูชิตา,',
+                'pali_roman': 'Vanditā te ca amhehi sakkārehi ca pūjitā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and they are revered by us and honoured with offerings,',
             },
         ],
     },
@@ -16661,6 +16897,20 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'หยุดระลึกถึงพระสังฆคุณสักครู่น้อยหนึ่งแล้วประธานกล่าวเชิญชวนสวดสรรเสริญพระสังฆคุณต่อไปว่า หันทะ มะยัง สังฆาภิคีติง กะโรมะ เส. รองประธานขึ้นต้นบทว่า สัทธัมมะโช นอกนั้นรับต่อ สุปะฏิปัตติคุณาทิยุตโต ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.',
                 'english': 'Pause a little while to recollect the qualities of the Sangha. Then the leader gives the invitation to go on and chant the praise of those qualities, saying: Handa mayaṃ saṅghābhigītiṃ karoma se. The deputy leader begins the passage with Saddhammajo, and the rest take it up from Supaṭipattiguṇādiyutto and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 55 ────────────────────────────────────────────────────
+    # Written from batch-055-055.json.
+    {
+        'page': 55,
+        'after': 'sanghabhigiti',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'เงยขึ้นพร้อมกัน แล้วนั่งพับเพียบประนมมือ ประธานกล่าวเชิญชวนสวดพุทธะมังคะละคาถา คือคำไหว้พระอรหันต์ 8 ทิศ ว่า หันทะ มะยัง พุทธะมังคะละคาถาโย ภะณามะ เส. รองประธานขึ้นต้นบทว่า สัมพุทโธ นอกนั้นรับต่อ ทิปะทัง เสฏโฐ ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำดังนี้.',
+                'english': 'Raise the head together, then sit with the legs folded to one side and the hands raised in salutation. The leader gives the invitation to chant the Buddhamaṅgala verses, which are the words of homage to the arahants of the eight directions, saying: Handa mayaṃ buddhamaṅgalagāthāyo bhaṇāma se. The deputy leader begins the passage with Sambuddho, and the rest take it up from Dipadaṃ seṭṭho and so on, going on together, pausing at each comma, thus.',
                 'english_unverified': True,
             },
         ],
