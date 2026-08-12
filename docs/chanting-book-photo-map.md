@@ -40,6 +40,7 @@ photograph.
 | 52 | IMG_0315 | 263 |
 | 53 | **IMG_0316** | 263 (a Photos-app screen capture — see below) |
 | 54 | IMG_0317 | 263 |
+| 59 | IMG_0322 | 263 |
 | 61 | IMG_0324 | 263 |
 | 68 | IMG_0331 | 263 |
 | 207 | IMG_0477 | 270 |
@@ -56,9 +57,10 @@ The offset is 262–263 through the low pages and 270 by page 207, so seven page
 somewhere between 68 and 207 were shot twice. Those stretches are unmapped.
 
 Pages 35–50 went in without being added here, and they all sat at offset 263 —
-the same as pages 31–34 and 51. So the offset holds unbroken from 31 to 54 at
-least. That is a reason to expect the next filename, never a reason to trust it:
-read the page number off the top of the photograph as always.
+the same as pages 31–34 and 51. Pages 55–58 went in the same way. So the offset
+holds unbroken from 31 to 59 at least, and page 61's anchor says it survives the
+gap to 61. That is a reason to expect the next filename, never a reason to trust
+it: read the page number off the top of the photograph as always.
 
 ## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
 
