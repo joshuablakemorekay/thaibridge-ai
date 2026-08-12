@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-12 after page
-59 went in.
+60 went in.
 
 ## Read first, in this order
 
@@ -12,10 +12,10 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-12 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–59 are in and unbroken**, plus 217–221. **89 chants, 1,169 verses.**
+- **Pages 1–60 are in and unbroken**, plus 217–221. **90 chants, 1,189 verses.**
   `/chanting` derives that line itself, so it is never stale.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 55–59 were applied 2026-08-11 and 2026-08-12, one commit each; pages 51
+- Pages 55–60 were applied 2026-08-11 and 2026-08-12, one commit each; pages 51
   to 54 landed over the two days before.
 
 ## How to work — this matters more than the tasks
@@ -29,31 +29,35 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 60, `IMG_0323`
+## Next: page 61, `IMG_0324`
 
-Page 59 ends **mid-sentence**, part way through the second of two paragraphs of
-Thai instruction at its foot, so page 60 opens by completing it. The last words
-on 59 are `…ประธานกล่าวเชิญชวนว่า`, and that phrase appears **twice in three
-lines** — once mid-paragraph and once as the page's last words. Either the book
-repeats itself or page 60 resolves it; page 59 reproduces both as printed and
-raises a check. Read 60 before deciding which.
+Page 61 is one of the map's **verified anchors** already, so the filename is
+known rather than expected. The rubric at the foot of page 60 says exactly what
+starts there: **ธาตุปะฏิกูละปัจจะเวกขะณะปาฐัง**, the reflection on the requisites
+as mere elements, beginning `ยะถาปัจจะยัง` with the room taking it up from
+`ปะวัตตะมานัง`. Expect the same shape page 60 had — a run-on passage in four
+movements, one per requisite, closing with a centred `นิฏฐิโต` colophon.
 
-Page 59 also names **ทะสะนาถะกะระณะธัมมะสุตตะ** (Dasanāthakaraṇadhammasutta) as
-its worked example of a chant needing a spoken invitation. The instruction says
-what follows this point in the service is a sutta, a paritta or a paṭha, one a
-day, in the order set out at the end of the regulations — so expect page 60
-onward to leave the ordination material behind and begin that sequence.
+**Pages 59–60 are the service's hinge.** The ordination and novice material
+ends, and what follows is the daily sutta/paritta/paṭha cycle, one a day, in the
+order set out at the end of the regulations. Page 60's two reflections are the
+first of it.
 
-**Pages 58 and 59 are one shape repeated twice** — บทขัด introductory verse,
-then the numbered chant it introduces — once for expulsion (ten grounds) and
-once for penalties (five). Two things that shape brought up:
+**A page can be mostly rubric.** Page 60 is one chant and three prose blocks:
+the tail of page 59's sentence, the rubric in, and the rubric out to page 61.
+Read the whole page before assuming the chant is all of it.
 
-- **The two halves need not be set alike.** Page 58 set its ten grounds as a
-  two-column list; page 59 set its five as a single column. Same book, same
-  shape of chant, opposite setting. Check the columns on every page of a pair.
-- **The title is spelled in Thai and the verses in Pali** — ทัณฑะกรรม in the
-  heading, ทัณฑะกัมมัง in every line under it. Reproduce both; page 58 does the
-  same with นาสะนังคะ.
+### The open decision: a prose chant with paragraphs
+
+The book sets อะตีตะปัจจะเวกขะณะปาโฐ as **four indented run-on paragraphs**, one
+per requisite. `layout: 'prose'` would flow all twenty verses into ONE justified
+block and lose those breaks, so the key was left off, following page 58. The app
+therefore shows twenty lines where the book shows four paragraphs.
+
+Each paragraph does still begin its own line at `อัชชะ มะยา`, so the structure
+is visible — but **the app has no way to render a multi-paragraph prose chant as
+the book sets it.** Page 61 will almost certainly hit the same wall. It is a
+real gap and worth Josh's decision before more pages of this kind go in.
 
 Pages 222 and 223 sit beside 217–221 which are already in, so they are a cheap
 excursion whenever wanted.
@@ -134,7 +138,20 @@ up over the ล of กัล์ยาโณ, the ธ of พุทธ์วา, t
 กัล๎ยาณัง with U+0E4E in `buddhabhithuti`. So the question is not "which mark on
 this word" but **which of the two marks this book's printer uses**, U+0E4C
 (thanthakhat ์) or U+0E4E (yamakkan ๎). One answer fixes every one of them, and
-they are all chanted lines. Everything entered on pages 51–54 uses ์.
+they are all chanted lines. Everything entered on pages 51–60 uses ์.
+
+**Page 60 is the best evidence so far, and it points at ์ (U+0E4C).** It carries
+the mark five times — อะปัจจะเวกขิต์วา, ท์วายะ, พ์รัห์มะ, ยาต์รา, อัพ์ยา — and on
+ท์วายะ it stands alone at the start of a line with nothing crowding it. At 11×
+it is an ε-shaped curl with a tail, not the crescent of yamakkan. That is a
+photograph reading well, not a verdict: it says what the printer cuts, and the
+book in Josh's hands is still what settles กัล๎ยาณัง. Nothing was changed on it.
+
+**Page 60 also found the opposite case.** The book prints **อุณหัสสะ with no
+mark at all**, where standard editions have อุณ๎หัสสะ. Both occurrences were
+checked at high magnification and neither is marked; both are stored unmarked.
+Worth knowing that this printer omits the mark as well as cutting it, because
+the omission is exactly what a reader would "correct" without noticing.
 
 **The ฬ/พ hazard.** These photographs cannot tell ฬ from พ at body-text size.
 Proven twice against Josh's own readings from the book: page 23 line 19, and
@@ -172,6 +189,11 @@ on 30. Fix them as each page is read, not in a sweep.
 
 ## Settled — do not re-open
 
+- **Page 59 repeats itself, and the book is what repeats.** Its last line prints
+  `ประธานกล่าวเชิญชวนว่า หันทะ มะยัง ทะสะนาถะกะระณะธัมมะสุตตะ` for the second
+  time in three lines. Page 60's first line completes that sentence, so the
+  duplication is the compositor's, not an artefact of the page turn. Page 59's
+  text stays exactly as printed.
 - Page 23 line 19 is **วิรุฬหะ** (Josh, against the physical book).
 - Variant readings **do** get a field; it exists as of `b40c9c5`.
 - **Pages 5 and 21 are on both the index and the contents**, as of `a97326d`
