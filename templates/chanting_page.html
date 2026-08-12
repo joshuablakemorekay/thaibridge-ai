@@ -372,8 +372,23 @@
        and is allowed to look like an app. */
     .page-body.view-book .page-app-link { display: none; }
     .page-body.view-book .page-chant.is-prose .verse-body {
-        text-align: justify;
         max-width: 70ch;
+    }
+    /* Justification belongs to the PARAGRAPH, not to the whole chant. A
+       run-on chant the book sets as several indented paragraphs — page 60's
+       Atītapaccavekkhaṇa, one paragraph per requisite — has one of these per
+       paragraph, so the breaks the book prints survive instead of the units
+       flowing into a single block. A chant with no paragraph marks has
+       exactly one of these wrapping everything, which is the old behaviour. */
+    .page-body.view-book .page-chant.is-prose .verse-para {
+        text-align: justify;
+    }
+    /* The book indents each paragraph after the first; the first sits flush
+       under the title. Matching `.block-prose` above, which does the same for
+       the rubrics printed around these chants. */
+    .page-body.view-book .page-chant.is-prose .verse-para + .verse-para {
+        text-indent: 2.5em;
+        margin-top: 0.5rem;
     }
     /* In verse mode a prose chant reads as numbered units like any other, so
        nothing here applies. That is the whole point of having both. */
@@ -720,7 +735,13 @@
         {# Wrapped so a prose chant can flow back into one justified block in
            book mode. A verse chant is unaffected by the wrapper. #}
         <div class="verse-body">
-        {% for verse in entry.verses %}
+        {# Grouped into the paragraphs the BOOK sets, so a run-on chant that
+           the page prints as several indented paragraphs is not flowed into
+           one block. A chant with no paragraph marks comes back as a single
+           group, which renders exactly as it did before this existed. #}
+        {% for paragraph in entry.verses | verse_paragraphs %}
+        <div class="verse-para">
+        {% for verse in paragraph %}
         {% if verse.section %}<h4 class="verse-section">{{ verse.section }}</h4>{% endif %}
         <div class="verse">
             <span class="verse-number">{{ verse.number }}</span>
@@ -761,6 +782,8 @@
         {% if verse.rubric %}
         <p class="block-rubric verse-rubric">{{ verse.rubric }}</p>
         {% endif %}
+        {% endfor %}
+        </div>
         {% endfor %}
         </div>
 

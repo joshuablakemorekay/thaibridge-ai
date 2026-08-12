@@ -409,7 +409,13 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
     # rendered `verse.rubric` since page 1 was entered by hand, and this loop
     # was the only thing between the two. A batch declaring one got a silent
     # drop — the page would have gone live missing three printed lines.
-    for key in ("page", "section", "printed_number", "rubric"):
+    # `para_start` is the same story again, found on page 60: the book sets
+    # Atītapaccavekkhaṇa as four indented paragraphs, one per requisite, and
+    # `layout: 'prose'` alone would flow all twenty units into one block. The
+    # flag says where the book starts a new paragraph, and `verse_paragraphs`
+    # in chanting.py splits on it. Left off this list it would be dropped in
+    # transit and the page would show a shape the book does not print.
+    for key in ("page", "section", "printed_number", "rubric", "para_start"):
         if key in verse:
             out += f"{indent}{INDENT}'{key}': {verse[key]!r},\n"
     for layer in LAYERS:

@@ -16203,6 +16203,7 @@ CHANTS = [
         'title_roman': '',
         'title_english': 'The Reflection on the Requisites Already Used',
         'page_start': 60,
+        'layout': 'prose',
         'source_printed': 'นัย ม.มู. 12/17-8',
         'group': 'General chanting',
         'english_unverified': True,
@@ -16281,6 +16282,7 @@ CHANTS = [
             },
             {
                 'number': 6,
+            'para_start': True,
                 'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย ปิณฑะปาโต ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo piṇḍapāto paribhutto,',
                 'thai': '',
@@ -16345,6 +16347,7 @@ CHANTS = [
             },
             {
                 'number': 13,
+            'para_start': True,
                 'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง เสนาสะนัง ปะริภุตตัง,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ senāsanaṃ paribhuttaṃ,',
                 'thai': '',
@@ -16385,6 +16388,7 @@ CHANTS = [
             },
             {
                 'number': 18,
+            'para_start': True,
                 'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo gilānapaccayabhesajjaparikkhāro paribhutto,',
                 'thai': '',
@@ -20054,6 +20058,32 @@ def describe_coverage(runs):
 def get_chant(chant_id):
     """Return one chant by id, or None."""
     return next((c for c in CHANTS if c['id'] == chant_id), None)
+
+
+def verse_paragraphs(verses):
+    """Split a chant's verses into the paragraphs the BOOK sets them in.
+
+    A run-on chant is not always one block of prose. Page 60's
+    Atītapaccavekkhaṇa is four indented paragraphs, one for each requisite,
+    and flowing all twenty units into a single justified block would show a
+    page the book does not print. `layout: 'prose'` on its own cannot say
+    that, so a verse carries `para_start` where a new paragraph begins.
+
+    Returns a list of lists, so the template can wrap each paragraph and let
+    the units inside it flow. A chant with no `para_start` anywhere comes back
+    as ONE group holding every verse, which is exactly how a single-paragraph
+    prose chant and an ordinary verse chant already render — the grouping is
+    invisible until a page needs it.
+
+    The first verse never needs the key: a paragraph opens there by
+    definition, and requiring it would make the flag mean two things.
+    """
+    groups = []
+    for verse in verses:
+        if not groups or verse.get('para_start'):
+            groups.append([])
+        groups[-1].append(verse)
+    return groups
 
 
 def check_page_blocks(chants=None, page_blocks=None):

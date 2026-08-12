@@ -1284,6 +1284,12 @@ def get_formality_badge(formality_code):
 # Make formality badge function available in all templates
 app.jinja_env.globals.update(get_formality_badge=get_formality_badge)
 
+# The chanting page groups a chant's verses into the paragraphs the printed
+# book sets them in. It lives in chanting.py beside the data it splits, and is
+# a filter rather than a global so the template reads left to right:
+# `entry.verses | verse_paragraphs`.
+app.jinja_env.filters['verse_paragraphs'] = chanting.verse_paragraphs
+
 
 
 
