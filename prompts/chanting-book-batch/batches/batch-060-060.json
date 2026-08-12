@@ -1,0 +1,353 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "atita-paccavekkhana-patha"
+    ],
+    "pages": [
+      {
+        "page": 60,
+        "file": "IMG_0323.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "note": "The first line of the page, which is not chant text: it completes the instruction paragraph that ran off the foot of page 59. With this line the sentence is whole, and page 59's repeated ประธานกล่าวเชิญชวนว่า is shown to be the book's own duplication rather than a page-turn effect.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "หันทะ มะยัง ทะสะนาถะกะระณะธัมมะสุตตัง ภะณามะ เส. ดังนี้ เป็นต้น",
+            "english": "\"Handa mayaṃ dasanāthakaraṇadhammasuttaṃ bhaṇāma se\" — and so on in that manner.",
+            "english_unverified": true
+          }
+        ]
+      },
+      {
+        "page": 60,
+        "file": "IMG_0323.PNG",
+        "script": "thai",
+        "chant": "atita-paccavekkhana-patha",
+        "verses": "1-20",
+        "starts_here": true,
+        "note": "The body of the page, under its own printed title อะตีตะปัจจะเวกขะณะปาโฐ, which carries no chant number. Single column. The chant is set as FOUR separate run-on paragraphs, one for each of the four requisites, each indented and each beginning อัชชะ มะยา. It ends with a centred colophon.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "ต่อจากพระสูตร หรือ พระปริตร หรือปาฐะ สวด อะตีตะปัจจะเวกขะณะปาฐะ ประธานกล่าวเชิญชวน ว่า หันทะ มะยัง อะตีตะปัจจะเวกขะณะปาฐัง ภะณามะ เส รองประธานขึ้นต้นบทว่า อัชชะ มะยา นอกนั้นรับต่อ อะปัจจะเวกขิต์วา ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.",
+            "english": "After the sutta, the paritta or the paṭha, the Atītapaccavekkhaṇa-pāṭha is chanted. The presiding monk gives the invitation, saying Handa mayaṃ atītapaccavekkhaṇapāṭhaṃ bhaṇāma se. The deputy begins the passage with Ajja mayā, and the rest take it up from Apaccavekkhitvā and so on, going on together, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      },
+      {
+        "page": 60,
+        "file": "IMG_0323.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "note": "The foot of the page, below the colophon and above the footnote rule: the rubric introducing the NEXT chant, ธาตุปะฏิกูละปัจจะเวกขะณะปาฐัง, which begins on page 61 and has not been read yet. No chant text.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "ต่อจากสวด อะตีตะปัจจะเวกขะณะปาฐะ ประธานกล่าวเชิญชวนว่า หันทะ มะยัง ธาตุปะฏิกูละปัจจะเวกขะณะปาฐัง ภะณามะ เส. รองประธานขึ้นต้นบทว่า ยะถาปัจจะยัง นอกนั้นรับต่อ ปะวัตตะมานัง ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้",
+            "english": "After the Atītapaccavekkhaṇa-pāṭha has been chanted, the presiding monk gives the invitation, saying Handa mayaṃ dhātupaṭikūlapaccavekkhaṇapāṭhaṃ bhaṇāma se. The deputy begins the passage with Yathāpaccayaṃ, and the rest take it up from Pavattamānaṃ and so on, going on together, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "atita-paccavekkhana-patha",
+      "working_notes": {
+        "invitation": "printed inside the prose rubric above the title, and recorded there rather than in the invitation field, as on pages 58 and 59.",
+        "units": "Twenty, divided at the printed commas and full stops exactly as pages 58 and 59 divide their run-on passages. The four printed paragraphs fall at verses 1-5 (robes), 6-12 (almsfood), 13-17 (lodging) and 18-20 (medicine).",
+        "ordering": "none — no Thai translation printed.",
+        "conventions": "The page uses the small mark ์ over a consonant to show a conjunct — อะปัจจะเวกขิต์วา, ท์วายะ, พ์รัห์มะ, ยาต์รา, อัพ์ยา. Written with U+0E4C, consistent with pages 51-59, and see the check about the mark's shape. The book does NOT mark อุณหัสสะ, where standard editions have อุณ๎หัสสะ.",
+        "pages": "IMG_0323.PNG (page 60), Thai script, the body of the page. Single column. The chant begins and ends on this page."
+      },
+      "title_thai": "อะตีตะปัจจะเวกขะณะปาโฐ",
+      "title_pali": "Atītapaccavekkhaṇapāṭho",
+      "title_roman": "",
+      "title_english": "The Reflection on the Requisites Already Used",
+      "page_start": 60,
+      "source_printed": "นัย ม.มู. 12/17-8",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "closing": {
+        "pali": "อะตีตะปัจจะเวกขะณะปาโฐ นิฏฐิโต",
+        "pali_roman": "Atītapaccavekkhaṇapāṭho niṭṭhito",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here ends the Reflection on the Requisites Already Used."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง จีวะรัง ปะริภุตตัง,",
+          "pali_roman": "Ajja mayā apaccavekkhitvā yaṃ cīvaraṃ paribhuttaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever robe I have used today without reflecting,"
+        },
+        {
+          "number": 2,
+          "pali": "ตัง ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,",
+          "pali_roman": "Taṃ yāvadeva sītassa paṭighātāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that was only for warding off cold,"
+        },
+        {
+          "number": 3,
+          "pali": "อุณหัสสะ ปะฏิฆาตายะ,",
+          "pali_roman": "Uṇhassa paṭighātāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "for warding off heat,"
+        },
+        {
+          "number": 4,
+          "pali": "ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,",
+          "pali_roman": "Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃ paṭighātāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "for warding off the touch of gadflies, mosquitoes, wind, sun and creeping things,"
+        },
+        {
+          "number": 5,
+          "pali": "ยาวะเทวะ หิริโกปีนะปะฏิจฉาทะนัตถัง.",
+          "pali_roman": "Yāvadeva hirikopīnapaṭicchādanatthaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and only for the sake of covering what modesty conceals."
+        },
+        {
+          "number": 6,
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา โย ปิณฑะปาโต ปะริภุตโต,",
+          "pali_roman": "Ajja mayā apaccavekkhitvā yo piṇḍapāto paribhutto,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever almsfood I have used today without reflecting,"
+        },
+        {
+          "number": 7,
+          "pali": "โส เนวะ ท์วายะ นะ มะทายะ นะ มัณฑะนายะ นะ วิภูสะนายะ,",
+          "pali_roman": "So neva dvāya na madāya na maṇḍanāya na vibhūsanāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that was not for amusement, nor for intoxication, nor for adornment, nor for beautifying,"
+        },
+        {
+          "number": 8,
+          "pali": "ยาวะเทวะ อิมัสสะ กายัสสะ ฐิติยา ยาปะนายะ,",
+          "pali_roman": "Yāvadeva imassa kāyassa ṭhitiyā yāpanāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "but only for the endurance and continuance of this body,"
+        },
+        {
+          "number": 9,
+          "pali": "วิหิงสุปะระติยา พ์รัห์มะจะริยานุคคะหายะ,",
+          "pali_roman": "Vihiṃsuparatiyā brahmacariyānuggahāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "for the ending of its hurt, and for the support of the holy life,"
+        },
+        {
+          "number": 10,
+          "pali": "อิติ ปุราณัญจะ เวทะนัง ปะฏิหังขามิ,",
+          "pali_roman": "Iti purāṇañca vedanaṃ paṭihaṅkhāmi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "thinking: thus I put an end to the old feeling,"
+        },
+        {
+          "number": 11,
+          "pali": "นะวัญจะ เวทะนัง นะ อุปปาเทสสามิ,",
+          "pali_roman": "Navañca vedanaṃ na uppādessāmi,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and I shall not give rise to a new feeling,"
+        },
+        {
+          "number": 12,
+          "pali": "ยาต์รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.",
+          "pali_roman": "Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and I shall have sustenance, blamelessness, and a life of ease."
+        },
+        {
+          "number": 13,
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง เสนาสะนัง ปะริภุตตัง,",
+          "pali_roman": "Ajja mayā apaccavekkhitvā yaṃ senāsanaṃ paribhuttaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever lodging I have used today without reflecting,"
+        },
+        {
+          "number": 14,
+          "pali": "ตัง ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,",
+          "pali_roman": "Taṃ yāvadeva sītassa paṭighātāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that was only for warding off cold,"
+        },
+        {
+          "number": 15,
+          "pali": "อุณหัสสะ ปะฏิฆาตายะ,",
+          "pali_roman": "Uṇhassa paṭighātāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "for warding off heat,"
+        },
+        {
+          "number": 16,
+          "pali": "ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,",
+          "pali_roman": "Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃ paṭighātāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "for warding off the touch of gadflies, mosquitoes, wind, sun and creeping things,"
+        },
+        {
+          "number": 17,
+          "pali": "ยาวะเทวะ อุตุปะริสสะยะวิโนทะนัง ปะฏิสัลลานารามัตถัง.",
+          "pali_roman": "Yāvadeva utuparissayavinodanaṃ paṭisallānārāmatthaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and only for dispelling the perils of the seasons and for delighting in seclusion."
+        },
+        {
+          "number": 18,
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,",
+          "pali_roman": "Ajja mayā apaccavekkhitvā yo gilānapaccayabhesajjaparikkhāro paribhutto,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever medicine for use in sickness I have used today without reflecting,"
+        },
+        {
+          "number": 19,
+          "pali": "โส ยาวะเทวะ อุปปันนานัง เวยยาพาธิกานัง เวทะนานัง ปะฏิฆาตายะ,",
+          "pali_roman": "So yāvadeva uppannānaṃ veyyābādhikānaṃ vedanānaṃ paṭighātāya,",
+          "thai": "",
+          "paiboon": "",
+          "english": "that was only for warding off painful feelings that had arisen,"
+        },
+        {
+          "number": 20,
+          "pali": "อัพ์ยาปัชฌะปะระมะตายาติ.",
+          "pali_roman": "Abyāpajjhaparamatāyāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and for freedom from affliction as the highest aim."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "อะปัจจะเวกขิต์วา",
+          "pali_roman": "apaccavekkhitvā",
+          "meaning": "not having reflected; the whole chant exists because the reflection was meant to be made at the time of use and was not"
+        },
+        {
+          "pali": "ยาวะเทวะ",
+          "pali_roman": "yāvadeva",
+          "meaning": "only so far as, for just this much and no more — the word that limits each requisite to its purpose"
+        },
+        {
+          "pali": "ปะริกขาโร",
+          "pali_roman": "parikkhāro",
+          "meaning": "a requisite; the four things a monastic may own and use — robe, almsfood, lodging, medicine"
+        },
+        {
+          "pali": "หิริโกปีนะ",
+          "pali_roman": "hirikopīna",
+          "meaning": "what shame would have covered; the parts of the body a robe exists to conceal"
+        },
+        {
+          "pali": "ปะฏิสัลลานะ",
+          "pali_roman": "paṭisallāna",
+          "meaning": "seclusion, going apart to be alone — the purpose a dwelling serves beyond shelter"
+        },
+        {
+          "pali": "อัพ์ยาปัชฌะ",
+          "pali_roman": "abyāpajjha",
+          "meaning": "freedom from affliction; the aim medicine serves, stated as the highest of its purposes"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0323.PNG",
+          "issue": "THE MARK, and this page answers the standing question better than any so far. อะปัจจะเวกขิต์วา, ท์วายะ, พ์รัห์มะ, ยาต์รา and อัพ์ยา all carry it, and on ท์วายะ it stands alone at the start of a line where nothing crowds it. At 11x it is unmistakably an ε-shaped curl with a tail — thanthakhat ์ (U+0E4C) — and NOT the crescent of yamakkan ๎ (U+0E4E). Everything on pages 51-60 is written with ์. This is evidence about which mark the printer cuts, not a licence to change กัล๎ยาณัง in buddhabhithuti, which is Josh's call."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0323.PNG",
+          "issue": "THE BOOK PRINTS อุณหัสสะ WITH NO MARK over the ณ, where standard editions have อุณ๎หัสสะ. Checked at high magnification at BOTH places it occurs, verse 3 and verse 15, and neither is marked. Reproduced unmarked. This is the one word on the page where the expected mark is absent, so it is exactly the kind of thing that gets silently 'corrected' — it has not been."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0323.PNG",
+          "issue": "The book prints ท์วายะ, which transliterates dvāya. Standard editions have davāya (เทวายะ / ทะวายะ). Reproduced as printed and transliterated to match; worth one look because a marked conjunct and an unmarked syllable differ by one small mark."
+        },
+        {
+          "verse": 5,
+          "file": "IMG_0323.PNG",
+          "issue": "The book prints หิริโกปีนะปะฏิจฉาทะนัตถัง with a single ป, giving hirikopīnapaṭicchādanatthaṃ. Standard editions double it, hirikopīnappaṭicchādanatthaṃ. Kept as printed."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0323.PNG",
+          "issue": "The book prints วิหิงสุปะระติยา, giving vihiṃsuparatiyā. Standard editions have vihiṃsūparatiyā with a long ū. Kept as printed."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0323.PNG",
+          "issue": "ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง is broken across a line in the justified setting at both verse 4 and verse 16, with NO hyphen at the break — the line simply ends สิริง and the next begins สะปะ. Rejoined as one word, which is what the run-on passage rule requires. Named because a break without a hyphen is easier to mistake for a word boundary than one with."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0323.PNG",
+          "issue": "LAYOUT — and this one needs a decision from Josh. The book sets this chant as FOUR separate indented run-on paragraphs, one per requisite. `layout: 'prose'` would flow all twenty verses into ONE justified block and lose the four paragraph breaks, so the key is left OFF, following page 58's mixed-layout precedent. The page then shows twenty lines where the book shows four paragraphs. Each paragraph does still begin its own line at อัชชะ มะยา, so the structure is visible, but the app currently has no way to render a multi-paragraph prose chant as the book sets it."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0323.PNG",
+          "issue": "The footnote marker 1 sits at the end of verse 20 and the footnote under the rule reads 1. นัย ม.มู. 12/17-8, both on this page, so it is filed as source_printed. The นัย prefix marks it as a reference by sense rather than a verbatim citation; reproduced exactly, not expanded."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0323.PNG",
+          "issue": "The colophon อะตีตะปัจจะเวกขะณะปาโฐ นิฏฐิโต is printed centred and bold under the chant, with NO full stop after นิฏฐิโต. Recorded in the closing field rather than as a verse, so the app sets it as a colophon and does not number it as a line to be chanted."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "atita-paccavekkhana-patha"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 61,
+    "resume_from_file": "IMG_0324.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. This batch has no paiboon values at all: the title is Pali in Thai script so title_roman is the empty string, and no verse carries a Thai translation, so every verse paiboon is empty.",
+    "pali_untouched": "Confirmed. Every pali value is the page's Thai script as printed; every pali_roman is IAST; no pali value has been run through Paiboon+.",
+    "page_scan": "agrees — three rows for one page, in the order they appear down it. Verses 1-20 are claimed exactly once by the middle row; the first and last rows carry no chant text, only page blocks. No verse is orphaned.",
+    "notes": "PAGE 59'S OPEN QUESTION IS ANSWERED. The first line of this page completes the sentence that ran off page 59, and with the whole sentence visible, page 59's ประธานกล่าวเชิญชวนว่า หันทะ มะยัง ทะสะนาถะกะระณะธัมมะสุตตะ IS the book repeating itself — a compositor's dittography, not a page-turn artefact. Page 59's text stays as printed, because the book does print it twice. Also: this page ends its first rubric ภะณามะ เส with NO full stop, where every other instance of that formula on pages 59 and 60 has one. Reproduced without. And see the check on the mark — page 60 gives the cleanest instance of it in the book so far."
+  }
+}
