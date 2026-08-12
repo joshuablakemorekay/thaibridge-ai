@@ -15937,7 +15937,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
         # ‼ CHECK [IMG_0321.PNG]: TWO-COLUMN READING, please confirm. The
         #   first pairing made is verse 1: left cell เตนะ โข ปะนะ สะมะเยนะ +
         #   right cell สามะเณรา อะคาระวา.
@@ -15981,6 +15980,188 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'undeferential towards the monks, and behaving unbecomingly towards them.',
+            },
+            # ‼ CHECK [IMG_0322.PNG]: TWO-COLUMN READING, please confirm. The
+            #   first pairing made on this page is verse 3: left cell ญัต์วา
+            #   ตะมัตถัง ภะคะวา + right cell ภิกขูนัญเญวะ สันติกา,
+            # ‼ CHECK [IMG_0322.PNG]: This line is printed word for word as
+            #   verse 3 of บทขัดนาสะนังคะ on page 58, and its English is
+            #   copied from that earlier printing rather than written again.
+            #   ญัต์วา carries the same small mark over the ต as page 58 —
+            #   part of the open ส์วากขาโต question about which mark this
+            #   printer uses. Written with U+0E4C (thanthakhat), consistent
+            #   with pages 51-58.
+            {
+                'number': 3,
+                'page': 59,
+                'pali': 'ญัต์วา ตะมัตถัง ภะคะวา ภิกขูนัญเญวะ สันติกา,',
+                'pali_roman': 'Ñatvā tamatthaṃ bhagavā bhikkhūnaññeva santikā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Blessed One, having learnt of that matter from the monks themselves,',
+            },
+            # ‼ CHECK [IMG_0322.PNG]: This row ends with a FULL STOP after จะ,
+            #   where the parallel line on page 58 (verse 4 of บทขัดนาสะนังคะ)
+            #   ends with a comma. Both reproduced as printed.
+            {
+                'number': 4,
+                'pali': 'อะนุญญาสิ ทัณฑะกัมมัง กาตุง ปัญจังคิกัสสะ จะ.',
+                'pali_roman': 'Anuññāsi daṇḍakammaṃ kātuṃ pañcaṅgikassa ca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'allowed a penalty to be imposed on one having the five factors;',
+            },
+            # ‼ CHECK [IMG_0322.PNG]: The word ทัณฑะกัมมะการะณังคัง is broken
+            #   by a hyphen ACROSS THE COLUMN GUTTER — the left cell ends
+            #   ทัณฑะกัมมะ- and the right cell begins การะณังคัง. Rejoined and
+            #   the hyphen dropped, as the rule for typesetter's line breaks
+            #   requires. Third time in this two-page stretch, after verse 5
+            #   of บทขัดนาสะนังคะ and verse 2 of this chant.
+            {
+                'number': 5,
+                'pali': 'สามะเณรานัง ทัณฑะกัมมะการะณังคัง ภะณามะ เส.',
+                'pali_roman': 'Sāmaṇerānaṃ daṇḍakammakāraṇaṅgaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': "let us now recite the grounds that cause a novice's penalty.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0322.PNG]: LAYOUT, please confirm. This chant is set in
+        #   a SINGLE column throughout, where its page-58 counterpart
+        #   นาสะนังคะ 10 สิกขาบท set its ten grounds as a two-column list.
+        #   Same book, same shape of chant, opposite setting — so the five
+        #   grounds are five verses read straight down, and no column pairing
+        #   was made. The layout key is left off, as it was on page 58,
+        #   because prose then list then prose has no single value.
+        # ‼ CHECK [IMG_0322.PNG]: The title ทัณฑะกรรม 5 สิกขาบท spells the
+        #   word ทัณฑะกรรม in Thai orthography, while every verse of the chant
+        #   spells the same word ทัณฑะกัมมัง in Pali. Both reproduced as
+        #   printed; page 58 does the same thing with นาสะนังคะ.
+        'id': 'thanthakam-5-sikkhabot',
+        'title_thai': 'ทัณฑะกรรม 5 สิกขาบท',
+        'title_pali': '',
+        'title_roman': 'tan-tá-gam hâa sìk-kǎa-bòt',
+        'title_english': 'The Five Grounds for Imposing a Penalty on a Novice',
+        'page_start': 59,
+        'source_printed': 'วิ.มหา. 4/171',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'อะนุญญาสิ โข,',
+                'pali_roman': 'Anuññāsi kho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He allowed —',
+            },
+            {
+                'number': 2,
+                'pali': 'โส ภะคะวา,',
+                'pali_roman': 'So bhagavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that Blessed One —',
+            },
+            # ‼ CHECK [IMG_0322.PNG]: This verse ends with a FULL STOP after
+            #   กาตุง, where the parallel verse 3 of นาสะนังคะ 10 สิกขาบท on
+            #   page 58 ends with a comma after นาเสตุง. Reproduced as
+            #   printed, and it is why the sentence is divided here.
+            {
+                'number': 3,
+                'pali': 'ปัญจะหิ อังเคหิ สะมันนาคะตัสสะ สามะเณรัสสะ ทัณฑะกัมมัง กาตุง.',
+                'pali_roman': 'Pañcahi aṅgehi samannāgatassa sāmaṇerassa daṇḍakammaṃ kātuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that a penalty be imposed on a novice possessed of five factors.',
+            },
+            {
+                'number': 4,
+                'pali': 'กะตะเมหิ ปัญจะหิ,',
+                'pali_roman': 'Katamehi pañcahi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Which five?',
+            },
+            {
+                'number': 5,
+                'pali': 'ภิกขูนัง อะลาภายะ ปะริสักกะติ,',
+                'pali_roman': 'Bhikkhūnaṃ alābhāya parisakkati,',
+                'thai': '',
+                'paiboon': '',
+                'english': "He exerts himself for the monks' loss of gain,",
+            },
+            {
+                'number': 6,
+                'pali': 'ภิกขูนัง อะนัตถายะ ปะริสักกะติ,',
+                'pali_roman': 'Bhikkhūnaṃ anatthāya parisakkati,',
+                'thai': '',
+                'paiboon': '',
+                'english': "he exerts himself for the monks' harm,",
+            },
+            {
+                'number': 7,
+                'pali': 'ภิกขูนัง อะนาวาสายะ ปะริสักกะติ,',
+                'pali_roman': 'Bhikkhūnaṃ anāvāsāya parisakkati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he exerts himself to deprive the monks of a dwelling,',
+            },
+            {
+                'number': 8,
+                'pali': 'ภิกขู อักโกสะติ ปะริภาสะติ,',
+                'pali_roman': 'Bhikkhū akkosati paribhāsati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he abuses and reviles the monks,',
+            },
+            {
+                'number': 9,
+                'pali': 'ภิกขู ภิกขูหิ เภเทติ,',
+                'pali_roman': 'Bhikkhū bhikkhūhi bhedeti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he sets monks at variance with monks,',
+            },
+            # ‼ CHECK [IMG_0322.PNG]: The closing sentence prints อะนุญญาสิ โข
+            #   โส ภะคะวา with NO comma after โข, where the opening at verse 1
+            #   prints อะนุญญาสิ โข, with one. Both reproduced as printed,
+            #   exactly as on page 58.
+            {
+                'number': 10,
+                'pali': 'อะนุญญาสิ โข โส ภะคะวา,',
+                'pali_roman': 'Anuññāsi kho so bhagavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That Blessed One allowed',
+            },
+            # ‼ CHECK [IMG_0322.PNG]: The superscript marker 1 sits at the
+            #   very end of this verse, and page 59's footnote under the rule
+            #   reads 1. วิ.มหา. 4/171 — a canonical citation, marker and note
+            #   on the same page. It is therefore filed as source_printed on
+            #   this chant. NOTE THIS AGAINST PAGES 57 AND 58: page 57 had a
+            #   marker with no footnote and page 58 a footnote (4/170) with no
+            #   marker, and page 59 shows what the pattern looks like when it
+            #   is intact. That is evidence for pairing them, not proof, and
+            #   it is left for Josh.
+            {
+                'number': 11,
+                'pali': 'อิเมหิ ปัญจะหิ อังเคหิ สะมันนาคะตัสสะ สามะเณรัสสะ ทัณฑะกัมมัง กาตุนติ.',
+                'pali_roman': 'Imehi pañcahi aṅgehi samannāgatassa sāmaṇerassa daṇḍakammaṃ kātunti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that a penalty be imposed on a novice possessed of these five factors.',
             },
         ],
     },
@@ -17740,6 +17921,40 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'สามเณรอีกรูปหนึ่งขัดบททัณฑกรรม 5 ต่อไป หยุดตามจุดลูกน้ำ ดังนี้.',
                 'english': 'Another sāmaṇera goes on to chant the introductory verse to the five penalties, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 59 ────────────────────────────────────────────────────
+    # Written from batch-059-059.json.
+    {
+        'page': 59,
+        'after': 'bot-khat-thanthakam',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'สามเณรผู้เป็นหัวหน้าขึ้นต้นบทว่า อะนุญญาสิ โข นอกนั้นรับต่อ โส ภะคะวา ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.',
+                'english': 'The senior sāmaṇera begins the passage with Anuññāsi kho, and the rest take it up from So bhagavā and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 59 ────────────────────────────────────────────────────
+    # Written from batch-059-059.json.
+    {
+        'page': 59,
+        'after': 'thanthakam-5-sikkhabot',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'ต่อจากนี้ สวดพระสูตร หรือพระปริตร หรือปาฐะต่างๆ ตามที่กำหนดไว้วันละ 1 สูตร หรือ 1 ปริตร หรือ 1 ปาฐะ ตามควรดังที่เรียงลำดับไว้ท้ายระเบียบนี้ จนถึงบทสุดท้ายแล้วเวียนมาสวดตั้งต้นไปใหม่อีก',
+                'english': 'From this point onward a sutta, a paritta or one of the various paṭhas is chanted, according to what is appointed for the day — one sutta, or one paritta, or one paṭha as is fitting, following the order set out at the end of these regulations; and when the last of them is reached, the cycle returns to the beginning and starts again.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'การสวดพระสูตร หรือ พระปริตร หรือปาฐะต่างๆ นั้น บางครั้งสวดเป็นทำนองสังโยค บางครั้งสวดเป็นทำนองมคธ สุดแต่ผู้เป็นประธานจะนำสวด วิธีสวดทำนองมคธ สวดบทขัดเป็นทำนองสรภัญญะ ถ้ามีการสวดบทขัดแล้ว ประธานไม่ต้องกล่าวคำเชิญชวนคือ หันทะ มะยัง นำขึ้นต้นบทเลยทีเดียว แต่ถ้าไม่มีการสวดบทขัด ต้องกล่าวคำเชิญชวน เช่น เมื่อจะสวด ทะสะนาถะกะระณะธัมมะสุตตะ ประธานกล่าวเชิญชวนว่า หันทะ มะยัง ทะสะนาถะกะระณะธัมมะสุตตะ ประธานกล่าวเชิญชวนว่า',
+                'english': 'As to the chanting of a sutta, a paritta or one of the various paṭhas: sometimes it is chanted in the saṅyoka manner and sometimes in the Magadha manner, according to how the presiding monk leads it. In the Magadha manner the introductory verse is chanted as sarabhañña. Where an introductory verse has been chanted, the presiding monk need not speak the words of invitation, that is Handa mayaṃ, but begins the passage directly. Where no introductory verse is chanted, the invitation must be spoken: thus, when the Dasanāthakaraṇadhammasutta is to be chanted, the presiding monk gives the invitation, saying Handa mayaṃ Dasanāthakaraṇadhammasutta, the presiding monk gives the invitation, saying',
                 'english_unverified': True,
             },
         ],
