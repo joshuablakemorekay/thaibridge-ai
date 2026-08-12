@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-11 after pages
-52, 53 and 54 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-12 after page
+59 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-11 after pages
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–54 are in and unbroken**, plus 217–221. **81 chants, 1,083 verses.**
+- **Pages 1–59 are in and unbroken**, plus 217–221. **89 chants, 1,169 verses.**
   `/chanting` derives that line itself, so it is never stale.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 52, 53 and 54 were applied on 2026-08-11, one commit each; page 51
-  landed the day before.
+- Pages 55–59 were applied 2026-08-11 and 2026-08-12, one commit each; pages 51
+  to 54 landed over the two days before.
 
 ## How to work — this matters more than the tasks
 
@@ -29,29 +29,31 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 55, `IMG_0318`
+## Next: page 60, `IMG_0323`
 
-It continues **สังฆาภิคีติ**, whose first four lines are at the foot of page 54.
-Verse 4 there ends with a full stop, but that is not the chant ending: both of
-the other two hymns run past their fourth line into a **two-column half** read
-across the row, and the contents puts the next entry at page ๕๕. So expect
-verse 5 onward in two columns, and expect the hymn to close the way the other
-two did — a bow-down rubric, then four lines of กาเยนะ วาจายะ… asking pardon.
+Page 59 ends **mid-sentence**, part way through the second of two paragraphs of
+Thai instruction at its foot, so page 60 opens by completing it. The last words
+on 59 are `…ประธานกล่าวเชิญชวนว่า`, and that phrase appears **twice in three
+lines** — once mid-paragraph and once as the page's last words. Either the book
+repeats itself or page 60 resolves it; page 59 reproduces both as printed and
+raises a check. Read 60 before deciding which.
 
-**Pages 52–54 are one shape repeated three times**, once for each of the Triple
-Gem, and page 55 should be the tail of the third:
+Page 59 also names **ทะสะนาถะกะระณะธัมมะสุตตะ** (Dasanāthakaraṇadhammasutta) as
+its worked example of a chant needing a spoken invitation. The instruction says
+what follows this point in the service is a sutta, a paritta or a paṭha, one a
+day, in the order set out at the end of the regulations — so expect page 60
+onward to leave the ordination material behind and begin that sequence.
 
-  rubric → the recollection as run-on prose (พระพุทธคุณ / พระธรรมคุณ /
-  พระสังฆคุณ) → rubric → the abhigīti hymn, four long centred lines then a
-  two-column half → bow-down rubric → four lines of pardon.
+**Pages 58 and 59 are one shape repeated twice** — บทขัด introductory verse,
+then the numbered chant it introduces — once for expulsion (ten grounds) and
+once for penalties (five). Two things that shape brought up:
 
-Two things that shape brought up, and both will recur on 55:
-
-- **None of these chants has a printed title.** The rubric above each one names
-  it, and that is where every id and English title in this stretch came from.
-- **Each hymn's invitation is printed INSIDE the rubric**, not as a line of its
-  own. It is kept in the page block and the `invitation` field is left empty, so
-  the page prints it once. Keep doing that unless Josh says otherwise.
+- **The two halves need not be set alike.** Page 58 set its ten grounds as a
+  two-column list; page 59 set its five as a single column. Same book, same
+  shape of chant, opposite setting. Check the columns on every page of a pair.
+- **The title is spelled in Thai and the verses in Pali** — ทัณฑะกรรม in the
+  heading, ทัณฑะกัมมัง in every line under it. Reproduce both; page 58 does the
+  same with นาสะนังคะ.
 
 Pages 222 and 223 sit beside 217–221 which are already in, so they are a cheap
 excursion whenever wanted.
@@ -102,7 +104,21 @@ the page it STARTS on, and the completed line must begin with the partial one.
 The `english` layer is exempt from that prefix test — the gloss of half a
 sentence is not the start of the gloss of the whole one.
 
-## Three things waiting on Josh — ask, don't guess
+## Four things waiting on Josh — ask, don't guess
+
+**The orphan footnote across pages 57, 58 and 59.** Page 57 prints a marker ๑
+with no footnote under it. Page 58 prints a footnote `1. วิ.มหา. 4/170` with no
+marker anywhere in its body — every line end checked at 3×. Page 59 then prints
+**both**: a marker ¹ on its last verse and `1. วิ.มหา. 4/171` at its foot. So 59
+is the intact version of what 57 and 58 each have half of, and 4/170 and 4/171
+are consecutive references in the same Vinaya volume.
+
+That is evidence the note on 58 belongs to the marker on 57, carried over to the
+next page's foot. It is **not** proof, because footnote numbers restart on every
+page and the rule is not to pair across pages. Nothing was changed. Page 59's
+own footnote is filed as `source_printed` on its chant; pages 57 and 58 have
+`source_printed` left off entirely, and 58's note sits as a page block. One look
+at the book settles all three at once.
 
 **สวากขาโต, and which mark goes over the ส.** Page 51 prints it TWICE with a
 mark above the ส, and at high magnification that mark is the same shape as the
