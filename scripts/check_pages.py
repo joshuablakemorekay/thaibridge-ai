@@ -210,8 +210,16 @@ def check(chanting, batch_files):
                                           [(k, p) for k, v in claims.items()
                                            for p in v]}}),
                     "served": len(served),
-                    "unrecorded": sorted(served - {
-                        p for v in claims.values() for p in v})}
+                    # A page is RECORDED if any batch file describes it, and a
+                    # page can be described entirely by blocks. Page 63 is the
+                    # first: it holds the notes to the evening service and no
+                    # chant, so it makes no verse claim and counting claims
+                    # alone reported it as having no record at all. That is
+                    # the one number here meant to stay still, so a fully read
+                    # page appearing in it would teach everyone to ignore it.
+                    "unrecorded": sorted(served
+                                         - {p for v in claims.values() for p in v}
+                                         - set(declared_blocks))}
 
 
 def main(argv=None):

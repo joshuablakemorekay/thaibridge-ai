@@ -84,6 +84,29 @@ class TestItPasses:
 
         assert not faults
 
+    def test_a_page_recorded_by_blocks_alone_counts_as_recorded(self, tmp_path):
+        """Page 63 — the notes to the evening service, and no chant on it.
+
+        A blocks-only page makes no verse claim, so counting claims alone
+        reported it as having no batch record while its blocks were being
+        compared and passing. `unrecorded` is the one number here meant to
+        stay still, so a fully read page turning up in it teaches everyone
+        to stop reading it.
+        """
+        block = {'type': 'item', 'number': 'ก', 'thai': 'ข้อความ',
+                 'english': 'text'}
+        files = batch_file(tmp_path,
+                           [row(page=63, chant='', verses='none',
+                                blocks=[block])],
+                           [])
+
+        faults, counts = check(app([], [{'page': 63, 'blocks': [block]}]),
+                               files)
+
+        assert not faults
+        assert counts['blocks'] == 1
+        assert 63 not in counts['unrecorded']
+
 
 class TestItCatchesTheThingsThatWentWrongBefore:
 
