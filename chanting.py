@@ -16650,6 +16650,234 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0325.PNG]: TWO COLUMNS, AND THIS IS THE READING THAT
+        #   MOST NEEDS CONFIRMING. Every line of this chant runs ACROSS both
+        #   columns: the left holds the first pāda, the right the second. The
+        #   first pairing made is left `อิมินา ปุญญะกัมเมนะ` with right
+        #   `อุปัชฌายา คุณุตตะรา`, joined by a single space as verse 1. The
+        #   halves were paired by row position, checked two ways: the full
+        #   stops fall only at the ends of right-hand halves, in the
+        #   alternating pattern a couplet gives, and reading the left column
+        #   straight down produces a run of unfinished half-lines rather than
+        #   continuous sense. Reading down the columns instead of across would
+        #   produce fluent and completely wrong Pali, so this is worth one
+        #   look at the book.
+        # ‼ CHECK [IMG_0325.PNG]: THE TITLE IS SPELT TWO WAYS IN THIS BOOK.
+        #   Page 62 prints อุททิสสะนาธิฏฐานะคาถา with a doubled ท in both the
+        #   title and the colophon, and page 61's rubric spells it the same
+        #   way in both places it names it — all four read at 5x or better.
+        #   But CONTENTS, transcribed from the book's own สารบัญ, has
+        #   อุทิสสะนาธิฏฐานะคาถา with a single ท, at both its page-62 and
+        #   page-239 listings. Nothing has been changed on either side. The
+        #   page and the contents page disagree, or one of the two readings is
+        #   wrong, and only the book settles which.
+        # ‼ CHECK [IMG_0325.PNG]: The colophon อุททิสสะนาธิฏฐานะคาถา นิฏฐิตา
+        #   is printed centred and bold under the chant, with NO full stop, as
+        #   on pages 60 and 61. Recorded in the closing field so the app sets
+        #   it as a colophon rather than numbering it as a chanted line. It is
+        #   นิฏฐิตา here, feminine to agree with คาถา, where the two pages
+        #   before have นิฏฐิโต with ปาโฐ.
+        # ‼ CHECK [IMG_0325.PNG]: THE PAGE'S LAST BLOCK IS CUT BY THE PAGE
+        #   TURN. Numbered note 1 stops mid-sentence at สังฆัสสาหัส์มิ ทาสี
+        #   and continues on page 63. Reproduced exactly as far as the page
+        #   carries it, with no attempt to finish the sentence. The line sits
+        #   close to the foot of the sheet and a thumb is in the frame at the
+        #   lower left, over the margin only — there is clear white paper
+        #   between the last line and the thumb, so nothing is hidden. Page 63
+        #   completes it.
+        # ‼ CHECK [IMG_0325.PNG]: พุทธัสสาหัส์มิ is broken across a line end
+        #   inside numbered note 1, WITH a hyphen — the line ends พุทธัสสา-
+        #   and the next begins หัส์มิ. Rejoined and the hyphen dropped, the
+        #   same rule the run-on passages follow. The word is printed unbroken
+        #   five more times in the same note, which confirms the join.
+        # ‼ CHECK [IMG_0325.PNG]: The instruction paragraph spaces its two mai
+        #   yamok differently: อื่น ๆ has a space before the ๆ and พร้อมๆ has
+        #   none, four lines apart in the same paragraph. Both reproduced
+        #   exactly as printed rather than made consistent.
+        # ‼ CHECK [IMG_0325.PNG]: The book sets this chant as TWO stanza
+        #   groups, seven lines then nine, separated by a blank line, with the
+        #   second group's first line indented like the first group's. The app
+        #   has no field for a blank line inside a verse-set chant —
+        #   `para_start` splits a prose chant only — so the break is recorded
+        #   here and in the working notes rather than written. Worth knowing
+        #   before the next two-stanza page arrives.
+        # ‼ CHECK [IMG_0325.PNG]: The right half of the last line, มาโรกาสัง
+        #   ละภันตุ มา., sits a little lower on the page than its left half
+        #   เตโสตตะมานุภาเวนะ, where every other row is level. Read as one
+        #   line anyway: it is the only unpaired half left on either side, and
+        #   the sentence it completes needs it. Noted because a drifting
+        #   baseline is what would make a mispairing look reasonable.
+        'id': 'uddissanadhitthana-gatha',
+        'title_thai': 'อุททิสสะนาธิฏฐานะคาถา',
+        'title_pali': 'Uddissanādhiṭṭhānagāthā',
+        'title_roman': '',
+        'title_english': 'The Verses of Dedication and Resolve',
+        'page_start': 62,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'อุททิสสะนาธิฏฐานะคาถา นิฏฐิตา',
+            'pali_roman': 'Uddissanādhiṭṭhānagāthā niṭṭhitā',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses of Dedication and Resolve.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'อิมินา ปุญญะกัมเมนะ อุปัชฌายา คุณุตตะรา',
+                'pali_roman': 'Iminā puññakammena upajjhāyā guṇuttarā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this meritorious deed — may my preceptors, of the highest virtue,',
+            },
+            {
+                'number': 2,
+                'pali': 'อาจะริยูปะการา จะ มาตาปิตา จะ ญาตะกา.',
+                'pali_roman': 'Ācariyūpakārā ca mātāpitā ca ñātakā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the teachers who have helped me, my mother and father and kinsfolk,',
+            },
+            {
+                'number': 3,
+                'pali': 'สุริโย จันทิมา ราชา คุณะวันตา นะราปิ จะ',
+                'pali_roman': 'Suriyo candimā rājā guṇavantā narāpi ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the sun, the moon, the king, and people of virtue too,',
+            },
+            # ‼ CHECK [IMG_0325.PNG]: พ์รัห์มะมารา carries the small mark
+            #   twice, over the พ and over the ห, and at 7x both are the
+            #   ε-shaped curl with a tail — the same shape page 60 showed
+            #   isolated on ท์วายะ. Written with U+0E4C, consistent with pages
+            #   51-61. This is the sixth page agreeing about the mark this
+            #   printer cuts.
+            {
+                'number': 4,
+                'pali': 'พ์รัห์มะมารา จะ อินทา จะ โลกะปาลา จะ เทวะตา.',
+                'pali_roman': 'Brahmamārā ca indā ca lokapālā ca devatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'brahmās and māras and indras, the guardians of the world and the devas,',
+            },
+            {
+                'number': 5,
+                'pali': 'ยะโม มิตตา มะนุสสา จะ มัชฌัตตา เวริกาปิ จะ',
+                'pali_roman': 'Yamo mittā manussā ca majjhattā verikāpi ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Yama, friends and human beings, the indifferent and the hostile alike —',
+            },
+            {
+                'number': 6,
+                'pali': 'สัพเพ สัตตา สุขี โหนตุ ปุญญานิ ปะกะตานิ เม.',
+                'pali_roman': 'Sabbe sattā sukhī hontu puññāni pakatāni me.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may all beings be happy. May the merits I have made',
+            },
+            {
+                'number': 7,
+                'pali': 'สุขัง จะ ติวิธัง เทนตุ ขิปปัง ปาเปถะ โว มะตัง.',
+                'pali_roman': 'Sukhaṃ ca tividhaṃ dentu khippaṃ pāpetha vo mataṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'give happiness of the three kinds, and swiftly bring you to what you intend.',
+            },
+            {
+                'number': 8,
+                'pali': 'อิมินา ปุญญะกัมเมนะ อิมินา อุททิเสนะ จะ',
+                'pali_roman': 'Iminā puññakammena iminā uddisena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this meritorious deed and by this dedication,',
+            },
+            {
+                'number': 9,
+                'pali': 'ขิปปาหัง สุละเภ เจวะ ตัณหุปาทานะเฉทะนัง.',
+                'pali_roman': 'Khippāhaṃ sulabhe ceva taṇhupādānachedanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may I swiftly come to the cutting off of craving and clinging.',
+            },
+            # ‼ CHECK [IMG_0325.PNG]: The book prints หินา with a SHORT ิ,
+            #   giving hinā, where standard editions have hīnā with a long ī.
+            #   Read at 7x against the ั of สันตาเน on the same line, which is
+            #   plainly a different mark. Kept as printed.
+            {
+                'number': 10,
+                'pali': 'เย สันตาเน หินา ธัมมา ยาวะ นิพพานะโต มะมัง',
+                'pali_roman': 'Ye santāne hinā dhammā yāva nibbānato mamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever base states are in my mind-stream, until I reach nibbāna,',
+            },
+            {
+                'number': 11,
+                'pali': 'นัสสันตุ สัพพะทา เยวะ ยัตถะ ชาโต ภะเว ภะเว.',
+                'pali_roman': 'Nassantu sabbadā yeva yattha jāto bhave bhave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they perish always, wherever I am born, in birth after birth.',
+            },
+            # ‼ CHECK [IMG_0325.PNG]: The book prints วิริยัมหินา with short ิ
+            #   in both syllables, giving viriyamhinā, where standard editions
+            #   have vīriyamhinā with a long ī. Read at 7x. Kept as printed,
+            #   and consistent with the same short vowel at verse 13's
+            #   วิริเยสุ.
+            {
+                'number': 12,
+                'pali': 'อุชุจิตตัง สะติปัญญา สัลเลโข วิริยัมหินา',
+                'pali_roman': 'Ujucittaṃ satipaññā sallekho viriyamhinā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May uprightness of mind, mindfulness and wisdom, austerity and energy be mine;',
+            },
+            {
+                'number': 13,
+                'pali': 'มารา ละภันตุ โนกาสัง กาตุญจะ วิริเยสุ เม.',
+                'pali_roman': 'Mārā labhantu nokāsaṃ kātuñca viriyesu me.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may the māras find no opening to act against my efforts.',
+            },
+            {
+                'number': 14,
+                'pali': 'พุทธาธิปะวะโร นาโถ ธัมโม นาโถ วะรุตตะโม',
+                'pali_roman': 'Buddhādhipavaro nātho dhammo nātho varuttamo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha, the foremost refuge; the Dhamma, the most excellent refuge;',
+            },
+            {
+                'number': 15,
+                'pali': 'นาโถ ปัจเจกะพุทโธ จะ สังโฆ นาโถตตะโร มะมัง.',
+                'pali_roman': 'Nātho paccekabuddho ca saṅgho nāthottaro mamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Paccekabuddha, a refuge; and the Sangha, my highest refuge.',
+            },
+            {
+                'number': 16,
+                'pali': 'เตโสตตะมานุภาเวนะ มาโรกาสัง ละภันตุ มา.',
+                'pali_roman': 'Tesottamānubhāvena mārokāsaṃ labhantu mā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of these supreme ones, may the māras find no opening at all.',
+            },
+        ],
+    },
 ]
 
 
@@ -18487,6 +18715,33 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'ต่อจากสวด ธาตุปะฏิกูละปัจจะเวกขะณะ สวด อุททิสสะนาธิฏฐานะคาถา ซึ่งเป็นบทแผ่ส่วนบุญแด่ผู้มีพระคุณต่างๆ ประธานกล่าวเชิญชวนว่า หันทะ มะยัง อุททิสสะนาธิฏฐานะคาถาโย ภะณามะ เส รองประธานขึ้นต้นบทว่า อิมินา นอกนั้นรับต่อ ปุญญะกัมเมนะ อุปัชฌายา คุณุตตะรา ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.',
                 'english': 'After the Dhātupaṭikūlapaccavekkhaṇa has been chanted, the Uddissanādhiṭṭhānagāthā is chanted, the verses that share merit with those to whom gratitude is owed. The presiding monk gives the invitation, saying Handa mayaṃ uddissanādhiṭṭhānagāthāyo bhaṇāma se. The deputy begins the verses with Iminā, and the rest take them up from Puññakammena upajjhāyā guṇuttarā and so on, going on together, pausing at each comma, thus.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 62 ────────────────────────────────────────────────────
+    # Written from batch-062-062.json.
+    {
+        'page': 62,
+        'after': 'uddissanadhitthana-gatha',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'เมื่อสวด อุททิสสะนาธิฏฐานะคาถา จบแล้ว พึงนั่งสงบแผ่ส่วนบุญกุศลแด่ท่านบรรพบุรุษบุรพาจารย์ และท่านผู้มีพระคุณอื่น ๆ ตลอดถึงสรรพสัตว์ทุกชั้นชาติสักครู่หนึ่ง แล้วนั่งคุกเข่ากราบด้วยเบญจางคประดิษฐ์ 3 หน พร้อมๆ กัน ประธานสั่งเลิกประชุม เป็นอันเสร็จพิธีทำวัตรสวดมนต์ภาคเย็นเท่านี้.',
+                'english': 'When the Uddissanādhiṭṭhānagāthā has been chanted to its end, one should sit quietly and share the merit with forebears and former teachers, and with all others to whom gratitude is owed, and on to all beings of every station, for a short while. Then kneel and bow with the fivefold prostration three times, all together. The presiding monk dismisses the assembly, and with this the evening service of devotions and chanting is complete.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'heading',
+                'thai': 'คำอธิบายประกอบทำวัตรเย็น',
+                'english': 'Notes on the evening service',
+                'english_unverified': True,
+            },
+            {
+                'type': 'item',
+                'number': 1,
+                'thai': 'ในคำสวดสรรเสริญพระพุทธคุณพระธรรมคุณพระสังฆคุณ ในบทว่า พุทธัสสาหัส์มิ ทาโส วะ, ธัมมัสสาหัส์มิ ทาโส วะ, สังฆัสสาหัส์มิ ทาโส วะ. ถ้าอุบาสิกาสวด ให้เปลี่ยนเป็น พุทธัสสาหัส์มิ ทาสี วะ, ธัมมัสสาหัส์มิ ทาสี วะ, สังฆัสสาหัส์มิ ทาสี',
+                'english': 'In the verses praising the qualities of the Buddha, the Dhamma and the Sangha, at the lines Buddhassāhasmi dāso va, Dhammassāhasmi dāso va, Saṅghassāhasmi dāso va: if a laywoman is chanting, they are changed to Buddhassāhasmi dāsī va, Dhammassāhasmi dāsī va, Saṅghassāhasmi dāsī',
                 'english_unverified': True,
             },
         ],
