@@ -1,0 +1,312 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "dhatupatikula-paccavekkhana-p61"
+    ],
+    "pages": [
+      {
+        "page": 61,
+        "file": "IMG_0324.PNG",
+        "script": "thai",
+        "chant": "dhatupatikula-paccavekkhana-p61",
+        "verses": "1-16",
+        "starts_here": true,
+        "note": "The body of the page, under its own printed title ธาตุปะฏิกูละปัจจะเวกขะณะปาโฐ, which carries no chant number. Single column throughout — checked at every point the line lengths change. The chant is set as FOUR indented run-on paragraphs, one for each of the four requisites, each beginning ยะถาปัจจะยัง. It ends with a centred colophon. This is the printing the rubric at the foot of page 60 announces, and it is Pali only: no Thai translation appears anywhere on the page."
+      },
+      {
+        "page": 61,
+        "file": "IMG_0324.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "note": "The foot of the page, below the colophon: the rubric introducing the NEXT chant, อุททิสสะนาธิฏฐานะคาถา, which begins on page 62 and has not been read yet. No chant text. There is no footnote rule and no footnote on this page — the lower third of the sheet is blank, carrying only mirrored show-through from the reverse.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "ต่อจากสวด ธาตุปะฏิกูละปัจจะเวกขะณะ สวด อุททิสสะนาธิฏฐานะคาถา ซึ่งเป็นบทแผ่ส่วนบุญแด่ผู้มีพระคุณต่างๆ ประธานกล่าวเชิญชวนว่า หันทะ มะยัง อุททิสสะนาธิฏฐานะคาถาโย ภะณามะ เส รองประธานขึ้นต้นบทว่า อิมินา นอกนั้นรับต่อ ปุญญะกัมเมนะ อุปัชฌายา คุณุตตะรา ฯเปฯ พร้อมกันไป หยุดตามจุดลูกน้ำ ดังนี้.",
+            "english": "After the Dhātupaṭikūlapaccavekkhaṇa has been chanted, the Uddissanādhiṭṭhānagāthā is chanted, the verses that share merit with those to whom gratitude is owed. The presiding monk gives the invitation, saying Handa mayaṃ uddissanādhiṭṭhānagāthāyo bhaṇāma se. The deputy begins the verses with Iminā, and the rest take them up from Puññakammena upajjhāyā guṇuttarā and so on, going on together, pausing at each comma, thus.",
+            "english_unverified": true
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "dhatupatikula-paccavekkhana-p61",
+      "working_notes": {
+        "invitation": "absent from this page, and therefore not written. The invitation หันทะ มะยัง ธาตุปะฏิกูละปัจจะเวกขะณะปาฐัง ภะณามะ เส. is printed inside the rubric at the foot of page 60 and is already in the app as a page block there, exactly as pages 58, 59 and 60 handle theirs.",
+        "units": "Sixteen, divided at the printed commas and full stops, the same rule pages 58, 59 and 60 use for a run-on passage. The four printed paragraphs fall at verses 1-4 (robe), 5-8 (almsfood), 9-12 (lodging) and 13-16 (medicine), and each is four units long — the passage is one reflection repeated four times with only the requisite and the grammatical number changing.",
+        "ordering": "none — no Thai translation is printed on this page, so there is nothing for the Pali to run out of step with.",
+        "conventions": "The page uses the small mark ์ over a consonant to show a conjunct, at ปัต์วา, which occurs once in each of the four paragraphs. Written with U+0E4C, consistent with pages 51-60 and with the evidence recorded on page 60. Each verse's pali_roman capitalises its first word, following page 60 rather than the existing pasted-text entry for this chant, which lower-cases mid-sentence units. The book prints Thai script and so has no case of its own; this is an editorial convention either way.",
+        "pages": "IMG_0324.PNG (page 61), Thai script, the whole of the upper two thirds of the page. Single column. The chant begins and ends on this page, colophon included. THE SAME CHANT IS PRINTED AGAIN AT PAGE 207 — the book's own สารบัญ lists it at both ๖๑ and ๒๐๗ — and the app already holds an entry, dhatupatikula-paccavekkhana, whose shape matches the OTHER printing and not this one. See the check about it; stage 2 must not merge this into that entry without Josh deciding."
+      },
+      "title_thai": "ธาตุปะฏิกูละปัจจะเวกขะณะปาโฐ",
+      "title_pali": "Dhātupaṭikūlapaccavekkhaṇapāṭho",
+      "title_roman": "",
+      "title_english": "The Reflection on the Elements and on Repulsiveness",
+      "page_start": 61,
+      "layout": "prose",
+      "english_unverified": true,
+      "invitation": {
+        "pali": "",
+        "pali_roman": "",
+        "thai": "",
+        "paiboon": "",
+        "english": ""
+      },
+      "closing": {
+        "pali": "ธาตุปะฏิกูละปัจจะเวกขะณะปาโฐ นิฏฐิโต",
+        "pali_roman": "Dhātupaṭikūlapaccavekkhaṇapāṭho niṭṭhito",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here ends the Reflection on the Elements and on Repulsiveness."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "pali": "ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง ยะทิทัง จีวะรัง,",
+          "pali_roman": "Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ yadidaṃ cīvaraṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Proceeding as its conditions proceed, this is merely elements — that is to say, this robe,"
+        },
+        {
+          "number": 2,
+          "pali": "ตะทุปะภุญชะโก จะ ปุคคะโล ธาตุมัตตะโก นิสสัตโต นิชชีโว สุญโญ,",
+          "pali_roman": "Tadupabhuñjako ca puggalo dhātumattako nissatto nijjīvo suñño,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and the person who makes use of it is merely elements, not a being, not a soul, empty,"
+        },
+        {
+          "number": 3,
+          "pali": "สัพพานิ ปะนะ อิมานิ จีวะรานิ อะชิคุจฉะนียานิ,",
+          "pali_roman": "Sabbāni pana imāni cīvarāni ajigucchanīyāni,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and all these robes are not in themselves repulsive,"
+        },
+        {
+          "number": 4,
+          "pali": "อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนียานิ ชายันติ.",
+          "pali_roman": "Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyāni jāyanti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "yet on reaching this foul body they become exceedingly repulsive."
+        },
+        {
+          "number": 5,
+          "para_start": true,
+          "pali": "ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง ยะทิทัง ปิณฑะปาโต,",
+          "pali_roman": "Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ yadidaṃ piṇḍapāto,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Proceeding as its conditions proceed, this is merely elements — that is to say, this almsfood,"
+        },
+        {
+          "number": 6,
+          "pali": "ตะทุปะภุญชะโก จะ ปุคคะโล ธาตุมัตตะโก นิสสัตโต นิชชีโว สุญโญ,",
+          "pali_roman": "Tadupabhuñjako ca puggalo dhātumattako nissatto nijjīvo suñño,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and the person who makes use of it is merely elements, not a being, not a soul, empty,"
+        },
+        {
+          "number": 7,
+          "pali": "สัพโพ ปะนายัง ปิณฑะปาโต อะชิคุจฉะนีโย,",
+          "pali_roman": "Sabbo panāyaṃ piṇḍapāto ajigucchanīyo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and all this almsfood is not in itself repulsive,"
+        },
+        {
+          "number": 8,
+          "pali": "อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนีโย ชายะติ.",
+          "pali_roman": "Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyo jāyati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "yet on reaching this foul body it becomes exceedingly repulsive."
+        },
+        {
+          "number": 9,
+          "para_start": true,
+          "pali": "ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง ยะทิทัง เสนาสะนัง,",
+          "pali_roman": "Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ yadidaṃ senāsanaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Proceeding as its conditions proceed, this is merely elements — that is to say, this lodging,"
+        },
+        {
+          "number": 10,
+          "pali": "ตะทุปะภุญชะโก จะ ปุคคะโล ธาตุมัตตะโก นิสสัตโต นิชชีโว สุญโญ,",
+          "pali_roman": "Tadupabhuñjako ca puggalo dhātumattako nissatto nijjīvo suñño,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and the person who makes use of it is merely elements, not a being, not a soul, empty,"
+        },
+        {
+          "number": 11,
+          "pali": "สัพพานิ ปะนะ อิมานิ เสนาสะนานิ อะชิคุจฉะนียานิ,",
+          "pali_roman": "Sabbāni pana imāni senāsanāni ajigucchanīyāni,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and all these lodgings are not in themselves repulsive,"
+        },
+        {
+          "number": 12,
+          "pali": "อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนียานิ ชายันติ",
+          "pali_roman": "Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyāni jāyanti",
+          "thai": "",
+          "paiboon": "",
+          "english": "yet on reaching this foul body they become exceedingly repulsive"
+        },
+        {
+          "number": 13,
+          "para_start": true,
+          "pali": "ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง ยะทิทัง คิลานะปัจจะยะเภสัชชะปะริกขาโร,",
+          "pali_roman": "Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ yadidaṃ gilānapaccayabhesajjaparikkhāro,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Proceeding as its conditions proceed, this is merely elements — that is to say, this medicinal requisite for use in sickness,"
+        },
+        {
+          "number": 14,
+          "pali": "ตะทุปะภุญชะโก จะ ปุคคะโล ธาตุมัตตะโก นิสสัตโต นีชชีโว สุญโญ,",
+          "pali_roman": "Tadupabhuñjako ca puggalo dhātumattako nissatto nījjīvo suñño,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and the person who makes use of it is merely elements, not a being, not a soul, empty,"
+        },
+        {
+          "number": 15,
+          "pali": "สัพโพ ปะนายัง คิลานะปัจจะยะเภสัชชะปะริกขาโร อะชิคุจฉะนีโย,",
+          "pali_roman": "Sabbo panāyaṃ gilānapaccayabhesajjaparikkhāro ajigucchanīyo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "and all this medicinal requisite for use in sickness is not in itself repulsive,"
+        },
+        {
+          "number": 16,
+          "pali": "อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนีโย ชายะติ.",
+          "pali_roman": "Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyo jāyati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "yet on reaching this foul body it becomes exceedingly repulsive."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ยะถาปัจจะยัง",
+          "pali_roman": "yathāpaccayaṃ",
+          "meaning": "according to its conditions; the opening word that frames everything following as something held up by causes rather than standing on its own"
+        },
+        {
+          "pali": "ธาตุมัตตะเมเวตัง",
+          "pali_roman": "dhātumattamevetaṃ",
+          "meaning": "this is merely elements — element-matter and nothing besides, the phrase the whole reflection turns on"
+        },
+        {
+          "pali": "นิสสัตโต",
+          "pali_roman": "nissatto",
+          "meaning": "not a being; not an enduring creature that the parts add up to"
+        },
+        {
+          "pali": "นิชชีโว",
+          "pali_roman": "nijjīvo",
+          "meaning": "not a soul; carrying no life-essence of its own that survives the conditions"
+        },
+        {
+          "pali": "สุญโญ",
+          "pali_roman": "suñño",
+          "meaning": "empty — empty of selfhood, not empty of existence; the requisite and its user are both there and neither is a self"
+        },
+        {
+          "pali": "ปูติกายัง",
+          "pali_roman": "pūtikāyaṃ",
+          "meaning": "this foul body; literally the putrid body, the thing contact with which makes clean requisites repulsive"
+        },
+        {
+          "pali": "ปะริกขาโร",
+          "pali_roman": "parikkhāro",
+          "meaning": "a requisite; here the fourth of them, the medicinal support allowed in sickness"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0324.PNG",
+          "issue": "THIS CHANT IS ALREADY IN THE APP, AND THIS IS NOT THAT PRINTING. The book prints Dhātupaṭikūlapaccavekkhaṇa twice — its own สารบัญ lists it at ๖๑ and at ๒๐๗, and both lines are already in CONTENTS. The existing entry `dhatupatikula-paccavekkhana` is one of the seventeen set from pasted text: it carries a full Thai translation, it is divided into about thirty short verses, and its movements are headed with parenthesised rubrics (ขณะรับจีวร and the rest). PAGE 61 HAS NONE OF THAT — no Thai anywhere, four run-on paragraphs, no rubrics. So the existing entry cannot be given page_start 61 without the app showing page 61 with text the page does not print. A separate id is proposed here, `dhatupatikula-paccavekkhana-p61`, but WHETHER THE APP CARRIES TWO ENTRIES FOR THIS CHANT IS JOSH'S DECISION and stage 2 must not run until he has made it. IMG_0477 (page 207) has not been read, so which printing the existing entry represents is inference from its shape, not a reading."
+        },
+        {
+          "verse": 14,
+          "file": "IMG_0324.PNG",
+          "issue": "THE BOOK PRINTS นีชชีโว HERE, with a long ี, where the other three paragraphs print นิชชีโว with a short ิ. Checked at 6x against นิสสัตโต three words earlier in the same line, whose ิ is plainly the shorter mark. Reproduced as printed and transliterated to match, giving nījjīvo against nijjīvo at verses 2, 6 and 10, and the pair is declared in diacritic_exceptions. Standard Pali is nijjīvo throughout, so this is almost certainly the compositor's slip — but it is what the page shows and it has not been corrected."
+        },
+        {
+          "verse": 12,
+          "file": "IMG_0324.PNG",
+          "issue": "THE THIRD PARAGRAPH ENDS WITH NO FULL STOP. ชายันติ closes it and the line simply stops, where paragraphs one, two and four all end ชายันติ. or ชายะติ. with a point. Checked at 5x with nothing else on the line after it. Reproduced without the stop."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0324.PNG",
+          "issue": "ตะทุปะภุญชะโก is broken across the line end in the first paragraph WITH a hyphen — the line ends ตะทุปะ- and the next begins ภุญชะโก. Rejoined as one word and the hyphen dropped, which is what the run-on passage rule requires. The same word is printed unbroken in the other three paragraphs, which confirms the join."
+        },
+        {
+          "verse": 13,
+          "file": "IMG_0324.PNG",
+          "issue": "คิลานะปัจจะยะเภสัชชะปะริกขาโร is broken across the line end in the fourth paragraph WITH a hyphen — the line ends คิลานะปัจจะยะ- and the next begins เภสัชชะปะริกขาโร. Rejoined and the hyphen dropped. Verse 15 prints the same word unbroken, which confirms the join."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0324.PNG",
+          "issue": "THE MARK, again. ปัต์วา carries it once in each of the four paragraphs, and at 8x it is the same ε-shaped curl with a tail that page 60 showed isolated on ท์วายะ. Written with U+0E4C throughout, consistent with pages 51-60. This is a fifth page agreeing with the others about what this printer cuts; it is still not a verdict on กัล๎ยาณัง in buddhabhithuti, which needs the book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0324.PNG",
+          "issue": "LAYOUT. The book sets this as FOUR indented run-on paragraphs, one per requisite, the same shape page 60 has. `layout: 'prose'` is set and para_start declared on verses 5, 9 and 13, using the verse_paragraphs mechanism added for page 60 in c3b38e6 — so the page should render four justified blocks and not one. Page 60 is the only other chant using it, so this is the second page to exercise it and worth looking at on screen."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0324.PNG",
+          "issue": "The colophon ธาตุปะฏิกูละปัจจะเวกขะณะปาโฐ นิฏฐิโต is printed centred and bold under the chant, with NO full stop after นิฏฐิโต — the same as page 60's. Recorded in the closing field so the app sets it as a colophon rather than numbering it as a chanted line."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0324.PNG",
+          "issue": "NO FOOTNOTE AND NO SOURCE ON THIS PAGE. There is no footnote rule, no superscript marker anywhere in the body, and the lower third of the sheet is blank apart from mirrored show-through from the reverse. `source_printed` is therefore left off entirely rather than carried over from a neighbouring page — and note that page 57's orphan marker and page 58's orphan footnote are still open, so this page's silence is worth one glance when the book is out."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0324.PNG",
+          "issue": "The closing rubric prints ภะณามะ เส with NO full stop before รองประธาน, the same as page 60's first rubric and unlike pages 58 and 59. Reproduced without. It also spells the coming chant อุททิสสะนาธิฏฐานะคาถา with a doubled ท in both places it names it, line 1 and line 3; both were read at 5x. Worth carrying into the page 62 read so the title is not silently normalised to อุทิสสะ."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "dhatupatikula-paccavekkhana-p61"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 62,
+    "resume_from_file": "IMG_0325.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "diacritic_exceptions": [
+      "nijjīvo/nījjīvo — the book itself prints the word two ways on this page. Paragraphs one, two and three have นิชชีโว with a short ิ; paragraph four has นีชชีโว with a long ี. Both were read at 6x. The pair is the book's, not the transliteration's, and reproducing it is the point — see the check on verse 14."
+    ],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. This batch has no paiboon values at all: the title is Pali in Thai script so title_roman is the empty string, and the page prints no Thai translation, so every verse paiboon is empty.",
+    "pali_untouched": "Confirmed. Every pali value is the page's Thai script as printed; every pali_roman is IAST; no pali value has been run through Paiboon+.",
+    "page_scan": "agrees — two rows for one page, in the order they appear down it. Verses 1-16 are claimed exactly once by the first row; the second row carries no chant text, only the closing page block. No verse is orphaned and none is claimed twice.",
+    "notes": "THE BATCH IS COMPLETE BUT STAGE 2 SHOULD NOT RUN UNTIL JOSH DECIDES ONE THING: this chant is printed twice in the book, at 61 and 207, and the app already holds an entry whose shape belongs to the other printing. A new id is proposed rather than a merge, because merging would put a Thai translation and thirty verse-lines onto a page that prints neither — but two entries for one chant is a structural decision about the edition and it is his. Page 207's photograph, IMG_0477, has not been read; reading it would settle which printing the existing entry came from and is the cheapest way to close this. Separately, the page is the second in the book to use the four-paragraph prose layout added for page 60, so the rendered page wants looking at rather than only the data."
+  }
+}
