@@ -18746,6 +18746,40 @@ PAGE_BLOCKS = [
             },
         ],
     },
+    # ── Page 63 ────────────────────────────────────────────────────
+    # Written from batch-063-063.json.
+    {
+        'page': 63,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'วะ. ในบทว่า วันทันโตหัง จะริสสามิ ถ้าอุบาสิกาสวด ให้เปลี่ยนเป็น วันทันตีหัง จะริสสามิ ทุกแห่ง ในบทว่า พุทธัง เม วันทะมาเนนะ, ธัมมัง เม วันทะมาเนนะ, สังฆัง เม วันทะมาเนนะ. ถ้าอุบาสิกาสวดให้เปลี่ยนเป็น พุทธัง เม วันทะมานายะ, ธัมมัง เม วันทะมานายะ, สังฆัง เม วันทะมานายะ.',
+                'english': "…va. And at the line Vandanto'haṃ carissāmi: if a laywoman is chanting, it is changed to Vandantī'haṃ carissāmi throughout. At the lines Buddhaṃ me vandamānena, Dhammaṃ me vandamānena, Saṅghaṃ me vandamānena: if a laywoman is chanting, they are changed to Buddhaṃ me vandamānāya, Dhammaṃ me vandamānāya, Saṅghaṃ me vandamānāya.",
+                'english_unverified': True,
+            },
+            {
+                'type': 'item',
+                'number': 2,
+                'thai': 'การทำวัตรสวดมนต์ภาคเย็น ตามระเบียบที่ชี้แจงมาแล้วเป็นระเบียบปฏิบัติในวันปรกติ ถ้าเป็นวันพิเศษ คือวันประชุมทำสังฆกรรมอุโบสถ สวดพระปาติโมกข์ และวันวิสาขบูชา มาฆบูชา เป็นต้น มีระเบียบปฏิบัติพิเศษอีกอย่างหนึ่ง ดังจะอธิบายต่อไปนี้ คือ.',
+                'english': 'The evening devotions and chanting, in the order set out above, is the order followed on an ordinary day. On a special day — that is, the day the Sangha assembles for the Uposatha act and the recitation of the Pāṭimokkha, and on Visākha Pūjā, Māgha Pūjā and the like — there is a further special order, which is explained as follows.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'item',
+                'number': 'ก',
+                'thai': 'วันทำสังฆกรรมอุโบสถสวดพระปาติโมกข์ เมื่อพระสงฆ์ลงประชุมพร้อมกันในโรงพระอุโบสถแล้ว ได้เวลา 18.00 น. ประธานนำทำวัตรเย็นเหมือนวันปรกติ ทำวัตรเย็นจบแล้ว นำสวด พุทธะมังคะละคาถา โดย สรภัญญวิธี จบแล้ว เจ้าหน้าที่แผนกบัญชีเรียกชื่อนับจำนวนภิกษุ ประกาศให้พระสงฆ์ทราบแล้ว เริ่มทำพิธีสวดพระปาติโมกข์ตามระเบียบต่อไป จบแล้วประธานนำสวดท้ายพระปาติโมกข์ คือ สีลุทเทสะปาฐะ, ภิกขุอะปะริหานิยะธัมมะสุตตะ, อะตีตะปัจจะเวกขะณะปาฐะ, และ อุททิสะนาธิฏฐานะคาถา เป็นอันเสร็จพิธีทำวัตรสวดมนต์เย็น ในวันสังฆกรรมอุโบสถ สวดพระปาติโมกข์เท่านี้ ประธานสั่งเลิกประชุม',
+                'english': 'The day of the Uposatha act and the recitation of the Pāṭimokkha. When the Sangha has assembled together in the uposatha hall and the hour of 18.00 has come, the presiding monk leads the evening devotions as on an ordinary day. When the evening devotions are done, he leads the chanting of the Buddhamaṅgalagāthā in the saraphañña manner. That done, the officer of the register calls the roll and counts the bhikkhus, and announces the number to the Sangha. The recitation of the Pāṭimokkha then begins and proceeds in its order. When it is finished, the presiding monk leads the chants that close the Pāṭimokkha — the Sīluddesapāṭha, the Bhikkhu-aparihāniyadhammasutta, the Atītapaccavekkhaṇapāṭha, and the Uddisanādhiṭṭhānagāthā. With this the evening devotions and chanting on the day of the Uposatha act and the recitation of the Pāṭimokkha are complete, and the presiding monk dismisses the assembly.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'item',
+                'number': 'ข',
+                'thai': 'วันมาฆบูชา วิสาขบูชา อัฏฐมีบูชา และวันอาสาฬหบูชา เวลา 19.30 น. เจ้าหน้าที่ตีสัญญาระฆัง พระภิกษุ สามเณร และอุบาสกอุบาสิกา ลงประชุมในโรงพระอุโบสถ ได้เวลากำหนดคือ 20.00 น. ไปประชุมพร้อมกัน ณ บริเวณพระบรมธาตุ ประธานให้โอวาทโดยย่อเกี่ยวกับความมุ่งหมายของงาน จบลงด้วยการแนะนำและเชิญชวนให้แสดงความเคารพบูชาแด่สมเด็จพระสัมมาสัมพุทธเจ้า พร้อมทั้งพระธรรม และพระอริยสงฆ์ ด้วยอามิสบูชาและปฏิบัติบูชาแล้วต่างคนต่างจุดธูปเทียนซึ่งถืออยู่นั้น ยืนประนมมือประคองไว้เพียงหน้าอก ประธานกล่าวนำคำบูชาดอกไม้ธูปเทียนเป็นภาษาบาลี ตามแบบของงานนั้นๆ ดังที่ปรากฏท้ายคำอธิบายนี้ นอกนั้นว่าตามพร้อมๆ กัน เมื่อกล่าวคำบูชาจบแล้ว เริ่มเดินเทียนเวียนประทักษิณ รอบบริเวณพระอุโบสถ ครบ 3 รอบแล้วเข้าสู่โรงพระอุโบสถ เมื่อพร้อมกันแล้วพระเถระผู้เป็นประธาน จุดธูปเทียนที่โต๊ะหมู่บูชาหน้าพระ',
+                'english': 'Māgha Pūjā, Visākha Pūjā, Aṭṭhamī Pūjā and Āsāḷha Pūjā. At 19.30 the officer strikes the bell as the signal, and the bhikkhus, the novices and the laymen and laywomen assemble in the uposatha hall. At the appointed hour of 20.00 they go and gather together at the precinct of the Great Relic. The presiding monk gives a short exhortation on the purpose of the occasion, closing with an invitation to pay homage to the Fully Enlightened Buddha, and with him the Dhamma and the Noble Sangha, by the offering of things and by the offering of practice. Each then lights the incense and candle they are holding, and stands with palms joined, holding them no higher than the chest. The presiding monk leads the words of offering of flowers, incense and candles in Pali, in the form belonging to that occasion, as given at the end of these notes; the rest say it after him together. When the words of offering are finished, the candle procession begins, circling the uposatha hall keeping it on the right. When three circuits are complete they enter the uposatha hall, and when all are gathered the presiding elder lights the incense and candles at the tiered altar before the',
+                'english_unverified': True,
+            },
+        ],
+    },
 ]
 
 

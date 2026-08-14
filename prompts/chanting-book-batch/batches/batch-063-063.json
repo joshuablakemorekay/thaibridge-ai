@@ -1,0 +1,63 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 0,
+    "manifest": [],
+    "pages": [
+      {
+        "page": 63,
+        "file": "IMG_0326.PNG",
+        "script": "thai",
+        "chant": "",
+        "verses": "none",
+        "starts_here": false,
+        "note": "THE WHOLE PAGE IS EXPLANATORY PROSE AND CARRIES NO CHANT. Single column. Four things in printed order: the tail of numbered note 1, which began on page 62 and finishes here; numbered note 2; and two lettered sub-notes under it, ก and ข, setting out what is done on an Uposatha Pāṭimokkha day and on the four Buddhist festival days. Sub-note ข is cut by the page and continues on page 64. No footnote rule and no footnote.",
+        "blocks": [
+          {
+            "type": "prose",
+            "thai": "วะ. ในบทว่า วันทันโตหัง จะริสสามิ ถ้าอุบาสิกาสวด ให้เปลี่ยนเป็น วันทันตีหัง จะริสสามิ ทุกแห่ง ในบทว่า พุทธัง เม วันทะมาเนนะ, ธัมมัง เม วันทะมาเนนะ, สังฆัง เม วันทะมาเนนะ. ถ้าอุบาสิกาสวดให้เปลี่ยนเป็น พุทธัง เม วันทะมานายะ, ธัมมัง เม วันทะมานายะ, สังฆัง เม วันทะมานายะ.",
+            "english": "…va. And at the line Vandanto'haṃ carissāmi: if a laywoman is chanting, it is changed to Vandantī'haṃ carissāmi throughout. At the lines Buddhaṃ me vandamānena, Dhammaṃ me vandamānena, Saṅghaṃ me vandamānena: if a laywoman is chanting, they are changed to Buddhaṃ me vandamānāya, Dhammaṃ me vandamānāya, Saṅghaṃ me vandamānāya.",
+            "english_unverified": true
+          },
+          {
+            "type": "item",
+            "number": 2,
+            "thai": "การทำวัตรสวดมนต์ภาคเย็น ตามระเบียบที่ชี้แจงมาแล้วเป็นระเบียบปฏิบัติในวันปรกติ ถ้าเป็นวันพิเศษ คือวันประชุมทำสังฆกรรมอุโบสถ สวดพระปาติโมกข์ และวันวิสาขบูชา มาฆบูชา เป็นต้น มีระเบียบปฏิบัติพิเศษอีกอย่างหนึ่ง ดังจะอธิบายต่อไปนี้ คือ.",
+            "english": "The evening devotions and chanting, in the order set out above, is the order followed on an ordinary day. On a special day — that is, the day the Sangha assembles for the Uposatha act and the recitation of the Pāṭimokkha, and on Visākha Pūjā, Māgha Pūjā and the like — there is a further special order, which is explained as follows.",
+            "english_unverified": true
+          },
+          {
+            "type": "item",
+            "number": "ก",
+            "thai": "วันทำสังฆกรรมอุโบสถสวดพระปาติโมกข์ เมื่อพระสงฆ์ลงประชุมพร้อมกันในโรงพระอุโบสถแล้ว ได้เวลา 18.00 น. ประธานนำทำวัตรเย็นเหมือนวันปรกติ ทำวัตรเย็นจบแล้ว นำสวด พุทธะมังคะละคาถา โดย สรภัญญวิธี จบแล้ว เจ้าหน้าที่แผนกบัญชีเรียกชื่อนับจำนวนภิกษุ ประกาศให้พระสงฆ์ทราบแล้ว เริ่มทำพิธีสวดพระปาติโมกข์ตามระเบียบต่อไป จบแล้วประธานนำสวดท้ายพระปาติโมกข์ คือ สีลุทเทสะปาฐะ, ภิกขุอะปะริหานิยะธัมมะสุตตะ, อะตีตะปัจจะเวกขะณะปาฐะ, และ อุททิสะนาธิฏฐานะคาถา เป็นอันเสร็จพิธีทำวัตรสวดมนต์เย็น ในวันสังฆกรรมอุโบสถ สวดพระปาติโมกข์เท่านี้ ประธานสั่งเลิกประชุม",
+            "english": "The day of the Uposatha act and the recitation of the Pāṭimokkha. When the Sangha has assembled together in the uposatha hall and the hour of 18.00 has come, the presiding monk leads the evening devotions as on an ordinary day. When the evening devotions are done, he leads the chanting of the Buddhamaṅgalagāthā in the saraphañña manner. That done, the officer of the register calls the roll and counts the bhikkhus, and announces the number to the Sangha. The recitation of the Pāṭimokkha then begins and proceeds in its order. When it is finished, the presiding monk leads the chants that close the Pāṭimokkha — the Sīluddesapāṭha, the Bhikkhu-aparihāniyadhammasutta, the Atītapaccavekkhaṇapāṭha, and the Uddisanādhiṭṭhānagāthā. With this the evening devotions and chanting on the day of the Uposatha act and the recitation of the Pāṭimokkha are complete, and the presiding monk dismisses the assembly.",
+            "english_unverified": true
+          },
+          {
+            "type": "item",
+            "number": "ข",
+            "thai": "วันมาฆบูชา วิสาขบูชา อัฏฐมีบูชา และวันอาสาฬหบูชา เวลา 19.30 น. เจ้าหน้าที่ตีสัญญาระฆัง พระภิกษุ สามเณร และอุบาสกอุบาสิกา ลงประชุมในโรงพระอุโบสถ ได้เวลากำหนดคือ 20.00 น. ไปประชุมพร้อมกัน ณ บริเวณพระบรมธาตุ ประธานให้โอวาทโดยย่อเกี่ยวกับความมุ่งหมายของงาน จบลงด้วยการแนะนำและเชิญชวนให้แสดงความเคารพบูชาแด่สมเด็จพระสัมมาสัมพุทธเจ้า พร้อมทั้งพระธรรม และพระอริยสงฆ์ ด้วยอามิสบูชาและปฏิบัติบูชาแล้วต่างคนต่างจุดธูปเทียนซึ่งถืออยู่นั้น ยืนประนมมือประคองไว้เพียงหน้าอก ประธานกล่าวนำคำบูชาดอกไม้ธูปเทียนเป็นภาษาบาลี ตามแบบของงานนั้นๆ ดังที่ปรากฏท้ายคำอธิบายนี้ นอกนั้นว่าตามพร้อมๆ กัน เมื่อกล่าวคำบูชาจบแล้ว เริ่มเดินเทียนเวียนประทักษิณ รอบบริเวณพระอุโบสถ ครบ 3 รอบแล้วเข้าสู่โรงพระอุโบสถ เมื่อพร้อมกันแล้วพระเถระผู้เป็นประธาน จุดธูปเทียนที่โต๊ะหมู่บูชาหน้าพระ",
+            "english": "Māgha Pūjā, Visākha Pūjā, Aṭṭhamī Pūjā and Āsāḷha Pūjā. At 19.30 the officer strikes the bell as the signal, and the bhikkhus, the novices and the laymen and laywomen assemble in the uposatha hall. At the appointed hour of 20.00 they go and gather together at the precinct of the Great Relic. The presiding monk gives a short exhortation on the purpose of the occasion, closing with an invitation to pay homage to the Fully Enlightened Buddha, and with him the Dhamma and the Noble Sangha, by the offering of things and by the offering of practice. Each then lights the incense and candle they are holding, and stands with palms joined, holding them no higher than the chest. The presiding monk leads the words of offering of flowers, incense and candles in Pali, in the form belonging to that occasion, as given at the end of these notes; the rest say it after him together. When the words of offering are finished, the candle procession begins, circling the uposatha hall keeping it on the right. When three circuits are complete they enter the uposatha hall, and when all are gathered the presiding elder lights the incense and candles at the tiered altar before the",
+            "english_unverified": true
+          }
+        ]
+      }
+    ]
+  },
+  "chants": [],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 64,
+    "resume_from_file": "IMG_0327.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — no kh/th/ph/ng hits. This batch has no chants and therefore no paiboon values at all.",
+    "pali_untouched": "Confirmed — vacuously. There are no pali values in this batch: the page carries no chant text, only Thai instruction. The Pali chant names quoted inside the instruction are reproduced in Thai script exactly as the prose prints them and are not transliterated anywhere.",
+    "page_scan": "agrees — one row for one page, carrying four blocks in the order they appear down it and no chant text. There are no verses to orphan or double-claim.",
+    "notes": "A CHANT-LESS BATCH, THE FIRST IN THIS WORKFLOW. Page 63 is entirely คำอธิบายประกอบทำวัตรเย็น and the manifest is empty on purpose. That also means there is nowhere for a per-chant `checks` array to live, so everything this page raises is written here instead. (1) THE CHANT NAME IS SPELT THREE WAYS IN THREE PLACES AND NOTHING HAS BEEN CHANGED. Sub-note ก names อุททิสะนาธิฏฐานะคาถา with a doubled ท and a SINGLE ส, read at 7x. Page 62 prints the title and colophon as อุททิสสะ, doubled ท and doubled ส, and page 61's rubric agrees with page 62. CONTENTS, from the book's own สารบัญ, has อุทิสสะ — single ท, doubled ส. Three printings, three spellings, all reproduced as they stand. One look at the book settles which the printer meant. (2) Two words are broken across line ends WITH hyphens inside sub-note ก — ภิกขุ- / อะปะริหานิยะธัมมะสุตตะ and อุททิสะนาธิฏ- / ฐานะคาถา — and both are rejoined with the hyphen dropped, the same rule the run-on passages follow. (3) SUB-NOTE ข IS CUT BY THE PAGE, stopping at จุดธูปเทียนที่โต๊ะหมู่บูชาหน้าพระ, and page 64 finishes it. Reproduced only as far as the page carries it. There is clear white paper below the last line to the foot of the sheet, so nothing is hidden. (4) The first block is the OTHER half of that arrangement — the tail of note 1, which began at the foot of page 62. It is filed as `prose` rather than as `item` 1, following page 60's precedent for a paragraph completing across a page turn: giving it the number would print a '1.' in front of a fragment, which the book does not do. (5) THE BOOK UNDERLINES THREE TIMES OF DAY — 18.00 น., 19.30 น. and 20.00 น. — each with a rule beneath it. A page block has no field for an underline, so the text is reproduced and the emphasis is not. Recorded here because it is a real thing on the page that the app does not show. (6) ก and ข go into `number` as Thai letters rather than integers, which the template renders as ก. and ข. exactly as printed. This is the first time that field has held anything but a digit. (7) Spacing reproduced rather than regularised in two places: ถ้าอุบาสิกาสวด ให้เปลี่ยนเป็น has a space at its first occurrence and none at its second, three lines apart; and งานนั้นๆ and พร้อมๆ both set the mai yamok closed up where page 62's อื่น ๆ has a space. (8) Sub-note ก ends ประธานสั่งเลิกประชุม with NO full stop, where note 2 ends คือ. with one."
+  }
+}
