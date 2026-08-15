@@ -16878,6 +16878,501 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0327.PNG]: THE APP ALREADY HOLDS A SHORTER VERSION OF
+        #   THIS PASSAGE, AND THIS IS NOT IT. `kham-choen-bucha-phitsadan`,
+        #   page 9, has eighteen units and opens with the SAME first three
+        #   verbatim — ยะมัมหะ โข มะยัง… / อุททิสสะ ปัพพะชิตา… / ยัสสะ จะ
+        #   มะยัง… — and closes with near-identical ones. It then diverges
+        #   completely: page 9's fourth unit is ตัสสะ โข ปะนะ ภะคะวะโต
+        #   โลเกกุตตะมะสัตถุภูตัสสะ where page 64's is อะโหสิ โข โส ภะคะวา
+        #   มัชฌิเมสุ ชะนะปะเทสุ. The two also END differently — page 9 has
+        #   อะภิถุตุง and ปุพพะภาคะนะมะการัง กะโรมะ เส., page 65 has
+        #   อะภิคายิตุง and ปุพพะภาคะนะมะการัญเจวะ พุทธานุสสะตินะยัญจะ กะโรมะ
+        #   เส. Under the batch rule that a printing differing at all is NOT a
+        #   repeat, this is set in full as its own chant. The book's own
+        #   สารบัญ lists it separately at page ๖๔, which agrees. Worth one
+        #   look to confirm the two really are different texts and not one
+        #   text misread twice.
+        # ‼ CHECK [IMG_0328.PNG]: NO COLOPHON ON THIS CHANT. Pages 60, 61 and
+        #   62 each close with a centred นิฏฐิโต/นิฏฐิตา line; this passage
+        #   simply ends at กะโรมะ เส. and the instruction paragraph follows.
+        #   The closing key is therefore left off entirely rather than
+        #   composed. Checked against the page — there is no centred line
+        #   between the last Pali line and the paragraph.
+        # ‼ CHECK [IMG_0327.PNG]: The passage is one continuous justified
+        #   block on both pages with NO paragraph break, unlike pages 60 and
+        #   61 which set their run-on chants as four indented paragraphs.
+        #   `layout: 'prose'` is set and no para_start is declared, so the app
+        #   should flow all thirty-seven units into a single block on each
+        #   page. That is what the book prints and is worth confirming on
+        #   screen.
+        # ‼ CHECK [IMG_0327.PNG]: The title คำเชิญบูชาพระรัตนตรัยพิเศษ is
+        #   THAI, not Pali, so title_pali is left empty and title_roman
+        #   carries the Paiboon+ romanisation of the Thai instead. This is the
+        #   shape the prompt asks for on a Thai-titled chant, and it differs
+        #   from pages 60-62 whose titles are Pali in Thai script.
+        'id': 'kham-choen-bucha-phra-ratanattaya-phiset',
+        'title_thai': 'คำเชิญบูชาพระรัตนตรัยพิเศษ',
+        'title_pali': '',
+        'title_roman': 'kam chəən buu-chaa prá-rát-dtà-ná-dtrai pí-sèet',
+        'title_english': 'The Special Invitation to Worship the Triple Gem',
+        'page_start': 64,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'ยะมัมหะ โข มะยัง ภะคะวันตัง สะระณัง คะตา,',
+                'pali_roman': 'Yamamha kho mayaṃ bhagavantaṃ saraṇaṃ gatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That Blessed One to whom we have gone for refuge,',
+            },
+            {
+                'number': 2,
+                'pali': 'อุททิสสะ ปัพพะชิตา โย โน ภะคะวา สัตถา,',
+                'pali_roman': 'Uddissa pabbajitā yo no bhagavā satthā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for whose sake we have gone forth, who is our Teacher, the Blessed One,',
+            },
+            {
+                'number': 3,
+                'pali': 'ยัสสะ จะ มะยัง ภะคะวะโต ธัมมัง โรเจมะ,',
+                'pali_roman': 'Yassa ca mayaṃ bhagavato dhammaṃ rocema,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and in whose Dhamma we delight —',
+            },
+            {
+                'number': 4,
+                'pali': 'อะโหสิ โข โส ภะคะวา มัชฌิเมสุ ชะนะปะเทสุ อะริยะเกสุ มะนุสเสสุ อุปปันโน,',
+                'pali_roman': 'Ahosi kho so bhagavā majjhimesu janapadesu ariyakesu manussesu uppanno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that Blessed One was born in the Middle Country, among the Ariyan people,',
+            },
+            # ‼ CHECK [IMG_0327.PNG]: สัก์ยะปุตโต and สัก์ยะกุลา both carry
+            #   the small conjunct mark over the ก, read at 6x, giving
+            #   sakyaputto and sakyakulā. Written with U+0E4C consistent with
+            #   pages 51-62. This is the seventh page agreeing about which
+            #   mark this printer cuts; still not a verdict on กัล๎ยาณัง.
+            {
+                'number': 5,
+                'pali': 'ขัตติโย ชาติยา โคตะโม โคตเตนะ สัก์ยะปุตโต สัก์ยะกุลา ปัพพะชิโต,',
+                'pali_roman': 'Khattiyo jātiyā gotamo gottena sakyaputto sakyakulā pabbajito,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'a khattiya by birth, a Gotama by clan, a son of the Sakyans, gone forth from the Sakyan family,',
+            },
+            {
+                'number': 6,
+                'pali': 'สัมมาปะโยคะมาคัมมะ สัมมาปะธานะมัน์วายะ,',
+                'pali_roman': 'Sammāpayogamāgamma sammāpadhānamanvāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having come to right application, having followed right endeavour,',
+            },
+            {
+                'number': 7,
+                'pali': 'สัมมานะมะสิการะมัน์วายะ อุรุเวลายัง นัชชา เนรัญชะรายะ ตีเร อัสสัตถะโพธิรุกขะมูเล,',
+                'pali_roman': 'Sammānamasikāramanvāya uruvelāyaṃ najjā nerañjarāya tīre assatthabodhirukkhamūle,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having followed right attention, at Uruvelā on the bank of the river Nerañjarā, at the foot of the assattha Bodhi tree,',
+            },
+            {
+                'number': 8,
+                'pali': 'สัพพะโส ตัณหานัง ขะยา วิราคา นิโรธา จาคา ปะฏินิสสัคคา,',
+                'pali_roman': 'Sabbaso taṇhānaṃ khayā virāgā nirodhā cāgā paṭinissaggā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the utter destruction of cravings, by their fading, their ceasing, their giving up and relinquishing,',
+            },
+            {
+                'number': 9,
+                'pali': 'สะเทวะเก โลเก สามาระเก สะพ์รัห์มะเก สัสสะมะณะพ์ราห์มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
+                'pali_roman': 'Sadevake loke sāmārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in this world with its devas, its māras and its brahmās, in this generation with its ascetics and brahmins, its rulers and its people,',
+            },
+            {
+                'number': 10,
+                'pali': 'อะนุตตะรัง สัมมาสัมโพธิง อะภิสัมพุทโธ,',
+                'pali_roman': 'Anuttaraṃ sammāsambodhiṃ abhisambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'awakened fully to the unsurpassed perfect enlightenment.',
+            },
+            {
+                'number': 11,
+                'pali': 'โส สัตเตสุ การุญญะตัง ปะฏิจจะ,',
+                'pali_roman': 'So sattesu kāruññataṃ paṭicca,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He then, on account of his compassion for beings,',
+            },
+            {
+                'number': 12,
+                'pali': 'กะรุณายะโก อะนุกัมปะโก หิเตสี อะนุกัมปัง อุปาทายะ,',
+                'pali_roman': 'Karuṇāyako anukampako hitesī anukampaṃ upādāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'being merciful, sympathetic and a seeker of their welfare, and taking up sympathy,',
+            },
+            {
+                'number': 13,
+                'pali': 'อาสะภัณฐานัง ปะฏิญญาสิ,',
+                'pali_roman': 'Āsabhaṇṭhānaṃ paṭiññāsi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'claimed the place of the leader of the herd,',
+            },
+            {
+                'number': 14,
+                'pali': 'ปะริสาสุ สีหะนาทัง นะทิ,',
+                'pali_roman': 'Parisāsu sīhanādaṃ nadi,',
+                'thai': '',
+                'paiboon': '',
+                'english': "roared the lion's roar in the assemblies,",
+            },
+            {
+                'number': 15,
+                'pali': 'ธัมมะจักกัง ปะวัตเตสิ,',
+                'pali_roman': 'Dhammacakkaṃ pavattesi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and set rolling the Wheel of the Dhamma.',
+            },
+            {
+                'number': 16,
+                'pali': 'โส โลกะจาริกัง จะระมาโน,',
+                'pali_roman': 'So lokacārikaṃ caramāno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He, journeying through the world,',
+            },
+            # ‼ CHECK [IMG_0327.PNG]: ปัจฉิมาชะนะ- is broken across the line
+            #   end at line 17 WITH a hyphen, the next line beginning
+            #   ตาภูตานัง, and อะนุ- at line 20 likewise continues as มะตัง.
+            #   Both rejoined and the hyphens dropped, as the run-on passage
+            #   rule requires. Each word is printed unbroken elsewhere on the
+            #   page (ปัจฉิมาชะนะตานุกัมปัง at verse 25, อะนุมะติง at verse
+            #   27), which confirms the joins.
+            {
+                'number': 17,
+                'pali': 'ตันตะทะนุรูปัง ธัมมัญจะ เทเสนโต วินะยัญจะ ปัญญะเปนโต โลกะจาริกัง จะริต์วา,',
+                'pali_roman': 'Tantadanurūpaṃ dhammañca desento vinayañca paññapento lokacārikaṃ caritvā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'teaching the Dhamma and laying down the Discipline, each as befitted the occasion, and having completed that journey through the world,',
+            },
+            {
+                'number': 18,
+                'pali': 'ปะริยัตติปะฏิปัตติปะฏิเวธะสังขาตัง ติวิธัง สัทธัมมัง สัมมะเทวะ โลเก ปะวัตตะยิต์วา,',
+                'pali_roman': 'Pariyattipaṭipattipaṭivedhasaṅkhātaṃ tividhaṃ saddhammaṃ sammadeva loke pavattayitvā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having rightly set going in the world the True Dhamma in its three kinds — learning, practice and penetration —',
+            },
+            {
+                'number': 19,
+                'pali': 'อะปะระภาเค กุสินารายัง อุปะวัตตะเน,',
+                'pali_roman': 'Aparabhāge kusinārāyaṃ upavattane,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'afterwards at Kusinārā, at Upavattana,',
+            },
+            {
+                'number': 20,
+                'pali': 'มัลลานัง สาละวะเน ยะมะกะสาลานะมันตะเร อะนุปาทิเสสายะ นิพพานะธาตุยา ปะรินิพพุโต,',
+                'pali_roman': 'Mallānaṃ sālavane yamakasālānamantare anupādisesāya nibbānadhātuyā parinibbuto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in the sāla grove of the Mallas, between the twin sāla trees, attained final nibbāna in the nibbāna element with no residue remaining.',
+            },
+            # ‼ CHECK [IMG_0327.PNG]: AN EDITORIAL INSTRUCTION IS PRINTED
+            #   INSIDE THE CHANTED LINE. The book sets (เปลี่ยนตาม พ.ศ.) —
+            #   'change according to the Buddhist Era year' — in parentheses
+            #   in the middle of the Pali, between จุททะสุตตะระปัญจะสะตาธิกานิ
+            #   and เท์ว สังวัจฉะระสะหัสสานิ. It is not Pali and is not
+            #   chanted; it tells the reader to update the number of years to
+            #   the current year. Kept inline exactly where it is printed,
+            #   because dropping it would lose a printed instruction and
+            #   moving it would misrepresent the line. `pali` carries the Thai
+            #   verbatim; `pali_roman` carries it as the English instruction
+            #   '(change according to the B.E. year)' instead, because that
+            #   layer must be Latin only — check_batch rejects Thai script in
+            #   it, rightly, and a Thai instruction has no IAST
+            #   transliteration. Romanising it with Paiboon+ was the other
+            #   option and was NOT taken: Paiboon+ in a pali_roman field is
+            #   the exact confusion the five-layer rule forbids. The figure as
+            #   printed is 2514, so this page was set for B.E. 2514 and the
+            #   number is now sixty years out of date — which is precisely
+            #   what the parenthesis is telling the reader to fix.
+            {
+                'number': 21,
+                'pali': 'ตะโต ปัฏฐายะ ยาวัชชะตะนา จุททะสุตตะระปัญจะสะตาธิกานิ (เปลี่ยนตาม พ.ศ.) เท์ว สังวัจฉะระสะหัสสานิ อะติกกันตานิ,',
+                'pali_roman': 'Tato paṭṭhāya yāvajjatanā cuddasuttarapañcasatādhikāni (change according to the B.E. year) dve saṃvaccharasahassāni atikkantāni,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'From that time until this day two thousand five hundred and fourteen years have passed. (change according to the Buddhist Era)',
+            },
+            {
+                'number': 22,
+                'pali': 'เอตตะกัง กาลัง โย เตนะ ภะคะวะตา เทสิโต ปัญญัตโต ธัมโม จะ วินะโย จะ,',
+                'pali_roman': 'Ettakaṃ kālaṃ yo tena bhagavatā desito paññatto dhammo ca vinayo ca,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and through all that length of time the Dhamma and the Discipline taught and laid down by that Blessed One',
+            },
+            {
+                'number': 23,
+                'pali': 'โส อัมหากัง ปัจฉิมาชะนะตาภูตานัง สัตถา หุต์วา ยะถากะถัญจิ ติฏฐะติ,',
+                'pali_roman': 'So amhākaṃ pacchimājanatābhūtānaṃ satthā hutvā yathākathañci tiṭṭhati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'have been the Teacher of us who are the later generation, and in one way or another they still stand.',
+            },
+            # ‼ CHECK [IMG_0327.PNG]: THE ฬ/พ HAZARD, AND THIS ONE NEEDS THE
+            #   BOOK. The two words are read here as โอพารกา and โอพาริเกนะ,
+            #   giving opārakā and opārikena. Standard Pali at this point is
+            #   oḷārikā / oḷārikena — โอฬาริกา, 'coarse, tangible' — which is
+            #   also what the sense requires, since the whole clause is about
+            #   beings who need something tangible and is the reason the stūpa
+            #   was permitted. The glyph was compared at 16x against a KNOWN พ
+            #   on the same page (สะพ์รัห์มะเก, line 7) and the two are
+            #   indistinguishable in stroke, weight and height. But the photo
+            #   map already records that these photographs CANNOT tell ฬ from
+            #   พ at body-text size, proven twice against Josh's own readings,
+            #   so that comparison is not evidence. Reproduced as it appears
+            #   and flagged. Note also that the first word appears to lack the
+            #   ิ the second has — โอพารกา against โอพาริเกนะ — so the book
+            #   may be inconsistent here as well. One look settles both.
+            {
+                'number': 24,
+                'pali': 'อะปิจะ โข ปะนะ สันติ สัตตา โอพารกา โอพาริเกนะ นะเยนะ ปะสาทิตาโร,',
+                'pali_roman': 'Apica kho pana santi sattā opārakā opārikena nayena pasāditāro,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And yet there are beings of a coarser kind, who are brought to confidence by a coarser means,',
+            },
+            {
+                'number': 25,
+                'pali': 'เตสัง ปะสาทายะ เตนะ ภะคะวะตา ปัจฉิมาชะนะตานุกัมปัง ปะฏิจจะ,',
+                'pali_roman': 'Tesaṃ pasādāya tena bhagavatā pacchimājanatānukampaṃ paṭicca,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and for the bringing of those to confidence, that Blessed One, on account of his sympathy for the later generation,',
+            },
+            {
+                'number': 26,
+                'pali': 'อัตตะโน อัจจะเยนะ ถูปะปะติฏฐาปะนัง อะนุมะตัง,',
+                'pali_roman': 'Attano accayena thūpapatiṭṭhāpanaṃ anumataṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'gave his consent to the founding of a stūpa after his passing.',
+            },
+            {
+                'number': 27,
+                'pali': 'ตัง โข ปะนะ ภะคะวะโต อะนุมะติง อุปาทายะ,',
+                'pali_roman': 'Taṃ kho pana bhagavato anumatiṃ upādāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And taking up that consent of the Blessed One,',
+            },
+            # ‼ CHECK [IMG_0327.PNG]: THE PAGE TURN FALLS MID-SENTENCE and the
+            #   verse is NOT cut mid-word. Page 64's last line ends กะตา and
+            #   page 65 opens ปะติฏฐาปิตา,. The two are separate words, so
+            #   verse 28 is written whole and verse 29 begins the new page —
+            #   no […] marker is needed and none is used. Verse 28 carries no
+            #   full stop because the sentence does not end there; that is the
+            #   book, not an omission.
+            {
+                'number': 28,
+                'pali': 'อะยัง ปะฏิมา มะหาสุระสิงหะนาเทนะ ปะวะระราเชนะ ตัง ภะคะวันตัง อุททิสสะ กะตา',
+                'pali_roman': 'Ayaṃ paṭimā mahāsurasīhanādena pavararājena taṃ bhagavantaṃ uddissa katā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'this image was made by the excellent king Mahāsurasīhanāda, dedicated to that Blessed One,',
+            },
+            {
+                'number': 29,
+                'page': 65,
+                'pali': 'ปะติฏฐาปิตา,',
+                'pali_roman': 'patiṭṭhāpitā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and was established here;',
+            },
+            {
+                'number': 30,
+                'pali': 'ยาวะเทวะ ทัสสะเนนะ ตัง ภะคะวันตัง อะนุสสะริต์วา ปะสาทะสังเวคะปะฏิลาภายะ เจวะ,',
+                'pali_roman': 'Yāvadeva dassanena taṃ bhagavantaṃ anussaritvā pasādasaṃvegapaṭilābhāya ceva,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'only so that, by the sight of it, one may recollect that Blessed One and so come to confidence and to a sense of urgency,',
+            },
+            {
+                'number': 31,
+                'pali': 'ตัปปัจจะยา สัมมาปะฏิปัตติปะริปูระณัตถายะ จะ,',
+                'pali_roman': 'Tappaccayā sammāpaṭipattiparipūraṇatthāya ca,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and so that, on that account, right practice may be brought to fulfilment.',
+            },
+            {
+                'number': 32,
+                'pali': 'มะยัญจัมหะ อิมัง ฐานัง สัมปัตตา,',
+                'pali_roman': 'Mayañcamha imaṃ ṭhānaṃ sampattā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And we have come to this place,',
+            },
+            {
+                'number': 33,
+                'pali': 'อิเม ทัณฑะทีปะธูปะปุปผาทิสักกาเร อิมัส์มิง สีหาสะเน อาโรเปต์วา,',
+                'pali_roman': 'Ime daṇḍadīpadhūpapupphādisakkāre imasmiṃ sīhāsane āropetvā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and having set these offerings — candles, incense, flowers and the rest — upon this lion throne,',
+            },
+            {
+                'number': 34,
+                'pali': 'ตัสสะ ภะคะวะโต สุจิระปะรินิพพุตัสสาปิ สะโต,',
+                'pali_roman': 'Tassa bhagavato sucirapariṇibbutassāpi sato,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to that Blessed One, long since finally gone to nibbāna though he is,',
+            },
+            {
+                'number': 35,
+                'pali': 'สักการัง กะริต์วา อะภิวาทะนัง กะริมหา,',
+                'pali_roman': 'Sakkāraṃ karitvā abhivādanaṃ karimhā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'we have made our offering and paid our homage.',
+            },
+            {
+                'number': 36,
+                'pali': 'หันทะทานิ มะยัง ตัง ภะคะวันตัง วาจายะ อะภิคายิตุง,',
+                'pali_roman': 'Handadāni mayaṃ taṃ bhagavantaṃ vācāya abhigāyituṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Now, in order to sing the praise of that Blessed One with our speech,',
+            },
+            {
+                'number': 37,
+                'pali': 'ปุพพะภาคะนะมะการัญเจวะ พุทธานุสสะตินะยัญจะ กะโรมะ เส.',
+                'pali_roman': 'Pubbabhāganamakārañceva buddhānussatinayañca karoma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let us make both the preliminary salutation and the way of recollection of the Buddha.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0328.PNG]: TWO COLUMNS, AND THE PAIRING NEEDS
+        #   CONFIRMING. Each printed line runs across both columns. The first
+        #   pairing made is left จาตุททะสี ปัณณะระสี with right ยา จะ ปักขัสสะ
+        #   อัฏฐะมี, joined by a single space as verse 1. Checked two ways:
+        #   the full stops fall only at the ends of right-hand halves, on rows
+        #   2, 4 and 6, which is the pattern three couplets give; and reading
+        #   the left column straight down produces a run of unfinished half-
+        #   lines rather than continuous sense. Reading down the columns would
+        #   produce fluent and completely wrong Pali.
+        # ‼ CHECK [IMG_0328.PNG]: NO COLOPHON. The verses end at ตันติ. and
+        #   the closing paragraph follows directly, with no centred นิฏฐิตา
+        #   line. The closing key is left off rather than composed.
+        # ‼ CHECK [IMG_0328.PNG]: The title คาถาอาราธนาธรรม is THAI, not Pali,
+        #   so title_pali is empty and title_roman carries the Paiboon+
+        #   romanisation of the Thai. Same shape as the chant above it on page
+        #   64.
+        'id': 'khatha-aradhana-dhamma',
+        'title_thai': 'คาถาอาราธนาธรรม',
+        'title_pali': '',
+        'title_roman': 'kaa-tǎa aa-râat-tá-naa tam',
+        'title_english': 'The Verses Inviting the Teaching of the Dhamma',
+        'page_start': 65,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'จาตุททะสี ปัณณะระสี ยา จะ ปักขัสสะ อัฏฐะมี',
+                'pali_roman': 'Cātuddasī paṇṇarasī yā ca pakkhassa aṭṭhamī',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The fourteenth day, the fifteenth, and the eighth of the fortnight —',
+            },
+            # ‼ CHECK [IMG_0328.PNG]: The book prints สัทธัมมัสสะวะนัสสิเม as
+            #   one unbroken word, giving saddhammassavanassime — saddhamma-
+            #   savanassa ime run together. Reproduced exactly as printed
+            #   rather than split at the word boundary, since nothing on the
+            #   page marks one.
+            {
+                'number': 2,
+                'pali': 'กาลา พุทเธนะ ปัญญัตตา สัทธัมมัสสะวะนัสสิเม.',
+                'pali_roman': 'Kālā buddhena paññattā saddhammassavanassime.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these are the times appointed by the Buddha for the hearing of the True Dhamma.',
+            },
+            {
+                'number': 3,
+                'pali': 'ปัณณะระสี อะยันทานิ สัมปัตตา อะภิลักขิตา',
+                'pali_roman': 'Paṇṇarasī ayandāni sampattā abhilakkhitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Now this fifteenth day has come, a day marked out for it,',
+            },
+            {
+                'number': 4,
+                'pali': 'เตนายัง ปะริสา ธัมมัง โสตุง อิธะ สะมาคะตา.',
+                'pali_roman': 'Tenāyaṃ parisā dhammaṃ sotuṃ idha samāgatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and therefore this assembly has gathered here to hear the Dhamma.',
+            },
+            {
+                'number': 5,
+                'pali': 'สาธุ อัยโย ภิกขุสังโฆ กะโรตุ ธัมมะเทสะนัง',
+                'pali_roman': 'Sādhu ayyo bhikkhusaṅgho karotu dhammadesanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It would be well, venerable sir, if the Bhikkhu Sangha would give a teaching of the Dhamma,',
+            },
+            {
+                'number': 6,
+                'pali': 'อะยัญจะ ปะริสา สัพพา อัฏฐิกัต์วา สุณาตุ ตันติ.',
+                'pali_roman': 'Ayañca parisā sabbā aṭṭhikatvā suṇātu tanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and if this whole assembly, giving it their full attention, would listen to it.',
+            },
+        ],
+    },
 ]
 
 
@@ -18776,6 +19271,47 @@ PAGE_BLOCKS = [
                 'number': 'ข',
                 'thai': 'วันมาฆบูชา วิสาขบูชา อัฏฐมีบูชา และวันอาสาฬหบูชา เวลา 19.30 น. เจ้าหน้าที่ตีสัญญาระฆัง พระภิกษุ สามเณร และอุบาสกอุบาสิกา ลงประชุมในโรงพระอุโบสถ ได้เวลากำหนดคือ 20.00 น. ไปประชุมพร้อมกัน ณ บริเวณพระบรมธาตุ ประธานให้โอวาทโดยย่อเกี่ยวกับความมุ่งหมายของงาน จบลงด้วยการแนะนำและเชิญชวนให้แสดงความเคารพบูชาแด่สมเด็จพระสัมมาสัมพุทธเจ้า พร้อมทั้งพระธรรม และพระอริยสงฆ์ ด้วยอามิสบูชาและปฏิบัติบูชาแล้วต่างคนต่างจุดธูปเทียนซึ่งถืออยู่นั้น ยืนประนมมือประคองไว้เพียงหน้าอก ประธานกล่าวนำคำบูชาดอกไม้ธูปเทียนเป็นภาษาบาลี ตามแบบของงานนั้นๆ ดังที่ปรากฏท้ายคำอธิบายนี้ นอกนั้นว่าตามพร้อมๆ กัน เมื่อกล่าวคำบูชาจบแล้ว เริ่มเดินเทียนเวียนประทักษิณ รอบบริเวณพระอุโบสถ ครบ 3 รอบแล้วเข้าสู่โรงพระอุโบสถ เมื่อพร้อมกันแล้วพระเถระผู้เป็นประธาน จุดธูปเทียนที่โต๊ะหมู่บูชาหน้าพระ',
                 'english': 'Māgha Pūjā, Visākha Pūjā, Aṭṭhamī Pūjā and Āsāḷha Pūjā. At 19.30 the officer strikes the bell as the signal, and the bhikkhus, the novices and the laymen and laywomen assemble in the uposatha hall. At the appointed hour of 20.00 they go and gather together at the precinct of the Great Relic. The presiding monk gives a short exhortation on the purpose of the occasion, closing with an invitation to pay homage to the Fully Enlightened Buddha, and with him the Dhamma and the Noble Sangha, by the offering of things and by the offering of practice. Each then lights the incense and candle they are holding, and stands with palms joined, holding them no higher than the chest. The presiding monk leads the words of offering of flowers, incense and candles in Pali, in the form belonging to that occasion, as given at the end of these notes; the rest say it after him together. When the words of offering are finished, the candle procession begins, circling the uposatha hall keeping it on the right. When three circuits are complete they enter the uposatha hall, and when all are gathered the presiding elder lights the incense and candles at the tiered altar before the',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 64 ────────────────────────────────────────────────────
+    # Written from batch-064-065.json.
+    {
+        'page': 64,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'ประธานแล้วนำทำวัตรเย็นเหมือนอย่างวันปรกติ แต่กล่าวคำเชิญบูชาพระรัตนตรัยเป็นพิเศษ โดยพิสดารกว่าวันอื่นดังนี้.',
+                'english': '…the presiding image. He then leads the evening devotions as on an ordinary day, except that the invitation to worship the Triple Gem is spoken in the special form, at greater length than on other days, as follows.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 65 ────────────────────────────────────────────────────
+    # Written from batch-064-065.json.
+    {
+        'page': 65,
+        'after': 'kham-choen-bucha-phra-ratanattaya-phiset',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'เมื่อทำวัตรเย็นจบแล้ว สวดพุทธะมังคะละคาถา โดยสรภัญญวิธี เหมือนที่อธิบายมาแล้ว ต่อจากบทนี้ อุบาสกอุบาสิกา ทำวัตรเย็นพร้อมกัน จบแล้วพระเถระผู้เป็นประธานขึ้นธรรมาสน์ หัวหน้าอุบาสกนั่งคุกเข่าท่าพรหม ประนมมือ กล่าวคาถาอาราธนาธรรม โดยสรภัญญวิธีดังนี้.',
+                'english': 'When the evening devotions are finished, the Buddhamaṅgalagāthā is chanted in the saraphañña manner, as explained above. After this passage the laymen and laywomen perform the evening devotions together. That done, the presiding elder ascends the Dhamma seat; the chief layman kneels in the brahmā posture with palms joined and speaks the verses inviting the Dhamma, in the saraphañña manner, as follows.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 65 ────────────────────────────────────────────────────
+    # Written from batch-064-065.json.
+    {
+        'page': 65,
+        'after': 'khatha-aradhana-dhamma',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'พระเถระผู้เป็นประธาน เริ่มแสดงพระธรรมเทศนากัณฑ์แรกในเรื่องเกี่ยวกับงานในวันมาฆบูชา วิสาขบูชา อัฏฐมีบูชา หรืออาสาฬหบูชา ตามอนุรูปแก่งาน จบแล้ว พระภิกษุสงฆ์ 4 รูป สวดคาถาธรรมบรรยายเนื่องในงานนั้นๆ แล้วสามเณรสวดอีกสำรับหนึ่งนับเป็นอันเสร็จพิธีปรกติเพียงเท่านี้ ต่อจากนี้ไป มีการแสดงพระธรรมเทศนาและสวดคาถาธรรมบรรยาย หรือพระสูตรต่างๆ แล้วแต่ประธานจะกำหนด เป็นการสลับผลัดกันไปจนตลอดสว่าง ในตอนนี้เป็นการกระทำปฏิบัติบูชาด้วยความสมัครใจ ผู้ที่มีศรัทธาปสาทะกล้าและมีกำลังกายดีก็อยู่ตลอดรุ่ง ที่มีศรัทธาอ่อน หรือมีกำลังกายอ่อนแอ ก็เลิกกลับที่ของตน หลังจากเสร็จพิธีปรกติแล้ว',
+                'english': 'The presiding elder begins the first discourse, on the subject of the occasion — Māgha Pūjā, Visākha Pūjā, Aṭṭhamī Pūjā or Āsāḷha Pūjā — as befits it. That done, four bhikkhus chant the expository verses belonging to that occasion, and then the novices chant another set, and with this the ordinary observance is complete. From this point on there is the giving of discourses and the chanting of expository verses, or of various suttas, as the presiding monk shall appoint, alternating in turn until daybreak. This part is the offering of practice, undertaken willingly: those of strong faith and good bodily strength stay until dawn, while those of weaker faith or weaker body return to their own quarters after the ordinary observance is done…',
                 'english_unverified': True,
             },
         ],
