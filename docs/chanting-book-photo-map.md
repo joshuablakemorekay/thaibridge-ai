@@ -43,6 +43,10 @@ photograph.
 | 59 | IMG_0322 | 263 |
 | 60 | IMG_0323 | 263 |
 | 61 | IMG_0324 | 263 |
+| 62 | IMG_0325 | 263 |
+| 63 | IMG_0326 | 263 |
+| 64 | IMG_0327 | 263 |
+| 65 | IMG_0328 | 263 |
 | 68 | IMG_0331 | 263 |
 | 207 | IMG_0477 | 270 |
 | 213 | IMG_0483 | 270 |
@@ -59,9 +63,10 @@ somewhere between 68 and 207 were shot twice. Those stretches are unmapped.
 
 Pages 35–50 went in without being added here, and they all sat at offset 263 —
 the same as pages 31–34 and 51. Pages 55–58 went in the same way. So the offset
-holds **unbroken from 31 to 61**, now anchored at both ends of that run. That is
-a reason to expect the next filename, never a reason to trust it: read the page
-number off the top of the photograph as always.
+holds **unbroken from 31 to 65**, now anchored at both ends of that run and at
+every page from 59 to 65. That is a reason to expect the next filename, never a
+reason to trust it: read the page number off the top of the photograph as
+always.
 
 ## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
 
@@ -134,7 +139,12 @@ own สารบัญ (already in `CONTENTS`) and the photos are the verified m
   be read before touching this chant** — it decides both the title and the line
   division, and getting it wrong would reshape a chant to the wrong printing.
 - **dhatupatikula-paccavekkhana** — genuinely printed twice, at 61 and 207.
-  Decide which printing the entry represents, or whether it needs two.
+  **Decided 2026-08-14: two entries, one per printing.** Page 61 was read and is
+  Pali-only in four run-on paragraphs, where this entry has a Thai translation,
+  about thirty short verses and parenthesised rubrics — so it cannot be the
+  page-61 printing without the app showing text that page does not print. Page
+  61 went in as `dhatupatikula-paccavekkhana-p61`; **this entry keeps its id and
+  takes `page_start` 207**, which `IMG_0477` still has to confirm.
 
 ## Upgrade in place — never re-add
 

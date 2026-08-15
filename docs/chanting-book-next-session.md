@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-12 after page
-60 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-15 after pages
+61 to 65 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-12 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–60 are in and unbroken**, plus 217–221. **90 chants, 1,189 verses.**
+- **Pages 1–65 are in and unbroken**, plus 217–221. **94 chants, 1,264 verses.**
   `/chanting` derives that line itself, so it is never stale.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 55–60 were applied 2026-08-11 and 2026-08-12, one commit each; pages 51
-  to 54 landed over the two days before.
+- Pages 61–65 were applied 2026-08-14 and 2026-08-15; pages 55–60 landed
+  2026-08-11 and 2026-08-12, and 51 to 54 over the two days before that.
 
 ## How to work — this matters more than the tasks
 
@@ -29,35 +29,30 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 61, `IMG_0324`
+## Next: page 66, `IMG_0329`
 
-Page 61 is one of the map's **verified anchors** already, so the filename is
-known rather than expected. The rubric at the foot of page 60 says exactly what
-starts there: **ธาตุปะฏิกูละปัจจะเวกขะณะปาฐัง**, the reflection on the requisites
-as mere elements, beginning `ยะถาปัจจะยัง` with the room taking it up from
-`ปะวัตตะมานัง`. Expect the same shape page 60 had — a run-on passage in four
-movements, one per requisite, closing with a centred `นิฏฐิโต` colophon.
+Page 65's closing paragraph is **cut by the page turn** — it ends at
+`หลังจากเสร็จพิธีปรกติแล้ว` with no full stop, so page 66 opens by finishing
+that sentence. Expect the same shape pages 62–65 have had: explanatory prose
+around the chants rather than chant text alone.
 
-**Pages 59–60 are the service's hinge.** The ordination and novice material
-ends, and what follows is the daily sutta/paritta/paṭha cycle, one a day, in the
-order set out at the end of the regulations. Page 60's two reflections are the
-first of it.
+**Page 63 was the first page in the book with no chant on it at all** — the
+whole sheet is `คำอธิบายประกอบทำวัตรเย็น`, so its batch has an EMPTY manifest
+and everything on it is a block. `check_batch`, `apply_batch` and `check_pages`
+all handle that now; `check_pages` needed one fix to stop reporting such a page
+as unrecorded. More pages like it are coming.
 
-**A page can be mostly rubric.** Page 60 is one chant and three prose blocks:
-the tail of page 59's sentence, the rubric in, and the rubric out to page 61.
-Read the whole page before assuming the chant is all of it.
+**A block's `number` can be a Thai letter.** Page 63's sub-notes ก and ข go in
+as `'number': 'ก'`, and the template renders them exactly as printed. Do not
+convert them to digits.
 
-### The open decision: a prose chant with paragraphs
+### Settled since: a prose chant with paragraphs
 
-The book sets อะตีตะปัจจะเวกขะณะปาโฐ as **four indented run-on paragraphs**, one
-per requisite. `layout: 'prose'` would flow all twenty verses into ONE justified
-block and lose those breaks, so the key was left off, following page 58. The app
-therefore shows twenty lines where the book shows four paragraphs.
-
-Each paragraph does still begin its own line at `อัชชะ มะยา`, so the structure
-is visible — but **the app has no way to render a multi-paragraph prose chant as
-the book sets it.** Page 61 will almost certainly hit the same wall. It is a
-real gap and worth Josh's decision before more pages of this kind go in.
+The gap the last brief flagged is closed. `para_start` on a verse plus
+`verse_paragraphs` in `chanting.py` (commit `c3b38e6`) splits a prose chant into
+the paragraphs the BOOK sets it in. Page 61 used it second and renders four
+justified blocks; page 64's passage has no paragraph break at all and correctly
+renders as one group of 37.
 
 Pages 222 and 223 sit beside 217–221 which are already in, so they are a cheap
 excursion whenever wanted.
@@ -107,6 +102,40 @@ It knows one rule worth knowing yourself: a line cut by a page break belongs to
 the page it STARTS on, and the completed line must begin with the partial one.
 The `english` layer is exempt from that prefix test — the gloss of half a
 sentence is not the start of the gloss of the whole one.
+
+## Raised on pages 61–65 — all open, all need the book
+
+**The chant printed twice, and the app now holds it twice on purpose.**
+Dhātupaṭikūlapaccavekkhaṇa is printed at page 61 AND page 207 — the สารบัญ
+lists both. The pre-existing `dhatupatikula-paccavekkhana` has a Thai
+translation, ~30 short verses and parenthesised rubrics; page 61 has none of
+that, being Pali-only in four run-on paragraphs. Josh chose two entries, one per
+printing, on the condition the app shows exactly what each page shows. So page
+61 is `dhatupatikula-paccavekkhana-p61`, and the old entry takes `page_start`
+207 when that page is read. **`IMG_0477` (page 207) has still not been read**,
+so which printing the old entry came from is inference from its shape.
+
+**The same chant name is spelt three ways in three places.** `อุทิสสะ` in the
+book's own สารบัญ (so, in `CONTENTS`), `อุททิสสะ` on page 62's title and
+colophon, `อุททิสะ` in page 63's sub-note ก. All read at 5–7×, all reproduced,
+none reconciled. One look settles all three.
+
+**Page 64 verse 24 is the ฬ/พ hazard on a chanted line.** The page reads
+`โอพารกา` / `โอพาริเกนะ`; the canon has *oḷārikā* / *oḷārikena*, and the sense
+of the clause — beings who need something tangible, which is why the stūpa was
+allowed — favours the canon. The glyph was compared at 16× against a known พ on
+the same page and matched, but the photo map already records that this exact
+comparison cannot settle ฬ from พ. Reproduced as it appears. The first word also
+appears to lack the ิ the second has, so the book may be inconsistent too.
+
+**Vowels the book shortens where standard editions lengthen them.** Page 61
+verse 14 prints `นีชชีโว` with a long ี where its other three paragraphs print
+`นิชชีโว` — declared as a diacritic exception, since the book itself differs
+from itself. Page 62 prints `หินา` and `วิริยัมหินา` short where editions have
+*hīnā* and *vīriyamhinā*. All kept as printed.
+
+**Two chants on pages 64–65 have no colophon**, unlike pages 60, 61 and 62.
+Checked against both pages; the `closing` key is left off rather than composed.
 
 ## Four things waiting on Josh — ask, don't guess
 
