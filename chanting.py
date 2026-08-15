@@ -17373,6 +17373,406 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 37; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0329.PNG]: THE ฬ/พ HAZARD IN THE SECOND PROSE BLOCK,
+        #   AND THIS ONE WAS DECIDED FROM THE BOOK RATHER THAN THE GLYPH. The
+        #   list of four festival days ends with a word read at 8x whose
+        #   second consonant could not be told from พ — the same failure the
+        #   photo map records twice already. It is written here as อาสาฬหะ
+        #   with ฬ, NOT because the canon has Āsāḷha, but because THIS BOOK
+        #   spells the same word with ฬ in two places already: its own สารบัญ
+        #   lists คำถวายดอกไม้ ธูป เทียน ในวันอาสาฬหบูชา at page 75, and page
+        #   65's closing paragraph prints อาสาฬหบูชา. Choosing the book's own
+        #   spelling of its own word is a reading, not a correction — but it
+        #   is a judgement and it is flagged as one.
+        # ‼ CHECK [IMG_0329.PNG]: THIS PASSAGE OVERLAPS PAGE 64'S BUT IS NOT
+        #   THE SAME TEXT, AND THE DIFFERENCES ARE SMALL ENOUGH TO MATTER.
+        #   Both open with the same three units verbatim. From the fourth they
+        #   diverge: page 64 runs อะโหสิ โข โส ภะคะวา มัชฌิเมสุ ชะนะปะเทสุ
+        #   อะริยะเกสุ มะนุสเสสุ อุปปันโน as ONE unit with no internal commas,
+        #   where page 66 breaks the same words with commas after ภะคะวา,
+        #   มัชฌิเมสุ and ชะนะปะเทสุ — which is why this entry has short
+        #   verses 4 to 7 where page 64 has one long one. Page 64 also reads
+        #   สามาระเก with a long า where page 66 reads สะมาระเก short, and
+        #   page 64 continues into the narrative of the awakening where page
+        #   66 turns straight to the qualities of the Buddha. Entered as
+        #   printed on each page. Two of these — the comma pattern and
+        #   สามาระเก/สะมาระเก — are worth one look, because they are exactly
+        #   the kind of difference that is really one text misread twice.
+        # ‼ CHECK [IMG_0329.PNG]: THIS IS THE FIRST OF FOUR NEAR-IDENTICAL
+        #   CHANTS. The book's สารบัญ gives the same title for four festival
+        #   days — Visākha at 66, Aṭṭhamī at 68, Māgha at 71, Āsāḷha at 75 —
+        #   and this page's own second paragraph says they differ only in the
+        #   wording proper to each day. When 68, 71 and 75 are read they will
+        #   look like repeats and must NOT be stubbed as such: under the batch
+        #   rule a printing that differs at all is a separate chant, and the
+        #   whole point of these four is that they differ in exactly one
+        #   respect.
+        # ‼ CHECK [IMG_0329.PNG]: THE CHANT IS NOT FINISHED ON THIS PAGE. It
+        #   ends at ทักขิเณยโย, with a comma, and the standard formula
+        #   continues อัญชะลิกะระณีโย… — which is NOT written here, from
+        #   memory or otherwise. `continues` is set, no closing is written,
+        #   and page 67 carries the rest. The foot of the sheet below the last
+        #   line is clear white paper; a thumb is in the frame over the blank
+        #   lower-left margin and hides nothing.
+        # ‼ CHECK [IMG_0329.PNG]: The first prose block quotes two short Pali
+        #   formulas inside the Thai instruction — หันทะทานิ มะยัง ภันเต
+        #   คัจฉามะ, พะหุกิจจา มะยัง พะหุกะระณียา. and ยัสสะทานิ ตุมเห กาลัง
+        #   มัญญะถะ — both set in bold on the page. They are reproduced inside
+        #   the block exactly as printed rather than lifted out into a chant
+        #   of their own, since the book prints them as part of the
+        #   instruction. The second has NO full stop after it where the first
+        #   has one.
+        # ‼ CHECK [IMG_0329.PNG]: Two words are broken across line ends WITH
+        #   hyphens — สัมมา- / สัมพุทโธ at lines 6-7 and สามีจิปะ- / ฏิปันโน
+        #   at lines 11-12 — and both are rejoined with the hyphen dropped.
+        #   สัมมาสัมพุทโธ is printed unbroken in the same passage and
+        #   สามีจิปะฏิปันโน matches the three parallel สาวะกะสังโฆ clauses
+        #   around it, which confirms both joins. ปุริสะ- at the last line
+        #   breaks the same way into ปุริสะปุคคะลา.
+        # ‼ CHECK [IMG_0329.PNG]: The title is THAI, not Pali, so title_pali
+        #   is empty and title_roman carries the romanisation the book's own
+        #   contents already prints for this line — kam tà-wǎai dɔ̀ɔk-máai
+        #   tûup tiian nai wan wí-sǎa-kà-buu-chaa — rather than a fresh one,
+        #   so a reader meets one spelling in the contents and on the page.
+        'id': 'kham-tawai-dokmai-thup-thian-visakha',
+        'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันวิสาขบูชา',
+        'title_pali': '',
+        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan wí-sǎa-kà-buu-chaa',
+        'title_english': 'The Words for Offering Flowers, Incense and Candles on Visākha Pūjā Day',
+        'page_start': 66,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'ยะมัมหะ โข มะยัง ภะคะวันตัง สะระณัง คะตา,',
+                'pali_roman': 'Yamamha kho mayaṃ bhagavantaṃ saraṇaṃ gatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That Blessed One to whom we have gone for refuge,',
+            },
+            {
+                'number': 2,
+                'pali': 'โย โน ภะคะวา สัตถา,',
+                'pali_roman': 'Yo no bhagavā satthā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who is our Teacher, the Blessed One,',
+            },
+            {
+                'number': 3,
+                'pali': 'ยัสสะ จะ มะยัง ภะคะวะโต ธัมมัง โรเจมะ,',
+                'pali_roman': 'Yassa ca mayaṃ bhagavato dhammaṃ rocema,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and in whose Dhamma we delight —',
+            },
+            {
+                'number': 4,
+                'pali': 'อะโหสิ โข โส ภะคะวา,',
+                'pali_roman': 'Ahosi kho so bhagavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that Blessed One was born',
+            },
+            # ‼ CHECK [IMG_0329.PNG]: VERSES 5 AND 6 ARE ONE WORD EACH,
+            #   มัชฌิเมสุ, and ชะนะปะเทสุ,, because the book puts a comma
+            #   after each. Splitting on the printed punctuation is the rule
+            #   this workflow uses for a run-on passage, so they are kept as
+            #   separate units rather than joined into one reading 'in the
+            #   Middle Country'. Their English is therefore a half-phrase
+            #   apiece and reads oddly on its own — that is the split showing
+            #   through, not a translation error. Worth Josh's eye on whether
+            #   these commas are really the book's.
+            {
+                'number': 5,
+                'pali': 'มัชฌิเมสุ,',
+                'pali_roman': 'Majjhimesu,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in the Middle',
+            },
+            {
+                'number': 6,
+                'pali': 'ชะนะปะเทสุ,',
+                'pali_roman': 'Janapadesu,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Country,',
+            },
+            {
+                'number': 7,
+                'pali': 'อะริยะเกสุ มะนุสเสสุ อุปปันโน,',
+                'pali_roman': 'Ariyakesu manussesu uppanno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'among the Ariyan people,',
+            },
+            {
+                'number': 8,
+                'pali': 'ขัตติโย ชาติยา โคตะโม โคตเตนะ,',
+                'pali_roman': 'Khattiyo jātiyā gotamo gottena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'a khattiya by birth, a Gotama by clan,',
+            },
+            {
+                'number': 9,
+                'pali': 'สัก์ยะปุตโต สัก์ยะกุลา ปัพพะชิโต,',
+                'pali_roman': 'Sakyaputto sakyakulā pabbajito,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'a son of the Sakyans, gone forth from the Sakyan family,',
+            },
+            {
+                'number': 10,
+                'pali': 'สะเทวะเก โลเก สะมาระเก สะพ์รัห์มะเก,',
+                'pali_roman': 'Sadevake loke samārake sabrahmake,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in this world with its devas, its māras and its brahmās,',
+            },
+            {
+                'number': 11,
+                'pali': 'สัสสะมะณะพ์ราห์มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
+                'pali_roman': 'Sassamaṇabrāhmaṇiyā pajāya sadevamanussāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in this generation with its ascetics and brahmins, its rulers and its people,',
+            },
+            {
+                'number': 12,
+                'pali': 'อะนุตตะรัง สัมมาสัมโพธิง อะภิสัมพุทโธ,',
+                'pali_roman': 'Anuttaraṃ sammāsambodhiṃ abhisambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'awakened fully to the unsurpassed perfect enlightenment.',
+            },
+            {
+                'number': 13,
+                'pali': 'นิสสังสะยัง โข โส ภะคะวา,',
+                'pali_roman': 'Nissaṃsayaṃ kho so bhagavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Beyond doubt that Blessed One is',
+            },
+            {
+                'number': 14,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Arahaṃ sammāsambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy, fully enlightened by himself,',
+            },
+            {
+                'number': 15,
+                'pali': 'วิชชาจะระณะสัมปันโน,',
+                'pali_roman': 'Vijjācaraṇasampanno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'accomplished in knowledge and conduct,',
+            },
+            {
+                'number': 16,
+                'pali': 'สุคะโต,',
+                'pali_roman': 'Sugato,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'well gone,',
+            },
+            {
+                'number': 17,
+                'pali': 'โลกะวิทู,',
+                'pali_roman': 'Lokavidū,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'knower of worlds,',
+            },
+            {
+                'number': 18,
+                'pali': 'อะนุตตะโร ปุริสะทัมมะสาระถิ,',
+                'pali_roman': 'Anuttaro purisadammasārathi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'unsurpassed guide of those who are to be tamed,',
+            },
+            {
+                'number': 19,
+                'pali': 'สัตถา เทวะมะนุสสานัง,',
+                'pali_roman': 'Satthā devamanussānaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'teacher of devas and of human beings,',
+            },
+            {
+                'number': 20,
+                'pali': 'พุทโธ,',
+                'pali_roman': 'Buddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'awakened,',
+            },
+            {
+                'number': 21,
+                'pali': 'ภะคะวา.',
+                'pali_roman': 'Bhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'blessed.',
+            },
+            # ‼ CHECK [IMG_0329.PNG]: ส์วากขาโต AGAIN, AND THIS IS A FRESH
+            #   INSTANCE OF THE STANDING QUESTION. The app already holds this
+            #   one word three ways — plain สวากขาโต on page 1 and in the
+            #   page-1 นมัสการ, ส์วากขาโต from page 51, and ส๎วากขาโต
+            #   elsewhere — and two of the three must be wrong. Page 66 prints
+            #   it with the mark over the ส, read at good magnification, so it
+            #   is entered as ส์วากขาโต with U+0E4C, matching page 51 and the
+            #   whole 51-65 run. This page does not settle which of the two
+            #   marks the printer cuts; it only adds a fourth occurrence to
+            #   the same question. It is a chanted line, so it is worth doing
+            #   early.
+            {
+                'number': 22,
+                'pali': 'ส์วากขาโต โข ปะนะ เตนะ ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto kho pana tena bhagavatā dhammo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And well proclaimed by that Blessed One is the Dhamma,',
+            },
+            {
+                'number': 23,
+                'pali': 'สันทิฏฐิโก,',
+                'pali_roman': 'Sandiṭṭhiko,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'visible here and now,',
+            },
+            {
+                'number': 24,
+                'pali': 'อะกาลิโก,',
+                'pali_roman': 'Akāliko,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'not delayed in time,',
+            },
+            {
+                'number': 25,
+                'pali': 'เอหิปัสสิโก,',
+                'pali_roman': 'Ehipassiko,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'inviting one to come and see,',
+            },
+            {
+                'number': 26,
+                'pali': 'โอปะนะยิโก,',
+                'pali_roman': 'Opanayiko,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'leading onward,',
+            },
+            {
+                'number': 27,
+                'pali': 'ปัจจัตตัง เวทิตัพโพ วิญญูหิ.',
+                'pali_roman': 'Paccattaṃ veditabbo viññūhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to be known for themselves by the wise.',
+            },
+            {
+                'number': 28,
+                'pali': 'สุปะฏิปันโน โข ปะนัสสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno kho panassa bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "And well practised is that Blessed One's community of disciples,",
+            },
+            {
+                'number': 29,
+                'pali': 'อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ujupaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "straightly practised is the Blessed One's community of disciples,",
+            },
+            {
+                'number': 30,
+                'pali': 'ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ñāyapaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "rightly practised is the Blessed One's community of disciples,",
+            },
+            {
+                'number': 31,
+                'pali': 'สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Sāmīcipaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "properly practised is the Blessed One's community of disciples,",
+            },
+            {
+                'number': 32,
+                'pali': 'ยะทิทัง.',
+                'pali_roman': 'Yadidaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that is to say,',
+            },
+            {
+                'number': 33,
+                'pali': 'จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,',
+                'pali_roman': 'Cattāri purisayugāni aṭṭha purisapuggalā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the four pairs of persons, the eight kinds of individuals —',
+            },
+            {
+                'number': 34,
+                'pali': 'เอสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Esa bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "this is the Blessed One's community of disciples,",
+            },
+            {
+                'number': 35,
+                'pali': 'อาหุเนยโย,',
+                'pali_roman': 'Āhuneyyo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy of gifts,',
+            },
+            {
+                'number': 36,
+                'pali': 'ปาหุเนยโย,',
+                'pali_roman': 'Pāhuneyyo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy of hospitality,',
+            },
+            {
+                'number': 37,
+                'pali': 'ทักขิเณยโย,',
+                'pali_roman': 'Dakkhiṇeyyo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy of offerings,',
+            },
+        ],
+    },
 ]
 
 
@@ -19312,6 +19712,25 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'พระเถระผู้เป็นประธาน เริ่มแสดงพระธรรมเทศนากัณฑ์แรกในเรื่องเกี่ยวกับงานในวันมาฆบูชา วิสาขบูชา อัฏฐมีบูชา หรืออาสาฬหบูชา ตามอนุรูปแก่งาน จบแล้ว พระภิกษุสงฆ์ 4 รูป สวดคาถาธรรมบรรยายเนื่องในงานนั้นๆ แล้วสามเณรสวดอีกสำรับหนึ่งนับเป็นอันเสร็จพิธีปรกติเพียงเท่านี้ ต่อจากนี้ไป มีการแสดงพระธรรมเทศนาและสวดคาถาธรรมบรรยาย หรือพระสูตรต่างๆ แล้วแต่ประธานจะกำหนด เป็นการสลับผลัดกันไปจนตลอดสว่าง ในตอนนี้เป็นการกระทำปฏิบัติบูชาด้วยความสมัครใจ ผู้ที่มีศรัทธาปสาทะกล้าและมีกำลังกายดีก็อยู่ตลอดรุ่ง ที่มีศรัทธาอ่อน หรือมีกำลังกายอ่อนแอ ก็เลิกกลับที่ของตน หลังจากเสร็จพิธีปรกติแล้ว',
                 'english': 'The presiding elder begins the first discourse, on the subject of the occasion — Māgha Pūjā, Visākha Pūjā, Aṭṭhamī Pūjā or Āsāḷha Pūjā — as befits it. That done, four bhikkhus chant the expository verses belonging to that occasion, and then the novices chant another set, and with this the ordinary observance is complete. From this point on there is the giving of discourses and the chanting of expository verses, or of various suttas, as the presiding monk shall appoint, alternating in turn until daybreak. This part is the offering of practice, undertaken willingly: those of strong faith and good bodily strength stay until dawn, while those of weaker faith or weaker body return to their own quarters after the ordinary observance is done…',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 66 ────────────────────────────────────────────────────
+    # Written from batch-066-066.json.
+    {
+        'page': 66,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'ตอนเช้ามืดก่อนจะเลิกประชุม พระเถระผู้เป็นประธานนำทำวัตรเช้าและสวดมนต์ตามควรแก่อัธยาศัยและกาลเวลาแล้ว อุบาสกอุบาสิกาทำวัตรเช้าจบแล้ว อุบาสกอุบาสิกากล่าวคำอำลาพระพร้อมๆ กันว่า หันทะทานิ มะยัง ภันเต คัจฉามะ, พะหุกิจจา มะยัง พะหุกะระณียา. พระเถระกล่าวคำอนุญาตว่า ยัสสะทานิ ตุมเห กาลัง มัญญะถะ พระเถระลงจากธรรมาสน์สู่อาสนะแล้ว พร้อมด้วยพระภิกษุสามเณรทั้งหมด กราบพระรัตนตรัยด้วยเบญจางคประดิษฐ์ 3 หน แล้วสั่งเลิกประชุม เป็นอันเสร็จพิธีเพียงเท่านี้',
+                'english': "…In the small hours, before the assembly is dismissed, the presiding elder leads the morning devotions and such chanting as suits the disposition of those present and the hour. When the laymen and laywomen have completed the morning devotions, they speak the words of leave-taking together: Handadāni mayaṃ bhante gacchāma, bahukiccā mayaṃ bahukaraṇīyā — 'Now, venerable sir, we take our leave; we have many duties, many things to do.' The elder speaks the words of permission: Yassadāni tumhe kālaṃ maññatha — 'Do now as you think fit.' The elder comes down from the Dhamma seat to his place, and together with all the bhikkhus and novices bows to the Triple Gem with the fivefold prostration three times, and then dismisses the assembly. With this the observance is complete.",
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'ในการประกอบพิธีและระเบียบปฏิบัติต่างๆ ในวันพิเศษ 4 วันคือ วันมาฆะ วิสาขะ อัฏฐะมี และอาสาฬหะนี้นั้น คล้ายกัน ต่างแต่เปลี่ยนเรื่องและถ้อยคำสำนวน ให้ตรงกับความประสงค์ของวันนั้นๆ เท่านั้น ซึ่งมีระเบียบการโดยเฉพาะงานนั้นๆ อยู่โดยมากแล้ว',
+                'english': 'The conduct of the ceremony and the various observances on these four special days — Māgha, Visākha, Aṭṭhamī and Āsāḷha — are alike. They differ only in changing the subject and the wording to suit the purpose of the particular day, and for the most part each occasion has its own order already set out.',
                 'english_unverified': True,
             },
         ],
