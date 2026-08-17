@@ -25,6 +25,7 @@ import pytest
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'scripts'))
 
 from check_batch import (check_blocks, check_checks_are_readable,  # noqa: E402
+                         check_cut_lines,
                          check_depth, check_diacritics, check_layer_keys,
                          check_layers_not_invented, check_line_breaks_agree,
                          check_manifest, check_page_map, check_pages_ascend,
@@ -309,6 +310,61 @@ class TestTheNumbersTheBookPrints:
         b = batch([chant(verses=[verse(1), verse(2), verse(3)])])
 
         assert check_printed_numbers(b) == []
+
+
+class TestCutLines:
+    """A line the page break cut in half must find its other half.
+
+    All three of these were confirmed to pass silently before the check
+    existed — page 68 was written with a real `[…]` on its last verse and
+    nothing looked at it. The cost of getting one wrong is an ellipsis that
+    reaches a reader mid-chant with no record that anything is owed.
+    """
+
+    def test_a_well_formed_cut_line_passes(self):
+        b = batch([chant(verses=[verse(1, pali='สะเทวะเก โลเก […]',
+                                       pali_roman='Sadevake loke […]')])],
+                  status={'completed': [], 'continues': ['metta']})
+
+        assert check_cut_lines(b) == []
+
+    def test_one_chanted_layer_cut_and_the_other_not_is_caught(self):
+        """The two layers then disagree about where the page break fell."""
+        b = batch([chant(verses=[verse(1, pali='สะเทวะเก โลเก […]',
+                                       pali_roman='Sadevake loke')])],
+                  status={'completed': [], 'continues': ['metta']})
+
+        assert any('disagree about where the page break fell' in p
+                   for p in check_cut_lines(b))
+
+    def test_a_cut_line_whose_chant_is_not_continuing_is_caught(self):
+        """Nothing would ever be sent to complete it."""
+        b = batch([chant(verses=[verse(1, pali='สะเทวะเก […]',
+                                       pali_roman='Sadevake […]')])])
+
+        assert any('not in batch_status.continues' in p
+                   for p in check_cut_lines(b))
+
+    def test_a_cut_line_that_is_not_the_last_verse_is_caught(self):
+        """A page break can only cut the line the page stopped on."""
+        b = batch([chant(verses=[verse(1, pali='สะเทวะเก […]',
+                                       pali_roman='Sadevake […]'),
+                                 verse(2)])],
+                  status={'completed': [], 'continues': ['metta']})
+
+        assert any('is not the last verse' in p for p in check_cut_lines(b))
+
+    def test_english_may_be_cut_or_not_without_complaint(self):
+        """The gloss of half a sentence is not half the gloss of the whole."""
+        b = batch([chant(verses=[verse(1, pali='สะเทวะเก […]',
+                                       pali_roman='Sadevake […]',
+                                       english='in this world')])],
+                  status={'completed': [], 'continues': ['metta']})
+
+        assert check_cut_lines(b) == []
+
+    def test_an_ordinary_batch_with_no_cut_lines_passes(self):
+        assert check_cut_lines(batch()) == []
 
 
 class TestLineBreaksAgree:

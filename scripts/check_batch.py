@@ -49,6 +49,10 @@ tested against a case that is known to break it:
     the pair, with its reason, in `batch_status.diacritic_exceptions`.
   * A DATA-ONLY batch does not carry the commentary it is meant to defer.
   * Nothing has a raw newline inside a string value.
+  * A line the page break cut in half is well formed: both chanted layers agree
+    it was cut, the chant is listed as continuing, and the cut falls on the
+    last verse. Without this a `[…]` can be written that nothing will ever
+    complete, and the app keeps the ellipsis for good.
   * A `merge_only` entry — one that only hands stage 2 the header fields a
     chant already in the app is missing — brings something, and brings no
     verses. Every verse-walking check above skips it, because there are
@@ -70,6 +74,13 @@ REPO = pathlib.Path(__file__).resolve().parent.parent
 BATCHES = REPO / "prompts" / "chanting-book-batch" / "batches"
 
 LAYERS = ("pali", "pali_roman", "thai", "paiboon", "english")
+# The two layers that REPRODUCE the page rather than gloss it. Where a page
+# break cuts a line, these two must agree about it; `english` need not, because
+# the gloss of half a sentence is not half the gloss of the whole one.
+CHANTED_LAYERS = ("pali", "pali_roman")
+# What stage 1 writes where a page stops mid-line. `check_pages` spells it the
+# same way, and the two must not drift apart.
+CUT = "[…]"
 # Paiboon+ uses k, t, p and ŋ. None of these can legitimately appear.
 RTGS_TELLS = ("kh", "th", "ph", "ng")
 # Fields a DATA-ONLY batch defers to stage 3 rather than writing now.
@@ -531,6 +542,65 @@ def check_line_breaks_agree(batch: dict) -> list[str]:
     return problems
 
 
+def check_cut_lines(batch: dict) -> list[str]:
+    """A line the page break cut in half has to be able to find its other half.
+
+    Where a page stops mid-unit, stage 1 marks the partial line with `[…]` and
+    the next batch carries the SAME verse number with the line whole.
+    `apply_batch` replaces the verse and `check_pages` proves the completion
+    starts with the partial — but only if the partial is well formed, and until
+    now nothing checked that. All three failures below were confirmed to pass
+    silently before this existed.
+
+    Three ways it goes wrong, all invisible afterwards:
+
+    1. `pali` is cut and `pali_roman` is not, or the reverse. The two chanted
+       layers then disagree about where the page break fell, and `check_pages`
+       holds the uncut one to a prefix test it was never given the text for.
+    2. The chant is not listed in `batch_status.continues`. Nothing will ever
+       be sent to complete the line, and the app keeps a `[…]` for good — a
+       reader meets an ellipsis mid-chant and there is no record it is owed.
+    3. The cut verse is not the LAST of its chant. A page break can only fall
+       at the end of what was shown, so a `[…]` anywhere else is a marker left
+       in by hand rather than a real cut.
+
+    `english` is deliberately not held to rule 1. The gloss of half a sentence
+    is not half the gloss of the whole one — `check_pages` exempts it for the
+    same reason — so it may carry the marker or not.
+    """
+    problems = []
+    for chant in batch["chants"]:
+        verses = verses_of(chant)
+        last = verses[-1]["number"] if verses else None
+        continues = set(batch["batch_status"].get("continues", []))
+
+        for verse in verses:
+            n = verse.get("number")
+            cut = [layer for layer in CHANTED_LAYERS
+                   if verse.get(layer, "").rstrip().endswith(CUT)]
+            if not cut:
+                continue
+
+            uncut = [layer for layer in CHANTED_LAYERS
+                     if verse.get(layer) and layer not in cut]
+            if uncut:
+                problems.append(
+                    f"{chant['id']} verse {n}: {cut} end in {CUT} but {uncut} "
+                    f"do not — the two chanted layers disagree about where the "
+                    f"page break fell")
+            if chant["id"] not in continues:
+                problems.append(
+                    f"{chant['id']} verse {n}: ends in {CUT} but the chant is "
+                    f"not in batch_status.continues — nothing will be sent to "
+                    f"complete it and the app would keep the {CUT} for good")
+            if n != last:
+                problems.append(
+                    f"{chant['id']} verse {n}: ends in {CUT} but is not the "
+                    f"last verse ({last} is) — a page break can only cut the "
+                    f"line the page stopped on")
+    return problems
+
+
 def check_blocks(batch: dict) -> list[str]:
     """Page blocks carry what the app renders them from.
 
@@ -659,6 +729,7 @@ CHECKS = (
     ("diacritics", check_diacritics),
     ("depth", check_depth),
     ("line breaks agree", check_line_breaks_agree),
+    ("cut lines", check_cut_lines),
     ("page blocks", check_blocks),
     ("checks readable", check_checks_are_readable),
     ("corrections reviewable", check_corrections_are_reviewable),
