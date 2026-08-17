@@ -311,6 +311,18 @@ def _rate_limit_key():
 # would keep its own separate tally and the real limit would multiply. If this
 # ever scales beyond one worker, this needs a shared store — Postgres is already
 # available — so the assumption is written down rather than left implicit.
+# Tests drive the same endpoint hundreds of times in seconds, which is exactly
+# what these limits exist to stop. conftest.py sets DISABLE_RATE_LIMITS so the
+# suite is exempt.
+#
+# This MUST come before the Limiter is built. Limiter reads RATELIMIT_ENABLED
+# during construction and then keeps its own copy, so setting the config
+# afterwards is accepted and ignored — the config reads False while the limiter
+# carries on limiting. That cost an afternoon: a test failed because earlier
+# tests in the same file had used up a limit that was supposed to be off.
+if os.environ.get('DISABLE_RATE_LIMITS'):
+    app.config['RATELIMIT_ENABLED'] = False
+
 limiter = Limiter(
     key_func=_rate_limit_key,
     app=app,
@@ -318,10 +330,28 @@ limiter = Limiter(
     strategy="fixed-window",
 )
 
-# Tests drive the same endpoint hundreds of times in seconds, which is exactly
-# what these limits exist to stop. conftest.py sets this so the suite is exempt.
-if os.environ.get('DISABLE_RATE_LIMITS'):
-    app.config['RATELIMIT_ENABLED'] = False
+def _failed_attempt_only(response):
+    """Count a request against its limit only when the attempt failed.
+
+    Used on the sign-in routes. A successful login must not consume anyone's
+    allowance: this app's users are monks and expats who may well share one
+    monastery or guesthouse connection, and charging them for logging in
+    correctly would let ordinary use lock the whole building out. Brute force,
+    by definition, produces failures — so counting only failures targets the
+    attack without touching normal traffic.
+
+    Checks the body, not just the status: /developer-login answers a wrong
+    password with a 200 carrying success:false, so status alone would read every
+    failed guess as a success and never count it.
+
+    NOT used on /signup. There the abuse to stop is mass account creation, and
+    that succeeds every time — counting only failures would miss it entirely.
+    """
+    if response.status_code != 200:
+        return True
+    body = response.get_json(silent=True) or {}
+    return not body.get('success', False)
+
 
 @app.errorhandler(429)
 def _rate_limit_exceeded(e):
@@ -6526,6 +6556,10 @@ def instructions():
 
 
 @app.route('/login', methods=['GET', 'POST'])
+# Brute-force protection. POST only, so viewing the form is never limited, and
+# failures only, so a real learner signing in is never charged for it.
+@limiter.limit("10 per 15 minutes; 40 per hour", key_func=_rate_limit_key,
+               methods=["POST"], deduct_when=_failed_attempt_only)
 def login():
     """Real sign-in. GET shows the form; POST verifies the password.
 
@@ -6758,6 +6792,10 @@ def progress_dashboard():
                          new_achievements=new_achievements)
 
 @app.route('/developer-login', methods=['GET', 'POST'])
+# Tighter than the user login: this is a single-person door that grants a full
+# bypass of every gate, so there is no legitimate reason to fail at it often.
+@limiter.limit("5 per 15 minutes; 20 per hour", key_func=_rate_limit_key,
+               methods=["POST"], deduct_when=_failed_attempt_only)
 def developer_login():
     """Developer mode login.
 
@@ -6800,6 +6838,12 @@ def developer_logout():
 # ============================================
 
 @app.route('/signup', methods=['GET', 'POST'])
+# Counts EVERY attempt, unlike the sign-in routes: the abuse here is mass
+# account creation, which succeeds each time, so counting only failures would
+# never see it. Generous enough for a group signing up on one shared
+# connection, which is a realistic evening at a monastery.
+@limiter.limit("10 per hour; 30 per day", key_func=_rate_limit_key,
+               methods=["POST"])
 def signup():
     if request.method == 'GET':
         return render_template('signup.html')
