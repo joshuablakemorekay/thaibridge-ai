@@ -40,6 +40,7 @@ from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 import random
 import re
+import uuid
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
@@ -211,6 +212,63 @@ class User(UserMixin, db.Model):
             return 'free'
         return self.subscription_tier
 
+
+class AiUsage(db.Model):
+    """One row per AI request — the only record of what the AI costs and who uses it.
+
+    ai_agent returns token counts on every call and, until this existed, app.py
+    threw them away. That made four things unanswerable: the spend, the traffic,
+    whether people who hit the daily cap go on to subscribe, and how often calls
+    fail. It is also the one gap that cannot be filled in later — a month that
+    was not recorded is simply gone.
+
+    Two deliberate omissions:
+
+    The message text is NEVER stored. Not the question, not the answer. Nothing
+    here says what anyone asked, which matters most for the Dhamma mode: someone
+    asking about their own practice should not have it filed away.
+
+    The cost in pounds is not stored either. Tokens and the model name are, and
+    the money is worked out when the numbers are read. Prices change, and a cash
+    figure written into a row would freeze last year's price there forever —
+    the same reason the chanting book stores the printed page number and derives
+    the rest.
+    """
+    __tablename__ = 'ai_usage'
+
+    id            = db.Column(db.Integer, primary_key=True)
+    created_at    = db.Column(db.DateTime, default=datetime.utcnow,
+                              nullable=False, index=True)
+
+    # Who. user_id is null for signed-out visitors, which is most of them on a
+    # public demo; session_key still groups one visitor's messages together so
+    # "how many people" is answerable without knowing who they are.
+    user_id       = db.Column(db.Integer, db.ForeignKey('users.id'),
+                              nullable=True, index=True)
+    session_key   = db.Column(db.String(64), index=True)
+
+    # What was asked for.
+    feature       = db.Column(db.String(20), nullable=False)   # 'chat' | 'hint' | ...
+    mode          = db.Column(db.String(20))                   # 'tutor' | 'buddhist' | ...
+
+    # What it cost. model matters because prices differ per model, and the app
+    # runs a cheap one live and a better one locally.
+    model         = db.Column(db.String(64))
+    input_tokens  = db.Column(db.Integer, default=0, nullable=False)
+    output_tokens = db.Column(db.Integer, default=0, nullable=False)
+
+    # How it went. tier is recorded AS IT WAS at the time — a user who upgrades
+    # later must not rewrite the history of what they did on the free plan, which
+    # is exactly the question "do people who hit the cap subscribe?" depends on.
+    tier          = db.Column(db.String(20))
+    outcome       = db.Column(db.String(20), nullable=False)   # see OUTCOMES below
+    error_type    = db.Column(db.String(64))
+
+    # Blocked rows carry zero tokens on purpose: they cost nothing and are
+    # conversion data, not spend. Logging only successes would lose them.
+    OUTCOMES = ('ok', 'error', 'blocked_cap', 'blocked_mode')
+
+
 def _ensure_user_columns():
     """create_all() adds new TABLES but never new COLUMNS to a table that already
     exists, so add any missing ones by hand. Idempotent — each ALTER is skipped
@@ -238,19 +296,33 @@ def _ensure_user_columns():
         'alphabet_completed_at':  dt,
         'progress':               json_,
     }
-    existing = {c['name'] for c in inspect(db.engine).get_columns('users')}
+    _ensure_columns('users', wanted)
+
+
+def _ensure_columns(table_name, wanted):
+    """Add any missing columns to an existing table. Idempotent.
+
+    Split out from the users-specific version so a second table costs one small
+    function rather than a copy of this loop. Adding a nullable column is instant
+    on Postgres, and rows written before it existed simply read NULL — which is
+    the honest answer: we were not recording that yet.
+    """
+    from sqlalchemy import inspect, text
+    existing = {c['name'] for c in inspect(db.engine).get_columns(table_name)}
     added = False
     for name, ddl in wanted.items():
         if name not in existing:
-            db.session.execute(text(f'ALTER TABLE users ADD COLUMN {name} {ddl}'))
-            app.logger.info('Migrated: added users.%s column', name)
+            db.session.execute(
+                text(f'ALTER TABLE {table_name} ADD COLUMN {name} {ddl}'))
+            app.logger.info('Migrated: added %s.%s column', table_name, name)
             added = True
     if added:
         db.session.commit()
 
+
 with app.app_context():
-    db.create_all()
-    _ensure_user_columns()
+    db.create_all()          # creates whole tables, e.g. ai_usage on first run
+    _ensure_user_columns()   # backfills columns onto tables that already exist
 
 # ============================================
 # LOGIN MANAGER (Flask-Login)
@@ -704,6 +776,56 @@ def load_user_progress(user):
     session['user_progress']['user_id']  = user.id
     session['user_progress']['username'] = user.username
     session.modified = True
+
+def _visitor_session_id():
+    """A stable id for this browser's AI conversation, created once and kept.
+
+    Also what groups a signed-out visitor's usage rows together, so "how many
+    people used the tutor today" is answerable without knowing who they are.
+    """
+    session_id = session.get('session_id')
+    if not session_id:
+        session_id = 'session_' + uuid.uuid4().hex
+        session['session_id'] = session_id
+        session.modified = True
+    return session_id
+
+
+def log_ai_usage(feature, outcome, *, mode=None, model=None,
+                 input_tokens=0, output_tokens=0, error_type=None):
+    """Record one AI request. Never raises.
+
+    Deliberately called from the route rather than from inside ai_agent: the AI
+    layer has no business knowing there is a database, and keeping it out means
+    ai_agent stays testable on its own.
+
+    The try/except is the important part. This runs after a reply the user is
+    waiting for has already been generated and paid for — dropping the whole
+    response because a logging INSERT failed would turn a working, billed answer
+    into a 500. One lost row is the cheaper failure by a wide margin.
+    """
+    try:
+        db.session.add(AiUsage(
+            user_id=current_user.id if current_user.is_authenticated else None,
+            # Groups a signed-out visitor's messages without identifying them.
+            session_key=(session.get('session_id') or '')[:64] or None,
+            feature=feature,
+            mode=mode,
+            model=model,
+            input_tokens=input_tokens or 0,
+            output_tokens=output_tokens or 0,
+            # Recorded as it was AT THE TIME. Reading it back off the user later
+            # would rewrite history every time someone upgrades, and destroy the
+            # one question this column exists to answer.
+            tier=active_tier(),
+            outcome=outcome,
+            error_type=error_type,
+        ))
+        db.session.commit()
+    except Exception:
+        db.session.rollback()
+        app.logger.exception('Could not log AI usage')
+
 
 @app.after_request
 def _persist_user_progress(response):
@@ -7651,12 +7773,22 @@ def ai_chat():
         message = data.get('message', '')
         mode = data.get('mode', 'conversation')
         scenario = data.get('scenario') or None
-        session_id = session.get('session_id', 'session_' + str(datetime.now().timestamp()))
+        # Give this visitor a conversation id and KEEP it. Reading with a
+        # default and never storing it handed out a fresh id on every request,
+        # which quietly broke three things: ai_agent keys its conversation
+        # history on this, so the AI started from nothing every message and
+        # "conversation mode" was never a conversation; its history dict grew a
+        # dead entry per message; and /api/ai/clear had nothing to clear.
+        session_id = _visitor_session_id()
 
         # --- Freemium gate: Pro is unlimited; free & basic get a taste ---
         tier = active_tier()
         if tier != 'pro':
             if mode not in FREE_AI_ALLOWED_MODES:
+                # Logged even though it cost nothing: a blocked request is the
+                # conversion signal, not spend. Recording only successes would
+                # lose the answer to "do people who hit a wall subscribe?"
+                log_ai_usage('chat', 'blocked_mode', mode=mode)
                 return jsonify({
                     'success': False,
                     'gate': 'mode_locked',
@@ -7666,6 +7798,7 @@ def ai_chat():
                 })
             usage = _ai_usage_today()
             if usage['count'] >= FREE_AI_DAILY_LIMIT:
+                log_ai_usage('chat', 'blocked_cap', mode=mode)
                 return jsonify({
                     'success': False,
                     'gate': 'daily_limit',
@@ -7690,6 +7823,22 @@ def ai_chat():
             scenario=scenario
         )
 
+        # Record what it cost. ai_agent has returned these token counts all
+        # along and nothing read them, so the spend was invisible.
+        if isinstance(response, dict) and response.get('success'):
+            tokens = response.get('tokens_used') or {}
+            log_ai_usage('chat', 'ok', mode=mode, model=getattr(ai_agent, 'model', None),
+                         input_tokens=tokens.get('input', 0),
+                         output_tokens=tokens.get('output', 0))
+        else:
+            # The agent caught the failure itself and returned it, so no
+            # exception reaches the handler below — without this branch those
+            # failures would be missing from the record entirely.
+            log_ai_usage('chat', 'error', mode=mode,
+                         model=getattr(ai_agent, 'model', None),
+                         error_type=(response or {}).get('error_type')
+                                    if isinstance(response, dict) else 'bad_response')
+
         # Count this message against the daily taste for free & basic users,
         # and tell the UI how many they have left.
         if tier != 'pro' and isinstance(response, dict) and response.get('success'):
@@ -7703,6 +7852,7 @@ def ai_chat():
         
     except Exception as e:
         print(f"AI Chat Error: {e}")
+        log_ai_usage('chat', 'error', error_type=type(e).__name__)
         return jsonify({
             'error': 'API error occurred. Please check your API key and try again.'
         }), 500
@@ -7791,7 +7941,9 @@ def ai_clear():
         return jsonify({'error': 'AI not available'}), 503
     
     try:
-        session_id = session.get('session_id', 'session_default')
+        # Must be the SAME id the chat route used. This had its own default
+        # ('session_default'), so it cleared a conversation nobody was having.
+        session_id = _visitor_session_id()
         ai_agent.clear_conversation(session_id)
         return jsonify({'success': True, 'message': 'Conversation cleared'})
     except Exception as e:
