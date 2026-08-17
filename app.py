@@ -266,7 +266,7 @@ class AiUsage(db.Model):
 
     # Blocked rows carry zero tokens on purpose: they cost nothing and are
     # conversion data, not spend. Logging only successes would lose them.
-    OUTCOMES = ('ok', 'error', 'blocked_cap', 'blocked_mode')
+    OUTCOMES = ('ok', 'error', 'blocked_cap', 'blocked_mode', 'blocked_fairuse')
 
 
 def _ensure_user_columns():
@@ -580,6 +580,18 @@ SECTION_REQUIREMENTS = {
 FREE_AI_DAILY_LIMIT = 15                       # messages/day for free & basic tiers
 FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 
+# Pro is "unlimited" in the sense that matters to a learner, but not literally:
+# without a ceiling, one subscriber could run up more in API costs than they pay.
+# At 0.285p worst case per message (a full 500-token reply on top of the ~1,100
+# token system prompt), 150 a day is £12.84 a month against £19.99 of revenue —
+# still profitable even if someone maxes it out every single day of the month.
+#
+# The number is chosen to be invisible: ten times the free allowance, and roughly
+# three times what a genuinely heavy day of study looks like. Anyone who reaches
+# it is not studying, and the reply says so kindly and invites them to get in
+# touch rather than treating them as an abuser.
+PRO_FAIR_USE_DAILY = 150
+
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
     'free': {
@@ -619,7 +631,7 @@ SUBSCRIPTION_TIERS = {
         'price': 19.99,
         'features': [
             '✓ Everything in Buddhist Scholar',
-            '✓ Unlimited AI chat — every mode, no daily cap',
+            f'✓ Unlimited AI chat — every mode, fair use up to {PRO_FAIR_USE_DAILY}/day',
             '✓ AI conversation partner with roleplay scenarios',
             '✓ Culture AI Q&A',
             '✓ AI exercise generator',
@@ -789,6 +801,28 @@ def _visitor_session_id():
         session['session_id'] = session_id
         session.modified = True
     return session_id
+
+
+def _pro_messages_today():
+    """How many AI messages this Pro subscriber has actually had today.
+
+    Counted from ai_usage rather than the session, because a cookie counter is
+    exactly what a ceiling like this must not depend on: clearing cookies would
+    reset it, which would make the ceiling decorative. Only successful calls
+    count — nobody should lose allowance to a request that failed or was blocked.
+
+    Uses UTC midnight to match AiUsage.created_at, which is written with
+    datetime.utcnow. The free-tier counter uses local dates; mixing the two would
+    put the reset at a different hour for each tier.
+    """
+    if not current_user.is_authenticated:
+        return 0
+    start_of_day = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
+    return db.session.query(db.func.count(AiUsage.id)).filter(
+        AiUsage.user_id == current_user.id,
+        AiUsage.outcome == 'ok',
+        AiUsage.created_at >= start_of_day,
+    ).scalar() or 0
 
 
 def log_ai_usage(feature, outcome, *, mode=None, model=None,
@@ -7781,7 +7815,7 @@ def ai_chat():
         # dead entry per message; and /api/ai/clear had nothing to clear.
         session_id = _visitor_session_id()
 
-        # --- Freemium gate: Pro is unlimited; free & basic get a taste ---
+        # --- Freemium gate: free & basic get a taste, Pro a fair-use ceiling ---
         tier = active_tier()
         if tier != 'pro':
             if mode not in FREE_AI_ALLOWED_MODES:
@@ -7803,7 +7837,25 @@ def ai_chat():
                     'success': False,
                     'gate': 'daily_limit',
                     'message': f"You’ve used your {FREE_AI_DAILY_LIMIT} free AI messages "
-                               "for today. Upgrade to Pro for unlimited AI, or come back tomorrow.",
+                               "for today. Upgrade to Pro for a much higher "
+                               "daily allowance, or come back tomorrow.",
+                })
+
+        # Pro has no daily allowance to spend, but it does have a ceiling — see
+        # PRO_FAIR_USE_DAILY. Anonymous visitors are skipped: a Pro tier requires
+        # an account, so there is no reliable identity to count against, and the
+        # per-IP rate limit still applies to them.
+        elif current_user.is_authenticated:
+            if _pro_messages_today() >= PRO_FAIR_USE_DAILY:
+                log_ai_usage('chat', 'blocked_fairuse', mode=mode)
+                return jsonify({
+                    'success': False,
+                    'gate': 'fair_use',
+                    'message': f"You've reached today's fair-use limit of "
+                               f"{PRO_FAIR_USE_DAILY} AI messages. It resets at "
+                               "midnight. This is here to keep the AI affordable "
+                               "to run, not to interrupt your study — if you "
+                               "regularly need more, please get in touch.",
                 })
 
         # Get user context from session

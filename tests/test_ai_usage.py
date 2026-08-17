@@ -235,3 +235,109 @@ def test_two_visitors_get_different_session_ids(agent):
     send(app.test_client(), message="b")
     keys = {r.session_key for r in rows()}
     assert len(keys) == 2, "separate visitors must not share an id"
+
+
+# ---------------------------------------------------------------------------
+# The Pro fair-use ceiling
+# ---------------------------------------------------------------------------
+
+@pytest.fixture
+def pro_account():
+    """A signed-in Pro subscriber. Yields (client, user_id)."""
+    username = f"p{uuid.uuid4().hex[:10]}"
+    client = app.test_client()
+    client.post("/signup", json={"username": username, "email": f"{username}@example.com",
+                                 "password": PASSWORD, "confirm_password": PASSWORD})
+    with app.app_context():
+        user = User.query.filter_by(username=username).first()
+        user.subscription_tier = "pro"
+        user.subscription_status = "active"
+        db.session.commit()
+        user_id = user.id
+    try:
+        yield client, user_id
+    finally:
+        with app.app_context():
+            AiUsage.query.filter_by(user_id=user_id).delete()
+            u = db.session.get(User, user_id)
+            if u:
+                db.session.delete(u)
+            db.session.commit()
+
+
+def seed_usage(user_id, n, outcome="ok", days_ago=0):
+    """Put n rows straight into the table, bypassing the route."""
+    from datetime import datetime, timedelta
+    when = datetime.utcnow() - timedelta(days=days_ago)
+    with app.app_context():
+        for _ in range(n):
+            db.session.add(AiUsage(user_id=user_id, feature="chat", mode="tutor",
+                                   outcome=outcome, input_tokens=10, output_tokens=10,
+                                   created_at=when, tier="pro"))
+        db.session.commit()
+
+
+def test_a_pro_user_under_the_ceiling_gets_through(agent, pro_account):
+    client, user_id = pro_account
+    seed_usage(user_id, appmod.PRO_FAIR_USE_DAILY - 1)
+    assert send(client).get_json()["success"] is True
+
+
+def test_a_pro_user_at_the_ceiling_is_stopped(agent, pro_account):
+    client, user_id = pro_account
+    seed_usage(user_id, appmod.PRO_FAIR_USE_DAILY)
+    body = send(client).get_json()
+    assert body["success"] is False
+    assert body["gate"] == "fair_use"
+    assert agent.calls == 0, "a blocked request must never reach the model"
+
+
+def test_hitting_the_ceiling_is_recorded(agent, pro_account):
+    client, user_id = pro_account
+    seed_usage(user_id, appmod.PRO_FAIR_USE_DAILY)
+    send(client)
+    with app.app_context():
+        blocked = AiUsage.query.filter_by(user_id=user_id,
+                                          outcome="blocked_fairuse").count()
+    assert blocked == 1
+
+
+def test_only_successful_calls_count_towards_the_ceiling(agent, pro_account):
+    """Nobody should lose allowance to a request that failed or was blocked."""
+    client, user_id = pro_account
+    seed_usage(user_id, appmod.PRO_FAIR_USE_DAILY, outcome="error")
+    assert send(client).get_json()["success"] is True
+
+
+def test_yesterdays_messages_do_not_count(agent, pro_account):
+    """The ceiling is per day. Without the date filter it would be a lifetime
+    cap, and a long-standing subscriber would eventually be locked out for good."""
+    client, user_id = pro_account
+    seed_usage(user_id, appmod.PRO_FAIR_USE_DAILY, days_ago=1)
+    assert send(client).get_json()["success"] is True
+
+
+def test_another_users_messages_do_not_count(agent, pro_account):
+    client, user_id = pro_account
+    other = f"o{uuid.uuid4().hex[:10]}"
+    c2 = app.test_client()
+    c2.post("/signup", json={"username": other, "email": f"{other}@example.com",
+                             "password": PASSWORD, "confirm_password": PASSWORD})
+    with app.app_context():
+        other_id = User.query.filter_by(username=other).first().id
+    try:
+        seed_usage(other_id, appmod.PRO_FAIR_USE_DAILY)
+        assert send(client).get_json()["success"] is True
+    finally:
+        with app.app_context():
+            AiUsage.query.filter_by(user_id=other_id).delete()
+            u = db.session.get(User, other_id)
+            if u:
+                db.session.delete(u)
+            db.session.commit()
+
+
+def test_the_ceiling_is_far_above_the_free_allowance(agent):
+    """A sanity check on the number itself: if these ever converge, Pro has
+    stopped being worth paying for."""
+    assert appmod.PRO_FAIR_USE_DAILY >= appmod.FREE_AI_DAILY_LIMIT * 5
