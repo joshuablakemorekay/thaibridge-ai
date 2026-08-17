@@ -687,7 +687,7 @@
         // Free & Basic can only use the allowed mode(s); the rest are Pro-only.
         if (!AI_LIMITS.unlimited && !AI_LIMITS.allowed_modes.includes(mode)) {
             showUpgradeNote("🔒 That AI mode is a Pro feature. Upgrade to unlock "
-                + "Conversation, Culture, Dhamma and the Exercise Generator.");
+                + "Conversation, Culture and the Exercise Generator.");
             return;
         }
         // Leaving conversation mode ends any roleplay in progress.
@@ -948,16 +948,18 @@
 
     function initAiLimits() {
         if (AI_LIMITS.unlimited) return;
-        // Visually lock the Pro-only mode buttons and activate the allowed one.
+        // Visually lock the Pro-only mode buttons. Free & Basic have more than one
+        // mode now, so highlight the one we actually start in rather than all of
+        // them — otherwise every allowed button looks active at once.
         document.querySelectorAll('.mode-btn').forEach(btn => {
             const m = btn.getAttribute('data-mode');
-            if (AI_LIMITS.allowed_modes.includes(m)) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
+            btn.classList.remove('active');
+            if (!AI_LIMITS.allowed_modes.includes(m)) {
                 btn.classList.add('mode-locked');
             }
         });
+        const startBtn = document.querySelector(`[data-mode="${currentMode}"]`);
+        if (startBtn) startBtn.classList.add('active');
         updateLimitHint();
     }
 

@@ -317,15 +317,19 @@ SECTION_REQUIREMENTS = {
     'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100, 'requires_alphabet': True},
 }
 
-# Freemium AI limits. Free & Basic tiers get a "taste" of the AI: the Tutor mode
-# only, capped at a few messages per day. Pro unlocks every mode with no cap. The
-# daily counter lives in the SESSION (not the DB) on purpose — it needs no schema
-# change and also works for logged-out visitors. It's a soft limit (a determined
-# user could clear cookies to reset it), which is fine for a portfolio/demo app.
-# Defined here, above SUBSCRIPTION_TIERS, so the Free tier's feature list can
-# quote the real number instead of a hardcoded one that goes stale.
-FREE_AI_DAILY_LIMIT = 15            # messages/day for free & basic tiers
-FREE_AI_ALLOWED_MODES = {'tutor'}   # the only AI mode free & basic can use
+# Freemium AI limits. Free & Basic get the Tutor mode plus Dhamma, capped at a
+# few messages a day between them. Pro unlocks every mode with no cap. Dhamma is
+# free because the teachings on this site are free — charging for the follow-up
+# question would be selling the Dhamma, the same line we refused to cross when
+# Meditation went back to the free tier. The daily cap isn't a toll on the
+# teaching, it's the honest cost of running the model. The daily counter lives in
+# the SESSION (not the DB) on purpose — it needs no schema change and also works
+# for logged-out visitors. It's a soft limit (a determined user could clear
+# cookies to reset it), which is fine for a portfolio/demo app. Defined here,
+# above SUBSCRIPTION_TIERS, so the Free tier's feature list can quote the real
+# number instead of a hardcoded one that goes stale.
+FREE_AI_DAILY_LIMIT = 15                       # messages/day for free & basic tiers
+FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
@@ -338,7 +342,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Dhamma talks in Thai & English',
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Guided meditation sessions, timer & techniques',
-            f'✓ AI Tutor — {FREE_AI_DAILY_LIMIT} messages a day',
+            f'✓ AI Tutor & Dhamma Q&A — {FREE_AI_DAILY_LIMIT} messages a day',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
@@ -368,7 +372,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Everything in Buddhist Scholar',
             '✓ Unlimited AI chat — every mode, no daily cap',
             '✓ AI conversation partner with roleplay scenarios',
-            '✓ Culture & Dhamma AI Q&A',
+            '✓ Culture AI Q&A',
             '✓ AI exercise generator',
             '✓ Thai–English dictionary',
             '✓ 3x points multiplier',
@@ -7379,8 +7383,8 @@ def ai_chat():
                     'success': False,
                     'gate': 'mode_locked',
                     'message': "This AI mode is a Pro feature. Free and Basic plans "
-                               "include the Tutor mode — upgrade to Pro to unlock "
-                               "Conversation, Culture, Dhamma and the Exercise Generator.",
+                               "include the Tutor and Dhamma modes — upgrade to Pro to "
+                               "unlock Conversation, Culture and the Exercise Generator.",
                 })
             usage = _ai_usage_today()
             if usage['count'] >= FREE_AI_DAILY_LIMIT:
