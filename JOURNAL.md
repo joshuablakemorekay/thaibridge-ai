@@ -2060,15 +2060,16 @@ it doesn't print.
   Postgres, proved by registering, redeploying, and logging back in.
 - Freed the Dhamma AI mode — the line I'd already drawn for Meditation applied to
   the follow-up question too.
-- Six things looked fine while being wrong today. Only direct checks settled any
-  of them.
+- Eight things looked fine while being wrong today — including my own test
+  suite, which had been running against the live database the whole time.
 
 **What I built**
 
 Neon Postgres replaces a SQLite file that sat on Render's disk and was wiped on
 every deploy. Progress moved out of the browser cookie into a JSON column, so a
-level survives a new phone. Rate limits on the AI endpoints. Twelve tests,
-because none of this had any.
+level survives a new phone. Rate limits on the AI endpoints and on the sign-in
+forms. Developer mode now switches off when no password is configured instead of
+falling back to `changeme`. Twenty-seven tests, because none of this had any.
 
 **Why I did it this way**
 
@@ -2092,7 +2093,7 @@ Neon **is** Postgres. One job, not two.
 Cost first (~0.2–0.3p a message), then the spend cap, then Neon, then progress,
 then limits — each verified live before starting the next.
 
-Six things looked fine while being wrong. `.env` reported saved but was
+Eight things looked fine while being wrong. `.env` reported saved but was
 untouched; the timestamp proved it. `DATABASE_URL` was saved in Render and
 wasn't in the Environment tab. Render served two-hour-old code while reporting
 itself healthy and Live. A probe returned HTTP 400 thirteen times because it
@@ -2104,6 +2105,34 @@ for it, until:
 > "It says auto deploy on commit"
 
 It had been on the whole time. The push had simply missed a webhook.
+
+The last two only turned up at the end, while adding rate limits to the login
+form, and they are the worst of the set because they were **my own checks
+lying to me**.
+
+The test suite had been reading and writing the **live database**. The guard
+that was supposed to stop it deleted `DATABASE_URL` — and `app.py` calls
+`load_dotenv()` at import, which loaded the real one straight back. Ids 1 to 25
+of the production `users` table were spent on test runs. Nothing failed: a suite
+pointed at production passes exactly as happily as one pointed at SQLite, just
+five seconds slower. I had even "proved" the guard worked by running the suite
+with a deliberately broken connection string — it passed, and I read that as
+success. It passed because dotenv had quietly swapped my broken string for the
+real one.
+
+And the rate limits were never off during tests either. `Limiter` reads its
+enabled setting when it is *constructed* and keeps its own copy, so switching it
+off afterwards is accepted and ignored. The config said `False`; the limiter
+carried on limiting. It surfaced only when one limit got tight enough for a
+single test file to exhaust on its own.
+
+Both hid behind a check that asserted on something *next to* the truth — a
+config value beside the limiter, an environment variable that something else
+would overwrite. That is the sharper version of the day's lesson, and worth
+writing down properly: **a check placed next to the thing it means to test will
+pass for the wrong reason, and I will believe it.** The guards added afterwards
+assert on `limiter.enabled` and on the database URI the app is actually using,
+because those are the values that decide behaviour.
 
 **Engineering Contribution**
 
@@ -2126,12 +2155,27 @@ It had been on the whole time. The push had simply missed a webhook.
   invariant doesn't rest on "nothing ever writes them". Replaced `hash()`-derived
   test usernames with `uuid4` after a run died mid-test and the leftover row made
   working code look broken. Mutation-tested the new tests — broke each feature
-  deliberately and confirmed the right test failed.
+  deliberately and confirmed the right test failed. That is what caught the worst
+  test of the day: my check that the `changeme` fallback was gone read a module
+  constant, which is correct on any machine that has the password configured —
+  every machine except the one the check exists for. Putting the bug straight
+  back left it green. The credential logic became a small pure function so the
+  unset case could be tested at all.
+
+- *Sign-in limits, and who pays for them:* Login counts failed attempts only,
+  not successful ones. These users are monks and expats who may share a single
+  monastery or guesthouse connection, so charging them for signing in correctly
+  would let ordinary use lock out everyone behind that connection. Brute force
+  produces failures by definition. Signup is the deliberate exception and counts
+  every attempt, because mass account creation succeeds each time and counting
+  failures would never see it.
 
 - *Roughly how much was accepted as-is vs engineered on:* About half. The Neon
   connection change went in close to first draft. The progress work took three
   corrections that only came from reading the existing code, and the test module
   was reshaped twice — the first version shipped dead placeholder code, the
-  second proved flaky.
+  second proved flaky. The last stretch was almost entirely rework: the rate
+  limits themselves were straightforward, and everything after them was fixing
+  checks that had been passing for the wrong reason.
 
 ---
