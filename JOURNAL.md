@@ -2052,3 +2052,86 @@ it doesn't print.
   red result I'd have "fixed" five pages that were already correct.
 
 ---
+## 2026-08-17 — The database that was deleting itself
+
+**TL;DR**
+
+- The live site had been silently deleting every account it created. Now on Neon
+  Postgres, proved by registering, redeploying, and logging back in.
+- Freed the Dhamma AI mode — the line I'd already drawn for Meditation applied to
+  the follow-up question too.
+- Six things looked fine while being wrong today. Only direct checks settled any
+  of them.
+
+**What I built**
+
+Neon Postgres replaces a SQLite file that sat on Render's disk and was wiped on
+every deploy. Progress moved out of the browser cookie into a JSON column, so a
+level survives a new phone. Rate limits on the AI endpoints. Twelve tests,
+because none of this had any.
+
+**Why I did it this way**
+
+> "I offer dhamma education freely whilst monetising parts of the app as to make
+> a small profit. I need to act ethically and morally, especially in a Buddhist
+> sense - call me the Buddhist businessman."
+
+Dhamma mode was Pro-only, so a reader could reach the free Theravada teachings
+and then hit a paywall asking about them — the same line I refused to cross when
+Meditation went back to free. The daily cap stays: that is the cost of running
+the model, not a toll on the teaching.
+
+One question saved a wrong turn:
+
+> "Is the postgres migration necessary if I want to use Neon for the database"
+
+Neon **is** Postgres. One job, not two.
+
+**How We Did It**
+
+Cost first (~0.2–0.3p a message), then the spend cap, then Neon, then progress,
+then limits — each verified live before starting the next.
+
+Six things looked fine while being wrong. `.env` reported saved but was
+untouched; the timestamp proved it. `DATABASE_URL` was saved in Render and
+wasn't in the Environment tab. Render served two-hour-old code while reporting
+itself healthy and Live. A probe returned HTTP 400 thirteen times because it
+sent `username` where the route wanted `identifier` — a false negative, not a
+verdict. A working feature looked broken because the test harness kept only the
+first of two cookies. And I diagnosed auto-deploy as broken and committed a fix
+for it, until:
+
+> "It says auto deploy on commit"
+
+It had been on the whole time. The push had simply missed a webhook.
+
+**Engineering Contribution**
+
+- *Decisions made:* One JSON column for progress rather than twenty-two real
+  ones — none of it is queried, only ever read back whole for one user, and a
+  column per field means a schema change per new counter. Rate limits keyed on
+  `CF-Connecting-IP`, not `remote_addr`: Render serves through Cloudflare, so
+  `remote_addr` is a proxy, and limiting on it would give every visitor on earth
+  one shared quota — taking the site down rather than protecting it. Fixed the
+  existing `_ensure_user_columns` instead of adopting Flask-Migrate; Alembic is
+  the better long-term answer, but learning a new tool while changing databases
+  is two risks, not one. Kept SQLite as the local fallback so development works
+  offline and the suite stays fast.
+
+- *Improvements made to generated code:* Login now lets the database win —
+  `init_user_progress()` only fills gaps, so a leftover anonymous cookie would
+  have beaten a real saved level. Excluded `is_developer` from the saved blob: a
+  privileged flag should be re-earned with the password, not restored from
+  storage. Filtered the authoritative keys on load as well as save, so the
+  invariant doesn't rest on "nothing ever writes them". Replaced `hash()`-derived
+  test usernames with `uuid4` after a run died mid-test and the leftover row made
+  working code look broken. Mutation-tested the new tests — broke each feature
+  deliberately and confirmed the right test failed.
+
+- *Roughly how much was accepted as-is vs engineered on:* About half. The Neon
+  connection change went in close to first draft. The progress work took three
+  corrections that only came from reading the existing code, and the test module
+  was reshaped twice — the first version shipped dead placeholder code, the
+  second proved flaky.
+
+---
