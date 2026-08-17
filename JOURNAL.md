@@ -2060,8 +2060,9 @@ it doesn't print.
   Postgres, proved by registering, redeploying, and logging back in.
 - Freed the Dhamma AI mode — the line I'd already drawn for Meditation applied to
   the follow-up question too.
-- Eight things looked fine while being wrong today — including my own test
-  suite, which had been running against the live database the whole time.
+- Nine things looked fine while being wrong today — including my own test suite,
+  which had been running against the live database, and an AI that had never
+  remembered a single previous message.
 
 **What I built**
 
@@ -2069,7 +2070,10 @@ Neon Postgres replaces a SQLite file that sat on Render's disk and was wiped on
 every deploy. Progress moved out of the browser cookie into a JSON column, so a
 level survives a new phone. Rate limits on the AI endpoints and on the sign-in
 forms. Developer mode now switches off when no password is configured instead of
-falling back to `changeme`. Twenty-seven tests, because none of this had any.
+falling back to `changeme`. An `ai_usage` table that records every AI request, so
+what the thing costs and how many people use it are answerable at all. A fair-use
+ceiling of 150 messages a day on Pro, which was literally uncapped. Forty-six
+tests, because none of this had any.
 
 **Why I did it this way**
 
@@ -2126,7 +2130,21 @@ off afterwards is accepted and ignored. The config said `False`; the limiter
 carried on limiting. It surfaced only when one limit got tight enough for a
 single test file to exhaust on its own.
 
-Both hid behind a check that asserted on something *next to* the truth — a
+The ninth turned up last, and it had been true the whole time the chat has been
+live. `session['session_id']` was **never set anywhere**. It was read with a
+default, so every request minted a new one — and `ai_agent` keys its conversation
+history on that value. The AI began from nothing on every single message.
+"Conversation mode" was never a conversation. Its history dictionary also grew a
+dead entry per message, and `/api/ai/clear` used a *different* default again, so
+it cleared something nobody had.
+
+Nothing would ever have reported that. Every reply reads perfectly sensibly on
+its own; the fault is only visible across two messages, and no test asked. It
+surfaced because a completely different feature — counting how many people use
+the tutor — needed that id to hold still. **The bug was not hiding. It just had
+nothing pointed at it.**
+
+Both of the earlier two hid behind a check that asserted on something *next to* the truth — a
 config value beside the limiter, an environment variable that something else
 would overwrite. That is the sharper version of the day's lesson, and worth
 writing down properly: **a check placed next to the thing it means to test will
@@ -2169,6 +2187,26 @@ because those are the values that decide behaviour.
   produces failures by definition. Signup is the deliberate exception and counts
   every attempt, because mass account creation succeeds each time and counting
   failures would never see it.
+
+- *What the usage table stores, and what it refuses to:* Tokens and the model
+  name, never a cash figure — prices move, and a number in pounds written into a
+  row would freeze last year's price there forever. The money is worked out when
+  the numbers are read. It also never stores the message or the reply: nothing in
+  that table says what anyone asked, which matters most for the Dhamma mode,
+  where someone asking about their own practice should not have it filed away.
+  Blocked requests are logged too, with zero tokens. They cost nothing, but they
+  are the entire answer to "do people who hit a wall subscribe?", and recording
+  only successes would have quietly thrown that away.
+
+- *Setting the Pro ceiling from a measurement instead of a guess:* Pro was
+  literally uncapped. The number came from the row the new table had just logged
+  — about 1,100 input tokens of system prompt against a 500-token reply cap, so
+  0.285p at worst. That makes 150 a day £12.84 against £19.99 of revenue: still
+  profitable if someone maxes it every day, and ten times the free allowance, so
+  no one studying will ever meet it. Counted from the table rather than the
+  session, because a cookie counter is exactly what a ceiling must not rest on.
+  And the Pro plan had been advertising "no daily cap", so the copy changed too —
+  a limit nobody will reach is still a limit.
 
 - *Roughly how much was accepted as-is vs engineered on:* About half. The Neon
   connection change went in close to first draft. The progress work took three
