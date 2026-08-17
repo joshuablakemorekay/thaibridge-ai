@@ -158,6 +158,43 @@ earlier moment. Worth knowing about before the day you need it.
 
 ---
 
+## "I wiped the database, but a new account still has my old XP"
+
+Not a fault, and worth knowing before it alarms you — it did once.
+
+A brand-new account **inherits whatever progress the browser is carrying**, so
+that someone who tries the alphabet quiz and then registers does not lose their
+XP. Wipe the users table, sign up again in the same browser, and your old level
+reappears on a genuinely new row. It looks exactly like a wipe that failed.
+
+**How to tell the difference in five seconds:**
+
+```sql
+SELECT id, created_at, progress->>'xp' AS xp, progress->>'last_login' AS earned
+FROM users;
+```
+
+If `created_at` is minutes ago but `earned` is days old, the row is new and the
+progress came from the browser. A wipe that had truly failed would show the
+original `created_at` and a high `id`.
+
+Since 2026-08-17 this only applies to progress **less than 12 hours old**
+(`ANONYMOUS_PROGRESS_MAX_AGE` in `app.py`), so an old cookie can no longer do
+this. The same limit stops one person's anonymous XP landing on the next
+person's account on a shared machine.
+
+**For a genuinely clean start**, clearing the table is not enough — the browser
+has a copy:
+
+```sql
+UPDATE users SET progress = NULL WHERE username = 'you';
+```
+
+then **log out** on the site (that discards the session's copy) and log back in.
+Skipping the logout means the browser simply saves its version back.
+
+---
+
 ## When something looks wrong
 
 Work outwards, cheapest check first:

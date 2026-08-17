@@ -2072,7 +2072,9 @@ level survives a new phone. Rate limits on the AI endpoints and on the sign-in
 forms. Developer mode now switches off when no password is configured instead of
 falling back to `changeme`. An `ai_usage` table that records every AI request, so
 what the thing costs and how many people use it are answerable at all. A fair-use
-ceiling of 150 messages a day on Pro, which was literally uncapped. Forty-six
+ceiling of 150 messages a day on Pro, which was literally uncapped. A runbook
+for operating the database, because the README is for reviewers and the journal
+is history and neither says how to check what the app is doing right now. Fifty
 tests, because none of this had any.
 
 **Why I did it this way**
@@ -2144,6 +2146,27 @@ surfaced because a completely different feature — counting how many people use
 the tutor — needed that id to hold still. **The bug was not hiding. It just had
 nothing pointed at it.**
 
+One more went the other way, and it is the reason the day ended well. After the
+database was wiped I created my account again and the old 145 XP came straight
+back. That looks precisely like a wipe that failed, so I said so:
+
+> "it's dodgy"
+
+It wasn't. The progress blob on a row created at 21:16 contained
+`last_login: 2026-08-15`, two days before the account existed — so it could only
+have come from my browser, not the database. A new account deliberately adopts
+whatever XP the browser is carrying, so that trying the alphabet quiz before
+registering doesn't cost you anything.
+
+Right behaviour, no limit on it. A cookie of any age could resurrect itself onto
+a fresh account — and on a shared monastery or library machine that means one
+person's progress landing on the next person's account. Bounded to 12 hours now.
+
+**Everything else today looked fine while being wrong. This one looked wrong
+while being fine**, and it still needed the data to tell the two apart. Being
+suspicious of a correct thing found a real bug that being satisfied would not
+have.
+
 Both of the earlier two hid behind a check that asserted on something *next to* the truth — a
 config value beside the limiter, an environment variable that something else
 would overwrite. That is the sharper version of the day's lesson, and worth
@@ -2207,6 +2230,23 @@ because those are the values that decide behaviour.
   session, because a cookie counter is exactly what a ceiling must not rest on.
   And the Pro plan had been advertising "no daily cap", so the copy changed too —
   a limit nobody will reach is still a limit.
+
+- *Bounding a behaviour rather than removing it:* The tempting fix for the XP
+  that came back was to stop new accounts inheriting anonymous progress at all.
+  That would have thrown away the reason it exists — someone who tries the quiz
+  and then registers should not be punished for registering. The fix is a limit,
+  not a deletion: 12 hours, measured from a timestamp the session already
+  carried and never updates, so it costs nothing to read. Anything undateable
+  counts as stale, because inheriting progress of unknown age is the outcome
+  worth avoiding.
+
+- *A mutation that did not fail, reported anyway:* the check is written
+  `if not user.progress and _anonymous_progress_is_stale()`. Removing the first
+  half broke no test — for a returning user the saved progress is loaded over
+  the top regardless, so the condition is currently doing nothing. It stays as a
+  statement of intent, and would start mattering if that load ever became a
+  merge. Worth writing down that it is not load-bearing rather than leaving a
+  future reader to assume it is.
 
 - *Roughly how much was accepted as-is vs engineered on:* About half. The Neon
   connection change went in close to first draft. The progress work took three
