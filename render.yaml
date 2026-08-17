@@ -20,6 +20,18 @@ services:
       - key: FLASK_SECRET_KEY
         generateValue: true
 
+      # Neon Postgres connection string. sync:false means the VALUE is set in the
+      # Render dashboard and preserved across deploys — declaring it here is what
+      # stops the Blueprint re-sync from wiping it.
+      # ⚠️ This one is load-bearing: if it is ever unset, app.py falls back to a
+      # SQLite file on Render's ephemeral disk, which is wiped on every deploy —
+      # so accounts and subscriptions would start silently disappearing again,
+      # with no error to notice. Use the POOLED connection string (the host with
+      # '-pooler' in it); Neon suspends idle compute and the pooler handles the
+      # reconnection. Left unset locally on purpose, so dev uses SQLite.
+      - key: DATABASE_URL
+        sync: false
+
       # Your Anthropic API key — NOT stored in this file. Render asks you for it
       # once when you create the Blueprint, then keeps it securely.
       - key: ANTHROPIC_API_KEY

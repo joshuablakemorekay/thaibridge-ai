@@ -105,16 +105,43 @@ def _paypal_access_token():
 # DATABASE CONFIGURATION
 # ============================================
 
-# The database lives in an 'instance' folder next to this file. SQLite can
-# create the .db file, but NOT the folder it sits in — so we make sure the
-# folder exists first. Without this, running from a fresh copy of the project
-# fails with "unable to open database file".
+# Postgres (Neon) in production, SQLite on a laptop — chosen by DATABASE_URL.
+#
+# Why it is not simply SQLite any more: Render's filesystem is ephemeral, so a
+# .db file living there is wiped on every deploy and every wake-from-idle,
+# taking every account and subscription record with it. Nothing errors; the
+# data is just gone next time. DATABASE_URL points the live site at Neon, which
+# persists. With no DATABASE_URL set — a laptop, or the test suite — we fall
+# back to the local file, so development works offline and tests stay fast.
+#
+# The 'instance' folder is still needed for that fallback: SQLite can create
+# the .db file, but NOT the folder it sits in, so we make sure it exists first.
+# Without this, running from a fresh copy of the project fails with
+# "unable to open database file".
 db_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'instance')
 os.makedirs(db_dir, exist_ok=True)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(
-    db_dir, 'thai_app.db'
-)
+database_url = os.environ.get('DATABASE_URL')
+if database_url:
+    # SQLAlchemy 2.x removed support for the older 'postgres://' scheme that
+    # some hosts still hand out. Neon gives the correct one, but rewriting it
+    # costs nothing and saves a baffling error if the provider ever changes.
+    if database_url.startswith('postgres://'):
+        database_url = database_url.replace('postgres://', 'postgresql://', 1)
+    app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+    # Neon suspends its compute when idle, which quietly drops pooled
+    # connections. Without pre-ping, the first request after a quiet spell dies
+    # with "server closed the connection unexpectedly" — pre-ping tests a
+    # connection before handing it to a request, and reconnects if it is dead.
+    app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {
+        'pool_pre_ping': True,
+        'pool_recycle': 300,
+    }
+else:
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(
+        db_dir, 'thai_app.db'
+    )
+
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -174,17 +201,26 @@ def _ensure_user_columns():
     """create_all() adds new TABLES but never new COLUMNS to a table that already
     exists, so add any missing ones by hand. Idempotent — each ALTER is skipped
     once its column is present — so this keeps an older database (local or live)
-    in step with the current User model."""
+    in step with the current User model.
+
+    The column types are picked per dialect because this is raw DDL, and raw DDL
+    is not portable: Postgres has no DATETIME type (it is TIMESTAMP), and a
+    Postgres boolean rejects a DEFAULT of 0 (it must be FALSE). SQLite is happy
+    with either spelling, so the Postgres-correct choice is the safe one to make
+    conditional rather than the other way round."""
     from sqlalchemy import inspect, text
+    is_pg = db.engine.dialect.name == 'postgresql'
+    dt    = 'TIMESTAMP' if is_pg else 'DATETIME'
+    false = 'FALSE'     if is_pg else '0'
     wanted = {
         'subscription_tier':      "VARCHAR(20) NOT NULL DEFAULT 'free'",
         'subscription_status':    "VARCHAR(20) NOT NULL DEFAULT 'inactive'",
         'stripe_customer_id':     "VARCHAR(64)",
         'stripe_subscription_id': "VARCHAR(64)",
-        'current_period_end':     "DATETIME",
-        'full_unlock':            "BOOLEAN NOT NULL DEFAULT 0",
-        'alphabet_completed':     "BOOLEAN NOT NULL DEFAULT 0",
-        'alphabet_completed_at':  "DATETIME",
+        'current_period_end':     dt,
+        'full_unlock':            f"BOOLEAN NOT NULL DEFAULT {false}",
+        'alphabet_completed':     f"BOOLEAN NOT NULL DEFAULT {false}",
+        'alphabet_completed_at':  dt,
     }
     existing = {c['name'] for c in inspect(db.engine).get_columns('users')}
     added = False
