@@ -36,6 +36,8 @@ from flask_login import (
     login_required, current_user,
 )
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 import random
 import re
 from datetime import datetime, timedelta
@@ -264,6 +266,68 @@ login_manager.login_message = "Please log in to continue."
 def load_user(user_id):
     """Given the id stored in the session, return the matching User (or None)."""
     return db.session.get(User, int(user_id))
+
+# ============================================
+# RATE LIMITING (protects the AI spend)
+# ============================================
+
+# The daily AI cap counts per SESSION, which is a cookie — so it only slows down
+# a person, not a script. Anything that ignores cookies gets a fresh allowance on
+# every request, which means the AI endpoints have no floor under them at all.
+# These limits are that floor. They are deliberately generous: high enough that
+# no real learner will ever notice, low enough that an automated caller cannot
+# empty the API credits before anyone spots it.
+
+def _rate_limit_key():
+    """Identify the visitor for rate limiting.
+
+    request.remote_addr is useless here: Render serves through Cloudflare, so
+    every request arrives wearing a proxy's address. Limiting on that would hand
+    all visitors on earth ONE shared quota — the first person to hit the limit
+    would lock out everybody, which is worse than having no limit.
+
+    Cloudflare sets CF-Connecting-IP to the real client address no matter how
+    many proxies are in the chain, so we prefer it and never have to guess the
+    hop count (Render's own edge, plus Cloudflare again when a custom domain is
+    proxied). X-Forwarded-For's first entry is the fallback, and remote_addr the
+    last resort for local development, where there is no proxy at all.
+    """
+    cf = request.headers.get('CF-Connecting-IP')
+    if cf:
+        return cf.strip()
+    forwarded = request.headers.get('X-Forwarded-For')
+    if forwarded:
+        return forwarded.split(',')[0].strip()
+    return get_remote_address()
+
+# In-memory storage is sound here specifically because Render runs this on a
+# single worker (the deploy log sets WEB_CONCURRENCY=1). With more workers each
+# would keep its own separate tally and the real limit would multiply. If this
+# ever scales beyond one worker, this needs a shared store — Postgres is already
+# available — so the assumption is written down rather than left implicit.
+limiter = Limiter(
+    key_func=_rate_limit_key,
+    app=app,
+    storage_uri="memory://",
+    strategy="fixed-window",
+)
+
+# Tests drive the same endpoint hundreds of times in seconds, which is exactly
+# what these limits exist to stop. conftest.py sets this so the suite is exempt.
+if os.environ.get('DISABLE_RATE_LIMITS'):
+    app.config['RATELIMIT_ENABLED'] = False
+
+@app.errorhandler(429)
+def _rate_limit_exceeded(e):
+    """The AI routes speak JSON, so a limit hit must answer in JSON too —
+    otherwise the browser gets Flask's HTML error page and the chat window
+    fails with an unhelpful parse error instead of a readable message."""
+    return jsonify({
+        'success': False,
+        'gate': 'rate_limited',
+        'message': "That's a lot of requests in a short time. "
+                   "Please wait a minute and try again.",
+    }), 429
 
 # ============================================
 # AI AGENT INTEGRATION
@@ -7481,6 +7545,10 @@ def chat():
                            roleplay_scenarios=ROLEPLAY_SCENARIOS)
 
 @app.route('/api/ai/chat', methods=['POST'])
+# ~30 messages an hour is far more than a learner types and far less than a
+# script manages in a second. The per-session daily cap still does the real
+# product work; this only stops something that ignores cookies entirely.
+@limiter.limit("30 per hour; 200 per day", key_func=_rate_limit_key)
 def ai_chat():
     """Send message to AI and get response"""
     if not ai_agent:
@@ -7550,6 +7618,7 @@ def ai_chat():
         }), 500
 
 @app.route('/api/ai/hint', methods=['POST'])
+@limiter.limit("30 per hour; 200 per day", key_func=_rate_limit_key)
 def ai_hint():
     """Get a progressive hint for a quiz question"""
     if not ai_agent:
@@ -7572,6 +7641,7 @@ def ai_hint():
         return jsonify({'error': str(e)}), 500
 
 @app.route('/api/ai/explain', methods=['POST'])
+@limiter.limit("30 per hour; 200 per day", key_func=_rate_limit_key)
 def ai_explain():
     """Explain why an answer is correct/incorrect"""
     if not ai_agent:
@@ -7594,6 +7664,10 @@ def ai_explain():
         return jsonify({'error': str(e)}), 500
 
 @app.route('/api/ai/generate', methods=['POST'])
+# Tighter than the rest on purpose: the exercise generator runs to 3,000 output
+# tokens, roughly six times a chat reply, making it the most expensive call in
+# the app by some distance.
+@limiter.limit("10 per hour; 40 per day", key_func=_rate_limit_key)
 def ai_generate():
     """Generate custom content (quizzes, flashcards, etc.)"""
     if not ai_agent:

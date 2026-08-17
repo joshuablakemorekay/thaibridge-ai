@@ -18,3 +18,9 @@ import os
 
 # Pop, not set-to-empty: app.py treats any truthy value as "use Postgres".
 os.environ.pop('DATABASE_URL', None)
+
+# Turn off rate limiting for the suite. The tests hammer the same endpoints
+# hundreds of times in a few seconds, which is precisely the traffic the limits
+# exist to block — without this they would start failing with 429s that say
+# nothing about whether the code is correct.
+os.environ['DISABLE_RATE_LIMITS'] = '1'
