@@ -762,6 +762,32 @@ def save_user_progress():
                              if k not in _PROGRESS_NOT_SAVED}
     db.session.commit()
 
+# How long anonymous progress stays adoptable. Someone who tries the alphabet
+# quiz in the morning and signs up that evening keeps their XP; a cookie from
+# yesterday is treated as belonging to a different visit — which on a shared
+# monastery or library machine may well mean a different person.
+ANONYMOUS_PROGRESS_MAX_AGE = timedelta(hours=12)
+
+
+def _anonymous_progress_is_stale():
+    """True when the progress in this session is too old to belong to this visit.
+
+    last_login is written once when a session's progress is created and never
+    updated anywhere, which makes it an accurate "when did this browser start
+    earning" stamp. Anything unreadable or missing counts as stale: inheriting
+    progress of unknown age is the outcome worth avoiding.
+    """
+    progress = session.get('user_progress') or {}
+    started = progress.get('last_login')
+    if not started:
+        return True
+    try:
+        age = datetime.now() - datetime.fromisoformat(started)
+    except (TypeError, ValueError):
+        return True
+    return age > ANONYMOUS_PROGRESS_MAX_AGE
+
+
 def load_user_progress(user):
     """Seed the session from the database when a user logs in.
 
@@ -774,6 +800,14 @@ def load_user_progress(user):
     A user with no saved progress yet (their first login since this shipped)
     keeps the session they have, which is then written on the way out.
     """
+    # A brand-new account inherits whatever this browser was carrying — that is
+    # how trying the quiz before registering keeps its XP. But only from THIS
+    # visit. Without the age check a two-day-old cookie resurrects itself onto a
+    # fresh account, which looks exactly like a database that failed to clear,
+    # and on a shared computer hands one person another's progress.
+    if not user.progress and _anonymous_progress_is_stale():
+        session.pop('user_progress', None)
+
     init_user_progress()
     if user.progress:
         # Filtered on the way in as well as on the way out. Nothing should ever

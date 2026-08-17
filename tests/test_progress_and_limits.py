@@ -155,6 +155,91 @@ def test_a_poisoned_blob_cannot_grant_a_paid_tier(account):
         assert row.full_unlock is False
 
 
+# ---------------------------------------------------------------------------
+# Which anonymous progress a new account is allowed to inherit
+# ---------------------------------------------------------------------------
+
+def _age_the_session(client, hours=None, last_login=None):
+    """Backdate this browser's progress, as if it were earned `hours` ago.
+
+    Reassigns the whole dict rather than editing a key inside it. Flask only
+    notices top-level changes to the session, so a nested edit here is silently
+    dropped — which is the same reason app.py sets session.modified by hand
+    everywhere it touches user_progress. The first version of this helper edited
+    in place, the backdating never reached the cookie, and two tests failed
+    against code that was working perfectly.
+    """
+    from datetime import datetime, timedelta
+    stamp = last_login if last_login is not None else (
+        datetime.now() - timedelta(hours=hours)).isoformat()
+    with client.session_transaction() as s:
+        progress = dict(s["user_progress"])
+        progress["last_login"] = stamp
+        s["user_progress"] = progress
+
+
+def _signup(client, username):
+    return client.post("/signup", json={
+        "username": username, "email": f"{username}@example.com",
+        "password": PASSWORD, "confirm_password": PASSWORD,
+    }).get_json()
+
+
+def test_xp_earned_this_visit_survives_signing_up():
+    """The reason the carry-over exists: try the quiz, then register, keep it."""
+    client = app.test_client()
+    award(client, 90)
+    _age_the_session(client, hours=1)
+    username = unique_username("fresh")
+    try:
+        assert _signup(client, username)["success"]
+        assert award(client, 0)["total_xp"] == 90
+    finally:
+        _delete_user(username)
+
+
+def test_a_stale_cookie_does_not_land_on_a_new_account():
+    """What went wrong in practice: a two-day-old cookie reappeared on a brand
+    new account, which looked exactly like a database that had failed to clear —
+    and on a shared computer would hand one person another's progress."""
+    client = app.test_client()
+    award(client, 145)
+    _age_the_session(client, hours=48)
+    username = unique_username("stale")
+    try:
+        assert _signup(client, username)["success"]
+        assert award(client, 0)["total_xp"] == 0, "stale progress was inherited"
+    finally:
+        _delete_user(username)
+
+
+def test_progress_of_unknown_age_is_not_inherited():
+    """Anything unreadable counts as stale — inheriting progress you cannot date
+    is the outcome worth avoiding."""
+    client = app.test_client()
+    award(client, 70)
+    _age_the_session(client, last_login="not a timestamp")
+    username = unique_username("bad")
+    try:
+        _signup(client, username)
+        assert award(client, 0)["total_xp"] == 0
+    finally:
+        _delete_user(username)
+
+
+def test_a_returning_user_keeps_their_saved_progress_however_old(account):
+    """The age check must only ever apply to accounts with nothing saved. A
+    long-standing user logging in after a month away must not be reset."""
+    client, username = account
+    award(client, 200)
+
+    returning = app.test_client()
+    award(returning, 5)                       # some unrelated browsing
+    _age_the_session(returning, hours=72)     # on a long-stale session
+    returning.post("/login", json={"identifier": username, "password": PASSWORD})
+    assert award(returning, 0)["total_xp"] == 200
+
+
 def test_logged_out_visitors_still_earn_xp():
     """The site works without an account and must keep doing so — no user row
     means no persistence, exactly as before."""
