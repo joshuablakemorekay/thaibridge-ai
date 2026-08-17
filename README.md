@@ -115,6 +115,8 @@ You'll need **Python 3.12** (the live site runs 3.12.8) and a free [Anthropic AP
    python -m pytest tests/ -v
    ```
 
+> **No `DATABASE_URL` needed locally.** Leave it unset and the app uses a SQLite file in `instance/`, so development works offline and the tests stay fast. Production sets it to a Postgres connection string. For looking at the live data — what the AI is costing, who has signed up, how to delete something without breaking a foreign key — see **[docs/DATABASE_RUNBOOK.md](./docs/DATABASE_RUNBOOK.md)**. Every query in it has been run against the real database.
+
 ## Results & evidence
 
 This is the part I care about most — not "I built it," but "here's the proof it works."
