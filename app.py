@@ -356,10 +356,37 @@ except Exception as e:
 import hashlib
 from functools import wraps
 
-# Developer password — loaded from environment
-DEVELOPER_PASSWORD_HASH = hashlib.sha256(
-    os.environ.get("DEVELOPER_PASSWORD", "changeme").encode()
-).hexdigest()
+# Developer password — loaded from environment.
+#
+# Developer mode bypasses every gate there is: alphabet, level and subscription
+# tier alike (see check_section_access). So an unset password has to switch the
+# whole thing OFF, not fall back to a default — a default here means the paid
+# content is open to anyone who reads this file, and it would happen silently,
+# because a working login looks identical either way.
+#
+# Monk Mode next door already behaves correctly: no codes configured means it
+# simply cannot be unlocked. Failing closed is the house style; this was the one
+# place that failed open.
+# Kept as a small pure function rather than inline so the unset case can be
+# tested without reimporting the module or depending on the machine's
+# environment. The first version of this test read the module constant, which
+# meant it passed on every machine that happened to have the variable set — i.e.
+# everywhere except the one configuration it was written to catch.
+def _developer_credentials(raw_password):
+    """(enabled, password_hash) for a configured developer password.
+
+    Blank, whitespace or absent all mean OFF. There is deliberately no default:
+    see the note above.
+    """
+    password = (raw_password or "").strip()
+    if not password:
+        return False, None
+    return True, hashlib.sha256(password.encode()).hexdigest()
+
+
+DEVELOPER_MODE_ENABLED, DEVELOPER_PASSWORD_HASH = _developer_credentials(
+    os.environ.get("DEVELOPER_PASSWORD")
+)
 
 # Points required for each level
 XP_LEVELS = {
@@ -6732,11 +6759,24 @@ def progress_dashboard():
 
 @app.route('/developer-login', methods=['GET', 'POST'])
 def developer_login():
-    """Developer mode login"""
+    """Developer mode login.
+
+    Unavailable entirely when no DEVELOPER_PASSWORD is configured — see the
+    constant above. The check sits at the top of both methods so an unconfigured
+    deployment does not even show the form.
+    """
+    if not DEVELOPER_MODE_ENABLED:
+        if request.method == 'POST':
+            return jsonify({
+                'success': False,
+                'message': 'Developer mode is not configured on this deployment.',
+            }), 403
+        return redirect('/')
+
     if request.method == 'POST':
         password = request.form.get('password', '')
         password_hash = hashlib.sha256(password.encode()).hexdigest()
-        
+
         if password_hash == DEVELOPER_PASSWORD_HASH:
             init_user_progress()
             session['user_progress']['is_developer'] = True
