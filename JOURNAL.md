@@ -1972,3 +1972,83 @@ earlier, on punctuation the book does not print:
 - *Roughly how much was accepted as-is vs engineered on:* I wrote none of the transcription. The evidence for why review matters is my own migration: it imported cleanly, and left the numbering reading 21, 22, 24 with a chanted line gone. Nothing failed — I caught it by reading the numbers before rendering anything.
 
 ---
+## August 2026 — Eight pages, and the checker that kept crying wolf
+
+**TL;DR**
+
+- Pages 61–68 of the chanting book went in: 8 pages, 7 new chants, 174 verses.
+- I said the same thing five times without noticing, and it turned out to be the spec.
+- Built the check nobody had written down — then it reported five faults, and the app was right all five times.
+
+**What I built**
+
+Eight pages, one at a time. Page 61's reflection on the requisites, page 62's
+verses of dedication, page 63 — the first sheet in the whole book with **no
+chant on it at all**, just the notes to the evening service. Then the long
+special invitation running across 64 and 65, and the four festival offerings
+starting at 66.
+
+Then the tooling caught up. `check_batch` learned about `[…]`, the mark for a
+line the page break cut in half. And I finally wrote down the check I'd been
+re-improvising every single page.
+
+**Why I did it this way**
+
+I only spotted it reading back. Five times, in five different messages, I said
+some version of the same sentence:
+
+> "as long as what is added to app cahnting page remians exactly as is in the book"
+
+> "continue as long as app chanting pages remain exactly as is in book."
+
+> "so long as it is all consistent with the book as in the app"
+
+> "keeping app chanting pages exactly same as book."
+
+That wasn't nagging. That was the spec, and it decided every hard call this
+session — including the one where the book prints the same chant twice, in two
+different shapes, and I chose to carry both rather than let one page show text
+it doesn't print.
+
+**How We Did It**
+
+1. One page per batch: read the photograph, write the batch file, validate,
+   dry-run, apply, test, render against the photo, commit.
+2. Hit the two-printings problem on page 61 and decided it: two entries, one
+   per printing.
+3. Found page 63 has no chant at all — an empty manifest, everything a block.
+   That broke a count in `check_pages`, so I fixed it and pinned it with a test.
+4. Wrote a `[…]` by hand on page 68 and realised nothing checked it.
+5. Promoted the throwaway render check into the repo, and watched it be wrong
+   three times before it was right.
+
+**Engineering Contribution**
+
+- *Decisions made:* **Two entries for one chant.** Dhātupaṭikūla is printed at
+  both page 61 and page 207, and the entry already in the app has a Thai
+  translation and thirty short verses where page 61 has neither. Merging would
+  have put text on page 61 that page 61 does not print. **Kept `โอพารกา` on page
+  64 and wrote `อาสาฬหะ` on page 66** — both are the ฬ/พ hazard my own photo map
+  says a photograph cannot settle, but the second word this book spells with ฬ
+  in two other places, so one is a reading and the other is a guess. **Scoped
+  the new render check deliberately narrow:** it does not police which chant
+  renders first or where a block sits, because `build_page_index` and
+  `block_groups` already decide those and have their own tests. A second copy of
+  a rule inside a checker is how a checker starts disagreeing with the thing it
+  checks.
+- *Improvements made to generated code:* `check_batch` now validates a cut line
+  three ways — both chanted layers agree it was cut, the chant is listed as
+  continuing, and the cut falls on the last verse. I proved all three passed
+  silently first rather than assuming. New `scripts/check_render.py` walks the
+  rendered page instead of counting hits on it, which is the fix for the two
+  false alarms the throwaway versions kept producing: the book legitimately
+  prints some lines twice, and short verses sit inside longer ones. 23 new tests,
+  531 total.
+- *Roughly how much was accepted as-is vs engineered on:* I wrote none of the
+  transcription. The evidence is the render check: it reported 18 pages, then 9
+  verses, then 5 verses as broken, and **every single one was the checker being
+  wrong, not the app.** The last five were continuations — a line cut by a page
+  break renders where it starts, not where it finishes. If I'd trusted the first
+  red result I'd have "fixed" five pages that were already correct.
+
+---

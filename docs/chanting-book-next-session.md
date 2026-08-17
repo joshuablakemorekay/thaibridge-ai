@@ -69,8 +69,15 @@ the batch file and it lands. Do not try to force it into `batch.pages.blocks`.
 
 ## The tooling, and what it will and won't do
 
-`check_batch.py` then `apply_batch.py --dry-run` then apply. Both need
-`PYTHONIOENCODING=utf-8` on Windows or they die on the first Thai character.
+`check_batch.py` then `apply_batch.py --dry-run` then apply, then
+`check_pages.py` and `check_render.py`. All need `PYTHONIOENCODING=utf-8` on
+Windows or they die on the first Thai character.
+
+`check_batch` also knows about `[…]` now. A line the page break cut in half has
+to be well formed — both chanted layers agree it was cut, the chant is listed
+in `batch_status.continues`, and the cut falls on the last verse. All three
+were confirmed to pass silently before, and page 68 was written with a real
+`[…]` that nothing looked at.
 
 Three kinds of entry:
 
@@ -102,6 +109,30 @@ It knows one rule worth knowing yourself: a line cut by a page break belongs to
 the page it STARTS on, and the completed line must begin with the partial one.
 The `english` layer is exempt from that prefix test — the gloss of half a
 sentence is not the start of the gloss of the whole one.
+
+### And `check_render.py`, which opens the page a reader meets
+
+`scripts/check_render.py` is the fourth check and the only one that renders.
+`check_batch` checks a batch against itself, `check_pages` checks the DATA
+against the batch, and neither looks at the HTML — but correct data renders
+badly often enough to matter, and a dropped block or a verse in the wrong order
+is invisible to all three of the others.
+
+It **walks** rather than counts: it takes each chant's strings in printed order
+and consumes them from the rendered text, never searching backwards. That is
+deliberate. Counting occurrences is the obvious approach and it is wrong twice
+over — the book legitimately prints the same line twice (page 67's
+`ตัสสะ ภะคะวะโต,`), and short units sit inside longer ones (`พุทโธ,` inside
+`สัมมาสัมพุทโธ,` on page 66). Every false alarm the throwaway versions of this
+check produced came from counting.
+
+It deliberately does NOT police two things, because they are decided elsewhere
+and have their own tests: which of two chants renders first (`build_page_index`
+sorts by the book's chant numbering) and where a block sits (`block_groups`
+anchors it). It checks blocks for presence only.
+
+Runs as a test too (`tests/test_check_render.py`), so a page that starts
+rendering the wrong thing breaks the suite.
 
 ## Raised on pages 61–65 — all open, all need the book
 
