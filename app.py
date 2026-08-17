@@ -291,6 +291,12 @@ def _rate_limit_key():
     hop count (Render's own edge, plus Cloudflare again when a custom domain is
     proxied). X-Forwarded-For's first entry is the fallback, and remote_addr the
     last resort for local development, where there is no proxy at all.
+
+    Trusting a header sounds careless, so the reason it is safe here: every
+    request to the live site arrives through Cloudflare, and Cloudflare
+    overwrites CF-Connecting-IP rather than passing on whatever the caller sent.
+    A spoofed value never survives the edge. Off Render there is no Cloudflare
+    and no limiter worth defeating, so the same trust costs nothing.
     """
     cf = request.headers.get('CF-Connecting-IP')
     if cf:
