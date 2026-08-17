@@ -9,6 +9,15 @@ services:
     region: frankfurt                  # closest region to the UK
     branch: main                       # trunk — rebuild-experiment merged into main 2026-06-10
 
+    # Deploy every push to main. Declared here rather than left to the dashboard
+    # toggle because Render only defaults this on for NEW services — an existing
+    # service keeps whatever the dashboard says, and the Blueprint never corrects
+    # it. On 2026-08-17 a push sat undeployed for half an hour while the site
+    # reported itself healthy on two-hour-old code, which is the quiet kind of
+    # wrong: nothing fails, the work simply isn't live. Version-controlling it
+    # means the setting can't drift back. (autoDeploy is the deprecated spelling.)
+    autoDeployTrigger: commit
+
     # Use the helper script so any Windows-only packages can't break the Linux build.
     buildCommand: "bash ./render-build.sh"
 
