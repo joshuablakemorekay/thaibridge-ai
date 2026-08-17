@@ -175,6 +175,18 @@ class User(UserMixin, db.Model):
     alphabet_completed     = db.Column(db.Boolean, default=False, nullable=False)
     alphabet_completed_at  = db.Column(db.DateTime)
 
+    # --- Learning progress ---
+    # XP, level, streak, achievements and the rest of session['user_progress'],
+    # kept here so a learner does not lose their level by clearing cookies or
+    # picking up their phone. Same reasoning as the alphabet gate above: the
+    # session stays the working copy, this is the durable one.
+    #
+    # One JSON column rather than twenty-odd real ones because none of it is
+    # queried or reported on — it is only ever read back whole for one user. A
+    # column per field would mean a schema change every time a new counter is
+    # added. JSONB on Postgres, JSON-in-TEXT on SQLite; SQLAlchemy handles both.
+    progress               = db.Column(db.JSON)
+
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
 
@@ -212,6 +224,7 @@ def _ensure_user_columns():
     is_pg = db.engine.dialect.name == 'postgresql'
     dt    = 'TIMESTAMP' if is_pg else 'DATETIME'
     false = 'FALSE'     if is_pg else '0'
+    json_ = 'JSONB'     if is_pg else 'TEXT'
     wanted = {
         'subscription_tier':      "VARCHAR(20) NOT NULL DEFAULT 'free'",
         'subscription_status':    "VARCHAR(20) NOT NULL DEFAULT 'inactive'",
@@ -221,6 +234,7 @@ def _ensure_user_columns():
         'full_unlock':            f"BOOLEAN NOT NULL DEFAULT {false}",
         'alphabet_completed':     f"BOOLEAN NOT NULL DEFAULT {false}",
         'alphabet_completed_at':  dt,
+        'progress':               json_,
     }
     existing = {c['name'] for c in inspect(db.engine).get_columns('users')}
     added = False
@@ -507,6 +521,80 @@ def init_user_progress():
             'alphabet_completed_at': None,
         }
         session.modified = True
+
+# Keys that are deliberately NOT written to User.progress.
+#
+# The first five have real columns on User, and those columns are the source of
+# truth — persisting them here too would let a stale saved blob hand someone a
+# subscription or unlock the alphabet. is_developer is different: it is kept out
+# because a privileged flag should be re-earned with the password each session,
+# never restored from storage. user_id and username are identity, set at login.
+_PROGRESS_NOT_SAVED = {
+    'subscription_tier', 'subscription_expires', 'full_unlock',
+    'alphabet_completed', 'alphabet_completed_at',
+    'is_developer', 'user_id', 'username',
+}
+
+def save_user_progress():
+    """Mirror the session's progress dict onto the logged-in user's row.
+
+    Assigns a brand-new dict rather than mutating the existing one: SQLAlchemy
+    spots an attribute assignment, but an in-place edit of a JSON column goes
+    unnoticed and would never be written.
+    """
+    if not current_user.is_authenticated:
+        return
+    progress = session.get('user_progress')
+    if not progress:
+        return
+    current_user.progress = {k: v for k, v in progress.items()
+                             if k not in _PROGRESS_NOT_SAVED}
+    db.session.commit()
+
+def load_user_progress(user):
+    """Seed the session from the database when a user logs in.
+
+    The database wins over whatever is already in the session. Someone can
+    browse and earn XP logged out, then sign in — and their real, saved progress
+    has to be the one that survives, not the anonymous cookie they happened to
+    arrive with. Defaults are laid down first so a saved blob written before a
+    new counter existed still gets that counter.
+
+    A user with no saved progress yet (their first login since this shipped)
+    keeps the session they have, which is then written on the way out.
+    """
+    init_user_progress()
+    if user.progress:
+        # Filtered on the way in as well as on the way out. Nothing should ever
+        # write these keys, so this is belt-and-braces — but it means a blob
+        # from an older version, a hand-edited row, or a future bug still can't
+        # put a misleading tier in front of the user. Access is gated on the
+        # columns either way (active_tier), so this is about not showing someone
+        # "Pro" in the interface while the database says free.
+        session['user_progress'].update(
+            {k: v for k, v in user.progress.items() if k not in _PROGRESS_NOT_SAVED}
+        )
+    session['user_progress']['user_id']  = user.id
+    session['user_progress']['username'] = user.username
+    session.modified = True
+
+@app.after_request
+def _persist_user_progress(response):
+    """Save progress at the end of any request that changed it.
+
+    One hook instead of a save call at each of the ~30 places that touch
+    user_progress: they all already set session.modified, so that flag is the
+    signal. Wrapped in try/except because a database hiccup must not turn a
+    working page into a 500 — the worst case is one lost XP update, and the
+    next request writes it again.
+    """
+    try:
+        if session.modified and current_user.is_authenticated:
+            save_user_progress()
+    except Exception:
+        db.session.rollback()
+        app.logger.exception('Could not save user progress')
+    return response
 
 def get_user_level(xp):
     """Calculate user level based on XP"""
@@ -6374,10 +6462,7 @@ def login():
         return jsonify({'success': False, 'message': 'Incorrect username/email or password.'}), 401
 
     login_user(user, remember=True)
-    init_user_progress()
-    session['user_progress']['user_id']  = user.id
-    session['user_progress']['username'] = user.username
-    session.modified = True
+    load_user_progress(user)   # their saved level/XP wins over the session
 
     return jsonify({
         'success': True,
@@ -6645,10 +6730,9 @@ def signup():
         return jsonify({'success': False, 'message': 'Registration failed. Please try again.'}), 500
 
     login_user(new_user, remember=True)   # creating an account also logs you in
-    init_user_progress()
-    session['user_progress']['user_id'] = new_user.id
-    session['user_progress']['username'] = new_user.username
-    session.modified = True
+    # A brand-new account has no saved progress, so this keeps whatever they
+    # earned while browsing logged out — signing up never costs them XP.
+    load_user_progress(new_user)
 
     return jsonify({
         'success': True,
