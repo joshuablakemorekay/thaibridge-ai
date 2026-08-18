@@ -7639,6 +7639,13 @@ def dana_stripe():
     checkout_kwargs = dict(
         mode='payment',
         line_items=[{'price_data': price_data, 'quantity': 1}],
+        # Opt this session out of Managed Payments. That feature covers SALES OF
+        # DIGITAL PRODUCTS — Stripe's eligible tax codes are all software, media
+        # and courses — and Cash Donation is deliberately not among them. A gift
+        # is not a sale, so Stripe rejects it, which is the same distinction the
+        # rest of this route exists to make. The subscriptions and the Instant
+        # Access Pass stay in Managed Payments: those genuinely are course sales.
+        managed_payments={'enabled': False},
         success_url=f"{base_url}/dana/thanks",
         cancel_url=f"{base_url}/premium#dana",
         # The webhook branches on this. Without it a dāna payment would fall

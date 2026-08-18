@@ -192,6 +192,21 @@ def test_the_gift_declares_the_donation_tax_code(client, stripe_create):
     assert product["tax_code"] != TAX_CODE_COURSE
 
 
+def test_the_gift_opts_out_of_managed_payments(client, stripe_create):
+    """Second half of the same 2026-08-18 outage.
+
+    Managed Payments covers SALES OF DIGITAL PRODUCTS, and its eligible tax
+    codes are all software, media and courses — Cash Donation is not among
+    them, so Stripe rejected the session outright. Adding the tax code alone
+    fixed the subscriptions but left dana failing with a different 502.
+
+    The subscriptions and the Instant Access Pass deliberately stay IN Managed
+    Payments: those really are course sales.
+    """
+    client.post("/dana", data=MultiDict([("amount", "10")]))
+    assert stripe_create.call_args.kwargs["managed_payments"] == {"enabled": False}
+
+
 def test_the_tax_codes_are_distinct_and_well_formed(client):
     """Two different things are being sold, so they carry two different codes.
     Collapsing them to one would silently reclassify gifts as course sales."""
