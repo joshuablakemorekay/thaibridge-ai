@@ -655,7 +655,7 @@ SUBSCRIPTION_TIERS = {
 # opens instantly. Built with inline Stripe pricing (no dashboard product needed).
 INSTANT_ACCESS_ADDON = {
     'name': 'Instant Access Pass',
-    'price': 9.99,
+    'price': 14.99,
     'blurb': 'A one-time unlock for Thai Master members — open every section instantly, with no levelling.',
 }
 
