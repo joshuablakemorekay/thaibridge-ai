@@ -591,6 +591,21 @@ SECTION_REQUIREMENTS = {
 # above SUBSCRIPTION_TIERS, so the Free tier's feature list can quote the real
 # number instead of a hardcoded one that goes stale.
 FREE_AI_DAILY_LIMIT = 15                       # messages/day for free & basic tiers
+
+# Ceiling on XP earned from practice drills in one day.
+#
+# The drills are generated in the browser, so the answer is already on the page
+# and /api/check_answer cannot tell a learner from a script — nothing it is
+# sent can prove the question was really faced. Verifying harder is not the
+# answer; bounding the reward is. 200 is twenty correct answers, comfortably
+# more than a real sitting, and it caps a scripted run at a couple of days'
+# honest work rather than an instant level 10.
+#
+# This matters more since levelling started earning a free paid section: XP is
+# no longer only a score, it opens a door. The counter lives in user_progress
+# rather than a bare session key so it is saved with the rest of a learner's
+# progress and a cookie wipe does not hand back a fresh allowance.
+DRILL_XP_DAILY_CAP = 200
 FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 
 # Pro is "unlimited" in the sense that matters to a learner, but not literally:
@@ -1237,6 +1252,18 @@ def _ai_usage_today():
         usage = {'date': today, 'count': 0}
         session['ai_usage'] = usage
     return usage
+
+def _drill_xp_today():
+    """Today's drill-XP tally for this learner, resetting at midnight."""
+    init_user_progress()
+    user = session['user_progress']
+    today = datetime.now().strftime('%Y-%m-%d')
+    if user.get('drill_xp_date') != today:
+        user['drill_xp_date'] = today
+        user['drill_xp_today'] = 0
+        session.modified = True
+    return user.get('drill_xp_today', 0)
+
 
 def ai_limits_status():
     """Describe the current visitor's AI access — used by both the template and
@@ -6939,7 +6966,18 @@ def get_quiz(category):
 
 
 @app.route('/api/check_answer', methods=['POST'])
+@limiter.limit("120 per hour; 600 per day", key_func=_rate_limit_key)
 def check_answer():
+    """Score one drill answer and pay the XP for it.
+
+    This endpoint cannot verify anything. The drills are built in the browser,
+    so the page already holds the answer and the request carries BOTH halves of
+    the comparison — a script can send a matching pair as easily as a learner
+    can answer correctly. That is not fixable without rebuilding the drills
+    server-side, so the reward is bounded instead: DRILL_XP_DAILY_CAP a day,
+    plus the rate limit above. Marking still works past the cap; only the XP
+    stops, because a learner who wants to keep drilling should be able to.
+    """
     data = request.get_json()
     if not data:
         return jsonify({'error': 'No data'}), 400
@@ -6951,11 +6989,20 @@ def check_answer():
     user = session['user_progress']
     xp_earned = 0
     new_level = user['level']
+    capped = False
     
     if is_correct:
-        result = add_xp(POINT_REWARDS['quiz_correct'], 'Correct answer')
-        xp_earned = result.get('points_earned', 0)
-        new_level = result.get('level')
+        remaining = max(0, DRILL_XP_DAILY_CAP - _drill_xp_today())
+        if remaining > 0:
+            result = add_xp(min(POINT_REWARDS['quiz_correct'], remaining),
+                            'Correct answer')
+            xp_earned = result.get('points_earned', 0)
+            new_level = result.get('level')
+            # Count what was actually paid, multiplier included, so a Pro
+            # subscriber's 3x does not quietly buy three times the ceiling.
+            user['drill_xp_today'] = user.get('drill_xp_today', 0) + xp_earned
+        else:
+            capped = True
         user['correct_answers'] = user.get('correct_answers', 0) + 1
         user['words_learned'] = user.get('words_learned', 0) + 1
     
@@ -6967,6 +7014,7 @@ def check_answer():
         'correct': is_correct,
         'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {data.get('correct')}",
         'xp_earned': xp_earned,
+        'daily_cap_reached': capped,
         'new_level': new_level,
         'total_xp': user['xp']
     })
