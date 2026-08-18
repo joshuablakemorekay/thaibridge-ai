@@ -173,6 +173,34 @@ def test_a_dana_webhook_event_grants_nothing(client):
     sync_addon.assert_not_called()
 
 
+def test_the_gift_declares_the_donation_tax_code(client, stripe_create):
+    """Regression test for a real outage (2026-08-18).
+
+    New Stripe accounts enable Managed Payments by default, which REFUSES any
+    checkout session whose product has no tax_code. The live site returned 502
+    on every gift until this was added, and the mocked tests above all passed
+    throughout — they check the amount, and never looked at what was being sold.
+
+    The donation code matters specifically: a gift is not the course. Sending
+    the course code would have Stripe treat dāna as a taxable training sale,
+    which is both wrong for VAT and wrong about what is happening.
+    """
+    from app import TAX_CODE_DONATION, TAX_CODE_COURSE
+    client.post("/dana", data=MultiDict([("amount", "10")]))
+    product = stripe_create.call_args.kwargs["line_items"][0]["price_data"]["product_data"]
+    assert product["tax_code"] == TAX_CODE_DONATION
+    assert product["tax_code"] != TAX_CODE_COURSE
+
+
+def test_the_tax_codes_are_distinct_and_well_formed(client):
+    """Two different things are being sold, so they carry two different codes.
+    Collapsing them to one would silently reclassify gifts as course sales."""
+    from app import TAX_CODE_DONATION, TAX_CODE_COURSE
+    assert TAX_CODE_DONATION != TAX_CODE_COURSE
+    for code in (TAX_CODE_DONATION, TAX_CODE_COURSE):
+        assert code.startswith("txcd_"), f"{code!r} is not a Stripe tax code"
+
+
 def test_presets_sit_inside_the_allowed_range(client):
     """A preset outside the floor/ceiling would render a button that always
     bounces — the two settings have to agree."""

@@ -687,6 +687,18 @@ INSTANT_ACCESS_ADDON = {
     'blurb': 'A one-time unlock for Thai Master members — open every section instantly, with no levelling.',
 }
 
+# Stripe tax codes. Every line item has to declare what is being sold: new
+# Stripe accounts enable Managed Payments by default, and it refuses a checkout
+# session whose product carries no tax_code. (Older accounts predate the
+# requirement, which is why this only surfaced on a freshly made account.)
+#
+# These are classifications with real-world meaning, not arbitrary strings —
+# they are what Stripe Tax would use to work out VAT. Confirm them with an
+# accountant before ever taking live payments, especially for digital services
+# sold from the UK across borders.
+TAX_CODE_COURSE = 'txcd_20060058'    # Training Services - Self-study Web-based
+TAX_CODE_DONATION = 'txcd_90000001'  # Cash Donation
+
 # Dāna (generosity) — a voluntary one-off gift that buys NOTHING.
 #
 # This is deliberately not a product and must never become one. It grants no
@@ -7483,6 +7495,7 @@ def subscribe_stripe(tier):
                 'recurring': {'interval': 'month'},
                 'product_data': {
                     'name': f"ThaiBridge AI — {tier_info['name']}",
+                    'tax_code': TAX_CODE_COURSE,
                 },
             },
             'quantity': 1,
@@ -7541,7 +7554,12 @@ def addon_instant_access_stripe():
             'price_data': {
                 'currency': 'gbp',
                 'unit_amount': int(round(INSTANT_ACCESS_ADDON['price'] * 100)),  # pence
-                'product_data': {'name': f"ThaiBridge AI — {INSTANT_ACCESS_ADDON['name']}"},
+                'product_data': {
+                    'name': f"ThaiBridge AI — {INSTANT_ACCESS_ADDON['name']}",
+                    # The pass unlocks the same course, so it is the same thing
+                    # being sold — just paid for once instead of monthly.
+                    'tax_code': TAX_CODE_COURSE,
+                },
             },
             'quantity': 1,
         }],
@@ -7609,7 +7627,12 @@ def dana_stripe():
     base_url = request.url_root.rstrip('/')
     price_data = {
         'currency': 'gbp',
-        'product_data': {'name': 'ThaiBridge AI — dāna (a gift, not a purchase)'},
+        'product_data': {
+            'name': 'ThaiBridge AI — dāna (a gift, not a purchase)',
+            # Not the course code: a gift buys nothing, and Stripe has a tax
+            # code that says exactly that.
+            'tax_code': TAX_CODE_DONATION,
+        },
         'unit_amount': pence,
     }
 
