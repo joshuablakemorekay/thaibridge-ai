@@ -30,6 +30,7 @@ from dotenv import load_dotenv
 load_dotenv()  # Load .env file before anything else reads environment variables
 # Set API key BEFORE any other imports
 
+from urllib.parse import urlparse  # only-our-own-host check on redirect targets
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import (
@@ -169,6 +170,11 @@ class User(UserMixin, db.Model):
     stripe_subscription_id = db.Column(db.String(64), index=True)   # 'sub_...' — the active subscription, if any
     current_period_end     = db.Column(db.DateTime)                 # when the paid period runs out (renewal/expiry)
     full_unlock            = db.Column(db.Boolean, default=False, nullable=False)  # one-time "Instant Access Pass" add-on: skips the level gates
+    # The one Thai Reader section this learner opened by levelling rather than
+    # paying (see EARNED_UNLOCK_LEVEL). A column, not a progress key, for the
+    # same reason as the flags above: it is an entitlement, so the browser must
+    # not be able to hand itself one by editing a cookie.
+    earned_unlock_section  = db.Column(db.String(50))
 
     # --- Alphabet gate ---
     # The alphabet is the prerequisite for every other content section, so
@@ -293,6 +299,7 @@ def _ensure_user_columns():
         'stripe_subscription_id': "VARCHAR(64)",
         'current_period_end':     dt,
         'full_unlock':            f"BOOLEAN NOT NULL DEFAULT {false}",
+        'earned_unlock_section':  "VARCHAR(50)",
         'alphabet_completed':     f"BOOLEAN NOT NULL DEFAULT {false}",
         'alphabet_completed_at':  dt,
         'progress':               json_,
@@ -766,6 +773,7 @@ def init_user_progress():
 # never restored from storage. user_id and username are identity, set at login.
 _PROGRESS_NOT_SAVED = {
     'subscription_tier', 'subscription_expires', 'full_unlock',
+    'earned_unlock_section',
     'alphabet_completed', 'alphabet_completed_at',
     'is_developer', 'user_id', 'username',
 }
@@ -1273,6 +1281,56 @@ def add_xp(points, action_description=""):
         'action': action_description
     }
 
+# ── The earned unlock ────────────────────────────────────────────────────────
+# One paid section, opened by levelling instead of by paying.
+#
+# Every free-tier section is level 1, so XP earned on the free content unlocked
+# nothing at all: a free learner watched a progress bar fill toward a reward
+# that did not exist. This gives it one. On reaching EARNED_UNLOCK_LEVEL a
+# learner may open a single Thai Reader section, permanently, for nothing.
+#
+# Level 3 is 250 XP and the free sections are worth roughly 360 between them,
+# so it is reached by finishing what is already free rather than by grinding
+# drills. Deliberately ONE section, deliberately Basic only, and deliberately
+# limited to sections whose level they have already met — a door held open, not
+# a tier given away. The section they pick is the one they wanted most, which
+# makes it the best possible thing for them to have read before seeing a price.
+EARNED_UNLOCK_LEVEL = 3
+EARNED_UNLOCK_TIER = 'basic'
+
+
+def earned_unlock_spent_on():
+    """The section this learner spent their earned unlock on, or None.
+
+    Signed-out visitors never have one. Claiming it requires an account, because
+    an entitlement kept in a cookie is one that clearing cookies mints again —
+    a new free section per browser wipe.
+    """
+    if current_user.is_authenticated:
+        return current_user.earned_unlock_section
+    return None
+
+
+def earned_unlock_offer(section_id):
+    """Can this learner open `section_id` with their earned unlock right now?
+
+    Requires the level they have reached to already cover the section. Offering
+    a Level 5 section to a Level 3 learner would spend their one unlock on a
+    door that stays shut behind the level gate.
+    """
+    if earned_unlock_spent_on():
+        return False
+    user = session.get('user_progress') or {}
+    if user.get('level', 1) < EARNED_UNLOCK_LEVEL:
+        return False
+    requirements = SECTION_REQUIREMENTS.get(section_id)
+    if not requirements or requirements['tier'] != EARNED_UNLOCK_TIER:
+        return False
+    if user.get('level', 1) < requirements['level']:
+        return False
+    return tier_still_owed(requirements['tier'], user)
+
+
 def tier_still_owed(required_tier, user):
     """Does this user still have to pay for a section on `required_tier`?
 
@@ -1338,6 +1396,10 @@ def check_section_access(section_id):
     # Gate 3 — subscription tier (payment). Monk Mode waives THIS, and only
     # this, free of charge. Everyone else is held to their real tier.
     if tier_still_owed(requirements['tier'], user):
+        # ...unless this is the one section they opened by levelling. It waives
+        # payment for that section alone and never the level gate above it.
+        if earned_unlock_spent_on() == section_id:
+            return True, "Opened with your earned unlock"
         tier_name = SUBSCRIPTION_TIERS[requirements['tier']]['name']
         return False, f"Requires {tier_name} subscription"
 
@@ -1388,6 +1450,8 @@ def require_access(section_id):
                                      section=section_id,
                                      message=message,
                                      requirements=SECTION_REQUIREMENTS.get(section_id, {}),
+                                     earned_unlock_offered=earned_unlock_offer(section_id),
+                                     earned_unlock_level=EARNED_UNLOCK_LEVEL,
                                      user_progress=session['user_progress'])
             
             user = session['user_progress']
@@ -5472,6 +5536,8 @@ def exercise(category):
                              section=f'exercise_{category}',
                              message=message,
                              requirements=SECTION_REQUIREMENTS.get(f'exercise_{category}', {}),
+                             earned_unlock_offered=earned_unlock_offer(f'exercise_{category}'),
+                             earned_unlock_level=EARNED_UNLOCK_LEVEL,
                              user_progress=session['user_progress'])
     
     beginner_mode = request.args.get('beginner', 'false').lower() == 'true'
@@ -7716,6 +7782,33 @@ def dana_thanks():
     they didn't earn.
     """
     return render_template('dana_thanks.html')
+
+
+@app.route('/unlock/earned/<section_id>', methods=['POST'])
+@login_required
+def claim_earned_unlock(section_id):
+    """Spend the one earned unlock on a section, permanently.
+
+    Re-checks the offer here rather than trusting that the button was only
+    drawn when it was allowed. The button is a hint; this is the rule. Requires
+    an account because the entitlement lives in a column — a cookie-held unlock
+    would be re-mintable by clearing cookies.
+    """
+    if not earned_unlock_offer(section_id):
+        return redirect(url_for('premium'))
+
+    current_user.earned_unlock_section = section_id
+    db.session.commit()
+    app.logger.info("Earned unlock spent on %s by user %s",
+                    section_id, current_user.id)
+
+    # Straight back to the section they just opened. The locked page they came
+    # from IS that section's URL, so the referrer is the right destination —
+    # but only when it is one of ours, never an address handed to us.
+    destination = request.referrer
+    if not destination or urlparse(destination).netloc != request.host:
+        destination = url_for('premium')
+    return redirect(destination)
 
 
 @app.route('/subscribe/cancel')

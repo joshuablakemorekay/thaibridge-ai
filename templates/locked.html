@@ -54,6 +54,32 @@
             </div>
         </div>
 
+        {# The earned unlock. Shown only when this learner has actually reached
+           the level, has not spent theirs, and this section is one they can
+           spend it on — earned_unlock_offer() decides all of that server-side,
+           and the claim route re-checks it, so this block is a hint and never
+           the rule. #}
+        {% if earned_unlock_offered %}
+        <div class="earned-unlock">
+            <h3>🔑 You've earned an unlock</h3>
+            <p>
+                Reaching Level {{ earned_unlock_level }} earns you <strong>one Thai Reader
+                section, free and permanently</strong> — and you choose which. Spend it here
+                and this section opens for good, with nothing to pay.
+            </p>
+            <p class="earned-unlock-warning">You only get one, so pick the section you want most.</p>
+            {% if current_user.is_authenticated %}
+            <form method="POST" action="/unlock/earned/{{ section }}">
+                <button type="submit" class="btn btn-gold">Open {{ section.replace('_', ' ').title() }} with my unlock</button>
+            </form>
+            {% else %}
+            {# Deliberately account-gated: an unlock kept in a cookie is one that
+               clearing cookies mints again. #}
+            <p><a href="/signup" class="btn btn-gold">Create a free account to claim it</a></p>
+            {% endif %}
+        </div>
+        {% endif %}
+
         <div class="action-buttons">
             <a href="/progress" class="btn btn-primary">View Progress Dashboard</a>
             <a href="/learn" class="btn btn-secondary">Practice More</a>
@@ -71,6 +97,19 @@
 </div>
 
 <style>
+    .earned-unlock {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        border: 2px solid var(--saffron, #E8A33D);
+        border-radius: 12px;
+        background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%);
+        text-align: left;
+    }
+    .earned-unlock h3 { margin: 0 0 0.6rem; color: #8a6d1b; }
+    .earned-unlock p { color: #5a4a2a; line-height: 1.7; margin: 0 0 0.9rem; }
+    .earned-unlock-warning { font-weight: bold; }
+    .earned-unlock form { margin: 0; }
+
     .locked-container {
         max-width: 700px;
         margin: 3rem auto;
