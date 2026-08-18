@@ -7801,23 +7801,18 @@ def stripe_webhook():
     # Always 200 so Stripe doesn't keep retrying a handled event.
     return '', 200
 
-@app.route('/api/award_points', methods=['POST'])
-def award_points():
-    """API endpoint to award points"""
-    data = request.get_json()
-    action = data.get('action', 'unknown')
-    points = data.get('points', 0)
-    
-    result = add_xp(points, action)
-    
-    user = session['user_progress']
-    new_achievements = check_achievements(user)
-    
-    result['new_achievements'] = [{'name': a['name'], 'description': a['description']} 
-                                 for a in new_achievements]
-    
-    return jsonify(result)
-
+# There is deliberately no endpoint that awards XP on request.
+#
+# /api/award_points used to live here and took the AMOUNT from the caller:
+# add_xp(data.get('points', 0)). One POST could mint any level, and for a Monk
+# Mode account — where XP is the only gate left, payment being waived — that is
+# the whole site unlocked in a single request. Nothing in the app ever called
+# it; it was reachable only by someone typing it themselves.
+#
+# It is not replaced. XP is granted by the app at the moment it is earned
+# (unlocking a section, completing the alphabet, answering a drill), never
+# because a request asked for it. If a future feature needs to grant XP, grant
+# it server-side at the point the thing is achieved.
 @app.route('/api/user_stats')
 def user_stats():
     """Get user statistics"""

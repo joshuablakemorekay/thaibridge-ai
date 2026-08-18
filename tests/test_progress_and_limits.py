@@ -27,7 +27,7 @@ os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
 from app import (  # noqa: E402
-    app, db, User, _PROGRESS_NOT_SAVED, _rate_limit_key,
+    app, db, User, _PROGRESS_NOT_SAVED, _rate_limit_key, get_user_level,
 )
 
 PASSWORD = "TestPass123"
@@ -76,9 +76,49 @@ def account():
 
 
 def award(client, points):
-    """Earn XP the way the app really does, through the endpoint."""
-    return client.post("/api/award_points",
-                       json={"action": "test", "points": points}).get_json()
+    """Give this browser XP, then make sure it reaches the database.
+
+    XP is seeded into the session rather than posted to an endpoint. The app
+    used to expose /api/award_points, which added whatever number the caller
+    sent, so one request could mint any level; it was removed and deliberately
+    not replaced. Real XP is granted server-side at the moment it is earned.
+
+    The follow-up POST is the part that matters, not the seeding. Progress is
+    written by the after_request hook and only when session.modified is set, so
+    seeding on its own would prove nothing about persistence. A deliberately
+    WRONG answer sets that flag while awarding no XP, which keeps the seeded
+    total exact.
+    """
+    client.get("/api/user_stats")            # make sure progress exists
+    with client.session_transaction() as session_data:
+        progress = session_data["user_progress"]
+        progress["xp"] = progress.get("xp", 0) + points
+        progress["level"] = get_user_level(progress["xp"])
+        session_data["user_progress"] = progress
+
+    client.post("/api/check_answer", json={"answer": "a", "correct": "b"})
+
+    stats = client.get("/api/user_stats").get_json()
+    return {"total_xp": stats["xp"], "level": stats["level"]}
+
+
+def test_no_endpoint_grants_xp_the_caller_asked_for(account):
+    """The hole this closes: /api/award_points took its amount from the request
+    body, so one POST could mint any level — and a Monk Mode account, whose only
+    remaining gate is level, would have had the entire site opened by it.
+
+    Asserted by URL rather than by reading the source so the test still fails if
+    the route is reintroduced under a different function name.
+    """
+    client, username = account
+    before = client.get("/api/user_stats").get_json()["xp"]
+
+    response = client.post("/api/award_points",
+                           json={"action": "test", "points": 999999})
+    assert response.status_code == 404, "the XP-minting endpoint is back"
+
+    after = client.get("/api/user_stats").get_json()["xp"]
+    assert after == before, "XP moved despite the request being refused"
 
 
 def saved_progress(username):
