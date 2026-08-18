@@ -43,6 +43,7 @@ from flask_limiter.util import get_remote_address
 import random
 import re
 import uuid
+import hmac
 from datetime import datetime, timedelta
 
 app = Flask(__name__)
@@ -6972,6 +6973,80 @@ def logout():
 # API ROUTES
 # ============================================
 
+# ── Server-issued drill questions ────────────────────────────────────────────
+#
+# A drill used to send the correct answer to the browser and then trust the
+# browser to send it back: /api/check_answer received BOTH halves and compared
+# them to each other. That is not a check, and it paid XP — which mattered more
+# once levelling started earning a free paid section.
+#
+# So the server issues each question with an id and remembers what the answer
+# was. It remembers it as an HMAC, not as text, because Flask's session cookie
+# is SIGNED BUT NOT ENCRYPTED — it is base64, and anyone can read their own.
+# Storing the answer there would just move the leak from the response body into
+# the cookie. An HMAC needs the secret key to produce, so a browser can neither
+# read the answer out of it nor forge one for an answer of its choosing.
+#
+# Redeeming consumes the id, so one question can be scored exactly once. A
+# scripted loop can still send guesses; it just cannot send the same correct
+# guess twice, and cannot know which guess is correct before sending it.
+_PENDING_ANSWER_LIMIT = 30   # plenty for a drill session, and keeps the cookie small
+
+
+def _answer_token(question_id, answer):
+    """A value that proves what the answer was without revealing it."""
+    return hmac.new(
+        app.secret_key.encode() if isinstance(app.secret_key, str) else app.secret_key,
+        f"{question_id}:{answer}".encode(),
+        hashlib.sha256,
+    ).hexdigest()
+
+
+def issue_question(answer):
+    """Register the answer to a question about to be sent out; return its id."""
+    question_id = uuid.uuid4().hex
+    pending = dict(session.get('pending_answers') or {})
+    pending[question_id] = _answer_token(question_id, answer)
+    # Oldest first out. Dicts keep insertion order, so this drops the questions
+    # a learner has long since scrolled past rather than the one in front of them.
+    while len(pending) > _PENDING_ANSWER_LIMIT:
+        pending.pop(next(iter(pending)))
+    session['pending_answers'] = pending
+    session.modified = True
+    return question_id
+
+
+def redeem_question(question_id, answer, options=None):
+    """Mark an answer against the question the server actually issued.
+
+    Returns (scored, is_correct, correct_answer). `scored` is False when there
+    is no matching outstanding question — an expired one, a replayed one, or a
+    drill the server never issued. Those still get marked by the caller, but
+    they must never pay XP: the server has no idea whether they are true.
+
+    `correct_answer` is recovered by testing the options against the stored
+    token, so the right answer can be shown after a guess without it ever having
+    been stored in readable form.
+    """
+    pending = dict(session.get('pending_answers') or {})
+    token = pending.pop(question_id, None)
+    if token is None:
+        return False, False, None
+
+    session['pending_answers'] = pending
+    session.modified = True
+
+    is_correct = hmac.compare_digest(token, _answer_token(question_id, answer))
+
+    correct_answer = answer if is_correct else None
+    if not is_correct:
+        for option in (options or []):
+            if hmac.compare_digest(token, _answer_token(question_id, option)):
+                correct_answer = option
+                break
+    return True, is_correct, correct_answer
+
+
 @app.route('/api/quiz/<category>')
 def get_quiz(category):
     beginner_mode = request.args.get('beginner', 'false').lower() == 'true'
@@ -6990,9 +7065,61 @@ def get_quiz(category):
     return jsonify({
         'thai': word['thai'],
         'english': word['english'],
-        'correct_answer': word['paiboon'],
+        # No 'correct_answer' — that is the whole point. The browser gets an id
+        # and the server keeps what it means.
+        'question_id': issue_question(word['paiboon']),
         'options': options,
         'beginner_mode': beginner_mode
+    })
+
+
+TONE_OPTIONS = ['Mid', 'Low', 'Falling', 'High', 'Rising']
+
+
+@app.route('/api/drill/<kind>')
+def get_drill_question(kind):
+    """Issue one tones/consonant-classes drill question.
+
+    These four drills used to be dealt entirely in the browser: the pool was
+    rendered into the page and the widget marked itself, then told
+    /api/check_answer what the answer had been. Same flaw as the vocabulary
+    quiz, so the same fix — the server picks the question and keeps the answer.
+    """
+    drills = TONES_AND_CLASSES['drills']
+
+    if kind == 'classid':
+        pool = [
+            {'thai': consonant['thai'], 'sub': consonant['name'], 'answer': group['label']}
+            for group in TONES_AND_CLASSES['classes']
+            for consonant in group['consonants']
+            if not consonant.get('obsolete')
+        ]
+        options = ['MID', 'HIGH', 'LOW']
+    elif kind == 'tone_calc':
+        level = request.args.get('level', type=int) or 0
+        source = drills['tone_calc']
+        # level 0 is the mixed set; anything else filters to that stage.
+        if level:
+            source = [q for q in source if q['level'] == level]
+        pool = [{'thai': q['thai'], 'sub': f"{q['class']} class", 'answer': q['tone']}
+                for q in source]
+        options = TONE_OPTIONS
+    elif kind in ('contrast', 'leading_h'):
+        pool = [{'thai': q['thai'], 'sub': q['english'], 'answer': q['tone']}
+                for q in drills[kind]]
+        options = TONE_OPTIONS
+    else:
+        return jsonify({'error': f'Unknown drill: {kind}'}), 404
+
+    if not pool:
+        return jsonify({'error': 'No questions here yet.'}), 404
+
+    question = random.choice(pool)
+    return jsonify({
+        'question_id': issue_question(question['answer']),
+        'thai': question['thai'],
+        'sub': question['sub'],
+        'options': options,
     })
 
 
@@ -7012,9 +7139,19 @@ def check_answer():
     data = request.get_json()
     if not data:
         return jsonify({'error': 'No data'}), 400
-    
-    is_correct = data.get('answer') == data.get('correct')
-    
+
+    # A question the server issued can be marked properly. Anything else is
+    # marked on the browser's say-so and must not pay: client-built drills, a
+    # question already scored, or one that aged out of the pending list.
+    question_id = data.get('question_id')
+    scored, is_correct, correct_answer = redeem_question(
+        question_id, data.get('answer'), data.get('options')
+    ) if question_id else (False, False, None)
+
+    if not scored:
+        is_correct = data.get('answer') == data.get('correct')
+        correct_answer = data.get('correct')
+
     # Gamification: Award points for correct answers
     init_user_progress()
     user = session['user_progress']
@@ -7022,7 +7159,7 @@ def check_answer():
     new_level = user['level']
     capped = False
     
-    if is_correct:
+    if is_correct and scored:
         remaining = max(0, DRILL_XP_DAILY_CAP - _drill_xp_today())
         if remaining > 0:
             result = add_xp(min(POINT_REWARDS['quiz_correct'], remaining),
@@ -7034,6 +7171,8 @@ def check_answer():
             user['drill_xp_today'] = user.get('drill_xp_today', 0) + xp_earned
         else:
             capped = True
+
+    if is_correct:
         user['correct_answers'] = user.get('correct_answers', 0) + 1
         user['words_learned'] = user.get('words_learned', 0) + 1
     
@@ -7043,9 +7182,13 @@ def check_answer():
     
     return jsonify({
         'correct': is_correct,
-        'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {data.get('correct')}",
+        'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {correct_answer or ''}",
+        'correct_answer': correct_answer,
         'xp_earned': xp_earned,
         'daily_cap_reached': capped,
+        # False when the server did not issue this question, so the marking is
+        # the browser's word and no XP was paid for it.
+        'scored': scored,
         'new_level': new_level,
         'total_xp': user['xp']
     })

@@ -166,9 +166,14 @@ async function checkAnswer(answer) {
     const response = await fetch('/api/check_answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        // The question id is what gets marked. The browser is no longer told
+        // the answer up front, so it cannot send it back — the server checks
+        // against what it issued. Options travel too, so a wrong guess can be
+        // shown the right one without the answer ever having been sent early.
         body: JSON.stringify({
+            question_id: currentQuestion.question_id,
             answer: answer,
-            correct: currentQuestion.correct_answer
+            options: currentQuestion.options
         })
     });
     
@@ -189,7 +194,7 @@ async function checkAnswer(answer) {
                 ${result.message}
             </p>
             <p class="thai-text" style="font-size: 2rem;">${currentQuestion.thai}</p>
-            <p class="paiboon" style="font-size: 1.3rem;">${currentQuestion.correct_answer}</p>
+            <p class="paiboon" style="font-size: 1.3rem;">${result.correct_answer ?? ''}</p>
             <p style="margin-top: 1.5rem;">
                 <button class="btn btn-saffron" onclick="loadQuiz()">Next Question</button>
             </p>

@@ -526,32 +526,19 @@ function showTab(tabName, btn) {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// ── Data handed over from the server ──
-const CLASSES = {{ data.classes | tojson }};
-const POOLS = {
-    tone_calc: {{ data.drills.tone_calc | tojson }},
-    contrast: {{ data.drills.contrast | tojson }},
-    leading_h: {{ data.drills.leading_h | tojson }}
-};
-const TONES = ['Mid', 'Low', 'Falling', 'High', 'Rising'];
-
-// Build the class-ID pool from the class lists, skipping obsolete letters.
-const CLASS_ID_POOL = [];
-CLASSES.forEach(cls => {
-    cls.consonants.forEach(c => {
-        if (!c.obsolete) CLASS_ID_POOL.push({ thai: c.thai, name: c.name, answer: cls.label });
-    });
-});
-
-function randOf(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+// The drill pools used to be handed over here — every question WITH its
+// answer, rendered straight into the page. That is what made the drills
+// unmarkable: the answer key shipped to the browser, so nothing sent back from
+// it could be trusted. Questions now come one at a time from /api/drill/<kind>
+// and the answer stays on the server. Nothing about the drills belongs in this
+// file any more.
 
 /*
- * Reusable drill widget. Reuses the existing /api/check_answer endpoint so
- * scoring, XP and quiz stats stay consistent with every other quiz on the site.
- *  cfg.getPool()      -> array to draw the next question from
- *  cfg.options        -> array of button labels
- *  cfg.renderQuestion -> (item) => HTML for the big question area
- *  cfg.correctOf      -> (item) => the correct option string
+ * Reusable drill widget. Draws each question from the server and lets the
+ * server mark it, so scoring, XP and quiz stats stay consistent with every
+ * other quiz on the site — and so the answer is never in the page.
+ *  cfg.kind    -> which drill, i.e. /api/drill/<kind>
+ *  cfg.params  -> optional () => query string, e.g. '?level=2'
  */
 function makeDrill(rootId, cfg) {
     const root = document.getElementById(rootId);
@@ -564,51 +551,75 @@ function makeDrill(rootId, cfg) {
 
     function updateScore() { scoreEl.textContent = `Score: ${score} / ${total}`; }
 
-    function nextQuestion() {
-        const pool = cfg.getPool();
-        if (!pool || pool.length === 0) { qEl.textContent = 'No questions here yet.'; return; }
-        current = randOf(pool);
-        locked = false;
+    async function nextQuestion() {
+        locked = true;                       // no answering a question not yet drawn
         fbEl.textContent = '';
         nextBtn.style.display = 'none';
-        qEl.innerHTML = cfg.renderQuestion(current);
         optsEl.innerHTML = '';
-        cfg.options.forEach(opt => {
+        qEl.textContent = '…';
+
+        try {
+            const params = cfg.params ? cfg.params() : '';
+            const res = await fetch(`/api/drill/${cfg.kind}${params}`);
+            if (!res.ok) { qEl.textContent = 'No questions here yet.'; return; }
+            current = await res.json();
+        } catch (e) {
+            qEl.textContent = 'Could not load a question. Check your connection.';
+            return;
+        }
+
+        qEl.innerHTML = `${current.thai}<small>${current.sub}</small>`;
+        current.options.forEach(opt => {
             const b = document.createElement('button');
             b.className = 'opt-btn';
             b.textContent = opt;
             b.onclick = () => answer(opt, b);
             optsEl.appendChild(b);
         });
+        locked = false;
     }
 
     async function answer(choice, btn) {
         if (locked) return;
         locked = true;
         total++;
-        const correct = cfg.correctOf(current);
         const buttons = optsEl.querySelectorAll('.opt-btn');
-        buttons.forEach(b => { b.disabled = true; if (b.textContent === correct) b.classList.add('correct'); });
+        buttons.forEach(b => { b.disabled = true; });
 
-        let xp = 0;
+        // The server marks it. The browser is no longer told the answer when the
+        // question is drawn, so it has nothing to mark against and nothing to
+        // send back — which is what stopped these drills minting XP.
+        let result = null;
         try {
             const res = await fetch('/api/check_answer', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ answer: choice, correct: correct })
+                body: JSON.stringify({
+                    question_id: current.question_id,
+                    answer: choice,
+                    options: current.options
+                })
             });
-            const dataRes = await res.json();
-            xp = dataRes.xp_earned || 0;
-        } catch (e) { /* keep the drill usable even if scoring is offline */ }
+            result = await res.json();
+        } catch (e) {
+            fbEl.style.color = 'var(--temple-red)';
+            fbEl.textContent = 'Could not reach the server to mark that one.';
+            nextBtn.style.display = 'inline-block';
+            return;
+        }
 
-        if (choice === correct) {
+        const correct = result.correct_answer;
+        buttons.forEach(b => { if (b.textContent === correct) b.classList.add('correct'); });
+
+        if (result.correct) {
             score++;
+            const xp = result.xp_earned || 0;
             fbEl.style.color = 'var(--bodhi-green)';
             fbEl.textContent = xp ? `✅ Correct!  +${xp} XP` : '✅ Correct!';
         } else {
             btn.classList.add('wrong');
             fbEl.style.color = 'var(--temple-red)';
-            fbEl.textContent = `❌ Not quite — the answer is ${correct}. ` + (current.english ? `(${current.english})` : '');
+            fbEl.textContent = `❌ Not quite — the answer is ${correct}.`;
         }
         updateScore();
         nextBtn.style.display = 'inline-block';
@@ -618,24 +629,18 @@ function makeDrill(rootId, cfg) {
     updateScore();
     nextQuestion();
     return { reset: nextQuestion };
+};
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     // Drill 1 — class identification
-    makeDrill('drill-classid', {
-        getPool: () => CLASS_ID_POOL,
-        options: ['MID', 'HIGH', 'LOW'],
-        renderQuestion: (it) => `${it.thai}<small>${it.name}</small>`,
-        correctOf: (it) => it.answer
-    });
+    makeDrill('drill-classid', { kind: 'classid' });
 
     // Drill 2 — tone calculation, filtered by the selected level
     let toneLevel = 1; // 1=mid, 2=high, 3=low, 0=mixed
     const toneDrill = makeDrill('drill-tonecalc', {
-        getPool: () => toneLevel === 0 ? POOLS.tone_calc : POOLS.tone_calc.filter(q => q.level === toneLevel),
-        options: TONES,
-        renderQuestion: (it) => `${it.thai}<small>${it.class} class</small>`,
-        correctOf: (it) => it.tone
+        kind: 'tone_calc',
+        params: () => `?level=${toneLevel}`
     });
     document.querySelectorAll('#drill-tonecalc .level-btn').forEach(btn => {
         btn.addEventListener('click', function () {
@@ -647,20 +652,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Drill 3 — contrast pairs
-    makeDrill('drill-contrast', {
-        getPool: () => POOLS.contrast,
-        options: TONES,
-        renderQuestion: (it) => `${it.thai}<small>${it.english}</small>`,
-        correctOf: (it) => it.tone
-    });
+    makeDrill('drill-contrast', { kind: 'contrast' });
 
     // Drill 4 — leading ห
-    makeDrill('drill-leadingh', {
-        getPool: () => POOLS.leading_h,
-        options: TONES,
-        renderQuestion: (it) => `${it.thai}<small>${it.english}</small>`,
-        correctOf: (it) => it.tone
-    });
+    makeDrill('drill-leadingh', { kind: 'leading_h' });
 });
 </script>
 {% endblock %}
