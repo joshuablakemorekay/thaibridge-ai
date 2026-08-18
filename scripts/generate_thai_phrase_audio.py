@@ -138,7 +138,11 @@ def collect_formality():
     """The Formality guide — the register names plus every example word/phrase
     across all eight registers (monastic, royal, literary …)."""
     import app
-    found = []
+    # ภาษาไทยกลาง is the page's opening point — that everything the app teaches
+    # is Central Thai, a DIALECT, which is a separate thing from the ten
+    # politeness levels below it. It lives in the template rather than in
+    # FORMALITY_LEVELS, so name it here or it would never get a recording.
+    found = ['ภาษาไทยกลาง']
     for level in app.FORMALITY_LEVELS.values():
         found.append(level['thai'])
         for ex in level.get('examples', []):

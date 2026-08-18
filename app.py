@@ -1834,9 +1834,11 @@ FORMALITY_LEVELS = {
         'code': 'N',
         'symbol': '⚪',
         'name': 'Neutral',
-        'thai': 'ภาษากลาง',
-        'paiboon': 'paa-sǎa glaaŋ',
-        'description': 'No special connotation of formality or informality; standard speech',
+        'thai': 'ภาษาทั่วไป',
+        'paiboon': 'paa-sǎa tûa-bpai',
+        'description': 'No special connotation of formality or informality; standard speech. '
+                       'Note: this is a level of POLITENESS, not a dialect — the Thai here used '
+                       'to read ภาษากลาง, which actually means Central Thai, a different thing entirely.',
         'color': '#228B22',
         'examples': [
             {'thai': 'ผม', 'paiboon': 'pǒm', 'english': 'I (male)'},
