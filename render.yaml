@@ -65,3 +65,31 @@ services:
       # Monk Mode simply can't be unlocked (fails safe), never a crash.
       - key: MONK_MODE_CODES
         sync: false
+
+      # Stripe. sync:false throughout — the NAME is declared here so the
+      # Blueprint re-sync stops wiping it, and the VALUE is typed into the
+      # Render dashboard. Never put a key value in this file: the repo is
+      # public, and git keeps a deleted secret in its history.
+      #
+      # ⚠️ These were missing entirely until 2026-08-18, which meant
+      # stripe.api_key was empty on the live site and EVERY payment route was
+      # dead — subscriptions, the Instant Access Pass and dāna alike. It went
+      # unnoticed because the paid routes all sit behind a login, so nothing
+      # visibly failed from outside.
+      #
+      # Use the TEST keys (sk_test_…/pk_test_…) while the site still says
+      # payments run in sandbox mode. Swapping to live keys is a dashboard
+      # change, but it also means removing every "no real money is charged"
+      # notice — the copy and the keys have to agree.
+      - key: STRIPE_SECRET_KEY
+        sync: false
+
+      - key: STRIPE_PUBLISHABLE_KEY
+        sync: false
+
+      # Signing secret from the Stripe webhook endpoint (Developers → Webhooks),
+      # NOT an API key. Without it stripe_webhook() returns 400 without reading
+      # the event, so a real payment would never activate the subscription it
+      # paid for — the failure is silent on the customer's side.
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
