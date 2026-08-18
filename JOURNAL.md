@@ -2314,3 +2314,79 @@ questions. The code was fine. The system wasn't.
   lives in the prompt archive because the git history does not carry it.
 
 ---
+
+## August 2026 — Three ways to order fried rice, and the label that meant two things
+
+Every line on the Sentences page was written formally. Josh sent a photo of one
+and asked:
+
+> In sentence & conversation dropdown under Learn tab existing content is
+> formal. Can we add informal to it, eg, (formal example) plus informal -
+> kaao/w pat jaan krap or kaao/w pat nʉŋ jaan krap. Do this for all the existing
+> content as to appeal to a wider audience. If there are any other formalities
+> add those too.
+
+I proposed "formal / everyday / casual" and got pulled up twice:
+
+> What about monk formality? Is casual informal? Because there is neutral as
+> well.
+
+> Is neutral same as central Thai? Is casual same as how friends should speak to
+> eachother? What's the difference between everyday and casual?
+
+Both corrections landed. "Informal" is an umbrella, not a rung — and I had given
+the middle rung two names in a single message. The second question found a real
+bug: `FORMALITY_LEVELS['neutral']` was labelled ภาษากลาง, which means Central
+Thai, a *dialect*. A politeness level and a dialect were sharing a name in
+shipped code.
+
+> What do we do then? I feel like we need to include Central Thai (standard
+> Bangkok-region Thai) here as well as, in the entire app as the default Thai.
+
+**How we did it:** renamed the level to ภาษาทั่วไป and added a card to the
+Formality page separating the two axes — dialect is where the speaker is *from*,
+formality is who they are *talking to*. Then built `thai_registers.py`: 108 of
+the page's 130 lines gained a Neutral and/or Casual version, keyed by the formal
+Thai string so app.py never changed shape. 123 new audio clips, two commits.
+
+**What I learned:** the app already had a ten-level register system, Monastic
+included. I nearly invented a parallel one before checking.
+
+**Engineering Contribution**
+
+- *Decisions made:* Monastic gets a note, not a casual rung — speaking to a monk
+  swaps the vocabulary (ถวาย not ให้, นิมนต์ not ชวน) rather than sliding down
+  the ladder, so a casual form there would model the one thing you must never
+  do. Rejected adding a monastic row site-wide; it only applies where a monk is
+  actually present. Keyed the variants by the formal Thai string rather than
+  restructuring the content dicts — it leaves app.py untouched and lets a
+  reviewer diff all the new Thai as one file. That trade has a cost, which is
+  what the tests are for.
+
+- *Improvements made to generated code:* Wrote `tests/test_registers.py` after
+  the feature shipped, aimed squarely at the fragility the keying buys — edit a
+  line in app.py to fix a typo and its rungs vanish silently, nothing raises,
+  the page just teaches less than it did yesterday. Proved the test works by
+  adding a single space to one line and watching it fail with the fix in the
+  message. Also made the rung block a *sibling* of `.answer` rather than a
+  child, so practice mode still hides it (via `~`) while tapping a rung's 🔊 no
+  longer trips `revealAnswer`.
+
+- *Roughly how much was accepted as-is vs engineered on:* The module structure
+  and all the Thai are mine to answer for. The two-commit split, the
+  sibling-combinator fix and the whole test file came after the first working
+  version. Direction was Josh's throughout — without his two questions I would
+  have shipped the wrong model twice.
+
+- *Offered and declined:* Suggested also removing a dead `register_levels`
+  parameter and fixing three identical `aria-label`s on the rung audio buttons.
+  Josh took the tests only; both remain.
+
+- *Raised and settled:* Whether to rename the Casual rung "Central". No — that
+  would put a dialect name on a politeness rung, which is the same mistake as
+  ภาษากลาง, in English. Colloquial stays available if Casual ever grates.
+
+- ⚠️ *Unreviewed:* all 127 new Thai strings are drafts awaiting Josh's check and
+  his teacher's Paiboon pass.
+
+---
