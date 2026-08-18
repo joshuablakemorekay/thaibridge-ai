@@ -541,7 +541,12 @@ SECTION_REQUIREMENTS = {
     # meditation techniques print Paiboon on screen. Charging for the guide meant
     # showing a free reader "kam buu-chaa" and then selling them the key to it —
     # a notation key is not a lesson, it is the legend on the map.
-    'paiboon': {'level': 1, 'tier': 'free', 'points_reward': 10, 'requires_alphabet': True},
+    # ...and with no alphabet prerequisite, for the same reason it is free. The
+    # pages that print Paiboon — chanting and meditation — have no alphabet gate
+    # themselves ("you do not need to read Thai to chant along"), so requiring
+    # the 44 consonants before the KEY to the notation kept the door shut for
+    # exactly the reader it was freed for.
+    'paiboon': {'level': 1, 'tier': 'free', 'points_reward': 10, 'requires_alphabet': False},
 
     # ── BASIC — Thai Reader (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,

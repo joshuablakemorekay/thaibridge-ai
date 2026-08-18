@@ -77,3 +77,11 @@ def test_the_payment_message_still_stands_alone_at_the_right_level():
 def test_a_paid_up_learner_at_the_right_level_gets_in():
     allowed, _ = access(LEVEL_AND_TIER, level=5, subscription_tier="basic")
     assert allowed
+
+
+def test_the_paiboon_key_is_reachable_without_the_alphabet():
+    """Paiboon is the key to notation the free chanting and meditation pages
+    already print. Those pages have no alphabet gate, so neither can the key —
+    otherwise the reader it was freed for still cannot use it."""
+    allowed, message = access("paiboon", alphabet_completed=False)
+    assert allowed, f"the key is still gated: {message!r}"
