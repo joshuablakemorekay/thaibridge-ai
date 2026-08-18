@@ -22,6 +22,7 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`tones-consonant-classes`](./tones-consonant-classes/) | agent-workflow | Explore-first build of one free section teaching tones + consonant classes with progressive drills | No (single version) |
 | [`chanting-book-entry`](./chanting-book-entry/) | content / agent-workflow | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v4) |
 | [`chanting-book-batch`](./chanting-book-batch/) | content / agent-workflow | The same workflow rebuilt for volume — a 286-chant book read from photographs, page by page, as a digital edition rather than a translation | Yes (v1 → v7, forked from `chanting-book-entry` v4) |
+| [`xp-economy-audit`](./xp-economy-audit/) | analysis | Audits the live XP system per audience — found free-tier levelling unlocks nothing, plus two endpoints that minted XP on request | Yes (v1 audit → v2 remediation) |
 
 ## Featured iterations
 

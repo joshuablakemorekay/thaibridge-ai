@@ -1,0 +1,24 @@
+The XP system is effective for two of your three audiences and decorative for
+the third.
+
+Free learners. Every free-tier section is level 1: home, alphabet, theravada,
+meditation, chanting and paiboon. Legitimate play earns roughly 360 XP — 200
+from the alphabet (100 unlock, 100 completion), 130 from the Dhamma sections,
+and 30 in first-visit bonuses. That reaches Level 3 on the XP_LEVELS curve. It
+unlocks nothing, because there is no level-2 or level-3 section that is not also
+behind a paid tier. A free learner watches a progress bar fill toward a reward
+that does not exist.
+
+Monk Mode. The tier gate is waived, so XP is the only thing between a monastic
+and the whole site. Here the levelling is real, earned progression.
+
+Paying subscribers. Also real: the level requirements pace the content, so a
+Basic subscriber cannot jump straight to Level 5 Sentences.
+
+Three things are broken. max_level_access is set on all three tiers (5 / 7 / 10)
+and is referenced nowhere else in the codebase — the docs advertise "Levels 6-7"
+for Basic and nothing enforces it. Four of six POINT_REWARDS are dead: only
+quiz_correct and first_visit are used, while quiz_perfect, daily_login,
+complete_lesson and unlock_section are defined and never read. And
+/api/award_points takes the XP amount from the client, so one POST can reach
+level 10; nothing in the app calls it.

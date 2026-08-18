@@ -7,6 +7,20 @@ Each entry follows this format:
 
 ---
 
+## xp-economy-audit
+
+### 2026-08-18 — v2 (remediation)
+**Change:** Follow-up prompt asking for fixes, with the priority named: *"How can we fix this? Especially so that a free user watches a progress bar fill up toward a reward that doesn't exist issue can be fixed."*
+**Reason:** v1 diagnosed; this asked what to do about it, and the second sentence ruled out an answer that fixed the security holes and left the free tier as it was.
+**Impact:** Three options for the free-user problem, of which "let XP buy one real paid section" shipped as the earned unlock (`a4385f3`) — Level 3 now opens one Thai Reader section, permanently and free. The other three findings shipped alongside it as separate commits.
+
+### 2026-08-18 — v1 (audit)
+**Change:** First version — asks whether the XP system is *effective*, naming the free sections so the answer has to be arithmetic: *"how do users get XP when only Alphabet, Paiboon and Buddhism is free? Can other sections be unlocked with XP or do they require payment?"*
+**Reason:** The XP system had been live since 2025-12 and nobody had checked whether it did anything for the audience that never pays.
+**Impact:** Found that free-tier levelling unlocks nothing (every free section is level 1, so ~360 earnable XP buys nothing), that `max_level_access` is set on all three tiers and read nowhere, that four of six `POINT_REWARDS` are dead, and that `/api/award_points` took its XP amount from the caller with no callers anywhere in the app.
+
+---
+
 ## chanting-book-batch
 
 ### 2026-08-06 — v7 (a publication, not a translation)

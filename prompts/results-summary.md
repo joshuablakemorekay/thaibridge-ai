@@ -1,6 +1,6 @@
 # Eval Results Summary
 
-_Generated: 2026-08-06 11:20 UTC_
+_Generated: 2026-08-18 15:32 UTC_
 
 | Prompt | Cases | Avg Score | Status |
 |---|---|---|---|
@@ -16,5 +16,6 @@ _Generated: 2026-08-06 11:20 UTC_
 | `romanization-system` | 1 | 100.0% | ✅ pass |
 | `tones-consonant-classes` | 1 | 100.0% | ✅ pass |
 | `wireframe-layout-system` | 1 | 100.0% | ✅ pass |
+| `xp-economy-audit` | 1 | 100.0% | ✅ pass |
 
 **Overall:** ✅ all prompts passing

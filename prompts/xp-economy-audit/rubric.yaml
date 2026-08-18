@@ -1,0 +1,43 @@
+# Evaluation rubric for: XP Economy Audit
+
+prompt: xp-economy-audit
+version: 1
+criteria:
+  - name: answers_per_audience
+    description: Verdict is given per audience, not as one average for the whole app
+    weight: 5
+    pass_condition: "sum(s in output.lower() for s in ['free', 'monk', 'subscriber', 'paying', 'pro', 'basic']) >= 3"
+
+  - name: totals_the_earnable_xp
+    description: Output adds up the XP actually available rather than describing the system
+    weight: 5
+    pass_condition: "any(c.isdigit() for c in output) and any(s in output.lower() for s in ['xp', 'points'])"
+
+  - name: checks_what_the_xp_unlocks
+    description: Output states whether earned XP unlocks anything, against the real gates
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['unlock', 'gate', 'level 1', 'nothing'])"
+
+  - name: names_the_dead_end
+    description: Identifies that free-tier levelling leads nowhere
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['nothing', 'decorative', 'dead', 'no reward', \"doesn't exist\"])"
+
+  - name: distinguishes_config_from_enforcement
+    description: Checks whether settings are actually read, not just present
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['never read', 'unused', 'not enforced', 'dead', 'referenced nowhere'])"
+
+  - name: is_substantial
+    description: A real audit, not a one-line verdict
+    weight: 2
+    pass_condition: "len(output.split()) >= 60"
+
+test_cases:
+  - input:
+      system: "XP levelling with tier-gated sections, where every free-tier section is level 1"
+    expected_traits:
+      - gives a separate verdict for free, paying and Monk Mode learners
+      - totals the XP a free learner can actually earn
+      - states that free-tier levelling unlocks nothing
+      - flags configuration that is defined but never read
