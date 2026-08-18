@@ -1338,6 +1338,32 @@ def earned_unlock_spent_on():
     return None
 
 
+def earned_unlock_status():
+    """What to tell this learner about their earned unlock, for the dashboard.
+
+    The progress page is where the XP bar lives, so it is where the bar's
+    destination has to be named. Without this the reward was only discoverable
+    by chance — you found out you had one by opening a locked section and seeing
+    the button.
+    """
+    spent = earned_unlock_spent_on()
+    if spent:
+        return {
+            'state': 'spent',
+            'section': spent,
+            'section_name': spent.replace('_', ' ').title(),
+        }
+    user = session.get('user_progress') or {}
+    if user.get('level', 1) >= EARNED_UNLOCK_LEVEL:
+        return {'state': 'available', 'section': None, 'section_name': None}
+    return {
+        'state': 'locked',
+        'level': EARNED_UNLOCK_LEVEL,
+        'section': None,
+        'section_name': None,
+    }
+
+
 def earned_unlock_offer(section_id):
     """Can this learner open `section_id` with their earned unlock right now?
 
@@ -7137,6 +7163,8 @@ def progress_dashboard():
                          locked_sections=locked_sections,
                          subscription_tiers=SUBSCRIPTION_TIERS,
                          achievements=ACHIEVEMENTS,
+                         earned_unlock=earned_unlock_status(),
+                         earned_unlock_level=EARNED_UNLOCK_LEVEL,
                          new_achievements=new_achievements)
 
 @app.route('/developer-login', methods=['GET', 'POST'])

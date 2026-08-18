@@ -29,6 +29,29 @@
                     - MAX LEVEL!
                 {% endif %}
             </p>
+
+            {# What the bar is FOR. Monks already have every section without
+               paying, so an unlock would be a reward for nothing — say nothing
+               to them. Everyone else is told where the levelling leads, because
+               a progress bar with an unnamed destination is what this replaced. #}
+            {% if not monk_mode %}
+                {% if earned_unlock.state == 'locked' %}
+                <p class="earned-unlock-note">
+                    🔑 Reach <strong>Level {{ earned_unlock.level }}</strong> to earn
+                    <strong>one Thai Reader section, free</strong> — yours to choose.
+                </p>
+                {% elif earned_unlock.state == 'available' %}
+                <p class="earned-unlock-note earned-unlock-ready">
+                    🔑 <strong>You've earned an unlock.</strong> Open any locked Thai Reader
+                    section and claim it there — you get one, so pick the one you want most.
+                </p>
+                {% elif earned_unlock.state == 'spent' %}
+                <p class="earned-unlock-note">
+                    🔑 You spent your earned unlock on
+                    <strong>{{ earned_unlock.section_name }}</strong> — it's yours for good.
+                </p>
+                {% endif %}
+            {% endif %}
         </div>
         
         <!-- Subscription Tier -->
@@ -214,6 +237,19 @@
         box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
     
+    .earned-unlock-note {
+        margin: 1rem 0 0;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.18);
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .earned-unlock-ready {
+        background: rgba(255, 248, 220, 0.95);
+        color: #6b5410;
+    }
+
     .xp-bar-container {
         background: rgba(255,255,255,0.2);
         height: 30px;

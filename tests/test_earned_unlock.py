@@ -175,3 +175,49 @@ def test_a_poisoned_progress_blob_cannot_grant_one(account):
     page = client.get(f"/{TOO_HIGH}").get_data(as_text=True)
     assert "Section Locked" in page
     assert spent_on(username) is None
+
+
+# ---------------------------------------------------------------------------
+# The dashboard — where the XP bar lives, so where its destination is named
+# ---------------------------------------------------------------------------
+
+def dashboard(client):
+    return client.get("/progress").get_data(as_text=True)
+
+
+def test_the_bar_names_what_it_leads_to_before_you_get_there(account):
+    client, _ = account
+    set_level(client, EARNED_UNLOCK_LEVEL - 1)
+    assert f"Level {EARNED_UNLOCK_LEVEL}" in dashboard(client)
+
+
+def test_the_dashboard_says_when_an_unlock_is_waiting(account):
+    client, _ = account
+    set_level(client, EARNED_UNLOCK_LEVEL)
+    assert "You've earned an unlock" in dashboard(client)
+
+
+def test_the_dashboard_says_where_a_spent_unlock_went(account):
+    """Otherwise the one thing they chose is invisible the moment they choose
+    it."""
+    client, username = account
+    pass_the_alphabet(username)
+    set_level(client, EARNED_UNLOCK_LEVEL)
+    client.post(f"/unlock/earned/{SPENDABLE}")
+
+    page = dashboard(client)
+    assert "spent your earned unlock" in page
+    assert SPENDABLE.replace("_", " ").title() in page
+
+
+def test_a_monk_is_not_offered_a_reward_they_already_have(account):
+    """Monk Mode already waives payment on every section, so an unlock would be
+    a prize for nothing."""
+    client, _ = account
+    set_level(client, EARNED_UNLOCK_LEVEL)
+    with client.session_transaction() as session_data:
+        progress = session_data["user_progress"]
+        progress["monk_mode"] = True
+        session_data["user_progress"] = progress
+
+    assert "You've earned an unlock" not in dashboard(client)
