@@ -228,7 +228,7 @@ Three tiers are defined (`SUBSCRIPTION_TIERS`):
 | Tier | Name | Price | Unlocks |
 |------|------|-------|---------|
 | `free` | Free Explorer | £0 | Levels 1–5, the full Thai alphabet, Theravada Dhamma teachings & articles, progress tracking |
-| `basic` | Buddhist Scholar | £9.99 | + Guided meditation sessions/timer/techniques, the Learn menu (vocab, grammar, sentences), culture, formality, register, Paiboon guide, Tour Guide & Business Thai, Levels 6–7, 2× points |
+| `basic` | Thai Reader | £9.99 | + Guided meditation sessions/timer/techniques, the Learn menu (vocab, grammar, sentences), culture, formality, register, Paiboon guide, Tour Guide & Business Thai, Levels 6–7, 2× points |
 | `pro` | Thai Master | £19.99 | + Unlimited AI chat (all modes), Culture & Dhamma AI Q&A, full dictionary, Levels 8–10, 3× points |
 
 The dividing line is deliberate: the **Dhamma teaching itself** is free (*dāna*), while the

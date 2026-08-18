@@ -529,7 +529,7 @@ SECTION_REQUIREMENTS = {
     # prerequisite — you do not need to read Thai to chant along.
     'chanting': {'level': 1, 'tier': 'free', 'points_reward': 40},
 
-    # ── BASIC — Buddhist Scholar (£9.99) ─────────────────────────────────
+    # ── BASIC — Thai Reader (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
     # Culture, and the exercises). Still gated by level/XP as well as the tier.
     # Paiboon and Vocabulary sit in the Learn menu alongside the sections below, so
@@ -609,7 +609,7 @@ SUBSCRIPTION_TIERS = {
         'max_level_access': 5,
     },
     'basic': {
-        'name': 'Buddhist Scholar (Basic)',
+        'name': 'Thai Reader (Basic)',
         'price': 9.99,
         'features': [
             '✓ Everything in Free',
@@ -630,7 +630,7 @@ SUBSCRIPTION_TIERS = {
         'name': 'Thai Master (Pro)',
         'price': 19.99,
         'features': [
-            '✓ Everything in Buddhist Scholar',
+            '✓ Everything in Thai Reader',
             f'✓ Unlimited AI chat — every mode, fair use up to {PRO_FAIR_USE_DAILY}/day',
             '✓ AI conversation partner with roleplay scenarios',
             '✓ Culture AI Q&A',

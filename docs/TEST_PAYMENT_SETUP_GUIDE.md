@@ -11,7 +11,7 @@ what to change when you eventually go live.
 | **PayPal** | ⏳ Pending — code is built, but no sandbox credentials added or test payment run yet |
 
 The plans (from `SUBSCRIPTION_TIERS` in `app.py`):
-**Buddhist Scholar** $9.99/mo · **Thai Master (Pro)** $19.99/mo.
+**Thai Reader** $9.99/mo · **Thai Master (Pro)** $19.99/mo.
 
 > The Stripe checkout builds the price **inline** (`price_data`), so you do
 > **not** need to create Products/Prices in the Stripe dashboard — just keys.

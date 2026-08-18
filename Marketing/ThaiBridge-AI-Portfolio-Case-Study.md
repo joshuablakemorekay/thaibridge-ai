@@ -47,7 +47,7 @@ ThaiBridge AI is a server-rendered Flask app with:
 - 🤖 **An AI tutor with six modes** — conversation, grammar, quiz generation, culture, Buddhism and gentle hints — powered by the Claude API, with a strict shared pronunciation rulebook injected into every prompt so the romanization stays consistent
 - 📚 **Lessons, grammar, culture and temple-etiquette modules**, plus Theravada teachings (free for all) and guided meditation sessions
 - 🔐 **Real user accounts** — proper sign-up, log-in and log-out, with passwords stored safely (hashed)
-- 💳 **Freemium subscriptions** (Free · Buddhist Scholar £9.99 · Thai Master £19.99) through Stripe
+- 💳 **Freemium subscriptions** (Free · Thai Reader £9.99 · Thai Master £19.99) through Stripe
 - 🏆 **Gamification** — points, levels and achievements, with a learning path that unlocks as you go
 
 ## Results & evidence
