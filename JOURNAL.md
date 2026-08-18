@@ -2257,3 +2257,60 @@ because those are the values that decide behaviour.
   checks that had been passing for the wrong reason.
 
 ---
+
+## August 2026 — Asking whether the XP system actually does anything
+
+I built the XP and levels system back in December and never checked whether it
+worked for the people who don't pay:
+
+> Is the user XP system effective in the app? For example, how do users get XP
+> when only Alphabet, Paiboon and Buddhism is free? Can other sections be
+> unlocked with XP or do they require payment?
+
+No, it turns out. Every free section is level 1, so the ~360 XP a free learner
+can earn unlocks nothing. The levelling is real progression for Monk Mode users
+and real pacing for subscribers — and decorative for everyone else. The audit
+also found `/api/award_points`, which took the XP amount from whoever called it
+and had no callers at all. One request could reach Level 10.
+
+> How can we fix this? Especially so that a free user watches a progress bar
+> fill up toward a reward that doesn't exist issue can be fixed.
+
+**How we did it:** four commits in order — deleted the minting endpoint, made
+locked sections name the paywall instead of only the level, added the earned
+unlock (Level 3 opens one Thai Reader section, free and permanent, learner's
+choice), then capped drill XP at 200/day. Earlier the same session,
+`make paiboon free` moved the romanisation guide to the free tier, since the
+free chanting and meditation pages already print Paiboon on screen.
+
+**What I learned:** "is it working?" and "is it effective?" are different
+questions. The code was fine. The system wasn't.
+
+**Engineering Contribution**
+
+- *Decisions made:* Chose the earned unlock over badges-and-streaks — the bar
+  needed a real destination, not a consolation prize. Rejected wiring up
+  `daily_login` (15 XP/day), which was sitting there dead and looked like an
+  easy win: it would let someone reach the unlock in ~17 days of just opening
+  the tab, buying content by showing up rather than by learning. A streak should
+  pay a badge, not the currency that buys sections.
+
+- *Improvements made to generated code:* The unlock shipped discoverable only by
+  accident — you would learn you had one by chance-opening a locked section, and
+  a spent one was invisible afterwards. Added it to the progress dashboard,
+  which is where the bar it rewards actually lives. Monks are shown nothing,
+  since they already have every section without paying.
+
+- *Roughly how much was accepted as-is vs engineered on:* Code shipped as-is;
+  the direction and the product decisions were mine. Backed by
+  `prompts/xp-economy-audit/REASONING.md`.
+
+- *Known-dead, deliberately left:* `max_level_access` is set on all three tiers
+  and read nowhere — the docs advertise "Levels 6–7" for Basic and nothing
+  enforces it. Noted, not fixed.
+
+- *A change with no commit of its own:* `make paiboon free` landed inside commit
+  `601624d`, whose message is entirely about dāna and Stripe. The reasoning
+  lives in the prompt archive because the git history does not carry it.
+
+---
