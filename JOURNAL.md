@@ -2390,3 +2390,67 @@ included. I nearly invented a parallel one before checking.
   his teacher's Paiboon pass.
 
 ---
+
+## August 2026 — The webhook that never reads the receipt number
+
+I asked a narrow question about the Stripe webhook and told Claude not to touch
+anything:
+
+> Inspect the /stripe/webhook handler in app.py. Tell me exactly what fields it
+> reads from checkout.session.completed, and whether it requires a real Checkout
+> Session ID or can process a Stripe test fixture. Do not modify any files.
+
+**What it reads.** Six fields, and one of them isn't really used. The route
+branches on `metadata.kind` (dāna gifts get logged and nothing else) and
+`metadata.addon` (the Instant Access Pass). `_sync_checkout_session` then reads
+`metadata.user_id` (falling back to `client_reference_id`), `metadata.tier`,
+`customer`, and `subscription` — which it re-fetches from Stripe to get the
+status and period end. The session `id` appears only in log messages.
+
+**The answer to the actual question:** no, it does not need a real Checkout
+Session ID. The id is never a lookup key, never re-fetched, never stored. What
+the handler actually gates on is the signature (`construct_event`, which checks
+the HMAC *and* the timestamp window) and metadata that resolves to a real user
+row. A stock `stripe trigger` fixture has empty metadata, so it logs
+"missing user_id/tier" and returns 200 having done nothing.
+
+**Three things worth writing down:**
+
+- A fixture with a fake `subscription` id grants a **non-expiring** paid tier.
+  `Subscription.retrieve()` fails, the exception is caught, `period_end` stays
+  `None`, `_apply_subscription` skips `None` period ends, and `effective_tier`
+  only expires a tier when `current_period_end is not None`. Every step is
+  individually sensible; the chain isn't.
+
+- No event-id dedupe. Replaying the same event re-applies it. Both sync helpers
+  are idempotent so it's harmless today, but replay protection rests entirely on
+  the signature's timestamp tolerance.
+
+- `_find_user_for_stripe` does `int(user_id)` unguarded. A non-numeric
+  `metadata.user_id` raises, 500s, and Stripe retries it. Only reachable by
+  someone who can already sign payloads, so it's a robustness wart rather than a
+  hole.
+
+**What I learned:** "does it work?" and "what would it accept?" are different
+questions, same as the XP audit. The webhook works fine for real Stripe traffic.
+Asking what it would swallow from a fixture is what surfaced the three findings,
+and none of them are visible from reading the happy path.
+
+**Engineering Contribution**
+
+- *Decisions made:* Kept this read-only on purpose. I could have had the `int()`
+  guard fixed in the same breath, but a review that quietly turns into a commit
+  stops being a review — I wanted the findings recorded as findings first, so the
+  fix gets its own decision later.
+
+- *Improvements made to generated code:* None — no code was touched this session.
+
+- *Roughly how much was accepted as-is vs engineered on:* N/A. This is an audit;
+  the output is the three findings above.
+
+- *Left open, deliberately:* All three. The `int()` guard is the small one and
+  the obvious next commit. Whether the non-expiring-tier chain needs changing
+  depends on whether test fixtures ever hit a real database — worth deciding
+  before it matters.
+
+---
