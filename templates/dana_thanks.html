@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Thank you - ThaiBridge AI{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="dana-thanks">
+        {% if stripe_unconfigured %}
+        <div class="dana-thanks-icon">🪷</div>
+        <h1>Giving isn't set up yet</h1>
+        <p class="dana-thanks-lead">
+            Payments aren't configured on this copy of the site, so nothing was
+            charged and nothing went wrong at your end. The teachings are free
+            either way — that part never depended on this.
+        </p>
+        {% else %}
+        <div class="dana-thanks-icon">🪷</div>
+        <h1>Thank you</h1>
+        {# No "you now have..." line anywhere on this page, on purpose. A gift
+           that comes back with a reward is a purchase wearing another word. #}
+        <p class="dana-thanks-lead">
+            Your gift helps keep the Dhamma teachings, the chanting book and the
+            meditation guides free for everyone — including the people who could
+            never pay for them.
+        </p>
+        <p class="dana-thanks-body">
+            You haven't bought anything, and nothing on the site has changed for
+            you. That's what makes it <em>dāna</em>.
+        </p>
+        {% endif %}
+        <div class="dana-thanks-actions">
+            <a href="/theravada" class="btn btn-primary">Read the teachings</a>
+            <a href="/chanting" class="btn btn-secondary">Open the chanting book</a>
+        </div>
+        <div class="dana-thanks-note">
+            <p><strong>Test mode:</strong> this used <strong>Stripe Checkout in sandbox mode</strong> — no real money changed hands. Swap in live keys to receive real gifts.</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .dana-thanks {
+        max-width: 640px;
+        margin: 3rem auto;
+        background: #fff;
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+        text-align: center;
+    }
+    .dana-thanks-icon { font-size: 5rem; margin-bottom: 1rem; }
+    .dana-thanks h1 { color: #8a6d1b; font-size: 2.2rem; margin-bottom: 1rem; }
+    .dana-thanks-lead { font-size: 1.15rem; color: #555; margin-bottom: 1rem; }
+    .dana-thanks-body { font-size: 1rem; color: #777; margin-bottom: 2rem; }
+    .dana-thanks-actions {
+        display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;
+    }
+    .btn {
+        padding: 1rem 2rem; border-radius: 25px; text-decoration: none;
+        font-weight: bold; transition: all 0.3s ease; display: inline-block;
+    }
+    .btn-primary { background: linear-gradient(135deg, var(--saffron, #FF9933) 0%, #d97e00 100%); color: #fff; }
+    .btn-secondary { background: linear-gradient(135deg, var(--royal-gold) 0%, var(--deep-gold) 100%); color: #fff; }
+    .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+    .dana-thanks-note {
+        margin-top: 1.5rem; padding: 1rem; background: rgba(255, 153, 51, 0.1);
+        border-left: 4px solid var(--monk-saffron); border-radius: 8px;
+    }
+    .dana-thanks-note p { margin: 0; font-size: 0.9rem; color: #666; }
+    @media (max-width: 768px) {
+        .dana-thanks { padding: 2rem 1rem; }
+        .dana-thanks-actions { flex-direction: column; }
+        .btn { width: 100%; }
+    }
+</style>
+{% endblock %}

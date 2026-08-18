@@ -12,6 +12,7 @@ import os
 import sys
 import json
 import glob
+from decimal import Decimal, InvalidOperation, ROUND_HALF_UP  # dāna amounts, in exact pence
 
 import monk_audio  # shared MP3 filename rules, also used by the build script
 import thai_consonants  # the 44 consonants + their recordings (Alphabet page)
@@ -528,15 +529,20 @@ SECTION_REQUIREMENTS = {
     # translations are not ours to sell, and there is no alphabet
     # prerequisite — you do not need to read Thai to chant along.
     'chanting': {'level': 1, 'tier': 'free', 'points_reward': 40},
+    # Paiboon was Basic for a while, filed with the Learn menu it sits in. It is
+    # free now because the free pages already USE it: the chanting layers and the
+    # meditation techniques print Paiboon on screen. Charging for the guide meant
+    # showing a free reader "kam buu-chaa" and then selling them the key to it —
+    # a notation key is not a lesson, it is the legend on the map.
+    'paiboon': {'level': 1, 'tier': 'free', 'points_reward': 10, 'requires_alphabet': True},
 
     # ── BASIC — Thai Reader (£9.99) ─────────────────────────────────
     # The structured language-learning content (the rest of the Learn menu,
     # Culture, and the exercises). Still gated by level/XP as well as the tier.
-    # Paiboon and Vocabulary sit in the Learn menu alongside the sections below, so
-    # they carry the same alphabet prerequisite. Vocabulary also earns XP on unlock
-    # like every one of its siblings — a 0 reward made its locked page read
-    # "+0 XP upon unlock" while the rest promised something.
-    'paiboon': {'level': 1, 'tier': 'basic', 'points_reward': 10, 'requires_alphabet': True},
+    # Vocabulary sits in the Learn menu alongside the sections below, so it carries
+    # the same alphabet prerequisite. It also earns XP on unlock like every one of
+    # its siblings — a 0 reward made its locked page read "+0 XP upon unlock" while
+    # the rest promised something.
     'learn': {'level': 1, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
     'exercise_festivals': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
     'exercise_isan_dialect': {'level': 2, 'tier': 'basic', 'points_reward': 15, 'requires_alphabet': True},
@@ -604,6 +610,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Guided meditation sessions, timer & techniques',
             f'✓ AI Tutor & Dhamma Q&A — {FREE_AI_DAILY_LIMIT} messages a day',
+            '✓ Paiboon romanization guide',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
@@ -615,7 +622,6 @@ SUBSCRIPTION_TIERS = {
             '✓ Everything in Free',
             '✓ Vowels, syllables & Read & Write Script',
             '✓ Tones & consonant classes',
-            '✓ Paiboon romanization guide',
             '✓ Vocabulary, grammar & lessons',
             '✓ Sentences & conversations, with audio',
             '✓ Culture, formality, register & gender guides',
@@ -651,6 +657,24 @@ INSTANT_ACCESS_ADDON = {
     'name': 'Instant Access Pass',
     'price': 9.99,
     'blurb': 'A one-time unlock for Thai Master members — open every section instantly, with no levelling.',
+}
+
+# Dāna (generosity) — a voluntary one-off gift that buys NOTHING.
+#
+# This is deliberately not a product and must never become one. It grants no
+# tier, no XP, no unlock and no badge; the moment a gift buys something it stops
+# being dāna and starts being a price, which is the exact line the free Dhamma
+# content exists to hold. It is also open to logged-out visitors, because
+# requiring an account would make it an upsell.
+#
+# Kept structurally separate from INSTANT_ACCESS_ADDON: both are one-off Stripe
+# payments, so every dāna session carries metadata {'kind': 'dana'} and the
+# webhook branches on it explicitly rather than letting it fall through to the
+# subscription path.
+DANA = {
+    'presets': [3, 10, 25],   # £, offered as buttons
+    'min_amount': 1,          # £, floor for a custom amount
+    'max_amount': 500,        # £, ceiling — a typo guard, not a judgement
 }
 
 # Points awarded for different actions
@@ -6722,6 +6746,7 @@ def premium():
                            current_tier=active_tier(),
                            addon=INSTANT_ACCESS_ADDON,
                            has_addon=has_full_unlock(),
+                           dana=DANA,
                            free_ai_daily_limit=FREE_AI_DAILY_LIMIT)
 
 
@@ -7229,6 +7254,80 @@ def addon_instant_access_stripe():
     return redirect(checkout_session.url, code=303)
 
 
+@app.route('/dana', methods=['POST'])
+@limiter.limit("10 per hour; 30 per day", key_func=_rate_limit_key)
+def dana_stripe():
+    """One-time Stripe Checkout for a dāna gift.
+
+    Open to everyone, logged in or not — see the DANA comment for why. The
+    amount comes from our own form, in pounds, and is range-checked server-side
+    so an edited form can't charge £0.01 or £50,000.
+
+    Grants nothing on success. There is no entitlement to sync, so there is no
+    success handler doing database work — just a thank-you page.
+    """
+    if not stripe.api_key:
+        return render_template('dana_thanks.html', stripe_unconfigured=True), 503
+
+    # Amount is collected by our own form (preset buttons post a fixed value, the
+    # "other" field posts a typed one) and converted to pence here. Stripe's
+    # custom_unit_amount is NOT an option: it only exists on a saved Price
+    # object, and inline price_data rejects it outright.
+    #
+    # Validation is a RANGE, not an allowlist. Someone editing the form to send
+    # £2 instead of £3 is just giving £2, which the floor already permits — the
+    # thing actually worth guarding against is a mistyped £5000 or a negative.
+    # Decimal, not float, so £7.35 doesn't arrive as 734 pence.
+    #
+    # The preset buttons and the typed field share the name `amount`, so clicking
+    # a preset also submits the (empty) input. Take the first NON-EMPTY value
+    # rather than trusting DOM order to decide which one wins.
+    raw = next((v.strip().lstrip('£') for v in request.form.getlist('amount')
+                if v and v.strip()), '')
+    try:
+        pounds = Decimal(raw)
+        # Decimal accepts 'inf' and 'nan' as valid input, and both then blow up
+        # on int() — OverflowError and ValueError respectively. Reject them here
+        # rather than letting a crafted form turn into a 500.
+        if not pounds.is_finite():
+            raise InvalidOperation
+        pence = int((pounds * 100).to_integral_value(rounding=ROUND_HALF_UP))
+    except (InvalidOperation, ValueError):
+        return redirect('/premium#dana')
+    if not (DANA['min_amount'] * 100 <= pence <= DANA['max_amount'] * 100):
+        return redirect('/premium#dana')
+
+    base_url = request.url_root.rstrip('/')
+    price_data = {
+        'currency': 'gbp',
+        'product_data': {'name': 'ThaiBridge AI — dāna (a gift, not a purchase)'},
+        'unit_amount': pence,
+    }
+
+    checkout_kwargs = dict(
+        mode='payment',
+        line_items=[{'price_data': price_data, 'quantity': 1}],
+        success_url=f"{base_url}/dana/thanks",
+        cancel_url=f"{base_url}/premium#dana",
+        # The webhook branches on this. Without it a dāna payment would fall
+        # through to _sync_checkout_session and log a spurious "missing tier".
+        metadata={'kind': 'dana'},
+    )
+    # Only prefill the email if we already know it — never make an account the price of giving.
+    if current_user.is_authenticated:
+        if current_user.stripe_customer_id:
+            checkout_kwargs['customer'] = current_user.stripe_customer_id
+        else:
+            checkout_kwargs['customer_email'] = current_user.email
+
+    try:
+        checkout_session = stripe.checkout.Session.create(**checkout_kwargs)
+    except Exception as e:
+        app.logger.exception("Stripe dāna checkout session creation failed")
+        return f"Sorry, we couldn't start checkout: {e}", 502
+    return redirect(checkout_session.url, code=303)
+
+
 @app.route('/subscribe/<tier>/paypal')
 @login_required
 def subscribe_paypal(tier):
@@ -7586,6 +7685,20 @@ def addon_success():
     return render_template('addon_success.html', addon=INSTANT_ACCESS_ADDON)
 
 
+@app.route('/dana/thanks')
+def dana_thanks():
+    """Stripe returns here after a dāna gift.
+
+    Deliberately does no work and checks nothing. Every other success route
+    re-fetches the session from Stripe because something has to be granted and
+    the browser can't be trusted to say it was paid for. Nothing is granted
+    here, so there is nothing to verify and nothing an unpaid visitor could
+    obtain by typing this URL — the worst case is that someone reads a thank-you
+    they didn't earn.
+    """
+    return render_template('dana_thanks.html')
+
+
 @app.route('/subscribe/cancel')
 def subscribe_cancel():
     """User backed out of Stripe Checkout — no charge, send them back to plans."""
@@ -7667,7 +7780,12 @@ def stripe_webhook():
     obj = event['data']['object']
 
     if etype == 'checkout.session.completed':
-        if (obj.get('metadata') or {}).get('addon') == 'full_unlock':
+        meta = obj.get('metadata') or {}
+        if meta.get('kind') == 'dana':
+            # A gift grants nothing, so there is no entitlement to write. Logged
+            # only so donations are visible in the logs alongside sales.
+            app.logger.info("Received dāna gift (session %s)", obj.get('id'))
+        elif meta.get('addon') == 'full_unlock':
             _sync_addon_session(obj)
         else:
             _sync_checkout_session(obj)
