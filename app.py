@@ -1273,6 +1273,19 @@ def add_xp(points, action_description=""):
         'action': action_description
     }
 
+def tier_still_owed(required_tier, user):
+    """Does this user still have to pay for a section on `required_tier`?
+
+    Pulled out of gate 3 so gate 2 can ask the same question without repeating
+    the hierarchy. Monk Mode answers no to everything — it waives payment and
+    only payment.
+    """
+    if user.get('monk_mode', False):
+        return False
+    tier_hierarchy = {'free': 0, 'basic': 1, 'pro': 2}
+    return tier_hierarchy[active_tier()] < tier_hierarchy[required_tier]
+
+
 def check_section_access(section_id):
     """Check whether the current user can open a section.
 
@@ -1309,18 +1322,24 @@ def check_section_access(section_id):
             return False, "Complete Thai Alphabet first"
 
     # Gate 2 — level / XP (skipped by the full-unlock add-on)
+    #
+    # The message names the payment as well, when one is still owed. The gates
+    # are checked in order and only the FIRST failure was ever reported, so a
+    # free learner looking at Level 5 Sentences was told "Requires Level 5",
+    # could grind all the way there, and only then discover a paywall behind
+    # it. The dashboard has always quoted both; the section itself did not.
     if not full_unlock and user['level'] < requirements['level']:
-        return False, f"Requires Level {requirements['level']}"
+        message = f"Requires Level {requirements['level']}"
+        if tier_still_owed(requirements['tier'], user):
+            tier = SUBSCRIPTION_TIERS[requirements['tier']]
+            message += f" + {tier['name']} (£{tier['price']:.2f}/mo)"
+        return False, message
 
     # Gate 3 — subscription tier (payment). Monk Mode waives THIS, and only
     # this, free of charge. Everyone else is held to their real tier.
-    if not user.get('monk_mode', False):
-        required_tier = requirements['tier']
-        user_tier = active_tier()
-        tier_hierarchy = {'free': 0, 'basic': 1, 'pro': 2}
-        if tier_hierarchy[user_tier] < tier_hierarchy[required_tier]:
-            tier_name = SUBSCRIPTION_TIERS[required_tier]['name']
-            return False, f"Requires {tier_name} subscription"
+    if tier_still_owed(requirements['tier'], user):
+        tier_name = SUBSCRIPTION_TIERS[requirements['tier']]['name']
+        return False, f"Requires {tier_name} subscription"
 
     return True, "Access granted"
 
