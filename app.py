@@ -16,6 +16,7 @@ from decimal import Decimal, InvalidOperation, ROUND_HALF_UP  # dāna amounts, i
 
 import monk_audio  # shared MP3 filename rules, also used by the build script
 import thai_consonants  # the 44 consonants + their recordings (Alphabet page)
+import thai_registers
 import thai_audio  # general Thai-phrase MP3 filename rule, shared with build script
 import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
@@ -6832,7 +6833,13 @@ def sentences():
                          aspect_examples=aspect_examples,
                          question_examples=question_examples,
                          conversations=CONVERSATIONS,
-                         conversational_phrases=CONVERSATIONAL_PHRASES)
+                         conversational_phrases=CONVERSATIONAL_PHRASES,
+                         # Politeness rungs hang off each formal line by its Thai
+                         # text, so the template asks for them per line rather
+                         # than every data structure above carrying them.
+                         registers=thai_registers.variants_for,
+                         register_warning=thai_registers.warning_for,
+                         register_levels=thai_registers.LEVELS)
 
 
 @app.route('/meditation')

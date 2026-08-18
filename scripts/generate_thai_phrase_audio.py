@@ -65,6 +65,10 @@ def collect_sentences():
     _walk_thai(app.CONVERSATIONS, found)
     _walk_thai(app.SENTENCE_PATTERNS, found)
     _walk_thai(app.CONVERSATIONAL_PHRASES, found)
+    # The neutral/casual rungs shown under each formal line. Kept in their own
+    # module, so _walk_thai over app's structures would never see them.
+    import thai_registers
+    found.extend(thai_registers.all_thai_strings())
     return found
 
 

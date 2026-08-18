@@ -63,10 +63,89 @@
 .conv-card.practice-on .answer:not(.revealed) .paiboon {
     color: transparent !important;
 }
+
+/* ── Politeness rungs ────────────────────────────────────────
+   Every line on this page is written formally. These rows hang the neutral and
+   casual versions underneath it (or, in the two dialogues with a monk, a note
+   about the monastic register, which is a different vocabulary rather than a
+   lower rung). Indented and lighter than the formal line so it stays obvious
+   which one is the main teaching point. */
+.reg-block { margin: 0.6rem 0 0.25rem 0.75rem; }
+.reg-row {
+    border-left: 3px solid #ccc;
+    padding: 0.4rem 0 0.4rem 0.7rem;
+    margin-bottom: 0.4rem;
+}
+.reg-tag {
+    display: inline-block;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.1rem 0.5rem;
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+.reg-thai { font-size: 1.15rem; vertical-align: middle; }
+.reg-paiboon {
+    font-family: 'Roboto Mono', 'Consolas', 'Monaco', monospace;
+    font-size: 0.95rem;
+    color: #666;
+    margin-left: 0.5rem;
+}
+.reg-same { color: #777; font-size: 0.92rem; font-style: italic; }
+.reg-note { font-size: 0.88rem; color: #555; margin-top: 0.25rem; line-height: 1.6; }
+.reg-warn {
+    background: #fff8e1;
+    border-left: 3px solid #FFA000;
+    padding: 0.5rem 0.7rem;
+    border-radius: 0 6px 6px 0;
+    font-size: 0.88rem;
+    color: #6d4c00;
+    line-height: 1.6;
+}
+/* Practice mode redacts the answer, and the rungs would give it away, so they
+   hide with it. They sit as a SIBLING of .answer rather than inside it, so that
+   tapping a rung's 🔊 does not also trip revealAnswer — hence the ~ combinator.
+   Each dialogue line is its own box, so this never reaches the next line. */
+.conv-card.practice-on .answer:not(.revealed) ~ .reg-block .reg-thai,
+.conv-card.practice-on .answer:not(.revealed) ~ .reg-block .reg-paiboon,
+.conv-card.practice-on .answer:not(.revealed) ~ .reg-block .reg-note,
+.conv-card.practice-on .answer:not(.revealed) ~ .reg-block .reg-same {
+    color: transparent !important;
+}
 </style>
 {% endblock %}
 
 {% block content %}
+{# Tap-to-hear button, rendered only when a recording exists for the phrase. #}
+{% macro listen(thai) %}{% set url = thai_audio_url(thai) %}{% if url %}<button type="button" class="th-audio" data-audio="{{ url }}" aria-label="Play this line">🔊</button>{% endif %}{% endmacro %}
+
+{# The neutral/casual (or monastic) rungs for one formal line. Renders nothing
+   at all for a line that has no variants, so it is safe to call anywhere. #}
+{% macro registers_block(thai) %}
+{%- set rows = registers(thai) -%}
+{%- set warn = register_warning(thai) -%}
+{%- if rows or warn %}
+<div class="reg-block">
+    {% for r in rows %}
+    <div class="reg-row" style="border-left-color: {{ r.colour }};">
+        <span class="reg-tag" style="background: {{ r.colour }};">{{ r.label }}</span>
+        {% if r.same %}
+            <span class="reg-same">Same as the formal line — nothing to drop here.</span>
+        {% elif r.thai %}
+            <span class="reg-thai thai-text">{{ r.thai }}</span>{{ listen(r.thai) }}
+            <span class="reg-paiboon">{{ r.paiboon }}</span>
+        {% endif %}
+        {% if r.note %}<div class="reg-note">{{ r.note }}</div>{% endif %}
+    </div>
+    {% endfor %}
+    {% if warn %}<div class="reg-warn">⚠️ {{ warn }}</div>{% endif %}
+</div>
+{%- endif %}
+{% endmacro %}
 <h1>
     💬 Sentences & Conversations
     <span class="thai">รูปประโยคและบทสนทนา</span>
@@ -76,6 +155,57 @@
     Master Thai fluency with essential sentence patterns and real-world conversations!
     <br>Practice progressive (กำลัง), completed (แล้ว), and future (จะ) forms in context.
 </p>
+
+<!-- How the politeness rungs work -->
+<div class="card" style="border-left: 5px solid #228B22; background: #f4faf4;">
+    <h2 style="margin-top: 0; color: #228B22;">🎚️ Formal, Neutral, Casual — what's the difference?</h2>
+    <p style="line-height: 1.8;">
+        Every main line on this page is <strong>formal</strong>: full pronoun, ครับ or ค่ะ on the end.
+        That is the right thing to learn first, but it is not how most Thai is actually spoken. So
+        underneath each line you'll now find the same thing said one or two rungs down.
+    </p>
+
+    <div class="reg-block" style="margin-left: 0;">
+        <div class="reg-row" style="border-left-color: #4B0082;">
+            <span class="reg-tag" style="background: #4B0082;">Formal</span>
+            <span class="reg-thai thai-text">ผมขอข้าวผัดหนึ่งจานครับ</span>{{ listen('ผมขอข้าวผัดหนึ่งจานครับ') }}
+            <span class="reg-paiboon">pǒm kɔ̌ɔ kâao pàt nʉ̀ŋ jaan kráp</span>
+            <div class="reg-note">Pronoun and particle both present. Strangers, staff, anyone senior to you.</div>
+        </div>
+        <div class="reg-row" style="border-left-color: #228B22;">
+            <span class="reg-tag" style="background: #228B22;">Neutral</span>
+            <span class="reg-thai thai-text">ขอข้าวผัดจานนึงครับ</span>{{ listen('ขอข้าวผัดจานนึงครับ') }}
+            <span class="reg-paiboon">kɔ̌ɔ kâao pàt jaan nʉ̀ŋ kráp</span>
+            <div class="reg-note">Pronoun dropped, ครับ kept. Safe with absolutely anyone — this is where most real speech lives.</div>
+        </div>
+        <div class="reg-row" style="border-left-color: #FF8C00;">
+            <span class="reg-tag" style="background: #FF8C00;">Casual</span>
+            <span class="reg-thai thai-text">ข้าวผัดจานนึง</span>{{ listen('ข้าวผัดจานนึง') }}
+            <span class="reg-paiboon">kâao pàt jaan nʉ̀ŋ</span>
+            <div class="reg-note">Particle gone too. Friends your own age, siblings, a stall you eat at every day.</div>
+        </div>
+    </div>
+
+    <p style="line-height: 1.8;">
+        <strong>The test is simply: is ครับ/ค่ะ still there?</strong> If yes, you're on neutral.
+        If no, you're on casual. That one question tells you which rung you're standing on every time.
+    </p>
+    <p style="line-height: 1.8;">
+        Casual isn't rude — rude is a further step again (กู, มึง), which this app doesn't teach.
+        But casual only ever travels <em>sideways or downwards</em>: to friends, to people younger
+        than you, to children. It never goes upward. Dropping the particle with a stranger, with
+        someone serving you, or with anyone older is where it stops being relaxed and starts being
+        an insult.
+    </p>
+    <p style="line-height: 1.8; margin-bottom: 0;">
+        <strong>Monastic</strong> (ภาษาพระสงฆ์) is not a rung on this ladder at all — it swaps the
+        <em>vocabulary</em> rather than the ending (ถวาย not ให้, นิมนต์ not ชวน, อาตมา and โยม for
+        the pronouns). So the two dialogues with a monk in them show a monastic note instead of a
+        casual form, because there genuinely isn't one. This is about politeness, not about region:
+        everything here is Central Thai, and you can read more on the
+        <a href="{{ url_for('formality_guide') }}">Formality page</a>.
+    </p>
+</div>
 
 <!-- Quick Navigation -->
 <div style="background: white; padding: 1rem; border-radius: 10px; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
@@ -134,6 +264,7 @@
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -149,6 +280,7 @@
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -173,6 +305,7 @@
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -188,6 +321,7 @@
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -212,6 +346,7 @@
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -227,6 +362,7 @@
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -251,6 +387,7 @@
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
@@ -267,6 +404,7 @@
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
@@ -305,6 +443,7 @@
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -320,6 +459,7 @@
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}
@@ -343,6 +483,7 @@
     <div style="background: {% if gender == 'neutral' %}#e3f2fd{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #2196F3;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
@@ -359,6 +500,7 @@
     <div style="background: {% if gender == 'neutral' %}#fce4ec{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid #E91E63;">
         <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {% if thai_audio_url(ex.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(ex.thai) }}" aria-label="Play this sentence">🔊</button>{% endif %}</div>
         <div class="paiboon" style="font-size: 1.3rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+        {{ registers_block(ex.thai) }}
         <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
         <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
             <strong>Breakdown:</strong> {{ ex.breakdown }}<br>
@@ -467,6 +609,7 @@
             <div class="thai-text" style="font-size: 1.5rem; margin-bottom: 0.5rem;">{{ line.thai }}</div>
             <div class="paiboon" style="font-size: 1.2rem; color: #666; margin-bottom: 0.5rem;">{{ line.paiboon }}</div>
         </div>
+        {{ registers_block(line.thai) }}
         <div style="font-size: 1rem; color: #333; margin-bottom: 0.5rem;"><strong>English:</strong> {{ line.english }}</div>
         <div style="background: white; padding: 0.5rem; border-radius: 6px; font-size: 0.9rem; color: #666;">
             <em>{{ line.note }}</em>
@@ -501,6 +644,7 @@
                     <div class="thai-text" style="font-size: 1.4rem;">{{ p.thai }}</div>
                     <div class="paiboon" style="font-size: 1.1rem; color: #666;">{{ p.paiboon }}</div>
                     <div style="color: #333;">{{ p.english }}</div>
+                    {{ registers_block(p.thai) }}
                 </div>
                 {% if thai_audio_url(p.thai) %}<button type="button" class="th-audio" data-audio="{{ thai_audio_url(p.thai) }}" aria-label="Play {{ p.english }}">🔊</button>{% endif %}
             </div>
