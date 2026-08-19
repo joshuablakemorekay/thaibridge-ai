@@ -121,3 +121,20 @@ def test_the_section_is_on_the_curriculum_outline_now_it_is_built():
     assert "register" in SECTION_REQUIREMENTS
     assert "register" not in curriculum.NOT_BUILT_YET
 
+
+
+def test_the_page_invites_corrections(unlocked_client):
+    """Register varies by region, age and setting more than most of the
+    language, so a route for corrections belongs here permanently — not as a
+    notice to be removed once someone has signed it off."""
+    body = unlocked_client.get("/register").get_data(as_text=True)
+    assert "corrections are welcome" in body
+    assert "/contact" in body
+
+
+def test_the_royal_register_still_carries_its_legal_warning(unlocked_client):
+    """The one register where a learner's mistake is a legal matter rather
+    than a social one. This warning is not decoration."""
+    body = unlocked_client.get("/register").get_data(as_text=True)
+    assert "112" in body
+    assert "Read it, do not write it." in body
