@@ -2650,3 +2650,91 @@ wrote the nine registers.
 - ⚠️ *Unreviewed:* the nine registers are a draft awaiting my teacher.
 
 ---
+
+## 2026-08-19 (night) — Two of the five were noes
+
+**What I built.** I had five ideas for loosening the free tier and no way to
+tell which were generous and which were just expensive. I asked for a verdict on
+each, and put the sales argument in with the question:
+
+> The whole curriculum outline, visible to everyone people pay more readily when
+> they can see what they're buying.
+
+Three shipped, two were refused. The refusals matter more: freeing the reading
+sections would have gutted the tier they *are*, and cutting the AI allowance
+would have saved pennies at the cost of the best free thing on the site.
+
+**How we did it.** Five features, all live. A Paiboon lookup that searches 1,217
+reviewed entries rather than transliterating; a public curriculum outline built
+from the gated routes; the Dhamma given its own AI allowance; a free Survival
+Thai section; and the alphabet prerequisite narrowed. Then two questions of mine
+turned out to find more than the answers did:
+
+> would you agree that survival mode is right to be placed in Tour Guide page or
+> not?
+
+> is it right for Alphabet page to be free?
+
+**Engineering Contribution**
+
+- *Decisions made:* Refused two of the five. Shown three possible builds for
+  the lookup, I closed it to one:
+
+  > Yes only do the first one leave the others out of it
+
+  Corpus search, not live AI and not a rule-based engine — a beginner cannot
+  tell a hallucinated tone mark from a real one, and in Thai a wrong tone is a
+  different word. Excluded the Yaitron dictionary's 4,894 pairs: it *is* the Pro
+  feature, and its romanisation was machine-generated, never checked. The Dhamma
+  allowance began as three words on a list — *"Small free Dhamma allowance"* —
+  and came back as a bug rather than a feature, so I asked what it actually
+  meant:
+
+  > What is the Dhamma quota split?
+
+  Funded it **on top of** the tutor's 15 rather than reserved out of it: nobody
+  should lose something so the site can keep a promise it had already made.
+  Built Survival Thai as its own section rather than folding it into Tour Guide,
+  which is paid, level 4 and alphabet-gated — I asked for that spec as
+  *"greetings, numbers, food, directions. Finishable, genuinely useful."* and it
+  is now enforced by a test that fails outside 30–70 phrases. Changed only
+  Culture of 15 candidate sections, and left the Instant Access Pass alone.
+
+- *Improvements made to generated code:* Nothing reworked at code level while
+  building. The quality pass afterwards found three things, all self-inflicted:
+  a compatibility shim in `ai_limits_status()` justified by a comment that was
+  already untrue when it shipped — its only reader moved to the new shape in the
+  same commit; a module docstring in `paiboon_lookup.py` describing one fold when
+  two shipped, and the undocumented one is what makes "sawatdee" findable at all;
+  and a filter dropping strings containing `/` with a comment explaining only the
+  other half of what it did. On verification, with another session editing the
+  same clone, I asked for:
+
+  > do what is safest and most effective.
+
+  which is how the commits came to be checked out into a throwaway `git
+  worktree` and tested alone — proving a failing test was theirs without
+  touching their files.
+
+- *Roughly:* shipped as-is on code, with the direction and the product decisions
+  mine. Full reasoning per feature in `prompts/free-tier-review/`,
+  `prompts/paiboon-lookup/`, `prompts/dhamma-ai-allowance/`,
+  `prompts/survival-thai/` and `prompts/alphabet-gate-audit/`.
+
+**What I learned.** My two best contributions today were questions, not
+instructions. Asking whether Survival Thai belonged on Tour Guide stopped free
+content landing behind a £9.99 paywall. Asking whether the Alphabet should be
+free led to the finding underneath it — that 15 sections taught entirely in
+romanisation still demanded 35 of 44 consonants first, and the pricing page
+carried a flag reading "pass a quiz to see our prices".
+
+- 📉 *On the verbatim ratio:* about 9% of this entry is quoted from me, well
+  under the 40% I aim for. That is honest rather than lazy. My inputs today were
+  short questions and short instructions — the leverage was in *which* question,
+  not in the volume of words. Raising the ratio would have meant deleting the
+  reasoning that explains the decisions, or padding with my approvals, and both
+  are worse entries. Recorded here rather than quietly massaged.
+
+- ⚠️ *Unreviewed:* Survival Thai's 50 phrases are a draft awaiting my teacher.
+
+---
