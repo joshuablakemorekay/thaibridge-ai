@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
-70 went in.
+71 went in.
 
 ## Read first, in this order
 
@@ -12,12 +12,12 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–70 are in and unbroken**, plus 217–221. **98 chants, 1,164 verses
+- **Pages 1–71 are in and unbroken**, plus 217–221. **100 chants, 1,199 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 69 and 70 were applied 2026-08-19; pages 66–68 over the days before
-  them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
+- Pages 69, 70 and 71 were applied 2026-08-19; pages 66–68 over the days
+  before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 
 ## How to work — this matters more than the tasks
 
@@ -30,28 +30,28 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 71, `IMG_0334`
+## Next: page 72, `IMG_0335`
 
-`sarabhanna-gatha-atthami` is **still open at verse 28** and page 71 finishes
-it. This is a **third** page of one chant, so page 71's batch is another
-`continuation_of` with the numbering carrying on at 29 — and this time it
-should be the one that CLOSES it, so expect `continues` to be absent and the
-‼ CONTINUES marker to come off.
-
-**We know roughly what is coming**, which is rare and worth using. Verses 11–28
-of this chant match the Visākha Saraphañña on pages 67–68 word for word, and
-that chant carries two more verses after its 28: `ทีฆะรัตตัมปิ อัมหากัง
-หิตายะ จะ สุขายะ จะ` and `อะปายัปปะริหานายะ อายานัญจาภิวุฑฒิยา`. Page 71 should
-open with this chant's equivalents. **That is a reason to check the reading, not
-to write it** — the four places these twins already diverge are exactly why.
+`sarabhanna-gatha-magha` is **open at verse 5** and page 72 carries the rest, so
+its batch is a `continuation_of` with the numbering carrying on at 6, no title
+and no invitation. Its two predecessors ran to thirty rows each — a reason to
+expect more, never a reason to assume how many.
 
 It is **set in two columns**, read across the row. Check the column structure
 before reading a word. Page 70's check on verse 3 records the four independent
-tests that settled it, and they are reusable: no punctuation in the left column,
-hyphens that only join across the gutter, and rows that match the twin.
+tests that settle it and they are reusable: no punctuation in the left column,
+hyphens that only join across the gutter, and rows that read as continuous
+sense across the gutter but as half-lines down it.
 
-Page 71 may also start the Māgha offering — the four parallel offerings sit at
-66, 68, 71 and 75 — so read the whole sheet before deciding what is on it.
+**Watch for `มาคะธานัง`.** Page 71 prints the Magadhans' name as `มาฆะทานัง`,
+which looks like the compositor being pulled toward `มาฆะ` by the six other
+occurrences on that page. If the word turns up again on 72, read it carefully —
+two independent slips would say something different from one.
+
+Page 72 may also run into whatever follows the Māgha service. The fourth of the
+parallel offerings, Āsāḷha, is expected around page 75, so there is other
+material between here and there. **Read the whole sheet before deciding what is
+on it** — page 71 held three chants.
 
 **Page 63 was the first page in the book with no chant on it at all** — the
 whole sheet is `คำอธิบายประกอบทำวัตรเย็น`, so its batch has an EMPTY manifest
@@ -184,6 +184,37 @@ from itself. Page 62 prints `หินา` and `วิริยัมหิน�
 
 **Two chants on pages 64–65 have no colophon**, unlike pages 60, 61 and 62.
 Checked against both pages; the `closing` key is left off rather than composed.
+
+## Raised on page 71 — three chants on one sheet
+
+**The Māgha offering is not a variant of the other two, and that is settled by
+reading it.** Visākha (p66) and Aṭṭhamī (p68) share almost every word. The Māgha
+one shares only its closing petition — the rest recounts the fourfold assembly
+and the Ovāda-pāṭimokkha. It is set in full as its own chant, not stubbed as a
+repeat, and its English is written fresh rather than copied across. Āsāḷha, the
+fourth, is still to come.
+
+**Two readings in the Māgha Saraphañña differ from the canon.** Verse 4 prints
+`มาฆะทานัง` where the sense wants `มาคะธานัง` — *māgadhānaṃ*, "of the
+Magadhans", which is whose hill-fort Rājagaha is. Verse 5 prints `เวฬุวันนัมหิ`
+with a doubled น where editions have *veḷuvanamhi*. Both reproduced as printed.
+The first is the one to look at: six other words on that page begin `มาฆะ`, so
+a compositor's eye slipping is a plausible account of it.
+
+**`ปะฏิคคัณหาตุ` is bare for the FOURTH page running** — 68, 69, 70 and 71 all
+bare against page 67's `ปะฏิคคัณ์หาตุ`.
+
+**A fifth divergence between the Saraphañña twins**, and the second that looks
+like a slip in the earlier reading rather than a real difference. Page 71 ends
+the Aṭṭhamī chant `อายานัญจาภิวุฑฒิยา.` with a full stop; the app holds the
+Visākha twin's verse 30 without one. It is the last line of a chant, where a
+stop is what you would expect. Nothing on page 68 was changed.
+
+**`เวฬุวะเน` really is ฬ, and this is the one case where the photograph can say
+so.** The photo map's warning that these images cannot tell ฬ from พ still
+stands generally — but ฬ carries a tall ascender that พ does not, and at 4× it
+is plainly there. Recorded on the strength of the ascender, with the canonical
+reading agreeing rather than deciding.
 
 ## Raised on page 70 — the twins disagree in four letters
 
