@@ -179,7 +179,11 @@ def thai_strings():
     """
     found = [phrase['thai'] for phrase in all_phrases()]
     found.extend(form['thai'] for form in POLITE_PARTICLE.values())
-    # 'ไป...ครับ/ค่ะ' is a TEMPLATE, not something anybody says — the blank is
-    # where a place name goes. Speaking it aloud would produce nonsense, so it
-    # is dropped here the way gender_thai_strings() drops its combined forms.
+    # Two things are dropped, the way gender_thai_strings() drops its combined
+    # forms. Both would produce nonsense if read aloud:
+    #   '...'  a TEMPLATE — the blank is where a place name goes, so
+    #          'ไป...ครับ/ค่ะ' is a shape rather than a sentence.
+    #   '/'    an EITHER-OR — 'ครับ/ค่ะ' means "one of these depending on who is
+    #          speaking", not a phrase. The particles are recorded separately
+    #          above, which is how a learner hears the difference.
     return [thai for thai in found if '...' not in thai and '/' not in thai]

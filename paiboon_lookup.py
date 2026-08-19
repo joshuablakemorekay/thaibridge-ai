@@ -32,13 +32,24 @@ predates the convention and names its fields `char` / `name` / `meaning`.
 
 SEARCHING WITHOUT THE DIACRITICS
 --------------------------------
-This is the part that makes the tool usable. Paiboon writes "delicious" as
-à-rɔ̀i — a grave accent, an open-o, a hyphen. Nobody types that. They type
-"aroi". So every entry is indexed under a FOLDED form (see `fold`) with the
-tone marks stripped, the IPA-ish letters flattened to ASCII and the hyphens
-removed, and the query is folded the same way before matching. The display
-always shows the real, fully-marked romanisation — folding is for finding, not
-for teaching.
+This is the part that makes the tool usable, and it takes TWO folds, not one.
+
+`fold` is the tight one: tone marks stripped, the IPA-ish letters flattened to
+ASCII, hyphens and spaces dropped. That alone gets "aroi" to à-rɔ̀i.
+
+`fold_loose` is the fallback, and it is what makes the commonest phrases in the
+language findable at all. Tight folding still misses ขอบคุณ and สวัสดี, because
+Paiboon spells them kɔ̀ɔp-kun and sà-wàt-dii and nobody types either. So the
+loose fold also forgives vowel length, the ee/ii and oo/uu spellings, the
+kh/ph/th of Thailand's road signs, and Paiboon's own bp/dt digraphs.
+
+Both are precomputed per entry at index-build time and matched band-major:
+exact beats prefix beats substring, whichever fold found it. A loose SUBSTRING
+counts only when nothing precise matched anywhere, so the fuzzy band can rescue
+a query without padding a good result set.
+
+The display always shows the real, fully-marked romanisation — folding is for
+finding, not for teaching.
 """
 import unicodedata
 from dataclasses import dataclass, field
