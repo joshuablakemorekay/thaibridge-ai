@@ -18982,7 +18982,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 28; the rest is not in the app yet.
         # ‼ CHECK [IMG_0332.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Only
         #   two rows of it are printed, and beneath them is the footnote rule
         #   and the three notes — so the page simply runs out. It is listed in
@@ -19346,6 +19345,452 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'accept these offerings, thus and thus well prepared.',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: THE CHANT ENDS HERE, and the two closing
+            #   rows are word for word the Visākha Saraphañña's verses 29 and
+            #   30. Two two-column rows at the head of the page, read across
+            #   the gutter like every other row of this chant, and then the
+            #   next chant's centred title. So `continues` comes off and the ‼
+            #   CONTINUES marker goes with it.
+            {
+                'number': 29,
+                'page': 71,
+                'pali': 'ทีฆะรัตตัมปิ อัมหากัง หิตายะ จะ สุขายะ จะ',
+                'pali_roman': 'Dīgharattampi amhākaṃ hitāya ca sukhāya ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for our welfare and our happiness for a long time to come,',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: A FULL STOP THE TWIN DOES NOT HAVE. This
+            #   page ends the chant อายานัญจาภิวุฑฒิยา. with a full stop; the
+            #   app holds the Visākha twin's verse 30 as อายานัญจาภิวุฑฒิยา
+            #   with none. It is the last line of a chant, so a stop is what
+            #   you would expect, and the likelier explanation is that page
+            #   68's reading dropped it than that the printer set the two
+            #   endings differently. That is page 68's photograph to settle,
+            #   not this one's, and nothing there was changed. This makes FIVE
+            #   places these twins disagree.
+            {
+                'number': 30,
+                'pali': 'อะปายัปปะริหานายะ อายานัญจาภิวุฑฒิยา.',
+                'pali_roman': 'Apāyapparihānāya āyānañcābhivuḍḍhiyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the avoiding of loss and for the increase of gain.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0334.PNG]: THE ENGLISH OF THIS WHOLE CHANT IS A WORKING
+        #   TRANSLATION AND NEEDS YOUR EYE. The page prints no Thai
+        #   translation anywhere, so there is nothing to check it against,
+        #   hence english_unverified. Verses 21 to 23 are the least certain:
+        #   the book's commas cut that sentence in three places that do not
+        #   fall where the grammar does, so the English is spread across the
+        #   three units and each one reads oddly on its own. Read them
+        #   together.
+        # ‼ CHECK [IMG_0334.PNG]: NO CHANT NUMBER, no invitation, and no
+        #   colophon. The book prints the centred title and goes straight into
+        #   the passage, exactly as it did for the Visākha and Aṭṭhamī
+        #   offerings, and the passage ends at สุขายะ. with the next title
+        #   following. The title is THAI, not Pali, so title_pali is empty and
+        #   title_roman carries the Paiboon+ romanisation.
+        # ‼ CHECK [IMG_0334.PNG]: NO FOOTNOTE ON THIS PAGE, which is worth
+        #   saying because its two predecessors both had three. Pages 67 and
+        #   69 carry editorial notes keyed to ถูโป, กะโต and ถูปัง in the
+        #   circumambulation passage — words this chant does not contain,
+        #   since it is about the assembly rather than walking round a stūpa.
+        #   The foot of this sheet was checked on its own crop: no rule, no
+        #   note, clear paper.
+        'id': 'kham-tawai-dokmai-thup-thian-magha',
+        'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันมาฆบูชา',
+        'title_pali': '',
+        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan maa-ká-buu-chaa',
+        'title_english': 'The Words for Offering Flowers, Incense and Candles on Māgha Pūjā Day',
+        'page_start': 71,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'pali': 'อัชชายัง,',
+                'pali_roman': 'Ajjāyaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Today,',
+            },
+            {
+                'number': 2,
+                'pali': 'มาฆะปุณณะมี สัมปัตตา,',
+                'pali_roman': 'Māghapuṇṇamī sampattā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Māgha full moon has come round,',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: A WORD REJOINED ACROSS A LINE BREAK, the
+            #   first of three on this page. Line 2 ends จาตุรังคิเก
+            #   สาวะกะสันนิ- with a hyphen and line 3 opens ปาเต,. The hyphen
+            #   is typesetting, so the word is rejoined as สาวะกะสันนิปาเต and
+            #   the hyphen dropped. The other two are วัฑฒะมานะ- / กัจฉายายะ
+            #   at verse 14 and มาฆะปุณณะมีนักขัต- / ตะสะมายัง at verse 19.
+            {
+                'number': 3,
+                'pali': 'มาฆะนักขัตเตนะ ปุณณะจันโท ยุตโต,',
+                'pali_roman': 'Māghanakkhattena puṇṇacando yutto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the full moon joined with the Māgha asterism —',
+            },
+            {
+                'number': 4,
+                'pali': 'ยัตถะ ตะถาคะโต,',
+                'pali_roman': 'Yattha tathāgato,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the day on which the Tathāgata,',
+            },
+            {
+                'number': 5,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Arahaṃ sammāsambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy, fully enlightened by himself,',
+            },
+            {
+                'number': 6,
+                'pali': 'จาตุรังคิเก สาวะกะสันนิปาเต,',
+                'pali_roman': 'Cāturaṅgike sāvakasannipāte,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'at an assembly of disciples possessing four factors,',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: THIS OFFERING IS NOT A VARIANT OF THE
+            #   OTHER THREE — it is different text. Visākha (p66) and Aṭṭhamī
+            #   (p68) both open ยะมัมหะ โข มะยัง ภะคะวันตัง and recite the
+            #   Buddha, Dhamma and Saṅgha formulas at length. This one opens
+            #   อัชชายัง and recounts the fourfold assembly and the Ovāda-
+            #   pāṭimokkha instead. Only its closing petition, verses 24 to
+            #   28, runs parallel to theirs. So it must NOT be stubbed as a
+            #   repeat, and its English is written fresh rather than copied
+            #   from the earlier printings.
+            {
+                'number': 7,
+                'pali': 'โอวาทะปาฏิโมกขัง อุททิสิ.',
+                'pali_roman': 'Ovādapāṭimokkhaṃ uddisi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'set forth the Ovāda-pāṭimokkha.',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: อัฑฒะเตระสานิ, four times in this chant,
+            #   at verses 8, 17 and 23. Read at the standard body size rather
+            #   than magnified, because the ฑ/ฒ pair here is unambiguous in
+            #   this face. It is aḍḍhaterasāni — 'half of the thirteenth
+            #   hundred', the traditional way of saying one thousand two
+            #   hundred and fifty, which is the number of bhikkhus at the
+            #   assembly. Glossed as the number in English rather than left
+            #   literal.
+            {
+                'number': 8,
+                'pali': 'ตะทา หิ อัฑฒะเตระสานิ,',
+                'pali_roman': 'Tadā hi aḍḍhaterasāni,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For on that day there were twelve hundred and fifty,',
+            },
+            {
+                'number': 9,
+                'pali': 'สัพเพสังเยวะ ขีณาสะวานัง,',
+                'pali_roman': 'Sabbesaṃyeva khīṇāsavānaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all of them arahants whose taints were destroyed,',
+            },
+            {
+                'number': 10,
+                'pali': 'สัพเพเต เอหิภิกขุกา,',
+                'pali_roman': 'Sabbete ehibhikkhukā,',
+                'thai': '',
+                'paiboon': '',
+                'english': "all of them gone forth at the Buddha's own 'Come, bhikkhu',",
+            },
+            {
+                'number': 11,
+                'pali': 'สัพเพปิ เต อะนามันติตาวะ.',
+                'pali_roman': 'Sabbepi te anāmantitāva.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and every one of them come without being summoned.',
+            },
+            {
+                'number': 12,
+                'pali': 'ภะคะวะโต สันติกัง อาคะตา,',
+                'pali_roman': 'Bhagavato santikaṃ āgatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'They had come into the presence of the Blessed One',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: เวฬุวะเน IS ฬ, NOT พ, AND THIS ONE CAN
+            #   BE READ. The photo map records that these photographs cannot
+            #   tell ฬ from พ at body-text size, and that stands as a general
+            #   warning — but ฬ carries a tall ascender that พ does not, and
+            #   at 4x on an isolated crop the ascender is plainly there and is
+            #   the same height as the one on ฬ elsewhere on the page. The
+            #   canonical reading agrees: Veḷuvana, the Bamboo Grove at
+            #   Rājagaha. Recorded as ฬ on the strength of the ascender rather
+            #   than of the canon, but flagged, because this is exactly the
+            #   class of judgement the map says to distrust.
+            {
+                'number': 13,
+                'pali': 'เวฬุวะเน กะลันทะกะนิวาเป,',
+                'pali_roman': 'Veḷuvane kalandakanivāpe,',
+                'thai': '',
+                'paiboon': '',
+                'english': "in the Bamboo Grove, at the squirrels' feeding place,",
+            },
+            {
+                'number': 14,
+                'pali': 'มาฆะปุณณะมิยัง วัฑฒะมานะกัจฉายายะ,',
+                'pali_roman': 'Māghapuṇṇamiyaṃ vaḍḍhamānakacchāyāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'on the Māgha full moon, as the shadows were lengthening,',
+            },
+            {
+                'number': 15,
+                'pali': 'ตัส์มิง สันนิปาเต ภะคะวา วิสุทธุโปสะถัง อะกาสิ,',
+                'pali_roman': 'Tasmiṃ sannipāte bhagavā visuddhuposathaṃ akāsi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and at that assembly the Blessed One held the pure Uposatha,',
+            },
+            {
+                'number': 16,
+                'pali': 'อะยัง อัมหากัง ภะคะวะโต เอโกเยวะ สาวะกะสันนิปาโต อะโหสิ.',
+                'pali_roman': 'Ayaṃ amhākaṃ bhagavato ekoyeva sāvakasannipāto ahosi.',
+                'thai': '',
+                'paiboon': '',
+                'english': "and this was the one and only such assembly of our Blessed One's disciples.",
+            },
+            {
+                'number': 17,
+                'pali': 'จาตุรังคิโก อัฑฒะเตระสานิ ภิกขุสะตานิ,',
+                'pali_roman': 'Cāturaṅgiko aḍḍhaterasāni bhikkhusatāni,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Possessed of four factors: twelve hundred and fifty bhikkhus,',
+            },
+            {
+                'number': 18,
+                'pali': 'สัพเพสังเยวะ ขีณาสะวานัง,',
+                'pali_roman': 'Sabbesaṃyeva khīṇāsavānaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all of them arahants whose taints were destroyed.',
+            },
+            {
+                'number': 19,
+                'pali': 'มะยันทานิ อิมัง มาฆะปุณณะมีนักขัตตะสะมายัง,',
+                'pali_roman': 'Mayandāni imaṃ māghapuṇṇamīnakkhattasamayaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'We now, at this season of the Māgha full-moon asterism,',
+            },
+            {
+                'number': 20,
+                'pali': 'ตักกาละสะทิสัง สัมปัตตา,',
+                'pali_roman': 'Takkālasadisaṃ sampattā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having come to a time like that time,',
+            },
+            {
+                'number': 21,
+                'pali': 'สุจิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง อะนุสสะระมานา อิมัส์มิง ตัสสะ ภะคะวะโต,',
+                'pali_roman': 'Suciraparinibbutampi taṃ bhagavantaṃ anussaramānā imasmiṃ tassa bhagavato,',
+                'thai': '',
+                'paiboon': '',
+                'english': "recollecting that Blessed One though he has long since gone to final nibbāna, here at that Blessed One's",
+            },
+            {
+                'number': 22,
+                'pali': 'สักขิภูเต เจติเย อิเมหิ ทีปะธูปะปุปผาทิสักกาเรหิ ตัง ภะคะวันตัง,',
+                'pali_roman': 'Sakkhibhūte cetiye imehi dīpadhūpapupphādisakkārehi taṃ bhagavantaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'shrine that stands witness to him, with these offerings of lamps, incense, flowers and the rest, to that Blessed One',
+            },
+            {
+                'number': 23,
+                'pali': 'ตานิ จะ อัฑฒะเตระสานิ ภิกขุสะตานิ อะภิปูชะยามะ,',
+                'pali_roman': 'Tāni ca aḍḍhaterasāni bhikkhusatāni abhipūjayāma,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and to those twelve hundred and fifty bhikkhus we make our offering.',
+            },
+            {
+                'number': 24,
+                'pali': 'สาธุ โน ภันเต ภะคะวา,',
+                'pali_roman': 'Sādhu no bhante bhagavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It would be well, venerable Blessed One,',
+            },
+            {
+                'number': 25,
+                'pali': 'สะสาวะกะสังโฆ สุจิระปะรินิพพุโต,',
+                'pali_roman': 'Sasāvakasaṅgho suciraparinibbuto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who with your community of disciples went long since to final nibbāna,',
+            },
+            {
+                'number': 26,
+                'pali': 'คุเณหิ ธะระมาโน,',
+                'pali_roman': 'Guṇehi dharamāno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and who yet endure by your qualities,',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: ปะฏิคคัณหาตุ IS BARE AGAIN — no mark
+            #   over the ณ, read at 4x on an isolated crop. That is pages 68,
+            #   69, 70 and now 71 all bare against page 67's ปะฏิคคัณ์หาตุ.
+            #   Four against one, on the same word in the same closing
+            #   formula, so the question is now firmly whether this printer
+            #   sets the mark at all rather than which of the two marks it is.
+            {
+                'number': 27,
+                'pali': 'อิเม สักกาเร ทุคคะตะปัณณาการะภูเต ปะฏิคคัณหาตุ,',
+                'pali_roman': 'Ime sakkāre duggatapaṇṇākārabhūte paṭiggaṇhātu,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'if you would accept these offerings, poor gifts as they are,',
+            },
+            {
+                'number': 28,
+                'pali': 'อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ.',
+                'pali_roman': 'Amhākaṃ dīgharattaṃ hitāya sukhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for our welfare and happiness for a long time to come.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0334.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Five
+        #   rows are printed and then the sheet runs out — the sentence has no
+        #   main verb yet, so it plainly carries on. It is listed in
+        #   batch_status.continues and carries continues: true. Its two
+        #   predecessors ran to thirty rows each, which is a reason to expect
+        #   more and never a reason to assume how many.
+        # ‼ CHECK [IMG_0334.PNG]: NO FULL STOP ANYWHERE IN THE FIVE ROWS,
+        #   which differs from both its predecessors. The Visākha and Aṭṭhamī
+        #   Saraphañña verses close a couplet with a stop at the end of every
+        #   second row; these five run straight on. Checked at the end of rows
+        #   2 and 4, where a stop would fall — the paper after คิริพภะเย and
+        #   after โคตะโมหะโข is clear. Reproduced as printed.
+        # ‼ CHECK [IMG_0334.PNG]: NO CHANT NUMBER. The title is set on TWO
+        #   printed lines — สะระภัญญะคาถา above and สำหรับสวดในวันมาฆบูชา
+        #   below — joined with a single space into one title_thai, which is
+        #   how both earlier Saraphañña titles were handled.
+        'id': 'sarabhanna-gatha-magha',
+        'title_thai': 'สะระภัญญะคาถา สำหรับสวดในวันมาฆบูชา',
+        'title_pali': '',
+        'title_roman': 'sà-rá-pan-yá-kaa-tǎa sǎm-ràp sùat nai wan maa-ká-buu-chaa',
+        'title_english': 'The Saraphañña Verses for Chanting on Māgha Pūjā Day',
+        'page_start': 71,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0334.PNG]: SET IN TWO COLUMNS, AND THIS IS THE
+            #   FIRST PAIRING. The left cell holds มาฆะนักขัตตะยุตตายะ and the
+            #   right ปุณณายะปุณณะมายังโย, joined into this one verse. The
+            #   same tests that settled pages 69 and 70 apply and agree: the
+            #   left column carries no punctuation, and read across the rows
+            #   give continuous sense — row 4 is viharanto rājagahe …
+            #   giribbhaye, one clause across the gutter. Read down, the left
+            #   column is five unfinished half-lines.
+            # ‼ CHECK [IMG_0334.PNG]: THE RIGHT CELL IS PRINTED AS ONE
+            #   UNBROKEN RUN — ปุณณายะปุณณะมายังโย, with no space before โย.
+            #   Its Visākha counterpart on page 67 prints วิสาขะปุณณะมายัง โย
+            #   with a space, and the app holds it that way. Transliterated
+            #   here as the run it is printed as, puṇṇāyapuṇṇamāyaṃyo, rather
+            #   than spaced out to match the other chant. Verse 2's โคตะโมหะโข
+            #   is the same case.
+            {
+                'number': 1,
+                'pali': 'มาฆะนักขัตตะยุตตายะ ปุณณายะปุณณะมายังโย',
+                'pali_roman': 'Māghanakkhattayuttāya puṇṇāyapuṇṇamāyaṃyo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'On the full-moon day joined with the Māgha asterism, he who —',
+            },
+            {
+                'number': 2,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ ภะคะวา โคตะโมหะโข',
+                'pali_roman': 'Arahaṃ sammāsambuddho bhagavā gotamohakho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the worthy one, fully enlightened by himself, the Blessed One, Gotama indeed,',
+            },
+            {
+                'number': 3,
+                'pali': 'สุทธานันตะทะยาญาโณ สัตถา โลเก อะนุตตะโร',
+                'pali_roman': 'Suddhānantadayāñāṇo satthā loke anuttaro',
+                'thai': '',
+                'paiboon': '',
+                'english': 'of pure and boundless knowledge and compassion, the unsurpassed Teacher in the world,',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: มาฆะทานัง WHERE THE SENSE WANTS
+            #   มาคะธานัง. Read at 4x on an isolated crop: the second
+            #   consonant is ฆ and the fourth is ท, so the word as printed is
+            #   māghadānaṃ. The standard line is viharanto rājagahe māgadhānaṃ
+            #   giribbhaye — 'of the MAGADHANS', the people, which is what a
+            #   hill-fort belongs to. It looks as though the compositor was
+            #   pulled toward มาฆะ by the six other occurrences of it on this
+            #   page. Reproduced exactly as printed and NOT corrected; the
+            #   English gives the Magadhan sense, which is flagged here so the
+            #   two do not silently disagree.
+            {
+                'number': 4,
+                'pali': 'วิหะรันโต ราชะคะเห มาฆะทานัง คิริพภะเย',
+                'pali_roman': 'Viharanto rājagahe māghadānaṃ giribbhaye',
+                'thai': '',
+                'paiboon': '',
+                'english': 'dwelling at Rājagaha, in the hill-girt stronghold of the Magadhans,',
+            },
+            # ‼ CHECK [IMG_0334.PNG]: เวฬุวันนัมหิ with นน, where standard
+            #   editions have veḷuvanamhi with one n. Read at 4x: there are
+            #   clearly two น. The ฬ is certain here too — its ascender is
+            #   visible at the same magnification. Reproduced as printed and
+            #   transliterated veḷuvannamhi to match.
+            {
+                'number': 5,
+                'pali': 'วิหาเร เวฬุวันนัมหิ กะลันทะกะนิวาปิเย',
+                'pali_roman': 'Vihāre veḷuvannamhi kalandakanivāpiye',
+                'thai': '',
+                'paiboon': '',
+                'english': "in the monastery of the Bamboo Grove, at the squirrels' feeding place —",
             },
         ],
     },
