@@ -2855,3 +2855,62 @@ it offered.
 - ⚠️ *Unreviewed:* the new copy is mine and has had no second reader.
 
 ---
+
+---
+
+## 2026-08-19 (late) — A hero that described itself, and the option that fell out of it
+
+**What I built.** The home page opened with *"Two subjects, side by side."* I
+read it back and said:
+
+> This doesn't sound very convincing.
+
+It was describing my filing system. A visitor doesn't care how the site is
+organised, they care what they get. It now names the four doors it opens, and
+the strapline moved up into the heading.
+
+**How we did it.** The structural fix took one commit. The culture-freedom line
+took four rounds and none of the AI's wordings survived. *"Keep your own
+culture, take on part of another"* made Thai culture the unnamed thing being
+declined. The next one made life a set of walls to fit around —
+
+> life shoudn't allow life is what we make it
+
+— and the one after had me watching Thailand practise through a window. I wrote
+the final copy myself, then added a personal note to `/about` on why preserving
+"Thainess" matters to me.
+
+**What I learned.** An objection to six words quietly deleted an option. I'd
+argued that *"follow no culture at all"* contradicts my own explainer page —
+which was true — but the clause went and the culturally neutral path went with
+it, off the front page entirely. Nothing failed. Nothing flagged it. It took me
+asking:
+
+> Should we mention any of this - Adopt aspects of another culture if you wish.
+> Or follow no culture at all. ... Because this is very important.
+
+Being right about the wording is not the same as being right about the change.
+
+**Engineering Contribution**
+
+- *Decisions made:* Rejected three AI wordings in a row, each for a reason worth
+  keeping — one made the host culture the thing being declined, one made the
+  reader's life a constraint, one made them a spectator. Chose to **name** the
+  culturally neutral option rather than imply it with a general promise of
+  freedom, and borrowed `/dhamma-and-culture`'s own phrasing so the two pages
+  agree instead of paraphrasing each other into conflict. Full record in
+  [`prompts/hero-copy-rewrite/REASONING.md`](prompts/hero-copy-rewrite/REASONING.md).
+
+- *Improvements made to generated code:* The strapline came out of the `<h1>`'s
+  3rem brand weight into its own sized span — a full sentence at brand size
+  wraps to four lines on desktop and walls up on mobile. Normalised "Theravada"
+  across all 26 mentions after my own new copy introduced the only macron on the
+  site. Added three guard tests for the promise that went missing, and **checked
+  they can actually fail** by deleting the phrase and watching the suite go red
+  before restoring it. Also fenced off the parochial-settings test with a scope
+  comment, because it scans for "England" and "British" and my new About note
+  uses both on purpose — a future session widening that check would delete my
+  own words to make tests pass.
+
+- *Roughly how much was accepted as-is vs engineered on:* The layout and CSS
+  shipped as-is. The copy is entirely mine.
