@@ -193,21 +193,6 @@ OTHERING_LABELS = ["foreigner", "Foreigner", "non-Thai", "Non-Thai"]
 LEARNER_FACING_PAGES = ["/culture", "/formality", "/monk-mode", "/"]
 
 
-@pytest.fixture
-def unlocked_client():
-    """A learner with everything open, so gated pages render their content."""
-    app.config["TESTING"] = True
-    with app.test_client() as c:
-        with c.session_transaction() as sess:
-            sess["user_progress"] = {
-                "xp": 9999, "level": 10, "subscription_tier": "pro",
-                "is_developer": True, "monk_mode": False, "full_unlock": True,
-                "alphabet_completed": True,
-                "sections_unlocked": [], "sections_visited": [],
-            }
-        yield c
-
-
 @pytest.mark.parametrize("path", LEARNER_FACING_PAGES)
 @pytest.mark.parametrize("label", OTHERING_LABELS)
 def test_no_page_defines_a_reader_by_what_they_are_not(unlocked_client, path, label):

@@ -48,23 +48,16 @@ def client():
 
 
 @pytest.fixture
-def unlocked_client():
-    """The learner who met the original crash: past the gate, into the view."""
-    app.config["TESTING"] = True
-    with app.test_client() as c:
-        with c.session_transaction() as sess:
-            sess["user_progress"] = {
-                "xp": 9999, "level": 10, "subscription_tier": "basic",
-                "is_developer": False, "monk_mode": False, "full_unlock": True,
-                "alphabet_completed": True,
-                "sections_unlocked": [], "sections_visited": [],
-            }
-        yield c
+def paying_client(make_client):
+    """A Basic subscriber who is not a developer — the learner the original
+    crash was reserved for. Deliberately not the everything-open fixture: as a
+    developer this test would pass without proving anything about a customer."""
+    return make_client(subscription_tier="basic", is_developer=False)
 
 
-def test_the_learner_who_paid_gets_the_page_not_a_crash(unlocked_client):
+def test_the_learner_who_paid_gets_the_page_not_a_crash(paying_client):
     """The regression this whole file exists for."""
-    response = unlocked_client.get("/register")
+    response = paying_client.get("/register")
     assert response.status_code == 200
 
 
@@ -73,8 +66,8 @@ def test_a_locked_out_visitor_gets_the_locked_page_not_a_crash(client):
     assert response.status_code == 200
 
 
-def test_all_nine_registers_reach_the_page(unlocked_client):
-    body = unlocked_client.get("/register").get_data(as_text=True)
+def test_all_nine_registers_reach_the_page(paying_client):
+    body = paying_client.get("/register").get_data(as_text=True)
     for key in EXPECTED_ORDER:
         # Escaped, because Jinja autoescapes: "Archaic & Ceremonial" reaches
         # the page as "Archaic &amp; Ceremonial".
@@ -123,18 +116,50 @@ def test_the_section_is_on_the_curriculum_outline_now_it_is_built():
 
 
 
-def test_the_page_invites_corrections(unlocked_client):
+def test_the_page_invites_corrections(paying_client):
     """Register varies by region, age and setting more than most of the
     language, so a route for corrections belongs here permanently — not as a
     notice to be removed once someone has signed it off."""
-    body = unlocked_client.get("/register").get_data(as_text=True)
+    body = paying_client.get("/register").get_data(as_text=True)
     assert "corrections are welcome" in body
     assert "/contact" in body
 
 
-def test_the_royal_register_still_carries_its_legal_warning(unlocked_client):
+def test_the_royal_register_still_carries_its_legal_warning(paying_client):
     """The one register where a learner's mistake is a legal matter rather
     than a social one. This warning is not decoration."""
-    body = unlocked_client.get("/register").get_data(as_text=True)
+    body = paying_client.get("/register").get_data(as_text=True)
     assert "112" in body
     assert "Read it, do not write it." in body
+
+
+# ── Contrast ──────────────────────────────────────────────────────────────
+#
+# register.html renders each level badge as WHITE text on the register's own
+# colour. Six of the nine first-draft colours failed AA against white — saffron
+# and gold sat near 2.1:1 — on a site that ships a Learning Support panel for
+# readers with visual stress. They were darkened in HLS with hue and saturation
+# untouched; this stops the pretty originals coming back.
+
+def _relative_luminance(hex_colour):
+    """WCAG 2.1 relative luminance."""
+    raw = hex_colour.lstrip("#")
+    channels = [int(raw[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+    linear = [c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+              for c in channels]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+
+def contrast_with_white(hex_colour):
+    lighter, darker = 1.0, _relative_luminance(hex_colour)
+    return (lighter + 0.05) / (darker + 0.05)
+
+
+@pytest.mark.parametrize("key", EXPECTED_ORDER)
+def test_every_level_badge_is_readable(key):
+    """AA for normal text is 4.5:1, and the badge text is small."""
+    colour = REGISTERS[key]["color"]
+    ratio = contrast_with_white(colour)
+    assert ratio >= 4.5, (
+        f"{key} badge is {colour} at {ratio:.2f}:1 against white — below AA"
+    )

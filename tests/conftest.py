@@ -28,3 +28,50 @@ os.environ["DATABASE_URL"] = ""
 # exist to block — without this they would start failing with 429s that say
 # nothing about whether the code is correct.
 os.environ["DISABLE_RATE_LIMITS"] = "1"
+
+# ── Signed-in learners ────────────────────────────────────────────────────
+#
+# Several suites need a client that is past the access gates. They do NOT all
+# need the same learner: a test about what a paying subscriber sees must not
+# quietly run as a developer with everything unlocked, or it proves nothing.
+# So the shared piece is the builder and the defaults, and each test names the
+# learner it means.
+
+import pytest  # noqa: E402
+
+from app import app as flask_app  # noqa: E402
+
+UNLOCKED_PROGRESS = {
+    "xp": 9999,
+    "level": 10,
+    "subscription_tier": "pro",
+    "is_developer": True,
+    "monk_mode": False,
+    "full_unlock": True,
+    "alphabet_completed": True,
+    "sections_unlocked": [],
+    "sections_visited": [],
+}
+
+
+@pytest.fixture
+def make_client():
+    """Build a test client for a learner, described by overrides.
+
+        client = make_client(subscription_tier="basic", is_developer=False)
+    """
+    def _make(**overrides):
+        flask_app.config["TESTING"] = True
+        client = flask_app.test_client()
+        progress = dict(UNLOCKED_PROGRESS)
+        progress.update(overrides)
+        with client.session_transaction() as session:
+            session["user_progress"] = progress
+        return client
+    return _make
+
+
+@pytest.fixture
+def unlocked_client(make_client):
+    """Everything open — for tests that only need to get past the gate."""
+    return make_client()
