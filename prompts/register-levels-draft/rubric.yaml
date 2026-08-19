@@ -1,0 +1,49 @@
+# Evaluation rubric for: Register Levels Draft
+
+prompt: register-levels-draft
+version: 1
+criteria:
+  - name: derives_the_contract_from_the_template
+    description: Reads the consuming template and states which keys and fields it requires
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['field', 'key', 'contract', 'template', 'sub_level', 'cultural_notes'])"
+
+  - name: covers_all_nine_registers
+    description: All nine levels are present, monastic through vulgar
+    weight: 5
+    pass_condition: "sum(s in output.lower() for s in ['monastic', 'royal', 'literary', 'technical', 'formal', 'neutral', 'casual', 'vulgar', 'archaic', 'obsolete']) >= 8"
+
+  - name: includes_thai_script
+    description: Real Thai script, not romanisation alone
+    weight: 5
+    pass_condition: "any('\u0e00' <= c <= '\u0e7f' for c in output)"
+
+  - name: includes_romanisation
+    description: Paiboon romanisation with tone marks accompanies the Thai
+    weight: 4
+    pass_condition: "any(c in output for c in ['à', 'â', 'á', 'ǎ', 'ɔ', 'ʉ', 'ə'])"
+
+  - name: flags_its_own_uncertainty
+    description: Says which parts need checking rather than presenting all at one confidence
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['check', 'unsure', 'confirm', 'review', 'draft', 'not confident'])"
+
+  - name: warns_where_the_stakes_are_legal
+    description: The royal register is flagged as recognise-only, not a style choice
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['112', 'lese', 'lèse', 'legal', 'criminal', 'do not write'])"
+
+  - name: is_substantial
+    description: A real draft with worked examples, not an outline
+    weight: 2
+    pass_condition: "len(output.split()) >= 120"
+
+test_cases:
+  - input:
+      task: "Draft nine levels of Thai formality for an existing template expecting monastic, royal, obsolete, literary, technical, formal, neutral, casual and vulgar"
+    expected_traits:
+      - derives the required fields from the consuming template
+      - covers all nine registers
+      - gives Thai script with Paiboon romanisation
+      - flags which lines need a native speaker's check
+      - marks the royal register as recognise-only for legal reasons

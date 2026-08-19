@@ -1,0 +1,37 @@
+Reading templates/register.html first gives the contract: nine keys in a fixed
+order, each needing level, name, thai, icon, color, description, usage_context,
+social_notes, examples and warning, with sub_level_a and sub_level_b only on
+casual and cultural_notes only on vulgar. Each example needs thai, paiboon,
+english, and either a note or a polite form.
+
+1. Monastic — ภาษาพระ. A separate vocabulary rather than politer Thai.
+   อาตมาจะไปวัด (àat-dtà-maa jà bpai wát) "I will go to the temple." อาตมา is a
+   monk's word for himself. พระฉันข้าวแล้วหรือยังครับ (prá chǎn kâao lɛ́ɛo rʉ̌ʉ yang
+   kráp) — ฉัน is the monastic word for eating; กิน would be wrong.
+   Please check: is นมัสการ the greeting your temple uses?
+
+2. Royal — ราชาศัพท์. เสวย (sà-wə̌əi) to eat, บรรทม (ban-tom) to sleep,
+   ทรงพระเจริญ (song prá jà-rəən). Recognise this register, do not write it:
+   Section 112 makes speech about the monarchy a criminal matter, so an error
+   here is a legal risk rather than a social one.
+
+3. Archaic and ceremonial — ภาษาโบราณ. ณ (ná) "at", อนึ่ง (à-nʉ̀ng) "furthermore".
+   Please check: is ณ archaic or simply formal-written?
+
+4. Literary — ภาษาวรรณคดี. บุปผา (bùp-pǎa) for ดอกไม้, นภา (ná-paa) for ท้องฟ้า.
+
+5. Academic — ภาษาวิชาการ. วิเคราะห์ (wí-krɔ́), สมมติฐาน (sǒm-mút-dtì-tǎan).
+
+6. Formal — ภาษาทางการ. กระผมขอเรียนเชิญท่านครับ, รับประทานอาหาร (ráp-bprà-taan aa-hǎan).
+
+7. Neutral — ภาษาสุภาพ. สวัสดีครับ (sà-wàt-dii kráp). The one to learn first.
+
+8. Casual — ภาษาพูด. ไปไหน (bpai nǎi), polite form ไปไหนครับ. 8A relaxed with
+   friends, 8B blunt.
+
+9. Vulgar — ภาษาหยาบ. กู (guu) and มึง (mʉng). Recognise only. These were once
+   ordinary pronouns, which is why they can still carry affection between old
+   friends.
+
+This is a draft and the Thai has not been checked by a native speaker. Each
+register carries its own list of what to confirm.

@@ -7,6 +7,29 @@ Each entry follows this format:
 
 ---
 
+## register-levels-draft
+
+### 2026-08-19 — v1
+**Change:** First version — asks for the nine formality registers as a reviewable draft: *"draft the nine register levels for me to review"*, with instructions to derive the field contract from the consuming template first, ground the romanisation in the app's existing Paiboon index, and flag uncertainty per register.
+**Reason:** `templates/register.html` had been in the repo since the first commit with no data behind it. The last three words of the request set the shape: the deliverable was something a Thai teacher could check, not finished content.
+**Impact:** Nine registers and 29 examples in `register_levels.py` (`e921ad4`). Found that `REGISTER_LEVELS` never existed in any commit, so `/register` had raised `NameError` for anyone past the access gate since the first commit — fixed first with a temporary 302 to `/formality` (`3d2fb99`). Also found the Paiboon index disagrees with itself (`phrá`/`prá`, `thaan`/`taan`, an IPA `ŋ` against the app's `ng`), which feeds the dictionary and chanting book too. The Thai remains unreviewed; the page carries a permanent invitation for corrections (`3eb7019`) rather than a temporary draft banner.
+
+---
+
+## inclusive-positioning
+
+### 2026-08-19 — v2 (the two constraints)
+**Change:** Adds *"Universal must mean no country named at all — not my country substituted for Thailand"* and *"Describe people by what they are learning, never by what they are not."*
+**Reason:** Both were caused by specific failures in v1's output that Josh caught. The draft proposed "practising the precepts in Britain" — *"Isn't this supposed to be universal?"* — and a first pass renamed "foreigner" to "non-Thai", which prompted *"Is there a better name than non-Thai?"*
+**Impact:** `/practising-anywhere` names no country anywhere on the page and says so, built from the five precepts, the three bases of merit and the Sigālovāda Sutta's six directions. The label was dropped rather than renamed, in favour of second-person address. Monk Mode stopped calling non-Thai monks "Western" and now describes both sides by the language they are learning. Tests fail if any of it comes back (`c7fa28d`, `4167bc9`).
+
+### 2026-08-19 — v1 (the diagnosis)
+**Change:** First version — the positioning question with an audit step in front of it: read the gate configuration before proposing any change.
+**Reason:** A learner who visits Thai temples said the app felt like Thai culture was the price of admission for the Dhamma. Without the audit step the prompt rewrites copy; with it, it checks whether the copy is even true.
+**Impact:** Found that the app already granted exactly what she asked for — `theravada`, `meditation`, `chanting` and `paiboon` all free, level 1, `requires_alphabet: False` — and that the home page said the opposite. Shipped as two new pages plus a home-page chooser (`80a8712`, `5b113d6`).
+
+---
+
 ## xp-economy-audit
 
 ### 2026-08-18 — v2 (remediation)

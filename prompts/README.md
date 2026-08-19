@@ -23,6 +23,8 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`chanting-book-entry`](./chanting-book-entry/) | content / agent-workflow | Two-stage workflow turning a page of a physical chanting book into a five-layer entry, without inventing canonical Pali | Yes (v1 → v4) |
 | [`chanting-book-batch`](./chanting-book-batch/) | content / agent-workflow | The same workflow rebuilt for volume — a 286-chant book read from photographs, page by page, as a digital edition rather than a translation | Yes (v1 → v7, forked from `chanting-book-entry` v4) |
 | [`xp-economy-audit`](./xp-economy-audit/) | analysis | Audits the live XP system per audience — found free-tier levelling unlocks nothing, plus two endpoints that minted XP on request | Yes (v1 audit → v2 remediation) |
+| [`inclusive-positioning`](./inclusive-positioning/) | analysis / content | Separates the universal teaching from one culture's expression of it — found the app's copy contradicted its own access rules | Yes (v1 → v2) |
+| [`register-levels-draft`](./register-levels-draft/) | content | Drafts nine levels of Thai formality against an existing template's contract, grounded in the app's own Paiboon index and flagged for review | No (single version) |
 
 ## Featured iterations
 
@@ -47,6 +49,18 @@ It also produced the folder's best argument for negative-testing a rubric. All 1
 **v7** is where the prompt stopped being about reproduction. Two pages went live showing about 40% of what the printed page shows — stage 1 had read the rest correctly and written it into the batch file, and stage 2 had no field for it and let it go. Nothing raised and no test failed; it was found by a human reading the app beside the book. The gap was structural: reconciliation compared chants against the manifest, and *nothing compared the leftovers against anything*. So v7 adds the rule that **everything stage 1 recorded must land somewhere, or the batch does not close** — "there is no field for it" is now a finding that stops the run, not a reason to drop content. Its mirror sits beside it: never write data the app cannot render, or you get a second copy of the truth that nothing tests and nobody reads.
 
 The same release reframed the job — a digital **publication**, not a translation — with a seven-step lifecycle in which two steps, human review and approval, are marked as the developer's and explicitly not delegable. A machine can prove two layers have the same number of units; it cannot know that a line of Pali is the one the tradition actually chants. The five criteria added for v7 were each negative-tested before being trusted, on the same principle the paragraph above learned the hard way.
+
+### [`inclusive-positioning`](./inclusive-positioning/)
+
+A learner said the app felt culturally exclusionary. The instinct is to rewrite the copy; adding *"check what the access rules actually grant before proposing anything"* turned it into a finding instead — `SECTION_REQUIREMENTS` already made every Buddhism page free, level 1 and free of the alphabet prerequisite, with a comment reading *"you do not need to read Thai to chant along."* **The permissions were right and the shop window was lying about them.** The home page had been telling people to "pass the quiz to unlock the site" for a quiz that unlocks nothing in the Buddhism section.
+
+The two constraints in v2 are both there because the first attempt got it wrong in a way only a human could see. It illustrated lay practice with *"practising the precepts in Britain"* — which is the same parochialism wearing a different flag, and led to the page being rebuilt on the Sigālovāda Sutta's six directions, universal by construction because every society has parents, teachers, partners, friends, people who work and people who teach. Then "foreigner" was renamed to "non-Thai", which is politer and **structurally identical** — both define a reader by not belonging. The fix was noticing that almost every sentence carrying the label already said "you", which made the label redundant: *"As a foreigner, you're NOT expected to initiate wai"* → *"You're not expected to initiate the wai."* The lesson the folder records is that **renaming a category is not the same as removing it.**
+
+### [`register-levels-draft`](./register-levels-draft/)
+
+The instructive part is what the prompt found rather than what it wrote. `templates/register.html` had been in the repo since the first commit, calling for a `REGISTER_LEVELS` dict that **never existed in any commit** — traced through the whole history including the deleted 236KB `app_backup.py`, where the name was also only ever *used*. Because the access gate ran before the view, the resulting `NameError` was invisible to everyone except learners who had paid or reached Level 4, and nothing linked to the page, so nobody ever reported it. **The gate hid the crash from exactly the people who could have reported it, and showed it only to the people who had paid.**
+
+It also shows two review habits worth keeping: the review sheet is *generated from* the data so a corrected sheet cannot drift from an uncorrected dict, and the draft flags its own uncertainty per register rather than presenting nine registers at one confidence level.
 
 ### [`buddhist-pdf-integration`](./buddhist-pdf-integration/)
 

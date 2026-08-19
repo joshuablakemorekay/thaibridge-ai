@@ -1,6 +1,6 @@
 # Eval Results Summary
 
-_Generated: 2026-08-18 15:32 UTC_
+_Generated: 2026-08-19 12:59 UTC_
 
 | Prompt | Cases | Avg Score | Status |
 |---|---|---|---|
@@ -11,8 +11,10 @@ _Generated: 2026-08-18 15:32 UTC_
 | `claude-code-workflow` | 1 | 100.0% | ✅ pass |
 | `frontend-build` | 1 | 100.0% | ✅ pass |
 | `gamification-system` | 1 | 100.0% | ✅ pass |
+| `inclusive-positioning` | 1 | 100.0% | ✅ pass |
 | `market-research-report` | 1 | 100.0% | ✅ pass |
 | `product-overview-section` | 1 | 100.0% | ✅ pass |
+| `register-levels-draft` | 1 | 100.0% | ✅ pass |
 | `romanization-system` | 1 | 100.0% | ✅ pass |
 | `tones-consonant-classes` | 1 | 100.0% | ✅ pass |
 | `wireframe-layout-system` | 1 | 100.0% | ✅ pass |

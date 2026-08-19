@@ -1,0 +1,34 @@
+Before proposing anything I read the gate configuration rather than the copy.
+
+SECTION_REQUIREMENTS already grants what the learner is asking for: theravada,
+meditation, chanting and paiboon are each level 1, tier free, with
+requires_alphabet set to False. The comment beside the chanting entry even says
+you do not need to read Thai to chant along. So the access rules and the page
+copy disagree, and the copy is the part that is wrong. The home page says the
+alphabet quiz will "unlock the site"; it unlocks the language track and nothing
+in the Buddhism section.
+
+That makes this a positioning problem rather than a permissions one, and it
+means the fix does not require removing anything.
+
+Keep the Thai cultural material. It is what makes the project distinctive, and
+the objection was never to its presence — it was to its apparent compulsoriness.
+Instead, separate the two things the app teaches and let a reader take either.
+
+The universal layer is the Dhamma itself: the four noble truths, the eightfold
+path, the precepts, metta and meditation. None of it depends on where a person
+was born. The cultural layer is one tradition's expression of that teaching:
+temple etiquette, ceremonies, the chanting tradition, and the vocabulary Thai has
+absorbed from Pali. Present them side by side, equal in weight, with the
+relationship explained, so a reader can see that the customs are examples rather
+than requirements.
+
+Practically: give the home page a way in that is not the alphabet, state on the
+Dhamma pages that they need no Thai, and say on the culture pages that these
+customs are one tradition's way of doing things.
+
+For the page teaching lay practice, build it from frameworks that are universal
+by construction rather than from worked examples, since an example always
+carries a setting with it. The six directions of the Sigalovada Sutta work well:
+every society has parents, teachers, partners, friends, people who work and
+people who teach the teaching.

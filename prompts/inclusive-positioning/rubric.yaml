@@ -1,0 +1,50 @@
+# Evaluation rubric for: Inclusive Positioning
+
+prompt: inclusive-positioning
+version: 2
+criteria:
+  - name: audits_gates_before_proposing
+    description: Checks what the access rules actually grant, rather than rewriting copy on sight
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['section_requirements', 'gate', 'access rule', 'requires_alphabet', 'level 1', 'free'])"
+
+  - name: finds_the_copy_contradicts_the_code
+    description: Names the gap between what the app grants and what the page claims
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['already', 'contradict', 'disagree', 'not true', 'unlock the site', 'says otherwise'])"
+
+  - name: keeps_the_thai_material
+    description: Preserves the cultural content rather than solving the problem by deletion
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['keep', 'preserve', 'not remove', 'retain', 'context']) and 'thai' in output.lower()"
+
+  - name: separates_universal_from_cultural
+    description: Distinguishes the teaching itself from one culture's expression of it
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['universal', 'dhamma']) and any(s in output.lower() for s in ['cultural', 'expression', 'tradition', 'context'])"
+
+  - name: names_no_country_as_the_setting
+    description: Does not substitute one country for another when describing where practice happens
+    weight: 4
+    pass_condition: "not any(s in output for s in ['in Britain', 'in America', 'in Europe', 'the West'])"
+
+  - name: avoids_defining_people_by_exclusion
+    description: Describes people by what they are doing, not by what they are not
+    weight: 4
+    pass_condition: "not any(s in output.lower() for s in ['foreigner', 'non-thai', 'western monk'])"
+
+  - name: is_substantial
+    description: A real proposal, not a one-line verdict
+    weight: 2
+    pass_condition: "len(output.split()) >= 60"
+
+test_cases:
+  - input:
+      situation: "Learners say a Thai-language Buddhism app feels culturally exclusionary; every Buddhism page is already free, level 1 and ungated, but the home page says the alphabet quiz unlocks the site"
+    expected_traits:
+      - reads the access rules before proposing a change
+      - identifies that the copy contradicts the gate configuration
+      - keeps the Thai cultural material rather than removing it
+      - separates the universal teaching from its Thai expression
+      - names no country as the setting for practice
+      - uses no label defining a reader by what they are not
