@@ -625,6 +625,47 @@ FREE_AI_DAILY_LIMIT = 15                       # messages/day for free & basic t
 DRILL_XP_DAILY_CAP = 200
 FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 
+# The Dhamma gets its OWN daily allowance, drawn from a separate counter.
+#
+# Sharing one pool quietly broke the promise made just above. Tutor and Dhamma
+# both spent the same 15, so a learner who drilled Thai vocabulary all morning
+# and then asked a question about the precepts was told to come back tomorrow
+# or upgrade. The teaching was never behind the paywall, but the question about
+# it sat behind a language-study budget — the same line, reached by a side
+# door.
+#
+# This is added ON TOP of the tutor's 15 rather than reserved out of it.
+# Reserving would have cut everyone's tutor allowance from 15 to 10 to fund a
+# fix for a promise we had already made; nobody should lose something so that
+# we can keep our word. At the costed 0.285p a message it is 1.4p a day for
+# someone who exhausts it daily, which almost nobody will.
+FREE_DHAMMA_DAILY_LIMIT = 5
+DHAMMA_AI_MODES = {'buddhist'}                 # modes that draw on that pool
+
+# Which session key each pool counts in, and which constant sets its size.
+#
+# 'count' is the tutor's key and keeps its old name, so a session created before
+# the split keeps today's tally instead of being handed a fresh 15 at rollout.
+#
+# The limit is stored as the CONSTANT'S NAME rather than its value. Copying the
+# value here made this dict a second source of truth that silently won: the
+# constants above still looked authoritative, but changing one no longer changed
+# the gate, and the suite's monkeypatch of FREE_AI_DAILY_LIMIT stopped biting.
+AI_POOLS = {
+    'tutor':  {'key': 'count',  'limit_name': 'FREE_AI_DAILY_LIMIT'},
+    'dhamma': {'key': 'dhamma', 'limit_name': 'FREE_DHAMMA_DAILY_LIMIT'},
+}
+
+
+def ai_pool_for(mode):
+    """The pool name a given AI mode spends from."""
+    return 'dhamma' if mode in DHAMMA_AI_MODES else 'tutor'
+
+
+def ai_pool_limit(pool_name):
+    """Today's allowance for a pool, read from the constant at call time."""
+    return globals()[AI_POOLS[pool_name]['limit_name']]
+
 # Pro is "unlimited" in the sense that matters to a learner, but not literally:
 # without a ceiling, one subscriber could run up more in API costs than they pay.
 # At 0.285p worst case per message (a full 500-token reply on top of the ~1,100
@@ -648,7 +689,8 @@ SUBSCRIPTION_TIERS = {
             '✓ Dhamma talks in Thai & English',
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Guided meditation sessions, timer & techniques',
-            f'✓ AI Tutor & Dhamma Q&A — {FREE_AI_DAILY_LIMIT} messages a day',
+            f'✓ AI Thai tutor — {FREE_AI_DAILY_LIMIT} messages a day',
+            f'✓ Dhamma Q&A — {FREE_DHAMMA_DAILY_LIMIT} questions a day, on its own allowance',
             '✓ Paiboon romanization guide',
             '✓ Progress tracking & levelling',
         ],
@@ -1278,8 +1320,12 @@ def _ai_usage_today():
     today = datetime.now().strftime('%Y-%m-%d')
     usage = session.get('ai_usage')
     if not usage or usage.get('date') != today:
-        usage = {'date': today, 'count': 0}
+        usage = {'date': today, 'count': 0, 'dhamma': 0}
         session['ai_usage'] = usage
+    # A session opened before the Dhamma pool existed has no 'dhamma' key. Fill
+    # it rather than letting .get() default at every call site, so the record
+    # always has the same shape whoever reads it.
+    usage.setdefault('dhamma', 0)
     return usage
 
 def _drill_xp_today():
@@ -1302,14 +1348,30 @@ def ai_limits_status():
         return {
             'tier': tier, 'unlimited': True, 'allowed_modes': None,
             'daily_limit': None, 'used_today': 0, 'remaining': None,
+            'pools': None, 'dhamma_modes': sorted(DHAMMA_AI_MODES),
         }
-    used = _ai_usage_today()['count']
+    usage = _ai_usage_today()
+    pools = {}
+    for name, pool in AI_POOLS.items():
+        limit = ai_pool_limit(name)
+        used = usage.get(pool['key'], 0)
+        pools[name] = {
+            'limit': limit,
+            'used': used,
+            'remaining': max(0, limit - used),
+        }
     return {
         'tier': tier, 'unlimited': False,
         'allowed_modes': sorted(FREE_AI_ALLOWED_MODES),
-        'daily_limit': FREE_AI_DAILY_LIMIT,
-        'used_today': used,
-        'remaining': max(0, FREE_AI_DAILY_LIMIT - used),
+        'pools': pools,
+        # Sent so the page can tell which pool the chosen mode spends from
+        # without hardcoding the word "buddhist" in JavaScript too.
+        'dhamma_modes': sorted(DHAMMA_AI_MODES),
+        # The tutor pool also answers to the original three keys. Nothing but
+        # this file should have to learn a new shape to keep working.
+        'daily_limit': pools['tutor']['limit'],
+        'used_today': pools['tutor']['used'],
+        'remaining': pools['tutor']['remaining'],
     }
 
 def add_xp(points, action_description=""):
@@ -6983,6 +7045,7 @@ def premium():
                            has_addon=has_full_unlock(),
                            dana=DANA,
                            free_ai_daily_limit=FREE_AI_DAILY_LIMIT,
+                           free_dhamma_daily_limit=FREE_DHAMMA_DAILY_LIMIT,
                            # Everything the site teaches, locked pages
                            # included. Shown to everyone, signed in or not:
                            # the sections are the argument for the price, and
@@ -8428,14 +8491,38 @@ def ai_chat():
                                "unlock Conversation, Culture and the Exercise Generator.",
                 })
             usage = _ai_usage_today()
-            if usage['count'] >= FREE_AI_DAILY_LIMIT:
+            pool_name = ai_pool_for(mode)
+            pool = AI_POOLS[pool_name]
+            pool_limit = ai_pool_limit(pool_name)
+            if usage.get(pool['key'], 0) >= pool_limit:
                 log_ai_usage('chat', 'blocked_cap', mode=mode)
+                if pool_name == 'dhamma':
+                    # No upsell here. The teaching is free, and the only honest
+                    # thing to say is that the day's questions are used up and
+                    # the cap is a running cost, not a price on the Dhamma.
+                    message = (f"That’s today’s {pool_limit} Dhamma questions. "
+                               "The teaching here is free and always will be — this "
+                               "limit is only what it costs us to run the model. "
+                               "Please come back tomorrow.")
+                else:
+                    # Point at the Dhamma before pointing at the price. Someone
+                    # out of tutor messages still has their Dhamma questions,
+                    # and telling them to pay when they already have something
+                    # left is the kind of nudge that reads as a trick.
+                    dhamma_left = max(0, ai_pool_limit('dhamma')
+                                      - usage.get(AI_POOLS['dhamma']['key'], 0))
+                    message = (f"You’ve used your {pool_limit} free Thai tutor "
+                               "messages for today. ")
+                    if dhamma_left:
+                        message += (f"You still have {dhamma_left} Dhamma question"
+                                    f"{'' if dhamma_left == 1 else 's'} left — switch to "
+                                    "Dhamma mode to use them. ")
+                    message += "Upgrade to Pro for a much higher daily allowance."
                 return jsonify({
                     'success': False,
                     'gate': 'daily_limit',
-                    'message': f"You’ve used your {FREE_AI_DAILY_LIMIT} free AI messages "
-                               "for today. Upgrade to Pro for a much higher "
-                               "daily allowance, or come back tomorrow.",
+                    'pool': pool_name,
+                    'message': message,
                 })
 
         # Pro has no daily allowance to spend, but it does have a ceiling — see
@@ -8492,10 +8579,17 @@ def ai_chat():
         # and tell the UI how many they have left.
         if tier != 'pro' and isinstance(response, dict) and response.get('success'):
             usage = _ai_usage_today()
-            usage['count'] += 1
+            pool_name = ai_pool_for(mode)
+            pool = AI_POOLS[pool_name]
+            usage[pool['key']] = usage.get(pool['key'], 0) + 1
             session['ai_usage'] = usage
             session.modified = True
-            response['remaining'] = max(0, FREE_AI_DAILY_LIMIT - usage['count'])
+            # `remaining` stays for the pool just spent, since that is what the
+            # hint under the chat box is showing. `pools` goes with it so the
+            # page can update the other allowance too without a second request.
+            response['pool'] = pool_name
+            response['remaining'] = max(0, ai_pool_limit(pool_name) - usage[pool['key']])
+            response['pools'] = ai_limits_status()['pools']
 
         return jsonify(response)
         

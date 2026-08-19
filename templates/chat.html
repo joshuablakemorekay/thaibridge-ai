@@ -699,7 +699,11 @@
             btn.classList.remove('active');
         });
         document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
-        
+
+        // The two modes have separate allowances, so the hint has to be redrawn
+        // on every switch — not just after a message is sent.
+        updateLimitHint();
+
         // Show mode change message
         const modeNames = {
             'conversation': '🗣️ Conversation Mode - Practice Thai dialogue',
@@ -769,14 +773,19 @@
                     document.getElementById('token-display').textContent =
                         `Session tokens: ${totalTokens.toLocaleString()}`;
                 }
-                if (typeof data.remaining === 'number') {
-                    AI_LIMITS.remaining = data.remaining;
+                // The server sends both pools back, so the other allowance stays
+                // accurate without asking for it again.
+                if (data.pools) {
+                    AI_LIMITS.pools = data.pools;
+                    AI_LIMITS.remaining = data.pools.tutor.remaining;
                     updateLimitHint();
                 }
             } else if (data.gate) {
                 showUpgradeNote(data.message);
-                if (data.gate === 'daily_limit') {
-                    AI_LIMITS.remaining = 0;
+                if (data.gate === 'daily_limit' && AI_LIMITS.pools) {
+                    // Zero only the pool that was actually refused.
+                    const pool = data.pool || currentPool();
+                    AI_LIMITS.pools[pool].remaining = 0;
                     updateLimitHint();
                 }
             } else {
@@ -923,13 +932,32 @@
     }
     
     // ---- Freemium UI helpers ----
+    // Which allowance the chosen mode spends from. Dhamma questions have their
+    // own daily pool, so the hint has to follow the mode rather than show one
+    // number for both — otherwise switching to Dhamma looks like it costs the
+    // Thai tutor's messages, which is exactly what the split fixed.
+    function currentPool() {
+        return (AI_LIMITS.dhamma_modes || []).includes(currentMode) ? 'dhamma' : 'tutor';
+    }
+
     function updateLimitHint() {
         const hint = document.getElementById('limit-hint');
-        if (!hint || AI_LIMITS.unlimited) return;
-        const left = AI_LIMITS.remaining;
-        if (left > 0) {
+        if (!hint || AI_LIMITS.unlimited || !AI_LIMITS.pools) return;
+        const pool = currentPool();
+        const left = AI_LIMITS.pools[pool].remaining;
+        // The Dhamma line carries no upsell in EITHER state. A "go Pro" beside
+        // the day's remaining Dhamma questions turns the teaching into a sales
+        // surface, which is the same objection as charging for it — just
+        // quieter. The tutor line keeps its link; that one really is a product.
+        if (left > 0 && pool === 'dhamma') {
+            hint.innerHTML = `🪷 <strong>${left}</strong> Dhamma question${left === 1 ? '' : 's'} left today`;
+        } else if (left > 0) {
             hint.innerHTML = `🎁 Free taste: <strong>${left}</strong> AI message${left === 1 ? '' : 's'} left today · `
                 + `<a href="/premium">Go Pro for unlimited →</a>`;
+        } else if (pool === 'dhamma') {
+            // No upsell: the teaching is free, and the cap is a running cost.
+            hint.innerHTML = `🪷 That’s today’s Dhamma questions — the teaching is free, `
+                + `the model isn’t. Back tomorrow.`;
         } else {
             hint.innerHTML = `🔒 You’ve used today’s free AI messages · `
                 + `<a href="/premium">Upgrade to Pro for unlimited →</a>`;
