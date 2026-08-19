@@ -34,6 +34,16 @@ has not yet been checked by a native speaker.
 SAME = {'same': True}
 
 LEVELS = {
+    # 'formal' is not a rung the module generates — it is the label for the main
+    # line already on the page. It lives here so the template's Formal chip takes
+    # its wording and colour from the same place as the rungs below it. ORDER
+    # does not include it, so nothing here renders an extra row.
+    'formal': {
+        'label': 'Formal',
+        'thai_name': 'ภาษาสุภาพ',
+        'colour': '#4B0082',
+        'blurb': 'Full pronoun, ครับ/ค่ะ on the end. This is the main line.',
+    },
     'neutral': {
         'label': 'Neutral',
         'thai_name': 'ภาษาทั่วไป',
