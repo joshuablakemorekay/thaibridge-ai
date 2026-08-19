@@ -48,6 +48,20 @@
     .panel-closing { margin: 1rem 0 0; }
     .panel-closing strong { color: var(--royal-purple); }
 
+    /* The "no Thai needed" line. Green rather than the panel's own colour so
+       it reads as reassurance rather than another instruction. #1B5E20 on
+       #E8F5E9 is 8.6:1, well clear of AA. */
+    .panel-no-thai {
+        background: #E8F5E9;
+        border-left: 4px solid var(--bodhi-green);
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        margin: 0 0 1rem;
+        color: #1B5E20;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
     /* Two columns on a wide screen, one on a phone — enough room for each
        layer's description to sit under its own label. */
     .layer-options {

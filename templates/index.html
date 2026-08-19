@@ -9,14 +9,77 @@
         <div class="hero-content">
             <h1 class="main-title">
                 <span class="brand-title">🪷 ThaiBridge AI</span>
-                <span class="brand-tagline">Thai language &amp; culture · ภาษาไทยและวัฒนธรรม</span>
+                <span class="brand-tagline">Theravada Buddhism &amp; the Thai language · พระธรรมและภาษาไทย</span>
             </h1>
-            <p class="hero-subtitle">Learn Thai through culture, Theravada Buddhism and a built-in AI tutor.</p>
+            <p class="hero-subtitle">
+                Two subjects, side by side. Study the Dhamma on its own, learn Thai on its
+                own, or follow how the two meet in Thailand&#39;s temples.
+            </p>
+            <p class="hero-note">
+                🪷 The Buddhist teachings here are free and open to everyone — no Thai needed.
+                <a href="/dhamma-and-culture">Why both are taught here →</a>
+            </p>
             <div class="hero-buttons">
-                <a href="/alphabet" class="btn btn-primary">🔤 Start with the Alphabet</a>
+                <a href="#start-here" class="btn btn-primary">🧭 Find your starting point</a>
                 <a href="/chat" class="btn btn-secondary">🤖 Try the AI Tutor</a>
             </div>
         </div>
+    </div>
+
+    <!-- Start Here: the visitor picks a track before being shown one.
+         Previously the only route in was "learn the alphabet", which told
+         someone here for the Dhamma that they had to learn Thai first — not
+         true, and the reason visitors here for the Dhamma felt shut out. -->
+    <div class="start-here" id="start-here">
+        <h2>🧭 What are you here to learn?</h2>
+        <p class="start-here-lead">
+            Pick whichever fits. Nothing here is locked behind the others.
+        </p>
+        <div class="track-grid">
+            <a href="/theravada" class="track-card track-dhamma">
+                <div class="track-icon">☸️</div>
+                <h3>Buddhism &amp; the Dhamma</h3>
+                <p>
+                    The teachings, the suttas, meditation and Dhamma talks — to study and
+                    practise anywhere in the world, in your own culture.
+                </p>
+                <span class="track-badge track-badge-free">Free · no Thai needed</span>
+            </a>
+
+            <a href="/alphabet" class="track-card track-language">
+                <div class="track-icon">🔤</div>
+                <h3>The Thai language</h3>
+                <p>
+                    Alphabet, tones, Paiboon romanization, grammar, vocabulary and real
+                    conversations. Starts with the 44 consonants.
+                </p>
+                <span class="track-badge">Starts free</span>
+            </a>
+
+            <a href="/culture" class="track-card track-culture">
+                <div class="track-icon">🎭</div>
+                <h3>Buddhism in Thailand</h3>
+                <p>
+                    Temple etiquette, ceremonies, festivals and customs — how Theravada
+                    is actually lived in Thai communities.
+                </p>
+                <span class="track-badge">Part of the Thai course</span>
+            </a>
+
+            <a href="/chanting" class="track-card track-chanting">
+                <div class="track-icon">📿</div>
+                <h3>Chanting &amp; texts</h3>
+                <p>
+                    The Digital Chanting Book — Pali, romanised Pali, Thai, Paiboon and
+                    English in layers. Read only the layers you want.
+                </p>
+                <span class="track-badge track-badge-free">Free · no Thai needed</span>
+            </a>
+        </div>
+        <p class="start-here-foot">
+            Not sure how Buddhism and Thai culture relate?
+            <a href="/dhamma-and-culture">🪷 Read the short explanation →</a>
+        </p>
     </div>
 
     <!-- Quick Access Cards -->
@@ -58,12 +121,16 @@
 
     <!-- Learning Path -->
     <div class="learning-path">
-        <h2>🎯 Your Learning Path</h2>
+        <h2>🎯 The Thai Language Path</h2>
+        <p class="path-lead">
+            This is the route through the <strong>language</strong> course. The Buddhist
+            pages are not part of it and need none of it — they are open from the start.
+        </p>
         <div class="path-steps">
             <div class="step">
                 <div class="step-number">1</div>
                 <h3>Thai Alphabet</h3>
-                <p>Learn the 44 consonants, then pass the quiz to unlock the site</p>
+                <p>Learn the 44 consonants, then pass the quiz to open the language track</p>
             </div>
             <div class="step-arrow">→</div>
             <div class="step">
@@ -119,8 +186,8 @@
             <div class="feature-item">
                 <span class="feature-icon">☸️</span>
                 <div>
-                    <h4>Buddhist Integration</h4>
-                    <p>Theravada teachings and meditation practices in Thai</p>
+                    <h4>Buddhism in its own right</h4>
+                    <p>Theravada teachings, suttas and meditation — free, and studied in English</p>
                 </div>
             </div>
             <div class="feature-item">
@@ -149,6 +216,93 @@
 </div>
 
 <style>
+    /* ── Hero supporting line ─────────────────────────────────────────
+       States the one fact that stops a Dhamma-only visitor bouncing: the
+       Buddhist pages cost nothing and need no Thai. */
+    .hero-subtitle { max-width: 46rem; margin-left: auto; margin-right: auto; }
+    .hero-note {
+        max-width: 44rem;
+        margin: 1rem auto 0;
+        padding: 0.7rem 1rem;
+        background: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 10px;
+        color: #fff;
+        font-size: 0.98rem;
+    }
+    .hero-note a { color: var(--royal-gold); font-weight: 600; }
+
+    /* ── "What are you here to learn?" ────────────────────────────────
+       Four equal doors. Equal on purpose: the moment one looks like the
+       main one, the others read as optional extras. */
+    .start-here { margin: 0 0 3rem; }
+    .start-here h2 { text-align: center; margin-bottom: 0.35rem; }
+    .start-here-lead {
+        text-align: center;
+        color: #6b5d45;
+        margin: 0 0 1.5rem;
+    }
+    .track-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.25rem;
+    }
+    .track-card {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: inherit;
+        background: #fff;
+        border: 2px solid #E8DCC0;
+        border-top: 6px solid #E8DCC0;
+        border-radius: 14px;
+        padding: 1.5rem 1.3rem;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .track-card:hover, .track-card:focus-visible {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(74, 26, 107, 0.18);
+    }
+    .track-icon { font-size: 2.4rem; line-height: 1; margin-bottom: 0.6rem; }
+    .track-card h3 { margin: 0 0 0.5rem; font-size: 1.2rem; color: var(--royal-purple); }
+    .track-card p { margin: 0 0 1rem; color: #55483a; font-size: 0.95rem; line-height: 1.55; }
+
+    /* Badge sits at the card foot whatever the copy length, so the four
+       cards line up instead of stair-stepping. */
+    .track-badge {
+        margin-top: auto;
+        align-self: flex-start;
+        background: #F3EDE0;
+        color: #55483a;
+        border-radius: 999px;
+        padding: 0.28rem 0.75rem;
+        font-size: 0.82rem;
+        font-weight: 600;
+    }
+    /* #1B5E20 on #E8F5E9 is 8.6:1 — this badge is the promise the page is
+       making, so it must not be the faint bit. */
+    .track-badge-free { background: #E8F5E9; color: #1B5E20; }
+
+    .track-dhamma   { border-top-color: var(--saffron); }
+    .track-language { border-top-color: var(--royal-purple); }
+    .track-culture  { border-top-color: var(--lotus-pink); }
+    .track-chanting { border-top-color: var(--royal-gold); }
+
+    .start-here-foot {
+        text-align: center;
+        margin: 1.5rem 0 0;
+        color: #6b5d45;
+        font-size: 0.95rem;
+    }
+
+    .path-lead {
+        text-align: center;
+        max-width: 44rem;
+        margin: 0 auto 1.5rem;
+        color: #6b5d45;
+        font-size: 0.95rem;
+    }
+
     .hero-section {
         background: linear-gradient(135deg, var(--royal-purple) 0%, var(--deep-purple) 100%);
         border-radius: 25px;

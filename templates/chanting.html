@@ -222,6 +222,10 @@
 
     <p class="panel-intro">{{ how_to_use.welcome }}</p>
 
+    {# Said BEFORE the toggles, because it is the reason a reader would reach
+       for them. Without it the Thai layers look compulsory. #}
+    <p class="panel-no-thai">🌏 {{ how_to_use.no_thai_needed }}</p>
+
     <div class="layer-options">
         {% for layer in layers %}
         <label class="layer-option">
