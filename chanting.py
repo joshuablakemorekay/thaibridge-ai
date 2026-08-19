@@ -19956,7 +19956,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 28; the rest is not in the app yet.
         # ‼ CHECK [IMG_0335.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Three
         #   rows are printed under the บทขัด heading and the sheet runs out;
         #   verse 3 ends with no full stop and the sentence is unfinished. It
@@ -20039,6 +20039,279 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'In the Mahāpadāna Sutta, three verses — so we have heard.',
+            },
+            {
+                'number': 4,
+                'page': 73,
+                'pali': 'ตีหิ สิกขาหิ สังขิตตัง ยาสุ พุทธานะ สาสะนัง.',
+                'pali_roman': 'Tīhi sikkhāhi saṅkhittaṃ yāsu buddhāna sāsanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'condensed into the three trainings, in which the teaching of the Buddhas is contained —',
+            },
+            # ‼ CHECK [IMG_0336.PNG]: A WORD REJOINED ACROSS THE GUTTER. The
+            #   left cell ends ตาสัมปะกาสะกัง ธัมมะ- with a hyphen and the
+            #   right cell opens ปะริยายัง, so the row reads ตาสัมปะกาสะกัง
+            #   ธัมมะปะริยายัง ภะณามะ เส. — the hyphen is typesetting and is
+            #   dropped. ภะณามะ เส is the standard 'let us now recite', which
+            #   is what closes a บทขัด, so this is where the prefatory verse
+            #   ends and the passage proper begins.
+            {
+                'number': 5,
+                'pali': 'ตาสัมปะกาสะกัง ธัมมะปะริยายัง ภะณามะ เส.',
+                'pali_roman': 'Tāsampakāsakaṃ dhammapariyāyaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let us now recite the exposition of the Dhamma that sets them forth.',
+            },
+            # ‼ CHECK [IMG_0336.PNG]: THE HEADING HERE IS A SECTION, NOT A NEW
+            #   CHANT, AND THAT IS A JUDGEMENT WORTH CHECKING. The book prints
+            #   โอวาทะปาติโมกขาทิปาโฐ centred between the บทขัด and this
+            #   passage — note ปาโฐ, the nominative, where page 72's title
+            #   prints ปาฐะ in the compound. Read as the main text of the
+            #   chant page 72 titled, so it goes in as a `section` on this
+            #   verse and the two stay ONE chant. The alternative reading is
+            #   that page 72's title covered only the prefatory verse and this
+            #   is a separate chant. One look at how the book's สารบัญ lists
+            #   it would settle it.
+            # ‼ CHECK [IMG_0336.PNG]: THE LAYOUT CHANGES FOUR TIMES ON THIS
+            #   PAGE, INSIDE ONE CHANT, and it was settled by measuring the
+            #   ink rather than by eye. Two-column rows for verses 4-5 (gutter
+            #   at x 940-1100); justified prose for 6-7 and again for 17-28
+            #   (no gutter, ink filling the full measure); centred single-
+            #   column lines for 8-11 (ink only from x 500 to 1140, clear
+            #   margin both sides); two-column rows again for 12-16 (gutter at
+            #   x 940-1100). Each prose group carries para_layout 'prose' and
+            #   each verse group 'lines', so the app sets each part the way
+            #   the page sets it.
+            {
+                'number': 6,
+                'section': 'โอวาทะปาติโมกขาทิปาโฐ: The Exhortation Pāṭimokkha Passage',
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'อุททิฏฐัง โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ,',
+                'pali_roman': 'Uddiṭṭhaṃ kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Set forth by that Blessed One, who knows and sees, the worthy one, fully enlightened by himself,',
+            },
+            {
+                'number': 7,
+                'pali': 'โอวาทะปาติโมกขัง ตีหิ คาถาหิ.',
+                'pali_roman': 'Ovādapātimokkhaṃ tīhi gāthāhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'was the Exhortation Pāṭimokkha, in three verses.',
+            },
+            # ‼ CHECK [IMG_0336.PNG]: THE FIRST GĀTHĀ IS SET ONE PĀDA TO A
+            #   LINE AND CENTRED, where the two that follow it are set two
+            #   pādas to a line in two columns. Same chant, same page, three
+            #   verses, two settings — so these four lines are four verses and
+            #   the next five rows are five verses, each verse being one
+            #   printed line as the book sets it. Measured, not judged: this
+            #   block has no gutter and clear margins on both sides, and the
+            #   block below it has a gutter.
+            {
+                'number': 8,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'ขันตี ปะระมัง ตะโป ตีติกขา',
+                'pali_roman': 'Khantī paramaṃ tapo tītikkhā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Patient endurance is the supreme austerity;',
+            },
+            {
+                'number': 9,
+                'pali': 'นิพพานัง ปะระมัง วะทันติ พุทธา',
+                'pali_roman': 'Nibbānaṃ paramaṃ vadanti buddhā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Buddhas say nibbāna is supreme.',
+            },
+            {
+                'number': 10,
+                'pali': 'นะ หิ ปัพพะชิโต ปะรูปะฆาตี',
+                'pali_roman': 'Na hi pabbajito parūpaghātī',
+                'thai': '',
+                'paiboon': '',
+                'english': 'One gone forth does not strike down another;',
+            },
+            # ‼ CHECK [IMG_0336.PNG]: NO PUNCTUATION ANYWHERE IN THE FIRST
+            #   GĀTHĀ. None of the four lines ends with a comma or a stop,
+            #   where the second and third gāthās close with a full stop at
+            #   verse 16. Reproduced as printed. The English supplies the
+            #   sentence breaks the sense needs, which is why its punctuation
+            #   does not match the Pali's here.
+            {
+                'number': 11,
+                'pali': 'สะมะโณ โหติ ปะรัง วิเหฐะยันโต',
+                'pali_roman': 'Samaṇo hoti paraṃ viheṭhayanto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'one who harms another is no ascetic.',
+            },
+            {
+                'number': 12,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'สัพพะปาปัสสะ อะกะระณัง กุสะลัสสูปะสัมปะทา',
+                'pali_roman': 'Sabbapāpassa akaraṇaṃ kusalassūpasampadā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Not to do any evil, to take up what is skilful,',
+            },
+            {
+                'number': 13,
+                'pali': 'สะจิตตะปะริโยทะปะนัง เอตัง พุทธานะ สาสะนัง',
+                'pali_roman': 'Sacittapariyodapanaṃ etaṃ buddhāna sāsanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': "to purify one's own mind — this is the teaching of the Buddhas.",
+            },
+            # ‼ CHECK [IMG_0336.PNG]: ปาติโมกเข with ต, matching this chant's
+            #   title and its verse 7, and differing from the ปาฏิโมกขัง with
+            #   ฏ printed in the chant above it on page 72. The same split
+            #   runs through both pages. Separately, ปะฏิวิระโต at verses 23
+            #   to 27 uses ฏ — but that is paṭivirato, a different word, so it
+            #   is not part of the same question.
+            {
+                'number': 14,
+                'pali': 'อะนูปะวาโท อะนูปะฆาโต ปาติโมกเข จะ สังวะโร',
+                'pali_roman': 'Anūpavādo anūpaghāto pātimokkhe ca saṃvaro',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Not to speak against, not to injure, restraint under the Pāṭimokkha,',
+            },
+            {
+                'number': 15,
+                'pali': 'มัตตัญญุตา จะ ภัตตัส์มิง ปันตัญจะ สะยะนาสะนัง',
+                'pali_roman': 'Mattaññutā ca bhattasmiṃ pantañca sayanāsanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'moderation in eating, and a lodging apart,',
+            },
+            {
+                'number': 16,
+                'pali': 'อะธิจิตเต จะ อาโยโค เอตัง พุทธานะ สาสะนันติ.',
+                'pali_roman': 'Adhicitte ca āyogo etaṃ buddhāna sāsananti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and devotion to the higher mind — this is the teaching of the Buddhas.',
+            },
+            {
+                'number': 17,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'อะเนกะปะริยาเยนะ โข ปะนะ เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ,',
+                'pali_roman': 'Anekapariyāyena kho pana tena bhagavatā jānatā passatā arahatā sammāsambuddhena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And in many ways by that Blessed One, who knows and sees, the worthy one, fully enlightened by himself,',
+            },
+            {
+                'number': 18,
+                'pali': 'สีลัง สัมมะทักขาตัง สะมาธิ สัมมะทักขาโต ปัญญา สัมมะทักขาตา.',
+                'pali_roman': 'Sīlaṃ sammadakkhātaṃ samādhi sammadakkhāto paññā sammadakkhātā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'virtue was well proclaimed, concentration was well proclaimed, wisdom was well proclaimed.',
+            },
+            {
+                'number': 19,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ สีลัง สัมมะทักขาตัง ภะคะวะตา,',
+                'pali_roman': 'Kathañca sīlaṃ sammadakkhātaṃ bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was virtue well proclaimed by the Blessed One?',
+            },
+            {
+                'number': 20,
+                'pali': 'เหฏฐิเมนะปิ ปะริยาเยนะ สีลัง สัมมะทักขาตัง ภะคะวะตา,',
+                'pali_roman': 'Heṭṭhimenapi pariyāyena sīlaṃ sammadakkhātaṃ bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the lower exposition too, virtue was well proclaimed by the Blessed One;',
+            },
+            # ‼ CHECK [IMG_0336.PNG]: A PARAGRAPH BREAK FALLS MID-SENTENCE.
+            #   This paragraph ends ภะคะวะตา, with a COMMA, not a full stop,
+            #   and the next paragraph opens กะถัญจะ. So the book starts a new
+            #   indented paragraph inside an unfinished sentence. Reproduced
+            #   exactly as printed rather than closed off — the paragraph
+            #   breaks are the book's and are recorded with para_start.
+            {
+                'number': 21,
+                'pali': 'อุปะริเมนะปิ ปะริยาเยนะ สีลัง สัมมะทักขาตัง ภะคะวะตา,',
+                'pali_roman': 'Uparimenapi pariyāyena sīlaṃ sammadakkhātaṃ bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and by the higher exposition too, virtue was well proclaimed by the Blessed One,',
+            },
+            {
+                'number': 22,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ เหฏฐิเมนะ ปะริยาเยนะ สีลัง สัมมะทักขาตัง ภะคะวะตา,',
+                'pali_roman': 'Kathañca heṭṭhimena pariyāyena sīlaṃ sammadakkhātaṃ bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was virtue well proclaimed by the Blessed One in the lower exposition?',
+            },
+            {
+                'number': 23,
+                'pali': 'อิธะ อะริยะสาวะโก ปาณาติปาตา ปะฏิวิระโต โหติ.',
+                'pali_roman': 'Idha ariyasāvako pāṇātipātā paṭivirato hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here a noble disciple abstains from killing living beings.',
+            },
+            {
+                'number': 24,
+                'pali': 'อะทินนาทานา ปะฏิวิระโต โหติ.',
+                'pali_roman': 'Adinnādānā paṭivirato hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He abstains from taking what is not given.',
+            },
+            {
+                'number': 25,
+                'pali': 'กาเมสุมิจฉาจารา ปะฏิวิระโต โหติ.',
+                'pali_roman': 'Kāmesumicchācārā paṭivirato hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He abstains from misconduct in sensual pleasures.',
+            },
+            {
+                'number': 26,
+                'pali': 'มุสาวาทา ปะฏิวิระโต โหติ.',
+                'pali_roman': 'Musāvādā paṭivirato hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He abstains from false speech.',
+            },
+            # ‼ CHECK [IMG_0336.PNG]: A WORD REJOINED ACROSS A LINE BREAK. The
+            #   line ends สุราเมระยะ- with a hyphen and the next opens
+            #   มัชชะปะมาทัฏฐานา, so the word is สุราเมระยะมัชชะปะมาทัฏฐานา
+            #   and the hyphen is dropped. Also note โหตีติ here where verses
+            #   23 to 26 all end โหติ — the extra ติ is the quotative closing
+            #   the list, and it is printed.
+            {
+                'number': 27,
+                'pali': 'สุราเมระยะมัชชะปะมาทัฏฐานา ปะฏิวิระโต โหตีติ.',
+                'pali_roman': 'Surāmerayamajjapamādaṭṭhānā paṭivirato hotīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He abstains from wines, spirits and intoxicants, which are the basis of heedlessness.',
+            },
+            {
+                'number': 28,
+                'pali': 'เอวัง โข เหฏฐิเมนะ ปะริยาเยนะ สีลัง สัมมะทักขาตัง ภะคะวะตา.',
+                'pali_roman': 'Evaṃ kho heṭṭhimena pariyāyena sīlaṃ sammadakkhātaṃ bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus was virtue well proclaimed by the Blessed One in the lower exposition.',
             },
         ],
     },
