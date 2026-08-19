@@ -21,6 +21,59 @@
     }
     .pb-listen:hover, .pb-listen:focus-visible { opacity: 1; background: rgba(212,175,55,0.25); }
     .pb-listen.is-playing { opacity: 1; background: var(--gold-shimmer, #FFD700); }
+
+    /* ── Look up a word ──────────────────────────────────────────────── */
+    .pb-lookup { border-left-color: var(--royal-purple, #6A1B9A); }
+    .pb-lookup-help { color: #666; margin: 0.25rem 0 1rem; }
+
+    /* Wraps to a stacked layout on a phone, which is where a quick lookup
+       between lessons actually happens. */
+    .pb-lookup-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .pb-lookup-input {
+        flex: 1 1 16rem;
+        padding: 0.65rem 0.85rem;
+        font-size: 1.05rem;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+    .pb-lookup-input:focus {
+        outline: none;
+        border-color: var(--royal-purple, #6A1B9A);
+    }
+
+    .pb-lookup-count, .pb-lookup-empty { margin: 1rem 0 0.5rem; color: #666; }
+
+    /* Auto-fitting columns: one per row on a phone, several on a laptop, with
+       no breakpoint to maintain. */
+    .pb-results {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+        gap: 0.75rem;
+        margin-top: 0.75rem;
+    }
+    .pb-result {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 0.75rem 0.9rem;
+        background: #fafafa;
+    }
+    .pb-result-thai { font-size: 1.35rem; margin-bottom: 0.2rem; }
+    /* The romanisation is the answer the visitor came for, so it is the thing
+       that stands out — full tone marks and all. */
+    .pb-result-paiboon {
+        font-family: 'Courier New', monospace;
+        font-size: 1.05rem;
+        color: var(--royal-purple, #6A1B9A);
+        font-weight: bold;
+    }
+    .pb-result-english { color: #555; margin-top: 0.2rem; }
+    .pb-result-source {
+        margin-top: 0.4rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: #999;
+    }
 </style>
 {% endblock %}
 
@@ -39,6 +92,59 @@
 <p style="text-align: center; color: #666; max-width: 800px; margin: 0 auto 2rem;">
     {{ guide.overview.description }}
 </p>
+
+{# ── Look up a word ────────────────────────────────────────────────────────
+   Sits above the guide on purpose: most visits here are "how do I write THIS
+   word?", not "teach me the system". The guide is still right underneath for
+   the visit that is. #}
+<div class="card pb-lookup">
+    <h3 style="margin-top: 0;">🔎 Look up a word</h3>
+    <p class="pb-lookup-help">
+        Type Thai, or the romanisation as you think it sounds — tone marks are
+        optional, and <em>sawatdee</em>, <em>khop khun</em> and <em>gai</em> all
+        work. You can search in English too.
+    </p>
+    <form method="get" action="{{ url_for('paiboon_guide') }}#lookup" class="pb-lookup-form" id="lookup">
+        <input type="search" name="q" value="{{ query }}" class="pb-lookup-input"
+               placeholder="e.g. aroi, ขอบคุณ, or elephant"
+               aria-label="Search for a word" autocomplete="off">
+        <button type="submit" class="btn btn-saffron">Search</button>
+    </form>
+
+    {% if query %}
+        {% if results %}
+        <p class="pb-lookup-count">
+            {{ results|length }} match{{ '' if results|length == 1 else 'es' }} for
+            <strong>{{ query }}</strong>
+        </p>
+        <div class="pb-results">
+            {% for entry in results %}
+            <div class="pb-result">
+                <div class="pb-result-thai">
+                    <span class="thai">{{ entry.thai }}</span>
+                    {{ listen(entry.thai) }}
+                </div>
+                <div class="pb-result-paiboon">{{ entry.paiboon }}</div>
+                {% if entry.english %}
+                <div class="pb-result-english">{{ entry.english }}</div>
+                {% endif %}
+                <div class="pb-result-source">{{ entry.source }}</div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        {# An honest miss. The lookup only ever shows romanisation a person
+           wrote and checked, so "not here" is the truthful answer — far better
+           than a guessed tone mark the learner has no way to catch. #}
+        <p class="pb-lookup-empty">
+            No match for <strong>{{ query }}</strong>. This searches the
+            {{ corpus_size }} words and phrases taught on ThaiBridge, so it will
+            not have every Thai word — try a shorter spelling, or ask the
+            <a href="/chat">AI tutor</a>.
+        </p>
+        {% endif %}
+    {% endif %}
+</div>
 
 <!-- Audio Resource -->
 {% if guide.overview.audio_resource %}

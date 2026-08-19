@@ -20,6 +20,7 @@ import thai_registers
 import thai_audio  # general Thai-phrase MP3 filename rule, shared with build script
 import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
+import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -6544,8 +6545,19 @@ def paiboon_guide():
         c['char']: url_for('static', filename=c['audio'])
         for c in thai_consonants.CONSONANTS
     }
+
+    # The lookup lives ON this page rather than at a route of its own. This is
+    # already the page people come to when they want to know how a Thai word is
+    # written in Paiboon — the guide answers it in principle, the search box
+    # answers it for one specific word. Splitting them would mean two places
+    # that do the same job and a nav entry to explain the difference.
+    query = request.args.get('q', '').strip()
+    results = paiboon_lookup.search(query) if query else []
+
     return render_template('paiboon.html', guide=PAIBOON_GUIDE,
-                           consonant_audio=consonant_audio)
+                           consonant_audio=consonant_audio,
+                           query=query, results=results,
+                           corpus_size=len(paiboon_lookup.get_index()))
 
 
 
