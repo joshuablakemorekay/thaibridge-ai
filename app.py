@@ -21,6 +21,7 @@ import thai_audio  # general Thai-phrase MP3 filename rule, shared with build sc
 import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
+import curriculum  # the public curriculum outline, built from the gated routes
 
 # On Windows the default console encoding (cp1252) can't print the emoji/Thai
 # characters in our startup messages, which crashes the app on launch. Force
@@ -1544,6 +1545,14 @@ def require_access(section_id):
             session.modified = True
             
             return f(*args, **kwargs)
+
+        # Record which section this view serves, so the curriculum outline can
+        # be BUILT from the routes rather than hand-listed beside them. The
+        # Culture page's story links taught us what hand-listing costs: a URL
+        # inferred from a key silently 404'd for months. A view that is gated
+        # is a view that belongs on the outline, and this is the only place
+        # that fact is already written down.
+        decorated_function._section_id = section_id
         return decorated_function
     return decorator
 
@@ -6976,7 +6985,12 @@ def premium():
                            addon=INSTANT_ACCESS_ADDON,
                            has_addon=has_full_unlock(),
                            dana=DANA,
-                           free_ai_daily_limit=FREE_AI_DAILY_LIMIT)
+                           free_ai_daily_limit=FREE_AI_DAILY_LIMIT,
+                           # Everything the site teaches, locked pages
+                           # included. Shown to everyone, signed in or not:
+                           # the sections are the argument for the price, and
+                           # eight feature bullets never made that argument.
+                           outline=curriculum.build_outline(sys.modules[__name__]))
 
 
 @app.route('/about')
@@ -8594,6 +8608,13 @@ def ai_status():
         'available': ai_agent is not None,
         'status': 'active' if ai_agent else 'unavailable'
     })
+
+
+# Checked here rather than beside SECTION_REQUIREMENTS because it reads the
+# ROUTES, and they are not all registered until the end of this file. A section
+# that is gated but unadvertised — or excluded for a reason nobody wrote down —
+# fails the import rather than quietly shipping an understated pricing page.
+curriculum.assert_outline_is_complete(sys.modules[__name__])
 
 
 if __name__ == '__main__':

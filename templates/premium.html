@@ -188,6 +188,60 @@
 {% endif %}
 
 <!-- ============================================================
+     THE WHOLE CURRICULUM — every page, locked ones included
+
+     Deliberately OUTSIDE the monk_mode branch above: a monk pays
+     nothing, but still deserves to see the whole path laid out.
+     Built from the gated routes (see curriculum.py), so it cannot
+     drift from what the tiers actually open.
+     ============================================================ -->
+<h2 style="text-align:center; color:var(--royal-purple); margin:3rem 0 0.4rem;">
+    📚 Everything the site teaches
+</h2>
+<p style="text-align:center; color:#666; max-width:640px; margin:0 auto 1.5rem;">
+    All {{ outline|map(attribute='sections')|map('length')|sum }} pages, including
+    the ones you haven't unlocked. Nothing here is hidden until you pay — you can
+    see exactly what each plan opens before you decide.
+</p>
+
+<div class="curriculum">
+    {% for group in outline %}
+    <section class="curriculum-tier curriculum-tier--{{ group.tier }}">
+        <header class="curriculum-tier-head">
+            <h3>{{ group.label }}</h3>
+            <span class="curriculum-price">
+                {% if group.price == 0 %}Free{% else %}£{{ group.price }}/mo{% endif %}
+            </span>
+            <span class="curriculum-count">
+                {{ group.sections|length }} page{{ '' if group.sections|length == 1 else 's' }}
+            </span>
+        </header>
+
+        {# The feature list carries the value a page count cannot show — Pro
+           adds one page but unlimited AI, the roleplay partner and the
+           exercise generator. Without this, the most expensive tier would
+           look like the emptiest one. #}
+        {% if group.features %}
+        <ul class="curriculum-features">
+            {% for feature in group.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <ul class="curriculum-pages">
+            {% for section in group.sections %}
+            <li>
+                <a href="{{ section.url }}">{{ section.title }}</a>
+                <span class="curriculum-level">Level {{ section.level }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endfor %}
+</div>
+
+<!-- ============================================================
      GENEROSITY — why the Dhamma, and asking about it, are free
      ============================================================ -->
 <div id="dana" class="card" style="text-align:center; background: linear-gradient(135deg, #FFF8DC 0%, #FFE4B5 100%); margin-top:2.5rem; border-left: 4px solid var(--saffron);">
@@ -367,6 +421,61 @@
     .feat-badge.is-taste {
         background: var(--bodhi-green, #6b8e23);
         color: #fff;
+    }
+
+    /* ---- Curriculum outline ---- */
+    .curriculum {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        align-items: start;
+    }
+
+    .curriculum-tier {
+        background: var(--silk-ivory, #fffdf7);
+        border: 2px solid #eadfca;
+        border-radius: 18px;
+        padding: 1.5rem;
+    }
+    /* The paid tiers get a coloured edge so the eye can tell at a glance
+       where free stops, without needing a lock icon on 18 separate rows. */
+    .curriculum-tier--basic { border-left: 5px solid var(--royal-purple, #6A1B9A); }
+    .curriculum-tier--pro   { border-left: 5px solid var(--saffron, #FF9800); }
+
+    .curriculum-tier-head { margin-bottom: 0.75rem; }
+    .curriculum-tier-head h3 { margin: 0 0 0.25rem; color: var(--royal-purple, #6A1B9A); }
+    .curriculum-price { font-weight: bold; }
+    .curriculum-count { color: #888; font-size: 0.85rem; margin-left: 0.5rem; }
+
+    .curriculum-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 1rem;
+        font-size: 0.9rem;
+        color: #5a4a2a;
+        border-bottom: 1px solid #eadfca;
+        padding-bottom: 0.75rem;
+    }
+    .curriculum-features li { margin: 0.15rem 0; }
+
+    .curriculum-pages { list-style: none; padding: 0; margin: 0; }
+    .curriculum-pages li {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 0.5rem;
+        padding: 0.35rem 0;
+        border-bottom: 1px dotted #eadfca;
+    }
+    .curriculum-pages li:last-child { border-bottom: none; }
+    .curriculum-pages a { text-decoration: none; }
+    .curriculum-pages a:hover { text-decoration: underline; }
+    .curriculum-level {
+        color: #999;
+        font-size: 0.75rem;
+        white-space: nowrap;
     }
 
     /* ---- Pricing grid ---- */
