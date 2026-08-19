@@ -19956,7 +19956,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 28; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 58; the rest is not in the app yet.
         # ‼ CHECK [IMG_0335.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Three
         #   rows are printed under the บทขัด heading and the sheet runs out;
         #   verse 3 ends with no full stop and the sentence is unfinished. It
@@ -20312,6 +20312,302 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Thus was virtue well proclaimed by the Blessed One in the lower exposition.',
+            },
+            # ‼ CHECK [IMG_0338.PNG]: THE WHOLE PAGE IS PROSE, and that was
+            #   measured rather than assumed: there is NO empty column band
+            #   anywhere between x 270 and x 1880, so no gutter and no verse
+            #   block. Six indented paragraphs, each opening กะถัญจะ. Every
+            #   group therefore carries para_layout 'prose' explicitly rather
+            #   than relying on the chant's own setting, which is 'lines' —
+            #   exactly the case where the default would have been wrong.
+            {
+                'number': 29,
+                'page': 74,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ อุปะริเมนะ ปะริยาเยนะ สีลัง สัมมะทักขาตัง ภะคะวะตา,',
+                'pali_roman': 'Kathañca uparimena pariyāyena sīlaṃ sammadakkhātaṃ bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was virtue well proclaimed by the Blessed One in the higher exposition?',
+            },
+            {
+                'number': 30,
+                'pali': 'อิธะ ภิกขุ สีละวา โหติ,',
+                'pali_roman': 'Idha bhikkhu sīlavā hoti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here a bhikkhu is virtuous,',
+            },
+            # ‼ CHECK [IMG_0338.PNG]: ปาติโมกขะสังวะระสังวุโต with ต,
+            #   consistent with this chant on pages 72 and 73 and still
+            #   differing from the ปาฏิโมกขัง with ฏ in the chant above it on
+            #   page 72.
+            {
+                'number': 31,
+                'pali': 'ปาติโมกขะสังวะระสังวุโต วิหะระติ อาจาระโคจะระสัมปันโน.',
+                'pali_roman': 'Pātimokkhasaṃvarasaṃvuto viharati ācāragocarasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he dwells restrained by the restraint of the Pāṭimokkha, perfect in conduct and resort.',
+            },
+            {
+                'number': 32,
+                'pali': 'อะณุมัตเตสุ วัชเชสุ ภะยะทัสสาวี สะมาทายะ สิกขะติ สิกขาปะเทสูติ.',
+                'pali_roman': 'Aṇumattesu vajjesu bhayadassāvī samādāya sikkhati sikkhāpadesūti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Seeing danger in the slightest fault, he trains by undertaking the training rules.',
+            },
+            {
+                'number': 33,
+                'pali': 'เอวัง โข อุปะริเมนะ ปะริยาเยนะ สีลัง สัมมะทักขาตัง ภะคะวะตา.',
+                'pali_roman': 'Evaṃ kho uparimena pariyāyena sīlaṃ sammadakkhātaṃ bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus was virtue well proclaimed by the Blessed One in the higher exposition.',
+            },
+            {
+                'number': 34,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ สะมาธิ สัมมะทักขาโต ภะคะวะตา,',
+                'pali_roman': 'Kathañca samādhi sammadakkhāto bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was concentration well proclaimed by the Blessed One?',
+            },
+            {
+                'number': 35,
+                'pali': 'เหฏฐิเมนะปิ ปะริยาเยนะ สะมาธิ สัมมะทักขาโต ภะคะวะตา,',
+                'pali_roman': 'Heṭṭhimenapi pariyāyena samādhi sammadakkhāto bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the lower exposition too, concentration was well proclaimed by the Blessed One;',
+            },
+            {
+                'number': 36,
+                'pali': 'อุปะริเมนะปิ ปะริยาเยนะ สะมาธิ สัมมะทักขาโต ภะคะวะตา.',
+                'pali_roman': 'Uparimenapi pariyāyena samādhi sammadakkhāto bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and by the higher exposition too, concentration was well proclaimed by the Blessed One.',
+            },
+            {
+                'number': 37,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ เหฏฐิเมนะ ปะริยาเยนะ สะมาธิ สัมมะทักขาโต ภะคะวะตา,',
+                'pali_roman': 'Kathañca heṭṭhimena pariyāyena samādhi sammadakkhāto bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was concentration well proclaimed by the Blessed One in the lower exposition?',
+            },
+            {
+                'number': 38,
+                'pali': 'อิธะ อะริยะสาวะโก โวสัคคารัมมะณัง กะริต์วา ละภะติ สะมาธิง ละภะติ จิตตัสเสกัคคะตันติ.',
+                'pali_roman': 'Idha ariyasāvako vossaggārammaṇaṃ karitvā labhati samādhiṃ labhati cittassekaggatanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here a noble disciple, having made release his object, gains concentration, gains one-pointedness of mind.',
+            },
+            {
+                'number': 39,
+                'pali': 'เอวัง โข เหฏฐิเมนะ ปะริยาเยนะ สะมาธิ สัมมะทักขาโต ภะคะวะตา.',
+                'pali_roman': 'Evaṃ kho heṭṭhimena pariyāyena samādhi sammadakkhāto bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus was concentration well proclaimed by the Blessed One in the lower exposition.',
+            },
+            # ‼ CHECK [IMG_0338.PNG]: THIS PARAGRAPH OPENS WITH A FULL STOP
+            #   WHERE ITS THREE SIBLINGS USE A COMMA. Verses 29, 37 and 58 all
+            #   end their opening question ภะคะวะตา, with a comma and run
+            #   straight on; verse 40 ends ภะคะวะตา. with a full stop. Read at
+            #   2.4x — the mark sits on the baseline with no tail. Reproduced
+            #   as printed. The English gives all four as questions
+            #   regardless, because that is what กะถัญจะ makes them.
+            {
+                'number': 40,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ อุปะริเมนะ ปะริยาเยนะ สะมาธิ สัมมะทักขาโต ภะคะวะตา.',
+                'pali_roman': 'Kathañca uparimena pariyāyena samādhi sammadakkhāto bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was concentration well proclaimed by the Blessed One in the higher exposition?',
+            },
+            {
+                'number': 41,
+                'pali': 'อิธะ ภิกขุ วิวิจเจวะ กาเมหิ วิวิจจะ อะกุสะเลหิ ธัมเมหิ,',
+                'pali_roman': 'Idha bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here a bhikkhu, quite secluded from sensual pleasures, secluded from unwholesome states,',
+            },
+            # ‼ CHECK [IMG_0338.PNG]: วิหะระต WITH NO ิ, WHERE THE SAME WORD
+            #   IS วิหะระติ THREE TIMES ELSEWHERE ON THIS PAGE. Checked at
+            #   3.5x on an isolated crop with clear paper above the line:
+            #   there is no vowel mark over the final ต. Verses 45, 46 and 49
+            #   all print วิหะระติ plainly. Standard Pali is viharati.
+            #   Reproduced exactly as printed and transliterated to match —
+            #   viharata, not viharati — because the two chanted layers have
+            #   to agree with each other. This is the single thing on this
+            #   page most worth checking against the book: either the printer
+            #   dropped the vowel or the ink did, and only the book can say.
+            {
+                'number': 42,
+                'pali': 'สะวิตักกัง สะวิจารัง วิเวกะชัมปีติสุขัง ปะฐะมัง ฌานัง อุปะสัมปัชชะ วิหะระต,',
+                'pali_roman': 'Savitakkaṃ savicāraṃ vivekajampītisukhaṃ paṭhamaṃ jhānaṃ upasampajja viharata,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'enters upon and dwells in the first jhāna, with applied and sustained thought, and the rapture and pleasure born of seclusion;',
+            },
+            {
+                'number': 43,
+                'pali': 'วิตักกะวิจารานัง วูปะสะมา,',
+                'pali_roman': 'Vitakkavicārānaṃ vūpasamā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'with the stilling of applied and sustained thought,',
+            },
+            {
+                'number': 44,
+                'pali': 'อัชฌัตตัง สัมปะสาทะนัง เจตะโส เอโกทิภาวัง อะวิตักกัง อะวิจารัง,',
+                'pali_roman': 'Ajjhattaṃ sampasādanaṃ cetaso ekodibhāvaṃ avitakkaṃ avicāraṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'with inner confidence and unification of mind, without applied and sustained thought,',
+            },
+            {
+                'number': 45,
+                'pali': 'สะมาธิชัมปีติสุขัง ทุติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ,',
+                'pali_roman': 'Samādhijampītisukhaṃ dutiyaṃ jhānaṃ upasampajja viharati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he enters upon and dwells in the second jhāna, with the rapture and pleasure born of concentration;',
+            },
+            {
+                'number': 46,
+                'pali': 'ปีติยา จะ วิราคา อุเปกขะโก จะ วิหะระติ สะโต จะ สัมปะชาโน,',
+                'pali_roman': 'Pītiyā ca virāgā upekkhako ca viharati sato ca sampajāno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'with the fading away of rapture he dwells equanimous, mindful and clearly comprehending,',
+            },
+            {
+                'number': 47,
+                'pali': 'สุขัญจะ กาเยนะ ปะฏิสังเวเทติ,',
+                'pali_roman': 'Sukhañca kāyena paṭisaṃvedeti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and he feels pleasure with the body;',
+            },
+            # ‼ CHECK [IMG_0338.PNG]: สุขะวิหารีติ carries the quotative ติ,
+            #   which closes the phrase the noble ones are quoted as
+            #   declaring. The English marks it with quotation marks the book
+            #   does not print — that is the English doing the work the ติ
+            #   does in the Pali, not a mark reproduced from the page.
+            {
+                'number': 48,
+                'pali': 'ยันตัง อะริยา อาจิกขันติ อุเปกขะโก สะติมา สุขะวิหารีติ,',
+                'pali_roman': 'Yantaṃ ariyā ācikkhanti upekkhako satimā sukhavihārīti,',
+                'thai': '',
+                'paiboon': '',
+                'english': "of which the noble ones declare, 'He is equanimous, mindful, one who dwells in pleasure' —",
+            },
+            {
+                'number': 49,
+                'pali': 'ตะติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ.',
+                'pali_roman': 'Tatiyaṃ jhānaṃ upasampajja viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he enters upon and dwells in the third jhāna.',
+            },
+            {
+                'number': 50,
+                'pali': 'สุขัสสะ จะ ปะหานา ทุกขัสสะ จะ ปะหานา,',
+                'pali_roman': 'Sukhassa ca pahānā dukkhassa ca pahānā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'With the abandoning of pleasure and of pain,',
+            },
+            # ‼ CHECK [IMG_0338.PNG]: A WORD REJOINED ACROSS A LINE BREAK. The
+            #   line ends ปุพเพวะ โสมะนัสสะ- with a hyphen and the next opens
+            #   โทมะนัสสานัง, so the word is โสมะนัสสะโทมะนัสสานัง and the
+            #   hyphen is dropped. The same happens at verse 36, where
+            #   สัมมะทัก- / ขาโต rejoins as สัมมะทักขาโต.
+            {
+                'number': 51,
+                'pali': 'ปุพเพวะ โสมะนัสสะโทมะนัสสานัง อัตถังคะมา,',
+                'pali_roman': 'Pubbeva somanassadomanassānaṃ atthaṅgamā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and with the earlier disappearance of joy and grief,',
+            },
+            {
+                'number': 52,
+                'pali': 'อะทุกขะมะสุขัง อุเปกขาสะติปาริสุทธิง,',
+                'pali_roman': 'Adukkhamasukhaṃ upekkhāsatipārisuddhiṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he enters the state that is neither painful nor pleasant, with purity of mindfulness due to equanimity —',
+            },
+            {
+                'number': 53,
+                'pali': 'จะตุตถัง ฌานัง อุปะสัมปัชชะ วิหะระตีติ,',
+                'pali_roman': 'Catutthaṃ jhānaṃ upasampajja viharatīti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he enters upon and dwells in the fourth jhāna.',
+            },
+            {
+                'number': 54,
+                'pali': 'เอวัง โข อุปะริเมนะ ปะริยาเยนะ สะมาธิ สัมมะทักขาโต ภะคะวะตา.',
+                'pali_roman': 'Evaṃ kho uparimena pariyāyena samādhi sammadakkhāto bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus was concentration well proclaimed by the Blessed One in the higher exposition.',
+            },
+            {
+                'number': 55,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ ปัญญา สัมมะทักขาตา ภะคะวะตา,',
+                'pali_roman': 'Kathañca paññā sammadakkhātā bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was wisdom well proclaimed by the Blessed One?',
+            },
+            {
+                'number': 56,
+                'pali': 'เหฏฐิเมนะปิ ปะริยาเยนะ ปัญญา สัมมะทักขาตา ภะคะวะตา,',
+                'pali_roman': 'Heṭṭhimenapi pariyāyena paññā sammadakkhātā bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the lower exposition too, wisdom was well proclaimed by the Blessed One;',
+            },
+            {
+                'number': 57,
+                'pali': 'อุปะริเมนะปิ ปะริยาเยนะ ปัญญา สัมมะทักขาตา ภะคะวะตา.',
+                'pali_roman': 'Uparimenapi pariyāyena paññā sammadakkhātā bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and by the higher exposition too, wisdom was well proclaimed by the Blessed One.',
+            },
+            # ‼ CHECK [IMG_0338.PNG]: THE CHANT DOES NOT END ON THIS PAGE.
+            #   This last paragraph asks its question and the sheet runs out
+            #   before answering it — the lower exposition of wisdom is still
+            #   owed, and the higher one after that. It is listed in
+            #   batch_status.continues and carries continues: true.
+            {
+                'number': 58,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ เหฏฐิเมนะ ปะริยาเยนะ ปัญญา สัมมะทักขาตา ภะคะวะตา,',
+                'pali_roman': 'Kathañca heṭṭhimena pariyāyena paññā sammadakkhātā bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was wisdom well proclaimed by the Blessed One in the lower exposition?',
             },
         ],
     },
