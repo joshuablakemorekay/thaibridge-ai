@@ -28,6 +28,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.join(
     os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'scripts'))
 
+from flask import session as flask_session  # noqa: E402
+
 import app  # noqa: E402
 import thai_audio  # noqa: E402
 import thai_registers  # noqa: E402
@@ -169,3 +171,54 @@ def test_a_same_rung_carries_no_thai_of_its_own():
                     f'the {key} rung of {formal!r} is marked SAME but also '
                     f'carries its own Thai'
                 )
+
+
+# ── The Formal label on the page ───────────────────────────────────────────
+
+@pytest.fixture(scope='module')
+def sentences_html():
+    """The rendered Sentences page, seen by a learner who can open it.
+
+    The page is gated behind Level 5 and a Basic subscription, so an anonymous
+    client gets the locked page instead — which renders no rungs at all and
+    would let every assertion below pass for the wrong reason. Hence the
+    explicit check that we are looking at the real thing.
+    """
+    app.app.config['TESTING'] = True
+
+    # Build the app's own default progress dict rather than hand-writing one, so
+    # a new key added to it later cannot make this fixture the thing that breaks.
+    with app.app.test_request_context():
+        app.init_user_progress()
+        progress = dict(flask_session['user_progress'])
+    progress.update({
+        'level': 99, 'subscription_tier': 'pro', 'full_unlock': True,
+        'alphabet_completed': True,
+    })
+
+    client = app.app.test_client()
+    with client.session_transaction() as sess:
+        sess['user_progress'] = progress
+    html = client.get('/sentences').get_data(as_text=True)
+    assert 'Section Locked' not in html, 'the gate is still shut — see docstring'
+    return html
+
+
+def test_every_rung_stack_is_labelled_formal_at_the_top(sentences_html):
+    """The main line IS the formal rung, and used to be the only unlabelled one.
+
+    Without its own chip the ladder read as two levels (Neutral, Casual) hanging
+    off an unnamed sentence, and the learner had to carry 'the big line is the
+    formal one' in their head from the intro card. One chip per block, no more:
+    a second would mean the macro had been called twice on the same line.
+    """
+    blocks = sentences_html.count('class="reg-block"')
+    assert blocks > 0, 'no rungs rendered at all'
+    assert sentences_html.count('>Formal</span>') == blocks
+
+
+def test_a_line_with_no_rungs_gets_no_formal_chip(sentences_html):
+    """A lone Formal tag with nothing beneath it labels a comparison that isn't
+    being made, so the register-less lines stay bare."""
+    lines = sentences_html.count('class="thai-text"')
+    assert sentences_html.count('>Formal</span>') < lines
