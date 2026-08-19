@@ -2519,3 +2519,70 @@ the template gets a third name to print. It also quietly gave a job to the
   Pre-existing, unrelated to this change, and not mine to fix mid-session.
 
 ---
+
+## 2026-08-19 (later) — The label that made an old inconsistency visible
+
+Right after the Formal chip shipped, Josh asked:
+
+> We need to add polite particle to sentences & conversations to either
+> neutral, casual or formal whichever one suit polite particle the most.
+
+The direct answer is Neutral. Formal carries ครับ/ค่ะ too, but what *defines*
+Formal is the full pronoun, and Casual is defined by dropping the particle.
+Neutral is the only rung whose whole identity is "pronoun gone, particle kept".
+There is no Polite level in the app's ten-level system either — it runs monastic,
+royal, obsolete, literary, technical, formal, neutral, casual, impolite, vulgar —
+so this was never a missing level. It was a missing particle.
+
+Then I counted, and the counting is the interesting part. Of the 108 lines with
+rungs, **25 had no polite particle at all** — including nineteen that the page
+had just started tagging **FORMAL**. ผมกำลังกินข้าว has a pronoun and no ครับ.
+By the module's own definition that is not formal. Their Neutral rungs had no
+particle either, which by the same one-question test made them casual. The chip
+did not create that problem; it made a year-old inconsistency impossible to
+ignore, which is the argument for labels over prose.
+
+> Should we add it to every formal and neutral?
+
+**How we did it:** yes, to those nineteen lines and their eighteen neutral rungs,
+in `app.py` and `thai_registers.py` in the same commit — the variants are keyed by
+the exact formal Thai string, so editing one file without the other silently
+detaches every rung on the page. Paiboon and the `breakdown` strings updated with
+each. Forty new edge-tts clips. Two commits, `0c13ca9` and `e082d40`, live on
+Render within twenty minutes.
+
+**What I learned:** four of the forty clips came back zero-byte from a failed
+edge-tts call, and the next run counted them as "already present" and skipped
+them. A file existing is not the same as a file being right, and the generator
+only checks the first thing.
+
+**Engineering Contribution**
+
+- *Decisions made:* The three เขา lines split into male and female entries. A
+  third-person sentence carries the particle of whoever is *speaking*, not of the
+  person spoken about, so one shared entry could not serve both example lists.
+  Monastic lines keep no particle — a monk says เจริญพร — and all 95 casual rungs
+  stay bare, because dropping the particle is the entire definition of casual.
+  Adding one there would have collapsed Casual into Neutral.
+
+- *Improvements made to generated code:* Found `แบบว่า...` carrying a "casual"
+  rung identical to the line itself, with a note reading *already casual* — so
+  the new chip was tagging a filler as formal. Converted it to a warning-only
+  entry, which renders the note and no chip. That in turn broke my own
+  one-chip-per-block test, correctly: rewrote it to count chips against stacks
+  that actually have rungs, and added a second test pinning the warning-only
+  case. Gave the macro's chip a `reg-tag-main` class so the intro card's
+  hand-written ladder stays out of the count.
+
+- *Roughly how much was accepted as-is vs engineered on:* The direction was
+  Josh's question. The audit that turned "add the particle" into "nineteen lines
+  are mislabelled" is the work, and so is deciding where *not* to add it.
+
+- *Left open:* the audio generator still treats a zero-byte MP3 as done. I
+  deleted and regenerated the four bad clips by hand; the failure handling is
+  unchanged and will do it again.
+
+- ⚠️ *Unreviewed:* all the new Thai is a draft awaiting Josh's check and his
+  teacher's Paiboon pass.
+
+---
