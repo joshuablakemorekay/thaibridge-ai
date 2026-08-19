@@ -2586,3 +2586,67 @@ only checks the first thing.
   teacher's Paiboon pass.
 
 ---
+
+## 2026-08-19 (evening) — The permissions were right; the shop window was lying
+
+**What I built.** I sent the app to a European friend who visits Thai temples and
+got back an objection I did not expect:
+
+> The main problem is anyone who is not Thai seem to be getting offended and
+> upset perhaps feeling left out or excluded
+
+Before proposing anything, I had the access rules read. `theravada`,
+`meditation`, `chanting` and `paiboon` were already free, level 1,
+`requires_alphabet: False` — the comment beside `chanting` literally says *"you
+do not need to read Thai to chant along."* The app had granted what she wanted
+all along. The home page just said the opposite: *"pass the quiz to unlock the
+site."*
+
+**How we did it.** Audited the gates, then fixed the copy to match: two new free
+pages (`/dhamma-and-culture`, `/practising-anywhere`), a "What are you here to
+learn?" chooser with four equal doors, and a wording pass. Then `/register`
+turned up crashing — `REGISTER_LEVELS` had never existed in *any* commit, and the
+access gate meant only paying learners ever saw the 500. Redirected it, then
+wrote the nine registers.
+
+**Engineering Contribution**
+
+- *Decisions made:* Kept every piece of Thai cultural material — the objection
+  was never to its presence but to its apparent compulsoriness.
+  `/practising-anywhere` names **no country at all**, built from the five
+  precepts, the three bases of merit and the Sigālovāda's six directions, which
+  are universal by construction. Skipped renaming `register_levels.py` despite
+  its collision with `thai_registers.py`: another session had `app.py` open and a
+  rename touching imports was the wrong risk today.
+
+- *Improvements made to generated code:* Twice I sent the wording back and both
+  times it changed the approach, not the phrasing. First:
+
+  > practising the precepts in Britain? How about Britain and other places around
+  > the world? Isn't this supposed to be universal?
+
+  Naming my own country instead of Thailand is the same move with a different
+  flag. Then, after "foreigner" became "non-Thai":
+
+  > Is there a better name than non-Thai?
+
+  Politer, structurally identical — both define a reader by not belonging. The
+  fix was noticing the sentences already said "you", making the label redundant.
+  Then a self-inflicted one: the nine register colours I picked render as
+  white-on-colour badges, and **six of nine failed AA** (saffron 2.13:1, gold
+  2.10:1) — on a site with a Learning Support panel for visual stress. Darkened
+  in HLS, hue and saturation untouched, with a test pinning it.
+
+- *Roughly how much was accepted as-is vs engineered on:* The structure and the
+  diagnosis went in unchanged. Every piece of language went through my
+  corrections, and the accessibility bug was mine to find and mine to have
+  caused. Backed by `prompts/inclusive-positioning/REASONING.md` and
+  `prompts/register-levels-draft/REASONING.md`.
+
+- *Lesson:* **Renaming a category is not removing it**, and a gate that hides a
+  crash from everyone except the people who paid is worse than one that crashes
+  for everybody.
+
+- ⚠️ *Unreviewed:* the nine registers are a draft awaiting my teacher.
+
+---
