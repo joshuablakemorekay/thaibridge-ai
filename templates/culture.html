@@ -516,21 +516,21 @@
             {% endfor %}
         </div>
 
-        <!-- Foreigner Guidelines -->
+        <!-- Guidelines for learners -->
         <div class="card" style="border-left: 5px solid #673ab7; background: linear-gradient(135deg, #ede7f6 0%, #d1c4e9 100%);">
-            <h3 style="color: #4527a0;">Guidelines for Foreigners</h3>
+            <h3 style="color: #4527a0;">Guidelines for Learners</h3>
             
             <div style="background: white; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
                 <h4 style="color: #5e35b1; margin-top: 0;">Should You Wai?</h4>
-                <p><strong>Reciprocation:</strong> {{ cultural_info.wai_gesture.foreigner_guidelines.reciprocation.rule }}</p>
-                <p><strong>How:</strong> {{ cultural_info.wai_gesture.foreigner_guidelines.reciprocation.how }}</p>
-                <p style="font-style: italic; color: #666;"><strong>Exception:</strong> {{ cultural_info.wai_gesture.foreigner_guidelines.reciprocation.exception }}</p>
+                <p><strong>Reciprocation:</strong> {{ cultural_info.wai_gesture.learner_guidelines.reciprocation.rule }}</p>
+                <p><strong>How:</strong> {{ cultural_info.wai_gesture.learner_guidelines.reciprocation.how }}</p>
+                <p style="font-style: italic; color: #666;"><strong>Exception:</strong> {{ cultural_info.wai_gesture.learner_guidelines.reciprocation.exception }}</p>
             </div>
 
             <div style="background: white; padding: 1.25rem; border-radius: 8px; margin: 1rem 0;">
                 <h4 style="color: #5e35b1; margin-top: 0;">Definitely Wai In These Situations:</h4>
                 <ul style="line-height: 1.8; padding-left: 1.5rem;">
-                    {% for situation in cultural_info.wai_gesture.foreigner_guidelines.when_to_definitely_wai %}
+                    {% for situation in cultural_info.wai_gesture.learner_guidelines.when_to_definitely_wai %}
                     <li>{{ situation }}</li>
                     {% endfor %}
                 </ul>

@@ -8,7 +8,7 @@
     {# Thai monk learning English: prompt = Thai, target = English.
        Audio is the anchor, the respelling is a memory aid, the Thai tip is the
        instruction. IPA is for advanced learners and hides by default. #}
-    {# No Paiboon here on purpose: it exists to help a Westerner pronounce Thai,
+    {# No Paiboon here on purpose: it exists to help a reader of the Latin alphabet pronounce Thai,
        and this reader already reads Thai. #}
     <div class="monk-entry-prompt">
         <span class="thai">{{ e.thai }}</span>
@@ -47,7 +47,7 @@
     <p class="monk-entry-tip thai">{{ e.english_tip_th }}</p>
     {% endif %}
     {% else %}
-    {# Western monk learning Thai: prompt = English, target = Thai + paiboon #}
+    {# Monk learning Thai: prompt = English, target = Thai + paiboon #}
     <div class="monk-entry-prompt">
         <span class="monk-entry-word">{{ e.english }}</span>
     </div>

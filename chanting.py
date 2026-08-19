@@ -71,7 +71,7 @@ Each verse carries up to five layers, and they are NOT interchangeable:
                    chanted, and it is what Thai chanting books print. It is
                    Pali, not Thai: do NOT run it through Paiboon.
   * `pali_roman` — the SAME Pali in Latin script with Pali diacritics (IAST:
-                   ā ī ū ṃ ṅ ñ ṭ ḍ ṇ ḷ). This is how a non-Thai reader chants
+                   ā ī ū ṃ ṅ ñ ṭ ḍ ṇ ḷ). This is how a reader who cannot read Thai script chants
                    it. It is romanised Pali, NOT Paiboon — the two systems
                    share no conventions and must never be mixed.
   * `thai`       — the THAI TRANSLATION of that Pali. This is ordinary Thai

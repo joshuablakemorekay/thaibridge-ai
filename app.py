@@ -1106,7 +1106,7 @@ DHAMMA_TALKS_BY_SLUG = {t['slug']: t for t in DHAMMA_TALKS}
 
 # The two learning directions Monk Mode supports.
 MONK_DIRECTIONS = {'learn_thai', 'learn_english'}
-MONK_DIRECTION_DEFAULT = 'learn_thai'   # a Western monk learning Thai
+MONK_DIRECTION_DEFAULT = 'learn_thai'   # a monk learning Thai
 
 # The two English accents the learn_english side can be shown in.
 # British is the default because the whole existing system was built to it: the
@@ -2359,7 +2359,7 @@ TOUR_VOCAB = {
     'food': [
         {'english': 'Delicious', 'thai': 'อร่อย', 'paiboon': 'à-rɔ̀i', 'note': 'Most useful food adjective'},
         {'english': 'Spicy', 'thai': 'เผ็ด', 'paiboon': 'pèt', 'note': 'Critical for food preferences'},
-        {'english': 'Not spicy', 'thai': 'ไม่เผ็ด', 'paiboon': 'mâi pèt', 'note': 'Essential for many foreigners'},
+        {'english': 'Not spicy', 'thai': 'ไม่เผ็ด', 'paiboon': 'mâi pèt', 'note': 'Essential for many learners'},
         {'english': 'Water', 'thai': 'น้ำ', 'paiboon': 'náam', 'note': 'Also means liquid in general'},
         {'english': 'Bill / Check', 'thai': 'เช็คบิล', 'paiboon': 'chék-bin', 'note': 'Used to request the bill'},
     ],
@@ -5153,7 +5153,7 @@ CULTURAL_INFO = {
                 'Service staff wai customers (customer may/may not return)',
                 'Everyone wais monks (monks do NOT return wai)'
             ],
-            'key_insight': 'It\'s better to wai when unsure than to NOT wai when you should. Thais appreciate foreigners who try!'
+            'key_insight': 'It\'s better to wai when unsure than to NOT wai when you should. Thais appreciate it when you try!'
         },
         
         'when_not_to_wai': {
@@ -5182,7 +5182,7 @@ CULTURAL_INFO = {
             'special_cases': {
                 'monks': 'Monks NEVER return wais - they give blessings instead. Don\'t expect a wai back!',
                 'royalty': 'In presence of royalty, follow others\' lead. Don\'t initiate.',
-                'foreigners': 'Thais don\'t expect foreigners to wai, but deeply appreciate it when you do correctly'
+                'learners': 'Thais don\'t expect you to wai, but deeply appreciate it when you do correctly'
             }
         },
         
@@ -5219,16 +5219,16 @@ CULTURAL_INFO = {
             ]
         },
         
-        'foreigner_guidelines': {
+        'learner_guidelines': {
             'reciprocation': {
                 'rule': 'If someone wais you, it\'s polite to return it',
                 'how': 'Match or slightly exceed their wai level',
                 'exception': 'If they\'re clearly service staff, a smile or nod is OK'
             },
             'initiation': {
-                'rule': 'As a foreigner, you\'re NOT expected to initiate wai',
+                'rule': 'You\'re NOT expected to initiate wai',
                 'but': 'Doing so appropriately shows deep respect and cultural understanding',
-                'appreciated': 'Thais will be impressed and pleased when foreigners wai correctly'
+                'appreciated': 'Thais will be impressed and pleased when you wai correctly'
             },
             'exceptions_no_wai': [
                 'Do NOT wai to children (smile/nod instead)',
@@ -5284,7 +5284,7 @@ CULTURAL_INFO = {
                 'action': 'Wai when introduced',
                 'level': 'Level 2 - respectful',
                 'words': 'สวัสดีครับ/ค่ะ (sà-wàt-dii kráp/kâ)',
-                'notes': 'Parents will appreciate foreigner showing respect'
+                'notes': 'Parents will appreciate you showing respect'
             },
             {
                 'scenario': 'Server brings your food',
@@ -5306,7 +5306,7 @@ CULTURAL_INFO = {
             'lotus_symbolism': 'Hands together represent lotus bud - symbol of purity rising from mud (samsara to enlightenment)',
             'namaste_connection': 'Related to Indian "namaste" but uniquely Thai in execution and social rules',
             'social_glue': 'The wai maintains Thailand\'s hierarchical society while allowing fluid respect exchange',
-            'tourist_respect': 'Foreigners attempting proper wai are deeply respected - shows you honor Thai culture'
+            'tourist_respect': 'Attempting a proper wai is deeply respected - shows you honor Thai culture'
         },
         
         'quick_reference': {
@@ -5432,7 +5432,7 @@ def set_monk_mode_off():
 
 @app.route('/set-monk-direction/<direction>')
 def set_monk_direction(direction):
-    """Switch the monk lessons between 'learn_thai' (a Western monk) and
+    """Switch the monk lessons between 'learn_thai' (a monk learning Thai) and
     'learn_english' (a Thai monk). Flips which language is the prompt."""
     init_user_progress()
     if direction in MONK_DIRECTIONS:
