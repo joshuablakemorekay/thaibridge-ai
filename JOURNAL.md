@@ -2738,3 +2738,120 @@ carried a flag reading "pass a quiz to see our prices".
 - ⚠️ *Unreviewed:* Survival Thai's 50 phrases are a draft awaiting my teacher.
 
 ---
+
+## 2026-08-19 (later still) — "In your own culture" still assumes you want one
+
+**What I built.** My European friend sent a second, longer round of feedback on
+the same objection. The evening's work had answered the first half of it — you
+do not have to be Thai — and I expected this round to be a tidy-up. Read against
+the pages I had just shipped, one line in her brief had no answer anywhere on
+the site:
+
+> Learners may also choose to remain culturally neutral and follow no particular
+> Buddhist culture or cultural tradition.
+
+Every sentence I had written that morning said some version of *practise in your
+own culture, wherever you live*. I had been reading that as the generous option.
+It is not: it still assumes a reader who wants to belong somewhere, and hands
+them a culture rather than asking. Someone who wants the teaching and no
+tradition at all was not being refused — they simply were not on the list.
+
+**How we did it.** Three additions and one deletion, all on pages that already
+existed. A **Culturally neutral** door alongside Universal Dhamma and Dhamma in
+Thai Culture, phrased in her words. Two new lines in the *what you do not need*
+list — *"including no culture at all"* and *"or to call yourself anything"*. A
+new question for the reader who wants to belong to nothing. And the two-lens
+layout from the morning came out, because her brief named four things where I
+had drawn two.
+
+That fourth distinction was the one I had genuinely missed. I had folded
+Theravada in with the Dhamma as "the universal side", which leaves a reader free
+to conclude Theravada is another culture they would be signing up to. It is not:
+it is a chain of transmission — a canon, a lineage, centuries of communities
+checking texts against each other — and it runs through several countries rather
+than belonging to one. It has its own rung now, saying exactly that.
+
+I also went looking for the promise on the way in, and found the signup page
+telling everyone creating an account that they were about to *"begin your Thai
+language journey"*, whatever they had actually come for. That is this morning's
+lie in the one place every learner passes through.
+
+**What I learned.** Renaming the exit is not the same as opening it, and I made
+that mistake twice in one day in two different shapes. This morning the gates
+were open and the copy said they were shut. This evening the copy was welcoming
+and the only thing it welcomed you into was still a culture. Both times the fix
+was to go and read what the thing actually offers, instead of what I had decided
+it offered.
+
+**Engineering Contribution**
+
+- *Decisions made:* Left the home page's four doors alone. Her three approaches
+  sort by **relationship to culture**; the home page sorts by **subject**, and
+  swapping one axis for the other would leave someone who came for the language
+  with nowhere to click. The approaches went on the explanation page instead,
+  where the framing question is already being asked. Kept every piece of Thai
+  material again — the ladder was built so that adding the neutral option costs
+  the Thai layer nothing, which is the whole point of separating them. On
+  vocabulary I closed it early:
+
+  > Thai users and non-Thai users is probably fine but I do like Learners which
+  > currently exists in the app
+
+  so the new copy addresses "you" throughout and the site's own word stays. That
+  also keeps yesterday's rule intact: nobody is described by what they are not.
+
+- *Improvements made to generated code:* The accessibility habit from the
+  register badges paid for itself — all four new layer tags are dark text on a
+  pale ground rather than white on colour, decided before writing them rather
+  than after measuring one at 2.13:1. The bigger find came out of restyling the
+  page: `var(--saffron)` is typed about seventy times across sixteen templates
+  and once in `base.css`, and it had **never been defined anywhere**. An
+  undefined custom property invalidates the whole declaration, so the browser
+  says nothing, the page still renders, and the colour silently does not apply —
+  which is why it survived this long. `--gold` and `--cream` were missing too,
+  and that is why the gender selector's active button had no background, no text
+  colour and no border at the same time; it has been reading as unselected for
+  as long as it has existed. Aliased all three to the variables that do exist,
+  and wrote a test that scans every `var(--x)` in the templates, stylesheets and
+  JS and fails on any with nothing behind it — with `var(--x, fallback)`
+  deliberately exempt, because the fallback is what makes that form correct.
+
+  Then a smaller discipline that mattered more than it looked. Screenshotting
+  the new page, the sidebar rendered as unreadable dark-on-dark, and my first
+  thought was that my three new colour definitions had caused it. Rather than
+  assume it either way, I copied my `base.css` aside, checked out the committed
+  version, reloaded and screenshotted again — identical. Pre-existing, not mine,
+  and now known rather than guessed at.
+
+- *Roughly how much was accepted as-is vs engineered on:* The brief was my
+  friend's and the diagnosis followed from reading it against the pages, so the
+  structure landed close to as-proposed. What got added on top was the refusal
+  to restructure the home page around a second axis, the
+  Theravada-as-transmission rung, the signup line and the CSS bug — none of
+  which were asked for.
+
+- *A mistake, recorded:* to take those screenshots I started a local server with
+  a bare `python -c "from app import app"` and no `DATABASE_URL=""`. A note
+  written **today**, by another session in this same clone, says precisely that
+  connects to the production Neon database. One logged-out read-only page was
+  loaded, so nothing was written and nothing is damaged — but that guard exists
+  so that "I only meant to look" never becomes the thing standing between a
+  local experiment and live data.
+
+- *On working in a shared clone:* another session was committing and pushing
+  throughout. `HEAD` moved between two of my own consecutive commands, and its
+  push carried my `fix(css)` commit up to GitHub before I had asked for one. No
+  work was lost — the remote only ever grew — but the habits that made that a
+  non-event were re-reading `git status` immediately before staging instead of
+  trusting a picture four minutes old, and naming files explicitly rather than
+  `git add .`.
+
+- 📉 *On the verbatim ratio:* low again, and for a different reason than
+  yesterday. Most of the input this session was a brief written by someone else
+  and forwarded on — quoted where it drove a decision, but not my voice. My own
+  words came to one steer on vocabulary and the go-aheads to commit and push.
+  Padding with those would misrepresent who decided what, so it stays as it is.
+
+- ⚠️ *Unreviewed:* the new copy is mine and has had no second reader.
+
+---
