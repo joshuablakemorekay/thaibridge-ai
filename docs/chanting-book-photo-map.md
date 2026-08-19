@@ -48,6 +48,7 @@ photograph.
 | 64 | IMG_0327 | 263 |
 | 65 | IMG_0328 | 263 |
 | 68 | IMG_0331 | 263 |
+| 69 | IMG_0332 | 263 |
 | 207 | IMG_0477 | 270 |
 | 213 | IMG_0483 | 270 |
 | 215 | IMG_0485 | 270 |
@@ -59,14 +60,14 @@ photograph.
 | 223 | IMG_0493 | 270 |
 
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
-somewhere between 68 and 207 were shot twice. Those stretches are unmapped.
+somewhere between 69 and 207 were shot twice. Those stretches are unmapped.
 
 Pages 35–50 went in without being added here, and they all sat at offset 263 —
 the same as pages 31–34 and 51. Pages 55–58 went in the same way. So the offset
-holds **unbroken from 31 to 65**, now anchored at both ends of that run and at
-every page from 59 to 65. That is a reason to expect the next filename, never a
+holds **unbroken from 31 to 69**, now anchored at both ends of that run and at
+every page from 59 to 69. That is a reason to expect the next filename, never a
 reason to trust it: read the page number off the top of the photograph as
-always.
+always — page 69 was confirmed that way on `IMG_0332`, not calculated.
 
 ## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
 

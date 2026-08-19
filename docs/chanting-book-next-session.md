@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-15 after pages
-61 to 65 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
+69 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,12 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-15 after pages
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–65 are in and unbroken**, plus 217–221. **94 chants, 1,264 verses.**
-  `/chanting` derives that line itself, so it is never stale.
+- **Pages 1–69 are in and unbroken**, plus 217–221. **98 chants, 1,138 verses
+  reconciled against their photographs.** `/chanting` derives its own coverage
+  line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 61–65 were applied 2026-08-14 and 2026-08-15; pages 55–60 landed
-  2026-08-11 and 2026-08-12, and 51 to 54 over the two days before that.
+- Page 69 was applied 2026-08-19; pages 66–68 over the days before it; pages
+  61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 
 ## How to work — this matters more than the tasks
 
@@ -29,12 +30,22 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 66, `IMG_0329`
+## Next: page 70, `IMG_0333`
 
-Page 65's closing paragraph is **cut by the page turn** — it ends at
-`หลังจากเสร็จพิธีปรกติแล้ว` with no full stop, so page 66 opens by finishing
-that sentence. Expect the same shape pages 62–65 have had: explanatory prose
-around the chants rather than chant text alone.
+Page 69 opens `สะระภัญญะคาถา สำหรับสวดในวันอัฏฐมีบูชา` and prints only **two
+rows of it** before the page runs out at the footnote rule, so page 70 carries
+the rest. It is in the app as `sarabhanna-gatha-atthami` with a ‼ CONTINUES
+marker on verse 2, and page 70's batch is a **continuation**: `continuation_of`,
+verse numbering carrying on at 3, no title and no invitation.
+
+It is **set in two columns** — one printed line running across both, left pāda
+then right — like the Visākha Saraphañña on pages 67 and 68. Check the column
+structure before reading a word, and check it again wherever the line lengths
+change. Its twin ran to thirty rows, which is a reason to expect more of the
+same and never a reason to assume how many.
+
+If page 70 turns out to start something else instead, that CONTINUES marker
+comes off then rather than being left standing.
 
 **Page 63 was the first page in the book with no chant on it at all** — the
 whole sheet is `คำอธิบายประกอบทำวัตรเย็น`, so its batch has an EMPTY manifest
@@ -167,6 +178,41 @@ from itself. Page 62 prints `หินา` and `วิริยัมหิน�
 
 **Two chants on pages 64–65 have no colophon**, unlike pages 60, 61 and 62.
 Checked against both pages; the `closing` key is left off rather than composed.
+
+## Raised on page 69 — all open, all need the book
+
+**The two parallel offerings are pointed differently in four places, and the
+difference is now confirmed from both sides.** Visākha runs across pages 66–67
+and Aṭṭhamī across 68–69, and they print the same sentences with different
+commas. Page 69 takes a full stop at `โลกะวิทู.` where page 66 takes a comma;
+it merges `…ปัต์วา อิมัง ฐานัง สัมปัตตา,` into one unit where the twin keeps
+two; it splits `ยะถาภุจเจ คุเณ,` from `อะนุสสะรันตา,` where the twin runs them
+together; and it makes three units of `สุจิระปะรินิพพุโตปิ, / ญาตัพเพหิ, /
+คุเณหิ อะตีตารัมมะณะตายะ ปัญญายะมาโน,` where the twin has two — separating
+`ญาตัพเพหิ` from the `คุเณหิ` it agrees with. Every comma was read on an
+isolated 3× crop. All four are reproduced as each page prints them, and all four
+are one look away from settled.
+
+**`ปะฏิคคัณหาตุ` is bare again, and it is now two against one.** Page 67 prints
+it `ปะฏิคคัณ์หาตุ` WITH the small mark and the app holds it that way; pages 68
+and 69 both print it bare. So the live question on this word is no longer which
+of the two marks the printer cuts, but **whether he sets one at all** — which is
+the same thing page 60 found on `อุณหัสสะ`. Worth knowing because the omission
+is exactly what a reader would "correct" without noticing.
+
+**The Aṭṭhamī chant names the Visākha full moon.** Page 69 verse 43 prints
+`อิมัง วิสาขะปุณณะมีกาลัง,` just as the Visākha twin does. It is not an error:
+Aṭṭhamī is the eighth day reckoned FROM that full moon, and what actually
+differs is the next unit — `สะรีรัชฌาปะนะกาละ` (the time of the cremation of
+the body) where the twin has `ชาติสัมโพธินิพพานะกาละ`. Recorded because it
+reads as a mistake to anyone who does not know why it is there.
+
+**One thing to fix in the file rather than in the book.** The Visākha twin's
+verse 56 carries `Sucirapaṇinibbutopi` as its `pali_roman` where its own `pali`
+reads `สุจิระปะรินิพพุโตปิ` — *parinibbutopi*, with an r. It looks like a
+transliteration slip in existing data rather than anything the book did. Nothing
+was changed, because the rule is that the file wins and only Josh overrides it
+chant by chant.
 
 ## Four things waiting on Josh — ask, don't guess
 
