@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
-71 went in.
+72 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–71 are in and unbroken**, plus 217–221. **100 chants, 1,199 verses
+- **Pages 1–72 are in and unbroken**, plus 217–221. **101 chants, 1,217 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 69, 70 and 71 were applied 2026-08-19; pages 66–68 over the days
+- Pages 69 to 72 were applied 2026-08-19; pages 66–68 over the days
   before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 
 ## How to work — this matters more than the tasks
@@ -30,28 +30,31 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 72, `IMG_0335`
+## Next: page 73, `IMG_0336`
 
-`sarabhanna-gatha-magha` is **open at verse 5** and page 72 carries the rest, so
-its batch is a `continuation_of` with the numbering carrying on at 6, no title
-and no invitation. Its two predecessors ran to thirty rows each — a reason to
-expect more, never a reason to assume how many.
+`ovada-patimokkhadi-patha` is **open at verse 3** and page 73 carries the rest,
+so its batch is a `continuation_of` with the numbering carrying on at 4, no
+title and no invitation. Only its **บทขัด**, the prefatory verse, is in so far —
+the main text of the chant is entirely still to come, so expect a long page and
+probably more than one.
+
+**Expect more section headings.** Page 72 gives the chant a `บทขัด` heading over
+its first verse, entered as a `section`. Anything else the book sets centred
+between verses of this chant — another `บท…`, a movement name — belongs the same
+way, on the first verse of what it heads. It is not a page block: a block can
+only sit between whole chants.
 
 It is **set in two columns**, read across the row. Check the column structure
-before reading a word. Page 70's check on verse 3 records the four independent
-tests that settle it and they are reusable: no punctuation in the left column,
-hyphens that only join across the gutter, and rows that read as continuous
-sense across the gutter but as half-lines down it.
+before reading a word; page 70's check on verse 3 records the reusable tests.
 
-**Watch for `มาคะธานัง`.** Page 71 prints the Magadhans' name as `มาฆะทานัง`,
-which looks like the compositor being pulled toward `มาฆะ` by the six other
-occurrences on that page. If the word turns up again on 72, read it carefully —
-two independent slips would say something different from one.
+**Watch the ฏ/ต in Pāṭimokkha.** Page 72 spells it BOTH ways on one sheet —
+`ปาฏิโมกขัง` with ฏ in the chant above, `ปาติโมกขัสสะ` and the title with ต
+below. Read each occurrence rather than assuming the chant is consistent with
+itself, and reproduce what is there.
 
-Page 72 may also run into whatever follows the Māgha service. The fourth of the
-parallel offerings, Āsāḷha, is expected around page 75, so there is other
-material between here and there. **Read the whole sheet before deciding what is
-on it** — page 71 held three chants.
+The fourth parallel offering, Āsāḷha, is expected around page 75, so there is
+other material between here and there. **Read the whole sheet before deciding
+what is on it** — page 71 held three chants and page 72 held two plus a block.
 
 **Page 63 was the first page in the book with no chant on it at all** — the
 whole sheet is `คำอธิบายประกอบทำวัตรเย็น`, so its batch has an EMPTY manifest
@@ -184,6 +187,34 @@ from itself. Page 62 prints `หินา` and `วิริยัมหิน�
 
 **Two chants on pages 64–65 have no colophon**, unlike pages 60, 61 and 62.
 Checked against both pages; the `closing` key is left off rather than composed.
+
+## Raised on page 72 — the book contradicts itself on one sheet
+
+**Pāṭimokkha is spelt two ways on page 72.** The Māgha Saraphañña prints
+`ปาฏิโมกขัง` with ฏ at its verses 9 and 18. The chant directly beneath it is
+titled `โอวาทะปาติโมกขาทิปาฐะ` and prints `ปาติโมกขัสสะ` at its verse 2 — both
+with ต. All four read at 3× on isolated crops. Same word, same sheet, two
+spellings, all reproduced as printed. This is the clearest single-page evidence
+yet of how much this printer varies, and it is worth remembering the next time a
+spelling looks like an error: **the book is not always consistent with itself,
+so "it differs from the line before" is not evidence of a misreading.**
+
+**`บทขัด` is a section, not a chant and not a block.** It is printed centred
+below the title and above the first verse, naming the prefatory verse. It rides
+on verse 1 as a `section` and the template renders it as a heading. A page block
+could not go there — `build_page_index` can only put blocks between whole
+chants.
+
+**The first explanatory paragraph in this run went in as a page block**, and it
+is declared on the SECOND page-map row rather than the first. That is what makes
+`block_groups` anchor it after the chant above it, which is where the book
+prints it; declaring it on the first row would have lifted it to the top of the
+page. It names the chant in **bold** mid-sentence, which `PAGE_BLOCKS` has no
+field for — the words are kept and only the weight is lost.
+
+**The three Saraphañña sets are not the same length.** Visākha and Aṭṭhamī both
+run to thirty verses; the Māgha one ends at twenty. That is the book, not a page
+missed — its last line closes with `ตาทิโนติ.`, the quotative plus a full stop.
 
 ## Raised on page 71 — three chants on one sheet
 
