@@ -119,6 +119,22 @@ class TestItIsWiredIntoTheRestOfTheSite:
         results = paiboon_lookup.search('mai kao jai', limit=5)
         assert any(e.thai == 'ไม่เข้าใจ' for e in results)
 
+    def test_the_home_page_sends_people_here_first(self, client):
+        """A free front door nobody can find does nothing. The home page's
+        language card used to open on the alphabet — "starts with the 44
+        consonants" — which was the wall this section exists to route around."""
+        body = client.get('/').get_data(as_text=True)
+        assert 'href="/survival"' in body
+
+    def test_it_is_step_one_of_the_language_path(self, client):
+        """It is the only step with no prerequisite, so it cannot sit behind
+        the alphabet in the path that describes the route."""
+        import re
+        body = client.get('/').get_data(as_text=True)
+        steps = re.findall(r'step-number">(\d+)</div>\s*<h3>([^<]+)', body)
+        assert steps, 'the learning path steps could not be found'
+        assert steps[0][1].strip() == 'Survival Thai'
+
     def test_it_is_in_the_learn_sidebar(self, client):
         body = client.get('/survival').get_data(as_text=True)
         assert 'href="/survival"' in body
