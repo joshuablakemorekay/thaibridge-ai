@@ -1,0 +1,325 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "sarabhanna-gatha-atthami"
+  ],
+  "pages": [
+   {
+    "page": 70,
+    "file": "IMG_0333.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "sarabhanna-gatha-atthami",
+    "verses": "3-28",
+    "starts_here": false,
+    "note": "The whole sheet, top to bottom, is this one chant — twenty-six two-column rows and nothing else. No title (that is on page 69), no chant number, no heading, no rubric, no footnote rule, no footnote, no colophon. SET IN TWO COLUMNS, read ACROSS the row: the left cell holds the first pāda and the right the second, and every full stop on the page falls at the end of a right cell while the left column carries no punctuation at all. Three rows join mid-word across the gutter, the left cell ending in a hyphen. The chant does NOT end here — its verse 28 is the twin's verse 28, and the twin has two more after that."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "sarabhanna-gatha-atthami",
+   "continuation_of": "sarabhanna-gatha-atthami",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent from this page, and none written. A continuation carries no title and no invitation by design; page 69 settled that this chant has none.",
+    "units": "Twenty-six, verses 3 to 28, one per printed row, each row read ACROSS the two columns. They fall into couplets, the full stop landing at the end of every second row for most of the page — rows 4, 6, 8, 12, 14, 16, 18, 20, 22 and 24 of the chant's own numbering — with a longer run at verses 9 to 12 and again at 25 to 28, where the sentence carries over four lines.",
+    "ordering": "None. The page prints no Thai translation, so there is nothing to run out of step with the Pali.",
+    "conventions": "None. The page prints no romanisation of its own, and there is no paiboon value in this batch at all — the page prints no Thai to romanise and the continuation carries no title.",
+    "pages": "IMG_0333.PNG, page 70, read off the top centre of the sheet. The whole page is this chant. Verse 3 is the first to carry page 70 and no verse after it turns a page. Nothing is obscured: no glare, no shadow in the gutter, and the thumb at the lower left sits on blank margin below the last row of the left column. The reverse of the leaf ghosts through faintly across the middle of the sheet but does not touch any line that was read."
+   },
+   "verses": [
+    {
+     "number": 3,
+     "page": 70,
+     "pali": "มัลเลหิ สัพพะคัมธานัง สัทเธหิ กะตะจิตะกา",
+     "pali_roman": "Mallehi sabbagaṃdhānaṃ saddhehi katacitakā",
+     "thai": "",
+     "paiboon": "",
+     "english": "A pyre of all fragrant woods was made by the faithful Mallas,"
+    },
+    {
+     "number": 4,
+     "pali": "ปาฏิเหรัง ทัสสะยันติ สะยะเมวะ อะปัชชะลิ.",
+     "pali_roman": "Pāṭiheraṃ dassayanti sayameva apajjali.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and showing a marvel it took flame of itself."
+    },
+    {
+     "number": 5,
+     "pali": "ตัสสันติมะเทหะภูตัง พัตติงสะวะระลักขะณัง",
+     "pali_roman": "Tassantimadehabhūtaṃ battiṃsavaralakkhaṇaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "That which was his final body, bearing the thirty-two excellent marks,"
+    },
+    {
+     "number": 6,
+     "pali": "ธาตุภูเตนะ เตเชนะ อัชฌายิตะ มะเหสิโน.",
+     "pali_roman": "Dhātubhūtena tejena ajjhāyita mahesino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "was burnt by that elemental fire — the body of the Great Seer."
+    },
+    {
+     "number": 7,
+     "pali": "ตาทิโสวะ อะยันทานิ สัมปัตโต อะภิลักขิโต",
+     "pali_roman": "Tādisova ayandāni sampatto abhilakkhito",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just such a day as that has now come round again, and is marked out,"
+    },
+    {
+     "number": 8,
+     "pali": "มะยันทานิ สุนักขัตตัง อะภิมังคะละสัมมะตัง.",
+     "pali_roman": "Mayandāni sunakkhattaṃ abhimaṅgalasammataṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and we now have reached this auspicious conjunction, held to be most blessed."
+    },
+    {
+     "number": 9,
+     "pali": "สัมปัตตา อะนุกาเลนะ พุทธานุสสะระณาระหัง",
+     "pali_roman": "Sampattā anukālena buddhānussaraṇārahaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having come to it in due time, worthy of the recollection of the Buddha,"
+    },
+    {
+     "number": 10,
+     "pali": "สะรีรัชฌาปะนักกาละภูตัง ตัสสะ สะยัมภุโน",
+     "pali_roman": "Sarīrajjhāpanakkālabhūtaṃ tassa sayambhuno",
+     "thai": "",
+     "paiboon": "",
+     "english": "it being the time of the cremation of the body of that Self-Awakened One."
+    },
+    {
+     "number": 11,
+     "pali": "ตัง สัมมานุสสะระมานา สุจิรัง นิพพุตามะปิ",
+     "pali_roman": "Taṃ sammānussaramānā suciraṃ nibbutāmapi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Rightly recollecting him, though he has long since been quenched,"
+    },
+    {
+     "number": 12,
+     "pali": "ปะสันนาการัง กะโรนตา สักกาเร อะภิสัชชิยะ.",
+     "pali_roman": "Pasannākāraṃ karontā sakkāre abhisajjiya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "we make this act of confidence, having prepared these offerings."
+    },
+    {
+     "number": 13,
+     "pali": "ทัณฑะทีเป ทีปะฆะเร มาลาวิกะติอาทะโย",
+     "pali_roman": "Daṇḍadīpe dīpaghare mālāvikatiādayo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Candles on their stands, lamps in their housings, garlands of every kind and the rest,"
+    },
+    {
+     "number": 14,
+     "pali": "ตัสเสวะ ปูชะนัตถายะ ยะถาสัตติ ยะถาพะลัง.",
+     "pali_roman": "Tasseva pūjanatthāya yathāsatti yathābalaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "for the honouring of him alone, so far as our means and our strength allow."
+    },
+    {
+     "number": 15,
+     "pali": "สะมาหะริต์วา เอกัตถะ ฐะปะยิมหา ยะถาระหัง",
+     "pali_roman": "Samāharitvā ekattha ṭhapayimhā yathārahaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having gathered them together in one place we have set them out as is fitting,"
+    },
+    {
+     "number": 16,
+     "pali": "นะรานะรานัง สัพเพสัง สัทธัมเม สัมปะสีทะตัง.",
+     "pali_roman": "Narānarānaṃ sabbesaṃ saddhamme sampasīdataṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "that all beings, human and other than human, may find confidence in the True Dhamma."
+    },
+    {
+     "number": 17,
+     "pali": "ธัมมัสสะวะนัง กะริสสามะ สัมพุทธะคุณะทีปะนัง",
+     "pali_roman": "Dhammassavanaṃ karissāma sambuddhaguṇadīpanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "We shall make a hearing of the Dhamma, one that shows forth the qualities of the Fully Awakened One,"
+    },
+    {
+     "number": 18,
+     "pali": "พุทธะสุโพธิตาทีนัง ทีปะนัตถัง มะเหสิโน.",
+     "pali_roman": "Buddhasubodhitādīnaṃ dīpanatthaṃ mahesino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "for the showing forth of the Great Seer's perfect awakening and all that follows from it."
+    },
+    {
+     "number": 19,
+     "pali": "ปะสันนาวะ มะยัง สัพเพ สัททะหามะ สุโพธิตัง",
+     "pali_roman": "Pasannāva mayaṃ sabbe saddahāma subodhitaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "All of us, being confident, place our trust in his perfect awakening,"
+    },
+    {
+     "number": 20,
+     "pali": "สักกัจจันตัง นะมัสสามะ สัมพุทธัง โคตะมะว์หะยัง.",
+     "pali_roman": "Sakkaccantaṃ namassāma sambuddhaṃ gotamavhayaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and with reverence we pay homage to the Fully Awakened One called Gotama."
+    },
+    {
+     "number": 21,
+     "pali": "อิเมหิ จะ สักกาเรหิ ฐะปิเตหิ ตะหิง ตะหิง",
+     "pali_roman": "Imehi ca sakkārehi ṭhapitehi tahiṃ tahiṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "And with these offerings, set out here and there,"
+    },
+    {
+     "number": 22,
+     "pali": "ตัส์มิง เจติยัฏฐาเน อะภิปูเชมะ สาธุกัง.",
+     "pali_roman": "Tasmiṃ cetiyaṭṭhāne abhipūjema sādhukaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "in that place of the shrine, we make our offering well."
+    },
+    {
+     "number": 23,
+     "pali": "สาธุ โน ภันเต ภะคะวา สุจิรัง ปะรินิพพุโต",
+     "pali_roman": "Sādhu no bhante bhagavā suciraṃ parinibbuto",
+     "thai": "",
+     "paiboon": "",
+     "english": "It would be well, venerable sir, that the Blessed One, long since gone to final nibbāna,"
+    },
+    {
+     "number": 24,
+     "pali": "ธะรันโต โพธิยา สักขิภูตานันตะคุเณนะ โส.",
+     "pali_roman": "Dharanto bodhiyā sakkhibhūtānantaguṇena so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "who yet endures by the boundless qualities that stand witness to his awakening,"
+    },
+    {
+     "number": 25,
+     "pali": "ปะวัตติต์วา นิรุทเธนะ อะนันตารัมมะเณนะปิ",
+     "pali_roman": "Pavattitvā niruddhena anantārammaṇenapi",
+     "thai": "",
+     "paiboon": "",
+     "english": "and who, having arisen and ceased, is yet an object without end,"
+    },
+    {
+     "number": 26,
+     "pali": "ปัจฉิมาชะนะตาภูตะสัตตานุกัมปะมานะสาธุ",
+     "pali_roman": "Pacchimājanatābhūtasattānukampamānasādhu",
+     "thai": "",
+     "paiboon": "",
+     "english": "with a mind of sympathy for the beings who are the later generation, would kindly"
+    },
+    {
+     "number": 27,
+     "pali": "อะนุกัมปัง อุปาทายะ ชานันโตวาภิวาทะนัง",
+     "pali_roman": "Anukampaṃ upādāya jānantovābhivādanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "taking up that sympathy, and as one who knows our salutation,"
+    },
+    {
+     "number": 28,
+     "pali": "ปะฏิคคัณหาตุ สักกาเร สุสัชชิเต ตะถา ตะถา.",
+     "pali_roman": "Paṭiggaṇhātu sakkāre susajjite tathā tathā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "accept these offerings, thus and thus well prepared."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0333.PNG",
+     "issue": "THE COLUMN READING FOR THE WHOLE PAGE, AND THE FIRST PAIRING. One printed line runs ACROSS both columns: the left cell holds มัลเลหิ สัพพะคัมธานัง and the right cell สัทเธหิ กะตะจิตะกา, joined into this one verse. Four independent things say so and none of them is a feel. (1) The left column carries NO punctuation at all in twenty-six lines, while every full stop on the page falls at the end of a RIGHT cell — which is what you get when the printed line ends there. (2) Row 8's left cell ends สะรีรัชฌาปะนักกาละ- with a hyphen and joins its OWN row's right cell as สะรีรัชฌาปะนักกาละภูตัง, a real compound; joining it downward to the next left cell would give สะรีรัชฌาปะนักกาละตัง, which is not a word. (3) Row 22 does the same, สักขิ- + ภูตานันตะคุเณนะ giving sakkhibhūta-. (4) Rows 21 to 28 read across produce verses that match the Visākha Saraphañña on pages 67-68 word for word. Reading down the left column alone gives a stack of unfinished half-lines."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0333.PNG",
+     "issue": "สัพพะคัมธานัง is printed with ม, not น. Checked at 5x on an isolated crop: the glyph after คั is a closed loop with no descending leg, so it is ม. Standard editions have sabbagandhānaṃ (คันธานัง). Reproduced as printed and transliterated faithfully as sabbagaṃdhānaṃ, treating the ม as the nasal it stands for rather than silently correcting it to n."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0333.PNG",
+     "issue": "พัตติงสะวะระลักขะณัง is printed with พ, not ท์ว. Checked at 4x against known พ on the same page (สัพเพ, นิพพุตา) and against known ท (ทัณฑะทีเป, ทีปะนัตถัง) — the shapes are distinct and this is พ. That is battiṃsa, not dvattiṃsa, and battiṃsa IS an attested Pali form of the word for thirty-two, so this looks like the book choosing a real variant rather than a misprint. Transliterated battiṃsavaralakkhaṇaṃ to match. Worth knowing because the app holds dvattimsakara-patha elsewhere and the two will look inconsistent side by side."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0333.PNG",
+     "issue": "THE ENGLISH OF VERSES 3 TO 10 IS A WORKING TRANSLATION AND NEEDS YOUR EYE. The page prints no Thai translation, so there is nothing to check it against. This verse is the least certain of them: ธาตุภูเตนะ เตเชนะ อัชฌายิตะ มะเหสิโน reads literally as 'burnt by fire that had become an element', and the sense turns on whether ธาตุ here means the elemental nature of the fire or the relics the burning produced — which is the whole point of Aṭṭhamī. The plainer reading was written rather than the pointed one."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0333.PNG",
+     "issue": "DIFFERS FROM ITS TWIN BY ONE LETTER. This page prints อะนุกาเลนะ (anukālena, 'in due time'); the Visākha Saraphañña at verse 9 has อะนุกาเรนะ (anukārena). Checked at 4x on an isolated crop — the glyph is ล, a plain loop with no leg, not ร. Both are possible words and the sense fits either, so one look at both pages settles it."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0333.PNG",
+     "issue": "DIFFERS FROM ITS TWIN, AND THIS PAGE LOOKS RIGHT. This page prints กะโรนตา (karontā); the Visākha Saraphañña at verse 12 has กะโรนาตา, with an extra า. Read at 4x: there is no า between น and ต here. karontā is the standard form, so the likelier explanation is a slip in the page-67 reading rather than a real difference between the two printings — but that is page 67's photograph to settle, not this one's, and nothing was changed."
+    },
+    {
+     "verse": 15,
+     "file": "IMG_0333.PNG",
+     "issue": "DIFFERS FROM ITS TWIN, AND THIS PAGE LOOKS RIGHT. This page prints เอกัตถะ (ekattha, 'in one place'); the Visākha Saraphañña at verse 15 has เอกัตตะ. Read at 4x: the final consonant has the tall left loop of ถ, not the plain ต. ekattha is the standard form. Same caveat as verse 12 — the other page is what settles it."
+    },
+    {
+     "verse": 26,
+     "file": "IMG_0333.PNG",
+     "issue": "DIFFERS FROM ITS TWIN AND CHANGES THE SENTENCE. This page ends the line สัตตานุกัมปะมานะสาธุ, with สาธุ and NO full stop, so the sentence runs on into verses 27 and 28 and สาธุ governs ปะฏิคคัณหาตุ — 'would kindly accept'. The Visākha Saraphañña at verse 26 ends มานะสา. with a full stop and closes the sentence there. Read at 4x on an isolated crop: the last glyph is ธ with the ุ vowel beneath, and the paper after it is clear. Reproduced as printed. Because the two readings are the same text two pages apart, the page-68 photograph is worth a second look as well as the book."
+    },
+    {
+     "verse": 28,
+     "file": "IMG_0333.PNG",
+     "issue": "ปะฏิคคัณหาตุ IS BARE HERE TOO — no mark over the ณ, read at 4x. That makes pages 68, 69 and 70 all bare against page 67's ปะฏิคคัณ์หาตุ. Three against one now, on what is the same word in the same formula, so the live question is whether this printer sets the mark at all rather than which of the two marks it is."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0333.PNG",
+     "issue": "THE CHANT DOES NOT END ON THIS PAGE, and there is positive evidence rather than only a page running out. Verse 28 here is word for word verse 28 of the Visākha Saraphañña, and that chant carries two further verses — ทีฆะรัตตัมปิ อัมหากัง… and อะปายัปปะริหานายะ… — after it. So page 71 should open with this chant's equivalents of those. continues stays true and the CONTINUES marker stays on."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0333.PNG",
+     "issue": "NOTHING ELSE IS ON THIS PAGE. No title (the chant's title is on page 69), no chant number, no section heading, no rubric, no footnote rule and no footnote, no colophon. Twenty-six two-column rows fill the sheet from the page number to the foot. The lower left margin carries a thumb holding the book open; it sits on blank paper below the last left-column row and covers no ink, checked on a crop of the foot of the sheet."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0333.PNG",
+     "issue": "TWO WORDS ARE REJOINED ACROSS THE GUTTER, at verses 10 and 24 and again at 26, where the left cell ends in a hyphen. The hyphen is typesetting and is dropped, and the two halves are joined with NO space — สะรีรัชฌาปะนักกาละ- + ภูตัง, สักขิ- + ภูตานันตะคุเณนะ, ปัจฉิมาชะนะตาภูตะ- + สัตตานุกัมปะมานะสาธุ. Every other row joins with a single space. The same three joins appear in the Visākha twin, which is a further confirmation of the column reading."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "sarabhanna-gatha-atthami"
+  ],
+  "resume_from_page": 71,
+  "resume_from_file": "IMG_0334.PNG",
+  "resume_from": "sarabhanna-gatha-atthami",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, so every verse paiboon is empty, and a continuation carries no title_roman. Scanned anyway for kh, th, ph and ng across every field: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed; every pali_roman is IAST transliterating it letter for letter, including the two places the book differs from standard editions (sabbagaṃdhānaṃ at verse 3 and battiṃsa at verse 5), which are transliterated as printed rather than as expected. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant. Verses 3-28 are claimed exactly once, no verse is orphaned and none is claimed twice. Verse 3 is the first verse on this page and carries page 70; no page turns inside the page, so no other verse carries one. There are no page blocks on this page.",
+  "notes": "A WHOLE PAGE OF ONE CHANT, which is the first of those in a while, and the entire risk on it is the column reading. Four things worth reading. (1) THE COLUMN READING IS CONFIRMED FOUR WAYS and the check on verse 3 sets them out — no punctuation anywhere in the left column, three hyphens that only join across the gutter, and eight verses that match the Visākha twin word for word when read across. Reading down the columns would have produced fluent, wrong Pali. (2) THIS CHANT AND ITS VISĀKHA TWIN SHARE VERSES 11 TO 28 ALMOST EXACTLY, and diverge at only four letters — anukālena for anukārena at 9, karontā for karonātā at 12, ekattha for ekatta at 15, and mānasādhu for mānasā. at 26. In two of those this page carries the standard form and page 67's reading does not, which makes page 67's photograph worth a second look alongside the book. Nothing on page 67 was changed. (3) THE OPENING EIGHT VERSES ARE GENUINELY DIFFERENT TEXT, about the pyre and the cremation where the Visākha chant is about the birth and the awakening, so they are not a repeat and their English is newly written and unverified. (4) ปะฏิคคัณหาตุ IS BARE FOR THE THIRD PAGE RUNNING. Nothing on this page needs re-photographing."
+ }
+}
