@@ -127,7 +127,7 @@
    rung, but it was the only one on the ladder without a label, so the three
    levels read as two. Renders nothing when a line has no rungs beneath it — a
    lone tag with nothing to compare it against is just noise. #}
-{% macro formal_tag(thai) %}{% if registers(thai) %}<span class="reg-tag" style="background: {{ register_levels.formal.colour }};">{{ register_levels.formal.label }}</span>{% endif %}{% endmacro %}
+{% macro formal_tag(thai) %}{% if registers(thai) %}<span class="reg-tag reg-tag-main" style="background: {{ register_levels.formal.colour }};">{{ register_levels.formal.label }}</span>{% endif %}{% endmacro %}
 
 {# The neutral/casual (or monastic) rungs for one formal line. Renders nothing
    at all for a line that has no variants, so it is safe to call anywhere. #}

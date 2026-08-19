@@ -209,12 +209,29 @@ def test_every_rung_stack_is_labelled_formal_at_the_top(sentences_html):
 
     Without its own chip the ladder read as two levels (Neutral, Casual) hanging
     off an unnamed sentence, and the learner had to carry 'the big line is the
-    formal one' in their head from the intro card. One chip per block, no more:
-    a second would mean the macro had been called twice on the same line.
+    formal one' in their head from the intro card.
+
+    Counted as a total rather than per block, because the chip sits on the main
+    line *above* its rungs — the two are siblings, not parent and child. The
+    macro's chip carries reg-tag-main so the intro card's hand-written example
+    ladder, which is an explainer rather than a line, stays out of the count.
     """
-    blocks = sentences_html.count('class="reg-block"')
-    assert blocks > 0, 'no rungs rendered at all'
-    assert sentences_html.count('>Formal</span>') == blocks
+    stacks = sentences_html.split('<div class="reg-block">')[1:]
+    with_rungs = sum(1 for block in stacks if 'class="reg-row"' in block)
+    assert with_rungs > 100, f'only {with_rungs} rung stacks rendered'
+    assert sentences_html.count('reg-tag-main') == with_rungs
+
+
+def test_a_warning_only_line_gets_no_formal_chip(sentences_html):
+    """A line can carry a note without carrying rungs — แบบว่า... is already
+    casual, so it has something to say and nothing to compare against. Those
+    blocks must render the warning and no chip."""
+    stacks = sentences_html.split('<div class="reg-block">')[1:]
+    warning_only = [b for b in stacks if 'class="reg-row"' not in b]
+    assert warning_only, 'no warning-only block on the page to check'
+    for block in warning_only:
+        assert 'reg-warn' in block
+        assert 'reg-tag-main' not in block.split('</div>')[0]
 
 
 def test_a_line_with_no_rungs_gets_no_formal_chip(sentences_html):
