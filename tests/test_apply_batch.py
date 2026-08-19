@@ -155,6 +155,67 @@ class TestCompletingALineCutByAPageBreak:
         assert any('does not extend' in p for p in check_join(incoming, present))
 
 
+class TestAChantThatRunsAcrossThreePages:
+    """The middle page of a three-page chant leaves the marker standing.
+
+    A chant finishing on its second page has its CONTINUES marker removed, and
+    that path has been covered since this script was written. A chant still
+    running on after the page just applied keeps its marker — and the marker
+    names the last verse the app holds, which has just changed.
+
+    Nothing exercised that until the Saraphañña verses for Aṭṭhamī ran 69 to
+    70 to 71. Every earlier chant finished on its second page, so the marker
+    was always removed rather than kept, and the stale-text case never came
+    up. Page 70 landed twenty-six verses under a marker still reading
+    "last verse here is 2" — the count guard said 1 -> 1 and was quite right,
+    which is exactly why the count is not enough on its own.
+    """
+
+    PRESENT = ("[\n    {\n"
+               "        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.\n"
+               "        'id': 'a',\n"
+               "        'invitation': {\n        },\n"
+               "        'verses': [\n"
+               "            {\n                'number': 1,\n            },\n"
+               "            {\n                'number': 2,\n            },\n"
+               "        ],\n    },\n]\n")
+
+    def test_the_marker_is_rewritten_to_name_the_new_last_verse(self):
+        b = batch([chant('a', [verse(3), verse(4)],
+                         continuation_of='a', continues=True)])
+
+        out, report = apply(b, self.PRESENT)
+
+        assert 'last verse here is 4;' in out
+        assert 'last verse here is 2;' not in out
+        assert report['refreshed'] == [('a', 4)]
+
+    def test_there_is_still_exactly_one_marker(self):
+        """Rewriting in place must not leave the old one behind beside it."""
+        b = batch([chant('a', [verse(3)], continuation_of='a', continues=True)])
+
+        out, _ = apply(b, self.PRESENT)
+
+        assert out.count('‼ CONTINUES') == 1
+
+    def test_it_stays_above_the_id_where_the_file_keeps_it(self):
+        """Position is not cosmetic — it is how the marker reads as the chant's."""
+        b = batch([chant('a', [verse(3)], continuation_of='a', continues=True)])
+
+        out, _ = apply(b, self.PRESENT)
+
+        assert out.index('‼ CONTINUES') < out.index("'id': 'a',")
+
+    def test_a_chant_that_finishes_still_loses_its_marker(self):
+        """The original behaviour, unchanged: no `continues`, no marker."""
+        b = batch([chant('a', [verse(3)], continuation_of='a')])
+
+        out, report = apply(b, self.PRESENT)
+
+        assert '‼ CONTINUES' not in out
+        assert 'refreshed' not in report
+
+
 class TestAClosingArrivingWithTheLastPage:
     """A chant spanning pages reaches its closing as a CONTINUATION.
 

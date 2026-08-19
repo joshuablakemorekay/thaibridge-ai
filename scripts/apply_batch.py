@@ -484,14 +484,24 @@ def count_markers(source: str, word: str) -> int:
     return len(re.findall(rf"# {re.escape(MARKER)} {word}", source))
 
 
-def drop_marker(source: str, chant_id: str, word: str) -> str:
-    """Remove a `‼ <word>` comment (and its wrapped lines) from one chant."""
+def replace_marker(source: str, chant_id: str, word: str,
+                   replacement: str = "") -> str:
+    """Swap a `‼ <word>` comment (and its wrapped lines) for `replacement`.
+
+    An empty `replacement` removes the marker, which is what finishing a
+    chant wants. A non-empty one rewrites it IN PLACE, which is what a chant
+    still running onto the next page wants — see `refresh` below.
+    """
     start = source.rindex(f"{INDENT}{{\n", 0, source.index(f"'id': {chant_id!r},"))
     head_end = source.index(f"'id': {chant_id!r},")
     head, rest = source[start:head_end], source[head_end:]
     kept, dropping = [], False
     for line in head.split("\n"):
         if re.search(rf"# {re.escape(MARKER)} {word}", line):
+            if dropping is False and replacement:
+                # rstrip because the block already ends in a newline and the
+                # join below puts one back between the lines it keeps.
+                kept.extend(replacement.rstrip("\n").split("\n"))
             dropping = True
             continue
         if dropping and line.strip().startswith("#   "):
@@ -499,6 +509,11 @@ def drop_marker(source: str, chant_id: str, word: str) -> str:
         dropping = False
         kept.append(line)
     return source[:start] + "\n".join(kept) + rest
+
+
+def drop_marker(source: str, chant_id: str, word: str) -> str:
+    """Remove a `‼ <word>` comment (and its wrapped lines) from one chant."""
+    return replace_marker(source, chant_id, word)
 
 
 def closing_is_already_a_verse(source: str, anchor: int, pali: str) -> bool:
@@ -899,6 +914,26 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
                 raise RuntimeError(
                     f"failed to remove the CONTINUES marker from {target}: "
                     f"count went {before} -> {after}. Refusing to report success.")
+        else:
+            # The chant carried on onto a page that is STILL not in. The marker
+            # stays, but it names the last verse the app holds, and that verse
+            # has just changed — so leaving it alone leaves a marker that lies.
+            #
+            # It went unnoticed until page 70 because no chant had run across
+            # three pages before: 66→67 and 68→69 both finished on the second
+            # page, where the branch above removes the marker outright. 69→70→71
+            # is the first that does not, and its marker still said "verse 2"
+            # over a chant holding twenty-eight.
+            last = chant["verses"][-1]["number"]
+            source = replace_marker(
+                source, target, "CONTINUES",
+                note(f"CONTINUES: last verse here is {last}; the rest is not "
+                     f"in the app yet.", INDENT * 2))
+            if f"last verse here is {last};" not in source:
+                raise RuntimeError(
+                    f"failed to refresh the CONTINUES marker on {target} to "
+                    f"verse {last}. Refusing to report success.")
+            report["refreshed"] = report.get("refreshed", []) + [(target, last)]
 
     # A merge is neither an addition nor a continuation, and must be excluded
     # here explicitly. Without the first clause it would fall through to this
@@ -983,6 +1018,11 @@ def main(argv=None) -> int:
         print(f"  corrected {field}")
     for marker in report.get("page_markers", []):
         print(f"  page marker {marker}")
+    # Its own line rather than folded into the marker counts below, which
+    # would read 1 -> 1 and hide it. A refresh is a real event: the chant
+    # still continues, and the marker now names a different verse.
+    for cid, last in report.get("refreshed", []):
+        print(f"  CONTINUES refreshed on {cid} -> last verse {last}")
     for page, kind, thai in report.get("blocks", []):
         print(f"  page block  {page:>3}  {kind:<9} {thai}")
     # Reported rather than passed over. A closing that was offered and not
