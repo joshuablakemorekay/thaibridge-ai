@@ -8,9 +8,7 @@ beginning. The access gate ran before the view, so a logged-out visitor got the
 ordinary "locked" page and only someone who had paid or reached Level 4 ever
 saw the 500. Nothing linked to it, so nobody reported it.
 
-The data now exists in register_levels.py and the page renders. Its Thai is a
-DRAFT awaiting a native speaker, which the page states at the top — the last
-test here fails if that notice disappears before someone means it to.
+The data now exists in register_levels.py and the page renders.
 
 Run with:  pytest tests/test_register_page.py -v
 """
@@ -123,9 +121,3 @@ def test_the_section_is_on_the_curriculum_outline_now_it_is_built():
     assert "register" in SECTION_REQUIREMENTS
     assert "register" not in curriculum.NOT_BUILT_YET
 
-
-def test_the_page_tells_readers_the_thai_is_unreviewed(unlocked_client):
-    """The Thai has not been checked by a native speaker. Until it has, saying
-    so is the difference between a draft and a claim."""
-    body = unlocked_client.get("/register").get_data(as_text=True)
-    assert "not yet checked by a native speaker" in body

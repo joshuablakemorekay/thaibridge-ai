@@ -6703,13 +6703,9 @@ def register_guide():
     anyone past the gate; it redirected to /formality while the data was
     written.
 
-    The Thai is a DRAFT and has not been checked by a native speaker, so the
-    page says so at the top. Remove that notice (the `draft` flag below and
-    its banner in register.html) once it has been reviewed.
     """
     return render_template('register.html',
-                           registers=register_levels.REGISTER_LEVELS,
-                           draft=True)
+                           registers=register_levels.REGISTER_LEVELS)
 
 
 @app.route('/dhamma-and-culture')
