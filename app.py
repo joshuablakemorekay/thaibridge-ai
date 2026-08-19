@@ -21,6 +21,7 @@ import thai_audio  # general Thai-phrase MP3 filename rule, shared with build sc
 import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
 import register_levels  # the nine formality registers shown on /register
+import survival  # the free Survival Thai starter set (/survival)
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
 
@@ -535,6 +536,12 @@ SECTION_REQUIREMENTS = {
     # section below, so charging for it would put the whole site behind the
     # paywall with no way in.
     'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
+    # Survival Thai is the free tier's answer to "I want to SPEAK Thai". Free
+    # and, crucially, requires_alphabet=False: every other language section
+    # demands the alphabet quiz first, which is the right prerequisite for
+    # reading and the wrong one for saying hello. Gating a starter set behind
+    # 44 consonants is how a beginner leaves.
+    'survival': {'level': 1, 'tier': 'free', 'points_reward': 60, 'requires_alphabet': False},
     # The page that separates the universal teaching from the Thai
     # expression of it. It is the answer to "do I have to become Thai to
     # learn Buddhism here?", so it must never itself be behind a gate.
@@ -6968,6 +6975,24 @@ def sentences():
                          registers=thai_registers.variants_for,
                          register_warning=thai_registers.warning_for,
                          register_levels=thai_registers.LEVELS)
+
+
+@app.route('/survival')
+@require_access('survival')
+def survival_thai():
+    """Survival Thai — the free starter set, deliberately ungated in practice.
+
+    It carries @require_access like every other section so it earns XP, records
+    a visit and appears on the public curriculum outline automatically. The
+    gate itself never fires: the section is level 1, free tier, and has no
+    alphabet prerequisite.
+    """
+    audio_map = _audio_map_for(survival.thai_strings())
+    return render_template('survival.html',
+                           sets=survival.SETS,
+                           particle=survival.POLITE_PARTICLE,
+                           audio_map=audio_map,
+                           phrase_count=len(survival.all_phrases()))
 
 
 @app.route('/meditation')

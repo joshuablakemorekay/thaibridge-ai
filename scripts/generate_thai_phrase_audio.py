@@ -115,6 +115,16 @@ def collect_tones_classes():
     return found
 
 
+def collect_survival():
+    """Survival Thai — the free starter set.
+
+    survival.thai_strings() already drops the 'ไป...ครับ/ค่ะ' template (a blank
+    where a place name goes, which nobody says aloud) and adds the two bare
+    polite particles, which learners tap on their own to hear kráp against kâ."""
+    import survival
+    return survival.thai_strings()
+
+
 def collect_paiboon():
     """The Paiboon Romanization guide.
 
@@ -224,6 +234,7 @@ PAGES = {
     'read_write': collect_read_write,
     'read_write_passages': collect_read_write_passages,
     'tones_classes': collect_tones_classes,
+    'survival': collect_survival,
     'paiboon': collect_paiboon,
     'grammar': collect_grammar,
     'formality': collect_formality,

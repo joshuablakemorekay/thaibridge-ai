@@ -242,12 +242,14 @@ def build_index():
     # Imported lazily and individually so a broken or missing module degrades
     # to a smaller index rather than taking the whole page down.
     import app
+    import survival
     import thai_reading
     import thai_registers
     import chanting
 
     # (module, attribute, label shown against a result)
     sources = [
+        (survival, 'SETS', 'Survival Thai'),
         (thai_reading, 'VOWEL_POSITIONS', 'Read & Write'),
         (thai_reading, 'DHARMA_WORDS', 'Read & Write'),
         (thai_reading, 'STORIES', 'Read & Write'),

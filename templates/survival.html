@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_learn.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Survival Thai — the free starter set{% endblock %}
+
+{% block extra_css %}
+<style>
+    .sv-intro { max-width: 720px; margin: 0 auto 1.5rem; text-align: center; color: #666; }
+
+    /* Jump links. Four sets is few enough to show them all rather than hide
+       them behind a menu, and a learner arriving mid-meal wants "food" now. */
+    .sv-jump { text-align: center; margin-bottom: 2rem; }
+    .sv-jump a {
+        display: inline-block;
+        margin: 0.25rem;
+        padding: 0.4rem 0.9rem;
+        border-radius: 999px;
+        border: 2px solid #eadfca;
+        text-decoration: none;
+        background: var(--silk-ivory, #fffdf7);
+    }
+    .sv-jump a:hover { border-color: var(--royal-purple, #6A1B9A); }
+
+    .sv-set { margin-bottom: 2.5rem; }
+    .sv-set-blurb { color: #666; max-width: 720px; }
+
+    /* Auto-fitting cards: one column on a phone, three on a laptop, no
+       breakpoint to maintain. */
+    .sv-phrases {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+        gap: 0.75rem;
+        margin-top: 1rem;
+    }
+    .sv-phrase {
+        border: 1px solid #eadfca;
+        border-radius: 10px;
+        padding: 0.8rem 1rem;
+        background: var(--silk-ivory, #fffdf7);
+    }
+    /* .thai-text is what the shared audio wiring looks for — it appends the
+       🔊 button to any element with this class whose text is in audio_map. */
+    .sv-phrase .thai-text { font-size: 1.5rem; line-height: 1.5; }
+    .sv-paiboon {
+        font-family: 'Courier New', monospace;
+        color: var(--royal-purple, #6A1B9A);
+        font-weight: bold;
+        margin: 0.15rem 0;
+    }
+    .sv-english { color: #333; }
+    .sv-note { color: #777; font-size: 0.85rem; margin-top: 0.4rem; font-style: italic; }
+
+    .sv-particle {
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+        border-top: 1px dotted #eadfca;
+        font-size: 0.85rem;
+        color: #666;
+    }
+
+    .sv-draft {
+        max-width: 720px;
+        margin: 2rem auto 0;
+        padding: 0.9rem 1.1rem;
+        border-left: 4px solid var(--saffron, #FF9800);
+        background: #FFF8DC;
+        border-radius: 8px;
+        color: #6a5520;
+        font-size: 0.9rem;
+    }
+
+    .sv-next { text-align: center; margin-top: 2.5rem; }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align:center;">
+    🗣️ Survival Thai
+    <span class="thai">ภาษาไทยเอาตัวรอด</span>
+</h1>
+
+<p class="sv-intro">
+    {{ phrase_count }} phrases, free, no account needed — and no alphabet required.
+    Enough to greet someone, count, order a meal and find your way. Tap any Thai
+    line to hear it.
+</p>
+
+<div class="sv-jump">
+    {% for set in sets %}
+    <a href="#{{ set.key }}">{{ set.emoji }} {{ set.title }}</a>
+    {% endfor %}
+</div>
+
+{% for set in sets %}
+<section class="sv-set" id="{{ set.key }}">
+    <h2>{{ set.emoji }} {{ set.title }}</h2>
+    <p class="sv-set-blurb">{{ set.blurb }}</p>
+
+    <div class="sv-phrases">
+        {% for phrase in set.phrases %}
+        <div class="sv-phrase">
+            <div class="thai-text">{{ phrase.thai }}</div>
+            <div class="sv-paiboon">{{ phrase.paiboon }}</div>
+            <div class="sv-english">{{ phrase.english }}</div>
+            {% if phrase.note %}<div class="sv-note">{{ phrase.note }}</div>{% endif %}
+            {% if phrase.particle %}
+            {# Both particles, always. Picking one would quietly teach half the
+               learners to sound wrong — same reasoning as /gender-examples. #}
+            <div class="sv-particle">
+                Add <span class="thai-text">{{ particle.male.thai }}</span>
+                <em>({{ particle.male.paiboon }})</em> if you are male,
+                <span class="thai-text">{{ particle.female.thai }}</span>
+                <em>({{ particle.female.paiboon }})</em> if you are female.
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endfor %}
+
+<div class="sv-draft">
+    ⚠️ <strong>Draft translations.</strong> The Thai on this page is a first draft
+    and is still being checked by a native-speaker teacher. If something reads
+    oddly to you, it may well be wrong — please
+    <a href="/contact">tell us</a>.
+</div>
+
+<div class="sv-next">
+    <p>Finished? The next step is learning to read the script itself.</p>
+    <a href="/alphabet" class="btn btn-saffron">Start the Thai alphabet →</a>
+</div>
+
+{% include 'partials/thai_audio_wiring.html' %}
+{% endblock %}
