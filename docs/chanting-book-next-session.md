@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
-69 went in.
+70 went in.
 
 ## Read first, in this order
 
@@ -12,12 +12,12 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–69 are in and unbroken**, plus 217–221. **98 chants, 1,138 verses
+- **Pages 1–70 are in and unbroken**, plus 217–221. **98 chants, 1,164 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Page 69 was applied 2026-08-19; pages 66–68 over the days before it; pages
-  61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
+- Pages 69 and 70 were applied 2026-08-19; pages 66–68 over the days before
+  them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 
 ## How to work — this matters more than the tasks
 
@@ -30,22 +30,28 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 70, `IMG_0333`
+## Next: page 71, `IMG_0334`
 
-Page 69 opens `สะระภัญญะคาถา สำหรับสวดในวันอัฏฐมีบูชา` and prints only **two
-rows of it** before the page runs out at the footnote rule, so page 70 carries
-the rest. It is in the app as `sarabhanna-gatha-atthami` with a ‼ CONTINUES
-marker on verse 2, and page 70's batch is a **continuation**: `continuation_of`,
-verse numbering carrying on at 3, no title and no invitation.
+`sarabhanna-gatha-atthami` is **still open at verse 28** and page 71 finishes
+it. This is a **third** page of one chant, so page 71's batch is another
+`continuation_of` with the numbering carrying on at 29 — and this time it
+should be the one that CLOSES it, so expect `continues` to be absent and the
+‼ CONTINUES marker to come off.
 
-It is **set in two columns** — one printed line running across both, left pāda
-then right — like the Visākha Saraphañña on pages 67 and 68. Check the column
-structure before reading a word, and check it again wherever the line lengths
-change. Its twin ran to thirty rows, which is a reason to expect more of the
-same and never a reason to assume how many.
+**We know roughly what is coming**, which is rare and worth using. Verses 11–28
+of this chant match the Visākha Saraphañña on pages 67–68 word for word, and
+that chant carries two more verses after its 28: `ทีฆะรัตตัมปิ อัมหากัง
+หิตายะ จะ สุขายะ จะ` and `อะปายัปปะริหานายะ อายานัญจาภิวุฑฒิยา`. Page 71 should
+open with this chant's equivalents. **That is a reason to check the reading, not
+to write it** — the four places these twins already diverge are exactly why.
 
-If page 70 turns out to start something else instead, that CONTINUES marker
-comes off then rather than being left standing.
+It is **set in two columns**, read across the row. Check the column structure
+before reading a word. Page 70's check on verse 3 records the four independent
+tests that settled it, and they are reusable: no punctuation in the left column,
+hyphens that only join across the gutter, and rows that match the twin.
+
+Page 71 may also start the Māgha offering — the four parallel offerings sit at
+66, 68, 71 and 75 — so read the whole sheet before deciding what is on it.
 
 **Page 63 was the first page in the book with no chant on it at all** — the
 whole sheet is `คำอธิบายประกอบทำวัตรเย็น`, so its batch has an EMPTY manifest
@@ -178,6 +184,36 @@ from itself. Page 62 prints `หินา` and `วิริยัมหิน�
 
 **Two chants on pages 64–65 have no colophon**, unlike pages 60, 61 and 62.
 Checked against both pages; the `closing` key is left off rather than composed.
+
+## Raised on page 70 — the twins disagree in four letters
+
+Page 70 is twenty-six two-column rows of one chant and nothing else, and its
+verses 11–28 are the Visākha Saraphañña's verses 11–28. Across those eighteen
+shared verses the two printings diverge in exactly four places:
+
+| verse | page 70 (Aṭṭhamī) | pages 67–68 (Visākha) | which is standard |
+|---|---|---|---|
+| 9 | `อะนุกาเลนะ` *anukālena* | `อะนุกาเรนะ` *anukārena* | either is a word |
+| 12 | `กะโรนตา` *karontā* | `กะโรนาตา` *karonātā* | **page 70** |
+| 15 | `เอกัตถะ` *ekattha* | `เอกัตตะ` *ekatta* | **page 70** |
+| 26 | `…มานะสาธุ` (runs on) | `…มานะสา.` (stops) | **pages 67–68** |
+
+Each was read at 4× on an isolated crop. In two of the four page 70 carries the
+standard form and the earlier reading does not, which makes **`IMG_0330` and
+`IMG_0331` worth a second look alongside the book** — these may be reading slips
+on the earlier pages rather than real differences between the printings.
+Nothing on those pages was changed. Verse 26 matters most of the four: with
+`สาธุ` the sentence runs on into the petition, and with `มานะสา.` it stops.
+
+**Two spellings on page 70 differ from standard editions and both look
+deliberate.** Verse 3 prints `สัพพะคัมธานัง` with ม where editions have
+`คันธานัง`; verse 5 prints `พัตติงสะ` (*battiṃsa*) where editions have
+*dvattiṃsa* — and *battiṃsa* is an attested Pali form, so that one is the book
+choosing a variant rather than erring. Both reproduced as printed.
+
+**`ปะฏิคคัณหาตุ` is bare for the third page running** — 68, 69 and 70 all bare
+against page 67's `ปะฏิคคัณ์หาตุ`. Three against one on the same word in the
+same formula.
 
 ## Raised on page 69 — all open, all need the book
 
