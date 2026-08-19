@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
-72 went in.
+73 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–72 are in and unbroken**, plus 217–221. **101 chants, 1,217 verses
+- **Pages 1–73 are in and unbroken**, plus 217–221. **101 chants, 1,242 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 69 to 72 were applied 2026-08-19; pages 66–68 over the days
+- Pages 69 to 73 were applied 2026-08-19; pages 66–68 over the days
   before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 
 ## How to work — this matters more than the tasks
@@ -30,31 +30,34 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 73, `IMG_0336`
+## Next: page 74, `IMG_0337`
 
-`ovada-patimokkhadi-patha` is **open at verse 3** and page 73 carries the rest,
-so its batch is a `continuation_of` with the numbering carrying on at 4, no
-title and no invitation. Only its **บทขัด**, the prefatory verse, is in so far —
-the main text of the chant is entirely still to come, so expect a long page and
-probably more than one.
+`ovada-patimokkhadi-patha` is **open at verse 28** and page 74 carries on, so
+its batch is another `continuation_of` numbering from 29, no title and no
+invitation.
 
-**Expect more section headings.** Page 72 gives the chant a `บทขัด` heading over
-its first verse, entered as a `section`. Anything else the book sets centred
-between verses of this chant — another `บท…`, a movement name — belongs the same
-way, on the first verse of what it heads. It is not a page block: a block can
-only sit between whole chants.
+**We know what the page owes.** Page 73 sets up a pair — virtue proclaimed by
+the LOWER exposition (`เหฏฐิเมนะ`) and by the HIGHER (`อุปะริเมนะ`) — and
+answers only the lower one, ending `เอวัง โข เหฏฐิเมนะ ปะริยาเยนะ สีลัง
+สัมมะทักขาตัง ภะคะวะตา.` So page 74 should open `กะถัญจะ อุปะริเมนะ…` and work
+the same way through concentration and wisdom after that. **That is a reason to
+check the reading, not to write it.**
 
-It is **set in two columns**, read across the row. Check the column structure
-before reading a word; page 70's check on verse 3 records the reusable tests.
+**Measure the layout, do not judge it.** This chant changes setting without
+warning — page 73 alone goes two-column, prose, centred single-column, two-column,
+prose. Profile the ink across the measure for each block before reading a word:
+a gutter around x 940–1100 means two columns; ink filling x 380–1580 with no
+gutter means prose; ink stopping short on both sides means centred lines. Then
+give each group `para_start` plus `para_layout` of `'prose'` or `'lines'`.
 
-**Watch the ฏ/ต in Pāṭimokkha.** Page 72 spells it BOTH ways on one sheet —
-`ปาฏิโมกขัง` with ฏ in the chant above, `ปาติโมกขัสสะ` and the title with ต
-below. Read each occurrence rather than assuming the chant is consistent with
-itself, and reproduce what is there.
+**Watch the ฏ/ต in Pāṭimokkha.** This chant uses ต throughout (`ปาติโมกเข`,
+`ปาติโมกขัง`) while the chant above it on page 72 uses ฏ. Read each occurrence
+rather than assuming, and reproduce what is there. Note `ปะฏิวิระโต` is a
+different word and correctly keeps ฏ.
 
-The fourth parallel offering, Āsāḷha, is expected around page 75, so there is
-other material between here and there. **Read the whole sheet before deciding
-what is on it** — page 71 held three chants and page 72 held two plus a block.
+The fourth parallel offering, Āsāḷha, is expected around page 75. **Read the
+whole sheet before deciding what is on it** — page 71 held three chants, page 72
+held two plus a block, page 73 held one chant in five different settings.
 
 **Page 63 was the first page in the book with no chant on it at all** — the
 whole sheet is `คำอธิบายประกอบทำวัตรเย็น`, so its batch has an EMPTY manifest
@@ -73,6 +76,22 @@ The gap the last brief flagged is closed. `para_start` on a verse plus
 the paragraphs the BOOK sets it in. Page 61 used it second and renders four
 justified blocks; page 64's passage has no paragraph break at all and correctly
 renders as one group of 37.
+
+### Settled on page 73: a chant set BOTH ways
+
+`layout` is chant-level and can only say prose OR lines. Page 73 needed both in
+one chant, so a paragraph may now override it with **`para_layout`** — `'prose'`
+or `'lines'` — declared on the verse that opens the group, beside `para_start`.
+`apply_batch` carries it through and the CSS keys on the paragraph rather than
+the chant container.
+
+**The fallback is the safety.** A paragraph that says nothing takes the chant's
+own `layout`, so every chant entered before this renders exactly as it did —
+proved by rendering all 77 pages both ways and diffing the visible text, and by
+checking the class lands on the same 61 paragraphs and no others.
+
+So: declare `para_layout` on every group of a mixed chant rather than relying on
+the default, because the default is right only by luck when a chant changes.
 
 Pages 222 and 223 sit beside 217–221 which are already in, so they are a cheap
 excursion whenever wanted.
