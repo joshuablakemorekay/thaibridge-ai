@@ -17,6 +17,13 @@ length (aa, ii, ɔɔ), and tone marks mid (a), low (à), falling (â), high (á)
 rising (ǎ). Where the existing Paiboon index disagrees with itself, the
 consistent spelling is used here and the divergence noted in the review sheet.
 
+Each `color` is used by register.html as the background of a level badge with
+WHITE text on it, so every one of them has to clear 4.5:1 against white. Six of
+the nine first-draft colours did not — the saffron and gold sat near 2.1:1. They
+were darkened in HLS with hue and saturation untouched, which keeps each
+register recognisably the colour it was designed with. If you adjust one, run
+tests/test_register_page.py, which fails on anything below AA.
+
 Shape each entry must keep — templates/register.html reads exactly these keys:
 
     level, name, thai, icon, color, description, usage_context,
@@ -33,7 +40,7 @@ REGISTER_LEVELS = {
         'name': 'Monastic Language',
         'thai': 'ภาษาพระ',
         'icon': '🙏',
-        'color': '#FF9933',
+        'color': '#B55B00',
         'description': (
             'The vocabulary used by monks and used towards them. It is not '
             '"more polite" ordinary Thai — it is a separate set of words for '
@@ -88,7 +95,7 @@ REGISTER_LEVELS = {
         'name': 'Royal Language',
         'thai': 'ราชาศัพท์',
         'icon': '👑',
-        'color': '#D4AF37',
+        'color': '#8C721E',
         'description': (
             'A distinct vocabulary for the monarchy, drawn largely from Pali, '
             'Sanskrit and Khmer. As with monastic language it substitutes '
@@ -236,7 +243,7 @@ REGISTER_LEVELS = {
         'name': 'Academic & Technical',
         'thai': 'ภาษาวิชาการ',
         'icon': '🔬',
-        'color': '#0288D1',
+        'color': '#0279BA',
         'description': (
             'The register of textbooks, research, medicine, law and official '
             'reports. Built from long Pali and Sanskrit compounds, which is '
@@ -281,7 +288,7 @@ REGISTER_LEVELS = {
         'name': 'Formal',
         'thai': 'ภาษาทางการ',
         'icon': '🎩',
-        'color': '#388E3C',
+        'color': '#348538',
         'description': (
             'Careful, respectful spoken and written Thai for occasions with '
             'distance in them: meetings, officialdom, customer service, and '
@@ -327,7 +334,7 @@ REGISTER_LEVELS = {
         'name': 'Neutral / Polite',
         'thai': 'ภาษาสุภาพ',
         'icon': '💬',
-        'color': '#00897B',
+        'color': '#008476',
         'description': (
             'Standard polite everyday Thai: the register of shops, offices, '
             'taxis, classrooms and most conversations between adults who are '
@@ -374,7 +381,7 @@ REGISTER_LEVELS = {
         'name': 'Casual / Colloquial',
         'thai': 'ภาษาพูด',
         'icon': '😊',
-        'color': '#FB8C00',
+        'color': '#AE6100',
         'description': (
             'How friends, classmates and family actually talk: particles '
             'dropped, pronouns swapped for nicknames, sentences shortened, '
