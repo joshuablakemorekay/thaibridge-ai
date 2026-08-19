@@ -1,0 +1,32 @@
+I read the gate rather than the comment, and they disagree.
+
+The check in /api/ai/chat compares usage['count'] against FREE_AI_DAILY_LIMIT
+without looking at `mode` at all. So the tutor and the Dhamma both drain the
+same 15 messages a day. A learner who spends fifteen messages drilling
+vocabulary and then asks about the Five Precepts is told to come back tomorrow
+or upgrade to Pro.
+
+That is the contradiction. The comment above FREE_AI_DAILY_LIMIT says the
+teaching is free and that charging for the follow-up question would be selling
+the Dhamma. The teaching was never behind the paywall — but the question about
+it now sits behind a language-study budget, which is the same line reached by a
+side door. This is a bug, not a feature request.
+
+The fix is to give the Dhamma its own counter. Two ways to do it, and the
+difference matters:
+
+- Reserve 5 of the existing 15. Costs nothing extra, but it is a takeaway:
+  everyone's Thai tutor drops from 15 to 10 in order to fund a promise the site
+  had already made.
+- Add a separate 5 on top. Nobody loses anything. Using the 0.285p per message
+  already costed in the file, that is about 1.4p a day for someone who exhausts
+  it every single day, which almost nobody will.
+
+Take the second.
+
+The wording needs the same treatment as the gate. Running out of Dhamma
+questions must not offer an upgrade at all — an upsell there is the site
+charging for the teaching in all but name. And running out of TUTOR messages
+should name the Dhamma questions still in hand before it mentions Pro, or the
+nudge reads as a trick. The running total under the chat box has to follow the
+mode too, or switching to Dhamma looks like it spends the tutor's allowance.

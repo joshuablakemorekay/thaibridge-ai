@@ -1,0 +1,49 @@
+# Evaluation rubric for: Free Tier Review
+
+prompt: free-tier-review
+version: 1
+criteria:
+  - name: gives_a_verdict_on_every_proposal
+    description: Every proposal is enumerated and gets a verdict, including at least one refusal
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in [\"don't\", 'do not']) and sum(output.count(str(n) + '.') for n in range(1, 7)) >= 4"
+
+  - name: rejects_at_least_one_proposal
+    description: A review that accepts everything is not a review
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in [\"don't\", 'do not', 'against', 'reject', 'leave it', 'stays'])"
+
+  - name: names_the_tier_a_giveaway_would_gut
+    description: Identifies that the reading sections are the Basic tier itself
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['basic', 'thai reader', '9.99'])"
+
+  - name: costs_the_ai_allowance_from_the_code
+    description: Uses the per-message costing already written in app.py, not a guess
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['0.285', 'per message', 'a month', 'cost'])"
+
+  - name: grounds_answers_in_the_gate_logic
+    description: References the real access data rather than the marketing copy
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['section_requirements', 'requires_alphabet', 'tier', 'level', 'gate'])"
+
+  - name: treats_the_dhamma_cap_as_a_principle_question
+    description: Connects the shared allowance to the site's stated position on the teaching being free
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['dhamma', 'teaching', 'principle', 'free'])"
+
+  - name: is_a_decision_not_a_survey
+    description: Substantial enough to justify the verdicts it gives
+    weight: 2
+    pass_condition: "len(output.split()) >= 150"
+
+test_cases:
+  - input:
+      task: "Judge five free-tier proposals for a Thai learning app, do or don't, grounded in SECTION_REQUIREMENTS and SUBSCRIPTION_TIERS rather than marketing copy"
+    expected_traits:
+      - gives a verdict on each proposal rather than a discussion
+      - rejects at least one proposal and says what trade-off that accepts
+      - identifies that the reading sections constitute the paid Basic tier
+      - uses the costing already present in the code for the AI allowance
+      - connects the shared AI cap to the site's stated position on the Dhamma

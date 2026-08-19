@@ -1,0 +1,49 @@
+# Evaluation rubric for: Paiboon Lookup
+
+prompt: paiboon-lookup
+version: 1
+criteria:
+  - name: checks_whether_a_transliterator_exists_first
+    description: Establishes what is actually in the codebase before proposing a build
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['no transliterator', 'does not exist', \"isn't one\", 'already', 'corpus', 'hand-written'])"
+
+  - name: offers_more_than_one_implementation
+    description: Presents the realistic options rather than jumping to the obvious one
+    weight: 5
+    pass_condition: "sum(s in output.lower() for s in ['corpus', 'rule-based', 'live ai', 'transliterat', 'option']) >= 3"
+
+  - name: names_the_failure_mode_not_just_the_cost
+    description: Says what happens when each option is WRONG, not only what it costs
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['wrong', 'hallucinat', 'cannot tell', 'beginner', 'subtly'])"
+
+  - name: a_miss_reads_as_a_miss
+    description: Commits to never guessing when the word is not in the corpus
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['miss', 'not in the corpus', 'never guess', 'no match', 'honest'])"
+
+  - name: handles_the_spellings_beginners_type
+    description: Accounts for tone marks, vowel length and RTGS spellings
+    weight: 5
+    pass_condition: "sum(s in output.lower() for s in ['tone mark', 'fold', 'rtgs', 'sawatdee', 'khop', 'vowel length', 'diacritic']) >= 2"
+
+  - name: places_it_on_an_existing_page
+    description: Avoids creating a new route for a job an existing page already does
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['/paiboon', 'existing page', 'same page', 'new route'])"
+
+  - name: is_substantial
+    description: Enough reasoning to justify the choice between options
+    weight: 2
+    pass_condition: "len(output.split()) >= 120"
+
+test_cases:
+  - input:
+      task: "Design a Paiboon romanisation lookup for a Thai learning app whose romanisation is all hand-written or offline-generated, for beginners who cannot verify a tone mark"
+    expected_traits:
+      - establishes that no transliterator exists in the codebase
+      - offers corpus search, live AI and rule-based as distinct options
+      - rejects live AI because a beginner cannot catch a wrong tone
+      - commits to a miss reading as a miss rather than a guess
+      - handles the spellings beginners actually type

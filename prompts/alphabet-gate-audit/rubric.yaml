@@ -1,0 +1,55 @@
+# Evaluation rubric for: Alphabet Gate Audit
+
+prompt: alphabet-gate-audit
+version: 1
+criteria:
+  - name: answers_from_counted_data
+    description: Counts the dependent sections rather than reasoning from instinct
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['21', 'every paid', 'all paid', 'count', 'requires_alphabet'])"
+
+  - name: explains_why_free_is_structurally_forced
+    description: Says what would follow for the dependent sections if the Alphabet were paid
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['prerequisite', 'nothing could', 'no way in', 'behind the paywall', 'forced'])"
+
+  - name: asks_the_harder_question
+    description: Moves past the question asked to whether the gate is drawn in the right place
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['too broad', 'right place', 'breadth', 'does not need', \"doesn't need\", 'no teaching work'])"
+
+  - name: measures_rather_than_asserts
+    description: Backs the borderline cases with a figure rather than an opinion
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['%', 'percent', 'characters', 'strings', 'count'])"
+
+  - name: checks_the_gate_order
+    description: Notes the alphabet gate runs before level and tier, so a payer can be blocked
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['first', 'order', 'before', 'already paid', 'subscriber'])"
+
+  - name: separates_plainly_wrong_from_arguable
+    description: Flags the dead pricing-page flag distinctly from the debatable cases
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['premium', 'pricing page', 'dead', 'never fired', 'inert'])"
+
+  - name: respects_the_out_of_scope_fence
+    description: Does not propose changing the paid add-on that skips these gates
+    weight: 3
+    pass_condition: "'instant access' not in output.lower() or any(s in output.lower() for s in ['settled', 'not re-open', 'out of scope', 'deliberate'])"
+
+  - name: is_substantial
+    description: Enough analysis to support the recommendation
+    weight: 2
+    pass_condition: "len(output.split()) >= 150"
+
+test_cases:
+  - input:
+      task: "A Thai learning app gates 21 paid sections behind an alphabet quiz. Decide whether the alphabet page should be free, then whether the prerequisite is drawn in the right place."
+    expected_traits:
+      - counts the dependent sections rather than asserting
+      - explains that freeing the alphabet is structurally forced
+      - asks whether the prerequisite is too broadly applied
+      - measures the borderline pages rather than asserting
+      - notes the gate order can block someone who has already paid
+      - separates the plainly wrong config from the arguable cases

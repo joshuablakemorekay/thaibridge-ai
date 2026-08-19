@@ -1,0 +1,38 @@
+I read SECTION_REQUIREMENTS and SUBSCRIPTION_TIERS before answering. Here is a
+verdict on each proposal rather than a survey.
+
+1. Complete Thai reading system free — DON'T. The sections vowels_syllables,
+read_write and tones_classes ARE the Basic tier; the tier is literally named
+"Thai Reader". Freeing them leaves £9.99 buying grammar, lessons and sentences
+with no headline left. You already have a softer version of this generosity:
+Level 3 earns one free Basic section, so a learner can choose reading and get it
+free without the tier collapsing. The trade-off you would be accepting is the
+loss of your paid tier's identity.
+
+2. Paiboon lookup tool — DO. Search the romanisation the app already ships,
+rather than transliterating. There is no transliterator in the codebase and
+there should not be one: a live AI call costs money per lookup and can be subtly
+wrong, and the person reaching for a lookup is a beginner who cannot tell a
+hallucinated tone mark from a correct one. A miss must read as a miss.
+
+3. One survival module — DO, and it is the strongest of the five. The free tier
+is Buddhism plus an alphabet chart, so someone who arrives wanting to speak Thai
+can finish nothing. Note that Tour Guide covers similar ground but is basic tier,
+level 4 and alphabet-gated.
+
+4. Reduce the 15 AI messages — DON'T. The costing is already in the code at
+0.285p worst case per message, so 15 a day is about £1.30 a month for a free
+user who maxes it out every single day, which almost nobody does. The tutor is
+what makes £19.99 believable; shrinking your best free feature to save pennies
+is the wrong trade.
+
+5. Small free Dhamma allowance — DO, but it is a bug, not a feature. Tutor and
+Dhamma share one cap, so a learner who spends the day on vocabulary is then
+refused a question about the precepts. The comment above FREE_AI_DAILY_LIMIT
+already states that charging for the follow-up question would be selling the
+Dhamma. The gate does not honour that. Give Dhamma its own small pool, added on
+top rather than reserved out of the existing 15.
+
+6. Public curriculum outline — DO, and it is the cheapest of the lot. Generate
+it from SECTION_REQUIREMENTS rather than hand-writing it, so it cannot go stale,
+and show every section including the locked ones.

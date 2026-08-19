@@ -1,0 +1,33 @@
+Where it belongs first, because the obvious answer is wrong.
+
+Tour Guide covers similar ground, but it is {'level': 4, 'tier': 'basic',
+'requires_alphabet': True} — paid, level 4, and locked behind the alphabet quiz.
+Putting a free starter set there would either force a paid section free or bury
+the taster behind £9.99, level 4 and 44 consonants. So this needs to be its own
+section, and a test should assert Tour Guide stays paid, or the justification
+for the split can quietly stop being true.
+
+Free is not enough to make it reachable. The alphabet gate is checked FIRST in
+check_section_access, before level and tier, so the section also needs
+requires_alphabet: False — the only language page on the site you can open
+knowing nothing.
+
+Four sets, about fifty phrases: greetings and politeness, numbers, ordering
+food, getting around. Finishable in one sitting is the design constraint, so
+enforce it with a test that fails if the count leaves the 30–70 range rather
+than merely intending it.
+
+Two details that matter more than they look:
+
+- Politeness particles are gendered. Show both ครับ (kráp) and ค่ะ (kâ) on every
+  phrase that needs one. Picking one would quietly teach half the learners to
+  sound wrong.
+- The Thai is a first draft and has not been through teacher review. Say so on
+  the page, in an amber banner a learner actually sees, not in a code comment —
+  someone is going to repeat these to a real person.
+
+The 'ไป...ครับ/ค่ะ' entry is a template with a blank for a place name, so keep it
+out of the audio strings; recording it would produce nonsense.
+
+Finally it is a doorway, not a dead end: finish the page with a link to the
+alphabet as the next step.

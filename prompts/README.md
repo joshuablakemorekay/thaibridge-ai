@@ -25,6 +25,11 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`xp-economy-audit`](./xp-economy-audit/) | analysis | Audits the live XP system per audience — found free-tier levelling unlocks nothing, plus two endpoints that minted XP on request | Yes (v1 audit → v2 remediation) |
 | [`inclusive-positioning`](./inclusive-positioning/) | analysis / content | Separates the universal teaching from one culture's expression of it — found the app's copy contradicted its own access rules | Yes (v1 → v2) |
 | [`register-levels-draft`](./register-levels-draft/) | content | Drafts nine levels of Thai formality against an existing template's contract, grounded in the app's own Paiboon index and flagged for review | No (single version) |
+| [`free-tier-review`](./free-tier-review/) | analysis | Judges five free-tier giveaway proposals do-or-don't against the real gate logic — two were rejected, and one turned out to be a bug rather than a feature | Yes (v1 verdicts → v2 narrowing) |
+| [`paiboon-lookup`](./paiboon-lookup/) | code-generation | Establishes what a romanisation lookup *can* be before building one — searches 1,217 reviewed entries rather than transliterating, so a miss reads as a miss | Yes (v1 options → v2 chosen build) |
+| [`dhamma-ai-allowance`](./dhamma-ai-allowance/) | analysis | Checks a principle stated in a code comment against the gate that actually runs — found the Thai tutor could exhaust the Dhamma's free questions | Yes (v1 finding → v2 fix) |
+| [`survival-thai`](./survival-thai/) | content | Builds a free, finishable starter section — and decides where it belongs first, which is what stopped it landing on a paid, alphabet-gated page | Yes (v1 → v3 findability) |
+| [`alphabet-gate-audit`](./alphabet-gate-audit/) | analysis | Answers whether the alphabet should be free, then asks the harder question underneath — is the prerequisite drawn in the right place? | Yes (v1 answer → v2 breadth) |
 
 ## Featured iterations
 

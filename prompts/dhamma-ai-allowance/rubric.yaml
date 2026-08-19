@@ -1,0 +1,50 @@
+# Evaluation rubric for: Dhamma AI Allowance
+
+prompt: dhamma-ai-allowance
+version: 1
+criteria:
+  - name: reads_the_gate_not_the_comment
+    description: Checks what the code does rather than restating the stated principle
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['gate', 'counter', 'shared', 'mode', 'same 15', 'same allowance'])"
+
+  - name: finds_the_contradiction
+    description: Identifies that one shared cap lets the tutor exhaust the Dhamma allowance
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['shared', 'same pool', 'both', 'eat', 'exhaust', 'drain'])"
+
+  - name: frames_it_as_a_bug
+    description: Treats a broken stated promise as a defect, not a feature request
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['bug', 'broken', 'contradict', 'does not honour', \"doesn't honour\", 'promise'])"
+
+  - name: costs_the_fix_from_the_existing_figure
+    description: Uses the per-message cost already in the file rather than estimating
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['0.285', '1.4p', 'a day', 'per message', 'cost'])"
+
+  - name: refuses_to_fund_it_by_taking_something_away
+    description: Names the reserve-from-15 option and rejects it as a takeaway
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['on top', 'reserve', 'takeaway', 'take away', 'nobody loses', 'reduce'])"
+
+  - name: checks_the_wording_too
+    description: Addresses the refusal message and the running total, not only the gate
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['message', 'upsell', 'upgrade', 'wording', 'hint'])"
+
+  - name: is_substantial
+    description: Enough analysis to support the finding
+    weight: 2
+    pass_condition: "len(output.split()) >= 120"
+
+test_cases:
+  - input:
+      task: "A learning app states in code that the Dhamma is free and charging for a follow-up question would be selling the teaching. Tutor and Dhamma AI modes share one daily cap. Check whether the code honours the stated position."
+    expected_traits:
+      - reads the actual gate rather than restating the comment
+      - finds that the tutor can exhaust the Dhamma allowance
+      - frames the result as a bug rather than a feature request
+      - costs the fix using the figure already in the file
+      - rejects funding the fix by reducing an existing allowance
+      - checks the user-facing wording for an upsell

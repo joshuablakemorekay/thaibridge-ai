@@ -1,0 +1,35 @@
+First, what this can be. I searched the codebase: there is no transliterator
+here, and every romanisation the app ships was either hand-written or generated
+offline by generate_paiboon.py and then reviewed. So there are three options,
+and only one is sane.
+
+1. Search the existing corpus — a box over the Paiboon already written and
+checked across the Alphabet, lessons, registers and chanting book. Free,
+instant, and correct by construction. Finds about 1,200 entries, not all Thai.
+
+2. Live AI romanisation — costs money per lookup and can be subtly wrong. A
+beginner cannot tell a hallucinated tone mark from a real one, and that beginner
+is exactly who is using this. Getting a tone wrong is not a typo in Thai, it is
+a different word. No.
+
+3. A rule-based engine — weeks of work, and Thai orthography has enough
+irregulars (silent ห, implicit vowels, ร as a vowel, loanword spellings) that it
+would be wrong often and wrong quietly.
+
+Build the first. A miss says "not in the corpus" and points at the AI tutor; it
+never guesses.
+
+The hard part is making it findable. Paiboon writes ขอบคุณ as kɔ̀ɔp-kun and
+สวัสดี as sà-wàt-dii, and nobody types that. Three folds run in order: exact,
+English gloss, then a deliberately blunt one that forgives tone marks, vowel
+length, the ee/ii and oo/uu spellings, the kh/ph/th of RTGS road signs, and
+Paiboon's own bp/dt digraphs. So "sawatdee", "khop khun", "aroi" and "gai" all
+reach the right rows.
+
+Ranking is band-major — an exact match beats a prefix beats a substring,
+whichever fold found it — because otherwise an incidental substring outranks the
+real word. And a loose substring only counts when nothing precise was found, or
+a good result set gets padded with noise.
+
+It belongs on /paiboon rather than a new route: that page already answers "how
+is this written?" in principle, and the box answers it for one word.

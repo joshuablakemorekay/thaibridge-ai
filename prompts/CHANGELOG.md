@@ -7,6 +7,51 @@ Each entry follows this format:
 
 ---
 
+## alphabet-gate-audit
+
+### 2026-08-19 — v1
+**Change:** First version — *"is it right for Alphabet page to be free?"*, with instructions to answer from counted data rather than instinct, then to ask the harder question underneath: is the prerequisite drawn in the right place? Measurement required for the borderline pages, and the Instant Access Pass fenced off as settled.
+**Reason:** The question as asked has a one-paragraph answer. Fencing off the add-on stopped the audit spending itself re-litigating a decision already made.
+**Impact:** All 21 paid sections carry `requires_alphabet`, so freeing the Alphabet is structurally forced, not generosity. Sorting the 21 found three that genuinely need the script, three that are dead or unbuilt, and 15 taught wholly in romanisation — Culture measured at 31% of strings containing any Thai across ~10,000 characters. Two changes shipped in `d99c524`: Culture freed from the gate (level and tier untouched), and a dead `requires_alphabet` removed from the pricing page, where it read as "pass a quiz to see our prices".
+
+---
+
+## survival-thai
+
+### 2026-08-19 — v1
+**Change:** First version — *"One full survival module — greetings, numbers, food, directions. Finishable, genuinely useful."* Later extended with the placement question *"would you agree that survival mode is right to be placed in Tour Guide page or not?"* and, after shipping, with making it findable.
+**Reason:** The free tier was Buddhism plus an alphabet chart, so someone who came to speak Thai could finish nothing without paying.
+**Impact:** 50 phrases in four sets at `/survival` (`e298ab9`), free and `requires_alphabet: False` — the only language page reachable knowing nothing. The placement question is what kept it out of Tour Guide, which is basic tier, level 4 and alphabet-gated. Audio completed in `9c0c77e` (26 new clips, 51/51). The home page gap was caught last: the language card still said *"Starts with the 44 consonants"*, the exact wall the section routes around — fixed in `0492089`, where Survival Thai became step 1 of the language path.
+
+---
+
+## dhamma-ai-allowance
+
+### 2026-08-19 — v1
+**Change:** First version — began as *"Small free Dhamma allowance"* among five giveaway proposals, and was reframed as a check of a stated principle against the gate that actually runs. v2 added the constraint that no fix may take something away from anyone.
+**Reason:** The position was already written down in a comment above `FREE_AI_DAILY_LIMIT`. Nobody had put it beside the gate underneath it.
+**Impact:** Found that `/api/ai/chat` compared one shared counter without reference to `mode`, so a learner who spent the day on vocabulary was refused a question about the precepts. Fixed in `be35854` by giving the Dhamma its own 5 a day *on top of* the tutor's 15 rather than reserved out of it. Both refusal messages rewritten, and the upsell removed from the Dhamma hint entirely. The tests caught a flaw in the fix itself: the first `AI_POOLS` copied limit values in, silently becoming a second source of truth that broke an existing `monkeypatch`.
+
+---
+
+## paiboon-lookup
+
+### 2026-08-19 — v1
+**Change:** First version asked what a Paiboon lookup *can* be before proposing a build, and specifically what happens when each option is wrong. v2 narrowed it to one: *"Yes only do the first one leave the others out of it."*
+**Reason:** The obvious reading of "lookup tool" is a transliterator. There isn't one in this codebase and there shouldn't be — every romanisation shipped was hand-written or generated offline and reviewed.
+**Impact:** 1,217 entries searchable at `/paiboon` (`e368522`). Live AI was rejected because a beginner cannot catch a wrong tone mark, and a wrong tone in Thai is a different word. Three folds handle the spellings beginners actually type — tone marks, vowel length, ee/ii and oo/uu, RTGS kh/ph/th, and Paiboon's bp/dt. Two ranking bugs found by testing against real queries: an incidental substring outranking ช้าง, and fuzzy noise padding a good result set. The Yaitron dictionary's 4,894 pairs were deliberately excluded — it is the Pro feature, and its romanisation is unreviewed.
+
+---
+
+## free-tier-review
+
+### 2026-08-19 — v1
+**Change:** First version — five free-tier proposals judged do-or-don't, with instructions to ground every answer in `SECTION_REQUIREMENTS` and `SUBSCRIPTION_TIERS` rather than the marketing copy, and to hold each answer to any principle already stated in the code.
+**Reason:** *"people pay more readily when they can see what they're buying"* — the sales argument arrived with the questions and shaped the curriculum outline that came out of them.
+**Impact:** Three built, two rejected. The reading system stayed paid because those sections *are* the Basic tier; the 15-message AI cap stayed because the code's own costing makes a reduction worth pennies. The outline shipped as `curriculum.py` (`9505e4a`), assembled from the gated routes rather than hand-listed, with a startup assertion that fails the import if a section is neither advertised nor excluded for a written-down reason. Building it that way immediately found three sections priced but never built, and that Pro adds one page against Basic's sixteen.
+
+---
+
 ## register-levels-draft
 
 ### 2026-08-19 — v1

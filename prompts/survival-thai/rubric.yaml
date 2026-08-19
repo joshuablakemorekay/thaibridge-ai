@@ -1,0 +1,55 @@
+# Evaluation rubric for: Survival Thai
+
+prompt: survival-thai
+version: 1
+criteria:
+  - name: answers_the_placement_question_before_building
+    description: Decides where the section belongs rather than assuming the obvious page
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['tour guide', 'belongs', 'own section', 'placement', 'home for'])"
+
+  - name: checks_the_tier_and_prerequisites_of_the_candidate_page
+    description: Grounds the placement answer in the candidate page's real gating
+    weight: 5
+    pass_condition: "sum(s in output.lower() for s in ['basic', 'level 4', 'requires_alphabet', 'alphabet-gated', 'paid', 'tier']) >= 2"
+
+  - name: makes_it_reachable_not_merely_free
+    description: Recognises the alphabet gate is checked before tier, so free alone is not enough
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['requires_alphabet', 'ungated', 'no alphabet', 'prerequisite', 'reachable'])"
+
+  - name: enforces_finishability
+    description: Turns finishable into something checked rather than intended
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['test', 'enforce', 'cap', 'range', 'count'])"
+
+  - name: shows_both_polite_particles
+    description: Does not pick one gendered particle and teach half the learners wrongly
+    weight: 5
+    pass_condition: "sum(s in output for s in ['ครับ', 'ค่ะ', 'kráp', 'kâ']) >= 2"
+
+  - name: covers_the_four_promised_sets
+    description: Greetings, numbers, food and directions all present
+    weight: 4
+    pass_condition: "sum(s in output.lower() for s in ['greeting', 'number', 'food', 'direction']) >= 3"
+
+  - name: marks_the_draft_where_learners_see_it
+    description: The unreviewed status appears on the page, not only in a comment
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['draft', 'unreviewed', 'not been checked', 'banner'])"
+
+  - name: is_substantial
+    description: A real module rather than an outline
+    weight: 2
+    pass_condition: "len(output.split()) >= 150"
+
+test_cases:
+  - input:
+      task: "Design a free, finishable survival Thai section for an app whose free tier is Buddhism plus an alphabet chart, where every language page is level-gated, paid and alphabet-gated"
+    expected_traits:
+      - decides where the section belongs before building it
+      - checks the candidate page's tier and prerequisites
+      - makes the section ungated as well as free
+      - enforces finishability rather than intending it
+      - shows both gendered polite particles
+      - marks the Thai as an unreviewed draft on the page itself

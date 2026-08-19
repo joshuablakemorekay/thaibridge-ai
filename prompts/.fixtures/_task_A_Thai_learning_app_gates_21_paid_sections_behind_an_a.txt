@@ -1,0 +1,39 @@
+Yes, the Alphabet is right to be free, and it is not really a generosity call.
+
+All 21 paid sections carry requires_alphabet: True. Every single one. So
+charging for the Alphabet would put a paid prerequisite in front of everything
+paid: nothing on the language side could be sampled before paying, and the free
+tier would collapse to Buddhism only. It is structurally forced.
+
+The harder question is whether the prerequisite is drawn in the right place, and
+21 of 21 is a blunt instrument.
+
+Three sections genuinely need the script: vowels_syllables and read_write ARE
+the script, and tones_classes derives its tone rules from consonant class, so
+the rules cannot be applied without knowing the letters.
+
+Three are not real sections: premium is the pricing page and carries no
+@require_access, so its flag never fires; greetings_wai and classifiers have no
+route and no template at all.
+
+That leaves 15 sections gated on the alphabet but taught entirely in
+romanisation, with Paiboon beside every Thai word. Measured rather than
+asserted: CULTURAL_INFO is 31% of strings containing any Thai, TOUR_VOCAB 25%,
+FORMALITY_LEVELS 26%, GRAMMAR 37%.
+
+Culture is the starkest case — roughly 10,000 characters, about two-thirds
+English prose on the wai, temple manners and festivals, and you must identify 35
+of 44 consonants to read it.
+
+Gate order sharpens this. The alphabet gate is checked first, before level and
+tier, so a subscriber who has paid £9.99 and opens Tour Guide is told "Complete
+Thai Alphabet first" — the paywall was not even what stopped them. I am not
+proposing changing the Instant Access Pass; that is the deliberate escape hatch
+and it is settled.
+
+Smallest change first: delete requires_alphabet from premium, which is dead
+config that reads as "pass a quiz to see our prices" and would become true the
+moment someone added the decorator. Then free Culture from the gate, keeping its
+level 3 and Basic tier so progression and payment are untouched. Leave the other
+14 — learn the script early is a defensible teaching position, it just does not
+extend to an English page about bowing.
