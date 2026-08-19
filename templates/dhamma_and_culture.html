@@ -7,47 +7,6 @@
 
 {% block extra_css %}
 <style>
-    /* Two-lens layout. The whole page exists to hold ONE idea in the reader's
-       head — universal teaching on one side, one culture's expression of it on
-       the other — so the two columns are deliberately equal in weight. Neither
-       is the "real" one. */
-    .lens-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-        margin: 2rem 0;
-    }
-    .lens {
-        border-radius: 14px;
-        padding: 1.6rem;
-        border: 2px solid;
-    }
-    .lens h3 { margin: 0 0 0.3rem; font-size: 1.35rem; }
-    .lens .lens-sub {
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        margin: 0 0 0.9rem;
-        opacity: 0.75;
-    }
-    .lens ul { margin: 0.75rem 0 0; padding-left: 1.2rem; }
-    .lens li { margin-bottom: 0.35rem; }
-
-    /* Saffron = the universal teaching. Purple = the Thai expression. Both
-       palettes are already the site's own, so the page reads as part of the app
-       rather than a leaflet dropped into it. */
-    .lens-dhamma {
-        background: linear-gradient(135deg, #FFF8DC 0%, #FFE9C4 100%);
-        border-color: var(--saffron);
-    }
-    .lens-dhamma h3, .lens-dhamma .lens-sub { color: #8a5a0b; }
-
-    .lens-thai {
-        background: linear-gradient(135deg, #F6F0FF 0%, #EDE0FA 100%);
-        border-color: var(--royal-purple);
-    }
-    .lens-thai h3, .lens-thai .lens-sub { color: var(--royal-purple); }
-
     /* The one-sentence answer, pulled out big. If a reader takes nothing else
        from this page, it should be this. */
     .headline-answer {
@@ -66,6 +25,89 @@
         color: #4a3d28;
     }
     .headline-answer strong { color: var(--royal-purple); }
+
+    /* ── The four layers ──────────────────────────────────────────────
+       A ladder, not a grid. Two equal columns was right for the comparison it
+       made, and wrong as a whole picture: the tradition that carried the
+       teaching, and the choices a reader makes about it, are two more separate
+       things again — and they sit in an order. Rungs are the honest shape. */
+    .layers { list-style: none; margin: 1.5rem 0; padding: 0; }
+    .layer {
+        background: #fff;
+        border: 2px solid #E8DCC0;
+        border-left: 6px solid #E8DCC0;
+        border-radius: 12px;
+        padding: 1.3rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .layer h3 { margin: 0.35rem 0 0.5rem; font-size: 1.25rem; }
+    .layer p { margin: 0; color: #55483a; line-height: 1.6; }
+    .layer ul { margin: 0.7rem 0 0; padding-left: 1.2rem; color: #55483a; }
+    .layer li { margin-bottom: 0.3rem; }
+    .layer-tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 0.18rem 0.65rem;
+        border-radius: 999px;
+    }
+
+    /* Every tag below is dark text on a pale ground. The register badges were
+       the lesson: white on saffron measured 2.13:1, on a site that has a
+       Learning Support panel for exactly the readers that fails. */
+    .layer-dhamma { border-color: var(--saffron); background: linear-gradient(135deg,#FFF8DC 0%,#FFF3E0 100%); }
+    .layer-dhamma h3 { color: #8a5a0b; }
+    .layer-dhamma .layer-tag { background: #FFE0B2; color: #6b4300; }
+
+    .layer-tradition { border-color: var(--deep-gold); background: linear-gradient(135deg,#FBF6E9 0%,#F3EAD3 100%); }
+    .layer-tradition h3 { color: #6d5209; }
+    .layer-tradition .layer-tag { background: #EADFC0; color: #5a4408; }
+
+    .layer-culture { border-color: var(--royal-purple); background: linear-gradient(135deg,#F6F0FF 0%,#EDE0FA 100%); }
+    .layer-culture h3 { color: var(--royal-purple); }
+    .layer-culture .layer-tag { background: #E3D3F5; color: #3d1459; }
+
+    .layer-yours { border-color: var(--bodhi-green); background: linear-gradient(135deg,#E8F5E9 0%,#D8EEDA 100%); }
+    .layer-yours h3 { color: #1B5E20; }
+    .layer-yours .layer-tag { background: #C3E4C6; color: #14471a; }
+
+    /* ── Three ways to use the site ───────────────────────────────────
+       Written in the reader's own voice, because what is being chosen is an
+       intention rather than a product tier. Equal columns this time, unlike
+       the layers above: these three really are peers, and nobody is being
+       asked to pick only one. */
+    .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+        margin: 1.5rem 0;
+    }
+    .approach {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border: 2px solid #E8DCC0;
+        border-top: 6px solid #E8DCC0;
+        border-radius: 14px;
+        padding: 1.4rem 1.3rem;
+    }
+    .approach h3 { margin: 0 0 0.7rem; font-size: 1.15rem; color: var(--royal-purple); }
+    .approach blockquote {
+        margin: 0 0 0.9rem;
+        padding-left: 0.9rem;
+        border-left: 3px solid #E8DCC0;
+        font-style: italic;
+        color: #4a3d28;
+        line-height: 1.55;
+    }
+    .approach > p { margin: 0 0 1rem; font-size: 0.95rem; color: #55483a; line-height: 1.55; }
+    .approach-links { margin-top: auto; font-size: 0.92rem; }
+    .approach-links a { display: inline-block; margin-right: 0.7rem; }
+    .approach-universal { border-top-color: var(--saffron); }
+    .approach-thai { border-top-color: var(--royal-purple); }
+    .approach-neutral { border-top-color: var(--bodhi-green); }
 
     .qa { margin: 1.5rem 0; }
     .qa h3 {
@@ -116,37 +158,46 @@
 </h1>
 
 <p style="text-align:center; color:#666; max-width:820px; margin:0 auto 1.5rem;">
-    Why this site teaches Buddhism and Thai together — and why you are free to
-    take only one of them.
+    Why this site teaches Buddhism and Thai together — and why you are free to take
+    one, both, or neither of the cultures involved.
 </p>
 
 <div class="headline-answer">
     <p>
         <strong>You do not need to become Thai to practise Buddhism.</strong><br>
-        You are welcome here to study the Dhamma on its own, wherever in the world
-        you live and whatever culture you belong to.
+        Study the Dhamma on its own, wherever in the world you live — keeping your own
+        culture, taking up parts of another if you want to, or belonging to no
+        tradition's customs at all.
     </p>
 </div>
 
 <div class="card">
     <p>
-        People sometimes arrive here and feel that two different things have been
-        bundled together — a teaching that belongs to everyone, and a country's
-        customs that belong to one people. That is a fair thing to notice. They
-        <em>are</em> two different things, and this page exists to keep them apart
-        clearly, so you can choose what you want.
+        People sometimes arrive here and feel that separate things have been bundled
+        together — a teaching that belongs to everyone, and a country's customs that
+        belong to one people. That is a fair thing to notice. They really are
+        separate, and this page exists to pull them apart clearly, so that what you
+        take is your own choice rather than a package deal.
     </p>
 </div>
 
-<h2>Two lenses, not one package</h2>
+<h2>Four things, usually delivered as one parcel</h2>
 
-<div class="lens-grid">
-    <div class="lens lens-dhamma">
-        <h3>☸️ The Dhamma</h3>
-        <p class="lens-sub">Universal · for anyone, anywhere</p>
-        <p style="margin:0;">
+<p>
+    Most of the confusion here comes from four separate things arriving together.
+    They are related, they are not identical, and only the first of them is the
+    teaching itself. Seeing where each one stops makes it much easier to decide
+    what you actually want.
+</p>
+
+<ul class="layers">
+    <li class="layer layer-dhamma">
+        <span class="layer-tag">1 · Universal</span>
+        <h3>☸️ The core Dhamma</h3>
+        <p>
             What the Buddha taught, and what a person does with it. None of this
-            depends on where you were born or what language you speak.
+            depends on where you were born, what language you speak, or which
+            customs you keep.
         </p>
         <ul>
             <li>The Four Noble Truths</li>
@@ -155,27 +206,55 @@
             <li>The Three Marks of Existence</li>
             <li>Dependent origination and kamma</li>
             <li>Mettā and meditation</li>
-            <li>The suttas and their Pali terms</li>
         </ul>
-    </div>
+    </li>
 
-    <div class="lens lens-thai">
-        <h3>🇹🇭 Dhamma in Thailand</h3>
-        <p class="lens-sub">Cultural · one tradition's expression</p>
-        <p style="margin:0;">
-            How Thai people, temples and the Thai language have carried, protected
-            and lived those teachings. Useful to understand. Never required.
+    <li class="layer layer-tradition">
+        <span class="layer-tag">2 · How it reached us</span>
+        <h3>📜 The Theravada tradition</h3>
+        <p>
+            Not the teaching, but the vessel that carried it — the line of
+            communities who memorised, recited, wrote down and checked these texts
+            for over two thousand years so that anyone could still read them today.
+            This is a matter of transmission and preservation, and it belongs to no
+            single country.
+        </p>
+        <ul>
+            <li>The Pali Canon, and the language it is kept in</li>
+            <li>The monastic lineage and the Vinaya</li>
+            <li>The commentaries and the recitation tradition</li>
+            <li>Shared across Sri Lanka, Burma, Thailand, Cambodia, Laos and beyond</li>
+        </ul>
+    </li>
+
+    <li class="layer layer-culture">
+        <span class="layer-tag">3 · One expression of it</span>
+        <h3>🇹🇭 Thai Buddhist culture</h3>
+        <p>
+            How those teachings are expressed and lived in one particular country.
+            Genuinely worth understanding, especially if you ever step into a Thai
+            temple. Never a requirement for practising Buddhism.
         </p>
         <ul>
             <li>Temple etiquette and ceremonies</li>
             <li>Thai Buddhist festivals and holy days</li>
-            <li>Monastic customs and forms of speech</li>
             <li>Merit-making and the alms round</li>
-            <li>Thai chanting traditions</li>
-            <li>Pali and Sanskrit words inside Thai</li>
+            <li>Thai chanting traditions and forms of speech</li>
+            <li>Pali and Sanskrit words inside the Thai language</li>
         </ul>
-    </div>
-</div>
+    </li>
+
+    <li class="layer layer-yours">
+        <span class="layer-tag">4 · Yours to decide</span>
+        <h3>🧭 What you do with any of it</h3>
+        <p>
+            Every custom on this site is something you may take up, adapt to where
+            you live, or leave alone entirely — and leaving it alone costs you
+            nothing of the teaching. This layer belongs to you. Nobody here gets a
+            vote in it.
+        </p>
+    </li>
+</ul>
 
 <div class="card">
     <p style="margin:0;">
@@ -234,6 +313,70 @@
     That is an offer of context, not a condition of entry.
 </p>
 
+<h2>Three ways to use this site</h2>
+
+<p>
+    People arrive here wanting quite different things, and each of these is a
+    complete answer on its own. <strong>They are not exclusive.</strong> You can
+    work through all three, move between them as you go, or stay in one and never
+    look at the others.
+</p>
+
+<div class="approach-grid">
+    <div class="approach approach-universal">
+        <h3>☸️ Universal Dhamma</h3>
+        <blockquote>
+            “I want to focus on Buddhist teachings and practices that can be
+            understood and applied anywhere.”
+        </blockquote>
+        <p>
+            The teachings themselves, and a lay practice that needs no temple, no
+            ceremony and no second language. Free, with no Thai required.
+        </p>
+        <p class="approach-links">
+            <a href="/practising-anywhere">🌏 Practising anywhere</a>
+            <a href="/theravada">☸️ The teachings</a>
+            <a href="/meditation">🧘 Meditation</a>
+        </p>
+    </div>
+
+    <div class="approach approach-thai">
+        <h3>🎭 Dhamma in Thai culture</h3>
+        <blockquote>
+            “I want to understand how Buddhism is expressed through Thai
+            language, society, temples and traditions.”
+        </blockquote>
+        <p>
+            What a whole society looks like when it lives the teaching — its
+            manners, its festivals, its temples, and the Buddhist vocabulary sitting
+            inside the everyday language.
+        </p>
+        <p class="approach-links">
+            <a href="/culture">🎭 Thai culture</a>
+            <a href="/survival">🗣️ Start speaking Thai</a>
+            <a href="/chanting">📿 Chanting book</a>
+        </p>
+    </div>
+
+    <div class="approach approach-neutral">
+        <h3>🕊️ Culturally neutral</h3>
+        <blockquote>
+            “I want to study and practise the Dhamma without adopting any
+            particular cultural identity or tradition.”
+        </blockquote>
+        <p>
+            The same teachings, taken up without joining anything. No customs to
+            adopt, no community to belong to and no label to wear — the
+            precepts, generosity and meditation stand on their own and ask nothing
+            of your identity.
+        </p>
+        <p class="approach-links">
+            <a href="/practising-anywhere">🌏 What you do not need</a>
+            <a href="/meditation">🧘 Meditation</a>
+        </p>
+    </div>
+</div>
+
 <div class="practice-anywhere">
     <h2>🌏 Practising where you actually live</h2>
     <p>
@@ -277,6 +420,32 @@
     </div>
 
     <div class="qa">
+        <h3>What if I do not want to belong to any culture or tradition at all?</h3>
+        <p>
+            Then don't. That is a real option here, not a consolation prize. You can
+            keep the culture you already have, take up parts of another one, or hold
+            none of it — the Dhamma is still fully available to you either way, and
+            everything on this site that matters most is on the side that asks nothing
+            of your identity. Nothing about the precepts, generosity, mettā or
+            meditation depends on you calling yourself anything.
+            <a href="/practising-anywhere">See what is genuinely not required →</a>
+        </p>
+    </div>
+
+    <div class="qa">
+        <h3>Is Theravada itself a culture I would be signing up to?</h3>
+        <p>
+            No — and it is worth keeping the two apart. Theravada is how these
+            teachings were <em>preserved and passed on</em>: a canon in Pali, a
+            monastic lineage, and centuries of communities checking the texts against
+            each other. That is a chain of transmission, not a set of customs, and it
+            runs through several countries rather than belonging to any one of them.
+            Reading a sutta that reached you through that chain does not enrol you in
+            anything.
+        </p>
+    </div>
+
+    <div class="qa">
         <h3>Isn't mixing culture into Buddhism a source of division?</h3>
         <p>
             It can be, when a culture is treated as the price of admission — which is
@@ -303,7 +472,9 @@
 
 <div class="card" style="text-align:center;">
     <p style="margin:0; font-size:1.05rem;">
-        Take what is useful to you. Leave the rest. 🙏
+        Learn the Dhamma. Understand its Thai expression if you want to. Keep your own
+        culture, take up part of another, or follow none at all — how the teaching
+        fits into your life stays yours to decide. 🙏
     </p>
 </div>
 {% endblock %}

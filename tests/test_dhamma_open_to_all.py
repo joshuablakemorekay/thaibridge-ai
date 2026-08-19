@@ -208,3 +208,76 @@ def test_the_etiquette_guidance_still_addresses_the_reader(unlocked_client):
     body = page_content(unlocked_client, "/culture")
     assert "Guidelines for Learners" in body
     assert "wai" in body.lower()
+
+
+# ── Culture is a choice, and one of the choices is "none" ─────────────────
+#
+# The second round of feedback went past "you do not have to be Thai". It asked
+# for something the page did not offer at all: the option of practising the
+# Dhamma without taking on ANY culture or tradition, including the reader's own.
+# Every sentence on the page said "in your own culture", which quietly assumes
+# a reader who wants to belong somewhere.
+
+def test_the_explanation_page_offers_belonging_to_no_culture_at_all(client):
+    body = page_content(client, "/dhamma-and-culture")
+    assert "Culturally neutral" in body, "the third way in is missing"
+    # The sentence wraps in the template, so match the tail of it rather than
+    # a span that a line break sits inside.
+    assert "cultural identity or tradition" in body
+
+
+def test_the_practice_page_lists_culture_itself_as_optional(client):
+    """The "what you do not need" list is where a reader checks for the catch."""
+    body = page_content(client, "/practising-anywhere")
+    assert "including no culture at all" in body
+    assert "or to call yourself anything" in body
+
+
+# ── Four layers, not two ──────────────────────────────────────────────────
+#
+# The page used to set the Dhamma against Thai culture, two columns, equal
+# weight. That comparison was right as far as it went and hid two further
+# distinctions: HOW the teaching was carried here (Theravada — a chain of
+# transmission, not a set of customs) and what the reader chooses to do with
+# any of it.
+
+LAYERS = [
+    "The core Dhamma",
+    "The Theravada tradition",
+    "Thai Buddhist culture",
+    "What you do with any of it",
+]
+
+
+@pytest.mark.parametrize("layer", LAYERS)
+def test_the_page_keeps_the_four_layers_apart(client, layer):
+    assert layer in page_content(client, "/dhamma-and-culture")
+
+
+def test_theravada_is_described_as_transmission_not_as_a_culture(client):
+    """A reader who thinks Theravada IS a culture has the same objection back."""
+    body = page_content(client, "/dhamma-and-culture")
+    assert "Not the teaching, but the vessel that carried it" in body
+    assert "transmission and preservation" in body
+
+
+# ── The three approaches, and that they are not exclusive ────────────────
+
+APPROACHES = ["Universal Dhamma", "Dhamma in Thai culture", "Culturally neutral"]
+
+
+@pytest.mark.parametrize("approach", APPROACHES)
+def test_all_three_approaches_are_offered(client, approach):
+    assert approach in page_content(client, "/dhamma-and-culture")
+
+
+def test_the_approaches_are_stated_not_to_be_exclusive(client):
+    """Three doors read as three boxes to be sorted into unless it says so."""
+    assert "They are not exclusive." in page_content(client, "/dhamma-and-culture")
+
+
+def test_the_signup_page_does_not_promise_only_a_language_course(client):
+    """The one line everyone passes through on the way in."""
+    body = client.get("/signup").get_data(as_text=True)
+    assert "begin your Thai language journey" not in body
+    assert "the Thai language" in body and "Dhamma" in body
