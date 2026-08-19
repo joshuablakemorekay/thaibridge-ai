@@ -30,10 +30,27 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`dhamma-ai-allowance`](./dhamma-ai-allowance/) | analysis | Checks a principle stated in a code comment against the gate that actually runs — found the Thai tutor could exhaust the Dhamma's free questions | Yes (v1 finding → v2 fix) |
 | [`survival-thai`](./survival-thai/) | content | Builds a free, finishable starter section — and decides where it belongs first, which is what stopped it landing on a paid, alphabet-gated page | Yes (v1 → v3 findability) |
 | [`alphabet-gate-audit`](./alphabet-gate-audit/) | analysis | Answers whether the alphabet should be free, then asks the harder question underneath — is the prerequisite drawn in the right place? | Yes (v1 answer → v2 breadth) |
+| [`hero-copy-rewrite`](./hero-copy-rewrite/) | content | Rewrites the home page hero from a description of the site's structure into a promise — and records the three AI wordings that were rejected before the author wrote the final copy himself | Yes (v1 → v3, author-written) |
 
 ## Featured iterations
 
 Prompts where the v1 → final journey shows the most learning:
+
+### [`hero-copy-rewrite`](./hero-copy-rewrite/)
+
+The one entry here where **none of the AI's wording survived**, which is why it
+is worth reading. A one-line brief — *"This doesn't sound very convincing"* —
+produced a clean rewrite that was structurally right and culturally wrong. Three
+proposed wordings were rejected in turn, each for a reason worth keeping: one
+made Thai culture the unnamed thing being declined, one wrote the reader's life
+as a set of walls, one positioned the reader as a spectator of someone else's
+practice.
+
+The failure it records is the useful part. An objection to the *phrase* "follow
+no culture at all" was allowed to delete the *option* it described, dropping the
+culturally-neutral path from the front page entirely. It took a direct question
+to catch it. Every constraint in the v3 prompt was discovered by rejecting a
+draft rather than stated up front.
 
 ### [`market-research-report`](./market-research-report/)
 
@@ -86,6 +103,7 @@ This library is structured to show:
 - [x] **Regression prevention** — `--fail-under 0.8` blocks changes that drop the score below 80%
 - [x] **Documentation** — every prompt has a REASONING.md explaining the *why*
 - [x] **Verification habit** — I check which tools actually ran rather than assuming
+- [x] **Honest authorship** — where I rewrote the AI's output myself, the rejected drafts and my reasons are recorded rather than hidden
 
 ## How to read this folder
 

@@ -7,6 +7,15 @@ Each entry follows this format:
 
 ---
 
+## hero-copy-rewrite
+
+### 2026-08-19 — v1 → v3
+**Change:** First version was a one-line critique of the live hero — *"This doesn't sound very convincing."* v2 added the cultural-freedom line and had three proposed wordings rejected in turn. v3 is the author's own text, with the constraints that killed each rejected draft written back into the prompt.
+**Reason:** The hero read *"Two subjects, side by side"* — a description of the site's filing system rather than a promise to a visitor, built from hedges that made two subjects sharing a page sound like an apology.
+**Impact:** Four commits, all live. `95635ef` moved the strapline into the `<h1>` and replaced the subtitle with one naming the four doors; `9b234c4` normalised "Theravada" across all 26 mentions; `9cf3302` restored the culturally-neutral option to the front page in the author's own words, borrowing `/dhamma-and-culture`'s phrasing so the two pages agree; `74341c6` added the `/about` card **On "Thainess" — a personal note**, shipped verbatim at the author's explicit instruction after concerns were raised and declined. The recorded failure: an objection to the phrase "follow no culture at all" was allowed to delete the option it described, and only a direct question caught it.
+
+---
+
 ## alphabet-gate-audit
 
 ### 2026-08-19 — v1

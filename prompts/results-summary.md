@@ -1,6 +1,6 @@
 # Eval Results Summary
 
-_Generated: 2026-08-19 15:57 UTC_
+_Generated: 2026-08-19 21:02 UTC_
 
 | Prompt | Cases | Avg Score | Status |
 |---|---|---|---|
@@ -14,6 +14,7 @@ _Generated: 2026-08-19 15:57 UTC_
 | `free-tier-review` | 1 | 100.0% | ✅ pass |
 | `frontend-build` | 1 | 100.0% | ✅ pass |
 | `gamification-system` | 1 | 100.0% | ✅ pass |
+| `hero-copy-rewrite` | 1 | 100.0% | ✅ pass |
 | `inclusive-positioning` | 1 | 100.0% | ✅ pass |
 | `market-research-report` | 1 | 100.0% | ✅ pass |
 | `paiboon-lookup` | 1 | 100.0% | ✅ pass |

@@ -1,0 +1,55 @@
+# Evaluation rubric for: Hero Copy Rewrite
+
+prompt: hero-copy-rewrite
+version: 3
+criteria:
+  - name: states_an_offer_not_a_structure
+    description: Says what the visitor gets, rather than describing how the site is arranged
+    weight: 5
+    pass_condition: "not any(s in output.lower() for s in ['side by side', 'two subjects', 'this site is organised', 'sections of the site'])"
+
+  - name: names_the_culturally_neutral_option
+    description: States the option of practising without adopting any cultural identity, rather than implying it with a general promise of freedom
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['without adopting', 'without joining', 'no particular cultural identity', 'any particular cultural identity'])"
+
+  - name: host_culture_is_given_not_declined
+    description: Names the host culture as something honoured and offered, never as the unnamed thing being turned down
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['honoured', 'honored', 'preserved', 'celebrate']) and 'thai' in output.lower()"
+
+  - name: avoids_life_as_a_constraint
+    description: Does not write the reader's life as walls they must fit around
+    weight: 4
+    pass_condition: "not any(s in output.lower() for s in ['as your life allows', 'however your life allows', 'if your life allows'])"
+
+  - name: avoids_spectator_framing
+    description: Hands the reader the tradition rather than showing them someone else practising it
+    weight: 4
+    pass_condition: "not any(s in output.lower() for s in ['how it is lived in thailand', 'how the dhamma is lived in thailand', 'watch how'])"
+
+  - name: does_not_claim_a_culture_free_buddhism
+    description: Avoids the phrasing the site's own explainer contradicts
+    weight: 4
+    pass_condition: "not any(s in output.lower() for s in ['no culture at all', 'culture-free', 'without any culture'])"
+
+  - name: offers_both_branches
+    description: Presents studying through the culture AND practising apart from it as real alternatives
+    weight: 4
+    pass_condition: "' or ' in output.lower() and any(s in output.lower() for s in ['tradition', 'temples', 'heritage'])"
+
+  - name: is_substantial
+    description: Real copy, not a one-line verdict
+    weight: 2
+    pass_condition: "len(output.split()) >= 60"
+
+test_cases:
+  - input:
+      brief: "Rewrite a home page hero for an app teaching the Dhamma alongside Thai language and culture; it currently reads 'Two subjects, side by side'; the culturally neutral option must be named explicitly and the Thai culture must read as honoured, not declined"
+    expected_traits:
+      - states what the visitor gets rather than how the site is arranged
+      - names practising without adopting any cultural identity as an explicit option
+      - presents the host culture as honoured and preserved
+      - does not write the reader's life as a constraint
+      - does not position the reader as a spectator
+      - does not claim a culture-free Buddhism exists
