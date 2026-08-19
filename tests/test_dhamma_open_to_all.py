@@ -83,6 +83,43 @@ def test_the_home_page_offers_a_way_in_that_is_not_the_alphabet(client):
     assert "/theravada" in body, "no Dhamma door on the home page"
 
 
+# ── The culturally neutral path stays named on the front page ─────────────
+#
+# Added 2026-08-19 after it went missing once. A hero draft promised freedom in
+# general terms — "find your own way to bring the teachings into your life" —
+# and dropped the option of practising without adopting any cultural identity
+# at all. The objection at the time was to the phrase "follow no culture at
+# all", which contradicts what /dhamma-and-culture argues (no Buddhism sits
+# anywhere culture-free). That was an objection to six words, but it took the
+# option with it, and nothing failed. A general promise of freedom is not the
+# same as naming the option, so the naming is what these tests pin down.
+
+
+def test_the_home_page_names_the_culturally_neutral_path(client):
+    """Not "you are free" in the abstract — the actual option, in words."""
+    body = client.get("/").get_data(as_text=True)
+    assert "without adopting any particular cultural identity" in body, (
+        "the home page no longer offers practising the Dhamma without taking "
+        "on a culture — the promise is only kept for as long as it is named"
+    )
+
+
+def test_the_home_page_offers_the_thai_expression_too(client):
+    """The other branch. Neither one is allowed to swallow the other."""
+    body = client.get("/").get_data(as_text=True)
+    assert "Theravada tradition" in body
+    assert "honoured" in body, (
+        "Thai heritage must read as something given, not as the thing being "
+        "declined — see prompts/hero-copy-rewrite/REASONING.md"
+    )
+
+
+def test_the_home_page_does_not_claim_a_culture_free_buddhism(client):
+    """The wording /dhamma-and-culture spends a section arguing against."""
+    body = client.get("/").get_data(as_text=True)
+    assert "no culture at all" not in body
+
+
 def test_the_explanation_page_says_the_thing_it_exists_to_say(client):
     body = client.get("/dhamma-and-culture").get_data(as_text=True)
     assert "You do not need to become Thai" in body
@@ -105,6 +142,13 @@ def test_the_chanting_book_tells_readers_the_thai_layers_are_optional(client):
 
 # Countries and peoples that could only ever appear here as "here is where you
 # would do this" — i.e. as a stand-in setting for the reader's own life.
+#
+# SCOPE: this list is checked against /practising-anywhere ONLY, and that is
+# deliberate. /about carries the author's own first-person note on preserving
+# Thai and British cultural heritage, which names both countries on purpose —
+# it is a statement about who wrote the app, not a claim about where practice
+# belongs. Do not widen this check to the whole site to "fix" a failure; that
+# would delete signed authorship to satisfy a test aimed at something else.
 PAROCHIAL_SETTINGS = [
     "Britain", "British", "England", "English people", "UK",
     "America", "American", "USA", "Europe", "European",
