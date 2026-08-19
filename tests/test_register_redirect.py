@@ -23,6 +23,7 @@ import pytest
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
+import curriculum  # noqa: E402
 from app import app, SECTION_REQUIREMENTS  # noqa: E402
 
 
@@ -81,11 +82,15 @@ def test_following_the_redirect_lands_somewhere_real(unlocked_client):
     assert response.status_code == 200
 
 
-# The matching half of this fix lives in curriculum.NOT_BUILT_YET, which
-# records why 'register' is kept off the public curriculum outline — a redirect
-# is not a section, and that outline is where the app promises what a
-# subscription buys. It is not asserted here because that module is still being
-# written in a parallel branch of work; add the assertion once it lands.
+def test_the_section_is_not_advertised_as_something_you_can_buy():
+    """The other half of this fix.
+
+    The curriculum outline is where the app promises what a subscription buys,
+    and a redirect is not a section. curriculum.py asserts at import time that
+    every gated section is either on that outline or recorded here with a
+    reason — which is what caught this redirect in the first place.
+    """
+    assert "register" in curriculum.NOT_BUILT_YET
 
 
 def test_the_section_entry_survives():
