@@ -9,14 +9,19 @@
         <div class="hero-content">
             <h1 class="main-title">
                 <span class="brand-title">🪷 ThaiBridge AI</span>
-                <span class="brand-tagline">Theravada Buddhism &amp; the Thai language · พระธรรมและภาษาไทย</span>
+                <span class="brand-strapline">Learn the Dhamma. Learn Thai. Find Your Own Path.</span>
+                <span class="brand-tagline">พระธรรมและภาษาไทย</span>
             </h1>
             <p class="hero-subtitle">
-                Two subjects, side by side. Study the Dhamma on its own, learn Thai on its
-                own, or follow how the two meet in Thailand&#39;s temples.
+                Buddhist teachings, Thai language, chanting and culture — brought together
+                in one place, with the freedom to explore as much or as little of each as
+                you choose.
             </p>
             <p class="hero-note">
                 🪷 The Buddhist teachings here are free and open to everyone — no Thai needed.
+                Thai culture is honoured here, not required. Explore the Dhamma as preserved
+                in the Theravāda tradition, discover how it is expressed in Thailand, and
+                find your own way to bring the teachings into your life.
                 <a href="/dhamma-and-culture">Why both are taught here →</a>
             </p>
             <div class="hero-buttons">
@@ -361,6 +366,16 @@
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     }
 
+    /* The strapline sits inside the <h1> but a step down in size: at the
+       3rem brand weight a full sentence swamps the hero and wraps to four
+       lines on desktop. */
+    .brand-strapline {
+        font-size: 1.9rem;
+        color: white;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
     .brand-tagline {
         font-size: 1.35rem;
         color: rgba(255, 255, 255, 0.9);
@@ -629,6 +644,10 @@
         .brand-title,
         .thai-title {
             font-size: 2rem;
+        }
+
+        .brand-strapline {
+            font-size: 1.3rem;
         }
 
         .romanized-title {
