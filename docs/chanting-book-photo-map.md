@@ -53,6 +53,7 @@ photograph.
 | 71 | IMG_0334 | 263 |
 | 72 | IMG_0335 | 263 |
 | 73 | IMG_0336 | 263 |
+| **74** | **IMG_0338** | **264** ⟵ offset changes here |
 | 207 | IMG_0477 | 270 |
 | 213 | IMG_0483 | 270 |
 | 215 | IMG_0485 | 270 |
@@ -64,15 +65,16 @@ photograph.
 | 223 | IMG_0493 | 270 |
 
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
-somewhere between 73 and 207 were shot twice. Those stretches are unmapped.
+somewhere between 74 and 207 were shot twice. Those stretches are unmapped.
 
 Pages 35–50 went in without being added here, and they all sat at offset 263 —
 the same as pages 31–34 and 51. Pages 55–58 went in the same way. So the offset
-holds **unbroken from 31 to 73**, now anchored at both ends of that run and at
-every page from 59 to 73. That is a reason to expect the next filename, never a
-reason to trust it: read the page number off the top of the photograph as
-always — pages 69 to 73 were each confirmed that way, on `IMG_0332` to
-`IMG_0336`, not calculated.
+holds **unbroken from 31 to 73** — and then BREAKS. Page 74 is `IMG_0338`,
+because `IMG_0337` does not exist, so the offset steps from 263 to **264** and
+stays there until the next deleted duplicate. That is the first of the seven
+changes this table predicted, and it is exactly why the rule is to read the page
+number off the top of the photograph rather than calculate it: pages 69 to 74
+were each confirmed that way, on `IMG_0332` to `IMG_0338`.
 
 ## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
 

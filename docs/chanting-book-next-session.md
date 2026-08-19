@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
-73 went in.
+74 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–73 are in and unbroken**, plus 217–221. **101 chants, 1,242 verses
+- **Pages 1–74 are in and unbroken**, plus 217–221. **101 chants, 1,272 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 69 to 73 were applied 2026-08-19; pages 66–68 over the days
+- Pages 69 to 74 were applied 2026-08-19; pages 66–68 over the days
   before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 
 ## How to work — this matters more than the tasks
@@ -30,30 +30,41 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 74, `IMG_0337`
+## Next: page 75, `IMG_0339` — but READ THE NUMBER, the offset just moved
 
-`ovada-patimokkhadi-patha` is **open at verse 28** and page 74 carries on, so
-its batch is another `continuation_of` numbering from 29, no title and no
+**The filename offset changed at page 74.** It is `IMG_0338`, not `IMG_0337`,
+which does not exist — so the offset stepped from 263 to **264** and page 75
+should be `IMG_0339`. That is the first of the seven changes the photo map
+predicted between here and page 207, and it is the whole reason the rule is to
+read the number off the top of the sheet rather than calculate it. Expect more.
+
+`ovada-patimokkhadi-patha` is **open at verse 58** and page 75 carries on, so
+its batch is another `continuation_of` numbering from 59, no title and no
 invitation.
 
-**We know what the page owes.** Page 73 sets up a pair — virtue proclaimed by
-the LOWER exposition (`เหฏฐิเมนะ`) and by the HIGHER (`อุปะริเมนะ`) — and
-answers only the lower one, ending `เอวัง โข เหฏฐิเมนะ ปะริยาเยนะ สีลัง
-สัมมะทักขาตัง ภะคะวะตา.` So page 74 should open `กะถัญจะ อุปะริเมนะ…` and work
-the same way through concentration and wisdom after that. **That is a reason to
-check the reading, not to write it.**
+**We know what the page owes.** Page 74 asks `กะถัญจะ เหฏฐิเมนะ ปะริยาเยนะ
+ปัญญา สัมมะทักขาตา ภะคะวะตา,` — wisdom by the lower exposition — and the sheet
+runs out before answering. So page 75 should answer it, then do the higher
+exposition of wisdom the same way, and that would complete the pattern the
+passage has followed for three pages. **That is a reason to check the reading,
+not to write it.**
 
 **Measure the layout, do not judge it.** This chant changes setting without
-warning — page 73 alone goes two-column, prose, centred single-column, two-column,
-prose. Profile the ink across the measure for each block before reading a word:
-a gutter around x 940–1100 means two columns; ink filling x 380–1580 with no
-gutter means prose; ink stopping short on both sides means centred lines. Then
-give each group `para_start` plus `para_layout` of `'prose'` or `'lines'`.
+warning: page 73 alone goes two-column, prose, centred single-column,
+two-column, prose, while page 74 is prose end to end. Profile the ink across the
+measure before reading a word — a gutter around x 940–1100 means two columns,
+ink filling x 270–1880 with no gutter means prose, ink stopping short on both
+sides means centred lines. Then give each group `para_start` plus `para_layout`.
+
+**Declare `para_layout` on EVERY group.** This chant's own `layout` is `lines`,
+so a prose paragraph that says nothing inherits the wrong setting and renders as
+a stack of short lines. Page 74's six paragraphs each say `'prose'` explicitly
+for that reason.
 
 **Watch the ฏ/ต in Pāṭimokkha.** This chant uses ต throughout (`ปาติโมกเข`,
-`ปาติโมกขัง`) while the chant above it on page 72 uses ฏ. Read each occurrence
-rather than assuming, and reproduce what is there. Note `ปะฏิวิระโต` is a
-different word and correctly keeps ฏ.
+`ปาติโมกขะสังวะระ`) while the chant above it on page 72 uses ฏ. Read each
+occurrence rather than assuming. `ปะฏิวิระโต` is a different word and correctly
+keeps ฏ.
 
 The fourth parallel offering, Āsāḷha, is expected around page 75. **Read the
 whole sheet before deciding what is on it** — page 71 held three chants, page 72
