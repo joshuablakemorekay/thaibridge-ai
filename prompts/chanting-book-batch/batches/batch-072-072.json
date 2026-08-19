@@ -1,0 +1,337 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "sarabhanna-gatha-magha",
+   "ovada-patimokkhadi-patha"
+  ],
+  "pages": [
+   {
+    "page": 72,
+    "file": "IMG_0335.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "sarabhanna-gatha-magha",
+    "verses": "6-20",
+    "starts_here": false,
+    "note": "The upper half of the page: fifteen two-column rows finishing the Māgha Saraphañña that began on page 71. Read across the gutter. It ENDS here at ตาทิโนติ. — twenty verses in all, where both the other Saraphañña sets ran to thirty. No colophon; the explanatory paragraph follows directly."
+   },
+   {
+    "page": 72,
+    "file": "IMG_0335.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "ovada-patimokkhadi-patha",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The lower half. First a three-line Thai paragraph in the measure of the page, explaining when this chant is used and naming it in bold — recorded as a page block, since it belongs to neither chant. Then the centred title on TWO lines, โอวาทะปาติโมกขาทิปาฐะ above and สำหรับสวดในวันมาฆบูชา below, with no chant number. Then a centred section heading บทขัด, and three two-column rows read across the row. The chant does NOT end here — บทขัด is only the prefatory verse and the sheet runs out mid sentence.",
+    "blocks": [
+     {
+      "type": "prose",
+      "thai": "ในงานวันมาฆบูชานี้นั้น หลังจากพระเถระผู้เป็นประธานแสดงพระธรรมเทศนากัณฑ์ต้นจบแล้ว พระภิกษุ สามเณร พร้อมกันสวด โอวาทะปาติโมกขาทิปาฐะ เป็นเหมือนสวดรับเทศน์ จึงเรียงไว้ในลำดับนี้ ดังนี้",
+      "english": "At this Māgha Pūjā observance, after the presiding elder has finished delivering the first section of the Dhamma talk, the bhikkhus and sāmaṇeras chant the Ovādapātimokkhādipāṭha together, in the manner of a chanted response to the sermon. It is therefore set out here in this order, thus.",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "sarabhanna-gatha-magha",
+   "continuation_of": "sarabhanna-gatha-magha",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design; page 71 settled that this chant has no invitation.",
+    "units": "Fifteen, verses 6 to 20, one per printed row, each read ACROSS the two columns. They complete the chant at twenty verses. The only full stop in the whole block is on the last row, so the fifteen rows are one long sentence — which is why the English of the middle verses reads oddly on its own and has to be read as a run.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. No romanisation is printed and this entry carries no paiboon value at all.",
+    "pages": "IMG_0335.PNG, page 72, read off the top centre of the sheet. Fifteen rows at the head of the page, then the chant ends. Verse 6 is the first verse on this page and carries page 72. Nothing is obscured; the thumbs at the foot of the sheet sit below the last printed line and cover no ink."
+   },
+   "verses": [
+    {
+     "number": 6,
+     "page": 72,
+     "pali": "สังฆัสสะสันนิปาตัมหิ อุตตะเม จะตุรังคิเก",
+     "pali_roman": "Saṅghassasannipātamhi uttame cāturaṅgike",
+     "thai": "",
+     "paiboon": "",
+     "english": "At the supreme fourfold assembly of the Saṅgha,"
+    },
+    {
+     "number": 7,
+     "pali": "อัฑฒะเตระสะหัสเสหิ ภิกขูหิ ปะริวาริโต",
+     "pali_roman": "Aḍḍhaterasahassehi bhikkhūhi parivārito",
+     "thai": "",
+     "paiboon": "",
+     "english": "surrounded by twelve hundred and fifty bhikkhus,"
+    },
+    {
+     "number": 8,
+     "pali": "ตีหิ คาถาหิ สังขิปปัง สัพพัง พุทธานะสาสะนัง",
+     "pali_roman": "Tīhi gāthāhi saṅkhippaṃ sabbaṃ buddhānasāsanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "in three verses, condensed, the whole teaching of the Buddhas —"
+    },
+    {
+     "number": 9,
+     "pali": "สะโมสาเรหิ โอวาทัง ปาฏิโมกขัง อะนุตตะรัง",
+     "pali_roman": "Samosārehi ovādaṃ pāṭimokkhaṃ anuttaraṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "he delivered the exhortation, the unsurpassed Pāṭimokkha."
+    },
+    {
+     "number": 10,
+     "pali": "ตะเมวันภูตะสัมพุทธัง สักขีณาสะวะสาวะกัง",
+     "pali_roman": "Tamevaṃbhūtasambuddhaṃ sakkhīṇāsavasāvakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "That same Fully Awakened One, so become, with his disciples whose taints were destroyed —"
+    },
+    {
+     "number": 11,
+     "pali": "จิระการะมะตี ตัมปิ ปะสาเทนะ อะนุตตะรัง",
+     "pali_roman": "Cirakāramatī tampi pasādena anuttaraṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "him too, of long-enduring purpose, with unsurpassed confidence,"
+    },
+    {
+     "number": 12,
+     "pali": "อะยัมปิ ปะริสา สัพพา ปะสันนา ธัมมะคามินี",
+     "pali_roman": "Ayampi parisā sabbā pasannā dhammagāminī",
+     "thai": "",
+     "paiboon": "",
+     "english": "this whole assembly also, confident and set upon the Dhamma,"
+    },
+    {
+     "number": 13,
+     "pali": "สัมปัตตาตาทิสักการัง สุนักขัตตัง สุมังคะลัง",
+     "pali_roman": "Sampattātādisakkāraṃ sunakkhattaṃ sumaṅgalaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "having come to such an offering, an auspicious conjunction, a good omen,"
+    },
+    {
+     "number": 14,
+     "pali": "ทีปะธูปาทิสักกาเร อะภิสัชชิ ยะถาพะลัง",
+     "pali_roman": "Dīpadhūpādisakkāre abhisajji yathābalaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "has prepared offerings of lamps, incense and the rest, so far as its strength allows,"
+    },
+    {
+     "number": 15,
+     "pali": "เตหิ ปูเชตะเวหัตถะ ตุฏฐา อิธะ สะมาคะตา",
+     "pali_roman": "Tehi pūjetavehattha tuṭṭhā idha samāgatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "and gathered here gladly, with these in hand for the honouring,"
+    },
+    {
+     "number": 16,
+     "pali": "อะภิวันทะติ ปูเชติ ภะคะวันตัง สะสาวะกัง",
+     "pali_roman": "Abhivandati pūjeti bhagavantaṃ sasāvakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "it salutes and honours the Blessed One together with his disciples,"
+    },
+    {
+     "number": 17,
+     "pali": "กาเลนะ สัมมุขีภูตัง อะตีตารัมมะนัตตะนา",
+     "pali_roman": "Kālena sammukhībhūtaṃ atītārammanattanā",
+     "thai": "",
+     "paiboon": "",
+     "english": "present before it in due season, though as an object belonging to the past,"
+    },
+    {
+     "number": 18,
+     "pali": "โอสาเรนตัง ปาฏิโมกขัง วิสุทธักขะมุโปสะเถ",
+     "pali_roman": "Osārentaṃ pāṭimokkhaṃ visuddhakkhamuposathe",
+     "thai": "",
+     "paiboon": "",
+     "english": "delivering the Pāṭimokkha at the pure and patient Uposatha."
+    },
+    {
+     "number": 19,
+     "pali": "อิโตชะเน สุปัญเญณะ โสตถี โหนตุ สะทาปิโน",
+     "pali_roman": "Itojane supaññeṇa sotthī hontu sadāpino",
+     "thai": "",
+     "paiboon": "",
+     "english": "Through this good wisdom, may there always be well-being for us,"
+    },
+    {
+     "number": 20,
+     "pali": "สาสะนัง สัตถุ อัมหากัง จิรัง ติฏฐะตุ ตาทิโนติ.",
+     "pali_roman": "Sāsanaṃ satthu amhākaṃ ciraṃ tiṭṭhatu tādinoti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and may the dispensation of our Teacher, the Such-one, long endure."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 6,
+     "file": "IMG_0335.PNG",
+     "issue": "SET IN TWO COLUMNS, read ACROSS the row, and the same tests that settled pages 69 to 71 apply and agree. The left column carries no punctuation in all fifteen rows and the one full stop on the block falls at the end of the last RIGHT cell. Read across, row 6 is saṅghassa sannipātamhi uttame cāturaṅgike — one clause spanning the gutter — and row 7 pairs อัฑฒะเตระสะหัสเสหิ with ภิกขูหิ, which belong together. Read down, the left column is fifteen unfinished half-lines."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0335.PNG",
+     "issue": "อัฑฒะเตระสะหัสเสหิ, with สะหัสเสหิ where page 71's prose has อัฑฒะเตระสานิ ภิกขุสะตานิ. Read at 3.2x. sahassa is 'thousand' and sata is 'hundred', so the two spellings of the same traditional number — twelve hundred and fifty — are built on different words two pages apart. Reproduced as printed and glossed with the number in English. Worth one look because the count is the whole point of the Māgha story."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0335.PNG",
+     "issue": "ปาฏิโมกขัง WITH ฏ HERE, AND ปาติ- WITH ต IN THE NEXT CHANT'S TITLE. This chant prints ปาฏิโมกขัง at verses 9 and 18, matching page 71's prose; the chant that follows on this same sheet is titled โอวาทะปาติโมกขาทิปาฐะ and prints โอวาทะปาติโมกขัสสะ at its verse 2, both with ต. Read at 3x on isolated crops of all four. So the book spells the same word two ways on ONE PAGE. Both reproduced as printed rather than reconciled, and this is the clearest single-page evidence yet of how this printer varies."
+    },
+    {
+     "verse": 17,
+     "file": "IMG_0335.PNG",
+     "issue": "อะตีตารัมมะนัตตะนา with น, where pages 69 and 70 print อะตีตารัมมะณะตายะ with ณ in the same phrase about an object belonging to the past. Read at 3x. The ending differs too, so this may be a different grammatical form rather than a different spelling of the same one. Reproduced as printed."
+    },
+    {
+     "verse": 20,
+     "file": "IMG_0335.PNG",
+     "issue": "THE CHANT ENDS HERE at ตาทิโนติ. — the ติ is the quotative that closes a quoted passage, and a full stop follows it, and the explanatory paragraph begins on the next line. So `continues` comes off and the ‼ CONTINUES marker goes with it. Twenty verses in all, where the Visākha and Aṭṭhamī Saraphañña both ran to thirty — a real difference in length between the three, not a page missed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0335.PNG",
+     "issue": "THE ENGLISH OF VERSES 6 TO 20 IS A WORKING TRANSLATION AND NEEDS YOUR EYE, more than most. The page prints no Thai translation, and this is the densest Pali in the run — verses 11, 15 and 17 in particular are compressed in ways that admit more than one reading, and the plainer one was written each time rather than the pointed one. Nothing was smoothed over to make it read better."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0335.PNG",
+     "issue": "NO COLOPHON. The chant ends at ตาทิโนติ. and the explanatory paragraph follows directly, with no จบ line between them. The closing key is left off rather than composed, as it was for both the other Saraphañña sets."
+    }
+   ]
+  },
+  {
+   "id": "ovada-patimokkhadi-patha",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and therefore not written. What stands in its place is the explanatory paragraph above the title, which says when the chant is used rather than inviting it, and which is recorded as a page block rather than as an invitation.",
+    "units": "Three, one per printed row, each read ACROSS the two columns, all under the section heading บทขัด. Only the prefatory verse is on this page.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own. title_roman is Paiboon+, built the same way as the three Saraphañña titles before it.",
+    "pages": "IMG_0335.PNG, page 72, the lower half. The paragraph, the two title lines, the บทขัด heading and three rows are all this page prints of it. Two-column setting, checked by reading the left column alone, which gives three unfinished half-lines."
+   },
+   "title_thai": "โอวาทะปาติโมกขาทิปาฐะ สำหรับสวดในวันมาฆบูชา",
+   "title_pali": "",
+   "title_roman": "oo-waa-tá-bpaa-dtì-môok-kǎa-tí-bpaa-tà sǎm-ràp sùat nai wan maa-ká-buu-chaa",
+   "title_english": "The Passage of the Exhortation Pāṭimokkha and What Follows, for Chanting on Māgha Pūjā Day",
+   "page_start": 72,
+   "english_unverified": true,
+   "invitation": {
+    "pali": "",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": ""
+   },
+   "verses": [
+    {
+     "number": 1,
+     "section": "บทขัด: The Prefatory Verse",
+     "pali": "สัตตันนัง ภะคะวันตานัง สัมพุทธานัง มะเหสินัง",
+     "pali_roman": "Sattannaṃ bhagavantānaṃ sambuddhānaṃ mahesinaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Of the seven Blessed Ones, the Fully Awakened, the Great Seers,"
+    },
+    {
+     "number": 2,
+     "pali": "โอวาทะปาติโมกขัสสะ อุทเทสัตเตนะ ทัสสิตา.",
+     "pali_roman": "Ovādapātimokkhassa uddesattena dassitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Ovāda-pāṭimokkha was shown by way of recitation."
+    },
+    {
+     "number": 3,
+     "pali": "มะหาปะทานะสุตตันเต ติสโส คาถาติ โน สุตัง",
+     "pali_roman": "Mahāpadānasuttante tisso gāthāti no sutaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "In the Mahāpadāna Sutta, three verses — so we have heard."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "โอวาทะปาติโมกขะ",
+     "pali_roman": "ovādapātimokkha",
+     "meaning": "the Exhortation Pāṭimokkha — the summary of the teaching given at the Māgha assembly, distinct from the disciplinary Pāṭimokkha recited fortnightly"
+    },
+    {
+     "pali": "บทขัด",
+     "pali_roman": "bòt kàt",
+     "meaning": "Thai, not Pali: the prefatory verse chanted before a main text, setting out where it comes from"
+    },
+    {
+     "pali": "มะหาปะทานะสุตตันตะ",
+     "pali_roman": "mahāpadānasuttanta",
+     "meaning": "the Mahāpadāna Sutta, which tells of the seven Buddhas and is where these verses are said to be found"
+    },
+    {
+     "pali": "มะเหสิ",
+     "pali_roman": "mahesi",
+     "meaning": "great seer — a title of a Buddha, from one who seeks the great goal"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0335.PNG",
+     "issue": "SET IN TWO COLUMNS like the chant above it, read ACROSS the row. Row 1 reads sattannaṃ bhagavantānaṃ sambuddhānaṃ mahesinaṃ — one phrase in the genitive plural running across the gutter, which reading down would break in half. The left column carries no punctuation and the block's only full stop falls at the end of row 2's right cell."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0335.PNG",
+     "issue": "บทขัด IS A SECTION HEADING, NOT A CHANT AND NOT A PAGE BLOCK. The book prints it centred below the two title lines and above the first verse. It names the prefatory verse chanted before the main text, so it goes on verse 1 as a `section` and the template renders it as a heading over that verse. If more of this chant carries further บท headings on page 73, they belong the same way."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0335.PNG",
+     "issue": "โอวาทะปาติโมกขัสสะ with ต, matching this chant's own title and differing from the ปาฏิโมกขัง with ฏ printed twice in the chant immediately above on the same page. See the check on that chant's verse 9 — one look settles both at once."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0335.PNG",
+     "issue": "THE CHANT DOES NOT END ON THIS PAGE. Three rows are printed under the บทขัด heading and the sheet runs out; verse 3 ends with no full stop and the sentence is unfinished. It is listed in batch_status.continues and carries continues: true. The บทขัด is only the prefatory verse, so the main text of the chant is still entirely to come."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0335.PNG",
+     "issue": "NO CHANT NUMBER. The title is set on TWO printed lines — โอวาทะปาติโมกขาทิปาฐะ above and สำหรับสวดในวันมาฆบูชา below — joined with a single space into one title_thai, the same handling all three Saraphañña titles got. The first line is Pali in Thai script and the second is Thai, so as with those three, title_pali is left empty and title_roman carries a Paiboon+ romanisation of the whole line. Flagged because the alternative — Pali title in title_pali, Thai in title_roman — is also defensible and this chant is the fourth in a row set this way."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0335.PNG",
+     "issue": "THE EXPLANATORY PARAGRAPH ABOVE THE TITLE IS A PAGE BLOCK, not part of either chant. It is Thai prose telling the chanter WHEN this chant is used — after the presiding elder's first section of the sermon — and it names the chant in BOLD in the middle of the sentence. The bold is reproduced as plain text because PAGE_BLOCKS has no emphasis field; the words are all there and only the weight is lost. Its English is a working translation and is marked unverified."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "sarabhanna-gatha-magha"
+  ],
+  "not_started": [],
+  "continues": [
+   "ovada-patimokkhadi-patha"
+  ],
+  "resume_from_page": 73,
+  "resume_from_file": "IMG_0336.PNG",
+  "resume_from": "ovada-patimokkhadi-patha",
+  "unreadable": [],
+  "paiboon_scan": "clean. One paiboon value in the batch — the new chant's title_roman — built the same way as the three Saraphañña titles before it and reusing maa-ká-buu-chaa verbatim from page 71. Scanned every field for kh, th, ph and ng: zero hits. Note môok-kǎa contains no 'kh'; the k there is the aspirated ข that Paiboon+ writes as k. Every verse paiboon is empty because the page prints no Thai translation.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed; every pali_roman is IAST transliterating it letter for letter, including the two places the book contradicts itself on one page (ปาฏิโมกขัง with ฏ and ปาติโมกขัสสะ with ต). No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. Two rows for one page, in the order they appear down it. Verses 6-20 of the Māgha Saraphañña are claimed exactly once and verses 1-3 of the new chant exactly once. No verse is orphaned and none is claimed twice. Verse 6 of the first chant is the only verse carrying a page key, because it is the first on this page; the second chant STARTS here, so page_start places it. The page's one block is declared on the second row so that it anchors after the chant above it, which is where the book prints it.",
+  "notes": "THE BOOK CONTRADICTS ITSELF ON ONE PAGE, and that is the finding worth reading. The Māgha Saraphañña prints ปาฏิโมกขัง with ฏ at its verses 9 and 18; the chant directly beneath it is titled โอวาทะปาติโมกขาทิปาฐะ and prints โอวาทะปาติโมกขัสสะ with ต. Same word, same sheet, two spellings, all four read at 3x on isolated crops. Everything is reproduced as printed rather than reconciled. Three other things. (1) THE MĀGHA SARAPHAÑÑA IS FINISHED at twenty verses, where both its counterparts ran to thirty — stage 2 must REMOVE its CONTINUES marker, and the new chant then opens its own. (2) THE FIRST EXPLANATORY PARAGRAPH IN THIS RUN goes in as a page block, declared on the second page row so it anchors after the chant above rather than being lifted to the top of the page. It names the chant in bold, which PAGE_BLOCKS cannot carry, so the words are kept and the weight is lost. (3) บทขัด IS A SECTION, not a chant and not a block — it heads the prefatory verse and rides on verse 1. Nothing on this page needs re-photographing."
+ }
+}
