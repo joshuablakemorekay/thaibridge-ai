@@ -12,6 +12,16 @@
             
             /* Buddhist Saffron & Temple Colors */
             --monk-saffron: #FF9933;
+            /* Aliases for names the stylesheets and templates actually type.
+               An undefined custom property makes the whole declaration invalid,
+               so until these existed every var(--saffron), var(--gold) and
+               var(--cream) silently dropped out — including the gender
+               selector's active button, whose background, colour and border all
+               vanished at once. Values match the canonical variables above so
+               there is still one source per colour. */
+            --saffron: #FF9933;   /* = --monk-saffron */
+            --gold:    #D4AF37;   /* = --royal-gold  */
+            --cream:   #FFF8DC;   /* = --silk-cream  */
             --temple-red: #8B0000;
             --temple-orange: #FF6B35;
             
