@@ -162,12 +162,16 @@ class TestWhatThePageIsToldUpFront:
         assert status["pools"]["tutor"]["limit"] == appmod.FREE_AI_DAILY_LIMIT
         assert status["pools"]["dhamma"]["limit"] == appmod.FREE_DHAMMA_DAILY_LIMIT
 
-    def test_the_old_keys_still_describe_the_tutor_pool(self):
-        """chat.html and anything else reading the old shape keeps working."""
+    def test_the_superseded_flat_keys_are_gone(self):
+        """The first cut kept daily_limit/used_today/remaining alongside the
+        pools, so "nothing but this file has to learn a new shape". That was
+        already untrue when it shipped: the only reader, chat.html, moved to
+        pools in the same commit. A compatibility shim with nothing to be
+        compatible with is just a second way to say the same thing wrong."""
         with app.test_request_context():
             status = appmod.ai_limits_status()
-        assert status["daily_limit"] == status["pools"]["tutor"]["limit"]
-        assert status["remaining"] == status["pools"]["tutor"]["remaining"]
+        for dead in ("daily_limit", "used_today", "remaining"):
+            assert dead not in status, f"{dead} is superseded by pools"
 
     def test_the_page_is_told_which_modes_are_dhamma(self):
         """So the hint can follow the mode without hardcoding 'buddhist' in

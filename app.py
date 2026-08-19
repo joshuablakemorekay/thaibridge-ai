@@ -1366,7 +1366,6 @@ def ai_limits_status():
     if tier == 'pro':
         return {
             'tier': tier, 'unlimited': True, 'allowed_modes': None,
-            'daily_limit': None, 'used_today': 0, 'remaining': None,
             'pools': None, 'dhamma_modes': sorted(DHAMMA_AI_MODES),
         }
     usage = _ai_usage_today()
@@ -1386,11 +1385,6 @@ def ai_limits_status():
         # Sent so the page can tell which pool the chosen mode spends from
         # without hardcoding the word "buddhist" in JavaScript too.
         'dhamma_modes': sorted(DHAMMA_AI_MODES),
-        # The tutor pool also answers to the original three keys. Nothing but
-        # this file should have to learn a new shape to keep working.
-        'daily_limit': pools['tutor']['limit'],
-        'used_today': pools['tutor']['used'],
-        'remaining': pools['tutor']['remaining'],
     }
 
 def add_xp(points, action_description=""):
@@ -8617,11 +8611,10 @@ def ai_chat():
             usage[pool['key']] = usage.get(pool['key'], 0) + 1
             session['ai_usage'] = usage
             session.modified = True
-            # `remaining` stays for the pool just spent, since that is what the
-            # hint under the chat box is showing. `pools` goes with it so the
-            # page can update the other allowance too without a second request.
-            response['pool'] = pool_name
-            response['remaining'] = max(0, ai_pool_limit(pool_name) - usage[pool['key']])
+            # Both pools go back, not just the one spent, so the page can
+            # redraw either allowance without a second request. An earlier cut
+            # also sent `pool` and `remaining` for the pool just used; the page
+            # reads neither, so they were dead weight on every reply.
             response['pools'] = ai_limits_status()['pools']
 
         return jsonify(response)

@@ -777,7 +777,6 @@
                 // accurate without asking for it again.
                 if (data.pools) {
                     AI_LIMITS.pools = data.pools;
-                    AI_LIMITS.remaining = data.pools.tutor.remaining;
                     updateLimitHint();
                 }
             } else if (data.gate) {
