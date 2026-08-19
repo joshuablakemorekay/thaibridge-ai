@@ -13,6 +13,7 @@ turns to it, and the person on their phone is reading the wrong words.
 """
 import collections
 import os
+import re
 import sys
 
 import pytest
@@ -1193,7 +1194,7 @@ class TestItAdaptsToWhateverThePagePrints:
         import pathlib
 
         template = pathlib.Path('templates/chanting_page.html').read_text(encoding='utf-8')
-        flow_rule = template[template.index('.is-prose .verse-body .verse .layer-pali'):]
+        flow_rule = template[template.index('.is-prose-para .verse .layer-pali'):]
         flow_rule = flow_rule[:flow_rule.index('}')]
 
         assert 'layer-thai' not in flow_rule
@@ -1202,6 +1203,112 @@ class TestItAdaptsToWhateverThePagePrints:
         page = self.build(monkeypatch, lambda c: c.update(layout='prose'))
         assert 'page-chant is-prose' in page
         assert 'class="layer layer-thai"' in page
+
+
+class TestAChantSetBothWaysOnOnePage:
+    """Page 73 sets ONE chant as prose AND as verse lines.
+
+    Its Ovāda-pāṭimokkha passage runs as justified prose, breaks into the three
+    gāthās — `ขันตี ปะระมัง ตะโป ตีติกขา` and the rest, which the book sets as
+    lines — and then returns to prose. `layout` is chant-level and cannot say
+    that, so flowing the whole chant would destroy the line breaks of the most
+    quoted verses in the book, and not flowing it would stack three paragraphs
+    of prose as short lines. Neither is the page.
+
+    So a paragraph may override the chant with `para_layout`. The fallback is
+    what keeps every chant entered before this rendering exactly as it did:
+    a paragraph that says nothing takes the chant's own setting.
+    """
+
+    @pytest.fixture()
+    def client(self, monkeypatch):
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        mixed = copy.deepcopy(chanting_module.CHANTS[0])
+        mixed['id'] = 'mixed'
+        mixed['page_start'] = 73
+        mixed['layout'] = 'prose'
+        # Verse 1 opens a prose paragraph by inheriting the chant. Verse 3
+        # opens a group of LINES inside it, and verse 5 returns to prose —
+        # the shape page 73 actually prints.
+        for v in mixed['verses']:
+            v.pop('para_start', None)
+            v.pop('para_layout', None)
+        mixed['verses'][2]['para_start'] = True
+        mixed['verses'][2]['para_layout'] = 'lines'
+        mixed['verses'][4]['para_start'] = True
+        mixed['verses'][4]['para_layout'] = 'prose'
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [mixed])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
+        return flask_app.app.test_client()
+
+    def read(self, client):
+        return client.get('/chanting/page/73', follow_redirects=True).get_data(as_text=True)
+
+    def test_the_prose_paragraphs_flow_and_the_lines_do_not(self, client):
+        page = self.read(client)
+        paras = re.findall(r'<div class="verse-para([^"]*)"', page)
+
+        # Three groups: prose, lines, prose — in the order the book sets them.
+        assert [('is-prose-para' in p) for p in paras] == [True, False, True]
+
+    def test_the_chant_is_still_marked_prose_for_its_measure(self, client):
+        """The 70ch measure is a property of the chant, not of one paragraph."""
+        assert 'page-chant is-prose' in self.read(client)
+
+    def test_a_paragraph_that_says_nothing_follows_the_chant(self, monkeypatch):
+        """The fallback, which is what leaves every existing chant untouched."""
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        plain = copy.deepcopy(chanting_module.CHANTS[0])
+        plain['id'] = 'plain'
+        plain['page_start'] = 73
+        plain['layout'] = 'prose'
+        for v in plain['verses']:
+            v.pop('para_start', None)
+            v.pop('para_layout', None)
+        plain['verses'][2]['para_start'] = True
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [plain])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
+        page = flask_app.app.test_client().get(
+            '/chanting/page/73', follow_redirects=True).get_data(as_text=True)
+        paras = re.findall(r'<div class="verse-para([^"]*)"', page)
+
+        assert len(paras) == 2
+        assert all('is-prose-para' in p for p in paras)
+
+    def test_lines_can_be_marked_prose_inside_a_verse_chant(self, monkeypatch):
+        """The override works both ways, which the fallback alone cannot do."""
+        import copy
+
+        import app as flask_app
+        import chanting as chanting_module
+
+        verse_chant = copy.deepcopy(chanting_module.CHANTS[0])
+        verse_chant['id'] = 'lines-with-a-prose-passage'
+        verse_chant['page_start'] = 73
+        verse_chant.pop('layout', None)
+        for v in verse_chant['verses']:
+            v.pop('para_start', None)
+            v.pop('para_layout', None)
+        verse_chant['verses'][2]['para_start'] = True
+        verse_chant['verses'][2]['para_layout'] = 'prose'
+
+        monkeypatch.setattr(chanting_module, 'CHANTS', [verse_chant])
+        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
+        page = flask_app.app.test_client().get(
+            '/chanting/page/73', follow_redirects=True).get_data(as_text=True)
+        paras = re.findall(r'<div class="verse-para([^"]*)"', page)
+
+        assert [('is-prose-para' in p) for p in paras] == [False, True]
 
 
 class TestThePageRoutes:

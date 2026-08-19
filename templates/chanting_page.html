@@ -329,7 +329,13 @@
     /* Scoped to .verse-body so the closing formula, which sits outside it,
        stays a centred block the way the book sets it rather than being pulled
        into the run of text. */
-    .page-body.view-book .page-chant.is-prose .verse-body .verse { display: inline; }
+    /* Keyed on the PARAGRAPH, not the chant. Page 73 sets one chant both
+       ways — run-on prose around three gāthās printed as verse lines — so
+       "does this flow?" is a question about the paragraph. Every paragraph of
+       a wholly-prose chant still gets the class, because the template falls
+       back to the chant's own `layout`, so those chants render exactly as
+       they did when this was keyed on `.page-chant.is-prose`. */
+    .page-body.view-book .verse-para.is-prose-para .verse { display: inline; }
     /* Only the two layers the book actually prints flow inline. Naming them
        matters: a blanket `.layer` here outranks the hide rules above — same
        !important weight, longer selector — and would drag the romanised Pali
@@ -344,7 +350,7 @@
        flowed Pali. If a real page turns up where the book runs the TRANSLATION
        together as prose as well, stage 1 raises a check and we do it properly
        against that page rather than guessing at it now. */
-    .page-body.view-book .page-chant.is-prose .verse-body .verse .layer-pali {
+    .page-body.view-book .verse-para.is-prose-para .verse .layer-pali {
         display: inline !important;
         margin: 0;
     }
@@ -380,13 +386,19 @@
        paragraph, so the breaks the book prints survive instead of the units
        flowing into a single block. A chant with no paragraph marks has
        exactly one of these wrapping everything, which is the old behaviour. */
-    .page-body.view-book .page-chant.is-prose .verse-para {
+    .page-body.view-book .verse-para.is-prose-para {
         text-align: justify;
     }
     /* The book indents each paragraph after the first; the first sits flush
        under the title. Matching `.block-prose` above, which does the same for
-       the rubrics printed around these chants. */
-    .page-body.view-book .page-chant.is-prose .verse-para + .verse-para {
+       the rubrics printed around these chants.
+
+       `:not(:first-child)` rather than the adjacent-sibling `+` this used to
+       use. They agree on a wholly-prose chant, where every sibling is a prose
+       paragraph — but on a mixed chant a group of verse lines sitting between
+       two prose paragraphs breaks the adjacency, and the paragraph after it
+       would have lost its indent for no reason the book gives. */
+    .page-body.view-book .verse-para.is-prose-para:not(:first-child) {
         text-indent: 2.5em;
         margin-top: 0.5rem;
     }
@@ -739,8 +751,16 @@
            the page prints as several indented paragraphs is not flowed into
            one block. A chant with no paragraph marks comes back as a single
            group, which renders exactly as it did before this existed. #}
+        {# How the book sets THIS paragraph. `layout` on the chant is the
+           default and was the whole answer until page 73, where one chant is
+           set both ways: run-on prose around three gāthās the book sets as
+           verse lines. A paragraph may override it with `para_layout`, so a
+           group of lines inside a prose chant stays lines — and a chant whose
+           paragraphs say nothing behaves exactly as it did before, because
+           every group then falls back to the chant's own setting. #}
         {% for paragraph in entry.verses | verse_paragraphs %}
-        <div class="verse-para">
+        {% set para_prose = (paragraph[0].para_layout or chant.layout) == 'prose' %}
+        <div class="verse-para{% if para_prose %} is-prose-para{% endif %}">
         {% for verse in paragraph %}
         {% if verse.section %}<h4 class="verse-section">{{ verse.section }}</h4>{% endif %}
         <div class="verse">
