@@ -1,3 +1,11 @@
+{# NOT SERVED. This page needs a `registers` dict of nine formality levels
+   (REGISTER_LEVELS), which has never existed in this repo — the route rendered
+   it with an undefined name and crashed from the first commit onwards.
+
+   /register now redirects to /formality until that data is written. The page
+   is kept because it is otherwise finished: nine registers from monastic to
+   vulgar, each with examples, usage context, social notes and a warning.
+   Write REGISTER_LEVELS, restore the render_template call, and it works. #}
 {% extends "base.html" %}
 
 {% block title %}Thai Language Register & Formality{% endblock %}

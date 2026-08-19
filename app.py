@@ -6622,9 +6622,26 @@ def tones_classes():
                            consonant_audio=consonant_audio)
 
 @app.route('/register')
-@require_access('register')
 def register_guide():
-    return render_template('register.html', registers=REGISTER_LEVELS)
+    """Send the nine-register guide to the Formality page.
+
+    register.html is a finished page wired to REGISTER_LEVELS, which has never
+    been defined — not in this file, not in the deleted app_backup.py, not in
+    any commit since the first. So this route has raised NameError since day
+    one, and because the access gate ran first, the crash was reserved for the
+    people who had paid or unlocked enough to get past it.
+
+    Formality already covers politeness levels, so the redirect loses the
+    learner nothing while the data is written. It is TEMPORARY (302) on
+    purpose: a 301 would be cached by browsers and would go on redirecting
+    people away from the page after it is finished.
+
+    Deliberately ungated — /formality applies its own gate, and one page
+    deciding who gets in beats two disagreeing about it. The 'register' entry
+    stays in SECTION_REQUIREMENTS: it is what users have already unlocked and
+    been given XP for, and deleting it would rewrite their progress.
+    """
+    return redirect(url_for('formality_guide'), code=302)
 
 
 @app.route('/dhamma-and-culture')
