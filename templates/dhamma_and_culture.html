@@ -1,0 +1,309 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_buddhism.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Dhamma, Culture &amp; Thailand{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* Two-lens layout. The whole page exists to hold ONE idea in the reader's
+       head — universal teaching on one side, one culture's expression of it on
+       the other — so the two columns are deliberately equal in weight. Neither
+       is the "real" one. */
+    .lens-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+    }
+    .lens {
+        border-radius: 14px;
+        padding: 1.6rem;
+        border: 2px solid;
+    }
+    .lens h3 { margin: 0 0 0.3rem; font-size: 1.35rem; }
+    .lens .lens-sub {
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0 0 0.9rem;
+        opacity: 0.75;
+    }
+    .lens ul { margin: 0.75rem 0 0; padding-left: 1.2rem; }
+    .lens li { margin-bottom: 0.35rem; }
+
+    /* Saffron = the universal teaching. Purple = the Thai expression. Both
+       palettes are already the site's own, so the page reads as part of the app
+       rather than a leaflet dropped into it. */
+    .lens-dhamma {
+        background: linear-gradient(135deg, #FFF8DC 0%, #FFE9C4 100%);
+        border-color: var(--saffron);
+    }
+    .lens-dhamma h3, .lens-dhamma .lens-sub { color: #8a5a0b; }
+
+    .lens-thai {
+        background: linear-gradient(135deg, #F6F0FF 0%, #EDE0FA 100%);
+        border-color: var(--royal-purple);
+    }
+    .lens-thai h3, .lens-thai .lens-sub { color: var(--royal-purple); }
+
+    /* The one-sentence answer, pulled out big. If a reader takes nothing else
+       from this page, it should be this. */
+    .headline-answer {
+        max-width: 820px;
+        margin: 2rem auto;
+        padding: 1.8rem 2rem;
+        background: #FFFDF8;
+        border: 3px solid var(--royal-gold);
+        border-radius: 16px;
+        text-align: center;
+    }
+    .headline-answer p {
+        margin: 0;
+        font-size: 1.3rem;
+        line-height: 1.65;
+        color: #4a3d28;
+    }
+    .headline-answer strong { color: var(--royal-purple); }
+
+    .qa { margin: 1.5rem 0; }
+    .qa h3 {
+        color: var(--royal-purple);
+        margin-bottom: 0.4rem;
+        font-size: 1.2rem;
+    }
+    .qa p { margin-top: 0; }
+
+    /* The transmission line — India to everywhere. Scrolls on its own on a
+       phone rather than squashing the words to nothing. */
+    .spread-scroller { overflow-x: auto; margin: 1.5rem 0; padding-bottom: 0.5rem; }
+    .spread {
+        display: flex;
+        align-items: stretch;
+        gap: 0.5rem;
+        min-width: max-content;
+    }
+    .spread-item {
+        background: #fff;
+        border: 2px solid #E8DCC0;
+        border-radius: 10px;
+        padding: 0.7rem 0.9rem;
+        text-align: center;
+        font-size: 0.9rem;
+        min-width: 8.5rem;
+    }
+    .spread-item strong { display: block; color: var(--royal-purple); }
+    .spread-item span { color: #6b5d45; font-size: 0.85rem; }
+    .spread-arrow { align-self: center; color: var(--saffron); font-size: 1.4rem; }
+    .spread-item.is-here { border-color: var(--saffron); background: #FFF8DC; }
+
+    .practice-anywhere {
+        background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+        border-left: 5px solid var(--bodhi-green);
+        border-radius: 12px;
+        padding: 1.5rem 1.8rem;
+        margin: 2rem 0;
+    }
+    .practice-anywhere h2 { margin-top: 0; color: #1B5E20; }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    🪷 Dhamma, Culture &amp; Thailand
+    <span class="thai">พระธรรมกับวัฒนธรรม</span>
+</h1>
+
+<p style="text-align:center; color:#666; max-width:820px; margin:0 auto 1.5rem;">
+    Why this site teaches Buddhism and Thai together — and why you are free to
+    take only one of them.
+</p>
+
+<div class="headline-answer">
+    <p>
+        <strong>You do not need to become Thai to practise Buddhism.</strong><br>
+        You are welcome here to study the Dhamma on its own, wherever in the world
+        you live and whatever culture you belong to.
+    </p>
+</div>
+
+<div class="card">
+    <p>
+        People sometimes arrive here and feel that two different things have been
+        bundled together — a teaching that belongs to everyone, and a country's
+        customs that belong to one people. That is a fair thing to notice. They
+        <em>are</em> two different things, and this page exists to keep them apart
+        clearly, so you can choose what you want.
+    </p>
+</div>
+
+<h2>Two lenses, not one package</h2>
+
+<div class="lens-grid">
+    <div class="lens lens-dhamma">
+        <h3>☸️ The Dhamma</h3>
+        <p class="lens-sub">Universal · for anyone, anywhere</p>
+        <p style="margin:0;">
+            What the Buddha taught, and what a person does with it. None of this
+            depends on where you were born or what language you speak.
+        </p>
+        <ul>
+            <li>The Four Noble Truths</li>
+            <li>The Noble Eightfold Path</li>
+            <li>The Five Precepts</li>
+            <li>The Three Marks of Existence</li>
+            <li>Dependent origination and kamma</li>
+            <li>Mettā and meditation</li>
+            <li>The suttas and their Pali terms</li>
+        </ul>
+    </div>
+
+    <div class="lens lens-thai">
+        <h3>🇹🇭 Dhamma in Thailand</h3>
+        <p class="lens-sub">Cultural · one tradition's expression</p>
+        <p style="margin:0;">
+            How Thai people, temples and the Thai language have carried, protected
+            and lived those teachings. Useful to understand. Never required.
+        </p>
+        <ul>
+            <li>Temple etiquette and ceremonies</li>
+            <li>Thai Buddhist festivals and holy days</li>
+            <li>Monastic customs and forms of speech</li>
+            <li>Merit-making and the alms round</li>
+            <li>Thai chanting traditions</li>
+            <li>Pali and Sanskrit words inside Thai</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card">
+    <p style="margin:0;">
+        <strong>The Thai customs on this site are examples, not instructions.</strong>
+        They show one Buddhist culture's way of doing things. They are not presented
+        as requirements for practising Buddhism, and nothing in the teaching depends
+        on adopting them.
+    </p>
+</div>
+
+<h2>Buddhism has always travelled through cultures</h2>
+
+<p>
+    The Buddha taught in northern India roughly two and a half thousand years ago.
+    Everywhere the teaching went afterwards, it arrived in a language people already
+    spoke, among customs they already had — and those communities built their own
+    ways of chanting it, teaching it and keeping it safe.
+</p>
+
+<div class="spread-scroller">
+    <div class="spread">
+        <div class="spread-item"><strong>India</strong><span>the teaching begins</span></div>
+        <div class="spread-arrow">→</div>
+        <div class="spread-item"><strong>Sri Lanka</strong><span>Pali Canon written down</span></div>
+        <div class="spread-arrow">→</div>
+        <div class="spread-item"><strong>Burma</strong><span>Theravada tradition</span></div>
+        <div class="spread-arrow">→</div>
+        <div class="spread-item is-here"><strong>Thailand</strong><span>this site's window</span></div>
+        <div class="spread-arrow">→</div>
+        <div class="spread-item"><strong>Tibet · China<br>Japan · Korea</strong><span>other forms again</span></div>
+        <div class="spread-arrow">→</div>
+        <div class="spread-item"><strong>Your country</strong><span>wherever you practise</span></div>
+    </div>
+</div>
+
+<p>
+    So there is no version of Buddhism sitting somewhere with no culture attached to
+    it at all. Every tradition that reached us came through somebody's language and
+    somebody's customs — including the Pali Canon itself, which survives because
+    particular communities recited and copied it for centuries. Thai Buddhism is one
+    of those cultural forms. It is not the teaching itself, and it does not own the
+    teaching.
+</p>
+
+<p>
+    Thailand is a striking example, though, because Buddhism there is woven right
+    through ordinary life — into manners, festivals, family life, art, and the
+    vocabulary of the language itself. A great deal of Thai comes from Pali and
+    Sanskrit, much of it Buddhist. That is why the two subjects sit side by side
+    here: each one explains the other. Understanding the Dhamma tells you <em>why</em>
+    Thai people do many of the things they do. Understanding Thailand shows you what
+    the teaching looks like when a whole society lives it.
+</p>
+
+<p>
+    That is an offer of context, not a condition of entry.
+</p>
+
+<div class="practice-anywhere">
+    <h2>🌏 Practising where you actually live</h2>
+    <p>
+        The Five Precepts, mettā, generosity and mindfulness need no temple, no
+        ceremony and no Thai. They are done in an ordinary week, in whatever country
+        you are in — at work, with your family, with your neighbours. If you never
+        learn a word of Thai and never visit a temple, you can still take up
+        everything on the Dhamma side of this site and practise it in full.
+    </p>
+    <p style="margin-bottom:0;">
+        <a href="/practising-anywhere" class="btn btn-saffron">🌏 How to practise anywhere</a>
+        <a href="/theravada" class="btn" style="background: var(--royal-purple); color:#fff; margin-left:0.5rem;">☸️ The teachings</a>
+        <a href="/meditation" class="btn" style="background: var(--bodhi-green); color:#fff; margin-left:0.5rem;">🧘 Meditation</a>
+    </p>
+</div>
+
+<h2>Common questions</h2>
+
+<div class="card">
+    <div class="qa">
+        <h3>Do I have to learn Thai to use this site?</h3>
+        <p>
+            No. The Dhamma pages — the teachings, the Dhamma talks, meditation and the
+            Digital Chanting Book — are free and open to everyone, with no Thai
+            required and no alphabet quiz to pass first. The Thai alphabet is the
+            starting point for the <em>language</em> course, which is a separate track.
+        </p>
+    </div>
+
+    <div class="qa">
+        <h3>The chanting book is full of Thai script. Is that not the same problem?</h3>
+        <p>
+            Each chant is shown in layers, so you can use whichever ones you want and
+            ignore the rest. The Pali is the traditional liturgical text of the
+            Theravada tradition, with a romanisation so you can read it without the
+            script. The English gives you the meaning. The Thai and Paiboon layers are
+            there for people who chant in Thai temples and want to follow along — if
+            that is not you, those two lines are simply not yours to read.
+            <a href="/chanting">See the chanting book →</a>
+        </p>
+    </div>
+
+    <div class="qa">
+        <h3>Isn't mixing culture into Buddhism a source of division?</h3>
+        <p>
+            It can be, when a culture is treated as the price of admission — which is
+            exactly what this page is here to refuse. But culture is also the reason
+            the teaching survived long enough to reach any of us. Communities in
+            Sri Lanka, Burma, Thailand and elsewhere memorised, chanted, copied and
+            protected these texts for two thousand years. Holding that history lightly,
+            without taking it on as an identity, is the honest middle ground.
+        </p>
+    </div>
+
+    <div class="qa">
+        <h3>Why is Thai culture here at all, then?</h3>
+        <p>
+            Because it is genuinely useful if you ever step into a Thai temple — and
+            because understanding it answers real questions. Why do people give alms?
+            Why is a monk spoken to differently? What is actually happening at a
+            ceremony? Those answers are worth having whether or not you ever adopt any
+            of it. It sits in its own section for exactly that reason.
+            <a href="/culture">See Thai culture →</a>
+        </p>
+    </div>
+</div>
+
+<div class="card" style="text-align:center;">
+    <p style="margin:0; font-size:1.05rem;">
+        Take what is useful to you. Leave the rest. 🙏
+    </p>
+</div>
+{% endblock %}

@@ -532,6 +532,13 @@ SECTION_REQUIREMENTS = {
     # section below, so charging for it would put the whole site behind the
     # paywall with no way in.
     'alphabet': {'level': 1, 'tier': 'free', 'points_reward': 100, 'requires_alphabet': False},
+    # The page that separates the universal teaching from the Thai
+    # expression of it. It is the answer to "do I have to become Thai to
+    # learn Buddhism here?", so it must never itself be behind a gate.
+    'dhamma_and_culture': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': False},
+    # The practice itself, with no culture attached — the Canon's own lay
+    # frameworks. Free and ungated for the same reason as the page above it.
+    'practising_anywhere': {'level': 1, 'tier': 'free', 'points_reward': 0, 'requires_alphabet': False},
     'theravada': {'level': 1, 'tier': 'free', 'points_reward': 40},
     'meditation': {'level': 1, 'tier': 'free', 'points_reward': 40},
     # Chanting sits with the other Dhamma pages: the chants and their
@@ -6606,6 +6613,34 @@ def tones_classes():
 @require_access('register')
 def register_guide():
     return render_template('register.html', registers=REGISTER_LEVELS)
+
+
+@app.route('/dhamma-and-culture')
+@require_access('dhamma_and_culture')
+def dhamma_and_culture():
+    """Why Buddhism and Thai are taught side by side here — and how to take
+    only one of them.
+
+    Static copy, so there is nothing to pass in. It exists because the site's
+    permissions already allow a Dhamma-only path (every Buddhism page is free,
+    level 1, no alphabet prerequisite) but nothing on screen said so.
+    """
+    return render_template('dhamma_and_culture.html')
+
+
+@app.route('/practising-anywhere')
+@require_access('practising_anywhere')
+def practising_anywhere():
+    """The Dhamma as a lay practice, with no country in it.
+
+    Built from the Canon's own universal frameworks — the five precepts, the
+    three bases of merit, the six directions of the Sigalovada Sutta and the
+    brahmaviharas — rather than from worked examples, because every worked
+    example smuggles a culture back in ("at the office", "at the temple").
+    The six directions in particular need no setting: every society has
+    parents, teachers, partners, friends, workers and those who teach.
+    """
+    return render_template('practising_anywhere.html')
 
 
 @app.route('/theravada')

@@ -3,6 +3,8 @@
 <aside class="layout-sidebar">
     <h3 class="sidebar-title">☸️ Buddhism</h3>
     <nav class="sidebar-nav">
+        <a href="/practising-anywhere"{% if request.path == '/practising-anywhere' %} class="active"{% endif %}>🌏 Practising the Dhamma Anywhere</a>
+        <a href="/dhamma-and-culture"{% if request.path == '/dhamma-and-culture' %} class="active"{% endif %}>🪷 Dhamma, Culture &amp; Thailand</a>
         <a href="/theravada"{% if request.path == '/theravada' %} class="active"{% endif %}>☸️ Theravada Dharma</a>
         <a href="/theravada#dhamma-talks"{% if request.path.startswith('/dhamma-talk') %} class="active"{% endif %}>🪷 Dhamma Talks</a>
         <a href="/chanting"{% if request.path == '/chanting' %} class="active"{% endif %}>📿 Digital Chanting Book</a>

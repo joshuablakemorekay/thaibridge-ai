@@ -1,0 +1,357 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_buddhism.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Practising the Dhamma Anywhere{% endblock %}
+
+{% block extra_css %}
+<style>
+    /* ── The six directions ───────────────────────────────────────────
+       The Sigalovada Sutta's own framing, and the reason this page needs
+       no country in it: every society on earth has parents, teachers,
+       partners, friends, people who work, and people who teach. The
+       reader supplies their own setting; the page supplies none. */
+    .directions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.1rem;
+        margin: 1.5rem 0;
+    }
+    .direction {
+        background: #FFFDF8;
+        border: 2px solid #E8DCC0;
+        border-left: 5px solid var(--saffron);
+        border-radius: 12px;
+        padding: 1.2rem 1.3rem;
+    }
+    .direction h3 {
+        margin: 0 0 0.15rem;
+        font-size: 1.1rem;
+        color: var(--royal-purple);
+    }
+    .direction .compass {
+        display: block;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #8a6d1b;
+        margin-bottom: 0.5rem;
+    }
+    .direction p { margin: 0; color: #55483a; font-size: 0.95rem; line-height: 1.6; }
+
+    /* ── The three bases of merit ─────────────────────────────────────
+       A complete practice that needs no institution behind it. */
+    .merit-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1.1rem;
+        margin: 1.5rem 0;
+    }
+    .merit {
+        border-radius: 12px;
+        padding: 1.3rem;
+        border: 2px solid;
+    }
+    .merit h3 { margin: 0 0 0.1rem; font-size: 1.15rem; }
+    .merit .pali-term {
+        display: block;
+        font-style: italic;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        margin-bottom: 0.6rem;
+    }
+    .merit p { margin: 0; font-size: 0.95rem; line-height: 1.6; }
+    .merit-dana  { background: #FFF8DC; border-color: var(--saffron);      color: #5a4a2a; }
+    .merit-sila  { background: #F6F0FF; border-color: var(--royal-purple); color: #40325a; }
+    .merit-bhav  { background: #E8F5E9; border-color: var(--bodhi-green);  color: #1B5E20; }
+    .merit-dana h3, .merit-dana .pali-term { color: #8a5a0b; }
+    .merit-sila h3, .merit-sila .pali-term { color: var(--royal-purple); }
+    .merit-bhav h3, .merit-bhav .pali-term { color: #1B5E20; }
+
+    /* ── Precepts ─────────────────────────────────────────────────────
+       Numbered because they are traditionally counted, and because a
+       reader undertaking them wants to know how many there are. */
+    .precepts { list-style: none; counter-reset: precept; padding: 0; margin: 1.25rem 0; }
+    .precepts li {
+        counter-increment: precept;
+        position: relative;
+        padding: 0.85rem 1rem 0.85rem 3.2rem;
+        border-bottom: 1px solid #EADFC8;
+        line-height: 1.6;
+    }
+    .precepts li:last-child { border-bottom: none; }
+    .precepts li::before {
+        content: counter(precept);
+        position: absolute;
+        left: 0.9rem;
+        top: 0.85rem;
+        width: 1.7rem;
+        height: 1.7rem;
+        line-height: 1.7rem;
+        text-align: center;
+        border-radius: 50%;
+        background: var(--royal-gold);
+        color: var(--deep-purple);
+        font-weight: bold;
+        font-size: 0.85rem;
+    }
+    .precepts .pali-term { font-style: italic; color: #8a6d1b; font-size: 0.9rem; }
+
+    /* What you are NOT required to have. Stated as plainly as the
+       requirements, because an unstated requirement is the one people
+       assume is there. */
+    .not-needed {
+        background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+        border-left: 5px solid var(--bodhi-green);
+        border-radius: 12px;
+        padding: 1.5rem 1.8rem;
+        margin: 2rem 0;
+    }
+    .not-needed h2 { margin-top: 0; color: #1B5E20; }
+    .not-needed ul { margin: 0.75rem 0 0; padding-left: 1.2rem; }
+    .not-needed li { margin-bottom: 0.4rem; color: #1B5E20; }
+
+    .source-note {
+        font-size: 0.9rem;
+        color: #6b5d45;
+        border-top: 1px dotted #d8d0bd;
+        padding-top: 0.6rem;
+        margin-top: 1.25rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>
+    🌏 Practising the Dhamma Anywhere
+    <span class="thai">ปฏิบัติธรรมได้ทุกที่</span>
+</h1>
+
+<p style="text-align:center; color:#666; max-width:820px; margin:0 auto 1.5rem;">
+    The teaching does not arrive with a country attached to it. This page is
+    about taking it up where you already are.
+</p>
+
+<div class="card">
+    <p>
+        You may have arrived here wondering whether Buddhism asks you to take on
+        somebody else&#39;s customs — a language, a temple, a set of manners that are
+        not yours. It does not. What follows is the practice itself, in the form the
+        Buddha gave it to lay people, and you will notice that it names no country,
+        no nationality and no ceremony.
+    </p>
+    <p style="margin-bottom:0;">
+        <strong>It names no country on purpose.</strong> Not because culture does not
+        matter, but because none of this depends on which one you live in.
+        <a href="/dhamma-and-culture">How Thai culture fits alongside it →</a>
+    </p>
+</div>
+
+<h2>Where it starts: the Five Precepts</h2>
+
+<p>
+    Five undertakings a person makes for themselves. They are training rules, not
+    commandments — you take them up, and when you fall short you take them up again.
+    No temple, no ceremony and no permission from anyone is required to begin.
+</p>
+
+<div class="card">
+    <ol class="precepts">
+        <li>
+            To refrain from taking life.
+            <span class="pali-term">pāṇātipātā veramaṇī</span>
+        </li>
+        <li>
+            To refrain from taking what is not given.
+            <span class="pali-term">adinnādānā veramaṇī</span>
+        </li>
+        <li>
+            To refrain from sexual misconduct.
+            <span class="pali-term">kāmesu micchācārā veramaṇī</span>
+        </li>
+        <li>
+            To refrain from false speech.
+            <span class="pali-term">musāvādā veramaṇī</span>
+        </li>
+        <li>
+            To refrain from intoxicants that cloud the mind.
+            <span class="pali-term">surāmeraya-majja-pamādaṭṭhānā veramaṇī</span>
+        </li>
+    </ol>
+    <p class="source-note">
+        The five training rules (<em>pañca-sīla</em>) undertaken by lay Buddhists
+        throughout the Theravada world — and, in the same words, everywhere else.
+    </p>
+</div>
+
+<h2>A complete practice, in three parts</h2>
+
+<p>
+    The Buddha described three grounds for making merit — <em>puñña-kiriya-vatthu</em>.
+    Between them they cover a whole life of practice, and not one of them requires an
+    institution, a building or a language you do not speak.
+</p>
+
+<div class="merit-grid">
+    <div class="merit merit-dana">
+        <h3>Giving</h3>
+        <span class="pali-term">dāna</span>
+        <p>
+            Generosity of things, of time, of attention, of patience. It is measured by
+            the state of mind behind it, not by the size of what is given.
+        </p>
+    </div>
+    <div class="merit merit-sila">
+        <h3>Virtue</h3>
+        <span class="pali-term">sīla</span>
+        <p>
+            The precepts above, lived out in ordinary conduct — what you do, what you
+            say, and how you treat whoever is in front of you.
+        </p>
+    </div>
+    <div class="merit merit-bhav">
+        <h3>Cultivation</h3>
+        <span class="pali-term">bhāvanā</span>
+        <p>
+            Training the mind: meditation, mindfulness, and the steady development of
+            understanding. <a href="/meditation" style="color:#1B5E20;">Meditation guidance →</a>
+        </p>
+    </div>
+</div>
+
+<h2>The Buddha&#39;s own map for lay life</h2>
+
+<p>
+    In the <strong>Sigālovāda Sutta</strong>, the Buddha meets a young householder
+    performing an inherited ritual of bowing to the six directions, and gives the
+    practice a different meaning: each direction stands for a set of relationships,
+    and honouring them properly is the practice. It has been called the layperson&#39;s
+    code of discipline ever since.
+</p>
+
+<p>
+    It is worth noticing what this list is made of. Every society that has ever
+    existed has these relationships in some form. That is why the teaching travels
+    without needing to be translated into anyone&#39;s customs — the customs differ,
+    the relationships do not.
+</p>
+
+<div class="directions">
+    <div class="direction">
+        <h3>Parents and children</h3>
+        <span class="compass">The east</span>
+        <p>
+            Care given and care returned — supporting those who raised you, and raising
+            those in your care well.
+        </p>
+    </div>
+    <div class="direction">
+        <h3>Teachers and students</h3>
+        <span class="compass">The south</span>
+        <p>
+            Respect and attention offered to those who teach you; thoroughness and
+            honesty offered to those you teach.
+        </p>
+    </div>
+    <div class="direction">
+        <h3>Partner and family</h3>
+        <span class="compass">The west</span>
+        <p>
+            Faithfulness, courtesy and shared responsibility with the person you share
+            a life with.
+        </p>
+    </div>
+    <div class="direction">
+        <h3>Friends and companions</h3>
+        <span class="compass">The north</span>
+        <p>
+            Generosity, kind speech, keeping your word, and standing by people when
+            their circumstances turn.
+        </p>
+    </div>
+    <div class="direction">
+        <h3>Those who work for you</h3>
+        <span class="compass">Below</span>
+        <p>
+            Work fairly assigned, fairly paid and fairly rested — and honest, careful
+            work given in return.
+        </p>
+    </div>
+    <div class="direction">
+        <h3>Those who teach the Dhamma</h3>
+        <span class="compass">Above</span>
+        <p>
+            Support and respect for monastics and teachers; guidance and instruction
+            given back freely.
+        </p>
+    </div>
+</div>
+
+<p class="source-note">
+    Sigālovāda Sutta, Dīgha Nikāya 31. The six directions are the sutta&#39;s own
+    structure, not a modern rearrangement of it.
+</p>
+
+<h2>The four qualities to grow in</h2>
+
+<p>
+    The <em>brahmavihāras</em> — four states of mind cultivated towards others, and
+    the answer the tradition gives to the worry that any teaching might divide people
+    from one another. Each is deliberately boundless: they are practised towards
+    everyone, without exception for nationality, belief or culture.
+</p>
+
+<div class="card">
+    <p><strong>Mettā</strong> — loving-kindness. Wishing others well, beginning with
+    those it is easy for and extending outwards until no one is left out.</p>
+    <p><strong>Karuṇā</strong> — compassion. The mind&#39;s response to suffering,
+    wherever it is met.</p>
+    <p><strong>Muditā</strong> — sympathetic joy. Gladness at another&#39;s good
+    fortune, which is the direct antidote to envy.</p>
+    <p style="margin-bottom:0;"><strong>Upekkhā</strong> — equanimity. Steadiness that
+    does not depend on things going your way.</p>
+</div>
+
+<div class="not-needed">
+    <h2>✅ What you do not need</h2>
+    <p>
+        Everything on this page can be taken up starting today. To practise it you do
+        not need:
+    </p>
+    <ul>
+        <li>to speak Thai, Pali, or any language other than your own</li>
+        <li>to live near a temple, or to have ever visited one</li>
+        <li>to adopt the customs, dress or manners of another country</li>
+        <li>to change your nationality, identity or community</li>
+        <li>a ceremony, a certificate, or anyone&#39;s permission</li>
+    </ul>
+    <p style="margin-bottom:0;">
+        The Pali terms are here because they are the tradition&#39;s precise vocabulary
+        and are worth knowing — not because the practice requires the language.
+    </p>
+</div>
+
+<h2>Where the rest of this site fits</h2>
+
+<div class="card">
+    <p>
+        If you want only what is on this page, you have everything you need — go on to
+        the <a href="/theravada">teachings</a> and to
+        <a href="/meditation">meditation</a>, and stop there. Nothing further is
+        required of you.
+    </p>
+    <p style="margin-bottom:0;">
+        If you are curious about how one particular tradition has carried these
+        teachings — its chanting, its temples, its language and its customs — that is
+        what the Thai side of this site is for, offered as
+        <a href="/dhamma-and-culture">context rather than a condition</a>.
+    </p>
+</div>
+
+<div class="card" style="text-align:center;">
+    <p style="margin:0; font-size:1.05rem;">
+        Wherever you are is where the practice happens. 🙏
+    </p>
+</div>
+{% endblock %}
