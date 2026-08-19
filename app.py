@@ -5658,42 +5658,42 @@ SENTENCE_PATTERNS = {
             'examples': {
                 'male': [
                     {
-                        'thai': 'ผมกำลังกินข้าว',
-                        'paiboon': 'pǒm gam-laŋ gin kâao',
+                        'thai': 'ผมกำลังกินข้าวครับ',
+                        'paiboon': 'pǒm gam-laŋ gin kâao kráp',
                         'english': 'I am eating rice',
-                        'breakdown': 'ผม (I) + กำลัง (progressive) + กิน (eat) + ข้าว (rice)'
+                        'breakdown': 'ผม (I) + กำลัง (progressive) + กิน (eat) + ข้าว (rice) + ครับ (polite particle)'
                     },
                     {
-                        'thai': 'ผมกำลังทำงาน',
-                        'paiboon': 'pǒm gam-laŋ tam ŋaan',
+                        'thai': 'ผมกำลังทำงานครับ',
+                        'paiboon': 'pǒm gam-laŋ tam ŋaan kráp',
                         'english': 'I am working',
-                        'breakdown': 'ผม (I) + กำลัง (progressive) + ทำงาน (work)'
+                        'breakdown': 'ผม (I) + กำลัง (progressive) + ทำงาน (work) + ครับ (polite particle)'
                     },
                     {
-                        'thai': 'เขากำลังอ่านหนังสือ',
-                        'paiboon': 'kǎo gam-laŋ àan nǎŋ-sʉ̌ʉ',
+                        'thai': 'เขากำลังอ่านหนังสือครับ',
+                        'paiboon': 'kǎo gam-laŋ àan nǎŋ-sʉ̌ʉ kráp',
                         'english': 'He/She is reading a book',
-                        'breakdown': 'เขา (he/she) + กำลัง (progressive) + อ่าน (read) + หนังสือ (book)'
+                        'breakdown': 'เขา (he/she) + กำลัง (progressive) + อ่าน (read) + หนังสือ (book) + ครับ (polite particle)'
                     }
                 ],
                 'female': [
                     {
-                        'thai': 'ดิฉันกำลังกินข้าว',
-                        'paiboon': 'dì-chǎn gam-laŋ gin kâao',
+                        'thai': 'ดิฉันกำลังกินข้าวค่ะ',
+                        'paiboon': 'dì-chǎn gam-laŋ gin kâao kâ',
                         'english': 'I am eating rice',
-                        'breakdown': 'ดิฉัน (I) + กำลัง (progressive) + กิน (eat) + ข้าว (rice)'
+                        'breakdown': 'ดิฉัน (I) + กำลัง (progressive) + กิน (eat) + ข้าว (rice) + ค่ะ (polite particle)'
                     },
                     {
-                        'thai': 'ดิฉันกำลังทำงาน',
-                        'paiboon': 'dì-chǎn gam-laŋ tam ŋaan',
+                        'thai': 'ดิฉันกำลังทำงานค่ะ',
+                        'paiboon': 'dì-chǎn gam-laŋ tam ŋaan kâ',
                         'english': 'I am working',
-                        'breakdown': 'ดิฉัน (I) + กำลัง (progressive) + ทำงาน (work)'
+                        'breakdown': 'ดิฉัน (I) + กำลัง (progressive) + ทำงาน (work) + ค่ะ (polite particle)'
                     },
                     {
-                        'thai': 'เขากำลังอ่านหนังสือ',
-                        'paiboon': 'kǎo gam-laŋ àan nǎŋ-sʉ̌ʉ',
+                        'thai': 'เขากำลังอ่านหนังสือค่ะ',
+                        'paiboon': 'kǎo gam-laŋ àan nǎŋ-sʉ̌ʉ kâ',
                         'english': 'He/She is reading a book',
-                        'breakdown': 'เขา (he/she) + กำลัง (progressive) + อ่าน (read) + หนังสือ (book)'
+                        'breakdown': 'เขา (he/she) + กำลัง (progressive) + อ่าน (read) + หนังสือ (book) + ค่ะ (polite particle)'
                     }
                 ]
             }
@@ -5706,42 +5706,42 @@ SENTENCE_PATTERNS = {
             'examples': {
                 'male': [
                     {
-                        'thai': 'ผมกินข้าวแล้ว',
-                        'paiboon': 'pǒm gin kâao lɛ́ɛo',
+                        'thai': 'ผมกินข้าวแล้วครับ',
+                        'paiboon': 'pǒm gin kâao lɛ́ɛo kráp',
                         'english': 'I already ate / I have eaten',
-                        'breakdown': 'ผม (I) + กิน (eat) + ข้าว (rice) + แล้ว (already)'
+                        'breakdown': 'ผม (I) + กิน (eat) + ข้าว (rice) + แล้ว (already) + ครับ (polite particle)'
                     },
                     {
-                        'thai': 'ผมทำงานเสร็จแล้ว',
-                        'paiboon': 'pǒm tam ŋaan sèt lɛ́ɛo',
+                        'thai': 'ผมทำงานเสร็จแล้วครับ',
+                        'paiboon': 'pǒm tam ŋaan sèt lɛ́ɛo kráp',
                         'english': 'I finished working already',
-                        'breakdown': 'ผม (I) + ทำงาน (work) + เสร็จ (finish) + แล้ว (already)'
+                        'breakdown': 'ผม (I) + ทำงาน (work) + เสร็จ (finish) + แล้ว (already) + ครับ (polite particle)'
                     },
                     {
-                        'thai': 'เขาไปแล้ว',
-                        'paiboon': 'kǎo bpai lɛ́ɛo',
+                        'thai': 'เขาไปแล้วครับ',
+                        'paiboon': 'kǎo bpai lɛ́ɛo kráp',
                         'english': 'He/She already went / has gone',
-                        'breakdown': 'เขา (he/she) + ไป (go) + แล้ว (already)'
+                        'breakdown': 'เขา (he/she) + ไป (go) + แล้ว (already) + ครับ (polite particle)'
                     }
                 ],
                 'female': [
                     {
-                        'thai': 'ดิฉันกินข้าวแล้ว',
-                        'paiboon': 'dì-chǎn gin kâao lɛ́ɛo',
+                        'thai': 'ดิฉันกินข้าวแล้วค่ะ',
+                        'paiboon': 'dì-chǎn gin kâao lɛ́ɛo kâ',
                         'english': 'I already ate / I have eaten',
-                        'breakdown': 'ดิฉัน (I) + กิน (eat) + ข้าว (rice) + แล้ว (already)'
+                        'breakdown': 'ดิฉัน (I) + กิน (eat) + ข้าว (rice) + แล้ว (already) + ค่ะ (polite particle)'
                     },
                     {
-                        'thai': 'ดิฉันทำงานเสร็จแล้ว',
-                        'paiboon': 'dì-chǎn tam ŋaan sèt lɛ́ɛo',
+                        'thai': 'ดิฉันทำงานเสร็จแล้วค่ะ',
+                        'paiboon': 'dì-chǎn tam ŋaan sèt lɛ́ɛo kâ',
                         'english': 'I finished working already',
-                        'breakdown': 'ดิฉัน (I) + ทำงาน (work) + เสร็จ (finish) + แล้ว (already)'
+                        'breakdown': 'ดิฉัน (I) + ทำงาน (work) + เสร็จ (finish) + แล้ว (already) + ค่ะ (polite particle)'
                     },
                     {
-                        'thai': 'เขาไปแล้ว',
-                        'paiboon': 'kǎo bpai lɛ́ɛo',
+                        'thai': 'เขาไปแล้วค่ะ',
+                        'paiboon': 'kǎo bpai lɛ́ɛo kâ',
                         'english': 'He/She already went / has gone',
-                        'breakdown': 'เขา (he/she) + ไป (go) + แล้ว (already)'
+                        'breakdown': 'เขา (he/she) + ไป (go) + แล้ว (already) + ค่ะ (polite particle)'
                     }
                 ]
             }
@@ -5754,42 +5754,42 @@ SENTENCE_PATTERNS = {
             'examples': {
                 'male': [
                     {
-                        'thai': 'ผมจะกินข้าว',
-                        'paiboon': 'pǒm jà gin kâao',
+                        'thai': 'ผมจะกินข้าวครับ',
+                        'paiboon': 'pǒm jà gin kâao kráp',
                         'english': 'I will eat rice',
-                        'breakdown': 'ผม (I) + จะ (will) + กิน (eat) + ข้าว (rice)'
+                        'breakdown': 'ผม (I) + จะ (will) + กิน (eat) + ข้าว (rice) + ครับ (polite particle)'
                     },
                     {
-                        'thai': 'ผมจะไปเมืองไทย',
-                        'paiboon': 'pǒm jà bpai mʉaŋ-tai',
+                        'thai': 'ผมจะไปเมืองไทยครับ',
+                        'paiboon': 'pǒm jà bpai mʉaŋ-tai kráp',
                         'english': 'I will go to Thailand',
-                        'breakdown': 'ผม (I) + จะ (will) + ไป (go) + เมืองไทย (Thailand)'
+                        'breakdown': 'ผม (I) + จะ (will) + ไป (go) + เมืองไทย (Thailand) + ครับ (polite particle)'
                     },
                     {
-                        'thai': 'เขาจะมาพรุ่งนี้',
-                        'paiboon': 'kǎo jà maa prûŋ-níi',
+                        'thai': 'เขาจะมาพรุ่งนี้ครับ',
+                        'paiboon': 'kǎo jà maa prûŋ-níi kráp',
                         'english': 'He/She will come tomorrow',
-                        'breakdown': 'เขา (he/she) + จะ (will) + มา (come) + พรุ่งนี้ (tomorrow)'
+                        'breakdown': 'เขา (he/she) + จะ (will) + มา (come) + พรุ่งนี้ (tomorrow) + ครับ (polite particle)'
                     }
                 ],
                 'female': [
                     {
-                        'thai': 'ดิฉันจะกินข้าว',
-                        'paiboon': 'dì-chǎn jà gin kâao',
+                        'thai': 'ดิฉันจะกินข้าวค่ะ',
+                        'paiboon': 'dì-chǎn jà gin kâao kâ',
                         'english': 'I will eat rice',
-                        'breakdown': 'ดิฉัน (I) + จะ (will) + กิน (eat) + ข้าว (rice)'
+                        'breakdown': 'ดิฉัน (I) + จะ (will) + กิน (eat) + ข้าว (rice) + ค่ะ (polite particle)'
                     },
                     {
-                        'thai': 'ดิฉันจะไปเมืองไทย',
-                        'paiboon': 'dì-chǎn jà bpai mʉaŋ-tai',
+                        'thai': 'ดิฉันจะไปเมืองไทยค่ะ',
+                        'paiboon': 'dì-chǎn jà bpai mʉaŋ-tai kâ',
                         'english': 'I will go to Thailand',
-                        'breakdown': 'ดิฉัน (I) + จะ (will) + ไป (go) + เมืองไทย (Thailand)'
+                        'breakdown': 'ดิฉัน (I) + จะ (will) + ไป (go) + เมืองไทย (Thailand) + ค่ะ (polite particle)'
                     },
                     {
-                        'thai': 'เขาจะมาพรุ่งนี้',
-                        'paiboon': 'kǎo jà maa prûŋ-níi',
+                        'thai': 'เขาจะมาพรุ่งนี้ค่ะ',
+                        'paiboon': 'kǎo jà maa prûŋ-níi kâ',
                         'english': 'He/She will come tomorrow',
-                        'breakdown': 'เขา (he/she) + จะ (will) + มา (come) + พรุ่งนี้ (tomorrow)'
+                        'breakdown': 'เขา (he/she) + จะ (will) + มา (come) + พรุ่งนี้ (tomorrow) + ค่ะ (polite particle)'
                     }
                 ]
             }
@@ -5802,33 +5802,33 @@ SENTENCE_PATTERNS = {
             'examples': {
                 'male': [
                     {
-                        'thai': 'ผมกำลังจะไป',
-                        'paiboon': 'pǒm gam-laŋ jà bpai',
+                        'thai': 'ผมกำลังจะไปครับ',
+                        'paiboon': 'pǒm gam-laŋ jà bpai kráp',
                         'english': 'I am about to go',
-                        'breakdown': 'ผม (I) + กำลัง (progressive) + จะ (will) + ไป (go)',
+                        'breakdown': 'ผม (I) + กำลัง (progressive) + จะ (will) + ไป (go) + ครับ (polite particle)',
                         'note': 'Progressive + Future = "about to"'
                     },
                     {
-                        'thai': 'ผมกินข้าวแล้วจะไป',
-                        'paiboon': 'pǒm gin kâao lɛ́ɛo jà bpai',
+                        'thai': 'ผมกินข้าวแล้วจะไปครับ',
+                        'paiboon': 'pǒm gin kâao lɛ́ɛo jà bpai kráp',
                         'english': 'After I eat, I will go',
-                        'breakdown': 'ผม (I) + กิน (eat) + ข้าว (rice) + แล้ว (after) + จะ (will) + ไป (go)',
+                        'breakdown': 'ผม (I) + กิน (eat) + ข้าว (rice) + แล้ว (after) + จะ (will) + ไป (go) + ครับ (polite particle)',
                         'note': 'Completed + Future = sequential actions'
                     }
                 ],
                 'female': [
                     {
-                        'thai': 'ดิฉันกำลังจะไป',
-                        'paiboon': 'dì-chǎn gam-laŋ jà bpai',
+                        'thai': 'ดิฉันกำลังจะไปค่ะ',
+                        'paiboon': 'dì-chǎn gam-laŋ jà bpai kâ',
                         'english': 'I am about to go',
-                        'breakdown': 'ดิฉัน (I) + กำลัง (progressive) + จะ (will) + ไป (go)',
+                        'breakdown': 'ดิฉัน (I) + กำลัง (progressive) + จะ (will) + ไป (go) + ค่ะ (polite particle)',
                         'note': 'Progressive + Future = "about to"'
                     },
                     {
-                        'thai': 'ดิฉันกินข้าวแล้วจะไป',
-                        'paiboon': 'dì-chǎn gin kâao lɛ́ɛo jà bpai',
+                        'thai': 'ดิฉันกินข้าวแล้วจะไปค่ะ',
+                        'paiboon': 'dì-chǎn gin kâao lɛ́ɛo jà bpai kâ',
                         'english': 'After I eat, I will go',
-                        'breakdown': 'ดิฉัน (I) + กิน (eat) + ข้าว (rice) + แล้ว (after) + จะ (will) + ไป (go)',
+                        'breakdown': 'ดิฉัน (I) + กิน (eat) + ข้าว (rice) + แล้ว (after) + จะ (will) + ไป (go) + ค่ะ (polite particle)',
                         'note': 'Completed + Future = sequential actions'
                     }
                 ]

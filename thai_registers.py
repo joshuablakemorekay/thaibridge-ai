@@ -439,100 +439,115 @@ VARIANTS = {
     # ---------------------------------------------------------------
     # Aspect markers — progressive
     # ---------------------------------------------------------------
-    'ผมกำลังกินข้าว': {
-        'neutral': {'thai': 'กำลังกินข้าวอยู่', 'paiboon': 'gam-laŋ gin kâao yùu',
-                    'note': 'Thai drops the subject freely when it is obvious who you mean.'},
+    'ผมกำลังกินข้าวครับ': {
+        'neutral': {'thai': 'กำลังกินข้าวอยู่ครับ', 'paiboon': 'gam-laŋ gin kâao yùu kráp',
+                    'note': 'Thai drops the subject freely when it is obvious who you mean. '
+                            'ครับ stays — that is what keeps this neutral rather than casual.'},
         'casual': {'thai': 'กินข้าวอยู่', 'paiboon': 'gin kâao yùu',
                    'note': 'อยู่ alone does the job of กำลัง. This is the everyday way to say it.'},
     },
-    'ผมกำลังทำงาน': {
-        'neutral': {'thai': 'กำลังทำงานอยู่', 'paiboon': 'gam-laŋ tam ŋaan yùu'},
+    'ผมกำลังทำงานครับ': {
+        'neutral': {'thai': 'กำลังทำงานอยู่ครับ', 'paiboon': 'gam-laŋ tam ŋaan yùu kráp'},
         'casual': {'thai': 'ทำงานอยู่', 'paiboon': 'tam ŋaan yùu'},
     },
-    'เขากำลังอ่านหนังสือ': {
-        'neutral': {'thai': 'เขาอ่านหนังสืออยู่', 'paiboon': 'kǎo àan nǎŋ-sʉ̌ʉ yùu',
+    # A third-person line carries the particle of whoever is SPEAKING, not of the
+    # person being spoken about, so the male and female example lists need one
+    # entry each even though the sentence is otherwise identical.
+    'เขากำลังอ่านหนังสือครับ': {
+        'neutral': {'thai': 'เขาอ่านหนังสืออยู่ครับ', 'paiboon': 'kǎo àan nǎŋ-sʉ̌ʉ yùu kráp',
                     'note': 'อยู่ at the end replaces กำลัง at the front.'},
     },
-    'ดิฉันกำลังกินข้าว': {
-        'neutral': {'thai': 'กำลังกินข้าวอยู่', 'paiboon': 'gam-laŋ gin kâao yùu'},
+    'ดิฉันกำลังกินข้าวค่ะ': {
+        'neutral': {'thai': 'กำลังกินข้าวอยู่ค่ะ', 'paiboon': 'gam-laŋ gin kâao yùu kâ'},
         'casual': {'thai': 'กินข้าวอยู่', 'paiboon': 'gin kâao yùu'},
     },
-    'ดิฉันกำลังทำงาน': {
-        'neutral': {'thai': 'กำลังทำงานอยู่', 'paiboon': 'gam-laŋ tam ŋaan yùu'},
+    'ดิฉันกำลังทำงานค่ะ': {
+        'neutral': {'thai': 'กำลังทำงานอยู่ค่ะ', 'paiboon': 'gam-laŋ tam ŋaan yùu kâ'},
         'casual': {'thai': 'ทำงานอยู่', 'paiboon': 'tam ŋaan yùu'},
+    },
+    'เขากำลังอ่านหนังสือค่ะ': {
+        'neutral': {'thai': 'เขาอ่านหนังสืออยู่ค่ะ', 'paiboon': 'kǎo àan nǎŋ-sʉ̌ʉ yùu kâ',
+                    'note': 'อยู่ at the end replaces กำลัง at the front.'},
     },
 
     # ---------------------------------------------------------------
     # Aspect markers — completed
     # ---------------------------------------------------------------
-    'ผมกินข้าวแล้ว': {
-        'neutral': {'thai': 'กินข้าวแล้ว', 'paiboon': 'gin kâao lɛ́ɛo'},
+    'ผมกินข้าวแล้วครับ': {
+        'neutral': {'thai': 'กินข้าวแล้วครับ', 'paiboon': 'gin kâao lɛ́ɛo kráp'},
         'casual': {'thai': 'กินแล้ว', 'paiboon': 'gin lɛ́ɛo',
                    'note': 'ข้าว drops too — "eaten already" is understood as a full meal.'},
     },
-    'ผมทำงานเสร็จแล้ว': {
-        'neutral': {'thai': 'ทำงานเสร็จแล้ว', 'paiboon': 'tam ŋaan sèt lɛ́ɛo'},
+    'ผมทำงานเสร็จแล้วครับ': {
+        'neutral': {'thai': 'ทำงานเสร็จแล้วครับ', 'paiboon': 'tam ŋaan sèt lɛ́ɛo kráp'},
         'casual': {'thai': 'เสร็จแล้ว', 'paiboon': 'sèt lɛ́ɛo',
                    'note': 'Just "done already" — context supplies the rest.'},
     },
-    'เขาไปแล้ว': {
+    'เขาไปแล้วครับ': {
         'neutral': SAME,
     },
-    'ดิฉันกินข้าวแล้ว': {
-        'neutral': {'thai': 'กินข้าวแล้ว', 'paiboon': 'gin kâao lɛ́ɛo'},
+    'ดิฉันกินข้าวแล้วค่ะ': {
+        'neutral': {'thai': 'กินข้าวแล้วค่ะ', 'paiboon': 'gin kâao lɛ́ɛo kâ'},
         'casual': {'thai': 'กินแล้ว', 'paiboon': 'gin lɛ́ɛo'},
     },
-    'ดิฉันทำงานเสร็จแล้ว': {
-        'neutral': {'thai': 'ทำงานเสร็จแล้ว', 'paiboon': 'tam ŋaan sèt lɛ́ɛo'},
+    'ดิฉันทำงานเสร็จแล้วค่ะ': {
+        'neutral': {'thai': 'ทำงานเสร็จแล้วค่ะ', 'paiboon': 'tam ŋaan sèt lɛ́ɛo kâ'},
         'casual': {'thai': 'เสร็จแล้ว', 'paiboon': 'sèt lɛ́ɛo'},
+    },
+    'เขาไปแล้วค่ะ': {
+        'neutral': SAME,
     },
 
     # ---------------------------------------------------------------
     # Aspect markers — future
     # ---------------------------------------------------------------
-    'ผมจะกินข้าว': {
-        'neutral': {'thai': 'จะกินข้าว', 'paiboon': 'jà gin kâao'},
+    'ผมจะกินข้าวครับ': {
+        'neutral': {'thai': 'จะกินข้าวครับ', 'paiboon': 'jà gin kâao kráp'},
         'casual': {'thai': 'จะไปกินข้าว', 'paiboon': 'jà bpai gin kâao',
                    'note': 'Adding ไป makes it sound like a plan rather than a statement.'},
     },
-    'ผมจะไปเมืองไทย': {
-        'neutral': {'thai': 'จะไปเมืองไทย', 'paiboon': 'jà bpai mʉaŋ-tai'},
+    'ผมจะไปเมืองไทยครับ': {
+        'neutral': {'thai': 'จะไปเมืองไทยครับ', 'paiboon': 'jà bpai mʉaŋ-tai kráp'},
         'casual': {'thai': 'จะไปไทย', 'paiboon': 'jà bpai tai',
                    'note': 'เมือง drops in casual speech — just ไทย.'},
     },
-    'เขาจะมาพรุ่งนี้': {
+    'เขาจะมาพรุ่งนี้ครับ': {
         'neutral': SAME,
         'casual': {'thai': 'พรุ่งนี้เขามา', 'paiboon': 'prûŋ-níi kǎo maa',
                    'note': 'Fronting the time and dropping จะ is very natural in speech.'},
     },
-    'ดิฉันจะกินข้าว': {
-        'neutral': {'thai': 'จะกินข้าว', 'paiboon': 'jà gin kâao'},
+    'ดิฉันจะกินข้าวค่ะ': {
+        'neutral': {'thai': 'จะกินข้าวค่ะ', 'paiboon': 'jà gin kâao kâ'},
         'casual': {'thai': 'จะไปกินข้าว', 'paiboon': 'jà bpai gin kâao'},
     },
-    'ดิฉันจะไปเมืองไทย': {
-        'neutral': {'thai': 'จะไปเมืองไทย', 'paiboon': 'jà bpai mʉaŋ-tai'},
+    'ดิฉันจะไปเมืองไทยค่ะ': {
+        'neutral': {'thai': 'จะไปเมืองไทยค่ะ', 'paiboon': 'jà bpai mʉaŋ-tai kâ'},
         'casual': {'thai': 'จะไปไทย', 'paiboon': 'jà bpai tai'},
+    },
+    'เขาจะมาพรุ่งนี้ค่ะ': {
+        'neutral': SAME,
+        'casual': {'thai': 'พรุ่งนี้เขามา', 'paiboon': 'prûŋ-níi kǎo maa'},
     },
 
     # ---------------------------------------------------------------
     # Aspect markers — combined
     # ---------------------------------------------------------------
-    'ผมกำลังจะไป': {
-        'neutral': {'thai': 'กำลังจะไป', 'paiboon': 'gam-laŋ jà bpai'},
+    'ผมกำลังจะไปครับ': {
+        'neutral': {'thai': 'กำลังจะไปครับ', 'paiboon': 'gam-laŋ jà bpai kráp'},
         'casual': {'thai': 'จะไปแล้ว', 'paiboon': 'jà bpai lɛ́ɛo',
                    'note': 'แล้ว with จะ means "off in a moment" — the usual spoken version.'},
     },
-    'ผมกินข้าวแล้วจะไป': {
-        'neutral': {'thai': 'กินข้าวแล้วจะไป', 'paiboon': 'gin kâao lɛ́ɛo jà bpai'},
+    'ผมกินข้าวแล้วจะไปครับ': {
+        'neutral': {'thai': 'กินข้าวแล้วจะไปครับ', 'paiboon': 'gin kâao lɛ́ɛo jà bpai kráp'},
         'casual': {'thai': 'กินเสร็จแล้วไป', 'paiboon': 'gin sèt lɛ́ɛo bpai',
                    'note': 'เสร็จ makes the sequence clearer, and จะ drops out.'},
     },
-    'ดิฉันกำลังจะไป': {
-        'neutral': {'thai': 'กำลังจะไป', 'paiboon': 'gam-laŋ jà bpai'},
+    'ดิฉันกำลังจะไปค่ะ': {
+        'neutral': {'thai': 'กำลังจะไปค่ะ', 'paiboon': 'gam-laŋ jà bpai kâ'},
         'casual': {'thai': 'จะไปแล้ว', 'paiboon': 'jà bpai lɛ́ɛo'},
     },
-    'ดิฉันกินข้าวแล้วจะไป': {
-        'neutral': {'thai': 'กินข้าวแล้วจะไป', 'paiboon': 'gin kâao lɛ́ɛo jà bpai'},
+    'ดิฉันกินข้าวแล้วจะไปค่ะ': {
+        'neutral': {'thai': 'กินข้าวแล้วจะไปค่ะ', 'paiboon': 'gin kâao lɛ́ɛo jà bpai kâ'},
         'casual': {'thai': 'กินเสร็จแล้วไป', 'paiboon': 'gin sèt lɛ́ɛo bpai'},
     },
 
@@ -619,9 +634,14 @@ VARIANTS = {
         'neutral': SAME,
         'casual': {'thai': 'คำนี้แปลว่าอะไร', 'paiboon': 'kam níi bplɛɛ wâa à-rai'},
     },
+    # Already casual, so it gets a note rather than a rung. The casual "rung"
+    # here was identical to the main line and only ever printed the same words
+    # twice; once the main line gained a Formal chip it was also labelling a
+    # filler as formal, which it is not.
     'แบบว่า...': {
-        'casual': {'thai': 'แบบว่า...', 'paiboon': 'bɛ̀ɛp wâa...',
-                   'note': 'Already casual — filler used mostly between friends.'},
+        'warn': 'Already casual — a filler used mostly between friends. There is no '
+                'formal version to step up to; in a polite setting you would simply '
+                'leave it out.',
     },
     'เดี๋ยวนะครับ': {
         'neutral': SAME,
