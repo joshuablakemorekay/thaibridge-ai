@@ -49,7 +49,7 @@ import random
 import re
 import uuid
 import hmac
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 app = Flask(__name__)
 
@@ -157,6 +157,27 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 # ============================================
+# TIME
+# ============================================
+
+def utcnow():
+    """UTC, naive — the shape every db.DateTime column in this file stores.
+
+    datetime.utcnow() is deprecated, but its recommended replacement
+    datetime.now(timezone.utc) returns an *aware* datetime, and none of the
+    columns here are timezone-aware. Comparing an aware value against a naive
+    one raises TypeError, so a straight swap would turn a warning into a crash
+    on the subscription-expiry check below.
+
+    The tzinfo is therefore dropped on purpose, in one place, rather than
+    accidentally in several. Use this everywhere instead of datetime.utcnow();
+    if the columns are ever migrated to timezone=True, this is the only line
+    that has to change. Pinned by tests/test_utcnow_contract.py.
+    """
+    return datetime.now(timezone.utc).replace(tzinfo=None)
+
+
+# ============================================
 # USER MODEL
 # ============================================
 
@@ -166,7 +187,7 @@ class User(UserMixin, db.Model):
     username      = db.Column(db.String(20),  unique=True, nullable=False)
     email         = db.Column(db.String(254), unique=True, nullable=False)
     password_hash = db.Column(db.String(256), nullable=False)
-    created_at    = db.Column(db.DateTime, default=datetime.utcnow, nullable=False)
+    created_at    = db.Column(db.DateTime, default=utcnow, nullable=False)
 
     # --- Subscription / billing (the database is the source of truth) ---
     # These are written by the Stripe webhook (Phase 3), NOT by the browser.
@@ -221,7 +242,7 @@ class User(UserMixin, db.Model):
             return 'free'
         if self.subscription_status not in ('active', 'trialing'):
             return 'free'
-        if self.current_period_end is not None and self.current_period_end < datetime.utcnow():
+        if self.current_period_end is not None and self.current_period_end < utcnow():
             return 'free'
         return self.subscription_tier
 
@@ -250,7 +271,7 @@ class AiUsage(db.Model):
     __tablename__ = 'ai_usage'
 
     id            = db.Column(db.Integer, primary_key=True)
-    created_at    = db.Column(db.DateTime, default=datetime.utcnow,
+    created_at    = db.Column(db.DateTime, default=utcnow,
                               nullable=False, index=True)
 
     # Who. user_id is null for signed-out visitors, which is most of them on a
@@ -983,12 +1004,12 @@ def _pro_messages_today():
     count — nobody should lose allowance to a request that failed or was blocked.
 
     Uses UTC midnight to match AiUsage.created_at, which is written with
-    datetime.utcnow. The free-tier counter uses local dates; mixing the two would
+    utcnow(). The free-tier counter uses local dates; mixing the two would
     put the reset at a different hour for each tier.
     """
     if not current_user.is_authenticated:
         return 0
-    start_of_day = datetime.utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
+    start_of_day = utcnow().replace(hour=0, minute=0, second=0, microsecond=0)
     return db.session.query(db.func.count(AiUsage.id)).filter(
         AiUsage.user_id == current_user.id,
         AiUsage.outcome == 'ok',
@@ -2723,7 +2744,7 @@ def mark_alphabet_complete():
 
     if current_user.is_authenticated:
         current_user.alphabet_completed = True
-        current_user.alphabet_completed_at = datetime.utcnow()
+        current_user.alphabet_completed_at = utcnow()
         try:
             db.session.commit()
         except Exception:                              # noqa: BLE001
@@ -8127,7 +8148,7 @@ def paypal_success():
     # PayPal here is a one-off 30-day access grant (this demo doesn't use PayPal's
     # recurring billing, so there's no webhook to renew it). We record it on the
     # user's account — the database, not the cookie, is the source of truth.
-    expires_dt = datetime.utcnow() + timedelta(days=30)
+    expires_dt = utcnow() + timedelta(days=30)
     _apply_subscription(current_user, tier=tier, status='active',
                         current_period_end=expires_dt)
     _mirror_tier_to_session(current_user)

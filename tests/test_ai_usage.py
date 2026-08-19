@@ -21,7 +21,7 @@ os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("FLASK_SECRET_KEY", "test-secret")
 
 import app as appmod  # noqa: E402
-from app import app, db, AiUsage, User  # noqa: E402
+from app import app, db, AiUsage, User, utcnow  # noqa: E402
 
 PASSWORD = "UsagePass123"
 
@@ -267,8 +267,8 @@ def pro_account():
 
 def seed_usage(user_id, n, outcome="ok", days_ago=0):
     """Put n rows straight into the table, bypassing the route."""
-    from datetime import datetime, timedelta
-    when = datetime.utcnow() - timedelta(days=days_ago)
+    from datetime import timedelta
+    when = utcnow() - timedelta(days=days_ago)
     with app.app_context():
         for _ in range(n):
             db.session.add(AiUsage(user_id=user_id, feature="chat", mode="tutor",
