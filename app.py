@@ -585,7 +585,14 @@ SECTION_REQUIREMENTS = {
     # Consonant classes + tone rules. Its content was moved here from the Grammar
     # page, so it's gated the same way — Basic tier, level 3.
     'tones_classes': {'level': 3, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
-    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': True},
+    # Culture is the one gated section that never needed the alphabet. It is
+    # about the wai, temple manners and festivals — roughly two-thirds English
+    # prose, and every Thai word on it is printed with its romanisation. Asking
+    # someone to name 35 of 44 consonants before they may read about bowing
+    # gated an English page behind a script exam. Level 3 and the Basic tier
+    # still apply, so the progression and the paywall are untouched; only the
+    # prerequisite that did no teaching work is gone.
+    'culture': {'level': 3, 'tier': 'basic', 'points_reward': 20, 'requires_alphabet': False},
     'lessons': {'level': 4, 'tier': 'basic', 'points_reward': 30, 'requires_alphabet': True},
     'register': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
     'formality': {'level': 4, 'tier': 'basic', 'points_reward': 25, 'requires_alphabet': True},
@@ -600,7 +607,12 @@ SECTION_REQUIREMENTS = {
     # The premium power tools. Unlimited AI is enforced separately in the
     # /api/ai/chat route, and Monk Mode never lifts the AI cap.
     'dictionary': {'level': 8, 'tier': 'pro', 'points_reward': 50, 'requires_alphabet': True},
-    'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100, 'requires_alphabet': True},
+    # No requires_alphabet here, deliberately. /premium is the PRICING page: it
+    # carries no @require_access, so the flag never fired — but it read as "pass
+    # a quiz before you may see our prices", and it would have become true the
+    # day someone added the decorator for consistency. The entry itself stays,
+    # because the tier and level are quoted elsewhere.
+    'premium': {'level': 10, 'tier': 'pro', 'points_reward': 100},
 }
 
 # Freemium AI limits. Free & Basic get the Tutor mode plus Dhamma, capped at a

@@ -85,3 +85,37 @@ def test_the_paiboon_key_is_reachable_without_the_alphabet():
     otherwise the reader it was freed for still cannot use it."""
     allowed, message = access("paiboon", alphabet_completed=False)
     assert allowed, f"the key is still gated: {message!r}"
+
+
+def test_culture_is_reachable_without_the_alphabet():
+    """Culture is about the wai, temple manners and festivals — roughly
+    two-thirds English prose, with every Thai word romanised beside it. It
+    needed no script-reading, so it should not have needed a script exam:
+    naming 35 of 44 consonants gated an English page behind an alphabet test."""
+    allowed, message = access("culture", alphabet_completed=False,
+                              level=3, subscription_tier="basic")
+    assert allowed, f"culture is still alphabet-gated: {message!r}"
+
+
+def test_culture_is_still_paid_and_still_level_gated():
+    """Only the prerequisite that did no teaching work was removed. Dropping
+    the paywall or the progression with it would be a different decision, and
+    not one anybody made."""
+    requirement = SECTION_REQUIREMENTS["culture"]
+    assert requirement["tier"] == "basic"
+    assert requirement["level"] == 3
+
+    allowed, _ = access("culture", alphabet_completed=True,
+                        level=1, subscription_tier="basic")
+    assert not allowed, "the level gate stopped applying"
+
+    allowed, _ = access("culture", alphabet_completed=True,
+                        level=3, subscription_tier="free")
+    assert not allowed, "the tier gate stopped applying"
+
+
+def test_the_pricing_page_never_asks_for_an_alphabet_pass():
+    """/premium carries no @require_access, so the flag never fired — but it
+    read as "pass a quiz before you may see our prices", and would have become
+    true the day someone added the decorator for consistency."""
+    assert not SECTION_REQUIREMENTS["premium"].get("requires_alphabet", False)
