@@ -20,6 +20,7 @@ import thai_registers
 import thai_audio  # general Thai-phrase MP3 filename rule, shared with build script
 import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
+import register_levels  # the nine formality registers shown on /register
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
 
@@ -6631,26 +6632,22 @@ def tones_classes():
                            consonant_audio=consonant_audio)
 
 @app.route('/register')
+@require_access('register')
 def register_guide():
-    """Send the nine-register guide to the Formality page.
+    """The nine registers of Thai, from monastic language down to vulgar.
 
-    register.html is a finished page wired to REGISTER_LEVELS, which has never
-    been defined — not in this file, not in the deleted app_backup.py, not in
-    any commit since the first. So this route has raised NameError since day
-    one, and because the access gate ran first, the crash was reserved for the
-    people who had paid or unlocked enough to get past it.
+    Data lives in register_levels.py. The route rendered an undefined
+    REGISTER_LEVELS from the first commit until 2026-08-19 and crashed for
+    anyone past the gate; it redirected to /formality while the data was
+    written.
 
-    Formality already covers politeness levels, so the redirect loses the
-    learner nothing while the data is written. It is TEMPORARY (302) on
-    purpose: a 301 would be cached by browsers and would go on redirecting
-    people away from the page after it is finished.
-
-    Deliberately ungated — /formality applies its own gate, and one page
-    deciding who gets in beats two disagreeing about it. The 'register' entry
-    stays in SECTION_REQUIREMENTS: it is what users have already unlocked and
-    been given XP for, and deleting it would rewrite their progress.
+    The Thai is a DRAFT and has not been checked by a native speaker, so the
+    page says so at the top. Remove that notice (the `draft` flag below and
+    its banner in register.html) once it has been reviewed.
     """
-    return redirect(url_for('formality_guide'), code=302)
+    return render_template('register.html',
+                           registers=register_levels.REGISTER_LEVELS,
+                           draft=True)
 
 
 @app.route('/dhamma-and-culture')

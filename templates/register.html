@@ -1,11 +1,18 @@
-{# NOT SERVED. This page needs a `registers` dict of nine formality levels
-   (REGISTER_LEVELS), which has never existed in this repo — the route rendered
-   it with an undefined name and crashed from the first commit onwards.
+{# The nine formality registers. Data comes from register_levels.py.
 
-   /register now redirects to /formality until that data is written. The page
-   is kept because it is otherwise finished: nine registers from monastic to
-   vulgar, each with examples, usage context, social notes and a warning.
-   Write REGISTER_LEVELS, restore the render_template call, and it works. #}
+   The `draft` flag renders a notice telling the reader the Thai has not been
+   checked by a native speaker. Delete the flag here, the banner below, and
+   draft=True in app.py once it has been reviewed. #}
+{% if draft %}
+<div class="card" style="border-left: 5px solid #C1440E; background: #FDF3EC;">
+    <p style="margin: 0; color: #6b3410;">
+        <strong>⚠️ Draft — not yet checked by a native speaker.</strong>
+        The Thai, the romanisation and the translations on this page are a first
+        draft awaiting review by a Thai teacher. Read it for the shape of the
+        system; do not rely on the individual lines yet.
+    </p>
+</div>
+{% endif %}
 {% extends "base.html" %}
 
 {% block title %}Thai Language Register & Formality{% endblock %}

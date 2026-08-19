@@ -40,13 +40,6 @@ NOT_LEARNING_CONTENT = {
 NOT_BUILT_YET = {
     'greetings_wai': 'no route or template — never built',
     'classifiers': 'no route or template — never built',
-    # The odd one out: register.html is finished, but the nine levels it renders
-    # (REGISTER_LEVELS) were never written, in any commit. The route raised
-    # NameError for anyone who had unlocked it, and now redirects to Formality.
-    # Held back from the outline because a redirect is not a section, and this
-    # page is where we promise honestly what a subscription buys.
-    'register': 'template built, but its REGISTER_LEVELS data never was — '
-                '/register redirects to Formality until it is written',
 }
 
 # Display names. `require_access` knows the section id, not what a human calls
