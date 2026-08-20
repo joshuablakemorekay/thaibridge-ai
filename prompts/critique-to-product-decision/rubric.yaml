@@ -1,0 +1,51 @@
+# Evaluation rubric for: Critique to Product Decision
+
+prompt: critique-to-product-decision
+version: 1
+criteria:
+  - name: separates_valid_from_invalid
+    description: Concedes the parts of the criticism that hold and names the parts that do not, rather than defending or capitulating wholesale
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['is real', 'is valid', 'genuine', 'does hold', 'correct']) and any(s in output.lower() for s in ['wrong', 'not true', 'does not hold', 'factually'])"
+
+  - name: answers_for_the_product_not_the_argument
+    description: Says what the criticism does to the product, rather than rebutting the critic
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['product', 'paying', 'customer', 'segment', 'funnel'])"
+
+  - name: protects_the_differentiator
+    description: Does not recommend removing the Thai cultural material, which is the thing distinguishing the product
+    weight: 5
+    pass_condition: "not any(s in output.lower() for s in ['remove the thai culture', 'drop the thai culture', 'strip out the culture', 'cut the thai content'])"
+
+  - name: permits_no_change
+    description: Willing to recommend against a change, rather than finding improvements because improvements were requested
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in [\"don't\", 'do not', 'would not', 'no —', 'not worth', 'costs you nothing'])"
+
+  - name: places_change_in_an_existing_home
+    description: Any change proposed goes on a page that already does that job, rather than adding a new page, route or nav entry
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['existing page', 'existing section', 'not a new route', 'no new page', 'no new nav', '/theravada'])"
+
+  - name: bounded_scope
+    description: Proposes a change small enough to actually happen, with its cost named
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['one section', 'one line', 'one sentence', 'an hour', 'small'])"
+
+  - name: is_substantial
+    description: A real analysis, not a one-line verdict
+    weight: 2
+    pass_condition: "len(output.split()) >= 150"
+
+test_cases:
+  - input:
+      critique: "A friend argues Thai monks never help the poor, live off free food and cash envelopes, that Thais have forgotten Theravada came from India, and that they live in a Thai culture bubble"
+      question: "How would any of this affect the app as a product for making money and providing free teaching, and suggest improvements if any at all"
+    expected_traits:
+      - concedes the documented parts and names the parts that are factually wrong
+      - answers in terms of the product and its paying segment
+      - does not recommend removing the Thai cultural material
+      - is willing to recommend no change where none is needed
+      - places any proposed change on an existing page
+      - names the cost of the change it proposes

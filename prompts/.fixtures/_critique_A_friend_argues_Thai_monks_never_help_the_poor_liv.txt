@@ -1,0 +1,37 @@
+As a product, this criticism costs you nothing. As a use of your week, it has
+already cost two rounds of edits — and that is the finding worth acting on.
+
+Sorting the criticism. The corruption point is real and well documented:
+Thailand has had serious temple scandals and Thais complain about them loudly,
+so it is not a hidden truth. The charity claim is wrong. Temples run hospices,
+food distribution and flood shelters, and for centuries the village temple was
+the only school a poor rural boy could reach. It does not look like a church
+soup kitchen because the monastic rules forbid the mechanics — a monk may not
+handle money, store food, cook, or eat after midday — so the work runs through
+lay committees instead. The history is half right: Theravada reached Thailand
+mainly through Sri Lanka rather than directly from India.
+
+What it means for the product. The critic is not in the paying segment. He is
+not learning Thai, not visiting temples and not buying. Your paying customer is
+the opposite person: someone with a Thai partner, in-laws they cannot speak to,
+a visa run, a temple invitation they do not want to get wrong. For them the Thai
+cultural material is the product and the only thing separating it from Duolingo.
+Sanding it down to satisfy someone outside the funnel would remove the
+differentiator and gain nothing.
+
+The one real signal. Your Buddhist content presents the tradition only at its
+best, which to a sceptical adult reads as devotional material rather than
+teaching. That is a credibility gap and it is cheap to close.
+
+What I would actually do — one section, not a project. Add a short block to an
+existing page, /theravada, on how the tradition judges itself: the Vinaya sets
+the standard, monks may not handle money or store food, and when Thais are angry
+about a jet-owning abbot they are using Buddhism's own rule book to say so. Not
+a new route, not a new nav entry. It is real teaching content, it explains the
+shape of Thai monastic charity, and it answers the "this is a brochure" charge
+without ever mentioning the objection. Roughly an hour of work.
+
+What I would not do. Do not add a page criticising the Sangha — that is a
+different product and it earns nothing. Do not touch the free tier: free Dhamma
+is both the ethical core and the top of the funnel. And do not write another
+defensive paragraph; first-screen space is conversion space.
