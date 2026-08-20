@@ -123,4 +123,78 @@ Check the hero note on a phone. It is eleven sentences and sits between the
 headline and the buttons — the natural split, if it reads heavy, is keeping the
 first four sentences and moving the closing lines to `/dhamma-and-culture`.
 
-**Tags:** `content` `copywriting` `cultural-positioning` `human-authored`
+---
+
+## Round 2 — 2026-08-20, commits `064a055`, `016cc01`
+
+The section above ends by predicting this one:
+
+> Check the hero note on a phone. It is eleven sentences and sits between the
+> headline and the buttons — the natural split, if it reads heavy, is keeping
+> the first four sentences and moving the closing lines to
+> `/dhamma-and-culture`.
+
+The question that reopened it:
+
+> "Do you think I've overdone this? Consider the fact that my target audience is mainly English speaking expats in Thailand, tourists, students, English speakers and learners in general who are interested in Thai culture and language."
+
+An outside critique answered yes and proposed cutting the hero to 28 words:
+*"We teach the Dhamma as Thailand preserves it, because that's where the
+language lives."* Its recap said to drop "The Dhamma is Universal", move the
+rest to an About/FAQ page, and stop letting one critic write the front page.
+
+**Half of that was right.** The note stated one promise five times over — "no
+Thai needed", "not required", "without adopting any… at all", "on your own
+terms", "your own path" — and its closing line restated the strapline three
+lines above it. Two sentences said the same thing twice in heavier English than
+the audience reads comfortably.
+
+**The other half would have repeated round 1's failure exactly.** The proposed
+replacement says the site teaches the Dhamma *as Thailand preserves it*, and
+nothing else. The culturally neutral branch — the thing round 1 was entirely
+spent putting back — is absent from it. A second wording objection came within
+one edit of deleting the same commitment, for the second time, on grounds that
+had nothing to do with the commitment itself.
+
+What made it survivable was not judgement, and that is the point worth
+recording. `tests/test_dhamma_open_to_all.py` asserts the clause is present on
+the rendered page. **The commitment is guarded by a test rather than by
+whoever happens to be editing the file that day** — which is the only form of
+protection that survives a persuasive argument.
+
+### What the guard tests taught in passing
+
+The assertions match exact substrings of the *rendered HTML*, so wrapping a
+guarded phrase across two lines of the template fails them while the copy
+itself is perfectly correct. Two tests failed on the first attempt at this
+rewrite for exactly that reason. Either keep guarded phrases on one source
+line, or make the assertions whitespace-tolerant — but know which you have
+chosen, because a test that fails for a formatting reason trains people to
+ignore it.
+
+### Same round: the explainer's closing card
+
+`/dhamma-and-culture` still ended on *"Keep your own culture, take up part of
+another, or follow none at all"* — the wording round 1 rejected for the hero,
+still live at the bottom of the page that exists to explain the position. It
+now mirrors the hero. Two pages arguing the same case in different words is
+how a position drifts.
+
+## Engineering on the output — round 2
+
+- **Accepted as-is:** the tightened hero body, the `/dhamma-and-culture` FAQ
+  paragraph and the reworded closing card all shipped as drafted.
+
+- **Reworked, and why:** the author wrote the "Welcome to ThaiBridge AI"
+  opener himself, and restored the closing line *"Keep the Dhamma close to your
+  heart yet remain detached"* after the draft had cut it as the one instruction
+  in a passage otherwise about not instructing. His page, his call.
+
+- **Whose decisions these were:** the substantive calls in this round —
+  rejecting the 28-word hero, keeping the welcoming clause in the `/about`
+  note, and *not* adding a justification page — were the agent's
+  recommendations, which the author accepted. Recorded plainly, because an
+  archive that quietly credits every good call to the human is worth as little
+  as one that credits them all to the model.
+
+**Tags:** `content` `copywriting` `cultural-positioning` `human-authored` `guarded-by-tests`

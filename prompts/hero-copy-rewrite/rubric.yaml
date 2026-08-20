@@ -1,7 +1,7 @@
 # Evaluation rubric for: Hero Copy Rewrite
 
 prompt: hero-copy-rewrite
-version: 3
+version: 4
 criteria:
   - name: states_an_offer_not_a_structure
     description: Says what the visitor gets, rather than describing how the site is arranged
@@ -37,6 +37,16 @@ criteria:
     description: Presents studying through the culture AND practising apart from it as real alternatives
     weight: 4
     pass_condition: "' or ' in output.lower() and any(s in output.lower() for s in ['tradition', 'temples', 'heritage'])"
+
+  - name: states_the_promise_once
+    description: Does not restate "you do not have to take on Thai culture" five different ways; round 2 cut three of them
+    weight: 3
+    pass_condition: "sum(1 for s in ['no thai needed', 'not required', 'without adopting', 'on your own terms', 'your own path', 'choose your own path'] if s in output.lower()) <= 3"
+
+  - name: does_not_echo_the_strapline
+    description: The closing line must not restate the strapline sitting three lines above it in the h1
+    weight: 2
+    pass_condition: "not ('learn thai' in output.lower() and 'own path' in output.lower())"
 
   - name: is_substantial
     description: Real copy, not a one-line verdict
