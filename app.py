@@ -2840,6 +2840,7 @@ THERAVADA_TEACHINGS = {
         {
             'rule': 'Patimokkha',
             'thai': 'ปาฏิโมกข์',
+            'paiboon': 'bpaa-dtì-môok',
             'english': 'Monastic Code',
             'description': '227 rules for bhikkhus, 311 for bhikkhunis.',
             'significance': 'Recited fortnightly. Foundation of monastic discipline.'
@@ -2847,13 +2848,53 @@ THERAVADA_TEACHINGS = {
         {
             'rule': 'Four Parajikas',
             'thai': 'ปาราชิก',
+            'paiboon': 'bpaa-raa-chík',
             'english': 'Defeats (Expulsion Offenses)',
             'description': 'Sexual intercourse, theft, killing, false claims.',
             'significance': 'Breaking these results in automatic expulsion.'
         },
         {
+            'rule': 'Rupiya-sikkhapada',
+            'thai': 'รูปิยสิกขาบท',
+            'paiboon': 'ruu-bpì-yá sìk-khǎa-bòt',
+            'english': 'The Money Rule',
+            'description': 'Nissaggiya Pacittiya 18: a monk may not accept gold or '
+                           'silver — money — whether taken by his own hand, taken on '
+                           'his behalf, or set down nearby for him. The two rules '
+                           'following it forbid trading, and buying and selling.',
+            'significance': 'A monk who owns nothing can be given anything and keep '
+                            'none of it. Wealth in a monastery is always someone '
+                            'else’s responsibility, by design.'
+        },
+        {
+            'rule': 'Vikala-bhojana',
+            'thai': 'วิกาลโภชน์',
+            'paiboon': 'wí-gaan-lá-phôot',
+            'english': 'Eating at the Wrong Time',
+            'description': 'Pacittiya 37: no food from midday until dawn. Pacittiya 38 '
+                           'forbids eating food stored overnight, and Pacittiya 40 '
+                           'forbids putting into the mouth anything not formally '
+                           'offered that day.',
+            'significance': 'A monk cannot stockpile, cannot self-cater and cannot eat '
+                            'unless a layperson hands him food. He is made dependent '
+                            'on the village on purpose.'
+        },
+        {
+            'rule': 'Veyyavaccakara',
+            'thai': 'ไวยาวัจกร',
+            'paiboon': 'wai-yaa-wát-jà-gɔɔn',
+            'english': 'The Lay Steward',
+            'description': 'The Vinaya’s own solution to the money rule: a '
+                           'layperson nominated to hold funds and make purchases on '
+                           'the Sangha’s behalf. Every Thai temple has one, and '
+                           'Thai law recognises the role.',
+            'significance': 'This is how a community whose monks cannot touch money '
+                            'still runs schools, hospices and flood relief.'
+        },
+        {
             'rule': 'Kathina',
             'thai': 'กฐิน',
+            'paiboon': 'gà-tǐn',
             'english': 'Robe-Offering Ceremony',
             'description': 'Annual ceremony where lay supporters offer cloth.',
             'significance': 'Important merit-making opportunity.'

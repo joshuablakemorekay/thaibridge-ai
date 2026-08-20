@@ -370,7 +370,10 @@
 {% for rule in teachings.key_vinaya %}
 <div class="card vinaya-card">
     <h3 style="margin-bottom: 0.25rem;">{{ rule.rule }}</h3>
-    <p class="thai-text" style="margin-bottom: 0.5rem;">{{ rule.thai }}</p>
+    <p class="thai-text" style="margin-bottom: 0.25rem;">{{ rule.thai }}</p>
+    {% if rule.paiboon %}
+    <p class="paiboon" style="margin-bottom: 0.5rem;">{{ rule.paiboon }}</p>
+    {% endif %}
     <p style="font-weight: bold; color: var(--royal-purple);">{{ rule.english }}</p>
     
     <p style="margin: 1rem 0; line-height: 1.8;">{{ rule.description }}</p>
@@ -381,6 +384,39 @@
     </div>
 </div>
 {% endfor %}
+
+<!-- The rules above are the standard the tradition sets itself. Saying so
+     plainly is what stops this page reading as a brochure — and it is also
+     the honest answer to "why doesn't Thai monastic charity look like a
+     church soup kitchen": most of the mechanics are closed to a monk. -->
+<div class="card vinaya-card">
+    <h3 style="margin-bottom: 0.75rem;">How the tradition judges itself</h3>
+    <p style="line-height: 1.8;">
+        These rules are not decoration, and they are not only read by monks. When a
+        Thai newspaper runs a story about an abbot with a private jet, or a
+        temple&#39;s donations going missing, the standard being used to judge it
+        comes from this same book &mdash; the monk was never supposed to be able to
+        own the money in the first place. Criticism of the Sangha in Thailand is
+        loud, ordinary, and mostly made by Buddhists.
+    </p>
+    <p style="line-height: 1.8;">
+        The rules also explain why Thai monastic charity does not look like a church
+        soup kitchen. A monk cannot handle money, store food, cook, dig the ground,
+        or eat after midday. Nearly every practical task a charity performs is closed
+        to him personally &mdash; so it runs through the temple instead. The
+        <span class="thai-text" lang="th">ไวยาวัจกร</span> and the temple committee
+        hold the funds and do the buying, and the temple becomes the place it
+        happens: flood shelter, food distribution, hospice care, and for centuries
+        the village school, which for a poor rural boy was the only route to literacy
+        there was.
+    </p>
+    <p style="line-height: 1.8; margin-bottom: 0;">
+        And the alms round is not a free lunch. It is an exchange the rules
+        deliberately tilt against the monk: he owns nothing, may not ask for
+        anything, may not keep anything overnight, and has to stand in front of the
+        village every morning in order to eat at all. The dependence is the teaching.
+    </p>
+</div>
 
     </div>
 </div>
