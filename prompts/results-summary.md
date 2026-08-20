@@ -1,6 +1,6 @@
 # Eval Results Summary
 
-_Generated: 2026-08-19 21:02 UTC_
+_Generated: 2026-08-20 09:36 UTC_
 
 | Prompt | Cases | Avg Score | Status |
 |---|---|---|---|
@@ -10,6 +10,7 @@ _Generated: 2026-08-19 21:02 UTC_
 | `chanting-book-batch` | 1 | 100.0% | ✅ pass |
 | `chanting-book-entry` | 1 | 100.0% | ✅ pass |
 | `claude-code-workflow` | 1 | 100.0% | ✅ pass |
+| `critique-to-product-decision` | 1 | 100.0% | ✅ pass |
 | `dhamma-ai-allowance` | 1 | 100.0% | ✅ pass |
 | `free-tier-review` | 1 | 100.0% | ✅ pass |
 | `frontend-build` | 1 | 100.0% | ✅ pass |

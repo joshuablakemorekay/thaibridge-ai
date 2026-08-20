@@ -30,7 +30,8 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`dhamma-ai-allowance`](./dhamma-ai-allowance/) | analysis | Checks a principle stated in a code comment against the gate that actually runs — found the Thai tutor could exhaust the Dhamma's free questions | Yes (v1 finding → v2 fix) |
 | [`survival-thai`](./survival-thai/) | content | Builds a free, finishable starter section — and decides where it belongs first, which is what stopped it landing on a paid, alphabet-gated page | Yes (v1 → v3 findability) |
 | [`alphabet-gate-audit`](./alphabet-gate-audit/) | analysis | Answers whether the alphabet should be free, then asks the harder question underneath — is the prerequisite drawn in the right place? | Yes (v1 answer → v2 breadth) |
-| [`hero-copy-rewrite`](./hero-copy-rewrite/) | content | Rewrites the home page hero from a description of the site's structure into a promise — and records the three AI wordings that were rejected before the author wrote the final copy himself | Yes (v1 → v3, author-written) |
+| [`hero-copy-rewrite`](./hero-copy-rewrite/) | content | Rewrites the home page hero from a description of the site's structure into a promise — and records the three AI wordings that were rejected before the author wrote the final copy himself, then a second round where a tightening nearly deleted the same commitment again | Yes (v1 → v4, author-written) |
+| [`critique-to-product-decision`](./critique-to-product-decision/) | analysis | Turns a hostile critique into a product decision instead of defensive copy — one section added, and one change explicitly refused | No (single version) |
 
 ## Featured iterations
 
@@ -51,6 +52,27 @@ no culture at all" was allowed to delete the *option* it described, dropping the
 culturally-neutral path from the front page entirely. It took a direct question
 to catch it. Every constraint in the v3 prompt was discovered by rejecting a
 draft rather than stated up front.
+
+**Round 2 is why the entry is still worth reading.** A later critique called the
+hero overdone — correctly; it stated one promise five times — and proposed a
+28-word replacement that quietly dropped the culturally-neutral branch all over
+again. The same commitment came within one edit of being deleted twice, both
+times by an argument about wording rather than about the commitment. What caught
+it the second time was not judgement but `tests/test_dhamma_open_to_all.py`,
+which asserts the clause is on the rendered page. **A position that matters
+should be guarded by a test, not by whoever is editing the file that day.**
+
+### [`critique-to-product-decision`](./critique-to-product-decision/)
+
+The entry where the recommendation was **to change almost nothing** — which is
+the hardest answer to get out of an assistant, and the reason the prompt is
+worth copying. It asks what a criticism does to *the product*, names both things
+the product exists for, and ends *"if any at all"*: explicit permission to say
+no. Without that clause, anything asked for improvements will find some.
+
+One change survived the sort, and it was not the one the critic thought was his
+best point. One change was considered and refused, and the refusal is written
+down with its reasoning — which is the part most archives leave out.
 
 ### [`market-research-report`](./market-research-report/)
 

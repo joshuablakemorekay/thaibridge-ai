@@ -7,7 +7,21 @@ Each entry follows this format:
 
 ---
 
+## critique-to-product-decision
+
+### 2026-08-20 — v1
+**Change:** First version. Asks what a hostile critique of Thai Buddhism does to the app *as a product* — for both revenue and free teaching — rather than whether the critique is correct, and ends "suggest any improvements I could make if any at all".
+**Reason:** The two previous rounds had both ended in defensive front-page copy answering the same person, neither of which made the app better at teaching Thai or at earning. Asking for the product consequence separates "is this argument right?" from "should this change what I ship?".
+**Impact:** Most of the critique changed nothing — the critic is not in the paying segment, and removing the Thai cultural material would cost the differentiator. One part survived: the Buddhist content presented the tradition only at its best. `d91a06a` added three Vinaya rules to `/theravada` (the money rule, eating at the wrong time, and the ไวยาวัจกร lay steward) with a note on how the tradition judges itself. `1e77b07` added a pedagogy line to `/dhamma-and-culture`. A justification page for the app's Thai focus was considered and **refused** — the position was already made three times over, and a fourth would have been the third piece of defensive copy in a week.
+
+---
+
 ## hero-copy-rewrite
+
+### 2026-08-20 — v3 → v4
+**Change:** Tightened the hero from roughly 125 words to 95, and added two rubric criteria for what the round found: `states_the_promise_once` and `does_not_echo_the_strapline`.
+**Reason:** An outside critique called the note overdone and was half right — it stated "you don't have to take on Thai culture" five separate ways, and its closing line restated the strapline three lines above it. The other half of that critique proposed a 28-word replacement that dropped the culturally-neutral branch, which is the exact commitment round 1 was spent restoring.
+**Impact:** `064a055` shipped the tightened hero with both branches intact; `016cc01` brought `/dhamma-and-culture`'s closing card into line, since it still carried the wording round 1 rejected. The recorded lesson: the commitment survived because `tests/test_dhamma_open_to_all.py` asserts it, not because anyone remembered it. Also found that those assertions match exact substrings of the rendered HTML, so wrapping a guarded phrase across two template lines fails a test the copy has not actually broken.
 
 ### 2026-08-19 — v1 → v3
 **Change:** First version was a one-line critique of the live hero — *"This doesn't sound very convincing."* v2 added the cultural-freedom line and had three proposed wordings rejected in turn. v3 is the author's own text, with the constraints that killed each rejected draft written back into the prompt.
