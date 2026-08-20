@@ -2914,3 +2914,105 @@ Being right about the wording is not the same as being right about the change.
 
 - *Roughly how much was accepted as-is vs engineered on:* The layout and CSS
   shipped as-is. The copy is entirely mine.
+
+---
+
+## 20 August 2026 — When the criticism is right and the fix is wrong
+
+A friend of mine, Chris, has been giving me both barrels about this app — that
+it's one-sided, that Thai monks take money and do nothing for the poor, that
+Thais live in a cultural bubble, and that I should stop pushing Thai culture at
+English speakers. I'd already rewritten my home page hero once because of him,
+and my `/about` note once. This session I nearly did it a third time.
+
+I asked an AI whether my hero was overdone:
+
+> "Do you think I've overdone this? Consider the fact that my target audience is mainly English speaking expats in Thailand, tourists, students, English speakers and learners in general who are interested in Thai culture and language."
+
+It said yes, and it was right. I'd said "you don't have to take on Thai culture"
+five different ways in one paragraph, and my last line just repeated my own
+strapline three lines above it. That's a fair hit.
+
+But the 28-word replacement it suggested quietly dropped the bit that says you
+can practise the Dhamma **without** taking on any culture at all — the exact
+thing I'd spent the whole of the previous session putting back in. Second time
+that's nearly happened, both times because someone had a problem with the
+*wording* and the *commitment* went out with it.
+
+**What I learned:** the thing that saved it wasn't me remembering. It was the
+guard tests I wrote last time, which check that the phrase is actually on the
+page. A position I care about now survives an argument I might lose. I'd also
+never thought about the flip side — two of those tests failed on the first
+attempt because the copy was fine but the sentence had wrapped across two lines
+in the template, and the test matches an exact string. A test that fails for a
+formatting reason teaches you to ignore it, so that's worth fixing properly.
+
+### Turning the criticism into a product decision instead of more copy
+
+Then I asked a different question, and it was the better one:
+
+> "Now take what Chris said and Claude's response then tell me how any of this would affect the app as a product for making money and providing free teaching."
+
+The honest answer was: almost none of it. Chris isn't going to buy this. The
+people who pay have a Thai partner, in-laws they can't talk to, a temple visit
+they don't want to get wrong — for them the Thai culture *is* the product, and
+it's the only thing that isn't Duolingo.
+
+But one part did land, and it wasn't the part Chris thought was his best. My
+Buddhist pages only ever showed the tradition at its best, which reads like a
+brochure to anyone sceptical. So I put the Vinaya rules on `/theravada` that
+actually explain things: monks can't handle money, can't store food, can't cook
+— which is why Thai temple charity runs through a **ไวยาวัจกร**, a lay steward,
+instead of the monk. And a short note saying that when Thais are furious about
+an abbot with a private jet, they're using Buddhism's own rule book to say so.
+
+Chris's best line was *"do you think if Buddha was alive today, that he would
+approve of this behaviour?"* — and it answers itself. The Buddha wrote those
+rules. Putting them on the page was a better answer than arguing.
+
+### The change I decided not to make
+
+I asked whether I should justify the app being focused on Thai culture at all.
+The answer was no, and I agreed with it. I've already explained my position on a
+whole page, in the hero, and in four subject doors that let you skip the culture
+completely. A fourth explanation would have been my third piece of defensive
+copy in a week. What went in instead was one line of *pedagogy*: Thai pronouns
+change with who you're speaking to, the politeness levels I teach are hierarchy
+built into the grammar, and a lot of formal vocabulary is Pali and Sanskrit that
+came in with Buddhism. Strip the culture out and you're teaching a Thai nobody
+speaks.
+
+**What I learned:** the more paragraphs you spend proving you're not pushing
+something, the more it sounds like something people need protecting from.
+Confidence reads as neutral; over-explaining reads as guilty.
+
+**Engineering Contribution**
+
+- *Decisions made:* Took the half of the critique that was right (the hero
+  repeated itself) and refused the half that would have deleted the
+  culturally-neutral branch for the second time. Kept the "welcoming those who
+  come to live, work or travel" clause in my `/about` note when I was advised to
+  cut it — it's the counterweight to the hardest passage above it, and cutting
+  it would have left the section ending on that. Refused to add a page
+  justifying the app's Thai focus. Full record in
+  [`prompts/critique-to-product-decision/REASONING.md`](prompts/critique-to-product-decision/REASONING.md)
+  and the round-2 section of
+  [`prompts/hero-copy-rewrite/REASONING.md`](prompts/hero-copy-rewrite/REASONING.md).
+
+- *Improvements made to generated code:* Added Paiboon romanisation to the whole
+  Vinaya section, not just the three new cards — drafted without it, it would
+  have been the one part of the site a learner couldn't read aloud. Put the new
+  material in the `/theravada` section that already existed rather than a new
+  page. Brought `/dhamma-and-culture`'s closing card into line with the hero,
+  since it still carried wording I'd rejected weeks earlier. Added two rubric
+  criteria for what this round found — one that fails copy repeating the same
+  promise more than three times, one that fails a hero echoing its own
+  strapline.
+
+- *Roughly how much was accepted as-is vs engineered on:* Less mine than last
+  time, and I'd rather say so. The Vinaya section, the FAQ line and the closing
+  card all shipped as drafted. I wrote the "Welcome to ThaiBridge AI" opener
+  myself and put back "Keep the Dhamma close to your heart yet remain detached"
+  after it had been cut. The substantive calls — reject the short hero, keep the
+  welcoming clause, don't add a justification page — were recommendations I
+  accepted rather than decisions I reached on my own.
