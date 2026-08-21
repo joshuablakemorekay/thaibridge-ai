@@ -721,7 +721,7 @@ PRO_FAIR_USE_DAILY = 150
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
     'free': {
-        'name': 'Free Explorer (Free)',
+        'name': 'FREE Explorer (FREE)',
         'price': 0,
         'features': [
             '✓ Thai alphabet — chart, flashcards & quiz',
@@ -740,7 +740,7 @@ SUBSCRIPTION_TIERS = {
         'name': 'Thai Reader (Basic)',
         'price': 9.99,
         'features': [
-            '✓ Everything in Free',
+            '✓ Everything in FREE',
             '✓ Vowels, syllables & Read & Write Script',
             '✓ Tones & consonant classes',
             '✓ Vocabulary, grammar & lessons',

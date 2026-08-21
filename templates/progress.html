@@ -60,7 +60,7 @@
                real status — free, in full — instead of a plan name and an upgrade
                button for a tier they never need to buy. #}
             {% if monk_mode %}
-            <h3><span class="monk-free">Free</span> 🧡</h3>
+            <h3><span class="monk-free">FREE</span> 🧡</h3>
             <p class="expires">Monk Mode — every section free of charge</p>
             {% else %}
             <h3>{{ subscription_tiers[user.subscription_tier].name }}</h3>
@@ -129,7 +129,7 @@
                 <h3>{{ section.name }}</h3>
                 {# Monk Mode waives payment, so show "Free" rather than a plan
                    name a monastic will never be charged for. #}
-                <p>Level {{ section.level_required }} • {% if monk_mode %}<span class="monk-free">Free</span> <span title="Free while Monk Mode is on">🧡</span>{% else %}{{ subscription_tiers[section.tier_required].name }}{% endif %}</p>
+                <p>Level {{ section.level_required }} • {% if monk_mode %}<span class="monk-free">FREE</span> <span title="Free while Monk Mode is on">🧡</span>{% else %}{{ subscription_tiers[section.tier_required].name }}{% endif %}</p>
                 <span class="reward">+{{ section.points_reward }} XP</span>
                 {% if section.unlocked %}
                 <span class="badge unlocked">✓ Unlocked</span>

@@ -21,7 +21,7 @@
                    name a monastic will never be charged for. This section is
                    gated by progress alone. #}
                 {% if monk_mode %}
-                <li><strong>Subscription:</strong> <span class="monk-free">Free</span> <span title="Free while Monk Mode is on">🧡</span> — no payment needed, just reach the level</li>
+                <li><strong>Subscription:</strong> <span class="monk-free">FREE</span> <span title="Free while Monk Mode is on">🧡</span> — no payment needed, just reach the level</li>
                 {% elif requirements.tier != 'free' %}
                 <li><strong>Subscription:</strong> {{ requirements.tier|title }}</li>
                 {% endif %}
@@ -46,7 +46,7 @@
                        honest label — showing their real tier reads like they're on
                        the bottom rung and owe an upgrade. #}
                     {% if monk_mode %}
-                    <span class="value monk-free">Free (Monk Mode)</span>
+                    <span class="value monk-free">FREE (Monk Mode)</span>
                     {% else %}
                     <span class="value">{{ user_progress.subscription_tier|title }}</span>
                     {% endif %}
@@ -75,7 +75,7 @@
             {% else %}
             {# Deliberately account-gated: an unlock kept in a cookie is one that
                clearing cookies mints again. #}
-            <p><a href="/signup" class="btn btn-gold">Create a free account to claim it</a></p>
+            <p><a href="/signup" class="btn btn-gold">Create a FREE account to claim it</a></p>
             {% endif %}
         </div>
         {% endif %}
