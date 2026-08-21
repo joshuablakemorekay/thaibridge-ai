@@ -19956,7 +19956,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 58; the rest is not in the app yet.
         # ‼ CHECK [IMG_0335.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Three
         #   rows are printed under the บทขัด heading and the sheet runs out;
         #   verse 3 ends with no full stop and the sentence is unfinished. It
@@ -20608,6 +20607,404 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'And how was wisdom well proclaimed by the Blessed One in the lower exposition?',
+            },
+            # ‼ CHECK [IMG_0339.PNG]: THE PAGE IS PROSE, AND THAT WAS
+            #   MEASURED. The ink profile across the measure runs unbroken
+            #   from x 240 to x 1720 with no empty column band anywhere, so
+            #   there is no gutter and no two-column setting. Three
+            #   paragraphs, twenty printed lines. Every group carries
+            #   para_layout 'prose' explicitly because this chant's own layout
+            #   is 'lines'.
+            # ‼ CHECK [IMG_0339.PNG]: THIS PARAGRAPH BEGAN ON PAGE 74 AND IS
+            #   NOT INDENTED HERE. The first line of page 75 starts hard at
+            #   the left margin, unlike the two paragraphs below it, which
+            #   confirms it continues verse 58's paragraph rather than opening
+            #   a new one. That is why verse 59 has para_layout but no
+            #   para_start.
+            {
+                'number': 59,
+                'page': 75,
+                'para_layout': 'prose',
+                'pali': 'อิธะ อะริยะสาวะโก ปัญญะวา โหติ,',
+                'pali_roman': 'Idha ariyasāvako paññavā hoti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here a noble disciple is wise,',
+            },
+            {
+                'number': 60,
+                'pali': 'อุทะยัตถะคามินิยา ปัญญายะ สะมันนาคะโต,',
+                'pali_roman': 'Udayatthagāminiyā paññāya samannāgato,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'endowed with the wisdom that reaches to rise and fall,',
+            },
+            # ‼ CHECK [IMG_0339.PNG]: THE PAGE ANSWERS WHAT PAGE 74 ASKED, and
+            #   the answer is what the shape of the passage predicted: wisdom
+            #   by the lower exposition, then verse 63 asks and verses 64 to
+            #   67 answer it by the higher. Read as printed, not written to
+            #   fit the pattern — but the pattern agreeing is worth recording.
+            {
+                'number': 61,
+                'pali': 'อะริยายะ นิพเพธิกายะ สัมมาทุกขักขะยะคามินิยาติ.',
+                'pali_roman': 'Ariyāya nibbedhikāya sammādukkhakkhayagāminiyā ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the noble penetrative wisdom that leads to the complete destruction of suffering.',
+            },
+            {
+                'number': 62,
+                'pali': 'เอวัง โข เหฏฐิเมนะ ปะริยาเยนะ ปัญญา สัมมะทักขาตา ภะคะวะตา.',
+                'pali_roman': 'Evaṃ kho heṭṭhimena pariyāyena paññā sammadakkhātā bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus, by the lower exposition, wisdom was well proclaimed by the Blessed One.',
+            },
+            {
+                'number': 63,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'กะถัญจะ อุปะริเมนะ ปะริยาเยนะ ปัญญา สัมมะทักขาตา ภะคะวะตา,',
+                'pali_roman': 'Kathañca uparimena pariyāyena paññā sammadakkhātā bhagavatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how was wisdom well proclaimed by the Blessed One by the higher exposition?',
+            },
+            {
+                'number': 64,
+                'pali': 'อิธะ ภิกขุ อิทัง ทุกขันติ ยะถาภูตัง ปะชานาติ,',
+                'pali_roman': 'Idha bhikkhu idaṃ dukkhan ti yathābhūtaṃ pajānāti,',
+                'thai': '',
+                'paiboon': '',
+                'english': "Here a bhikkhu understands as it really is: 'This is suffering';",
+            },
+            {
+                'number': 65,
+                'pali': 'อะยัง ทุกขะสะมุทะโยติ ยะถาภูตัง ปะชานาติ,',
+                'pali_roman': 'Ayaṃ dukkhasamudayo ti yathābhūtaṃ pajānāti,',
+                'thai': '',
+                'paiboon': '',
+                'english': "he understands as it really is: 'This is the origin of suffering';",
+            },
+            {
+                'number': 66,
+                'pali': 'อะยัง ทุกขะนิโรโธติ ยะถาภูตัง ปะชานาติ,',
+                'pali_roman': 'Ayaṃ dukkhanirodho ti yathābhūtaṃ pajānāti,',
+                'thai': '',
+                'paiboon': '',
+                'english': "he understands as it really is: 'This is the cessation of suffering';",
+            },
+            # ‼ CHECK [IMG_0339.PNG]: ปะชานาตีติ carries the quotative ติ
+            #   closing the fourth truth, where verses 64 to 66 end plainly
+            #   ปะชานาติ,. Read at 3x. The English marks the four truths with
+            #   quotation marks the book does not print — that is the English
+            #   doing what the ติ does in the Pali.
+            {
+                'number': 67,
+                'pali': 'อะยัง ทุกขะนิโรธะคามินี ปะฏิปะทาติ ยะถาภูตัง ปะชานาตีติ.',
+                'pali_roman': 'Ayaṃ dukkhanirodhagāminī paṭipadā ti yathābhūtaṃ pajānātī ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "he understands as it really is: 'This is the way leading to the cessation of suffering'.",
+            },
+            {
+                'number': 68,
+                'pali': 'เอวัง โข อุปะริเมนะ ปะริยาเยนะ ปัญญา สัมมะทักขาตา ภะคะวะตา.',
+                'pali_roman': 'Evaṃ kho uparimena pariyāyena paññā sammadakkhātā bhagavatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus, by the higher exposition, wisdom was well proclaimed by the Blessed One.',
+            },
+            {
+                'number': 69,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สีละปะริภาวิโต สะมาธิ มะหัปผะโล โหติ มะหานิสังโส,',
+                'pali_roman': 'Sīlaparibhāvito samādhi mahapphalo hoti mahānisaṃso,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Concentration steeped in virtue is of great fruit and great benefit;',
+            },
+            {
+                'number': 70,
+                'pali': 'สะมาธิปะริภาวิตา ปัญญา มะหัปผะลา โหติ มะหานิสังสา,',
+                'pali_roman': 'Samādhiparibhāvitā paññā mahapphalā hoti mahānisaṃsā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'wisdom steeped in concentration is of great fruit and great benefit;',
+            },
+            {
+                'number': 71,
+                'pali': 'ปัญญาปะริภาวิตัง จิตตัง สัมมะเทวะ อาสะเวหิ วิมุจจะติ.',
+                'pali_roman': 'Paññāparibhāvitaṃ cittaṃ sammadeva āsavehi vimuccati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the mind steeped in wisdom is rightly released from the taints.',
+            },
+            {
+                'number': 72,
+                'pali': 'เสยยะถีทัง กามาสะวา ภะวาสะวา อะวิชชาสะวา.',
+                'pali_roman': 'Seyyathīdaṃ kāmāsavā bhavāsavā avijjāsavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That is to say: from the taint of sensuality, the taint of being, and the taint of ignorance.',
+            },
+            {
+                'number': 73,
+                'pali': 'ภาสิตา โข ปะนะ ภะคะวะตา ปะรินิพพานะสะมะเย อะยัง ปัจฉิมะวาจา,',
+                'pali_roman': 'Bhāsitā kho pana bhagavatā parinibbānasamaye ayaṃ pacchimavācā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And these last words were spoken by the Blessed One at the time of his final Nibbāna:',
+            },
+            {
+                'number': 74,
+                'pali': 'หันทะทานิ ภิกขะเว อามันตะยามิ โว,',
+                'pali_roman': 'Handadāni bhikkhave āmantayāmi vo,',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Come now, bhikkhus, I address you:",
+            },
+            {
+                'number': 75,
+                'pali': 'วะยะธัมมา สังขารา อัปปะมาเทนะ สัมปาเทถาติ.',
+                'pali_roman': 'Vayadhammā saṅkhārā appamādena sampādethā ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "all formations are subject to decay — bring about your welfare with diligence.'",
+            },
+            # ‼ CHECK [IMG_0339.PNG]: ปะทะชาตานิ, and the whole
+            #   elephant's-footprint simile, are quoted from the Buddha inside
+            #   this passage. ภาสิตัญจิทัง ภะคะวะตา opens the quotation and it
+            #   runs to อัคคะมักขายะตีติ. at verse 81. The English marks the
+            #   span with quotation marks the book does not print.
+            {
+                'number': 76,
+                'pali': 'ภาสิตัญจิทัง ภะคะวะตา เสยยะถาปิ ภิกขะเว ยานิ กานิจิ ชังคะลานัง ปาณานัง ปะทะชาตานิ,',
+                'pali_roman': 'Bhāsitañcidaṃ bhagavatā seyyathāpi bhikkhave yāni kānici jaṅgalānaṃ pāṇānaṃ padajātāni,',
+                'thai': '',
+                'paiboon': '',
+                'english': "And this too was spoken by the Blessed One: 'Just as, bhikkhus, whatever footprints there are of creatures that walk,",
+            },
+            {
+                'number': 77,
+                'pali': 'สัพพานิ ตานิ หัตถิปะเท สะโมธานัง คัจฉันติ,',
+                'pali_roman': 'Sabbāni tāni hatthipade samodhānaṃ gacchanti,',
+                'thai': '',
+                'paiboon': '',
+                'english': "all of them are contained within the elephant's footprint,",
+            },
+            {
+                'number': 78,
+                'pali': 'หัตถิปะทัง เตสัง อัคคะมักขายะติ,',
+                'pali_roman': 'Hatthipadaṃ tesaṃ aggamakkhāyati,',
+                'thai': '',
+                'paiboon': '',
+                'english': "and the elephant's footprint is declared the chief of them,",
+            },
+            {
+                'number': 79,
+                'pali': 'ยะทิทัง มะหันตัตเตนะ.',
+                'pali_roman': 'Yadidaṃ mahantattena.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that is, by reason of its size;',
+            },
+            {
+                'number': 80,
+                'pali': 'เอวะเมวะ โข ภิกขะเว เย เกจิ กุสะลา ธัมมา สัพเพ เต อัปปะมาทะมูละกา อัปปะมาทะสะโมสะระณา,',
+                'pali_roman': 'Evameva kho bhikkhave ye keci kusalā dhammā sabbe te appamādamūlakā appamādasamosaraṇā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'just so, bhikkhus, whatever wholesome states there are, all of them are rooted in diligence and meet together in diligence,',
+            },
+            {
+                'number': 81,
+                'pali': 'อัปปะมาโท เตสัง อัคคะมักขายะตีติ.',
+                'pali_roman': 'Appamādo tesaṃ aggamakkhāyatī ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "and diligence is declared the chief of them.'",
+            },
+            # ‼ CHECK [IMG_0339.PNG]: ตัส์มา CARRIES THE SMALL MARK OVER THE
+            #   ส, and at 5x on an isolated crop it is the ε-shaped curl with
+            #   a tail — the same shape page 60 read on ท์วายะ, so it is
+            #   recorded as ์ (U+0E4C) like everything else in this stretch.
+            #   This is the class of mark still waiting on the physical book:
+            #   one answer settles ส์วากขาโต, กัล์ยาโณ and every other word in
+            #   it at once.
+            {
+                'number': 82,
+                'pali': 'ตัส์มาติหัมเหหิ สิกขิตัพพัง ติพพาเปกขา ภะวิสสามะ,',
+                'pali_roman': 'Tasmātihamhehi sikkhitabbaṃ tibbāpekkhā bhavissāma,',
+                'thai': '',
+                'paiboon': '',
+                'english': "Therefore we should train ourselves thus: 'We will be keenly intent",
+            },
+            # ‼ CHECK [IMG_0339.PNG]: THE THREE TRAININGS ARE POINTED
+            #   UNEVENLY. The page prints อะธิสีละสิกขาสะมาทาเน
+            #   อะธิจิตตะสิกขาสะมาทาเน, with NO comma between the first two
+            #   and a comma after the second, then อะธิปัญญาสิกขาสะมาทาเน,
+            #   with its own. Read at 4x across the whole line. Standard
+            #   editions comma all three. Reproduced exactly as printed, which
+            #   is why verse 83 holds two of the trainings and verse 84 holds
+            #   one.
+            {
+                'number': 83,
+                'pali': 'อะธิสีละสิกขาสะมาทาเน อะธิจิตตะสิกขาสะมาทาเน,',
+                'pali_roman': 'Adhisīlasikkhāsamādāne adhicittasikkhāsamādāne,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'on undertaking the training in the higher virtue, on undertaking the training in the higher mind,',
+            },
+            {
+                'number': 84,
+                'pali': 'อะธิปัญญาสิกขาสะมาทาเน,',
+                'pali_roman': 'Adhipaññāsikkhāsamādāne,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'on undertaking the training in the higher wisdom;',
+            },
+            # ‼ CHECK [IMG_0339.PNG]: THE CHANT ENDS HERE and the ‼ CONTINUES
+            #   marker page 74 left on it comes off. เอวัญหิ โน สิกขิตัพพัง.
+            #   closes the passage with a full stop, and what follows on the
+            #   sheet is the centred bold title of the next chant, not more of
+            #   this one. No colophon (จบ…) is printed under it, so no closing
+            #   key is written — the same as pages 64 and 65, where one was
+            #   left off rather than composed.
+            {
+                'number': 85,
+                'pali': 'อัปปะมาเทนะ สัมปาเทสสามาติ เอวัญหิ โน สิกขิตัพพัง.',
+                'pali_roman': 'Appamādena sampādessāmā ti evañhi no sikkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "we will bring about our welfare with diligence' — thus indeed should we train ourselves.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0339.PNG]: THE ฬ/พ HAZARD, ON A TITLE, AND THIS ONE
+        #   MUST BE SETTLED FROM THE BOOK. The title prints ในวันอาสาพหบูชา
+        #   and verse 6 prints อาสาพ์หะปุณณะมิยัง — both with พ where standard
+        #   Thai and standard Pali have ฬ (อาสาฬหบูชา, āsāḷha). Read at 6x on
+        #   the bold title and at 10x on the body word: the letter has two
+        #   humps and NO tall ascender, which is the one test page 71
+        #   established can tell the two apart, and the ์ mark above it sits
+        #   in clear space where an ascender would be. So it is recorded as พ.
+        #   BUT the photo map's standing warning is that these photographs
+        #   have been wrong about exactly this letter twice before, against
+        #   Josh's own reading from the book, so this is a reading and not a
+        #   verdict. It matters more than the usual case because it is in the
+        #   TITLE of the chant.
+        # ‼ CHECK [IMG_0339.PNG]: title_roman ROMANISES THE SPOKEN NAME OF THE
+        #   DAY, aa-sǎan-hà-buu-chaa, not the printed letters. Paiboon+ is a
+        #   pronunciation system and this field exists so a non-Thai reader
+        #   can find the chant, and the day is said aa-sǎan-hà-buu-chaa
+        #   whatever the compositor set. Every other word of it matches the
+        #   three sibling titles character for character. Settle the ฬ/พ
+        #   question above and this follows from it.
+        # ‼ CHECK [IMG_0339.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, with no Thai translation anywhere on the
+        #   page, so thai and paiboon are empty on every verse and the English
+        #   is a working translation made for this edition — except verses 1
+        #   to 3, which are copied from the Visākha printing already in the
+        #   app.
+        'id': 'kham-tawai-dokmai-thup-thian-asalha',
+        'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันอาสาพหบูชา',
+        'title_pali': '',
+        'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan aa-sǎan-hà-buu-chaa',
+        'title_english': 'The Words for Offering Flowers, Incense and Candles on Āsāḷha Pūjā Day',
+        'page_start': 75,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 75,
+                'pali': 'ยะมัมหะ โข มะยัง ภะคะวันตัง สะระณัง คะตา,',
+                'pali_roman': 'Yamamha kho mayaṃ bhagavantaṃ saraṇaṃ gatā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That Blessed One to whom we have gone for refuge,',
+            },
+            {
+                'number': 2,
+                'pali': 'โย โน ภะคะวา สัตถา,',
+                'pali_roman': 'Yo no bhagavā satthā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who is our Teacher, the Blessed One,',
+            },
+            {
+                'number': 3,
+                'pali': 'ยัสสะ จะ มะยัง ภะคะวะโต ธัมมัง โรเจมะ,',
+                'pali_roman': 'Yassa ca mayaṃ bhagavato dhammaṃ rocema,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and in whose Dhamma we delight —',
+            },
+            # ‼ CHECK [IMG_0339.PNG]: THIS IS NOT A REPEAT OF THE VISĀKHA OR
+            #   AṬṬHAMĪ OFFERING, and verse 4 is where it parts from them.
+            #   Verses 1 to 3 are word for word the Visākha printing's verses
+            #   1 to 3, and their English is taken from it rather than
+            #   rewritten. Verse 4 then reads อะโหสิ โข โส ภะคะวา อะระหัง
+            #   สัมมาสัมพุทโธ, where the twin has อะโหสิ โข โส ภะคะวา,
+            #   followed by มัชฌิเมสุ — so this printing turns to the first
+            #   sermon at Bārāṇasī where the twins turn to the Buddha's birth.
+            #   Set in full as its own chant, like the Māgha one was.
+            {
+                'number': 4,
+                'pali': 'อะโหสิ โข โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Ahosi kho so bhagavā arahaṃ sammāsambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that Blessed One was worthy, fully enlightened by himself,',
+            },
+            # ‼ CHECK [IMG_0339.PNG]: ปฏิจจะ IS PRINTED WITHOUT THE ะ AFTER
+            #   THE ป, where this book's usual style is ปะฏิจจะ. Read at 8x on
+            #   an isolated crop: ป and ฏิ sit directly together with no vowel
+            #   between them. Reproduced as printed; the transliteration is
+            #   paṭicca either way, since the ะ is orthography rather than a
+            #   different word.
+            {
+                'number': 5,
+                'pali': 'สัตเตสุ การุญญัง ปฏิจจะ กะรุณายะโก หิเตสี อะนุกัมปัง อุปาทายะ,',
+                'pali_roman': 'Sattesu kāruññaṃ paṭicca karuṇāyako hitesī anukampaṃ upādāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and out of compassion for beings, being merciful, a seeker of their welfare, and taking up sympathy,',
+            },
+            # ‼ CHECK [IMG_0339.PNG]: อาสาพ์หะ IS TRANSLITERATED FAITHFULLY AS
+            #   āsābha, NOT CORRECTED TO āsāḷha. The mark makes พ the first
+            #   half of a cluster with the ห that follows, so the printed
+            #   letters give āsābha — the same treatment as
+            #   มาฆะทานัง/māghadānaṃ on page 71. The English gives the Āsāḷha
+            #   sense, which is flagged here so the two layers do not silently
+            #   disagree.
+            # ‼ CHECK [IMG_0339.PNG]: THE PAGE STOPS MID-UNIT and the line is
+            #   marked […]. มิคะทาเย is the last printed word on the sheet —
+            #   there is no comma or full stop after it, and the row profile
+            #   shows no further ink below that line — so the unit is
+            #   incomplete and page 76 must complete it. The chant is listed
+            #   in batch_status.continues.
+            {
+                'number': 6,
+                'pali': 'อาสาพ์หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย […]',
+                'pali_roman': 'Āsābhapuṇṇamiyaṃ bārāṇasiyaṃ isipatane migadāye […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'on the Āsāḷha full moon, at Bārāṇasī, in the Deer Park at Isipatana […]',
             },
         ],
     },
