@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
-74 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-21 after page
+75 went in.
 
 ## Read first, in this order
 
@@ -12,12 +12,13 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-19 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–74 are in and unbroken**, plus 217–221. **101 chants, 1,272 verses
+- **Pages 1–75 are in and unbroken**, plus 217–221. **102 chants, 1,305 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 69 to 74 were applied 2026-08-19; pages 66–68 over the days
-  before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
+- Page 75 was applied 2026-08-21; pages 69 to 74 on 2026-08-19; pages 66–68 over
+  the days before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11
+  and 2026-08-12.
 
 ## How to work — this matters more than the tasks
 
@@ -30,45 +31,86 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 75, `IMG_0339` — but READ THE NUMBER, the offset just moved
+## Next: page 76, `IMG_0340` — but READ THE NUMBER off the sheet
 
-**The filename offset changed at page 74.** It is `IMG_0338`, not `IMG_0337`,
-which does not exist — so the offset stepped from 263 to **264** and page 75
-should be `IMG_0339`. That is the first of the seven changes the photo map
-predicted between here and page 207, and it is the whole reason the rule is to
-read the number off the top of the sheet rather than calculate it. Expect more.
+The offset has been 264 since page 74 and held again for page 75, so page 76
+*should* be `IMG_0340`. The photo map still predicts six more changes between
+here and page 207, so read the top-centre number rather than trusting the
+arithmetic.
 
-`ovada-patimokkhadi-patha` is **open at verse 58** and page 75 carries on, so
-its batch is another `continuation_of` numbering from 59, no title and no
-invitation.
+**`kham-tawai-dokmai-thup-thian-asalha` is open at verse 6, and verse 6 is CUT
+mid-unit.** Page 75 ends `อาสาพ์หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย […]`
+with no comma and no full stop after `มิคะทาเย`. So page 76's batch is a
+`continuation_of` whose FIRST verse is **6 again**, carrying that line whole —
+not verse 7. `apply_batch` replaces the partial and `check_pages` proves the
+completed line starts with what the partial held.
 
-**We know what the page owes.** Page 74 asks `กะถัญจะ เหฏฐิเมนะ ปะริยาเยนะ
-ปัญญา สัมมะทักขาตา ภะคะวะตา,` — wisdom by the lower exposition — and the sheet
-runs out before answering. So page 75 should answer it, then do the higher
-exposition of wisdom the same way, and that would complete the pattern the
-passage has followed for three pages. **That is a reason to check the reading,
-not to write it.**
+**Settle the ฬ/พ question first if the book is to hand.** Page 75 prints this
+chant's TITLE as `ในวันอาสาพหบูชา` and its body word as `อาสาพ์หะปุณณะมิยัง` —
+both with **พ** where standard Thai and standard Pali have ฬ (อาสาฬหบูชา,
+*āsāḷha*). Read at 6× on the bold title and 10× on the body word: two humps, no
+tall ascender, and the ์ mark sitting in the clear space where an ascender would
+be. Recorded as printed and transliterated `Āsābhapuṇṇamiyaṃ` to match, with
+the English giving the Āsāḷha sense. **But the photo map's warning that these
+photographs have been wrong about this exact letter twice still stands**, and
+this one is in a chant TITLE and in its id, so it is the most valuable single
+thing on the page to check against the book.
 
-**Measure the layout, do not judge it.** This chant changes setting without
-warning: page 73 alone goes two-column, prose, centred single-column,
-two-column, prose, while page 74 is prose end to end. Profile the ink across the
-measure before reading a word — a gutter around x 940–1100 means two columns,
-ink filling x 270–1880 with no gutter means prose, ink stopping short on both
-sides means centred lines. Then give each group `para_start` plus `para_layout`.
+**What page 76 owes.** The Āsāḷha offering has reached the Deer Park at
+Isipatana on the full-moon day, which is where the first sermon was taught. Its
+three siblings run to 60, 60 and 28 verses, so this one has a long way left, and
+all four share a closing petition. **That is a reason to check the reading, not
+to write it.**
 
-**Declare `para_layout` on EVERY group.** This chant's own `layout` is `lines`,
-so a prose paragraph that says nothing inherits the wrong setting and renders as
-a stack of short lines. Page 74's six paragraphs each say `'prose'` explicitly
-for that reason.
+**Ovāda-pāṭimokkhādi-pāṭha is CLOSED.** It ran from page 72 to page 75 and ends
+at verse 85 with `เอวัญหิ โน สิกขิตัพพัง.` — no colophon under it, so no
+`closing` key was composed. Its `‼ CONTINUES` marker has come off; the only one
+left in the file is the Āsāḷha chant's.
 
-**Watch the ฏ/ต in Pāṭimokkha.** This chant uses ต throughout (`ปาติโมกเข`,
-`ปาติโมกขะสังวะระ`) while the chant above it on page 72 uses ฏ. Read each
-occurrence rather than assuming. `ปะฏิวิระโต` is a different word and correctly
-keeps ฏ.
+**Measure the layout, do not judge it.** Profile the ink across the measure
+before reading a word — a gutter around x 940–1100 means two columns, ink
+filling the measure with no gutter means prose, ink stopping short on both sides
+means centred lines. Page 75 was measured this way and is prose end to end,
+x 240 to x 1720 unbroken.
 
-The fourth parallel offering, Āsāḷha, is expected around page 75. **Read the
-whole sheet before deciding what is on it** — page 71 held three chants, page 72
-held two plus a block, page 73 held one chant in five different settings.
+**A paragraph can span a page turn, and page 75 is what taught that.** Its first
+paragraph opened on page 74 at verse 58, so verse 59 must NOT carry
+`para_start` — but it IS the first verse of the page-75 slice, and the template
+reads `para_layout` off `paragraph[0]`. So verse 59 carries **`para_layout`
+without `para_start`**, which is new and is the general fix: whenever a page
+opens mid-paragraph in a chant whose own `layout` disagrees, the first verse on
+that page needs `para_layout` and nothing else. Without it page 75 would have
+rendered three justified paragraphs as a stack of short lines.
+
+**Watch the ฏ/ต in Pāṭimokkha.** The ovāda chant used ต throughout
+(`ปาติโมกเข`, `ปาติโมกขะสังวะระ`) while the chant above it on page 72 uses ฏ.
+Read each occurrence rather than assuming. `ปะฏิวิระโต` is a different word and
+correctly keeps ฏ.
+
+**The fourth parallel offering arrived on page 75**, as the photo map predicted
+— Visākha (66), Aṭṭhamī (68), Māgha (71), Āsāḷha (75). **Read the whole sheet
+before deciding what is on it** — page 71 held three chants, page 72 held two
+plus a block, page 73 held one chant in five different settings, and page 75
+held the end of one chant and the start of another.
+
+## Raised on page 75 — all open, all need the book
+
+**The ฬ/พ hazard, in a title.** Above, and it is the one to do first.
+
+**The three trainings are pointed unevenly.** Verse 83 prints
+`อะธิสีละสิกขาสะมาทาเน อะธิจิตตะสิกขาสะมาทาเน,` with **no comma between the
+first two** and one after the second, then `อะธิปัญญาสิกขาสะมาทาเน,` with its
+own. Read at 4× across the whole line. Standard editions comma all three. That
+is why verse 83 holds two of the trainings and verse 84 holds one.
+
+**`ปฏิจจะ` is printed without the ะ** this book usually sets after the ป
+(`ปะฏิจจะ`). Read at 8× on an isolated crop: ป and ฏิ sit directly together.
+Reproduced as printed; `paṭicca` either way, since the ะ is orthography.
+
+**`ตัส์มา` carries the small mark over the ส**, an ε-shaped curl with a tail at
+5× — the same shape page 60 read on `ท์วายะ`. Recorded as ์ (U+0E4C) like
+everything else in this stretch. Still part of the one open question that the
+book settles in a single look.
 
 **Page 63 was the first page in the book with no chant on it at all** — the
 whole sheet is `คำอธิบายประกอบทำวัตรเย็น`, so its batch has an EMPTY manifest

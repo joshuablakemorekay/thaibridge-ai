@@ -54,6 +54,7 @@ photograph.
 | 72 | IMG_0335 | 263 |
 | 73 | IMG_0336 | 263 |
 | **74** | **IMG_0338** | **264** ⟵ offset changes here |
+| 75 | IMG_0339 | 264 |
 | 207 | IMG_0477 | 270 |
 | 213 | IMG_0483 | 270 |
 | 215 | IMG_0485 | 270 |
@@ -74,7 +75,9 @@ because `IMG_0337` does not exist, so the offset steps from 263 to **264** and
 stays there until the next deleted duplicate. That is the first of the seven
 changes this table predicted, and it is exactly why the rule is to read the page
 number off the top of the photograph rather than calculate it: pages 69 to 74
-were each confirmed that way, on `IMG_0332` to `IMG_0338`.
+were each confirmed that way, on `IMG_0332` to `IMG_0338`. Page 75 was read
+the same way and is `IMG_0339`, so the new offset of 264 has now held for two
+pages rather than one.
 
 ## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
 
