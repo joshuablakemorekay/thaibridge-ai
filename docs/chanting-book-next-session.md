@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-21 after page
-75 went in.
+76 went in.
 
 ## Read first, in this order
 
@@ -12,13 +12,13 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-21 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–75 are in and unbroken**, plus 217–221. **102 chants, 1,305 verses
+- **Pages 1–76 are in and unbroken**, plus 217–221. **102 chants, 1,324 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Page 75 was applied 2026-08-21; pages 69 to 74 on 2026-08-19; pages 66–68 over
-  the days before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on 2026-08-11
-  and 2026-08-12.
+- Pages 75 and 76 were applied 2026-08-21; pages 69 to 74 on 2026-08-19; pages
+  66–68 over the days before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on
+  2026-08-11 and 2026-08-12.
 
 ## How to work — this matters more than the tasks
 
@@ -31,72 +31,126 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 76, `IMG_0340` — but READ THE NUMBER off the sheet
+## Next: page 77, `IMG_0341` — but READ THE NUMBER off the sheet
 
-The offset has been 264 since page 74 and held again for page 75, so page 76
-*should* be `IMG_0340`. The photo map still predicts six more changes between
+The offset has been 264 since page 74 and has now held for three pages, so page
+77 *should* be `IMG_0341`. The photo map still predicts six more changes between
 here and page 207, so read the top-centre number rather than trusting the
 arithmetic.
 
-**`kham-tawai-dokmai-thup-thian-asalha` is open at verse 6, and verse 6 is CUT
-mid-unit.** Page 75 ends `อาสาพ์หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย […]`
-with no comma and no full stop after `มิคะทาเย`. So page 76's batch is a
-`continuation_of` whose FIRST verse is **6 again**, carrying that line whole —
-not verse 7. `apply_batch` replaces the partial and `check_pages` proves the
-completed line starts with what the partial held.
+**Nothing is left open.** Page 76 finished the Āsāḷha offering at verse 25, and
+there is no `‼ CONTINUES` marker anywhere in `chanting.py` — page 77 starts
+clean, whatever it holds. **Read the whole sheet before deciding what is on
+it**: recent pages have held one chant, three chants, a chant plus a block, and
+a chant ending with a Thai instruction paragraph under it.
 
-**SETTLED 2026-08-21, and it changes how to read this book.** Page 75's chant
-title and its verse 6 were first recorded as `ในวันอาสาพหบูชา` and
-`อาสาพ์หะปุณณะมิยัง`, with **พ**, on the strength of two careful reads — 6× on
-the bold title, 10× on the body word — that both showed two humps and **no tall
-ascender**. Josh read the page and it is `อาสาฬหบูชา` and `อาสาฬ์หะปุณณะมิยัง`,
-with **ฬ**. Both are corrected in `chanting.py` and in the batch file, and the
-transliteration moved with them to `Āsāḷhapuṇṇamiyaṃ`.
+**All four parallel offerings are now in** — Visākha (66), Aṭṭhamī (68), Māgha
+(71) and Āsāḷha (75–76) — so a page that looks like a fifth is something else.
 
-**The lesson is bigger than the word.** This is the THIRD time these
-photographs have lost ฬ to พ against Josh's own reading, and the first where the
-**absence** of an ascender was taken as evidence *for* พ. It is not evidence.
-Page 71 could say `เวฬุวะเน` was ฬ because the ascender was visibly THERE —
-positive evidence still holds. Its absence proves nothing in this printing. So
-**every ฬ/พ is a question for the book**, and no amount of magnification
-changes that.
-
-**What page 76 owes.** The Āsāḷha offering has reached the Deer Park at
-Isipatana on the full-moon day, which is where the first sermon was taught. Its
-three siblings run to 60, 60 and 28 verses, so this one has a long way left, and
-all four share a closing petition. **That is a reason to check the reading, not
-to write it.**
-
-**Ovāda-pāṭimokkhādi-pāṭha is CLOSED.** It ran from page 72 to page 75 and ends
-at verse 85 with `เอวัญหิ โน สิกขิตัพพัง.` — no colophon under it, so no
-`closing` key was composed. Its `‼ CONTINUES` marker has come off; the only one
-left in the file is the Āsāḷha chant's.
+## Standing rules for every page
 
 **Measure the layout, do not judge it.** Profile the ink across the measure
 before reading a word — a gutter around x 940–1100 means two columns, ink
-filling the measure with no gutter means prose, ink stopping short on both sides
-means centred lines. Page 75 was measured this way and is prose end to end,
-x 240 to x 1720 unbroken.
+filling the measure with no gutter means prose, ink stopping short on both
+sides means centred lines. Pages 75 and 76 were both measured this way and are
+prose end to end.
 
 **A paragraph can span a page turn, and page 75 is what taught that.** Its first
 paragraph opened on page 74 at verse 58, so verse 59 must NOT carry
 `para_start` — but it IS the first verse of the page-75 slice, and the template
 reads `para_layout` off `paragraph[0]`. So verse 59 carries **`para_layout`
-without `para_start`**, which is new and is the general fix: whenever a page
-opens mid-paragraph in a chant whose own `layout` disagrees, the first verse on
-that page needs `para_layout` and nothing else. Without it page 75 would have
-rendered three justified paragraphs as a stack of short lines.
+without `para_start`**. The general rule: whenever a page opens mid-paragraph in
+a chant whose own `layout` disagrees, the first verse on that page needs
+`para_layout` and nothing else. Where the chant's own `layout` is already right
+— as on page 76, which is a prose chant throughout — nothing is needed and
+declaring it would be noise.
 
-**Watch the ฏ/ต in Pāṭimokkha.** The ovāda chant used ต throughout
-(`ปาติโมกเข`, `ปาติโมกขะสังวะระ`) while the chant above it on page 72 uses ฏ.
-Read each occurrence rather than assuming. `ปะฏิวิระโต` is a different word and
-correctly keeps ฏ.
+**Check the rendered page, not just the four checks.** Page 76's trailing block
+passed all four and still rendered in the wrong place. See "What page 76 taught
+the tooling" below.
 
-**The fourth parallel offering arrived on page 75**, as the photo map predicted
-— Visākha (66), Aṭṭhamī (68), Māgha (71), Āsāḷha (75). **Read the whole sheet
-before deciding what is on it** — page 71 held three chants, page 72 held two
-plus a block, page 73 held one chant in five different settings, and page 75
-held the end of one chant and the start of another.
+## The ฬ/พ misreading, and how page 76 explained it
+
+Worth reading before any page in this stretch, because it is the one failure
+these photographs produce that looks completely convincing.
+
+Page 76 shows both cases **on one sheet**, eleven lines apart:
+
+- The Thai instruction paragraph at the foot prints `อาสาฬหบูชา` **bare**, and
+  the ฬ ascender is unmistakable at 8×.
+- Verse 15 prints `อาสาฬ์หะปุณณะมีกาลัง`, where the ฬ carries the ์ cluster
+  mark — and the ascender does not survive the printing. The mark sits exactly
+  where the ascender would be, and the letter is indistinguishable from พ at
+  any magnification.
+
+So the rule is narrower and more useful than "the camera cannot tell them
+apart":
+
+- **A bare ฬ can be read from the photograph.** The ascender is there.
+- **A MARKED ฬ์ cannot be, ever.** It will read as พ์ every time.
+- **A missing ascender is never evidence for พ.** That is what page 75 got
+  wrong.
+
+One more tell, and it is the one that should have caught page 75 before Josh
+did: **พ์ห is not a legal Pali cluster.** Transliterating it gives `āsābha`,
+which is not a word. If a faithful transliteration produces a non-word, the
+reading is wrong — check the letter rather than recording the non-word.
+
+## Raised on page 76 — three open, one decision needed
+
+**A FOOTNOTE THE APP CANNOT FULLY SHOW — this one needs Josh's call.** Verse 20
+carries a superscript 1 on `อิมัง ถูปัง`, and the footnote reads
+`๑. ถ้ามีพระพุทธรูปเป็นประธานใช้ อิมัง ปะฏิมัง` — "if a Buddha image is the
+principal object, use อิมัง ปะฏิมัง". It is an editorial note, not a citation,
+so `source_printed` is correctly left off, and it is recorded as a verse
+**variant**, which both templates render as "the book's footnote gives another
+reading: อิมัง ปะฏิมัง". **The CONDITION is lost**, and for this footnote the
+condition is the whole point — it tells a chanter *when* to say it. Either a
+`condition` field on a variant plus one line in each of the two templates, or
+leave it. Not decided.
+
+**`สัมปุณณัง` at verse 14 against `สัมปุระณะ` at verse 15** — the same word,
+twice on one sheet, both read at 7× on isolated crops. Standard Pali is
+*sampuṇṇa* in both places. Reproduced as printed and transliterated to match,
+which is why the romanised layer looks inconsistent. The clearest single thing
+on the page to check.
+
+**The pointing is now three readings to one against page 69.** Page 76 splits
+`ปัต์วา,` from `อิมัง ฐานัง สัมปัตตา,`, runs `ยะถาภุจเจ คุเณ อะนุสสะรันตา,`
+together, and runs `ญาตัพเพหิ คุเณหิ` together — matching the Visākha printing
+on page 66 in all three places and differing from the Aṭṭhamī printing on page
+69 in all three. **`IMG_0332` is now worth re-reading**; page 69 is the odd one
+of three.
+
+**`ปะฏิคคัณหาตุ` is bare for the fifth printing running** — 68, 69, 70, 71 and
+now 76, against page 67's single `ปะฏิคคัณ์หาตุ`. Page 67 is looking like the
+outlier rather than the rule.
+
+**One thing to fix in the app, not in the book.** The Visākha entry's verse 56
+carries `Sucirapaṇinibbutopi` as its `pali_roman` where its own `pali` reads
+`สุจิระปะรินิพพุโตปิ`. Page 76's verse 22 is written correctly as
+`suciraparinibbutopi`, so the two chants now disagree in the app. Nothing was
+changed — different chant, and the file wins unless Josh says otherwise.
+
+## What page 76 taught the tooling
+
+**`apply_batch` now carries a verse's `variants`.** The field has been in
+`chanting.py` since `b40c9c5` and both templates have rendered it ever since;
+this loop was the only thing between a batch declaring one and the app showing
+it. Same class of gap as `rubric`, `para_start` and `para_layout` before it. It
+renders long-hand rather than by `repr`, and refuses a variant missing its
+`marker`, `word` or `reading`.
+
+**A trailing block needs its own page-map row.** Page 76's Thai instruction
+paragraph is printed BELOW the chant, but `block_groups` anchors a non-footnote
+block to the *previous* chant on the page — which, on a one-row page, is
+nothing, so it rendered at the TOP. The fix is a second row for the same page
+with `"chant": ""` and `"verses": "none"`, carrying the block. The block then
+anchors after the chant, which is where the book prints it. Caught by reading
+the rendered page, not by any of the four checks: `check_render` deliberately
+checks blocks for presence only, and placement is `check_page_blocks`'s job,
+which was satisfied because the anchor was *valid* — just not where the book
+puts it.
 
 ## Raised on page 75 — one still open, two settled
 
