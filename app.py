@@ -1189,6 +1189,82 @@ def _load_dhamma_talks():
 DHAMMA_TALKS = _load_dhamma_talks()
 DHAMMA_TALKS_BY_SLUG = {t['slug']: t for t in DHAMMA_TALKS}
 
+
+# ============================================
+# JOURNAL (free, public)
+# ============================================
+# Josh's own journal — personal thoughts and experiences, written in the first
+# person. Same "write a file, drop it in" loader as the talks above, so there
+# is no admin screen and no database table to maintain.
+#
+# It is deliberately NOT a forum. Only Josh publishes here; there are no
+# comments and no user-submitted content, which keeps the page a publisher
+# surface rather than a user-to-user service.
+JOURNAL_CONTENT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'content', 'journal')
+
+def _load_journal_entries():
+    """Load every content/journal/*.json entry, newest first.
+
+    Sorted by 'date' descending because a journal reads newest-first, unlike
+    the talks and monk topics which use a curated 'order' field. An entry with
+    no date sorts to the bottom rather than crashing the sort.
+    """
+    entries = []
+    for path in sorted(glob.glob(os.path.join(JOURNAL_CONTENT_DIR, '*.json'))):
+        try:
+            with open(path, encoding='utf-8') as f:
+                entries.append(json.load(f))
+        except (json.JSONDecodeError, OSError) as e:
+            # One malformed file must not take /journal down for everyone.
+            app.logger.warning("Skipping journal entry %s: %s", path, e)
+    entries.sort(key=lambda e: e.get('date', ''), reverse=True)
+    for entry in entries:
+        entry['display_date'] = _format_journal_date(entry.get('date', ''))
+    return entries
+
+
+def _format_journal_date(iso_date):
+    """Turn '2026-08-08' into '8 August 2026' for display.
+
+    A journal reads better with the date written out than with an ISO string.
+    The stored value stays ISO so sorting is a plain string comparison; an
+    unparseable date is shown as-is rather than swallowed.
+    """
+    try:
+        parsed = datetime.strptime(iso_date, '%Y-%m-%d')
+    except ValueError:
+        return iso_date
+    # '%-d' strips the leading zero on Linux (Render); Windows wants '%#d'.
+    # Josh develops on Windows and deploys to Linux, so try both.
+    for fmt in ('%-d %B %Y', '%#d %B %Y'):
+        try:
+            return parsed.strftime(fmt)
+        except ValueError:
+            continue
+    return parsed.strftime('%d %B %Y')
+
+
+def _normalise_journal_blocks(entry):
+    """Turn an entry's blocks into a uniform list of dicts.
+
+    Writing an entry should be as close to writing prose as possible, so a
+    plain string in 'blocks' is shorthand for an ordinary paragraph. The
+    template only ever sees dicts with a 'type', so it needs no special cases.
+    """
+    blocks = []
+    for block in entry.get('blocks', []):
+        if isinstance(block, str):
+            blocks.append({'type': 'p', 'text': block})
+        elif isinstance(block, dict):
+            block = dict(block)
+            block.setdefault('type', 'p')
+            blocks.append(block)
+    return blocks
+
+
+JOURNAL_ENTRIES = _load_journal_entries()
+JOURNAL_BY_SLUG = {e['slug']: e for e in JOURNAL_ENTRIES if e.get('slug')}
+
 # The two learning directions Monk Mode supports.
 MONK_DIRECTIONS = {'learn_thai', 'learn_english'}
 MONK_DIRECTION_DEFAULT = 'learn_thai'   # a monk learning Thai
@@ -6974,6 +7050,25 @@ def bob_buddhism_overview():
 @app.route('/bob-fear-article')
 def bob_fear_article():
     return redirect('/bob-writings#fear', code=301)
+
+
+@app.route('/journal')
+def journal():
+    """Josh's journal — the index of entries, newest first.
+
+    Ungated on purpose, like the Dhamma talks and Pra Kru Bob's writings.
+    """
+    return render_template('journal.html', entries=JOURNAL_ENTRIES)
+
+
+@app.route('/journal/<slug>')
+def journal_entry(slug):
+    """A single journal entry."""
+    entry = JOURNAL_BY_SLUG.get(slug)
+    if not entry:
+        return "Entry not found. <a href='/journal'>Back to the Journal</a>", 404
+    return render_template('journal_entry.html', entry=entry,
+                           blocks=_normalise_journal_blocks(entry))
 
 
 @app.route('/dhamma-talk/<slug>')

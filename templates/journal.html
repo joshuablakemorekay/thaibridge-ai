@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block sidebar %}{% include 'partials/sidebar_buddhism.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}Journal - ThaiBridge AI{% endblock %}
+
+{% block extra_css %}
+<style>
+    body {
+        background: linear-gradient(135deg, #FFF9E6 0%, #FFE7B3 100%);
+    }
+
+    .journal-container {
+        max-width: 900px;
+        margin: 2rem auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        border-top: 6px solid var(--saffron);
+    }
+
+    .journal-header {
+        text-align: center;
+        border-bottom: 3px solid var(--gold);
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .journal-lotus {
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .journal-title {
+        font-size: 2.5rem;
+        color: var(--royal-purple);
+        margin: 0 0 1rem 0;
+        font-weight: bold;
+    }
+
+    .journal-intro {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+        max-width: 640px;
+        margin: 0 auto;
+    }
+
+    /* One card per entry. The whole card is the link, so it is an easy target
+       on a phone rather than a small "read more" at the bottom. */
+    .entry-card {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        padding: 1.75rem;
+        margin-bottom: 1.5rem;
+        border: 2px solid #F0E0C0;
+        border-left: 6px solid var(--gold);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .entry-card:hover {
+        border-left-color: var(--saffron);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .entry-date {
+        font-size: 0.92rem;
+        color: #8a7a5a;
+        letter-spacing: 0.03em;
+        margin-bottom: 0.4rem;
+    }
+
+    .entry-title {
+        font-size: 1.6rem;
+        color: var(--royal-purple);
+        margin: 0 0 0.4rem 0;
+        font-weight: bold;
+        line-height: 1.35;
+    }
+
+    .entry-subtitle {
+        font-size: 1.1rem;
+        color: #666;
+        font-style: italic;
+        margin: 0 0 0.75rem 0;
+    }
+
+    .entry-summary {
+        font-size: 1.02rem;
+        line-height: 1.8;
+        color: #444;
+        margin: 0;
+    }
+
+    .entry-more {
+        display: inline-block;
+        margin-top: 0.9rem;
+        color: var(--saffron);
+        font-weight: bold;
+    }
+
+    /* Shown when there are no entries yet. Better than a blank page: it tells
+       the reader the section is new rather than broken. */
+    .journal-empty {
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+        border: 2px dashed #E0D0B0;
+        border-radius: 12px;
+        color: #777;
+        font-size: 1.05rem;
+        line-height: 1.8;
+    }
+
+    .journal-footer {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 2px solid #eee;
+        text-align: center;
+        color: #777;
+        font-size: 0.98rem;
+        line-height: 1.8;
+    }
+
+    @media (max-width: 700px) {
+        .journal-container {
+            padding: 1.5rem;
+            margin: 1rem auto;
+        }
+
+        .journal-title {
+            font-size: 1.9rem;
+        }
+
+        .entry-card {
+            padding: 1.25rem;
+        }
+
+        .entry-title {
+            font-size: 1.35rem;
+        }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="journal-container">
+
+    <div class="journal-header">
+        <div class="journal-lotus">🪷 🪷 🪷</div>
+        <h1 class="journal-title">Journal</h1>
+        <p class="journal-intro">
+            Personal thoughts and experiences, written as they come &mdash; on
+            practice, on language, and on life between two countries.
+        </p>
+    </div>
+
+    {% if entries %}
+        {% for entry in entries %}
+        <a class="entry-card" href="/journal/{{ entry.slug }}">
+            {% if entry.date %}<div class="entry-date">{{ entry.display_date or entry.date }}</div>{% endif %}
+            <h2 class="entry-title">{{ entry.title }}</h2>
+            {% if entry.subtitle %}
+            <p class="entry-subtitle">{{ entry.subtitle }}</p>
+            {% endif %}
+            {% if entry.summary %}
+            <p class="entry-summary">{{ entry.summary }}</p>
+            {% endif %}
+            <span class="entry-more">Read the entry &rarr;</span>
+        </a>
+        {% endfor %}
+    {% else %}
+        <div class="journal-empty">
+            🪷<br>
+            The first entry hasn&#39;t been written yet.<br>
+            Please check back soon.
+        </div>
+    {% endif %}
+
+    <div class="journal-footer">
+        ☸<br>
+        Written and shared freely.
+    </div>
+</div>
+{% endblock %}
