@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-21 after page
-76 went in.
+77 went in.
 
 ## Read first, in this order
 
@@ -12,13 +12,16 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-21 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–76 are in and unbroken**, plus 217–221. **102 chants, 1,324 verses
+- **Pages 1–77 are in and unbroken**, plus 217–221. **105 chants, 1,342 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 75 and 76 were applied 2026-08-21; pages 69 to 74 on 2026-08-19; pages
-  66–68 over the days before them; 61–65 on 2026-08-14 and 2026-08-15; 55–60 on
-  2026-08-11 and 2026-08-12.
+- Pages 75, 76 and 77 were applied 2026-08-21; pages 69 to 74 on 2026-08-19;
+  pages 66–68 over the days before them; 61–65 on 2026-08-14 and 2026-08-15;
+  55–60 on 2026-08-11 and 2026-08-12.
+- **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
+  Tamnan parittas appointed for evening chanting. Everything from here is
+  paritta until the book says otherwise.
 
 ## How to work — this matters more than the tasks
 
@@ -31,21 +34,30 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 77, `IMG_0341` — but READ THE NUMBER off the sheet
+## Next: page 78, `IMG_0342` — but READ THE NUMBER off the sheet
 
-The offset has been 264 since page 74 and has now held for three pages, so page
-77 *should* be `IMG_0341`. The photo map still predicts six more changes between
-here and page 207, so read the top-centre number rather than trusting the
-arithmetic.
+The offset of 264 has now held for four pages, so page 78 *should* be
+`IMG_0342`. Six more changes are still predicted before page 207, so read the
+top-centre number.
 
-**Nothing is left open.** Page 76 finished the Āsāḷha offering at verse 25, and
-there is no `‼ CONTINUES` marker anywhere in `chanting.py` — page 77 starts
-clean, whatever it holds. **Read the whole sheet before deciding what is on
-it**: recent pages have held one chant, three chants, a chant plus a block, and
-a chant ending with a Thai instruction paragraph under it.
+**`sarana-gamana-patha-sipsong-tamnan` is marked `‼ CONTINUES`, and that marker
+is an INFERENCE, not a reading.** Page 77 ends with the three refuges complete
+and stopped with a full stop, then the footnote rule and the foot of the sheet.
+Nothing on the photograph says whether the chant goes on. As this formula is
+normally chanted it repeats twice more, with `ทุติยัมปิ` and `ตะติยัมปิ`, and if
+it does so here those lines open page 78.
 
-**All four parallel offerings are now in** — Visākha (66), Aṭṭhamī (68), Māgha
-(71) and Āsāḷha (75–76) — so a page that looks like a fifth is something else.
+**So page 78 settles it in one look, and both outcomes are cheap:**
+
+- If page 78 opens with `ทุติยัมปิ …`, it is a continuation — number from 4,
+  no title, no invitation.
+- If page 78 opens on something else, the chant was already complete: drop the
+  `‼ CONTINUES` comment from `chanting.py`, say so, and carry on. Nothing else
+  changes.
+
+It was marked as continuing rather than left looking finished because a
+truncated chant that reads as whole is the failure this workflow most exists to
+prevent, and a stale marker costs one line to remove.
 
 ## Standing rules for every page
 
@@ -68,6 +80,56 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Raised on page 77 — two decisions, and a test that earned its keep
+
+**TWO OF THE THREE CHANTS ON THIS PAGE ARE REPRINTS, and whether the edition
+should show them separately is Josh's call, not a reading.** The book prints the
+Namo salutation on pages 2, 52 and now 77, and the going-for-refuge on page 12
+and now 77. Each went in as its own chant, on the one-entry-per-printing rule
+this book has followed since page 61 — and the readings support it, because both
+page-77 printings visibly differ from the earlier ones:
+
+| | earlier printings | page 77 |
+|---|---|---|
+| Namo | no title at all (`title_thai` is `''` on both) | prints `ปุพพะภาคะนะมะการะปาโฐ` |
+| Namo | every line ends `.` | third line ends `ฯ` |
+| refuges | page 12 separates them with **commas** | page 77 uses **full stops** |
+
+So the app now holds three Namos and two refuge formulas. That is faithful to
+the book and may still be more than the edition wants.
+
+**`สะเมตตา` with double ต at verse 2**, where standard editions have *sametā*.
+Read at 7× on an isolated crop; reproduced and transliterated `samettā` to match.
+
+**The bracketed first line is conditional.** Verse 1 is printed in round
+brackets with a superscript, and the footnote reads
+`ใช้แต่ในราชพิธีและรัฐพิธี` — "used only in royal and state ceremonies". The
+brackets are reproduced and the footnote is a page block at the foot, but
+**nothing in the data ties the two together**: a footnote block sits at the page
+foot and cannot point back at a verse. Same shape of gap as page 76's
+conditional variant, and the same decision is still open.
+
+## What page 77 taught — the tests caught three of my errors
+
+Worth writing down because it is the first time the suite, rather than a check
+script or a re-read, found the mistake:
+
+- `ปาโฐ` was transliterated **`pāṭha`** on two titles. It is **`pāṭho`** — the
+  nominative, with โ. `tests/test_contents_roman.py` romanises every Pali title
+  independently and compares, so it failed on both.
+- `บทขัดชุมนุมเทวดา` was romanised `bòt kàt …` with a space where the contents
+  table has `bòt-kàt …` with a hyphen, and a second test refuses to let the
+  contents and the chant page spell one title two ways.
+
+**All three chants were already listed in the book's own สารบัญ, and
+`CONTENTS` already held the correct romanisation of all three.** The right move
+when a title is already in that table is to take the value from it rather than
+compose one — check `chanting._CONTENTS_ROMAN` before writing `title_pali` or
+`title_roman`.
+
+**Run the whole suite, not just the four checks.** All four checks passed on the
+version with three wrong titles in it.
 
 ## The ฬ/พ misreading, and how page 76 explained it
 
