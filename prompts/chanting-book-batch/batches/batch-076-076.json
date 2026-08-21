@@ -1,0 +1,341 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "kham-tawai-dokmai-thup-thian-asalha"
+  ],
+  "pages": [
+   {
+    "page": 76,
+    "file": "IMG_0340.PNG",
+    "script": "thai",
+    "chant": "kham-tawai-dokmai-thup-thian-asalha",
+    "verses": "6-25",
+    "starts_here": false,
+    "note": "Twenty-three printed lines, single column, justified prose end to end — measured, not judged: the ink runs unbroken from x 250 to x 1850 with no gutter anywhere. The page COMPLETES the Āsāḷha offering page 75 opened. Its first two lines finish the unit page 75 cut in half, so verse 6 is COMPLETED rather than added and stays on page 75 where its line starts. Five paragraphs, four of them indented; the first is the tail of page 75's. The chant then ends at สุขายะ. with NO colophon and no จบ line. Below it, still on this page, sits a Thai instruction paragraph which is recorded as a page block, and under a rule at the foot a single footnote keyed to verse 20. One word is broken across a line break with a hyphen, อะตีตา- / รัมมะณะตายะ on verse 23, and is rejoined. The Thai instruction paragraph below the chant is declared on the SECOND row of this page rather than this one, so that block_groups anchors it AFTER the chant instead of lifting it to the top of the page — the same reason page 72's explanatory paragraph is declared the way it is."
+   },
+   {
+    "page": 76,
+    "file": "IMG_0340.PNG",
+    "script": "thai",
+    "chant": "",
+    "verses": "none",
+    "starts_here": false,
+    "blocks": [
+     {
+      "type": "prose",
+      "thai": "สำหรับวันอาสาฬหบูชา สวด ธัมมะจักกัปปะวัตตะนะสุตตะ และแสดงธรรมเรื่องพระพุทธประวัติ ตั้งแต่ต้นมา จนถึงทรงแสดง ธัมมะจักกัปปะวัตตะนะสุตตะ แล้วอธิบายขยายความ ธัมมะจักกัปปะวัตตะนะสุตตะ ให้พิสดาร ส่วนบาลี ธัมมะจักกัปปะวัตตะนะสุตตะ ได้เรียงไว้แผนกหนึ่งในท้ายเล่มนี้แล้ว",
+      "english": "For Āsāḷha Pūjā day, the Dhammacakkappavattana Sutta is chanted, and a Dhamma talk is given on the life of the Buddha from its beginning up to his teaching of the Dhammacakkappavattana Sutta; then the Dhammacakkappavattana Sutta is explained and expounded at length. The Pali of the Dhammacakkappavattana Sutta has been set out in a separate section at the end of this volume.",
+      "english_unverified": true
+     }
+    ],
+    "note": "The foot of the sheet below the chant, and it holds no chant text — hence the empty chant and 'none' verses. A single Thai instruction paragraph, indented like the Pali paragraphs above it, telling the reader what is chanted and preached on Āsāḷha Pūjā day and where the Pali of the Dhammacakkappavattana Sutta is printed in this book. It exists as its own row ONLY so the block anchors after the chant, which is where the book prints it. Below it, a rule and the page's one footnote, which is keyed to verse 20 and recorded as a verse variant rather than a block."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-tawai-dokmai-thup-thian-asalha",
+   "continuation_of": "kham-tawai-dokmai-thup-thian-asalha",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty, verses 6 to 25, divided at the printed commas and full stops. Verse 6 is the COMPLETION of the line page 75 cut, carrying the same number with the line whole. Five paragraph groups: verse 6 finishes the paragraph page 75 began, and verses 7, 13, 15 and 22 open the four the book indents. No group declares para_layout, and that is correct rather than an omission — this chant's own layout is already 'prose', so every group inherits the right setting. Page 75's problem does not arise here.",
+    "ordering": "None. No Thai translation is printed for the chant, so nothing can run out of step with the Pali. The Thai paragraph at the foot is an instruction to the reader, not a translation of anything above it, and is recorded as a page block.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value at all.",
+    "pages": "IMG_0340.PNG, page 76, read off the top centre of the sheet — the offset of 264 has now held for three pages. The chant ends on this page, so nothing continues past it. Verse 6 carries no page key because its line starts on page 75; verse 7 is the first verse ON this page and carries 76. Nothing is obscured: the thumbs at the bottom edge are below the footnote rule and cover no ink, and the reverse of the leaf ghosts through faintly without touching any line read."
+   },
+   "verses": [
+    {
+     "number": 6,
+     "pali": "อาสาฬ์หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย ปัญจะวัคคิยานัง ภิกขูนัง อะนุตตะรัง ธัมมะจักกัง ปะฐะมัง ปะวัตเตต์วา จัตตาริ อะริยะสัจจานิ ปะกาเสสิ.",
+     "pali_roman": "Āsāḷhapuṇṇamiyaṃ bārāṇasiyaṃ isipatane migadāye pañcavaggiyānaṃ bhikkhūnaṃ anuttaraṃ dhammacakkaṃ paṭhamaṃ pavattetvā cattāri ariyasaccāni pakāsesi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "on the Āsāḷha full moon, at Bārāṇasī, in the Deer Park at Isipatana, first set rolling the unsurpassed Wheel of the Dhamma for the group of five bhikkhus and made known the four noble truths."
+    },
+    {
+     "number": 7,
+     "page": 76,
+     "para_start": true,
+     "pali": "ตัส์มิญจะ โข สะมะเย ปัญจะวัคคิยานัง ภิกขูนัง ปะมุโข อายัส์มา อัญญาโกณฑัญโญ ภะคะวะโต ธัมมัง สุต์วา,",
+     "pali_roman": "Tasmiñca kho samaye pañcavaggiyānaṃ bhikkhūnaṃ pamukho āyasmā aññākoṇḍañño bhagavato dhammaṃ sutvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "And at that time the venerable Aññā-Koṇḍañña, foremost of the group of five bhikkhus, having heard the Dhamma of the Blessed One,"
+    },
+    {
+     "number": 8,
+     "pali": "วิระชัง วีตะมะลัง ธัมมะจักขุง ปะฏิละภิต์วา,",
+     "pali_roman": "Virajaṃ vītamalaṃ dhammacakkhuṃ paṭilabhitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and having gained the dust-free, stainless eye of the Dhamma —"
+    },
+    {
+     "number": 9,
+     "pali": "ยังกิญจิ สะมุทะยะธัมมัง สัพพันตัง นิโรธะธัมมันติ.",
+     "pali_roman": "Yaṅkiñci samudayadhammaṃ sabbantaṃ nirodhadhammanti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "'whatever is subject to arising, all that is subject to cessation' —"
+    },
+    {
+     "number": 10,
+     "pali": "ภะคะวันตัง อุปะสัมปะทัง ยาจิต์วา,",
+     "pali_roman": "Bhagavantaṃ upasampadaṃ yācitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "asked the Blessed One for the higher ordination,"
+    },
+    {
+     "number": 11,
+     "pali": "ภะคะวะโตเยวะ สันติกา เอหิภิกขุอุปะสัมปะทัง ปะฏิละภิต์วา,",
+     "pali_roman": "Bhagavatoyeva santikā ehibhikkhuupasampadaṃ paṭilabhitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and having received the 'Come, bhikkhu' ordination from the Blessed One's own presence,"
+    },
+    {
+     "number": 12,
+     "pali": "ภะคะวะโต ธัมมะวินะเย อะริยะสาวะกะสังโฆ โลเก ปะฐะมัง อุปปันโน อะโหสิ.",
+     "pali_roman": "Bhagavato dhammavinaye ariyasāvakasaṅgho loke paṭhamaṃ uppanno ahosi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Saṅgha of noble disciples in the Blessed One's Dhamma and Discipline arose in the world for the first time."
+    },
+    {
+     "number": 13,
+     "para_start": true,
+     "pali": "ตัส์มิญจาปิ โข สะมะเย สังฆะระตะนัง โลเก ปะฐะมัง อุปปันนัง อะโหสิ.",
+     "pali_roman": "Tasmiñcāpi kho samaye saṅgharatanaṃ loke paṭhamaṃ uppannaṃ ahosi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And at that time too the Jewel of the Saṅgha arose in the world for the first time."
+    },
+    {
+     "number": 14,
+     "pali": "พุทธะระตะนัง ธัมมะระตะนัง สังฆะระตะนันติ ติระตะนัง สัมปุณณัง อะโหสิ.",
+     "pali_roman": "Buddharatanaṃ dhammaratanaṃ saṅgharatananti tiratanaṃ sampuṇṇaṃ ahosi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the Triple Jewel — the Jewel of the Buddha, the Jewel of the Dhamma and the Jewel of the Saṅgha — was complete."
+    },
+    {
+     "number": 15,
+     "para_start": true,
+     "pali": "มะยัง โข เอตะระหิ อิมัง อาสาฬ์หะปุณณะมีกาลัง ตัสสะ ภะคะวะโต ธัมมะจักกัปปะวัตตะนะกาละสัมมะตัง อะริยะสาวะกะสังฆะอุปปัตติกาละสัมมะตัญจะ ระตะนัตตะยะสัมปุระณะกาละสัมมะตัญจะ ปัต์วา,",
+     "pali_roman": "Mayaṃ kho etarahi imaṃ āsāḷhapuṇṇamīkālaṃ tassa bhagavato dhammacakkappavattanakālasammataṃ ariyasāvakasaṅghauppattikālasammatañca ratanattayasampuraṇakālasammatañca patvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "We now, at this present time, having reached this Āsāḷha full-moon day — which is held to be the time when that Blessed One set rolling the Wheel of the Dhamma, and the time when the Saṅgha of noble disciples arose, and the time when the Triple Jewel was made complete —"
+    },
+    {
+     "number": 16,
+     "pali": "อิมัง ฐานัง สัมปัตตา,",
+     "pali_roman": "Imaṃ ṭhānaṃ sampattā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and having come to this place,"
+    },
+    {
+     "number": 17,
+     "pali": "อิเม สักกาเร คะเหต์วา,",
+     "pali_roman": "Ime sakkāre gahetvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and having taken up these offerings,"
+    },
+    {
+     "number": 18,
+     "pali": "อัตตะโน กายัง สักการุปะธานัง กะริต์วา,",
+     "pali_roman": "Attano kāyaṃ sakkārupadhānaṃ karitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and having made our own body the bearer of that homage,"
+    },
+    {
+     "number": 19,
+     "pali": "ตัสสะ ภะคะวะโต ยะถาภุจเจ คุเณ อะนุสสะรันตา,",
+     "pali_roman": "Tassa bhagavato yathābhucce guṇe anussarantā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "recollecting the qualities of that Blessed One as they truly are,"
+    },
+    {
+     "number": 20,
+     "pali": "อิมัง ถูปัง ติกขัตตุง ปะทักขิณัง กะริสสามะ,",
+     "pali_roman": "Imaṃ thūpaṃ tikkhattuṃ padakkhiṇaṃ karissāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "shall walk three times around this stūpa, keeping it on the right,",
+     "variants": [
+      {
+       "marker": "1",
+       "word": "อิมัง ถูปัง",
+       "reading": "อิมัง ปะฏิมัง",
+       "reading_roman": "imaṃ paṭimaṃ"
+      }
+     ]
+    },
+    {
+     "number": 21,
+     "pali": "ยะถา คะหิเตหิ สักกาเรหิ ปูชัง กุรุมานา.",
+     "pali_roman": "Yathā gahitehi sakkārehi pūjaṃ kurumānā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "making our offering with the offerings as they have been taken up."
+    },
+    {
+     "number": 22,
+     "para_start": true,
+     "pali": "สาธุ โน ภันเต ภะคะวา สุจิระปะรินิพพุโตปิ,",
+     "pali_roman": "Sādhu no bhante bhagavā suciraparinibbutopi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "It would be well, venerable Blessed One, who though long since finally gone to nibbāna,"
+    },
+    {
+     "number": 23,
+     "pali": "ญาตัพเพหิ คุเณหิ อะตีตารัมมะณะตายะ ปัญญายะมาโน,",
+     "pali_roman": "Ñātabbehi guṇehi atītārammaṇatāya paññāyamāno,",
+     "thai": "",
+     "paiboon": "",
+     "english": "are still known by your qualities, and are discerned as an object belonging to the past,"
+    },
+    {
+     "number": 24,
+     "pali": "อิเม อัมเหหิ คะหิเต สักกาเร ปะฏิคคัณหาตุ,",
+     "pali_roman": "Ime amhehi gahite sakkāre paṭiggaṇhātu,",
+     "thai": "",
+     "paiboon": "",
+     "english": "that you accept these offerings taken up by us —"
+    },
+    {
+     "number": 25,
+     "pali": "อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ.",
+     "pali_roman": "Amhākaṃ dīgharattaṃ hitāya sukhāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "for our welfare and happiness for a long time to come."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ธัมมะจักกัปปะวัตตะนะ",
+     "pali_roman": "dhammacakkappavattana",
+     "meaning": "the setting in motion of the Wheel of the Dhamma — the first sermon, which is what this day commemorates"
+    },
+    {
+     "pali": "ปัญจะวัคคิยา ภิกขู",
+     "pali_roman": "pañcavaggiyā bhikkhū",
+     "meaning": "the group of five bhikkhus, the Buddha's first audience at Isipatana"
+    },
+    {
+     "pali": "ธัมมะจักขุ",
+     "pali_roman": "dhammacakkhu",
+     "meaning": "the eye of the Dhamma; the seeing that makes someone a stream-enterer. Koṇḍañña's gaining of it is the moment the Saṅgha becomes possible"
+    },
+    {
+     "pali": "เอหิภิกขุอุปะสัมปะทา",
+     "pali_roman": "ehibhikkhuupasampadā",
+     "meaning": "the 'Come, bhikkhu' ordination — given by the Buddha's own word, the earliest form of admission to the Saṅgha"
+    },
+    {
+     "pali": "ติระตะนะ",
+     "pali_roman": "tiratana",
+     "meaning": "the Triple Jewel. This page records the exact moment it became complete: the Saṅgha arising alongside the Buddha and the Dhamma"
+    },
+    {
+     "pali": "ปะทักขิณา",
+     "pali_roman": "padakkhiṇā",
+     "meaning": "circumambulation keeping the object on the right — what the chanters do three times while this is recited"
+    },
+    {
+     "pali": "ถูปะ",
+     "pali_roman": "thūpa",
+     "meaning": "a stūpa or reliquary mound. The book's footnote allows ปะฏิมัง, an image, where that is what stands before the chanters"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 6,
+     "file": "IMG_0340.PNG",
+     "issue": "THE COMPLETION OF THE CUT LINE. Page 75 stopped at มิคะทาเย with no punctuation; this page opens ปัญจะวัคคิยานัง ภิกขูนัง and runs to ปะกาเสสิ. The whole unit is therefore one verse, and it KEEPS page 75 because that is where its line starts. It is a long unit, but the punctuation gives no earlier break — read across both sheets to be sure."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0340.PNG",
+     "issue": "THE PAGE IS PROSE, AND THAT WAS MEASURED. The ink profile runs unbroken from x 250 to x 1850 with no empty column band anywhere, so no gutter and no two-column setting. Five paragraphs across twenty-three printed lines."
+    },
+    {
+     "verse": 14,
+     "file": "IMG_0340.PNG",
+     "issue": "THE SAME WORD IS SPELT TWO WAYS ON THIS SHEET. Verse 14 prints ติระตะนัง สัมปุณณัง with ณณ, and verse 15 prints ระตะนัตตะยะสัมปุระณะกาละ with ระณะ. Both read at 7x on isolated crops. Standard Pali is sampuṇṇa in both places. Reproduced exactly as printed and transliterated to match — sampuṇṇaṃ at 14, sampuraṇa at 15 — which is why the two look inconsistent in the romanised layer. This is the clearest thing on the page to check against the book."
+    },
+    {
+     "verse": 15,
+     "file": "IMG_0340.PNG",
+     "issue": "อาสาฬ์หะปุณณะมีกาลัง IS RECORDED WITH ฬ, following Josh's reading of page 75 from the physical book on 2026-08-21. Worth knowing HOW the photograph misled: on this same sheet, the Thai instruction paragraph at the foot prints อาสาฬหบูชา with the ฬ ascender plainly visible at 8x — but here, where the ฬ carries the ์ cluster mark, the ascender does not survive the printing and the letter is indistinguishable from พ. The mark sits exactly where the ascender would be. So a MARKED ฬ์ in this book will read as พ์ every time, at any magnification."
+    },
+    {
+     "verse": 15,
+     "file": "IMG_0340.PNG",
+     "issue": "THE POINTING AGREES WITH PAGE 66, NOT PAGE 69, and that is a third reading of an open question. This page prints ปัต์วา, อิมัง ฐานัง สัมปัตตา, as two units, exactly as the Visākha printing on page 66 does and unlike the Aṭṭhamī printing on page 69, which merges them. Verse 19 does the same thing: ยะถาภุจเจ คุเณ อะนุสสะรันตา, runs together as page 66 has it, where page 69 splits them. Verse 23 makes it three for three — ญาตัพเพหิ คุเณหิ runs together here and on page 66, and is split on page 69. So page 69 is now the odd one of three, which makes IMG_0332 worth a second look."
+    },
+    {
+     "verse": 18,
+     "file": "IMG_0340.PNG",
+     "issue": "อัตตะโน กายัง สักการุปะธานัง กะริต์วา, HAS NO PARALLEL IN THE THREE SIBLING OFFERINGS — neither the Visākha, Aṭṭhamī nor Māgha printing carries it. The English is written fresh for it and is a working translation: sakkārupadhāna is read as the body being made the support or bearer of the homage. Worth an eye, because nothing in the app can corroborate it."
+    },
+    {
+     "verse": 20,
+     "file": "IMG_0340.PNG",
+     "issue": "A FOOTNOTE THE APP CANNOT FULLY SHOW, AND IT NEEDS JOSH'S DECISION. The book prints a superscript 1 on อิมัง ถูปัง and, under a rule at the foot, 1. ถ้ามีพระพุทธรูปเป็นประธานใช้ อิมัง ปะฏิมัง — 'if a Buddha image is the principal object, use อิมัง ปะฏิมัง'. It is an EDITORIAL note, not a canonical citation, so source_printed is deliberately left off. It is recorded as a verse variant, which the template renders as 'the book's footnote gives another reading: อิมัง ปะฏิมัง'. THE CONDITION IS LOST: there is no field for 'when to use it', and for this footnote the condition is the whole point. Options are a new `condition` field on a variant plus one line in both templates, or leaving it as it is. Not decided here."
+    },
+    {
+     "verse": 23,
+     "file": "IMG_0340.PNG",
+     "issue": "A WORD REJOINED ACROSS A LINE BREAK. The line ends อะตีตา- with a hyphen and the next opens รัมมะณะตายะ, so the word is อะตีตารัมมะณะตายะ and the hyphen is dropped — typesetting, not spelling."
+    },
+    {
+     "verse": 24,
+     "file": "IMG_0340.PNG",
+     "issue": "ปะฏิคคัณหาตุ IS BARE AGAIN, for the fifth printing running against page 67's single ปะฏิคคัณ์หาตุ. Read at 7x on an isolated crop: there is no mark over the ณ. Pages 68, 69, 70, 71 and now 76 all print it bare, so the live question is no longer which mark the printer cuts but whether he sets one at all here, and page 67 is looking like the outlier."
+    },
+    {
+     "verse": 25,
+     "file": "IMG_0340.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ. is the same closing petition all four parallel offerings share. No colophon (จบ…) is printed under it, so no closing key is written. Twenty-five verses in total, against sixty for the Visākha and Aṭṭhamī printings and twenty-eight for the Māgha one — this book sets the Āsāḷha offering in far fewer, longer units rather than saying less."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0340.PNG",
+     "issue": "THE THAI PARAGRAPH AT THE FOOT IS AN INSTRUCTION, NOT A TRANSLATION, and is recorded as a page block anchored after this chant, which is where the book prints it. It names ธัมมะจักกัปปะวัตตะนะสุตตะ four times in BOLD, and PAGE_BLOCKS has no field for weight — the words are kept and only the bold is lost, exactly as on page 72. The last two lines split that word across a line break with NO hyphen (ธัมมะจักกัป / ปะวัตตะนะสุตตะ); it is rejoined, since the break is the measure running out. The paragraph ends แล้ว with no full stop."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0340.PNG",
+     "issue": "THE APP'S EXISTING VISĀKHA ENTRY HAS A TRANSLITERATION SLIP IN THE SAME SENTENCE, and it is worth fixing while this is fresh. Its verse 56 carries Sucirapaṇinibbutopi where its own pali reads สุจิระปะรินิพพุโตปิ — parinibbutopi, with an r. This page's verse 22 is written correctly as suciraparinibbutopi, so the two chants now disagree in the app. Nothing on the Visākha entry was changed, because it is a different chant and the file wins unless Josh says otherwise."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-tawai-dokmai-thup-thian-asalha"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 77,
+  "resume_from_file": "IMG_0341.PNG",
+  "resume_from": "",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation of the chant, so every verse paiboon is empty, and a continuation carries no title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter — including verse 15's สัมปุระณะ as sampuraṇa, which disagrees with verse 14's สัมปุณณัง on the same sheet and is reproduced rather than reconciled. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant and one block. The row claims verses 6-25 and the entry holds exactly those. Verse 6 deliberately carries NO page key — its line starts on page 75, so it belongs there — and verse 7 is the first verse on this page and carries 76. No verse is orphaned and none is claimed twice.",
+  "notes": "THE ĀSĀḶHA OFFERING IS COMPLETE, at twenty-five verses across pages 75 and 76, and the fourth of the four parallel offerings is now in. Nothing on this page continues. Four things worth Josh's eye. (1) THE FOOTNOTE ON VERSE 20 NEEDS A DECISION: it is a conditional substitution — use อิมัง ปะฏิมัง if a Buddha image rather than a stūpa is the principal object — and the variant field can carry the alternative reading but not the condition, which is the whole point of the note. (2) สัมปุณณัง at verse 14 against สัมปุระณะ at verse 15, the same word twice on one sheet. (3) THE POINTING IS NOW THREE READINGS TO ONE against page 69 in three separate places, which makes IMG_0332 worth re-reading. (4) HOW THE ฬ/พ MISREADING HAPPENED IS NOW VISIBLE ON ONE SHEET: bare ฬ in the Thai paragraph at the foot shows its ascender plainly at 8x, while the ฬ carrying the ์ mark eleven lines above does not — the mark occupies the ascender's space. A marked ฬ์ in this book cannot be told from พ์ by eye. Nothing on this page needs re-photographing."
+ }
+}
