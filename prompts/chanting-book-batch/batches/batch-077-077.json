@@ -1,0 +1,417 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "bot-khat-chumnum-thewada",
+   "pubbabhaga-namakara-sipsong-tamnan",
+   "sarana-gamana-patha-sipsong-tamnan"
+  ],
+  "pages": [
+   {
+    "page": 77,
+    "file": "IMG_0341.PNG",
+    "script": "thai",
+    "columns": "1 then 2",
+    "chant": "bot-khat-chumnum-thewada",
+    "verses": "1-11",
+    "starts_here": true,
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "พระสูตร พระปริตร ปาฐะ และคาถา",
+      "english": "Suttas, Parittas, Passages and Verses",
+      "english_unverified": true
+     },
+     {
+      "type": "heading",
+      "thai": "ที่กำหนดสวดในภาคเย็น",
+      "english": "appointed for chanting in the evening",
+      "english_unverified": true
+     },
+     {
+      "type": "heading",
+      "thai": "สิบสองตำนาน",
+      "english": "The Twelve Tamnan",
+      "english_unverified": true
+     },
+     {
+      "type": "footnote",
+      "marker": "1",
+      "thai": "ใช้แต่ในราชพิธีและรัฐพิธี",
+      "english": "Used only in royal and state ceremonies.",
+      "english_unverified": true
+     }
+    ],
+    "note": "The top of a whole NEW PART of the book. Three centred lines open the sheet — พระสูตร พระปริตร ปาฐะ และคาถา / ที่กำหนดสวดในภาคเย็น / สิบสองตำนาน — and they head the section, not this chant, so they are recorded as three heading blocks on this first row, which is what puts them above everything. Then the chant's own title and eleven verses. THE SETTING CHANGES INSIDE THE CHANT: verses 1 and 2 fill the whole measure, verses 3 to 8 are set in TWO COLUMNS with a measured 80px gutter at x 800-880, and verses 9 to 11 return to one indented column. Verse 1 is bracketed and carries a superscript 1; its footnote is printed under a rule at the foot of the sheet and is declared here, though block_groups correctly sends a footnote to the page foot rather than to this chant."
+   },
+   {
+    "page": 77,
+    "file": "IMG_0341.PNG",
+    "script": "thai",
+    "chant": "pubbabhaga-namakara-sipsong-tamnan",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The middle of the sheet. A centred title and the three Namo lines, single column with wide word spacing — profiled to be sure, because the spacing is wide enough to look like a gutter and is not: the gaps are one or two cells wide against the 80px gutter above."
+   },
+   {
+    "page": 77,
+    "file": "IMG_0341.PNG",
+    "script": "thai",
+    "chant": "sarana-gamana-patha-sipsong-tamnan",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The foot of the sheet, above the footnote rule. A centred title and the three refuges run on as one justified block, wrapping so that the last คัจฉามิ. falls on its own line — a wrap, not a page break. The sheet then ends. Whether the chant continues onto page 78 is a question about page 78; see the check on verse 3."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-chumnum-thewada",
+   "working_notes": {
+    "invitation": "absent, and none written. The title is followed straight away by the bracketed line.",
+    "units": "Eleven. Verses 1 and 2 are each one printed line filling the measure, kept whole rather than split at their internal commas, because this chant is set as VERSE and each of those lines is a couplet. Verses 3 to 8 are the two-column rows, read ACROSS. Verses 9 to 11 are the three ธัมมัสสะวะนะกาโล lines, which the book prints three times over.",
+    "ordering": "None. No Thai translation is printed, so nothing can run out of step with the Pali.",
+    "conventions": "None. The page prints no romanisation of its own. title_roman is Paiboon+ written for this app, because this chant's title is Thai rather than Pali-in-Thai-script.",
+    "pages": "IMG_0341.PNG, page 77, read off the top centre of the sheet — the offset of 264 has now held for four pages. The chant starts and ends on this page. Nothing is obscured; the reverse of the leaf ghosts through faintly across the whole sheet and was ignored throughout."
+   },
+   "title_thai": "บทขัดชุมนุมเทวดา",
+   "title_pali": "",
+   "title_roman": "bòt-kàt chum-num tee-wá-daa",
+   "title_english": "The Prefatory Verse for Assembling the Devas",
+   "page_start": 77,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "page": 77,
+     "pali": "(สะรัชชัง สะเสนัง สะพันธุง นะรินทัง, ปะริตตานุภาโว สะทา รักขะตูติ)",
+     "pali_roman": "(Sarajjaṃ sasenaṃ sabandhuṃ narindaṃ, parittānubhāvo sadā rakkhatū ti)",
+     "thai": "",
+     "paiboon": "",
+     "english": "(May the power of the paritta ever protect the ruler, together with his realm, his forces and his kin.)"
+    },
+    {
+     "number": 2,
+     "pali": "ผะริต์วานะ เมตตัง สะเมตตา ภะทันตา, อะวิกขิตตะจิตตา ปะริตตัง ภะณันตุ.",
+     "pali_roman": "Pharitvāna mettaṃ samettā bhadantā, avikkhittacittā parittaṃ bhaṇantu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Suffusing loving-kindness, venerable sirs, full of loving-kindness and with undistracted minds, may you recite the paritta."
+    },
+    {
+     "number": 3,
+     "pali": "สะมันตา จักกะวาเฬสุ อัต์ราคัจฉันตุ เทวะตา",
+     "pali_roman": "Samantā cakkavāḷesu atrāgacchantu devatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "From all around the world-systems, may the devas come here,"
+    },
+    {
+     "number": 4,
+     "pali": "สัทธัมมัง มุนิราชัสสะ สุณันตุ สัคคะโมกขะทัง",
+     "pali_roman": "Saddhammaṃ munirājassa suṇantu saggamokkhadaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "and hear the True Dhamma of the King of Sages, which gives heaven and liberation."
+    },
+    {
+     "number": 5,
+     "pali": "สัคเค กาเม จะ รูเป คิริสิขะระตะเฏ จันตะลิกเข วิมาเน.",
+     "pali_roman": "Sagge kāme ca rūpe girisikharataṭe cantalikkhe vimāne.",
+     "thai": "",
+     "paiboon": "",
+     "english": "In the heavens of sense-desire and of form, on mountain peaks and crags, and in mansions in the sky;"
+    },
+    {
+     "number": 6,
+     "pali": "ทีเป รัฏเฐ จะ คาเม ตะรุวะนะคะหะเน เคหะวัตถุมหิ เขตเต.",
+     "pali_roman": "Dīpe raṭṭhe ca gāme taruvanagahane gehavatthumhi khette.",
+     "thai": "",
+     "paiboon": "",
+     "english": "on islands, in countries and in villages, in trees and forest thickets, in house-sites and in fields;"
+    },
+    {
+     "number": 7,
+     "pali": "ภุมมา จายันตุ เทวา ชะละถะละวิสะเม ยักขะคันธัพพะนาคา,",
+     "pali_roman": "Bhummā cāyantu devā jalathalavisame yakkhagandhabbanāgā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the earth-dwelling devas come, and the yakkhas, gandhabbas and nāgas of water, land and rough country —"
+    },
+    {
+     "number": 8,
+     "pali": "ติฏฐันตา สันติเก ยัง มุนิวะระวะจะนัง สาธะโว เม สุณันตุ ฯ",
+     "pali_roman": "Tiṭṭhantā santike yaṃ munivaravacanaṃ sādhavo me suṇantu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "standing near, may these good beings hear the word of the excellent Sage that I recite."
+    },
+    {
+     "number": 9,
+     "pali": "ธัมมัสสะวะนะกาโล อะยัมภะทันตา",
+     "pali_roman": "Dhammassavanakālo ayaṃ bhadantā",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is the time to hear the Dhamma, venerable sirs."
+    },
+    {
+     "number": 10,
+     "pali": "ธัมมัสสะวะนะกาโล อะยัมภะทันตา",
+     "pali_roman": "Dhammassavanakālo ayaṃ bhadantā",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is the time to hear the Dhamma, venerable sirs."
+    },
+    {
+     "number": 11,
+     "pali": "ธัมมัสสะวะนะกาโล อะยัมภะทันตา.",
+     "pali_roman": "Dhammassavanakālo ayaṃ bhadantā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is the time to hear the Dhamma, venerable sirs."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปะริตตะ",
+     "pali_roman": "paritta",
+     "meaning": "a protective chant. The whole section this page opens is a collection of them"
+    },
+    {
+     "pali": "จักกะวาฬะ",
+     "pali_roman": "cakkavāḷa",
+     "meaning": "a world-system; the whole sphere of a world. The devas are called from all of them"
+    },
+    {
+     "pali": "เทวะตา",
+     "pali_roman": "devatā",
+     "meaning": "a deva, a celestial being. The chant invites them to come and listen"
+    },
+    {
+     "pali": "ยักขะ / คันธัพพะ / นาคะ",
+     "pali_roman": "yakkha / gandhabba / nāga",
+     "meaning": "three classes of non-human being — spirits, celestial musicians and serpent-beings — named alongside the devas"
+    },
+    {
+     "pali": "มุนิราชะ",
+     "pali_roman": "munirāja",
+     "meaning": "the King of Sages, a title of the Buddha"
+    },
+    {
+     "pali": "สัคคะโมกขะทะ",
+     "pali_roman": "saggamokkhada",
+     "meaning": "giving heaven and liberation — what the True Dhamma is said to give"
+    },
+    {
+     "pali": "ธัมมัสสะวะนะกาละ",
+     "pali_roman": "dhammassavanakāla",
+     "meaning": "the time for hearing the Dhamma. Called three times, which is how the assembly is opened"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0341.PNG",
+     "issue": "TWO COLUMNS, AND THE GUTTER WAS MEASURED. Verses 3 to 8 are set in two columns with an 80px empty band at x 800-880 — the widest gap on those lines by a factor of four against the ordinary word spaces. Read ACROSS the row. The honest test agrees: reading the left column straight down gives สะมันตา จักกะวาเฬสุ / สัทธัมมัง มุนิราชัสสะ / สัคเค กาเม จะ รูเป, a series of unfinished half-lines, while reading across gives Samantā cakkavāḷesu atrāgacchantu devatā, which is a sentence. FIRST PAIRING SHOWN HERE so it can be confirmed against the book: left สะมันตา จักกะวาเฬสุ + right อัต์ราคัจฉันตุ เทวะตา."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0341.PNG",
+     "issue": "จักกะวาเฬสุ IS ฬ, AND THIS TIME IT WAS PROVEN RATHER THAN JUDGED. Read in isolation at 8x the letter looked like พ — no ascender — which is exactly the mistake page 75 made. Set beside the two undoubted พ in ยักขะคันธัพพะนาคา at verse 7, on the same sheet in the same size, the difference is plain: the พ stop at x-height and this letter carries a tall ascender. The test that works is comparison against a known พ on the SAME page, not magnification."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0341.PNG",
+     "issue": "THIS LINE IS BRACKETED AND FOOTNOTED, AND BOTH MATTER. The book prints it inside round brackets with a superscript 1, and the footnote at the foot of the sheet reads ใช้แต่ในราชพิธีและรัฐพิธี — 'used only in royal and state ceremonies'. So the line is optional and occasion-specific. The brackets are reproduced as printed and the footnote is recorded as a page block; nothing marks the two as belonging together except this check, because a footnote block sits at the page foot and cannot point back at a verse."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0341.PNG",
+     "issue": "สะเมตตา WITH DOUBLE ต, where standard editions have sametā with one. Read at 7x on an isolated crop: there are clearly two ต. Reproduced as printed and transliterated samettā to match, so the two chanted layers still agree."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0341.PNG",
+     "issue": "ฯ CLOSES THE VERSE, reproduced in the pali and rendered as a full stop in the pali_roman — the convention this file already uses in seven other places. Verse 11 ends with an ordinary full stop instead, and verses 9 and 10 end with no mark at all, all as printed."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0341.PNG",
+     "issue": "THE BOOK PRINTS THIS LINE THREE TIMES, so it is entered three times. Not a duplication and not a typesetting artefact — the summons is called three times, the same way the Namo below it is chanted three times. Only the third carries a full stop. Recorded because check_render walks strings in printed order and a line repeated verbatim is exactly the case that looks like an error."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0341.PNG",
+     "issue": "THE THREE CENTRED LINES AT THE TOP OF THE SHEET HEAD A SECTION, NOT THIS CHANT. พระสูตร พระปริตร ปาฐะ และคาถา / ที่กำหนดสวดในภาคเย็น / สิบสองตำนาน announce a whole new part of the book — the Twelve Tamnan parittas for evening chanting — so they go in as heading blocks rather than as this chant's title, whose own title is บทขัดชุมนุมเทวดา below them. Their English is written for this edition."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0341.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, with no Thai translation anywhere on the page, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "pubbabhaga-namakara-sipsong-tamnan",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Three, one Namo per printed line, exactly as the book sets them. The third carries ฯ.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is left empty because the title is Pali in Thai script and title_pali carries it.",
+    "pages": "IMG_0341.PNG, page 77. Title and all three lines are on this page; the chant starts and ends here."
+   },
+   "title_thai": "ปุพพะภาคะนะมะการะปาโฐ",
+   "title_pali": "Pubbabhāganamakārapāṭho",
+   "title_roman": "",
+   "title_english": "The Preliminary Salutation",
+   "page_start": 77,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "page": 77,
+     "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ",
+     "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Blessed One, the Worthy One, perfectly enlightened by himself."
+    },
+    {
+     "number": 2,
+     "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ",
+     "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Blessed One, the Worthy One, perfectly enlightened by himself."
+    },
+    {
+     "number": 3,
+     "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ ฯ",
+     "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Blessed One, the Worthy One, perfectly enlightened by himself."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปุพพะภาคะ",
+     "pali_roman": "pubbabhāga",
+     "meaning": "the preliminary part; what comes first. This salutation opens almost every service in the book"
+    },
+    {
+     "pali": "นะมะการะ",
+     "pali_roman": "namakāra",
+     "meaning": "the making of homage — the act this three-line formula performs"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0341.PNG",
+     "issue": "A THIRD PRINTING OF THE SAME CHANT, AND IT IS NOT A REPEAT. The app already holds pubbabhaga-namakara from page 2 and pubbabhaga-namakara-evening from page 52, and the rule for this book has been one entry per printing. This one differs from both in two visible ways, which is why it is set in full rather than stubbed: it PRINTS A TITLE (ปุพพะภาคะนะมะการะปาโฐ, where pages 2 and 52 print none, and both existing entries carry title_thai ''), and it ends its third line with ฯ where the earlier two end all three lines with full stops. Josh may prefer these three to be one entry; that is a decision about the edition, not a reading."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0341.PNG",
+     "issue": "ฯ ON THE THIRD LINE ONLY, where lines 1 and 2 end with no mark at all. The two earlier printings in the app end every line with a full stop. Reproduced as printed; the roman renders ฯ as a full stop, as elsewhere in this file."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0341.PNG",
+     "issue": "THE TITLE ENDS ปาโฐ, NOT ปาฐะ, and the first transliteration of it here was wrong. It was written pāṭha and the book prints pāṭho — the nominative, with โ. Caught by tests/test_contents_roman.py, which romanises the title independently and compares, and corrected to match. The same slip was made on สะระณะคะมะนะปาโฐ below and corrected the same way. Both now agree character for character with the romanisation the book's own สารบัญ already carries in CONTENTS."
+    }
+   ]
+  },
+  {
+   "id": "sarana-gamana-patha-sipsong-tamnan",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Three, split at the printed full stops. The book runs all three on as one justified block, so layout is 'prose'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is left empty because the title is Pali in Thai script.",
+    "pages": "IMG_0341.PNG, page 77. Title and the three refuges are on this page. The last คัจฉามิ. sits on its own line, which is the measure wrapping rather than anything structural. The sheet ends below it with the footnote rule."
+   },
+   "title_thai": "สะระณะคะมะนะปาโฐ",
+   "title_pali": "Saraṇagamanapāṭho",
+   "title_roman": "",
+   "title_english": "The Going for Refuge",
+   "page_start": 77,
+   "layout": "prose",
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "page": 77,
+     "pali": "พุทธัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I go to the Buddha for refuge."
+    },
+    {
+     "number": 2,
+     "pali": "ธัมมัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dhammaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I go to the Dhamma for refuge."
+    },
+    {
+     "number": 3,
+     "pali": "สังฆัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Saṅghaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I go to the Saṅgha for refuge."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สะระณะ",
+     "pali_roman": "saraṇa",
+     "meaning": "refuge; a shelter one goes to. The word the whole formula turns on"
+    },
+    {
+     "pali": "คะมะนะ",
+     "pali_roman": "gamana",
+     "meaning": "going. Taking refuge is described as an act of going, not of believing"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0341.PNG",
+     "issue": "MARKED continues: true, AND THAT IS AN INFERENCE, NOT A READING. The three refuges end with a full stop and the sheet then runs out at the footnote rule, so nothing on this photograph says whether the chant goes on. As this formula is chanted it normally repeats twice more, with ทุติยัมปิ and ตะติยัมปิ, and if it does here those lines are on page 78. It is marked as continuing because a chant left looking finished when it is not is the failure this workflow most exists to prevent, and a stale CONTINUES marker is cheap to remove. PAGE 78 SETTLES IT: if page 78 opens on something else, drop the marker and nothing else changes."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0341.PNG",
+     "issue": "PRINTED AS RUN-ON PROSE, not as three lines, so layout is 'prose'. The app already holds these words inside tisarana-gamana-ubosot from page 12, which separates them with COMMAS where this page uses FULL STOPS and which is a different chant with a different title. Set as its own entry rather than merged, on the same one-entry-per-printing rule as the Namo above it."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-chumnum-thewada",
+   "pubbabhaga-namakara-sipsong-tamnan"
+  ],
+  "not_started": [],
+  "continues": [
+   "sarana-gamana-patha-sipsong-tamnan"
+  ],
+  "resume_from_page": 78,
+  "resume_from_file": "IMG_0342.PNG",
+  "resume_from": "sarana-gamana-patha-sipsong-tamnan",
+  "unreadable": [],
+  "paiboon_scan": "clean. The page prints no Thai translation, so every verse paiboon is empty and the only Paiboon+ in the batch is one title_roman, 'bòt kàt chum-num tee-wá-daa'. Scanned every field for kh, th, ph and ng: zero hits. ขัด is kàt not khàt, and ชุมนุม is chum-num with no ŋ in it.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter — including สะเมตตา as samettā, which standard editions spell sametā. ฯ is kept in the pali and rendered as a full stop in the roman, the convention this file already uses. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. Three rows for one page, one per chant, in the order they appear down the sheet. Each row's verse range matches its entry exactly — 1-11, 1-3, 1-3 — no verse is orphaned and none is claimed twice. Each chant's first verse carries the page key and no page turns inside any of them. Four blocks are declared on the first row: three headings, which anchor above everything because that row is the page's first, and one footnote, which block_groups sends to the page foot.",
+  "notes": "A STRUCTURAL PAGE — the book opens a whole new part here, the สิบสองตำนาน parittas for evening chanting, and page 77 holds its section heading plus three separate chants. Four things for Josh. (1) TWO OF THE THREE CHANTS ARE THIRD AND SECOND PRINTINGS of text already in the app, entered as their own chants on the one-entry-per-printing rule this book has used since page 61 — but both differ visibly from the earlier printings (this Namo has a TITLE and ends with ฯ; these refuges use full stops where page 12 uses commas), so the rule and the readings agree. Whether the edition should show three Namos is a decision, not a reading. (2) THE ฬ/พ LETTER CAME UP AGAIN and was settled properly this time — see the check on verse 3. Comparing against a known พ on the same page works; magnification alone does not. (3) THE TWO-COLUMN BLOCK was measured, not judged: an 80px gutter at x 800-880, four times any word space on those lines. (4) sarana is marked as continuing on an INFERENCE about how the formula is chanted, not on anything the photograph shows; page 78 settles it in one look. Nothing needs re-photographing. ‼ THREE TITLE ERRORS WERE CAUGHT BY THE TEST SUITE AND CORRECTED before anything was committed. Both ปาโฐ titles were transliterated pāṭha instead of pāṭho, and บทขัดชุมนุมเทวดา was romanised 'bòt kàt' with a space where the contents table has 'bòt-kàt' with a hyphen. All three chants are listed in the book's own สารบัญ and CONTENTS already held the correct romanisation of all three, so the right values were taken from there rather than composed again."
+ }
+}
