@@ -427,7 +427,50 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
             out += f"{indent}{INDENT}'{key}': {verse[key]!r},\n"
     for layer in LAYERS:
         out += f"{indent}{INDENT}'{layer}': {verse.get(layer, '')!r},\n"
+    # `variants` is the same story yet again, found on page 76: the book keys
+    # a footnote to one word of a chanted line and offers ANOTHER reading for
+    # it — อิมัง ถูปัง becomes อิมัง ปะฏิมัง where a Buddha image rather than
+    # a stūpa is the principal object. That is not a citation and not a
+    # correction: both readings are the book's, and which one a chanter says
+    # depends on what is in front of them. `chanting.py` has held the field
+    # since b40c9c5 and the template has rendered it under the line ever
+    # since, so this loop was the only thing between the two. Left off, a
+    # batch declaring one would be dropped in transit and the page would go
+    # live showing a superscript with nothing under it.
+    out += render_variants(verse.get("variants", ()), indent + INDENT)
     return out + f"{indent}}},\n"
+
+
+def render_variants(variants: list, indent: str) -> str:
+    """Render a verse's variant readings in the shape chanting.py uses.
+
+    Emitted long-hand rather than by `repr` because a list of dicts on one
+    line is unreadable beside the hand-written ones already in the file, and
+    these are read by eye against the book more often than most fields.
+
+    Every variant is checked here rather than trusted. A variant missing its
+    `marker` or `word` renders as a superscript pointing at nothing, which is
+    present in the data, wrong on the page, and invisible in a diff.
+    """
+    if not variants:
+        return ""
+    out = f"{indent}'variants': [\n"
+    for variant in variants:
+        for key in ("marker", "word", "reading"):
+            if not variant.get(key):
+                raise SystemExit(
+                    f"a variant has no {key!r}: {variant!r} — a variant "
+                    f"without one cannot be rendered against its line")
+        out += f"{indent}{INDENT}{{\n"
+        # Exactly the keys both templates render, and no more. A key the
+        # page cannot show would be a second copy of the truth that
+        # nothing displays and nothing tests.
+        for key in ("marker", "word", "reading", "reading_roman"):
+            if key in variant:
+                out += (f"{indent}{INDENT}{INDENT}"
+                        f"'{key}': {variant[key]!r},\n")
+        out += f"{indent}{INDENT}}},\n"
+    return out + f"{indent}],\n"
 
 
 def render_closing(closing: dict) -> str:
