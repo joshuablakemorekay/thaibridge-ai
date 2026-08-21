@@ -45,16 +45,21 @@ with no comma and no full stop after `มิคะทาเย`. So page 76's ba
 not verse 7. `apply_batch` replaces the partial and `check_pages` proves the
 completed line starts with what the partial held.
 
-**Settle the ฬ/พ question first if the book is to hand.** Page 75 prints this
-chant's TITLE as `ในวันอาสาพหบูชา` and its body word as `อาสาพ์หะปุณณะมิยัง` —
-both with **พ** where standard Thai and standard Pali have ฬ (อาสาฬหบูชา,
-*āsāḷha*). Read at 6× on the bold title and 10× on the body word: two humps, no
-tall ascender, and the ์ mark sitting in the clear space where an ascender would
-be. Recorded as printed and transliterated `Āsābhapuṇṇamiyaṃ` to match, with
-the English giving the Āsāḷha sense. **But the photo map's warning that these
-photographs have been wrong about this exact letter twice still stands**, and
-this one is in a chant TITLE and in its id, so it is the most valuable single
-thing on the page to check against the book.
+**SETTLED 2026-08-21, and it changes how to read this book.** Page 75's chant
+title and its verse 6 were first recorded as `ในวันอาสาพหบูชา` and
+`อาสาพ์หะปุณณะมิยัง`, with **พ**, on the strength of two careful reads — 6× on
+the bold title, 10× on the body word — that both showed two humps and **no tall
+ascender**. Josh read the page and it is `อาสาฬหบูชา` and `อาสาฬ์หะปุณณะมิยัง`,
+with **ฬ**. Both are corrected in `chanting.py` and in the batch file, and the
+transliteration moved with them to `Āsāḷhapuṇṇamiyaṃ`.
+
+**The lesson is bigger than the word.** This is the THIRD time these
+photographs have lost ฬ to พ against Josh's own reading, and the first where the
+**absence** of an ascender was taken as evidence *for* พ. It is not evidence.
+Page 71 could say `เวฬุวะเน` was ฬ because the ascender was visibly THERE —
+positive evidence still holds. Its absence proves nothing in this printing. So
+**every ฬ/พ is a question for the book**, and no amount of magnification
+changes that.
 
 **What page 76 owes.** The Āsāḷha offering has reached the Deer Park at
 Isipatana on the full-moon day, which is where the first sermon was taught. Its
@@ -93,19 +98,20 @@ before deciding what is on it** — page 71 held three chants, page 72 held two
 plus a block, page 73 held one chant in five different settings, and page 75
 held the end of one chant and the start of another.
 
-## Raised on page 75 — all open, all need the book
+## Raised on page 75 — one still open, two settled
 
-**The ฬ/พ hazard, in a title.** Above, and it is the one to do first.
+**The ฬ/พ hazard, in a title — SETTLED, and the reading was wrong.** Above.
 
-**The three trainings are pointed unevenly.** Verse 83 prints
+**STILL OPEN: the three trainings are pointed unevenly.** Verse 83 prints
 `อะธิสีละสิกขาสะมาทาเน อะธิจิตตะสิกขาสะมาทาเน,` with **no comma between the
 first two** and one after the second, then `อะธิปัญญาสิกขาสะมาทาเน,` with its
 own. Read at 4× across the whole line. Standard editions comma all three. That
 is why verse 83 holds two of the trainings and verse 84 holds one.
 
-**`ปฏิจจะ` is printed without the ะ** this book usually sets after the ป
-(`ปะฏิจจะ`). Read at 8× on an isolated crop: ป and ฏิ sit directly together.
-Reproduced as printed; `paṭicca` either way, since the ะ is orthography.
+**SETTLED: `ปฏิจจะ` really is printed without the ะ** this book usually sets
+after the ป (`ปะฏิจจะ`). Read at 8× on an isolated crop, and Josh confirmed it
+from the book on 2026-08-21. Kept as printed; `paṭicca` either way, since the ะ
+is orthography rather than a different word.
 
 **`ตัส์มา` carries the small mark over the ส**, an ε-shaped curl with a tail at
 5× — the same shape page 60 read on `ท์วายะ`. Recorded as ์ (U+0E4C) like
@@ -319,6 +325,10 @@ stands generally — but ฬ carries a tall ascender that พ does not, and at 4
 is plainly there. Recorded on the strength of the ascender, with the canonical
 reading agreeing rather than deciding.
 
+⚠️ **This holds only in the direction it was used.** Page 75 turned the same
+test around — no ascender, therefore พ — and was wrong. Seeing an ascender can
+settle a letter as ฬ; not seeing one settles nothing.
+
 ## Raised on page 70 — the twins disagree in four letters
 
 Page 70 is twenty-six two-column rows of one chant and nothing else, and its
@@ -429,9 +439,17 @@ checked at high magnification and neither is marked; both are stored unmarked.
 Worth knowing that this printer omits the mark as well as cutting it, because
 the omission is exactly what a reader would "correct" without noticing.
 
-**The ฬ/พ hazard.** These photographs cannot tell ฬ from พ at body-text size.
-Proven twice against Josh's own readings from the book: page 23 line 19, and
-อะสัมมุฬโห on page 22. Words written with ฬ as a **judgement, not a reading**:
+**The ฬ/พ hazard.** These photographs cannot tell ฬ from พ, and the failure is
+not confined to body-text size. Proven **three times** against Josh's own
+readings from the book: page 23 line 19, อะสัมมุฬโห on page 22, and — on
+2026-08-21 — the chant TITLE อาสาฬหบูชา on page 75, which had been read as
+อาสาพหบูชา at 6× in bold display type.
+
+**A missing ascender is not evidence for พ.** That is what page 75 got wrong.
+The presence of an ascender can still say ฬ, as it did for `เวฬุวะเน` on page
+71; its absence says nothing at all. Ask the book.
+
+Words written with ฬ as a **judgement, not a reading**:
 
 - อะวิรุฬหิฉันทา — page 22
 - ปีฬิตัสสะ — page 24
@@ -439,7 +457,10 @@ Proven twice against Josh's own readings from the book: page 23 line 19, and
 
 **And the one that matters most.** Paṭiccasamuppāda writes the sense-bases word
 as สะพายะตะนัง with พ at verses 4, 5, 16 and 17, and the photograph appears to
-agree. Standard Pali is *saḷāyatana*, with ฬ. Josh's instruction to "let the
+agree. Standard Pali is *saḷāyatana*, with ฬ. **Page 75 makes this likelier
+still**: three photographic readings of this letter have now been overturned by
+the book, all of them in the same direction — ฬ lost to พ. Josh's instruction to
+"let the
 photo win" was given for paste damage and **must not be applied here** — the
 photograph is precisely what cannot settle this, and applying it would fix four
 wrong readings permanently. Left untouched pending the book.

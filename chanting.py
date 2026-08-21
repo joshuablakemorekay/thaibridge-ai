@@ -20886,26 +20886,22 @@ CHANTS = [
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
         # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
-        # ‼ CHECK [IMG_0339.PNG]: THE ฬ/พ HAZARD, ON A TITLE, AND THIS ONE
-        #   MUST BE SETTLED FROM THE BOOK. The title prints ในวันอาสาพหบูชา
-        #   and verse 6 prints อาสาพ์หะปุณณะมิยัง — both with พ where standard
-        #   Thai and standard Pali have ฬ (อาสาฬหบูชา, āsāḷha). Read at 6x on
-        #   the bold title and at 10x on the body word: the letter has two
-        #   humps and NO tall ascender, which is the one test page 71
-        #   established can tell the two apart, and the ์ mark above it sits
-        #   in clear space where an ascender would be. So it is recorded as พ.
-        #   BUT the photo map's standing warning is that these photographs
-        #   have been wrong about exactly this letter twice before, against
-        #   Josh's own reading from the book, so this is a reading and not a
-        #   verdict. It matters more than the usual case because it is in the
-        #   TITLE of the chant.
-        # ‼ CHECK [IMG_0339.PNG]: title_roman ROMANISES THE SPOKEN NAME OF THE
-        #   DAY, aa-sǎan-hà-buu-chaa, not the printed letters. Paiboon+ is a
-        #   pronunciation system and this field exists so a non-Thai reader
-        #   can find the chant, and the day is said aa-sǎan-hà-buu-chaa
-        #   whatever the compositor set. Every other word of it matches the
-        #   three sibling titles character for character. Settle the ฬ/พ
-        #   question above and this follows from it.
+        # ‼ RESOLVED [IMG_0339.PNG]: THE ฬ/พ HAZARD, SETTLED FROM THE BOOK.
+        #   Josh read this page on 2026-08-21 and it is อาสาฬหบูชา with ฬ, and
+        #   therefore อาสาฬ์หะปุณณะมิยัง at verse 6. The photograph was read at
+        #   6x on the bold title and 10x on the body word and showed two humps
+        #   and no tall ascender both times, so it was recorded as พ — and that
+        #   was wrong. This is the THIRD time these images have lost ฬ to พ
+        #   against Josh's own reading, after page 23 line 19 and อะสัมมุฬโห on
+        #   page 22, and the first where the absence of an ascender was itself
+        #   taken as evidence. The ascender test is not reliable in this
+        #   printing; treat every ฬ/พ as one for the book from here on. The
+        #   title, verse 6 and its transliteration are now what the book prints.
+        # ‼ RESOLVED [IMG_0339.PNG]: title_roman was already right and needed
+        #   no change. It romanises the spoken name of the day,
+        #   aa-sǎan-hà-buu-chaa, which is what อาสาฬหบูชา is said as — so
+        #   settling the letter as ฬ left it alone. It matches the three sibling
+        #   titles word for word.
         # ‼ CHECK [IMG_0339.PNG]: english_unverified is set. The book prints
         #   this chant in Pali only, with no Thai translation anywhere on the
         #   page, so thai and paiboon are empty on every verse and the English
@@ -20913,7 +20909,7 @@ CHANTS = [
         #   to 3, which are copied from the Visākha printing already in the
         #   app.
         'id': 'kham-tawai-dokmai-thup-thian-asalha',
-        'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันอาสาพหบูชา',
+        'title_thai': 'คำถวายดอกไม้ ธูป เทียน ในวันอาสาฬหบูชา',
         'title_pali': '',
         'title_roman': 'kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan aa-sǎan-hà-buu-chaa',
         'title_english': 'The Words for Offering Flowers, Incense and Candles on Āsāḷha Pūjā Day',
@@ -20971,11 +20967,11 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'that Blessed One was worthy, fully enlightened by himself,',
             },
-            # ‼ CHECK [IMG_0339.PNG]: ปฏิจจะ IS PRINTED WITHOUT THE ะ AFTER
-            #   THE ป, where this book's usual style is ปะฏิจจะ. Read at 8x on
-            #   an isolated crop: ป and ฏิ sit directly together with no vowel
-            #   between them. Reproduced as printed; the transliteration is
-            #   paṭicca either way, since the ะ is orthography rather than a
+            # ‼ RESOLVED [IMG_0339.PNG]: ปฏิจจะ IS PRINTED WITHOUT THE ะ,
+            #   confirmed by Josh from the physical book on 2026-08-21, where
+            #   this book's usual style is ปะฏิจจะ. Read at 8x on an isolated
+            #   crop and the reading held. Kept as printed; the transliteration
+            #   is paṭicca either way, since the ะ is orthography rather than a
             #   different word.
             {
                 'number': 5,
@@ -20985,13 +20981,6 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'and out of compassion for beings, being merciful, a seeker of their welfare, and taking up sympathy,',
             },
-            # ‼ CHECK [IMG_0339.PNG]: อาสาพ์หะ IS TRANSLITERATED FAITHFULLY AS
-            #   āsābha, NOT CORRECTED TO āsāḷha. The mark makes พ the first
-            #   half of a cluster with the ห that follows, so the printed
-            #   letters give āsābha — the same treatment as
-            #   มาฆะทานัง/māghadānaṃ on page 71. The English gives the Āsāḷha
-            #   sense, which is flagged here so the two layers do not silently
-            #   disagree.
             # ‼ CHECK [IMG_0339.PNG]: THE PAGE STOPS MID-UNIT and the line is
             #   marked […]. มิคะทาเย is the last printed word on the sheet —
             #   there is no comma or full stop after it, and the row profile
@@ -21000,8 +20989,8 @@ CHANTS = [
             #   in batch_status.continues.
             {
                 'number': 6,
-                'pali': 'อาสาพ์หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย […]',
-                'pali_roman': 'Āsābhapuṇṇamiyaṃ bārāṇasiyaṃ isipatane migadāye […]',
+                'pali': 'อาสาฬ์หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย […]',
+                'pali_roman': 'Āsāḷhapuṇṇamiyaṃ bārāṇasiyaṃ isipatane migadāye […]',
                 'thai': '',
                 'paiboon': '',
                 'english': 'on the Āsāḷha full moon, at Bārāṇasī, in the Deer Park at Isipatana […]',
