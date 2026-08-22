@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
-79 went in.
+80 went in.
 
 ## Read first, in this order
 
@@ -12,12 +12,14 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–79 are in and unbroken**, plus 217–221. **108 chants, 1,390 verses
+- **Pages 1–80 are in and unbroken**, plus 217–221. **110 chants, 1,414 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 78 and 79 were applied 2026-08-22; pages 75 to 77 on 2026-08-21; pages
-  69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
+- **Nothing is left open.** There is no `‼ CONTINUES` marker anywhere in
+  `chanting.py` — page 80 closed all three of its chants.
+- Pages 78, 79 and 80 were applied 2026-08-22; pages 75 to 77 on 2026-08-21;
+  pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
   Tamnan parittas appointed for evening chanting. Everything from here is
@@ -34,25 +36,20 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 80, `IMG_0344` — but READ THE NUMBER off the sheet
+## Next: page 81, `IMG_0345` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for six pages, so page 80 *should* be
-`IMG_0344`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for seven pages, so page 81 *should* be
+`IMG_0345`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**`namokara-atthaka-gatha` is open at verse 3, and it is NOT a cut line.** Page
-79's last row is a whole printed unit, so there is no `[…]` to complete: page
-80's batch is an ordinary `continuation_of` numbering **from 4**.
+**Page 81 starts clean.** Nothing continues, nothing is cut, and there is no
+`‼ CONTINUES` marker in the file — so whatever is on the sheet begins there.
 
-**The title says how many verses to expect.** `อัฏฐะกะ` means a set of eight
-and only three are in, so **five more should follow on page 80**. That is a
-reason to expect a continuation, not a reason to write one — and if page 80
-gives a different number, the book wins and the count goes in a check.
-
-**Expect two columns and check for a hyphen at the gutter.** These three rows
-are two-column with a 140px gutter, and the first of them breaks a word across
-it with a hyphen. If page 80 continues the same setting, the same thing can
-happen again.
+**Expect a paritta and expect two columns.** The book is inside the
+สิบสองตำนาน now, and pages 79 and 80 were two-column throughout. The สารบัญ
+lists the บทขัด prefaces in a long run — ระตะนะสุตตัง, กะระณียะเมตตะสุตตัง,
+ขันธะปะริตตัง and so on — so a preface followed by its sutta is the shape to
+expect. **That is a reason to read carefully, not a reason to assume.**
 
 ## Standing rules for every page
 
@@ -75,6 +72,33 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Raised on page 80 — a title the contents disagrees with
+
+**The page heading and the book's own สารบัญ spell one title two different
+ways.** The page prints `บทขัดมังคะละสุตตะ` ending **สุตตะ**; `CONTENTS` —
+built from the สารบัญ — lists `บทขัดมังคะละสุตตัง` ending **สุตตัง**. Read at
+2.3× on the bold heading: the last syllable is plainly `ตะ`.
+
+The page is reproduced, so `title_thai` ends `สุตตะ` and `title_roman` is
+composed to match (`bòt-kàt maŋ-ká-lá-sùt-dtà`) rather than taken from the
+table. **One consequence worth knowing: the contents test cannot catch this
+title**, because the two strings no longer match, so nothing will warn if it
+drifts. Fourth spelling disagreement in nine pages, after 72, 76 and 78.
+
+**The gutter MOVES inside one chant.** `บทขัดต้นตำนาน` has its gutter at
+x 810–900 for its first four rows and at x 1060–1240 for the remaining eight,
+because the metre changes half way. Each row was profiled separately at 10px
+steps; profiling the block once would have shown a single smeared column and
+hidden the shift entirely. **Profile rows, not blocks, wherever the line
+lengths change.**
+
+**Verses 3 and 4 of `บทขัดต้นตำนาน` carry the least certain English on the
+page** — the sentence runs across both rows and the syntax is compressed even
+for this book. Flagged as a working translation rather than a settled reading.
+
+**Two more `ฬ`**, both `จักกะวาฬ-`, both proven on their own line against the
+`พ` of `สัพเพสุ` sitting beside them. The method is now routine.
 
 ## What page 79 proved — a hyphen across the gutter
 
