@@ -1,0 +1,441 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "sarana-gamana-patha-sipsong-tamnan",
+   "sambuddhe",
+   "namakarasiddhi-gatha"
+  ],
+  "pages": [
+   {
+    "page": 78,
+    "file": "IMG_0342.PNG",
+    "script": "thai",
+    "chant": "sarana-gamana-patha-sipsong-tamnan",
+    "verses": "4-9",
+    "starts_here": false,
+    "note": "The top of the sheet, four printed lines in two indented paragraphs, single column and run on — profiled to be sure: ink unbroken from x 280 to x 1840 with no gutter. IT ANSWERS PAGE 77'S OPEN QUESTION: the page opens ทุติยัมปิ, so the refuge chant does carry on, exactly as the marker inferred. The ตะติยัมปิ set closes it and the last verse carries a superscript 1, whose footnote is printed under a rule at the foot of this page and is a CANONICAL CITATION, so it goes in as source_printed rather than as a block."
+   },
+   {
+    "page": 78,
+    "file": "IMG_0342.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "sambuddhe",
+    "verses": "1-15",
+    "starts_here": true,
+    "note": "The middle of the sheet and most of it: a centred bold title and fifteen two-column rows in three stanzas of five, each stanza opening with an indented สัมพุทเธ line. The gutter is a 140px empty band at x 1000-1140, measured, so the rows are read ACROSS. The three stanzas differ only in their numbers; the last three lines of each are word-for-word identical."
+   },
+   {
+    "page": 78,
+    "file": "IMG_0342.PNG",
+    "script": "thai",
+    "chant": "namakarasiddhi-gatha",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The foot of the sheet above the footnote rule. A centred bold title and three centred lines, single column — ink x 320 to x 1280 with nothing to the right. The sheet then runs out mid-chant: line 3 ends วินิโมจะยันโต with no stop and the sentence is plainly unfinished, so the chant continues onto page 79."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "sarana-gamana-patha-sipsong-tamnan",
+   "continuation_of": "sarana-gamana-patha-sipsong-tamnan",
+   "source_printed": "ขุ. ขุ. มหา. 25/1",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Six, verses 4 to 9, split at the printed full stops, the same rule page 77 used for verses 1 to 3. Two paragraph groups — the ทุติยัมปิ set and the ตะติยัมปิ set — each indented in the book, so verses 4 and 7 carry para_start. No para_layout is declared and none is needed: this chant's own layout is already 'prose', so every group inherits the right setting.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0342.PNG, page 78, read off the top centre of the sheet — the offset of 264 has now held for five pages. The chant ENDS on this page. Verse 4 is the first verse on it and carries the page key; no page turns inside it."
+   },
+   "verses": [
+    {
+     "number": 4,
+     "page": 78,
+     "para_start": true,
+     "pali": "ทุติยัมปิ พุทธัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dutiyampi buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, I go to the Buddha for refuge."
+    },
+    {
+     "number": 5,
+     "pali": "ทุติยัมปิ ธัมมัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dutiyampi dhammaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, I go to the Dhamma for refuge."
+    },
+    {
+     "number": 6,
+     "pali": "ทุติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dutiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, I go to the Saṅgha for refuge."
+    },
+    {
+     "number": 7,
+     "para_start": true,
+     "pali": "ตะติยัมปิ พุทธัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Tatiyampi buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, I go to the Buddha for refuge."
+    },
+    {
+     "number": 8,
+     "pali": "ตะติยัมปิ ธัมมัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Tatiyampi dhammaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, I go to the Dhamma for refuge."
+    },
+    {
+     "number": 9,
+     "pali": "ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Tatiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, I go to the Saṅgha for refuge."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ทุติยัมปิ / ตะติยัมปิ",
+     "pali_roman": "dutiyampi / tatiyampi",
+     "meaning": "for a second time / for a third time. The refuge is taken three times over, which is what makes the going for refuge complete"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 4,
+     "file": "IMG_0342.PNG",
+     "issue": "THIS SETTLES PAGE 77'S OPEN QUESTION, AND THE INFERENCE WAS RIGHT. Page 77 was marked ‼ CONTINUES on reasoning about how the formula is chanted rather than on anything the photograph showed. Page 78 opens ทุติยัมปิ พุทธัง สะระณัง คัจฉามิ., so the chant does carry on and the marker was correct. Recorded because the reasoning was a guess that happened to be right, and the next such guess may not be."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0342.PNG",
+     "issue": "A CANONICAL CITATION, NOT AN EDITORIAL NOTE, so it goes in source_printed. The superscript 1 sits on this verse and the footnote under the rule reads ขุ. ขุ. มหา. 25/1 — a reference in the book's own abbreviations, reproduced verbatim and neither expanded nor reformatted. This is the FIRST footnote in this stretch that is a citation rather than a usage note; pages 76 and 77 both carried editorial notes, which were deliberately kept out of this field."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0342.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Nine verses across pages 77 and 78 — three refuges, then the same three twice more. No colophon is printed under it, so no closing key is written."
+    }
+   ]
+  },
+  {
+   "id": "sambuddhe",
+   "working_notes": {
+    "invitation": "absent, and none written. The title is followed straight away by the first verse.",
+    "units": "Fifteen, one per two-column row, read ACROSS. Three stanzas of five, each opening with an indented สัมพุทเธ line, so verses 1, 6 and 11 carry para_start — the book's own grouping rather than one imposed here. The chant's layout is left at the default 'lines', which is what these rows are.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own. title_roman is left empty because the title is Pali in Thai script and title_pali carries it.",
+    "pages": "IMG_0342.PNG, page 78. Title and all fifteen rows are on this page; the chant starts and ends here. Verse 1 carries the page key and no page turns inside it."
+   },
+   "title_thai": "สัมพัทเธ",
+   "title_pali": "Sambaddhe",
+   "title_roman": "",
+   "title_english": "The Perfectly Awakened Ones",
+   "page_start": 78,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "page": 78,
+     "para_start": true,
+     "pali": "สัมพุทเธ อัฏฐะวีสัญจะ ท์วาทะสัญจะ สะหัสสะเก",
+     "pali_roman": "Sambuddhe aṭṭhavīsañca dvādasañca sahassake",
+     "thai": "",
+     "paiboon": "",
+     "english": "The twenty-eight Perfectly Awakened Ones, and the twelve thousand,"
+    },
+    {
+     "number": 2,
+     "pali": "ปัญจะสะตะสะหัสสานิ นะมามิ สิระสา อะหัง",
+     "pali_roman": "Pañcasatasahassāni namāmi sirasā ahaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the five hundred thousand — to them I bow with my head."
+    },
+    {
+     "number": 3,
+     "pali": "เตสัง ธัมมัญจะ สังฆัญจะ อาทะเรนะ นะมามิหัง",
+     "pali_roman": "Tesaṃ dhammañca saṅghañca ādarena namāmihaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Their Dhamma and their Saṅgha too I revere and bow to."
+    },
+    {
+     "number": 4,
+     "pali": "นะมะการานุภาเวนะ หันต์วา สัพเพ อุปัททะเว",
+     "pali_roman": "Namakārānubhāvena hantvā sabbe upaddave",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the power of this homage, having destroyed all misfortunes,"
+    },
+    {
+     "number": 5,
+     "pali": "อะเนกา อันตะรายาปิ วินัสสันตุ อะเสสะโต.",
+     "pali_roman": "Anekā antarāyāpi vinassantu asesato.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the many dangers too be destroyed without remainder."
+    },
+    {
+     "number": 6,
+     "para_start": true,
+     "pali": "สัมพุทเธ ปัญจะปัญญาสัญจะ จะตุวีสะติสะหัสสะเก",
+     "pali_roman": "Sambuddhe pañcapaññāsañca catuvīsatisahassake",
+     "thai": "",
+     "paiboon": "",
+     "english": "The fifty-five Perfectly Awakened Ones, and the twenty-four thousand,"
+    },
+    {
+     "number": 7,
+     "pali": "ทะสะสะตะสะหัสสานิ นะมามิ สิระสา อะหัง",
+     "pali_roman": "Dasasatasahassāni namāmi sirasā ahaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the ten hundred thousand — to them I bow with my head."
+    },
+    {
+     "number": 8,
+     "pali": "เตสัง ธัมมัญจะ สังฆัญจะ อาทะเรนะ นะมามิหัง",
+     "pali_roman": "Tesaṃ dhammañca saṅghañca ādarena namāmihaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Their Dhamma and their Saṅgha too I revere and bow to."
+    },
+    {
+     "number": 9,
+     "pali": "นะมะการานุภาเวนะ หันต์วา สัพเพ อุปัททะเว",
+     "pali_roman": "Namakārānubhāvena hantvā sabbe upaddave",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the power of this homage, having destroyed all misfortunes,"
+    },
+    {
+     "number": 10,
+     "pali": "อะเนกา อันตะรายาปิ วินัสสันตุ อะเสสะโต.",
+     "pali_roman": "Anekā antarāyāpi vinassantu asesato.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the many dangers too be destroyed without remainder."
+    },
+    {
+     "number": 11,
+     "para_start": true,
+     "pali": "สัมพุทเธ นะวุตตะระสะเต อัฏฐะจัตตาฬีสะสะหัสสะเก",
+     "pali_roman": "Sambuddhe navuttarasate aṭṭhacattāḷīsasahassake",
+     "thai": "",
+     "paiboon": "",
+     "english": "The one hundred and nine Perfectly Awakened Ones, and the forty-eight thousand,"
+    },
+    {
+     "number": 12,
+     "pali": "วีสะติสะตะสะหัสสานิ นะมามิ สิระสา อะหัง.",
+     "pali_roman": "Vīsatisatasahassāni namāmi sirasā ahaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the twenty hundred thousand — to them I bow with my head."
+    },
+    {
+     "number": 13,
+     "pali": "เตสัง ธัมมัญจะ สังฆัญจะ อาทะเรนะ นะมามิหัง",
+     "pali_roman": "Tesaṃ dhammañca saṅghañca ādarena namāmihaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Their Dhamma and their Saṅgha too I revere and bow to."
+    },
+    {
+     "number": 14,
+     "pali": "นะมะการานุภาเวนะ หันต์วา สัพเพ อุปัททะเว",
+     "pali_roman": "Namakārānubhāvena hantvā sabbe upaddave",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the power of this homage, having destroyed all misfortunes,"
+    },
+    {
+     "number": 15,
+     "pali": "อะเนกา อันตะรายาปิ วินัสสันตุ อะเสสะโต.",
+     "pali_roman": "Anekā antarāyāpi vinassantu asesato.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the many dangers too be destroyed without remainder."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สัมพุทธะ",
+     "pali_roman": "sambuddha",
+     "meaning": "a Perfectly Awakened One. The chant counts them in three enormous groups and bows to all of them"
+    },
+    {
+     "pali": "นะมามิ สิระสา",
+     "pali_roman": "namāmi sirasā",
+     "meaning": "I bow with my head — the most complete form of homage, the head being the highest part of the body"
+    },
+    {
+     "pali": "นะมะการานุภาวะ",
+     "pali_roman": "namakārānubhāva",
+     "meaning": "the power of paying homage. This chant is a paritta: the homage itself is what is said to avert danger"
+    },
+    {
+     "pali": "อุปัททะวะ",
+     "pali_roman": "upaddava",
+     "meaning": "misfortune, calamity — one of the three things the refrain asks to be destroyed"
+    },
+    {
+     "pali": "อันตะรายะ",
+     "pali_roman": "antarāya",
+     "meaning": "danger, obstacle; anything that comes in between and blocks the way"
+    },
+    {
+     "pali": "อะเสสะโต",
+     "pali_roman": "asesato",
+     "meaning": "without remainder, completely. What is asked for is not reduction but removal"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0342.PNG",
+     "issue": "THE TITLE AND THE BODY SPELL THE SAME WORD TWO WAYS, ON ONE PAGE. The title is printed สัมพัทเธ, with ั above the พ; every one of the three stanza-opening verses prints สัมพุทเธ, with ุ below it. Both read at 8x on isolated crops, stacked one above the other for comparison — the vowel is unambiguously above in one and below in the other. Standard Pali is Sambuddhe, so the TITLE looks like the misprint. Reproduced exactly as printed on both, which is why title_pali is Sambaddhe while every verse romanises Sambuddhe. THE ID FOLLOWS THE BODY, not the title — 'sambuddhe' — because an id is a permanent handle and should not carry a probable slip. This is the third page in four to spell one word two ways: page 72 did it with Pāṭimokkha, page 76 with sampuṇṇa."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0342.PNG",
+     "issue": "TWO COLUMNS, AND THE GUTTER WAS MEASURED: a 140px empty band at x 1000-1140, far wider than any word space on those rows. Read ACROSS. The honest test agrees — the left column alone reads สัมพุทเธ อัฏฐะวีสัญจะ / ปัญจะสะตะสะหัสสานิ / เตสัง ธัมมัญจะ สังฆัญจะ, a stack of half-lines with no verb between them. FIRST PAIRING SHOWN FOR CHECKING: left สัมพุทเธ อัฏฐะวีสัญจะ + right ท์วาทะสัญจะ สะหัสสะเก."
+    },
+    {
+     "verse": 11,
+     "file": "IMG_0342.PNG",
+     "issue": "อัฏฐะจัตตาฬีสะ IS ฬ, PROVEN BY COMPARISON RATHER THAN BY MAGNIFICATION. Set beside the two undoubted พ of สัพเพ three rows below it, on the same sheet in the same size, this letter plainly carries the tall ascender they lack. That is the test page 77 established and it is now the standing method for this letter."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0342.PNG",
+     "issue": "A FULL STOP WHERE THE TWO PARALLEL LINES HAVE NONE. Verse 12 ends นะมามิ สิระสา อะหัง. with a stop; verses 2 and 7, which are the same line in the other two stanzas, end อะหัง with nothing. Read at 5x on an isolated crop. Reproduced as printed on all three. Since these three stanzas are otherwise identical apart from their numbers, this is the kind of difference worth a second look at the book."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0342.PNG",
+     "issue": "THE LAST THREE LINES OF EACH STANZA ARE WORD FOR WORD IDENTICAL — verses 3-5, 8-10 and 13-15 are the same three lines printed three times. Not a duplication and not a paste error: the refrain is chanted after each count. Recorded because check_render walks strings in printed order and a line repeated verbatim three times is exactly the case that looks like a fault."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0342.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition. The three counts are given literally rather than totalled — the traditional reckoning adds them up, but the book does not, and neither does this."
+    }
+   ]
+  },
+  {
+   "id": "namakarasiddhi-gatha",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Three, one per printed line, as far as the sheet goes. Single column, centred.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_pali is taken from the book's own สารบัญ as CONTENTS already romanises it, rather than composed here.",
+    "pages": "IMG_0342.PNG, page 78. The title is on this page so page_start is 78 and verse 1 carries the page key. The chant runs off the foot of the sheet and is picked up on page 79."
+   },
+   "title_thai": "นะมะการะสิทธิคาถา",
+   "title_pali": "Namakārasiddhigāthā",
+   "title_roman": "",
+   "title_english": "The Verses on the Success of Paying Homage",
+   "page_start": 78,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "page": 78,
+     "pali": "โย จักขุมา โมหะมะลาปะกัฏโฐ",
+     "pali_roman": "Yo cakkhumā mohamalāpakaṭṭho",
+     "thai": "",
+     "paiboon": "",
+     "english": "He who has vision, from whom the stain of delusion has been stripped away,"
+    },
+    {
+     "number": 2,
+     "pali": "สามัง วะ พุทโธ สุคะโต วิมุตโต",
+     "pali_roman": "Sāmaṃ va buddho sugato vimutto",
+     "thai": "",
+     "paiboon": "",
+     "english": "awakened of himself, well-gone, released,"
+    },
+    {
+     "number": 3,
+     "pali": "มารัสสะ ปาสา วินิโมจะยันโต",
+     "pali_roman": "Mārassa pāsā vinimocayanto",
+     "thai": "",
+     "paiboon": "",
+     "english": "freeing others from the snares of Māra —"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "จักขุมา",
+     "pali_roman": "cakkhumā",
+     "meaning": "one who has vision; the Seer. A title of the Buddha, used here of his seeing rather than his teaching"
+    },
+    {
+     "pali": "โมหะมะละ",
+     "pali_roman": "mohamala",
+     "meaning": "the stain of delusion — what has been stripped away in him"
+    },
+    {
+     "pali": "สุคะโต",
+     "pali_roman": "sugato",
+     "meaning": "well-gone; one who has gone the good way and gone to a good place"
+    },
+    {
+     "pali": "มาระ",
+     "pali_roman": "māra",
+     "meaning": "Māra, the tempter; death and the forces that bind beings. His snares are what the Buddha frees others from"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0342.PNG",
+     "issue": "THE CHANT RUNS OFF THE SHEET, AND THIS IS NOT A CUT LINE. Verse 3 ends วินิโมจะยันโต, a complete printed unit with no punctuation after it, and the footnote rule follows. So no […] marker is used — the unit is whole and it is the SENTENCE that is unfinished, which is what continues: true records. Page 79 carries on from verse 4."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0342.PNG",
+     "issue": "SINGLE COLUMN, MEASURED. Ink runs x 320 to x 1280 with nothing to the right of it, so these three lines are centred single-column and not the two-column setting used by the chant above them on the same sheet. Worth stating because the page changes setting twice."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0342.PNG",
+     "issue": "title_pali IS TAKEN FROM CONTENTS, NOT COMPOSED. The book's own สารบัญ already romanises this title as Namakārasiddhigāthā and chanting._CONTENTS_ROMAN holds it, so that value was used rather than a fresh transliteration — the rule page 77 taught, after two titles were transliterated pāṭha instead of pāṭho."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "sarana-gamana-patha-sipsong-tamnan",
+   "sambuddhe"
+  ],
+  "not_started": [],
+  "continues": [
+   "namakarasiddhi-gatha"
+  ],
+  "resume_from_page": 79,
+  "resume_from_file": "IMG_0343.PNG",
+  "resume_from": "namakarasiddhi-gatha",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, every verse paiboon is empty, and all three chants have Pali titles so none carries a title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter — including the title สัมพัทเธ as Sambaddhe, which disagrees with its own chant's สัมพุทเธ/Sambuddhe on the same page and is reproduced rather than reconciled. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. Three rows for one page, one per chant, in the order they appear down the sheet. Each row's verse range matches its entry exactly — 4-9, 1-15, 1-3 — no verse is orphaned and none is claimed twice. Each chant's first verse on this page carries the page key and no page turns inside any of them. No page blocks: the only footnote on the sheet is a canonical citation and belongs on the chant as source_printed.",
+  "notes": "PAGE 78 ANSWERS PAGE 77'S OPEN QUESTION and closes two chants. Four things for Josh. (1) THE ‼ CONTINUES MARKER ON THE REFUGES WAS AN INFERENCE AND IT WAS RIGHT — page 78 opens ทุติยัมปิ. (2) THE SAMBUDDHE TITLE AND ITS OWN BODY SPELL THE WORD TWO WAYS on one sheet, สัมพัทเธ against สัมพุทเธ, both read at 8x and stacked for comparison; the title is the odd one and standard Pali agrees with the body, so the id follows the body while title_pali reproduces the title. Third page in four to spell one word two ways. (3) VERSE 12 CARRIES A FULL STOP that its two parallel lines lack, in three stanzas that are otherwise identical apart from their numbers. (4) THE FIRST CANONICAL CITATION IN THIS STRETCH — ขุ. ขุ. มหา. 25/1 — goes in as source_printed, where pages 76 and 77 both had editorial notes that were deliberately kept out of that field. Nothing on this page needs re-photographing."
+ }
+}
