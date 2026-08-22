@@ -21810,7 +21810,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
         # ‼ CHECK [IMG_0342.PNG]: title_pali IS TAKEN FROM CONTENTS, NOT
         #   COMPOSED. The book's own สารบัญ already romanises this title as
         #   Namakārasiddhigāthā and chanting._CONTENTS_ROMAN holds it, so that
@@ -21868,6 +21867,283 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'freeing others from the snares of Māra —',
+            },
+            # ‼ CHECK [IMG_0343.PNG]: THE CHANT CONTINUES CLEANLY FROM PAGE 78
+            #   AND NEEDED NO […]. Page 78 ended มารัสสะ ปาสา วินิโมจะยันโต, a
+            #   whole printed unit, and this page opens ปาเปสิ เขมัง — a new
+            #   line, not the second half of one. So this batch numbers from 4
+            #   and nothing is overwritten, which is what the page-78 brief
+            #   predicted.
+            # ‼ CHECK [IMG_0343.PNG]: SINGLE COLUMN, MEASURED. Ink runs x 500
+            #   to x 1260 across all twenty-one lines with no empty band
+            #   inside it, so there is no two-column setting here — worth
+            #   stating because the SAME SHEET turns two-column for the chant
+            #   below, and the eye wants to carry the setting over.
+            {
+                'number': 4,
+                'page': 79,
+                'pali': 'ปาเปสิ เขมัง ชะนะตัง วิเนยยัง.',
+                'pali_roman': 'Pāpesi khemaṃ janataṃ vineyyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'brought to safety the people fit to be trained.',
+            },
+            {
+                'number': 5,
+                'pali': 'พุทธัง วะรันตัง สิระสา นะมามิ',
+                'pali_roman': 'Buddhaṃ varantaṃ sirasā namāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That excellent Buddha I salute with my head,',
+            },
+            {
+                'number': 6,
+                'pali': 'โลกัสสะ นาถัญจะ วินายะกัญจะ',
+                'pali_roman': 'Lokassa nāthañca vināyakañca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the refuge of the world and its guide.',
+            },
+            {
+                'number': 7,
+                'pali': 'ตันเตชะสา เต ชะยะสิทธิ โหตุ',
+                'pali_roman': 'Tantejasā te jayasiddhi hotu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of that, may victory and success be yours,',
+            },
+            {
+                'number': 8,
+                'pali': 'สัพพันตะรายา จะ วินาสะเมนตุ.',
+                'pali_roman': 'Sabbantarāyā ca vināsamentu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may all dangers come to nothing.',
+            },
+            # ‼ CHECK [IMG_0343.PNG]: THREE STANZAS OF EIGHT, ONE PER JEWEL —
+            #   Buddha, Dhamma, Saṅgha — each closing with the same two-line
+            #   refrain, ตันเตชะสา and สัพพันตะรายา. Verses 7-8, 15-16 and
+            #   23-24 are therefore word-for-word identical, three times over.
+            #   Not a duplication: it is the refrain, and check_render walks
+            #   strings in printed order so a verbatim repeat is exactly the
+            #   case that reads as a fault.
+            {
+                'number': 9,
+                'para_start': True,
+                'pali': 'ธัมโม ธะโช โย วิยะ ตัสสะ สัตถุ',
+                'pali_roman': 'Dhammo dhajo yo viya tassa satthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Dhamma, which is like the banner of that Teacher,',
+            },
+            {
+                'number': 10,
+                'pali': 'ทัสเสสิ โลกัสสะ วิสุทธิมัคคัง',
+                'pali_roman': 'Dassesi lokassa visuddhimaggaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'showed the world the path of purification;',
+            },
+            {
+                'number': 11,
+                'pali': 'นิยยานิโก ธัมมะธะรัสสะ ธารี',
+                'pali_roman': 'Niyyāniko dhammadharassa dhārī',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it leads out, and upholds the one who upholds it,',
+            },
+            {
+                'number': 12,
+                'pali': 'สาตาวะโห สันติกะโร สุจิณโณ.',
+                'pali_roman': 'Sātāvaho santikaro suciṇṇo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'bringing sweetness, making peace, well practised.',
+            },
+            {
+                'number': 13,
+                'pali': 'ธัมมัง วะรันตัง สิระสา นะมามิ',
+                'pali_roman': 'Dhammaṃ varantaṃ sirasā namāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That excellent Dhamma I salute with my head,',
+            },
+            {
+                'number': 14,
+                'pali': 'โมหัปปะทาลัง อุปะสันตะทาหัง',
+                'pali_roman': 'Mohappadālaṃ upasantadāhaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'which shatters delusion and stills the burning.',
+            },
+            {
+                'number': 15,
+                'pali': 'ตันเตชะสา เต ชะยะสิทธิ โหตุ',
+                'pali_roman': 'Tantejasā te jayasiddhi hotu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of that, may victory and success be yours,',
+            },
+            {
+                'number': 16,
+                'pali': 'สัพพันตะรายา จะ วินาสะเมนตุ.',
+                'pali_roman': 'Sabbantarāyā ca vināsamentu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may all dangers come to nothing.',
+            },
+            {
+                'number': 17,
+                'para_start': True,
+                'pali': 'สัทธัมมะเสนา สุคะตานุโค โย',
+                'pali_roman': 'Saddhammasenā sugatānugo yo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The army of the True Dhamma, which follows the Well-gone One,',
+            },
+            {
+                'number': 18,
+                'pali': 'โลกัสสะ ปาปูปะกิเลสะเชตา',
+                'pali_roman': 'Lokassa pāpūpakilesajetā',
+                'thai': '',
+                'paiboon': '',
+                'english': "conqueror of the world's evil and its defilements;",
+            },
+            {
+                'number': 19,
+                'pali': 'สันโต สะยัง สันตินิโยชะโก จะ',
+                'pali_roman': 'Santo sayaṃ santiniyojako ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'at peace itself, and joining others to peace,',
+            },
+            # ‼ CHECK [IMG_0343.PNG]: ส์วากขาตะธัมมัง CARRIES THE SMALL MARK
+            #   OVER THE ส, and so does ส์วากขาตัสเสวะ in the chant below it
+            #   on this same sheet. Both read at 9x: an ε-shaped curl with a
+            #   tail, the shape page 60 identified as ์ (U+0E4C). Romanised
+            #   sv-, which is what all eight existing ส์วากขาโต lines in the
+            #   app already do. THIS IS THE OPEN QUESTION OF THE WHOLE STRETCH
+            #   — the app holds this word three ways (plain ส, ส์ and ส๎) and
+            #   one look at the book settles every one of them. Two more
+            #   instances here.
+            {
+                'number': 20,
+                'pali': 'ส์วากขาตะธัมมัง วิทิตัง กะโรติ.',
+                'pali_roman': 'Svākkhātadhammaṃ viditaṃ karoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it makes the well-proclaimed Dhamma known.',
+            },
+            {
+                'number': 21,
+                'pali': 'สังฆัง วะรันตัง สิระสา นะมามิ',
+                'pali_roman': 'Saṅghaṃ varantaṃ sirasā namāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That excellent Saṅgha I salute with my head,',
+            },
+            {
+                'number': 22,
+                'pali': 'พุทธานุพุทธัง สะมะสีละทิฏฐิง',
+                'pali_roman': 'Buddhānubuddhaṃ samasīladiṭṭhiṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'awakened after the Awakened One, equal in virtue and in view.',
+            },
+            {
+                'number': 23,
+                'pali': 'ตันเตชะสา เต ชะยะสิทธิ โหตุ',
+                'pali_roman': 'Tantejasā te jayasiddhi hotu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of that, may victory and success be yours,',
+            },
+            # ‼ CHECK [IMG_0343.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Twenty-four verses across pages 78 and 79.
+            #   No colophon (จบ…) is printed under it, so no closing key is
+            #   written — the next thing on the sheet is the following chant's
+            #   title.
+            {
+                'number': 24,
+                'pali': 'สัพพันตะรายา จะ วินาสะเมนตุ.',
+                'pali_roman': 'Sabbantarāyā ca vināsamentu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may all dangers come to nothing.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0343.PNG]: title_pali TAKEN FROM CONTENTS, and
+        #   independently confirmed. The book's own สารบัญ romanises this
+        #   title Namokāraaṭṭhakagāthā and chanting._CONTENTS_ROMAN holds it;
+        #   scripts/romanise_contents.translit_pali produces the same string
+        #   from the Thai. Both agree, so the value is used rather than
+        #   composed — the rule page 77 taught.
+        'id': 'namokara-atthaka-gatha',
+        'title_thai': 'นะโมการะอัฏฐะกะคาถา',
+        'title_pali': 'Namokāraaṭṭhakagāthā',
+        'title_roman': '',
+        'title_english': 'The Eightfold Homage Verses',
+        'page_start': 79,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0343.PNG]: TWO COLUMNS, AND A HYPHEN PROVES IT. The
+            #   left column of row 1 ends สัมมา- with a hyphen and the right
+            #   column opens สัมพุทธัสสะ, so the word runs ACROSS the gutter
+            #   and is rejoined here as สัมมาสัมพุทธัสสะ with the hyphen
+            #   dropped. That is the strongest evidence for a two-column
+            #   reading this book has yet given — a hyphen at the end of a
+            #   left column cannot mean anything else. The gutter was measured
+            #   as well: a 140px empty band at x 1000-1140, the same width
+            #   page 78 used.
+            {
+                'number': 1,
+                'page': 79,
+                'pali': 'นะโม อะระหะโต สัมมาสัมพุทธัสสะ มะเหสิโน',
+                'pali_roman': 'Namo arahato sammāsambuddhassa mahesino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Worthy One, the Perfectly Awakened, the great Seeker;',
+            },
+            # ‼ CHECK [IMG_0343.PNG]: ส์วากขาตัสเสวะ — the second instance of
+            #   the ส์ mark on this sheet, and part of the same open question
+            #   as verse 20 of the chant above. Read at 9x; romanised
+            #   svākkhātasseva, dropping the mark as a cluster marker, which
+            #   is what the app already does everywhere else.
+            {
+                'number': 2,
+                'pali': 'นะโม อุตตะมะธัมมัสสะ ส์วากขาตัสเสวะ เตนิธะ',
+                'pali_roman': 'Namo uttamadhammassa svākkhātasseva tenidha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to the supreme Dhamma, well proclaimed by him here;',
+            },
+            # ‼ CHECK [IMG_0343.PNG]: THE TITLE SAYS THERE ARE EIGHT VERSES
+            #   AND ONLY THREE ARE HERE. อัฏฐะกะ means a set of eight, so five
+            #   more should follow on page 80. That is a reason to expect the
+            #   continuation, not a reason to write it — nothing beyond these
+            #   three rows is on this photograph. The sheet simply runs out;
+            #   the last row is a whole printed unit with no punctuation, so
+            #   no […] marker is used.
+            {
+                'number': 3,
+                'pali': 'นะโม มะหาสังฆัสสาปิ วิสุทธะสีละทิฏฐิโน',
+                'pali_roman': 'Namo mahāsaṅghassāpi visuddhasīladiṭṭhino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage also to the great Saṅgha, pure in virtue and in view;',
             },
         ],
     },
