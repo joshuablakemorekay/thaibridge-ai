@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-21 after page
-77 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
+78 went in.
 
 ## Read first, in this order
 
@@ -12,13 +12,13 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-21 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–77 are in and unbroken**, plus 217–221. **105 chants, 1,342 verses
+- **Pages 1–78 are in and unbroken**, plus 217–221. **107 chants, 1,366 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 75, 76 and 77 were applied 2026-08-21; pages 69 to 74 on 2026-08-19;
-  pages 66–68 over the days before them; 61–65 on 2026-08-14 and 2026-08-15;
-  55–60 on 2026-08-11 and 2026-08-12.
+- Page 78 was applied 2026-08-22; pages 75 to 77 on 2026-08-21; pages 69 to 74
+  on 2026-08-19; pages 66–68 over the days before them; 61–65 on 2026-08-14 and
+  2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
   Tamnan parittas appointed for evening chanting. Everything from here is
   paritta until the book says otherwise.
@@ -34,30 +34,21 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 78, `IMG_0342` — but READ THE NUMBER off the sheet
+## Next: page 79, `IMG_0343` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for four pages, so page 78 *should* be
-`IMG_0342`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for five pages, so page 79 *should* be
+`IMG_0343`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**`sarana-gamana-patha-sipsong-tamnan` is marked `‼ CONTINUES`, and that marker
-is an INFERENCE, not a reading.** Page 77 ends with the three refuges complete
-and stopped with a full stop, then the footnote rule and the foot of the sheet.
-Nothing on the photograph says whether the chant goes on. As this formula is
-normally chanted it repeats twice more, with `ทุติยัมปิ` and `ตะติยัมปิ`, and if
-it does so here those lines open page 78.
+**`namakarasiddhi-gatha` is open at verse 3, and it is NOT a cut line.** Page 78
+ends `มารัสสะ ปาสา วินิโมจะยันโต` — a complete printed unit with no punctuation
+after it, followed by the footnote rule. So there is no `[…]` to complete:
+page 79's batch is an ordinary `continuation_of` numbering **from 4**, no title
+and no invitation. What is unfinished is the sentence, not the line.
 
-**So page 78 settles it in one look, and both outcomes are cheap:**
-
-- If page 78 opens with `ทุติยัมปิ …`, it is a continuation — number from 4,
-  no title, no invitation.
-- If page 78 opens on something else, the chant was already complete: drop the
-  `‼ CONTINUES` comment from `chanting.py`, say so, and carry on. Nothing else
-  changes.
-
-It was marked as continuing rather than left looking finished because a
-truncated chant that reads as whole is the failure this workflow most exists to
-prevent, and a stale marker costs one line to remove.
+**Everything else on page 78 closed.** The refuges finished at verse 9 and
+Sambuddhe is complete at 15, so `namakarasiddhi-gatha` is the only
+`‼ CONTINUES` marker left in the file.
 
 ## Standing rules for every page
 
@@ -80,6 +71,39 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Raised on page 78 — one settled, two open
+
+**THE PAGE-77 INFERENCE WAS RIGHT, and that is worth recording as a method.**
+The refuge chant was marked `‼ CONTINUES` on reasoning about how the formula is
+chanted rather than on anything the photograph showed. Page 78 opens
+`ทุติยัมปิ`, so it did continue. **The rule that produced the right answer:
+where a chant may or may not be finished, mark it as continuing.** A stale
+marker costs one line to remove; a truncated chant that reads as whole is the
+failure this workflow exists to prevent.
+
+**`สัมพัทเธ` in the title against `สัมพุทเธ` in its own body**, on one sheet.
+Both read at 8× on isolated crops and stacked one above the other: the vowel is
+unambiguously **above** the พ in the title (ั) and **below** it in every verse
+(ุ). Standard Pali is *Sambuddhe*, so the title is the odd one. Both reproduced
+as printed, which is why `title_pali` is `Sambaddhe` while every verse romanises
+`Sambuddhe`. **The id follows the body — `sambuddhe`** — because an id is a
+permanent handle and should not carry a probable slip.
+
+This is now the **third page in four** to spell one word two ways: page 72 with
+Pāṭimokkha (ฏ against ต), page 76 with sampuṇṇa (ณณ against ระณ), page 78 here.
+Treat "it differs from the line before" as a reason to look, never as proof of a
+misreading.
+
+**Verse 12 carries a full stop that its two parallel lines lack.** The three
+stanzas are identical apart from their numbers, and verses 2 and 7 end `อะหัง`
+with nothing while verse 12 ends `อะหัง.`. Read at 5×; reproduced on all three.
+
+**The first canonical citation in this stretch.** `ขุ. ขุ. มหา. 25/1`, keyed to
+the last refuge, goes in as `source_printed` — pages 76 and 77 both carried
+footnotes that were *editorial* and were deliberately kept out of that field.
+The distinction is still the one that matters: a reference goes in the field, an
+instruction to the chanter does not.
 
 ## Raised on page 77 — two decisions, and a test that earned its keep
 
