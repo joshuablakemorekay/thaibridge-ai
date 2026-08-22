@@ -22462,6 +22462,279 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 24; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0345.PNG]: THE PAGE HEADING AGREES WITH THE CONTENTS
+        #   HERE, which is worth saying because page 80's did not. This title
+        #   prints มังคะละสุตตัง with สุตตัง, matching the สารบัญ exactly,
+        #   where page 80's prefatory chant printed บทขัดมังคะละสุตตะ with
+        #   สุตตะ against the contents' สุตตัง. So the book is inconsistent
+        #   about that one ending between a preface and the sutta it
+        #   introduces, not systematically.
+        # ‼ CHECK [IMG_0345.PNG]: english_unverified is set. The book prints
+        #   this sutta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition. The nidāna's English follows the standard formulas
+        #   closely because they are formulas; the gāthās are glossed line by
+        #   line.
+        'id': 'mangala-suttam-pathamam',
+        'title_thai': 'มังคะละสุตตัง ปะฐะมัง',
+        'title_pali': 'Maṅgalasuttaṃ paṭhamaṃ',
+        'title_roman': '',
+        'title_english': 'The Maṅgala Sutta, the First',
+        'page_start': 81,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0345.PNG]: ONE CHANT SET BOTH WAYS ON ONE SHEET,
+            #   and both groups declare their layout explicitly. The nidāna is
+            #   justified prose filling the measure — ink x 260 to x 1720 with
+            #   no gutter anywhere — and the gāthās below it are two-column.
+            #   So verse 1 carries para_layout 'prose' and verse 5 carries
+            #   para_layout 'lines'; neither relies on the chant-level
+            #   default. This is the page-73 case: a paragraph that says
+            #   nothing inherits the wrong setting and the page renders as a
+            #   shape the book does not print.
+            {
+                'number': 1,
+                'page': 81,
+                'para_layout': 'prose',
+                'pali': 'เอวัมเม สุตัง.',
+                'pali_roman': 'Evamme sutaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus have I heard.',
+            },
+            {
+                'number': 2,
+                'pali': 'เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม.',
+                'pali_roman': 'Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme.',
+                'thai': '',
+                'paiboon': '',
+                'english': "At one time the Blessed One was dwelling at Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's monastery.",
+            },
+            # ‼ CHECK [IMG_0345.PNG]: THE THIRD PROSE UNIT IS VERY LONG — it
+            #   runs from อะถะโข to อัฏฐาสิ. across most of three printed
+            #   lines with no full stop inside it. Split at the printed full
+            #   stops like every other prose page in this book, which gives
+            #   four units rather than the dozen a comma-split would. Worth
+            #   confirming against the book that no stop was missed inside it.
+            {
+                'number': 3,
+                'pali': 'อะถะโข อัญญะตะรา เทวะตา อะภิกกันตายะ รัตติยา อะภิกกันตะวัณณา เกวะละกัปปัง เชตะวะนัง โอภาเสต์วา เยนะ ภะคะวา เตนุปะสังกะมิ อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง อัฏฐาสิ.',
+                'pali_roman': 'Athakho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṃ jetavanaṃ obhāsetvā yena bhagavā tenupasaṅkami upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhāsi.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Then a certain deity, in the far reaches of the night, of surpassing beauty, having lit up the whole of Jeta's Grove, approached the Blessed One; and having approached and paid homage to him, stood to one side.",
+            },
+            {
+                'number': 4,
+                'pali': 'เอกะมันตัง ฐิตา โข สา เทวะตา ภะคะวันตัง คาถายะ อัชฌะภาสิ.',
+                'pali_roman': 'Ekamantaṃ ṭhitā kho sā devatā bhagavantaṃ gāthāya ajjhabhāsi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Standing to one side, that deity addressed the Blessed One in verse:',
+            },
+            # ‼ CHECK [IMG_0345.PNG]: TWO COLUMNS, MEASURED ROW BY ROW. The
+            #   right column begins at exactly x 1080 on every one of the
+            #   twenty rows; the left half is ragged, so the empty band before
+            #   it runs from 100px to 300px wide. Profiling the block once
+            #   would have reported a single smeared column — the page-80
+            #   lesson. Read ACROSS. FIRST PAIRING FOR CHECKING: left พะหู
+            #   เทวา มะนุสสา จะ + right มังคะลานิ อะจินตะยุง, which is Bahū
+            #   devā manussā ca maṅgalāni acintayuṃ, a sentence. The left
+            #   column alone reads as ten unfinished half-lines, which is the
+            #   honest test and it agrees.
+            {
+                'number': 5,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'พะหู เทวา มะนุสสา จะ มังคะลานิ อะจินตะยุง',
+                'pali_roman': 'Bahū devā manussā ca maṅgalāni acintayuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Many devas and human beings have pondered what blessings are,',
+            },
+            # ‼ CHECK [IMG_0345.PNG]: พ์รูหิ carries the พ์ cluster mark,
+            #   romanised brūhi with the mark dropped — the same treatment the
+            #   app gives พ์รัห์มะ throughout. Verse 23's พ์รัห์มะจะริยัญจะ is
+            #   the other instance on this sheet.
+            {
+                'number': 6,
+                'pali': 'อากังขะมานา โสตถานัง พ์รูหิ มังคะละมุตตะมัง',
+                'pali_roman': 'Ākaṅkhamānā sotthānaṃ brūhi maṅgalamuttamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'longing for well-being: tell us, then, the highest blessing.',
+            },
+            {
+                'number': 7,
+                'pali': 'อะเสวะนา จะ พาลานัง ปัณฑิตานัญจะ เสวะนา',
+                'pali_roman': 'Asevanā ca bālānaṃ paṇḍitānañca sevanā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Not to keep company with fools, but to keep company with the wise,',
+            },
+            # ‼ CHECK [IMG_0345.PNG]: THE REFRAIN เอตัมมังคะละมุตตะมัง. CLOSES
+            #   NINE OF THESE ROWS — verses 8, 10, 12, 14, 16, 18, 20, 22 and
+            #   24 — word for word identical every time, and always as the
+            #   RIGHT half of its row. Not a duplication: it is what makes the
+            #   sutta a litany. Recorded because check_render walks strings in
+            #   printed order and a line repeated nine times is exactly the
+            #   case that reads as a fault.
+            {
+                'number': 8,
+                'pali': 'ปูชา จะ ปูชะนียานัง เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Pūjā ca pūjanīyānaṃ Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and to honour those worthy of honour: this is the highest blessing.',
+            },
+            {
+                'number': 9,
+                'pali': 'ปะฏิรูปะเทสะวาโส จะ ปุพเพ จะ กะตะปุญญะตา',
+                'pali_roman': 'Paṭirūpadesavāso ca pubbe ca katapuññatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To live in a fitting place, and to have made merit in the past,',
+            },
+            {
+                'number': 10,
+                'pali': 'อัตตะสัมมาปะณิธิ จะ เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Attasammāpaṇidhi ca Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and to have set oneself rightly: this is the highest blessing.',
+            },
+            {
+                'number': 11,
+                'pali': 'พาหุสัจจัญจะ สิปปัญจะ วินะโย จะ สุสิกขิโต',
+                'pali_roman': 'Bāhusaccañca sippañca vinayo ca susikkhito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Much learning and skill, and a discipline well trained,',
+            },
+            {
+                'number': 12,
+                'pali': 'สุภาสิตา จะ ยา วาจา เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Subhāsitā ca yā vācā Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and speech that is well spoken: this is the highest blessing.',
+            },
+            {
+                'number': 13,
+                'pali': 'มาตาปิตุอุปัฏฐานัง ปุตตะทารัสสะ สังคะโห',
+                'pali_roman': 'Mātāpituupaṭṭhānaṃ puttadārassa saṅgaho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Supporting mother and father, and caring for wife and children,',
+            },
+            {
+                'number': 14,
+                'pali': 'อะนากุลา จะ กัมมันตา เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Anākulā ca kammantā Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and work that is free of confusion: this is the highest blessing.',
+            },
+            {
+                'number': 15,
+                'pali': 'ทานัญจะ ธัมมะจะริยา จะ ญาตะกานัญจะ สังคะโห',
+                'pali_roman': 'Dānañca dhammacariyā ca ñātakānañca saṅgaho',
+                'thai': '',
+                'paiboon': '',
+                'english': "Giving, and living by the Dhamma, and caring for one's relatives,",
+            },
+            {
+                'number': 16,
+                'pali': 'อะนะวัชชานิ กัมมานิ เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Anavajjāni kammāni Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and actions that are blameless: this is the highest blessing.',
+            },
+            {
+                'number': 17,
+                'pali': 'อาระตี วิระตี ปาปา มัชชะปานา จะ สัญญะโม',
+                'pali_roman': 'Āratī viratī pāpā majjapānā ca saññamo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Ceasing and abstaining from evil, and restraint from strong drink,',
+            },
+            {
+                'number': 18,
+                'pali': 'อัปปะมาโท จะ ธัมเมสุ เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Appamādo ca dhammesu Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and diligence in wholesome states: this is the highest blessing.',
+            },
+            {
+                'number': 19,
+                'pali': 'คาระโว จะ นิวาโต จะ สันตุฏฐี จะ กะตัญญุตา',
+                'pali_roman': 'Gāravo ca nivāto ca santuṭṭhī ca kataññutā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Reverence and humility, contentment and gratitude,',
+            },
+            {
+                'number': 20,
+                'pali': 'กาเลนะ ธัมมัสสะวะนัง เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Kālena dhammassavanaṃ Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and hearing the Dhamma at the right time: this is the highest blessing.',
+            },
+            {
+                'number': 21,
+                'pali': 'ขันตี จะ โสวะจัสสะตา สะมะณานัญจะ ทัสสะนัง',
+                'pali_roman': 'Khantī ca sovacassatā samaṇānañca dassanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Patience, being easy to admonish, and the sight of contemplatives,',
+            },
+            {
+                'number': 22,
+                'pali': 'กาเลนะ ธัมมะสากัจฉา เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Kālena dhammasākacchā Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and discussion of the Dhamma at the right time: this is the highest blessing.',
+            },
+            {
+                'number': 23,
+                'pali': 'ตะโป จะ พ์รัห์มะจะริยัญจะ อะริยะสัจจานะทัสสะนัง',
+                'pali_roman': 'Tapo ca brahmacariyañca ariyasaccānadassanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Austerity and the holy life, and the seeing of the noble truths,',
+            },
+            # ‼ CHECK [IMG_0345.PNG]: THE SHEET RUNS OUT MID-SUTTA and verse
+            #   24 is a whole printed row, so no […] marker is used — it is
+            #   the sutta that is unfinished, not the line. The Maṅgala Sutta
+            #   traditionally runs to eleven gāthās and ten are here, so page
+            #   82 should carry the rest plus its closing. That is a reason to
+            #   expect the continuation, not to write it.
+            {
+                'number': 24,
+                'pali': 'นิพพานะสัจฉิกิริยา จะ เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Nibbānasacchikiriyā ca Etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the realisation of Nibbāna: this is the highest blessing.',
+            },
+        ],
+    },
 ]
 
 

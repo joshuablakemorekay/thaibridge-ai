@@ -1,0 +1,339 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mangala-suttam-pathamam"
+  ],
+  "pages": [
+   {
+    "page": 81,
+    "file": "IMG_0345.PNG",
+    "script": "thai",
+    "columns": "1 then 2",
+    "chant": "mangala-suttam-pathamam",
+    "verses": "1-24",
+    "starts_here": true,
+    "note": "The whole sheet is one chant, and it is set TWO DIFFERENT WAYS. A centred bold title, then six lines of justified PROSE filling the measure (ink x 260-1720, no gutter anywhere) carrying the sutta's nidāna; then twenty TWO-COLUMN rows of verse. The right column of every verse row begins at exactly x 1080 and the left half is ragged, so the empty band between them runs from 100px to 300px wide depending on the line — measured row by row, not once for the block. The sheet runs out mid-sutta and the chant carries on to page 82."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mangala-suttam-pathamam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. The บทขัด that introduces this sutta is its own chant on page 80.",
+    "units": "Twenty-four. Verses 1 to 4 are the prose nidāna, split at the printed full stops; verses 5 to 24 are one per two-column row, read ACROSS. TWO GROUPS, and each declares its own para_layout because this chant is set BOTH ways: verse 1 carries para_layout 'prose' and verse 5 carries para_start with para_layout 'lines'. Neither is left to the chant-level default, which is the page-73 rule for a mixed chant.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own. title_pali is taken from the book's own สารบัญ via CONTENTS; the transliteration script independently produces the same string.",
+    "pages": "IMG_0345.PNG, page 81, read off the top centre of the sheet — the offset of 264 has now held for eight pages. The title is on this page so page_start is 81 and verse 1 carries the page key. The chant runs off the foot of the sheet and is picked up on page 82."
+   },
+   "title_thai": "มังคะละสุตตัง ปะฐะมัง",
+   "title_pali": "Maṅgalasuttaṃ paṭhamaṃ",
+   "title_roman": "",
+   "title_english": "The Maṅgala Sutta, the First",
+   "page_start": 81,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง.",
+     "pali_roman": "Evamme sutaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard.",
+     "page": 81,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม.",
+     "pali_roman": "Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme.",
+     "thai": "",
+     "paiboon": "",
+     "english": "At one time the Blessed One was dwelling at Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's monastery."
+    },
+    {
+     "number": 3,
+     "pali": "อะถะโข อัญญะตะรา เทวะตา อะภิกกันตายะ รัตติยา อะภิกกันตะวัณณา เกวะละกัปปัง เชตะวะนัง โอภาเสต์วา เยนะ ภะคะวา เตนุปะสังกะมิ อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง อัฏฐาสิ.",
+     "pali_roman": "Athakho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṃ jetavanaṃ obhāsetvā yena bhagavā tenupasaṅkami upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhāsi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then a certain deity, in the far reaches of the night, of surpassing beauty, having lit up the whole of Jeta's Grove, approached the Blessed One; and having approached and paid homage to him, stood to one side."
+    },
+    {
+     "number": 4,
+     "pali": "เอกะมันตัง ฐิตา โข สา เทวะตา ภะคะวันตัง คาถายะ อัชฌะภาสิ.",
+     "pali_roman": "Ekamantaṃ ṭhitā kho sā devatā bhagavantaṃ gāthāya ajjhabhāsi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Standing to one side, that deity addressed the Blessed One in verse:"
+    },
+    {
+     "number": 5,
+     "pali": "พะหู เทวา มะนุสสา จะ มังคะลานิ อะจินตะยุง",
+     "pali_roman": "Bahū devā manussā ca maṅgalāni acintayuṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Many devas and human beings have pondered what blessings are,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 6,
+     "pali": "อากังขะมานา โสตถานัง พ์รูหิ มังคะละมุตตะมัง",
+     "pali_roman": "Ākaṅkhamānā sotthānaṃ brūhi maṅgalamuttamaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "longing for well-being: tell us, then, the highest blessing."
+    },
+    {
+     "number": 7,
+     "pali": "อะเสวะนา จะ พาลานัง ปัณฑิตานัญจะ เสวะนา",
+     "pali_roman": "Asevanā ca bālānaṃ paṇḍitānañca sevanā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Not to keep company with fools, but to keep company with the wise,"
+    },
+    {
+     "number": 8,
+     "pali": "ปูชา จะ ปูชะนียานัง เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Pūjā ca pūjanīyānaṃ Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and to honour those worthy of honour: this is the highest blessing."
+    },
+    {
+     "number": 9,
+     "pali": "ปะฏิรูปะเทสะวาโส จะ ปุพเพ จะ กะตะปุญญะตา",
+     "pali_roman": "Paṭirūpadesavāso ca pubbe ca katapuññatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "To live in a fitting place, and to have made merit in the past,"
+    },
+    {
+     "number": 10,
+     "pali": "อัตตะสัมมาปะณิธิ จะ เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Attasammāpaṇidhi ca Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and to have set oneself rightly: this is the highest blessing."
+    },
+    {
+     "number": 11,
+     "pali": "พาหุสัจจัญจะ สิปปัญจะ วินะโย จะ สุสิกขิโต",
+     "pali_roman": "Bāhusaccañca sippañca vinayo ca susikkhito",
+     "thai": "",
+     "paiboon": "",
+     "english": "Much learning and skill, and a discipline well trained,"
+    },
+    {
+     "number": 12,
+     "pali": "สุภาสิตา จะ ยา วาจา เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Subhāsitā ca yā vācā Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and speech that is well spoken: this is the highest blessing."
+    },
+    {
+     "number": 13,
+     "pali": "มาตาปิตุอุปัฏฐานัง ปุตตะทารัสสะ สังคะโห",
+     "pali_roman": "Mātāpituupaṭṭhānaṃ puttadārassa saṅgaho",
+     "thai": "",
+     "paiboon": "",
+     "english": "Supporting mother and father, and caring for wife and children,"
+    },
+    {
+     "number": 14,
+     "pali": "อะนากุลา จะ กัมมันตา เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Anākulā ca kammantā Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and work that is free of confusion: this is the highest blessing."
+    },
+    {
+     "number": 15,
+     "pali": "ทานัญจะ ธัมมะจะริยา จะ ญาตะกานัญจะ สังคะโห",
+     "pali_roman": "Dānañca dhammacariyā ca ñātakānañca saṅgaho",
+     "thai": "",
+     "paiboon": "",
+     "english": "Giving, and living by the Dhamma, and caring for one's relatives,"
+    },
+    {
+     "number": 16,
+     "pali": "อะนะวัชชานิ กัมมานิ เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Anavajjāni kammāni Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and actions that are blameless: this is the highest blessing."
+    },
+    {
+     "number": 17,
+     "pali": "อาระตี วิระตี ปาปา มัชชะปานา จะ สัญญะโม",
+     "pali_roman": "Āratī viratī pāpā majjapānā ca saññamo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Ceasing and abstaining from evil, and restraint from strong drink,"
+    },
+    {
+     "number": 18,
+     "pali": "อัปปะมาโท จะ ธัมเมสุ เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Appamādo ca dhammesu Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and diligence in wholesome states: this is the highest blessing."
+    },
+    {
+     "number": 19,
+     "pali": "คาระโว จะ นิวาโต จะ สันตุฏฐี จะ กะตัญญุตา",
+     "pali_roman": "Gāravo ca nivāto ca santuṭṭhī ca kataññutā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Reverence and humility, contentment and gratitude,"
+    },
+    {
+     "number": 20,
+     "pali": "กาเลนะ ธัมมัสสะวะนัง เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Kālena dhammassavanaṃ Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and hearing the Dhamma at the right time: this is the highest blessing."
+    },
+    {
+     "number": 21,
+     "pali": "ขันตี จะ โสวะจัสสะตา สะมะณานัญจะ ทัสสะนัง",
+     "pali_roman": "Khantī ca sovacassatā samaṇānañca dassanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Patience, being easy to admonish, and the sight of contemplatives,"
+    },
+    {
+     "number": 22,
+     "pali": "กาเลนะ ธัมมะสากัจฉา เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Kālena dhammasākacchā Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and discussion of the Dhamma at the right time: this is the highest blessing."
+    },
+    {
+     "number": 23,
+     "pali": "ตะโป จะ พ์รัห์มะจะริยัญจะ อะริยะสัจจานะทัสสะนัง",
+     "pali_roman": "Tapo ca brahmacariyañca ariyasaccānadassanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Austerity and the holy life, and the seeing of the noble truths,"
+    },
+    {
+     "number": 24,
+     "pali": "นิพพานะสัจฉิกิริยา จะ เอตัมมังคะละมุตตะมัง.",
+     "pali_roman": "Nibbānasacchikiriyā ca Etammaṅgalamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the realisation of Nibbāna: this is the highest blessing."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "มังคะละ",
+     "pali_roman": "maṅgala",
+     "meaning": "a blessing; an auspicious thing. The deity asks which is highest, and the sutta answers with thirty-eight of them"
+    },
+    {
+     "pali": "เอวัมเม สุตัง",
+     "pali_roman": "evamme sutaṃ",
+     "meaning": "thus have I heard — the formula that opens a sutta and marks it as remembered testimony rather than composition"
+    },
+    {
+     "pali": "เทวะตา",
+     "pali_roman": "devatā",
+     "meaning": "a deity. Here the questioner, not the teacher: the sutta is an answer to a visitor's question"
+    },
+    {
+     "pali": "โสตถิ",
+     "pali_roman": "sotthi",
+     "meaning": "well-being, safety. What the devas and humans were longing for when they pondered"
+    },
+    {
+     "pali": "อะเสวะนา / เสวะนา",
+     "pali_roman": "asevanā / sevanā",
+     "meaning": "not associating with / associating with. The first blessing is a matter of company, before anything else"
+    },
+    {
+     "pali": "อัตตะสัมมาปะณิธิ",
+     "pali_roman": "attasammāpaṇidhi",
+     "meaning": "setting oneself rightly; aiming one's own life in the right direction"
+    },
+    {
+     "pali": "โสวะจัสสะตา",
+     "pali_roman": "sovacassatā",
+     "meaning": "being easy to speak to, easy to admonish — one of the qualities hardest to see in oneself"
+    },
+    {
+     "pali": "สัจฉิกิริยา",
+     "pali_roman": "sacchikiriyā",
+     "meaning": "realisation; making something real for oneself rather than knowing about it"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0345.PNG",
+     "issue": "ONE CHANT SET BOTH WAYS ON ONE SHEET, and both groups declare their layout explicitly. The nidāna is justified prose filling the measure — ink x 260 to x 1720 with no gutter anywhere — and the gāthās below it are two-column. So verse 1 carries para_layout 'prose' and verse 5 carries para_layout 'lines'; neither relies on the chant-level default. This is the page-73 case: a paragraph that says nothing inherits the wrong setting and the page renders as a shape the book does not print."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0345.PNG",
+     "issue": "TWO COLUMNS, MEASURED ROW BY ROW. The right column begins at exactly x 1080 on every one of the twenty rows; the left half is ragged, so the empty band before it runs from 100px to 300px wide. Profiling the block once would have reported a single smeared column — the page-80 lesson. Read ACROSS. FIRST PAIRING FOR CHECKING: left พะหู เทวา มะนุสสา จะ + right มังคะลานิ อะจินตะยุง, which is Bahū devā manussā ca maṅgalāni acintayuṃ, a sentence. The left column alone reads as ten unfinished half-lines, which is the honest test and it agrees."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0345.PNG",
+     "issue": "พ์รูหิ carries the พ์ cluster mark, romanised brūhi with the mark dropped — the same treatment the app gives พ์รัห์มะ throughout. Verse 23's พ์รัห์มะจะริยัญจะ is the other instance on this sheet."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0345.PNG",
+     "issue": "THE REFRAIN เอตัมมังคะละมุตตะมัง. CLOSES NINE OF THESE ROWS — verses 8, 10, 12, 14, 16, 18, 20, 22 and 24 — word for word identical every time, and always as the RIGHT half of its row. Not a duplication: it is what makes the sutta a litany. Recorded because check_render walks strings in printed order and a line repeated nine times is exactly the case that reads as a fault."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0345.PNG",
+     "issue": "THE PAGE HEADING AGREES WITH THE CONTENTS HERE, which is worth saying because page 80's did not. This title prints มังคะละสุตตัง with สุตตัง, matching the สารบัญ exactly, where page 80's prefatory chant printed บทขัดมังคะละสุตตะ with สุตตะ against the contents' สุตตัง. So the book is inconsistent about that one ending between a preface and the sutta it introduces, not systematically."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0345.PNG",
+     "issue": "THE THIRD PROSE UNIT IS VERY LONG — it runs from อะถะโข to อัฏฐาสิ. across most of three printed lines with no full stop inside it. Split at the printed full stops like every other prose page in this book, which gives four units rather than the dozen a comma-split would. Worth confirming against the book that no stop was missed inside it."
+    },
+    {
+     "verse": 24,
+     "file": "IMG_0345.PNG",
+     "issue": "THE SHEET RUNS OUT MID-SUTTA and verse 24 is a whole printed row, so no […] marker is used — it is the sutta that is unfinished, not the line. The Maṅgala Sutta traditionally runs to eleven gāthās and ten are here, so page 82 should carry the rest plus its closing. That is a reason to expect the continuation, not to write it."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0345.PNG",
+     "issue": "english_unverified is set. The book prints this sutta in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition. The nidāna's English follows the standard formulas closely because they are formulas; the gāthās are glossed line by line."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mangala-suttam-pathamam"
+  ],
+  "resume_from_page": 82,
+  "resume_from_file": "IMG_0346.PNG",
+  "resume_from": "mangala-suttam-pathamam",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, every verse paiboon is empty, and the chant has a Pali title so it carries no title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in โอภาเสต์วา, อุปะสังกะมิต์วา, อะภิวาเทต์วา, พ์รูหิ and พ์รัห์มะจะริยัญจะ, all romanised with the mark dropped as a cluster marker. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant. It claims verses 1-24 and the entry holds exactly those. Verse 1 is the first verse on the page and the only one carrying a page key; no page turns inside it. No page blocks and no footnote on this sheet.",
+  "notes": "THE MAṄGALA SUTTA ITSELF, and the first chant since page 73 that is set BOTH WAYS on one sheet — six lines of justified prose for the nidāna, then twenty two-column rows of verse. Both groups declare para_layout explicitly rather than relying on the chant default, which is the whole reason that mechanism exists. Three things for Josh. (1) THE TWO-COLUMN GUTTER IS RAGGED: the right column starts at exactly x 1080 on all twenty rows while the left half varies, so the empty band is anywhere from 100px to 300px. Measured row by row after page 80 showed a block-level profile can hide a shift. (2) THE REFRAIN REPEATS NINE TIMES, verbatim, always as the right half of its row. (3) THIS TITLE AGREES WITH THE CONTENTS where page 80's prefatory chant did not — so the สุตตัง/สุตตะ inconsistency is between a preface and its sutta, not systematic. Nothing on this page needs re-photographing."
+ }
+}
