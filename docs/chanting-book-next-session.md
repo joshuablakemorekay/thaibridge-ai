@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
-81 went in.
+82 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–81 are in and unbroken**, plus 217–221. **111 chants, 1,438 verses
+- **Pages 1–82 are in and unbroken**, plus 217–221. **113 chants, 1,465 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 78 to 81 were applied 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 78 to 82 were applied 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,25 +34,22 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 82, `IMG_0346` — but READ THE NUMBER off the sheet
+## Next: page 83, `IMG_0347` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for eight pages, so page 82 *should* be
-`IMG_0346`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for nine pages, so page 83 *should* be
+`IMG_0347`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**`mangala-suttam-pathamam` is open at verse 24, and it is NOT a cut line.**
-Page 81's last row is a whole printed unit, so there is no `[…]` to complete:
-page 82's batch is an ordinary `continuation_of` numbering **from 25**.
+**`ratana-suttam-dutiyam` is open at verse 7, and it is NOT a cut line.** Page
+82's last line is whole; it is the SENTENCE that is unfinished. So page 83's
+batch is an ordinary `continuation_of` numbering **from 8**, no `[…]`.
 
-**Ten of the sutta's gāthās are in.** The Maṅgala Sutta traditionally runs to
-eleven, so page 82 should carry the last one and the sutta's closing. **That is
-a reason to expect the continuation, not to write it** — the book decides, as
-it did when `อัฏฐะกะ` promised eight and page 80 delivered exactly five more.
+**It is set SINGLE column** — ink x 680–1380, nothing either side — even though
+both chants above it on the same sheet are two-column. **Do not carry the
+setting over the page turn**; profile page 83's block on its own.
 
-**The chant is set BOTH ways, so a continuation must say which.** Verse 1's
-group is `prose` and verse 5's is `lines`. If page 82 opens mid-gāthā the first
-verse on it needs `para_layout: 'lines'` — the page-75 rule — and if the sutta
-closes in prose, that group needs `'prose'` declared.
+**Expect a long sutta.** The Ratana Sutta runs to seventeen stanzas and one is
+in. Its `บทขัด` is already entered as its own chant on page 82.
 
 ## Standing rules for every page
 
@@ -75,6 +72,32 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Raised on page 82 — the first colophon in the whole stretch
+
+**`มังคะละสุตตัง นิฏฐิตัง.` is printed centred under the sutta**, so that chant
+takes a `closing` at last. **Every chant since page 64 has had the key left off
+because the book printed none**, and the absence had begun to look like a rule
+of this book rather than a fact about those pages. It is not. Look for a
+centred `จบ…` or `…นิฏฐิตัง.` under every chant from here on.
+
+**A citation carrying TWO references.** `ขุ. ขุ. 25/3 ขุ. สุ. 25/376` — the
+Khuddakapāṭha and the Suttanipāta, both printings of the same sutta. Reproduced
+verbatim as one string, neither split into two fields nor expanded.
+
+**A second hyphen across a gutter**, after page 79's. The left column ends
+`โรคามะนุสสะทุพภิกขะ-` and the right opens `สัมภูตันติวิธัมภะยัง`. Rejoined,
+hyphen dropped. It settles that block's two-column reading on its own.
+
+**A second title the contents test can no longer see.** The page prints
+`บทขัด ระตะนะสุตตัง` with a SPACE; the สารบัญ has `บทขัดระตะนะสุตตัง` without
+one. The page is reproduced, so `title_thai` is not a key in
+`_CONTENTS_ROMAN` and nothing will warn if that title drifts. Page 80's
+`สุตตะ`/`สุตตัง` did the same. **Two of the last three pages.**
+
+**Three settings on one sheet** — two-column, prose-then-two-column, and
+centred single column. Third page running where profiling each block separately
+was the only thing that caught it.
 
 ## Raised on page 81 — the ragged gutter
 
