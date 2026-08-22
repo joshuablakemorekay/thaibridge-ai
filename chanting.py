@@ -22076,7 +22076,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
         # ‼ CHECK [IMG_0343.PNG]: title_pali TAKEN FROM CONTENTS, and
         #   independently confirmed. The book's own สารบัญ romanises this
         #   title Namokāraaṭṭhakagāthā and chanting._CONTENTS_ROMAN holds it;
@@ -22144,6 +22143,322 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'homage also to the great Saṅgha, pure in virtue and in view;',
+            },
+            # ‼ CHECK [IMG_0344.PNG]: TWO COLUMNS, GUTTER MEASURED at 180px (x
+            #   960-1140), and NO hyphen crosses it on this page — unlike page
+            #   79's first row, where สัมมา- did. Read across. FIRST PAIRING
+            #   FOR CHECKING: left นะโม โอมาต์ยารัทธัสสะ + right
+            #   ระตะนัตตะยัสสะ สาธุกัง.
+            {
+                'number': 4,
+                'page': 80,
+                'pali': 'นะโม โอมาต์ยารัทธัสสะ ระตะนัตตะยัสสะ สาธุกัง',
+                'pali_roman': 'Namo omātyāraddhassa ratanattayassa sādhukaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage, duly made, to the Triple Gem that is begun with the syllable oṃ;',
+            },
+            {
+                'number': 5,
+                'pali': 'นะโม โอมะกาตีตัสสะ ตัสสะ วัตถุตตะยัสสะปิ',
+                'pali_roman': 'Namo omakātītassa tassa vatthuttayassāpi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage too to that threefold object, which has passed beyond all that is low;',
+            },
+            {
+                'number': 6,
+                'pali': 'นะโม การัปปะภาเวนะ วิคัจฉันตุ อุปัททะวา',
+                'pali_roman': 'Namo kārappabhāvena vigacchantu upaddavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of this homage, may misfortunes depart;',
+            },
+            {
+                'number': 7,
+                'pali': 'นะโม การานุภาเวนะ สุวัตถิ โหตุ สัพพะทา',
+                'pali_roman': 'Namo kārānubhāvena suvatthi hotu sabbadā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the might of this homage, may there be well-being at all times;',
+            },
+            # ‼ CHECK [IMG_0344.PNG]: THE TITLE'S COUNT IS MET EXACTLY, WHICH
+            #   IS WORTH RECORDING. อัฏฐะกะ means a set of eight; page 79
+            #   carried three and this page carries five, so the chant closes
+            #   at eight. The page-79 brief predicted five more and said that
+            #   was a reason to expect a continuation rather than to write one
+            #   — the prediction was not used to fill anything in, and the
+            #   page agrees with it.
+            # ‼ CHECK [IMG_0344.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Eight verses across pages 79 and 80. No
+            #   colophon is printed under it; the next thing on the sheet is
+            #   the following chant's title.
+            {
+                'number': 8,
+                'pali': 'นะโม การัสสะ เตเชนะ วิธิมหิ โหมิ เตชะวา.',
+                'pali_roman': 'Namo kārassa tejena vidhimhi homi tejavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of this homage, may I be mighty in the undertaking.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0344.PNG]: title_roman TAKEN FROM CONTENTS. The book's
+        #   own สารบัญ romanises this title bòt-kàt dtôn-dtam-naan and
+        #   chanting._CONTENTS_ROMAN holds it, so that value was used rather
+        #   than composed — the rule page 77 taught.
+        # ‼ CHECK [IMG_0344.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-ton-tamnan',
+        'title_thai': 'บทขัดต้นตำนาน',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt dtôn-dtam-naan',
+        'title_english': 'The Prefatory Verse Opening the Tamnan',
+        'page_start': 80,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0344.PNG]: TWO COLUMNS, AND THE GUTTER MOVES INSIDE
+            #   THIS ONE CHANT. Rows 1 to 4 are set in a longer metre with the
+            #   gutter at x 810-900; rows 5 to 12 are indented and their
+            #   gutter sits at x 1060-1240. Each row was profiled separately
+            #   at 10px steps rather than the block being profiled once, which
+            #   is the only reason the shift was seen. FIRST PAIRING FOR
+            #   CHECKING: left เย สันตา สันตะจิตตา + right ติสะระณะสะระณา
+            #   เอตถะ โลกันตะเร วา,.
+            {
+                'number': 1,
+                'page': 80,
+                'pali': 'เย สันตา สันตะจิตตา ติสะระณะสะระณา เอตถะ โลกันตะเร วา,',
+                'pali_roman': 'Ye santā santacittā tisaraṇasaraṇā ettha lokantare vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those who are at peace, peaceful in mind, who have the Three Refuges as their refuge, whether here or in the space between the worlds,',
+            },
+            # ‼ CHECK [IMG_0344.PNG]: คุณะคะณะคะหะณัพ์ยาวะฏา is one very long
+            #   compound carrying the พ์ cluster mark, romanised
+            #   guṇagaṇagahaṇabyāvaṭā with the mark dropped as a cluster
+            #   marker — the same treatment the app gives พ์ยาธิ and
+            #   สะพ์รัห์มะเก. Reproduced exactly as printed; it is the longest
+            #   single word on the page and worth a look.
+            {
+                'number': 2,
+                'pali': 'ภุมมาภุมมา จะ เทวา คุณะคะณะคะหะณัพ์ยาวะฏา สัพพะกาลัง,',
+                'pali_roman': 'Bhummābhummā ca devā guṇagaṇagahaṇabyāvaṭā sabbakālaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the devas of the earth and above it, at all times engaged in taking up the whole mass of virtues,',
+            },
+            {
+                'number': 3,
+                'pali': 'เอเต อายันตุ เทวา วะระกะนะกะมะเย เมรุราเช วะสันโต',
+                'pali_roman': 'Ete āyantu devā varakanakamaye merurāje vasanto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may these devas come, dwelling on Meru the king, made of the finest gold,',
+            },
+            # ‼ CHECK [IMG_0344.PNG]: โสตุมัคคัง สะมัคคัง. — read as printed,
+            #   and the English of verses 3 and 4 is the least certain on this
+            #   page. The sentence runs across both rows and the syntax is
+            #   compressed even by this book's standards, so the gloss is a
+            #   working translation of a line whose sense should be checked
+            #   rather than a settled reading.
+            {
+                'number': 4,
+                'pali': 'สันโต สันโต สะเหตุง มุนิวะระวะจะนัง โสตุมัคคัง สะมัคคัง.',
+                'pali_roman': 'Santo santo sahetuṃ munivaravacanaṃ sotumaggaṃ samaggaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'at peace, at peace, and together in harmony, to hear the supreme word of the excellent Sage.',
+            },
+            # ‼ CHECK [IMG_0344.PNG]: จักกะวาเฬสุ IS ฬ, proven on the line
+            #   itself: the two พ of สัพเพสุ sit immediately to its left in
+            #   the same row and the same size, and they stop at x-height
+            #   where this letter carries a tall ascender. Same test as pages
+            #   77 and 78, and it is now the standing method for this letter.
+            {
+                'number': 5,
+                'para_start': True,
+                'pali': 'สัพเพสุ จักกะวาเฬสุ ยักขา เทวา จะ พ์รัห์มุโน',
+                'pali_roman': 'Sabbesu cakkavāḷesu yakkhā devā ca brahmuno',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In all the world-systems, the yakkhas, the devas and the brahmās —',
+            },
+            {
+                'number': 6,
+                'pali': 'ยัง อัมเหหิ กะตัง ปุญญัง สัพพะสัมปัตติสาธะกัง.',
+                'pali_roman': 'Yaṃ amhehi kataṃ puññaṃ sabbasampattisādhakaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever merit has been made by us, which brings about every attainment,',
+            },
+            {
+                'number': 7,
+                'pali': 'สัพเพ ตัง อะนุโมทิต์วา สะมัคคา สาสะเน ระตา',
+                'pali_roman': 'Sabbe taṃ anumoditvā samaggā sāsane ratā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they all rejoice in it, in harmony and delighting in the Teaching,',
+            },
+            {
+                'number': 8,
+                'pali': 'ปะมาทะระหิตา โหนตุ อารักขาสุ วิเสสะโต.',
+                'pali_roman': 'Pamādarahitā hontu ārakkhāsu visesato.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may they be free of negligence, especially in giving protection.',
+            },
+            {
+                'number': 9,
+                'pali': 'สาสะนัสสะ จะ โลกัสสะ วุฑฒี ภะวะตุ สัพพะทา',
+                'pali_roman': 'Sāsanassa ca lokassa vuḍḍhī bhavatu sabbadā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May there always be growth for the Teaching and for the world;',
+            },
+            {
+                'number': 10,
+                'pali': 'สาสะนัมปิ จะ โลกัญจะ เทวา รักขันตุ สัพพะทา.',
+                'pali_roman': 'Sāsanampi ca lokañca devā rakkhantu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may the devas always guard both the Teaching and the world.',
+            },
+            {
+                'number': 11,
+                'pali': 'สัทธิง โหนตุ สุขี สัพเพ ปะริวาเรหิ อัตตะโน',
+                'pali_roman': 'Saddhiṃ hontu sukhī sabbe parivārehi attano',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May all be happy, together with their own retinues,',
+            },
+            {
+                'number': 12,
+                'pali': 'อะนีฆา สุมะนา โหนตุ สะหะ สัพเพหิ ญาติภิ.',
+                'pali_roman': 'Anīghā sumanā hontu saha sabbehi ñātibhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'free from trouble and glad in mind, along with all their kin.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0344.PNG]: THE PAGE HEADING AND THE BOOK'S OWN CONTENTS
+        #   SPELL THIS TITLE DIFFERENTLY. The page prints บทขัดมังคะละสุตตะ
+        #   ending สุตตะ; chanting._CONTENTS_ROMAN — built from the book's
+        #   สารบัญ — lists บทขัดมังคะละสุตตัง ending สุตตัง, and gives it as
+        #   bòt-kàt maŋ-ká-lá-sùt-dtaŋ. Read at 2.3x on the bold heading: the
+        #   last syllable is plainly ตะ, not ตัง. THE PAGE IS REPRODUCED, so
+        #   title_thai ends สุตตะ and title_roman is composed to match it as
+        #   bòt-kàt maŋ-ká-lá-sùt-dtà. This is a disagreement inside the book,
+        #   not a misreading of either — and it means the contents test cannot
+        #   catch this title, because the two strings no longer match. Worth
+        #   settling from the book alongside the other two-spellings-of-one-
+        #   word cases on pages 72, 76 and 78.
+        # ‼ CHECK [IMG_0344.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-mangkhala-sutta',
+        'title_thai': 'บทขัดมังคะละสุตตะ',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt maŋ-ká-lá-sùt-dtà',
+        'title_english': 'The Prefatory Verse for the Maṅgala Sutta',
+        'page_start': 80,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0344.PNG]: TWO COLUMNS, gutter measured at x
+            #   1040-1240. Read across. FIRST PAIRING FOR CHECKING: left ยัญจะ
+            #   ท์วาทะสะ วัสสานิ + right จินตะยิงสุ สะเทวะกา. Reading the left
+            #   column alone gives four unfinished half-lines, which is the
+            #   honest test and it agrees.
+            {
+                'number': 1,
+                'page': 80,
+                'pali': 'ยัญจะ ท์วาทะสะ วัสสานิ จินตะยิงสุ สะเทวะกา',
+                'pali_roman': 'Yañca dvādasa vassāni cintayiṃsu sadevakā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That which, for twelve years, beings together with their devas pondered,',
+            },
+            {
+                'number': 2,
+                'pali': 'จิรัสสัง จินตะยันตาปิ เนวะ ชานิงสุ มังคะลัง.',
+                'pali_roman': 'Cirassaṃ cintayantāpi neva jāniṃsu maṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and though they pondered long, they never came to know what a blessing is.',
+            },
+            # ‼ CHECK [IMG_0344.PNG]: จักกะวาฬะสะหัสเสสุ IS ฬ, by the same
+            #   same-page comparison as verse 5 of the chant above: the พ of
+            #   สัพเพสุ one block up sits at x-height and this letter carries
+            #   the ascender. Two instances of the word on one sheet, both ฬ.
+            {
+                'number': 3,
+                'pali': 'จักกะวาฬะสะหัสเสสุ ทะสะสุ เยนะ ตัตตะกัง',
+                'pali_roman': 'Cakkavāḷasahassesu dasasu yena tattakaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That over which, throughout ten thousand world-systems, for all that time',
+            },
+            {
+                'number': 4,
+                'pali': 'กาลัง โกลาหะลัง ชาตัง ยาวะ พ์รัห์มะนิเวสะนา.',
+                'pali_roman': 'Kālaṃ kolāhalaṃ jātaṃ yāva brahmanivesanā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'an uproar arose, reaching as far as the dwellings of the brahmās.',
+            },
+            {
+                'number': 5,
+                'pali': 'ยัง โลกะนาโถ เทเสสิ สัพพะปาปะวินาสะนัง',
+                'pali_roman': 'Yaṃ lokanātho desesi sabbapāpavināsanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That which the Refuge of the World taught, the destroyer of all evil,',
+            },
+            {
+                'number': 6,
+                'pali': 'ยัง สุต์วา สัพพะทุกเขหิ มุจจันตาสังขิยา นะรา',
+                'pali_roman': 'Yaṃ sutvā sabbadukkhehi muccantāsaṅkhiyā narā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'on hearing which countless people are freed from all suffering —',
+            },
+            # ‼ CHECK [IMG_0344.PNG]: THE CHANT IS COMPLETE ON THIS SHEET. เห.
+            #   is the particle every บทขัด in this book closes with, and the
+            #   page ends below it, so nothing runs onto page 81 and no
+            #   continues flag is set. No colophon (จบ…) is printed.
+            {
+                'number': 7,
+                'pali': 'เอวะมาทิคุณูเปตัง มังคะลันตัมภะณามะ เห.',
+                'pali_roman': 'Evamādiguṇūpetaṃ maṅgalantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'endowed with such qualities as these: that Maṅgala let us now recite.',
             },
         ],
     },
