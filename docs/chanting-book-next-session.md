@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
-80 went in.
+81 went in.
 
 ## Read first, in this order
 
@@ -12,13 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–80 are in and unbroken**, plus 217–221. **110 chants, 1,414 verses
+- **Pages 1–81 are in and unbroken**, plus 217–221. **111 chants, 1,438 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- **Nothing is left open.** There is no `‼ CONTINUES` marker anywhere in
-  `chanting.py` — page 80 closed all three of its chants.
-- Pages 78, 79 and 80 were applied 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 78 to 81 were applied 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -36,20 +34,25 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 81, `IMG_0345` — but READ THE NUMBER off the sheet
+## Next: page 82, `IMG_0346` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for seven pages, so page 81 *should* be
-`IMG_0345`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for eight pages, so page 82 *should* be
+`IMG_0346`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**Page 81 starts clean.** Nothing continues, nothing is cut, and there is no
-`‼ CONTINUES` marker in the file — so whatever is on the sheet begins there.
+**`mangala-suttam-pathamam` is open at verse 24, and it is NOT a cut line.**
+Page 81's last row is a whole printed unit, so there is no `[…]` to complete:
+page 82's batch is an ordinary `continuation_of` numbering **from 25**.
 
-**Expect a paritta and expect two columns.** The book is inside the
-สิบสองตำนาน now, and pages 79 and 80 were two-column throughout. The สารบัญ
-lists the บทขัด prefaces in a long run — ระตะนะสุตตัง, กะระณียะเมตตะสุตตัง,
-ขันธะปะริตตัง and so on — so a preface followed by its sutta is the shape to
-expect. **That is a reason to read carefully, not a reason to assume.**
+**Ten of the sutta's gāthās are in.** The Maṅgala Sutta traditionally runs to
+eleven, so page 82 should carry the last one and the sutta's closing. **That is
+a reason to expect the continuation, not to write it** — the book decides, as
+it did when `อัฏฐะกะ` promised eight and page 80 delivered exactly five more.
+
+**The chant is set BOTH ways, so a continuation must say which.** Verse 1's
+group is `prose` and verse 5's is `lines`. If page 82 opens mid-gāthā the first
+verse on it needs `para_layout: 'lines'` — the page-75 rule — and if the sutta
+closes in prose, that group needs `'prose'` declared.
 
 ## Standing rules for every page
 
@@ -72,6 +75,25 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Raised on page 81 — the ragged gutter
+
+**The right column starts at exactly x 1080 on all twenty rows; the left half
+is ragged.** So the empty band between the columns is anywhere from 100px to
+300px wide depending on how long the left half runs. Measured row by row.
+
+That matters for the method: **a gutter is not always a fixed band.** What is
+constant is where the RIGHT column starts, and that is the thing to measure.
+Looking for a uniform-width gap would have found nothing here.
+
+**The refrain `เอตัมมังคะละมุตตะมัง.` repeats nine times, verbatim**, always as
+the right half of its row. Expected in a litany, and exactly the shape that
+reads as a paste error.
+
+**This title agrees with the contents, where page 80's did not.** The sutta
+prints `มังคะละสุตตัง` with `สุตตัง`, matching the สารบัญ; page 80's preface
+printed `บทขัดมังคะละสุตตะ` with `สุตตะ` against it. So that inconsistency sits
+between a preface and its own sutta rather than running through the book.
 
 ## Raised on page 80 — a title the contents disagrees with
 
