@@ -22465,7 +22465,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 24; the rest is not in the app yet.
         # ‼ CHECK [IMG_0345.PNG]: THE PAGE HEADING AGREES WITH THE CONTENTS
         #   HERE, which is worth saying because page 80's did not. This title
         #   prints มังคะละสุตตัง with สุตตัง, matching the สารบัญ exactly,
@@ -22493,6 +22492,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'ขุ. ขุ. 25/3 ขุ. สุ. 25/376',
+        'closing': {
+            'pali': 'มังคะละสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'Maṅgalasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Maṅgala Sutta.',
         },
         'verses': [
             # ‼ CHECK [IMG_0345.PNG]: ONE CHANT SET BOTH WAYS ON ONE SHEET,
@@ -22732,6 +22739,345 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'and the realisation of Nibbāna: this is the highest blessing.',
+            },
+            # ‼ CHECK [IMG_0346.PNG]: TWO COLUMNS, gutter measured at x
+            #   940-1160 — a different position from page 81's x 1080, on the
+            #   same chant. The metre is the same; the setting simply shifts
+            #   across the page turn. Measured rather than carried over.
+            {
+                'number': 25,
+                'page': 82,
+                'pali': 'ผุฏฐัสสะ โลกะธัมเมหิ จิตตัง ยัสสะ นะ กัมปะติ',
+                'pali_roman': 'Phuṭṭhassa lokadhammehi cittaṃ yassa na kampati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'One whose mind does not waver when touched by the ways of the world,',
+            },
+            {
+                'number': 26,
+                'pali': 'อะโสกัง วิระชัง เขมัง เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Asokaṃ virajaṃ khemaṃ etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'sorrowless, stainless, secure: this is the highest blessing.',
+            },
+            {
+                'number': 27,
+                'pali': 'เอตาทิสานิ กัต์วานะ สัพพัตถะมะปะราชิตา',
+                'pali_roman': 'Etādisāni katvāna sabbatthamaparājitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having done such things as these, undefeated everywhere,',
+            },
+            # ‼ CHECK [IMG_0346.PNG]: A CANONICAL CITATION CARRYING TWO
+            #   REFERENCES. The superscript 1 sits on this verse and the
+            #   footnote reads ขุ. ขุ. 25/3 ขุ. สุ. 25/376 — the Khuddakapāṭha
+            #   and the Suttanipāta, both printings of the same sutta.
+            #   Reproduced verbatim as one string, neither split nor expanded,
+            #   because that is how the book sets it.
+            # ‼ CHECK [IMG_0346.PNG]: มังคะละมุตตะมันติ. carries the quotative
+            #   ติ closing the deity's whole question and the Buddha's whole
+            #   answer, where the other nine refrains end plainly
+            #   มังคะละมุตตะมัง. — so the last one is marked as the end of a
+            #   quotation. Read at 2.2x. Reproduced, and romanised muttamanti
+            #   to match.
+            {
+                'number': 28,
+                'pali': 'สัพพัตถะ โสตถิง คัจฉันติ ตันเตสัง มังคะละมุตตะมันติ.',
+                'pali_roman': 'Sabbattha sotthiṃ gacchanti tantesaṃ maṅgalamuttamanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they go in safety everywhere: that is their highest blessing.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0346.PNG]: THE PAGE AND THE CONTENTS SPACE THIS TITLE
+        #   DIFFERENTLY. The page heading prints บทขัด ระตะนะสุตตัง with a
+        #   SPACE after บทขัด; the book's own สารบัญ lists บทขัดระตะนะสุตตัง
+        #   with none. The page is reproduced. The romanisation is unaffected
+        #   by the space so the contents' value is used unchanged, but note
+        #   the same consequence as page 80: because title_thai is no longer a
+        #   key in _CONTENTS_ROMAN, the never-spell-a-title-two-ways test
+        #   cannot see this chant. Second title in three pages where that is
+        #   true.
+        # ‼ CHECK [IMG_0346.PNG]: english_unverified is set, and this chant's
+        #   English is the least certain on the page. The prose preface is a
+        #   single compressed sentence listing the Buddha's perfections and
+        #   deeds in the accusative before its verb arrives twelve units
+        #   later; the gloss keeps the list order the book prints and does not
+        #   try to smooth the syntax. Worth reading against the book.
+        'id': 'bot-khat-ratana-suttam',
+        'title_thai': 'บทขัด ระตะนะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt rá-dtà-ná-sùt-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Ratana Sutta',
+        'page_start': 82,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0346.PNG]: SET BOTH WAYS, and both groups declare
+            #   their layout. Eight lines of justified prose (ink x 300-1820,
+            #   no gutter anywhere) then four two-column rows (gutter x
+            #   960-1140). Verse 1 carries para_layout 'prose' and verse 13
+            #   'lines'; neither relies on the chant default. Same shape as
+            #   page 81's sutta.
+            {
+                'number': 1,
+                'page': 82,
+                'para_layout': 'prose',
+                'pali': 'ปะณิธานะโต ปัฏฐายะ ตะถาคะตัสสะ ทะสะ ปาระมิโย ทะสะ อุปะปาระมิโย,',
+                'pali_roman': 'Paṇidhānato paṭṭhāya tathāgatassa dasa pāramiyo dasa upapāramiyo,',
+                'thai': '',
+                'paiboon': '',
+                'english': "From the time of his aspiration onwards, the Tathāgata's ten perfections, ten higher perfections,",
+            },
+            # ‼ CHECK [IMG_0346.PNG]: A WIDE GAP INSIDE LINE 2 OF THE PROSE,
+            #   between ทะสะ and ปะระมัตถะปาระมิโย — visibly wider than the
+            #   other word spaces on that line. Read as JUSTIFICATION rather
+            #   than as meaningful spacing, and set as a single space here.
+            #   Worth an eye at the book, since the rule elsewhere is to
+            #   reproduce unusual spacing.
+            {
+                'number': 2,
+                'pali': 'ทะสะ ปะระมัตถะปาระมิโย,',
+                'pali_roman': 'Dasa paramatthapāramiyo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and ten ultimate perfections;',
+            },
+            {
+                'number': 3,
+                'pali': 'ปัญจะ มะหาปะริจจาเค ติสโส จะริยา,',
+                'pali_roman': 'Pañca mahāpariccāge tisso cariyā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'his five great renunciations, his three kinds of conduct;',
+            },
+            {
+                'number': 4,
+                'pali': 'ปัจฉิมัพภะเว คัพภาวักกันติง ชาติง อะภินิกขะมะนัง,',
+                'pali_roman': 'Pacchimabbhave gabbhāvakkantiṃ jātiṃ abhinikkhamanaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in his last existence, his descent into the womb, his birth, his going forth;',
+            },
+            {
+                'number': 5,
+                'pali': 'ปะธานะจะริยัง โพธิปัลลังเก มาระวิชะยัง,',
+                'pali_roman': 'Padhānacariyaṃ bodhipallaṅke māravijayaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'his striving, his victory over Māra on the seat of awakening;',
+            },
+            {
+                'number': 6,
+                'pali': 'สัพพัญญุตะญาณัปปะฏิเวธัง,',
+                'pali_roman': 'Sabbaññutañāṇappaṭivedhaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'his penetration of the knowledge of omniscience;',
+            },
+            {
+                'number': 7,
+                'pali': 'นะวะโลกุตตะระธัมเมติ,',
+                'pali_roman': 'Navalokuttaradhammeti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the nine supramundane states —',
+            },
+            {
+                'number': 8,
+                'pali': 'สัพเพปิเม พุทธะคุเณ,',
+                'pali_roman': 'Sabbepime buddhaguṇe,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all these qualities of the Buddha,',
+            },
+            {
+                'number': 9,
+                'pali': 'อาวัชชิต์วา เวสาลิยา ตีสุ ปาการันตะเรสุ,',
+                'pali_roman': 'Āvajjitvā vesāliyā tīsu pākārantaresu,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having called them to mind, within the three walls of Vesālī,',
+            },
+            {
+                'number': 10,
+                'pali': 'ติยามะรัตติง ปะริตตัง กะโรนโต,',
+                'pali_roman': 'Tiyāmarattiṃ parittaṃ karonto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'making the paritta through the three watches of the night,',
+            },
+            {
+                'number': 11,
+                'pali': 'อายัส์มา อานันทัตเถโร วิยะ,',
+                'pali_roman': 'Āyasmā ānandatthero viya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'as the venerable elder Ānanda did,',
+            },
+            {
+                'number': 12,
+                'pali': 'การุญญะจิตตัง อุปัฏฐะเปต์วา.',
+                'pali_roman': 'Kāruññacittaṃ upaṭṭhapetvā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having set up a mind of compassion.',
+            },
+            # ‼ CHECK [IMG_0346.PNG]: จักกะวาเฬสุ IS ฬ, the third instance in
+            #   four pages, and the same test settles it: the letter carries a
+            #   tall ascender that the พ elsewhere on the sheet lack.
+            #   ยัสสาณัมปะฏิคคัณหันติ at verse 14 is BARE, with no mark over
+            #   the ณ, consistent with pages 68 to 76.
+            {
+                'number': 13,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'โกฏิสะตะสะหัสเสสุ จักกะวาเฬสุ เทวะตา',
+                'pali_roman': 'Koṭisatasahassesu cakkavāḷesu devatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The deities in a hundred thousand koṭis of world-systems',
+            },
+            {
+                'number': 14,
+                'pali': 'ยัสสาณัมปะฏิคคัณหันติ ยัญจะ เวสาลิยัมปุเร.',
+                'pali_roman': 'Yassāṇampaṭiggaṇhanti yañca vesāliyampure.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'accept its authority, and so did the city of Vesālī.',
+            },
+            # ‼ CHECK [IMG_0346.PNG]: A HYPHEN ACROSS THE GUTTER, the second
+            #   in four pages after page 79's สัมมา-. The left column ends
+            #   โรคามะนุสสะทุพภิกขะ- and the right column opens
+            #   สัมภูตันติวิธัมภะยัง, so the word is rejoined as
+            #   โรคามะนุสสะทุพภิกขะสัมภูตันติวิธัมภะยัง and the hyphen dropped
+            #   as typesetting. It also settles the two-column reading of this
+            #   block on its own, independently of the measured gutter.
+            {
+                'number': 15,
+                'pali': 'โรคามะนุสสะทุพภิกขะสัมภูตันติวิธัมภะยัง',
+                'pali_roman': 'Rogāmanussadubbhikkhasambhūtantividhambhayaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The threefold fear arisen from disease, from non-human beings and from famine',
+            },
+            {
+                'number': 16,
+                'pali': 'ขิปปะมันตะระธาเปสิ ปะริตตันตัมภะณามะ เห.',
+                'pali_roman': 'Khippamantaradhāpesi parittantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it swiftly made to vanish: that paritta let us now recite.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0346.PNG]: english_unverified is set. The book prints
+        #   this sutta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'ratana-suttam-dutiyam',
+        'title_thai': 'ระตะนะสุตตัง ทุติยัง',
+        'title_pali': 'Ratanasuttaṃ dutiyaṃ',
+        'title_roman': '',
+        'title_english': 'The Ratana Sutta, the Second',
+        'page_start': 82,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0346.PNG]: SINGLE COLUMN, MEASURED, AND THAT IS THE
+            #   POINT. Ink runs x 680 to x 1380 with nothing either side — so
+            #   these seven lines are centred single-column, even though BOTH
+            #   chants above them on this same sheet are two-column. Three
+            #   settings on one page. Profiling each block separately is the
+            #   only thing that catches this, and it is the third page running
+            #   where it has mattered.
+            {
+                'number': 1,
+                'page': 82,
+                'pali': 'ยานีธะ ภูตานิ สะมาคะตานิ',
+                'pali_roman': 'Yānīdha bhūtāni samāgatāni',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever beings are gathered here,',
+            },
+            {
+                'number': 2,
+                'pali': 'ภุมมานิ วา ยานิวะ อันตะลิกเข',
+                'pali_roman': 'Bhummāni vā yāniva antalikkhe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whether of the earth or of the sky,',
+            },
+            {
+                'number': 3,
+                'pali': 'สัพเพ วะ ภูตา สุมะนา ภะวันตุ',
+                'pali_roman': 'Sabbe va bhūtā sumanā bhavantu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may all those beings be glad of mind,',
+            },
+            {
+                'number': 4,
+                'pali': 'อะโถปิ สักกัจจะ สุณันตุ ภาสิตัง.',
+                'pali_roman': 'Athopi sakkacca suṇantu bhāsitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and moreover listen carefully to what is spoken.',
+            },
+            # ‼ CHECK [IMG_0346.PNG]: ตัส์มา carries the ์ cluster mark,
+            #   romanised tasmā with the mark dropped. Same word and same
+            #   treatment as page 75's ตัส์มาติหัมเหหิ, and part of the open
+            #   question about which mark this printer cuts.
+            {
+                'number': 5,
+                'pali': 'ตัส์มา หิ ภูตา นิสาเมถะ สัพเพ',
+                'pali_roman': 'Tasmā hi bhūtā nisāmetha sabbe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Therefore, beings, all of you attend:',
+            },
+            {
+                'number': 6,
+                'pali': 'เมตตัง กะโรถะ มานุสิยา ปะชายะ',
+                'pali_roman': 'Mettaṃ karotha mānusiyā pajāya',
+                'thai': '',
+                'paiboon': '',
+                'english': 'show loving-kindness to the human race,',
+            },
+            # ‼ CHECK [IMG_0346.PNG]: THE SHEET RUNS OUT MID-SENTENCE but
+            #   verse 7 is a whole printed line, so no […] marker is used —
+            #   the line is complete and the SENTENCE is not, which is what
+            #   continues: true records. Page 83 numbers from 8.
+            {
+                'number': 7,
+                'pali': 'ทิวา จะ รัตโต จะ หะรันติ เย พะลิง',
+                'pali_roman': 'Divā ca ratto ca haranti ye baliṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who by day and by night bring offerings;',
             },
         ],
     },
