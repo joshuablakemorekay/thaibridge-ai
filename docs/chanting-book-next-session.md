@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
-78 went in.
+79 went in.
 
 ## Read first, in this order
 
@@ -12,13 +12,13 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–78 are in and unbroken**, plus 217–221. **107 chants, 1,366 verses
+- **Pages 1–79 are in and unbroken**, plus 217–221. **108 chants, 1,390 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Page 78 was applied 2026-08-22; pages 75 to 77 on 2026-08-21; pages 69 to 74
-  on 2026-08-19; pages 66–68 over the days before them; 61–65 on 2026-08-14 and
-  2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
+- Pages 78 and 79 were applied 2026-08-22; pages 75 to 77 on 2026-08-21; pages
+  69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
+  2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
   Tamnan parittas appointed for evening chanting. Everything from here is
   paritta until the book says otherwise.
@@ -34,21 +34,25 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 79, `IMG_0343` — but READ THE NUMBER off the sheet
+## Next: page 80, `IMG_0344` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for five pages, so page 79 *should* be
-`IMG_0343`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for six pages, so page 80 *should* be
+`IMG_0344`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**`namakarasiddhi-gatha` is open at verse 3, and it is NOT a cut line.** Page 78
-ends `มารัสสะ ปาสา วินิโมจะยันโต` — a complete printed unit with no punctuation
-after it, followed by the footnote rule. So there is no `[…]` to complete:
-page 79's batch is an ordinary `continuation_of` numbering **from 4**, no title
-and no invitation. What is unfinished is the sentence, not the line.
+**`namokara-atthaka-gatha` is open at verse 3, and it is NOT a cut line.** Page
+79's last row is a whole printed unit, so there is no `[…]` to complete: page
+80's batch is an ordinary `continuation_of` numbering **from 4**.
 
-**Everything else on page 78 closed.** The refuges finished at verse 9 and
-Sambuddhe is complete at 15, so `namakarasiddhi-gatha` is the only
-`‼ CONTINUES` marker left in the file.
+**The title says how many verses to expect.** `อัฏฐะกะ` means a set of eight
+and only three are in, so **five more should follow on page 80**. That is a
+reason to expect a continuation, not a reason to write one — and if page 80
+gives a different number, the book wins and the count goes in a check.
+
+**Expect two columns and check for a hyphen at the gutter.** These three rows
+are two-column with a 140px gutter, and the first of them breaks a word across
+it with a hyphen. If page 80 continues the same setting, the same thing can
+happen again.
 
 ## Standing rules for every page
 
@@ -71,6 +75,30 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## What page 79 proved — a hyphen across the gutter
+
+**The strongest evidence for a two-column reading this book has given.** The
+left column of the Namokāra's first row ends `สัมมา-` **with a hyphen**, and
+the right column opens `สัมพุทธัสสะ`. A hyphen at the end of a left column
+cannot mean anything but "this word continues to the right", so the row is read
+across and the word rejoins as `สัมมาสัมพุทธัสสะ` with the hyphen dropped as
+typesetting.
+
+Worth keeping because the two-column danger is the worst failure available on
+these pages, and every other page has been settled by measuring a gutter. This
+one settled itself.
+
+**One sheet, two settings, and only a per-block profile caught it.** Page 79's
+upper chant is single column (ink x 500–1260, no gutter) and its lower chant is
+two (140px gutter at x 1000–1140). Profiling the page as a whole would have
+blurred both. **Profile each block, not each page.**
+
+**Two more `ส์` marks** — `ส์วากขาตะธัมมัง` and `ส์วากขาตัสเสวะ`, both at 9×,
+both the ε-curl page 60 identified. Romanised `sv-`, matching all eight existing
+`ส์วากขาโต` lines in the app. This is still the open question of the whole
+stretch: the app holds this one word **three ways** (plain `ส`, `ส์`, `ส๎`) and
+one look at the book settles every one of them.
 
 ## Raised on page 78 — one settled, two open
 

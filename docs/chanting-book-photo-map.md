@@ -58,6 +58,7 @@ photograph.
 | 76 | IMG_0340 | 264 |
 | 77 | IMG_0341 | 264 |
 | 78 | IMG_0342 | 264 |
+| 79 | IMG_0343 | 264 |
 | 207 | IMG_0477 | 270 |
 | 213 | IMG_0483 | 270 |
 | 215 | IMG_0485 | 270 |
@@ -79,8 +80,8 @@ stays there until the next deleted duplicate. That is the first of the seven
 changes this table predicted, and it is exactly why the rule is to read the page
 number off the top of the photograph rather than calculate it: pages 69 to 74
 were each confirmed that way, on `IMG_0332` to `IMG_0338`. Pages 75 and 76 were
-read the same way, as were pages 77 and 78, and are `IMG_0339` to `IMG_0342`,
-so the new offset of 264 has now held for five pages.
+read the same way, as were pages 77 to 79, and are `IMG_0339` to `IMG_0343`,
+so the new offset of 264 has now held for six pages.
 
 ## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
 
