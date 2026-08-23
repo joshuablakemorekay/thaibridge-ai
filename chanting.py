@@ -22986,7 +22986,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 85; the rest is not in the app yet.
         # ‼ CHECK [IMG_0346.PNG]: english_unverified is set. The book prints
         #   this sutta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -23005,6 +23004,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'ขุ. ขุ. 25/5 ขุ.สุ. 25/367',
+        'closing': {
+            'pali': 'ระตะนะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'Ratanasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Ratana Sutta.',
         },
         'verses': [
             # ‼ CHECK [IMG_0346.PNG]: SINGLE COLUMN, MEASURED, AND THAT IS THE
@@ -23894,6 +23901,284 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'the Dhamma we salute: may there be well-being.',
+            },
+            # ‼ CHECK [IMG_0351.PNG]: SINGLE COLUMN, MEASURED: ink x 700-1400
+            #   with nothing either side, so these four lines are centred
+            #   single-column — even though both chants below them on this
+            #   same sheet are two-column. Third page running with more than
+            #   one setting on it.
+            {
+                'number': 86,
+                'page': 86,
+                'para_start': True,
+                'pali': 'ยานีธะ ภูตานิ สะมาคะตานิ',
+                'pali_roman': 'Yānīdha bhūtāni samāgatāni',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever beings are gathered here,',
+            },
+            {
+                'number': 87,
+                'pali': 'ภุมมานิ วา ยานิวะ อันตะลิกเข',
+                'pali_roman': 'Bhummāni vā yāniva antalikkhe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whether of the earth or of the sky,',
+            },
+            {
+                'number': 88,
+                'pali': 'ตะถาคะตัง เทวะมะนุสสะปูชิตัง',
+                'pali_roman': 'Tathāgataṃ devamanussapūjitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Tathāgata, honoured by devas and humans —',
+            },
+            # ‼ CHECK [IMG_0351.PNG]: ‼ PAGE 85's ORPHAN MARKER IS STILL AN
+            #   ORPHAN, and this footnote is NOT paired with it. Page 85's
+            #   last line carries a superscript 1 with no footnote anywhere on
+            #   that sheet. THIS page has its own superscript 1 on verse 89
+            #   and its own footnote beneath the rule, so the pair on page 86
+            #   is complete and internal. Footnote numbers restart on every
+            #   page and the standing rule is never to match a marker across a
+            #   sheet, so page 85's marker is left unattached and nothing was
+            #   written for it. It is the same shape as the orphan across
+            #   pages 57, 58 and 59, and one look at the book settles both at
+            #   once.
+            {
+                'number': 89,
+                'pali': 'สังฆัง นะมัสสามะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Saṅghaṃ namassāma suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Saṅgha we salute: may there be well-being.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0351.PNG]: THE PAGE SPACES THE TITLE AND THE CONTENTS
+        #   DOES NOT — บทขัด กะระณียะเมตตะสุตตัง with a space here,
+        #   บทขัดกะระณียะเมตตะสุตตัง without one in the สารบัญ. Exactly as
+        #   page 82 did with the Ratana preface. The page is reproduced, so
+        #   title_thai is not a key in _CONTENTS_ROMAN and the never-spell-a-
+        #   title-two-ways test cannot see this chant either. THIRD title now
+        #   in that position.
+        # ‼ CHECK [IMG_0351.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-karaniyametta-suttam',
+        'title_thai': 'บทขัด กะระณียะเมตตะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt gà-rá-nii-yá-mêet-dtà-sùt-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Karaṇīya-metta Sutta',
+        'page_start': 86,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0351.PNG]: TWO COLUMNS, gutter measured at x
+            #   860-1100. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   ยัสสานุภาวะโต ยักขา + right เนวะ ทัสเสนติ ภิงสะนัง. Reading
+            #   the left column alone gives four unfinished half-lines, which
+            #   is the honest test and it agrees.
+            {
+                'number': 1,
+                'page': 86,
+                'pali': 'ยัสสานุภาวะโต ยักขา เนวะ ทัสเสนติ ภิงสะนัง',
+                'pali_roman': 'Yassānubhāvato yakkhā neva dassenti bhiṃsanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of which the yakkhas show nothing frightful;',
+            },
+            {
+                'number': 2,
+                'pali': 'ยัมหิ เจวานุยุญชันโต รัตตินทิวะมะตันทิโต,',
+                'pali_roman': 'Yamhi cevānuyuñjanto rattindivamatandito,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and one who applies himself to it, night and day untiring,',
+            },
+            {
+                'number': 3,
+                'pali': 'สุขัง สุปะติ สุตโต จะ ปาปัง กิญจิ นะ ปัสสะติ,',
+                'pali_roman': 'Sukhaṃ supati sutto ca pāpaṃ kiñci na passati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'sleeps happily, and sleeping sees no evil thing at all;',
+            },
+            {
+                'number': 4,
+                'pali': 'เอวะมาทิคุณูเปตัง ปะริตตันตัมภะณามะ เห.',
+                'pali_roman': 'Evamādiguṇūpetaṃ parittantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'endowed with such qualities as these: that paritta let us now recite.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 13; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0351.PNG]: english_unverified is set. The book prints
+        #   this sutta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'karaniyametta-suttam-tatiyam',
+        'title_thai': 'กะระณียะเมตตะสุตตัง ตะติยัง',
+        'title_pali': 'Karaṇīyamettasuttaṃ tatiyaṃ',
+        'title_roman': '',
+        'title_english': 'The Karaṇīya-metta Sutta, the Third',
+        'page_start': 86,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0351.PNG]: TWO COLUMNS, AND THE GUTTER IS NOT WHERE
+            #   THE CHANT ABOVE IT PUTS ONE. This block's gutter is at x
+            #   1040-1120; the บทขัด directly above it on the same sheet has
+            #   its at x 860-1100. Each was profiled separately rather than
+            #   the page profiled once. Read ACROSS. FIRST PAIRING FOR
+            #   CHECKING: left กะระณียะมัตถะกุสะเลนะ + right ยันตัง สันตัง
+            #   ปะทัง อะภิสะเมจจะ,.
+            {
+                'number': 1,
+                'page': 86,
+                'pali': 'กะระณียะมัตถะกุสะเลนะ ยันตัง สันตัง ปะทัง อะภิสะเมจจะ,',
+                'pali_roman': 'Karaṇīyamatthakusalena yantaṃ santaṃ padaṃ abhisamecca,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is what should be done by one skilled in the good, who has understood that state of peace:',
+            },
+            {
+                'number': 2,
+                'pali': 'สักโก อุชู จะ สุหุชู จะ สุวะโจ จัสสะ มุทุ อะนะติมานี,',
+                'pali_roman': 'Sakko ujū ca suhujū ca suvaco cassa mudu anatimānī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let him be able, upright, perfectly upright, easy to speak to, gentle, without conceit;',
+            },
+            {
+                'number': 3,
+                'pali': 'สันตุสสะโก จะ สุภะโร จะ อัปปะกิจโจ จะ สัลละหุกะวุตติ,',
+                'pali_roman': 'Santussako ca subharo ca appakicco ca sallahukavutti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'contented, easily supported, with few duties and a frugal way of life;',
+            },
+            # ‼ CHECK [IMG_0351.PNG]: สันตินท์ริโย carries the ท์ cluster
+            #   mark, romanised santindriyo with the mark dropped — the usual
+            #   treatment. Verse 12's พ์ยาโรสะนา is the other cluster mark on
+            #   this chant, romanised byārosanā.
+            {
+                'number': 4,
+                'pali': 'สันตินท์ริโย จะ นิปะโก จะ อัปปะคัพโภ กุเลสุ อะนะนุคิทโธ,',
+                'pali_roman': 'Santindriyo ca nipako ca appagabbho kulesu ananugiddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'with senses calmed, prudent, not forward, and not greedy among families;',
+            },
+            {
+                'number': 5,
+                'pali': 'นะ จะ ขุททัง สะมาจะเร กิญจิ เยนะ วิญญู ปะเร อุปะวะเทยยุง,',
+                'pali_roman': 'Na ca khuddaṃ samācare kiñci yena viññū pare upavadeyyuṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and let him not do the slightest thing for which the wise might reprove him.',
+            },
+            # ‼ CHECK [IMG_0351.PNG]: สัพเพ สัตตา ภะวันตุ สุขิตัตตา, APPEARS
+            #   TWICE on this sheet, at verses 6 and 10, word for word. Not a
+            #   duplication: the wish is made once over the pairs of verse 7
+            #   and once over those of verses 8 and 9. Recorded because
+            #   check_render walks strings in printed order.
+            {
+                'number': 6,
+                'pali': 'สุขิโน วา เขมิโน โหนตุ สัพเพ สัตตา ภะวันตุ สุขิตัตตา,',
+                'pali_roman': 'Sukhino vā khemino hontu sabbe sattā bhavantu sukhitattā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May they be happy and secure; may all beings be happy at heart.',
+            },
+            {
+                'number': 7,
+                'pali': 'เย เกจิ ปาณะภูตัตถิ ตะสา วา ถาวะรา วา อะนะวะเสสา,',
+                'pali_roman': 'Ye keci pāṇabhūtatthi tasā vā thāvarā vā anavasesā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever living beings there are — trembling or still, without exception;',
+            },
+            {
+                'number': 8,
+                'pali': 'ทีฆา วา เย มะหันตา วา มัชฌิมา รัสสะกา อะณุกะถูลา,',
+                'pali_roman': 'Dīghā vā ye mahantā vā majjhimā rassakā aṇukathūlā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'long or great, middling, short, subtle or gross;',
+            },
+            {
+                'number': 9,
+                'pali': 'ทิฏฐา วา เย จะ อะทิฏฐา เย จะ ทูเร วะสันติ อะวิทูเร,',
+                'pali_roman': 'Diṭṭhā vā ye ca adiṭṭhā ye ca dūre vasanti avidūre,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'seen or unseen, dwelling far or near;',
+            },
+            {
+                'number': 10,
+                'pali': 'ภูตา วา สัมภะเวสี วา สัพเพ สัตตา ภะวันตุ สุขิตัตตา,',
+                'pali_roman': 'Bhūtā vā sambhavesī vā sabbe sattā bhavantu sukhitattā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'already born or still seeking birth — may all beings be happy at heart.',
+            },
+            {
+                'number': 11,
+                'pali': 'นะ ปะโร ปะรัง นิกุพเพถะ นาติมัญเญถะ กัตถะจิ นัง กิญจิ,',
+                'pali_roman': 'Na paro paraṃ nikubbetha nātimaññetha katthaci naṃ kiñci,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Let none deceive another, nor despise anyone anywhere;',
+            },
+            # ‼ CHECK [IMG_0351.PNG]: ปะฏีฆะสัญญา IS PRINTED WITH A LONG ี
+            #   where standard editions have paṭigha- with a short i. Read at
+            #   2.3x. Reproduced as printed and transliterated paṭīgha- to
+            #   match, so the two chanted layers still agree. Same class as
+            #   the vowel differences already recorded on pages 61, 62 and 85.
+            {
+                'number': 12,
+                'pali': 'พ์ยาโรสะนา ปะฏีฆะสัญญา นาญญะมัญญัสสะ ทุกขะมิจเฉยยะ,',
+                'pali_roman': 'Byārosanā paṭīghasaññā nāññamaññassa dukkhamiccheyya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let none, from anger or ill will, wish harm upon another.',
+            },
+            # ‼ CHECK [IMG_0351.PNG]: THE SHEET RUNS OUT ON THE MOTHER SIMILE,
+            #   mid-sentence. Verse 13 is a whole printed row ending อายุสา
+            #   เอกะปุตตะมะนุรักเข, with a comma, so no […] marker is used —
+            #   the row is complete and the SENTENCE is not. Page 87 carries
+            #   the apodosis, which is where the sutta names mettā for the
+            #   first time.
+            {
+                'number': 13,
+                'pali': 'มาตา ยะถา นิยัง ปุตตัง อายุสา เอกะปุตตะมะนุรักเข,',
+                'pali_roman': 'Mātā yathā niyaṃ puttaṃ āyusā ekaputtamanurakkhe,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Just as a mother would protect her only child with her life,',
             },
         ],
     },
