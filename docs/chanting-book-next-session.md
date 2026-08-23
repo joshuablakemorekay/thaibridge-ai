@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-87 went in.
+88 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–87 are in and unbroken**, plus 217–221. **117 chants, 1,587 verses
+- **Pages 1–88 are in and unbroken**, plus 217–221. **120 chants, 1,612 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 83 to 87 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 83 to 88 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,25 +34,23 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 88, `IMG_0353` — but READ THE NUMBER off the sheet
+## Next: page 89, `IMG_0354` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and held for page 87, so page 88 *should* be
-`IMG_0353`. **Five more changes are still expected before page 207**, so keep
-reading the number off the sheet.
+The offset is **265** since page 86 and has held for 87 and 88, so page 89
+*should* be `IMG_0354`. **Five more changes are still expected before page
+207**, so keep reading the number off the sheet.
 
-**`khandha-parittam-catuttham` is open at verse 12, and verse 12 is CUT.** Page
-87 ends `ปะมาณะวันตานิ […]` with no comma, where verses 9, 10 and 11 each end
-with one. So page 88's batch carries the SAME verse number 12 again with the
-line whole — not verse 13 — and needs both `continuation_of` and `continues:
-true` if the paritta still does not end there.
+**`mora-parittam-pancamam` is open at verse 5**, with no `[…]` — the line is
+whole and it is the sentence that carries on. Page 89's batch numbers **from
+6** and needs both `continuation_of` and `continues: true` if it does not end
+there.
 
-**It is set BOTH ways.** Verses 1–8 are two-column rows; verse 9 opens a
-full-measure prose group with `para_layout: 'prose'`. If page 88 continues the
-prose, its first verse needs `'prose'` declared too; if it returns to verse
-rows, that group needs `'lines'`.
+**Expect a colophon and expect a second half.** The Mora Paritta has a morning
+verse and an evening verse; page 88 carries only the sunrise one, so the sunset
+stanza and the closing should follow.
 
-**Expect a colophon.** Pages 86 and 87 both printed one, and this paritta's
-`บทขัด` names a second paritta — Chaddanta — which has not appeared yet.
+**Profile every block.** Page 88 carried FOUR chants in FOUR settings — prose,
+centred single column, two column, centred single column again.
 
 ## Standing rules for every page
 
@@ -76,7 +74,23 @@ declaring it would be noise.
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
 
-## Four titles the contents test cannot see — pages 80, 82, 86, 87
+## ⚠️ Page 88 — one colophon closes TWO chants
+
+The line printed centred at the middle of page 88 reads
+`ขันธะปะริตตัง ฉัททันตะปะริตตัง นิฏฐิตัง.` — **naming both parittas**. The
+Khandha Paritta ends at the top of that same sheet; the Chaddanta ends
+immediately above the line.
+
+**Recorded as the CHADDANTA's `closing`**, because that is the chant it directly
+follows, and **the Khandha Paritta is deliberately left with no `closing` of its
+own** even though the line names it. Attaching it to both would print the same
+line twice on one page.
+
+First colophon in the book that closes a pair. **Worth Josh's eye** — if he
+would rather the Khandha Paritta also carried it, the fix is one key, but the
+page would then show it twice.
+
+## Five titles the contents test cannot see — pages 80, 82, 86, 87, 88
 
 This is now a pattern, not four surprises. Each time, the page heading and the
 book's own สารบัญ spell or space a title differently, the **page** is
@@ -90,6 +104,7 @@ cannot see that chant at all, and nothing will warn if its title drifts later.
 | 82 | `บทขัด ระตะนะสุตตัง` (spaced) | `บทขัดระตะนะสุตตัง` |
 | 86 | `บทขัด กะระณียะเมตตะสุตตัง` (spaced) | `บทขัดกะระณียะเมตตะสุตตัง` |
 | 87 | `บทขัด ขันธะปะริตตัง ฉัททันตะปะริตตัง` (spaced, `ปะริตตัง`) | `บทขัดขันธะปะริตตัง ฉัททันตะปะริตัง` (`ปะริตัง`) |
+| 88 | `บทขัด โมระปะริตตัง` (spaced) | `บทขัดโมระปะริตตัง` |
 
 Page 87's differs **twice** — the space and a doubled `ต`. Where the page and
 the table disagree, `title_roman` is composed to match the PAGE rather than
