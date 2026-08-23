@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-85 went in.
+86 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–85 are in and unbroken**, plus 217–221. **113 chants, 1,543 verses
+- **Pages 1–86 are in and unbroken**, plus 217–221. **115 chants, 1,564 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 83 to 85 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 83 to 86 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,27 +34,26 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 86, `IMG_0350` — but READ THE NUMBER off the sheet
+## Next: page 87, `IMG_0352` — READ THE NUMBER, the offset just moved
 
-The offset of 264 has now held for twelve pages, so page 86 *should* be
-`IMG_0350`. Six more changes are still predicted before page 207, so read the
-top-centre number.
+**⚠️ THE OFFSET CHANGED AT PAGE 86.** `IMG_0350` does not exist — it was already
+in the photo map's deleted-duplicate list — so page 86 is **`IMG_0351`** and the
+offset stepped from 264 to **265**. Page 87 *should* therefore be `IMG_0352`.
+That was the SECOND of the seven changes the map predicted; **five are still to
+come before page 207**, so keep reading the number off the sheet.
 
-**`ratana-suttam-dutiyam` is open at verse 85** and has now run across FOUR
-sheets — 82, 83, 84, 85. Page 86's batch numbers **from 86**, and needs both
-`continuation_of` and `continues: true` if it still does not end there.
+**`karaniyametta-suttam-tatiyam` is open at verse 13**, with no `[…]` — the row
+is whole and it is the SENTENCE that carries on. Page 87's batch numbers **from
+14** and needs both `continuation_of` and `continues: true` if it does not end
+there.
 
-**It should end on page 86.** Verses 78–81 and 82–85 are the Buddha and Dhamma
-homage stanzas; the Saṅgha one is missing, so expect
-`สังฆัง นะมัสสามะ สุวัตถิ โหตุ.` and then a colophon. **A reason to expect it,
-not to write it.**
+**It stops on the mother simile**, mid-sentence: "just as a mother would protect
+her only child with her life…". Page 87 carries the apodosis, which is where the
+sutta names **mettā** for the first time.
 
-**READ THE FOOT OF PAGE 86 FIRST.** Page 85's last line carries a superscript
-**1 with no footnote anywhere on that sheet** — profiled, no rule and no text.
-The note it points at is most likely at the foot of page 86. **Do not pair them
-without seeing it**: footnote numbers restart on every page and the standing
-rule is never to match a marker across a sheet. If page 86 carries a citation,
-say in a check that page 85's marker is probably its, and let Josh decide.
+**Expect two columns and profile the block yourself.** Page 86 carried two
+chants with gutters in different places — x 860–1100 and x 1040–1120 — on one
+sheet.
 
 ## Standing rules for every page
 
@@ -77,6 +76,29 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Page 86 — the orphan marker stays orphaned
+
+Page 85's last line carries a superscript **1** with no footnote on that sheet.
+Page 86 has **its own** superscript 1 on verse 89 **and its own footnote** under
+the rule, so the pair on page 86 is complete and internal.
+
+**They were NOT joined.** Footnote numbers restart on every page and the
+standing rule is never to match a marker to a footnote on a different sheet.
+Page 85's marker is left unattached and nothing was written for it. Same shape
+as the orphan across pages 57–59 — **one look at the book settles both at
+once**.
+
+The citation itself is worth noting for a different reason: this one prints
+`ขุ.สุ.` with **no space** where page 82's printed `ขุ. สุ.` with one. Both
+reproduced as their pages set them.
+
+## Page 86 — a third title the contents test cannot see
+
+`บทขัด กะระณียะเมตตะสุตตัง` is **spaced** on the page and **unspaced** in the
+สารบัญ — exactly what page 82's Ratana preface did. The page is reproduced, so
+`title_thai` is not a key in `_CONTENTS_ROMAN` and nothing will warn if that
+title drifts. **Three titles are now in that position** (pages 80, 82, 86).
 
 ## ⚠️ Page 85 — the ฬ/พ tests disagree for the first time
 

@@ -65,6 +65,7 @@ photograph.
 | 83 | IMG_0347 | 264 |
 | 84 | IMG_0348 | 264 |
 | 85 | IMG_0349 | 264 |
+| **86** | **IMG_0351** | **265** ⟵ offset changes here |
 | 207 | IMG_0477 | 270 |
 | 213 | IMG_0483 | 270 |
 | 215 | IMG_0485 | 270 |
@@ -87,7 +88,10 @@ changes this table predicted, and it is exactly why the rule is to read the page
 number off the top of the photograph rather than calculate it: pages 69 to 74
 were each confirmed that way, on `IMG_0332` to `IMG_0338`. Pages 75 and 76 were
 read the same way, as were pages 77 to 85, and are `IMG_0339` to `IMG_0349`,
-so the new offset of 264 has now held for twelve pages.
+so the offset of 264 held for twelve pages — and then BREAKS AGAIN at page 86.
+`IMG_0350` does not exist (it is already in the deleted-duplicate list below), so
+page 86 is `IMG_0351` and the offset steps to **265**. That is the SECOND of the
+seven changes this table predicted; five are still to come before page 207.
 
 ## One photograph is a screen capture — `IMG_0316.PNG` (page 53)
 
