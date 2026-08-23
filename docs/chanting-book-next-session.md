@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-90 went in.
+91 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–90 are in and unbroken**, plus 217–221. **124 chants, 1,662 verses
+- **Pages 1–91 are in and unbroken**, plus 217–221. **124 chants, 1,709 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 83 to 90 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 83 to 91 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,25 +34,22 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 91, `IMG_0356` — but READ THE NUMBER off the sheet
+## Next: page 92, `IMG_0357` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–90, so page 91 *should*
-be `IMG_0356`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–91, so page 92 *should*
+be `IMG_0357`. **Five more changes are still expected before page 207.**
 
-**`dhajagga-parittam-sattamam` is open at verse 20, and verse 20 is CUT.** Page
-90 ends `…เทวะราชัสสะ ธะชัคคัง […]` with no comma, where verses 14 and 15 each
-end with one. So page 91's batch carries **verse 20 again** with the line whole
-— not verse 21 — and needs both `continuation_of` and `continues: true` if the
-sutta does not end there.
+**`dhajagga-parittam-sattamam` is open at verse 66, and verse 66 is CUT.** Page
+91 ends `…ภิกขะเว อะนุสสะระตัง […]` with no comma, where verses 45 and 53 — the
+same line for the Buddha and the Dhamma — each end with one. So page 92's batch
+carries **verse 66 again** with the line whole, not verse 67.
 
-**It is PROSE and each group declares it.** The chant has no chant-level
-`layout` key; verses 1 and 6 each carry `para_layout: 'prose'`. Page 91's first
-group must declare its own.
+**It is PROSE and EVERY group must declare it.** This chant has no chant-level
+`layout` key, so a group that says nothing falls back to `lines`. See the rule
+below — it bit twice on page 91.
 
-**Sakka names three banners and page 90 reaches the third.** His own,
-Pajāpati's, and Varuṇa's — with the same promise after each, so verses 11/16
-and 12/17 are already verbatim pairs. Expect the Varuṇa promise, then the
-Buddha correcting Sakka, which is what the sutta is actually for.
+**Expect the sutta to close soon**, with the Saṅgha promise and then a colophon;
+every paritta in this run has had one except the Mora and the Vaṭṭaka.
 
 ## Standing rules for every page
 
@@ -75,6 +72,26 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## ⚠️ para_layout goes on the first verse OF THIS PAGE, not of the batch
+
+Page 91 got this wrong **twice** before rendering caught it, and page 75
+established the rule in the first place. Worth stating exactly:
+
+- A chant with **no chant-level `layout` key** falls back to `lines`. A prose
+  chant that relies on the default renders as a stack of short lines.
+- The template reads `para_layout` off **`paragraph[0]`** — the first verse of
+  the group *in the slice being rendered*.
+- So when a page opens **mid-paragraph**, the first verse on that page needs
+  `para_layout` and **no** `para_start`.
+- **The verse that needs it is the first one whose `page` is this page** — not
+  the first verse in the batch. Page 91's batch opens at verse 20, but verse
+  20's line *starts on page 90*, so it is not in page 91's slice at all. The fix
+  had to go on verse **21**.
+
+**None of the four checks sees this.** `check_pages` compares data to the batch,
+`check_render` walks strings in printed order and does not look at grouping.
+Only opening the page catches it — so open the page.
 
 ## ⚠️⚠️ The ฬ/พ conflict has now happened TWICE — pages 85 and 90
 
