@@ -1,0 +1,331 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "ratana-suttam-dutiyam"
+  ],
+  "pages": [
+   {
+    "page": 85,
+    "file": "IMG_0349.PNG",
+    "script": "thai",
+    "chant": "ratana-suttam-dutiyam",
+    "verses": "60-85",
+    "starts_here": false,
+    "note": "The whole sheet is one chant and twenty-six printed lines, SINGLE column — ink x 640-1560 with nothing either side. Five lines are indented by a measured 80-90px against the block's OWN left edge of 640-650 — verses 62, 68, 72, 78 and 82 — and each is a stanza opening. The last line carries a superscript 1 and THERE IS NO FOOTNOTE ANYWHERE ON THE SHEET: no rule, no text, nothing between the last verse and the foot of the page. The sheet runs out mid-sutta."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "ratana-suttam-dutiyam",
+   "continuation_of": "ratana-suttam-dutiyam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-six, verses 60 to 85, one per printed line. Verses 60 and 61 close the stanza page 84 opened; verses 62, 68, 72, 78 and 82 open the five indented stanzas and carry para_start. Measured against this block's own left edge, not against page 84's threshold — the mistake page 84 caught.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0349.PNG, page 85, read off the top centre of the sheet — the offset of 264 has now held for twelve pages. Verse 60 is the first verse on this page and carries the page key. The chant runs off the foot and is picked up on page 86."
+   },
+   "verses": [
+    {
+     "number": 60,
+     "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Saṅgha.",
+     "page": 85
+    },
+    {
+     "number": 61,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 62,
+     "pali": "วะนัปปะคุมเพ ยะถา ผุสสิตัคเค",
+     "pali_roman": "Vanappagumbe yathā phussitagge",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just as a woodland thicket, its crowns in blossom",
+     "para_start": true
+    },
+    {
+     "number": 63,
+     "pali": "คิมหานะมาเส ปะฐะมัส์มิง คิมเห",
+     "pali_roman": "Gimhānamāse paṭhamasmiṃ gimhe",
+     "thai": "",
+     "paiboon": "",
+     "english": "in the first month of the hot season,"
+    },
+    {
+     "number": 64,
+     "pali": "ตะถูปะมัง ธัมมะวะรัง อะเทสะยิ",
+     "pali_roman": "Tathūpamaṃ dhammavaraṃ adesayi",
+     "thai": "",
+     "paiboon": "",
+     "english": "so did he teach the excellent Dhamma, likened to that,"
+    },
+    {
+     "number": 65,
+     "pali": "นิพพานะคามิง ปะระมัง หิตายะ",
+     "pali_roman": "Nibbānagāmiṃ paramaṃ hitāya",
+     "thai": "",
+     "paiboon": "",
+     "english": "leading to Nibbāna, for the highest welfare."
+    },
+    {
+     "number": 66,
+     "pali": "อิทัมปิ พุทเธ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi buddhe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Buddha."
+    },
+    {
+     "number": 67,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 68,
+     "pali": "วะโร วะรัญญู วะระโท วะราหะโร",
+     "pali_roman": "Varo varaññū varado varāharo",
+     "thai": "",
+     "paiboon": "",
+     "english": "The excellent one, knower of the excellent, giver and bringer of the excellent,",
+     "para_start": true
+    },
+    {
+     "number": 69,
+     "pali": "อะนุตตะโร ธัมมะวะรัง อะเทสะยิ",
+     "pali_roman": "Anuttaro dhammavaraṃ adesayi",
+     "thai": "",
+     "paiboon": "",
+     "english": "unsurpassed, taught the excellent Dhamma."
+    },
+    {
+     "number": 70,
+     "pali": "อิทัมปิ พุทเธ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi buddhe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Buddha."
+    },
+    {
+     "number": 71,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 72,
+     "pali": "ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง",
+     "pali_roman": "Khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The old is destroyed, and there is no new arising;",
+     "para_start": true
+    },
+    {
+     "number": 73,
+     "pali": "วิรัตตะจิตตายะติเก ภะวัส์มิง",
+     "pali_roman": "Virattacittāyatike bhavasmiṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "their minds are without passion for a future existence."
+    },
+    {
+     "number": 74,
+     "pali": "เต ขีณะพีชา อะวิรุพหิฉันทา",
+     "pali_roman": "Te khīṇabījā avirubhichandā",
+     "thai": "",
+     "paiboon": "",
+     "english": "With their seeds destroyed and no desire for regrowth,"
+    },
+    {
+     "number": 75,
+     "pali": "นิพพันติ ธีรา ยะถายัมปะทีโป",
+     "pali_roman": "Nibbanti dhīrā yathāyampadīpo",
+     "thai": "",
+     "paiboon": "",
+     "english": "the wise go out, just as this lamp does."
+    },
+    {
+     "number": 76,
+     "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Saṅgha."
+    },
+    {
+     "number": 77,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 78,
+     "pali": "ยานีธะ ภูตานิ สะมาคะตานิ",
+     "pali_roman": "Yānīdha bhūtāni samāgatāni",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever beings are gathered here,",
+     "para_start": true
+    },
+    {
+     "number": 79,
+     "pali": "ภุมมานิ วา ยานิวะ อันตะลิกเข",
+     "pali_roman": "Bhummāni vā yāniva antalikkhe",
+     "thai": "",
+     "paiboon": "",
+     "english": "whether of the earth or of the sky,"
+    },
+    {
+     "number": 80,
+     "pali": "ตะถาคะตัง เทวะมะนุสสะปูชิตัง",
+     "pali_roman": "Tathāgataṃ devamanussapūjitaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Tathāgata, honoured by devas and humans —"
+    },
+    {
+     "number": 81,
+     "pali": "พุทธัง นะมัสสามะ สุวัตถิ โหตุ.",
+     "pali_roman": "Buddhaṃ namassāma suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Buddha we salute: may there be well-being."
+    },
+    {
+     "number": 82,
+     "pali": "ยานีธะ ภูตานิ สะมาคะตานิ",
+     "pali_roman": "Yānīdha bhūtāni samāgatāni",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever beings are gathered here,",
+     "para_start": true
+    },
+    {
+     "number": 83,
+     "pali": "ภุมมานิ วา ยานิวะ อันตะลิกเข",
+     "pali_roman": "Bhummāni vā yāniva antalikkhe",
+     "thai": "",
+     "paiboon": "",
+     "english": "whether of the earth or of the sky,"
+    },
+    {
+     "number": 84,
+     "pali": "ตะถาคะตัง เทวะมะนุสสะปูชิตัง",
+     "pali_roman": "Tathāgataṃ devamanussapūjitaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Tathāgata, honoured by devas and humans —"
+    },
+    {
+     "number": 85,
+     "pali": "ธัมมัง นะมัสสามะ สุวัตถิ โหตุ.",
+     "pali_roman": "Dhammaṃ namassāma suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Dhamma we salute: may there be well-being."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "วะนัปปะคุมพะ",
+     "pali_roman": "vanappagumba",
+     "meaning": "a woodland thicket. The simile for the Dhamma: in flower at the top in the first month of the hot season"
+    },
+    {
+     "pali": "วะระ",
+     "pali_roman": "vara",
+     "meaning": "excellent, best. Verse 68 rings four changes on it in a single line — varo varaññū varado varāharo"
+    },
+    {
+     "pali": "ขีณะพีชะ",
+     "pali_roman": "khīṇabīja",
+     "meaning": "with the seed destroyed — nothing left that could sprout into another existence"
+    },
+    {
+     "pali": "นิพพันติ",
+     "pali_roman": "nibbanti",
+     "meaning": "they go out, as a lamp goes out. The verb the word nibbāna is built from, used here with a lamp standing right beside it"
+    },
+    {
+     "pali": "นะมัสสามะ",
+     "pali_roman": "namassāma",
+     "meaning": "we salute. The last three stanzas turn from the truth-act to plain homage, one for each jewel"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 74,
+     "file": "IMG_0349.PNG",
+     "issue": "‼ THE PAGE PRINTS อะวิรุพหิฉันทา WITH พ, AND THE APP ALREADY HOLDS THIS WORD WITH ฬ. This is the most consequential reading on the page and it needs the book. THE EVIDENCE FOR พ: the letter is BARE, with no cluster mark, and at 11x beside the พ of พีชา on the SAME LINE it is identical in shape and in height — two humps, top edge level with the ห and ฉ next to it, no ascender whatever. Pages 76, 77, 78 and 80 all showed a bare ฬ carrying an obvious tall ascender at far lower magnification, so a bare letter without one reads as พ. THE EVIDENCE FOR ฬ: standard Pali is avirūḷhi, 'regrowth', and the app already holds this WHOLE STANZA a second time, inside `parittakarana-patha` (page_start 20), where verse 10 carries the same five lines with อะวิรุฬหิฉันทา spelt ฬ — and the photo map explicitly records that reading, attributed to page 22, as written with ฬ AS A JUDGEMENT, NOT A READING. Also the printed form gives avirubhi-, which is not a word, and page 79's non-word test would say ฬ. SO THE TWO TESTS DISAGREE FOR THE FIRST TIME. The page is reproduced as printed, per the standing rule, which means the app now holds this word two ways and ONE LOOK AT THE BOOK SETTLES BOTH. Nothing on page 22 was changed. WHERE TO LOOK: parittakarana-patha verse 10 holds the identical stanza, so the two entries can be compared side by side once the book has settled it."
+    },
+    {
+     "verse": 74,
+     "file": "IMG_0349.PNG",
+     "issue": "THE VOWEL DIFFERS TOO, and it is the same word. This page prints อะวิรุ- with a SHORT ุ where standard editions have avirūḷhi with a long ū. Recorded alongside the ฬ/พ question above because the two belong to the same check against the book — if the compositor set this word from a different exemplar, both would follow from that."
+    },
+    {
+     "verse": 85,
+     "file": "IMG_0349.PNG",
+     "issue": "‼ AN ORPHAN FOOTNOTE MARKER. The last line carries a superscript 1 and THERE IS NO FOOTNOTE ON THIS SHEET — profiled the whole foot of the page and there is no rule and no text between the last verse at y 2555 and the page edge. So source_printed is deliberately left OFF rather than guessed at. This is the same shape as the orphan across pages 57, 58 and 59, and the note it points at is most likely printed at the foot of page 86 where the sutta ends. DO NOT pair them without reading page 86: footnote numbers restart on every page, and the standing rule is never to match a marker to a footnote on a different sheet."
+    },
+    {
+     "verse": 62,
+     "file": "IMG_0349.PNG",
+     "issue": "FIVE STANZA OPENINGS, MEASURED AGAINST THIS BLOCK'S OWN LEFT EDGE. Verses 62, 68, 72, 78 and 82 start at x 730 where every other line starts at x 640-650. The baseline is computed from the page rather than carried from page 84, whose block sat at x 870 — which is exactly the mistake page 84 caught, and it would have reported every line here as un-indented."
+    },
+    {
+     "verse": 75,
+     "file": "IMG_0349.PNG",
+     "issue": "นิพพันติ ธีรา ยะถายัมปะทีโป — the simile the sutta ends its Saṅgha stanzas on, and the one place where nibbāna's root sense is visible: the wise 'go out' as the lamp goes out. Reproduced as printed; the English keeps the lamp rather than paraphrasing it away."
+    },
+    {
+     "verse": 60,
+     "file": "IMG_0349.PNG",
+     "issue": "SINGLE COLUMN, MEASURED: ink x 640 to x 1560 with no empty band inside it. Third sheet running for this chant and the setting has not changed, but it was profiled fresh rather than assumed."
+    },
+    {
+     "verse": 78,
+     "file": "IMG_0349.PNG",
+     "issue": "THE LAST TWO STANZAS ARE THE SAME FOUR LINES WITH ONE WORD CHANGED — verses 78 to 81 and 82 to 85 differ only in พุทธัง against ธัมมัง on their fourth line. Not duplication: the homage is made to each jewel in turn, and page 86 should carry the สังฆัง one. Recorded because check_render walks strings in printed order and three near-identical lines twice over is exactly the shape that reads as a fault."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "ratana-suttam-dutiyam"
+  ],
+  "resume_from_page": 86,
+  "resume_from_file": "IMG_0350.PNG",
+  "resume_from": "ratana-suttam-dutiyam",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, every verse paiboon is empty, and a continuation carries no title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed, and one reading is flagged rather than settled. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in ปะฐะมัส์มิง and ภะวัส์มิง. The flagged one is verse 74: the page prints อะวิรุพหิฉันทา with a BARE พ, identical at 11x to the พ of พีชา on the same line, and it is reproduced that way and transliterated avirubhi- to match — even though that is not a word and the app holds this same word with ฬ from page 22. The English gives the intended sense. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant. It claims verses 60-85 and the entry holds exactly those. Verse 60 is the first verse on the page and the only one carrying a page key; no page turns inside it. No page blocks. The superscript on verse 85 has no footnote on this sheet, so nothing was recorded for it.",
+  "notes": "ONE CHANT, ONE SHEET, TWENTY-SIX LINES. Three things for Josh, and the first is the most important thing to come out of this run. (1) THE ฬ/พ TESTS DISAGREE FOR THE FIRST TIME. Verse 74 prints อะวิรุพหิฉันทา with a BARE พ — identical at 11x to the พ beside it on the same line, no ascender, where pages 76 to 80 all showed a bare ฬ's ascender plainly. But standard Pali is avirūḷhi, the printed form is not a word, and THE APP ALREADY HOLDS THE WHOLE STANZA A SECOND TIME, in parittakarana-patha verse 10, with อะวิรุฬหิฉันทา spelt ฬ — a reading the photo map records as a JUDGEMENT rather than a reading. Reproduced as printed, so the app now holds it two ways and one look settles both. parittakarana-patha was not touched. (2) AN ORPHAN FOOTNOTE MARKER on the last line with no footnote anywhere on the sheet — source_printed left off rather than guessed, and page 86 must be read before pairing anything. (3) THE VOWEL IN THAT SAME WORD IS SHORT where editions have it long, which belongs to the same question. Nothing needs re-photographing."
+ }
+}
