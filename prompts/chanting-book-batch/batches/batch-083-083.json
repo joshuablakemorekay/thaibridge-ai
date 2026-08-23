@@ -1,0 +1,346 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "ratana-suttam-dutiyam"
+  ],
+  "pages": [
+   {
+    "page": 83,
+    "file": "IMG_0347.PNG",
+    "script": "thai",
+    "chant": "ratana-suttam-dutiyam",
+    "verses": "8-33",
+    "starts_here": false,
+    "note": "The whole sheet is one chant and twenty-six printed lines, SINGLE column — measured, ink x 620-1400 with nothing either side and no gutter anywhere. That is worth stating because page 82 carried this same chant beneath two two-column ones, and the setting does not carry over a page turn. Five lines are INDENTED by a measured 90px — verses 9, 14, 19, 24 and 30 — and each is a stanza opening, so each carries para_start. No footnote, no rule, no colophon: the sheet simply runs out mid-sutta."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "ratana-suttam-dutiyam",
+   "continuation_of": "ratana-suttam-dutiyam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-six, verses 8 to 33, one per printed line. Verse 8 closes the stanza page 82 opened; verses 9, 14, 19, 24 and 30 open the five indented stanzas and carry para_start. No para_layout is declared and none is needed — this chant's layout is the default 'lines', which is what every line here is.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0348 is NOT this page — this is IMG_0347.PNG, page 83, read off the top centre of the sheet, and the offset of 264 has now held for ten pages. Verse 8 is the first verse on this page and carries the page key; no page turns inside it. The chant runs off the foot and is picked up on page 84."
+   },
+   "verses": [
+    {
+     "number": 8,
+     "pali": "ตัส์มา หิ เน รักขะถะ อัปปะมัตตา.",
+     "pali_roman": "Tasmā hi ne rakkhatha appamattā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "therefore protect them, being diligent.",
+     "page": 83
+    },
+    {
+     "number": 9,
+     "pali": "ยังกิญจิ วิตตัง อิธะ วา หุรัง วา",
+     "pali_roman": "Yaṅkiñci vittaṃ idha vā huraṃ vā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever treasure there is, here or beyond,",
+     "para_start": true
+    },
+    {
+     "number": 10,
+     "pali": "สัคเคสุ วา ยัง ระตะนัง ปะณีตัง",
+     "pali_roman": "Saggesu vā yaṃ ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "or whatever excellent jewel is in the heavens,"
+    },
+    {
+     "number": 11,
+     "pali": "นะ โน สะมัง อัตถิ ตะถาคะเตนะ",
+     "pali_roman": "Na no samaṃ atthi tathāgatena",
+     "thai": "",
+     "paiboon": "",
+     "english": "there is none among them equal to the Tathāgata."
+    },
+    {
+     "number": 12,
+     "pali": "อิทัมปิ พุทเธ ระตะนัง ปะณีตัง.",
+     "pali_roman": "Idampi buddhe ratanaṃ paṇītaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Buddha."
+    },
+    {
+     "number": 13,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 14,
+     "pali": "ขะยัง วิราคัง อะมะตัง ปะณีตัง",
+     "pali_roman": "Khayaṃ virāgaṃ amataṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The destruction, the fading of desire, the deathless, the excellent —",
+     "para_start": true
+    },
+    {
+     "number": 15,
+     "pali": "ยะทัชฌะคา สัก์ยะมุนี สะมาหิโต",
+     "pali_roman": "Yadajjhagā sakyamunī samāhito",
+     "thai": "",
+     "paiboon": "",
+     "english": "which the Sakyan sage, composed, attained;"
+    },
+    {
+     "number": 16,
+     "pali": "นะ เตนะ ธัมเมนะ สะมัตถิ กิญจิ",
+     "pali_roman": "Na tena dhammena samatthi kiñci",
+     "thai": "",
+     "paiboon": "",
+     "english": "there is nothing at all equal to that Dhamma."
+    },
+    {
+     "number": 17,
+     "pali": "อิทัมปิ ธัมเม ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi dhamme ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Dhamma."
+    },
+    {
+     "number": 18,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 19,
+     "pali": "ยัมพุทธะเสฏโฐ ปะริวัณณะยี สุจิง",
+     "pali_roman": "Yambuddhaseṭṭho parivaṇṇayī suciṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "That purity which the supreme Buddha praised,",
+     "para_start": true
+    },
+    {
+     "number": 20,
+     "pali": "สะมาธิมานันตะริกัญญะมาหุ",
+     "pali_roman": "Samādhimānantarikaññamāhu",
+     "thai": "",
+     "paiboon": "",
+     "english": "the concentration they call 'without interval' —"
+    },
+    {
+     "number": 21,
+     "pali": "สะมาธินา เตนะ สะโม นะ วิชชะติ",
+     "pali_roman": "Samādhinā tena samo na vijjati",
+     "thai": "",
+     "paiboon": "",
+     "english": "no concentration equal to that is found."
+    },
+    {
+     "number": 22,
+     "pali": "อิทัมปิ ธัมเม ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi dhamme ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Dhamma."
+    },
+    {
+     "number": 23,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 24,
+     "pali": "เย ปุคคะลา อัฏฐะ สะตัง ปะสัตถา",
+     "pali_roman": "Ye puggalā aṭṭha sataṃ pasatthā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those eight persons praised by the good,",
+     "para_start": true
+    },
+    {
+     "number": 25,
+     "pali": "จัตตาริ เอตานิ ยุคานิ โหนติ",
+     "pali_roman": "Cattāri etāni yugāni honti",
+     "thai": "",
+     "paiboon": "",
+     "english": "who make these four pairs;"
+    },
+    {
+     "number": 26,
+     "pali": "เต ทักขิเณยยา สุคะตัสสะ สาวะกา",
+     "pali_roman": "Te dakkhiṇeyyā sugatassa sāvakā",
+     "thai": "",
+     "paiboon": "",
+     "english": "they are the Well-gone One's disciples, worthy of offerings;"
+    },
+    {
+     "number": 27,
+     "pali": "เอเตสุ ทินนานิ มะหัปผะลานิ",
+     "pali_roman": "Etesu dinnāni mahapphalāni",
+     "thai": "",
+     "paiboon": "",
+     "english": "what is given to them bears great fruit."
+    },
+    {
+     "number": 28,
+     "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Saṅgha."
+    },
+    {
+     "number": 29,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 30,
+     "pali": "เย สุปปะยุตตา มะนะสา ทัฬ์เหนะ",
+     "pali_roman": "Ye suppayuttā manasā daḷhena",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those who, with a firm mind, are well applied",
+     "para_start": true
+    },
+    {
+     "number": 31,
+     "pali": "นิกกามิโน โคตะมะสาสะนัมหิ",
+     "pali_roman": "Nikkāmino gotamasāsanamhi",
+     "thai": "",
+     "paiboon": "",
+     "english": "and free of longing, in Gotama's dispensation;"
+    },
+    {
+     "number": 32,
+     "pali": "เต ปัตติปัตตา อะมะตัง วิคัยหะ",
+     "pali_roman": "Te pattipattā amataṃ vigayha",
+     "thai": "",
+     "paiboon": "",
+     "english": "they have reached the attainment, plunged into the deathless,"
+    },
+    {
+     "number": 33,
+     "pali": "ลัทธา มุธา นิพพุติง ภุญชะมานา",
+     "pali_roman": "Laddhā mudhā nibbutiṃ bhuñjamānā",
+     "thai": "",
+     "paiboon": "",
+     "english": "and having gained it for nothing, enjoy the peace;"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ระตะนะ",
+     "pali_roman": "ratana",
+     "meaning": "a jewel. The sutta's whole structure: each stanza names one and swears well-being on the truth of it"
+    },
+    {
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ",
+     "pali_roman": "etena saccena suvatthi hotu",
+     "meaning": "'by this truth, may there be well-being' — an act of truth, where the protection rests on the statement being true rather than on any power in the words"
+    },
+    {
+     "pali": "อานันตะริกะสะมาธิ",
+     "pali_roman": "ānantarikasamādhi",
+     "meaning": "the concentration 'without interval' — the samādhi immediately followed by its fruit, which verse 20 says has no equal"
+    },
+    {
+     "pali": "อัฏฐะ ปุคคะลา / จัตตาริ ยุคานิ",
+     "pali_roman": "aṭṭha puggalā / cattāri yugāni",
+     "meaning": "the eight persons who are four pairs — the four stages of awakening counted as path and fruit"
+    },
+    {
+     "pali": "ทักขิเณยยะ",
+     "pali_roman": "dakkhiṇeyya",
+     "meaning": "worthy of offerings. Why giving to the Saṅgha is said to bear great fruit"
+    },
+    {
+     "pali": "มุธา",
+     "pali_roman": "mudhā",
+     "meaning": "for nothing, without cost. The peace is not bought — it is had freely by those who reached it"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 30,
+     "file": "IMG_0347.PNG",
+     "issue": "ทัฬ์เหนะ IS RECORDED WITH ฬ, AND THE PHOTOGRAPH CANNOT SHOW THAT — this is the exact configuration page 76 proved unreadable. The letter carries the ์ cluster mark, and page 76 demonstrated on one sheet that a MARKED ฬ์ loses its ascender in this printing and is indistinguishable from พ์: อาสาฬหบูชา bare showed its ascender plainly at 8x while อาสาฬ์หะ eleven lines above did not. Josh settled that word as ฬ from the book. The deciding test here is the one page 79 added: พ์ + ห IS NOT A LEGAL PALI CLUSTER, so reading พ gives dabhena, which is not a word, while ฬ gives daḷhena — firm, resolute — which is what manasā daḷhena means. Recorded as ฬ on the cluster test, NOT on the image. Worth Josh's eye with the book, like every marked ฬ์ from here on."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0347.PNG",
+     "issue": "SINGLE COLUMN, MEASURED, AND THE SETTING DID NOT CARRY OVER. Ink runs x 620 to x 1400 across all twenty-six lines with no empty band inside it. Page 82 had this same chant sitting beneath two two-column chants, so the eye wants to carry the two-column reading across the page turn. Profiled fresh."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0347.PNG",
+     "issue": "FIVE STANZA OPENINGS, MEASURED RATHER THAN JUDGED. Verses 9, 14, 19, 24 and 30 start at x 720 while every other line starts at x 630-640 — a consistent 90px indent, measured line by line across the whole sheet. Each is a stanza opening in the sutta, so each carries para_start. Nothing else on the page is indented."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0347.PNG",
+     "issue": "PAGE 82's VERSE 5 OPENS A STANZA TOO AND IS NOT MARKED, because THAT page does not indent it. Measured on IMG_0346: verses 1 to 6 of this chant all start at x 690-700 with no indent anywhere, where this page indents every stanza opening by 90px. So the book marks its stanzas on page 83 and not on page 82, and each page is reproduced as it prints. Recorded because the grouping now looks uneven in the data and that unevenness is the book's, not an omission."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0347.PNG",
+     "issue": "THE 'THIS TOO IS AN EXCELLENT JEWEL' LINE IS POINTED UNEVENLY. Verse 12 ends อิทัมปิ พุทเธ ระตะนัง ปะณีตัง. WITH a full stop; verses 17, 22 and 28, which are the same line for the Dhamma and the Saṅgha, end ปะณีตัง with none. Read at 2.4x on each. Reproduced exactly as printed on all four."
+    },
+    {
+     "verse": 26,
+     "file": "IMG_0347.PNG",
+     "issue": "A WIDE GAP AFTER เต, between it and ทักขิเณยยา, visibly wider than the other word spaces on that line. Read as JUSTIFICATION rather than meaningful spacing and set as a single space, the same decision as page 82's ทะสะ gap. Worth an eye at the book, since the standing rule elsewhere is to reproduce unusual spacing."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0347.PNG",
+     "issue": "THE REFRAIN เอเตนะ สัจเจนะ สุวัตถิ โหตุ. CLOSES FOUR STANZAS on this sheet — verses 13, 18, 23 and 29 — word for word identical every time, and a fifth instance is already in from page 82. Not a duplication: it is the act of truth the whole sutta is built on, repeated after every jewel named. Recorded because check_render walks strings in printed order and a verbatim repeat is exactly the case that reads as a fault."
+    },
+    {
+     "verse": 15,
+     "file": "IMG_0347.PNG",
+     "issue": "สัก์ยะมุนี carries the ก์ cluster mark, romanised sakyamunī with the mark dropped — the same treatment the app gives สัก์ยะปุตโต on page 66."
+    },
+    {
+     "verse": 33,
+     "file": "IMG_0347.PNG",
+     "issue": "THE CHANT CONTINUES PAST THIS SHEET and the entry says so with continues: true ALONGSIDE continuation_of. Both keys are needed on a chant that arrives in the middle and leaves in the middle: continuation_of tells stage 2 where to append, and continues tells it to leave the ‼ CONTINUES marker in place. Without the second the marker comes off and a sutta that is two-thirds entered reads as finished. Verse 33 ends ภุญชะมานา, a whole printed line, so there is no […] — which is exactly why the cut-line check cannot catch this."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "ratana-suttam-dutiyam"
+  ],
+  "resume_from_page": 84,
+  "resume_from_file": "IMG_0348.PNG",
+  "resume_from": "ratana-suttam-dutiyam",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, every verse paiboon is empty, and a continuation carries no title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed, with ONE reading that is not from the photograph and is flagged as such. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in ตัส์มา and สัก์ยะมุนี. The exception is ทัฬ์เหนะ at verse 30: the image cannot tell ฬ์ from พ์ — page 76 proved that — so it is recorded as ฬ on the ground that พ์ห is not a legal Pali cluster and the alternative is not a word. That is the one place on this page where something other than the photograph decided the letter, and the check says so. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant. It claims verses 8-33 and the entry holds exactly those. Verse 8 is the first verse on the page and the only one carrying a page key; no page turns inside it. No page blocks and no footnote on this sheet.",
+  "notes": "ONE CHANT, ONE SHEET, TWENTY-SIX LINES, and the cleanest page in a while — no blocks, no footnote, no colophon, no column change. Three things for Josh. (1) ทัฬ์เหนะ AT VERSE 30 IS THE FIRST READING IN THIS RUN DECIDED BY SOMETHING OTHER THAN THE IMAGE. It is the marked-ฬ configuration page 76 proved unreadable, so it was settled on page 79's cluster test — พ์ห is not legal Pali and gives a non-word — rather than on what the photograph shows. Flagged prominently; every marked ฬ์ from here on needs the book. (2) THE STANZA INDENTS ARE ON THIS PAGE AND NOT ON PAGE 82, measured on both sheets: page 83 indents every stanza opening by 90px and page 82 indents none. Each page is reproduced as it prints, so the grouping looks uneven in the data and that unevenness is the book's. (3) VERSE 12 TAKES A FULL STOP that its three parallel lines at 17, 22 and 28 do not. Nothing on this page needs re-photographing."
+ }
+}
