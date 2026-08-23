@@ -24751,7 +24751,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
         # ‼ CHECK [IMG_0353.PNG]: english_unverified is set. The book prints
         #   this paritta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -24770,6 +24769,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'โมระปะริตตัง นิฏฐิตัง.',
+            'pali_roman': 'Moraparittaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Mora Paritta.',
         },
         'verses': [
             # ‼ CHECK [IMG_0353.PNG]: SINGLE COLUMN, MEASURED: ink x 320-1560
@@ -24828,6 +24834,282 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Those brahmins who are masters of knowledge in all things —',
+            },
+            {
+                'number': 6,
+                'page': 89,
+                'pali': 'เต เม นะโม เต จะ มัง ปาละยันตุ',
+                'pali_roman': 'Te me namo te ca maṃ pālayantu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to them my homage; and may they protect me.',
+            },
+            {
+                'number': 7,
+                'pali': 'นะมัตถุ พุทธานัง นะมัตถุ โพธิยา',
+                'pali_roman': 'Namatthu buddhānaṃ namatthu bodhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddhas, homage to the awakening;',
+            },
+            {
+                'number': 8,
+                'pali': 'นะโม วิมุตตานัง นะโม วิมุตติยา',
+                'pali_roman': 'Namo vimuttānaṃ namo vimuttiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to the liberated, homage to liberation.',
+            },
+            {
+                'number': 9,
+                'pali': 'อิมัง โส ปะริตตัง กัต์วา โมโร จะระติ เอสะนา.',
+                'pali_roman': 'Imaṃ so parittaṃ katvā moro carati esanā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having made this paritta, the peacock goes about seeking his food.',
+            },
+            # ‼ CHECK [IMG_0354.PNG]: THE SUNSET STANZA, AND IT IS THE SUNRISE
+            #   ONE WITH TWO WORDS CHANGED. Page 88's verse 1 opens
+            #   อุเทตะยัญจักขุมา — 'here he RISES' — and this page's verse 10
+            #   opens อะเปตะยัญจักขุมา, 'here he SETS'. The only other
+            #   difference across the two four-line stanzas is ทิวะสัง (day)
+            #   against รัตติง (night) at verses 4 and 13. Everything else is
+            #   word for word identical. Read at 2.5x on both. Not a
+            #   duplication and not a compositor's slip.
+            # ‼ CHECK [IMG_0354.PNG]: ONE INDENT ON THE WHOLE BLOCK, measured
+            #   against this block's own left edge. Verse 10 starts at x 630
+            #   where every other line starts at x 510-520 — a 120px indent,
+            #   and nothing else on the block is indented. The baseline was
+            #   computed from this page rather than carried from page 88,
+            #   whose block sat at x 320, which is the rule page 84 taught.
+            {
+                'number': 10,
+                'para_start': True,
+                'pali': 'อะเปตะยัญจักขุมา เอกะราชา',
+                'pali_roman': 'Apetayañcakkhumā ekarājā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here he sets, the one with vision, the sole king,',
+            },
+            {
+                'number': 11,
+                'pali': 'หะริสสะวัณโณ ปะฐะวิปปะภาโส',
+                'pali_roman': 'Harissavaṇṇo paṭhavippabhāso',
+                'thai': '',
+                'paiboon': '',
+                'english': 'golden-hued, illumining the earth;',
+            },
+            {
+                'number': 12,
+                'pali': 'ตัง ตัง นะมัสสามิ หะริสสะวัณณัง ปะฐะวิปปะภาสัง',
+                'pali_roman': 'Taṃ taṃ namassāmi harissavaṇṇaṃ paṭhavippabhāsaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'him I salute, the golden-hued, the illuminer of the earth —',
+            },
+            {
+                'number': 13,
+                'pali': 'ตะยัชชะ คุตตา วิหะเรมุ รัตติง',
+                'pali_roman': 'Tayajja guttā viharemu rattiṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'guarded by you this day, may we dwell through the night.',
+            },
+            {
+                'number': 14,
+                'pali': 'เย พ์ราห์มะณา เวทะคุ สัพพะธัมเม',
+                'pali_roman': 'Ye brāhmaṇā vedagu sabbadhamme',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those brahmins who are masters of knowledge in all things —',
+            },
+            # ‼ CHECK [IMG_0354.PNG]: VERSES 6, 7, 8 AND 15, 16, 17 ARE WORD
+            #   FOR WORD IDENTICAL — the three-line refrain closes both
+            #   stanzas. Only verses 9 and 18 differ, in their last two words:
+            #   จะระติ เอสะนา. against วาสะมะกัปปะยีติ. Recorded because
+            #   check_render walks strings in printed order and six verbatim
+            #   lines on one page is exactly the shape that reads as a fault.
+            {
+                'number': 15,
+                'pali': 'เต เม นะโม เต จะ มัง ปาละยันตุ',
+                'pali_roman': 'Te me namo te ca maṃ pālayantu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to them my homage; and may they protect me.',
+            },
+            {
+                'number': 16,
+                'pali': 'นะมัตถุ พุทธานัง นะมัตถุ โพธิยา',
+                'pali_roman': 'Namatthu buddhānaṃ namatthu bodhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddhas, homage to the awakening;',
+            },
+            {
+                'number': 17,
+                'pali': 'นะโม วิมุตตานัง นะโม วิมุตติยา',
+                'pali_roman': 'Namo vimuttānaṃ namo vimuttiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to the liberated, homage to liberation.',
+            },
+            {
+                'number': 18,
+                'pali': 'อิมัง โส ปะริตตัง กัต์วา โมโร วาสะมะกัปปะยีติ.',
+                'pali_roman': 'Imaṃ so parittaṃ katvā moro vāsamakappayīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having made this paritta, the peacock settles down to rest.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0354.PNG]: A SIXTH TITLE THE CONTENTS TEST CANNOT SEE.
+        #   The page prints บทขัด วัฏฏะกะปะริตตัง with a SPACE after บทขัด;
+        #   the สารบัญ has บทขัดวัฏฏะกะปะริตตัง without one. Same as pages 82,
+        #   86, 87 and 88. The page is reproduced, so title_thai is not a key
+        #   in _CONTENTS_ROMAN — the romanisation is unaffected by the space,
+        #   so the contents' value is used unchanged.
+        # ‼ CHECK [IMG_0354.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-vattaka-parittam',
+        'title_thai': 'บทขัด วัฏฏะกะปะริตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt wát-dtà-gà-bpà-rít-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Vaṭṭaka Paritta',
+        'page_start': 89,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0354.PNG]: TWO COLUMNS, gutter measured at x
+            #   780-1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   ปูเรนตัมโพธิสัมภาเร + right นิพพัตตัง วัฏฏะชาติยัง,. Note that
+            #   the LEFT HALF IS IDENTICAL to page 88's Mora preface, which
+            #   opens ปูเรนตัมโพธิสัมภาเร too — both are Jātaka-birth prefaces
+            #   and they share the line. Not a copied row.
+            {
+                'number': 1,
+                'page': 89,
+                'pali': 'ปูเรนตัมโพธิสัมภาเร นิพพัตตัง วัฏฏะชาติยัง,',
+                'pali_roman': 'Pūrentambodhisambhāre nibbattaṃ vaṭṭajātiyaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Born as a quail while fulfilling the requisites of awakening,',
+            },
+            {
+                'number': 2,
+                'pali': 'ยัสสะ เตเชนะ ทาวัคคิ มะหาสัตตัง วิวัชชะยิ,',
+                'pali_roman': 'Yassa tejena dāvaggi mahāsattaṃ vivajjayi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by whose power the forest fire turned aside from the Great Being;',
+            },
+            {
+                'number': 3,
+                'pali': 'เถรัสสะ สารีปุตตัสสะ โลกะนาเถนะ ภาสิตัง,',
+                'pali_roman': 'Therassa sāriputtassa lokanāthena bhāsitaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'spoken by the Refuge of the World to the elder Sāriputta,',
+            },
+            {
+                'number': 4,
+                'pali': 'กัปปัฏฐายิ มะหาเตชัง ปะริตตันตัมภะณามะ เห.',
+                'pali_roman': 'Kappaṭṭhāyi mahātejaṃ parittantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'lasting an aeon and of great power: that paritta let us now recite.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0354.PNG]: english_unverified is set. The book prints
+        #   this paritta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition. Verse 5 onward is spoken by the quail chick in the first
+        #   person, which the gloss does not yet make explicit because the
+        #   page does not — the speaker becomes clear on page 90.
+        'id': 'vattaka-parittam-chattham',
+        'title_thai': 'วัฏฏะกะปะริตตัง ฉัฏฐัง',
+        'title_pali': 'Vaṭṭakaparittaṃ chaṭṭhaṃ',
+        'title_roman': '',
+        'title_english': 'The Vaṭṭaka Paritta, the Sixth',
+        'page_start': 89,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0354.PNG]: TWO COLUMNS, gutter measured at x
+            #   800-1040 — a different position again from the บทขัด directly
+            #   above it on this sheet, whose gutter is at x 780-1020. Each
+            #   block profiled separately. Read ACROSS. FIRST PAIRING FOR
+            #   CHECKING: left อัตถิ โลเก สีละคุโณ + right สัจจัง
+            #   โสเจยยะนุททะยา.
+            {
+                'number': 1,
+                'page': 89,
+                'pali': 'อัตถิ โลเก สีละคุโณ สัจจัง โสเจยยะนุททะยา',
+                'pali_roman': 'Atthi loke sīlaguṇo saccaṃ soceyyanuddayā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There is in the world the quality of virtue, truth, purity and compassion;',
+            },
+            {
+                'number': 2,
+                'pali': 'เตนะ สัจเจนะ กาหามิ สัจจะกิริยะมะนุตตะรัง',
+                'pali_roman': 'Tena saccena kāhāmi saccakiriyamanuttaraṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by that truth I shall make an unsurpassed act of truth.',
+            },
+            {
+                'number': 3,
+                'pali': 'อาวัชชิต์วา ธัมมะพะลัง สะริต์วา ปุพพะเก ชิเน',
+                'pali_roman': 'Āvajjitvā dhammabalaṃ saritvā pubbake jine',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Calling to mind the power of the Dhamma and recalling the Conquerors of old,',
+            },
+            {
+                'number': 4,
+                'pali': 'สัจจะพะละมะวัสสายะ สัจจะกิริยะมะกาสะหัง',
+                'pali_roman': 'Saccabalamavassāya saccakiriyamakāsahaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'relying on the power of truth, I made an act of truth:',
+            },
+            # ‼ CHECK [IMG_0354.PNG]: THE SHEET RUNS OUT MID-SENTENCE but
+            #   verse 5 is a whole printed row, so no […] marker is used — it
+            #   is the sentence that carries on. Verse 5 states the chick's
+            #   helplessness and page 90 carries what follows from it, which
+            #   is where the act of truth lands.
+            {
+                'number': 5,
+                'pali': 'สันติ ปักขา อะปัตตะนา สันติ ปาทา อะวัญจะนา',
+                'pali_roman': 'Santi pakkhā apattanā santi pādā avañcanā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There are wings, but they cannot fly; there are feet, but they cannot walk;',
             },
         ],
     },
