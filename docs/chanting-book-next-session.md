@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-86 went in.
+87 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–86 are in and unbroken**, plus 217–221. **115 chants, 1,564 verses
+- **Pages 1–87 are in and unbroken**, plus 217–221. **117 chants, 1,587 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 83 to 86 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 83 to 87 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,26 +34,25 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 87, `IMG_0352` — READ THE NUMBER, the offset just moved
+## Next: page 88, `IMG_0353` — but READ THE NUMBER off the sheet
 
-**⚠️ THE OFFSET CHANGED AT PAGE 86.** `IMG_0350` does not exist — it was already
-in the photo map's deleted-duplicate list — so page 86 is **`IMG_0351`** and the
-offset stepped from 264 to **265**. Page 87 *should* therefore be `IMG_0352`.
-That was the SECOND of the seven changes the map predicted; **five are still to
-come before page 207**, so keep reading the number off the sheet.
+The offset is **265** since page 86 and held for page 87, so page 88 *should* be
+`IMG_0353`. **Five more changes are still expected before page 207**, so keep
+reading the number off the sheet.
 
-**`karaniyametta-suttam-tatiyam` is open at verse 13**, with no `[…]` — the row
-is whole and it is the SENTENCE that carries on. Page 87's batch numbers **from
-14** and needs both `continuation_of` and `continues: true` if it does not end
-there.
+**`khandha-parittam-catuttham` is open at verse 12, and verse 12 is CUT.** Page
+87 ends `ปะมาณะวันตานิ […]` with no comma, where verses 9, 10 and 11 each end
+with one. So page 88's batch carries the SAME verse number 12 again with the
+line whole — not verse 13 — and needs both `continuation_of` and `continues:
+true` if the paritta still does not end there.
 
-**It stops on the mother simile**, mid-sentence: "just as a mother would protect
-her only child with her life…". Page 87 carries the apodosis, which is where the
-sutta names **mettā** for the first time.
+**It is set BOTH ways.** Verses 1–8 are two-column rows; verse 9 opens a
+full-measure prose group with `para_layout: 'prose'`. If page 88 continues the
+prose, its first verse needs `'prose'` declared too; if it returns to verse
+rows, that group needs `'lines'`.
 
-**Expect two columns and profile the block yourself.** Page 86 carried two
-chants with gutters in different places — x 860–1100 and x 1040–1120 — on one
-sheet.
+**Expect a colophon.** Pages 86 and 87 both printed one, and this paritta's
+`บทขัด` names a second paritta — Chaddanta — which has not appeared yet.
 
 ## Standing rules for every page
 
@@ -76,6 +75,28 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Four titles the contents test cannot see — pages 80, 82, 86, 87
+
+This is now a pattern, not four surprises. Each time, the page heading and the
+book's own สารบัญ spell or space a title differently, the **page** is
+reproduced, and `title_thai` therefore stops being a key in
+`chanting._CONTENTS_ROMAN` — so `test_the_table_and_the_chants_never_spell_one_title_two_ways`
+cannot see that chant at all, and nothing will warn if its title drifts later.
+
+| page | the page prints | the สารบัญ has |
+|---|---|---|
+| 80 | `บทขัดมังคะละสุตตะ` (`สุตตะ`) | `บทขัดมังคะละสุตตัง` (`สุตตัง`) |
+| 82 | `บทขัด ระตะนะสุตตัง` (spaced) | `บทขัดระตะนะสุตตัง` |
+| 86 | `บทขัด กะระณียะเมตตะสุตตัง` (spaced) | `บทขัดกะระณียะเมตตะสุตตัง` |
+| 87 | `บทขัด ขันธะปะริตตัง ฉัททันตะปะริตตัง` (spaced, `ปะริตตัง`) | `บทขัดขันธะปะริตตัง ฉัททันตะปะริตัง` (`ปะริตัง`) |
+
+Page 87's differs **twice** — the space and a doubled `ต`. Where the page and
+the table disagree, `title_roman` is composed to match the PAGE rather than
+taken from the table.
+
+**One look at the สารบัญ settles all four**, and it is worth doing before the
+list grows.
 
 ## Page 86 — the orphan marker stays orphaned
 
