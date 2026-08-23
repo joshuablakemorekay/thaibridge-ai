@@ -1,0 +1,489 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "vattaka-parittam-chattham",
+   "bot-khat-dhajagga-suttam",
+   "dhajagga-parittam-sattamam"
+  ],
+  "pages": [
+   {
+    "page": 90,
+    "file": "IMG_0355.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "vattaka-parittam-chattham",
+    "verses": "6-9",
+    "starts_here": false,
+    "note": "The top of the sheet: four TWO-COLUMN rows closing the Vaṭṭaka Paritta, gutter measured at x 780-1080, then the colophon วัฏฏะกะปะริตตัง นิฏฐิตัง. centred beneath them. No footnote for this chant."
+   },
+   {
+    "page": 90,
+    "file": "IMG_0355.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-dhajagga-suttam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "A centred bold title and four TWO-COLUMN rows, gutter measured at x 820-1080. The chant starts and ends here."
+   },
+   {
+    "page": 90,
+    "file": "IMG_0355.PNG",
+    "script": "thai",
+    "chant": "dhajagga-parittam-sattamam",
+    "verses": "1-20",
+    "starts_here": true,
+    "note": "The lower two thirds, all PROSE filling the measure — ink x 280-1820 with no gutter anywhere. A centred bold title, then TWO indented paragraphs: the sutta's nidāna, then Sakka's instruction to the devas. Verse 1 carries the superscript 1 and the footnote at the foot of this sheet. The sheet runs out MID-UNIT and verse 20 carries […]."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "vattaka-parittam-chattham",
+   "continuation_of": "vattaka-parittam-chattham",
+   "closing": {
+    "pali": "วัฏฏะกะปะริตตัง นิฏฐิตัง.",
+    "pali_roman": "Vaṭṭakaparittaṃ niṭṭhitaṃ.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Vaṭṭaka Paritta."
+   },
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Four, verses 6 to 9, one per two-column row, read ACROSS. No para_start: they continue the single group page 89 opened.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0355.PNG, page 90, read off the top centre of the sheet — the offset of 265 holds for a fourth page. The chant ENDS on this page, with a colophon. Verse 6 is the first verse on it and carries the page key."
+   },
+   "verses": [
+    {
+     "number": 6,
+     "pali": "มาตา ปิตา จะ นิกขันตา ชาตะเวทะ ปะฏิกกะมะ",
+     "pali_roman": "Mātā pitā ca nikkhantā jātaveda paṭikkama",
+     "thai": "",
+     "paiboon": "",
+     "english": "My mother and father have gone out — O Fire, turn back!",
+     "page": 90
+    },
+    {
+     "number": 7,
+     "pali": "สะหะ สัจเจ กะเต มัยหัง มะหาปัชชะลิโต สิขี",
+     "pali_roman": "Saha sacce kate mayhaṃ mahāpajjalito sikhī",
+     "thai": "",
+     "paiboon": "",
+     "english": "When my act of truth was made, the great blazing flame"
+    },
+    {
+     "number": 8,
+     "pali": "วัชเชสิ โสพะสะ กะรีสานิ อุทะกัง ปัต์วา ยะถา สิขี",
+     "pali_roman": "Vajjesi sobasa karīsāni udakaṃ patvā yathā sikhī",
+     "thai": "",
+     "paiboon": "",
+     "english": "spared sixteen karīsas, as a flame does on reaching water."
+    },
+    {
+     "number": 9,
+     "pali": "สัจเจนะ เม สะโม นัตถิ เอสา เม สัจจะปาระมีติ.",
+     "pali_roman": "Saccena me samo natthi esā me saccapāramīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is nothing equal to my truth: this is my perfection of truth."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ชาตะเวทะ",
+     "pali_roman": "jātaveda",
+     "meaning": "Fire, addressed by name — the chick speaks to the forest fire directly and tells it to turn back"
+    },
+    {
+     "pali": "กะรีสะ",
+     "pali_roman": "karīsa",
+     "meaning": "a measure of land. Sixteen karīsas is the patch the fire is said to have spared, and which stays unburnt for an aeon"
+    },
+    {
+     "pali": "สัจจะปาระมี",
+     "pali_roman": "saccapāramī",
+     "meaning": "the perfection of truth. The chant names itself as one of the ten perfections in its last line"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 8,
+     "file": "IMG_0355.PNG",
+     "issue": "‼ โสพะสะ WITH A BARE พ, WHERE STANDARD PALI HAS soḷasa WITH ฬ — AND THIS IS THE SECOND TIME, AFTER PAGE 85. The letter carries NO cluster mark, and at 7x stacked directly above the พพ of สัพพูปัททะวะ from the บทขัด lower on this same sheet it is identical in shape and height: two humps, top edge level with the ส and ะ beside it, no ascender. Pages 76, 77, 78 and 80 all showed a bare ฬ carrying an obvious tall ascender. But soḷasa means SIXTEEN and sobasa is not a word, so page 79's non-word test says ฬ. THE TWO TESTS DISAGREE AGAIN. The page is reproduced as printed and transliterated sobasa to match, with the English giving the 'sixteen' sense. WHY THIS MATTERS MORE THAN PAGE 85's: two independent bare letters on two different sheets now read พ where the canon has ฬ, so it is no longer a one-off. Either this printer sets some ฬ without its ascender, or the book really prints พ in both places. ONE LOOK AT THE BOOK SETTLES BOTH AT ONCE."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0355.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 780-1080. Read ACROSS. FIRST PAIRING FOR CHECKING: left มาตา ปิตา จะ นิกขันตา + right ชาตะเวทะ ปะฏิกกะมะ."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0355.PNG",
+     "issue": "THE PARITTA CLOSES WITH ITS OWN NAME FOR ITSELF — เอสา เม สัจจะปาระมีติ, 'this is my perfection of truth', with the quotative ติ. The colophon วัฏฏะกะปะริตตัง นิฏฐิตัง. follows it centred, and goes in as `closing`. No footnote and no marker for this chant on either of its sheets, so source_printed is left off — the same as the Mora Paritta on pages 88 and 89."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-dhajagga-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Four, one per two-column row, read ACROSS. One group; the chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is the contents' value; the SPACING of title_thai follows the page, which differs from the contents by one space.",
+    "pages": "IMG_0355.PNG, page 90. Title and all four rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด ธะชัคคะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt tá-chák-ká-sùt-dtaŋ",
+   "title_english": "The Prefatory Verse for the Dhajagga Sutta",
+   "page_start": 90,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยัสสานุสสะระเณนาปิ อันตะลิกเขปิ ปาณิโน,",
+     "pali_roman": "Yassānussaraṇenāpi antalikkhepi pāṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the mere recollection of which even creatures in mid-air",
+     "page": 90
+    },
+    {
+     "number": 2,
+     "pali": "ปะติฏฐะมะธิคัจฉันติ ภูมิยัง วิยะ สัพพะทา,",
+     "pali_roman": "Patiṭṭhamadhigacchanti bhūmiyaṃ viya sabbadā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "always find a footing, as though upon the ground;"
+    },
+    {
+     "number": 3,
+     "pali": "สัพพูปัททะวะชาลัมหา ยักขะโจราทิสัมภะวา,",
+     "pali_roman": "Sabbūpaddavajālamhā yakkhacorādisambhavā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and from the net of all misfortunes arising from yakkhas, thieves and the like,"
+    },
+    {
+     "number": 4,
+     "pali": "คะณะนา นะ จะ มุตตานัง ปะริตตันตัมภะณามะ เห.",
+     "pali_roman": "Gaṇanā na ca muttānaṃ parittantambhaṇāma he.",
+     "thai": "",
+     "paiboon": "",
+     "english": "those freed are beyond counting: that paritta let us now recite."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ธะชัคคะ",
+     "pali_roman": "dhajagga",
+     "meaning": "the top of a banner. The sutta's whole image: look up at it and fear goes"
+    },
+    {
+     "pali": "อันตะลิกขะ",
+     "pali_roman": "antalikkha",
+     "meaning": "mid-air, the space between. Creatures there are said to find a footing as if on ground"
+    },
+    {
+     "pali": "อุปัททะวะชาละ",
+     "pali_roman": "upaddavajāla",
+     "meaning": "the net of misfortunes — a single compound for everything the paritta is recited against"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0355.PNG",
+     "issue": "A SEVENTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด ธะชัคคะสุตตัง with a SPACE after บทขัด; the สารบัญ has บทขัดธะชัคคะสุตตัง without one. Same as pages 82, 86, 87, 88 and 89. The page is reproduced; the romanisation is unaffected by the space, so the contents' value is used unchanged."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0355.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 820-1080 — a slightly different position from the block above it on this sheet, whose gutter is at x 780-1080. Each profiled separately. FIRST PAIRING FOR CHECKING: left ยัสสานุสสะระเณนาปิ + right อันตะลิกเขปิ ปาณิโน,."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0355.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "dhajagga-parittam-sattamam",
+   "continues": true,
+   "source_printed": "สํ.ส. 15/320-223",
+   "working_notes": {
+    "invitation": "absent, and none written. The บทขัด that introduces this sutta is its own chant directly above it on this page.",
+    "units": "Twenty, split at the printed commas and full stops. TWO paragraph groups, both indented in the book: verses 1 to 5 are the nidāna and verses 6 to 20 are Sakka's instruction. Verse 1 and verse 6 each declare para_layout 'prose'; the chant has no chant-level layout key, so declaring it on both groups is what keeps them prose. Verse 20 is cut by the foot of the sheet and carries […].",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_pali is the contents' value, which the transliteration script independently reproduces.",
+    "pages": "IMG_0355.PNG, page 90. The title is on this page so page_start is 90 and verse 1 carries the page key. The chant runs off the foot of the sheet mid-unit and is picked up on page 91."
+   },
+   "title_thai": "ธะชัคคะปะริตตัง ธะชัคคะสุตตัง สัตตะมัง",
+   "title_pali": "Dhajaggaparittaṃ dhajaggasuttaṃ sattamaṃ",
+   "title_roman": "",
+   "title_english": "The Dhajagga Paritta, the Dhajagga Sutta, the Seventh",
+   "page_start": 90,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง,",
+     "pali_roman": "Evamme sutaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard.",
+     "page": 90,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม.",
+     "pali_roman": "Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme.",
+     "thai": "",
+     "paiboon": "",
+     "english": "At one time the Blessed One was dwelling at Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's monastery."
+    },
+    {
+     "number": 3,
+     "pali": "ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ.",
+     "pali_roman": "Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "There the Blessed One addressed the bhikkhus: 'Bhikkhus!'"
+    },
+    {
+     "number": 4,
+     "pali": "ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง.",
+     "pali_roman": "Bhadanteti te bhikkhū bhagavato paccassosuṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "'Venerable sir,' those bhikkhus replied to the Blessed One."
+    },
+    {
+     "number": 5,
+     "pali": "ภะคะวา เอตะทะโวจะ.",
+     "pali_roman": "Bhagavā etadavoca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Blessed One said this:"
+    },
+    {
+     "number": 6,
+     "pali": "ภูตะปุพพัง ภิกขะเว เทวาสุระสังคาโม สะมุปัพ์ยุพโห อะโหสิ,",
+     "pali_roman": "Bhūtapubbaṃ bhikkhave devāsurasaṅgāmo samupabyupho ahosi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Once upon a time, bhikkhus, a battle between the devas and the asuras was joined.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 7,
+     "pali": "อะถะ โข ภิกขะเว สักโก เทวานะมินโท เทเว ตาวะติงเส อามันเตสิ.",
+     "pali_roman": "Atha kho bhikkhave sakko devānamindo deve tāvatiṃse āmantesi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then, bhikkhus, Sakka lord of the devas addressed the devas of the Thirty-Three:"
+    },
+    {
+     "number": 8,
+     "pali": "สะเจ มาริสา เทวานัง สังคามะคะตานัง อุปปัชเชยยะ ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,",
+     "pali_roman": "Sace mārisā devānaṃ saṅgāmagatānaṃ uppajjeyya bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "'If, good sirs, fear or trembling or horripilation should arise in the devas gone to battle,"
+    },
+    {
+     "number": 9,
+     "pali": "มะเมวะ ตัส์มิง สะมะเย ธะชัคคัง อุลโลเกยยาถะ,",
+     "pali_roman": "Mameva tasmiṃ samaye dhajaggaṃ ullokeyyātha,",
+     "thai": "",
+     "paiboon": "",
+     "english": "then at that time look up at the top of my banner;"
+    },
+    {
+     "number": 10,
+     "pali": "มะมัง หิ โว ธะชัคคัง อุลโลกะยะตัง ยัมภะวิสสะติ,",
+     "pali_roman": "Mamaṃ hi vo dhajaggaṃ ullokayataṃ yambhavissati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "for when you look up at the top of my banner, whatever"
+    },
+    {
+     "number": 11,
+     "pali": "ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,",
+     "pali_roman": "Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "fear or trembling or horripilation there may be,"
+    },
+    {
+     "number": 12,
+     "pali": "โส ปะหิยยิสสะติ.",
+     "pali_roman": "So pahiyyissati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "it will be abandoned."
+    },
+    {
+     "number": 13,
+     "pali": "โน เจ เม ธะชัคคัง อุลโลเกยยาถะ.",
+     "pali_roman": "No ce me dhajaggaṃ ullokeyyātha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "If you do not look up at the top of my banner,"
+    },
+    {
+     "number": 14,
+     "pali": "อะถะ ปะชาปะติสสะ เทวะราชัสสะ ธะชัคคัง อุลโลเกยยาถะ,",
+     "pali_roman": "Atha pajāpatissa devarājassa dhajaggaṃ ullokeyyātha,",
+     "thai": "",
+     "paiboon": "",
+     "english": "then look up at the top of the banner of Pajāpati, king of the devas;"
+    },
+    {
+     "number": 15,
+     "pali": "ปะชาปะติสสะ หิ โว เทวะราชัสสะ ธะชัคคัง อุลโลกะยะตัง ยัมภะวิสสะติ,",
+     "pali_roman": "Pajāpatissa hi vo devarājassa dhajaggaṃ ullokayataṃ yambhavissati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "for when you look up at the top of the banner of Pajāpati, king of the devas, whatever"
+    },
+    {
+     "number": 16,
+     "pali": "ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,",
+     "pali_roman": "Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "fear or trembling or horripilation there may be,"
+    },
+    {
+     "number": 17,
+     "pali": "โส ปะหิยยิสสะติ.",
+     "pali_roman": "So pahiyyissati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "it will be abandoned."
+    },
+    {
+     "number": 18,
+     "pali": "โน เจ ปะชาปะติสสะ เทวะราชัสสะ ธะชัคคัง อุลโลเกยยาถะ.",
+     "pali_roman": "No ce pajāpatissa devarājassa dhajaggaṃ ullokeyyātha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "If you do not look up at the top of the banner of Pajāpati, king of the devas,"
+    },
+    {
+     "number": 19,
+     "pali": "อะถะ วะรุณัสสะ เทวะราชัสสะ ธะชัคคัง อุลโลเกยยาถะ.",
+     "pali_roman": "Atha varuṇassa devarājassa dhajaggaṃ ullokeyyātha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "then look up at the top of the banner of Varuṇa, king of the devas."
+    },
+    {
+     "number": 20,
+     "pali": "วะรุณัสสะ หิ โว เทวะราชัสสะ ธะชัคคัง […]",
+     "pali_roman": "Varuṇassa hi vo devarājassa dhajaggaṃ […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "For when you look up at the top of the banner of Varuṇa, king of the devas, […]"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "เทวาสุระสังคามะ",
+     "pali_roman": "devāsurasaṅgāma",
+     "meaning": "the battle between the devas and the asuras — the frame story Sakka's advice comes from"
+    },
+    {
+     "pali": "สักโก เทวานะมินโท",
+     "pali_roman": "sakko devānamindo",
+     "meaning": "Sakka, lord of the devas. He gives the advice the Buddha will then correct"
+    },
+    {
+     "pali": "ฉัมภิตัตตะ",
+     "pali_roman": "chambhitatta",
+     "meaning": "trembling, being petrified. The middle term of the three the sutta repeats over and over"
+    },
+    {
+     "pali": "โลมะหังสะ",
+     "pali_roman": "lomahaṃsa",
+     "meaning": "horripilation, hair standing on end — the bodily sign of terror, named separately from the fear itself"
+    },
+    {
+     "pali": "ปะหิยยะติ",
+     "pali_roman": "pahiyyati",
+     "meaning": "is abandoned, falls away. What is promised of the fear, three times over"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0355.PNG",
+     "issue": "เอวัมเม สุตัง, ENDS WITH A COMMA HERE, where page 81's Maṅgala Sutta printed เอวัมเม สุตัง. with a full stop. The superscript 1 sits immediately after the comma. Read at 1.9x. Reproduced as each page prints it; the two suttas differ in the book and were not reconciled."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0355.PNG",
+     "issue": "‼ THE CITATION READS 15/320-223, WHICH LOOKS WRONG AND IS REPRODUCED ANYWAY. The footnote is สํ.ส. 15/320-223 — a range running DOWNWARD from 320 to 223. Read at 4x under the rule; the digits are unambiguous. Standard references for this sutta run 15/320-323, so this is most likely a compositor transposing 3 and 2. Reproduced verbatim because the rule is that the book is the authority, and flagged here because a wrong citation is a wrong reference in a book about the Dhamma. ONE OF THE CLEAREST THINGS ON THE PAGE TO CHECK."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0355.PNG",
+     "issue": "PROSE, MEASURED, AND BOTH GROUPS DECLARE IT. Ink runs x 280-1820 across the whole passage with no gutter anywhere. The book indents two paragraphs — the nidāna at verse 1 and Sakka's instruction at verse 6 — so both carry para_layout 'prose' explicitly rather than relying on a chant-level default, which this chant does not have. Same shape as pages 81, 82 and 87."
+    },
+    {
+     "verse": 20,
+     "file": "IMG_0355.PNG",
+     "issue": "THE SHEET RUNS OUT MID-UNIT and the line is marked […]. ธะชัคคัง is the last word printed and there is no comma after it, where verses 14 and 15 each end with one. So the unit is incomplete and page 91 must complete it. The chant is listed in batch_status.continues and carries continues: true."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0355.PNG",
+     "issue": "THE SUTTA REPEATS ITSELF THREE TIMES BY DESIGN. Verses 11 and 16 are word for word identical (ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,) and verses 12 and 17 are too (โส ปะหิยยิสสะติ.), because Sakka names three banners in turn — his own, Pajāpati's and Varuṇa's — with the same promise after each. Page 91 should carry the third. Recorded because check_render walks strings in printed order."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0355.PNG",
+     "issue": "สะมุปัพ์ยุพโห carries the พ์ cluster mark, romanised samupabyupho with the mark dropped. Standard editions have samupabyūḷho, so the book's ending differs from the canonical one as well as the mark — reproduced exactly as printed and worth an eye alongside the ฬ/พ questions."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0355.PNG",
+     "issue": "A WIDE GAP INSIDE VERSE 3, between อามันเตสิ and ภิกขะโวติ, visibly wider than the other word spaces on that line. Read as JUSTIFICATION rather than meaningful spacing and set as a single space, the same decision as pages 82 and 83."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0355.PNG",
+     "issue": "english_unverified is set. The book prints this sutta in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition. The nidāna follows the standard formulas closely because they are formulas; Sakka's speech is glossed clause by clause and its quotation marks are the English's, not the book's."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "vattaka-parittam-chattham",
+   "bot-khat-dhajagga-suttam"
+  ],
+  "not_started": [],
+  "continues": [
+   "dhajagga-parittam-sattamam"
+  ],
+  "resume_from_page": 91,
+  "resume_from_file": "IMG_0356.PNG",
+  "resume_from": "dhajagga-parittam-sattamam",
+  "unreadable": [],
+  "paiboon_scan": "clean. The page prints no Thai translation, so every verse paiboon is empty, and the only Paiboon+ in the batch is one title_roman taken from CONTENTS. Scanned every field for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed, with ONE reading flagged rather than settled. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in ปัต์วา, ตัต์ระ, ตัส์มิง and สะมุปัพ์ยุพโห, and the nikkhahit in the citation's สํ. The flagged one is โสพะสะ at Vaṭṭaka verse 8: a BARE พ where standard Pali has soḷasa with ฬ, reproduced as printed and transliterated sobasa to match even though that is not a word. Second such case after page 85. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. Three rows for one page, one per chant, in the order they appear down the sheet. Each row's verse range matches its entry exactly — 6-9, 1-4, 1-20 — no verse is orphaned and none is claimed twice. Each chant's first verse on this page carries the page key and no page turns inside any of them. No page blocks: the only footnote is a canonical citation and belongs on the Dhajagga Sutta as source_printed.",
+  "notes": "‼ THE ฬ/พ CONFLICT HAS HAPPENED A SECOND TIME, and that is the most important thing on this page. Vaṭṭaka verse 8 prints โสพะสะ with a BARE พ — stacked at 7x against the พพ of สัพพูปัททะวะ from lower on the SAME SHEET it is identical, no ascender — where standard Pali is soḷasa, 'sixteen', and sobasa is not a word. Page 85's อะวิรุพหิ was the first. Two independent bare letters on two different sheets now read พ where the canon has ฬ, so it is no longer a one-off: either this printer sets some ฬ without its ascender, or the book really prints พ in both places. Both reproduced as printed; ONE LOOK AT THE BOOK SETTLES BOTH. Two other things. (1) THE CITATION READS สํ.ส. 15/320-223 — a range running DOWNWARD — where standard references have 15/320-323. Read at 4x; the digits are unambiguous. Reproduced verbatim and flagged, because a wrong citation is a wrong reference in a book about the Dhamma. (2) A SEVENTH TITLE THE CONTENTS TEST CANNOT SEE. Nothing needs re-photographing."
+ }
+}
