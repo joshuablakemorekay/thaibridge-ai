@@ -25250,7 +25250,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 20; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 66; the rest is not in the app yet.
         # ‼ CHECK [IMG_0355.PNG]: english_unverified is set. The book prints
         #   this sutta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -25475,13 +25475,456 @@ CHANTS = [
             #   So the unit is incomplete and page 91 must complete it. The
             #   chant is listed in batch_status.continues and carries
             #   continues: true.
+            # ‼ COMPLETED FROM p91: this line was cut by the page break and is
+            #   now whole. Was: วะรุณัสสะ หิ โว เทวะราชัสสะ ธะชัคคัง […]
+            # ‼ CHECK [IMG_0356.PNG]: THE COMPLETION OF THE CUT UNIT. Page 90
+            #   stopped at ธะชัคคัง with no comma; this page opens
+            #   อุลโลกะยะตัง ยัมภะวิสสะติ, so the unit is whole and it KEEPS
+            #   page 90, where its line starts. Verse 21 is therefore the
+            #   first verse ON this page and carries the page key.
             {
                 'number': 20,
-                'pali': 'วะรุณัสสะ หิ โว เทวะราชัสสะ ธะชัคคัง […]',
-                'pali_roman': 'Varuṇassa hi vo devarājassa dhajaggaṃ […]',
+                'pali': 'วะรุณัสสะ หิ โว เทวะราชัสสะ ธะชัคคัง อุลโลกะยะตัง ยัมภะวิสสะติ,',
+                'pali_roman': 'Varuṇassa hi vo devarājassa dhajaggaṃ ullokayataṃ yambhavissati,',
                 'thai': '',
                 'paiboon': '',
-                'english': 'For when you look up at the top of the banner of Varuṇa, king of the devas, […]',
+                'english': 'for when you look up at the top of the banner of Varuṇa, king of the devas, whatever',
+            },
+            # ‼ CHECK [IMG_0356.PNG]: PARA_LAYOUT WITHOUT PARA_START, AND ON
+            #   VERSE 21 RATHER THAN 20 — the first two attempts at this page
+            #   got it wrong in different ways. Verse 21 belongs to the
+            #   paragraph page 90 opened at verse 6, so it must NOT carry
+            #   para_start. It also must carry para_layout 'prose', because it
+            #   is the FIRST VERSE OF THIS PAGE'S SLICE and the template reads
+            #   the setting off paragraph[0]; this chant has no chant-level
+            #   layout key, so the fallback is 'lines' and the opening
+            #   paragraph rendered as a stack of short lines. The first fix
+            #   put it on verse 20, which does nothing: verse 20's line STARTS
+            #   on page 90, so it is not in page 91's slice at all. THE RULE:
+            #   the verse that needs para_layout is the first one whose `page`
+            #   is this page, not the first one in the batch. Caught by
+            #   rendering the page; none of the four checks sees it.
+            # ‼ CHECK [IMG_0356.PNG]: THE SUTTA REPEATS ITSELF HEAVILY BY
+            #   DESIGN. ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา, appears at
+            #   verses 21, 26, 33, 40, 46 and 54 — six times, word for word —
+            #   and โส ปะหิยยิสสะติ. at 22, 47 and 55. Sakka names four
+            #   banners and the Buddha names three recollections, each with
+            #   the same promise. Recorded because check_render walks strings
+            #   in printed order and nine verbatim repeats on one sheet is
+            #   exactly the shape that reads as a fault.
+            {
+                'number': 21,
+                'page': 91,
+                'para_layout': 'prose',
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever fear or trembling or horripilation there may be,',
+            },
+            {
+                'number': 22,
+                'pali': 'โส ปะหิยยิสสะติ.',
+                'pali_roman': 'So pahiyyissati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it will be abandoned.',
+            },
+            {
+                'number': 23,
+                'pali': 'โน เจ วะรุณัสสะ เทวะราชัสสะ ธะชัคคัง อุลโลเกยยาถะ.',
+                'pali_roman': 'No ce varuṇassa devarājassa dhajaggaṃ ullokeyyātha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If you do not look up at the top of the banner of Varuṇa, king of the devas,',
+            },
+            # ‼ CHECK [IMG_0356.PNG]: SAKKA NAMES A FOURTH BANNER, NOT THREE.
+            #   Page 90 carried his own, Pajāpati's and Varuṇa's; this page
+            #   adds อีสานะ, Īsāna. So the sequence is four deep, and the
+            #   second paragraph at verse 28 lists all four again in the same
+            #   order. Worth recording because the page-90 brief predicted
+            #   three.
+            {
+                'number': 24,
+                'pali': 'อะถะ อีสานัสสะ เทวะราชัสสะ ธะชัคคัง อุลโลเกยยาถะ,',
+                'pali_roman': 'Atha īsānassa devarājassa dhajaggaṃ ullokeyyātha,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then look up at the top of the banner of Īsāna, king of the devas;',
+            },
+            {
+                'number': 25,
+                'pali': 'อีสานัสสะ หิ โว เทวะราชัสสะ ธะชัคคัง อุลโลกะยะตัง ยัมภะวิสสะติ,',
+                'pali_roman': 'Īsānassa hi vo devarājassa dhajaggaṃ ullokayataṃ yambhavissati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for when you look up at the top of the banner of Īsāna, king of the devas, whatever',
+            },
+            {
+                'number': 26,
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever fear or trembling or horripilation there may be,',
+            },
+            # ‼ CHECK [IMG_0356.PNG]: ปะหิยยิสสะตีติ CARRIES THE QUOTATIVE ติ,
+            #   closing Sakka's whole speech, where verses 22, 47 and 55 end
+            #   plainly ปะหิยยิสสะติ. Reproduced, and romanised pahiyyissatīti
+            #   to match.
+            {
+                'number': 27,
+                'pali': 'โส ปะหิยยิสสะตีติ.',
+                'pali_roman': 'So pahiyyissatīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "it will be abandoned.'",
+            },
+            # ‼ CHECK [IMG_0356.PNG]: THE SECOND PARAGRAPH IS THE BUDDHA
+            #   CORRECTING SAKKA, and it is what the sutta is actually for.
+            #   Verse 34 says the fear 'might be abandoned, and might not',
+            #   and verse 36 gives the reason: Sakka is not free of lust, hate
+            #   or delusion. The paragraph is indented in the book, so verse
+            #   28 carries para_start with para_layout 'prose' — this chant
+            #   has no chant-level layout key, so every group must declare its
+            #   own.
+            {
+                'number': 28,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ตัง โข ปะนะ ภิกขะเว สักกัสสะ วา เทวานะมินทัสสะ ธะชัคคัง อุลโลกะยะตัง,',
+                'pali_roman': 'Taṃ kho pana bhikkhave sakkassa vā devānamindassa dhajaggaṃ ullokayataṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But, bhikkhus, for one looking up at the top of the banner of Sakka lord of the devas,',
+            },
+            {
+                'number': 29,
+                'pali': 'ปะชาปะติสสะ วา เทวะราชัสสะ ธะชัคคัง อุลโลกะยะตัง,',
+                'pali_roman': 'Pajāpatissa vā devarājassa dhajaggaṃ ullokayataṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or of the banner of Pajāpati, king of the devas,',
+            },
+            {
+                'number': 30,
+                'pali': 'วะรุณัสสะ วา เทวะราชัสสะ ธะชัคคัง อุลโลกะยะตัง,',
+                'pali_roman': 'Varuṇassa vā devarājassa dhajaggaṃ ullokayataṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or of the banner of Varuṇa, king of the devas,',
+            },
+            {
+                'number': 31,
+                'pali': 'อีสานัสสะ วา เทวะราชัสสะ ธะชัคคัง อุลโลกะยะตัง,',
+                'pali_roman': 'Īsānassa vā devarājassa dhajaggaṃ ullokayataṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or of the banner of Īsāna, king of the devas —',
+            },
+            {
+                'number': 32,
+                'pali': 'ยัมภะวิสสะติ,',
+                'pali_roman': 'Yambhavissati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever there may be,',
+            },
+            {
+                'number': 33,
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever fear or trembling or horripilation there may be,',
+            },
+            {
+                'number': 34,
+                'pali': 'โส ปะหิยเยถาปิ โนปิ ปะหิยเยถะ.',
+                'pali_roman': 'So pahiyyethāpi nopi pahiyyetha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it might be abandoned, and it might not.',
+            },
+            {
+                'number': 35,
+                'pali': 'ตัง กิสสะ เหตุ.',
+                'pali_roman': 'Taṃ kissa hetu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And why is that?',
+            },
+            {
+                'number': 36,
+                'pali': 'สักโก หิ ภิกขะเว เทวานะมินโท อะวีตะราโค อะวีตะโทโส อะวีตะโมโห,',
+                'pali_roman': 'Sakko hi bhikkhave devānamindo avītarāgo avītadoso avītamoho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Because Sakka lord of the devas is not free of lust, not free of hate, not free of delusion;',
+            },
+            {
+                'number': 37,
+                'pali': 'ภิรุ ฉัมภี อุต์ราสี ปะลายีติ.',
+                'pali_roman': 'Bhiru chambhī utrāsī palāyīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he is timid, easily startled, fearful, one who flees.',
+            },
+            {
+                'number': 38,
+                'pali': 'อะหัญจะ โข ภิกขะเว เอวัง วะทามิ,',
+                'pali_roman': 'Ahañca kho bhikkhave evaṃ vadāmi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But I, bhikkhus, say this:',
+            },
+            {
+                'number': 39,
+                'pali': 'สะเจ ตุมหากัง ภิกขะเว อะรัญญะคะตานัง วา รุกขะมูละคะตานัง วา สุญญาคาระคะตานัง วา อุปปัชเชยยะ,',
+                'pali_roman': 'Sace tumhākaṃ bhikkhave araññagatānaṃ vā rukkhamūlagatānaṃ vā suññāgāragatānaṃ vā uppajjeyya,',
+                'thai': '',
+                'paiboon': '',
+                'english': "'If, bhikkhus, when you have gone to the forest, or to the root of a tree, or to an empty dwelling, there should arise",
+            },
+            {
+                'number': 40,
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever fear or trembling or horripilation there may be,',
+            },
+            {
+                'number': 41,
+                'pali': 'มะเมวะ ตัส์มิง สะมะเย อะนุสสะเรยยาถะ.',
+                'pali_roman': 'Mameva tasmiṃ samaye anussareyyātha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then at that time recollect me:',
+            },
+            # ‼ CHECK [IMG_0356.PNG]: THE THREE RECOLLECTIONS ARE PRINTED IN
+            #   FULL — Itipi so at verses 42 to 44, Svākkhāto at 50 to 52,
+            #   Supaṭipanno at 58 to 65. The app already holds all three from
+            #   the morning service, and this sutta is where they are quoted
+            #   from. Set fresh from this page rather than copied across,
+            #   because the pointing differs: this page splits โอปะนะยิโก,
+            #   from ปัจจัตตัง with a comma.
+            {
+                'number': 42,
+                'pali': 'อิติปิ โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Itipi so bhagavā arahaṃ sammāsambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such indeed is the Blessed One: worthy, perfectly awakened by himself,',
+            },
+            # ‼ CHECK [IMG_0356.PNG]: โลกะวิทู CARRIES ITS ู, checked at 7x on
+            #   an isolated crop because the band edge made it look bare at
+            #   first. It is lokavidū, not lokavidu. Recorded because the
+            #   first reading of it was wrong and the correction came from the
+            #   zoom.
+            {
+                'number': 43,
+                'pali': 'วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู อะนุตตะโร ปุริสะทัมมะสาระถิ,',
+                'pali_roman': 'Vijjācaraṇasampanno sugato lokavidū anuttaro purisadammasārathi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'accomplished in knowledge and conduct, well-gone, knower of the world, unsurpassed trainer of persons to be tamed,',
+            },
+            {
+                'number': 44,
+                'pali': 'สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวาติ.',
+                'pali_roman': 'Satthā devamanussānaṃ buddho bhagavāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'teacher of devas and humans, awakened, blessed.',
+            },
+            {
+                'number': 45,
+                'pali': 'มะมัง หิ โว ภิกขะเว อะนุสสะระตัง ยัมภะวิสสะติ,',
+                'pali_roman': 'Mamaṃ hi vo bhikkhave anussarataṃ yambhavissati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For when you recollect me, bhikkhus, whatever',
+            },
+            {
+                'number': 46,
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever fear or trembling or horripilation there may be,',
+            },
+            {
+                'number': 47,
+                'pali': 'โส ปะหิยยิสสะติ.',
+                'pali_roman': 'So pahiyyissati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it will be abandoned.',
+            },
+            {
+                'number': 48,
+                'pali': 'โน เจ มัง อะนุสสะเรยยาถะ,',
+                'pali_roman': 'No ce maṃ anussareyyātha,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If you do not recollect me,',
+            },
+            {
+                'number': 49,
+                'pali': 'อะถะ ธัมมัง อะนุสสะเรยยาถะ.',
+                'pali_roman': 'Atha dhammaṃ anussareyyātha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then recollect the Dhamma:',
+            },
+            # ‼ CHECK [IMG_0356.PNG]: ส์วากขาโต CARRIES THE SMALL MARK OVER
+            #   THE ส, and this is another instance of the open question that
+            #   runs through the whole app. Read at 1.9x. Romanised svākkhāto
+            #   with the mark dropped, matching the eight existing ส์วากขาโต
+            #   lines. One look at the book settles this word everywhere at
+            #   once.
+            {
+                'number': 50,
+                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto bhagavatā dhammo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Dhamma is well proclaimed by the Blessed One,',
+            },
+            {
+                'number': 51,
+                'pali': 'สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก โอปะนะยิโก,',
+                'pali_roman': 'Sandiṭṭhiko akāliko ehipassiko opanayiko,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'visible here and now, timeless, inviting inspection, leading onward,',
+            },
+            {
+                'number': 52,
+                'pali': 'ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.',
+                'pali_roman': 'Paccattaṃ veditabbo viññūhīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to be known by the wise each for himself.',
+            },
+            {
+                'number': 53,
+                'pali': 'ธัมมัง หิ โว ภิกขะเว อะนุสสะระตัง ยัมภะวิสสะติ,',
+                'pali_roman': 'Dhammaṃ hi vo bhikkhave anussarataṃ yambhavissati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For when you recollect the Dhamma, bhikkhus, whatever',
+            },
+            {
+                'number': 54,
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whatever fear or trembling or horripilation there may be,',
+            },
+            {
+                'number': 55,
+                'pali': 'โส ปะหิยยิสสะติ.',
+                'pali_roman': 'So pahiyyissati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it will be abandoned.',
+            },
+            {
+                'number': 56,
+                'pali': 'โน เจ ธัมมัง อะนุสสะเรยยาถะ,',
+                'pali_roman': 'No ce dhammaṃ anussareyyātha,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If you do not recollect the Dhamma,',
+            },
+            {
+                'number': 57,
+                'pali': 'อะถะ สังฆัง อะนุสสะเรยยาถะ.',
+                'pali_roman': 'Atha saṅghaṃ anussareyyātha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then recollect the Saṅgha:',
+            },
+            {
+                'number': 58,
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "The Saṅgha of the Blessed One's disciples has practised well,",
+            },
+            {
+                'number': 59,
+                'pali': 'อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ujupaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "the Saṅgha of the Blessed One's disciples has practised uprightly,",
+            },
+            {
+                'number': 60,
+                'pali': 'ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ñāyapaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "the Saṅgha of the Blessed One's disciples has practised methodically,",
+            },
+            {
+                'number': 61,
+                'pali': 'สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Sāmīcipaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "the Saṅgha of the Blessed One's disciples has practised properly —",
+            },
+            {
+                'number': 62,
+                'pali': 'ยะทิทัง จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,',
+                'pali_roman': 'Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that is, the four pairs of persons, the eight kinds of individuals;',
+            },
+            {
+                'number': 63,
+                'pali': 'เอสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Esa bhagavato sāvakasaṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': "this Saṅgha of the Blessed One's disciples is",
+            },
+            {
+                'number': 64,
+                'pali': 'อาหุเนยโย ปาหุเนยโย ทักขิเณยโย อัญชะลีกะระณีโย,',
+                'pali_roman': 'Āhuneyyo pāhuneyyo dakkhiṇeyyo añjalīkaraṇīyo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'worthy of gifts, worthy of hospitality, worthy of offerings, worthy of reverential salutation,',
+            },
+            {
+                'number': 65,
+                'pali': 'อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.',
+                'pali_roman': 'Anuttaraṃ puññakkhettaṃ lokassāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'an unsurpassed field of merit for the world.',
+            },
+            # ‼ CHECK [IMG_0356.PNG]: THE SHEET RUNS OUT MID-UNIT and the line
+            #   is marked […]. อะนุสสะระตัง is the last word printed with no
+            #   comma after it, where verses 45 and 53 — the same line for the
+            #   Buddha and the Dhamma — each end ยัมภะวิสสะติ, with one. So
+            #   the unit is incomplete and page 92 must complete it. The chant
+            #   carries both continuation_of and continues: true.
+            {
+                'number': 66,
+                'pali': 'สังฆัง หิ โว ภิกขะเว อะนุสสะระตัง […]',
+                'pali_roman': 'Saṅghaṃ hi vo bhikkhave anussarataṃ […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For when you recollect the Saṅgha, bhikkhus, […]',
             },
         ],
     },
