@@ -22986,7 +22986,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 33; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 59; the rest is not in the app yet.
         # ‼ CHECK [IMG_0346.PNG]: english_unverified is set. The book prints
         #   this sutta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -23358,6 +23358,264 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'and having gained it for nothing, enjoy the peace;',
+            },
+            # ‼ CHECK [IMG_0348.PNG]: SINGLE COLUMN, MEASURED: ink x 860 to x
+            #   1660 with no empty band inside it. The block also sits further
+            #   right than page 83's, which is why a fixed threshold failed —
+            #   profile the block's own left edge first, then the indents
+            #   against it.
+            # ‼ CHECK [IMG_0348.PNG]: EVERY อิทัมปิ LINE ON THIS SHEET IS FOR
+            #   THE SAṄGHA, none for the Buddha or the Dhamma, because these
+            #   stanzas are all in the Saṅgha section. Page 83 had พุทเธ once
+            #   and ธัมเม twice. Worth stating so the repetition is not
+            #   mistaken for a copied line.
+            {
+                'number': 34,
+                'page': 84,
+                'pali': 'อิทัมปิ สังเฆ ระตะนัง ปะณีตัง',
+                'pali_roman': 'Idampi saṅghe ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is an excellent jewel in the Saṅgha.',
+            },
+            {
+                'number': 35,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            # ‼ CHECK [IMG_0348.PNG]: FOUR STANZA OPENINGS, MEASURED. Verses
+            #   36, 42, 48 and 56 start at x 960 where every other line starts
+            #   at x 870-880 — a consistent 80-90px indent, measured line by
+            #   line across the whole sheet, and nothing else is indented.
+            #   Same treatment as page 83, which indents its five. NOTE that
+            #   the first attempt to measure this used page 83's absolute
+            #   threshold and reported every line as indented; the baseline
+            #   moved between the two sheets, so the indent has to be measured
+            #   RELATIVE to the block, not against a fixed x.
+            {
+                'number': 36,
+                'para_start': True,
+                'pali': 'ยะถินทะขีโล ปะฐะวิง สิโต สิยา',
+                'pali_roman': 'Yathindakhīlo paṭhaviṃ sito siyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Just as a locking post, planted firm in the earth,',
+            },
+            {
+                'number': 37,
+                'pali': 'จะตุพภิ วาเตภิ อะสัมปะกัมปิโย',
+                'pali_roman': 'Catubbhi vātebhi asampakampiyo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'cannot be shaken by the winds from the four quarters,',
+            },
+            {
+                'number': 38,
+                'pali': 'ตะถูปะมัง สัปปุริสัง วะทามิ',
+                'pali_roman': 'Tathūpamaṃ sappurisaṃ vadāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so, I say, is the true person to be likened —',
+            },
+            {
+                'number': 39,
+                'pali': 'โย อะริยะสัจจานิ อะเวจจะ ปัสสะติ',
+                'pali_roman': 'Yo ariyasaccāni avecca passati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the one who sees the noble truths with penetration.',
+            },
+            # ‼ CHECK [IMG_0348.PNG]: THE TWO CLOSING LINES REPEAT FOUR TIMES
+            #   EACH ON THIS SHEET — อิทัมปิ สังเฆ ระตะนัง ปะณีตัง at verses
+            #   34, 40, 46 and 54, and เอเตนะ สัจเจนะ สุวัตถิ โหตุ. at 35, 41,
+            #   47 and 55 — word for word identical every time. Not
+            #   duplication: every stanza of this sutta closes the same way.
+            #   Recorded because check_render walks strings in printed order
+            #   and eight verbatim repeats on one page is exactly the shape
+            #   that reads as a fault.
+            {
+                'number': 40,
+                'pali': 'อิทัมปิ สังเฆ ระตะนัง ปะณีตัง',
+                'pali_roman': 'Idampi saṅghe ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is an excellent jewel in the Saṅgha.',
+            },
+            {
+                'number': 41,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 42,
+                'para_start': True,
+                'pali': 'เย อะริยะสัจจานิ วิภาวะยันติ',
+                'pali_roman': 'Ye ariyasaccāni vibhāvayanti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those who make plain the noble truths,',
+            },
+            {
+                'number': 43,
+                'pali': 'คัมภีระปัญเญนะ สุเทสิตานิ',
+                'pali_roman': 'Gambhīrapaññena sudesitāni',
+                'thai': '',
+                'paiboon': '',
+                'english': 'well taught by him of deep wisdom —',
+            },
+            {
+                'number': 44,
+                'pali': 'กิญจาปิ เต โหนติ ภุสัปปะมัตตา',
+                'pali_roman': 'Kiñcāpi te honti bhusappamattā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'however greatly negligent they may become,',
+            },
+            # ‼ CHECK [IMG_0348.PNG]: อัฏฐะมะมาทิยันติ IS THE DOCTRINAL CLAIM
+            #   OF THIS STANZA and worth reading carefully: na te bhavaṃ
+            #   aṭṭhamamādiyanti, 'they do not take up an eighth existence' —
+            #   the standard statement that a stream-enterer has at most seven
+            #   more lives. Reproduced as printed; the English states it
+            #   plainly rather than glossing it away.
+            {
+                'number': 45,
+                'pali': 'นะ เต ภะวัง อัฏฐะมะมาทิยันติ',
+                'pali_roman': 'Na te bhavaṃ aṭṭhamamādiyanti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they do not take up an eighth existence.',
+            },
+            {
+                'number': 46,
+                'pali': 'อิทัมปิ สังเฆ ระตะนัง ปะณีตัง',
+                'pali_roman': 'Idampi saṅghe ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is an excellent jewel in the Saṅgha.',
+            },
+            {
+                'number': 47,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 48,
+                'para_start': True,
+                'pali': 'สะหาวัสสะ ทัสสะนะสัมปะทายะ',
+                'pali_roman': 'Sahāvassa dassanasampadāya',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Together with his attainment of vision,',
+            },
+            # ‼ CHECK [IMG_0348.PNG]: ต์ยัสสุ BEGINS WITH A MARKED CONSONANT,
+            #   which is unusual — the ์ cluster mark sits on the very first
+            #   letter of the line, so the word opens with the cluster ty-.
+            #   Romanised tyassu with the mark dropped, the same treatment
+            #   every other cluster mark in this book gets. Read at 2.6x; the
+            #   mark is clear and sits over the ต, not over anything before
+            #   it.
+            {
+                'number': 49,
+                'pali': 'ต์ยัสสุ ธัมมา ชะหิตา ภะวันติ',
+                'pali_roman': 'Tyassu dhammā jahitā bhavanti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'three things come to be abandoned in him:',
+            },
+            {
+                'number': 50,
+                'pali': 'สักกายะทิฏฐิ วิจิกิจฉิตัญจะ',
+                'pali_roman': 'Sakkāyadiṭṭhi vicikicchitañca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'identity view, and doubt,',
+            },
+            {
+                'number': 51,
+                'pali': 'สีลัพพะตัง วาปิ ยะทัตถิ กิญจิ',
+                'pali_roman': 'Sīlabbataṃ vāpi yadatthi kiñci',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and clinging to rule and observance, whatever of it there is.',
+            },
+            {
+                'number': 52,
+                'pali': 'จะตูหะปาเยหิ จะ วิปปะมุตโต',
+                'pali_roman': 'Catūhapāyehi ca vippamutto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He is wholly freed from the four lower realms,',
+            },
+            {
+                'number': 53,
+                'pali': 'ฉะ จาภิฐานานิ อะภัพโพ กาตุง',
+                'pali_roman': 'Cha cābhiṭhānāni abhabbo kātuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and incapable of committing the six great wrongs.',
+            },
+            {
+                'number': 54,
+                'pali': 'อิทัมปิ สังเฆ ระตะนัง ปะณีตัง',
+                'pali_roman': 'Idampi saṅghe ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is an excellent jewel in the Saṅgha.',
+            },
+            {
+                'number': 55,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 56,
+                'para_start': True,
+                'pali': 'กิญจาปิ โส กัมมัง กะโรติ ปาปะกัง',
+                'pali_roman': 'Kiñcāpi so kammaṃ karoti pāpakaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Though he may still do some evil deed',
+            },
+            {
+                'number': 57,
+                'pali': 'กาเยนะ วาจายุทะ เจตะสา วา',
+                'pali_roman': 'Kāyena vācāyuda cetasā vā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by body, or by speech, or by mind,',
+            },
+            {
+                'number': 58,
+                'pali': 'อะภัพโพ โส ตัสสะ ปะฏิจฉะทายะ',
+                'pali_roman': 'Abhabbo so tassa paṭicchadāya',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he is incapable of concealing it —',
+            },
+            # ‼ CHECK [IMG_0348.PNG]: THE SHEET RUNS OUT MID-STANZA but verse
+            #   59 is a whole printed line, so no […] marker is used — it is
+            #   the stanza that is unfinished. The entry carries BOTH
+            #   continuation_of AND continues: true, which is what page 83 was
+            #   caught missing and what check_batch now enforces.
+            {
+                'number': 59,
+                'pali': 'อะภัพพะตา ทิฏฐะปะทัสสะ วุตตา',
+                'pali_roman': 'Abhabbatā diṭṭhapadassa vuttā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for that incapacity is declared of one who has seen the state.',
             },
         ],
     },

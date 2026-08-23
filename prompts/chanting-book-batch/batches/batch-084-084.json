@@ -1,0 +1,340 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "ratana-suttam-dutiyam"
+  ],
+  "pages": [
+   {
+    "page": 84,
+    "file": "IMG_0348.PNG",
+    "script": "thai",
+    "chant": "ratana-suttam-dutiyam",
+    "verses": "34-59",
+    "starts_here": false,
+    "note": "The whole sheet is one chant and twenty-six printed lines, SINGLE column — measured, ink x 860-1660 with nothing either side. FOUR lines are indented by a measured 80-90px — verses 36, 42, 48 and 56 — and each is a stanza opening, so each carries para_start, the same treatment page 83 got. No footnote, no rule, no colophon: the sheet runs out mid-sutta."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "ratana-suttam-dutiyam",
+   "continuation_of": "ratana-suttam-dutiyam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-six, verses 34 to 59, one per printed line. Verses 34 and 35 close the stanza page 83 opened; verses 36, 42, 48 and 56 open the four indented stanzas and carry para_start. No para_layout is declared and none is needed — this chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0348.PNG, page 84, read off the top centre of the sheet — the offset of 264 has now held for eleven pages. Verse 34 is the first verse on this page and carries the page key; no page turns inside it. The chant runs off the foot and is picked up on page 85."
+   },
+   "verses": [
+    {
+     "number": 34,
+     "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Saṅgha.",
+     "page": 84
+    },
+    {
+     "number": 35,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 36,
+     "pali": "ยะถินทะขีโล ปะฐะวิง สิโต สิยา",
+     "pali_roman": "Yathindakhīlo paṭhaviṃ sito siyā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just as a locking post, planted firm in the earth,",
+     "para_start": true
+    },
+    {
+     "number": 37,
+     "pali": "จะตุพภิ วาเตภิ อะสัมปะกัมปิโย",
+     "pali_roman": "Catubbhi vātebhi asampakampiyo",
+     "thai": "",
+     "paiboon": "",
+     "english": "cannot be shaken by the winds from the four quarters,"
+    },
+    {
+     "number": 38,
+     "pali": "ตะถูปะมัง สัปปุริสัง วะทามิ",
+     "pali_roman": "Tathūpamaṃ sappurisaṃ vadāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "so, I say, is the true person to be likened —"
+    },
+    {
+     "number": 39,
+     "pali": "โย อะริยะสัจจานิ อะเวจจะ ปัสสะติ",
+     "pali_roman": "Yo ariyasaccāni avecca passati",
+     "thai": "",
+     "paiboon": "",
+     "english": "the one who sees the noble truths with penetration."
+    },
+    {
+     "number": 40,
+     "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Saṅgha."
+    },
+    {
+     "number": 41,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 42,
+     "pali": "เย อะริยะสัจจานิ วิภาวะยันติ",
+     "pali_roman": "Ye ariyasaccāni vibhāvayanti",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those who make plain the noble truths,",
+     "para_start": true
+    },
+    {
+     "number": 43,
+     "pali": "คัมภีระปัญเญนะ สุเทสิตานิ",
+     "pali_roman": "Gambhīrapaññena sudesitāni",
+     "thai": "",
+     "paiboon": "",
+     "english": "well taught by him of deep wisdom —"
+    },
+    {
+     "number": 44,
+     "pali": "กิญจาปิ เต โหนติ ภุสัปปะมัตตา",
+     "pali_roman": "Kiñcāpi te honti bhusappamattā",
+     "thai": "",
+     "paiboon": "",
+     "english": "however greatly negligent they may become,"
+    },
+    {
+     "number": 45,
+     "pali": "นะ เต ภะวัง อัฏฐะมะมาทิยันติ",
+     "pali_roman": "Na te bhavaṃ aṭṭhamamādiyanti",
+     "thai": "",
+     "paiboon": "",
+     "english": "they do not take up an eighth existence."
+    },
+    {
+     "number": 46,
+     "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Saṅgha."
+    },
+    {
+     "number": 47,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 48,
+     "pali": "สะหาวัสสะ ทัสสะนะสัมปะทายะ",
+     "pali_roman": "Sahāvassa dassanasampadāya",
+     "thai": "",
+     "paiboon": "",
+     "english": "Together with his attainment of vision,",
+     "para_start": true
+    },
+    {
+     "number": 49,
+     "pali": "ต์ยัสสุ ธัมมา ชะหิตา ภะวันติ",
+     "pali_roman": "Tyassu dhammā jahitā bhavanti",
+     "thai": "",
+     "paiboon": "",
+     "english": "three things come to be abandoned in him:"
+    },
+    {
+     "number": 50,
+     "pali": "สักกายะทิฏฐิ วิจิกิจฉิตัญจะ",
+     "pali_roman": "Sakkāyadiṭṭhi vicikicchitañca",
+     "thai": "",
+     "paiboon": "",
+     "english": "identity view, and doubt,"
+    },
+    {
+     "number": 51,
+     "pali": "สีลัพพะตัง วาปิ ยะทัตถิ กิญจิ",
+     "pali_roman": "Sīlabbataṃ vāpi yadatthi kiñci",
+     "thai": "",
+     "paiboon": "",
+     "english": "and clinging to rule and observance, whatever of it there is."
+    },
+    {
+     "number": 52,
+     "pali": "จะตูหะปาเยหิ จะ วิปปะมุตโต",
+     "pali_roman": "Catūhapāyehi ca vippamutto",
+     "thai": "",
+     "paiboon": "",
+     "english": "He is wholly freed from the four lower realms,"
+    },
+    {
+     "number": 53,
+     "pali": "ฉะ จาภิฐานานิ อะภัพโพ กาตุง",
+     "pali_roman": "Cha cābhiṭhānāni abhabbo kātuṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "and incapable of committing the six great wrongs."
+    },
+    {
+     "number": 54,
+     "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+     "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "This too is an excellent jewel in the Saṅgha."
+    },
+    {
+     "number": 55,
+     "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "pali_roman": "Etena saccena suvatthi hotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this truth, may there be well-being."
+    },
+    {
+     "number": 56,
+     "pali": "กิญจาปิ โส กัมมัง กะโรติ ปาปะกัง",
+     "pali_roman": "Kiñcāpi so kammaṃ karoti pāpakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Though he may still do some evil deed",
+     "para_start": true
+    },
+    {
+     "number": 57,
+     "pali": "กาเยนะ วาจายุทะ เจตะสา วา",
+     "pali_roman": "Kāyena vācāyuda cetasā vā",
+     "thai": "",
+     "paiboon": "",
+     "english": "by body, or by speech, or by mind,"
+    },
+    {
+     "number": 58,
+     "pali": "อะภัพโพ โส ตัสสะ ปะฏิจฉะทายะ",
+     "pali_roman": "Abhabbo so tassa paṭicchadāya",
+     "thai": "",
+     "paiboon": "",
+     "english": "he is incapable of concealing it —"
+    },
+    {
+     "number": 59,
+     "pali": "อะภัพพะตา ทิฏฐะปะทัสสะ วุตตา",
+     "pali_roman": "Abhabbatā diṭṭhapadassa vuttā",
+     "thai": "",
+     "paiboon": "",
+     "english": "for that incapacity is declared of one who has seen the state."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อินทะขีละ",
+     "pali_roman": "indakhīla",
+     "meaning": "the locking post set in a city gateway, sunk deep and immovable. The simile for one who has seen the truths"
+    },
+    {
+     "pali": "อะเวจจะ ปัสสะติ",
+     "pali_roman": "avecca passati",
+     "meaning": "sees with penetration; sees having gone into it, not merely believing"
+    },
+    {
+     "pali": "อัฏฐะมะ ภะวะ",
+     "pali_roman": "aṭṭhama bhava",
+     "meaning": "an eighth existence. A stream-enterer has at most seven more lives, and this is the exact claim made for them"
+    },
+    {
+     "pali": "สักกายะทิฏฐิ / วิจิกิจฉา / สีลัพพะตะปะรามาสะ",
+     "pali_roman": "sakkāyadiṭṭhi / vicikicchā / sīlabbataparāmāsa",
+     "meaning": "identity view, doubt, and clinging to rule and observance — the three fetters dropped at stream-entry, which verses 49 to 51 name one by one"
+    },
+    {
+     "pali": "จะตุ อะปายะ",
+     "pali_roman": "catu apāya",
+     "meaning": "the four lower realms. Freedom from them is the second thing claimed here"
+    },
+    {
+     "pali": "ฉะ อะภิฐานานิ",
+     "pali_roman": "cha abhiṭhānāni",
+     "meaning": "the six great wrongs — the deeds one who has seen the state is constitutionally unable to commit"
+    },
+    {
+     "pali": "ทิฏฐะปะทะ",
+     "pali_roman": "diṭṭhapada",
+     "meaning": "one who has seen the state; the last word of this stanza and its whole ground"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 49,
+     "file": "IMG_0348.PNG",
+     "issue": "ต์ยัสสุ BEGINS WITH A MARKED CONSONANT, which is unusual — the ์ cluster mark sits on the very first letter of the line, so the word opens with the cluster ty-. Romanised tyassu with the mark dropped, the same treatment every other cluster mark in this book gets. Read at 2.6x; the mark is clear and sits over the ต, not over anything before it."
+    },
+    {
+     "verse": 36,
+     "file": "IMG_0348.PNG",
+     "issue": "FOUR STANZA OPENINGS, MEASURED. Verses 36, 42, 48 and 56 start at x 960 where every other line starts at x 870-880 — a consistent 80-90px indent, measured line by line across the whole sheet, and nothing else is indented. Same treatment as page 83, which indents its five. NOTE that the first attempt to measure this used page 83's absolute threshold and reported every line as indented; the baseline moved between the two sheets, so the indent has to be measured RELATIVE to the block, not against a fixed x."
+    },
+    {
+     "verse": 34,
+     "file": "IMG_0348.PNG",
+     "issue": "SINGLE COLUMN, MEASURED: ink x 860 to x 1660 with no empty band inside it. The block also sits further right than page 83's, which is why a fixed threshold failed — profile the block's own left edge first, then the indents against it."
+    },
+    {
+     "verse": 45,
+     "file": "IMG_0348.PNG",
+     "issue": "อัฏฐะมะมาทิยันติ IS THE DOCTRINAL CLAIM OF THIS STANZA and worth reading carefully: na te bhavaṃ aṭṭhamamādiyanti, 'they do not take up an eighth existence' — the standard statement that a stream-enterer has at most seven more lives. Reproduced as printed; the English states it plainly rather than glossing it away."
+    },
+    {
+     "verse": 40,
+     "file": "IMG_0348.PNG",
+     "issue": "THE TWO CLOSING LINES REPEAT FOUR TIMES EACH ON THIS SHEET — อิทัมปิ สังเฆ ระตะนัง ปะณีตัง at verses 34, 40, 46 and 54, and เอเตนะ สัจเจนะ สุวัตถิ โหตุ. at 35, 41, 47 and 55 — word for word identical every time. Not duplication: every stanza of this sutta closes the same way. Recorded because check_render walks strings in printed order and eight verbatim repeats on one page is exactly the shape that reads as a fault."
+    },
+    {
+     "verse": 34,
+     "file": "IMG_0348.PNG",
+     "issue": "EVERY อิทัมปิ LINE ON THIS SHEET IS FOR THE SAṄGHA, none for the Buddha or the Dhamma, because these stanzas are all in the Saṅgha section. Page 83 had พุทเธ once and ธัมเม twice. Worth stating so the repetition is not mistaken for a copied line."
+    },
+    {
+     "verse": 59,
+     "file": "IMG_0348.PNG",
+     "issue": "THE SHEET RUNS OUT MID-STANZA but verse 59 is a whole printed line, so no […] marker is used — it is the stanza that is unfinished. The entry carries BOTH continuation_of AND continues: true, which is what page 83 was caught missing and what check_batch now enforces."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "ratana-suttam-dutiyam"
+  ],
+  "resume_from_page": 85,
+  "resume_from_file": "IMG_0349.PNG",
+  "resume_from": "ratana-suttam-dutiyam",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, every verse paiboon is empty, and a continuation carries no title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the line-initial cluster mark in ต์ยัสสุ at verse 49. No marked ฬ์ appears on this sheet, so nothing here needed the cluster test page 83 used. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant. It claims verses 34-59 and the entry holds exactly those. Verse 34 is the first verse on the page and the only one carrying a page key; no page turns inside it. No page blocks and no footnote on this sheet.",
+  "notes": "ONE CHANT, ONE SHEET, TWENTY-SIX LINES, the Ratana Sutta's Saṅgha stanzas. Three things for Josh. (1) A MEASURING MISTAKE WORTH RECORDING: the first attempt to find the stanza indents used page 83's absolute x threshold and reported EVERY line as indented, because this block sits further right on the sheet. The indent has to be measured relative to the block's own left edge, not against a fixed number carried from the page before. Re-measured, and four stanza openings came out cleanly at verses 36, 42, 48 and 56. (2) ต์ยัสสุ AT VERSE 49 BEGINS WITH A MARKED CONSONANT — the cluster mark on the very first letter of the line, which has not come up before. (3) THE TWO CLOSING LINES EACH REPEAT FOUR TIMES on this one sheet, verbatim, and all eight are for the Saṅgha. Nothing on this page needs re-photographing."
+ }
+}
