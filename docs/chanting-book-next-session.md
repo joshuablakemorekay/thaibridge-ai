@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
-82 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
+83 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-22 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–82 are in and unbroken**, plus 217–221. **113 chants, 1,465 verses
+- **Pages 1–83 are in and unbroken**, plus 217–221. **113 chants, 1,491 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 78 to 82 were applied 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Page 83 was applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,22 +34,24 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 83, `IMG_0347` — but READ THE NUMBER off the sheet
+## Next: page 84, `IMG_0348` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for nine pages, so page 83 *should* be
-`IMG_0347`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for ten pages, so page 84 *should* be
+`IMG_0348`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**`ratana-suttam-dutiyam` is open at verse 7, and it is NOT a cut line.** Page
-82's last line is whole; it is the SENTENCE that is unfinished. So page 83's
-batch is an ordinary `continuation_of` numbering **from 8**, no `[…]`.
+**`ratana-suttam-dutiyam` is open at verse 33**, with no `[…]` — page 83's last
+line is whole and it is the stanza that carries on. Page 84's batch is a
+`continuation_of` numbering **from 34**, and it needs **both** `continuation_of`
+AND `continues: true` if the sutta still does not finish there. See below.
 
-**It is set SINGLE column** — ink x 680–1380, nothing either side — even though
-both chants above it on the same sheet are two-column. **Do not carry the
-setting over the page turn**; profile page 83's block on its own.
+**Seven or eight stanzas are in of seventeen.** The Ratana Sutta is long; expect
+it to run to page 85 at least, and expect its colophon when it does end — page
+82 proved this book does print them.
 
-**Expect a long sutta.** The Ratana Sutta runs to seventeen stanzas and one is
-in. Its `บทขัด` is already entered as its own chant on page 82.
+**Every stanza opening on page 83 is indented by 90px and marked `para_start`.
+Page 82's are NOT indented and are not marked.** Measure page 84's rather than
+assuming either.
 
 ## Standing rules for every page
 
@@ -72,6 +74,42 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## What page 83 caught — a chant can lose its CONTINUES silently
+
+**A chant that arrives mid-way AND leaves mid-way needs BOTH keys.**
+`continuation_of` tells `apply_batch` where to append; **`continues: true`
+tells it to leave the `‼ CONTINUES` marker in place.** Page 83's batch listed
+the sutta in `batch_status.continues` and left `continues` off the entry, so
+the marker came off and a two-thirds-entered sutta read as finished.
+
+**Nothing caught it, and that is the point.** `check_cut_lines` only fires
+where a line ends in `[…]`, and this line was whole — it was the *sentence*
+that carried on. So the one existing guard on continuation was blind to
+exactly the common case: a chant that continues without a cut line.
+
+**`check_batch` now has `continues agree`**, which checks both directions —
+listed-but-not-declared and declared-but-not-listed. It passes on all 83
+existing batches, so no earlier page has this fault, and it was negative-tested
+both ways before being trusted.
+
+## Raised on page 83 — a letter the photograph cannot show
+
+**`ทัฬ์เหนะ` at verse 30 is recorded with ฬ, and the image did not decide it.**
+It is the marked-ฬ configuration page 76 proved unreadable — a `ฬ` carrying the
+`์` cluster mark loses its ascender in this printing and cannot be told from
+`พ`. The deciding test is page 79's: **`พ์` + `ห` is not a legal Pali cluster**,
+so `พ` gives *dabhena*, which is not a word, while `ฬ` gives *daḷhena* — firm —
+which is what `manasā daḷhena` means.
+
+**This is the first reading in this run settled by something other than the
+photograph**, and it is flagged as such in the data. Every marked `ฬ์` from here
+on needs the book.
+
+**The stanza indents are on page 83 and not on page 82.** Measured on both
+sheets: page 83 indents every stanza opening by 90px, page 82 indents none.
+Each page is reproduced as it prints, so the grouping looks uneven in the data
+— and that unevenness is the book's, not an omission.
 
 ## Raised on page 82 — the first colophon in the whole stretch
 
