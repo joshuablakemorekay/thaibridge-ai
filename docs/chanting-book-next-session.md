@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-84 went in.
+85 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–84 are in and unbroken**, plus 217–221. **113 chants, 1,517 verses
+- **Pages 1–85 are in and unbroken**, plus 217–221. **113 chants, 1,543 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 83 and 84 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 83 to 85 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,23 +34,27 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 85, `IMG_0349` — but READ THE NUMBER off the sheet
+## Next: page 86, `IMG_0350` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for eleven pages, so page 85 *should* be
-`IMG_0349`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for twelve pages, so page 86 *should* be
+`IMG_0350`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**`ratana-suttam-dutiyam` is open at verse 59**, with no `[…]` — page 84's last
-line is whole and it is the stanza that carries on. Page 85's batch numbers
-**from 60**, and needs **both** `continuation_of` and `continues: true` if the
-sutta still does not end there.
+**`ratana-suttam-dutiyam` is open at verse 85** and has now run across FOUR
+sheets — 82, 83, 84, 85. Page 86's batch numbers **from 86**, and needs both
+`continuation_of` and `continues: true` if it still does not end there.
 
-**It has been running for three pages.** Pages 82, 83 and 84 have carried it and
-it is not finished. Expect its colophon when it does end — page 82 proved this
-book prints them.
+**It should end on page 86.** Verses 78–81 and 82–85 are the Buddha and Dhamma
+homage stanzas; the Saṅgha one is missing, so expect
+`สังฆัง นะมัสสามะ สุวัตถิ โหตุ.` and then a colophon. **A reason to expect it,
+not to write it.**
 
-**MEASURE THE INDENT AGAINST THE BLOCK, NOT A FIXED x.** See below; this is the
-mistake page 84 caught.
+**READ THE FOOT OF PAGE 86 FIRST.** Page 85's last line carries a superscript
+**1 with no footnote anywhere on that sheet** — profiled, no rule and no text.
+The note it points at is most likely at the foot of page 86. **Do not pair them
+without seeing it**: footnote numbers restart on every page and the standing
+rule is never to match a marker across a sheet. If page 86 carries a citation,
+say in a check that page 85's marker is probably its, and let Josh decide.
 
 ## Standing rules for every page
 
@@ -73,6 +77,37 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## ⚠️ Page 85 — the ฬ/พ tests disagree for the first time
+
+Verse 74 prints **`อะวิรุพหิฉันทา`**, and this is the most consequential reading
+of the run so far.
+
+**For พ:** the letter is **bare** — no cluster mark — and at 11× beside the `พ`
+of `พีชา` **on the same line** it is identical in shape and height: two humps,
+no ascender at all. Pages 76, 77, 78 and 80 each showed a bare `ฬ` carrying an
+obvious tall ascender at far lower magnification.
+
+**For ฬ:** standard Pali is *avirūḷhi*, "regrowth". The printed form gives
+*avirubhi-*, which is not a word, so page 79's non-word test says the reading is
+wrong. And **the app already holds this identical stanza a second time** — in
+`parittakarana-patha` verse 10 — spelt `อะวิรุฬหิฉันทา`, a reading the list at
+the foot of this file records as **a judgement, not a reading**.
+
+**The page is reproduced as printed**, per the standing rule, so the app now
+holds the word both ways in two chants. `parittakarana-patha` was NOT touched.
+**One look at the book settles both at once**, and the two entries hold the same
+five lines so they can be compared side by side.
+
+The vowel differs too — this page has a short `ุ` where editions have long *ū* —
+and belongs to the same question.
+
+## Page 85 — an orphan footnote marker
+
+The last line carries a superscript **1** and there is **no footnote anywhere on
+the sheet**: profiled the whole foot, no rule and no text between the last verse
+and the page edge. `source_printed` is left OFF rather than guessed. Same shape
+as the orphan across pages 57–59. See the page-86 note above.
 
 ## What page 84 caught — an indent is relative, not absolute
 
@@ -739,6 +774,11 @@ readings from the book: page 23 line 19, อะสัมมุฬโห on page 
 **A missing ascender is not evidence for พ.** That is what page 75 got wrong.
 The presence of an ascender can still say ฬ, as it did for `เวฬุวะเน` on page
 71; its absence says nothing at all. Ask the book.
+
+⚠️ **Page 85 turned one of these the other way.** It prints
+`อะวิรุพหิฉันทา` with a bare `พ` that is indistinguishable from the `พ` beside
+it, where `parittakarana-patha` verse 10 holds the identical stanza with `ฬ`.
+Both are kept as their pages print them; see the page-85 section above.
 
 Words written with ฬ as a **judgement, not a reading**:
 
