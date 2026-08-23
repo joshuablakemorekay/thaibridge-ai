@@ -715,6 +715,45 @@ def check_checks_are_readable(batch: dict) -> list[str]:
     return problems
 
 
+def check_continues_agree(batch: dict) -> list[str]:
+    """`batch_status.continues` and the entries' own `continues` must agree.
+
+    Found on page 83, where they did not. A chant arriving in the middle of
+    itself AND running off the end of the sheet needs BOTH keys: `continuation_of`
+    tells `apply_batch` where to append, and `continues` tells it to leave the
+    ‼ CONTINUES marker in place. The page-83 batch listed the chant in
+    `batch_status.continues` and left `continues` off the entry, so the marker
+    came off and a two-thirds-entered sutta read as finished.
+
+    Nothing caught it. `check_cut_lines` only fires where a line ends in `[…]`,
+    and this chant's last line was whole — it was the SENTENCE that carried on,
+    not the line. So the one existing guard on continuation is blind to exactly
+    the case where a chant continues without a cut line, which is most of them.
+
+    Both directions are checked, because either half alone is a lie about the
+    book: an entry claiming to continue that the status does not list will have
+    no batch sent to complete it, and a status listing a chant whose entry is
+    silent loses the marker Josh greps for.
+    """
+    problems = []
+    listed = set(batch["batch_status"].get("continues", []))
+    declared = {c["id"] for c in batch["chants"] if c.get("continues")}
+
+    for cid in sorted(listed - declared):
+        if any(merge_only(c) for c in batch["chants"] if c.get("id") == cid):
+            continue
+        problems.append(
+            f"{cid}: listed in batch_status.continues but the entry has no "
+            f"'continues': true — apply_batch would take the ‼ CONTINUES "
+            f"marker off and the chant would read as finished")
+    for cid in sorted(declared - listed):
+        problems.append(
+            f"{cid}: the entry says 'continues': true but it is not in "
+            f"batch_status.continues — nothing records that a further batch "
+            f"is owed")
+    return problems
+
+
 CHECKS = (
     ("shape", check_shape),
     ("paiboon drift", check_paiboon),
@@ -730,6 +769,7 @@ CHECKS = (
     ("depth", check_depth),
     ("line breaks agree", check_line_breaks_agree),
     ("cut lines", check_cut_lines),
+    ("continues agree", check_continues_agree),
     ("page blocks", check_blocks),
     ("checks readable", check_checks_are_readable),
     ("corrections reviewable", check_corrections_are_reviewable),
