@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-89 went in.
+90 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–89 are in and unbroken**, plus 217–221. **122 chants, 1,634 verses
+- **Pages 1–90 are in and unbroken**, plus 217–221. **124 chants, 1,662 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 83 to 89 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 83 to 90 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,23 +34,25 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 90, `IMG_0355` — but READ THE NUMBER off the sheet
+## Next: page 91, `IMG_0356` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87, 88 and 89, so page 90
-*should* be `IMG_0355`. **Five more changes are still expected before page
-207**, so keep reading the number off the sheet.
+The offset is **265** since page 86 and has held for 87–90, so page 91 *should*
+be `IMG_0356`. **Five more changes are still expected before page 207.**
 
-**`vattaka-parittam-chattham` is open at verse 5**, with no `[…]` — the row is
-whole and it is the sentence that carries on. Page 90's batch numbers **from 6**
-and needs both `continuation_of` and `continues: true` if it does not end there.
+**`dhajagga-parittam-sattamam` is open at verse 20, and verse 20 is CUT.** Page
+90 ends `…เทวะราชัสสะ ธะชัคคัง […]` with no comma, where verses 14 and 15 each
+end with one. So page 91's batch carries **verse 20 again** with the line whole
+— not verse 21 — and needs both `continuation_of` and `continues: true` if the
+sutta does not end there.
 
-**Verse 5 states the quail chick's helplessness**; page 90 carries what follows
-from it, which is where the act of truth lands and where the speaker becomes
-explicit. The gloss deliberately does not name the speaker yet, because the page
-does not.
+**It is PROSE and each group declares it.** The chant has no chant-level
+`layout` key; verses 1 and 6 each carry `para_layout: 'prose'`. Page 91's first
+group must declare its own.
 
-**Expect a colophon.** Every paritta in this run has closed with one except the
-Mora — see below.
+**Sakka names three banners and page 90 reaches the third.** His own,
+Pajāpati's, and Varuṇa's — with the same promise after each, so verses 11/16
+and 12/17 are already verbatim pairs. Expect the Varuṇa promise, then the
+Buddha correcting Sakka, which is what the sutta is actually for.
 
 ## Standing rules for every page
 
@@ -73,6 +75,42 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## ⚠️⚠️ The ฬ/พ conflict has now happened TWICE — pages 85 and 90
+
+This is no longer a one-off, and it is the most important open question in the
+book.
+
+| page | the page prints | standard Pali | the printed form |
+|---|---|---|---|
+| 85 | `อะวิรุพหิฉันทา` | *avirūḷhi-* | *avirubhi-* — **not a word** |
+| 90 | `โสพะสะ` | *soḷasa* ("sixteen") | *sobasa* — **not a word** |
+
+**Both letters are BARE** — no cluster mark — and both were stacked at high
+magnification against an undoubted `พ` on the same line or the same sheet, and
+found identical: two humps, no ascender. Pages 76, 77, 78 and 80 each showed a
+bare `ฬ` carrying an obvious tall ascender at far lower magnification, so the
+ascender test says `พ` both times.
+
+**But the non-word test (page 79) says `ฬ` both times**, and on page 85 the app
+already holds the identical stanza a second time — `parittakarana-patha` verse
+10 — spelt with `ฬ`.
+
+**Both pages are reproduced as printed.** So either this printer sets *some* `ฬ`
+without its ascender, or the book really does print `พ` in both places. **One
+look at the book settles both at once**, and the two are on facing halves of the
+same run, so it is a single job.
+
+## Page 90 — a citation that looks transposed
+
+The footnote reads `สํ.ส. 15/320-223` — a range running **downward** from 320 to
+223. Read at 4×; the digits are unambiguous. Standard references for the
+Dhajagga Sutta run **15/320-323**, so this looks like a compositor swapping 3
+and 2.
+
+**Reproduced verbatim**, because the book is the authority — but flagged,
+because a wrong citation is a wrong reference in a book about the Dhamma. **One
+of the clearest things on the page to check.**
 
 ## Page 89 — the Mora Paritta closes with NO citation
 
@@ -114,7 +152,7 @@ First colophon in the book that closes a pair. **Worth Josh's eye** — if he
 would rather the Khandha Paritta also carried it, the fix is one key, but the
 page would then show it twice.
 
-## Six titles the contents test cannot see — pages 80, 82, 86, 87, 88, 89
+## Seven titles the contents test cannot see — pages 80, 82, 86–90
 
 This is now a pattern, not four surprises. Each time, the page heading and the
 book's own สารบัญ spell or space a title differently, the **page** is
@@ -130,6 +168,7 @@ cannot see that chant at all, and nothing will warn if its title drifts later.
 | 87 | `บทขัด ขันธะปะริตตัง ฉัททันตะปะริตตัง` (spaced, `ปะริตตัง`) | `บทขัดขันธะปะริตตัง ฉัททันตะปะริตัง` (`ปะริตัง`) |
 | 88 | `บทขัด โมระปะริตตัง` (spaced) | `บทขัดโมระปะริตตัง` |
 | 89 | `บทขัด วัฏฏะกะปะริตตัง` (spaced) | `บทขัดวัฏฏะกะปะริตตัง` |
+| 90 | `บทขัด ธะชัคคะสุตตัง` (spaced) | `บทขัดธะชัคคะสุตตัง` |
 
 Page 87's differs **twice** — the space and a doubled `ต`. Where the page and
 the table disagree, `title_roman` is composed to match the PAGE rather than
