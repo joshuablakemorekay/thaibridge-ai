@@ -24336,7 +24336,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 12; the rest is not in the app yet.
         # ‼ CHECK [IMG_0352.PNG]: english_unverified is set. The book prints
         #   this paritta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -24357,6 +24356,7 @@ CHANTS = [
             'paiboon': '',
             'english': '',
         },
+        'source_printed': 'วิ.จู. 7/11-12 อํ.จตุกก. 21/94-95',
         'verses': [
             # ‼ CHECK [IMG_0352.PNG]: TWO COLUMNS for verses 1 to 8, gutter
             #   measured at x 800-1040 — a third position again on this one
@@ -24471,13 +24471,363 @@ CHANTS = [
             #   with one — so this unit is incomplete and page 88 must
             #   complete it. The chant is listed in batch_status.continues and
             #   carries continues: true.
+            # ‼ COMPLETED FROM p88: this line was cut by the page break and is
+            #   now whole. Was: ปะมาณะวันตานิ […]
+            # ‼ CHECK [IMG_0353.PNG]: THE COMPLETION OF THE CUT UNIT. Page 87
+            #   stopped at ปะมาณะวันตานิ with no comma; this page opens
+            #   สิริงสะปานิ, so the unit is ปะมาณะวันตานิ สิริงสะปานิ, and it
+            #   KEEPS page 87, where its line starts. The completed line
+            #   begins with the partial exactly, which is what check_pages
+            #   tests.
             {
                 'number': 12,
-                'pali': 'ปะมาณะวันตานิ […]',
-                'pali_roman': 'Pamāṇavantāni […]',
+                'pali': 'ปะมาณะวันตานิ สิริงสะปานิ,',
+                'pali_roman': 'Pamāṇavantāni siriṃsapāni,',
                 'thai': '',
                 'paiboon': '',
-                'english': 'measurable are […]',
+                'english': 'measurable are the creeping things —',
+            },
+            # ‼ CHECK [IMG_0353.PNG]: PROSE, MEASURED: ink x 280-1840 with no
+            #   gutter anywhere across all three printed lines. This continues
+            #   the prose group page 87 opened at verse 9, so nothing here re-
+            #   declares para_layout — the group already carries it.
+            {
+                'number': 13,
+                'page': 88,
+                'pali': 'อะหิ วิจฉิกา สะตะปะที อุณณะนาภี,',
+                'pali_roman': 'Ahi vicchikā satapadī uṇṇanābhī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'snakes, scorpions, centipedes, spiders,',
+            },
+            {
+                'number': 14,
+                'pali': 'สะระพู มูสิกา.',
+                'pali_roman': 'Sarabū mūsikā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'geckos and mice.',
+            },
+            {
+                'number': 15,
+                'pali': 'กะตา เม รักขา,',
+                'pali_roman': 'Katā me rakkhā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have made my protection,',
+            },
+            {
+                'number': 16,
+                'pali': 'กะตา เม ปะริตตา,',
+                'pali_roman': 'Katā me parittā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have made my paritta;',
+            },
+            {
+                'number': 17,
+                'pali': 'ปะฏิกกะมันตุ ภูตานิ.',
+                'pali_roman': 'Paṭikkamantu bhūtāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let the creatures depart.',
+            },
+            {
+                'number': 18,
+                'pali': 'โสหัง นะโม ภะคะวะโต.',
+                'pali_roman': 'Sohaṃ namo bhagavato.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I pay homage to the Blessed One,',
+            },
+            # ‼ CHECK [IMG_0353.PNG]: A CANONICAL CITATION WITH TWO REFERENCES
+            #   AND AN UNUSUAL ABBREVIATION. The footnote reads วิ.จู. 7/11-12
+            #   อํ.จตุกก. 21/94-95 — Vinaya Cūḷavagga and Aṅguttara Catukka-
+            #   nipāta. Note อํ with the NIKKHAHIT (U+0E4D) over the อ, not an
+            #   ordinary vowel mark; read at 4.5x. Reproduced verbatim as one
+            #   string, neither split nor expanded.
+            {
+                'number': 19,
+                'pali': 'นะโม สัตตันนัง สัมมาสัมพุทธานัง.',
+                'pali_roman': 'Namo sattannaṃ sammāsambuddhānaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to the seven Perfectly Awakened Ones.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0353.PNG]: ‼ ONE COLOPHON CLOSES TWO CHANTS. The line
+        #   printed centred under verse 8 reads ขันธะปะริตตัง ฉัททันตะปะริตตัง
+        #   นิฏฐิตัง. — naming BOTH the Khandha Paritta, which ended at the
+        #   top of this same sheet, and the Chaddanta Paritta above it. It is
+        #   recorded as the CHADDANTA's `closing`, because that is the chant
+        #   it directly follows, and the Khandha Paritta is deliberately left
+        #   with NO closing of its own even though the line names it.
+        #   Attaching it to both would print it twice on one page. Worth
+        #   Josh's eye: it is the first colophon in the book that closes a
+        #   pair.
+        # ‼ CHECK [IMG_0353.PNG]: english_unverified is set. The book prints
+        #   this paritta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition. It tells a story out of the Jātakas in eight lines, and
+        #   the pronouns are compressed even for this book — the gloss names
+        #   the hunter and the elephant where the Pali only implies them, and
+        #   that is the gloss interpreting rather than the page saying so.
+        'id': 'chaddanta-parittam',
+        'title_thai': 'ฉัททันตะปะริตตัง',
+        'title_pali': 'Chaddantaparittaṃ',
+        'title_roman': '',
+        'title_english': 'The Chaddanta Paritta',
+        'page_start': 88,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'ขันธะปะริตตัง ฉัททันตะปะริตตัง นิฏฐิตัง.',
+            'pali_roman': 'Khandhaparittaṃ chaddantaparittaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Khandha Paritta and the Chaddanta Paritta.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0353.PNG]: SINGLE COLUMN, MEASURED: ink x 660-1400
+            #   with nothing either side. Worth stating because the chant
+            #   below it on this sheet IS two-column, and the one below that
+            #   is single again — three settings on one page.
+            {
+                'number': 1,
+                'page': 88,
+                'pali': 'วะธิสสะเมนันติ ปะรามะสันโต,',
+                'pali_roman': 'Vadhissamenanti parāmasanto,',
+                'thai': '',
+                'paiboon': '',
+                'english': "As he touched him, thinking 'I shall kill him',",
+            },
+            {
+                'number': 2,
+                'pali': 'กาสาวะมัททักขิ ธะชัง อิสีนัง,',
+                'pali_roman': 'Kāsāvamaddakkhi dhajaṃ isīnaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he caught sight of the ochre robe, the banner of the seers;',
+            },
+            {
+                'number': 3,
+                'pali': 'ทุกเขนะ ผุฏฐัสสุทะปาทิ สัญญา,',
+                'pali_roman': 'Dukkhena phuṭṭhassudapādi saññā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and though struck with pain, a thought arose in him —',
+            },
+            {
+                'number': 4,
+                'pali': 'อะระหัทธะโช สัพภิ อะวัชฌะรูโป,',
+                'pali_roman': 'Arahaddhajo sabbhi avajjharūpo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the banner of the arahants is not to be slain by the good.',
+            },
+            # ‼ CHECK [IMG_0353.PNG]: พ์ยะถิโตปิ carries the พ์ cluster mark,
+            #   romanised byathitopi with the mark dropped. Standard editions
+            #   have byathito, so the reading agrees once the mark is read as
+            #   a cluster.
+            {
+                'number': 5,
+                'pali': 'สัลเลนะ วิทโธ พ์ยะถิโตปิ สันโต,',
+                'pali_roman': 'Sallena viddho byathitopi santo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Pierced by the dart and afflicted though he was,',
+            },
+            {
+                'number': 6,
+                'pali': 'กาสาวะวัตถัมหิ มะนัง นะ ทุสสะยิ,',
+                'pali_roman': 'Kāsāvavatthamhi manaṃ na dussayi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he did not let his mind be corrupted towards the ochre cloth.',
+            },
+            {
+                'number': 7,
+                'pali': 'สะเจ อิมัง นาคะวะเรนะ สัจจัง,',
+                'pali_roman': 'Sace imaṃ nāgavarena saccaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': "If this be truth, by the noble elephant's word,",
+            },
+            # ‼ CHECK [IMG_0353.PNG]: พาละมิคา IS พ AND ล, NOT ฬ. Read at
+            #   2.6x: the first letter is พ, giving bālamigā, and the third is
+            #   plain ล with no ascender. Recorded because the photo map lists
+            #   วาฬะมิคานิ from page 29 among the words written with ฬ as a
+            #   judgement, and this is a DIFFERENT word in a different chant —
+            #   bālamigā, 'young beasts', not vāḷamigā, 'wild beasts'. They
+            #   should not be reconciled with each other.
+            {
+                'number': 8,
+                'pali': 'มา มัง วะเน พาละมิคา อะคัญฉุนติ.',
+                'pali_roman': 'Mā maṃ vane bālamigā agañchunti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the beasts of the forest not come upon me.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0353.PNG]: A FIFTH TITLE THE CONTENTS TEST CANNOT SEE.
+        #   The page prints บทขัด โมระปะริตตัง with a SPACE after บทขัด; the
+        #   สารบัญ has บทขัดโมระปะริตตัง without one. Same as pages 82, 86 and
+        #   87. The page is reproduced, so title_thai is not a key in
+        #   _CONTENTS_ROMAN — but the romanisation is unaffected by the space,
+        #   so the contents' value is used unchanged.
+        # ‼ CHECK [IMG_0353.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-mora-parittam',
+        'title_thai': 'บทขัด โมระปะริตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt moo-rá-bpà-rít-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Mora Paritta',
+        'page_start': 88,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0353.PNG]: TWO COLUMNS, gutter measured at x
+            #   800-1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   ปูเรนตัมโพธิสัมภาเร + right นิพพัตตัง โมระโยนิยัง.
+            {
+                'number': 1,
+                'page': 88,
+                'pali': 'ปูเรนตัมโพธิสัมภาเร นิพพัตตัง โมระโยนิยัง',
+                'pali_roman': 'Pūrentambodhisambhāre nibbattaṃ morayoniyaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Born in the womb of a peacock while fulfilling the requisites of awakening,',
+            },
+            {
+                'number': 2,
+                'pali': 'เยนะ สังวิหิตารักขัง มะหาสัตตัง วะเนจะรา',
+                'pali_roman': 'Yena saṃvihitārakkhaṃ mahāsattaṃ vanecarā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Great Being, whose protection was arranged by it, the forest-dwellers',
+            },
+            {
+                'number': 3,
+                'pali': 'จิรัสสัง วายะมันตาปิ เนวะ สักขิงสุ คัณหิตุง',
+                'pali_roman': 'Cirassaṃ vāyamantāpi neva sakkhiṃsu gaṇhituṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'though they strove for a long while, were never able to catch;',
+            },
+            {
+                'number': 4,
+                'pali': 'พ์รัห์มะมันตันติ อักขาตัง ปะริตตันตัมภะณามะ เห.',
+                'pali_roman': 'Brahmamantanti akkhātaṃ parittantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'declared to be a Brahma-spell: that paritta let us now recite.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0353.PNG]: english_unverified is set. The book prints
+        #   this paritta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'mora-parittam-pancamam',
+        'title_thai': 'โมระปะริตตัง ปัญจะมัง',
+        'title_pali': 'Moraparittaṃ pañcamaṃ',
+        'title_roman': '',
+        'title_english': 'The Mora Paritta, the Fifth',
+        'page_start': 88,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0353.PNG]: SINGLE COLUMN, MEASURED: ink x 320-1560
+            #   with nothing either side — so these five lines are NOT two-
+            #   column even though the บทขัด directly above them on this sheet
+            #   is. Three settings on this one page: prose, single column, two
+            #   column, single column again.
+            # ‼ CHECK [IMG_0353.PNG]: จักขุมา HERE IS THE SUN, not the Buddha.
+            #   The same word is a title of the Buddha at page 78's
+            #   Namakārasiddhi verse 1, and the English differs accordingly.
+            #   Recorded so the two glosses are not read as inconsistent.
+            {
+                'number': 1,
+                'page': 88,
+                'pali': 'อุเทตะยัญจักขุมา เอกะราชา',
+                'pali_roman': 'Udetayañcakkhumā ekarājā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here he rises, the one with vision, the sole king,',
+            },
+            {
+                'number': 2,
+                'pali': 'หะริสสะวัณโณ ปะฐะวิปปะภาโส',
+                'pali_roman': 'Harissavaṇṇo paṭhavippabhāso',
+                'thai': '',
+                'paiboon': '',
+                'english': 'golden-hued, illumining the earth;',
+            },
+            {
+                'number': 3,
+                'pali': 'ตัง ตัง นะมัสสามิ หะริสสะวัณณัง ปะฐะวิปปะภาสัง',
+                'pali_roman': 'Taṃ taṃ namassāmi harissavaṇṇaṃ paṭhavippabhāsaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'him I salute, the golden-hued, the illuminer of the earth —',
+            },
+            {
+                'number': 4,
+                'pali': 'ตะยัชชะ คุตตา วิหะเรมุ ทิวะสัง',
+                'pali_roman': 'Tayajja guttā viharemu divasaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'guarded by you this day, may we dwell through the daylight.',
+            },
+            # ‼ CHECK [IMG_0353.PNG]: THE SHEET RUNS OUT MID-SENTENCE but
+            #   verse 5 is a whole printed line ending สัพพะธัมเม with no
+            #   punctuation, so no […] marker is used — it is the sentence
+            #   that carries on, not the line. Page 89 numbers from 6.
+            # ‼ CHECK [IMG_0353.PNG]: พ์ราห์มะณา carries TWO cluster marks in
+            #   one word, on the พ and on the ห, romanised brāhmaṇā with both
+            #   dropped — the same treatment as page 87's พ์รัห์มะเมตัง.
+            {
+                'number': 5,
+                'pali': 'เย พ์ราห์มะณา เวทะคุ สัพพะธัมเม',
+                'pali_roman': 'Ye brāhmaṇā vedagu sabbadhamme',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those brahmins who are masters of knowledge in all things —',
             },
         ],
     },

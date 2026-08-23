@@ -1,0 +1,530 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 4,
+  "manifest": [
+   "khandha-parittam-catuttham",
+   "chaddanta-parittam",
+   "bot-khat-mora-parittam",
+   "mora-parittam-pancamam"
+  ],
+  "pages": [
+   {
+    "page": 88,
+    "file": "IMG_0353.PNG",
+    "script": "thai",
+    "chant": "khandha-parittam-catuttham",
+    "verses": "12-19",
+    "starts_here": false,
+    "note": "The top of the sheet: three lines of justified PROSE filling the measure — ink x 280-1840, no gutter — completing the Khandha Paritta. The first words complete the unit page 87 cut, so verse 12 is COMPLETED rather than added and keeps page 87 where its line starts. Verse 19 carries a superscript 1 and the footnote at the foot of this sheet is a canonical citation with two references."
+   },
+   {
+    "page": 88,
+    "file": "IMG_0353.PNG",
+    "script": "thai",
+    "chant": "chaddanta-parittam",
+    "verses": "1-8",
+    "starts_here": true,
+    "note": "A centred bold title and eight SINGLE-column centred lines — ink x 660-1400, no gutter. Beneath them a colophon that names BOTH parittas at once: ขันธะปะริตตัง ฉัททันตะปะริตตัง นิฏฐิตัง. The chant starts and ends here."
+   },
+   {
+    "page": 88,
+    "file": "IMG_0353.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-mora-parittam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "A centred bold title and four TWO-COLUMN rows, gutter measured at x 800-1020. The chant starts and ends here."
+   },
+   {
+    "page": 88,
+    "file": "IMG_0353.PNG",
+    "script": "thai",
+    "chant": "mora-parittam-pancamam",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "The foot of the sheet: a centred bold title and five SINGLE-column lines — ink x 320-1560, no gutter, so not two-column even though the chant directly above it is. The sheet runs out mid-sentence and the chant carries on to page 89."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "khandha-parittam-catuttham",
+   "continuation_of": "khandha-parittam-catuttham",
+   "source_printed": "วิ.จู. 7/11-12 อํ.จตุกก. 21/94-95",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Eight, verses 12 to 19. Verse 12 is the COMPLETION of the unit page 87 cut, carrying the same number with the line whole; the rest are split at the printed commas and full stops. All continue the prose group page 87 opened at verse 9, so none carries para_start — the group's para_layout 'prose' is already declared there.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0353.PNG, page 88, read off the top centre of the sheet — the offset of 265 holds. The chant ENDS on this page. Verse 12 carries NO page key because its line starts on page 87; verse 13 is the first verse ON this page and carries 88."
+   },
+   "verses": [
+    {
+     "number": 12,
+     "pali": "ปะมาณะวันตานิ สิริงสะปานิ,",
+     "pali_roman": "Pamāṇavantāni siriṃsapāni,",
+     "thai": "",
+     "paiboon": "",
+     "english": "measurable are the creeping things —"
+    },
+    {
+     "number": 13,
+     "pali": "อะหิ วิจฉิกา สะตะปะที อุณณะนาภี,",
+     "pali_roman": "Ahi vicchikā satapadī uṇṇanābhī,",
+     "thai": "",
+     "paiboon": "",
+     "english": "snakes, scorpions, centipedes, spiders,",
+     "page": 88
+    },
+    {
+     "number": 14,
+     "pali": "สะระพู มูสิกา.",
+     "pali_roman": "Sarabū mūsikā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "geckos and mice."
+    },
+    {
+     "number": 15,
+     "pali": "กะตา เม รักขา,",
+     "pali_roman": "Katā me rakkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "I have made my protection,"
+    },
+    {
+     "number": 16,
+     "pali": "กะตา เม ปะริตตา,",
+     "pali_roman": "Katā me parittā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "I have made my paritta;"
+    },
+    {
+     "number": 17,
+     "pali": "ปะฏิกกะมันตุ ภูตานิ.",
+     "pali_roman": "Paṭikkamantu bhūtāni.",
+     "thai": "",
+     "paiboon": "",
+     "english": "let the creatures depart."
+    },
+    {
+     "number": 18,
+     "pali": "โสหัง นะโม ภะคะวะโต.",
+     "pali_roman": "Sohaṃ namo bhagavato.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I pay homage to the Blessed One,"
+    },
+    {
+     "number": 19,
+     "pali": "นะโม สัตตันนัง สัมมาสัมพุทธานัง.",
+     "pali_roman": "Namo sattannaṃ sammāsambuddhānaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "homage to the seven Perfectly Awakened Ones."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สิริงสะปะ",
+     "pali_roman": "siriṃsapa",
+     "meaning": "a creeping thing. The general word the list of specific creatures unpacks"
+    },
+    {
+     "pali": "อุณณะนาภี",
+     "pali_roman": "uṇṇanābhī",
+     "meaning": "a spider — literally 'wool-navel', for the thread it spins from its belly"
+    },
+    {
+     "pali": "สะระพู",
+     "pali_roman": "sarabū",
+     "meaning": "a house lizard or gecko. Named alongside mice as an ordinary household danger, not a wild one"
+    },
+    {
+     "pali": "สัตตันนัง สัมมาสัมพุทธานัง",
+     "pali_roman": "sattannaṃ sammāsambuddhānaṃ",
+     "meaning": "the seven Perfectly Awakened Ones — Vipassī to Gotama, the seven Buddhas of this and previous aeons"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 12,
+     "file": "IMG_0353.PNG",
+     "issue": "THE COMPLETION OF THE CUT UNIT. Page 87 stopped at ปะมาณะวันตานิ with no comma; this page opens สิริงสะปานิ, so the unit is ปะมาณะวันตานิ สิริงสะปานิ, and it KEEPS page 87, where its line starts. The completed line begins with the partial exactly, which is what check_pages tests."
+    },
+    {
+     "verse": 19,
+     "file": "IMG_0353.PNG",
+     "issue": "A CANONICAL CITATION WITH TWO REFERENCES AND AN UNUSUAL ABBREVIATION. The footnote reads วิ.จู. 7/11-12 อํ.จตุกก. 21/94-95 — Vinaya Cūḷavagga and Aṅguttara Catukka-nipāta. Note อํ with the NIKKHAHIT (U+0E4D) over the อ, not an ordinary vowel mark; read at 4.5x. Reproduced verbatim as one string, neither split nor expanded."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0353.PNG",
+     "issue": "PROSE, MEASURED: ink x 280-1840 with no gutter anywhere across all three printed lines. This continues the prose group page 87 opened at verse 9, so nothing here re-declares para_layout — the group already carries it."
+    }
+   ]
+  },
+  {
+   "id": "chaddanta-parittam",
+   "closing": {
+    "pali": "ขันธะปะริตตัง ฉัททันตะปะริตตัง นิฏฐิตัง.",
+    "pali_roman": "Khandhaparittaṃ chaddantaparittaṃ niṭṭhitaṃ.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here end the Khandha Paritta and the Chaddanta Paritta."
+   },
+   "working_notes": {
+    "invitation": "absent, and none written. The บทขัด that introduces this paritta is on page 87, shared with the Khandha Paritta.",
+    "units": "Eight, one per printed line. Single column, so no pairing was needed and none was made.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_pali is the contents' value, which the transliteration script independently reproduces.",
+    "pages": "IMG_0353.PNG, page 88. Title and all eight lines are on this page; the chant starts and ends here."
+   },
+   "title_thai": "ฉัททันตะปะริตตัง",
+   "title_pali": "Chaddantaparittaṃ",
+   "title_roman": "",
+   "title_english": "The Chaddanta Paritta",
+   "page_start": 88,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "วะธิสสะเมนันติ ปะรามะสันโต,",
+     "pali_roman": "Vadhissamenanti parāmasanto,",
+     "thai": "",
+     "paiboon": "",
+     "english": "As he touched him, thinking 'I shall kill him',",
+     "page": 88
+    },
+    {
+     "number": 2,
+     "pali": "กาสาวะมัททักขิ ธะชัง อิสีนัง,",
+     "pali_roman": "Kāsāvamaddakkhi dhajaṃ isīnaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "he caught sight of the ochre robe, the banner of the seers;"
+    },
+    {
+     "number": 3,
+     "pali": "ทุกเขนะ ผุฏฐัสสุทะปาทิ สัญญา,",
+     "pali_roman": "Dukkhena phuṭṭhassudapādi saññā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and though struck with pain, a thought arose in him —"
+    },
+    {
+     "number": 4,
+     "pali": "อะระหัทธะโช สัพภิ อะวัชฌะรูโป,",
+     "pali_roman": "Arahaddhajo sabbhi avajjharūpo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "the banner of the arahants is not to be slain by the good."
+    },
+    {
+     "number": 5,
+     "pali": "สัลเลนะ วิทโธ พ์ยะถิโตปิ สันโต,",
+     "pali_roman": "Sallena viddho byathitopi santo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Pierced by the dart and afflicted though he was,"
+    },
+    {
+     "number": 6,
+     "pali": "กาสาวะวัตถัมหิ มะนัง นะ ทุสสะยิ,",
+     "pali_roman": "Kāsāvavatthamhi manaṃ na dussayi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "he did not let his mind be corrupted towards the ochre cloth."
+    },
+    {
+     "number": 7,
+     "pali": "สะเจ อิมัง นาคะวะเรนะ สัจจัง,",
+     "pali_roman": "Sace imaṃ nāgavarena saccaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "If this be truth, by the noble elephant's word,"
+    },
+    {
+     "number": 8,
+     "pali": "มา มัง วะเน พาละมิคา อะคัญฉุนติ.",
+     "pali_roman": "Mā maṃ vane bālamigā agañchunti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the beasts of the forest not come upon me."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "กาสาวะ",
+     "pali_roman": "kāsāva",
+     "meaning": "the ochre robe. The whole paritta turns on the hunter wearing it and the elephant refusing to strike it"
+    },
+    {
+     "pali": "อะระหัทธะชะ",
+     "pali_roman": "arahaddhaja",
+     "meaning": "the banner of the arahants — the robe seen as a standard, not as cloth"
+    },
+    {
+     "pali": "สัลละ",
+     "pali_roman": "salla",
+     "meaning": "a dart or arrow. The Bodhisatta is pierced by it and still does not let his mind turn"
+    },
+    {
+     "pali": "สัจจะกิริยา",
+     "pali_roman": "saccakiriyā",
+     "meaning": "an act of truth — the form verses 7 and 8 take: if this is true, then let this follow"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0353.PNG",
+     "issue": "‼ ONE COLOPHON CLOSES TWO CHANTS. The line printed centred under verse 8 reads ขันธะปะริตตัง ฉัททันตะปะริตตัง นิฏฐิตัง. — naming BOTH the Khandha Paritta, which ended at the top of this same sheet, and the Chaddanta Paritta above it. It is recorded as the CHADDANTA's `closing`, because that is the chant it directly follows, and the Khandha Paritta is deliberately left with NO closing of its own even though the line names it. Attaching it to both would print it twice on one page. Worth Josh's eye: it is the first colophon in the book that closes a pair."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0353.PNG",
+     "issue": "พาละมิคา IS พ AND ล, NOT ฬ. Read at 2.6x: the first letter is พ, giving bālamigā, and the third is plain ล with no ascender. Recorded because the photo map lists วาฬะมิคานิ from page 29 among the words written with ฬ as a judgement, and this is a DIFFERENT word in a different chant — bālamigā, 'young beasts', not vāḷamigā, 'wild beasts'. They should not be reconciled with each other."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0353.PNG",
+     "issue": "พ์ยะถิโตปิ carries the พ์ cluster mark, romanised byathitopi with the mark dropped. Standard editions have byathito, so the reading agrees once the mark is read as a cluster."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0353.PNG",
+     "issue": "SINGLE COLUMN, MEASURED: ink x 660-1400 with nothing either side. Worth stating because the chant below it on this sheet IS two-column, and the one below that is single again — three settings on one page."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0353.PNG",
+     "issue": "english_unverified is set. The book prints this paritta in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition. It tells a story out of the Jātakas in eight lines, and the pronouns are compressed even for this book — the gloss names the hunter and the elephant where the Pali only implies them, and that is the gloss interpreting rather than the page saying so."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-mora-parittam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Four, one per two-column row, read ACROSS. One group; the chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is the contents' value; the SPACING of title_thai follows the page, which differs from the contents by one space.",
+    "pages": "IMG_0353.PNG, page 88. Title and all four rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด โมระปะริตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt moo-rá-bpà-rít-dtaŋ",
+   "title_english": "The Prefatory Verse for the Mora Paritta",
+   "page_start": 88,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ปูเรนตัมโพธิสัมภาเร นิพพัตตัง โมระโยนิยัง",
+     "pali_roman": "Pūrentambodhisambhāre nibbattaṃ morayoniyaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Born in the womb of a peacock while fulfilling the requisites of awakening,",
+     "page": 88
+    },
+    {
+     "number": 2,
+     "pali": "เยนะ สังวิหิตารักขัง มะหาสัตตัง วะเนจะรา",
+     "pali_roman": "Yena saṃvihitārakkhaṃ mahāsattaṃ vanecarā",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Great Being, whose protection was arranged by it, the forest-dwellers"
+    },
+    {
+     "number": 3,
+     "pali": "จิรัสสัง วายะมันตาปิ เนวะ สักขิงสุ คัณหิตุง",
+     "pali_roman": "Cirassaṃ vāyamantāpi neva sakkhiṃsu gaṇhituṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "though they strove for a long while, were never able to catch;"
+    },
+    {
+     "number": 4,
+     "pali": "พ์รัห์มะมันตันติ อักขาตัง ปะริตตันตัมภะณามะ เห.",
+     "pali_roman": "Brahmamantanti akkhātaṃ parittantambhaṇāma he.",
+     "thai": "",
+     "paiboon": "",
+     "english": "declared to be a Brahma-spell: that paritta let us now recite."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "โพธิสัมภาระ",
+     "pali_roman": "bodhisambhāra",
+     "meaning": "the requisites of awakening — the perfections a Bodhisatta accumulates over many lives"
+    },
+    {
+     "pali": "โมระโยนิ",
+     "pali_roman": "morayoni",
+     "meaning": "the peacock womb; birth as a peacock. The Bodhisatta's form in this Jātaka"
+    },
+    {
+     "pali": "วะเนจะระ",
+     "pali_roman": "vanecara",
+     "meaning": "forest-dweller — the hunters who tried for years to trap him and could not"
+    },
+    {
+     "pali": "พ์รัห์มะมันตะ",
+     "pali_roman": "brahmamanta",
+     "meaning": "a Brahma-spell; a supreme charm. What the paritta itself is called"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0353.PNG",
+     "issue": "A FIFTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด โมระปะริตตัง with a SPACE after บทขัด; the สารบัญ has บทขัดโมระปะริตตัง without one. Same as pages 82, 86 and 87. The page is reproduced, so title_thai is not a key in _CONTENTS_ROMAN — but the romanisation is unaffected by the space, so the contents' value is used unchanged."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0353.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 800-1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left ปูเรนตัมโพธิสัมภาเร + right นิพพัตตัง โมระโยนิยัง."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0353.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "mora-parittam-pancamam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. The บทขัด that introduces this paritta is its own chant directly above it on this page.",
+    "units": "Five, one per printed line. Single column, so no pairing was needed and none was made.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_pali is the contents' value, which the transliteration script independently reproduces.",
+    "pages": "IMG_0353.PNG, page 88. The title is on this page so page_start is 88 and verse 1 carries the page key. The chant runs off the foot of the sheet and is picked up on page 89."
+   },
+   "title_thai": "โมระปะริตตัง ปัญจะมัง",
+   "title_pali": "Moraparittaṃ pañcamaṃ",
+   "title_roman": "",
+   "title_english": "The Mora Paritta, the Fifth",
+   "page_start": 88,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อุเทตะยัญจักขุมา เอกะราชา",
+     "pali_roman": "Udetayañcakkhumā ekarājā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Here he rises, the one with vision, the sole king,",
+     "page": 88
+    },
+    {
+     "number": 2,
+     "pali": "หะริสสะวัณโณ ปะฐะวิปปะภาโส",
+     "pali_roman": "Harissavaṇṇo paṭhavippabhāso",
+     "thai": "",
+     "paiboon": "",
+     "english": "golden-hued, illumining the earth;"
+    },
+    {
+     "number": 3,
+     "pali": "ตัง ตัง นะมัสสามิ หะริสสะวัณณัง ปะฐะวิปปะภาสัง",
+     "pali_roman": "Taṃ taṃ namassāmi harissavaṇṇaṃ paṭhavippabhāsaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "him I salute, the golden-hued, the illuminer of the earth —"
+    },
+    {
+     "number": 4,
+     "pali": "ตะยัชชะ คุตตา วิหะเรมุ ทิวะสัง",
+     "pali_roman": "Tayajja guttā viharemu divasaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "guarded by you this day, may we dwell through the daylight."
+    },
+    {
+     "number": 5,
+     "pali": "เย พ์ราห์มะณา เวทะคุ สัพพะธัมเม",
+     "pali_roman": "Ye brāhmaṇā vedagu sabbadhamme",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those brahmins who are masters of knowledge in all things —"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "จักขุมา",
+     "pali_roman": "cakkhumā",
+     "meaning": "the one with vision. Here the SUN, saluted at its rising — not the Buddha, as the same word was on page 78"
+    },
+    {
+     "pali": "เอกะราชา",
+     "pali_roman": "ekarājā",
+     "meaning": "the sole king. A title of the sun in this paritta"
+    },
+    {
+     "pali": "หะริสสะวัณณะ",
+     "pali_roman": "harissavaṇṇa",
+     "meaning": "golden-hued; the colour the sun is saluted by, twice in three lines"
+    },
+    {
+     "pali": "เวทะคู",
+     "pali_roman": "vedagū",
+     "meaning": "one who has gone to the end of knowledge; a master of the Vedas, and by extension of what is truly to be known"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0353.PNG",
+     "issue": "SINGLE COLUMN, MEASURED: ink x 320-1560 with nothing either side — so these five lines are NOT two-column even though the บทขัด directly above them on this sheet is. Three settings on this one page: prose, single column, two column, single column again."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0353.PNG",
+     "issue": "จักขุมา HERE IS THE SUN, not the Buddha. The same word is a title of the Buddha at page 78's Namakārasiddhi verse 1, and the English differs accordingly. Recorded so the two glosses are not read as inconsistent."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0353.PNG",
+     "issue": "THE SHEET RUNS OUT MID-SENTENCE but verse 5 is a whole printed line ending สัพพะธัมเม with no punctuation, so no […] marker is used — it is the sentence that carries on, not the line. Page 89 numbers from 6."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0353.PNG",
+     "issue": "พ์ราห์มะณา carries TWO cluster marks in one word, on the พ and on the ห, romanised brāhmaṇā with both dropped — the same treatment as page 87's พ์รัห์มะเมตัง."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0353.PNG",
+     "issue": "english_unverified is set. The book prints this paritta in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "khandha-parittam-catuttham",
+   "chaddanta-parittam",
+   "bot-khat-mora-parittam"
+  ],
+  "not_started": [],
+  "continues": [
+   "mora-parittam-pancamam"
+  ],
+  "resume_from_page": 89,
+  "resume_from_file": "IMG_0354.PNG",
+  "resume_from": "mora-parittam-pancamam",
+  "unreadable": [],
+  "paiboon_scan": "clean. The page prints no Thai translation, so every verse paiboon is empty, and the only Paiboon+ in the batch is one title_roman taken from CONTENTS. Scanned every field for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in พ์ยะถิโตปิ, พ์รัห์มะมันตันติ and พ์ราห์มะณา, and the NIKKHAHIT in the citation's อํ. No ฬ appears anywhere on this sheet — พาละมิคา at verse 8 of the Chaddanta is พ and plain ล, checked at 2.6x, and is a different word from page 29's วาฬะมิคานิ. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. Four rows for one page, one per chant, in the order they appear down the sheet. Each row's verse range matches its entry exactly — 12-19, 1-8, 1-4, 1-5 — no verse is orphaned and none is claimed twice. Verse 12 deliberately carries NO page key: its line starts on page 87. Every other chant's first verse on this page carries 88. No page blocks: the only footnote is a canonical citation and belongs on the Khandha Paritta as source_printed.",
+  "notes": "FOUR CHANTS ON ONE SHEET AND FOUR DIFFERENT SETTINGS — prose, centred single column, two column, centred single column again. Three things for Josh. (1) ‼ ONE COLOPHON CLOSES TWO CHANTS: ขันธะปะริตตัง ฉัททันตะปะริตตัง นิฏฐิตัง. names both parittas, and is recorded on the CHADDANTA because that is the chant it directly follows. The Khandha Paritta is left with no closing of its own even though the line names it — attaching it to both would print it twice on one page. First colophon in the book that closes a pair. (2) A CITATION WITH AN UNUSUAL ABBREVIATION — อํ with the nikkhahit (U+0E4D), read at 4.5x, reproduced verbatim. (3) A FIFTH TITLE THE CONTENTS TEST CANNOT SEE, บทขัด โมระปะริตตัง spaced on the page and unspaced in the สารบัญ. Nothing needs re-photographing."
+ }
+}
