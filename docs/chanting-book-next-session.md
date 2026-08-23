@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-83 went in.
+84 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–83 are in and unbroken**, plus 217–221. **113 chants, 1,491 verses
+- **Pages 1–84 are in and unbroken**, plus 217–221. **113 chants, 1,517 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Page 83 was applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 83 and 84 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,24 +34,23 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 84, `IMG_0348` — but READ THE NUMBER off the sheet
+## Next: page 85, `IMG_0349` — but READ THE NUMBER off the sheet
 
-The offset of 264 has now held for ten pages, so page 84 *should* be
-`IMG_0348`. Six more changes are still predicted before page 207, so read the
+The offset of 264 has now held for eleven pages, so page 85 *should* be
+`IMG_0349`. Six more changes are still predicted before page 207, so read the
 top-centre number.
 
-**`ratana-suttam-dutiyam` is open at verse 33**, with no `[…]` — page 83's last
-line is whole and it is the stanza that carries on. Page 84's batch is a
-`continuation_of` numbering **from 34**, and it needs **both** `continuation_of`
-AND `continues: true` if the sutta still does not finish there. See below.
+**`ratana-suttam-dutiyam` is open at verse 59**, with no `[…]` — page 84's last
+line is whole and it is the stanza that carries on. Page 85's batch numbers
+**from 60**, and needs **both** `continuation_of` and `continues: true` if the
+sutta still does not end there.
 
-**Seven or eight stanzas are in of seventeen.** The Ratana Sutta is long; expect
-it to run to page 85 at least, and expect its colophon when it does end — page
-82 proved this book does print them.
+**It has been running for three pages.** Pages 82, 83 and 84 have carried it and
+it is not finished. Expect its colophon when it does end — page 82 proved this
+book prints them.
 
-**Every stanza opening on page 83 is indented by 90px and marked `para_start`.
-Page 82's are NOT indented and are not marked.** Measure page 84's rather than
-assuming either.
+**MEASURE THE INDENT AGAINST THE BLOCK, NOT A FIXED x.** See below; this is the
+mistake page 84 caught.
 
 ## Standing rules for every page
 
@@ -74,6 +73,23 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## What page 84 caught — an indent is relative, not absolute
+
+The first attempt to find page 84's stanza openings reused page 83's absolute
+threshold (`x >= 760`) and reported **every one of the twenty-six lines as
+indented**, because this sheet's whole text block sits further right than the
+one before it.
+
+**The rule: profile the block's own left edge first, then measure the indent
+against that.** Page 83's body starts at x 630–640 and indents to x 720; page
+84's starts at x 870–880 and indents to x 960. Both are the same ~90px indent
+and neither shares a threshold with the other.
+
+It failed loudly rather than quietly — twenty-six indents is obviously wrong —
+but the same mistake with a threshold that happened to land inside the block
+would have marked a few real lines and missed the rest, and nothing downstream
+checks stanza grouping.
 
 ## What page 83 caught — a chant can lose its CONTINUES silently
 
