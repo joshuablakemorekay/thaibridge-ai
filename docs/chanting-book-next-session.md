@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-92 went in.
+93 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–92 are in and unbroken**, plus 217–221. **126 chants, 1,733 verses
+- **Pages 1–93 are in and unbroken**, plus 217–221. **126 chants, 1,757 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Page 92 was applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 and 93 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,21 +34,22 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 93, `IMG_0358` — but READ THE NUMBER off the sheet
+## Next: page 94, `IMG_0359` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–92, so page 93 *should*
-be `IMG_0358`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–93, so page 94 *should*
+be `IMG_0359`. **Five more changes are still expected before page 207.**
 
-**`atanatiya-parittam-atthamam` is open at verse 5**, with no `[…]` — the row is
-whole and it is the LIST that carries on. Page 93's batch numbers **from 6** and
-needs both `continuation_of` and `continues: true` if it does not end there.
+**`atanatiya-parittam-atthamam` is open at verse 29**, with no `[…]` — the row
+ends on a full stop and it is the paritta that carries on. Page 94's batch
+numbers **from 30** and needs both `continuation_of` and `continues: true` if it
+does not end there.
 
-**Five of the seven Buddhas are saluted, one per row, in order** — Vipassī,
-Sikhī, Vessabhū, Kakusandha, Koṇāgamana. **Kassapa and Gotama should follow.**
-A reason to expect the continuation, not to write it.
+**The roll-call of twenty-eight Buddhas is complete** (verses 13–27, two to a
+row), and verse 28–29 opens the "these and countless others" stanza. Expect the
+paritta's protective section next, and a colophon when it ends.
 
-**Expect two columns and check the gutter yourself.** Page 92 carried three
-blocks with gutters at x 1000–1080, 1020–1100 and 1000–1100.
+**Measure the indents against THIS block's left edge.** Page 93's body sits at
+x 380 and indents to 470; page 92's sat elsewhere.
 
 ## Standing rules for every page
 
@@ -71,6 +72,32 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## ⚠️ Page 93 — the book's own typesetting speaks to the ส์ question
+
+Page 93's **second footnote** reads `โกฏฺิโย อยํ หิ อิตฺถีลิงฺคํ` and it is set
+with the **PHINTHU** (`◌ฺ`, U+0E3A) — the subscript dot — on `ฏ`, on `ต` and on
+`ง`.
+
+**The body of this book never uses phinthu.** It marks its clusters with the
+small mark ABOVE, as in `สัก์ยะปุตตัสสะ` on verse 7 of this very page.
+
+So **the printer has phinthu and chooses not to use it in the chanted text.**
+That is the first evidence about the `ส์วากขาโต` question that comes from the
+book's own typesetting rather than from magnifying a glyph, and it is worth
+weighing alongside page 60's reading of `ท์วายะ`. It does not settle which mark
+the body uses — `์` or `๎` — but it does say the choice is deliberate.
+
+## Page 93 — a third footnote whose other half cannot be shown
+
+The same footnote gives a **reading** (`โกฏฺิโย` for the line's `โกฏะโย`) **and**
+a grammatical note (that form is feminine). Only the reading has a field; the
+grammar is lost.
+
+**Third instance of the same gap**, after page 76's conditional footnote ("use
+`อิมัง ปะฏิมัง` if a Buddha image is the principal") and page 77's. **A `note`
+field on a variant would close all three** — one key in `apply_batch`, one line
+in each of the two templates.
 
 ## Page 92 — one field cannot hold two printings
 
