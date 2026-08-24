@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-96 went in.
+97 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–96 are in and unbroken**, plus 217–221. **128 chants and 1,977
+- **Pages 1–97 are in and unbroken**, plus 217–221. **130 chants and 2,000
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 96 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 97 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,19 +46,17 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 97, `IMG_0362` — but READ THE NUMBER off the sheet
+## Next: page 98, `IMG_0363` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–96, so page 97 *should*
-be `IMG_0362`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–97, so page 98 *should*
+be `IMG_0363`. **Five more changes are still expected before page 207.**
 
-**Page 97 starts clean.** Three chants closed on page 96 — the Āṭānāṭiya
-Paritta after five sheets, and both Aṅgulimāla chants — and there is no
-`‼ CONTINUES` marker left in the file. Whatever is on the sheet begins there.
+**Page 98 starts clean.** Both chants closed on page 97 and nothing of mine is
+open. (A `‼ CONTINUES` marker does exist in the file — it belongs to the OTHER
+session's roman-script work, not to the Thai-script run.)
 
-**Nine of the Twelve Tamnan are in.** Maṅgala, Ratana, Karaṇīya-metta, Khandha,
-Mora, Vaṭṭaka, Dhajagga, Āṭānāṭiya, Aṅgulimāla. **Three remain** — the สารบัญ
-lists Bojjhaṅga, Abhaya and Jaya, each with its own `บทขัด` first, as every one
-so far has had.
+**Ten of the Twelve Tamnan are in.** Two remain: the สารบัญ lists **Abhaya** and
+**Jaya**, each with its own `บทขัด` first, as all ten have had.
 
 ## ⚠️ Two sessions, one `chanting.py` — what happened on page 94
 
@@ -180,7 +178,7 @@ established the rule in the first place. Worth stating exactly:
 `check_render` walks strings in printed order and does not look at grouping.
 Only opening the page catches it — so open the page.
 
-## ⚠️⚠️⚠️ The ฬ/พ conflict has now happened THREE TIMES — pages 85, 90, 95
+## ⚠️⚠️⚠️ The ฬ/พ conflict — FOUR times now, and the rule needs revising
 
 This is no longer a one-off, and it is the most important open question in the
 book.
@@ -190,6 +188,22 @@ book.
 | 85 | `อะวิรุพหิฉันทา` | *avirūḷhi-* | *avirubhi-* — **not a word** |
 | 90 | `โสพะสะ` | *soḷasa* ("sixteen") | *sobasa* — **not a word** |
 | 95 | `วิรุพหะโก` | *Virūḷhaka* (Great King of the South) | *virubhaka* — **not a word** |
+| 97 | `เคลัญเญนาภิปีพิโต` | *abhipīḷita* ("afflicted") | *abhipībita* — **not a word** |
+
+**⚠️ PAGE 97 UNDERMINES THE RULE THIS FILE WROTE DOWN.** Pages 76–80 each showed
+a bare `ฬ` carrying an **obvious** tall ascender — `จักกะวาเฬสุ`,
+`อัฏฐะจัตตาฬีสะ` — which is why *"a bare ฬ can be read from the photograph"* was
+recorded as settled. Page 97 shows a **bare position where the canon demands ฬ
+and there is no ascender at all**, in the same kind of intervocalic slot.
+
+So one of two things is true, and **the photographs cannot choose between
+them**:
+
+- this printer sets *some* bare `ฬ` without an ascender, and the rule is wrong;
+- or the book really does print `พ` in all four places.
+
+Both readings fit everything seen. **Four words now wait on one look at the
+book**, and page 95's four Great Kings remains the cheapest place to settle it.
 
 **Page 95 is the easiest of the three to check**, because the four Great Kings
 are named together in a fixed order — Dhataraṭṭha, Virūḷhaka, Virūpakkha,

@@ -1,0 +1,380 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "bot-khat-bojjhanga-parittam",
+   "bojjhanga-parittam-dasamam"
+  ],
+  "pages": [
+   {
+    "page": 97,
+    "file": "IMG_0362.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-bojjhanga-parittam",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "The top of the sheet: a centred bold title and six TWO-COLUMN rows, gutter measured at x 860-1020. The chant starts and ends here."
+   },
+   {
+    "page": 97,
+    "file": "IMG_0362.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bojjhanga-parittam-dasamam",
+    "verses": "1-17",
+    "starts_here": true,
+    "note": "The rest of the sheet: a centred bold title and seventeen TWO-COLUMN rows, gutter measured at x 900-1020. Four rows are indented by a measured 90px against the block's own left edge of 350 — verses 1, 7, 11 and 15 — and each opens a stanza. Then the colophon โพชฌังคะปะริตตัง นิฏฐิตัง. centred beneath. The chant starts and ends here; no footnote anywhere on the sheet."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-bojjhanga-parittam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Six, one per two-column row, read ACROSS. One group; the chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is the contents' value; the SPACING of title_thai follows the page, which differs from the contents by one space.",
+    "pages": "IMG_0362.PNG, page 97. Title and all six rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด โพชฌังคะปะริตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt poot-chaŋ-ká-bpà-rít-dtaŋ",
+   "title_english": "The Prefatory Verse for the Bojjhaṅga Paritta",
+   "page_start": 97,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สังสาเร สังสะรันตานัง สัพพะทุกขะวินาสะเน",
+     "pali_roman": "Saṃsāre saṃsarantānaṃ sabbadukkhavināsane",
+     "thai": "",
+     "paiboon": "",
+     "english": "For those wandering on in saṃsāra, in the destruction of all suffering,",
+     "page": 97
+    },
+    {
+     "number": 2,
+     "pali": "สัตตะ ธัมเม จะ โพชฌังเค มาระเสนัปปะมัททิโน.",
+     "pali_roman": "Satta dhamme ca bojjhaṅge mārasenappamaddino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the seven states, the factors of awakening, crushers of Māra's army."
+    },
+    {
+     "number": 3,
+     "pali": "พุชฌิต์วา เยปิเม สัตตา ติภะวามุตตะกุตตะมา",
+     "pali_roman": "Bujjhitvā yepime sattā tibhavāmuttakuttamā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those beings who, having awakened by them, are freed from the three realms, supreme,"
+    },
+    {
+     "number": 4,
+     "pali": "อะชาติง อะชะราพ์ยาธิง อะมะตัง นิพภะยัง คะตา.",
+     "pali_roman": "Ajātiṃ ajarābyādhiṃ amataṃ nibbhayaṃ gatā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "have gone to the unborn, the ageless and diseaseless, the deathless, the fearless."
+    },
+    {
+     "number": 5,
+     "pali": "เอวะมาทิคุณูเปตัง อะเนกะคุณะสังคะหัง",
+     "pali_roman": "Evamādiguṇūpetaṃ anekaguṇasaṅgahaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Endowed with such qualities as these, a collection of many virtues,"
+    },
+    {
+     "number": 6,
+     "pali": "โอสะถัญจะ อิมัง มันตัง โพชฌังคันตัมภะณามะ เห.",
+     "pali_roman": "Osathañca imaṃ mantaṃ bojjhaṅgantambhaṇāma he.",
+     "thai": "",
+     "paiboon": "",
+     "english": "a medicine and a spell: that Bojjhaṅga let us now recite."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "โพชฌังคะ",
+     "pali_roman": "bojjhaṅga",
+     "meaning": "a factor of awakening. Seven of them, and the paritta is named for the set"
+    },
+    {
+     "pali": "ติภะวะ",
+     "pali_roman": "tibhava",
+     "meaning": "the three realms of existence — sensual, form and formless. Freedom from all three is what awakening by these factors gives"
+    },
+    {
+     "pali": "โอสะถะ / มันตะ",
+     "pali_roman": "osatha / manta",
+     "meaning": "medicine and spell. The preface calls the Bojjhaṅga both, which is exactly how it is used — recited over the sick"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0362.PNG",
+     "issue": "A TENTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด โพชฌังคะปะริตตัง with a SPACE after บทขัด; the สารบัญ has บทขัดโพชฌังคะปะริตตัง without one. Same as pages 82, 86, 87, 88, 89, 90, 92 and 96."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0362.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 860-1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left สังสาเร สังสะรันตานัง + right สัพพะทุกขะวินาสะเน."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0362.PNG",
+     "issue": "อะชะราพ์ยาธิง carries the พ์ cluster mark, romanised ajarābyādhiṃ with the mark dropped. Standard editions have ajarābyādhiṃ, so the reading agrees once the mark is read as a cluster."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0362.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "bojjhanga-parittam-dasamam",
+   "closing": {
+    "pali": "โพชฌังคะปะริตตัง นิฏฐิตัง.",
+    "pali_roman": "Bojjhaṅgaparittaṃ niṭṭhitaṃ.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Bojjhaṅga Paritta."
+   },
+   "working_notes": {
+    "invitation": "absent, and none written. The บทขัด that introduces this paritta is its own chant directly above it on this page.",
+    "units": "Seventeen, one per two-column row, read ACROSS. Four stanzas, each closing with the same truth-utterance: verses 1 to 6 name the seven factors, 7 to 10 tell of Moggallāna and Kassapa, 11 to 14 of the Buddha and Cunda, 15 to 17 draw the conclusion. Verses 1, 7, 11 and 15 carry para_start.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_pali is the contents' value, which the transliteration script independently reproduces.",
+    "pages": "IMG_0362.PNG, page 97, read off the top centre of the sheet — the offset of 265 holds for an eleventh page. The chant starts and ends on this page."
+   },
+   "title_thai": "โพชฌังคะปะริตตัง ทะสะมัง",
+   "title_pali": "Bojjhaṅgaparittaṃ dasamaṃ",
+   "title_roman": "",
+   "title_english": "The Bojjhaṅga Paritta, the Tenth",
+   "page_start": 97,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "โพชฌังโค สะติสังขาโต ธัมมานัง วิจะโย ตะถา",
+     "pali_roman": "Bojjhaṅgo satisaṅkhāto dhammānaṃ vicayo tathā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The factor of awakening called mindfulness, and likewise investigation of states,",
+     "page": 97
+    },
+    {
+     "number": 2,
+     "pali": "วิริยัมปีติปัสสัทธิ โพชฌังคา จะ ตะถาปะเร.",
+     "pali_roman": "Viriyampītipassaddhi bojjhaṅgā ca tathāpare.",
+     "thai": "",
+     "paiboon": "",
+     "english": "energy, rapture and tranquillity, and the other factors likewise;"
+    },
+    {
+     "number": 3,
+     "pali": "สะมาธุเปกขะโพชฌังคา สัตเตเต สัพพะทัสสินา",
+     "pali_roman": "Samādhupekkhabojjhaṅgā sattete sabbadassinā",
+     "thai": "",
+     "paiboon": "",
+     "english": "concentration and equanimity — these seven, by the All-Seeing One,"
+    },
+    {
+     "number": 4,
+     "pali": "มุนินา สัมมะทักขาตา ภาวิตา พะหุลีกะตา.",
+     "pali_roman": "Muninā sammadakkhātā bhāvitā bahulīkatā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Sage, are rightly proclaimed, developed and made much of."
+    },
+    {
+     "number": 5,
+     "pali": "สังวัตตันติ อะภิญญายะ นิพพานายะ จะ โพธิยา",
+     "pali_roman": "Saṃvattanti abhiññāya nibbānāya ca bodhiyā",
+     "thai": "",
+     "paiboon": "",
+     "english": "They lead to direct knowledge, to Nibbāna and to awakening."
+    },
+    {
+     "number": 6,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.",
+     "pali_roman": "Etena saccavajjena sotthi te hotu sabbadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this utterance of truth, may you be well at all times."
+    },
+    {
+     "number": 7,
+     "pali": "เอกัส์มิง สะมะเย นาโถ โมคคัลลานัญจะ กัสสะปัง",
+     "pali_roman": "Ekasmiṃ samaye nātho moggallānañca kassapaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "On one occasion the Protector, seeing Moggallāna and Kassapa",
+     "para_start": true
+    },
+    {
+     "number": 8,
+     "pali": "คิลาเน ทุกขิเต ทิส์วา โพชฌังเค สัตตะ เทสะยิ.",
+     "pali_roman": "Gilāne dukkhite disvā bojjhaṅge satta desayi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "sick and in pain, taught the seven factors of awakening."
+    },
+    {
+     "number": 9,
+     "pali": "เต จะ ตัง อะภินันทิต์วา โรคา มุจจิงสุ ตังขะเณ",
+     "pali_roman": "Te ca taṃ abhinanditvā rogā mucciṃsu taṅkhaṇe",
+     "thai": "",
+     "paiboon": "",
+     "english": "And they, delighting in it, were freed from disease in that very moment."
+    },
+    {
+     "number": 10,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.",
+     "pali_roman": "Etena saccavajjena sotthi te hotu sabbadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this utterance of truth, may you be well at all times."
+    },
+    {
+     "number": 11,
+     "pali": "เอกะทา ธัมมะราชาปิ เคลัญเญนาภิปีพิโต",
+     "pali_roman": "Ekadā dhammarājāpi gelaññenābhipībito",
+     "thai": "",
+     "paiboon": "",
+     "english": "Once the King of the Dhamma himself, afflicted by illness,",
+     "para_start": true
+    },
+    {
+     "number": 12,
+     "pali": "จุนทัตเถเรนะ ตัญเญวะ ภะณาเปต์วานะ สาทะรัง.",
+     "pali_roman": "Cundattherena taññeva bhaṇāpetvāna sādaraṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "had that very teaching recited by the elder Cunda, respectfully."
+    },
+    {
+     "number": 13,
+     "pali": "สัมโมทิต์วา จะ อาพาธา ตัมหา วุฏฐาสิ ฐานะโส",
+     "pali_roman": "Sammoditvā ca ābādhā tamhā vuṭṭhāsi ṭhānaso",
+     "thai": "",
+     "paiboon": "",
+     "english": "And being gladdened, he rose up from that affliction there and then."
+    },
+    {
+     "number": 14,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.",
+     "pali_roman": "Etena saccavajjena sotthi te hotu sabbadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this utterance of truth, may you be well at all times."
+    },
+    {
+     "number": 15,
+     "pali": "ปะหีนา เต จะ อาพาธา ติณณันนัมปิ มะเหสินัง",
+     "pali_roman": "Pahīnā te ca ābādhā tiṇṇannampi mahesinaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "And those afflictions of all three great Seekers were abandoned,",
+     "para_start": true
+    },
+    {
+     "number": 16,
+     "pali": "มัคคาหะตะกิเลสา วะ ปัตตานุปัตติธัมมะตัง.",
+     "pali_roman": "Maggāhatakilesā va pattānupattidhammataṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "just as the defilements struck down by the path reach the state of not returning."
+    },
+    {
+     "number": 17,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.",
+     "pali_roman": "Etena saccavajjena sotthi te hotu sabbadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By this utterance of truth, may you be well at all times."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สะติ / ธัมมะวิจะยะ / วิริยะ / ปีติ / ปัสสัทธิ / สะมาธิ / อุเปกขา",
+     "pali_roman": "sati / dhammavicaya / viriya / pīti / passaddhi / samādhi / upekkhā",
+     "meaning": "the seven factors of awakening, named in order across verses 1 to 3"
+    },
+    {
+     "pali": "เคลัญญะ",
+     "pali_roman": "gelañña",
+     "meaning": "illness, sickness. What the Buddha himself is said to have been afflicted by at verse 11"
+    },
+    {
+     "pali": "จุนทัตเถระ",
+     "pali_roman": "cundatthera",
+     "meaning": "the elder Cunda, who recited the Bojjhaṅga to the Buddha when he was ill"
+    },
+    {
+     "pali": "ติณณันนัง มะเหสินัง",
+     "pali_roman": "tiṇṇannaṃ mahesinaṃ",
+     "meaning": "of the three great Seekers — Moggallāna, Kassapa and the Buddha himself, the three the paritta cured"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 11,
+     "file": "IMG_0362.PNG",
+     "issue": "‼‼ เคลัญเญนาภิปีพิโต — A FOURTH BARE ?/พ, AND THIS ONE CUTS AGAINST WHAT PAGES 76-80 SEEMED TO ESTABLISH. Standard Pali is gelaññenābhipīḷito, 'afflicted by illness', with ฬ; abhipībito is not a word. The letter is BARE and at 7x stacked directly above the พ of อาพาธา two rows below it on this same sheet it is identical — two humps, no ascender. THE PROBLEM: pages 76, 77, 78 and 80 each showed a bare ฬ carrying an OBVIOUS tall ascender (จักกะวาเฬสุ, อัฏฐะจัตตาฬีสะ), which is why 'a bare ฬ can be read from the photograph' was written down as a rule. This page shows a bare position where the canon demands ฬ and there is no ascender at all. So EITHER this printer sets some bare ฬ without an ascender — and the rule is wrong — OR the book really does print พ in all four places. Reproduced as printed. This is now FOUR instances: pages 85, 90, 95 and 97."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0362.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 900-1020 — a different position from the บทขัด above it on this sheet, whose gutter is at x 860-1020. Each profiled separately. Read ACROSS. FIRST PAIRING FOR CHECKING: left โพชฌังโค สะติสังขาโต + right ธัมมานัง วิจะโย ตะถา."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0362.PNG",
+     "issue": "เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา. CLOSES ALL FOUR STANZAS — verses 6, 10, 14 and 17 — word for word. Recorded because check_render walks strings in printed order and four verbatim repeats on one sheet is exactly the shape that reads as a fault."
+    },
+    {
+     "verse": 15,
+     "file": "IMG_0362.PNG",
+     "issue": "ติณณันนัมปิ มะเหสินัง — 'of all three great Seekers'. The three are Moggallāna and Kassapa from verse 7 and the Buddha himself from verse 11, which is what makes the last stanza the conclusion of the other three rather than a fourth story. The English says so plainly because the Pali only implies it."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0362.PNG",
+     "issue": "A COLOPHON AND NO CITATION. โพชฌังคะปะริตตัง นิฏฐิตัง. is printed centred under verse 17 and goes in as `closing`. No footnote and no marker anywhere on the sheet, so source_printed is left off — the same as the Mora, Vaṭṭaka and Aṅgulimāla parittas."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0362.PNG",
+     "issue": "english_unverified is set. The book prints this paritta in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition. Verse 16's simile is the least certain line: ปัตตานุปัตติธัมมะตัง is compressed even for this book and the gloss reads it as the defilements reaching the state of not returning."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-bojjhanga-parittam",
+   "bojjhanga-parittam-dasamam"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 98,
+  "resume_from_file": "IMG_0363.PNG",
+  "resume_from": "",
+  "unreadable": [],
+  "paiboon_scan": "clean. The page prints no Thai translation, so every verse paiboon is empty, and the only Paiboon+ in the batch is one title_roman taken from CONTENTS. Scanned every field for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed, with ONE reading flagged rather than settled. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in พุชฌิต์วา, อะชะราพ์ยาธิง, เอกัส์มิง, ทิส์วา, อะภินันทิต์วา, ภะณาเปต์วานะ and สัมโมทิต์วา. The flagged one is verse 11's เคลัญเญนาภิปีพิโต: a BARE พ where standard Pali has gelaññenābhipīḷito with ฬ, reproduced as printed and transliterated abhipībito to match even though that is not a word. Fourth such case after pages 85, 90 and 95. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. Two rows for one page, one per chant, in the order they appear down the sheet. Each row's verse range matches its entry exactly — 1-6 and 1-17 — no verse is orphaned and none is claimed twice. Each chant's first verse carries the page key and no page turns inside either. No page blocks and no footnote on this sheet.",
+  "notes": "‼‼ THE ฬ/พ QUESTION TOOK A TURN ON THIS PAGE AND MY EARLIER CONCLUSION NEEDS REVISING. Verse 11 prints เคลัญเญนาภิปีพิโต with a BARE พ — identical at 7x to the พ of อาพาธา two rows below — where standard Pali is gelaññenābhipīḷito with ฬ. That is the FOURTH instance, after pages 85, 90 and 95. THE POINT: pages 76 to 80 each showed a bare ฬ carrying an obvious tall ascender, which is why 'a bare ฬ can be read from the photograph' was written into the brief as a rule. This page shows a bare position where the canon demands ฬ and there is NO ascender. So either the printer sets some bare ฬ without one — and that rule is wrong — or the book really prints พ in all four places. Both readings are still consistent with everything seen; the photographs cannot choose between them. FOUR WORDS NOW WAIT ON ONE LOOK AT THE BOOK. Otherwise a clean sheet: two chants, both complete, a colophon, no footnote, nothing left open. Nothing needs re-photographing.",
+  "diacritic_exceptions": [
+   "satta/sattā — genuinely two different words, and the BOOK prints the difference. The preface's verse 3 reads เยปิเม สัตตา with the long า — sattā, 'beings', the subject of the sentence. The paritta's verse 8 reads โพชฌังเค สัตตะ เทสะยิ with the short ะ — satta, 'seven', counting the factors. Long against short is visible on the page and the two are unrelated words; making them agree would turn 'he taught the seven factors' into 'he taught beings factors'."
+  ]
+ }
+}
