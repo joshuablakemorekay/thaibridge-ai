@@ -21,9 +21,9 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from chanting import (  # noqa: E402
-    build_page_index, chant_page_spans, check_page_blocks, check_variants,
-    contents_for_front_page, contents_stretches, describe_coverage,
-    describe_pages, page_coverage)
+    BOOK_LAST_PAGE, build_page_index, chant_page_spans, check_page_blocks,
+    check_variants, contents_for_front_page, contents_stretches,
+    describe_coverage, describe_pages, page_coverage)
 
 
 def verse(number, page=None):
@@ -232,13 +232,43 @@ class TestTheContentsReachesContinuationPages:
 
         A page the app serves but no contents line reaches is a page a reader
         can only find by guessing its number.
+
+        Bounded at `BOOK_LAST_PAGE` because the book stops listing before it
+        stops printing. The สารบัญ's last line is at page 308 and the book runs
+        to 325 — the closing stretch is a ROMAN-script section, the Mahāsamaya
+        Sutta and its neighbours, which the contents names nowhere at all.
+
+        That is the book's own silence, not a gap in the app, and the fix must
+        not add a line the book does not print — the same rule this whole class
+        exists to keep. Extending the last line's stretch to the end would file
+        the Mahāsamaya under a kathina-cloth heading, which is worse than
+        unreachable: it would be wrong. Those pages are reached instead by the
+        page-to-page arrows, which already step over what is not in yet.
+
+        So the guarantee is held exactly where the book supports it, and the
+        pages beyond it are exempt by name rather than by the assertion quietly
+        being weakened.
         """
-        entered = {page['page'] for page in build_page_index()[0]}
+        entered = {page['page'] for page in build_page_index()[0]
+                   if page['page'] <= BOOK_LAST_PAGE}
         reachable = set()
         for front in (35, 36, 37, 38, 39, 40, 41, 42, 43, 44):
             rows, _ = contents_for_front_page(front)
             reachable |= {p for row in rows for p in row['pages']}
         assert not entered - reachable
+
+    def test_the_unlisted_back_section_is_exempt_and_stays_small(self):
+        """The exemption above is a hole, so it is measured rather than trusted.
+
+        Only pages past the last line of the สารบัญ may be unreachable from the
+        contents. If a page at or below 308 ever becomes unreachable the test
+        above catches it; this one catches the opposite drift — the exemption
+        growing to cover pages the contents really does name.
+        """
+        entered = {page['page'] for page in build_page_index()[0]}
+        exempt = {page for page in entered if page > BOOK_LAST_PAGE}
+        assert all(page > 308 for page in exempt)
+        assert max(exempt, default=0) <= 325
 
     def test_a_button_is_never_offered_for_a_page_that_is_not_in(self):
         """The honesty rule the contents page already had, kept.
