@@ -31221,6 +31221,702 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0364.PNG]: A TWELFTH TITLE THE CONTENTS TEST CANNOT
+        #   SEE. The page prints บทขัด ชะยะปะริตตัง with a SPACE after บทขัด;
+        #   the สารบัญ has บทขัดชะยะปะริตตัง without one. The page wins, so
+        #   the never-spell-a-title-two-ways test goes silent for this chant.
+        #   This is now every บทขัด from page 82 on without exception.
+        # ‼ CHECK [IMG_0364.PNG]: NO INDENTS in this chant. All six rows
+        #   measured at x 351-354 against each other — the block has a single
+        #   flat left edge, unlike the chant below it. One paragraph.
+        # ‼ CHECK [IMG_0364.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-jaya-parittam',
+        'title_thai': 'บทขัด ชะยะปะริตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt chá-yá-bpà-rít-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Jaya Paritta',
+        'page_start': 99,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0364.PNG]: TWO COLUMNS, right column begins at x
+            #   1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left ชะยัง
+            #   เทวะมะนุสสานัง + right ชะโย โหตุ ปะราชิโต.
+            {
+                'number': 1,
+                'page': 99,
+                'pali': 'ชะยัง เทวะมะนุสสานัง ชะโย โหตุ ปะราชิโต',
+                'pali_roman': 'Jayaṃ devamanussānaṃ jayo hotu parājito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Victory for devas and humans — may there be victory, and may the defeated one be put down;',
+            },
+            {
+                'number': 2,
+                'page': 99,
+                'pali': 'มาระเสนา อะภิกกันตา สะมันตา ท์วาทะสะโยชะนา',
+                'pali_roman': 'Mārasenā abhikkantā samantā dvādasayojanā',
+                'thai': '',
+                'paiboon': '',
+                'english': "Māra's army came on, twelve leagues deep on every side,",
+            },
+            {
+                'number': 3,
+                'page': 99,
+                'pali': 'ขันติเมตตาอะธิฏฐานา วิทธังเสต์วานะ จักขุมา',
+                'pali_roman': 'Khantimettā-adhiṭṭhānā vidhaṃsetvāna cakkhumā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the One with Vision, resolved on patience and loving-kindness, scattered them;',
+            },
+            {
+                'number': 4,
+                'page': 99,
+                'pali': 'ภะวาภะเว สังสะรันโต ทิพพะจักขุง วิโสธะยิ',
+                'pali_roman': 'Bhavābhave saṃsaranto dibbacakkhuṃ visodhayi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'wandering on from existence to existence, he purified the divine eye,',
+            },
+            {
+                'number': 5,
+                'page': 99,
+                'pali': 'ปะริยาปันนาทิโสตถานัง หิตายะ จะ สุขายะ จะ',
+                'pali_roman': 'Pariyāpannādisotthānaṃ hitāya ca sukhāya ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the safety, the welfare and the happiness of all, beginning with those still bound to the round.',
+            },
+            # ‼ CHECK [IMG_0364.PNG]: The row ends ปะริตตันตัมภะณามะ เห ฯ with
+            #   PAIYANNOI (ฯ) and a space before it, not a full stop.
+            #   Reproduced as printed; the romanisation closes with a full
+            #   stop because ฯ has no roman equivalent here.
+            {
+                'number': 6,
+                'page': 99,
+                'pali': 'พุทธะกิจจัง วิโสเธต์วา ปะริตตันตัมภะณามะ เห ฯ',
+                'pali_roman': 'Buddhakiccaṃ visodhetvā parittantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Having brought the Buddha's work to completion — let us now recite that paritta, friends.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0364.PNG]: No colophon and no citation. An ink profile
+        #   below the last row found marks only at x 150-201 and x 1911+,
+        #   which are the page edge and the binding shadow, not text.
+        # ‼ CHECK [IMG_0364.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'jaya-parittam-dvadasamam',
+        'title_thai': 'ชะยะปะริตตัง ท์วาทะสะมัง',
+        'title_pali': '',
+        'title_roman': 'Jayaparittaṃ dvādasamaṃ',
+        'title_english': 'The Jaya Paritta, the Twelfth',
+        'page_start': 99,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0364.PNG]: TWO COLUMNS, right column begins at x
+            #   1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   มะหาการุณิโก นาโถ + right หิตายะ สัพพะปาณินัง.
+            {
+                'number': 1,
+                'page': 99,
+                'para_start': True,
+                'pali': 'มะหาการุณิโก นาโถ หิตายะ สัพพะปาณินัง',
+                'pali_roman': 'Mahākāruṇiko nātho hitāya sabbapāṇinaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Protector of great compassion, for the welfare of all living beings,',
+            },
+            {
+                'number': 2,
+                'page': 99,
+                'pali': 'ปูเรต์วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง',
+                'pali_roman': 'Pūretvā pāramī sabbā patto sambodhimuttamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having fulfilled all the perfections, reached the supreme awakening.',
+            },
+            # ‼ CHECK [IMG_0364.PNG]: Verses 3 and 7 end with PAIYANNOI (ฯ)
+            #   and a space before it, where verses 5, 9, 11, 12, 14, 16 and
+            #   18 end with a full stop. Both reproduced as printed; the
+            #   romanisations use a full stop throughout because ฯ has no
+            #   roman equivalent here.
+            {
+                'number': 3,
+                'page': 99,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง ฯ',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the speaking of this truth, may the blessing of victory be yours.',
+            },
+            # ‼ CHECK [IMG_0364.PNG]: Three indents measured at 120px against
+            #   the block's own left edge of 237 — verses 1, 4 and 13. Verse 1
+            #   is the chant's own start, so para_start is set on 4 and 13
+            #   only. The groups are 1-3 (the truth-utterance), 4-12 (the
+            #   victory and auspiciousness verses) and 13-18 (the three
+            #   blessings, masculine, feminine and plural).
+            {
+                'number': 4,
+                'page': 99,
+                'para_start': True,
+                'pali': 'ชะยันโต โพธิยา มูเล สัก์ยานัง นันทิวัฑฒะโน',
+                'pali_roman': 'Jayanto bodhiyā mūle sakyānaṃ nandivaḍḍhano',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Victorious at the foot of the Bodhi tree, increaser of the joy of the Sakyans,',
+            },
+            {
+                'number': 5,
+                'page': 99,
+                'pali': 'เอวัง ต์วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล.',
+                'pali_roman': 'Evaṃ tvaṃ vijayo hohi jayassu jayamaṅgale.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so may you too be victorious — be victorious in the blessing of victory.',
+            },
+            {
+                'number': 6,
+                'page': 99,
+                'pali': 'อะปะราชิตะปัลลังเก สีเส ปะฐะวิโปกขะเร',
+                'pali_roman': 'Aparājitapallaṅke sīse pathavipokkhare',
+                'thai': '',
+                'paiboon': '',
+                'english': "On the unconquered seat, at the crown of the earth's lotus-ground,",
+            },
+            {
+                'number': 7,
+                'page': 99,
+                'pali': 'อะภิเสเก สัพพะพุทธานัง อัคคัปปัตโต ปะโมทะติ ฯ',
+                'pali_roman': 'Abhiseke sabbabuddhānaṃ aggappatto pamodati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'at the consecration place of all the Buddhas, he rejoices, having reached the highest.',
+            },
+            {
+                'number': 8,
+                'page': 99,
+                'pali': 'สุนักขัตตัง สุมังคะลัง สุปะภาตัง สุหุฏฐิตัง',
+                'pali_roman': 'Sunakkhattaṃ sumaṅgalaṃ supabhātaṃ suhuṭṭhitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'A good star, a good blessing, a good dawn, a good waking,',
+            },
+            {
+                'number': 9,
+                'page': 99,
+                'pali': 'สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ์รัห์มะจาริสุ.',
+                'pali_roman': 'Sukhaṇo sumuhutto ca suyiṭṭhaṃ brahmacārisu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'a good moment, a good instant — and a gift well given to those who live the holy life.',
+            },
+            {
+                'number': 10,
+                'page': 99,
+                'pali': 'ปะทักขิณัง กายะกัมมัง วาจากัมมัง ปะทักขิณัง',
+                'pali_roman': 'Padakkhiṇaṃ kāyakammaṃ vācākammaṃ padakkhiṇaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Auspicious the act of body, auspicious the act of speech,',
+            },
+            {
+                'number': 11,
+                'page': 99,
+                'pali': 'ปะทักขิณัง มะโนกัมมัง ปะณิธี เต ปะทักขิณา.',
+                'pali_roman': 'Padakkhiṇaṃ manokammaṃ paṇidhī te padakkhiṇā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'auspicious the act of mind, and auspicious are your aspirations.',
+            },
+            {
+                'number': 12,
+                'page': 99,
+                'pali': 'ปะทักขิณานิ กัต์วานะ ละภันตัตเถ ปะทักขิเณ.',
+                'pali_roman': 'Padakkhiṇāni katvāna labhantatthe padakkhiṇe.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having done what is auspicious, they gain the auspicious goods.',
+            },
+            # ‼ CHECK [IMG_0364.PNG]: ‼‼ THREE MORE BARE พ WHERE THE CANON HAS
+            #   ฬ, AND THIS IS THE CLEANEST COMPARISON THE BOOK HAS GIVEN.
+            #   Verses 13, 15 and 17 print วิรุพโห / วิรุพหา / วิรุพหา where
+            #   standard Pali is viruḷho / viruḷhā (วิรุฬโห / วิรุฬหา). At 4x
+            #   each letter is BARE — two humps, no ascender — and each one
+            #   sits on the SAME LINE, at the same size, three words away from
+            #   the พ of พุทธะสาสะเน. They are identical in shape and height.
+            #   That is a same-line, same-size control the earlier instances
+            #   did not have. Running total is now SEVEN across pages 85, 90,
+            #   95, 97 and 99 x3. Reproduced as printed, and the romanisation
+            #   follows the printed พ (virubho / virubhā) exactly as pages 85,
+            #   90, 95 and 97 did — those give avirubhichandā, sobasa,
+            #   virubhako and abhipībito, all non-words. Still one look at the
+            #   book away from being settled.
+            # ‼ CHECK [IMG_0364.PNG]: Verses 13/15/17 and 14/16/18 are the
+            #   SAME blessing three times over, differing only in gender and
+            #   number — โส/สา/เต and โหหิ/โหหิ/โหถะ, with
+            #   อัตถะลัทโธ/อัตถะลัทธา/อัตถะลัทธา and อะโรโค/อะโรคา/อะโรคา.
+            #   Each of the six lines was read off the sheet separately rather
+            #   than copied down.
+            {
+                'number': 13,
+                'page': 99,
+                'para_start': True,
+                'pali': 'โส อัตถะลัทโธ สุขิโต วิรุพโห พุทธะสาสะเน',
+                'pali_roman': 'So atthaladdho sukhito virubho buddhasāsane',
+                'thai': '',
+                'paiboon': '',
+                'english': "May he, having gained the goal, be happy, thriving in the Buddha's teaching;",
+            },
+            {
+                'number': 14,
+                'page': 99,
+                'pali': 'อะโรโค สุขิโต โหหิ สะหะ สัพเพหิ ญาติภิ.',
+                'pali_roman': 'Arogo sukhito hohi saha sabbehi ñātibhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may he be free of illness and happy, together with all his kin.',
+            },
+            {
+                'number': 15,
+                'page': 99,
+                'pali': 'สา อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน',
+                'pali_roman': 'Sā atthaladdhā sukhitā virubhā buddhasāsane',
+                'thai': '',
+                'paiboon': '',
+                'english': "May she, having gained the goal, be happy, thriving in the Buddha's teaching;",
+            },
+            {
+                'number': 16,
+                'page': 99,
+                'pali': 'อะโรคา สุขิตา โหหิ สะหะ สัพเพหิ ญาติภิ.',
+                'pali_roman': 'Arogā sukhitā hohi saha sabbehi ñātibhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may she be free of illness and happy, together with all her kin.',
+            },
+            {
+                'number': 17,
+                'page': 99,
+                'pali': 'เต อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน',
+                'pali_roman': 'Te atthaladdhā sukhitā virubhā buddhasāsane',
+                'thai': '',
+                'paiboon': '',
+                'english': "May they, having gained the goal, be happy, thriving in the Buddha's teaching;",
+            },
+            {
+                'number': 18,
+                'page': 99,
+                'pali': 'อะโรคา สุขิตา โหถะ สะหะ สัพเพหิ ญาติภิ.',
+                'pali_roman': 'Arogā sukhitā hotha saha sabbehi ñātibhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they be free of illness and happy, together with all their kin.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0575.PNG]: THE IAST ON THIS SHEET IS MECHANICAL, not
+        #   hand-written: every pali_roman was produced by
+        #   scripts/romanise_contents.translit_pali from the pali beside it.
+        #   That is the first thing in this section that REMOVES a source of
+        #   error rather than adding one, and it should be the default for
+        #   every Thai-script page from here on.
+        'id': 'baep-kammavaca-suat-hai-pha-kathin',
+        'title_thai': 'แบบกรรมวาจาสวดให้ผ้ากฐิน',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Form of the Kammavācā for Giving the Kathina Cloth',
+        'page_start': 308,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0575.PNG]: The namo is printed as THREE separate
+            #   lines rather than one line marked to be said three times, so
+            #   it is entered as three verses. That is what the sheet shows.
+            {
+                'number': 1,
+                'page': 308,
+                'para_start': True,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Fully Enlightened One.',
+            },
+            {
+                'number': 2,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Fully Enlightened One.',
+            },
+            {
+                'number': 3,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Fully Enlightened One.',
+            },
+            {
+                'number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สุณาตุ เม ภันเต สังโฆ,',
+                'pali_roman': 'Suṇātu me bhante saṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Let the Saṅgha, venerable sirs, hear me.',
+            },
+            {
+                'number': 5,
+                'pali': 'อิทัง สังฆัสสะ กะฐินะทุสสัง อุปปันนัง,',
+                'pali_roman': 'Idaṃ saṅghassa kaṭhinadussaṃ uppannaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This kathina cloth has come to the Saṅgha.',
+            },
+            {
+                'number': 6,
+                'pali': 'ยะทิ สังฆัสสะ ปัตตะกัลลัง,',
+                'pali_roman': 'Yadi saṅghassa pattakallaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If the Saṅgha is ready,',
+            },
+            {
+                'number': 7,
+                'pali': 'สังโฆ อิมัง กะฐินะทุสสัง,',
+                'pali_roman': 'Saṅgho imaṃ kaṭhinadussaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let the Saṅgha give this kathina cloth',
+            },
+            {
+                'number': 8,
+                'pali': 'อายัส์มะโต (อิตถันนามัสสะ) ทะเทยยะ,',
+                'pali_roman': 'Āyasmato (itthannāmassa) dadeyya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to the venerable (name of the recipient),',
+            },
+            {
+                'number': 9,
+                'pali': 'กะฐินัง อัตถะริตุง,',
+                'pali_roman': 'Kaṭhinaṃ attharituṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the spreading of the kathina.',
+            },
+            {
+                'number': 10,
+                'pali': 'เอสา ญัตติ.',
+                'pali_roman': 'Esā ñatti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is the motion.',
+            },
+            {
+                'number': 11,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สุณาตุ เม ภันเต สังโฆ,',
+                'pali_roman': 'Suṇātu me bhante saṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Let the Saṅgha, venerable sirs, hear me.',
+            },
+            {
+                'number': 12,
+                'pali': 'อิทัง สังฆัสสะ กะฐินะทุสสัง อุปปันนัง,',
+                'pali_roman': 'Idaṃ saṅghassa kaṭhinadussaṃ uppannaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This kathina cloth has come to the Saṅgha.',
+            },
+            {
+                'number': 13,
+                'pali': 'สังโฆ อิมัง กะฐินะทุสสัง อายัส์มะโต (อิตถันนามัสสะ) เทติ,',
+                'pali_roman': 'Saṅgho imaṃ kaṭhinadussaṃ āyasmato (itthannāmassa) deti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Saṅgha gives this kathina cloth to the venerable (name),',
+            },
+            {
+                'number': 14,
+                'pali': 'กะฐินัง อัตถะริตุง,',
+                'pali_roman': 'Kaṭhinaṃ attharituṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the spreading of the kathina.',
+            },
+            {
+                'number': 15,
+                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali_roman': 'Yassāyasmato khamati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To whichever venerable one it is acceptable —',
+            },
+            {
+                'number': 16,
+                'pali': 'อิมัสสะ กะฐินะทุสสัสสะ,',
+                'pali_roman': 'Imassa kaṭhinadussassa,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the giving of this kathina cloth',
+            },
+            # ‼ CHECK [IMG_0575.PNG]: A FULL STOP INSIDE THE BRACKETS. Verse
+            #   17 prints (อิตถันนามัสสะ.) with a stop before the closing
+            #   bracket, where verses 8, 13 and 24 print (อิตถันนามัสสะ)
+            #   without one. Read at 5x on a 1.5x crop. Kept as printed on all
+            #   four.
+            {
+                'number': 17,
+                'pali': 'อายัส์มะโต (อิตถันนามัสสะ.) ทานัง,',
+                'pali_roman': 'Āyasmato (itthannāmassa.) dānaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to the venerable (name) —',
+            },
+            {
+                'number': 18,
+                'pali': 'กะฐินัง อัตถะริตุง,',
+                'pali_roman': 'Kaṭhinaṃ attharituṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the spreading of the kathina,',
+            },
+            {
+                'number': 19,
+                'pali': 'โส ตุณ์หัสสะ,',
+                'pali_roman': 'So tuṇhassa,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let that one remain silent.',
+            },
+            {
+                'number': 20,
+                'pali': 'ยัสสะ นะ ขะมะติ,',
+                'pali_roman': 'Yassa na khamati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To whomever it is not acceptable,',
+            },
+            {
+                'number': 21,
+                'pali': 'โส ภาเสยยะ.',
+                'pali_roman': 'So bhāseyya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let that one speak.',
+            },
+            {
+                'number': 22,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ทินนัง อิทัง สังเฆนะ,',
+                'pali_roman': 'Dinnaṃ idaṃ saṅghena,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This has been given by the Saṅgha,',
+            },
+            {
+                'number': 23,
+                'pali': 'กะฐินะทุสสัง,',
+                'pali_roman': 'Kaṭhinadussaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the kathina cloth,',
+            },
+            {
+                'number': 24,
+                'pali': 'อายัส์มะโต (อิตถันนามัสสะ) กะฐินัง อัตถะริตุง,',
+                'pali_roman': 'Āyasmato (itthannāmassa) kaṭhinaṃ attharituṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to the venerable (name), for the spreading of the kathina.',
+            },
+            {
+                'number': 25,
+                'pali': 'ขะมะติ สังฆัสสะ,',
+                'pali_roman': 'Khamati saṅghassa,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It is acceptable to the Saṅgha,',
+            },
+            {
+                'number': 26,
+                'pali': 'ตัส์มา ตุณ์หี,',
+                'pali_roman': 'Tasmā tuṇhī,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'therefore it is silent.',
+            },
+            {
+                'number': 27,
+                'pali': 'เอวะเมตัง ธาระยามิ.',
+                'pali_roman': 'Evametaṃ dhārayāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus do I hold it.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-athitthan-pha-kathin',
+        'title_thai': 'คำอธิษฐานผ้ากฐิน',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words for Determining the Kathina Cloth',
+        'page_start': 308,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0575.PNG]: ⚠ THESE LINES MIX THAI APPARATUS WITH
+            #   PALI, AND THIS IS THE FIRST PLACE IN THE BOOK THAT DOES. Each
+            #   line prints a Thai LABEL (สังฆาฏิ :), then the Pali, then a
+            #   Thai REPEAT-RUBRIC (ว่า 3 ครั้ง). Nothing in the 98 pages
+            #   entered before this carried either — a search of chanting.py
+            #   found no `pali` value containing ว่า and none with a label
+            #   prefix. The whole printed line is kept in `pali`, because page
+            #   fidelity is the governing rule and the line must render as the
+            #   sheet sets it; `pali_roman` transliterates ONLY the Pali,
+            #   since running the transliterator over a Thai label would
+            #   produce a confident nonsense reading. The cost is that `pali`
+            #   is no longer purely Pali on these lines, and that is recorded
+            #   here rather than hidden.
+            # ‼ CHECK [IMG_0575.PNG]: THE RUBRIC IS NOT TRANSLITERATED but IS
+            #   translated: the English carries '(say 3 times)' because a
+            #   reader needs the instruction, while pali_roman stops at
+            #   attharāmi. The two romanised layers therefore do not cover the
+            #   same span of the printed line, which is deliberate.
+            {
+                'number': 1,
+                'page': 308,
+                'para_start': True,
+                'pali': 'สังฆาฏิ : อิมายะ สังฆาฏิยา กะฐินัง อัตถะรามิ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Imāya saṅghāṭiyā kaṭhinaṃ attharāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Outer robe: with this outer robe I spread the kathina. (say 3 times)',
+            },
+            {
+                'number': 2,
+                'pali': 'อุตตราสงค์ : อิมินา อุตตะราสังเคนะ กะฐินัง อัตถะรามิ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Iminā uttarāsaṅgena kaṭhinaṃ attharāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Upper robe: with this upper robe I spread the kathina. (say 3 times)',
+            },
+            {
+                'number': 3,
+                'pali': 'อันตรวาสก : อิมินา อันตะระวาสะเกนะ กะฐินัง อัตถะรามิ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Iminā antaravāsakena kaṭhinaṃ attharāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Inner robe: with this inner robe I spread the kathina. (say 3 times)',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 1; the rest is not in the app yet.
+        'id': 'kham-anumothana-kathin',
+        'title_thai': 'คำอนุโมทนากฐิน',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Rejoicing in the Kathina',
+        'page_start': 308,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0575.PNG]: ⚠ THE `thai` FIELD HERE HOLDS AN
+            #   INSTRUCTION, NOT A TRANSLATION. The book prints four lines of
+            #   Thai directly beneath the Pali, explaining that this form is
+            #   for a recipient senior to all present and that อาวุโส becomes
+            #   ภันเต otherwise. It belongs to this line and is printed with
+            #   it, but the block system cannot place a block INSIDE a chant —
+            #   the same limit that forced page 310 to be split — so it is
+            #   carried on the verse where it renders in the right place.
+            #   `paiboon` is left empty on purpose: Paiboon+ romanises a
+            #   translation, and this is not one.
+            # ‼ CHECK [IMG_0575.PNG]: ⚠ THE CONTENTS LISTS THIS TITLE TWICE,
+            #   at page ๓๐๓ and again at ๓๐๘. This entry is the page-308
+            #   printing. When the page-303 one is reached it must be given a
+            #   DISTINCT id rather than merged, the same way mahasamayasutta-
+            #   roman was kept apart from the page-175 printing — otherwise
+            #   one will silently overwrite the other.
+            {
+                'number': 1,
+                'page': 308,
+                'para_start': True,
+                'pali': 'อัตถะตัง อาวุโส สังฆัสสะ กะฐินัง, ธัมมิโก กะฐินัตถาโร อะนุโมทะถะ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Atthataṃ āvuso saṅghassa kaṭhinaṃ, dhammiko kaṭhinatthāro anumodatha',
+                'thai': 'นี้สำหรับท่านผู้ครองกฐินมีพรรษาแก่กว่าภิกษุทั้งปวง ถ้ามีภิกษุอื่นที่มีพรรษามากกว่าท่านผู้ครองกฐินอยู่ ในที่นั้น ให้เปลี่ยนคำว่า อาวุโส เป็น ภันเต แล้วให้พระสงฆ์ทั้งปวงเปล่งวาจาอนุโมทนาต่อไปว่า',
+                'paiboon': '',
+                'english': "The Saṅgha's kathina has been spread, friends; the spreading of the kathina is in accordance with the Dhamma. Rejoice in it. (say 3 times)",
+            },
+        ],
+    },
 ]
 
 
@@ -33348,6 +34044,20 @@ PAGE_BLOCKS = [
                 'type': 'heading',
                 'thai': 'gāthājinabañjara',
                 'english': "The Verses of the Victor's Cage",
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 308 ───────────────────────────────────────────────────
+    # Written from batch-308-308.json.
+    {
+        'page': 308,
+        'after': 'baep-kammavaca-suat-hai-pha-kathin',
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'หมายเหตุ ในวงเล็บ อิตถันนามัสสะ ให้ใส่ชื่อผู้ครองกฐินแทน',
+                'english': 'Note: in the brackets, itthannāmassa, put the name of the one receiving the kathina instead.',
                 'english_unverified': True,
             },
         ],
