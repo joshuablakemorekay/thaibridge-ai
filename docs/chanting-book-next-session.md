@@ -1160,13 +1160,36 @@ heading above as applying to it.
 
 ## Where it is
 
-**Pages 317–325 are IN** — the whole Mahāsamaya Sutta, 192 verses, entered
-2026-08-24. The chant is complete and carries no CONTINUES marker.
+**Pages 312–325 are IN and unbroken**, all entered 2026-08-24:
 
-**Resume at page 316 = `IMG_0583`, but READ THE NUMBER off the sheet.** The
-offset is 267 below the IMG_0587/0588 step, so 316 *should* be `IMG_0583` — and
-the whole reason this pass found what it found is that the number gets read
-rather than calculated.
+| pages | chant | verses |
+|---|---|---:|
+| 312–316 | `yod-phrakantraipidok` | 86 |
+| 316 | `vipassit` | 1 |
+| 317–325 | `mahasamayasutta-roman` | 192 |
+
+All three are complete and **no CONTINUES marker is left anywhere in the file**.
+
+**Resume at page 311 = `IMG_0578`, but READ THE NUMBER off the sheet.** Page 311
+is the END of the Jinapañjara — verses 9 to 15, closing `carāmi jinapañjareti`
+— so the next unit is that chant, and its opening page has to be found by
+reading backwards until a title appears. The offset is 267 here.
+
+## ⚠ Two open questions for when the book is in hand
+
+Neither blocks further work, but both are cheaper to settle now than later.
+
+1. **Is `VIPASSIT` a title or a closing label?** It is centred, capitalised,
+   with white space above and one centred line below — set exactly like the
+   page-312 title, which is why it was entered as its own chant. But it carries
+   no bracketed English gloss where that title does. If the book says it belongs
+   to the chant above, fold it in as a `closing` and drop the separate entry.
+2. **The invocation material on 314–316 cannot be checked by sense.** Heart
+   syllables (`sosososasa`, `a-a-a-a-ni`, `ma-a-u`) are abbreviations where each
+   letter stands for a phrase, and words like `buddhapapha`, `puyapaka`,
+   `hetupova`, `vinapañca` and `kalākara kanā` have no reading to check against.
+   They are transcribed exactly as set. These are the lines that most need
+   the printed page.
 
 ## Read `docs/chanting-book-photo-map.md` first
 
@@ -1239,3 +1262,44 @@ x 1062–1159 — and 323 and 324 FACE EACH OTHER.
 two-column ones, and a whole-page gutter scan reports NO columns on it at all,
 because the wide block closes the corridor. Reading it as two-column throughout
 would have folded its first eight lines into four wrong verses.
+
+## What the Yod Phrakantraipidok stretch taught, and it is not small
+
+Pages 312–316 are a different kind of page from anything the forward pass has
+met, and three of the four hard lessons came from getting something wrong first.
+
+**⚠ MAGNIFY BEFORE TRANSCRIBING. This is now the default for the roman
+section, not a fallback.** Twice on this chant, reading at page zoom produced a
+wrong answer that a crop corrected. Every sheet from 314 on was read from crops
+enlarged 1.5x.
+
+**⚠ WORD SPACES HERE ARE 6–11px, NOT 15–25px.** Page 312 was first entered with
+every line RUN TOGETHER, because the gaps were measured against an absolute
+expected width and nothing cleared it. The section's real word space is only
+about twice its letter gap. What made it worse: the gap after each item numeral
+is 52px — a DOUBLE space — so measuring against that made every ordinary space
+vanish. **Count wide gaps against the LINE'S OWN median, never an absolute
+width**, and sanity-check on a short line whose word count you already know.
+Fixed in `1d2d91f`.
+
+**⚠ WORDS BREAK ACROSS LINE ENDS WITH NO HYPHEN.** Four times in two sheets —
+`yāvajī`/`vaṃ`, `kusalā`/`dhammā`, `sabbasiddhivijjādhā`/`raṇaṃsāvaṃ` on 315,
+and `saññā`/`khandho` on 316. Page 314 used a visible hyphen for the same thing,
+so both marks are in use. An unhyphenated break leaves two nonsense fragments
+and **no mark to warn you**, which makes it the fault most likely to survive
+into the data unnoticed. Check every line end against the next line's opening.
+
+**A SKEWED PHOTOGRAPH DEFEATS THE VERTICAL-GAP RULE.** On page 313 the left
+edge drifts 43px from head to foot and the paragraph gaps compress with it:
+item 3 breaks at 71px, item 5 at only 54px, below the threshold that has grouped
+every page in this project. The hanging numerals settled it. Any sheet shot at
+an angle needs the grouping taken from something other than the gap.
+
+## The book contradicts the repo on one point
+
+`chanting.py`'s comment above `_CONTENTS_ENGLISH` says the English is "never
+taken from the book, which prints no English at all". **Page 312 prints English**
+— `[The Peak of Tipitaka]`, centred in square brackets under the title — and
+`yod-phrakantraipidok` now carries the BOOK'S wording in `title_english` rather
+than one written for the app. That comment should be softened when someone next
+touches it; it is true of the Thai-script pages and false of the roman section.
