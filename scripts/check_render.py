@@ -109,6 +109,28 @@ def first_claimed(batch_files) -> dict[tuple[str, int], int]:
     return lowest
 
 
+def printed(source: dict, thai_key: str, roman_key: str) -> str:
+    """The layer the BOOK sets, preferring Thai script and falling back to roman.
+
+    Almost every page in this book is printed in Thai script, so `pali` and
+    `title_thai` are what a reader sees and what this check should walk. The
+    back of the book is not: pages 317 onwards set the Mahāsamaya Sutta in
+    ROMAN Pali with no Thai script anywhere, so `pali` is empty by design and
+    `pali_roman` is the chanted layer.
+
+    Reading only the Thai key there does something worse than miss a fault. It
+    finds no strings at all, walks nothing, and prints PASS — a page that could
+    render blank and be certified correct. The first roman page went through
+    this check reporting `pages rendered: 0` under a PASS, which is exactly the
+    waved-through failure `check_batch`'s docstring is about.
+
+    The fallback is one-directional on purpose. Where the book gives Thai
+    script that is what gets walked, and a romanisation this app generated is
+    never checked in its place.
+    """
+    return source.get(thai_key) or source.get(roman_key) or ""
+
+
 def expected(batch: dict, page: int,
              lowest: dict[tuple[str, int], int] | None = None
              ) -> tuple[list[list[tuple[str, str]]], list[tuple[str, str]]]:
@@ -162,22 +184,23 @@ def expected(batch: dict, page: int,
         run: list[tuple[str, str]] = []
         # A continuation carries no title by design, and the book does not
         # reprint one on a page a chant merely runs onto.
-        if row.get("starts_here") and entry.get("title_thai"):
-            run.append((f"{cid} title", entry["title_thai"]))
+        if row.get("starts_here") and printed(entry, "title_thai", "title_pali"):
+            run.append((f"{cid} title",
+                        printed(entry, "title_thai", "title_pali")))
         wanted = verse_numbers(row.get("verses", "none"))
         for verse in entry.get("verses") or []:
             n = verse["number"]
-            if n not in wanted or not verse.get("pali"):
+            if n not in wanted or not printed(verse, "pali", "pali_roman"):
                 continue
             # A line this page finishes but an earlier page began renders
             # where it began. Claiming it here would report the app for
             # following its own rule.
             if lowest and lowest.get((cid, n), page) < page:
                 continue
-            run.append((f"{cid} v{n}", verse["pali"]))
+            run.append((f"{cid} v{n}", printed(verse, "pali", "pali_roman")))
         # The colophon shows only on the page where the chant actually ends,
         # which is the page holding its last verse.
-        closing = (entry.get("closing") or {}).get("pali")
+        closing = printed(entry.get("closing") or {}, "pali", "pali_roman")
         if closing and entry.get("verses") \
                 and entry["verses"][-1]["number"] in wanted:
             run.append((f"{cid} closing", closing))
