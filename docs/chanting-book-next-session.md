@@ -1124,3 +1124,94 @@ downgrade it. Nothing reads `group` today — it is the only chant of 81 that do
 not say `General chanting`, so it is an outlier rather than a treasure — but the
 lesson generalises: **before re-applying any batch, diff it against the file
 first.** The file wins, and the renderer does not know that.
+
+---
+
+# The BACKWARD pass — the roman section at the back of the book
+
+Everything above describes the FORWARD pass, which is at page 96 and climbing.
+A second pass now works **backwards from the last page**, and the two will
+eventually meet. This section is its state carrier; do not read the "Next"
+heading above as applying to it.
+
+## Where it is
+
+**Pages 317–325 are IN** — the whole Mahāsamaya Sutta, 192 verses, entered
+2026-08-24. The chant is complete and carries no CONTINUES marker.
+
+**Resume at page 316 = `IMG_0583`, but READ THE NUMBER off the sheet.** The
+offset is 267 below the IMG_0587/0588 step, so 316 *should* be `IMG_0583` — and
+the whole reason this pass found what it found is that the number gets read
+rather than calculated.
+
+## Read `docs/chanting-book-photo-map.md` first
+
+It now carries three things this pass established, and they matter more than
+the page count:
+
+1. **Three pages between 224 and 316 were never photographed.** 91 contiguous
+   files for 94 pages. They leave no filename gap, so only reading page numbers
+   will find them.
+2. **Pages 309–325 are roman-script and the สารบัญ never names them.** The
+   contents cannot tell you where a chant starts down here.
+3. **A chant can be in the book twice, in two scripts.** Mahāsamaya is at 175
+   in Thai and 317–325 in roman. The roman one is `mahasamayasutta-roman`.
+
+## What the roman section broke, and what now handles it
+
+Three things assumed Thai script and had to be fixed before a roman page could
+go in at all. All three are committed; they are listed so nobody re-discovers
+them the hard way.
+
+* **Book mode hid `pali_roman`**, so a roman-only sheet rendered BLANK. The
+  template now shows a roman line where the book itself set it, judged by the
+  page: no `pali` means there was no Thai to romanise.
+* **`check_render` walked `verse["pali"]`**, which is empty here, so it reported
+  `pages rendered: 0` and then printed PASS. A blank page certified correct.
+  It now falls back to the roman layer, one-directionally.
+* **The contents-reachability test could not hold**, because the สารบัญ stops
+  at 308. It is now bounded at `BOOK_LAST_PAGE`, with a second test stopping the
+  exemption creeping below 308.
+
+## ⚠ Two sessions cannot both hold `chanting.py`
+
+This pass ran alongside the forward pass in the SAME clone and they collided:
+one file held four pages of work from two sessions and neither could commit
+without dragging in the other's. It was resolved by one honest combined commit.
+
+**"Bank the batch files and apply later" is NOT a safe way round it.** A batch
+file whose verses are not in `chanting.py` makes `check_pages` AND
+`check_render` fail — so the repo sits red for as long as the data is held. Nine
+banked batches broke the suite exactly that way, and it went green again only
+once they were applied.
+
+If two sessions must run at once, give each a `git worktree`. Note that
+`apply_batch` splices a NEW chant at the single line closing `CHANTS`
+(`apply_batch.py:996`), so two sessions adding chants will conflict there every
+time — verse appends to different chants merge cleanly.
+
+## What is worth a second pair of eyes against the book
+
+All of it is an unreviewed draft, but these are the lines with least context to
+self-correct from:
+
+* **Page 321, verses 100–105** — a dense run of proper names: Kuṭeṇḍu, Veṭeṇḍu,
+  Viṭuca, Viṭuṭa, Kinnughaṇḍu, Nighaṇḍu, Opamañña, Timbarū, Suriyavaccasā.
+* **The book contradicting itself**, all recorded as printed and none corrected:
+  `tap` for `taṃ` on two sheets (320, 321); `viruḷho` against `viruḷhako` for
+  the same Great King; `bhikkhu` against `bhikkhū` on one sheet (318); `Evam`
+  against `Evaṃ`; `āmantayi` against `āmantayī`.
+* **Page 320 verse 76**, where the BOLD says new unit and the SPACING says same
+  block. The spacing was followed — rows inside it sit 39–51px apart where every
+  real break on that sheet is 77–113px.
+
+## Measure every sheet. The gutter changed on all of them
+
+Five sheets, five different measures: 319 a hard right-column edge at x 1080,
+320 a corridor at x 972–1188, 321 at x 963–1045, 323 at x 880–978, 324 at
+x 1062–1159 — and 323 and 324 FACE EACH OTHER.
+
+**Page 322 is the trap.** It is mixed: eight single-column rows and then fifteen
+two-column ones, and a whole-page gutter scan reports NO columns on it at all,
+because the wide block closes the corridor. Reading it as two-column throughout
+would have folded its first eight lines into four wrong verses.

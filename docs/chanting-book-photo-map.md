@@ -84,9 +84,59 @@ photograph.
 | 221 | IMG_0491 | 270 |
 | 222 | IMG_0492 | 270 |
 | 223 | IMG_0493 | 270 |
+| 317 | IMG_0584 | 267 |
+| 318 | IMG_0585 | 267 |
+| 319 | IMG_0586 | 267 |
+| **320** | **IMG_0589** | **269** ⟵ offset changes here |
+| 321 | IMG_0590 | 269 |
+| 322 | IMG_0591 | 269 |
+| 323 | IMG_0592 | 269 |
+| 324 | IMG_0593 | 269 |
+| **325** | **IMG_0594** | **269** ⟵ last page of the book |
 
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
 somewhere between 74 and 207 were shot twice. Those stretches are unmapped.
+
+## ⚠ Three pages between 224 and 316 were never photographed
+
+The back of the book was mapped on 2026-08-24 by working backwards from the
+last photograph, and it turned up a gap that the forward pass would not have
+reached for months.
+
+Page 223 sits at offset **270** and page 317 at offset **267**. Files
+`IMG_0493` to `IMG_0584` are contiguous — no gaps in that stretch at all — so
+that is **91 files carrying 94 pages**. A *falling* offset can only mean pages
+without photographs, and three of them.
+
+This is the same class of miss as page 21, and it has the same signature:
+**a missing page leaves no gap in the filenames.** Only reading the page
+numbers off the sheets will find which three they are. Worth doing with the
+book in hand before it is put away.
+
+## The offset RISES again at IMG_0587/0588, and both really are duplicates
+
+Page 319 is `IMG_0586` at offset 267 and page 320 is `IMG_0589` at offset 269.
+`IMG_0587` and `IMG_0588` do not exist and are already in the deleted-duplicate
+list, so no page is missing there — the offset simply steps by two. Both sides
+of the step were read off the sheets rather than calculated, which is what
+proves it is a duplicate deletion and not two more unphotographed pages.
+
+## Pages 309–325 are a ROMAN-SCRIPT section the สารบัญ never names
+
+`BOOK_LAST_PAGE` is 308, which is the last page the book's own contents lists,
+and the book runs to 325. The closing stretch is set in **roman Pali with no
+Thai script at all** — the only pages in the book like this.
+
+Two consequences worth knowing before entering any more of it:
+
+* **The contents cannot help you find where a chant starts.** For every page up
+  to 308 the สารบัญ names the opening page; here it names nothing, so the only
+  way is to read backwards until a title appears.
+* **The same chant can be in the book twice.** The Mahāsamaya Sutta is printed
+  in Thai script at page 175 — the contents lists it — and again in roman at
+  317–325. The roman printing was entered as its own chant,
+  `mahasamayasutta-roman`, so that page 175 can go in later without either
+  overwriting the other.
 
 Pages 35–50 went in without being added here, and they all sat at offset 263 —
 the same as pages 31–34 and 51. Pages 55–58 went in the same way. So the offset
