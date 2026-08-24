@@ -29221,7 +29221,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 71; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 82; the rest is not in the app yet.
         # ‼ CHECK [IMG_0579.PNG]: THE BOOK PRINTS ENGLISH ON THIS PAGE, and it
         #   is the first page in the book to do so. Beneath the title, centred
         #   and in square brackets: [The Peak of Tipitaka]. chanting.py states
@@ -29931,6 +29931,132 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Nandavivaṅka: thus the Fully Enlightened One, the well-gone. For as long as life lasts I go to the Buddha for refuge.',
+            },
+            # ‼ CHECK [IMG_0582.PNG]: ⚠ WORDS BROKEN ACROSS LINE ENDS WITH NO
+            #   HYPHEN AT ALL — a different mark from page 314's, and easier
+            #   to miss. Three on this sheet: 'yāvajī' / 'vaṃ' at the first
+            #   line break, 'kusalā' / 'dhammā' further down item 10, and
+            #   'sabbasiddhivijjādhā' / 'raṇaṃsāvaṃ' in item 11. Page 314
+            #   broke a word with a visible hyphen; this sheet just stops mid-
+            #   word and continues. All three rejoined, and all three would
+            #   read as nonsense words if they were not.
+            {
+                'number': 72,
+                'page': 315,
+                'printed_number': 10,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'cātummahārājikā issaro kusalādhammā iti vijjācaraṇasampanno u-ū yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the realm of the Four Great Kings, wholesome states; thus, perfect in knowledge and conduct — u-ū — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 73,
+                'pali': '',
+                'pali_roman': 'tāvatiṃsā issaro kusalādhammā nandapañcasugato lokavidū mahā-e-o yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Tāvatiṃsa heaven, wholesome states; the well-gone one, knower of worlds — mahā-e-o — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 74,
+                'pali': '',
+                'pali_roman': 'yāmā issaro kusalādhammā brahmā sadda pañcasatta sattāpāramī anuttaro yamakakha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Yāma heaven, wholesome states; Brahmā, sound, the five and seven, the seven perfections, the unsurpassed — yamakakha — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 75,
+                'pali': '',
+                'pali_roman': 'tusitā issaro kusalādhammā puyapaka purisadammasārathi yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Tusita heaven, wholesome states; puyapaka, trainer of tameable people — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 76,
+                'pali': '',
+                'pali_roman': 'nimmānaratī issaro kusalādhammā hetupova satthādevamanussānaṃ tathā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Nimmānaratī heaven, wholesome states; hetupova, teacher of devas and humans, likewise — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            # ‼ CHECK [IMG_0582.PNG]: 'buddhapapha' is not a form found
+            #   elsewhere and has no obvious reading; the same is true of
+            #   'puyapaka' at verse 75, 'hetupova' at 76, 'vinapañca' at 78
+            #   and 'kalākara kanā' at 79. These are heart-syllable or
+            #   invocation material rather than ordinary Pali, so sense cannot
+            #   be used to check them — they are transcribed exactly as set
+            #   and are worth the book in hand.
+            {
+                'number': 77,
+                'pali': '',
+                'pali_roman': 'paranimmitavasavattī issaro kusalādhammā saṅkhārakhandho dukkhaṃ aniccaṃ anattā rūpakhandho buddhapapha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Paranimmitavasavattī heaven, wholesome states; the aggregate of formations — suffering, impermanent, not-self — the aggregate of form, buddhapapha — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 78,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'brahmā issaro kusalādhammā natthipaccayā vinapañca bhagavatā yāvanibbānaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord Brahmā, wholesome states; by the condition of non-existence, vinapañca, by the Blessed One — until Nibbāna I go for refuge.',
+            },
+            {
+                'number': 79,
+                'printed_number': 11,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'namobuddhassa namodhammassa namosaṅghassa buddhilābho kalākara kanā etena saccena suvatthi hontu hulū hulū hulū savāhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha; the gain of awakening. By this truth may there be well-being — hulū hulū hulū savāhāya.',
+            },
+            # ‼ CHECK [IMG_0582.PNG]: THE BOOK PRINTS 'mitt' WITHOUT ITS FINAL
+            #   VOWEL, in the run 'mitti mitti mitt citti citti'. Its two
+            #   neighbours both carry the i. Read at 5x: clear paper after the
+            #   second t. Kept as printed, NOT completed to mitti.
+            {
+                'number': 80,
+                'pali': '',
+                'pali_roman': 'namobuddhassa namodhammassa namosaṅghassa vitti vitti vitti mitti mitti mitt citti citti vatti vatti mayasu suvatthi hontu hulū hulū hulū savāhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha; syllable formulas repeated in threes and pairs. May there be well-being — hulū hulū hulū savāhāya.',
+            },
+            # ‼ CHECK [IMG_0582.PNG]: 'devasāvaṃ' AND 'mahādevāsāvaṃ' ON ONE
+            #   LINE — the second carries a long ā where the first does not,
+            #   for what should be the same element. Kept as each is set.
+            {
+                'number': 81,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'indasāvaṃ mahā-indasāvaṃ brahmasāvaṃ mahābrahmasāvaṃ cakkavattisāvaṃ mahācakkavattisāvaṃ devasāvaṃ mahādevāsāvaṃ isīsāvaṃ mahā-isīsāvaṃ munīsāvaṃ mahāmunīsāvaṃ sappurisasāvaṃ mahāsappurisasāvaṃ buddhasāvaṃ paccekabuddhasāvaṃ arahattasāvaṃ sabbasiddhivijjādhāraṇaṃsāvaṃ sabbalokā-iriyānaṃsāvaṃ etena saccena suvatthi hontu.',
+                'thai': '',
+                'paiboon': '',
+                'english': "The power of Inda and of great Inda, of Brahmā and great Brahmā, of the wheel-turning king and the great wheel-turner, of devas and great devas, of seers and great seers, of sages and great sages, of good people and great good people, of Buddhas, of Paccekabuddhas, of arahantship, of all attainment and knowledge held, and of all the world's conduct. By this truth may there be well-being.",
+            },
+            # ‼ CHECK [IMG_0582.PNG]: The book prints 'viriaṃ' where the
+            #   expected form is viriyaṃ. Read at 5x: no y. Recorded as
+            #   printed.
+            {
+                'number': 82,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'sāvaṃ guṇaṃ vaja balaṃ tejaṃ viriaṃ siddhi kammaṃ dhammaṃ saccaṃ nibbānaṃ mokkhaṃ guyhakaṃ dānaṃ sīlaṃ paññā nikkhaṃ puññaṃ bhāgayaṃ yasaṃ tappaṃ sukhaṃ siri rūpaṃ catuvīsatidesanaṃ etena saccena suvatthi hontu hulū hulū hulū savāhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Power, virtue, speech, strength, brilliance, energy, attainment, action, Dhamma, truth, Nibbāna, release, what is hidden, giving, morality, wisdom, renunciation, merit, fortune, fame, satisfaction, happiness, splendour, form, and the twenty-four teachings. By this truth may there be well-being — hulū hulū hulū savāhāya.',
             },
         ],
     },

@@ -1,0 +1,210 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "yod-phrakantraipidok"
+  ],
+  "pages": [
+   {
+    "page": 315,
+    "file": "IMG_0582.PNG",
+    "script": "roman",
+    "columns": 1,
+    "chant": "yod-phrakantraipidok",
+    "verses": "72-82",
+    "starts_here": false,
+    "note": "SINGLE COLUMN and PROSE END TO END — the first sheet of this chant with no formula lines on it at all. Items 10 and 11, five printed paragraphs between them, wrapping at the measure. Read from five magnified crops rather than the full sheet, because the setting is dense enough that word boundaries are unreliable at page zoom. The series carries on to page 316."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "yod-phrakantraipidok",
+   "continuation_of": "yod-phrakantraipidok",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Eleven, verses 72 to 82, one per SENTENCE, grouped into the five paragraphs the page prints. Every group carries para_start and para_layout 'prose', because the chant's own layout is 'lines' and would otherwise set these wrapping paragraphs as a stack of short lines. Sentence-level division follows the prose convention already in chanting.py, where a verse is a clause and a paragraph is a group.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text with ordinary word division.",
+    "pages": "IMG_0582.PNG, page 315, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 72,
+     "pali": "",
+     "pali_roman": "cātummahārājikā issaro kusalādhammā iti vijjācaraṇasampanno u-ū yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the realm of the Four Great Kings, wholesome states; thus, perfect in knowledge and conduct — u-ū — for as long as life lasts I go to the Buddha for refuge.",
+     "page": 315,
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 10
+    },
+    {
+     "number": 73,
+     "pali": "",
+     "pali_roman": "tāvatiṃsā issaro kusalādhammā nandapañcasugato lokavidū mahā-e-o yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the Tāvatiṃsa heaven, wholesome states; the well-gone one, knower of worlds — mahā-e-o — for as long as life lasts I go to the Buddha for refuge."
+    },
+    {
+     "number": 74,
+     "pali": "",
+     "pali_roman": "yāmā issaro kusalādhammā brahmā sadda pañcasatta sattāpāramī anuttaro yamakakha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the Yāma heaven, wholesome states; Brahmā, sound, the five and seven, the seven perfections, the unsurpassed — yamakakha — for as long as life lasts I go to the Buddha for refuge."
+    },
+    {
+     "number": 75,
+     "pali": "",
+     "pali_roman": "tusitā issaro kusalādhammā puyapaka purisadammasārathi yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the Tusita heaven, wholesome states; puyapaka, trainer of tameable people — for as long as life lasts I go to the Buddha for refuge."
+    },
+    {
+     "number": 76,
+     "pali": "",
+     "pali_roman": "nimmānaratī issaro kusalādhammā hetupova satthādevamanussānaṃ tathā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the Nimmānaratī heaven, wholesome states; hetupova, teacher of devas and humans, likewise — for as long as life lasts I go to the Buddha for refuge."
+    },
+    {
+     "number": 77,
+     "pali": "",
+     "pali_roman": "paranimmitavasavattī issaro kusalādhammā saṅkhārakhandho dukkhaṃ aniccaṃ anattā rūpakhandho buddhapapha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the Paranimmitavasavattī heaven, wholesome states; the aggregate of formations — suffering, impermanent, not-self — the aggregate of form, buddhapapha — for as long as life lasts I go to the Buddha for refuge."
+    },
+    {
+     "number": 78,
+     "pali": "",
+     "pali_roman": "brahmā issaro kusalādhammā natthipaccayā vinapañca bhagavatā yāvanibbānaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord Brahmā, wholesome states; by the condition of non-existence, vinapañca, by the Blessed One — until Nibbāna I go for refuge.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 79,
+     "pali": "",
+     "pali_roman": "namobuddhassa namodhammassa namosaṅghassa buddhilābho kalākara kanā etena saccena suvatthi hontu hulū hulū hulū savāhāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha; the gain of awakening. By this truth may there be well-being — hulū hulū hulū savāhāya.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 11
+    },
+    {
+     "number": 80,
+     "pali": "",
+     "pali_roman": "namobuddhassa namodhammassa namosaṅghassa vitti vitti vitti mitti mitti mitt citti citti vatti vatti mayasu suvatthi hontu hulū hulū hulū savāhāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha; syllable formulas repeated in threes and pairs. May there be well-being — hulū hulū hulū savāhāya."
+    },
+    {
+     "number": 81,
+     "pali": "",
+     "pali_roman": "indasāvaṃ mahā-indasāvaṃ brahmasāvaṃ mahābrahmasāvaṃ cakkavattisāvaṃ mahācakkavattisāvaṃ devasāvaṃ mahādevāsāvaṃ isīsāvaṃ mahā-isīsāvaṃ munīsāvaṃ mahāmunīsāvaṃ sappurisasāvaṃ mahāsappurisasāvaṃ buddhasāvaṃ paccekabuddhasāvaṃ arahattasāvaṃ sabbasiddhivijjādhāraṇaṃsāvaṃ sabbalokā-iriyānaṃsāvaṃ etena saccena suvatthi hontu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The power of Inda and of great Inda, of Brahmā and great Brahmā, of the wheel-turning king and the great wheel-turner, of devas and great devas, of seers and great seers, of sages and great sages, of good people and great good people, of Buddhas, of Paccekabuddhas, of arahantship, of all attainment and knowledge held, and of all the world's conduct. By this truth may there be well-being.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 82,
+     "pali": "",
+     "pali_roman": "sāvaṃ guṇaṃ vaja balaṃ tejaṃ viriaṃ siddhi kammaṃ dhammaṃ saccaṃ nibbānaṃ mokkhaṃ guyhakaṃ dānaṃ sīlaṃ paññā nikkhaṃ puññaṃ bhāgayaṃ yasaṃ tappaṃ sukhaṃ siri rūpaṃ catuvīsatidesanaṃ etena saccena suvatthi hontu hulū hulū hulū savāhāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Power, virtue, speech, strength, brilliance, energy, attainment, action, Dhamma, truth, Nibbāna, release, what is hidden, giving, morality, wisdom, renunciation, merit, fortune, fame, satisfaction, happiness, splendour, form, and the twenty-four teachings. By this truth may there be well-being — hulū hulū hulū savāhāya.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "issaro",
+     "meaning": "lord, ruler. Item 10 walks the six sense-sphere heavens in order, naming each as issaro before its refuge formula"
+    },
+    {
+     "pali": "",
+     "pali_roman": "hulū hulū hulū savāhāya",
+     "meaning": "a closing invocation, repeated at the end of each part of item 11. Not translatable word for word — svāhā is the old offering-call, and hulū is a devotional syllable"
+    },
+    {
+     "pali": "",
+     "pali_roman": "sāvaṃ",
+     "meaning": "the repeated element of item 11's long roll — indasāvaṃ, brahmasāvaṃ and the rest — naming the power or influence of each class of being in turn"
+    },
+    {
+     "pali": "",
+     "pali_roman": "catuvīsatidesanaṃ",
+     "meaning": "the twenty-four teachings — the twenty-four conditional relations of the Paṭṭhāna, counted as one item at the end of the list"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 72,
+     "file": "IMG_0582.PNG",
+     "issue": "⚠ WORDS BROKEN ACROSS LINE ENDS WITH NO HYPHEN AT ALL — a different mark from page 314's, and easier to miss. Three on this sheet: 'yāvajī' / 'vaṃ' at the first line break, 'kusalā' / 'dhammā' further down item 10, and 'sabbasiddhivijjādhā' / 'raṇaṃsāvaṃ' in item 11. Page 314 broke a word with a visible hyphen; this sheet just stops mid-word and continues. All three rejoined, and all three would read as nonsense words if they were not."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0582.PNG",
+     "issue": "READ FROM FIVE MAGNIFIED CROPS, NOT THE FULL SHEET. At page zoom this setting is dense enough that word boundaries cannot be resolved — the same trap that produced the wrong reading of page 312. Each crop was enlarged 1.55x before transcription."
+    },
+    {
+     "verse": 80,
+     "file": "IMG_0582.PNG",
+     "issue": "THE BOOK PRINTS 'mitt' WITHOUT ITS FINAL VOWEL, in the run 'mitti mitti mitt citti citti'. Its two neighbours both carry the i. Read at 5x: clear paper after the second t. Kept as printed, NOT completed to mitti."
+    },
+    {
+     "verse": 81,
+     "file": "IMG_0582.PNG",
+     "issue": "'devasāvaṃ' AND 'mahādevāsāvaṃ' ON ONE LINE — the second carries a long ā where the first does not, for what should be the same element. Kept as each is set."
+    },
+    {
+     "verse": 82,
+     "file": "IMG_0582.PNG",
+     "issue": "The book prints 'viriaṃ' where the expected form is viriyaṃ. Read at 5x: no y. Recorded as printed."
+    },
+    {
+     "verse": 77,
+     "file": "IMG_0582.PNG",
+     "issue": "'buddhapapha' is not a form found elsewhere and has no obvious reading; the same is true of 'puyapaka' at verse 75, 'hetupova' at 76, 'vinapañca' at 78 and 'kalākara kanā' at 79. These are heart-syllable or invocation material rather than ordinary Pali, so sense cannot be used to check them — they are transcribed exactly as set and are worth the book in hand."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "yod-phrakantraipidok"
+  ],
+  "resume_from_page": 316,
+  "resume_from_file": "IMG_0583.PNG",
+  "resume_from": "yod-phrakantraipidok",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in saraṇaṃ and guṇaṃ, long ū in hulū and lokavidū, long ī in nimmānaratī and paranimmitavasavattī. The three words broken across line ends are rejoined and recorded; nothing else is joined or divided.",
+  "page_scan": "agrees. One row for one page covering verses 72-82, the whole of what this page adds. Verse 72 carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "⚠ AN UNREVIEWED DRAFT, and like page 314 it carries invocation material that sense cannot check. Two findings. (1) WORDS BREAK ACROSS LINE ENDS WITH NO HYPHEN on this sheet — three times — where page 314 used a visible hyphen for the same thing. An unhyphenated break leaves two nonsense fragments and no mark to warn you, so it is the easiest fault in this section to miss; all three are recorded by name. (2) THE SETTING IS TOO DENSE TO READ AT PAGE ZOOM. Five crops at 1.55x were needed. That is now twice in this chant that magnification changed the reading, and it should be the default for the whole roman section rather than a fallback.",
+  "diacritic_exceptions": []
+ }
+}
