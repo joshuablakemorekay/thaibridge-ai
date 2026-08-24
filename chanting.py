@@ -25250,7 +25250,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 66; the rest is not in the app yet.
         # ‼ CHECK [IMG_0355.PNG]: english_unverified is set. The book prints
         #   this sutta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -25272,6 +25271,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'ธะชัคคะปะริตตัง ธะชัคคะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'Dhajaggaparittaṃ dhajaggasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Dhajagga Paritta, the Dhajagga Sutta.',
         },
         'verses': [
             # ‼ CHECK [IMG_0355.PNG]: เอวัมเม สุตัง, ENDS WITH A COMMA HERE,
@@ -25918,13 +25924,335 @@ CHANTS = [
             #   Buddha and the Dhamma — each end ยัมภะวิสสะติ, with one. So
             #   the unit is incomplete and page 92 must complete it. The chant
             #   carries both continuation_of and continues: true.
+            # ‼ COMPLETED FROM p92: this line was cut by the page break and is
+            #   now whole. Was: สังฆัง หิ โว ภิกขะเว อะนุสสะระตัง […]
             {
                 'number': 66,
-                'pali': 'สังฆัง หิ โว ภิกขะเว อะนุสสะระตัง […]',
-                'pali_roman': 'Saṅghaṃ hi vo bhikkhave anussarataṃ […]',
+                'pali': 'สังฆัง หิ โว ภิกขะเว อะนุสสะระตัง ยัมภะวิสสะติ,',
+                'pali_roman': 'Saṅghaṃ hi vo bhikkhave anussarataṃ yambhavissati,',
                 'thai': '',
                 'paiboon': '',
-                'english': 'For when you recollect the Saṅgha, bhikkhus, […]',
+                'english': 'For when you recollect the Saṅgha, bhikkhus, whatever',
+            },
+            # ‼ CHECK [IMG_0357.PNG]: A HAND HOLDS THE BOOK IN THIS PHOTOGRAPH
+            #   AND IT COVERS NO TEXT — checked rather than assumed. Skin tone
+            #   occupies x 1720-1900; the prose block's ink reaches x 1720 and
+            #   the verse rows stop by x 1600. Cropping the right margin at
+            #   2.4x shows clear white between the last glyph of every prose
+            #   line and the dark page edge, and the fingers sit BEYOND that
+            #   edge. Nothing is obscured and nothing needs re-photographing.
+            # ‼ CHECK [IMG_0357.PNG]: PARA_LAYOUT IS ON VERSE 67, NOT VERSE
+            #   66, and that is deliberate. Verse 66's line STARTS on page 91,
+            #   so it is not in this page's slice; verse 67 is the first verse
+            #   whose page is 92 and therefore the one the template reads
+            #   para_layout from. This is exactly what page 91 got wrong
+            #   twice.
+            {
+                'number': 67,
+                'page': 92,
+                'para_layout': 'prose',
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา,',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'fear or trembling or horripilation there may be,',
+            },
+            {
+                'number': 68,
+                'pali': 'โส ปะหิยยิสสะติ.',
+                'pali_roman': 'So pahiyyissati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it will be abandoned.',
+            },
+            {
+                'number': 69,
+                'pali': 'ตัง กิสสะ เหตุ ตะถาคะโต หิ ภิกขะเว อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Taṃ kissa hetu tathāgato hi bhikkhave arahaṃ sammāsambuddho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And why is that? Because the Tathāgata, bhikkhus, is worthy, perfectly awakened by himself,',
+            },
+            # ‼ CHECK [IMG_0357.PNG]: THE FOUR WORDS ARE THE EXACT NEGATIONS
+            #   OF PAGE 91's. Page 91 verse 37 says of Sakka ภิรุ ฉัมภี
+            #   อุต์ราสี ปะลายีติ; this page says of the Tathāgata อะภิรุ
+            #   อัจฉัมภี อะนุต์ราสี อะปะลายีติ. That contrast is the point of
+            #   the whole sutta, and the English keeps the four-for-four shape
+            #   rather than smoothing it.
+            {
+                'number': 70,
+                'pali': 'วีตะราโค วีตะโทโส วีตะโมโห อะภิรุ อัจฉัมภี อะนุต์ราสี อะปะลายีติ.',
+                'pali_roman': 'Vītarāgo vītadoso vītamoho abhiru acchambhī anutrāsī apalāyīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'free of lust, free of hate, free of delusion, unafraid, not startled, not fearful, one who does not flee.',
+            },
+            {
+                'number': 71,
+                'pali': 'อิทะมะโวจะ ภะคะวา.',
+                'pali_roman': 'Idamavoca bhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is what the Blessed One said.',
+            },
+            # ‼ CHECK [IMG_0357.PNG]: ‼ A WORD BROKEN ACROSS A LINE BREAK WITH
+            #   ITS CLUSTER MARK STRANDED. Line 3 ends อิทัง วัต and line 4
+            #   OPENS with a bare ์ before วานะ — the mark that belongs on the
+            #   ต at the end of the previous line. Read at 5x: the ์ sits
+            #   alone at the start of the line with clear paper around it.
+            #   Rejoined as วัต์วานะ. This is a new kind of line break for
+            #   this book — not a hyphen, but a combining mark orphaned onto
+            #   the next line — and it would be invisible as a fault once in.
+            {
+                'number': 72,
+                'pali': 'อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
+                'pali_roman': 'Idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having said this, the Well-gone One, the Teacher, further said this:',
+            },
+            # ‼ CHECK [IMG_0357.PNG]: SET BOTH WAYS ON ONE SHEET. The prose
+            #   frame runs x 300-1720 with no gutter; the gāthās below it are
+            #   two-column with the gutter at x 1000-1080. So verse 67
+            #   declares 'prose' and verse 73 declares 'lines'. Read the rows
+            #   ACROSS. FIRST PAIRING FOR CHECKING: left อะรัญเญ รุกขะมูเล วา
+            #   + right สุญญาคาเร วะ ภิกขะโว.
+            {
+                'number': 73,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'อะรัญเญ รุกขะมูเล วา สุญญาคาเร วะ ภิกขะโว',
+                'pali_roman': 'Araññe rukkhamūle vā suññāgāre va bhikkhavo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In the forest, at the root of a tree, or in an empty dwelling, bhikkhus,',
+            },
+            {
+                'number': 74,
+                'pali': 'อะนุสสะเรถะ สัมพุทธัง ภะยัง ตุมหากะ โน สิยา.',
+                'pali_roman': 'Anussaretha sambuddhaṃ bhayaṃ tumhāka no siyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'recollect the Perfectly Awakened One, and no fear will be yours.',
+            },
+            {
+                'number': 75,
+                'pali': 'โน เจ พุทธัง สะเรยยาถะ โลกะเชฏฐัง นะราสะภัง',
+                'pali_roman': 'No ce buddhaṃ sareyyātha lokajeṭṭhaṃ narāsabhaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If you cannot recollect the Buddha, eldest in the world, bull among men,',
+            },
+            {
+                'number': 76,
+                'pali': 'อะถะ ธัมมัง สะเรยยาถะ นิยยานิกัง สุเทสิตัง.',
+                'pali_roman': 'Atha dhammaṃ sareyyātha niyyānikaṃ sudesitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then recollect the Dhamma, leading out, well taught.',
+            },
+            {
+                'number': 77,
+                'pali': 'โน เจ ธัมมัง สะเรยยาถะ นิยยานิกัง สุเทสิตัง',
+                'pali_roman': 'No ce dhammaṃ sareyyātha niyyānikaṃ sudesitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If you cannot recollect the Dhamma, leading out, well taught,',
+            },
+            {
+                'number': 78,
+                'pali': 'อะถะ สังฆัง สะเรยยาถะ ปุญญักเขตตัง อะนุตตะรัง.',
+                'pali_roman': 'Atha saṅghaṃ sareyyātha puññakkhettaṃ anuttaraṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then recollect the Saṅgha, an unsurpassed field of merit.',
+            },
+            {
+                'number': 79,
+                'pali': 'เอวัมพุทธัง สะรันตานัง ธัมมัง สังฆัญจะ ภิกขะโว',
+                'pali_roman': 'Evambuddhaṃ sarantānaṃ dhammaṃ saṅghañca bhikkhavo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For those who thus recollect the Buddha, the Dhamma and the Saṅgha, bhikkhus,',
+            },
+            # ‼ CHECK [IMG_0357.PNG]: ‼ THE SAME CITATION AS PAGE 90, WITH THE
+            #   SAME ODD RANGE AND DIFFERENT SPACING — AND THIS PAGE'S VERSION
+            #   IS DELIBERATELY NOT RECORDED. This footnote reads สํ. ส.
+            #   15/320-223 with a SPACE after สํ.; page 90's read สํ.ส.
+            #   15/320-223 without one. Both carry the range running DOWNWARD
+            #   from 320 to 223, where standard references have 15/320-323.
+            #   Read at 5x on both. THAT THE SAME ODD NUMBER APPEARS TWICE
+            #   makes it the book's consistent reading rather than a single
+            #   slip, which is worth knowing before anyone 'corrects' it. The
+            #   chant already carries page 90's value in source_printed, and
+            #   apply_batch ADDS ONLY — it never overwrites — so this page's
+            #   spacing is not written. That is the right behaviour (the first
+            #   reading wins), but it means the app shows สํ.ส. unspaced while
+            #   page 92 prints สํ. ส. spaced. One field cannot hold both.
+            #   Recorded here so the difference is not lost.
+            {
+                'number': 80,
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส นะ เหสสะตีติ.',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso na hessatīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there will be no fear, no trembling and no horripilation.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0357.PNG]: AN EIGHTH TITLE THE CONTENTS TEST CANNOT
+        #   SEE. The page prints บทขัด อาฏานาฏิยะปะริตตัง with a SPACE after
+        #   บทขัด; the สารบัญ has บทขัดอาฏานาฏิยะปะริตตัง without one. Same as
+        #   pages 82, 86, 87, 88, 89 and 90. The page is reproduced; the
+        #   romanisation is unaffected by the space, so the contents' value is
+        #   used unchanged.
+        # ‼ CHECK [IMG_0357.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition. Verses 1 to 3 are a single sentence whose main verb does
+        #   not arrive until verse 4, and the gloss keeps that order rather
+        #   than reassembling it.
+        'id': 'bot-khat-atanatiya-parittam',
+        'title_thai': 'บทขัด อาฏานาฏิยะปะริตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt aa-dtaa-naa-dtì-yá-bpà-rít-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Āṭānāṭiya Paritta',
+        'page_start': 92,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 92,
+                'pali': 'อัปปะสันเนหิ นาถัสสะ สาสะเน สาธุสัมมะเต,',
+                'pali_roman': 'Appasannehi nāthassa sāsane sādhusammate,',
+                'thai': '',
+                'paiboon': '',
+                'english': "By those unconvinced of the Protector's Teaching, though it is held good,",
+            },
+            {
+                'number': 2,
+                'pali': 'อะมะนุสเสหิ จัณเฑหิ สะทา กิพพิสะการิภิ,',
+                'pali_roman': 'Amanussehi caṇḍehi sadā kibbisakāribhi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by fierce non-human beings, forever doing harm —',
+            },
+            # ‼ CHECK [IMG_0357.PNG]: A HYPHEN ACROSS THE GUTTER, the THIRD in
+            #   this run after pages 79 and 82. The left column ends ตัสสันนะ-
+            #   and the right opens มะหิงสายะ, so the word is rejoined as
+            #   ตัสสันนะมะหิงสายะ and the hyphen dropped as typesetting. It
+            #   settles the two-column reading of this block on its own,
+            #   independently of the measured gutter at x 1020-1100.
+            {
+                'number': 3,
+                'pali': 'ปะริสานัญจะ ตัสสันนะมะหิงสายะ จะ คุตติยา,',
+                'pali_roman': 'Parisānañca tassannamahiṃsāya ca guttiyā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and for the safety and protection of his assemblies,',
+            },
+            {
+                'number': 4,
+                'pali': 'ยันเทเสสิ มะหาวีโร ปะริตตันตัมภะณามะ เห.',
+                'pali_roman': 'Yandesesi mahāvīro parittantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that which the Great Hero taught: that paritta let us now recite.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0357.PNG]: english_unverified is set. The book prints
+        #   this paritta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition. The five Buddha names are left untranslated as proper
+        #   names and glossed in the vocabulary instead.
+        'id': 'atanatiya-parittam-atthamam',
+        'title_thai': 'อาฏานาฏิยะปะริตตัง อัฏฐะมัง',
+        'title_pali': 'Āṭānāṭiyaparittaṃ aṭṭhamaṃ',
+        'title_roman': '',
+        'title_english': 'The Āṭānāṭiya Paritta, the Eighth',
+        'page_start': 92,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0357.PNG]: TWO COLUMNS, gutter measured at x
+            #   1000-1100. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   วิปัสสิสสะ นะมัตถุ + right จักขุมันตัสสะ สิรีมะโต. Reading the
+            #   left column alone gives five naked names with no predicate,
+            #   which is the honest test and it agrees.
+            {
+                'number': 1,
+                'page': 92,
+                'pali': 'วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สิรีมะโต',
+                'pali_roman': 'Vipassissa namatthu cakkhumantassa sirīmato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to Vipassī, possessed of vision and of glory;',
+            },
+            {
+                'number': 2,
+                'pali': 'สิขิสสะปิ นะมัตถุ สัพพะภูตานุกัมปิโน',
+                'pali_roman': 'Sikhissapi namatthu sabbabhūtānukampino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to Sikhī also, compassionate to all beings;',
+            },
+            # ‼ CHECK [IMG_0357.PNG]: น์หาตะกัสสะ CARRIES THE น์ CLUSTER MARK,
+            #   which has not appeared before in this book — the mark has so
+            #   far been seen on ส, ต, ท, ก, พ and ห. Romanised nhātakassa
+            #   with the mark dropped, the same treatment as every other
+            #   cluster mark. Read at 2.2x.
+            {
+                'number': 3,
+                'pali': 'เวสสะภุสสะ นะมัตถุ น์หาตะกัสสะ ตะปัสสิโน',
+                'pali_roman': 'Vessabhussa namatthu nhātakassa tapassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to Vessabhū, cleansed and ardent;',
+            },
+            {
+                'number': 4,
+                'pali': 'นะมัตถุ กะกุสันธัสสะ มาระเสนัปปะมัททิโน',
+                'pali_roman': 'Namatthu kakusandhassa mārasenappamaddino',
+                'thai': '',
+                'paiboon': '',
+                'english': "homage to Kakusandha, crusher of Māra's army;",
+            },
+            # ‼ CHECK [IMG_0357.PNG]: THE SHEET RUNS OUT MID-LIST but verse 5
+            #   is a whole printed row, so no […] marker is used. Five of the
+            #   seven Buddhas are saluted here in order — Vipassī, Sikhī,
+            #   Vessabhū, Kakusandha, Koṇāgamana — so Kassapa and Gotama
+            #   should follow on page 93. That is a reason to expect the
+            #   continuation, not to write it.
+            {
+                'number': 5,
+                'pali': 'โกนาคะมะนัสสะ นะมัตถุ พ์ราห์มะณัสสะ วุสีมะโต',
+                'pali_roman': 'Konāgamanassa namatthu brāhmaṇassa vusīmato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to Koṇāgamana, the brahmin who has lived the life;',
             },
         ],
     },
