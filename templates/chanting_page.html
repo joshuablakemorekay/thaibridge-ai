@@ -285,6 +285,11 @@
     .page-body.view-book .layer-pali_roman,
     .page-body.view-book .layer-paiboon,
     .page-body.view-book .layer-english { display: none !important; }
+    /* …except where the roman line is the one the book prints. A page set in
+       roman Pali with no Thai script has nothing else to show, and hiding it
+       would leave book mode blank on exactly the pages it is meant to be
+       truest to. See `is-printed` where the verse layers are written. */
+    .page-body.view-book .layer-pali_roman.is-printed { display: block !important; }
 
     /* No numbers and no rules in book mode — the book has neither. */
     /* Two different numbers, and only one of them belongs on the page.
@@ -777,7 +782,15 @@
                A Pali-only page has no `thai`, and therefore no `paiboon`;
                nothing here fills that in. #}
             {% if verse.pali %}<p class="layer layer-pali">{{ verse.pali }}</p>{% endif %}
-            {% if verse.pali_roman %}<p class="layer layer-pali_roman">{{ verse.pali_roman }}</p>{% endif %}
+            {# `is-printed` marks a roman line the BOOK itself sets, rather than
+               one this app romanised from the Thai. The back of the book — the
+               Mahāsamaya Sutta and the suttas around it — is printed in roman
+               Pali and no Thai script at all, so for those pages `pali_roman`
+               IS the chanted layer. Book mode hides the romanisations, and
+               without this it would hide the only thing the page prints and
+               render the sheet blank. Judged by the page, not by a new field:
+               no `pali` means the book gave us no Thai script to romanise. #}
+            {% if verse.pali_roman %}<p class="layer layer-pali_roman{% if not verse.pali %} is-printed{% endif %}">{{ verse.pali_roman }}</p>{% endif %}
             {% if verse.thai %}<p class="layer layer-thai">{{ verse.thai }}</p>{% endif %}
             {% if verse.paiboon %}<p class="layer layer-paiboon">{{ verse.paiboon }}</p>{% endif %}
             {% if verse.english %}<p class="layer layer-english">{{ verse.english }}</p>{% endif %}
