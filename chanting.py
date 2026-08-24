@@ -31871,7 +31871,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 1; the rest is not in the app yet.
         'id': 'kham-anumothana-kathin',
         'title_thai': 'คำอนุโมทนากฐิน',
         'title_pali': '',
@@ -31914,6 +31913,33 @@ CHANTS = [
                 'thai': 'นี้สำหรับท่านผู้ครองกฐินมีพรรษาแก่กว่าภิกษุทั้งปวง ถ้ามีภิกษุอื่นที่มีพรรษามากกว่าท่านผู้ครองกฐินอยู่ ในที่นั้น ให้เปลี่ยนคำว่า อาวุโส เป็น ภันเต แล้วให้พระสงฆ์ทั้งปวงเปล่งวาจาอนุโมทนาต่อไปว่า',
                 'paiboon': '',
                 'english': "The Saṅgha's kathina has been spread, friends; the spreading of the kathina is in accordance with the Dhamma. Rejoice in it. (say 3 times)",
+            },
+            # ‼ CHECK [IMG_0576.PNG]: THE TWO VERSES OF THIS CHANT DIFFER BY
+            #   TWO WORDS AND THAT IS THE POINT. Page 308 reads อาวุโส …
+            #   อะนุโมทะถะ and page 309 reads ภันเต … อะนุโมทามะ. One is said
+            #   by a recipient senior to those present, the other by one
+            #   junior to them. They are not a repetition to be collapsed, and
+            #   the book's instruction paragraphs under each say exactly which
+            #   is which.
+            # ‼ CHECK [IMG_0576.PNG]: ⚠ `thai` HOLDS AN INSTRUCTION, NOT A
+            #   TRANSLATION, as on verse 1. The book prints five lines of Thai
+            #   beneath the Pali explaining who says this form and that ภันเต
+            #   becomes อาวุโส for senior monks. `paiboon` is left empty on
+            #   purpose: Paiboon+ romanises a translation and this is not one.
+            # ‼ CHECK [IMG_0576.PNG]: THE SHEET IS MOSTLY BLANK — text ends
+            #   about a quarter of the way down and there is nothing below it.
+            #   Checked at 3x across the lower two thirds: no ink but bleed-
+            #   through from page 310's title, which is roman and belongs to
+            #   the next chant. Nothing has been missed.
+            {
+                'number': 2,
+                'page': 309,
+                'para_start': True,
+                'pali': 'อัตถะตัง ภันเต สังฆัสสะ กะฐินัง, ธัมมิโก กะฐินัตถาโร อะนุโมทามะ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Atthataṃ bhante saṅghassa kaṭhinaṃ, dhammiko kaṭhinatthāro anumodāma',
+                'thai': 'นี้สำหรับผู้อ่อนพรรษากว่าท่านผู้ครองกฐินกล่าว ถ้ามีภิกษุที่แก่พรรษากว่าท่านผู้ครองกฐินอยู่ในที่นั้น กี่รูปก็ตามให้ผู้แก่เหล่านั้นเปลี่ยนคำว่า ภันเต เป็น อาวุโส หรือจะให้ว่าพร้อมกันเฉพาะผู้แก่เสียคราวหนึ่งก่อนว่า 3 ครั้งแล้วให้ผู้อ่อนกว่าอีกคราวหนึ่ง 3 ครั้งก็ได้',
+                'paiboon': '',
+                'english': "The Saṅgha's kathina has been spread, venerable sirs; the spreading of the kathina is in accordance with the Dhamma. We rejoice in it. (say 3 times)",
             },
         ],
     },

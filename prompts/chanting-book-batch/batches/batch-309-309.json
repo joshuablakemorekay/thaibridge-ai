@@ -1,0 +1,93 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "kham-anumothana-kathin"
+  ],
+  "pages": [
+   {
+    "page": 309,
+    "file": "IMG_0576.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-anumothana-kathin",
+    "verses": "2",
+    "starts_here": false,
+    "note": "A SHORT SHEET: one Pali line with its repeat-rubric, then five lines of Thai instruction, and the rest of the page is blank. This is the same anumodana formula as page 308 in its ภันเต form, said by a monk junior to the recipient, where page 308 gives the อาวุโส form for a senior one. The chant, and this stretch of the book, ENDS here — page 310 opens the roman section."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-anumothana-kathin",
+   "continuation_of": "kham-anumothana-kathin",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "One, verse 2. It opens a new paragraph on this page so it carries para_start; the chant's layout is 'lines' and needs no para_layout.",
+    "ordering": "The `thai` holds the book's INSTRUCTION paragraph, as on verse 1 — not a translation, so `paiboon` stays empty.",
+    "conventions": "The printed line goes in `pali` whole, rubric included, and pali_roman transliterates the Pali portion only, mechanically via translit_pali.",
+    "pages": "IMG_0576.PNG, page 309, read off the sheet. Offset 267. This is the LAST Thai-script sheet before the roman section begins at 310."
+   },
+   "verses": [
+    {
+     "number": 2,
+     "pali": "อัตถะตัง ภันเต สังฆัสสะ กะฐินัง, ธัมมิโก กะฐินัตถาโร อะนุโมทามะ (ว่า 3 ครั้ง)",
+     "pali_roman": "Atthataṃ bhante saṅghassa kaṭhinaṃ, dhammiko kaṭhinatthāro anumodāma",
+     "thai": "นี้สำหรับผู้อ่อนพรรษากว่าท่านผู้ครองกฐินกล่าว ถ้ามีภิกษุที่แก่พรรษากว่าท่านผู้ครองกฐินอยู่ในที่นั้น กี่รูปก็ตามให้ผู้แก่เหล่านั้นเปลี่ยนคำว่า ภันเต เป็น อาวุโส หรือจะให้ว่าพร้อมกันเฉพาะผู้แก่เสียคราวหนึ่งก่อนว่า 3 ครั้งแล้วให้ผู้อ่อนกว่าอีกคราวหนึ่ง 3 ครั้งก็ได้",
+     "paiboon": "",
+     "english": "The Saṅgha's kathina has been spread, venerable sirs; the spreading of the kathina is in accordance with the Dhamma. We rejoice in it. (say 3 times)",
+     "page": 309,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะนุโมทามะ",
+     "pali_roman": "anumodāma",
+     "meaning": "we rejoice — first person plural, the reply. Page 308 prints อะนุโมทะถะ, 'rejoice', the imperative addressed to others"
+    },
+    {
+     "pali": "ภันเต",
+     "pali_roman": "bhante",
+     "meaning": "venerable sir — used upwards, to a senior. Page 308's อาวุโส, friend, is used downwards, and the whole difference between the two lines is which way the seniority runs"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0576.PNG",
+     "issue": "THE TWO VERSES OF THIS CHANT DIFFER BY TWO WORDS AND THAT IS THE POINT. Page 308 reads อาวุโส … อะนุโมทะถะ and page 309 reads ภันเต … อะนุโมทามะ. One is said by a recipient senior to those present, the other by one junior to them. They are not a repetition to be collapsed, and the book's instruction paragraphs under each say exactly which is which."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0576.PNG",
+     "issue": "⚠ `thai` HOLDS AN INSTRUCTION, NOT A TRANSLATION, as on verse 1. The book prints five lines of Thai beneath the Pali explaining who says this form and that ภันเต becomes อาวุโส for senior monks. `paiboon` is left empty on purpose: Paiboon+ romanises a translation and this is not one."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0576.PNG",
+     "issue": "THE SHEET IS MOSTLY BLANK — text ends about a quarter of the way down and there is nothing below it. Checked at 3x across the lower two thirds: no ink but bleed-through from page 310's title, which is roman and belongs to the next chant. Nothing has been missed."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-anumothana-kathin"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 307,
+  "resume_from_file": "IMG_0574.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean. No Thai translation is printed on this sheet — the Thai that appears is an instruction — so paiboon is empty and there is no Paiboon+ anywhere in the batch.",
+  "pali_untouched": "Confirmed and mechanically true: pali_roman was produced by translit_pali from the Pali portion of the pali value rather than typed, so the two cannot drift. pali_roman deliberately stops before the Thai repeat-rubric, as on page 308.",
+  "page_scan": "agrees. One row for one page covering verse 2, the whole of what this page adds. Verse 2 carries the page key. No page blocks and no footnotes on this sheet.",
+  "notes": "THIS COMPLETES THE KATHINA STRETCH and joins page 310, so the app's coverage is now unbroken from 308 to the last page of the book. Page 309 is the LAST THAI-SCRIPT SHEET before the roman section — a boundary that was first written into the photo map as 309 by calculation and has now been read off both sides. Next backward step is page 307, which is inside the contents-listed part of the book, so the สารบัญ can be used to find where its chant begins rather than reading upwards blind.",
+  "diacritic_exceptions": []
+ }
+}
