@@ -1,0 +1,257 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "gathajinabanjara"
+  ],
+  "pages": [
+   {
+    "page": 311,
+    "file": "IMG_0578.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "gathajinabanjara",
+    "verses": "17-34",
+    "starts_here": false,
+    "note": "TWO COLUMNS end to end, eighteen rows carrying the book's numbered items 9 to 15. Gutter measured at x 871-1055: the right column's left edge holds between x 1055 and x 1087 on every row. Grouping measured too — [3, 2, 2, 2, 2, 2, 5] by the 45px rule, so item 9 runs to THREE rows and item 15 to FIVE where the rest take two. The chant, and the Jinapanjara with it, ENDS here on 'carāmi jinapañjareti.'"
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "gathajinabanjara",
+   "continuation_of": "gathajinabanjara",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Eighteen, verses 17 to 34, in seven groups matching the book's numbered items 9 to 15. The first row of each item carries para_start and the book's printed_number. The chant's layout is 'lines'. COMPLETE at verse 34.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text.",
+    "pages": "IMG_0578.PNG, page 311, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 17,
+     "pali": "",
+     "pali_roman": "sesāsīti mahātherā vijitā jinasāvakā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The remaining eighty great elders, victorious disciples of the Victor,",
+     "para_start": true,
+     "printed_number": 9,
+     "page": 311
+    },
+    {
+     "number": 18,
+     "pali": "",
+     "pali_roman": "etesīti mahātherā jitavanto jinorasā",
+     "thai": "",
+     "paiboon": "",
+     "english": "these great elders, conquerors, true sons of the Victor,"
+    },
+    {
+     "number": 19,
+     "pali": "",
+     "pali_roman": "jalantā sīlatejena aṅgamaṅgesu saṇṭhitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "blazing with the power of virtue, are established in each of my limbs."
+    },
+    {
+     "number": 20,
+     "pali": "",
+     "pali_roman": "ratanaṃ purato āsi dakkhiṇe mettasuttakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Ratana Sutta is before me, the Metta Sutta on my right,",
+     "para_start": true,
+     "printed_number": 10
+    },
+    {
+     "number": 21,
+     "pali": "",
+     "pali_roman": "dhajaggaṃ pacchato āsi vāme aṅgulimālakaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Dhajagga behind me, the Aṅgulimāla on my left."
+    },
+    {
+     "number": 22,
+     "pali": "",
+     "pali_roman": "khandhamoraparittañca āṭānāṭiyasuttakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Khandha and Mora parittas and the Āṭānāṭiya Sutta",
+     "para_start": true,
+     "printed_number": 11
+    },
+    {
+     "number": 23,
+     "pali": "",
+     "pali_roman": "ākāse chadanaṃ āsi sesā pākārasaṇṭhitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "are a canopy in the sky; the rest stand as a rampart."
+    },
+    {
+     "number": 24,
+     "pali": "",
+     "pali_roman": "jinanānā varasaṃyuttā sattapākāralaṅkatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Joined with the manifold excellence of the Victor, adorned with seven ramparts,",
+     "para_start": true,
+     "printed_number": 12
+    },
+    {
+     "number": 25,
+     "pali": "",
+     "pali_roman": "vātapittādisañjātā bāhirajjhattupaddavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the troubles born of wind and bile and the rest, outward and inward,"
+    },
+    {
+     "number": 26,
+     "pali": "",
+     "pali_roman": "asesā vinayaṃ yantu anantajinatejasā",
+     "thai": "",
+     "paiboon": "",
+     "english": "go without remainder to their end, by the boundless power of the Victor,",
+     "para_start": true,
+     "printed_number": 13
+    },
+    {
+     "number": 27,
+     "pali": "",
+     "pali_roman": "vasato me sakiccena sadā sambuddhapañjare.",
+     "thai": "",
+     "paiboon": "",
+     "english": "while I dwell about my business, always in the cage of the Fully Enlightened One."
+    },
+    {
+     "number": 28,
+     "pali": "",
+     "pali_roman": "jinapañjaramajjhamhi viharantaṃ mahītale",
+     "thai": "",
+     "paiboon": "",
+     "english": "As I dwell in the midst of the Victor's cage upon the earth,",
+     "para_start": true,
+     "printed_number": 14
+    },
+    {
+     "number": 29,
+     "pali": "",
+     "pali_roman": "sadā pālentu maṃ sabbe te mahāpurisāsabhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may all those great and noble ones ever protect me."
+    },
+    {
+     "number": 30,
+     "pali": "",
+     "pali_roman": "iccevamanto sugutto surakkho",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus well guarded, well protected,",
+     "para_start": true,
+     "printed_number": 15
+    },
+    {
+     "number": 31,
+     "pali": "",
+     "pali_roman": "jinānubhāvena jitupaddavo",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Victor troubles are conquered,"
+    },
+    {
+     "number": 32,
+     "pali": "",
+     "pali_roman": "dhammānubhāvena jitārisaṅgho",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Dhamma the host of enemies is conquered,"
+    },
+    {
+     "number": 33,
+     "pali": "",
+     "pali_roman": "saṅghānubhāvena jitantarāyo",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Saṅgha dangers are conquered,"
+    },
+    {
+     "number": 34,
+     "pali": "",
+     "pali_roman": "saddhammānubhāvapālito carāmi jinapañjareti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "guarded by the power of the true Dhamma, I live in the Victor's cage."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "sesāsīti mahātherā",
+     "meaning": "the remaining eighty great elders — the eighty disciples beyond the ones named individually on page 310"
+    },
+    {
+     "pali": "",
+     "pali_roman": "pākāra",
+     "meaning": "a rampart or encircling wall. The parittas are set as seven ramparts around the chanter, which is the image the whole chant is built on"
+    },
+    {
+     "pali": "",
+     "pali_roman": "vātapittādi",
+     "meaning": "wind, bile and the rest — the humours of Indian medicine, named as the source of bodily affliction"
+    },
+    {
+     "pali": "",
+     "pali_roman": "jinapañjara",
+     "meaning": "the Victor's cage. The closing verse names it twice, and the chant ends on the word"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 17,
+     "file": "IMG_0578.PNG",
+     "issue": "THE ITEMS ARE NOT ALL THE SAME LENGTH, and the grouping was measured rather than assumed. Item 9 runs to THREE rows and item 15 to FIVE, where every other item on the sheet takes two: measured group sizes [3, 2, 2, 2, 2, 2, 5] against paragraph breaks of 49-63px and within-item gaps of 23-35px."
+    },
+    {
+     "verse": 30,
+     "file": "IMG_0578.PNG",
+     "issue": "ITEM 15 IS SET SHORTER THAN THE REST. Its five rows carry brief half-lines — iccevamanto / sugutto surakkho — so the left column ends as early as x 627 where other rows reach x 871. The gutter is unchanged; it is the lines that are short. Measured per row rather than read as a layout change."
+    },
+    {
+     "verse": 34,
+     "file": "IMG_0578.PNG",
+     "issue": "THE CHANT ENDS HERE, on 'carāmi jinapañjareti.' — the -ti closing the quoted verse, as the book prints it. No colophon follows, and page 312 opens the next chant with its own title."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0578.PNG",
+     "issue": "TWO COLUMNS across all eighteen rows, gutter measured at x 871-1055. That matches page 310's x 961-1125 in kind but not in position, so the two sheets of one chant were profiled separately."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "gathajinabanjara"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 309,
+  "resume_from_file": "IMG_0576.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits — the kh in khandha and the th in mahātherā are the page's own IAST.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in saṇṭhitā and aṅgulimālakaṃ's neighbours, t with dot below in āṭānāṭiya and saṇṭhitā, n with tilde in pañjare and sañjātā.",
+  "page_scan": "agrees. One row for one page covering verses 17-34, the whole of what this page adds. Verse 17 carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "THIS COMPLETES THE JINAPANJARA and the pair of chants opened on page 310. Coverage in the roman section is now unbroken from 310 to 325. One finding: THE ITEM LENGTHS VARY, three rows for item 9 and five for item 15 against two for the rest, so the grouping had to be measured — reading two rows per item, which holds for five of the seven, would have mis-split the opening and the closing verse. Next backward step is page 309, whose chant will need finding by reading upwards until a title appears.",
+  "diacritic_exceptions": []
+ }
+}
