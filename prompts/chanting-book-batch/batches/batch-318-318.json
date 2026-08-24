@@ -1,0 +1,274 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 318,
+    "file": "IMG_0585.PNG",
+    "script": "roman",
+    "columns": "1 and 2 alternating",
+    "chant": "mahasamayasutta-roman",
+    "verses": "23-41",
+    "starts_here": false,
+    "note": "The sheet alternates: a single PROSE line introducing a speaker, then a TWO-COLUMN gatha of two rows, twice over, and then thirteen lines of unbroken PROSE to the foot. Both gutters were profiled on their own row bands and they do not match each other — x 871-984 for the first gatha, x 900-980 for the second. Prose ink runs x 260-1780 with no internal gutter, and hanging-indent continuations start at x 375. The sheet ends mid-discourse on 'Bhagava etadavoca:' and the sutta carries on to page 319."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Nineteen, verses 23 to 41. Six groups, alternating prose and gatha, each declaring its own para_layout because the sheet is set both ways: 23 prose, 24-25 lines, 26 prose, 27-28 lines, 29-41 prose. Verse 23 opens a new paragraph on this page, so para_start is right and the page does NOT open mid-paragraph.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text. paiboon is empty because there is no thai to romanise.",
+    "pages": "IMG_0585.PNG, page 318, read off the sheet. Offset 267, unchanged from page 317."
+   },
+   "verses": [
+    {
+     "number": 23,
+     "pali": "",
+     "pali_roman": "Atha kho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi:",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then another deity spoke this verse in the presence of the Blessed One:",
+     "page": 318,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 24,
+     "pali": "",
+     "pali_roman": "“Chetvā khīlaṃ chetvā palighaṃ indakhīlaṃ ohacca-manejā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "“Having cut through the stake, having cut through the bar, having uprooted the pillar, unstirred,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 25,
+     "pali": "",
+     "pali_roman": "Te caranti suddhā vimalā cakkhumatā sudantā susu nāgā”ti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "they walk pure and stainless, young nāgas well tamed by the One with vision.”"
+    },
+    {
+     "number": 26,
+     "pali": "",
+     "pali_roman": "Atha kho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi:",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then another deity spoke this verse in the presence of the Blessed One:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 27,
+     "pali": "",
+     "pali_roman": "“Ye keci buddhaṃ saraṇaṃ gatāse na te gamissanti apāyabhūmiṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "“Whoever have gone to the Buddha for refuge will not go to the plane of misery.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 28,
+     "pali": "",
+     "pali_roman": "Pahāya mānusaṃ dehaṃ devakāyaṃ paripūressantī”ti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having left the human body behind, they will fill out the ranks of the devas.”"
+    },
+    {
+     "number": 29,
+     "pali": "",
+     "pali_roman": "Atha kho bhagavā bhikkhu āmantesi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then the Blessed One addressed the bhikkhus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 30,
+     "pali": "",
+     "pali_roman": "“yebhuyyena bhikkhave dasasu lokadhātūsu devatā sannipatitā tathāgataṃ dassanāya bhikkhusaṅghañca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "“Bhikkhus, deities from ten world-systems have for the most part gathered to see the Tathāgata and the community of bhikkhus."
+    },
+    {
+     "number": 31,
+     "pali": "",
+     "pali_roman": "Ye pi te bhikkhave ahesuṃ atīta-maddhānaṃ arahanto sammāsambuddhā, tesampi bhagavantānaṃ etaparamā yeva devatā sannipatitā ahesuṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Bhikkhus, those who in times past were arahants, fully enlightened Buddhas — for those Blessed Ones too the deities gathered in just such numbers at most,"
+    },
+    {
+     "number": 32,
+     "pali": "",
+     "pali_roman": "seyyathāpi mayhaṃ etarahi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "just as they do for me now."
+    },
+    {
+     "number": 33,
+     "pali": "",
+     "pali_roman": "Ye pi te bhikkhave bhavissanti anāgata-maddhānaṃ arahanto sammāsambuddhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "And bhikkhus, those who in times to come will be arahants, fully enlightened Buddhas —"
+    },
+    {
+     "number": 34,
+     "pali": "",
+     "pali_roman": "tesampi bhagavantānaṃ etaparamā yeva devatā sannipatitā bhavissanti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "for those Blessed Ones too the deities will gather in just such numbers at most,"
+    },
+    {
+     "number": 35,
+     "pali": "",
+     "pali_roman": "seyyathāpi mayhaṃ etarahi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "just as they do for me now."
+    },
+    {
+     "number": 36,
+     "pali": "",
+     "pali_roman": "Ācikkhissāmi bhikkhave devakāyānaṃ nāmāni.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall announce, bhikkhus, the names of the hosts of devas."
+    },
+    {
+     "number": 37,
+     "pali": "",
+     "pali_roman": "Kittayissāmi bhikkhave devakāyānaṃ nāmāni.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall proclaim, bhikkhus, the names of the hosts of devas."
+    },
+    {
+     "number": 38,
+     "pali": "",
+     "pali_roman": "Desissāmi bhikkhave devakāyānaṃ nāmāni.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall teach, bhikkhus, the names of the hosts of devas."
+    },
+    {
+     "number": 39,
+     "pali": "",
+     "pali_roman": "Taṃ suṇātha. Sādhukaṃ manasikarotha. Bhāsissāmī”ti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Listen to it. Attend closely. I shall speak.”"
+    },
+    {
+     "number": 40,
+     "pali": "",
+     "pali_roman": "“Evam bhante”ti kho te bhikkhū bhagavato paccassosuṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "“Yes, venerable sir,” those bhikkhus replied to the Blessed One."
+    },
+    {
+     "number": 41,
+     "pali": "",
+     "pali_roman": "Bhagavā etadavoca:",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Blessed One said this:"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "khīla, paligha, indakhīla",
+     "meaning": "stake, cross-bar and pillar — three images of what blocks a gate, used together for what an arahant has cut through"
+    },
+    {
+     "pali": "",
+     "pali_roman": "anejā",
+     "meaning": "unstirred, unmoved by craving. From ejā, disturbance or trembling"
+    },
+    {
+     "pali": "",
+     "pali_roman": "susu nāgā",
+     "meaning": "young nagas. Naga here is the title given to a great being or a tamed elephant rather than the serpent, and the verse pairs it with sudanta, well tamed"
+    },
+    {
+     "pali": "",
+     "pali_roman": "apāyabhūmi",
+     "meaning": "the plane of misery, the lower realms of rebirth"
+    },
+    {
+     "pali": "",
+     "pali_roman": "etaparamā",
+     "meaning": "having this as the maximum — the deities gathered for past and future Buddhas in just such numbers at most, and no more"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 29,
+     "file": "IMG_0585.PNG",
+     "issue": "THE BOOK PRINTS 'bhikkhu' WHERE THE SENSE NEEDS THE PLURAL. The line reads 'Atha kho bhagava bhikkhu amantesi,' with a short u, where the standard reading is bhikkhu with a macron — the Blessed One addressed the bhikkhus, and verse 40 has the plural 'te bhikkhu' with the macron ON the same sheet. Read at 5x: no macron over the u at verse 29, a clear one at verse 40. Recorded as printed, NOT corrected."
+    },
+    {
+     "verse": 31,
+     "file": "IMG_0585.PNG",
+     "issue": "A WORD BROKEN ACROSS A LINE BREAK WITH NO HYPHEN. The line ends 'sammasambuddha, tesam' and the next OPENS 'pi bhagavantanam' at the left margin, not indented. The same sentence appears again four lines later at verse 34 and prints 'tesampi' as ONE word, so the break is the compositor's and the two halves are rejoined here as tesampi. The parallel line on the same sheet is what settles it; without it this would be a guess."
+    },
+    {
+     "verse": 40,
+     "file": "IMG_0585.PNG",
+     "issue": "THE BOOK SPELLS THE NIGGAHITA TWO WAYS. This line prints 'Evam bhante' with a plain m, where page 317 verse 1 prints 'Evam me sutam' with the dotted m. Both read clearly at 5x. Kept as each page sets it rather than made to agree — the inconsistency is the book's and belongs in the record, not smoothed out of it."
+    },
+    {
+     "verse": 24,
+     "file": "IMG_0585.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 871-984 by profiling the ink across the row. Verse 24 reads ACROSS: 'Chetva khilam chetva paligham' left, 'indakhilam ohacca-maneja,' right."
+    },
+    {
+     "verse": 27,
+     "file": "IMG_0585.PNG",
+     "issue": "TWO COLUMNS again, and the gutter is NOT the same as verse 24's on the same sheet — x 900-980 against x 871-984. Each block was profiled on its own row band rather than one measurement being assumed for the page."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamayasutta-roman"
+  ],
+  "resume_from_page": 319,
+  "resume_from_file": "IMG_0586.PNG",
+  "resume_from": "mahasamayasutta-roman",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits — the kh in khilam and the th in Chetva are the page's own IAST, not Paiboon+ drift.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in maneja and sannipatita, a-macron and i-macron as set, and the two places where the book DEPARTS from its own convention are recorded in checks rather than quietly fixed.",
+  "page_scan": "agrees. One row for one page covering verses 23-41, which is the whole of what this page adds. Verse 23 carries the page key and opens a new paragraph, so no verse on this sheet inherits a paragraph from page 317. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "A thumb sits at the right edge of the photograph, at x 1790 and beyond, and covers no text — prose ink ends at x 1782 at its widest, with clear paper between. Three findings, and all three are the BOOK being inconsistent with itself rather than anything unclear in the photograph. (1) 'bhikkhu' without its macron at verse 29 where verse 40 has it. (2) 'tesam pi' broken across a line break and printed 'tesampi' four lines later, which is what allows it to be rejoined rather than guessed. (3) 'Evam' plain against page 317's 'Evam' dotted. None corrected; all recorded. Layout MEASURED, and the two gatha gutters on this one sheet differ from each other — x 871-984 and x 900-980 — which is the reason for profiling every block instead of the page.",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — the BOOK prints both on this one sheet, short at verse 29 and long at verse 40, and they are the same word in the same plural sense. Making them agree would erase a difference the page itself makes, so both stand as printed and the reason is recorded in a check."
+  ]
+ }
+}

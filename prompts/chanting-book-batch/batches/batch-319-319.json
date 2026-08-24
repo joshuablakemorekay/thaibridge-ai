@@ -1,0 +1,301 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 319,
+    "file": "IMG_0586.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "mahasamayasutta-roman",
+    "verses": "42-63",
+    "starts_here": false,
+    "note": "TWO COLUMNS end to end — the first sheet of the sutta with no prose on it at all. Profiled row by row: the right column begins at a firm x 1080 on every one of the twenty-two rows, and the widest left-column line ends at x 927, so the gutter never closes. Twenty-two rows in ten groups, read ACROSS. The sheet runs out mid-list and the sutta carries on to page 320."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-two, verses 42 to 63. Ten groups: eight of two rows and two of three. EVERY group declares para_layout 'lines', because the chant's own layout is 'prose' and would otherwise set these gathas as prose. Verse 42 opens a new group AND is the first verse of this page, so it carries both para_start and para_layout — the page does not open mid-paragraph, since page 318 ended on the prose line 'Bhagava etadavoca:'.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text. paiboon is empty because there is no thai to romanise.",
+    "pages": "IMG_0586.PNG, page 319, read off the sheet. Offset 267, unchanged from pages 317 and 318."
+   },
+   "verses": [
+    {
+     "number": 42,
+     "pali": "",
+     "pali_roman": "“Silokamanukassāmi yattha bhummā tadassitā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "“I shall recite a verse in praise, telling where the earth-devas dwell:",
+     "page": 319,
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 43,
+     "pali": "",
+     "pali_roman": "Ye sitā girigabbharaṃ pahitattā samāhitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "those who cling to the mountain cleft, resolute and composed."
+    },
+    {
+     "number": 44,
+     "pali": "",
+     "pali_roman": "Puthū sīhā’va sallīnā lomahaṃsābhisambhuno,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Many, withdrawn like lions, whose hair stands on end in awe,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 45,
+     "pali": "",
+     "pali_roman": "Odātamanasā suddhā vippasanna-manāvilā”.",
+     "thai": "",
+     "paiboon": "",
+     "english": "bright of mind, pure, serene and untroubled.”"
+    },
+    {
+     "number": 46,
+     "pali": "",
+     "pali_roman": "Bhiyyo pañcasate ñatvā vane kāpilavatthave,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Knowing that more than five hundred were in the Kapilavatthu wood,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 47,
+     "pali": "",
+     "pali_roman": "Tato āmantayi satthā sāvake sāsane rate:",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Teacher then addressed the disciples who delight in the teaching:"
+    },
+    {
+     "number": 48,
+     "pali": "",
+     "pali_roman": "“Devakāyā abhikkantā. Te vijānātha bhikkhavo”.",
+     "thai": "",
+     "paiboon": "",
+     "english": "“The hosts of devas have come. Know them, bhikkhus.”",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 49,
+     "pali": "",
+     "pali_roman": "Te ca ātappa-makaruṃ sutvā buddhassa sāsanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And they made an ardent effort, having heard the Buddha's instruction."
+    },
+    {
+     "number": 50,
+     "pali": "",
+     "pali_roman": "Tesaṃ pāturahu ñāṇaṃ amanussāna dassanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Knowledge appeared to them, the seeing of non-human beings.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 51,
+     "pali": "",
+     "pali_roman": "Appeke sata-maddakkhuṃ, sahassaṃ atha sattariṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Some saw a hundred, some a thousand, and some seventy thousand."
+    },
+    {
+     "number": 52,
+     "pali": "",
+     "pali_roman": "Sataṃ eke sahassānaṃ amanussāna-maddasuṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Some saw a hundred thousand non-human beings,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 53,
+     "pali": "",
+     "pali_roman": "Appeke ’nanta-maddakkhuṃ: disā sabbā phuṭā ahuṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and some saw them without end: every direction was filled."
+    },
+    {
+     "number": 54,
+     "pali": "",
+     "pali_roman": "Tañca sabbaṃ abhiññāya vavakkhitvāna cakkhumā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having directly known all of that, having surveyed it, the One with vision",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 55,
+     "pali": "",
+     "pali_roman": "Tato āmantayi satthā sāvake sāsane rate:",
+     "thai": "",
+     "paiboon": "",
+     "english": "then addressed, as Teacher, the disciples who delight in the teaching:"
+    },
+    {
+     "number": 56,
+     "pali": "",
+     "pali_roman": "“Devakāyā abhikkantā. Te vijānātha bhikkhavo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "“The hosts of devas have come. Know them, bhikkhus —",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 57,
+     "pali": "",
+     "pali_roman": "Ye vo’haṃ kittayissāmi girāhi anupubbaso.",
+     "thai": "",
+     "paiboon": "",
+     "english": "those whom I shall proclaim to you in words, one after another."
+    },
+    {
+     "number": 58,
+     "pali": "",
+     "pali_roman": "Satta sahassā va yakkhā bhummā kāpilavatthavā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Seven thousand yakkhas, earth-dwellers of Kapilavatthu,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 59,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 60,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 61,
+     "pali": "",
+     "pali_roman": "Cha sahassā hemavatā yakkhā nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Six thousand yakkhas from the Himavā, of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 62,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 63,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "siloka",
+     "meaning": "a verse, a stanza — and also fame or repute. The opening line puns on both: the Buddha recites a verse that also praises"
+    },
+    {
+     "pali": "",
+     "pali_roman": "girigabbhara",
+     "meaning": "a mountain cleft or cave. Where the earth-dwelling devas of the first verse are said to abide"
+    },
+    {
+     "pali": "",
+     "pali_roman": "lomahaṃsābhisambhū",
+     "meaning": "one in whom the hair stands on end — awe rather than fear, said of the assembled beings"
+    },
+    {
+     "pali": "",
+     "pali_roman": "amanussa",
+     "meaning": "non-human being. The general word covering the yakkhas, devas and nagas the list goes on to name"
+    },
+    {
+     "pali": "",
+     "pali_roman": "hemavata",
+     "meaning": "of the Himava, the snowy mountain range. A class of yakkha named by where it dwells"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0586.PNG",
+     "issue": "TWO COLUMNS ON EVERY ROW, and the gutter was measured rather than judged: the right column's left edge sits at x 1078-1085 on all twenty-two rows and the longest left-column line stops at x 927. Unlike pages 317 and 318, this sheet has ONE gutter throughout rather than a different one per block."
+    },
+    {
+     "verse": 42,
+     "file": "IMG_0586.PNG",
+     "issue": "'Silokamanukassami' is set in BOLD, as the opening words of a spoken unit are elsewhere in this section. The app has no bold layer, so it is recorded rather than reproduced."
+    },
+    {
+     "verse": 53,
+     "file": "IMG_0586.PNG",
+     "issue": "The book prints an APOSTROPHE STANDING FOR AN ELIDED VOWEL in ’nanta-maddakkhum, and again at siha’va (44) and vo’ham (57). Kept as the page sets them. They are elision marks, not quotation marks, and a script that normalises quotes would silently change three words."
+    },
+    {
+     "verse": 59,
+     "file": "IMG_0586.PNG",
+     "issue": "Verses 59 and 62 are IDENTICAL, and so are 60 and 63 — the list repeats a refrain for each class of being it names. This is the book being what it is, not a duplicate to be collapsed, and check_render walks rather than counts precisely so that repeats like this pass."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamayasutta-roman"
+  ],
+  "resume_from_page": 320,
+  "resume_from_file": "IMG_0589.PNG",
+  "resume_from": "mahasamayasutta-roman",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits — the kh in abhikkanta and the th in yattha are the page's own IAST.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in vannavanto and jutimanto's neighbours, t with dot below in phuta, and the three elision apostrophes left exactly as set.",
+  "page_scan": "agrees. One row for one page covering verses 42-63, which is the whole of what this page adds. Verse 42 carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "NOT APPLIED. Stage 1 only — this batch file is written and checked, but nothing has been written into chanting.py, because a second session is working in the same clone and holds that file. Apply it with the others when the file is free. The photograph itself is clean: a thumb at the right edge beyond x 1900 covers no text, since the right column's ink ends well inside it. Two findings. (1) THIS IS THE FIRST SHEET OF THE SECTION WITH NO PROSE AT ALL, and it has ONE gutter throughout rather than a different one per block as pages 317 and 318 had — so the per-block profiling those pages needed is not wasted here, it is what proves the difference. (2) THE REFRAIN REPEATS EXACTLY — verses 59 and 62, 60 and 63 — which is the book's own structure for a list and must not be collapsed.",
+  "diacritic_exceptions": []
+ }
+}

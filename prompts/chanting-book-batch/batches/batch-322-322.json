@@ -1,0 +1,299 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 322,
+    "file": "IMG_0591.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "mahasamayasutta-roman",
+    "verses": "112-134",
+    "starts_here": false,
+    "note": "MIXED LAYOUT, and this is the only sheet in the section that is. Measured row by row: the first EIGHT rows are SINGLE COLUMN and wide — ink x 668-1397, indented to x 670, no gutter anywhere in them — and only from row nine does the sheet go TWO COLUMN, the right column starting at x 1197-1226 with the widest left-column line ending at x 985. A whole-page gutter scan finds NOTHING here, because the wide block closes the corridor; the two-column gutter only appears once the top block is excluded. Twenty-three rows in nine groups. The sutta carries on to page 323."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-three, verses 112 to 134. Nine groups, EVERY one declaring para_layout 'lines' because the chant's own layout is 'prose'. The first two groups are the single-column block and the rest are two-column rows read across; both are one verse per printed line, which is how every two-column sheet in this book has been entered.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text.",
+    "pages": "IMG_0591.PNG, page 322, read off the sheet. Offset 269."
+   },
+   "verses": [
+    {
+     "number": 112,
+     "pali": "",
+     "pali_roman": "Ye nāgarāje sahasā haranti",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those swift ones who carry off the nāga kings,",
+     "para_start": true,
+     "para_layout": "lines",
+     "page": 322
+    },
+    {
+     "number": 113,
+     "pali": "",
+     "pali_roman": "Dibbā dijā pakkhi visuddhacakkhū,",
+     "thai": "",
+     "paiboon": "",
+     "english": "divine birds, winged, of pure sight,"
+    },
+    {
+     "number": 114,
+     "pali": "",
+     "pali_roman": "Vehāyasā te vana-majjhapattā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "through the air they came into the middle of the wood."
+    },
+    {
+     "number": 115,
+     "pali": "",
+     "pali_roman": "Citrā supaṇṇā iti tesa nāmaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Citrā and Supaṇṇā — such are their names."
+    },
+    {
+     "number": 116,
+     "pali": "",
+     "pali_roman": "Abhayan tadā nāgarājāna-māsi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then there was safety for the nāga kings:",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 117,
+     "pali": "",
+     "pali_roman": "Supaṇṇato khema-makāsi buddho.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Buddha made a sanctuary for them from the supaṇṇas."
+    },
+    {
+     "number": 118,
+     "pali": "",
+     "pali_roman": "Saṇhāhi vācāhi upavhayantā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Calling to one another with gentle words,"
+    },
+    {
+     "number": 119,
+     "pali": "",
+     "pali_roman": "Nāgā supaṇṇā saraṇa-magaṃsu buddhaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "nāgas and supaṇṇas alike went to the Buddha for refuge."
+    },
+    {
+     "number": 120,
+     "pali": "",
+     "pali_roman": "Jitā vajirahatthena samuddaṃ asurā sitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Conquered by the one with the thunderbolt in hand, the asuras dwell in the sea.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 121,
+     "pali": "",
+     "pali_roman": "Bhātaro vāsavassete iddhimanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "These brothers of Vāsava are possessed of power and renown."
+    },
+    {
+     "number": 122,
+     "pali": "",
+     "pali_roman": "Kālakañchā mahābhismā asurā dānaveghasā:",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Kālakañchas, greatly terrifying, the Dānaveghasa asuras:",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 123,
+     "pali": "",
+     "pali_roman": "Vepacitti sucitti ca pahārādo namucī saha",
+     "thai": "",
+     "paiboon": "",
+     "english": "Vepacitti and Sucitti, Pahārāda together with Namucī,"
+    },
+    {
+     "number": 124,
+     "pali": "",
+     "pali_roman": "Satañca baliputtānaṃ sabbe verocanāmakā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and a hundred sons of Bali, all named Verocana.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 125,
+     "pali": "",
+     "pali_roman": "Sannayhitvā baliṃ senaṃ rāhubhadda-mupāgamuṃ:",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having armed Bali's host, they went up to good Rāhu:"
+    },
+    {
+     "number": 126,
+     "pali": "",
+     "pali_roman": "’Samayo ’dāni bhaddante bhikkhūnaṃ samitiṃ vanaṃ.’",
+     "thai": "",
+     "paiboon": "",
+     "english": "'Now is the time, venerable sir, for the assembly of bhikkhus in the wood.'",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 127,
+     "pali": "",
+     "pali_roman": "Āpo ca devā paṭhavī ca tejo vāyo tadāgamuṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The devas of water and of earth, of fire and of air, then came."
+    },
+    {
+     "number": 128,
+     "pali": "",
+     "pali_roman": "Varuṇā vāruṇā devā somo ca yasasā saha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Varuṇas, the devas of Varuṇa, and Soma together with Yasas.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 129,
+     "pali": "",
+     "pali_roman": "Mettākaruṇākāyikā āgū devā yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The hosts of loving-kindness and compassion came, devas of renown."
+    },
+    {
+     "number": 130,
+     "pali": "",
+     "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These ten, tenfold hosts, all of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 131,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 132,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 133,
+     "pali": "",
+     "pali_roman": "Veṇḍū ca devā sahalī ca asamā ca duve yamā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Veṇḍu devas and the Sahalīs, the Asamas and the two Yamas.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 134,
+     "pali": "",
+     "pali_roman": "Candassūpanisā devā canda-māgū purakkhitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The devas attending on the moon came, with the moon before them."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "supaṇṇa",
+     "meaning": "the garuda, the great bird that preys on nagas. The opening block is the moment the Buddha makes peace between them"
+    },
+    {
+     "pali": "",
+     "pali_roman": "vajirahattha",
+     "meaning": "thunderbolt-in-hand — Sakka, who defeated the asuras and drove them into the sea"
+    },
+    {
+     "pali": "",
+     "pali_roman": "asura",
+     "meaning": "the titans, rivals of the devas. Named here by their clans: Kalakanchas, Danaveghasas, the sons of Bali"
+    },
+    {
+     "pali": "",
+     "pali_roman": "purindada",
+     "meaning": "giver-in-former-births, an epithet of Sakka. Page 323 uses it of him again"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 112,
+     "file": "IMG_0591.PNG",
+     "issue": "THE FIRST EIGHT ROWS ARE SINGLE COLUMN, NOT TWO. Measured row by row rather than judged: rows 1-8 carry ink from x 668 to at most x 1397 with no internal gap at any threshold down to 50, while every row from nine on has a clear gutter. This is the only mixed sheet in the roman section, and a page-level gutter scan reports NO columns at all here — which is how it would have been missed."
+    },
+    {
+     "verse": 120,
+     "file": "IMG_0591.PNG",
+     "issue": "THE LAYOUT CHANGES WITHOUT A FULL PARAGRAPH BREAK. The vertical gap between the last wide row and the first two-column row is 40px, where breaks inside the two-column part run 80-86px and rows inside the wide block sit 20-37px apart. The gap is ambiguous on its own, so the group boundary here was taken from the LAYOUT change and the bold on 'Jita vajirahatthena', not from the spacing. Recorded because it is the one grouping decision on this sheet that measurement alone does not settle."
+    },
+    {
+     "verse": 126,
+     "file": "IMG_0591.PNG",
+     "issue": "The book sets an ELISION APOSTROPHE twice in one line, 'Samayo 'dani, and the line is also enclosed in single quotation marks as reported speech. Kept exactly as printed; a script normalising quotes would change both the elisions and the speech marks."
+    }
+   ],
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamayasutta-roman"
+  ],
+  "resume_from_page": 323,
+  "resume_from_file": "IMG_0592.PNG",
+  "resume_from": "mahasamayasutta-roman",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter, with every retroflex dot, macron and n-tilde read at 5x and the elision apostrophes left exactly as set.",
+  "page_scan": "agrees. One row for page 322 covering the whole entry. The first verse of the page carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "NOT APPLIED. Stage 1 only — this batch file is written and checked, but nothing has been written into chanting.py, because a second session is working in the same clone and holds that file. One finding, and it is the most important measurement in this whole section: THIS SHEET IS MIXED, eight single-column rows then fifteen two-column ones, and the whole-page gutter scan that worked on 319, 320 and 321 reports NO gutter here at all. Reading it as a two-column page throughout — which is what carrying the previous sheet's layout forward would have done — would have paired the first eight lines into four wrong verses.",
+  "diacritic_exceptions": [
+   "varuṇā/vāruṇā — genuinely two different words, and the BOOK prints them SIDE BY SIDE IN ONE LINE. Verse 128 reads 'Varuṇā vāruṇā devā': the first is the Varuṇa devas themselves, the second the adjectival form, those belonging to Varuṇa. Short against long is visible within a single printed row at 5x, so making them agree would erase a distinction the page itself makes. Same reasoning as the va/vā pair on pages 82 and 92."
+  ]
+ }
+}

@@ -1,0 +1,321 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 321,
+    "file": "IMG_0590.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "mahasamayasutta-roman",
+    "verses": "88-111",
+    "starts_here": false,
+    "note": "TWO COLUMNS end to end, gutter measured as a clean corridor at x 963-1045 — a third distinct measure after page 319's x 1080 edge and page 320's x 972-1188 corridor. Twenty-four rows in ELEVEN groups, and the grouping was measured rather than judged: [3, 2, 3, 2, 2, 2, 2, 2, 2, 2, 2] by the same 70px rule page 320 needed. The sheet runs out mid-list and the sutta carries on to page 322."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-four, verses 88 to 111. Eleven groups, EVERY one declaring para_layout 'lines' because the chant's own layout is 'prose'. Verse 88 opens a group and is the first verse of this page, so it carries both para_start and para_layout.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text. paiboon is empty because there is no thai to romanise.",
+    "pages": "IMG_0590.PNG, page 321, read off the sheet. Offset 269, matching page 320 after the IMG_0587/0588 step."
+   },
+   "verses": [
+    {
+     "number": 88,
+     "pali": "",
+     "pali_roman": "Puttā pi tassa bahavo indanāmā mahabbalā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,",
+     "page": 321,
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 89,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 90,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 91,
+     "pali": "",
+     "pali_roman": "Uttarañca disaṃ rājā kuvero tap pasāsati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the northern quarter is Kuvera.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 92,
+     "pali": "",
+     "pali_roman": "Yakkhānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the yakkhas, a great king of renown."
+    },
+    {
+     "number": 93,
+     "pali": "",
+     "pali_roman": "Puttā pi tassa bahavo indanāmā mahabbalā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 94,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 95,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 96,
+     "pali": "",
+     "pali_roman": "Purimadisaṃ dhataraṭṭho, dakkhiṇena viruḷhako,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Dhataraṭṭha in the eastern quarter, Viruḷhaka in the south,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 97,
+     "pali": "",
+     "pali_roman": "Pacchimena virūpakkho, kuvero uttaraṃ disaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Virūpakkha in the west, Kuvera in the northern quarter."
+    },
+    {
+     "number": 98,
+     "pali": "",
+     "pali_roman": "Cattāro te mahārājā samantā caturo disā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those four Great Kings, filling the four quarters all around,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 99,
+     "pali": "",
+     "pali_roman": "Daddallamānā aṭṭhaṃsu vane kāpilavatthave.",
+     "thai": "",
+     "paiboon": "",
+     "english": "stood blazing in the Kapilavatthu wood."
+    },
+    {
+     "number": 100,
+     "pali": "",
+     "pali_roman": "Tesaṃ māyāvino dāsā āgū vañcanikā saṭhā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Their servants came, deceivers, tricksters and frauds:",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 101,
+     "pali": "",
+     "pali_roman": "Māyā kuṭeṇḍu veṭeṇḍu viṭuca viṭuṭo saha",
+     "thai": "",
+     "paiboon": "",
+     "english": "Māyā, Kuṭeṇḍu, Veṭeṇḍu, Viṭu and Viṭuṭa together,"
+    },
+    {
+     "number": 102,
+     "pali": "",
+     "pali_roman": "Candano kāmaseṭṭho ca kinnughaṇḍu nighaṇḍu ca,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Candana and Kāmaseṭṭha, Kinnughaṇḍu and Nighaṇḍu,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 103,
+     "pali": "",
+     "pali_roman": "Panādo opamañño ca devasūto ca mātali,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Panāda and Opamañña, and Mātali the devas' charioteer,"
+    },
+    {
+     "number": 104,
+     "pali": "",
+     "pali_roman": "Cittaseno ca gandhabbo naḷo rājā janosabho",
+     "thai": "",
+     "paiboon": "",
+     "english": "Cittasena the gandhabba, king Naḷa, Janosabha,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 105,
+     "pali": "",
+     "pali_roman": "Āgū pañcasikho ceva timbarū suriyavaccasā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Pañcasikha came, and Timbarū with Suriyavaccasā."
+    },
+    {
+     "number": 106,
+     "pali": "",
+     "pali_roman": "Ete caññe ca rājāno gandhabbā saha rājubhi",
+     "thai": "",
+     "paiboon": "",
+     "english": "These and other kings, gandhabbas together with their kings,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 107,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 108,
+     "pali": "",
+     "pali_roman": "Athāgū nābhasā nāgā vesālā saha tacchakā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then came the nāgas of Nābhasa, and those of Vesālī with the Tacchakas.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 109,
+     "pali": "",
+     "pali_roman": "Kambalassatarā āgū pāyāgā saha ñātibhi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Kambalas and Assataras came, and those of Payāga with their kin."
+    },
+    {
+     "number": 110,
+     "pali": "",
+     "pali_roman": "Yāmūnā dhataraṭṭhā ca āgū nāgā yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Yāmuna nāgas and the Dhataraṭṭhas came, nāgas of renown.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 111,
+     "pali": "",
+     "pali_roman": "Erāvaṇṇo mahānāgo sopāga samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Erāvaṇṇa the great nāga, he too came to the wood, to the assembly."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "kuvera",
+     "meaning": "the fourth Great King, guardian of the north and lord of the yakkhas. Also called Vessavana. His three fellows were named on page 320"
+    },
+    {
+     "pali": "",
+     "pali_roman": "daddallamāna",
+     "meaning": "blazing, shining brilliantly. Said of the four Great Kings standing in the wood"
+    },
+    {
+     "pali": "",
+     "pali_roman": "māyāvin, vañcanika, saṭha",
+     "meaning": "illusionist, deceiver, fraud — the three words the verse uses of the Great Kings' servants, then followed by their names"
+    },
+    {
+     "pali": "",
+     "pali_roman": "mātali",
+     "meaning": "Mātali, charioteer to Sakka. Named here among the gandhabbas as devasūta, the devas' driver"
+    },
+    {
+     "pali": "",
+     "pali_roman": "erāvaṇṇa",
+     "meaning": "Eravanna, the great naga — the same name as Sakka's elephant Eravana, and here counted among the nagas who came"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 91,
+     "file": "IMG_0590.PNG",
+     "issue": "'tap' AGAIN, THE SECOND SHEET TO PRINT IT. The line reads 'kuvero tap pasasati' exactly as page 320 verse 81 reads 'virulho tap pasasati', where the sense needs tam. Two separate sheets printing the same odd spelling makes it the book's consistent reading rather than a compositor's slip. Recorded as printed on both, NOT corrected on either."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0590.PNG",
+     "issue": "TWO COLUMNS throughout, gutter measured as a clean corridor at x 963-1045. That is the THIRD different measure in three sheets — 319 had a hard right-column edge at x 1080, 320 a corridor at x 972-1188 — which is the argument for profiling every sheet rather than carrying one measurement forward."
+    },
+    {
+     "verse": 100,
+     "file": "IMG_0590.PNG",
+     "issue": "A LONG RUN OF PROPER NAMES, verses 100 to 105, and they are the hardest lines on the sheet to read: Kutendu, Vetendu, Vituca, Vituto, Kinnughandu, Nighandu, Opamanno, Timbaru, Suriyavaccasa. Every one was read at 5x and every retroflex dot checked individually. Names carry no context to correct them from, so they are the lines in this section most worth a second pair of eyes against the book."
+    },
+    {
+     "verse": 96,
+     "file": "IMG_0590.PNG",
+     "issue": "THE BOOK NAMES THE SAME KING TWO WAYS WITHIN SIX LINES. Verse 96 has 'virulhako' where page 320 verse 81 has 'virulho', and both are the southern Great King. The page prints both forms and neither was made to agree with the other."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamayasutta-roman"
+  ],
+  "resume_from_page": 322,
+  "resume_from_file": "IMG_0591.PNG",
+  "resume_from": "mahasamayasutta-roman",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in vannavanto, ErAvanno and the ghandu names, l with dot below in virulhako and nalo, t with dot below in Kutendu, Vetendu, Vituto and dhatarattha, and n with tilde in opamanno and natibhi. The one departure from standard spelling, 'tap' at verse 91, is recorded in a check rather than quietly fixed.",
+  "page_scan": "agrees. One row for one page covering verses 88-111, which is the whole of what this page adds. Verse 88 carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "NOT APPLIED. Stage 1 only — this batch file is written and checked, but nothing has been written into chanting.py, because a second session is working in the same clone and holds that file. Three findings. (1) 'tap' CONFIRMED ON A SECOND SHEET, which upgrades it from a possible slip to the book's reading. (2) 'virulhako' HERE AGAINST 'virulho' ON PAGE 320 for the same Great King — the book is inconsistent with itself and both forms stand. (3) VERSES 100-105 ARE A DENSE RUN OF PROPER NAMES with no context to check them against; they are flagged as the lines in this section most worth verifying against the physical book.",
+  "diacritic_exceptions": [
+   "viruḷha/viruḷhaka — the same southern Great King, printed short on page 320 and with the -ka suffix here. Both are the book's own and the difference is between two sheets rather than a drift in transliteration, so neither was changed."
+  ]
+ }
+}

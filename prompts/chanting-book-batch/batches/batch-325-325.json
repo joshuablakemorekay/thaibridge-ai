@@ -1,0 +1,179 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 325,
+    "file": "IMG_0594.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "mahasamayasutta-roman",
+    "verses": "184-192",
+    "starts_here": false,
+    "note": "THE LAST PAGE OF THE BOOK. TWO COLUMNS, and the sheet is mostly white — only nine rows in four groups, ending a little over halfway down. Two white corridors were measured, x 913-1009 and x 1094-1152, because the left column's longest line reaches between them; the second column's own left edge is the firm one. The sutta ENDS here, on 'savaka te jane suta'ti.', and nothing follows it on the page."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Nine, verses 184 to 192. Four groups, EVERY one declaring para_layout 'lines'. The chant is COMPLETE at verse 192 — this is the last printed page of the book.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text.",
+    "pages": "IMG_0594.PNG, page 325, read off the sheet. Offset 269. This is the highest-numbered photograph in the folder and the highest-numbered page in the book."
+   },
+   "verses": [
+    {
+     "number": 184,
+     "pali": "",
+     "pali_roman": "Yathā pāvussako megho thanayanto savijjuko.",
+     "thai": "",
+     "paiboon": "",
+     "english": "like a rain-cloud in the wet season, thundering with lightning.",
+     "para_start": true,
+     "para_layout": "lines",
+     "page": 325
+    },
+    {
+     "number": 185,
+     "pali": "",
+     "pali_roman": "Tadā so paccudāvatti, saṅkuddho asayaṃvase.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then he turned back, enraged and not his own master."
+    },
+    {
+     "number": 186,
+     "pali": "",
+     "pali_roman": "Tañca sabbaṃ abhiññāya vavakkhitvāna cakkhumā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having directly known all of that, having surveyed it, the One with vision",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 187,
+     "pali": "",
+     "pali_roman": "Tato āmantayī satthā sāvake sāsane rate:",
+     "thai": "",
+     "paiboon": "",
+     "english": "then addressed, as Teacher, the disciples who delight in the teaching:"
+    },
+    {
+     "number": 188,
+     "pali": "",
+     "pali_roman": "“Mārasenā abhikkantā. Te vijānātha bhikkhavo”.",
+     "thai": "",
+     "paiboon": "",
+     "english": "“Māra's host has come. Know them, bhikkhus.”"
+    },
+    {
+     "number": 189,
+     "pali": "",
+     "pali_roman": "Te ca ātappa-makaruṃ sutvā buddhassa sāsanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And they made an ardent effort, having heard the Buddha's instruction.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 190,
+     "pali": "",
+     "pali_roman": "Vītarāgehi pakkāmuṃ. N’esaṃ lomampi iñjayuṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "From those free of lust it withdrew. Not one hair of theirs was stirred."
+    },
+    {
+     "number": 191,
+     "pali": "",
+     "pali_roman": "“Sabbe vijitasaṅgāmā bhayātītā yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "“All of them victors in the battle, gone beyond fear, of renown,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 192,
+     "pali": "",
+     "pali_roman": "Modanti saha bhūtehi sāvakā te jane sutā”ti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "they rejoice together with the beings — those disciples of yours are famed among people.”"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "pāvussaka megha",
+     "meaning": "a rain-cloud of the wet season. The simile for Mara's host arriving, thundering and flashing"
+    },
+    {
+     "pali": "",
+     "pali_roman": "asayaṃvasa",
+     "meaning": "not in one's own power. Said of Mara turning back, enraged and no longer master of himself"
+    },
+    {
+     "pali": "",
+     "pali_roman": "n’esaṃ lomampi iñjayuṃ",
+     "meaning": "not even a hair of theirs was stirred — the phrase that measures the disciples' composure against Mara's whole army"
+    },
+    {
+     "pali": "",
+     "pali_roman": "vijitasaṅgāma",
+     "meaning": "one who has won the battle. The sutta's last epithet for the disciples, and its closing image"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0594.PNG",
+     "issue": "THE SUTTA AND THE BOOK BOTH END HERE, and NO COLOPHON IS PRINTED. Every Thai-script chant in this book closes with a nitthitam formula; this one simply stops after the last verse, with white paper below it. No closing was written, because inventing one would put a line on the page the book does not print."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0594.PNG",
+     "issue": "TWO WHITE CORRIDORS, x 913-1009 and x 1094-1152, rather than one. The left column's longest lines reach into the space between them, so the single clean gutter the other sheets have does not exist here. The second column's left edge is the reliable measure."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0594.PNG",
+     "issue": "HEAVY BLEED-THROUGH FROM THE REVERSE OF THE SHEET, and it is a DONOR LIST with names and money amounts, not chant text — clearly legible in mirror image across the lower half. It was checked at 3x to be certain none of it is on this side. Nothing from it has been entered, and the lower half of page 325 is genuinely blank."
+    },
+    {
+     "verse": 186,
+     "file": "IMG_0594.PNG",
+     "issue": "The book prints 'Tato amantayi sattha' with a LONG i here, where page 319 verse 55 prints the same line with a SHORT i. Both read clearly at 5x. Kept as each page sets it rather than made to agree."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "mahasamayasutta-roman"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": null,
+  "resume_from_file": null,
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter, with every retroflex dot, macron and n-tilde read at 5x and the elision apostrophes left exactly as set.",
+  "page_scan": "agrees. One row for page 325 covering the whole entry. The first verse of the page carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "NOT APPLIED. Stage 1 only — nothing has been written into chanting.py, because a second session holds that file. THIS COMPLETES THE MAHASAMAYA SUTTA AND THE BOOK: verses 184-192 finish the chant that opened on page 317, and page 325 is the last printed page. Three findings. (1) NO COLOPHON — the sutta just stops, where every Thai-script chant in this book closes with a nitthitam formula. Nothing was invented to fill it. (2) THE BLEED-THROUGH ON THIS SHEET IS A DONOR LIST, names and amounts from the reverse, legible in mirror across the lower half; checked at 3x and none of it is on this side. (3) 'amantayi' LONG HERE, SHORT ON PAGE 319 — the same line, two spellings, both kept.",
+  "diacritic_exceptions": []
+ }
+}

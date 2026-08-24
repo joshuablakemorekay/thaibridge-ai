@@ -26175,7 +26175,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 29; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 83; the rest is not in the app yet.
         # ‼ CHECK [IMG_0357.PNG]: english_unverified is set. The book prints
         #   this paritta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -26509,6 +26509,2421 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'all Buddhas equal to the unequalled, all Buddhas of great power.',
+            },
+            # ‼ CHECK [IMG_0359.PNG]: A HAND IS IN THIS PHOTOGRAPH AND IT
+            #   COVERS NO TEXT — checked, not assumed. Skin tone starts at x
+            #   1860; the text's right column ends by x 1660. Two hundred
+            #   pixels of clear margin between them. Second page running with
+            #   a hand in frame and neither needed re-photographing.
+            {
+                'number': 30,
+                'page': 94,
+                'pali': 'สัพเพ ทะสะพะลูเปตา เวสารัชเชหุปาคะตา',
+                'pali_roman': 'Sabbe dasabalūpetā vesārajjehupāgatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'All endowed with the ten powers, and come to the four confidences;',
+            },
+            {
+                'number': 31,
+                'pali': 'สัพเพ เต ปะฏิชานันติ อาสะภัณฐานะมุตตะมัง.',
+                'pali_roman': 'Sabbe te paṭijānanti āsabhaṇṭhānamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all of them claim the supreme place of the bull.',
+            },
+            {
+                'number': 32,
+                'pali': 'สีหะนาทัง นะทันเต เต ปะริสาสุ วิสาระทา',
+                'pali_roman': 'Sīhanādaṃ nadante te parisāsu visāradā',
+                'thai': '',
+                'paiboon': '',
+                'english': "They roar the lion's roar, self-assured in the assemblies;",
+            },
+            {
+                'number': 33,
+                'pali': 'พ์รัห์มะจักกัง ปะวัตเตนติ โลเก อัปปะฏิวัตติยัง.',
+                'pali_roman': 'Brahmacakkaṃ pavattenti loke appaṭivattiyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they set rolling the divine wheel in the world, which none can turn back.',
+            },
+            {
+                'number': 34,
+                'pali': 'อุเปตา พุทธะธัมเมหิ อัฏฐาระสะหิ นายะกา',
+                'pali_roman': 'Upetā buddhadhammehi aṭṭhārasahi nāyakā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The leaders, endowed with the eighteen qualities of a Buddha,',
+            },
+            # ‼ CHECK [IMG_0359.PNG]: A HYPHEN ACROSS THE GUTTER, the FOURTH
+            #   in this run after pages 79, 82 and 92. The left column ends
+            #   ท์วัตติงสะลักขะณูเปตา- and the right opens
+            #   สีต์ยานุพ์ยัญชะนาธะรา, so the word is rejoined as
+            #   ท์วัตติงสะลักขะณูเปตาสีต์ยานุพ์ยัญชะนาธะรา and the hyphen
+            #   dropped as typesetting. It is the longest single word entered
+            #   from this book so far, and it settles the two-column reading
+            #   of this block on its own.
+            {
+                'number': 35,
+                'pali': 'ท์วัตติงสะลักขะณูเปตาสีต์ยานุพ์ยัญชะนาธะรา',
+                'pali_roman': 'Dvattiṃsalakkhaṇūpetāsītyānubyañjanādharā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of the thirty-two marks and bearing the eighty minor signs;',
+            },
+            # ‼ CHECK [IMG_0359.PNG]: สุปปะภา carries its ุ, checked at the
+            #   band edge where the first crop cut it — the same trap as page
+            #   91's โลกะวิทู. Read again on an overlapping band and the vowel
+            #   is there.
+            {
+                'number': 36,
+                'pali': 'พ์ยามัปปะภายะ สุปปะภา สัพเพ เต มุนิกุญชะรา',
+                'pali_roman': 'Byāmappabhāya suppabhā sabbe te munikuñjarā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'radiant with the fathom-wide aura, all of them elephants among sages;',
+            },
+            {
+                'number': 37,
+                'pali': 'พุทธา สัพพัญญุโน เอเต สัพเพ ขีณาสะวา ชินา.',
+                'pali_roman': 'Buddhā sabbaññuno ete sabbe khīṇāsavā jinā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these Buddhas, all-knowing, all of them Conquerors with taints destroyed.',
+            },
+            {
+                'number': 38,
+                'pali': 'มะหัปปะภา มะหาเตชา มะหาปัญญา มะหัพพะลา',
+                'pali_roman': 'Mahappabhā mahātejā mahāpaññā mahabbalā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Of great radiance, great power, great wisdom, great strength;',
+            },
+            {
+                'number': 39,
+                'pali': 'มะหาการุณิกา ธีรา สัพเพสานัง สุขาวะหา.',
+                'pali_roman': 'Mahākāruṇikā dhīrā sabbesānaṃ sukhāvahā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'greatly compassionate, steadfast, bringers of happiness to all.',
+            },
+            {
+                'number': 40,
+                'pali': 'ทีปา นาถา ปะติฏฐา จะ ตาณา เลณา จะ ปาณินัง',
+                'pali_roman': 'Dīpā nāthā patiṭṭhā ca tāṇā leṇā ca pāṇinaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Islands, protectors, supports, shelters and refuges of living beings;',
+            },
+            {
+                'number': 41,
+                'pali': 'คะตี พันธู มะหัสสาสา สะระณา จะ หิเตสิโน.',
+                'pali_roman': 'Gatī bandhū mahassāsā saraṇā ca hitesino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'their destination, their kin, their great comfort, their refuge, seekers of their welfare.',
+            },
+            {
+                'number': 42,
+                'pali': 'สะเทวะกัสสะ โลกัสสะ สัพเพ เอเต ปะรายะนา',
+                'pali_roman': 'Sadevakassa lokassa sabbe ete parāyanā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For the world with its devas, all these are the final resort;',
+            },
+            {
+                'number': 43,
+                'pali': 'เตสาหัง สิระสา ปาเท วันทามิ ปุริสุตตะเม.',
+                'pali_roman': 'Tesāhaṃ sirasā pāde vandāmi purisuttame.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'with my head I venerate their feet, those highest of persons.',
+            },
+            {
+                'number': 44,
+                'pali': 'วะจะสา มะนะสา เจวะ วันทาเมเต ตะถาคะเต',
+                'pali_roman': 'Vacasā manasā ceva vandāmete tathāgate',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By speech and by mind alike I venerate these Tathāgatas,',
+            },
+            {
+                'number': 45,
+                'pali': 'สะยะเน อาสะเน ฐาเน คะมะเน จาปิ สัพพะทา.',
+                'pali_roman': 'Sayane āsane ṭhāne gamane cāpi sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'lying down, sitting, standing and walking, at all times.',
+            },
+            {
+                'number': 46,
+                'pali': 'สะทา สุเขนะ รักขันตุ พุทธา สันติกะรา ตุวัง',
+                'pali_roman': 'Sadā sukhena rakkhantu buddhā santikarā tuvaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May the Buddhas, makers of peace, always guard you in happiness;',
+            },
+            {
+                'number': 47,
+                'pali': 'เตหิ ต์วัง รักขิโต สันโต มุตโต สัพพะภะเยนะ จะ.',
+                'pali_roman': 'Tehi tvaṃ rakkhito santo mutto sabbabhayena ca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'guarded by them, may you be at peace and freed from every fear.',
+            },
+            {
+                'number': 48,
+                'pali': 'สัพพะโรคะวินิมุตโต สัพพะสันตาปะวัชชิโต',
+                'pali_roman': 'Sabbarogavinimutto sabbasantāpavajjito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Released from every disease, spared every affliction,',
+            },
+            {
+                'number': 49,
+                'pali': 'สัพพะเวระมะติกกันโต นิพพุโต จะ ตุวัง ภะวะ.',
+                'pali_roman': 'Sabbaveramatikkanto nibbuto ca tuvaṃ bhava.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having passed beyond all enmity, may you be quenched.',
+            },
+            # ‼ CHECK [IMG_0359.PNG]: ONE INDENT ON THE WHOLE SHEET, measured
+            #   against this block's own left edge. Verse 50 starts at x 590
+            #   where every other row starts at x 470 — a 120px indent — and
+            #   it turns the chant from praising the Buddhas to invoking
+            #   protection. The baseline was computed from this page rather
+            #   than carried from page 93, whose block sat at x 380.
+            {
+                'number': 50,
+                'para_start': True,
+                'pali': 'เตสัง สัจเจนะ สีเลนะ ขันติเมตตาพะเลนะ จะ',
+                'pali_roman': 'Tesaṃ saccena sīlena khantimettābalena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By their truth, their virtue, and the power of their patience and loving-kindness,',
+            },
+            # ‼ CHECK [IMG_0359.PNG]: เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ
+            #   สุเขนะ จะ REPEATS VERBATIM at verses 51, 53 and 55, and will
+            #   go on repeating: the paritta names a quarter, says what
+            #   powerful beings live there, and asks the same protection each
+            #   time. Recorded because check_render walks strings in printed
+            #   order.
+            {
+                'number': 51,
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they too protect you, with health and with happiness.',
+            },
+            # ‼ CHECK [IMG_0359.PNG]: THE PRINTED ROW ORDER PUTS THE PROMISE
+            #   BEFORE THE QUARTER, and that is the book, not a mis-pairing.
+            #   Row 51 is เตปิ ตุมเห อะนุรักขันตุ… and row 52 is
+            #   ปุรัตถิมัส์มิง ทิสาภาเค…, so read straight down the page the
+            #   promise comes first and the quarter second. It parses
+            #   correctly that way — verse 50's 'by their truth' governs verse
+            #   51, and each quarter then takes the promise that follows it.
+            #   Recorded because standard editions set the quarter first and
+            #   someone comparing them would think the rows had been swapped.
+            {
+                'number': 52,
+                'pali': 'ปุรัตถิมัส์มิง ทิสาภาเค สันติ ภูตา มะหิทธิกา',
+                'pali_roman': 'Puratthimasmiṃ disābhāge santi bhūtā mahiddhikā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In the eastern quarter there are beings of great power —',
+            },
+            {
+                'number': 53,
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they too protect you, with health and with happiness.',
+            },
+            {
+                'number': 54,
+                'pali': 'ทักขิณัส์มิง ทิสาภาเค สันติ เทวา มะหิทธิกา',
+                'pali_roman': 'Dakkhiṇasmiṃ disābhāge santi devā mahiddhikā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In the southern quarter there are devas of great power —',
+            },
+            {
+                'number': 55,
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they too protect you, with health and with happiness.',
+            },
+            # ‼ CHECK [IMG_0359.PNG]: THE SHEET RUNS OUT AFTER A WHOLE ROW, so
+            #   no […] marker is used. The western quarter's nāgas are named
+            #   and their promise is on page 95, along with the northern
+            #   quarter. Page 95 numbers from 57.
+            {
+                'number': 56,
+                'pali': 'ปัจฉิมัส์มิง ทิสาภาเค สันติ นาคา มะหิทธิกา',
+                'pali_roman': 'Pacchimasmiṃ disābhāge santi nāgā mahiddhikā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In the western quarter there are nāgas of great power —',
+            },
+            # ‼ CHECK [IMG_0360.PNG]: TWO COLUMNS, gutter measured at x
+            #   1040-1120. Read ACROSS. The four quarters are now complete
+            #   across pages 94 and 95 — east/bhūtas, south/devas, west/nāgas
+            #   on page 94, north/yakkhas here — and verses 60 to 63 then name
+            #   the four Great Kings who guard them.
+            {
+                'number': 57,
+                'page': 95,
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they too protect you, with health and with happiness.',
+            },
+            {
+                'number': 58,
+                'pali': 'อุตตะรัส์มิง ทิสาภาเค สันติ ยักขา มะหิทธิกา',
+                'pali_roman': 'Uttarasmiṃ disābhāge santi yakkhā mahiddhikā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In the northern quarter there are yakkhas of great power —',
+            },
+            {
+                'number': 59,
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they too protect you, with health and with happiness.',
+            },
+            # ‼ CHECK [IMG_0360.PNG]: ‼ วิรุพหะโก WITH A BARE พ — THE THIRD
+            #   INSTANCE OF THIS PATTERN, AFTER PAGES 85 AND 90. The letter
+            #   carries NO cluster mark, and at 6x stacked against the พ of
+            #   พุทโธ six rows below it on this same sheet it is identical:
+            #   two humps, top edge level with the ห and โ beside it, no
+            #   ascender. But standard Pali is Virūḷhaka, the Great King of
+            #   the SOUTH, and virubhaka is not a word — so page 79's non-word
+            #   test says ฬ. THREE INDEPENDENT BARE LETTERS ON THREE SHEETS
+            #   now read พ where the canon has ฬ: avirūḷhi (p85), soḷasa (p90)
+            #   and now Virūḷhaka. The page is reproduced as printed and
+            #   transliterated virubhako to match, with the English giving the
+            #   Virūḷhaka sense. ONE LOOK AT THE BOOK SETTLES ALL THREE, and
+            #   this one is the easiest to check because the four Great Kings
+            #   are named together in a fixed order.
+            {
+                'number': 60,
+                'pali': 'ปุริมะทิสัง ธะตะรัฏโฐ ทักขิเณนะ วิรุพหะโก',
+                'pali_roman': 'Purimadisaṃ dhataraṭṭho dakkhiṇena virubhako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Dhataraṭṭha in the eastern quarter, Virūḷhaka in the southern,',
+            },
+            {
+                'number': 61,
+                'pali': 'ปัจฉิเมนะ วิรูปักโข กุเวโร อุตตะรัง ทิสัง.',
+                'pali_roman': 'Pacchimena virūpakkho kuvero uttaraṃ disaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Virūpakkha in the western, Kuvera in the northern quarter.',
+            },
+            {
+                'number': 62,
+                'pali': 'จัตตาโร เต มะหาราชา โลกะปาลา ยะสัสสิโน',
+                'pali_roman': 'Cattāro te mahārājā lokapālā yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those four Great Kings, guardians of the world, renowned —',
+            },
+            # ‼ CHECK [IMG_0360.PNG]: VERSE 63 ENDS WITH A FULL STOP where
+            #   verses 57, 59 and 65 — the same line — end with none. Read at
+            #   1.7x on each. It is the line that closes the four Great Kings
+            #   stanza rather than one of the quarter stanzas, so the stop
+            #   marks the end of a section. Reproduced as printed on all four.
+            {
+                'number': 63,
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ.',
+                'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they too protect you, with health and with happiness.',
+            },
+            {
+                'number': 64,
+                'pali': 'อากาสัฏฐา จะ ภุมมัฏฐา เทวา นาคา มะหิทธิกา',
+                'pali_roman': 'Ākāsaṭṭhā ca bhummaṭṭhā devā nāgā mahiddhikā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Devas and nāgas of great power, dwelling in the sky and on the earth —',
+            },
+            {
+                'number': 65,
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they too protect you, with health and with happiness.',
+            },
+            # ‼ CHECK [IMG_0360.PNG]: THREE STANZA SETS OPEN ON THIS SHEET, at
+            #   verses 66, 72 and 78, each indented by 90-100px against the
+            #   block's own left edge of 370. Each is a triple: the three
+            #   refuges (66-71), the three jewels beyond compare (72-77), and
+            #   the three jewels as medicine (78-83, running on to page 96).
+            #   The baseline was computed from this page rather than carried
+            #   from page 94, whose block sat at x 470.
+            {
+                'number': 66,
+                'para_start': True,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There is no other refuge for me: the Buddha is my excellent refuge.',
+            },
+            {
+                'number': 67,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by this utterance of truth, may victory and blessing be yours.',
+            },
+            {
+                'number': 68,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There is no other refuge for me: the Dhamma is my excellent refuge.',
+            },
+            {
+                'number': 69,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by this utterance of truth, may victory and blessing be yours.',
+            },
+            {
+                'number': 70,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There is no other refuge for me: the Saṅgha is my excellent refuge.',
+            },
+            {
+                'number': 71,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by this utterance of truth, may victory and blessing be yours.',
+            },
+            # ‼ CHECK [IMG_0360.PNG]: HEAVY VERBATIM REPETITION, ALL OF IT THE
+            #   BOOK. ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ appears at
+            #   verses 72, 74 and 76 word for word; นัตถิ เม สะระณัง อัญญัง
+            #   opens 66, 68 and 70; เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.
+            #   closes 67, 69 and 71; and เตปิ ตุมเห อะนุรักขันตุ… appears
+            #   four times. Each triple runs Buddha, Dhamma, Saṅgha. Recorded
+            #   because check_render walks strings in printed order.
+            {
+                'number': 72,
+                'para_start': True,
+                'pali': 'ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ',
+                'pali_roman': 'Yaṅkiñci ratanaṃ loke vijjati vividhaṃ puthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever jewel there is in the world, of many and various kinds,',
+            },
+            {
+                'number': 73,
+                'pali': 'ระตะนัง พุทธะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Ratanaṃ buddhasamaṃ natthi tasmā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is no jewel equal to the Buddha: therefore may you be well.',
+            },
+            {
+                'number': 74,
+                'pali': 'ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ',
+                'pali_roman': 'Yaṅkiñci ratanaṃ loke vijjati vividhaṃ puthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever jewel there is in the world, of many and various kinds,',
+            },
+            {
+                'number': 75,
+                'pali': 'ระตะนัง ธัมมะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Ratanaṃ dhammasamaṃ natthi tasmā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is no jewel equal to the Dhamma: therefore may you be well.',
+            },
+            {
+                'number': 76,
+                'pali': 'ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ',
+                'pali_roman': 'Yaṅkiñci ratanaṃ loke vijjati vividhaṃ puthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever jewel there is in the world, of many and various kinds,',
+            },
+            {
+                'number': 77,
+                'pali': 'ระตะนัง สังฆะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Ratanaṃ saṅghasamaṃ natthi tasmā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is no jewel equal to the Saṅgha: therefore may you be well.',
+            },
+            {
+                'number': 78,
+                'para_start': True,
+                'pali': 'สักกัต์วา พุทธะระตะนัง โอสะถัง อุตตะมัง วะรัง',
+                'pali_roman': 'Sakkatvā buddharatanaṃ osathaṃ uttamaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having honoured the Jewel of the Buddha, the supreme and excellent medicine,',
+            },
+            {
+                'number': 79,
+                'pali': 'หิตัง เทวะมะนุสสานัง พุทธะเตเชนะ โสตถินา',
+                'pali_roman': 'Hitaṃ devamanussānaṃ buddhatejena sotthinā',
+                'thai': '',
+                'paiboon': '',
+                'english': "the welfare of devas and humans — by the Buddha's power, in safety,",
+            },
+            {
+                'number': 80,
+                'pali': 'นัสสันตุปัททะวา สัพเพ ทุกขา วูปะสะเมนตุ เต.',
+                'pali_roman': 'Nassantupaddavā sabbe dukkhā vūpasamentu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may all your misfortunes perish and your sufferings be stilled.',
+            },
+            {
+                'number': 81,
+                'pali': 'สักกัต์วา ธัมมะระตะนัง โอสะถัง อุตตะมัง วะรัง',
+                'pali_roman': 'Sakkatvā dhammaratanaṃ osathaṃ uttamaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having honoured the Jewel of the Dhamma, the supreme and excellent medicine,',
+            },
+            # ‼ CHECK [IMG_0360.PNG]: ปะริพาหูปะสะมะนัง — read at 1.7x and
+            #   reproduced as printed. Standard editions have
+            #   parilāhūpasamanaṃ, 'the stiller of fever', with ล where this
+            #   page has พ. That is the SAME ล/พ confusion class as the ฬ/พ
+            #   one, on a different letter, and it is worth checking on the
+            #   same visit to the book. Transliterated paripāhūpasamanaṃ to
+            #   match the page; the English gives the fever sense.
+            {
+                'number': 82,
+                'pali': 'ปะริพาหูปะสะมะนัง ธัมมะเตเชนะ โสตถินา',
+                'pali_roman': 'Paripāhūpasamanaṃ dhammatejena sotthinā',
+                'thai': '',
+                'paiboon': '',
+                'english': "the stiller of fever — by the Dhamma's power, in safety,",
+            },
+            # ‼ CHECK [IMG_0360.PNG]: THE SHEET RUNS OUT AFTER A FULL STOP, so
+            #   no […] marker is used. The medicine stanza has done the Buddha
+            #   and the Dhamma; the Saṅgha one should open page 96, and the
+            #   paritta's close should follow. Page 96 numbers from 84.
+            {
+                'number': 83,
+                'pali': 'นัสสันตุปัททะวา สัพเพ ภะยา วูปะสะเมนตุ เต.',
+                'pali_roman': 'Nassantupaddavā sabbe bhayā vūpasamentu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may all your misfortunes perish and your fears be stilled.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0584.PNG]: THE BOOK PRINTS THIS SECTION IN ROMAN PALI
+        #   WITH NO THAI SCRIPT — the first page in the whole book to do so.
+        #   Every verse therefore has an EMPTY pali and carries its text in
+        #   pali_roman, and paiboon is empty because Paiboon+ romanises the
+        #   Thai and there is no Thai. Read at 3x across the whole sheet: no
+        #   Thai character appears anywhere on it, title included. This needed
+        #   a template change before the page could render — book mode hid
+        #   pali_roman, so the sheet would have come out blank.
+        # ‼ CHECK [IMG_0584.PNG]: THE SAME SUTTA IS ALREADY IN THE BOOK IN
+        #   THAI SCRIPT. The book's own contents lists mahasamayasuttam at
+        #   page 175, with its own bot khat above it. So the book prints this
+        #   sutta TWICE, in two scripts, in two places. This entry is the
+        #   ROMAN printing and is deliberately a SEPARATE chant with the id
+        #   suffixed -roman, so that page 175 can be entered later without one
+        #   page overwriting the other's text. Whether the two should
+        #   eventually be joined is Josh's call; nothing here forecloses it.
+        'id': 'mahasamayasutta-roman',
+        'title_thai': '',
+        'title_pali': 'Mahāsamayasutta',
+        'title_roman': '',
+        'title_english': 'The Discourse on the Great Assembly',
+        'page_start': 317,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0584.PNG]: Evam me sutam: is set in BOLD, and so is
+            #   Maha samayo pavanasmim at verse 18. The bold marks where a
+            #   unit begins. The app has no bold layer, so this is recorded
+            #   rather than reproduced.
+            {
+                'number': 1,
+                'page': 317,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'Evaṃ me sutaṃ:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus have I heard:',
+            },
+            {
+                'number': 2,
+                'pali': '',
+                'pali_roman': 'Ekaṃ samayaṃ bhagavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'At one time the Blessed One',
+            },
+            {
+                'number': 3,
+                'pali': '',
+                'pali_roman': 'sakkesu viharati kapilavatthusmiṃ mahāvane',
+                'thai': '',
+                'paiboon': '',
+                'english': 'was dwelling among the Sakyans, at Kapilavatthu in the Great Wood,',
+            },
+            {
+                'number': 4,
+                'pali': '',
+                'pali_roman': 'mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi sabbeheva arahantehi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'together with a great community of bhikkhus, five hundred bhikkhus, all of them arahants.',
+            },
+            {
+                'number': 5,
+                'pali': '',
+                'pali_roman': 'Dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṃ dassanāya bhikkhusaṅghañca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And from ten world-systems the deities had for the most part gathered to see the Blessed One and the community of bhikkhus.',
+            },
+            {
+                'number': 6,
+                'pali': '',
+                'pali_roman': 'Atha kho catunnaṃ suddhāvāsakāyikānaṃ devānaṃ etadahosi:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then it occurred to four deities of the Pure Abodes:',
+            },
+            {
+                'number': 7,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '“Ayaṃ kho bhagavā sakkesu viharati kapilavatthusmiṃ mahāvane',
+                'thai': '',
+                'paiboon': '',
+                'english': '“This Blessed One is dwelling among the Sakyans, at Kapilavatthu in the Great Wood,',
+            },
+            {
+                'number': 8,
+                'pali': '',
+                'pali_roman': 'mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi sabbeheva arahantehi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'together with a great community of bhikkhus, five hundred bhikkhus, all of them arahants,',
+            },
+            {
+                'number': 9,
+                'pali': '',
+                'pali_roman': 'dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṃ dassanāya bhikkhusaṅghañca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and from ten world-systems the deities have for the most part gathered to see the Blessed One and the community of bhikkhus.',
+            },
+            {
+                'number': 10,
+                'pali': '',
+                'pali_roman': 'Yannūna mayampi yena bhagavā tenupasaṅkameyyāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'What if we too were to approach the Blessed One,',
+            },
+            {
+                'number': 11,
+                'pali': '',
+                'pali_roman': 'Upasaṅkamitvā bhagavato santike paccekagāthā bhāseyyāmā”ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and having approached, each speak a verse in his presence?”',
+            },
+            {
+                'number': 12,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'Atha kho tā devatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then those deities —',
+            },
+            {
+                'number': 13,
+                'pali': '',
+                'pali_roman': 'seyyathāpi nāma balavā puriso samiñjitaṃ vā bāhaṃ pasāreyya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'just as a strong man might extend his bent arm,',
+            },
+            # ‼ CHECK [IMG_0584.PNG]: The page prints a DOUBLE SPACE inside
+            #   'pasaritam va baham  saminjeyya' — two clear spaces between
+            #   baham and saminjeyya at 5x, where every other gap on the line
+            #   is single. Read as compositor's spacing and normalised to one
+            #   space; the words themselves are not in doubt.
+            {
+                'number': 14,
+                'pali': '',
+                'pali_roman': 'pasāritaṃ vā bāhaṃ samiñjeyya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or bend his extended arm —',
+            },
+            {
+                'number': 15,
+                'pali': '',
+                'pali_roman': 'evameva suddhāvāsesu devesu antarahitā bhagavato purato pāturahaṃsu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'just so vanished from among the deities of the Pure Abodes and appeared before the Blessed One.',
+            },
+            {
+                'number': 16,
+                'pali': '',
+                'pali_roman': 'Atha kho tā devatā bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhaṃsu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then those deities paid homage to the Blessed One and stood to one side.',
+            },
+            {
+                'number': 17,
+                'pali': '',
+                'pali_roman': 'Ekamantaṃ ṭhitā kho ekā devatā bhagavato santike imaṃ gāthaṃ abhāsi:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Standing to one side, one deity spoke this verse in the presence of the Blessed One:',
+            },
+            # ‼ CHECK [IMG_0584.PNG]: TWO COLUMNS, gutter measured at x
+            #   878-992 by profiling the ink across the row rather than
+            #   judging it by eye. Verse 18 reads ACROSS: Maha samayo
+            #   pavanasmim. in the left column, Devakaya samagata: in the
+            #   right.
+            {
+                'number': 18,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Mahā samayo pavanasmiṃ. Devakāyā samāgatā:',
+                'thai': '',
+                'paiboon': '',
+                'english': '“A great assembly in the woodland: the hosts of devas have come together;',
+            },
+            {
+                'number': 19,
+                'pali': '',
+                'pali_roman': '‘Āgatamha imaṃ dhammasamayaṃ dakkhitāye v’aparājitasaṅghan’ti”.',
+                'thai': '',
+                'paiboon': '',
+                'english': '‘we have come to this assembly of the Dhamma, to see the invincible Saṅgha’.”',
+            },
+            {
+                'number': 20,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'Atha kho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then another deity spoke this verse in the presence of the Blessed One:',
+            },
+            # ‼ CHECK [IMG_0584.PNG]: TWO COLUMNS again, gutter measured at x
+            #   800-898 — a different measure from verse 18's on the same
+            #   sheet, so each gatha block was profiled separately rather than
+            #   one measurement assumed for the whole page.
+            {
+                'number': 21,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Tatra bhikkhavo samādahaṃsu cittamattano ujuka-makaṃsu.',
+                'thai': '',
+                'paiboon': '',
+                'english': '“There the bhikkhus are composed; they have made their own minds straight.',
+            },
+            {
+                'number': 22,
+                'pali': '',
+                'pali_roman': 'Sārathīva nettāni gahetvā indriyāni rakkhanti paṇḍitā”ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Like a charioteer holding the reins, the wise ones guard their faculties.”',
+            },
+            {
+                'number': 23,
+                'page': 318,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'Atha kho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then another deity spoke this verse in the presence of the Blessed One:',
+            },
+            # ‼ CHECK [IMG_0585.PNG]: TWO COLUMNS, gutter measured at x
+            #   871-984 by profiling the ink across the row. Verse 24 reads
+            #   ACROSS: 'Chetva khilam chetva paligham' left, 'indakhilam
+            #   ohacca-maneja,' right.
+            {
+                'number': 24,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Chetvā khīlaṃ chetvā palighaṃ indakhīlaṃ ohacca-manejā,',
+                'thai': '',
+                'paiboon': '',
+                'english': '“Having cut through the stake, having cut through the bar, having uprooted the pillar, unstirred,',
+            },
+            {
+                'number': 25,
+                'pali': '',
+                'pali_roman': 'Te caranti suddhā vimalā cakkhumatā sudantā susu nāgā”ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they walk pure and stainless, young nāgas well tamed by the One with vision.”',
+            },
+            {
+                'number': 26,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'Atha kho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then another deity spoke this verse in the presence of the Blessed One:',
+            },
+            # ‼ CHECK [IMG_0585.PNG]: TWO COLUMNS again, and the gutter is NOT
+            #   the same as verse 24's on the same sheet — x 900-980 against x
+            #   871-984. Each block was profiled on its own row band rather
+            #   than one measurement being assumed for the page.
+            {
+                'number': 27,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Ye keci buddhaṃ saraṇaṃ gatāse na te gamissanti apāyabhūmiṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': '“Whoever have gone to the Buddha for refuge will not go to the plane of misery.',
+            },
+            {
+                'number': 28,
+                'pali': '',
+                'pali_roman': 'Pahāya mānusaṃ dehaṃ devakāyaṃ paripūressantī”ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having left the human body behind, they will fill out the ranks of the devas.”',
+            },
+            # ‼ CHECK [IMG_0585.PNG]: THE BOOK PRINTS 'bhikkhu' WHERE THE
+            #   SENSE NEEDS THE PLURAL. The line reads 'Atha kho bhagava
+            #   bhikkhu amantesi,' with a short u, where the standard reading
+            #   is bhikkhu with a macron — the Blessed One addressed the
+            #   bhikkhus, and verse 40 has the plural 'te bhikkhu' with the
+            #   macron ON the same sheet. Read at 5x: no macron over the u at
+            #   verse 29, a clear one at verse 40. Recorded as printed, NOT
+            #   corrected.
+            {
+                'number': 29,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'Atha kho bhagavā bhikkhu āmantesi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then the Blessed One addressed the bhikkhus:',
+            },
+            {
+                'number': 30,
+                'pali': '',
+                'pali_roman': '“yebhuyyena bhikkhave dasasu lokadhātūsu devatā sannipatitā tathāgataṃ dassanāya bhikkhusaṅghañca.',
+                'thai': '',
+                'paiboon': '',
+                'english': '“Bhikkhus, deities from ten world-systems have for the most part gathered to see the Tathāgata and the community of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0585.PNG]: A WORD BROKEN ACROSS A LINE BREAK WITH
+            #   NO HYPHEN. The line ends 'sammasambuddha, tesam' and the next
+            #   OPENS 'pi bhagavantanam' at the left margin, not indented. The
+            #   same sentence appears again four lines later at verse 34 and
+            #   prints 'tesampi' as ONE word, so the break is the compositor's
+            #   and the two halves are rejoined here as tesampi. The parallel
+            #   line on the same sheet is what settles it; without it this
+            #   would be a guess.
+            {
+                'number': 31,
+                'pali': '',
+                'pali_roman': 'Ye pi te bhikkhave ahesuṃ atīta-maddhānaṃ arahanto sammāsambuddhā, tesampi bhagavantānaṃ etaparamā yeva devatā sannipatitā ahesuṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Bhikkhus, those who in times past were arahants, fully enlightened Buddhas — for those Blessed Ones too the deities gathered in just such numbers at most,',
+            },
+            {
+                'number': 32,
+                'pali': '',
+                'pali_roman': 'seyyathāpi mayhaṃ etarahi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'just as they do for me now.',
+            },
+            {
+                'number': 33,
+                'pali': '',
+                'pali_roman': 'Ye pi te bhikkhave bhavissanti anāgata-maddhānaṃ arahanto sammāsambuddhā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And bhikkhus, those who in times to come will be arahants, fully enlightened Buddhas —',
+            },
+            {
+                'number': 34,
+                'pali': '',
+                'pali_roman': 'tesampi bhagavantānaṃ etaparamā yeva devatā sannipatitā bhavissanti,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for those Blessed Ones too the deities will gather in just such numbers at most,',
+            },
+            {
+                'number': 35,
+                'pali': '',
+                'pali_roman': 'seyyathāpi mayhaṃ etarahi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'just as they do for me now.',
+            },
+            {
+                'number': 36,
+                'pali': '',
+                'pali_roman': 'Ācikkhissāmi bhikkhave devakāyānaṃ nāmāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall announce, bhikkhus, the names of the hosts of devas.',
+            },
+            {
+                'number': 37,
+                'pali': '',
+                'pali_roman': 'Kittayissāmi bhikkhave devakāyānaṃ nāmāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall proclaim, bhikkhus, the names of the hosts of devas.',
+            },
+            {
+                'number': 38,
+                'pali': '',
+                'pali_roman': 'Desissāmi bhikkhave devakāyānaṃ nāmāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall teach, bhikkhus, the names of the hosts of devas.',
+            },
+            {
+                'number': 39,
+                'pali': '',
+                'pali_roman': 'Taṃ suṇātha. Sādhukaṃ manasikarotha. Bhāsissāmī”ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Listen to it. Attend closely. I shall speak.”',
+            },
+            # ‼ CHECK [IMG_0585.PNG]: THE BOOK SPELLS THE NIGGAHITA TWO WAYS.
+            #   This line prints 'Evam bhante' with a plain m, where page 317
+            #   verse 1 prints 'Evam me sutam' with the dotted m. Both read
+            #   clearly at 5x. Kept as each page sets it rather than made to
+            #   agree — the inconsistency is the book's and belongs in the
+            #   record, not smoothed out of it.
+            {
+                'number': 40,
+                'pali': '',
+                'pali_roman': '“Evam bhante”ti kho te bhikkhū bhagavato paccassosuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': '“Yes, venerable sir,” those bhikkhus replied to the Blessed One.',
+            },
+            {
+                'number': 41,
+                'pali': '',
+                'pali_roman': 'Bhagavā etadavoca:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Blessed One said this:',
+            },
+            # ‼ CHECK [IMG_0586.PNG]: 'Silokamanukassami' is set in BOLD, as
+            #   the opening words of a spoken unit are elsewhere in this
+            #   section. The app has no bold layer, so it is recorded rather
+            #   than reproduced.
+            {
+                'number': 42,
+                'page': 319,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Silokamanukassāmi yattha bhummā tadassitā,',
+                'thai': '',
+                'paiboon': '',
+                'english': '“I shall recite a verse in praise, telling where the earth-devas dwell:',
+            },
+            {
+                'number': 43,
+                'pali': '',
+                'pali_roman': 'Ye sitā girigabbharaṃ pahitattā samāhitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those who cling to the mountain cleft, resolute and composed.',
+            },
+            {
+                'number': 44,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Puthū sīhā’va sallīnā lomahaṃsābhisambhuno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Many, withdrawn like lions, whose hair stands on end in awe,',
+            },
+            {
+                'number': 45,
+                'pali': '',
+                'pali_roman': 'Odātamanasā suddhā vippasanna-manāvilā”.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'bright of mind, pure, serene and untroubled.”',
+            },
+            {
+                'number': 46,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Bhiyyo pañcasate ñatvā vane kāpilavatthave,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Knowing that more than five hundred were in the Kapilavatthu wood,',
+            },
+            {
+                'number': 47,
+                'pali': '',
+                'pali_roman': 'Tato āmantayi satthā sāvake sāsane rate:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Teacher then addressed the disciples who delight in the teaching:',
+            },
+            {
+                'number': 48,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Devakāyā abhikkantā. Te vijānātha bhikkhavo”.',
+                'thai': '',
+                'paiboon': '',
+                'english': '“The hosts of devas have come. Know them, bhikkhus.”',
+            },
+            {
+                'number': 49,
+                'pali': '',
+                'pali_roman': 'Te ca ātappa-makaruṃ sutvā buddhassa sāsanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And they made an ardent effort, having heard the Buddha's instruction.",
+            },
+            {
+                'number': 50,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Tesaṃ pāturahu ñāṇaṃ amanussāna dassanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Knowledge appeared to them, the seeing of non-human beings.',
+            },
+            {
+                'number': 51,
+                'pali': '',
+                'pali_roman': 'Appeke sata-maddakkhuṃ, sahassaṃ atha sattariṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Some saw a hundred, some a thousand, and some seventy thousand.',
+            },
+            {
+                'number': 52,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Sataṃ eke sahassānaṃ amanussāna-maddasuṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Some saw a hundred thousand non-human beings,',
+            },
+            # ‼ CHECK [IMG_0586.PNG]: The book prints an APOSTROPHE STANDING
+            #   FOR AN ELIDED VOWEL in ’nanta-maddakkhum, and again at siha’va
+            #   (44) and vo’ham (57). Kept as the page sets them. They are
+            #   elision marks, not quotation marks, and a script that
+            #   normalises quotes would silently change three words.
+            {
+                'number': 53,
+                'pali': '',
+                'pali_roman': 'Appeke ’nanta-maddakkhuṃ: disā sabbā phuṭā ahuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and some saw them without end: every direction was filled.',
+            },
+            {
+                'number': 54,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Tañca sabbaṃ abhiññāya vavakkhitvāna cakkhumā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having directly known all of that, having surveyed it, the One with vision',
+            },
+            {
+                'number': 55,
+                'pali': '',
+                'pali_roman': 'Tato āmantayi satthā sāvake sāsane rate:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then addressed, as Teacher, the disciples who delight in the teaching:',
+            },
+            {
+                'number': 56,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Devakāyā abhikkantā. Te vijānātha bhikkhavo,',
+                'thai': '',
+                'paiboon': '',
+                'english': '“The hosts of devas have come. Know them, bhikkhus —',
+            },
+            {
+                'number': 57,
+                'pali': '',
+                'pali_roman': 'Ye vo’haṃ kittayissāmi girāhi anupubbaso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those whom I shall proclaim to you in words, one after another.',
+            },
+            {
+                'number': 58,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Satta sahassā va yakkhā bhummā kāpilavatthavā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Seven thousand yakkhas, earth-dwellers of Kapilavatthu,',
+            },
+            # ‼ CHECK [IMG_0586.PNG]: Verses 59 and 62 are IDENTICAL, and so
+            #   are 60 and 63 — the list repeats a refrain for each class of
+            #   being it names. This is the book being what it is, not a
+            #   duplicate to be collapsed, and check_render walks rather than
+            #   counts precisely so that repeats like this pass.
+            {
+                'number': 59,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 60,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 61,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Cha sahassā hemavatā yakkhā nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Six thousand yakkhas from the Himavā, of varied hues,',
+            },
+            {
+                'number': 62,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 63,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 64,
+                'page': 320,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Sātāgirā tisahassā yakkhā nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Three thousand Sātāgira yakkhas, of varied hues,',
+            },
+            # ‼ CHECK [IMG_0589.PNG]: THE REFRAIN REPEATS VERBATIM SIX TIMES
+            #   on this sheet — verses 65, 68, 71, 79, 84 are identical and so
+            #   are 66, 69, 72, 80, 85. That is the book's own structure for a
+            #   list of the assembled hosts, not duplication to be collapsed.
+            {
+                'number': 65,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 66,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 67,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Iccete soḷasa sahassā yakkhā nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These sixteen thousand yakkhas, of varied hues,',
+            },
+            {
+                'number': 68,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 69,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 70,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Vessāmittā pañcasatā yakkhā nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Five hundred Vessāmitta yakkhas, of varied hues,',
+            },
+            {
+                'number': 71,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 72,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0589.PNG]: The book sets EM DASHES inside verses 73
+            #   and 74, closing a parenthetical about Kumbhira's dwelling and
+            #   his retinue. Kept as printed; they are the page's punctuation
+            #   and carry the sense of the aside.
+            {
+                'number': 73,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Kumbhīro rājagahiko — vepull’assa nivesanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Kumbhīra of Rājagaha — his dwelling is Mount Vepulla —',
+            },
+            {
+                'number': 74,
+                'pali': '',
+                'pali_roman': 'Bhiyyo naṃ satasahassaṃ yakkhānaṃ payirupāsati —',
+                'thai': '',
+                'paiboon': '',
+                'english': 'more than a hundred thousand yakkhas attend upon him —',
+            },
+            {
+                'number': 75,
+                'pali': '',
+                'pali_roman': 'Kumbhīro rājagahiko sopāga samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Kumbhīra of Rājagaha, he too came to the wood, to the assembly.',
+            },
+            # ‼ CHECK [IMG_0589.PNG]: THE BOOK'S BLANK LINES AND ITS BOLD
+            #   DISAGREE HERE, and the blank lines were followed. 'Purimanca
+            #   disam raja' is set in BOLD, which everywhere else in this
+            #   section marks a new unit — but there is NO blank line before
+            #   it. Measured rather than judged: rows inside this block sit
+            #   39-51px apart while every real paragraph break on the sheet is
+            #   77-113px. So verses 73-77 are ONE five-row block as printed,
+            #   and the bold is recorded here instead of being turned into a
+            #   break the page does not make.
+            {
+                'number': 76,
+                'pali': '',
+                'pali_roman': 'Purimañca disaṃ rājā dhataraṭṭho pasāsati,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the eastern quarter is Dhataraṭṭha,',
+            },
+            {
+                'number': 77,
+                'pali': '',
+                'pali_roman': 'Gandhabbānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'lord of the gandhabbas, a great king of renown.',
+            },
+            {
+                'number': 78,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Puttā pi tassa bahavo indanāmā mahabbalā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            {
+                'number': 79,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 80,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0589.PNG]: THE BOOK PRINTS 'tap' WHERE THE SENSE
+            #   NEEDS 'tam'. The line reads 'virulho tap pasasati' with a
+            #   plain p, and page 321 prints 'kuvero tap pasasati' the same
+            #   way. The same odd spelling on TWO separate sheets makes it the
+            #   book's consistent reading rather than one compositor's slip,
+            #   which is worth knowing before anyone corrects it. Recorded as
+            #   printed, NOT corrected.
+            {
+                'number': 81,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dakkhiṇañca disaṃ rājā viruḷho tap pasāsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the southern quarter is Viruḷha.',
+            },
+            {
+                'number': 82,
+                'pali': '',
+                'pali_roman': 'Kumbhaṇḍānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the kumbhaṇḍas, a great king of renown.',
+            },
+            {
+                'number': 83,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Puttā pi tassa bahavo indanāmā mahabbalā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            {
+                'number': 84,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 85,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 86,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Pacchimañca disaṃ rājā virūpakkho pasāsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the western quarter is Virūpakkha.',
+            },
+            {
+                'number': 87,
+                'pali': '',
+                'pali_roman': 'Nāgānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the nāgas, a great king of renown.',
+            },
+            {
+                'number': 88,
+                'page': 321,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Puttā pi tassa bahavo indanāmā mahabbalā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            {
+                'number': 89,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 90,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0590.PNG]: 'tap' AGAIN, THE SECOND SHEET TO PRINT
+            #   IT. The line reads 'kuvero tap pasasati' exactly as page 320
+            #   verse 81 reads 'virulho tap pasasati', where the sense needs
+            #   tam. Two separate sheets printing the same odd spelling makes
+            #   it the book's consistent reading rather than a compositor's
+            #   slip. Recorded as printed on both, NOT corrected on either.
+            {
+                'number': 91,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Uttarañca disaṃ rājā kuvero tap pasāsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the northern quarter is Kuvera.',
+            },
+            {
+                'number': 92,
+                'pali': '',
+                'pali_roman': 'Yakkhānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the yakkhas, a great king of renown.',
+            },
+            {
+                'number': 93,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Puttā pi tassa bahavo indanāmā mahabbalā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            {
+                'number': 94,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 95,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0590.PNG]: THE BOOK NAMES THE SAME KING TWO WAYS
+            #   WITHIN SIX LINES. Verse 96 has 'virulhako' where page 320
+            #   verse 81 has 'virulho', and both are the southern Great King.
+            #   The page prints both forms and neither was made to agree with
+            #   the other.
+            {
+                'number': 96,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Purimadisaṃ dhataraṭṭho, dakkhiṇena viruḷhako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Dhataraṭṭha in the eastern quarter, Viruḷhaka in the south,',
+            },
+            {
+                'number': 97,
+                'pali': '',
+                'pali_roman': 'Pacchimena virūpakkho, kuvero uttaraṃ disaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Virūpakkha in the west, Kuvera in the northern quarter.',
+            },
+            {
+                'number': 98,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Cattāro te mahārājā samantā caturo disā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those four Great Kings, filling the four quarters all around,',
+            },
+            {
+                'number': 99,
+                'pali': '',
+                'pali_roman': 'Daddallamānā aṭṭhaṃsu vane kāpilavatthave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'stood blazing in the Kapilavatthu wood.',
+            },
+            # ‼ CHECK [IMG_0590.PNG]: A LONG RUN OF PROPER NAMES, verses 100
+            #   to 105, and they are the hardest lines on the sheet to read:
+            #   Kutendu, Vetendu, Vituca, Vituto, Kinnughandu, Nighandu,
+            #   Opamanno, Timbaru, Suriyavaccasa. Every one was read at 5x and
+            #   every retroflex dot checked individually. Names carry no
+            #   context to correct them from, so they are the lines in this
+            #   section most worth a second pair of eyes against the book.
+            {
+                'number': 100,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Tesaṃ māyāvino dāsā āgū vañcanikā saṭhā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Their servants came, deceivers, tricksters and frauds:',
+            },
+            {
+                'number': 101,
+                'pali': '',
+                'pali_roman': 'Māyā kuṭeṇḍu veṭeṇḍu viṭuca viṭuṭo saha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Māyā, Kuṭeṇḍu, Veṭeṇḍu, Viṭu and Viṭuṭa together,',
+            },
+            {
+                'number': 102,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Candano kāmaseṭṭho ca kinnughaṇḍu nighaṇḍu ca,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Candana and Kāmaseṭṭha, Kinnughaṇḍu and Nighaṇḍu,',
+            },
+            {
+                'number': 103,
+                'pali': '',
+                'pali_roman': 'Panādo opamañño ca devasūto ca mātali,',
+                'thai': '',
+                'paiboon': '',
+                'english': "Panāda and Opamañña, and Mātali the devas' charioteer,",
+            },
+            {
+                'number': 104,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Cittaseno ca gandhabbo naḷo rājā janosabho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Cittasena the gandhabba, king Naḷa, Janosabha,',
+            },
+            {
+                'number': 105,
+                'pali': '',
+                'pali_roman': 'Āgū pañcasikho ceva timbarū suriyavaccasā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Pañcasikha came, and Timbarū with Suriyavaccasā.',
+            },
+            {
+                'number': 106,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Ete caññe ca rājāno gandhabbā saha rājubhi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These and other kings, gandhabbas together with their kings,',
+            },
+            {
+                'number': 107,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 108,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Athāgū nābhasā nāgā vesālā saha tacchakā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then came the nāgas of Nābhasa, and those of Vesālī with the Tacchakas.',
+            },
+            {
+                'number': 109,
+                'pali': '',
+                'pali_roman': 'Kambalassatarā āgū pāyāgā saha ñātibhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Kambalas and Assataras came, and those of Payāga with their kin.',
+            },
+            {
+                'number': 110,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Yāmūnā dhataraṭṭhā ca āgū nāgā yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Yāmuna nāgas and the Dhataraṭṭhas came, nāgas of renown.',
+            },
+            {
+                'number': 111,
+                'pali': '',
+                'pali_roman': 'Erāvaṇṇo mahānāgo sopāga samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Erāvaṇṇa the great nāga, he too came to the wood, to the assembly.',
+            },
+            # ‼ CHECK [IMG_0591.PNG]: THE FIRST EIGHT ROWS ARE SINGLE COLUMN,
+            #   NOT TWO. Measured row by row rather than judged: rows 1-8
+            #   carry ink from x 668 to at most x 1397 with no internal gap at
+            #   any threshold down to 50, while every row from nine on has a
+            #   clear gutter. This is the only mixed sheet in the roman
+            #   section, and a page-level gutter scan reports NO columns at
+            #   all here — which is how it would have been missed.
+            {
+                'number': 112,
+                'page': 322,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Ye nāgarāje sahasā haranti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those swift ones who carry off the nāga kings,',
+            },
+            {
+                'number': 113,
+                'pali': '',
+                'pali_roman': 'Dibbā dijā pakkhi visuddhacakkhū,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'divine birds, winged, of pure sight,',
+            },
+            {
+                'number': 114,
+                'pali': '',
+                'pali_roman': 'Vehāyasā te vana-majjhapattā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'through the air they came into the middle of the wood.',
+            },
+            {
+                'number': 115,
+                'pali': '',
+                'pali_roman': 'Citrā supaṇṇā iti tesa nāmaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Citrā and Supaṇṇā — such are their names.',
+            },
+            {
+                'number': 116,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Abhayan tadā nāgarājāna-māsi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then there was safety for the nāga kings:',
+            },
+            {
+                'number': 117,
+                'pali': '',
+                'pali_roman': 'Supaṇṇato khema-makāsi buddho.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Buddha made a sanctuary for them from the supaṇṇas.',
+            },
+            {
+                'number': 118,
+                'pali': '',
+                'pali_roman': 'Saṇhāhi vācāhi upavhayantā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Calling to one another with gentle words,',
+            },
+            {
+                'number': 119,
+                'pali': '',
+                'pali_roman': 'Nāgā supaṇṇā saraṇa-magaṃsu buddhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'nāgas and supaṇṇas alike went to the Buddha for refuge.',
+            },
+            # ‼ CHECK [IMG_0591.PNG]: THE LAYOUT CHANGES WITHOUT A FULL
+            #   PARAGRAPH BREAK. The vertical gap between the last wide row
+            #   and the first two-column row is 40px, where breaks inside the
+            #   two-column part run 80-86px and rows inside the wide block sit
+            #   20-37px apart. The gap is ambiguous on its own, so the group
+            #   boundary here was taken from the LAYOUT change and the bold on
+            #   'Jita vajirahatthena', not from the spacing. Recorded because
+            #   it is the one grouping decision on this sheet that measurement
+            #   alone does not settle.
+            {
+                'number': 120,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Jitā vajirahatthena samuddaṃ asurā sitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Conquered by the one with the thunderbolt in hand, the asuras dwell in the sea.',
+            },
+            {
+                'number': 121,
+                'pali': '',
+                'pali_roman': 'Bhātaro vāsavassete iddhimanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These brothers of Vāsava are possessed of power and renown.',
+            },
+            {
+                'number': 122,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Kālakañchā mahābhismā asurā dānaveghasā:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Kālakañchas, greatly terrifying, the Dānaveghasa asuras:',
+            },
+            {
+                'number': 123,
+                'pali': '',
+                'pali_roman': 'Vepacitti sucitti ca pahārādo namucī saha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Vepacitti and Sucitti, Pahārāda together with Namucī,',
+            },
+            {
+                'number': 124,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Satañca baliputtānaṃ sabbe verocanāmakā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and a hundred sons of Bali, all named Verocana.',
+            },
+            {
+                'number': 125,
+                'pali': '',
+                'pali_roman': 'Sannayhitvā baliṃ senaṃ rāhubhadda-mupāgamuṃ:',
+                'thai': '',
+                'paiboon': '',
+                'english': "Having armed Bali's host, they went up to good Rāhu:",
+            },
+            # ‼ CHECK [IMG_0591.PNG]: The book sets an ELISION APOSTROPHE
+            #   twice in one line, 'Samayo 'dani, and the line is also
+            #   enclosed in single quotation marks as reported speech. Kept
+            #   exactly as printed; a script normalising quotes would change
+            #   both the elisions and the speech marks.
+            {
+                'number': 126,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '’Samayo ’dāni bhaddante bhikkhūnaṃ samitiṃ vanaṃ.’',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Now is the time, venerable sir, for the assembly of bhikkhus in the wood.'",
+            },
+            {
+                'number': 127,
+                'pali': '',
+                'pali_roman': 'Āpo ca devā paṭhavī ca tejo vāyo tadāgamuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The devas of water and of earth, of fire and of air, then came.',
+            },
+            {
+                'number': 128,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Varuṇā vāruṇā devā somo ca yasasā saha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Varuṇas, the devas of Varuṇa, and Soma together with Yasas.',
+            },
+            {
+                'number': 129,
+                'pali': '',
+                'pali_roman': 'Mettākaruṇākāyikā āgū devā yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The hosts of loving-kindness and compassion came, devas of renown.',
+            },
+            {
+                'number': 130,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, tenfold hosts, all of varied hues,',
+            },
+            {
+                'number': 131,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 132,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 133,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Veṇḍū ca devā sahalī ca asamā ca duve yamā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Veṇḍu devas and the Sahalīs, the Asamas and the two Yamas.',
+            },
+            {
+                'number': 134,
+                'pali': '',
+                'pali_roman': 'Candassūpanisā devā canda-māgū purakkhitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The devas attending on the moon came, with the moon before them.',
+            },
+            {
+                'number': 135,
+                'page': 323,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Suriyassūpanisā devā suriya-māgū purakkhitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The devas attending on the sun came, with the sun before them.',
+            },
+            {
+                'number': 136,
+                'pali': '',
+                'pali_roman': 'Nakkhattāni purakkhitvā āgū mandabalāhakā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Putting the constellations before them, the Mandabalāhakas came.',
+            },
+            {
+                'number': 137,
+                'pali': '',
+                'pali_roman': 'Vasūnaṃ vāsavo seṭṭho sakkopāga purindado.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Vāsava, chief of the Vasus, Sakka the Purindada, came too.',
+            },
+            # ‼ CHECK [IMG_0592.PNG]: THE THREE-ROW REFRAIN REPEATS FOUR TIMES
+            #   ON THIS ONE SHEET — verses 138-140, 144-146, 152-154 and
+            #   159-161 are identical to each other and to rows on pages 320,
+            #   321 and 322. That is the book's own structure and must not be
+            #   collapsed; check_render walks rather than counts so that
+            #   repeats like this pass.
+            {
+                'number': 138,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, tenfold hosts, all of varied hues,',
+            },
+            {
+                'number': 139,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 140,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 141,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Athāgū sahabhū devā jala-maggisikhāriva,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then came the Sahabhū devas, blazing like the crest of a fire,',
+            },
+            {
+                'number': 142,
+                'pali': '',
+                'pali_roman': 'Ariṭṭhakā ca rojā ca ummāpupphanibhāsino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Ariṭṭhakas and the Rojas, shining like flax flowers.',
+            },
+            # ‼ CHECK [IMG_0592.PNG]: TWO SENTENCES IN ONE PRINTED ROW at
+            #   verses 143 and 148: 'Suleyya-rucira agu. Agu vasavanesino.'
+            #   and 'Khiddapadusika agu. Agu manopadusika.' The full stop
+            #   falls mid-row, at the gutter. Kept as one verse because the
+            #   ROW is the unit on a two-column sheet, which is how every such
+            #   page in this book has been entered.
+            {
+                'number': 143,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Varuṇā sahadhammā ca accutā ca anejakā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Varuṇas and the Sahadhammas, the Accutas and the Anejakas.',
+            },
+            {
+                'number': 144,
+                'pali': '',
+                'pali_roman': 'Sūleyya-rucirā āgū. Āgū vāsavanesino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Sūleyyas and Rucirās came. The Vāsavanesis came.',
+            },
+            {
+                'number': 145,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, tenfold hosts, all of varied hues,',
+            },
+            {
+                'number': 146,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 147,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 148,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Samānā mahāsamānā mānusā mānusuttamā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Samānas and Mahāsamānas, the Mānusas and Mānusuttamas.',
+            },
+            {
+                'number': 149,
+                'pali': '',
+                'pali_roman': 'Khiḍḍāpadūsikā āgū. Āgū manopadūsikā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Khiḍḍāpadūsikas came. The Manopadūsikas came.',
+            },
+            {
+                'number': 150,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Athāgū harayo devā ye ca lohitavāsino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then came the Harī devas, and those clothed in red.',
+            },
+            {
+                'number': 151,
+                'pali': '',
+                'pali_roman': 'Pāragā mahāpāragā āgū devā yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Pāragas and Mahāpāragas came, devas of renown.',
+            },
+            {
+                'number': 152,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, tenfold hosts, all of varied hues,',
+            },
+            {
+                'number': 153,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 154,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 155,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Sukkā karumhā aruṇā āgū veghanasā saha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Sukkas, Karumhas and Aruṇas came, with the Veghanasas.',
+            },
+            {
+                'number': 156,
+                'pali': '',
+                'pali_roman': 'Odātagayhā pāmokkhā āgū devā vicakkhaṇā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Odātagayhas and the foremost ones came, discerning devas.',
+            },
+            {
+                'number': 157,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Sadāmattā hāragajā missakā ca yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Sadāmattas, Hāragajas and Missakas, of renown.',
+            },
+            {
+                'number': 158,
+                'pali': '',
+                'pali_roman': 'Thanayaṃ āgā pajunno, yo disā abhivassati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Pajjunna came thundering, who rains upon the quarters.',
+            },
+            {
+                'number': 159,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, tenfold hosts, all of varied hues,',
+            },
+            {
+                'number': 160,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 161,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 162,
+                'page': 324,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Khemiyā tusitā yāmā kaṭṭhakā ca yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Khemiyas, Tusitas and Yāmas, and the Kaṭṭhakas of renown,',
+            },
+            {
+                'number': 163,
+                'pali': '',
+                'pali_roman': 'Lambitakā lāmaseṭṭhā jotināmā ca āsavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Lambitakas and Lāmaseṭṭhas, the Jotināmas and Āsavas.',
+            },
+            {
+                'number': 164,
+                'pali': '',
+                'pali_roman': 'Nimmāṇaratino āgū. Athāgū paranimmitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Nimmāṇaratis came. Then came the Paranimmitas.',
+            },
+            {
+                'number': 165,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, tenfold hosts, all of varied hues,',
+            },
+            {
+                'number': 166,
+                'pali': '',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 167,
+                'pali': '',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0593.PNG]: 'Satthete devanikaya' is set in BOLD,
+            #   marking the line that closes the roll-call of the hosts.
+            #   Unlike page 320's bold, this one DOES sit at a measured
+            #   paragraph break, so bold and spacing agree here and the group
+            #   boundary is not in doubt.
+            {
+                'number': 168,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Saṭṭhete devanikāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These sixty orders of devas, all of varied hues,',
+            },
+            {
+                'number': 169,
+                'pali': '',
+                'pali_roman': 'Nāmanvayena āgañchuṃ ye caññe sadisā saha:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came each according to his name, and others like them with them:',
+            },
+            {
+                'number': 170,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '’Pavutthajātimakkhīlaṃ oghatiṇṇa-manāsavaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': "'One whose birth is done with, who has no barrenness, who has crossed the flood, without taint,",
+            },
+            {
+                'number': 171,
+                'pali': '',
+                'pali_roman': 'Dakkhemoghataraṃ nāgaṃ candaṃ va asitātitaṃ.’',
+                'thai': '',
+                'paiboon': '',
+                'english': "let us see the nāga who has crossed the flood, like the moon come clear of darkness.'",
+            },
+            {
+                'number': 172,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Subrahmā paramatto ca puttā iddhimato saha,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Subrahmā and Paramatta, sons together with the mighty one,',
+            },
+            {
+                'number': 173,
+                'pali': '',
+                'pali_roman': 'Sanaṅkumāro tisso ca sopāga samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sanaṅkumāra and Tissa — he too came to the wood, to the assembly.',
+            },
+            {
+                'number': 174,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Sahassabrahmalokānaṃ mahābrahmābhitiṭṭhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Over a thousand Brahma worlds the Great Brahmā presides.',
+            },
+            {
+                'number': 175,
+                'pali': '',
+                'pali_roman': 'Upapanno jutimanto bhismākāyo yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Reborn there, radiant, of awesome form, he is of renown.',
+            },
+            {
+                'number': 176,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Dasettha issarā āgū paccekavasavattino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Ten lords came here, each wielding his own mastery,',
+            },
+            {
+                'number': 177,
+                'pali': '',
+                'pali_roman': 'Tesañca majjhato āgā hārito parivārito.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and in their midst came Hārita, surrounded by his retinue.',
+            },
+            {
+                'number': 178,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Te ca sabbe abhikkante sinde deve sabrahmake,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And when all these had come, the devas with Inda and with Brahmā,',
+            },
+            # ‼ CHECK [IMG_0593.PNG]: The book sets an EM DASH mid-row in
+            #   'Marasena abhikkami — passa kanhassa mandiyam', where the dash
+            #   carries the turn from narration to the narrator's aside. Kept
+            #   as printed.
+            {
+                'number': 179,
+                'pali': '',
+                'pali_roman': 'Mārasenā abhikkāmi — passa kaṇhassa mandiyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Māra's host came on — see the folly of the Dark One.",
+            },
+            # ‼ CHECK [IMG_0593.PNG]: FOUR IMPERATIVES SET AS SEPARATE
+            #   SENTENCES in one row: 'Etha. Ganhatha. Bandhatha.' with a
+            #   fourth clause after the gutter. Mara's order is punctuated as
+            #   staccato commands and is kept that way rather than run
+            #   together.
+            {
+                'number': 180,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '’Etha. Gaṇhatha. Bandhatha. Rāgena bandhamatthu vo.',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Come. Seize them. Bind them. Let them be bound by lust for you.",
+            },
+            {
+                'number': 181,
+                'pali': '',
+                'pali_roman': 'Samantā parivāretha. Mā vo muñcittha koci naṃ.’',
+                'thai': '',
+                'paiboon': '',
+                'english': "Surround them on every side. Let not one of them escape you.'",
+            },
+            {
+                'number': 182,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Iti tattha mahāseno kaṇhasenaṃ apesayi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So there the great commander sent forth his dark army,',
+            },
+            {
+                'number': 183,
+                'pali': '',
+                'pali_roman': 'Pāṇinā tala-māhacca saraṃ katvāna bheravaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'striking the ground with his palm, making a terrifying sound,',
+            },
+            {
+                'number': 184,
+                'page': 325,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Yathā pāvussako megho thanayanto savijjuko.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'like a rain-cloud in the wet season, thundering with lightning.',
+            },
+            {
+                'number': 185,
+                'pali': '',
+                'pali_roman': 'Tadā so paccudāvatti, saṅkuddho asayaṃvase.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then he turned back, enraged and not his own master.',
+            },
+            # ‼ CHECK [IMG_0594.PNG]: The book prints 'Tato amantayi sattha'
+            #   with a LONG i here, where page 319 verse 55 prints the same
+            #   line with a SHORT i. Both read clearly at 5x. Kept as each
+            #   page sets it rather than made to agree.
+            {
+                'number': 186,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Tañca sabbaṃ abhiññāya vavakkhitvāna cakkhumā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having directly known all of that, having surveyed it, the One with vision',
+            },
+            {
+                'number': 187,
+                'pali': '',
+                'pali_roman': 'Tato āmantayī satthā sāvake sāsane rate:',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then addressed, as Teacher, the disciples who delight in the teaching:',
+            },
+            {
+                'number': 188,
+                'pali': '',
+                'pali_roman': '“Mārasenā abhikkantā. Te vijānātha bhikkhavo”.',
+                'thai': '',
+                'paiboon': '',
+                'english': "“Māra's host has come. Know them, bhikkhus.”",
+            },
+            {
+                'number': 189,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': 'Te ca ātappa-makaruṃ sutvā buddhassa sāsanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And they made an ardent effort, having heard the Buddha's instruction.",
+            },
+            {
+                'number': 190,
+                'pali': '',
+                'pali_roman': 'Vītarāgehi pakkāmuṃ. N’esaṃ lomampi iñjayuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'From those free of lust it withdrew. Not one hair of theirs was stirred.',
+            },
+            {
+                'number': 191,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': '',
+                'pali_roman': '“Sabbe vijitasaṅgāmā bhayātītā yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': '“All of them victors in the battle, gone beyond fear, of renown,',
+            },
+            {
+                'number': 192,
+                'pali': '',
+                'pali_roman': 'Modanti saha bhūtehi sāvakā te jane sutā”ti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they rejoice together with the beings — those disciples of yours are famed among people.”',
             },
         ],
     },

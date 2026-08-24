@@ -1,0 +1,313 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 320,
+    "file": "IMG_0589.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "mahasamayasutta-roman",
+    "verses": "64-87",
+    "starts_here": false,
+    "note": "TWO COLUMNS end to end, gutter measured as a clean corridor at x 972-1188 with no ink in it over the whole text height — a wider measure than page 319's x 1080 edge, which is why each sheet is profiled rather than one measurement carried forward. Twenty-four rows in EIGHT groups, and the grouping was measured too: real breaks on this sheet run 77-113px between rows where rows inside a group sit 12-51px apart. The sheet runs out mid-list and the sutta carries on to page 321."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-four, verses 64 to 87. Eight groups, EVERY one declaring para_layout 'lines' because the chant's own layout is 'prose'. The group at verses 73-77 is FIVE rows and that is what the sheet prints — see the checks, because the bold inside it suggests otherwise. Verse 64 opens a group and is the first verse of this page, so it carries both para_start and para_layout.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text. paiboon is empty because there is no thai to romanise.",
+    "pages": "IMG_0589.PNG, page 320, read off the sheet. IMG_0587 and IMG_0588 do not exist, so the offset steps from 267 to 269 here — the number was read off the page, not calculated."
+   },
+   "verses": [
+    {
+     "number": 64,
+     "pali": "",
+     "pali_roman": "Sātāgirā tisahassā yakkhā nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Three thousand Sātāgira yakkhas, of varied hues,",
+     "page": 320,
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 65,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 66,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 67,
+     "pali": "",
+     "pali_roman": "Iccete soḷasa sahassā yakkhā nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These sixteen thousand yakkhas, of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 68,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 69,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 70,
+     "pali": "",
+     "pali_roman": "Vessāmittā pañcasatā yakkhā nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Five hundred Vessāmitta yakkhas, of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 71,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 72,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 73,
+     "pali": "",
+     "pali_roman": "Kumbhīro rājagahiko — vepull’assa nivesanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Kumbhīra of Rājagaha — his dwelling is Mount Vepulla —",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 74,
+     "pali": "",
+     "pali_roman": "Bhiyyo naṃ satasahassaṃ yakkhānaṃ payirupāsati —",
+     "thai": "",
+     "paiboon": "",
+     "english": "more than a hundred thousand yakkhas attend upon him —"
+    },
+    {
+     "number": 75,
+     "pali": "",
+     "pali_roman": "Kumbhīro rājagahiko sopāga samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Kumbhīra of Rājagaha, he too came to the wood, to the assembly."
+    },
+    {
+     "number": 76,
+     "pali": "",
+     "pali_roman": "Purimañca disaṃ rājā dhataraṭṭho pasāsati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the eastern quarter is Dhataraṭṭha,"
+    },
+    {
+     "number": 77,
+     "pali": "",
+     "pali_roman": "Gandhabbānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "lord of the gandhabbas, a great king of renown."
+    },
+    {
+     "number": 78,
+     "pali": "",
+     "pali_roman": "Puttā pi tassa bahavo indanāmā mahabbalā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 79,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 80,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 81,
+     "pali": "",
+     "pali_roman": "Dakkhiṇañca disaṃ rājā viruḷho tap pasāsati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the southern quarter is Viruḷha.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 82,
+     "pali": "",
+     "pali_roman": "Kumbhaṇḍānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the kumbhaṇḍas, a great king of renown."
+    },
+    {
+     "number": 83,
+     "pali": "",
+     "pali_roman": "Puttā pi tassa bahavo indanāmā mahabbalā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 84,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 85,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 86,
+     "pali": "",
+     "pali_roman": "Pacchimañca disaṃ rājā virūpakkho pasāsati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the western quarter is Virūpakkha.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 87,
+     "pali": "",
+     "pali_roman": "Nāgānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the nāgas, a great king of renown."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "vepulla",
+     "meaning": "Mount Vepulla, one of the five hills ringing Rajagaha. Given here as the yakkha Kumbhira's dwelling"
+    },
+    {
+     "pali": "",
+     "pali_roman": "dhataraṭṭha, viruḷha, virūpakkha",
+     "meaning": "three of the Four Great Kings, guardians of the eastern, southern and western quarters. Kuvera of the north follows on page 321"
+    },
+    {
+     "pali": "",
+     "pali_roman": "gandhabba, kumbhaṇḍa, nāga",
+     "meaning": "the classes of being each Great King rules — celestial musicians, a class of dwarfish spirits, and the serpent beings"
+    },
+    {
+     "pali": "",
+     "pali_roman": "payirupāsati",
+     "meaning": "attends upon, waits on, sits close to. Used of the hundred thousand yakkhas around Kumbhira"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 76,
+     "file": "IMG_0589.PNG",
+     "issue": "THE BOOK'S BLANK LINES AND ITS BOLD DISAGREE HERE, and the blank lines were followed. 'Purimanca disam raja' is set in BOLD, which everywhere else in this section marks a new unit — but there is NO blank line before it. Measured rather than judged: rows inside this block sit 39-51px apart while every real paragraph break on the sheet is 77-113px. So verses 73-77 are ONE five-row block as printed, and the bold is recorded here instead of being turned into a break the page does not make."
+    },
+    {
+     "verse": 81,
+     "file": "IMG_0589.PNG",
+     "issue": "THE BOOK PRINTS 'tap' WHERE THE SENSE NEEDS 'tam'. The line reads 'virulho tap pasasati' with a plain p, and page 321 prints 'kuvero tap pasasati' the same way. The same odd spelling on TWO separate sheets makes it the book's consistent reading rather than one compositor's slip, which is worth knowing before anyone corrects it. Recorded as printed, NOT corrected."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0589.PNG",
+     "issue": "TWO COLUMNS throughout, gutter measured as a clean corridor at x 972-1188 — no ink anywhere in it over the full text height. Page 319's right column began at x 1080, so this sheet's measure is genuinely different and was not assumed from the previous page."
+    },
+    {
+     "verse": 65,
+     "file": "IMG_0589.PNG",
+     "issue": "THE REFRAIN REPEATS VERBATIM SIX TIMES on this sheet — verses 65, 68, 71, 79, 84 are identical and so are 66, 69, 72, 80, 85. That is the book's own structure for a list of the assembled hosts, not duplication to be collapsed."
+    },
+    {
+     "verse": 73,
+     "file": "IMG_0589.PNG",
+     "issue": "The book sets EM DASHES inside verses 73 and 74, closing a parenthetical about Kumbhira's dwelling and his retinue. Kept as printed; they are the page's punctuation and carry the sense of the aside."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamayasutta-roman"
+  ],
+  "resume_from_page": 321,
+  "resume_from_file": "IMG_0590.PNG",
+  "resume_from": "mahasamayasutta-roman",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits — the kh in yakkha and the bh in Kumbhiro are the page's own IAST.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in vannavanto and Kumbhandanam, l with dot below in solasa and virulho, t with dot below in dhatarattho, and the elision apostrophe in vepull'assa left exactly as set. The one place the book departs from standard spelling, 'tap' at verse 81, is recorded in a check rather than quietly fixed.",
+  "page_scan": "agrees. One row for one page covering verses 64-87, which is the whole of what this page adds. Verse 64 carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "NOT APPLIED. Stage 1 only — this batch file is written and checked, but nothing has been written into chanting.py, because a second session is working in the same clone and holds that file. Two findings, and the first is the reason this page needed measuring twice. (1) THE BOLD AND THE BLANK LINES DISAGREE at verse 76: bold says new unit, spacing says same block, and the spacing was followed because it is what the page actually prints. A page read by eye alone would very likely have split it. (2) 'tap' FOR 'tam' AT VERSE 81, and again on page 321 — two sheets, so it is the book's reading and not a slip. The offset also steps here, 267 to 269, because IMG_0587 and IMG_0588 do not exist; the page number was read off the sheet rather than calculated, which is the standing rule and the reason this did not go wrong.",
+  "diacritic_exceptions": []
+ }
+}

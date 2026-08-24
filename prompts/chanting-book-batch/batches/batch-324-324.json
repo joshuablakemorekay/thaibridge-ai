@@ -1,0 +1,296 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 324,
+    "file": "IMG_0593.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "mahasamayasutta-roman",
+    "verses": "162-183",
+    "starts_here": false,
+    "note": "TWO COLUMNS end to end, gutter measured as a clean corridor at x 1062-1159. Twenty-two rows in ten groups, measured by the same 70px rule. This sheet turns from the list of hosts to Mara's attack. The sutta carries on to page 325."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-two, verses 162 to 183. Ten groups, EVERY one declaring para_layout 'lines'. The refrain appears once, at 165-167, and after verse 168 the sheet leaves the list behind.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text.",
+    "pages": "IMG_0593.PNG, page 324, read off the sheet. Offset 269."
+   },
+   "verses": [
+    {
+     "number": 162,
+     "pali": "",
+     "pali_roman": "Khemiyā tusitā yāmā kaṭṭhakā ca yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Khemiyas, Tusitas and Yāmas, and the Kaṭṭhakas of renown,",
+     "para_start": true,
+     "para_layout": "lines",
+     "page": 324
+    },
+    {
+     "number": 163,
+     "pali": "",
+     "pali_roman": "Lambitakā lāmaseṭṭhā jotināmā ca āsavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Lambitakas and Lāmaseṭṭhas, the Jotināmas and Āsavas."
+    },
+    {
+     "number": 164,
+     "pali": "",
+     "pali_roman": "Nimmāṇaratino āgū. Athāgū paranimmitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Nimmāṇaratis came. Then came the Paranimmitas."
+    },
+    {
+     "number": 165,
+     "pali": "",
+     "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These ten, tenfold hosts, all of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 166,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 167,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 168,
+     "pali": "",
+     "pali_roman": "Saṭṭhete devanikāyā sabbe nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These sixty orders of devas, all of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 169,
+     "pali": "",
+     "pali_roman": "Nāmanvayena āgañchuṃ ye caññe sadisā saha:",
+     "thai": "",
+     "paiboon": "",
+     "english": "came each according to his name, and others like them with them:"
+    },
+    {
+     "number": 170,
+     "pali": "",
+     "pali_roman": "’Pavutthajātimakkhīlaṃ oghatiṇṇa-manāsavaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "'One whose birth is done with, who has no barrenness, who has crossed the flood, without taint,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 171,
+     "pali": "",
+     "pali_roman": "Dakkhemoghataraṃ nāgaṃ candaṃ va asitātitaṃ.’",
+     "thai": "",
+     "paiboon": "",
+     "english": "let us see the nāga who has crossed the flood, like the moon come clear of darkness.'"
+    },
+    {
+     "number": 172,
+     "pali": "",
+     "pali_roman": "Subrahmā paramatto ca puttā iddhimato saha,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Subrahmā and Paramatta, sons together with the mighty one,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 173,
+     "pali": "",
+     "pali_roman": "Sanaṅkumāro tisso ca sopāga samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Sanaṅkumāra and Tissa — he too came to the wood, to the assembly."
+    },
+    {
+     "number": 174,
+     "pali": "",
+     "pali_roman": "Sahassabrahmalokānaṃ mahābrahmābhitiṭṭhati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Over a thousand Brahma worlds the Great Brahmā presides.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 175,
+     "pali": "",
+     "pali_roman": "Upapanno jutimanto bhismākāyo yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Reborn there, radiant, of awesome form, he is of renown."
+    },
+    {
+     "number": 176,
+     "pali": "",
+     "pali_roman": "Dasettha issarā āgū paccekavasavattino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Ten lords came here, each wielding his own mastery,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 177,
+     "pali": "",
+     "pali_roman": "Tesañca majjhato āgā hārito parivārito.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and in their midst came Hārita, surrounded by his retinue."
+    },
+    {
+     "number": 178,
+     "pali": "",
+     "pali_roman": "Te ca sabbe abhikkante sinde deve sabrahmake,",
+     "thai": "",
+     "paiboon": "",
+     "english": "And when all these had come, the devas with Inda and with Brahmā,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 179,
+     "pali": "",
+     "pali_roman": "Mārasenā abhikkāmi — passa kaṇhassa mandiyaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Māra's host came on — see the folly of the Dark One."
+    },
+    {
+     "number": 180,
+     "pali": "",
+     "pali_roman": "’Etha. Gaṇhatha. Bandhatha. Rāgena bandhamatthu vo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "'Come. Seize them. Bind them. Let them be bound by lust for you.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 181,
+     "pali": "",
+     "pali_roman": "Samantā parivāretha. Mā vo muñcittha koci naṃ.’",
+     "thai": "",
+     "paiboon": "",
+     "english": "Surround them on every side. Let not one of them escape you.'"
+    },
+    {
+     "number": 182,
+     "pali": "",
+     "pali_roman": "Iti tattha mahāseno kaṇhasenaṃ apesayi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "So there the great commander sent forth his dark army,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 183,
+     "pali": "",
+     "pali_roman": "Pāṇinā tala-māhacca saraṃ katvāna bheravaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "striking the ground with his palm, making a terrifying sound,"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "saṭṭhete devanikāyā",
+     "meaning": "these sixty orders of devas — the line that closes the whole roll-call begun on page 319"
+    },
+    {
+     "pali": "",
+     "pali_roman": "sanaṅkumāra",
+     "meaning": "Sanankumara, the ever-youthful Brahma, named among the Brahma-world visitors"
+    },
+    {
+     "pali": "",
+     "pali_roman": "kaṇha",
+     "meaning": "the Dark One, a name for Mara. His army is the kanhasena, the dark host"
+    },
+    {
+     "pali": "",
+     "pali_roman": "mandiya",
+     "meaning": "folly, dullness. 'See the folly of the Dark One' — the narrator's aside as Mara attacks"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 168,
+     "file": "IMG_0593.PNG",
+     "issue": "'Satthete devanikaya' is set in BOLD, marking the line that closes the roll-call of the hosts. Unlike page 320's bold, this one DOES sit at a measured paragraph break, so bold and spacing agree here and the group boundary is not in doubt."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0593.PNG",
+     "issue": "TWO COLUMNS throughout, gutter measured as a clean corridor at x 1062-1159 — the rightmost measure in the section, against x 880-978 on the facing page 323. Two adjacent sheets, nearly 200px apart in where the second column starts."
+    },
+    {
+     "verse": 179,
+     "file": "IMG_0593.PNG",
+     "issue": "The book sets an EM DASH mid-row in 'Marasena abhikkami — passa kanhassa mandiyam', where the dash carries the turn from narration to the narrator's aside. Kept as printed."
+    },
+    {
+     "verse": 180,
+     "file": "IMG_0593.PNG",
+     "issue": "FOUR IMPERATIVES SET AS SEPARATE SENTENCES in one row: 'Etha. Ganhatha. Bandhatha.' with a fourth clause after the gutter. Mara's order is punctuated as staccato commands and is kept that way rather than run together."
+    }
+   ],
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamayasutta-roman"
+  ],
+  "resume_from_page": 325,
+  "resume_from_file": "IMG_0594.PNG",
+  "resume_from": "mahasamayasutta-roman",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter, with every retroflex dot, macron and n-tilde read at 5x and the elision apostrophes left exactly as set.",
+  "page_scan": "agrees. One row for page 324 covering the whole entry. The first verse of the page carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "NOT APPLIED. Stage 1 only — nothing has been written into chanting.py, because a second session holds that file. Two findings. (1) THE GUTTER IS x 1062-1159 HERE AND x 880-978 ON THE FACING PAGE 323 — nearly 200px apart on two adjacent sheets, which is the clearest evidence yet that a gutter cannot be carried from one page to the next. (2) THE BOLD AND THE SPACING AGREE at verse 168, unlike page 320 where they disagreed — worth recording, because it shows page 320's conflict was a real exception and not the section's norm.",
+  "diacritic_exceptions": []
+ }
+}

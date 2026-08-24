@@ -1,0 +1,333 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamayasutta-roman"
+  ],
+  "pages": [
+   {
+    "page": 323,
+    "file": "IMG_0592.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "mahasamayasutta-roman",
+    "verses": "135-161",
+    "starts_here": false,
+    "note": "TWO COLUMNS end to end, gutter measured as a clean corridor at x 880-978. Twenty-seven rows in eleven groups, alternating a named pair with the three-row refrain that closes each set of hosts. The sutta carries on to page 324."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamayasutta-roman",
+   "continuation_of": "mahasamayasutta-roman",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-seven, verses 135 to 161. Eleven groups, EVERY one declaring para_layout 'lines'. Four of them are the identical three-row refrain, which is the book's own structure for a list and is not collapsed.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty throughout and pali_roman carries the printed text.",
+    "pages": "IMG_0592.PNG, page 323, read off the sheet. Offset 269."
+   },
+   "verses": [
+    {
+     "number": 135,
+     "pali": "",
+     "pali_roman": "Suriyassūpanisā devā suriya-māgū purakkhitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The devas attending on the sun came, with the sun before them.",
+     "para_start": true,
+     "para_layout": "lines",
+     "page": 323
+    },
+    {
+     "number": 136,
+     "pali": "",
+     "pali_roman": "Nakkhattāni purakkhitvā āgū mandabalāhakā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Putting the constellations before them, the Mandabalāhakas came."
+    },
+    {
+     "number": 137,
+     "pali": "",
+     "pali_roman": "Vasūnaṃ vāsavo seṭṭho sakkopāga purindado.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Vāsava, chief of the Vasus, Sakka the Purindada, came too."
+    },
+    {
+     "number": 138,
+     "pali": "",
+     "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These ten, tenfold hosts, all of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 139,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 140,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 141,
+     "pali": "",
+     "pali_roman": "Athāgū sahabhū devā jala-maggisikhāriva,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then came the Sahabhū devas, blazing like the crest of a fire,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 142,
+     "pali": "",
+     "pali_roman": "Ariṭṭhakā ca rojā ca ummāpupphanibhāsino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Ariṭṭhakas and the Rojas, shining like flax flowers."
+    },
+    {
+     "number": 143,
+     "pali": "",
+     "pali_roman": "Varuṇā sahadhammā ca accutā ca anejakā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Varuṇas and the Sahadhammas, the Accutas and the Anejakas.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 144,
+     "pali": "",
+     "pali_roman": "Sūleyya-rucirā āgū. Āgū vāsavanesino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Sūleyyas and Rucirās came. The Vāsavanesis came."
+    },
+    {
+     "number": 145,
+     "pali": "",
+     "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These ten, tenfold hosts, all of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 146,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 147,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 148,
+     "pali": "",
+     "pali_roman": "Samānā mahāsamānā mānusā mānusuttamā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Samānas and Mahāsamānas, the Mānusas and Mānusuttamas.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 149,
+     "pali": "",
+     "pali_roman": "Khiḍḍāpadūsikā āgū. Āgū manopadūsikā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Khiḍḍāpadūsikas came. The Manopadūsikas came."
+    },
+    {
+     "number": 150,
+     "pali": "",
+     "pali_roman": "Athāgū harayo devā ye ca lohitavāsino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then came the Harī devas, and those clothed in red.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 151,
+     "pali": "",
+     "pali_roman": "Pāragā mahāpāragā āgū devā yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Pāragas and Mahāpāragas came, devas of renown."
+    },
+    {
+     "number": 152,
+     "pali": "",
+     "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These ten, tenfold hosts, all of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 153,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 154,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 155,
+     "pali": "",
+     "pali_roman": "Sukkā karumhā aruṇā āgū veghanasā saha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Sukkas, Karumhas and Aruṇas came, with the Veghanasas.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 156,
+     "pali": "",
+     "pali_roman": "Odātagayhā pāmokkhā āgū devā vicakkhaṇā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Odātagayhas and the foremost ones came, discerning devas."
+    },
+    {
+     "number": 157,
+     "pali": "",
+     "pali_roman": "Sadāmattā hāragajā missakā ca yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Sadāmattas, Hāragajas and Missakas, of renown.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 158,
+     "pali": "",
+     "pali_roman": "Thanayaṃ āgā pajunno, yo disā abhivassati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Pajjunna came thundering, who rains upon the quarters."
+    },
+    {
+     "number": 159,
+     "pali": "",
+     "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino,",
+     "thai": "",
+     "paiboon": "",
+     "english": "These ten, tenfold hosts, all of varied hues,",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 160,
+     "pali": "",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 161,
+     "pali": "",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "nakkhatta",
+     "meaning": "the lunar mansions or constellations, put before the cloud-devas in the procession"
+    },
+    {
+     "pali": "",
+     "pali_roman": "khiḍḍāpadūsika, manopadūsika",
+     "meaning": "devas ruined by play and devas ruined by mind — two classes whose names describe how they fall from their state"
+    },
+    {
+     "pali": "",
+     "pali_roman": "pajjunna",
+     "meaning": "the rain-god, who comes thundering and rains upon the quarters"
+    },
+    {
+     "pali": "",
+     "pali_roman": "ummāpuppha",
+     "meaning": "the flax flower, pale blue. The Aritthakas and Rojas are said to shine like it"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0592.PNG",
+     "issue": "TWO COLUMNS throughout, gutter measured as a clean corridor at x 880-978 — the narrowest and leftmost measure in the section so far, against x 1080 on 319, x 972-1188 on 320 and x 963-1045 on 321. Four sheets, four different measures."
+    },
+    {
+     "verse": 138,
+     "file": "IMG_0592.PNG",
+     "issue": "THE THREE-ROW REFRAIN REPEATS FOUR TIMES ON THIS ONE SHEET — verses 138-140, 144-146, 152-154 and 159-161 are identical to each other and to rows on pages 320, 321 and 322. That is the book's own structure and must not be collapsed; check_render walks rather than counts so that repeats like this pass."
+    },
+    {
+     "verse": 143,
+     "file": "IMG_0592.PNG",
+     "issue": "TWO SENTENCES IN ONE PRINTED ROW at verses 143 and 148: 'Suleyya-rucira agu. Agu vasavanesino.' and 'Khiddapadusika agu. Agu manopadusika.' The full stop falls mid-row, at the gutter. Kept as one verse because the ROW is the unit on a two-column sheet, which is how every such page in this book has been entered."
+    }
+   ],
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamayasutta-roman"
+  ],
+  "resume_from_page": 324,
+  "resume_from_file": "IMG_0593.PNG",
+  "resume_from": "mahasamayasutta-roman",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter, with every retroflex dot, macron and n-tilde read at 5x and the elision apostrophes left exactly as set.",
+  "page_scan": "agrees. One row for page 323 covering the whole entry. The first verse of the page carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "NOT APPLIED. Stage 1 only — nothing has been written into chanting.py, because a second session holds that file. Two findings. (1) THE GUTTER IS A FOURTH DISTINCT MEASURE, x 880-978, which is now four sheets and four different gutters — the case for profiling every sheet is settled. (2) A FULL STOP FALLS AT THE GUTTER on two rows, so a row holds two complete sentences; the row is still the unit, as on every two-column page in this book.",
+  "diacritic_exceptions": []
+ }
+}
