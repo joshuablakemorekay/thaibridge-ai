@@ -30782,6 +30782,271 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0577.PNG]: ⚠ THE BOOK PRINTS A WHOLE PARAGRAPH OF
+        #   ENGLISH HERE, and it is not a gloss. Three justified lines of
+        #   instruction: 'To make more holy before chanting
+        #   phragathachinbanchorn one should repeat namotassa 3 times and then
+        #   pay respect to the virtue of Chaoprakhun Somdech by saying:'. This
+        #   is the SECOND English in the roman section after page 312's
+        #   bracketed title gloss, and the first that is a full paragraph. It
+        #   is entered as a rubric block carrying english_printed, a new flag
+        #   that tells the book's own English apart from the working
+        #   translations every other block holds — without it, book mode hides
+        #   it and the sheet loses text it actually prints.
+        # ‼ CHECK [IMG_0577.PNG]: THE TWO BLOCK KINDS ON THIS PAGE USE
+        #   DIFFERENT FIELDS, on purpose. The two rubrics carry their text in
+        #   `english` because what the book prints there IS English. The
+        #   heading carries 'gāthājinabañjara' in `thai` because what the book
+        #   prints there is Pali in roman, and `thai` is the block schema's
+        #   slot for the printed text whatever its script. Worth stating,
+        #   because a `thai` field holding roman looks like a mistake and is
+        #   not.
+        'id': 'phragathachinbanchorn',
+        'title_thai': '',
+        'title_pali': 'PHRAGATHACHINBANCHORN',
+        'title_roman': '',
+        'title_english': "The Verses of the Victor's Cage",
+        'page_start': 310,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0577.PNG]: TWO COLUMNS, gutter measured at x
+            #   961-1125 — the right column's left edge sits at x 1125-1142 on
+            #   both rows and the widest left-column line ends at x 961.
+            {
+                'number': 1,
+                'page': 310,
+                'pali': '',
+                'pali_roman': 'Puttakāmo labhe puttaṃ dhanakāmo labhe dhanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'One who wants a son gains a son; one who wants wealth gains wealth;',
+            },
+            {
+                'number': 2,
+                'pali': '',
+                'pali_roman': 'atthikāye kāyañāya devānaṃ piyataṃ suttavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in the body of what is sought, by knowledge of the body, the learned one is dear to the devas.',
+            },
+            # ‼ CHECK [IMG_0577.PNG]: Verse 3 is PROSE where verses 1-2 are a
+            #   two-column gatha, so it declares para_layout 'prose' against
+            #   the chant's own 'lines'. Measured: verses 1-2 carry a gutter
+            #   at x 811-1142 and verse 3's line runs x 454-1780 with no
+            #   internal gap.
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'itipisobhagavā yamarājāno vessuvaṇṇo maraṇaṃsukhaṃ arahaṃsugato namobuddhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One; Yama the king; Vessuvaṇṇa; the ease of death; the worthy one, the well-gone. Homage to the Buddha.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 16; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0577.PNG]: ⚠ ENTERED AS A SEPARATE CHANT FROM THE ONE
+        #   ABOVE, AND THAT IS A JUDGEMENT. The book sets 'gāthājinabañjara'
+        #   as a BOLD LEFT-ALIGNED heading at x 330 — smaller and less
+        #   prominent than the centred capitalised title above — and the
+        #   numbered verses follow it. Splitting here lets the heading render
+        #   in its right place, between the preliminary and the numbered
+        #   verses, which the data model cannot do for a heading in the middle
+        #   of one chant. If the book means them as one chant, this should be
+        #   rejoined and the heading handled another way. Same class of open
+        #   question as VIPASSIT on page 316.
+        'id': 'gathajinabanjara',
+        'title_thai': '',
+        'title_pali': 'gāthājinabañjara',
+        'title_roman': '',
+        'title_english': "The Verses of the Victor's Cage",
+        'page_start': 310,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0577.PNG]: TWO COLUMNS across all sixteen rows,
+            #   gutter measured at x 961-1125: the right column's left edge
+            #   holds between x 1125 and x 1136 on every row, and the longest
+            #   left-column line ends at x 961. One gutter for the whole
+            #   block, unlike pages 317 and 318 which needed one per block.
+            {
+                'number': 1,
+                'page': 310,
+                'printed_number': 1,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'jayāsanāgatā buddhā jetavā māraṃ savāhanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddhas, having come to the seat of victory, having conquered Māra with his mount,',
+            },
+            {
+                'number': 2,
+                'pali': '',
+                'pali_roman': 'catusaccāsabhaṃ rasaṃ ye pivimsu narāsabhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those chief among men who drank the excellent nectar of the four truths.',
+            },
+            {
+                'number': 3,
+                'printed_number': 2,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'taṇhaṅkarādayo buddhā aṭṭhavīsati nāyakā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The twenty-eight Buddhas, leaders beginning with Taṇhaṅkara,',
+            },
+            {
+                'number': 4,
+                'pali': '',
+                'pali_roman': 'sabbe patiṭṭhitā mayhaṃ matthake te munissarā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all those lords of sages are established upon my head.',
+            },
+            {
+                'number': 5,
+                'printed_number': 3,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'sīse patiṭṭhito mayhaṃ buddho dhammo davilocane',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha is established on my head, the Dhamma in my two eyes,',
+            },
+            {
+                'number': 6,
+                'pali': '',
+                'pali_roman': 'saṅgho patiṭṭhito mayhaṃ ure sabbaguṇākaro.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Saṅgha, the mine of all virtues, is established in my breast.',
+            },
+            {
+                'number': 7,
+                'printed_number': 4,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'hadaye me anuruddho sārīputto ca dakkhiṇe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Anuruddha is in my heart, Sāriputta on my right,',
+            },
+            {
+                'number': 8,
+                'pali': '',
+                'pali_roman': 'koṇḍañño piṭṭhibhāgasmiṃ moggallāno cavāmake.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Koṇḍañña at my back, and Moggallāna on my left.',
+            },
+            {
+                'number': 9,
+                'printed_number': 5,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'dakkhiṇe savane mayhaṃ āsuṃ ānandarāhulo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In my right ear are Ānanda and Rāhula,',
+            },
+            {
+                'number': 10,
+                'pali': '',
+                'pali_roman': 'kassapo ca mahānāmo ubhāsuṃ vāmasotake.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and Kassapa and Mahānāma are both in my left ear.',
+            },
+            {
+                'number': 11,
+                'printed_number': 6,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'kesanto piṭṭhibhāgasmiṃ suriyo va pabhaṅkaro',
+                'thai': '',
+                'paiboon': '',
+                'english': 'At the end of my hair behind, like the radiant sun,',
+            },
+            {
+                'number': 12,
+                'pali': '',
+                'pali_roman': 'nisinno sirisampanno sobhito munipuṅgavo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'sits Sobhita, endowed with splendour, chief of sages.',
+            },
+            {
+                'number': 13,
+                'printed_number': 7,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'kumārakassapo thero mahesī cittavādako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The elder Kumārakassapa, great seeker, eloquent speaker,',
+            },
+            {
+                'number': 14,
+                'pali': '',
+                'pali_roman': 'so mayhaṃ vadaneniccaṃ patiṭṭhāsi guṇākaro.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that mine of virtues is ever established in my mouth.',
+            },
+            {
+                'number': 15,
+                'printed_number': 8,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'puṇṇo aṅgulimālo ca upālī nandasīvalī',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Puṇṇa and Aṅgulimāla, Upāli, Nanda and Sīvalī —',
+            },
+            # ‼ CHECK [IMG_0577.PNG]: NO FULL STOP at the end of verse 16 —
+            #   item 8 runs off the foot of the sheet ending 'nalāṭe tilakā
+            #   mama' with clear paper after it, where every other even-
+            #   numbered row on the page ends in one. The sense carries into
+            #   item 9 on page 311, so the missing stop is the book's own and
+            #   is kept.
+            {
+                'number': 16,
+                'pali': '',
+                'pali_roman': 'therā pañca ime jātā nalāṭe tilakā mama',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these five elders are become the auspicious marks upon my forehead',
+            },
+        ],
+    },
 ]
 
 
@@ -32880,6 +33145,39 @@ PAGE_BLOCKS = [
             },
         ],
     },
+    # ── Page 310 ───────────────────────────────────────────────────
+    # Written from batch-310-310.json.
+    {
+        'page': 310,
+        'blocks': [
+            {
+                'type': 'rubric',
+                'thai': '',
+                'english': 'Somdechphrabudhachan [To Brahmaraṃsī]',
+                'english_printed': True,
+            },
+            {
+                'type': 'rubric',
+                'thai': '',
+                'english': 'To make more holy before chanting phragathachinbanchorn one should repeat namotassa 3 times and then pay respect to the virtue of Chaoprakhun Somdech by saying:',
+                'english_printed': True,
+            },
+        ],
+    },
+    # ── Page 310 ───────────────────────────────────────────────────
+    # Written from batch-310-310.json.
+    {
+        'page': 310,
+        'after': 'phragathachinbanchorn',
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'gāthājinabañjara',
+                'english': "The Verses of the Victor's Cage",
+                'english_unverified': True,
+            },
+        ],
+    },
 ]
 
 
@@ -34797,11 +35095,26 @@ def check_page_blocks(chants=None, page_blocks=None):
                         f"{where}: '{named}' is not printed on that page")
                 continue
 
-            if not block.get('thai'):
+            # `thai` holds the printed text for every block in the Thai-script
+            # pages. The roman section at the back has blocks whose printed
+            # text is ENGLISH — the instruction paragraph on page 310 — and
+            # those carry `english_printed` instead. They render their English
+            # in book mode rather than being hidden as a translation, so they
+            # are not blank; but only where that flag says the words are the
+            # book's own.
+            if not (block.get('thai')
+                    or (block.get('english_printed') and block.get('english'))):
                 problems.append(f'{where}: no `thai`, so it renders as nothing')
             if block.get('type') == 'item' and block.get('number') is None:
                 problems.append(f'{where}: a numbered item with no number')
-            if block.get('english') and not block.get('english_unverified'):
+            # The rule is that English shown to a reader must say it is ours,
+            # because it always was ours. `english_printed` is the exception
+            # and the reason for it: those words are the BOOK'S — page 310's
+            # instruction paragraph is printed in English on the sheet — so
+            # marking them "written for this app" would be a false claim about
+            # the source, which is the opposite of what the rule is for.
+            if (block.get('english') and not block.get('english_unverified')
+                    and not block.get('english_printed')):
                 problems.append(
                     f'{where}: English that does not say it was written for '
                     f'this app'

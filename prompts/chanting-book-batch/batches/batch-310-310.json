@@ -1,0 +1,360 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "phragathachinbanchorn",
+   "gathajinabanjara"
+  ],
+  "pages": [
+   {
+    "page": 310,
+    "file": "IMG_0577.PNG",
+    "script": "roman",
+    "columns": "1 then 2",
+    "chant": "phragathachinbanchorn",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The head of the sheet: a centred title in capitals, a centred attribution beneath it, then THREE LINES OF ENGLISH PROSE that the book itself prints as an instruction. Then a TWO-COLUMN gatha of two rows, gutter measured at x 961-1125, and a prose line closing the preliminary. This chant starts and ends on this page.",
+    "blocks": [
+     {
+      "type": "rubric",
+      "thai": "",
+      "english": "Somdechphrabudhachan [To Brahmaraṃsī]",
+      "english_printed": true
+     },
+     {
+      "type": "rubric",
+      "thai": "",
+      "english": "To make more holy before chanting phragathachinbanchorn one should repeat namotassa 3 times and then pay respect to the virtue of Chaoprakhun Somdech by saying:",
+      "english_printed": true
+     }
+    ]
+   },
+   {
+    "page": 310,
+    "file": "IMG_0577.PNG",
+    "script": "roman",
+    "columns": 2,
+    "chant": "gathajinabanjara",
+    "verses": "1-16",
+    "starts_here": true,
+    "note": "The lower two thirds: a bold left-aligned heading at x 330, then SIXTEEN TWO-COLUMN rows carrying the book's numbered items 1 to 8, two rows to an item, gutter measured at x 961-1125 across all sixteen. The numerals hang left at x 390 against a text indent of x 455. The chant runs off the foot and carries on to page 311.",
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "gāthājinabañjara",
+      "english": "The Verses of the Victor's Cage",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "phragathachinbanchorn",
+   "working_notes": {
+    "invitation": "absent as a field. What would be an invitation is printed here as an ENGLISH instruction, which is a page block rather than a chant field because the book sets it as prose above the title's verse.",
+    "units": "Three. Verses 1-2 are a two-column gatha read across and inherit the chant's 'lines' layout; verse 3 is a single prose line and declares para_layout 'prose'.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text.",
+    "pages": "IMG_0577.PNG, page 310, read off the sheet. Offset 267."
+   },
+   "title_thai": "",
+   "title_pali": "PHRAGATHACHINBANCHORN",
+   "title_roman": "",
+   "title_english": "The Verses of the Victor's Cage",
+   "page_start": 310,
+   "layout": "lines",
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "Puttakāmo labhe puttaṃ dhanakāmo labhe dhanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "One who wants a son gains a son; one who wants wealth gains wealth;",
+     "page": 310
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "atthikāye kāyañāya devānaṃ piyataṃ suttavā",
+     "thai": "",
+     "paiboon": "",
+     "english": "in the body of what is sought, by knowledge of the body, the learned one is dear to the devas."
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "itipisobhagavā yamarājāno vessuvaṇṇo maraṇaṃsukhaṃ arahaṃsugato namobuddhāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One; Yama the king; Vessuvaṇṇa; the ease of death; the worthy one, the well-gone. Homage to the Buddha.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "phragathachinbanchorn",
+     "meaning": "พระคาถาชินบัญชร, the Jinapañjara Gāthā — the Victor's Cage. The title is romanised THAI, as on page 312, not Pali"
+    },
+    {
+     "pali": "",
+     "pali_roman": "somdech phra budhachan (to brahmaraṃsī)",
+     "meaning": "Somdet Phra Phutthachan (To Brahmarangsi), the 19th-century abbot of Wat Rakhang to whom this composition is attributed. The book names him under the title"
+    },
+    {
+     "pali": "",
+     "pali_roman": "namotassa",
+     "meaning": "the namo tassa formula, which the instruction says to repeat three times before beginning"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0577.PNG",
+     "issue": "⚠ THE BOOK PRINTS A WHOLE PARAGRAPH OF ENGLISH HERE, and it is not a gloss. Three justified lines of instruction: 'To make more holy before chanting phragathachinbanchorn one should repeat namotassa 3 times and then pay respect to the virtue of Chaoprakhun Somdech by saying:'. This is the SECOND English in the roman section after page 312's bracketed title gloss, and the first that is a full paragraph. It is entered as a rubric block carrying english_printed, a new flag that tells the book's own English apart from the working translations every other block holds — without it, book mode hides it and the sheet loses text it actually prints."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0577.PNG",
+     "issue": "THE TWO BLOCK KINDS ON THIS PAGE USE DIFFERENT FIELDS, on purpose. The two rubrics carry their text in `english` because what the book prints there IS English. The heading carries 'gāthājinabañjara' in `thai` because what the book prints there is Pali in roman, and `thai` is the block schema's slot for the printed text whatever its script. Worth stating, because a `thai` field holding roman looks like a mistake and is not."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0577.PNG",
+     "issue": "Verse 3 is PROSE where verses 1-2 are a two-column gatha, so it declares para_layout 'prose' against the chant's own 'lines'. Measured: verses 1-2 carry a gutter at x 811-1142 and verse 3's line runs x 454-1780 with no internal gap."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0577.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 961-1125 — the right column's left edge sits at x 1125-1142 on both rows and the widest left-column line ends at x 961."
+    }
+   ]
+  },
+  {
+   "id": "gathajinabanjara",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Sixteen, the book's numbered items 1 to 8 at two rows each. The first row of each item carries para_start and the book's own printed_number; the second row carries neither. The chant's layout is 'lines'.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text.",
+    "pages": "IMG_0577.PNG, page 310, read off the sheet. Offset 267."
+   },
+   "title_thai": "",
+   "title_pali": "gāthājinabañjara",
+   "title_roman": "",
+   "title_english": "The Verses of the Victor's Cage",
+   "page_start": 310,
+   "layout": "lines",
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "jayāsanāgatā buddhā jetavā māraṃ savāhanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Buddhas, having come to the seat of victory, having conquered Māra with his mount,",
+     "para_start": true,
+     "printed_number": 1,
+     "page": 310
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "catusaccāsabhaṃ rasaṃ ye pivimsu narāsabhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "those chief among men who drank the excellent nectar of the four truths."
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "taṇhaṅkarādayo buddhā aṭṭhavīsati nāyakā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The twenty-eight Buddhas, leaders beginning with Taṇhaṅkara,",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "sabbe patiṭṭhitā mayhaṃ matthake te munissarā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "all those lords of sages are established upon my head."
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "sīse patiṭṭhito mayhaṃ buddho dhammo davilocane",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Buddha is established on my head, the Dhamma in my two eyes,",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "saṅgho patiṭṭhito mayhaṃ ure sabbaguṇākaro.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Saṅgha, the mine of all virtues, is established in my breast."
+    },
+    {
+     "number": 7,
+     "pali": "",
+     "pali_roman": "hadaye me anuruddho sārīputto ca dakkhiṇe",
+     "thai": "",
+     "paiboon": "",
+     "english": "Anuruddha is in my heart, Sāriputta on my right,",
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 8,
+     "pali": "",
+     "pali_roman": "koṇḍañño piṭṭhibhāgasmiṃ moggallāno cavāmake.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Koṇḍañña at my back, and Moggallāna on my left."
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "dakkhiṇe savane mayhaṃ āsuṃ ānandarāhulo",
+     "thai": "",
+     "paiboon": "",
+     "english": "In my right ear are Ānanda and Rāhula,",
+     "para_start": true,
+     "printed_number": 5
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "kassapo ca mahānāmo ubhāsuṃ vāmasotake.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and Kassapa and Mahānāma are both in my left ear."
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "kesanto piṭṭhibhāgasmiṃ suriyo va pabhaṅkaro",
+     "thai": "",
+     "paiboon": "",
+     "english": "At the end of my hair behind, like the radiant sun,",
+     "para_start": true,
+     "printed_number": 6
+    },
+    {
+     "number": 12,
+     "pali": "",
+     "pali_roman": "nisinno sirisampanno sobhito munipuṅgavo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "sits Sobhita, endowed with splendour, chief of sages."
+    },
+    {
+     "number": 13,
+     "pali": "",
+     "pali_roman": "kumārakassapo thero mahesī cittavādako",
+     "thai": "",
+     "paiboon": "",
+     "english": "The elder Kumārakassapa, great seeker, eloquent speaker,",
+     "para_start": true,
+     "printed_number": 7
+    },
+    {
+     "number": 14,
+     "pali": "",
+     "pali_roman": "so mayhaṃ vadaneniccaṃ patiṭṭhāsi guṇākaro.",
+     "thai": "",
+     "paiboon": "",
+     "english": "that mine of virtues is ever established in my mouth."
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "puṇṇo aṅgulimālo ca upālī nandasīvalī",
+     "thai": "",
+     "paiboon": "",
+     "english": "Puṇṇa and Aṅgulimāla, Upāli, Nanda and Sīvalī —",
+     "para_start": true,
+     "printed_number": 8
+    },
+    {
+     "number": 16,
+     "pali": "",
+     "pali_roman": "therā pañca ime jātā nalāṭe tilakā mama",
+     "thai": "",
+     "paiboon": "",
+     "english": "these five elders are become the auspicious marks upon my forehead"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "jinapañjara",
+     "meaning": "the Victor's Cage — the protective enclosure the verses build by seating a Buddha or great disciple at each part of the body"
+    },
+    {
+     "pali": "",
+     "pali_roman": "taṇhaṅkara",
+     "meaning": "the first of the twenty-eight Buddhas named in verse 2, reaching back before Dīpaṅkara"
+    },
+    {
+     "pali": "",
+     "pali_roman": "narāsabha / munissara / munipuṅgava",
+     "meaning": "chief among men, lord of sages, bull of sages — three epithets the verses use of the Buddhas and great elders"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0577.PNG",
+     "issue": "⚠ ENTERED AS A SEPARATE CHANT FROM THE ONE ABOVE, AND THAT IS A JUDGEMENT. The book sets 'gāthājinabañjara' as a BOLD LEFT-ALIGNED heading at x 330 — smaller and less prominent than the centred capitalised title above — and the numbered verses follow it. Splitting here lets the heading render in its right place, between the preliminary and the numbered verses, which the data model cannot do for a heading in the middle of one chant. If the book means them as one chant, this should be rejoined and the heading handled another way. Same class of open question as VIPASSIT on page 316."
+    },
+    {
+     "verse": 16,
+     "file": "IMG_0577.PNG",
+     "issue": "NO FULL STOP at the end of verse 16 — item 8 runs off the foot of the sheet ending 'nalāṭe tilakā mama' with clear paper after it, where every other even-numbered row on the page ends in one. The sense carries into item 9 on page 311, so the missing stop is the book's own and is kept."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0577.PNG",
+     "issue": "TWO COLUMNS across all sixteen rows, gutter measured at x 961-1125: the right column's left edge holds between x 1125 and x 1136 on every row, and the longest left-column line ends at x 961. One gutter for the whole block, unlike pages 317 and 318 which needed one per block."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "phragathachinbanchorn"
+  ],
+  "not_started": [],
+  "continues": [
+   "gathajinabanjara"
+  ],
+  "resume_from_page": 311,
+  "resume_from_file": "IMG_0578.PNG",
+  "resume_from": "gathajinabanjara",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. The romanised title is the BOOK'S own roman spelling of a Thai name, not Paiboon+.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in puṇṇo and guṇākaro, t with dot below in patiṭṭhito and nalāṭe, n with tilde in koṇḍañño and saṅgho's neighbours. One block carries roman text in its `thai` field, which is the schema's slot for printed text and is recorded in a check.",
+  "page_scan": "agrees. TWO rows for one page, one per chant, in the order they appear down the sheet — verses 1-3 for the first and 1-16 for the second, each matching its entry exactly. The title-area blocks are declared on the FIRST row so they anchor above everything; the gāthājinabañjara heading is declared on the SECOND row so it anchors after the chant above it, which is where the book prints it. No verse is orphaned and none is claimed twice.",
+  "notes": "⚠ THE BOOK PRINTS A FULL PARAGRAPH OF ENGLISH ON THIS SHEET. That is the second English found in the roman section and the first that is more than a gloss, and it needed a new `english_printed` flag plus template, apply_batch and check_render changes before it could render in book mode at all — the same class of fault as book mode hiding pali_roman. Two further notes. (1) THE PAGE IS SPLIT INTO TWO CHANTS ON A JUDGEMENT, so that the bold mid-page heading can render where the book prints it; flagged like VIPASSIT for settling with the book. (2) THE GUTTER IS ONE MEASURE FOR THE WHOLE SIXTEEN-ROW BLOCK, x 961-1125, unlike the Mahāsamaya sheets which needed one per block.",
+  "diacritic_exceptions": []
+ }
+}
