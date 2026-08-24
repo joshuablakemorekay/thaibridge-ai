@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-94 went in.
+95 went in.
 
 ## Read first, in this order
 
@@ -12,17 +12,19 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–94 are in and unbroken**, plus 217–221. **126 chants, 1,784 verses
+- **Pages 1–95 are in and unbroken**, plus 217–221. **126 chants, 1,811 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - ⚠️ **A SECOND SESSION IS WORKING IN THIS SAME CLONE**, on the ROMAN-SCRIPT
   pages (317, 318). It has `chanting.py`, `scripts/check_render.py`,
   `templates/chanting_page.html` and `tests/test_chanting_pages.py` open. Page
-  94's data is applied and verified but its `chanting.py` change is NOT
-  committed, because one file cannot be split between two sessions' commits —
-  see below.
+  94's and 95's data is applied and verified but their `chanting.py` changes are
+  NOT committed, because one file cannot be split between two sessions' commits
+  — see below. **The test suite currently shows failures that are theirs, not
+  ours**: `mahasamayasutta-roman` verses whose batch files exist but are not yet
+  applied. Do not try to fix those.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 94 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 95 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -40,22 +42,20 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 95, `IMG_0360` — but READ THE NUMBER off the sheet
+## Next: page 96, `IMG_0361` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–94, so page 95 *should*
-be `IMG_0360`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–95, so page 96 *should*
+be `IMG_0361`. **Five more changes are still expected before page 207.**
 
-**`atanatiya-parittam-atthamam` is open at verse 56**, with no `[…]` — the row
-is whole and it is the paritta that carries on. Page 95's batch numbers **from
-57**.
+**`atanatiya-parittam-atthamam` is open at verse 83**, with no `[…]` — the row
+ends on a full stop. Page 96's batch numbers **from 84**.
 
-**Three quarters are named, one to go.** East (bhūtas), south (devas), west
-(nāgas) are in; the northern quarter and its yakkhas should follow, then the
-paritta's close.
+**The medicine stanza has done the Buddha and the Dhamma.** The Saṅgha one
+should open page 96, then the paritta's close and probably a colophon.
 
-**The printed row order puts the PROMISE before the QUARTER.** Standard editions
-set the quarter first. It parses correctly as the book sets it and was NOT
-re-ordered — do not "fix" it on page 95 either.
+**Do not re-order the rows.** This chant prints the promise before the quarter
+and the book's order has been kept throughout; page 96 should be read the same
+way.
 
 ## ⚠️ Two sessions, one `chanting.py` — what happened on page 94
 
@@ -177,7 +177,7 @@ established the rule in the first place. Worth stating exactly:
 `check_render` walks strings in printed order and does not look at grouping.
 Only opening the page catches it — so open the page.
 
-## ⚠️⚠️ The ฬ/พ conflict has now happened TWICE — pages 85 and 90
+## ⚠️⚠️⚠️ The ฬ/พ conflict has now happened THREE TIMES — pages 85, 90, 95
 
 This is no longer a one-off, and it is the most important open question in the
 book.
@@ -186,6 +186,15 @@ book.
 |---|---|---|---|
 | 85 | `อะวิรุพหิฉันทา` | *avirūḷhi-* | *avirubhi-* — **not a word** |
 | 90 | `โสพะสะ` | *soḷasa* ("sixteen") | *sobasa* — **not a word** |
+| 95 | `วิรุพหะโก` | *Virūḷhaka* (Great King of the South) | *virubhaka* — **not a word** |
+
+**Page 95 is the easiest of the three to check**, because the four Great Kings
+are named together in a fixed order — Dhataraṭṭha, Virūḷhaka, Virūpakkha,
+Kuvera — so the reading is unambiguous once the book is open.
+
+**And a fourth letter of the same class turned up on the same page:** verse 82's
+`ปะริพาหูปะสะมะนัง` has `พ` where editions have *parilāha-* with `ล`. Worth
+checking on the same visit.
 
 **Both letters are BARE** — no cluster mark — and both were stacked at high
 magnification against an undoubted `พ` on the same line or the same sheet, and

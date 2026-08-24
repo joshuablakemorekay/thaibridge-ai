@@ -1,0 +1,343 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "atanatiya-parittam-atthamam"
+  ],
+  "pages": [
+   {
+    "page": 95,
+    "file": "IMG_0360.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "atanatiya-parittam-atthamam",
+    "verses": "57-83",
+    "starts_here": false,
+    "note": "The whole sheet is one chant and twenty-seven TWO-COLUMN rows, gutter measured at x 1040-1120. Three rows are indented by a measured 90-100px against the block's own left edge of 370 — verses 66, 72 and 78 — and each opens a new stanza set. No title, no colophon, no footnote and no rule anywhere on the sheet."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "atanatiya-parittam-atthamam",
+   "continuation_of": "atanatiya-parittam-atthamam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-seven, verses 57 to 83, one per two-column row, read ACROSS. Verses 57 to 65 finish the four quarters and the four Great Kings; verses 66, 72 and 78 open the three indented stanza sets and carry para_start. No para_layout is declared and none is needed — this chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0360.PNG, page 95, read off the top centre of the sheet — the offset of 265 holds for a ninth page. Verse 57 is the first verse on this page and carries the page key."
+   },
+   "verses": [
+    {
+     "number": 57,
+     "pali": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ",
+     "pali_roman": "Tepi tumhe anurakkhantu ārogyena sukhena ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they too protect you, with health and with happiness.",
+     "page": 95
+    },
+    {
+     "number": 58,
+     "pali": "อุตตะรัส์มิง ทิสาภาเค สันติ ยักขา มะหิทธิกา",
+     "pali_roman": "Uttarasmiṃ disābhāge santi yakkhā mahiddhikā",
+     "thai": "",
+     "paiboon": "",
+     "english": "In the northern quarter there are yakkhas of great power —"
+    },
+    {
+     "number": 59,
+     "pali": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ",
+     "pali_roman": "Tepi tumhe anurakkhantu ārogyena sukhena ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they too protect you, with health and with happiness."
+    },
+    {
+     "number": 60,
+     "pali": "ปุริมะทิสัง ธะตะรัฏโฐ ทักขิเณนะ วิรุพหะโก",
+     "pali_roman": "Purimadisaṃ dhataraṭṭho dakkhiṇena virubhako",
+     "thai": "",
+     "paiboon": "",
+     "english": "Dhataraṭṭha in the eastern quarter, Virūḷhaka in the southern,"
+    },
+    {
+     "number": 61,
+     "pali": "ปัจฉิเมนะ วิรูปักโข กุเวโร อุตตะรัง ทิสัง.",
+     "pali_roman": "Pacchimena virūpakkho kuvero uttaraṃ disaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Virūpakkha in the western, Kuvera in the northern quarter."
+    },
+    {
+     "number": 62,
+     "pali": "จัตตาโร เต มะหาราชา โลกะปาลา ยะสัสสิโน",
+     "pali_roman": "Cattāro te mahārājā lokapālā yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those four Great Kings, guardians of the world, renowned —"
+    },
+    {
+     "number": 63,
+     "pali": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ.",
+     "pali_roman": "Tepi tumhe anurakkhantu ārogyena sukhena ca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they too protect you, with health and with happiness."
+    },
+    {
+     "number": 64,
+     "pali": "อากาสัฏฐา จะ ภุมมัฏฐา เทวา นาคา มะหิทธิกา",
+     "pali_roman": "Ākāsaṭṭhā ca bhummaṭṭhā devā nāgā mahiddhikā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Devas and nāgas of great power, dwelling in the sky and on the earth —"
+    },
+    {
+     "number": 65,
+     "pali": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ",
+     "pali_roman": "Tepi tumhe anurakkhantu ārogyena sukhena ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they too protect you, with health and with happiness."
+    },
+    {
+     "number": 66,
+     "pali": "นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง",
+     "pali_roman": "Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is no other refuge for me: the Buddha is my excellent refuge.",
+     "para_start": true
+    },
+    {
+     "number": 67,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.",
+     "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by this utterance of truth, may victory and blessing be yours."
+    },
+    {
+     "number": 68,
+     "pali": "นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง",
+     "pali_roman": "Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is no other refuge for me: the Dhamma is my excellent refuge."
+    },
+    {
+     "number": 69,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.",
+     "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by this utterance of truth, may victory and blessing be yours."
+    },
+    {
+     "number": 70,
+     "pali": "นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง",
+     "pali_roman": "Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is no other refuge for me: the Saṅgha is my excellent refuge."
+    },
+    {
+     "number": 71,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.",
+     "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by this utterance of truth, may victory and blessing be yours."
+    },
+    {
+     "number": 72,
+     "pali": "ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ",
+     "pali_roman": "Yaṅkiñci ratanaṃ loke vijjati vividhaṃ puthu",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever jewel there is in the world, of many and various kinds,",
+     "para_start": true
+    },
+    {
+     "number": 73,
+     "pali": "ระตะนัง พุทธะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.",
+     "pali_roman": "Ratanaṃ buddhasamaṃ natthi tasmā sotthī bhavantu te.",
+     "thai": "",
+     "paiboon": "",
+     "english": "there is no jewel equal to the Buddha: therefore may you be well."
+    },
+    {
+     "number": 74,
+     "pali": "ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ",
+     "pali_roman": "Yaṅkiñci ratanaṃ loke vijjati vividhaṃ puthu",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever jewel there is in the world, of many and various kinds,"
+    },
+    {
+     "number": 75,
+     "pali": "ระตะนัง ธัมมะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.",
+     "pali_roman": "Ratanaṃ dhammasamaṃ natthi tasmā sotthī bhavantu te.",
+     "thai": "",
+     "paiboon": "",
+     "english": "there is no jewel equal to the Dhamma: therefore may you be well."
+    },
+    {
+     "number": 76,
+     "pali": "ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ",
+     "pali_roman": "Yaṅkiñci ratanaṃ loke vijjati vividhaṃ puthu",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever jewel there is in the world, of many and various kinds,"
+    },
+    {
+     "number": 77,
+     "pali": "ระตะนัง สังฆะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.",
+     "pali_roman": "Ratanaṃ saṅghasamaṃ natthi tasmā sotthī bhavantu te.",
+     "thai": "",
+     "paiboon": "",
+     "english": "there is no jewel equal to the Saṅgha: therefore may you be well."
+    },
+    {
+     "number": 78,
+     "pali": "สักกัต์วา พุทธะระตะนัง โอสะถัง อุตตะมัง วะรัง",
+     "pali_roman": "Sakkatvā buddharatanaṃ osathaṃ uttamaṃ varaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having honoured the Jewel of the Buddha, the supreme and excellent medicine,",
+     "para_start": true
+    },
+    {
+     "number": 79,
+     "pali": "หิตัง เทวะมะนุสสานัง พุทธะเตเชนะ โสตถินา",
+     "pali_roman": "Hitaṃ devamanussānaṃ buddhatejena sotthinā",
+     "thai": "",
+     "paiboon": "",
+     "english": "the welfare of devas and humans — by the Buddha's power, in safety,"
+    },
+    {
+     "number": 80,
+     "pali": "นัสสันตุปัททะวา สัพเพ ทุกขา วูปะสะเมนตุ เต.",
+     "pali_roman": "Nassantupaddavā sabbe dukkhā vūpasamentu te.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may all your misfortunes perish and your sufferings be stilled."
+    },
+    {
+     "number": 81,
+     "pali": "สักกัต์วา ธัมมะระตะนัง โอสะถัง อุตตะมัง วะรัง",
+     "pali_roman": "Sakkatvā dhammaratanaṃ osathaṃ uttamaṃ varaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having honoured the Jewel of the Dhamma, the supreme and excellent medicine,"
+    },
+    {
+     "number": 82,
+     "pali": "ปะริพาหูปะสะมะนัง ธัมมะเตเชนะ โสตถินา",
+     "pali_roman": "Paripāhūpasamanaṃ dhammatejena sotthinā",
+     "thai": "",
+     "paiboon": "",
+     "english": "the stiller of fever — by the Dhamma's power, in safety,"
+    },
+    {
+     "number": 83,
+     "pali": "นัสสันตุปัททะวา สัพเพ ภะยา วูปะสะเมนตุ เต.",
+     "pali_roman": "Nassantupaddavā sabbe bhayā vūpasamentu te.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may all your misfortunes perish and your fears be stilled."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ธะตะรัฏฐะ / วิรุฬหะกะ / วิรูปักขะ / กุเวระ",
+     "pali_roman": "dhataraṭṭha / virūḷhaka / virūpakkha / kuvera",
+     "meaning": "the four Great Kings who guard the four quarters — east, south, west and north. Named one per half-line at verses 60 and 61"
+    },
+    {
+     "pali": "โลกะปาละ",
+     "pali_roman": "lokapāla",
+     "meaning": "guardian of the world. The collective title of those four"
+    },
+    {
+     "pali": "สัจจะวัชชะ",
+     "pali_roman": "saccavajja",
+     "meaning": "an utterance of truth. The three refuge stanzas each end by swearing on one"
+    },
+    {
+     "pali": "ชะยะมังคะละ",
+     "pali_roman": "jayamaṅgala",
+     "meaning": "victory and blessing — what the truth-utterance asks for"
+    },
+    {
+     "pali": "โอสะถะ",
+     "pali_roman": "osatha",
+     "meaning": "medicine. Each of the Three Jewels is called the supreme medicine in turn"
+    },
+    {
+     "pali": "อุปัททะวะ",
+     "pali_roman": "upaddava",
+     "meaning": "misfortune, calamity. Asked to perish in each of the closing stanzas"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 60,
+     "file": "IMG_0360.PNG",
+     "issue": "‼ วิรุพหะโก WITH A BARE พ — THE THIRD INSTANCE OF THIS PATTERN, AFTER PAGES 85 AND 90. The letter carries NO cluster mark, and at 6x stacked against the พ of พุทโธ six rows below it on this same sheet it is identical: two humps, top edge level with the ห and โ beside it, no ascender. But standard Pali is Virūḷhaka, the Great King of the SOUTH, and virubhaka is not a word — so page 79's non-word test says ฬ. THREE INDEPENDENT BARE LETTERS ON THREE SHEETS now read พ where the canon has ฬ: avirūḷhi (p85), soḷasa (p90) and now Virūḷhaka. The page is reproduced as printed and transliterated virubhako to match, with the English giving the Virūḷhaka sense. ONE LOOK AT THE BOOK SETTLES ALL THREE, and this one is the easiest to check because the four Great Kings are named together in a fixed order."
+    },
+    {
+     "verse": 63,
+     "file": "IMG_0360.PNG",
+     "issue": "VERSE 63 ENDS WITH A FULL STOP where verses 57, 59 and 65 — the same line — end with none. Read at 1.7x on each. It is the line that closes the four Great Kings stanza rather than one of the quarter stanzas, so the stop marks the end of a section. Reproduced as printed on all four."
+    },
+    {
+     "verse": 66,
+     "file": "IMG_0360.PNG",
+     "issue": "THREE STANZA SETS OPEN ON THIS SHEET, at verses 66, 72 and 78, each indented by 90-100px against the block's own left edge of 370. Each is a triple: the three refuges (66-71), the three jewels beyond compare (72-77), and the three jewels as medicine (78-83, running on to page 96). The baseline was computed from this page rather than carried from page 94, whose block sat at x 470."
+    },
+    {
+     "verse": 72,
+     "file": "IMG_0360.PNG",
+     "issue": "HEAVY VERBATIM REPETITION, ALL OF IT THE BOOK. ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ appears at verses 72, 74 and 76 word for word; นัตถิ เม สะระณัง อัญญัง opens 66, 68 and 70; เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง. closes 67, 69 and 71; and เตปิ ตุมเห อะนุรักขันตุ… appears four times. Each triple runs Buddha, Dhamma, Saṅgha. Recorded because check_render walks strings in printed order."
+    },
+    {
+     "verse": 82,
+     "file": "IMG_0360.PNG",
+     "issue": "ปะริพาหูปะสะมะนัง — read at 1.7x and reproduced as printed. Standard editions have parilāhūpasamanaṃ, 'the stiller of fever', with ล where this page has พ. That is the SAME ล/พ confusion class as the ฬ/พ one, on a different letter, and it is worth checking on the same visit to the book. Transliterated paripāhūpasamanaṃ to match the page; the English gives the fever sense."
+    },
+    {
+     "verse": 57,
+     "file": "IMG_0360.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 1040-1120. Read ACROSS. The four quarters are now complete across pages 94 and 95 — east/bhūtas, south/devas, west/nāgas on page 94, north/yakkhas here — and verses 60 to 63 then name the four Great Kings who guard them."
+    },
+    {
+     "verse": 83,
+     "file": "IMG_0360.PNG",
+     "issue": "THE SHEET RUNS OUT AFTER A FULL STOP, so no […] marker is used. The medicine stanza has done the Buddha and the Dhamma; the Saṅgha one should open page 96, and the paritta's close should follow. Page 96 numbers from 84."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "atanatiya-parittam-atthamam"
+  ],
+  "resume_from_page": 96,
+  "resume_from_file": "IMG_0361.PNG",
+  "resume_from": "atanatiya-parittam-atthamam",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, every verse paiboon is empty, and a continuation carries no title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed, with TWO readings flagged rather than settled. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in อุตตะรัส์มิง, อาโรค์เยนะ, ตัส์มา and สักกัต์วา. The two flagged are verse 60's วิรุพหะโก, a bare พ where standard Pali has Virūḷhaka with ฬ, and verse 82's ปะริพาหูปะสะมะนัง, a พ where editions have parilāha- with ล. Both reproduced as printed and transliterated to match even though neither is a word. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant. It claims verses 57-83 and the entry holds exactly those. Verse 57 is the first verse on the page and the only one carrying a page key; no page turns inside it. No page blocks and no footnote on this sheet.",
+  "notes": "‼ THE ฬ/พ PATTERN HAS NOW HAPPENED THREE TIMES. Verse 60 prints วิรุพหะโก with a BARE พ — identical at 6x to the พ of พุทโธ on the same sheet — where standard Pali is Virūḷhaka, the Great King of the South, and virubhaka is not a word. That follows avirūḷhi on page 85 and soḷasa on page 90. Three independent bare letters on three sheets, all reading พ, all giving non-words. ONE LOOK AT THE BOOK SETTLES ALL THREE, and this instance is the easiest to check because the four Great Kings are named together in a fixed order. Two other things. (1) A FOURTH LETTER OF THE SAME CLASS: verse 82's ปะริพาหูปะสะมะนัง has พ where editions have parilāha- with ล — worth checking on the same visit. (2) VERSE 63 TAKES A FULL STOP where its three identical siblings take none, because it closes the Great Kings section rather than a quarter. Nothing needs re-photographing."
+ }
+}
