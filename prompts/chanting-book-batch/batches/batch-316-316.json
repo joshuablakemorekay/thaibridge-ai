@@ -1,0 +1,185 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "yod-phrakantraipidok",
+   "vipassit"
+  ],
+  "pages": [
+   {
+    "page": 316,
+    "file": "IMG_0583.PNG",
+    "script": "roman",
+    "columns": 1,
+    "chant": "yod-phrakantraipidok",
+    "verses": "83-86",
+    "starts_here": false,
+    "note": "The head of the sheet: item 12 in two paragraphs — three sentences set flush, then one indented paragraph of heart-syllable material. PROSE throughout, wrapping at the measure, read from two 1.5x crops. Item 12 is the last item, and the chant ENDS here."
+   },
+   {
+    "page": 316,
+    "file": "IMG_0583.PNG",
+    "script": "roman",
+    "columns": 1,
+    "chant": "vipassit",
+    "verses": "1",
+    "starts_here": true,
+    "note": "Beneath item 12 and separated by white space: a CENTRED heading in capitals, VIPASSIT, with a single centred line under it. Structurally the same shape as the title on page 312, so it is entered as its own chant rather than folded into the one above. It starts and ends here, and page 317 opens the Mahāsamaya Sutta."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "yod-phrakantraipidok",
+   "continuation_of": "yod-phrakantraipidok",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Four, verses 83 to 86, one per sentence in two paragraphs. Both carry para_start and para_layout 'prose'. The chant is COMPLETE at verse 86 — item 12 is the last numbered item and nothing follows it but the separate VIPASSIT block.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text with ordinary word division.",
+    "pages": "IMG_0583.PNG, page 316, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 83,
+     "pali": "",
+     "pali_roman": "namobuddhassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo itipi so bhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Buddha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — such is the Blessed One.",
+     "page": 316,
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 12
+    },
+    {
+     "number": 84,
+     "pali": "",
+     "pali_roman": "namodhammassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo svākkhāto bhagavatā dhammo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Dhamma. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — well proclaimed by the Blessed One is the Dhamma."
+    },
+    {
+     "number": 85,
+     "pali": "",
+     "pali_roman": "namosaṅghassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo supatipanno bhagavato sāvakasaṅgho vāhaparittaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Saṅgha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — of good practice is the Blessed One's community of disciples. The protective recitation."
+    },
+    {
+     "number": 86,
+     "pali": "",
+     "pali_roman": "namobuddhāya ma-a-u dukkhaṃ aniccaṃ anattā yāvatassa hāyo mona u-a-ma dukkhaṃ aniccaṃ anattā u-a-ma-a vandā namobuddhāya na-a kati nissaraṇa ārapakhuddhaṃ ma-a-u dukkhaṃ aniccaṃ anattā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Buddha — ma-a-u — suffering, impermanent, not-self; and so on through the heart syllables u-a-ma and na-a, with reverence, escape, and again: suffering, impermanent, not-self.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "vāhaparittaṃ",
+     "meaning": "the protective recitation — the word that closes item 12's third sentence and, with it, the numbered series"
+    },
+    {
+     "pali": "",
+     "pali_roman": "ma-a-u / u-a-ma / na-a",
+     "meaning": "heart syllables again, as in item 9. Each letter stands for a phrase, so they are abbreviations rather than words and cannot be translated one by one"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 84,
+     "file": "IMG_0583.PNG",
+     "issue": "ANOTHER WORD BROKEN ACROSS A LINE END WITH NO HYPHEN — line 3 ends 'saññā' and line 4 opens 'khandho', for saññākhandho. That is the FOURTH unhyphenated break in this chant after the three on page 315, so it is this section's habit rather than an accident. Rejoined."
+    },
+    {
+     "verse": 85,
+     "file": "IMG_0583.PNG",
+     "issue": "THE BOOK PRINTS 'supatipanno' where the standard form is suppaṭipanno — single p, and a plain t with no retroflex dot. Read at 5x on the crop. Kept as printed, NOT corrected."
+    },
+    {
+     "verse": 83,
+     "file": "IMG_0583.PNG",
+     "issue": "Item 12 gives the same five khandhas three times over, once under each of the Three Refuges, and the three sentences are identical but for their opening and closing clause. That is the book's own structure and is not duplication to be collapsed."
+    }
+   ]
+  },
+  {
+   "id": "vipassit",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "One. A single centred line beneath a centred title.",
+    "ordering": "None. No Thai translation is printed, and no Thai script.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text.",
+    "pages": "IMG_0583.PNG, page 316, read off the sheet. Offset 267."
+   },
+   "title_thai": "",
+   "title_pali": "VIPASSIT",
+   "title_roman": "",
+   "title_english": "The Vipassit Blessing",
+   "page_start": 316,
+   "layout": "lines",
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "sabbadukkhā sabbabhayā sabbarogā vinassantu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "May all suffering, all fear and all illness perish.",
+     "page": 316
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "sabbadukkhā sabbabhayā sabbarogā",
+     "meaning": "all suffering, all fear, all illness — the three the line asks to be destroyed. A very common Thai blessing formula"
+    },
+    {
+     "pali": "",
+     "pali_roman": "vinassantu",
+     "meaning": "may they perish. Third person plural imperative of vinassati"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0583.PNG",
+     "issue": "⚠ ENTERED AS ITS OWN CHANT, AND THAT IS A JUDGEMENT RATHER THAN A CERTAINTY. VIPASSIT is centred, in capitals, with white space above it and a single centred line below — structurally identical to how YOD PHRAKANTRAIPIDOK is set on page 312, which is why it is treated as a title. But it carries no bracketed English gloss as that title does, and it could instead be a closing label belonging to the chant above. Worth settling with the book in hand; if it is a closing, this chant should be folded into yod-phrakantraipidok as a closing rather than left standing."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0583.PNG",
+     "issue": "The line is set tight enough to read as one word at page zoom — sabbadukkhāsabbabhayāsabbarogāvinassantu. Divided on the same measured basis as the rest of the section, and here the words are ordinary Pali so the division is not in doubt."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "yod-phrakantraipidok",
+   "vipassit"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 311,
+  "resume_from_file": "IMG_0578.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in nissaraṇa and viññāṇakhandho, n with tilde in saññākhandho. The one word broken across a line end is rejoined and recorded; the non-standard 'supatipanno' is kept exactly as the book sets it.",
+  "page_scan": "agrees. TWO rows for one page, one per chant, in the order they appear down the sheet. Verses 83-86 for the first and verse 1 for the second, each matching its entry exactly. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "THIS COMPLETES YOD PHRAKANTRAIPIDOK and closes the stretch 312-316, which now joins the Mahāsamaya Sutta at 317. Two findings. (1) A FOURTH UNHYPHENATED LINE BREAK — saññā/khandho — after three on page 315. Four in two sheets makes it this section's habit, not an accident, and it is the fault most likely to survive unnoticed because it leaves no mark. (2) ⚠ VIPASSIT IS ENTERED AS ITS OWN CHANT ON A JUDGEMENT. It is set exactly like the page-312 title — centred, capitalised, white space above — but carries no English gloss as that one does, and it could be a closing label for the chant above instead. That is the one open question on this sheet and it needs the book.",
+  "diacritic_exceptions": []
+ }
+}

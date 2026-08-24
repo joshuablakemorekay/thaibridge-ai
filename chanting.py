@@ -29221,7 +29221,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 82; the rest is not in the app yet.
         # ‼ CHECK [IMG_0579.PNG]: THE BOOK PRINTS ENGLISH ON THIS PAGE, and it
         #   is the first page in the book to do so. Beneath the title, centred
         #   and in square brackets: [The Peak of Tipitaka]. chanting.py states
@@ -30058,6 +30057,58 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'Power, virtue, speech, strength, brilliance, energy, attainment, action, Dhamma, truth, Nibbāna, release, what is hidden, giving, morality, wisdom, renunciation, merit, fortune, fame, satisfaction, happiness, splendour, form, and the twenty-four teachings. By this truth may there be well-being — hulū hulū hulū savāhāya.',
             },
+            # ‼ CHECK [IMG_0583.PNG]: Item 12 gives the same five khandhas
+            #   three times over, once under each of the Three Refuges, and
+            #   the three sentences are identical but for their opening and
+            #   closing clause. That is the book's own structure and is not
+            #   duplication to be collapsed.
+            {
+                'number': 83,
+                'page': 316,
+                'printed_number': 12,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'namobuddhassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo itipi so bhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — such is the Blessed One.',
+            },
+            # ‼ CHECK [IMG_0583.PNG]: ANOTHER WORD BROKEN ACROSS A LINE END
+            #   WITH NO HYPHEN — line 3 ends 'saññā' and line 4 opens
+            #   'khandho', for saññākhandho. That is the FOURTH unhyphenated
+            #   break in this chant after the three on page 315, so it is this
+            #   section's habit rather than an accident. Rejoined.
+            {
+                'number': 84,
+                'pali': '',
+                'pali_roman': 'namodhammassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo svākkhāto bhagavatā dhammo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Dhamma. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — well proclaimed by the Blessed One is the Dhamma.',
+            },
+            # ‼ CHECK [IMG_0583.PNG]: THE BOOK PRINTS 'supatipanno' where the
+            #   standard form is suppaṭipanno — single p, and a plain t with
+            #   no retroflex dot. Read at 5x on the crop. Kept as printed, NOT
+            #   corrected.
+            {
+                'number': 85,
+                'pali': '',
+                'pali_roman': 'namosaṅghassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo supatipanno bhagavato sāvakasaṅgho vāhaparittaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Homage to the Saṅgha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — of good practice is the Blessed One's community of disciples. The protective recitation.",
+            },
+            {
+                'number': 86,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'namobuddhāya ma-a-u dukkhaṃ aniccaṃ anattā yāvatassa hāyo mona u-a-ma dukkhaṃ aniccaṃ anattā u-a-ma-a vandā namobuddhāya na-a kati nissaraṇa ārapakhuddhaṃ ma-a-u dukkhaṃ aniccaṃ anattā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha — ma-a-u — suffering, impermanent, not-self; and so on through the heart syllables u-a-ma and na-a, with reverence, escape, and again: suffering, impermanent, not-self.',
+            },
         ],
     },
     {
@@ -30682,6 +30733,52 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'and by the majesty of the arahants, I bind a protection on every side.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0583.PNG]: ⚠ ENTERED AS ITS OWN CHANT, AND THAT IS A
+        #   JUDGEMENT RATHER THAN A CERTAINTY. VIPASSIT is centred, in
+        #   capitals, with white space above it and a single centred line
+        #   below — structurally identical to how YOD PHRAKANTRAIPIDOK is set
+        #   on page 312, which is why it is treated as a title. But it carries
+        #   no bracketed English gloss as that title does, and it could
+        #   instead be a closing label belonging to the chant above. Worth
+        #   settling with the book in hand; if it is a closing, this chant
+        #   should be folded into yod-phrakantraipidok as a closing rather
+        #   than left standing.
+        'id': 'vipassit',
+        'title_thai': '',
+        'title_pali': 'VIPASSIT',
+        'title_roman': '',
+        'title_english': 'The Vipassit Blessing',
+        'page_start': 316,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0583.PNG]: The line is set tight enough to read as
+            #   one word at page zoom —
+            #   sabbadukkhāsabbabhayāsabbarogāvinassantu. Divided on the same
+            #   measured basis as the rest of the section, and here the words
+            #   are ordinary Pali so the division is not in doubt.
+            {
+                'number': 1,
+                'page': 316,
+                'pali': '',
+                'pali_roman': 'sabbadukkhā sabbabhayā sabbarogā vinassantu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May all suffering, all fear and all illness perish.',
             },
         ],
     },
