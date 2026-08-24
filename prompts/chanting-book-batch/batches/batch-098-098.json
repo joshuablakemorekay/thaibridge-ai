@@ -1,0 +1,457 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "bot-khat-abhaya-parittam",
+   "abhaya-parittam-ekadasamam",
+   "devata-uyyojana-gatha"
+  ],
+  "pages": [
+   {
+    "page": 98,
+    "file": "IMG_0363.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-abhaya-parittam",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The top of the sheet: a centred bold title and three TWO-COLUMN rows, gutter measured at x 974-1224. Row 1 is indented 90px against the block's left edge of 549. The chant starts and ends here."
+   },
+   {
+    "page": 98,
+    "file": "IMG_0363.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "abhaya-parittam-ekadasamam",
+    "verses": "1-12",
+    "starts_here": true,
+    "note": "The middle of the sheet: a centred bold title and twelve SINGLE-COLUMN lines, block left edge x 612. Three lines are indented by a measured 90px — 1, 5 and 9 — and each opens a stanza. Three stanzas of four, identical but for the fourth line of each. The chant starts and ends here."
+   },
+   {
+    "page": 98,
+    "file": "IMG_0363.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "devata-uyyojana-gatha",
+    "verses": "1-8",
+    "starts_here": true,
+    "note": "The foot of the sheet: a centred bold title and eight TWO-COLUMN rows, gutter measured at x 855-1207. Two rows are indented by a measured 135px against the block's left edge of 392 — verses 1 and 7. No colophon and no citation. The chant starts and ends here; no footnote anywhere on the sheet."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-abhaya-parittam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Three, one per two-column row, read ACROSS. One group; the chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is the contents' value; the SPACING of title_thai follows the page, which differs from the contents by one space.",
+    "pages": "IMG_0363.PNG, page 98. Title and all three rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด อะภะยะปะริตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt à-pá-yá-bpà-rít-dtaŋ",
+   "title_english": "The Prefatory Verse for the Abhaya Paritta",
+   "page_start": 98,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ปุญญะลาภัง มะหาเตชัง วัณณะกิตติมะหายะสัง",
+     "pali_roman": "Puññalābhaṃ mahātejaṃ vaṇṇakittimahāyasaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Gain of merit, great majesty, beauty, fame and great renown —",
+     "page": 98
+    },
+    {
+     "number": 2,
+     "pali": "สัพพะสัตตะหิตัง ชาตัง ตัง สุณันตุ อะเสสะโต.",
+     "pali_roman": "Sabbasattahitaṃ jātaṃ taṃ suṇantu asesato.",
+     "thai": "",
+     "paiboon": "",
+     "english": "arisen for the welfare of all beings: let them listen to it, every one, without exception.",
+     "page": 98
+    },
+    {
+     "number": 3,
+     "pali": "อัตตัปปะระหิตัง ชาตัง ปะริตตันตัมภะณามะ เห.",
+     "pali_roman": "Attapparahitaṃ jātaṃ parittantambhaṇāma he.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Arisen for the good of self and others: let us now recite that paritta, friends.",
+     "page": 98
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะภะยะ",
+     "pali_roman": "abhaya",
+     "meaning": "fearlessness, safety. The paritta is named for what it gives, not for what it drives off"
+    },
+    {
+     "pali": "ปะริตตันตัมภะณามะ เห",
+     "pali_roman": "parittantam bhaṇāma he",
+     "meaning": "'let us recite that paritta, friends' — the closing formula of a บทขัด, printed run together as one word here"
+    },
+    {
+     "pali": "อะเสสะโต",
+     "pali_roman": "asesato",
+     "meaning": "without remainder, leaving none out. It is the whole assembly, gods included, being asked to listen"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0363.PNG",
+     "issue": "AN ELEVENTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด อะภะยะปะริตตัง with a SPACE after บทขัด; the สารบัญ has บทขัดอะภะยะปะริตตัง without one. The page wins, so the never-spell-a-title-two-ways test goes silent for this chant. Same as pages 80, 82, 86, 87, 88, 89, 90, 92, 96 and 97."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0363.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 974-1224. Read ACROSS. FIRST PAIRING FOR CHECKING: left ปุญญะลาภัง มะหาเตชัง + right วัณณะกิตติมะหายะสัง."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0363.PNG",
+     "issue": "Verse 1 is indented by a measured 90px against the block's own left edge of 549. It is the first verse of the chant, so the existing paragraph start already carries it and no field is needed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0363.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "abhaya-parittam-ekadasamam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Twelve, one per printed line. SINGLE column. Three groups of four — the same three lines repeated, each closed by a different one of the Three Refuges.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_thai and title_roman are both the contents' values and they agree with the page.",
+    "pages": "IMG_0363.PNG, page 98. Title and all twelve lines are on this page; the chant starts and ends here."
+   },
+   "title_thai": "อะภะยะปะริตตัง เอกาทะสะมัง",
+   "title_pali": "",
+   "title_roman": "Abhayaparittaṃ ekādasamaṃ",
+   "title_english": "The Abhaya Paritta, the Eleventh",
+   "page_start": 98,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยันทุนนิมิตตัง อะวะมังคะลัญจะ",
+     "pali_roman": "Yandunnimittaṃ avamaṅgalañca",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever ill omen there is, and whatever is inauspicious,",
+     "page": 98
+    },
+    {
+     "number": 2,
+     "pali": "โย จามะนาโป สะกุณัสสะ สัทโท",
+     "pali_roman": "Yo cāmanāpo sakuṇassa saddo",
+     "thai": "",
+     "paiboon": "",
+     "english": "and whatever cry of a bird is unwelcome,",
+     "page": 98
+    },
+    {
+     "number": 3,
+     "pali": "ปาปัคคะโห ทุสสุปินัง อะกันตัง",
+     "pali_roman": "Pāpaggaho dussupinaṃ akantaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "an evil planet, an unpleasant bad dream —",
+     "page": 98
+    },
+    {
+     "number": 4,
+     "pali": "พุทธานุภาเวนะ วินาสะเมนตุ.",
+     "pali_roman": "Buddhānubhāvena vināsamentu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Buddha may they come to nothing.",
+     "page": 98
+    },
+    {
+     "number": 5,
+     "pali": "ยันทุนนิมิตตัง อะวะมังคะลัญจะ",
+     "pali_roman": "Yandunnimittaṃ avamaṅgalañca",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever ill omen there is, and whatever is inauspicious,",
+     "page": 98,
+     "para_start": true
+    },
+    {
+     "number": 6,
+     "pali": "โย จามะนาโป สะกุณัสสะ สัทโท",
+     "pali_roman": "Yo cāmanāpo sakuṇassa saddo",
+     "thai": "",
+     "paiboon": "",
+     "english": "and whatever cry of a bird is unwelcome,",
+     "page": 98
+    },
+    {
+     "number": 7,
+     "pali": "ปาปัคคะโห ทุสสุปินัง อะกันตัง",
+     "pali_roman": "Pāpaggaho dussupinaṃ akantaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "an evil planet, an unpleasant bad dream —",
+     "page": 98
+    },
+    {
+     "number": 8,
+     "pali": "ธัมมานุภาเวนะ วินาสะเมนตุ.",
+     "pali_roman": "Dhammānubhāvena vināsamentu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Dhamma may they come to nothing.",
+     "page": 98
+    },
+    {
+     "number": 9,
+     "pali": "ยันทุนนิมิตตัง อะวะมังคะลัญจะ",
+     "pali_roman": "Yandunnimittaṃ avamaṅgalañca",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever ill omen there is, and whatever is inauspicious,",
+     "page": 98,
+     "para_start": true
+    },
+    {
+     "number": 10,
+     "pali": "โย จามะนาโป สะกุณัสสะ สัทโท",
+     "pali_roman": "Yo cāmanāpo sakuṇassa saddo",
+     "thai": "",
+     "paiboon": "",
+     "english": "and whatever cry of a bird is unwelcome,",
+     "page": 98
+    },
+    {
+     "number": 11,
+     "pali": "ปาปัคคะโห ทุสสุปินัง อะกันตัง",
+     "pali_roman": "Pāpaggaho dussupinaṃ akantaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "an evil planet, an unpleasant bad dream —",
+     "page": 98
+    },
+    {
+     "number": 12,
+     "pali": "สังฆานุภาเวนะ วินาสะเมนตุ.",
+     "pali_roman": "Saṅghānubhāvena vināsamentu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Sangha may they come to nothing.",
+     "page": 98
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ทุนนิมิตตัง",
+     "pali_roman": "dunnimittaṃ",
+     "meaning": "a bad sign or ill omen. ยันทุนนิมิตตัง is yaṃ + dunnimittaṃ run together, 'whatever ill omen'"
+    },
+    {
+     "pali": "ปาปัคคะโห",
+     "pali_roman": "pāpaggaho",
+     "meaning": "an evil planet — literally a bad 'seizer'. Thai astrology reads the planets as taking hold of a person's fortune"
+    },
+    {
+     "pali": "วินาสะเมนตุ",
+     "pali_roman": "vināsamentu",
+     "meaning": "'let them be destroyed'. Not a request for protection FROM the omen but for the omen itself to be undone"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0363.PNG",
+     "issue": "SINGLE column, unlike the two chants around it. Twelve lines, block left edge measured at x 612."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0363.PNG",
+     "issue": "Three indents measured at 90px against the block's left edge of 612 — verses 1, 5 and 9. Verse 1 is the chant's own start, so para_start is set on 5 and 9 only."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0363.PNG",
+     "issue": "The three stanzas are IDENTICAL except for their fourth line — พุทธานุภาเวนะ, then ธัมมานุภาเวนะ, then สังฆานุภาเวนะ. Each of the twelve lines was read off the sheet separately rather than copied down, and the fourth line of every stanza was re-checked at 6x."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0363.PNG",
+     "issue": "ทุสสุปินัง verified at 6x — ท with ุ, then ส, then ส with ุ. Not ทุสฺสุปินัง; the book's body text never uses the phinthu."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0363.PNG",
+     "issue": "ยันทุนนิมิตตัง verified at 5x — TWO separate น glyphs between ทุ and ิม. Romanised yandunnimittaṃ, which agrees with standard editions."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0363.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "devata-uyyojana-gatha",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Eight, one per two-column row, read ACROSS. Two groups — verses 1-6 and 7-8.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_thai and title_roman are both the contents' values and they agree with the page.",
+    "pages": "IMG_0363.PNG, page 98. Title and all eight rows are on this page; the chant starts and ends here. Page 99 opens with a new บทขัด, so nothing carries over."
+   },
+   "title_thai": "เทวะตาอุยโยชะนะคาถา",
+   "title_pali": "",
+   "title_roman": "Devatāuyyojanagāthā",
+   "title_english": "The Verses for Taking Leave of the Devas",
+   "page_start": 98,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ทุกขัปปัตตา จะ นิททุกขา ภะยัปปัตตา จะ นิพภะยา",
+     "pali_roman": "Dukkhappattā ca niddukkhā bhayappattā ca nibbhayā",
+     "thai": "",
+     "paiboon": "",
+     "english": "May those who have met with suffering be free of suffering, those who have met with fear be free of fear,",
+     "page": 98
+    },
+    {
+     "number": 2,
+     "pali": "โสกัปปัตตา จะ นิสโสกา โหนตุ สัพเพปิ ปาณิโน.",
+     "pali_roman": "Sokappattā ca nissokā hontu sabbepi pāṇino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "those who have met with grief be free of grief — may every living being be so.",
+     "page": 98
+    },
+    {
+     "number": 3,
+     "pali": "เอตตาวะตา จะ อัมเหหิ สัมภะตัง ปุญญะสัมปะทัง",
+     "pali_roman": "Ettāvatā ca amhehi sambhataṃ puññasampadaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "And by this much of the attainment of merit gathered by us,",
+     "page": 98
+    },
+    {
+     "number": 4,
+     "pali": "สัพเพ เทวานุโมทันตุ สัพพะสัมปัตติสิทธิยา.",
+     "pali_roman": "Sabbe devānumodantu sabbasampattisiddhiyā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may all the devas rejoice, for the winning of every blessing.",
+     "page": 98
+    },
+    {
+     "number": 5,
+     "pali": "ทานัง ทะทันตุ สัทธายะ สีลัง รักขันตุ สัพพะทา",
+     "pali_roman": "Dānaṃ dadantu saddhāya sīlaṃ rakkhantu sabbadā",
+     "thai": "",
+     "paiboon": "",
+     "english": "May they give gifts with faith, may they keep the precepts always,",
+     "page": 98
+    },
+    {
+     "number": 6,
+     "pali": "ภาวะนาภิระตา โหนตุ คัจฉันตุ เทวะตาคะตา.",
+     "pali_roman": "Bhāvanābhiratā hontu gacchantu devatāgatā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they delight in meditation; and may the devas who have come now go.",
+     "page": 98
+    },
+    {
+     "number": 7,
+     "pali": "สัพเพ พุทธา พะลัปปัตตา ปัจเจกานัญจะ ยัง พะลัง",
+     "pali_roman": "Sabbe buddhā balappattā paccekānañca yaṃ balaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "By all the Buddhas who have won strength, and whatever strength the Paccekabuddhas have,",
+     "page": 98,
+     "para_start": true
+    },
+    {
+     "number": 8,
+     "pali": "อะระหันตานัญจะ เตเชนะ รักขัง พันธามิ สัพพะโส.",
+     "pali_roman": "Arahantānañca tejena rakkhaṃ bandhāmi sabbaso.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and by the majesty of the arahants, I bind a protection on every side.",
+     "page": 98
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อุยโยชะนะ",
+     "pali_roman": "uyyojana",
+     "meaning": "sending off, dismissing. The devas were invited at the start of the paritta service; this is the chant that lets them go"
+    },
+    {
+     "pali": "เทวะตาคะตา",
+     "pali_roman": "devatāgatā",
+     "meaning": "'the devas who have come'. The word only makes sense because an invitation was chanted first"
+    },
+    {
+     "pali": "รักขัง พันธามิ",
+     "pali_roman": "rakkhaṃ bandhāmi",
+     "meaning": "'I bind a protection'. The image is of tying a guard around a person, which is what the paritta thread is for"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0363.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 855-1207. Read ACROSS. FIRST PAIRING FOR CHECKING: left ทุกขัปปัตตา จะ นิททุกขา + right ภะยัปปัตตา จะ นิพภะยา."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0363.PNG",
+     "issue": "Two indents measured at 135px against the block's left edge of 392 — verses 1 and 7. Verse 1 is the chant's own start, so para_start is set on 7 only. The break falls between row 6 and row 7, giving a six-row group and a two-row group; that is the page's own division, not a metrical one."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0363.PNG",
+     "issue": "The book prints เทวานุโมทันตุ, romanised devānumodantu. Standard editions read sabbe devānumodantu here too, so the reading agrees."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0363.PNG",
+     "issue": "No colophon and no citation. The page ends with row 8 and the next printed thing is page 99's heading; the ink below y 2582 on the photograph is the page edge, not text."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0363.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-abhaya-parittam",
+   "abhaya-parittam-ekadasamam",
+   "devata-uyyojana-gatha"
+  ],
+  "continues": [],
+  "resume_from": null,
+  "paiboon_scan": "Nothing to scan. All three chants are printed in Pali only, so paiboon is empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0363.PNG read end to end. Page number 98 read off the sheet. Three centred bold titles, three blocks, no footnote, no rule, no citation, no colophon. An ink profile of the whole sheet found no text between the last row (ends y 2582) and the bottom edge.",
+  "notes": "Page 98 carries the ELEVENTH of the Twelve Tamnan (Abhaya) with its own บทขัด, and then เทวะตาอุยโยชะนะคาถา, the verses that send the devas home. Page 99 opens with บทขัด ชะยะปะริตตัง, the twelfth and last.",
+  "diacritic_exceptions": []
+ }
+}

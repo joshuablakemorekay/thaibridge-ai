@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-97 went in.
+98 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–97 are in and unbroken**, plus 217–221. **130 chants and 2,000
+- **Pages 1–98 are in and unbroken**, plus 217–221. **133 chants and 2,023
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 97 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 98 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,17 +46,20 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 98, `IMG_0363` — but READ THE NUMBER off the sheet
+## Next: page 99, `IMG_0364` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–97, so page 98 *should*
-be `IMG_0363`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–98, so page 99 *should*
+be `IMG_0364`. **Five more changes are still expected before page 207.**
 
-**Page 98 starts clean.** Both chants closed on page 97 and nothing of mine is
-open. (A `‼ CONTINUES` marker does exist in the file — it belongs to the OTHER
-session's roman-script work, not to the Thai-script run.)
+**Page 99 starts clean, and its top is already known.** All three page-98 chants
+close on their own sheet, and page 99 was peeked at to prove it: it opens with a
+centred bold **`บทขัด ชะยะปะริตตัง`** over two columns, first row
+`ชะยัง เทวะมะนุสสานัง` / `ชะโย โหตุ ปะราชิโต`. Read it off the sheet again
+rather than trusting that line — it was a quick look, not a measured read.
 
-**Ten of the Twelve Tamnan are in.** Two remain: the สารบัญ lists **Abhaya** and
-**Jaya**, each with its own `บทขัด` first, as all ten have had.
+**The Twelve Tamnan finish here.** Eleven are in; **Jaya** is the twelfth and
+last, with its own `บทขัด` first as all eleven have had. After it the book moves
+on to something new, so expect the next section heading soon.
 
 ## ⚠️ Two sessions, one `chanting.py` — what happened on page 94
 
@@ -279,10 +282,11 @@ First colophon in the book that closes a pair. **Worth Josh's eye** — if he
 would rather the Khandha Paritta also carried it, the fix is one key, but the
 page would then show it twice.
 
-## Eight titles the contents test cannot see — pages 80, 82, 86–90, 92
+## Eleven titles the contents test cannot see — pages 80, 82, 86–90, 92, 96–98
 
-This is now a pattern, not four surprises. Each time, the page heading and the
-book's own สารบัญ spell or space a title differently, the **page** is
+This is now the RULE for a `บทขัด`, not a run of surprises: from page 82 on,
+every single one of them is spaced on the page and unspaced in the table.
+Each time the page heading and the book's own สารบัญ differ, the **page** is
 reproduced, and `title_thai` therefore stops being a key in
 `chanting._CONTENTS_ROMAN` — so `test_the_table_and_the_chants_never_spell_one_title_two_ways`
 cannot see that chant at all, and nothing will warn if its title drifts later.
@@ -297,6 +301,9 @@ cannot see that chant at all, and nothing will warn if its title drifts later.
 | 89 | `บทขัด วัฏฏะกะปะริตตัง` (spaced) | `บทขัดวัฏฏะกะปะริตตัง` |
 | 90 | `บทขัด ธะชัคคะสุตตัง` (spaced) | `บทขัดธะชัคคะสุตตัง` |
 | 92 | `บทขัด อาฏานาฏิยะปะริตตัง` (spaced) | `บทขัดอาฏานาฏิยะปะริตตัง` |
+| 96 | `บทขัด อังคุลิมาละปะริตตัง` (spaced) | `บทขัดอังคุลิมาละปะริตตัง` |
+| 97 | `บทขัด โพชฌังคะปะริตตัง` (spaced) | `บทขัดโพชฌังคะปะริตตัง` |
+| 98 | `บทขัด อะภะยะปะริตตัง` (spaced) | `บทขัดอะภะยะปะริตตัง` |
 
 Page 87's differs **twice** — the space and a doubled `ต`. Where the page and
 the table disagree, `title_roman` is composed to match the PAGE rather than
