@@ -87,7 +87,7 @@ photograph.
 | 221 | IMG_0491 | 270 |
 | 222 | IMG_0492 | 270 |
 | 223 | IMG_0493 | 270 |
-| 309 | IMG_0576 | 267 | ⟵ LAST Thai-script sheet |
+| 309 | IMG_0576 | 267 ⟵ LAST Thai-script sheet |
 | **310** | **IMG_0577** | **267** ⟵ FIRST roman sheet |
 | 311 | IMG_0578 | 267 |
 | 312 | IMG_0579 | 267 |
