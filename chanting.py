@@ -29230,15 +29230,15 @@ CHANTS = [
         #   for every page entered so far. It does not hold here.
         #   title_english carries the BOOK'S wording rather than one written
         #   for the app, and the square brackets are the book's own.
-        # ‼ CHECK [IMG_0579.PNG]: THE WORDS ARE RUN TOGETHER WITH NO SPACES,
-        #   and this was MEASURED, not judged. Item 1's first line has 34
-        #   inter-glyph gaps: one of 51px, immediately after the numeral, and
-        #   every other one between 2 and 10px. A real word space at this
-        #   resolution runs 15-25px. So the line carries exactly ONE space and
-        #   the rest is continuous. Reproduced as printed rather than divided
-        #   into words — the division is recoverable from the Pali and is
-        #   given in this batch's vocabulary, but rewriting the page's own
-        #   setting would be changing the text rather than the interaction.
+        # ‼ CHECK [IMG_0579.PNG]: THE WORD SPACING IS NARROW AND READS AS
+        #   NONE. A word space in this section measures 6-11px where a letter
+        #   gap is 3-5px, and on every line tested the count of gaps above
+        #   the line's OWN median matches the word count. The gap after each
+        #   item numeral is 52px — a DOUBLE space — and measuring against
+        #   that scale is what makes the ordinary spaces vanish. The first
+        #   reading of this page did exactly that and entered all 24 lines
+        #   run together; it was corrected before anything was built on it.
+        #   Count wide gaps against the line's own median, not an absolute.
         'id': 'yod-phrakantraipidok',
         'title_thai': '',
         'title_pali': 'YOD PHRAKANTRAIPIDOK',
@@ -29268,7 +29268,7 @@ CHANTS = [
                 'printed_number': 1,
                 'para_start': True,
                 'pali': '',
-                'pali_roman': 'itipisobhagavāarahaṃvatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā arahaṃ vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: worthy indeed is that Blessed One.',
@@ -29276,7 +29276,7 @@ CHANTS = [
             {
                 'number': 2,
                 'pali': '',
-                'pali_roman': 'itipisobhagavāsammāsambuddhovatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā sammāsambuddho vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: fully enlightened indeed is that Blessed One.',
@@ -29287,7 +29287,7 @@ CHANTS = [
             {
                 'number': 3,
                 'pali': '',
-                'pali_roman': 'itipisobhagavāvijjācaraṇasampannovatasobhagavā',
+                'pali_roman': 'itipi so bhagavā vijjācaraṇasampanno vata so bhagavā',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: perfect in knowledge and conduct indeed is that Blessed One',
@@ -29295,7 +29295,7 @@ CHANTS = [
             {
                 'number': 4,
                 'pali': '',
-                'pali_roman': 'itipisobhagavāsugatovatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā sugato vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: well-gone indeed is that Blessed One.',
@@ -29303,7 +29303,7 @@ CHANTS = [
             {
                 'number': 5,
                 'pali': '',
-                'pali_roman': 'itipisobhagavālokavidūvatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā lokavidū vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: knower of worlds indeed is that Blessed One.',
@@ -29311,7 +29311,7 @@ CHANTS = [
             {
                 'number': 6,
                 'pali': '',
-                'pali_roman': 'arahantaṃsaraṇaṃgacchāmi.',
+                'pali_roman': 'arahantaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Worthy One I go for refuge.',
@@ -29319,7 +29319,7 @@ CHANTS = [
             {
                 'number': 7,
                 'pali': '',
-                'pali_roman': 'arahantaṃsirasānamāmi.',
+                'pali_roman': 'arahantaṃ sirasā namāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Worthy One I bow with my head.',
@@ -29327,7 +29327,7 @@ CHANTS = [
             {
                 'number': 8,
                 'pali': '',
-                'pali_roman': 'sammāsambuddhaṃsaraṇaṃgacchāmi.',
+                'pali_roman': 'sammāsambuddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Fully Enlightened One I go for refuge.',
@@ -29335,7 +29335,7 @@ CHANTS = [
             {
                 'number': 9,
                 'pali': '',
-                'pali_roman': 'sammāsambuddhaṃsirasānamāmi.',
+                'pali_roman': 'sammāsambuddhaṃ sirasā namāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Fully Enlightened One I bow with my head.',
@@ -29343,7 +29343,7 @@ CHANTS = [
             {
                 'number': 10,
                 'pali': '',
-                'pali_roman': 'vijjācaraṇasampannaṃsaraṇaṃgacchāmi.',
+                'pali_roman': 'vijjācaraṇasampannaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the One Perfect in Knowledge and Conduct I go for refuge.',
@@ -29351,7 +29351,7 @@ CHANTS = [
             {
                 'number': 11,
                 'pali': '',
-                'pali_roman': 'vijjācaraṇasampannaṃsirasānamāmi.',
+                'pali_roman': 'vijjācaraṇasampannaṃ sirasā namāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the One Perfect in Knowledge and Conduct I bow with my head.',
@@ -29359,21 +29359,22 @@ CHANTS = [
             {
                 'number': 12,
                 'pali': '',
-                'pali_roman': 'sugataṃsaraṇaṃgacchāmi.',
+                'pali_roman': 'sugataṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Well-Gone One I go for refuge.',
             },
-            # ‼ CHECK [IMG_0579.PNG]: ONE LINE BREAKS THE RULE. Verse 13
-            #   prints 'sugataṃsirasā namāmi.' with a clear space before
-            #   namāmi, where the identical construction at verses 7, 9, 11
-            #   and 15 has none. Measured on the row and read at 5x. Kept as
-            #   printed on all five lines; the book is inconsistent and the
-            #   inconsistency is the record.
+            # ‼ CHECK [IMG_0579.PNG]: Verse 13's space before namāmi is the
+            #   ONE gap on this sheet wide enough to survive a naive absolute
+            #   threshold, at 9px where its neighbours sit at 6px. It is NOT
+            #   an anomaly in the book — it is the same word space as every
+            #   other line, printed a little wider. Recorded because the
+            #   first reading treated it as the page's only space, and that
+            #   was the clue that the reading was wrong.
             {
                 'number': 13,
                 'pali': '',
-                'pali_roman': 'sugataṃsirasā namāmi.',
+                'pali_roman': 'sugataṃ sirasā namāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Well-Gone One I bow with my head.',
@@ -29381,7 +29382,7 @@ CHANTS = [
             {
                 'number': 14,
                 'pali': '',
-                'pali_roman': 'lokavidaṃsaraṇaṃgacchāmi.',
+                'pali_roman': 'lokavidaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Knower of Worlds I go for refuge.',
@@ -29389,7 +29390,7 @@ CHANTS = [
             {
                 'number': 15,
                 'pali': '',
-                'pali_roman': 'lokavidaṃsirasānamāmi.',
+                'pali_roman': 'lokavidaṃ sirasā namāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Knower of Worlds I bow with my head.',
@@ -29399,7 +29400,7 @@ CHANTS = [
                 'printed_number': 2,
                 'para_start': True,
                 'pali': '',
-                'pali_roman': 'itipisobhagavāanuttarovatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā anuttaro vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: unsurpassed indeed is that Blessed One.',
@@ -29407,7 +29408,7 @@ CHANTS = [
             {
                 'number': 17,
                 'pali': '',
-                'pali_roman': 'itipisobhagavāpurisadammasārathivatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā purisadammasārathi vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: trainer of tameable people indeed is that Blessed One.',
@@ -29415,7 +29416,7 @@ CHANTS = [
             {
                 'number': 18,
                 'pali': '',
-                'pali_roman': 'itipisobhagavāsatthādevamanussānaṃvatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā satthā devamanussānaṃ vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: teacher of devas and humans indeed is that Blessed One.',
@@ -29423,7 +29424,7 @@ CHANTS = [
             {
                 'number': 19,
                 'pali': '',
-                'pali_roman': 'itipisobhagavābuddhovatasobhagavā.',
+                'pali_roman': 'itipi so bhagavā buddho vata so bhagavā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: awakened indeed is that Blessed One.',
@@ -29431,7 +29432,7 @@ CHANTS = [
             {
                 'number': 20,
                 'pali': '',
-                'pali_roman': 'anuttaraṃsaraṇaṃgacchāmi.',
+                'pali_roman': 'anuttaraṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Unsurpassed One I go for refuge.',
@@ -29439,7 +29440,7 @@ CHANTS = [
             {
                 'number': 21,
                 'pali': '',
-                'pali_roman': 'anuttaraṃsirasānamāmi.',
+                'pali_roman': 'anuttaraṃ sirasā namāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Unsurpassed One I bow with my head.',
@@ -29447,7 +29448,7 @@ CHANTS = [
             {
                 'number': 22,
                 'pali': '',
-                'pali_roman': 'purisadammasārathisaraṇaṃgacchāmi.',
+                'pali_roman': 'purisadammasārathi saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Trainer of Tameable People I go for refuge.',
@@ -29455,7 +29456,7 @@ CHANTS = [
             {
                 'number': 23,
                 'pali': '',
-                'pali_roman': 'purisadammasārathisirasānamāmi.',
+                'pali_roman': 'purisadammasārathi sirasā namāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Trainer of Tameable People I bow with my head.',
@@ -29463,7 +29464,7 @@ CHANTS = [
             {
                 'number': 24,
                 'pali': '',
-                'pali_roman': 'satthādevamanussānaṃsaraṇaṃgacchāmi.',
+                'pali_roman': 'satthā devamanussānaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Teacher of Devas and Humans I go for refuge.',
