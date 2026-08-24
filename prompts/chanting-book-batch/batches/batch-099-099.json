@@ -1,0 +1,402 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "bot-khat-jaya-parittam",
+   "jaya-parittam-dvadasamam"
+  ],
+  "pages": [
+   {
+    "page": 99,
+    "file": "IMG_0364.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-jaya-parittam",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "The top of the sheet: a centred bold title and six TWO-COLUMN rows, right column beginning at x 1020. NO indents — all six rows share a left edge at x 351-354. The chant starts and ends here."
+   },
+   {
+    "page": 99,
+    "file": "IMG_0364.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "jaya-parittam-dvadasamam",
+    "verses": "1-18",
+    "starts_here": true,
+    "note": "The rest of the sheet: a centred bold title and eighteen TWO-COLUMN rows, right column beginning at x 1020. Three rows are indented by a measured 120px against the block's own left edge of 237 — verses 1, 4 and 13 — and each opens a group. No colophon, no citation, no footnote. The chant starts and ends here."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-jaya-parittam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Six, one per two-column row, read ACROSS. One group; the chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is the contents' value; the SPACING of title_thai follows the page, which differs from the contents by one space.",
+    "pages": "IMG_0364.PNG, page 99. Title and all six rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด ชะยะปะริตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt chá-yá-bpà-rít-dtaŋ",
+   "title_english": "The Prefatory Verse for the Jaya Paritta",
+   "page_start": 99,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ชะยัง เทวะมะนุสสานัง ชะโย โหตุ ปะราชิโต",
+     "pali_roman": "Jayaṃ devamanussānaṃ jayo hotu parājito",
+     "thai": "",
+     "paiboon": "",
+     "english": "Victory for devas and humans — may there be victory, and may the defeated one be put down;",
+     "page": 99
+    },
+    {
+     "number": 2,
+     "pali": "มาระเสนา อะภิกกันตา สะมันตา ท์วาทะสะโยชะนา",
+     "pali_roman": "Mārasenā abhikkantā samantā dvādasayojanā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Māra's army came on, twelve leagues deep on every side,",
+     "page": 99
+    },
+    {
+     "number": 3,
+     "pali": "ขันติเมตตาอะธิฏฐานา วิทธังเสต์วานะ จักขุมา",
+     "pali_roman": "Khantimettā-adhiṭṭhānā vidhaṃsetvāna cakkhumā",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the One with Vision, resolved on patience and loving-kindness, scattered them;",
+     "page": 99
+    },
+    {
+     "number": 4,
+     "pali": "ภะวาภะเว สังสะรันโต ทิพพะจักขุง วิโสธะยิ",
+     "pali_roman": "Bhavābhave saṃsaranto dibbacakkhuṃ visodhayi",
+     "thai": "",
+     "paiboon": "",
+     "english": "wandering on from existence to existence, he purified the divine eye,",
+     "page": 99
+    },
+    {
+     "number": 5,
+     "pali": "ปะริยาปันนาทิโสตถานัง หิตายะ จะ สุขายะ จะ",
+     "pali_roman": "Pariyāpannādisotthānaṃ hitāya ca sukhāya ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "for the safety, the welfare and the happiness of all, beginning with those still bound to the round.",
+     "page": 99
+    },
+    {
+     "number": 6,
+     "pali": "พุทธะกิจจัง วิโสเธต์วา ปะริตตันตัมภะณามะ เห ฯ",
+     "pali_roman": "Buddhakiccaṃ visodhetvā parittantambhaṇāma he.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having brought the Buddha's work to completion — let us now recite that paritta, friends.",
+     "page": 99
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ชะยะ",
+     "pali_roman": "jaya",
+     "meaning": "victory. The last of the Twelve Tamnan is named for it, and the whole set closes on the word"
+    },
+    {
+     "pali": "ท์วาทะสะโยชะนา",
+     "pali_roman": "dvādasayojanā",
+     "meaning": "twelve yojanas — the depth of Māra's army on every side. A yojana is roughly the distance an ox-cart travels in a day"
+    },
+    {
+     "pali": "จักขุมา",
+     "pali_roman": "cakkhumā",
+     "meaning": "'the one who has eyes', an epithet of the Buddha. It answers Māra's army with sight rather than force"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0364.PNG",
+     "issue": "A TWELFTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด ชะยะปะริตตัง with a SPACE after บทขัด; the สารบัญ has บทขัดชะยะปะริตตัง without one. The page wins, so the never-spell-a-title-two-ways test goes silent for this chant. This is now every บทขัด from page 82 on without exception."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0364.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left ชะยัง เทวะมะนุสสานัง + right ชะโย โหตุ ปะราชิโต."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0364.PNG",
+     "issue": "NO INDENTS in this chant. All six rows measured at x 351-354 against each other — the block has a single flat left edge, unlike the chant below it. One paragraph."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0364.PNG",
+     "issue": "The row ends ปะริตตันตัมภะณามะ เห ฯ with PAIYANNOI (ฯ) and a space before it, not a full stop. Reproduced as printed; the romanisation closes with a full stop because ฯ has no roman equivalent here."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0364.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "jaya-parittam-dvadasamam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Eighteen, one per two-column row, read ACROSS. Three groups — verses 1-3, 4-12 and 13-18.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_thai and title_roman are both the contents' values and they agree with the page.",
+    "pages": "IMG_0364.PNG, page 99. Title and all eighteen rows are on this page; the chant starts and ends here. Page 100 opens 13. ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา, so nothing carries over."
+   },
+   "title_thai": "ชะยะปะริตตัง ท์วาทะสะมัง",
+   "title_pali": "",
+   "title_roman": "Jayaparittaṃ dvādasamaṃ",
+   "title_english": "The Jaya Paritta, the Twelfth",
+   "page_start": 99,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "มะหาการุณิโก นาโถ หิตายะ สัพพะปาณินัง",
+     "pali_roman": "Mahākāruṇiko nātho hitāya sabbapāṇinaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Protector of great compassion, for the welfare of all living beings,",
+     "page": 99,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "ปูเรต์วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง",
+     "pali_roman": "Pūretvā pāramī sabbā patto sambodhimuttamaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "having fulfilled all the perfections, reached the supreme awakening.",
+     "page": 99
+    },
+    {
+     "number": 3,
+     "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง ฯ",
+     "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the speaking of this truth, may the blessing of victory be yours.",
+     "page": 99
+    },
+    {
+     "number": 4,
+     "pali": "ชะยันโต โพธิยา มูเล สัก์ยานัง นันทิวัฑฒะโน",
+     "pali_roman": "Jayanto bodhiyā mūle sakyānaṃ nandivaḍḍhano",
+     "thai": "",
+     "paiboon": "",
+     "english": "Victorious at the foot of the Bodhi tree, increaser of the joy of the Sakyans,",
+     "page": 99,
+     "para_start": true
+    },
+    {
+     "number": 5,
+     "pali": "เอวัง ต์วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล.",
+     "pali_roman": "Evaṃ tvaṃ vijayo hohi jayassu jayamaṅgale.",
+     "thai": "",
+     "paiboon": "",
+     "english": "so may you too be victorious — be victorious in the blessing of victory.",
+     "page": 99
+    },
+    {
+     "number": 6,
+     "pali": "อะปะราชิตะปัลลังเก สีเส ปะฐะวิโปกขะเร",
+     "pali_roman": "Aparājitapallaṅke sīse pathavipokkhare",
+     "thai": "",
+     "paiboon": "",
+     "english": "On the unconquered seat, at the crown of the earth's lotus-ground,",
+     "page": 99
+    },
+    {
+     "number": 7,
+     "pali": "อะภิเสเก สัพพะพุทธานัง อัคคัปปัตโต ปะโมทะติ ฯ",
+     "pali_roman": "Abhiseke sabbabuddhānaṃ aggappatto pamodati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "at the consecration place of all the Buddhas, he rejoices, having reached the highest.",
+     "page": 99
+    },
+    {
+     "number": 8,
+     "pali": "สุนักขัตตัง สุมังคะลัง สุปะภาตัง สุหุฏฐิตัง",
+     "pali_roman": "Sunakkhattaṃ sumaṅgalaṃ supabhātaṃ suhuṭṭhitaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "A good star, a good blessing, a good dawn, a good waking,",
+     "page": 99
+    },
+    {
+     "number": 9,
+     "pali": "สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ์รัห์มะจาริสุ.",
+     "pali_roman": "Sukhaṇo sumuhutto ca suyiṭṭhaṃ brahmacārisu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "a good moment, a good instant — and a gift well given to those who live the holy life.",
+     "page": 99
+    },
+    {
+     "number": 10,
+     "pali": "ปะทักขิณัง กายะกัมมัง วาจากัมมัง ปะทักขิณัง",
+     "pali_roman": "Padakkhiṇaṃ kāyakammaṃ vācākammaṃ padakkhiṇaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Auspicious the act of body, auspicious the act of speech,",
+     "page": 99
+    },
+    {
+     "number": 11,
+     "pali": "ปะทักขิณัง มะโนกัมมัง ปะณิธี เต ปะทักขิณา.",
+     "pali_roman": "Padakkhiṇaṃ manokammaṃ paṇidhī te padakkhiṇā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "auspicious the act of mind, and auspicious are your aspirations.",
+     "page": 99
+    },
+    {
+     "number": 12,
+     "pali": "ปะทักขิณานิ กัต์วานะ ละภันตัตเถ ปะทักขิเณ.",
+     "pali_roman": "Padakkhiṇāni katvāna labhantatthe padakkhiṇe.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having done what is auspicious, they gain the auspicious goods.",
+     "page": 99
+    },
+    {
+     "number": 13,
+     "pali": "โส อัตถะลัทโธ สุขิโต วิรุพโห พุทธะสาสะเน",
+     "pali_roman": "So atthaladdho sukhito virubho buddhasāsane",
+     "thai": "",
+     "paiboon": "",
+     "english": "May he, having gained the goal, be happy, thriving in the Buddha's teaching;",
+     "page": 99,
+     "para_start": true
+    },
+    {
+     "number": 14,
+     "pali": "อะโรโค สุขิโต โหหิ สะหะ สัพเพหิ ญาติภิ.",
+     "pali_roman": "Arogo sukhito hohi saha sabbehi ñātibhi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may he be free of illness and happy, together with all his kin.",
+     "page": 99
+    },
+    {
+     "number": 15,
+     "pali": "สา อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน",
+     "pali_roman": "Sā atthaladdhā sukhitā virubhā buddhasāsane",
+     "thai": "",
+     "paiboon": "",
+     "english": "May she, having gained the goal, be happy, thriving in the Buddha's teaching;",
+     "page": 99
+    },
+    {
+     "number": 16,
+     "pali": "อะโรคา สุขิตา โหหิ สะหะ สัพเพหิ ญาติภิ.",
+     "pali_roman": "Arogā sukhitā hohi saha sabbehi ñātibhi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may she be free of illness and happy, together with all her kin.",
+     "page": 99
+    },
+    {
+     "number": 17,
+     "pali": "เต อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน",
+     "pali_roman": "Te atthaladdhā sukhitā virubhā buddhasāsane",
+     "thai": "",
+     "paiboon": "",
+     "english": "May they, having gained the goal, be happy, thriving in the Buddha's teaching;",
+     "page": 99
+    },
+    {
+     "number": 18,
+     "pali": "อะโรคา สุขิตา โหถะ สะหะ สัพเพหิ ญาติภิ.",
+     "pali_roman": "Arogā sukhitā hotha saha sabbehi ñātibhi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they be free of illness and happy, together with all their kin.",
+     "page": 99
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปะทักขิณะ",
+     "pali_roman": "padakkhiṇa",
+     "meaning": "auspicious — literally 'to the right'. It is the same word as circumambulating a shrine keeping it on your right, and the chant applies it to body, speech and mind in turn"
+    },
+    {
+     "pali": "อะปะราชิตะปัลลังกะ",
+     "pali_roman": "aparājitapallaṅka",
+     "meaning": "'the unconquered seat' — the spot under the Bodhi tree where every Buddha sits and is never driven back"
+    },
+    {
+     "pali": "นันทิวัฑฒะโน",
+     "pali_roman": "nandivaḍḍhano",
+     "meaning": "'increaser of joy'. A title for the Buddha as the Sakyan clan's own, not as a world-teacher"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 13,
+     "file": "IMG_0364.PNG",
+     "issue": "‼‼ THREE MORE BARE พ WHERE THE CANON HAS ฬ, AND THIS IS THE CLEANEST COMPARISON THE BOOK HAS GIVEN. Verses 13, 15 and 17 print วิรุพโห / วิรุพหา / วิรุพหา where standard Pali is viruḷho / viruḷhā (วิรุฬโห / วิรุฬหา). At 4x each letter is BARE — two humps, no ascender — and each one sits on the SAME LINE, at the same size, three words away from the พ of พุทธะสาสะเน. They are identical in shape and height. That is a same-line, same-size control the earlier instances did not have. Running total is now SEVEN across pages 85, 90, 95, 97 and 99 x3. Reproduced as printed, and the romanisation follows the printed พ (virubho / virubhā) exactly as pages 85, 90, 95 and 97 did — those give avirubhichandā, sobasa, virubhako and abhipībito, all non-words. Still one look at the book away from being settled."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0364.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left มะหาการุณิโก นาโถ + right หิตายะ สัพพะปาณินัง."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0364.PNG",
+     "issue": "Three indents measured at 120px against the block's own left edge of 237 — verses 1, 4 and 13. Verse 1 is the chant's own start, so para_start is set on 4 and 13 only. The groups are 1-3 (the truth-utterance), 4-12 (the victory and auspiciousness verses) and 13-18 (the three blessings, masculine, feminine and plural)."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0364.PNG",
+     "issue": "Verses 3 and 7 end with PAIYANNOI (ฯ) and a space before it, where verses 5, 9, 11, 12, 14, 16 and 18 end with a full stop. Both reproduced as printed; the romanisations use a full stop throughout because ฯ has no roman equivalent here."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0364.PNG",
+     "issue": "Verses 13/15/17 and 14/16/18 are the SAME blessing three times over, differing only in gender and number — โส/สา/เต and โหหิ/โหหิ/โหถะ, with อัตถะลัทโธ/อัตถะลัทธา/อัตถะลัทธา and อะโรโค/อะโรคา/อะโรคา. Each of the six lines was read off the sheet separately rather than copied down."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0364.PNG",
+     "issue": "No colophon and no citation. An ink profile below the last row found marks only at x 150-201 and x 1911+, which are the page edge and the binding shadow, not text."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0364.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-jaya-parittam",
+   "jaya-parittam-dvadasamam"
+  ],
+  "continues": [],
+  "resume_from": null,
+  "paiboon_scan": "Nothing to scan. Both chants are printed in Pali only, so paiboon is empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0364.PNG read end to end. Page number 99 read off the sheet. Two centred bold titles, two blocks, no footnote, no rule, no citation, no colophon. An ink profile of the whole sheet found no text below the last row.",
+  "notes": "Page 99 closes the TWELVE TAMNAN. Jaya is the twelfth, with its own บทขัด first as all eleven before it had. Page 100 opens a numbered chant, 13. ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา, so the set is complete and the book moves on. The page also gives the ฬ/พ question its cleanest test yet — see the check on verse 13.",
+  "diacritic_exceptions": []
+ }
+}
