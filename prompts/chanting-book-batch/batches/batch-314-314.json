@@ -1,0 +1,303 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "yod-phrakantraipidok"
+  ],
+  "pages": [
+   {
+    "page": 314,
+    "file": "IMG_0581.PNG",
+    "script": "roman",
+    "columns": 1,
+    "chant": "yod-phrakantraipidok",
+    "verses": "51-71",
+    "starts_here": false,
+    "note": "SINGLE COLUMN. Items 6, 7 and 8 repeat the formula of the previous sheet — the five jhanas, the four formless bases, the four paths and four fruits — one line each. Item 9 then CHANGES KIND ENTIRELY: run-on PROSE that wraps at the measure, carrying heart-syllable formulas, em dashes and hyphenated line breaks. The seventeen formula lines and the four prose paragraphs therefore need different layouts on one sheet. The series carries on to page 315."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "yod-phrakantraipidok",
+   "continuation_of": "yod-phrakantraipidok",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-one, verses 51 to 71. Items 6, 7 and 8 are one verse per printed line and inherit the chant's 'lines' layout. Item 9 is FOUR PROSE PARAGRAPHS, each carrying para_start AND para_layout 'prose' — the chant's own layout is 'lines' and would otherwise set them as a stack of short lines.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text, with the narrow word spacing transcribed as ordinary word division.",
+    "pages": "IMG_0581.PNG, page 314, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 51,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā paṭhamajhāna dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the first jhāna.",
+     "page": 314,
+     "para_start": true,
+     "printed_number": 6
+    },
+    {
+     "number": 52,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā dutiyajhāna dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the second jhāna."
+    },
+    {
+     "number": 53,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā tatiyajhāna dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the third jhāna."
+    },
+    {
+     "number": 54,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā catutthajhāna dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fourth jhāna."
+    },
+    {
+     "number": 55,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā pañcamajhāna dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fifth jhāna."
+    },
+    {
+     "number": 56,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā ākāsānañcāyatana dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite space.",
+     "para_start": true,
+     "printed_number": 7
+    },
+    {
+     "number": 57,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā viññānañcāyatana dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite consciousness."
+    },
+    {
+     "number": 58,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā ākiñcaññāyatana dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of nothingness."
+    },
+    {
+     "number": 59,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā nevasaññānāsaññāyatana dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of neither-perception-nor-non-perception."
+    },
+    {
+     "number": 60,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā sotāpattimagga dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of stream-entry.",
+     "para_start": true,
+     "printed_number": 8
+    },
+    {
+     "number": 61,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā sakidāgāmimagga dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of once-returning."
+    },
+    {
+     "number": 62,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā anāgāmimagga dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of non-returning."
+    },
+    {
+     "number": 63,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā arahattamagga dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of arahantship."
+    },
+    {
+     "number": 64,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā sotāpattiphala dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of stream-entry."
+    },
+    {
+     "number": 65,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā sakidāgāmiphala dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of once-returning."
+    },
+    {
+     "number": 66,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā anāgāmiphala dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of non-returning."
+    },
+    {
+     "number": 67,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā arahattaphala dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of arahantship."
+    },
+    {
+     "number": 68,
+     "pali": "",
+     "pali_roman": "kusalādhammā itipi so bhagavā a-ā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi jambhūdīpañca issaro kusalādhammā namobuddhāya namodhammāya namosan—ghāya pañcabuddhānamāmihaṃ āpāmacupa dimasamaṇkhu saṃvidhāpukayapa upasajasahe pāsāyaso.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Wholesome states. Such is the Blessed One. For as long as life lasts I go to the Buddha for refuge. Lord of the Jambū continent, wholesome states. Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha. I revere the five Buddhas — followed by the heart-syllable formulas.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 9
+    },
+    {
+     "number": 69,
+     "pali": "",
+     "pali_roman": "sosososasa a-a-a-a-ni tejasu nemabhūcanāvive asaṃvisulopusabubha iśvāsu, susvā-i, kusalādhammā citti vi-atthi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Heart-syllable formulas, each letter standing for a whole phrase; then: wholesome states, the mind, and what is present.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 70,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā arahaṃ a-ā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi sābodhipañca issaro dhammā. kusalā dhammā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One, the worthy one. For as long as life lasts I go to the Buddha for refuge. Lord of the five awakenings, states. Wholesome states",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 71,
+     "pali": "",
+     "pali_roman": "nandavivaṅko iti sammāsambuddho sugalāno yāvajīvaṃ buddhaṃ saraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Nandavivaṅka: thus the Fully Enlightened One, the well-gone. For as long as life lasts I go to the Buddha for refuge.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "jhāna",
+     "meaning": "the meditative absorptions. Item 6 counts FIVE, the Abhidhamma reckoning, where the suttas usually count four"
+    },
+    {
+     "pali": "",
+     "pali_roman": "āyatana",
+     "meaning": "base or sphere. Item 7 runs the four formless attainments in order"
+    },
+    {
+     "pali": "",
+     "pali_roman": "magga / phala",
+     "meaning": "path and fruit. Item 8 pairs each of the four stages with its fruit, eight lines in all"
+    },
+    {
+     "pali": "",
+     "pali_roman": "a-ā, so-so-sa-sa, a-a-a-a-ni",
+     "meaning": "heart syllables — each letter stands for a whole phrase, a Thai devotional convention. They are abbreviations, not words, which is why they cannot be translated line for line"
+    },
+    {
+     "pali": "",
+     "pali_roman": "jambhūdīpa",
+     "meaning": "the Jambu continent, the southern continent of Buddhist cosmology — the human world"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 68,
+     "file": "IMG_0581.PNG",
+     "issue": "⚠ ITEM 9 IS THE LEAST CERTAIN TEXT IN THIS CHANT AND IS WORTH CHECKING AGAINST THE BOOK BEFORE ANYTHING RELIES ON IT. It is heart-syllable material — strings like sosososasa, a-a-a-a-ni, āpāmacupa, dimasamaṇkhu — where word division CANNOT be inferred from sense, because the syllables are abbreviations rather than words. The division here follows the page's own measured spacing where that is decisive and the known Thai text elsewhere. Read at 3x magnification on a crop rather than off the full sheet."
+    },
+    {
+     "verse": 68,
+     "file": "IMG_0581.PNG",
+     "issue": "A WORD BROKEN ACROSS A LINE BY A HYPHEN. Line 2 ends 'namodham-' and line 3 opens 'māya'. Rejoined as namodhammāya, which is the expected homage to the Dhamma and is not in doubt. The hyphen is the compositor's and is not carried into the text."
+    },
+    {
+     "verse": 68,
+     "file": "IMG_0581.PNG",
+     "issue": "AN EM DASH INSIDE A WORD, MID-LINE — the page prints 'namosan—ghāya' where the word is namosaṅghāya, homage to the Saṅgha. It is NOT a line break: the dash sits in the middle of a line with text either side. Kept exactly as printed, because unlike the hyphen above it is not a wrapping artefact and removing it would be editing the page."
+    },
+    {
+     "verse": 68,
+     "file": "IMG_0581.PNG",
+     "issue": "THE SPACING MEASUREMENT DECIDED ONE JOIN THAT THE EYE COULD NOT. Line 3 shows four wide gaps for five tokens, which separates 'pañcabuddhānamāmihaṃ' from 'āpāmacupa' — they look joined at full-page zoom. The same line's median gap is 3px and the wide ones 6-8px."
+    },
+    {
+     "verse": 70,
+     "file": "IMG_0581.PNG",
+     "issue": "NO FULL STOP at the end of verse 70 — the paragraph simply stops after 'kusalā dhammā'. Clear paper after it at 5x, and the next paragraph begins indented. Kept as printed."
+    },
+    {
+     "verse": 71,
+     "file": "IMG_0581.PNG",
+     "issue": "'saraṇaṃgacchāmi' IS PRINTED AS ONE WORD HERE, where verses 68 and 70 print 'saraṇaṃ gacchāmi' as two. Measured: this line carries a single wide gap where the others carry several. The book is inconsistent and both forms are kept as set."
+    },
+    {
+     "verse": 51,
+     "file": "IMG_0581.PNG",
+     "issue": "Item 6 counts FIVE jhanas, which is the Abhidhamma reckoning rather than the suttas' four. Not an error in the book and not to be 'corrected' to four."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "yod-phrakantraipidok"
+  ],
+  "resume_from_page": 315,
+  "resume_from_file": "IMG_0582.PNG",
+  "resume_from": "yod-phrakantraipidok",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in saraṇaṃ and ñāṇa, t with dot below in paṭhama, and the s with acute in iśvāsu left exactly as set. The em dash inside namosan—ghāya is kept; the wrapping hyphen in namodham-/māya is not.",
+  "page_scan": "agrees. One row for one page covering verses 51-71, the whole of what this page adds. Verse 51 carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "⚠ ITEM 9 IS AN UNREVIEWED DRAFT OF UNUSUALLY LOW CONFIDENCE and is the one place in this section that most needs the book in hand. Three findings. (1) THE SHEET CARRIES TWO LAYOUTS: seventeen formula lines that inherit the chant's 'lines' layout, then four PROSE paragraphs that each have to declare para_layout explicitly. (2) HEART-SYLLABLE MATERIAL CANNOT BE DIVIDED BY SENSE — sosososasa, a-a-a-a-ni, āpāmacupa are abbreviations where each letter stands for a phrase, so the only guides are the page's measured spacing and the known Thai text. (3) THE BOOK USES AN EM DASH INSIDE A WORD, mid-line, in namosan—ghāya; that is kept, while the ordinary wrapping hyphen in namodham-/māya is not. Two different marks, two different decisions.",
+  "diacritic_exceptions": []
+ }
+}

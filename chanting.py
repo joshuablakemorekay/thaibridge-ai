@@ -29221,7 +29221,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 50; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 71; the rest is not in the app yet.
         # ‼ CHECK [IMG_0579.PNG]: THE BOOK PRINTS ENGLISH ON THIS PAGE, and it
         #   is the first page in the book to do so. Beneath the title, centred
         #   and in square brackets: [The Peak of Tipitaka]. chanting.py states
@@ -29710,6 +29710,227 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the supramundane.',
+            },
+            # ‼ CHECK [IMG_0581.PNG]: Item 6 counts FIVE jhanas, which is the
+            #   Abhidhamma reckoning rather than the suttas' four. Not an
+            #   error in the book and not to be 'corrected' to four.
+            {
+                'number': 51,
+                'page': 314,
+                'printed_number': 6,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā paṭhamajhāna dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the first jhāna.',
+            },
+            {
+                'number': 52,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā dutiyajhāna dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the second jhāna.',
+            },
+            {
+                'number': 53,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā tatiyajhāna dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the third jhāna.',
+            },
+            {
+                'number': 54,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā catutthajhāna dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fourth jhāna.',
+            },
+            {
+                'number': 55,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā pañcamajhāna dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fifth jhāna.',
+            },
+            {
+                'number': 56,
+                'printed_number': 7,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā ākāsānañcāyatana dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite space.',
+            },
+            {
+                'number': 57,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā viññānañcāyatana dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite consciousness.',
+            },
+            {
+                'number': 58,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā ākiñcaññāyatana dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of nothingness.',
+            },
+            {
+                'number': 59,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā nevasaññānāsaññāyatana dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of neither-perception-nor-non-perception.',
+            },
+            {
+                'number': 60,
+                'printed_number': 8,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā sotāpattimagga dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of stream-entry.',
+            },
+            {
+                'number': 61,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā sakidāgāmimagga dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of once-returning.',
+            },
+            {
+                'number': 62,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā anāgāmimagga dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of non-returning.',
+            },
+            {
+                'number': 63,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā arahattamagga dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of arahantship.',
+            },
+            {
+                'number': 64,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā sotāpattiphala dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of stream-entry.',
+            },
+            {
+                'number': 65,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā sakidāgāmiphala dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of once-returning.',
+            },
+            {
+                'number': 66,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā anāgāmiphala dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of non-returning.',
+            },
+            {
+                'number': 67,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā arahattaphala dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of arahantship.',
+            },
+            # ‼ CHECK [IMG_0581.PNG]: ⚠ ITEM 9 IS THE LEAST CERTAIN TEXT IN
+            #   THIS CHANT AND IS WORTH CHECKING AGAINST THE BOOK BEFORE
+            #   ANYTHING RELIES ON IT. It is heart-syllable material — strings
+            #   like sosososasa, a-a-a-a-ni, āpāmacupa, dimasamaṇkhu — where
+            #   word division CANNOT be inferred from sense, because the
+            #   syllables are abbreviations rather than words. The division
+            #   here follows the page's own measured spacing where that is
+            #   decisive and the known Thai text elsewhere. Read at 3x
+            #   magnification on a crop rather than off the full sheet.
+            # ‼ CHECK [IMG_0581.PNG]: A WORD BROKEN ACROSS A LINE BY A HYPHEN.
+            #   Line 2 ends 'namodham-' and line 3 opens 'māya'. Rejoined as
+            #   namodhammāya, which is the expected homage to the Dhamma and
+            #   is not in doubt. The hyphen is the compositor's and is not
+            #   carried into the text.
+            # ‼ CHECK [IMG_0581.PNG]: AN EM DASH INSIDE A WORD, MID-LINE — the
+            #   page prints 'namosan—ghāya' where the word is namosaṅghāya,
+            #   homage to the Saṅgha. It is NOT a line break: the dash sits in
+            #   the middle of a line with text either side. Kept exactly as
+            #   printed, because unlike the hyphen above it is not a wrapping
+            #   artefact and removing it would be editing the page.
+            # ‼ CHECK [IMG_0581.PNG]: THE SPACING MEASUREMENT DECIDED ONE JOIN
+            #   THAT THE EYE COULD NOT. Line 3 shows four wide gaps for five
+            #   tokens, which separates 'pañcabuddhānamāmihaṃ' from
+            #   'āpāmacupa' — they look joined at full-page zoom. The same
+            #   line's median gap is 3px and the wide ones 6-8px.
+            {
+                'number': 68,
+                'printed_number': 9,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'kusalādhammā itipi so bhagavā a-ā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi jambhūdīpañca issaro kusalādhammā namobuddhāya namodhammāya namosan—ghāya pañcabuddhānamāmihaṃ āpāmacupa dimasamaṇkhu saṃvidhāpukayapa upasajasahe pāsāyaso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Wholesome states. Such is the Blessed One. For as long as life lasts I go to the Buddha for refuge. Lord of the Jambū continent, wholesome states. Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha. I revere the five Buddhas — followed by the heart-syllable formulas.',
+            },
+            {
+                'number': 69,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'sosososasa a-a-a-a-ni tejasu nemabhūcanāvive asaṃvisulopusabubha iśvāsu, susvā-i, kusalādhammā citti vi-atthi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Heart-syllable formulas, each letter standing for a whole phrase; then: wholesome states, the mind, and what is present.',
+            },
+            # ‼ CHECK [IMG_0581.PNG]: NO FULL STOP at the end of verse 70 —
+            #   the paragraph simply stops after 'kusalā dhammā'. Clear paper
+            #   after it at 5x, and the next paragraph begins indented. Kept
+            #   as printed.
+            {
+                'number': 70,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā arahaṃ a-ā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi sābodhipañca issaro dhammā. kusalā dhammā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One, the worthy one. For as long as life lasts I go to the Buddha for refuge. Lord of the five awakenings, states. Wholesome states',
+            },
+            # ‼ CHECK [IMG_0581.PNG]: 'saraṇaṃgacchāmi' IS PRINTED AS ONE WORD
+            #   HERE, where verses 68 and 70 print 'saraṇaṃ gacchāmi' as two.
+            #   Measured: this line carries a single wide gap where the others
+            #   carry several. The book is inconsistent and both forms are
+            #   kept as set.
+            {
+                'number': 71,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': 'nandavivaṅko iti sammāsambuddho sugalāno yāvajīvaṃ buddhaṃ saraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Nandavivaṅka: thus the Fully Enlightened One, the well-gone. For as long as life lasts I go to the Buddha for refuge.',
             },
         ],
     },
