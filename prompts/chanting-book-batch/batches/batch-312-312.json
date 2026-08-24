@@ -1,0 +1,302 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "yod-phrakantraipidok"
+  ],
+  "pages": [
+   {
+    "page": 312,
+    "file": "IMG_0579.PNG",
+    "script": "roman",
+    "columns": 1,
+    "chant": "yod-phrakantraipidok",
+    "verses": "1-24",
+    "starts_here": true,
+    "note": "SINGLE COLUMN, and a wholly different kind of page from the sutta at the back. A centred title, a centred ENGLISH gloss in square brackets beneath it, then a numbered series set at TWO indent levels — measured at x 411 and x 491, with the item numerals hanging at x 336. Item 2 opens at a 131px break where lines inside an item sit 29-52px apart. The words are RUN TOGETHER with no spaces, which was measured rather than assumed. The sheet ends mid-item-2 and the series carries on to page 313."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "yod-phrakantraipidok",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. The roman section prints no bot khat.",
+    "units": "Twenty-four, verses 1 to 24, in two groups — the book's own numbered items 1 and 2, carried on the first verse of each as printed_number. The chant's layout is 'lines', one verse per printed line, so no para_layout is needed and declaring it would be noise.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text. paiboon is empty because there is no thai to romanise. The run-together word setting is reproduced exactly as printed — see the checks.",
+    "pages": "IMG_0579.PNG, page 312, read off the sheet. Offset 267."
+   },
+   "title_thai": "",
+   "title_pali": "YOD PHRAKANTRAIPIDOK",
+   "title_roman": "",
+   "title_english": "The Peak of Tipitaka",
+   "page_start": 312,
+   "layout": "lines",
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "itipisobhagavāarahaṃvatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: worthy indeed is that Blessed One.",
+     "page": 312,
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "itipisobhagavāsammāsambuddhovatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: fully enlightened indeed is that Blessed One."
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "itipisobhagavāvijjācaraṇasampannovatasobhagavā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in knowledge and conduct indeed is that Blessed One"
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "itipisobhagavāsugatovatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: well-gone indeed is that Blessed One."
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "itipisobhagavālokavidūvatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: knower of worlds indeed is that Blessed One."
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "arahantaṃsaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Worthy One I go for refuge."
+    },
+    {
+     "number": 7,
+     "pali": "",
+     "pali_roman": "arahantaṃsirasānamāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Worthy One I bow with my head."
+    },
+    {
+     "number": 8,
+     "pali": "",
+     "pali_roman": "sammāsambuddhaṃsaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Fully Enlightened One I go for refuge."
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "sammāsambuddhaṃsirasānamāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Fully Enlightened One I bow with my head."
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "vijjācaraṇasampannaṃsaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the One Perfect in Knowledge and Conduct I go for refuge."
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "vijjācaraṇasampannaṃsirasānamāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the One Perfect in Knowledge and Conduct I bow with my head."
+    },
+    {
+     "number": 12,
+     "pali": "",
+     "pali_roman": "sugataṃsaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Well-Gone One I go for refuge."
+    },
+    {
+     "number": 13,
+     "pali": "",
+     "pali_roman": "sugataṃsirasā namāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Well-Gone One I bow with my head."
+    },
+    {
+     "number": 14,
+     "pali": "",
+     "pali_roman": "lokavidaṃsaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Knower of Worlds I go for refuge."
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "lokavidaṃsirasānamāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Knower of Worlds I bow with my head."
+    },
+    {
+     "number": 16,
+     "pali": "",
+     "pali_roman": "itipisobhagavāanuttarovatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: unsurpassed indeed is that Blessed One.",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 17,
+     "pali": "",
+     "pali_roman": "itipisobhagavāpurisadammasārathivatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: trainer of tameable people indeed is that Blessed One."
+    },
+    {
+     "number": 18,
+     "pali": "",
+     "pali_roman": "itipisobhagavāsatthādevamanussānaṃvatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: teacher of devas and humans indeed is that Blessed One."
+    },
+    {
+     "number": 19,
+     "pali": "",
+     "pali_roman": "itipisobhagavābuddhovatasobhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: awakened indeed is that Blessed One."
+    },
+    {
+     "number": 20,
+     "pali": "",
+     "pali_roman": "anuttaraṃsaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Unsurpassed One I go for refuge."
+    },
+    {
+     "number": 21,
+     "pali": "",
+     "pali_roman": "anuttaraṃsirasānamāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Unsurpassed One I bow with my head."
+    },
+    {
+     "number": 22,
+     "pali": "",
+     "pali_roman": "purisadammasārathisaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Trainer of Tameable People I go for refuge."
+    },
+    {
+     "number": 23,
+     "pali": "",
+     "pali_roman": "purisadammasārathisirasānamāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Trainer of Tameable People I bow with my head."
+    },
+    {
+     "number": 24,
+     "pali": "",
+     "pali_roman": "satthādevamanussānaṃsaraṇaṃgacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Teacher of Devas and Humans I go for refuge."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "yod phrakan traipidok",
+     "meaning": "ยอดพระกัณฑ์ไตรปิฎก, a well-known Thai devotional text. The title is romanised THAI, not Pali, which is why it is set in capitals and reads unlike every other title in the book"
+    },
+    {
+     "pali": "",
+     "pali_roman": "itipi so bhagavā",
+     "meaning": "such is the Blessed One — the opening of the Buddha's nine epithets, which this text takes one at a time and turns into a refuge formula"
+    },
+    {
+     "pali": "",
+     "pali_roman": "sirasā namāmi",
+     "meaning": "I bow with my head. Paired throughout with saraṇaṃ gacchāmi, I go for refuge, so each epithet gets both"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0579.PNG",
+     "issue": "THE BOOK PRINTS ENGLISH ON THIS PAGE, and it is the first page in the book to do so. Beneath the title, centred and in square brackets: [The Peak of Tipitaka]. chanting.py states the opposite in the comment above _CONTENTS_ENGLISH — 'never taken from the book, which prints no English at all' — and that has held for every page entered so far. It does not hold here. title_english carries the BOOK'S wording rather than one written for the app, and the square brackets are the book's own."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0579.PNG",
+     "issue": "THE WORDS ARE RUN TOGETHER WITH NO SPACES, and this was MEASURED, not judged. Item 1's first line has 34 inter-glyph gaps: one of 51px, immediately after the numeral, and every other one between 2 and 10px. A real word space at this resolution runs 15-25px. So the line carries exactly ONE space and the rest is continuous. Reproduced as printed rather than divided into words — the division is recoverable from the Pali and is given in this batch's vocabulary, but rewriting the page's own setting would be changing the text rather than the interaction."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0579.PNG",
+     "issue": "ONE LINE BREAKS THE RULE. Verse 13 prints 'sugataṃsirasā namāmi.' with a clear space before namāmi, where the identical construction at verses 7, 9, 11 and 15 has none. Measured on the row and read at 5x. Kept as printed on all five lines; the book is inconsistent and the inconsistency is the record."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0579.PNG",
+     "issue": "NO FULL STOP at the end of verse 3, where the four lines around it all have one. Clear white paper after the final a at 5x. Kept as printed."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0579.PNG",
+     "issue": "THE BOOK NUMBERS ITS ITEMS and the numerals hang left of the text at x 336, outside the x 411 indent. Carried as printed_number on the first verse of each item, which is what that field is for — the app's own verse count and the book's item number are different things and are kept apart."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "yod-phrakantraipidok"
+  ],
+  "resume_from_page": 313,
+  "resume_from_file": "IMG_0580.PNG",
+  "resume_from": "yod-phrakantraipidok",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. The romanised title is the BOOK'S own roman spelling of a Thai name, not Paiboon+, and is recorded as printed.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter INCLUDING ITS SPACING: dotted m throughout, n with dot below in saraṇaṃ and vijjācaraṇa, u-macron in lokavidū. No word has been separated from its neighbour and none joined that the page prints apart.",
+  "page_scan": "agrees. One row for one page covering verses 1-24, which is the whole entry. Verse 1 carries the page key and starts the chant. No verse is orphaned and none is claimed twice. No page blocks; the bracketed English gloss belongs to the chant's title, not to a block.",
+  "notes": "Three findings, and two of them contradict things the repo currently assumes. (1) THE BOOK PRINTS ENGLISH — [The Peak of Tipitaka] — where chanting.py's own comment says it never does. title_english now carries the book's wording on this chant and is flagged for review. (2) THE WORDS ARE GENUINELY RUN TOGETHER: 34 gaps on the opening line, one of 51px after the numeral and the rest 2-10px, where a word space would be 15-25px. Reproduced as printed. (3) THE TITLE IS ROMANISED THAI, not Pali — ยอดพระกัณฑ์ไตรปิฎก — which is a third kind of title for this book after Thai script and Pali. ⚠ This whole chant is an UNREVIEWED DRAFT and the run-together lines are the hardest in the book to proofread; they are worth checking against the sheet before anyone relies on them.",
+  "diacritic_exceptions": []
+ }
+}

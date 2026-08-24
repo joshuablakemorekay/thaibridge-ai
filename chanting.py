@@ -26175,7 +26175,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 83; the rest is not in the app yet.
         # ‼ CHECK [IMG_0357.PNG]: english_unverified is set. The book prints
         #   this paritta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -26197,6 +26196,13 @@ CHANTS = [
             'english': '',
         },
         'source_printed': 'ที.ปา 11/209',
+        'closing': {
+            'pali': 'อาฏานาฏิยะปะริตตัง นิฏฐิตัง.',
+            'pali_roman': 'Āṭānāṭiyaparittaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Āṭānāṭiya Paritta.',
+        },
         'verses': [
             # ‼ CHECK [IMG_0357.PNG]: TWO COLUMNS, gutter measured at x
             #   1000-1100. Read ACROSS. FIRST PAIRING FOR CHECKING: left
@@ -27038,6 +27044,74 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'may all your misfortunes perish and your fears be stilled.',
+            },
+            # ‼ CHECK [IMG_0361.PNG]: TWO COLUMNS, gutter measured at x
+            #   900-1080 — a different position from the บทขัด below it on
+            #   this sheet, whose gutter is at x 1000-1080. Each profiled
+            #   separately.
+            {
+                'number': 84,
+                'page': 96,
+                'pali': 'สักกัต์วา สังฆะระตะนัง โอสะถัง อุตตะมัง วะรัง',
+                'pali_roman': 'Sakkatvā saṅgharatanaṃ osathaṃ uttamaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having honoured the Jewel of the Saṅgha, the supreme and excellent medicine,',
+            },
+            {
+                'number': 85,
+                'pali': 'อาหุเนยยัง ปาหุเนยยัง สังฆะเตเชนะ โสตถินา',
+                'pali_roman': 'Āhuneyyaṃ pāhuneyyaṃ saṅghatejena sotthinā',
+                'thai': '',
+                'paiboon': '',
+                'english': "worthy of gifts and of hospitality — by the Saṅgha's power, in safety,",
+            },
+            {
+                'number': 86,
+                'pali': 'นัสสันตุปัททะวา สัพเพ โรคา วูปะสะเมนตุ เต.',
+                'pali_roman': 'Nassantupaddavā sabbe rogā vūpasamentu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may all your misfortunes perish and your diseases be stilled.',
+            },
+            # ‼ CHECK [IMG_0361.PNG]: THE CLOSING BLESSING IS A SEPARATE
+            #   STANZA and is indented, so verse 87 carries para_start. Verses
+            #   87 to 90 are not part of the medicine sequence above them —
+            #   they are the general blessing that ends the whole paritta, and
+            #   verses 89 and 90 are the four-things verse quoted on its own
+            #   all over Theravāda practice.
+            {
+                'number': 87,
+                'para_start': True,
+                'pali': 'สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ',
+                'pali_roman': 'Sabbītiyo vivajjantu sabbarogo vinassatu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May all calamities be avoided, may every disease be destroyed;',
+            },
+            {
+                'number': 88,
+                'pali': 'มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ.',
+                'pali_roman': 'Mā te bhavatvantarāyo sukhī dīghāyuko bhava.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may no obstacle be yours; be happy and long-lived.',
+            },
+            {
+                'number': 89,
+                'pali': 'อะภิวาทะนะสีลิสสะ นิจจัง วุฑฒาปะจายิโน',
+                'pali_roman': 'Abhivādanasīlissa niccaṃ vuḍḍhāpacāyino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For one whose habit is to salute, who constantly honours the elders,',
+            },
+            {
+                'number': 90,
+                'pali': 'จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.',
+                'pali_roman': 'Cattāro dhammā vaḍḍhanti āyu vaṇṇo sukhaṃ balaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'four things increase: long life, beauty, happiness and strength.',
             },
         ],
     },
@@ -28924,6 +28998,475 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'they rejoice together with the beings — those disciples of yours are famed among people.”',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0361.PNG]: A NINTH TITLE THE CONTENTS TEST CANNOT SEE.
+        #   The page prints บทขัด อังคุลิมาละปะริตตัง with a SPACE after
+        #   บทขัด; the สารบัญ has บทขัดอังคุลิมาละปะริตตัง without one. Same
+        #   as pages 82, 86, 87, 88, 89, 90 and 92. The page is reproduced;
+        #   the romanisation is unaffected by the space, so the contents'
+        #   value is used unchanged.
+        # ‼ CHECK [IMG_0361.PNG]: english_unverified is set, and this chant's
+        #   English is the least certain on the page. Verses 1 to 4 are one
+        #   long relative clause whose main verb does not arrive until verse
+        #   5, and the gloss keeps the book's order rather than reassembling
+        #   it into English syntax.
+        'id': 'bot-khat-angulimala-parittam',
+        'title_thai': 'บทขัด อังคุลิมาละปะริตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt aŋ-kú-lí-maa-lá-bpà-rít-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Aṅgulimāla Paritta',
+        'page_start': 96,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0361.PNG]: TWO COLUMNS, gutter measured at x
+            #   1000-1080. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   ปะริตตัง ยัมภะณันตัสสะ + right นิสินนัฏฐานะโธวะนัง.
+            {
+                'number': 1,
+                'page': 96,
+                'pali': 'ปะริตตัง ยัมภะณันตัสสะ นิสินนัฏฐานะโธวะนัง',
+                'pali_roman': 'Parittaṃ yambhaṇantassa nisinnaṭṭhānadhovanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The paritta which, for one reciting it, the water that washes the place where he sat',
+            },
+            {
+                'number': 2,
+                'pali': 'อุทะกัมปิ วินาเสติ สัพพะเมวะ ปะริสสะยัง.',
+                'pali_roman': 'Udakampi vināseti sabbamevaparissayaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'destroys every danger whatsoever;',
+            },
+            {
+                'number': 3,
+                'pali': 'โสตถินา คัพภะวุฏฐานัง ยัญจะ สาเธติ ตังขะเณ',
+                'pali_roman': 'Sotthinā gabbhavuṭṭhānaṃ yañca sādheti taṅkhaṇe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and which brings about a safe delivery of the child in that very moment;',
+            },
+            # ‼ CHECK [IMG_0361.PNG]: VERSE 4 ENDS WITH A FULL STOP where the
+            #   sentence plainly runs on into verse 5 — ภาสิตัง. then
+            #   กัปปัฏฐายิ มะหาเตชัง ปะริตตันตัมภะณามะ เห. Read at 1.8x; the
+            #   mark is on the baseline. Reproduced as printed. The three
+            #   sibling prefaces on pages 88, 89 and 92 all take a comma in
+            #   that position, so this one is the odd one.
+            {
+                'number': 4,
+                'pali': 'เถรัสสังคุลิมาลัสสะ โลกะนาเถนะ ภาสิตัง.',
+                'pali_roman': 'Therassaṅgulimālassa lokanāthena bhāsitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'spoken by the Refuge of the World to the elder Aṅgulimāla;',
+            },
+            {
+                'number': 5,
+                'pali': 'กัปปัฏฐายิ มะหาเตชัง ปะริตตันตัมภะณามะ เห.',
+                'pali_roman': 'Kappaṭṭhāyi mahātejaṃ parittantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'lasting an aeon and of great power: that paritta let us now recite.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0361.PNG]: A FINGER IS IN THIS PHOTOGRAPH AND IT COVERS
+        #   NO TEXT — checked, not assumed. Skin tone occupies y 2600 to the
+        #   bottom edge; the last printed line, the colophon, ends at y 2380.
+        #   Two hundred pixels of clear paper between them. Third page in this
+        #   run with a hand in frame and none has needed re-photographing.
+        # ‼ CHECK [IMG_0361.PNG]: english_unverified is set. The book prints
+        #   this paritta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition. ภะคินิ is kept as 'Sister' rather than smoothed away,
+        #   because the paritta is a speech to one woman and loses its point
+        #   without her.
+        'id': 'angulimala-parittam-navamam',
+        'title_thai': 'อังคุลิมาละปะริตตัง นะวะมัง',
+        'title_pali': 'Aṅgulimālaparittaṃ navamaṃ',
+        'title_roman': '',
+        'title_english': 'The Aṅgulimāla Paritta, the Ninth',
+        'page_start': 96,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'อังคุลิมาละปะริตตัง นิฏฐิตัง.',
+            'pali_roman': 'Aṅgulimālaparittaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Aṅgulimāla Paritta.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0361.PNG]: THE SAME SENTENCE PRINTED THREE TIMES,
+            #   IN THREE SEPARATE INDENTED PARAGRAPHS. Verses 1-3, 4-6 and 7-9
+            #   are word for word identical, and the book sets each as its own
+            #   paragraph rather than running them together — so verses 1, 4
+            #   and 7 each carry para_start and para_layout 'prose'. It is
+            #   chanted three times, like the Namo and the refuges. Recorded
+            #   because check_render walks strings in printed order and nine
+            #   lines that are really three would otherwise read as a fault.
+            # ‼ CHECK [IMG_0361.PNG]: PROSE, MEASURED: ink x 320 to x 1800
+            #   with no gutter anywhere, so this chant is NOT two-column even
+            #   though both chants above it on this same sheet are. Third
+            #   setting on one page. This chant has no chant-level layout key,
+            #   so every group declares 'prose' explicitly — the page-73 rule.
+            {
+                'number': 1,
+                'page': 96,
+                'para_layout': 'prose',
+                'pali': 'ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต,',
+                'pali_roman': 'Yatohaṃ bhagini ariyāya jātiyā jāto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sister, since I was born in the noble birth,',
+            },
+            {
+                'number': 2,
+                'pali': 'นาภิชานามิ สัญจิจจะ ปาณัง ชีวิตา โวโรเปตา,',
+                'pali_roman': 'Nābhijānāmi sañcicca pāṇaṃ jīvitā voropetā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I am not aware of having intentionally deprived any living being of life;',
+            },
+            {
+                'number': 3,
+                'pali': 'เตนะ สัจเจนะ โสตถิ เต โหตุ โสตถิ คัพภัสสะ.',
+                'pali_roman': 'Tena saccena sotthi te hotu sotthi gabbhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by that truth, may you be well and may your child be well.',
+            },
+            {
+                'number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต,',
+                'pali_roman': 'Yatohaṃ bhagini ariyāya jātiyā jāto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sister, since I was born in the noble birth,',
+            },
+            {
+                'number': 5,
+                'pali': 'นาภิชานามิ สัญจิจจะ ปาณัง ชีวิตา โวโรเปตา,',
+                'pali_roman': 'Nābhijānāmi sañcicca pāṇaṃ jīvitā voropetā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I am not aware of having intentionally deprived any living being of life;',
+            },
+            {
+                'number': 6,
+                'pali': 'เตนะ สัจเจนะ โสตถิ เต โหตุ โสตถิ คัพภัสสะ.',
+                'pali_roman': 'Tena saccena sotthi te hotu sotthi gabbhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by that truth, may you be well and may your child be well.',
+            },
+            {
+                'number': 7,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต,',
+                'pali_roman': 'Yatohaṃ bhagini ariyāya jātiyā jāto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sister, since I was born in the noble birth,',
+            },
+            {
+                'number': 8,
+                'pali': 'นาภิชานามิ สัญจิจจะ ปาณัง ชีวิตา โวโรเปตา,',
+                'pali_roman': 'Nābhijānāmi sañcicca pāṇaṃ jīvitā voropetā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I am not aware of having intentionally deprived any living being of life;',
+            },
+            # ‼ CHECK [IMG_0361.PNG]: A COLOPHON AND NO CITATION.
+            #   อังคุลิมาละปะริตตัง นิฏฐิตัง. is printed centred under the
+            #   third paragraph and goes in as `closing`. No footnote and no
+            #   marker anywhere on the sheet, so source_printed is left off —
+            #   the same as the Mora and Vaṭṭaka parittas.
+            {
+                'number': 9,
+                'pali': 'เตนะ สัจเจนะ โสตถิ เต โหตุ โสตถิ คัพภัสสะ.',
+                'pali_roman': 'Tena saccena sotthi te hotu sotthi gabbhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by that truth, may you be well and may your child be well.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 24; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0579.PNG]: THE BOOK PRINTS ENGLISH ON THIS PAGE, and it
+        #   is the first page in the book to do so. Beneath the title, centred
+        #   and in square brackets: [The Peak of Tipitaka]. chanting.py states
+        #   the opposite in the comment above _CONTENTS_ENGLISH — 'never taken
+        #   from the book, which prints no English at all' — and that has held
+        #   for every page entered so far. It does not hold here.
+        #   title_english carries the BOOK'S wording rather than one written
+        #   for the app, and the square brackets are the book's own.
+        # ‼ CHECK [IMG_0579.PNG]: THE WORDS ARE RUN TOGETHER WITH NO SPACES,
+        #   and this was MEASURED, not judged. Item 1's first line has 34
+        #   inter-glyph gaps: one of 51px, immediately after the numeral, and
+        #   every other one between 2 and 10px. A real word space at this
+        #   resolution runs 15-25px. So the line carries exactly ONE space and
+        #   the rest is continuous. Reproduced as printed rather than divided
+        #   into words — the division is recoverable from the Pali and is
+        #   given in this batch's vocabulary, but rewriting the page's own
+        #   setting would be changing the text rather than the interaction.
+        'id': 'yod-phrakantraipidok',
+        'title_thai': '',
+        'title_pali': 'YOD PHRAKANTRAIPIDOK',
+        'title_roman': '',
+        'title_english': 'The Peak of Tipitaka',
+        'page_start': 312,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0579.PNG]: THE BOOK NUMBERS ITS ITEMS and the
+            #   numerals hang left of the text at x 336, outside the x 411
+            #   indent. Carried as printed_number on the first verse of each
+            #   item, which is what that field is for — the app's own verse
+            #   count and the book's item number are different things and are
+            #   kept apart.
+            {
+                'number': 1,
+                'page': 312,
+                'printed_number': 1,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipisobhagavāarahaṃvatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: worthy indeed is that Blessed One.',
+            },
+            {
+                'number': 2,
+                'pali': '',
+                'pali_roman': 'itipisobhagavāsammāsambuddhovatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: fully enlightened indeed is that Blessed One.',
+            },
+            # ‼ CHECK [IMG_0579.PNG]: NO FULL STOP at the end of verse 3,
+            #   where the four lines around it all have one. Clear white paper
+            #   after the final a at 5x. Kept as printed.
+            {
+                'number': 3,
+                'pali': '',
+                'pali_roman': 'itipisobhagavāvijjācaraṇasampannovatasobhagavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in knowledge and conduct indeed is that Blessed One',
+            },
+            {
+                'number': 4,
+                'pali': '',
+                'pali_roman': 'itipisobhagavāsugatovatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: well-gone indeed is that Blessed One.',
+            },
+            {
+                'number': 5,
+                'pali': '',
+                'pali_roman': 'itipisobhagavālokavidūvatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: knower of worlds indeed is that Blessed One.',
+            },
+            {
+                'number': 6,
+                'pali': '',
+                'pali_roman': 'arahantaṃsaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Worthy One I go for refuge.',
+            },
+            {
+                'number': 7,
+                'pali': '',
+                'pali_roman': 'arahantaṃsirasānamāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Worthy One I bow with my head.',
+            },
+            {
+                'number': 8,
+                'pali': '',
+                'pali_roman': 'sammāsambuddhaṃsaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Fully Enlightened One I go for refuge.',
+            },
+            {
+                'number': 9,
+                'pali': '',
+                'pali_roman': 'sammāsambuddhaṃsirasānamāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Fully Enlightened One I bow with my head.',
+            },
+            {
+                'number': 10,
+                'pali': '',
+                'pali_roman': 'vijjācaraṇasampannaṃsaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the One Perfect in Knowledge and Conduct I go for refuge.',
+            },
+            {
+                'number': 11,
+                'pali': '',
+                'pali_roman': 'vijjācaraṇasampannaṃsirasānamāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the One Perfect in Knowledge and Conduct I bow with my head.',
+            },
+            {
+                'number': 12,
+                'pali': '',
+                'pali_roman': 'sugataṃsaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Well-Gone One I go for refuge.',
+            },
+            # ‼ CHECK [IMG_0579.PNG]: ONE LINE BREAKS THE RULE. Verse 13
+            #   prints 'sugataṃsirasā namāmi.' with a clear space before
+            #   namāmi, where the identical construction at verses 7, 9, 11
+            #   and 15 has none. Measured on the row and read at 5x. Kept as
+            #   printed on all five lines; the book is inconsistent and the
+            #   inconsistency is the record.
+            {
+                'number': 13,
+                'pali': '',
+                'pali_roman': 'sugataṃsirasā namāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Well-Gone One I bow with my head.',
+            },
+            {
+                'number': 14,
+                'pali': '',
+                'pali_roman': 'lokavidaṃsaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Knower of Worlds I go for refuge.',
+            },
+            {
+                'number': 15,
+                'pali': '',
+                'pali_roman': 'lokavidaṃsirasānamāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Knower of Worlds I bow with my head.',
+            },
+            {
+                'number': 16,
+                'printed_number': 2,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipisobhagavāanuttarovatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: unsurpassed indeed is that Blessed One.',
+            },
+            {
+                'number': 17,
+                'pali': '',
+                'pali_roman': 'itipisobhagavāpurisadammasārathivatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: trainer of tameable people indeed is that Blessed One.',
+            },
+            {
+                'number': 18,
+                'pali': '',
+                'pali_roman': 'itipisobhagavāsatthādevamanussānaṃvatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: teacher of devas and humans indeed is that Blessed One.',
+            },
+            {
+                'number': 19,
+                'pali': '',
+                'pali_roman': 'itipisobhagavābuddhovatasobhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: awakened indeed is that Blessed One.',
+            },
+            {
+                'number': 20,
+                'pali': '',
+                'pali_roman': 'anuttaraṃsaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Unsurpassed One I go for refuge.',
+            },
+            {
+                'number': 21,
+                'pali': '',
+                'pali_roman': 'anuttaraṃsirasānamāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Unsurpassed One I bow with my head.',
+            },
+            {
+                'number': 22,
+                'pali': '',
+                'pali_roman': 'purisadammasārathisaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Trainer of Tameable People I go for refuge.',
+            },
+            {
+                'number': 23,
+                'pali': '',
+                'pali_roman': 'purisadammasārathisirasānamāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Trainer of Tameable People I bow with my head.',
+            },
+            {
+                'number': 24,
+                'pali': '',
+                'pali_roman': 'satthādevamanussānaṃsaraṇaṃgacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Teacher of Devas and Humans I go for refuge.',
             },
         ],
     },
