@@ -61,6 +61,64 @@ rather than trusting that line — it was a quick look, not a measured read.
 last, with its own `บทขัด` first as all eleven have had. After it the book moves
 on to something new, so expect the next section heading soon.
 
+## 🐛 OPEN BUG — 11 Thai colophons are printed TWICE (pages 38-47)
+
+Found 2026-08-24 when Josh said he could see no paiboon anywhere. **Not fixed —
+raised with him and left for his call.**
+
+The book prints `จบพระวิภังค์` ("Here ends the Vibhanga") as ONE centred line
+closing the chant. The app renders it as two:
+
+    จบพระวิภังค์          <- layer-pali
+    จบพระวิภังค์          <- layer-thai   (the same line again)
+    jop pra-wi-pang        <- paiboon
+
+**Why it happened:** `templates/chanting_page.html` gates the whole closing block
+on `chant.closing.pali`, so a Thai-only colophon would not render at all unless
+its text were ALSO put in `pali`. Duplicating it was the only way to make it show.
+
+**The 11**, all in the สวดแจง section: `phra-winai-sangkhep`,
+`phra-sut-sangkhep`, `phra-sangkhani`, `phra-wiphang`, `phra-thatukatha`,
+`phra-pukkhalabanyat`, `phra-kathawatthu`, `phra-yamaka`, `phra-mahapatthan`,
+`thammasangkhani-matika-patho`, `mongkhon-chakkrawan-noi`. The other 41 closings
+are Pali (`…นิฏฐิตา`) with `thai` empty and are CORRECT — do not touch them.
+
+**The fix, when Josh says go:** widen the template condition to
+`chant.closing.pali or chant.closing.thai`, render the pali line only when there
+is one, then move those 11 lines out of `pali` into `thai` alone. Open question
+he has not answered: whether a Thai colophon should keep its `paiboon` (my
+inclination: yes, it is Thai the book prints).
+
+⚠️ This also means the app's ONLY genuine five-layer content is pages 217-221
+(59 lines). The 16 "paiboon lines" on pages 10-47 are mostly these duplicates.
+
+## ❗ The book has a SECOND, TRANSLATED pass — it starts around page 191–193
+
+Sampled 2026-08-24 after Josh asked why no page carries a `paiboon` line. The
+answer is that this book is printed in **two passes over the same material**:
+
+| pages | what is printed | layers filled |
+|---|---|---|
+| 1 – ~190 | the chants in **Pali only** | `pali`, `pali_roman`, `english` |
+| ~193 – 221+ | the same chants again, **สวดแปล** — Pali line, Thai translation beneath | all five |
+
+`IMG_0462` is a divider page: bold **`บทสวดมนต์`**, with
+**`ทำวัตรเช้าแปล`** showing through from its reverse. Pages 120, 155 and 189
+were checked in the untranscribed middle and are Pali only; 194, 195, 200, 212,
+217 and 218 all carry the translation. **The exact boundary page still needs
+reading off the sheet** — it was narrowed by sampling, not measured.
+
+**Do not read “no Thai translation is printed” on pages 67–98 as a fact about the
+book.** It is a fact about the FIRST pass. `thai` and `paiboon` are empty there
+because the page prints no Thai, exactly as the prompt requires — and they will
+start filling by themselves once the run reaches the translated section.
+
+⚠️ **DECIDE BEFORE PAGE ~193, NOT AFTER.** The translated section covers chants
+the app ALREADY HAS from the first pass. Keeping the book exactly as printed
+means they become SECOND ENTRIES — the book prints them twice, so the app shows
+them twice — rather than back-filling `thai` into the existing entry. That is
+Josh's call and it changes how every page from there on is applied.
+
 ## ⚠️ Two sessions, one `chanting.py` — what happened on page 94
 
 A second Claude session is working the **roman-script** end of the book (pages
