@@ -1,0 +1,319 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "yod-phrakantraipidok"
+  ],
+  "pages": [
+   {
+    "page": 313,
+    "file": "IMG_0580.PNG",
+    "script": "roman",
+    "columns": 1,
+    "chant": "yod-phrakantraipidok",
+    "verses": "25-50",
+    "starts_here": false,
+    "note": "SINGLE COLUMN, twenty-six lines. The sheet OPENS MID-ITEM — the first four lines finish item 2, which began on page 312 — and then carries items 3, 4 and 5 whole. The sheet is slightly SKEWED in the photograph, its left edge drifting from x 399 at the head to x 356 at the foot, which compresses the vertical gaps down the page: item 5's break measures only 54px where items 3 and 4 measure 71 and 70. The hanging numerals at x 317, 310 and 300 are the reliable marker of a new item here, not the gap. The series carries on to page 314."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "yod-phrakantraipidok",
+   "continuation_of": "yod-phrakantraipidok",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-six, verses 25 to 50. Four groups: the tail of item 2 (25-28, carrying NO para_start because the item opened on page 312), then items 3, 4 and 5, each carrying printed_number on its first verse. The chant's layout is 'lines', so no para_layout is needed anywhere.",
+    "ordering": "None. No Thai translation is printed, and no Thai script anywhere on the sheet.",
+    "conventions": "Roman section, so pali is empty and pali_roman carries the printed text. The word spacing is NARROW — 6-11px against a 3-5px letter gap — and is transcribed as ordinary word division, which is what it is. See page 312's checks for why that had to be established by measurement.",
+    "pages": "IMG_0580.PNG, page 313, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 25,
+     "pali": "",
+     "pali_roman": "satthā devamanussānaṃ sirasā namāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Teacher of Devas and Humans I bow with my head.",
+     "page": 313
+    },
+    {
+     "number": 26,
+     "pali": "",
+     "pali_roman": "buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Awakened One I go for refuge."
+    },
+    {
+     "number": 27,
+     "pali": "",
+     "pali_roman": "buddhaṃ sirasā namāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "To the Awakened One I bow with my head."
+    },
+    {
+     "number": 28,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One."
+    },
+    {
+     "number": 29,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā rūpakhandho aniccalakkhaṇapārami ca sampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: the aggregate of form, perfect in the mark of impermanence and in the perfections.",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 30,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā vedanākhandho aniccalakkhaṇapārami ca sampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: the aggregate of feeling, perfect in the mark of impermanence and in the perfections."
+    },
+    {
+     "number": 31,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā saññākhandho aniccalakkhaṇapārami ca sampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: the aggregate of perception, perfect in the mark of impermanence and in the perfections."
+    },
+    {
+     "number": 32,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā saṅkhārakhandho aniccalakkhaṇapārami ca sampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: the aggregate of formations, perfect in the mark of impermanence and in the perfections."
+    },
+    {
+     "number": 33,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā viññāṇakhandho aniccalakkhaṇapārami ca sampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: the aggregate of consciousness, perfect in the mark of impermanence and in the perfections."
+    },
+    {
+     "number": 34,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā paṭhavī dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the earth element.",
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 35,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā āpo dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the water element."
+    },
+    {
+     "number": 36,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā tejo dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the fire element."
+    },
+    {
+     "number": 37,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā vāyo dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the air element."
+    },
+    {
+     "number": 38,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā ākāsa dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the space element."
+    },
+    {
+     "number": 39,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā viññāna dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the consciousness element."
+    },
+    {
+     "number": 40,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā cakkavāḷa dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the world-sphere element."
+    },
+    {
+     "number": 41,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā cātummahārājikā dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the realm of the Four Great Kings.",
+     "para_start": true,
+     "printed_number": 5
+    },
+    {
+     "number": 42,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā tāvatiṃsā dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tāvatiṃsa heaven."
+    },
+    {
+     "number": 43,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā yāmā dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Yāma heaven."
+    },
+    {
+     "number": 44,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā tusitā dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tusita heaven."
+    },
+    {
+     "number": 45,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā nimmānaratī dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Nimmānaratī heaven."
+    },
+    {
+     "number": 46,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā paranimmitavasavattī dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Paranimmitavasavattī heaven."
+    },
+    {
+     "number": 47,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā kāmāvacara dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the sense-sphere realm."
+    },
+    {
+     "number": 48,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā rūpāvacara dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the form realm."
+    },
+    {
+     "number": 49,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā arūpāvacara dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the formless realm."
+    },
+    {
+     "number": 50,
+     "pali": "",
+     "pali_roman": "itipi so bhagavā lokuttara dhātu samādhiñāṇasampanno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the supramundane."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "",
+     "pali_roman": "khandha",
+     "meaning": "the five aggregates — form, feeling, perception, formations, consciousness. Item 3 takes them one at a time"
+    },
+    {
+     "pali": "",
+     "pali_roman": "dhātu",
+     "meaning": "element. Item 4 runs the six elements plus cakkavāḷa; item 5 continues the same formula through the heavens and the three spheres"
+    },
+    {
+     "pali": "",
+     "pali_roman": "cakkavāḷa",
+     "meaning": "a world-sphere or world-system, the whole extent of one cosmos"
+    },
+    {
+     "pali": "",
+     "pali_roman": "samādhiñāṇasampanno",
+     "meaning": "perfect in the knowledge of concentration. Printed as ONE word throughout item 4 and item 5"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 25,
+     "file": "IMG_0580.PNG",
+     "issue": "THE PAGE OPENS MID-ITEM. Verses 25-28 finish item 2, whose numeral is on page 312, so no verse on this sheet carries para_start until verse 29. The chant's layout is 'lines' and the group agrees with it, so no para_layout is needed either — declaring one here would be noise."
+    },
+    {
+     "verse": 41,
+     "file": "IMG_0580.PNG",
+     "issue": "THE SHEET IS SKEWED AND THE GAP RULE FAILS ON IT. The left edge drifts from x 399 at the head to x 356 at the foot, and the vertical gaps compress with it: item 3 breaks at 71px, item 4 at 70px, item 5 at only 54px. Read by gap alone, item 5 would have been folded into item 4. The NUMERALS hang left of the text — x 317, 310 and 300 against a text indent of x 390 falling to x 356 — and that is what settles the grouping on this page."
+    },
+    {
+     "verse": 39,
+     "file": "IMG_0580.PNG",
+     "issue": "THE BOOK SPELLS THE SAME WORD TWO WAYS ON ONE SHEET. Verse 39 prints 'viññāna' with a plain n where verse 33 prints 'viññāṇakhandho' with the retroflex. Both read clearly at 5x. Kept as each line sets it, NOT made to agree."
+    },
+    {
+     "verse": 29,
+     "file": "IMG_0580.PNG",
+     "issue": "The book prints 'aniccalakkhaṇapārami' with a SHORT final i, where the standard form is pāramī. It is printed the same way on all five lines of item 3, so it is the book's reading rather than one slip. Recorded as printed."
+    },
+    {
+     "verse": 28,
+     "file": "IMG_0580.PNG",
+     "issue": "Verse 28 is a bare 'itipi so bhagavā.' closing item 2 — the shortest line in the chant, and it is the line whose gap profile proved the word spacing: 14 gaps, median 5px, with the top two at 10 and 9px, matching exactly the two word spaces it contains."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "yod-phrakantraipidok"
+  ],
+  "resume_from_page": 314,
+  "resume_from_file": "IMG_0581.PNG",
+  "resume_from": "yod-phrakantraipidok",
+  "unreadable": [],
+  "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits — the kh in khandho and the th in paṭhavī are the page's own IAST.",
+  "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter INCLUDING ITS SPACING: dotted m, n with dot below in saraṇaṃ and viññāṇakhandho, l with dot below in cakkavāḷa, t with dot below in paṭhavī, long ī in nimmānaratī and paranimmitavasavattī. The two places the book disagrees with itself — viññāna against viññāṇa, and the short i in pārami — are recorded in checks rather than quietly fixed.",
+  "page_scan": "agrees. One row for one page covering verses 25-50, the whole of what this page adds. Verse 25 carries the page key and deliberately carries nothing else, because the item it belongs to opened on page 312. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
+  "notes": "Two findings. (1) A SKEWED SHEET DEFEATS THE VERTICAL-GAP RULE. The photograph's left edge drifts 43px across the page and the paragraph gaps compress with it, so item 5's break measures 54px against item 3's 71px — below the threshold that has grouped every previous page. The hanging numerals are what settle it. Any page photographed at an angle needs the same care. (2) THE WORD SPACING IS NARROW AND WAS SETTLED ON PAGE 312 by measuring gaps against each line's own median rather than an absolute width; this sheet is transcribed with ordinary word division on that basis, and verse 28 is the cleanest single piece of evidence for it.",
+  "diacritic_exceptions": []
+ }
+}

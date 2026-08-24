@@ -29221,7 +29221,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 24; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 50; the rest is not in the app yet.
         # ‼ CHECK [IMG_0579.PNG]: THE BOOK PRINTS ENGLISH ON THIS PAGE, and it
         #   is the first page in the book to do so. Beneath the title, centred
         #   and in square brackets: [The Peak of Tipitaka]. chanting.py states
@@ -29468,6 +29468,544 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'To the Teacher of Devas and Humans I go for refuge.',
+            },
+            # ‼ CHECK [IMG_0580.PNG]: THE PAGE OPENS MID-ITEM. Verses 25-28
+            #   finish item 2, whose numeral is on page 312, so no verse on
+            #   this sheet carries para_start until verse 29. The chant's
+            #   layout is 'lines' and the group agrees with it, so no
+            #   para_layout is needed either — declaring one here would be
+            #   noise.
+            {
+                'number': 25,
+                'page': 313,
+                'pali': '',
+                'pali_roman': 'satthā devamanussānaṃ sirasā namāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Teacher of Devas and Humans I bow with my head.',
+            },
+            {
+                'number': 26,
+                'pali': '',
+                'pali_roman': 'buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Awakened One I go for refuge.',
+            },
+            {
+                'number': 27,
+                'pali': '',
+                'pali_roman': 'buddhaṃ sirasā namāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To the Awakened One I bow with my head.',
+            },
+            # ‼ CHECK [IMG_0580.PNG]: Verse 28 is a bare 'itipi so bhagavā.'
+            #   closing item 2 — the shortest line in the chant, and it is the
+            #   line whose gap profile proved the word spacing: 14 gaps,
+            #   median 5px, with the top two at 10 and 9px, matching exactly
+            #   the two word spaces it contains.
+            {
+                'number': 28,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One.',
+            },
+            # ‼ CHECK [IMG_0580.PNG]: The book prints 'aniccalakkhaṇapārami'
+            #   with a SHORT final i, where the standard form is pāramī. It is
+            #   printed the same way on all five lines of item 3, so it is the
+            #   book's reading rather than one slip. Recorded as printed.
+            {
+                'number': 29,
+                'printed_number': 3,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā rūpakhandho aniccalakkhaṇapārami ca sampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: the aggregate of form, perfect in the mark of impermanence and in the perfections.',
+            },
+            {
+                'number': 30,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā vedanākhandho aniccalakkhaṇapārami ca sampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: the aggregate of feeling, perfect in the mark of impermanence and in the perfections.',
+            },
+            {
+                'number': 31,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā saññākhandho aniccalakkhaṇapārami ca sampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: the aggregate of perception, perfect in the mark of impermanence and in the perfections.',
+            },
+            {
+                'number': 32,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā saṅkhārakhandho aniccalakkhaṇapārami ca sampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: the aggregate of formations, perfect in the mark of impermanence and in the perfections.',
+            },
+            {
+                'number': 33,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā viññāṇakhandho aniccalakkhaṇapārami ca sampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: the aggregate of consciousness, perfect in the mark of impermanence and in the perfections.',
+            },
+            {
+                'number': 34,
+                'printed_number': 4,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā paṭhavī dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the earth element.',
+            },
+            {
+                'number': 35,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā āpo dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the water element.',
+            },
+            {
+                'number': 36,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā tejo dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the fire element.',
+            },
+            {
+                'number': 37,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā vāyo dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the air element.',
+            },
+            {
+                'number': 38,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā ākāsa dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the space element.',
+            },
+            # ‼ CHECK [IMG_0580.PNG]: THE BOOK SPELLS THE SAME WORD TWO WAYS
+            #   ON ONE SHEET. Verse 39 prints 'viññāna' with a plain n where
+            #   verse 33 prints 'viññāṇakhandho' with the retroflex. Both read
+            #   clearly at 5x. Kept as each line sets it, NOT made to agree.
+            {
+                'number': 39,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā viññāna dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the consciousness element.',
+            },
+            {
+                'number': 40,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā cakkavāḷa dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the world-sphere element.',
+            },
+            # ‼ CHECK [IMG_0580.PNG]: THE SHEET IS SKEWED AND THE GAP RULE
+            #   FAILS ON IT. The left edge drifts from x 399 at the head to x
+            #   356 at the foot, and the vertical gaps compress with it: item
+            #   3 breaks at 71px, item 4 at 70px, item 5 at only 54px. Read by
+            #   gap alone, item 5 would have been folded into item 4. The
+            #   NUMERALS hang left of the text — x 317, 310 and 300 against a
+            #   text indent of x 390 falling to x 356 — and that is what
+            #   settles the grouping on this page.
+            {
+                'number': 41,
+                'printed_number': 5,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā cātummahārājikā dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the realm of the Four Great Kings.',
+            },
+            {
+                'number': 42,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā tāvatiṃsā dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tāvatiṃsa heaven.',
+            },
+            {
+                'number': 43,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā yāmā dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Yāma heaven.',
+            },
+            {
+                'number': 44,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā tusitā dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tusita heaven.',
+            },
+            {
+                'number': 45,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā nimmānaratī dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Nimmānaratī heaven.',
+            },
+            {
+                'number': 46,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā paranimmitavasavattī dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Paranimmitavasavattī heaven.',
+            },
+            {
+                'number': 47,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā kāmāvacara dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the sense-sphere realm.',
+            },
+            {
+                'number': 48,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā rūpāvacara dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the form realm.',
+            },
+            {
+                'number': 49,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā arūpāvacara dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the formless realm.',
+            },
+            {
+                'number': 50,
+                'pali': '',
+                'pali_roman': 'itipi so bhagavā lokuttara dhātu samādhiñāṇasampanno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the supramundane.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0362.PNG]: A TENTH TITLE THE CONTENTS TEST CANNOT SEE.
+        #   The page prints บทขัด โพชฌังคะปะริตตัง with a SPACE after บทขัด;
+        #   the สารบัญ has บทขัดโพชฌังคะปะริตตัง without one. Same as pages
+        #   82, 86, 87, 88, 89, 90, 92 and 96.
+        # ‼ CHECK [IMG_0362.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-bojjhanga-parittam',
+        'title_thai': 'บทขัด โพชฌังคะปะริตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt poot-chaŋ-ká-bpà-rít-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Bojjhaṅga Paritta',
+        'page_start': 97,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0362.PNG]: TWO COLUMNS, gutter measured at x
+            #   860-1020. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   สังสาเร สังสะรันตานัง + right สัพพะทุกขะวินาสะเน.
+            {
+                'number': 1,
+                'page': 97,
+                'pali': 'สังสาเร สังสะรันตานัง สัพพะทุกขะวินาสะเน',
+                'pali_roman': 'Saṃsāre saṃsarantānaṃ sabbadukkhavināsane',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For those wandering on in saṃsāra, in the destruction of all suffering,',
+            },
+            {
+                'number': 2,
+                'pali': 'สัตตะ ธัมเม จะ โพชฌังเค มาระเสนัปปะมัททิโน.',
+                'pali_roman': 'Satta dhamme ca bojjhaṅge mārasenappamaddino.',
+                'thai': '',
+                'paiboon': '',
+                'english': "the seven states, the factors of awakening, crushers of Māra's army.",
+            },
+            {
+                'number': 3,
+                'pali': 'พุชฌิต์วา เยปิเม สัตตา ติภะวามุตตะกุตตะมา',
+                'pali_roman': 'Bujjhitvā yepime sattā tibhavāmuttakuttamā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those beings who, having awakened by them, are freed from the three realms, supreme,',
+            },
+            # ‼ CHECK [IMG_0362.PNG]: อะชะราพ์ยาธิง carries the พ์ cluster
+            #   mark, romanised ajarābyādhiṃ with the mark dropped. Standard
+            #   editions have ajarābyādhiṃ, so the reading agrees once the
+            #   mark is read as a cluster.
+            {
+                'number': 4,
+                'pali': 'อะชาติง อะชะราพ์ยาธิง อะมะตัง นิพภะยัง คะตา.',
+                'pali_roman': 'Ajātiṃ ajarābyādhiṃ amataṃ nibbhayaṃ gatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'have gone to the unborn, the ageless and diseaseless, the deathless, the fearless.',
+            },
+            {
+                'number': 5,
+                'pali': 'เอวะมาทิคุณูเปตัง อะเนกะคุณะสังคะหัง',
+                'pali_roman': 'Evamādiguṇūpetaṃ anekaguṇasaṅgahaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Endowed with such qualities as these, a collection of many virtues,',
+            },
+            {
+                'number': 6,
+                'pali': 'โอสะถัญจะ อิมัง มันตัง โพชฌังคันตัมภะณามะ เห.',
+                'pali_roman': 'Osathañca imaṃ mantaṃ bojjhaṅgantambhaṇāma he.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'a medicine and a spell: that Bojjhaṅga let us now recite.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0362.PNG]: A COLOPHON AND NO CITATION. โพชฌังคะปะริตตัง
+        #   นิฏฐิตัง. is printed centred under verse 17 and goes in as
+        #   `closing`. No footnote and no marker anywhere on the sheet, so
+        #   source_printed is left off — the same as the Mora, Vaṭṭaka and
+        #   Aṅgulimāla parittas.
+        # ‼ CHECK [IMG_0362.PNG]: english_unverified is set. The book prints
+        #   this paritta in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition. Verse 16's simile is the least certain line:
+        #   ปัตตานุปัตติธัมมะตัง is compressed even for this book and the
+        #   gloss reads it as the defilements reaching the state of not
+        #   returning.
+        'id': 'bojjhanga-parittam-dasamam',
+        'title_thai': 'โพชฌังคะปะริตตัง ทะสะมัง',
+        'title_pali': 'Bojjhaṅgaparittaṃ dasamaṃ',
+        'title_roman': '',
+        'title_english': 'The Bojjhaṅga Paritta, the Tenth',
+        'page_start': 97,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'โพชฌังคะปะริตตัง นิฏฐิตัง.',
+            'pali_roman': 'Bojjhaṅgaparittaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Bojjhaṅga Paritta.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0362.PNG]: TWO COLUMNS, gutter measured at x
+            #   900-1020 — a different position from the บทขัด above it on
+            #   this sheet, whose gutter is at x 860-1020. Each profiled
+            #   separately. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   โพชฌังโค สะติสังขาโต + right ธัมมานัง วิจะโย ตะถา.
+            {
+                'number': 1,
+                'page': 97,
+                'pali': 'โพชฌังโค สะติสังขาโต ธัมมานัง วิจะโย ตะถา',
+                'pali_roman': 'Bojjhaṅgo satisaṅkhāto dhammānaṃ vicayo tathā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening called mindfulness, and likewise investigation of states,',
+            },
+            {
+                'number': 2,
+                'pali': 'วิริยัมปีติปัสสัทธิ โพชฌังคา จะ ตะถาปะเร.',
+                'pali_roman': 'Viriyampītipassaddhi bojjhaṅgā ca tathāpare.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'energy, rapture and tranquillity, and the other factors likewise;',
+            },
+            {
+                'number': 3,
+                'pali': 'สะมาธุเปกขะโพชฌังคา สัตเตเต สัพพะทัสสินา',
+                'pali_roman': 'Samādhupekkhabojjhaṅgā sattete sabbadassinā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'concentration and equanimity — these seven, by the All-Seeing One,',
+            },
+            {
+                'number': 4,
+                'pali': 'มุนินา สัมมะทักขาตา ภาวิตา พะหุลีกะตา.',
+                'pali_roman': 'Muninā sammadakkhātā bhāvitā bahulīkatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Sage, are rightly proclaimed, developed and made much of.',
+            },
+            {
+                'number': 5,
+                'pali': 'สังวัตตันติ อะภิญญายะ นิพพานายะ จะ โพธิยา',
+                'pali_roman': 'Saṃvattanti abhiññāya nibbānāya ca bodhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'They lead to direct knowledge, to Nibbāna and to awakening.',
+            },
+            # ‼ CHECK [IMG_0362.PNG]: เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ
+            #   สัพพะทา. CLOSES ALL FOUR STANZAS — verses 6, 10, 14 and 17 —
+            #   word for word. Recorded because check_render walks strings in
+            #   printed order and four verbatim repeats on one sheet is
+            #   exactly the shape that reads as a fault.
+            {
+                'number': 6,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you be well at all times.',
+            },
+            {
+                'number': 7,
+                'para_start': True,
+                'pali': 'เอกัส์มิง สะมะเย นาโถ โมคคัลลานัญจะ กัสสะปัง',
+                'pali_roman': 'Ekasmiṃ samaye nātho moggallānañca kassapaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'On one occasion the Protector, seeing Moggallāna and Kassapa',
+            },
+            {
+                'number': 8,
+                'pali': 'คิลาเน ทุกขิเต ทิส์วา โพชฌังเค สัตตะ เทสะยิ.',
+                'pali_roman': 'Gilāne dukkhite disvā bojjhaṅge satta desayi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'sick and in pain, taught the seven factors of awakening.',
+            },
+            {
+                'number': 9,
+                'pali': 'เต จะ ตัง อะภินันทิต์วา โรคา มุจจิงสุ ตังขะเณ',
+                'pali_roman': 'Te ca taṃ abhinanditvā rogā mucciṃsu taṅkhaṇe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And they, delighting in it, were freed from disease in that very moment.',
+            },
+            {
+                'number': 10,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you be well at all times.',
+            },
+            # ‼ CHECK [IMG_0362.PNG]: ‼‼ เคลัญเญนาภิปีพิโต — A FOURTH BARE
+            #   ?/พ, AND THIS ONE CUTS AGAINST WHAT PAGES 76-80 SEEMED TO
+            #   ESTABLISH. Standard Pali is gelaññenābhipīḷito, 'afflicted by
+            #   illness', with ฬ; abhipībito is not a word. The letter is BARE
+            #   and at 7x stacked directly above the พ of อาพาธา two rows
+            #   below it on this same sheet it is identical — two humps, no
+            #   ascender. THE PROBLEM: pages 76, 77, 78 and 80 each showed a
+            #   bare ฬ carrying an OBVIOUS tall ascender (จักกะวาเฬสุ,
+            #   อัฏฐะจัตตาฬีสะ), which is why 'a bare ฬ can be read from the
+            #   photograph' was written down as a rule. This page shows a bare
+            #   position where the canon demands ฬ and there is no ascender at
+            #   all. So EITHER this printer sets some bare ฬ without an
+            #   ascender — and the rule is wrong — OR the book really does
+            #   print พ in all four places. Reproduced as printed. This is now
+            #   FOUR instances: pages 85, 90, 95 and 97.
+            {
+                'number': 11,
+                'para_start': True,
+                'pali': 'เอกะทา ธัมมะราชาปิ เคลัญเญนาภิปีพิโต',
+                'pali_roman': 'Ekadā dhammarājāpi gelaññenābhipībito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Once the King of the Dhamma himself, afflicted by illness,',
+            },
+            {
+                'number': 12,
+                'pali': 'จุนทัตเถเรนะ ตัญเญวะ ภะณาเปต์วานะ สาทะรัง.',
+                'pali_roman': 'Cundattherena taññeva bhaṇāpetvāna sādaraṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'had that very teaching recited by the elder Cunda, respectfully.',
+            },
+            {
+                'number': 13,
+                'pali': 'สัมโมทิต์วา จะ อาพาธา ตัมหา วุฏฐาสิ ฐานะโส',
+                'pali_roman': 'Sammoditvā ca ābādhā tamhā vuṭṭhāsi ṭhānaso',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And being gladdened, he rose up from that affliction there and then.',
+            },
+            {
+                'number': 14,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you be well at all times.',
+            },
+            # ‼ CHECK [IMG_0362.PNG]: ติณณันนัมปิ มะเหสินัง — 'of all three
+            #   great Seekers'. The three are Moggallāna and Kassapa from
+            #   verse 7 and the Buddha himself from verse 11, which is what
+            #   makes the last stanza the conclusion of the other three rather
+            #   than a fourth story. The English says so plainly because the
+            #   Pali only implies it.
+            {
+                'number': 15,
+                'para_start': True,
+                'pali': 'ปะหีนา เต จะ อาพาธา ติณณันนัมปิ มะเหสินัง',
+                'pali_roman': 'Pahīnā te ca ābādhā tiṇṇannampi mahesinaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And those afflictions of all three great Seekers were abandoned,',
+            },
+            {
+                'number': 16,
+                'pali': 'มัคคาหะตะกิเลสา วะ ปัตตานุปัตติธัมมะตัง.',
+                'pali_roman': 'Maggāhatakilesā va pattānupattidhammataṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'just as the defilements struck down by the path reach the state of not returning.',
+            },
+            {
+                'number': 17,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you be well at all times.',
             },
         ],
     },
