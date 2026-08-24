@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
-91 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
+92 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,11 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-23 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–91 are in and unbroken**, plus 217–221. **124 chants, 1,709 verses
+- **Pages 1–92 are in and unbroken**, plus 217–221. **126 chants, 1,733 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 83 to 91 were applied 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Page 92 was applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,22 +34,21 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 92, `IMG_0357` — but READ THE NUMBER off the sheet
+## Next: page 93, `IMG_0358` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–91, so page 92 *should*
-be `IMG_0357`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–92, so page 93 *should*
+be `IMG_0358`. **Five more changes are still expected before page 207.**
 
-**`dhajagga-parittam-sattamam` is open at verse 66, and verse 66 is CUT.** Page
-91 ends `…ภิกขะเว อะนุสสะระตัง […]` with no comma, where verses 45 and 53 — the
-same line for the Buddha and the Dhamma — each end with one. So page 92's batch
-carries **verse 66 again** with the line whole, not verse 67.
+**`atanatiya-parittam-atthamam` is open at verse 5**, with no `[…]` — the row is
+whole and it is the LIST that carries on. Page 93's batch numbers **from 6** and
+needs both `continuation_of` and `continues: true` if it does not end there.
 
-**It is PROSE and EVERY group must declare it.** This chant has no chant-level
-`layout` key, so a group that says nothing falls back to `lines`. See the rule
-below — it bit twice on page 91.
+**Five of the seven Buddhas are saluted, one per row, in order** — Vipassī,
+Sikhī, Vessabhū, Kakusandha, Koṇāgamana. **Kassapa and Gotama should follow.**
+A reason to expect the continuation, not to write it.
 
-**Expect the sutta to close soon**, with the Saṅgha promise and then a colophon;
-every paritta in this run has had one except the Mora and the Vaṭṭaka.
+**Expect two columns and check the gutter yourself.** Page 92 carried three
+blocks with gutters at x 1000–1080, 1020–1100 and 1000–1100.
 
 ## Standing rules for every page
 
@@ -72,6 +71,38 @@ declaring it would be noise.
 **Check the rendered page, not just the four checks.** Page 76's trailing block
 passed all four and still rendered in the wrong place. See "What page 76 taught
 the tooling" below.
+
+## Page 92 — one field cannot hold two printings
+
+The Dhajagga Sutta's citation is printed on **both** page 90 and page 92, with
+the same odd range and **different spacing**:
+
+| page | prints |
+|---|---|
+| 90 | `สํ.ส. 15/320-223` — unspaced |
+| 92 | `สํ. ส. 15/320-223` — spaced |
+
+Both read at 5×. `apply_batch` **adds only and never overwrites**, so the chant
+kept page 90's value and page 92's was silently not written. **That is the right
+behaviour** — the first reading wins, as with any merge — but `source_printed`
+is a single field and cannot hold both, so the app shows the unspaced form while
+page 92 prints the spaced one. Recorded in a check rather than forced.
+
+**The range matters more than the spacing.** `320-223` runs *downward*, where
+standard references have `320-323`. That the same odd number appears on **two
+separate sheets** makes it the book's consistent reading rather than one
+compositor's slip — worth knowing before anyone "corrects" it.
+
+## Page 92 — a cluster mark stranded by a line break
+
+Line 3 ends `อิทัง วัต` and line 4 **opens with a bare `์`** before `วานะ` — the
+mark belongs on the `ต` at the end of the previous line. Read at 5×: it sits
+alone at the line start with clear paper around it. Rejoined as `วัต์วานะ`.
+
+A new kind of break for this book — not a hyphen, but a **combining mark
+orphaned onto the next line** — and one that would be invisible as a fault once
+it was in. Watch for it wherever a line ends on a consonant that should carry a
+cluster mark.
 
 ## ⚠️ para_layout goes on the first verse OF THIS PAGE, not of the batch
 
@@ -169,7 +200,7 @@ First colophon in the book that closes a pair. **Worth Josh's eye** — if he
 would rather the Khandha Paritta also carried it, the fix is one key, but the
 page would then show it twice.
 
-## Seven titles the contents test cannot see — pages 80, 82, 86–90
+## Eight titles the contents test cannot see — pages 80, 82, 86–90, 92
 
 This is now a pattern, not four surprises. Each time, the page heading and the
 book's own สารบัญ spell or space a title differently, the **page** is
@@ -186,6 +217,7 @@ cannot see that chant at all, and nothing will warn if its title drifts later.
 | 88 | `บทขัด โมระปะริตตัง` (spaced) | `บทขัดโมระปะริตตัง` |
 | 89 | `บทขัด วัฏฏะกะปะริตตัง` (spaced) | `บทขัดวัฏฏะกะปะริตตัง` |
 | 90 | `บทขัด ธะชัคคะสุตตัง` (spaced) | `บทขัดธะชัคคะสุตตัง` |
+| 92 | `บทขัด อาฏานาฏิยะปะริตตัง` (spaced) | `บทขัดอาฏานาฏิยะปะริตตัง` |
 
 Page 87's differs **twice** — the space and a doubled `ต`. Where the page and
 the table disagree, `title_roman` is composed to match the PAGE rather than
