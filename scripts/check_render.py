@@ -171,8 +171,15 @@ def expected(batch: dict, page: int,
             continue
 
         for i, block in enumerate(row.get("blocks") or []):
-            if block.get("thai"):
-                loose.append((f"{block.get('type')} block {i}", block["thai"]))
+            # A block in the roman section may carry no Thai at all — the
+            # book's own English instruction on page 310 is the whole of what
+            # that block prints. Walking only `thai` would check nothing and
+            # still pass, which is the fault `printed` exists to stop.
+            shown = block.get("thai") or (block.get("english")
+                                          if block.get("english_printed")
+                                          else "")
+            if shown:
+                loose.append((f"{block.get('type')} block {i}", shown))
         if row.get("service_closing"):
             loose.append(("service closing", row["service_closing"]))
 

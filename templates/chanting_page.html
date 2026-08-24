@@ -290,6 +290,14 @@
        would leave book mode blank on exactly the pages it is meant to be
        truest to. See `is-printed` where the verse layers are written. */
     .page-body.view-book .layer-pali_roman.is-printed { display: block !important; }
+    /* And the same for English the BOOK ITSELF prints. Almost every English
+       string in this app is our own translation, which book mode is right to
+       hide — but the roman section carries the book's own English: a bracketed
+       gloss under the title on page 312, and a whole instruction paragraph on
+       page 310. Hiding those would drop text the sheet actually shows.
+       `english_printed` on the block is what tells them apart; it is inline
+       rather than block because these render as spans. */
+    .page-body.view-book .layer-english.is-printed { display: inline !important; }
 
     /* No numbers and no rules in book mode — the book has neither. */
     /* Two different numbers, and only one of them belongs on the page.
@@ -627,13 +635,13 @@
         {% if block.type == 'heading' %}
         <h3 class="block-heading">
             <span class="layer layer-thai">{{ block.thai }}</span>
-            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+            {% if block.english %}<span class="layer layer-english{% if block.english_printed %} is-printed{% endif %}">{{ block.english }}</span>{% endif %}
         </h3>
 
         {% elif block.type == 'service_closing' %}
         <p class="block-service-closing">
             <span class="layer layer-thai">{{ block.thai }}</span>
-            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+            {% if block.english %}<span class="layer layer-english{% if block.english_printed %} is-printed{% endif %}">{{ block.english }}</span>{% endif %}
         </p>
 
         {# A direction to the chanters — (กราบพร้อมกัน) and the like. The book
@@ -641,7 +649,7 @@
         {% elif block.type == 'rubric' %}
         <p class="block-rubric">
             <span class="layer layer-thai">{{ block.thai }}</span>
-            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+            {% if block.english %}<span class="layer layer-english{% if block.english_printed %} is-printed{% endif %}">{{ block.english }}</span>{% endif %}
         </p>
 
         {% elif block.type == 'item' %}
@@ -649,7 +657,7 @@
             <span class="block-item-number">{{ block.number }}.</span>
             <span>
                 <span class="layer layer-thai">{{ block.thai }}</span>
-                {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+                {% if block.english %}<span class="layer layer-english{% if block.english_printed %} is-printed{% endif %}">{{ block.english }}</span>{% endif %}
             </span>
         </div>
 
@@ -673,13 +681,13 @@
         <p class="block-footnote">
             {% if block.marker %}<span class="fn-mark">{{ block.marker }}.</span> {% endif %}
             <span class="layer layer-thai">{{ block.thai }}</span>
-            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+            {% if block.english %}<span class="layer layer-english{% if block.english_printed %} is-printed{% endif %}">{{ block.english }}</span>{% endif %}
         </p>
 
         {% else %}
         <p class="block-prose">
             <span class="layer layer-thai">{{ block.thai }}</span>
-            {% if block.english %}<span class="layer layer-english">{{ block.english }}</span>{% endif %}
+            {% if block.english %}<span class="layer layer-english{% if block.english_printed %} is-printed{% endif %}">{{ block.english }}</span>{% endif %}
         </p>
         {% endif %}
         {% endfor %}

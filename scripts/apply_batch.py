@@ -775,10 +775,35 @@ def block_groups(batch: dict) -> list[tuple[int, str | None, list[dict]]]:
                 groups.items(), key=lambda kv: (kv[0][0], kv[0][1] or ""))]
 
 
+def printed_text(block: dict) -> str:
+    """The words the BOOK sets in this block, whatever field they arrived in.
+
+    `thai` holds the printed text for every block in the Thai-script pages, and
+    the writer used to skip any block without it — silently, with no line in
+    the report. `check_batch` made that unreachable by refusing such a block,
+    so it never cost anything.
+
+    The roman section broke both halves of that. Page 310 prints a whole
+    INSTRUCTION PARAGRAPH IN ENGLISH and page 312 a bracketed English gloss;
+    those blocks carry `english_printed` and no `thai` at all, and the first
+    one written vanished on the way into the file without a word. Identity is
+    keyed on this too, so a block is deduplicated by the words the book prints
+    rather than by a field that may be empty.
+    """
+    if block.get("thai"):
+        return block["thai"]
+    if block.get("english_printed"):
+        return block.get("english") or ""
+    return ""
+
+
 def render_block(block: dict, indent: str) -> str:
     """One block, in the shape and key order PAGE_BLOCKS already uses."""
+    # `english_printed` marks English the BOOK sets, as against the working
+    # translations every other block carries. Without it in this list the key
+    # is silently dropped and the book's own words are hidden in book mode.
     keys = ["type", "marker", "number", "chant", "thai", "english",
-            "english_unverified"]
+            "english_printed", "english_unverified"]
     lines = [f"{indent}{{"]
     for key in keys:
         if key not in block:
@@ -827,7 +852,7 @@ def apply_blocks(batch: dict, source: str, source_batch: str,
     # The marker is part of the identity. Page 32 prints the same citation
     # under two different markers, 1 and 4, and they are two printed footnotes
     # rather than one recorded twice — keying on the text alone would drop one.
-    already = {(g.get("page"), b.get("type"), b.get("marker"), b.get("thai"))
+    already = {(g.get("page"), b.get("type"), b.get("marker"), printed_text(b))
                for g in chanting.PAGE_BLOCKS for b in g.get("blocks", [])}
 
     written = []
@@ -835,15 +860,15 @@ def apply_blocks(batch: dict, source: str, source_batch: str,
     for page, anchor, blocks in block_groups(batch):
         fresh = []
         for b in blocks:
-            key = (page, b.get("type"), b.get("marker"), b.get("thai"))
-            if not b.get("thai") or key in already:
+            key = (page, b.get("type"), b.get("marker"), printed_text(b))
+            if not printed_text(b) or key in already:
                 continue
             already.add(key)          # also stops a batch repeating itself
             fresh.append(b)
         if not fresh:
             continue
         addition += render_block_group(page, anchor, fresh, source_batch)
-        written.extend((page, b.get("type"), b.get("thai")) for b in fresh)
+        written.extend((page, b.get("type"), printed_text(b)) for b in fresh)
 
     if not addition:
         return source

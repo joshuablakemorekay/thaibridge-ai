@@ -608,6 +608,13 @@ def check_blocks(batch: dict) -> list[str]:
     data, invisible on the page, impossible to spot by reading the file. An
     empty `english` is allowed only on a footnote, because a canonical citation
     is reproduced and never translated.
+
+    The one block that may carry NO `thai` is one whose printed text is English
+    in the book itself, marked `english_printed`. The roman section at the back
+    prints exactly that: an instruction paragraph on page 310 and a bracketed
+    title gloss on page 312. Such a block renders its English in book mode
+    rather than being hidden as a working translation, so it is not blank —
+    but only where the flag says the words are the book's own.
     """
     problems = []
     for row in batch["batch"]["pages"]:
@@ -615,7 +622,8 @@ def check_blocks(batch: dict) -> list[str]:
             where = f"page {row.get('page')} block {i} ({block.get('type')})"
             if not block.get("type"):
                 problems.append(f"{where}: has no type")
-            if not block.get("thai"):
+            if not block.get("thai") and not (block.get("english_printed")
+                                              and block.get("english")):
                 problems.append(f"{where}: has no thai — it would render blank")
             if not block.get("english") and block.get("type") != "footnote":
                 problems.append(f"{where}: has no english")
