@@ -26175,7 +26175,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 29; the rest is not in the app yet.
         # ‼ CHECK [IMG_0357.PNG]: english_unverified is set. The book prints
         #   this paritta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -26196,6 +26196,7 @@ CHANTS = [
             'paiboon': '',
             'english': '',
         },
+        'source_printed': 'ที.ปา 11/209',
         'verses': [
             # ‼ CHECK [IMG_0357.PNG]: TWO COLUMNS, gutter measured at x
             #   1000-1100. Read ACROSS. FIRST PAIRING FOR CHECKING: left
@@ -26253,6 +26254,261 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'homage to Koṇāgamana, the brahmin who has lived the life;',
+            },
+            # ‼ CHECK [IMG_0358.PNG]: TWO COLUMNS, gutter measured at x
+            #   960-1040. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   กัสสะปัสสะ นะมัตถุ + right วิปปะมุตตัสสะ สัพพะธิ. The seven
+            #   Buddhas are now complete across pages 92 and 93 — Vipassī,
+            #   Sikhī, Vessabhū, Kakusandha, Koṇāgamana on page 92, then
+            #   Kassapa and Aṅgīrasa here, Aṅgīrasa being Gotama under another
+            #   name.
+            {
+                'number': 6,
+                'page': 93,
+                'pali': 'กัสสะปัสสะ นะมัตถุ วิปปะมุตตัสสะ สัพพะธิ',
+                'pali_roman': 'Kassapassa namatthu vippamuttassa sabbadhi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to Kassapa, wholly released;',
+            },
+            {
+                'number': 7,
+                'pali': 'อังคีระสัสสะ นะมัตถุ สัก์ยะปุตตัสสะ สิรีมะโต',
+                'pali_roman': 'Aṅgīrasassa namatthu sakyaputtassa sirīmato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'homage to Aṅgīrasa, son of the Sakyans, possessed of glory,',
+            },
+            {
+                'number': 8,
+                'pali': 'โย อิมัง ธัมมะมะเทเสสิ สัพพะทุกขา ปะนูทะนัง',
+                'pali_roman': 'Yo imaṃ dhammamadesesi sabbadukkhā panūdanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who taught this Dhamma, the dispelling of all suffering.',
+            },
+            {
+                'number': 9,
+                'pali': 'เย จาปิ นิพพุตา โลเก ยะถาภูตัง วิปัสสิสุง',
+                'pali_roman': 'Ye cāpi nibbutā loke yathābhūtaṃ vipassisuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And those in the world who are quenched, who saw things as they are —',
+            },
+            {
+                'number': 10,
+                'pali': 'เต ชะนา อะปิสุณา มะหันตา วีตะสาระทา',
+                'pali_roman': 'Te janā apisuṇā mahantā vītasāradā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those people, free of slander, great, without timidity;',
+            },
+            {
+                'number': 11,
+                'pali': 'หิตัง เทวะมะนุสสานัง ยัง นะมัสสันติ โคตะมัง',
+                'pali_roman': 'Hitaṃ devamanussānaṃ yaṃ namassanti gotamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Gotama whom they salute, the welfare of devas and humans,',
+            },
+            # ‼ CHECK [IMG_0358.PNG]: A CANONICAL CITATION, keyed to this
+            #   verse by a superscript 1. The footnote reads ที.ปา 11/209 —
+            #   Dīgha Nikāya, Pāthika-vagga — and goes in as source_printed.
+            #   Reproduced verbatim, abbreviations and all.
+            {
+                'number': 12,
+                'pali': 'วิชชาจะระณะสัมปันนัง มะหันตัง วีตะสาระทัง.',
+                'pali_roman': 'Vijjācaraṇasampannaṃ mahantaṃ vītasāradaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'accomplished in knowledge and conduct, great, without timidity.',
+            },
+            # ‼ CHECK [IMG_0358.PNG]: THE ROLL-CALL OF TWENTY-EIGHT BUDDHAS
+            #   BEGINS HERE, two to a row, and runs to verse 27. Verse 13 and
+            #   verse 28 are the only indented lines on the sheet — measured
+            #   at x 470 against the block's own left edge of 380 — so each
+            #   carries para_start. The baseline was computed from this page,
+            #   not carried from page 92.
+            {
+                'number': 13,
+                'para_start': True,
+                'pali': 'นะโม เม สัพพะพุทธานัง อุปปันนานัง มะเหสินัง',
+                'pali_roman': 'Namo me sabbabuddhānaṃ uppannānaṃ mahesinaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage from me to all the Buddhas who have arisen, the great Seekers:',
+            },
+            {
+                'number': 14,
+                'pali': 'ตัณหังกะโร มะหาวีโร เมธังกะโร มะหายะโส.',
+                'pali_roman': 'Taṇhaṅkaro mahāvīro medhaṅkaro mahāyaso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Taṇhaṅkara the great hero, Medhaṅkara of great renown;',
+            },
+            {
+                'number': 15,
+                'pali': 'สะระณังกะโร โลกะหิโต ทีปังกะโร ชุตินธะโร',
+                'pali_roman': 'Saraṇaṅkaro lokahito dīpaṅkaro jutindharo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Saraṇaṅkara benefactor of the world, Dīpaṅkara bearer of radiance;',
+            },
+            {
+                'number': 16,
+                'pali': 'โกณฑัญโญ ชะนะปาโมกโข มังคะโล ปุริสาสะโภ.',
+                'pali_roman': 'Koṇḍañño janapāmokkho maṅgalo purisāsabho.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Koṇḍañña foremost of people, Maṅgala bull among men;',
+            },
+            # ‼ CHECK [IMG_0358.PNG]: สุมะโน สุมะโน — THE SAME WORD TWICE IN
+            #   ONE HALF-LINE, and it is not a compositor repeating himself.
+            #   The first is the Buddha's NAME, Sumana; the second is the
+            #   adjective sumano, 'glad-minded'. Standard editions have the
+            #   same doubling. Read at 1.85x. Reproduced as printed and the
+            #   English keeps both.
+            {
+                'number': 17,
+                'pali': 'สุมะโน สุมะโน ธีโร เรวะโต ระติวัฑฒะโน',
+                'pali_roman': 'Sumano sumano dhīro revato rativaḍḍhano',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sumana the glad-minded sage, Revata increaser of delight;',
+            },
+            {
+                'number': 18,
+                'pali': 'โสภิโต คุณะสัมปันโน อะโนมะทัสสี ชะนุตตะโม.',
+                'pali_roman': 'Sobhito guṇasampanno anomadassī januttamo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sobhita endowed with virtue, Anomadassī highest of people;',
+            },
+            {
+                'number': 19,
+                'pali': 'ปะทุโม โลกะปัชโชโต นาระโท วะระสาระถี',
+                'pali_roman': 'Padumo lokapajjoto nārado varasārathī',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Paduma light of the world, Nārada the excellent charioteer;',
+            },
+            {
+                'number': 20,
+                'pali': 'ปะทุมุตตะโร สัตตะสาโร สุเมโธ อัปปะฏิปุคคะโล.',
+                'pali_roman': 'Padumuttaro sattasāro sumedho appaṭipuggalo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Padumuttara essence of beings, Sumedha without peer;',
+            },
+            {
+                'number': 21,
+                'pali': 'สุชาโต สัพพะโลกัคโค ปิยะทัสสี นะราสะโภ',
+                'pali_roman': 'Sujāto sabbalokaggo piyadassī narāsabho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sujāta highest in all the world, Piyadassī bull among men;',
+            },
+            {
+                'number': 22,
+                'pali': 'อัตถะทัสสี การุณิโก ธัมมะทัสสี ตะโมนุโท.',
+                'pali_roman': 'Atthadassī kāruṇiko dhammadassī tamonudo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Atthadassī the compassionate, Dhammadassī dispeller of darkness;',
+            },
+            {
+                'number': 23,
+                'pali': 'สิทธัตโถ อะสะโม โลเก ติสโส จะ วะทะตัง วะโร',
+                'pali_roman': 'Siddhattho asamo loke tisso ca vadataṃ varo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Siddhattha unequalled in the world, and Tissa best of speakers;',
+            },
+            {
+                'number': 24,
+                'pali': 'ปุสโส จะ วะระโท พุทโธ วิปัสสี จะ อะนูปะโม.',
+                'pali_roman': 'Pusso ca varado buddho vipassī ca anūpamo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and Phussa the Buddha, giver of the best, and Vipassī beyond compare;',
+            },
+            {
+                'number': 25,
+                'pali': 'สิขี สัพพะหิโต สัตถา เวสสะภู สุขะทายะโก',
+                'pali_roman': 'Sikhī sabbahito satthā vessabhū sukhadāyako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sikhī the teacher who benefits all, Vessabhū the giver of happiness;',
+            },
+            {
+                'number': 26,
+                'pali': 'กะกุสันโธ สัตถะวาโห โกนาคะมะโน ระณัญชะโห.',
+                'pali_roman': 'Kakusandho satthavāho konāgamano raṇañjaho.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Kakusandha the caravan leader, Koṇāgamana who has left conflict behind;',
+            },
+            # ‼ CHECK [IMG_0358.PNG]: VERSE 27 ENDS WITH A COMMA where verses
+            #   14, 16, 18, 20, 22, 24, 26 and 29 all end with a full stop —
+            #   because the roll-call runs on into เอเต จัญเญ at verse 28
+            #   rather than stopping. Read at 1.25x. Reproduced as printed.
+            {
+                'number': 27,
+                'pali': 'กัสสะโป สิริสัมปันโน โคตะโม สัก์ยะปุงคะโว,',
+                'pali_roman': 'Kassapo sirisampanno gotamo sakyapuṅgavo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Kassapa endowed with glory, Gotama bull of the Sakyans —',
+            },
+            # ‼ CHECK [IMG_0358.PNG]: ‼ THE SECOND FOOTNOTE IS SET IN A
+            #   DIFFERENT PALI ORTHOGRAPHY FROM THE BODY, AND THAT BEARS ON
+            #   THE BOOK'S BIGGEST OPEN QUESTION. It reads โกฏฺิโย อยํ หิ
+            #   อิตฺถีลิงฺคํ — 'koṭṭhiyo: this is feminine' — and it uses the
+            #   PHINTHU (◌ฺ, U+0E3A), the subscript dot, on ฏ, on ต and on ง.
+            #   The body of this book never uses phinthu: it marks its
+            #   clusters with the small mark above, as in สัก์ยะปุตตัสสะ on
+            #   verse 7 of this very page. So the printer HAS phinthu and
+            #   chooses not to use it in the chanted text. That is real
+            #   evidence about what the mark over the ส in ส์วากขาโต is and is
+            #   not, and it is worth weighing alongside page 60's reading of
+            #   ท์วายะ.
+            # ‼ CHECK [IMG_0358.PNG]: THE SAME FOOTNOTE IS ALSO A GRAMMATICAL
+            #   NOTE, AND HALF OF IT CANNOT BE SHOWN. It offers โกฏฺิโย as a
+            #   reading for this line's โกฏะโย AND says that form is feminine.
+            #   The reading goes in as a verse variant, which the template
+            #   renders as 'the book's footnote gives another reading'. THE
+            #   GRAMMATICAL HALF IS LOST — there is no field for it, exactly
+            #   as with page 76's conditional footnote and page 77's. Third
+            #   instance of the same gap; a `note` field on a variant would
+            #   close all three.
+            {
+                'number': 28,
+                'para_start': True,
+                'pali': 'เอเต จัญเญ จะ สัมพุทธา อะเนกะสะตะโกฏะโย',
+                'pali_roman': 'Ete caññe ca sambuddhā anekasatakoṭayo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these and other Perfectly Awakened Ones, many hundreds of koṭis,',
+                'variants': [
+                    {
+                        'marker': '2',
+                        'word': 'อะเนกะสะตะโกฏะโย',
+                        'reading': 'โกฏฺิโย',
+                        'reading_roman': 'koṭṭhiyo',
+                    },
+                ],
+            },
+            # ‼ CHECK [IMG_0358.PNG]: THE SHEET RUNS OUT AFTER A FULL STOP, so
+            #   no […] marker is used — the line and the sentence are both
+            #   complete and it is the paritta that carries on. Page 94
+            #   numbers from 30.
+            {
+                'number': 29,
+                'pali': 'สัพเพ พุทธา อะสะมะสะมา สัพเพ พุทธา มะหิทธิกา.',
+                'pali_roman': 'Sabbe buddhā asamasamā sabbe buddhā mahiddhikā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'all Buddhas equal to the unequalled, all Buddhas of great power.',
             },
         ],
     },
