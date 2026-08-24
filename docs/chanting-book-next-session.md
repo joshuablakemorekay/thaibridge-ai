@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-93 went in.
+94 went in.
 
 ## Read first, in this order
 
@@ -12,11 +12,17 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–93 are in and unbroken**, plus 217–221. **126 chants, 1,757 verses
+- **Pages 1–94 are in and unbroken**, plus 217–221. **126 chants, 1,784 verses
   reconciled against their photographs.** `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
+- ⚠️ **A SECOND SESSION IS WORKING IN THIS SAME CLONE**, on the ROMAN-SCRIPT
+  pages (317, 318). It has `chanting.py`, `scripts/check_render.py`,
+  `templates/chanting_page.html` and `tests/test_chanting_pages.py` open. Page
+  94's data is applied and verified but its `chanting.py` change is NOT
+  committed, because one file cannot be split between two sessions' commits —
+  see below.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 and 93 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 94 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -34,22 +40,42 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 94, `IMG_0359` — but READ THE NUMBER off the sheet
+## Next: page 95, `IMG_0360` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–93, so page 94 *should*
-be `IMG_0359`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–94, so page 95 *should*
+be `IMG_0360`. **Five more changes are still expected before page 207.**
 
-**`atanatiya-parittam-atthamam` is open at verse 29**, with no `[…]` — the row
-ends on a full stop and it is the paritta that carries on. Page 94's batch
-numbers **from 30** and needs both `continuation_of` and `continues: true` if it
-does not end there.
+**`atanatiya-parittam-atthamam` is open at verse 56**, with no `[…]` — the row
+is whole and it is the paritta that carries on. Page 95's batch numbers **from
+57**.
 
-**The roll-call of twenty-eight Buddhas is complete** (verses 13–27, two to a
-row), and verse 28–29 opens the "these and countless others" stanza. Expect the
-paritta's protective section next, and a colophon when it ends.
+**Three quarters are named, one to go.** East (bhūtas), south (devas), west
+(nāgas) are in; the northern quarter and its yakkhas should follow, then the
+paritta's close.
 
-**Measure the indents against THIS block's left edge.** Page 93's body sits at
-x 380 and indents to 470; page 92's sat elsewhere.
+**The printed row order puts the PROMISE before the QUARTER.** Standard editions
+set the quarter first. It parses correctly as the book sets it and was NOT
+re-ordered — do not "fix" it on page 95 either.
+
+## ⚠️ Two sessions, one `chanting.py` — what happened on page 94
+
+A second Claude session is working the **roman-script** end of the book (pages
+317, 318) in this same clone. When page 94 was applied, `chanting.py` held both
+sessions' work at once, plus that session's changes to `check_render.py`, the
+page template and a test.
+
+**Page 94 was applied and fully verified — four checks green, suite 1,324, page
+renders correctly — but its `chanting.py` change was left UNCOMMITTED.** Only
+`batch-094-094.json` and the docs were committed. Committing the shared file
+would have swept the other session's in-progress chant into a "page 94" commit
+under the wrong message, without the template and test changes that go with it.
+
+**So the docs may read one page ahead of what `chanting.py` has committed.** The
+data is regenerable at any time: `python scripts/apply_batch.py
+prompts/chanting-book-batch/batches/batch-094-094.json`.
+
+**The durable fix is a git worktree** so the two sessions stop sharing a working
+tree. Offer it before starting another long run alongside someone else.
 
 ## Standing rules for every page
 

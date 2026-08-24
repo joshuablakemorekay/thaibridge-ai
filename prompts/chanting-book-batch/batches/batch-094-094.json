@@ -1,0 +1,346 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "atanatiya-parittam-atthamam"
+  ],
+  "pages": [
+   {
+    "page": 94,
+    "file": "IMG_0359.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "atanatiya-parittam-atthamam",
+    "verses": "30-56",
+    "starts_here": false,
+    "note": "The whole sheet is one chant and twenty-seven TWO-COLUMN rows, gutter measured at x 1000-1140. One row is indented by a measured 120px against the block's own left edge of 470 — verse 50 — and it opens the protective stanzas. Row 35 breaks a word across the gutter with a hyphen. No title, no colophon, no footnote and no rule anywhere on the sheet. A HAND holds the book at the lower right; skin tone starts at x 1860 and the text ends by x 1660, so it covers nothing."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "atanatiya-parittam-atthamam",
+   "continuation_of": "atanatiya-parittam-atthamam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Twenty-seven, verses 30 to 56, one per two-column row, read ACROSS. Verses 30 to 49 continue the praise of the Buddhas that page 93's verse 28 opened; verse 50 opens the indented protective stanzas and carries para_start. No para_layout is declared and none is needed — this chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0359.PNG, page 94, read off the top centre of the sheet — the offset of 265 holds for an eighth page. Verse 30 is the first verse on this page and carries the page key. A hand is in the frame and was checked; it covers no text."
+   },
+   "verses": [
+    {
+     "number": 30,
+     "pali": "สัพเพ ทะสะพะลูเปตา เวสารัชเชหุปาคะตา",
+     "pali_roman": "Sabbe dasabalūpetā vesārajjehupāgatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "All endowed with the ten powers, and come to the four confidences;",
+     "page": 94
+    },
+    {
+     "number": 31,
+     "pali": "สัพเพ เต ปะฏิชานันติ อาสะภัณฐานะมุตตะมัง.",
+     "pali_roman": "Sabbe te paṭijānanti āsabhaṇṭhānamuttamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "all of them claim the supreme place of the bull."
+    },
+    {
+     "number": 32,
+     "pali": "สีหะนาทัง นะทันเต เต ปะริสาสุ วิสาระทา",
+     "pali_roman": "Sīhanādaṃ nadante te parisāsu visāradā",
+     "thai": "",
+     "paiboon": "",
+     "english": "They roar the lion's roar, self-assured in the assemblies;"
+    },
+    {
+     "number": 33,
+     "pali": "พ์รัห์มะจักกัง ปะวัตเตนติ โลเก อัปปะฏิวัตติยัง.",
+     "pali_roman": "Brahmacakkaṃ pavattenti loke appaṭivattiyaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "they set rolling the divine wheel in the world, which none can turn back."
+    },
+    {
+     "number": 34,
+     "pali": "อุเปตา พุทธะธัมเมหิ อัฏฐาระสะหิ นายะกา",
+     "pali_roman": "Upetā buddhadhammehi aṭṭhārasahi nāyakā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The leaders, endowed with the eighteen qualities of a Buddha,"
+    },
+    {
+     "number": 35,
+     "pali": "ท์วัตติงสะลักขะณูเปตาสีต์ยานุพ์ยัญชะนาธะรา",
+     "pali_roman": "Dvattiṃsalakkhaṇūpetāsītyānubyañjanādharā",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of the thirty-two marks and bearing the eighty minor signs;"
+    },
+    {
+     "number": 36,
+     "pali": "พ์ยามัปปะภายะ สุปปะภา สัพเพ เต มุนิกุญชะรา",
+     "pali_roman": "Byāmappabhāya suppabhā sabbe te munikuñjarā",
+     "thai": "",
+     "paiboon": "",
+     "english": "radiant with the fathom-wide aura, all of them elephants among sages;"
+    },
+    {
+     "number": 37,
+     "pali": "พุทธา สัพพัญญุโน เอเต สัพเพ ขีณาสะวา ชินา.",
+     "pali_roman": "Buddhā sabbaññuno ete sabbe khīṇāsavā jinā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "these Buddhas, all-knowing, all of them Conquerors with taints destroyed."
+    },
+    {
+     "number": 38,
+     "pali": "มะหัปปะภา มะหาเตชา มะหาปัญญา มะหัพพะลา",
+     "pali_roman": "Mahappabhā mahātejā mahāpaññā mahabbalā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Of great radiance, great power, great wisdom, great strength;"
+    },
+    {
+     "number": 39,
+     "pali": "มะหาการุณิกา ธีรา สัพเพสานัง สุขาวะหา.",
+     "pali_roman": "Mahākāruṇikā dhīrā sabbesānaṃ sukhāvahā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "greatly compassionate, steadfast, bringers of happiness to all."
+    },
+    {
+     "number": 40,
+     "pali": "ทีปา นาถา ปะติฏฐา จะ ตาณา เลณา จะ ปาณินัง",
+     "pali_roman": "Dīpā nāthā patiṭṭhā ca tāṇā leṇā ca pāṇinaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Islands, protectors, supports, shelters and refuges of living beings;"
+    },
+    {
+     "number": 41,
+     "pali": "คะตี พันธู มะหัสสาสา สะระณา จะ หิเตสิโน.",
+     "pali_roman": "Gatī bandhū mahassāsā saraṇā ca hitesino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "their destination, their kin, their great comfort, their refuge, seekers of their welfare."
+    },
+    {
+     "number": 42,
+     "pali": "สะเทวะกัสสะ โลกัสสะ สัพเพ เอเต ปะรายะนา",
+     "pali_roman": "Sadevakassa lokassa sabbe ete parāyanā",
+     "thai": "",
+     "paiboon": "",
+     "english": "For the world with its devas, all these are the final resort;"
+    },
+    {
+     "number": 43,
+     "pali": "เตสาหัง สิระสา ปาเท วันทามิ ปุริสุตตะเม.",
+     "pali_roman": "Tesāhaṃ sirasā pāde vandāmi purisuttame.",
+     "thai": "",
+     "paiboon": "",
+     "english": "with my head I venerate their feet, those highest of persons."
+    },
+    {
+     "number": 44,
+     "pali": "วะจะสา มะนะสา เจวะ วันทาเมเต ตะถาคะเต",
+     "pali_roman": "Vacasā manasā ceva vandāmete tathāgate",
+     "thai": "",
+     "paiboon": "",
+     "english": "By speech and by mind alike I venerate these Tathāgatas,"
+    },
+    {
+     "number": 45,
+     "pali": "สะยะเน อาสะเน ฐาเน คะมะเน จาปิ สัพพะทา.",
+     "pali_roman": "Sayane āsane ṭhāne gamane cāpi sabbadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "lying down, sitting, standing and walking, at all times."
+    },
+    {
+     "number": 46,
+     "pali": "สะทา สุเขนะ รักขันตุ พุทธา สันติกะรา ตุวัง",
+     "pali_roman": "Sadā sukhena rakkhantu buddhā santikarā tuvaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "May the Buddhas, makers of peace, always guard you in happiness;"
+    },
+    {
+     "number": 47,
+     "pali": "เตหิ ต์วัง รักขิโต สันโต มุตโต สัพพะภะเยนะ จะ.",
+     "pali_roman": "Tehi tvaṃ rakkhito santo mutto sabbabhayena ca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "guarded by them, may you be at peace and freed from every fear."
+    },
+    {
+     "number": 48,
+     "pali": "สัพพะโรคะวินิมุตโต สัพพะสันตาปะวัชชิโต",
+     "pali_roman": "Sabbarogavinimutto sabbasantāpavajjito",
+     "thai": "",
+     "paiboon": "",
+     "english": "Released from every disease, spared every affliction,"
+    },
+    {
+     "number": 49,
+     "pali": "สัพพะเวระมะติกกันโต นิพพุโต จะ ตุวัง ภะวะ.",
+     "pali_roman": "Sabbaveramatikkanto nibbuto ca tuvaṃ bhava.",
+     "thai": "",
+     "paiboon": "",
+     "english": "having passed beyond all enmity, may you be quenched."
+    },
+    {
+     "number": 50,
+     "pali": "เตสัง สัจเจนะ สีเลนะ ขันติเมตตาพะเลนะ จะ",
+     "pali_roman": "Tesaṃ saccena sīlena khantimettābalena ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "By their truth, their virtue, and the power of their patience and loving-kindness,",
+     "para_start": true
+    },
+    {
+     "number": 51,
+     "pali": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ",
+     "pali_roman": "Tepi tumhe anurakkhantu ārogyena sukhena ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they too protect you, with health and with happiness."
+    },
+    {
+     "number": 52,
+     "pali": "ปุรัตถิมัส์มิง ทิสาภาเค สันติ ภูตา มะหิทธิกา",
+     "pali_roman": "Puratthimasmiṃ disābhāge santi bhūtā mahiddhikā",
+     "thai": "",
+     "paiboon": "",
+     "english": "In the eastern quarter there are beings of great power —"
+    },
+    {
+     "number": 53,
+     "pali": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ",
+     "pali_roman": "Tepi tumhe anurakkhantu ārogyena sukhena ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they too protect you, with health and with happiness."
+    },
+    {
+     "number": 54,
+     "pali": "ทักขิณัส์มิง ทิสาภาเค สันติ เทวา มะหิทธิกา",
+     "pali_roman": "Dakkhiṇasmiṃ disābhāge santi devā mahiddhikā",
+     "thai": "",
+     "paiboon": "",
+     "english": "In the southern quarter there are devas of great power —"
+    },
+    {
+     "number": 55,
+     "pali": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ",
+     "pali_roman": "Tepi tumhe anurakkhantu ārogyena sukhena ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they too protect you, with health and with happiness."
+    },
+    {
+     "number": 56,
+     "pali": "ปัจฉิมัส์มิง ทิสาภาเค สันติ นาคา มะหิทธิกา",
+     "pali_roman": "Pacchimasmiṃ disābhāge santi nāgā mahiddhikā",
+     "thai": "",
+     "paiboon": "",
+     "english": "In the western quarter there are nāgas of great power —"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ทะสะพะละ",
+     "pali_roman": "dasabala",
+     "meaning": "the ten powers of a Tathāgata — the knowledges that make a Buddha able to teach"
+    },
+    {
+     "pali": "เวสารัชชะ",
+     "pali_roman": "vesārajja",
+     "meaning": "the four confidences; the grounds on which a Buddha fears no challenge"
+    },
+    {
+     "pali": "อาสะภัณฐานะ",
+     "pali_roman": "āsabhaṇṭhāna",
+     "meaning": "the place of the bull — the foremost position, claimed with the lion's roar"
+    },
+    {
+     "pali": "ท์วัตติงสะลักขะณะ / อะสีต์ยานุพ์ยัญชะนะ",
+     "pali_roman": "dvattiṃsalakkhaṇa / asītyānubyañjana",
+     "meaning": "the thirty-two marks and the eighty minor signs of a great man — joined into one word here by a hyphen across the gutter"
+    },
+    {
+     "pali": "พ์ยามัปปะภา",
+     "pali_roman": "byāmappabhā",
+     "meaning": "the aura extending a fathom around the body"
+    },
+    {
+     "pali": "มุนิกุญชะระ",
+     "pali_roman": "munikuñjara",
+     "meaning": "elephant among sages — kuñjara, the bull elephant, used as a term of pre-eminence"
+    },
+    {
+     "pali": "ตาณะ / เลณะ / สะระณะ",
+     "pali_roman": "tāṇa / leṇa / saraṇa",
+     "meaning": "shelter, cave-refuge and refuge — three words for safety piled up in one line"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 35,
+     "file": "IMG_0359.PNG",
+     "issue": "A HYPHEN ACROSS THE GUTTER, the FOURTH in this run after pages 79, 82 and 92. The left column ends ท์วัตติงสะลักขะณูเปตา- and the right opens สีต์ยานุพ์ยัญชะนาธะรา, so the word is rejoined as ท์วัตติงสะลักขะณูเปตาสีต์ยานุพ์ยัญชะนาธะรา and the hyphen dropped as typesetting. It is the longest single word entered from this book so far, and it settles the two-column reading of this block on its own."
+    },
+    {
+     "verse": 30,
+     "file": "IMG_0359.PNG",
+     "issue": "A HAND IS IN THIS PHOTOGRAPH AND IT COVERS NO TEXT — checked, not assumed. Skin tone starts at x 1860; the text's right column ends by x 1660. Two hundred pixels of clear margin between them. Second page running with a hand in frame and neither needed re-photographing."
+    },
+    {
+     "verse": 50,
+     "file": "IMG_0359.PNG",
+     "issue": "ONE INDENT ON THE WHOLE SHEET, measured against this block's own left edge. Verse 50 starts at x 590 where every other row starts at x 470 — a 120px indent — and it turns the chant from praising the Buddhas to invoking protection. The baseline was computed from this page rather than carried from page 93, whose block sat at x 380."
+    },
+    {
+     "verse": 51,
+     "file": "IMG_0359.PNG",
+     "issue": "เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ REPEATS VERBATIM at verses 51, 53 and 55, and will go on repeating: the paritta names a quarter, says what powerful beings live there, and asks the same protection each time. Recorded because check_render walks strings in printed order."
+    },
+    {
+     "verse": 52,
+     "file": "IMG_0359.PNG",
+     "issue": "THE PRINTED ROW ORDER PUTS THE PROMISE BEFORE THE QUARTER, and that is the book, not a mis-pairing. Row 51 is เตปิ ตุมเห อะนุรักขันตุ… and row 52 is ปุรัตถิมัส์มิง ทิสาภาเค…, so read straight down the page the promise comes first and the quarter second. It parses correctly that way — verse 50's 'by their truth' governs verse 51, and each quarter then takes the promise that follows it. Recorded because standard editions set the quarter first and someone comparing them would think the rows had been swapped."
+    },
+    {
+     "verse": 36,
+     "file": "IMG_0359.PNG",
+     "issue": "สุปปะภา carries its ุ, checked at the band edge where the first crop cut it — the same trap as page 91's โลกะวิทู. Read again on an overlapping band and the vowel is there."
+    },
+    {
+     "verse": 56,
+     "file": "IMG_0359.PNG",
+     "issue": "THE SHEET RUNS OUT AFTER A WHOLE ROW, so no […] marker is used. The western quarter's nāgas are named and their promise is on page 95, along with the northern quarter. Page 95 numbers from 57."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "atanatiya-parittam-atthamam"
+  ],
+  "resume_from_page": 95,
+  "resume_from_file": "IMG_0360.PNG",
+  "resume_from": "atanatiya-parittam-atthamam",
+  "unreadable": [],
+  "paiboon_scan": "clean, and vacuously so — this batch contains NO paiboon value at all. The page prints no Thai translation, every verse paiboon is empty, and a continuation carries no title_roman. Scanned every field regardless for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster marks in พ์รัห์มะจักกัง, ท์วัตติงสะ-, สีต์ยานุพ์ยัญชะนาธะรา, พ์ยามัปปะภายะ, ต์วัง, อาโรค์เยนะ, ปุรัตถิมัส์มิง, ทักขิณัส์มิง and ปัจฉิมัส์มิง. The one departure from the printed characters is the hyphen at verse 35, dropped because the word runs across the gutter, and raised in a check. No ฬ appears anywhere on this sheet. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. One row for one page, holding one chant. It claims verses 30-56 and the entry holds exactly those. Verse 30 is the first verse on the page and the only one carrying a page key; no page turns inside it. No page blocks and no footnote on this sheet.",
+  "notes": "ONE CHANT, ONE SHEET, TWENTY-SEVEN TWO-COLUMN ROWS, and no furniture at all — no title, no colophon, no footnote, no rule. Three things for Josh. (1) A FOURTH HYPHEN ACROSS A GUTTER, joining ท์วัตติงสะลักขะณูเปตา- to สีต์ยานุพ์ยัญชะนาธะรา — the longest single word entered from this book so far, and proof of the two-column reading on its own. (2) THE PRINTED ROW ORDER PUTS THE PROMISE BEFORE THE QUARTER, where standard editions set the quarter first. It parses correctly as printed and was NOT re-ordered; recorded so nobody comparing editions thinks the rows were swapped. (3) A HAND IS IN THE FRAME AGAIN and again covers nothing — skin at x 1860 against text ending at x 1660. Nothing needs re-photographing."
+ }
+}
