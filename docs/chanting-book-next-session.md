@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-95 went in.
+96 went in.
 
 ## Read first, in this order
 
@@ -12,19 +12,23 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–95 are in and unbroken**, plus 217–221. **126 chants, 1,811 verses
-  reconciled against their photographs.** `/chanting` derives its own coverage
+- **Pages 1–96 are in and unbroken**, plus 217–221. **128 chants and 1,977
+  verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
+  `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
 - ⚠️ **A SECOND SESSION IS WORKING IN THIS SAME CLONE**, on the ROMAN-SCRIPT
   pages (317, 318). It has `chanting.py`, `scripts/check_render.py`,
   `templates/chanting_page.html` and `tests/test_chanting_pages.py` open. Page
-  94's and 95's data is applied and verified but their `chanting.py` changes are
-  NOT committed, because one file cannot be split between two sessions' commits
-  — see below. **The test suite currently shows failures that are theirs, not
-  ours**: `mahasamayasutta-roman` verses whose batch files exist but are not yet
-  applied. Do not try to fix those.
+  94, 95 and 96's data is applied and verified but their `chanting.py` changes
+  are NOT committed, because one file cannot be split between two sessions'
+  commits — see below.
+- ⚠️ **TEST RESULTS ARE MOMENTARILY UNRELIABLE while the other session is
+  writing.** Page 96's run showed two failures that vanished on a re-run seconds
+  later — they were mid-write on `chanting.py`. **Re-run before believing a red
+  suite**, and check whether the failing names are theirs
+  (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 95 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 96 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -42,20 +46,19 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 96, `IMG_0361` — but READ THE NUMBER off the sheet
+## Next: page 97, `IMG_0362` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–95, so page 96 *should*
-be `IMG_0361`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–96, so page 97 *should*
+be `IMG_0362`. **Five more changes are still expected before page 207.**
 
-**`atanatiya-parittam-atthamam` is open at verse 83**, with no `[…]` — the row
-ends on a full stop. Page 96's batch numbers **from 84**.
+**Page 97 starts clean.** Three chants closed on page 96 — the Āṭānāṭiya
+Paritta after five sheets, and both Aṅgulimāla chants — and there is no
+`‼ CONTINUES` marker left in the file. Whatever is on the sheet begins there.
 
-**The medicine stanza has done the Buddha and the Dhamma.** The Saṅgha one
-should open page 96, then the paritta's close and probably a colophon.
-
-**Do not re-order the rows.** This chant prints the promise before the quarter
-and the book's order has been kept throughout; page 96 should be read the same
-way.
+**Nine of the Twelve Tamnan are in.** Maṅgala, Ratana, Karaṇīya-metta, Khandha,
+Mora, Vaṭṭaka, Dhajagga, Āṭānāṭiya, Aṅgulimāla. **Three remain** — the สารบัญ
+lists Bojjhaṅga, Abhaya and Jaya, each with its own `บทขัด` first, as every one
+so far has had.
 
 ## ⚠️ Two sessions, one `chanting.py` — what happened on page 94
 

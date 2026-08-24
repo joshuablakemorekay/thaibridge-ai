@@ -1,0 +1,430 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "atanatiya-parittam-atthamam",
+   "bot-khat-angulimala-parittam",
+   "angulimala-parittam-navamam"
+  ],
+  "pages": [
+   {
+    "page": 96,
+    "file": "IMG_0361.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "atanatiya-parittam-atthamam",
+    "verses": "84-90",
+    "starts_here": false,
+    "note": "The top of the sheet: seven TWO-COLUMN rows closing the Āṭānāṭiya Paritta, gutter measured at x 900-1080, with verse 87 indented to open the closing blessing. Then the colophon อาฏานาฏิยะปะริตตัง นิฏฐิตัง. centred beneath. No footnote."
+   },
+   {
+    "page": 96,
+    "file": "IMG_0361.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-angulimala-parittam",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A centred bold title and five TWO-COLUMN rows, gutter measured at x 1000-1080. The chant starts and ends here."
+   },
+   {
+    "page": 96,
+    "file": "IMG_0361.PNG",
+    "script": "thai",
+    "chant": "angulimala-parittam-navamam",
+    "verses": "1-9",
+    "starts_here": true,
+    "note": "The foot of the sheet: a centred bold title, then THREE indented PROSE paragraphs filling the measure — ink x 320 to x 1800, no gutter — each carrying the same sentence word for word. Then the colophon อังคุลิมาละปะริตตัง นิฏฐิตัง. centred. A finger sits at the very bottom edge, y 2600 onward; the last printed line ends at y 2380, so it covers nothing."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "atanatiya-parittam-atthamam",
+   "continuation_of": "atanatiya-parittam-atthamam",
+   "closing": {
+    "pali": "อาฏานาฏิยะปะริตตัง นิฏฐิตัง.",
+    "pali_roman": "Āṭānāṭiyaparittaṃ niṭṭhitaṃ.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Āṭānāṭiya Paritta."
+   },
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Seven, verses 84 to 90, one per two-column row, read ACROSS. Verses 84 to 86 finish the medicine stanza the Saṅgha was owed; verse 87 opens the closing blessing and carries para_start. No para_layout is needed — this chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. The page prints no romanisation of its own and this entry carries no paiboon value.",
+    "pages": "IMG_0361.PNG, page 96, read off the top centre of the sheet — the offset of 265 holds for a tenth page. The chant ENDS on this page, with a colophon, after running across pages 92 to 96. Verse 84 is the first verse on this page."
+   },
+   "verses": [
+    {
+     "number": 84,
+     "pali": "สักกัต์วา สังฆะระตะนัง โอสะถัง อุตตะมัง วะรัง",
+     "pali_roman": "Sakkatvā saṅgharatanaṃ osathaṃ uttamaṃ varaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having honoured the Jewel of the Saṅgha, the supreme and excellent medicine,",
+     "page": 96
+    },
+    {
+     "number": 85,
+     "pali": "อาหุเนยยัง ปาหุเนยยัง สังฆะเตเชนะ โสตถินา",
+     "pali_roman": "Āhuneyyaṃ pāhuneyyaṃ saṅghatejena sotthinā",
+     "thai": "",
+     "paiboon": "",
+     "english": "worthy of gifts and of hospitality — by the Saṅgha's power, in safety,"
+    },
+    {
+     "number": 86,
+     "pali": "นัสสันตุปัททะวา สัพเพ โรคา วูปะสะเมนตุ เต.",
+     "pali_roman": "Nassantupaddavā sabbe rogā vūpasamentu te.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may all your misfortunes perish and your diseases be stilled."
+    },
+    {
+     "number": 87,
+     "pali": "สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ",
+     "pali_roman": "Sabbītiyo vivajjantu sabbarogo vinassatu",
+     "thai": "",
+     "paiboon": "",
+     "english": "May all calamities be avoided, may every disease be destroyed;",
+     "para_start": true
+    },
+    {
+     "number": 88,
+     "pali": "มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ.",
+     "pali_roman": "Mā te bhavatvantarāyo sukhī dīghāyuko bhava.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may no obstacle be yours; be happy and long-lived."
+    },
+    {
+     "number": 89,
+     "pali": "อะภิวาทะนะสีลิสสะ นิจจัง วุฑฒาปะจายิโน",
+     "pali_roman": "Abhivādanasīlissa niccaṃ vuḍḍhāpacāyino",
+     "thai": "",
+     "paiboon": "",
+     "english": "For one whose habit is to salute, who constantly honours the elders,"
+    },
+    {
+     "number": 90,
+     "pali": "จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.",
+     "pali_roman": "Cattāro dhammā vaḍḍhanti āyu vaṇṇo sukhaṃ balaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "four things increase: long life, beauty, happiness and strength."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สัพพีติ",
+     "pali_roman": "sabbīti",
+     "meaning": "every calamity. The closing blessing asks for all of them to be turned aside"
+    },
+    {
+     "pali": "อะภิวาทะนะสีลี",
+     "pali_roman": "abhivādanasīlī",
+     "meaning": "one whose habit is to salute — someone who makes a practice of paying respect"
+    },
+    {
+     "pali": "วุฑฒาปะจายี",
+     "pali_roman": "vuḍḍhāpacāyī",
+     "meaning": "one who honours those senior in years or in virtue"
+    },
+    {
+     "pali": "อายุ วัณโณ สุขัง พะลัง",
+     "pali_roman": "āyu vaṇṇo sukhaṃ balaṃ",
+     "meaning": "long life, beauty, happiness, strength — the four things said to increase, and the line most often quoted from this paritta"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 87,
+     "file": "IMG_0361.PNG",
+     "issue": "THE CLOSING BLESSING IS A SEPARATE STANZA and is indented, so verse 87 carries para_start. Verses 87 to 90 are not part of the medicine sequence above them — they are the general blessing that ends the whole paritta, and verses 89 and 90 are the four-things verse quoted on its own all over Theravāda practice."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0361.PNG",
+     "issue": "A COLOPHON AND NO CITATION. อาฏานาฏิยะปะริตตัง นิฏฐิตัง. is printed centred under verse 90 and goes in as `closing`. There is no footnote and no marker anywhere on this sheet, and page 93's citation is already recorded on the chant, so nothing is added here. The paritta has run across pages 92 to 96."
+    },
+    {
+     "verse": 84,
+     "file": "IMG_0361.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 900-1080 — a different position from the บทขัด below it on this sheet, whose gutter is at x 1000-1080. Each profiled separately."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-angulimala-parittam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Five, one per two-column row, read ACROSS. One group; the chant's layout is the default 'lines'.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_roman is the contents' value; the SPACING of title_thai follows the page, which differs from the contents by one space.",
+    "pages": "IMG_0361.PNG, page 96. Title and all five rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด อังคุลิมาละปะริตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt aŋ-kú-lí-maa-lá-bpà-rít-dtaŋ",
+   "title_english": "The Prefatory Verse for the Aṅgulimāla Paritta",
+   "page_start": 96,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ปะริตตัง ยัมภะณันตัสสะ นิสินนัฏฐานะโธวะนัง",
+     "pali_roman": "Parittaṃ yambhaṇantassa nisinnaṭṭhānadhovanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The paritta which, for one reciting it, the water that washes the place where he sat",
+     "page": 96
+    },
+    {
+     "number": 2,
+     "pali": "อุทะกัมปิ วินาเสติ สัพพะเมวะ ปะริสสะยัง.",
+     "pali_roman": "Udakampi vināseti sabbamevaparissayaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "destroys every danger whatsoever;"
+    },
+    {
+     "number": 3,
+     "pali": "โสตถินา คัพภะวุฏฐานัง ยัญจะ สาเธติ ตังขะเณ",
+     "pali_roman": "Sotthinā gabbhavuṭṭhānaṃ yañca sādheti taṅkhaṇe",
+     "thai": "",
+     "paiboon": "",
+     "english": "and which brings about a safe delivery of the child in that very moment;"
+    },
+    {
+     "number": 4,
+     "pali": "เถรัสสังคุลิมาลัสสะ โลกะนาเถนะ ภาสิตัง.",
+     "pali_roman": "Therassaṅgulimālassa lokanāthena bhāsitaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "spoken by the Refuge of the World to the elder Aṅgulimāla;"
+    },
+    {
+     "number": 5,
+     "pali": "กัปปัฏฐายิ มะหาเตชัง ปะริตตันตัมภะณามะ เห.",
+     "pali_roman": "Kappaṭṭhāyi mahātejaṃ parittantambhaṇāma he.",
+     "thai": "",
+     "paiboon": "",
+     "english": "lasting an aeon and of great power: that paritta let us now recite."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "คัพภะวุฏฐานะ",
+     "pali_roman": "gabbhavuṭṭhāna",
+     "meaning": "delivery of a child. What this paritta is recited for, and what the sutta it comes from is about"
+    },
+    {
+     "pali": "นิสินนัฏฐานะโธวะนะ",
+     "pali_roman": "nisinnaṭṭhānadhovana",
+     "meaning": "the washing of the place where one sat — the water used to wash the seat, said to carry the paritta's power"
+    },
+    {
+     "pali": "กัปปัฏฐายิ",
+     "pali_roman": "kappaṭṭhāyi",
+     "meaning": "lasting an aeon. The same claim the Vaṭṭaka preface makes on page 89"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0361.PNG",
+     "issue": "A NINTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด อังคุลิมาละปะริตตัง with a SPACE after บทขัด; the สารบัญ has บทขัดอังคุลิมาละปะริตตัง without one. Same as pages 82, 86, 87, 88, 89, 90 and 92. The page is reproduced; the romanisation is unaffected by the space, so the contents' value is used unchanged."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0361.PNG",
+     "issue": "VERSE 4 ENDS WITH A FULL STOP where the sentence plainly runs on into verse 5 — ภาสิตัง. then กัปปัฏฐายิ มะหาเตชัง ปะริตตันตัมภะณามะ เห. Read at 1.8x; the mark is on the baseline. Reproduced as printed. The three sibling prefaces on pages 88, 89 and 92 all take a comma in that position, so this one is the odd one."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0361.PNG",
+     "issue": "TWO COLUMNS, gutter measured at x 1000-1080. Read ACROSS. FIRST PAIRING FOR CHECKING: left ปะริตตัง ยัมภะณันตัสสะ + right นิสินนัฏฐานะโธวะนัง."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0361.PNG",
+     "issue": "english_unverified is set, and this chant's English is the least certain on the page. Verses 1 to 4 are one long relative clause whose main verb does not arrive until verse 5, and the gloss keeps the book's order rather than reassembling it into English syntax."
+    }
+   ]
+  },
+  {
+   "id": "angulimala-parittam-navamam",
+   "closing": {
+    "pali": "อังคุลิมาละปะริตตัง นิฏฐิตัง.",
+    "pali_roman": "Aṅgulimālaparittaṃ niṭṭhitaṃ.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Aṅgulimāla Paritta."
+   },
+   "working_notes": {
+    "invitation": "absent, and none written. The บทขัด that introduces this paritta is its own chant directly above it on this page.",
+    "units": "Nine — the SAME THREE UNITS printed three times over, split at the printed commas and full stop. The book sets three separate indented paragraphs, so verses 1, 4 and 7 each open a group and each declares para_layout 'prose'. This chant has no chant-level layout key, so every group must declare its own.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None. title_pali is the contents' value, which the transliteration script independently reproduces.",
+    "pages": "IMG_0361.PNG, page 96. Title, all three paragraphs and the colophon are on this page; the chant starts and ends here. A finger is in the frame at the bottom edge and covers no text — checked."
+   },
+   "title_thai": "อังคุลิมาละปะริตตัง นะวะมัง",
+   "title_pali": "Aṅgulimālaparittaṃ navamaṃ",
+   "title_roman": "",
+   "title_english": "The Aṅgulimāla Paritta, the Ninth",
+   "page_start": 96,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต,",
+     "pali_roman": "Yatohaṃ bhagini ariyāya jātiyā jāto,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Sister, since I was born in the noble birth,",
+     "page": 96,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "นาภิชานามิ สัญจิจจะ ปาณัง ชีวิตา โวโรเปตา,",
+     "pali_roman": "Nābhijānāmi sañcicca pāṇaṃ jīvitā voropetā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am not aware of having intentionally deprived any living being of life;"
+    },
+    {
+     "number": 3,
+     "pali": "เตนะ สัจเจนะ โสตถิ เต โหตุ โสตถิ คัพภัสสะ.",
+     "pali_roman": "Tena saccena sotthi te hotu sotthi gabbhassa.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by that truth, may you be well and may your child be well."
+    },
+    {
+     "number": 4,
+     "pali": "ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต,",
+     "pali_roman": "Yatohaṃ bhagini ariyāya jātiyā jāto,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Sister, since I was born in the noble birth,",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 5,
+     "pali": "นาภิชานามิ สัญจิจจะ ปาณัง ชีวิตา โวโรเปตา,",
+     "pali_roman": "Nābhijānāmi sañcicca pāṇaṃ jīvitā voropetā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am not aware of having intentionally deprived any living being of life;"
+    },
+    {
+     "number": 6,
+     "pali": "เตนะ สัจเจนะ โสตถิ เต โหตุ โสตถิ คัพภัสสะ.",
+     "pali_roman": "Tena saccena sotthi te hotu sotthi gabbhassa.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by that truth, may you be well and may your child be well."
+    },
+    {
+     "number": 7,
+     "pali": "ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต,",
+     "pali_roman": "Yatohaṃ bhagini ariyāya jātiyā jāto,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Sister, since I was born in the noble birth,",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 8,
+     "pali": "นาภิชานามิ สัญจิจจะ ปาณัง ชีวิตา โวโรเปตา,",
+     "pali_roman": "Nābhijānāmi sañcicca pāṇaṃ jīvitā voropetā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am not aware of having intentionally deprived any living being of life;"
+    },
+    {
+     "number": 9,
+     "pali": "เตนะ สัจเจนะ โสตถิ เต โหตุ โสตถิ คัพภัสสะ.",
+     "pali_roman": "Tena saccena sotthi te hotu sotthi gabbhassa.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by that truth, may you be well and may your child be well."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ภะคินิ",
+     "pali_roman": "bhagini",
+     "meaning": "sister — the woman in difficult labour whom Aṅgulimāla is addressing. The vocative is what makes this a spoken act of truth rather than a formula"
+    },
+    {
+     "pali": "อะริยายะ ชาติยา",
+     "pali_roman": "ariyāya jātiyā",
+     "meaning": "the noble birth — Aṅgulimāla's going forth, not his physical birth. Before it he was a killer; the truth-act rests on the distinction"
+    },
+    {
+     "pali": "สัญจิจจะ",
+     "pali_roman": "sañcicca",
+     "meaning": "intentionally. The precise word the whole act of truth turns on"
+    },
+    {
+     "pali": "โสตถิ คัพภัสสะ",
+     "pali_roman": "sotthi gabbhassa",
+     "meaning": "safety for the child. What the truth is sworn for"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0361.PNG",
+     "issue": "THE SAME SENTENCE PRINTED THREE TIMES, IN THREE SEPARATE INDENTED PARAGRAPHS. Verses 1-3, 4-6 and 7-9 are word for word identical, and the book sets each as its own paragraph rather than running them together — so verses 1, 4 and 7 each carry para_start and para_layout 'prose'. It is chanted three times, like the Namo and the refuges. Recorded because check_render walks strings in printed order and nine lines that are really three would otherwise read as a fault."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0361.PNG",
+     "issue": "PROSE, MEASURED: ink x 320 to x 1800 with no gutter anywhere, so this chant is NOT two-column even though both chants above it on this same sheet are. Third setting on one page. This chant has no chant-level layout key, so every group declares 'prose' explicitly — the page-73 rule."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0361.PNG",
+     "issue": "A FINGER IS IN THIS PHOTOGRAPH AND IT COVERS NO TEXT — checked, not assumed. Skin tone occupies y 2600 to the bottom edge; the last printed line, the colophon, ends at y 2380. Two hundred pixels of clear paper between them. Third page in this run with a hand in frame and none has needed re-photographing."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0361.PNG",
+     "issue": "A COLOPHON AND NO CITATION. อังคุลิมาละปะริตตัง นิฏฐิตัง. is printed centred under the third paragraph and goes in as `closing`. No footnote and no marker anywhere on the sheet, so source_printed is left off — the same as the Mora and Vaṭṭaka parittas."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0361.PNG",
+     "issue": "english_unverified is set. The book prints this paritta in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition. ภะคินิ is kept as 'Sister' rather than smoothed away, because the paritta is a speech to one woman and loses its point without her."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "atanatiya-parittam-atthamam",
+   "bot-khat-angulimala-parittam",
+   "angulimala-parittam-navamam"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 97,
+  "resume_from_file": "IMG_0362.PNG",
+  "resume_from": "",
+  "unreadable": [],
+  "paiboon_scan": "clean. The page prints no Thai translation, so every verse paiboon is empty, and the only Paiboon+ in the batch is one title_roman taken from CONTENTS. Scanned every field for kh, th, ph and ng: zero hits.",
+  "pali_untouched": "Confirmed. Every pali value is this page's Thai script as printed and every pali_roman transliterates it letter for letter, including the cluster mark in สักกัต์วา. No ฬ appears anywhere on this sheet, so nothing here touches the question pages 85, 90 and 95 opened. No pali value has been run through Paiboon+.",
+  "page_scan": "agrees. Three rows for one page, one per chant, in the order they appear down the sheet. Each row's verse range matches its entry exactly — 84-90, 1-5, 1-9 — no verse is orphaned and none is claimed twice. Each chant's first verse on this page carries the page key and no page turns inside any of them. No page blocks and no footnote on this sheet.",
+  "notes": "THREE CHANTS CLOSE ON ONE SHEET and nothing is left open — the Āṭānāṭiya Paritta after five pages, the Aṅgulimāla preface, and the Aṅgulimāla Paritta itself, each with its own colophon. Three things for Josh. (1) THE AṄGULIMĀLA PARITTA IS ONE SENTENCE PRINTED THREE TIMES, in three separate indented paragraphs, so nine verses are really three chanted thrice. (2) THREE SETTINGS ON ONE SHEET again — two-column, two-column with a different gutter, then full-measure prose. (3) VERSE 4 OF THE บทขัด TAKES A FULL STOP where the sentence runs on and where its three sibling prefaces all take a comma. A NINTH title the contents test cannot see. Nothing needs re-photographing."
+ }
+}
