@@ -87,6 +87,14 @@ photograph.
 | 221 | IMG_0491 | 270 |
 | 222 | IMG_0492 | 270 |
 | 223 | IMG_0493 | 270 |
+| 309 | IMG_0576 | 267 | ⟵ LAST Thai-script sheet |
+| **310** | **IMG_0577** | **267** ⟵ FIRST roman sheet |
+| 311 | IMG_0578 | 267 |
+| 312 | IMG_0579 | 267 |
+| 313 | IMG_0580 | 267 |
+| 314 | IMG_0581 | 267 |
+| 315 | IMG_0582 | 267 |
+| 316 | IMG_0583 | 267 |
 | 317 | IMG_0584 | 267 |
 | 318 | IMG_0585 | 267 |
 | 319 | IMG_0586 | 267 |
@@ -124,7 +132,15 @@ list, so no page is missing there — the offset simply steps by two. Both sides
 of the step were read off the sheets rather than calculated, which is what
 proves it is a duplicate deletion and not two more unphotographed pages.
 
-## Pages 309–325 are a ROMAN-SCRIPT section the สารบัญ never names
+## Pages 310–325 are a ROMAN-SCRIPT section the สารบัญ never names
+
+**The boundary is 310, and it was first written here as 309 — that was wrong.**
+The number was inferred from `BOOK_LAST_PAGE` being 308 rather than read off a
+sheet, which is the one thing this document tells you never to do. Page 309 was
+then photographed-checked and is **Thai script**: it carries the tail of the
+kathina material, `อัตถะตัง ภันเต สังฆัสสะ กะฐินัง…` and a Thai instruction
+paragraph, and it belongs to a chant the สารบัญ *does* list. `IMG_0576` is the
+last Thai-script sheet; `IMG_0577` (page 310) is the first roman one.
 
 `BOOK_LAST_PAGE` is 308, which is the last page the book's own contents lists,
 and the book runs to 325. The closing stretch is set in **roman Pali with no
