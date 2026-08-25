@@ -321,22 +321,31 @@ with a real พ shows a match either way.** It cannot discriminate, and every
 - A visible **tall ascender** is still positive proof of `ฬ` (pages 76–80, and
   `เวฬุวะเน` on pages 33/34/36/71). Its **absence proves nothing**.
 
-### ⏳ STILL TO FLIP — eight places, awaiting Josh's word
+### ✅ ALL FOURTEEN PLACES ARE NOW ฬ — the sweep is complete
 
-Pages 85 and 99 are corrected. The same finding implicates these, but Josh
-verified only those two pages, so they have NOT been changed:
+Josh confirmed **four pages** directly at the book: 85, 95, 99 and 102. The
+remaining six places were changed on the strength of the rule those four
+established, and are listed here so it is clear which rest on a reading and
+which on the rule.
 
-| page | chant | as stored | should be | canon |
+| page | chant | verse | now reads | confirmed how |
 |---|---|---|---|---|
-| 31 | `ปะฏิจจะสะมุปปาทะปาโฐ` v4, v5 | `สะพายะตะนัง` | `สะฬายะตะนัง` | *saḷāyatana* |
-| 32 | `ปะฏิจจะสะมุปปาทะปาโฐ` v16, v17 | `สะพายะตะนะ` | `สะฬายะตะนะ` | *saḷāyatana* |
-| 90 | `วัฏฏะกะปะริตตัง` v8 | `โสพะสะ` | `โสฬะสะ` | *soḷasa* |
-| 95 | `อาฏานาฏิยะปะริตตัง` v60 | `วิรุพหะโก` | `วิรุฬหะโก` | *Virūḷhaka* |
-| 97 | `โพชฌังคะปะริตตัง` v11 | `เคลัญเญนาภิปีพิโต` | `เคลัญเญนาภิปีฬิโต` | *abhipīḷito* |
-| 102 | `มงคลจักรวาฬใหญ่` v1 | `ฉะพะภิญญา` | `ฉะฬะภิญญา` | *chaḷabhiññā* |
+| 31 | `ปะฏิจจะสะมุปปาทะปาโฐ` | 4, 5 | `สะฬายะตะนัง` | by rule |
+| 32 | `ปะฏิจจะสะมุปปาทะปาโฐ` | 16, 17 | `สะฬายะตะนะ` | by rule |
+| 85 | `ระตะนะสุตตัง` | 74 | `อะวิรุฬหิฉันทา` | **read at the book** |
+| 90 | `วัฏฏะกะปะริตตัง` | 8 | `โสฬะสะ` | by rule |
+| 95 | `อาฏานาฏิยะปะริตตัง` | 60 | `วิรุฬหะโก` | **read at the book** |
+| 97 | `โพชฌังคะปะริตตัง` | 11 | `เคลัญเญนาภิปีฬิโต` | by rule |
+| 99 | `ชะยะปะริตตัง` | 13, 15, 17 | `วิรุฬโห` / `วิรุฬหา` | **read at the book** |
+| 102 | `มงคลจักรวาฬใหญ่` | 1 | `ฉะฬะภิญญา` | **read at the book** |
 
-Each needs its `pali`, its `pali_roman` AND its batch record changed together,
-or `check_pages` fails.
+Each had its `pali`, its `pali_roman` and its batch record changed together, and
+the stale `‼ CHECK` comments that argued for `พ` have been rewritten in place —
+leaving them would have had `chanting.py` narrating a conclusion its own data
+contradicts.
+
+**The app no longer contradicts itself.** `อะวิรุฬหิฉันทา` is printed on both
+page 22 and page 85 and now reads the same in both.
 
 ## Page 90 — a citation that looks transposed
 

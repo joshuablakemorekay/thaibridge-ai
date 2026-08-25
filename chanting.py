@@ -4517,16 +4517,19 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'with consciousness as condition, name-and-form;',
             },
-            # ‼ CHECK: สะพายะตะนัง should read สะฬายะตะนัง (saḷāyatanaṃ), the
-            #          six sense bases. ฬ has been misread as พ. This error
-            #          runs through every occurrence — verses 4, 5, 16 and 17 —
-            #          and I have transliterated all of them faithfully as
-            #          sabāyatana- rather than substituting. Four instances of
-            #          one fault; correct them as a group.
+            # ✅ RESOLVED 2026-08-25 — IT IS ฬ, CONFIRMED AT THE BOOK.
+            #   สะฬายะตะนัง (saḷāyatanaṃ), verses 4, 5, 16 and 17.
+            #   Josh read pages 85, 95, 99 and 102 off the physical book. This typeface
+            #   PHOTOGRAPHS ฬ AS พ, so every earlier note here arguing from
+            #   the glyph — 'bare', 'no ascender', 'identical at Nx to a
+            #   known พ' — was reasoning from an artefact. A same-line match
+            #   against a real พ cannot discriminate when the camera renders
+            #   both the same way. Corrected in pali and pali_roman.
+            #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             {
                 'number': 4,
-                'pali': 'นามะรูปะปัจจะยา สะพายะตะนัง,',
-                'pali_roman': 'nāmarūpapaccayā sabāyatanaṃ,',
+                'pali': 'นามะรูปะปัจจะยา สะฬายะตะนัง,',
+                'pali_roman': 'nāmarūpapaccayā saḷāyatanaṃ,',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4535,8 +4538,8 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'สะพายะตะนะปัจจะยา ผัสโส,',
-                'pali_roman': 'sabāyatanapaccayā phasso,',
+                'pali': 'สะฬายะตะนะปัจจะยา ผัสโส,',
+                'pali_roman': 'saḷāyatanapaccayā phasso,',
                 'thai': '',
                 'paiboon': '',
                 'english': 'with the six sense bases as condition, contact;',
@@ -4659,8 +4662,8 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'นามะรูปะนิโรธา สะพายะตะนะนิโรโธ,',
-                'pali_roman': 'nāmarūpanirodhā sabāyatananirodho,',
+                'pali': 'นามะรูปะนิโรธา สะฬายะตะนะนิโรโธ,',
+                'pali_roman': 'nāmarūpanirodhā saḷāyatananirodho,',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -4670,8 +4673,8 @@ CHANTS = [
             },
             {
                 'number': 17,
-                'pali': 'สะพายะตะนะนิโรธา ผัสสะนิโรโธ,',
-                'pali_roman': 'sabāyatananirodhā phassanirodho,',
+                'pali': 'สะฬายะตะนะนิโรธา ผัสสะนิโรโธ,',
+                'pali_roman': 'saḷāyatananirodhā phassanirodho,',
                 'thai': '',
                 'paiboon': '',
                 'english': (
@@ -23751,29 +23754,17 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'their minds are without passion for a future existence.',
             },
-            # ‼ CHECK [IMG_0349.PNG]: ‼ THE PAGE PRINTS อะวิรุพหิฉันทา WITH พ,
-            #   AND THE APP ALREADY HOLDS THIS WORD WITH ฬ. This is the most
-            #   consequential reading on the page and it needs the book. THE
-            #   EVIDENCE FOR พ: the letter is BARE, with no cluster mark, and
-            #   at 11x beside the พ of พีชา on the SAME LINE it is identical
-            #   in shape and in height — two humps, top edge level with the ห
-            #   and ฉ next to it, no ascender whatever. Pages 76, 77, 78 and
-            #   80 all showed a bare ฬ carrying an obvious tall ascender at
-            #   far lower magnification, so a bare letter without one reads as
-            #   พ. THE EVIDENCE FOR ฬ: standard Pali is avirūḷhi, 'regrowth',
-            #   and the app already holds this WHOLE STANZA a second time,
-            #   inside `parittakarana-patha` (page_start 20), where verse 10
-            #   carries the same five lines with อะวิรุฬหิฉันทา spelt ฬ — and
-            #   the photo map explicitly records that reading, attributed to
-            #   page 22, as written with ฬ AS A JUDGEMENT, NOT A READING. Also
-            #   the printed form gives avirubhi-, which is not a word, and
-            #   page 79's non-word test would say ฬ. SO THE TWO TESTS DISAGREE
-            #   FOR THE FIRST TIME. The page is reproduced as printed, per the
-            #   standing rule, which means the app now holds this word two
-            #   ways and ONE LOOK AT THE BOOK SETTLES BOTH. Nothing on page 22
-            #   was changed. WHERE TO LOOK: parittakarana-patha verse 10 holds
-            #   the identical stanza, so the two entries can be compared side
-            #   by side once the book has settled it.
+            # ✅ RESOLVED 2026-08-25 — IT IS ฬ, CONFIRMED AT THE BOOK.
+            #   เต ขีณะพีชา อะวิรุฬหิฉันทา (avirūḷhi, 'regrowth'). Josh read
+            #   THIS PAGE off the physical book and confirmed it directly.
+            #   The note that stood here weighed 'bare, no ascender, identical
+            #   at 11x to the พ of พีชา on the SAME LINE' against the canon,
+            #   and let the glyph win. That was wrong: this typeface
+            #   PHOTOGRAPHS ฬ AS พ, so a same-line match with a real พ proves
+            #   nothing. The app held this word BOTH ways — ฬ in
+            #   `parittakarana-patha` v10 (page 22), พ here — and the two now
+            #   agree on ฬ. The page-22 judgement call was right all along.
+            #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             # ‼ CHECK [IMG_0349.PNG]: THE VOWEL DIFFERS TOO, and it is the
             #   same word. This page prints อะวิรุ- with a SHORT ุ where
             #   standard editions have avirūḷhi with a long ū. Recorded
@@ -25137,27 +25128,19 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'When my act of truth was made, the great blazing flame',
             },
-            # ‼ CHECK [IMG_0355.PNG]: ‼ โสพะสะ WITH A BARE พ, WHERE STANDARD
-            #   PALI HAS soḷasa WITH ฬ — AND THIS IS THE SECOND TIME, AFTER
-            #   PAGE 85. The letter carries NO cluster mark, and at 7x stacked
-            #   directly above the พพ of สัพพูปัททะวะ from the บทขัด lower on
-            #   this same sheet it is identical in shape and height: two
-            #   humps, top edge level with the ส and ะ beside it, no ascender.
-            #   Pages 76, 77, 78 and 80 all showed a bare ฬ carrying an
-            #   obvious tall ascender. But soḷasa means SIXTEEN and sobasa is
-            #   not a word, so page 79's non-word test says ฬ. THE TWO TESTS
-            #   DISAGREE AGAIN. The page is reproduced as printed and
-            #   transliterated sobasa to match, with the English giving the
-            #   'sixteen' sense. WHY THIS MATTERS MORE THAN PAGE 85's: two
-            #   independent bare letters on two different sheets now read พ
-            #   where the canon has ฬ, so it is no longer a one-off. Either
-            #   this printer sets some ฬ without its ascender, or the book
-            #   really prints พ in both places. ONE LOOK AT THE BOOK SETTLES
-            #   BOTH AT ONCE.
+            # ✅ RESOLVED 2026-08-25 — IT IS ฬ, CONFIRMED AT THE BOOK.
+            #   โสฬะสะ (soḷasa, 'sixteen'), not โสพะสะ.
+            #   Josh read pages 85, 95, 99 and 102 off the physical book. This typeface
+            #   PHOTOGRAPHS ฬ AS พ, so every earlier note here arguing from
+            #   the glyph — 'bare', 'no ascender', 'identical at Nx to a
+            #   known พ' — was reasoning from an artefact. A same-line match
+            #   against a real พ cannot discriminate when the camera renders
+            #   both the same way. Corrected in pali and pali_roman.
+            #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             {
                 'number': 8,
-                'pali': 'วัชเชสิ โสพะสะ กะรีสานิ อุทะกัง ปัต์วา ยะถา สิขี',
-                'pali_roman': 'Vajjesi sobasa karīsāni udakaṃ patvā yathā sikhī',
+                'pali': 'วัชเชสิ โสฬะสะ กะรีสานิ อุทะกัง ปัต์วา ยะถา สิขี',
+                'pali_roman': 'Vajjesi soḷasa karīsāni udakaṃ patvā yathā sikhī',
                 'thai': '',
                 'paiboon': '',
                 'english': 'spared sixteen karīsas, as a flame does on reaching water.',
@@ -26806,24 +26789,19 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'may they too protect you, with health and with happiness.',
             },
-            # ‼ CHECK [IMG_0360.PNG]: ‼ วิรุพหะโก WITH A BARE พ — THE THIRD
-            #   INSTANCE OF THIS PATTERN, AFTER PAGES 85 AND 90. The letter
-            #   carries NO cluster mark, and at 6x stacked against the พ of
-            #   พุทโธ six rows below it on this same sheet it is identical:
-            #   two humps, top edge level with the ห and โ beside it, no
-            #   ascender. But standard Pali is Virūḷhaka, the Great King of
-            #   the SOUTH, and virubhaka is not a word — so page 79's non-word
-            #   test says ฬ. THREE INDEPENDENT BARE LETTERS ON THREE SHEETS
-            #   now read พ where the canon has ฬ: avirūḷhi (p85), soḷasa (p90)
-            #   and now Virūḷhaka. The page is reproduced as printed and
-            #   transliterated virubhako to match, with the English giving the
-            #   Virūḷhaka sense. ONE LOOK AT THE BOOK SETTLES ALL THREE, and
-            #   this one is the easiest to check because the four Great Kings
-            #   are named together in a fixed order.
+            # ✅ RESOLVED 2026-08-25 — IT IS ฬ, CONFIRMED AT THE BOOK.
+            #   วิรุฬหะโก (Virūḷhaka, Great King of the South).
+            #   Josh read THIS PAGE, page 95, and confirmed it directly off the physical book. This typeface
+            #   PHOTOGRAPHS ฬ AS พ, so every earlier note here arguing from
+            #   the glyph — 'bare', 'no ascender', 'identical at Nx to a
+            #   known พ' — was reasoning from an artefact. A same-line match
+            #   against a real พ cannot discriminate when the camera renders
+            #   both the same way. Corrected in pali and pali_roman.
+            #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             {
                 'number': 60,
-                'pali': 'ปุริมะทิสัง ธะตะรัฏโฐ ทักขิเณนะ วิรุพหะโก',
-                'pali_roman': 'Purimadisaṃ dhataraṭṭho dakkhiṇena virubhako',
+                'pali': 'ปุริมะทิสัง ธะตะรัฏโฐ ทักขิเณนะ วิรุฬหะโก',
+                'pali_roman': 'Purimadisaṃ dhataraṭṭho dakkhiṇena virūḷhako',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Dhataraṭṭha in the eastern quarter, Virūḷhaka in the southern,',
@@ -30326,26 +30304,20 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'By this utterance of truth, may you be well at all times.',
             },
-            # ‼ CHECK [IMG_0362.PNG]: ‼‼ เคลัญเญนาภิปีพิโต — A FOURTH BARE
-            #   ?/พ, AND THIS ONE CUTS AGAINST WHAT PAGES 76-80 SEEMED TO
-            #   ESTABLISH. Standard Pali is gelaññenābhipīḷito, 'afflicted by
-            #   illness', with ฬ; abhipībito is not a word. The letter is BARE
-            #   and at 7x stacked directly above the พ of อาพาธา two rows
-            #   below it on this same sheet it is identical — two humps, no
-            #   ascender. THE PROBLEM: pages 76, 77, 78 and 80 each showed a
-            #   bare ฬ carrying an OBVIOUS tall ascender (จักกะวาเฬสุ,
-            #   อัฏฐะจัตตาฬีสะ), which is why 'a bare ฬ can be read from the
-            #   photograph' was written down as a rule. This page shows a bare
-            #   position where the canon demands ฬ and there is no ascender at
-            #   all. So EITHER this printer sets some bare ฬ without an
-            #   ascender — and the rule is wrong — OR the book really does
-            #   print พ in all four places. Reproduced as printed. This is now
-            #   FOUR instances: pages 85, 90, 95 and 97.
+            # ✅ RESOLVED 2026-08-25 — IT IS ฬ, CONFIRMED AT THE BOOK.
+            #   เคลัญเญนาภิปีฬิโต (gelaññenābhipīḷito, 'afflicted by illness').
+            #   Josh read pages 85, 95, 99 and 102 off the physical book. This typeface
+            #   PHOTOGRAPHS ฬ AS พ, so every earlier note here arguing from
+            #   the glyph — 'bare', 'no ascender', 'identical at Nx to a
+            #   known พ' — was reasoning from an artefact. A same-line match
+            #   against a real พ cannot discriminate when the camera renders
+            #   both the same way. Corrected in pali and pali_roman.
+            #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             {
                 'number': 11,
                 'para_start': True,
-                'pali': 'เอกะทา ธัมมะราชาปิ เคลัญเญนาภิปีพิโต',
-                'pali_roman': 'Ekadā dhammarājāpi gelaññenābhipībito',
+                'pali': 'เอกะทา ธัมมะราชาปิ เคลัญเญนาภิปีฬิโต',
+                'pali_roman': 'Ekadā dhammarājāpi gelaññenābhipīḷito',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Once the King of the Dhamma himself, afflicted by illness,',
@@ -31465,20 +31437,16 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'Having done what is auspicious, they gain the auspicious goods.',
             },
-            # ‼ CHECK [IMG_0364.PNG]: ‼‼ THREE MORE BARE พ WHERE THE CANON HAS
-            #   ฬ, AND THIS IS THE CLEANEST COMPARISON THE BOOK HAS GIVEN.
-            #   Verses 13, 15 and 17 print วิรุพโห / วิรุพหา / วิรุพหา where
-            #   standard Pali is viruḷho / viruḷhā (วิรุฬโห / วิรุฬหา). At 4x
-            #   each letter is BARE — two humps, no ascender — and each one
-            #   sits on the SAME LINE, at the same size, three words away from
-            #   the พ of พุทธะสาสะเน. They are identical in shape and height.
-            #   That is a same-line, same-size control the earlier instances
-            #   did not have. Running total is now SEVEN across pages 85, 90,
-            #   95, 97 and 99 x3. Reproduced as printed, and the romanisation
-            #   follows the printed พ (virubho / virubhā) exactly as pages 85,
-            #   90, 95 and 97 did — those give avirubhichandā, sobasa,
-            #   virubhako and abhipībito, all non-words. Still one look at the
-            #   book away from being settled.
+            # ✅ RESOLVED 2026-08-25 — ALL THREE ARE ฬ, CONFIRMED AT THE BOOK.
+            #   วิรุฬโห / วิรุฬหา / วิรุฬหา (viruḷho / viruḷhā). Josh read rows
+            #   13, 15 and 17 off the physical book. The note that stood here
+            #   called this 'the cleanest comparison the book has given',
+            #   because each letter sat on the SAME LINE, same size, three
+            #   words from the พ of พุทธะสาสะเน and matched it at 4x. That
+            #   argument is CIRCULAR: if the typeface photographs ฬ as พ, the
+            #   comparison matches either way and can never discriminate.
+            #   Every 'identical at Nx' note in this file has the same flaw.
+            #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             # ‼ CHECK [IMG_0364.PNG]: Verses 13/15/17 and 14/16/18 are the
             #   SAME blessing three times over, differing only in gender and
             #   number — โส/สา/เต and โหหิ/โหหิ/โหถะ, with
@@ -33589,16 +33557,15 @@ CHANTS = [
             'english': '',
         },
         'verses': [
-            # ‼ CHECK [IMG_0367.PNG]: ‼‼ AN EIGHTH BARE พ WHERE THE CANON HAS
-            #   ฬ — AND THE FIRST ONE IN PROSE. The block prints
-            #   ฉะพะภิญญานุภาเวนะ where standard Pali is chaḷabhiññā, 'the six
-            #   higher knowledges'. At 5x the letter is bare, two humps, no
-            #   ascender. It transliterates to chababhiññā, which is not a
-            #   word — the same signature as pages 85, 90, 95, 97 and 99 x3.
-            #   What is new is the CONTEXT: every earlier instance was in
-            #   metrical verse, and this one is in a run-on prose compound.
-            #   Reproduced as printed and romanised from the printed พ, as all
-            #   seven before it were.
+            # ✅ RESOLVED 2026-08-25 — IT IS ฬ, CONFIRMED AT THE BOOK.
+            #   ฉะฬะภิญญานุภาเวนะ (chaḷabhiññā, 'the six higher
+            #   knowledges'). Josh read THIS PAGE off the physical book and
+            #   confirmed it directly. This typeface PHOTOGRAPHS ฬ AS พ, so
+            #   the note that stood here — 'bare, two humps, no ascender',
+            #   and that it was the eighth of a pattern — was reasoning from
+            #   a camera artefact. Being in PROSE rather than verse made no
+            #   difference: the artefact is in the typeface, not the setting.
+            #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             # ‼ CHECK [IMG_0367.PNG]: ‼ THE BOOK SPELLS ONE WORD TWO WAYS
             #   INSIDE A SINGLE SENTENCE. It prints ตุย์หัง WITH the cluster
             #   mark, then ตุยหัง WITHOUT it twice, a few words later. Both
@@ -33618,8 +33585,8 @@ CHANTS = [
                 'page': 102,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'สิริธิติมะติเตโชชะยะสิทธิมะหิทธิมะหาคุณาปะริมิตะปุญญาธิการัสสะ สัพพันตะรายะนิวาระณะสะมัตถัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ ท์วัตติงสะมะหาปุริสะลักขะณานุภาเวนะ อะสีต์ยานุพ์ยัญชะนานุภาเวนะ อัฏฐุตตะระสะตะมังคะลานุภาเวนะ ฉัพพัณณะรังสิยานุภาเวนะ เกตุมาลานุภาเวนะ ทะสะปาระมิตานุภาเวนะ ทะสะอุปะปาระมิตานุภาเวนะ ทะสะปะระมัตถะปาระมิตานุภาเวนะ สีละสะมาธิปัญญานุภาเวนะ พุทธานุภาเวนะ ธัมมานุภาเวนะ สังฆานุภาเวนะ เตชานุภาเวนะ อิทธานุภาเวนะ พะลานุภาเวนะ เญยยะธัมมานุภาเวนะ จะตุราสีติสะหัสสะธัมมักขันธานุภาเวนะ นะวะโลกุตตะระธัมมานุภาเวนะ อัฏฐังคิกะมัคคานุภาเวนะ อัฏฐะสะมาปัตติยานุภาเวนะ ฉะพะภิญญานุภาเวนะ จะตุสัจจะญาณานุภาเวนะ ทะสะพะละญาณานุภาเวนะ สัพพัญญุตะญาณานุภาเวนะ เมตตากะรุณามุทิตาอุเปกขานุภาเวนะ สัพพะปะริตตานุภาเวนะ ระตะนัตตะยะสะระณานุภาเวนะ ตุย์หัง สัพพะโรคะโสกุปัททะวะทุกขะโทมะนัสสุปายาสา วินัสสันตุ สัพพะอันตะรายาปิ วินัสสันตุ สัพพะสังกัปปา ตุยหัง สะมิชฌันตุ ทีฆายุตา ตุยหัง โหตุ สะตะวัสสะชีเวนะ สะมังคิโก โหตุ สัพพะทา.',
-                'pali_roman': 'Siridhitimatitejojayasiddhimahiddhimahāguṇāparimitapuññādhikārassa sabbantarāyanivāraṇasamatthassa bhagavato arahato sammāsambuddhassa dvattiṃsamahāpurisalakkhaṇānubhāvena asītyānubyañjanānubhāvena aṭṭhuttarasatamaṅgalānubhāvena chabbaṇṇaraṃsiyānubhāvena ketumālānubhāvena dasapāramitānubhāvena dasa-upapāramitānubhāvena dasaparamatthapāramitānubhāvena sīlasamādhipaññānubhāvena buddhānubhāvena dhammānubhāvena saṅghānubhāvena tejānubhāvena iddhānubhāvena balānubhāvena neyyadhammānubhāvena caturāsītisahassadhammakkhandhānubhāvena navalokuttaradhammānubhāvena aṭṭhaṅgikamaggānubhāvena aṭṭhasamāpattiyānubhāvena chababhiññānubhāvena catusaccañāṇānubhāvena dasabalañāṇānubhāvena sabbaññutañāṇānubhāvena mettākaruṇāmuditā-upekkhānubhāvena sabbaparittānubhāvena ratanattayasaraṇānubhāvena tuyhaṃ sabbarogasokupaddavadukkhadomanassupāyāsā vinassantu sabba-antarāyāpi vinassantu sabbasaṅkappā tuyhaṃ samijjhantu dīghāyutā tuyhaṃ hotu satavassajīvena samaṅgiko hotu sabbadā.',
+                'pali': 'สิริธิติมะติเตโชชะยะสิทธิมะหิทธิมะหาคุณาปะริมิตะปุญญาธิการัสสะ สัพพันตะรายะนิวาระณะสะมัตถัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ ท์วัตติงสะมะหาปุริสะลักขะณานุภาเวนะ อะสีต์ยานุพ์ยัญชะนานุภาเวนะ อัฏฐุตตะระสะตะมังคะลานุภาเวนะ ฉัพพัณณะรังสิยานุภาเวนะ เกตุมาลานุภาเวนะ ทะสะปาระมิตานุภาเวนะ ทะสะอุปะปาระมิตานุภาเวนะ ทะสะปะระมัตถะปาระมิตานุภาเวนะ สีละสะมาธิปัญญานุภาเวนะ พุทธานุภาเวนะ ธัมมานุภาเวนะ สังฆานุภาเวนะ เตชานุภาเวนะ อิทธานุภาเวนะ พะลานุภาเวนะ เญยยะธัมมานุภาเวนะ จะตุราสีติสะหัสสะธัมมักขันธานุภาเวนะ นะวะโลกุตตะระธัมมานุภาเวนะ อัฏฐังคิกะมัคคานุภาเวนะ อัฏฐะสะมาปัตติยานุภาเวนะ ฉะฬะภิญญานุภาเวนะ จะตุสัจจะญาณานุภาเวนะ ทะสะพะละญาณานุภาเวนะ สัพพัญญุตะญาณานุภาเวนะ เมตตากะรุณามุทิตาอุเปกขานุภาเวนะ สัพพะปะริตตานุภาเวนะ ระตะนัตตะยะสะระณานุภาเวนะ ตุย์หัง สัพพะโรคะโสกุปัททะวะทุกขะโทมะนัสสุปายาสา วินัสสันตุ สัพพะอันตะรายาปิ วินัสสันตุ สัพพะสังกัปปา ตุยหัง สะมิชฌันตุ ทีฆายุตา ตุยหัง โหตุ สะตะวัสสะชีเวนะ สะมังคิโก โหตุ สัพพะทา.',
+                'pali_roman': 'Siridhitimatitejojayasiddhimahiddhimahāguṇāparimitapuññādhikārassa sabbantarāyanivāraṇasamatthassa bhagavato arahato sammāsambuddhassa dvattiṃsamahāpurisalakkhaṇānubhāvena asītyānubyañjanānubhāvena aṭṭhuttarasatamaṅgalānubhāvena chabbaṇṇaraṃsiyānubhāvena ketumālānubhāvena dasapāramitānubhāvena dasa-upapāramitānubhāvena dasaparamatthapāramitānubhāvena sīlasamādhipaññānubhāvena buddhānubhāvena dhammānubhāvena saṅghānubhāvena tejānubhāvena iddhānubhāvena balānubhāvena neyyadhammānubhāvena caturāsītisahassadhammakkhandhānubhāvena navalokuttaradhammānubhāvena aṭṭhaṅgikamaggānubhāvena aṭṭhasamāpattiyānubhāvena chaḷabhiññānubhāvena catusaccañāṇānubhāvena dasabalañāṇānubhāvena sabbaññutañāṇānubhāvena mettākaruṇāmuditā-upekkhānubhāvena sabbaparittānubhāvena ratanattayasaraṇānubhāvena tuyhaṃ sabbarogasokupaddavadukkhadomanassupāyāsā vinassantu sabba-antarāyāpi vinassantu sabbasaṅkappā tuyhaṃ samijjhantu dīghāyutā tuyhaṃ hotu satavassajīvena samaṅgiko hotu sabbadā.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'By the power of the thirty-two marks of a Great Man belonging to the Blessed One, the Worthy One, the Perfectly Self-Awakened — whose splendour, steadfastness, intelligence, majesty, victory, accomplishment and great might rest on immeasurable merit and great virtue, and who is able to ward off every danger — by the power of the eighty minor marks, of the hundred and eight auspicious signs, of the six-coloured rays, of the halo; by the power of the ten perfections, the ten higher perfections and the ten ultimate perfections; by the power of virtue, concentration and wisdom; of the Buddha, the Dhamma and the Sangha; of majesty, of psychic power, of strength, of the knowable Dhamma; of the eighty-four thousand divisions of the Dhamma, of the nine supramundane states, of the Eightfold Path, of the eight attainments, of the six higher knowledges, of the knowledge of the Four Truths, of the knowledge of the ten powers, of omniscient knowledge; by the power of loving-kindness, compassion, sympathetic joy and equanimity; of all the parittas; and of going for refuge to the Triple Gem — may all your diseases, sorrows, misfortunes, pains, griefs and despairs perish; may all dangers too perish; may all your intentions succeed; may long life be yours; and may you be endowed always with a life of a hundred years.',
