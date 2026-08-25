@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-101 went in.
+102 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–101 are in and unbroken**, plus 217–221. **137 chants and 2,089
+- **Pages 1–102 are in and unbroken**, plus 217–221. **138 chants and 2,099
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 101 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 102 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,13 +46,28 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 102, `IMG_0367` — but READ THE NUMBER off the sheet
+## Next: page 103, `IMG_0368` — ⚠️ A CHANT IS OPEN, and its top is known
 
-The offset is **265** since page 86 and has held for 87–101, so page 102 *should*
-be `IMG_0367`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–102, so page 103 *should*
+be `IMG_0368`. **Five more changes are still expected before page 207.**
 
-**Page 102 starts clean.** The page-101 chant closes on its own sheet with a
-colophon. Expect `15.` next, or a new section heading.
+**⚠️ `mongkhon-chakkrawan-yai` IS OPEN AND CARRIES A `‼ CONTINUES` MARKER.** It
+starts on page 102 with verse 1 and runs to verse 10 there. **Resume at verse
+11.** Page 103 was peeked at and prints, before anything else:
+
+1. four more two-column rows — `นักขัตตะยักขะภูตานัง` / `ปาปัคคะหะนิวาระณา`
+   then `ปะริตตัสสานุภาเวนะ` / `หันต์วา เตสัง อุปัททะเว.`, the SAME couplet
+   twice over;
+2. a centred bold **THAI** colophon, **`จบสิบสองตำนาน`** — "here end the Twelve
+   Tamnan";
+3. then a new chant, `บทขัด ทะสะนาถะกะระณะธัมมะสุตตัง`.
+
+Read all of that off the sheet again rather than trusting this note — it was a
+quick look, not a measured read. **The Thai colophon needs a decision**: it is
+Thai, not Pali, so it hits exactly the bug recorded below — `closing.pali` is
+what the template gates on, and putting Thai there is what produced the eleven
+doubled colophons on pages 38–47. Do not repeat that. Either fix the template
+first, or record the colophon and raise it with Josh.
 
 ## ❗ This section cites AUTHORS, not the canon — and its numbering RESTARTS
 
@@ -274,7 +289,7 @@ established the rule in the first place. Worth stating exactly:
 `check_render` walks strings in printed order and does not look at grouping.
 Only opening the page catches it — so open the page.
 
-## ⚠️⚠️⚠️ The ฬ/พ conflict — SEVEN instances, and page 99 is the best test yet
+## ⚠️⚠️⚠️ The ฬ/พ conflict — EIGHT instances, now in PROSE as well as verse
 
 This is no longer a one-off, and it is the most important open question in the
 book.
@@ -288,6 +303,13 @@ book.
 | 99 | `วิรุพโห` (v13) | *viruḷho* ("thriving") | *virubho* — **not a word** |
 | 99 | `วิรุพหา` (v15) | *viruḷhā* (fem.) | *virubhā* — **not a word** |
 | 99 | `วิรุพหา` (v17) | *viruḷhā* (pl.) | *virubhā* — **not a word** |
+| 102 | `ฉะพะภิญญา` (prose) | *chaḷabhiññā* ("six higher knowledges") | *chababhiññā* — **not a word** |
+
+**Page 102 widens it beyond verse.** The first seven were all in metrical
+lines, where a compositor setting from a verse exemplar could plausibly have
+carried one habit throughout. This one sits in a run-on PROSE compound, in a
+completely different part of the book's typesetting, and behaves identically —
+bare `พ`, no ascender, and a transliteration that is not a word.
 
 **⭐ PAGE 99 IS THE CLEANEST TEST THE BOOK HAS GIVEN, and it points at พ.** All
 three sit on a line that ALSO contains `พุทธะสาสะเน` — a known `พ`, same line,
