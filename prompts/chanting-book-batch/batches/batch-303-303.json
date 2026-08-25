@@ -1,0 +1,344 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 6,
+  "manifest": [
+   "kham-athitthan-khao-phansa",
+   "kham-pawarana-ok-phansa",
+   "kham-sattaha",
+   "kham-anumothana-kathin-303",
+   "kham-la-sikkha",
+   "kham-sadaeng-ton-pen-ubasok"
+  ],
+  "pages": [
+   {
+    "page": 303,
+    "file": "IMG_0570.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-athitthan-khao-phansa",
+    "verses": "1",
+    "starts_here": true,
+    "note": "A centred heading and one line. Starts and ends on this sheet."
+   },
+   {
+    "page": 303,
+    "file": "IMG_0570.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-pawarana-ok-phansa",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "A centred heading and 3 paragraphs. Starts and ends on this sheet."
+   },
+   {
+    "page": 303,
+    "file": "IMG_0570.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-sattaha",
+    "verses": "1",
+    "starts_here": true,
+    "note": "A centred heading and one line. Starts and ends on this sheet."
+   },
+   {
+    "page": 303,
+    "file": "IMG_0570.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-anumothana-kathin-303",
+    "verses": "1",
+    "starts_here": true,
+    "note": "A centred heading and one line. Starts and ends on this sheet."
+   },
+   {
+    "page": 303,
+    "file": "IMG_0570.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-la-sikkha",
+    "verses": "1",
+    "starts_here": true,
+    "note": "A centred heading and one line. Starts and ends on this sheet."
+   },
+   {
+    "page": 303,
+    "file": "IMG_0570.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-sadaeng-ton-pen-ubasok",
+    "verses": "1",
+    "starts_here": true,
+    "note": "A centred heading and one line. Starts and ends on this sheet."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-athitthan-khao-phansa",
+   "title_thai": "คำอธิษฐานเข้าพรรษา",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Determining the Rains Residence",
+   "page_start": 303,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1. Thai-script Pali; the chant starts and ends on page 303.",
+    "ordering": "No Thai translation is printed except on kham-la-sikkha, which prints one beneath its Pali.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see the checks on page 306.",
+    "pages": "IMG_0570.PNG, page 303, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิมัส์มิง อาวาเส อิมัง เตมาสัง วัสสัง อุเปมิ. (ว่า ๓ ครั้ง)",
+     "pali_roman": "Imasmiṃ āvāse imaṃ temāsaṃ vassaṃ upemi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "In this monastery I enter upon the rains for these three months. (say 3 times)",
+     "page": 303,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0570.PNG",
+     "issue": "The repeat-rubric uses the THAI numeral — '(ว่า ๓ ครั้ง)' — where คำอนุโมทนากฐิน lower down the same page uses the Arabic 3. See that chant's check; the two are on one sheet."
+    }
+   ]
+  },
+  {
+   "id": "kham-pawarana-ok-phansa",
+   "title_thai": "คำปวารณาออกพรรษา",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Invitation at the End of the Rains",
+   "page_start": 303,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "3. Thai-script Pali; the chant starts and ends on page 303.",
+    "ordering": "No Thai translation is printed except on kham-la-sikkha, which prints one beneath its Pali.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see the checks on page 306.",
+    "pages": "IMG_0570.PNG, page 303, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สังฆัมภันเต ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.",
+     "pali_roman": "Saṅghambhante pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sirs, I invite the Saṅgha: if you have seen, heard or suspected anything, let the venerable ones speak to me out of compassion; seeing it, I shall make amends.",
+     "page": 303,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "ทุติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.",
+     "pali_roman": "Dutiyampi bhante saṅghaṃ pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, venerable sirs, I invite the Saṅgha: if you have seen, heard or suspected anything, let the venerable ones speak to me out of compassion; seeing it, I shall make amends.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 3,
+     "pali": "ตะติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.",
+     "pali_roman": "Tatiyampi bhante saṅghaṃ pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, venerable sirs, I invite the Saṅgha: if you have seen, heard or suspected anything, let the venerable ones speak to me out of compassion; seeing it, I shall make amends.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0570.PNG",
+     "issue": "THE FIRST PARAGRAPH IS SET DIFFERENTLY FROM THE OTHER TWO. It opens 'สังฆัมภันเต ปะวาเรมิ' as one word-group, where verses 2 and 3 open 'ทุติยัมปิ ภันเต สังฆัง ปะวาเรมิ' and 'ตะติยัมปิ ภันเต สังฆัง ปะวาเรมิ' with ภันเต standing separate and สังฆัง in the accusative. Kept as each is printed rather than regularised to one pattern."
+    }
+   ]
+  },
+  {
+   "id": "kham-sattaha",
+   "title_thai": "คำสัตตาหะ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of the Seven-Day Absence",
+   "page_start": 303,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1. Thai-script Pali; the chant starts and ends on page 303.",
+    "ordering": "No Thai translation is printed except on kham-la-sikkha, which prints one beneath its Pali.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see the checks on page 306.",
+    "pages": "IMG_0570.PNG, page 303, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สัตตาหะกะระณียัง กิจจัง เม อัตถิ ตัส์มา มะยา คันตัพพัง อิมัส์มิง สัตตาหัพภันตะเร นิวัตติสสามิ.",
+     "pali_roman": "Sattāhakaraṇīyaṃ kiccaṃ me atthi tasmā mayā gantabbaṃ imasmiṃ sattāhabbhantare nivattissāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I have business to be done within seven days; therefore I must go. Within these seven days I shall return.",
+     "page": 303,
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  },
+  {
+   "id": "kham-anumothana-kathin-303",
+   "title_thai": "คำอนุโมทนากฐิน",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Rejoicing in the Kathina",
+   "page_start": 303,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1. Thai-script Pali; the chant starts and ends on page 303.",
+    "ordering": "No Thai translation is printed except on kham-la-sikkha, which prints one beneath its Pali.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see the checks on page 306.",
+    "pages": "IMG_0570.PNG, page 303, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อัตถะตัง ภันเต สังฆัสสะ กะฐินัง, ธัมมิโก กะฐินัตถาโร อะนุโมทามะ.(ว่า 3 ครั้ง)",
+     "pali_roman": "Atthataṃ bhante saṅghassa kaṭhinaṃ, dhammiko kaṭhinatthāro anumodāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Saṅgha's kathina has been spread, venerable sirs; the spreading of the kathina is in accordance with the Dhamma. We rejoice in it. (say 3 times)",
+     "page": 303,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0570.PNG",
+     "issue": "⚠ THIS IS THE SECOND PRINTING OF คำอนุโมทนากฐิน AND IT HAS A DISTINCT ID. The สารบัญ lists the title at BOTH ๓๐๓ and ๓๐๘, and page 308's printing was entered first as `kham-anumothana-kathin` with a check saying this one would need its own id. It does: `kham-anumothana-kathin-303`. Merging them would have let one silently overwrite the other, which is the failure mahasamayasutta-roman was kept apart to avoid. The two also DIFFER — 308 reads อาวุโส … อะนุโมทะถะ and this one ภันเต … อะนุโมทามะ — so they are not even the same words."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0570.PNG",
+     "issue": "⚠ TWO DIFFERENT NUMERAL SYSTEMS ON ONE SHEET. This line prints '(ว่า 3 ครั้ง)' with an ARABIC 3, while คำอธิษฐานเข้าพรรษา at the top of the same page prints '(ว่า ๓ ครั้ง)' with the THAI ๓. Both read clearly. Kept as each is set, NOT normalised — and worth knowing before anyone writes a script that counts repetitions."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0570.PNG",
+     "issue": "The rubric is printed with NO SPACE before the bracket — 'อะนุโมทามะ.(ว่า 3 ครั้ง)' — where the other rubrics on this page space it. Kept as printed."
+    }
+   ]
+  },
+  {
+   "id": "kham-la-sikkha",
+   "title_thai": "คำลาสิกขา",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Leaving the Training",
+   "page_start": 303,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1. Thai-script Pali; the chant starts and ends on page 303.",
+    "ordering": "No Thai translation is printed except on kham-la-sikkha, which prints one beneath its Pali.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see the checks on page 306.",
+    "pages": "IMG_0570.PNG, page 303, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สิกขัง ปัจจักขามิ. คิหีติ มัง ธาเรถะ.",
+     "pali_roman": "Sikkhaṃ paccakkhāmi. gihīti maṃ dhāretha.",
+     "thai": "ข้าพเจ้าลาสิกขา ท่านทั้งหลายจงจำข้าพเจ้าไว้ว่า เป็นคฤหัสถ์",
+     "paiboon": "",
+     "english": "I renounce the training. Remember me as a householder.",
+     "page": 303,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0570.PNG",
+     "issue": "THE ONLY THAI TRANSLATION ON THIS SHEET. Every other chant here prints Pali alone, but คำลาสิกขา prints a Thai rendering beneath its Pali, so `thai` carries a translation here rather than an instruction or a label — the first time in this stretch that is true. `paiboon` is still left empty, for the reason recorded on page 306."
+    }
+   ]
+  },
+  {
+   "id": "kham-sadaeng-ton-pen-ubasok",
+   "title_thai": "คำแสดงตนเป็นอุบาสก",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Declaring Oneself a Lay Follower",
+   "page_start": 303,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1. Thai-script Pali; the chant starts and ends on page 303.",
+    "ordering": "No Thai translation is printed except on kham-la-sikkha, which prints one beneath its Pali.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see the checks on page 306.",
+    "pages": "IMG_0570.PNG, page 303, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอสาหัง ภันเต, สุจิระปะรินิพพุตัมปิ, ตัง ภะคะวันตัง สะระณัง คัจฉามิ, ธัมมัญจะ ภิกขุสังฆัญจะ, อุปาสะกัตตัง สังโฆ ธาเรตุ.",
+     "pali_roman": "Esāhaṃ bhante, suciraparinibbutampi, taṃ bhagavantaṃ saraṇaṃ gacchāmi, dhammañca bhikkhusaṅghañca, upāsakattaṃ saṅgho dhāretu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sirs, I go for refuge to that Blessed One, though he attained final Nibbāna long ago, and to the Dhamma and to the community of monks. May the Saṅgha remember me as a lay follower.",
+     "page": 303,
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-athitthan-khao-phansa",
+   "kham-pawarana-ok-phansa",
+   "kham-sattaha",
+   "kham-anumothana-kathin-303",
+   "kham-la-sikkha",
+   "kham-sadaeng-ton-pen-ubasok"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 302,
+  "resume_from_file": "IMG_0569.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch, so none can have drifted. One chant, kham-la-sikkha, prints a Thai translation and would ordinarily carry Paiboon+; it is left empty for the reason recorded on page 306 and flagged there.",
+  "pali_untouched": "Confirmed and mechanically true: every pali_roman was produced by translit_pali from the pali beside it rather than typed, so the two cannot drift. Where a repeat-rubric is printed inside the line, pali_roman transliterates the PALI ONLY, as established on page 308. The cluster marks ์ in อิมัส์มิง, ตัส์มา and อายัส์มันโต are all present as the book sets them.",
+  "page_scan": "agrees. SIX rows for one page, one per chant, in the order they appear down the sheet. Each row's verse range matches its entry exactly. The Pali at the TOP of the sheet is deliberately NOT here: it is the tail of a chant that begins on page 302, together with its rubric, and belongs to that page's batch.",
+  "notes": "SIX SHORT CHANTS ON ONE SHEET, the densest page the backward pass has met. Three findings. (1) ⚠ THE SECOND คำอนุโมทนากฐิน, exactly as page 308's check predicted, entered as kham-anumothana-kathin-303 — and the two printings are not even the same words, one reading อาวุโส … อะนุโมทะถะ and the other ภันเต … อะนุโมทามะ. (2) ⚠ TWO NUMERAL SYSTEMS ON ONE SHEET: (ว่า ๓ ครั้ง) with the Thai numeral at the top and (ว่า 3 ครั้ง) with the Arabic one lower down. Neither normalised. (3) THE TOP OF THE SHEET IS NOT ENTERED HERE — a rubric and two lines of Pali belonging to a chant that starts on page 302, which will bring them.",
+  "diacritic_exceptions": []
+ }
+}

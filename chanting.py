@@ -32962,6 +32962,256 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-athitthan-khao-phansa',
+        'title_thai': 'คำอธิษฐานเข้าพรรษา',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Determining the Rains Residence',
+        'page_start': 303,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0570.PNG]: The repeat-rubric uses the THAI numeral
+            #   — '(ว่า ๓ ครั้ง)' — where คำอนุโมทนากฐิน lower down the same
+            #   page uses the Arabic 3. See that chant's check; the two are on
+            #   one sheet.
+            {
+                'number': 1,
+                'page': 303,
+                'para_start': True,
+                'pali': 'อิมัส์มิง อาวาเส อิมัง เตมาสัง วัสสัง อุเปมิ. (ว่า ๓ ครั้ง)',
+                'pali_roman': 'Imasmiṃ āvāse imaṃ temāsaṃ vassaṃ upemi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In this monastery I enter upon the rains for these three months. (say 3 times)',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-pawarana-ok-phansa',
+        'title_thai': 'คำปวารณาออกพรรษา',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Invitation at the End of the Rains',
+        'page_start': 303,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0570.PNG]: THE FIRST PARAGRAPH IS SET DIFFERENTLY
+            #   FROM THE OTHER TWO. It opens 'สังฆัมภันเต ปะวาเรมิ' as one
+            #   word-group, where verses 2 and 3 open 'ทุติยัมปิ ภันเต สังฆัง
+            #   ปะวาเรมิ' and 'ตะติยัมปิ ภันเต สังฆัง ปะวาเรมิ' with ภันเต
+            #   standing separate and สังฆัง in the accusative. Kept as each
+            #   is printed rather than regularised to one pattern.
+            {
+                'number': 1,
+                'page': 303,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สังฆัมภันเต ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
+                'pali_roman': 'Saṅghambhante pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sirs, I invite the Saṅgha: if you have seen, heard or suspected anything, let the venerable ones speak to me out of compassion; seeing it, I shall make amends.',
+            },
+            {
+                'number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ทุติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
+                'pali_roman': 'Dutiyampi bhante saṅghaṃ pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time, venerable sirs, I invite the Saṅgha: if you have seen, heard or suspected anything, let the venerable ones speak to me out of compassion; seeing it, I shall make amends.',
+            },
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ตะติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
+                'pali_roman': 'Tatiyampi bhante saṅghaṃ pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time, venerable sirs, I invite the Saṅgha: if you have seen, heard or suspected anything, let the venerable ones speak to me out of compassion; seeing it, I shall make amends.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-sattaha',
+        'title_thai': 'คำสัตตาหะ',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of the Seven-Day Absence',
+        'page_start': 303,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 303,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สัตตาหะกะระณียัง กิจจัง เม อัตถิ ตัส์มา มะยา คันตัพพัง อิมัส์มิง สัตตาหัพภันตะเร นิวัตติสสามิ.',
+                'pali_roman': 'Sattāhakaraṇīyaṃ kiccaṃ me atthi tasmā mayā gantabbaṃ imasmiṃ sattāhabbhantare nivattissāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have business to be done within seven days; therefore I must go. Within these seven days I shall return.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-anumothana-kathin-303',
+        'title_thai': 'คำอนุโมทนากฐิน',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Rejoicing in the Kathina',
+        'page_start': 303,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0570.PNG]: ⚠ THIS IS THE SECOND PRINTING OF
+            #   คำอนุโมทนากฐิน AND IT HAS A DISTINCT ID. The สารบัญ lists the
+            #   title at BOTH ๓๐๓ and ๓๐๘, and page 308's printing was entered
+            #   first as `kham-anumothana-kathin` with a check saying this one
+            #   would need its own id. It does: `kham-anumothana-kathin-303`.
+            #   Merging them would have let one silently overwrite the other,
+            #   which is the failure mahasamayasutta-roman was kept apart to
+            #   avoid. The two also DIFFER — 308 reads อาวุโส … อะนุโมทะถะ and
+            #   this one ภันเต … อะนุโมทามะ — so they are not even the same
+            #   words.
+            # ‼ CHECK [IMG_0570.PNG]: ⚠ TWO DIFFERENT NUMERAL SYSTEMS ON ONE
+            #   SHEET. This line prints '(ว่า 3 ครั้ง)' with an ARABIC 3,
+            #   while คำอธิษฐานเข้าพรรษา at the top of the same page prints
+            #   '(ว่า ๓ ครั้ง)' with the THAI ๓. Both read clearly. Kept as
+            #   each is set, NOT normalised — and worth knowing before anyone
+            #   writes a script that counts repetitions.
+            # ‼ CHECK [IMG_0570.PNG]: The rubric is printed with NO SPACE
+            #   before the bracket — 'อะนุโมทามะ.(ว่า 3 ครั้ง)' — where the
+            #   other rubrics on this page space it. Kept as printed.
+            {
+                'number': 1,
+                'page': 303,
+                'para_start': True,
+                'pali': 'อัตถะตัง ภันเต สังฆัสสะ กะฐินัง, ธัมมิโก กะฐินัตถาโร อะนุโมทามะ.(ว่า 3 ครั้ง)',
+                'pali_roman': 'Atthataṃ bhante saṅghassa kaṭhinaṃ, dhammiko kaṭhinatthāro anumodāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': "The Saṅgha's kathina has been spread, venerable sirs; the spreading of the kathina is in accordance with the Dhamma. We rejoice in it. (say 3 times)",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-la-sikkha',
+        'title_thai': 'คำลาสิกขา',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Leaving the Training',
+        'page_start': 303,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0570.PNG]: THE ONLY THAI TRANSLATION ON THIS SHEET.
+            #   Every other chant here prints Pali alone, but คำลาสิกขา prints
+            #   a Thai rendering beneath its Pali, so `thai` carries a
+            #   translation here rather than an instruction or a label — the
+            #   first time in this stretch that is true. `paiboon` is still
+            #   left empty, for the reason recorded on page 306.
+            {
+                'number': 1,
+                'page': 303,
+                'para_start': True,
+                'pali': 'สิกขัง ปัจจักขามิ. คิหีติ มัง ธาเรถะ.',
+                'pali_roman': 'Sikkhaṃ paccakkhāmi. gihīti maṃ dhāretha.',
+                'thai': 'ข้าพเจ้าลาสิกขา ท่านทั้งหลายจงจำข้าพเจ้าไว้ว่า เป็นคฤหัสถ์',
+                'paiboon': '',
+                'english': 'I renounce the training. Remember me as a householder.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-sadaeng-ton-pen-ubasok',
+        'title_thai': 'คำแสดงตนเป็นอุบาสก',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Declaring Oneself a Lay Follower',
+        'page_start': 303,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 303,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'เอสาหัง ภันเต, สุจิระปะรินิพพุตัมปิ, ตัง ภะคะวันตัง สะระณัง คัจฉามิ, ธัมมัญจะ ภิกขุสังฆัญจะ, อุปาสะกัตตัง สังโฆ ธาเรตุ.',
+                'pali_roman': 'Esāhaṃ bhante, suciraparinibbutampi, taṃ bhagavantaṃ saraṇaṃ gacchāmi, dhammañca bhikkhusaṅghañca, upāsakattaṃ saṅgho dhāretu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sirs, I go for refuge to that Blessed One, though he attained final Nibbāna long ago, and to the Dhamma and to the community of monks. May the Saṅgha remember me as a lay follower.',
+            },
+        ],
+    },
 ]
 
 
