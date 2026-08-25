@@ -1,0 +1,206 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "kitchawat-10-yang"
+  ],
+  "pages": [
+   {
+    "page": 304,
+    "file": "IMG_0571.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "kitchawat-10-yang",
+    "verses": "1-11",
+    "starts_here": true,
+    "note": "A centred heading, then a TWO-COLUMN NUMBERED LIST of ten duties reading ACROSS — odd numbers left, even numbers right — with the gutter measured at x 916-1030 and the right column's edge holding at x 1030-1032. A closing paragraph of PROSE follows, full measure with no gutter. The chant starts and ends on this page and the lower half of the sheet is blank."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kitchawat-10-yang",
+   "title_thai": "กิจวัตร ๑๐ อย่าง",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Ten Duties",
+   "page_start": 304,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Eleven. Ten are the book's numbered duties, ONE PER CELL rather than one per printed row — see the checks — each carrying the book's own number as printed_number. The eleventh is the closing paragraph and declares para_layout 'prose' against the chant's 'lines'.",
+    "ordering": "No Pali on this sheet; the duties are listed in Thai, so `thai` carries the text and `pali`/`pali_roman` are empty by design.",
+    "conventions": "`paiboon` is left EMPTY throughout, for the reason recorded on page 306.",
+    "pages": "IMG_0571.PNG, page 304, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ลงอุโบสถ",
+     "paiboon": "",
+     "english": "Attending the uposatha",
+     "printed_number": 1,
+     "page": 304,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "บิณฑบาตเลี้ยงชีพ",
+     "paiboon": "",
+     "english": "Going on almsround for one's livelihood",
+     "printed_number": 2
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวดมนต์ไหว้พระ",
+     "paiboon": "",
+     "english": "Chanting and paying homage",
+     "printed_number": 3
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "กวาดอาวาสวิหารลานพระเจดีย์",
+     "paiboon": "",
+     "english": "Sweeping the monastery, the hall and the courtyard of the stupa",
+     "printed_number": 4
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "รักษาผ้าครอง",
+     "paiboon": "",
+     "english": "Caring for the robes one wears",
+     "printed_number": 5
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "อยู่ปริวาสกรรม",
+     "paiboon": "",
+     "english": "Undergoing probation when it is required",
+     "printed_number": 6
+    },
+    {
+     "number": 7,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โกนผมปลงหนวดตัดเล็บ",
+     "paiboon": "",
+     "english": "Shaving the head, trimming the beard and cutting the nails",
+     "printed_number": 7
+    },
+    {
+     "number": 8,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ศึกษาสิกขาบทและปฏิบัติพระอาจารย์",
+     "paiboon": "",
+     "english": "Studying the training rules and attending upon one's teacher",
+     "printed_number": 8
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เทศนาบัติ(แสดงอาบัติ)",
+     "paiboon": "",
+     "english": "Declaring offences (confessing an offence)",
+     "printed_number": 9
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "พิจารณาปัจจะเวกขะณะทั้ง 4 เป็นต้น",
+     "paiboon": "",
+     "english": "Reflecting on the four requisites, and so on",
+     "printed_number": 10
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "กิจวัตร 10 เหล่านี้เป็นกิจใหญ่ควรที่ภิกษุจะต้องศึกษาให้ทราบความชัดและจำไว้เพื่อปฏิบัติสมควรแก่สมณสารูปแห่งตน.",
+     "paiboon": "",
+     "english": "These ten duties are matters of weight. A monk should study them until he knows them clearly and holds them in mind, so as to practise in a way befitting his state as a recluse.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อุโบสถ",
+     "pali_roman": "uposatha",
+     "meaning": "the fortnightly observance at which the Pāṭimokkha is recited"
+    },
+    {
+     "pali": "ปริวาสกรรม",
+     "pali_roman": "parivāsakamma",
+     "meaning": "the act of probation, undergone by a monk who has concealed a saṅghādisesa offence"
+    },
+    {
+     "pali": "ปัจจะเวกขะณะ",
+     "pali_roman": "paccavekkhaṇa",
+     "meaning": "reflection. The four are on robes, almsfood, lodging and medicine, reflected on before use"
+    },
+    {
+     "pali": "สมณสารูป",
+     "pali_roman": "samaṇasārūpa",
+     "meaning": "what befits a recluse. The closing paragraph gives it as the reason for learning the ten"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0571.PNG",
+     "issue": "⚠ TWO COLUMNS, BUT EACH CELL IS ITS OWN VERSE — the opposite of how every two-column page in the roman section was entered. There a row was ONE line of verse split across the gutter, so the row was the unit; here each cell is a COMPLETE numbered duty, and the numbering runs 1-2 across then 3-4, which proves the columns are read across as separate items rather than joined. Ten cells, ten verses. Gutter measured at x 916-1030."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0571.PNG",
+     "issue": "Item 9 prints a Thai gloss in brackets with NO SPACE before it — 'เทศนาบัติ(แสดงอาบัติ)' — where the book normally spaces its brackets. Kept exactly as set."
+    },
+    {
+     "verse": 11,
+     "file": "IMG_0571.PNG",
+     "issue": "The closing paragraph is PROSE at full measure with no gutter, against the list above it, so it declares para_layout 'prose'. It also ends with a full stop, which the ten list items do not."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0571.PNG",
+     "issue": "Item 10 ends 'เป็นต้น', and so on — the list is explicitly open-ended at its last item even though the heading counts ten. Kept as printed rather than closed off."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kitchawat-10-yang"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 303,
+  "resume_from_file": "IMG_0570.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence and deliberately so, as on pages 305 to 307. No Paiboon+ was written anywhere in this batch, so none can have drifted.",
+  "pali_untouched": "Trivially confirmed: there is NO Pali on this sheet. Every `pali` and `pali_roman` is empty because the duties are listed in Thai.",
+  "page_scan": "agrees. One row for one page covering verses 1-11, the whole entry. Verse 1 carries the page key and starts the chant. No verse is orphaned and none is claimed twice. No page blocks: the ten duties are verses of the chant the contents names, not page material.",
+  "notes": "One finding, and it reverses a rule this session has applied a dozen times. TWO COLUMNS DO NOT ALWAYS MEAN A ROW IS ONE VERSE. Every two-column sheet in the roman section held one line of verse split across the gutter, so the ROW was the unit; here each cell is a complete numbered duty and the numbers run 1-2 across then 3-4, so the CELL is the unit. The numbering is what settles it, and a page with no numbers would need something else to settle it.",
+  "diacritic_exceptions": []
+ }
+}
