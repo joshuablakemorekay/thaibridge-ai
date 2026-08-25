@@ -1,0 +1,321 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "ratanattayappabhavabhiyacana-gatha"
+  ],
+  "pages": [
+   {
+    "page": 100,
+    "file": "IMG_0365.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "ratanattayappabhavabhiyacana-gatha",
+    "verses": "1-22",
+    "starts_here": true,
+    "note": "The whole sheet: a centred bold NUMBERED title (13.), twenty-two TWO-COLUMN rows with the right column beginning at x 1120, a centred bold colophon, then a rule and a Thai authorship footnote. Only verse 1 is indented, measured against a fitted baseline because the block's left edge drifts 65px down the page. The chant starts and ends here."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "ratanattayappabhavabhiyacana-gatha",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Twenty-two, one per two-column row, read ACROSS. One group — the only indent on the sheet is verse 1's, which the chant's own start already carries.",
+    "ordering": "None. No Thai translation is printed. The Thai that IS on this page is the footnote, which names the author.",
+    "conventions": "The heading prints a NUMBER, 13, which goes in book_number and is kept out of title_thai. title_thai and title_roman then both match the สารบัญ exactly, so the contents test can see this chant.",
+    "pages": "IMG_0365.PNG, page 100. Title, all twenty-two rows, the colophon and the footnote are all on this page; the chant starts and ends here."
+   },
+   "title_thai": "ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา",
+   "title_pali": "",
+   "title_roman": "Ratanattayappabhāvābhiyācanagāthā",
+   "title_english": "Verses Entreating the Power of the Triple Gem",
+   "book_number": "13",
+   "page_start": 100,
+   "english_unverified": true,
+   "source_printed": "พระราชนิพนธ์ในพระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัว",
+   "closing": {
+    "pali": "ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา นิฏฐิตา",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here end the Verses Entreating the Power of the Triple Gem."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อะระหัง สัมมาสัมพุทโธ อุตตะมัง ธัมมะมัชฌะคา",
+     "pali_roman": "Arahaṃ sammāsambuddho uttamaṃ dhammamajjhagā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Worthy One, the Perfectly Self-Awakened, attained the supreme Dhamma",
+     "page": 100
+    },
+    {
+     "number": 2,
+     "pali": "มะหาสังฆัง ปะโพเธสิ อิจเจตัง ระตะนัตตะยัง.",
+     "pali_roman": "Mahāsaṅghaṃ pabodhesi iccetaṃ ratanattayaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and awakened the great Sangha — and so there is this Triple Gem.",
+     "page": 100
+    },
+    {
+     "number": 3,
+     "pali": "พุทโธ ธัมโม สังโฆ จาติ นานาโหนตัมปิ วัตถุโต",
+     "pali_roman": "Buddho dhammo saṅgho cāti nānā hontampi vatthuto",
+     "thai": "",
+     "paiboon": "",
+     "english": "Buddha, Dhamma and Sangha, though they are separate as things,",
+     "page": 100
+    },
+    {
+     "number": 4,
+     "pali": "อัญญะมัญญาวิโยคาวะ เอกีภูตัมปะนัตถะโต.",
+     "pali_roman": "Aññamaññāviyogāva ekībhūtampanatthato.",
+     "thai": "",
+     "paiboon": "",
+     "english": "are inseparable one from another, and in meaning they are one.",
+     "page": 100
+    },
+    {
+     "number": 5,
+     "pali": "พุทโธ ธัมมัสสะ โพเธตา ธัมโม สังเฆนะ ธาริโต.",
+     "pali_roman": "Buddho dhammassa bodhetā dhammo saṅghena dhārito.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Buddha is the one who awakens to the Dhamma; the Dhamma is upheld by the Sangha.",
+     "page": 100
+    },
+    {
+     "number": 6,
+     "pali": "สังโฆ จะ สาวะโก พุทธัสสะ อิจเจกาพัทธะเมวิทัง.",
+     "pali_roman": "Saṅgho ca sāvako buddhassa iccekābaddhamevidaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the Sangha is the Buddha's disciple — so this is bound together as one.",
+     "page": 100
+    },
+    {
+     "number": 7,
+     "pali": "วิสุทธัง อุตตะมัง เสฏฐัง โลกัส์มิง ระตะนัตตะยัง",
+     "pali_roman": "Visuddhaṃ uttamaṃ seṭṭhaṃ lokasmiṃ ratanattayaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Pure, supreme and most excellent in the world is the Triple Gem;",
+     "page": 100
+    },
+    {
+     "number": 8,
+     "pali": "สังวัตตะติ ปะสันนานัง อัตตะโน สุทธิกามินัง.",
+     "pali_roman": "Saṃvattati pasannānaṃ attano suddhikāminaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "it works for those with faith, who desire purity for themselves.",
+     "page": 100
+    },
+    {
+     "number": 9,
+     "pali": "สัมมา ปะฏิปัชชันตานัง ปะระมายะ วิสุทธิยา",
+     "pali_roman": "Sammā paṭipajjantānaṃ paramāya visuddhiyā",
+     "thai": "",
+     "paiboon": "",
+     "english": "For those practising rightly it leads to the highest purity —",
+     "page": 100
+    },
+    {
+     "number": 10,
+     "pali": "วิสุทธิ สัพพะเก์ลเสหิ โหติ ทุกเขหิ นิพพุติ.",
+     "pali_roman": "Visuddhi sabbaklesehi hoti dukkhehi nibbuti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "purity from all the defilements, and the cooling of all sufferings.",
+     "page": 100
+    },
+    {
+     "number": 11,
+     "pali": "นิพพานัง ปะระมัง สุญญัง นิพพานัง ปะระมัง สุขัง",
+     "pali_roman": "Nibbānaṃ paramaṃ suññaṃ nibbānaṃ paramaṃ sukhaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Nibbāna is the supreme emptiness; Nibbāna is the supreme happiness.",
+     "page": 100
+    },
+    {
+     "number": 12,
+     "pali": "เอเตนะ สัจจะวัชเชนะ สุวัตถิ โหตุ สัพพะทา.",
+     "pali_roman": "Etena saccavajjena suvatthi hotu sabbadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the speaking of this truth, may there be well-being always.",
+     "page": 100
+    },
+    {
+     "number": 13,
+     "pali": "ระตะนัตตะยานุภาเวนะ ระตะนัตตะยะเตชะสา",
+     "pali_roman": "Ratanattayānubhāvena ratanattayatejasā",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the power of the Triple Gem, by the majesty of the Triple Gem,",
+     "page": 100
+    },
+    {
+     "number": 14,
+     "pali": "อุปัททะวันตะรายา จะ อุปะสัคคา จะ สัพพะโส.",
+     "pali_roman": "Upaddavantarāyā ca upasaggā ca sabbaso.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may misfortunes and dangers, and obstacles of every kind,",
+     "page": 100
+    },
+    {
+     "number": 15,
+     "pali": "มา กะทาจิ สัมผุสิงสุ รัฏฐัง ส์ยามานะเมวิทัง",
+     "pali_roman": "Mā kadāci samphusiṃsu raṭṭhaṃ syāmānamevidaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "never once touch this realm of the Siamese.",
+     "page": 100
+    },
+    {
+     "number": 16,
+     "pali": "อาโรคิยะสุขัญเจวะ ตะโต ทีฆายุตาปิ จะ.",
+     "pali_roman": "Ārogiyasukhañceva tato dīghāyutāpi ca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And health and happiness, and long life after that,",
+     "page": 100
+    },
+    {
+     "number": 17,
+     "pali": "ตัพพัตถูนัญจะ สัมปัตตะโย สุขัง สัพพัตถะ โสตถิ จะ",
+     "pali_roman": "Tabbatthūnañca sampattayo sukhaṃ sabbattha sotthi ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the attainments of those good things, and happiness and safety everywhere —",
+     "page": 100
+    },
+    {
+     "number": 18,
+     "pali": "ภะวันตุ สัมปะวัตตันตุ ส์ยามานัง รัฏฐะปาลินัง.",
+     "pali_roman": "Bhavantu sampavattantu syāmānaṃ raṭṭhapālinaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may these come to be and continue for the rulers of the Siamese.",
+     "page": 100
+    },
+    {
+     "number": 19,
+     "pali": "เต จะ รัฏฐัญจะ รักขันตุ ส์ยามะรัฏฐิกะเทวะตา",
+     "pali_roman": "Te ca raṭṭhañca rakkhantu syāmaraṭṭhikadevatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "And may the devas of the Siamese realm guard both them and the realm,",
+     "page": 100
+    },
+    {
+     "number": 20,
+     "pali": "ส์ยามานัง รัฏฐะปาลีหิ ธัมมามิเสหิ ปูชิตา.",
+     "pali_roman": "Syāmānaṃ raṭṭhapālīhi dhammāmisehi pūjitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "being honoured by the rulers of the Siamese with gifts of Dhamma and of goods.",
+     "page": 100
+    },
+    {
+     "number": 21,
+     "pali": "สิทธะมัตถุ สิทธะมัตถุ สิทธะมัตถุ อิทัง ผะลัง",
+     "pali_roman": "Siddhamatthu siddhamatthu siddhamatthu idaṃ phalaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "May it be accomplished, may it be accomplished, may it be accomplished — this fruit,",
+     "page": 100
+    },
+    {
+     "number": 22,
+     "pali": "เอตัส์มิง ระตะนัตตะยัส์มิง สัมปะสาทะนะเจตะโส.",
+     "pali_roman": "Etasmiṃ ratanattayasmiṃ sampasādanacetaso.",
+     "thai": "",
+     "paiboon": "",
+     "english": "for one whose heart is settled in faith in this Triple Gem.",
+     "page": 100
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะภิยาจะนะ",
+     "pali_roman": "abhiyācana",
+     "meaning": "entreaty, earnest request. The chant does not merely praise the Triple Gem — it asks something of it, which is what the title says"
+    },
+    {
+     "pali": "ส์ยามะ",
+     "pali_roman": "syāma",
+     "meaning": "Siam. The word appears four times, in ส์ยามานะ, ส์ยามานัง twice and ส์ยามะรัฏฐิกะ — this is a chant for one country, not for the world"
+    },
+    {
+     "pali": "สิทธะมัตถุ",
+     "pali_roman": "siddhamatthu",
+     "meaning": "'may it be accomplished'. Printed three times over in verse 21, which is how the chant ends before its final line"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0365.PNG",
+     "issue": "‼ THE FOOTNOTE IS AN AUTHORSHIP NOTE, NOT A CANONICAL CITATION — the first of its kind in the run. The page prints, under a rule, `1. พระราชนิพนธ์ในพระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัว` — 'a royal composition of His Majesty King Mongkut'. Every other source_printed in the app so far holds a Tipitaka reference (สํ.ส. 15/320 and the like). Put in source_printed anyway, because the field's job is to carry what the book prints as the source and the template renders it as a plain footnote under a rule with no 'Tipitaka' wording of its own. It is also true: this chant is a nineteenth-century Siamese composition, so its source IS an author rather than the canon. Flagged because the field now holds two different kinds of thing."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0365.PNG",
+     "issue": "The heading prints 13. before the title. Kept in book_number as '13' and out of title_thai, following the twenty-five numbered chants already in the app. Because title_thai is therefore clean, it matches _CONTENTS_ROMAN and the never-spell-a-title-two-ways test CAN see this chant — unlike the twelve บทขัด before it."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0365.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1120. Read ACROSS. FIRST PAIRING FOR CHECKING: left อะระหัง สัมมาสัมพุทโธ + right อุตตะมัง ธัมมะมัชฌะคา."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0365.PNG",
+     "issue": "INDENT MEASURED AGAINST A FITTED BASELINE, NOT A FIXED THRESHOLD. The block's left edge DRIFTS 65px down the page — 478 at the top, 541 at the bottom — because the sheet curves away from the camera. A fixed threshold would have called the lower half indented. Fitting a line through rows 2-22 gives x = 0.0343*y + 464, and every one of those rows sits on it within 8px, while verse 1 stands +138 clear. So: ONE indent, on verse 1 only, which the chant's own paragraph start already carries. No para_start is needed anywhere in this chant."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0365.PNG",
+     "issue": "The colophon ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา นิฏฐิตา is centred and bold beneath the last row, above the footnote rule. Held in closing.pali, which is where the other 41 Pali colophons live."
+    },
+    {
+     "verse": 15,
+     "file": "IMG_0365.PNG",
+     "issue": "This is a chant FOR SIAM specifically — ส์ยามานะเมวิทัง, ส์ยามานัง (twice) and ส์ยามะรัฏฐิกะเทวะตา. The English says 'the Siamese' rather than 'Thailand' because the Pali is syāma and the composition predates the 1939 renaming."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0365.PNG",
+     "issue": "Seven words carry the ์ cluster mark: โลกัส์มิง (v7), สัพพะเก์ลเสหิ (v10), ส์ยามานะเมวิทัง (v15), ส์ยามานัง (v18, v20), ส์ยามะรัฏฐิกะเทวะตา (v19), เอตัส์มิง and ระตะนัตตะยัส์มิง (v22). All romanised with the mark read as a cluster and dropped."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0365.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "ratanattayappabhavabhiyacana-gatha"
+  ],
+  "continues": [],
+  "resume_from": null,
+  "paiboon_scan": "Nothing to scan. The chant is printed in Pali only, so paiboon is empty on every verse. The one Thai string on the page is source_printed, which is a footnote and not a chanted layer.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0365.PNG read end to end. Page number 100 read off the sheet. One centred bold numbered title, one block of 22 rows, one centred colophon, one rule and one footnote. Nothing else.",
+  "notes": "Page 100 returns the book to its OWN numbering after the Twelve Tamnan — the heading is 13., picking up the numbered sequence that ran before the Tamnan interrupted it. The chant is King Mongkut's, not canonical, and prays for Siam by name.",
+  "diacritic_exceptions": []
+ }
+}

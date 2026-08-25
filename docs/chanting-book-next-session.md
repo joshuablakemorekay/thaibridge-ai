@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-99 went in.
+100 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–99 are in and unbroken**, plus 217–221. **135 chants and 2,047
+- **Pages 1–100 are in and unbroken**, plus 217–221. **136 chants and 2,069
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 99 were applied 2026-08-24; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 100 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,20 +46,28 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 100, `IMG_0365` — but READ THE NUMBER off the sheet
+## Next: page 101, `IMG_0366` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–99, so page 100 *should*
-be `IMG_0365`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–100, so page 101 *should*
+be `IMG_0366`. **Five more changes are still expected before page 207.**
 
-**Page 100 starts clean, and its top is already known.** Both page-99 chants
-close on their own sheet. Page 100 opens with a centred bold, NUMBERED heading —
-**`13. ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา`** — over two columns, first row
-`อะระหัง สัมมาสัมพุทโธ` / `อุตตะมัง ธัมมะมัชฌะคา`. Read it off the sheet again
-rather than trusting that line; it was a quick look, not a measured read.
+**Page 101 starts clean.** The page-100 chant closes on its own sheet with a
+colophon, and the book is back on its own numbering — expect `14.` next, or a
+new section heading.
 
-**⭐ THE TWELVE TAMNAN ARE COMPLETE.** Page 99 closed the set with Jaya, the
-twelfth, and its `บทขัด`. From page 100 the book returns to its own numbering
-(`13.`), so the numbered sequence that ran before the Tamnan picks up again.
+## 📏 Measure indents against a FITTED BASELINE, not a fixed threshold
+
+Page 100 made this unavoidable and it is the right method from now on. That
+sheet's block left edge **drifts 65px down the page** — 478 at the top row, 541
+at the bottom — because the page curves away from the camera. A fixed threshold
+calls the lower half indented and is simply wrong. (Page 94 was the earlier
+version of this mistake, where page 83's absolute `x >= 760` reported all 26
+rows as indented.)
+
+**What to do:** take the left edge of every row, fit a straight line through the
+rows you believe are NOT indented, then look at the residuals. On page 100 the
+fit was `x = 0.0343*y + 464`; rows 2–22 sat on it within 8px and verse 1 stood
+**+138** clear. That is an unambiguous answer, and it takes one short script.
 
 ## 🐛 OPEN BUG — 11 Thai colophons are printed TWICE (pages 38-47)
 
