@@ -1,0 +1,968 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 4,
+  "manifest": [
+   "kham-kho-riak-upasampathapekkha-khao-ma",
+   "kham-sommot-ton-lae-kham-tham-antarayikatham",
+   "kham-phra-upatchai-klao-phadiang-song",
+   "kham-suat-kammawaca-upasombot"
+  ],
+  "pages": [
+   {
+    "page": 297,
+    "file": "IMG_0564.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-kho-riak-upasampathapekkha-khao-ma",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "A centred heading and its paragraph, PROSE at full measure, split into verses at the book's own commas. Starts and ends on this sheet."
+   },
+   {
+    "page": 297,
+    "file": "IMG_0564.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-sommot-ton-lae-kham-tham-antarayikatham",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A centred heading and its paragraph, PROSE at full measure, split into verses at the book's own commas. Starts and ends on this sheet."
+   },
+   {
+    "page": 297,
+    "file": "IMG_0564.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-phra-upatchai-klao-phadiang-song",
+    "verses": "1-14",
+    "starts_here": true,
+    "note": "A centred heading and its paragraph, PROSE at full measure, split into verses at the book's own commas. Starts and ends on this sheet."
+   },
+   {
+    "page": 297,
+    "file": "IMG_0564.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-suat-kammawaca-upasombot",
+    "verses": "1-12",
+    "starts_here": true,
+    "note": "A centred heading and its paragraph, PROSE at full measure, split into verses at the book's own commas. The chant runs off the foot of the sheet and is picked up on page 298.",
+    "blocks": [
+     {
+      "type": "prose",
+      "thai": "หมายเหตุ บทว่า อาวุโส นั้น ถ้ามีพระภิกษุแก่พรรษากว่าอุปัชฌาย์ ร่วมประชุมอยู่ด้วย พึงใช้ ภันเต แทน",
+      "english": "Note: as for the word āvuso — if a monk senior to the preceptor is present in the assembly, bhante should be used instead.",
+      "english_unverified": true
+     }
+    ]
+   },
+   {
+    "page": 298,
+    "file": "IMG_0565.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-suat-kammawaca-upasombot",
+    "verses": "13-68",
+    "starts_here": false,
+    "note": "The whole of page 298, which carries NO heading of its own: the three announcements and the concluding declaration, finishing the act begun on 297. Four paragraphs of prose at full measure."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-kho-riak-upasampathapekkha-khao-ma",
+   "title_thai": "คำขอเรียกอุปสัมปทาเปกขะเข้ามา",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Asking to Call the Candidates In",
+   "page_start": 297,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "6, one per clause of the book's own paragraphs, split at its commas as page 308's kammavaca was.",
+    "ordering": "No Thai translation is printed; the Thai on this sheet is bracketed rubrics and one editorial note.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, covering the PALI ONLY where a line also carries a Thai rubric. paiboon is left empty — see page 306.",
+    "pages": "IMG_0564.PNG, page 297, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สุณาตุ เม ภันเต สังโฆ,",
+     "pali_roman": "Suṇātu me bhante saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Let the Saṅgha, venerable sirs, hear me. Puṇṇa and Subha, candidates for ordination under the venerable Manussanāga, have been instructed by me. If the Saṅgha is ready, let Puṇṇa and Subha come forward.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 297
+    },
+    {
+     "number": 2,
+     "pali": "ปุณโณ จะ สุโภ จะ อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,",
+     "pali_roman": "Puṇṇo ca subho ca āyasmato manussanāgassa upasampadāpekkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "อะนุสิฏฐา เต มะยา,",
+     "pali_roman": "Anusiṭṭhā te mayā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "ยะทิ สังฆัสสะ ปัตตะกัลลัง,",
+     "pali_roman": "Yadi saṅghassa pattakallaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "ปุณโณ จะ สุโภ จะ อาคัจเฉยยุง.",
+     "pali_roman": "Puṇṇo ca subho ca āgaccheyyuṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 6,
+     "pali": "(คำเรียก) อาคัจฉะถะ",
+     "pali_roman": "Āgacchatha",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The call:) Come forward.",
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  },
+  {
+   "id": "kham-sommot-ton-lae-kham-tham-antarayikatham",
+   "title_thai": "คำสมมติตนและคำถามอันตรายิกธรรม",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Appointing Oneself and Asking the Obstructing Conditions",
+   "page_start": 297,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "5, one per clause of the book's own paragraphs, split at its commas as page 308's kammavaca was.",
+    "ordering": "No Thai translation is printed; the Thai on this sheet is bracketed rubrics and one editorial note.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, covering the PALI ONLY where a line also carries a Thai rubric. paiboon is left empty — see page 306.",
+    "pages": "IMG_0564.PNG, page 297, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สุณาตุ เม ภันเต สังโฆ,",
+     "pali_roman": "Suṇātu me bhante saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Let the Saṅgha, venerable sirs, hear me. If the Saṅgha is ready, I would question Puṇṇa and Subha on the obstructing conditions.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 297
+    },
+    {
+     "number": 2,
+     "pali": "ปุณโณ จะ สุโภ จะ อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,",
+     "pali_roman": "Puṇṇo ca subho ca āyasmato manussanāgassa upasampadāpekkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "ยะทิ สังฆัสสะ ปัตตะกัลลัง,",
+     "pali_roman": "Yadi saṅghassa pattakallaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "ปุณณัญจะ สุภัญจะ อันตะรายิเก ธัมเม ปุจเฉยยัง",
+     "pali_roman": "Puṇṇañca subhañca antarāyike dhamme puccheyyaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(สอบถามที่ละรูป)",
+     "paiboon": "",
+     "english": "(Questioned one at a time)"
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  },
+  {
+   "id": "kham-phra-upatchai-klao-phadiang-song",
+   "title_thai": "คำพระอุปัชฌาย์กล่าวเผดียงสงฆ์",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of the Preceptor Informing the Saṅgha",
+   "page_start": 297,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "14, one per clause of the book's own paragraphs, split at its commas as page 308's kammavaca was.",
+    "ordering": "No Thai translation is printed; the Thai on this sheet is bracketed rubrics and one editorial note.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, covering the PALI ONLY where a line also carries a Thai rubric. paiboon is left empty — see page 306.",
+    "pages": "IMG_0564.PNG, page 297, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิทานิ โข อาวุโส (ภันเต) อะยัญจะ ปุณโณ นามะ สามะเณโร,",
+     "pali_roman": "Idāni kho āvuso (bhante) ayañca puṇṇo nāma sāmaṇero,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Now, friends (venerable sirs), these two novices named Puṇṇa and Subha are my candidates, seeking ordination and asking it of the Saṅgha. I request this whole Saṅgha: please, friends, let this whole Saṅgha question them on the obstructing conditions, know their readiness, and ordain them by a formal act with a motion and three announcements, unshakeable and befitting the occasion. Let the act be concluded.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 297
+    },
+    {
+     "number": 2,
+     "pali": "อะยัญจะ สุโภ นามะ สามะเณโร,",
+     "pali_roman": "Ayañca subho nāma sāmaṇero,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "มะมะ อุปะสัมปะทาเปกขา,",
+     "pali_roman": "Mama upasampadāpekkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "อุปะสัมปะทัง อากังขะมานา,",
+     "pali_roman": "Upasampadaṃ ākaṅkhamānā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "สังฆัง ยาจันติ,",
+     "pali_roman": "Saṅghaṃ yācanti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 6,
+     "pali": "อะหัง สัพพะมิมัง สังฆัง อัชเฌสามิ,",
+     "pali_roman": "Ahaṃ sabbamimaṃ saṅghaṃ ajjhesāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 7,
+     "pali": "สาธุ อาวุโส (ภันเต) สัพโพยัง สังโฆ,",
+     "pali_roman": "Sādhu āvuso (bhante) sabboyaṃ saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 8,
+     "pali": "อิมัญจะ ปุณณัง นามะ สามะเณรัง,",
+     "pali_roman": "Imañca puṇṇaṃ nāma sāmaṇeraṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 9,
+     "pali": "อิมัญจะ สุภัง นามะ สามะเณรัง,",
+     "pali_roman": "Imañca subhaṃ nāma sāmaṇeraṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 10,
+     "pali": "อันตะรายิเก ธัมเม ปุจฉิต์วา,",
+     "pali_roman": "Antarāyike dhamme pucchitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 11,
+     "pali": "ตัตถะ ปัตตะกัลลัตตัง ญัต์วา,",
+     "pali_roman": "Tattha pattakallattaṃ ñatvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 12,
+     "pali": "ญัตติจะตุตเถนะ กัมเมนะ อะกุปเปนะ ฐานาระเหนะ อุปะสัมปาเทมาติ,",
+     "pali_roman": "Ñatticatutthena kammena akuppena ṭhānārahena upasampādemāti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 13,
+     "pali": "กัมมะสันนิฏฐานัง กะโรตุ.",
+     "pali_roman": "Kammasanniṭṭhānaṃ karotu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 14,
+     "pali": "(ที่ประชุมสงฆ์รับพร้อมกันว่า) สาธุ",
+     "pali_roman": "Sādhu",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The assembled Saṅgha responds together:) Sādhu.",
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0564.PNG",
+     "issue": "THE BOOK PRINTS AN ALTERNATIVE INSIDE THE LINE — 'อาวุโส (ภันเต)' twice, giving both forms of address in one breath, and its own note beneath explains when each is used. The brackets are kept inline exactly as printed, and the note is entered as a page block anchored after this chant."
+    }
+   ]
+  },
+  {
+   "id": "kham-suat-kammawaca-upasombot",
+   "title_thai": "คำสวดกรรมวาจาอุปสมบท",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Chanting the Kammavācā of Ordination",
+   "page_start": 297,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "68, one per clause of the book's own paragraphs, split at its commas as page 308's kammavaca was.",
+    "ordering": "No Thai translation is printed; the Thai on this sheet is bracketed rubrics and one editorial note.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, covering the PALI ONLY where a line also carries a Thai rubric. paiboon is left empty — see page 306.",
+    "pages": "IMG_0564.PNG, page 297, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สุณาตุ เม ภันเต สังโฆ,",
+     "pali_roman": "Suṇātu me bhante saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Let the Saṅgha, venerable sirs, hear me. This is the motion for the ordination of Puṇṇa and Subha under the venerable Manussanāga as preceptor.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 297
+    },
+    {
+     "number": 2,
+     "pali": "อะยัญจะ ปุณโณ,",
+     "pali_roman": "Ayañca puṇṇo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "อะยัญจะ สุโภ,",
+     "pali_roman": "Ayañca subho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,",
+     "pali_roman": "Āyasmato manussanāgassa upasampadāpekkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "ปะริสุทธา อันตะรายิเกหิ ธัมเมหิ,",
+     "pali_roman": "Parisuddhā antarāyikehi dhammehi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 6,
+     "pali": "ปะริปุณณะมิเมสัง ปัตตะจีวะรัง,",
+     "pali_roman": "Paripuṇṇamimesaṃ pattacīvaraṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 7,
+     "pali": "ปุณโณ จะ สุโภ จะ สังฆัง อุปะสัมปะทัง ยาจันติ,",
+     "pali_roman": "Puṇṇo ca subho ca saṅghaṃ upasampadaṃ yācanti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 8,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 9,
+     "pali": "ยะทิ สังฆัสสะ ปัตตะกัลลัง,",
+     "pali_roman": "Yadi saṅghassa pattakallaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 10,
+     "pali": "สังโฆ ปุณณัญจะ สุภัญจะ อุปะสัมปาเทยยะ,",
+     "pali_roman": "Saṅgho puṇṇañca subhañca upasampādeyya,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 11,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 12,
+     "pali": "เอสา ญัตติ.",
+     "pali_roman": "Esā ñatti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 13,
+     "pali": "สุณาตุ เม ภันเต สังโฆ,",
+     "pali_roman": "Suṇātu me bhante saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "The first announcement: the Saṅgha ordains Puṇṇa and Subha under the venerable Manussanāga as preceptor. Let one to whom it is acceptable remain silent; let one to whom it is not speak.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 298
+    },
+    {
+     "number": 14,
+     "pali": "อะยัญจะ ปุณโณ,",
+     "pali_roman": "Ayañca puṇṇo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 15,
+     "pali": "อะยัญจะ สุโภ,",
+     "pali_roman": "Ayañca subho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 16,
+     "pali": "อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,",
+     "pali_roman": "Āyasmato manussanāgassa upasampadāpekkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 17,
+     "pali": "ปะริสุทธา อันตะรายิเกหิ ธัมเมหิ,",
+     "pali_roman": "Parisuddhā antarāyikehi dhammehi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 18,
+     "pali": "ปะริปุณณะมิเมสัง ปัตตะจีวะรัง,",
+     "pali_roman": "Paripuṇṇamimesaṃ pattacīvaraṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 19,
+     "pali": "ปุณโณ จะ สุโภ จะ สังฆัง อุปะสัมปะทัง ยาจันติ,",
+     "pali_roman": "Puṇṇo ca subho ca saṅghaṃ upasampadaṃ yācanti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 20,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 21,
+     "pali": "สังโฆ ปุณณัญจะ สุภัญจะ อุปะสัมปาเทติ,",
+     "pali_roman": "Saṅgho puṇṇañca subhañca upasampādeti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 22,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 23,
+     "pali": "ยัสสายัส์มะโต ขะมะติ,",
+     "pali_roman": "Yassāyasmato khamati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 24,
+     "pali": "ปุณณัสสะ จะ สุภัสสะ จะ อุปะสัมปะทา,",
+     "pali_roman": "Puṇṇassa ca subhassa ca upasampadā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 25,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 26,
+     "pali": "โส ตุณ์หัสสะ,",
+     "pali_roman": "So tuṇhassa,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 27,
+     "pali": "ยัสสะ นะ ขะมะติ,",
+     "pali_roman": "Yassa na khamati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 28,
+     "pali": "โส ภาเสยยะ.",
+     "pali_roman": "So bhāseyya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 29,
+     "pali": "ทุติยัมปิ เอตะมัตถัง วะทามิ,",
+     "pali_roman": "Dutiyampi etamatthaṃ vadāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time I speak of this matter — the same announcement.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 30,
+     "pali": "สุณาตุ เม ภันเต สังโฆ,",
+     "pali_roman": "Suṇātu me bhante saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 31,
+     "pali": "อะยัญจะ ปุณโณ,",
+     "pali_roman": "Ayañca puṇṇo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 32,
+     "pali": "อะยัญจะ สุโภ,",
+     "pali_roman": "Ayañca subho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 33,
+     "pali": "อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,",
+     "pali_roman": "Āyasmato manussanāgassa upasampadāpekkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 34,
+     "pali": "ปะริสุทธา อันตะรายิเกหิ ธัมเมหิ,",
+     "pali_roman": "Parisuddhā antarāyikehi dhammehi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 35,
+     "pali": "ปะริปุณณะมิเมสัง ปัตตะจีวะรัง,",
+     "pali_roman": "Paripuṇṇamimesaṃ pattacīvaraṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 36,
+     "pali": "ปุณโณ จะ สุโภ จะ สังฆัง อุปะสัมปะทัง ยาจันติ,",
+     "pali_roman": "Puṇṇo ca subho ca saṅghaṃ upasampadaṃ yācanti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 37,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 38,
+     "pali": "สังโฆ ปุณณัญจะ สุภัญจะ อุปะสัมปาเทติ,",
+     "pali_roman": "Saṅgho puṇṇañca subhañca upasampādeti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 39,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 40,
+     "pali": "ยัสสายัส์มะโต ขะมะติ,",
+     "pali_roman": "Yassāyasmato khamati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 41,
+     "pali": "ปุณณัสสะ จะ สุภัสสะ จะ อุปะสัมปะทา,",
+     "pali_roman": "Puṇṇassa ca subhassa ca upasampadā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 42,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 43,
+     "pali": "โส ตุณ์หัสสะ,",
+     "pali_roman": "So tuṇhassa,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 44,
+     "pali": "ยัสสะ นะ ขะมะติ,",
+     "pali_roman": "Yassa na khamati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 45,
+     "pali": "โส ภาเสยยะ.",
+     "pali_roman": "So bhāseyya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 46,
+     "pali": "ตะติยัมปิ เอตะมัตถัง วะทามิ,",
+     "pali_roman": "Tatiyampi etamatthaṃ vadāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time I speak of this matter — the same announcement.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 47,
+     "pali": "สุณาตุ เม ภันเต สังโฆ,",
+     "pali_roman": "Suṇātu me bhante saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 48,
+     "pali": "อะยัญจะ ปุณโณ,",
+     "pali_roman": "Ayañca puṇṇo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 49,
+     "pali": "อะยัญจะ สุโภ,",
+     "pali_roman": "Ayañca subho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 50,
+     "pali": "อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,",
+     "pali_roman": "Āyasmato manussanāgassa upasampadāpekkhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 51,
+     "pali": "ปะริสุทธา อันตะรายิเกหิ ธัมเมหิ,",
+     "pali_roman": "Parisuddhā antarāyikehi dhammehi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 52,
+     "pali": "ปะริปุณณะมิเมสัง ปัตตะจีวะรัง,",
+     "pali_roman": "Paripuṇṇamimesaṃ pattacīvaraṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 53,
+     "pali": "ปุณโณ จะ สุโภ จะ สังฆัง อุปะสัมปะทัง ยาจันติ,",
+     "pali_roman": "Puṇṇo ca subho ca saṅghaṃ upasampadaṃ yācanti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 54,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 55,
+     "pali": "สังโฆ ปุณณัญจะ สุภัญจะ อุปะสัมปาเทติ,",
+     "pali_roman": "Saṅgho puṇṇañca subhañca upasampādeti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 56,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 57,
+     "pali": "ยัสสายัส์มะโต ขะมะติ,",
+     "pali_roman": "Yassāyasmato khamati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 58,
+     "pali": "ปุณณัสสะ จะ สุภัสสะ จะ อุปะสัมปะทา,",
+     "pali_roman": "Puṇṇassa ca subhassa ca upasampadā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 59,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 60,
+     "pali": "โส ตุณ์หัสสะ,",
+     "pali_roman": "So tuṇhassa,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 61,
+     "pali": "ยัสสะ นะ ขะมะติ,",
+     "pali_roman": "Yassa na khamati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 62,
+     "pali": "โส ภาเสยยะ.",
+     "pali_roman": "So bhāseyya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 63,
+     "pali": "อุปะสัมปันนา สังเฆนะ,",
+     "pali_roman": "Upasampannā saṅghena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Puṇṇa and Subha have been ordained by the Saṅgha under the venerable Manussanāga as preceptor. It is acceptable to the Saṅgha, therefore it is silent. Thus do I hold it.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 64,
+     "pali": "ปุณโณ จะ สุโภ จะ,",
+     "pali_roman": "Puṇṇo ca subho ca,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 65,
+     "pali": "อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,",
+     "pali_roman": "Āyasmatā manussanāgena upajjhāyena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 66,
+     "pali": "ขะมะติ สังฆัสสะ,",
+     "pali_roman": "Khamati saṅghassa,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 67,
+     "pali": "ตัส์มา ตุณ์หี,",
+     "pali_roman": "Tasmā tuṇhī,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 68,
+     "pali": "เอวะเมตัง ธาระยามิ.",
+     "pali_roman": "Evametaṃ dhārayāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0564.PNG",
+     "issue": "⚠ PAGE 298 CARRIES NO HEADING AT ALL — the first sheet in the backward pass with none. Everything on it belongs to this chant, which begins on 297, and the contents confirms it by listing คำสวดกรรมวาจาอุปสมบท at ๒๙๗. A sheet with no heading cannot be read on its own; the contents is what settles where it belongs."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0565.PNG",
+     "issue": "THE ANNOUNCEMENT IS PRINTED THREE TIMES IN FULL, each time complete rather than abbreviated, prefixed ทุติยัมปิ and ตะติยัมปิ from the second. That is the ญัตติจะตุตถะกัมมะ — a motion and three announcements — and the repetition is the form of the act, not duplication."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0564.PNG",
+     "issue": "PUṆṆA AND SUBHA ARE PLACEHOLDER NAMES, as อิตถันนามัสสะ is on page 308 — this is the form for a PAIR of candidates (นาคคู่), which is why every clause is dual. The preceptor's name มะนุสสะนาคะ is a placeholder too."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-kho-riak-upasampathapekkha-khao-ma",
+   "kham-sommot-ton-lae-kham-tham-antarayikatham",
+   "kham-phra-upatchai-klao-phadiang-song",
+   "kham-suat-kammawaca-upasombot"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 296,
+  "resume_from_file": "IMG_0563.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch. No Thai translation is printed on either sheet.",
+  "pali_untouched": "Confirmed and mechanically true: every pali_roman was produced by translit_pali from the Pali portion of its clause rather than typed. Where a line carries a bracketed Thai rubric, pali_roman covers the Pali only. The cluster marks in อายัส์มะโต, ตุณ์หัสสะ, ปุจฉิต์วา, ญัต์วา and ตัส์มา are present as the book sets them.",
+  "page_scan": "agrees. Four rows for page 297, one per chant, plus a FIFTH row for page 298 carrying the rest of the last chant. The หมายเหตุ note is declared on the FOURTH row so it anchors after the THIRD chant, which is where the book prints it.",
+  "notes": "THE ORDINATION KAMMAVACA FOR A PAIR OF CANDIDATES, across two sheets. Three findings. (1) ⚠ PAGE 298 CARRIES NO HEADING AT ALL — the first such sheet in this pass. It cannot be placed by reading it; the contents listing คำสวดกรรมวาจาอุปสมบท at ๒๙๗ is what settles it. (2) THE ANNOUNCEMENT IS PRINTED THREE TIMES IN FULL — the motion and three announcements that make the act — so the repetition is the form and not duplication. (3) THE BOOK PRINTS BOTH FORMS OF ADDRESS INLINE, 'อาวุโส (ภันเต)', with its own note beneath saying when each applies; the brackets are kept and the note entered as a block.",
+  "diacritic_exceptions": []
+ }
+}
