@@ -1,0 +1,155 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "kham-athibai-prakop"
+  ],
+  "pages": [
+   {
+    "page": 276,
+    "file": "IMG_0544.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-athibai-prakop",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A centred heading and five NUMBERED Thai paragraphs of explanation, prose at full measure. The chant starts and ends on this sheet. The TWO-COLUMN Pali gāthā above the heading belongs to คาถาศราทธพรต, which the contents puts at ๒๗๕, and is left for that page's batch."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-athibai-prakop",
+   "title_thai": "คำอธิบายประกอบ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "Accompanying Explanation",
+   "page_start": 276,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Five, one per numbered paragraph, each carrying the book's own numeral as printed_number and declaring para_layout 'prose' against the chant's 'lines'.",
+    "ordering": "There is no Pali here at all — the whole entry is Thai explanation — so `pali` and `pali_roman` are empty throughout, as on page 306.",
+    "conventions": "`paiboon` is left EMPTY, for the reason recorded on page 306.",
+    "pages": "IMG_0544.PNG, page 276, read off the sheet. Offset 268 — see the checks."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "การสวดมาติกาบังสุกุลตามระเบียบ นี้ คือ สวดอย่างเต็มที่ ถ้าย่อสวดให้ตัด วิปัสสะนาภูมิปาฐะ ออกเสีย สวด ธัมมะสังคะณีมาติกา แล้วสวด ปัฏฐานะมาติกา เลย",
+     "paiboon": "",
+     "english": "This chanting of the mātikā and the paṃsukūla according to the procedure is the full form. To shorten it, leave out the Vipassanābhūmi passage: chant the Dhammasaṅgaṇī mātikā and then go straight on to the Paṭṭhāna mātikā.",
+     "printed_number": 1,
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 276
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ในฐานะที่ไม่มีผ้าภูษาโยง ให้ใช้ด้ายสายสิญจน์แทน ถ้าไม่มีผ้าสำหรับทอดบังสุกุล ให้พระจับผ้าภูษาโยงหรือด้ายสายสิญจน์บังสุกุล",
+     "paiboon": "",
+     "english": "Where there is no connecting cloth, the sacred thread may be used instead. If there is no cloth to lay out for the paṃsukūla, the monks take hold of the connecting cloth or the sacred thread for it.",
+     "printed_number": 2,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ขณะสวดมาติกาบังสุกุลนั้นถ้ามีพัดให้ตั้งพัดสวดและตั้งพัดบังสุกุล ต่างแต่เมื่อตั้งพัดสวดจับมือขวา เมื่อบังสุกุลจับพัดมือซ้ายเพื่อจะได้จับชักผ้าด้วยมือขวา เมื่ออนุโมทนาก็จับพัดด้วยมือขวาตามปรกติ",
+     "paiboon": "",
+     "english": "While chanting the mātikā and the paṃsukūla, if there is a ceremonial fan it is set up for both. The difference is that for the chanting the fan is held in the right hand, while for the paṃsukūla it is held in the left so that the cloth may be drawn with the right; and for the blessing it is held in the right hand again, as usual.",
+     "printed_number": 3,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "พึงมีสติสัมปชัญญะว่า เมื่อจับผ้าชักบังสุกุลนั้น ต้องหงายมือจับอย่าคว่ำมือจับ ครั้นชักแล้วให้หยิบเอาผ้านั้นไปเก็บไว้ข้างตัวเสร็จแล้วถือขาดติดตัวไปด้วย ผ้าภูษาโยงหรือด้ายสายสิญจน์นี้ ห้ามหยิบของข้ามเด็ดขาด",
+     "paiboon": "",
+     "english": "One should be mindful and clearly aware that when taking hold of the cloth to draw the paṃsukūla, the hand must be turned palm upward, not palm downward. Having drawn it, take the cloth and set it at one's side, and afterwards keep it as one's own. As for this connecting cloth or sacred thread — reaching across it to take anything is absolutely forbidden.",
+     "printed_number": 4,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "การชักผ้ามหาบังสุกุล ที่เจ้าภาพนำไปทอดไว้ที่หีบศพในเวลาก่อนจะทำการฌาปนกิจ ไม่มีการสวดมาติกาแต่อย่างใด ถือพัดมือซ้ายตรงขึ้นไปชักบังสุกุลเลย ชักเสร็จแล้วถือเอาผ้านั้นลงมา ส่วนเจ้าภาพผู้ทอดผ้าต้องยืนรออยู่จนกว่าพระจะชักบังสุกุลเสร็จ ขณะพระกล่าวคำชักบังสุกุล ประนมมือฟังตั้งใจอุทิศส่วนกุศลให้แก่ผู้ตายด้วย",
+     "paiboon": "",
+     "english": "For the drawing of the great paṃsukūla, which the host lays out on the coffin before the cremation is performed, there is no chanting of the mātikā at all. Holding the fan in the left hand, go straight up and draw the paṃsukūla; when it is drawn, carry the cloth down. The host who laid out the cloth must stand waiting until the monks have finished drawing it, and while the monks pronounce the words of the paṃsukūla, should listen with palms together and direct the merit to the dead.",
+     "printed_number": 5,
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "บังสุกุล",
+     "pali_roman": "paṃsukūla",
+     "meaning": "a rag-robe; here the funeral rite in which cloth is laid out and drawn by the monks on behalf of the dead"
+    },
+    {
+     "pali": "มาติกา",
+     "pali_roman": "mātikā",
+     "meaning": "the matrix or table of contents of an Abhidhamma text, chanted at funerals"
+    },
+    {
+     "pali": "ผ้าภูษาโยง / ด้ายสายสิญจน์",
+     "pali_roman": "phā phūsā yong / dāi sāi sin",
+     "meaning": "the connecting cloth and the sacred thread — either may join the monks to the coffin, and neither may be reached across"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0544.PNG",
+     "issue": "⚠ THE OFFSET IS 268 ON THIS SHEET, NOT 267. IMG_0544 reads 276, so the offset here is 268; from page 279 onward it is 267. The step happens across the ภาคผนวก divider on 277, whose blank verso — page 278 — was never photographed. Anyone calculating a filename in this stretch from the 267 used later will land one sheet out."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0544.PNG",
+     "issue": "NO PALI ANYWHERE IN THIS ENTRY. The whole chant is Thai explanation, so `pali` and `pali_roman` are empty on every verse — the second such chant after คำอปโลกน์กฐิน on 305-307. `paiboon` is left empty too, flagged on page 306."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0544.PNG",
+     "issue": "A SPACE INSIDE A PHRASE — item 1 prints 'ตามระเบียบ นี้' with a space before นี้, where the sense runs straight on. Read at 5x. Kept as printed."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0544.PNG",
+     "issue": "The book uses the older spelling 'ปรกติ' rather than ปกติ. Kept as printed."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-athibai-prakop"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 275,
+  "resume_from_file": "IMG_0543.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch, and there is no Pali on the sheet to romanise either.",
+  "pali_untouched": "Trivially confirmed: there is NO Pali in this entry. Every `pali` and `pali_roman` is empty because the whole thing is Thai explanation.",
+  "page_scan": "agrees. One row for one page covering verses 1-5. The two-column Pali gāthā above the heading is deliberately not here: it belongs to คาถาศราทธพรต, which the contents puts at ๒๗๕.",
+  "notes": "FIVE NUMBERED NOTES ON HOW THE FUNERAL RITE IS DONE. Two findings. (1) ⚠ THE OFFSET ON THIS SHEET IS 268, NOT THE 267 USED FROM 279 ONWARD — the step happens across the unnumbered ภาคผนวก divider and its unphotographed blank verso, page 278. Calculating a filename here from 267 lands one sheet out. (2) THERE IS NO PALI IN THIS ENTRY AT ALL, the second such chant after คำอปโลกน์กฐิน.",
+  "diacritic_exceptions": []
+ }
+}
