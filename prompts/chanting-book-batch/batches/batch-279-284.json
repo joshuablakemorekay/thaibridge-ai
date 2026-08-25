@@ -1,0 +1,1253 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 6,
+  "files_read": 6,
+  "received": 1,
+  "manifest": [
+   "withi-banphacha-upasombot-baep-ukasa"
+  ],
+  "pages": [
+   {
+    "page": 279,
+    "file": "IMG_0546.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "withi-banphacha-upasombot-baep-ukasa",
+    "verses": "1-15",
+    "starts_here": true,
+    "note": "A centred heading, then Thai instructions and Pali alternating down the sheet."
+   },
+   {
+    "page": 280,
+    "file": "IMG_0547.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "withi-banphacha-upasombot-baep-ukasa",
+    "verses": "16-35",
+    "starts_here": false,
+    "note": "The method continuing; this sheet carries NO heading of its own."
+   },
+   {
+    "page": 281,
+    "file": "IMG_0548.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "withi-banphacha-upasombot-baep-ukasa",
+    "verses": "36-53",
+    "starts_here": false,
+    "note": "The method continuing; this sheet carries NO heading of its own."
+   },
+   {
+    "page": 282,
+    "file": "IMG_0549.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "withi-banphacha-upasombot-baep-ukasa",
+    "verses": "54-71",
+    "starts_here": false,
+    "note": "The method continuing; this sheet carries NO heading of its own. Two-column question and answer."
+   },
+   {
+    "page": 283,
+    "file": "IMG_0550.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "withi-banphacha-upasombot-baep-ukasa",
+    "verses": "72-106",
+    "starts_here": false,
+    "note": "The method continuing; this sheet carries NO heading of its own. Two-column question and answer."
+   },
+   {
+    "page": 284,
+    "file": "IMG_0551.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "withi-banphacha-upasombot-baep-ukasa",
+    "verses": "107-110",
+    "starts_here": false,
+    "note": "The method continuing; this sheet carries NO heading of its own.",
+    "service_closing": "จบพิธีอุปสมบทแบบอุกาสะ"
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "withi-banphacha-upasombot-baep-ukasa",
+   "title_thai": "วิธีบรรพชาอุปสมบทแบบอุกาสะ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Method of Going Forth and Ordination, the Ukāsa Form",
+   "page_start": 279,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "110. Thai procedural instructions and Pali alternate throughout; no Thai TRANSLATION is printed anywhere.",
+    "ordering": "Every Thai verse is an instruction, a rubric or a column header.",
+    "conventions": "pali_roman is IAST from translit_pali with bracketed Thai stripped first. paiboon is left empty — see page 306.",
+    "pages": "IMG_0546 to IMG_0551, pages 279-284, read off the sheets. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "กุลบุตรผู้ที่มีศรัทธามุ่งบรรพชา อุปสมบท พึงรับผ้าไตรอุ้มประนมมือเข้าไปในสังฆสันนิบาต วางผ้าไตรไว้ข้างตัวด้านซ้าย รับเครื่องสักการะถวายพระอุปัชฌายะ แล้วกราบด้วยเบญจางคประดิษฐ์ 3 ครั้ง แล้วอุ้มผ้าไตรประนมมือ ยืนขึ้น เปล่งวาจาขอบรรพชาว่าดังนี้",
+     "paiboon": "",
+     "english": "A son of good family with faith, intending to go forth and be ordained, should take the set of three robes and enter the assembly of the Saṅgha holding them with palms together, set the robes at his left side, receive the offerings and present them to the preceptor, bow three times with the fivefold prostration, then hold the robes with palms together, STAND UP, and pronounce the request for the going forth thus:",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 279
+    },
+    {
+     "number": 2,
+     "pali": "อุกาสะ วันทามิ ภันเต, สัพพัง อะปะราธัง ขะมะถะ เม ภันเต, มะยา กะตัง ปุญญัง สามินา อะนุโมทิตัพพัง, สามินา กะตัง ปุญญัง มัยหัง ทาตัพพัง, สาธุ สาธุ อะนุโมทามิ.",
+     "pali_roman": "Ukāsa vandāmi bhante, sabbaṃ aparādhaṃ khamatha me bhante, mayā kataṃ puññaṃ sāminā anumoditabbaṃ, sāminā kataṃ puññaṃ mayhaṃ dātabbaṃ, sādhu sādhu anumodāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "With your leave, I pay homage, venerable sir. Forgive me all my faults, venerable sir. May the merit I have made be rejoiced in by you; may the merit you have made be given to me. Sādhu, sādhu, I rejoice.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 3,
+     "pali": "อุกาสะ การุญญัง กัต์วา, ปัพพัชชัง เทถะ เม ภันเต,",
+     "pali_roman": "Ukāsa kāruññaṃ katvā, pabbajjaṃ detha me bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "With your leave, having shown compassion, give me the going forth, venerable sir.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(นั่งลงคุกเข่าประนมมือว่า)",
+     "paiboon": "",
+     "english": "(Kneel down with palms together and say:)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 5,
+     "pali": "อะหัง ภันเต, ปัพพัชชัง ยาจามิ,",
+     "pali_roman": "Ahaṃ bhante, pabbajjaṃ yācāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, I ask for the going forth.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 6,
+     "pali": "ทุติยัมปิ อะหัง ภันเต, ปัพพัชชัง ยาจามิ,",
+     "pali_roman": "Dutiyampi ahaṃ bhante, pabbajjaṃ yācāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, Venerable sir, I ask for the going forth.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 7,
+     "pali": "ตะติยัมปิ อะหัง ภันเต, ปัพพัชชัง ยาจามิ,",
+     "pali_roman": "Tatiyampi ahaṃ bhante, pabbajjaṃ yācāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, Venerable sir, I ask for the going forth.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 8,
+     "pali": "สัพพะทุกขะ, นิสสะระณะนิพพานะ, สัจฉิกะระณัตถายะ, อิมัง กาสาวัง คะเหต์วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Sabbadukkha, nissaraṇanibbāna, sacchikaraṇatthāya, imaṃ kāsāvaṃ gahetvā, pabbājetha maṃ bhante, anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For the sake of realising Nibbāna, the escape from all suffering, having taken this ochre cloth, give me the going forth, venerable sir, out of compassion.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(ตั้งแต่ สัพพะทุกขะ มา ว่า 3 ครั้ง พระอุปัชฌายะรับผ้าไตร แล้วว่าต่อไป)",
+     "paiboon": "",
+     "english": "(From sabbadukkha onward, say three times. The preceptor takes the robes, then continue:)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 10,
+     "pali": "สัพพะทุกขะ, นิสสะระณะนิพพานะ, สัจฉิกะระณัตถายะ, เอตัง กาสาวัง ทัต์วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Sabbadukkha, nissaraṇanibbāna, sacchikaraṇatthāya, etaṃ kāsāvaṃ datvā, pabbājetha maṃ bhante, anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For the sake of realising Nibbāna, the escape from all suffering, having GIVEN this ochre cloth, give me the going forth, venerable sir, out of compassion.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(ตั้งแต่ สัพพะทุกขะ มา ว่า 3 ครั้ง)",
+     "paiboon": "",
+     "english": "(From sabbadukkha onward, say three times.)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 12,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ในลำดับนั้น พระอุปัชฌายะให้โอวาท และบอก ตะจะปัญจะกะกัมมัฏฐาน ให้ว่าตามไปทีละบท โดยอนุโลมและปฏิโลมดังนี้",
+     "paiboon": "",
+     "english": "Then the preceptor gives the exhortation and teaches the five-part meditation on the skin, having him repeat it phrase by phrase, forwards and in reverse, thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 13,
+     "pali": "เกสา โลมา นะขา ทันตา ตะโจ (อนุโลม)",
+     "pali_roman": "Kesā lomā nakhā dantā taco …",
+     "thai": "",
+     "paiboon": "",
+     "english": "Hair of the head, hair of the body, nails, teeth, skin. (forwards)",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 14,
+     "pali": "ตะโจ ทันตา นะขา โลมา เกสา. (ปฏิโลม)",
+     "pali_roman": "Taco dantā nakhā lomā kesā. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "Skin, teeth, nails, hair of the body, hair of the head. (in reverse)",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "พระอุปัชฌายะชักอังสะออกจากไตรสวมให้แล้ว สั่งให้ออกไปครองผ้าครบไตรจีวรตามระเบียบ ครั้นเสร็จแล้วรับเครื่องไทยทานเข้าไปหาพระอาจารย์ท่าน แล้วกราบลง 3 ครั้ง ยืนประนมมือเปล่งวาจาขอสรณะและศีลดังนี้",
+     "paiboon": "",
+     "english": "The preceptor draws the shoulder-cloth from the set and puts it on him, and tells him to go out and put on the full three robes properly. When that is done he takes the offerings, goes to the teacher, bows three times, then STANDS with palms together and asks for the refuges and precepts thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 16,
+     "pali": "อุกาสะ วันทามิ ภันเต, สัพพัง อะปะราธัง ขะมะถะ เม ภันเต, มะยา กะตัง ปุญญัง สามินา อะนุโมทิตัพพัง, สามินา กะตัง ปุญญัง มัยหัง ทาตัพพัง, สาธุ สาธุ อะนุโมทามิ.",
+     "pali_roman": "Ukāsa vandāmi bhante, sabbaṃ aparādhaṃ khamatha me bhante, mayā kataṃ puññaṃ sāminā anumoditabbaṃ, sāminā kataṃ puññaṃ mayhaṃ dātabbaṃ, sādhu sādhu anumodāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "With your leave, I pay homage, venerable sir. Forgive me all my faults, venerable sir. May the merit I have made be rejoiced in by you; may the merit you have made be given to me. Sādhu, sādhu, I rejoice.",
+     "para_start": true,
+     "para_layout": "lines",
+     "page": 280
+    },
+    {
+     "number": 17,
+     "pali": "อุกาสะ การุญญัง กัต์วา, ติสะระเณนะ สะหะ, สีลานิ เทถะ เม ภันเต.",
+     "pali_roman": "Ukāsa kāruññaṃ katvā, tisaraṇena saha, sīlāni detha me bhante.",
+     "thai": "",
+     "paiboon": "",
+     "english": "With your leave, having shown compassion, give me the precepts together with the three refuges, venerable sir.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 18,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(นั่งลงคุกเข่าขอสรณะและศีลดังต่อไปนี้)",
+     "paiboon": "",
+     "english": "(Kneel down and ask for the refuges and precepts as follows:)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 19,
+     "pali": "อะหัง ภันเต, สะระณะสีลัง ยาจามิ,",
+     "pali_roman": "Ahaṃ bhante, saraṇasīlaṃ yācāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, I ask for the refuges and the precepts.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 20,
+     "pali": "ทุติยัมปิ อะหัง ภันเต, สะระณะสีลัง ยาจามิ,",
+     "pali_roman": "Dutiyampi ahaṃ bhante, saraṇasīlaṃ yācāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, Venerable sir, I ask for the refuges and the precepts.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 21,
+     "pali": "ตะติยัมปิ อะหัง ภันเต, สะระณะสีลัง ยาจามิ,",
+     "pali_roman": "Tatiyampi ahaṃ bhante, saraṇasīlaṃ yācāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, Venerable sir, I ask for the refuges and the precepts.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 22,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ลำดับนั้น พระอาจารย์กล่าวคำนมัสการนำให้ผู้มุ่งบรรพชา ว่าตามไปดังนี้.",
+     "paiboon": "",
+     "english": "Then the teacher pronounces the homage, leading the candidate to repeat it thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 23,
+     "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.",
+     "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Blessed One, the Worthy One, the Fully Enlightened One.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 24,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(ว่า 3 หน)",
+     "paiboon": "",
+     "english": "(say 3 times)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 25,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "แต่นั้นท่านจะสั่งด้วยคำว่า เอวัง วะเทหิ หรือ ยะมะหัง วะทามิ ตัง วะเทหิ พึงรับว่า อามะ ภันเต ครั้นแล้วท่านนำให้เปล่งวาจาว่าสรณะคมน์พึงว่าตามไปทีละพากย์ดังนี้",
+     "paiboon": "",
+     "english": "Then he will direct him with the words evaṃ vadehi, or yamahaṃ vadāmi taṃ vadehi, and he should answer āma bhante. Then the teacher leads him to pronounce the going for refuge, repeating phrase by phrase thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 26,
+     "pali": "พุทธัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I go to the Buddha for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 27,
+     "pali": "ธัมมัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dhammaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I go to the Dhamma for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 28,
+     "pali": "สังฆัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Saṅghaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I go to the Saṅgha for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 29,
+     "pali": "ทุติยัมปิ พุทธัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dutiyampi buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time I go to the Buddha for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 30,
+     "pali": "ทุติยัมปิ ธัมมัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dutiyampi dhammaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time I go to the Dhamma for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 31,
+     "pali": "ทุติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Dutiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time I go to the Saṅgha for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 32,
+     "pali": "ตะติยัมปิ พุทธัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Tatiyampi buddhaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time I go to the Buddha for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 33,
+     "pali": "ตะติยัมปิ ธัมมัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Tatiyampi dhammaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time I go to the Dhamma for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 34,
+     "pali": "ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+     "pali_roman": "Tatiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time I go to the Saṅgha for refuge.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 35,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อจบแล้ว ท่านบอกว่า ติสะระณะคะมะนัง นิฏฐิตัง พึงรับว่า อามะ ภันเต ลำดับนั้นพระอาจารย์จะบอกให้รู้ว่า การบรรพชาเป็นสามเณรสำเร็จด้วยสรณคมน์เพียงเท่านี้ ต่อแต่นั้นพึงสมาทานสิกขาบท 10 ประการ ว่าตามท่านไปดังนี้",
+     "paiboon": "",
+     "english": "When it is finished he says tisaraṇagamanaṃ niṭṭhitaṃ, and he should answer āma bhante. Then the teacher tells him that the going forth as a novice is accomplished by the going for refuge alone. After that he should undertake the ten training rules, repeating after him thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 36,
+     "pali": "ปาณาติปาตา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from killing living beings.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 1,
+     "page": 281
+    },
+    {
+     "number": 37,
+     "pali": "อะทินนาทานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Adinnādānā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from taking what is not given.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 2
+    },
+    {
+     "number": 38,
+     "pali": "อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from unchastity.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 3
+    },
+    {
+     "number": 39,
+     "pali": "มุสาวาทา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Musāvādā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from false speech.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 4
+    },
+    {
+     "number": 40,
+     "pali": "สุราเมระยะมัชชะปะมาทัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Surāmerayamajjapamādaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from intoxicants, the basis of heedlessness.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 5
+    },
+    {
+     "number": 41,
+     "pali": "วิกาละโภชะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Vikālabhojanā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from eating at the wrong time.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 6
+    },
+    {
+     "number": 42,
+     "pali": "นัจจะคีตะวาทิตะวิสูกะทัสสะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Naccagītavāditavisūkadassanā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from dancing, singing, music and unseemly shows.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 7
+    },
+    {
+     "number": 43,
+     "pali": "มาลาคันธะวิเลปะนะธาระณะมัณฑะนะวิภูสะนัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Mālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from garlands, scents, cosmetics and adornment.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 8
+    },
+    {
+     "number": 44,
+     "pali": "อุจจาสะยะนะมะหาสะยะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Uccāsayanamahāsayanā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from high and large beds and seats.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 9
+    },
+    {
+     "number": 45,
+     "pali": "ชาตะรูปะระชะตะปะฏิคคะหะณา เวระมะณี สิกขาปะทัง สะมาทิยามิ.",
+     "pali_roman": "Jātarūparajatapaṭiggahaṇā veramaṇī sikkhāpadaṃ samādiyāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake the training rule of abstaining from accepting gold and silver.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 10
+    },
+    {
+     "number": 46,
+     "pali": "อิมานิ ทะสะ สิกขาปะทานิ สะมาทิยามิ. ว่า 3 ครั้ง แล้วกราบลง 1 ครั้ง แล้วยืนขึ้นว่า",
+     "pali_roman": "Imāni dasa sikkhāpadāni samādiyāmi. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "I undertake these ten training rules. (say 3 times, then bow once, then stand and say:)",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 47,
+     "pali": "วันทามิ ภันเต, สัพพัง อะปะราธัง ขะมะถะ เม ภันเต, มะยา กะตัง ปุญญัง สามินา อะนุโมทิตัพพัง, สามินา กะตัง ปุญญัง มัยหัง ทาตัพพัง, สาธุ สาธุ อะนุโมทามิ. คุกเข่ากราบ 3 ครั้ง",
+     "pali_roman": "Vandāmi bhante, sabbaṃ aparādhaṃ khamatha me bhante, mayā kataṃ puññaṃ sāminā anumoditabbaṃ, sāminā kataṃ puññaṃ mayhaṃ dātabbaṃ, sādhu sādhu anumodāmi. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "I pay homage, venerable sir… (kneel and bow three times)",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 48,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ในลำดับนั้น สามเณรพึงรับบาตรอุ้มเข้าไปหาพระอุปัชฌายะในสังฆสันนิบาต วางบาตรไว้ข้างตัวด้านซ้าย รับเครื่องไทยทานถวายท่านแล้วกราบลง 3 ครั้ง ยืนประนมมือกล่าวคำขอนิสัย ว่าดังนี้",
+     "paiboon": "",
+     "english": "Then the novice takes the bowl to the preceptor in the assembly, sets it at his left side, presents the offerings, bows three times, then STANDS with palms together and makes the request for dependence thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 49,
+     "pali": "อุกาสะ วันทามิ ภันเต, สัพพัง อะปะราธัง ขะมะถะ เม ภันเต, มะยา กะตัง ปุญญัง สามินา อะนุโมทิตัพพัง, สามินา กะตัง ปุญญัง มัยหัง ทาตัพพัง, สาธุ สาธุ อะนุโมทามิ.",
+     "pali_roman": "Ukāsa vandāmi bhante, sabbaṃ aparādhaṃ khamatha me bhante, mayā kataṃ puññaṃ sāminā anumoditabbaṃ, sāminā kataṃ puññaṃ mayhaṃ dātabbaṃ, sādhu sādhu anumodāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "With your leave, I pay homage, venerable sir. Forgive me all my faults, venerable sir. May the merit I have made be rejoiced in by you; may the merit you have made be given to me. Sādhu, sādhu, I rejoice.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 50,
+     "pali": "อุกาสะ การุญญัง กัต์วา นิสสะยัง เทถะ เม ภันเต.",
+     "pali_roman": "Ukāsa kāruññaṃ katvā nissayaṃ detha me bhante.",
+     "thai": "",
+     "paiboon": "",
+     "english": "With your leave, having shown compassion, give me dependence, venerable sir.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 51,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(นั่งคุกเข่าว่า)",
+     "paiboon": "",
+     "english": "(Kneel and say:)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 52,
+     "pali": "อะหัง ภันเต, นิสสะยัง ยาจามิ.",
+     "pali_roman": "Ahaṃ bhante, nissayaṃ yācāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, I ask for dependence.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 53,
+     "pali": "ทุติยัมปิ อะหัง ภันเต, นิสสะยัง ยาจามิ.",
+     "pali_roman": "Dutiyampi ahaṃ bhante, nissayaṃ yācāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, Venerable sir, I ask for dependence.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 54,
+     "pali": "ตะติยัมปิ อะหัง ภันเต, นิสสะยัง ยาจามิ.",
+     "pali_roman": "Tatiyampi ahaṃ bhante, nissayaṃ yācāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, venerable sir, I ask for dependence.",
+     "para_start": true,
+     "para_layout": "lines",
+     "page": 282
+    },
+    {
+     "number": 55,
+     "pali": "อุปัชฌาโย เม ภันเต โหหิ. วรรคนี้ว่า 3 ครั้ง",
+     "pali_roman": "Upajjhāyo me bhante hohi. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, be my preceptor. (this passage said three times)",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 56,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อพระอุปัชฌายะว่า ปะฏิรูปัง, โอปายิกัง, ปาสาทิเกนะ สัมปาเทหิ แล้วสามเณรพึงกล่าวรับว่า อุกาสะ สัมปะฏิจฉามิ ในระหว่างๆ 3 ครั้ง แล้วว่าต่อ",
+     "paiboon": "",
+     "english": "When the preceptor says paṭirūpaṃ, or opāyikaṃ, or pāsādikena sampādehi, the novice should answer ukāsa sampaṭicchāmi between each, three times, then continue:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 57,
+     "pali": "อัชชะตัคเคทานิ เถโร, มัยหัง ภาโร, อะหัมปิ เถรัสสะ ภาโร. ว่า 3 ครั้ง แล้วกราบลง 1 ครั้ง ยืนขึ้นว่าต่อ",
+     "pali_roman": "Ajjataggedāni thero, mayhaṃ bhāro, ahampi therassa bhāro. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "From this day the elder is my charge, and I am the elder's charge. (say 3 times, bow once, then stand and continue:)",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 58,
+     "pali": "วันทามิ ภันเต, สัพพัง อะปะราธัง ขะมะถะ เม ภันเต, มะยา กะตัง ปุญญัง สามินา อะนุโมทิตัพพัง, สามินา กะตัง ปุญญัง มัยหัง ทาตัพพัง, สาธุ สาธุ อะนุโมทามิ. คุกเข่ากราบ 3 ครั้ง",
+     "pali_roman": "Vandāmi bhante, sabbaṃ aparādhaṃ khamatha me bhante, mayā kataṃ puññaṃ sāminā anumoditabbaṃ, sāminā kataṃ puññaṃ mayhaṃ dātabbaṃ, sādhu sādhu anumodāmi. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "I pay homage, venerable sir… (kneel and bow three times)",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 59,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ตั้งแต่ อุปัชฌาโย ฯลฯ เถรัสสะ ภาโร 3 วรรคนี้ พระอุปัชฌายะ บางองค์ให้ว่ารวดเดียวตามแบบนั้นก็มี ให้ว่าเป็นตอน ๆ ดังนี้คือเมื่อสามเณรว่า อุปัชฌาโย เม ภันเต โหหิ 3 ครั้ง แล้วพระอุปัชฌายะ กล่าวรับว่า ปะฏิรูปัง โอปายิกัง ปาสาทิเกนะ สัมปาเทหิ, บทใดบทหนึ่งพึงรับว่า อุกาสะ สัมปะฏิจฉามิ ทุกบทไปแล้วสามเณรพึงกล่าวรับเป็นธุระให้ท่านว่า อัชชะตัคเคทานิ ฯลฯ ภาโร 3 ครั้ง ก็มี ลำดับนั้นพระอุปัชฌายะ หรือพระกรรมวาจาจารย์เอาบาตรมีสายโยกคล้องตัวผู้มุ่งอุปสมบทแล้วบอกบาตรและจีวร ผู้มุ่งอุปสมบทพึงรับว่า อามะ ภันเต 4 ครั้ง ดังนี้",
+     "paiboon": "",
+     "english": "As for the three passages from upajjhāyo … therassa bhāro: some preceptors have them said straight through in that form, and some have them said in sections, thus — when the novice says upajjhāyo me bhante hohi three times, the preceptor answers paṭirūpaṃ, opāyikaṃ, pāsādikena sampādehi, and to whichever he says the novice answers ukāsa sampaṭicchāmi each time; then the novice takes it upon himself to say ajjataggedāni … bhāro three times. Then the preceptor or the kammavācā teacher hangs the bowl with its strap on the candidate and declares the bowl and robes; the candidate should answer āma bhante four times, thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 60,
+     "pali": "ปะฐะมัง อุปัชฌัง คาหาเปตัพโพ อุปัชฌัง คาหาเปต์วา ปัตตะจีวะรัง อาจิกขิตัพพัง",
+     "pali_roman": "Paṭhamaṃ upajjhaṃ gāhāpetabbo upajjhaṃ gāhāpetvā pattacīvaraṃ ācikkhitabbaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "First he should be made to take a preceptor; having been made to take a preceptor, the bowl and robes should be declared.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 61,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "คำบอกบาตรจีวร",
+     "paiboon": "",
+     "english": "The Declaration of Bowl and Robes",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 62,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "คำรับ",
+     "paiboon": "",
+     "english": "The Response"
+    },
+    {
+     "number": 63,
+     "pali": "อะยันเต ปัตโต",
+     "pali_roman": "Ayante patto",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is your bowl.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 1
+    },
+    {
+     "number": 64,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 65,
+     "pali": "อะยัง สังฆาฏิ",
+     "pali_roman": "Ayaṃ saṅghāṭi",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is the outer robe.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 2
+    },
+    {
+     "number": 66,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 67,
+     "pali": "อะยัง อุตตะราสังโค",
+     "pali_roman": "Ayaṃ uttarāsaṅgo",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is the upper robe.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 3
+    },
+    {
+     "number": 68,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 69,
+     "pali": "อะยัง อันตะระวาสะโก",
+     "pali_roman": "Ayaṃ antaravāsako",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is the inner robe.",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 4
+    },
+    {
+     "number": 70,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 71,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ต่อจากนั้น พระอาจารย์ท่านบอกให้ออกไปข้างนอก ว่า คัจฉะ อะมุมหิ โอกาเส ติฏฐาหิ พึงถอยออกลุกขึ้นเดินไปยืนอยู่ในที่กำหนดไว้ พระอาจารย์ท่านสวดสมมติตนเป็นผู้สอนซ้อม แล้วออกไปสวดถาม อันตรายิกธรรม พึงรับว่า นัตถิ ภันเต 5 ครั้ง อามะ ภันเต 8 ครั้ง ดังนี้",
+     "paiboon": "",
+     "english": "Then the teacher tells him to go outside, saying gaccha amumhi okāse tiṭṭhāhi. He withdraws, rises, walks out and stands in the appointed place. The teacher chants his own appointment as the one who rehearses, then goes out and chants the questions on the obstructing conditions. He should answer natthi bhante five times and āma bhante eight times, thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 72,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ถาม",
+     "paiboon": "",
+     "english": "Asked",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 283
+    },
+    {
+     "number": 73,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ตอบ",
+     "paiboon": "",
+     "english": "Answered"
+    },
+    {
+     "number": 74,
+     "pali": "กุฏฐัง",
+     "pali_roman": "Kuṭṭhaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Leprosy?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 1
+    },
+    {
+     "number": 75,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is none, venerable sir."
+    },
+    {
+     "number": 76,
+     "pali": "คัณโฑ",
+     "pali_roman": "Gaṇḍo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Boils?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 2
+    },
+    {
+     "number": 77,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is none, venerable sir."
+    },
+    {
+     "number": 78,
+     "pali": "กิลาโส",
+     "pali_roman": "Kilāso",
+     "thai": "",
+     "paiboon": "",
+     "english": "Skin disease?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 3
+    },
+    {
+     "number": 79,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is none, venerable sir."
+    },
+    {
+     "number": 80,
+     "pali": "โสโส",
+     "pali_roman": "Soso",
+     "thai": "",
+     "paiboon": "",
+     "english": "Consumption?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 4
+    },
+    {
+     "number": 81,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is none, venerable sir."
+    },
+    {
+     "number": 82,
+     "pali": "อะปะมาโร",
+     "pali_roman": "Apamāro",
+     "thai": "",
+     "paiboon": "",
+     "english": "Epilepsy?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 5
+    },
+    {
+     "number": 83,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is none, venerable sir."
+    },
+    {
+     "number": 84,
+     "pali": "มะนุสโสสิ",
+     "pali_roman": "Manussosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you a human being?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 1
+    },
+    {
+     "number": 85,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 86,
+     "pali": "ปุริโสสิ",
+     "pali_roman": "Purisosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you a man?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 2
+    },
+    {
+     "number": 87,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 88,
+     "pali": "ภุชิสโสสิ",
+     "pali_roman": "Bhujissosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you a free man?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 3
+    },
+    {
+     "number": 89,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 90,
+     "pali": "อะนะโณสิ",
+     "pali_roman": "Anaṇosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you free of debt?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 4
+    },
+    {
+     "number": 91,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 92,
+     "pali": "นะสิ ราชะภะโฏ",
+     "pali_roman": "Nasi rājabhaṭo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you not in the king's service?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 5
+    },
+    {
+     "number": 93,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 94,
+     "pali": "อะนุญญาโตสิ มาตาปิตูหิ",
+     "pali_roman": "Anuññātosi mātāpitūhi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Have you your parents' permission?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 6
+    },
+    {
+     "number": 95,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 96,
+     "pali": "ปะริปุณณะวีสะติวัสโสสิ",
+     "pali_roman": "Paripuṇṇavīsativassosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you fully twenty years of age?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 7
+    },
+    {
+     "number": 97,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 98,
+     "pali": "ปะริปุณณันเต ปัตตะจีวะรัง",
+     "pali_roman": "Paripuṇṇante pattacīvaraṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are your bowl and robes complete?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 8
+    },
+    {
+     "number": 99,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 100,
+     "pali": "กินนาโมสิ",
+     "pali_roman": "Kinnāmosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "What is your name?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 1
+    },
+    {
+     "number": 101,
+     "pali": "อะหัง ภันเต...............นามะ",
+     "pali_roman": "Ahaṃ bhante...............nāma",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, my name is …"
+    },
+    {
+     "number": 102,
+     "pali": "โก นามะ เต อุปัชฌาโย",
+     "pali_roman": "Ko nāma te upajjhāyo",
+     "thai": "",
+     "paiboon": "",
+     "english": "What is your preceptor's name?",
+     "para_start": true,
+     "para_layout": "lines",
+     "printed_number": 2
+    },
+    {
+     "number": 103,
+     "pali": "อุปัชฌาโย เม ภันเต อายัส์มา...................นามะ",
+     "pali_roman": "Upajjhāyo me bhante āyasmā...................nāma",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, my preceptor is the venerable …"
+    },
+    {
+     "number": 104,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ช่องที่...................ไว้ พระอุปัชฌายะหรืออาจารย์ท่านจะตั้งชื่อของผู้ขออุปสมบท และบอกชื่อพระอุปัชฌายะกรอกลงช่องให้ไว้ก่อนวันบวช",
+     "paiboon": "",
+     "english": "The blanks marked ................... are for the preceptor or teacher to give the candidate's name and the preceptor's name, filled in before the day of ordination.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 105,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ครั้นสวดสอนซ้อมแล้ว ท่านกลับเข้ามาสวดขอเรียกผู้ขออุปสมบทเข้ามา จากนั้นผู้ขออุปสมบทพึงเข้ามาในสังฆสันนิบาต กราบลงตรงหน้าพระอุปัชฌายะ ๓ ครั้ง แล้วนั่งคุกเข่าประนมมือ เปล่งวาจาขออุปสมบทว่าดังนี้",
+     "paiboon": "",
+     "english": "When the rehearsal has been chanted, he comes back in and chants the request to call the candidate in. The candidate then enters the assembly of the Saṅgha, bows three times before the preceptor, kneels with palms together, and pronounces the request for ordination thus:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 106,
+     "pali": "สังฆัมภันเต, อุปะสัมปะทัง ยาจามิ, อุลลุมปะตุ มัง ภันเต, สังโฆ อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Saṅghambhante, upasampadaṃ yācāmi, ullumpatu maṃ bhante, saṅgho anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sirs, I ask the Saṅgha for ordination. May the Saṅgha raise me up out of compassion.",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 107,
+     "pali": "ทุติยัมปิ ภันเต, สังฆัง อุปะสัมปะทัง ยาจามิ, อุลลุมปะตุ มัง ภันเต, สังโฆ อะนุกัมปัง อุปาทายะ",
+     "pali_roman": "Dutiyampi bhante, saṅghaṃ upasampadaṃ yācāmi, ullumpatu maṃ bhante, saṅgho anukampaṃ upādāya",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time…",
+     "para_start": true,
+     "para_layout": "lines",
+     "page": 284
+    },
+    {
+     "number": 108,
+     "pali": "ตะติยัมปิ ภันเต, สังฆัง อุปะสัมปะทัง ยาจามิ, อุลลุมปะตุ มัง ภันเต, สังโฆ อะนุกัมปัง อุปาทายะ",
+     "pali_roman": "Tatiyampi bhante, saṅghaṃ upasampadaṃ yācāmi, ullumpatu maṃ bhante, saṅgho anukampaṃ upādāya",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time…",
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 109,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ถ้าว่าพร้อมกันให้เปลี่ยน ยาจามิ, เป็น ยาจามะ เปลี่ยน มัง เป็น โน",
+     "paiboon": "",
+     "english": "If said together, change yācāmi to yācāma and maṃ to no.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 110,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ในลำดับนั้น พระอุปัชฌายะกล่าวเผดียงสงฆ์แล้ว พระอาจารย์สวดสมมติตนถามอันตรายิกธรรม ผู้ขออุปสมบทพึงรับว่า นัตถิ ภันเต 5 ครั้ง อามะ ภันเต 8 ครั้ง บอกชื่อตนและชื่อพระอุปัชฌายะรวม 2 ครั้ง เหมือนที่กล่าวแล้วในหนหลัง แต่นั้นพึงนั่งฟังท่านสวดกรรมวาจาอุปสมบทไปจนจบ ครั้นจบแล้วท่านเอาบาตรออกจากตัว แล้วพึงกราบลง 3 ครั้ง แต่นั้นพึงนั่งพับเพียบประนมมือฟังพระอุปัชฌายะบอกอนุศาสน์ไปจนจบ แล้วรับว่า อามะ ภันเต เป็นเสร็จพิธีอุปสมบท แล้วกราบพระอุปัชฌายะ 3 ครั้ง ถ้ามีไทยทานถวายก็ให้รับไทยทานถวายพระอันดับ เสร็จแล้วพระท่านอนุโมทนา เมื่อพระอนุโมทนา พึงกรวดน้ำตั้งใจอุทิศบุญกุศลส่วนนี้ให้แก่ท่านผู้มีพระคุณ เมื่อพระว่า ยะถา จบ ก็เทน้ำลงให้หมด ต่อนั้นประนมมือฟัง อนุโมทนาไปจนจบ เป็นเสร็จพิธี.",
+     "paiboon": "",
+     "english": "Then, the preceptor having informed the Saṅgha, the teacher chants his own appointment and asks the obstructing conditions. The candidate answers natthi bhante five times and āma bhante eight times, and gives his own name and the preceptor's name twice, as already described above. After that he sits and listens to the chanting of the kammavācā of ordination to its end. When it is finished the teacher takes the bowl off him, and he bows three times. Then he sits with legs folded to one side, palms together, and listens to the preceptor giving the admonition to its end, and answers āma bhante. That completes the ordination ceremony; then he bows three times to the preceptor. If there are offerings, they are received and presented to the monks in order. Then the monks give the blessing; while they do, he pours the water of dedication, directing the merit of this to those to whom he owes gratitude. When the monks reach yathā, he pours out all the water. After that he listens with palms together to the blessing until it ends. That completes the ceremony.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อุกาสะ",
+     "pali_roman": "ukāsa",
+     "meaning": "a word asking leave to speak. It opens nearly every request in this form and is what the form is named after"
+    },
+    {
+     "pali": "สัพพะทุกขะ นิสสะระณะนิพพานะ สัจฉิกะระณัตถายะ",
+     "pali_roman": "sabbadukkha nissaraṇa-nibbāna sacchikaraṇatthāya",
+     "meaning": "for the sake of realising Nibbāna, the escape from all suffering — the phrase the candidate repeats three times as the robes are handed over"
+    },
+    {
+     "pali": "สัมปะฏิจฉามิ",
+     "pali_roman": "sampaṭicchāmi",
+     "meaning": "I accept. The novice's answer to whichever word the preceptor uses to accept him"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0548.PNG",
+     "issue": "⚠ THE TEN PRECEPTS ARE PRINTED IN FULL HERE AND ABBREVIATED ON PAGE 286. This form prints each as 'ปาณาติปาตา เวระมะณี สิกขาปะทัง สะมาทิยามิ.'; the Esāhaṃ form on 286 prints only 'ปาณาติปาตา เวระมะณี.' Same ten rules, two different lengths of formula. Neither has been completed from the other."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0547.PNG",
+     "issue": "⚠ '(ว่า 3 หน)' HERE, '(ว่า 3 ครั้ง)' EVERYWHERE ELSE — หน rather than ครั้ง for 'times', the only place in the backward pass it appears. Kept as printed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0550.PNG",
+     "issue": "⚠ A THAI NUMERAL IN THE INSTRUCTION ON 283 — 'กราบลงตรงหน้าพระอุปัชฌายะ ๓ ครั้ง' — where the identical instruction on page 288 uses the Arabic 3. Same sentence, two numeral systems, six pages apart."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0549.PNG",
+     "issue": "⚠ ฯลฯ TWICE ON PAGE 282, inside a Thai explanatory paragraph rather than in the chanted text — 'ตั้งแต่ อุปัชฌาโย ฯลฯ เถรัสสะ ภาโร' and 'อัชชะตัคเคทานิ ฯลฯ ภาโร'. The passages abbreviated are printed in full a few lines above, so nothing is lost. Reproduced as set."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0546.PNG",
+     "issue": "THE CANDIDATE STANDS IN THIS FORM AND KNEELS IN THE OTHER. The Ukāsa instructions repeatedly say ยืนขึ้น / ยืนประนมมือ, stand with palms together, where the Esāhaṃ form on 284-289 has him kneel throughout. The two ceremonies differ in posture as well as in words."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0551.PNG",
+     "issue": "THE SERVICE CLOSING จบพิธีอุปสมบทแบบอุกาสะ is carried as the page-284 row's service_closing. It sits directly above the heading of the Esāhaṃ form, which is why page 284 belongs to BOTH chants — the last lines of one and the first of the other."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "withi-banphacha-upasombot-baep-ukasa"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 278,
+  "resume_from_file": "IMG_0545.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch. No Thai translation is printed on any of the six sheets.",
+  "pali_untouched": "Confirmed. pali_roman is translit_pali applied with bracketed Thai stripped first and a … left in place. The dotted name blanks are kept in `pali` exactly as printed.",
+  "page_scan": "agrees. Six rows, one per sheet. Page 284 carries the LAST verses of this chant and the FIRST of the Esāhaṃ form entered earlier, so two batches legitimately describe parts of that page.",
+  "notes": "THE UKASA ORDINATION CEREMONY, six sheets under one contents entry, and the counterpart to the Esāhaṃ form on 284-289. Four findings. (1) ⚠ THE TEN PRECEPTS ARE FULL HERE AND ABBREVIATED ON 286 — same rules, different formula length. (2) ⚠ '(ว่า 3 หน)' on 280, the only หน in the backward pass. (3) ⚠ A THAI NUMERAL ๓ on 283 where the identical instruction on 288 uses Arabic 3. (4) THE CANDIDATE STANDS THROUGHOUT THIS FORM and kneels throughout the other — the ceremonies differ in posture, not only in wording.",
+  "diacritic_exceptions": []
+ }
+}
