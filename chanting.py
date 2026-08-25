@@ -32462,6 +32462,112 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-apalok-kathin-baep-2-rup',
+        'title_thai': 'คำอปโลกน์กฐิน แบบ ๒ รูป',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Announcing the Kathina, the Form for Two Monks',
+        'page_start': 305,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0572.PNG]: รูปที่ 1 and รูปที่ 2 are entered as
+            #   VERSES rather than blocks, as on page 306: the book prints
+            #   each as a bold line of its own inside the chant, and a block
+            #   can only anchor at a chant boundary.
+            {
+                'number': 1,
+                'page': 305,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'รูปที่ 1',
+                'paiboon': '',
+                'english': 'Monk 1:',
+            },
+            # ‼ CHECK [IMG_0572.PNG]: TWO PRINTED BLANKS IN ONE SENTENCE, of
+            #   different lengths — a longer run of dots for the donor and a
+            #   shorter one for whoever accompanies them, joined by พร้อมด้วย.
+            #   The four-monk form on page 306 has a single blank here.
+            #   Reproduced at the lengths printed.
+            {
+                'number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ผ้ากฐินทานกับทั้งผ้าอานิสงสบริวารทั้งปวงนี้เป็นของ.............พร้อมด้วย............ผู้ประกอบด้วยศรัทธา อุตสาหะพร้อมเพรียงกันนำมาถวาย แด่พระภิกษุสงฆ์ผู้อยู่จำพรรษาถ้วนไตรมาสในอาวาสนี้',
+                'paiboon': '',
+                'english': 'This kathina cloth, together with all the accompanying requisites, belongs to ............. along with ............, who out of faith and diligence have together brought it as an offering to the community of monks who have kept the rains residence for the full three months in this monastery.',
+            },
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ก็แลผ้ากฐินทานนี้เป็นของบริสุทธิ์ดุจเลื่อนลอยมาโดยนภากาศแล้วแลตกลงในที่ประชุมสงฆ์ จะได้จำเพาะเจาะจงลงว่าเป็นของพระภิกษุรูปใดรูปหนึ่งก็หามิได้ มีพระบรมพุทธานุญาตไว้ว่า ให้พระสงฆ์ทั้งปวงยอมอนุญาตให้แก่ภิกษุรูปหนึ่ง เพื่อจะทำซึ่งกฐินัตถารกิจตามพระบรมพุทธานุญาต และมีคำพระอรรถกถาจารย์ ผู้รู้พระบรมพุทธาธิบายสังวรรณนาไว้ว่า ภิกษุรูปใดประกอบด้วยศีลสุตาธิคุณ มีสติปัญญา สามารถรู้ธรรม 8 ประการ มีบุพกิจเป็นต้น ภิกษุรูปนั้นจึงสมควรเพื่อจะกระทำกฐินัตถารกิจ ตามพระบรมพุทธานุญาตได้',
+                'paiboon': '',
+                'english': "Now this kathina cloth is pure, as though it had drifted through the sky and come to rest in the assembly of the Saṅgha; it cannot be said to belong to any one monk in particular. The Buddha allowed that the whole Saṅgha should consent to grant it to one monk, so that he may carry out the spreading of the kathina as the Buddha allowed. And the commentators, who know the Buddha's intention, explained it thus: a monk endowed with the virtues of morality and learning, with mindfulness and understanding, able to know the eight matters beginning with the preliminary duties — that monk is fit to carry out the spreading of the kathina in accordance with what the Buddha allowed.",
+            },
+            # ‼ CHECK [IMG_0572.PNG]: THE TWO-MONK AND FOUR-MONK FORMS DIVIDE
+            #   THE RESPONSES DIFFERENTLY. Here the first monk's part closes
+            #   '(ไม่ต้อง สาธุ)', no sādhu needed, and the second monk's
+            #   closes '(สาธุ)'. On pages 306-307 the FIRST monk's part calls
+            #   for สาธุ and the SECOND is the one that forbids it. The
+            #   brackets are not decoration and the two forms are not
+            #   interchangeable.
+            {
+                'number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'บัดนี้ พระสงฆ์ทั้งปวง จะเห็นสมควรแก่ภิกษุรูปใด จงพร้อมกันยอมอนุญาตให้แก่ภิกษุรูปนั้น เทอญ. (ไม่ต้อง สาธุ)',
+                'paiboon': '',
+                'english': 'Now, whichever monk the assembled Saṅgha sees as fitting, let them together consent to grant it to that monk. (No sādhu needed)',
+            },
+            {
+                'number': 5,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'รูปที่ 2',
+                'paiboon': '',
+                'english': 'Monk 2:',
+            },
+            # ‼ CHECK [IMG_0572.PNG]: ⚠ THE BOOK SPELLS ONE WORD TWO WAYS
+            #   ACROSS TWO PAGES. This sheet prints 'สัทธสัญญาสาธุการ' with ธ
+            #   where page 306 prints 'สัททสัญญาสาธุการ' with ท, in the same
+            #   phrase calling for the response. Both read clearly at 5x on a
+            #   1.55x crop. Kept as each page sets it, NOT made to agree — the
+            #   same treatment as the roman section's tap/taṃ and
+            #   bhikkhu/bhikkhū.
+            {
+                'number': 6,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ผ้ากฐินทาน กับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ ข้าพเจ้าพิจารณาเห็นสมควรแก่.............เป็นผู้มีสติปัญญาสามารถ เพื่อกระทำกฐินัตถารกิจให้ถูกต้องตามพระบรมพุทธานุญาตได้ ถ้าพระภิกษุรูปใดเห็นไม่สมควรจงทักท้วงขึ้นในท่ามกลางระหว่างสงฆ์ (หยุดนิดหนึ่ง) ถ้าเห็นสมควรแล้วไซร้จงให้สัทธสัญญาสาธุการขึ้นให้พร้อมกัน เทอญ. (สาธุ)',
+                'paiboon': '',
+                'english': 'This kathina cloth, with all its accompanying requisites, I consider fitting for ............., who has the mindfulness and understanding to carry out the spreading of the kathina correctly, in accordance with what the Buddha allowed. If any monk sees it as unfitting, let him object in the midst of the Saṅgha. (pause a moment) If it is seen as fitting, let all raise the sound of approval together. (Sādhu)',
+            },
+        ],
+    },
 ]
 
 
