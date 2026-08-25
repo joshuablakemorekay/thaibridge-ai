@@ -1,0 +1,177 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "dasanathakarana-dhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 104,
+    "file": "IMG_0369.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "dasanathakarana-dhamma-suttam",
+    "verses": "3-8",
+    "starts_here": false,
+    "note": "The whole sheet, SINGLE-column prose. The head of the page completes item 2, cut by the page break on 103. Then the book's numbered items 3, 4, 5 and 6 whole, and item 7 cut mid-word at ทัฬ์หะ- at the foot. No heading, no footnote, no colophon."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "dasanathakarana-dhamma-suttam",
+   "continuation_of": "dasanathakarana-dhamma-suttam",
+   "continues": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Six. Verse 3 COMPLETES the line page 103 cut; verses 4-7 are the book's numbered items 3, 4, 5 and 6, each whole; verse 8 is item 7, cut mid-word at the foot of the page.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None new. printed_number stays one behind the verse number, because verse 1 is the unnumbered nidāna.",
+    "pages": "IMG_0369.PNG, page 104. SINGLE column prose throughout. The chant arrived from page 103 and CONTINUES onto page 105 — three more items to come, since the sutta lists ten."
+   },
+   "verses": [
+    {
+     "number": 3,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา สาตัถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, ยัมปิ ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา, สาตัถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ abhivadanti, tathārūpassa dhammā bahussutā honti, dhatā vacasā paricitā manasānupekkhitā diṭṭhiyā suppaṭividdhā, yampi bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā, sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ abhivadanti, tathārūpassa dhammā bahussutā honti, dhatā vacasā paricitā manasānupekkhitā diṭṭhiyā suppaṭividdhā, ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk has learned much, retains what he has heard and stores it up; those teachings which are good in the beginning, good in the middle and good at the end, which proclaim with meaning and phrasing the wholly complete and purified holy life — such teachings he has learned much of, retained, recited aloud, pondered in mind and penetrated well by view. That a monk is learned in this way — this too is a refuge-making quality.",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 4,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ กัล์ยาณะมิตโต โหติ, กัล์ยาณะสะหาโย กัล์ยาณะสัมปะวังโก, ยัมปิ ภิกขะเว ภิกขุ กัล์ยาณะมิตโต โหติ, กัล์ยาณะสะหาโย กัล์ยาณะสัมปะวังโก, อะยัมปิ ธัมโม นาถะกะระโณ,",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu kalyāṇamitto hoti, kalyāṇasahāyo kalyāṇasampavaṅko, yampi bhikkhave bhikkhu kalyāṇamitto hoti, kalyāṇasahāyo kalyāṇasampavaṅko, ayampi dhammo nāthakaraṇo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk has good friends, good companions, good associates. That a monk has good friends in this way — this too is a refuge-making quality,",
+     "page": 104,
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 5,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ สุวะโจ โหติ, โสวะจัสสะกะระเณหิ ธัมเมหิ สะมันนาคะโต, ขะโม ปะทักขิณัคคาหี อะนุสาสะนิง, ยัมปิ ภิกขะเว ภิกขุ สุวะโจ โหติ, โสวะจัสสะกะระเณหิ ธัมเมหิ สะมันนาคะโต. ขะโม ปะทักขิณัคคาหี อะนุสาสะนิง, อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu suvaco hoti, sovacassakaraṇehi dhammehi samannāgato, khamo padakkhiṇaggāhī anusāsaniṃ, yampi bhikkhave bhikkhu suvaco hoti, sovacassakaraṇehi dhammehi samannāgato. Khamo padakkhiṇaggāhī anusāsaniṃ, ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk is easy to speak to, endowed with qualities that make him easy to admonish, patient, and taking instruction respectfully. That a monk is easy to speak to in this way — this too is a refuge-making quality.",
+     "page": 104,
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 6,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ์รัห์มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต์รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง. ยัมปิ ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ์รัห์มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต์รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง, อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu, yāni tāni sabrahmacārīnaṃ uccāvacāni kiṃkaraṇīyāni, tattha dakkho hoti analaso, tatrupāyāya vīmaṃsāya samannāgato, alaṃ kātuṃ alaṃ saṃvidhātuṃ. Yampi bhikkhave bhikkhu, yāni tāni sabrahmacārīnaṃ uccāvacāni kiṃkaraṇīyāni, tattha dakkho hoti analaso, tatrupāyāya vīmaṃsāya samannāgato, alaṃ kātuṃ alaṃ saṃvidhātuṃ, ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, in whatever duties there are for his fellows in the holy life, high or low, a monk is deft and unlazy, possessed of the judgement needed for them, able to do them and able to arrange them. That a monk is capable in this way — this too is a refuge-making quality.",
+     "page": 104,
+     "para_start": true,
+     "printed_number": 5
+    },
+    {
+     "number": 7,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมมะกาโม โหต, ปิยะสะมุทาหาโร, อะภิธัมเม อะภิวินะเย อุฬารัปปามุชโช. ยัมปิ ภิกขะเว ภิกขุ ธัมมะกาโม โหติ, ปิยะสะมุทาหาโร, อะภิธัมเม อะภิวินะเย อุฬารัปปามุชโช. อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu dhammakāmo hoti, piyasamudāhāro, abhidhamme abhivinaye uḷārappāmujjo. Yampi bhikkhave bhikkhu dhammakāmo hoti, piyasamudāhāro, abhidhamme abhivinaye uḷārappāmujjo. Ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk loves the Dhamma, is delightful to talk with, and has great gladness in the higher Dhamma and the higher discipline. That a monk loves the Dhamma in this way — this too is a refuge-making quality.",
+     "page": 104,
+     "para_start": true,
+     "printed_number": 6
+    },
+    {
+     "number": 8,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬ์หะ[…]",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu āraddhavīriyo viharati, akusalānaṃ dhammānaṃ pahānāya, kusalānaṃ dhammānaṃ upasampadāya, thāmavā daḷha[…]",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk dwells with energy aroused for abandoning unwholesome states and acquiring wholesome ones, steadfast, firm […]",
+     "page": 104,
+     "para_start": true,
+     "printed_number": 7
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "กัล์ยาณะมิตโต",
+     "pali_roman": "kalyāṇamitto",
+     "meaning": "'having good friends'. Item 3 is the whole of admirable friendship, given as one of the ten things that make a person their own refuge"
+    },
+    {
+     "pali": "สุวะโจ",
+     "pali_roman": "suvaco",
+     "meaning": "'easy to speak to', literally well-spoken-TO. Item 4 is about being correctable, which is why ขะโม, patience, sits beside it"
+    },
+    {
+     "pali": "อุฬารัปปามุชโช",
+     "pali_roman": "uḷārappāmujjo",
+     "meaning": "'having great gladness'. The book prints ปามุชโช, pāmujja, rather than the commoner ปาโมชโช, pāmojja — both are real Pali forms and the page's is kept"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0369.PNG",
+     "issue": "COMPLETES THE LINE PAGE 103 CUT. Item 2 ran from ...ปะริโยสานะกัล์ยาณา สาตัถัง on page 103 straight into สะพ์ยัญชะนัง at the head of this page. Re-emitted whole, so the […] marker comes off. NOTE A REAL DIFFERENCE BETWEEN THE TWO HALVES OF THE SAME SENTENCE: the first ปะริโยสานะกัล์ยาณา (page 103) has NO comma after it, the second (this page) HAS one. Both reproduced as printed rather than harmonised."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0369.PNG",
+     "issue": "‼ THE BOOK PRINTS โหต WITHOUT ITS ิ. Item 6's first clause reads ภิกขุ ธัมมะกาโม โหต, — read at 6x, the ต carries no vowel mark at all — while the SAME WORD five words later in the same item reads โหติ, with the ิ present, and every other item on the page has โหติ. It is a dropped vowel, not a variant: hota is not a form that fits here. Reproduced as printed and romanised hoti, because the romanisation carries the word the sentence needs; flagged so the difference is not read as a transcription slip."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0369.PNG",
+     "issue": "‼ ฬ RULE APPLIED, NOT READ AT THE BOOK. อุฬารัปปามุชโช photographs as อุพารัปปามุชโช — bare พ, no ascender, at 7x. Standard Pali is uḷārapāmujja/uḷārapāmojja with ḷ, so the rule settled on 2026-08-25 says ฬ. Josh has NOT checked this page; it rests on the rule, like pages 31, 32, 90 and 97."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0369.PNG",
+     "issue": "‼ CUT MID-WORD, AND ฬ RULE APPLIED TO THE FRAGMENT. The page ends ถามะวา ทัพ์หะ- with a HYPHEN, breaking a word across the page turn. Standard Pali is thāmavā daḷhaparakkamo, so the letter is ฬ by the same rule and the fragment is written ทัฬ์หะ. The printed hyphen is NOT reproduced — it is a line-break artefact, as the seven rejoined on page 102 were — and […] marks the cut instead. Page 105 must open with the rest of ทัฬ์หะปะรักกะโม."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0369.PNG",
+     "issue": "PUNCTUATION VARIES BETWEEN OTHERWISE IDENTICAL CLAUSES AND IS REPRODUCED AS PRINTED. Item 3 closes on a COMMA (นาถะกะระโณ,) where items 2, 4, 5 and 6 close on a full stop. Item 4 prints สะมันนาคะโต. with a full stop in its second clause where the first has สะมันนาคะโต, with a comma. Neither is tidied."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0369.PNG",
+     "issue": "SINGLE column prose for the whole sheet, block left edge measured at x 272 rising to 328 down the page as the paper curves. The six item starts are indented — measured at x 420, 429, 443 and 457 for items 3, 4, 5 and 7 against the drifting flush edge — so para_start is set on every verse."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0369.PNG",
+     "issue": "english_unverified is set on the chant. The book prints it in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "continues": [
+   "dasanathakarana-dhamma-suttam"
+  ],
+  "resume_from": {
+   "chant": "dasanathakarana-dhamma-suttam",
+   "next_verse": 9,
+   "page": 105
+  },
+  "paiboon_scan": "Nothing to scan. The chant is printed in Pali only, so paiboon is empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0369.PNG read end to end. Page number 104 read off the sheet. Prose from the top margin to the foot, no heading, no rule, no footnote, no colophon. Two hands hold the page open at the bottom margin and obscure nothing.",
+  "notes": "‼ TWO THINGS WORTH A SECOND PAIR OF EYES. (1) Item 6 prints โหต with NO ิ where the same word five words later prints โหติ — a dropped vowel, reproduced as printed. (2) TWO MORE ฬ PLACES, both applied FROM THE RULE and not read at the book: อุฬารัปปามุชโช in item 6, and the cut fragment ทัฬ์หะ- in item 7. Both photograph as พ and both have ḷ in standard Pali.",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — genuinely two different words and the BOOK prints the difference. bhikkhave is the vocative plural used to address the monks; bhikkhu, singular, is the monk each item describes. Both recur through every item in their own forms.",
+   "hoti/honti — singular and plural of the same verb, and the sutta needs both in one sentence: the MONK is learned (hoti) and the TEACHINGS are many (honti). Not drift."
+  ]
+ }
+}

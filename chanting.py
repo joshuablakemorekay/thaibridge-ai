@@ -38164,7 +38164,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 8; the rest is not in the app yet.
         # ‼ CHECK [IMG_0368.PNG]: The heading prints 16. before the title.
         #   Kept in book_number and out of title_thai, so title_thai matches
         #   _CONTENTS_ROMAN and the never-spell-a-title-two-ways test CAN see
@@ -38229,16 +38229,111 @@ CHANTS = [
             # ‼ CHECK [IMG_0368.PNG]: Three words carry the ล์ cluster mark in
             #   item 2 — อาทิกัล์ยาณา, มัชเฌกัล์ยาณา and ปะริโยสานะกัล์ยาณา —
             #   all romanised -kalyāṇā with the mark read as a cluster.
+            # ‼ COMPLETED FROM p104: this line was cut by the page break and
+            #   is now whole. Was: ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ,
+            #   สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา
+            #   มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา สาตัถัง […]
+            # ‼ CHECK [IMG_0369.PNG]: COMPLETES THE LINE PAGE 103 CUT. Item 2
+            #   ran from ...ปะริโยสานะกัล์ยาณา สาตัถัง on page 103 straight
+            #   into สะพ์ยัญชะนัง at the head of this page. Re-emitted whole,
+            #   so the […] marker comes off. NOTE A REAL DIFFERENCE BETWEEN
+            #   THE TWO HALVES OF THE SAME SENTENCE: the first
+            #   ปะริโยสานะกัล์ยาณา (page 103) has NO comma after it, the
+            #   second (this page) HAS one. Both reproduced as printed rather
+            #   than harmonised.
             {
                 'number': 3,
-                'page': 103,
                 'printed_number': 2,
                 'para_start': True,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา สาตัถัง […]',
-                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā sātthaṃ […]',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา สาตัถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, ยัมปิ ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา, สาตัถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ abhivadanti, tathārūpassa dhammā bahussutā honti, dhatā vacasā paricitā manasānupekkhitā diṭṭhiyā suppaṭividdhā, yampi bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā, sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ abhivadanti, tathārūpassa dhammā bahussutā honti, dhatā vacasā paricitā manasānupekkhitā diṭṭhiyā suppaṭividdhā, ayampi dhammo nāthakaraṇo.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'And further, monks, a monk has learned much, retains what he has heard and stores it up; those teachings which are good in the beginning, good in the middle and good at the end, with meaning […]',
+                'english': 'And further, monks, a monk has learned much, retains what he has heard and stores it up; those teachings which are good in the beginning, good in the middle and good at the end, which proclaim with meaning and phrasing the wholly complete and purified holy life — such teachings he has learned much of, retained, recited aloud, pondered in mind and penetrated well by view. That a monk is learned in this way — this too is a refuge-making quality.',
+            },
+            # ‼ CHECK [IMG_0369.PNG]: PUNCTUATION VARIES BETWEEN OTHERWISE
+            #   IDENTICAL CLAUSES AND IS REPRODUCED AS PRINTED. Item 3 closes
+            #   on a COMMA (นาถะกะระโณ,) where items 2, 4, 5 and 6 close on a
+            #   full stop. Item 4 prints สะมันนาคะโต. with a full stop in its
+            #   second clause where the first has สะมันนาคะโต, with a comma.
+            #   Neither is tidied.
+            {
+                'number': 4,
+                'page': 104,
+                'printed_number': 3,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ กัล์ยาณะมิตโต โหติ, กัล์ยาณะสะหาโย กัล์ยาณะสัมปะวังโก, ยัมปิ ภิกขะเว ภิกขุ กัล์ยาณะมิตโต โหติ, กัล์ยาณะสะหาโย กัล์ยาณะสัมปะวังโก, อะยัมปิ ธัมโม นาถะกะระโณ,',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu kalyāṇamitto hoti, kalyāṇasahāyo kalyāṇasampavaṅko, yampi bhikkhave bhikkhu kalyāṇamitto hoti, kalyāṇasahāyo kalyāṇasampavaṅko, ayampi dhammo nāthakaraṇo,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk has good friends, good companions, good associates. That a monk has good friends in this way — this too is a refuge-making quality,',
+            },
+            {
+                'number': 5,
+                'page': 104,
+                'printed_number': 4,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ สุวะโจ โหติ, โสวะจัสสะกะระเณหิ ธัมเมหิ สะมันนาคะโต, ขะโม ปะทักขิณัคคาหี อะนุสาสะนิง, ยัมปิ ภิกขะเว ภิกขุ สุวะโจ โหติ, โสวะจัสสะกะระเณหิ ธัมเมหิ สะมันนาคะโต. ขะโม ปะทักขิณัคคาหี อะนุสาสะนิง, อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu suvaco hoti, sovacassakaraṇehi dhammehi samannāgato, khamo padakkhiṇaggāhī anusāsaniṃ, yampi bhikkhave bhikkhu suvaco hoti, sovacassakaraṇehi dhammehi samannāgato. Khamo padakkhiṇaggāhī anusāsaniṃ, ayampi dhammo nāthakaraṇo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk is easy to speak to, endowed with qualities that make him easy to admonish, patient, and taking instruction respectfully. That a monk is easy to speak to in this way — this too is a refuge-making quality.',
+            },
+            {
+                'number': 6,
+                'page': 104,
+                'printed_number': 5,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ์รัห์มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต์รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง. ยัมปิ ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ์รัห์มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต์รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง, อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu, yāni tāni sabrahmacārīnaṃ uccāvacāni kiṃkaraṇīyāni, tattha dakkho hoti analaso, tatrupāyāya vīmaṃsāya samannāgato, alaṃ kātuṃ alaṃ saṃvidhātuṃ. Yampi bhikkhave bhikkhu, yāni tāni sabrahmacārīnaṃ uccāvacāni kiṃkaraṇīyāni, tattha dakkho hoti analaso, tatrupāyāya vīmaṃsāya samannāgato, alaṃ kātuṃ alaṃ saṃvidhātuṃ, ayampi dhammo nāthakaraṇo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, in whatever duties there are for his fellows in the holy life, high or low, a monk is deft and unlazy, possessed of the judgement needed for them, able to do them and able to arrange them. That a monk is capable in this way — this too is a refuge-making quality.',
+            },
+            # ‼ CHECK [IMG_0369.PNG]: ‼ THE BOOK PRINTS โหต WITHOUT ITS ิ.
+            #   Item 6's first clause reads ภิกขุ ธัมมะกาโม โหต, — read at 6x,
+            #   the ต carries no vowel mark at all — while the SAME WORD five
+            #   words later in the same item reads โหติ, with the ิ present,
+            #   and every other item on the page has โหติ. It is a dropped
+            #   vowel, not a variant: hota is not a form that fits here.
+            #   Reproduced as printed and romanised hoti, because the
+            #   romanisation carries the word the sentence needs; flagged so
+            #   the difference is not read as a transcription slip.
+            # ‼ CHECK [IMG_0369.PNG]: ‼ ฬ RULE APPLIED, NOT READ AT THE BOOK.
+            #   อุฬารัปปามุชโช photographs as อุพารัปปามุชโช — bare พ, no
+            #   ascender, at 7x. Standard Pali is uḷārapāmujja/uḷārapāmojja
+            #   with ḷ, so the rule settled on 2026-08-25 says ฬ. Josh has NOT
+            #   checked this page; it rests on the rule, like pages 31, 32, 90
+            #   and 97.
+            {
+                'number': 7,
+                'page': 104,
+                'printed_number': 6,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมมะกาโม โหต, ปิยะสะมุทาหาโร, อะภิธัมเม อะภิวินะเย อุฬารัปปามุชโช. ยัมปิ ภิกขะเว ภิกขุ ธัมมะกาโม โหติ, ปิยะสะมุทาหาโร, อะภิธัมเม อะภิวินะเย อุฬารัปปามุชโช. อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu dhammakāmo hoti, piyasamudāhāro, abhidhamme abhivinaye uḷārappāmujjo. Yampi bhikkhave bhikkhu dhammakāmo hoti, piyasamudāhāro, abhidhamme abhivinaye uḷārappāmujjo. Ayampi dhammo nāthakaraṇo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk loves the Dhamma, is delightful to talk with, and has great gladness in the higher Dhamma and the higher discipline. That a monk loves the Dhamma in this way — this too is a refuge-making quality.',
+            },
+            # ‼ CHECK [IMG_0369.PNG]: ‼ CUT MID-WORD, AND ฬ RULE APPLIED TO
+            #   THE FRAGMENT. The page ends ถามะวา ทัพ์หะ- with a HYPHEN,
+            #   breaking a word across the page turn. Standard Pali is thāmavā
+            #   daḷhaparakkamo, so the letter is ฬ by the same rule and the
+            #   fragment is written ทัฬ์หะ. The printed hyphen is NOT
+            #   reproduced — it is a line-break artefact, as the seven
+            #   rejoined on page 102 were — and […] marks the cut instead.
+            #   Page 105 must open with the rest of ทัฬ์หะปะรักกะโม.
+            {
+                'number': 8,
+                'page': 104,
+                'printed_number': 7,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬ์หะ[…]',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu āraddhavīriyo viharati, akusalānaṃ dhammānaṃ pahānāya, kusalānaṃ dhammānaṃ upasampadāya, thāmavā daḷha[…]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk dwells with energy aroused for abandoning unwholesome states and acquiring wholesome ones, steadfast, firm […]',
             },
         ],
     },
