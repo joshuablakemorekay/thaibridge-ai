@@ -341,6 +341,15 @@ def check_printed_numbers(batch: dict) -> list[str]:
     Not checked: that the numbers start at 1. A continuation legitimately
     arrives carrying 19-30, because the first eighteen went in with the
     previous page.
+
+    ONE CHANT MAY HOLD SEVERAL LISTS. The rehearsal on pages 293-294 numbers
+    its questions 1-5 for the afflictions, then restarts at 1 for the eight
+    qualifications, then again for name and preceptor — three printed lists
+    inside one contents entry. A number that drops back to 1 therefore opens a
+    NEW list rather than repeating an old one, and the counters reset with it.
+    Both rules below still hold inside each list, which is where a swapped pair
+    or a mis-read numeral would actually show up; only the assumption of one
+    list per chant is given up.
     """
     problems = []
     for chant in batch["chants"]:
@@ -355,6 +364,10 @@ def check_printed_numbers(batch: dict) -> list[str]:
                     f"{chant['id']} verse {where}: printed_number is {n!r} — "
                     f"it must be a positive whole number")
                 continue
+
+            # A drop back to 1 is the book starting another list.
+            if n == 1 and previous is not None and previous > 1:
+                seen, previous = {}, None
             if n in seen:
                 problems.append(
                     f"{chant['id']}: verses {seen[n]} and {where} both carry "
