@@ -33723,6 +33723,282 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0568.PNG]: ⚠ THE สารบัญ PUTS THIS CHANT ON PAGE ๓๐๒,
+        #   BUT ITS TITLE IS PRINTED ON 301. The contents lists วิธีแสดงอาบัติ
+        #   at ๓๐๒, where the centred heading and the whole first half of the
+        #   dialogue are plainly on page 301 — only the last two lines fall on
+        #   302. page_start is set from the SHEET, at 301, because that is
+        #   where the chant begins; the contents line is left untouched, since
+        #   this project reproduces the book's contents rather than correcting
+        #   it.
+        'id': 'withi-sadaeng-abat',
+        'title_thai': 'วิธีแสดงอาบัติ',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Method of Confessing an Offence',
+        'page_start': 301,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0568.PNG]: TWO COLUMNS, BUT NOT A VERSE SPLIT
+            #   ACROSS A GUTTER. The narrow left column holds only bracketed
+            #   THAI SPEAKER RUBRICS — (พรรษาอ่อนว่า), (พรรษาแก่รับว่า) and so
+            #   on — each aligned with the FIRST line of the turn it
+            #   introduces, and the right column holds the Pali. The rubric is
+            #   carried at the head of that first verse so the two read
+            #   together as the sheet sets them; pali_roman covers the Pali
+            #   only.
+            {
+                'number': 1,
+                'page': 301,
+                'para_start': True,
+                'pali': '(พรรษาอ่อนว่า) สัพพา ตา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Sabbā tā āpattiyo ārocemi',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The junior says:) I declare all those offences. (say 3 times)',
+            },
+            {
+                'number': 2,
+                'pali': 'สัพพา คะรุละหุกา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Sabbā garulahukā āpattiyo ārocemi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I declare all offences, grave and light. (say 3 times)',
+            },
+            {
+                'number': 3,
+                'pali': 'อะหัง ภันเต สัมพะหุลา นานาวัตถุกาโย อาปัตติโย',
+                'pali_roman': 'Ahaṃ bhante sambahulā nānāvatthukāyo āpattiyo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, I have fallen into many offences of various kinds;',
+            },
+            {
+                'number': 4,
+                'pali': 'อาปัชชิง ตา ตุมหะ มูเล ปะฏิเทเสมิ.',
+                'pali_roman': 'Āpajjiṃ tā tumha mūle paṭidesemi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I confess them in your presence.',
+            },
+            {
+                'number': 5,
+                'para_start': True,
+                'pali': '(พรรษาแก่รับว่า) ปัสสะหิ อาวุโส ตา อาปัตติโย.',
+                'pali_roman': 'Passahi āvuso tā āpattiyo.',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The senior responds:) Do you see those offences, friend?',
+            },
+            {
+                'number': 6,
+                'para_start': True,
+                'pali': '(พรรษาอ่อนว่า) อุกาสะ อามะ ภันเต ปัสสามิ.',
+                'pali_roman': 'Ukāsa āma bhante passāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The junior says:) With your leave — yes, venerable sir, I see them.',
+            },
+            {
+                'number': 7,
+                'para_start': True,
+                'pali': '(พรรษาแก่รับว่า) อายะติง อาวุโส สังวะเรยยาสิ.',
+                'pali_roman': 'Āyatiṃ āvuso saṃvareyyāsi.',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The senior responds:) In future, friend, you should restrain yourself.',
+            },
+            {
+                'number': 8,
+                'para_start': True,
+                'pali': '(พรรษาอ่อนว่า) สาธุ สุฏฐุ ภันเต สังวะริสสามิ',
+                'pali_roman': 'Sādhu suṭṭhu bhante saṃvarissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The junior says:) Very well, venerable sir, I shall restrain myself.',
+            },
+            {
+                'number': 9,
+                'pali': 'ทุติยัมปิ สาธุ สุฏฐุ ภันเต สังวะริสสามิ',
+                'pali_roman': 'Dutiyampi sādhu suṭṭhu bhante saṃvarissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time: very well, venerable sir, I shall restrain myself.',
+            },
+            {
+                'number': 10,
+                'pali': 'ตะติยัมปิ สาธุ สุฏฐุ ภันเต สังวะริสสามิ',
+                'pali_roman': 'Tatiyampi sādhu suṭṭhu bhante saṃvarissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time: very well, venerable sir, I shall restrain myself.',
+            },
+            {
+                'number': 11,
+                'pali': 'นะ ปุเนวัง กะริสสามิ',
+                'pali_roman': 'Na punevaṃ karissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall not act thus again;',
+            },
+            {
+                'number': 12,
+                'pali': 'นะ ปุเนวัง ภาสิสสามิ',
+                'pali_roman': 'Na punevaṃ bhāsissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall not speak thus again;',
+            },
+            {
+                'number': 13,
+                'pali': 'นะ ปุเนวัง จินตะยิสสามิ.',
+                'pali_roman': 'Na punevaṃ cintayissāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall not think thus again.',
+            },
+            {
+                'number': 14,
+                'para_start': True,
+                'pali': '(พรรษาแก่ว่า) สัพพา ตา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Sabbā tā āpattiyo ārocemi',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The senior says:) I declare all those offences. (say 3 times)',
+            },
+            {
+                'number': 15,
+                'pali': 'สัพพา คะรุละหุกา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)',
+                'pali_roman': 'Sabbā garulahukā āpattiyo ārocemi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I declare all offences, grave and light. (say 3 times)',
+            },
+            {
+                'number': 16,
+                'pali': 'อะหัง อาวุโส สัมพะหุลา นานาวัตถุกาโย อาปัตติโย',
+                'pali_roman': 'Ahaṃ āvuso sambahulā nānāvatthukāyo āpattiyo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Friend, I have fallen into many offences of various kinds;',
+            },
+            # ‼ CHECK [IMG_0568.PNG]: ⚠ ตุมหะ IN ONE HALF, ตุยหะ IN THE OTHER.
+            #   Verse 4 reads 'ตา ตุมหะ มูเล ปะฏิเทเสมิ' and verse 17, the
+            #   same line in the senior's half, reads 'ตา ตุยหะ มูเล
+            #   ปะฏิเทเสมิ'. Both read clearly at 5x. They are different
+            #   pronouns for the same sense here and the book uses one in each
+            #   half; kept as printed on both.
+            {
+                'number': 17,
+                'pali': 'อาปัชชิง ตา ตุยหะ มูเล ปะฏิเทเสมิ.',
+                'pali_roman': 'Āpajjiṃ tā tuyha mūle paṭidesemi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I confess them in your presence.',
+            },
+            {
+                'number': 18,
+                'para_start': True,
+                'pali': '(พรรษาอ่อนรับว่า) อุกาสะ ปัสสะถะ ภันเต ตา อาปัตติโย.',
+                'pali_roman': 'Ukāsa passatha bhante tā āpattiyo.',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The junior responds:) With your leave — do you see those offences, venerable sir?',
+            },
+            # ‼ CHECK [IMG_0568.PNG]: THE TWO HALVES ARE NOT SYMMETRICAL.
+            #   Verse 6, the junior's assent, opens 'อุกาสะ อามะ ภันเต
+            #   ปัสสามิ' — with อุกาสะ, asking leave — while verse 19, the
+            #   senior's assent, opens simply 'อามะ อาวุโส ปัสสามิ' without
+            #   it. A senior does not ask leave of a junior, so the asymmetry
+            #   is the point and is not an omission.
+            {
+                'number': 19,
+                'para_start': True,
+                'pali': '(พรรษาแก่ว่า) อามะ อาวุโส ปัสสามิ.',
+                'pali_roman': 'Āma āvuso passāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The senior says:) Yes, friend, I see them.',
+            },
+            {
+                'number': 20,
+                'para_start': True,
+                'pali': '(พรรษาอ่อนรับว่า) อายะติง ภันเต สังวะเรยยาถะ.',
+                'pali_roman': 'Āyatiṃ bhante saṃvareyyātha.',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The junior responds:) In future, venerable sir, you should restrain yourself.',
+            },
+            {
+                'number': 21,
+                'para_start': True,
+                'pali': '(พรรษาแก่ว่า) สาธุ สุฏฐุ อาวุโส สังวะริสสามิ',
+                'pali_roman': 'Sādhu suṭṭhu āvuso saṃvarissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The senior says:) Very well, friend, I shall restrain myself.',
+            },
+            {
+                'number': 22,
+                'pali': 'ทุติยัมปิ สาธุ สุฏฐุ อาวุโส สังวะริสสามิ',
+                'pali_roman': 'Dutiyampi sādhu suṭṭhu āvuso saṃvarissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time: very well, friend, I shall restrain myself.',
+            },
+            {
+                'number': 23,
+                'pali': 'ตะติยัมปิ สาธุ สุฏฐุ อาวุโส สังวะริสสามิ',
+                'pali_roman': 'Tatiyampi sādhu suṭṭhu āvuso saṃvarissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time: very well, friend, I shall restrain myself.',
+            },
+            {
+                'number': 24,
+                'pali': 'นะ ปุเนวัง กะริสสามิ',
+                'pali_roman': 'Na punevaṃ karissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall not act thus again;',
+            },
+            # ‼ CHECK [IMG_0569.PNG]: THE CHANT IS CUT BY THE PAGE BREAK MID-
+            #   TURN. The senior's threefold undertaking runs 'นะ ปุเนวัง
+            #   กะริสสามิ' at the foot of 301 and its other two lines at the
+            #   top of 302, so the turn is split across the sheets. Entered as
+            #   separate verses on their own pages rather than joined, which
+            #   is the treatment a paragraph across a page turn gets.
+            {
+                'number': 25,
+                'page': 302,
+                'pali': 'นะ ปุเนวัง ภาสิสสามิ',
+                'pali_roman': 'Na punevaṃ bhāsissāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall not speak thus again;',
+            },
+            {
+                'number': 26,
+                'pali': 'นะ ปุเนวัง จินตะยิสสามิ.',
+                'pali_roman': 'Na punevaṃ cintayissāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I shall not think thus again.',
+            },
+        ],
+    },
 ]
 
 

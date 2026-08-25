@@ -1,0 +1,339 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "withi-sadaeng-abat"
+  ],
+  "pages": [
+   {
+    "page": 301,
+    "file": "IMG_0568.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "withi-sadaeng-abat",
+    "verses": "1-24",
+    "starts_here": true,
+    "note": "A centred heading, then a DIALOGUE set in two columns: bracketed Thai speaker rubrics in a narrow left column, the Pali they introduce in the right. The exchange runs twice — junior confessing to senior, then senior to junior — and the second run is cut by the foot of the sheet."
+   },
+   {
+    "page": 302,
+    "file": "IMG_0569.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "withi-sadaeng-abat",
+    "verses": "25-26",
+    "starts_here": false,
+    "note": "The two lines at the very TOP of page 302, above คำพินทุผ้า, finishing the senior's undertaking. batch-302-303.json deliberately left them out and recorded that they belonged to a chant beginning on 301; this is that chant bringing them."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "withi-sadaeng-abat",
+   "title_thai": "วิธีแสดงอาบัติ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Method of Confessing an Offence",
+   "page_start": 301,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Twenty-six, verses 1 to 26, in ten groups — one per turn of the dialogue. The first verse of each turn carries the speaker rubric that the book prints beside it in the left column.",
+    "ordering": "No Thai translation is printed; the Thai on this sheet is the speaker rubrics and the repeat instructions.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, covering the PALI ONLY where a line also carries a Thai rubric.",
+    "pages": "IMG_0568.PNG page 301 and IMG_0569.PNG page 302, both read off their sheets. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "(พรรษาอ่อนว่า) สัพพา ตา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)",
+     "pali_roman": "Sabbā tā āpattiyo ārocemi",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The junior says:) I declare all those offences. (say 3 times)",
+     "page": 301,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "สัพพา คะรุละหุกา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)",
+     "pali_roman": "Sabbā garulahukā āpattiyo ārocemi",
+     "thai": "",
+     "paiboon": "",
+     "english": "I declare all offences, grave and light. (say 3 times)"
+    },
+    {
+     "number": 3,
+     "pali": "อะหัง ภันเต สัมพะหุลา นานาวัตถุกาโย อาปัตติโย",
+     "pali_roman": "Ahaṃ bhante sambahulā nānāvatthukāyo āpattiyo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, I have fallen into many offences of various kinds;"
+    },
+    {
+     "number": 4,
+     "pali": "อาปัชชิง ตา ตุมหะ มูเล ปะฏิเทเสมิ.",
+     "pali_roman": "Āpajjiṃ tā tumha mūle paṭidesemi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I confess them in your presence."
+    },
+    {
+     "number": 5,
+     "pali": "(พรรษาแก่รับว่า) ปัสสะหิ อาวุโส ตา อาปัตติโย.",
+     "pali_roman": "Passahi āvuso tā āpattiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The senior responds:) Do you see those offences, friend?",
+     "para_start": true
+    },
+    {
+     "number": 6,
+     "pali": "(พรรษาอ่อนว่า) อุกาสะ อามะ ภันเต ปัสสามิ.",
+     "pali_roman": "Ukāsa āma bhante passāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The junior says:) With your leave — yes, venerable sir, I see them.",
+     "para_start": true
+    },
+    {
+     "number": 7,
+     "pali": "(พรรษาแก่รับว่า) อายะติง อาวุโส สังวะเรยยาสิ.",
+     "pali_roman": "Āyatiṃ āvuso saṃvareyyāsi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The senior responds:) In future, friend, you should restrain yourself.",
+     "para_start": true
+    },
+    {
+     "number": 8,
+     "pali": "(พรรษาอ่อนว่า) สาธุ สุฏฐุ ภันเต สังวะริสสามิ",
+     "pali_roman": "Sādhu suṭṭhu bhante saṃvarissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The junior says:) Very well, venerable sir, I shall restrain myself.",
+     "para_start": true
+    },
+    {
+     "number": 9,
+     "pali": "ทุติยัมปิ สาธุ สุฏฐุ ภันเต สังวะริสสามิ",
+     "pali_roman": "Dutiyampi sādhu suṭṭhu bhante saṃvarissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time: very well, venerable sir, I shall restrain myself."
+    },
+    {
+     "number": 10,
+     "pali": "ตะติยัมปิ สาธุ สุฏฐุ ภันเต สังวะริสสามิ",
+     "pali_roman": "Tatiyampi sādhu suṭṭhu bhante saṃvarissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time: very well, venerable sir, I shall restrain myself."
+    },
+    {
+     "number": 11,
+     "pali": "นะ ปุเนวัง กะริสสามิ",
+     "pali_roman": "Na punevaṃ karissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall not act thus again;"
+    },
+    {
+     "number": 12,
+     "pali": "นะ ปุเนวัง ภาสิสสามิ",
+     "pali_roman": "Na punevaṃ bhāsissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall not speak thus again;"
+    },
+    {
+     "number": 13,
+     "pali": "นะ ปุเนวัง จินตะยิสสามิ.",
+     "pali_roman": "Na punevaṃ cintayissāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall not think thus again."
+    },
+    {
+     "number": 14,
+     "pali": "(พรรษาแก่ว่า) สัพพา ตา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)",
+     "pali_roman": "Sabbā tā āpattiyo ārocemi",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The senior says:) I declare all those offences. (say 3 times)",
+     "para_start": true
+    },
+    {
+     "number": 15,
+     "pali": "สัพพา คะรุละหุกา อาปัตติโย อาโรเจมิ (ว่า 3 ครั้ง)",
+     "pali_roman": "Sabbā garulahukā āpattiyo ārocemi",
+     "thai": "",
+     "paiboon": "",
+     "english": "I declare all offences, grave and light. (say 3 times)"
+    },
+    {
+     "number": 16,
+     "pali": "อะหัง อาวุโส สัมพะหุลา นานาวัตถุกาโย อาปัตติโย",
+     "pali_roman": "Ahaṃ āvuso sambahulā nānāvatthukāyo āpattiyo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Friend, I have fallen into many offences of various kinds;"
+    },
+    {
+     "number": 17,
+     "pali": "อาปัชชิง ตา ตุยหะ มูเล ปะฏิเทเสมิ.",
+     "pali_roman": "Āpajjiṃ tā tuyha mūle paṭidesemi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I confess them in your presence."
+    },
+    {
+     "number": 18,
+     "pali": "(พรรษาอ่อนรับว่า) อุกาสะ ปัสสะถะ ภันเต ตา อาปัตติโย.",
+     "pali_roman": "Ukāsa passatha bhante tā āpattiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The junior responds:) With your leave — do you see those offences, venerable sir?",
+     "para_start": true
+    },
+    {
+     "number": 19,
+     "pali": "(พรรษาแก่ว่า) อามะ อาวุโส ปัสสามิ.",
+     "pali_roman": "Āma āvuso passāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The senior says:) Yes, friend, I see them.",
+     "para_start": true
+    },
+    {
+     "number": 20,
+     "pali": "(พรรษาอ่อนรับว่า) อายะติง ภันเต สังวะเรยยาถะ.",
+     "pali_roman": "Āyatiṃ bhante saṃvareyyātha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The junior responds:) In future, venerable sir, you should restrain yourself.",
+     "para_start": true
+    },
+    {
+     "number": 21,
+     "pali": "(พรรษาแก่ว่า) สาธุ สุฏฐุ อาวุโส สังวะริสสามิ",
+     "pali_roman": "Sādhu suṭṭhu āvuso saṃvarissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "(The senior says:) Very well, friend, I shall restrain myself.",
+     "para_start": true
+    },
+    {
+     "number": 22,
+     "pali": "ทุติยัมปิ สาธุ สุฏฐุ อาวุโส สังวะริสสามิ",
+     "pali_roman": "Dutiyampi sādhu suṭṭhu āvuso saṃvarissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time: very well, friend, I shall restrain myself."
+    },
+    {
+     "number": 23,
+     "pali": "ตะติยัมปิ สาธุ สุฏฐุ อาวุโส สังวะริสสามิ",
+     "pali_roman": "Tatiyampi sādhu suṭṭhu āvuso saṃvarissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time: very well, friend, I shall restrain myself."
+    },
+    {
+     "number": 24,
+     "pali": "นะ ปุเนวัง กะริสสามิ",
+     "pali_roman": "Na punevaṃ karissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall not act thus again;"
+    },
+    {
+     "number": 25,
+     "pali": "นะ ปุเนวัง ภาสิสสามิ",
+     "pali_roman": "Na punevaṃ bhāsissāmi",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall not speak thus again;",
+     "page": 302
+    },
+    {
+     "number": 26,
+     "pali": "นะ ปุเนวัง จินตะยิสสามิ.",
+     "pali_roman": "Na punevaṃ cintayissāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I shall not think thus again."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อาปัตติ",
+     "pali_roman": "āpatti",
+     "meaning": "an offence against the Vinaya. The dialogue is the formal act of declaring and confessing them"
+    },
+    {
+     "pali": "คะรุละหุกา",
+     "pali_roman": "garulahukā",
+     "meaning": "grave and light — the two weights of offence, declared together in one line"
+    },
+    {
+     "pali": "อุกาสะ",
+     "pali_roman": "ukāsa",
+     "meaning": "a word asking leave to speak, opening a junior's address to a senior"
+    },
+    {
+     "pali": "สังวะริสสามิ",
+     "pali_roman": "saṃvarissāmi",
+     "meaning": "I shall restrain myself. The undertaking that closes each half of the exchange, said three times"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0568.PNG",
+     "issue": "TWO COLUMNS, BUT NOT A VERSE SPLIT ACROSS A GUTTER. The narrow left column holds only bracketed THAI SPEAKER RUBRICS — (พรรษาอ่อนว่า), (พรรษาแก่รับว่า) and so on — each aligned with the FIRST line of the turn it introduces, and the right column holds the Pali. The rubric is carried at the head of that first verse so the two read together as the sheet sets them; pali_roman covers the Pali only."
+    },
+    {
+     "verse": 17,
+     "file": "IMG_0568.PNG",
+     "issue": "⚠ ตุมหะ IN ONE HALF, ตุยหะ IN THE OTHER. Verse 4 reads 'ตา ตุมหะ มูเล ปะฏิเทเสมิ' and verse 17, the same line in the senior's half, reads 'ตา ตุยหะ มูเล ปะฏิเทเสมิ'. Both read clearly at 5x. They are different pronouns for the same sense here and the book uses one in each half; kept as printed on both."
+    },
+    {
+     "verse": 19,
+     "file": "IMG_0568.PNG",
+     "issue": "THE TWO HALVES ARE NOT SYMMETRICAL. Verse 6, the junior's assent, opens 'อุกาสะ อามะ ภันเต ปัสสามิ' — with อุกาสะ, asking leave — while verse 19, the senior's assent, opens simply 'อามะ อาวุโส ปัสสามิ' without it. A senior does not ask leave of a junior, so the asymmetry is the point and is not an omission."
+    },
+    {
+     "verse": 25,
+     "file": "IMG_0569.PNG",
+     "issue": "THE CHANT IS CUT BY THE PAGE BREAK MID-TURN. The senior's threefold undertaking runs 'นะ ปุเนวัง กะริสสามิ' at the foot of 301 and its other two lines at the top of 302, so the turn is split across the sheets. Entered as separate verses on their own pages rather than joined, which is the treatment a paragraph across a page turn gets."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0568.PNG",
+     "issue": "⚠ THE สารบัญ PUTS THIS CHANT ON PAGE ๓๐๒, BUT ITS TITLE IS PRINTED ON 301. The contents lists วิธีแสดงอาบัติ at ๓๐๒, where the centred heading and the whole first half of the dialogue are plainly on page 301 — only the last two lines fall on 302. page_start is set from the SHEET, at 301, because that is where the chant begins; the contents line is left untouched, since this project reproduces the book's contents rather than correcting it."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "withi-sadaeng-abat"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 300,
+  "resume_from_file": "IMG_0567.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch. No Thai TRANSLATION is printed on either sheet — the Thai is speaker rubrics and repeat instructions.",
+  "pali_untouched": "Confirmed and mechanically true: every pali_roman was produced by translit_pali from the Pali portion of its line rather than typed, so the two cannot drift. On the ten lines that also carry a bracketed Thai rubric, pali_roman covers the PALI ONLY.",
+  "page_scan": "agrees. Two rows, one per page — verses 1-24 on 301 and 25-26 on 302 — matching the entry exactly. Verse 1 carries page 301 and verse 25 carries page 302. No verse is orphaned and none is claimed twice.",
+  "notes": "A DIALOGUE, and the first two-column sheet in this stretch where the columns are NOT a verse split across a gutter — the left column is speaker rubrics only. Three findings. (1) ⚠ THE CONTENTS PUTS THIS CHANT ON ๓๐๒ AND THE BOOK PRINTS IT ON 301; page_start follows the sheet and the contents line is left as the book has it. (2) ⚠ ตุมหะ AGAINST ตุยหะ in the two halves of the same line. (3) THE HALVES ARE DELIBERATELY ASYMMETRICAL — the junior says อุกาสะ, asking leave, and the senior does not.",
+  "diacritic_exceptions": []
+ }
+}
