@@ -1,0 +1,967 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 4,
+  "files_read": 4,
+  "received": 3,
+  "manifest": [
+   "kham-kho-nissai-nak-khu",
+   "kham-kho-upasombot-phrom-kan",
+   "kham-bok-anusat"
+  ],
+  "pages": [
+   {
+    "page": 290,
+    "file": "IMG_0557.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-kho-nissai-nak-khu",
+    "verses": "1-10",
+    "starts_here": true,
+    "note": "A centred heading and its lines, PROSE at full measure, split into verses at the book's own commas."
+   },
+   {
+    "page": 290,
+    "file": "IMG_0557.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-kho-upasombot-phrom-kan",
+    "verses": "1-12",
+    "starts_here": true,
+    "note": "A centred heading and its lines, PROSE at full measure, split into verses at the book's own commas."
+   },
+   {
+    "page": 290,
+    "file": "IMG_0557.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-bok-anusat",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "A centred heading and its lines, PROSE at full measure, split into verses at the book's own commas."
+   },
+   {
+    "page": 291,
+    "file": "IMG_0558.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-bok-anusat",
+    "verses": "3-30",
+    "starts_here": false,
+    "note": "The chant continuing; this sheet carries NO heading of its own."
+   },
+   {
+    "page": 292,
+    "file": "IMG_0559.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-bok-anusat",
+    "verses": "31-53",
+    "starts_here": false,
+    "note": "The chant continuing; this sheet carries NO heading of its own."
+   },
+   {
+    "page": 293,
+    "file": "IMG_0560.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-bok-anusat",
+    "verses": "54-63",
+    "starts_here": false,
+    "note": "The chant continuing; this sheet carries NO heading of its own."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-kho-nissai-nak-khu",
+   "title_thai": "คำขอนิสสัยนาคคู่",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Requesting Dependence, for a Pair",
+   "page_start": 290,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "10.",
+    "ordering": "No Thai translation is printed; the Thai is subheadings and bracketed substitution rubrics.",
+    "conventions": "pali_roman is IAST from translit_pali with any bracketed Thai rubric STRIPPED before transliterating and a … left in its place, so no Thai script reaches a romanised field. paiboon is left empty — see page 306.",
+    "pages": "IMG_0557 to IMG_0560, pages 290-293, read off the sheets. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "มะยัง ภันเต,",
+     "pali_roman": "Mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, we ask for dependence.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 290
+    },
+    {
+     "number": 2,
+     "pali": "นิสสะยัง ยาจามะ,",
+     "pali_roman": "Nissayaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "ทุติยัมปิ มะยัง ภันเต,",
+     "pali_roman": "Dutiyampi mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, venerable sir, we ask for dependence.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 4,
+     "pali": "นิสสะยัง ยาจามะ,",
+     "pali_roman": "Nissayaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "ตะติยัมปิ มะยัง ภันเต,",
+     "pali_roman": "Tatiyampi mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, venerable sir, we ask for dependence.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 6,
+     "pali": "นิสสะยัง ยาจามะ,",
+     "pali_roman": "Nissayaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 7,
+     "pali": "อุปัชฌาโย โน ภันเต โหหิ. (ว่า ๓ ครั้ง)",
+     "pali_roman": "Upajjhāyo no bhante hohi. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, be our preceptor. (say 3 times)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 8,
+     "pali": "อัชชะตัคเคทานิ เถโร,",
+     "pali_roman": "Ajjataggedāni thero,",
+     "thai": "",
+     "paiboon": "",
+     "english": "From this day the elder is our charge, and we are the elder's charge. (say 3 times)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 9,
+     "pali": "อัมหากัง ภาโร,",
+     "pali_roman": "Amhākaṃ bhāro,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 10,
+     "pali": "มะยัมปิ เถรัสสะ ภารา. (ว่า 3 ครั้ง)",
+     "pali_roman": "Mayampi therassa bhārā. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0557.PNG",
+     "issue": "⚠ TWO NUMERAL SYSTEMS IN ONE CHANT, four lines apart — '(ว่า ๓ ครั้ง)' with the THAI numeral on the preceptor line and '(ว่า 3 ครั้ง)' with the ARABIC one on the line below it. The same pairing appears on page 303 between two different chants; here it is inside one. Neither normalised."
+    }
+   ]
+  },
+  {
+   "id": "kham-kho-upasombot-phrom-kan",
+   "title_thai": "คำขออุปสมบทพร้อมกัน",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Requesting Ordination Together",
+   "page_start": 290,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "12.",
+    "ordering": "No Thai translation is printed; the Thai is subheadings and bracketed substitution rubrics.",
+    "conventions": "pali_roman is IAST from translit_pali with any bracketed Thai rubric STRIPPED before transliterating and a … left in its place, so no Thai script reaches a romanised field. paiboon is left empty — see page 306.",
+    "pages": "IMG_0557 to IMG_0560, pages 290-293, read off the sheets. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สังฆัมภันเต,",
+     "pali_roman": "Saṅghambhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sirs, we ask the Saṅgha for ordination. May the Saṅgha raise us up out of compassion.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 290
+    },
+    {
+     "number": 2,
+     "pali": "อุปะสัมปะทัง ยาจามะ,",
+     "pali_roman": "Upasampadaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "อุลลุมปะตุ โน ภันเต,",
+     "pali_roman": "Ullumpatu no bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "สังโฆ อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Saṅgho anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "ทุติยัมปิ ภันเต,",
+     "pali_roman": "Dutiyampi bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, venerable sirs, we ask the Saṅgha for ordination.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 6,
+     "pali": "สังฆัง อุปะสัมปะทัง ยาจามะ,",
+     "pali_roman": "Saṅghaṃ upasampadaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 7,
+     "pali": "อุลลุมปะตุ โน ภันเต,",
+     "pali_roman": "Ullumpatu no bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 8,
+     "pali": "สังโฆ อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Saṅgho anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 9,
+     "pali": "ตะติยัมปิ ภันเต,",
+     "pali_roman": "Tatiyampi bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, venerable sirs, we ask the Saṅgha for ordination.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 10,
+     "pali": "สังฆัง อุปะสัมปะทัง ยาจามะ,",
+     "pali_roman": "Saṅghaṃ upasampadaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 11,
+     "pali": "อุลลุมปะตุ โน ภันเต,",
+     "pali_roman": "Ullumpatu no bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 12,
+     "pali": "สังโฆ อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Saṅgho anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  },
+  {
+   "id": "kham-bok-anusat",
+   "title_thai": "คำบอกอนุศาสน์",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of the Admonition",
+   "page_start": 290,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "63.",
+    "ordering": "No Thai translation is printed; the Thai is subheadings and bracketed substitution rubrics.",
+    "conventions": "pali_roman is IAST from translit_pali with any bracketed Thai rubric STRIPPED before transliterating and a … left in its place, so no Thai script reaches a romanised field. paiboon is left empty — see page 306.",
+    "pages": "IMG_0557 to IMG_0560, pages 290-293, read off the sheets. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นิสัย 4",
+     "paiboon": "",
+     "english": "The Four Supports",
+     "page": 290,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "อะนุญญาสิ โข ภะคะวา อุปะสัมปาเทต์วา จัตตาโร นิสสะเย จัตตาริ จะ อะกะระณียานิ อาจิกขิตุง",
+     "pali_roman": "Anuññāsi kho bhagavā upasampādetvā cattāro nissaye cattāri ca akaraṇīyāni ācikkhituṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Blessed One allowed that, having ordained, the four supports and the four things not to be done should be declared.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 290
+    },
+    {
+     "number": 3,
+     "pali": "ปิณฑิยาโลปะโภชะนัง นิสสายะ ปัพพัชชา,",
+     "pali_roman": "Piṇḍiyālopabhojanaṃ nissāya pabbajjā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Going forth depends on almsfood gathered in scraps. In that you should make an effort for life. Extra gains are: a Saṅgha meal, a designated meal, an invitation, a ticket meal, a fortnightly meal, an uposatha meal, a first-of-the-fortnight meal.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 1,
+     "page": 291
+    },
+    {
+     "number": 4,
+     "pali": "ตัตถะ เต (ถ้าหลายรูปเปลี่ยน เต เป็น โว) ยาวะชีวัง อุสสาโห กะระณีโย,",
+     "pali_roman": "Tattha te yāvajīvaṃ ussāho karaṇīyo, …",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "อะติเรกะลาโภ,",
+     "pali_roman": "Atirekalābho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 6,
+     "pali": "สังฆะภัตตัง อุเทสะภัตตัง นิมันตะนัง สะลากะภัตตัง ปักขิกัง อุโปสะถิกัง ปาฏิปะทิกัง.",
+     "pali_roman": "Saṅghabhattaṃ udesabhattaṃ nimantanaṃ salākabhattaṃ pakkhikaṃ uposathikaṃ pāṭipadikaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 7,
+     "pali": "ปังสุกูละจีวะรัง นิสสายะ ปัพพัชชา,",
+     "pali_roman": "Paṃsukūlacīvaraṃ nissāya pabbajjā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Going forth depends on rag-robes. In that you should make an effort for life. Extra gains are: linen, cotton, silk, wool, hemp, canvas.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 2
+    },
+    {
+     "number": 8,
+     "pali": "ตัตถะ เต (ถ้าหลายรูปเปลี่ยน เต เป็น โว) ยาวะชีวัง อุสสาโห กะระณีโย,",
+     "pali_roman": "Tattha te yāvajīvaṃ ussāho karaṇīyo, …",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 9,
+     "pali": "อะติเรกะลาโภ,",
+     "pali_roman": "Atirekalābho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 10,
+     "pali": "โขมัง กัปปาสิกัง โกเสยยัง กัมพะลัง สาณัง ภังคัง.",
+     "pali_roman": "Khomaṃ kappāsikaṃ koseyyaṃ kambalaṃ sāṇaṃ bhaṅgaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 11,
+     "pali": "รุกขะมูละเสนาสะนัง นิสสายะ ปัพพัชชา,",
+     "pali_roman": "Rukkhamūlasenāsanaṃ nissāya pabbajjā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Going forth depends on dwelling at the foot of a tree. In that you should make an effort for life. Extra gains are: a dwelling, a half-gabled house, a mansion, a flat-roofed house, a cave.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 3
+    },
+    {
+     "number": 12,
+     "pali": "ตัตถะ เต (หลายรูปเปลี่ยน เต เป็น โว) ยาวะชีวัง อุสสาโห กะระณีโย,",
+     "pali_roman": "Tattha te yāvajīvaṃ ussāho karaṇīyo, …",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 13,
+     "pali": "อะติเรกะลาโภ,",
+     "pali_roman": "Atirekalābho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 14,
+     "pali": "วิหาโร อัฑฒะโยโค ปาสาโท หัมมิยัง คุหา.",
+     "pali_roman": "Vihāro aḍḍhayogo pāsādo hammiyaṃ guhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 15,
+     "pali": "ปูติมุตตะเภสัชชัง นิสสายะ ปัพพัชชา,",
+     "pali_roman": "Pūtimuttabhesajjaṃ nissāya pabbajjā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Going forth depends on medicine of fermented cow's urine. In that you should make an effort for life. Extra gains are: ghee, butter, oil, honey, molasses.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 4
+    },
+    {
+     "number": 16,
+     "pali": "ตัตถะ เต (ถ้าหลายรูปเปลี่ยน เต เป็น โว) ยาวะชีวัง อุสสาโห กะระณีโย,",
+     "pali_roman": "Tattha te yāvajīvaṃ ussāho karaṇīyo, …",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 17,
+     "pali": "อะติเรกะลาโภ,",
+     "pali_roman": "Atirekalābho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 18,
+     "pali": "สัปปิ นะวะนีตัง เตลัง มะธุ ผาณิตัง.",
+     "pali_roman": "Sappi navanītaṃ telaṃ madhu phāṇitaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 19,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "อกรณียกิจ 4",
+     "paiboon": "",
+     "english": "The Four Things Not To Be Done",
+     "para_start": true
+    },
+    {
+     "number": 20,
+     "pali": "อุปะสัมปันเนนะ ภิกขุนา เมถุโน ธัมโม นะ ปะฏิเสวิตัพโพ อันตะมะโส ติรัจฉานะคะตายะปิ.",
+     "pali_roman": "Upasampannena bhikkhunā methuno dhammo na paṭisevitabbo antamaso tiracchānagatāyapi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "A bhikkhu who has been ordained must not engage in sexual intercourse, not even with an animal.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 1,
+     "page": 291
+    },
+    {
+     "number": 21,
+     "pali": "โย ภิกขุ เมถุนัง ธัมมัง ปะฏิเสวะติ,",
+     "pali_roman": "Yo bhikkhu methunaṃ dhammaṃ paṭisevati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever bhikkhu engages in sexual intercourse is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 22,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 23,
+     "pali": "เสยยะถาปิ นามะ ปุริโส สีสัจฉินโน อะภัพโพ เตนะ สะรีระพันธะเนนะ ชีวิตุง,",
+     "pali_roman": "Seyyathāpi nāma puriso sīsacchinno abhabbo tena sarīrabandhanena jīvituṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just as a man with his head cut off cannot live on with that body,",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 24,
+     "pali": "เอวะเมวะ ภิกขุ เมถุนัง ธัมมัง ปะฏิเสวิต์วา,",
+     "pali_roman": "Evameva bhikkhu methunaṃ dhammaṃ paṭisevitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "just so a bhikkhu who has engaged in sexual intercourse is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 25,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 26,
+     "pali": "ตันเต (ถ้าหลายรูปเปลี่ยน ตันเต เป็น ตัง โว) ยาวะชีวัง อะกะระณียัง",
+     "pali_roman": "Tante yāvajīvaṃ akaraṇīyaṃ …",
+     "thai": "",
+     "paiboon": "",
+     "english": "That is not to be done by you for life.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 27,
+     "pali": "อุปะสัมปันเนนะ ภิกขุนา อะทินนัง เถยยะสังขาตัง นะ อาทาตัพพัง,",
+     "pali_roman": "Upasampannena bhikkhunā adinnaṃ theyyasaṅkhātaṃ na ādātabbaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "A bhikkhu who has been ordained must not take by theft what is not given, down to a blade of grass.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 2
+    },
+    {
+     "number": 28,
+     "pali": "อันตะมะโส ติณะสะลากัง อุปาทายะ",
+     "pali_roman": "Antamaso tiṇasalākaṃ upādāya",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 29,
+     "pali": "โย ภิกขุ ปาทัง วา ปาทาระหัง วา อะติเรกะปาทัง วา อะทินนัง เถยยะสังขาตัง อาทิยะติ,",
+     "pali_roman": "Yo bhikkhu pādaṃ vā pādārahaṃ vā atirekapādaṃ vā adinnaṃ theyyasaṅkhātaṃ ādiyati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever bhikkhu takes by theft a pāda, or the worth of a pāda, or more, is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 30,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 31,
+     "pali": "เสยยะถาปิ นามะ ปัณฑุปะลาโส พันธะนา ปะมุตโต อะภัพโพ หะริตัตตายะ.",
+     "pali_roman": "Seyyathāpi nāma paṇḍupalāso bandhanā pamutto abhabbo haritattāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just as a withered leaf freed from its stalk cannot become green again,",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 292
+    },
+    {
+     "number": 32,
+     "pali": "เอวะเมวะ ภิกขุ ปาทัง วา ปาทาระหัง วา อะติเรกะปาทัง วา อะทินนัง เถยยะสังขาตัง อาทิยิต์วา,",
+     "pali_roman": "Evameva bhikkhu pādaṃ vā pādārahaṃ vā atirekapādaṃ vā adinnaṃ theyyasaṅkhātaṃ ādiyitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "just so a bhikkhu who has taken by theft is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 33,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 34,
+     "pali": "ตันเต (ถ้าหลายรูปเปลี่ยน ตันเต เป็น ตัง โว) ยาวะชีวัง อะกะระณียัง.",
+     "pali_roman": "Tante yāvajīvaṃ akaraṇīyaṃ. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "That is not to be done by you for life.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 35,
+     "pali": "อุปะสัมปันเนนะ ภิกขุนา สัญจิจจะ ปาโณ ชีวิตา นะ โวโรเปตัพโพ. อันตะมะโส กุนถะกิปิลลิกัง อุปาทายะ.",
+     "pali_roman": "Upasampannena bhikkhunā sañcicca pāṇo jīvitā na voropetabbo. antamaso kunthakipillikaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "A bhikkhu who has been ordained must not intentionally deprive a living being of life, down to an ant.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 3
+    },
+    {
+     "number": 36,
+     "pali": "โย ภิกขุ สัญจิจจะ มะนุสสะวิคคะหัง ชีวิตา โวโรเปติ,",
+     "pali_roman": "Yo bhikkhu sañcicca manussaviggahaṃ jīvitā voropeti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever bhikkhu intentionally deprives a human being of life, down to causing an abortion, is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 37,
+     "pali": "อันตะมะโส คัพภะปาตะนัง อุปาทายะ,",
+     "pali_roman": "Antamaso gabbhapātanaṃ upādāya,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 38,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 39,
+     "pali": "เสยยะถาปิ นามะ ปุถุสิลา ท์วิธา ภินนา อัปปะฏิสันธิกา โหติ,",
+     "pali_roman": "Seyyathāpi nāma puthusilā dvidhā bhinnā appaṭisandhikā hoti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just as a flat stone broken in two cannot be joined again,",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 40,
+     "pali": "เอวะเมวะ ภิกขุ สัญจิจจะ มะนุสสะวิคคะหัง ชีวิตา โวโรเปต์วา,",
+     "pali_roman": "Evameva bhikkhu sañcicca manussaviggahaṃ jīvitā voropetvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "just so a bhikkhu who has intentionally deprived a human being of life is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 41,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 42,
+     "pali": "ตันเต (ถ้าหลายรูปเปลี่ยน ตันเต เป็น ตัง โว) ยาวะชีวัง อะกะระณียัง.",
+     "pali_roman": "Tante yāvajīvaṃ akaraṇīyaṃ. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "That is not to be done by you for life.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 43,
+     "pali": "อุปะสัมปันเนนะ ภิกขุนา อุตตะริมะนุสสะธัมโม นะ อุลละปิตัพโพ อันตะมะโส สุญญาคาเร อะภิระมามีติ.",
+     "pali_roman": "Upasampannena bhikkhunā uttarimanussadhammo na ullapitabbo antamaso suññāgāre abhiramāmīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "A bhikkhu who has been ordained must not claim a superhuman state, even to say 'I delight in an empty hut'.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 4
+    },
+    {
+     "number": 44,
+     "pali": "โย ภิกขุ ปาปิจโฉ อิจฉาปะกะโต อะสันตัง อะภูตัง อุตตะริมะนุสสะธัมมัง อุลละปะติ,",
+     "pali_roman": "Yo bhikkhu pāpiccho icchāpakato asantaṃ abhūtaṃ uttarimanussadhammaṃ ullapati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever bhikkhu, of evil wishes and overcome by desire, claims a superhuman state that is not there and untrue — jhāna, liberation, concentration, attainment, path or fruit — is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 45,
+     "pali": "ฌานัง วา วิโมกขัง วา สะมาธิง วา สะมาปัตติง วา มัคคัง วา ผะลัง วา,",
+     "pali_roman": "Jhānaṃ vā vimokkhaṃ vā samādhiṃ vā samāpattiṃ vā maggaṃ vā phalaṃ vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 46,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 47,
+     "pali": "เสยยะถาปิ นามะ ตาโล มัตถะกัจฉินโน อะภัพโพ ปุนะ วิรุพหิยา,",
+     "pali_roman": "Seyyathāpi nāma tālo matthakacchinno abhabbo puna virubhiyā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just as a palm tree cut off at the crown cannot grow again,",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 48,
+     "pali": "เอวะเมวะ ภิกขุ ปาปิจโฉ อิจฉาปะกะโต อะสันตัง อะภูตัง อุตตะริมะนุสสะธัมมัง อุลละปิต์วา,",
+     "pali_roman": "Evameva bhikkhu pāpiccho icchāpakato asantaṃ abhūtaṃ uttarimanussadhammaṃ ullapitvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "just so a bhikkhu who has made such a claim is no ascetic, no son of the Sakyan.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 49,
+     "pali": "อัสสะมะโณ โหติ อะสักยะปุตติโย.",
+     "pali_roman": "Assamaṇo hoti asakyaputtiyo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 50,
+     "pali": "ตันเต (ถ้าหลายรูปเปลี่ยน ตันเต เป็น ตัง โว) ยาวะชีวัง อะกะระณียันติ.",
+     "pali_roman": "Tante yāvajīvaṃ akaraṇīyanti. …",
+     "thai": "",
+     "paiboon": "",
+     "english": "That is not to be done by you for life.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 51,
+     "pali": "อะเนกะปะริยาเยนะ โข ปะนะ เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ,",
+     "pali_roman": "Anekapariyāyena kho pana tena bhagavatā jānatā passatā arahatā sammāsambuddhena,",
+     "thai": "",
+     "paiboon": "",
+     "english": "In many ways virtue, concentration and wisdom were well proclaimed by that Blessed One who knows and sees, the worthy one, fully enlightened by himself.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 52,
+     "pali": "สีลัง สัมมะทักขาตัง สะมาธิ สัมมะทักขาโต ปัญญา สัมมะทักขาตา.",
+     "pali_roman": "Sīlaṃ sammadakkhātaṃ samādhi sammadakkhāto paññā sammadakkhātā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 53,
+     "pali": "ยาวะเทวะ ตัสสะ มะทะนิมมะทะนัสสะ ปิปาสะวินะยัสสะ อาละยะสะมุคฆาตัสสะ วิฏฏูปัจเฉทัสสะ ตัณหักขะยัสสะ วิราคัสสะ นิโรธัสสะ นิพพานัสสะ",
+     "pali_roman": "Yāvadeva tassa madanimmadanassa pipāsavinayassa ālayasamugghātassa viṭṭūpacchedassa taṇhakkhayassa virāgassa nirodhassa nibbānassa",
+     "thai": "",
+     "paiboon": "",
+     "english": "just so far as for the crushing of intoxication, the removal of thirst, the uprooting of clinging, the cutting off of the round, the destruction of craving, dispassion, cessation, Nibbāna —",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 54,
+     "pali": "สัจฉิกิริยายะ.",
+     "pali_roman": "Sacchikiriyāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "for the realising of it.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 293
+    },
+    {
+     "number": 55,
+     "pali": "ตัตถะ สีละปะริภาวิโต สะมาธิ มะหัปผะโล โหติ มะหานิสังโส",
+     "pali_roman": "Tattha sīlaparibhāvito samādhi mahapphalo hoti mahānisaṃso",
+     "thai": "",
+     "paiboon": "",
+     "english": "Therein concentration steeped in virtue is of great fruit and great benefit;",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 56,
+     "pali": "สะมาธิปะริภาวิตา ปัญญา มะหัปผะลา โหติ มะหานิสังสา",
+     "pali_roman": "Samādhiparibhāvitā paññā mahapphalā hoti mahānisaṃsā",
+     "thai": "",
+     "paiboon": "",
+     "english": "wisdom steeped in concentration is of great fruit and great benefit;",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 57,
+     "pali": "ปัญญาปะริภาวิตัง จิตตัง สัมมะเทวะ อาสะเวหิ วิมุจจะติ",
+     "pali_roman": "Paññāparibhāvitaṃ cittaṃ sammadeva āsavehi vimuccati",
+     "thai": "",
+     "paiboon": "",
+     "english": "the mind steeped in wisdom is rightly freed from the taints,",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 58,
+     "pali": "เสยยะถีทัง. กามาสะวา ภะวาสะวา อะวิชชาสะวา.",
+     "pali_roman": "Seyyathīdaṃ. kāmāsavā bhavāsavā avijjāsavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "that is: the taint of sensuality, the taint of being, the taint of ignorance.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 59,
+     "pali": "ตัส์มาติหะ เต (ถ้าหลายรูปเปลี่ยน เต เป็น โว) อิมัส์มิง ตะถาคะตัปปะเวทิเต ธัมมะวินะเย,",
+     "pali_roman": "Tasmātiha te imasmiṃ tathāgatappavedite dhammavinaye, …",
+     "thai": "",
+     "paiboon": "",
+     "english": "Therefore in this Dhamma and Discipline made known by the Tathāgata the training in higher virtue, in higher mind and in higher wisdom should be undertaken respectfully.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 60,
+     "pali": "สักกัจจัง อะธิสีละสิกขา สิกขิตัพพา,",
+     "pali_roman": "Sakkaccaṃ adhisīlasikkhā sikkhitabbā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 61,
+     "pali": "อะธิจิตตะสิกขา สิกขิตัพพา,",
+     "pali_roman": "Adhicittasikkhā sikkhitabbā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 62,
+     "pali": "อะธิปัญญาสิกขา สิกขิตัพพา.",
+     "pali_roman": "Adhipaññāsikkhā sikkhitabbā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 63,
+     "pali": "ตัตถะ อัปปะมาเทนะ สัมปาเทตัพพัง.",
+     "pali_roman": "Tattha appamādena sampādetabbaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Therein you should strive with diligence.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0559.PNG",
+     "issue": "⚠ FOUR SHEETS, AND THREE OF THEM CARRY NO HEADING. This chant runs 290 to 293 and only its first page names it; 291, 292 and 293 are unheaded continuations. Pages 292 and 293 could not be placed by reading them at all — the contents listing คำบอกอนุศาสน์ at ๒๙๐ is what settles it, as it did for page 298."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0558.PNG",
+     "issue": "⚠ THE SUBSTITUTION RUBRIC LOSES ITS ถ้า ON THE THIRD NISSAYA. Items 1, 2 and 4 print '(ถ้าหลายรูปเปลี่ยน เต เป็น โว)' and item 3 prints '(หลายรูปเปลี่ยน เต เป็น โว)' without ถ้า, 'if'. Read at 5x. Kept as printed on all four; the book is inconsistent with itself within one list."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0557.PNG",
+     "issue": "นิสัย 4 and อกรณียกิจ 4 are entered as Thai-only VERSES, not blocks. The book prints each as a subheading INSIDE this chant — below its title and above the items it introduces — and a block can only anchor at a chant boundary, which would put them above the chant's own heading. Same treatment as รูปที่ 1 on page 306."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0558.PNG",
+     "issue": "THE RUBRIC IS STRIPPED BEFORE TRANSLITERATING. Every 'ตัตถะ เต (ถ้าหลายรูปเปลี่ยน …)' clause carries Thai inside the Pali, and translit_pali passes Thai straight through — which check_batch catches as Thai script in a romanised field. The bracket is removed before transliterating and a … marks where it stood, so pali_roman covers the Pali only."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-kho-nissai-nak-khu",
+   "kham-kho-upasombot-phrom-kan",
+   "kham-bok-anusat"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 289,
+  "resume_from_file": "IMG_0556.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch.",
+  "pali_untouched": "Confirmed. pali_roman is translit_pali applied to each clause with any bracketed Thai rubric stripped first and a … left where it stood, so no Thai script reaches a romanised field — the fault page 295 hit and check_batch caught twice over.",
+  "page_scan": "agrees. Rows across four sheets. The Pali at the TOP of page 290 is deliberately not here: it is the tail of a chant beginning on page 289.",
+  "notes": "A CHANT ACROSS FOUR SHEETS, THREE OF THEM UNHEADED. Three findings. (1) ⚠ PAGES 291, 292 AND 293 CARRY NO HEADING — they cannot be placed by reading them, and the contents listing คำบอกอนุศาสน์ at ๒๙๐ is the only thing that settles it. That is now the second such chant, after 297-298. (2) ⚠ THE SUBSTITUTION RUBRIC LOSES ITS ถ้า on the third nissaya where the other three keep it. (3) ⚠ TWO NUMERAL SYSTEMS FOUR LINES APART inside คำขอนิสสัยนาคคู่ — Thai ๓ then Arabic 3.",
+  "diacritic_exceptions": []
+ }
+}
