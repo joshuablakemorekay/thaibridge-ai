@@ -1,0 +1,435 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 2,
+  "files_read": 2,
+  "received": 1,
+  "manifest": [
+   "kham-kho-banphacha-nak-khu"
+  ],
+  "pages": [
+   {
+    "page": 289,
+    "file": "IMG_0556.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-kho-banphacha-nak-khu",
+    "verses": "1-25",
+    "starts_here": true,
+    "note": "A centred heading, a Thai explanation of what this form leaves out, then the refuge-and-request in three rounds."
+   },
+   {
+    "page": 290,
+    "file": "IMG_0557.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-kho-banphacha-nak-khu",
+    "verses": "26-40",
+    "starts_here": false,
+    "note": "The three rounds of asking for the going forth, at the top of the sheet above คำขอนิสสัยนาคคู่."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-kho-banphacha-nak-khu",
+   "title_thai": "คำขอบรรพชานาคคู่",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Requesting the Going Forth, for a Pair",
+   "page_start": 289,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "40. One Thai explanation, then six Pali paragraphs split at the book's own commas.",
+    "ordering": "No Thai translation is printed; the Thai is the book's own explanatory note.",
+    "conventions": "pali_roman is IAST from translit_pali with any bracketed Thai stripped first. paiboon is left empty — see page 306.",
+    "pages": "IMG_0556.PNG page 289 and IMG_0557.PNG page 290. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "จะกล่าวแต่เฉพาะที่แปลก ส่วนที่ไม่แปลกและคำอธิบายวิธีต่างๆ ซึ่งเหมือนกันกับ 2 วิธี ที่กล่าวมาแล้ว จะไม่กล่าวอีกขอให้พลิกกลับไปศึกษาใน 2 วิธีนั้น แม้คำขออุปสมบทพร้อมกัน (สังฆัมภันเต) ก็ได้อธิบายไว้แล้วท้ายคำขออุปสมบทแบบ เอสาหัง",
+     "paiboon": "",
+     "english": "Only what differs will be given. What does not differ, and the explanations of the various procedures which are the same as the two methods already given, will not be repeated — please turn back and study them there. Even the request for ordination together (saṅghambhante) has already been explained at the end of the request for ordination in the Esāhaṃ form.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 289
+    },
+    {
+     "number": 2,
+     "pali": "เอเต มะยัง ภันเต,",
+     "pali_roman": "Ete mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "We go for refuge to that Blessed One, though he attained final Nibbāna long ago, and to the Dhamma and to the community of monks. May we obtain the going forth in that Blessed One's Dhamma and Discipline; may we obtain ordination.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 3,
+     "pali": "สุจิระปะรินิพพุตัมปิ,",
+     "pali_roman": "Suciraparinibbutampi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "ตัง ภะคะวันตัง สะระณัง คัจฉามะ,",
+     "pali_roman": "Taṃ bhagavantaṃ saraṇaṃ gacchāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "ธัมมัญจะ ภิกขุสังฆัญจะ,",
+     "pali_roman": "Dhammañca bhikkhusaṅghañca,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 6,
+     "pali": "ละเภยยามะ มะยัง ภันเต,",
+     "pali_roman": "Labheyyāma mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 7,
+     "pali": "ตัสสะ ภะคะวะโต,",
+     "pali_roman": "Tassa bhagavato,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 8,
+     "pali": "ธัมมะวินะเย ปัพพัชชัง,",
+     "pali_roman": "Dhammavinaye pabbajjaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 9,
+     "pali": "ละเภยยามะ อุปะสัมปะทัง.",
+     "pali_roman": "Labheyyāma upasampadaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 10,
+     "pali": "ทุติยัมปิ มะยัง ภันเต,",
+     "pali_roman": "Dutiyampi mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time…",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 11,
+     "pali": "สุจิระปะรินิพพุตัมปิ,",
+     "pali_roman": "Suciraparinibbutampi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 12,
+     "pali": "ตัง ภะคะวันตัง สะระณัง คัจฉามะ,",
+     "pali_roman": "Taṃ bhagavantaṃ saraṇaṃ gacchāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 13,
+     "pali": "ธัมมัญจะ ภิกขุสังฆัญจะ,",
+     "pali_roman": "Dhammañca bhikkhusaṅghañca,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 14,
+     "pali": "ละเภยยามะ มะยัง ภันเต,",
+     "pali_roman": "Labheyyāma mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 15,
+     "pali": "ตัสสะ ภะคะวะโต,",
+     "pali_roman": "Tassa bhagavato,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 16,
+     "pali": "ธัมมะวินะเย ปัพพัชชัง,",
+     "pali_roman": "Dhammavinaye pabbajjaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 17,
+     "pali": "ละเภยยามะ อุปะสัมปะทัง.",
+     "pali_roman": "Labheyyāma upasampadaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 18,
+     "pali": "ตะติยัมปิ มะยัง ภันเต,",
+     "pali_roman": "Tatiyampi mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time…",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 19,
+     "pali": "สุจิระปะรินิพพุตัมปิ,",
+     "pali_roman": "Suciraparinibbutampi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 20,
+     "pali": "ตัง ภะคะวันตัง สะระณัง คัจฉามะ,",
+     "pali_roman": "Taṃ bhagavantaṃ saraṇaṃ gacchāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 21,
+     "pali": "ธัมมัญจะ ภิกขุสังฆัญจะ,",
+     "pali_roman": "Dhammañca bhikkhusaṅghañca,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 22,
+     "pali": "ละเภยยามะ มะยัง ภันเต,",
+     "pali_roman": "Labheyyāma mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 23,
+     "pali": "ตัสสะ ภะคะวะโต,",
+     "pali_roman": "Tassa bhagavato,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 24,
+     "pali": "ธัมมะวินะเย ปัพพัชชัง,",
+     "pali_roman": "Dhammavinaye pabbajjaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 25,
+     "pali": "ละเภยยามะ อุปะสัมปะทัง.",
+     "pali_roman": "Labheyyāma upasampadaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 26,
+     "pali": "มะยัง ภันเต,",
+     "pali_roman": "Mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sirs, we ask for the going forth. Having taken these ochre cloths, give us the going forth out of compassion.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 290
+    },
+    {
+     "number": 27,
+     "pali": "ปัพพัชชัง ยาจามะ,",
+     "pali_roman": "Pabbajjaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 28,
+     "pali": "อิมานิ กาสายานิ วัตถานิ คะเหต์วา,",
+     "pali_roman": "Imāni kāsāyāni vatthāni gahetvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 29,
+     "pali": "ปัพพาเชถะ โน ภันเต,",
+     "pali_roman": "Pabbājetha no bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 30,
+     "pali": "อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 31,
+     "pali": "ทุติยัมปิ มะยัง ภันเต,",
+     "pali_roman": "Dutiyampi mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time…",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 32,
+     "pali": "ปัพพัชชัง ยาจามะ,",
+     "pali_roman": "Pabbajjaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 33,
+     "pali": "อิมานิ กาสายานิ วัตถานิ คะเหต์วา,",
+     "pali_roman": "Imāni kāsāyāni vatthāni gahetvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 34,
+     "pali": "ปัพพาเชถะ โน ภันเต,",
+     "pali_roman": "Pabbājetha no bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 35,
+     "pali": "อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 36,
+     "pali": "ตะติยัมปิ มะยัง ภันเต,",
+     "pali_roman": "Tatiyampi mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time…",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 37,
+     "pali": "ปัพพัชชัง ยาจามะ,",
+     "pali_roman": "Pabbajjaṃ yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 38,
+     "pali": "อิมานิ กาสายานิ วัตถานิ คะเหต์วา,",
+     "pali_roman": "Imāni kāsāyāni vatthāni gahetvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 39,
+     "pali": "ปัพพาเชถะ โน ภันเต,",
+     "pali_roman": "Pabbājetha no bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 40,
+     "pali": "อะนุกัมปัง อุปาทายะ.",
+     "pali_roman": "Anukampaṃ upādāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปัพพัชชา",
+     "pali_roman": "pabbajjā",
+     "meaning": "the going forth — novice ordination, asked for here before the higher ordination"
+    },
+    {
+     "pali": "กาสายานิ วัตถานิ",
+     "pali_roman": "kāsāyāni vatthāni",
+     "meaning": "the ochre cloths. The candidate holds them out as he asks"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0556.PNG",
+     "issue": "⚠ THE BOOK TELLS THE READER TO LOOK ELSEWHERE. This chant opens with a Thai note saying that only what DIFFERS from the two forms already given will be printed, and that the reader should turn back to study the rest there. So the pair form is deliberately incomplete on the page — the book is cross-referencing itself, not omitting by accident. Recorded as a verse because it is printed inside the chant, below its heading."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0556.PNG",
+     "issue": "THE LINES ABOVE THIS CHANT BELONG TO PAGE 288. The tail of the single-candidate request, a substitution rubric telling the reader to change ยาจามิ to ยาจามะ and มัง to โน, a long Thai instruction covering the whole ceremony, and a centred SERVICE CLOSING — จบพิธีอุปสมบทแบบเอสาหัง — all belong to the chant that begins on 288 and are left for that page's batch."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0557.PNG",
+     "issue": "THE CHANT IS CUT BY THE PAGE BREAK BETWEEN ITS TWO HALVES. The refuge-and-request rounds end at the foot of 289 and the going-forth rounds open at the top of 290, above คำขอนิสสัยนาคคู่. Each half opens its own paragraph, so verse 5 carries para_start in its own right rather than continuing one."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-kho-banphacha-nak-khu"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 288,
+  "resume_from_file": "IMG_0555.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch.",
+  "pali_untouched": "Confirmed. pali_roman is translit_pali applied to each clause with any bracketed Thai stripped first, so no Thai script reaches a romanised field. The Thai explanation carries an empty pali and pali_roman rather than a transliteration of Thai.",
+  "page_scan": "agrees. Two rows, one per page. Everything above this chant on page 289 is deliberately not here — it belongs to the chant beginning on 288, including a service closing.",
+  "notes": "THE PAIR FORM OF THE GOING-FORTH REQUEST. One finding, and it is about the book's method rather than its text: ⚠ THE BOOK CROSS-REFERENCES ITSELF. This chant opens by saying only what DIFFERS from the two forms already given will be printed and that the reader should turn back for the rest. So the pair form is incomplete on the page BY DESIGN — the same habit as the ฯลฯ abbreviation on 295, which pages 293-294 turned out to fill in. Nothing has been supplied from outside.",
+  "diacritic_exceptions": []
+ }
+}
