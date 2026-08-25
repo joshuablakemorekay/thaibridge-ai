@@ -93,6 +93,10 @@ photograph.
 | 221 | IMG_0491 | 270 |
 | 222 | IMG_0492 | 270 |
 | 223 | IMG_0493 | 270 |
+| 276 | IMG_0544 | 268 |
+| **277** | **IMG_0545** | **268** ⟵ divider, NO number printed |
+| **278** | — | ⚠ BLANK VERSO, NEVER PHOTOGRAPHED |
+| **279** | **IMG_0546** | **267** ⟵ offset drops across the gap |
 | 309 | IMG_0576 | 267 ⟵ LAST Thai-script sheet |
 | **310** | **IMG_0577** | **267** ⟵ FIRST roman sheet |
 | 311 | IMG_0578 | 267 |
@@ -129,6 +133,19 @@ This is the same class of miss as page 21, and it has the same signature:
 **a missing page leaves no gap in the filenames.** Only reading the page
 numbers off the sheets will find which three they are. Worth doing with the
 book in hand before it is put away.
+
+### One of the three has been found: page 278
+
+`IMG_0544` reads **276** and `IMG_0546` reads **279**, so the offset drops from
+268 to 267 between them. Between those two sheets sits `IMG_0545`, which is the
+**ภาคผนวก section divider** — a title centred on an otherwise blank page, and
+the only sheet in this pass with **no page number printed on it at all**.
+
+So page 277 is the divider and **page 278 is its blank verso, never
+photographed**. Nothing is lost: the verso is blank. But it is the first of the
+three predicted gaps to be identified, and it suggests where the other two will
+be — **section dividers have blank versos, and blank pages do not get
+photographed.** `ภาคผนวก` is not the book's only divider.
 
 ## The offset RISES again at IMG_0587/0588, and both really are duplicates
 
