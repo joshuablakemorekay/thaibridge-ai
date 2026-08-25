@@ -109,7 +109,8 @@ def first_claimed(batch_files) -> dict[tuple[str, int], int]:
     return lowest
 
 
-def printed(source: dict, thai_key: str, roman_key: str) -> str:
+def printed(source: dict, thai_key: str, roman_key: str,
+            extra_key: str | None = None) -> str:
     """The layer the BOOK sets, preferring Thai script and falling back to roman.
 
     Almost every page in this book is printed in Thai script, so `pali` and
@@ -127,8 +128,18 @@ def printed(source: dict, thai_key: str, roman_key: str) -> str:
     The fallback is one-directional on purpose. Where the book gives Thai
     script that is what gets walked, and a romanisation this app generated is
     never checked in its place.
+
+    `extra_key` is the third case and it caught the same fault a third time.
+    Page 306's announcement is made IN THAI with no Pali at all, so `pali` and
+    `pali_roman` are both empty and every verse was skipped — seven verses
+    walked as one string, under a PASS. Where a verse carries no Pali in either
+    script, the `thai` IS the printed text and is walked. It is never reached
+    on an ordinary chant, because there `pali` is present and wins first, so a
+    Thai TRANSLATION is still never checked in place of the Pali it renders
+    beside.
     """
-    return source.get(thai_key) or source.get(roman_key) or ""
+    return (source.get(thai_key) or source.get(roman_key)
+            or source.get(extra_key or "") or "")
 
 
 def expected(batch: dict, page: int,
@@ -197,14 +208,14 @@ def expected(batch: dict, page: int,
         wanted = verse_numbers(row.get("verses", "none"))
         for verse in entry.get("verses") or []:
             n = verse["number"]
-            if n not in wanted or not printed(verse, "pali", "pali_roman"):
+            if n not in wanted or not printed(verse, "pali", "pali_roman", "thai"):
                 continue
             # A line this page finishes but an earlier page began renders
             # where it began. Claiming it here would report the app for
             # following its own rule.
             if lowest and lowest.get((cid, n), page) < page:
                 continue
-            run.append((f"{cid} v{n}", printed(verse, "pali", "pali_roman")))
+            run.append((f"{cid} v{n}", printed(verse, "pali", "pali_roman", "thai")))
         # The colophon shows only on the page where the chant actually ends,
         # which is the page holding its last verse.
         closing = printed(entry.get("closing") or {}, "pali", "pali_roman")
