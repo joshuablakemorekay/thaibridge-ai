@@ -289,72 +289,54 @@ established the rule in the first place. Worth stating exactly:
 `check_render` walks strings in printed order and does not look at grouping.
 Only opening the page catches it — so open the page.
 
-## ⚠️⚠️⚠️ The ฬ/พ conflict — EIGHT instances, now in PROSE as well as verse
+## ✅ SETTLED 2026-08-25 — THE TYPEFACE PHOTOGRAPHS ฬ AS พ. TRUST THE CANON.
 
-This is no longer a one-off, and it is the most important open question in the
-book.
+**Josh read pages 85 and 99 off the physical book and both are `ฬ`.** That ends
+the question this run carried for eighteen pages, and it ends it against the
+reading I had been defending.
 
-| page | the page prints | standard Pali | the printed form |
-|---|---|---|---|
-| 85 | `อะวิรุพหิฉันทา` | *avirūḷhi-* | *avirubhi-* — **not a word** |
-| 90 | `โสพะสะ` | *soḷasa* ("sixteen") | *sobasa* — **not a word** |
-| 95 | `วิรุพหะโก` | *Virūḷhaka* (Great King of the South) | *virubhaka* — **not a word** |
-| 97 | `เคลัญเญนาภิปีพิโต` | *abhipīḷita* ("afflicted") | *abhipībita* — **not a word** |
-| 99 | `วิรุพโห` (v13) | *viruḷho* ("thriving") | *virubho* — **not a word** |
-| 99 | `วิรุพหา` (v15) | *viruḷhā* (fem.) | *virubhā* — **not a word** |
-| 99 | `วิรุพหา` (v17) | *viruḷhā* (pl.) | *virubhā* — **not a word** |
-| 102 | `ฉะพะภิญญา` (prose) | *chaḷabhiññā* ("six higher knowledges") | *chababhiññā* — **not a word** |
+| page | photograph showed | the BOOK has |
+|---|---|---|
+| 85 | `อะวิรุพหิฉันทา` | **`อะวิรุฬหิฉันทา`** (*avirūḷhi*) |
+| 99 ×3 | `วิรุพโห` / `วิรุพหา` | **`วิรุฬโห` / `วิรุฬหา`** (*viruḷho / viruḷhā*) |
 
-**Page 102 widens it beyond verse.** The first seven were all in metrical
-lines, where a compositor setting from a verse exemplar could plausibly have
-carried one habit throughout. This one sits in a run-on PROSE compound, in a
-completely different part of the book's typesetting, and behaves identically —
-bare `พ`, no ascender, and a transliteration that is not a word.
+**Why the photographic evidence was worthless, and why it looked so strong.**
+Page 99 was offered as the cleanest test the book had given: the disputed letter
+sat on the same line, at the same size, three words from the `พ` of
+`พุทธะสาสะเน`, and at 4× the two were identical. That argument is circular. **If
+the typeface renders ฬ so that it photographs as พ, then a same-line comparison
+with a real พ shows a match either way.** It cannot discriminate, and every
+"identical at N×" note in the batch records has the same flaw.
 
-**⭐ PAGE 99 IS THE CLEANEST TEST THE BOOK HAS GIVEN, and it points at พ.** All
-three sit on a line that ALSO contains `พุทธะสาสะเน` — a known `พ`, same line,
-same size, three words away. At 4× they are identical in shape and height. Every
-earlier instance had to be compared against a `พ` on a different line or a
-different page. If the printer sets some bare `ฬ` without an ascender, this is
-where the difference should have shown, and it does not.
+### THE RULE FROM NOW ON
 
-**⚠️ PAGE 97 UNDERMINES THE RULE THIS FILE WROTE DOWN.** Pages 76–80 each showed
-a bare `ฬ` carrying an **obvious** tall ascender — `จักกะวาเฬสุ`,
-`อัฏฐะจัตตาฬีสะ` — which is why *"a bare ฬ can be read from the photograph"* was
-recorded as settled. Page 97 shows a **bare position where the canon demands ฬ
-and there is no ascender at all**, in the same kind of intervocalic slot.
+- A bare letter that *photographs* as `พ` where **standard Pali has ḷ** is a
+  **`ฬ`**. Write `ฬ`. Do not "reproduce the พ as printed" — the พ is a camera
+  artefact, not what the page prints.
+- The **canon is the tiebreaker**, not the glyph. This is the one place in the
+  whole run where the photograph is overruled by default.
+- ⚠️ **This does NOT make every พ into ฬ.** Where standard Pali genuinely has
+  `b`, the letter is a real `พ`. Recorded example, do not touch it:
+  `พาละมิคา` (*bālamigā*, "young beasts") in `chaddanta-parittam` v8, page 88.
+- A visible **tall ascender** is still positive proof of `ฬ` (pages 76–80, and
+  `เวฬุวะเน` on pages 33/34/36/71). Its **absence proves nothing**.
 
-So one of two things is true, and **the photographs cannot choose between
-them**:
+### ⏳ STILL TO FLIP — eight places, awaiting Josh's word
 
-- this printer sets *some* bare `ฬ` without an ascender, and the rule is wrong;
-- or the book really does print `พ` in all four places.
+Pages 85 and 99 are corrected. The same finding implicates these, but Josh
+verified only those two pages, so they have NOT been changed:
 
-Both readings fit everything seen. **Four words now wait on one look at the
-book**, and page 95's four Great Kings remains the cheapest place to settle it.
+| page | chant | as stored | should be | canon |
+|---|---|---|---|---|
+| 31 | `ปะฏิจจะสะมุปปาทะปาโฐ` v4, v5 | `สะพายะตะนัง` | `สะฬายะตะนัง` | *saḷāyatana* |
+| 32 | `ปะฏิจจะสะมุปปาทะปาโฐ` v16, v17 | `สะพายะตะนะ` | `สะฬายะตะนะ` | *saḷāyatana* |
+| 90 | `วัฏฏะกะปะริตตัง` v8 | `โสพะสะ` | `โสฬะสะ` | *soḷasa* |
+| 95 | `อาฏานาฏิยะปะริตตัง` v60 | `วิรุพหะโก` | `วิรุฬหะโก` | *Virūḷhaka* |
+| 97 | `โพชฌังคะปะริตตัง` v11 | `เคลัญเญนาภิปีพิโต` | `เคลัญเญนาภิปีฬิโต` | *abhipīḷito* |
+| 102 | `มงคลจักรวาฬใหญ่` v1 | `ฉะพะภิญญา` | `ฉะฬะภิญญา` | *chaḷabhiññā* |
 
-**Page 95 is the easiest of the three to check**, because the four Great Kings
-are named together in a fixed order — Dhataraṭṭha, Virūḷhaka, Virūpakkha,
-Kuvera — so the reading is unambiguous once the book is open.
-
-**And a fourth letter of the same class turned up on the same page:** verse 82's
-`ปะริพาหูปะสะมะนัง` has `พ` where editions have *parilāha-* with `ล`. Worth
-checking on the same visit.
-
-**Both letters are BARE** — no cluster mark — and both were stacked at high
-magnification against an undoubted `พ` on the same line or the same sheet, and
-found identical: two humps, no ascender. Pages 76, 77, 78 and 80 each showed a
-bare `ฬ` carrying an obvious tall ascender at far lower magnification, so the
-ascender test says `พ` both times.
-
-**But the non-word test (page 79) says `ฬ` both times**, and on page 85 the app
-already holds the identical stanza a second time — `parittakarana-patha` verse
-10 — spelt with `ฬ`.
-
-**Both pages are reproduced as printed.** So either this printer sets *some* `ฬ`
-without its ascender, or the book really does print `พ` in both places. **One
-look at the book settles both at once**, and the two are on facing halves of the
-same run, so it is a single job.
+Each needs its `pali`, its `pali_roman` AND its batch record changed together,
+or `check_pages` fails.
 
 ## Page 90 — a citation that looks transposed
 

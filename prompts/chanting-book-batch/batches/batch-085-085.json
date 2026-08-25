@@ -150,8 +150,8 @@
     },
     {
      "number": 74,
-     "pali": "เต ขีณะพีชา อะวิรุพหิฉันทา",
-     "pali_roman": "Te khīṇabījā avirubhichandā",
+     "pali": "เต ขีณะพีชา อะวิรุฬหิฉันทา",
+     "pali_roman": "Te khīṇabījā avirūḷhichandā",
      "thai": "",
      "paiboon": "",
      "english": "With their seeds destroyed and no desire for regrowth,"
@@ -278,7 +278,7 @@
     {
      "verse": 74,
      "file": "IMG_0349.PNG",
-     "issue": "‼ THE PAGE PRINTS อะวิรุพหิฉันทา WITH พ, AND THE APP ALREADY HOLDS THIS WORD WITH ฬ. This is the most consequential reading on the page and it needs the book. THE EVIDENCE FOR พ: the letter is BARE, with no cluster mark, and at 11x beside the พ of พีชา on the SAME LINE it is identical in shape and in height — two humps, top edge level with the ห and ฉ next to it, no ascender whatever. Pages 76, 77, 78 and 80 all showed a bare ฬ carrying an obvious tall ascender at far lower magnification, so a bare letter without one reads as พ. THE EVIDENCE FOR ฬ: standard Pali is avirūḷhi, 'regrowth', and the app already holds this WHOLE STANZA a second time, inside `parittakarana-patha` (page_start 20), where verse 10 carries the same five lines with อะวิรุฬหิฉันทา spelt ฬ — and the photo map explicitly records that reading, attributed to page 22, as written with ฬ AS A JUDGEMENT, NOT A READING. Also the printed form gives avirubhi-, which is not a word, and page 79's non-word test would say ฬ. SO THE TWO TESTS DISAGREE FOR THE FIRST TIME. The page is reproduced as printed, per the standing rule, which means the app now holds this word two ways and ONE LOOK AT THE BOOK SETTLES BOTH. Nothing on page 22 was changed. WHERE TO LOOK: parittakarana-patha verse 10 holds the identical stanza, so the two entries can be compared side by side once the book has settled it."
+     "issue": "✅ RESOLVED AT THE BOOK, 2026-08-25 — IT IS ฬ. Josh read this line off the physical book and confirmed เต ขีณะพีชา อะวิรุฬหิฉันทา with ฬ. The photograph shows a bare letter with no ascender that is indistinguishable at 11x from the พ of พีชา on the SAME LINE — so the earlier reading of พ was made on good evidence and was still WRONG. This settles the question the whole run has been carrying: THIS TYPEFACE PHOTOGRAPHS ฬ AS พ, and the camera cannot be trusted on this one letter. The page-22 judgement call that wrote อะวิรุฬหิ against the photograph was right. Corrected here from อะวิรุพหิ, and pali_roman from avirubhichandā to avirūḷhichandā."
     },
     {
      "verse": 74,

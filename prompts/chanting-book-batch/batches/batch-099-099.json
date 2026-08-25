@@ -276,8 +276,8 @@
     },
     {
      "number": 13,
-     "pali": "โส อัตถะลัทโธ สุขิโต วิรุพโห พุทธะสาสะเน",
-     "pali_roman": "So atthaladdho sukhito virubho buddhasāsane",
+     "pali": "โส อัตถะลัทโธ สุขิโต วิรุฬโห พุทธะสาสะเน",
+     "pali_roman": "So atthaladdho sukhito viruḷho buddhasāsane",
      "thai": "",
      "paiboon": "",
      "english": "May he, having gained the goal, be happy, thriving in the Buddha's teaching;",
@@ -295,8 +295,8 @@
     },
     {
      "number": 15,
-     "pali": "สา อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน",
-     "pali_roman": "Sā atthaladdhā sukhitā virubhā buddhasāsane",
+     "pali": "สา อัตถะลัทธา สุขิตา วิรุฬหา พุทธะสาสะเน",
+     "pali_roman": "Sā atthaladdhā sukhitā viruḷhā buddhasāsane",
      "thai": "",
      "paiboon": "",
      "english": "May she, having gained the goal, be happy, thriving in the Buddha's teaching;",
@@ -313,8 +313,8 @@
     },
     {
      "number": 17,
-     "pali": "เต อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน",
-     "pali_roman": "Te atthaladdhā sukhitā virubhā buddhasāsane",
+     "pali": "เต อัตถะลัทธา สุขิตา วิรุฬหา พุทธะสาสะเน",
+     "pali_roman": "Te atthaladdhā sukhitā viruḷhā buddhasāsane",
      "thai": "",
      "paiboon": "",
      "english": "May they, having gained the goal, be happy, thriving in the Buddha's teaching;",
@@ -351,7 +351,7 @@
     {
      "verse": 13,
      "file": "IMG_0364.PNG",
-     "issue": "‼‼ THREE MORE BARE พ WHERE THE CANON HAS ฬ, AND THIS IS THE CLEANEST COMPARISON THE BOOK HAS GIVEN. Verses 13, 15 and 17 print วิรุพโห / วิรุพหา / วิรุพหา where standard Pali is viruḷho / viruḷhā (วิรุฬโห / วิรุฬหา). At 4x each letter is BARE — two humps, no ascender — and each one sits on the SAME LINE, at the same size, three words away from the พ of พุทธะสาสะเน. They are identical in shape and height. That is a same-line, same-size control the earlier instances did not have. Running total is now SEVEN across pages 85, 90, 95, 97 and 99 x3. Reproduced as printed, and the romanisation follows the printed พ (virubho / virubhā) exactly as pages 85, 90, 95 and 97 did — those give avirubhichandā, sobasa, virubhako and abhipībito, all non-words. Still one look at the book away from being settled."
+     "issue": "✅ RESOLVED AT THE BOOK, 2026-08-25 — ALL THREE ARE ฬ. Josh read rows 13, 15 and 17 off the physical book and confirmed วิรุฬโห / วิรุฬหา / วิรุฬหา. The photograph shows bare letters identical in shape and height to the พ of พุทธะสาสะเน three words along the SAME LINE — which was offered here as the cleanest test the book had given, and it was cleanly WRONG. A same-line comparison proves nothing when the typeface photographs ฬ as พ in the first place. Corrected from วิรุพโห / วิรุพหา, and pali_roman from virubho / virubhā to viruḷho / viruḷhā."
     },
     {
      "verse": 1,
