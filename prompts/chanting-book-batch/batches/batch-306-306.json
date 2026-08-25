@@ -1,0 +1,186 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "kham-apalok-kathin-baep-4-rup"
+  ],
+  "pages": [
+   {
+    "page": 306,
+    "file": "IMG_0573.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-apalok-kathin-baep-4-rup",
+    "verses": "1-7",
+    "starts_here": true,
+    "note": "A centred title, a centred subtitle, then PROSE end to end — and it is THAI, not Pali. The announcement is divided between four monks and the sheet carries the first two: a bold speaker label รูปที่ 1 on its own line, four paragraphs, then รูปที่ 2 and the start of a fifth. Read from four crops at 1.55x. The last paragraph breaks mid-sentence at the foot and carries on to page 307."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-apalok-kathin-baep-4-rup",
+   "continues": true,
+   "title_thai": "คำอปโลกน์กฐิน แบบ ๔ รูป",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Announcing the Kathina, the Form for Four Monks",
+   "page_start": 306,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Seven. Two are the book's SPEAKER LABELS, each printed on its own line; the other five are paragraphs of the announcement. Every one declares para_layout 'prose' against the chant's 'lines'.",
+    "ordering": "There is no Pali on this sheet at all — the announcement is in Thai — so `pali` and `pali_roman` are empty throughout and `thai` carries the chanted text itself rather than a translation.",
+    "conventions": "`paiboon` is left EMPTY on every verse. See the checks: it is a deliberate deferral, not an oversight.",
+    "pages": "IMG_0573.PNG, page 306, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "รูปที่ 1",
+     "paiboon": "",
+     "english": "Monk 1:",
+     "page": 306,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ผ้ากฐินทาน กับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ เป็นของ................ผู้กอปรด้วยศรัทธาอุตสาหะน้อมนำมาถวาย แด่พระภิกษุสงฆ์ผู้จำพรรษากาลถ้วนไตรมาสในอาวาสวิหารนี้",
+     "paiboon": "",
+     "english": "This kathina cloth, together with all the accompanying requisites, belongs to ................, who out of faith and diligence has respectfully brought it as an offering to the community of monks who have kept the rains residence for the full three months in this monastery.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ก็แลผ้ากฐินทานนี้ เป็นของบริสุทธิ์ดุจเลื่อนลอยมาโดยนภากาศ แล้วแลตกลงยังท่ามกลางสงฆ์ จะได้จำเพาะเจาะจงแก่พระภิกษุสงฆ์รูปหนึ่งรูปใดก็หามิได้ มีพระพุทธานุญาตไว้ให้แก่ภิกษุผู้มีจีวรอันเก่า หรือมีจีวรทุพพลภาพ หรือภิกษุรูปใดรูปหนึ่งซึ่งมีสติปัญญาสามารถอาจกระทำกฐินัตถารกิจ หรือภิกษุรูปใดรูปหนึ่งซึ่งมีสติปัญญาสามารถอาจกระทำกฐินัตถารกิจ มิให้เพี้ยนผิด ต้องตามวินัยนิยมบรมพุทธานุญาต",
+     "paiboon": "",
+     "english": "Now this kathina cloth is pure, as though it had drifted through the sky and come to rest in the midst of the Saṅgha; it is not designated for any one monk in particular. The Buddha allowed it for a monk whose robe is old, or whose robe is worn out, or for any monk who has the mindfulness and understanding to carry out the spreading of the kathina — for any monk who has the mindfulness and understanding to carry out the spreading of the kathina without error, in accordance with the discipline the Buddha allowed.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อได้กรานกฐินแล้วไซร้ อานิสงสคุณจะพึงบังเกิดมี 5 ประการ คือ อยู่ปราศจากไตรจีวรได้ ไม่เป็นอาบัติด้วยทุติยกฐินสิกขาบท 1 เก็บอติเรกจีวรไว้ได้ไม่เป็นอาบัติด้วยปฐมกฐินสิกขาบท 1 ฉันคณะโภชน์ปรัมปรโภชน์ได้ไม่เป็นอาบัติด้วยคณะโภชน์ และปรัมปรโภชน์สิกขาบท 1 เข้าไปในละแวกบ้านได้ไม่ต้องอาบัติด้วยอนามันตจาริกสิกขาบท 1 จีวรลาภที่บังเกิดขึ้นในอาวาสจะเป็นของภิกษุผู้ได้กรานกฐินแล้ว 1 ทั้งจีวรกาลจะยืดออกไปอีก 4 เดือนตลอดเหมันตฤดู ดังนี้",
+     "paiboon": "",
+     "english": "When the kathina has been spread, five benefits arise: one may be apart from the three robes without offence under the second kathina rule; one may keep an extra robe without offence under the first kathina rule; one may eat a group meal or an out-of-turn meal without offence under the group-meal and out-of-turn-meal rules; one may enter a village without offence under the rule on going without informing; robe-gains arising in the monastery belong to the monk who has spread the kathina; and the robe season is extended a further four months through the cold season.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "บัดนี้ พระสงฆ์ทั้งหลายจะมีความยินยอมพร้อมกันรับกฐินนี้หรือไม่ ถ้ามีความยินยอมพร้อมกันรับกฐินนี้แล้วไซร้ จงให้สัททสัญญาสาธุการขึ้นให้พร้อมกันเทอญ. (สาธุ)",
+     "paiboon": "",
+     "english": "Now, will the assembled Saṅgha consent together to receive this kathina? If they do consent together to receive it, let them raise the sound of approval all together. (Sādhu)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "รูปที่ 2",
+     "paiboon": "",
+     "english": "Monk 2:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 7,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สมเด็จพระผู้มีพระภาคเจ้า ทรงอนุญาตกฐินัตถารกิจนั้นให้เป็นการเฉพาะบุคคล สงฆ์ก็ดี คณะก็ดี จะกรานกฐินไม่ได้ แต่เพราะอนุโมทนาแห่งสงฆ์และคณะและอัตถารกิจแห่งบุคคล กฐินเป็นอันสงฆ์อันคณะอันบุคคลกรานได้ ก็แลผ้ากฐินทานนี้ ควรแก่ภิกษุผู้มีจีวรเก่าหรือมีจีวรทุพพลภาพหรือภิกษุรูปใดจะมีอุตสาหะและสามารถทำจีวรกรรมใน",
+     "paiboon": "",
+     "english": "The Blessed One allowed the spreading of the kathina to be the act of an individual: neither the Saṅgha nor a group can spread the kathina. But through the rejoicing of the Saṅgha and of the group, and the act of the individual, the kathina counts as spread by Saṅgha, group and individual alike. And this kathina cloth is fitting for a monk whose robe is old or worn out, or for any monk who has the diligence and ability to do the robe work in",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "กฐินัตถารกิจ",
+     "pali_roman": "kaṭhinatthārakicca",
+     "meaning": "the act of spreading the kathina — the technical term for the whole ceremony"
+    },
+    {
+     "pali": "อปโลกน์",
+     "pali_roman": "apalokana",
+     "meaning": "announcing, informing the Saṅgha. A formal announcement that does not need a full act of the Saṅgha"
+    },
+    {
+     "pali": "อานิสงส์",
+     "pali_roman": "ānisaṃsa",
+     "meaning": "benefit or advantage. The five listed here are the privileges a monk gains for the kathina season"
+    },
+    {
+     "pali": "ไตรมาส",
+     "pali_roman": "temāsa",
+     "meaning": "the three months — the rains residence that must be completed before the kathina can be received"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0573.PNG",
+     "issue": "⚠ THE FIRST VERSES IN THE BOOK WITH THAI AND NO PALI. Every one of the 136 Thai-bearing verses entered before this sits beside a Pali line and holds a TRANSLATION of it; here the Thai IS the chanted text, because the announcement is made in Thai. `pali` and `pali_roman` are therefore empty by design rather than missing."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0573.PNG",
+     "issue": "⚠ `paiboon` IS EMPTY ON EVERY VERSE AND THAT IS DELIBERATE. 134 of the 136 Thai-bearing verses already in the file carry Paiboon+, so this breaks a near-universal convention and the reason needs to be on the record: Paiboon+ has to be written by hand, it encodes TONES, and check_paiboon only catches drift back toward RTGS spellings — it cannot tell a wrong tone from a right one. Forty lines of hand-written tone marks would pass every check in this repo while being wrong. Left empty so that the gap is visible, and flagged for a dedicated romanisation pass by someone who can verify it."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0573.PNG",
+     "issue": "THE BOOK PRINTS A BLANK FOR THE DONOR'S NAME — a run of dots, '................', where the giver is named aloud. Reproduced as printed rather than filled or removed; it is the same kind of placeholder as (อิตถันนามัสสะ) on page 308, set differently."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0573.PNG",
+     "issue": "⚠ A CLAUSE IS PRINTED TWICE IN SUCCESSION. 'หรือภิกษุรูปใดรูปหนึ่งซึ่งมีสติปัญญาสามารถอาจกระทำกฐินัตถารกิจ' appears twice running, the second time followed by มิให้เพี้ยนผิด. Read at 5x on a 1.55x crop: both are fully present with no ellipsis or mark between them. Kept as printed, because this project reproduces the sheet rather than correcting it — but it reads like a compositor's doubling and is worth a look with the book."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0573.PNG",
+     "issue": "รูปที่ 1 and รูปที่ 2 ARE ENTERED AS VERSES, not blocks. The book prints each as a bold line of its own introducing that monk's part. A block would render in the right place only at a chant boundary, and these fall inside one chant — the same limit that split page 310 — so they are verses, which puts them on their own line where the book puts them."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0573.PNG",
+     "issue": "'(สาธุ)' closes the first monk's part — the assembly's response, printed in brackets. Kept inside the verse as the book sets it, on the same line as the call for it."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "kham-apalok-kathin-baep-4-rup"
+  ],
+  "resume_from_page": 307,
+  "resume_from_file": "IMG_0574.PNG",
+  "resume_from": "kham-apalok-kathin-baep-4-rup",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence, and that absence is deliberate — see the checks. No Paiboon+ was written anywhere in this batch, so there is nothing to have drifted. The Thai on this sheet is the chanted text itself and awaits a romanisation pass that can be verified.",
+  "pali_untouched": "Trivially confirmed: there is NO Pali on this sheet. Every `pali` and `pali_roman` is empty because the announcement is made in Thai, which is the first time in the book that has been true of a chant's own text rather than of a page's missing translation.",
+  "page_scan": "agrees. One row for one page covering verses 1-7, the whole entry. Verse 1 carries the page key and starts the chant. No verse is orphaned and none is claimed twice. No page blocks on this sheet: the two speaker labels are verses, for the reason given in the checks.",
+  "notes": "⚠ THREE THINGS ON THIS SHEET ARE FIRSTS AND ALL THREE ARE RECORDED RATHER THAN SMOOTHED OVER. (1) THAI WITH NO PALI — the chant's own text is Thai, where all 136 Thai-bearing verses before it were translations beside Pali. (2) `paiboon` LEFT EMPTY against a 134-of-136 convention, because hand-written tone marks would pass every check in this repo while being wrong; the gap is left visible on purpose. (3) A PRINTED BLANK for the donor's name, a run of dots. Also one likely compositor's doubling at verse 3, kept as printed and flagged for the book.",
+  "diacritic_exceptions": []
+ }
+}

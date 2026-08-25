@@ -31943,6 +31943,418 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0573.PNG]: ⚠ THE FIRST VERSES IN THE BOOK WITH THAI AND
+        #   NO PALI. Every one of the 136 Thai-bearing verses entered before
+        #   this sits beside a Pali line and holds a TRANSLATION of it; here
+        #   the Thai IS the chanted text, because the announcement is made in
+        #   Thai. `pali` and `pali_roman` are therefore empty by design rather
+        #   than missing.
+        # ‼ CHECK [IMG_0573.PNG]: ⚠ `paiboon` IS EMPTY ON EVERY VERSE AND THAT
+        #   IS DELIBERATE. 134 of the 136 Thai-bearing verses already in the
+        #   file carry Paiboon+, so this breaks a near-universal convention
+        #   and the reason needs to be on the record: Paiboon+ has to be
+        #   written by hand, it encodes TONES, and check_paiboon only catches
+        #   drift back toward RTGS spellings — it cannot tell a wrong tone
+        #   from a right one. Forty lines of hand-written tone marks would
+        #   pass every check in this repo while being wrong. Left empty so
+        #   that the gap is visible, and flagged for a dedicated romanisation
+        #   pass by someone who can verify it.
+        'id': 'kham-apalok-kathin-baep-4-rup',
+        'title_thai': 'คำอปโลกน์กฐิน แบบ ๔ รูป',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Announcing the Kathina, the Form for Four Monks',
+        'page_start': 306,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0573.PNG]: รูปที่ 1 and รูปที่ 2 ARE ENTERED AS
+            #   VERSES, not blocks. The book prints each as a bold line of its
+            #   own introducing that monk's part. A block would render in the
+            #   right place only at a chant boundary, and these fall inside
+            #   one chant — the same limit that split page 310 — so they are
+            #   verses, which puts them on their own line where the book puts
+            #   them.
+            {
+                'number': 1,
+                'page': 306,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'รูปที่ 1',
+                'paiboon': '',
+                'english': 'Monk 1:',
+            },
+            # ‼ CHECK [IMG_0573.PNG]: THE BOOK PRINTS A BLANK FOR THE DONOR'S
+            #   NAME — a run of dots, '................', where the giver is
+            #   named aloud. Reproduced as printed rather than filled or
+            #   removed; it is the same kind of placeholder as (อิตถันนามัสสะ)
+            #   on page 308, set differently.
+            {
+                'number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ผ้ากฐินทาน กับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ เป็นของ................ผู้กอปรด้วยศรัทธาอุตสาหะน้อมนำมาถวาย แด่พระภิกษุสงฆ์ผู้จำพรรษากาลถ้วนไตรมาสในอาวาสวิหารนี้',
+                'paiboon': '',
+                'english': 'This kathina cloth, together with all the accompanying requisites, belongs to ................, who out of faith and diligence has respectfully brought it as an offering to the community of monks who have kept the rains residence for the full three months in this monastery.',
+            },
+            # ‼ CHECK [IMG_0573.PNG]: ⚠ A CLAUSE IS PRINTED TWICE IN
+            #   SUCCESSION. 'หรือภิกษุรูปใดรูปหนึ่งซึ่งมีสติปัญญาสามารถอาจกระท
+            #   ำกฐินัตถารกิจ' appears twice running, the second time followed
+            #   by มิให้เพี้ยนผิด. Read at 5x on a 1.55x crop: both are fully
+            #   present with no ellipsis or mark between them. Kept as
+            #   printed, because this project reproduces the sheet rather than
+            #   correcting it — but it reads like a compositor's doubling and
+            #   is worth a look with the book.
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ก็แลผ้ากฐินทานนี้ เป็นของบริสุทธิ์ดุจเลื่อนลอยมาโดยนภากาศ แล้วแลตกลงยังท่ามกลางสงฆ์ จะได้จำเพาะเจาะจงแก่พระภิกษุสงฆ์รูปหนึ่งรูปใดก็หามิได้ มีพระพุทธานุญาตไว้ให้แก่ภิกษุผู้มีจีวรอันเก่า หรือมีจีวรทุพพลภาพ หรือภิกษุรูปใดรูปหนึ่งซึ่งมีสติปัญญาสามารถอาจกระทำกฐินัตถารกิจ หรือภิกษุรูปใดรูปหนึ่งซึ่งมีสติปัญญาสามารถอาจกระทำกฐินัตถารกิจ มิให้เพี้ยนผิด ต้องตามวินัยนิยมบรมพุทธานุญาต',
+                'paiboon': '',
+                'english': 'Now this kathina cloth is pure, as though it had drifted through the sky and come to rest in the midst of the Saṅgha; it is not designated for any one monk in particular. The Buddha allowed it for a monk whose robe is old, or whose robe is worn out, or for any monk who has the mindfulness and understanding to carry out the spreading of the kathina — for any monk who has the mindfulness and understanding to carry out the spreading of the kathina without error, in accordance with the discipline the Buddha allowed.',
+            },
+            {
+                'number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เมื่อได้กรานกฐินแล้วไซร้ อานิสงสคุณจะพึงบังเกิดมี 5 ประการ คือ อยู่ปราศจากไตรจีวรได้ ไม่เป็นอาบัติด้วยทุติยกฐินสิกขาบท 1 เก็บอติเรกจีวรไว้ได้ไม่เป็นอาบัติด้วยปฐมกฐินสิกขาบท 1 ฉันคณะโภชน์ปรัมปรโภชน์ได้ไม่เป็นอาบัติด้วยคณะโภชน์ และปรัมปรโภชน์สิกขาบท 1 เข้าไปในละแวกบ้านได้ไม่ต้องอาบัติด้วยอนามันตจาริกสิกขาบท 1 จีวรลาภที่บังเกิดขึ้นในอาวาสจะเป็นของภิกษุผู้ได้กรานกฐินแล้ว 1 ทั้งจีวรกาลจะยืดออกไปอีก 4 เดือนตลอดเหมันตฤดู ดังนี้',
+                'paiboon': '',
+                'english': 'When the kathina has been spread, five benefits arise: one may be apart from the three robes without offence under the second kathina rule; one may keep an extra robe without offence under the first kathina rule; one may eat a group meal or an out-of-turn meal without offence under the group-meal and out-of-turn-meal rules; one may enter a village without offence under the rule on going without informing; robe-gains arising in the monastery belong to the monk who has spread the kathina; and the robe season is extended a further four months through the cold season.',
+            },
+            # ‼ CHECK [IMG_0573.PNG]: '(สาธุ)' closes the first monk's part —
+            #   the assembly's response, printed in brackets. Kept inside the
+            #   verse as the book sets it, on the same line as the call for
+            #   it.
+            {
+                'number': 5,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'บัดนี้ พระสงฆ์ทั้งหลายจะมีความยินยอมพร้อมกันรับกฐินนี้หรือไม่ ถ้ามีความยินยอมพร้อมกันรับกฐินนี้แล้วไซร้ จงให้สัททสัญญาสาธุการขึ้นให้พร้อมกันเทอญ. (สาธุ)',
+                'paiboon': '',
+                'english': 'Now, will the assembled Saṅgha consent together to receive this kathina? If they do consent together to receive it, let them raise the sound of approval all together. (Sādhu)',
+            },
+            {
+                'number': 6,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'รูปที่ 2',
+                'paiboon': '',
+                'english': 'Monk 2:',
+            },
+            {
+                'number': 7,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'สมเด็จพระผู้มีพระภาคเจ้า ทรงอนุญาตกฐินัตถารกิจนั้นให้เป็นการเฉพาะบุคคล สงฆ์ก็ดี คณะก็ดี จะกรานกฐินไม่ได้ แต่เพราะอนุโมทนาแห่งสงฆ์และคณะและอัตถารกิจแห่งบุคคล กฐินเป็นอันสงฆ์อันคณะอันบุคคลกรานได้ ก็แลผ้ากฐินทานนี้ ควรแก่ภิกษุผู้มีจีวรเก่าหรือมีจีวรทุพพลภาพหรือภิกษุรูปใดจะมีอุตสาหะและสามารถทำจีวรกรรมใน',
+                'paiboon': '',
+                'english': 'The Blessed One allowed the spreading of the kathina to be the act of an individual: neither the Saṅgha nor a group can spread the kathina. But through the rejoicing of the Saṅgha and of the group, and the act of the individual, the kathina counts as spread by Saṅgha, group and individual alike. And this kathina cloth is fitting for a monk whose robe is old or worn out, or for any monk who has the diligence and ability to do the robe work in',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0365.PNG]: ‼ THE FOOTNOTE IS AN AUTHORSHIP NOTE, NOT A
+        #   CANONICAL CITATION — the first of its kind in the run. The page
+        #   prints, under a rule, `1.
+        #   พระราชนิพนธ์ในพระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัว` — 'a royal
+        #   composition of His Majesty King Mongkut'. Every other
+        #   source_printed in the app so far holds a Tipitaka reference (สํ.ส.
+        #   15/320 and the like). Put in source_printed anyway, because the
+        #   field's job is to carry what the book prints as the source and the
+        #   template renders it as a plain footnote under a rule with no
+        #   'Tipitaka' wording of its own. It is also true: this chant is a
+        #   nineteenth-century Siamese composition, so its source IS an author
+        #   rather than the canon. Flagged because the field now holds two
+        #   different kinds of thing.
+        # ‼ CHECK [IMG_0365.PNG]: The heading prints 13. before the title.
+        #   Kept in book_number as '13' and out of title_thai, following the
+        #   twenty-five numbered chants already in the app. Because title_thai
+        #   is therefore clean, it matches _CONTENTS_ROMAN and the never-
+        #   spell-a-title-two-ways test CAN see this chant — unlike the twelve
+        #   บทขัด before it.
+        # ‼ CHECK [IMG_0365.PNG]: The colophon ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา
+        #   นิฏฐิตา is centred and bold beneath the last row, above the
+        #   footnote rule. Held in closing.pali, which is where the other 41
+        #   Pali colophons live.
+        # ‼ CHECK [IMG_0365.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'ratanattayappabhavabhiyacana-gatha',
+        'title_thai': 'ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา',
+        'title_pali': '',
+        'title_roman': 'Ratanattayappabhāvābhiyācanagāthā',
+        'title_english': 'Verses Entreating the Power of the Triple Gem',
+        'book_number': '13',
+        'page_start': 100,
+        'source_printed': 'พระราชนิพนธ์ในพระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัว',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา นิฏฐิตา',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses Entreating the Power of the Triple Gem.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0365.PNG]: TWO COLUMNS, right column begins at x
+            #   1120. Read ACROSS. FIRST PAIRING FOR CHECKING: left อะระหัง
+            #   สัมมาสัมพุทโธ + right อุตตะมัง ธัมมะมัชฌะคา.
+            # ‼ CHECK [IMG_0365.PNG]: INDENT MEASURED AGAINST A FITTED
+            #   BASELINE, NOT A FIXED THRESHOLD. The block's left edge DRIFTS
+            #   65px down the page — 478 at the top, 541 at the bottom —
+            #   because the sheet curves away from the camera. A fixed
+            #   threshold would have called the lower half indented. Fitting a
+            #   line through rows 2-22 gives x = 0.0343*y + 464, and every one
+            #   of those rows sits on it within 8px, while verse 1 stands +138
+            #   clear. So: ONE indent, on verse 1 only, which the chant's own
+            #   paragraph start already carries. No para_start is needed
+            #   anywhere in this chant.
+            {
+                'number': 1,
+                'page': 100,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ อุตตะมัง ธัมมะมัชฌะคา',
+                'pali_roman': 'Arahaṃ sammāsambuddho uttamaṃ dhammamajjhagā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Worthy One, the Perfectly Self-Awakened, attained the supreme Dhamma',
+            },
+            {
+                'number': 2,
+                'page': 100,
+                'pali': 'มะหาสังฆัง ปะโพเธสิ อิจเจตัง ระตะนัตตะยัง.',
+                'pali_roman': 'Mahāsaṅghaṃ pabodhesi iccetaṃ ratanattayaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and awakened the great Sangha — and so there is this Triple Gem.',
+            },
+            {
+                'number': 3,
+                'page': 100,
+                'pali': 'พุทโธ ธัมโม สังโฆ จาติ นานาโหนตัมปิ วัตถุโต',
+                'pali_roman': 'Buddho dhammo saṅgho cāti nānā hontampi vatthuto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Buddha, Dhamma and Sangha, though they are separate as things,',
+            },
+            {
+                'number': 4,
+                'page': 100,
+                'pali': 'อัญญะมัญญาวิโยคาวะ เอกีภูตัมปะนัตถะโต.',
+                'pali_roman': 'Aññamaññāviyogāva ekībhūtampanatthato.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'are inseparable one from another, and in meaning they are one.',
+            },
+            {
+                'number': 5,
+                'page': 100,
+                'pali': 'พุทโธ ธัมมัสสะ โพเธตา ธัมโม สังเฆนะ ธาริโต.',
+                'pali_roman': 'Buddho dhammassa bodhetā dhammo saṅghena dhārito.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha is the one who awakens to the Dhamma; the Dhamma is upheld by the Sangha.',
+            },
+            {
+                'number': 6,
+                'page': 100,
+                'pali': 'สังโฆ จะ สาวะโก พุทธัสสะ อิจเจกาพัทธะเมวิทัง.',
+                'pali_roman': 'Saṅgho ca sāvako buddhassa iccekābaddhamevidaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And the Sangha is the Buddha's disciple — so this is bound together as one.",
+            },
+            # ‼ CHECK [IMG_0365.PNG]: Seven words carry the ์ cluster mark:
+            #   โลกัส์มิง (v7), สัพพะเก์ลเสหิ (v10), ส์ยามานะเมวิทัง (v15),
+            #   ส์ยามานัง (v18, v20), ส์ยามะรัฏฐิกะเทวะตา (v19), เอตัส์มิง and
+            #   ระตะนัตตะยัส์มิง (v22). All romanised with the mark read as a
+            #   cluster and dropped.
+            {
+                'number': 7,
+                'page': 100,
+                'pali': 'วิสุทธัง อุตตะมัง เสฏฐัง โลกัส์มิง ระตะนัตตะยัง',
+                'pali_roman': 'Visuddhaṃ uttamaṃ seṭṭhaṃ lokasmiṃ ratanattayaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Pure, supreme and most excellent in the world is the Triple Gem;',
+            },
+            {
+                'number': 8,
+                'page': 100,
+                'pali': 'สังวัตตะติ ปะสันนานัง อัตตะโน สุทธิกามินัง.',
+                'pali_roman': 'Saṃvattati pasannānaṃ attano suddhikāminaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'it works for those with faith, who desire purity for themselves.',
+            },
+            {
+                'number': 9,
+                'page': 100,
+                'pali': 'สัมมา ปะฏิปัชชันตานัง ปะระมายะ วิสุทธิยา',
+                'pali_roman': 'Sammā paṭipajjantānaṃ paramāya visuddhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For those practising rightly it leads to the highest purity —',
+            },
+            {
+                'number': 10,
+                'page': 100,
+                'pali': 'วิสุทธิ สัพพะเก์ลเสหิ โหติ ทุกเขหิ นิพพุติ.',
+                'pali_roman': 'Visuddhi sabbaklesehi hoti dukkhehi nibbuti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'purity from all the defilements, and the cooling of all sufferings.',
+            },
+            {
+                'number': 11,
+                'page': 100,
+                'pali': 'นิพพานัง ปะระมัง สุญญัง นิพพานัง ปะระมัง สุขัง',
+                'pali_roman': 'Nibbānaṃ paramaṃ suññaṃ nibbānaṃ paramaṃ sukhaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Nibbāna is the supreme emptiness; Nibbāna is the supreme happiness.',
+            },
+            {
+                'number': 12,
+                'page': 100,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ สุวัตถิ โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena suvatthi hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the speaking of this truth, may there be well-being always.',
+            },
+            {
+                'number': 13,
+                'page': 100,
+                'pali': 'ระตะนัตตะยานุภาเวนะ ระตะนัตตะยะเตชะสา',
+                'pali_roman': 'Ratanattayānubhāvena ratanattayatejasā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of the Triple Gem, by the majesty of the Triple Gem,',
+            },
+            {
+                'number': 14,
+                'page': 100,
+                'pali': 'อุปัททะวันตะรายา จะ อุปะสัคคา จะ สัพพะโส.',
+                'pali_roman': 'Upaddavantarāyā ca upasaggā ca sabbaso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may misfortunes and dangers, and obstacles of every kind,',
+            },
+            # ‼ CHECK [IMG_0365.PNG]: This is a chant FOR SIAM specifically —
+            #   ส์ยามานะเมวิทัง, ส์ยามานัง (twice) and ส์ยามะรัฏฐิกะเทวะตา.
+            #   The English says 'the Siamese' rather than 'Thailand' because
+            #   the Pali is syāma and the composition predates the 1939
+            #   renaming.
+            {
+                'number': 15,
+                'page': 100,
+                'pali': 'มา กะทาจิ สัมผุสิงสุ รัฏฐัง ส์ยามานะเมวิทัง',
+                'pali_roman': 'Mā kadāci samphusiṃsu raṭṭhaṃ syāmānamevidaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'never once touch this realm of the Siamese.',
+            },
+            {
+                'number': 16,
+                'page': 100,
+                'pali': 'อาโรคิยะสุขัญเจวะ ตะโต ทีฆายุตาปิ จะ.',
+                'pali_roman': 'Ārogiyasukhañceva tato dīghāyutāpi ca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And health and happiness, and long life after that,',
+            },
+            {
+                'number': 17,
+                'page': 100,
+                'pali': 'ตัพพัตถูนัญจะ สัมปัตตะโย สุขัง สัพพัตถะ โสตถิ จะ',
+                'pali_roman': 'Tabbatthūnañca sampattayo sukhaṃ sabbattha sotthi ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the attainments of those good things, and happiness and safety everywhere —',
+            },
+            {
+                'number': 18,
+                'page': 100,
+                'pali': 'ภะวันตุ สัมปะวัตตันตุ ส์ยามานัง รัฏฐะปาลินัง.',
+                'pali_roman': 'Bhavantu sampavattantu syāmānaṃ raṭṭhapālinaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may these come to be and continue for the rulers of the Siamese.',
+            },
+            {
+                'number': 19,
+                'page': 100,
+                'pali': 'เต จะ รัฏฐัญจะ รักขันตุ ส์ยามะรัฏฐิกะเทวะตา',
+                'pali_roman': 'Te ca raṭṭhañca rakkhantu syāmaraṭṭhikadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And may the devas of the Siamese realm guard both them and the realm,',
+            },
+            {
+                'number': 20,
+                'page': 100,
+                'pali': 'ส์ยามานัง รัฏฐะปาลีหิ ธัมมามิเสหิ ปูชิตา.',
+                'pali_roman': 'Syāmānaṃ raṭṭhapālīhi dhammāmisehi pūjitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'being honoured by the rulers of the Siamese with gifts of Dhamma and of goods.',
+            },
+            {
+                'number': 21,
+                'page': 100,
+                'pali': 'สิทธะมัตถุ สิทธะมัตถุ สิทธะมัตถุ อิทัง ผะลัง',
+                'pali_roman': 'Siddhamatthu siddhamatthu siddhamatthu idaṃ phalaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May it be accomplished, may it be accomplished, may it be accomplished — this fruit,',
+            },
+            {
+                'number': 22,
+                'page': 100,
+                'pali': 'เอตัส์มิง ระตะนัตตะยัส์มิง สัมปะสาทะนะเจตะโส.',
+                'pali_roman': 'Etasmiṃ ratanattayasmiṃ sampasādanacetaso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for one whose heart is settled in faith in this Triple Gem.',
+            },
+        ],
+    },
 ]
 
 
