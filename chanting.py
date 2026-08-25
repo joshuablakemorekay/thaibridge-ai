@@ -31946,7 +31946,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
         # ‼ CHECK [IMG_0573.PNG]: ⚠ THE FIRST VERSES IN THE BOOK WITH THAI AND
         #   NO PALI. Every one of the 136 Thai-bearing verses entered before
         #   this sits beside a Pali line and holds a TRANSLATION of it; here
@@ -32074,6 +32073,114 @@ CHANTS = [
                 'thai': 'สมเด็จพระผู้มีพระภาคเจ้า ทรงอนุญาตกฐินัตถารกิจนั้นให้เป็นการเฉพาะบุคคล สงฆ์ก็ดี คณะก็ดี จะกรานกฐินไม่ได้ แต่เพราะอนุโมทนาแห่งสงฆ์และคณะและอัตถารกิจแห่งบุคคล กฐินเป็นอันสงฆ์อันคณะอันบุคคลกรานได้ ก็แลผ้ากฐินทานนี้ ควรแก่ภิกษุผู้มีจีวรเก่าหรือมีจีวรทุพพลภาพหรือภิกษุรูปใดจะมีอุตสาหะและสามารถทำจีวรกรรมใน',
                 'paiboon': '',
                 'english': 'The Blessed One allowed the spreading of the kathina to be the act of an individual: neither the Saṅgha nor a group can spread the kathina. But through the rejoicing of the Saṅgha and of the group, and the act of the individual, the kathina counts as spread by Saṅgha, group and individual alike. And this kathina cloth is fitting for a monk whose robe is old or worn out, or for any monk who has the diligence and ability to do the robe work in',
+            },
+            # ‼ CHECK [IMG_0574.PNG]: THE SHEET OPENS MID-SENTENCE AND THIS IS
+            #   NOT A CUT LINE. Page 306 ends 'ทำจีวรกรรมใน' and this page
+            #   opens 'วันเดียวกันนี้', which completes it. It is a PARAGRAPH
+            #   spanning a page turn, not a single line cut in half, so it
+            #   takes the page-75 treatment — verse 8 carries para_layout and
+            #   deliberately no para_start — rather than the [] gap marker,
+            #   which is for a line cut mid-way. Worth stating because the two
+            #   look alike and the repo has different machinery for each. Note
+            #   also that the gap machinery reads `pali` explicitly and so
+            #   could not have served this chant, which has none.
+            {
+                'number': 8,
+                'page': 307,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'วันเดียวกันนี้ ให้เป็นกฐินัตถารกิจ ต้องตามพระบรมพุทธานุญาต มิให้วิธีวินัยนิยมทั้งปวงเคลื่อนคลาดได้',
+                'paiboon': '',
+                'english': 'on this same day, as the act of spreading the kathina, in accordance with what the Buddha allowed, so that none of the procedures of the discipline go astray.',
+            },
+            # ‼ CHECK [IMG_0574.PNG]: '(ไม่ต้อง สาธุ)' — NO SĀDHU NEEDED —
+            #   closes the second monk's part, where the first monk's part on
+            #   page 306 closes with '(สาธุ)' calling for one. The two
+            #   brackets are opposite instructions and are easy to read as the
+            #   same thing. Both kept exactly as printed.
+            {
+                'number': 9,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'บัดนี้ พระสงฆ์ทั้งปวงจะเห็นสมควรแก่พระภิกษุรูปใด จงพร้อมกันยอมอนุญาตให้แก่ภิกษุรูปนั้น เทอญ. (ไม่ต้อง สาธุ)',
+                'paiboon': '',
+                'english': 'Now, whichever monk the assembled Saṅgha sees as fitting, let them together consent to grant it to that monk. (No sādhu needed)',
+            },
+            {
+                'number': 10,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'รูปที่ 3',
+                'paiboon': '',
+                'english': 'Monk 3:',
+            },
+            # ‼ CHECK [IMG_0574.PNG]: THE PRINTED BLANKS ARE OF DIFFERENT
+            #   LENGTHS and the difference carries meaning: verse 11 has a
+            #   SHORT blank for the recipient's name then a LONGER one for his
+            #   position, and verses 12, 14 and 15 use different lengths
+            #   again. Reproduced with the run of dots each one prints rather
+            #   than normalised to one width.
+            # ‼ CHECK [IMG_0574.PNG]: 'วินัยนิยมนั้นๆ' uses the Thai
+            #   repetition mark ๆ. Kept as printed; it is not a typo and must
+            #   not be expanded.
+            {
+                'number': 11,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ผ้ากฐินทาน กับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ ข้าพเจ้าพิจารณาเห็นสมควรแด่.........ผู้เป็น...............ในวัดนี้ ซึ่งเป็นพหูสูตทรงธรรม ทรงวินัย เป็นผู้ชี้แจงชักนำให้สพรหมจารีสงฆ์บริษัทรื่นเริง เป็นผู้ให้โอวาทานุศาสน์แก่ภิกษุสามเณรและคฤหัสถ์ เป็นผู้ทรงกฐินมาติกา ฉลาดรู้ในวินัยกรรม จะไม่ให้วินัยนิยมนั้นๆ กำเริบได้ และเป็นผู้มีสติปัญญาสามารถ อาจกระทำกฐินัตถารกิจให้ต้องตามพระบรมพุทธานุญาตได้',
+                'paiboon': '',
+                'english': 'This kathina cloth, with all its accompanying requisites, I consider fitting for ........., who is ............... in this monastery: one of wide learning, upholding the Dhamma and the Vinaya; one who explains and encourages, gladdening the community of fellow practitioners; one who gives instruction to monks, novices and householders; one who upholds the kathina headings, skilled in the acts of the discipline, who will not let those procedures be disturbed; and one with the mindfulness and understanding to carry out the spreading of the kathina in accordance with what the Buddha allowed.',
+            },
+            # ‼ CHECK [IMG_0574.PNG]: '(หยุดนิดหนึ่ง)' — PAUSE A MOMENT — is a
+            #   stage direction to the speaker, printed in brackets mid-
+            #   sentence, telling him to wait for any objection. Kept inline
+            #   as the book sets it rather than lifted out as a rubric.
+            {
+                'number': 12,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เพราะฉะนั้น ข้าพเจ้าจึงพิจารณาเห็นว่า พระสงฆ์ทั้งปวงจะยินยอมพร้อมกันถวายผ้ากฐินทานกับทั้งผ้าอานิสงสบริวารทั้งปวงนี้แด่......ถ้าพระภิกษุรูปใดเห็นไม่สมควร จงทักท้วงขึ้นในท่ามกลางสงฆ์ (หยุดนิดหนึ่ง) ถ้าเห็นสมควรแล้ว จงสาธุการขึ้นให้พร้อมกันเทอญ. สาธุ',
+                'paiboon': '',
+                'english': 'Therefore I consider that the assembled Saṅgha will consent together to offer this kathina cloth with all its accompanying requisites to ...... If any monk sees it as unfitting, let him object in the midst of the Saṅgha. (pause a moment) If it is seen as fitting, let all raise the sound of approval together. Sādhu',
+            },
+            {
+                'number': 13,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'รูปที่ 4',
+                'paiboon': '',
+                'english': 'Monk 4:',
+            },
+            {
+                'number': 14,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ผ้ากฐินทานกับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ถ้าแลพระสงฆ์บริษัทมีเอกฉันทานุมัติพร้อมกันยอมถวายแด่....................แล้ว ขอพระสงฆ์จงอย่าได้ถือเอาผ้าไตรจีวร ซึ่งเป็นบริวารแห่งผ้ากฐินทานนั้น ถึงพระสงฆ์ทั้งปวงจะยินยอมพร้อมกันถวายด้วยอปโลกนวาจา ก็ไม่ขึ้น ต้องถวายด้วยญัตติทุติยกรรมวาจา ตามพระบรมพุทธานุญาต',
+                'paiboon': '',
+                'english': 'As for this kathina cloth with all its accompanying requisites: if the assembled Saṅgha is of one accord and consents together to offer it to ...................., then let the Saṅgha not take the three robes that are the requisites of that kathina cloth. Even if the whole Saṅgha consents together to offer them by announcement alone, it does not stand; they must be offered by a motion and one announcement, in accordance with what the Buddha allowed.',
+            },
+            {
+                'number': 15,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เพราะฉะนั้น ขอพระสงฆ์จงทำกรรมสันนิษฐานว่า จะถวายผ้ากฐินทานนั้นแด่.............ด้วยญัตติทุติยกรรมวาจาอันไม่กำเริบตามสมควรแก่สถานะ ณ กาลบัดนี้ เทอญ. สาธุ',
+                'paiboon': '',
+                'english': 'Therefore let the Saṅgha carry out the act of determination, that this kathina cloth be offered to ............. by a motion and one announcement, unshaken and befitting the occasion, at this present time. Sādhu',
             },
         ],
     },

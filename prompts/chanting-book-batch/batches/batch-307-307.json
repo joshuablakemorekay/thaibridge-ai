@@ -1,0 +1,183 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "kham-apalok-kathin-baep-4-rup"
+  ],
+  "pages": [
+   {
+    "page": 307,
+    "file": "IMG_0574.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-apalok-kathin-baep-4-rup",
+    "verses": "8-15",
+    "starts_here": false,
+    "note": "PROSE end to end and Thai throughout, as page 306. The sheet OPENS MID-PARAGRAPH — the first line completes the sentence page 306 broke at 'ทำจีวรกรรมใน' — then finishes the second monk's part and carries the third and fourth monks' whole, each behind its own bold label. The chant ENDS here; page 308 opens the next one with its own heading."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-apalok-kathin-baep-4-rup",
+   "continuation_of": "kham-apalok-kathin-baep-4-rup",
+   "working_notes": {
+    "invitation": "absent, and none written. A continuation carries none by design.",
+    "units": "Eight, verses 8 to 15. Verse 8 CONTINUES the paragraph opened at verse 7 on page 306, so it carries para_layout and NOT para_start — the rule page 75 established. Two of the eight are speaker labels, as on page 306. COMPLETE at verse 15.",
+    "ordering": "No Pali anywhere on this sheet; the announcement is in Thai, so `thai` carries the chanted text and `pali`/`pali_roman` are empty by design.",
+    "conventions": "`paiboon` is left EMPTY throughout, for the reason recorded on page 306.",
+    "pages": "IMG_0574.PNG, page 307, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 8,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "วันเดียวกันนี้ ให้เป็นกฐินัตถารกิจ ต้องตามพระบรมพุทธานุญาต มิให้วิธีวินัยนิยมทั้งปวงเคลื่อนคลาดได้",
+     "paiboon": "",
+     "english": "on this same day, as the act of spreading the kathina, in accordance with what the Buddha allowed, so that none of the procedures of the discipline go astray.",
+     "page": 307,
+     "para_layout": "prose"
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "บัดนี้ พระสงฆ์ทั้งปวงจะเห็นสมควรแก่พระภิกษุรูปใด จงพร้อมกันยอมอนุญาตให้แก่ภิกษุรูปนั้น เทอญ. (ไม่ต้อง สาธุ)",
+     "paiboon": "",
+     "english": "Now, whichever monk the assembled Saṅgha sees as fitting, let them together consent to grant it to that monk. (No sādhu needed)",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "รูปที่ 3",
+     "paiboon": "",
+     "english": "Monk 3:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ผ้ากฐินทาน กับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ ข้าพเจ้าพิจารณาเห็นสมควรแด่.........ผู้เป็น...............ในวัดนี้ ซึ่งเป็นพหูสูตทรงธรรม ทรงวินัย เป็นผู้ชี้แจงชักนำให้สพรหมจารีสงฆ์บริษัทรื่นเริง เป็นผู้ให้โอวาทานุศาสน์แก่ภิกษุสามเณรและคฤหัสถ์ เป็นผู้ทรงกฐินมาติกา ฉลาดรู้ในวินัยกรรม จะไม่ให้วินัยนิยมนั้นๆ กำเริบได้ และเป็นผู้มีสติปัญญาสามารถ อาจกระทำกฐินัตถารกิจให้ต้องตามพระบรมพุทธานุญาตได้",
+     "paiboon": "",
+     "english": "This kathina cloth, with all its accompanying requisites, I consider fitting for ........., who is ............... in this monastery: one of wide learning, upholding the Dhamma and the Vinaya; one who explains and encourages, gladdening the community of fellow practitioners; one who gives instruction to monks, novices and householders; one who upholds the kathina headings, skilled in the acts of the discipline, who will not let those procedures be disturbed; and one with the mindfulness and understanding to carry out the spreading of the kathina in accordance with what the Buddha allowed.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 12,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เพราะฉะนั้น ข้าพเจ้าจึงพิจารณาเห็นว่า พระสงฆ์ทั้งปวงจะยินยอมพร้อมกันถวายผ้ากฐินทานกับทั้งผ้าอานิสงสบริวารทั้งปวงนี้แด่......ถ้าพระภิกษุรูปใดเห็นไม่สมควร จงทักท้วงขึ้นในท่ามกลางสงฆ์ (หยุดนิดหนึ่ง) ถ้าเห็นสมควรแล้ว จงสาธุการขึ้นให้พร้อมกันเทอญ. สาธุ",
+     "paiboon": "",
+     "english": "Therefore I consider that the assembled Saṅgha will consent together to offer this kathina cloth with all its accompanying requisites to ...... If any monk sees it as unfitting, let him object in the midst of the Saṅgha. (pause a moment) If it is seen as fitting, let all raise the sound of approval together. Sādhu",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 13,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "รูปที่ 4",
+     "paiboon": "",
+     "english": "Monk 4:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 14,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ผ้ากฐินทานกับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ถ้าแลพระสงฆ์บริษัทมีเอกฉันทานุมัติพร้อมกันยอมถวายแด่....................แล้ว ขอพระสงฆ์จงอย่าได้ถือเอาผ้าไตรจีวร ซึ่งเป็นบริวารแห่งผ้ากฐินทานนั้น ถึงพระสงฆ์ทั้งปวงจะยินยอมพร้อมกันถวายด้วยอปโลกนวาจา ก็ไม่ขึ้น ต้องถวายด้วยญัตติทุติยกรรมวาจา ตามพระบรมพุทธานุญาต",
+     "paiboon": "",
+     "english": "As for this kathina cloth with all its accompanying requisites: if the assembled Saṅgha is of one accord and consents together to offer it to ...................., then let the Saṅgha not take the three robes that are the requisites of that kathina cloth. Even if the whole Saṅgha consents together to offer them by announcement alone, it does not stand; they must be offered by a motion and one announcement, in accordance with what the Buddha allowed.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เพราะฉะนั้น ขอพระสงฆ์จงทำกรรมสันนิษฐานว่า จะถวายผ้ากฐินทานนั้นแด่.............ด้วยญัตติทุติยกรรมวาจาอันไม่กำเริบตามสมควรแก่สถานะ ณ กาลบัดนี้ เทอญ. สาธุ",
+     "paiboon": "",
+     "english": "Therefore let the Saṅgha carry out the act of determination, that this kathina cloth be offered to ............. by a motion and one announcement, unshaken and befitting the occasion, at this present time. Sādhu",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อปโลกนวาจา",
+     "pali_roman": "apalokanavācā",
+     "meaning": "announcement alone. Verse 14 turns on the difference between this and a formal act — the robes cannot be given by announcement, only by ñatti-dutiya-kammavācā"
+    },
+    {
+     "pali": "ญัตติทุติยกรรมวาจา",
+     "pali_roman": "ñattidutiyakammavācā",
+     "meaning": "a motion and one announcement — the two-part formal act of the Saṅgha, as against a mere announcement"
+    },
+    {
+     "pali": "พหูสูต",
+     "pali_roman": "bahussuta",
+     "meaning": "of wide learning, one who has heard much. The first quality the third monk names in the recipient"
+    },
+    {
+     "pali": "เอกฉันทานุมัติ",
+     "pali_roman": "ekachandānumati",
+     "meaning": "unanimous consent, one accord. What verse 14 requires before the offering stands"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 8,
+     "file": "IMG_0574.PNG",
+     "issue": "THE SHEET OPENS MID-SENTENCE AND THIS IS NOT A CUT LINE. Page 306 ends 'ทำจีวรกรรมใน' and this page opens 'วันเดียวกันนี้', which completes it. It is a PARAGRAPH spanning a page turn, not a single line cut in half, so it takes the page-75 treatment — verse 8 carries para_layout and deliberately no para_start — rather than the [] gap marker, which is for a line cut mid-way. Worth stating because the two look alike and the repo has different machinery for each. Note also that the gap machinery reads `pali` explicitly and so could not have served this chant, which has none."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0574.PNG",
+     "issue": "'(ไม่ต้อง สาธุ)' — NO SĀDHU NEEDED — closes the second monk's part, where the first monk's part on page 306 closes with '(สาธุ)' calling for one. The two brackets are opposite instructions and are easy to read as the same thing. Both kept exactly as printed."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0574.PNG",
+     "issue": "'(หยุดนิดหนึ่ง)' — PAUSE A MOMENT — is a stage direction to the speaker, printed in brackets mid-sentence, telling him to wait for any objection. Kept inline as the book sets it rather than lifted out as a rubric."
+    },
+    {
+     "verse": 11,
+     "file": "IMG_0574.PNG",
+     "issue": "THE PRINTED BLANKS ARE OF DIFFERENT LENGTHS and the difference carries meaning: verse 11 has a SHORT blank for the recipient's name then a LONGER one for his position, and verses 12, 14 and 15 use different lengths again. Reproduced with the run of dots each one prints rather than normalised to one width."
+    },
+    {
+     "verse": 11,
+     "file": "IMG_0574.PNG",
+     "issue": "'วินัยนิยมนั้นๆ' uses the Thai repetition mark ๆ. Kept as printed; it is not a typo and must not be expanded."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-apalok-kathin-baep-4-rup"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 305,
+  "resume_from_file": "IMG_0572.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence and deliberately so, as on page 306. No Paiboon+ was written anywhere in this batch, so none can have drifted.",
+  "pali_untouched": "Trivially confirmed: there is NO Pali on this sheet. Every `pali` and `pali_roman` is empty because the announcement is made in Thai.",
+  "page_scan": "agrees. One row for one page covering verses 8-15, the whole of what this page adds. Verse 8 carries the page key and deliberately carries no para_start, because the paragraph it belongs to opened on page 306. No page blocks on this sheet: the two speaker labels are verses, as on 306.",
+  "notes": "THIS COMPLETES คำอปโลกน์กฐิน แบบ ๔ รูป across pages 306-307, so coverage is now unbroken from 306 to the end of the book. Two findings. (1) A PARAGRAPH SPANNING A PAGE TURN IS NOT A CUT LINE — the two look identical on the sheet and the repo has separate machinery for each; this one takes the page-75 treatment, and the [] machinery could not have served it anyway because it reads `pali`, which this chant has none of. (2) THE BRACKETED DIRECTIONS ARE NOT ALL THE SAME KIND: (สาธุ) calls for the response, (ไม่ต้อง สาธุ) forbids it, and (หยุดนิดหนึ่ง) is a pause. All three are kept inline exactly as printed.",
+  "diacritic_exceptions": []
+ }
+}
