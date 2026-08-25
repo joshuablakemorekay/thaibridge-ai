@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-100 went in.
+101 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–100 are in and unbroken**, plus 217–221. **136 chants and 2,069
+- **Pages 1–101 are in and unbroken**, plus 217–221. **137 chants and 2,089
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 100 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 101 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,14 +46,41 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 101, `IMG_0366` — but READ THE NUMBER off the sheet
+## Next: page 102, `IMG_0367` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–100, so page 101 *should*
-be `IMG_0366`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–101, so page 102 *should*
+be `IMG_0367`. **Five more changes are still expected before page 207.**
 
-**Page 101 starts clean.** The page-100 chant closes on its own sheet with a
-colophon, and the book is back on its own numbering — expect `14.` next, or a
-new section heading.
+**Page 102 starts clean.** The page-101 chant closes on its own sheet with a
+colophon. Expect `15.` next, or a new section heading.
+
+## ❗ This section cites AUTHORS, not the canon — and its numbering RESTARTS
+
+Two findings that arrived together on pages 100 and 101, and both will keep
+mattering.
+
+**1. `source_printed` now holds two different kinds of thing.** Every footnote up
+to page 97 was a Tipitaka reference (`สํ.ส. 15/320`). Pages 100 and 101 both
+print an AUTHOR instead:
+
+| page | chant | the footnote says |
+|---|---|---|
+| 100 | `ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา` | `พระราชนิพนธ์ในพระบาทสมเด็จพระจอมเกล้าเจ้าอยู่หัว` — King Mongkut |
+| 101 | `สุขาภิยาจะนะคาถา` | `สมเด็จพระพุทธโฆษาจารย์ (ฉิม) วัดมหาธาตุ รจนา` — Somdet Phra Buddhaghosacariya (Chim) |
+
+Two in a row is not a one-off: these are **Siamese compositions, not canon**, so
+an author IS their source. Both go in `source_printed` — the template renders it
+as a plain footnote under a rule, with no wording of its own, which is exactly
+what the page prints. Expect more of them through this section.
+
+**2. ⚠️ `book_number` IS NOT UNIQUE, AND MUST NOT BE MADE UNIQUE.** The book
+restarts its numbering by section, so:
+
+- printed `13` = `อาทิยะสุตตะคาถา` (page 30) **and** `ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา` (page 100)
+- printed `14` = `ปัพพะโตปะมะคาถา` (earlier) **and** `สุขาภิยาจะนะคาถา` (page 101)
+
+Both pages print the number, so both keep it. Any future test asserting a unique
+`book_number` would be asserting something **the book does not do**.
 
 ## 📏 Measure indents against a FITTED BASELINE, not a fixed threshold
 

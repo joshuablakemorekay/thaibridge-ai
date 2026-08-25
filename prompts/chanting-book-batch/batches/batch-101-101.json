@@ -1,0 +1,303 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "sukhabhiyacana-gatha"
+  ],
+  "pages": [
+   {
+    "page": 101,
+    "file": "IMG_0366.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "sukhabhiyacana-gatha",
+    "verses": "1-20",
+    "starts_here": true,
+    "note": "The whole sheet: a centred bold NUMBERED title (14.), twenty TWO-COLUMN rows with the right column beginning at x 1009, a centred bold colophon, then a rule and a Thai authorship footnote. Only verse 1 is indented, +116 against a fitted baseline that is flat on this sheet. The chant starts and ends here."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "sukhabhiyacana-gatha",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Twenty, one per two-column row, read ACROSS. One group — the only indent is verse 1's, which the chant's own start already carries.",
+    "ordering": "None. No Thai translation is printed. The Thai on this page is the footnote, which names the author.",
+    "conventions": "The heading prints a NUMBER, 14, which goes in book_number and is kept out of title_thai. title_thai and title_roman then both match the สารบัญ exactly, so the contents test can see this chant.",
+    "pages": "IMG_0366.PNG, page 101. Title, all twenty rows, the colophon and the footnote are all on this page; the chant starts and ends here."
+   },
+   "title_thai": "สุขาภิยาจะนะคาถา",
+   "title_pali": "",
+   "title_roman": "Sukhābhiyācanagāthā",
+   "title_english": "Verses Entreating Happiness",
+   "book_number": "14",
+   "page_start": 101,
+   "english_unverified": true,
+   "source_printed": "สมเด็จพระพุทธโฆษาจารย์ (ฉิม) วัดมหาธาตุ รจนา",
+   "closing": {
+    "pali": "สุขาภิยาจะนะคาถา นิฏฐิตา",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here end the Verses Entreating Happiness."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยัง ยัง เทวะมะนุสสานัง มังคะลัตถายะ ภาสิตัง",
+     "pali_roman": "Yaṃ yaṃ devamanussānaṃ maṅgalatthāya bhāsitaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever has been spoken for the blessing of devas and humans,",
+     "page": 101
+    },
+    {
+     "number": 2,
+     "pali": "ตัสสะ ตัสสานุภาเวนะ โหตุ ราชะกุเล สุขัง.",
+     "pali_roman": "Tassa tassānubhāvena hotu rājakule sukhaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of each such word, may there be happiness in the royal house.",
+     "page": 101
+    },
+    {
+     "number": 3,
+     "pali": "เย เย อารักขะกา เทวา ตัตถะ ตัตถาธิวาสิโน",
+     "pali_roman": "Ye ye ārakkhakā devā tattha tatthādhivāsino",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever guardian devas dwell in this place and that,",
+     "page": 101
+    },
+    {
+     "number": 4,
+     "pali": "อิมินา ธัมมะทาเนนะ สัพเพ อัมเหหิ ปูชิตา.",
+     "pali_roman": "Iminā dhammadānena sabbe amhehi pūjitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they all be honoured by us with this gift of Dhamma.",
+     "page": 101
+    },
+    {
+     "number": 5,
+     "pali": "สะทา ภัท์รานิ ปัสสันตุ สุขิตา โหนตุ นิพภะยา",
+     "pali_roman": "Sadā bhadrāni passantu sukhitā hontu nibbhayā",
+     "thai": "",
+     "paiboon": "",
+     "english": "May they always see auspicious things; may they be happy and free of fear;",
+     "page": 101
+    },
+    {
+     "number": 6,
+     "pali": "อัปปะมัตตา จะ อัมเหสุ สัพเพ รักขันตุ โน สะทา.",
+     "pali_roman": "Appamattā ca amhesu sabbe rakkhantu no sadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and being heedful concerning us, may they all guard us always.",
+     "page": 101
+    },
+    {
+     "number": 7,
+     "pali": "ยัญจะ โน ภาสะมาเนหิ กุสะลัง ปะสุตัง พะหุง",
+     "pali_roman": "Yañca no bhāsamānehi kusalaṃ pasutaṃ bahuṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "And whatever abundant merit has been produced by our reciting,",
+     "page": 101
+    },
+    {
+     "number": 8,
+     "pali": "ตันโน เทวานุโมทันตุ จิรัง ติฏฐันตุ สาตะตัง.",
+     "pali_roman": "Tanno devānumodantu ciraṃ tiṭṭhantu sātataṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the devas rejoice in it, and may they stand long and unbroken.",
+     "page": 101
+    },
+    {
+     "number": 9,
+     "pali": "เย วา ชะลาพุชัณฑะชา สังเสทะโชปะปาติกา",
+     "pali_roman": "Ye vā jalābujaṇḍajā saṃsedajopapātikā",
+     "thai": "",
+     "paiboon": "",
+     "english": "And whatever beings are womb-born or egg-born, moisture-born or spontaneously arisen,",
+     "page": 101
+    },
+    {
+     "number": 10,
+     "pali": "อะเวรา โหนตุ สัพเพ เต อะนีฆา นิรุปัททะวา.",
+     "pali_roman": "Averā hontu sabbe te anīghā nirupaddavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they all be free of enmity, free of affliction, free of misfortune.",
+     "page": 101
+    },
+    {
+     "number": 11,
+     "pali": "ปัสสันตุ อะนะวัชชานิ มา จะ สาวัชชะมาคะมา",
+     "pali_roman": "Passantu anavajjāni mā ca sāvajjamāgamā",
+     "thai": "",
+     "paiboon": "",
+     "english": "May they see what is blameless, and may nothing blameworthy come upon them.",
+     "page": 101
+    },
+    {
+     "number": 12,
+     "pali": "จิรัง ติฏฐะตุ โลกัส์มิง สัมมาสัมพุทธะสาสะนัง.",
+     "pali_roman": "Ciraṃ tiṭṭhatu lokasmiṃ sammāsambuddhasāsanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Long may the teaching of the Perfectly Self-Awakened One stand in the world,",
+     "page": 101
+    },
+    {
+     "number": 13,
+     "pali": "ทัสเสนตัง โสตะวันตูนัง มัคคัง สัตตะวิสุทธิยา",
+     "pali_roman": "Dassentaṃ sotavantūnaṃ maggaṃ sattavisuddhiyā",
+     "thai": "",
+     "paiboon": "",
+     "english": "showing to those who have ears the path to the purification of beings.",
+     "page": 101
+    },
+    {
+     "number": 14,
+     "pali": "ยาวะ พุทโธติ นามัมปิ โลกะเชฏฐัสสะ สัตถุโน",
+     "pali_roman": "Yāva buddhoti nāmampi lokajeṭṭhassa satthuno",
+     "thai": "",
+     "paiboon": "",
+     "english": "For as long as even the name 'Buddha' — of the Teacher, chief of the world,",
+     "page": 101
+    },
+    {
+     "number": 15,
+     "pali": "สัมมาเทสิตะธัมมัสสะ ปะวัตตะติ มะเหสิโน",
+     "pali_roman": "Sammādesitadhammassa pavattati mahesino",
+     "thai": "",
+     "paiboon": "",
+     "english": "the great sage whose Dhamma was rightly taught — continues,",
+     "page": 101
+    },
+    {
+     "number": 16,
+     "pali": "ปะสันนา โหนตุ สัพเพปิ ปาณิโน พุทธะสาสะเน.",
+     "pali_roman": "Pasannā hontu sabbepi pāṇino buddhasāsane.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may every living being have faith in the Buddha's teaching.",
+     "page": 101
+    },
+    {
+     "number": 17,
+     "pali": "สัมมา ธารัง ปะเวจฉันโต กาเล เทโว ปะวัสสะตุ",
+     "pali_roman": "Sammā dhāraṃ pavecchanto kāle devo pavassatu",
+     "thai": "",
+     "paiboon": "",
+     "english": "Pouring down its stream in right measure, may the rain-deva rain in season,",
+     "page": 101
+    },
+    {
+     "number": 18,
+     "pali": "วุฑฒิภาวายะ สัตตานัง สะมิทธัง เนตุ เมทะนิง.",
+     "pali_roman": "Vuḍḍhibhāvāya sattānaṃ samiddhaṃ netu medaniṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and bring the earth to abundance, for the growth of beings.",
+     "page": 101
+    },
+    {
+     "number": 19,
+     "pali": "มาตา ปิตา จะ อัต์ระชัง นิจจัง รักขันติ ปุตตะกัง",
+     "pali_roman": "Mātā pitā ca attajaṃ niccaṃ rakkhanti puttakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "As a mother and a father always guard the little child born of them,",
+     "page": 101
+    },
+    {
+     "number": 20,
+     "pali": "เอวัง ธัมเมนะ ราชาโน ปะชัง รักขันตุ สัพพะทา.",
+     "pali_roman": "Evaṃ dhammena rājāno pajaṃ rakkhantu sabbadā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "so may kings guard their people always, and by Dhamma.",
+     "page": 101
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ชะลาพุชัณฑะชา / สังเสทะโชปะปาติกา",
+     "pali_roman": "jalābuja-aṇḍajā / saṃsedaja-opapātikā",
+     "meaning": "the four modes of birth — womb-born, egg-born, moisture-born and spontaneously arisen. Verse 9 names all four so that nothing alive is left out of the wish that follows"
+    },
+    {
+     "pali": "เมทะนิง",
+     "pali_roman": "medaniṃ",
+     "meaning": "the earth, the ground. Verse 18 asks the rain to bring it to abundance — a chant that prays for the harvest as well as for the mind"
+    },
+    {
+     "pali": "อะภิยาจะนะ",
+     "pali_roman": "abhiyācana",
+     "meaning": "entreaty. The same word as page 100's title, and the two chants sit together for that reason: one entreats power, this one entreats happiness"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0366.PNG",
+     "issue": "A SECOND AUTHORSHIP FOOTNOTE, IMMEDIATELY AFTER THE FIRST. The page prints, under a rule, `1. สมเด็จพระพุทธโฆษาจารย์ (ฉิม) วัดมหาธาตุ รจนา` — 'composed by Somdet Phra Buddhaghosacariya (Chim) of Wat Mahathat'. Page 100's footnote named King Mongkut. Two in a row means this is not a one-off: this part of the book cites AUTHORS, not the canon, because these chants are Siamese compositions rather than canonical texts. Held in source_printed, as page 100's was."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0366.PNG",
+     "issue": "‼ book_number IS NOT UNIQUE ACROSS THE BOOK, AND MUST NOT BE MADE SO. This chant's printed 14 is also carried by ปัพพะโตปะมะคาถา earlier in the book, exactly as page 100's printed 13 is also carried by อาทิยะสุตตะคาถา on page 30. The book restarts its numbering by section. Both pages print the number, so both keep it. Anything that later asserts a unique book_number would be asserting something the book does not do."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0366.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1009. Read ACROSS. FIRST PAIRING FOR CHECKING: left ยัง ยัง เทวะมะนุสสานัง + right มังคะลัตถายะ ภาสิตัง."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0366.PNG",
+     "issue": "Indents measured against a fitted baseline, as page 100 established. This sheet lay FLAT — the fit is x = -0.0005*y + 254.6, a drift of -1px over the whole block, against page 100's -65px. Rows 2-20 sit on it within 3px; verse 1 stands +116 clear. ONE indent, on verse 1, which the chant's own paragraph start already carries. No para_start anywhere. The page-edge shadow runs the full height at x 140-169 and had to be excluded first — scanning from x 150 returns 150 for every row and hides the answer completely."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0366.PNG",
+     "issue": "The colophon สุขาภิยาจะนะคาถา นิฏฐิตา is centred and bold beneath the last row, above the footnote rule. Held in closing.pali."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0366.PNG",
+     "issue": "Two words carry the ์ cluster mark: ภัท์รานิ (v5) and อัต์ระชัง (v19). Both romanised with the mark read as a cluster and dropped — bhadrāni, attajaṃ."
+    },
+    {
+     "verse": 20,
+     "file": "IMG_0366.PNG",
+     "issue": "The last verse ends with the footnote marker, printed สัพพะทา.¹ — the marker sits after the full stop. Reproduced without the marker in the pali layer, since the footnote itself is carried by source_printed and the template prints it under a rule."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0366.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "sukhabhiyacana-gatha"
+  ],
+  "continues": [],
+  "resume_from": null,
+  "paiboon_scan": "Nothing to scan. The chant is printed in Pali only, so paiboon is empty on every verse. The one Thai string on the page is source_printed, which is a footnote and not a chanted layer.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0366.PNG read end to end. Page number 101 read off the sheet. One centred bold numbered title, one block of 20 rows, one centred colophon, one rule and one footnote. Nothing else.",
+  "notes": "Page 101 is the second of a pair: 13. ระตะนัตตะยัปปะภาวาภิยาจะนะคาถา entreats the power of the Triple Gem, 14. สุขาภิยาจะนะคาถา entreats happiness, and both carry an AUTHORSHIP footnote rather than a canonical citation. This is a section of Siamese compositions, not canon.",
+  "diacritic_exceptions": []
+ }
+}

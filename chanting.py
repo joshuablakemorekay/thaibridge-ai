@@ -32568,6 +32568,400 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0366.PNG]: A SECOND AUTHORSHIP FOOTNOTE, IMMEDIATELY
+        #   AFTER THE FIRST. The page prints, under a rule, `1.
+        #   สมเด็จพระพุทธโฆษาจารย์ (ฉิม) วัดมหาธาตุ รจนา` — 'composed by
+        #   Somdet Phra Buddhaghosacariya (Chim) of Wat Mahathat'. Page 100's
+        #   footnote named King Mongkut. Two in a row means this is not a one-
+        #   off: this part of the book cites AUTHORS, not the canon, because
+        #   these chants are Siamese compositions rather than canonical texts.
+        #   Held in source_printed, as page 100's was.
+        # ‼ CHECK [IMG_0366.PNG]: ‼ book_number IS NOT UNIQUE ACROSS THE BOOK,
+        #   AND MUST NOT BE MADE SO. This chant's printed 14 is also carried
+        #   by ปัพพะโตปะมะคาถา earlier in the book, exactly as page 100's
+        #   printed 13 is also carried by อาทิยะสุตตะคาถา on page 30. The book
+        #   restarts its numbering by section. Both pages print the number, so
+        #   both keep it. Anything that later asserts a unique book_number
+        #   would be asserting something the book does not do.
+        # ‼ CHECK [IMG_0366.PNG]: The colophon สุขาภิยาจะนะคาถา นิฏฐิตา is
+        #   centred and bold beneath the last row, above the footnote rule.
+        #   Held in closing.pali.
+        # ‼ CHECK [IMG_0366.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'sukhabhiyacana-gatha',
+        'title_thai': 'สุขาภิยาจะนะคาถา',
+        'title_pali': '',
+        'title_roman': 'Sukhābhiyācanagāthā',
+        'title_english': 'Verses Entreating Happiness',
+        'book_number': '14',
+        'page_start': 101,
+        'source_printed': 'สมเด็จพระพุทธโฆษาจารย์ (ฉิม) วัดมหาธาตุ รจนา',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'สุขาภิยาจะนะคาถา นิฏฐิตา',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses Entreating Happiness.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0366.PNG]: TWO COLUMNS, right column begins at x
+            #   1009. Read ACROSS. FIRST PAIRING FOR CHECKING: left ยัง ยัง
+            #   เทวะมะนุสสานัง + right มังคะลัตถายะ ภาสิตัง.
+            # ‼ CHECK [IMG_0366.PNG]: Indents measured against a fitted
+            #   baseline, as page 100 established. This sheet lay FLAT — the
+            #   fit is x = -0.0005*y + 254.6, a drift of -1px over the whole
+            #   block, against page 100's -65px. Rows 2-20 sit on it within
+            #   3px; verse 1 stands +116 clear. ONE indent, on verse 1, which
+            #   the chant's own paragraph start already carries. No para_start
+            #   anywhere. The page-edge shadow runs the full height at x
+            #   140-169 and had to be excluded first — scanning from x 150
+            #   returns 150 for every row and hides the answer completely.
+            {
+                'number': 1,
+                'page': 101,
+                'pali': 'ยัง ยัง เทวะมะนุสสานัง มังคะลัตถายะ ภาสิตัง',
+                'pali_roman': 'Yaṃ yaṃ devamanussānaṃ maṅgalatthāya bhāsitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever has been spoken for the blessing of devas and humans,',
+            },
+            {
+                'number': 2,
+                'page': 101,
+                'pali': 'ตัสสะ ตัสสานุภาเวนะ โหตุ ราชะกุเล สุขัง.',
+                'pali_roman': 'Tassa tassānubhāvena hotu rājakule sukhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of each such word, may there be happiness in the royal house.',
+            },
+            {
+                'number': 3,
+                'page': 101,
+                'pali': 'เย เย อารักขะกา เทวา ตัตถะ ตัตถาธิวาสิโน',
+                'pali_roman': 'Ye ye ārakkhakā devā tattha tatthādhivāsino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever guardian devas dwell in this place and that,',
+            },
+            {
+                'number': 4,
+                'page': 101,
+                'pali': 'อิมินา ธัมมะทาเนนะ สัพเพ อัมเหหิ ปูชิตา.',
+                'pali_roman': 'Iminā dhammadānena sabbe amhehi pūjitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they all be honoured by us with this gift of Dhamma.',
+            },
+            # ‼ CHECK [IMG_0366.PNG]: Two words carry the ์ cluster mark:
+            #   ภัท์รานิ (v5) and อัต์ระชัง (v19). Both romanised with the
+            #   mark read as a cluster and dropped — bhadrāni, attajaṃ.
+            {
+                'number': 5,
+                'page': 101,
+                'pali': 'สะทา ภัท์รานิ ปัสสันตุ สุขิตา โหนตุ นิพภะยา',
+                'pali_roman': 'Sadā bhadrāni passantu sukhitā hontu nibbhayā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May they always see auspicious things; may they be happy and free of fear;',
+            },
+            {
+                'number': 6,
+                'page': 101,
+                'pali': 'อัปปะมัตตา จะ อัมเหสุ สัพเพ รักขันตุ โน สะทา.',
+                'pali_roman': 'Appamattā ca amhesu sabbe rakkhantu no sadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and being heedful concerning us, may they all guard us always.',
+            },
+            {
+                'number': 7,
+                'page': 101,
+                'pali': 'ยัญจะ โน ภาสะมาเนหิ กุสะลัง ปะสุตัง พะหุง',
+                'pali_roman': 'Yañca no bhāsamānehi kusalaṃ pasutaṃ bahuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And whatever abundant merit has been produced by our reciting,',
+            },
+            {
+                'number': 8,
+                'page': 101,
+                'pali': 'ตันโน เทวานุโมทันตุ จิรัง ติฏฐันตุ สาตะตัง.',
+                'pali_roman': 'Tanno devānumodantu ciraṃ tiṭṭhantu sātataṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may the devas rejoice in it, and may they stand long and unbroken.',
+            },
+            {
+                'number': 9,
+                'page': 101,
+                'pali': 'เย วา ชะลาพุชัณฑะชา สังเสทะโชปะปาติกา',
+                'pali_roman': 'Ye vā jalābujaṇḍajā saṃsedajopapātikā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And whatever beings are womb-born or egg-born, moisture-born or spontaneously arisen,',
+            },
+            {
+                'number': 10,
+                'page': 101,
+                'pali': 'อะเวรา โหนตุ สัพเพ เต อะนีฆา นิรุปัททะวา.',
+                'pali_roman': 'Averā hontu sabbe te anīghā nirupaddavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may they all be free of enmity, free of affliction, free of misfortune.',
+            },
+            {
+                'number': 11,
+                'page': 101,
+                'pali': 'ปัสสันตุ อะนะวัชชานิ มา จะ สาวัชชะมาคะมา',
+                'pali_roman': 'Passantu anavajjāni mā ca sāvajjamāgamā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May they see what is blameless, and may nothing blameworthy come upon them.',
+            },
+            {
+                'number': 12,
+                'page': 101,
+                'pali': 'จิรัง ติฏฐะตุ โลกัส์มิง สัมมาสัมพุทธะสาสะนัง.',
+                'pali_roman': 'Ciraṃ tiṭṭhatu lokasmiṃ sammāsambuddhasāsanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Long may the teaching of the Perfectly Self-Awakened One stand in the world,',
+            },
+            {
+                'number': 13,
+                'page': 101,
+                'pali': 'ทัสเสนตัง โสตะวันตูนัง มัคคัง สัตตะวิสุทธิยา',
+                'pali_roman': 'Dassentaṃ sotavantūnaṃ maggaṃ sattavisuddhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'showing to those who have ears the path to the purification of beings.',
+            },
+            {
+                'number': 14,
+                'page': 101,
+                'pali': 'ยาวะ พุทโธติ นามัมปิ โลกะเชฏฐัสสะ สัตถุโน',
+                'pali_roman': 'Yāva buddhoti nāmampi lokajeṭṭhassa satthuno',
+                'thai': '',
+                'paiboon': '',
+                'english': "For as long as even the name 'Buddha' — of the Teacher, chief of the world,",
+            },
+            {
+                'number': 15,
+                'page': 101,
+                'pali': 'สัมมาเทสิตะธัมมัสสะ ปะวัตตะติ มะเหสิโน',
+                'pali_roman': 'Sammādesitadhammassa pavattati mahesino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the great sage whose Dhamma was rightly taught — continues,',
+            },
+            {
+                'number': 16,
+                'page': 101,
+                'pali': 'ปะสันนา โหนตุ สัพเพปิ ปาณิโน พุทธะสาสะเน.',
+                'pali_roman': 'Pasannā hontu sabbepi pāṇino buddhasāsane.',
+                'thai': '',
+                'paiboon': '',
+                'english': "may every living being have faith in the Buddha's teaching.",
+            },
+            {
+                'number': 17,
+                'page': 101,
+                'pali': 'สัมมา ธารัง ปะเวจฉันโต กาเล เทโว ปะวัสสะตุ',
+                'pali_roman': 'Sammā dhāraṃ pavecchanto kāle devo pavassatu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Pouring down its stream in right measure, may the rain-deva rain in season,',
+            },
+            {
+                'number': 18,
+                'page': 101,
+                'pali': 'วุฑฒิภาวายะ สัตตานัง สะมิทธัง เนตุ เมทะนิง.',
+                'pali_roman': 'Vuḍḍhibhāvāya sattānaṃ samiddhaṃ netu medaniṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and bring the earth to abundance, for the growth of beings.',
+            },
+            {
+                'number': 19,
+                'page': 101,
+                'pali': 'มาตา ปิตา จะ อัต์ระชัง นิจจัง รักขันติ ปุตตะกัง',
+                'pali_roman': 'Mātā pitā ca attajaṃ niccaṃ rakkhanti puttakaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'As a mother and a father always guard the little child born of them,',
+            },
+            # ‼ CHECK [IMG_0366.PNG]: The last verse ends with the footnote
+            #   marker, printed สัพพะทา.¹ — the marker sits after the full
+            #   stop. Reproduced without the marker in the pali layer, since
+            #   the footnote itself is carried by source_printed and the
+            #   template prints it under a rule.
+            {
+                'number': 20,
+                'page': 101,
+                'pali': 'เอวัง ธัมเมนะ ราชาโน ปะชัง รักขันตุ สัพพะทา.',
+                'pali_roman': 'Evaṃ dhammena rājāno pajaṃ rakkhantu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so may kings guard their people always, and by Dhamma.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kitchawat-10-yang',
+        'title_thai': 'กิจวัตร ๑๐ อย่าง',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Ten Duties',
+        'page_start': 304,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0571.PNG]: ⚠ TWO COLUMNS, BUT EACH CELL IS ITS OWN
+            #   VERSE — the opposite of how every two-column page in the roman
+            #   section was entered. There a row was ONE line of verse split
+            #   across the gutter, so the row was the unit; here each cell is
+            #   a COMPLETE numbered duty, and the numbering runs 1-2 across
+            #   then 3-4, which proves the columns are read across as separate
+            #   items rather than joined. Ten cells, ten verses. Gutter
+            #   measured at x 916-1030.
+            {
+                'number': 1,
+                'page': 304,
+                'printed_number': 1,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ลงอุโบสถ',
+                'paiboon': '',
+                'english': 'Attending the uposatha',
+            },
+            {
+                'number': 2,
+                'printed_number': 2,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'บิณฑบาตเลี้ยงชีพ',
+                'paiboon': '',
+                'english': "Going on almsround for one's livelihood",
+            },
+            {
+                'number': 3,
+                'printed_number': 3,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'สวดมนต์ไหว้พระ',
+                'paiboon': '',
+                'english': 'Chanting and paying homage',
+            },
+            {
+                'number': 4,
+                'printed_number': 4,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'กวาดอาวาสวิหารลานพระเจดีย์',
+                'paiboon': '',
+                'english': 'Sweeping the monastery, the hall and the courtyard of the stupa',
+            },
+            {
+                'number': 5,
+                'printed_number': 5,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'รักษาผ้าครอง',
+                'paiboon': '',
+                'english': 'Caring for the robes one wears',
+            },
+            {
+                'number': 6,
+                'printed_number': 6,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'อยู่ปริวาสกรรม',
+                'paiboon': '',
+                'english': 'Undergoing probation when it is required',
+            },
+            {
+                'number': 7,
+                'printed_number': 7,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'โกนผมปลงหนวดตัดเล็บ',
+                'paiboon': '',
+                'english': 'Shaving the head, trimming the beard and cutting the nails',
+            },
+            {
+                'number': 8,
+                'printed_number': 8,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ศึกษาสิกขาบทและปฏิบัติพระอาจารย์',
+                'paiboon': '',
+                'english': "Studying the training rules and attending upon one's teacher",
+            },
+            # ‼ CHECK [IMG_0571.PNG]: Item 9 prints a Thai gloss in brackets
+            #   with NO SPACE before it — 'เทศนาบัติ(แสดงอาบัติ)' — where the
+            #   book normally spaces its brackets. Kept exactly as set.
+            {
+                'number': 9,
+                'printed_number': 9,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เทศนาบัติ(แสดงอาบัติ)',
+                'paiboon': '',
+                'english': 'Declaring offences (confessing an offence)',
+            },
+            # ‼ CHECK [IMG_0571.PNG]: Item 10 ends 'เป็นต้น', and so on — the
+            #   list is explicitly open-ended at its last item even though the
+            #   heading counts ten. Kept as printed rather than closed off.
+            {
+                'number': 10,
+                'printed_number': 10,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'พิจารณาปัจจะเวกขะณะทั้ง 4 เป็นต้น',
+                'paiboon': '',
+                'english': 'Reflecting on the four requisites, and so on',
+            },
+            # ‼ CHECK [IMG_0571.PNG]: The closing paragraph is PROSE at full
+            #   measure with no gutter, against the list above it, so it
+            #   declares para_layout 'prose'. It also ends with a full stop,
+            #   which the ten list items do not.
+            {
+                'number': 11,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'กิจวัตร 10 เหล่านี้เป็นกิจใหญ่ควรที่ภิกษุจะต้องศึกษาให้ทราบความชัดและจำไว้เพื่อปฏิบัติสมควรแก่สมณสารูปแห่งตน.',
+                'paiboon': '',
+                'english': 'These ten duties are matters of weight. A monk should study them until he knows them clearly and holds them in mind, so as to practise in a way befitting his state as a recluse.',
+            },
+        ],
+    },
 ]
 
 
