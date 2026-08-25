@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-102 went in.
+103 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–102 are in and unbroken**, plus 217–221. **138 chants and 2,099
+- **Pages 1–103 are in and unbroken**, plus 217–221. **140 chants and 2,112
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 102 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 103 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,28 +46,39 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 103, `IMG_0368` — ⚠️ A CHANT IS OPEN, and its top is known
+## Next: page 104, `IMG_0369` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–102, so page 103 *should*
-be `IMG_0368`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–103, so page 104 *should*
+be `IMG_0369`. **Five more changes are still expected before page 207.**
 
-**⚠️ `mongkhon-chakkrawan-yai` IS OPEN AND CARRIES A `‼ CONTINUES` MARKER.** It
-starts on page 102 with verse 1 and runs to verse 10 there. **Resume at verse
-11.** Page 103 was peeked at and prints, before anything else:
+**⚠️ `dasanathakarana-dhamma-suttam` IS OPEN and carries a `‼ CONTINUES` marker.**
+It starts on page 103 with the nidāna and the book's numbered items 1 and 2.
+**Item 2 is cut mid-sentence after `สาตัถัง` and RESUMES at verse 4.** Eight more
+numbered items are still to come — the sutta lists ten.
 
-1. four more two-column rows — `นักขัตตะยักขะภูตานัง` / `ปาปัคคะหะนิวาระณา`
-   then `ปะริตตัสสานุภาเวนะ` / `หันต์วา เตสัง อุปัททะเว.`, the SAME couplet
-   twice over;
-2. a centred bold **THAI** colophon, **`จบสิบสองตำนาน`** — "here end the Twelve
-   Tamnan";
-3. then a new chant, `บทขัด ทะสะนาถะกะระณะธัมมะสุตตัง`.
+The book's own item numbers go in `printed_number` and are OFFSET FROM the verse
+numbers by one, because verse 1 is the unnumbered nidāna: printed 1 = verse 2,
+printed 2 = verse 3, and so on.
 
-Read all of that off the sheet again rather than trusting this note — it was a
-quick look, not a measured read. **The Thai colophon needs a decision**: it is
-Thai, not Pali, so it hits exactly the bug recorded below — `closing.pali` is
-what the template gates on, and putting Thai there is what produced the eleven
-doubled colophons on pages 38–47. Do not repeat that. Either fix the template
-first, or record the colophon and raise it with Josh.
+## ✅ The Thai-colophon bug is FIXED — and the two kinds are different
+
+`templates/chanting_page.html` now gates the closing block on
+`closing.pali OR closing.thai`, with the pali line conditional, so a **Thai**
+colophon renders without having to be duplicated into `pali`. The eleven
+doubled colophons on pages 38–47 are corrected and each prints once.
+
+**But note which mechanism a จบ line belongs in — they are NOT the same:**
+
+| what it closes | where it goes | example |
+|---|---|---|
+| **one chant** | `closing` on that chant | `จบพระวิภังค์` closes the Vibhaṅga, page 40 |
+| **a whole section** | `service_closing` on the PAGE ROW | `จบสิบสองตำนาน` closes the Twelve Tamnan, page 103 |
+
+Page 103's line closes the SECTION, so `มงคลจักรวาฬใหญ่` itself gets **no**
+colophon — the same treatment page 41 gave `จบสวดแจงเท่านี้`. Its optical centre
+measures x 984 against 977 and 982 for the sheet's two bold titles, which is how
+it was identified as a centred heading rather than body text.
+
 
 ## ❗ This section cites AUTHORS, not the canon — and its numbering RESTARTS
 

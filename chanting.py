@@ -33526,7 +33526,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 10; the rest is not in the app yet.
         # ‼ CHECK [IMG_0367.PNG]: THE CHANT CONTINUES ONTO PAGE 103, which
         #   prints four more rows — นักขัตตะยักขะภูตานัง / ปะริตตัสสานุภาเวนะ
         #   twice more — and then the centred bold THAI colophon
@@ -33682,6 +33681,61 @@ CHANTS = [
             {
                 'number': 10,
                 'page': 102,
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.',
+                'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the paritta, having destroyed their misfortunes.',
+            },
+            # ‼ CHECK [IMG_0368.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Fourteen verses across pages 102 and 103 — a
+            #   fifteen-line prose block and eight rows on 102, four rows
+            #   here.
+            # ‼ CHECK [IMG_0368.PNG]: ‼ THE SAME COUPLET IS PRINTED THREE
+            #   TIMES ACROSS THE TWO PAGES. นักขัตตะยักขะภูตานัง /
+            #   ปาปัคคะหะนิวาระณา followed by ปะริตตัสสานุภาเวนะ / หันต์วา
+            #   เตสัง อุปัททะเว. closes page 102 as verses 9-10 and is then
+            #   set TWICE MORE here as 11-12 and 13-14. All three were read
+            #   off the sheets separately rather than copied. It is not a
+            #   printer's doubling: page 103's two are both there, one under
+            #   the other, and the indents alternate across all three exactly
+            #   as they do through the rest of the chant.
+            # ‼ CHECK [IMG_0368.PNG]: Indents continue the page-102 pattern —
+            #   verses 11 and 13 stand at x 360/359 against 240/239 for 12 and
+            #   14, about 120px, so para_start is set on 11 and 13. Measured
+            #   against a flat baseline; this sheet does not drift.
+            {
+                'number': 11,
+                'page': 103,
+                'para_start': True,
+                'pali': 'นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา',
+                'pali_roman': 'Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Warding off the evil planets of the stars, the yakkhas and the spirits,',
+            },
+            {
+                'number': 12,
+                'page': 103,
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.',
+                'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the paritta, having destroyed their misfortunes.',
+            },
+            {
+                'number': 13,
+                'page': 103,
+                'para_start': True,
+                'pali': 'นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา',
+                'pali_roman': 'Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Warding off the evil planets of the stars, the yakkhas and the spirits,',
+            },
+            {
+                'number': 14,
+                'page': 103,
                 'pali': 'ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.',
                 'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
                 'thai': '',
@@ -38015,6 +38069,179 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0368.PNG]: A THIRTEENTH TITLE THE CONTENTS TEST CANNOT
+        #   SEE. The page prints บทขัด ทะสะนาถะกะระณะธัมมะสุตตัง with a SPACE
+        #   after บทขัด; the สารบัญ has it without one. Every บทขัด from page
+        #   82 on has done this.
+        # ‼ CHECK [IMG_0368.PNG]: Every row ends in a COMMA except the last,
+        #   which ends in a full stop. Reproduced as printed.
+        # ‼ CHECK [IMG_0368.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-dasanathakarana-dhamma-suttam',
+        'title_thai': 'บทขัด ทะสะนาถะกะระณะธัมมะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt tá-sà-naa-tà-gà-rá-ná-tam-má-sùt-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Discourse on the Ten Refuge-Makers',
+        'page_start': 103,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0368.PNG]: TWO COLUMNS, right column begins at x
+            #   1010. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   สะเทวะกัสสะ โลกัสสะ + right นาถะภูโต นะราสะโภ,.
+            # ‼ CHECK [IMG_0368.PNG]: ONE indent only, on verse 1, measured at
+            #   x 361 against a flat baseline of 239-244 for verses 2-6. The
+            #   chant's own paragraph start carries it, so no para_start is
+            #   set anywhere.
+            {
+                'number': 1,
+                'page': 103,
+                'pali': 'สะเทวะกัสสะ โลกัสสะ นาถะภูโต นะราสะโภ,',
+                'pali_roman': 'Sadevakassa lokassa nāthabhūto narāsabho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Being a refuge for the world with its devas, the bull among men,',
+            },
+            {
+                'number': 2,
+                'page': 103,
+                'pali': 'สะนาถัตตัปปะสิทธัตถัง สาวะกานัง หิเตสะโก,',
+                'pali_roman': 'Sanāthattappasiddhatthaṃ sāvakānaṃ hitesako,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'seeking the welfare of his disciples, that they might be established as ones with a refuge,',
+            },
+            {
+                'number': 3,
+                'page': 103,
+                'pali': 'ทะสะ นาถะกะระเณ นามะ เย ธัมเม สะมุทีระยิ,',
+                'pali_roman': 'Dasa nāthakaraṇe nāma ye dhamme samudīrayi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'proclaimed the ten states called the makers of a refuge —',
+            },
+            {
+                'number': 4,
+                'page': 103,
+                'pali': 'ตังสัมปะทาภิกามานัง สาธูนัง ธัมมะกามินัง,',
+                'pali_roman': 'Taṃsampadābhikāmānaṃ sādhūnaṃ dhammakāminaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for good people who love the Dhamma and long to attain them,',
+            },
+            {
+                'number': 5,
+                'page': 103,
+                'pali': 'เตสัง สันทีปะกัง สุตตัง ยัง นาเถเนวะ ภาสิตัง,',
+                'pali_roman': 'Tesaṃ sandīpakaṃ suttaṃ yaṃ nāthenevabhāsitaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the sutta that sets those states out, spoken by the Refuge himself —',
+            },
+            {
+                'number': 6,
+                'page': 103,
+                'pali': 'สะนาถัตตาตะสิทธัตถัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Sanāthattātasiddhatthaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let us recite that discourse, that we may be established as ones with a refuge.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0368.PNG]: The heading prints 16. before the title.
+        #   Kept in book_number and out of title_thai, so title_thai matches
+        #   _CONTENTS_ROMAN and the never-spell-a-title-two-ways test CAN see
+        #   this chant. book_number 16 is also carried by ภัทเทกะรัตตะคาถา
+        #   earlier in the book — the numbering restarts by section and must
+        #   not be made unique.
+        # ‼ CHECK [IMG_0368.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'dasanathakarana-dhamma-suttam',
+        'title_thai': 'ทะสะนาถะกะระณะธัมมะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Dasanāthakaraṇadhammasuttaṃ',
+        'title_english': 'The Discourse on the Ten Refuge-Makers',
+        'book_number': '16',
+        'page_start': 103,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0368.PNG]: SINGLE column prose from the heading
+            #   down, unlike the two-column blocks above it on the same sheet.
+            #   ตัต์ระ carries the ์ cluster mark, romanised tatra with the
+            #   mark read as a cluster and dropped.
+            {
+                'number': 1,
+                'page': 103,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ สะนาถา ภิกขะเว วิหะระถะ มา อะนาถา, ทุกขัง ภิกขะเว อะนาโถ วิหะระติ. ทะสะยิเม ภิกขะเว นาถะกะระณา ธัมมา. กะตะเม ทะสะ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca sanāthā bhikkhave viharatha mā anāthā, dukkhaṃ bhikkhave anātho viharati. Dasayime bhikkhave nāthakaraṇā dhammā. Katame dasa.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the monks: 'Monks.' 'Venerable sir,' those monks replied. The Blessed One said this: 'Monks, dwell as those who have a refuge, not as those without one. One without a refuge, monks, dwells in suffering. There are these ten refuge-making qualities, monks. Which ten?'",
+            },
+            # ‼ CHECK [IMG_0368.PNG]: The book numbers its own items 1. and
+            #   2., so those go in printed_number. They do NOT agree with the
+            #   verse numbers, because verse 1 is the unnumbered nidāna — the
+            #   same offset the Dasadhamma Sutta already has in the app.
+            {
+                'number': 2,
+                'page': 103,
+                'printed_number': 1,
+                'para_start': True,
+                'pali': 'อิธะ ภิกขะเว ภิกขุ สีละวา โหติ, ปาติโมกขะสังวะระสังวุโต วิหะระติ, อาจาระโคจะระสัมปันโน, อะณุมัตเตสุ วัชเชสุ ภะยะทัสสาวี สะมาทายะ สิกขะติ สิกขาปะเทสุ. ยัมปิ ภิกขะเว ภิกขุ สีละวา โหติ ปาติโมกขะสังวะระสังวุโต วิหะระติ อาจาระโคจะระสัมปันโน, อะณุมัตเตสุ วัชเชสุ ภะยะทัสสาวี สะมาทายะ สิกขะติ สิกขาปะเทสุ, อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali_roman': 'Idha bhikkhave bhikkhu sīlavā hoti, pātimokkhasaṃvarasaṃvuto viharati, ācāragocarasampanno, aṇumattesu vajjesu bhayadassāvī samādāya sikkhati sikkhāpadesu. Yampi bhikkhave bhikkhu sīlavā hoti pātimokkhasaṃvarasaṃvuto viharati ācāragocarasampanno, aṇumattesu vajjesu bhayadassāvī samādāya sikkhati sikkhāpadesu, ayampi dhammo nāthakaraṇo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here, monks, a monk is virtuous; he dwells restrained by the restraint of the Pātimokkha, perfect in conduct and resort, seeing danger in the slightest fault, and trains in the training rules he has undertaken. That a monk is virtuous in this way — this too is a refuge-making quality.',
+            },
+            # ‼ CHECK [IMG_0368.PNG]: CUT MID-SENTENCE. Item 2 breaks after
+            #   สาตัถัง at the foot of the page and runs on to page 104.
+            #   Marked with […] and continues is set. An ink profile below the
+            #   last line found marks only at y 2720+, which is the page edge.
+            # ‼ CHECK [IMG_0368.PNG]: Three words carry the ล์ cluster mark in
+            #   item 2 — อาทิกัล์ยาณา, มัชเฌกัล์ยาณา and ปะริโยสานะกัล์ยาณา —
+            #   all romanised -kalyāṇā with the mark read as a cluster.
+            {
+                'number': 3,
+                'page': 103,
+                'printed_number': 2,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา สาตัถัง […]',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā sātthaṃ […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk has learned much, retains what he has heard and stores it up; those teachings which are good in the beginning, good in the middle and good at the end, with meaning […]',
+            },
+        ],
+    },
 ]
 
 
@@ -40224,6 +40451,18 @@ PAGE_BLOCKS = [
                 'thai': 'หมายเหตุ บทว่า อาวุโส นั้น ถ้ามีภิกษุแก่พรรษากว่าอุปัชฌาย์ร่วมประชุมอยู่ด้วย พึงใช้ ภันเต แทน',
                 'english': 'Note: as for the word āvuso — if a monk senior to the preceptor is present in the assembly, bhante should be used instead.',
                 'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 103 ───────────────────────────────────────────────────
+    # Written from batch-103-103.json.
+    {
+        'page': 103,
+        'after': 'mongkhon-chakkrawan-yai',
+        'blocks': [
+            {
+                'type': 'service_closing',
+                'thai': 'จบสิบสองตำนาน',
             },
         ],
     },
