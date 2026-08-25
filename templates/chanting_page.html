@@ -829,11 +829,19 @@
         </div>
 
         {# The closing formula the book prints under a finished chant — จบ… .
-           Shown only where the chant actually ENDS on this page. #}
-        {% if chant.closing and chant.closing.pali and entry.verses
+           Shown only where the chant actually ENDS on this page.
+
+           Gated on pali OR thai, because some colophons are THAI, not Pali:
+           จบสิบสองตำนาน closes the Twelve Tamnan on page 103, and the สวดแจง
+           section (pages 38-47) closes its chants with จบพระวินัย and the like.
+           Gating on `pali` alone made a Thai-only colophon vanish, so whoever
+           entered those put the Thai in BOTH `pali` and `thai` to force it to
+           render — which printed the one line the book prints twice over. The
+           pali line is now conditional, so a Thai colophon needs `thai` only. #}
+        {% if chant.closing and (chant.closing.pali or chant.closing.thai) and entry.verses
               and entry.verses[-1].number == chant.verses[-1].number %}
         <div class="verse chant-closing">
-            <p class="layer layer-pali">{{ chant.closing.pali }}</p>
+            {% if chant.closing.pali %}<p class="layer layer-pali">{{ chant.closing.pali }}</p>{% endif %}
             {% if chant.closing.pali_roman %}<p class="layer layer-pali_roman">{{ chant.closing.pali_roman }}</p>{% endif %}
             {% if chant.closing.thai %}<p class="layer layer-thai">{{ chant.closing.thai }}</p>{% endif %}
             {% if chant.closing.paiboon %}<p class="layer layer-paiboon">{{ chant.closing.paiboon }}</p>{% endif %}
