@@ -1,0 +1,44 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [],
+  "pages": [
+   {
+    "page": 277,
+    "file": "IMG_0545.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "withi-banphacha-upasombot-baep-ukasa",
+    "verses": "none",
+    "starts_here": false,
+    "note": "A SECTION DIVIDER and nothing else: ภาคผนวก centred on an otherwise blank sheet, with NO PAGE NUMBER printed on it. The row carries no verses and exists only to place the heading, which is the only way to put a block on a page no chant has lines on. The chant it is attached to is the one that follows in the appendix; the divider introduces the whole section rather than that chant, and that is recorded in the checks.",
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "ภาคผนวก",
+      "english": "Appendix",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 276,
+  "resume_from_file": "IMG_0544.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ and no verses at all in this batch.",
+  "pali_untouched": "Not applicable: this batch carries no verses. The only text is a Thai section heading.",
+  "page_scan": "agrees. One row for one page, carrying no verses and one heading block.",
+  "notes": "A DIVIDER PAGE, AND THE FIRST MISSING SHEET IDENTIFIED. Two findings. (1) ⚠ NO PAGE NUMBER IS PRINTED on this sheet, so for the first time in this pass the page had to be placed by arithmetic — IMG_0544 reads 276, IMG_0546 reads 279, and the contents puts ภาคผนวก at ๒๗๗. (2) ⚠ PAGE 278 IS THE BLANK VERSO OF THIS DIVIDER AND WAS NEVER PHOTOGRAPHED. The offset drops from 268 to 267 across it, which is exactly the signature the photo map predicted for the three unphotographed pages between 224 and 316. This is the first of the three to be found and named; two remain.",
+  "diacritic_exceptions": []
+ }
+}
