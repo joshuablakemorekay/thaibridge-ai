@@ -1,0 +1,179 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "dasanathakarana-dhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 105,
+    "file": "IMG_0370.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "dasanathakarana-dhamma-suttam",
+    "verses": "8-13",
+    "starts_here": false,
+    "note": "SINGLE-column prose. The head of the page completes item 7, cut mid-word on 104. Then items 8, 9 and 10, then two unnumbered closing paragraphs, a centred bold colophon, a rule and a canonical citation. The chant ends here."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "dasanathakarana-dhamma-suttam",
+   "continuation_of": "dasanathakarana-dhamma-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Six. Verse 8 COMPLETES the line page 104 cut; 9, 10 and 11 are the book's numbered items 8, 9 and 10; 12 is the closing exhortation and 13 the formula that ends a sutta, both UNNUMBERED.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None new. printed_number runs one behind the verse number and STOPS at 10 — the last two paragraphs carry no number in the book.",
+    "pages": "IMG_0370.PNG, page 105. The chant arrived from page 104 and ENDS here, with its colophon and a citation."
+   },
+   "english_unverified": true,
+   "source_printed": "อํ. ทสก. 24/25-6-7",
+   "closing": {
+    "pali": "ทะสะนาถะกะระณะธัมมะสุตตัง นิฏฐิตัง",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Discourse on the Ten Refuge-Makers."
+   },
+   "verses": [
+    {
+     "number": 8,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬ์หะปะรักกะโม อะนิกขิตตะธุโร กุสะเลสุ ธัมเมสุ. ยัมปิ ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬหะปะรักกะโม อะนิกขิตตะธุโร กุสะเลสุ ธัมเมสุ. อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu āraddhavīriyo viharati, akusalānaṃ dhammānaṃ pahānāya, kusalānaṃ dhammānaṃ upasampadāya, thāmavā daḷhaparakkamo anikkhittadhuro kusalesu dhammesu. Yampi bhikkhave bhikkhu āraddhavīriyo viharati, akusalānaṃ dhammānaṃ pahānāya, kusalānaṃ dhammānaṃ upasampadāya, thāmavā daḷhaparakkamo anikkhittadhuro kusalesu dhammesu. Ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk dwells with energy aroused for abandoning unwholesome states and acquiring wholesome ones — steadfast, firm in exertion, not laying down the burden with regard to wholesome states. That a monk is energetic in this way — this too is a refuge-making quality.",
+     "para_start": true,
+     "printed_number": 7
+    },
+    {
+     "number": 9,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ สันตุฏโฐ โหติ, อิตะริตะระจีวะระปิณฑะปาตะเสนาสะนะคิลานะปัจจะยะเภสัชชะปะริกขาเรนะ. ยัมปิ ภิกขะเว ภิกขุ สันตุฏโฐ โหติ, อิตะริตะระจีวะระปิณฑะปาตะเสนาสะนะคิลานะปัจจะยะเภสัชชะปะริกขาเรนะ. อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu santuṭṭho hoti, itarītaracīvarapiṇḍapātasenāsanagilānapaccayabhesajjaparikkhārena. Yampi bhikkhave bhikkhu santuṭṭho hoti, itarītaracīvarapiṇḍapātasenāsanagilānapaccayabhesajjaparikkhārena. Ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk is content with whatever robes, almsfood, lodging and medicinal requisites for the sick he receives. That a monk is content in this way — this too is a refuge-making quality.",
+     "page": 105,
+     "para_start": true,
+     "printed_number": 8
+    },
+    {
+     "number": 10,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ สะติมา โหติ, ปะระเมนะ สะติเนปักเกนะ สะมันนาคะโต, จิระกะตัมปิ จิระภาสิตัมปิ สะริตา อะนุสสะริตา, ยัมปิ ภิกขะเว ภิกขุ สะติมา โหติ, ปะระเมนะ สะติเนปักเกนะ สะมันนาคะโต, จิระกะตัมปิ จิระภาสิตัมปิ สะริตา อะนุสสะริตา, อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu satimā hoti, paramena satinepakkena samannāgato, cirakatampi cirabhāsitampi saritā anussaritā, yampi bhikkhave bhikkhu satimā hoti, paramena satinepakkena samannāgato, cirakatampi cirabhāsitampi saritā anussaritā, ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk is mindful, possessed of the highest mindfulness and discretion, one who remembers and recollects what was done and said long ago. That a monk is mindful in this way — this too is a refuge-making quality.",
+     "page": 105,
+     "para_start": true,
+     "printed_number": 9
+    },
+    {
+     "number": 11,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ ปัญญะวา โหติ, อุทะยัตถะคามินิยา ปัญญายะ สะมันนาคะโต, อะริยายะ นิพเพธิกายะ สัมมาทุกขักขะยะคามินิยา, ยัมปิ ภิกขะเว ภิกขุ ปัญญะวา โหติ, อุทะยัตถะคามินิยา ปัญญายะ สะมันนาคะโต, อะริยายะ นิพเพธิกายะ สัมมาทุกขักขะยะคามินิยา, อะยัมปิ ธัมโม นาถะกะระโณ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu paññavā hoti, udayatthagāminiyā paññāya samannāgato, ariyāya nibbedhikāya sammādukkhakkhayagāminiyā, yampi bhikkhave bhikkhu paññavā hoti, udayatthagāminiyā paññāya samannāgato, ariyāya nibbedhikāya sammādukkhakkhayagāminiyā, ayampi dhammo nāthakaraṇo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk is wise, possessed of the wisdom that sees rise and fall — noble, penetrating, leading to the complete destruction of suffering. That a monk is wise in this way — this too is a refuge-making quality.",
+     "page": 105,
+     "para_start": true,
+     "printed_number": 10
+    },
+    {
+     "number": 12,
+     "pali": "สะนาถา ภิกขะเว วิหะระถะ มา อะนาถา, ทุกขัง ภิกขะเว อะนาโถ วิหะระติ, อิเม โข ภิกขะเว ทะสะ นาถะกะระณา ธัมมาติ.",
+     "pali_roman": "Sanāthā bhikkhave viharatha mā anāthā, dukkhaṃ bhikkhave anātho viharati, ime kho bhikkhave dasa nāthakaraṇā dhammāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Dwell as those who have a refuge, monks, not as those without one. One without a refuge, monks, dwells in suffering. These, monks, are the ten refuge-making qualities.",
+     "page": 105,
+     "para_start": true
+    },
+    {
+     "number": 13,
+     "pali": "อิทะมะโวจะ ภะคะวา. อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.",
+     "pali_roman": "Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṃ abhinanduntī.",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is what the Blessed One said. Gladdened, those monks delighted in the Blessed One's words.",
+     "page": 105,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะนิกขิตตะธุโร",
+     "pali_roman": "anikkhittadhuro",
+     "meaning": "'not laying down the burden'. The yoke-word ธุระ is the same one a draught ox carries — the image is of not unhitching yourself"
+    },
+    {
+     "pali": "สะติเนปักเกนะ",
+     "pali_roman": "satinepakkena",
+     "meaning": "mindfulness together with nepakka, shrewdness or discretion. Item 9 pairs remembering with knowing what to do about it"
+    },
+    {
+     "pali": "อุทะยัตถะคามินิยา",
+     "pali_roman": "udayatthagāminiyā",
+     "meaning": "'going to rise and fall' — the wisdom that watches things arise and pass. Item 10 is insight, and it closes the list"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 8,
+     "file": "IMG_0370.PNG",
+     "issue": "COMPLETES THE LINE PAGE 104 CUT, AND THE PREDICTION HELD. Page 104 broke mid-word at ถามะวา ทัพ์หะ- and page 105 opens ปะรักกะโม อะนิกขิตตะธุโร — so the word is ทัฬ์หะปะรักกะโม, as the brief said it must be. Re-emitted whole and the […] marker comes off."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0370.PNG",
+     "issue": "‼ THE BOOK PRINTS THE SAME WORD TWO WAYS INSIDE THIS ONE ITEM. The first is ทัพ์หะปะรักกะโม WITH the cluster mark (page 104), the second ทัพหะปะรักกะโม WITHOUT it (this page, line 3, read at 5x). Both are daḷhaparakkamo. Reproduced exactly as printed in each place rather than harmonised — the same treatment page 102's ตุย์หัง / ตุยหัง got. The ฬ in both is the settled rule applied, NOT a reading: Josh has not checked this page."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0370.PNG",
+     "issue": "Two line-break hyphens rejoined in item 8, both inside the same long requisites compound: ปิณฑะ-ปาตะ and เภสัชชะ-ปะริกขาเรนะ. The compound is printed unbroken apart from those two line turns."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0370.PNG",
+     "issue": "THE LAST TWO PARAGRAPHS CARRY NO NUMBER. Verse 12 is the Buddha's closing exhortation, verse 13 the standard formula that ends a sutta. Both are indented like the numbered items but print no figure, so printed_number is absent on both and stops at 10."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0370.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Thirteen verses across pages 103, 104 and 105 — the nidāna, the ten numbered items, and two closing paragraphs. The colophon ทะสะนาถะกะระณะธัมมะสุตตัง นิฏฐิตัง is centred and bold beneath, above the footnote rule."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0370.PNG",
+     "issue": "THE FOOTNOTE IS A CANONICAL CITATION AGAIN, after the two authorship notes on pages 100 and 101. It reads อํ. ทสก. 24/25-6-7 — Aṅguttara Nikāya, the Book of Tens. Held in source_printed as every citation before it is."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0370.PNG",
+     "issue": "english_unverified is set on the chant. The book prints it in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "dasanathakarana-dhamma-suttam"
+  ],
+  "continues": [],
+  "resume_from": null,
+  "paiboon_scan": "Nothing to scan. The chant is printed in Pali only, so paiboon is empty on every verse. The one Thai string is source_printed, a citation and not a chanted layer.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0370.PNG read end to end. Page number 105 read off the sheet. Prose from the top margin, then a centred bold colophon, a rule and one footnote. The lower third of the sheet is blank.",
+  "notes": "The Ten Refuge-Makers is COMPLETE — thirteen verses across pages 103 to 105. Page 104's mid-word cut resolved exactly as predicted: ทัฬ์หะ + ปะรักกะโม. The book then prints the SAME word again a line later WITHOUT its cluster mark, which is reproduced as printed.",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — genuinely two different words and the BOOK prints the difference. bhikkhu, singular, is the monk each item describes; bhikkhū, plural, is the assembly that delights in the Buddha's words in the closing formula.",
+   "hoti/honti — singular and plural of the same verb. Each item says the MONK is thus (hoti); the plural belongs to other subjects elsewhere in the sutta. Not drift."
+  ]
+ }
+}
