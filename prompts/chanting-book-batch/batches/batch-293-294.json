@@ -1,0 +1,586 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 2,
+  "files_read": 2,
+  "received": 3,
+  "manifest": [
+   "baep-suat-kammawaca-nai-upasombotkam-samrap-nak-diao",
+   "kham-sommot-ton-phuea-son-som",
+   "kham-son-som"
+  ],
+  "pages": [
+   {
+    "page": 293,
+    "file": "IMG_0560.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "baep-suat-kammawaca-nai-upasombotkam-samrap-nak-diao",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "A centred heading and its lines."
+   },
+   {
+    "page": 293,
+    "file": "IMG_0560.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-sommot-ton-phuea-son-som",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "A centred heading and its lines."
+   },
+   {
+    "page": 293,
+    "file": "IMG_0560.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-son-som",
+    "verses": "1-15",
+    "starts_here": true,
+    "note": "A centred heading and its lines."
+   },
+   {
+    "page": 294,
+    "file": "IMG_0561.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "kham-son-som",
+    "verses": "16-41",
+    "starts_here": false,
+    "note": "The rest of the question list, TWO COLUMNS — the question numbered on the left, the answer on the right — read as separate cells."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "baep-suat-kammawaca-nai-upasombotkam-samrap-nak-diao",
+   "title_thai": "แบบสวดกรรมวาจาในอุปสมบทกรรม สำหรับนาคเดี่ยว",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Form of Chanting the Kammavācā in the Act of Ordination, for a Single Candidate",
+   "page_start": 293,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "2.",
+    "ordering": "No Thai translation is printed; the Thai is instructions, column headers and rubrics.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, EXCEPT where a line carries a Thai rubric. paiboon is left empty — see page 306.",
+    "pages": "IMG_0560.PNG page 293 and IMG_0561.PNG page 294. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อผู้มุ่งอุปสมบทออกไปยืนข้างนอกเรียบร้อยแล้ว พระกรรมวาจาจารย์ (คู่สวด) จึงนั่งคุกเข่าประนมมือ กราบพระ 3 ครั้ง แล้วเปล่งคำนมัสการพระรัตนตรัยว่า",
+     "paiboon": "",
+     "english": "When the one seeking ordination has gone out and is standing ready outside, the kammavācā teachers (the pair who chant) kneel with palms together, bow three times, and pronounce the homage to the Triple Gem thus:",
+     "page": 293,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ. (ว่า 3 ครั้ง)",
+     "pali_roman": "Namo tassa bhagavato arahato sammāsambuddhassa.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Blessed One, the Worthy One, the Fully Enlightened One. (say 3 times)",
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  },
+  {
+   "id": "kham-sommot-ton-phuea-son-som",
+   "title_thai": "คำสมมติตนเพื่อสอนซ้อม",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Appointing Oneself to Rehearse the Instruction",
+   "page_start": 293,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "6.",
+    "ordering": "No Thai translation is printed; the Thai is instructions, column headers and rubrics.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, EXCEPT where a line carries a Thai rubric. paiboon is left empty — see page 306.",
+    "pages": "IMG_0560.PNG page 293 and IMG_0561.PNG page 294. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สมมตินาคชื่อ โอภาโส สมมติพระอุปัชฌายะชื่อ โสภะโณ",
+     "paiboon": "",
+     "english": "The candidate is taken to be named Obhāsa, and the preceptor Sobhaṇa.",
+     "page": 293,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "สุณาตุ เม ภันเต สังโฆ,",
+     "pali_roman": "Suṇātu me bhante saṅgho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Let the Saṅgha, venerable sirs, hear me. If the Saṅgha is ready, I would instruct Obhāsa.",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 3,
+     "pali": "โอภาโส,",
+     "pali_roman": "Obhāso,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,",
+     "pali_roman": "Āyasmato sobhaṇassa upasampadāpekkho,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "ยะทิ สังฆัสสะ ปัตตะกัลลัง,",
+     "pali_roman": "Yadi saṅghassa pattakallaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 6,
+     "pali": "อะหัง โอภาสัง อะนุสาเสยยัง.",
+     "pali_roman": "Ahaṃ obhāsaṃ anusāseyyaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0560.PNG",
+     "issue": "A WORD BROKEN ACROSS A LINE BY A HYPHEN — 'อุปะสัมปะทา-' / 'เปกโข', the same word and the same break point as page 294's first chant. Rejoined."
+    }
+   ]
+  },
+  {
+   "id": "kham-son-som",
+   "title_thai": "คำสอนซ้อม",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of the Rehearsal",
+   "page_start": 293,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "41.",
+    "ordering": "No Thai translation is printed; the Thai is instructions, column headers and rubrics.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali, EXCEPT where a line carries a Thai rubric. paiboon is left empty — see page 306.",
+    "pages": "IMG_0560.PNG page 293 and IMG_0561.PNG page 294. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สุณะสิ โอภาสะ,",
+     "pali_roman": "Suṇasi obhāsa,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Listen, Obhāsa. This is the time for truth, the time for what is so. When they question you in the midst of the Saṅgha, if it is present say it is present; if absent, say it is absent. Do not be flustered, do not be embarrassed. They will question you thus: do you have afflictions of these kinds?",
+     "page": 293,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "อะยันเต สัจจะกาโล ภูตะกาโล,",
+     "pali_roman": "Ayante saccakālo bhūtakālo,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "ยัง ชาตัง ตัง สังฆะมัชเฌ ปุจฉันเต,",
+     "pali_roman": "Yaṃ jātaṃ taṃ saṅghamajjhe pucchante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "สันตัง อัตถีติ วัตตัพพัง,",
+     "pali_roman": "Santaṃ atthīti vattabbaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "อะสันตัง นัตถีติ วัตตัพพัง,",
+     "pali_roman": "Asantaṃ natthīti vattabbaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 6,
+     "pali": "มา โข วิตถาสิ,",
+     "pali_roman": "Mā kho vitthāsi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 7,
+     "pali": "มา โข มังกุ อะโหสิ,",
+     "pali_roman": "Mā kho maṅku ahosi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 8,
+     "pali": "เอวันตัง ปุจฉิสสันติ,",
+     "pali_roman": "Evantaṃ pucchissanti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 9,
+     "pali": "สันติ เต เอวะรูปา อาพาธา.",
+     "pali_roman": "Santi te evarūpā ābādhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ถาม",
+     "paiboon": "",
+     "english": "Asked",
+     "page": 293,
+     "para_start": true
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ตอบ",
+     "paiboon": "",
+     "english": "Answered"
+    },
+    {
+     "number": 12,
+     "pali": "กุฏฐัง",
+     "pali_roman": "Kuṭṭhaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Have you leprosy?",
+     "printed_number": 1,
+     "para_start": true
+    },
+    {
+     "number": 13,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "No, venerable sir."
+    },
+    {
+     "number": 14,
+     "pali": "คัณโฑ",
+     "pali_roman": "Gaṇḍo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Have you boils?",
+     "printed_number": 2
+    },
+    {
+     "number": 15,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "No, venerable sir."
+    },
+    {
+     "number": 16,
+     "pali": "กิลาโส",
+     "pali_roman": "Kilāso",
+     "thai": "",
+     "paiboon": "",
+     "english": "Have you skin disease?",
+     "printed_number": 3,
+     "page": 294
+    },
+    {
+     "number": 17,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "No, venerable sir."
+    },
+    {
+     "number": 18,
+     "pali": "โสโส",
+     "pali_roman": "Soso",
+     "thai": "",
+     "paiboon": "",
+     "english": "Have you consumption?",
+     "printed_number": 4
+    },
+    {
+     "number": 19,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "No, venerable sir."
+    },
+    {
+     "number": 20,
+     "pali": "อะปะมาโร",
+     "pali_roman": "Apamāro",
+     "thai": "",
+     "paiboon": "",
+     "english": "Have you epilepsy?",
+     "printed_number": 5
+    },
+    {
+     "number": 21,
+     "pali": "นัตถิ ภันเต",
+     "pali_roman": "Natthi bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "No, venerable sir."
+    },
+    {
+     "number": 22,
+     "pali": "มะนุสโสสิ",
+     "pali_roman": "Manussosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you a human being?",
+     "printed_number": 1,
+     "para_start": true,
+     "page": 294
+    },
+    {
+     "number": 23,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 24,
+     "pali": "ปุริโสสิ",
+     "pali_roman": "Purisosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you a man?",
+     "printed_number": 2
+    },
+    {
+     "number": 25,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 26,
+     "pali": "ภุชิสโสสิ",
+     "pali_roman": "Bhujissosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you a free man?",
+     "printed_number": 3
+    },
+    {
+     "number": 27,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 28,
+     "pali": "อะนะโณสิ",
+     "pali_roman": "Anaṇosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you free of debt?",
+     "printed_number": 4
+    },
+    {
+     "number": 29,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 30,
+     "pali": "นะสิ ราชะภะโฏ",
+     "pali_roman": "Nasi rājabhaṭo",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you not in the king's service?",
+     "printed_number": 5
+    },
+    {
+     "number": 31,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 32,
+     "pali": "อะนุญญาโตสิ มาตาปิตูหิ",
+     "pali_roman": "Anuññātosi mātāpitūhi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Have you your parents' permission?",
+     "printed_number": 6
+    },
+    {
+     "number": 33,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 34,
+     "pali": "ปะริปุณณะวีสะติวัสโสสิ",
+     "pali_roman": "Paripuṇṇavīsativassosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are you fully twenty years of age?",
+     "printed_number": 7
+    },
+    {
+     "number": 35,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 36,
+     "pali": "ปะริปุณณันเต ปัตตะจีวะรัง",
+     "pali_roman": "Paripuṇṇante pattacīvaraṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Are your bowl and robes complete?",
+     "printed_number": 8
+    },
+    {
+     "number": 37,
+     "pali": "อามะ ภันเต",
+     "pali_roman": "Āma bhante",
+     "thai": "",
+     "paiboon": "",
+     "english": "Yes, venerable sir."
+    },
+    {
+     "number": 38,
+     "pali": "กินนาโมสิ",
+     "pali_roman": "Kinnāmosi",
+     "thai": "",
+     "paiboon": "",
+     "english": "What is your name?",
+     "printed_number": 1,
+     "para_start": true
+    },
+    {
+     "number": 39,
+     "pali": "อะหัง ภันเต โอภาโส นามะ",
+     "pali_roman": "Ahaṃ bhante obhāso nāma",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, my name is Obhāsa."
+    },
+    {
+     "number": 40,
+     "pali": "โก นามะ เต อุปัชฌาโย",
+     "pali_roman": "Ko nāma te upajjhāyo",
+     "thai": "",
+     "paiboon": "",
+     "english": "What is your preceptor's name?",
+     "printed_number": 2
+    },
+    {
+     "number": 41,
+     "pali": "อุปัชฌาโย เม ภันเต อายัส์มา โสภะโณ นามะ",
+     "pali_roman": "Upajjhāyo me bhante āyasmā sobhaṇo nāma",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, my preceptor is the venerable Sobhaṇa."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0560.PNG",
+     "issue": "⚠ THIS IS THE FULL LIST THAT PAGE 295 ABBREVIATES WITH ฯลฯ. There the questioning is printed as 'กุฏฐัง ฯลฯ' and the answers as 'นัตถิ ภันเต ฯลฯ'; here, in the REHEARSAL, the book prints all fifteen questions and their answers in full. So the text page 295 omits is not lost — it is on 293-294, and anyone completing 295 should take it from here rather than from outside the book."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0561.PNG",
+     "issue": "TWO COLUMNS, AND EACH CELL IS ITS OWN VERSE — the treatment page 304 established. The left column holds a numbered question and the right its answer, under the headers ถาม and ตอบ, so the columns carry separate utterances by different speakers rather than one line split across a gutter. The headers themselves are entered as two Thai-only verses, because they are printed lines the sheet shows."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0561.PNG",
+     "issue": "THE LIST RESTARTS ITS NUMBERING THREE TIMES — 1-5 for the afflictions, then 1-8 for the qualifications, then 1-2 for name and preceptor. printed_number follows the book and therefore repeats; the app's own verse count runs straight through, which is exactly what the two fields are kept apart for."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "baep-suat-kammawaca-nai-upasombotkam-samrap-nak-diao",
+   "kham-sommot-ton-phuea-son-som",
+   "kham-son-som"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 292,
+  "resume_from_file": "IMG_0559.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch.",
+  "pali_untouched": "Confirmed. Every pali_roman was produced by translit_pali from its clause, except the namo line carrying a repeat-rubric, where it covers the Pali only. The Thai-only verses — the instruction, the appointment line and the two column headers — carry an empty pali_roman rather than a transliteration of Thai.",
+  "page_scan": "agrees. Rows for both pages. The Pali at the TOP of page 293 is deliberately not here: it is the tail of a chant beginning on page 292.",
+  "notes": "THE REHEARSAL, AND THE LIST PAGE 295 ABBREVIATES. Three findings. (1) ⚠ THE ฯลฯ ON PAGE 295 IS FILLED IN HERE — all fifteen questions and answers are printed in full in the rehearsal, so the abbreviated text is inside the book after all, on 293-294. Anyone completing 295 should take it from here. (2) TWO COLUMNS WITH ถาม / ตอบ HEADERS, each cell its own verse, as page 304 established. (3) THE NUMBERING RESTARTS THREE TIMES — 1-5, 1-8, 1-2 — so printed_number repeats while the app's verse count runs straight through.",
+  "diacritic_exceptions": []
+ }
+}
