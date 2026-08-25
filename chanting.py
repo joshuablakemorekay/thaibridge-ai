@@ -33999,6 +33999,139 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0567.PNG]: ⚠ THE สารบัญ PUTS THIS CHANT ON PAGE ๓๐๑ AND
+        #   THE BOOK PRINTS IT ON 300 — the same off-by-one that
+        #   วิธีแสดงอาบัติ showed, which the contents lists at ๓๐๒ and the
+        #   book prints on 301. It is NOT systematic across the region: the
+        #   six chants on page 302 are listed at ๓๐๒ and printed there.
+        #   page_start follows the SHEET in every case and the contents lines
+        #   are left exactly as the book has them.
+        'id': 'kham-samathan-sin',
+        'title_thai': 'คำสมาทานศีล',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Undertaking the Precepts',
+        'page_start': 300,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0567.PNG]: THE BOOK PRINTS NO NUMERALS beside these
+            #   eight, unlike the ten duties on page 304 which are numbered on
+            #   the page. printed_number here therefore records the position
+            #   in the sequence, which the closing line ('these EIGHT training
+            #   rules') makes explicit, rather than a numeral the sheet shows.
+            # ‼ CHECK [IMG_0567.PNG]: THE THAI ON THIS SHEET IS A TRANSLATION,
+            #   not a rubric or an instruction — the first time that has been
+            #   true in the backward pass since page 303's คำลาสิกขา.
+            #   `paiboon` would ordinarily accompany it and is still left
+            #   empty, for the reason recorded on page 306.
+            {
+                'number': 1,
+                'page': 300,
+                'printed_number': 1,
+                'para_start': True,
+                'pali': 'ปาณาติปาตา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Pāṇātipātā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากฆ่าสัตว์มีชีวิตด้วยตนเองและใช้ให้ผู้อื่นฆ่า)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from killing living beings. (I undertake the training rule, that is, to refrain from killing living creatures myself and from having others kill.)',
+            },
+            # ‼ CHECK [IMG_0567.PNG]: ⚠ THE BOOK MISPRINTS THE SECOND PRECEPT.
+            #   It reads 'สิกขาปะทัง สะทามิยามิ' where all seven others read
+            #   'สะมาทิยามิ' — the ม and ท transposed. Read at 5x on a 1.55x
+            #   crop: it is สะทามิยามิ on the sheet. Kept EXACTLY as printed,
+            #   like every other of the book's own slips in this section, but
+            #   this one is worth Josh's eye because it is a word a reader
+            #   would chant and the correct form is on the eight lines around
+            #   it.
+            {
+                'number': 2,
+                'printed_number': 2,
+                'pali': 'อะทินนาทานา เวระมะณี สิกขาปะทัง สะทามิยามิ.',
+                'pali_roman': 'Adinnādānā veramaṇī sikkhāpadaṃ sadāmiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากลักทรัพย์ด้วยตนเองและใช้ให้ผู้อื่นลัก)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from taking what is not given. (I undertake the training rule, that is, to refrain from stealing myself and from having others steal.)',
+            },
+            {
+                'number': 3,
+                'printed_number': 3,
+                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากอสัทธรรม กรรมอันเป็นข้าศึกแก่พรหมจรรย์)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from unchastity. (I undertake the training rule, that is, to refrain from what is ignoble, the act that is the enemy of the holy life.)',
+            },
+            {
+                'number': 4,
+                'printed_number': 4,
+                'pali': 'มุสาวาทา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Musāvādā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากการพูดเท็จ)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from false speech. (I undertake the training rule, that is, to refrain from speaking falsely.)',
+            },
+            {
+                'number': 5,
+                'printed_number': 5,
+                'pali': 'สุราเมระยะมัชชะปะมาทัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Surāmerayamajjapamādaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากน้ำเมาคือสุรา และเมรัย อันเป็นที่ตั้งแห่งความประมาท)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from intoxicants, which are the basis of heedlessness. (I undertake the training rule, that is, to refrain from spirits and fermented drink, which are the ground of heedlessness.)',
+            },
+            {
+                'number': 6,
+                'printed_number': 6,
+                'pali': 'วิกาละโภชะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Vikālabhojanā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากการบริโภคอาหารในเวลาวิกาล)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from eating at the wrong time. (I undertake the training rule, that is, to refrain from taking food outside the proper time.)',
+            },
+            {
+                'number': 7,
+                'printed_number': 7,
+                'pali': 'นัจจะคีตะวาทิตะวิสูกะทัสสะนา มาลาคันธะวิเลปะนะธาระณะมัณฑะนะวิภูสะนัฏฐานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Naccagītavāditavisūkadassanā mālāgandhavilepanadhāraṇamaṇḍanavibhūsanaṭṭhānā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากการดู ฟัง ฟ้อนรำ ขับร้องและประโคมเครื่องดนตรีต่างๆ และการเล่นที่เป็นข้าศึกแก่กุศล และทัดทรงตกแต่งร่างกายด้วยเครื่องประดับและดอกไม้ของหอม เครื่องทาเครื่องย้อม ผัดผิวให้งามต่างๆ)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from dancing, singing, music and unseemly shows, and from wearing garlands, scents, cosmetics and adornment. (I undertake the training rule, that is, to refrain from watching and listening to dancing, singing and the playing of instruments of all kinds, and from amusements that are the enemy of what is wholesome; and from adorning the body with ornaments and scented flowers, ointments and dyes, and beautifying the complexion.)',
+            },
+            # ‼ CHECK [IMG_0567.PNG]: The eighth precept's Thai gloss opens
+            #   'คือ เว้นจาก' with a SPACE after คือ, where the other seven
+            #   print 'คือเว้นจาก' closed up. Kept as set.
+            {
+                'number': 8,
+                'printed_number': 8,
+                'pali': 'อุจจาสะยะนะมะหาสะยะนา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Uccāsayanamahāsayanā veramaṇī sikkhāpadaṃ samādiyāmi.',
+                'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือ เว้นจากนั่งนอนเหนือเตียง ตั่งมีเท้าสูงเกินประมาณ และที่นั่งที่นอนอันสูงใหญ่ ภายในใส่นุ่นและสำลี อาสนะ อันวิจิตรไปด้วยลวดลายงาม ด้วยเงินทองต่างๆ)',
+                'paiboon': '',
+                'english': 'I undertake the training rule to abstain from high and luxurious beds and seats. (I undertake the training rule, that is, to refrain from sitting or lying on beds and couches with legs above the measure, and on large high seats and beds stuffed with kapok and cotton, and on seats elaborately worked with fine patterns in silver and gold.)',
+            },
+            {
+                'number': 9,
+                'para_start': True,
+                'pali': 'อิมานิ อัฏฐะ สิกขาปะทานิ สะมาทิยามิ. (ว่า 3 ครั้ง)',
+                'pali_roman': 'Imāni aṭṭha sikkhāpadāni samādiyāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I undertake these eight training rules. (say 3 times)',
+            },
+        ],
+    },
 ]
 
 
