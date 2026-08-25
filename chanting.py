@@ -36034,6 +36034,220 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0561.PNG]: THE CALL IS SINGULAR HERE AND PLURAL ON PAGE
+        #   297. This sheet prints '(คำเรียก) อาคัจฉาหิ' for one candidate;
+        #   page 297's pair form prints '(คำเรียก) อาคัจฉะถะ'. One letter
+        #   apart in the ending, and the whole difference between the two
+        #   ceremonies.
+        'id': 'kham-riak-upasampathapekkha-khao-ma',
+        'title_thai': 'คำเรียกอุปสัมปทาเปกขะเข้ามา',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Calling the Candidate In',
+        'page_start': 294,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0561.PNG]: A WORD BROKEN ACROSS A LINE BY A HYPHEN
+            #   — the sheet prints 'อุปะสัมปะทา-' at a line end and 'เปกโข' at
+            #   the next line's start, for อุปะสัมปะทาเปกโข. Rejoined; the
+            #   hyphen is the compositor's. This sheet does it TWICE, in
+            #   different places in the word — see the other chant's check.
+            {
+                'number': 1,
+                'page': 294,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สุณาตุ เม ภันเต สังโฆ,',
+                'pali_roman': 'Suṇātu me bhante saṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Let the Saṅgha, venerable sirs, hear me. Obhāsa, candidate for ordination under the venerable Sobhaṇa, has been instructed by me. If the Saṅgha is ready, let Obhāsa come forward.',
+            },
+            {
+                'number': 2,
+                'pali': 'โอภาโส,',
+                'pali_roman': 'Obhāso,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 3,
+                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 4,
+                'pali': 'อะนุสิฏโฐ โส มะยา,',
+                'pali_roman': 'Anusiṭṭho so mayā,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 5,
+                'pali': 'ยะทิ สังฆัสสะ ปัตตะกัลลัง,',
+                'pali_roman': 'Yadi saṅghassa pattakallaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 6,
+                'pali': 'โอภาโส อาคัจเฉยยะ.',
+                'pali_roman': 'Obhāso āgaccheyya.',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 7,
+                'para_start': True,
+                'pali': '(คำเรียก) อาคัจฉาหิ',
+                'pali_roman': 'Āgacchāhi',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The call:) Come forward.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0562.PNG]: ⚠ THIS CHANT'S หมายเหตุ IS PRINTED ON THE
+        #   NEXT SHEET. The note explaining when ภันเต replaces อาวุโส sits at
+        #   the top of page 295, above that page's first heading — not under
+        #   the chant it belongs to. It is carried by a page-295 row with NO
+        #   VERSES, which is the only way to place a block on a page a chant
+        #   has no lines on. Page 297's identical note is printed under its
+        #   own chant, on the same sheet, so the book does it both ways.
+        'id': 'kham-phra-upatchaiya-klao-phadiang-song',
+        'title_thai': 'คำพระอุปัชฌายะกล่าวเผดียงสงฆ์',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of the Preceptor Informing the Saṅgha',
+        'page_start': 294,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0561.PNG]: THE SAME WORD HYPHENATED AT A DIFFERENT
+            #   POINT. Here it breaks 'อุปะสัม-' / 'ปะทาเปกโข' where the chant
+            #   above breaks 'อุปะสัมปะทา-' / 'เปกโข' — same word, two
+            #   different break points on one sheet, because the line lengths
+            #   differ. Both rejoined.
+            # ‼ CHECK [IMG_0561.PNG]: THE BOOK PRINTS BOTH FORMS OF ADDRESS
+            #   INLINE, 'อาวุโส (ภันเต)', twice in this paragraph — the same
+            #   construction as page 297's pair form. Brackets kept exactly as
+            #   set.
+            {
+                'number': 1,
+                'page': 294,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'อิทานิ โข อาวุโส (ภันเต) อะยัง โอภาโส นามะ สามะเณโร มะมะ อุปะสัมปะทาเปกโข อุปะสัมปะทัง อากังขะมาโน,',
+                'pali_roman': 'Idāni kho āvuso (bhante) ayaṃ obhāso nāma sāmaṇero mama upasampadāpekkho upasampadaṃ ākaṅkhamāno,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Now, friend (venerable sir), this novice named Obhāsa is my candidate, seeking ordination and asking it of the Saṅgha. I request this whole Saṅgha: please, friend, let this whole Saṅgha question this novice named Obhāsa on the obstructing conditions, know his readiness, and ordain him by a formal act with a motion and three announcements, unshakeable and befitting the occasion. Let the act be concluded.',
+            },
+            {
+                'number': 2,
+                'pali': 'สังฆัง ยาจะติ,',
+                'pali_roman': 'Saṅghaṃ yācati,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 3,
+                'pali': 'อะหัง สัพพะมิมัง สังฆัง อัชเฌสามิ,',
+                'pali_roman': 'Ahaṃ sabbamimaṃ saṅghaṃ ajjhesāmi,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 4,
+                'pali': 'สาธุ อาวุโส (ภันเต) สัพโพยัง สังโฆ,',
+                'pali_roman': 'Sādhu āvuso (bhante) sabboyaṃ saṅgho,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 5,
+                'pali': 'อิมัง โอภาสัง นามะ สามะเณรัง,',
+                'pali_roman': 'Imaṃ obhāsaṃ nāma sāmaṇeraṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 6,
+                'pali': 'อันตะรายิเก ธัมเม ปุจฉิต์วา,',
+                'pali_roman': 'Antarāyike dhamme pucchitvā,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 7,
+                'pali': 'ตัตถะ ปัตตะกัลลัตตัง ญัต์วา,',
+                'pali_roman': 'Tattha pattakallattaṃ ñatvā,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 8,
+                'pali': 'ญัตติจะตุตเถนะ กัมเมนะ อะกุปเปนะ ฐานาระเหนะ อุปะสัมปาเทมาติ,',
+                'pali_roman': 'Ñatticatutthena kammena akuppena ṭhānārahena upasampādemāti,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 9,
+                'pali': 'กัมมะสันนิฏฐานัง กะโรตุ,',
+                'pali_roman': 'Kammasanniṭṭhānaṃ karotu,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 10,
+                'para_start': True,
+                'pali': '(ที่ประชุมสงฆ์รับพร้อมกันว่า) สาธุ',
+                'pali_roman': 'Sādhu',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The assembled Saṅgha responds together:) Sādhu.',
+            },
+        ],
+    },
 ]
 
 
@@ -38229,6 +38443,19 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'อุปสัมปทาเปกขะมีหลายรูป อุปสมบทพร้อมกันได้คราวละ 2 รูป 3 รูป แต่ให้มีพระอุปัชฌายะองค์เดียวกันได้ คำสวดกรรมวาจาจึงต้องเปลี่ยน วิภัตติ วจนะ ให้ถูกต้องตามหลักบาลีดังนี้ สมมตินาคชื่อ ปุณโณ กับ สุโภ สมมติพระอุปัชฌายะชื่อ มะนุสสะนาโค',
                 'english': 'Where there are several candidates, two or three may be ordained together provided they have the same preceptor. The kammavācā must therefore change its case endings and number to be correct in Pali, as follows. The candidates are taken to be named Puṇṇa and Subha, and the preceptor Manussanāga.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 295 ───────────────────────────────────────────────────
+    # Written from batch-294-294.json.
+    {
+        'page': 295,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'หมายเหตุ บทว่า อาวุโส นั้น ถ้ามีภิกษุแก่พรรษากว่าอุปัชฌาย์ร่วมประชุมอยู่ด้วย พึงใช้ ภันเต แทน',
+                'english': 'Note: as for the word āvuso — if a monk senior to the preceptor is present in the assembly, bhante should be used instead.',
                 'english_unverified': True,
             },
         ],
