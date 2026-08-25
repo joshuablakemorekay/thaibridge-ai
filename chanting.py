@@ -33212,6 +33212,517 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-phinthu-pha',
+        'title_thai': 'คำพินทุผ้า',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Marking the Cloth',
+        'page_start': 302,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 302,
+                'para_start': True,
+                'pali': 'อิมัง พินทุกัปปัง กะโรมิ.',
+                'pali_roman': 'Imaṃ bindukappaṃ karomi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I make this mark of allowability.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-athitthan',
+        'title_thai': 'คำอธิษฐาน',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Determining',
+        'page_start': 302,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0569.PNG]: FIVE LABELLED LINES, each printing a
+            #   Thai label then its Pali — บาตร, สังฆาฏิ, จีวร, สบง,
+            #   ผ้าอาบน้ำฝน. Handled as page 308's robe-determination lines
+            #   were: the whole printed line in `pali`, and pali_roman
+            #   transliterating the Pali only, because running the
+            #   transliterator over a Thai label yields a confident nonsense
+            #   reading.
+            {
+                'number': 1,
+                'page': 302,
+                'para_start': True,
+                'pali': 'บาตร : อิมัง ปัตตัง อะธิฏฐามิ.',
+                'pali_roman': 'Imaṃ pattaṃ adhiṭṭhāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Bowl: I determine this bowl.',
+            },
+            {
+                'number': 2,
+                'pali': 'สังฆาฏิ : อิมัง สังฆาฏิง อะธิฏฐามิ.',
+                'pali_roman': 'Imaṃ saṅghāṭiṃ adhiṭṭhāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Outer robe: I determine this outer robe.',
+            },
+            # ‼ CHECK [IMG_0569.PNG]: THE BOOK'S LABEL AND ITS PALI DISAGREE
+            #   ABOUT WHICH ROBE. Line 3 is labelled จีวร, the general word
+            #   for robe, but its Pali is อุตตะราสังคัง, specifically the
+            #   UPPER robe — and page 308 labels that same Pali อุตตราสงค์.
+            #   Kept as this sheet prints it.
+            {
+                'number': 3,
+                'pali': 'จีวร : อิมัง อุตตะราสังคัง อะธิฏฐามิ.',
+                'pali_roman': 'Imaṃ uttarāsaṅgaṃ adhiṭṭhāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Upper robe: I determine this upper robe.',
+            },
+            {
+                'number': 4,
+                'pali': 'สบง : อิมัง อันตะระวาสะกัง อะธิฏฐามิ.',
+                'pali_roman': 'Imaṃ antaravāsakaṃ adhiṭṭhāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Inner robe: I determine this inner robe.',
+            },
+            {
+                'number': 5,
+                'pali': 'ผ้าอาบน้ำฝน : อิมัง วัสสิกะสาฏิกัง อะธิฏฐามิ.',
+                'pali_roman': 'Imaṃ vassikasāṭikaṃ adhiṭṭhāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Rains-bathing cloth: I determine this rains-bathing cloth.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-sia-sala',
+        'title_thai': 'คำเสียสละ',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Forfeiting',
+        'page_start': 302,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0569.PNG]: THE INSTRUCTION PRECEDES THE PALI HERE,
+            #   where page 308's anumodanā prints its instruction beneath. It
+            #   is entered as its own verse so it renders in printed order; a
+            #   block cannot sit inside a chant.
+            {
+                'number': 1,
+                'page': 302,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'จีวรเป็นนิสสัคคียะ เพราะอยู่ปราศจากเขตล่วงราตรี จะต้องเสียสละดังนี้',
+                'paiboon': '',
+                'english': 'A robe becomes forfeitable through being away from it past dawn, and must be forfeited thus:',
+            },
+            {
+                'number': 2,
+                'para_start': True,
+                'pali': 'อิทัง เม ภันเต จีวะรัง รัตติวิปปะวุตถัง',
+                'pali_roman': 'Idaṃ me bhante cīvaraṃ rattivippavutthaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, this robe of mine has been apart from me for a night,',
+            },
+            {
+                'number': 3,
+                'pali': 'อัญญัต์ระ ภิกขุสัมมะติยา นิสสัคคิยัง',
+                'pali_roman': 'Aññatra bhikkhusammatiyā nissaggiyaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and without the consent of the bhikkhus it is forfeitable.',
+            },
+            {
+                'number': 4,
+                'pali': 'อิมาหัง อายัส์มะโต นิสสัชชามิ.',
+                'pali_roman': 'Imāhaṃ āyasmato nissajjāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I forfeit it to the venerable one.',
+            },
+            # ‼ CHECK [IMG_0569.PNG]: A RUBRIC GIVING SUBSTITUTE WORDS — '(ถ้า
+            #   2 ผืนว่า ท์วิจีวะรัง ถ้าทั้ง 3 ผืนว่า ติจีวะรัง)' — telling
+            #   the speaker to swap in the dual or plural form for two or
+            #   three cloths. It is a variant instruction rather than a repeat
+            #   count, the first of its kind in this stretch, and is kept on
+            #   its own line as printed.
+            {
+                'number': 5,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ถ้า 2 ผืนว่า ท์วิจีวะรัง ถ้าทั้ง 3 ผืนว่า ติจีวะรัง)',
+                'paiboon': '',
+                'english': '(For two cloths say tvicīvaraṃ; for all three say ticīvaraṃ)',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-khuen',
+        'title_thai': 'คำคืน',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Returning',
+        'page_start': 302,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 302,
+                'para_start': True,
+                'pali': 'อิมัง จีวะรัง อายัส์มะโต ทัมมิ.',
+                'pali_roman': 'Imaṃ cīvaraṃ āyasmato dammi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I give this robe to the venerable one.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-wikap',
+        'title_thai': 'คำวิกัปป์',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Shared Ownership',
+        'page_start': 302,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 302,
+                'para_start': True,
+                'pali': 'อิมัง จีวะรัง ตุยหัง วิกัปเปมิ.',
+                'pali_roman': 'Imaṃ cīvaraṃ tuyhaṃ vikappemi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I assign this robe to you in shared ownership.',
+            },
+            # ‼ CHECK [IMG_0569.PNG]: 'หลายผืนว่า' — 'for several cloths say'
+            #   — is a Thai instruction printed INLINE at the head of the Pali
+            #   line rather than on its own. The whole line is kept in `pali`
+            #   and pali_roman covers the Pali only, as with the labelled
+            #   lines above.
+            {
+                'number': 2,
+                'pali': 'หลายผืนว่า อิมานิ จีวะรานิ ตุยหัง วิกัปเปมิ.',
+                'pali_roman': 'Imāni cīvarāni tuyhaṃ vikappemi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For several cloths say: I assign these robes to you in shared ownership.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-thon',
+        'title_thai': 'คำถอน',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Withdrawing',
+        'page_start': 302,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 302,
+                'para_start': True,
+                'pali': 'อิมัง จีวะรัง มัยหัง สันตะกัง ปะริภุญชะ วา',
+                'pali_roman': 'Imaṃ cīvaraṃ mayhaṃ santakaṃ paribhuñja vā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This robe is my property; use it,',
+            },
+            {
+                'number': 2,
+                'pali': 'วิสัชเชหิ วา ยะถาปัจจะยัง วา กะโรหิ.',
+                'pali_roman': 'Visajjehi vā yathāpaccayaṃ vā karohi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or give it away, or do with it as you see fit.',
+            },
+            # ‼ CHECK [IMG_0570.PNG]: THIS CHANT SPANS A PAGE BOUNDARY THAT
+            #   ANOTHER BATCH ALREADY TOUCHED. batch-303-303.json entered the
+            #   six chants that START on 303 and recorded that the lines above
+            #   them belonged to a chant beginning on 302. This batch carries
+            #   a SECOND row for page 303 to bring them, so two batch files
+            #   describe parts of one page — which check_pages reconciles by
+            #   verse range, not by file.
+            {
+                'number': 3,
+                'page': 303,
+                'para_start': True,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ถ้าผู้ถอนอ่อนกว่าว่า)',
+                'paiboon': '',
+                'english': '(If the one withdrawing is the junior, say:)',
+            },
+            # ‼ CHECK [IMG_0570.PNG]: THE SAME FORMULA TWICE, DIFFERING ONLY
+            #   IN VERB ENDINGS, and that difference is the whole point. Page
+            #   302 prints ปะริภุญชะ / วิสัชเชหิ / กะโรหิ — singular
+            #   imperatives, spoken to a junior — and page 303 prints
+            #   ปะริภุญชะถะ / วิสัชเชถะ / กะโรถะ, the plural-polite forms used
+            #   when the one withdrawing is himself the junior. The bracketed
+            #   rubric between them says exactly that. Not a repetition to
+            #   collapse.
+            {
+                'number': 4,
+                'para_start': True,
+                'pali': 'อิมัง จีวะรัง มัยหัง สันตะกัง ปะริภุญชะถะ วา',
+                'pali_roman': 'Imaṃ cīvaraṃ mayhaṃ santakaṃ paribhuñjatha vā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This robe is my property; use it,',
+            },
+            {
+                'number': 5,
+                'pali': 'วิสัชเชถะ วา ยะถาปัจจะยัง วา กะโรถะ.',
+                'pali_roman': 'Visajjetha vā yathāpaccayaṃ vā karotha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or give it away, or do with it as you see fit.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 10; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0367.PNG]: THE CHANT CONTINUES ONTO PAGE 103, which
+        #   prints four more rows — นักขัตตะยักขะภูตานัง / ปะริตตัสสานุภาเวนะ
+        #   twice more — and then the centred bold THAI colophon
+        #   จบสิบสองตำนาน, 'here end the Twelve Tamnan'. continues is set and
+        #   no closing is given here.
+        # ‼ CHECK [IMG_0367.PNG]: The title is THAI, not Pali, so title_roman
+        #   carries the สารบัญ's Paiboon value moŋ-kon jàk-grà-waan yài rather
+        #   than an IAST transliteration. Same treatment as มงคลจักรวาฬน้อย,
+        #   the LESSER blessing, already in the app at page 46 — this is its
+        #   larger companion, not a duplicate.
+        # ‼ CHECK [IMG_0367.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'mongkhon-chakkrawan-yai',
+        'title_thai': 'มงคลจักรวาฬใหญ่',
+        'title_pali': '',
+        'title_roman': 'moŋ-kon jàk-grà-waan yài',
+        'title_english': 'The Greater Universal Blessing',
+        'page_start': 102,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0367.PNG]: ‼‼ AN EIGHTH BARE พ WHERE THE CANON HAS
+            #   ฬ — AND THE FIRST ONE IN PROSE. The block prints
+            #   ฉะพะภิญญานุภาเวนะ where standard Pali is chaḷabhiññā, 'the six
+            #   higher knowledges'. At 5x the letter is bare, two humps, no
+            #   ascender. It transliterates to chababhiññā, which is not a
+            #   word — the same signature as pages 85, 90, 95, 97 and 99 x3.
+            #   What is new is the CONTEXT: every earlier instance was in
+            #   metrical verse, and this one is in a run-on prose compound.
+            #   Reproduced as printed and romanised from the printed พ, as all
+            #   seven before it were.
+            # ‼ CHECK [IMG_0367.PNG]: ‼ THE BOOK SPELLS ONE WORD TWO WAYS
+            #   INSIDE A SINGLE SENTENCE. It prints ตุย์หัง WITH the cluster
+            #   mark, then ตุยหัง WITHOUT it twice, a few words later. Both
+            #   are tuyhaṃ. Reproduced exactly as printed in each of the three
+            #   places rather than harmonised, because the page is what is
+            #   being reproduced.
+            # ‼ CHECK [IMG_0367.PNG]: THE PROSE HAS NO COMMAS AT ALL — fifteen
+            #   printed lines of unbroken ...านุภาเวนะ compounds with only TWO
+            #   full stops in the whole block. So the two prose verses break
+            #   at those full stops and nowhere else; there was no other
+            #   punctuation to break on. Seven line-break hyphens were
+            #   rejoined: ปาระมิตา-นุภาเวนะ, จะตุราสีติ-สะหัสสะ,
+            #   มัคคา-นุภาเวนะ, ญาณา-นุภาเวนะ, กะรุณา-มุทิตา, อันตะ-รายาปิ and
+            #   สะตะ-วัสสะ.
+            {
+                'number': 1,
+                'page': 102,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สิริธิติมะติเตโชชะยะสิทธิมะหิทธิมะหาคุณาปะริมิตะปุญญาธิการัสสะ สัพพันตะรายะนิวาระณะสะมัตถัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ ท์วัตติงสะมะหาปุริสะลักขะณานุภาเวนะ อะสีต์ยานุพ์ยัญชะนานุภาเวนะ อัฏฐุตตะระสะตะมังคะลานุภาเวนะ ฉัพพัณณะรังสิยานุภาเวนะ เกตุมาลานุภาเวนะ ทะสะปาระมิตานุภาเวนะ ทะสะอุปะปาระมิตานุภาเวนะ ทะสะปะระมัตถะปาระมิตานุภาเวนะ สีละสะมาธิปัญญานุภาเวนะ พุทธานุภาเวนะ ธัมมานุภาเวนะ สังฆานุภาเวนะ เตชานุภาเวนะ อิทธานุภาเวนะ พะลานุภาเวนะ เญยยะธัมมานุภาเวนะ จะตุราสีติสะหัสสะธัมมักขันธานุภาเวนะ นะวะโลกุตตะระธัมมานุภาเวนะ อัฏฐังคิกะมัคคานุภาเวนะ อัฏฐะสะมาปัตติยานุภาเวนะ ฉะพะภิญญานุภาเวนะ จะตุสัจจะญาณานุภาเวนะ ทะสะพะละญาณานุภาเวนะ สัพพัญญุตะญาณานุภาเวนะ เมตตากะรุณามุทิตาอุเปกขานุภาเวนะ สัพพะปะริตตานุภาเวนะ ระตะนัตตะยะสะระณานุภาเวนะ ตุย์หัง สัพพะโรคะโสกุปัททะวะทุกขะโทมะนัสสุปายาสา วินัสสันตุ สัพพะอันตะรายาปิ วินัสสันตุ สัพพะสังกัปปา ตุยหัง สะมิชฌันตุ ทีฆายุตา ตุยหัง โหตุ สะตะวัสสะชีเวนะ สะมังคิโก โหตุ สัพพะทา.',
+                'pali_roman': 'Siridhitimatitejojayasiddhimahiddhimahāguṇāparimitapuññādhikārassa sabbantarāyanivāraṇasamatthassa bhagavato arahato sammāsambuddhassa dvattiṃsamahāpurisalakkhaṇānubhāvena asītyānubyañjanānubhāvena aṭṭhuttarasatamaṅgalānubhāvena chabbaṇṇaraṃsiyānubhāvena ketumālānubhāvena dasapāramitānubhāvena dasa-upapāramitānubhāvena dasaparamatthapāramitānubhāvena sīlasamādhipaññānubhāvena buddhānubhāvena dhammānubhāvena saṅghānubhāvena tejānubhāvena iddhānubhāvena balānubhāvena neyyadhammānubhāvena caturāsītisahassadhammakkhandhānubhāvena navalokuttaradhammānubhāvena aṭṭhaṅgikamaggānubhāvena aṭṭhasamāpattiyānubhāvena chababhiññānubhāvena catusaccañāṇānubhāvena dasabalañāṇānubhāvena sabbaññutañāṇānubhāvena mettākaruṇāmuditā-upekkhānubhāvena sabbaparittānubhāvena ratanattayasaraṇānubhāvena tuyhaṃ sabbarogasokupaddavadukkhadomanassupāyāsā vinassantu sabba-antarāyāpi vinassantu sabbasaṅkappā tuyhaṃ samijjhantu dīghāyutā tuyhaṃ hotu satavassajīvena samaṅgiko hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of the thirty-two marks of a Great Man belonging to the Blessed One, the Worthy One, the Perfectly Self-Awakened — whose splendour, steadfastness, intelligence, majesty, victory, accomplishment and great might rest on immeasurable merit and great virtue, and who is able to ward off every danger — by the power of the eighty minor marks, of the hundred and eight auspicious signs, of the six-coloured rays, of the halo; by the power of the ten perfections, the ten higher perfections and the ten ultimate perfections; by the power of virtue, concentration and wisdom; of the Buddha, the Dhamma and the Sangha; of majesty, of psychic power, of strength, of the knowable Dhamma; of the eighty-four thousand divisions of the Dhamma, of the nine supramundane states, of the Eightfold Path, of the eight attainments, of the six higher knowledges, of the knowledge of the Four Truths, of the knowledge of the ten powers, of omniscient knowledge; by the power of loving-kindness, compassion, sympathetic joy and equanimity; of all the parittas; and of going for refuge to the Triple Gem — may all your diseases, sorrows, misfortunes, pains, griefs and despairs perish; may all dangers too perish; may all your intentions succeed; may long life be yours; and may you be endowed always with a life of a hundred years.',
+            },
+            {
+                'number': 2,
+                'page': 102,
+                'pali': 'อากาสะปัพพะตะวะนะภูมิคังคามะหาสะมุททา อารักขะกา เทวะตา สะทา ตุมเห อะนุรักขันตุ.',
+                'pali_roman': 'Ākāsapabbatavanabhūmigaṅgāmahāsamuddā ārakkhakā devatā sadā tumhe anurakkhantu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May the guardian devas of the sky, the mountains, the forests, the earth, the rivers and the great oceans protect you always.',
+            },
+            # ‼ CHECK [IMG_0367.PNG]: TWO COLUMNS from verse 3 on, right
+            #   column beginning at x 1120. Read ACROSS. FIRST PAIRING FOR
+            #   CHECKING: left ภะวะตุ สัพพะมังคะลัง + right รักขันตุ
+            #   สัพพะเทวะตา.
+            # ‼ CHECK [IMG_0367.PNG]: The eight rows indent ALTERNATELY — rows
+            #   1, 3, 5 and 7 of the block stand about 127px clear of rows 2,
+            #   4, 6 and 8, measured against the drifting left edge (the
+            #   indented rows run 489 down to 467, the flush rows 362 down to
+            #   342). Each indent opens a couplet, so para_start is set on
+            #   verses 3, 5, 7 and 9, giving four two-line stanzas: Buddha,
+            #   Dhamma, Sangha, and the paritta.
+            {
+                'number': 3,
+                'page': 102,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be yours; may all the devas guard you;',
+            },
+            {
+                'number': 4,
+                'page': 102,
+                'pali': 'สัพพะพุทธานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Sabbabuddhānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Buddhas, may you be well for ever.',
+            },
+            {
+                'number': 5,
+                'page': 102,
+                'para_start': True,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be yours; may all the devas guard you;',
+            },
+            {
+                'number': 6,
+                'page': 102,
+                'pali': 'สัพพะธัมมานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Sabbadhammānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Dhamma, may you be well for ever.',
+            },
+            {
+                'number': 7,
+                'page': 102,
+                'para_start': True,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May every blessing be yours; may all the devas guard you;',
+            },
+            {
+                'number': 8,
+                'page': 102,
+                'pali': 'สัพพะสังฆานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Sabbasaṅghānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Sangha, may you be well for ever.',
+            },
+            {
+                'number': 9,
+                'page': 102,
+                'para_start': True,
+                'pali': 'นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา',
+                'pali_roman': 'Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Warding off the evil planets of the stars, the yakkhas and the spirits,',
+            },
+            {
+                'number': 10,
+                'page': 102,
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.',
+                'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the paritta, having destroyed their misfortunes.',
+            },
+        ],
+    },
 ]
 
 

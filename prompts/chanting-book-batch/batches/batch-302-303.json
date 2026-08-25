@@ -1,0 +1,445 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 6,
+  "manifest": [
+   "kham-phinthu-pha",
+   "kham-athitthan",
+   "kham-sia-sala",
+   "kham-khuen",
+   "kham-wikap",
+   "kham-thon"
+  ],
+  "pages": [
+   {
+    "page": 302,
+    "file": "IMG_0569.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-phinthu-pha",
+    "verses": "1",
+    "starts_here": true,
+    "note": "A centred heading and its lines. Starts and ends on this sheet."
+   },
+   {
+    "page": 302,
+    "file": "IMG_0569.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-athitthan",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A centred heading and its lines. Starts and ends on this sheet."
+   },
+   {
+    "page": 302,
+    "file": "IMG_0569.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-sia-sala",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A centred heading and its lines. Starts and ends on this sheet."
+   },
+   {
+    "page": 302,
+    "file": "IMG_0569.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-khuen",
+    "verses": "1",
+    "starts_here": true,
+    "note": "A centred heading and its lines. Starts and ends on this sheet."
+   },
+   {
+    "page": 302,
+    "file": "IMG_0569.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-wikap",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "A centred heading and its lines. Starts and ends on this sheet."
+   },
+   {
+    "page": 302,
+    "file": "IMG_0569.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-thon",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "A centred heading and its lines. The chant runs off the foot of the sheet and is picked up on page 303."
+   },
+   {
+    "page": 303,
+    "file": "IMG_0570.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-thon",
+    "verses": "3-5",
+    "starts_here": false,
+    "note": "The TOP of page 303, above คำอธิษฐานเข้าพรรษา: a bracketed rubric and the same withdrawal formula again in its junior form. batch-303-303.json deliberately left these three lines out and said they belonged to page 302's chant; this is that chant bringing them."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-phinthu-pha",
+   "title_thai": "คำพินทุผ้า",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Marking the Cloth",
+   "page_start": 302,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1. Thai-script Pali except where a Thai instruction or rubric is printed on its own line.",
+    "ordering": "No Thai translation is printed anywhere on this sheet; the Thai that appears is an instruction, a label or a rubric.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. Where a line carries a Thai label or rubric, pali_roman transliterates the PALI ONLY, as established on page 308. paiboon is left empty — see page 306.",
+    "pages": "IMG_0569.PNG, page 302, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิมัง พินทุกัปปัง กะโรมิ.",
+     "pali_roman": "Imaṃ bindukappaṃ karomi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I make this mark of allowability.",
+     "page": 302,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  },
+  {
+   "id": "kham-athitthan",
+   "title_thai": "คำอธิษฐาน",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Determining",
+   "page_start": 302,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "5. Thai-script Pali except where a Thai instruction or rubric is printed on its own line.",
+    "ordering": "No Thai translation is printed anywhere on this sheet; the Thai that appears is an instruction, a label or a rubric.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. Where a line carries a Thai label or rubric, pali_roman transliterates the PALI ONLY, as established on page 308. paiboon is left empty — see page 306.",
+    "pages": "IMG_0569.PNG, page 302, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "บาตร : อิมัง ปัตตัง อะธิฏฐามิ.",
+     "pali_roman": "Imaṃ pattaṃ adhiṭṭhāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Bowl: I determine this bowl.",
+     "page": 302,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "สังฆาฏิ : อิมัง สังฆาฏิง อะธิฏฐามิ.",
+     "pali_roman": "Imaṃ saṅghāṭiṃ adhiṭṭhāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Outer robe: I determine this outer robe."
+    },
+    {
+     "number": 3,
+     "pali": "จีวร : อิมัง อุตตะราสังคัง อะธิฏฐามิ.",
+     "pali_roman": "Imaṃ uttarāsaṅgaṃ adhiṭṭhāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Upper robe: I determine this upper robe."
+    },
+    {
+     "number": 4,
+     "pali": "สบง : อิมัง อันตะระวาสะกัง อะธิฏฐามิ.",
+     "pali_roman": "Imaṃ antaravāsakaṃ adhiṭṭhāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Inner robe: I determine this inner robe."
+    },
+    {
+     "number": 5,
+     "pali": "ผ้าอาบน้ำฝน : อิมัง วัสสิกะสาฏิกัง อะธิฏฐามิ.",
+     "pali_roman": "Imaṃ vassikasāṭikaṃ adhiṭṭhāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Rains-bathing cloth: I determine this rains-bathing cloth."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0569.PNG",
+     "issue": "FIVE LABELLED LINES, each printing a Thai label then its Pali — บาตร, สังฆาฏิ, จีวร, สบง, ผ้าอาบน้ำฝน. Handled as page 308's robe-determination lines were: the whole printed line in `pali`, and pali_roman transliterating the Pali only, because running the transliterator over a Thai label yields a confident nonsense reading."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0569.PNG",
+     "issue": "THE BOOK'S LABEL AND ITS PALI DISAGREE ABOUT WHICH ROBE. Line 3 is labelled จีวร, the general word for robe, but its Pali is อุตตะราสังคัง, specifically the UPPER robe — and page 308 labels that same Pali อุตตราสงค์. Kept as this sheet prints it."
+    }
+   ]
+  },
+  {
+   "id": "kham-sia-sala",
+   "title_thai": "คำเสียสละ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Forfeiting",
+   "page_start": 302,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "5. Thai-script Pali except where a Thai instruction or rubric is printed on its own line.",
+    "ordering": "No Thai translation is printed anywhere on this sheet; the Thai that appears is an instruction, a label or a rubric.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. Where a line carries a Thai label or rubric, pali_roman transliterates the PALI ONLY, as established on page 308. paiboon is left empty — see page 306.",
+    "pages": "IMG_0569.PNG, page 302, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "จีวรเป็นนิสสัคคียะ เพราะอยู่ปราศจากเขตล่วงราตรี จะต้องเสียสละดังนี้",
+     "paiboon": "",
+     "english": "A robe becomes forfeitable through being away from it past dawn, and must be forfeited thus:",
+     "page": 302,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "อิทัง เม ภันเต จีวะรัง รัตติวิปปะวุตถัง",
+     "pali_roman": "Idaṃ me bhante cīvaraṃ rattivippavutthaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, this robe of mine has been apart from me for a night,",
+     "para_start": true
+    },
+    {
+     "number": 3,
+     "pali": "อัญญัต์ระ ภิกขุสัมมะติยา นิสสัคคิยัง",
+     "pali_roman": "Aññatra bhikkhusammatiyā nissaggiyaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "and without the consent of the bhikkhus it is forfeitable."
+    },
+    {
+     "number": 4,
+     "pali": "อิมาหัง อายัส์มะโต นิสสัชชามิ.",
+     "pali_roman": "Imāhaṃ āyasmato nissajjāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I forfeit it to the venerable one."
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(ถ้า 2 ผืนว่า ท์วิจีวะรัง ถ้าทั้ง 3 ผืนว่า ติจีวะรัง)",
+     "paiboon": "",
+     "english": "(For two cloths say tvicīvaraṃ; for all three say ticīvaraṃ)"
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0569.PNG",
+     "issue": "THE INSTRUCTION PRECEDES THE PALI HERE, where page 308's anumodanā prints its instruction beneath. It is entered as its own verse so it renders in printed order; a block cannot sit inside a chant."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0569.PNG",
+     "issue": "A RUBRIC GIVING SUBSTITUTE WORDS — '(ถ้า 2 ผืนว่า ท์วิจีวะรัง ถ้าทั้ง 3 ผืนว่า ติจีวะรัง)' — telling the speaker to swap in the dual or plural form for two or three cloths. It is a variant instruction rather than a repeat count, the first of its kind in this stretch, and is kept on its own line as printed."
+    }
+   ]
+  },
+  {
+   "id": "kham-khuen",
+   "title_thai": "คำคืน",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Returning",
+   "page_start": 302,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1. Thai-script Pali except where a Thai instruction or rubric is printed on its own line.",
+    "ordering": "No Thai translation is printed anywhere on this sheet; the Thai that appears is an instruction, a label or a rubric.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. Where a line carries a Thai label or rubric, pali_roman transliterates the PALI ONLY, as established on page 308. paiboon is left empty — see page 306.",
+    "pages": "IMG_0569.PNG, page 302, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิมัง จีวะรัง อายัส์มะโต ทัมมิ.",
+     "pali_roman": "Imaṃ cīvaraṃ āyasmato dammi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I give this robe to the venerable one.",
+     "page": 302,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  },
+  {
+   "id": "kham-wikap",
+   "title_thai": "คำวิกัปป์",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Shared Ownership",
+   "page_start": 302,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "2. Thai-script Pali except where a Thai instruction or rubric is printed on its own line.",
+    "ordering": "No Thai translation is printed anywhere on this sheet; the Thai that appears is an instruction, a label or a rubric.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. Where a line carries a Thai label or rubric, pali_roman transliterates the PALI ONLY, as established on page 308. paiboon is left empty — see page 306.",
+    "pages": "IMG_0569.PNG, page 302, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิมัง จีวะรัง ตุยหัง วิกัปเปมิ.",
+     "pali_roman": "Imaṃ cīvaraṃ tuyhaṃ vikappemi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I assign this robe to you in shared ownership.",
+     "page": 302,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "หลายผืนว่า อิมานิ จีวะรานิ ตุยหัง วิกัปเปมิ.",
+     "pali_roman": "Imāni cīvarāni tuyhaṃ vikappemi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For several cloths say: I assign these robes to you in shared ownership."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0569.PNG",
+     "issue": "'หลายผืนว่า' — 'for several cloths say' — is a Thai instruction printed INLINE at the head of the Pali line rather than on its own. The whole line is kept in `pali` and pali_roman covers the Pali only, as with the labelled lines above."
+    }
+   ]
+  },
+  {
+   "id": "kham-thon",
+   "title_thai": "คำถอน",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of Withdrawing",
+   "page_start": 302,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "5. Thai-script Pali except where a Thai instruction or rubric is printed on its own line.",
+    "ordering": "No Thai translation is printed anywhere on this sheet; the Thai that appears is an instruction, a label or a rubric.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. Where a line carries a Thai label or rubric, pali_roman transliterates the PALI ONLY, as established on page 308. paiboon is left empty — see page 306.",
+    "pages": "IMG_0569.PNG, page 302, read off the sheet. Offset 267."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิมัง จีวะรัง มัยหัง สันตะกัง ปะริภุญชะ วา",
+     "pali_roman": "Imaṃ cīvaraṃ mayhaṃ santakaṃ paribhuñja vā",
+     "thai": "",
+     "paiboon": "",
+     "english": "This robe is my property; use it,",
+     "page": 302,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "วิสัชเชหิ วา ยะถาปัจจะยัง วา กะโรหิ.",
+     "pali_roman": "Visajjehi vā yathāpaccayaṃ vā karohi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "or give it away, or do with it as you see fit."
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(ถ้าผู้ถอนอ่อนกว่าว่า)",
+     "paiboon": "",
+     "english": "(If the one withdrawing is the junior, say:)",
+     "page": 303,
+     "para_start": true
+    },
+    {
+     "number": 4,
+     "pali": "อิมัง จีวะรัง มัยหัง สันตะกัง ปะริภุญชะถะ วา",
+     "pali_roman": "Imaṃ cīvaraṃ mayhaṃ santakaṃ paribhuñjatha vā",
+     "thai": "",
+     "paiboon": "",
+     "english": "This robe is my property; use it,",
+     "para_start": true
+    },
+    {
+     "number": 5,
+     "pali": "วิสัชเชถะ วา ยะถาปัจจะยัง วา กะโรถะ.",
+     "pali_roman": "Visajjetha vā yathāpaccayaṃ vā karotha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "or give it away, or do with it as you see fit."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 4,
+     "file": "IMG_0570.PNG",
+     "issue": "THE SAME FORMULA TWICE, DIFFERING ONLY IN VERB ENDINGS, and that difference is the whole point. Page 302 prints ปะริภุญชะ / วิสัชเชหิ / กะโรหิ — singular imperatives, spoken to a junior — and page 303 prints ปะริภุญชะถะ / วิสัชเชถะ / กะโรถะ, the plural-polite forms used when the one withdrawing is himself the junior. The bracketed rubric between them says exactly that. Not a repetition to collapse."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0570.PNG",
+     "issue": "THIS CHANT SPANS A PAGE BOUNDARY THAT ANOTHER BATCH ALREADY TOUCHED. batch-303-303.json entered the six chants that START on 303 and recorded that the lines above them belonged to a chant beginning on 302. This batch carries a SECOND row for page 303 to bring them, so two batch files describe parts of one page — which check_pages reconciles by verse range, not by file."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-phinthu-pha",
+   "kham-athitthan",
+   "kham-sia-sala",
+   "kham-khuen",
+   "kham-wikap",
+   "kham-thon"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 301,
+  "resume_from_file": "IMG_0568.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch, so none can have drifted. No Thai TRANSLATION is printed on this sheet — the Thai that appears is a label, an instruction or a rubric.",
+  "pali_untouched": "Confirmed and mechanically true: every pali_roman was produced by translit_pali from the Pali portion of its line rather than typed. Where a line carries a Thai label, an inline instruction or a bracketed rubric, pali_roman covers the PALI ONLY. The cluster marks ์ in อัญญัต์ระ, อายัส์มะโต and ท์วิจีวะรัง are present as the book sets them.",
+  "page_scan": "agrees. Six rows for page 302, one per chant, plus a SEVENTH row for page 303 carrying kham-thon's continuation. The Pali at the very top of page 302 is deliberately NOT here: it is the tail of a chant beginning on page 301 and belongs to that page's batch.",
+  "notes": "SIX ROBE CHANTS, and one of them settles a loose end. Three findings. (1) คำถอน SPANS 302-303 and this batch carries a second row for page 303 to bring the three lines batch-303-303.json deliberately left out — two batch files now describe parts of one page, which check_pages reconciles by verse range rather than by file. (2) THE TWO WITHDRAWAL FORMULAS DIFFER ONLY IN VERB ENDINGS — singular to a junior, plural-polite when the speaker is the junior — and the rubric between them says so. (3) ⚠ THE LABEL จีวร SITS OVER อุตตะราสังคัง, the upper robe specifically, where page 308 labels that same Pali อุตตราสงค์. The book disagrees with itself across six pages and both are kept.",
+  "diacritic_exceptions": []
+ }
+}
