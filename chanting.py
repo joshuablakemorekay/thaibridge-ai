@@ -34132,6 +34132,263 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-kho-buat-chi',
+        'title_thai': 'คำขอบวชชี',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Requesting the Going Forth',
+        'page_start': 299,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0566.PNG]: ⚠ THE SAME OPENING AS คำแสดงตนเป็นอุบาสก
+            #   ON PAGE 303, AND A DIFFERENT ENDING. Both run 'เอสาหัง ภันเต,
+            #   สุจิระปะรินิพพุตัมปิ, ตัง ภะคะวันตัง สะระณัง คัจฉามิ, ธัมมัญจะ
+            #   ภิกขุสังฆัญจะ,' and then part: page 303 closes 'อุปาสะกัตตัง
+            #   สังโฆ ธาเรตุ', asking to be remembered as a LAY FOLLOWER, and
+            #   this one closes 'ปัพพัชชัง มัง ภันเต, สังโฆ ธาเรตุ อัชชะตัคเค
+            #   ปาณุเปตัง, สะระณัง คะตัง', asking to be remembered as one GONE
+            #   FORTH. Two different requests sharing eleven words; they are
+            #   separate chants and must not be conflated.
+            # ‼ CHECK [IMG_0566.PNG]: THE BOOK PRINTS ITS OWN TRANSLATION OF
+            #   THIS CHANT, under a centred heading คำแปล, and it is entered
+            #   as page BLOCKS anchored after this chant rather than as this
+            #   verse's `thai`. The book sets it as a separate headed passage,
+            #   not as a layer beside the Pali, and a block anchored to the
+            #   following chant's row renders it exactly there — between this
+            #   chant and the next.
+            {
+                'number': 1,
+                'page': 299,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'เอสาหัง ภันเต, สุจิระปะรินิพพุตัมปิ, ตัง ภะคะวันตัง สะระณัง คัจฉามิ, ธัมมัญจะ ภิกขุสังฆัญจะ, ปัพพัชชัง มัง ภันเต, สังโฆ ธาเรตุ อัชชะตัคเค ปาณุเปตัง, สะระณัง คะตัง.',
+                'pali_roman': 'Esāhaṃ bhante, suciraparinibbutampi, taṃ bhagavantaṃ saraṇaṃ gacchāmi, dhammañca bhikkhusaṅghañca, pabbajjaṃ maṃ bhante, saṅgho dhāretu ajjatagge pāṇupetaṃ, saraṇaṃ gataṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, I go for refuge to that Blessed One, though he attained final Nibbāna long ago, and to the Dhamma and to the community of monks. May the Saṅgha remember me, venerable sir, as one gone forth, who from this day has gone for refuge for as long as life lasts.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-aradhana-sin-8',
+        'title_thai': 'คำอาราธนาศีล ๘',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Requesting the Eight Precepts',
+        'page_start': 299,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0566.PNG]: THE LINE IS PRINTED THREE TIMES IN FULL
+            #   rather than once with a repeat-rubric, so it is entered as
+            #   three verses. Compare page 303's คำอธิษฐานเข้าพรรษา, which
+            #   prints its line once and adds (ว่า ๓ ครั้ง). The book does
+            #   both and the difference is reproduced.
+            {
+                'number': 1,
+                'page': 299,
+                'para_start': True,
+                'pali': 'มะยัง ภันเต ติสะระเณนะ สะหะ อัฏฐะ สีลานิ ยาจามะ.',
+                'pali_roman': 'Mayaṃ bhante tisaraṇena saha aṭṭha sīlāni yācāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, we ask for the eight precepts together with the three refuges.',
+            },
+            {
+                'number': 2,
+                'pali': 'มะยัง ภันเต ติสะระเณนะ สะหะ อัฏฐะ สีลานิ ยาจามะ.',
+                'pali_roman': 'Mayaṃ bhante tisaraṇena saha aṭṭha sīlāni yācāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, we ask for the eight precepts together with the three refuges.',
+            },
+            {
+                'number': 3,
+                'pali': 'มะยัง ภันเต ติสะระเณนะ สะหะ อัฏฐะ สีลานิ ยาจามะ.',
+                'pali_roman': 'Mayaṃ bhante tisaraṇena saha aṭṭha sīlāni yācāma.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, we ask for the eight precepts together with the three refuges.',
+            },
+            # ‼ CHECK [IMG_0566.PNG]: A SUBSTITUTION RUBRIC, not a repeat
+            #   count — '(ถ้าคนเดียว อะหัง แทน มะยัง และ ยาจามิ แทน ยาจามะ)',
+            #   giving the singular forms for a solitary petitioner. Same kind
+            #   as page 302's คำเสียสละ rubric. Kept on its own line as
+            #   printed.
+            {
+                'number': 4,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ถ้าคนเดียว อะหัง แทน มะยัง และ ยาจามิ แทน ยาจามะ)',
+                'paiboon': '',
+                'english': '(If alone, say ahaṃ in place of mayaṃ, and yācāmi in place of yācāma)',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-namatsakan-phra-phutthachao',
+        'title_thai': 'คำนมัสการพระพุทธเจ้า',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of Homage to the Buddha',
+        'page_start': 299,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 299,
+                'para_start': True,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Fully Enlightened One.',
+            },
+            {
+                'number': 2,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Fully Enlightened One.',
+            },
+            {
+                'number': 3,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Fully Enlightened One.',
+            },
+            {
+                'number': 4,
+                'para_start': True,
+                'pali': 'พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I go to the Buddha for refuge.',
+            },
+            {
+                'number': 5,
+                'pali': 'ธัมมัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Dhammaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I go to the Dhamma for refuge.',
+            },
+            {
+                'number': 6,
+                'pali': 'สังฆัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Saṅghaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I go to the Saṅgha for refuge.',
+            },
+            {
+                'number': 7,
+                'pali': 'ทุติยัมปิ พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Dutiyampi buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time I go to the Buddha for refuge.',
+            },
+            {
+                'number': 8,
+                'pali': 'ทุติยัมปิ ธัมมัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Dutiyampi dhammaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time I go to the Dhamma for refuge.',
+            },
+            {
+                'number': 9,
+                'pali': 'ทุติยัมปิ สังฆัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Dutiyampi saṅghaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a second time I go to the Saṅgha for refuge.',
+            },
+            {
+                'number': 10,
+                'pali': 'ตะติยัมปิ พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Tatiyampi buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time I go to the Buddha for refuge.',
+            },
+            # ‼ CHECK [IMG_0567.PNG]: THE CHANT IS CUT BY THE PAGE BREAK MID-
+            #   ROUND. The third round runs 'ตะติยัมปิ พุทธัง' at the foot of
+            #   299 and its Dhamma and Saṅgha lines at the top of 300, so the
+            #   round is split across the sheets and entered as separate
+            #   verses on their own pages.
+            {
+                'number': 11,
+                'page': 300,
+                'pali': 'ตะติยัมปิ ธัมมัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Tatiyampi dhammaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time I go to the Dhamma for refuge.',
+            },
+            {
+                'number': 12,
+                'pali': 'ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Tatiyampi saṅghaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time I go to the Saṅgha for refuge.',
+            },
+            # ‼ CHECK [IMG_0567.PNG]: TWO SPEAKERS IN ONE PRINTED LINE. The
+            #   closing line carries '(พระท่านว่า)' and '(รับว่า)' — the
+            #   monk's declaration and the response — with a Pali fragment
+            #   after each. The whole line is kept in `pali` as printed, and
+            #   pali_roman transliterates BOTH Pali fragments and neither
+            #   rubric.
+            {
+                'number': 13,
+                'para_start': True,
+                'pali': '(พระท่านว่า) ติสะระณะคะมะนัง นิฏฐิตัง. (รับว่า) อามะ ภันเต.',
+                'pali_roman': 'Tisaraṇagamanaṃ niṭṭhitaṃ. Āma bhante.',
+                'thai': '',
+                'paiboon': '',
+                'english': '(The monk says:) The going for refuge is completed. (The response:) Yes, venerable sir.',
+            },
+        ],
+    },
 ]
 
 
@@ -36273,6 +36530,26 @@ PAGE_BLOCKS = [
                 'type': 'prose',
                 'thai': 'หมายเหตุ ในวงเล็บ อิตถันนามัสสะ ให้ใส่ชื่อผู้ครองกฐินแทน',
                 'english': 'Note: in the brackets, itthannāmassa, put the name of the one receiving the kathina instead.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 299 ───────────────────────────────────────────────────
+    # Written from batch-299-300.json.
+    {
+        'page': 299,
+        'after': 'kham-kho-buat-chi',
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'คำแปล',
+                'english': 'The Translation',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'ข้าแต่ท่านผู้เจริญ ข้าพเจ้าขอถึงสมเด็จพระผู้มีพระภาคเจ้า แม้เสด็จดับขันธปรินิพพานนานแล้วนั้น กับทั้งพระธรรมและพระสงฆ์ ว่าเป็นสรณะที่พึ่งที่ระลึก ขอพระสงฆ์จงจำข้าพเจ้าไว้ว่าเป็นผู้บวชในพระธรรมวินัย ผู้ถึงพระรัตนตรัยเป็นสรณะตลอดชีวิต ตั้งแต่บัดนี้เป็นต้นไป',
+                'english': 'Venerable sir, I go for refuge to the Blessed One, though he long ago passed into final Nibbāna, and to the Dhamma and the Saṅgha, as my refuge and support. May the Saṅgha remember me as one gone forth in the Dhamma and Discipline, who has gone to the Triple Gem for refuge for life, from this day onward.',
                 'english_unverified': True,
             },
         ],
