@@ -114,6 +114,56 @@
         margin: 0;
     }
 
+    /* The author's own hashtags, kept because they are part of how the talk was
+       written. Quiet enough not to compete with the title. */
+    .talk-tags {
+        margin: 0.75rem 0 0 0;
+        font-size: 0.95rem;
+        color: #9a8a6a;
+        letter-spacing: 0.02em;
+    }
+
+    /* Section headings a talk sets for itself — here, the Abhidhamma sources.
+       Sized between the title and the body so the talk reads as one piece
+       rather than as separate articles. */
+    .talk-heading {
+        font-size: 1.35rem;
+        color: var(--royal-purple);
+        line-height: 1.5;
+        margin: 3rem 0 1.25rem 0;
+    }
+
+    .talk-divider {
+        text-align: center;
+        color: #C9B48A;
+        font-size: 1.4rem;
+        letter-spacing: 0.4rem;
+        margin: 2.5rem 0;
+    }
+
+    /* The author's closing note about the nature of the talk. Set apart from the
+       talk itself, because it is about the talk rather than part of it. */
+    .talk-closing-note {
+        margin-top: 3rem;
+        padding: 1.75rem;
+        background: #FDF7EA;
+        border-radius: 10px;
+        border-left: 4px solid var(--gold);
+    }
+
+    .talk-closing-note h4 {
+        margin: 0 0 0.75rem 0;
+        font-size: 1.05rem;
+        color: var(--royal-purple);
+    }
+
+    .talk-closing-note p {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.85;
+        color: #555;
+    }
+
     .talk-footer {
         margin-top: 3rem;
         padding-top: 2rem;
@@ -166,6 +216,15 @@
         .talk-th {
             font-size: 1.15rem;
         }
+
+        .talk-heading {
+            font-size: 1.15rem;
+            margin-top: 2.25rem;
+        }
+
+        .talk-closing-note {
+            padding: 1.25rem;
+        }
     }
 </style>
 {% endblock %}
@@ -175,10 +234,20 @@
 
     <div class="talk-header">
         <div class="talk-lotus">🪷 🪷 🪷</div>
+        {# Not every talk has been translated into Thai. When there is no Thai
+           title the English one is the only title, so it takes the top slot
+           rather than leaving an empty heading above it. #}
+        {% if talk.title.th %}
         <h1 class="talk-title-th">{{ talk.title.th }}</h1>
         <h2 class="talk-title-en">{{ talk.title.en }}</h2>
+        {% else %}
+        <h1 class="talk-title-en">{{ talk.title.en }}</h1>
+        {% endif %}
         {% if talk.subtitle %}
         <p class="talk-subtitle">{{ talk.subtitle.en }}</p>
+        {% endif %}
+        {% if talk.tags %}
+        <p class="talk-tags">{{ talk.tags }}</p>
         {% endif %}
 
         <div class="talk-byline">
@@ -194,14 +263,37 @@
         {% if talk.translation_note %}
         <div class="talk-translation-note">{{ talk.translation_note }}</div>
         {% endif %}
+        {# Said plainly for an English-only talk, so a learner who came here for
+           the Thai is not left hunting for a column that was never there. #}
+        {% if talk.language_note %}
+        <div class="talk-translation-note">{{ talk.language_note }}</div>
+        {% endif %}
     </div>
 
+    {# A talk is a list of blocks, not just paragraphs: a talk may set its own
+       section headings and rule-off dividers, and either or both halves of a
+       paragraph may be missing when a talk exists in one language only. #}
     {% for passage in talk.paragraphs %}
+        {% if passage.heading %}
+    <h3 class="talk-heading">{{ passage.heading }}</h3>
+        {% elif passage.divider %}
+    <div class="talk-divider">{{ passage.divider }}</div>
+        {% else %}
     <div class="talk-passage">
-        <p class="talk-th">{{ passage.th }}</p>
-        <p class="talk-en">{{ passage.en }}</p>
+        {% if passage.th %}<p class="talk-th">{{ passage.th }}</p>{% endif %}
+        {% if passage.en %}<p class="talk-en">{{ passage.en }}</p>{% endif %}
     </div>
+        {% endif %}
     {% endfor %}
+
+    {# The author's own note about what the talk is and is not. It closes the
+       talk, so it sits after the passages and before the site's footer. #}
+    {% if talk.closing_note %}
+    <div class="talk-closing-note">
+        <h4>{{ talk.closing_note.heading }}</h4>
+        <p>{{ talk.closing_note.body }}</p>
+    </div>
+    {% endif %}
 
     <div class="talk-footer">
         ☸<br>

@@ -432,23 +432,31 @@
         🪷 Dhamma Talks
     </h2>
     <p style="text-align: center; color: #555; font-size: 1.2rem; margin-bottom: 2.5rem; font-style: italic;">
-        Talks given freely by our monks, in Thai and English side by side
+        Talks given freely by our monks, in Thai and English wherever a translation exists
     </p>
 
     {% for talk in talks %}
     <div class="talk-card">
         <div class="talk-card-header">
+            {# Talks that have not been translated show the English title alone
+               rather than an empty Thai heading above it. #}
+            {% if talk.title.th %}
             <h3 class="talk-card-title-th">{{ talk.title.th }}</h3>
+            {% endif %}
             <h3 class="talk-card-title">{{ talk.title.en }}</h3>
             {% if talk.subtitle %}
             <p class="talk-card-subtitle">{{ talk.subtitle.en }}</p>
             {% endif %}
         </div>
 
-        {% if talk.paragraphs %}
+        {# The excerpt is the talk's opening paragraph. A talk may open with a
+           heading or a divider block, so take the first block that actually has
+           words in it. #}
+        {% set opening = (talk.paragraphs | selectattr('en', 'defined') | list | first) %}
+        {% if opening %}
         <div class="talk-card-excerpt">
-            <p>{{ talk.paragraphs[0].th }}</p>
-            <p><em>{{ talk.paragraphs[0].en }}</em></p>
+            {% if opening.th %}<p>{{ opening.th }}</p>{% endif %}
+            <p><em>{{ opening.en }}</em></p>
         </div>
         {% endif %}
 
