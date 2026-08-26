@@ -1,0 +1,426 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 3,
+  "files_read": 3,
+  "received": 2,
+  "manifest": [
+   "rabiap-suat-thawai-phon-phra-kon-chan",
+   "rabiap-suat-mon-nai-ngan-phithi-awamongkhon"
+  ],
+  "pages": [
+   {
+    "page": 264,
+    "file": "IMG_0532.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-thawai-phon-phra-kon-chan",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A NUMBERED centred heading and Thai instruction paragraphs with a numbered list."
+   },
+   {
+    "page": 264,
+    "file": "IMG_0532.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-nai-ngan-phithi-awamongkhon",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A NUMBERED centred heading and Thai instruction paragraphs with a numbered list."
+   },
+   {
+    "page": 265,
+    "file": "IMG_0533.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-nai-ngan-phithi-awamongkhon",
+    "verses": "6-17",
+    "starts_here": false,
+    "note": "The chant continuing; this sheet carries no heading of its own."
+   },
+   {
+    "page": 266,
+    "file": "IMG_0534.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-nai-ngan-phithi-awamongkhon",
+    "verses": "18-21",
+    "starts_here": false,
+    "note": "The chant continuing; this sheet carries no heading of its own."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "rabiap-suat-thawai-phon-phra-kon-chan",
+   "title_thai": "ระเบียบสวดถวายพรพระก่อนฉัน",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Order of Chanting the Blessing of the Buddha before the Meal",
+   "book_number": 6,
+   "book_number_printed": "6",
+   "page_start": 264,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "5 Thai instruction paragraphs.",
+    "ordering": "There is no Pali as chanted TEXT; every Pali phrase is quoted inside an instruction. All verses are Thai.",
+    "conventions": "`pali` and `pali_roman` are empty throughout. paiboon is left empty, as on page 306.",
+    "pages": "IMG_0532 to IMG_0534, pages 264-266. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อประธานให้ศีลเสร็จแล้ว นำสวดดังต่อไปนี้",
+     "paiboon": "",
+     "english": "When the one presiding has finished giving the precepts, he leads the chanting as follows:",
+     "para_layout": "prose",
+     "para_start": true,
+     "page": 264
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะมะการะปาฐะ คือ นะโม ฯเปฯ 3 จบ",
+     "paiboon": "",
+     "english": "The homage passage, that is namo … three times.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "อิติปิ โส ภะคะวา ฯเปฯ อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.",
+     "paiboon": "",
+     "english": "Itipi so bhagavā … ending anuttaraṃ puññakkhettaṃ lokassāti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง ฯเปฯ โมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.",
+     "paiboon": "",
+     "english": "Bāhuṃ sahassamabhinimmitasāvudhantaṃ … ending mokkhaṃ sukhaṃ adhigameyya naro sapañño.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "มะหาการุณิโก นาโถ ฯเปฯ ละภันตัตเถ ปะทักขิเณ ภะวะตุ สัพพะมังคะลัง ต่อไปจนถึง สะทา โสตถี ภะวันตุ เต.",
+     "paiboon": "",
+     "english": "Mahākāruṇiko nātho … ending labhantatthe padakkhiṇe; then bhavatu sabbamaṅgalaṃ, on to sadā sotthī bhavantu te.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 4
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0532.PNG",
+     "issue": "⚠ A NEARLY IDENTICAL CHANT ALREADY EXISTS. ระเบียบถวายพรพระ was entered from pages 270-271 with its own contents line at ๒๗๐; this one, ระเบียบสวดถวายพรพระก่อนฉัน, is listed at ๒๖๔ and is shorter — four items against that one's four plus two instruction paragraphs, and different wording throughout. Entered under its own id. Checked against the existing ids before writing, as the Maṅgala on page 272 taught."
+    }
+   ]
+  },
+  {
+   "id": "rabiap-suat-mon-nai-ngan-phithi-awamongkhon",
+   "title_thai": "ระเบียบสวดมนต์ในงานพิธีอวมงคล",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Order of Chanting at Inauspicious Ceremonies",
+   "book_number": 7,
+   "book_number_printed": "7",
+   "page_start": 264,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "21 Thai instruction paragraphs.",
+    "ordering": "There is no Pali as chanted TEXT; every Pali phrase is quoted inside an instruction. All verses are Thai.",
+    "conventions": "`pali` and `pali_roman` are empty throughout. paiboon is left empty, as on page 306.",
+    "pages": "IMG_0532 to IMG_0534, pages 264-266. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ระเบียบสวดมนต์ในงานอวมงคลนั้น โดยมากมีดังนี้ คือ งานทำบุญศพ 7 วัน 50 วัน 100 วันและงานสัตตมวารที่ทำทุก 7 วันในระหว่าง 7 วันถึง 50 วัน และ 50 วันถึง 100 วัน นอกจากนี้ก็มีงานทำบุญปรารภวันตายของบรรพบุรุษบุรพาจารย์ ซึ่งมีนิยมทำกันอยู่โดยมาก ระเบียบการสวดมนต์ในงานพิธีเช่นนี้ มีต้นสวดมนต์และท้ายสวดมนต์เป็นระเบียบเดียวกันต่างแต่พระสูตรที่นำมาสวดให้เหมาะสมแก่งาน หรือให้ถูกกับความปรารถนาของเจ้าของงานเท่านั้น ดังจะแนะไว้ต่อไปนี้.-",
+     "paiboon": "",
+     "english": "The order of chanting at inauspicious occasions is mostly as follows: merit-making for the dead at seven days, fifty days and a hundred days, and the seven-day observances made every seven days between the seventh and the fiftieth day, and between the fiftieth and the hundredth. Besides these there is merit-making on the anniversary of the death of forebears and former teachers, which is very commonly done. The order of chanting at such occasions has the same opening and closing throughout; only the discourse brought in to suit the occasion differs, or is chosen to match the wish of the host. It will be set out as follows.-",
+     "para_layout": "prose",
+     "para_start": true,
+     "page": 264
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "งานทำบุญศพ 7 วัน หรือ ที่เรียกว่า สัตตมวาร ใช้สวด อะนัตตะลักขะณะสุตตัง",
+     "paiboon": "",
+     "english": "For merit-making at seven days, called the sattamavāra, the Anattalakkhaṇa Sutta is chanted.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "งานทำบุญศพ 50 วัน หรือ ที่เรียกว่า ปัญญาสมวาร ใช้สวด อาทิตตะปะริยายะสุตตัง.",
+     "paiboon": "",
+     "english": "For merit-making at fifty days, called the paññāsamavāra, the Ādittapariyāya Sutta is chanted.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "งานทำบุญศพ 100 วัน หรือ ที่เรียกว่า สตมวาร ใช้สวดสะติปัฏฐานะปาโฐ.",
+     "paiboon": "",
+     "english": "For merit-making at a hundred days, called the satamavāra, the Satipaṭṭhāna passage is chanted.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "งานทำบุญศพ สัตตมวาร ที่ 2-3 เป็นต้น นิยมใช้สวด ธัมมะนิยามะสุตตัง แต่จะสวดสูตรอื่นสูตรหนึ่งสูตรใดก็ได้ สุดแต่ผู้เป็นประธานจะพิจารณาเห็นสมควร หรือ",
+     "paiboon": "",
+     "english": "For the second and third seven-day observances and so on, the Dhammaniyāma Sutta is usually chanted, though any other discourse may be chanted instead, as the one presiding sees fit, or",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เจ้าภาพงานนิมนต์เจาะจงไว้",
+     "paiboon": "",
+     "english": "as the host of the occasion has specifically requested.",
+     "para_layout": "prose",
+     "page": 265
+    },
+    {
+     "number": 7,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "จะทำระเบียบสวดมนต์ทำบุญศพ 7 วัน ไว้เป็นตัวอย่างดังต่อไปนี้",
+     "paiboon": "",
+     "english": "The order of chanting for the seven-day merit-making will be set out as an example, as follows:",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 8,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "การสวดมนต์งานอวมงคล ไม่ต้องขัดชุมนุมเทวดา เมื่อทายกอาราธนาพระปริตรจบแล้ว พระเถระผู้เป็นประธานนำสวดดังนี้",
+     "paiboon": "",
+     "english": "At an inauspicious occasion there is no introduction assembling the devas. When the layman has finished requesting the parittas, the presiding elder leads the chanting thus:",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะมะการะปาฐะ นะโม ฯเปฯ 3 จบ",
+     "paiboon": "",
+     "english": "The homage passage, namo … three times.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สะระณะคะมะนะปาฐะ พุทธัง สะระณัง คัจฉามิ ฯเปฯ ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+     "paiboon": "",
+     "english": "The going-for-refuge passage, buddhaṃ saraṇaṃ gacchāmi … tatiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ปัพพะโตปะมะคาถา และ อะริยะธะนะคาถา สวดต่อกัน ขึ้น ยะถาปิ เสลา วิปุลา นะภัง อาหัจจะ ปัพพะตา ฯเปฯ อะนุยุญเชถะ เมธาวี สะรัง พุทธานะ สาสะนันติ.",
+     "paiboon": "",
+     "english": "The Pabbatopama and Ariyadhana verses, chanted straight through, beginning yathāpi selā vipulā nabhaṃ āhacca pabbatā … ending anuyuñjetha medhāvī saraṃ buddhāna sāsananti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 12,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "พระภิกษุรูปหนึ่งตั้งพัดขัด อะนัตตะลักขะณะสุตตัง ขึ้น ยันตัง สัตเตหิ ทุกเขนะ เญยยัง อะนัตตะลักขะณัง ฯเปฯ สาธูนัง อัตถะสิทธัตถัง ตัง สุตตันตัง ภะณามะ เส.",
+     "paiboon": "",
+     "english": "One monk raises his fan and chants the introduction to the Anattalakkhaṇa Sutta, beginning yantaṃ sattehi dukkhena neyyaṃ anattalakkhaṇaṃ … ending sādhūnaṃ atthasiddhatthaṃ taṃ suttantaṃ bhaṇāma se.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 13,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวด อะนัตตะลักขะณะสุตตัง ประธานขึ้นต้นบท เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา ฯเปฯ เอวัง เม วิญญาณัง มา อะโหสีติ. ลงตรงนี้แล้วประธานขึ้นต่อไป ตัง กิง มัญญะถะ ภิกขะเว ฯเปฯ เอวะเมตัง ยะถาภูตัง สัมมัปปัญญายะ ทัฏฐัพพัง ลงตรงนี้อีกวาระหนึ่งแล้วประธานขึ้นต่อไป เอวัง ปัสสัง ภิกขะเว สุต์วา อะริยะสาวะโก ฯเปฯ ปัญจะวัคคิยานัง ภิกขูนัง อะนุปาทายะ อาสะเวหิ จิตตานิ วิมุจจิงสูติ.",
+     "paiboon": "",
+     "english": "Chant the Anattalakkhaṇa Sutta. The one presiding begins evaṃ me sutaṃ, ekaṃ samayaṃ bhagavā … down to evaṃ me viññāṇaṃ mā ahosīti, and stops there; then he continues taṃ kiṃ maññatha bhikkhave … down to evametaṃ yathābhūtaṃ sammappaññāya daṭṭhabbaṃ, and stops there once more; then he continues evaṃ passaṃ bhikkhave sutvā ariyasāvako … ending pañcavaggiyānaṃ bhikkhūnaṃ anupādāya āsavehi cittāni vimucciṃsūti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 5
+    },
+    {
+     "number": 14,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวด ปะฏิจจะสะมุปปาทะปาโฐ ขึ้น อะวิชชาปัจจะยา สังขารา ฯเปฯ เอวะเมตัสสะ เกวะลัสสะ ทุกขักขันธัสสะ นิโรโธ โหติ.",
+     "paiboon": "",
+     "english": "Chant the Paṭiccasamuppāda passage, beginning avijjāpaccayā saṅkhārā … ending evametassa kevalassa dukkhakkhandhassa nirodho hoti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 6
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวด พุทธะอุทานะคาถา ขึ้น ยะทา หะเว ปาตุภะวันติ ธัมมา ฯเปฯ สูโรวะ โอภาสะยะมันตะลิกขันติ.",
+     "paiboon": "",
+     "english": "Chant the Buddha's Udāna verses, beginning yadā have pātubhavanti dhammā … ending sūrova obhāsayamantalikkhanti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 7
+    },
+    {
+     "number": 16,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวด ภัทเทกะรัตตะคาถา ขึ้น อะตีตัง นาน์วาคะเมยยะ นัปปะฏิกังเข อะนาคะตัง ฯเปฯ ตัง เว ภัทเทกะรัตโตติ สันโต อาจิกขะเต มุนีติ.",
+     "paiboon": "",
+     "english": "Chant the Bhaddekaratta verses, beginning atītaṃ nānvāgameyya nappaṭikaṅkhe anāgataṃ … ending taṃ ve bhaddekaratto ti santo ācikkhate munīti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 8
+    },
+    {
+     "number": 17,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวด ภะวะตุ สัพพะมังคะลัง ฯเปฯ สะทา โสตถี ภะวันตุ เต.",
+     "paiboon": "",
+     "english": "Chant bhavatu sabbamaṅgalaṃ … sadā sotthī bhavantu te.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 9
+    },
+    {
+     "number": 18,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ส่วนการสวดมนต์ 50 วัน 100 วัน หรือ สัตตมวาร ที่ 2-3 เป็นต้น มีระเบียบสวดต้นพระสูตรและท้ายพระสูตรเหมือนกันทุกประการ แปลกแต่เปลี่ยนสวดพระสูตรตามที่กำหนดไว้เท่านั้น",
+     "paiboon": "",
+     "english": "As for the chanting at fifty days, a hundred days, or the second and third seven-day observances and so on, the opening and closing of the discourse follow the same order in every respect; only the discourse chanted is changed, according to what has been laid down.",
+     "para_layout": "prose",
+     "para_start": true,
+     "page": 266
+    },
+    {
+     "number": 19,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "การสวด อาทิตตะปะริยายะสุตตะ มีนิยมขึ้นในระหว่างดังนี้ เมื่อขัดจบแล้วขึ้น เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา ฯเปฯ ลง มะโน อาทิตโต ธัมมา อาทิตตา ฯเปฯ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ. แล้วขึ้น เอวัง ปัสสัง ภิกขะเว สุต์วา อะริยะสาวะโก ฯเปฯ ตัสสะ ภิกขุสะหัสสัสสะ อะนุปาทายะ อาสะเวหิ จิตตานิ วิมุจจิงสูติ.",
+     "paiboon": "",
+     "english": "For the Ādittapariyāya Sutta it is usual to break in the middle thus: when the introduction is finished, begin evaṃ me sutaṃ, ekaṃ samayaṃ bhagavā … down to mano āditto dhammā ādittā … sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi; then begin evaṃ passaṃ bhikkhave sutvā ariyasāvako … ending tassa bhikkhusahassassa anupādāya āsavehi cittāni vimucciṃsūti.",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 20,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "การสวด สะติปัฏฐานะปาฐะ ไม่มีนิยมหยุดในระหว่างสวดจบทอดเดียว คือเมื่อขัดจบแล้วก็ขึ้น อัตถิ โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ ฯเปฯ เอเตนะ มัคเคนะ ตะริงสุ ปุพเพ ตะริสสะเร เจวะ ตะรันติ โจฆันติ.",
+     "paiboon": "",
+     "english": "For the Satipaṭṭhāna passage it is not usual to break in the middle; it is chanted straight through. When the introduction is finished, begin atthi kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena … ending etena maggena tariṃsu pubbe tarissare ceva taranti coghanti.",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 21,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "การสวด ธัมมะนิยามะสุตตะ เมื่อขัดจบแล้วขึ้น เอวัมเม สุตัง ฯเปฯ ลง ภะคะวา เอตะทะโวจะ. แล้วขึ้นต่อ อุปปาทา วา ภิกขะเว ตะถาคะตานัง ฯเปฯ อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.",
+     "paiboon": "",
+     "english": "For the Dhammaniyāma Sutta, when the introduction is finished begin evaṃ me sutaṃ … down to bhagavā etadavoca; then continue uppādā vā bhikkhave tathāgatānaṃ … ending attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.",
+     "para_layout": "prose",
+     "para_start": true
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0532.PNG",
+     "issue": "⚠ THE PARAGRAPH ENDS WITH '.-' — A FULL STOP FOLLOWED BY A HYPHEN. 'ดังจะแนะไว้ต่อไปนี้.-' introduces the list that follows. It is neither a wrapping break nor a compound joiner nor a speaker handover; it is a fifth job the hyphen does in this book, here acting as a colon. Kept exactly as set."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0532.PNG",
+     "issue": "⚠ THE PAGE BREAK CUTS A SENTENCE AT THE WORD 'หรือ'. Page 264's item 4 ends 'สุดแต่ผู้เป็นประธานจะพิจารณาเห็นสมควร หรือ' and page 265 opens 'เจ้าภาพงานนิมนต์เจาะจงไว้' — together 'as the one presiding sees fit, OR as the host has specifically requested'. Verse 5 therefore carries para_layout and deliberately NO para_start, the page-75 rule."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0532.PNG",
+     "issue": "TWO SUTTA NAMES ARE HYPHENATED ACROSS LINE ENDS — 'อะนัตตะลักขะณะ-สุตตัง' in item 1 and 'อาทิตตะ-ปะริยายะสุตตัง' in item 2. Both rejoined; they are compositor's breaks, unlike the '.-' above."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0533.PNG",
+     "issue": "THE BOOK GIVES THE BREAK POINTS INSIDE A CHANTED SUTTA. Item 5 tells the one presiding exactly where to stop and resume within the Anattalakkhaṇa Sutta — twice — and the closing paragraphs do the same for three other suttas. This is the book instructing on delivery rather than on order."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "rabiap-suat-thawai-phon-phra-kon-chan",
+   "rabiap-suat-mon-nai-ngan-phithi-awamongkhon"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 261,
+  "resume_from_file": "IMG_0529.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch, and there is no Pali layer to romanise.",
+  "pali_untouched": "Trivially confirmed: every `pali` and `pali_roman` is empty. All the Pali on these sheets is quoted inside Thai instructions rather than set as chanted text.",
+  "page_scan": "agrees. Rows for both chants across three sheets. The items 10 and 11 at the TOP of page 264 belong to the chant before this one and are left for page 261.",
+  "notes": "TWO ORDERS OF CHANTING. Three findings. (1) ⚠ '.-' — A FULL STOP FOLLOWED BY A HYPHEN, acting as a colon before a list. That is a FIFTH job the hyphen does in this book, after the wrapping break, the mid-line em dash, the speaker handover and the spaced compound joiner. (2) ⚠ THE PAGE BREAK CUTS A SENTENCE AT THE WORD 'หรือ', so the 265 verse carries no para_start. (3) ⚠ A NEARLY IDENTICAL CHANT ALREADY EXISTS — ระเบียบถวายพรพระ from 270-271 — and this shorter one at ๒๖๔ is entered under its own id after checking.",
+  "diacritic_exceptions": []
+ }
+}
