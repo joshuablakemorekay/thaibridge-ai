@@ -133,6 +133,20 @@
         margin: 3rem 0 1.25rem 0;
     }
 
+    /* A list a talk writes as a list — a closing set of sources, for instance.
+       Set at body size so it reads as part of the talk, not as small print. */
+    .talk-bullets {
+        margin: 0 0 2.5rem 0;
+        padding-left: 2.5rem;
+    }
+
+    .talk-bullets li {
+        font-size: 1.1rem;
+        line-height: 1.9;
+        color: #444;
+        margin-bottom: 0.85rem;
+    }
+
     .talk-divider {
         text-align: center;
         color: #C9B48A;
@@ -278,6 +292,10 @@
     <h3 class="talk-heading">{{ passage.heading }}</h3>
         {% elif passage.divider %}
     <div class="talk-divider">{{ passage.divider }}</div>
+        {% elif passage.bullets %}
+    <ul class="talk-bullets">
+        {% for item in passage.bullets %}<li>{{ item }}</li>{% endfor %}
+    </ul>
         {% else %}
     <div class="talk-passage">
         {% if passage.th %}<p class="talk-th">{{ passage.th }}</p>{% endif %}
