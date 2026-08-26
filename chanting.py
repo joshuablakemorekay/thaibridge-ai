@@ -42715,6 +42715,172 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0534.PNG]: ⚠ THE OPENING PARAGRAPH RUNS ACROSS TWO
+        #   SHEETS AND IS CUT MID-PHRASE. Page 266 ends 'ตลอดถึง' and page 267
+        #   opens 'การลุกและยืนเดิน' — together 'even in rising and standing
+        #   and walking'. Verse 2 therefore carries para_layout and
+        #   deliberately NO para_start, the page-75 rule; the same happens
+        #   again at the 267/268 break, where item 4 ends 'ให้จุ่ม' and 268
+        #   opens 'เทียนลงในน้ำ'.
+        # ‼ CHECK [IMG_0534.PNG]: ⚠ NO PALI AS CHANTED TEXT. Every Pali phrase
+        #   here is QUOTED inside a Thai instruction, naming a passage and
+        #   giving its opening words with ฯเปฯ, so all verses are Thai. That
+        #   is now five consecutive chants entered this way — 266-268,
+        #   268-270, 270-271, 271-272 and 274 — because this whole stretch of
+        #   the book is procedural rather than liturgical.
+        # ‼ CHECK [IMG_0536.PNG]: THE BOOK WARNS AGAINST A COMMON MISTAKE —
+        #   'จงระมัดระวังมักเผลอไปขึ้นต้นบท ปะริตตานุภาโว', take care, it is
+        #   easy to slip and begin at parittānubhāvo instead. Worth noting
+        #   because it is the book correcting its readers rather than
+        #   instructing them.
+        'id': 'athibai-rabiap-suat-mon-phiset',
+        'title_thai': 'อธิบายระเบียบสวดมนต์พิเศษ',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'An Explanation of the Special Chanting Procedures',
+        'book_number': 8,
+        'book_number_printed': '8',
+        'page_start': 266,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 266,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'การสวดมนต์ในงานพิธีต่างๆ นั้น ความมุ่งหมายก็เพื่อให้สำเร็จเป็นสิริสวัสดิมงคลแก่เจ้าภาพงาน และเพื่อจะเป็นวิบากกุศลแด่ท่านผู้มีพระคุณแก่เจ้าภาพงานซึ่งล่วงลับไปแล้ว ดังนั้น งานพิธีสวดมนต์จึงถือเป็นพิธีที่มีความสำคัญยิ่งประการหนึ่ง ถ้างานศาสนพิธีใดไม่มีการสวดมนต์อยู่ด้วย ก็ถือว่างานนั้นไม่มีความสำคัญ เมื่อเป็นดังนี้ พระภิกษุซึ่งถูกนิมนต์ไปสวดมนต์ในงานพิธีต่างๆ นั้น จึงจำเป็นจะต้องสวดมนต์ให้ถูกต้องตามระเบียบและมีความเรียบร้อยเป็นเครื่องเจริญศรัทธาปสาทะของเจ้าภาพ เพื่อความเป็นระเบียบเรียบร้อย และสำเร็จเป็นสิริมงคลตามความมุ่งหมาย ต้องมีการฝึกซ้อมร่วมกันเสมอ นอกจากฝึกซ้อมให้สวดพร้อมกัน ฝึกทำเสียงให้เข้ากันอย่างสม่ำเสมอแล้ว พระภิกษุจะต้องฝึกตนในการนั่ง การประนมมือ การถือพัด ตลอดถึง',
+                'paiboon': '',
+                'english': 'The purpose of chanting at the various ceremonies is that it may bring about auspiciousness and blessing for the host of the occasion, and that it may be a fruit of merit for those to whom the host owes gratitude who have passed away. A chanting ceremony is therefore held to be one of the most important of rites; if any religious occasion has no chanting in it, that occasion is held to be of no importance. This being so, monks invited to chant at the various ceremonies must chant correctly according to the procedure and with good order, as something that increases the faith and confidence of the host. For the sake of good order, and that it may succeed as a blessing as intended, there must always be rehearsal together. Besides rehearsing to chant in unison and training the voice to blend evenly, the monk must train himself in sitting, in holding the palms together, in holding the fan, and even in',
+            },
+            # ‼ CHECK [IMG_0535.PNG]: ⚠ A SPACED HYPHEN INSIDE A COMPOUND —
+            #   'มีสติ - สัมปชัญญะ', with a space either side of the hyphen,
+            #   where the two words are ordinarily written together or with a
+            #   slash. It is neither a line break nor a speaker handover; it
+            #   is the book's own punctuation joining the pair. Kept exactly
+            #   as set.
+            {
+                'number': 2,
+                'page': 267,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'การลุกและยืนเดินในสมาคมนั้นๆ ให้ชอบด้วยพระธรรมวินัยและเป็นระเบียบเรียบร้อยตามกาลเทศะด้วย เช่น พยายามรักษากิริยามารยาทในเวลาสวดมนต์ ไม่พูดกัน ไม่สอดส่ายตาไปในที่นั้นๆ สำรวมทอดสายตาลงแต่พอดี นั่งเรียบร้อยไม่เอนเอียงและไม่ทอดตัวมากเกินพอดีประนมมือตรงอยู่เพียงหน้าอก ไม่ลดมือลงมาก ไม่ยกขึ้นสูงกว่านั้น และสำรวมไม่กระดิกนิ้วไปมา มีสติ - สัมปชัญญะ ควบคุมจิตให้ตั้งใจสวดด้วยความเคารพ เอื้อเฟื้อในพระพุทธมนต์นั้นๆ ตามที่สวดไป',
+                'paiboon': '',
+                'english': 'rising and standing and walking in such gatherings, so that it accords with the Dhamma and Discipline and is orderly and fitting to the occasion. For instance: keeping to proper conduct while chanting, not talking, not letting the eyes wander about the place, keeping the gaze lowered just so much, sitting properly without leaning and without slumping, holding the palms together straight at the level of the chest, not letting the hands drop lower nor raising them higher than that, and restraining the fingers from fidgeting; with mindfulness and clear comprehension governing the mind, so as to chant with respect and regard for the words being chanted.',
+            },
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ส่วนระเบียบพิเศษที่ยังมิได้อธิบาย จักนำมาอธิบายไว้พอเป็นแบบอย่างดังต่อไปนี้.',
+                'paiboon': '',
+                'english': 'As for the special procedures not yet explained, they will be set out here as examples, as follows.',
+            },
+            {
+                'number': 4,
+                'printed_number': 1,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'การสวดมนต์ในงานมงคลนั้น นิยมใช้ทำน้ำพระพุทธมนต์และใช้ด้ายสายสิญจน์ด้วย ดังนั้นเมื่อเริ่มพิธีสวดมนต์ พอทายกอาราธนาศีล พระเถระผู้เป็นประธานหยิบด้ายสายสิญจน์ส่งไปยังพระเถระต่อ ๆ ไปตามลำดับจนถึงรูปสุดท้าย',
+                'paiboon': '',
+                'english': 'At an auspicious occasion it is usual to make lustral water and to use the sacred thread as well. So when the chanting begins, as soon as the layman has requested the precepts, the presiding elder takes up the sacred thread and passes it on to each elder in turn down to the last.',
+            },
+            {
+                'number': 5,
+                'printed_number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เมื่อมีการทำน้ำพระพุทธมนต์ บังคับต้องสวด นะโมการะอัฏฐะกะคาถา คือ นะโม อะระหะโต สัมมาสัมพุทธัสสะ มะเหสิโน ฯเปฯ ถ้าไม่มีการทำน้ำพระพุทธมนต์ คือเจ้าภาพงานไม่ประสงค์มิได้จัดภาชนะน้ำมนต์ไว้ไม่ต้องสวด นะโมการะอัฏฐะกะคาถา',
+                'paiboon': '',
+                'english': 'When lustral water is being made, the Namokāra-aṭṭhaka verses must be chanted — namo arahato sammāsambuddhassa mahesino …. If no lustral water is being made, that is if the host does not wish it and has set out no vessel, the Namokāra-aṭṭhaka verses need not be chanted.',
+            },
+            {
+                'number': 6,
+                'printed_number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'การสวดมนต์ ถ้าใช้ด้ายสายสิญจน์ให้สวดบท นักขัตตะยักขะภูตานัง ให้ภิกษุรูปสุดท้ายเตรียมเก็บม้วนด้ายสายสิญจน์ แล้วส่งคืนต่อ ๆ ไปจนถึงประธาน เก็บม้วนให้ได้จังหวะ คือพอสวดจบด้ายสายสิญจน์ก็ถึงประธานพอดี ถ้าพระภิกษุสวดมนต์มีมากรูป ให้เริ่มเก็บม้วนด้ายสายสิญจน์ตั้งแต่ขึ้นบท ภะวะตุ สัพพะมังคะลัง เป็นต้นไป ถ้าไม่มีใช้ด้ายสายสิญจน์ ไม่ต้องสวดบท นักขัตตะยักขะภูตานัง คงจบลงเพียงบท ภะวะตุ สัพพะมังคะลัง ฯเปฯ เท่านั้น',
+                'paiboon': '',
+                'english': 'In the chanting, if the sacred thread is used, chant the passage nakkhattayakkhabhūtānaṃ. The last monk should be ready to gather and wind the thread, passing it back in turn until it reaches the one presiding, winding it in time so that the thread reaches him exactly as the chanting ends. If many monks are chanting, begin winding the thread from the passage bhavatu sabbamaṅgalaṃ onward. If the sacred thread is not used, the passage nakkhattayakkhabhūtānaṃ need not be chanted, and it ends simply at bhavatu sabbamaṅgalaṃ ….',
+            },
+            {
+                'number': 7,
+                'printed_number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'การหยดเทียนพระพุทธมนต์ลงในน้ำพระพุทธมนต์ ปรกติเป็นหน้าที่ของพระเถระผู้เป็นประธานสวด มีนิยมใช้หยดเทียนในเมื่อสวดถึงบท ระตะนะสุตตะ คือพอสวดไปถึงบท มังคะละสุตตะ ให้เจ้าภาพงานเริ่มจุดเทียนพระพุทธมนต์ ติดไว้ที่ภาชนะน้ำพระพุทธมนต์ แล้วยกภาชนะนั้นประเคนพระเถระผู้เป็นประธาน พอสวดไปถึงบท ระตะนะสุตตะ ขึ้น เย สุปปะยุตตา มะนะสา ทัพเหนะ ฯเปฯ ประธานเริ่มหยดเทียนลงในน้ำพระพุทธมนต์ พอสวดถึงบท ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง วิรัตตะจิตตายะติเก ภะวัส์มิง เต ขีณะพีชา อะวิรุฬหิฉันทา นิพพันติ ธีรา ให้จุ่ม',
+                'paiboon': '',
+                'english': 'Dripping the candle into the lustral water is ordinarily the duty of the presiding elder. It is usual to drip the candle when the chanting reaches the Ratana Sutta. That is: when the chanting reaches the Maṅgala Sutta, the host lights the candle and fixes it to the vessel of lustral water, then lifts the vessel and presents it to the presiding elder. When the chanting reaches the Ratana Sutta at ye suppayuttā manasā daḷhena …, the one presiding begins to drip the candle into the water. When the chanting reaches khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ, virattacittāyatike bhavasmiṃ, te khīṇabījā aviruḷhichandā, nibbanti dhīrā, he dips',
+            },
+            {
+                'number': 8,
+                'page': 268,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เทียนลงในน้ำพร้อม ๆ กับคำสวดว่า นิพพันติ ธีรา แล้วติดเทียนไว้ที่ภาชนะตามเดิม',
+                'paiboon': '',
+                'english': 'the candle into the water exactly together with the words nibbanti dhīrā, then fixes the candle back on the vessel as before.',
+            },
+            {
+                'number': 9,
+                'printed_number': 5,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'งานพิธีใดมีสวดมนต์แล้ว มีการแสดงธรรมไว้ท้ายสวดมนต์ ในงานเช่นนั้น พระสวดมนต์ไม่ให้ศีล เจ้าภาพงานไม่ต้องรับศีลก่อนฟังสวดมนต์เริ่มด้วยการอาราธนาสวดพระปริตรเลยทีเดียวเมื่อสวดมนต์จบแล้ว รับศีลเสียก่อนจึงฟังเทศน์ การให้ศีลในงานพิธีเช่นนั้น เป็นภาระของพระธรรมกถึก ผู้แสดงธรรม',
+                'paiboon': '',
+                'english': 'At an occasion where there is chanting and a sermon is given after it, the chanting monks do not give the precepts. The host need not take the precepts before listening to the chanting; it begins straight away with the request for the parittas. When the chanting is finished, the precepts are taken first and then the sermon is heard. Giving the precepts at such an occasion is the responsibility of the preacher who gives the sermon.',
+            },
+            {
+                'number': 10,
+                'printed_number': 6,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'บทขัดชุมนุมเทวดานั้น ถ้าเป็นพระราชพิธีและสวดมนต์ในพระราชสถาน ให้ขึ้นต้นบทขัดตั้งแต่ สะรัชชัง สะเสนัง สะพันธุง นะรินทัง ฯเปฯ ธัมมัสสะวะนะกาโล อะยัมภะทันตา. ถ้าเป็นงานพิธีอื่นๆ นอกจากพระราชพิธี ให้ขึ้นบทขัดชุมนุมเทวดา เริ่มแต่ ผะริต์วานะ เมตตัง สะเมตตา เป็นต้นไป จงระมัดระวังมักเผลอไปขึ้นต้นบท ปะริตตานุภาโว ฯเปฯ',
+                'paiboon': '',
+                'english': 'As for the introduction assembling the devas: if it is a royal ceremony and the chanting is in a royal place, begin the introduction at sarajjaṃ sasenaṃ sabandhuṃ narindaṃ … ending dhammassavanakālo ayambhadantā. If it is any other ceremony than a royal one, begin the introduction assembling the devas at pharitvāna mettaṃ sametā onward. Take care — it is easy to slip and begin at parittānubhāvo … instead.',
+            },
+            {
+                'number': 11,
+                'printed_number': 7,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ถ้าการสวดมนต์ไม่มีขัดบทชุมนุมเทวดา ไม่ต้องสวด เทวะตาอุยโยชะนะคาถา คือ ทุกขัปปัตตา จะ นิททุกขา ฯเปฯ คัจฉันตุ เทวะตาคะตา. ถ้ามีเชิญชุมนุมเทวดาแล้ว ต้องสวด เทวะตาอุยโยชะนะคาถา เสมอ คือบท สะรัชชัง สะเสนัง สะพันธุง นะรินทัง ฯเปฯ เป็นบทเชิญเทวดา มาชุมนุมอนุโมทนาในงานพิธี บททุกขัปปัตตา จะ นิททุกขา ฯเปฯ เป็นบทส่งเทวดากลับคืน เป็นคติถือสืบกันมาดังแต่โบราณกาล',
+                'paiboon': '',
+                'english': 'If the chanting has no introduction assembling the devas, the Devatā-uyyojana verses need not be chanted — that is dukkhappattā ca niddukkhā … ending gacchantu devatāgatā. If the devas have been invited to assemble, the Devatā-uyyojana verses must always be chanted. The passage sarajjaṃ sasenaṃ sabandhuṃ narindaṃ … is the passage inviting the devas to assemble and rejoice in the ceremony; the passage dukkhappattā ca niddukkhā … is the passage sending the devas back. This is a convention handed down since ancient times.',
+            },
+        ],
+    },
 ]
 
 
