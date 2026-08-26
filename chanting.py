@@ -41636,6 +41636,134 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'anumothana-withi',
+        'title_thai': 'อนุโมทนาวิธี',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Method of Rejoicing',
+        'page_start': 272,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 272,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ยะถา วาริวะหา ปูรา ปะริปูเรนติ สาคะรัง,',
+                'pali_roman': 'Yathā vārivahā pūrā paripūrenti sāgaraṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Just as rivers full of water fill the ocean,',
+            },
+            {
+                'number': 2,
+                'pali': 'เอวะเมวะ อิโต ทินนัง เปตานัง อุปะกัปปะติ,',
+                'pali_roman': 'Evameva ito dinnaṃ petānaṃ upakappati,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            {
+                'number': 3,
+                'pali': 'อิจฉิตัง ปัตถิตัง ตุมหัง ขิปปะเมวะ สะมิชฌะตุ สัพเพ ปูเรนตุ สังกัปปา,',
+                'pali_roman': 'Icchitaṃ patthitaṃ tumhaṃ khippameva samijjhatu sabbe pūrentu saṅkappā,',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            # ‼ CHECK [IMG_0540.PNG]: ⚠ A BARE ฯ CLOSES THE FIRST PARAGRAPH —
+            #   'มะณิ โชติระโส ยะถาฯ', the paiyannoi run straight on to the
+            #   word with no space. Same mark as page 274's gāthā row. It is
+            #   Thai script inside a Pali line, so translit_pali passes it
+            #   through and check_batch flags it; the romanisation is written
+            #   out with … in its place.
+            {
+                'number': 4,
+                'pali': 'จันโท ปัณณะระโส ยะถา มะณิ โชติระโส ยะถาฯ',
+                'pali_roman': 'Cando paṇṇaraso yathā maṇi jotiraso yathā …',
+                'thai': '',
+                'paiboon': '',
+                'english': '…continues.',
+            },
+            # ‼ CHECK [IMG_0540.PNG]: ⚠ THE สัพพีติโย FORMULA IS PRINTED THREE
+            #   TIMES IN FULL inside ONE unbroken paragraph, with no commas
+            #   and no line breaks between the repetitions, then runs straight
+            #   on into the อะภิวาทะนะ verse. It is therefore ONE verse — a
+            #   long one — because that is what the sheet prints. Splitting it
+            #   into three would impose a division the book does not make.
+            # ‼ CHECK [IMG_0540.PNG]: A WORD BROKEN ACROSS A LINE BY A HYPHEN
+            #   — 'ภะวัตวัน-' at a line end and 'ตะราโย' at the next line's
+            #   start, for ภะวัตวันตะราโย. Rejoined; the hyphen is the
+            #   compositor's.
+            {
+                'number': 5,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ อะภิวาทะนะสีลิสสะ นิจจัง วุฑฒาปะจายิโน จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.',
+                'pali_roman': 'Sabbītiyo vivajjantu sabbarogo vinassatu mā te bhavatvantarāyo sukhī dīghāyuko bhava sabbītiyo vivajjantu sabbarogo vinassatu mā te bhavatvantarāyo sukhī dīghāyuko bhava sabbītiyo vivajjantu sabbarogo vinassatu mā te bhavatvantarāyo sukhī dīghāyuko bhava abhivādanasīlissa niccaṃ vuḍḍhāpacāyino cattāro dhammā vaḍḍhanti āyu vaṇṇo sukhaṃ balaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May all misfortunes be avoided, may all disease perish, may no danger befall you, may you be happy and long-lived — said three times over; and for one habitually respectful, ever honouring elders, four things increase: long life, beauty, happiness and strength.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0540.PNG]: ⚠ THE FULL 'มงคลจักรวาฬน้อย' IS ALREADY IN
+        #   THE BOOK UNDER THE ID mongkhon-chakkrawan-noi, AND SO IS mongkhon-
+        #   chakkrawan-yai, THE GREATER ONE. This sheet prints a THIRD
+        #   version, titled (ย่อ) — abbreviated — with its own contents line
+        #   at ๒๗๒, so it is entered under its own id. That is the fifth text
+        #   this book prints more than once, after the Mahāsamaya Sutta,
+        #   คำอนุโมทนากฐิน, the Āṭānāṭiya and the precept lists. Checked
+        #   against the existing ids before writing, which is what stopped a
+        #   silent overwrite.
+        'id': 'mongkhon-chakkrawan-noi-yo',
+        'title_thai': 'มงคลจักรวาฬน้อย (ย่อ)',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Lesser Maṅgala Cakkavāḷa (abbreviated)',
+        'page_start': 272,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0540.PNG]: PRINTED AS ONE UNBROKEN PARAGRAPH with
+            #   no commas anywhere, so it is one verse. Nothing has been split
+            #   at a phrase boundary the book does not mark.
+            {
+                'number': 1,
+                'page': 272,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ระตะนัตตะยานุภาเวนะ ระตะนัตตะยะเตชะสา ทุกขะโรคะภะยา เวรา โสกา สัตตุ จุปัททะวา อะเนกา อันตะรายาปิ วินัสสันตุ อะเสสะโต ชะยะสิทธิ ธะนัง ลาภัง โสตถิ ภาคยัง สุขัง พะลัง สิริ อายุ จะ วัณโณ จะ โภคัง วุฑฒี จะ ยะสะวา สะตะวัสสา จะ อายู จะ ชีวะสิทธิ ภะวันตุ เต.',
+                'pali_roman': 'Ratanattayānubhāvena ratanattayatejasā dukkharogabhayā verā sokā sattu cupaddavā anekā antarāyāpi vinassantu asesato jayasiddhi dhanaṃ lābhaṃ sotthi bhāgyaṃ sukhaṃ balaṃ siri āyu ca vaṇṇo ca bhogaṃ vuḍḍhī ca yasavā satavassā ca āyū ca jīvasiddhi bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of the Triple Gem and by its majesty, may suffering, disease, fear, enmity, sorrow, foes and calamities, and the many dangers too, perish without remainder. May victory and success, wealth, gain, well-being, fortune, happiness, strength, splendour, long life and beauty, riches and increase and renown, a hundred years of life, and success in living, be yours.',
+            },
+        ],
+    },
 ]
 
 

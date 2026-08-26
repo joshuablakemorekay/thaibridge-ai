@@ -1,0 +1,180 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "anumothana-withi",
+   "mongkhon-chakkrawan-noi-yo"
+  ],
+  "pages": [
+   {
+    "page": 272,
+    "file": "IMG_0540.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "anumothana-withi",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "A centred heading and PROSE at full measure, no columns. Starts and ends on this sheet."
+   },
+   {
+    "page": 272,
+    "file": "IMG_0540.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "mongkhon-chakkrawan-noi-yo",
+    "verses": "1-1",
+    "starts_here": true,
+    "note": "A centred heading and PROSE at full measure, no columns. Starts and ends on this sheet."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "anumothana-withi",
+   "title_thai": "อนุโมทนาวิธี",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Method of Rejoicing",
+   "page_start": 272,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "5, split at the book's own commas where it prints any.",
+    "ordering": "No Thai translation is printed on this sheet.",
+    "conventions": "pali_roman is IAST from translit_pali. paiboon is left empty — see page 306.",
+    "pages": "IMG_0540.PNG, page 272, read off the sheet. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยะถา วาริวะหา ปูรา ปะริปูเรนติ สาคะรัง,",
+     "pali_roman": "Yathā vārivahā pūrā paripūrenti sāgaraṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Just as rivers full of water fill the ocean,",
+     "page": 272,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "เอวะเมวะ อิโต ทินนัง เปตานัง อุปะกัปปะติ,",
+     "pali_roman": "Evameva ito dinnaṃ petānaṃ upakappati,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 3,
+     "pali": "อิจฉิตัง ปัตถิตัง ตุมหัง ขิปปะเมวะ สะมิชฌะตุ สัพเพ ปูเรนตุ สังกัปปา,",
+     "pali_roman": "Icchitaṃ patthitaṃ tumhaṃ khippameva samijjhatu sabbe pūrentu saṅkappā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 4,
+     "pali": "จันโท ปัณณะระโส ยะถา มะณิ โชติระโส ยะถาฯ",
+     "pali_roman": "Cando paṇṇaraso yathā maṇi jotiraso yathā …",
+     "thai": "",
+     "paiboon": "",
+     "english": "…continues."
+    },
+    {
+     "number": 5,
+     "pali": "สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ อะภิวาทะนะสีลิสสะ นิจจัง วุฑฒาปะจายิโน จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.",
+     "pali_roman": "Sabbītiyo vivajjantu sabbarogo vinassatu mā te bhavatvantarāyo sukhī dīghāyuko bhava sabbītiyo vivajjantu sabbarogo vinassatu mā te bhavatvantarāyo sukhī dīghāyuko bhava sabbītiyo vivajjantu sabbarogo vinassatu mā te bhavatvantarāyo sukhī dīghāyuko bhava abhivādanasīlissa niccaṃ vuḍḍhāpacāyino cattāro dhammā vaḍḍhanti āyu vaṇṇo sukhaṃ balaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "May all misfortunes be avoided, may all disease perish, may no danger befall you, may you be happy and long-lived — said three times over; and for one habitually respectful, ever honouring elders, four things increase: long life, beauty, happiness and strength.",
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 4,
+     "file": "IMG_0540.PNG",
+     "issue": "⚠ A BARE ฯ CLOSES THE FIRST PARAGRAPH — 'มะณิ โชติระโส ยะถาฯ', the paiyannoi run straight on to the word with no space. Same mark as page 274's gāthā row. It is Thai script inside a Pali line, so translit_pali passes it through and check_batch flags it; the romanisation is written out with … in its place."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0540.PNG",
+     "issue": "⚠ THE สัพพีติโย FORMULA IS PRINTED THREE TIMES IN FULL inside ONE unbroken paragraph, with no commas and no line breaks between the repetitions, then runs straight on into the อะภิวาทะนะ verse. It is therefore ONE verse — a long one — because that is what the sheet prints. Splitting it into three would impose a division the book does not make."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0540.PNG",
+     "issue": "A WORD BROKEN ACROSS A LINE BY A HYPHEN — 'ภะวัตวัน-' at a line end and 'ตะราโย' at the next line's start, for ภะวัตวันตะราโย. Rejoined; the hyphen is the compositor's."
+    }
+   ]
+  },
+  {
+   "id": "mongkhon-chakkrawan-noi-yo",
+   "title_thai": "มงคลจักรวาฬน้อย (ย่อ)",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Lesser Maṅgala Cakkavāḷa (abbreviated)",
+   "page_start": 272,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "1, split at the book's own commas where it prints any.",
+    "ordering": "No Thai translation is printed on this sheet.",
+    "conventions": "pali_roman is IAST from translit_pali. paiboon is left empty — see page 306.",
+    "pages": "IMG_0540.PNG, page 272, read off the sheet. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ระตะนัตตะยานุภาเวนะ ระตะนัตตะยะเตชะสา ทุกขะโรคะภะยา เวรา โสกา สัตตุ จุปัททะวา อะเนกา อันตะรายาปิ วินัสสันตุ อะเสสะโต ชะยะสิทธิ ธะนัง ลาภัง โสตถิ ภาคยัง สุขัง พะลัง สิริ อายุ จะ วัณโณ จะ โภคัง วุฑฒี จะ ยะสะวา สะตะวัสสา จะ อายู จะ ชีวะสิทธิ ภะวันตุ เต.",
+     "pali_roman": "Ratanattayānubhāvena ratanattayatejasā dukkharogabhayā verā sokā sattu cupaddavā anekā antarāyāpi vinassantu asesato jayasiddhi dhanaṃ lābhaṃ sotthi bhāgyaṃ sukhaṃ balaṃ siri āyu ca vaṇṇo ca bhogaṃ vuḍḍhī ca yasavā satavassā ca āyū ca jīvasiddhi bhavantu te.",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the power of the Triple Gem and by its majesty, may suffering, disease, fear, enmity, sorrow, foes and calamities, and the many dangers too, perish without remainder. May victory and success, wealth, gain, well-being, fortune, happiness, strength, splendour, long life and beauty, riches and increase and renown, a hundred years of life, and success in living, be yours.",
+     "page": 272,
+     "para_start": true,
+     "para_layout": "prose"
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0540.PNG",
+     "issue": "⚠ THE FULL 'มงคลจักรวาฬน้อย' IS ALREADY IN THE BOOK UNDER THE ID mongkhon-chakkrawan-noi, AND SO IS mongkhon-chakkrawan-yai, THE GREATER ONE. This sheet prints a THIRD version, titled (ย่อ) — abbreviated — with its own contents line at ๒๗๒, so it is entered under its own id. That is the fifth text this book prints more than once, after the Mahāsamaya Sutta, คำอนุโมทนากฐิน, the Āṭānāṭiya and the precept lists. Checked against the existing ids before writing, which is what stopped a silent overwrite."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0540.PNG",
+     "issue": "PRINTED AS ONE UNBROKEN PARAGRAPH with no commas anywhere, so it is one verse. Nothing has been split at a phrase boundary the book does not mark."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "anumothana-withi",
+   "mongkhon-chakkrawan-noi-yo"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 271,
+  "resume_from_file": "IMG_0539.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch.",
+  "pali_untouched": "Confirmed. pali_roman is translit_pali applied to each clause, except the line closing with a bare ฯ, which is written out with … in its place because the transliterator passes Thai script straight through.",
+  "page_scan": "agrees. Two rows for one page, one per chant. The instruction paragraphs at the TOP of the sheet — the tail of ระเบียบอนุโมทนา, which the contents puts at ๒๗๑ — are deliberately not here and are left for that page.",
+  "notes": "TWO PROSE CHANTS. Two findings. (1) ⚠ A THIRD MAṄGALA. The full มงคลจักรวาฬน้อย and the greater มงคลจักรวาฬใหญ่ are BOTH already in the book; this sheet prints an abbreviated (ย่อ) version with its own contents line, entered under its own id. Checking the existing ids before writing is what stopped one silently overwriting another — the fifth such doubled text in this book. (2) ⚠ THE สัพพีติโย FORMULA IS PRINTED THREE TIMES IN FULL INSIDE ONE PARAGRAPH, with no commas or breaks between, so it is one long verse rather than three; splitting it would impose a division the book does not make.",
+  "diacritic_exceptions": [
+   "āyu/āyū — the BOOK prints both, a few words apart in ONE sentence of the Maṅgala: 'สิริ อายุ จะ วัณโณ จะ' with the short u, then 'สะตะวัสสา จะ อายู จะ' with the long ū. Read at 5x: the second plainly carries the ู. Making them agree would erase a difference the page itself makes, so both stand as printed. Same reasoning as the va/vā pair on pages 82 and 92 and the varuṇā/vāruṇā pair on page 322 — and check_diacritics caught this one on a line that reads past easily."
+  ]
+ }
+}
