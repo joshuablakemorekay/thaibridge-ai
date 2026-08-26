@@ -1,0 +1,328 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "bot-khat-abhinha-paccavekkhana-patha",
+   "abhinha-paccavekkhana-patha"
+  ],
+  "pages": [
+   {
+    "page": 106,
+    "file": "IMG_0371.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-abhinha-paccavekkhana-patha",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "The top of the sheet: a centred bold title and five TWO-COLUMN rows, right column beginning at x 1180. Only verse 1 is indented. Row 5's left column ends on a HYPHEN that splits ธัมมะปะริยายัง across the gutter. The chant starts and ends here."
+   },
+   {
+    "page": 106,
+    "file": "IMG_0371.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "abhinha-paccavekkhana-patha",
+    "verses": "1-9",
+    "starts_here": true,
+    "note": "The rest of the sheet: a centred bold NUMBERED title (17.), then SINGLE-COLUMN prose in ONE paragraph — only the first line is indented — running to the foot of the page and cut mid-sentence after กัมมัสสะโกมหิ. No footnote, no colophon."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-abhinha-paccavekkhana-patha",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Five, one per two-column row, read ACROSS. One group.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "title_roman is the contents' Paiboon value; title_thai follows the PAGE, which differs from the contents twice over — see the checks.",
+    "pages": "IMG_0371.PNG, page 106. Title and all five rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด อะภิณหะปัจจะเวกขะณะปาฐะ",
+   "title_pali": "",
+   "title_roman": "bòt-kàt à-pin-hà-bpàt-jà-wêek-kà-ná-bpaa-tà",
+   "title_english": "The Prefatory Verse for the Constant Reflections",
+   "page_start": 106,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยานิ เว ปัญจะ ฐานานิ ปัญจะนิมมะละโลจะโน",
+     "pali_roman": "Yāni ve pañca ṭhānāni pañcanimmalalocano",
+     "thai": "",
+     "paiboon": "",
+     "english": "The five themes which he of the five stainless eyes",
+     "page": 106
+    },
+    {
+     "number": 2,
+     "pali": "เวเนยยานัง ปะกาเสสิ อะภิณ์หัง ปัจจะเวกขิตุง",
+     "pali_roman": "Veneyyānaṃ pakāsesi abhiṇhaṃ paccavekkhituṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "made known to those fit to be trained, to be reflected on constantly —",
+     "page": 106
+    },
+    {
+     "number": 3,
+     "pali": "สัมมานุกะริยะมานานิ สัตถุสาสะนะการิภิ",
+     "pali_roman": "Sammānukariyamānāni satthusāsanakāribhi",
+     "thai": "",
+     "paiboon": "",
+     "english": "those themes, rightly practised by those who do the Teacher's bidding,",
+     "page": 106
+    },
+    {
+     "number": 4,
+     "pali": "ตัง ตัง อัตถะวะสัง สัมมา สาธะยันติ ยะถาระหัง.",
+     "pali_roman": "Taṃ taṃ atthavasaṃ sammā sādhayanti yathārahaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "accomplish rightly each its own purpose, as is fitting.",
+     "page": 106
+    },
+    {
+     "number": 5,
+     "pali": "เตสัมปะกาสะกัง ธัมมะปะริยายัง ภะณามะ เส.",
+     "pali_roman": "Tesampakāsakaṃ dhammapariyāyaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Let us recite the exposition of Dhamma that sets them out.",
+     "page": 106
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะภิณ์หัง",
+     "pali_roman": "abhiṇhaṃ",
+     "meaning": "constantly, again and again. It is the word the whole chant is named for — these are the reflections to be made OFTEN, not once"
+    },
+    {
+     "pali": "ปัญจะนิมมะละโลจะโน",
+     "pali_roman": "pañcanimmalalocano",
+     "meaning": "'he of the five stainless eyes', an epithet of the Buddha. The five eyes are a commentarial set: the physical, the divine, the wisdom, the Buddha and the universal eye"
+    },
+    {
+     "pali": "เวเนยยานัง",
+     "pali_roman": "veneyyānaṃ",
+     "meaning": "'of those fit to be trained' — those who can still be reached by teaching. It marks who the five reflections are FOR"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0371.PNG",
+     "issue": "‼ A FOURTEENTH TITLE THE CONTENTS TEST CANNOT SEE, AND THIS ONE DIFFERS TWICE. The page prints บทขัด อะภิณหะปัจจะเวกขะณะปาฐะ — SPACED after บทขัด, and with a BARE ณ. The สารบัญ has บทขัดอะภิณ์หะปัจจะเวกขะณะปาฐะ — unspaced, and with the ์ cluster mark on ณ. Read at 4x to be sure the mark is absent. The page wins on both. title_roman is still the contents' value, because the ์ is a cluster mark and does not change the Paiboon."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0371.PNG",
+     "issue": "‼ AND THE CHANT'S OWN VERSE CONTRADICTS ITS OWN TITLE. The title prints อะภิณหะ with a bare ณ, but verse 2 four lines below prints อะภิณ์หัง WITH the cluster mark. Both reproduced as printed. The prose chant beneath then uses the bare form throughout — see that chant's checks."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0371.PNG",
+     "issue": "‼ A HYPHEN SPLITS A WORD ACROSS THE COLUMN GUTTER, not across a line ending. The left column ends เตสัมปะกาสะกัง ธัมมะ- and the RIGHT column of the same row opens ปะริยายัง. Read across, the word is ธัมมะปะริยายัง and it is rejoined here, as page 102's seven line-break hyphens were. This is the first time the break has fallen at the gutter rather than at a line end."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0371.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1180. Read ACROSS. FIRST PAIRING FOR CHECKING: left ยานิ เว ปัญจะ ฐานานิ + right ปัญจะนิมมะละโลจะโน."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0371.PNG",
+     "issue": "ONE indent only, on verse 1. The chant's own paragraph start carries it, so no para_start is set anywhere."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0371.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "abhinha-paccavekkhana-patha",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Nine, broken at the book's own full stops. The page prints ONE unindented paragraph — only its first line is indented — so every verse after the first stays inside that paragraph and none carries para_start.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "The heading prints a NUMBER, 17, which goes in book_number. title_roman is composed to match the PAGE, which ends ปาฐะ where the สารบัญ ends ปาโฐ.",
+    "pages": "IMG_0371.PNG, page 106. The chant STARTS here and CONTINUES onto page 107 — the last verse breaks after กัมมัสสะโกมหิ."
+   },
+   "title_thai": "อะภิณ์หะปัจจะเวกขะณะปาฐะ",
+   "title_pali": "",
+   "title_roman": "Abhiṇhapaccavekkhaṇapāṭha",
+   "title_english": "The Recitation of the Constant Reflections",
+   "book_number": "17",
+   "page_start": 106,
+   "english_unverified": true,
+   "continues": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อัตถิ โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ, ปัญจะ ฐานานิ สัมมะทักขาตานิ, ยานิ อะภิณหัง ปัจจะเวกขิตัพพานิ อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา. กะตะมานิ ปัญจะ",
+     "pali_roman": "Atthi kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena, pañca ṭhānāni sammadakkhātāni, yāni abhiṇhaṃ paccavekkhitabbāni itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā. Katamāni pañca",
+     "thai": "",
+     "paiboon": "",
+     "english": "There are, declared by the Blessed One who knows and sees, the Worthy One, the Perfectly Self-Awakened, five themes rightly taught, to be reflected on constantly by a woman or a man, by a householder or one gone forth. Which five?",
+     "page": 106,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "ชะราธัมโมมหิ ชะรัง อะนะตีโตติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.",
+     "pali_roman": "Jarādhammomhi jaraṃ anatītoti abhiṇhaṃ paccavekkhitabbaṃ itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am subject to ageing, I have not gone beyond ageing — this is to be reflected on constantly by a woman or a man, by a householder or one gone forth.",
+     "page": 106
+    },
+    {
+     "number": 3,
+     "pali": "พ์ยาธิธัมโมมหิ พยาธิง อะนะตีโตติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.",
+     "pali_roman": "Byādhidhammomhi byādhiṃ anatītoti abhiṇhaṃ paccavekkhitabbaṃ itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am subject to illness, I have not gone beyond illness — this is to be reflected on constantly by a woman or a man, by a householder or one gone forth.",
+     "page": 106
+    },
+    {
+     "number": 4,
+     "pali": "มะระณะธัมโมมหิ มะระณัง อะนะตีโตติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.",
+     "pali_roman": "Maraṇadhammomhi maraṇaṃ anatītoti abhiṇhaṃ paccavekkhitabbaṃ itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am subject to death, I have not gone beyond death — this is to be reflected on constantly by a woman or a man, by a householder or one gone forth.",
+     "page": 106
+    },
+    {
+     "number": 5,
+     "pali": "สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโวติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.",
+     "pali_roman": "Sabbehi me piyehi manāpehi nānābhāvo vinābhāvoti abhiṇhaṃ paccavekkhitabbaṃ itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I must be parted and separated from all that is dear and pleasing to me — this is to be reflected on constantly by a woman or a man, by a householder or one gone forth.",
+     "page": 106
+    },
+    {
+     "number": 6,
+     "pali": "กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามีติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.",
+     "pali_roman": "Kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmīti abhiṇhaṃ paccavekkhitabbaṃ itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am the owner of my actions, heir to my actions, born of my actions, related through my actions, and have my actions as my refuge; whatever action I do, good or bad, of that I shall be the heir — this is to be reflected on constantly by a woman or a man, by a householder or one gone forth.",
+     "page": 106
+    },
+    {
+     "number": 7,
+     "pali": "อิมานิ โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ ปัญจะ ฐานานิ สัมมะทักขาตานิ, ยานิ อะภิณหัง ปัจจะเวกขิตัพพานิ อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.",
+     "pali_roman": "Imāni kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena pañca ṭhānāni sammadakkhātāni, yāni abhiṇhaṃ paccavekkhitabbāni itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "These are the five themes rightly taught by the Blessed One who knows and sees, the Worthy One, the Perfectly Self-Awakened, to be reflected on constantly by a woman or a man, by a householder or one gone forth.",
+     "page": 106
+    },
+    {
+     "number": 8,
+     "pali": "ตัส์มาติหัมเหหิ เอวัง อะภิณหัง ปัจจะเวกขิตัพพัง.",
+     "pali_roman": "Tasmātihamhehi evaṃ abhiṇhaṃ paccavekkhitabbaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Therefore this is how we should reflect constantly.",
+     "page": 106
+    },
+    {
+     "number": 9,
+     "pali": "ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ […]",
+     "pali_roman": "Jarādhammomhi jaraṃ anatīto, byādhidhammomhi byādhiṃ anatīto, maraṇadhammomhi maraṇaṃ anatīto, sabbehi me piyehi manāpehi nānābhāvo vinābhāvo, kammassakomhi […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am subject to ageing and have not gone beyond ageing; I am subject to illness and have not gone beyond illness; I am subject to death and have not gone beyond death; I must be parted from all that is dear and pleasing to me; I am the owner of my actions […]",
+     "page": 106
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "กัมมัสสะโกมหิ",
+     "pali_roman": "kammassakomhi",
+     "meaning": "'I am the owner of my actions'. The fifth reflection, and the only one that is not about loss — it is about responsibility"
+    },
+    {
+     "pali": "นานาภาโว วินาภาโว",
+     "pali_roman": "nānābhāvo vinābhāvo",
+     "meaning": "'becoming otherwise, becoming apart'. Two near-synonyms doubled for weight, as this book's Pali often does"
+    },
+    {
+     "pali": "ตัส์มาติหัมเหหิ",
+     "pali_roman": "tasmātihamhehi",
+     "meaning": "tasmā + iti + amhehi run together — 'therefore, by us'. It turns the list from doctrine into practice"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0371.PNG",
+     "issue": "‼ THE PROSE USES อะภิณหัง WITH A BARE ณ THROUGHOUT, where the บทขัด above it prints อะภิณ์หัง WITH the cluster mark in its verse 2, and where this chant's own TITLE prints อะภิณ์หะ with the mark. Read at 6x on the first prose instance to be certain. Three spellings of one word on one page, all reproduced as printed."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0371.PNG",
+     "issue": "‼ AND THE SAME PAIR OF WORDS IS SET TWO WAYS ON THIS PAGE. Verse 3 prints พ์ยาธิธัมโมมหิ พยาธิง — the first WITH the cluster mark, the second WITHOUT. Verse 9, the short recapitulation, prints พ์ยาธิธัมโมมหิ พ์ยาธิง with the mark on BOTH. Read at 5x in each place. Reproduced exactly as printed; both romanise byādhi-."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0371.PNG",
+     "issue": "SINGLE column prose. ONE paragraph: only the first line is indented, measured at x 466 against a flush edge of 333-340 for all fifteen lines below it. So para_start and para_layout 'prose' sit on verse 1 alone and the other eight verses continue the same paragraph."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0371.PNG",
+     "issue": "THE VERSE BREAKS ARE THE BOOK'S OWN FULL STOPS, not paragraph breaks. Each of the five reflections closes ...ปัพพะชิเตนะ วา. and the frame sentences close the same way, so the sentence is the only unit the page offers."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0371.PNG",
+     "issue": "CUT MID-SENTENCE. The page ends after กัมมัสสะโกมหิ in the short recapitulation and runs on to page 107. Marked with […] and continues is set. This break falls at a WORD boundary, unlike page 104's, so no fragment is stranded."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0371.PNG",
+     "issue": "‼ THIS IS A DIFFERENT CHANT FROM THE abhinha-paccavekkhana ALREADY IN THE APP. That one is อะภิณหะปัจจะเวกขะณะ, the five reflections in short form WITH a Thai translation, from earlier in the book; the สารบัญ lists the two separately. This is the full Pali ปาฐะ. Given the id abhinha-paccavekkhana-patha to keep them apart."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0371.PNG",
+     "issue": "A FIFTEENTH TITLE THE CONTENTS TEST CANNOT SEE. The page heading ends ปาฐะ; the สารบัญ ends ปาโฐ. Same shape as page 77's two ปาโฐ titles. title_roman is composed to match the page."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0371.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-abhinha-paccavekkhana-patha"
+  ],
+  "continues": [
+   "abhinha-paccavekkhana-patha"
+  ],
+  "resume_from": {
+   "chant": "abhinha-paccavekkhana-patha",
+   "next_verse": 10,
+   "page": 107
+  },
+  "paiboon_scan": "Nothing to scan. Both chants are printed in Pali only, so paiboon is empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0371.PNG read end to end. Page number 106 read off the sheet. Two centred bold titles, one two-column block of five rows, one single-column prose paragraph to the foot. No footnote, no rule, no colophon. Two hands hold the page at the bottom margin and obscure nothing.",
+  "notes": "‼ ONE WORD, THREE SPELLINGS, ONE PAGE. The บทขัด title prints อะภิณหะ with a bare ณ; its verse 2 prints อะภิณ์หัง with the cluster mark; the numbered title prints อะภิณ์หะ with it; and the prose below uses the bare form throughout. Separately, พ์ยาธิ / พยาธิ is set both ways in verse 3 and both WITH the mark in verse 9. All reproduced as printed. Also the first hyphen of the run to split a word across the COLUMN GUTTER rather than a line ending.",
+  "diacritic_exceptions": []
+ }
+}

@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-105 went in.
+106 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–105 are in and unbroken**, plus 217–221. **140 chants and 2,122
+- **Pages 1–106 are in and unbroken**, plus 217–221. **142 chants and 2,136
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 105 were applied 2026-08-24/25; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 106 were applied 2026-08-24/26; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,21 +46,43 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 106, `IMG_0371` — but READ THE NUMBER off the sheet
+## Next: page 107, `IMG_0372` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–105, so page 106 *should*
-be `IMG_0371`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–106, so page 107 *should*
+be `IMG_0372`. **Five more changes are still expected before page 207.**
 
-**Page 106 starts clean.** `dasanathakarana-dhamma-suttam` CLOSED on page 105
-with its colophon and citation, and **nothing is open** — no `‼ CONTINUES`
-marker belongs to the Thai-script run. The lower third of page 105 is blank, so
-expect a new heading at the top of 106; the book was on `16.` so `17.` is
-likely.
+**⚠️ `abhinha-paccavekkhana-patha` IS OPEN and carries a `‼ CONTINUES` marker.**
+Verse 9 breaks after `กัมมัสสะโกมหิ` in the short recapitulation. **Resume at
+verse 10.** The break falls at a WORD boundary this time, so nothing is stranded
+— page 107 should open with `กัมมะทายาโท` or similar.
 
-**The mid-word cut resolved exactly as predicted.** Page 104 broke at
-`ถามะวา ทัพ์หะ-` and page 105 opened `ปะรักกะโม อะนิกขิตตะธุโร` — the word is
-`ทัฬ์หะปะรักกะโม`. Worth knowing the method worked: the brief named the expected
-opening in advance and it was there.
+## ⚠️ Page 106: ONE WORD, THREE SPELLINGS, ONE PAGE
+
+This sheet is the worst case so far for the book contradicting itself, and every
+form is reproduced as printed:
+
+| where | prints |
+|---|---|
+| `บทขัด` **title** | `อะภิณหะ` — bare ณ |
+| `บทขัด` **verse 2** | `อะภิณ์หัง` — with the cluster mark |
+| numbered **title** (17.) | `อะภิณ์หะ` — with the mark |
+| the **prose**, 8 times | `อะภิณหัง` — bare, throughout |
+
+And separately, `พ์ยาธิ` / `พยาธิ`: verse 3 sets the pair as
+`พ์ยาธิธัมโมมหิ พยาธิง` — mark on the first, none on the second — while verse 9
+sets both WITH the mark. Each read at 5–6× before being written down.
+
+**Do not harmonise any of it.** The lesson is the same one page 102's
+`ตุย์หัง` / `ตุยหัง` taught: the cluster mark is not applied consistently by this
+printer, and a tidy-up would be inventing a book that does not exist.
+
+## ✂️ A hyphen can split a word across the COLUMN GUTTER
+
+New on page 106 and worth knowing. In the `บทขัด`'s row 5, the LEFT column ends
+`เตสัมปะกาสะกัง ธัมมะ-` and the RIGHT column of the same row opens `ปะริยายัง`.
+Read across, the word is `ธัมมะปะริยายัง`. Rejoined, exactly as page 102's seven
+line-break hyphens were — but check for this at the gutter as well as at line
+ends from now on.
 
 
 ## ✅ The Thai-colophon bug is FIXED — and the two kinds are different
