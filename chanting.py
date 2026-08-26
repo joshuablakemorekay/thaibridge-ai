@@ -42152,6 +42152,119 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0538.PNG]: ⚠ NO PALI AS CHANTED TEXT. Every Pali phrase
+        #   here is QUOTED inside a Thai instruction — naming a chant and
+        #   giving its opening and closing words with ฯเปฯ between — so all
+        #   six verses are Thai. Same decision as pages 271-272 and 274;
+        #   putting any of it in `pali` would make the app offer a direction
+        #   as a line to recite.
+        # ‼ CHECK [IMG_0538.PNG]: THE MATERIAL ABOVE THIS CHANT IS NOT ENTERED
+        #   HERE: items 8 and 9, the สวดท้ายนพเคราะห์ sub-heading with its
+        #   three items, and a SERVICE CLOSING — จบพิธีสวดนพเคราะห์ — all
+        #   belong to ระเบียบสวดมนต์นพเคราะห์, which the contents puts at ๒๖๘,
+        #   and are left for that page's batch.
+        'id': 'rabiap-thawai-phon-phra',
+        'title_thai': 'ระเบียบถวายพรพระ',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Procedure for the Blessing of the Buddha',
+        'book_number': 10,
+        'book_number_printed': '10',
+        'page_start': 270,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 270,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ตามธรรมเนียมในงานพิธีที่มีการสวดมนต์เย็นและฉันเช้าหรือฉันเพลนั้น สำหรับระเบียบสวดมนต์เย็น ได้อธิบายมาแล้วทั้งงานมงคลและงานอวมงคล ส่วนเวลาก่อนแต่จะฉันเช้าหรือฉันเพลในวันรุ่งขึ้นนั้น มีระเบียบที่จะปฏิบัติดังนี้',
+                'paiboon': '',
+                'english': 'According to the custom at ceremonies where there is evening chanting and a morning or midday meal: the procedure for the evening chanting has already been explained, for both auspicious and inauspicious occasions. As for the time before the morning or midday meal on the following day, the procedure to be followed is this:',
+            },
+            # ‼ CHECK [IMG_0538.PNG]: THE BOOK SAYS THE PARITTAS ARE NOT
+            #   REQUESTED HERE — 'ไม่ต้องอาราธนาพระปริตร' — which is why this
+            #   chant carries no invitation. That is the book stating the
+            #   absence rather than the absence being unrecorded.
+            {
+                'number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ก่อนแต่จะฉันภัตตาหารนั้น มีธรรมเนียมต้องสวดถวายพรพระเสียก่อน คือเมื่อได้เวลาแล้ว เจ้าภาพงานจุดธูปเทียนบูชาพระรัตนตรัยแล้วสมาทานศีล ต่อแต่นั้นพระสงฆ์เริ่มสวดถวายพรพระ ไม่ต้องอาราธนาพระปริตร ดังนี้',
+                'paiboon': '',
+                'english': 'Before the meal it is the custom to chant the blessing of the Buddha first. That is: when the time has come, the host of the occasion lights incense and candles in homage to the Triple Gem and takes the precepts; after that the monks begin the blessing of the Buddha. There is no need to request the parittas. Thus:',
+            },
+            {
+                'number': 3,
+                'printed_number': 1,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'สวด นะมะการะปาฐะ คือ นะโม 3 จบ',
+                'paiboon': '',
+                'english': 'Chant the homage passage, that is, the namo three times.',
+            },
+            {
+                'number': 4,
+                'printed_number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'สวด พุทธคุณ ธรรมคุณ สังฆคุณ ขึ้น อิติปิ โส ภะคะวา ฯเปฯ อะนุตตะรัง ปัญญักเขตตัง โลกัสสาติ.',
+                'paiboon': '',
+                'english': 'Chant the virtues of the Buddha, the Dhamma and the Saṅgha, beginning itipi so bhagavā … ending anuttaraṃ puññakkhettaṃ lokassāti.',
+            },
+            {
+                'number': 5,
+                'printed_number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'สวด ชะยะมังคะละคาถา ขึ้น พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง ฯเปฯ โมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.',
+                'paiboon': '',
+                'english': 'Chant the Jayamaṅgala verses, beginning bāhuṃ sahassamabhinimmitasāvudhantaṃ … ending mokkhaṃ sukhaṃ adhigameyya naro sapañño.',
+            },
+            # ‼ CHECK [IMG_0539.PNG]: ⚠ THE NUMERAL SYSTEM CHANGES INSIDE ONE
+            #   LIST, ACROSS THE PAGE BREAK. Items 1, 2 and 3 are printed with
+            #   ARABIC numerals at the foot of page 270; item ๔ at the top of
+            #   page 271 is printed with the THAI numeral. One chant, one
+            #   list, four items, two numeral systems — and the break falls
+            #   exactly where the sheet does. printed_number carries 4 for all
+            #   purposes; the numeral itself is kept in the `thai` text as the
+            #   page sets it.
+            {
+                'number': 6,
+                'page': 271,
+                'printed_number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': '๔. สวด ชะยะปะริตตะคาถา ขึ้น มะหาการุณิโก นาโถ หิตายะ สัพพะปาณินัง ฯเปฯ ปะทักขิณานิ กัต์วานะ ละภันตัตเถ ปะทักขิเณ สวด ภะวะตุ สัพพะมังคะลัง ฯเปฯ สะทา โสตถี ภะวันตุ เต. ต่อรวดเดียว ไม่หยุดขึ้นใหม่ เมื่อสวดจบแล้วจึงเตรียมการฉันภัตตาหารต่อไป',
+                'paiboon': '',
+                'english': 'Chant the Jayaparitta verses, beginning mahākāruṇiko nātho hitāya sabbapāṇinaṃ … ending padakkhiṇāni katvāna labhantatthe padakkhiṇe; then chant bhavatu sabbamaṅgalaṃ … sadā sotthī bhavantu te, straight through without stopping and starting again. When the chanting is finished, preparations for the meal follow.',
+            },
+        ],
+    },
 ]
 
 
