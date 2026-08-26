@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-106 went in.
+107 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–106 are in and unbroken**, plus 217–221. **142 chants and 2,136
+- **Pages 1–107 are in and unbroken**, plus 217–221. **143 chants and 2,156
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 106 were applied 2026-08-24/26; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 107 were applied 2026-08-24/26; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,15 +46,41 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 107, `IMG_0372` — ⚠️ A CHANT IS OPEN
+## Next: page 108, `IMG_0373` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–106, so page 107 *should*
-be `IMG_0372`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–107, so page 108 *should*
+be `IMG_0373`. **Five more changes are still expected before page 207.**
 
-**⚠️ `abhinha-paccavekkhana-patha` IS OPEN and carries a `‼ CONTINUES` marker.**
-Verse 9 breaks after `กัมมัสสะโกมหิ` in the short recapitulation. **Resume at
-verse 10.** The break falls at a WORD boundary this time, so nothing is stranded
-— page 107 should open with `กัมมะทายาโท` or similar.
+**⚠️ `bot-khat-maggavibhanga-suttam` IS OPEN and carries a `‼ CONTINUES` marker.**
+Four two-column rows are in from page 107. **Resume at verse 5.** Page 108 was
+peeked at and carries more rows in the same two-column setting, closing
+`ตัง สุตตันตัง ภะณามะ เส.` — after which `18.` should follow. Verse 4 ends on a
+full stop and was NOT cut mid-line, so there is no `[…]` to complete: just append.
+
+## ⚠️ อะภิณหะปัจจะเวกขะณะ — FOUR spellings of one title across two sheets
+
+Now settled and closed, but recorded because it is the clearest case in the run
+of the book disagreeing with itself, and nothing was harmonised:
+
+| where | prints |
+|---|---|
+| p106 `บทขัด` title | `อะภิณหะ` … `ปาฐะ` |
+| p106 `บทขัด` verse 2 | `อะภิณ์หัง` |
+| p106 numbered title (17.) | `อะภิณ์หะ` … `ปาฐะ` |
+| p106 prose, ×8 | `อะภิณหัง` |
+| **p107 colophon** | `อะภิณหะ` … **`ปาโฐ`** |
+
+The **colophon agrees with the สารบัญ and the heading does not** — which is why
+the numbered chant is one of the titles the contents test cannot see.
+
+## 🔗 Joining a cut line keeps exposing punctuation the page break hid
+
+Twice now, and worth expecting a third time. Page 104's join showed the two
+halves of item 2 differing by a comma; page 107's shows `ปาปะกัง วา ตัสสะ` with
+NO comma where page 106's same formula has one. **When you complete a cut verse,
+re-read BOTH halves against their sheets** — the difference is only visible once
+the sentence is whole.
+
 
 ## ⚠️ Page 106: ONE WORD, THREE SPELLINGS, ONE PAGE
 

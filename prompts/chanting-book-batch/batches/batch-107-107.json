@@ -1,0 +1,389 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "abhinha-paccavekkhana-patha",
+   "bot-khat-maggavibhanga-suttam"
+  ],
+  "pages": [
+   {
+    "page": 107,
+    "file": "IMG_0372.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "abhinha-paccavekkhana-patha",
+    "verses": "9-25",
+    "starts_here": false,
+    "note": "The top of the sheet completes the line page 106 cut, then a SECOND indented paragraph runs to a centred bold colophon. SINGLE column. A rule and a canonical citation at the foot. The chant ends here."
+   },
+   {
+    "page": 107,
+    "file": "IMG_0372.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-maggavibhanga-suttam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "Below the colophon: a centred bold title and four TWO-COLUMN rows, right column beginning at x 1010, verse 1 indented. The chant starts here and CONTINUES onto page 108."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "abhinha-paccavekkhana-patha",
+   "continuation_of": "abhinha-paccavekkhana-patha",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Seventeen. Verse 9 COMPLETES the line page 106 cut; verses 10-25 are a SECOND paragraph, broken at the book's own full stops as page 106's were.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None new.",
+    "pages": "IMG_0372.PNG, page 107. The chant arrived from page 106 and ENDS here, with a colophon and a citation."
+   },
+   "source_printed": "อํ. ปญฺจก. 22/81-2-3",
+   "closing": {
+    "pali": "อะภิณหะปัจจะเวกขะณะปาโฐ นิฏฐิโต.",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Recitation of the Constant Reflections."
+   },
+   "verses": [
+    {
+     "number": 9,
+     "pali": "ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา ตัสสะ ทายาโท ภะวิสสามีติ.",
+     "pali_roman": "Jarādhammomhi jaraṃ anatīto, byādhidhammomhi byādhiṃ anatīto, maraṇadhammomhi maraṇaṃ anatīto, sabbehi me piyehi manāpehi nānābhāvo vinābhāvo, kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā tassa dāyādo bhavissāmīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "I am subject to ageing and have not gone beyond ageing; I am subject to illness and have not gone beyond illness; I am subject to death and have not gone beyond death; I must be parted from all that is dear and pleasing to me; I am the owner of my actions, heir to my actions, born of my actions, related through my actions, and have my actions as my refuge — whatever action I do, good or bad, of that I shall be the heir."
+    },
+    {
+     "number": 10,
+     "pali": "ตะโต อุตตะริงปิ ปัจจะเวกขิตัพพัง.",
+     "pali_roman": "Tato uttariṃpi paccavekkhitabbaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Beyond that, this too should be reflected on.",
+     "page": 107,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 11,
+     "pali": "นะ โข ปะนาหะเมวะ ชะราธัมโมมหิ ชะรัง อะนะตีโต.",
+     "pali_roman": "Na kho panāhameva jarādhammomhi jaraṃ anatīto.",
+     "thai": "",
+     "paiboon": "",
+     "english": "It is not I alone who am subject to ageing and have not gone beyond ageing.",
+     "page": 107
+    },
+    {
+     "number": 12,
+     "pali": "อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ, สัพเพ สัตตา ชะราธัมมา ชะรัง อะนะตีตา, ตัง กุเตตถะ ลัพภา.",
+     "pali_roman": "Athakho yāvatā sattānaṃ āgati gati cuti upapatti, sabbe sattā jarādhammā jaraṃ anatītā, taṃ kutettha labbhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "But rather, as far as beings come and go, pass away and reappear, all beings are subject to ageing and have not gone beyond it — how could that be had?",
+     "page": 107
+    },
+    {
+     "number": 13,
+     "pali": "นะ โข ปะนาหะเมวะ พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต.",
+     "pali_roman": "Na kho panāhameva byādhidhammomhi byādhiṃ anatīto.",
+     "thai": "",
+     "paiboon": "",
+     "english": "It is not I alone who am subject to illness and have not gone beyond illness.",
+     "page": 107
+    },
+    {
+     "number": 14,
+     "pali": "อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.",
+     "pali_roman": "Athakho yāvatā sattānaṃ āgati gati cuti upapatti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "But rather, as far as beings come and go, pass away and reappear.",
+     "page": 107
+    },
+    {
+     "number": 15,
+     "pali": "สัพเพ สัตตา พ์ยาธิธัมมา พ์ยาธิง อะนะตีตา, ตัง กุเตตถะ ลัพภา.",
+     "pali_roman": "Sabbe sattā byādhidhammā byādhiṃ anatītā, taṃ kutettha labbhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "All beings are subject to illness and have not gone beyond it — how could that be had?",
+     "page": 107
+    },
+    {
+     "number": 16,
+     "pali": "นะ โข ปะนาหะเมวะ มะระณะธัมโมมหิ มะระณัง อะนะตีโต.",
+     "pali_roman": "Na kho panāhameva maraṇadhammomhi maraṇaṃ anatīto.",
+     "thai": "",
+     "paiboon": "",
+     "english": "It is not I alone who am subject to death and have not gone beyond death.",
+     "page": 107
+    },
+    {
+     "number": 17,
+     "pali": "อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.",
+     "pali_roman": "Athakho yāvatā sattānaṃ āgati gati cuti upapatti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "But rather, as far as beings come and go, pass away and reappear.",
+     "page": 107
+    },
+    {
+     "number": 18,
+     "pali": "สัพเพ สัตตา มะระณะธัมมา มะระณัง อะนะตีตา, ตัง กุเตตถะ ลัพภา.",
+     "pali_roman": "Sabbe sattā maraṇadhammā maraṇaṃ anatītā, taṃ kutettha labbhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "All beings are subject to death and have not gone beyond it — how could that be had?",
+     "page": 107
+    },
+    {
+     "number": 19,
+     "pali": "นะ โข ปะนะ มัย์หะเมวะ สัพเพหิ ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.",
+     "pali_roman": "Na kho pana mayhameva sabbehi piyehi manāpehi nānābhāvo vinābhāvo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "It is not I alone who must be parted and separated from all that is dear and pleasing.",
+     "page": 107
+    },
+    {
+     "number": 20,
+     "pali": "อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.",
+     "pali_roman": "Athakho yāvatā sattānaṃ āgati gati cuti upapatti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "But rather, as far as beings come and go, pass away and reappear.",
+     "page": 107
+    },
+    {
+     "number": 21,
+     "pali": "สัพเพสัง สัตตานัง ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.",
+     "pali_roman": "Sabbesaṃ sattānaṃ piyehi manāpehi nānābhāvo vinābhāvo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "All beings must be parted and separated from what is dear and pleasing to them.",
+     "page": 107
+    },
+    {
+     "number": 22,
+     "pali": "ตัง กุเตตถะ ลัพภา.",
+     "pali_roman": "Taṃ kutettha labbhā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "How could that be had?",
+     "page": 107
+    },
+    {
+     "number": 23,
+     "pali": "นะ โข ปะนาหะเมวะ กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามิ.",
+     "pali_roman": "Na kho panāhameva kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "It is not I alone who am the owner of my actions, heir to them, born of them, related through them, with them as my refuge — whatever action I do, good or bad, of that I shall be the heir.",
+     "page": 107
+    },
+    {
+     "number": 24,
+     "pali": "อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.",
+     "pali_roman": "Athakho yāvatā sattānaṃ āgati gati cuti upapatti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "But rather, as far as beings come and go, pass away and reappear.",
+     "page": 107
+    },
+    {
+     "number": 25,
+     "pali": "สัพเพ สัตตา กัมมัสสะกา กัมมะทายาทา กัมมะโยนี กัมมะพันธุ กัมมะปะฏิสะระณา, ยัง กัมมัง กะริสสันติ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาทา ภะวิสสันติ, ตัง กุเตตถะ ลัพภาติ.",
+     "pali_roman": "Sabbe sattā kammassakā kammadāyādā kammayonī kammabandhu kammapaṭisaraṇā, yaṃ kammaṃ karissanti kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādā bhavissanti, taṃ kutettha labbhāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "All beings are the owners of their actions, heirs to them, born of them, related through them, with them as their refuge — whatever action they do, good or bad, of that they will be the heirs. How could it be otherwise?",
+     "page": 107
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ตัง กุเตตถะ ลัพภา",
+     "pali_roman": "taṃ kutettha labbhā",
+     "meaning": "'how could that be had here?' — the refrain that closes each pair. It is the sentence that turns the reflection from self-pity into common ground"
+    },
+    {
+     "pali": "อาคะติ คะติ จุติ อุปะปัตติ",
+     "pali_roman": "āgati gati cuti upapatti",
+     "meaning": "coming, going, passing away, reappearing. Four words for the whole traffic of birth and death, and the reason the reflection applies to everyone"
+    },
+    {
+     "pali": "ตะโต อุตตะริงปิ",
+     "pali_roman": "tato uttariṃpi",
+     "meaning": "'beyond that too'. It opens the second half of the chant, which takes each of the five reflections and widens it from oneself to all beings"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 9,
+     "file": "IMG_0372.PNG",
+     "issue": "COMPLETES THE LINE PAGE 106 CUT, AND THE PREDICTION HELD. Page 106 broke after กัมมัสสะโกมหิ and the brief said 107 should open with กัมมะทายาโท or similar. It opens กัมมะทายาโท กัมมะโยนิ. Re-emitted whole and the […] marker comes off."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0372.PNG",
+     "issue": "‼ AND JOINING IT UP EXPOSED A PUNCTUATION DIFFERENCE. This occurrence reads ปาปะกัง วา ตัสสะ with NO comma; page 106's verse 6 reads ปาปะกัง วา, ตัสสะ WITH one, and verse 23 on this page has the comma too. Reproduced as printed in each place. The same thing happened when page 104's cut was joined."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0372.PNG",
+     "issue": "A SECOND PARAGRAPH STARTS HERE. Line 3 of the sheet is indented at x 373 against a flush edge of 253-258 for the fourteen lines below it, so ตะโต อุตตะริงปิ opens a new paragraph and carries para_start with para_layout 'prose'. Page 106's whole prose was one paragraph; this is the second."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0372.PNG",
+     "issue": "‼ THE BOOK PUNCTUATES THE SAME REFRAIN INCONSISTENTLY, AND THE VERSE BREAKS FOLLOW IT. After the ageing pair it runs อุปะปัตติ, สัพเพ สัตตา … with a COMMA, keeping the sentence whole. After the illness, death and kamma pairs it puts a FULL STOP at อุปะปัตติ. and starts สัพเพ สัตตา as a new sentence. Verses 12 and 13 split for that reason and verse 12 does not. Nothing is harmonised."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0372.PNG",
+     "issue": "‼ THE COLOPHON SPELLS THE TITLE DIFFERENTLY AGAIN. It reads อะภิณหะปัจจะเวกขะณะปาโฐ นิฏฐิโต. — bare ณ and ปาโฐ — where the page-106 heading printed อะภิณ์หะ…ปาฐะ with the cluster mark. The colophon agrees with the สารบัญ and the heading does not. Both reproduced; this is the FOURTH spelling of the word across the two sheets."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0372.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Twenty-five verses across pages 106 and 107."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0372.PNG",
+     "issue": "THE FOOTNOTE USES THE PHINTHU. It reads อํ. ปญฺจก. 22/81-2-3 — Aṅguttara, the Book of Fives — with the subscript dot under ญ, where the body text of this book never uses it and marks clusters with the mark ABOVE instead. Same finding as page 93's second footnote. Held in source_printed exactly as printed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0372.PNG",
+     "issue": "One line-break hyphen rejoined: กัมมะปะฏิ- / สะระณา in the last verse."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-maggavibhanga-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Four so far, one per two-column row, read ACROSS. One group.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "title_roman is the contents' Paiboon value; the SPACING of title_thai follows the page.",
+    "pages": "IMG_0372.PNG, page 107. The chant STARTS here with four rows and CONTINUES onto page 108, which carries more rows and closes ตัง สุตตันตัง ภะณามะ เส."
+   },
+   "title_thai": "บทขัด มัคคะวิภังคะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt mák-ká-wí-paŋ-ká-sùt-dtaŋ",
+   "title_english": "The Prefatory Verse for the Discourse on the Analysis of the Path",
+   "page_start": 107,
+   "english_unverified": true,
+   "continues": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สะเทวะโก อะยัง โลโก สะมาระโก สะพ์รัห์มะโก",
+     "pali_roman": "Sadevako ayaṃ loko samārako sabrahmako",
+     "thai": "",
+     "paiboon": "",
+     "english": "This world with its devas, with its Māras and its Brahmās,",
+     "page": 107
+    },
+    {
+     "number": 2,
+     "pali": "ยัมมัคคัง อัปปะชานันโต สัพพะทุกขา นะ มุจจะติ.",
+     "pali_roman": "Yammaggaṃ appajānanto sabbadukkhā na muccati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "not knowing which path, is not freed from all suffering.",
+     "page": 107
+    },
+    {
+     "number": 3,
+     "pali": "มัคคักขายีนะมัคโค โส ภะคะวา มัคคะโกวิโท",
+     "pali_roman": "Maggakkhāyīnamaggo so bhagavā maggakovido",
+     "thai": "",
+     "paiboon": "",
+     "english": "He is the path among those who point out the path, the Blessed One skilled in the path,",
+     "page": 107
+    },
+    {
+     "number": 4,
+     "pali": "ตัง เว มัคคัง อะภิญญายะ ทุกขะสังขะยะคามินัง.",
+     "pali_roman": "Taṃ ve maggaṃ abhiññāya dukkhasaṅkhayagāminaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "having realised that path which leads to the destruction of suffering.",
+     "page": 107
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "มัคคะวิภังคะ",
+     "pali_roman": "maggavibhaṅga",
+     "meaning": "the analysis of the path — the sutta that takes the Eightfold Path apart factor by factor"
+    },
+    {
+     "pali": "มัคคักขายีนะ",
+     "pali_roman": "maggakkhāyīnaṃ",
+     "meaning": "'of those who declare the path'. The Buddha is not merely one of them; the verse says he IS the path among them"
+    },
+    {
+     "pali": "ทุกขะสังขะยะคามินัง",
+     "pali_roman": "dukkhasaṅkhayagāminaṃ",
+     "meaning": "'leading to the complete destruction of suffering'. The standard description of the Eightfold Path, and what the บทขัด is pointing at"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0372.PNG",
+     "issue": "A SIXTEENTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด มัคคะวิภังคะสุตตัง with a SPACE after บทขัด; the สารบัญ has it without one. Every บทขัด from page 82 on has done this."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0372.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1010. Read ACROSS. FIRST PAIRING FOR CHECKING: left สะเทวะโก อะยัง โลโก + right สะมาระโก สะพ์รัห์มะโก."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0372.PNG",
+     "issue": "ONE indent only, on verse 1, measured at x 366 against a flush 253-255 for verses 2-4. The chant's own paragraph start carries it, so no para_start is set."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0372.PNG",
+     "issue": "THE CHANT CONTINUES ONTO PAGE 108. Four rows here; page 108 was peeked at and carries more, closing ตัง สุตตันตัง ภะณามะ เส. continues is set and no closing is given here. Verse 4 ends on a full stop and is NOT cut mid-line, so no […] marker is used."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0372.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "abhinha-paccavekkhana-patha"
+  ],
+  "continues": [
+   "bot-khat-maggavibhanga-suttam"
+  ],
+  "resume_from": {
+   "chant": "bot-khat-maggavibhanga-suttam",
+   "next_verse": 5,
+   "page": 108
+  },
+  "paiboon_scan": "Nothing to scan. Both chants are printed in Pali only, so paiboon is empty on every verse. The one Thai string is source_printed, a citation and not a chanted layer.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0372.PNG read end to end. Page number 107 read off the sheet. Two prose lines completing the previous page, one indented paragraph of fifteen lines, a centred colophon, a centred bold title, four two-column rows, a rule and one footnote.",
+  "notes": "‼ A FOURTH SPELLING OF THE SAME TITLE. The colophon prints อะภิณหะปัจจะเวกขะณะปาโฐ — bare ณ, ปาโฐ — agreeing with the สารบัญ and disagreeing with page 106's own heading. Joining page 106's cut also exposed a missing comma that the page break had hidden. The footnote uses the PHINTHU, as page 93's did, where the body never does.",
+  "diacritic_exceptions": [
+   "kammayoni/kammayonī — genuinely two different words and the BOOK prints the difference. The singular sentences read กัมมะโยนิ with a SHORT ิ, of one person: \"I am born of my actions.\" The final plural sentence reads กัมมะโยนี with a LONG ี, of all beings, alongside its other plurals กัมมัสสะกา, กัมมะทายาทา and กัมมะปะฏิสะระณา. Read at the sheet and reproduced in each place."
+  ]
+ }
+}
