@@ -41223,7 +41223,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
         # ‼ CHECK [IMG_0371.PNG]: ‼ THIS IS A DIFFERENT CHANT FROM THE
         #   abhinha-paccavekkhana ALREADY IN THE APP. That one is
         #   อะภิณหะปัจจะเวกขะณะ, the five reflections in short form WITH a
@@ -41253,6 +41252,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'อํ. ปญฺจก. 22/81-2-3',
+        'closing': {
+            'pali': 'อะภิณหะปัจจะเวกขะณะปาโฐ นิฏฐิโต.',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Recitation of the Constant Reflections.',
         },
         'verses': [
             # ‼ CHECK [IMG_0371.PNG]: ‼ THE PROSE USES อะภิณหัง WITH A BARE ณ
@@ -41355,14 +41362,187 @@ CHANTS = [
             #   107. Marked with […] and continues is set. This break falls at
             #   a WORD boundary, unlike page 104's, so no fragment is
             #   stranded.
+            # ‼ COMPLETED FROM p107: this line was cut by the page break and
+            #   is now whole. Was: ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ์ยาธิธัมโมมหิ
+            #   พ์ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม
+            #   ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ […]
+            # ‼ CHECK [IMG_0372.PNG]: COMPLETES THE LINE PAGE 106 CUT, AND THE
+            #   PREDICTION HELD. Page 106 broke after กัมมัสสะโกมหิ and the
+            #   brief said 107 should open with กัมมะทายาโท or similar. It
+            #   opens กัมมะทายาโท กัมมะโยนิ. Re-emitted whole and the […]
+            #   marker comes off.
+            # ‼ CHECK [IMG_0372.PNG]: ‼ AND JOINING IT UP EXPOSED A
+            #   PUNCTUATION DIFFERENCE. This occurrence reads ปาปะกัง วา ตัสสะ
+            #   with NO comma; page 106's verse 6 reads ปาปะกัง วา, ตัสสะ WITH
+            #   one, and verse 23 on this page has the comma too. Reproduced
+            #   as printed in each place. The same thing happened when page
+            #   104's cut was joined.
             {
                 'number': 9,
-                'page': 106,
-                'pali': 'ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ […]',
-                'pali_roman': 'Jarādhammomhi jaraṃ anatīto, byādhidhammomhi byādhiṃ anatīto, maraṇadhammomhi maraṇaṃ anatīto, sabbehi me piyehi manāpehi nānābhāvo vinābhāvo, kammassakomhi […]',
+                'pali': 'ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา ตัสสะ ทายาโท ภะวิสสามีติ.',
+                'pali_roman': 'Jarādhammomhi jaraṃ anatīto, byādhidhammomhi byādhiṃ anatīto, maraṇadhammomhi maraṇaṃ anatīto, sabbehi me piyehi manāpehi nānābhāvo vinābhāvo, kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā tassa dāyādo bhavissāmīti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'I am subject to ageing and have not gone beyond ageing; I am subject to illness and have not gone beyond illness; I am subject to death and have not gone beyond death; I must be parted from all that is dear and pleasing to me; I am the owner of my actions […]',
+                'english': 'I am subject to ageing and have not gone beyond ageing; I am subject to illness and have not gone beyond illness; I am subject to death and have not gone beyond death; I must be parted from all that is dear and pleasing to me; I am the owner of my actions, heir to my actions, born of my actions, related through my actions, and have my actions as my refuge — whatever action I do, good or bad, of that I shall be the heir.',
+            },
+            # ‼ CHECK [IMG_0372.PNG]: A SECOND PARAGRAPH STARTS HERE. Line 3
+            #   of the sheet is indented at x 373 against a flush edge of
+            #   253-258 for the fourteen lines below it, so ตะโต อุตตะริงปิ
+            #   opens a new paragraph and carries para_start with para_layout
+            #   'prose'. Page 106's whole prose was one paragraph; this is the
+            #   second.
+            {
+                'number': 10,
+                'page': 107,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ตะโต อุตตะริงปิ ปัจจะเวกขิตัพพัง.',
+                'pali_roman': 'Tato uttariṃpi paccavekkhitabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Beyond that, this too should be reflected on.',
+            },
+            {
+                'number': 11,
+                'page': 107,
+                'pali': 'นะ โข ปะนาหะเมวะ ชะราธัมโมมหิ ชะรัง อะนะตีโต.',
+                'pali_roman': 'Na kho panāhameva jarādhammomhi jaraṃ anatīto.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It is not I alone who am subject to ageing and have not gone beyond ageing.',
+            },
+            {
+                'number': 12,
+                'page': 107,
+                'pali': 'อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ, สัพเพ สัตตา ชะราธัมมา ชะรัง อะนะตีตา, ตัง กุเตตถะ ลัพภา.',
+                'pali_roman': 'Athakho yāvatā sattānaṃ āgati gati cuti upapatti, sabbe sattā jarādhammā jaraṃ anatītā, taṃ kutettha labbhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But rather, as far as beings come and go, pass away and reappear, all beings are subject to ageing and have not gone beyond it — how could that be had?',
+            },
+            # ‼ CHECK [IMG_0372.PNG]: ‼ THE BOOK PUNCTUATES THE SAME REFRAIN
+            #   INCONSISTENTLY, AND THE VERSE BREAKS FOLLOW IT. After the
+            #   ageing pair it runs อุปะปัตติ, สัพเพ สัตตา … with a COMMA,
+            #   keeping the sentence whole. After the illness, death and kamma
+            #   pairs it puts a FULL STOP at อุปะปัตติ. and starts สัพเพ สัตตา
+            #   as a new sentence. Verses 12 and 13 split for that reason and
+            #   verse 12 does not. Nothing is harmonised.
+            {
+                'number': 13,
+                'page': 107,
+                'pali': 'นะ โข ปะนาหะเมวะ พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต.',
+                'pali_roman': 'Na kho panāhameva byādhidhammomhi byādhiṃ anatīto.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It is not I alone who am subject to illness and have not gone beyond illness.',
+            },
+            {
+                'number': 14,
+                'page': 107,
+                'pali': 'อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.',
+                'pali_roman': 'Athakho yāvatā sattānaṃ āgati gati cuti upapatti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But rather, as far as beings come and go, pass away and reappear.',
+            },
+            {
+                'number': 15,
+                'page': 107,
+                'pali': 'สัพเพ สัตตา พ์ยาธิธัมมา พ์ยาธิง อะนะตีตา, ตัง กุเตตถะ ลัพภา.',
+                'pali_roman': 'Sabbe sattā byādhidhammā byādhiṃ anatītā, taṃ kutettha labbhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'All beings are subject to illness and have not gone beyond it — how could that be had?',
+            },
+            {
+                'number': 16,
+                'page': 107,
+                'pali': 'นะ โข ปะนาหะเมวะ มะระณะธัมโมมหิ มะระณัง อะนะตีโต.',
+                'pali_roman': 'Na kho panāhameva maraṇadhammomhi maraṇaṃ anatīto.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It is not I alone who am subject to death and have not gone beyond death.',
+            },
+            {
+                'number': 17,
+                'page': 107,
+                'pali': 'อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.',
+                'pali_roman': 'Athakho yāvatā sattānaṃ āgati gati cuti upapatti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But rather, as far as beings come and go, pass away and reappear.',
+            },
+            {
+                'number': 18,
+                'page': 107,
+                'pali': 'สัพเพ สัตตา มะระณะธัมมา มะระณัง อะนะตีตา, ตัง กุเตตถะ ลัพภา.',
+                'pali_roman': 'Sabbe sattā maraṇadhammā maraṇaṃ anatītā, taṃ kutettha labbhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'All beings are subject to death and have not gone beyond it — how could that be had?',
+            },
+            {
+                'number': 19,
+                'page': 107,
+                'pali': 'นะ โข ปะนะ มัย์หะเมวะ สัพเพหิ ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.',
+                'pali_roman': 'Na kho pana mayhameva sabbehi piyehi manāpehi nānābhāvo vinābhāvo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It is not I alone who must be parted and separated from all that is dear and pleasing.',
+            },
+            {
+                'number': 20,
+                'page': 107,
+                'pali': 'อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.',
+                'pali_roman': 'Athakho yāvatā sattānaṃ āgati gati cuti upapatti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But rather, as far as beings come and go, pass away and reappear.',
+            },
+            {
+                'number': 21,
+                'page': 107,
+                'pali': 'สัพเพสัง สัตตานัง ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.',
+                'pali_roman': 'Sabbesaṃ sattānaṃ piyehi manāpehi nānābhāvo vinābhāvo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'All beings must be parted and separated from what is dear and pleasing to them.',
+            },
+            {
+                'number': 22,
+                'page': 107,
+                'pali': 'ตัง กุเตตถะ ลัพภา.',
+                'pali_roman': 'Taṃ kutettha labbhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'How could that be had?',
+            },
+            {
+                'number': 23,
+                'page': 107,
+                'pali': 'นะ โข ปะนาหะเมวะ กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามิ.',
+                'pali_roman': 'Na kho panāhameva kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'It is not I alone who am the owner of my actions, heir to them, born of them, related through them, with them as my refuge — whatever action I do, good or bad, of that I shall be the heir.',
+            },
+            {
+                'number': 24,
+                'page': 107,
+                'pali': 'อะถะโข ยาวะตา สัตตานัง อาคะติ คะติ จุติ อุปะปัตติ.',
+                'pali_roman': 'Athakho yāvatā sattānaṃ āgati gati cuti upapatti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But rather, as far as beings come and go, pass away and reappear.',
+            },
+            {
+                'number': 25,
+                'page': 107,
+                'pali': 'สัพเพ สัตตา กัมมัสสะกา กัมมะทายาทา กัมมะโยนี กัมมะพันธุ กัมมะปะฏิสะระณา, ยัง กัมมัง กะริสสันติ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาทา ภะวิสสันติ, ตัง กุเตตถะ ลัพภาติ.',
+                'pali_roman': 'Sabbe sattā kammassakā kammadāyādā kammayonī kammabandhu kammapaṭisaraṇā, yaṃ kammaṃ karissanti kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādā bhavissanti, taṃ kutettha labbhāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'All beings are the owners of their actions, heirs to them, born of them, related through them, with them as their refuge — whatever action they do, good or bad, of that they will be the heirs. How could it be otherwise?',
             },
         ],
     },
@@ -41761,6 +41941,214 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'By the power of the Triple Gem and by its majesty, may suffering, disease, fear, enmity, sorrow, foes and calamities, and the many dangers too, perish without remainder. May victory and success, wealth, gain, well-being, fortune, happiness, strength, splendour, long life and beauty, riches and increase and renown, a hundred years of life, and success in living, be yours.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0372.PNG]: A SIXTEENTH TITLE THE CONTENTS TEST CANNOT
+        #   SEE. The page prints บทขัด มัคคะวิภังคะสุตตัง with a SPACE after
+        #   บทขัด; the สารบัญ has it without one. Every บทขัด from page 82 on
+        #   has done this.
+        # ‼ CHECK [IMG_0372.PNG]: THE CHANT CONTINUES ONTO PAGE 108. Four rows
+        #   here; page 108 was peeked at and carries more, closing ตัง
+        #   สุตตันตัง ภะณามะ เส. continues is set and no closing is given
+        #   here. Verse 4 ends on a full stop and is NOT cut mid-line, so no
+        #   […] marker is used.
+        # ‼ CHECK [IMG_0372.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-maggavibhanga-suttam',
+        'title_thai': 'บทขัด มัคคะวิภังคะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt mák-ká-wí-paŋ-ká-sùt-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Discourse on the Analysis of the Path',
+        'page_start': 107,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0372.PNG]: TWO COLUMNS, right column begins at x
+            #   1010. Read ACROSS. FIRST PAIRING FOR CHECKING: left สะเทวะโก
+            #   อะยัง โลโก + right สะมาระโก สะพ์รัห์มะโก.
+            # ‼ CHECK [IMG_0372.PNG]: ONE indent only, on verse 1, measured at
+            #   x 366 against a flush 253-255 for verses 2-4. The chant's own
+            #   paragraph start carries it, so no para_start is set.
+            {
+                'number': 1,
+                'page': 107,
+                'pali': 'สะเทวะโก อะยัง โลโก สะมาระโก สะพ์รัห์มะโก',
+                'pali_roman': 'Sadevako ayaṃ loko samārako sabrahmako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This world with its devas, with its Māras and its Brahmās,',
+            },
+            {
+                'number': 2,
+                'page': 107,
+                'pali': 'ยัมมัคคัง อัปปะชานันโต สัพพะทุกขา นะ มุจจะติ.',
+                'pali_roman': 'Yammaggaṃ appajānanto sabbadukkhā na muccati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'not knowing which path, is not freed from all suffering.',
+            },
+            {
+                'number': 3,
+                'page': 107,
+                'pali': 'มัคคักขายีนะมัคโค โส ภะคะวา มัคคะโกวิโท',
+                'pali_roman': 'Maggakkhāyīnamaggo so bhagavā maggakovido',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He is the path among those who point out the path, the Blessed One skilled in the path,',
+            },
+            {
+                'number': 4,
+                'page': 107,
+                'pali': 'ตัง เว มัคคัง อะภิญญายะ ทุกขะสังขะยะคามินัง.',
+                'pali_roman': 'Taṃ ve maggaṃ abhiññāya dukkhasaṅkhayagāminaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having realised that path which leads to the destruction of suffering.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0539.PNG]: ⚠ NO PALI AS CHANTED TEXT ANYWHERE IN THIS
+        #   ENTRY. Every Pali phrase on these sheets is QUOTED inside a Thai
+        #   instruction — naming a chant and giving its first and last words
+        #   with ฯเปฯ between — so all seven verses are Thai. Putting any of
+        #   it in `pali` would make the app offer a direction as a line to
+        #   recite, the same decision taken for page 274's numbered items.
+        # ‼ CHECK [IMG_0539.PNG]: THE ITEM ABOVE THIS CHANT IS NUMBERED WITH A
+        #   THAI NUMERAL — '๔. สวด ชะยะปะริตตะคาถา' — where page 274's list of
+        #   four uses Arabic 1-4. That item belongs to ระเบียบถวายพรพระ at ๒๗๐
+        #   and is left for that page, but the numeral difference is worth
+        #   recording where it was seen.
+        'id': 'rabiap-anumothana',
+        'title_thai': 'ระเบียบอนุโมทนา',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Procedure for the Anumodanā',
+        'book_number': 11,
+        'book_number_printed': '11',
+        'page_start': 271,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 271,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เป็นธรรมเนียมของพระ เมื่อฉันเสร็จแล้วสวดอนุโมทนาเป็นการให้พรอีกครั้งหนึ่ง ระเบียบอนุโมทนานั้นดังนี้ เมื่อฉันเสร็จแล้วหรือเจ้าภาพถวายเครื่องไทยธรรมเสร็จแล้ว เริ่มอนุโมทนา ดังนี้',
+                'paiboon': '',
+                'english': 'It is the custom of the monks, when the meal is finished, to chant the anumodanā as a further blessing. The procedure is as follows. When the meal is finished, or when the host has finished presenting the offerings, the anumodanā begins thus:',
+            },
+            # ‼ CHECK [IMG_0539.PNG]: ⚠ A PALI WORD IS DELIBERATELY SPLIT
+            #   BETWEEN TWO SPEAKERS, and the hyphen is not a line break. The
+            #   instruction reads 'รองประธานรับ สัพพี นอกนั้นสวดพร้อมกันต่อไป-
+            #   ติโย วิวัชชันตุ' — the deputy takes up สัพพี and the rest
+            #   continue -ติโย, together making สัพพีติโย. The hyphen shows
+            #   where one voice hands over to the others. Every other hyphen
+            #   met in this pass has been a compositor's line break to be
+            #   rejoined; this one is the book showing how the chant is shared
+            #   and MUST NOT be closed up.
+            {
+                'number': 2,
+                'printed_number': 1,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'พระสงฆ์ทั้งหมดตั้งพัดขึ้นพร้อมกัน ถือพัดด้วยมือขวาพระเถระผู้เป็นประธานขึ้น ยะถา วาริวะหา ปูรา ปะริปูเรนติ สาคะรัง ฯเปฯ ลง มะณิ โชติระโส ยะถา ทอดเสียงยาวเล็กน้อย รองประธานรับ สัพพี นอกนั้นสวดพร้อมกันต่อไป- ติโย วิวัชชันตุ ฯเปฯ อายุ วัณโณ สุขัง พะลัง.',
+                'paiboon': '',
+                'english': 'All the monks raise their fans together, holding them in the right hand. The presiding elder begins yathā vārivahā pūrā paripūrenti sāgaraṃ … down to maṇi jotiraso yathā, drawing the sound out a little. The deputy takes up sabbī, and the rest chant on together — tiyo vivajjantu … āyu vaṇṇo sukhaṃ balaṃ.',
+            },
+            {
+                'number': 3,
+                'printed_number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ประธานขึ้น ภะวะตุ นอกนั้นรับพร้อมกันต่อไปว่า สัพพะมังคะลัง ฯเปฯ สะทา โสตถี ภะวันตุ เต.',
+                'paiboon': '',
+                'english': 'The one presiding begins bhavatu, and the rest take it up together — sabbamaṅgalaṃ … sadā sotthī bhavantu te.',
+            },
+            {
+                'number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'นี้เป็นระเบียบอนุโมทนาปรกติ ถ้าเป็นงานพิธีต่างๆ ก็มีนิยมสวดพระคาถาหรือพระสูตรต่างๆ โดยสมควรแก่งานพิธีนั้นๆ สอดแทรกลงในระหว่าง ยะถา ฯเปฯ กับ ภะวะตุ สัพพะมังคะลัง ฯเปฯ เรียกว่า อนุโมทนาวิเสส ดังนี้',
+                'paiboon': '',
+                'english': 'This is the ordinary anumodanā procedure. For the various ceremonies it is usual to chant verses or discourses suited to that ceremony, inserted between yathā … and bhavatu sabbamaṅgalaṃ …. This is called the special anumodanā, as follows:',
+            },
+            # ‼ CHECK [IMG_0539.PNG]: TWO NUMBERED LISTS INSIDE ONE ENTRY,
+            #   each running 1-2 — the ordinary procedure first, then the
+            #   special one after the paragraph that introduces it.
+            #   printed_number restarts at 1, which is the book's own
+            #   structure and which check_printed_numbers has allowed since
+            #   pages 293-294 taught it.
+            {
+                'number': 5,
+                'printed_number': 1,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ถ้าเป็นงานมงคล สวดพระคาถาหรือพระสูตรที่มีความหมายเกี่ยวกับงานมงคล เช่น เทวะตาทิสสะทักขิณานุโมทะนาคาถา วิหาระทานะคาถา กาละทานะสุตตะคาถา อัคคัปปะสาทะสุตตะ และมงคลจักรวาฬน้อย เป็นต้นต่อจาก ยะถา-สัพพี- แล้วจึงสวด ภะวะตุ สัพพะมังคะลัง ฯเปฯ ต่อไป ตัวอย่างเช่น อนุโมทนาในงานทำบุญฉลองอายุเมื่อสวด ยะถา- สัพพี -จบแล้ว สวด เทวะตาทิสสะทักขิณานุโมทะนาคาถา และ เทวะตาภิสัมมันตะนะคาถา ต่อกันรวดเดียว คือ ยัส์มิง ปะเทเส กัปเปติ ฯเปฯ ตัส์มา หิ เน รักขะณะ อัปปะมัตตา แล้วสวด โส อัตถะลัทโธ สำหรับเจ้าภาพเป็นบุรุษ หรือ สา อัตถะลัทธา สำหรับเจ้าภาพเป็นสตรี หรือ เต อัตถะลัทธา สำหรับเจ้าภาพ',
+                'paiboon': '',
+                'english': 'If it is an auspicious occasion, chant verses or discourses whose meaning bears on such an occasion — for instance the Devatādissadakkhiṇānumodanā verses, the Vihāradāna verses, the Kāladānasutta verses, the Aggappasāda Sutta and the Lesser Maṅgala Cakkavāḷa — after yathā-sabbī-, and then chant bhavatu sabbamaṅgalaṃ … For example, at a merit-making for long life: when yathā- sabbī- is finished, chant the Devatādissadakkhiṇānumodanā verses and the Devatābhisammantana verses straight through, that is yasmiṃ padese kappeti … tasmā hi ne rakkhaṇa appamattā; then chant so atthaladdho if the host is a man, or sā atthaladdhā if the host is a woman, or te atthaladdhā if the hosts',
+            },
+            # ‼ CHECK [IMG_0540.PNG]: ⚠ A WORD IS SPLIT BY THE PAGE BREAK
+            #   ITSELF. Page 271 ends 'สำหรับเจ้าภาพ' and page 272 opens
+            #   'หลายคน', together สำหรับเจ้าภาพหลายคน — 'if the hosts are
+            #   several'. Verse 6 therefore carries para_layout and
+            #   deliberately NO para_start: it continues a paragraph rather
+            #   than opening one, which is the page-75 rule.
+            {
+                'number': 6,
+                'page': 272,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'หลายคน สวด 3 จบแล้วสวดมงคลจักรวาฬน้อยอย่างพิสดารหรืออย่างย่อ สวดขึ้น สัพพะพุทธานุภาเวนะ ฯเปฯ สวด ภะวะตุ สัพพะมังคะลัง ต่อรวดเดียว ไม่ต้องหยุดขึ้นใหม่',
+                'paiboon': '',
+                'english': 'are several. Chant it three times, then chant the Lesser Maṅgala Cakkavāḷa either in the full form or the abbreviated one, beginning sabbabuddhānubhāvena …, and chant bhavatu sabbamaṅgalaṃ straight on without stopping and starting again.',
+            },
+            {
+                'number': 7,
+                'printed_number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ถ้าเป็นงานอวมงคล เมื่อสวด ยะถา- สัพพี- แล้วสวด ติโรกุฑฑะกัณฑะคาถา ขึ้นที่ อะทาสิ เม อะกาสิ เม ฯเปฯ บ้าง ที่ อะยัญจะ โข ทักขิณา ทินนา ฯเปฯ บ้าง แล้วลงที่ ตุมเหหิ ปุญญัง ปะสุตัง อะนัปปะกันติ. ต่อจากนี้สวด ภะวะตุ สัพพะมังคะลัง ฯเปฯ สะทา โสตถี ภะวันตุ เต. ในขณะที่พระเถระผู้เป็นประธานเริ่มอนุโมทนาขึ้น ยะถา วาริวะหา ฯเปฯ นั้นให้เจ้าภาพกรวดน้ำแผ่กุศลให้บรรพบุรุษบุรพาจารย์ ตลอดถึงสรรพสัตว์ทั่วไป พอพระเถระว่าไปถึง มะณิ โชติระโส ยะถา ก็ให้กรวดน้ำหมดพอดี แล้วประนมมือฟังพระสวดอนุโมทนาจนจบแล้ว กราบ ๓ หน เป็นอันเสร็จพิธี.',
+                'paiboon': '',
+                'english': 'If it is an inauspicious occasion, after chanting yathā- sabbī- chant the Tirokuḍḍa Kaṇḍa verses, beginning either at adāsi me akāsi me … or at ayañca kho dakkhiṇā dinnā …, and ending at tumhehi puññaṃ pasutaṃ anappakanti. After this chant bhavatu sabbamaṅgalaṃ … sadā sotthī bhavantu te. While the presiding elder begins the anumodanā, yathā vārivahā …, the host pours the water of dedication, spreading the merit to forebears and former teachers and to all beings; by the time the elder reaches maṇi jotiraso yathā the water should be exactly finished. Then, with palms together, listen to the monks chanting the anumodanā to its end, and bow three times. That completes the ceremony.',
             },
         ],
     },
