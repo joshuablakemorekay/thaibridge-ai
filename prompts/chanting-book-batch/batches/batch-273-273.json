@@ -1,0 +1,332 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "akkappasada-suttagatha",
+   "tirokuddakanda-pacchimaphak",
+   "bhojanadanumothana-gatha"
+  ],
+  "pages": [
+   {
+    "page": 273,
+    "file": "IMG_0541.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "akkappasada-suttagatha",
+    "verses": "1-8",
+    "starts_here": true,
+    "note": "A centred heading and TWO-COLUMN gāthā rows read across. Starts and ends on this sheet."
+   },
+   {
+    "page": 273,
+    "file": "IMG_0541.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "tirokuddakanda-pacchimaphak",
+    "verses": "1-10",
+    "starts_here": true,
+    "note": "A centred heading and TWO-COLUMN gāthā rows read across. Starts and ends on this sheet."
+   },
+   {
+    "page": 273,
+    "file": "IMG_0541.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bhojanadanumothana-gatha",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "A centred heading and TWO-COLUMN gāthā rows read across. Starts and ends on this sheet."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "akkappasada-suttagatha",
+   "title_thai": "อัคคัปปะสาทะสุตตะคาถา",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Verses of the Aggappasāda Sutta",
+   "page_start": 273,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "8, one per printed row.",
+    "ordering": "No Thai translation is printed anywhere on this sheet.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see page 306.",
+    "pages": "IMG_0541.PNG, page 273, read off the sheet. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อัคคะโต เว ปะสันนานัง อัคคัง ธัมมัง วิชานะตัง",
+     "pali_roman": "Aggato ve pasannānaṃ aggaṃ dhammaṃ vijānataṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "For those confident in the highest, knowing the highest Dhamma,",
+     "page": 273,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "อัคเค พุทเธ ปะสันนานัง ทักขิเณยเย อะนุตตะเร",
+     "pali_roman": "Agge buddhe pasannānaṃ dakkhiṇeyye anuttare",
+     "thai": "",
+     "paiboon": "",
+     "english": "confident in the highest, the Buddha, unsurpassed and worthy of offerings;"
+    },
+    {
+     "number": 3,
+     "pali": "อัคเค ธัมเม ปะสันนานัง วิราคูปะสะเม สุเข",
+     "pali_roman": "Agge dhamme pasannānaṃ virāgūpasame sukhe",
+     "thai": "",
+     "paiboon": "",
+     "english": "confident in the highest Dhamma, the bliss of dispassion and peace;"
+    },
+    {
+     "number": 4,
+     "pali": "อัคเค สังเฆ ปะสันนานัง ปุญญักเขตเต อะนุตตะเร",
+     "pali_roman": "Agge saṅghe pasannānaṃ puññakkhette anuttare",
+     "thai": "",
+     "paiboon": "",
+     "english": "confident in the highest Saṅgha, the unsurpassed field of merit —"
+    },
+    {
+     "number": 5,
+     "pali": "อัคคัส์มิง ทานัง ทะทะตัง อัคคัง ปุญญัง ปะวัฑฒะติ",
+     "pali_roman": "Aggasmiṃ dānaṃ dadataṃ aggaṃ puññaṃ pavaḍḍhati",
+     "thai": "",
+     "paiboon": "",
+     "english": "for those giving a gift to the highest, the highest merit grows:"
+    },
+    {
+     "number": 6,
+     "pali": "อัคคัง อายุ จะ วัณโณ จะ ยะโส กิตติ สุขัง พะลัง",
+     "pali_roman": "Aggaṃ āyu ca vaṇṇo ca yaso kitti sukhaṃ balaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "the highest life span and beauty, fame, repute, happiness and strength."
+    },
+    {
+     "number": 7,
+     "pali": "อัคคัสสะ ทาตา เมธาวี อัคคะธัมมะสะมาหิโต",
+     "pali_roman": "Aggassa dātā medhāvī aggadhammasamāhito",
+     "thai": "",
+     "paiboon": "",
+     "english": "The wise giver to the highest, composed in the highest Dhamma,"
+    },
+    {
+     "number": 8,
+     "pali": "เทวะภูโต มะนุสโส วา อัคคัปปัตโต ปะโมทะตีติ.",
+     "pali_roman": "Devabhūto manusso vā aggappatto pamodatīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "whether become a deva or a human, rejoices, having attained the highest."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0541.PNG",
+     "issue": "THE FIRST FOUR ROWS ARE ONE SENTENCE, held open by a run of genitive plurals — ปะสันนานัง four times — before the main clause arrives at row 5. Each row is still its own verse, as the two-column setting prints them, but a reader meeting row 1 alone is meeting half a thought."
+    }
+   ]
+  },
+  {
+   "id": "tirokuddakanda-pacchimaphak",
+   "title_thai": "ติโรกุฑฑะกัณฑะปัจฉิมภาค",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Latter Part of the Tirokuḍḍa Kaṇḍa",
+   "page_start": 273,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "10, one per printed row.",
+    "ordering": "No Thai translation is printed anywhere on this sheet.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see page 306.",
+    "pages": "IMG_0541.PNG, page 273, read off the sheet. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อะทาสิ เม อะกาสิ เม ญาติมิตตา สะขา จะ เม",
+     "pali_roman": "Adāsi me akāsi me ñātimittā sakhā ca me",
+     "thai": "",
+     "paiboon": "",
+     "english": "'He gave to me, he acted for me; he was my kinsman, friend and companion' —",
+     "page": 273,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "เปตานัง ทักขิณัง ทัชชา ปุพเพ กะตะมะนุสสะรัง",
+     "pali_roman": "Petānaṃ dakkhiṇaṃ dajjā pubbe katamanussaraṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "recalling what was done before, one should give a gift for the departed."
+    },
+    {
+     "number": 3,
+     "pali": "นะ หิ รุณณัง วา โสโก วา ยา วัญญา ปะริเทวะนา",
+     "pali_roman": "Na hi ruṇṇaṃ vā soko vā yā vaññā paridevanā",
+     "thai": "",
+     "paiboon": "",
+     "english": "For weeping, or sorrow, or any other lamentation,"
+    },
+    {
+     "number": 4,
+     "pali": "นะ ตัง เปตานะมัตถายะ เอวัง ติฏฐันติ ญาตะโย",
+     "pali_roman": "Na taṃ petānamatthāya evaṃ tiṭṭhanti ñātayo",
+     "thai": "",
+     "paiboon": "",
+     "english": "is of no use to the departed, though the relatives go on so."
+    },
+    {
+     "number": 5,
+     "pali": "อะยัญจะ โข ทักขิณา ทินนา สังฆัม์หิ สุปะติฏฐิตา",
+     "pali_roman": "Ayañca kho dakkhiṇā dinnā saṅghamhi supatiṭṭhitā",
+     "thai": "",
+     "paiboon": "",
+     "english": "But this gift, given and well established in the Saṅgha,"
+    },
+    {
+     "number": 6,
+     "pali": "ทีฆะรัตตัง หิตายัสสะ ฐานะโส อุปะกัปปะติ",
+     "pali_roman": "Dīgharattaṃ hitāyassa ṭhānaso upakappati",
+     "thai": "",
+     "paiboon": "",
+     "english": "serves for their long-lasting welfare, and at once."
+    },
+    {
+     "number": 7,
+     "pali": "โส ญาติธัมโม จะ อะยัง นิทัสสิโต",
+     "pali_roman": "So ñātidhammo ca ayaṃ nidassito",
+     "thai": "",
+     "paiboon": "",
+     "english": "This duty to kin has now been shown,"
+    },
+    {
+     "number": 8,
+     "pali": "เปตานะ ปูชา จะ กะตา อุฬารา",
+     "pali_roman": "Petāna pūjā ca katā uḷārā",
+     "thai": "",
+     "paiboon": "",
+     "english": "and lofty honour has been done to the departed;"
+    },
+    {
+     "number": 9,
+     "pali": "พะลัญจะ ภิกขูนะมะนุปปะทินนัง",
+     "pali_roman": "Balañca bhikkhūnamanuppadinnaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "strength has been given to the bhikkhus too,"
+    },
+    {
+     "number": 10,
+     "pali": "ตุมเหหิ ปุญญัง ปะสุตัง อะนัปปะกันติ.",
+     "pali_roman": "Tumhehi puññaṃ pasutaṃ anappakanti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and no small merit has been gathered by you."
+    }
+   ],
+   "vocabulary": [],
+   "checks": [
+    {
+     "verse": 7,
+     "file": "IMG_0541.PNG",
+     "issue": "⚠ THE LAYOUT CHANGES INSIDE THIS CHANT. Verses 1-6 are set in TWO COLUMNS read across; verses 7-10 are set as CENTRED SINGLE-COLUMN lines, because they are a different metre — eleven syllables rather than eight. The change is the book's and is visible on the sheet; both halves are entered one verse per printed line, which is what each half prints."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0541.PNG",
+     "issue": "VERSES 5-6 ARE INDENTED further than 1-4, marking the turn from what does NOT help the departed to what does — 'but this gift, given and well established in the Saṅgha'. The indent is the book's own paragraphing."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0541.PNG",
+     "issue": "⚠ THE TITLE SAYS ปัจฉิมภาค, THE LATTER PART. This is the closing section of the Tirokuḍḍa Kaṇḍa only; the book cites its opening elsewhere — page 274's paṃsukūla instruction names 'ติโรกุฑฑะกัณฑะคาถา ขึ้น อะทาสิ เม อะกาสิ เม', which is where this text begins. Entered under its own id as the book titles it, not merged with any fuller printing."
+    }
+   ]
+  },
+  {
+   "id": "bhojanadanumothana-gatha",
+   "title_thai": "โภชะนะทานุโมทะนาคาถา",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Verses of Rejoicing in the Gift of Food",
+   "page_start": 273,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "4, one per printed row.",
+    "ordering": "No Thai translation is printed anywhere on this sheet.",
+    "conventions": "pali_roman is IAST produced MECHANICALLY by translit_pali. paiboon is left empty — see page 306.",
+    "pages": "IMG_0541.PNG, page 273, read off the sheet. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อายุโท พะละโท ธีโร วัณณะโท ปะฏิภาณะโท",
+     "pali_roman": "Āyudo balado dhīro vaṇṇado paṭibhāṇado",
+     "thai": "",
+     "paiboon": "",
+     "english": "The steadfast giver of life, of strength, of beauty, of ready wit,",
+     "page": 273,
+     "para_start": true
+    },
+    {
+     "number": 2,
+     "pali": "สุขัสสะ ทาตา เมธาวี สุขัง โส อะธิคัจฉะติ",
+     "pali_roman": "Sukhassa dātā medhāvī sukhaṃ so adhigacchati",
+     "thai": "",
+     "paiboon": "",
+     "english": "the wise giver of happiness, himself attains happiness."
+    },
+    {
+     "number": 3,
+     "pali": "อายุง ทัต์วา พะลัง วัณณัง สุขัญจะ ปะฏิภาณะโท",
+     "pali_roman": "Āyuṃ datvā balaṃ vaṇṇaṃ sukhañca paṭibhāṇado",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having given life, strength, beauty, happiness and ready wit,"
+    },
+    {
+     "number": 4,
+     "pali": "ทีฆายุ ยะสะวา โหติ ยัตถะ ยัตถูปะปัชชะตีติ.",
+     "pali_roman": "Dīghāyu yasavā hoti yattha yatthūpapajjatīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "he is long-lived and renowned wherever he is reborn."
+    }
+   ],
+   "vocabulary": [],
+   "checks": []
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "akkappasada-suttagatha",
+   "tirokuddakanda-pacchimaphak",
+   "bhojanadanumothana-gatha"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 272,
+  "resume_from_file": "IMG_0540.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch, and no Thai is printed on the sheet to romanise.",
+  "pali_untouched": "Confirmed and mechanically true: every pali_roman was produced by translit_pali from the pali beside it rather than typed. No line on this sheet carries a Thai rubric, so nothing needed stripping and no override was written.",
+  "page_scan": "agrees. Three rows for one page, one per chant, in the order they appear down the sheet. Each chant starts and ends here.",
+  "notes": "THREE SHORT GĀTHĀ CHANTS, and the cleanest sheet in a long while — no rubrics, no abbreviations, no Thai at all, so translit_pali produced every romanisation unaided. Two findings. (1) ⚠ THE LAYOUT CHANGES INSIDE ติโรกุฑฑะกัณฑะปัจฉิมภาค: two columns for verses 1-6, then centred single-column lines for 7-10, because the metre changes from eight syllables to eleven. (2) ⚠ ITS TITLE SAYS ปัจฉิมภาค, THE LATTER PART — the book prints only the closing section here and names the opening ('อะทาสิ เม อะกาสิ เม') in page 274's instruction. Entered as the book titles it.",
+  "diacritic_exceptions": []
+ }
+}
