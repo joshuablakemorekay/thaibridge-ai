@@ -41947,7 +41947,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
         # ‼ CHECK [IMG_0372.PNG]: A SIXTEENTH TITLE THE CONTENTS TEST CANNOT
         #   SEE. The page prints บทขัด มัคคะวิภังคะสุตตัง with a SPACE after
         #   บทขัด; the สารบัญ has it without one. Every บทขัด from page 82 on
@@ -42018,6 +42017,82 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'having realised that path which leads to the destruction of suffering.',
+            },
+            # ‼ CHECK [IMG_0373.PNG]: TWO COLUMNS, continuing page 107's
+            #   setting. Read ACROSS. FIRST PAIRING FOR CHECKING: left สะยัง
+            #   เตเนวะ คันต์วานะ + right ปัตโต โพธิมะนุตตะรัง.
+            {
+                'number': 5,
+                'page': 108,
+                'pali': 'สะยัง เตเนวะ คันต์วานะ ปัตโต โพธิมะนุตตะรัง',
+                'pali_roman': 'Sayaṃ teneva gantvāna patto bodhimanuttaraṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having gone by that very path himself, he reached the unsurpassed awakening;',
+            },
+            {
+                'number': 6,
+                'page': 108,
+                'pali': 'สัมมานุปะฏิปัต์ยัตถัง สัตตานัง โพธิกามินัง.',
+                'pali_roman': 'Sammānupaṭipattyatthaṃ sattānaṃ bodhikāminaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and for the right practice of beings who long for awakening,',
+            },
+            # ‼ CHECK [IMG_0373.PNG]: ‼ นานาวิเธหุปาเยภิ ENDS IN ภิ, NOT หิ,
+            #   AND THAT IS CORRECT PALI. Read at 7x: the final consonant is
+            #   unmistakably ภ. It looks like a misprint for the expected
+            #   -ehi, but Pali has TWO instrumental plural endings, -ehi and
+            #   -ebhi, and both are canonical. Romanised nānāvidhehupāyebhi.
+            #   Recorded so nobody later 'corrects' it to หิ.
+            {
+                'number': 7,
+                'page': 108,
+                'pali': 'นานาวิเธหุปาเยภิ ปะเวเทสิ หิเตสะโก',
+                'pali_roman': 'Nānāvidhehupāyebhi pavedesi hitesako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the seeker of their welfare made it known by many kinds of means.',
+            },
+            {
+                'number': 8,
+                'page': 108,
+                'pali': 'ตัมมัคคะทีปะกัง สุตตัง ยัง สัมพุทเธนะ ภาสิตัง.',
+                'pali_roman': 'Tammaggadīpakaṃ suttaṃ yaṃ sambuddhena bhāsitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That sutta which illuminates the path, spoken by the Fully Awakened One —',
+            },
+            {
+                'number': 9,
+                'page': 108,
+                'pali': 'วัตถุตตะเย ปะสันนานัง สาธูนัง ธัมมะกามินัง',
+                'pali_roman': 'Vatthuttaye pasannānaṃ sādhūnaṃ dhammakāminaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for good people with faith in the Triple Gem, who love the Dhamma,',
+            },
+            {
+                'number': 10,
+                'page': 108,
+                'pali': 'ภิยโย ปะสาทุปปาเทนะ ทิฏโฐชุกะระเณนะ จะ.',
+                'pali_roman': 'Bhiyyo pasāduppādena diṭṭhojukaraṇena ca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to arouse yet more faith and to straighten their view,',
+            },
+            # ‼ CHECK [IMG_0373.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Eleven verses across pages 107 and 108. NO
+            #   COLOPHON is printed — the numbered title 18. follows straight
+            #   after a gap, as บทขัด endings usually do.
+            {
+                'number': 11,
+                'page': 108,
+                'pali': 'สุวัตถิสาธะนัตถังปิ ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Suvatthisādhanatthaṃpi taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and to bring about well-being — let us recite that discourse.',
             },
         ],
     },
@@ -42262,6 +42337,106 @@ CHANTS = [
                 'thai': '๔. สวด ชะยะปะริตตะคาถา ขึ้น มะหาการุณิโก นาโถ หิตายะ สัพพะปาณินัง ฯเปฯ ปะทักขิณานิ กัต์วานะ ละภันตัตเถ ปะทักขิเณ สวด ภะวะตุ สัพพะมังคะลัง ฯเปฯ สะทา โสตถี ภะวันตุ เต. ต่อรวดเดียว ไม่หยุดขึ้นใหม่ เมื่อสวดจบแล้วจึงเตรียมการฉันภัตตาหารต่อไป',
                 'paiboon': '',
                 'english': 'Chant the Jayaparitta verses, beginning mahākāruṇiko nātho hitāya sabbapāṇinaṃ … ending padakkhiṇāni katvāna labhantatthe padakkhiṇe; then chant bhavatu sabbamaṅgalaṃ … sadā sotthī bhavantu te, straight through without stopping and starting again. When the chanting is finished, preparations for the meal follow.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0373.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'maggavibhanga-suttam',
+        'title_thai': 'มัคคะวิภังคะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Maggavibhaṅgasuttaṃ',
+        'title_english': 'The Discourse on the Analysis of the Path',
+        'book_number': '18',
+        'page_start': 108,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0373.PNG]: THE UNIT IS THE PARAGRAPH HERE, NOT THE
+            #   FULL STOP, AND THE PAGE DECIDES THAT. Five openers are
+            #   indented — measured at x 460, 460, 462, 463 and 465 against a
+            #   flush edge of 324-332 — so each paragraph is one verse and
+            #   para_start is set on all five. Pages 106 and 107 broke at full
+            #   stops because their prose had NO internal indents and the
+            #   sentence was the only unit on offer. Same chant style,
+            #   different sheet, different answer.
+            # ‼ CHECK [IMG_0373.PNG]: SINGLE column prose from the heading
+            #   down. ตัต์ระ carries the ์ cluster mark, as page 103's did,
+            #   romanised tatra with the mark read as a cluster.
+            # ‼ CHECK [IMG_0373.PNG]: Two line-break hyphens rejoined: มะนะสิ-
+            #   / กะโรถะ in paragraph 1 and ทุกขะ- / สะมุทะเย in paragraph 2.
+            # ‼ CHECK [IMG_0373.PNG]: THE PALI LISTS THE EIGHT FACTORS WITH
+            #   COMMAS IN THREE PLACES ONLY — after สัมมาสังกัปโป, after
+            #   สัมมาอาชีโว and nowhere else — grouping them 2/3/3. Reproduced
+            #   as printed rather than punctuated evenly.
+            {
+                'number': 1,
+                'page': 108,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. อะริยัง โว ภิกขะเว อัฏฐังคิกัง มัคคัง เทสิสสามิ วิภะชิสสามิ, ตัง สุณาถะ สาธุกัง มะนะสิกะโรถะ, ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. กะตะโม จะ ภิกขะเว อะริโย อัฏฐังคิโก มัคโค เสยยะถีทัง สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Ariyaṃ vo bhikkhave aṭṭhaṅgikaṃ maggaṃ desissāmi vibhajissāmi, taṃ suṇātha sādhukaṃ manasikarotha, bhāsissāmīti. Evambhanteti kho te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Katamo ca bhikkhave ariyo aṭṭhaṅgiko maggo seyyathīdaṃ sammādiṭṭhi sammāsaṅkappo, sammāvācā sammākammanto sammā-ājīvo, sammāvāyāmo sammāsati sammāsamādhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the monks: 'Monks.' 'Venerable sir,' those monks replied. The Blessed One said this: 'Monks, I shall teach you the noble eightfold path and analyse it. Listen to it, attend closely, I shall speak.' 'Yes, venerable sir,' those monks replied. The Blessed One said this: 'And what, monks, is the noble eightfold path? It is this: right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, right concentration.'",
+            },
+            {
+                'number': 2,
+                'page': 108,
+                'para_start': True,
+                'pali': 'กะตะมา จะ ภิกขะเว สัมมาทิฏฐิ, ยัง โข ภิกขะเว ทุกเข ญาณัง, ทุกขะสะมุทะเย ญาณัง, ทุกขะนิโรเธ ญาณัง, ทุกขะนิโรธะคามินิยา ปะฏิปะทายะ ญาณัง. อะยัง วุจจะติ ภิกขะเว สัมมาทิฏฐิ.',
+                'pali_roman': 'Katamā ca bhikkhave sammādiṭṭhi, yaṃ kho bhikkhave dukkhe ñāṇaṃ, dukkhasamudaye ñāṇaṃ, dukkhanirodhe ñāṇaṃ, dukkhanirodhagāminiyā paṭipadāya ñāṇaṃ. Ayaṃ vuccati bhikkhave sammādiṭṭhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right view? Knowledge of suffering, knowledge of the origin of suffering, knowledge of the cessation of suffering, knowledge of the way leading to the cessation of suffering. This, monks, is called right view.',
+            },
+            {
+                'number': 3,
+                'page': 108,
+                'para_start': True,
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมาสังกัปโป, โย โข ภิกขะเว เนกขัมมะสังกัปโป, อัพ์ยาปาทะสังกัปโป อะวิหิงสาสังกัปโป. อะยัง วุจจะติ ภิกขะเว สัมมาสังกัปโป.',
+                'pali_roman': 'Katamo ca bhikkhave sammāsaṅkappo, yo kho bhikkhave nekkhammasaṅkappo, abyāpādasaṅkappo avihiṃsāsaṅkappo. Ayaṃ vuccati bhikkhave sammāsaṅkappo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right intention? The intention of renunciation, the intention of non-ill-will, the intention of harmlessness. This, monks, is called right intention.',
+            },
+            {
+                'number': 4,
+                'page': 108,
+                'para_start': True,
+                'pali': 'กะตะมา จะ ภิกขะเว สัมมาวาจา, ยา โข ภิกขะเว มุสาวาทา เวระมะณี, ปิสุณายะ วาจายะ เวระมะณี, ผะรุสายะ วาจายะ เวระมะณี, สัมผัปปะลาปา เวระมะณี, อะยัง วุจจะติ ภิกขะเว สัมมาวาจา.',
+                'pali_roman': 'Katamā ca bhikkhave sammāvācā, yā kho bhikkhave musāvādā veramaṇī, pisuṇāya vācāya veramaṇī, pharusāya vācāya veramaṇī, samphappalāpā veramaṇī, ayaṃ vuccati bhikkhave sammāvācā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right speech? Abstaining from false speech, abstaining from malicious speech, abstaining from harsh speech, abstaining from idle chatter. This, monks, is called right speech.',
+            },
+            # ‼ CHECK [IMG_0373.PNG]: CUT MID-SENTENCE. The page ends after
+            #   ปาณาติปาตา in the definition of right action and runs on to
+            #   page 109. Marked with […] and continues is set. The break
+            #   falls at a WORD boundary, so nothing is stranded — page 109
+            #   should open with เวระมะณี.
+            {
+                'number': 5,
+                'page': 108,
+                'para_start': True,
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมากัมมันโต, ยา โข ภิกขะเว ปาณาติปาตา […]',
+                'pali_roman': 'Katamo ca bhikkhave sammākammanto, yā kho bhikkhave pāṇātipātā […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right action? Abstaining from the destruction of life […]',
             },
         ],
     },

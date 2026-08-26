@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-107 went in.
+108 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–107 are in and unbroken**, plus 217–221. **143 chants and 2,156
+- **Pages 1–108 are in and unbroken**, plus 217–221. **144 chants and 2,168
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 107 were applied 2026-08-24/26; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 108 were applied 2026-08-24/26; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,16 +46,41 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 108, `IMG_0373` — ⚠️ A CHANT IS OPEN
+## Next: page 109, `IMG_0374` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–107, so page 108 *should*
-be `IMG_0373`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–108, so page 109 *should*
+be `IMG_0374`. **Five more changes are still expected before page 207.**
 
-**⚠️ `bot-khat-maggavibhanga-suttam` IS OPEN and carries a `‼ CONTINUES` marker.**
-Four two-column rows are in from page 107. **Resume at verse 5.** Page 108 was
-peeked at and carries more rows in the same two-column setting, closing
-`ตัง สุตตันตัง ภะณามะ เส.` — after which `18.` should follow. Verse 4 ends on a
-full stop and was NOT cut mid-line, so there is no `[…]` to complete: just append.
+**⚠️ `maggavibhanga-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Five
+paragraphs are in — the nidāna with the list of eight, then right view, right
+intention and right speech defined. **Resume at verse 6.** Paragraph 5 breaks
+after `ปาณาติปาตา`, at a WORD boundary, so **page 109 should open with
+`เวระมะณี`**. Five factors remain: action, livelihood, effort, mindfulness,
+concentration — then the closing and a colophon.
+
+## 📐 The prose unit is whatever the SHEET offers — check the indents first
+
+Pages 106–108 are three answers to the same question and all three are right:
+
+| page | what the sheet does | unit used |
+|---|---|---|
+| 106 | one paragraph, only line 1 indented | the **full stop** |
+| 107 | two paragraphs, both openers indented | the **full stop** inside each |
+| 108 | **five** paragraphs, all five openers indented | the **paragraph** |
+
+So: **measure the indents before choosing.** Where the book paragraphs its prose,
+the paragraph is the unit; where it does not, the sentence is the only unit on
+offer. Do not carry a decision across from the previous page — the same chant
+style is set differently on different sheets.
+
+## ✅ `นานาวิเธหุปาเยภิ` is NOT a misprint
+
+Page 108's `บทขัด` verse 7 ends in **ภิ** where `-ehi` is expected. Read at 7×;
+the letter is unmistakably ภ. **Pali has two instrumental plural endings, `-ehi`
+and `-ebhi`, and both are canonical** — so `upāyebhi` is correct and must not be
+"corrected" to `หิ`. Recorded because it looks exactly like the kind of slip a
+later pass would tidy away.
+
 
 ## ⚠️ อะภิณหะปัจจะเวกขะณะ — FOUR spellings of one title across two sheets
 
