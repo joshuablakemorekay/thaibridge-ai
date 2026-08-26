@@ -1,0 +1,357 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 3,
+  "files_read": 3,
+  "received": 1,
+  "manifest": [
+   "rabiap-suat-mon-noppakhro"
+  ],
+  "pages": [
+   {
+    "page": 268,
+    "file": "IMG_0536.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-noppakhro",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "A NUMBERED centred heading — 9. — then two Thai instruction paragraphs and the first numbered list."
+   },
+   {
+    "page": 269,
+    "file": "IMG_0537.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-noppakhro",
+    "verses": "7-15",
+    "starts_here": false,
+    "note": "The chant continuing; this sheet carries no heading of its own, only a bold sub-heading inside the chant."
+   },
+   {
+    "page": 270,
+    "file": "IMG_0538.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-noppakhro",
+    "verses": "16-21",
+    "starts_here": false,
+    "note": "The chant continuing; this sheet carries no heading of its own, only a bold sub-heading inside the chant.",
+    "service_closing": "จบพิธีสวดนพเคราะห์"
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "rabiap-suat-mon-noppakhro",
+   "title_thai": "ระเบียบสวดมนต์นพเคราะห์",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Procedure for the Navagraha Chanting",
+   "book_number": 9,
+   "book_number_printed": "9",
+   "page_start": 268,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent as a field. The chant's own second paragraph says the astrologer or learned layman requests the parittas, so the request is described rather than printed as a line.",
+    "units": "21 Thai instruction paragraphs across three sheets, including two bold sub-headings entered as verses. THREE numbered lists run inside one entry — 1-5, then 1-9, then 1-3 — so printed_number restarts twice.",
+    "ordering": "There is no Pali as chanted TEXT. Every Pali phrase is quoted inside an instruction, naming a chant and giving its first and last words with ฯเปฯ between, so all verses are Thai — the same decision as pages 270-272 and 274.",
+    "conventions": "`pali` and `pali_roman` are empty throughout. paiboon is left empty, as on page 306.",
+    "pages": "IMG_0536 to IMG_0538, pages 268-270. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "การสวดมนต์นพเคราะห์นั้น นิยมใช้พระสวด 9 รูป และมีนิยมให้สวดพระปริตรตามลำดับนพเคราะห์ ซึ่งมีระเบียบสวดดังนี้",
+     "paiboon": "",
+     "english": "For the Navagraha chanting it is usual to have nine monks chant, and usual for the parittas to be chanted in the order of the nine planets. The procedure is as follows.",
+     "para_start": true,
+     "para_layout": "prose",
+     "page": 268
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อโหรหรือบัณฑิตอาราธนาพระปริตรแล้ว พระเถระผู้เป็นประธานนำสวดบทต้นนพเคราะห์ต่อไปนี้",
+     "paiboon": "",
+     "english": "When the astrologer or the learned layman has requested the parittas, the presiding elder leads the opening passages of the Navagraha as follows:",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะมะการะปาฐะ คือ นะโม 3 จบ",
+     "paiboon": "",
+     "english": "The homage passage, that is, the namo three times.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 1
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สะระณะคะมะนะปาฐะ คือ พุทธัง สะระณัง คัจฉามิ ฯเปฯ ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+     "paiboon": "",
+     "english": "The going-for-refuge passage, that is buddhaṃ saraṇaṃ gacchāmi … tatiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 2
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะมะการะสิทธิคาถา คือ โย จักขุมา โมหะมะลาปะกัฏโฐ ฯเปฯ",
+     "paiboon": "",
+     "english": "The Namakārasiddhi verses, that is yo cakkhumā mohamalāpakaṭṭho …",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 3
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะโมการะอัฏฐะกะคาถา คือ นะโม อะระหะโต สัมมาสัมพุทธัสสะ ฯเปฯ",
+     "paiboon": "",
+     "english": "The Namokāra-aṭṭhaka verses, that is namo arahato sammāsambuddhassa …",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 4
+    },
+    {
+     "number": 7,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "มังคะละสุตตะ ขึ้น อะเสวะนา จะ พาลานัง ฯเปฯ ตันเตสัง มังคะละมุตตะมันติ.",
+     "paiboon": "",
+     "english": "The Maṅgala Sutta, beginning asevanā ca bālānaṃ … ending tantesaṃ maṅgalamuttamanti.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 5,
+     "page": 269
+    },
+    {
+     "number": 8,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวดนพเคราะห์",
+     "paiboon": "",
+     "english": "The Navagraha Chanting",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อสวดมาถึง มังคะละสุตตัง แล้วหยุดให้โหรสวดบูชาพระอาทิตย์ก่อน จบแล้วพระภิกษุรูปหนึ่งตั้งพัดสวด บทขัดโมระปะริตตัง ขึ้น ปูเรนตัมโพธิสัมภาเร ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด โมระปะริตตัง ขึ้น อุเทตะยัญจักขุมา เอกะราชา ฯเปฯ โมโร วาสะมะกัปปะยีติ.",
+     "paiboon": "",
+     "english": "When the chanting reaches the Maṅgala Sutta, stop and let the astrologer chant the offering to the Sun first. When that is done, one monk raises his fan and chants the introduction to the Mora Paritta … then the Mora Paritta itself.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 1
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระจันทร์แล้วสวด บทขัด อะภะยะปะริตตัง ขึ้น ปุญญะลาภัง มะหาเตชัง ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด อะภะยะปะริตตัง ขึ้น ยันทุนนิมิตตัง อะวะมังคะลัญจะ ฯเปฯ วินาสะเมนตุ.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to the Moon; then the introduction to the Abhaya Paritta, and the Abhaya Paritta itself.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 2
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระอังคารแล้วสวด บทขัด กะระณียะเมตตะสุตตัง ขึ้น ยัสสานุภาวะโต ยักขา ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด กะระณียะเมตตะสุตตัง ขึ้น กะระณียะมัตถะกุสะเลนะ ฯเปฯ คัพภะเสยยัง ปุนะเรตีติ.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to Mars; then the introduction to the Karaṇīyametta Sutta, and the sutta itself.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 3
+    },
+    {
+     "number": 12,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระพุธแล้วสวด บทขัด ขันธะปะริตตัง ขึ้น สัพพาสีวิสะชาตีนัง ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด ขันธะปะริตตัง ขึ้น วิรูปักเขหิ เม เมตตัง ฯเปฯ นะโม สัตตันนัง สัมมาสัมพุทธานัง.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to Mercury; then the introduction to the Khandha Paritta, and the paritta itself.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 4
+    },
+    {
+     "number": 13,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระเสาร์แล้วสวด บทขัด อังคุลิมาละปะริตตัง ขึ้น ปะริตตัง ยัมภะณันตัสสะ ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด อังคุลิมาละปะริตตัง และ โพชฌังคะปะริตตัง ขึ้น ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต ฯเปฯ โสตถิ เต โหตุ สัพพะทา.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to Saturn; then the introduction to the Aṅgulimāla Paritta, and the Aṅgulimāla and Bojjhaṅga parittas.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 5
+    },
+    {
+     "number": 14,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระพฤหัสบดีแล้วสวด บทขัด ระตะนะสุตตัง ขึ้น ปะณิธานะโต ปัฏฐายะ ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด ระตะนะสุตตัง ขึ้น ยานีธะ ภูตานิ สะมาคะตานิ ฯเปฯ สังฆัง นะมัสสามะ สุวัตถิ โหตุ.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to Jupiter; then the introduction to the Ratana Sutta, and the sutta itself.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 6
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระราหู (วันพุธกลางคืน) แล้วสวด บทขัด อาฏานาฏิยะปะริตัง ขึ้น อัปปะสันเนหิ นาถัสสะ ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด อาฏานาฏิยะสุตตัง ขึ้น วิปัสสิสสะ นะ มัตถุ ฯเปฯ อายุ วัณโณ สุขัง พะลัง.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to Rāhu (Wednesday night); then the introduction to the Āṭānāṭiya Paritta, and the Āṭānāṭiya Sutta.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 7
+    },
+    {
+     "number": 16,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระศุกร์แล้วสวด บทขัด ธะชัคคะสุตตัง ขึ้น ยัสสานุสสะระเณนาปิ ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด ธะชัคคะสุตตัง ขึ้น เอวัมเม สุตัง ฯเปฯ โลมะหังโส นะ เหสสะตีติ.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to Venus; then the introduction to the Dhajagga Sutta, and the sutta itself.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 8,
+     "page": 270
+    },
+    {
+     "number": 17,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรสวดบูชาพระเกตุแล้วสวด บทขัด ชะยะปะริตตัง ขึ้น ชะยัง เทวะมะนุสสานัง ฯเปฯ ปะริตตันตัมภะณามะ เห. สวด ชะยะปะริตตัง ขึ้น มะหาการุณิโก นาโถ ฯเปฯ สะหะ สัพเพหิ ญาติภิ.",
+     "paiboon": "",
+     "english": "The astrologer chants the offering to Ketu; then the introduction to the Jaya Paritta, and the paritta itself.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 9
+    },
+    {
+     "number": 18,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวดท้ายนพเคราะห์",
+     "paiboon": "",
+     "english": "The Closing of the Navagraha Chanting",
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 19,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "โหรกล่าวสรุปพระเคราะห์ให้พรเจ้าภาพแล้ว พระสวดมงคลจักรวาฬใหญ่ ขึ้น สิริธิติมะติเตโชชะยะสิทธิมะหิทธิมะหาคุณาปะริมิตะปุญญาธิการัสสะ ฯเปฯ อะรักขะกา เทวะตา สะทา ตุมเห อะนุรักขันตุ",
+     "paiboon": "",
+     "english": "The astrologer sums up the planets and gives the blessing to the host; then the monks chant the Greater Maṅgala Cakkavāḷa, beginning siridhitimatitejojayasiddhimahiddhimahāguṇāparimitapuññādhikārassa … ending arakkhakā devatā sadā tumhe anurakkhantu.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 1
+    },
+    {
+     "number": 20,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวด ภะวะตุ สัพพะมังคะลัง ฯเปฯ สะทา โสตถี ภะวันตุ เต.",
+     "paiboon": "",
+     "english": "Chant bhavatu sabbamaṅgalaṃ … sadā sotthī bhavantu te.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 2
+    },
+    {
+     "number": 21,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวด นักขัตตะยักขะภูตานัง ฯเปฯ หันต์วา เตสัง อุปัททะเว.",
+     "paiboon": "",
+     "english": "Chant nakkhattayakkhabhūtānaṃ … hantvā tesaṃ upaddave.",
+     "para_start": true,
+     "para_layout": "prose",
+     "printed_number": 3
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "นพเคราะห์",
+     "pali_roman": "noppakhro / navagraha",
+     "meaning": "the nine planets of Indian astrology. Each is given its own offering and its own paritta, in order"
+    },
+    {
+     "pali": "บทขัด",
+     "pali_roman": "bot khat",
+     "meaning": "the introductory verses chanted before a paritta. Every one of the nine planets gets a bot khat and then the paritta itself"
+    },
+    {
+     "pali": "โหร",
+     "pali_roman": "hora",
+     "meaning": "the astrologer. He chants the offering to each planet, and the monks answer with its paritta"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0536.PNG",
+     "issue": "⚠ THREE NUMBERED LISTS INSIDE ONE ENTRY — 1-5 for the opening passages, then 1-9 for the nine planets, then 1-3 for the closing. printed_number restarts TWICE, which is the most restarts any chant in this book has, and which check_printed_numbers has allowed since pages 293-294 taught it."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0537.PNG",
+     "issue": "⚠ ปะริตัง WITH ONE ต, WHERE EVERY OTHER LINE ON THE SHEET HAS ปะริตตัง. Item 7 of the planets prints 'บทขัด อาฏานาฏิยะปะริตัง' where the eight items around it all print ปะริตตัง. Read at 5x. Kept as printed, NOT corrected."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0537.PNG",
+     "issue": "THE BOOK UNDERLINES ONE PHRASE — '(วันพุธกลางคืน)', Wednesday night, in item 7, marking when Rāhu's turn falls. The app has no underline layer, so this is recorded rather than reproduced; the words themselves are present."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0538.PNG",
+     "issue": "TWO BOLD SUB-HEADINGS ARE ENTERED AS VERSES — สวดนพเคราะห์ on 269 and สวดท้ายนพเคราะห์ on 270. Both are printed inside this chant, below its own heading, and a block can only anchor at a chant boundary. Same treatment as นิสัย 4 on page 290 and รูปที่ 1 on page 306."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0538.PNG",
+     "issue": "THE SERVICE CLOSING จบพิธีสวดนพเคราะห์ closes the whole ceremony and is carried as the page-270 row's service_closing, which is what that field is for."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "rabiap-suat-mon-noppakhro"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 266,
+  "resume_from_file": "IMG_0534.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch, and there is no Pali layer to romanise.",
+  "pali_untouched": "Trivially confirmed: every `pali` and `pali_roman` is empty. All the Pali on these three sheets is quoted inside Thai instructions rather than set as chanted text.",
+  "page_scan": "agrees. Three rows, one per sheet. The items 5, 6 and 7 at the TOP of page 268 belong to อธิบายระเบียบสวดมนต์พิเศษ, which the contents puts at ๒๖๖, and are left for that page.",
+  "notes": "THE NAVAGRAHA CHANTING, three sheets under one contents entry. Three findings. (1) ⚠ THREE NUMBERED LISTS INSIDE ONE ENTRY, printed_number restarting twice — the most restarts of any chant in this book. (2) ⚠ ปะริตัง WITH ONE ต in item 7, where the eight items around it print ปะริตตัง. Kept as printed. (3) THE BOOK UNDERLINES '(วันพุธกลางคืน)' in that same item; the app has no underline layer, so the emphasis is recorded and the words kept.",
+  "diacritic_exceptions": []
+ }
+}
