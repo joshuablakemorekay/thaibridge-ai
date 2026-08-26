@@ -40672,6 +40672,235 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0543.PNG]: ⚠ THE OFFSET IS 268 ON BOTH SHEETS, not the
+        #   267 used from page 279 onward. IMG_0543 reads 275 and IMG_0544
+        #   reads 276. The step happens across the unnumbered ภาคผนวก divider
+        #   on 277 and its unphotographed blank verso, page 278.
+        # ‼ CHECK [IMG_0543.PNG]: ⚠ THE INSTRUCTION ABOVE THIS CHANT USES
+        #   ฯเปฯ, NOT ฯลฯ. The Thai paragraph at the top of 275 — which
+        #   belongs to the chant beginning on 274 and is NOT entered here —
+        #   abbreviates Pali with ฯเปฯ, the peyyāla mark, where pages 282 and
+        #   295 abbreviate Thai with ฯลฯ. Two different abbreviation marks for
+        #   two different purposes, and worth knowing before either is read as
+        #   the other.
+        'id': 'katha-sarathaphrot',
+        'title_thai': 'คาถาศราทธพรต',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Verses of the Śrāddha Rite',
+        'page_start': 275,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0543.PNG]: THE SUBTITLE IS ENTERED AS A VERSE.
+            #   'ใช้สวดรับเทศน์ในงานพระราชพิธีเผาศพ' is printed centred
+            #   beneath the title, inside the chant, and a block could only
+            #   anchor above the title — so it is a Thai-only verse, as the
+            #   speaker labels on page 306 are.
+            {
+                'number': 1,
+                'page': 275,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ใช้สวดรับเทศน์ในงานพระราชพิธีเผาศพ',
+                'paiboon': '',
+                'english': 'Used for chanting in response to the sermon at a royal cremation ceremony.',
+            },
+            {
+                'number': 2,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'นะโม ตัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ',
+                'pali_roman': 'Namo tassa bhagavato arahato sammāsambuddhassa',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One, the Worthy One, the Fully Enlightened One.',
+            },
+            # ‼ CHECK [IMG_0543.PNG]: ⚠ A THIRD WORD FOR 'TIMES'. This sheet
+            #   prints '(ว่า 3 จบ)' where page 280 prints '(ว่า 3 หน)' and
+            #   everywhere else prints '(ว่า 3 ครั้ง)'. Three different words
+            #   — จบ, หน, ครั้ง — for the same instruction in one book. All
+            #   kept as printed.
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ว่า 3 จบ)',
+                'paiboon': '',
+                'english': '(say 3 times)',
+            },
+            {
+                'number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'ภาสิตา โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ อะยัง ปัจฉิมา วาจา หันทะทานิ ภิกขะเว อามันตะยามิ โว วะยะธัมมา สังขารา อัปปะมาเทนะ สัมปาเทถาติ.',
+                'pali_roman': 'Bhāsitā kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena ayaṃ pacchimā vācā handadāni bhikkhave āmantayāmi vo vayadhammā saṅkhārā appamādena sampādethāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "These last words were spoken by that Blessed One who knows and sees, the worthy one, fully enlightened by himself: 'Now then, bhikkhus, I address you — formations are subject to decay; strive on with diligence.'",
+            },
+            # ‼ CHECK [IMG_0543.PNG]: TWO COLUMNS READ ACROSS, and the refrain
+            #   'อะถะ นิพพินทะติ ทุกเข เอสะ มัคโค วิสุทธิยา' is printed THREE
+            #   TIMES — after impermanence, after suffering and after not-
+            #   self. That is the structure of the verse, not duplication.
+            {
+                'number': 5,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'สัพเพ สังขารา อะนิจจาติ ยะทา ปัญญายะ ปัสสะติ',
+                'pali_roman': 'Sabbe saṅkhārā aniccāti yadā paññāya passati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When one sees with wisdom that all formations are impermanent,',
+            },
+            {
+                'number': 6,
+                'pali': 'อะถะ นิพพินทะติ ทุกเข เอสะ มัคโค วิสุทธิยา',
+                'pali_roman': 'Atha nibbindati dukkhe esa maggo visuddhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then one grows weary of suffering — this is the path to purity.',
+            },
+            {
+                'number': 7,
+                'pali': 'สัพเพ สังขารา ทุกขาติ ยะทา ปัญญายะ ปัสสะติ',
+                'pali_roman': 'Sabbe saṅkhārā dukkhāti yadā paññāya passati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When one sees with wisdom that all formations are suffering,',
+            },
+            {
+                'number': 8,
+                'pali': 'อะถะ นิพพินทะติ ทุกเข เอสะ มัคโค วิสุทธิยา',
+                'pali_roman': 'Atha nibbindati dukkhe esa maggo visuddhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then one grows weary of suffering — this is the path to purity.',
+            },
+            {
+                'number': 9,
+                'pali': 'สัพเพ ธัมมา อะนัตตาติ ยะทา ปัญญายะ ปัสสะติ',
+                'pali_roman': 'Sabbe dhammā anattāti yadā paññāya passati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When one sees with wisdom that all things are not-self,',
+            },
+            {
+                'number': 10,
+                'pali': 'อะถะ นิพพินทะติ ทุกเข เอสะ มัคโค วิสุทธิยา',
+                'pali_roman': 'Atha nibbindati dukkhe esa maggo visuddhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then one grows weary of suffering — this is the path to purity.',
+            },
+            {
+                'number': 11,
+                'pali': 'วิสุทธิ สัพพักเลเสหิ โหติ ทุกเขหิ นิพพุติ',
+                'pali_roman': 'Visuddhi sabbaklesehi hoti dukkhehi nibbuti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Purity from all defilements is release from sufferings;',
+            },
+            {
+                'number': 12,
+                'pali': 'เจตะโส โหติ สา สันติ นิพพานะมีติ วุจจะติ',
+                'pali_roman': 'Cetaso hoti sā santi nibbānamīti vuccati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that peace of mind is what is called Nibbāna.',
+            },
+            {
+                'number': 13,
+                'pali': 'เย จะ โข สัมมะทักขาเต ธัมเม ธัมมานุวัตติโน',
+                'pali_roman': 'Ye ca kho sammadakkhāte dhamme dhammānuvattino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those who live in accordance with the Dhamma, well proclaimed,',
+            },
+            {
+                'number': 14,
+                'pali': 'เต ชะนา ปาระเมสสันติ มัจจุเธยยัง สุทุตตะรัง',
+                'pali_roman': 'Te janā pāramessanti maccudheyyaṃ suduttaraṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those people will cross beyond the realm of death, so hard to cross.',
+            },
+            {
+                'number': 15,
+                'pali': 'อัปปะมาโท อะมะตัง ปะทัง ปะมาโท มัจจุโน ปะทัง',
+                'pali_roman': 'Appamādo amataṃ padaṃ pamādo maccuno padaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Diligence is the path to the deathless; negligence is the path to death.',
+            },
+            {
+                'number': 16,
+                'page': 276,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'อัปปะมัตตา นะ มียันติ เย ปะมัตตา ยะถา มะตา',
+                'pali_roman': 'Appamattā na mīyanti ye pamattā yathā matā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The diligent do not die; the negligent are as if already dead.',
+            },
+            {
+                'number': 17,
+                'pali': 'อัปปะมัตโต อุโภ อัตเถ อะธิคัณหาติ ปัณฑิโต',
+                'pali_roman': 'Appamatto ubho atthe adhigaṇhāti paṇḍito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The diligent and wise one attains both kinds of good —',
+            },
+            {
+                'number': 18,
+                'pali': 'ทิฏเฐ ธัมเม จะ โย อัตโถ โย จัตโถ สัมปะรายิโก',
+                'pali_roman': 'Diṭṭhe dhamme ca yo attho yo cattho samparāyiko',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the good of this present life and the good of the life to come.',
+            },
+            {
+                'number': 19,
+                'pali': 'อัตถาภิสะมะยา ธีโร ปัณฑิโตติ ปะวุจจะติ',
+                'pali_roman': 'Atthābhisamayā dhīro paṇḍitoti pavuccati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By penetrating what is good, the steadfast one is called wise.',
+            },
+            {
+                'number': 20,
+                'pali': 'เอตตะกานัมปิ ปาฐานัง อัตถัง อัญญายะ สาธุกัง',
+                'pali_roman': 'Ettakānampi pāṭhānaṃ atthaṃ aññāya sādhukaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having rightly understood the meaning of even these few passages,',
+            },
+            {
+                'number': 21,
+                'pali': 'ปะฏิปัชเชถะ เมธาวี อะโมฆัง ชีวิตัง ยะถาติ.',
+                'pali_roman': 'Paṭipajjetha medhāvī amoghaṃ jīvitaṃ yathāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let the wise one practise, so that life may not be in vain.',
+            },
+        ],
+    },
 ]
 
 
