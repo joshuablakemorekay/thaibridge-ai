@@ -40901,6 +40901,230 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0542.PNG]: ⚠ THE TITLE ITSELF SAYS (ย่อ), ABBREVIATED,
+        #   AND THE BOOK HAS THE FULL FORM ELSEWHERE. อาฏานาฏิยะปะริตตัง
+        #   อัฏฐะมัง is already entered from page 92. This is a SEPARATE,
+        #   shorter chant with its own contents line at ๒๗๔, entered under its
+        #   own id — the same treatment as the two printings of คำอนุโมทนากฐิน
+        #   and of the Mahāsamaya Sutta.
+        'id': 'atanatiya-parittam-yo',
+        'title_thai': 'อาฏานาฏิยะปะริตตัง (ย่อ)',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Āṭānāṭiya Paritta (abbreviated)',
+        'page_start': 274,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 274,
+                'para_start': True,
+                'pali': 'สัพพะโรคะวินิมุตโต สัพพะสันตาปะวัชชิโต',
+                'pali_roman': 'Sabbarogavinimutto sabbasantāpavajjito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Freed from all disease, spared from all torment,',
+            },
+            # ‼ CHECK [IMG_0542.PNG]: ⚠ A BARE ฯ ENDS THE SECOND ROW —
+            #   'นิพพุโต จะ ตุวัง ภะวะ ฯ', the paiyannoi alone rather than the
+            #   ฯลฯ or ฯเปฯ pairs seen elsewhere. That is a third abbreviation
+            #   mark in this book. Kept exactly as printed.
+            {
+                'number': 2,
+                'pali': 'สัพพะเวระมะติกกันโต นิพพุโต จะ ตุวัง ภะวะ ฯ',
+                'pali_roman': 'Sabbaveramatikkanto nibbuto ca tuvaṃ bhava …',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having passed beyond all enmity — may you be at peace.',
+            },
+            {
+                'number': 3,
+                'pali': 'สัพพีติโย วิวัชชันตุ สัพพะโรโค วินัสสะตุ',
+                'pali_roman': 'Sabbītiyo vivajjantu sabbarogo vinassatu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May all misfortunes be avoided; may all disease perish;',
+            },
+            {
+                'number': 4,
+                'pali': 'มา เต ภะวัตวันตะราโย สุขี ทีฆายุโก ภะวะ',
+                'pali_roman': 'Mā te bhavatvantarāyo sukhī dīghāyuko bhava',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may no danger befall you; may you be happy and long-lived.',
+            },
+            {
+                'number': 5,
+                'pali': 'อะภิวาทะนะสีลิสสะ นิจจัง วุฑฒาปะจายิโน',
+                'pali_roman': 'Abhivādanasīlissa niccaṃ vuḍḍhāpacāyino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For one habitually respectful, ever honouring elders,',
+            },
+            {
+                'number': 6,
+                'pali': 'จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.',
+                'pali_roman': 'Cattāro dhammā vaḍḍhanti āyu vaṇṇo sukhaṃ balaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'four things increase: long life, beauty, happiness and strength.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0542.PNG]: THE HEADING IS NUMBERED — '12.
+        #   ระเบียบบังสุกุล' — where the contents lists it without the
+        #   numeral. The 12 is carried as book_number and book_number_printed
+        #   rather than being folded into the title, so the app's own title
+        #   matches the contents while the page's numeral is still recorded.
+        'id': 'rabiap-bangsukun',
+        'title_thai': 'ระเบียบบังสุกุล',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Procedure for the Paṃsukūla',
+        'book_number': 12,
+        'book_number_printed': '12',
+        'page_start': 274,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 274,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ธรรมเนียมบังสุกุลเพื่ออุทิศกุศลแด่ผู้ที่ล่วงลับไปแล้วนั้น ถ้าทำอย่างเต็มแบบ พระสงฆ์ต้องสวดเสียก่อน เรียกว่าสวด มาติกา มีระเบียบดังนี้',
+                'paiboon': '',
+                'english': 'As for the custom of the paṃsukūla, done to dedicate merit to one who has died: if it is done in the full form, the monks must first chant what is called the mātikā. The procedure is as follows.',
+            },
+            {
+                'number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ถ้าเป็นงานบังสุกุลโดยเฉพาะ ให้เจ้าภาพรับศีลก่อน พระสงฆ์จึงสวดมาติกา ถ้าเป็นบังสุกุลต่อเนื่องจากงานพิธีอย่างอื่น เช่น งานทำบุญศพ ๗ วัน เป็นต้น เจ้าภาพไม่ต้องรับศีลอีก เพราะรับมาก่อนแต่สวดมนต์หรือฟังเทศน์แล้ว พระสงฆ์เริ่มสวดมาติกาเลยดังนี้',
+                'paiboon': '',
+                'english': 'If it is a paṃsukūla occasion in its own right, the host first takes the precepts and then the monks chant the mātikā. If the paṃsukūla follows on from some other ceremony — a seven-day merit-making for the dead, for instance — the host need not take the precepts again, having already taken them before the chanting or the sermon, and the monks begin the mātikā straight away, thus:',
+            },
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'พระสงฆ์ทั้งหมดตั้งพัดขึ้นพร้อมกัน ผู้เป็นประธานนำสวดตามลำดับ คือ',
+                'paiboon': '',
+                'english': 'All the monks raise their fans together, and the one presiding leads the chanting in order, thus:',
+            },
+            {
+                'number': 4,
+                'printed_number': 1,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'นะมะการะปาฐะ คือ นะโม 3 จบ',
+                'paiboon': '',
+                'english': 'The homage passage, that is, the namo three times.',
+            },
+            # ‼ CHECK [IMG_0542.PNG]: ⚠ THE NUMBERED ITEMS ARE INSTRUCTIONS,
+            #   NOT CHANTED LINES, so they are entered as THAI verses even
+            #   though each quotes Pali. Items 2, 3 and 4 name a passage and
+            #   give its opening and closing words with ฯเปฯ between —
+            #   'ธัมมะสังคะณีมาติกาปาฐะ ขึ้น กุสะลา ธัมมา … ฯเปฯ … ธัมมา.'
+            #   They tell the reader WHAT to chant rather than being the
+            #   chant, so putting them in `pali` would make the app offer a
+            #   direction as a line to recite.
+            {
+                'number': 5,
+                'printed_number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ธัมมะสังคะณีมาติกาปาฐะ ขึ้น กุสะลา ธัมมา อะกุสะลา ธัมมา อัพยากะตา ธัมมา ฯเปฯ อะนิทัสสะนาปะปะฏิฆา ธัมมา.',
+                'paiboon': '',
+                'english': 'The Dhammasaṅgaṇī mātikā passage, beginning kusalā dhammā, akusalā dhammā, abyākatā dhammā … ending anidassanāppaṭighā dhammā.',
+            },
+            {
+                'number': 6,
+                'printed_number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'วิปัสสะนาภูมิปาฐะ ขึ้น ปัญจักขันธา รูปักขันโธ ฯเปฯ ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง.',
+                'paiboon': '',
+                'english': 'The Vipassanābhūmi passage, beginning pañcakkhandhā rūpakkhandho … ending dukkhanirodhagāminī paṭipadā ariyasaccaṃ.',
+            },
+            {
+                'number': 7,
+                'printed_number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'ปัฏฐานะมาติกาปาฐะ ขึ้น เหตุปัจจะโย ฯเปฯ อะวิคะตะปัจจะโย.',
+                'paiboon': '',
+                'english': 'The Paṭṭhāna mātikā passage, beginning hetupaccayo … ending avigatapaccayo.',
+            },
+            {
+                'number': 8,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'เมื่อสวดจบแล้วให้วางพัดไว้ตามเดิม และเมื่อพระสวดปัฏฐานะมาติกาปาฐะจบแล้ว เจ้าภาพถวายไทยธรรมก่อนแล้ว เตรียมจัดลาดผ้าภูษาโยงหรือด้ายสายสิญจน์ซึ่งใช้แทนไปวางไว้ด้านหน้าพระสงฆ์ตั้งแต่ต้นแถวถึงปลายแถว เจ้าภาพทอดผ้าบังสุกุลซึ่งเตรียมไว้ลงบนผ้าภูษาโยงหรือด้ายสายสิญจน์นั้น ให้ตรงกับหน้าพระสงฆ์เป็นรายรูป',
+                'paiboon': '',
+                'english': 'When the chanting is finished the fans are set down as before. When the monks have finished the Paṭṭhāna mātikā passage, the host first presents the offerings, then prepares and spreads the connecting cloth, or the sacred thread used in its place, laying it in front of the monks from the head of the row to the end. The host then lays the prepared paṃsukūla cloth on the connecting cloth or thread, in front of each monk in turn.',
+            },
+            # ‼ CHECK [IMG_0542.PNG]: ฯเปฯ APPEARS FIVE TIMES ACROSS THIS
+            #   CHANT, always abbreviating PALI. Page 275's closing paragraph
+            #   alone uses it twice. It is not the ฯลฯ of pages 282 and 295,
+            #   which abbreviates Thai.
+            # ‼ CHECK [IMG_0543.PNG]: THE BOOK RECORDS A CHANGE IN PRACTICE:
+            #   'ธรรมเนียมเก่าว่า 3 หน ธรรมเนียมปัจจุบันว่าหนเดียว' — the old
+            #   custom was three times, the present custom once. Kept as
+            #   printed; it is the book describing its own tradition rather
+            #   than prescribing.
+            {
+                'number': 9,
+                'page': 275,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'พระสงฆ์ทั้งหมดจับพัดด้วยมือซ้ายตั้งขึ้น แล้วใช้มือขวาจับที่ผ้าบังสุกุลที่เจ้าภาพทอดไว้นั้นพร้อมกัน แล้วประธานขึ้นต้นบทบังสุกุลว่า อะนิจจา วะตะ สังขารา ฯเปฯ เตสัง วูปะสะโม สุโข ธรรมเนียมเก่าว่า 3 หน ธรรมเนียมปัจจุบันว่าหนเดียว เมื่อว่าบทบังสุกุลจบแล้วพระสงฆ์สวดอนุโมทนากถา เจ้าภาพกรวดน้ำอุทิศส่วนกุศลคือ สวด ยะถา-สัพพี จบแล้ว สวด ติโรกุฑฑะกัณฑะคาถา ขึ้น อะทาสิ เม อะกาสิ เม หรือ อะยัญจะ โข ทักขิณา ทินนา ฯเปฯ ตุมเหหิ ปุญญัง ปะสุตัง อะนัปปะกันติ. ขึ้น ภะวะตุ สัพพะมังคะลัง ต่อจนจบเป็นอันเสร็จพิธีบังสุกุล',
+                'paiboon': '',
+                'english': 'All the monks take up their fans in the left hand and raise them, then together take hold with the right hand of the paṃsukūla cloth the host has laid out. The one presiding begins the paṃsukūla verse, aniccā vata saṅkhārā … tesaṃ vūpasamo sukho — the old custom is three times, the present custom once. When the verse is finished the monks chant the blessing, and the host pours the water of dedication: they chant yathā and sabbī, and when that is done chant the Tirokuḍḍakaṇḍa verses beginning adāsi me akāsi me, or ayañca kho dakkhiṇā dinnā … tumhehi puññaṃ pasutaṃ anappakanti. Then bhavatu sabbamaṅgalaṃ is taken up and chanted to the end, and the paṃsukūla ceremony is complete.',
+            },
+        ],
+    },
 ]
 
 
