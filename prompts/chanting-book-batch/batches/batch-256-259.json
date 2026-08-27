@@ -1,0 +1,500 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 4,
+  "files_read": 4,
+  "received": 2,
+  "manifest": [
+   "rabiap-suat-mon-ngan-phithi-mongkhon",
+   "rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen"
+  ],
+  "pages": [
+   {
+    "page": 256,
+    "file": "IMG_0524.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-ngan-phithi-mongkhon",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "The page opens with the TAIL of the Ratana Sutta running on from 255, then a centred section heading อธิบายระเบียบสวดมนต์ในพิธีต่างๆ with two paragraphs of introduction, then this chant's numbered heading 1."
+   },
+   {
+    "page": 257,
+    "file": "IMG_0525.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-ngan-phithi-mongkhon",
+    "verses": "6-12",
+    "starts_here": false,
+    "note": "The chant continuing; no heading of its own. Two long instruction paragraphs for the Dhammacakka, then a second numbered list restarting at 1."
+   },
+   {
+    "page": 258,
+    "file": "IMG_0526.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-ngan-phithi-mongkhon",
+    "verses": "13-24",
+    "starts_here": false,
+    "note": "The chant continuing and ENDING, then the numbered heading 2. for the next chant at the foot of the page."
+   },
+   {
+    "page": 258,
+    "file": "IMG_0526.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen",
+    "verses": "1-1",
+    "starts_here": true,
+    "note": "Only the numbered heading 2. and the single opening line, at the very foot of the page, cut mid-word."
+   },
+   {
+    "page": 259,
+    "file": "IMG_0527.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen",
+    "verses": "2-6",
+    "starts_here": false,
+    "note": "The opening line completing, then a three-item list and a closing line. The numbered heading 3. follows lower down and is recorded in batch-259-260."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "rabiap-suat-mon-ngan-phithi-mongkhon",
+   "title_thai": "ระเบียบสวดมนต์งานพิธีมงคล",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Order of Chanting at an Auspicious Ceremony",
+   "book_number": 1,
+   "book_number_printed": "1",
+   "page_start": 256,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "24 Thai instruction paragraphs, one of them the bold sub-heading ต้นตำนาน entered as a verse.",
+    "ordering": "No Pali is set as chanted TEXT; every Pali phrase is quoted inside an instruction. All verses are Thai.",
+    "conventions": "`pali` and `pali_roman` empty throughout; paiboon left empty, as on page 306.",
+    "pages": "IMG_0524 to IMG_0526, pages 256-258. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ถ้าเป็นงานทำบุญฉลองอายุ มีนิยมให้สวด ธัมมะจักกัปปะวัตตะนะสุตตะ และเจ็ดตำนานย่อต่อท้ายดังนี้",
+     "paiboon": "",
+     "english": "For a birthday merit-making ceremony it is usual to chant the Dhammacakkappavattana Sutta, with the short Seven Tamnan added at the end, as follows:",
+     "para_layout": "prose",
+     "para_start": true,
+     "page": 256
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เมื่อทายกอาราธนาพระปริตรจบแล้ว พระภิกษุรูปหนึ่งตั้งพัดขัดชุมนุมเทวดาขึ้น ผะริต์วานะ เมตตัง สะเมตตา ภะทันตา ฯเปฯ ธัมมัสสะวะนะกาโล อะยัมภะทันตา. วางพัดไว้แล้วพระเถระผู้เป็นประธานนำสวดต่อไปตามลำดับดังนี้ คือ",
+     "paiboon": "",
+     "english": "When the layman has finished requesting the parittas, one monk raises his fan and chants the introduction assembling the devas, pharitvāna mettaṃ sametā bhadantā … ending dhammassavanakālo ayambhadantā. He sets the fan down, and the presiding elder leads the chanting in order, thus:",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ต้นตำนาน",
+     "paiboon": "",
+     "english": "The Opening of the Tamnan",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะมะการะปาฐะ คือ นะโม ฯเปฯ 3 จบ",
+     "paiboon": "",
+     "english": "The homage passage, that is namo … three times.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สะระณะคะมะนะปาฐะ คือ พุทธัง สะระณัง คัจฉามิ ฯเปฯ ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+     "paiboon": "",
+     "english": "The going-for-refuge passage, buddhaṃ saraṇaṃ gacchāmi … tatiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะมะการะสิทธิคาถา คือ โย จักขุมา โมหะมะลาปะกัฏโฐ ฯเปฯ สัพพันตะรายา จะ วินาสะเมนตุ.",
+     "paiboon": "",
+     "english": "The Namakārasiddhi verses, yo cakkhumā mohamalāpakaṭṭho … sabbantarāyā ca vināsamentu.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 3,
+     "page": 257
+    },
+    {
+     "number": 7,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นะโมการะอัฏฐะกะคาถา คือ นะโม อะระหะโต สัมมาสัมพุทธัสสะ มะเหสิโน ฯเปฯ นะโมการัสสะ เตเชนะ วิธิมหิ โหมิ เตชะวา.",
+     "paiboon": "",
+     "english": "The Namokāra-aṭṭhaka verses, namo arahato sammāsambuddhassa mahesino … namokārassa tejena vidhimhi homi tejavā.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 8,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "หยุดสวดไว้เพียงนี้ แล้วพระภิกษุรูปที่ขัดตั้งพัดเริ่มขัด เย สันตา สันตะจิตตา ติสะระณะสะระณา เอตถะ โลกันตะเร วา ฯเปฯ อะนีฆา สุมะนา โหนตุ สะหะ สัพเพหิ ญาติภิ แล้วขัด ธัมมะจักกัปปะวัตตะนะสุตตะ ต่อไปว่า อะนุตตะรัง อะภิสัมโพธิง สัมพุชฌิต์วา ตะถาคะโต ฯเปฯ เวยยากะระณะปาเฐนะ สังคีตันตัมภะณามะ เส.",
+     "paiboon": "",
+     "english": "The chanting stops here. The monk who gave the introduction raises his fan and begins ye santā santacittā tisaraṇasaraṇā ettha lokantare vā … anīghā sumanā hontu saha sabbehi ñātibhi; then he gives the introduction to the Dhammacakkappavattana Sutta, anuttaraṃ abhisambodhiṃ sambujjhitvā tathāgato … veyyākaraṇapāṭhena saṅgītantambhaṇāma se.",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "วางพัดไว้ พระเถระผู้เป็นประธานนำสวด ธัมมะจักกัปปะวัตตะนะสุตตัง ขึ้นต้นบทว่า เอวัมเม สุตัง รองประธานและพระภิกษุนอกนี้รับ เอกัง สะมะยัง ภะคะวา ฯเปฯ ต่อกันไปจนถึง อิทัง โข ปะนะ ภิกขะเว ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง. อะยะเมวะ อะริโย อัฏฐังคิโก มัคโค. เสยยะถีทัง. สัมมาทิฏฐิ สัมมาสังกัปโป สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ. ลงพร้อมกันที่ตรงนี้ แล้วประธานขึ้นบทต่อไปว่า อิทัง ทุกขัง นอกนี้รับต่อพร้อมกันว่า อะริยะสัจจันติ เม ภิกขะเว ฯเปฯ สวดจนถึง ปะวัตติเต จะ ภะคะวะตา ธัมมะจักเก ภุมมา เทวา สัททะมะนุสสาเวสุง เอตัมภะคะวะตา ฯเปฯ พ์รัห์มุนา วา เกนะจิ วา โลกัส์มินติ. ลงพร้อมกันที่ตรงนี้เป็นวาระที่ 2 แล้วประธานขึ้นบทต่อไปว่า ภุมมานัง นอกนี้รับพร้อมกันว่า เทวานัง สัททัง สุต์วา ฯเปฯ สวดไปจนถึง พ์รัห์มุนา วา เกนะจิ วา โลกัส์มินติ. ลงพร้อมกันที่ตรงนี้เป็นวาระที่ 3 แล้วประธานขึ้นบทต่อไปว่า อิติหะ เตนะ นอกนี้รับพร้อมกันว่า ขะเณนะ เตนะ มุหุตเตนะ ฯเปฯ สวดต่อไปจนจบ คือ อัญญาโกณฑัญโญเต์ววะ นามัง อะโหสีติ.",
+     "paiboon": "",
+     "english": "He sets the fan down. The presiding elder leads the Dhammacakkappavattana Sutta, beginning evaṃ me sutaṃ; the vice-president and the other monks take it up at ekaṃ samayaṃ bhagavā … and carry on to idaṃ kho pana bhikkhave dukkhanirodhagāminī paṭipadā ariyasaccaṃ, ayameva ariyo aṭṭhaṅgiko maggo, seyyathīdaṃ, sammādiṭṭhi sammāsaṅkappo sammāvācā sammākammanto sammāājīvo sammāvāyāmo sammāsati sammāsamādhi. All close together here. The president then begins idaṃ dukkhaṃ and the rest take it up together at ariyasaccanti me bhikkhave … chanting as far as pavattite ca bhagavatā dhammacakke bhummā devā saddamanussāvesuṃ etambhagavatā … brahmunā vā kenaci vā lokasminti. All close together here, the second time. The president then begins bhummānaṃ and the rest take it up at devānaṃ saddaṃ sutvā … as far as brahmunā vā kenaci vā lokasminti. All close together here, the third time. The president then begins itiha tena and the rest take it up at khaṇena tena muhuttena … to the end, aññākoṇḍaññoteva nāmaṃ ahosīti.",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 10,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ประธานนำสวดเจ็ดตำนานย่อต่อไปคือ",
+     "paiboon": "",
+     "english": "The president then leads the short Seven Tamnan, thus:",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 11,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "มังคะละสุตตะ ขึ้น อะเสวะนา จะ พาลานัง ฯเปฯ ลง ตันเตสัง มังคะละมุตตะมันติ.",
+     "paiboon": "",
+     "english": "The Maṅgala Sutta, beginning asevanā ca bālānaṃ … closing at tantesaṃ maṅgalamuttamanti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 12,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ระตะนะสุตตะ ขึ้น ยังกิญจิ วิตตัง อิธะ วา หุรัง วา ฯเปฯ ถึง เย",
+     "paiboon": "",
+     "english": "The Ratana Sutta, beginning yaṃ kiñci vittaṃ idha vā huraṃ vā … as far as ye",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 13,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สุปะยุตตา มะนะสา ฯเปฯ สุวัตถิ โหตุ แล้วข้ามไปขึ้น ขีณัง ปุราณัง นะวัง ฯเปฯ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "paiboon": "",
+     "english": "suppayuttā manasā … suvatthi hotu; then skip on to khīṇaṃ purāṇaṃ navaṃ … saṅghe ratanaṃ paṇītaṃ etena saccena suvatthi hotu.",
+     "para_layout": "prose",
+     "page": 258
+    },
+    {
+     "number": 14,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "กะระณียะเมตตะสุตตะ ขึ้น เมตตัญจะ สัพพะโลกัส์มิง ฯเปฯ นะ หิ ชาตุ คัพภะเสยยัง ปุนะเรตีติ.",
+     "paiboon": "",
+     "english": "The Karaṇīyametta Sutta, beginning mettañca sabbalokasmiṃ … na hi jātu gabbhaseyyaṃ punaretīti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ขันธะปะริตตะ ขึ้น อัปปะมาโณ พุทโธ ฯเปฯ นะโม สัตตันนัง สัมมาสัมพุทธานัง.",
+     "paiboon": "",
+     "english": "The Khandha Paritta, beginning appamāṇo buddho … namo sattannaṃ sammāsambuddhānaṃ.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 16,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ธะชัคคะสุตตะ ขึ้น อิติปิ โส ภะคะวา ฯเปฯ ส์วากขาโต ภะคะวะตา ธัมโม ฯเปฯ สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ ฯเปฯ อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.",
+     "paiboon": "",
+     "english": "The Dhajagga Sutta, beginning itipi so bhagavā … svākkhāto bhagavatā dhammo … supaṭipanno bhagavato sāvakasaṅgho … anuttaraṃ puññakkhettaṃ lokassāti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 5
+    },
+    {
+     "number": 17,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "อาฏานาฏิยะปะริตตะ ขึ้น วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สีรีมะโต ฯเปฯ วิชชาจะระณะสัมปันนัง พุทธัง วันทามะ โคตะมันติ.",
+     "paiboon": "",
+     "english": "The Āṭānāṭiya Paritta, beginning vipassissa namatthu cakkhumantassa sīrīmato … vijjācaraṇasampannaṃ buddhaṃ vandāma gotamanti.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 6
+    },
+    {
+     "number": 18,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "อังคุลิมาละปะริตตะ ถ้าเป็นงานคฤหัสถ์ขึ้น ยะโตหัง ภะคินิ ถ้าเป็นงานบรรพชิตขึ้น โพชฌังโค สะติสังขาโต ฯเปฯ เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.",
+     "paiboon": "",
+     "english": "The Aṅgulimāla Paritta: for a lay ceremony begin yatohaṃ bhagini; for a monastic one begin bojjhaṅgo satisaṅkhāto … etena saccavajjena sotthi te hotu sabbadā.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 7
+    },
+    {
+     "number": 19,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "แล้วสวดท้ายเจ็ดตำนานย่อดังนี้",
+     "paiboon": "",
+     "english": "Then chant the short closing of the Seven Tamnan, thus:",
+     "para_layout": "prose",
+     "para_start": true
+    },
+    {
+     "number": 20,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง ฯเปฯ เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง แล้วสวด ยังกิญจิ ระตะนัง ต่อไปไม่ต้องลง คือ ยังกิญจิ ระตะนัง โลเก ฯเปฯ ตัส์มา โสตถี ภะวันตุ เต.",
+     "paiboon": "",
+     "english": "Natthi me saraṇaṃ aññaṃ, buddho me saraṇaṃ varaṃ … etena saccavajjena hotu te jayamaṅgalaṃ; then chant yaṃ kiñci ratanaṃ straight on without closing, that is yaṃ kiñci ratanaṃ loke … tasmā sotthī bhavantu te.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 21,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "เทวะตาอุยโยชะนะคาถา คือ ทุกขัปปัตตา จะ นิททุกขา ฯเปฯ คัจฉันตุ เทวะตาคะตา.",
+     "paiboon": "",
+     "english": "The verses sending off the devas, that is dukkhappattā ca niddukkhā … gacchantu devatāgatā.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 22,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สัพเพ พุทธา พะลัปปัตตา ฯเปฯ รักขัง พันธามิ สัพพะโส.",
+     "paiboon": "",
+     "english": "Sabbe buddhā balappattā … rakkhaṃ bandhāmi sabbaso.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 23,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "ภะวะตุ สัพพะมังคะลัง ฯเปฯ สัพพะสังฆานุภาเวนะ สะทา โสตถี ภะวันตุ เต.",
+     "paiboon": "",
+     "english": "Bhavatu sabbamaṅgalaṃ … sabbasaṅghānubhāvena sadā sotthī bhavantu te.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 4
+    },
+    {
+     "number": 24,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นักขัตตะยักขะภูตานัง ฯเปฯ หันต์วา เตสัง อุปัททะเว.",
+     "paiboon": "",
+     "english": "Nakkhattayakkhabhūtānaṃ … hantvā tesaṃ upaddave.",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 5
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "งานพิธีมงคล",
+     "pali_roman": "ngan phithi mongkhon",
+     "meaning": "an auspicious ceremony — a birthday, a new house — as against งานอวมงคล, a merit-making for the dead"
+    },
+    {
+     "pali": "เจ็ดตำนานย่อ",
+     "pali_roman": "chet tamnan yo",
+     "meaning": "the SHORT Seven Tamnan, the third of the three forms; this chant uses it after the Dhammacakka"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0526.PNG",
+     "issue": "⚠ A SPELLING THE BOOK ITSELF VARIES. Item 6 here prints สีรีมะโต, with a LONG ี in the first syllable. The Āṭānāṭiya Paritta as set out in full on page 92 prints สิรีมะโต, short. Both are entered as printed and neither has been normalised to the other. Worth checking against the physical book, since this is one letter in a word a reader chants."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0525.PNG",
+     "issue": "THE NUMBERED LIST RESTARTS AT 1 TWICE inside one chant — items 1-4 under ต้นตำนาน, then 1-7 for the Seven Tamnan themselves, then 1-5 for the closing. Three separate printed lists, entered as printed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0525.PNG",
+     "issue": "A PAGE BREAK FALLS BETWEEN TWO WORDS OF ONE PHRASE: page 257 ends its item 2 at เย and page 258 opens สุปะยุตตา. The paragraph continues across the turn, so the verse beginning 258 carries para_layout and NO para_start, by the page-75 rule."
+    }
+   ]
+  },
+  {
+   "id": "rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen",
+   "title_thai": "ระเบียบสวดมนต์ในงานพิธีมงคลอื่น ๆ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Order of Chanting at Other Auspicious Ceremonies",
+   "book_number": 2,
+   "book_number_printed": "2",
+   "page_start": 258,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "6 short Thai units — an opening sentence cut by the page turn, a three-item list, and a closing line.",
+    "ordering": "No Pali at all. This chant names the three forms that the next three chants then set out.",
+    "conventions": "`pali` and `pali_roman` empty; paiboon left empty.",
+    "pages": "IMG_0526 and IMG_0527, pages 258-259. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "นอกจากงานทำบุญฉลองอายุแล้ว นิยมสวดแต่เจ็ดตำนานเป็นพื้น การสวด",
+     "paiboon": "",
+     "english": "Apart from the birthday merit-making ceremony, it is usual to chant the Seven Tamnan only. The chanting",
+     "para_layout": "prose",
+     "para_start": true,
+     "page": 258
+    },
+    {
+     "number": 2,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "มนต์เจ็ดตำนานมีนิยมใช้อยู่ ๓ แบบ คือ",
+     "paiboon": "",
+     "english": "of the Seven Tamnan is used in three forms, namely:",
+     "para_layout": "prose",
+     "page": 259
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวดเจ็ดตำนานอย่างเต็มที่",
+     "paiboon": "",
+     "english": "chanting the Seven Tamnan in full",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวดเจ็ดตำนานอย่างปานกลาง",
+     "paiboon": "",
+     "english": "chanting the Seven Tamnan in the middling form",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 5,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "สวดเจ็ดตำนานอย่างย่อ",
+     "paiboon": "",
+     "english": "chanting the Seven Tamnan in the short form",
+     "para_layout": "prose",
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "มีระเบียบสวดตามลำดับดังนี้.-",
+     "paiboon": "",
+     "english": "The orders for these follow, in turn:",
+     "para_layout": "prose",
+     "para_start": true
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปานกลาง",
+     "pali_roman": "pan klang",
+     "meaning": "middling — the second of the three forms, between อย่างเต็มที่ (full) and อย่างย่อ (short)"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0526.PNG",
+     "issue": "THIS CHANT IS THE HINGE OF THE WHOLE SECTION. It names the three forms of the Seven Tamnan in order, and the next three numbered chants — 3. on page 259, and the two already entered on 261-264 — are those three forms, set out one after another."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0526.PNG",
+     "issue": "THE PAGE BREAK CUTS A WORD IN HALF. Page 258 ends การสวด and page 259 opens มนต์เจ็ดตำนาน, making การสวดมนต์เจ็ดตำนาน. The second verse carries para_layout and NO para_start."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0527.PNG",
+     "issue": "THE COUNT ๓ IS A THAI NUMERAL WHILE THE LIST IT INTRODUCES USES ARABIC 1. 2. 3. — both entered as printed. The closing line ends with the .- mark this section uses before a list, as page 256 does too."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "rabiap-suat-mon-ngan-phithi-mongkhon",
+   "rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 255,
+  "resume_from_file": "IMG_0523.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch, and there is no Pali layer to romanise.",
+  "pali_untouched": "Trivially confirmed: every `pali` and `pali_roman` is empty. All the Pali on these sheets is quoted inside Thai instructions rather than set as chanted text.",
+  "page_scan": "agrees. Five rows across four sheets: page 258 carries the end of one chant and the start of the next, so it has two rows, and page 259 gains this batch's chant above the chant batch-259-260 already put there.",
+  "notes": "TWO CHANTS, and the section they belong to. Page 256 carries a centred section heading อธิบายระเบียบสวดมนต์ในพิธีต่างๆ with two paragraphs of introduction, printed BETWEEN the Ratana Sutta's tail and this chant's heading. ⚠ THOSE BLOCKS ARE DELIBERATELY NOT WRITTEN HERE. A block anchors with `after`, naming the chant it follows down the page, and the chant it follows is the Ratana Sutta, which is not yet in the app — it is still running at the top of 255 and starts earlier still. Anchoring them now would mean omitting `after`, which places them ABOVE every chant on the page and so above the Ratana Sutta tail, in the wrong place. They belong to the batch that enters that Ratana Sutta, and page 256 shows this chant without its section heading until then. THIS IS THE SAME DEFERRAL that left page 259's opening line to this batch, and it is discharged here.",
+  "diacritic_exceptions": []
+ }
+}
