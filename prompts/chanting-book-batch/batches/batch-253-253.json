@@ -1,0 +1,453 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "kham-kho-khama-thot-dae-phra-maha-thera",
+   "kham-rap-khama-thot-khong-phra-maha-thera",
+   "kham-anumothana-khong-phra-maha-thera"
+  ],
+  "pages": [
+   {
+    "page": 253,
+    "file": "IMG_0521.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-kho-khama-thot-dae-phra-maha-thera",
+    "verses": "1-11",
+    "starts_here": true,
+    "note": "The page opens with this chant's centred heading, so nothing runs on from 252. One paragraph of Pali prose."
+   },
+   {
+    "page": 253,
+    "file": "IMG_0521.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-rap-khama-thot-khong-phra-maha-thera",
+    "verses": "1-15",
+    "starts_here": true,
+    "note": "The second of the three, its own centred heading. One paragraph of Pali prose, the elder's reply."
+   },
+   {
+    "page": 253,
+    "file": "IMG_0521.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-anumothana-khong-phra-maha-thera",
+    "verses": "1-7",
+    "starts_here": true,
+    "note": "The third, its own centred heading. One paragraph of Pali prose, then a Thai note about all three chants, and the page ends."
+   },
+   {
+    "page": 253,
+    "file": "IMG_0521.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "",
+    "verses": "none",
+    "note": "The closing Thai note, printed below the third chant. It is about all THREE chants on the page, not about the third alone, so it is a page block rather than a verse. This row carries no chant so that it anchors after the chant above it.",
+    "blocks": [
+     {
+      "type": "rubric",
+      "thai": "คำขอขมาโทษและคำรับขมาโทษแบบนี้ นิยมใช้ในพระมหาเถระชั้นสูง เช่น สมเด็จพระสังฆราช หรือสมเด็จพระราชาคณะ ตามแต่จะโปรด ส่วนคำอนุโมทนา นิยมใช้สำหรับพระเถระทั่วไป",
+      "english": "This form of asking pardon, and of accepting it, is customarily used with Great Elders of high rank — the Supreme Patriarch, or a Somdet Phra Rachakhana — as may be fitting. The words of rejoicing are customarily used for elders generally.",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-kho-khama-thot-dae-phra-maha-thera",
+   "title_thai": "คำขอขมาโทษแด่พระมหาเถระ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words for Asking Pardon of a Great Elder",
+   "page_start": 253,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "11 clauses, split where the book prints its commas, as the prose chants on pages 22 and 31 are split.",
+    "ordering": "Pure Pali prose. No Thai is printed inside the chant itself.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0521, page 253. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อัจจะโย โน ภันเต อัจจัคคะมา,",
+     "pali_roman": "Accayo no bhante accaggamā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, a transgression has overcome us,",
+     "page": 253
+    },
+    {
+     "number": 2,
+     "pali": "ยะถาพาเล ยะถามุฬเห ยะถาอะกุสะเล,",
+     "pali_roman": "yathābāle yathāmuḷhe yathāakusale,",
+     "thai": "",
+     "paiboon": "",
+     "english": "as fools, as deluded, as unskilful,"
+    },
+    {
+     "number": 3,
+     "pali": "เย มะยัง ภันเต,",
+     "pali_roman": "ye mayaṃ bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "in that we, venerable sir,"
+    },
+    {
+     "number": 4,
+     "pali": "กะทาจิ กะระหะจิ,",
+     "pali_roman": "kadāci karahaci,",
+     "thai": "",
+     "paiboon": "",
+     "english": "at some time or other,"
+    },
+    {
+     "number": 5,
+     "pali": "ปะมาทัง วา อาคัมมะ,",
+     "pali_roman": "pamādaṃ vā āgamma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "having come under the sway of heedlessness,"
+    },
+    {
+     "number": 6,
+     "pali": "อะโยนิโสมะนะสิการัง วา อาคัมมะ,",
+     "pali_roman": "ayonisomanasikāraṃ vā āgamma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "or having come under the sway of unwise attention,"
+    },
+    {
+     "number": 7,
+     "pali": "มะหาเถเร อะคาระวัง อะกะริมหา,",
+     "pali_roman": "mahāthere agāravaṃ akarimhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "have shown disrespect towards the Great Elder,"
+    },
+    {
+     "number": 8,
+     "pali": "กาเยนะ วา วาจายะ วา มะนะสา วา,",
+     "pali_roman": "kāyena vā vācāya vā manasā vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "by body, by speech, or by mind,"
+    },
+    {
+     "number": 9,
+     "pali": "สัมมุขาปิ ปะรัมมุขาปิ,",
+     "pali_roman": "sammukhāpi parammukhāpi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "whether to his face or behind his back —"
+    },
+    {
+     "number": 10,
+     "pali": "เตสัง โน ภันเต มะหาเถโร,",
+     "pali_roman": "tesaṃ no bhante mahāthero,",
+     "thai": "",
+     "paiboon": "",
+     "english": "of these, venerable sir, may the Great Elder"
+    },
+    {
+     "number": 11,
+     "pali": "อัจจะยัง อัจจะยะโต ปะฏิคคัณหาตุ อายะติง สังวะรายะ.",
+     "pali_roman": "accayaṃ accayato paṭiggaṇhātu āyatiṃ saṃvarāya.",
+     "thai": "",
+     "paiboon": "",
+     "english": "accept our transgression as a transgression, for the sake of restraint in future."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อัจจะโย",
+     "pali_roman": "accayo",
+     "meaning": "a transgression, an overstepping; the word this whole exchange turns on"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0521.PNG",
+     "issue": "⚠ ยะถามุฬเห IS WRITTEN WITH ฬ ON PURPOSE, AGAINST THE PHOTOGRAPH. The sheet shows what looks like พ, but this typeface photographs ฬ as พ — the finding settled at the book on 2026-08-25 after fourteen places were wrong — and the canon has ḷ here, yathāmūḷhe. The same word appears in the second chant and is written the same way. NOT read off the photograph."
+    }
+   ]
+  },
+  {
+   "id": "kham-rap-khama-thot-khong-phra-maha-thera",
+   "title_thai": "คำรับขมาโทษของพระมหาเถระ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Great Elder's Words Accepting the Asking of Pardon",
+   "page_start": 253,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "15 clauses, split where the book prints its commas.",
+    "ordering": "Pure Pali prose. No Thai is printed inside the chant itself.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0521, page 253. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ตัคฆะ โว อาวุโส อัจจะโย อัจจัคคะมา,",
+     "pali_roman": "Taggha vo āvuso accayo accaggamā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Indeed, friends, a transgression has overcome you,",
+     "page": 253
+    },
+    {
+     "number": 2,
+     "pali": "ยะถาพาเล ยะถามุฬเห ยะถาอะกุสะเล,",
+     "pali_roman": "yathābāle yathāmuḷhe yathāakusale,",
+     "thai": "",
+     "paiboon": "",
+     "english": "as fools, as deluded, as unskilful,"
+    },
+    {
+     "number": 3,
+     "pali": "เย ตุมเห กะทาจิ กะระหะจิ,",
+     "pali_roman": "ye tumhe kadāci karahaci,",
+     "thai": "",
+     "paiboon": "",
+     "english": "in that you, at some time or other,"
+    },
+    {
+     "number": 4,
+     "pali": "ปะมาทัง วา อาคัมมะ,",
+     "pali_roman": "pamādaṃ vā āgamma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "having come under the sway of heedlessness,"
+    },
+    {
+     "number": 5,
+     "pali": "อะโยนิโสมะนะสิการัง วา อาคัมมะ,",
+     "pali_roman": "ayonisomanasikāraṃ vā āgamma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "or having come under the sway of unwise attention,"
+    },
+    {
+     "number": 6,
+     "pali": "มะยิ อะคาระวัง อะกัตถะ,",
+     "pali_roman": "mayi agāravaṃ akattha,",
+     "thai": "",
+     "paiboon": "",
+     "english": "have shown disrespect towards me,"
+    },
+    {
+     "number": 7,
+     "pali": "กาเยนะ วา วาจายะ วา มะนะสา วา,",
+     "pali_roman": "kāyena vā vācāya vā manasā vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "by body, by speech, or by mind,"
+    },
+    {
+     "number": 8,
+     "pali": "สัมมุขาปิ ปะรัมมุขาปิ,",
+     "pali_roman": "sammukhāpi parammukhāpi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "whether to my face or behind my back."
+    },
+    {
+     "number": 9,
+     "pali": "ยะโต จะ โข ตุมเห อัจจะยัง อัจจะยะโต ทิส์วา,",
+     "pali_roman": "yato ca kho tumhe accayaṃ accayato disvā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "But since you have seen the transgression as a transgression,"
+    },
+    {
+     "number": 10,
+     "pali": "ยะถาธัมมัง ปะฏิกกะโรถะ,",
+     "pali_roman": "yathādhammaṃ paṭikkarotha,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and make amends for it according to the Dhamma,"
+    },
+    {
+     "number": 11,
+     "pali": "อายะติง สังวะรัง อาปัชชะถะ,",
+     "pali_roman": "āyatiṃ saṃvaraṃ āpajjatha,",
+     "thai": "",
+     "paiboon": "",
+     "english": "and undertake restraint in future,"
+    },
+    {
+     "number": 12,
+     "pali": "ตัง โว ปะฏิคคัณหามิ,",
+     "pali_roman": "taṃ vo paṭiggaṇhāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "I accept it of you."
+    },
+    {
+     "number": 13,
+     "pali": "วุฑฒิ เหสา อาวุโส อะริยัสสะ วินะเย,",
+     "pali_roman": "vuḍḍhi hesā āvuso ariyassa vinaye,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For this is growth, friends, in the discipline of the noble one:"
+    },
+    {
+     "number": 14,
+     "pali": "โย อัจจะยัง อัจจะยะโต ทิส์วา ยะถาธัมมัง ปะฏิกกะโรติ,",
+     "pali_roman": "yo accayaṃ accayato disvā yathādhammaṃ paṭikkaroti,",
+     "thai": "",
+     "paiboon": "",
+     "english": "that one who sees a transgression as a transgression makes amends for it according to the Dhamma,"
+    },
+    {
+     "number": 15,
+     "pali": "อายะติง สังวะรัง อาปัชชะติ.",
+     "pali_roman": "āyatiṃ saṃvaraṃ āpajjati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and undertakes restraint in future."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ตัคฆะ",
+     "pali_roman": "taggha",
+     "meaning": "indeed, assuredly — the particle with which an elder opens his acceptance"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0521.PNG",
+     "issue": "ยะถามุฬเห, as in the first chant, written with ฬ against the photograph for the same reason."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0521.PNG",
+     "issue": "THE ELDER'S REPLY ENDS ITS EIGHTH CLAUSE WITH A FULL STOP where the asking has a comma, and the sentence then restarts at ยะโต จะ โข. Entered exactly as printed."
+    }
+   ]
+  },
+  {
+   "id": "kham-anumothana-khong-phra-maha-thera",
+   "title_thai": "คำอนุโมทนาของพระมหาเถระ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Great Elder's Words of Rejoicing",
+   "page_start": 253,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "7 clauses, split where the book prints its commas.",
+    "ordering": "Pure Pali prose. No Thai is printed inside the chant itself.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0521, page 253. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยัง ยัง ปุญญัง มะยา กะตัง อุปะจิตัง,",
+     "pali_roman": "Yaṃ yaṃ puññaṃ mayā kataṃ upacitaṃ,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever merit I have made and gathered,",
+     "page": 253
+    },
+    {
+     "number": 2,
+     "pali": "กาเยนะ วา วาจายะ วา มะนะสา วา,",
+     "pali_roman": "kāyena vā vācāya vā manasā vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "by body, by speech, or by mind,"
+    },
+    {
+     "number": 3,
+     "pali": "ตัง ตัง อายัส์มันตานัง อาทิสสามิ,",
+     "pali_roman": "taṃ taṃ āyasmantānaṃ ādissāmi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "all of it I dedicate to the venerable ones,"
+    },
+    {
+     "number": 4,
+     "pali": "สาธายัส์มันโต อัส์มิง อัส์มิง ปุญเญ ปัตติกา หุต์วา อะนุโมทันตุ,",
+     "pali_roman": "sādhāyasmanto asmiṃ asmiṃ puññe pattikā hutvā anumodantu,",
+     "thai": "",
+     "paiboon": "",
+     "english": "so that the venerable ones, becoming sharers in this merit and that, may rejoice in it well,"
+    },
+    {
+     "number": 5,
+     "pali": "เตนะ อะนุโมทะนามะเยนะปิ ปุญเญนะ สุขิตา โหนตุ อะโรคา นิรุปัททะวา.",
+     "pali_roman": "tena anumodanāmayenapi puññena sukhitā hontu arogā nirupaddavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and by that merit, which is itself made of rejoicing, may they be happy, free of illness and free of harm."
+    },
+    {
+     "number": 6,
+     "pali": "จิรัง ทีฆะมัทธานัง อิมัส์มิง ตะถาคะตัปปะเวทิเต ธัมมะวินะเย,",
+     "pali_roman": "ciraṃ dīghamaddhānaṃ imasmiṃ tathāgatappavedite dhammavinaye,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a long time, for a long span, in this Dhamma and discipline made known by the Tathāgata,"
+    },
+    {
+     "number": 7,
+     "pali": "วุฑฒิง วิรุฬหิง เวปุลลัง อาปัชชันตุ.",
+     "pali_roman": "vuḍḍhiṃ viruḷhiṃ vepullaṃ āpajjantu.",
+     "thai": "",
+     "paiboon": "",
+     "english": "may they come to growth, increase and abundance."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะนุโมทะนา",
+     "pali_roman": "anumodanā",
+     "meaning": "rejoicing in another's merit; the book treats the rejoicing as usable for any elder, not only a Great Elder"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 7,
+     "file": "IMG_0521.PNG",
+     "issue": "⚠ วิรุฬหิง IS WRITTEN WITH ฬ ON PURPOSE, AGAINST THE PHOTOGRAPH, for the same reason as ยะถามุฬเห above: the canon has virūḷhiṃ. Page 256 prints the related อะวิรุฬหิฉันทา where the ฬ IS legible in the photograph, which is the corroboration."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-kho-khama-thot-dae-phra-maha-thera",
+   "kham-rap-khama-thot-khong-phra-maha-thera",
+   "kham-anumothana-khong-phra-maha-thera"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 252,
+  "resume_from_file": "IMG_0520.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch.",
+  "pali_untouched": "Typed from the sheet and romanised mechanically. TWO LETTERS WERE DELIBERATELY NOT READ OFF THE PHOTOGRAPH — the ฬ in ยะถามุฬเห and วิรุฬหิง — because this typeface photographs ฬ as พ and the canon has ḷ in both.",
+  "page_scan": "agrees. Four rows on one sheet: three chants, all beginning here, and a chant-less row for the closing note.",
+  "notes": "A COMPLETE SHEET — three chants, all starting and ending on it, and nothing running on in either direction. ⚠ TWO LETTERS ARE WRITTEN AGAINST THE PHOTOGRAPH: ยะถามุฬเห and วิรุฬหิง both take ฬ, because this typeface photographs ฬ as พ and the canon has ḷ. The closing Thai note is a page block, not a verse, because it speaks about all three chants rather than continuing the third.",
+  "diacritic_exceptions": []
+ }
+}
