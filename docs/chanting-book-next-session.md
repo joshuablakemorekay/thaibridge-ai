@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-110 went in.
+111 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–110 are in and unbroken**, plus 217–221. **145 chants and 2,182
+- **Pages 1–111 are in and unbroken**, plus 217–221. **147 chants and 2,188
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 110 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 111 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,19 +46,31 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 111, `IMG_0376` — but READ THE NUMBER off the sheet
+## Next: page 112, `IMG_0377` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–110, so page 111 *should*
-be `IMG_0376`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–111, so page 112 *should*
+be `IMG_0377`. **Five more changes are still expected before page 207.**
 
-**Page 111 starts clean.** Both page-110 chants close with their own colophons
-and **nothing is open** — no `‼ CONTINUES` marker belongs to the Thai-script run.
-The lower third of page 110 is blank apart from its two footnotes, so expect a
-new heading at the top of 111. The book was on `18.`, so `19.` is likely.
+**⚠️ `karaniyakaraniya-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Two
+paragraphs are in — the danger of misconduct, then the benefit of good conduct
+begun. **Resume at verse 3.** Verse 2 is cut after `อักขาตัง,` — the break falls
+**on a comma** — so **page 112 should open with the positive triplet
+`กายะสุจะริตัง`**. The sutta is a matched pair, so expect the five benefits
+mirroring the five dangers, then a closing and probably a colophon.
 
-**The cut-line prediction has now held FOUR times running** — 104→105, 106→107,
-108→109, 109→110. Keep naming the expected opening in the brief before turning
-the page; it is what makes the join checkable.
+## 🧾 The ฬ tally, and which places rest on what
+
+Fifteen places now. **Four were read at the book by Josh** (85, 95, 99, 102);
+the rest are the rule applied. Page 111's `สัมมุฬโห` is the best-supported of
+the rule-applications — the app already holds `อะสัมมุฬโห`, the same word
+negated, **from Josh's own typing** at `mettanisamsa-sutta` v19, so the book's
+own spelling of its own word agrees. It is still recorded as a rule-application,
+because this page has not been checked.
+
+If a spot-check is ever wanted, `สัมมุฬโห` on page 111 is now the cheapest one
+to confirm, since a disagreement there would also contradict something already
+typed from the book.
+
 
 ## ‼ A colophon that does not agree with its own noun
 

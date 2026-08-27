@@ -1,0 +1,232 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "bot-khat-karaniyakaraniya-suttam",
+   "karaniyakaraniya-suttam"
+  ],
+  "pages": [
+   {
+    "page": 111,
+    "file": "IMG_0376.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-karaniyakaraniya-suttam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "The top of the sheet: a centred bold title and four TWO-COLUMN rows, right column beginning at x 1060, verse 1 indented. The chant starts and ends here."
+   },
+   {
+    "page": 111,
+    "file": "IMG_0376.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "karaniyakaraniya-suttam",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "The rest of the sheet: a centred bold NUMBERED title (19.), then SINGLE-COLUMN prose in TWO indented paragraphs — the danger of misconduct, then the benefit of good conduct, cut mid-sentence at the foot. No footnote, no colophon."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-karaniyakaraniya-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Four, one per two-column row, read ACROSS. One group.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "title_roman is the contents' Paiboon value; the SPACING of title_thai follows the page.",
+    "pages": "IMG_0376.PNG, page 111. Title and all four rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด กะระณียากะระณียะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt gà-rá-nii-yaa-gà-rá-nii-yá-sùt-dtaŋ",
+   "title_english": "The Prefatory Verse for the Discourse on What Should and Should Not Be Done",
+   "page_start": 111,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "วิเนตา สุขะมัคคัส์มิง เวเนยเย วินะยัง มุนิ",
+     "pali_roman": "Vinetā sukhamaggasmiṃ veneyye vinayaṃ muni",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Sage, training those fit to be trained in the path of happiness,",
+     "page": 111
+    },
+    {
+     "number": 2,
+     "pali": "อะกะรัญญัปปะหานายะ กะรัญญะกะระณายะ จะ.",
+     "pali_roman": "Akaraññappahānāya karaññakaraṇāya ca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "so that what should not be done be abandoned, and what should be done be done —",
+     "page": 111
+    },
+    {
+     "number": 3,
+     "pali": "ยัง สุตตันตัง อะภาสิตถะ เวเทหะมุนิโน วะรัง",
+     "pali_roman": "Yaṃ suttantaṃ abhāsittha vedehamunino varaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "the discourse he spoke, excellent, to the Sage of Videha,",
+     "page": 111
+    },
+    {
+     "number": 4,
+     "pali": "สุต์วา ตะถานุการายะ ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Sutvā tathānukārāya taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "let us recite that discourse, having heard it, so as to act accordingly.",
+     "page": 111
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะกะรัญญะ / กะรัญญะ",
+     "pali_roman": "akaraññā / karaññā",
+     "meaning": "what should not be done and what should be done. The whole sutta is built on that pair, and the title names both"
+    },
+    {
+     "pali": "เวเทหะมุนิโน",
+     "pali_roman": "vedehamunino",
+     "meaning": "'to the Sage of Videha' — an epithet of Ānanda, who is the one asking in this sutta"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0376.PNG",
+     "issue": "A SEVENTEENTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด กะระณียากะระณียะสุตตัง with a SPACE after บทขัด; the สารบัญ has it without one. Every บทขัด from page 82 on has done this."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0376.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1060. Read ACROSS. FIRST PAIRING FOR CHECKING: left วิเนตา สุขะมัคคัส์มิง + right เวเนยเย วินะยัง มุนิ."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0376.PNG",
+     "issue": "ONE indent only, on verse 1, measured at x 337 against a flush 221-222 for verses 2-4. The chant's own paragraph start carries it, so no para_start is set."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0376.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "karaniyakaraniya-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Two, one per indented paragraph, as pages 108 and 109 were. The sheet indents both openers, so the paragraph is the unit.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "The heading prints a NUMBER, 19, which goes in book_number. title_thai and title_roman both match the สารบัญ.",
+    "pages": "IMG_0376.PNG, page 111. The chant STARTS here and CONTINUES onto page 112 — the second paragraph is cut after อักขาตัง,."
+   },
+   "title_thai": "กะระณียากะระณียะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Karaṇīyākaraṇīyasuttaṃ",
+   "title_english": "The Discourse on What Should and Should Not Be Done",
+   "book_number": "19",
+   "page_start": 111,
+   "english_unverified": true,
+   "continues": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. อะถะโข อายัส์มา อานันโท, เยนะ ภะคะวา เตนุปะสังกะมิ, อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง นิสีทิ, เอกะมันตัง นิสินนัง โข อายัส์มันตัง อานันทัง ภะคะวา เอตะทะโวจะ. เอกังเสนาหัง อานันทะ อะกะระณียัง วะทามิ. กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, โก อาทีนะโว ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข. อัตตาปิ อัตตานัง อุปะวะทะติ, อะนุวิจจะ วิญญู คะระหันติ, ปาปะโก กิตติสัทโท อัพภุคคัจฉะติ, สัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา อะปายัง ทุคคะติง วินิปาตัง นิระยัง อุปะปัชชะติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข.",
+     "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Athakho āyasmā ānando, yena bhagavā tenupasaṅkami, upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ nisīdi, ekamantaṃ nisinnaṃ kho āyasmantaṃ ānandaṃ bhagavā etadavoca. Ekaṃsenāhaṃ ānanda akaraṇīyaṃ vadāmi. kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ko ādīnavo pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ayaṃ ādīnavo pāṭikaṅkho. Attāpi attānaṃ upavadati, anuvicca viññū garahanti, pāpako kittisaddo abbhuggacchati, sammūḷho kālaṃ karoti, kāyassa bhedā parammaraṇā apāyaṃ duggatiṃ vinipātaṃ nirayaṃ upapajjati. Yamidaṃ ānanda mayā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ayaṃ ādīnavo pāṭikaṅkho.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. Then the venerable Ānanda approached the Blessed One, paid homage and sat down to one side. To him the Blessed One said this: 'Ānanda, I say categorically that misconduct of body, speech and mind should not be done.' 'Venerable sir, of that misconduct which the Blessed One has categorically declared should not be done — what danger is to be expected when it is done?' 'Ānanda, of that misconduct which I have categorically declared should not be done, this danger is to be expected: one blames oneself; on considering, the wise censure one; an evil report spreads abroad; one dies confused; and on the breaking up of the body, after death, one reappears in a state of deprivation, a bad destination, the lower world, hell.'",
+     "page": 111,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, […]",
+     "pali_roman": "Ekaṃsenāhaṃ ānanda karaṇīyaṃ vadāmi. kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ko ānisaṃso pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "'Ānanda, I say categorically that good conduct of body, speech and mind should be done.' 'Venerable sir, of that good conduct which the Blessed One has categorically declared should be done — what benefit is to be expected when it is done?' 'Ānanda, of that good conduct which I have categorically declared should be done […]",
+     "page": 111,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "เอกังเสนะ",
+     "pali_roman": "ekaṃsena",
+     "meaning": "categorically, one-sidedly — without qualification. The word the whole sutta turns on: some things admit no 'it depends'"
+    },
+    {
+     "pali": "อาทีนะโว / อานิสังโส",
+     "pali_roman": "ādīnavo / ānisaṃso",
+     "meaning": "danger and benefit. The two paragraphs are built as a matched pair, one asking each"
+    },
+    {
+     "pali": "สัมมุฬโห กาลัง กะโรติ",
+     "pali_roman": "sammūḷho kālaṃ karoti",
+     "meaning": "'he dies confused'. Fourth of the five dangers, and the one that reaches past this life"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0376.PNG",
+     "issue": "‼ ฬ RULE APPLIED, NOT READ AT THE BOOK — but with unusually good support. สัมมุฬโห photographs as สัมมุพโห: bare พ, no ascender, read at 6x. Standard Pali is sammūḷho, 'confused'. What makes this one stronger than the other rule-applications is that the app ALREADY HOLDS THE SAME WORD FAMILY WITH ฬ from Josh's own typing — อะสัมมุฬโห in mettanisamsa-sutta verse 19 — so the book's own spelling of its own word agrees. Still marked as a rule-application: Josh has not checked THIS page."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0376.PNG",
+     "issue": "THE PARAGRAPH IS THE UNIT. Both openers are indented, measured at x 345 and 352 against a flush edge of 222-231, so para_start is set on both verses and para_layout 'prose' on the first."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0376.PNG",
+     "issue": "TWO TRIPLETS REPEAT THROUGH THE SUTTA AND WERE READ SEPARATELY EACH TIME. Paragraph 1 sets กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง four times; paragraph 2 sets its positive twin กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. The FIRST occurrence in each paragraph carries the quotative ติ attached — ...มะโนทุจจะริตันติ — and the others do not."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0376.PNG",
+     "issue": "Five cluster marks in this paragraph: อายัส์มา, อุปะสังกะมิต์วา, อะภิวาเทต์วา, อายัส์มันตัง and ตัส์มิง (four times). All romanised with the mark read as a cluster and dropped."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0376.PNG",
+     "issue": "CUT MID-SENTENCE at the foot of the page, after อักขาตัง, — the break falls ON a comma. Marked with […] and continues is set. Page 112 should open with the positive triplet กายะสุจะริตัง."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0376.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-karaniyakaraniya-suttam"
+  ],
+  "continues": [
+   "karaniyakaraniya-suttam"
+  ],
+  "resume_from": {
+   "chant": "karaniyakaraniya-suttam",
+   "next_verse": 3,
+   "page": 112
+  },
+  "paiboon_scan": "Nothing to scan. Both chants are printed in Pali only, so paiboon is empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0376.PNG read end to end. Page number 111 read off the sheet. A centred bold title with four two-column rows, a centred bold numbered title, two indented prose paragraphs running to the foot. No footnote, no rule, no colophon.",
+  "notes": "‼ ONE MORE ฬ PLACE APPLIED FROM THE RULE: สัมมุฬโห, which photographs as สัมมุพโห. It has better support than most — the app already holds อะสัมมุฬโห with ฬ from Josh's own typing, so the book's own spelling of the same word family agrees. Still a rule-application, not a reading. The sutta is built as a matched pair, danger then benefit, and the second half is cut at the page turn.",
+  "diacritic_exceptions": []
+ }
+}
