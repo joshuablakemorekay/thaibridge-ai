@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-108 went in.
+109 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–108 are in and unbroken**, plus 217–221. **144 chants and 2,168
+- **Pages 1–109 are in and unbroken**, plus 217–221. **144 chants and 2,172
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 108 were applied 2026-08-24/26; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 109 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,17 +46,30 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 109, `IMG_0374` — ⚠️ A CHANT IS OPEN
+## Next: page 110, `IMG_0375` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–108, so page 109 *should*
-be `IMG_0374`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–109, so page 110 *should*
+be `IMG_0375`. **Five more changes are still expected before page 207.**
 
-**⚠️ `maggavibhanga-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Five
-paragraphs are in — the nidāna with the list of eight, then right view, right
-intention and right speech defined. **Resume at verse 6.** Paragraph 5 breaks
-after `ปาณาติปาตา`, at a WORD boundary, so **page 109 should open with
-`เวระมะณี`**. Five factors remain: action, livelihood, effort, mindfulness,
-concentration — then the closing and a colophon.
+**⚠️ `maggavibhanga-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Nine
+paragraphs are in — the nidāna and seven of the eight factors, with right
+concentration begun. **Resume at verse 10.** Verse 9 breaks after `สะโต จะ` in
+the third-jhāna formula, at a WORD boundary, so **page 110 should open with
+`สัมปะชาโน`**. The third and fourth jhānas, the closing and a colophon are still
+to come.
+
+**The cut-line prediction has now held three times running** — 104→105, 106→107
+and 108→109. Naming the expected opening in the brief before turning the page is
+what makes the join checkable; keep doing it.
+
+## ‼ Right action is given in its MONASTIC form
+
+Page 109's third abstention is `อะพ์รัห์มะจะริยา` — unchastity — where the lay
+formulation has `กาเมสุมิจฉาจารา`, sexual misconduct. **Three abstentions, not
+four.** That is not an omission: it is the version for those gone forth, and this
+is a monastic chanting book. Reproduced as printed, and recorded because the
+missing fourth item looks like a dropped line.
+
 
 ## 📐 The prose unit is whatever the SHEET offers — check the indents first
 

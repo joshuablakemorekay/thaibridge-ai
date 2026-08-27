@@ -42343,7 +42343,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
         # ‼ CHECK [IMG_0373.PNG]: english_unverified is set. The book prints
         #   this chant in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -42428,15 +42428,88 @@ CHANTS = [
             #   page 109. Marked with […] and continues is set. The break
             #   falls at a WORD boundary, so nothing is stranded — page 109
             #   should open with เวระมะณี.
+            # ‼ COMPLETED FROM p109: this line was cut by the page break and
+            #   is now whole. Was: กะตะโม จะ ภิกขะเว สัมมากัมมันโต, ยา โข
+            #   ภิกขะเว ปาณาติปาตา […]
+            # ‼ CHECK [IMG_0374.PNG]: COMPLETES THE PARAGRAPH PAGE 108 CUT,
+            #   AND THE PREDICTION HELD FOR THE THIRD TIME. Page 108 broke
+            #   after ปาณาติปาตา and the brief said 109 should open with
+            #   เวระมะณี. It does. Re-emitted whole and the […] marker comes
+            #   off.
+            # ‼ CHECK [IMG_0374.PNG]: ‼ RIGHT ACTION HAS ONLY THREE
+            #   ABSTENTIONS HERE, NOT FOUR. The page gives ปาณาติปาตา,
+            #   อะทินนาทานา and อะพ์รัห์มะจะริยา — killing, stealing and
+            #   unchastity — where the lay formulation has กาเมสุมิจฉาจารา,
+            #   sexual misconduct, as the third. อะพ์รัห์มะจะริยา is the
+            #   MONASTIC form. Reproduced as printed; it is not an omission
+            #   but the version for those gone forth.
             {
                 'number': 5,
-                'page': 108,
                 'para_start': True,
-                'pali': 'กะตะโม จะ ภิกขะเว สัมมากัมมันโต, ยา โข ภิกขะเว ปาณาติปาตา […]',
-                'pali_roman': 'Katamo ca bhikkhave sammākammanto, yā kho bhikkhave pāṇātipātā […]',
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมากัมมันโต, ยา โข ภิกขะเว ปาณาติปาตา เวระมะณี, อะทินนาทานา เวระมะณี, อะพ์รัห์มะจะริยา เวระมะณี, อะยัง วุจจะติ ภิกขะเว สัมมากัมมันโต.',
+                'pali_roman': 'Katamo ca bhikkhave sammākammanto, yā kho bhikkhave pāṇātipātā veramaṇī, adinnādānā veramaṇī, abrahmacariyā veramaṇī, ayaṃ vuccati bhikkhave sammākammanto.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'And what, monks, is right action? Abstaining from the destruction of life […]',
+                'english': 'And what, monks, is right action? Abstaining from the destruction of life, abstaining from taking what is not given, abstaining from unchaste conduct. This, monks, is called right action.',
+            },
+            # ‼ CHECK [IMG_0374.PNG]: Four indented paragraph openers measured
+            #   on this sheet — x 364, 363, 362 and 358 against a flush edge
+            #   of 235-250. The paragraph is the unit again, as page 108
+            #   established, and para_start is set on every verse including
+            #   the completing one.
+            {
+                'number': 6,
+                'page': 109,
+                'para_start': True,
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมาอาชีโว, อิธะ ภิกขะเว อะริยะสาวะโก มิจฉาอาชีวัง ปะหายะ, สัมมาอาชีเวนะ ชีวิกัง กัปเปติ, อะยัง วุจจะติ ภิกขะเว สัมมาอาชีโว.',
+                'pali_roman': 'Katamo ca bhikkhave sammā-ājīvo, idha bhikkhave ariyasāvako micchā-ājīvaṃ pahāya, sammā-ājīvena jīvikaṃ kappeti, ayaṃ vuccati bhikkhave sammā-ājīvo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right livelihood? Here, monks, a noble disciple, having abandoned wrong livelihood, makes his living by right livelihood. This, monks, is called right livelihood.',
+            },
+            # ‼ CHECK [IMG_0374.PNG]: THE FOUR RIGHT EFFORTS REPEAT ONE CLAUSE
+            #   VERBATIM FOUR TIMES — ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ
+            #   จิตตัง ปัคคัณหาติ ปะทะหะติ. All four were read off the sheet
+            #   separately rather than copied. The FOURTH is punctuated
+            #   differently: it closes on a COMMA before อะยัง วุจจะติ where
+            #   the first three close on a full stop.
+            {
+                'number': 7,
+                'page': 109,
+                'para_start': True,
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมาวายาโม. อิธะ ภิกขะเว ภิกขุ อะนุปปันนานัง ปาปะกานัง อะกุสะลานัง ธัมมานัง อะนุปปาทายะ, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. อุปปันนานัง ปาปะกานัง อะกุสะลานัง ธัมมานัง ปะหานายะ, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. อะนุปปันนานัง กุสะลานัง ธัมมานัง อุปปาทายะ, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. อุปปันนานัง กุสะลานัง ธัมมานัง ฐิติยา, อะสัมโมสายะ ภิยโยภาวายะ เวปุลลายะ ภาวะนายะ ปาริปูริยา, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ, อะยัง วุจจะติ ภิกขะเว สัมมาวายาโม.',
+                'pali_roman': 'Katamo ca bhikkhave sammāvāyāmo. Idha bhikkhave bhikkhu anuppannānaṃ pāpakānaṃ akusalānaṃ dhammānaṃ anuppādāya, chandaṃ janeti vāyamati vīriyaṃ ārabhati cittaṃ paggaṇhāti padahati. Uppannānaṃ pāpakānaṃ akusalānaṃ dhammānaṃ pahānāya, chandaṃ janeti vāyamati vīriyaṃ ārabhati cittaṃ paggaṇhāti padahati. Anuppannānaṃ kusalānaṃ dhammānaṃ uppādāya, chandaṃ janeti vāyamati vīriyaṃ ārabhati cittaṃ paggaṇhāti padahati. Uppannānaṃ kusalānaṃ dhammānaṃ ṭhitiyā, asammosāya bhiyyobhāvāya vepullāya bhāvanāya pāripūriyā, chandaṃ janeti vāyamati vīriyaṃ ārabhati cittaṃ paggaṇhāti padahati, ayaṃ vuccati bhikkhave sammāvāyāmo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right effort? Here a monk generates desire, endeavours, arouses energy, exerts his mind and strives for the non-arising of unarisen evil unwholesome states; for the abandoning of arisen ones; for the arising of unarisen wholesome states; and for the continuance, non-confusion, increase, expansion, development and fulfilment of arisen wholesome states. This, monks, is called right effort.',
+            },
+            # ‼ CHECK [IMG_0374.PNG]: THE FOUR FOUNDATIONS LIKEWISE REPEAT
+            #   อาตาปี สัมปะชาโน สะติมา วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง.
+            #   verbatim four times, each closing on a full stop. Read
+            #   separately in each place.
+            {
+                'number': 8,
+                'page': 109,
+                'para_start': True,
+                'pali': 'กะตะมา จะ ภิกขะเว สัมมาสะติ, อิธะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. จิตเต จิตตานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. อะยัง วุจจะติ ภิกขะเว สัมมาสะติ.',
+                'pali_roman': 'Katamā ca bhikkhave sammāsati, idha bhikkhave bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṃ. Vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṃ. Citte cittānupassī viharati, ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṃ. Dhammesu dhammānupassī viharati, ātāpī sampajāno satimā vineyya loke abhijjhādomanassaṃ. Ayaṃ vuccati bhikkhave sammāsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right mindfulness? Here a monk dwells contemplating the body in the body, ardent, clearly comprehending, mindful, having put away covetousness and grief for the world. He dwells contemplating feelings in feelings, mind in mind, and phenomena in phenomena, in the same way. This, monks, is called right mindfulness.',
+            },
+            # ‼ CHECK [IMG_0374.PNG]: CUT MID-SENTENCE at the foot of the
+            #   page, after สะโต จะ in the third jhāna formula. Marked with
+            #   […] and continues is set. The break falls at a WORD boundary,
+            #   so page 110 should open with สัมปะชาโน.
+            {
+                'number': 9,
+                'page': 109,
+                'para_start': True,
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมาสะมาธิ, อิธะ ภิกขะเว ภิกขุ วิวิจเจวะ กาเมหิ วิวิจจะ อะกุสะเลหิ ธัมเมหิ, สะวิตักกัง สะวิจารัง วิเวกะชัมปีติสุขัง ปะฐะมัง ฌานัง อุปะสัมปัชชะ วิหะระติ. วิตักกะวิจารานัง วูปะสะมา, อัชฌัตตัง สัมปะสาทะนัง เจตะโส เอโกทิภาวัง, อะวิตักกัง อะวิจารัง สะมาธิชัมปีติสุขัง, ทุติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ. ปีติยา จะ วิราคา อุเปกขะโก จะ วิหะระติ สะโต จะ […]',
+                'pali_roman': 'Katamo ca bhikkhave sammāsamādhi, idha bhikkhave bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi, savitakkaṃ savicāraṃ vivekajampītisukhaṃ paṭhamaṃ jhānaṃ upasampajja viharati. Vitakkavicārānaṃ vūpasamā, ajjhattaṃ sampasādanaṃ cetaso ekodibhāvaṃ, avitakkaṃ avicāraṃ samādhijampītisukhaṃ, dutiyaṃ jhānaṃ upasampajja viharati. Pītiyā ca virāgā upekkhako ca viharati sato ca […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is right concentration? Here a monk, quite secluded from sense pleasures and secluded from unwholesome states, enters and dwells in the first jhāna, which has thinking and examining, with rapture and pleasure born of seclusion. With the stilling of thinking and examining, he enters and dwells in the second jhāna, with inner clarity and unification of mind, without thinking and examining, with rapture and pleasure born of concentration. With the fading away of rapture he dwells equanimous, mindful […]',
             },
         ],
     },
