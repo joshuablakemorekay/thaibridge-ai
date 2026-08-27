@@ -1,0 +1,333 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "kham-bangsukun-sop-rue-atthi",
+   "kham-bangsukun-khon-pen",
+   "kham-kho-khama-thot-phra-ratanatrai"
+  ],
+  "pages": [
+   {
+    "page": 252,
+    "file": "IMG_0520.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "kham-bangsukun-sop-rue-atthi",
+    "verses": "1-8",
+    "starts_here": true,
+    "note": "The page opens with the TAIL of a Thai paragraph running on from 251, then this chant's centred heading. Two sub-headings inside it, แบบมหานิกาย and แบบธรรมยุต, each with its own verses in two columns."
+   },
+   {
+    "page": 252,
+    "file": "IMG_0520.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "kham-bangsukun-khon-pen",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "Its own centred heading, two lines in two columns, complete here."
+   },
+   {
+    "page": 252,
+    "file": "IMG_0520.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-kho-khama-thot-phra-ratanatrai",
+    "verses": "1-9",
+    "starts_here": true,
+    "note": "Its own centred heading, one paragraph of Pali prose, and the page ends there with white space below."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-bangsukun-sop-rue-atthi",
+   "title_thai": "คำบังสุกุลศพหรืออัฐิ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of the Paṃsukūla for a Body or for Relics",
+   "page_start": 252,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "8 units — two Thai sub-headings entered as verses, and six lines of Pali, each printed as a pair of half-lines in two columns and joined.",
+    "ordering": "Pali throughout, apart from the two Thai sub-headings.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0520, page 252. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "แบบมหานิกาย",
+     "paiboon": "",
+     "english": "The Mahānikāya form",
+     "page": 252
+    },
+    {
+     "number": 2,
+     "pali": "อะนิจจา วะตะ สังขารา อุปปาทะวะยะธัมมิโน",
+     "pali_roman": "Aniccā vata saṅkhārā uppādavayadhammino",
+     "thai": "",
+     "paiboon": "",
+     "english": "Impermanent, alas, are formations, of the nature to arise and pass away."
+    },
+    {
+     "number": 3,
+     "pali": "อุปปัชชิต์วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.",
+     "pali_roman": "Uppajjitvā nirujjhanti tesaṃ vūpasamo sukho.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having arisen, they cease; their stilling is happiness."
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "แบบธรรมยุต",
+     "paiboon": "",
+     "english": "The Dhammayut form"
+    },
+    {
+     "number": 5,
+     "pali": "อะนิจจา วะตะ สังขารา อุปปาทะวะยะธัมมิโน",
+     "pali_roman": "Aniccā vata saṅkhārā uppādavayadhammino",
+     "thai": "",
+     "paiboon": "",
+     "english": "Impermanent, alas, are formations, of the nature to arise and pass away."
+    },
+    {
+     "number": 6,
+     "pali": "อุปปัชชิต์วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.",
+     "pali_roman": "Uppajjitvā nirujjhanti tesaṃ vūpasamo sukho.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having arisen, they cease; their stilling is happiness."
+    },
+    {
+     "number": 7,
+     "pali": "สัพเพ สัตตา มะรันติ จะ มะริงสุ จะ มะริสสะเร",
+     "pali_roman": "Sabbe sattā maranti ca mariṃsu ca marissare",
+     "thai": "",
+     "paiboon": "",
+     "english": "All beings die, and have died, and will die;"
+    },
+    {
+     "number": 8,
+     "pali": "ตะเถวาหัง มะริสสามิ นัตถิ เม เอตถะ สังสะโย.",
+     "pali_roman": "Tathevāhaṃ marissāmi natthi me ettha saṃsayo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "just so shall I die — of this I have no doubt."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "บังสุกุล",
+     "pali_roman": "paṃsukūla",
+     "meaning": "literally rag-robe cloth; the chant said over a body or relics while a cloth is offered"
+    },
+    {
+     "pali": "แบบธรรมยุต",
+     "pali_roman": "baep thammayut",
+     "meaning": "the Dhammayut form, which adds two lines the Mahānikāya form does not have"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0520.PNG",
+     "issue": "TWO SUB-HEADINGS SIT INSIDE ONE CHANT. แบบมหานิกาย and แบบธรรมยุต are printed under a single bold heading, คำบังสุกุลศพหรืออัฐิ, so this is one chant and they are entered as Thai verses. A block cannot anchor inside a chant, which is the same reason ต้นเจ็ดตำนาน is a verse on page 259."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0520.PNG",
+     "issue": "THE TWO FORMS SHARE THEIR FIRST TWO LINES WORD FOR WORD and the Dhammayut form then adds two more. Both are printed in full and both are entered in full; the repetition is the book's, not a duplication."
+    }
+   ]
+  },
+  {
+   "id": "kham-bangsukun-khon-pen",
+   "title_thai": "คำบังสุกุลคนเป็น",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words of the Paṃsukūla for the Living",
+   "page_start": 252,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "2 lines, each a pair of half-lines in two columns and joined.",
+    "ordering": "Pure Pali. No Thai is printed with it.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0520, page 252. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อะจิรัง วะตะยัง กาโย ปะฐะวิง อะธิเสสสะติ",
+     "pali_roman": "Aciraṃ vatayaṃ kāyo paṭhaviṃ adhisessati",
+     "thai": "",
+     "paiboon": "",
+     "english": "Before long, alas, this body will lie upon the earth,",
+     "page": 252
+    },
+    {
+     "number": 2,
+     "pali": "ฉุฑโฑ อะเปตะวิญญาโณ นิรัตถังวะ กะลิงคะรัง.",
+     "pali_roman": "Chuḍḍo apetaviññāṇo niratthaṃva kaliṅgaraṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "cast aside, bereft of consciousness, like a useless log."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "กะลิงคะรัง",
+     "pali_roman": "kaliṅgaraṃ",
+     "meaning": "a log, a useless piece of wood — the image the verse ends on"
+    }
+   ],
+   "checks": []
+  },
+  {
+   "id": "kham-kho-khama-thot-phra-ratanatrai",
+   "title_thai": "คำขอขมาโทษพระรัตนตรัย",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words for Asking Pardon of the Triple Gem",
+   "page_start": 252,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "9 clauses, split where the book prints its commas.",
+    "ordering": "Pure Pali. No Thai is printed with it.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0520, page 252. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อัจจะโย โน ภันเต อัจจัคคะมา,",
+     "pali_roman": "Accayo no bhante accaggamā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sirs, a transgression has overcome us,",
+     "page": 252
+    },
+    {
+     "number": 2,
+     "pali": "ยะถาพาเล ยะถามุฬเห ยะถาอะกุสะเล,",
+     "pali_roman": "yathābāle yathāmuḷhe yathāakusale,",
+     "thai": "",
+     "paiboon": "",
+     "english": "as fools, as deluded, as unskilful,"
+    },
+    {
+     "number": 3,
+     "pali": "เย มะยัง ภันเต ชาติโต ปัฏฐายะ ปะมาทัง วา อาคัมมะ,",
+     "pali_roman": "ye mayaṃ bhante jātito paṭṭhāya pamādaṃ vā āgamma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "in that we, venerable sirs, from birth onwards, having come under the sway of heedlessness,"
+    },
+    {
+     "number": 4,
+     "pali": "อะโยนิโสมะนะสิการัง วา อาคัมมะ,",
+     "pali_roman": "ayonisomanasikāraṃ vā āgamma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "or having come under the sway of unwise attention,"
+    },
+    {
+     "number": 5,
+     "pali": "พุทเธ วา ธัมเม วา สังเฆ วา อะคาระวัง อะกะริมหา,",
+     "pali_roman": "buddhe vā dhamme vā saṅghe vā agāravaṃ akarimhā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "have shown disrespect towards the Buddha, or the Dhamma, or the Saṅgha,"
+    },
+    {
+     "number": 6,
+     "pali": "กาเยนะ วา วาจายะ วา มะนะสา วา,",
+     "pali_roman": "kāyena vā vācāya vā manasā vā,",
+     "thai": "",
+     "paiboon": "",
+     "english": "by body, by speech, or by mind,"
+    },
+    {
+     "number": 7,
+     "pali": "สัมมุขาปิ ปะรัมมุขาปิ,",
+     "pali_roman": "sammukhāpi parammukhāpi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "whether face to face or out of sight —"
+    },
+    {
+     "number": 8,
+     "pali": "เตสัง โน ภันเต,",
+     "pali_roman": "tesaṃ no bhante,",
+     "thai": "",
+     "paiboon": "",
+     "english": "of these, venerable sirs,"
+    },
+    {
+     "number": 9,
+     "pali": "อัจจะยัง อัจจะยะโต ปะฏิคคัณหาตุ อายะติง สังวะรายะ,",
+     "pali_roman": "accayaṃ accayato paṭiggaṇhātu āyatiṃ saṃvarāya,",
+     "thai": "",
+     "paiboon": "",
+     "english": "may our transgression be accepted as a transgression, for the sake of restraint in future,"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ชาติโต ปัฏฐายะ",
+     "pali_roman": "jātito paṭṭhāya",
+     "meaning": "from birth onwards; the phrase that widens this asking beyond a single occasion"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0520.PNG",
+     "issue": "⚠ ยะถามุฬเห IS WRITTEN WITH ฬ AGAINST THE PHOTOGRAPH, as on page 253: this typeface photographs ฬ as พ, and the canon has ḷ, yathāmūḷhe. NOT read off the sheet."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0520.PNG",
+     "issue": "⚠ THE CHANT ENDS WITH A COMMA. The last line printed is อายะติง สังวะรายะ, and the rest of the page is white space; page 253 opens with a different chant's heading, so nothing completes it. The parallel chant on page 253 ends the same formula with a FULL STOP. Entered exactly as printed, comma and all — worth checking against the physical book."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0520.PNG",
+     "issue": "เตสัง โน ภันเต, HAS NO ADDRESSEE HERE where the page 253 version has เตสัง โน ภันเต มะหาเถโร. That follows from the sense — there is no elder to accept it — and is entered as printed."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-bangsukun-sop-rue-atthi",
+   "kham-bangsukun-khon-pen",
+   "kham-kho-khama-thot-phra-ratanatrai"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 251,
+  "resume_from_file": "IMG_0519.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch.",
+  "pali_untouched": "Typed from the sheet and romanised mechanically. ONE LETTER WAS DELIBERATELY NOT READ OFF THE PHOTOGRAPH — the ฬ in ยะถามุฬเห — because this typeface photographs ฬ as พ and the canon has ḷ.",
+  "page_scan": "agrees. Three rows on one sheet, all three chants beginning here.",
+  "notes": "⚠ THE PARAGRAPH AT THE TOP OF THIS PAGE IS DELIBERATELY NOT WRITTEN. It is the tail of a Thai note running on from 251, about คำอาราธนาแสดงธรรมอย่างพิสดาร — which day of the moon takes ปัณณะระสี, จาตุททะสี or อัฏฐะมี — and it belongs to the chant that begins on 251. It is left for that page for the same reason page 256's section heading was left for page 254: the material that anchors it is not in the app yet. ⚠ NOTE FOR THAT BATCH: the book breaks ปัณณะระสี across a line end WITH A HYPHEN, ปัณณะ-ระสี, and prints it unhyphenated two words later — so the hyphen is a line-break artefact and the word should be rejoined. ⚠ THE THIRD CHANT ENDS WITH A COMMA and nothing completes it; see its checks.",
+  "diacritic_exceptions": []
+ }
+}

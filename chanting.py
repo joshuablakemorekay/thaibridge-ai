@@ -45257,7 +45257,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
         # ‼ CHECK [IMG_0376.PNG]: english_unverified is set. The book prints
         #   this chant in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -45277,6 +45276,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'อํ. ทุก. 20/73-74',
+        'closing': {
+            'pali': 'กะระณียากะระณียะสุตตัง นิฏฐิตัง.',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on What Should and Should Not Be Done.',
         },
         'verses': [
             # ‼ CHECK [IMG_0376.PNG]: ‼ ฬ RULE APPLIED, NOT READ AT THE BOOK —
@@ -45318,16 +45325,63 @@ CHANTS = [
             #   page, after อักขาตัง, — the break falls ON a comma. Marked
             #   with […] and continues is set. Page 112 should open with the
             #   positive triplet กายะสุจะริตัง.
+            # ‼ COMPLETED FROM p112: this line was cut by the page break and
+            #   is now whole. Was: เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ.
+            #   กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต
+            #   ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง
+            #   วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก
+            #   อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ
+            #   กะระณียัง อักขาตัง, […]
+            # ‼ CHECK [IMG_0377.PNG]: COMPLETES THE LINE PAGE 111 CUT, AND THE
+            #   PREDICTION HELD FOR THE FIFTH TIME RUNNING. Page 111 broke ON
+            #   A COMMA after อักขาตัง, and the brief said 112 should open
+            #   with the positive triplet กายะสุจะริตัง. It does.
+            # ‼ CHECK [IMG_0377.PNG]: ‼ THE ฬ RULE APPLIED TO อะสัมมุฬโห — AND
+            #   THIS IS THE WORD JOSH HIMSELF TYPED FROM THE BOOK. The page
+            #   photographs อะสัมมุพโห with a bare พ. The app has held
+            #   อะสัมมุฬโห with ฬ since before this run, in mettanisamsa-sutta
+            #   v19, entered from the physical book. So the rule's output here
+            #   is IDENTICAL to a reading Josh already made. That is the
+            #   strongest confirmation the rule has had short of him checking
+            #   this page, and it is the exact mirror of page 111's สัมมุฬโห.
+            # ‼ CHECK [IMG_0377.PNG]: ‼ THE COLOPHON DISAGREES WITH PAGE 110's
+            #   IN BOTH RESPECTS. This one reads กะระณียากะระณียะสุตตัง
+            #   นิฏฐิตัง. — the CORRECT neuter นิฏฐิตัง to agree with สุตตัง,
+            #   AND a full stop. Page 110's reads มัคคะวิภังคะสุตตัง นิฏฐิตา —
+            #   feminine, no stop. Two สุตตัง colophons two pages apart,
+            #   differing in gender agreement and in punctuation. Both
+            #   reproduced as printed.
+            # ‼ CHECK [IMG_0377.PNG]: THE POSITIVE TRIPLET IS SET FOUR TIMES
+            #   and its punctuation is NOT uniform: the third occurrence is
+            #   followed by a COMMA (…มะโนสุจะริตัง, ตัส์มิง) where the second
+            #   and fourth take a FULL STOP. Read separately in each place.
+            # ‼ CHECK [IMG_0377.PNG]: ‼ THIS COMPLETING VERSE CARRIES A PAGE,
+            #   WHICH MOST DO NOT, AND THE REASON MATTERS. The model says a
+            #   verse takes `page` only where the printed page TURNS, and a
+            #   completing verse normally has none because it renders on the
+            #   page its paragraph BEGAN on. Here the chant's last verse IS
+            #   the completing verse, and the colophon and citation are
+            #   printed on page 112 — so leaving the page off put the
+            #   colophon, the citation and the whole paragraph on page 111,
+            #   and page 112 showed nothing of the chant at all. check_render
+            #   caught it. Marked page 112 because the turn falls INSIDE verse
+            #   2, which is the closest the model can come: page 112 now
+            #   carries the paragraph, its colophon and its citation, as the
+            #   book does, and page 111 carries verse 1. The cost is that page
+            #   111 no longer shows the four lines of verse 2 that the book
+            #   prints there. Every earlier multi-page chant escaped this
+            #   because its last verse was not the completing one.
             {
                 'number': 2,
-                'page': 111,
+                'page': 112,
                 'para_start': True,
-                'pali': 'เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, […]',
-                'pali_roman': 'Ekaṃsenāhaṃ ānanda karaṇīyaṃ vadāmi. kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ko ānisaṃso pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, […]',
+                'pali': 'เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง, ตัส์มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโข. อัตตาปิ อัตตานัง นะ อุปะวะทะติ, อะนุวิจจะ วิญญู ปะสังสันติ, กัล์ยาโณ กิตติสัทโท อัพภุคคัจฉะติ, อะสัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา สุคะติง สัคคัง โลกัง อุปะปัชชะติ, ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโขติ. อิทะมะโวจะ ภะคะวา, อัตตะมะโน อายัส์มา อานันโท ภะคะวะโต ภาสิตัง อะภินันทีติ.',
+                'pali_roman': 'Ekaṃsenāhaṃ ānanda karaṇīyaṃ vadāmi. kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ko ānisaṃso pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ, tasmiṃ karaṇīye kayiramāne, ayaṃ ānisaṃso pāṭikaṅkho. Attāpi attānaṃ na upavadati, anuvicca viññū pasaṃsanti, kalyāṇo kittisaddo abbhuggacchati, asammūḷho kālaṃ karoti, kāyassa bhedā parammaraṇā sugatiṃ saggaṃ lokaṃ upapajjati, yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ayaṃ ānisaṃso pāṭikaṅkhoti. Idamavoca bhagavā, attamano āyasmā ānando bhagavato bhāsitaṃ abhinandīti.',
                 'thai': '',
                 'paiboon': '',
-                'english': "'Ānanda, I say categorically that good conduct of body, speech and mind should be done.' 'Venerable sir, of that good conduct which the Blessed One has categorically declared should be done — what benefit is to be expected when it is done?' 'Ānanda, of that good conduct which I have categorically declared should be done […]",
+                'english': "'Ānanda, I say categorically that good conduct of body, speech and mind should be done.' 'Venerable sir, of that good conduct which the Blessed One has categorically declared should be done — what benefit is to be expected when it is done?' 'Ānanda, of that good conduct which I have categorically declared should be done, this benefit is to be expected: one does not blame oneself; on considering, the wise praise one; a good report spreads abroad; one dies unconfused; and on the breaking up of the body, after death, one reappears in a good destination, a heavenly world.' This is what the Blessed One said. Gladdened, the venerable Ānanda delighted in the Blessed One's words.",
             },
+
         ],
     },
     {
@@ -45678,6 +45732,404 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'may they come to growth, increase and abundance.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0377.PNG]: ‼ THE TITLE CARRIES A PRINTED FULL STOP —
+        #   บทขัด อัคคัปปะสาทะสุตตัง. — and no other title in this run has
+        #   done that. The numbered heading four lines below, 20.
+        #   อัคคัปปะสาทะสุตตัง, has NO stop. Reproduced as printed, stop
+        #   included, so title_thai differs from the สารบัญ twice over: the
+        #   space after บทขัด and the full stop. An EIGHTEENTH title the
+        #   contents test cannot see.
+        # ‼ CHECK [IMG_0377.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-aggappasada-suttam',
+        'title_thai': 'บทขัด อัคคัปปะสาทะสุตตัง.',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt àk-kàp-bpà-sǎa-tà-sùt-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Discourse on Faith in the Foremost',
+        'page_start': 112,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0377.PNG]: TWO COLUMNS, right column begins at x
+            #   1120. Read ACROSS. FIRST PAIRING FOR CHECKING: left ยานิ
+            #   ยาน์ยัคคะภูตานิ + right สัมมะตานิ ตะถา ตะถา.
+            # ‼ CHECK [IMG_0377.PNG]: ONE indent only, on verse 1, measured at
+            #   +132 against a FITTED baseline. This sheet drifts 82px from
+            #   top to bottom — 388 down to 309 — so a fixed threshold would
+            #   have been useless; the fit is x = -0.0372*y + 400 and every
+            #   flush line sits on it within 5px.
+            {
+                'number': 1,
+                'page': 112,
+                'pali': 'ยานิ ยาน์ยัคคะภูตานิ สัมมะตานิ ตะถา ตะถา',
+                'pali_roman': 'Yāni yānyaggabhūtāni sammatāni tathā tathā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever things are reckoned foremost, in this way and that,',
+            },
+            {
+                'number': 2,
+                'page': 112,
+                'pali': 'เตสัง เตสัง หิ สัพเพสัง อัคคัญญุตตะมะโกฏิยา.',
+                'pali_roman': 'Tesaṃ tesaṃ hi sabbesaṃ aggaññuttamakoṭiyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'of all those, by the highest and foremost measure —',
+            },
+            {
+                'number': 3,
+                'page': 112,
+                'pali': 'อัคคะโต ตัปปะสันนานัง สัตตานัง อัคคะตาวะหัง',
+                'pali_roman': 'Aggato tappasannānaṃ sattānaṃ aggatāvahaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for beings who have faith in the foremost as foremost, it brings foremost state:',
+            },
+            {
+                'number': 4,
+                'page': 112,
+                'pali': 'พุทโธ ธัมโม จะ สังโฆ จะ อิจเจตัง ระตะนัตตะยัง.',
+                'pali_roman': 'Buddho dhammo ca saṅgho ca iccetaṃ ratanattayaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Buddha, the Dhamma and the Sangha — such is the Triple Gem.',
+            },
+            {
+                'number': 5,
+                'page': 112,
+                'pali': 'อิมะมัตถัง ปะเวเทนตา สาธูนัง อัคคะกามินัง',
+                'pali_roman': 'Imamatthaṃ pavedentā sādhūnaṃ aggakāminaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Making this matter known to good people who long for the foremost,',
+            },
+            {
+                'number': 6,
+                'page': 112,
+                'pali': 'อัคเคเยวะ ปะสาทัตถัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Aggeyeva pasādatthaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so that faith may rest on the foremost alone — let us recite that discourse.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0377.PNG]: ‼ NOT THE SAME CHANT AS akkappasada-
+        #   suttagatha ALREADY IN THE APP. The สารบัญ lists อัคคัปปะสาทะสุตตัง
+        #   and อัคคัปปะสาทะสุตตะคาถา separately; the app holds the CAATHAA.
+        #   This is the sutta itself, so it takes the id aggappasada-suttam.
+        # ‼ CHECK [IMG_0377.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'aggappasada-suttam',
+        'title_thai': 'อัคคัปปะสาทะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Aggappasādasuttaṃ',
+        'title_english': 'The Discourse on Faith in the Foremost',
+        'book_number': '20',
+        'page_start': 112,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0377.PNG]: THE PARAGRAPH IS THE UNIT. Both openers
+            #   are indented at +133 and +131 against the sheet's FITTED
+            #   baseline; every other line sits within 5px of it. para_start
+            #   on both, para_layout 'prose' on the first.
+            {
+                'number': 1,
+                'page': 112,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. จัตตาโร เม ภิกขะเว อัคคัปปะสาทา. กะตะเม จัตตาโร.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Cattāro me bhikkhave aggappasādā. Katame cattāro.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the monks: 'Monks.' 'Venerable sir,' those monks replied. The Blessed One said this: 'Monks, there are these four foremost kinds of faith. Which four?'",
+            },
+            # ‼ CHECK [IMG_0377.PNG]: THE PAGE BREAKS AT A SENTENCE BOUNDARY,
+            #   not mid-sentence. Verse 2 ends อัคโค วิปาโก โหติ. with a full
+            #   stop at the foot of the sheet, so NO […] marker is used — page
+            #   113 simply continues the paragraph with the next of the four.
+            #   continues is still set on the chant.
+            {
+                'number': 2,
+                'page': 112,
+                'para_start': True,
+                'pali': 'ยาวะตา ภิกขะเว สัตตา อะปะทา วา ท์วิปะทา วา จะตุปปะทา วา พะหุปปะทา วา, รูปิโน วา อะรูปิโน วา, สัญญิโน วา อะสัญญิโน วา เนวะสัญญีนาสัญญิโน วา, ตะถาคะโต เตสัง อัคคะมักขายะติ อะระหัง สัมมาสัมพุทโธ. เย ภิกขะเว พุทเธ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.',
+                'pali_roman': 'Yāvatā bhikkhave sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā, rūpino vā arūpino vā, saññino vā asaññino vā nevasaññīnāsaññino vā, tathāgato tesaṃ aggamakkhāyati arahaṃ sammāsambuddho. Ye bhikkhave buddhe pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Monks, as far as there are beings — footless or two-footed or four-footed or many-footed, with form or formless, percipient or non-percipient or neither-percipient-nor-non-percipient — the Tathāgata, the Worthy One, the Perfectly Self-Awakened, is reckoned foremost among them. Those, monks, who have faith in the Buddha have faith in the foremost; and for those with faith in the foremost, the result is foremost.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0520.PNG]: TWO SUB-HEADINGS SIT INSIDE ONE CHANT.
+        #   แบบมหานิกาย and แบบธรรมยุต are printed under a single bold
+        #   heading, คำบังสุกุลศพหรืออัฐิ, so this is one chant and they are
+        #   entered as Thai verses. A block cannot anchor inside a chant,
+        #   which is the same reason ต้นเจ็ดตำนาน is a verse on page 259.
+        # ‼ CHECK [IMG_0520.PNG]: THE TWO FORMS SHARE THEIR FIRST TWO LINES
+        #   WORD FOR WORD and the Dhammayut form then adds two more. Both are
+        #   printed in full and both are entered in full; the repetition is
+        #   the book's, not a duplication.
+        'id': 'kham-bangsukun-sop-rue-atthi',
+        'title_thai': 'คำบังสุกุลศพหรืออัฐิ',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of the Paṃsukūla for a Body or for Relics',
+        'page_start': 252,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 252,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'แบบมหานิกาย',
+                'paiboon': '',
+                'english': 'The Mahānikāya form',
+            },
+            {
+                'number': 2,
+                'pali': 'อะนิจจา วะตะ สังขารา อุปปาทะวะยะธัมมิโน',
+                'pali_roman': 'Aniccā vata saṅkhārā uppādavayadhammino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Impermanent, alas, are formations, of the nature to arise and pass away.',
+            },
+            {
+                'number': 3,
+                'pali': 'อุปปัชชิต์วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.',
+                'pali_roman': 'Uppajjitvā nirujjhanti tesaṃ vūpasamo sukho.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having arisen, they cease; their stilling is happiness.',
+            },
+            {
+                'number': 4,
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'แบบธรรมยุต',
+                'paiboon': '',
+                'english': 'The Dhammayut form',
+            },
+            {
+                'number': 5,
+                'pali': 'อะนิจจา วะตะ สังขารา อุปปาทะวะยะธัมมิโน',
+                'pali_roman': 'Aniccā vata saṅkhārā uppādavayadhammino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Impermanent, alas, are formations, of the nature to arise and pass away.',
+            },
+            {
+                'number': 6,
+                'pali': 'อุปปัชชิต์วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.',
+                'pali_roman': 'Uppajjitvā nirujjhanti tesaṃ vūpasamo sukho.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having arisen, they cease; their stilling is happiness.',
+            },
+            {
+                'number': 7,
+                'pali': 'สัพเพ สัตตา มะรันติ จะ มะริงสุ จะ มะริสสะเร',
+                'pali_roman': 'Sabbe sattā maranti ca mariṃsu ca marissare',
+                'thai': '',
+                'paiboon': '',
+                'english': 'All beings die, and have died, and will die;',
+            },
+            {
+                'number': 8,
+                'pali': 'ตะเถวาหัง มะริสสามิ นัตถิ เม เอตถะ สังสะโย.',
+                'pali_roman': 'Tathevāhaṃ marissāmi natthi me ettha saṃsayo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'just so shall I die — of this I have no doubt.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-bangsukun-khon-pen',
+        'title_thai': 'คำบังสุกุลคนเป็น',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words of the Paṃsukūla for the Living',
+        'page_start': 252,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 252,
+                'pali': 'อะจิรัง วะตะยัง กาโย ปะฐะวิง อะธิเสสสะติ',
+                'pali_roman': 'Aciraṃ vatayaṃ kāyo paṭhaviṃ adhisessati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Before long, alas, this body will lie upon the earth,',
+            },
+            {
+                'number': 2,
+                'pali': 'ฉุฑโฑ อะเปตะวิญญาโณ นิรัตถังวะ กะลิงคะรัง.',
+                'pali_roman': 'Chuḍḍo apetaviññāṇo niratthaṃva kaliṅgaraṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'cast aside, bereft of consciousness, like a useless log.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-kho-khama-thot-phra-ratanatrai',
+        'title_thai': 'คำขอขมาโทษพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words for Asking Pardon of the Triple Gem',
+        'page_start': 252,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 252,
+                'pali': 'อัจจะโย โน ภันเต อัจจัคคะมา,',
+                'pali_roman': 'Accayo no bhante accaggamā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sirs, a transgression has overcome us,',
+            },
+            # ‼ CHECK [IMG_0520.PNG]: ⚠ ยะถามุฬเห IS WRITTEN WITH ฬ AGAINST
+            #   THE PHOTOGRAPH, as on page 253: this typeface photographs ฬ as
+            #   พ, and the canon has ḷ, yathāmūḷhe. NOT read off the sheet.
+            {
+                'number': 2,
+                'pali': 'ยะถาพาเล ยะถามุฬเห ยะถาอะกุสะเล,',
+                'pali_roman': 'yathābāle yathāmuḷhe yathāakusale,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'as fools, as deluded, as unskilful,',
+            },
+            {
+                'number': 3,
+                'pali': 'เย มะยัง ภันเต ชาติโต ปัฏฐายะ ปะมาทัง วา อาคัมมะ,',
+                'pali_roman': 'ye mayaṃ bhante jātito paṭṭhāya pamādaṃ vā āgamma,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in that we, venerable sirs, from birth onwards, having come under the sway of heedlessness,',
+            },
+            {
+                'number': 4,
+                'pali': 'อะโยนิโสมะนะสิการัง วา อาคัมมะ,',
+                'pali_roman': 'ayonisomanasikāraṃ vā āgamma,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or having come under the sway of unwise attention,',
+            },
+            {
+                'number': 5,
+                'pali': 'พุทเธ วา ธัมเม วา สังเฆ วา อะคาระวัง อะกะริมหา,',
+                'pali_roman': 'buddhe vā dhamme vā saṅghe vā agāravaṃ akarimhā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'have shown disrespect towards the Buddha, or the Dhamma, or the Saṅgha,',
+            },
+            {
+                'number': 6,
+                'pali': 'กาเยนะ วา วาจายะ วา มะนะสา วา,',
+                'pali_roman': 'kāyena vā vācāya vā manasā vā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by body, by speech, or by mind,',
+            },
+            {
+                'number': 7,
+                'pali': 'สัมมุขาปิ ปะรัมมุขาปิ,',
+                'pali_roman': 'sammukhāpi parammukhāpi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whether face to face or out of sight —',
+            },
+            # ‼ CHECK [IMG_0520.PNG]: เตสัง โน ภันเต, HAS NO ADDRESSEE HERE
+            #   where the page 253 version has เตสัง โน ภันเต มะหาเถโร. That
+            #   follows from the sense — there is no elder to accept it — and
+            #   is entered as printed.
+            {
+                'number': 8,
+                'pali': 'เตสัง โน ภันเต,',
+                'pali_roman': 'tesaṃ no bhante,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'of these, venerable sirs,',
+            },
+            # ‼ CHECK [IMG_0520.PNG]: ⚠ THE CHANT ENDS WITH A COMMA. The last
+            #   line printed is อายะติง สังวะรายะ, and the rest of the page is
+            #   white space; page 253 opens with a different chant's heading,
+            #   so nothing completes it. The parallel chant on page 253 ends
+            #   the same formula with a FULL STOP. Entered exactly as printed,
+            #   comma and all — worth checking against the physical book.
+            {
+                'number': 9,
+                'pali': 'อัจจะยัง อัจจะยะโต ปะฏิคคัณหาตุ อายะติง สังวะรายะ,',
+                'pali_roman': 'accayaṃ accayato paṭiggaṇhātu āyatiṃ saṃvarāya,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'may our transgression be accepted as a transgression, for the sake of restraint in future,',
             },
         ],
     },
