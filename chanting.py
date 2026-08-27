@@ -42343,7 +42343,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
         # ‼ CHECK [IMG_0373.PNG]: english_unverified is set. The book prints
         #   this chant in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -42363,6 +42362,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'สํ.มหา. 19/10-12',
+        'closing': {
+            'pali': 'มัคคะวิภังคะสุตตัง นิฏฐิตา',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on the Analysis of the Path.',
         },
         'verses': [
             # ‼ CHECK [IMG_0373.PNG]: THE UNIT IS THE PARAGRAPH HERE, NOT THE
@@ -42501,15 +42508,45 @@ CHANTS = [
             #   page, after สะโต จะ in the third jhāna formula. Marked with
             #   […] and continues is set. The break falls at a WORD boundary,
             #   so page 110 should open with สัมปะชาโน.
+            # ‼ COMPLETED FROM p110: this line was cut by the page break and
+            #   is now whole. Was: กะตะโม จะ ภิกขะเว สัมมาสะมาธิ, อิธะ ภิกขะเว
+            #   ภิกขุ วิวิจเจวะ กาเมหิ วิวิจจะ อะกุสะเลหิ ธัมเมหิ, สะวิตักกัง
+            #   สะวิจารัง วิเวกะชัมปีติสุขัง ปะฐะมัง ฌานัง อุปะสัมปัชชะ
+            #   วิหะระติ. วิตักกะวิจารานัง วูปะสะมา, อัชฌัตตัง สัมปะสาทะนัง
+            #   เจตะโส เอโกทิภาวัง, อะวิตักกัง อะวิจารัง สะมาธิชัมปีติสุขัง,
+            #   ทุติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ. ปีติยา จะ วิราคา
+            #   อุเปกขะโก จะ วิหะระติ สะโต จะ […]
+            # ‼ CHECK [IMG_0375.PNG]: COMPLETES THE PARAGRAPH PAGE 109 CUT,
+            #   AND THE PREDICTION HELD FOR THE FOURTH TIME RUNNING. Page 109
+            #   broke after สะโต จะ and the brief said 110 should open with
+            #   สัมปะชาโน. It does. Re-emitted whole and the […] marker comes
+            #   off.
             {
                 'number': 9,
-                'page': 109,
                 'para_start': True,
-                'pali': 'กะตะโม จะ ภิกขะเว สัมมาสะมาธิ, อิธะ ภิกขะเว ภิกขุ วิวิจเจวะ กาเมหิ วิวิจจะ อะกุสะเลหิ ธัมเมหิ, สะวิตักกัง สะวิจารัง วิเวกะชัมปีติสุขัง ปะฐะมัง ฌานัง อุปะสัมปัชชะ วิหะระติ. วิตักกะวิจารานัง วูปะสะมา, อัชฌัตตัง สัมปะสาทะนัง เจตะโส เอโกทิภาวัง, อะวิตักกัง อะวิจารัง สะมาธิชัมปีติสุขัง, ทุติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ. ปีติยา จะ วิราคา อุเปกขะโก จะ วิหะระติ สะโต จะ […]',
-                'pali_roman': 'Katamo ca bhikkhave sammāsamādhi, idha bhikkhave bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi, savitakkaṃ savicāraṃ vivekajampītisukhaṃ paṭhamaṃ jhānaṃ upasampajja viharati. Vitakkavicārānaṃ vūpasamā, ajjhattaṃ sampasādanaṃ cetaso ekodibhāvaṃ, avitakkaṃ avicāraṃ samādhijampītisukhaṃ, dutiyaṃ jhānaṃ upasampajja viharati. Pītiyā ca virāgā upekkhako ca viharati sato ca […]',
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมาสะมาธิ, อิธะ ภิกขะเว ภิกขุ วิวิจเจวะ กาเมหิ วิวิจจะ อะกุสะเลหิ ธัมเมหิ, สะวิตักกัง สะวิจารัง วิเวกะชัมปีติสุขัง ปะฐะมัง ฌานัง อุปะสัมปัชชะ วิหะระติ. วิตักกะวิจารานัง วูปะสะมา, อัชฌัตตัง สัมปะสาทะนัง เจตะโส เอโกทิภาวัง, อะวิตักกัง อะวิจารัง สะมาธิชัมปีติสุขัง, ทุติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ. ปีติยา จะ วิราคา อุเปกขะโก จะ วิหะระติ สะโต จะ สัมปะชาโน. สุขัญจะ กาเยนะ ปะฏิสังเวเทติ, ยันตัง อะริยา อาจิกขันติ อุเปกขะโก สะติมา สุขะวิหารีติ, ตะติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ, สุขัสสะ จะ ปะหานา ทุกขัสสะ จะ ปะหานา, ปุพเพ วะ โสมะนัสสะโทมะนัสสานัง อัตถังคะมา อะทุกขะมะสุขัง อุเปกขาสะติปาริสุทธิง, จะตุตถัง ฌานัง อุปะสัมปัชชะ วิหะระติ, อะยัง วุจจะติ ภิกขะเว สัมมาสะมาธีติ.',
+                'pali_roman': 'Katamo ca bhikkhave sammāsamādhi, idha bhikkhave bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi, savitakkaṃ savicāraṃ vivekajampītisukhaṃ paṭhamaṃ jhānaṃ upasampajja viharati. Vitakkavicārānaṃ vūpasamā, ajjhattaṃ sampasādanaṃ cetaso ekodibhāvaṃ, avitakkaṃ avicāraṃ samādhijampītisukhaṃ, dutiyaṃ jhānaṃ upasampajja viharati. Pītiyā ca virāgā upekkhako ca viharati sato ca sampajāno. Sukhañca kāyena paṭisaṃvedeti, yantaṃ ariyā ācikkhanti upekkhako satimā sukhavihārīti, tatiyaṃ jhānaṃ upasampajja viharati, sukhassa ca pahānā dukkhassa ca pahānā, pubbe va somanassadomanassānaṃ atthaṅgamā adukkhamasukhaṃ upekkhāsatipārisuddhiṃ, catutthaṃ jhānaṃ upasampajja viharati, ayaṃ vuccati bhikkhave sammāsamādhīti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'And what, monks, is right concentration? Here a monk, quite secluded from sense pleasures and secluded from unwholesome states, enters and dwells in the first jhāna, which has thinking and examining, with rapture and pleasure born of seclusion. With the stilling of thinking and examining, he enters and dwells in the second jhāna, with inner clarity and unification of mind, without thinking and examining, with rapture and pleasure born of concentration. With the fading away of rapture he dwells equanimous, mindful […]',
+                'english': "And what, monks, is right concentration? Here a monk, secluded from sense pleasures and unwholesome states, enters and dwells in the first jhāna, with thinking and examining, and rapture and pleasure born of seclusion. With the stilling of thinking and examining he enters the second, with inner clarity and unification of mind. With the fading of rapture he dwells equanimous, mindful and clearly comprehending, experiencing pleasure with the body — that of which the noble ones say 'equanimous and mindful, he dwells pleasantly' — and enters the third. With the abandoning of pleasure and pain, and the earlier passing away of joy and grief, he enters the fourth jhāna, which is neither painful nor pleasant, with purity of mindfulness through equanimity. This, monks, is called right concentration.",
+            },
+            # ‼ CHECK [IMG_0375.PNG]: ‼ THE SUTTA-ENDING FORMULA IS PUNCTUATED
+            #   DIFFERENTLY FROM PAGE 105's. Here it reads อิทะมะโวจะ ภะคะวา,
+            #   with a COMMA; page 105's identical formula in the Ten Refuge-
+            #   Makers reads อิทะมะโวจะ ภะคะวา. with a FULL STOP. Both
+            #   reproduced as printed.
+            # ‼ CHECK [IMG_0375.PNG]: Verse 10 is its own indented paragraph,
+            #   measured at x 495 against the flush 348-368 of the lines above
+            #   it — so para_start is set on it as well as on verse 9.
+            {
+                'number': 10,
+                'page': 110,
+                'para_start': True,
+                'pali': 'อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.',
+                'pali_roman': 'Idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinanduntī.',
+                'thai': '',
+                'paiboon': '',
+                'english': "This is what the Blessed One said. Gladdened, those monks delighted in the Blessed One's words.",
             },
         ],
     },
@@ -44038,7 +44075,7 @@ CHANTS = [
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'อาฏานาฏิยะปะริตตะ ขึ้น วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สิรีมะโต ฯเปฯ จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.',
+                'thai': 'อาฏานาฏิยะปะริตตะ ขึ้น วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สีรีมะโต ฯเปฯ จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.',
                 'paiboon': '',
                 'english': 'The Āṭānāṭiya Paritta, beginning vipassissa namatthu cakkhumantassa sirīmato … ending cattāro dhammā vaḍḍhanti āyu vaṇṇo sukhaṃ balaṃ.',
             },
@@ -44128,6 +44165,129 @@ CHANTS = [
                 'thai': 'นักขัตตะยักขะภูตานัง ฯเปฯ หันต์วา เตสัง อุปัททะเว.',
                 'paiboon': '',
                 'english': 'Nakkhattayakkhabhūtānaṃ … hantvā tesaṃ upaddave.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0375.PNG]: NO NUMBER is printed on this heading, unlike
+        #   16., 17. and 18. before it. So book_number is absent and
+        #   title_thai matches _CONTENTS_ROMAN exactly — the contents test CAN
+        #   see this chant.
+        # ‼ CHECK [IMG_0375.PNG]: THE COLOPHON AGREES HERE.
+        #   อัฏฐังคิกะมัคคะคาถา นิฏฐิตา — นิฏฐิตา is feminine and คาถา is
+        #   feminine, so this one is correct, unlike the สุตตัง colophon four
+        #   lines above it on the SAME PAGE. Both reproduced as printed.
+        # ‼ CHECK [IMG_0375.PNG]: The citation ขุ.ธ. 25/51 is Khuddaka, the
+        #   Dhammapada — these are Dhammapada verses 273-276. It is the SECOND
+        #   footnote on the sheet, keyed to this chant, while footnote 1
+        #   belongs to the sutta above.
+        # ‼ CHECK [IMG_0375.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'atthangikamagga-gatha',
+        'title_thai': 'อัฏฐังคิกะมัคคะคาถา',
+        'title_pali': '',
+        'title_roman': 'Aṭṭhaṅgikamaggagāthā',
+        'title_english': 'Verses on the Eightfold Path',
+        'page_start': 110,
+        'source_printed': 'ขุ.ธ. 25/51',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'อัฏฐังคิกะมัคคะคาถา นิฏฐิตา',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here end the Verses on the Eightfold Path.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0375.PNG]: TWO COLUMNS, right column begins at x
+            #   1120. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   มัคคานัฏฐังคิโก เสฏโฐ + right สัจจานัง จะตุโร ปะทา.
+            # ‼ CHECK [IMG_0375.PNG]: ONE indent only, on verse 1, measured at
+            #   x 512 against a flush 382-395 for verses 2-8. The chant's own
+            #   paragraph start carries it, so no para_start is set.
+            {
+                'number': 1,
+                'page': 110,
+                'pali': 'มัคคานัฏฐังคิโก เสฏโฐ สัจจานัง จะตุโร ปะทา',
+                'pali_roman': 'Maggānaṭṭhaṅgiko seṭṭho saccānaṃ caturo padā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Of paths the eightfold is best; of truths, the four sayings;',
+            },
+            {
+                'number': 2,
+                'page': 110,
+                'pali': 'วิราโค เสฏโฐ ธัมมานัง ทิปะทานัญจะ จักขุมา.',
+                'pali_roman': 'Virāgo seṭṭho dhammānaṃ dipadānañca cakkhumā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'of states, dispassion is best; and of two-footed beings, the One with Vision.',
+            },
+            {
+                'number': 3,
+                'page': 110,
+                'pali': 'เอเสวะ มัคโค นัตถัญโญ ทัสสะนัสสะ วิสุทธิยา',
+                'pali_roman': 'Eseva maggo natthañño dassanassa visuddhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is the only path; there is no other for the purifying of vision.',
+            },
+            {
+                'number': 4,
+                'page': 110,
+                'pali': 'เอตัญหิ ตุมเห ปะฏิปัชชะถะ มาระเสนัปปะโมหะนัง.',
+                'pali_roman': 'Etañhi tumhe paṭipajjatha mārasenappamohanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Follow this path, then, which bewilders Māra's army.",
+            },
+            {
+                'number': 5,
+                'page': 110,
+                'pali': 'เอตัญหิ ตุมเห ปะฏิปันนา ทุกขัสสันตัง กะริสสะถะ',
+                'pali_roman': 'Etañhi tumhe paṭipannā dukkhassantaṃ karissatha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Following this path you will make an end of suffering.',
+            },
+            {
+                'number': 6,
+                'page': 110,
+                'pali': 'อักขาโต โว มะยา มัคโค อัญญายะ สัลละสัตถะนัง.',
+                'pali_roman': 'Akkhāto vo mayā maggo aññāya sallasatthanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The path was made known by me once I had understood the drawing out of the dart.',
+            },
+            {
+                'number': 7,
+                'page': 110,
+                'pali': 'ตุมเหหิ กิจจัง อาตัปปัง อักขาตาโร ตะถาคะตา',
+                'pali_roman': 'Tumhehi kiccaṃ ātappaṃ akkhātāro tathāgatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The work of striving is yours; the Tathāgatas only make it known.',
+            },
+            {
+                'number': 8,
+                'page': 110,
+                'pali': 'ปะฏิปันนา ปะโมกขันติ ฌายิโน มาระพันธะนาติ.',
+                'pali_roman': 'Paṭipannā pamokkhanti jhāyino mārabandhanāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Those who follow it, meditating, are freed from Māra's bondage.",
             },
         ],
     },

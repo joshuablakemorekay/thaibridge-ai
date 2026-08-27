@@ -1,0 +1,272 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "maggavibhanga-suttam",
+   "atthangikamagga-gatha"
+  ],
+  "pages": [
+   {
+    "page": 110,
+    "file": "IMG_0375.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "maggavibhanga-suttam",
+    "verses": "9-10",
+    "starts_here": false,
+    "note": "The top of the sheet completes right concentration, cut on 109, then an indented paragraph carries the sutta-ending formula, then a centred bold colophon. SINGLE column."
+   },
+   {
+    "page": 110,
+    "file": "IMG_0375.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "atthangikamagga-gatha",
+    "verses": "1-8",
+    "starts_here": true,
+    "note": "Below that: a centred bold title with NO number, eight TWO-COLUMN rows with the right column beginning at x 1120, verse 1 indented, and a centred bold colophon. TWO footnotes at the foot of the sheet, one for each chant. The chant starts and ends here."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "maggavibhanga-suttam",
+   "continuation_of": "maggavibhanga-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Two. Verse 9 COMPLETES the paragraph page 109 cut; verse 10 is the formula that ends a sutta, in its own indented paragraph.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None new.",
+    "pages": "IMG_0375.PNG, page 110. The chant arrived from page 109 and ENDS here, with a colophon and a citation."
+   },
+   "source_printed": "สํ.มหา. 19/10-12",
+   "closing": {
+    "pali": "มัคคะวิภังคะสุตตัง นิฏฐิตา",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Discourse on the Analysis of the Path."
+   },
+   "verses": [
+    {
+     "number": 9,
+     "pali": "กะตะโม จะ ภิกขะเว สัมมาสะมาธิ, อิธะ ภิกขะเว ภิกขุ วิวิจเจวะ กาเมหิ วิวิจจะ อะกุสะเลหิ ธัมเมหิ, สะวิตักกัง สะวิจารัง วิเวกะชัมปีติสุขัง ปะฐะมัง ฌานัง อุปะสัมปัชชะ วิหะระติ. วิตักกะวิจารานัง วูปะสะมา, อัชฌัตตัง สัมปะสาทะนัง เจตะโส เอโกทิภาวัง, อะวิตักกัง อะวิจารัง สะมาธิชัมปีติสุขัง, ทุติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ. ปีติยา จะ วิราคา อุเปกขะโก จะ วิหะระติ สะโต จะ สัมปะชาโน. สุขัญจะ กาเยนะ ปะฏิสังเวเทติ, ยันตัง อะริยา อาจิกขันติ อุเปกขะโก สะติมา สุขะวิหารีติ, ตะติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ, สุขัสสะ จะ ปะหานา ทุกขัสสะ จะ ปะหานา, ปุพเพ วะ โสมะนัสสะโทมะนัสสานัง อัตถังคะมา อะทุกขะมะสุขัง อุเปกขาสะติปาริสุทธิง, จะตุตถัง ฌานัง อุปะสัมปัชชะ วิหะระติ, อะยัง วุจจะติ ภิกขะเว สัมมาสะมาธีติ.",
+     "pali_roman": "Katamo ca bhikkhave sammāsamādhi, idha bhikkhave bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi, savitakkaṃ savicāraṃ vivekajampītisukhaṃ paṭhamaṃ jhānaṃ upasampajja viharati. Vitakkavicārānaṃ vūpasamā, ajjhattaṃ sampasādanaṃ cetaso ekodibhāvaṃ, avitakkaṃ avicāraṃ samādhijampītisukhaṃ, dutiyaṃ jhānaṃ upasampajja viharati. Pītiyā ca virāgā upekkhako ca viharati sato ca sampajāno. Sukhañca kāyena paṭisaṃvedeti, yantaṃ ariyā ācikkhanti upekkhako satimā sukhavihārīti, tatiyaṃ jhānaṃ upasampajja viharati, sukhassa ca pahānā dukkhassa ca pahānā, pubbe va somanassadomanassānaṃ atthaṅgamā adukkhamasukhaṃ upekkhāsatipārisuddhiṃ, catutthaṃ jhānaṃ upasampajja viharati, ayaṃ vuccati bhikkhave sammāsamādhīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what, monks, is right concentration? Here a monk, secluded from sense pleasures and unwholesome states, enters and dwells in the first jhāna, with thinking and examining, and rapture and pleasure born of seclusion. With the stilling of thinking and examining he enters the second, with inner clarity and unification of mind. With the fading of rapture he dwells equanimous, mindful and clearly comprehending, experiencing pleasure with the body — that of which the noble ones say 'equanimous and mindful, he dwells pleasantly' — and enters the third. With the abandoning of pleasure and pain, and the earlier passing away of joy and grief, he enters the fourth jhāna, which is neither painful nor pleasant, with purity of mindfulness through equanimity. This, monks, is called right concentration.",
+     "para_start": true
+    },
+    {
+     "number": 10,
+     "pali": "อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.",
+     "pali_roman": "Idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinanduntī.",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is what the Blessed One said. Gladdened, those monks delighted in the Blessed One's words.",
+     "page": 110,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อุเปกขาสะติปาริสุทธิง",
+     "pali_roman": "upekkhāsatipārisuddhiṃ",
+     "meaning": "'purity of mindfulness through equanimity' — the phrase that marks the fourth jhāna, where pleasure and pain have both been laid down"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 9,
+     "file": "IMG_0375.PNG",
+     "issue": "COMPLETES THE PARAGRAPH PAGE 109 CUT, AND THE PREDICTION HELD FOR THE FOURTH TIME RUNNING. Page 109 broke after สะโต จะ and the brief said 110 should open with สัมปะชาโน. It does. Re-emitted whole and the […] marker comes off."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0375.PNG",
+     "issue": "‼ THE COLOPHON'S ENDING DOES NOT AGREE WITH ITS NOUN. It reads มัคคะวิภังคะสุตตัง นิฏฐิตา — นิฏฐิตา is FEMININE, while สุตตัง is neuter and takes นิฏฐิตัง, which is what every other สุตตัง colophon in this book prints. Read at the sheet and reproduced as printed. The book has done the reverse before: page 62's อุททิสสะนาธิฏฐานะคาถา correctly takes นิฏฐิตา to agree with คาถา, so this is not a house style but an inconsistency."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0375.PNG",
+     "issue": "‼ THE SUTTA-ENDING FORMULA IS PUNCTUATED DIFFERENTLY FROM PAGE 105's. Here it reads อิทะมะโวจะ ภะคะวา, with a COMMA; page 105's identical formula in the Ten Refuge-Makers reads อิทะมะโวจะ ภะคะวา. with a FULL STOP. Both reproduced as printed."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0375.PNG",
+     "issue": "Verse 10 is its own indented paragraph, measured at x 495 against the flush 348-368 of the lines above it — so para_start is set on it as well as on verse 9."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0375.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Ten verses across pages 108, 109 and 110. The citation สํ.มหา. 19/10-12 is Saṃyutta, the Mahāvagga."
+    }
+   ]
+  },
+  {
+   "id": "atthangikamagga-gatha",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Eight, one per two-column row, read ACROSS. One group.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "No number is printed on the heading. title_thai and title_roman are both the สารบัญ's values and agree with the page.",
+    "pages": "IMG_0375.PNG, page 110. Title, all eight rows and the colophon are on this page; the chant starts and ends here."
+   },
+   "title_thai": "อัฏฐังคิกะมัคคะคาถา",
+   "title_pali": "",
+   "title_roman": "Aṭṭhaṅgikamaggagāthā",
+   "title_english": "Verses on the Eightfold Path",
+   "page_start": 110,
+   "english_unverified": true,
+   "source_printed": "ขุ.ธ. 25/51",
+   "closing": {
+    "pali": "อัฏฐังคิกะมัคคะคาถา นิฏฐิตา",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here end the Verses on the Eightfold Path."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "มัคคานัฏฐังคิโก เสฏโฐ สัจจานัง จะตุโร ปะทา",
+     "pali_roman": "Maggānaṭṭhaṅgiko seṭṭho saccānaṃ caturo padā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Of paths the eightfold is best; of truths, the four sayings;",
+     "page": 110
+    },
+    {
+     "number": 2,
+     "pali": "วิราโค เสฏโฐ ธัมมานัง ทิปะทานัญจะ จักขุมา.",
+     "pali_roman": "Virāgo seṭṭho dhammānaṃ dipadānañca cakkhumā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "of states, dispassion is best; and of two-footed beings, the One with Vision.",
+     "page": 110
+    },
+    {
+     "number": 3,
+     "pali": "เอเสวะ มัคโค นัตถัญโญ ทัสสะนัสสะ วิสุทธิยา",
+     "pali_roman": "Eseva maggo natthañño dassanassa visuddhiyā",
+     "thai": "",
+     "paiboon": "",
+     "english": "This is the only path; there is no other for the purifying of vision.",
+     "page": 110
+    },
+    {
+     "number": 4,
+     "pali": "เอตัญหิ ตุมเห ปะฏิปัชชะถะ มาระเสนัปปะโมหะนัง.",
+     "pali_roman": "Etañhi tumhe paṭipajjatha mārasenappamohanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Follow this path, then, which bewilders Māra's army.",
+     "page": 110
+    },
+    {
+     "number": 5,
+     "pali": "เอตัญหิ ตุมเห ปะฏิปันนา ทุกขัสสันตัง กะริสสะถะ",
+     "pali_roman": "Etañhi tumhe paṭipannā dukkhassantaṃ karissatha",
+     "thai": "",
+     "paiboon": "",
+     "english": "Following this path you will make an end of suffering.",
+     "page": 110
+    },
+    {
+     "number": 6,
+     "pali": "อักขาโต โว มะยา มัคโค อัญญายะ สัลละสัตถะนัง.",
+     "pali_roman": "Akkhāto vo mayā maggo aññāya sallasatthanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The path was made known by me once I had understood the drawing out of the dart.",
+     "page": 110
+    },
+    {
+     "number": 7,
+     "pali": "ตุมเหหิ กิจจัง อาตัปปัง อักขาตาโร ตะถาคะตา",
+     "pali_roman": "Tumhehi kiccaṃ ātappaṃ akkhātāro tathāgatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The work of striving is yours; the Tathāgatas only make it known.",
+     "page": 110
+    },
+    {
+     "number": 8,
+     "pali": "ปะฏิปันนา ปะโมกขันติ ฌายิโน มาระพันธะนาติ.",
+     "pali_roman": "Paṭipannā pamokkhanti jhāyino mārabandhanāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Those who follow it, meditating, are freed from Māra's bondage.",
+     "page": 110
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ทิปะทานัญจะ จักขุมา",
+     "pali_roman": "dipadānañca cakkhumā",
+     "meaning": "'and of two-footed beings, the One with Vision'. The verse ranks four bests in a row, and the Buddha is the fourth"
+    },
+    {
+     "pali": "สัลละสัตถะนัง",
+     "pali_roman": "sallasatthanaṃ",
+     "meaning": "the drawing out of the dart. The Buddha teaches the path only after knowing how the arrow comes out — the image the Sallasutta turns on"
+    },
+    {
+     "pali": "ตุมเหหิ กิจจัง อาตัปปัง",
+     "pali_roman": "tumhehi kiccaṃ ātappaṃ",
+     "meaning": "'the striving is to be done by you'. The most quoted line of the four, and the reason the gatha closes the sutta on the path"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0375.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1120. Read ACROSS. FIRST PAIRING FOR CHECKING: left มัคคานัฏฐังคิโก เสฏโฐ + right สัจจานัง จะตุโร ปะทา."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0375.PNG",
+     "issue": "ONE indent only, on verse 1, measured at x 512 against a flush 382-395 for verses 2-8. The chant's own paragraph start carries it, so no para_start is set."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0375.PNG",
+     "issue": "NO NUMBER is printed on this heading, unlike 16., 17. and 18. before it. So book_number is absent and title_thai matches _CONTENTS_ROMAN exactly — the contents test CAN see this chant."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0375.PNG",
+     "issue": "THE COLOPHON AGREES HERE. อัฏฐังคิกะมัคคะคาถา นิฏฐิตา — นิฏฐิตา is feminine and คาถา is feminine, so this one is correct, unlike the สุตตัง colophon four lines above it on the SAME PAGE. Both reproduced as printed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0375.PNG",
+     "issue": "The citation ขุ.ธ. 25/51 is Khuddaka, the Dhammapada — these are Dhammapada verses 273-276. It is the SECOND footnote on the sheet, keyed to this chant, while footnote 1 belongs to the sutta above."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0375.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "maggavibhanga-suttam",
+   "atthangikamagga-gatha"
+  ],
+  "continues": [],
+  "resume_from": null,
+  "paiboon_scan": "Nothing to scan. Both chants are printed in Pali only, so paiboon is empty on every verse. The two Thai strings are the citations, which are footnotes and not chanted layers.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0375.PNG read end to end. Page number 110 read off the sheet. Six prose lines, a centred colophon, a centred bold title, eight two-column rows, a second centred colophon, a rule and TWO footnotes. The lower third is blank apart from the footnotes. A hand holds the page at the lower right and obscures nothing.",
+  "notes": "‼ TWO COLOPHONS ON ONE SHEET, ONE OF THEM UNGRAMMATICAL. มัคคะวิภังคะสุตตัง นิฏฐิตา uses the FEMININE นิฏฐิตา with a neuter noun where every other สุตตัง colophon in the book prints นิฏฐิตัง; อัฏฐังคิกะมัคคะคาถา นิฏฐิตา four lines below is correct, because คาถา is feminine. Both as printed. Also two footnotes on one page for the first time in this run, each keyed to its own chant.",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — genuinely two different words and the BOOK prints the difference. ภิกขุ, singular, is the monk the jhāna formula describes; ภิกขู, plural, is the assembly that delights in the Buddha's words in the closing formula. Same pair declared on pages 103, 104 and 105 for the same reason."
+  ]
+ }
+}

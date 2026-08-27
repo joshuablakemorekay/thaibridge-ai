@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-109 went in.
+110 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–109 are in and unbroken**, plus 217–221. **144 chants and 2,172
+- **Pages 1–110 are in and unbroken**, plus 217–221. **145 chants and 2,182
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 109 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 110 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,21 +46,31 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 110, `IMG_0375` — ⚠️ A CHANT IS OPEN
+## Next: page 111, `IMG_0376` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–109, so page 110 *should*
-be `IMG_0375`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–110, so page 111 *should*
+be `IMG_0376`. **Five more changes are still expected before page 207.**
 
-**⚠️ `maggavibhanga-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Nine
-paragraphs are in — the nidāna and seven of the eight factors, with right
-concentration begun. **Resume at verse 10.** Verse 9 breaks after `สะโต จะ` in
-the third-jhāna formula, at a WORD boundary, so **page 110 should open with
-`สัมปะชาโน`**. The third and fourth jhānas, the closing and a colophon are still
-to come.
+**Page 111 starts clean.** Both page-110 chants close with their own colophons
+and **nothing is open** — no `‼ CONTINUES` marker belongs to the Thai-script run.
+The lower third of page 110 is blank apart from its two footnotes, so expect a
+new heading at the top of 111. The book was on `18.`, so `19.` is likely.
 
-**The cut-line prediction has now held three times running** — 104→105, 106→107
-and 108→109. Naming the expected opening in the brief before turning the page is
-what makes the join checkable; keep doing it.
+**The cut-line prediction has now held FOUR times running** — 104→105, 106→107,
+108→109, 109→110. Keep naming the expected opening in the brief before turning
+the page; it is what makes the join checkable.
+
+## ‼ A colophon that does not agree with its own noun
+
+Page 110 prints **`มัคคะวิภังคะสุตตัง นิฏฐิตา`** — `นิฏฐิตา` is **feminine**,
+but `สุตตัง` is neuter and takes `นิฏฐิตัง`, which is what every other `สุตตัง`
+colophon in this book prints.
+
+It is not a house style. Four lines below on the SAME sheet,
+`อัฏฐังคิกะมัคคะคาถา นิฏฐิตา` is **correct**, because `คาถา` is feminine — and
+page 62 got the same agreement right. So the book is simply inconsistent here.
+Both reproduced as printed; **do not "fix" the ending.**
+
 
 ## ‼ Right action is given in its MONASTIC form
 
