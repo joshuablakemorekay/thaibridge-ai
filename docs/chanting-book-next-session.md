@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-111 went in.
+112 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–111 are in and unbroken**, plus 217–221. **147 chants and 2,188
+- **Pages 1–112 are in and unbroken**, plus 217–221. **149 chants and 2,196
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 111 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 112 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,17 +46,39 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 112, `IMG_0377` — ⚠️ A CHANT IS OPEN
+## Next: page 113, `IMG_0378` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–111, so page 112 *should*
-be `IMG_0377`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–112, so page 113 *should*
+be `IMG_0378`. **Five more changes are still expected before page 207.**
 
-**⚠️ `karaniyakaraniya-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Two
-paragraphs are in — the danger of misconduct, then the benefit of good conduct
-begun. **Resume at verse 3.** Verse 2 is cut after `อักขาตัง,` — the break falls
-**on a comma** — so **page 112 should open with the positive triplet
-`กายะสุจะริตัง`**. The sutta is a matched pair, so expect the five benefits
-mirroring the five dangers, then a closing and probably a colophon.
+**⚠️ `aggappasada-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Two
+paragraphs are in — the nidāna and the FIRST of the four foremost faiths (the
+Tathāgata). **Resume at verse 3.** Page 112 ends at a **sentence** boundary, so
+there is no `[…]` to complete: just append. Three faiths remain — the Path,
+dispassion, and the Sangha — then a closing and probably a colophon.
+
+## ⚠️⚠️ A VERSE THAT SPANS A PAGE TURN CAN ONLY LIVE ON ONE PAGE
+
+Page 112 hit this for the first time and it cost an hour. **Read this before
+completing any cut verse that is also a chant's LAST verse.**
+
+The model says a verse takes `page` only where the printed page turns, so a
+completing verse normally has none and renders on the page its paragraph
+**began** on. That is fine — until the completing verse is also the last one and
+the chant's **colophon and citation are printed on the far side of the turn**.
+Then leaving the page off puts the colophon and citation on the EARLY page and
+the later page shows nothing of the chant at all. `check_render` catches it.
+
+**What to do:** mark the completing verse with the LATER page. Page 112 now
+carries the paragraph, its colophon and its citation, exactly as the book does.
+**The cost is real and must be recorded**: the earlier page no longer shows the
+few lines of that verse the book prints there. Batch-111 keeps the cut text
+quoted in a check so nothing is lost, and claims only verse 1 on its page row.
+
+**A proper fix exists and is not done:** let `closing` carry its own page, or let
+`build_page_index` emit a closing-only entry. Both touch shared template and
+script code, so they were left for Josh.
+
 
 ## 🧾 The ฬ tally, and which places rest on what
 

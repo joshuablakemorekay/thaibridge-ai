@@ -1,0 +1,317 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "karaniyakaraniya-suttam",
+   "bot-khat-aggappasada-suttam",
+   "aggappasada-suttam"
+  ],
+  "pages": [
+   {
+    "page": 112,
+    "file": "IMG_0377.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "karaniyakaraniya-suttam",
+    "verses": "2",
+    "starts_here": false,
+    "note": "The top of the sheet completes the benefit paragraph cut on 111, then the centred bold colophon, and the citation at the foot belongs to this chant. Verse 2 is marked page 112 BECAUSE THE TURN FALLS INSIDE IT — see the ‼ check on verse 2."
+   },
+   {
+    "page": 112,
+    "file": "IMG_0377.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-aggappasada-suttam",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "A centred bold title that ENDS IN A FULL STOP, then six TWO-COLUMN rows with the right column beginning at x 1120, verse 1 indented. The chant starts and ends here."
+   },
+   {
+    "page": 112,
+    "file": "IMG_0377.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "aggappasada-suttam",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "A centred bold NUMBERED title (20.), then SINGLE-COLUMN prose in two indented paragraphs. The page ends at a SENTENCE boundary, so no […] is needed; the chant continues onto 113."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "karaniyakaraniya-suttam",
+   "continuation_of": "karaniyakaraniya-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "One. Verse 2 COMPLETES the paragraph page 111 cut, and the chant ends with it.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None new.",
+    "pages": "IMG_0377.PNG, page 112. The chant arrived from page 111 and ENDS here, with a colophon and a citation."
+   },
+   "source_printed": "อํ. ทุก. 20/73-74",
+   "closing": {
+    "pali": "กะระณียากะระณียะสุตตัง นิฏฐิตัง.",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Discourse on What Should and Should Not Be Done."
+   },
+   "verses": [
+    {
+     "number": 2,
+     "pali": "เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง, ตัส์มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโข. อัตตาปิ อัตตานัง นะ อุปะวะทะติ, อะนุวิจจะ วิญญู ปะสังสันติ, กัล์ยาโณ กิตติสัทโท อัพภุคคัจฉะติ, อะสัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา สุคะติง สัคคัง โลกัง อุปะปัชชะติ, ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโขติ. อิทะมะโวจะ ภะคะวา, อัตตะมะโน อายัส์มา อานันโท ภะคะวะโต ภาสิตัง อะภินันทีติ.",
+     "pali_roman": "Ekaṃsenāhaṃ ānanda karaṇīyaṃ vadāmi. kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ko ānisaṃso pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ, tasmiṃ karaṇīye kayiramāne, ayaṃ ānisaṃso pāṭikaṅkho. Attāpi attānaṃ na upavadati, anuvicca viññū pasaṃsanti, kalyāṇo kittisaddo abbhuggacchati, asammūḷho kālaṃ karoti, kāyassa bhedā parammaraṇā sugatiṃ saggaṃ lokaṃ upapajjati, yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ayaṃ ānisaṃso pāṭikaṅkhoti. Idamavoca bhagavā, attamano āyasmā ānando bhagavato bhāsitaṃ abhinandīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "'Ānanda, I say categorically that good conduct of body, speech and mind should be done.' 'Venerable sir, of that good conduct which the Blessed One has categorically declared should be done — what benefit is to be expected when it is done?' 'Ānanda, of that good conduct which I have categorically declared should be done, this benefit is to be expected: one does not blame oneself; on considering, the wise praise one; a good report spreads abroad; one dies unconfused; and on the breaking up of the body, after death, one reappears in a good destination, a heavenly world.' This is what the Blessed One said. Gladdened, the venerable Ānanda delighted in the Blessed One's words.",
+     "page": 112,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะสัมมุฬโห กาลัง กะโรติ",
+     "pali_roman": "asammūḷho kālaṃ karoti",
+     "meaning": "'he dies unconfused'. The exact mirror of page 111's สัมมุฬโห — the fourth benefit answers the fourth danger word for word"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0377.PNG",
+     "issue": "COMPLETES THE LINE PAGE 111 CUT, AND THE PREDICTION HELD FOR THE FIFTH TIME RUNNING. Page 111 broke ON A COMMA after อักขาตัง, and the brief said 112 should open with the positive triplet กายะสุจะริตัง. It does."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0377.PNG",
+     "issue": "‼ THE ฬ RULE APPLIED TO อะสัมมุฬโห — AND THIS IS THE WORD JOSH HIMSELF TYPED FROM THE BOOK. The page photographs อะสัมมุพโห with a bare พ. The app has held อะสัมมุฬโห with ฬ since before this run, in mettanisamsa-sutta v19, entered from the physical book. So the rule's output here is IDENTICAL to a reading Josh already made. That is the strongest confirmation the rule has had short of him checking this page, and it is the exact mirror of page 111's สัมมุฬโห."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0377.PNG",
+     "issue": "‼ THE COLOPHON DISAGREES WITH PAGE 110's IN BOTH RESPECTS. This one reads กะระณียากะระณียะสุตตัง นิฏฐิตัง. — the CORRECT neuter นิฏฐิตัง to agree with สุตตัง, AND a full stop. Page 110's reads มัคคะวิภังคะสุตตัง นิฏฐิตา — feminine, no stop. Two สุตตัง colophons two pages apart, differing in gender agreement and in punctuation. Both reproduced as printed."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0377.PNG",
+     "issue": "THE POSITIVE TRIPLET IS SET FOUR TIMES and its punctuation is NOT uniform: the third occurrence is followed by a COMMA (…มะโนสุจะริตัง, ตัส์มิง) where the second and fourth take a FULL STOP. Read separately in each place."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0377.PNG",
+     "issue": "‼ THIS COMPLETING VERSE CARRIES A PAGE, WHICH MOST DO NOT, AND THE REASON MATTERS. The model says a verse takes `page` only where the printed page TURNS, and a completing verse normally has none because it renders on the page its paragraph BEGAN on. Here the chant's last verse IS the completing verse, and the colophon and citation are printed on page 112 — so leaving the page off put the colophon, the citation and the whole paragraph on page 111, and page 112 showed nothing of the chant at all. check_render caught it. Marked page 112 because the turn falls INSIDE verse 2, which is the closest the model can come: page 112 now carries the paragraph, its colophon and its citation, as the book does, and page 111 carries verse 1. The cost is that page 111 no longer shows the four lines of verse 2 that the book prints there. Every earlier multi-page chant escaped this because its last verse was not the completing one."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0377.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Two verses across pages 111 and 112 — the danger paragraph and the benefit paragraph, a matched pair. The citation อํ. ทุก. 20/73-74 is Aṅguttara, the Book of Twos."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-aggappasada-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Six, one per two-column row, read ACROSS. One group.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "title_roman is the contents' Paiboon value; title_thai follows the PAGE, which differs from the สารบัญ by a space AND by a printed full stop.",
+    "pages": "IMG_0377.PNG, page 112. Title and all six rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด อัคคัปปะสาทะสุตตัง.",
+   "title_pali": "",
+   "title_roman": "bòt-kàt àk-kàp-bpà-sǎa-tà-sùt-dtaŋ",
+   "title_english": "The Prefatory Verse for the Discourse on Faith in the Foremost",
+   "page_start": 112,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยานิ ยาน์ยัคคะภูตานิ สัมมะตานิ ตะถา ตะถา",
+     "pali_roman": "Yāni yānyaggabhūtāni sammatāni tathā tathā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whatever things are reckoned foremost, in this way and that,",
+     "page": 112
+    },
+    {
+     "number": 2,
+     "pali": "เตสัง เตสัง หิ สัพเพสัง อัคคัญญุตตะมะโกฏิยา.",
+     "pali_roman": "Tesaṃ tesaṃ hi sabbesaṃ aggaññuttamakoṭiyā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "of all those, by the highest and foremost measure —",
+     "page": 112
+    },
+    {
+     "number": 3,
+     "pali": "อัคคะโต ตัปปะสันนานัง สัตตานัง อัคคะตาวะหัง",
+     "pali_roman": "Aggato tappasannānaṃ sattānaṃ aggatāvahaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "for beings who have faith in the foremost as foremost, it brings foremost state:",
+     "page": 112
+    },
+    {
+     "number": 4,
+     "pali": "พุทโธ ธัมโม จะ สังโฆ จะ อิจเจตัง ระตะนัตตะยัง.",
+     "pali_roman": "Buddho dhammo ca saṅgho ca iccetaṃ ratanattayaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Buddha, the Dhamma and the Sangha — such is the Triple Gem.",
+     "page": 112
+    },
+    {
+     "number": 5,
+     "pali": "อิมะมัตถัง ปะเวเทนตา สาธูนัง อัคคะกามินัง",
+     "pali_roman": "Imamatthaṃ pavedentā sādhūnaṃ aggakāminaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Making this matter known to good people who long for the foremost,",
+     "page": 112
+    },
+    {
+     "number": 6,
+     "pali": "อัคเคเยวะ ปะสาทัตถัง ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Aggeyeva pasādatthaṃ taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "so that faith may rest on the foremost alone — let us recite that discourse.",
+     "page": 112
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อัคคะ",
+     "pali_roman": "agga",
+     "meaning": "foremost, topmost. The word runs through every verse of this บทขัด — foremost things, foremost faith, foremost state"
+    },
+    {
+     "pali": "ยาน์ยัคคะภูตานิ",
+     "pali_roman": "yānyaggabhūtāni",
+     "meaning": "yāni + aggabhūtāni run together, 'whatever things have become foremost'. The ์ marks the elided vowel"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0377.PNG",
+     "issue": "‼ THE TITLE CARRIES A PRINTED FULL STOP — บทขัด อัคคัปปะสาทะสุตตัง. — and no other title in this run has done that. The numbered heading four lines below, 20. อัคคัปปะสาทะสุตตัง, has NO stop. Reproduced as printed, stop included, so title_thai differs from the สารบัญ twice over: the space after บทขัด and the full stop. An EIGHTEENTH title the contents test cannot see."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0377.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1120. Read ACROSS. FIRST PAIRING FOR CHECKING: left ยานิ ยาน์ยัคคะภูตานิ + right สัมมะตานิ ตะถา ตะถา."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0377.PNG",
+     "issue": "ONE indent only, on verse 1, measured at +132 against a FITTED baseline. This sheet drifts 82px from top to bottom — 388 down to 309 — so a fixed threshold would have been useless; the fit is x = -0.0372*y + 400 and every flush line sits on it within 5px."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0377.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "aggappasada-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Two, one per indented paragraph. Both openers are indented against the fitted baseline, so the paragraph is the unit.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "The heading prints a NUMBER, 20, which goes in book_number. title_thai and title_roman both match the สารบัญ.",
+    "pages": "IMG_0377.PNG, page 112. The chant STARTS here and CONTINUES onto page 113 — three more of the four foremost faiths are still to come."
+   },
+   "title_thai": "อัคคัปปะสาทะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Aggappasādasuttaṃ",
+   "title_english": "The Discourse on Faith in the Foremost",
+   "book_number": "20",
+   "page_start": 112,
+   "english_unverified": true,
+   "continues": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. จัตตาโร เม ภิกขะเว อัคคัปปะสาทา. กะตะเม จัตตาโร.",
+     "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Cattāro me bhikkhave aggappasādā. Katame cattāro.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the monks: 'Monks.' 'Venerable sir,' those monks replied. The Blessed One said this: 'Monks, there are these four foremost kinds of faith. Which four?'",
+     "page": 112,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "ยาวะตา ภิกขะเว สัตตา อะปะทา วา ท์วิปะทา วา จะตุปปะทา วา พะหุปปะทา วา, รูปิโน วา อะรูปิโน วา, สัญญิโน วา อะสัญญิโน วา เนวะสัญญีนาสัญญิโน วา, ตะถาคะโต เตสัง อัคคะมักขายะติ อะระหัง สัมมาสัมพุทโธ. เย ภิกขะเว พุทเธ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.",
+     "pali_roman": "Yāvatā bhikkhave sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā, rūpino vā arūpino vā, saññino vā asaññino vā nevasaññīnāsaññino vā, tathāgato tesaṃ aggamakkhāyati arahaṃ sammāsambuddho. Ye bhikkhave buddhe pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, as far as there are beings — footless or two-footed or four-footed or many-footed, with form or formless, percipient or non-percipient or neither-percipient-nor-non-percipient — the Tathāgata, the Worthy One, the Perfectly Self-Awakened, is reckoned foremost among them. Those, monks, who have faith in the Buddha have faith in the foremost; and for those with faith in the foremost, the result is foremost.",
+     "page": 112,
+     "para_start": true
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อัคคัปปะสาทะ",
+     "pali_roman": "aggappasāda",
+     "meaning": "faith in the foremost. The sutta names four, and the reasoning is the same each time: faith in the best thing brings the best result"
+    },
+    {
+     "pali": "อะปะทา … พะหุปปะทา",
+     "pali_roman": "apadā … bahuppadā",
+     "meaning": "footless, two-footed, four-footed, many-footed. The stock way of counting every kind of creature, so that nothing is left outside the comparison"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0377.PNG",
+     "issue": "THE PARAGRAPH IS THE UNIT. Both openers are indented at +133 and +131 against the sheet's FITTED baseline; every other line sits within 5px of it. para_start on both, para_layout 'prose' on the first."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0377.PNG",
+     "issue": "THE PAGE BREAKS AT A SENTENCE BOUNDARY, not mid-sentence. Verse 2 ends อัคโค วิปาโก โหติ. with a full stop at the foot of the sheet, so NO […] marker is used — page 113 simply continues the paragraph with the next of the four. continues is still set on the chant."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0377.PNG",
+     "issue": "‼ NOT THE SAME CHANT AS akkappasada-suttagatha ALREADY IN THE APP. The สารบัญ lists อัคคัปปะสาทะสุตตัง and อัคคัปปะสาทะสุตตะคาถา separately; the app holds the CAATHAA. This is the sutta itself, so it takes the id aggappasada-suttam."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0377.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "karaniyakaraniya-suttam",
+   "bot-khat-aggappasada-suttam"
+  ],
+  "continues": [
+   "aggappasada-suttam"
+  ],
+  "resume_from": {
+   "chant": "aggappasada-suttam",
+   "next_verse": 3,
+   "page": 113
+  },
+  "paiboon_scan": "Nothing to scan. All three chants are printed in Pali only, so paiboon is empty on every verse. The one Thai string is the citation, a footnote and not a chanted layer.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0377.PNG read end to end. Page number 112 read off the sheet. Seven prose lines, a centred colophon, a centred bold title with six two-column rows, a centred bold numbered title, two indented prose paragraphs, a rule and one footnote.",
+  "notes": "‼ THREE THINGS. (1) The ฬ rule produced อะสัมมุฬโห — the SAME word Josh typed from the book into mettanisamsa-sutta v19 — so the rule's output here is identical to a reading he already made. (2) This colophon prints นิฏฐิตัง. with the CORRECT neuter and a full stop, where page 110's สุตตัง colophon printed นิฏฐิตา with neither. (3) The บทขัด title ends in a printed FULL STOP, which no other title in this run does.",
+  "diacritic_exceptions": []
+ }
+}

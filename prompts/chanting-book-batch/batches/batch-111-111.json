@@ -25,9 +25,9 @@
     "script": "thai",
     "columns": 1,
     "chant": "karaniyakaraniya-suttam",
-    "verses": "1-2",
+    "verses": "1",
     "starts_here": true,
-    "note": "The rest of the sheet: a centred bold NUMBERED title (19.), then SINGLE-COLUMN prose in TWO indented paragraphs — the danger of misconduct, then the benefit of good conduct, cut mid-sentence at the foot. No footnote, no colophon."
+    "note": "The rest of the sheet: a centred bold NUMBERED title (19.), then SINGLE-COLUMN prose in TWO indented paragraphs — the danger of misconduct, then the benefit of good conduct, which is cut mid-sentence at the foot. Only verse 1 is CLAIMED for this page: verse 2 spans the turn, and because its colophon and citation are printed on 112 it is marked page 112 there. The book does print verse 2's first four lines on THIS sheet; the app cannot show one verse on two pages. See the ‼ check on batch-112's verse 2."
    }
   ]
  },
@@ -148,16 +148,6 @@
      "page": 111,
      "para_start": true,
      "para_layout": "prose"
-    },
-    {
-     "number": 2,
-     "pali": "เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, […]",
-     "pali_roman": "Ekaṃsenāhaṃ ānanda karaṇīyaṃ vadāmi. kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ko ānisaṃso pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, […]",
-     "thai": "",
-     "paiboon": "",
-     "english": "'Ānanda, I say categorically that good conduct of body, speech and mind should be done.' 'Venerable sir, of that good conduct which the Blessed One has categorically declared should be done — what benefit is to be expected when it is done?' 'Ānanda, of that good conduct which I have categorically declared should be done […]",
-     "page": 111,
-     "para_start": true
     }
    ],
    "vocabulary": [
@@ -207,6 +197,11 @@
      "verse": null,
      "file": "IMG_0376.PNG",
      "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0376.PNG",
+     "issue": "‼ THIS SHEET ALSO PRINTS THE FIRST FOUR LINES OF VERSE 2, WHICH ARE RECORDED IN batch-112 INSTEAD. As read from this page the cut line was: เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, […] Verse 2 spans the page turn, and the app can render a verse on only ONE page. Its colophon and citation are printed on 112, so the verse is marked page 112 there; leaving it here put the colophon and citation on 111 too and left page 112 showing nothing of the chant, which check_render caught. The cost, recorded honestly: page 111 in the app does not show these four lines. The text itself is not lost — it is quoted here and carried whole by batch-112."
     }
    ]
   }
@@ -220,7 +215,7 @@
   ],
   "resume_from": {
    "chant": "karaniyakaraniya-suttam",
-   "next_verse": 3,
+   "next_verse": 2,
    "page": 112
   },
   "paiboon_scan": "Nothing to scan. Both chants are printed in Pali only, so paiboon is empty on every verse.",
