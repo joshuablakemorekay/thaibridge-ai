@@ -42942,7 +42942,7 @@ CHANTS = [
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'การหยดเทียนพระพุทธมนต์ลงในน้ำพระพุทธมนต์ ปรกติเป็นหน้าที่ของพระเถระผู้เป็นประธานสวด มีนิยมใช้หยดเทียนในเมื่อสวดถึงบท ระตะนะสุตตะ คือพอสวดไปถึงบท มังคะละสุตตะ ให้เจ้าภาพงานเริ่มจุดเทียนพระพุทธมนต์ ติดไว้ที่ภาชนะน้ำพระพุทธมนต์ แล้วยกภาชนะนั้นประเคนพระเถระผู้เป็นประธาน พอสวดไปถึงบท ระตะนะสุตตะ ขึ้น เย สุปปะยุตตา มะนะสา ทัพเหนะ ฯเปฯ ประธานเริ่มหยดเทียนลงในน้ำพระพุทธมนต์ พอสวดถึงบท ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง วิรัตตะจิตตายะติเก ภะวัส์มิง เต ขีณะพีชา อะวิรุฬหิฉันทา นิพพันติ ธีรา ให้จุ่ม',
+                'thai': 'การหยดเทียนพระพุทธมนต์ลงในน้ำพระพุทธมนต์ ปรกติเป็นหน้าที่ของพระเถระผู้เป็นประธานสวด มีนิยมใช้หยดเทียนในเมื่อสวดถึงบท ระตะนะสุตตะ คือพอสวดไปถึงบท มังคะละสุตตะ ให้เจ้าภาพงานเริ่มจุดเทียนพระพุทธมนต์ ติดไว้ที่ภาชนะน้ำพระพุทธมนต์ แล้วยกภาชนะนั้นประเคนพระเถระผู้เป็นประธาน พอสวดไปถึงบท ระตะนะสุตตะ ขึ้น เย สุปปะยุตตา มะนะสา ทัฬเหนะ ฯเปฯ ประธานเริ่มหยดเทียนลงในน้ำพระพุทธมนต์ พอสวดถึงบท ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง วิรัตตะจิตตายะติเก ภะวัส์มิง เต ขีณะพีชา อะวิรุฬหิฉันทา นิพพันติ ธีรา ให้จุ่ม',
                 'paiboon': '',
                 'english': 'Dripping the candle into the lustral water is ordinarily the duty of the presiding elder. It is usual to drip the candle when the chanting reaches the Ratana Sutta. That is: when the chanting reaches the Maṅgala Sutta, the host lights the candle and fixes it to the vessel of lustral water, then lifts the vessel and presents it to the presiding elder. When the chanting reaches the Ratana Sutta at ye suppayuttā manasā daḷhena …, the one presiding begins to drip the candle into the water. When the chanting reaches khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ, virattacittāyatike bhavasmiṃ, te khīṇabījā aviruḷhichandā, nibbanti dhīrā, he dips',
             },
@@ -43404,7 +43404,7 @@ CHANTS = [
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'ระตะนะสุตตัง ขึ้น ยังกิญจิ วิตตัง อิธะ วา หุรัง วา ฯเปฯ เย สุปะยุตตา มะนะสา ทัพเหนะ ฯเปฯ อิทัมปิ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ. แล้วข้ามไปสวด ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง ฯเปฯ เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'thai': 'ระตะนะสุตตัง ขึ้น ยังกิญจิ วิตตัง อิธะ วา หุรัง วา ฯเปฯ เย สุปปะยุตตา มะนะสา ทัฬเหนะ ฯเปฯ อิทัมปิ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ. แล้วข้ามไปสวด ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง ฯเปฯ เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
                 'paiboon': '',
                 'english': 'The Ratana Sutta, beginning yaṃ kiñci vittaṃ idha vā huraṃ vā … then skipping ahead to khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ … ending etena saccena suvatthi hotu.',
             },
@@ -43772,7 +43772,7 @@ CHANTS = [
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'ระตะนะสุตตะ ขึ้น ยังกิญจิ วิตตัง อิธะ วา หุรัง วา ฯเปฯ เย สุปะยุตตา มะนะสา ทัพเหนะ ฯเปฯ อิทัมปิ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ แล้วข้ามไปสวด ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง ฯเปฯ เอเตนะ สัจเจนะ สุวัตถิ โหตุ เริ่มหยดเทียนน้ำมนต์ที่ ขีณัง ปุราณัง ฯเปฯ พอสวดถึง นิพพันติ ธีรา ยะถายัมปะทีโป ให้จุ่มเทียนลงที่น้ำมนต์พร้อมๆ กับคำว่า นิพพันติ.',
+                'thai': 'ระตะนะสุตตะ ขึ้น ยังกิญจิ วิตตัง อิธะ วา หุรัง วา ฯเปฯ เย สุปปะยุตตา มะนะสา ทัฬเหนะ ฯเปฯ อิทัมปิ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ แล้วข้ามไปสวด ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง ฯเปฯ เอเตนะ สัจเจนะ สุวัตถิ โหตุ เริ่มหยดเทียนน้ำมนต์ที่ ขีณัง ปุราณัง ฯเปฯ พอสวดถึง นิพพันติ ธีรา ยะถายัมปะทีโป ให้จุ่มเทียนลงที่น้ำมนต์พร้อมๆ กับคำว่า นิพพันติ.',
                 'paiboon': '',
                 'english': 'The Ratana Sutta, yaṃ kiñci vittaṃ idha vā huraṃ vā … then skipping to khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ …. Begin dripping the candle into the lustral water at khīṇaṃ purāṇaṃ …, and when the chanting reaches nibbanti dhīrā yathāyampadīpo, dip the candle into the water exactly together with the word nibbanti.',
             },
@@ -44306,7 +44306,7 @@ CHANTS = [
         #   printed lists, entered as printed.
         # ‼ CHECK [IMG_0525.PNG]: A PAGE BREAK FALLS BETWEEN TWO WORDS OF ONE
         #   PHRASE: page 257 ends its item 2 at เย and page 258 opens
-        #   สุปะยุตตา. The paragraph continues across the turn, so the verse
+        #   สุปปะยุตตา. The paragraph continues across the turn, so the verse
         #   beginning 258 carries para_layout and NO para_start, by the
         #   page-75 rule.
         'id': 'rabiap-suat-mon-ngan-phithi-mongkhon',
@@ -44462,7 +44462,7 @@ CHANTS = [
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'สุปะยุตตา มะนะสา ฯเปฯ สุวัตถิ โหตุ แล้วข้ามไปขึ้น ขีณัง ปุราณัง นะวัง ฯเปฯ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'thai': 'สุปปะยุตตา มะนะสา ฯเปฯ สุวัตถิ โหตุ แล้วข้ามไปขึ้น ขีณัง ปุราณัง นะวัง ฯเปฯ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
                 'paiboon': '',
                 'english': 'suppayuttā manasā … suvatthi hotu; then skip on to khīṇaṃ purāṇaṃ navaṃ … saṅghe ratanaṃ paṇītaṃ etena saccena suvatthi hotu.',
             },

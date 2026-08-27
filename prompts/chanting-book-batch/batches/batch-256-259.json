@@ -213,7 +213,7 @@
      "number": 13,
      "pali": "",
      "pali_roman": "",
-     "thai": "สุปะยุตตา มะนะสา ฯเปฯ สุวัตถิ โหตุ แล้วข้ามไปขึ้น ขีณัง ปุราณัง นะวัง ฯเปฯ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+     "thai": "สุปปะยุตตา มะนะสา ฯเปฯ สุวัตถิ โหตุ แล้วข้ามไปขึ้น ขีณัง ปุราณัง นะวัง ฯเปฯ สังเฆ ระตะนัง ปะณีตัง เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
      "paiboon": "",
      "english": "suppayuttā manasā … suvatthi hotu; then skip on to khīṇaṃ purāṇaṃ navaṃ … saṅghe ratanaṃ paṇītaṃ etena saccena suvatthi hotu.",
      "para_layout": "prose",
@@ -366,7 +366,7 @@
     {
      "verse": null,
      "file": "IMG_0525.PNG",
-     "issue": "A PAGE BREAK FALLS BETWEEN TWO WORDS OF ONE PHRASE: page 257 ends its item 2 at เย and page 258 opens สุปะยุตตา. The paragraph continues across the turn, so the verse beginning 258 carries para_layout and NO para_start, by the page-75 rule."
+     "issue": "A PAGE BREAK FALLS BETWEEN TWO WORDS OF ONE PHRASE: page 257 ends its item 2 at เย and page 258 opens สุปปะยุตตา. The paragraph continues across the turn, so the verse beginning 258 carries para_layout and NO para_start, by the page-75 rule."
     }
    ]
   },
