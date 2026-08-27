@@ -44689,6 +44689,647 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'kham-kho-khama-thot-phra-therauthera',
+        'title_thai': 'คำขอขมาโทษพระเถรานุเถระทั่วไป',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Words for Asking Pardon of the Elders and Junior Elders Generally',
+        'page_start': 254,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 254,
+                'pali': 'เถเร ปะมาเทนะ, ท์วารัตตะเยนะ กะตัง, สัพพัง อะปะราธัง ขะมะตุ โน ภันเต.',
+                'pali_roman': 'There pamādena, dvārattayena kataṃ, sabbaṃ aparādhaṃ khamatu no bhante.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Venerable sir, may you forgive us every offence done towards the elder through heedlessness, by way of the three doors.',
+            },
+            {
+                'number': 2,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'พระเถระตอบว่า อะหัง ขะมามิ, อายัส์มันเตหิปิ เม ขะมิตัพพัง.',
+                'paiboon': '',
+                'english': 'The elder answers ahaṃ khamāmi, āyasmantehipi me khamitabbaṃ.',
+            },
+            {
+                'number': 3,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'พระอนุเถระรับว่า ขะมามะ ภันเต.',
+                'paiboon': '',
+                'english': 'The junior monks reply khamāma bhante.',
+            },
+            # ‼ CHECK [IMG_0522.PNG]: THE FINAL PARAGRAPH IS A RUBRIC ABOUT
+            #   THE CHANT ITSELF, telling the reader which words to swap for
+            #   one monk instead of several, and which form suits an elder of
+            #   ten rains or more. It is printed as running text under the
+            #   same heading, so it is entered as a verse of the chant rather
+            #   than as a page block.
+            {
+                'number': 4,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': '',
+                'pali_roman': '',
+                'thai': 'นี้สำหรับผู้ขอขมาโทษหลายรูป ถ้ารูปเดียวให้เปลี่ยนตามภาษานิยม คือ คำว่า ขะมะตุ โน ภันเต เปลี่ยนเป็น ขะมะตุ เม ภันเต คำว่า อายัส์มันเตหิปิ เม ขะมิตัพพัง เปลี่ยนเป็น อายัส์มะตาปิ เม ขะมิตัพพัง. คำว่า ขะมามะ ภันเต เปลี่ยนเป็น ขะมามิ ภันเต คำว่า เถเร ปะมาเทนะ สำหรับพระเถระ 10 พรรษาขึ้นไป ถ้าต่ำกว่า 10 พรรษาลงมาเปลี่ยนเป็น อายัส์มันเต ปะมาเทนะ.',
+                'paiboon': '',
+                'english': 'This is for several monks asking pardon together. For one alone the wording changes as usage requires: khamatu no bhante becomes khamatu me bhante; āyasmantehipi me khamitabbaṃ becomes āyasmatāpi me khamitabbaṃ; khamāma bhante becomes khamāmi bhante. And there ye pamādena is for an elder of ten rains or more; below ten rains it becomes āyasmante pamādena.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0522.PNG]: NO ENGLISH IS WRITTEN FOR THESE VERSES. The
+        #   book prints none, and this batch is DATA-ONLY, so the `english`
+        #   layer is left empty rather than invented.
+        'id': 'gatha-jut-thian-chai',
+        'title_thai': 'คาถาจุดเทียนชัย',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Verses for Lighting the Victory Candle',
+        'page_start': 254,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 254,
+                'pali': 'พุทโธ สัพพัญญุตะญาโณ ธัมโม โลกุตตะโร วะโร',
+                'pali_roman': 'Buddho sabbaññutañāṇo dhammo lokuttaro varo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha, whose knowing is all-knowing; the Dhamma, supreme and beyond the world;',
+            },
+            {
+                'number': 2,
+                'pali': 'สังโฆ มัคคะผะลัฏโฐ จะ อิจเจตัง ระตะนัตตะยัง.',
+                'pali_roman': 'Saṅgho maggaphalaṭṭho ca iccetaṃ ratanattayaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the Saṅgha, standing in the paths and their fruits — these are the Three Jewels.',
+            },
+            {
+                'number': 3,
+                'pali': 'เอตัสสะ อานุภาเวนะ สัพพะทุกขา อุปัททะวา',
+                'pali_roman': 'Etassa ānubhāvena sabbadukkhā upaddavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of these, may all sufferings and misfortunes,',
+            },
+            {
+                'number': 4,
+                'pali': 'อันตะรายา จะ นัสสันตุ สัพพะโสตถี ภะวันตุ เต.',
+                'pali_roman': 'Antarāyā ca nassantu sabbasotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and all dangers, perish; and may every blessing be yours.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0523.PNG]: ⚠ THE BOOK PRINTS THIS SAME VERSE THREE WAYS
+        #   AND ALL THREE ARE KEPT. Page 20 has เย ปุคคะลา อัฏฐะสะตัง ปะสัฏฐา
+        #   as one word with ฏ; page 82 and this page have อัฏฐะ สะตัง ปะสัตถา
+        #   as two words with ต. Page 82 also writes ทัฬ์เหนะ with the mark
+        #   over the ฬ where this page writes ทัฬเหนะ without it. None has
+        #   been normalised to any other. Worth checking against the physical
+        #   book.
+        # ‼ CHECK [IMG_0523.PNG]: THE FULL STOPS VARY LINE BY LINE and are
+        #   entered exactly as printed. อิทัมปิ ธัมเม ระตะนัง ปะณีตัง appears
+        #   twice on page 255, once WITHOUT a stop and once WITH one; the same
+        #   is true of อิทัมปิ สังเฆ ระตะนัง ปะณีตัง. They have not been made
+        #   consistent.
+        # ‼ CHECK [IMG_0524.PNG]: THE COLUMN COUNT CHANGES INSIDE THE CHANT.
+        #   It opens in two columns on 254, drops to one centred column for
+        #   the whole of 255, and returns to two for its last two lines on
+        #   256. The page rows record the count each sheet actually uses.
+        'id': 'gatha-dap-thian-chai',
+        'title_thai': 'คาถาดับเทียนชัย',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'The Verses for Quenching the Victory Candle',
+        'page_start': 254,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 254,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have no other refuge; the Buddha is my excellent refuge.',
+            },
+            {
+                'number': 2,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the speaking of this truth, may the blessing of victory be yours.',
+            },
+            {
+                'number': 3,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have no other refuge; the Dhamma is my excellent refuge.',
+            },
+            {
+                'number': 4,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the speaking of this truth, may the blessing of victory be yours.',
+            },
+            {
+                'number': 5,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have no other refuge; the Saṅgha is my excellent refuge.',
+            },
+            {
+                'number': 6,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the speaking of this truth, may the blessing of victory be yours.',
+            },
+            {
+                'number': 7,
+                'pali': 'ยังกิญจิ วิตตัง อิธะ วา หุรัง วา',
+                'pali_roman': 'Yaṅkiñci vittaṃ idha vā huraṃ vā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever treasure there is, here or beyond,',
+            },
+            {
+                'number': 8,
+                'pali': 'สัคเคสุ วา ยัง ระตะนัง ปะณีตัง',
+                'pali_roman': 'Saggesu vā yaṃ ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'or whatever excellent jewel is in the heavens,',
+            },
+            {
+                'number': 9,
+                'pali': 'นะ โน สะมัง อัตถิ ตะถาคะเตนะ',
+                'pali_roman': 'Na no samaṃ atthi tathāgatena',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is none equal to the Tathāgata.',
+            },
+            {
+                'number': 10,
+                'page': 255,
+                'pali': 'อิทัมปิ พุทเธ ระตะนัง ปะณีตัง.',
+                'pali_roman': 'Idampi buddhe ratanaṃ paṇītaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is the excellent jewel in the Buddha.',
+            },
+            {
+                'number': 11,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 12,
+                'pali': 'ขะยัง วิราคัง อะมะตัง ปะณีตัง',
+                'pali_roman': 'Khayaṃ virāgaṃ amataṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That ending, that fading of desire, the deathless, the excellent,',
+            },
+            {
+                'number': 13,
+                'pali': 'ยะทัชฌะคา สัก์ยะมุนี สะมาหิโต',
+                'pali_roman': 'Yadajjhagā sakyamunī samāhito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'which the Sakyan sage, composed, attained —',
+            },
+            {
+                'number': 14,
+                'pali': 'นะ เตนะ ธัมเมนะ สะมัตถิ กิญจิ',
+                'pali_roman': 'Na tena dhammena samatthi kiñci',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is nothing equal to that Dhamma.',
+            },
+            {
+                'number': 15,
+                'pali': 'อิทัมปิ ธัมเม ระตะนัง ปะณีตัง',
+                'pali_roman': 'Idampi dhamme ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is the excellent jewel in the Dhamma.',
+            },
+            {
+                'number': 16,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 17,
+                'pali': 'ยัมพุทธะเสฏโฐ ปะริวัณณะยี สุจิง',
+                'pali_roman': 'Yambuddhaseṭṭho parivaṇṇayī suciṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That purity which the supreme Buddha praised,',
+            },
+            {
+                'number': 18,
+                'pali': 'สะมาธิมานันตะริกัญญะมาหุ',
+                'pali_roman': 'Samādhimānantarikaññamāhu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the concentration they call the one with immediate result —',
+            },
+            {
+                'number': 19,
+                'pali': 'สะมาธินา เตนะ สะโม นะ วิชชะติ',
+                'pali_roman': 'Samādhinā tena samo na vijjati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'no concentration equal to that is found.',
+            },
+            {
+                'number': 20,
+                'pali': 'อิทัมปิ ธัมเม ระตะนัง ปะณีตัง.',
+                'pali_roman': 'Idampi dhamme ratanaṃ paṇītaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is the excellent jewel in the Dhamma.',
+            },
+            {
+                'number': 21,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 22,
+                'pali': 'เย ปุคคะลา อัฏฐะ สะตัง ปะสัตถา',
+                'pali_roman': 'Ye puggalā aṭṭha sataṃ pasatthā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those eight persons, praised by the good,',
+            },
+            {
+                'number': 23,
+                'pali': 'จัตตาริ เอตานิ ยุคานิ โหนติ',
+                'pali_roman': 'Cattāri etāni yugāni honti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who make up these four pairs,',
+            },
+            {
+                'number': 24,
+                'pali': 'เต ทักขิเณยยา สุคะตัสสะ สาวะกา',
+                'pali_roman': 'Te dakkhiṇeyyā sugatassa sāvakā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they are the disciples of the Well-Gone One, worthy of offerings;',
+            },
+            {
+                'number': 25,
+                'pali': 'เอเตสุ ทินนานิ มะหัปผะลานิ.',
+                'pali_roman': 'Etesu dinnāni mahapphalāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'what is given to them bears great fruit.',
+            },
+            {
+                'number': 26,
+                'pali': 'อิทัมปิ สังเฆ ระตะนัง ปะณีตัง',
+                'pali_roman': 'Idampi saṅghe ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is the excellent jewel in the Saṅgha.',
+            },
+            {
+                'number': 27,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 28,
+                'pali': 'เย สุปปะยุตตา มะนะสา ทัฬเหนะ',
+                'pali_roman': 'Ye suppayuttā manasā daḷhena',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those who, with a firm mind, applied themselves well',
+            },
+            {
+                'number': 29,
+                'pali': 'นิกกามิโน โคตะมะสาสะนัมหิ',
+                'pali_roman': 'Nikkāmino gotamasāsanamhi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'in the teaching of Gotama, wanting nothing,',
+            },
+            {
+                'number': 30,
+                'pali': 'เต ปัตติปัตตา อะมะตัง วิคัยหะ',
+                'pali_roman': 'Te pattipattā amataṃ vigayha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'have reached what was to be reached, plunging into the deathless,',
+            },
+            {
+                'number': 31,
+                'pali': 'ลัทธา มุธา นิพพุติง ภุญชะมานา.',
+                'pali_roman': 'Laddhā mudhā nibbutiṃ bhuñjamānā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and, having gained it freely, they enjoy the peace of quenching.',
+            },
+            {
+                'number': 32,
+                'pali': 'อิทัมปิ สังเฆ ระตะนัง ปะณีตัง.',
+                'pali_roman': 'Idampi saṅghe ratanaṃ paṇītaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is the excellent jewel in the Saṅgha.',
+            },
+            {
+                'number': 33,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 34,
+                'pali': 'ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง',
+                'pali_roman': 'Khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The old is exhausted, no new becoming arises;',
+            },
+            {
+                'number': 35,
+                'pali': 'วิรัตตะจิตตายะติเก ภะวัส์มิง',
+                'pali_roman': 'Virattacittāyatike bhavasmiṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'their minds are dispassionate towards any being to come.',
+            },
+            {
+                'number': 36,
+                'page': 256,
+                'pali': 'เต ขีณะพีชา อะวิรุฬหิฉันทา',
+                'pali_roman': 'Te khīṇabījā aviruḷhichandā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Their seed is spent, their wish to grow is gone;',
+            },
+            {
+                'number': 37,
+                'pali': 'นิพพันติ ธีรา ยะถายัมปะทีโป',
+                'pali_roman': 'Nibbanti dhīrā yathāyampadīpo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the wise go out, as this lamp goes out.',
+            },
+            {
+                'number': 38,
+                'pali': 'อิทัมปิ สังเฆ ระตะนัง ปะณีตัง',
+                'pali_roman': 'Idampi saṅghe ratanaṃ paṇītaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This too is the excellent jewel in the Saṅgha.',
+            },
+            {
+                'number': 39,
+                'pali': 'เอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali_roman': 'Etena saccena suvatthi hotu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may there be well-being.',
+            },
+            {
+                'number': 40,
+                'pali': 'สัพพะโรคะวินิมุตโต สัพพะสันตาปะวัชชิโต',
+                'pali_roman': 'Sabbarogavinimutto sabbasantāpavajjito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Freed from every illness, spared every burning torment,',
+            },
+            {
+                'number': 41,
+                'pali': 'สัพพะเวระมะติกกันโต ยะถา ทีโป จะ นิพพุโต.',
+                'pali_roman': 'Sabbaveramatikkanto yathā dīpo ca nibbuto.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having passed beyond all enmity, may you be quenched as this lamp is quenched.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0376.PNG]: A SEVENTEENTH TITLE THE CONTENTS TEST CANNOT
+        #   SEE. The page prints บทขัด กะระณียากะระณียะสุตตัง with a SPACE
+        #   after บทขัด; the สารบัญ has it without one. Every บทขัด from page
+        #   82 on has done this.
+        # ‼ CHECK [IMG_0376.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-karaniyakaraniya-suttam',
+        'title_thai': 'บทขัด กะระณียากะระณียะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt gà-rá-nii-yaa-gà-rá-nii-yá-sùt-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Discourse on What Should and Should Not Be Done',
+        'page_start': 111,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0376.PNG]: TWO COLUMNS, right column begins at x
+            #   1060. Read ACROSS. FIRST PAIRING FOR CHECKING: left วิเนตา
+            #   สุขะมัคคัส์มิง + right เวเนยเย วินะยัง มุนิ.
+            # ‼ CHECK [IMG_0376.PNG]: ONE indent only, on verse 1, measured at
+            #   x 337 against a flush 221-222 for verses 2-4. The chant's own
+            #   paragraph start carries it, so no para_start is set.
+            {
+                'number': 1,
+                'page': 111,
+                'pali': 'วิเนตา สุขะมัคคัส์มิง เวเนยเย วินะยัง มุนิ',
+                'pali_roman': 'Vinetā sukhamaggasmiṃ veneyye vinayaṃ muni',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Sage, training those fit to be trained in the path of happiness,',
+            },
+            {
+                'number': 2,
+                'page': 111,
+                'pali': 'อะกะรัญญัปปะหานายะ กะรัญญะกะระณายะ จะ.',
+                'pali_roman': 'Akaraññappahānāya karaññakaraṇāya ca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so that what should not be done be abandoned, and what should be done be done —',
+            },
+            {
+                'number': 3,
+                'page': 111,
+                'pali': 'ยัง สุตตันตัง อะภาสิตถะ เวเทหะมุนิโน วะรัง',
+                'pali_roman': 'Yaṃ suttantaṃ abhāsittha vedehamunino varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the discourse he spoke, excellent, to the Sage of Videha,',
+            },
+            {
+                'number': 4,
+                'page': 111,
+                'pali': 'สุต์วา ตะถานุการายะ ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Sutvā tathānukārāya taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let us recite that discourse, having heard it, so as to act accordingly.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0376.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'karaniyakaraniya-suttam',
+        'title_thai': 'กะระณียากะระณียะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Karaṇīyākaraṇīyasuttaṃ',
+        'title_english': 'The Discourse on What Should and Should Not Be Done',
+        'book_number': '19',
+        'page_start': 111,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0376.PNG]: ‼ ฬ RULE APPLIED, NOT READ AT THE BOOK —
+            #   but with unusually good support. สัมมุฬโห photographs as
+            #   สัมมุพโห: bare พ, no ascender, read at 6x. Standard Pali is
+            #   sammūḷho, 'confused'. What makes this one stronger than the
+            #   other rule-applications is that the app ALREADY HOLDS THE SAME
+            #   WORD FAMILY WITH ฬ from Josh's own typing — อะสัมมุฬโห in
+            #   mettanisamsa-sutta verse 19 — so the book's own spelling of
+            #   its own word agrees. Still marked as a rule-application: Josh
+            #   has not checked THIS page.
+            # ‼ CHECK [IMG_0376.PNG]: THE PARAGRAPH IS THE UNIT. Both openers
+            #   are indented, measured at x 345 and 352 against a flush edge
+            #   of 222-231, so para_start is set on both verses and
+            #   para_layout 'prose' on the first.
+            # ‼ CHECK [IMG_0376.PNG]: TWO TRIPLETS REPEAT THROUGH THE SUTTA
+            #   AND WERE READ SEPARATELY EACH TIME. Paragraph 1 sets
+            #   กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง four times;
+            #   paragraph 2 sets its positive twin กายะสุจะริตัง วะจีสุจะริตัง
+            #   มะโนสุจะริตัง. The FIRST occurrence in each paragraph carries
+            #   the quotative ติ attached — ...มะโนทุจจะริตันติ — and the
+            #   others do not.
+            # ‼ CHECK [IMG_0376.PNG]: Five cluster marks in this paragraph:
+            #   อายัส์มา, อุปะสังกะมิต์วา, อะภิวาเทต์วา, อายัส์มันตัง and
+            #   ตัส์มิง (four times). All romanised with the mark read as a
+            #   cluster and dropped.
+            {
+                'number': 1,
+                'page': 111,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. อะถะโข อายัส์มา อานันโท, เยนะ ภะคะวา เตนุปะสังกะมิ, อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง นิสีทิ, เอกะมันตัง นิสินนัง โข อายัส์มันตัง อานันทัง ภะคะวา เอตะทะโวจะ. เอกังเสนาหัง อานันทะ อะกะระณียัง วะทามิ. กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, โก อาทีนะโว ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข. อัตตาปิ อัตตานัง อุปะวะทะติ, อะนุวิจจะ วิญญู คะระหันติ, ปาปะโก กิตติสัทโท อัพภุคคัจฉะติ, สัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา อะปายัง ทุคคะติง วินิปาตัง นิระยัง อุปะปัชชะติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Athakho āyasmā ānando, yena bhagavā tenupasaṅkami, upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ nisīdi, ekamantaṃ nisinnaṃ kho āyasmantaṃ ānandaṃ bhagavā etadavoca. Ekaṃsenāhaṃ ānanda akaraṇīyaṃ vadāmi. kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ko ādīnavo pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ayaṃ ādīnavo pāṭikaṅkho. Attāpi attānaṃ upavadati, anuvicca viññū garahanti, pāpako kittisaddo abbhuggacchati, sammūḷho kālaṃ karoti, kāyassa bhedā parammaraṇā apāyaṃ duggatiṃ vinipātaṃ nirayaṃ upapajjati. Yamidaṃ ānanda mayā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ayaṃ ādīnavo pāṭikaṅkho.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. Then the venerable Ānanda approached the Blessed One, paid homage and sat down to one side. To him the Blessed One said this: 'Ānanda, I say categorically that misconduct of body, speech and mind should not be done.' 'Venerable sir, of that misconduct which the Blessed One has categorically declared should not be done — what danger is to be expected when it is done?' 'Ānanda, of that misconduct which I have categorically declared should not be done, this danger is to be expected: one blames oneself; on considering, the wise censure one; an evil report spreads abroad; one dies confused; and on the breaking up of the body, after death, one reappears in a state of deprivation, a bad destination, the lower world, hell.'",
+            },
+            # ‼ CHECK [IMG_0376.PNG]: CUT MID-SENTENCE at the foot of the
+            #   page, after อักขาตัง, — the break falls ON a comma. Marked
+            #   with […] and continues is set. Page 112 should open with the
+            #   positive triplet กายะสุจะริตัง.
+            {
+                'number': 2,
+                'page': 111,
+                'para_start': True,
+                'pali': 'เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, […]',
+                'pali_roman': 'Ekaṃsenāhaṃ ānanda karaṇīyaṃ vadāmi. kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ko ānisaṃso pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, […]',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Ānanda, I say categorically that good conduct of body, speech and mind should be done.' 'Venerable sir, of that good conduct which the Blessed One has categorically declared should be done — what benefit is to be expected when it is done?' 'Ānanda, of that good conduct which I have categorically declared should be done […]",
+            },
+        ],
+    },
 ]
 
 
@@ -46971,6 +47612,32 @@ PAGE_BLOCKS = [
             {
                 'type': 'service_closing',
                 'thai': 'จบ',
+            },
+        ],
+    },
+    # ── Page 256 ───────────────────────────────────────────────────
+    # Written from batch-254-256.json.
+    {
+        'page': 256,
+        'after': 'gatha-dap-thian-chai',
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'อธิบายระเบียบสวดมนต์ในพิธีต่างๆ',
+                'english': 'An Explanation of the Orders of Chanting at the Various Ceremonies',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'งานพิธีต่างๆ ที่เกี่ยวเนื่องกับศาสนพิธีโดยเฉพาะ ที่มีการสวดพระพุทธมนต์นั้น แบ่งออกเป็น 2 จำพวก คืองานพิธีที่เป็นมงคล 1 งานพิธีที่เป็นอวมงคล 1 งานพิธีที่เป็นมงคลนั้น เช่น งานทำบุญฉลองอายุ หรือฉลองอาคารบ้านเรือน ที่ถือกันว่าทำงานพิธีเพื่อให้เป็นสิริสวัสดิมงคล งานพิธีที่เป็นอวมงคลนั้น ได้แก่งานทำบุญอุทิศให้แก่คนตาย เช่น ทำบุญ 7 วัน 50 วัน หรือ 100 วัน โดยมิได้มุ่งให้เป็นสิริสวัสดิมงคล',
+                'english': 'Ceremonies bound up with religious observance in particular, at which the Buddha-mantas are chanted, fall into two kinds: the auspicious, and the inauspicious. An auspicious ceremony is such as a birthday merit-making, or the blessing of a building or a house, held in the belief that the ceremony brings good fortune and blessing. An inauspicious ceremony is a merit-making dedicated to someone who has died — at seven days, fifty days or a hundred days — which is not aimed at good fortune and blessing.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'ในงานพิธีมงคลและพิธีอวมงคลดังกล่าว มีพิธีนิยมสวดมนต์ไม่เหมือนกัน คือ งานพิธีมงคลมีระเบียบสวดอย่าง 1 งานพิธีอวมงคลมีระเบียบสวดอีกอย่าง 1 จักอธิบายไว้พอเป็นตัวอย่างดังต่อไปนี้.-',
+                'english': 'At those auspicious and inauspicious ceremonies the customary chanting is not the same: the auspicious ceremony has one order, the inauspicious another. Enough will be explained here to serve as an example, as follows:',
+                'english_unverified': True,
             },
         ],
     },
