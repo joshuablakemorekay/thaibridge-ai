@@ -92,12 +92,16 @@
     { "en": "When rumination starts:" },
     { "en": "“Rumination cues action.”" },
     { "en": "“Action beats depression.”" },
-    { "en": "When distraction starts:" },
+    { "en": "whenever your mind is distracted away from the task at hand. This is a cue to switch your mind back to the task" },
     { "en": "“Refocus.”" },
     { "en": "When idleness starts:" },
     { "en": "“Get up and act.”" },
     { "en": "Small actions repeated consistently become habits. Habits develop discipline. Discipline creates momentum. Momentum allows us to accomplish meaningful goals." },
     { "en": "And it all starts with one simple action:" },
-    { "en": "Get out of bed and begin." }
-  ]
+    { "en": "Get out of bed. Make the bed, & begin your day." }
+  ],
+  "closing_note": {
+    "heading": "Note on what a cue is:",
+    "body": "Phase 1: Problem, eg, wandering mind. Phase 2: Problem triggers a cue to immediately take action, eg, set mind back to the task with full focus. This is how we can train the mind as to sustain focus on a particular task."
+  }
 }
