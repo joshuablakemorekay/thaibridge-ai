@@ -50961,7 +50961,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 8; the rest is not in the app yet.
         'id': 'buddha-jayamangala-gatha-plae',
         'title_thai': 'พุทธชัยมังคลคาถา (ถวายพรพระ)',
         'page_start': 203,
@@ -51049,6 +51049,83 @@ CHANTS = [
                 'thai': 'พระจอมมุนีได้ชนะช้างตัวประเสริฐชื่อนาฬาคิรี, เป็นช้างตกมันยิ่งนัก แสนที่จะทารุณ, ประดุจไฟป่า จักราวุธ และสายฟ้า, ด้วยวิธีรดลงด้วยน้ำคือพระเมตตา, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná cháaŋ dtua bprà-sə̀ət chʉ̂ʉ naa-laa-ki-rii, bpen cháaŋ dtòk man yîŋ nák sɛ̌ɛn tîi jà taa-run, bprà-dùt fai bpàa jàk-graa-wút lɛ́ sǎai-fáa, dûay wí-tii rót loŋ dûay náam kʉʉ prá mêet-dtaa, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
                 'english': 'The Lord of Sages defeated the great elephant Nalagiri, maddened and utterly cruel, like a forest fire, a discus weapon, a thunderbolt - defeated him by sprinkling the water that is loving-kindness. By that power may the blessings of victory be yours.',
+            },
+            # ‼ CHECK [IMG_0474.PNG]: A BRACKETED GLOSS INSIDE THE THAI:
+            #   ได้ชนะโจรชื่อองคุลิมาล, (ผู้มีพวงดอกไม้คือนิ้วมือมนุษย์), -
+            #   the book explains the bandit's name, 'he whose garland of
+            #   flowers is human fingers', in brackets in the middle of the
+            #   sentence. Kept with its brackets and both commas. Different
+            #   again from page 201's เต (ตา), which offered an alternative to
+            #   chant; this one is the book explaining itself.
+            # ‼ CHECK [IMG_0474.PNG]: ALL FIVE STANZAS END ON THE SAME TWO
+            #   CLAUSES, in Pali and in Thai alike - ตันเตชะสา ภะวะตุ เต
+            #   ชะยะมังคะลานิ. and ขอชัยมงคลทั้งหลายจงมีแก่ท่าน,
+            #   ด้วยเดชแห่งพระพุทธชัยมงคลนั้น. Each was read off the sheet
+            #   rather than assumed; they are identical, and stanza 4's Thai
+            #   refrain runs on from สามโยชน์, with no line of its own.
+            {
+                'number': 4,
+                'page': 204,
+                'pali': 'อุกขิตตะขัคคะมะติหัตถะสุทารุณันตัง, ธาวันติโยชะนะปะถังคุลิมาละวันตัง, อิทธีภิสังขะตะมะโน ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Ukkhittakhaggamatihatthasudāruṇantaṃ, Dhāvantiyojanapathaṅgulimālavantaṃ, Iddhībhisaṅkhatamano jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'thai': 'พระจอมมุนีมีพระหฤทัยไปในที่จะกระทำอิทธิปาฏิหาริย์, ได้ชนะโจรชื่อองคุลิมาล, (ผู้มีพวงดอกไม้คือนิ้วมือมนุษย์), แสนร้ายกาจ มีฝีมือ, ถือดาบวิ่งไล่พระองค์ไปสิ้นทางสามโยชน์, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
+                'paiboon': 'prá-jɔɔm-mú-nii mii prá-hà-rʉ́-tai bpai nai tîi jà grà-tam ìt-tì-bpaa-dtì-hǎan, dâai chá-ná joon chʉ̂ʉ oŋ-kú-lí-maan, (pûu mii puaŋ-dɔ̀ɔk-máai kʉʉ níu-mʉʉ má-nút), sɛ̌ɛn ráai-gàat mii fǐi-mʉʉ, tʉ̌ʉ dàap wîŋ lâi prá-oŋ bpai sîn taaŋ sǎam yôot, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
+                'english': 'The Lord of Sages, his mind set on a display of power, defeated the bandit Angulimala - he of the garland made of human fingers - vicious and skilled, who chased him sword in hand for three leagues. By that power may the blessings of victory be yours.',
+            },
+            # ‼ CHECK [IMG_0474.PNG]: THE THANTHAKHAT CLUSTERS ARE AS PRINTED,
+            #   checked at 4x: กัต์วานะ (verse 5) and พ์รัห์มัง (verse 8).
+            #   Every Pali line on this sheet was also put through the app's
+            #   own transliterator as a cross-check, and all fifteen came back
+            #   as the standard Jayamangala readings - Katvāna kaṭṭhamudaraṃ
+            #   iva gabbhinīyā, Duggāhadiṭṭhibhujagena, and the rest - which
+            #   is independent corroboration of the reading, not a correction
+            #   of it.
+            {
+                'number': 5,
+                'page': 204,
+                'pali': 'กัต์วานะ กัฏฐะมุทะรัง อิวะ คัพภินียา, จิญจายะ ทุฏฐะวะจะนัง ชะนะกายะมัชเฌ, สันเตนะ โสมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Katvāna kaṭṭhamudaraṃ iva gabbhinīyā, Ciñcāya duṭṭhavacanaṃ janakāyamajjhe, Santena somavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'thai': 'พระจอมมุนีได้ชนะคำกล่าวร้ายของนางจิญจมาณวิกา, ผู้เอาไม้กลมผูกที่ท้อง ทำอาการประหนึ่งว่ามีครรภ์, ด้วยวิธีสงบระงับอันงาม ในท่ามกลางหมู่ชน, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
+                'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná kam glàao ráai kɔ̌ɔŋ naaŋ jin-já-maa-ná-wí-gaa, pûu ao máai glom pùuk tîi tɔ́ɔŋ tam aa-gaan bprà-nʉ̀ŋ wâa mii kan, dûay wí-tii sà-ŋòp rá-ŋáp an ŋaam nai tâam-glaaŋ mùu chon, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
+                'english': 'The Lord of Sages defeated the slander of Cinca, who tied a round piece of wood to her belly to feign pregnancy, by the fine way of stillness, in the midst of the crowd. By that power may the blessings of victory be yours.',
+            },
+            {
+                'number': 6,
+                'page': 204,
+                'pali': 'สัจจัง วิหายะ มะติสัจจะกะวาทะเกตุง, วาทาภิโรปิตะมะนัง อะติอันธะภูตัง, ปัญญาปะทีปะชะลิโต ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Saccaṃ vihāya matisaccakavādaketuṃ, Vādābhiropitamanaṃ atiandhabhūtaṃ, Paññāpadīpajalito jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'thai': 'พระจอมมุนีรุ่งเรืองแล้วด้วยประทีปคือปัญญา, ได้ชนะสัจจกะนิครนถ์ ผู้สละเสียซึ่งความสัตย์, มีใจที่จะยกถ้อยคำของตนให้สูงดุจยกธง, เป็นผู้มืดมนยิ่งนัก, ด้วยเทศนาญาณวิธี, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
+                'paiboon': 'prá-jɔɔm-mú-nii rûŋ-rʉaŋ lɛ́ɛo dûay bprà-tîip kʉʉ bpan-yaa, dâai chá-ná sàt-jà-gá ní-kron pûu sà-là sǐa sʉ̂ŋ kwaam-sàt, mii jai tîi jà yók tɔ̂ɔi-kam kɔ̌ɔŋ dton hâi sǔuŋ dùt yók toŋ, bpen pûu mʉ̂ʉt-mon yîŋ nák, dûay têet-sà-nǎa yaan-wí-tii, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
+                'english': 'The Lord of Sages, ablaze with the lamp that is wisdom, defeated Saccaka the Nigantha, who had abandoned truth and set his mind on raising his own words like a banner, a man deep in darkness, by the way of the knowledge that teaches. By that power may the blessings of victory be yours.',
+            },
+            {
+                'number': 7,
+                'page': 204,
+                'pali': 'นันโทปะนันทะภุชะคัง วิพุธัง มะหิทธิง, ปุตเตนะ เถระภุชะเคนะ ทะมาปะยันโต, อิทธูปะเทสะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Nandopanandabhujagaṃ vibudhaṃ mahiddhiṃ, Puttena therabhujagena damāpayanto, Iddhūpadesavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'thai': 'พระจอมมุนีโปรดให้พระโมคคัลลานเถระพุทธชิโนรส, นิรมิตกายเป็นนาคราช, ไปทรมานพญานาคราช ชื่อนันโทปนันทะ, ผู้มีความรู้ผิด มีฤทธิ์มาก, ด้วยวิธีแสดงฤทธิ์ที่เหนือกว่า, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
+                'paiboon': 'prá-jɔɔm-mú-nii bpròot hâi prá-môok-kan-laan têe-rá pút-tá-chí-noo-rót, ní-rá-mít gaai bpen naa-ká-râat, bpai tɔɔ-rá-maan pá-yaa-naa-ká-râat chʉ̂ʉ nan-too-bpà-nan-tá, pûu mii kwaam-rúu-pìt mii rít mâak, dûay wí-tii sà-dɛɛŋ rít tîi nʉ̌a gwàa, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
+                'english': 'The Lord of Sages had his son, the elder Moggallana, take the form of a naga and tame the naga king Nandopananda, wrong in view and great in power, by the way of a greater display of power. By that power may the blessings of victory be yours.',
+            },
+            # ‼ CHECK [IMG_0474.PNG]: ‼ VERSE 8 SPANS THE PAGE TURN, AND IS
+            #   RECORDED WHOLE ON 204. The book prints its two Pali lines at
+            #   the foot of 204 and its Thai prose paragraph at the head of
+            #   205 - IMG_0475 was opened and read before this page was
+            #   written, so the unit went in complete rather than being split.
+            #   This follows the ruling already made at 195-196: a unit is
+            #   recorded whole on the page its PALI starts, with no […]
+            #   marker, because the app has no way to show half a unit. THE
+            #   COST, stated plainly: page 205 renders without the Thai
+            #   paragraph it actually prints at the top, and page 205's rows
+            #   therefore start at verse 9.
+            {
+                'number': 8,
+                'page': 204,
+                'pali': 'ทุคคาหะทิฏฐิภุชะเคนะ สุทัฏฐะหัตถัง, พ์รัห์มัง วิสุทธิชุติมิทธิพะกาภิธานัง, ญาณาคะเทนะ วิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Duggāhadiṭṭhibhujagena sudaṭṭhahatthaṃ, Brahmaṃ visuddhijutimiddhibakābhidhānaṃ, Ñāṇāgadena vidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'thai': 'พระจอมมุนีได้ชนะพรหมผู้มีนามว่าพกะ ผู้มีฤทธิ์ สำคัญตนว่ารุ่งเรืองด้วยคุณอันบริสุทธิ์, มีมืออันท้าวภุชงค์คือทิฏฐิที่ตนถือผิด รัดรึงไว้แน่นแฟ้นแล้ว, ด้วยวิธีวางยาอันพิเศษ คือเทศนาญาณ, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
+                'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná prom pûu mii naam wâa pá-gà pûu mii rít sǎm-kan dton wâa rûŋ-rʉaŋ dûay kun an bɔɔ-rí-sùt, mii mʉʉ an táao pú-choŋ kʉʉ tít-tì tîi dton tʉ̌ʉ pìt rát-rʉŋ wái nɛ̂n-fɛ́n lɛ́ɛo, dûay wí-tii waaŋ yaa an pí-sèet kʉʉ têet-sà-nǎa-yaan, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
+                'english': 'The Lord of Sages defeated the brahma named Baka, of great power, who supposed himself radiant with purity, his hand gripped fast by the serpent that is his own wrong view, by the way of the antidote that is knowledge. By that power may the blessings of victory be yours.',
             },
         ],
     },

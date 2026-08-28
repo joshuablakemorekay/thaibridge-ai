@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-203 went in.
+204 went in.
 
 ## Read first, in this order
 
@@ -80,8 +80,12 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 204, `IMG_0474`.** ⚠️ `buddha-jayamangala-gatha-plae` IS OPEN —
-**3 stanzas in, resume at verse 4**. `samvega-parikittana-patha-plae` CLOSED on
+**Next: page 205, `IMG_0475`.** ⚠️ `buddha-jayamangala-gatha-plae` IS OPEN —
+**8 stanzas in, resume at verse 9**. ⚠️ **Verse 8 is ALREADY IN, recorded whole
+on page 204**, so do NOT enter the Thai paragraph at the head of 205 — it
+belongs to a unit the app already holds. 205 also carries the chant's closing
+เอตาปิ verse and then a NEW chant, `ตังขะณิกะปัจจะเวกขะณะปาโฐ`, with an
+invitation and the rubric `(ขณะใช้สอยจีวร)`. `samvega-parikittana-patha-plae` CLOSED on
 203, and the whole morning service closed with it.
 
 Three things page 203 turned up that change how later pages are read:
