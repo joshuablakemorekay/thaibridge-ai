@@ -1421,36 +1421,70 @@ heading above as applying to it.
 
 ## Where it is
 
-**Pages 312–325 are IN and unbroken**, all entered 2026-08-24:
+Coverage is now **1–112, 217–221, 250–277 and 279–325**. The forward pass is at
+112 and climbing; this pass has walked back from 325 to **250**.
 
-| pages | chant | verses |
-|---|---|---:|
-| 312–316 | `yod-phrakantraipidok` | 86 |
-| 316 | `vipassit` | 1 |
-| 317–325 | `mahasamayasutta-roman` | 192 |
+**Resume at page 249 = `IMG_0517`, but READ THE NUMBER off the sheet.** The
+offset is 268 through the 250s. Page 250 opens with its own centred heading, so
+nothing runs back from it — 249 is a clean start.
 
-All three are complete and **no CONTINUES marker is left anywhere in the file**.
+### What the 250s turned out to be
 
-**Resume at page 311 = `IMG_0578`, but READ THE NUMBER off the sheet.** Page 311
-is the END of the Jinapañjara — verses 9 to 15, closing `carāmi jinapañjareti`
-— so the next unit is that chant, and its opening page has to be found by
-reading backwards until a title appears. The offset is 267 here.
+A single connected run about ceremony, and it reads better backwards than the
+page numbers suggest:
 
-## ⚠ Two open questions for when the book is in hand
+| pages | what is there |
+|---|---|
+| 250–252 | the four invitations; the elaborate one spans all three sheets |
+| 252 | the bangsukun verses, and asking pardon of the Triple Gem |
+| 253 | asking pardon of a Great Elder, his reply, and his rejoicing |
+| 254–256 | the victory candle, lit and quenched |
+| 256–260 | `อธิบายระเบียบสวดมนต์ในพิธีต่างๆ` and its numbered orders 1, 2, 3 |
+| 261–264 | orders 4 and 5 — the middling and short Seven Tamnan |
 
-Neither blocks further work, but both are cheaper to settle now than later.
+**The three Seven Tamnan orders differ by WHERE THEY BEGIN, not only by length.**
+The full form's Karaṇīyametta starts at the sutta's true opening
+`กะระณียะมัตถะกุสะเลนะ`; the short form starts at `เมตตัญจะ สัพพะโลกัส์มิง`,
+well into it. Same for the Khandha Paritta. They are three different texts, not
+one text cut three ways.
 
-1. **Is `VIPASSIT` a title or a closing label?** It is centred, capitalised,
-   with white space above and one centred line below — set exactly like the
-   page-312 title, which is why it was entered as its own chant. But it carries
-   no bracketed English gloss where that title does. If the book says it belongs
-   to the chant above, fold it in as a `closing` and drop the separate entry.
+## ⚠ Four things this pass had to settle, all cheap to get wrong again
+
+1. **`สุปปะยุตตา` has TWO ป and `ทัฬเหนะ` takes ฬ.** I entered both wrong on
+   four pages (258, 261, 263, 267) before checking at magnification. Fixed in
+   `e9105d9`. The Ratana Sutta already in the app from the forward pass has both
+   right — use it as the cross-check.
+2. **The ฬ-as-พ rule applies here too.** `ยะถามุฬเห` (252, 253) and `วิรุฬหิง`
+   (253) are written with ฬ AGAINST the photograph, because this typeface
+   photographs ฬ as พ and the canon has ḷ. Page 256's `อะวิรุฬหิฉันทา`, where
+   the ฬ IS legible, is the corroboration.
+3. **`สีรีมะโต` on 258 and 260, `สิรีมะโต` on 92.** The book disagrees with
+   itself; all three are kept as printed. So are the three spellings of one
+   Ratana Sutta line on pages 20, 82 and 255.
+4. **A block anchors after the PREVIOUS chant on its page**, computed only from
+   the rows in the batch being applied (`apply_batch.py:772`). Walking backwards
+   this bites constantly: the chant a heading sits under is often not entered
+   yet. Two ways through, both used here — defer the block to the batch that
+   enters the chant above it (page 256's section heading went to batch-254-256),
+   or give it a row with `chant: ""` and `verses: "none"` placed AFTER that
+   chant's row.
+
+## ⚠ Open questions for when the book is in hand
+
+Neither blocks further work.
+
+1. **Is `VIPASSIT` (page 316) a title or a closing label?** Centred and
+   capitalised like the page-312 title, which is why it was entered as its own
+   chant, but with no bracketed English gloss where that title has one.
 2. **The invocation material on 314–316 cannot be checked by sense.** Heart
    syllables (`sosososasa`, `a-a-a-a-ni`, `ma-a-u`) are abbreviations where each
-   letter stands for a phrase, and words like `buddhapapha`, `puyapaka`,
-   `hetupova`, `vinapañca` and `kalākara kanā` have no reading to check against.
-   They are transcribed exactly as set. These are the lines that most need
-   the printed page.
+   letter stands for a phrase. Transcribed exactly as set.
+3. **Page 252's third chant ENDS WITH A COMMA** — `อายะติง สังวะรายะ,` with
+   white space below and a different chant's heading on 253. The same formula on
+   253 ends with a full stop.
+4. **Page 250 prints `กัตอัญชะลี`**, not the more usual `กัตวัญชะลี`.
+5. **Page 300's second precept reads `สะทามิยามิ` for `สะมาทิยามิ`** — a word a
+   reader would chant.
 
 ## Read `docs/chanting-book-photo-map.md` first
 
@@ -1483,9 +1517,29 @@ them the hard way.
 
 ## ⚠ Two sessions cannot both hold `chanting.py`
 
-This pass ran alongside the forward pass in the SAME clone and they collided:
-one file held four pages of work from two sessions and neither could commit
-without dragging in the other's. It was resolved by one honest combined commit.
+This pass ran alongside the forward pass in the SAME clone and they collided
+twice, in two different ways.
+
+**First: a shared working tree.** One file held four pages of work from two
+sessions and neither could commit without dragging in the other's. Resolved by
+one honest combined commit, which is the least bad option once it has happened.
+
+**Second, and worse: a LOST UPDATE.** The other session read `chanting.py`,
+this session applied a batch, and the other session then wrote its whole file
+back — silently deleting three chants that had already passed every check. It
+was caught only because the full test suite ran afterwards and `check_render`
+reported the verses `MISSING from the page entirely`. Nothing else would have
+noticed.
+
+**So: apply, then commit IMMEDIATELY, and verify after.** The window that lost
+the work was the four minutes the test suite took between applying and
+committing. Committed work survived the overwrite untouched; only the
+uncommitted apply was lost.
+
+Expect transient red too. A check run while the other session is mid-write will
+report failures that are gone a minute later — page 112's closing was `MISSING`
+in one run and present in the next. Re-run before believing a failure that names
+a page you did not touch.
 
 **"Bank the batch files and apply later" is NOT a safe way round it.** A batch
 file whose verses are not in `chanting.py` makes `check_pages` AND
