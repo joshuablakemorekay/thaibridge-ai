@@ -1,0 +1,304 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "bot-khat-chasaraniyadhamma-suttam",
+   "chasaraniyadhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 114,
+    "file": "IMG_0379.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-chasaraniyadhamma-suttam",
+    "verses": "1-8",
+    "starts_here": true,
+    "note": "The top of the sheet: a centred bold title and eight TWO-COLUMN rows, right column beginning at x 1180, verse 1 indented. The chant starts and ends here."
+   },
+   {
+    "page": 114,
+    "file": "IMG_0379.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "chasaraniyadhamma-suttam",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "The rest of the sheet: a centred bold NUMBERED title (21.), then SINGLE-COLUMN prose in five indented paragraphs — the nidāna and the book's items 1 to 4, the last cut mid-sentence at the foot. No footnote, no colophon."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-chasaraniyadhamma-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Eight, one per two-column row, read ACROSS. One group.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "title_roman is the contents' Paiboon value; the SPACING of title_thai follows the page.",
+    "pages": "IMG_0379.PNG, page 114. Title and all eight rows are on this page; the chant starts and ends here."
+   },
+   "title_thai": "บทขัด ฉะสาราณียะธัมมะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt chà-sǎa-raa-nii-yá-tam-má-sùt-dtaŋ",
+   "title_english": "The Prefatory Verse for the Discourse on the Six States to be Remembered",
+   "page_start": 114,
+   "english_unverified": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สะมัคคะกะระโณ พุทโธ สามัคคิยัง นิโยชะโก",
+     "pali_roman": "Samaggakaraṇo buddho sāmaggiyaṃ niyojako",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Buddha, maker of concord, who yokes people to harmony,",
+     "page": 114
+    },
+    {
+     "number": 2,
+     "pali": "สะมัคคะกะระเณ ธัมเม สาราณีเย อะเทสะยิ.",
+     "pali_roman": "Samaggakaraṇe dhamme sārāṇīye adesayi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "taught the states to be remembered, which make for concord —",
+     "page": 114
+    },
+    {
+     "number": 3,
+     "pali": "อัญญะมัญญัง ปิยะตายะ สาธิโน คาระวัสสะ จะ",
+     "pali_roman": "Aññamaññaṃ piyatāya sādhino gāravassa ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "for affection one for another, and for respect that brings success,",
+     "page": 114
+    },
+    {
+     "number": 4,
+     "pali": "สังคะหายาวิวาทายะ สามัคคิเยกะตายะ จะ",
+     "pali_roman": "Saṅgahāyāvivādāya sāmaggiyekatāya ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "for cohesion, for freedom from dispute, and for concord and unity.",
+     "page": 114
+    },
+    {
+     "number": 5,
+     "pali": "สังวัตตันเตวะ ภิกขูนัง ธัมเมนะ ปะฏิปัชชะตัง",
+     "pali_roman": "Saṃvattanteva bhikkhūnaṃ dhammena paṭipajjataṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "They lead onward for monks who practise by the Dhamma.",
+     "page": 114
+    },
+    {
+     "number": 6,
+     "pali": "เตสัมปะกาสะกัง สุตตัง ยัง สัมพุทเธนะ ภาสิตัง.",
+     "pali_roman": "Tesampakāsakaṃ suttaṃ yaṃ sambuddhena bhāsitaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "That sutta which sets them out, spoken by the Fully Awakened One —",
+     "page": 114
+    },
+    {
+     "number": 7,
+     "pali": "สุต์วานานุกะระเณนะ ยะถา พุทเธนะ เทสิตัง",
+     "pali_roman": "Sutvānānukaraṇena yathā buddhena desitaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "having heard it, so as to act as the Buddha taught,",
+     "page": 114
+    },
+    {
+     "number": 8,
+     "pali": "สาธูนัง อัตตะสิทธัตถัง ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Sādhūnaṃ attasiddhatthaṃ taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "for good people's own accomplishment — let us recite that discourse.",
+     "page": 114
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สาราณียะ",
+     "pali_roman": "sārāṇīya",
+     "meaning": "'to be remembered', or in some readings 'conducive to fellow-feeling'. The six are named for what a community keeps in mind about one another"
+    },
+    {
+     "pali": "สะมัคคะกะระโณ",
+     "pali_roman": "samaggakaraṇo",
+     "meaning": "'maker of concord'. The บทขัด opens by naming the Buddha for the thing this sutta is about, before naming the sutta at all"
+    },
+    {
+     "pali": "เอกีภาวายะ",
+     "pali_roman": "ekībhāvāya",
+     "meaning": "'to the state of being one'. The last of the four results the six states lead to, and the strongest"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0379.PNG",
+     "issue": "A NINETEENTH TITLE THE CONTENTS TEST CANNOT SEE. The page prints บทขัด ฉะสาราณียะธัมมะสุตตัง with a SPACE after บทขัด; the สารบัญ has it without one. Every บทขัด from page 82 on has done this."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0379.PNG",
+     "issue": "TWO COLUMNS, right column begins at x 1180. Read ACROSS. FIRST PAIRING FOR CHECKING: left สะมัคคะกะระโณ พุทโธ + right สามัคคิยัง นิโยชะโก."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0379.PNG",
+     "issue": "อัญญะมัญญัง VERIFIED AT 6x — the marks under the ญ glyphs are the letter's own tails, not ู vowels. It read as อัญญูะมัญญัง at ordinary magnification, which is why it was checked."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0379.PNG",
+     "issue": "ONE indent only, on verse 1, at +130 against a FITTED baseline. This sheet sits unusually far right and drifts +59px down the page, so a fixed threshold would be meaningless; every flush line sits on the fit within 4px."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0379.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  },
+  {
+   "id": "chasaraniyadhamma-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Five, one per indented paragraph — the nidāna, then the book's numbered items 1 to 4. Item 4 is cut at the foot.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "The heading prints a NUMBER, 21, which goes in book_number. printed_number runs one behind the verse number because verse 1 is the unnumbered nidāna.",
+    "pages": "IMG_0379.PNG, page 114. The chant STARTS here and CONTINUES onto page 115 — two more of the six states are still to come."
+   },
+   "title_thai": "ฉะสาราณียะธัมมะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Chasārāṇīyadhammasuttaṃ",
+   "title_english": "The Discourse on the Six States to be Remembered",
+   "book_number": "21",
+   "page_start": 114,
+   "english_unverified": true,
+   "continues": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. ฉะยิเม ภิกขะเว ธัมมา สาราณียา ปิยะกะระณา คะรุกะระณา, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตันติ กะตะเม ฉะ.",
+     "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Chayime bhikkhave dhammā sārāṇīyā piyakaraṇā garukaraṇā, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattanti katame cha.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the monks: 'Monks.' 'Venerable sir,' those monks replied. The Blessed One said this: 'Monks, there are these six states to be remembered, making for affection and respect, which lead to cohesion, to non-dispute, to concord, to unity. Which six?'",
+     "page": 114,
+     "para_start": true,
+     "para_layout": "prose"
+    },
+    {
+     "number": 2,
+     "pali": "อิธะ ภิกขะเว ภิกขุโน เมตตัง กายะกัมมัง ปัจจุปัฏฐิตัง โหติ. สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.",
+     "pali_roman": "Idha bhikkhave bhikkhuno mettaṃ kāyakammaṃ paccupaṭṭhitaṃ hoti. Sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Here, monks, a monk maintains bodily acts of loving-kindness towards his fellows in the holy life, both openly and in private — this too is a state to be remembered, making for affection and respect, and it leads to cohesion, to non-dispute, to concord, to unity.",
+     "page": 114,
+     "para_start": true,
+     "printed_number": 1
+    },
+    {
+     "number": 3,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง วะจีกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhuno mettaṃ vacīkammaṃ paccupaṭṭhitaṃ hoti, sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk maintains verbal acts of loving-kindness towards his fellows in the holy life, both openly and in private — this too is a state to be remembered, making for affection and respect, and it leads to cohesion, to non-dispute, to concord, to unity.",
+     "page": 114,
+     "para_start": true,
+     "printed_number": 2
+    },
+    {
+     "number": 4,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง มะโนกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhuno mettaṃ manokammaṃ paccupaṭṭhitaṃ hoti, sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk maintains mental acts of loving-kindness towards his fellows in the holy life, both openly and in private — this too is a state to be remembered, making for affection and respect, and it leads to cohesion, to non-dispute, to concord, to unity.",
+     "page": 114,
+     "para_start": true,
+     "printed_number": 3
+    },
+    {
+     "number": 5,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ, เย เต ลาภา ธัมมิกา ธัมมะลัทธา […]",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu, ye te lābhā dhammikā dhammaladdhā […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk — whatever gains are righteous and righteously obtained […]",
+     "page": 114,
+     "para_start": true,
+     "printed_number": 4
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อาวิ เจวะ ระโห จะ",
+     "pali_roman": "āvi ceva raho ca",
+     "meaning": "'both openly and in private'. The phrase that makes each of the first three states a test of sincerity rather than of manners"
+    },
+    {
+     "pali": "ธัมมะลัทธา",
+     "pali_roman": "dhammaladdhā",
+     "meaning": "righteously obtained. Item 4 turns from conduct to property — what a monk receives and how he shares it"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0379.PNG",
+     "issue": "THE PARAGRAPH IS THE UNIT. Five openers are indented at +119 to +130 against the fitted baseline; every other line sits on it within 4px. para_start on all five, para_layout 'prose' on the first."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0379.PNG",
+     "issue": "‼ ITEM 1 CLOSES ITS FIRST CLAUSE WITH A FULL STOP WHERE ITEMS 2 AND 3 USE A COMMA. All three read ...ปัจจุปัฏฐิตัง โหติ followed by สะพ์รัห์มะจารีสุ, but item 1 prints โหติ. and the other two print โหติ,. Read separately in each place and reproduced as printed."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0379.PNG",
+     "issue": "One line-break hyphen rejoined in item 1: สะพ์รัห์มะ- / จารีสุ. Items 2 and 3 print the same word unbroken, which is how the difference was noticed."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0379.PNG",
+     "issue": "CUT MID-SENTENCE at the foot of the page, after ธัมมะลัทธา. Marked with […] and continues is set. The break falls at a WORD boundary, so page 115 should open with อันตะมะโส or similar — the sharing clause that completes item 4."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0379.PNG",
+     "issue": "english_unverified is set. The book prints this chant in Pali only, so thai and paiboon are empty on every verse and the English is a working translation made for this edition."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-chasaraniyadhamma-suttam"
+  ],
+  "continues": [
+   "chasaraniyadhamma-suttam"
+  ],
+  "resume_from": {
+   "chant": "chasaraniyadhamma-suttam",
+   "next_verse": 6,
+   "page": 115
+  },
+  "paiboon_scan": "Nothing to scan. Both chants are printed in Pali only, so paiboon is empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0379.PNG read end to end. Page number 114 read off the sheet. A centred bold title with eight two-column rows, a centred bold numbered title, five indented prose paragraphs running to the foot. No footnote, no rule, no colophon. Two hands hold the page at the bottom margin and obscure nothing.",
+  "notes": "The whole sheet sits unusually far right and drifts +59px down the page, so every indent was measured against a fitted baseline rather than a threshold. อัญญะมัญญัง was checked at 6x because the ญ tails read as ู vowels at ordinary magnification — they are not. Item 1 closes a clause with a full stop where items 2 and 3 use a comma.",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — genuinely two different words and the BOOK prints the difference. ภิกขู, plural, is the assembly the Buddha addresses in the nidāna; ภิกขุ, singular, is the monk each of the six states describes, and ภิกขุโน is its genitive. Same pair declared on pages 103, 104, 105 and 110 for the same reason."
+  ]
+ }
+}

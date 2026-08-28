@@ -46891,6 +46891,217 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0379.PNG]: A NINETEENTH TITLE THE CONTENTS TEST CANNOT
+        #   SEE. The page prints บทขัด ฉะสาราณียะธัมมะสุตตัง with a SPACE
+        #   after บทขัด; the สารบัญ has it without one. Every บทขัด from page
+        #   82 on has done this.
+        # ‼ CHECK [IMG_0379.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'bot-khat-chasaraniyadhamma-suttam',
+        'title_thai': 'บทขัด ฉะสาราณียะธัมมะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt chà-sǎa-raa-nii-yá-tam-má-sùt-dtaŋ',
+        'title_english': 'The Prefatory Verse for the Discourse on the Six States to be Remembered',
+        'page_start': 114,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0379.PNG]: TWO COLUMNS, right column begins at x
+            #   1180. Read ACROSS. FIRST PAIRING FOR CHECKING: left
+            #   สะมัคคะกะระโณ พุทโธ + right สามัคคิยัง นิโยชะโก.
+            # ‼ CHECK [IMG_0379.PNG]: ONE indent only, on verse 1, at +130
+            #   against a FITTED baseline. This sheet sits unusually far right
+            #   and drifts +59px down the page, so a fixed threshold would be
+            #   meaningless; every flush line sits on the fit within 4px.
+            {
+                'number': 1,
+                'page': 114,
+                'pali': 'สะมัคคะกะระโณ พุทโธ สามัคคิยัง นิโยชะโก',
+                'pali_roman': 'Samaggakaraṇo buddho sāmaggiyaṃ niyojako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha, maker of concord, who yokes people to harmony,',
+            },
+            {
+                'number': 2,
+                'page': 114,
+                'pali': 'สะมัคคะกะระเณ ธัมเม สาราณีเย อะเทสะยิ.',
+                'pali_roman': 'Samaggakaraṇe dhamme sārāṇīye adesayi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'taught the states to be remembered, which make for concord —',
+            },
+            # ‼ CHECK [IMG_0379.PNG]: อัญญะมัญญัง VERIFIED AT 6x — the marks
+            #   under the ญ glyphs are the letter's own tails, not ู vowels.
+            #   It read as อัญญูะมัญญัง at ordinary magnification, which is
+            #   why it was checked.
+            {
+                'number': 3,
+                'page': 114,
+                'pali': 'อัญญะมัญญัง ปิยะตายะ สาธิโน คาระวัสสะ จะ',
+                'pali_roman': 'Aññamaññaṃ piyatāya sādhino gāravassa ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for affection one for another, and for respect that brings success,',
+            },
+            {
+                'number': 4,
+                'page': 114,
+                'pali': 'สังคะหายาวิวาทายะ สามัคคิเยกะตายะ จะ',
+                'pali_roman': 'Saṅgahāyāvivādāya sāmaggiyekatāya ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for cohesion, for freedom from dispute, and for concord and unity.',
+            },
+            {
+                'number': 5,
+                'page': 114,
+                'pali': 'สังวัตตันเตวะ ภิกขูนัง ธัมเมนะ ปะฏิปัชชะตัง',
+                'pali_roman': 'Saṃvattanteva bhikkhūnaṃ dhammena paṭipajjataṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'They lead onward for monks who practise by the Dhamma.',
+            },
+            {
+                'number': 6,
+                'page': 114,
+                'pali': 'เตสัมปะกาสะกัง สุตตัง ยัง สัมพุทเธนะ ภาสิตัง.',
+                'pali_roman': 'Tesampakāsakaṃ suttaṃ yaṃ sambuddhena bhāsitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That sutta which sets them out, spoken by the Fully Awakened One —',
+            },
+            {
+                'number': 7,
+                'page': 114,
+                'pali': 'สุต์วานานุกะระเณนะ ยะถา พุทเธนะ เทสิตัง',
+                'pali_roman': 'Sutvānānukaraṇena yathā buddhena desitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having heard it, so as to act as the Buddha taught,',
+            },
+            {
+                'number': 8,
+                'page': 114,
+                'pali': 'สาธูนัง อัตตะสิทธัตถัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Sādhūnaṃ attasiddhatthaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': "for good people's own accomplishment — let us recite that discourse.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0379.PNG]: english_unverified is set. The book prints
+        #   this chant in Pali only, so thai and paiboon are empty on every
+        #   verse and the English is a working translation made for this
+        #   edition.
+        'id': 'chasaraniyadhamma-suttam',
+        'title_thai': 'ฉะสาราณียะธัมมะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Chasārāṇīyadhammasuttaṃ',
+        'title_english': 'The Discourse on the Six States to be Remembered',
+        'book_number': '21',
+        'page_start': 114,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0379.PNG]: THE PARAGRAPH IS THE UNIT. Five openers
+            #   are indented at +119 to +130 against the fitted baseline;
+            #   every other line sits on it within 4px. para_start on all
+            #   five, para_layout 'prose' on the first.
+            {
+                'number': 1,
+                'page': 114,
+                'para_start': True,
+                'para_layout': 'prose',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. ฉะยิเม ภิกขะเว ธัมมา สาราณียา ปิยะกะระณา คะรุกะระณา, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตันติ กะตะเม ฉะ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Chayime bhikkhave dhammā sārāṇīyā piyakaraṇā garukaraṇā, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattanti katame cha.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying near Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the monks: 'Monks.' 'Venerable sir,' those monks replied. The Blessed One said this: 'Monks, there are these six states to be remembered, making for affection and respect, which lead to cohesion, to non-dispute, to concord, to unity. Which six?'",
+            },
+            # ‼ CHECK [IMG_0379.PNG]: ‼ ITEM 1 CLOSES ITS FIRST CLAUSE WITH A
+            #   FULL STOP WHERE ITEMS 2 AND 3 USE A COMMA. All three read
+            #   ...ปัจจุปัฏฐิตัง โหติ followed by สะพ์รัห์มะจารีสุ, but item 1
+            #   prints โหติ. and the other two print โหติ,. Read separately in
+            #   each place and reproduced as printed.
+            # ‼ CHECK [IMG_0379.PNG]: One line-break hyphen rejoined in item
+            #   1: สะพ์รัห์มะ- / จารีสุ. Items 2 and 3 print the same word
+            #   unbroken, which is how the difference was noticed.
+            {
+                'number': 2,
+                'page': 114,
+                'printed_number': 1,
+                'para_start': True,
+                'pali': 'อิธะ ภิกขะเว ภิกขุโน เมตตัง กายะกัมมัง ปัจจุปัฏฐิตัง โหติ. สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
+                'pali_roman': 'Idha bhikkhave bhikkhuno mettaṃ kāyakammaṃ paccupaṭṭhitaṃ hoti. Sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here, monks, a monk maintains bodily acts of loving-kindness towards his fellows in the holy life, both openly and in private — this too is a state to be remembered, making for affection and respect, and it leads to cohesion, to non-dispute, to concord, to unity.',
+            },
+            {
+                'number': 3,
+                'page': 114,
+                'printed_number': 2,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง วะจีกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhuno mettaṃ vacīkammaṃ paccupaṭṭhitaṃ hoti, sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk maintains verbal acts of loving-kindness towards his fellows in the holy life, both openly and in private — this too is a state to be remembered, making for affection and respect, and it leads to cohesion, to non-dispute, to concord, to unity.',
+            },
+            {
+                'number': 4,
+                'page': 114,
+                'printed_number': 3,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง มะโนกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhuno mettaṃ manokammaṃ paccupaṭṭhitaṃ hoti, sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk maintains mental acts of loving-kindness towards his fellows in the holy life, both openly and in private — this too is a state to be remembered, making for affection and respect, and it leads to cohesion, to non-dispute, to concord, to unity.',
+            },
+            # ‼ CHECK [IMG_0379.PNG]: CUT MID-SENTENCE at the foot of the
+            #   page, after ธัมมะลัทธา. Marked with […] and continues is set.
+            #   The break falls at a WORD boundary, so page 115 should open
+            #   with อันตะมะโส or similar — the sharing clause that completes
+            #   item 4.
+            {
+                'number': 5,
+                'page': 114,
+                'printed_number': 4,
+                'para_start': True,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ, เย เต ลาภา ธัมมิกา ธัมมะลัทธา […]',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu, ye te lābhā dhammikā dhammaladdhā […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And further, monks, a monk — whatever gains are righteous and righteously obtained […]',
+            },
+        ],
+    },
 ]
 
 

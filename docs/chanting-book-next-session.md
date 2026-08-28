@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-113 went in.
+114 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–113 are in and unbroken**, plus 217–221. **149 chants and 2,208
+- **Pages 1–114 are in and unbroken**, plus 217–221. **151 chants and 2,221
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 113 were applied 2026-08-24/28; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 114 were applied 2026-08-24/28; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,14 +46,28 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 114, `IMG_0379` — but READ THE NUMBER off the sheet
+## Next: page 115, `IMG_0380` — ⚠️ A CHANT IS OPEN
 
-The offset is **265** since page 86 and has held for 87–113, so page 114 *should*
-be `IMG_0379`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–114, so page 115 *should*
+be `IMG_0380`. **Five more changes are still expected before page 207.**
 
-**Page 114 starts clean.** `aggappasada-suttam` closed on 113 with its colophon
-and citation, and **nothing is open**. The book was on `20.`, so expect `21.` or
-a new `บทขัด`.
+**⚠️ `chasaraniyadhamma-suttam` IS OPEN and carries a `‼ CONTINUES` marker.**
+Five paragraphs are in — the nidāna and the book's items 1 to 4, the last cut.
+**Resume at verse 6.** Item 4 breaks after `ธัมมะลัทธา` at a WORD boundary, so
+page 115 should open with the sharing clause that completes it. **Two of the six
+states remain** (right view and virtue), then a closing and probably a colophon.
+
+## 📏 Measure indents against a FITTED baseline — page 114 is the clearest case
+
+Worth keeping in front of you. This sheet sits unusually far right AND drifts
+**+59px** down the page: its flush lines run from x 341 at the top to x 392 at
+the foot. A fixed threshold picks the wrong answer at both ends.
+
+The fit was `x = 0.0262*y + 330`. Against it, **every flush line landed within
+4px** and the six indents stood **+119 to +130** clear — an unambiguous split
+that no single number could have produced. Pages 100, 112 and 113 all needed the
+same treatment (drifts of −82, −25 and +59). **Assume drift; fit the line.**
+
 
 ## ‼ THE BOOK PRINTS THE SAME EIGHT VERSES TWICE — AND BOTH STAY
 
