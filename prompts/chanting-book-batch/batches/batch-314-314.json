@@ -190,7 +190,7 @@
     {
      "number": 69,
      "pali": "",
-     "pali_roman": "sosososasa a-a-a-a-ni tejasu nemabhūcanāvive asaṃvisulopusabubha iśvāsu, susvā-i, kusalādhammā citti vi-atthi.",
+     "pali_roman": "sososasa a-a-a-a-ni tejasu nemabhūcanāvive asaṃvisulopusabubha iśvāsu, susvā-i, kusalādhammā citti vi-atthi.",
      "thai": "",
      "paiboon": "",
      "english": "Heart-syllable formulas, each letter standing for a whole phrase; then: wholesome states, the mind, and what is present.",
@@ -249,7 +249,7 @@
     {
      "verse": 68,
      "file": "IMG_0581.PNG",
-     "issue": "⚠ ITEM 9 IS THE LEAST CERTAIN TEXT IN THIS CHANT AND IS WORTH CHECKING AGAINST THE BOOK BEFORE ANYTHING RELIES ON IT. It is heart-syllable material — strings like sosososasa, a-a-a-a-ni, āpāmacupa, dimasamaṇkhu — where word division CANNOT be inferred from sense, because the syllables are abbreviations rather than words. The division here follows the page's own measured spacing where that is decisive and the known Thai text elsewhere. Read at 3x magnification on a crop rather than off the full sheet."
+     "issue": "⚠ ITEM 9 IS THE LEAST CERTAIN TEXT IN THIS CHANT AND IS WORTH CHECKING AGAINST THE BOOK BEFORE ANYTHING RELIES ON IT. It is heart-syllable material — strings like sososasa, a-a-a-a-ni, āpāmacupa, dimasamaṇkhu — where word division CANNOT be inferred from sense, because the syllables are abbreviations rather than words. The division here follows the page's own measured spacing where that is decisive and the known Thai text elsewhere. Read at 3x magnification on a crop rather than off the full sheet."
     },
     {
      "verse": 68,
@@ -297,7 +297,7 @@
   "paiboon_scan": "clean, and trivially so. The page prints no Thai, so every paiboon is empty and there is no Paiboon+ anywhere in the batch. Scanned every romanised slot for kh, th, ph and ng standing in for Thai consonants: zero hits.",
   "pali_untouched": "Confirmed, with the sense inverted for this section. There is no Thai-script pali to leave untouched — every pali value is empty by design — and every pali_roman is the page's own roman text copied letter for letter: dotted m throughout, n with dot below in saraṇaṃ and ñāṇa, t with dot below in paṭhama, and the s with acute in iśvāsu left exactly as set. The em dash inside namosan—ghāya is kept; the wrapping hyphen in namodham-/māya is not.",
   "page_scan": "agrees. One row for one page covering verses 51-71, the whole of what this page adds. Verse 51 carries the page key. No verse is orphaned and none is claimed twice. No page blocks and no footnotes on this sheet.",
-  "notes": "⚠ ITEM 9 IS AN UNREVIEWED DRAFT OF UNUSUALLY LOW CONFIDENCE and is the one place in this section that most needs the book in hand. Three findings. (1) THE SHEET CARRIES TWO LAYOUTS: seventeen formula lines that inherit the chant's 'lines' layout, then four PROSE paragraphs that each have to declare para_layout explicitly. (2) HEART-SYLLABLE MATERIAL CANNOT BE DIVIDED BY SENSE — sosososasa, a-a-a-a-ni, āpāmacupa are abbreviations where each letter stands for a phrase, so the only guides are the page's measured spacing and the known Thai text. (3) THE BOOK USES AN EM DASH INSIDE A WORD, mid-line, in namosan—ghāya; that is kept, while the ordinary wrapping hyphen in namodham-/māya is not. Two different marks, two different decisions.",
+  "notes": "⚠ ITEM 9 IS AN UNREVIEWED DRAFT OF UNUSUALLY LOW CONFIDENCE and is the one place in this section that most needs the book in hand. Three findings. (1) THE SHEET CARRIES TWO LAYOUTS: seventeen formula lines that inherit the chant's 'lines' layout, then four PROSE paragraphs that each have to declare para_layout explicitly. (2) HEART-SYLLABLE MATERIAL CANNOT BE DIVIDED BY SENSE — sososasa, a-a-a-a-ni, āpāmacupa are abbreviations where each letter stands for a phrase, so the only guides are the page's measured spacing and the known Thai text. (3) THE BOOK USES AN EM DASH INSIDE A WORD, mid-line, in namosan—ghāya; that is kept, while the ordinary wrapping hyphen in namodham-/māya is not. Two different marks, two different decisions.",
   "diacritic_exceptions": []
  }
 }
