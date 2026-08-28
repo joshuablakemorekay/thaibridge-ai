@@ -132,7 +132,7 @@ photograph.
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
 somewhere between 74 and 207 were shot twice. Those stretches are unmapped.
 
-## ⚠ Three pages between 224 and 316 were never photographed — TWO now found
+## ⚠ Three pages between 224 and 316 were never photographed — ALL THREE FOUND
 
 The back of the book was mapped on 2026-08-24 by working backwards from the
 last photograph, and it turned up a gap that the forward pass would not have
@@ -173,8 +173,19 @@ Identical in shape to 277/278/279: divider on the recto, blank verso, content
 resuming on the next recto. The offset therefore steps here too — **268 at
 pages 249 and up, 269 at 247 and below.**
 
-**One of the three is still unfound.** Look for a third divider: a sheet with no
-page number, a centred title and nothing else.
+### And the third is page 246, next door
+
+`IMG_0515` prints **245**, not 246. So the count between 245 and 249 is: 245 on
+`IMG_0515`, then **246 unphotographed**, then 247 the divider on `IMG_0516`,
+then **248 unphotographed**, then 249 on `IMG_0517`.
+
+That is an ordinary book structure — a section ends, a blank verso, a divider
+recto, a blank verso, the new section opening on a recto — and it accounts for
+**two of the three gaps in one place**.
+
+**ALL THREE ARE NOW FOUND: 246, 248 and 278.** The arithmetic closes exactly:
+page 223 sits at offset 270 and page 317 at offset 267, a fall of three, and
+three pages have no photograph. Nothing else is missing between 224 and 316.
 
 | page | photo | offset |
 |---|---|---|

@@ -1500,12 +1500,14 @@ heading above as applying to it.
 
 ## Where it is
 
-Coverage is now **1–112, 217–221, 250–277 and 279–325**. The forward pass is at
-112 and climbing; this pass has walked back from 325 to **250**.
+Coverage is now **1–114, 193, 217–221, 241–245, 247, 249–277 and 279–325**.
+The forward pass is at 114; this pass has walked back from 325 to **241**.
+Pages 246 and 248 are absent ON PURPOSE — see the photo map.
 
-**Resume at page 249 = `IMG_0517`, but READ THE NUMBER off the sheet.** The
-offset is 268 through the 250s. Page 250 opens with its own centred heading, so
-nothing runs back from it — 249 is a clean start.
+**Resume at page 240 = `IMG_0510`, but READ THE NUMBER off the sheet.** The
+offset is **270** from page 245 down and **268** from 249 up; two unphotographed
+blanks sit between. Page 241 opens with its own centred heading, so nothing runs
+back from it — 240 is a clean start.
 
 ### What the 250s turned out to be
 
@@ -1548,22 +1550,57 @@ one text cut three ways.
    or give it a row with `chant: ""` and `verses: "none"` placed AFTER that
    chant's row.
 
+## ⚠ The book has a SECOND doubled chant, and it answered both open questions
+
+`ยอดพระกัณฑ์ไตรปิฎก` is printed **twice**: at **241–245 in Thai script** and at
+**312–316 in roman**, where the roman pass had already entered it as
+`yod-phrakantraipidok`. Mahāsamaya (175 Thai, 317–325 roman) was the only
+doubled chant known before. The Thai one is `yod-phrakantraipidok-thai`; neither
+has been merged into the other, because the book prints both.
+
+This closed the two questions the roman pass left open:
+
+1. **`VIPASSIT` is a TITLE.** Page 245 prints the same word in Thai script,
+   `วิปัสสิต`, in bold, centred, larger than the single line beneath it —
+   unmistakably a heading. Entering it as its own chant was right.
+2. **The heart-syllable material now has a second witness.** `ma-a-u` is
+   `มะอะอุ`, `sososasa` is `โสโสสะสะ`, `a-a-a-a-ni` is `อะอะอะอะนิ`. What could
+   not be checked by sense can be checked against its twin.
+
+**And the twin immediately found a real error in committed data.** The app held
+`sosososasa`, five syllables; the Thai has four, and re-reading the roman sheet
+at magnification showed the book prints `sososasa`. Corrected in `c7fd915`.
+
+### How to use a twin
+
+Romanise the Thai with `translit_pali` and compare word by word against the
+roman chant already in the app. Differences are either a transcription error —
+go back to BOTH photographs at magnification — or a genuine difference between
+the printings, in which case **enter each as its own page prints it and record
+the difference in the checks.** Fourteen differences were found across 241–245
+and none was smoothed away. The largest is a whole line: the roman prints
+`itipi so bhagavā.` where the Thai prints nothing, so the Thai has 85 units to
+the roman's 86. Both sheets were checked.
+
+English was taken from the roman twin verse for verse rather than written
+afresh. It is the same chant; two hand-written glosses for one text would only
+drift apart.
+
 ## ⚠ Open questions for when the book is in hand
 
-Neither blocks further work.
+None of these blocks further work.
 
-1. **Is `VIPASSIT` (page 316) a title or a closing label?** Centred and
-   capitalised like the page-312 title, which is why it was entered as its own
-   chant, but with no bracketed English gloss where that title has one.
-2. **The invocation material on 314–316 cannot be checked by sense.** Heart
-   syllables (`sosososasa`, `a-a-a-a-ni`, `ma-a-u`) are abbreviations where each
-   letter stands for a phrase. Transcribed exactly as set.
-3. **Page 252's third chant ENDS WITH A COMMA** — `อายะติง สังวะรายะ,` with
+1. **Page 252's third chant ENDS WITH A COMMA** — `อายะติง สังวะรายะ,` with
    white space below and a different chant's heading on 253. The same formula on
-   253 ends with a full stop.
-4. **Page 250 prints `กัตอัญชะลี`**, not the more usual `กัตวัญชะลี`.
-5. **Page 300's second precept reads `สะทามิยามิ` for `สะมาทิยามิ`** — a word a
+   253 ends with a full stop. Page 249's first chant does the same thing in its
+   middle unit.
+2. **Page 250 prints `กัตอัญชะลี`**, not the more usual `กัตวัญชะลี`.
+3. **Page 300's second precept reads `สะทามิยามิ` for `สะมาทิยามิ`** — a word a
    reader would chant.
+4. **The two printings of ยอดพระกัณฑ์ไตรปิฎก disagree in fourteen places.** The
+   substantive ones: a whole missing line; `ปาระมี`/`ปาระมิ` inside one item;
+   `ปุกะยะปะ` against `puyapaka`; a whole word `วิชชา` the roman lacks; and the
+   roman's `mitti mitti mitt`, which really is what that sheet prints.
 
 ## Read `docs/chanting-book-photo-map.md` first
 
