@@ -48034,7 +48034,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
         # ‼ CHECK [IMG_0463.PNG]: NOT A DUPLICATE TO MERGE. The app already
         #   holds คำบูชาพระรัตนตรัย from page 1, in Pali only. This is the
         #   book's SECOND printing of it, in the translated section, and it
@@ -48124,6 +48123,42 @@ CHANTS = [
                 'paiboon': 'kâa-dtɛ̀ɛ prá-oŋ pûu-jà-rəən, prá-pûu-mii-prá-pâak-jâo mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo, soŋ sâaŋ kun an sǎm-rèt bprà-yòot wái gɛ̀ɛ kâa-pá-jâo táŋ-lǎai,',
                 'english': 'Venerable sir, though the Blessed One long ago attained final Nibbāna, he brought into being what is of benefit to us,',
             },
+            {
+                'number': 6,
+                'page': 194,
+                'pali': 'ปัจฉิมาชะนะตานุกัมปะมานะสา,',
+                'pali_roman': 'Pacchimājanatānukampamānasā,',
+                'thai': 'ทรงมีพระหฤทัยอนุเคราะห์แก่พวกข้าพเจ้า, อันเป็นชนรุ่นหลัง,',
+                'paiboon': 'soŋ mii prá-há-rʉ́-tai à-nú-krɔ́ gɛ̀ɛ pûak kâa-pá-jâo, an bpen chon rûn-lǎŋ,',
+                'english': 'whose heart is compassionate towards us, who are of a later generation,',
+            },
+            {
+                'number': 7,
+                'page': 194,
+                'pali': 'อิเม สักกาเร ทุคคะตะปัณณาการะภูเต ปะฏิคคัณหาตุ,',
+                'pali_roman': 'Ime sakkāre duggatapaṇṇākārabhūte paṭiggaṇhātu,',
+                'thai': 'ขอพระผู้มีพระภาคเจ้าจงรับเครื่องสักการะ, อันเป็นบรรณาการของคนยากทั้งหลายเหล่านี้,',
+                'paiboon': 'kɔ̌ɔ prá-pûu-mii-prá-pâak-jâo joŋ ráp krʉ̂aŋ sàk-gaa-rá, an bpen ban-naa-gaan kɔ̌ɔŋ kon yâak táŋ-lǎai lào níi,',
+                'english': 'may the Blessed One accept these offerings, which are the poor gifts of the needy,',
+            },
+            # ‼ CHECK [IMG_0464.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Eight verses across pages 193 and 194, each
+            #   a Pali line with its own Thai translation beneath.
+            # ‼ CHECK [IMG_0464.PNG]: AN ORNAMENT SEPARATES THE TWO CHANTS.
+            #   Three flowers are set centred at x 872 below verse 8, with
+            #   white space above and below. It is not a heading and carries
+            #   no words, so it is recorded here rather than as a block — the
+            #   app has no ornament type and inventing one would be adding to
+            #   the book.
+            {
+                'number': 8,
+                'page': 194,
+                'pali': 'อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ.',
+                'pali_roman': 'Amhākaṃ dīgharattaṃ hitāya sukhāya.',
+                'thai': 'เพื่อประโยชน์และความสุขแก่ข้าพเจ้าทั้งหลาย, ตลอดกาลนานเทอญ.',
+                'paiboon': 'pʉ̂a bprà-yòot lɛ́ kwaam-sùk gɛ̀ɛ kâa-pá-jâo táŋ-lǎai, dtà-lɔ̀ɔt gaan naan təən.',
+                'english': 'for our welfare and happiness, for a long time to come.',
+            },
         ],
     },
     {
@@ -48162,6 +48197,112 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'May all suffering, all fear and all illness be destroyed.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0464.PNG]: ‼ THE PAGE PRINTS NO TITLE FOR THIS CHANT.
+        #   It begins straight after the ornament with อะระหัง สัมมาสัมพุทโธ
+        #   ภะคะวา, in bold, and the book's own สารบัญ does not list it in the
+        #   translated section either — the section's entries jump from
+        #   คำบูชาพระรัตนตรัย (๑๙๓) to ปุพพะภาคะนะมะการ (๑๙๕). title_thai is
+        #   therefore NOT read off this page: it is taken from the app's
+        #   existing copies of the same chant at pages 1 and 51, where the
+        #   book does title it. Recorded because a title the page does not
+        #   print is exactly the kind of thing this run must not invent
+        #   silently.
+        # ‼ CHECK [IMG_0464.PNG]: ‼ A THIRD PRINTING, AND IT DIFFERS FROM BOTH
+        #   THE OTHERS. The app holds kham-namatsakan-phra-ratanattaya (page
+        #   1) and -evening (page 51), each with THREE verses that pair the
+        #   two Pali lines together. This page SPLITS each pair into two Pali
+        #   lines so that each can carry its own Thai translation, giving SIX.
+        #   The rubric differs too: (กราบ) here, (กราบพร้อมกัน) in both
+        #   earlier copies. Reproduced as printed; not merged.
+        # ‼ CHECK [IMG_0464.PNG]: english_unverified is set. The English is
+        #   this edition's working translation, and here it can be checked
+        #   against the Thai the book itself prints.
+        'id': 'kham-namatsakan-phra-ratanattaya-plae',
+        'title_thai': 'คำนมัสการพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': 'kam ná-mát-sà-gaan prá-rát-dtà-ná-dtrai',
+        'title_english': 'Homage to the Triple Gem',
+        'page_start': 194,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 194,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ ภะคะวา,',
+                'pali_roman': 'Arahaṃ sammāsambuddho bhagavā,',
+                'thai': 'พระผู้มีพระภาคเจ้า, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,',
+                'paiboon': 'prá-pûu-mii-prá-pâak-jâo, bpen prá-à-rá-hǎn, dàp pləəŋ gì-lèet pləəŋ túk sîn-chəəŋ, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,',
+                'english': 'The Blessed One is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,',
+            },
+            # ‼ CHECK [IMG_0464.PNG]: The (กราบ) lines are centred at x 872
+            #   beneath the second verse of each pair, and are carried as a
+            #   rubric on that verse — they instruct the chanter to bow and
+            #   are not chanted.
+            {
+                'number': 2,
+                'page': 194,
+                'rubric': '(กราบ)',
+                'pali': 'พุทธัง ภะคะวันตัง อะภิวาเทมิ.',
+                'pali_roman': 'Buddhaṃ bhagavantaṃ abhivādemi.',
+                'thai': 'ข้าพเจ้าอภิวาทพระผู้มีพระภาคเจ้า, ผู้รู้ ผู้ตื่น ผู้เบิกบาน.',
+                'paiboon': 'kâa-pá-jâo à-pí-wâat prá-pûu-mii-prá-pâak-jâo, pûu-rúu pûu-dtʉ̀ʉn pûu-bə̀ək-baan.',
+                'english': 'I bow low to the Blessed One, the one who knows, who is awake, who has blossomed.',
+            },
+            # ‼ CHECK [IMG_0464.PNG]: ‼ ส์วากขาโต CARRIES THE CLUSTER MARK
+            #   HERE, where page 1's copy prints สวากขาโต WITHOUT it and page
+            #   51's prints it WITH. Three printings, two spellings. All
+            #   reproduced as printed.
+            {
+                'number': 3,
+                'page': 194,
+                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto bhagavatā dhammo,',
+                'thai': 'พระธรรม เป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,',
+                'paiboon': 'prá-tam bpen tam tîi prá-pûu-mii-prá-pâak-jâo, dtràt wái dii lɛ́ɛo,',
+                'english': 'The Dhamma is the teaching well proclaimed by the Blessed One,',
+            },
+            {
+                'number': 4,
+                'page': 194,
+                'rubric': '(กราบ)',
+                'pali': 'ธัมมัง นะมัสสามิ.',
+                'pali_roman': 'Dhammaṃ namassāmi.',
+                'thai': 'ข้าพเจ้านมัสการพระธรรม.',
+                'paiboon': 'kâa-pá-jâo ná-mát-sà-gaan prá-tam.',
+                'english': 'I pay homage to the Dhamma.',
+            },
+            {
+                'number': 5,
+                'page': 194,
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า, ปฏิบัติดีแล้ว,',
+                'paiboon': 'prá-sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo, bpà-dtì-bàt dii lɛ́ɛo,',
+                'english': "The Sangha of the Blessed One's disciples has practised well,",
+            },
+            {
+                'number': 6,
+                'page': 194,
+                'rubric': '(กราบ)',
+                'pali': 'สังฆัง นะมามิ.',
+                'pali_roman': 'Saṅghaṃ namāmi.',
+                'thai': 'ข้าพเจ้านอบน้อมพระสงฆ์.',
+                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-sǒŋ.',
+                'english': 'I bow to the Sangha.',
             },
         ],
     },

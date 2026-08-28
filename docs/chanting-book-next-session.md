@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-193 went in — the first five-layer page.
+194 went in.
 
 ## Read first, in this order
 
@@ -80,8 +80,36 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 194, `IMG_0464`.** ⚠️ `kham-bucha-phra-ratanattaya-plae` IS OPEN —
-five units in, **resume at verse 6**.
+**Next: page 195, `IMG_0465`.** Page 194 closed both its chants and **nothing
+is open in this lane**. The สารบัญ says 195 carries `ปุพพะภาคะนะมะการ` and
+`พุทธาภิถุติ`.
+
+## ‼ A CHANT CAN BE PRINTED WITH NO TITLE — do not invent one silently
+
+Page 194's second chant begins straight after an ornament, in bold, with **no
+heading of any kind**, and the book's own สารบัญ does not list it in this
+section either: the entries jump from `คำบูชาพระรัตนตรัย` (๑๙๓) to
+`ปุพพะภาคะนะมะการ` (๑๙๕).
+
+Its `title_thai` is therefore **not read off the page**. It is taken from the
+app's existing copies of the same chant at pages 1 and 51, where the book *does*
+title it, and the check on that chant says so in as many words. **Where a title
+comes from somewhere other than the sheet in front of you, record where.**
+
+## 🔁 Three printings of one chant, all different
+
+`คำนมัสการพระรัตนตรัย` is now in the app three times, and no two agree:
+
+| | page 1 | page 51 | page 194 |
+|---|---|---|---|
+| verses | 3 | 3 | **6** |
+| rubric | `(กราบพร้อมกัน)` | `(กราบพร้อมกัน)` | **`(กราบ)`** |
+| `svākkhāto` | `สวากขาโต` | `ส์วากขาโต` | `ส์วากขาโต` |
+
+Page 194 splits each pair of Pali lines in two **because each half needs its own
+Thai translation** — the translated section's layout forces a finer unit than the
+Pali-only pages needed. Expect that throughout this section: **the same chant
+will have MORE verses here than in its first-pass copy.**
 
 ## ‼ THE BOOK'S TWO PRINTINGS CAN DIFFER IN MEANING, NOT JUST PUNCTUATION
 
