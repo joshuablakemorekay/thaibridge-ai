@@ -1,0 +1,583 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 2,
+  "files_read": 2,
+  "received": 2,
+  "manifest": [
+   "unhissavijaya-gatha",
+   "gathajinabanjara-thai"
+  ],
+  "pages": [
+   {
+    "page": 237,
+    "file": "IMG_0507.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "unhissavijaya-gatha",
+    "verses": "1-10",
+    "starts_here": true,
+    "note": "The page opens with this chant's centred bold heading, then ten TWO-COLUMN rows read ACROSS. Complete on this sheet."
+   },
+   {
+    "page": 237,
+    "file": "IMG_0507.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "gathajinabanjara-thai",
+    "verses": "1-11",
+    "starts_here": true,
+    "note": "Below it, a centred bold พระคาถาชินบัญชร: two opening lines, a centred rubric in brackets, then numbered stanzas 1 to 4. The chant CONTINUES onto 238."
+   },
+   {
+    "page": 238,
+    "file": "IMG_0508.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "gathajinabanjara-thai",
+    "verses": "12-37",
+    "starts_here": false,
+    "note": "The chant continuing and ENDING; no heading of its own. Stanzas 5 to 15. Stanza 9 has THREE lines and stanza 15 has FIVE, where every other stanza has two — the same shape the roman copy has at 311."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "unhissavijaya-gatha",
+   "title_thai": "อุณ์หิสสะวิชะยะคาถา",
+   "title_pali": "",
+   "title_roman": "ùn-hìt-sà-wí-chá-yá-kaa-tǎa",
+   "title_english": "The Uṇhissavijaya Verses",
+   "page_start": 237,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Ten lines, each printed as a pair of half-lines in two columns and joined.",
+    "ordering": "Pure Pali. No Thai translation is printed, even though the chant stands inside the translated section — as with คาถาจุดเทียนชัย on page 193.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0507, page 237. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อัตถิ อุณ์หิสสะ วิชะโย ธัมโม โลเก อะนุตตะโร",
+     "pali_roman": "atthi uṇhissa vijayo dhammo loke anuttaro",
+     "thai": "",
+     "paiboon": "",
+     "english": "There is the Uṇhissavijaya, a teaching unsurpassed in the world.",
+     "page": 237
+    },
+    {
+     "number": 2,
+     "pali": "สัพพะสัตตะหิตัตถายะ ตัง ต์วัง คัณหาหิ เทวะเต",
+     "pali_roman": "sabbasattahitatthāya taṃ tvaṃ gaṇhāhi devate",
+     "thai": "",
+     "paiboon": "",
+     "english": "For the welfare of all beings, take it up, O deity."
+    },
+    {
+     "number": 3,
+     "pali": "ปะริวัชเช ราชะทัณเฑ อะมะนุสเสหิ ปาวะเก",
+     "pali_roman": "parivajje rājadaṇḍe amanussehi pāvake",
+     "thai": "",
+     "paiboon": "",
+     "english": "It wards off royal punishment, non-human beings and fire,"
+    },
+    {
+     "number": 4,
+     "pali": "พ์ยัคเฆ นาเค วิเส ภูเต อะกาละมะระเณนะ วา",
+     "pali_roman": "byagghe nāge vise bhūte akālamaraṇena vā",
+     "thai": "",
+     "paiboon": "",
+     "english": "tigers, serpents, poison and spirits, and untimely death."
+    },
+    {
+     "number": 5,
+     "pali": "สัพพัส์มา มะระณา มุตโต ฐะเปต์วา กาละมาริตัง",
+     "pali_roman": "sabbasmā maraṇā mutto ṭhapetvā kālamāritaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "One is freed from every death but the death that comes in its time."
+    },
+    {
+     "number": 6,
+     "pali": "ตัสเสวะ อานุภาเวนะ โหตุ เทโว สุขี สะทา",
+     "pali_roman": "tasseva ānubhāvena hotu devo sukhī sadā",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the power of that very thing, may the deity be always happy."
+    },
+    {
+     "number": 7,
+     "pali": "สุทธะสีลัง สะมาทายะ ธัมมัง สุจะริตัง จะเร",
+     "pali_roman": "suddhasīlaṃ samādāya dhammaṃ sucaritaṃ care",
+     "thai": "",
+     "paiboon": "",
+     "english": "Undertaking pure virtue, let one walk the Dhamma well practised."
+    },
+    {
+     "number": 8,
+     "pali": "ตัสเสวะ อานุภาเวนะ โหตุ เทโว สุขี สะทา",
+     "pali_roman": "tasseva ānubhāvena hotu devo sukhī sadā",
+     "thai": "",
+     "paiboon": "",
+     "english": "By the power of that very thing, may the deity be always happy."
+    },
+    {
+     "number": 9,
+     "pali": "ลิกขิตัง จินติตัง ปูชัง ธาระณัง วาจะนัง คะรุง",
+     "pali_roman": "likkhitaṃ cintitaṃ pūjaṃ dhāraṇaṃ vācanaṃ garuṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Writing it, reflecting on it, honouring it, bearing it in mind, reciting it with reverence,"
+    },
+    {
+     "number": 10,
+     "pali": "ปะเรสัง เทสะนัง สุต์วา ตัสสะ อายุ ปะวัฑฒะติ ฯ",
+     "pali_roman": "paresaṃ desanaṃ sutvā tassa āyu pavaḍḍhati",
+     "thai": "",
+     "paiboon": "",
+     "english": "and hearing it taught to others — that person's life increases."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อุณ์หิสสะ วิชะโย",
+     "pali_roman": "uṇhissa vijayo",
+     "meaning": "the victory of the crown of the head; a verse taught to a deity whose life was ending, and chanted for length of life"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0507.PNG",
+     "issue": "THIS CHANT IS NOT ANYWHERE ELSE IN THE APP. It has no first printing to be read against, so unlike its neighbour it has only one witness."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0507.PNG",
+     "issue": "THE CHANT CLOSES WITH THE MARK ฯ, which is kept in the printed Pali line and dropped from pali_roman — it is a Thai mark with no roman form, and that field must hold Latin only."
+    }
+   ]
+  },
+  {
+   "id": "gathajinabanjara-thai",
+   "title_thai": "พระคาถาชินบัญชร",
+   "title_pali": "",
+   "title_roman": "prá-kaa-tǎa chin-ban-chon",
+   "title_english": "The Verses of the Victor's Cage",
+   "page_start": 237,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "37 — two opening lines, a rubric, and 34 lines in fifteen numbered stanzas.",
+    "ordering": "Pali throughout apart from the one Thai rubric. Two columns read ACROSS.",
+    "conventions": "The id takes a -thai suffix because the app already holds the roman copy as `gathajinabanjara`. ENGLISH IS TAKEN FROM THAT COPY verse for verse — it is the same chant, and two glosses for one text would drift apart. paiboon left empty.",
+    "pages": "IMG_0507 and IMG_0508, pages 237-238. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ปุตตะกาโมละเภปุตตัง ธะนะกาโมละเภธะนัง",
+     "pali_roman": "puttakāmolabheputtaṃ dhanakāmolabhedhanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "One who wants a son gains a son; one who wants wealth gains wealth.",
+     "page": 237
+    },
+    {
+     "number": 2,
+     "pali": "อัตถิกาเยกายะญายะ เทวานังปิยะตังสุตตะวา",
+     "pali_roman": "atthikāyekāyañāya devānaṃpiyataṃsuttavā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having heard this in the body by the body's own way, one becomes dear to the devas."
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(แล้วจึงเจริญภาวนา)",
+     "paiboon": "",
+     "english": "(then develop the meditation)"
+    },
+    {
+     "number": 4,
+     "pali": "ชะยาสะนาคะตา พุทธา เชต์วา มารัง สะวาหะนัง",
+     "pali_roman": "jayāsanāgatā buddhā jetvā māraṃ savāhanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Buddhas, having come to the seat of victory, having conquered Māra with his mount,",
+     "printed_number": 1
+    },
+    {
+     "number": 5,
+     "pali": "จะตุสัจจาสะภัง ระสัง เย ปิวิงสุ นะราสะภา",
+     "pali_roman": "catusaccāsabhaṃ rasaṃ ye piviṃsu narāsabhā",
+     "thai": "",
+     "paiboon": "",
+     "english": "those chief among men who drank the excellent nectar of the four truths."
+    },
+    {
+     "number": 6,
+     "pali": "ตัณหังกะราทะโย พุทธา อัฏฐะวีสะติ นายะกา",
+     "pali_roman": "taṇhaṅkarādayo buddhā aṭṭhavīsati nāyakā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The twenty-eight Buddhas, leaders beginning with Taṇhaṅkara,",
+     "printed_number": 2
+    },
+    {
+     "number": 7,
+     "pali": "สัพเพ ปะติฏฐิตา มัยหัง มัตถะเก เต มุนิสสะรา",
+     "pali_roman": "sabbe patiṭṭhitā mayhaṃ matthake te munissarā",
+     "thai": "",
+     "paiboon": "",
+     "english": "all those lords of sages are established upon my head."
+    },
+    {
+     "number": 8,
+     "pali": "สีเส ปะติฏฐิโต มัยหัง พุทโธ ธัมโม ท์วิโลจะเน",
+     "pali_roman": "sīse patiṭṭhito mayhaṃ buddho dhammo dvilocane",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Buddha is established on my head, the Dhamma in my two eyes,",
+     "printed_number": 3
+    },
+    {
+     "number": 9,
+     "pali": "สังโฆ ปะติฏฐิโต มัยหัง อุเร สัพพะคุณากะโร",
+     "pali_roman": "saṅgho patiṭṭhito mayhaṃ ure sabbaguṇākaro",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Saṅgha, the mine of all virtues, is established in my breast."
+    },
+    {
+     "number": 10,
+     "pali": "หะทะเย เม อะนุรุทโธ สารีปุตโต จะ ทักขิเณ",
+     "pali_roman": "hadaye me anuruddho sārīputto ca dakkhiṇe",
+     "thai": "",
+     "paiboon": "",
+     "english": "Anuruddha is in my heart, Sāriputta on my right,",
+     "printed_number": 4
+    },
+    {
+     "number": 11,
+     "pali": "โกณฑัญโญ ปิฏฐิภาคัส์มิง โมคคัลลาโน จะ วามะเก",
+     "pali_roman": "koṇḍañño piṭṭhibhāgasmiṃ moggallāno ca vāmake",
+     "thai": "",
+     "paiboon": "",
+     "english": "Koṇḍañña at my back, and Moggallāna on my left."
+    },
+    {
+     "number": 12,
+     "pali": "ทักขิเณ สะวะเน มัยหัง อาสุง อานันทะราหุโล",
+     "pali_roman": "dakkhiṇe savane mayhaṃ āsuṃ ānandarāhulo",
+     "thai": "",
+     "paiboon": "",
+     "english": "In my right ear are Ānanda and Rāhula,",
+     "printed_number": 5,
+     "page": 238
+    },
+    {
+     "number": 13,
+     "pali": "กัสสะโป จะ มะหานาโม อุภาสุง วามะโสตะเก",
+     "pali_roman": "kassapo ca mahānāmo ubhāsuṃ vāmasotake",
+     "thai": "",
+     "paiboon": "",
+     "english": "and Kassapa and Mahānāma are both in my left ear."
+    },
+    {
+     "number": 14,
+     "pali": "เกสะโต ปิฏฐิภาคัส์มิง สุริโยวะ ปะภังกะโร",
+     "pali_roman": "kesato piṭṭhibhāgasmiṃ suriyova pabhaṅkaro",
+     "thai": "",
+     "paiboon": "",
+     "english": "At the end of my hair behind, like the radiant sun,",
+     "printed_number": 6
+    },
+    {
+     "number": 15,
+     "pali": "นิสินโน สิริสัมปันโน โสภีโต มุนิปุงคะโว",
+     "pali_roman": "nisinno sirisampanno sobhīto munipuṅgavo",
+     "thai": "",
+     "paiboon": "",
+     "english": "sits Sobhita, endowed with splendour, chief of sages."
+    },
+    {
+     "number": 16,
+     "pali": "กุมาระกัสสะโป เถโร มะเหสี จิตตะวาทะโก",
+     "pali_roman": "kumārakassapo thero mahesī cittavādako",
+     "thai": "",
+     "paiboon": "",
+     "english": "The elder Kumārakassapa, great seeker, eloquent speaker,",
+     "printed_number": 7
+    },
+    {
+     "number": 17,
+     "pali": "โส มัยหัง วะทะเน นิจจัง ปะติฏฐาสิ คุณากะโร",
+     "pali_roman": "so mayhaṃ vadane niccaṃ patiṭṭhāsi guṇākaro",
+     "thai": "",
+     "paiboon": "",
+     "english": "that mine of virtues is ever established in my mouth."
+    },
+    {
+     "number": 18,
+     "pali": "ปุณโณ อังคุลิมาโล จะ อุปาลี นันทะสีวะลี",
+     "pali_roman": "puṇṇo aṅgulimālo ca upālī nandasīvalī",
+     "thai": "",
+     "paiboon": "",
+     "english": "Puṇṇa and Aṅgulimāla, Upāli, Nanda and Sīvalī —",
+     "printed_number": 8
+    },
+    {
+     "number": 19,
+     "pali": "เถรา ปัญจะ อิเม ชาตา นะลาเฏ ติละกา มะมะ",
+     "pali_roman": "therā pañca ime jātā nalāṭe tilakā mama",
+     "thai": "",
+     "paiboon": "",
+     "english": "these five elders are become the auspicious marks upon my forehead"
+    },
+    {
+     "number": 20,
+     "pali": "เสสาสีติ มะหาเถรา วิชิตา ชินะสาวะกา",
+     "pali_roman": "sesāsīti mahātherā vijitā jinasāvakā",
+     "thai": "",
+     "paiboon": "",
+     "english": "The remaining eighty great elders, victorious disciples of the Victor,",
+     "printed_number": 9
+    },
+    {
+     "number": 21,
+     "pali": "เอเตสีติ มะหาเถรา ชิตะวันโต ชิโนระสา",
+     "pali_roman": "etesīti mahātherā jitavanto jinorasā",
+     "thai": "",
+     "paiboon": "",
+     "english": "these great elders, conquerors, true sons of the Victor,"
+    },
+    {
+     "number": 22,
+     "pali": "ชะลันตา สีละเตเชนะ อังคะมังเคสุ สัณฐิตา",
+     "pali_roman": "jalantā sīlatejena aṅgamaṅgesu saṇṭhitā",
+     "thai": "",
+     "paiboon": "",
+     "english": "blazing with the power of virtue, are established in each of my limbs."
+    },
+    {
+     "number": 23,
+     "pali": "ระตะนัง ปุระโต อาสิ ทักขิเณ เมตตะสุตตะกัง",
+     "pali_roman": "ratanaṃ purato āsi dakkhiṇe mettasuttakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Ratana Sutta is before me, the Metta Sutta on my right,",
+     "printed_number": 10
+    },
+    {
+     "number": 24,
+     "pali": "ธะชัคคัง ปัจฉะโต อาสิ วาเม อังคุลิมาละกัง",
+     "pali_roman": "dhajaggaṃ pacchato āsi vāme aṅgulimālakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Dhajagga behind me, the Aṅgulimāla on my left."
+    },
+    {
+     "number": 25,
+     "pali": "ขันธะโมระปะริตตัญจะ อาฏานาฏิยะสุตตะกัง",
+     "pali_roman": "khandhamoraparittañca āṭānāṭiyasuttakaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Khandha and Mora parittas and the Āṭānāṭiya Sutta",
+     "printed_number": 11
+    },
+    {
+     "number": 26,
+     "pali": "อากาเส ฉะทะนัง อาสิ เสสา ปาการะสัณฐิตา",
+     "pali_roman": "ākāse chadanaṃ āsi sesā pākārasaṇṭhitā",
+     "thai": "",
+     "paiboon": "",
+     "english": "are a canopy in the sky; the rest stand as a rampart."
+    },
+    {
+     "number": 27,
+     "pali": "ชินาณา วะระสังยุตตา สัตตัปปาการะลังกะตา",
+     "pali_roman": "jināṇā varasaṃyuttā sattappākāralaṅkatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Joined with the manifold excellence of the Victor, adorned with seven ramparts,",
+     "printed_number": 12
+    },
+    {
+     "number": 28,
+     "pali": "วาตะปิตตาทิสัญชาตา พาหิรัชฌัตตุปัททะวา",
+     "pali_roman": "vātapittādisañjātā bāhirajjhattupaddavā",
+     "thai": "",
+     "paiboon": "",
+     "english": "may the troubles born of wind and bile and the rest, outward and inward,"
+    },
+    {
+     "number": 29,
+     "pali": "อะเสสา วินะยัง ยันตุ อะนันตะชินะเตชะสา",
+     "pali_roman": "asesā vinayaṃ yantu anantajinatejasā",
+     "thai": "",
+     "paiboon": "",
+     "english": "go without remainder to their end, by the boundless power of the Victor,",
+     "printed_number": 13
+    },
+    {
+     "number": 30,
+     "pali": "วะสะโต เม สะกิจเจนะ สะทา สัมพุทธะปัญชะเร",
+     "pali_roman": "vasato me sakiccena sadā sambuddhapañjare",
+     "thai": "",
+     "paiboon": "",
+     "english": "while I dwell about my business, always in the cage of the Fully Enlightened One."
+    },
+    {
+     "number": 31,
+     "pali": "ชินะปัญชะระมัชฌัมหิ วิหะรันตัง มะหีตะเล",
+     "pali_roman": "jinapañjaramajjhamhi viharantaṃ mahītale",
+     "thai": "",
+     "paiboon": "",
+     "english": "As I dwell in the midst of the Victor's cage upon the earth,",
+     "printed_number": 14
+    },
+    {
+     "number": 32,
+     "pali": "สะทา ปาเลนตุ มัง สัพเพ เต มะหาปุริสาสะภา",
+     "pali_roman": "sadā pālentu maṃ sabbe te mahāpurisāsabhā",
+     "thai": "",
+     "paiboon": "",
+     "english": "may all those great and noble ones ever protect me."
+    },
+    {
+     "number": 33,
+     "pali": "อิจเจวะมันโต สุคุตโต สุรักโข",
+     "pali_roman": "iccevamanto sugutto surakkho",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus well guarded, well protected,",
+     "printed_number": 15
+    },
+    {
+     "number": 34,
+     "pali": "ชินานุภาเวนะ ชิตูปัททะโว",
+     "pali_roman": "jinānubhāvena jitūpaddavo",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Victor troubles are conquered,"
+    },
+    {
+     "number": 35,
+     "pali": "ธัมมานุภาเวนะ ชิตาริสังโค",
+     "pali_roman": "dhammānubhāvena jitārisaṅgo",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Dhamma the host of enemies is conquered,"
+    },
+    {
+     "number": 36,
+     "pali": "สังฆานุภาเวนะ ชิตันตะราโย",
+     "pali_roman": "saṅghānubhāvena jitantarāyo",
+     "thai": "",
+     "paiboon": "",
+     "english": "by the power of the Saṅgha dangers are conquered,"
+    },
+    {
+     "number": 37,
+     "pali": "สัทธัมมานุภาวะปาลิโต จะรามิ ชินะปัญชะเรติ ฯ",
+     "pali_roman": "saddhammānubhāvapālito carāmi jinapañjareti",
+     "thai": "",
+     "paiboon": "",
+     "english": "guarded by the power of the true Dhamma, I live in the Victor's cage."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ชินะปัญชะระ",
+     "pali_roman": "jinapañjara",
+     "meaning": "the Victor's cage or lattice — the protective enclosure the chant builds by seating the Buddhas and elders on the parts of the body"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0507.PNG",
+     "issue": "⚠ A THIRD DOUBLED CHANT. The Jinapañjara is printed here at 237-238 in Thai script and at 310-311 in roman, where the app already holds it as `gathajinabanjara`. That makes three: Mahāsamaya, ยอดพระกัณฑ์ไตรปิฎก, and this. The roman copy's 34 verses map onto these stanzas exactly, so the two printings check each other."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0507.PNG",
+     "issue": "THE RUBRIC (แล้วจึงเจริญภาวนา) IS ENTERED AS A VERSE. It is printed centred between the two opening lines and stanza 1, INSIDE the chant, and a page block cannot anchor inside a chant — the same reason ต้นเจ็ดตำนาน is a verse on page 259. Its brackets are kept as printed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0508.PNG",
+     "issue": "THE THAI PRINTING SETS NO FULL STOP at the end of a stanza where the roman copy does — 12 lines differ in that alone (verses 7, 9, 11, 13, 17, 22, 24, 26, 28, 30, 32, 37). Recorded here once rather than as a check apiece, and neither side has been repunctuated."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0507.PNG",
+     "issue": "⚠ THE THAI PRINTING HAS TWO OPENING LINES THE ROMAN DOES NOT. ปุตตะกาโมละเภปุตตัง and อัตถิกาเยกายะญายะ are printed above the rubric here; the roman copy at 310 begins straight at ชะยาสะนาคะตา. They are also set as SOLID strings with no word spaces, unlike every other line in the chant, and are entered that way."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `jayāsanāgatā buddhā jetvā māraṃ savāhanaṃ`; the roman copy prints `jayāsanāgatā buddhā jetavā māraṃ savāhanaṃ`. Each is entered as its own page sets it."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `catusaccāsabhaṃ rasaṃ ye piviṃsu narāsabhā`; the roman copy prints `catusaccāsabhaṃ rasaṃ ye pivimsu narāsabhā.`. Each is entered as its own page sets it."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `sīse patiṭṭhito mayhaṃ buddho dhammo dvilocane`; the roman copy prints `sīse patiṭṭhito mayhaṃ buddho dhammo davilocane`. Each is entered as its own page sets it."
+    },
+    {
+     "verse": 14,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `kesato piṭṭhibhāgasmiṃ suriyova pabhaṅkaro`; the roman copy prints `kesanto piṭṭhibhāgasmiṃ suriyo va pabhaṅkaro`. Each is entered as its own page sets it."
+    },
+    {
+     "verse": 15,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `nisinno sirisampanno sobhīto munipuṅgavo`; the roman copy prints `nisinno sirisampanno sobhito munipuṅgavo.`. Each is entered as its own page sets it."
+    },
+    {
+     "verse": 27,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `jināṇā varasaṃyuttā sattappākāralaṅkatā`; the roman copy prints `jinanānā varasaṃyuttā sattapākāralaṅkatā`. Each is entered as its own page sets it."
+    },
+    {
+     "verse": 34,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `jinānubhāvena jitūpaddavo`; the roman copy prints `jinānubhāvena jitupaddavo`. Each is entered as its own page sets it."
+    },
+    {
+     "verse": 35,
+     "file": "IMG_0507.PNG",
+     "issue": "THE TWO PRINTINGS DIFFER. This sheet romanises to `dhammānubhāvena jitārisaṅgo`; the roman copy prints `dhammānubhāvena jitārisaṅgho`. Each is entered as its own page sets it."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "unhissavijaya-gatha",
+   "gathajinabanjara-thai"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 236,
+  "resume_from_file": "IMG_0506.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence on the verses. The only Paiboon is each chant's title_roman, following batch-193-193.",
+  "pali_untouched": "Typed from the sheets and romanised mechanically. The Jinapañjara can be read against the roman copy at 310-311, and 8 differences were found that way.",
+  "page_scan": "agrees. Three rows across two sheets: one chant complete on 237, one running 237 to 238.",
+  "notes": "⚠ A THIRD DOUBLED CHANT. The Jinapañjara is here in Thai script and at 310-311 in roman, after Mahāsamaya and ยอดพระกัณฑ์ไตรปิฎก. 8 differences between the printings were found by romanising this sheet and comparing, and none has been smoothed away. ⚠ The Thai printing also has TWO OPENING LINES and a RUBRIC that the roman copy lacks entirely. Its neighbour อุณ์หิสสะวิชะยะคาถา is new to the app and has no second witness.",
+  "diacritic_exceptions": []
+ }
+}
