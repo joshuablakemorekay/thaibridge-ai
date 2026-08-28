@@ -49563,7 +49563,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
         # ‼ CHECK [IMG_0467.PNG]: THE INVITATION IS PRINTED IN BRACKETS,
         #   centred beneath the title. Reproduced with its brackets; Pali
         #   only, as the three before it.
@@ -49681,6 +49680,165 @@ CHANTS = [
                 'thai': 'เป็นสงฆ์ควรแก่สักการะที่เขาจัดไว้ต้อนรับ,',
                 'paiboon': 'bpen sǒŋ kuan gɛ̀ɛ sàk-gaa-rá tîi kǎo jàt wái dtɔ̂ɔn-ráp,',
                 'english': 'worthy of the offerings people set out in welcome,',
+            },
+            # ‼ CHECK [IMG_0468.PNG]: Verses 10 and 11 are short and set with
+            #   their Thai in a RIGHT-HAND COLUMN; 12, 13 and 14 are long and
+            #   indented beneath. The same length-driven choice as every sheet
+            #   in this section.
+            {
+                'number': 10,
+                'page': 198,
+                'pali': 'ทักขิเณยโย,',
+                'pali_roman': 'Dakkhiṇeyyo,',
+                'thai': 'เป็นผู้ควรรับทักษิณาทาน,',
+                'paiboon': 'bpen pûu kuan ráp ták-sì-nǎa-taan,',
+                'english': 'worthy of gifts given in faith,',
+            },
+            {
+                'number': 11,
+                'page': 198,
+                'pali': 'อัญชะลีกะระณีโย,',
+                'pali_roman': 'Añjalikaraṇīyo,',
+                'thai': 'เป็นผู้ที่บุคคลทั่วไปควรทำอัญชลี,',
+                'paiboon': 'bpen pûu tîi bùk-kon tûa-bpai kuan tam an-chá-lii,',
+                'english': 'worthy of reverent salutation by anyone,',
+            },
+            {
+                'number': 12,
+                'page': 198,
+                'pali': 'อะนุตตะรัง ปุญญักเขตตัง โลกัสสะ,',
+                'pali_roman': 'Anuttaraṃ puññakkhettaṃ lokassa,',
+                'thai': 'เป็นเนื้อนาบุญของโลก, ไม่มีนาบุญอื่นยิ่งกว่า,',
+                'paiboon': 'bpen nʉ́a naa-bun kɔ̌ɔŋ lôok, mâi mii naa-bun ʉ̀ʉn yîŋ gwàa,',
+                'english': 'the unsurpassed field of merit for the world — no field of merit is greater,',
+            },
+            {
+                'number': 13,
+                'page': 198,
+                'pali': 'ตะมะหัง สังฆัง อะภิปูชะยามิ,',
+                'pali_roman': 'Tamahaṃ saṅghaṃ abhipūjayāmi,',
+                'thai': 'ข้าพเจ้าบูชาอย่างยิ่ง เฉพาะพระสงฆ์หมู่นั้น,',
+                'paiboon': 'kâa-pá-jâo buu-chaa yàaŋ-yîŋ chà-pɔ́ prá-sǒŋ mùu nán,',
+                'english': 'I pay the highest homage to that Sangha,',
+            },
+            # ‼ CHECK [IMG_0468.PNG]: ‼ THE THIRD PRINTING OF THIS CLOSING
+            #   LINE HAS A THIRD PUNCTUATION. Read at 5x, the Thai ends
+            #   ด้วยเศียรเกล้า, with a COMMA. The identical line closes
+            #   พุทธาภิถุติ on page 196 and ธัมมาภิถุติ on page 197, and BOTH
+            #   of those end ด้วยเศียรเกล้า. with a FULL STOP. Three parallel
+            #   closings, three sheets, and only this one takes a comma.
+            #   Reproduced as printed.
+            # ‼ CHECK [IMG_0468.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Fourteen verses across pages 197 and 198.
+            #   Its rubric completes the set the brief predicted:
+            #   (กราบระลึกถึงพระสังฆคุณ), after …พระพุทธคุณ and …พระธรรมคุณ.
+            {
+                'number': 14,
+                'page': 198,
+                'rubric': '(กราบระลึกถึงพระสังฆคุณ)',
+                'pali': 'ตะมะหัง สังฆัง สิระสา นะมามิ.',
+                'pali_roman': 'Tamahaṃ saṅghaṃ sirasā namāmi.',
+                'thai': 'ข้าพเจ้านอบน้อมพระสงฆ์หมู่นั้น ด้วยเศียรเกล้า,',
+                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-sǒŋ mùu nán dûay sǐian-glâo,',
+                'english': 'I bow to that Sangha with my head.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0468.PNG]: ‼ THE INVITATION INVITES TWO CHANTS AT ONCE.
+        #   It reads …ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ
+        #   ภะณามะ เส. — 'the verses of homage AND the passage on urgency'. So
+        #   the สังเวคะปะริกิตตะนะปาฐะ that follows on a later page has NO
+        #   invitation of its own; this one covers both. Recorded so its
+        #   absence there is not read as an omission.
+        # ‼ CHECK [IMG_0468.PNG]: NOT A DUPLICATE TO MERGE. The app already
+        #   holds ระตะนัตตะยัปปะณามะคาถา from page 3, in Pali only. This is
+        #   the translated section's copy; given the id
+        #   ratanattayappanamagatha-plae, on the precedent set at pages 113
+        #   and 193.
+        # ‼ CHECK [IMG_0468.PNG]: ALL SIX UNITS ARE LONG, so every Thai line
+        #   on this chant is INDENTED beneath its Pali — the right-hand column
+        #   does not appear at all here, unlike the chant above it on the same
+        #   sheet.
+        # ‼ CHECK [IMG_0468.PNG]: english_unverified is set. The English is
+        #   this edition's working translation, checkable here against the
+        #   Thai the book prints.
+        'id': 'ratanattayappanamagatha-plae',
+        'title_thai': 'ระตะนัตตะยัปปะณามะคาถา',
+        'title_pali': '',
+        'title_roman': 'Ratanattayappaṇāmagāthā',
+        'title_english': 'Verses of Homage to the Triple Gem',
+        'page_start': 198,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '(หันทะ มะยัง ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส.)',
+            'pali_roman': '(Handa mayaṃ ratanattayappaṇāmagāthāyo ceva saṃvegaparikittanapāṭhañca bhaṇāma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us recite the verses of homage to the Triple Gem, and the passage on spiritual urgency.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 198,
+                'pali': 'พุทโธ สุสุทโธ กะรุณามะหัณณะโว,',
+                'pali_roman': 'Buddho susuddho karuṇāmahaṇṇavo,',
+                'thai': 'พระพุทธเจ้าผู้บริสุทธิ์ มีพระกรุณาดุจห้วงมหรรณพ,',
+                'paiboon': 'prá-pút-tá-jâo pûu bɔɔ-rí-sùt mii prá-gà-rú-naa dùt hûaŋ má-han-ná-póp,',
+                'english': 'The Buddha, wholly pure, whose compassion is like a great ocean,',
+            },
+            {
+                'number': 2,
+                'page': 198,
+                'pali': 'โยจจันตะสุทธัพพะระญาณะโลจะโน,',
+                'pali_roman': 'Yoccantasuddhabbarañāṇalocano,',
+                'thai': 'พระองค์ใด มีตาคือญาณ อันประเสริฐหมดจดถึงที่สุด,',
+                'paiboon': 'prá-oŋ dai mii dtaa kʉʉ yaan an bprà-sə̀ət mòt-jòt tʉ̌ŋ tîi-sùt,',
+                'english': 'whose eye is knowledge, excellent and utterly pure,',
+            },
+            {
+                'number': 3,
+                'page': 198,
+                'pali': 'โลกัสสะ ปาปูปะกิเลสะฆาตะโก,',
+                'pali_roman': 'Lokassa pāpūpakilesaghātako,',
+                'thai': 'เป็นผู้ฆ่าเสียซึ่งบาป และอุปกิเลสของโลก,',
+                'paiboon': 'bpen pûu kâa sǐa sʉ̂ŋ bàap lɛ́ ù-bpà-gì-lèet kɔ̌ɔŋ lôok,',
+                'english': "the destroyer of the world's evil and its defilements —",
+            },
+            {
+                'number': 4,
+                'page': 198,
+                'pali': 'วันทามิ พุทธัง อะหะมาทะเรนะ ตัง,',
+                'pali_roman': 'Vandāmi buddhaṃ ahamādarena taṃ,',
+                'thai': 'ข้าพเจ้าไหว้พระพุทธเจ้าพระองค์นั้น, โดยใจเคารพเอื้อเฟื้อ,',
+                'paiboon': 'kâa-pá-jâo wâai prá-pút-tá-jâo prá-oŋ nán, dooy jai kao-róp ʉ́a-fʉ́ʉa,',
+                'english': 'I revere that Buddha with a heart of respect and care,',
+            },
+            {
+                'number': 5,
+                'page': 198,
+                'pali': 'ธัมโม ปะทีโป วิยะ ตัสสะ สัตถุโน,',
+                'pali_roman': 'Dhammo padīpo viya tassa satthuno,',
+                'thai': 'พระธรรมของพระศาสดา สว่างรุ่งเรืองเปรียบดวงประทีป,',
+                'paiboon': 'prá-tam kɔ̌ɔŋ prá-sàat-sà-daa sà-wàaŋ rûŋ-rʉaŋ bpriiap duaŋ bprà-tîip,',
+                'english': 'The Dhamma of that Teacher shines bright as a lamp,',
+            },
+            # ‼ CHECK [IMG_0468.PNG]: CUT AT THE PAGE TURN. Verse 6 is the
+            #   last thing on the sheet and the chant runs on to page 199. No
+            #   […] is used: it ends at a comma the book itself prints and
+            #   nothing is broken mid-word.
+            {
+                'number': 6,
+                'page': 198,
+                'pali': 'โย มัคคะปากามะตะเภทะภินนะโก,',
+                'pali_roman': 'Yo maggapākāmatabhedabhinnako,',
+                'thai': 'จำแนกประเภท คือ มรรค ผล นิพพาน, ส่วนใด,',
+                'paiboon': 'jam-nɛ̂ɛk bprà-pêet kʉʉ mák pǒn níp-paan, sùan dai,',
+                'english': 'which is divided into path, fruit and the deathless —',
             },
         ],
     },

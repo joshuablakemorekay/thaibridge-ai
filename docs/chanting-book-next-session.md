@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-197 went in.
+198 went in.
 
 ## Read first, in this order
 
@@ -80,10 +80,31 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 198, `IMG_0468`.** ⚠️ `sanghabhithuti-plae` IS OPEN — nine units
-in, **resume at verse 10**. Expect the remaining ทักขิเณยโย / อัญชะลีกะระณีโย
-epithets, a closing rubric naming **สังฆคุณ**, then
-`ระตะนัตตะยัปปะณามะคาถา` which the สารบัญ puts at ๑๙๘.
+**Next: page 199, `IMG_0469`.** ⚠️ `ratanattayappanamagatha-plae` IS OPEN —
+six units in, **resume at verse 7**.
+
+⚠️ **The สังเวคะปะริกิตตะนะปาฐะ that follows will have NO invitation of its
+own.** Page 198's invitation covers both chants —
+`…ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส.` — so
+record its absence as intended, not as an omission.
+
+## ✅ The three praises closed exactly as predicted — and disagreed on one comma
+
+The 195–198 set is complete and the pattern held: bracketed Pali-only
+invitation, IAST `title_roman` from the สารบัญ, length-driven layout, and a
+closing rubric naming each Gem — `…พระพุทธคุณ` (196), `…พระธรรมคุณ` (197),
+`…พระสังฆคุณ` (198).
+
+**But the identical closing Thai line is punctuated three ways.** All three read
+`ข้าพเจ้านอบน้อม… ด้วยเศียรเกล้า` and then:
+
+| page | ends |
+|---|---|
+| 196 | `ด้วยเศียรเกล้า.` — full stop |
+| 197 | `ด้วยเศียรเกล้า.` — full stop |
+| **198** | **`ด้วยเศียรเกล้า,` — comma** |
+
+Read at 5×. Reproduced as printed in each place.
 
 ## 🔤 The three praises: what to expect, so it reads as pattern not error
 
