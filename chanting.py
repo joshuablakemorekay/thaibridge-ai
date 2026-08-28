@@ -34068,19 +34068,26 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'I undertake the training rule to abstain from killing living beings. (I undertake the training rule, that is, to refrain from killing living creatures myself and from having others kill.)',
             },
-            # ‼ CHECK [IMG_0567.PNG]: ⚠ THE BOOK MISPRINTS THE SECOND PRECEPT.
-            #   It reads 'สิกขาปะทัง สะทามิยามิ' where all seven others read
-            #   'สะมาทิยามิ' — the ม and ท transposed. Read at 5x on a 1.55x
-            #   crop: it is สะทามิยามิ on the sheet. Kept EXACTLY as printed,
-            #   like every other of the book's own slips in this section, but
-            #   this one is worth Josh's eye because it is a word a reader
-            #   would chant and the correct form is on the eight lines around
-            #   it.
+            # ‼ CHECK [IMG_0567.PNG]: ⚠ CORRECTED AGAINST THE PRINTED PAGE,
+            #   ON JOSH'S RULING AT THE BOOK, 2026-08-28. THE SHEET PRINTS
+            #   'สิกขาปะทัง สะทามิยามิ' — ม and ท transposed — where the other
+            #   seven precepts read 'สะมาทิยามิ'. Read at 5x on a 1.55x crop;
+            #   the misprint is really there. Josh checked the physical page
+            #   and ruled it a mistake in the book: all eight precepts should
+            #   read สะมาทิยามิ, so this one now does.
+            #
+            #   THIS IS THE ONE DELIBERATE DEPARTURE FROM PAGE FIDELITY in the
+            #   chanting data. Everywhere else the book's own slips are kept
+            #   exactly as printed. It is departed from here because a reader
+            #   chants this line aloud and the book's own eight neighbours
+            #   give the right form. The printed reading is recorded above so
+            #   nothing is lost, and no other slip may be 'corrected' without
+            #   the same ruling.
             {
                 'number': 2,
                 'printed_number': 2,
-                'pali': 'อะทินนาทานา เวระมะณี สิกขาปะทัง สะทามิยามิ.',
-                'pali_roman': 'Adinnādānā veramaṇī sikkhāpadaṃ sadāmiyāmi.',
+                'pali': 'อะทินนาทานา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali_roman': 'Adinnādānā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากลักทรัพย์ด้วยตนเองและใช้ให้ผู้อื่นลัก)',
                 'paiboon': '',
                 'english': 'I undertake the training rule to abstain from taking what is not given. (I undertake the training rule, that is, to refrain from stealing myself and from having others steal.)',
