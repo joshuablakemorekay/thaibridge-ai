@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-196 went in.
+197 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,23 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 197, `IMG_0467`.** ⚠️ `dhammabhithuti-plae` IS OPEN — six units
-in, **resume at verse 7**. The สารบัญ says 197 also carries `สังฆาภิถุติ`
-(contents value `Saṅghābhithuti`).
+**Next: page 198, `IMG_0468`.** ⚠️ `sanghabhithuti-plae` IS OPEN — nine units
+in, **resume at verse 10**. Expect the remaining ทักขิเณยโย / อัญชะลีกะระณีโย
+epithets, a closing rubric naming **สังฆคุณ**, then
+`ระตะนัตตะยัปปะณามะคาถา` which the สารบัญ puts at ๑๙๘.
+
+## 🔤 The three praises: what to expect, so it reads as pattern not error
+
+`พุทธาภิถุติ`, `ธัมมาภิถุติ` and `สังฆาภิถุติ` run 195–198 and behave alike:
+
+- each opens with a **bracketed invitation**, Pali only, centred
+- each closes with its **own rubric naming the Gem**: `…พระพุทธคุณ`,
+  `…พระธรรมคุณ`, and `สังฆคุณ` expected on 198
+- `title_roman` for all three is **IAST** in the สารบัญ
+  (`Buddhābhithuti`, `Dhammābhithuti`, `Saṅghābhithuti`) even though other
+  titles in the same section are Paiboon
+- **short units** put their Thai in a right-hand column, **long ones** indent it
+  beneath — line length decides, every time
 
 ## 🚫 NEVER `git checkout chanting.py` — use `git stash` if you must
 

@@ -48939,7 +48939,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
         # ‼ CHECK [IMG_0466.PNG]: THE INVITATION IS PRINTED IN BRACKETS,
         #   centred beneath the title. Reproduced with its brackets; Pali
         #   only, as the two before it.
@@ -49029,6 +49028,36 @@ CHANTS = [
                 'thai': 'เป็นสิ่งที่ผู้รู้ก็รู้ได้เฉพาะตน,',
                 'paiboon': 'bpen sìŋ tîi pûu-rúu gɔ̂ rúu dâai chà-pɔ́ dton,',
                 'english': 'it is to be known by the wise, each for himself,',
+            },
+            # ‼ CHECK [IMG_0467.PNG]: Both verses are long enough that their
+            #   Thai is INDENTED beneath rather than set in a right-hand
+            #   column — the same length-driven choice as pages 195 and 196.
+            {
+                'number': 7,
+                'page': 197,
+                'pali': 'ตะมะหัง ธัมมัง อะภิปูชะยามิ,',
+                'pali_roman': 'Tamahaṃ dhammaṃ abhipūjayāmi,',
+                'thai': 'ข้าพเจ้าบูชาอย่างยิ่ง เฉพาะพระธรรมนั้น,',
+                'paiboon': 'kâa-pá-jâo buu-chaa yàaŋ-yîŋ chà-pɔ́ prá-tam nán,',
+                'english': 'I pay the highest homage to that Dhamma,',
+            },
+            # ‼ CHECK [IMG_0467.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Eight verses across pages 196 and 197.
+            # ‼ CHECK [IMG_0467.PNG]: THE CLOSING RUBRIC MATCHES ITS CHANT:
+            #   (กราบระลึกถึงพระธรรมคุณ) — 'bow, recollecting the Dhamma's
+            #   virtues' — where พุทธาภิถุติ closed with …พระพุทธคุณ. The book
+            #   varies the word to name the Gem being recollected, so the
+            #   three praises will each close differently. Reproduced as
+            #   printed.
+            {
+                'number': 8,
+                'page': 197,
+                'rubric': '(กราบระลึกถึงพระธรรมคุณ)',
+                'pali': 'ตะมะหัง ธัมมัง สิระสา นะมามิ.',
+                'pali_roman': 'Tamahaṃ dhammaṃ sirasā namāmi.',
+                'thai': 'ข้าพเจ้านอบน้อมพระธรรมนั้น ด้วยเศียรเกล้า.',
+                'paiboon': 'kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-tam nán dûay sǐian-glâo.',
+                'english': 'I bow to that Dhamma with my head.',
             },
         ],
     },
@@ -49528,6 +49557,130 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "guarded by the power of the true Dhamma, I live in the Victor's cage.",
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0467.PNG]: THE INVITATION IS PRINTED IN BRACKETS,
+        #   centred beneath the title. Reproduced with its brackets; Pali
+        #   only, as the three before it.
+        # ‼ CHECK [IMG_0467.PNG]: title_roman IS THE CONTENTS' VALUE —
+        #   Saṅghābhithuti. The สารบัญ is IAST for all three praises, though
+        #   it is Paiboon for other titles in the same section.
+        # ‼ CHECK [IMG_0467.PNG]: english_unverified is set. The English is
+        #   this edition's working translation, checkable here against the
+        #   Thai the book prints.
+        'id': 'sanghabhithuti-plae',
+        'title_thai': 'สังฆาภิถุติ',
+        'title_pali': '',
+        'title_roman': 'Saṅghābhithuti',
+        'title_english': 'Praise of the Sangha',
+        'page_start': 197,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '(หันทะ มะยัง สังฆาภิถุติง กะโรมะ เส.)',
+            'pali_roman': '(Handa mayaṃ saṅghābhithutiṃ karoma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us give praise to the Sangha.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0467.PNG]: ‼ VERSE 1 SAYS นั้นหมู่ใด WHERE VERSES
+            #   2, 3 AND 4 SAY หมู่ใด. The extra นั้น appears only in the
+            #   first of the four, matching its Pali's โย โส which the others
+            #   drop. Read separately in each place and reproduced as printed.
+            {
+                'number': 1,
+                'page': 197,
+                'pali': 'โย โส สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Yo so supaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้านั้นหมู่ใด, ปฏิบัติดีแล้ว,',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo nán mùu dai, bpà-dtì-bàt dii lɛ́ɛo,',
+                'english': "That Sangha of the Blessed One's disciples, whichever it is, has practised well,",
+            },
+            {
+                'number': 2,
+                'page': 197,
+                'pali': 'อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ujupaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติตรงแล้ว,',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt dtroŋ lɛ́ɛo,',
+                'english': "the Sangha of the Blessed One's disciples has practised straightly,",
+            },
+            {
+                'number': 3,
+                'page': 197,
+                'pali': 'ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ñāyapaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติเพื่อรู้ธรรม เป็นเครื่องออกจากทุกข์แล้ว,',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt pʉ̂a rúu tam bpen krʉ̂aŋ ɔ̀ɔk jàak túk lɛ́ɛo,',
+                'english': "the Sangha of the Blessed One's disciples has practised for knowing the Dhamma, the means of release from suffering,",
+            },
+            {
+                'number': 4,
+                'page': 197,
+                'pali': 'สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Sāmīcipaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติสมควรแล้ว,',
+                'paiboon': 'sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo mùu dai, bpà-dtì-bàt sǒm-kuan lɛ́ɛo,',
+                'english': "the Sangha of the Blessed One's disciples has practised fittingly,",
+            },
+            {
+                'number': 5,
+                'page': 197,
+                'pali': 'ยะทิทัง,',
+                'pali_roman': 'Yadidaṃ,',
+                'thai': 'ได้แก่บุคคลเหล่านี้ คือ,',
+                'paiboon': 'dâai-gɛ̀ɛ bùk-kon lào níi kʉʉ,',
+                'english': 'namely, these persons:',
+            },
+            # ‼ CHECK [IMG_0467.PNG]: THAI NUMERALS, REPRODUCED AS PRINTED:
+            #   คู่แห่งบุรุษ ๔ คู่, นับเรียงตัวบุรุษได้ ๘ บุรุษ. The book uses
+            #   ๔ and ๘, not 4 and 8, and the paiboon reads them as sìi and
+            #   bpɛ̀ɛt.
+            {
+                'number': 6,
+                'page': 197,
+                'pali': 'จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,',
+                'pali_roman': 'Cattāri purisayugāni aṭṭha purisapuggalā,',
+                'thai': 'คู่แห่งบุรุษ ๔ คู่, นับเรียงตัวบุรุษได้ ๘ บุรุษ,',
+                'paiboon': 'kûu hɛ̀ŋ bù-rùt sìi kûu, náp riiaŋ dtua bù-rùt dâai bpɛ̀ɛt bù-rùt,',
+                'english': 'four pairs of persons, eight individuals counted singly,',
+            },
+            {
+                'number': 7,
+                'page': 197,
+                'pali': 'เอสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Esa bhagavato sāvakasaṅgho,',
+                'thai': 'นั่นแหละ สงฆ์สาวกของพระผู้มีพระภาคเจ้า,',
+                'paiboon': 'nân lɛ̀ sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo,',
+                'english': "that is the Sangha of the Blessed One's disciples —",
+            },
+            {
+                'number': 8,
+                'page': 197,
+                'pali': 'อาหุเนยโย,',
+                'pali_roman': 'Āhuneyyo,',
+                'thai': 'เป็นสงฆ์ควรแก่สักการะที่เขานำมาบูชา,',
+                'paiboon': 'bpen sǒŋ kuan gɛ̀ɛ sàk-gaa-rá tîi kǎo nam maa buu-chaa,',
+                'english': 'worthy of the offerings people bring,',
+            },
+            # ‼ CHECK [IMG_0467.PNG]: CUT AT THE PAGE TURN. Verse 9 is the
+            #   last thing on the sheet and the chant runs on to page 198. No
+            #   […] is used: verse 9 ends at a comma the book itself prints
+            #   and nothing is broken mid-word.
+            {
+                'number': 9,
+                'page': 197,
+                'pali': 'ปาหุเนยโย,',
+                'pali_roman': 'Pāhuneyyo,',
+                'thai': 'เป็นสงฆ์ควรแก่สักการะที่เขาจัดไว้ต้อนรับ,',
+                'paiboon': 'bpen sǒŋ kuan gɛ̀ɛ sàk-gaa-rá tîi kǎo jàt wái dtɔ̂ɔn-ráp,',
+                'english': 'worthy of the offerings people set out in welcome,',
             },
         ],
     },
