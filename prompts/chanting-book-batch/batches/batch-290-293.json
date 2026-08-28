@@ -761,8 +761,8 @@
     },
     {
      "number": 47,
-     "pali": "เสยยะถาปิ นามะ ตาโล มัตถะกัจฉินโน อะภัพโพ ปุนะ วิรุพหิยา,",
-     "pali_roman": "Seyyathāpi nāma tālo matthakacchinno abhabbo puna virubhiyā,",
+     "pali": "เสยยะถาปิ นามะ ตาโล มัตถะกัจฉินโน อะภัพโพ ปุนะ วิรุฬหิยา,",
+     "pali_roman": "Seyyathāpi nāma tālo matthakacchinno abhabbo puna virūḷhiyā,",
      "thai": "",
      "paiboon": "",
      "english": "Just as a palm tree cut off at the crown cannot grow again,",
@@ -942,6 +942,11 @@
      "verse": null,
      "file": "IMG_0558.PNG",
      "issue": "THE RUBRIC IS STRIPPED BEFORE TRANSLITERATING. Every 'ตัตถะ เต (ถ้าหลายรูปเปลี่ยน …)' clause carries Thai inside the Pali, and translit_pali passes Thai straight through — which check_batch catches as Thai script in a romanised field. The bracket is removed before transliterating and a … marks where it stood, so pali_roman covers the Pali only."
+    },
+    {
+     "verse": 47,
+     "file": "IMG_0559.PNG",
+     "issue": "⚠ วิรุฬหิยา IS WRITTEN WITH ฬ AGAINST THE PHOTOGRAPH, which shows พ even at high magnification. Two things settle it against the sheet. The canon reads abhabbo puna virūḷhiyā — the palm tree cut at the crown that cannot grow again — and the ฬ-as-พ rule was settled AT THE BOOK on 2026-08-25 after fourteen places were wrong, with the explicit warning that arguing from 'it looks identical to a known พ' is circular. The book itself prints วิรุฬหะโก, วิรุฬหิง, วิรุฬหา and วิรุฬหะมูละสันตานัง elsewhere. STILL WORTH JOSH'S EYE at the physical page, because this glyph shows no ascender where those do."
     }
    ]
   }
