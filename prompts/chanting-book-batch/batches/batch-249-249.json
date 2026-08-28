@@ -1,0 +1,239 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 3,
+  "manifest": [
+   "kham-aradhana-sin-5-prokati",
+   "kham-aradhana-sin-5-phiset",
+   "kham-aradhana-sin-8-prokati"
+  ],
+  "pages": [
+   {
+    "page": 249,
+    "file": "IMG_0517.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-aradhana-sin-5-prokati",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The page opens with this chant's centred heading, so nothing runs on from 248. Three units of Pali prose."
+   },
+   {
+    "page": 249,
+    "file": "IMG_0517.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-aradhana-sin-5-phiset",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "Its own centred heading, three units of Pali prose, complete on this page."
+   },
+   {
+    "page": 249,
+    "file": "IMG_0517.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-aradhana-sin-8-prokati",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "Its own centred heading, three units of Pali prose, and the page ends there with white space below."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-aradhana-sin-5-prokati",
+   "title_thai": "คำอาราธนาศีล 5 ปรกติ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words for Requesting the Ordinary Five Precepts",
+   "page_start": 249,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written. These chants ARE requests; nothing invites them.",
+    "units": "3 units — the request, and the same again for a second and a third time. Kept whole rather than split at their commas, matching the parallel request on page 250: each repetition is one breath-group, not a run of clauses like the long prose chants on 22, 31 and 253.",
+    "ordering": "Pure Pali. No Thai is printed inside the chant.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0517, page 249. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "มะยัง ภันเต, วิสุง วิสุง รักขะณัตถายะ, ติสะระเณนะ สะหะ, ปัญจะ สีลานิ ยาจามะ.",
+     "pali_roman": "Mayaṃ bhante, visuṃ visuṃ rakkhaṇatthāya, tisaraṇena saha, pañca sīlāni yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, we ask for the five precepts, together with the three refuges, to keep each one separately.",
+     "page": 249
+    },
+    {
+     "number": 2,
+     "pali": "ทุติยัมปิ มะยัง ภันเต, วิสุง วิสุง รักขะณัตถายะ, ติสะระเณนะ สะหะ, ปัญจะ สีลานิ ยาจามะ,",
+     "pali_roman": "Dutiyampi mayaṃ bhante, visuṃ visuṃ rakkhaṇatthāya, tisaraṇena saha, pañca sīlāni yācāma,",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, venerable sir, we ask for the five precepts, together with the three refuges, to keep each one separately."
+    },
+    {
+     "number": 3,
+     "pali": "ตะติยัมปิ มะยัง ภันเต, วิสุง วิสุง รักขะณัตถายะ, ติสะระเณนะ สะหะ, ปัญจะ สีลานิ ยาจามะ.",
+     "pali_roman": "Tatiyampi mayaṃ bhante, visuṃ visuṃ rakkhaṇatthāya, tisaraṇena saha, pañca sīlāni yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, venerable sir, we ask for the five precepts, together with the three refuges, to keep each one separately."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "วิสุง วิสุง รักขะณัตถายะ",
+     "pali_roman": "visuṃ visuṃ rakkhaṇatthāya",
+     "meaning": "for the sake of keeping each one separately — the phrase that marks the ORDINARY precepts, and the one the constant-precept request drops"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0517.PNG",
+     "issue": "⚠ THE SECOND UNIT ENDS WITH A COMMA where the first and third end with a FULL STOP — ปัญจะ สีลานิ ยาจามะ, against ยาจามะ. Checked at magnification. Entered as printed and not made consistent; this is the second place in the 250s where the book ends a formula with a comma, the other being page 252's คำขอขมาโทษพระรัตนตรัย."
+    }
+   ]
+  },
+  {
+   "id": "kham-aradhana-sin-5-phiset",
+   "title_thai": "คำอาราธนาศีล 5 พิเศษ คือนิจศีล",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words for Requesting the Special Five Precepts, the Constant Precepts",
+   "page_start": 249,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written. These chants ARE requests; nothing invites them.",
+    "units": "3 units — the request, and the same again for a second and a third time. Kept whole rather than split at their commas, matching the parallel request on page 250: each repetition is one breath-group, not a run of clauses like the long prose chants on 22, 31 and 253.",
+    "ordering": "Pure Pali. No Thai is printed inside the chant.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0517, page 249. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "มะยัง ภันเต, ติสะระเณนะ สะหะ, ปัญจังคะสะมันนาคะตัง นิจจะสีลัง ยาจามะ.",
+     "pali_roman": "Mayaṃ bhante, tisaraṇena saha, pañcaṅgasamannāgataṃ niccasīlaṃ yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, we ask for the constant precepts, complete in their five factors, together with the three refuges.",
+     "page": 249
+    },
+    {
+     "number": 2,
+     "pali": "ทุติยัมปิ มะยัง ภันเต, ติสะระเณนะ สะหะ, ปัญจังคะสะมันนาคะตัง นิจจะสีลัง ยาจามะ.",
+     "pali_roman": "Dutiyampi mayaṃ bhante, tisaraṇena saha, pañcaṅgasamannāgataṃ niccasīlaṃ yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, venerable sir, we ask for the constant precepts, complete in their five factors, together with the three refuges."
+    },
+    {
+     "number": 3,
+     "pali": "ตะติยัมปิ มะยัง ภันเต, ติสะระเณนะ สะหะ, ปัญจังคะสะมันนาคะตัง นิจจะสีลัง ยาจามะ.",
+     "pali_roman": "Tatiyampi mayaṃ bhante, tisaraṇena saha, pañcaṅgasamannāgataṃ niccasīlaṃ yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, venerable sir, we ask for the constant precepts, complete in their five factors, together with the three refuges."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "นิจจะสีลัง",
+     "pali_roman": "niccasīlaṃ",
+     "meaning": "the constant precepts, undertaken as a standing observance rather than for one occasion"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0517.PNG",
+     "issue": "THIS REQUEST DROPS วิสุง วิสุง รักขะณัตถายะ, which both the chants either side of it keep. That is the difference between asking for precepts to keep SEPARATELY and asking for the constant precepts as one undertaking, so the omission is the point rather than a slip."
+    }
+   ]
+  },
+  {
+   "id": "kham-aradhana-sin-8-prokati",
+   "title_thai": "คำอาราธนาศีล 8 ปรกติ",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "The Words for Requesting the Ordinary Eight Precepts",
+   "page_start": 249,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written. These chants ARE requests; nothing invites them.",
+    "units": "3 units — the request, and the same again for a second and a third time. Kept whole rather than split at their commas, matching the parallel request on page 250: each repetition is one breath-group, not a run of clauses like the long prose chants on 22, 31 and 253.",
+    "ordering": "Pure Pali. No Thai is printed inside the chant.",
+    "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty.",
+    "pages": "IMG_0517, page 249. Offset 268."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "มะยัง ภันเต, วิสุง วิสุง รักขะณัตถายะ, ติสะระเณนะ สะหะ, อัฏฐะ สีลานิ ยาจามะ.",
+     "pali_roman": "Mayaṃ bhante, visuṃ visuṃ rakkhaṇatthāya, tisaraṇena saha, aṭṭha sīlāni yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Venerable sir, we ask for the eight precepts, together with the three refuges, to keep each one separately.",
+     "page": 249
+    },
+    {
+     "number": 2,
+     "pali": "ทุติยัมปิ มะยัง ภันเต, วิสุง วิสุง รักขะณัตถายะ, ติสะระเณนะ สะหะ, อัฏฐะ สีลานิ ยาจามะ.",
+     "pali_roman": "Dutiyampi mayaṃ bhante, visuṃ visuṃ rakkhaṇatthāya, tisaraṇena saha, aṭṭha sīlāni yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a second time, venerable sir, we ask for the eight precepts, together with the three refuges, to keep each one separately."
+    },
+    {
+     "number": 3,
+     "pali": "ตะติยัมปิ มะยัง ภันเต, วิสุง วิสุง รักขะณัตถายะ, ติสะระเณนะ สะหะ, อัฏฐะ สีลานิ ยาจามะ.",
+     "pali_roman": "Tatiyampi mayaṃ bhante, visuṃ visuṃ rakkhaṇatthāya, tisaraṇena saha, aṭṭha sīlāni yācāma.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a third time, venerable sir, we ask for the eight precepts, together with the three refuges, to keep each one separately."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อัฏฐะ สีลานิ",
+     "pali_roman": "aṭṭha sīlāni",
+     "meaning": "the eight precepts. The ordinary form asks for them separately; the uposatha form on page 250 asks for them as one observance"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0517.PNG",
+     "issue": "THIS IS THE ORDINARY EIGHT, and the uposatha eight on page 250 is a DIFFERENT CHANT — that one asks อัฏฐังคะสะมันนาคะตัง อุโปสะถัง, the observance complete in eight factors, where this asks อัฏฐะ สีลานิ, eight precepts kept separately. Both are entered."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-aradhana-sin-5-prokati",
+   "kham-aradhana-sin-5-phiset",
+   "kham-aradhana-sin-8-prokati"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 248,
+  "resume_from_file": "IMG_0516.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written anywhere in this batch.",
+  "pali_untouched": "Typed from the sheet and romanised mechanically. The one doubtful mark, the comma closing the second unit of the first chant, was checked at magnification.",
+  "page_scan": "agrees. Three rows on one sheet, all three chants beginning and ending here.",
+  "notes": "A COMPLETE SHEET — three requests for precepts, all starting and ending on it, nothing running on in either direction. They differ in ways that are easy to flatten and have not been: the constant-precept request DROPS วิสุง วิสุง รักขะณัตถายะ, and the ordinary eight here is a different chant from the uposatha eight on page 250. ⚠ The second unit of the first chant ENDS WITH A COMMA where its neighbours end with a full stop; entered as printed.",
+  "diacritic_exceptions": []
+ }
+}
