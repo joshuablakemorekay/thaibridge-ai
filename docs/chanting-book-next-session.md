@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-199 went in.
+200 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,21 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 200, `IMG_0470`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
-four units in, **resume at verse 5**. Its first-pass copy at page 4 runs to
-**40 verses**, so expect this one to be long.
+**Next: page 201, `IMG_0471`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
+**21 units in, resume at verse 22**. Verse 21 ends `เยสัง ปะริญญายะ,` and its
+English is deliberately left hanging, because the sentence completes on 201.
+
+## ✍️ Typography this section uses that must not be tidied
+
+Collected as they turn up, all reproduced exactly:
+
+| what | where | note |
+|---|---|---|
+| `:-` colon-dash | 200 v6, v15 | introduces a list, in **both** Pali and Thai; keep the space before it |
+| Thai numerals | 197 (`๔`, `๘`), 200 (`๕`) | never 4/8/5; paiboon reads them as words |
+| brackets on invitations | 195–198 | `(หันทะ มะยัง … เส.)` — the brackets are printed |
+| brackets on rubrics | 194–198 | `(กราบ)`, `(๓ ครั้ง)`, `(กราบระลึกถึง…)` |
+| a printed full stop in a title | 112 | `บทขัด อัคคัปปะสาทะสุตตัง.` |
 
 ## 📖 A chant can arrive with NEITHER title NOR invitation — and it did
 

@@ -1,0 +1,247 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "pages": [
+   {
+    "page": 200,
+    "file": "IMG_0470.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "samvega-parikittana-patha-plae",
+    "verses": "5-21",
+    "starts_here": false,
+    "note": "The whole sheet, one chant. Seventeen PALI lines with their Thai — short ones in a right-hand column, long ones indented beneath. No title, no invitation, no rubric, no footnote: the page is one continuous run of the First Noble Truth and the five aggregates. The chant CONTINUES onto page 201."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "samvega-parikittana-patha-plae",
+   "continuation_of": "samvega-parikittana-patha-plae",
+   "continues": true,
+   "working_notes": {
+    "invitation": "none of its own — page 198's invitation covers this chant.",
+    "units": "Seventeen, verses 5-21, one per PALI line with its Thai. The short ones use the right-hand column, the long ones indent beneath.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "None new.",
+    "pages": "IMG_0470.PNG, page 200. The chant arrived from page 199 and CONTINUES onto page 201."
+   },
+   "verses": [
+    {
+     "number": 5,
+     "pali": "สัมโพธะคามี สุคะตัปปะเวทิโต,",
+     "pali_roman": "Sambodhagāmī sugatappavedito,",
+     "thai": "เป็นไปเพื่อความรู้พร้อม, เป็นธรรมที่พระสุคตประกาศ,",
+     "paiboon": "bpen bpai pʉ̂a kwaam-rúu prɔ́ɔm, bpen tam tîi prá-sù-kót bprà-gàat,",
+     "english": "it leads to full awakening, proclaimed by the Fortunate One,",
+     "page": 200
+    },
+    {
+     "number": 6,
+     "pali": "มะยันตัง ธัมมัง สุต์วา เอวัง ชานามะ :-",
+     "pali_roman": "Mayantaṃ dhammaṃ sutvā evaṃ jānāma :-",
+     "thai": "พวกเราเมื่อได้ฟังธรรมนั้นแล้ว, จึงได้รู้อย่างนี้ว่า :-",
+     "paiboon": "pûak rao mʉ̂a dâai faŋ tam nán lɛ́ɛo, jʉŋ dâai rúu yàaŋ-níi wâa :-",
+     "english": "Having heard that Dhamma, we know thus:—",
+     "page": 200
+    },
+    {
+     "number": 7,
+     "pali": "ชาติปิ ทุกขา,",
+     "pali_roman": "Jātipi dukkhā,",
+     "thai": "แม้ความเกิดก็เป็นทุกข์,",
+     "paiboon": "mɛ́ɛ kwaam-gə̀ət gɔ̂ bpen túk,",
+     "english": "birth is suffering,",
+     "page": 200
+    },
+    {
+     "number": 8,
+     "pali": "ชะราปิ ทุกขา,",
+     "pali_roman": "Jarāpi dukkhā,",
+     "thai": "แม้ความแก่ก็เป็นทุกข์,",
+     "paiboon": "mɛ́ɛ kwaam-gɛ̀ɛ gɔ̂ bpen túk,",
+     "english": "ageing is suffering,",
+     "page": 200
+    },
+    {
+     "number": 9,
+     "pali": "มะระณัมปิ ทุกขัง,",
+     "pali_roman": "Maraṇampi dukkhaṃ,",
+     "thai": "แม้ความตายก็เป็นทุกข์,",
+     "paiboon": "mɛ́ɛ kwaam-dtaai gɔ̂ bpen túk,",
+     "english": "death is suffering,",
+     "page": 200
+    },
+    {
+     "number": 10,
+     "pali": "โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา,",
+     "pali_roman": "Sokaparidevadukkhadomanassupāyāsāpi dukkhā,",
+     "thai": "แม้ความโศก ความร่ำไรรำพัน ความไม่สบายกาย ความไม่สบายใจ ความคับแค้นใจ ก็เป็นทุกข์,",
+     "paiboon": "mɛ́ɛ kwaam-sòok kwaam-râm-rai-ram-pan kwaam mâi sà-baai gaai kwaam mâi sà-baai jai kwaam káp-kɛ́ɛn jai gɔ̂ bpen túk,",
+     "english": "sorrow, lamentation, bodily pain, mental pain and despair are suffering,",
+     "page": 200
+    },
+    {
+     "number": 11,
+     "pali": "อัปปิเยหิ สัมปะโยโค ทุกโข,",
+     "pali_roman": "Appiyehi sampayogo dukkho,",
+     "thai": "ความประสบกับสิ่งไม่เป็นที่รักที่พอใจ ก็เป็นทุกข์,",
+     "paiboon": "kwaam bprà-sòp gàp sìŋ mâi bpen tîi rák tîi pɔɔ-jai gɔ̂ bpen túk,",
+     "english": "meeting what is unloved and displeasing is suffering,",
+     "page": 200
+    },
+    {
+     "number": 12,
+     "pali": "ปิเยหิ วิปปะโยโค ทุกโข,",
+     "pali_roman": "Piyehi vippayogo dukkho,",
+     "thai": "ความพลัดพรากจากสิ่งเป็นที่รักที่พอใจ ก็เป็นทุกข์,",
+     "paiboon": "kwaam plát-prâak jàak sìŋ bpen tîi rák tîi pɔɔ-jai gɔ̂ bpen túk,",
+     "english": "parting from what is loved and pleasing is suffering,",
+     "page": 200
+    },
+    {
+     "number": 13,
+     "pali": "ยัมปิจฉัง นะ ละภะติ ตัมปิ ทุกขัง,",
+     "pali_roman": "Yampicchaṃ na labhati tampi dukkhaṃ,",
+     "thai": "มีความปรารถนาสิ่งใด ไม่ได้สิ่งนั้น นั่นก็เป็นทุกข์,",
+     "paiboon": "mii kwaam bpràat-tà-nǎa sìŋ dai mâi dâai sìŋ nán nân gɔ̂ bpen túk,",
+     "english": "not getting what one wishes for is suffering,",
+     "page": 200
+    },
+    {
+     "number": 14,
+     "pali": "สังขิตเตนะ ปัญจุปาทานักขันธา ทุกขา,",
+     "pali_roman": "Saṅkhittena pañcupādānakkhandhā dukkhā,",
+     "thai": "ว่าโดยย่อ อุปาทานขันธ์ทั้ง ๕ เป็นตัวทุกข์,",
+     "paiboon": "wâa dooy yɔ̂ɔ ù-bpaa-taan-kǎn táŋ hâa bpen dtua túk,",
+     "english": "in brief, the five aggregates of clinging are suffering,",
+     "page": 200
+    },
+    {
+     "number": 15,
+     "pali": "เสยยะถีทัง,",
+     "pali_roman": "Seyyathīdaṃ,",
+     "thai": "ได้แก่สิ่งเหล่านี้ คือ :-",
+     "paiboon": "dâai-gɛ̀ɛ sìŋ lào níi kʉʉ :-",
+     "english": "namely:—",
+     "page": 200
+    },
+    {
+     "number": 16,
+     "pali": "รูปูปาทานักขันโธ,",
+     "pali_roman": "Rūpūpādānakkhandho,",
+     "thai": "ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ รูป,",
+     "paiboon": "kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ rûup,",
+     "english": "the aggregate of clinging that is form,",
+     "page": 200
+    },
+    {
+     "number": 17,
+     "pali": "เวทะนูปาทานักขันโธ,",
+     "pali_roman": "Vedanūpādānakkhandho,",
+     "thai": "ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ เวทนา,",
+     "paiboon": "kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ wêet-tà-naa,",
+     "english": "the aggregate of clinging that is feeling,",
+     "page": 200
+    },
+    {
+     "number": 18,
+     "pali": "สัญญูปาทานักขันโธ,",
+     "pali_roman": "Saññūpādānakkhandho,",
+     "thai": "ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ สัญญา,",
+     "paiboon": "kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ sǎn-yaa,",
+     "english": "the aggregate of clinging that is perception,",
+     "page": 200
+    },
+    {
+     "number": 19,
+     "pali": "สังขารูปาทานักขันโธ,",
+     "pali_roman": "Saṅkhārūpādānakkhandho,",
+     "thai": "ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ สังขาร,",
+     "paiboon": "kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ sǎŋ-kǎan,",
+     "english": "the aggregate of clinging that is formations,",
+     "page": 200
+    },
+    {
+     "number": 20,
+     "pali": "วิญญาณูปาทานักขันโธ,",
+     "pali_roman": "Viññāṇūpādānakkhandho,",
+     "thai": "ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ วิญญาณ,",
+     "paiboon": "kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ win-yaan,",
+     "english": "the aggregate of clinging that is consciousness,",
+     "page": 200
+    },
+    {
+     "number": 21,
+     "pali": "เยสัง ปะริญญายะ,",
+     "pali_roman": "Yesaṃ pariññāya,",
+     "thai": "เพื่อให้สาวกกำหนดรอบรู้อุปาทานขันธ์ เหล่านี้เอง,",
+     "paiboon": "pʉ̂a hâi sǎa-wók gam-nòt rɔ̂ɔp-rúu ù-bpaa-taan-kǎn lào níi eeŋ,",
+     "english": "for the full understanding of which,",
+     "page": 200
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปัญจุปาทานักขันธา",
+     "pali_roman": "pañcupādānakkhandhā",
+     "meaning": "the five aggregates of clinging. The Thai renders the compound as ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น — 'the aggregate that is the ground of holding fast' — and repeats it in full for all five"
+    },
+    {
+     "pali": "โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา",
+     "pali_roman": "sokaparidevadukkhadomanassupāyāsā",
+     "meaning": "sorrow, lamentation, bodily pain, mental pain, despair — five words compounded into one. The Thai separates all five out"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 6,
+     "file": "IMG_0470.PNG",
+     "issue": "‼ THE BOOK USES A COLON-DASH, :- , AND IT IS REPRODUCED. Verse 6 ends เอวัง ชานามะ :- in the Pali and จึงได้รู้อย่างนี้ว่า :- in the Thai, and verse 15 ends คือ :- the same way. It is the book's own way of introducing a list. Kept exactly, including the space before it."
+    },
+    {
+     "verse": 14,
+     "file": "IMG_0470.PNG",
+     "issue": "THAI NUMERAL REPRODUCED AS PRINTED: อุปาทานขันธ์ทั้ง ๕. The book uses ๕, not 5, as it used ๔ and ๘ on page 197. The paiboon reads it as hâa."
+    },
+    {
+     "verse": 16,
+     "file": "IMG_0470.PNG",
+     "issue": "THE SAME THAI PHRASE IS SET FIVE TIMES IN FULL. Verses 16-20 each repeat ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ … with only the last word changing. All five were read off the sheet separately rather than copied, and all five are identical apart from that word."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0470.PNG",
+     "issue": "Verses 7, 8, 9 and 15 are short and set with their Thai in a RIGHT-HAND COLUMN; the rest are long and indented beneath. Same length-driven choice as every sheet in this section."
+    },
+    {
+     "verse": 21,
+     "file": "IMG_0470.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 21 is the last thing on the sheet and the chant runs on to page 201. No […] is used: it ends at a comma the book itself prints. Its English is deliberately left hanging — 'for the full understanding of which,' — because the sentence completes on the next page."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "continues": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "resume_from": {
+   "chant": "samvega-parikittana-patha-plae",
+   "next_verse": 22,
+   "page": 201
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0470.PNG read end to end. Page number 200 printed clearly at the top centre. One chant throughout, no heading, no footnote, no rule, no colophon. A hand holds the sheet at the left margin and obscures nothing.",
+  "notes": "‼ THE BOOK USES A COLON-DASH :- TO INTRODUCE A LIST, twice on this sheet, in both the Pali and the Thai. Reproduced exactly, space included. Also a Thai numeral ๕ for the five aggregates, and the same Thai phrase set five times in full for verses 16-20 — each read separately rather than copied.",
+  "diacritic_exceptions": []
+ }
+}

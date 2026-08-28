@@ -47373,13 +47373,21 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'To the Awakened One I bow with my head.',
             },
+            {
+                'number': 28,
+                'pali': 'อิติปิ โส ภะคะวา.',
+                'pali_roman': 'itipi so bhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Such is the Blessed One.',
+            },
             # ‼ CHECK [IMG_0511.PNG]: THE TWO PRINTINGS DIFFER HERE. This
             #   sheet romanises to `itipi so bhagavā rūpakhandho
             #   aniccalakkhaṇapāramī ca sampanno.`; the roman twin prints
             #   `itipi so bhagavā rūpakhandho aniccalakkhaṇapārami ca
             #   sampanno.`. Both are entered as their own page prints them.
             {
-                'number': 28,
+                'number': 29,
                 'printed_number': 3,
                 'pali': 'อิติปิ โส ภะคะวา รูปะขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā rūpakhandho aniccalakkhaṇapāramī ca sampanno.',
@@ -47393,7 +47401,7 @@ CHANTS = [
             #   `itipi so bhagavā vedanākhandho aniccalakkhaṇapārami ca
             #   sampanno.`. Both are entered as their own page prints them.
             {
-                'number': 29,
+                'number': 30,
                 'pali': 'อิติปิ โส ภะคะวา เวทะนาขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā vedanākhandho aniccalakkhaṇapāramī ca sampanno.',
                 'thai': '',
@@ -47406,7 +47414,7 @@ CHANTS = [
             #   `itipi so bhagavā saññākhandho aniccalakkhaṇapārami ca
             #   sampanno.`. Both are entered as their own page prints them.
             {
-                'number': 30,
+                'number': 31,
                 'pali': 'อิติปิ โส ภะคะวา สัญญาขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā saññākhandho aniccalakkhaṇapāramī ca sampanno.',
                 'thai': '',
@@ -47419,7 +47427,7 @@ CHANTS = [
             #   `itipi so bhagavā saṅkhārakhandho aniccalakkhaṇapārami ca
             #   sampanno.`. Both are entered as their own page prints them.
             {
-                'number': 31,
+                'number': 32,
                 'pali': 'อิติปิ โส ภะคะวา สังขาระขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā saṅkhārakhandho aniccalakkhaṇapāramī ca sampanno.',
                 'thai': '',
@@ -47432,7 +47440,7 @@ CHANTS = [
             #   Checked at magnification. Entered as printed; the roman twin
             #   uses the short vowel on all five.
             {
-                'number': 32,
+                'number': 33,
                 'pali': 'อิติปิ โส ภะคะวา วิญญาณะขันโธ อะนิจจะลักขะณะปาระมิ จะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā viññāṇakhandho aniccalakkhaṇapārami ca sampanno.',
                 'thai': '',
@@ -47440,7 +47448,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: the aggregate of consciousness, perfect in the mark of impermanence and in the perfections.',
             },
             {
-                'number': 33,
+                'number': 34,
                 'printed_number': 4,
                 'pali': 'อิติปิ โส ภะคะวา ปะฐะวี ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā paṭhavī dhātu samādhiñāṇa sampanno.',
@@ -47449,7 +47457,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the earth element.',
             },
             {
-                'number': 34,
+                'number': 35,
                 'pali': 'อิติปิ โส ภะคะวา อาโป ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā āpo dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47457,7 +47465,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the water element.',
             },
             {
-                'number': 35,
+                'number': 36,
                 'pali': 'อิติปิ โส ภะคะวา เตโช ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā tejo dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47465,7 +47473,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the fire element.',
             },
             {
-                'number': 36,
+                'number': 37,
                 'pali': 'อิติปิ โส ภะคะวา วาโย ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā vāyo dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47473,7 +47481,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the air element.',
             },
             {
-                'number': 37,
+                'number': 38,
                 'pali': 'อิติปิ โส ภะคะวา อากาสะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā ākāsa dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47486,7 +47494,7 @@ CHANTS = [
             #   dhātu samādhiñāṇasampanno.`. Both are entered as their own
             #   page prints them.
             {
-                'number': 38,
+                'number': 39,
                 'pali': 'อิติปิ โส ภะคะวา วิญญาณะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā viññāṇa dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47498,7 +47506,7 @@ CHANTS = [
             #   and the roman twin reads `cakkavāḷa`, which settles it
             #   independently of the canon.
             {
-                'number': 39,
+                'number': 40,
                 'pali': 'อิติปิ โส ภะคะวา จักกะวาฬะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā cakkavāḷa dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47506,7 +47514,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the world-sphere element.',
             },
             {
-                'number': 40,
+                'number': 41,
                 'printed_number': 5,
                 'pali': 'อิติปิ โส ภะคะวา จาตุมมะหาราชิกา ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā cātummahārājikā dhātu samādhiñāṇa sampanno.',
@@ -47515,7 +47523,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the realm of the Four Great Kings.',
             },
             {
-                'number': 41,
+                'number': 42,
                 'pali': 'อิติปิ โส ภะคะวา ตาวะติงสา ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā tāvatiṃsā dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47523,7 +47531,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tāvatiṃsa heaven.',
             },
             {
-                'number': 42,
+                'number': 43,
                 'pali': 'อิติปิ โส ภะคะวา ยามา ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā yāmā dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47531,7 +47539,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Yāma heaven.',
             },
             {
-                'number': 43,
+                'number': 44,
                 'pali': 'อิติปิ โส ภะคะวา ตุสิตา ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā tusitā dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47539,7 +47547,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tusita heaven.',
             },
             {
-                'number': 44,
+                'number': 45,
                 'pali': 'อิติปิ โส ภะคะวา นิมมานะระตี ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā nimmānaratī dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47547,7 +47555,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Nimmānaratī heaven.',
             },
             {
-                'number': 45,
+                'number': 46,
                 'pali': 'อิติปิ โส ภะคะวา ปะระนิมมิตะวะสะวัตตี ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā paranimmitavasavattī dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47555,7 +47563,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the Paranimmitavasavattī heaven.',
             },
             {
-                'number': 46,
+                'number': 47,
                 'pali': 'อิติปิ โส ภะคะวา กามาวะจะระ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā kāmāvacara dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47563,7 +47571,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the sense-sphere realm.',
             },
             {
-                'number': 47,
+                'number': 48,
                 'pali': 'อิติปิ โส ภะคะวา รูปาวะจะระ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā rūpāvacara dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47571,7 +47579,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the form realm.',
             },
             {
-                'number': 48,
+                'number': 49,
                 'pali': 'อิติปิ โส ภะคะวา อะรูปาวะจะระ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā arūpāvacara dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47579,7 +47587,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the formless realm.',
             },
             {
-                'number': 49,
+                'number': 50,
                 'pali': 'อิติปิ โส ภะคะวา โลกุตตะระ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā lokuttara dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47587,7 +47595,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the supramundane.',
             },
             {
-                'number': 50,
+                'number': 51,
                 'printed_number': 6,
                 'pali': 'อิติปิ โส ภะคะวา ปะฐะมะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā paṭhamajhāna dhātu samādhiñāṇa sampanno.',
@@ -47596,7 +47604,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the first jhāna.',
             },
             {
-                'number': 51,
+                'number': 52,
                 'page': 243,
                 'pali': 'อิติปิ โส ภะคะวา ทุติยะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā dutiyajhāna dhātu samādhiñāṇa sampanno.',
@@ -47605,7 +47613,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the second jhāna.',
             },
             {
-                'number': 52,
+                'number': 53,
                 'pali': 'อิติปิ โส ภะคะวา ตะติยะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā tatiyajhāna dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47613,7 +47621,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the third jhāna.',
             },
             {
-                'number': 53,
+                'number': 54,
                 'pali': 'อิติปิ โส ภะคะวา จะตุตถะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā catutthajhāna dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47621,7 +47629,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fourth jhāna.',
             },
             {
-                'number': 54,
+                'number': 55,
                 'pali': 'อิติปิ โส ภะคะวา ปัญจะมะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā pañcamajhāna dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47629,7 +47637,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fifth jhāna.',
             },
             {
-                'number': 55,
+                'number': 56,
                 'printed_number': 7,
                 'pali': 'อิติปิ โส ภะคะวา อากาสานัญจายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā ākāsānañcāyatana dhātu samādhiñāṇa sampanno.',
@@ -47643,7 +47651,7 @@ CHANTS = [
             #   bhagavā viññānañcāyatana dhātu samādhiñāṇasampanno.`. Both are
             #   entered as their own page prints them.
             {
-                'number': 56,
+                'number': 57,
                 'pali': 'อิติปิ โส ภะคะวา วิญญาณัญจายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā viññāṇañcāyatana dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47651,7 +47659,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite consciousness.',
             },
             {
-                'number': 57,
+                'number': 58,
                 'pali': 'อิติปิ โส ภะคะวา อากิญจัญญายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā ākiñcaññāyatana dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47659,7 +47667,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of nothingness.',
             },
             {
-                'number': 58,
+                'number': 59,
                 'pali': 'อิติปิ โส ภะคะวา เนวะสัญญานาสัญญายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā nevasaññānāsaññāyatana dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47667,7 +47675,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of neither-perception-nor-non-perception.',
             },
             {
-                'number': 59,
+                'number': 60,
                 'printed_number': 8,
                 'pali': 'อิติปิ โส ภะคะวา โสตาปัตติมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā sotāpattimagga dhātu samādhiñāṇa sampanno.',
@@ -47676,7 +47684,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of stream-entry.',
             },
             {
-                'number': 60,
+                'number': 61,
                 'pali': 'อิติปิ โส ภะคะวา สะกิทาคามิมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā sakidāgāmimagga dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47684,7 +47692,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of once-returning.',
             },
             {
-                'number': 61,
+                'number': 62,
                 'pali': 'อิติปิ โส ภะคะวา อะนาคามิมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā anāgāmimagga dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47692,7 +47700,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of non-returning.',
             },
             {
-                'number': 62,
+                'number': 63,
                 'pali': 'อิติปิ โส ภะคะวา อะระหัตตะมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā arahattamagga dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47700,7 +47708,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of arahantship.',
             },
             {
-                'number': 63,
+                'number': 64,
                 'pali': 'อิติปิ โส ภะคะวา โสตาปัตติผะละ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā sotāpattiphala dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47708,7 +47716,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of stream-entry.',
             },
             {
-                'number': 64,
+                'number': 65,
                 'pali': 'อิติปิ โส ภะคะวา สะกิทาคามิผะละ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā sakidāgāmiphala dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47716,7 +47724,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of once-returning.',
             },
             {
-                'number': 65,
+                'number': 66,
                 'pali': 'อิติปิ โส ภะคะวา อะนาคามิผะละ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā anāgāmiphala dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47724,7 +47732,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of non-returning.',
             },
             {
-                'number': 66,
+                'number': 67,
                 'pali': 'อิติปิ โส ภะคะวา อะระหัตตะผะละ ธาตุ สะมาธิญาณะ สัมปันโน.',
                 'pali_roman': 'itipi so bhagavā arahattaphala dhātu samādhiñāṇa sampanno.',
                 'thai': '',
@@ -47739,7 +47747,7 @@ CHANTS = [
             #   issaro kusalādhammā namobud`. Both are entered as their own
             #   page prints them.
             {
-                'number': 67,
+                'number': 68,
                 'printed_number': 9,
                 'pali': 'กุสะลา ธัมมา อิติปิ โส ภะคะวา อะอา ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ. ชัมพูทีปัญจะ อิสสะโร กุสะลา ธัมมา นะโม พุทธายะ นะโม ธัมมายะ นะโม สังฆายะ ปัญจะพุทธา นะมามิหัง อาปามะจุปะ ทีมะสังอังขุ สังวิธาปุกะยะปะ อุปะสะชะสะเห ปาสายะโส.',
                 'pali_roman': 'kusalā dhammā itipi so bhagavā aā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi. jambūdīpañca issaro kusalā dhammā namo buddhāya namo dhammāya namo saṅghāya pañcabuddhā namāmihaṃ āpāmacupa dīmasaṃaṅkhu saṃvidhāpukayapa upasajasahe pāsāyaso.',
@@ -47755,7 +47763,7 @@ CHANTS = [
             #   kusalādhammā citti vi-atthi.`. Both are entered as their own
             #   page prints them.
             {
-                'number': 68,
+                'number': 69,
                 'pali': 'โสโสสะสะ อะอะอะอะนิ เตชะสุเนมะภูจะนาวิเว อะสังวิสุโลปุสะพุภะ อิสะวาสุ สุสะวาอิ กุสะลา ธัมมา จิตติ วิอัตถิ.',
                 'pali_roman': 'sososasa aaaani tejasunemabhūcanāvive asaṃvisulopusabubha isavāsu susavāi kusalā dhammā citti viatthi.',
                 'thai': '',
@@ -47770,7 +47778,7 @@ CHANTS = [
             #   kusalā dhammā`. Both are entered as their own page prints
             #   them.
             {
-                'number': 69,
+                'number': 70,
                 'pali': 'อิติปิ โส ภะคะวา อะระหัง อะอา ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ สา โพธิ ปัญจะ อิสสะโร ธัมมา กุสะลา ธัมมา.',
                 'pali_roman': 'itipi so bhagavā arahaṃ aā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi sā bodhi pañca issaro dhammā kusalā dhammā.',
                 'thai': '',
@@ -47778,7 +47786,7 @@ CHANTS = [
                 'english': 'Such is the Blessed One, the worthy one. For as long as life lasts I go to the Buddha for refuge. Lord of the five awakenings, states. Wholesome states',
             },
             {
-                'number': 70,
+                'number': 71,
                 'pali': 'นันทะวิวังโก อิติ สัมมาสัมพุทโธ สุคะลาโน ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'nandavivaṅko iti sammāsambuddho sugalāno yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
@@ -47789,7 +47797,7 @@ CHANTS = [
             #   the roman prints `u-ū`, short then long. Entered as printed on
             #   each side.
             {
-                'number': 71,
+                'number': 72,
                 'page': 244,
                 'printed_number': 10,
                 'pali': 'จาตุมมะหาราชิกา อิสสะโร กุสะลา ธัมมา อิติ วิชชาจะระณะสัมปันโน อุอุ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
@@ -47799,7 +47807,7 @@ CHANTS = [
                 'english': 'Lord of the realm of the Four Great Kings, wholesome states; thus, perfect in knowledge and conduct — u-ū — for as long as life lasts I go to the Buddha for refuge.',
             },
             {
-                'number': 72,
+                'number': 73,
                 'pali': 'ตาวะติงสา อิสสะโร กุสะลา ธัมมา นันทะ ปัญจะ สุคะโต โลกะวิทู มะหาเอโอ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'tāvatiṃsā issaro kusalā dhammā nanda pañca sugato lokavidū mahāeo yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
@@ -47807,7 +47815,7 @@ CHANTS = [
                 'english': 'Lord of the Tāvatiṃsa heaven, wholesome states; the well-gone one, knower of worlds — mahā-e-o — for as long as life lasts I go to the Buddha for refuge.',
             },
             {
-                'number': 73,
+                'number': 74,
                 'pali': 'ยามา อิสสะโร กุสะลา ธัมมา พ์รัห์มาสัททะ ปัญจะ สัตตา สัตตาปาระมี อะนุตตะโร ยะมะกะขะ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'yāmā issaro kusalā dhammā brahmāsadda pañca sattā sattāpāramī anuttaro yamakakha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
@@ -47822,7 +47830,7 @@ CHANTS = [
             #   Checked at magnification. Neither has been changed to match
             #   the other.
             {
-                'number': 74,
+                'number': 75,
                 'pali': 'ตุสิตา อิสสะโร กุสะลา ธัมมา ปุกะยะปะ ปุริสะทัมมะสาระถิ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'tusitā issaro kusalā dhammā pukayapa purisadammasārathi yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
@@ -47830,7 +47838,7 @@ CHANTS = [
                 'english': 'Lord of the Tusita heaven, wholesome states; puyapaka, trainer of tameable people — for as long as life lasts I go to the Buddha for refuge.',
             },
             {
-                'number': 75,
+                'number': 76,
                 'pali': 'นิมมานะระตี อิสสะโร กุสะลา ธัมมา เหตุโปวะ สัตถา เทวะมะนุสสานัง ตะถา ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'nimmānaratī issaro kusalā dhammā hetupova satthā devamanussānaṃ tathā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
@@ -47838,7 +47846,7 @@ CHANTS = [
                 'english': 'Lord of the Nimmānaratī heaven, wholesome states; hetupova, teacher of devas and humans, likewise — for as long as life lasts I go to the Buddha for refuge.',
             },
             {
-                'number': 76,
+                'number': 77,
                 'pali': 'ปะระนิมมิตะวะสะวัตตี อิสสะโร กุสะลา ธัมมา สังขารักขันโธ ทุกขัง อะนิจจัง อะนัตตา รูปักขันโธ พุทธะปะผะ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'paranimmitavasavattī issaro kusalā dhammā saṅkhārakkhandho dukkhaṃ aniccaṃ anattā rūpakkhandho buddhapapha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
@@ -47850,7 +47858,7 @@ CHANTS = [
             #   `rūpakhandho`. Both sheets checked at magnification; entered
             #   as printed.
             {
-                'number': 77,
+                'number': 78,
                 'pali': 'พ์รัห์มา อิสสะโร กุสะลา ธัมมา นัตถิปัจจะยา วินะปัญจะ ภะคะวะตา ยาวะนิพพานัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'brahmā issaro kusalā dhammā natthipaccayā vinapañca bhagavatā yāvanibbānaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
@@ -47858,7 +47866,7 @@ CHANTS = [
                 'english': 'Lord Brahmā, wholesome states; by the condition of non-existence, vinapañca, by the Blessed One — until Nibbāna I go for refuge.',
             },
             {
-                'number': 78,
+                'number': 79,
                 'printed_number': 11,
                 'pali': 'นะโม พุทธัสสะ นะโม ธัมมัสสะ นะโม สังฆัสสะ พุทธิลาโภกะลา กะระกะนา เอเตนะ สัจเจนะ สุวัตถิ โหนตุ หุลู หุลู หุลู สะวาหายะ.',
                 'pali_roman': 'namo buddhassa namo dhammassa namo saṅghassa buddhilābhokalā karakanā etena saccena suvatthi hontu hulū hulū hulū savāhāya.',
@@ -47872,7 +47880,7 @@ CHANTS = [
             #   the app had not mistyped it — the book really does print
             #   `mitt`.
             {
-                'number': 79,
+                'number': 80,
                 'pali': 'นะโม พุทธัสสะ นะโม ธัมมัสสะ นะโม สังฆัสสะ วิตติ วิตติ วิตติ มิตติ มิตติ มิตติ จิตติ จิตติ วัตติ วัตติ มะยะสุ สุวัตถิ โหนตุ หุลู หุลู หุลู สะวาหายะ.',
                 'pali_roman': 'namo buddhassa namo dhammassa namo saṅghassa vitti vitti vitti mitti mitti mitti citti citti vatti vatti mayasu suvatthi hontu hulū hulū hulū savāhāya.',
                 'thai': '',
@@ -47880,7 +47888,7 @@ CHANTS = [
                 'english': 'Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha; syllable formulas repeated in threes and pairs. May there be well-being — hulū hulū hulū savāhāya.',
             },
             {
-                'number': 80,
+                'number': 81,
                 'pali': 'อินทะสาวัง มะหาอินทะสาวัง พ์รัห์มะสาวัง มะหาพ์รัห์มะสาวัง จักกะวัตติสาวัง มะหาจักกะวัตติสาวัง เทวาสาวัง มะหาเทวาสาวัง อิสิสาวัง มะหาอิสิสาวัง มุนีสาวัง มะหามุนีสาวัง สัปปุริสะสาวัง มะหาสัปปุริสะสาวัง พุทธะสาวัง ปัจเจกะพุทธะสาวัง อะระหัตตะสาวัง สัพพะสิทธิวิชชาธาระณังสาวัง สัพพะโลกา อิริยานังสาวัง เอเตนะ สัจเจนะ สุวัตถิ โหนตุ.',
                 'pali_roman': 'indasāvaṃ mahāindasāvaṃ brahmasāvaṃ mahābrahmasāvaṃ cakkavattisāvaṃ mahācakkavattisāvaṃ devāsāvaṃ mahādevāsāvaṃ isisāvaṃ mahāisisāvaṃ munīsāvaṃ mahāmunīsāvaṃ sappurisasāvaṃ mahāsappurisasāvaṃ buddhasāvaṃ paccekabuddhasāvaṃ arahattasāvaṃ sabbasiddhivijjādhāraṇaṃsāvaṃ sabbalokā iriyānaṃsāvaṃ etena saccena suvatthi hontu.',
                 'thai': '',
@@ -47895,7 +47903,7 @@ CHANTS = [
             #   as two. Entered as printed on this side; the roman is left as
             #   printed on its own.
             {
-                'number': 81,
+                'number': 82,
                 'pali': 'สาวัง คุณัง วิชชา วะชะ พะลัง เตชัง วิริยัง สิทธิกัมมัง ธัมมัง สัจจัง นิพพานัง โมกขัง คุยหะกัง ทานัง สีลัง ปัญญานิกขัง ปุญญัง ภาคะยัง ตะปัง ยะสัง สุขัง สิริรูปัง จะตุวีสะติเทสะนัง เอเตนะ สัจเจนะ สุวัตถิ โหนตุ หุลู หุลู หุลู สะวาหายะ.',
                 'pali_roman': 'sāvaṃ guṇaṃ vijjā vaja balaṃ tejaṃ viriyaṃ siddhikammaṃ dhammaṃ saccaṃ nibbānaṃ mokkhaṃ guyhakaṃ dānaṃ sīlaṃ paññānikkhaṃ puññaṃ bhāgayaṃ tapaṃ yasaṃ sukhaṃ sirirūpaṃ catuvīsatidesanaṃ etena saccena suvatthi hontu hulū hulū hulū savāhāya.',
                 'thai': '',
@@ -47903,7 +47911,7 @@ CHANTS = [
                 'english': 'Power, virtue, speech, strength, brilliance, energy, attainment, action, Dhamma, truth, Nibbāna, release, what is hidden, giving, morality, wisdom, renunciation, merit, fortune, fame, satisfaction, happiness, splendour, form, and the twenty-four teachings. By this truth may there be well-being — hulū hulū hulū savāhāya.',
             },
             {
-                'number': 82,
+                'number': 83,
                 'printed_number': 12,
                 'pali': 'นะโม พุทธัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม อิติปิ โส ภะคะวา.',
                 'pali_roman': 'namo buddhassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo itipi so bhagavā.',
@@ -47923,7 +47931,7 @@ CHANTS = [
             #   Page 244 ended at นะโม and this sheet opens ส์วากขาโต ภะคะวะตา
             #   ธัมโม. The verse belongs to 244, where it starts.
             {
-                'number': 83,
+                'number': 84,
                 'pali': 'นะโม ธัมมัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม ส์วากขาโต ภะคะวะตา ธัมโม.',
                 'pali_roman': 'namo dhammassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo svākkhāto bhagavatā dhammo.',
                 'thai': '',
@@ -47931,7 +47939,7 @@ CHANTS = [
                 'english': 'Homage to the Dhamma. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — well proclaimed by the Blessed One is the Dhamma.',
             },
             {
-                'number': 84,
+                'number': 85,
                 'page': 245,
                 'pali': 'นะโม สังฆัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ วาหะปะริตตัง.',
                 'pali_roman': 'namo saṅghassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo supaṭipanno bhagavato sāvakasaṅgho vāhaparittaṃ.',
@@ -47947,7 +47955,7 @@ CHANTS = [
             #   `u-a-ma`. The heart-syllable material the roman pass recorded
             #   as uncheckable now has a second witness.
             {
-                'number': 85,
+                'number': 86,
                 'pali': 'นะโม พุทธายะ มะอะอุ ทุกขัง อะนิจจัง อะนัตตา ยาวะ ตัสสะ หาโย โมนะ อุอะมะ ทุกขัง อะนิจจัง อะนัตตา อุอะมะอะ วันทา นะโม พุทธายะ นะอะ กะติ นิสะระณะ อาระปะขุทธัง มะอะอุ ทุกขัง อะนิจจัง อะนัตตา.',
                 'pali_roman': 'namo buddhāya maau dukkhaṃ aniccaṃ anattā yāva tassa hāyo mona uama dukkhaṃ aniccaṃ anattā uamaa vandā namo buddhāya naa kati nisaraṇa ārapakhuddhaṃ maau dukkhaṃ aniccaṃ anattā.',
                 'thai': '',
@@ -49926,7 +49934,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 21; the rest is not in the app yet.
         # ‼ CHECK [IMG_0469.PNG]: ‼‼ NO TITLE AND NO INVITATION ARE PRINTED,
         #   AND BOTH ABSENCES WERE PREDICTED. The passage begins straight
         #   after the previous chant's last Thai line, with no heading at all.
@@ -50002,6 +50010,182 @@ CHANTS = [
                 'thai': 'เป็นเครื่องสงบกิเลส, เป็นไปเพื่อปรินิพพาน,',
                 'paiboon': 'bpen krʉ̂aŋ sà-ŋòp gì-lèet, bpen bpai pʉ̂a bpà-rí-níp-paan,',
                 'english': 'it stills defilement and goes to final Nibbāna,',
+            },
+            {
+                'number': 5,
+                'page': 200,
+                'pali': 'สัมโพธะคามี สุคะตัปปะเวทิโต,',
+                'pali_roman': 'Sambodhagāmī sugatappavedito,',
+                'thai': 'เป็นไปเพื่อความรู้พร้อม, เป็นธรรมที่พระสุคตประกาศ,',
+                'paiboon': 'bpen bpai pʉ̂a kwaam-rúu prɔ́ɔm, bpen tam tîi prá-sù-kót bprà-gàat,',
+                'english': 'it leads to full awakening, proclaimed by the Fortunate One,',
+            },
+            # ‼ CHECK [IMG_0470.PNG]: ‼ THE BOOK USES A COLON-DASH, :- , AND
+            #   IT IS REPRODUCED. Verse 6 ends เอวัง ชานามะ :- in the Pali and
+            #   จึงได้รู้อย่างนี้ว่า :- in the Thai, and verse 15 ends คือ :-
+            #   the same way. It is the book's own way of introducing a list.
+            #   Kept exactly, including the space before it.
+            {
+                'number': 6,
+                'page': 200,
+                'pali': 'มะยันตัง ธัมมัง สุต์วา เอวัง ชานามะ :-',
+                'pali_roman': 'Mayantaṃ dhammaṃ sutvā evaṃ jānāma :-',
+                'thai': 'พวกเราเมื่อได้ฟังธรรมนั้นแล้ว, จึงได้รู้อย่างนี้ว่า :-',
+                'paiboon': 'pûak rao mʉ̂a dâai faŋ tam nán lɛ́ɛo, jʉŋ dâai rúu yàaŋ-níi wâa :-',
+                'english': 'Having heard that Dhamma, we know thus:—',
+            },
+            {
+                'number': 7,
+                'page': 200,
+                'pali': 'ชาติปิ ทุกขา,',
+                'pali_roman': 'Jātipi dukkhā,',
+                'thai': 'แม้ความเกิดก็เป็นทุกข์,',
+                'paiboon': 'mɛ́ɛ kwaam-gə̀ət gɔ̂ bpen túk,',
+                'english': 'birth is suffering,',
+            },
+            {
+                'number': 8,
+                'page': 200,
+                'pali': 'ชะราปิ ทุกขา,',
+                'pali_roman': 'Jarāpi dukkhā,',
+                'thai': 'แม้ความแก่ก็เป็นทุกข์,',
+                'paiboon': 'mɛ́ɛ kwaam-gɛ̀ɛ gɔ̂ bpen túk,',
+                'english': 'ageing is suffering,',
+            },
+            {
+                'number': 9,
+                'page': 200,
+                'pali': 'มะระณัมปิ ทุกขัง,',
+                'pali_roman': 'Maraṇampi dukkhaṃ,',
+                'thai': 'แม้ความตายก็เป็นทุกข์,',
+                'paiboon': 'mɛ́ɛ kwaam-dtaai gɔ̂ bpen túk,',
+                'english': 'death is suffering,',
+            },
+            # ‼ CHECK [IMG_0470.PNG]: Verses 7, 8, 9 and 15 are short and set
+            #   with their Thai in a RIGHT-HAND COLUMN; the rest are long and
+            #   indented beneath. Same length-driven choice as every sheet in
+            #   this section.
+            {
+                'number': 10,
+                'page': 200,
+                'pali': 'โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา,',
+                'pali_roman': 'Sokaparidevadukkhadomanassupāyāsāpi dukkhā,',
+                'thai': 'แม้ความโศก ความร่ำไรรำพัน ความไม่สบายกาย ความไม่สบายใจ ความคับแค้นใจ ก็เป็นทุกข์,',
+                'paiboon': 'mɛ́ɛ kwaam-sòok kwaam-râm-rai-ram-pan kwaam mâi sà-baai gaai kwaam mâi sà-baai jai kwaam káp-kɛ́ɛn jai gɔ̂ bpen túk,',
+                'english': 'sorrow, lamentation, bodily pain, mental pain and despair are suffering,',
+            },
+            {
+                'number': 11,
+                'page': 200,
+                'pali': 'อัปปิเยหิ สัมปะโยโค ทุกโข,',
+                'pali_roman': 'Appiyehi sampayogo dukkho,',
+                'thai': 'ความประสบกับสิ่งไม่เป็นที่รักที่พอใจ ก็เป็นทุกข์,',
+                'paiboon': 'kwaam bprà-sòp gàp sìŋ mâi bpen tîi rák tîi pɔɔ-jai gɔ̂ bpen túk,',
+                'english': 'meeting what is unloved and displeasing is suffering,',
+            },
+            {
+                'number': 12,
+                'page': 200,
+                'pali': 'ปิเยหิ วิปปะโยโค ทุกโข,',
+                'pali_roman': 'Piyehi vippayogo dukkho,',
+                'thai': 'ความพลัดพรากจากสิ่งเป็นที่รักที่พอใจ ก็เป็นทุกข์,',
+                'paiboon': 'kwaam plát-prâak jàak sìŋ bpen tîi rák tîi pɔɔ-jai gɔ̂ bpen túk,',
+                'english': 'parting from what is loved and pleasing is suffering,',
+            },
+            {
+                'number': 13,
+                'page': 200,
+                'pali': 'ยัมปิจฉัง นะ ละภะติ ตัมปิ ทุกขัง,',
+                'pali_roman': 'Yampicchaṃ na labhati tampi dukkhaṃ,',
+                'thai': 'มีความปรารถนาสิ่งใด ไม่ได้สิ่งนั้น นั่นก็เป็นทุกข์,',
+                'paiboon': 'mii kwaam bpràat-tà-nǎa sìŋ dai mâi dâai sìŋ nán nân gɔ̂ bpen túk,',
+                'english': 'not getting what one wishes for is suffering,',
+            },
+            # ‼ CHECK [IMG_0470.PNG]: THAI NUMERAL REPRODUCED AS PRINTED:
+            #   อุปาทานขันธ์ทั้ง ๕. The book uses ๕, not 5, as it used ๔ and ๘
+            #   on page 197. The paiboon reads it as hâa.
+            {
+                'number': 14,
+                'page': 200,
+                'pali': 'สังขิตเตนะ ปัญจุปาทานักขันธา ทุกขา,',
+                'pali_roman': 'Saṅkhittena pañcupādānakkhandhā dukkhā,',
+                'thai': 'ว่าโดยย่อ อุปาทานขันธ์ทั้ง ๕ เป็นตัวทุกข์,',
+                'paiboon': 'wâa dooy yɔ̂ɔ ù-bpaa-taan-kǎn táŋ hâa bpen dtua túk,',
+                'english': 'in brief, the five aggregates of clinging are suffering,',
+            },
+            {
+                'number': 15,
+                'page': 200,
+                'pali': 'เสยยะถีทัง,',
+                'pali_roman': 'Seyyathīdaṃ,',
+                'thai': 'ได้แก่สิ่งเหล่านี้ คือ :-',
+                'paiboon': 'dâai-gɛ̀ɛ sìŋ lào níi kʉʉ :-',
+                'english': 'namely:—',
+            },
+            # ‼ CHECK [IMG_0470.PNG]: THE SAME THAI PHRASE IS SET FIVE TIMES
+            #   IN FULL. Verses 16-20 each repeat ขันธ์
+            #   อันเป็นที่ตั้งแห่งความยึดมั่น คือ … with only the last word
+            #   changing. All five were read off the sheet separately rather
+            #   than copied, and all five are identical apart from that word.
+            {
+                'number': 16,
+                'page': 200,
+                'pali': 'รูปูปาทานักขันโธ,',
+                'pali_roman': 'Rūpūpādānakkhandho,',
+                'thai': 'ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ รูป,',
+                'paiboon': 'kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ rûup,',
+                'english': 'the aggregate of clinging that is form,',
+            },
+            {
+                'number': 17,
+                'page': 200,
+                'pali': 'เวทะนูปาทานักขันโธ,',
+                'pali_roman': 'Vedanūpādānakkhandho,',
+                'thai': 'ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ เวทนา,',
+                'paiboon': 'kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ wêet-tà-naa,',
+                'english': 'the aggregate of clinging that is feeling,',
+            },
+            {
+                'number': 18,
+                'page': 200,
+                'pali': 'สัญญูปาทานักขันโธ,',
+                'pali_roman': 'Saññūpādānakkhandho,',
+                'thai': 'ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ สัญญา,',
+                'paiboon': 'kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ sǎn-yaa,',
+                'english': 'the aggregate of clinging that is perception,',
+            },
+            {
+                'number': 19,
+                'page': 200,
+                'pali': 'สังขารูปาทานักขันโธ,',
+                'pali_roman': 'Saṅkhārūpādānakkhandho,',
+                'thai': 'ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ สังขาร,',
+                'paiboon': 'kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ sǎŋ-kǎan,',
+                'english': 'the aggregate of clinging that is formations,',
+            },
+            {
+                'number': 20,
+                'page': 200,
+                'pali': 'วิญญาณูปาทานักขันโธ,',
+                'pali_roman': 'Viññāṇūpādānakkhandho,',
+                'thai': 'ขันธ์ อันเป็นที่ตั้งแห่งความยึดมั่น คือ วิญญาณ,',
+                'paiboon': 'kǎn an bpen tîi-dtâŋ hɛ̀ŋ kwaam yʉ́t-mân kʉʉ win-yaan,',
+                'english': 'the aggregate of clinging that is consciousness,',
+            },
+            # ‼ CHECK [IMG_0470.PNG]: CUT AT THE PAGE TURN. Verse 21 is the
+            #   last thing on the sheet and the chant runs on to page 201. No
+            #   […] is used: it ends at a comma the book itself prints. Its
+            #   English is deliberately left hanging — 'for the full
+            #   understanding of which,' — because the sentence completes on
+            #   the next page.
+            {
+                'number': 21,
+                'page': 200,
+                'pali': 'เยสัง ปะริญญายะ,',
+                'pali_roman': 'Yesaṃ pariññāya,',
+                'thai': 'เพื่อให้สาวกกำหนดรอบรู้อุปาทานขันธ์ เหล่านี้เอง,',
+                'paiboon': 'pʉ̂a hâi sǎa-wók gam-nòt rɔ̂ɔp-rúu ù-bpaa-taan-kǎn lào níi eeŋ,',
+                'english': 'for the full understanding of which,',
             },
         ],
     },
