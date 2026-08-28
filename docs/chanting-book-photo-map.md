@@ -127,7 +127,7 @@ photograph.
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
 somewhere between 74 and 207 were shot twice. Those stretches are unmapped.
 
-## ⚠ Three pages between 224 and 316 were never photographed
+## ⚠ Three pages between 224 and 316 were never photographed — TWO now found
 
 The back of the book was mapped on 2026-08-24 by working backwards from the
 last photograph, and it turned up a gap that the forward pass would not have
@@ -155,6 +155,27 @@ photographed**. Nothing is lost: the verso is blank. But it is the first of the
 three predicted gaps to be identified, and it suggests where the other two will
 be — **section dividers have blank versos, and blank pages do not get
 photographed.** `ภาคผนวก` is not the book's only divider.
+
+### The prediction held: page 248 is the second
+
+`IMG_0516` is the **ภาคปกิณกะ section divider** — a title centred on an
+otherwise blank sheet with **no page number printed on it**, the second such
+sheet in the book. `IMG_0517` prints **249**, and the สารบัญ puts ภาคปกิณกะ at
+**๒๔๗**. So the divider is page 247 and **page 248 is its blank verso, never
+photographed.**
+
+Identical in shape to 277/278/279: divider on the recto, blank verso, content
+resuming on the next recto. The offset therefore steps here too — **268 at
+pages 249 and up, 269 at 247 and below.**
+
+**One of the three is still unfound.** Look for a third divider: a sheet with no
+page number, a centred title and nothing else.
+
+| page | photo | offset |
+|---|---|---|
+| 249 | `IMG_0517` | 268 |
+| **248** | **— never photographed (blank verso)** | |
+| **247** | **`IMG_0516`** | **269** ⟵ offset changes here |
 
 ## The offset RISES again at IMG_0587/0588, and both really are duplicates
 
