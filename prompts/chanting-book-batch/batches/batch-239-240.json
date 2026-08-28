@@ -1,0 +1,385 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 2,
+  "files_read": 2,
+  "received": 1,
+  "manifest": [
+   "uddissanadhitthana-gatha-plae"
+  ],
+  "pages": [
+   {
+    "page": 239,
+    "file": "IMG_0509.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "uddissanadhitthana-gatha-plae",
+    "verses": "1-22",
+    "starts_here": true,
+    "note": "The page opens with the chant's centred bold heading and its invitation in brackets beneath, then 22 TWO-COLUMN rows — Pali on the left, its Thai verse translation on the right — in three groups separated by blank lines."
+   },
+   {
+    "page": 240,
+    "file": "IMG_0510.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "uddissanadhitthana-gatha-plae",
+    "verses": "23-34",
+    "starts_here": false,
+    "note": "The chant continuing and ENDING; no heading of its own. Twelve more two-column rows, then the page ends in white space."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "uddissanadhitthana-gatha-plae",
+   "title_thai": "อุททิสะนาธิฏฐานะคาถา",
+   "title_pali": "",
+   "title_roman": "ùt-tì-sà-naa-tít-tǎan-ná-kaa-tǎa",
+   "title_english": "The Verses of Dedication and Resolve",
+   "page_start": 239,
+   "layout": "lines",
+   "english_unverified": true,
+   "invitation": {
+    "pali": "หันทะ มะยัง อุททิสะนาธิฏฐานะคาถาโย ภะณามะ เส.",
+    "pali_roman": "Handa mayaṃ uddisanādhiṭṭhānagāthāyo bhaṇāma se.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us recite the verses of dedication and resolve."
+   },
+   "working_notes": {
+    "invitation": "printed in brackets under the heading and entered as the chant's invitation.",
+    "units": "34 rows, read ACROSS: Pali left, Thai translation right. Three groups on 239 and three on 240, separated by blank lines.",
+    "ordering": "The Thai column is a VERSE translation and does not always run one line to one Pali line. Where it wraps to two lines for one Pali row — rows 11, 24 and 26 — the two lines are joined into that row's `thai`, because they translate that row and nothing else. Row baselines were MEASURED off the sheet rather than judged by eye.",
+    "conventions": "The id carries a -plae suffix to mark it as the translated section's copy: the app already holds this chant from page 62 as `uddissanadhitthana-gatha`. paiboon left empty.",
+    "pages": "IMG_0509 and IMG_0510, pages 239-240. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิมินา ปุญญะกัมเมนะ",
+     "pali_roman": "Iminā puññakammena",
+     "thai": "ด้วยบุญนี้ อุทิศให้",
+     "paiboon": "",
+     "english": "By this deed of merit, dedicated",
+     "page": 239
+    },
+    {
+     "number": 2,
+     "pali": "อุปัชฌายา คุณุตตะรา",
+     "pali_roman": "Upajjhāyā guṇuttarā",
+     "thai": "อุปัชฌาย์ ผู้เลิศคุณ",
+     "paiboon": "",
+     "english": "to the preceptors of highest virtue,"
+    },
+    {
+     "number": 3,
+     "pali": "อาจะริยูปะการา จะ",
+     "pali_roman": "Ācariyūpakārā ca",
+     "thai": "แลอาจารย์ ผู้เกื้อหนุน",
+     "paiboon": "",
+     "english": "and to the teachers who have helped me,"
+    },
+    {
+     "number": 4,
+     "pali": "มาตาปิตา จะ ญาตะกา",
+     "pali_roman": "Mātāpitā ca ñātakā",
+     "thai": "ทั้งพ่อแม่ แลปวงญาติ",
+     "paiboon": "",
+     "english": "to mother and father and kinsfolk,"
+    },
+    {
+     "number": 5,
+     "pali": "สุริโย จันทิมา ราชา",
+     "pali_roman": "Suriyo candimā rājā",
+     "thai": "สูรย์จันทร์ แลราชา",
+     "paiboon": "",
+     "english": "to the sun and the moon and the king,"
+    },
+    {
+     "number": 6,
+     "pali": "คุณะวันตา นะราปิ จะ",
+     "pali_roman": "Guṇavantā narāpi ca",
+     "thai": "ผู้ทรงคุณ หรือสูงชาติ",
+     "paiboon": "",
+     "english": "to people of virtue and of high birth,"
+    },
+    {
+     "number": 7,
+     "pali": "พ์รัห์มะมารา จะ อินทา จะ",
+     "pali_roman": "Brahmamārā ca indā ca",
+     "thai": "พรหม มาร และอินทราช",
+     "paiboon": "",
+     "english": "to Brahmā, to Māra and to Indra,"
+    },
+    {
+     "number": 8,
+     "pali": "โลกะปาลา จะ เทวะตา",
+     "pali_roman": "Lokapālā ca devatā",
+     "thai": "ทั้งทวยเทพ และโลกบาล",
+     "paiboon": "",
+     "english": "to the guardians of the world and the deities,"
+    },
+    {
+     "number": 9,
+     "pali": "ยะโม มิตตา มะนุสสา จะ",
+     "pali_roman": "Yamo mittā manussā ca",
+     "thai": "ยมราช มนุษย์ มิตร",
+     "paiboon": "",
+     "english": "to Yama, to friends and to human beings,"
+    },
+    {
+     "number": 10,
+     "pali": "มัชฌัตตา เวริกาปิ จะ",
+     "pali_roman": "Majjhattā verikāpi ca",
+     "thai": "ผู้เป็นกลาง ผู้จองผลาญ",
+     "paiboon": "",
+     "english": "to the indifferent and to those who bear enmity —"
+    },
+    {
+     "number": 11,
+     "pali": "สัพเพ สัตตา สุขี โหนตุ",
+     "pali_roman": "Sabbe sattā sukhī hontu",
+     "thai": "ขอให้เป็นสุขศานติ์ ทุกทั่วหน้า อย่าทุกข์ทน",
+     "paiboon": "",
+     "english": "may all beings be happy, every one of them, and free from suffering."
+    },
+    {
+     "number": 12,
+     "pali": "ปุญญานิ ปะกะตานิ เม",
+     "pali_roman": "Puññāni pakatāni me",
+     "thai": "บุญผองที่ข้าทำ จงช่วยอำนวยศุภผล",
+     "paiboon": "",
+     "english": "May the merits I have made bring about their good fruit,"
+    },
+    {
+     "number": 13,
+     "pali": "สุขัง จะ ติวิธัง เทนตุ",
+     "pali_roman": "Sukhaṃ ca tividhaṃ dentu",
+     "thai": "ให้สุขสามอย่างล้น",
+     "paiboon": "",
+     "english": "and grant happiness of the three kinds in abundance,"
+    },
+    {
+     "number": 14,
+     "pali": "ขิปปัง ปาเปถะ โว มะตัง",
+     "pali_roman": "Khippaṃ pāpetha vo mataṃ",
+     "thai": "ให้ลุถึงนิพพานพลัน",
+     "paiboon": "",
+     "english": "and swiftly bring you to what you have set your heart on."
+    },
+    {
+     "number": 15,
+     "pali": "อิมินา ปุญญะกัมเมนะ",
+     "pali_roman": "Iminā puññakammena",
+     "thai": "ด้วยบุญนี้ ที่เราทำ",
+     "paiboon": "",
+     "english": "By this deed of merit that we have done,"
+    },
+    {
+     "number": 16,
+     "pali": "อิมินา อุททิเสนะ จะ",
+     "pali_roman": "Iminā uddisena ca",
+     "thai": "แลอุทิศ ให้ปวงสัตว์",
+     "paiboon": "",
+     "english": "and by this dedication to all beings,"
+    },
+    {
+     "number": 17,
+     "pali": "ขิปปาหัง สุละเภ เจวะ",
+     "pali_roman": "Khippāhaṃ sulabhe ceva",
+     "thai": "เราพลันได้ ซึ่งการตัด",
+     "paiboon": "",
+     "english": "may I swiftly come to the cutting off"
+    },
+    {
+     "number": 18,
+     "pali": "ตัณหุปาทานะเฉทะนัง",
+     "pali_roman": "Taṇhupādānachedanaṃ",
+     "thai": "ตัวตัณหา อุปาทาน",
+     "paiboon": "",
+     "english": "of craving and of clinging."
+    },
+    {
+     "number": 19,
+     "pali": "เย สันตาเน หินา ธัมมา",
+     "pali_roman": "Ye santāne hinā dhammā",
+     "thai": "สิ่งชั่วในดวงใจ",
+     "paiboon": "",
+     "english": "Whatever base states are in my heart,"
+    },
+    {
+     "number": 20,
+     "pali": "ยาวะ นิพพานะโต มะมัง",
+     "pali_roman": "Yāva nibbānato mamaṃ",
+     "thai": "กว่าเราจะถึงนิพพาน",
+     "paiboon": "",
+     "english": "until I reach Nibbāna,"
+    },
+    {
+     "number": 21,
+     "pali": "นัสสันตุ สัพพะทา เยวะ",
+     "pali_roman": "Nassantu sabbadā yeva",
+     "thai": "มลายสิ้น จากสันดาน",
+     "paiboon": "",
+     "english": "let them perish utterly from my nature,"
+    },
+    {
+     "number": 22,
+     "pali": "ยัตถะ ชาโต ภะเว ภะเว",
+     "pali_roman": "Yattha jāto bhave bhave",
+     "thai": "ทุก ๆ ภพ ที่เราเกิด",
+     "paiboon": "",
+     "english": "in every existence in which I am born."
+    },
+    {
+     "number": 23,
+     "pali": "อุชุจิตตัง สะติปัญญา",
+     "pali_roman": "Ujucittaṃ satipaññā",
+     "thai": "มีจิตตรง และสติ ทั้งปัญญา อันประเสริฐ",
+     "paiboon": "",
+     "english": "An upright mind, mindfulness, and excellent wisdom,",
+     "page": 240
+    },
+    {
+     "number": 24,
+     "pali": "สัลเลโข วิริยัมหินา",
+     "pali_roman": "Sallekho viriyamhinā",
+     "thai": "พร้อมทั้ง ความเพียรเลิศ เป็นเครื่องขูด กิเลสหาย",
+     "paiboon": "",
+     "english": "together with surpassing effort, scouring the defilements away —"
+    },
+    {
+     "number": 25,
+     "pali": "มารา ละภันตุ โนกาสัง",
+     "pali_roman": "Mārā labhantu nokāsaṃ",
+     "thai": "โอกาสอย่าพึงมี แก่หมู่มาร สิ้นทั้งหลาย",
+     "paiboon": "",
+     "english": "may the hosts of Māra find no opening at all,"
+    },
+    {
+     "number": 26,
+     "pali": "กาตุญจะ วิริเยสุ เม",
+     "pali_roman": "Kātuñca viriyesu me",
+     "thai": "เป็นช่องประทุษร้าย ทำลายล้าง ความเพียรจม",
+     "paiboon": "",
+     "english": "no chink through which to do harm and sink my effort."
+    },
+    {
+     "number": 27,
+     "pali": "พุทธาทิปะวะโร นาโถ",
+     "pali_roman": "Buddhādipavaro nātho",
+     "thai": "พระพุทธผู้บวรนาถ",
+     "paiboon": "",
+     "english": "The Buddha, the excellent refuge;"
+    },
+    {
+     "number": 28,
+     "pali": "ธัมโม นาโถ วะรุตตะโม",
+     "pali_roman": "Dhammo nātho varuttamo",
+     "thai": "พระธรรมที่พึ่งอุดม",
+     "paiboon": "",
+     "english": "the Dhamma, the supreme refuge;"
+    },
+    {
+     "number": 29,
+     "pali": "นาโถ ปัจเจกะพุทโธ จะ",
+     "pali_roman": "Nātho paccekabuddho ca",
+     "thai": "พระปัจเจกพุทธสม-",
+     "paiboon": "",
+     "english": "the Paccekabuddhas as refuge too,"
+    },
+    {
+     "number": 30,
+     "pali": "สังโฆ นาโถตตะโร มะมัง",
+     "pali_roman": "Saṅgho nāthottaro mamaṃ",
+     "thai": "ทบพระสงฆ์ ที่พึ่งผยอง",
+     "paiboon": "",
+     "english": "and the Saṅgha, the refuge above all, are mine."
+    },
+    {
+     "number": 31,
+     "pali": "เตโสตตะมานุภาเวนะ",
+     "pali_roman": "Tesottamānubhāvena",
+     "thai": "ด้วยอานุภาพนั้น",
+     "paiboon": "",
+     "english": "By the power of those supreme ones,"
+    },
+    {
+     "number": 32,
+     "pali": "มาโรกาสัง ละภันตุ มา",
+     "pali_roman": "Mārokāsaṃ labhantu mā",
+     "thai": "ขอหมู่มารอย่าได้ช่อง",
+     "paiboon": "",
+     "english": "may Māra find no opening;"
+    },
+    {
+     "number": 33,
+     "pali": "ทะสะปุญญานุภาเวนะ",
+     "pali_roman": "Dasapuññānubhāvena",
+     "thai": "ด้วยเดชบุญทั้งสิบป้อง",
+     "paiboon": "",
+     "english": "by the power of the ten kinds of merit,"
+    },
+    {
+     "number": 34,
+     "pali": "มาโรกาสัง ละภันตุ มา ฯ",
+     "pali_roman": "Mārokāsaṃ labhantu mā",
+     "thai": "อย่าเปิดโอกาสแก่มาร เทอญ ฯ",
+     "paiboon": "",
+     "english": "let no opening be given to Māra at all."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อุททิสะนา",
+     "pali_roman": "uddisanā",
+     "meaning": "dedication — the pointing of merit towards others, which is what the first half of this chant does"
+    },
+    {
+     "pali": "อะธิฏฐานะ",
+     "pali_roman": "adhiṭṭhāna",
+     "meaning": "resolve, determination; the second half turns from dedicating merit to resolving on the goal"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0509.PNG",
+     "issue": "⚠ THE HEADING IS SPELT DIFFERENTLY FROM THE FIRST PRINTING. This page prints อุททิสะนาธิฏฐานะคาถา with ONE ส; page 62 prints อุททิสสะนาธิฏฐานะคาถา with two. Checked at magnification, and the invitation on this page uses the one-ส form too. Entered as printed; neither has been changed to match the other."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0509.PNG",
+     "issue": "THE VERSE SEGMENTATION DIFFERS FROM PAGE 62 BY DESIGN. There the Pali is set two half-lines to a line, so the chant has 16 verses; here each half-line has its own row so that its Thai translation can sit beside it, giving 34. Same words, different setting, and each follows its own page."
+    },
+    {
+     "verse": 29,
+     "file": "IMG_0510.PNG",
+     "issue": "A THAI WORD IS SPLIT ACROSS TWO ROWS WITH A HYPHEN. Row 29's translation ends พระปัจเจกพุทธสม- and row 30 opens ทบพระสงฆ์, making สมทบ. The two halves belong to DIFFERENT rows, each paired with its own Pali line, so they CANNOT be rejoined the way page 252's ปัณณะ-ระสี was. The hyphen is kept where the book prints it."
+    },
+    {
+     "verse": 11,
+     "file": "IMG_0509.PNG",
+     "issue": "THE THAI COLUMN HAS MORE LINES THAN THE PALI in three places — rows 11, 24 and 26 — because the verse translation wraps. Baselines were measured off the sheet to be sure the extra line belongs to the row above it and is not a unit of its own."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "uddissanadhitthana-gatha-plae"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 238,
+  "resume_from_file": "IMG_0508.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. No Paiboon+ was written on any verse; the only Paiboon in this batch is the chant's title_roman, which follows the shape the page-193 batch set for this section.",
+  "pali_untouched": "Typed from the sheets and romanised mechanically. The Pali can be read against the first printing of the same chant at page 62, which the app already holds.",
+  "page_scan": "agrees. Two rows, one per sheet, one chant.",
+  "notes": "⚠ THE BACKWARD PASS HAS REACHED THE TRANSLATED SECTION. This is the same reprint the forward pass entered page 193 of — Pali on the left, Thai verse translation on the right — so the two passes are now working the same section from both ends and will meet. The -plae id convention and the Paiboon title_roman follow batch-193-193 exactly. ⚠ The heading is spelt with ONE ส here against TWO at page 62, and the Thai column wraps to two lines in three places where the row baselines were measured rather than judged.",
+  "diacritic_exceptions": []
+ }
+}
