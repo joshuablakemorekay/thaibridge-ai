@@ -99,6 +99,7 @@ photograph.
 | 193 | **IMG_0463** | number NOT printed on the sheet — 193 on the authority of the สารบัญ (`ทำวัตรเช้า แปล` at ๑๙๓), confirmed by IMG_0464 carrying a printed 194 |
 | 194 | IMG_0464 | 270 |
 | 195 | IMG_0465 | 270 |
+| 196 | IMG_0466 | 270 |
 | 207 | IMG_0477 | 270 |
 | 213 | IMG_0483 | 270 |
 | 215 | IMG_0485 | 270 |

@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-194 went in.
+195 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,51 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 195, `IMG_0465`.** Page 194 closed both its chants and **nothing
-is open in this lane**. The สารบัญ says 195 carries `ปุพพะภาคะนะมะการ` and
-`พุทธาภิถุติ`.
+**Next: page 196, `IMG_0466`.** ⚠️ `buddhabhithuti-plae` IS OPEN — eleven
+units in, **resume at verse 12**. Verse 11's PALI is complete; only its Thai is
+cut, after `ด้วยพระปัญญา`.
+
+## 🚫 NEVER `git checkout chanting.py` — use `git stash` if you must
+
+Done twice in this session. The first time it **destroyed the other session's
+uncommitted page-252 work**; it was only recoverable because their batch file
+survived on disk and `apply_batch` regenerates deterministically. The second time
+nothing was lost, by luck rather than care.
+
+`chanting.py` is shared and almost always has someone's uncommitted work in it.
+**If an apply needs undoing, `git stash` it** — that is recoverable — or fix the
+batch and let `apply_batch` reconcile. Never discard the file.
+
+## ⚠️ title_roman COMES FROM THE CONTENTS, NEVER FROM THE PAIBOON+ TABLE
+
+The contents test caught this on page 195 and the distinction is worth stating
+plainly:
+
+- the **`paiboon` layer** is governed by the app's Paiboon+ table
+- a **`title_roman`** is governed by the book's own สารบัญ
+
+They disagree, and the สารบัญ wins for titles, because a reader must reach the
+same spelling from the contents and from the chant page. Page 195 gives both
+kinds in adjacent chants: `ปุพพะภาคะนะมะการ` → `pùp-pá-paa-ká-ná-má-gaan`
+(plain `p`, where the table would give `bp`), and `พุทธาภิถุติ` →
+`Buddhābhithuti` (an **IAST** reading, not Paiboon at all). **Look every title up
+before writing it.**
+
+## 📐 One chant can use TWO layouts, decided by line length
+
+Page 195's `พุทธาภิถุติ` sets its ten short epithets in **two columns** — Pali
+left, Thai right, gutter about x 850 — then reverts to the **indented** style of
+pages 193–194 for its one long sentence. `ปุพพะภาคะนะมะการ` does the same in
+miniature: verse 1 indented, verses 2–3 in columns.
+
+It is the book fitting text to the measure, not a change of structure, and the
+app renders both the same way. **Do not read a layout change as a new chant.**
+
+## ✂️ The cut can fall in the THAI while the PALI is whole
+
+New on page 195. Verse 11's Pali is complete on the sheet; only its translation
+runs off the foot. `[…]` is marked in **`thai` and `paiboon` only** — `pali` and
+`pali_roman` stand complete — and `continues` is still set.
 
 ## ‼ A CHANT CAN BE PRINTED WITH NO TITLE — do not invent one silently
 

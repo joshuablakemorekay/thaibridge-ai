@@ -48624,6 +48624,233 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0465.PNG]: THE INVITATION IS PRINTED IN BRACKETS and
+        #   set centred over TWO lines beneath the title. Reproduced with its
+        #   brackets, as printed. It is Pali only — the book gives no Thai for
+        #   it.
+        # ‼ CHECK [IMG_0465.PNG]: ‼ title_roman IS THE CONTENTS' VALUE, NOT
+        #   ONE COMPOSED HERE, AND THE TEST CAUGHT ME COMPOSING IT. The สารบัญ
+        #   prints pùp-pá-paa-ká-ná-má-gaan with a plain p, where the Paiboon+
+        #   table would give bp for ป. The table governs the paiboon LAYER;
+        #   the contents governs a TITLE, because a reader must reach the same
+        #   spelling from the contents and from the chant page. Same lesson as
+        #   page 77's two ปาโฐ titles.
+        # ‼ CHECK [IMG_0465.PNG]: The app already holds ปุพพะภาคะนะมะการะปาโฐ
+        #   at page 77, under a DIFFERENT title (…ปาโฐ) and in the Twelve
+        #   Tamnan section. This is the translated section's copy, titled
+        #   ปุพพะภาคะนะมะการ; given the id pubbabhaga-namakara-plae.
+        # ‼ CHECK [IMG_0465.PNG]: english_unverified is set. The English is
+        #   this edition's working translation, checkable here against the
+        #   Thai the book prints.
+        'id': 'pubbabhaga-namakara-plae',
+        'title_thai': 'ปุพพะภาคะนะมะการ',
+        'title_pali': '',
+        'title_roman': 'pùp-pá-paa-ká-ná-má-gaan',
+        'title_english': 'The Preliminary Homage',
+        'page_start': 195,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '(หันทะ มะยัง พุทธัสสะ ภะคะวะโต ปุพพะภาคะนะมะการัง กะโรมะ เส.)',
+            'pali_roman': '(Handa mayaṃ buddhassa bhagavato pubbabhāganamakāraṃ karoma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us make the preliminary homage to the Buddha, the Blessed One.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0465.PNG]: ‼ THE LAYOUT OF THE THAI CHANGES INSIDE
+            #   THIS ONE CHANT. Verse 1's translation is long and is set on
+            #   its OWN indented line beneath its Pali; verses 2 and 3 are
+            #   short and their translations sit in a RIGHT-HAND COLUMN on the
+            #   same line as the Pali, with the gutter at about x 850. It is
+            #   the book fitting text to the measure, not a change of
+            #   structure, and the app renders both the same way.
+            {
+                'number': 1,
+                'page': 195,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต,',
+                'pali_roman': 'Namo tassa bhagavato,',
+                'thai': 'ขอนอบน้อมแด่พระผู้มีพระภาคเจ้า พระองค์นั้น,',
+                'paiboon': 'kɔ̌ɔ nɔ̂ɔp-nɔ́ɔm dɛ̀ɛ prá-pûu-mii-prá-pâak-jâo prá-oŋ nán,',
+                'english': 'Homage to that Blessed One,',
+            },
+            {
+                'number': 2,
+                'page': 195,
+                'pali': 'อะระหะโต,',
+                'pali_roman': 'Arahato,',
+                'thai': 'ซึ่งเป็นผู้ไกลจากกิเลส,',
+                'paiboon': 'sʉ̂ŋ bpen pûu glai jàak gì-lèet,',
+                'english': 'who is far from defilement,',
+            },
+            # ‼ CHECK [IMG_0465.PNG]: (๓ ครั้ง) — 'three times' — is centred
+            #   beneath verse 3 and carried as a rubric on it. It instructs
+            #   repetition and is not itself chanted.
+            {
+                'number': 3,
+                'page': 195,
+                'rubric': '(๓ ครั้ง)',
+                'pali': 'สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Sammāsambuddhassa.',
+                'thai': 'ตรัสรู้ชอบได้โดยพระองค์เอง.',
+                'paiboon': 'dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ.',
+                'english': 'who awakened rightly by himself.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 11; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0465.PNG]: ‼ title_roman IS THE CONTENTS' VALUE. The
+        #   สารบัญ gives Buddhābhithuti — an IAST reading, not a Paiboon one,
+        #   unlike the chant above it whose contents entry IS Paiboon. The
+        #   table is inconsistent about which system it uses for a title, and
+        #   the contents wins either way.
+        # ‼ CHECK [IMG_0465.PNG]: THE INVITATION IS PRINTED IN BRACKETS,
+        #   centred on one line beneath the title. Reproduced with its
+        #   brackets. Pali only; the book gives no Thai for it.
+        # ‼ CHECK [IMG_0465.PNG]: english_unverified is set. The English is
+        #   this edition's working translation, checkable here against the
+        #   Thai the book prints.
+        'id': 'buddhabhithuti-plae',
+        'title_thai': 'พุทธาภิถุติ',
+        'title_pali': '',
+        'title_roman': 'Buddhābhithuti',
+        'title_english': 'Praise of the Buddha',
+        'page_start': 195,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '(หันทะ มะยัง พุทธาภิถุติง กะโรมะ เส.)',
+            'pali_roman': '(Handa mayaṃ buddhābhithutiṃ karoma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us give praise to the Buddha.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0465.PNG]: ‼ TWO COLUMNS FOR THE SHORT UNITS.
+            #   Verses 1-10 set the PALI left and its THAI right on the SAME
+            #   line, gutter at about x 850 — this is the epithet list, and
+            #   each epithet is one short word. Verse 11 is a long sentence
+            #   and reverts to the indented style of pages 193-194. Same
+            #   chant, two layouts, decided by line length.
+            {
+                'number': 1,
+                'page': 195,
+                'pali': 'โย โส ตะถาคะโต,',
+                'pali_roman': 'Yo so tathāgato,',
+                'thai': 'พระตถาคตเจ้านั้น พระองค์ใด,',
+                'paiboon': 'prá-dtà-taa-kót-jâo nán prá-oŋ dai,',
+                'english': 'That Tathāgata, whoever he is,',
+            },
+            {
+                'number': 2,
+                'page': 195,
+                'pali': 'อะระหัง,',
+                'pali_roman': 'Arahaṃ,',
+                'thai': 'เป็นผู้ไกลจากกิเลส,',
+                'paiboon': 'bpen pûu glai jàak gì-lèet,',
+                'english': 'is far from defilement,',
+            },
+            {
+                'number': 3,
+                'page': 195,
+                'pali': 'สัมมาสัมพุทโธ,',
+                'pali_roman': 'Sammāsambuddho,',
+                'thai': 'เป็นผู้ตรัสรู้ชอบได้โดยพระองค์เอง,',
+                'paiboon': 'bpen pûu dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,',
+                'english': 'is one who awakened rightly by himself,',
+            },
+            {
+                'number': 4,
+                'page': 195,
+                'pali': 'วิชชาจะระณะสัมปันโน,',
+                'pali_roman': 'Vijjācaraṇasampanno,',
+                'thai': 'เป็นผู้ถึงพร้อมด้วยวิชชาและจรณะ,',
+                'paiboon': 'bpen pûu tʉ̌ŋ prɔ́ɔm dûay wít-chaa lɛ́ jà-rá-ná,',
+                'english': 'is perfect in knowledge and conduct,',
+            },
+            {
+                'number': 5,
+                'page': 195,
+                'pali': 'สุคะโต,',
+                'pali_roman': 'Sugato,',
+                'thai': 'เป็นผู้ไปแล้วด้วยดี,',
+                'paiboon': 'bpen pûu bpai lɛ́ɛo dûay dii,',
+                'english': 'is well gone,',
+            },
+            {
+                'number': 6,
+                'page': 195,
+                'pali': 'โลกะวิทู,',
+                'pali_roman': 'Lokavidū,',
+                'thai': 'เป็นผู้รู้โลกอย่างแจ่มแจ้ง,',
+                'paiboon': 'bpen pûu rúu lôok yàaŋ jɛ̀m-jɛ̂ɛŋ,',
+                'english': 'is the knower of the world in clarity,',
+            },
+            {
+                'number': 7,
+                'page': 195,
+                'pali': 'อะนุตตะโร ปุริสะทัมมะสาระถิ,',
+                'pali_roman': 'Anuttaro purisadammasārathi,',
+                'thai': 'เป็นผู้สามารถฝึกบุรุษที่สมควรฝึกได้อย่างไม่มีใครยิ่งกว่า,',
+                'paiboon': 'bpen pûu sǎa-mâat fʉ̀k bù-rùt tîi sǒm-kuan fʉ̀k dâai yàaŋ mâi mii krai yîŋ gwàa,',
+                'english': 'is the unsurpassed trainer of those fit to be trained,',
+            },
+            {
+                'number': 8,
+                'page': 195,
+                'pali': 'สัตถา เทวะมะนุสสานัง,',
+                'pali_roman': 'Satthā devamanussānaṃ,',
+                'thai': 'เป็นครูผู้สอนของเทวดาและมนุษย์ทั้งหลาย,',
+                'paiboon': 'bpen kruu pûu sɔ̌ɔn kɔ̌ɔŋ têe-wá-daa lɛ́ má-nút táŋ-lǎai,',
+                'english': 'is the teacher of devas and humans,',
+            },
+            {
+                'number': 9,
+                'page': 195,
+                'pali': 'พุทโธ,',
+                'pali_roman': 'Buddho,',
+                'thai': 'เป็นผู้รู้ ผู้ตื่น ผู้เบิกบานด้วยธรรม,',
+                'paiboon': 'bpen pûu-rúu pûu-dtʉ̀ʉn pûu-bə̀ək-baan dûay tam,',
+                'english': 'is the one who knows, who is awake, who has blossomed through Dhamma,',
+            },
+            # ‼ CHECK [IMG_0465.PNG]: THE THAI SAYS MORE THAN THE PALI IN TWO
+            #   PLACES, and both are kept. โลกะวิทู is glossed
+            #   'รู้โลกอย่างแจ่มแจ้ง' — 'clearly' is not in the Pali; and
+            #   ภะคะวา is glossed 'มีความจำเริญ จำแนกธรรมสั่งสอนสัตว์', which
+            #   unpacks the title rather than translating it. These are the
+            #   book's translator's choices and are reproduced, not trimmed to
+            #   match the Pali.
+            {
+                'number': 10,
+                'page': 195,
+                'pali': 'ภะคะวา,',
+                'pali_roman': 'Bhagavā,',
+                'thai': 'เป็นผู้มีความจำเริญ จำแนกธรรมสั่งสอนสัตว์,',
+                'paiboon': 'bpen pûu mii kwaam-jam-rəən jam-nɛ̂ɛk tam sàŋ-sɔ̌ɔn sàt,',
+                'english': 'is the Blessed One, who divides the Dhamma and teaches beings,',
+            },
+            # ‼ CHECK [IMG_0465.PNG]: CUT MID-SENTENCE IN THE THAI, not in the
+            #   Pali. The Pali of verse 11 is complete on this sheet; its
+            #   translation runs off the foot after ด้วยพระปัญญา. Marked with
+            #   […] in BOTH thai and paiboon, and continues is set. Page 196
+            #   should open with the rest of that translation.
+            {
+                'number': 11,
+                'page': 195,
+                'pali': 'โย อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ์รัห์มะกัง, สัสสะมะณะพ์ราห์มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต์วา ปะเวเทสิ,',
+                'pali_roman': 'Yo imaṃ lokaṃ sadevakaṃ samārakaṃ sabrahmakaṃ, sassamaṇabrāhmaṇiṃ pajaṃ sadevamanussaṃ sayaṃ abhiññā sacchikatvā pavedesi,',
+                'thai': 'พระผู้มีพระภาคเจ้าพระองค์ใด, ได้ทรงทำความดับทุกข์ให้แจ้งด้วยพระปัญญา […]',
+                'paiboon': 'prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, dâai soŋ tam kwaam-dàp-túk hâi jɛ̂ɛŋ dûay prá-bpan-yaa […]',
+                'english': 'The Blessed One, having realised by his own direct knowledge this world with its devas, its Māras and its Brahmās, this generation with its ascetics and brahmins, its devas and humans, made it known […]',
+            },
+        ],
+    },
 ]
 
 
