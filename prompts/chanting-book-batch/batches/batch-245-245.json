@@ -15,7 +15,7 @@
     "script": "thai",
     "columns": 1,
     "chant": "yod-phrakantraipidok-thai",
-    "verses": "83-85",
+    "verses": "84-86",
     "starts_here": false,
     "note": "The chant ENDING. Its first line completes the verse cut by the turn from 244, then two more units and the chant is done."
    },
@@ -37,7 +37,7 @@
    "continuation_of": "yod-phrakantraipidok-thai",
    "verses": [
     {
-     "number": 83,
+     "number": 84,
      "pali": "นะโม ธัมมัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม ส์วากขาโต ภะคะวะตา ธัมโม.",
      "pali_roman": "namo dhammassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo svākkhāto bhagavatā dhammo.",
      "thai": "",
@@ -45,16 +45,16 @@
      "english": "Homage to the Dhamma. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — well proclaimed by the Blessed One is the Dhamma."
     },
     {
-     "number": 84,
+     "number": 85,
+     "page": 245,
      "pali": "นะโม สังฆัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ วาหะปะริตตัง.",
      "pali_roman": "namo saṅghassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo supaṭipanno bhagavato sāvakasaṅgho vāhaparittaṃ.",
      "thai": "",
      "paiboon": "",
-     "english": "Homage to the Saṅgha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — of good practice is the Blessed One's community of disciples. The protective recitation.",
-     "page": 245
+     "english": "Homage to the Saṅgha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — of good practice is the Blessed One's community of disciples. The protective recitation."
     },
     {
-     "number": 85,
+     "number": 86,
      "pali": "นะโม พุทธายะ มะอะอุ ทุกขัง อะนิจจัง อะนัตตา ยาวะ ตัสสะ หาโย โมนะ อุอะมะ ทุกขัง อะนิจจัง อะนัตตา อุอะมะอะ วันทา นะโม พุทธายะ นะอะ กะติ นิสะระณะ อาระปะขุทธัง มะอะอุ ทุกขัง อะนิจจัง อะนัตตา.",
      "pali_roman": "namo buddhāya maau dukkhaṃ aniccaṃ anattā yāva tassa hāyo mona uama dukkhaṃ aniccaṃ anattā uamaa vandā namo buddhāya naa kati nisaraṇa ārapakhuddhaṃ maau dukkhaṃ aniccaṃ anattā.",
      "thai": "",
@@ -64,12 +64,12 @@
    ],
    "checks": [
     {
-     "verse": 83,
+     "verse": 84,
      "file": "IMG_0515.PNG",
      "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN. Page 244 ended at นะโม and this sheet opens ส์วากขาโต ภะคะวะตา ธัมโม. The verse belongs to 244, where it starts."
     },
     {
-     "verse": 85,
+     "verse": 86,
      "file": "IMG_0515.PNG",
      "issue": "⚠ THIS IS THE THAI TWIN of `yod-phrakantraipidok` at 312-316. The two printings are compared verse by verse and every difference is recorded rather than smoothed away. This is the line that identified the twin: มะอะอุ here is the roman `ma-a-u` on page 316, and อุอะมะ is `u-a-ma`. The heart-syllable material the roman pass recorded as uncheckable now has a second witness."
     }

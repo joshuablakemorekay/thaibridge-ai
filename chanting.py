@@ -32517,20 +32517,20 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'Monk 2:',
             },
-            # ‼ CHECK [IMG_0572.PNG]: ⚠ THE BOOK SPELLS ONE WORD TWO WAYS
-            #   ACROSS TWO PAGES. This sheet prints 'สัทธสัญญาสาธุการ' with ธ
+            # ‼ CHECK [IMG_0572.PNG]: ⚠ CORRECTED ON JOSH'S RULING AT THE
+            #   BOOK, 2026-08-28. This sheet PRINTS 'สัทธสัญญาสาธุการ' with ธ
             #   where page 306 prints 'สัททสัญญาสาธุการ' with ท, in the same
-            #   phrase calling for the response. Both read clearly at 5x on a
-            #   1.55x crop. Kept as each page sets it, NOT made to agree — the
-            #   same treatment as the roman section's tap/taṃ and
-            #   bhikkhu/bhikkhū.
+            #   phrase calling for the response; both read clearly at 5x on a
+            #   1.55x crop. Josh checked the physical pages and ruled that
+            #   BOTH should read สัททสัญญา, so this one now does. The printed
+            #   reading is recorded here so nothing is lost.
             {
                 'number': 6,
                 'para_start': True,
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'ผ้ากฐินทาน กับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ ข้าพเจ้าพิจารณาเห็นสมควรแก่.............เป็นผู้มีสติปัญญาสามารถ เพื่อกระทำกฐินัตถารกิจให้ถูกต้องตามพระบรมพุทธานุญาตได้ ถ้าพระภิกษุรูปใดเห็นไม่สมควรจงทักท้วงขึ้นในท่ามกลางระหว่างสงฆ์ (หยุดนิดหนึ่ง) ถ้าเห็นสมควรแล้วไซร้จงให้สัทธสัญญาสาธุการขึ้นให้พร้อมกัน เทอญ. (สาธุ)',
+                'thai': 'ผ้ากฐินทาน กับทั้งผ้าอานิสงสบริวารทั้งปวงนี้ ข้าพเจ้าพิจารณาเห็นสมควรแก่.............เป็นผู้มีสติปัญญาสามารถ เพื่อกระทำกฐินัตถารกิจให้ถูกต้องตามพระบรมพุทธานุญาตได้ ถ้าพระภิกษุรูปใดเห็นไม่สมควรจงทักท้วงขึ้นในท่ามกลางระหว่างสงฆ์ (หยุดนิดหนึ่ง) ถ้าเห็นสมควรแล้วไซร้จงให้สัททสัญญาสาธุการขึ้นให้พร้อมกัน เทอญ. (สาธุ)',
                 'paiboon': '',
                 'english': 'This kathina cloth, with all its accompanying requisites, I consider fitting for ............., who has the mindfulness and understanding to carry out the spreading of the kathina correctly, in accordance with what the Buddha allowed. If any monk sees it as unfitting, let him object in the midst of the Saṅgha. (pause a moment) If it is seen as fitting, let all raise the sound of approval together. (Sādhu)',
             },
@@ -44082,7 +44082,7 @@ CHANTS = [
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'อาฏานาฏิยะปะริตตะ ขึ้น วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สีรีมะโต ฯเปฯ จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.',
+                'thai': 'อาฏานาฏิยะปะริตตะ ขึ้น วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สิรีมะโต ฯเปฯ จัตตาโร ธัมมา วัฑฒันติ อายุ วัณโณ สุขัง พะลัง.',
                 'paiboon': '',
                 'english': 'The Āṭānāṭiya Paritta, beginning vipassissa namatthu cakkhumantassa sirīmato … ending cattāro dhammā vaḍḍhanti āyu vaṇṇo sukhaṃ balaṃ.',
             },
@@ -44301,12 +44301,13 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CHECK [IMG_0526.PNG]: ⚠ A SPELLING THE BOOK ITSELF VARIES. Item 6
-        #   here prints สีรีมะโต, with a LONG ี in the first syllable. The
-        #   Āṭānāṭiya Paritta as set out in full on page 92 prints สิรีมะโต,
-        #   short. Both are entered as printed and neither has been normalised
-        #   to the other. Worth checking against the physical book, since this
-        #   is one letter in a word a reader chants.
+        # ‼ CHECK [IMG_0526.PNG]: ⚠ CORRECTED ON JOSH'S RULING AT THE BOOK,
+        #   2026-08-28. Item 6 on pages 258 and 260 PRINTS สีรีมะโต, with a
+        #   LONG ี in the first syllable, where the Āṭānāṭiya Paritta set out
+        #   in full on page 92 prints สิรีมะโต with a short one. All three
+        #   were read at magnification. Josh checked the physical pages and
+        #   ruled that all three should read สิรีมะโต, so 258 and 260 now do.
+        #   The printed reading is recorded here so nothing is lost.
         # ‼ CHECK [IMG_0525.PNG]: THE NUMBERED LIST RESTARTS AT 1 TWICE inside
         #   one chant — items 1-4 under ต้นตำนาน, then 1-7 for the Seven
         #   Tamnan themselves, then 1-5 for the closing. Three separate
@@ -44513,7 +44514,7 @@ CHANTS = [
                 'para_layout': 'prose',
                 'pali': '',
                 'pali_roman': '',
-                'thai': 'อาฏานาฏิยะปะริตตะ ขึ้น วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สีรีมะโต ฯเปฯ วิชชาจะระณะสัมปันนัง พุทธัง วันทามะ โคตะมันติ.',
+                'thai': 'อาฏานาฏิยะปะริตตะ ขึ้น วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สิรีมะโต ฯเปฯ วิชชาจะระณะสัมปันนัง พุทธัง วันทามะ โคตะมันติ.',
                 'paiboon': '',
                 'english': 'The Āṭānāṭiya Paritta, beginning vipassissa namatthu cakkhumantassa sīrīmato … vijjācaraṇasampannaṃ buddhaṃ vandāma gotamanti.',
             },

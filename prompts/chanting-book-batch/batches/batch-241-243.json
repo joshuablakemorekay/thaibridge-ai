@@ -24,7 +24,7 @@
     "script": "thai",
     "columns": 1,
     "chant": "yod-phrakantraipidok-thai",
-    "verses": "25-50",
+    "verses": "25-51",
     "starts_here": false,
     "note": "The chant continuing; no heading. The tail of item ๒, then items ๓, ๔ and ๕ complete, and item ๖'s first line at the foot."
    },
@@ -34,7 +34,7 @@
     "script": "thai",
     "columns": 1,
     "chant": "yod-phrakantraipidok-thai",
-    "verses": "51-70",
+    "verses": "52-71",
     "starts_here": false,
     "note": "The chant continuing; no heading. The rest of item ๖, then ๗, ๘ and ๙ — ๙ being the heart-syllable material."
    }
@@ -53,7 +53,7 @@
    "continues": true,
    "working_notes": {
     "invitation": "absent, and none written.",
-    "units": "70 lines on these three sheets, in nine numbered items. The chant runs on to 245 and its last items are left for the next batch.",
+    "units": "71 lines on these three sheets, in nine numbered items. The chant runs on to 245.",
     "ordering": "Pure Pali in Thai script. The numbering is in THAI numerals ๑ to ๙ here, where the roman twin uses Arabic 1 to 9.",
     "conventions": "pali_roman is mechanical from translit_pali; paiboon left empty. ENGLISH IS TAKEN FROM THE ROMAN TWIN verse for verse, because it is the same chant and was written for these very words — two hand-written glosses for one text would only drift apart.",
     "pages": "IMG_0511 to IMG_0513, pages 241-243. Offset 270."
@@ -61,13 +61,13 @@
    "verses": [
     {
      "number": 1,
+     "page": 241,
+     "printed_number": 1,
      "pali": "อิติปิ โส ภะคะวา อะระหัง วะตะ โส ภะคะวา.",
      "pali_roman": "itipi so bhagavā arahaṃ vata so bhagavā.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: worthy indeed is that Blessed One.",
-     "printed_number": 1,
-     "page": 241
+     "english": "Such is the Blessed One: worthy indeed is that Blessed One."
     },
     {
      "number": 2,
@@ -183,12 +183,12 @@
     },
     {
      "number": 16,
+     "printed_number": 2,
      "pali": "อิติปิ โส ภะคะวา อะนุตตะโร วะตะ โส ภะคะวา.",
      "pali_roman": "itipi so bhagavā anuttaro vata so bhagavā.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: unsurpassed indeed is that Blessed One.",
-     "printed_number": 2
+     "english": "Such is the Blessed One: unsurpassed indeed is that Blessed One."
     },
     {
      "number": 17,
@@ -256,12 +256,12 @@
     },
     {
      "number": 25,
+     "page": 242,
      "pali": "สัตถา เทวะมะนุสสานัง สิระสา นะมามิ.",
      "pali_roman": "satthā devamanussānaṃ sirasā namāmi.",
      "thai": "",
      "paiboon": "",
-     "english": "To the Teacher of Devas and Humans I bow with my head.",
-     "page": 242
+     "english": "To the Teacher of Devas and Humans I bow with my head."
     },
     {
      "number": 26,
@@ -281,15 +281,23 @@
     },
     {
      "number": 28,
+     "pali": "อิติปิ โส ภะคะวา.",
+     "pali_roman": "itipi so bhagavā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Such is the Blessed One."
+    },
+    {
+     "number": 29,
+     "printed_number": 3,
      "pali": "อิติปิ โส ภะคะวา รูปะขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā rūpakhandho aniccalakkhaṇapāramī ca sampanno.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: the aggregate of form, perfect in the mark of impermanence and in the perfections.",
-     "printed_number": 3
+     "english": "Such is the Blessed One: the aggregate of form, perfect in the mark of impermanence and in the perfections."
     },
     {
-     "number": 29,
+     "number": 30,
      "pali": "อิติปิ โส ภะคะวา เวทะนาขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā vedanākhandho aniccalakkhaṇapāramī ca sampanno.",
      "thai": "",
@@ -297,7 +305,7 @@
      "english": "Such is the Blessed One: the aggregate of feeling, perfect in the mark of impermanence and in the perfections."
     },
     {
-     "number": 30,
+     "number": 31,
      "pali": "อิติปิ โส ภะคะวา สัญญาขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā saññākhandho aniccalakkhaṇapāramī ca sampanno.",
      "thai": "",
@@ -305,7 +313,7 @@
      "english": "Such is the Blessed One: the aggregate of perception, perfect in the mark of impermanence and in the perfections."
     },
     {
-     "number": 31,
+     "number": 32,
      "pali": "อิติปิ โส ภะคะวา สังขาระขันโธ อะนิจจะลักขะณะปาระมี จะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā saṅkhārakhandho aniccalakkhaṇapāramī ca sampanno.",
      "thai": "",
@@ -313,7 +321,7 @@
      "english": "Such is the Blessed One: the aggregate of formations, perfect in the mark of impermanence and in the perfections."
     },
     {
-     "number": 32,
+     "number": 33,
      "pali": "อิติปิ โส ภะคะวา วิญญาณะขันโธ อะนิจจะลักขะณะปาระมิ จะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā viññāṇakhandho aniccalakkhaṇapārami ca sampanno.",
      "thai": "",
@@ -321,16 +329,16 @@
      "english": "Such is the Blessed One: the aggregate of consciousness, perfect in the mark of impermanence and in the perfections."
     },
     {
-     "number": 33,
+     "number": 34,
+     "printed_number": 4,
      "pali": "อิติปิ โส ภะคะวา ปะฐะวี ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā paṭhavī dhātu samādhiñāṇa sampanno.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the earth element.",
-     "printed_number": 4
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the earth element."
     },
     {
-     "number": 34,
+     "number": 35,
      "pali": "อิติปิ โส ภะคะวา อาโป ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā āpo dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -338,7 +346,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the water element."
     },
     {
-     "number": 35,
+     "number": 36,
      "pali": "อิติปิ โส ภะคะวา เตโช ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā tejo dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -346,7 +354,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the fire element."
     },
     {
-     "number": 36,
+     "number": 37,
      "pali": "อิติปิ โส ภะคะวา วาโย ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā vāyo dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -354,7 +362,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the air element."
     },
     {
-     "number": 37,
+     "number": 38,
      "pali": "อิติปิ โส ภะคะวา อากาสะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā ākāsa dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -362,7 +370,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the space element."
     },
     {
-     "number": 38,
+     "number": 39,
      "pali": "อิติปิ โส ภะคะวา วิญญาณะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā viññāṇa dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -370,7 +378,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the consciousness element."
     },
     {
-     "number": 39,
+     "number": 40,
      "pali": "อิติปิ โส ภะคะวา จักกะวาฬะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā cakkavāḷa dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -378,16 +386,16 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the world-sphere element."
     },
     {
-     "number": 40,
+     "number": 41,
+     "printed_number": 5,
      "pali": "อิติปิ โส ภะคะวา จาตุมมะหาราชิกา ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā cātummahārājikā dhātu samādhiñāṇa sampanno.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the realm of the Four Great Kings.",
-     "printed_number": 5
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the realm of the Four Great Kings."
     },
     {
-     "number": 41,
+     "number": 42,
      "pali": "อิติปิ โส ภะคะวา ตาวะติงสา ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā tāvatiṃsā dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -395,7 +403,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tāvatiṃsa heaven."
     },
     {
-     "number": 42,
+     "number": 43,
      "pali": "อิติปิ โส ภะคะวา ยามา ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā yāmā dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -403,7 +411,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Yāma heaven."
     },
     {
-     "number": 43,
+     "number": 44,
      "pali": "อิติปิ โส ภะคะวา ตุสิตา ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā tusitā dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -411,7 +419,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Tusita heaven."
     },
     {
-     "number": 44,
+     "number": 45,
      "pali": "อิติปิ โส ภะคะวา นิมมานะระตี ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā nimmānaratī dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -419,7 +427,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Nimmānaratī heaven."
     },
     {
-     "number": 45,
+     "number": 46,
      "pali": "อิติปิ โส ภะคะวา ปะระนิมมิตะวะสะวัตตี ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā paranimmitavasavattī dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -427,7 +435,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the Paranimmitavasavattī heaven."
     },
     {
-     "number": 46,
+     "number": 47,
      "pali": "อิติปิ โส ภะคะวา กามาวะจะระ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā kāmāvacara dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -435,7 +443,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the sense-sphere realm."
     },
     {
-     "number": 47,
+     "number": 48,
      "pali": "อิติปิ โส ภะคะวา รูปาวะจะระ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā rūpāvacara dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -443,7 +451,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the form realm."
     },
     {
-     "number": 48,
+     "number": 49,
      "pali": "อิติปิ โส ภะคะวา อะรูปาวะจะระ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā arūpāvacara dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -451,7 +459,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the formless realm."
     },
     {
-     "number": 49,
+     "number": 50,
      "pali": "อิติปิ โส ภะคะวา โลกุตตะระ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā lokuttara dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -459,25 +467,25 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the supramundane."
     },
     {
-     "number": 50,
+     "number": 51,
+     "printed_number": 6,
      "pali": "อิติปิ โส ภะคะวา ปะฐะมะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā paṭhamajhāna dhātu samādhiñāṇa sampanno.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the first jhāna.",
-     "printed_number": 6
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the first jhāna."
     },
     {
-     "number": 51,
+     "number": 52,
+     "page": 243,
      "pali": "อิติปิ โส ภะคะวา ทุติยะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā dutiyajhāna dhātu samādhiñāṇa sampanno.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the second jhāna.",
-     "page": 243
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the second jhāna."
     },
     {
-     "number": 52,
+     "number": 53,
      "pali": "อิติปิ โส ภะคะวา ตะติยะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā tatiyajhāna dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -485,7 +493,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the third jhāna."
     },
     {
-     "number": 53,
+     "number": 54,
      "pali": "อิติปิ โส ภะคะวา จะตุตถะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā catutthajhāna dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -493,7 +501,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fourth jhāna."
     },
     {
-     "number": 54,
+     "number": 55,
      "pali": "อิติปิ โส ภะคะวา ปัญจะมะฌานะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā pañcamajhāna dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -501,16 +509,16 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fifth jhāna."
     },
     {
-     "number": 55,
+     "number": 56,
+     "printed_number": 7,
      "pali": "อิติปิ โส ภะคะวา อากาสานัญจายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā ākāsānañcāyatana dhātu samādhiñāṇa sampanno.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite space.",
-     "printed_number": 7
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite space."
     },
     {
-     "number": 56,
+     "number": 57,
      "pali": "อิติปิ โส ภะคะวา วิญญาณัญจายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā viññāṇañcāyatana dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -518,7 +526,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of infinite consciousness."
     },
     {
-     "number": 57,
+     "number": 58,
      "pali": "อิติปิ โส ภะคะวา อากิญจัญญายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā ākiñcaññāyatana dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -526,7 +534,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of nothingness."
     },
     {
-     "number": 58,
+     "number": 59,
      "pali": "อิติปิ โส ภะคะวา เนวะสัญญานาสัญญายะตะนะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā nevasaññānāsaññāyatana dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -534,16 +542,16 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the base of neither-perception-nor-non-perception."
     },
     {
-     "number": 59,
+     "number": 60,
+     "printed_number": 8,
      "pali": "อิติปิ โส ภะคะวา โสตาปัตติมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā sotāpattimagga dhātu samādhiñāṇa sampanno.",
      "thai": "",
      "paiboon": "",
-     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of stream-entry.",
-     "printed_number": 8
+     "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of stream-entry."
     },
     {
-     "number": 60,
+     "number": 61,
      "pali": "อิติปิ โส ภะคะวา สะกิทาคามิมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā sakidāgāmimagga dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -551,7 +559,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of once-returning."
     },
     {
-     "number": 61,
+     "number": 62,
      "pali": "อิติปิ โส ภะคะวา อะนาคามิมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā anāgāmimagga dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -559,7 +567,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of non-returning."
     },
     {
-     "number": 62,
+     "number": 63,
      "pali": "อิติปิ โส ภะคะวา อะระหัตตะมัคคะ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā arahattamagga dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -567,7 +575,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the path of arahantship."
     },
     {
-     "number": 63,
+     "number": 64,
      "pali": "อิติปิ โส ภะคะวา โสตาปัตติผะละ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā sotāpattiphala dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -575,7 +583,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of stream-entry."
     },
     {
-     "number": 64,
+     "number": 65,
      "pali": "อิติปิ โส ภะคะวา สะกิทาคามิผะละ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā sakidāgāmiphala dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -583,7 +591,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of once-returning."
     },
     {
-     "number": 65,
+     "number": 66,
      "pali": "อิติปิ โส ภะคะวา อะนาคามิผะละ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā anāgāmiphala dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -591,7 +599,7 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of non-returning."
     },
     {
-     "number": 66,
+     "number": 67,
      "pali": "อิติปิ โส ภะคะวา อะระหัตตะผะละ ธาตุ สะมาธิญาณะ สัมปันโน.",
      "pali_roman": "itipi so bhagavā arahattaphala dhātu samādhiñāṇa sampanno.",
      "thai": "",
@@ -599,16 +607,16 @@
      "english": "Such is the Blessed One: perfect in the knowledge of concentration on the element of the fruit of arahantship."
     },
     {
-     "number": 67,
+     "number": 68,
+     "printed_number": 9,
      "pali": "กุสะลา ธัมมา อิติปิ โส ภะคะวา อะอา ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ. ชัมพูทีปัญจะ อิสสะโร กุสะลา ธัมมา นะโม พุทธายะ นะโม ธัมมายะ นะโม สังฆายะ ปัญจะพุทธา นะมามิหัง อาปามะจุปะ ทีมะสังอังขุ สังวิธาปุกะยะปะ อุปะสะชะสะเห ปาสายะโส.",
      "pali_roman": "kusalā dhammā itipi so bhagavā aā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi. jambūdīpañca issaro kusalā dhammā namo buddhāya namo dhammāya namo saṅghāya pañcabuddhā namāmihaṃ āpāmacupa dīmasaṃaṅkhu saṃvidhāpukayapa upasajasahe pāsāyaso.",
      "thai": "",
      "paiboon": "",
-     "english": "Wholesome states. Such is the Blessed One. For as long as life lasts I go to the Buddha for refuge. Lord of the Jambū continent, wholesome states. Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha. I revere the five Buddhas — followed by the heart-syllable formulas.",
-     "printed_number": 9
+     "english": "Wholesome states. Such is the Blessed One. For as long as life lasts I go to the Buddha for refuge. Lord of the Jambū continent, wholesome states. Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha. I revere the five Buddhas — followed by the heart-syllable formulas."
     },
     {
-     "number": 68,
+     "number": 69,
      "pali": "โสโสสะสะ อะอะอะอะนิ เตชะสุเนมะภูจะนาวิเว อะสังวิสุโลปุสะพุภะ อิสะวาสุ สุสะวาอิ กุสะลา ธัมมา จิตติ วิอัตถิ.",
      "pali_roman": "sososasa aaaani tejasunemabhūcanāvive asaṃvisulopusabubha isavāsu susavāi kusalā dhammā citti viatthi.",
      "thai": "",
@@ -616,7 +624,7 @@
      "english": "Heart-syllable formulas, each letter standing for a whole phrase; then: wholesome states, the mind, and what is present."
     },
     {
-     "number": 69,
+     "number": 70,
      "pali": "อิติปิ โส ภะคะวา อะระหัง อะอา ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ สา โพธิ ปัญจะ อิสสะโร ธัมมา กุสะลา ธัมมา.",
      "pali_roman": "itipi so bhagavā arahaṃ aā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi sā bodhi pañca issaro dhammā kusalā dhammā.",
      "thai": "",
@@ -624,7 +632,7 @@
      "english": "Such is the Blessed One, the worthy one. For as long as life lasts I go to the Buddha for refuge. Lord of the five awakenings, states. Wholesome states"
     },
     {
-     "number": 70,
+     "number": 71,
      "pali": "นันทะวิวังโก อิติ สัมมาสัมพุทโธ สุคะลาโน ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.",
      "pali_roman": "nandavivaṅko iti sammāsambuddho sugalāno yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.",
      "thai": "",
@@ -651,14 +659,14 @@
      "issue": "⚠ THIS CHANT IS IN THE BOOK TWICE, IN TWO SCRIPTS. It is ยอดพระกัณฑ์ไตรปิฎก here at 241-245 in Thai script and `yod-phrakantraipidok` at 312-316 in roman. Mahāsamaya is the only other chant known to be doubled this way. The Thai one is entered under a `-thai` id and neither has been merged into the other; the book prints both, so the app carries both."
     },
     {
-     "verse": null,
+     "verse": 28,
      "file": "IMG_0512.PNG",
-     "issue": "⚠ THE THAI PRINTING HAS 85 UNITS WHERE THE ROMAN HAS 86. After พุทธัง สิระสา นะมามิ. the roman prints a bare `itipi so bhagavā.` and the Thai does NOT. Both sheets were checked at magnification — page 313 really prints four lines there and page 242 really prints three. Neither has been made to match the other."
+     "issue": "⚠ RETRACTED, AND IT WAS MY ERROR. This check previously said the Thai printing had 85 units where the roman has 86, because I read THREE lines at the top of page 242 where the sheet prints FOUR. Josh checked the physical book on 2026-08-28: อิติปิ โส ภะคะวา. IS printed on the line below พุทธัง สิระสา นะมามิ, exactly as the roman copy has it at 313. The line has been inserted as verse 28 and everything after it renumbered; the two printings now agree at 86 units each and their English is 1:1. THE LESSON: a difference found by comparing twins is a reason to re-read BOTH sheets, and I re-read only the one I doubted."
     },
     {
      "verse": 32,
      "file": "IMG_0512.PNG",
-     "issue": "⚠ THE BOOK VARIES ITS OWN SPELLING INSIDE ONE ITEM. Item ๓ prints ปาระมี with a LONG ี on its first four lines and ปาระมิ with a SHORT ิ on the fifth. Checked at magnification. Entered as printed; the roman twin uses the short vowel on all five."
+     "issue": "⚠ THE BOOK VARIES ITS OWN SPELLING INSIDE ONE ITEM. Item ๓ prints ปาระมี with a LONG ี on its first four lines and ปาระมิ with a SHORT ิ on the fifth. Checked at magnification. Entered as printed; the roman twin uses the short vowel on all five. CONFIRMED BY JOSH AT THE BOOK, 2026-08-28: the page really does print ปาระมี on the first four lines and ปาระมิ on the fifth. Settled — the book varies its own spelling here and both stay as printed."
     },
     {
      "verse": 39,
@@ -741,7 +749,7 @@
   "paiboon_scan": "clean by absence. No Paiboon+ was written.",
   "pali_untouched": "Typed from the sheets. One letter was NOT read off the photograph — the ฬ in จักกะวาฬะ — and the roman twin's `cakkavāḷa` confirms it.",
   "page_scan": "agrees. Three rows, one per sheet, one chant continuing past the last of them.",
-  "notes": "⚠ A SECOND DOUBLED CHANT, AND IT ANSWERS TWO OPEN QUESTIONS. ยอดพระกัณฑ์ไตรปิฎก is printed at 241-245 in Thai script and at 312-316 in roman — the same chant twice, like Mahāsamaya at 175 and 317-325. The notes for the roman pass recorded that the heart-syllable material on 314-316 could not be checked by sense; IT CAN NOW BE CHECKED AGAINST ITS OWN TWIN. 10 differences between the two printings were found by romanising this sheet and comparing; the first twelve are recorded in the checks and NONE has been smoothed away. The largest is that the roman prints one line, `itipi so bhagavā.`, that the Thai does not.",
+  "notes": "⚠ A SECOND DOUBLED CHANT, AND IT ANSWERS TWO OPEN QUESTIONS. ยอดพระกัณฑ์ไตรปิฎก is printed at 241-245 in Thai script and at 312-316 in roman — the same chant twice, like Mahāsamaya at 175 and 317-325. The notes for the roman pass recorded that the heart-syllable material on 314-316 could not be checked by sense; IT CAN NOW BE CHECKED AGAINST ITS OWN TWIN. 10 differences between the two printings were found by romanising this sheet and comparing; the first twelve are recorded in the checks and NONE has been smoothed away. ⚠ THE LARGEST 'DIFFERENCE' TURNED OUT TO BE MY OWN MISREADING: I read three lines at the top of 242 where there are four. Josh confirmed at the book on 2026-08-28 that อิติปิ โส ภะคะวา. is printed there, and it has been inserted as verse 28. The two printings agree at 86 units.",
   "diacritic_exceptions": [
    "aniccalakkhaṇapārami/aniccalakkhaṇapāramī — NOT a romanisation slip. The BOOK spells it both ways inside one item: page 242 prints ปาระมี with a long ี on the first four lines of item ๓ and ปาระมิ with a short ิ on the fifth. Checked at magnification. The roman twin on page 313 uses the short vowel on all five, so the two printings disagree here too; every reading is kept as its own page prints it."
   ]
