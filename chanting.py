@@ -50964,6 +50964,7 @@ CHANTS = [
         # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
         'id': 'buddha-jayamangala-gatha-plae',
         'title_thai': 'พุทธชัยมังคลคาถา (ถวายพรพระ)',
+        'page_start': 203,
         'title_pali': '',
         'title_roman': 'pút-tá-chai-maŋ-ká-lá-kaa-tǎa (tà-wǎai pɔɔn prá)',
         'group': 'General chanting',
@@ -51010,8 +51011,8 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 203,
-                'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง,\nทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
-                'pali_roman': 'Bāhuṃ sahassamabhinimmitasāvudhantaṃ, Grīmekhalaṃ uditaghorasasenamāraṃ,\nDānādidhammavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Bāhuṃ sahassamabhinimmitasāvudhantaṃ, Grīmekhalaṃ uditaghorasasenamāraṃ, Dānādidhammavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีได้ชนะพญามารผู้เนรมิตแขนมากตั้งพัน, ถืออาวุธครบมือ ขี่คชสารครีเมขละ, พร้อมด้วยเสนามารโห่ร้องก้องกึก, ด้วยธรรมวิธีมีทานบารมีเป็นต้น, ขอชัยมงคลทั้งหลาย จงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná pá-yaa-maan pûu neen-rá-mít kɛ̌ɛn mâak dtâŋ pan, tʉ̌ʉ aa-wút króp mʉʉ kìi ká-chá-sǎan kriimeekálá, prɔ́ɔm dûay sěe-naa-maan hòo-rɔ́ɔŋ gɔ̂ŋ-gʉ́k, dûay tam-má wí-tii mii taan baa-rá-mii bpen dtôn, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
                 'english': 'The Lord of Sages defeated Mara, who conjured a thousand arms, each with a weapon, riding the elephant Girimekhala with his roaring army - defeated him by the way of Dhamma, giving and the rest. By that power may the blessings of victory be yours.',
@@ -51030,8 +51031,8 @@ CHANTS = [
             {
                 'number': 2,
                 'page': 203,
-                'pali': 'มาราติเรกะมะภิยุชฌิตะสัพพะรัตติง, โฆรัมปะนาฬะวะกะมักขะมะถัทธะยักขัง,\nขันตีสุทันตะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
-                'pali_roman': 'Mārātirekamabhiyujjhitasabbarattiṃ, Ghorampanāḷavakamakkhamathaddhayakkhaṃ,\nKhantīsudantavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'pali': 'มาราติเรกะมะภิยุชฌิตะสัพพะรัตติง, โฆรัมปะนาฬะวะกะมักขะมะถัทธะยักขัง, ขันตีสุทันตะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Mārātirekamabhiyujjhitasabbarattiṃ, Ghorampanāḷavakamakkhamathaddhayakkhaṃ, Khantīsudantavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีได้ชนะอาฬวกยักษ์, ผู้มีจิตกระด้างปราศจากความอดทน, มีฤทธิ์พิลึกยิ่งกว่าพญามาร, เข้ามาต่อสู้ยิ่งนักจนตลอดรุ่ง, ด้วยวิธีทรมานเป็นอันดี คือพระขันติ, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná aa-lá-wá-gá yák, pûu mii jìt grà-dâaŋ bpràat-sà-jàak kwaam òt-ton, mii rít pí-lʉ́k yîŋ gwàa pá-yaa-maan, kâo maa dtɔ̀ɔ-sûu yîŋ nák jon dtà-lɔ̀ɔt rûŋ, dûay wí-tii tɔɔ-rá-maan bpen an dii kʉʉ prá kǎn-dtì, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
                 'english': "The Lord of Sages defeated the yakkha Alavaka, hard of heart and without patience, of a power more frightening than Mara's, who fought him all night long - defeated him by the fine way of taming that is patience. By that power may the blessings of victory be yours.",
@@ -51043,8 +51044,8 @@ CHANTS = [
             {
                 'number': 3,
                 'page': 203,
-                'pali': 'นาฬาคิริง คะชะวะรัง อะติมัตตะภูตัง, ทาวัคคิจักกะมะสะนีวะ สุทารุณันตัง,\nเมตตัมพุเสกะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
-                'pali_roman': 'Nāḷāgiriṃ gajavaraṃ atimattabhūtaṃ, Dāvaggicakkamasanīva sudāruṇantaṃ,\nMettambusekavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
+                'pali': 'นาฬาคิริง คะชะวะรัง อะติมัตตะภูตัง, ทาวัคคิจักกะมะสะนีวะ สุทารุณันตัง, เมตตัมพุเสกะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali_roman': 'Nāḷāgiriṃ gajavaraṃ atimattabhūtaṃ, Dāvaggicakkamasanīva sudāruṇantaṃ, Mettambusekavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีได้ชนะช้างตัวประเสริฐชื่อนาฬาคิรี, เป็นช้างตกมันยิ่งนัก แสนที่จะทารุณ, ประดุจไฟป่า จักราวุธ และสายฟ้า, ด้วยวิธีรดลงด้วยน้ำคือพระเมตตา, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná cháaŋ dtua bprà-sə̀ət chʉ̂ʉ naa-laa-ki-rii, bpen cháaŋ dtòk man yîŋ nák sɛ̌ɛn tîi jà taa-run, bprà-dùt fai bpàa jàk-graa-wút lɛ́ sǎai-fáa, dûay wí-tii rót loŋ dûay náam kʉʉ prá mêet-dtaa, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
                 'english': 'The Lord of Sages defeated the great elephant Nalagiri, maddened and utterly cruel, like a forest fire, a discus weapon, a thunderbolt - defeated him by sprinkling the water that is loving-kindness. By that power may the blessings of victory be yours.',

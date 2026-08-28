@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-202 went in.
+203 went in.
 
 ## Read first, in this order
 
@@ -80,10 +80,35 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 203, `IMG_0473`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
-**50 units in, resume at verse 51**. On 202 it reached what looked like an
-ending twice over — a monastic one and a lay one, each under its own rubric —
-and still ran on, so do not assume the next full stop closes it.
+**Next: page 204, `IMG_0474`.** ⚠️ `buddha-jayamangala-gatha-plae` IS OPEN —
+**3 stanzas in, resume at verse 4**. `samvega-parikittana-patha-plae` CLOSED on
+203, and the whole morning service closed with it.
+
+Three things page 203 turned up that change how later pages are read:
+
+1. **A ฬ can be PROVEN, not just inferred.** The bold Pali face loses the
+   ascender, but the lighter Thai translation face on the same page keeps it.
+   `อาฬวก` and `นาฬาคิรี` were both settled that way at 9×, with no appeal to
+   the canon. **Look for the word in the Thai before falling back on the rule.**
+2. **A new chant needs `page_start`.** Without it the chant is *unpaginated*:
+   it lives in `CHANTS`, every test passes, and it renders on **no page at
+   all**. `check_batch` does not catch this — only `check_render` does, and
+   only by noticing the verses are missing from the page. Supply it on every
+   chant whose row says `starts_here`.
+3. **A stanza cannot hold two Pali lines over one shared Thai.** The
+   Jayamangala prints each stanza as two Pali lines with ONE Thai prose
+   paragraph translating both. A verse renders its `pali` as a single
+   paragraph, and `para_layout` groups whole verses rather than lines inside
+   one, so there is nowhere to put that shape. Storing the break as `
+` was
+   tried and `check_render` rejected it — rightly, since the CSS has no
+   `white-space` rule and the app would have been claiming a break it never
+   shows. **The two printed lines are therefore joined with a space**, which
+   reads exactly as the book reads, and the batch's `checks` record where each
+   break falls. Splitting into two verses was rejected because the first would
+   print with four empty layers, which reads as unfinished work rather than as
+   the book. Expect the same shape on 204 onward — the chant has eight
+   stanzas.
 
 ## ✍️ Typography this section uses that must not be tidied
 
@@ -99,6 +124,8 @@ Collected as they turn up, all reproduced exactly:
 | a **bracketed variant inside chanted Pali** | 201 v37 | `เต (ตา) มะยัง …` — masculine with the feminine beside it, so one line serves a mixed assembly. The **Thai is not doubled**, only the Pali |
 | a **rubric splitting one chant into two endings** | 202 v44, v49 | `(สำหรับภิกษุ-สามเณรสวด)` then `(สำหรับอุบาสก-อุบาสิกาสวด)` — alternatives, not a sequence. Both runs kept in full, each rubric on the verse it heads |
 | a **full stop that closes an alternative, not the chant** | 202 v48 | `สังวัตตะตุ.` / `เทอญ.` — the monastic run ends, the lay run starts at 49, the chant carries on to 203 |
+| a **semicolon** | 203 v52 | `ของเราทั้งหลาย;` — the first in the run; it holds the sentence open across v53 |
+| a **title spelt one way on the page and another in the สารบัญ** | 203 | page `พุทธชัยมังคลคาถา` (มัง), contents `พุทธชัยมงคลคาถา` (มง). Both read off photographs. Page wins, per the pages-80–99 rule |
 
 ## 📖 A chant can arrive with NEITHER title NOR invitation — and it did
 

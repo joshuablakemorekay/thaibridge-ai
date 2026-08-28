@@ -1,0 +1,197 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "samvega-parikittana-patha-plae",
+   "buddha-jayamangala-gatha-plae"
+  ],
+  "pages": [
+   {
+    "page": 203,
+    "file": "IMG_0473.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "samvega-parikittana-patha-plae",
+    "verses": "51-53",
+    "starts_here": false,
+    "service_closing": "(จบคำทำวัตรเช้า)",
+    "note": "The top of the sheet, finishing the chant that arrived from 202. Beneath verse 53 the book prints the centred italic (จบคำทำวัตรเช้า), closing the whole morning service - carried on THIS row so it renders above the next chant's heading, where the book puts it."
+   },
+   {
+    "page": 203,
+    "file": "IMG_0473.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "buddha-jayamangala-gatha-plae",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The lower two thirds. A centred bold heading, then three stanzas, each two Pali lines with a Thai prose translation beneath. No invitation, no rubric, no footnote. The chant CONTINUES onto page 204."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "samvega-parikittana-patha-plae",
+   "continuation_of": "samvega-parikittana-patha-plae",
+   "working_notes": {
+    "invitation": "none of its own - page 198's invitation covers this chant.",
+    "units": "Three, verses 51-53, finishing the chant.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "A semicolon, and the service closing beneath - see the checks.",
+    "pages": "IMG_0473.PNG, page 203. The chant arrived from page 202 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 51,
+     "pali": "ตัสสะ ภะคะวะโต สาสะนัง ยะถาสะติ ยะถาพะลัง มะนะสิกะโรมะ อะนุปะฏิปัชชามะ,",
+     "pali_roman": "Tassa bhagavato sāsanaṃ yathāsati yathābalaṃ manasikaroma anupaṭipajjāma,",
+     "thai": "จักทำในใจอยู่ปฏิบัติตามอยู่ซึ่งคำสั่งสอนของพระผู้มีพระภาคเจ้านั้นตามสติกำลัง,",
+     "paiboon": "jàk tam nai jai yùu bpà-dtì-bàt dtaam yùu sʉ̂ŋ kam-sàŋ-sɔ̌ɔn kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo nán dtaam sà-dtì gam-laŋ,",
+     "english": "we will bear in mind and practise the teaching of that Blessed One as far as our mindfulness and strength allow,",
+     "page": 203
+    },
+    {
+     "number": 52,
+     "pali": "สา สา โน ปะฏิปัตติ,",
+     "pali_roman": "Sā sā no paṭipatti,",
+     "thai": "ขอให้ความปฏิบัตินั้น ๆ ของเราทั้งหลาย;",
+     "paiboon": "kɔ̌ɔ hâi kwaam bpà-dtì-bàt nán nán kɔ̌ɔŋ rao táŋ-lǎai;",
+     "english": "may that practice of ours;",
+     "page": 203
+    },
+    {
+     "number": 53,
+     "pali": "อิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยายะ สังวัตตะตุ.",
+     "pali_roman": "Imassa kevalassa dukkhakkhandhassa antakiriyāya saṃvattatu.",
+     "thai": "จงเป็นไปเพื่อการทำที่สุดแห่งกองทุกข์ ทั้งสิ้นนี้ เทอญ.",
+     "paiboon": "joŋ bpen bpai pʉ̂a gaan tam tîi-sùt hɛ̀ŋ gɔɔŋ-túk táŋ-sîn níi təən.",
+     "english": "lead to the making an end of this whole mass of suffering.",
+     "page": 203
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ยะถาสะติ ยะถาพะลัง",
+     "pali_roman": "yathāsati yathābalaṃ",
+     "meaning": "'as far as mindfulness goes, as far as strength goes'. The Thai keeps the pairing as ตามสติกำลัง - a promise measured by what the chanter actually has, not an absolute one"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 52,
+     "file": "IMG_0473.PNG",
+     "issue": "‼ A SEMICOLON, THE FIRST IN THIS RUN. Verse 52's Thai ends ของเราทั้งหลาย; - read at 3.6x, and it is a semicolon, not a comma. It holds the sentence open across verse 53, which completes it. Reproduced as printed. Verse 52 also carries the Thai repetition mark ๆ with a space before it, นั้น ๆ, which is likewise kept."
+    },
+    {
+     "verse": 53,
+     "file": "IMG_0473.PNG",
+     "issue": "THE CHANT ENDS HERE, and so does the service. Verse 53 closes on a full stop, and beneath it the book prints the centred italic (จบคำทำวัตรเช้า), 'end of the words of the morning chanting'. That is recorded as the page row's service_closing so it renders between this chant and the next one's heading, which is where the book puts it - not at the page foot."
+    }
+   ]
+  },
+  {
+   "id": "buddha-jayamangala-gatha-plae",
+   "title_thai": "พุทธชัยมังคลคาถา (ถวายพรพระ)",
+   "page_start": 203,
+   "title_pali": "",
+   "title_roman": "pút-tá-chai-maŋ-ká-lá-kaa-tǎa (tà-wǎai pɔɔn prá)",
+   "continues": true,
+   "working_notes": {
+    "invitation": "none printed.",
+    "units": "Three, one per STANZA. Each stanza is two printed Pali lines with a single Thai prose translation beneath both, so a stanza is one unit here rather than one unit per line.",
+    "ordering": "Pali stanza first, then its Thai.",
+    "conventions": "The title differs from the สารบัญ by one letter - see the checks.",
+    "pages": "IMG_0473.PNG, page 203. The chant STARTS here and CONTINUES onto page 204."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.",
+     "pali_roman": "Bāhuṃ sahassamabhinimmitasāvudhantaṃ, Grīmekhalaṃ uditaghorasasenamāraṃ, Dānādidhammavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.",
+     "thai": "พระจอมมุนีได้ชนะพญามารผู้เนรมิตแขนมากตั้งพัน, ถืออาวุธครบมือ ขี่คชสารครีเมขละ, พร้อมด้วยเสนามารโห่ร้องก้องกึก, ด้วยธรรมวิธีมีทานบารมีเป็นต้น, ขอชัยมงคลทั้งหลาย จงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.",
+     "paiboon": "prá-jɔɔm-mú-nii dâai chá-ná pá-yaa-maan pûu neen-rá-mít kɛ̌ɛn mâak dtâŋ pan, tʉ̌ʉ aa-wút króp mʉʉ kìi ká-chá-sǎan kriimeekálá, prɔ́ɔm dûay sěe-naa-maan hòo-rɔ́ɔŋ gɔ̂ŋ-gʉ́k, dûay tam-má wí-tii mii taan baa-rá-mii bpen dtôn, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.",
+     "english": "The Lord of Sages defeated Mara, who conjured a thousand arms, each with a weapon, riding the elephant Girimekhala with his roaring army - defeated him by the way of Dhamma, giving and the rest. By that power may the blessings of victory be yours.",
+     "page": 203
+    },
+    {
+     "number": 2,
+     "pali": "มาราติเรกะมะภิยุชฌิตะสัพพะรัตติง, โฆรัมปะนาฬะวะกะมักขะมะถัทธะยักขัง, ขันตีสุทันตะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.",
+     "pali_roman": "Mārātirekamabhiyujjhitasabbarattiṃ, Ghorampanāḷavakamakkhamathaddhayakkhaṃ, Khantīsudantavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.",
+     "thai": "พระจอมมุนีได้ชนะอาฬวกยักษ์, ผู้มีจิตกระด้างปราศจากความอดทน, มีฤทธิ์พิลึกยิ่งกว่าพญามาร, เข้ามาต่อสู้ยิ่งนักจนตลอดรุ่ง, ด้วยวิธีทรมานเป็นอันดี คือพระขันติ, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.",
+     "paiboon": "prá-jɔɔm-mú-nii dâai chá-ná aa-lá-wá-gá yák, pûu mii jìt grà-dâaŋ bpràat-sà-jàak kwaam òt-ton, mii rít pí-lʉ́k yîŋ gwàa pá-yaa-maan, kâo maa dtɔ̀ɔ-sûu yîŋ nák jon dtà-lɔ̀ɔt rûŋ, dûay wí-tii tɔɔ-rá-maan bpen an dii kʉʉ prá kǎn-dtì, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.",
+     "english": "The Lord of Sages defeated the yakkha Alavaka, hard of heart and without patience, of a power more frightening than Mara's, who fought him all night long - defeated him by the fine way of taming that is patience. By that power may the blessings of victory be yours.",
+     "page": 203
+    },
+    {
+     "number": 3,
+     "pali": "นาฬาคิริง คะชะวะรัง อะติมัตตะภูตัง, ทาวัคคิจักกะมะสะนีวะ สุทารุณันตัง, เมตตัมพุเสกะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.",
+     "pali_roman": "Nāḷāgiriṃ gajavaraṃ atimattabhūtaṃ, Dāvaggicakkamasanīva sudāruṇantaṃ, Mettambusekavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.",
+     "thai": "พระจอมมุนีได้ชนะช้างตัวประเสริฐชื่อนาฬาคิรี, เป็นช้างตกมันยิ่งนัก แสนที่จะทารุณ, ประดุจไฟป่า จักราวุธ และสายฟ้า, ด้วยวิธีรดลงด้วยน้ำคือพระเมตตา, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.",
+     "paiboon": "prá-jɔɔm-mú-nii dâai chá-ná cháaŋ dtua bprà-sə̀ət chʉ̂ʉ naa-laa-ki-rii, bpen cháaŋ dtòk man yîŋ nák sɛ̌ɛn tîi jà taa-run, bprà-dùt fai bpàa jàk-graa-wút lɛ́ sǎai-fáa, dûay wí-tii rót loŋ dûay náam kʉʉ prá mêet-dtaa, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.",
+     "english": "The Lord of Sages defeated the great elephant Nalagiri, maddened and utterly cruel, like a forest fire, a discus weapon, a thunderbolt - defeated him by sprinkling the water that is loving-kindness. By that power may the blessings of victory be yours.",
+     "page": 203
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ชะยะมังคะลานิ",
+     "pali_roman": "jayamaṅgalāni",
+     "meaning": "'the blessings of victory'. Every stanza ends on the same line, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ - by that power, may the blessings of victory be yours - so the chant is eight victories with one refrain"
+    },
+    {
+     "pali": "ค์รีเมขะลัง",
+     "pali_roman": "Grīmekhalaṃ",
+     "meaning": "Girimekhala, the elephant Mara rode. The book writes the cluster with a thanthakhat over the ค, ค์รี, which the app's transliterator reads as Grī - so the roman line follows the book rather than the more usual Giri-"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0473.PNG",
+     "issue": "‼ THE PAGE HEADING AND THE BOOK'S OWN สารบัญ SPELL THIS TITLE DIFFERENTLY, and BOTH photographs were read to be sure. Page 203 prints พุทธชัยมังคลคาถา (ถวายพรพระ) with the mai han akat, มัง - read at 4x. The contents, front-matter page 41 in IMG_0259, prints พุทธชัยมงคลคาถา (ถวายพรพระ) without it, มง - read off that photograph directly, so the app's contents line is right and this is a real difference inside the book, not a transcription slip. Handled by the rule already settled for the twelve บทขัด titles on pages 80-99: the PAGE is reproduced, and title_roman is composed to match the page rather than taken from the table. One consequence, the same as for those twelve: title_thai is no longer a key in _CONTENTS_ROMAN, so test_the_table_and_the_chants_never_spell_one_title_two_ways cannot see this chant and will not warn if its title drifts later."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0473.PNG",
+     "issue": "‼ ฬ POSITIVELY PROVEN ON THIS PAGE, not inferred. โฆรัมปะนาฬะวะกะ… in the bold Pali shows the letter with no ascender at 9x, which by the settled rule proves nothing either way. But the Thai translation beneath it, อาฬวกยักษ์, is set in the LIGHTER non-bold face, and there the ascender is plainly visible at 9x - so the ฬ is proven from the page itself. Verse 3 is the same story: นาฬาคิริง in the Pali, and นาฬาคิรี in the Thai with a clear ascender. WORTH CARRYING FORWARD: when the bold Pali hides a ฬ, look for the same word in the light Thai translation on the same page, where the ascender survives."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0473.PNG",
+     "issue": "‼ A PAGE-FIDELITY DEPARTURE, AND IT IS DELIBERATE. The book prints each stanza as TWO Pali lines with a single Thai prose paragraph translating both. The app has no way to show that: a verse renders its pali as one paragraph, and the paragraph mechanism groups whole verses rather than lines within one, so a stanza cannot hold two Pali lines over one shared translation. Storing the break as a newline was tried first and check_render rejected it - correctly, because the CSS has no white-space rule, so the app would have been claiming a break the page never shows. The stanza is therefore recorded as ONE unit with the two printed lines joined by a space, which reads exactly as the book reads. WHERE THE BREAKS FALL, so nothing is lost from the record: stanza 1 after สาวุธันตัง, ค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ; stanza 2 after มะถัทธะยักขัง, ; stanza 3 after สุทารุณันตัง, . The alternative - splitting each stanza into two verses and hanging the shared Thai off the second - was rejected because it would print a verse with four empty layers, which reads as unfinished work rather than as the book."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0473.PNG",
+     "issue": "THIS IS THE CHANT'S SECOND PRINTING and the two differ, which is why it gets its own entry rather than being merged. The first is jayamangala-atthaka-gatha from page 44, listed separately in the สารบัญ at ๔๔; there the stanza is set as FOUR lines with no commas, here as TWO lines with commas after สาวุธันตัง and มุนินโท. Same words, different setting."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0473.PNG",
+     "issue": "CUT AT THE PAGE TURN. Stanza 3 is the last thing on the sheet and the chant runs on to page 204. No […] is used: the stanza is complete, and the next one starts on the next sheet."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "continues": [
+   "buddha-jayamangala-gatha-plae"
+  ],
+  "resume_from": {
+   "chant": "buddha-jayamangala-gatha-plae",
+   "next_verse": 4,
+   "page": 204
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0473.PNG read end to end, with the heading, the semicolon, the service closing, ค์รีเมขะลัง, อาฬวก and นาฬาคิรี all re-read zoomed 3.2-9x. Page number 203 printed clearly at the top centre. Front-matter page 41, IMG_0259, was also opened to check the contents spelling of the title. Two chants, one service closing, one heading, no footnote, no rule, no colophon.",
+  "notes": "‼ THE MORNING SERVICE CLOSES AND A NEW CHANT OPENS ON ONE SHEET. Three things worth carrying forward: the book spells the new chant's title one way on the page (มังคล) and another in its own สารบัญ (มงคล), both verified from photographs and handled by the settled page-wins rule; the first semicolon in the run, in verse 52's Thai; and a way of PROVING a ฬ - the light Thai translation face keeps the ascender the bold Pali face loses, and it settled อาฬวก and นาฬาคิรี here without recourse to the canon.",
+  "diacritic_exceptions": []
+ }
+}
