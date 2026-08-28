@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-195 went in.
+196 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,9 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 196, `IMG_0466`.** ⚠️ `buddhabhithuti-plae` IS OPEN — eleven
-units in, **resume at verse 12**. Verse 11's PALI is complete; only its Thai is
-cut, after `ด้วยพระปัญญา`.
+**Next: page 197, `IMG_0467`.** ⚠️ `dhammabhithuti-plae` IS OPEN — six units
+in, **resume at verse 7**. The สารบัญ says 197 also carries `สังฆาภิถุติ`
+(contents value `Saṅghābhithuti`).
 
 ## 🚫 NEVER `git checkout chanting.py` — use `git stash` if you must
 
@@ -119,6 +119,26 @@ miniature: verse 1 indented, verses 2–3 in columns.
 
 It is the book fitting text to the measure, not a change of structure, and the
 app renders both the same way. **Do not read a layout change as a new chant.**
+
+## ✂️ WHEN ONLY THE THAI SPANS THE TURN, RECORD THE VERSE WHOLE ON ITS PALI'S PAGE
+
+Page 195→196 raised this and page 195 was corrected because of it. **Do not mark
+`[…]` in `thai` alone and try to complete it on the next page** — that was the
+first attempt and `apply_batch` rejected it:
+
+> `buddhabhithuti-plae verse 11: the app's line does not end in […], so this is
+> an overlap rather than a line cut by a page break`
+
+The completion path looks for `[…]` in the **`pali`** layer. Where the Pali is
+whole and only its translation runs over, there is nothing for it to complete.
+
+**What to do:** the verse belongs to the page its **Pali** is printed on, and its
+**whole translation** goes there with it. No marker at all — the text is not
+missing, only the printed line is split. The next page's batch then **starts at
+the following verse number**, and says so in a check.
+
+This is the second shape of the page-spanning problem page 112 raised. There the
+colophon sat on the far side of the turn; here it was half a translation.
 
 ## ✂️ The cut can fall in the THAI while the PALI is whole
 

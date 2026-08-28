@@ -236,9 +236,9 @@
      "number": 11,
      "pali": "โย อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ์รัห์มะกัง, สัสสะมะณะพ์ราห์มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต์วา ปะเวเทสิ,",
      "pali_roman": "Yo imaṃ lokaṃ sadevakaṃ samārakaṃ sabrahmakaṃ, sassamaṇabrāhmaṇiṃ pajaṃ sadevamanussaṃ sayaṃ abhiññā sacchikatvā pavedesi,",
-     "thai": "พระผู้มีพระภาคเจ้าพระองค์ใด, ได้ทรงทำความดับทุกข์ให้แจ้งด้วยพระปัญญา […]",
-     "paiboon": "prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, dâai soŋ tam kwaam-dàp-túk hâi jɛ̂ɛŋ dûay prá-bpan-yaa […]",
-     "english": "The Blessed One, having realised by his own direct knowledge this world with its devas, its Māras and its Brahmās, this generation with its ascetics and brahmins, its devas and humans, made it known […]",
+     "thai": "พระผู้มีพระภาคเจ้าพระองค์ใด, ได้ทรงทำความดับทุกข์ให้แจ้งด้วยพระปัญญา อันยิ่งเองแล้ว, ทรงสอนโลกนี้ พร้อมทั้งเทวดา, มาร, พรหม, และหมู่สัตว์พร้อมทั้งสมณพราหมณ์, พร้อมทั้งเทวดา และมนุษย์ให้รู้ตาม,",
+     "paiboon": "prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, dâai soŋ tam kwaam-dàp-túk hâi jɛ̂ɛŋ dûay prá-bpan-yaa an yîŋ eeŋ lɛ́ɛo, soŋ sɔ̌ɔn lôok níi prɔ́ɔm táŋ têe-wá-daa, maan, prom, lɛ́ mùu sàt prɔ́ɔm táŋ sà-má-ná-praam, prɔ́ɔm táŋ têe-wá-daa lɛ́ má-nút hâi rúu dtaam,",
+     "english": "The Blessed One, having realised by his own direct knowledge this world with its devas, its Māras and its Brahmās, this generation with its ascetics and brahmins, its devas and humans, made it known to them,",
      "page": 195
     }
    ],
@@ -271,11 +271,6 @@
      "issue": "‼ TWO COLUMNS FOR THE SHORT UNITS. Verses 1-10 set the PALI left and its THAI right on the SAME line, gutter at about x 850 — this is the epithet list, and each epithet is one short word. Verse 11 is a long sentence and reverts to the indented style of pages 193-194. Same chant, two layouts, decided by line length."
     },
     {
-     "verse": 11,
-     "file": "IMG_0465.PNG",
-     "issue": "CUT MID-SENTENCE IN THE THAI, not in the Pali. The Pali of verse 11 is complete on this sheet; its translation runs off the foot after ด้วยพระปัญญา. Marked with […] in BOTH thai and paiboon, and continues is set. Page 196 should open with the rest of that translation."
-    },
-    {
      "verse": 10,
      "file": "IMG_0465.PNG",
      "issue": "THE THAI SAYS MORE THAN THE PALI IN TWO PLACES, and both are kept. โลกะวิทู is glossed 'รู้โลกอย่างแจ่มแจ้ง' — 'clearly' is not in the Pali; and ภะคะวา is glossed 'มีความจำเริญ จำแนกธรรมสั่งสอนสัตว์', which unpacks the title rather than translating it. These are the book's translator's choices and are reproduced, not trimmed to match the Pali."
@@ -284,6 +279,11 @@
      "verse": null,
      "file": "IMG_0465.PNG",
      "issue": "english_unverified is set. The English is this edition's working translation, checkable here against the Thai the book prints."
+    },
+    {
+     "verse": 11,
+     "file": "IMG_0465.PNG",
+     "issue": "‼ THE BOOK BREAKS THIS VERSE'S TRANSLATION ACROSS THE PAGE TURN, BUT THE VERSE IS RECORDED WHOLE HERE. Its PALI is complete on this sheet; its THAI runs off the foot after ด้วยพระปัญญา and finishes at the head of page 196. A verse lives on ONE page in this app, and this one's Pali is printed here, so the whole translation is carried here too. No […] marker: the text is not missing, only the printed line is split. Page 196's batch therefore starts at verse 12. This is the second shape of the page-spanning problem page 112 raised — there the colophon was on the far side, here it is half the translation."
     }
    ]
   }

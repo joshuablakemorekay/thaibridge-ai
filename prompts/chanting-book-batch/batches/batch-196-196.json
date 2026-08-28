@@ -1,0 +1,274 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "buddhabhithuti-plae",
+   "dhammabhithuti-plae"
+  ],
+  "pages": [
+   {
+    "page": 196,
+    "file": "IMG_0466.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "buddhabhithuti-plae",
+    "verses": "12-18",
+    "starts_here": false,
+    "note": "The top of the sheet completes the translation cut on 195, then carries seven more units — short ones with their Thai in a right-hand column, long ones indented — and closes with the rubric (กราบระลึกถึงพระพุทธคุณ)."
+   },
+   {
+    "page": 196,
+    "file": "IMG_0466.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "dhammabhithuti-plae",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "The rest of the sheet: a centred bold title, a bracketed invitation, then verse 1 indented and the six qualities of the Dhamma set PALI left with their THAI right. The chant CONTINUES onto page 197."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "buddhabhithuti-plae",
+   "continuation_of": "buddhabhithuti-plae",
+   "working_notes": {
+    "invitation": "printed on page 195; nothing new here.",
+    "units": "Seven, verses 12-18, one per PALI line with its Thai. The chant closes at verse 18 with a rubric.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "None new.",
+    "pages": "IMG_0466.PNG, page 196. The chant arrived from page 195 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 12,
+     "pali": "โย ธัมมัง เทเสสิ,",
+     "pali_roman": "Yo dhammaṃ desesi,",
+     "thai": "พระผู้มีพระภาคเจ้าพระองค์ใด, ทรงแสดงธรรมแล้ว,",
+     "paiboon": "prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, soŋ sà-dɛɛŋ tam lɛ́ɛo,",
+     "english": "The Blessed One, whoever he is, has taught the Dhamma —",
+     "page": 196
+    },
+    {
+     "number": 13,
+     "pali": "อาทิกัล์ยาณัง,",
+     "pali_roman": "Ādikalyāṇaṃ,",
+     "thai": "ไพเราะในเบื้องต้น,",
+     "paiboon": "pai-rɔ́ nai bʉ̂aŋ-dtôn,",
+     "english": "beautiful in the beginning,",
+     "page": 196
+    },
+    {
+     "number": 14,
+     "pali": "มัชเฌกัล์ยาณัง,",
+     "pali_roman": "Majjhekalyāṇaṃ,",
+     "thai": "ไพเราะในท่ามกลาง,",
+     "paiboon": "pai-rɔ́ nai tâam-glaaŋ,",
+     "english": "beautiful in the middle,",
+     "page": 196
+    },
+    {
+     "number": 15,
+     "pali": "ปะริโยสานะกัล์ยาณัง,",
+     "pali_roman": "Pariyosānakalyāṇaṃ,",
+     "thai": "ไพเราะในที่สุด,",
+     "paiboon": "pai-rɔ́ nai tîi-sùt,",
+     "english": "beautiful in the end,",
+     "page": 196
+    },
+    {
+     "number": 16,
+     "pali": "สาตถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง ปะกาเสสิ,",
+     "pali_roman": "Sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ pakāsesi,",
+     "thai": "ทรงประกาศพรหมจรรย์ คือแบบแห่งการปฏิบัติอันประเสริฐ บริสุทธิ์ บริบูรณ์สิ้นเชิง, พร้อมทั้งอรรถะ พร้อมทั้งพยัญชนะ,",
+     "paiboon": "soŋ bprà-gàat prom-má-jan kʉʉ bɛ̀ɛp hɛ̀ŋ gaan bpà-dtì-bàt an bprà-sə̀ət bɔɔ-rí-sùt bɔɔ-rí-buun sîn-chəəŋ, prɔ́ɔm táŋ àt-tà prɔ́ɔm táŋ pá-yan-chá-ná,",
+     "english": "he proclaimed the holy life — the pattern of noble practice, pure and wholly complete, with its meaning and its phrasing,",
+     "page": 196
+    },
+    {
+     "number": 17,
+     "pali": "ตะมะหัง ภะคะวันตัง อะภิปูชะยามิ,",
+     "pali_roman": "Tamahaṃ bhagavantaṃ abhipūjayāmi,",
+     "thai": "ข้าพเจ้าบูชาอย่างยิ่ง เฉพาะพระผู้มีพระภาคเจ้าพระองค์นั้น,",
+     "paiboon": "kâa-pá-jâo buu-chaa yàaŋ-yîŋ chà-pɔ́ prá-pûu-mii-prá-pâak-jâo prá-oŋ nán,",
+     "english": "I pay the highest homage to that Blessed One,",
+     "page": 196
+    },
+    {
+     "number": 18,
+     "pali": "ตะมะหัง ภะคะวันตัง สิระสา นะมามิ.",
+     "pali_roman": "Tamahaṃ bhagavantaṃ sirasā namāmi.",
+     "thai": "ข้าพเจ้านอบน้อมพระผู้มีพระภาคเจ้าพระองค์นั้น, ด้วยเศียรเกล้า.",
+     "paiboon": "kâa-pá-jâo nɔ̂ɔp-nɔ́ɔm prá-pûu-mii-prá-pâak-jâo prá-oŋ nán, dûay sǐian-glâo.",
+     "english": "I bow to that Blessed One with my head.",
+     "page": 196,
+     "rubric": "(กราบระลึกถึงพระพุทธคุณ)"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สาตถัง สะพ์ยัญชะนัง",
+     "pali_roman": "sātthaṃ sabyañjanaṃ",
+     "meaning": "'with its meaning and its phrasing'. The Thai keeps both Pali words as อรรถะ and พยัญชนะ rather than translating them"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 12,
+     "file": "IMG_0466.PNG",
+     "issue": "‼ THIS PAGE STARTS AT VERSE 12, NOT 11, AND THE REASON IS WORTH KNOWING. Verse 11's PALI is printed whole on page 195; only its THAI runs over onto the head of this sheet. A verse lives on ONE page in this app, and that verse belongs to 195 where its Pali is, so its whole translation is recorded there rather than split. apply_batch cannot complete such a verse either — its completion path looks for […] in the PALI layer, and there was none. The two lines of Thai at the top of this sheet are therefore carried by batch-195, not here."
+    },
+    {
+     "verse": 18,
+     "file": "IMG_0466.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Eighteen verses across pages 195 and 196."
+    },
+    {
+     "verse": 18,
+     "file": "IMG_0466.PNG",
+     "issue": "THE CLOSING RUBRIC IS DESCRIPTIVE, NOT AN INSTRUCTION TO COUNT: (กราบระลึกถึงพระพุทธคุณ) — 'bow, recollecting the Buddha's virtues'. Longer than the bare (กราบ) of page 194 and the (๓ ครั้ง) of page 195. Reproduced as printed."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0466.PNG",
+     "issue": "THE TWO LAYOUTS ALTERNATE AGAIN WITHIN THE CHANT, as on page 195: verses 13, 14, 15 and 17 are short and set with their Thai in a RIGHT-HAND COLUMN; verses 12, 16 and 18 are long and their Thai is INDENTED beneath. Line length decides it, not structure."
+    }
+   ]
+  },
+  {
+   "id": "dhammabhithuti-plae",
+   "working_notes": {
+    "invitation": "PRESENT, printed in brackets and centred beneath the title.",
+    "units": "Six so far, one per PALI line with its Thai. Verse 1 is long and indented; verses 2-6 are the six qualities of the Dhamma, short, with their Thai in a right-hand column.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "title_roman is the สารบัญ's value, Dhammābhithuti — an IAST reading, matching พุทธาภิถุติ's Buddhābhithuti on the page before.",
+    "pages": "IMG_0466.PNG, page 196. The chant STARTS here and CONTINUES onto page 197."
+   },
+   "title_thai": "ธัมมาภิถุติ",
+   "title_pali": "",
+   "title_roman": "Dhammābhithuti",
+   "title_english": "Praise of the Dhamma",
+   "page_start": 196,
+   "english_unverified": true,
+   "continues": true,
+   "invitation": {
+    "pali": "(หันทะ มะยัง ธัมมาภิถุติง กะโรมะ เส.)",
+    "pali_roman": "(Handa mayaṃ dhammābhithutiṃ karoma se.)",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us give praise to the Dhamma."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "โย โส ส์วากขาโต ภะคะวะตา ธัมโม,",
+     "pali_roman": "Yo so svākkhāto bhagavatā dhammo,",
+     "thai": "พระธรรมนั้นใด, เป็นสิ่งที่พระผู้มีพระภาคเจ้าได้ตรัสไว้ดีแล้ว,",
+     "paiboon": "prá-tam nán dai, bpen sìŋ tîi prá-pûu-mii-prá-pâak-jâo dâai dtràt wái dii lɛ́ɛo,",
+     "english": "That Dhamma, whichever it is, was well proclaimed by the Blessed One,",
+     "page": 196
+    },
+    {
+     "number": 2,
+     "pali": "สันทิฏฐิโก,",
+     "pali_roman": "Sandiṭṭhiko,",
+     "thai": "เป็นสิ่งที่ผู้ศึกษาและปฏิบัติ พึงเห็นได้ด้วยตนเอง,",
+     "paiboon": "bpen sìŋ tîi pûu sʉ̀k-sǎa lɛ́ bpà-dtì-bàt pʉŋ hěn dâai dûay dton-eeŋ,",
+     "english": "it is to be seen for oneself by one who studies and practises,",
+     "page": 196
+    },
+    {
+     "number": 3,
+     "pali": "อะกาลิโก,",
+     "pali_roman": "Akāliko,",
+     "thai": "เป็นสิ่งที่ปฏิบัติได้ และให้ผลได้ ไม่จำกัดกาล,",
+     "paiboon": "bpen sìŋ tîi bpà-dtì-bàt dâai lɛ́ hâi pǒn dâai mâi jam-gàt gaan,",
+     "english": "it can be practised and bears fruit without limit of time,",
+     "page": 196
+    },
+    {
+     "number": 4,
+     "pali": "เอหิปัสสิโก,",
+     "pali_roman": "Ehipassiko,",
+     "thai": "เป็นสิ่งที่ควรกล่าวกะผู้อื่นว่า ท่านจงมาดูเถิด,",
+     "paiboon": "bpen sìŋ tîi kuan glàao gà pûu ʉ̀ʉn wâa tâan joŋ maa duu tə̀ət,",
+     "english": "it is worth saying to another, 'Come and see',",
+     "page": 196
+    },
+    {
+     "number": 5,
+     "pali": "โอปะนะยิโก,",
+     "pali_roman": "Opanayiko,",
+     "thai": "เป็นสิ่งที่ควรน้อมเข้ามาใส่ตัว,",
+     "paiboon": "bpen sìŋ tîi kuan nɔ́ɔm kâo maa sài dtua,",
+     "english": "it is worth drawing inward into oneself,",
+     "page": 196
+    },
+    {
+     "number": 6,
+     "pali": "ปัจจัตตัง เวทิตัพโพ วิญญูหิ,",
+     "pali_roman": "Paccattaṃ veditabbo viññūhi,",
+     "thai": "เป็นสิ่งที่ผู้รู้ก็รู้ได้เฉพาะตน,",
+     "paiboon": "bpen sìŋ tîi pûu-rúu gɔ̂ rúu dâai chà-pɔ́ dton,",
+     "english": "it is to be known by the wise, each for himself,",
+     "page": 196
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สันทิฏฐิโก … วิญญูหิ",
+     "pali_roman": "sandiṭṭhiko … viññūhi",
+     "meaning": "the six standard qualities of the Dhamma, recited as a set. The Thai here does not translate them one word for one word but explains each — 'to be seen by one who studies AND PRACTISES' is longer than sandiṭṭhiko says"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0466.PNG",
+     "issue": "THE INVITATION IS PRINTED IN BRACKETS, centred beneath the title. Reproduced with its brackets; Pali only, as the two before it."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0466.PNG",
+     "issue": "title_roman IS THE CONTENTS' VALUE — Dhammābhithuti, an IAST reading, matching the Buddhābhithuti of the chant above. The สารบัญ is consistent for this pair even though it is Paiboon for other titles on the same spread."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0466.PNG",
+     "issue": "THE THAI EXPLAINS RATHER THAN TRANSLATES, and is kept as printed. สันทิฏฐิโก is glossed 'to be seen by one who STUDIES AND PRACTISES' and อะกาลิโก 'can be practised AND BEARS FRUIT without limit of time' — both say more than the Pali word does. These are the book's translator's choices."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0466.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 6 is the last thing on the sheet and the chant runs on to page 197. No […] is used: verse 6 ends at a comma the book itself prints and nothing is broken mid-word."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0466.PNG",
+     "issue": "english_unverified is set. The English is this edition's working translation, checkable here against the Thai the book prints."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "buddhabhithuti-plae"
+  ],
+  "continues": [
+   "dhammabhithuti-plae"
+  ],
+  "resume_from": {
+   "chant": "dhammabhithuti-plae",
+   "next_verse": 7,
+   "page": 197
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0466.PNG read end to end. Page number 196 printed clearly at the top centre. One chant closing with a rubric, one centred bold title, one bracketed invitation. No footnote, no rule, no colophon. A hand holds the sheet at the left margin and obscures nothing.",
+  "notes": "The rubrics keep getting longer and more descriptive: (กราบ) on 194, (๓ ครั้ง) on 195, and (กราบระลึกถึงพระพุทธคุณ) here — 'bow, recollecting the Buddha's virtues'. Each reproduced as printed. The Thai in this section repeatedly EXPLAINS rather than translates, and that is left alone.",
+  "diacritic_exceptions": []
+ }
+}
