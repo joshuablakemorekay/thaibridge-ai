@@ -23,6 +23,7 @@
  "chants": [
   {
    "id": "yod-phrakantraipidok-thai",
+   "continuation_of": "yod-phrakantraipidok-thai",
    "continues": true,
    "verses": [
     {

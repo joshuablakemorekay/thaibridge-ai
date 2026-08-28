@@ -1,0 +1,143 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "yod-phrakantraipidok-thai",
+   "vipassit-thai"
+  ],
+  "pages": [
+   {
+    "page": 245,
+    "file": "IMG_0515.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "yod-phrakantraipidok-thai",
+    "verses": "83-85",
+    "starts_here": false,
+    "note": "The chant ENDING. Its first line completes the verse cut by the turn from 244, then two more units and the chant is done."
+   },
+   {
+    "page": 245,
+    "file": "IMG_0515.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "vipassit-thai",
+    "verses": "1-1",
+    "starts_here": true,
+    "note": "A centred BOLD heading วิปัสสิต with one centred line under it, then the page ends in white space."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "yod-phrakantraipidok-thai",
+   "continuation_of": "yod-phrakantraipidok-thai",
+   "verses": [
+    {
+     "number": 83,
+     "pali": "นะโม ธัมมัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม ส์วากขาโต ภะคะวะตา ธัมโม.",
+     "pali_roman": "namo dhammassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo svākkhāto bhagavatā dhammo.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Dhamma. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — well proclaimed by the Blessed One is the Dhamma."
+    },
+    {
+     "number": 84,
+     "pali": "นะโม สังฆัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ วาหะปะริตตัง.",
+     "pali_roman": "namo saṅghassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo supaṭipanno bhagavato sāvakasaṅgho vāhaparittaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Saṅgha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — of good practice is the Blessed One's community of disciples. The protective recitation.",
+     "page": 245
+    },
+    {
+     "number": 85,
+     "pali": "นะโม พุทธายะ มะอะอุ ทุกขัง อะนิจจัง อะนัตตา ยาวะ ตัสสะ หาโย โมนะ อุอะมะ ทุกขัง อะนิจจัง อะนัตตา อุอะมะอะ วันทา นะโม พุทธายะ นะอะ กะติ นิสะระณะ อาระปะขุทธัง มะอะอุ ทุกขัง อะนิจจัง อะนัตตา.",
+     "pali_roman": "namo buddhāya maau dukkhaṃ aniccaṃ anattā yāva tassa hāyo mona uama dukkhaṃ aniccaṃ anattā uamaa vandā namo buddhāya naa kati nisaraṇa ārapakhuddhaṃ maau dukkhaṃ aniccaṃ anattā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Homage to the Buddha — ma-a-u — suffering, impermanent, not-self; and so on through the heart syllables u-a-ma and na-a, with reverence, escape, and again: suffering, impermanent, not-self."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 83,
+     "file": "IMG_0515.PNG",
+     "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN. Page 244 ended at นะโม and this sheet opens ส์วากขาโต ภะคะวะตา ธัมโม. The verse belongs to 244, where it starts."
+    },
+    {
+     "verse": 85,
+     "file": "IMG_0515.PNG",
+     "issue": "⚠ THIS IS THE THAI TWIN of `yod-phrakantraipidok` at 312-316. The two printings are compared verse by verse and every difference is recorded rather than smoothed away. This is the line that identified the twin: มะอะอุ here is the roman `ma-a-u` on page 316, and อุอะมะ is `u-a-ma`. The heart-syllable material the roman pass recorded as uncheckable now has a second witness."
+    }
+   ]
+  },
+  {
+   "id": "vipassit-thai",
+   "title_thai": "วิปัสสิต",
+   "title_pali": "",
+   "title_roman": "",
+   "title_english": "Vipassit",
+   "page_start": 245,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "One line under a bold centred heading.",
+    "ordering": "Pali in Thai script.",
+    "conventions": "paiboon left empty.",
+    "pages": "IMG_0515, page 245. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สัพพะทุกขา สัพพะภะยา สัพพะโรคา วินาสสันตุ",
+     "pali_roman": "sabbadukkhā sabbabhayā sabbarogā vināssantu",
+     "thai": "",
+     "paiboon": "",
+     "english": "May all suffering, all fear and all illness be destroyed.",
+     "page": 245
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "วินาสสันตุ",
+     "pali_roman": "vinassantu",
+     "meaning": "let them be destroyed — the whole of this one-line chant is that wish, made three times over"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0515.PNG",
+     "issue": "⚠ THIS ANSWERS AN OPEN QUESTION FROM THE ROMAN PASS. `VIPASSIT` on page 316 was entered as its own chant but the notes recorded a doubt about whether it was a title or a closing label. Here the same word is printed in Thai script in BOLD, centred, larger than the line beneath it — unmistakably a heading. The roman entry was right."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0515.PNG",
+     "issue": "THE THAI LINE HAS NO FULL STOP where the roman twin ends `vinassantu.` with one. Entered as printed."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "yod-phrakantraipidok-thai",
+   "vipassit-thai"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 240,
+  "resume_from_file": "IMG_0510.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from the sheet at magnification.",
+  "page_scan": "agrees. Two rows on one sheet: a chant ending and a one-line chant beginning.",
+  "notes": "⚠ THIS IS THE THAI TWIN of `yod-phrakantraipidok` at 312-316. The two printings are compared verse by verse and every difference is recorded rather than smoothed away. THE TWIN IS NOW COMPLETE: 241-245 in Thai script against 312-316 in roman, and วิปัสสิต against VIPASSIT. Both open questions left by the roman pass are answered — VIPASSIT is a title, and the heart-syllable material has a second witness to be read against.",
+  "diacritic_exceptions": []
+ }
+}

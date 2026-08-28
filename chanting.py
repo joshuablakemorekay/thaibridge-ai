@@ -47105,7 +47105,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 70; the rest is not in the app yet.
         # ‼ CHECK [IMG_0511.PNG]: ⚠ THIS CHANT IS IN THE BOOK TWICE, IN TWO
         #   SCRIPTS. It is ยอดพระกัณฑ์ไตรปิฎก here at 241-245 in Thai script
         #   and `yod-phrakantraipidok` at 312-316 in roman. Mahāsamaya is the
@@ -47779,6 +47778,175 @@ CHANTS = [
                 'paiboon': '',
                 'english': 'Nandavivaṅka: thus the Fully Enlightened One, the well-gone. For as long as life lasts I go to the Buddha for refuge.',
             },
+            # ‼ CHECK [IMG_0514.PNG]: The Thai prints อุอุ, two SHORT vowels;
+            #   the roman prints `u-ū`, short then long. Entered as printed on
+            #   each side.
+            {
+                'number': 71,
+                'page': 244,
+                'printed_number': 10,
+                'pali': 'จาตุมมะหาราชิกา อิสสะโร กุสะลา ธัมมา อิติ วิชชาจะระณะสัมปันโน อุอุ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'cātummahārājikā issaro kusalā dhammā iti vijjācaraṇasampanno uu yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the realm of the Four Great Kings, wholesome states; thus, perfect in knowledge and conduct — u-ū — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 72,
+                'pali': 'ตาวะติงสา อิสสะโร กุสะลา ธัมมา นันทะ ปัญจะ สุคะโต โลกะวิทู มะหาเอโอ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'tāvatiṃsā issaro kusalā dhammā nanda pañca sugato lokavidū mahāeo yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Tāvatiṃsa heaven, wholesome states; the well-gone one, knower of worlds — mahā-e-o — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 73,
+                'pali': 'ยามา อิสสะโร กุสะลา ธัมมา พ์รัห์มาสัททะ ปัญจะ สัตตา สัตตาปาระมี อะนุตตะโร ยะมะกะขะ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'yāmā issaro kusalā dhammā brahmāsadda pañca sattā sattāpāramī anuttaro yamakakha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Yāma heaven, wholesome states; Brahmā, sound, the five and seven, the seven perfections, the unsurpassed — yamakakha — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            # ‼ CHECK [IMG_0514.PNG]: ⚠ THIS IS THE THAI TWIN of `yod-
+            #   phrakantraipidok` at 312-316. The two printings are compared
+            #   verse by verse and every difference is recorded rather than
+            #   smoothed away. Here the Thai prints ปุกะยะปะ where the roman
+            #   prints `puyapaka` — the same syllables in a different order.
+            #   Checked at magnification. Neither has been changed to match
+            #   the other.
+            {
+                'number': 74,
+                'pali': 'ตุสิตา อิสสะโร กุสะลา ธัมมา ปุกะยะปะ ปุริสะทัมมะสาระถิ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'tusitā issaro kusalā dhammā pukayapa purisadammasārathi yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Tusita heaven, wholesome states; puyapaka, trainer of tameable people — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 75,
+                'pali': 'นิมมานะระตี อิสสะโร กุสะลา ธัมมา เหตุโปวะ สัตถา เทวะมะนุสสานัง ตะถา ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'nimmānaratī issaro kusalā dhammā hetupova satthā devamanussānaṃ tathā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Nimmānaratī heaven, wholesome states; hetupova, teacher of devas and humans, likewise — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            {
+                'number': 76,
+                'pali': 'ปะระนิมมิตะวะสะวัตตี อิสสะโร กุสะลา ธัมมา สังขารักขันโธ ทุกขัง อะนิจจัง อะนัตตา รูปักขันโธ พุทธะปะผะ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'paranimmitavasavattī issaro kusalā dhammā saṅkhārakkhandho dukkhaṃ aniccaṃ anattā rūpakkhandho buddhapapha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the Paranimmitavasavattī heaven, wholesome states; the aggregate of formations — suffering, impermanent, not-self — the aggregate of form, buddhapapha — for as long as life lasts I go to the Buddha for refuge.',
+            },
+            # ‼ CHECK [IMG_0514.PNG]: The Thai prints สังขารักขันโธ and
+            #   รูปักขันโธ where the roman prints `saṅkhārakhandho` and
+            #   `rūpakhandho`. Both sheets checked at magnification; entered
+            #   as printed.
+            {
+                'number': 77,
+                'pali': 'พ์รัห์มา อิสสะโร กุสะลา ธัมมา นัตถิปัจจะยา วินะปัญจะ ภะคะวะตา ยาวะนิพพานัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'brahmā issaro kusalā dhammā natthipaccayā vinapañca bhagavatā yāvanibbānaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord Brahmā, wholesome states; by the condition of non-existence, vinapañca, by the Blessed One — until Nibbāna I go for refuge.',
+            },
+            {
+                'number': 78,
+                'printed_number': 11,
+                'pali': 'นะโม พุทธัสสะ นะโม ธัมมัสสะ นะโม สังฆัสสะ พุทธิลาโภกะลา กะระกะนา เอเตนะ สัจเจนะ สุวัตถิ โหนตุ หุลู หุลู หุลู สะวาหายะ.',
+                'pali_roman': 'namo buddhassa namo dhammassa namo saṅghassa buddhilābhokalā karakanā etena saccena suvatthi hontu hulū hulū hulū savāhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha; the gain of awakening. By this truth may there be well-being — hulū hulū hulū savāhāya.',
+            },
+            # ‼ CHECK [IMG_0514.PNG]: The Thai prints มิตติ three times in
+            #   full; the roman prints `mitti mitti mitt`, the third cut
+            #   short. The roman sheet was re-read at magnification to be sure
+            #   the app had not mistyped it — the book really does print
+            #   `mitt`.
+            {
+                'number': 79,
+                'pali': 'นะโม พุทธัสสะ นะโม ธัมมัสสะ นะโม สังฆัสสะ วิตติ วิตติ วิตติ มิตติ มิตติ มิตติ จิตติ จิตติ วัตติ วัตติ มะยะสุ สุวัตถิ โหนตุ หุลู หุลู หุลู สะวาหายะ.',
+                'pali_roman': 'namo buddhassa namo dhammassa namo saṅghassa vitti vitti vitti mitti mitti mitti citti citti vatti vatti mayasu suvatthi hontu hulū hulū hulū savāhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha, homage to the Dhamma, homage to the Saṅgha; syllable formulas repeated in threes and pairs. May there be well-being — hulū hulū hulū savāhāya.',
+            },
+            {
+                'number': 80,
+                'pali': 'อินทะสาวัง มะหาอินทะสาวัง พ์รัห์มะสาวัง มะหาพ์รัห์มะสาวัง จักกะวัตติสาวัง มะหาจักกะวัตติสาวัง เทวาสาวัง มะหาเทวาสาวัง อิสิสาวัง มะหาอิสิสาวัง มุนีสาวัง มะหามุนีสาวัง สัปปุริสะสาวัง มะหาสัปปุริสะสาวัง พุทธะสาวัง ปัจเจกะพุทธะสาวัง อะระหัตตะสาวัง สัพพะสิทธิวิชชาธาระณังสาวัง สัพพะโลกา อิริยานังสาวัง เอเตนะ สัจเจนะ สุวัตถิ โหนตุ.',
+                'pali_roman': 'indasāvaṃ mahāindasāvaṃ brahmasāvaṃ mahābrahmasāvaṃ cakkavattisāvaṃ mahācakkavattisāvaṃ devāsāvaṃ mahādevāsāvaṃ isisāvaṃ mahāisisāvaṃ munīsāvaṃ mahāmunīsāvaṃ sappurisasāvaṃ mahāsappurisasāvaṃ buddhasāvaṃ paccekabuddhasāvaṃ arahattasāvaṃ sabbasiddhivijjādhāraṇaṃsāvaṃ sabbalokā iriyānaṃsāvaṃ etena saccena suvatthi hontu.',
+                'thai': '',
+                'paiboon': '',
+                'english': "The power of Inda and of great Inda, of Brahmā and great Brahmā, of the wheel-turning king and the great wheel-turner, of devas and great devas, of seers and great seers, of sages and great sages, of good people and great good people, of Buddhas, of Paccekabuddhas, of arahantship, of all attainment and knowledge held, and of all the world's conduct. By this truth may there be well-being.",
+            },
+            # ‼ CHECK [IMG_0514.PNG]: ⚠ THE THAI HAS A WORD THE ROMAN DOES
+            #   NOT. This sheet prints สาวัง คุณัง วิชชา วะชะ พะลัง; the roman
+            #   twin prints `sāvaṃ guṇaṃ vaja balaṃ` with no วิชชา at all. The
+            #   Thai also prints วิริยัง where the roman has `viriaṃ`, and
+            #   สิทธิกัมมัง as one word where the roman sets `siddhi kammaṃ`
+            #   as two. Entered as printed on this side; the roman is left as
+            #   printed on its own.
+            {
+                'number': 81,
+                'pali': 'สาวัง คุณัง วิชชา วะชะ พะลัง เตชัง วิริยัง สิทธิกัมมัง ธัมมัง สัจจัง นิพพานัง โมกขัง คุยหะกัง ทานัง สีลัง ปัญญานิกขัง ปุญญัง ภาคะยัง ตะปัง ยะสัง สุขัง สิริรูปัง จะตุวีสะติเทสะนัง เอเตนะ สัจเจนะ สุวัตถิ โหนตุ หุลู หุลู หุลู สะวาหายะ.',
+                'pali_roman': 'sāvaṃ guṇaṃ vijjā vaja balaṃ tejaṃ viriyaṃ siddhikammaṃ dhammaṃ saccaṃ nibbānaṃ mokkhaṃ guyhakaṃ dānaṃ sīlaṃ paññānikkhaṃ puññaṃ bhāgayaṃ tapaṃ yasaṃ sukhaṃ sirirūpaṃ catuvīsatidesanaṃ etena saccena suvatthi hontu hulū hulū hulū savāhāya.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Power, virtue, speech, strength, brilliance, energy, attainment, action, Dhamma, truth, Nibbāna, release, what is hidden, giving, morality, wisdom, renunciation, merit, fortune, fame, satisfaction, happiness, splendour, form, and the twenty-four teachings. By this truth may there be well-being — hulū hulū hulū savāhāya.',
+            },
+            {
+                'number': 82,
+                'printed_number': 12,
+                'pali': 'นะโม พุทธัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม อิติปิ โส ภะคะวา.',
+                'pali_roman': 'namo buddhassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo itipi so bhagavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — such is the Blessed One.',
+            },
+            # ‼ CHECK [IMG_0514.PNG]: INCOMPLETE LINE. Verse 83 is the last
+            #   thing printed on page 244 and its sentence runs onto 245, so
+            #   it is recorded ending […] and completed by batch-245-245 under
+            #   the same verse number.
+            # ‼ COMPLETED FROM p245: this line was cut by the page break and
+            #   is now whole. Was: นะโม ธัมมัสสะ ทุกขัง อะนิจจัง อะนัตตา
+            #   รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ
+            #   นะโม […]
+            # ‼ CHECK [IMG_0515.PNG]: COMPLETES THE LINE CUT BY THE PAGE TURN.
+            #   Page 244 ended at นะโม and this sheet opens ส์วากขาโต ภะคะวะตา
+            #   ธัมโม. The verse belongs to 244, where it starts.
+            {
+                'number': 83,
+                'pali': 'นะโม ธัมมัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม ส์วากขาโต ภะคะวะตา ธัมโม.',
+                'pali_roman': 'namo dhammassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo svākkhāto bhagavatā dhammo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Dhamma. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — well proclaimed by the Blessed One is the Dhamma.',
+            },
+            {
+                'number': 84,
+                'page': 245,
+                'pali': 'นะโม สังฆัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ วาหะปะริตตัง.',
+                'pali_roman': 'namo saṅghassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo supaṭipanno bhagavato sāvakasaṅgho vāhaparittaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Homage to the Saṅgha. Suffering, impermanent, not-self: the aggregates of form, feeling, perception, formations and consciousness. Homage — of good practice is the Blessed One's community of disciples. The protective recitation.",
+            },
+            # ‼ CHECK [IMG_0515.PNG]: ⚠ THIS IS THE THAI TWIN of `yod-
+            #   phrakantraipidok` at 312-316. The two printings are compared
+            #   verse by verse and every difference is recorded rather than
+            #   smoothed away. This is the line that identified the twin:
+            #   มะอะอุ here is the roman `ma-a-u` on page 316, and อุอะมะ is
+            #   `u-a-ma`. The heart-syllable material the roman pass recorded
+            #   as uncheckable now has a second witness.
+            {
+                'number': 85,
+                'pali': 'นะโม พุทธายะ มะอะอุ ทุกขัง อะนิจจัง อะนัตตา ยาวะ ตัสสะ หาโย โมนะ อุอะมะ ทุกขัง อะนิจจัง อะนัตตา อุอะมะอะ วันทา นะโม พุทธายะ นะอะ กะติ นิสะระณะ อาระปะขุทธัง มะอะอุ ทุกขัง อะนิจจัง อะนัตตา.',
+                'pali_roman': 'namo buddhāya maau dukkhaṃ aniccaṃ anattā yāva tassa hāyo mona uama dukkhaṃ aniccaṃ anattā uamaa vandā namo buddhāya naa kati nisaraṇa ārapakhuddhaṃ maau dukkhaṃ aniccaṃ anattā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Buddha — ma-a-u — suffering, impermanent, not-self; and so on through the heart syllables u-a-ma and na-a, with reverence, escape, and again: suffering, impermanent, not-self.',
+            },
         ],
     },
     {
@@ -47955,6 +48123,45 @@ CHANTS = [
                 'thai': 'ข้าแต่พระองค์ผู้เจริญ, พระผู้มีพระภาคเจ้าแม้ปรินิพพานนานแล้ว, ทรงสร้างคุณอันสำเร็จประโยชน์ไว้แก่ข้าพเจ้าทั้งหลาย,',
                 'paiboon': 'kâa-dtɛ̀ɛ prá-oŋ pûu-jà-rəən, prá-pûu-mii-prá-pâak-jâo mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo, soŋ sâaŋ kun an sǎm-rèt bprà-yòot wái gɛ̀ɛ kâa-pá-jâo táŋ-lǎai,',
                 'english': 'Venerable sir, though the Blessed One long ago attained final Nibbāna, he brought into being what is of benefit to us,',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0515.PNG]: ⚠ THIS ANSWERS AN OPEN QUESTION FROM THE
+        #   ROMAN PASS. `VIPASSIT` on page 316 was entered as its own chant
+        #   but the notes recorded a doubt about whether it was a title or a
+        #   closing label. Here the same word is printed in Thai script in
+        #   BOLD, centred, larger than the line beneath it — unmistakably a
+        #   heading. The roman entry was right.
+        'id': 'vipassit-thai',
+        'title_thai': 'วิปัสสิต',
+        'title_pali': '',
+        'title_roman': '',
+        'title_english': 'Vipassit',
+        'page_start': 245,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0515.PNG]: THE THAI LINE HAS NO FULL STOP where the
+            #   roman twin ends `vinassantu.` with one. Entered as printed.
+            {
+                'number': 1,
+                'page': 245,
+                'pali': 'สัพพะทุกขา สัพพะภะยา สัพพะโรคา วินาสสันตุ',
+                'pali_roman': 'sabbadukkhā sabbabhayā sabbarogā vināssantu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May all suffering, all fear and all illness be destroyed.',
             },
         ],
     },
