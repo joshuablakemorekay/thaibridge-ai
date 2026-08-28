@@ -49943,7 +49943,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 40; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 50; the rest is not in the app yet.
         # ‼ CHECK [IMG_0469.PNG]: ‼‼ NO TITLE AND NO INVITATION ARE PRINTED,
         #   AND BOTH ABSENCES WERE PREDICTED. The passage begins straight
         #   after the previous chant's last Thai line, with no heading at all.
@@ -50386,6 +50386,536 @@ CHANTS = [
                 'thai': 'โดยความโศก ความร่ำไรรำพัน ความไม่สบายกาย ความไม่สบายใจ ความคับแค้นใจ ทั้งหลาย,',
                 'paiboon': 'dooy kwaam-sòok kwaam-râm-rai-ram-pan kwaam mâi sà-baai gaai kwaam mâi sà-baai jai kwaam káp-kɛ́ɛn jai táŋ-lǎai,',
                 'english': 'by sorrow, lamentation, bodily pain, mental pain and despair,',
+            },
+            # ‼ CHECK [IMG_0472.PNG]: Verses 41 and 42 are short and set with
+            #   their Thai in a RIGHT-HAND COLUMN; the rest are long and
+            #   indented beneath. Same length-driven choice as every sheet in
+            #   this section.
+            {
+                'number': 41,
+                'page': 202,
+                'pali': 'ทุกโขติณณา,',
+                'pali_roman': 'Dukkhotiṇṇā,',
+                'thai': 'เป็นผู้ถูกความทุกข์ หยั่งเอาแล้ว,',
+                'paiboon': 'bpen pûu tùuk kwaam-túk yàŋ ao lɛ́ɛo,',
+                'english': 'overwhelmed by suffering,',
+            },
+            {
+                'number': 42,
+                'page': 202,
+                'pali': 'ทุกขะปะเรตา,',
+                'pali_roman': 'Dukkhaparetā,',
+                'thai': 'เป็นผู้มีความทุกข์ เป็นเบื้องหน้าแล้ว,',
+                'paiboon': 'bpen pûu mii kwaam-túk bpen bʉ̂aŋ-nâa lɛ́ɛo,',
+                'english': 'with suffering before us,',
+            },
+            {
+                'number': 43,
+                'page': 202,
+                'pali': 'อัปเปวะนามิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยา ปัญญาเยถาติ,',
+                'pali_roman': 'Appevanāmimassa kevalassa dukkhakkhandhassa antakiriyā paññāyethāti,',
+                'thai': 'ทำไฉน การทำที่สุดแห่งกองทุกข์ทั้งสิ้นนี้, จะพึงปรากฏชัดแก่เราได้,',
+                'paiboon': 'tam-chà-nǎi gaan tam tîi-sùt hɛ̀ŋ gɔɔŋ-túk táŋ-sîn níi, jà pʉŋ bpràa-gòt chát gɛ̀ɛ rao dâai,',
+                'english': 'how might the making an end of this whole mass of suffering be made plain to us,',
+            },
+            # ‼ CHECK [IMG_0472.PNG]: ‼ THE CHANT SPLITS IN TWO HERE, AND THE
+            #   BOOK PRINTS BOTH ENDINGS. A centred italic rubric
+            #   (สำหรับภิกษุ-สามเณรสวด) - 'for bhikkhus and samaneras to
+            #   chant' - stands above verse 44, and a second,
+            #   (สำหรับอุบาสก-อุบาสิกาสวด), 'for laymen and laywomen to
+            #   chant', stands above verse 49. They are alternatives: an
+            #   assembly chants one run or the other, not both. Recorded as
+            #   verse rubrics so each prints where the book prints it, and
+            #   BOTH runs are kept in full, in order, exactly as the sheet has
+            #   them. Same device as page 201's เต (ตา) - one printed page
+            #   serving different chanters - but done with rubrics over whole
+            #   passages instead of brackets inside a line.
+            {
+                'number': 44,
+                'page': 202,
+                'rubric': '(สำหรับภิกษุ-สามเณรสวด)',
+                'pali': 'จิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง อุททิสสะ อะระหันตัง สัมมาสัมพุทธัง,',
+                'pali_roman': 'Ciraparinibbutampi taṃ bhagavantaṃ uddissa arahantaṃ sammāsambuddhaṃ,',
+                'thai': 'เราทั้งหลาย อุทิศเฉพาะพระผู้มีพระภาคเจ้า, ผู้ไกลจากกิเลส, ตรัสรู้ชอบได้โดยพระองค์เอง, แม้ปรินิพพานนานแล้ว พระองค์นั้น,',
+                'paiboon': 'rao táŋ-lǎai ù-tít chà-pɔ́ prá-pûu-mii-prá-pâak-jâo, pûu glai jàak gì-lèet, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ eeŋ, mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo prá-oŋ nán,',
+                'english': 'Dedicating ourselves to that Blessed One, the Arahant, perfectly awakened by himself, long since fully unbound,',
+            },
+            {
+                'number': 45,
+                'page': 202,
+                'pali': 'สัทธา อะคารัส์มา อะนะคาริยัง ปัพพะชิตา,',
+                'pali_roman': 'Saddhā agārasmā anagāriyaṃ pabbajitā,',
+                'thai': 'เป็นผู้มีศรัทธา ออกบวชจากเรือน ไม่เกี่ยวข้องด้วยเรือนแล้ว,',
+                'paiboon': 'bpen pûu mii sàt-taa ɔ̀ɔk-bùat jàak rʉan mâi gìao-kɔ̂ɔŋ dûay rʉan lɛ́ɛo,',
+                'english': 'we, out of faith, have gone forth from home into homelessness,',
+            },
+            {
+                'number': 46,
+                'page': 202,
+                'pali': 'ตัส์มิง ภะคะวะติ พ์รัห์มะจะริยัง จะรามะ,',
+                'pali_roman': 'Tasmiṃ bhagavati brahmacariyaṃ carāma,',
+                'thai': 'ประพฤติอยู่ซึ่งพรหมจรรย์ ในพระผู้มีพระภาคเจ้าพระองค์นั้น,',
+                'paiboon': 'bprà-prʉ́t yùu sʉ̂ŋ prom-má-jan nai prá-pûu-mii-prá-pâak-jâo prá-oŋ nán,',
+                'english': 'and live the holy life in that Blessed One,',
+            },
+            # ‼ CHECK [IMG_0472.PNG]: NO COMMA AT THE END OF VERSE 47's THAI.
+            #   Read at 3.2x: ของภิกษุทั้งหลาย is followed by nothing at all,
+            #   where every neighbouring Thai line ends in a comma. Reproduced
+            #   bare. The Pali line above it does end in a comma.
+            {
+                'number': 47,
+                'page': 202,
+                'pali': 'ภิกขูนัง สิกขาสาชีวะสะมาปันนา,',
+                'pali_roman': 'Bhikkhūnaṃ sikkhāsājīvasamāpannā,',
+                'thai': 'ถึงพร้อมด้วยสิกขาและธรรมเป็นเครื่องเลี้ยงชีวิต ของภิกษุทั้งหลาย',
+                'paiboon': 'tʉ̌ŋ prɔ́ɔm dûay sìk-kǎa lɛ́ tam bpen krʉ̂aŋ líaŋ chii-wít kɔ̌ɔŋ pík-sù táŋ-lǎai',
+                'english': 'endowed with the training and the livelihood of the bhikkhus,',
+            },
+            # ‼ CHECK [IMG_0472.PNG]: A FULL STOP MID-CHANT, and it is kept.
+            #   Verse 48 ends สังวัตตะตุ. and its Thai ends เทอญ. - the
+            #   monastic run finishes there and the lay run starts fresh at
+            #   49. The chant itself is not over; the punctuation closes the
+            #   alternative, not the chant.
+            {
+                'number': 48,
+                'page': 202,
+                'pali': 'ตัง โน พ์รัห์มะจะริยัง อิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยายะ สังวัตตะตุ.',
+                'pali_roman': 'Taṃ no brahmacariyaṃ imassa kevalassa dukkhakkhandhassa antakiriyāya saṃvattatu.',
+                'thai': 'ขอให้พรหมจรรย์ของเราทั้งหลายนั้น, จงเป็นไปเพื่อการทำที่สุด แห่งกองทุกข์ทั้งสิ้นนี้ เทอญ.',
+                'paiboon': 'kɔ̌ɔ hâi prom-má-jan kɔ̌ɔŋ rao táŋ-lǎai nán, joŋ bpen bpai pʉ̂a gaan tam tîi-sùt hɛ̀ŋ gɔɔŋ-túk táŋ-sîn níi təən.',
+                'english': 'May this holy life of ours lead to the making an end of this whole mass of suffering.',
+            },
+            {
+                'number': 49,
+                'page': 202,
+                'rubric': '(สำหรับอุบาสก-อุบาสิกาสวด)',
+                'pali': 'จิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง สะระณัง คะตา,',
+                'pali_roman': 'Ciraparinibbutampi taṃ bhagavantaṃ saraṇaṃ gatā,',
+                'thai': 'เราทั้งหลายผู้ถึงแล้วซึ่งพระผู้มีพระภาคเจ้า แม้ปรินิพพานนานแล้ว พระองค์นั้น เป็นสรณะ,',
+                'paiboon': 'rao táŋ-lǎai pûu tʉ̌ŋ lɛ́ɛo sʉ̂ŋ prá-pûu-mii-prá-pâak-jâo mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo prá-oŋ nán bpen sà-rá-ná,',
+                'english': 'We, having gone to that Blessed One as refuge, long since fully unbound,',
+            },
+            # ‼ CHECK [IMG_0472.PNG]: CUT AT THE PAGE TURN. Verse 50 is the
+            #   last thing on the sheet and the chant runs on to page 203. No
+            #   […] is used: it ends at a comma the book itself prints.
+            {
+                'number': 50,
+                'page': 202,
+                'pali': 'ธัมมัญจะ สังฆัญจะ,',
+                'pali_roman': 'Dhammañca saṅghañca,',
+                'thai': 'ถึงพระธรรมด้วย, ถึงพระสงฆ์ด้วย,',
+                'paiboon': 'tʉ̌ŋ prá-tam dûay, tʉ̌ŋ prá-sǒŋ dûay,',
+                'english': 'and to the Dhamma and to the Saṅgha,',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0504.PNG]: ⚠ THE TRANSLATED PRINTING SPLITS UNITS THE
+        #   FIRST PRINTING RUNS TOGETHER. Page 60 sets 20 units; this copy
+        #   sets 25, because each needs its own line to carry a Thai
+        #   translation beneath it. Page 60's 'โส เนวะ ท์วายะ นะ มะทายะ นะ
+        #   มัณฑะนายะ นะ วิภูสะนายะ' is four units here, and its 'ยาวะเทวะ
+        #   อิมัสสะ กายัสสะ ฐิติยา ยาปะนายะ' is two. Same words, different
+        #   setting; each follows its own page.
+        # ‼ CHECK [IMG_0504.PNG]: THE FOUR BRACKETED SUB-HEADINGS ARE ENTERED
+        #   AS VERSES. They sit INSIDE the chant, and a page block cannot
+        #   anchor inside a chant — the same reason ต้นเจ็ดตำนาน is a verse on
+        #   page 259. Their brackets are kept as printed.
+        'id': 'atita-paccavekkhana-patha-plae',
+        'title_thai': 'อะตีตะปัจจะเวกขะณะปาโฐ',
+        'title_pali': '',
+        'title_roman': 'Atītapaccavekkhaṇapāṭho',
+        'title_english': 'The Passage of Reflection After the Fact',
+        'page_start': 234,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': 'หันทะ มะยัง อะตีตะปัจจะเวกขะณะปาฐัง ภะณามะ เส.',
+            'pali_roman': 'Handa mayaṃ atītapaccavekkhaṇapāṭhaṃ bhaṇāma se.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us recite the passage of reflection after the fact.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 234,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ภายหลังการใช้สอยจีวร)',
+                'paiboon': '',
+                'english': '(after using a robe)',
+            },
+            {
+                'number': 2,
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง จีวะรัง ปะริภุตตัง,',
+                'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ cīvaraṃ paribhuttaṃ,',
+                'thai': 'จีวรใด อันเรานุ่งห่มแล้ว, ไม่ทันพิจารณา ในวันนี้,',
+                'paiboon': '',
+                'english': 'Whatever robe I have used today without reflecting,',
+            },
+            {
+                'number': 3,
+                'pali': 'ตัง ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Taṃ yāvadeva sītassa paṭighātāya,',
+                'thai': 'จีวรนั้น เรานุ่งห่มแล้ว, เพียงเพื่อบำบัดความหนาว,',
+                'paiboon': '',
+                'english': 'that was only for warding off cold,',
+            },
+            {
+                'number': 4,
+                'pali': 'อุณหัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Uṇhassa paṭighātāya,',
+                'thai': 'เพื่อบำบัดความร้อน,',
+                'paiboon': '',
+                'english': 'for warding off heat,',
+            },
+            # ‼ CHECK [IMG_0504.PNG]: THE ROBE REFLECTION RUNS
+            #   ปะสัมผัสสานังปะฏิฆาตายะ TOGETHER WITH NO SPACE where the
+            #   lodging reflection on 235 sets ปะสัมผัสสานัง ปะฏิฆาตายะ with
+            #   one, and page 60 spaces both. Entered as each line prints it.
+            {
+                'number': 5,
+                'pali': 'ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานังปะฏิฆาตายะ,',
+                'pali_roman': 'Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃpaṭighātāya,',
+                'thai': 'เพื่อบำบัดสัมผัสอันเกิดจากเหลือบ ยุง ลม แดด และสัตว์เลื้อยคลานทั้งหลาย,',
+                'paiboon': '',
+                'english': 'for warding off the touch of gadflies, mosquitoes, wind, sun and creeping things,',
+            },
+            # ‼ CHECK [IMG_0504.PNG]: THE PALI ENDS WITH A FULL STOP AND ITS
+            #   THAI WITH A COMMA — หิริโกปีนะปะฏิจฉาทะนัตถัง. against
+            #   ความละอาย, — although this is the last unit of the robe
+            #   reflection. Entered as printed on both lines.
+            {
+                'number': 6,
+                'pali': 'ยาวะเทวะ หิริโกปีนะปะฏิจฉาทะนัตถัง.',
+                'pali_roman': 'Yāvadeva hirikopīnapaṭicchādanatthaṃ.',
+                'thai': 'และเพียงเพื่อปกปิดอวัยวะ อันให้เกิดความละอาย,',
+                'paiboon': '',
+                'english': 'and only for the sake of covering what modesty conceals.',
+            },
+            {
+                'number': 7,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ภายหลังการบริโภคบิณฑบาต)',
+                'paiboon': '',
+                'english': '(after eating almsfood)',
+            },
+            {
+                'number': 8,
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย ปิณฑะปาโต ปะริภุตโต,',
+                'pali_roman': 'Ajja mayā apaccavekkhitvā yo piṇḍapāto paribhutto,',
+                'thai': 'บิณฑบาตใด อันเราบริโภคแล้ว, ไม่ทันพิจารณาในวันนี้,',
+                'paiboon': '',
+                'english': 'Whatever almsfood I have used today without reflecting,',
+            },
+            {
+                'number': 9,
+                'pali': 'โส เนวะ ท์วายะ,',
+                'pali_roman': 'So neva dvāya,',
+                'thai': 'บิณฑบาตนั้นเราบริโภคแล้ว, ไม่ใช่เป็นไปเพื่อความเพลิดเพลิน สนุกสนาน,',
+                'paiboon': '',
+                'english': 'that was not for amusement,',
+            },
+            {
+                'number': 10,
+                'pali': 'นะ มะทายะ,',
+                'pali_roman': 'Na madāya,',
+                'thai': 'ไม่ใช่เป็นไปเพื่อความเมามัน เกิดกำลังพลังทางกาย,',
+                'paiboon': '',
+                'english': 'nor for intoxication,',
+            },
+            {
+                'number': 11,
+                'pali': 'นะ มัณฑะนายะ,',
+                'pali_roman': 'Na maṇḍanāya,',
+                'thai': 'ไม่ใช่เป็นไปเพื่อประดับ,',
+                'paiboon': '',
+                'english': 'nor for adornment,',
+            },
+            {
+                'number': 12,
+                'pali': 'นะ วิภูสะนายะ,',
+                'pali_roman': 'Na vibhūsanāya,',
+                'thai': 'ไม่ใช่เป็นไปเพื่อตกแต่ง,',
+                'paiboon': '',
+                'english': 'nor for beautifying,',
+            },
+            {
+                'number': 13,
+                'pali': 'ยาวะเทวะ อิมัสสะ กายัสสะ ฐิติยา,',
+                'pali_roman': 'Yāvadeva imassa kāyassa ṭhitiyā,',
+                'thai': 'แต่ให้เป็นไปเพียงเพื่อความตั้งอยู่ได้แห่งกายนี้,',
+                'paiboon': '',
+                'english': 'but only for the endurance of this body,',
+            },
+            {
+                'number': 14,
+                'pali': 'ยาปะนายะ,',
+                'pali_roman': 'Yāpanāya,',
+                'thai': 'เพื่อความเป็นไปได้ของอัตภาพ,',
+                'paiboon': '',
+                'english': 'for its continuance,',
+            },
+            {
+                'number': 15,
+                'page': 235,
+                'pali': 'วิหิงสุปะระติยา,',
+                'pali_roman': 'Vihiṃsuparatiyā,',
+                'thai': 'เพื่อความสิ้นไปแห่งความลำบากทางกาย,',
+                'paiboon': '',
+                'english': 'for the ending of its hurt,',
+            },
+            {
+                'number': 16,
+                'pali': 'พ์รัห์มะจะริยานุคคะหายะ,',
+                'pali_roman': 'Brahmacariyānuggahāya,',
+                'thai': 'เพื่ออนุเคราะห์แก่การประพฤติพรหมจรรย์,',
+                'paiboon': '',
+                'english': 'and for the support of the holy life,',
+            },
+            {
+                'number': 17,
+                'pali': 'อิติ ปุราณัญจะ เวทะนัง ปะฏิหังขามิ,',
+                'pali_roman': 'Iti purāṇañca vedanaṃ paṭihaṅkhāmi,',
+                'thai': 'ด้วยการทำอย่างนี้, เราย่อมระงับเสียได้ซึ่งทุกขเวทนาเก่า คือความหิว,',
+                'paiboon': '',
+                'english': 'thinking: thus I put an end to the old feeling,',
+            },
+            {
+                'number': 18,
+                'pali': 'นะวัญจะ เวทะนัง นะ อุปปาเทสสามิ,',
+                'pali_roman': 'Navañca vedanaṃ na uppādessāmi,',
+                'thai': 'และไม่ทำทุกขเวทนาใหม่ให้เกิดขึ้น,',
+                'paiboon': '',
+                'english': 'and I shall not give rise to a new feeling,',
+            },
+            {
+                'number': 19,
+                'pali': 'ยาต์รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.',
+                'pali_roman': 'Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti.',
+                'thai': 'อนึ่ง ความเป็นไปโดยสะดวกแห่งอัตภาพนี้ด้วย, ความเป็นผู้หาโทษมิได้ด้วย, และความเป็นอยู่โดยผาสุกด้วย, จักมีแก่เรา ดังนี้.',
+                'paiboon': '',
+                'english': 'and I shall have sustenance, blamelessness, and a life of ease.',
+            },
+            {
+                'number': 20,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ภายหลังการใช้สอยเสนาสนะ)',
+                'paiboon': '',
+                'english': '(after using a lodging)',
+            },
+            {
+                'number': 21,
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง เสนาสะนัง ปะริภุตตัง,',
+                'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ senāsanaṃ paribhuttaṃ,',
+                'thai': 'เสนาสนะใด อันเราใช้สอยแล้ว, ไม่ทันพิจารณาในวันนี้,',
+                'paiboon': '',
+                'english': 'Whatever lodging I have used today without reflecting,',
+            },
+            {
+                'number': 22,
+                'pali': 'ตัง ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Taṃ yāvadeva sītassa paṭighātāya,',
+                'thai': 'เสนาสนะนั้น เราใช้สอยแล้ว, เพียงเพื่อบำบัดความหนาว,',
+                'paiboon': '',
+                'english': 'that was only for warding off cold,',
+            },
+            {
+                'number': 23,
+                'pali': 'อุณหัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Uṇhassa paṭighātāya,',
+                'thai': 'เพื่อบำบัดความร้อน,',
+                'paiboon': '',
+                'english': 'for warding off heat,',
+            },
+            {
+                'number': 24,
+                'pali': 'ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,',
+                'pali_roman': 'Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃ paṭighātāya,',
+                'thai': 'เพื่อบำบัดสัมผัสอันเกิดจากเหลือบ ยุง ลม แดด และสัตว์เลื้อยคลานทั้งหลาย,',
+                'paiboon': '',
+                'english': 'for warding off the touch of gadflies, mosquitoes, wind, sun and creeping things,',
+            },
+            {
+                'number': 25,
+                'pali': 'ยาวะเทวะ อุตุปะริสสะยะวิโนทะนัง ปะฏิสัลลานารามัตถัง.',
+                'pali_roman': 'Yāvadeva utuparissayavinodanaṃ paṭisallānārāmatthaṃ.',
+                'thai': 'เพียงเพื่อบรรเทาอันตรายอันจะพึงมีจากดินฟ้าอากาศ, และเพื่อความเป็นผู้ยินดีอยู่ได้, ในที่หลีกเร้นสำหรับภาวนา.',
+                'paiboon': '',
+                'english': 'and only for dispelling the perils of the seasons and for delighting in seclusion.',
+            },
+            {
+                'number': 26,
+                'page': 236,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(ภายหลังบริโภคคิลานเภสัช)',
+                'paiboon': '',
+                'english': '(after taking medicine)',
+            },
+            {
+                'number': 27,
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,',
+                'pali_roman': 'Ajja mayā apaccavekkhitvā yo gilānapaccayabhesajjaparikkhāro paribhutto,',
+                'thai': 'คิลานเภสัชบริขารใด อันเราบริโภคแล้ว, ไม่ทันพิจารณา ในวันนี้,',
+                'paiboon': '',
+                'english': 'Whatever medicine for use in sickness I have used today without reflecting,',
+            },
+            {
+                'number': 28,
+                'pali': 'โส ยาวะเทวะ อุปปันนานัง เวยยาพาธิกานัง เวทะนานัง ปะฏิฆาตายะ,',
+                'pali_roman': 'So yāvadeva uppannānaṃ veyyābādhikānaṃ vedanānaṃ paṭighātāya,',
+                'thai': 'คิลานเภสัชบริขารนั้น เราบริโภคแล้ว, เพียงเพื่อบำบัดทุกขเวทนา อันบังเกิดขึ้นแล้ว มีอาพาธต่าง ๆ เป็นมูล,',
+                'paiboon': '',
+                'english': 'that was only for warding off painful feelings that had arisen,',
+            },
+            {
+                'number': 29,
+                'pali': 'อัพ์ยาปัชฌะปะระมะตายาติ.',
+                'pali_roman': 'Abyāpajjhaparamatāyāti.',
+                'thai': 'เพื่อความเป็นผู้ไม่มีโรคเบียดเบียนเป็นอย่างยิ่ง ดังนี้.',
+                'paiboon': '',
+                'english': 'and for freedom from affliction as the highest aim.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0506.PNG]: ⚠ THE HEADING AND THE INVITATION NAME THE
+        #   CHANT DIFFERENTLY. The heading is นมัสการพระอรหันต์ 8 ทิศ, homage
+        #   to the arahants of the eight directions; the invitation beneath
+        #   calls for พุทธะมังคะละคาถาโย, and page 55 titles the same chant
+        #   พุทธะมังคะละคาถา. Both are kept as printed and the title follows
+        #   the heading on THIS page.
+        # ‼ CHECK [IMG_0506.PNG]: PAGE 55 CLOSES ITS LINES WITH A COMMA OR
+        #   FULL STOP AND PAGE 236 DOES NOT — 10 of the twelve differ in that
+        #   alone (verses 1, 3, 4, 6, 7, 8, 9, 10, 11, 12). Recorded once
+        #   rather than as a check apiece; neither side has been repunctuated.
+        # ‼ CHECK [IMG_0506.PNG]: ⚠ TWO REAL LETTER DIFFERENCES, both checked
+        #   at magnification on page 236 and both holding: v2 prints
+        #   `อาคะเนยเย` here against `อาคะเณยเย` on page 55; v5 prints
+        #   `อิสาเณปิ` here against `อีสาเนปิ` on page 55. Each is entered as
+        #   its own page sets it.
+        'id': 'buddhamangala-gatha-plae',
+        'title_thai': 'นมัสการพระอรหันต์ 8 ทิศ',
+        'title_pali': '',
+        'title_roman': 'ná-mát-sà-gaan prá à-rá-hǎn bpɛ̀ɛt tít',
+        'title_english': 'Homage to the Arahants of the Eight Directions',
+        'page_start': 236,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': 'หันทะ มะยัง สะระภัญเญนะ พุทธะมังคะละคาถาโย ภะณามะ เส.',
+            'pali_roman': 'Handa mayaṃ sarabhaññena buddhamaṅgalagāthāyo bhaṇāma se.',
+            'thai': '',
+            'paiboon': '',
+            'english': "Now let us recite, in the chanting tone, the verses of the Buddha's blessing.",
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 236,
+                'pali': 'สัมพุทโธ ทิปะทัง เสฏโฐ นิสินโน เจวะ มัชฌิเม',
+                'pali_roman': 'Sambuddho dipadaṃ seṭṭho nisinno ceva majjhime',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Perfectly Awakened One, best of those who go on two feet, is seated in the middle;',
+            },
+            {
+                'number': 2,
+                'pali': 'โกณฑัญโญ ปุพพะภาเค จะ อาคะเนยเย จะ กัสสะโป',
+                'pali_roman': 'Koṇḍañño pubbabhāge ca āganeyye ca kassapo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Koṇḍañña in the eastern quarter, and Kassapa in the south-east,',
+            },
+            {
+                'number': 3,
+                'pali': 'สารีปุตโต จะ ทักขิเณ หะระติเย อุปาลี จะ',
+                'pali_roman': 'Sārīputto ca dakkhiṇe haratiye upālī ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sāriputta in the south, and Upāli in the south-west,',
+            },
+            {
+                'number': 4,
+                'pali': 'ปัจฉิเมปิ จะ อานันโท พายัพเพ จะ คะวัมปะติ',
+                'pali_roman': 'Pacchimepi ca ānando bāyabbe ca gavampati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Ānanda in the west also, and Gavampati in the north-west.',
+            },
+            {
+                'number': 5,
+                'pali': 'โมคคัลลาโน จะ อุตตะเร อิสาเณปิ จะ ราหุโล',
+                'pali_roman': 'Moggallāno ca uttare isāṇepi ca rāhulo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Moggallāna in the north, and Rāhula in the north-east —',
+            },
+            {
+                'number': 6,
+                'pali': 'อิเม โข มังคะลา พุทธา สัพเพ อิธะ ปะติฏฐิตา',
+                'pali_roman': 'Ime kho maṅgalā buddhā sabbe idha patiṭṭhitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these auspicious enlightened ones are all established here,',
+            },
+            {
+                'number': 7,
+                'pali': 'วันทิตา เต จะ อัมเหหิ สักกาเรหิ จะ ปูชิตา',
+                'pali_roman': 'Vanditā te ca amhehi sakkārehi ca pūjitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and they are revered by us and honoured with offerings,',
+            },
+            {
+                'number': 8,
+                'pali': 'เอเตสัง อานุภาเวนะ สัพพะโสตถี ภะวันตุ โน ฯ',
+                'pali_roman': 'Etesaṃ ānubhāvena sabbasotthī bhavantu no',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and by their power, may every blessing be ours.',
+            },
+            {
+                'number': 9,
+                'pali': 'อิจเจวะมัจจันตะนะมัสสะเนยยัง',
+                'pali_roman': 'Iccevamaccantanamassaneyyaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus, that which is supremely worthy of salutation —',
+            },
+            {
+                'number': 10,
+                'pali': 'นะมัสสะมาโน ระตะนัตตะยัง ยัง',
+                'pali_roman': 'Namassamāno ratanattayaṃ yaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'saluting that Triple Gem,',
+            },
+            {
+                'number': 11,
+                'pali': 'ปุญญาภิสันทัง วิปุลัง อะลัตถัง',
+                'pali_roman': 'Puññābhisandaṃ vipulaṃ alatthaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have gained an abundant stream of merit;',
+            },
+            {
+                'number': 12,
+                'pali': 'ตัสสานุภาเวนะ หะตันตะราโย ฯ',
+                'pali_roman': 'Tassānubhāvena hatantarāyo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of that, may my obstacles be destroyed.',
             },
         ],
     },
