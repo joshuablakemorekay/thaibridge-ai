@@ -1,0 +1,44 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 0,
+  "manifest": [],
+  "pages": [
+   {
+    "page": 247,
+    "file": "IMG_0516.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-aradhana-sin-5-prokati",
+    "verses": "none",
+    "starts_here": false,
+    "note": "A SECTION DIVIDER and nothing else: ภาคปกิณกะ centred on an otherwise blank sheet, with NO PAGE NUMBER printed on it. The row carries no verses and exists only to place the heading, which is the only way to put a block on a page no chant has lines on. The chant it names is the first one of the section that follows; the divider introduces the whole section rather than that chant, exactly as page 277 does for ภาคผนวก.",
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "ภาคปกิณกะ",
+      "english": "Miscellaneous Section",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 246,
+  "resume_from_file": "IMG_0515.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. Nothing but a heading was written.",
+  "pali_untouched": "No Pali on the sheet at all.",
+  "page_scan": "agrees. One row, one sheet, no verses.",
+  "notes": "⚠ THIS SHEET PRINTS NO PAGE NUMBER, AND IT IS 247, NOT 248. The สารบัญ puts ภาคปกิณกะ at ๒๔๗, and page 249 printed on IMG_0517 is the next photographed sheet — so PAGE 248 IS THE DIVIDER'S BLANK VERSO AND WAS NEVER PHOTOGRAPHED. That is one of the three unphotographed pages between 224 and 316 that the photo map has been hunting, and it is the SAME PATTERN as ภาคผนวก: divider on the recto at 277, blank verso at 278, content resuming at 279. The filename offset therefore changes here, from 268 at pages 249 and up to 269 at 247 and below. READ THE NUMBER OFF EACH SHEET rather than calculating it.",
+  "diacritic_exceptions": []
+ }
+}

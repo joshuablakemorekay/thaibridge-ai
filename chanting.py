@@ -49229,6 +49229,19 @@ PAGE_BLOCKS = [
             },
         ],
     },
+    # ── Page 247 ───────────────────────────────────────────────────
+    # Written from batch-247-247.json.
+    {
+        'page': 247,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'ภาคปกิณกะ',
+                'english': 'Miscellaneous Section',
+                'english_unverified': True,
+            },
+        ],
+    },
 ]
 
 
