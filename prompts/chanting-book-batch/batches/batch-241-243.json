@@ -45,7 +45,7 @@
    "id": "yod-phrakantraipidok-thai",
    "title_thai": "ยอดพระกัณฑ์ไตรปิฎก",
    "title_pali": "",
-   "title_roman": "",
+   "title_roman": "yɔ̂ɔt prá-gan dtrai-bpì-dòk",
    "title_english": "The Peak of the Tipiṭaka",
    "page_start": 241,
    "layout": "lines",
@@ -719,6 +719,11 @@
      "verse": 69,
      "file": "IMG_0511.PNG",
      "issue": "THE TWO PRINTINGS DIFFER HERE. This sheet romanises to `itipi so bhagavā arahaṃ aā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi sā bodhi pañca issaro dhammā kusalā dhammā.`; the roman twin prints `itipi so bhagavā arahaṃ a-ā yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi sābodhipañca issaro dhammā. kusalā dhammā`. Both are entered as their own page prints them."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0511.PNG",
+     "issue": "title_roman is taken from the สารบัญ, which names this chant at ๒๔๑ and romanises it in Paiboon. The roman twin at 312 carries no Thai title at all, so the two entries do not conflict."
     }
    ]
   }

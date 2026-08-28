@@ -35,7 +35,7 @@
    "id": "uddissanadhitthana-gatha-plae",
    "title_thai": "อุททิสะนาธิฏฐานะคาถา",
    "title_pali": "",
-   "title_roman": "ùt-tì-sà-naa-tít-tǎan-ná-kaa-tǎa",
+   "title_roman": "Uddisanādhiṭṭhānagāthā",
    "title_english": "The Verses of Dedication and Resolve",
    "page_start": 239,
    "layout": "lines",
@@ -362,6 +362,11 @@
      "verse": 11,
      "file": "IMG_0509.PNG",
      "issue": "THE THAI COLUMN HAS MORE LINES THAN THE PALI in three places — rows 11, 24 and 26 — because the verse translation wraps. Baselines were measured off the sheet to be sure the extra line belongs to the row above it and is not a unit of its own."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0509.PNG",
+     "issue": "⚠ THREE SPELLINGS OF ONE TITLE. Page 239 prints อุททิสะนาธิฏฐานะคาถา, page 62 prints อุททิสสะนาธิฏฐานะคาถา, and the สารบัญ prints อุทิสสะนาธิฏฐานะคาถา — one ท and two ส. All three are left as their own page sets them. title_roman here romanises THIS page's spelling rather than borrowing the contents' Udissanādhiṭṭhānagāthā, which belongs to a different one."
     }
    ]
   }
