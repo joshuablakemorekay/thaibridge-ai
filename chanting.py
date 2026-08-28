@@ -47781,6 +47781,183 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0463.PNG]: NOT A DUPLICATE TO MERGE. The สารบัญ lists
+        #   คาถาจุดเทียนชัย at page ๒๕๔, and the app holds that copy; this is
+        #   the SECOND printing, inside the translated section. Reproducing
+        #   the book means keeping both, exactly as the อัคคัปปะสาทะ gatha on
+        #   pages 113 and 273 is kept twice. Given the id gatha-jut-thian-
+        #   chai-plae to keep them apart.
+        # ‼ CHECK [IMG_0463.PNG]: english_unverified is set. The book prints
+        #   THIS chant in Pali only — the translated section does not
+        #   translate it — so thai and paiboon are empty on every verse and
+        #   the English is a working translation made for this edition.
+        'id': 'gatha-jut-thian-chai-plae',
+        'title_thai': 'คาถาจุดเทียนชัย',
+        'title_pali': '',
+        'title_roman': 'kaa-tǎa jùt tiian-chai',
+        'title_english': 'The Verse for Lighting the Victory Candle',
+        'page_start': 193,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0463.PNG]: TWO COLUMNS, right column begins at x
+            #   1090. Read ACROSS. FIRST PAIRING FOR CHECKING: left พุทโธ
+            #   สัพพัญญุตะญาโณ + right ธัมโม โลกุตตะโร วะโร.
+            {
+                'number': 1,
+                'page': 193,
+                'pali': 'พุทโธ สัพพัญญุตะญาโณ ธัมโม โลกุตตะโร วะโร',
+                'pali_roman': 'Buddho sabbaññutañāṇo dhammo lokuttaro varo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Buddha, of omniscient knowledge; the Dhamma, supramundane and excellent;',
+            },
+            # ‼ CHECK [IMG_0463.PNG]: ‼ AND THE PUNCTUATION DIFFERS TOO. Page
+            #   254 closes rows 2 and 4 with a FULL STOP; this page closes
+            #   both with NOTHING. Read at 5x. Three differences in all
+            #   between the two printings of a four-row chant.
+            {
+                'number': 2,
+                'page': 193,
+                'pali': 'สังโฆ มัคคะผะลัฏโฐ จะ อิจเจตัง ระตะนัตตะยัง',
+                'pali_roman': 'Saṅgho maggaphalaṭṭho ca iccetaṃ ratanattayaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the Sangha, established in path and fruit — such is the Triple Gem.',
+            },
+            {
+                'number': 3,
+                'page': 193,
+                'pali': 'เอตัสสะ อานุภาเวนะ สัพพะทุกขา อุปัททะวา',
+                'pali_roman': 'Etassa ānubhāvena sabbadukkhā upaddavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By its power, may all sufferings, misfortunes',
+            },
+            # ‼ CHECK [IMG_0463.PNG]: ‼‼ THE BOOK PRINTS THIS CHANT TWICE AND
+            #   THE TWO COPIES DIFFER IN THE TEXT ITSELF, NOT ONLY IN
+            #   PUNCTUATION. Page 254's copy — already in the app as gatha-
+            #   jut-thian-chai — ends สัพพะโสตถี ภะวันตุ เต. with เต, 'to
+            #   YOU'. This page ends สัพพะโสตถี ภะวันตุ โน with โน, 'to US'.
+            #   Read at 5x; the letters are unambiguous. That is a change of
+            #   meaning, not a typo to reconcile, and both are reproduced as
+            #   printed.
+            {
+                'number': 4,
+                'page': 193,
+                'pali': 'อันตะรายา จะ นัสสันตุ สัพพะโสตถี ภะวันตุ โน',
+                'pali_roman': 'Antarāyā ca nassantu sabbasotthī bhavantu no',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and dangers perish, and may every blessing be ours.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0463.PNG]: NOT A DUPLICATE TO MERGE. The app already
+        #   holds คำบูชาพระรัตนตรัย from page 1, in Pali only. This is the
+        #   book's SECOND printing of it, in the translated section, and it
+        #   carries the Thai. Both stay, on the same precedent as the
+        #   อัคคัปปะสาทะ gatha (pages 113 and 273) and the คาถาจุดเทียนชัย
+        #   above (pages 193 and 254). Given the id kham-bucha-phra-
+        #   ratanattaya-plae.
+        # ‼ CHECK [IMG_0463.PNG]: english_unverified is set. The English is
+        #   this edition's working translation. NOTE that unlike every Pali-
+        #   only chant in the run, the English here can be checked against a
+        #   Thai translation the book itself prints, which is a stronger
+        #   position than the first pass ever allowed.
+        'id': 'kham-bucha-phra-ratanattaya-plae',
+        'title_thai': 'คำบูชาพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': 'kam buu-chaa prá-rát-dtà-ná-dtrai',
+        'title_english': 'The Offering of Homage to the Triple Gem',
+        'page_start': 193,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0463.PNG]: ‼‼ THE FIRST PAGE OF THE RUN TO CARRY
+            #   ALL FIVE LAYERS. The book's translated section starts here,
+            #   and from this page the layout itself distinguishes them: PALI
+            #   is set flush at x 256 in bold, its THAI translation indented
+            #   beneath at x 380. Measured on every line of the chant. paiboon
+            #   is written from the Thai using the app's Paiboon+ table — the
+            #   book prints no romanisation of its own anywhere on this sheet.
+            {
+                'number': 1,
+                'page': 193,
+                'pali': 'โย โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Yo so bhagavā arahaṃ sammāsambuddho,',
+                'thai': 'พระผู้มีพระภาคเจ้านั้น พระองค์ใด, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,',
+                'paiboon': 'prá-pûu-mii-prá-pâak-jâo nán, prá-oŋ dai, bpen prá-à-rá-hǎn, dàp pləəŋ gì-lèet pləəŋ túk sîn-chəəŋ, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,',
+                'english': 'That Blessed One, whoever he is, is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,',
+            },
+            {
+                'number': 2,
+                'page': 193,
+                'pali': 'ส์วากขาโต เยนะ ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto yena bhagavatā dhammo,',
+                'thai': 'พระธรรมเป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,',
+                'paiboon': 'prá-tam bpen tam tîi prá-pûu-mii-prá-pâak-jâo, dtràt wái dii lɛ́ɛo,',
+                'english': 'The Dhamma is the teaching well proclaimed by that Blessed One,',
+            },
+            {
+                'number': 3,
+                'page': 193,
+                'pali': 'สุปะฏิปันโน ยัสสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno yassa bhagavato sāvakasaṅgho,',
+                'thai': 'พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า พระองค์ใด, ปฏิบัติดีแล้ว,',
+                'paiboon': 'prá-sǒŋ sǎa-wók kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, bpà-dtì-bàt dii lɛ́ɛo,',
+                'english': "The Sangha of that Blessed One's disciples has practised well,",
+            },
+            # ‼ CHECK [IMG_0463.PNG]: ‼ A COMMA WITH NO SPACE AFTER IT,
+            #   REPRODUCED. The Thai reads
+            #   พระธรรมและพระสงฆ์,ด้วยเครื่องสักการะ — every other comma on
+            #   the sheet is followed by a space. Kept exactly as printed.
+            {
+                'number': 4,
+                'page': 193,
+                'pali': 'ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง, อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยามะ,',
+                'pali_roman': 'Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ, imehi sakkārehi yathārahaṃ āropitehi abhipūjayāma,',
+                'thai': 'ข้าพเจ้าทั้งหลาย, ขอบูชาอย่างยิ่งซึ่งพระผู้มีพระภาคเจ้าพระองค์นั้น, พร้อมทั้งพระธรรมและพระสงฆ์,ด้วยเครื่องสักการะทั้งหลายเหล่านี้, อันยกขึ้นตามสมควรแล้วอย่างไร,',
+                'paiboon': 'kâa-pá-jâo táŋ-lǎai, kɔ̌ɔ buu-chaa yàaŋ-yîŋ sʉ̂ŋ prá-pûu-mii-prá-pâak-jâo prá-oŋ nán, prɔ́ɔm táŋ prá-tam lɛ́ prá-sǒŋ, dûay krʉ̂aŋ sàk-gaa-rá táŋ-lǎai lào níi, an yók kʉ̂n dtaam sǒm-kuan lɛ́ɛo yàaŋ-rai,',
+                'english': 'We pay the highest homage to that Blessed One, together with the Dhamma and the Sangha, with these offerings raised up as is fitting,',
+            },
+            # ‼ CHECK [IMG_0463.PNG]: CUT AT THE PAGE TURN. The fifth unit's
+            #   Thai is the last thing on the sheet and the chant runs on to
+            #   page 194. No […] marker is used because the unit ENDS at a
+            #   comma that the book itself prints; nothing is broken mid-word.
+            #   continues is set.
+            {
+                'number': 5,
+                'page': 193,
+                'pali': 'สาธุ โน ภันเต ภะคะวา สุจิระปะรินิพพุโตปิ,',
+                'pali_roman': 'Sādhu no bhante bhagavā sucirāparinibbutopi,',
+                'thai': 'ข้าแต่พระองค์ผู้เจริญ, พระผู้มีพระภาคเจ้าแม้ปรินิพพานนานแล้ว, ทรงสร้างคุณอันสำเร็จประโยชน์ไว้แก่ข้าพเจ้าทั้งหลาย,',
+                'paiboon': 'kâa-dtɛ̀ɛ prá-oŋ pûu-jà-rəən, prá-pûu-mii-prá-pâak-jâo mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo, soŋ sâaŋ kun an sǎm-rèt bprà-yòot wái gɛ̀ɛ kâa-pá-jâo táŋ-lǎai,',
+                'english': 'Venerable sir, though the Blessed One long ago attained final Nibbāna, he brought into being what is of benefit to us,',
+            },
+        ],
+    },
 ]
 
 
@@ -50128,6 +50305,19 @@ PAGE_BLOCKS = [
                 'type': 'heading',
                 'thai': 'ภาคปกิณกะ',
                 'english': 'Miscellaneous Section',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 193 ───────────────────────────────────────────────────
+    # Written from batch-193-193.json.
+    {
+        'page': 193,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'ทำวัตรเช้าแปล',
+                'english': 'The Morning Chanting, Translated',
                 'english_unverified': True,
             },
         ],
