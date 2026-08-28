@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-114 went in.
+193 went in — the first five-layer page.
 
 ## Read first, in this order
 
@@ -46,16 +46,59 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 115, `IMG_0380` — ⚠️ A CHANT IS OPEN
+## ⚠️ TWO SESSIONS, TWO LANES — agreed 2026-08-28
 
-The offset is **265** since page 86 and has held for 87–114, so page 115 *should*
-be `IMG_0380`. **Five more changes are still expected before page 207.**
+The two sessions collided on page 114: the other session jumped forward from the
+back of the book and entered it while this one was finishing 113. Their page 114
+is sound — it was cross-checked independently against the same sheet and agrees
+on every measurement — so nothing was redone.
 
-**⚠️ `chasaraniyadhamma-suttam` IS OPEN and carries a `‼ CONTINUES` marker.**
-Five paragraphs are in — the nidāna and the book's items 1 to 4, the last cut.
-**Resume at verse 6.** Item 4 breaks after `ธัมมะลัทธา` at a WORD boundary, so
-page 115 should open with the sharing clause that completes it. **Two of the six
-states remain** (right view and virtue), then a closing and probably a colophon.
+**The lanes from here:**
+
+| lane | pages | who |
+|---|---|---|
+| first pass, forward | **114 →** | the other session (mid-chant, `chasaraniyadhamma-suttam` open) |
+| **translated section** | **193 → 240** | this one |
+
+Josh's instruction when told: *"I'm happy as long as it is kept exactly as is in
+the book."* So the split is by convenience, not by principle — but **do not work
+the other lane without checking `git log` first.**
+
+## ✅ THE TRANSLATED SECTION HAS STARTED — five layers from page 193
+
+**Page 193 is the first page of the run to carry all five layers.** The section
+opens with a divider (`IMG_0462`: `บทสวดมนต์ / ทำวัตรเช้า -เย็น แปล`) and then
+`ทำวัตรเช้าแปล` on 193.
+
+**How the book marks the two layers, and it is the layout that does it:**
+
+- **PALI** — set flush left, in **bold**, at x 256
+- **THAI** — set **indented** beneath its own Pali line, at x 380
+
+Measured on every line. One Pali line, then its translation, always in step.
+`paiboon` is written from the Thai with the app's Paiboon+ table — **the book
+prints no romanisation of its own**, so there is nothing to copy and nothing to
+be tempted by.
+
+**Next: page 194, `IMG_0464`.** ⚠️ `kham-bucha-phra-ratanattaya-plae` IS OPEN —
+five units in, **resume at verse 6**.
+
+## ‼ THE BOOK'S TWO PRINTINGS CAN DIFFER IN MEANING, NOT JUST PUNCTUATION
+
+Page 193 proves the repeated-chant question matters more than tidiness. It prints
+`คาถาจุดเทียนชัย`, which the app already holds from page 254 — and the two
+copies are **not the same text**:
+
+| | page 254 | page 193 |
+|---|---|---|
+| last row ends | `ภะวันตุ เต.` — **"to you"** | `ภะวันตุ โน` — **"to us"** |
+| rows 2 and 4 | full stop | no stop |
+
+Read at 5×; the letters are unambiguous. **Had these been merged as duplicates,
+one of the two readings would have been silently destroyed.** Keep every repeat
+as its own entry — the precedent now runs to three (the อัคคัปปะสาทะ gatha on
+113/273, this, and whatever the translated section brings).
+
 
 ## 📏 Measure indents against a FITTED baseline — page 114 is the clearest case
 
