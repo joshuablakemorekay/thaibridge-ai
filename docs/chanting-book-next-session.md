@@ -1680,7 +1680,7 @@ first.** The file wins, and the renderer does not know that.
 
 ---
 
-# The BACKWARD pass — the roman section at the back of the book
+# The BACKWARD pass — from the last page towards the middle
 
 Everything above describes the FORWARD pass, which is at page 96 and climbing.
 A second pass now works **backwards from the last page**, and the two will
@@ -1689,107 +1689,100 @@ heading above as applying to it.
 
 ## Where it is
 
-Coverage is now **1–114, 193, 217–221, 241–245, 247, 249–277 and 279–325**.
-The forward pass is at 114; this pass has walked back from 325 to **241**.
-Pages 246 and 248 are absent ON PURPOSE — see the photo map.
+Coverage is **1–114, 193–203, 217–221, 232–245, 247, 249–277 and 279–325**.
+**101 pages are left: 115–192, 204–216 and 222–231.** Pages 246, 248 and 278
+are absent ON PURPOSE — see the photo map.
 
-**Resume at page 240 = `IMG_0510`, but READ THE NUMBER off the sheet.** The
-offset is **270** from page 245 down and **268** from 249 up; two unphotographed
-blanks sit between. Page 241 opens with its own centred heading, so nothing runs
-back from it — 240 is a clean start.
+**Resume at page 231 = `IMG_0501`, but READ THE NUMBER off the sheet.** The
+offset is **270** from 245 down and **268** from 249 up; two unphotographed
+blanks sit between. Page 232 opens with its own centred heading, so nothing
+runs back from it — 231 is a clean start.
 
-### What the 250s turned out to be
+## ⚠ The backward pass has reached the TRANSLATED section
 
-A single connected run about ceremony, and it reads better backwards than the
-page numbers suggest:
+Everything from roughly 193 to 245 is the book's **second printing of chants it
+already gave in Pali** — Pali with a Thai verse translation. The forward pass
+entered page 193 first and set the conventions; follow them exactly:
 
-| pages | what is there |
-|---|---|
-| 250–252 | the four invitations; the elaborate one spans all three sheets |
-| 252 | the bangsukun verses, and asking pardon of the Triple Gem |
-| 253 | asking pardon of a Great Elder, his reply, and his rejoicing |
-| 254–256 | the victory candle, lit and quenched |
-| 256–260 | `อธิบายระเบียบสวดมนต์ในพิธีต่างๆ` and its numbered orders 1, 2, 3 |
-| 261–264 | orders 4 and 5 — the middling and short Seven Tamnan |
+* **The id takes a `-plae` suffix** when the app already holds the chant from
+  its first printing — `sanghabhigiti-plae` against `sanghabhigiti` at page 54.
+* **`title_roman` must match the สารบัญ**, in whatever system the contents uses
+  for that title — Pali IAST for some, Paiboon for others. A test enforces it
+  and it caught four of mine.
+* **Two layouts.** Some pages set Pali left and Thai right in two columns; some
+  set Pali in bold flush left with the Thai indented on the line beneath. Read
+  the sheet; do not assume.
+* **Some chants inside the section print NO translation at all** — คาถาจุดเทียนชัย
+  on 193, อุณ์หิสสะวิชะยะคาถา on 237, นมัสการพระอรหันต์ 8 ทิศ on 236.
 
-**The three Seven Tamnan orders differ by WHERE THEY BEGIN, not only by length.**
-The full form's Karaṇīyametta starts at the sutta's true opening
-`กะระณียะมัตถะกุสะเลนะ`; the short form starts at `เมตตัญจะ สัพพะโลกัส์มิง`,
-well into it. Same for the Khandha Paritta. They are three different texts, not
-one text cut three ways.
+**Verse counts will NOT match between a chant and its `-plae` copy, and that is
+not a fault.** The translated printing splits runs of short phrases so each can
+carry its own Thai line: the reflection passage is 25 units on 234–236 against
+20 on page 60. Rubrics printed inside a chant add more, since a page block
+cannot anchor inside a chant and has to be a verse.
 
-## ⚠ Four things this pass had to settle, all cheap to get wrong again
+## ⚠ Use the twins. They find real errors
 
-1. **`สุปปะยุตตา` has TWO ป and `ทัฬเหนะ` takes ฬ.** I entered both wrong on
-   four pages (258, 261, 263, 267) before checking at magnification. Fixed in
-   `e9105d9`. The Ratana Sutta already in the app from the forward pass has both
-   right — use it as the cross-check.
-2. **The ฬ-as-พ rule applies here too.** `ยะถามุฬเห` (252, 253) and `วิรุฬหิง`
-   (253) are written with ฬ AGAINST the photograph, because this typeface
-   photographs ฬ as พ and the canon has ḷ. Page 256's `อะวิรุฬหิฉันทา`, where
-   the ฬ IS legible, is the corroboration.
-3. **`สีรีมะโต` on 258 and 260, `สิรีมะโต` on 92.** The book disagrees with
-   itself; all three are kept as printed. So are the three spellings of one
-   Ratana Sutta line on pages 20, 82 and 255.
-4. **A block anchors after the PREVIOUS chant on its page**, computed only from
-   the rows in the batch being applied (`apply_batch.py:772`). Walking backwards
-   this bites constantly: the chant a heading sits under is often not entered
-   yet. Two ways through, both used here — defer the block to the batch that
-   enters the chant above it (page 256's section heading went to batch-254-256),
-   or give it a row with `chant: ""` and `verses: "none"` placed AFTER that
-   chant's row.
+The book prints some chants **twice**, and comparing the two copies is the only
+independent check available without the physical book. Three doubled chants are
+now known, besides every `-plae` pair:
 
-## ⚠ The book has a SECOND doubled chant, and it answered both open questions
+| chant | first | second |
+|---|---|---|
+| Mahāsamaya | 175 Thai | 317–325 roman |
+| ยอดพระกัณฑ์ไตรปิฎก | 241–245 Thai | 312–316 roman |
+| Jinapañjara | 237–238 Thai | 310–311 roman |
 
-`ยอดพระกัณฑ์ไตรปิฎก` is printed **twice**: at **241–245 in Thai script** and at
-**312–316 in roman**, where the roman pass had already entered it as
-`yod-phrakantraipidok`. Mahāsamaya (175 Thai, 317–325 roman) was the only
-doubled chant known before. The Thai one is `yod-phrakantraipidok-thai`; neither
-has been merged into the other, because the book prints both.
+**How.** Romanise the Thai with `translit_pali` and compare word by word against
+the copy already in the app. `scripts/crosscheck_repeated_lines.py` does the
+same job for lines repeated anywhere in the book. Separate punctuation-only
+differences from letter differences and record the punctuation ones ONCE, not
+per line.
 
-This closed the two questions the roman pass left open:
+**It works.** It found `sosososasa` in committed data where the roman sheet
+prints `sososasa`. It found two letter differences on page 236 and eight on 238,
+all of which held when re-read at magnification.
 
-1. **`VIPASSIT` is a TITLE.** Page 245 prints the same word in Thai script,
-   `วิปัสสิต`, in bold, centred, larger than the single line beneath it —
-   unmistakably a heading. Entering it as its own chant was right.
-2. **The heart-syllable material now has a second witness.** `ma-a-u` is
-   `มะอะอุ`, `sososasa` is `โสโสสะสะ`, `a-a-a-a-ni` is `อะอะอะอะนิ`. What could
-   not be checked by sense can be checked against its twin.
+**⚠ AND IT HAS ONE TRAP, WHICH I FELL INTO.** A difference is a reason to
+**re-read BOTH sheets**. I reported that page 242 had 85 units to the roman's 86
+and called the roman's extra `itipi so bhagavā.` a difference between printings.
+It was not: I had read three lines at the top of 242 where four are printed.
+Josh found it at the book. **Re-reading only the sheet you already doubt is how
+a transcription error gets promoted into a finding.**
 
-**And the twin immediately found a real error in committed data.** The app held
-`sosososasa`, five syllables; the Thai has four, and re-reading the roman sheet
-at magnification showed the book prints `sososasa`. Corrected in `c7fd915`.
+## ⚠ Exactly three deliberate departures from page fidelity
 
-### How to use a twin
+All three ruled by Josh at the physical book on 2026-08-28, all three recording
+the printed reading beside the correction. The full list is also in a comment
+above page 300's verse in `chanting.py`:
 
-Romanise the Thai with `translit_pali` and compare word by word against the
-roman chant already in the app. Differences are either a transcription error —
-go back to BOTH photographs at magnification — or a genuine difference between
-the printings, in which case **enter each as its own page prints it and record
-the difference in the checks.** Fourteen differences were found across 241–245
-and none was smoothed away. The largest is a whole line: the roman prints
-`itipi so bhagavā.` where the Thai prints nothing, so the Thai has 85 units to
-the roman's 86. Both sheets were checked.
+| page | printed | entered |
+|---|---|---|
+| 300 | สะทามิยามิ | สะมาทิยามิ |
+| 258, 260 | สีรีมะโต | สิรีมะโต |
+| 305 | สัทธสัญญา | สัททสัญญา |
 
-English was taken from the roman twin verse for verse rather than written
-afresh. It is the same chant; two hand-written glosses for one text would only
-drift apart.
+**Everywhere else the book's own slips stay exactly as printed.** No other slip
+may be corrected without the same ruling, and the list should stay short.
 
-## ⚠ Open questions for when the book is in hand
+## Settled at the book, 2026-08-28 — do not re-open
 
-None of these blocks further work.
+The ฬ-rule held every time it was tested. All four of these were written
+AGAINST what the photograph showed, and all four were right:
+`วิรุฬหิยา` (292), `ยะถามุฬเห` (252, 253), `วิรุฬหิง` (253), `จักกะวาฬะ` (242).
+**Keep applying the rule without hedging.**
 
-1. **Page 252's third chant ENDS WITH A COMMA** — `อายะติง สังวะรายะ,` with
-   white space below and a different chant's heading on 253. The same formula on
-   253 ends with a full stop. Page 249's first chant does the same thing in its
-   middle unit.
-2. **Page 250 prints `กัตอัญชะลี`**, not the more usual `กัตวัญชะลี`.
-3. **Page 300's second precept reads `สะทามิยามิ` for `สะมาทิยามิ`** — a word a
-   reader would chant.
-4. **The two printings of ยอดพระกัณฑ์ไตรปิฎก disagree in fourteen places.** The
-   substantive ones: a whole missing line; `ปาระมี`/`ปาระมิ` inside one item;
-   `ปุกะยะปะ` against `puyapaka`; a whole word `วิชชา` the roman lacks; and the
-   roman's `mitti mitti mitt`, which really is what that sheet prints.
+Also settled: `กัตอัญชะลี` on 250 is what the book prints; `ตุมหะ`/`ตุยหะ` on 301
+really do differ between the two halves; page 242's `ปาระมี`/`ปาระมิ` is the
+book varying itself; the comma endings on 249 and 252 do not matter.
+
+## ⚠ Still open
+
+**The dedication chant's title has three spellings** — page 239 `อุททิสะ-`,
+page 62 `อุททิสสะ-`, the สารบัญ `อุทิสสะ-`. Josh could not settle it. Each
+stays as its own page sets it, which is the safe state.
+
+Whether pages 246, 248 and 278 are truly blank is deduced, not confirmed.
 
 ## Read `docs/chanting-book-photo-map.md` first
 
@@ -1820,42 +1813,47 @@ them the hard way.
   at 308. It is now bounded at `BOOK_LAST_PAGE`, with a second test stopping the
   exemption creeping below 308.
 
-## ⚠ Two sessions cannot both hold `chanting.py`
+## ⚠ Two sessions cannot both hold `chanting.py` — SETTLE THIS FIRST
 
-This pass ran alongside the forward pass in the SAME clone and they collided
-twice, in two different ways.
+Running the forward and backward passes at once in the SAME clone has now cost
+four distinct things. This is the biggest open process problem in the work.
 
-**First: a shared working tree.** One file held four pages of work from two
-sessions and neither could commit without dragging in the other's. Resolved by
-one honest combined commit, which is the least bad option once it has happened.
+**1. A LOST UPDATE.** The other session read `chanting.py`, this session applied
+a batch, and the other session wrote its whole file back — silently deleting
+three chants that had already passed every check. Caught only because the full
+suite ran afterwards and `check_render` reported the verses `MISSING from the
+page entirely`. Nothing else would have noticed.
 
-**Second, and worse: a LOST UPDATE.** The other session read `chanting.py`,
-this session applied a batch, and the other session then wrote its whole file
-back — silently deleting three chants that had already passed every check. It
-was caught only because the full test suite ran afterwards and `check_render`
-reported the verses `MISSING from the page entirely`. Nothing else would have
-noticed.
+**2. Commits carrying someone else's work.** `git add chanting.py` cannot stage
+part of a file. Three commits on main carry the other session's in-flight
+chants under a message about mine. `38f6e86` is the worst: its message says
+"page 244" and its `chanting.py` changes are entirely another session's page-193
+work. It is already pushed, so it was left alone rather than rewritten.
 
-**So: apply, then commit IMMEDIATELY, and verify after.** The window that lost
-the work was the four minutes the test suite took between applying and
-committing. Committed work survived the overwrite untouched; only the
-uncommitted apply was lost.
+**3. Transient red.** A check run while the other session is mid-write reports
+failures that are gone a minute later. **Re-run before believing a failure that
+names a page you did not touch.**
 
-Expect transient red too. A check run while the other session is mid-write will
-report failures that are gone a minute later — page 112's closing was `MISSING`
-in one run and present in the next. Re-run before believing a failure that names
-a page you did not touch.
+**4. Red you cannot fix.** At the end of this session `buddha-jayamangala-gatha-plae`
+sat in `chanting.py` with three verses and `page_start: None`, so page 203
+rendered nothing and `check_render` failed. It belongs to the other session's
+batch-203-203. Editing another session's chant while it is mid-write is exactly
+how (1) happened, so it was left for them.
 
-**"Bank the batch files and apply later" is NOT a safe way round it.** A batch
-file whose verses are not in `chanting.py` makes `check_pages` AND
-`check_render` fail — so the repo sits red for as long as the data is held. Nine
-banked batches broke the suite exactly that way, and it went green again only
-once they were applied.
+**Until it is settled: apply, then commit IMMEDIATELY, and verify after.** The
+window that lost the work was the four minutes a test suite took between
+applying and committing. Committed work survived the overwrite untouched; only
+the uncommitted apply was lost.
 
-If two sessions must run at once, give each a `git worktree`. Note that
-`apply_batch` splices a NEW chant at the single line closing `CHANTS`
-(`apply_batch.py:996`), so two sessions adding chants will conflict there every
-time — verse appends to different chants merge cleanly.
+**"Bank the batch files and apply later" is NOT a way round it.** A batch whose
+verses are not in `chanting.py` makes `check_pages` AND `check_render` fail, so
+the repo sits red for as long as the data is held. Nine banked batches broke the
+suite exactly that way.
+
+**The fix is a `git worktree` each, or running the two passes one at a time.**
+Note that `apply_batch` splices a NEW chant at the single line closing `CHANTS`
+(`apply_batch.py:996`), so two sessions adding chants conflict there every time;
+verse appends to different chants merge cleanly.
 
 ## What is worth a second pair of eyes against the book
 
