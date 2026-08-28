@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-200 went in.
+201 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,10 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 201, `IMG_0471`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
-**21 units in, resume at verse 22**. Verse 21 ends `เยสัง ปะริญญายะ,` and its
-English is deliberately left hanging, because the sentence completes on 201.
+**Next: page 202, `IMG_0472`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
+**40 units in, resume at verse 41**. Its first-pass copy at page 4 has 40
+verses in total, so this one has already passed that count; expect it to run
+further still.
 
 ## ✍️ Typography this section uses that must not be tidied
 
@@ -95,6 +96,7 @@ Collected as they turn up, all reproduced exactly:
 | brackets on invitations | 195–198 | `(หันทะ มะยัง … เส.)` — the brackets are printed |
 | brackets on rubrics | 194–198 | `(กราบ)`, `(๓ ครั้ง)`, `(กราบระลึกถึง…)` |
 | a printed full stop in a title | 112 | `บทขัด อัคคัปปะสาทะสุตตัง.` |
+| a **bracketed variant inside chanted Pali** | 201 v37 | `เต (ตา) มะยัง …` — masculine with the feminine beside it, so one line serves a mixed assembly. The **Thai is not doubled**, only the Pali |
 
 ## 📖 A chant can arrive with NEITHER title NOR invitation — and it did
 

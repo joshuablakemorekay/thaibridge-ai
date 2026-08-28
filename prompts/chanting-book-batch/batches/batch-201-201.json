@@ -1,0 +1,260 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "pages": [
+   {
+    "page": 201,
+    "file": "IMG_0471.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "samvega-parikittana-patha-plae",
+    "verses": "22-40",
+    "starts_here": false,
+    "note": "The whole sheet, one chant. Nineteen PALI lines with their Thai — the ten aggregate lines and the three short closing ones in a right-hand column, the rest indented beneath. No title, no invitation, no rubric, no footnote. The chant CONTINUES onto page 202."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "samvega-parikittana-patha-plae",
+   "continuation_of": "samvega-parikittana-patha-plae",
+   "continues": true,
+   "working_notes": {
+    "invitation": "none of its own — page 198's invitation covers this chant.",
+    "units": "Nineteen, verses 22-40. Ten of them are the aggregates run twice, once against อะนิจจา and once against อะนัตตา, and they are set in the right-hand column.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "None new.",
+    "pages": "IMG_0471.PNG, page 201. The chant arrived from page 200 and CONTINUES onto page 202."
+   },
+   "verses": [
+    {
+     "number": 22,
+     "pali": "ธะระมาโน โส ภะคะวา,",
+     "pali_roman": "Dharamāno so bhagavā,",
+     "thai": "จึงพระผู้มีพระภาคเจ้านั้น เมื่อยังทรงพระชนม์อยู่,",
+     "paiboon": "jʉŋ prá-pûu-mii-prá-pâak-jâo nán mʉ̂a yaŋ soŋ prá-chon yùu,",
+     "english": "So that Blessed One, while he still lived,",
+     "page": 201
+    },
+    {
+     "number": 23,
+     "pali": "เอวัง พะหุลัง สาวะเก วิเนติ,",
+     "pali_roman": "Evaṃ bahulaṃ sāvake vineti,",
+     "thai": "ย่อมทรงแนะนำสาวกทั้งหลาย เช่นนี้เป็นส่วนมาก,",
+     "paiboon": "yɔ̂m soŋ nɛ́-nam sǎa-wók táŋ-lǎai chên-níi bpen sùan mâak,",
+     "english": "instructed his disciples largely in this way,",
+     "page": 201
+    },
+    {
+     "number": 24,
+     "pali": "เอวัง ภาคา จะ ปะนัสสะ ภะคะวะโต สาวะเกสุ อะนุสาสะนี พะหุลา ปะวัตตะติ,",
+     "pali_roman": "Evaṃ bhāgā ca panassa bhagavato sāvakesu anusāsanī bahulā pavattati,",
+     "thai": "อนึ่ง คำสั่งสอนของพระผู้มีพระภาคเจ้านั้น, ย่อมเป็นไปในสาวกทั้งหลาย, ส่วนมาก, มีส่วนคือการจำแนกอย่างนี้ว่า :-",
+     "paiboon": "à-nʉ̀ŋ kam-sàŋ-sɔ̌ɔn kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo nán, yɔ̂m bpen bpai nai sǎa-wók táŋ-lǎai, sùan mâak, mii sùan kʉʉ gaan jam-nɛ̂ɛk yàaŋ-níi wâa :-",
+     "english": "and moreover that Blessed One's instruction to his disciples largely proceeded with this division:—",
+     "page": 201
+    },
+    {
+     "number": 25,
+     "pali": "รูปัง อะนิจจัง,",
+     "pali_roman": "Rūpaṃ aniccaṃ,",
+     "thai": "รูปไม่เที่ยง,",
+     "paiboon": "rûup mâi tîaŋ,",
+     "english": "form is impermanent,",
+     "page": 201
+    },
+    {
+     "number": 26,
+     "pali": "เวทะนา อะนิจจา,",
+     "pali_roman": "Vedanā aniccā,",
+     "thai": "เวทนาไม่เที่ยง,",
+     "paiboon": "wêet-tà-naa mâi tîaŋ,",
+     "english": "feeling is impermanent,",
+     "page": 201
+    },
+    {
+     "number": 27,
+     "pali": "สัญญา อะนิจจา,",
+     "pali_roman": "Saññā aniccā,",
+     "thai": "สัญญาไม่เที่ยง,",
+     "paiboon": "sǎn-yaa mâi tîaŋ,",
+     "english": "perception is impermanent,",
+     "page": 201
+    },
+    {
+     "number": 28,
+     "pali": "สังขารา อะนิจจา,",
+     "pali_roman": "Saṅkhārā aniccā,",
+     "thai": "สังขารไม่เที่ยง,",
+     "paiboon": "sǎŋ-kǎan mâi tîaŋ,",
+     "english": "formations are impermanent,",
+     "page": 201
+    },
+    {
+     "number": 29,
+     "pali": "วิญญาณัง อะนิจจัง,",
+     "pali_roman": "Viññāṇaṃ aniccaṃ,",
+     "thai": "วิญญาณไม่เที่ยง,",
+     "paiboon": "win-yaan mâi tîaŋ,",
+     "english": "consciousness is impermanent,",
+     "page": 201
+    },
+    {
+     "number": 30,
+     "pali": "รูปัง อะนัตตา,",
+     "pali_roman": "Rūpaṃ anattā,",
+     "thai": "รูปไม่ใช่ตัวตน,",
+     "paiboon": "rûup mâi châi dtua-dton,",
+     "english": "form is not-self,",
+     "page": 201
+    },
+    {
+     "number": 31,
+     "pali": "เวทะนา อะนัตตา,",
+     "pali_roman": "Vedanā anattā,",
+     "thai": "เวทนาไม่ใช่ตัวตน,",
+     "paiboon": "wêet-tà-naa mâi châi dtua-dton,",
+     "english": "feeling is not-self,",
+     "page": 201
+    },
+    {
+     "number": 32,
+     "pali": "สัญญา อะนัตตา,",
+     "pali_roman": "Saññā anattā,",
+     "thai": "สัญญาไม่ใช่ตัวตน,",
+     "paiboon": "sǎn-yaa mâi châi dtua-dton,",
+     "english": "perception is not-self,",
+     "page": 201
+    },
+    {
+     "number": 33,
+     "pali": "สังขารา อะนัตตา,",
+     "pali_roman": "Saṅkhārā anattā,",
+     "thai": "สังขารไม่ใช่ตัวตน,",
+     "paiboon": "sǎŋ-kǎan mâi châi dtua-dton,",
+     "english": "formations are not-self,",
+     "page": 201
+    },
+    {
+     "number": 34,
+     "pali": "วิญญาณัง อะนัตตา,",
+     "pali_roman": "Viññāṇaṃ anattā,",
+     "thai": "วิญญาณไม่ใช่ตัวตน,",
+     "paiboon": "win-yaan mâi châi dtua-dton,",
+     "english": "consciousness is not-self,",
+     "page": 201
+    },
+    {
+     "number": 35,
+     "pali": "สัพเพ สังขารา อะนิจจา,",
+     "pali_roman": "Sabbe saṅkhārā aniccā,",
+     "thai": "สังขารทั้งหลายทั้งปวง ไม่เที่ยง,",
+     "paiboon": "sǎŋ-kǎan táŋ-lǎai táŋ-bpuaŋ mâi tîaŋ,",
+     "english": "all formations are impermanent,",
+     "page": 201
+    },
+    {
+     "number": 36,
+     "pali": "สัพเพ ธัมมา อะนัตตาติ,",
+     "pali_roman": "Sabbe dhammā anattāti,",
+     "thai": "ธรรมทั้งหลายทั้งปวง ไม่ใช่ตัวตน ดังนี้,",
+     "paiboon": "tam táŋ-lǎai táŋ-bpuaŋ mâi châi dtua-dton daŋ-níi,",
+     "english": "all things are not-self — thus,",
+     "page": 201
+    },
+    {
+     "number": 37,
+     "pali": "เต (ตา) มะยัง โอติณณาม์หะ,",
+     "pali_roman": "Te (tā) mayaṃ otiṇṇāmha,",
+     "thai": "พวกเราทั้งหลาย เป็นผู้ถูกครอบงำแล้ว,",
+     "paiboon": "pûak rao táŋ-lǎai bpen pûu tùuk krɔ̂ɔp-ŋam lɛ́ɛo,",
+     "english": "We are overwhelmed,",
+     "page": 201
+    },
+    {
+     "number": 38,
+     "pali": "ชาติยา,",
+     "pali_roman": "Jātiyā,",
+     "thai": "โดยความเกิด,",
+     "paiboon": "dooy kwaam-gə̀ət,",
+     "english": "by birth,",
+     "page": 201
+    },
+    {
+     "number": 39,
+     "pali": "ชะรามะระเณนะ,",
+     "pali_roman": "Jarāmaraṇena,",
+     "thai": "โดยความแก่ และความตาย,",
+     "paiboon": "dooy kwaam-gɛ̀ɛ lɛ́ kwaam-dtaai,",
+     "english": "by ageing and death,",
+     "page": 201
+    },
+    {
+     "number": 40,
+     "pali": "โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ,",
+     "pali_roman": "Sokehi paridevehi dukkhehi domanassehi upāyāsehi,",
+     "thai": "โดยความโศก ความร่ำไรรำพัน ความไม่สบายกาย ความไม่สบายใจ ความคับแค้นใจ ทั้งหลาย,",
+     "paiboon": "dooy kwaam-sòok kwaam-râm-rai-ram-pan kwaam mâi sà-baai gaai kwaam mâi sà-baai jai kwaam káp-kɛ́ɛn jai táŋ-lǎai,",
+     "english": "by sorrow, lamentation, bodily pain, mental pain and despair,",
+     "page": 201
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "เต (ตา)",
+     "pali_roman": "te (tā)",
+     "meaning": "'we' — masculine, with the FEMININE form printed beside it in brackets. Men chant เต, women ตา. The book prints both so one page serves a mixed assembly"
+    },
+    {
+     "pali": "โอติณณาม์หะ",
+     "pali_roman": "otiṇṇāmha",
+     "meaning": "'we are sunk in, overwhelmed'. The Thai renders it ถูกครอบงำ — overpowered — which is what the whole passage on urgency turns on"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 37,
+     "file": "IMG_0471.PNG",
+     "issue": "‼ THE BOOK PRINTS A BRACKETED ALTERNATIVE INSIDE THE PALI: เต (ตา) มะยัง โอติณณาม์หะ. Read at 5x. เต is the masculine 'we' and (ตา) the feminine, so the same printed line serves men and women in one assembly. Reproduced exactly, brackets included — this is the FIRST bracketed variant to appear inside a chanted Pali line in this run, as distinct from the bracketed invitations and rubrics. The Thai translation below it is not doubled; only the Pali is."
+    },
+    {
+     "verse": 25,
+     "file": "IMG_0471.PNG",
+     "issue": "TEN VERSES SET AS TWO PARALLEL FIVES. Verses 25-29 run the five aggregates against อะนิจจา, and 30-34 run the SAME five against อะนัตตา. All ten were read off the sheet separately rather than copied; the Thai differs only in ไม่เที่ยง against ไม่ใช่ตัวตน."
+    },
+    {
+     "verse": 24,
+     "file": "IMG_0471.PNG",
+     "issue": "THE COLON-DASH :- APPEARS AGAIN, in the Thai of verse 24 — …อย่างนี้ว่า :- — introducing the list that follows, exactly as on page 200. Kept with its space."
+    },
+    {
+     "verse": 40,
+     "file": "IMG_0471.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 40 is the last thing on the sheet and the chant runs on to page 202. No […] is used: it ends at a comma the book itself prints."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "continues": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "resume_from": {
+   "chant": "samvega-parikittana-patha-plae",
+   "next_verse": 41,
+   "page": 202
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0471.PNG read end to end. Page number 201 printed clearly at the top centre. One chant throughout, no heading, no footnote, no rule, no colophon. A hand holds the sheet at the right margin and obscures nothing.",
+  "notes": "‼ FIRST BRACKETED VARIANT INSIDE A CHANTED PALI LINE: เต (ตา) มะยัง โอติณณาม์หะ — masculine เต with the feminine ตา beside it, so one printed line serves a mixed assembly. Reproduced with its brackets. The Thai below is NOT doubled. Also the colon-dash :- again, and the five aggregates set twice over, once against impermanence and once against not-self.",
+  "diacritic_exceptions": []
+ }
+}
