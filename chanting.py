@@ -45832,7 +45832,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
         # ‼ CHECK [IMG_0377.PNG]: ‼ NOT THE SAME CHANT AS akkappasada-
         #   suttagatha ALREADY IN THE APP. The สารบัญ lists อัคคัปปะสาทะสุตตัง
         #   and อัคคัปปะสาทะสุตตะคาถา separately; the app holds the CAATHAA.
@@ -45856,6 +45855,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'อํ. จตุกฺก. 21/44',
+        'closing': {
+            'pali': 'อัคคัปปะสาทะสุตตัง นิฏฐิตัง',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on Faith in the Foremost.',
         },
         'verses': [
             # ‼ CHECK [IMG_0377.PNG]: THE PARAGRAPH IS THE UNIT. Both openers
@@ -45887,6 +45894,142 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Monks, as far as there are beings — footless or two-footed or four-footed or many-footed, with form or formless, percipient or non-percipient or neither-percipient-nor-non-percipient — the Tathāgata, the Worthy One, the Perfectly Self-Awakened, is reckoned foremost among them. Those, monks, who have faith in the Buddha have faith in the foremost; and for those with faith in the foremost, the result is foremost.',
+            },
+            # ‼ CHECK [IMG_0378.PNG]: Indents measured against a FITTED
+            #   baseline — this sheet drifts 25px. Five openers stand +109 to
+            #   +113 clear: verses 3, 4, 5, 6 and the first verse row. Every
+            #   other line sits on the fit.
+            # ‼ CHECK [IMG_0378.PNG]: Two line-break hyphens rejoined, both
+            #   the same word split the same way: อัคคะมัก- / ขายะติ in verses
+            #   3 and 4.
+            {
+                'number': 3,
+                'page': 113,
+                'para_start': True,
+                'pali': 'ยาวะตา ภิกขะเว ธัมมา สังขะตา วา อะสังขะตา วา, วิราโค เตสัง อัคคะมักขายะติ. ยะทิทัง มะทะนิมมะทะโน ปิปาสะวินะโย อาละยะสะมุคฆาโต วัฏฏูปัจเฉโท ตัณหักขะโย วิราโค นิโรโธ นิพพานัง. เย ภิกขะเว วิราคะธัมเม ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.',
+                'pali_roman': 'Yāvatā bhikkhave dhammā saṅkhatā vā asaṅkhatā vā, virāgo tesaṃ aggamakkhāyati. Yadidaṃ madanimmadano pipāsavinayo ālayasamugghāto vaṭṭūpacchedo taṇhakkhayo virāgo nirodho nibbānaṃ. Ye bhikkhave virāgadhamme pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Monks, as far as there are states conditioned or unconditioned, dispassion is reckoned foremost among them — that is, the crushing of pride, the removal of thirst, the uprooting of clinging, the cutting of the round, the destruction of craving, dispassion, cessation, Nibbāna. Those, monks, who have faith in the Dhamma of dispassion have faith in the foremost; and for those with faith in the foremost, the result is foremost.',
+            },
+            {
+                'number': 4,
+                'page': 113,
+                'para_start': True,
+                'pali': 'ยาวะตา ภิกขะเว ธัมมา สังขะตา, อะริโย อัฏฐังคิโก มัคโค เตสัง อัคคะมักขายะติ. เสยยะถีทัง สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ. เย ภิกขะเว อะริยะมัคคะธัมเม ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.',
+                'pali_roman': 'Yāvatā bhikkhave dhammā saṅkhatā, ariyo aṭṭhaṅgiko maggo tesaṃ aggamakkhāyati. Seyyathīdaṃ sammādiṭṭhi sammāsaṅkappo, sammāvācā sammākammanto sammā-ājīvo, sammāvāyāmo sammāsati sammāsamādhi. Ye bhikkhave ariyamaggadhamme pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Monks, as far as there are conditioned states, the noble eightfold path is reckoned foremost among them — that is, right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, right concentration. Those, monks, who have faith in the Dhamma of the noble path have faith in the foremost; and for those with faith in the foremost, the result is foremost.',
+            },
+            {
+                'number': 5,
+                'page': 113,
+                'para_start': True,
+                'pali': 'ยาวะตา ภิกขะเว สังฆา วา คะณา วา ตะถาคะตะสาวะกะสังโฆ เตสัง อัคคะมักขายะติ. ยะทิทัง จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา. เย ภิกขะเว สังเฆ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.',
+                'pali_roman': 'Yāvatā bhikkhave saṅghā vā gaṇā vā tathāgatasāvakasaṅgho tesaṃ aggamakkhāyati. Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā. Ye bhikkhave saṅghe pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Monks, as far as there are communities or groups, the Sangha of the Tathāgata's disciples is reckoned foremost among them — that is, the four pairs of persons, the eight kinds of individuals. Those, monks, who have faith in the Sangha have faith in the foremost; and for those with faith in the foremost, the result is foremost.",
+            },
+            {
+                'number': 6,
+                'page': 113,
+                'para_start': True,
+                'pali': 'อิเม โข ภิกขะเว จัตตาโร อัคคัปปะสาทาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
+                'pali_roman': 'Ime kho bhikkhave cattāro aggappasādāti. Idamavoca bhagavā. Idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These, monks, are the four foremost kinds of faith. This is what the Blessed One said. Having said this, the Fortunate One, the Teacher, further said this:',
+            },
+            # ‼ CHECK [IMG_0378.PNG]: ‼ THESE EIGHT ROWS ARE ALSO IN THE APP
+            #   ALREADY, AS A SEPARATE CHANT — AND BOTH ARE RIGHT.
+            #   akkappasada-suttagatha holds the identical eight verses at
+            #   page_start 273, entered by the other session. The book prints
+            #   them TWICE: here on page 113 inside the sutta, introduced by
+            #   อะถาปะรัง เอตะทะโวจะ สัตถา, and again on page 273 under their
+            #   own heading, which the สารบัญ lists separately as
+            #   อัคคัปปะสาทะสุตตะคาถา. Reproducing the book means both exist.
+            #   Not a duplicate to merge. The romanisation here is matched to
+            #   the page-273 entry word for word so the two never drift apart.
+            # ‼ CHECK [IMG_0378.PNG]: THE LAYOUT CHANGES MID-CHANT. Verses 1-6
+            #   are prose; verses 7-14 are TWO-COLUMN rows, right column
+            #   beginning at x 1030, read ACROSS. Verse 7 carries para_layout
+            #   'lines' to switch it. FIRST PAIRING FOR CHECKING: left อัคคะโต
+            #   เว ปะสันนานัง + right อัคคัง ธัมมัง วิชานะตัง.
+            {
+                'number': 7,
+                'page': 113,
+                'para_start': True,
+                'para_layout': 'lines',
+                'pali': 'อัคคะโต เว ปะสันนานัง อัคคัง ธัมมัง วิชานะตัง',
+                'pali_roman': 'Aggato ve pasannānaṃ aggaṃ dhammaṃ vijānataṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For those with faith in the foremost, knowing the foremost Dhamma,',
+            },
+            {
+                'number': 8,
+                'page': 113,
+                'pali': 'อัคเค พุทเธ ปะสันนานัง ทักขิเณยเย อะนุตตะเร',
+                'pali_roman': 'Agge buddhe pasannānaṃ dakkhiṇeyye anuttare',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for those with faith in the foremost Buddha, unsurpassed and worthy of gifts,',
+            },
+            {
+                'number': 9,
+                'page': 113,
+                'pali': 'อัคเค ธัมเม ปะสันนานัง วิราคูปะสะเม สุเข',
+                'pali_roman': 'Agge dhamme pasannānaṃ virāgūpasame sukhe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for those with faith in the foremost Dhamma, the bliss of dispassion and peace,',
+            },
+            {
+                'number': 10,
+                'page': 113,
+                'pali': 'อัคเค สังเฆ ปะสันนานัง ปุญญักเขตเต อะนุตตะเร',
+                'pali_roman': 'Agge saṅghe pasannānaṃ puññakkhette anuttare',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for those with faith in the foremost Sangha, the unsurpassed field of merit —',
+            },
+            {
+                'number': 11,
+                'page': 113,
+                'pali': 'อัคคัส์มิง ทานัง ทะทะตัง อัคคัง ปุญญัง ปะวัฑฒะติ',
+                'pali_roman': 'Aggasmiṃ dānaṃ dadataṃ aggaṃ puññaṃ pavaḍḍhati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for those giving gifts to the foremost, foremost merit increases,',
+            },
+            {
+                'number': 12,
+                'page': 113,
+                'pali': 'อัคคัง อายุ จะ วัณโณ จะ ยะโส กิตติ สุขัง พะลัง',
+                'pali_roman': 'Aggaṃ āyu ca vaṇṇo ca yaso kitti sukhaṃ balaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and foremost long life, beauty, fame, renown, happiness and strength.',
+            },
+            {
+                'number': 13,
+                'page': 113,
+                'pali': 'อัคคัสสะ ทาตา เมธาวี อัคคะธัมมะสะมาหิโต',
+                'pali_roman': 'Aggassa dātā medhāvī aggadhammasamāhito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The wise giver of what is foremost, composed in the foremost Dhamma,',
+            },
+            {
+                'number': 14,
+                'page': 113,
+                'pali': 'เทวะภูโต มะนุสโส วา อัคคัปปัตโต ปะโมทะตีติ.',
+                'pali_roman': 'Devabhūto manusso vā aggappatto pamodatīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'whether become a deva or a human, rejoices having reached the foremost.',
             },
         ],
     },

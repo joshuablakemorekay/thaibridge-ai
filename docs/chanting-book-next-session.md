@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-112 went in.
+113 went in.
 
 ## Read first, in this order
 
@@ -12,7 +12,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
 
 ## State — verify with git, don't take this file's word
 
-- **Pages 1–112 are in and unbroken**, plus 217–221. **149 chants and 2,196
+- **Pages 1–113 are in and unbroken**, plus 217–221. **149 chants and 2,208
   verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
   `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
   line, so it is never stale — read it rather than this bullet.
@@ -28,7 +28,7 @@ Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
   suite**, and check whether the failing names are theirs
   (`mahasamayasutta-roman`) before investigating anything.
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 112 were applied 2026-08-24/27; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
+- Pages 92 to 113 were applied 2026-08-24/28; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
   pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
   2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
@@ -46,16 +46,38 @@ before deciding what it contains** — page 30 was expected to be Pabbatopama
 alone and turned out to hold the end of one chant, a brand-new one, and the
 start of a third.
 
-## Next: page 113, `IMG_0378` — ⚠️ A CHANT IS OPEN
+## Next: page 114, `IMG_0379` — but READ THE NUMBER off the sheet
 
-The offset is **265** since page 86 and has held for 87–112, so page 113 *should*
-be `IMG_0378`. **Five more changes are still expected before page 207.**
+The offset is **265** since page 86 and has held for 87–113, so page 114 *should*
+be `IMG_0379`. **Five more changes are still expected before page 207.**
 
-**⚠️ `aggappasada-suttam` IS OPEN and carries a `‼ CONTINUES` marker.** Two
-paragraphs are in — the nidāna and the FIRST of the four foremost faiths (the
-Tathāgata). **Resume at verse 3.** Page 112 ends at a **sentence** boundary, so
-there is no `[…]` to complete: just append. Three faiths remain — the Path,
-dispassion, and the Sangha — then a closing and probably a colophon.
+**Page 114 starts clean.** `aggappasada-suttam` closed on 113 with its colophon
+and citation, and **nothing is open**. The book was on `20.`, so expect `21.` or
+a new `บทขัด`.
+
+## ‼ THE BOOK PRINTS THE SAME EIGHT VERSES TWICE — AND BOTH STAY
+
+The first real case of the book repeating a whole chant, and it is the shape the
+translated section will present on every page from ~193.
+
+`อัคคัปปะสาทะสุตตะคาถา` appears **twice**:
+
+| where | as what |
+|---|---|
+| **page 113** | verses 7–14 of `aggappasada-suttam`, introduced by `อะถาปะรัง เอตะทะโวจะ สัตถา` |
+| **page 273** | a standalone chant, `akkappasada-suttagatha` — entered by the other session |
+
+The สารบัญ lists them **separately**. So this is not a duplicate to merge: the
+book prints them in two places under two headings, and reproducing the book means
+keeping both. **The romanisations are matched word for word** between the two so
+they cannot silently drift; a check on batch-113 records that, and there is now a
+verification one-liner that compares the two verse lists.
+
+**This is the precedent for the ~193–240 decision.** If the repeated gatha stays
+twice, the translated section's repeats should stay too — as second entries, not
+as a back-fill into the first-pass chants. Still Josh's call, but the run has now
+answered the same question once, in the book's own terms.
+
 
 ## ⚠️⚠️ A VERSE THAT SPANS A PAGE TURN CAN ONLY LIVE ON ONE PAGE
 

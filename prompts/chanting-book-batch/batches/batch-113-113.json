@@ -1,0 +1,226 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "aggappasada-suttam"
+  ],
+  "pages": [
+   {
+    "page": 113,
+    "file": "IMG_0378.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "aggappasada-suttam",
+    "verses": "3-14",
+    "starts_here": false,
+    "note": "The whole sheet. Four indented SINGLE-COLUMN prose paragraphs — dispassion, the path, the Sangha, then the closing formula — followed by eight TWO-COLUMN verse rows with the right column beginning at x 1030, then a centred bold colophon, a rule and a citation. The chant ends here."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "aggappasada-suttam",
+   "continuation_of": "aggappasada-suttam",
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "Twelve. Verses 3-6 are indented prose paragraphs; 7-14 are the eight TWO-COLUMN verse rows the sutta ends with, read ACROSS.",
+    "ordering": "None. No Thai translation is printed.",
+    "conventions": "None new. The verse rows change the layout mid-chant, so verse 7 carries para_layout 'lines' where verse 1 carried 'prose'.",
+    "pages": "IMG_0378.PNG, page 113. The chant arrived from page 112 and ENDS here, with a colophon and a citation."
+   },
+   "source_printed": "อํ. จตุกฺก. 21/44",
+   "closing": {
+    "pali": "อัคคัปปะสาทะสุตตัง นิฏฐิตัง",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Discourse on Faith in the Foremost."
+   },
+   "verses": [
+    {
+     "number": 3,
+     "pali": "ยาวะตา ภิกขะเว ธัมมา สังขะตา วา อะสังขะตา วา, วิราโค เตสัง อัคคะมักขายะติ. ยะทิทัง มะทะนิมมะทะโน ปิปาสะวินะโย อาละยะสะมุคฆาโต วัฏฏูปัจเฉโท ตัณหักขะโย วิราโค นิโรโธ นิพพานัง. เย ภิกขะเว วิราคะธัมเม ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.",
+     "pali_roman": "Yāvatā bhikkhave dhammā saṅkhatā vā asaṅkhatā vā, virāgo tesaṃ aggamakkhāyati. Yadidaṃ madanimmadano pipāsavinayo ālayasamugghāto vaṭṭūpacchedo taṇhakkhayo virāgo nirodho nibbānaṃ. Ye bhikkhave virāgadhamme pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, as far as there are states conditioned or unconditioned, dispassion is reckoned foremost among them — that is, the crushing of pride, the removal of thirst, the uprooting of clinging, the cutting of the round, the destruction of craving, dispassion, cessation, Nibbāna. Those, monks, who have faith in the Dhamma of dispassion have faith in the foremost; and for those with faith in the foremost, the result is foremost.",
+     "page": 113,
+     "para_start": true
+    },
+    {
+     "number": 4,
+     "pali": "ยาวะตา ภิกขะเว ธัมมา สังขะตา, อะริโย อัฏฐังคิโก มัคโค เตสัง อัคคะมักขายะติ. เสยยะถีทัง สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ. เย ภิกขะเว อะริยะมัคคะธัมเม ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.",
+     "pali_roman": "Yāvatā bhikkhave dhammā saṅkhatā, ariyo aṭṭhaṅgiko maggo tesaṃ aggamakkhāyati. Seyyathīdaṃ sammādiṭṭhi sammāsaṅkappo, sammāvācā sammākammanto sammā-ājīvo, sammāvāyāmo sammāsati sammāsamādhi. Ye bhikkhave ariyamaggadhamme pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, as far as there are conditioned states, the noble eightfold path is reckoned foremost among them — that is, right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, right concentration. Those, monks, who have faith in the Dhamma of the noble path have faith in the foremost; and for those with faith in the foremost, the result is foremost.",
+     "page": 113,
+     "para_start": true
+    },
+    {
+     "number": 5,
+     "pali": "ยาวะตา ภิกขะเว สังฆา วา คะณา วา ตะถาคะตะสาวะกะสังโฆ เตสัง อัคคะมักขายะติ. ยะทิทัง จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา. เย ภิกขะเว สังเฆ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.",
+     "pali_roman": "Yāvatā bhikkhave saṅghā vā gaṇā vā tathāgatasāvakasaṅgho tesaṃ aggamakkhāyati. Yadidaṃ cattāri purisayugāni aṭṭha purisapuggalā. Ye bhikkhave saṅghe pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, as far as there are communities or groups, the Sangha of the Tathāgata's disciples is reckoned foremost among them — that is, the four pairs of persons, the eight kinds of individuals. Those, monks, who have faith in the Sangha have faith in the foremost; and for those with faith in the foremost, the result is foremost.",
+     "page": 113,
+     "para_start": true
+    },
+    {
+     "number": 6,
+     "pali": "อิเม โข ภิกขะเว จัตตาโร อัคคัปปะสาทาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.",
+     "pali_roman": "Ime kho bhikkhave cattāro aggappasādāti. Idamavoca bhagavā. Idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "These, monks, are the four foremost kinds of faith. This is what the Blessed One said. Having said this, the Fortunate One, the Teacher, further said this:",
+     "page": 113,
+     "para_start": true
+    },
+    {
+     "number": 7,
+     "pali": "อัคคะโต เว ปะสันนานัง อัคคัง ธัมมัง วิชานะตัง",
+     "pali_roman": "Aggato ve pasannānaṃ aggaṃ dhammaṃ vijānataṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "For those with faith in the foremost, knowing the foremost Dhamma,",
+     "page": 113,
+     "para_start": true,
+     "para_layout": "lines"
+    },
+    {
+     "number": 8,
+     "pali": "อัคเค พุทเธ ปะสันนานัง ทักขิเณยเย อะนุตตะเร",
+     "pali_roman": "Agge buddhe pasannānaṃ dakkhiṇeyye anuttare",
+     "thai": "",
+     "paiboon": "",
+     "english": "for those with faith in the foremost Buddha, unsurpassed and worthy of gifts,",
+     "page": 113
+    },
+    {
+     "number": 9,
+     "pali": "อัคเค ธัมเม ปะสันนานัง วิราคูปะสะเม สุเข",
+     "pali_roman": "Agge dhamme pasannānaṃ virāgūpasame sukhe",
+     "thai": "",
+     "paiboon": "",
+     "english": "for those with faith in the foremost Dhamma, the bliss of dispassion and peace,",
+     "page": 113
+    },
+    {
+     "number": 10,
+     "pali": "อัคเค สังเฆ ปะสันนานัง ปุญญักเขตเต อะนุตตะเร",
+     "pali_roman": "Agge saṅghe pasannānaṃ puññakkhette anuttare",
+     "thai": "",
+     "paiboon": "",
+     "english": "for those with faith in the foremost Sangha, the unsurpassed field of merit —",
+     "page": 113
+    },
+    {
+     "number": 11,
+     "pali": "อัคคัส์มิง ทานัง ทะทะตัง อัคคัง ปุญญัง ปะวัฑฒะติ",
+     "pali_roman": "Aggasmiṃ dānaṃ dadataṃ aggaṃ puññaṃ pavaḍḍhati",
+     "thai": "",
+     "paiboon": "",
+     "english": "for those giving gifts to the foremost, foremost merit increases,",
+     "page": 113
+    },
+    {
+     "number": 12,
+     "pali": "อัคคัง อายุ จะ วัณโณ จะ ยะโส กิตติ สุขัง พะลัง",
+     "pali_roman": "Aggaṃ āyu ca vaṇṇo ca yaso kitti sukhaṃ balaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "and foremost long life, beauty, fame, renown, happiness and strength.",
+     "page": 113
+    },
+    {
+     "number": 13,
+     "pali": "อัคคัสสะ ทาตา เมธาวี อัคคะธัมมะสะมาหิโต",
+     "pali_roman": "Aggassa dātā medhāvī aggadhammasamāhito",
+     "thai": "",
+     "paiboon": "",
+     "english": "The wise giver of what is foremost, composed in the foremost Dhamma,",
+     "page": 113
+    },
+    {
+     "number": 14,
+     "pali": "เทวะภูโต มะนุสโส วา อัคคัปปัตโต ปะโมทะตีติ.",
+     "pali_roman": "Devabhūto manusso vā aggappatto pamodatīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "whether become a deva or a human, rejoices having reached the foremost.",
+     "page": 113
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "มะทะนิมมะทะโน",
+     "pali_roman": "madanimmadano",
+     "meaning": "'the crushing of pride'. First of the eight epithets of Nibbāna listed in verse 3, and the only one framed as an undoing of the self"
+    },
+    {
+     "pali": "จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา",
+     "pali_roman": "cattāri purisayugāni aṭṭha purisapuggalā",
+     "meaning": "the four pairs, the eight kinds of individuals — the standard way of naming the Sangha of the noble ones, counted by path and fruit"
+    },
+    {
+     "pali": "อะถาปะรัง เอตะทะโวจะ สัตถา",
+     "pali_roman": "athāparaṃ etadavoca satthā",
+     "meaning": "'and further the Teacher said this' — the formula that hands a sutta over from prose to verse. It is why the eight rows below belong to this chant"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 7,
+     "file": "IMG_0378.PNG",
+     "issue": "‼ THESE EIGHT ROWS ARE ALSO IN THE APP ALREADY, AS A SEPARATE CHANT — AND BOTH ARE RIGHT. akkappasada-suttagatha holds the identical eight verses at page_start 273, entered by the other session. The book prints them TWICE: here on page 113 inside the sutta, introduced by อะถาปะรัง เอตะทะโวจะ สัตถา, and again on page 273 under their own heading, which the สารบัญ lists separately as อัคคัปปะสาทะสุตตะคาถา. Reproducing the book means both exist. Not a duplicate to merge. The romanisation here is matched to the page-273 entry word for word so the two never drift apart."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0378.PNG",
+     "issue": "THE LAYOUT CHANGES MID-CHANT. Verses 1-6 are prose; verses 7-14 are TWO-COLUMN rows, right column beginning at x 1030, read ACROSS. Verse 7 carries para_layout 'lines' to switch it. FIRST PAIRING FOR CHECKING: left อัคคะโต เว ปะสันนานัง + right อัคคัง ธัมมัง วิชานะตัง."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0378.PNG",
+     "issue": "Indents measured against a FITTED baseline — this sheet drifts 25px. Five openers stand +109 to +113 clear: verses 3, 4, 5, 6 and the first verse row. Every other line sits on the fit."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0378.PNG",
+     "issue": "Two line-break hyphens rejoined, both the same word split the same way: อัคคะมัก- / ขายะติ in verses 3 and 4."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0378.PNG",
+     "issue": "‼ A THIRD COLOPHON PATTERN IN FOUR PAGES. This one reads อัคคัปปะสาทะสุตตัง นิฏฐิตัง — correct neuter, NO full stop. Page 112's had the correct neuter WITH a full stop; page 110's had the feminine นิฏฐิตา and no stop. Three variants of the same formula in four sheets, all reproduced as printed."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0378.PNG",
+     "issue": "THE FOOTNOTE USES THE PHINTHU: อํ. จตุกฺก. 21/44 — Aṅguttara, the Book of Fours — with the subscript dot under ก, where the body text never uses it. Same as pages 93 and 107."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0378.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Fourteen verses across pages 112 and 113."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "aggappasada-suttam"
+  ],
+  "continues": [],
+  "resume_from": null,
+  "paiboon_scan": "Nothing to scan. The chant is printed in Pali only, so paiboon is empty on every verse. The one Thai string is the citation, a footnote and not a chanted layer.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0378.PNG read end to end. Page number 113 read off the sheet. Four indented prose paragraphs, eight two-column rows, a centred bold colophon, a rule and one footnote. Nothing else.",
+  "notes": "‼ THE BOOK PRINTS THE SAME EIGHT VERSES TWICE, AND BOTH STAY. They close the sutta here on page 113 and appear again on page 273 under their own heading, which the สารบัญ lists separately — the app already holds that second copy as akkappasada-suttagatha. Reproducing the book means keeping both; the romanisations are matched word for word so they cannot drift. Also a THIRD colophon pattern in four pages: correct neuter, no full stop.",
+  "diacritic_exceptions": []
+ }
+}
