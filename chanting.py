@@ -49754,7 +49754,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
         # ‼ CHECK [IMG_0468.PNG]: ‼ THE INVITATION INVITES TWO CHANTS AT ONCE.
         #   It reads …ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ
         #   ภะณามะ เส. — 'the verses of homage AND the passage on urgency'. So
@@ -49846,6 +49845,163 @@ CHANTS = [
                 'thai': 'จำแนกประเภท คือ มรรค ผล นิพพาน, ส่วนใด,',
                 'paiboon': 'jam-nɛ̂ɛk bprà-pêet kʉʉ mák pǒn níp-paan, sùan dai,',
                 'english': 'which is divided into path, fruit and the deathless —',
+            },
+            {
+                'number': 7,
+                'page': 199,
+                'pali': 'โลกุตตะโร โย จะ ตะทัตถะทีปะโน,',
+                'pali_roman': 'Lokuttaro yo ca tadatthadīpano,',
+                'thai': 'ซึ่งเป็นตัวโลกุตระ, และส่วนใดที่ชี้แนวแห่งโลกุตระนั้น,',
+                'paiboon': 'sʉ̂ŋ bpen dtua lôok-gùt-dtrà, lɛ́ sùan dai tîi chíi nɛɛo hɛ̀ŋ lôok-gùt-dtrà nán,',
+                'english': 'which is itself supramundane, and whatever points the way to it —',
+            },
+            {
+                'number': 8,
+                'page': 199,
+                'pali': 'วันทามิ ธัมมัง อะหะมาทะเรนะ ตัง,',
+                'pali_roman': 'Vandāmi dhammaṃ ahamādarena taṃ,',
+                'thai': 'ข้าพเจ้าไหว้พระธรรมนั้น โดยใจเคารพเอื้อเฟื้อ,',
+                'paiboon': 'kâa-pá-jâo wâai prá-tam nán dooy jai kao-róp ʉ́a-fʉ́ʉa,',
+                'english': 'I revere that Dhamma with a heart of respect and care,',
+            },
+            {
+                'number': 9,
+                'page': 199,
+                'pali': 'สังโฆ สุเขตตาภ์ยะติเขตตะสัญญิโต,',
+                'pali_roman': 'Saṅgho sukhettābhyatikhettasaññito,',
+                'thai': 'พระสงฆ์เป็นนาบุญอันยิ่งใหญ่กว่านาบุญอันดีทั้งหลาย,',
+                'paiboon': 'prá-sǒŋ bpen naa-bun an yîŋ-yài gwàa naa-bun an dii táŋ-lǎai,',
+                'english': 'The Sangha is a field of merit greater than all good fields,',
+            },
+            {
+                'number': 10,
+                'page': 199,
+                'pali': 'โย ทิฏฐะสันโต สุคะตานุโพธะโก,',
+                'pali_roman': 'Yo diṭṭhasanto sugatānubodhako,',
+                'thai': 'เป็นผู้เห็นพระนิพพาน, ตรัสรู้ตามพระสุคต, หมู่ใด,',
+                'paiboon': 'bpen pûu hěn prá-níp-paan, dtràt-rúu dtaam prá-sù-kót, mùu dai,',
+                'english': 'which has seen the peace, awakening after the Fortunate One,',
+            },
+            {
+                'number': 11,
+                'page': 199,
+                'pali': 'โลลัปปะหีโน อะริโย สุเมธะโส,',
+                'pali_roman': 'Lolappahīno ariyo sumedhaso,',
+                'thai': 'เป็นผู้ละกิเลสเครื่องโลเล เป็นพระอริยเจ้า มีปัญญาดี,',
+                'paiboon': 'bpen pûu lá gì-lèet krʉ̂aŋ loo-lee bpen prá-à-rí-yá-jâo mii bpan-yaa dii,',
+                'english': 'which has abandoned wavering, noble and of good wisdom —',
+            },
+            {
+                'number': 12,
+                'page': 199,
+                'pali': 'วันทามิ สังฆัง อะหะมาทะเรนะ ตัง,',
+                'pali_roman': 'Vandāmi saṅghaṃ ahamādarena taṃ,',
+                'thai': 'ข้าพเจ้าไหว้พระสงฆ์หมู่นั้น โดยใจเคารพเอื้อเฟื้อ,',
+                'paiboon': 'kâa-pá-jâo wâai prá-sǒŋ mùu nán dooy jai kao-róp ʉ́a-fʉ́ʉa,',
+                'english': 'I revere that Sangha with a heart of respect and care,',
+            },
+            # ‼ CHECK [IMG_0469.PNG]: ‼ VERSE 13'S PALI IS SET FULL WIDTH, not
+            #   in the bold-left column the rest of the chant uses. It runs
+            #   across two printed lines to the right margin, and its Thai
+            #   then follows indented over three lines. It is the chant's
+            #   closing stanza and the book gives it the whole measure.
+            #   Recorded as ONE verse, because that is what the invitation and
+            #   the sense make it.
+            # ‼ CHECK [IMG_0469.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Thirteen verses across pages 198 and 199.
+            #   The app's first-pass copy at page 3 has SIXTEEN — the two
+            #   passes divide the same text differently, because this one is
+            #   divided by translation unit. Not a discrepancy to reconcile.
+            {
+                'number': 13,
+                'page': 199,
+                'pali': 'อิจเจวะเมกันตะภิปูชะเนยยะกัง, วัตถุตตะยัง วันทะยะตาภิสังขะตัง, ปุญญัง มะยา ยัง มะมะ สัพพุปัททะวา, มา โหนตุ เว ตัสสะ ปะภาวะสิทธิยา.',
+                'pali_roman': 'Iccevamekantabhipūjaneyyakaṃ, vatthuttayaṃ vandayatābhisaṅkhataṃ, puññaṃ mayā yaṃ mama sabbupaddavā, mā hontu ve tassa pabhāvasiddhiyā.',
+                'thai': 'บุญใด ที่ข้าพเจ้าผู้ไหว้อยู่ซึ่งวัตถุสาม, คือพระรัตนตรัย อันควรบูชายิ่งโดยส่วนเดียว, ได้กระทำแล้วเป็นอย่างยิ่ง เช่นนี้, ขออุปัทวะทั้งหลาย, จงอย่ามีแก่ข้าพเจ้าเลย, ด้วยอำนาจความสำเร็จ อันเกิดจากบุญนั้น.',
+                'paiboon': 'bun dai tîi kâa-pá-jâo pûu wâai yùu sʉ̂ŋ wát-tù sǎam, kʉʉ prá-rát-dtà-ná-dtrai an kuan buu-chaa yîŋ dooy sùan diao, dâai grà-tam lɛ́ɛo bpen yàaŋ-yîŋ chên-níi, kɔ̌ɔ ù-bpàt-tà-wá táŋ-lǎai, joŋ yàa mii gɛ̀ɛ kâa-pá-jâo ləəi, dûay am-nâat kwaam-sǎm-rèt an gə̀ət jàak bun nán.',
+                'english': 'By whatever merit I, revering the Threefold Object worthy of the highest homage, have thus produced — may no misfortune whatever come to me, by the power of its accomplishment.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0469.PNG]: ‼‼ NO TITLE AND NO INVITATION ARE PRINTED,
+        #   AND BOTH ABSENCES WERE PREDICTED. The passage begins straight
+        #   after the previous chant's last Thai line, with no heading at all.
+        #   Page 198's invitation named BOTH chants —
+        #   …ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ
+        #   เส. — so this one needs none of its own. The brief recorded that a
+        #   page in advance and the sheet bears it out.
+        # ‼ CHECK [IMG_0469.PNG]: ‼ title_thai IS NOT READ OFF THIS PAGE. It
+        #   is taken from the book's own สารบัญ, which lists
+        #   สังเวคะปะริกิตตะนะปาฐะ, and from the app's first-pass copy at page
+        #   4 where the book does print the title. Recorded because a title
+        #   the sheet does not carry must never be passed off as a reading —
+        #   the same situation as page 194's second chant.
+        # ‼ CHECK [IMG_0469.PNG]: TWO CHANTS, NOT ONE, following the first
+        #   pass. The app already holds ratanattayappanamagatha (page 3) and
+        #   samvega-parikittana-patha (page 4) as separate entries, and the
+        #   invitation names them separately too. Split the same way here;
+        #   given the id samvega-parikittana-patha-plae.
+        # ‼ CHECK [IMG_0469.PNG]: english_unverified is set. The English is
+        #   this edition's working translation, checkable here against the
+        #   Thai the book prints.
+        'id': 'samvega-parikittana-patha-plae',
+        'title_thai': 'สังเวคะปะริกิตตะนะปาฐะ',
+        'title_pali': '',
+        'title_roman': 'Saṃvegaparikittanapāṭha',
+        'title_english': 'The Passage on Spiritual Urgency',
+        'page_start': 199,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 199,
+                'pali': 'อิธะ ตะถาคะโต โลเก อุปปันโน,',
+                'pali_roman': 'Idha tathāgato loke uppanno,',
+                'thai': 'พระตถาคตเจ้าเกิดขึ้นแล้ว ในโลกนี้,',
+                'paiboon': 'prá-dtà-taa-kót-jâo gə̀ət kʉ̂n lɛ́ɛo nai lôok níi,',
+                'english': 'Here a Tathāgata has arisen in the world,',
+            },
+            {
+                'number': 2,
+                'page': 199,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Arahaṃ sammāsambuddho,',
+                'thai': 'เป็นผู้ไกลจากกิเลส, ตรัสรู้ชอบได้โดยพระองค์เอง,',
+                'paiboon': 'bpen pûu glai jàak gì-lèet, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,',
+                'english': 'far from defilement, awakened rightly by himself,',
+            },
+            {
+                'number': 3,
+                'page': 199,
+                'pali': 'ธัมโม จะ เทสิโต นิยยานิโก,',
+                'pali_roman': 'Dhammo ca desito niyyāniko,',
+                'thai': 'และพระธรรมที่ทรงแสดง เป็นธรรมเครื่องออกจากทุกข์,',
+                'paiboon': 'lɛ́ prá-tam tîi soŋ sà-dɛɛŋ bpen tam krʉ̂aŋ ɔ̀ɔk jàak túk,',
+                'english': 'and the Dhamma he taught leads out of suffering,',
+            },
+            # ‼ CHECK [IMG_0469.PNG]: CUT AT THE PAGE TURN. Verse 4 is the
+            #   last thing on the sheet and the chant runs on to page 200. No
+            #   […] is used: it ends at a comma the book itself prints.
+            {
+                'number': 4,
+                'page': 199,
+                'pali': 'อุปะสะมิโก ปะรินิพพานิโก,',
+                'pali_roman': 'Upasamiko parinibbāniko,',
+                'thai': 'เป็นเครื่องสงบกิเลส, เป็นไปเพื่อปรินิพพาน,',
+                'paiboon': 'bpen krʉ̂aŋ sà-ŋòp gì-lèet, bpen bpai pʉ̂a bpà-rí-níp-paan,',
+                'english': 'it stills defilement and goes to final Nibbāna,',
             },
         ],
     },

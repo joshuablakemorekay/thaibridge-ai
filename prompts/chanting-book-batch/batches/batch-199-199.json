@@ -1,0 +1,238 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 2,
+  "manifest": [
+   "ratanattayappanamagatha-plae",
+   "samvega-parikittana-patha-plae"
+  ],
+  "pages": [
+   {
+    "page": 199,
+    "file": "IMG_0469.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "ratanattayappanamagatha-plae",
+    "verses": "7-13",
+    "starts_here": false,
+    "note": "The top of the sheet finishes ระตะนัตตะยัปปะณามะคาถา — six PALI lines with their Thai indented beneath, then a closing stanza whose Pali is set FULL WIDTH across two printed lines with its Thai following over three."
+   },
+   {
+    "page": 199,
+    "file": "IMG_0469.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "samvega-parikittana-patha-plae",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "The rest of the sheet, with NO title and NO invitation printed — both covered by page 198's invitation. Four PALI lines with their Thai indented beneath. The chant CONTINUES onto page 200."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "ratanattayappanamagatha-plae",
+   "continuation_of": "ratanattayappanamagatha-plae",
+   "working_notes": {
+    "invitation": "printed on page 198, and it covers this chant AND the passage that follows.",
+    "units": "Seven, verses 7-13. The chant ends at verse 13, whose Pali is set FULL WIDTH across two printed lines rather than in the usual bold-left form.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "None new.",
+    "pages": "IMG_0469.PNG, page 199. The chant arrived from page 198 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 7,
+     "pali": "โลกุตตะโร โย จะ ตะทัตถะทีปะโน,",
+     "pali_roman": "Lokuttaro yo ca tadatthadīpano,",
+     "thai": "ซึ่งเป็นตัวโลกุตระ, และส่วนใดที่ชี้แนวแห่งโลกุตระนั้น,",
+     "paiboon": "sʉ̂ŋ bpen dtua lôok-gùt-dtrà, lɛ́ sùan dai tîi chíi nɛɛo hɛ̀ŋ lôok-gùt-dtrà nán,",
+     "english": "which is itself supramundane, and whatever points the way to it —",
+     "page": 199
+    },
+    {
+     "number": 8,
+     "pali": "วันทามิ ธัมมัง อะหะมาทะเรนะ ตัง,",
+     "pali_roman": "Vandāmi dhammaṃ ahamādarena taṃ,",
+     "thai": "ข้าพเจ้าไหว้พระธรรมนั้น โดยใจเคารพเอื้อเฟื้อ,",
+     "paiboon": "kâa-pá-jâo wâai prá-tam nán dooy jai kao-róp ʉ́a-fʉ́ʉa,",
+     "english": "I revere that Dhamma with a heart of respect and care,",
+     "page": 199
+    },
+    {
+     "number": 9,
+     "pali": "สังโฆ สุเขตตาภ์ยะติเขตตะสัญญิโต,",
+     "pali_roman": "Saṅgho sukhettābhyatikhettasaññito,",
+     "thai": "พระสงฆ์เป็นนาบุญอันยิ่งใหญ่กว่านาบุญอันดีทั้งหลาย,",
+     "paiboon": "prá-sǒŋ bpen naa-bun an yîŋ-yài gwàa naa-bun an dii táŋ-lǎai,",
+     "english": "The Sangha is a field of merit greater than all good fields,",
+     "page": 199
+    },
+    {
+     "number": 10,
+     "pali": "โย ทิฏฐะสันโต สุคะตานุโพธะโก,",
+     "pali_roman": "Yo diṭṭhasanto sugatānubodhako,",
+     "thai": "เป็นผู้เห็นพระนิพพาน, ตรัสรู้ตามพระสุคต, หมู่ใด,",
+     "paiboon": "bpen pûu hěn prá-níp-paan, dtràt-rúu dtaam prá-sù-kót, mùu dai,",
+     "english": "which has seen the peace, awakening after the Fortunate One,",
+     "page": 199
+    },
+    {
+     "number": 11,
+     "pali": "โลลัปปะหีโน อะริโย สุเมธะโส,",
+     "pali_roman": "Lolappahīno ariyo sumedhaso,",
+     "thai": "เป็นผู้ละกิเลสเครื่องโลเล เป็นพระอริยเจ้า มีปัญญาดี,",
+     "paiboon": "bpen pûu lá gì-lèet krʉ̂aŋ loo-lee bpen prá-à-rí-yá-jâo mii bpan-yaa dii,",
+     "english": "which has abandoned wavering, noble and of good wisdom —",
+     "page": 199
+    },
+    {
+     "number": 12,
+     "pali": "วันทามิ สังฆัง อะหะมาทะเรนะ ตัง,",
+     "pali_roman": "Vandāmi saṅghaṃ ahamādarena taṃ,",
+     "thai": "ข้าพเจ้าไหว้พระสงฆ์หมู่นั้น โดยใจเคารพเอื้อเฟื้อ,",
+     "paiboon": "kâa-pá-jâo wâai prá-sǒŋ mùu nán dooy jai kao-róp ʉ́a-fʉ́ʉa,",
+     "english": "I revere that Sangha with a heart of respect and care,",
+     "page": 199
+    },
+    {
+     "number": 13,
+     "pali": "อิจเจวะเมกันตะภิปูชะเนยยะกัง, วัตถุตตะยัง วันทะยะตาภิสังขะตัง, ปุญญัง มะยา ยัง มะมะ สัพพุปัททะวา, มา โหนตุ เว ตัสสะ ปะภาวะสิทธิยา.",
+     "pali_roman": "Iccevamekantabhipūjaneyyakaṃ, vatthuttayaṃ vandayatābhisaṅkhataṃ, puññaṃ mayā yaṃ mama sabbupaddavā, mā hontu ve tassa pabhāvasiddhiyā.",
+     "thai": "บุญใด ที่ข้าพเจ้าผู้ไหว้อยู่ซึ่งวัตถุสาม, คือพระรัตนตรัย อันควรบูชายิ่งโดยส่วนเดียว, ได้กระทำแล้วเป็นอย่างยิ่ง เช่นนี้, ขออุปัทวะทั้งหลาย, จงอย่ามีแก่ข้าพเจ้าเลย, ด้วยอำนาจความสำเร็จ อันเกิดจากบุญนั้น.",
+     "paiboon": "bun dai tîi kâa-pá-jâo pûu wâai yùu sʉ̂ŋ wát-tù sǎam, kʉʉ prá-rát-dtà-ná-dtrai an kuan buu-chaa yîŋ dooy sùan diao, dâai grà-tam lɛ́ɛo bpen yàaŋ-yîŋ chên-níi, kɔ̌ɔ ù-bpàt-tà-wá táŋ-lǎai, joŋ yàa mii gɛ̀ɛ kâa-pá-jâo ləəi, dûay am-nâat kwaam-sǎm-rèt an gə̀ət jàak bun nán.",
+     "english": "By whatever merit I, revering the Threefold Object worthy of the highest homage, have thus produced — may no misfortune whatever come to me, by the power of its accomplishment.",
+     "page": 199
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "โลลัปปะหีโน",
+     "pali_roman": "lolappahīno",
+     "meaning": "'having abandoned wavering'. The Thai renders โลล as กิเลสเครื่องโลเล — the defilement that makes a mind unsteady"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 13,
+     "file": "IMG_0469.PNG",
+     "issue": "‼ VERSE 13'S PALI IS SET FULL WIDTH, not in the bold-left column the rest of the chant uses. It runs across two printed lines to the right margin, and its Thai then follows indented over three lines. It is the chant's closing stanza and the book gives it the whole measure. Recorded as ONE verse, because that is what the invitation and the sense make it."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0469.PNG",
+     "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Thirteen verses across pages 198 and 199. The app's first-pass copy at page 3 has SIXTEEN — the two passes divide the same text differently, because this one is divided by translation unit. Not a discrepancy to reconcile."
+    }
+   ]
+  },
+  {
+   "id": "samvega-parikittana-patha-plae",
+   "working_notes": {
+    "invitation": "ABSENT ON THIS PAGE, AND THAT IS INTENDED — page 198's invitation covers this chant as well as the one before it. None has been written.",
+    "units": "Four so far, one per PALI line with its Thai indented beneath.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "THE PAGE PRINTS NO TITLE. title_thai and title_roman are taken from the สารบัญ and from the app's first-pass copy at page 4; see the checks.",
+    "pages": "IMG_0469.PNG, page 199. The chant STARTS here and CONTINUES onto page 200."
+   },
+   "title_thai": "สังเวคะปะริกิตตะนะปาฐะ",
+   "title_pali": "",
+   "title_roman": "Saṃvegaparikittanapāṭha",
+   "title_english": "The Passage on Spiritual Urgency",
+   "page_start": 199,
+   "english_unverified": true,
+   "continues": true,
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อิธะ ตะถาคะโต โลเก อุปปันโน,",
+     "pali_roman": "Idha tathāgato loke uppanno,",
+     "thai": "พระตถาคตเจ้าเกิดขึ้นแล้ว ในโลกนี้,",
+     "paiboon": "prá-dtà-taa-kót-jâo gə̀ət kʉ̂n lɛ́ɛo nai lôok níi,",
+     "english": "Here a Tathāgata has arisen in the world,",
+     "page": 199
+    },
+    {
+     "number": 2,
+     "pali": "อะระหัง สัมมาสัมพุทโธ,",
+     "pali_roman": "Arahaṃ sammāsambuddho,",
+     "thai": "เป็นผู้ไกลจากกิเลส, ตรัสรู้ชอบได้โดยพระองค์เอง,",
+     "paiboon": "bpen pûu glai jàak gì-lèet, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ-eeŋ,",
+     "english": "far from defilement, awakened rightly by himself,",
+     "page": 199
+    },
+    {
+     "number": 3,
+     "pali": "ธัมโม จะ เทสิโต นิยยานิโก,",
+     "pali_roman": "Dhammo ca desito niyyāniko,",
+     "thai": "และพระธรรมที่ทรงแสดง เป็นธรรมเครื่องออกจากทุกข์,",
+     "paiboon": "lɛ́ prá-tam tîi soŋ sà-dɛɛŋ bpen tam krʉ̂aŋ ɔ̀ɔk jàak túk,",
+     "english": "and the Dhamma he taught leads out of suffering,",
+     "page": 199
+    },
+    {
+     "number": 4,
+     "pali": "อุปะสะมิโก ปะรินิพพานิโก,",
+     "pali_roman": "Upasamiko parinibbāniko,",
+     "thai": "เป็นเครื่องสงบกิเลส, เป็นไปเพื่อปรินิพพาน,",
+     "paiboon": "bpen krʉ̂aŋ sà-ŋòp gì-lèet, bpen bpai pʉ̂a bpà-rí-níp-paan,",
+     "english": "it stills defilement and goes to final Nibbāna,",
+     "page": 199
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "นิยยานิโก",
+     "pali_roman": "niyyāniko",
+     "meaning": "'leading out'. The Thai spells out what it leads out OF — ออกจากทุกข์, out of suffering — which the Pali leaves to be understood"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0469.PNG",
+     "issue": "‼‼ NO TITLE AND NO INVITATION ARE PRINTED, AND BOTH ABSENCES WERE PREDICTED. The passage begins straight after the previous chant's last Thai line, with no heading at all. Page 198's invitation named BOTH chants — …ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส. — so this one needs none of its own. The brief recorded that a page in advance and the sheet bears it out."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0469.PNG",
+     "issue": "‼ title_thai IS NOT READ OFF THIS PAGE. It is taken from the book's own สารบัญ, which lists สังเวคะปะริกิตตะนะปาฐะ, and from the app's first-pass copy at page 4 where the book does print the title. Recorded because a title the sheet does not carry must never be passed off as a reading — the same situation as page 194's second chant."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0469.PNG",
+     "issue": "TWO CHANTS, NOT ONE, following the first pass. The app already holds ratanattayappanamagatha (page 3) and samvega-parikittana-patha (page 4) as separate entries, and the invitation names them separately too. Split the same way here; given the id samvega-parikittana-patha-plae."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0469.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 4 is the last thing on the sheet and the chant runs on to page 200. No […] is used: it ends at a comma the book itself prints."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0469.PNG",
+     "issue": "english_unverified is set. The English is this edition's working translation, checkable here against the Thai the book prints."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "ratanattayappanamagatha-plae"
+  ],
+  "continues": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "resume_from": {
+   "chant": "samvega-parikittana-patha-plae",
+   "next_verse": 5,
+   "page": 200
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0469.PNG read end to end. Page number 199 printed clearly at the top centre. One chant ending, one beginning with no heading of any kind. No footnote, no rule, no colophon, no rubric. A hand holds the sheet at the right margin and obscures nothing.",
+  "notes": "‼ THE SECOND CHANT ON THIS SHEET HAS NEITHER TITLE NOR INVITATION, AND BOTH ABSENCES WERE PREDICTED FROM PAGE 198. Its title is taken from the สารบัญ and the first-pass copy, and that is recorded rather than passed off as a reading. Also verse 13 of the first chant is set FULL WIDTH, the only verse in this section so far not to use the bold-left column.",
+  "diacritic_exceptions": []
+ }
+}

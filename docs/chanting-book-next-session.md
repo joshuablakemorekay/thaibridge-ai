@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-198 went in.
+199 went in.
 
 ## Read first, in this order
 
@@ -80,13 +80,30 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 199, `IMG_0469`.** ⚠️ `ratanattayappanamagatha-plae` IS OPEN —
-six units in, **resume at verse 7**.
+**Next: page 200, `IMG_0470`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
+four units in, **resume at verse 5**. Its first-pass copy at page 4 runs to
+**40 verses**, so expect this one to be long.
 
-⚠️ **The สังเวคะปะริกิตตะนะปาฐะ that follows will have NO invitation of its
-own.** Page 198's invitation covers both chants —
-`…ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส.` — so
-record its absence as intended, not as an omission.
+## 📖 A chant can arrive with NEITHER title NOR invitation — and it did
+
+Page 199's second chant begins straight after the previous one's last Thai line,
+with no heading of any kind. **Both absences were predicted from page 198** and
+the sheet bore it out:
+
+- **no invitation**, because 198's invitation named both chants at once
+- **no title**, so `title_thai` comes from the สารบัญ and from the first-pass
+  copy at page 4 — recorded in a check, never passed off as a reading
+
+That is now twice in this section (page 194's second chant was the first). **When
+a chant has no printed title, say where the title came from.**
+
+## 🔢 The two passes divide the same text differently — that is not a discrepancy
+
+`ระตะนัตตะยัปปะณามะคาถา` has **16 verses** in its first-pass copy (page 3) and
+**13** here. Nothing is missing: the first pass split by Pali line, this section
+splits by translation unit, and one Thai gloss can cover what the Pali sets as
+two lines. Expect the counts to differ for every repeated chant, in both
+directions.
 
 ## ✅ The three praises closed exactly as predicted — and disagreed on one comma
 
