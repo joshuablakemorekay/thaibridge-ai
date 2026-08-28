@@ -34076,13 +34076,21 @@ CHANTS = [
             #   and ruled it a mistake in the book: all eight precepts should
             #   read สะมาทิยามิ, so this one now does.
             #
-            #   THIS IS THE ONE DELIBERATE DEPARTURE FROM PAGE FIDELITY in the
-            #   chanting data. Everywhere else the book's own slips are kept
-            #   exactly as printed. It is departed from here because a reader
-            #   chants this line aloud and the book's own eight neighbours
-            #   give the right form. The printed reading is recorded above so
-            #   nothing is lost, and no other slip may be 'corrected' without
-            #   the same ruling.
+            #   ONE OF EXACTLY THREE DELIBERATE DEPARTURES FROM PAGE
+            #   FIDELITY in the chanting data, all three ruled by Josh at the
+            #   physical book on 2026-08-28 and all three recording the
+            #   printed reading beside the correction:
+            #
+            #     p300  สะทามิยามิ  -> สะมาทิยามิ   (this one)
+            #     p258, p260  สีรีมะโต -> สิรีมะโต
+            #     p305  สัทธสัญญา -> สัททสัญญา
+            #
+            #   Everywhere else the book's own slips are kept exactly as
+            #   printed. These three were departed from because each is a
+            #   word a reader chants aloud and the book itself gives the
+            #   right form on a neighbouring line or page. NO OTHER SLIP MAY
+            #   BE 'CORRECTED' WITHOUT THE SAME RULING — the list above is
+            #   the whole of it, and it should stay short.
             {
                 'number': 2,
                 'printed_number': 2,
@@ -49935,7 +49943,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 21; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 40; the rest is not in the app yet.
         # ‼ CHECK [IMG_0469.PNG]: ‼‼ NO TITLE AND NO INVITATION ARE PRINTED,
         #   AND BOTH ABSENCES WERE PREDICTED. The passage begins straight
         #   after the previous chant's last Thai line, with no heading at all.
@@ -50187,6 +50195,197 @@ CHANTS = [
                 'thai': 'เพื่อให้สาวกกำหนดรอบรู้อุปาทานขันธ์ เหล่านี้เอง,',
                 'paiboon': 'pʉ̂a hâi sǎa-wók gam-nòt rɔ̂ɔp-rúu ù-bpaa-taan-kǎn lào níi eeŋ,',
                 'english': 'for the full understanding of which,',
+            },
+            {
+                'number': 22,
+                'page': 201,
+                'pali': 'ธะระมาโน โส ภะคะวา,',
+                'pali_roman': 'Dharamāno so bhagavā,',
+                'thai': 'จึงพระผู้มีพระภาคเจ้านั้น เมื่อยังทรงพระชนม์อยู่,',
+                'paiboon': 'jʉŋ prá-pûu-mii-prá-pâak-jâo nán mʉ̂a yaŋ soŋ prá-chon yùu,',
+                'english': 'So that Blessed One, while he still lived,',
+            },
+            {
+                'number': 23,
+                'page': 201,
+                'pali': 'เอวัง พะหุลัง สาวะเก วิเนติ,',
+                'pali_roman': 'Evaṃ bahulaṃ sāvake vineti,',
+                'thai': 'ย่อมทรงแนะนำสาวกทั้งหลาย เช่นนี้เป็นส่วนมาก,',
+                'paiboon': 'yɔ̂m soŋ nɛ́-nam sǎa-wók táŋ-lǎai chên-níi bpen sùan mâak,',
+                'english': 'instructed his disciples largely in this way,',
+            },
+            # ‼ CHECK [IMG_0471.PNG]: THE COLON-DASH :- APPEARS AGAIN, in the
+            #   Thai of verse 24 — …อย่างนี้ว่า :- — introducing the list that
+            #   follows, exactly as on page 200. Kept with its space.
+            {
+                'number': 24,
+                'page': 201,
+                'pali': 'เอวัง ภาคา จะ ปะนัสสะ ภะคะวะโต สาวะเกสุ อะนุสาสะนี พะหุลา ปะวัตตะติ,',
+                'pali_roman': 'Evaṃ bhāgā ca panassa bhagavato sāvakesu anusāsanī bahulā pavattati,',
+                'thai': 'อนึ่ง คำสั่งสอนของพระผู้มีพระภาคเจ้านั้น, ย่อมเป็นไปในสาวกทั้งหลาย, ส่วนมาก, มีส่วนคือการจำแนกอย่างนี้ว่า :-',
+                'paiboon': 'à-nʉ̀ŋ kam-sàŋ-sɔ̌ɔn kɔ̌ɔŋ prá-pûu-mii-prá-pâak-jâo nán, yɔ̂m bpen bpai nai sǎa-wók táŋ-lǎai, sùan mâak, mii sùan kʉʉ gaan jam-nɛ̂ɛk yàaŋ-níi wâa :-',
+                'english': "and moreover that Blessed One's instruction to his disciples largely proceeded with this division:—",
+            },
+            # ‼ CHECK [IMG_0471.PNG]: TEN VERSES SET AS TWO PARALLEL FIVES.
+            #   Verses 25-29 run the five aggregates against อะนิจจา, and
+            #   30-34 run the SAME five against อะนัตตา. All ten were read off
+            #   the sheet separately rather than copied; the Thai differs only
+            #   in ไม่เที่ยง against ไม่ใช่ตัวตน.
+            {
+                'number': 25,
+                'page': 201,
+                'pali': 'รูปัง อะนิจจัง,',
+                'pali_roman': 'Rūpaṃ aniccaṃ,',
+                'thai': 'รูปไม่เที่ยง,',
+                'paiboon': 'rûup mâi tîaŋ,',
+                'english': 'form is impermanent,',
+            },
+            {
+                'number': 26,
+                'page': 201,
+                'pali': 'เวทะนา อะนิจจา,',
+                'pali_roman': 'Vedanā aniccā,',
+                'thai': 'เวทนาไม่เที่ยง,',
+                'paiboon': 'wêet-tà-naa mâi tîaŋ,',
+                'english': 'feeling is impermanent,',
+            },
+            {
+                'number': 27,
+                'page': 201,
+                'pali': 'สัญญา อะนิจจา,',
+                'pali_roman': 'Saññā aniccā,',
+                'thai': 'สัญญาไม่เที่ยง,',
+                'paiboon': 'sǎn-yaa mâi tîaŋ,',
+                'english': 'perception is impermanent,',
+            },
+            {
+                'number': 28,
+                'page': 201,
+                'pali': 'สังขารา อะนิจจา,',
+                'pali_roman': 'Saṅkhārā aniccā,',
+                'thai': 'สังขารไม่เที่ยง,',
+                'paiboon': 'sǎŋ-kǎan mâi tîaŋ,',
+                'english': 'formations are impermanent,',
+            },
+            {
+                'number': 29,
+                'page': 201,
+                'pali': 'วิญญาณัง อะนิจจัง,',
+                'pali_roman': 'Viññāṇaṃ aniccaṃ,',
+                'thai': 'วิญญาณไม่เที่ยง,',
+                'paiboon': 'win-yaan mâi tîaŋ,',
+                'english': 'consciousness is impermanent,',
+            },
+            {
+                'number': 30,
+                'page': 201,
+                'pali': 'รูปัง อะนัตตา,',
+                'pali_roman': 'Rūpaṃ anattā,',
+                'thai': 'รูปไม่ใช่ตัวตน,',
+                'paiboon': 'rûup mâi châi dtua-dton,',
+                'english': 'form is not-self,',
+            },
+            {
+                'number': 31,
+                'page': 201,
+                'pali': 'เวทะนา อะนัตตา,',
+                'pali_roman': 'Vedanā anattā,',
+                'thai': 'เวทนาไม่ใช่ตัวตน,',
+                'paiboon': 'wêet-tà-naa mâi châi dtua-dton,',
+                'english': 'feeling is not-self,',
+            },
+            {
+                'number': 32,
+                'page': 201,
+                'pali': 'สัญญา อะนัตตา,',
+                'pali_roman': 'Saññā anattā,',
+                'thai': 'สัญญาไม่ใช่ตัวตน,',
+                'paiboon': 'sǎn-yaa mâi châi dtua-dton,',
+                'english': 'perception is not-self,',
+            },
+            {
+                'number': 33,
+                'page': 201,
+                'pali': 'สังขารา อะนัตตา,',
+                'pali_roman': 'Saṅkhārā anattā,',
+                'thai': 'สังขารไม่ใช่ตัวตน,',
+                'paiboon': 'sǎŋ-kǎan mâi châi dtua-dton,',
+                'english': 'formations are not-self,',
+            },
+            {
+                'number': 34,
+                'page': 201,
+                'pali': 'วิญญาณัง อะนัตตา,',
+                'pali_roman': 'Viññāṇaṃ anattā,',
+                'thai': 'วิญญาณไม่ใช่ตัวตน,',
+                'paiboon': 'win-yaan mâi châi dtua-dton,',
+                'english': 'consciousness is not-self,',
+            },
+            {
+                'number': 35,
+                'page': 201,
+                'pali': 'สัพเพ สังขารา อะนิจจา,',
+                'pali_roman': 'Sabbe saṅkhārā aniccā,',
+                'thai': 'สังขารทั้งหลายทั้งปวง ไม่เที่ยง,',
+                'paiboon': 'sǎŋ-kǎan táŋ-lǎai táŋ-bpuaŋ mâi tîaŋ,',
+                'english': 'all formations are impermanent,',
+            },
+            {
+                'number': 36,
+                'page': 201,
+                'pali': 'สัพเพ ธัมมา อะนัตตาติ,',
+                'pali_roman': 'Sabbe dhammā anattāti,',
+                'thai': 'ธรรมทั้งหลายทั้งปวง ไม่ใช่ตัวตน ดังนี้,',
+                'paiboon': 'tam táŋ-lǎai táŋ-bpuaŋ mâi châi dtua-dton daŋ-níi,',
+                'english': 'all things are not-self — thus,',
+            },
+            # ‼ CHECK [IMG_0471.PNG]: ‼ THE BOOK PRINTS A BRACKETED
+            #   ALTERNATIVE INSIDE THE PALI: เต (ตา) มะยัง โอติณณาม์หะ. Read
+            #   at 5x. เต is the masculine 'we' and (ตา) the feminine, so the
+            #   same printed line serves men and women in one assembly.
+            #   Reproduced exactly, brackets included — this is the FIRST
+            #   bracketed variant to appear inside a chanted Pali line in this
+            #   run, as distinct from the bracketed invitations and rubrics.
+            #   The Thai translation below it is not doubled; only the Pali
+            #   is.
+            {
+                'number': 37,
+                'page': 201,
+                'pali': 'เต (ตา) มะยัง โอติณณาม์หะ,',
+                'pali_roman': 'Te (tā) mayaṃ otiṇṇāmha,',
+                'thai': 'พวกเราทั้งหลาย เป็นผู้ถูกครอบงำแล้ว,',
+                'paiboon': 'pûak rao táŋ-lǎai bpen pûu tùuk krɔ̂ɔp-ŋam lɛ́ɛo,',
+                'english': 'We are overwhelmed,',
+            },
+            {
+                'number': 38,
+                'page': 201,
+                'pali': 'ชาติยา,',
+                'pali_roman': 'Jātiyā,',
+                'thai': 'โดยความเกิด,',
+                'paiboon': 'dooy kwaam-gə̀ət,',
+                'english': 'by birth,',
+            },
+            {
+                'number': 39,
+                'page': 201,
+                'pali': 'ชะรามะระเณนะ,',
+                'pali_roman': 'Jarāmaraṇena,',
+                'thai': 'โดยความแก่ และความตาย,',
+                'paiboon': 'dooy kwaam-gɛ̀ɛ lɛ́ kwaam-dtaai,',
+                'english': 'by ageing and death,',
+            },
+            # ‼ CHECK [IMG_0471.PNG]: CUT AT THE PAGE TURN. Verse 40 is the
+            #   last thing on the sheet and the chant runs on to page 202. No
+            #   […] is used: it ends at a comma the book itself prints.
+            {
+                'number': 40,
+                'page': 201,
+                'pali': 'โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ,',
+                'pali_roman': 'Sokehi paridevehi dukkhehi domanassehi upāyāsehi,',
+                'thai': 'โดยความโศก ความร่ำไรรำพัน ความไม่สบายกาย ความไม่สบายใจ ความคับแค้นใจ ทั้งหลาย,',
+                'paiboon': 'dooy kwaam-sòok kwaam-râm-rai-ram-pan kwaam mâi sà-baai gaai kwaam mâi sà-baai jai kwaam káp-kɛ́ɛn jai táŋ-lǎai,',
+                'english': 'by sorrow, lamentation, bodily pain, mental pain and despair,',
             },
         ],
     },
