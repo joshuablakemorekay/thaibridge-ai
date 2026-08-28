@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-201 went in.
+202 went in.
 
 ## Read first, in this order
 
@@ -80,10 +80,10 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 202, `IMG_0472`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
-**40 units in, resume at verse 41**. Its first-pass copy at page 4 has 40
-verses in total, so this one has already passed that count; expect it to run
-further still.
+**Next: page 203, `IMG_0473`.** ⚠️ `samvega-parikittana-patha-plae` IS OPEN —
+**50 units in, resume at verse 51**. On 202 it reached what looked like an
+ending twice over — a monastic one and a lay one, each under its own rubric —
+and still ran on, so do not assume the next full stop closes it.
 
 ## ✍️ Typography this section uses that must not be tidied
 
@@ -97,6 +97,8 @@ Collected as they turn up, all reproduced exactly:
 | brackets on rubrics | 194–198 | `(กราบ)`, `(๓ ครั้ง)`, `(กราบระลึกถึง…)` |
 | a printed full stop in a title | 112 | `บทขัด อัคคัปปะสาทะสุตตัง.` |
 | a **bracketed variant inside chanted Pali** | 201 v37 | `เต (ตา) มะยัง …` — masculine with the feminine beside it, so one line serves a mixed assembly. The **Thai is not doubled**, only the Pali |
+| a **rubric splitting one chant into two endings** | 202 v44, v49 | `(สำหรับภิกษุ-สามเณรสวด)` then `(สำหรับอุบาสก-อุบาสิกาสวด)` — alternatives, not a sequence. Both runs kept in full, each rubric on the verse it heads |
+| a **full stop that closes an alternative, not the chant** | 202 v48 | `สังวัตตะตุ.` / `เทอญ.` — the monastic run ends, the lay run starts at 49, the chant carries on to 203 |
 
 ## 📖 A chant can arrive with NEITHER title NOR invitation — and it did
 

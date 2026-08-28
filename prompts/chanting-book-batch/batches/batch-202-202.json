@@ -1,0 +1,186 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "pages": [
+   {
+    "page": 202,
+    "file": "IMG_0472.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "samvega-parikittana-patha-plae",
+    "verses": "41-50",
+    "starts_here": false,
+    "note": "The whole sheet, one chant, but with TWO centred italic rubrics splitting it into a monastic ending (44-48) and a lay ending (49-50). No title, no invitation of its own, no footnote. The chant CONTINUES onto page 203."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "samvega-parikittana-patha-plae",
+   "continuation_of": "samvega-parikittana-patha-plae",
+   "continues": true,
+   "working_notes": {
+    "invitation": "none of its own - page 198's invitation covers this chant.",
+    "units": "Ten, verses 41-50, one per PALI line with its Thai. Two of them carry a rubric above.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "Mid-chant rubrics that switch who is chanting - see the checks.",
+    "pages": "IMG_0472.PNG, page 202. The chant arrived from page 201 and CONTINUES onto page 203."
+   },
+   "verses": [
+    {
+     "number": 41,
+     "pali": "ทุกโขติณณา,",
+     "pali_roman": "Dukkhotiṇṇā,",
+     "thai": "เป็นผู้ถูกความทุกข์ หยั่งเอาแล้ว,",
+     "paiboon": "bpen pûu tùuk kwaam-túk yàŋ ao lɛ́ɛo,",
+     "english": "overwhelmed by suffering,",
+     "page": 202
+    },
+    {
+     "number": 42,
+     "pali": "ทุกขะปะเรตา,",
+     "pali_roman": "Dukkhaparetā,",
+     "thai": "เป็นผู้มีความทุกข์ เป็นเบื้องหน้าแล้ว,",
+     "paiboon": "bpen pûu mii kwaam-túk bpen bʉ̂aŋ-nâa lɛ́ɛo,",
+     "english": "with suffering before us,",
+     "page": 202
+    },
+    {
+     "number": 43,
+     "pali": "อัปเปวะนามิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยา ปัญญาเยถาติ,",
+     "pali_roman": "Appevanāmimassa kevalassa dukkhakkhandhassa antakiriyā paññāyethāti,",
+     "thai": "ทำไฉน การทำที่สุดแห่งกองทุกข์ทั้งสิ้นนี้, จะพึงปรากฏชัดแก่เราได้,",
+     "paiboon": "tam-chà-nǎi gaan tam tîi-sùt hɛ̀ŋ gɔɔŋ-túk táŋ-sîn níi, jà pʉŋ bpràa-gòt chát gɛ̀ɛ rao dâai,",
+     "english": "how might the making an end of this whole mass of suffering be made plain to us,",
+     "page": 202
+    },
+    {
+     "number": 44,
+     "pali": "จิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง อุททิสสะ อะระหันตัง สัมมาสัมพุทธัง,",
+     "pali_roman": "Ciraparinibbutampi taṃ bhagavantaṃ uddissa arahantaṃ sammāsambuddhaṃ,",
+     "thai": "เราทั้งหลาย อุทิศเฉพาะพระผู้มีพระภาคเจ้า, ผู้ไกลจากกิเลส, ตรัสรู้ชอบได้โดยพระองค์เอง, แม้ปรินิพพานนานแล้ว พระองค์นั้น,",
+     "paiboon": "rao táŋ-lǎai ù-tít chà-pɔ́ prá-pûu-mii-prá-pâak-jâo, pûu glai jàak gì-lèet, dtràt-rúu chɔ̂ɔp dâai dooy prá-oŋ eeŋ, mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo prá-oŋ nán,",
+     "english": "Dedicating ourselves to that Blessed One, the Arahant, perfectly awakened by himself, long since fully unbound,",
+     "page": 202,
+     "rubric": "(สำหรับภิกษุ-สามเณรสวด)"
+    },
+    {
+     "number": 45,
+     "pali": "สัทธา อะคารัส์มา อะนะคาริยัง ปัพพะชิตา,",
+     "pali_roman": "Saddhā agārasmā anagāriyaṃ pabbajitā,",
+     "thai": "เป็นผู้มีศรัทธา ออกบวชจากเรือน ไม่เกี่ยวข้องด้วยเรือนแล้ว,",
+     "paiboon": "bpen pûu mii sàt-taa ɔ̀ɔk-bùat jàak rʉan mâi gìao-kɔ̂ɔŋ dûay rʉan lɛ́ɛo,",
+     "english": "we, out of faith, have gone forth from home into homelessness,",
+     "page": 202
+    },
+    {
+     "number": 46,
+     "pali": "ตัส์มิง ภะคะวะติ พ์รัห์มะจะริยัง จะรามะ,",
+     "pali_roman": "Tasmiṃ bhagavati brahmacariyaṃ carāma,",
+     "thai": "ประพฤติอยู่ซึ่งพรหมจรรย์ ในพระผู้มีพระภาคเจ้าพระองค์นั้น,",
+     "paiboon": "bprà-prʉ́t yùu sʉ̂ŋ prom-má-jan nai prá-pûu-mii-prá-pâak-jâo prá-oŋ nán,",
+     "english": "and live the holy life in that Blessed One,",
+     "page": 202
+    },
+    {
+     "number": 47,
+     "pali": "ภิกขูนัง สิกขาสาชีวะสะมาปันนา,",
+     "pali_roman": "Bhikkhūnaṃ sikkhāsājīvasamāpannā,",
+     "thai": "ถึงพร้อมด้วยสิกขาและธรรมเป็นเครื่องเลี้ยงชีวิต ของภิกษุทั้งหลาย",
+     "paiboon": "tʉ̌ŋ prɔ́ɔm dûay sìk-kǎa lɛ́ tam bpen krʉ̂aŋ líaŋ chii-wít kɔ̌ɔŋ pík-sù táŋ-lǎai",
+     "english": "endowed with the training and the livelihood of the bhikkhus,",
+     "page": 202
+    },
+    {
+     "number": 48,
+     "pali": "ตัง โน พ์รัห์มะจะริยัง อิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยายะ สังวัตตะตุ.",
+     "pali_roman": "Taṃ no brahmacariyaṃ imassa kevalassa dukkhakkhandhassa antakiriyāya saṃvattatu.",
+     "thai": "ขอให้พรหมจรรย์ของเราทั้งหลายนั้น, จงเป็นไปเพื่อการทำที่สุด แห่งกองทุกข์ทั้งสิ้นนี้ เทอญ.",
+     "paiboon": "kɔ̌ɔ hâi prom-má-jan kɔ̌ɔŋ rao táŋ-lǎai nán, joŋ bpen bpai pʉ̂a gaan tam tîi-sùt hɛ̀ŋ gɔɔŋ-túk táŋ-sîn níi təən.",
+     "english": "May this holy life of ours lead to the making an end of this whole mass of suffering.",
+     "page": 202
+    },
+    {
+     "number": 49,
+     "pali": "จิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง สะระณัง คะตา,",
+     "pali_roman": "Ciraparinibbutampi taṃ bhagavantaṃ saraṇaṃ gatā,",
+     "thai": "เราทั้งหลายผู้ถึงแล้วซึ่งพระผู้มีพระภาคเจ้า แม้ปรินิพพานนานแล้ว พระองค์นั้น เป็นสรณะ,",
+     "paiboon": "rao táŋ-lǎai pûu tʉ̌ŋ lɛ́ɛo sʉ̂ŋ prá-pûu-mii-prá-pâak-jâo mɛ́ɛ bpà-rí-níp-paan naan lɛ́ɛo prá-oŋ nán bpen sà-rá-ná,",
+     "english": "We, having gone to that Blessed One as refuge, long since fully unbound,",
+     "page": 202,
+     "rubric": "(สำหรับอุบาสก-อุบาสิกาสวด)"
+    },
+    {
+     "number": 50,
+     "pali": "ธัมมัญจะ สังฆัญจะ,",
+     "pali_roman": "Dhammañca saṅghañca,",
+     "thai": "ถึงพระธรรมด้วย, ถึงพระสงฆ์ด้วย,",
+     "paiboon": "tʉ̌ŋ prá-tam dûay, tʉ̌ŋ prá-sǒŋ dûay,",
+     "english": "and to the Dhamma and to the Saṅgha,",
+     "page": 202
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะคารัส์มา อะนะคาริยัง",
+     "pali_roman": "agārasmā anagāriyaṃ",
+     "meaning": "'from the house into the houseless' - the standard phrase for going forth. The Thai renders it ออกบวชจากเรือน ไม่เกี่ยวข้องด้วยเรือนแล้ว, 'ordained away from the house, no longer involved with the house'"
+    },
+    {
+     "pali": "สิกขาสาชีวะสะมาปันนา",
+     "pali_roman": "sikkhāsājīvasamāpannā",
+     "meaning": "'possessed of the training and the way of life held in common'. The Thai splits it into สิกขา, the training, and ธรรมเป็นเครื่องเลี้ยงชีวิต, the Dhamma that is the means of livelihood"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 44,
+     "file": "IMG_0472.PNG",
+     "issue": "‼ THE CHANT SPLITS IN TWO HERE, AND THE BOOK PRINTS BOTH ENDINGS. A centred italic rubric (สำหรับภิกษุ-สามเณรสวด) - 'for bhikkhus and samaneras to chant' - stands above verse 44, and a second, (สำหรับอุบาสก-อุบาสิกาสวด), 'for laymen and laywomen to chant', stands above verse 49. They are alternatives: an assembly chants one run or the other, not both. Recorded as verse rubrics so each prints where the book prints it, and BOTH runs are kept in full, in order, exactly as the sheet has them. Same device as page 201's เต (ตา) - one printed page serving different chanters - but done with rubrics over whole passages instead of brackets inside a line."
+    },
+    {
+     "verse": 48,
+     "file": "IMG_0472.PNG",
+     "issue": "A FULL STOP MID-CHANT, and it is kept. Verse 48 ends สังวัตตะตุ. and its Thai ends เทอญ. - the monastic run finishes there and the lay run starts fresh at 49. The chant itself is not over; the punctuation closes the alternative, not the chant."
+    },
+    {
+     "verse": 47,
+     "file": "IMG_0472.PNG",
+     "issue": "NO COMMA AT THE END OF VERSE 47's THAI. Read at 3.2x: ของภิกษุทั้งหลาย is followed by nothing at all, where every neighbouring Thai line ends in a comma. Reproduced bare. The Pali line above it does end in a comma."
+    },
+    {
+     "verse": 41,
+     "file": "IMG_0472.PNG",
+     "issue": "Verses 41 and 42 are short and set with their Thai in a RIGHT-HAND COLUMN; the rest are long and indented beneath. Same length-driven choice as every sheet in this section."
+    },
+    {
+     "verse": 50,
+     "file": "IMG_0472.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 50 is the last thing on the sheet and the chant runs on to page 203. No […] is used: it ends at a comma the book itself prints."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "continues": [
+   "samvega-parikittana-patha-plae"
+  ],
+  "resume_from": {
+   "chant": "samvega-parikittana-patha-plae",
+   "next_verse": 51,
+   "page": 203
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0472.PNG read end to end, and every line re-read zoomed 3-3.5x. Page number 202 printed clearly at the top centre. One chant throughout, two centred italic rubrics, no heading, no footnote, no rule, no colophon. A hand holds the sheet at the left margin and obscures nothing.",
+  "notes": "‼ THE CHANT SPLITS INTO A MONASTIC ENDING AND A LAY ENDING, each under its own centred italic rubric, and the book prints both. Kept in full and in order, with the rubrics on the verses they head. Verse 48 carries a mid-chant full stop that closes the monastic alternative, and verse 47's Thai ends with NO comma where its neighbours all have one - both reproduced as printed.",
+  "diacritic_exceptions": []
+ }
+}
