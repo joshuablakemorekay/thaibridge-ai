@@ -1,0 +1,243 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "chasaraniyadhamma-suttam",
+   "bot-khat-bhikkhu-aparihaniyadhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 115,
+    "file": "IMG_0380.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "chasaraniyadhamma-suttam",
+    "verses": "5-8",
+    "starts_here": false,
+    "blocks": [
+     {
+      "type": "footnote",
+      "thai": "1. อํ. ฉกฺก. 22/322",
+      "english": "Aṅguttara Nikāya, Book of Sixes, 22/322.",
+      "english_unverified": true
+     }
+    ],
+    "note": "The top two thirds. The tail of the line page 114 cut, then items 5 and 6, the sutta's closing paragraph, a centred colophon, and a footnote below a rule at the page foot."
+   },
+   {
+    "page": 115,
+    "file": "IMG_0380.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-bhikkhu-aparihaniyadhamma-suttam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "The foot of the sheet. A centred bold heading, then four rows of Pali set as pādas in two columns. No invitation of its own - a บทขัด is itself the invitation. The chant CONTINUES onto page 116."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "chasaraniyadhamma-suttam",
+   "continuation_of": "chasaraniyadhamma-suttam",
+   "closing": {
+    "pali": "สาราณียะธัมมะสุตตัง นิฏฐิตัง.",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "The Discourse on the Principles of Cordiality is ended."
+   },
+   "working_notes": {
+    "invitation": "printed on 114, with the บทขัด that precedes the sutta.",
+    "units": "Four. Verse 5 is COMPLETED here - page 114 cut it with […] - and verses 6-8 finish the sutta.",
+    "ordering": "Pali only; this section prints no Thai translation.",
+    "conventions": "A colophon and a footnote, both new to this chant.",
+    "pages": "IMG_0380.PNG, page 115. The chant arrived from page 114 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 5,
+     "page": 114,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ, เย เต ลาภา ธัมมิกา ธัมมะลัทธา อันตะมะโส ปัตตะปะริยาปันนะมัตตัมปิ, ตะถารูเปหิ ลาเภหิ อัปปะฏิวิภัตตะโภคี โหติ, สีละวันเตหิ สะพ๎รัห๎มะจารีหิ สาธาระณะโภคี, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu, ye te lābhā dhammikā dhammaladdhā antamaso pattapariyāpannamattampi, tathārūpehi lābhehi appaṭivibhattabhogī hoti, sīlavantehi sabrahmacārīhi sādhāraṇabhogī, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk shares without reserve whatever gains are righteous and righteously obtained, down to the mere contents of his bowl, using them in common with his virtuous companions in the holy life. This too is a principle of cordiality, endearing and respectful, conducing to helpfulness, to non-dispute, to concord and to unity."
+    },
+    {
+     "number": 6,
+     "page": 115,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ, ยานิ ตานิ สีลานิ อะขัณฑานิ อะฉิททานิ อะสะพะลานิ อะกัมมาสานิ, ภุชิสสานิ วิญญุปะสัตถานิ อะปะรามัตถานิ สะมาธิสังวัตตะนิกานิ, ตะถารูเปสุ สีเลสุ สีลสามัญญะคะโต วิหะระติ, สะพ๎รัห๎มะจารีหิ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu, yāni tāni sīlāni akhaṇḍāni achiddāni asabalāni akammāsāni, bhujissāni viññupasatthāni aparāmatthāni samādhisaṃvattanikāni, tathārūpesu sīlesu sīlsāmaññagato viharati, sabrahmacārīhi āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk dwells possessed — openly and in private, in common with his companions in the holy life — of those virtues that are unbroken, untorn, unblemished, unmottled, freeing, praised by the wise, untarnished, and conducive to concentration. This too is a principle of cordiality, endearing and respectful, conducing to helpfulness, to non-dispute, to concord and to unity.",
+     "printed_number": 5
+    },
+    {
+     "number": 7,
+     "page": 115,
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ, ยายัง ทิฏฐิ อะริยา นิยยานิกา, นิยยาติ ตักกะรัสสะ สัมมาทุกขักขะยายะ, ตะถารูปายะ ทิฏฐิยา ทิฏฐิสามัญญะคะโต วิหะระติ, สะพ๎รัห๎มะจารีหิ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.",
+     "pali_roman": "Puna caparaṃ bhikkhave bhikkhu, yāyaṃ diṭṭhi ariyā niyyānikā, niyyāti takkarassa sammādukkhakkhayāya, tathārūpāya diṭṭhiyā diṭṭhisāmaññagato viharati, sabrahmacārīhi āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And further, monks, a monk dwells possessed — openly and in private, in common with his companions in the holy life — of that view which is noble and emancipating, and which leads whoever acts upon it to the complete destruction of suffering. This too is a principle of cordiality, endearing and respectful, conducing to helpfulness, to non-dispute, to concord and to unity.",
+     "printed_number": 6
+    },
+    {
+     "number": 8,
+     "page": 115,
+     "pali": "อิเม โข ภิกขะเว ฉะ ธัมมา สาราณียา ปิยะกะระณา คะรุกะระณา, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตันตีติ. อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.",
+     "pali_roman": "Ime kho bhikkhave cha dhammā sārāṇīyā piyakaraṇā garukaraṇā, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattantīti. idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "These, monks, are the six principles of cordiality, endearing and respectful, conducing to helpfulness, to non-dispute, to concord and to unity. Thus spoke the Blessed One, and those monks delighted in his words."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อัปปะฏิวิภัตตะโภคี",
+     "pali_roman": "appaṭivibhattabhogī",
+     "meaning": "'one who enjoys without dividing off' - who does not set a share aside for himself before sharing. The phrase อันตะมะโส ปัตตะปะริยาปันนะมัตตัมปิ, 'down to the mere contents of the bowl', fixes how far the sharing goes"
+    },
+    {
+     "pali": "สาราณียา",
+     "pali_roman": "sāraṇīyā",
+     "meaning": "'conducive to cordiality', the word the whole sutta turns on and the one its title takes. Each of the six ends on the same refrain, printed in full every time"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 5,
+     "file": "IMG_0380.PNG",
+     "issue": "COMPLETES THE LINE PAGE 114 CUT. Page 114 ended …เย เต ลาภา ธัมมิกา ธัมมะลัทธา […] and this sheet opens อันตะมะโส ปัตตะปะริยาปันนะมัตตัมปิ, mid-sentence with no number of its own. The whole line is given here so the […] is replaced rather than left standing."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0380.PNG",
+     "issue": "THE PRINTED NUMBERS DO NOT MATCH THE APP'S. The book numbers these items 5. and 6.; the app calls them verses 6 and 7, because its verse 1 is the nidāna, which the book leaves unnumbered. printed_number carries the book's figure on both, which is what a reader chanting from the page needs."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0380.PNG",
+     "issue": "THE REFRAIN IS PRINTED IN FULL EVERY TIME, never abbreviated with ฯเปฯ - อะยัมปิ ธัมโม สาราณีโย … เอกีภาวายะ สังวัตตะติ. closes verses 5, 6 and 7 identically, and verse 8 gives it once more in the plural. All four were read off the sheet rather than copied from one another."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0380.PNG",
+     "issue": "A COLOPHON AND A FOOTNOTE, both on this sheet. The centred สาราณียะธัมมะสุตตัง นิฏฐิตัง. closes the sutta and is recorded as the chant's `closing`. Verse 8 ends with a superscript 1 whose footnote sits below a rule at the page foot: 1. อํ. ฉกฺก. 22/322 - an Aṅguttara citation, written with the Pali phinthu, and recorded as a page block."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-bhikkhu-aparihaniyadhamma-suttam",
+   "title_thai": "บทขัด ภิกขุอะปะริหานิยะธัมมะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt pík-kù-à-bpà-rí-hǎa-ní-yá-tam-má-sùt-dtaŋ",
+   "page_start": 115,
+   "continues": true,
+   "working_notes": {
+    "invitation": "none of its own; a บทขัด IS the invitation to the sutta that follows.",
+    "units": "Four, one per printed ROW - two pādas in two columns, joined by a space, as page 114's บทขัด was.",
+    "ordering": "Pali only.",
+    "conventions": "Two-column pādas; a full stop mid-stanza.",
+    "pages": "IMG_0380.PNG, page 115. The chant STARTS here and CONTINUES onto page 116."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 115,
+     "pali": "มะหาการุณิโก พุทโธ สาวะกานัง หิเตสะโก",
+     "pali_roman": "Mahākāruṇiko buddho sāvakānaṃ hitesako",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Buddha, of great compassion, seeking the welfare of his disciples,"
+    },
+    {
+     "number": 2,
+     "page": 115,
+     "pali": "วุฑฒิง อากังขะมาโนวะ ธัมเม สัมพุทธะเทสิเต.",
+     "pali_roman": "Vuḍḍhiṃ ākaṅkhamānova dhamme sambuddhadesite.",
+     "thai": "",
+     "paiboon": "",
+     "english": "wishing only for their growth in the Dhamma the Awakened One had taught,"
+    },
+    {
+     "number": 3,
+     "page": 115,
+     "pali": "ภิกขูนัง สัมมะทักขาสิ ธัมเม อะปะริหานิเย",
+     "pali_roman": "Bhikkhūnaṃ sammadakkhāsi dhamme aparihāniye",
+     "thai": "",
+     "paiboon": "",
+     "english": "rightly declared to the monks the things that lead to no decline;"
+    },
+    {
+     "number": 4,
+     "page": 115,
+     "pali": "สุต๎วานุปะฏิปัต๎ยัตถัง ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Sutvānupaṭipatyatthaṃ taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "so that, having heard, we may practise accordingly — let us recite that discourse."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะปะริหานิเย",
+     "pali_roman": "aparihāniye",
+     "meaning": "'not leading to decline'. The sutta this บทขัด introduces lists the conditions under which a community does not decline, and the title takes the word straight from it"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0380.PNG",
+     "issue": "‼ THE PAGE HEADING AND THE สารบัญ DIFFER BY A SPACE, as they do for every บทขัด from page 82 on. The page prints บทขัด ภิกขุอะปะริหานิยะธัมมะสุตตัง spaced; the table has บทขัดภิกขุอะปะริหานิยะธัมมะสุตตัง unspaced. The PAGE is reproduced, per the settled rule, so title_thai stops being a key in _CONTENTS_ROMAN and the contents test cannot see this chant. title_roman is composed to match the page - which here gives the same Paiboon string the table holds, since a space does not change the reading."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0380.PNG",
+     "issue": "ONE VERSE PER PRINTED ROW, both pādas joined by a space - the same shape as bot-khat-chasaraniyadhamma-suttam on page 114, which stores eight rows as eight verses. Followed rather than re-decided."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0380.PNG",
+     "issue": "A FULL STOP MID-STANZA, at the end of verse 2 - ธัมเม สัมพุทธะเทสิเต. - where verses 1 and 3 end bare. Page 114's บทขัด does the same at its verses 2 and 6. Reproduced as printed."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0380.PNG",
+     "issue": "YAMAKKAN ON BOTH CLUSTERS IN VERSE 4, สุต๎วานุปะฏิปัต๎ยัตถัง, read at 4.5x. NOTE for whoever works this stretch: page 114's verse 7 stores สุต์วา with THANTHAKHAT, which is the file-wide inconsistency written up above. That page is not this one's to change, and it was left alone."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0380.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 4 is the last thing on the sheet and the บทขัด runs on to page 116, where the sutta itself will follow. No […] is used: the line is complete."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "chasaraniyadhamma-suttam"
+  ],
+  "continues": [
+   "bot-khat-bhikkhu-aparihaniyadhamma-suttam"
+  ],
+  "resume_from": {
+   "chant": "bot-khat-bhikkhu-aparihaniyadhamma-suttam",
+   "next_verse": 5,
+   "page": 116
+  },
+  "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse. That is a fact about the page, not a gap.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0380.PNG read end to end, with the บทขัด's four rows and its clusters re-read at 3-4.5x. Page number 115 printed clearly at the top centre. Two chants, one colophon, one footnote, one heading, no rubric.",
+  "notes": "Completes the line page 114 cut, finishes the Saraniyadhamma Sutta with its colophon and citation, and opens the next บทขัด. ‼ NOTE ON THE CLUSTER MARK: this page is written with yamakkan ๎, but page 114 - already committed, not this page's to change - stores สุต์วา with thanthakhat. That is the file-wide inconsistency written up in the brief and left for Josh.",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — different words, not a spelling slip: bhikkhu is the nominative singular in ปุนะ จะปะรัง ภิกขะเว ภิกขุ, and bhikkhū the plural, in ภิกขูนัง on the บทขัด's third line and in เต ภิกขู closing the sutta."
+  ]
+ }
+}
