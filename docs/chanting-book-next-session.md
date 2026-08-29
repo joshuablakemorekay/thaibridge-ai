@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-208 went in.
+209 went in.
 
 ## Read first, in this order
 
@@ -80,18 +80,31 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 209, `IMG_0479`.** ⚠️ `dhatupatikula-paccavekkhana-plae` IS OPEN —
-**23 units in, resume at verse 24**, and the LODGING SECTION IS ONLY HALF DONE:
-`สุญโญ` and the two closing lines are still to come, then the medicine. `tangkhanika-paccavekkhana-patho-plae`
+**Next: page 210, `IMG_0480`.** ✅ **NOTHING IS OPEN** —
+`dhatupatikula-paccavekkhana-plae` CLOSED on 209 with the medicine, its fourth
+section. 210 starts fresh, and the สารบัญ puts `ปัตติทานะคาถา` at ๒๑๐. `tangkhanika-paccavekkhana-patho-plae`
 CLOSED on 207 with the medicine, its fourth requisite.
 
 The chant now running takes the SAME four requisites again, but through the
 elements and repulsiveness rather than the purpose of use. Robe and alms food
 are done, the lodging is half done, the medicine is still to come.
 
-⚠️⚠️ **DO NOT COPY ONE SECTION FROM ANOTHER.** The formula is printed four
-times and the book punctuates it differently each time. Six differences are
-already confirmed between the robe (207) and the alms food and lodging (208):
+⚠️⚠️ **DO NOT COPY ONE SECTION FROM ANOTHER.** That chant is finished now, but
+keep the lesson: the formula was printed four times and the book punctuated it
+differently every time. Its closing line used **all four** possible
+combinations of number and punctuation —
+
+| section | closing line |
+|---|---|
+| robe, 207 v9 | `ชายันติ,` — plural, comma |
+| alms food, 208 v18 | `ชายะติ ฯ` — singular, paiyannoi |
+| lodging, 209 v27 | `ชายันติ ฯ` — plural, paiyannoi |
+| medicine, 209 v36 | `ชายะติ,` — singular, comma |
+
+The number is grammar (`จีวะรานิ`/`เสนาสะนานิ` plural against
+`ปิณฑะปาโต`/`ปะริกขาโร` singular); the punctuation follows nothing. And one
+Pali word, `ตะทุปะภุญชะโก`, got **four** different Thai renderings inside the
+one chant. The six differences found earlier:
 
 | | robe | alms food | lodging |
 |---|---|---|---|
@@ -1854,6 +1867,34 @@ really do differ between the two halves; page 242's `ปาระมี`/`ปา
 book varying itself; the comma endings on 249 and 252 do not matter.
 
 ## ⚠ Still open
+
+### ⚠⚠ YAMAKKAN vs THANTHAKHAT — one character, 1,138 places, both passes
+
+Thai-script Pali marks a consonant cluster with either **yamakkan ๎ (U+0E4E)**
+or **thanthakhat ์ (U+0E4C)**. They are nearly identical at photograph
+resolution. **The app is split, and the split follows who typed it:**
+
+| mark | count | where |
+|---|---:|---|
+| yamakkan `๎` | 84 | pages 2–20, and the forward pass's 193–207 |
+| thanthakhat `์` | 1054 | everywhere else, including all of the backward pass |
+
+So the translated section **disagrees with itself**: page 194 sets `ส๎วากขาโต`
+and page 225 sets `ส์วากขาโต` for the same word, in the same service, entered
+by two sessions a few days apart.
+
+**Nothing has been changed either way.** New entries follow the house majority.
+
+Magnifying page 224 shows a mark shaped like a small loop with a rising tail,
+which matches the thanthakhat over ฆ in `พระสงฆ์` in the Thai text on 225. That
+is evidence, not proof — it is the same "it looks like a known X" argument the
+ฬ/พ rule was settled against as circular, so it has not been acted on.
+
+**This needs Josh at the page, once, and then a single global fix.** It is the
+largest open question in the data by number of places affected.
+
+### Other open questions
+
 
 **The dedication chant's title has three spellings** — page 239 `อุททิสะ-`,
 page 62 `อุททิสสะ-`, the สารบัญ `อุทิสสะ-`. Josh could not settle it. Each
