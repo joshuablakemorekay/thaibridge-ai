@@ -1,0 +1,148 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "sabbapattidana-gatha-plae"
+  ],
+  "pages": [
+   {
+    "page": 212,
+    "file": "IMG_0482.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "sabbapattidana-gatha-plae",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "The whole sheet, one chant, beginning and ending here. A centred bold heading, a bracketed invitation, then five stanzas: the Pali set as pādas in two columns, each stanza followed by one Thai prose paragraph. No rubric, no footnote, no rule, no colophon."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "sabbapattidana-gatha-plae",
+   "title_thai": "สัพพะปัตติทานะคาถา",
+   "title_pali": "",
+   "title_roman": "Sabbapattidānagāthā",
+   "page_start": 212,
+   "invitation": {
+    "pali": "(หันทะ มะยัง สัพพะปัตติทานะคาถาโย ภะณามะ เส.)",
+    "pali_roman": "(Handa mayaṃ sabbapattidānagāthāyo bhaṇāma se.)",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us recite the verses for sharing merit with all."
+   },
+   "working_notes": {
+    "invitation": "printed, in brackets, directly under the heading.",
+    "units": "Five, one per STANZA. The Pali is set in TWO COLUMNS and the Thai translates a whole stanza, so a stanza is one unit here.",
+    "ordering": "Pali stanza first, then its Thai.",
+    "conventions": "A two-column verse layout, new to this run - see the checks.",
+    "pages": "IMG_0482.PNG, page 212. The chant STARTS and ENDS on this one sheet."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 212,
+     "pali": "ปุญญัสสิทานิ กะตัสสะ ยานัญญานิ กะตานิ เม เตสัญจะ ภาคิโน โหนตุ สัตตานันตาปะมาณะกา",
+     "pali_roman": "Puññassidāni katassa yānaññāni katāni me tesañca bhāgino hontu sattānantāpamāṇakā",
+     "thai": "สัตว์ทั้งหลาย ไม่มีที่สุด ไม่มีประมาณ จงมีส่วนแห่งบุญที่ข้าพเจ้าได้ทำในบัดนี้ และแห่งบุญอื่นที่ได้ทำไว้ก่อนแล้ว",
+     "paiboon": "sàt táŋ-lǎai mâi mii tîi-sùt mâi mii bprà-maan joŋ mii sùan hɛ̀ŋ bun tîi kâa-pá-jâo dâai tam nai bàt-níi lɛ́ hɛ̀ŋ bun ʉ̀ʉn tîi dâai tam wái gɔ̀ɔn lɛ́ɛo",
+     "english": "May beings without end and without measure share in the merit I have made now, and in the other merit made before"
+    },
+    {
+     "number": 2,
+     "page": 212,
+     "pali": "เย ปิยา คุณะวันตา จะ มัยหัง มาตาปิตาทะโย ทิฏฐา เม จาปะยะทิฏฐา วา อัญเญ มัชฌัตตะเวริโน",
+     "pali_roman": "Ye piyā guṇavantā ca mayhaṃ mātāpitādayo diṭṭhā me cāpayadiṭṭhā vā aññe majjhattaverino",
+     "thai": "คือจะเป็นสัตว์เหล่าใด ซึ่งเป็นที่รักใคร่และมีบุญคุณ เช่น มารดา บิดาของข้าพเจ้าเป็นต้น ก็ดี ที่ข้าพเจ้าเห็นแล้วหรือไม่ได้เห็นก็ดี สัตว์เหล่าอื่นที่เป็นกลางๆ หรือเป็นคู่เวรกันก็ดี",
+     "paiboon": "kʉʉ jà bpen sàt lào dai sʉ̂ŋ bpen tîi rák-krâi lɛ́ mii bun-kun chên maan-daa bì-daa kɔ̌ɔŋ kâa-pá-jâo bpen dtôn gɔ̂ dii tîi kâa-pá-jâo hěn lɛ́ɛo rʉ̌ʉ mâi dâai hěn gɔ̂ dii sàt lào ʉ̀ʉn tîi bpen glaaŋ-glaaŋ rʉ̌ʉ bpen kûu-ween gan gɔ̂ dii",
+     "english": "whether dear and full of virtue, such as my mother and father, seen by me or unseen, or others, neutral or hostile"
+    },
+    {
+     "number": 3,
+     "page": 212,
+     "pali": "สัตตา ติฏฐันติ โลกัส๎มิง เต ภุมมา จะตุโยนิกา ปัญเจกะจะตุโวการา สังสะรันตา ภะวาภะเว",
+     "pali_roman": "Sattā tiṭṭhanti lokasmiṃ te bhummā catuyonikā pañcekacatuvokārā saṃsarantā bhavābhave",
+     "thai": "สัตว์ทั้งหลาย ตั้งอยู่ในโลก อยู่ในภูมิทั้งสาม อยู่ในกำเนิดทั้งสี่ มีขันธ์ห้าขันธ์ มีขันธ์ขันธ์เดียว มีขันธ์สี่ขันธ์ กำลังท่องเที่ยวอยู่ในภพน้อยภพใหญ่ก็ดี",
+     "paiboon": "sàt táŋ-lǎai dtâŋ yùu nai lôok yùu nai puum táŋ sǎam yùu nai gam-nə̀ət táŋ sìi mii kǎn hâa kǎn mii kǎn kǎn diao mii kǎn sìi kǎn gam-laŋ tɔ̂ŋ-tîao yùu nai pôp nɔ́ɔi pôp yài gɔ̂ dii",
+     "english": "beings established in the world, in the three planes, in the four kinds of birth, with five aggregates, with one, or with four, wandering in becoming great and small"
+    },
+    {
+     "number": 4,
+     "page": 212,
+     "pali": "ญาตัง เย ปัตติทานัมเม อะนุโมทันตุ เต สะยัง เย จิมัง นัปปะชานันติ เทวา เตสัง นิเวทะยุง",
+     "pali_roman": "Ñātaṃ ye pattidānamme anumodantu te sayaṃ ye cimaṃ nappajānanti devā tesaṃ nivedayuṃ",
+     "thai": "สัตว์เหล่าใด รู้ส่วนบุญที่ข้าพเจ้าแผ่ให้แล้ว สัตว์เหล่านั้น จงอนุโมทนาเองเถิด ส่วนสัตว์เหล่าใด ยังไม่รู้ส่วนบุญนี้ ขอเทวดาทั้งหลายจงบอกสัตว์เหล่านั้นให้รู้",
+     "paiboon": "sàt lào dai rúu sùan bun tîi kâa-pá-jâo pɛ̀ɛ hâi lɛ́ɛo sàt lào nán joŋ à-nú-moo-tá-naa eeŋ tə̀ət sùan sàt lào dai yaŋ mâi rúu sùan bun níi kɔ̌ɔ têe-wá-daa táŋ-lǎai joŋ bɔ̀ɔk sàt lào nán hâi rúu",
+     "english": "those who know of the merit I have shared, may they rejoice in it themselves; and those who do not yet know it, may the devas tell them"
+    },
+    {
+     "number": 5,
+     "page": 212,
+     "pali": "มะยา ทินนานะ ปุญญานัง อะนุโมทะนะเหตุนา สัพเพ สัตตา สะทา โหนตุ อะเวรา สุขะชีวิโน เขมัปปะทัญจะ ปัปโปนตุ เตสาสา สิชฌะตัง สุภา ฯ",
+     "pali_roman": "Mayā dinnāna puññānaṃ anumodanahetunā sabbe sattā sadā hontu averā sukhajīvino khemappadañca pappontu tesāsā sijjhataṃ subhā.",
+     "thai": "เพราะเหตุที่ได้อนุโมทนาส่วนบุญที่ข้าพเจ้าแผ่ให้แล้ว สัตว์ทั้งหลายทั้งปวง จงเป็นผู้ไม่มีเวร อยู่เป็นสุขทุกเมื่อ จงถึงบทอันเกษม กล่าวคือพระนิพพาน ความปรารถนาที่ดีงามของสัตว์เหล่านั้น จงสำเร็จเถิด ฯ",
+     "paiboon": "prɔ́ hèet tîi dâai à-nú-moo-tá-naa sùan bun tîi kâa-pá-jâo pɛ̀ɛ hâi lɛ́ɛo sàt táŋ-lǎai táŋ-bpuaŋ joŋ bpen pûu mâi mii ween yùu bpen sùk túk mʉ̂a joŋ tʉ̌ŋ bòt an gà-sěem glàao kʉʉ prá-níp-paan kwaam bpràat-tà-nǎa tîi dii-ŋaam kɔ̌ɔŋ sàt lào nán joŋ sǎm-rèt tə̀ət",
+     "english": "By the merit of rejoicing in the share I have given, may all beings always be free from enmity and live happily, may they reach the place of peace, that is Nibbana, and may their good wishes be fulfilled."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปัญเจกะจะตุโวการา",
+     "pali_roman": "pañcekacatuvokārā",
+     "meaning": "'of five, one, or four aggregates' - the three kinds of existence, counted by how many khandhas they have. The Thai spells all three out as มีขันธ์ห้าขันธ์, มีขันธ์ขันธ์เดียว, มีขันธ์สี่ขันธ์"
+    },
+    {
+     "pali": "เขมัปปะทัง",
+     "pali_roman": "khemappadaṃ",
+     "meaning": "'the place of safety'. The Thai names what it means - บทอันเกษม กล่าวคือพระนิพพาน, 'the secure state, that is to say Nibbana'"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0482.PNG",
+     "issue": "‼ A TWO-COLUMN VERSE LAYOUT, NEW TO THIS RUN. The Pali is set as pādas in two columns - ปุญญัสสิทานิ กะตัสสะ on the left, ยานัญญานิ กะตานิ เม on the right, then the next pair beneath - and one Thai prose paragraph translates the whole stanza. A stanza is therefore ONE unit here, with its pādas joined by single spaces, exactly as the Jayamangala's two-line stanzas were handled on 203-205. The column break is a layout device the app cannot show and is NOT stored; the structure is recorded here instead. Stanzas 1-4 have four pādas, stanza 5 has SIX."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0482.PNG",
+     "issue": "‼ NOT ONE THAI PARAGRAPH ON THIS SHEET ENDS IN PUNCTUATION. Verses 1-4 stop bare - …ที่ได้ทำไว้ก่อนแล้ว, …เป็นคู่เวรกันก็ดี, …ภพใหญ่ก็ดี, …ให้รู้ - and verse 5 ends with ฯ. No commas, no full stops anywhere. That is unlike every earlier chant in this section, where the Thai lines are comma-heavy, and it is reproduced exactly."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0482.PNG",
+     "issue": "YAMAKKAN CONFIRMED on โลกัส๎มิง at 12x - the hook of ั over the ก, the angular zig-zag over the ส, and the ิ over the ม, all three plainly distinct."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0482.PNG",
+     "issue": "THE REPETITION MARK ๆ IS CLOSED UP HERE - ที่เป็นกลางๆ หรือ - which is the 205/207 setting rather than the spaced form used on 203 and 210. Both forms have now appeared three times each in this section."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0482.PNG",
+     "issue": "THIS CHANT HAS NO OTHER PRINTING IN THE APP. The สารบัญ lists สัพพะปัตติทานะคาถา exactly once, at ๒๑๒, and nothing in chanting.py opens ปุญญัสสิทานิ. The -plae suffix is kept anyway, for consistency with every other chant entered from this section, and so that a Pali-only twin can be added later without renaming this one."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "sabbapattidana-gatha-plae"
+  ],
+  "continues": [],
+  "resume_from": {
+   "chant": null,
+   "next_verse": null,
+   "page": 213
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0482.PNG read end to end, with โลกัส๎มิง re-read at 12x. Page number 212 printed clearly at the top centre. Every pāda was put through the app's transliterator as a cross-check. One chant, one heading, one invitation, no rubric, no footnote, no rule, no colophon. A hand holds the sheet at the left margin and obscures nothing.",
+  "notes": "‼ A TWO-COLUMN PĀDA LAYOUT, the first in this run; stanzas are recorded as single units with the pādas space-joined, as the Jayamangala's were. ‼ NOT ONE THAI PARAGRAPH ENDS IN PUNCTUATION - four stop bare and the fifth ends with ฯ - which is unlike every earlier chant in the section. Also: this chant has NO other printing in the app, the สารบัญ listing it once at ๒๑๒.",
+  "diacritic_exceptions": []
+ }
+}

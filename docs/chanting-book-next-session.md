@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-211 went in.
+212 went in.
 
 ## Read first, in this order
 
@@ -80,8 +80,16 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 212, `IMG_0482`.** ✅ **NOTHING IS OPEN** — `pattidana-gatha-plae`
-CLOSED on 211 at verse 20. The สารบัญ puts `สัพพะปัตติทานะคาถา` at ๒๑๒. `tangkhanika-paccavekkhana-patho-plae`
+**Next: page 213, `IMG_0483`.** ✅ **NOTHING IS OPEN** —
+`sabbapattidana-gatha-plae` began and ended on 212. The สารบัญ puts
+`ปัฏฐะนะฐะปะนะคาถา` at ๒๑๓.
+
+⚠️ **A TWO-COLUMN PĀDA LAYOUT appeared on 212** and may well continue. The Pali
+is set as half-lines in two columns with one Thai prose paragraph under each
+whole stanza. Handled the same way as the Jayamangala's two-line stanzas: **one
+verse per stanza, pādas joined by single spaces**, with the column structure
+recorded in the batch `checks` rather than stored. The app cannot show a column
+break, and `check_render` rejects a stored newline. `tangkhanika-paccavekkhana-patho-plae`
 CLOSED on 207 with the medicine, its fourth requisite.
 
 The chant now running takes the SAME four requisites again, but through the
