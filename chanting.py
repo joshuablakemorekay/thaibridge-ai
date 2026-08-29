@@ -53549,6 +53549,103 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
+        'id': 'patthana-thapana-gatha-plae',
+        'title_thai': 'ปัฏฐะนะฐะปะนะคาถา',
+        'title_pali': '',
+        'title_roman': 'Paṭṭhanaṭhapanagāthā',
+        'page_start': 213,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '(หันทะ มะยัง ปัฏฐะนะฐะปะนะคาถาโย ภะณามะ เส.)',
+            'pali_roman': '(Handa mayaṃ paṭṭhanaṭhapanagāthāyo bhaṇāma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us recite the verses that set an aspiration.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0483.PNG]: TWO-LINE STANZAS AGAIN, and handled as
+            #   they were on 203 and 212: one verse per stanza, with the
+            #   printed lines joined by a single space, because the app
+            #   renders pali as one paragraph and check_render rejects a
+            #   stored newline. Verse 1's Pali wraps across two printed lines
+            #   and verses 3-6 are set as pāda pairs; both are joined the same
+            #   way.
+            {
+                'number': 1,
+                'page': 213,
+                'pali': 'ยันทานิ เม กะตัง ปุญญัง เตนาเนนุททิเสนะ จะ ขิปปัง สัจฉิกะเรยยาหัง ธัมเม โลกุตตะเร นะวะ,',
+                'pali_roman': 'Yandāni me kataṃ puññaṃ tenānenuddisena ca khippaṃ sacchikareyyāhaṃ dhamme lokuttare nava,',
+                'thai': 'บุญใดที่ข้าพเจ้าได้ทำในบัดนี้, เพราะบุญนั้น และการอุทิศแผ่ส่วนบุญนั้น, ขอให้ข้าพเจ้าทำให้แจ้งโลกุตรธรรมเก้าในทันที,',
+                'paiboon': 'bun dai tîi kâa-pá-jâo dâai tam nai bàt-níi, prɔ́ bun nán lɛ́ gaan ù-tít pɛ̀ɛ sùan bun nán, kɔ̌ɔ hâi kâa-pá-jâo tam hâi jɛ̂ɛŋ loo-gùt-dtà-ra-tam gâo nai tan-tii,',
+                'english': 'By whatever merit I have made now, and by this sharing of it, may I quickly realise the nine supramundane states,',
+            },
+            {
+                'number': 2,
+                'page': 213,
+                'pali': 'สะเจ ตาวะ อะภัพโพหัง สังสาเร ปะนะ สังสะรัง,',
+                'pali_roman': 'Sace tāva abhabbohaṃ saṃsāre pana saṃsaraṃ,',
+                'thai': 'ถ้าข้าพเจ้าเป็นผู้อาภัพอยู่ ยังต้องท่องเที่ยวไปในวัฏฏสงสาร,',
+                'paiboon': 'tâa kâa-pá-jâo bpen pûu aa-pàp yùu yaŋ dtɔ̂ŋ tɔ̂ŋ-tîao bpai nai wát-dtà-sǒŋ-sǎan,',
+                'english': 'but if I am still incapable of it and must wander on in samsara,',
+            },
+            # ‼ CHECK [IMG_0483.PNG]: THAI NUMERAL REPRODUCED AS PRINTED:
+            #   ความอาภัพ ๑๘ อย่าง. The book uses ๑๘, not 18, as it used ๕ on
+            #   200 and ๘ on 205. The paiboon reads it as sìp-bpɛ̀ɛt.
+            {
+                'number': 3,
+                'page': 213,
+                'pali': 'นิยะโต โพธิสัตโตวะ สัมพุทเธนะ วิยากะโต นาฏฐาระสะปิ อาภัพพะฐานานิ ปาปุเณยยะหัง,',
+                'pali_roman': 'Niyato bodhisattova sambuddhena viyākato nāṭṭhārasapi ābhabbaṭhānāni pāpuṇeyyahaṃ,',
+                'thai': 'ขอให้ข้าพเจ้าเป็นเหมือนโพธิสัตว์ผู้เที่ยงแท้, ได้รับพยากรณ์แต่พระพุทธเจ้าแล้ว, ไม่ถึงฐานะแห่งความอาภัพ ๑๘ อย่าง,',
+                'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo bpen mʉ̌an poo-tí-sàt pûu tîaŋ-tɛ́ɛ, dâai ráp pá-yaa-gɔɔn dtɛ̀ɛ prá-pút-tá-jâo lɛ́ɛo, mâi tʉ̌ŋ tǎa-ná hɛ̀ŋ kwaam aa-pàp sìp-bpɛ̀ɛt yàaŋ,',
+                'english': 'may I be like the bodhisatta who is certain, declared so by a Buddha, and not fall into the eighteen states of incapacity,',
+            },
+            {
+                'number': 4,
+                'page': 213,
+                'pali': 'ปัญจะเวรานิ วัชเชยยัง ระเมยยัง สีละรักขะเน ปัญจะกาเม อะลัคโคหัง วัชเชยยัง กามะปังกะโต,',
+                'pali_roman': 'Pañcaverāni vajjeyyaṃ rameyyaṃ sīlarakkhane pañcakāme alaggohaṃ vajjeyyaṃ kāmapaṅkato,',
+                'thai': 'ข้าพเจ้าพึงเว้นจากเวรทั้งห้า, พึงยินดีในการรักษาศีล, ไม่เกาะเกี่ยวในกามคุณทั้งห้า, พึงเว้นจากเปือกตม กล่าวคือกาม,',
+                'paiboon': 'kâa-pá-jâo pʉŋ wén jàak ween táŋ hâa, pʉŋ yin-dii nai gaan rák-sǎa sǐin, mâi gɔ̀ nǐao nai gaam-má-kun táŋ hâa, pʉŋ wén jàak bpʉ̀ak-dtom glàao kʉʉ gaam,',
+                'english': 'may I avoid the five enmities and delight in keeping the precepts, unattached to the five strands of sense pleasure, avoiding the mire of lust,',
+            },
+            {
+                'number': 5,
+                'page': 213,
+                'pali': 'ทุททิฏฐิยา นะ ยุชเชยยัง สังยุชเชยยัง สุทิฏฐิยา ปาเป มิตเต นะ เสเวยยัง เสเวยยัง ปัณฑิเต สะทา,',
+                'pali_roman': 'Duddiṭṭhiyā na yujjeyyaṃ saṃyujjeyyaṃ sudiṭṭhiyā pāpe mitte na seveyyaṃ seveyyaṃ paṇḍite sadā,',
+                'thai': 'ขอให้ข้าพเจ้าไม่พึงประกอบด้วยทิฐิชั่ว, พึงประกอบด้วยทิฐิที่ดีงาม, ไม่พึงคบมิตรชั่ว, พึงคบแต่บัณฑิตทุกเมื่อ,',
+                'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo mâi pʉŋ bprà-gɔ̀ɔp dûay tít-tì chûa, pʉŋ bprà-gɔ̀ɔp dûay tít-tì tîi dii-ŋaam, mâi pʉŋ kóp mít chûa, pʉŋ kóp dtɛ̀ɛ ban-dìt túk mʉ̂a,',
+                'english': 'may I not be joined to wrong view but to right view, not keep bad friends but always the wise,',
+            },
+            # ‼ CHECK [IMG_0483.PNG]: ‼ A WORD BROKEN BY A HYPHEN IN THE
+            #   MIDDLE OF A LINE, and it is reproduced. Verse 6 prints
+            #   สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร, — a hyphen, then a
+            #   SPACE, then the rest of the same compound. Read at 6x. This is
+            #   not a line-end break: both halves sit on one printed line, and
+            #   the hyphen marks the pāda boundary falling inside a word. The
+            #   first of its kind in this run. Kept exactly, hyphen and space,
+            #   in the Thai script AND mirrored in the roman line, since that
+            #   line transliterates what is printed rather than what a lexicon
+            #   would give.
+            # ‼ CHECK [IMG_0483.PNG]: CUT AT THE PAGE TURN. Verse 6 is the
+            #   last thing on the sheet and the chant runs on to page 214. No
+            #   […] is used: it ends at a comma the book itself prints.
+            {
+                'number': 6,
+                'page': 213,
+                'pali': 'สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร อัปปะสัยโห วะ สัตตูหิ เหยยัง อะมันทะมุยหะโก,',
+                'pali_roman': 'Saddhāsatihirottappā- tāpakkhantiguṇākaro appasayho va sattūhi heyyaṃ amandamuyhako,',
+                'thai': 'ขอให้ข้าพเจ้าเป็นบ่อที่เกิดแห่งคุณ, คือ ศรัทธา สติ หิริ โอตตัปปะ ความเพียร และขันติ, พึงเป็นผู้ที่ศัตรูครอบงำไม่ได้, ไม่เป็นคนเขลา คนหลงงมงาย,',
+                'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo bpen bɔ̀ɔ tîi gə̀ət hɛ̀ŋ kun, kʉʉ sàt-taa sà-dtì hì-rí oo-dtàt-dtà-bpà kwaam-piian lɛ́ kǎn-dtì, pʉŋ bpen pûu tîi sàt-dtruu krɔ̂ɔp-ŋam mâi dâai, mâi bpen kon klǎo kon lǒŋ ŋom-ŋaai,',
+                'english': 'may I be a mine of good qualities - faith, mindfulness, moral shame and dread, energy and patience - unconquerable by enemies, neither dull nor deluded,',
+            },
+        ],
+    },
 ]
 
 
