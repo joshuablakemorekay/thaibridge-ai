@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-215 went in.
+216 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,17 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 216, `IMG_0486`.** ✅ **NOTHING IS OPEN** —
-`khemakhema-saranadipika-plae` began and ended on 215. The สารบัญ puts
-`อะภิณหะปัจจะเวกขะณะ ๕` at ๒๑๖.
+**PAGES 193–245 ARE NOW CONTINUOUS.** 216 was the last gap and it is closed;
+`abhinha-paccavekkhana-plae` began and ended on that sheet. Nothing in this
+lane is open. The next unentered sheet is **246**.
+
+⚠️ **ONE THING LEFT BEHIND ON PAGE 217, for Josh.** Page 216's starred footnote
+runs onto 217 — `วัย`, then `ข้อ ๒` to `ข้อ ๕`, a closing paragraph and the
+citation `(องฺ. ปญฺจก. ๒๒/๕๗/๖๖-๗๐)`. It is recorded **whole on 216**, under the
+same ruling used at 195–196 and 204–205. The cost: **page 217 renders without
+the eight or so lines it actually prints at the top.** 217 was entered by hand
+long ago and has no batch record, so nothing there was touched. Fixing it means
+either giving 217 a batch record or accepting the loss.
 
 ⚠️ **The two-column pāda layout is now the norm for the gāthā chants here**
 (212 and 215 both). One verse per stanza, pādas joined by single spaces, column

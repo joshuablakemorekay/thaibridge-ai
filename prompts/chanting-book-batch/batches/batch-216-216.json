@@ -1,0 +1,233 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 2,
+  "received": 1,
+  "manifest": [
+   "abhinha-paccavekkhana-plae"
+  ],
+  "pages": [
+   {
+    "page": 216,
+    "file": "IMG_0486.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "abhinha-paccavekkhana-plae",
+    "verses": "1-13",
+    "starts_here": true,
+    "blocks": [
+     {
+      "type": "footnote",
+      "thai": "*ข้อที่ควรพิจารณาเนืองๆ ๕ อย่างนี้ มีวัตถุประสงค์เพื่อละสาเหตุต่างๆ มีความมัวเมา เป็นต้น ที่ทำให้สัตว์ทั้งหลายตกอยู่ในความประมาท และประพฤติทุจริตทางไตรทวาร กล่าวคือ :- ข้อ ๑ เป็นเหตุละ หรือบรรเทาความเมาในความเป็นหนุ่มสาว หรือความเยาววัย ข้อ ๒ เป็นเหตุละ หรือบรรเทาความเมาในความไม่มีโรค คือ ความแข็งแรงมีสุขภาพดี ข้อ ๓ เป็นเหตุละ หรือบรรเทาความเมาในชีวิต ข้อ ๔ เป็นเหตุละ หรือบรรเทาความยึดติดผูกพันในของรักทั้งหลาย ข้อ ๕ เป็นเหตุละ หรือบรรเทาความทุจริตต่างๆ โดยตรง เมื่อพิจารณาขยายวงออกไป เห็นว่ามิใช่ตนผู้เดียวที่ต้องเป็นอย่างนี้ แต่เป็นคติธรรมดาของสัตว์ทั้งปวงที่จะต้องเป็นไป เมื่อพิจารณาเห็นอย่างนี้เสมอๆ มรรคก็จะเกิดขึ้น เมื่อเจริญมรรคนั้นมากเข้า ก็จะละสังโยชน์ทั้งหลาย สิ้นอนุสัยได้ (องฺ. ปญฺจก. ๒๒/๕๗/๖๖-๗๐)",
+      "english_unverified": true,
+      "english": "A note on why these five are recollected: to loosen the intoxications of youth, health and life, the clinging to what is dear, and misconduct itself; and on seeing that this is the way of all beings, not one's own case alone."
+     }
+    ],
+    "note": "The whole sheet, one chant. A centred bold heading, a bracketed invitation, then five numbered items - the fifth running to nine lines in two columns - and a starred footnote at the foot which CONTINUES onto page 217 and is recorded here whole."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "abhinha-paccavekkhana-plae",
+   "title_thai": "อะภิณหะปัจจะเวกขะณะ ๕",
+   "title_pali": "",
+   "title_roman": "Abhiṇhapaccavekkhaṇa 5",
+   "page_start": 216,
+   "invitation": {
+    "pali": "(หันทะ มะยัง อะภิณหะปัจจะเวกขะณะปาฐัง ภะณามะ เส.)",
+    "pali_roman": "(Handa mayaṃ abhiṇhapaccavekkhaṇapāṭhaṃ bhaṇāma se.)",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us recite the passage on the five frequent recollections."
+   },
+   "working_notes": {
+    "invitation": "printed, in brackets, directly under the heading.",
+    "units": "Thirteen. Items 1-4 are one line each, numbered ๑-๔; item ๕ runs to NINE lines, set as Pali on the left with its Thai in a right-hand column, and only its first line carries the printed number.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "Bracketed feminine forms, one of them labelled - see the checks.",
+    "pages": "IMG_0486.PNG, page 216. The chant STARTS and ENDS on this sheet, but its FOOTNOTE runs onto 217."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 216,
+     "pali": "ชะราธัมโมมหิ ชะรัง อะนะตีโต (หญิงว่า อะนะตีตา)",
+     "pali_roman": "Jarādhammomhi jaraṃ anatīto (women say: anatītā)",
+     "thai": "เรามีความแก่เป็นธรรมดา ไม่ล่วงพ้นความแก่ไปได้",
+     "paiboon": "rao mii kwaam-gɛ̀ɛ bpen tam-má-daa mâi lûaŋ-pón kwaam-gɛ̀ɛ bpai dâai",
+     "english": "I am of the nature to grow old; I have not gone beyond ageing.",
+     "printed_number": 1
+    },
+    {
+     "number": 2,
+     "page": 216,
+     "pali": "พ๎ยาธิธัมโมมหิ พ๎ยาธิง อะนะตีโต (อะนะตีตา)",
+     "pali_roman": "Byādhidhammomhi byādhiṃ anatīto (anatītā)",
+     "thai": "เรามีความเจ็บไข้เป็นธรรมดา ไม่ล่วงพ้นความเจ็บไข้ไปได้",
+     "paiboon": "rao mii kwaam jèp-kâi bpen tam-má-daa mâi lûaŋ-pón kwaam jèp-kâi bpai dâai",
+     "english": "I am of the nature to fall ill; I have not gone beyond illness.",
+     "printed_number": 2
+    },
+    {
+     "number": 3,
+     "page": 216,
+     "pali": "มะระณะธัมโมมหิ มะระณัง อะนะตีโต (อะนะตีตา)",
+     "pali_roman": "Maraṇadhammomhi maraṇaṃ anatīto (anatītā)",
+     "thai": "เรามีความตายเป็นธรรมดา ไม่ล่วงพ้นความตายไปได้",
+     "paiboon": "rao mii kwaam-dtaai bpen tam-má-daa mâi lûaŋ-pón kwaam-dtaai bpai dâai",
+     "english": "I am of the nature to die; I have not gone beyond dying.",
+     "printed_number": 3
+    },
+    {
+     "number": 4,
+     "page": 216,
+     "pali": "สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว",
+     "pali_roman": "Sabbehi me piyehi manāpehi nānābhāvo vinābhāvo",
+     "thai": "เราจักต้องพลัดพรากจากของรักของชอบใจทั้งหลายทั้งปวง",
+     "paiboon": "rao jàk dtɔ̂ŋ plát-prâak jàak kɔ̌ɔŋ rák kɔ̌ɔŋ chɔ̂ɔp-jai táŋ-lǎai táŋ-bpuaŋ",
+     "english": "I must be parted from all that is dear and pleasing to me.",
+     "printed_number": 4
+    },
+    {
+     "number": 5,
+     "page": 216,
+     "pali": "กัมมัสสะโกมหิ",
+     "pali_roman": "Kammassakomhi",
+     "thai": "เรามีกรรมเป็นของ ๆ ตน",
+     "paiboon": "rao mii gam bpen kɔ̌ɔŋ kɔ̌ɔŋ dton",
+     "english": "I am the owner of my kamma,",
+     "printed_number": 5
+    },
+    {
+     "number": 6,
+     "page": 216,
+     "pali": "กัมมะทายาโท",
+     "pali_roman": "Kammadāyādo",
+     "thai": "เรามีกรรมเป็นทายาท",
+     "paiboon": "rao mii gam bpen taa-yâat",
+     "english": "heir to my kamma,"
+    },
+    {
+     "number": 7,
+     "page": 216,
+     "pali": "กัมมะโยนิ",
+     "pali_roman": "Kammayoni",
+     "thai": "เรามีกรรมเป็นกำเนิด",
+     "paiboon": "rao mii gam bpen gam-nə̀ət",
+     "english": "born of my kamma,"
+    },
+    {
+     "number": 8,
+     "page": 216,
+     "pali": "กัมมะพันธุ",
+     "pali_roman": "Kammabandhu",
+     "thai": "เรามีกรรมเป็นเผ่าพันธุ์",
+     "paiboon": "rao mii gam bpen pào-pan",
+     "english": "related to my kamma,"
+    },
+    {
+     "number": 9,
+     "page": 216,
+     "pali": "กัมมะปะฏิสะระโณ",
+     "pali_roman": "Kammapaṭisaraṇo",
+     "thai": "เรามีกรรมเป็นที่พึ่งอาศัย",
+     "paiboon": "rao mii gam bpen tîi-pʉ̂ŋ aa-sǎi",
+     "english": "abiding supported by my kamma."
+    },
+    {
+     "number": 10,
+     "page": 216,
+     "pali": "ยัง กัมมัง กะริสสามิ",
+     "pali_roman": "Yaṃ kammaṃ karissāmi",
+     "thai": "เราทำกรรมอันใดไว้",
+     "paiboon": "rao tam gam an dai wái",
+     "english": "Whatever kamma I do,"
+    },
+    {
+     "number": 11,
+     "page": 216,
+     "pali": "กัล๎ยาณัง วา ปาปะกัง วา",
+     "pali_roman": "Kalyāṇaṃ vā pāpakaṃ vā",
+     "thai": "ดีก็ตาม ชั่วก็ตาม",
+     "paiboon": "dii gɔ̂ dtaam chûa gɔ̂ dtaam",
+     "english": "for good or for ill,"
+    },
+    {
+     "number": 12,
+     "page": 216,
+     "pali": "ตัสสะ ทายาโท ภะวิสสามิ",
+     "pali_roman": "Tassa dāyādo bhavissāmi",
+     "thai": "เราจักต้องรับผลของกรรมนั้น",
+     "paiboon": "rao jàk dtɔ̂ŋ ráp pǒn kɔ̌ɔŋ gam nán",
+     "english": "to that I shall be heir."
+    },
+    {
+     "number": 13,
+     "page": 216,
+     "pali": "เอวัง อะภิณหัง อัมเหหิ ปัจจะเวกขิตัพพัง",
+     "pali_roman": "Evaṃ abhiṇhaṃ amhehi paccavekkhitabbaṃ",
+     "thai": "เราทั้งหลาย พึงพิจารณาเนือง ๆ อย่างนี้แล ฯ",
+     "paiboon": "rao táŋ-lǎai pʉŋ pí-jaa-rá-naa nʉaŋ nʉaŋ yàaŋ níi lɛɛ",
+     "english": "Thus should we often reflect."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะนะตีโต / อะนะตีตา",
+     "pali_roman": "anatīto / anatītā",
+     "meaning": "'not gone beyond' - masculine and feminine. The book gives the feminine in brackets after each masculine, so one printed line serves a mixed assembly"
+    },
+    {
+     "pali": "กัมมัสสะโกมหิ",
+     "pali_roman": "kammassakomhi",
+     "meaning": "'I am the owner of my kamma'. The Thai renders it เรามีกรรมเป็นของ ๆ ตน, with the repetition mark standing for the doubled ของ"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0486.PNG",
+     "issue": "‼ THE FEMININE ALTERNATIVE IS LABELLED ONCE AND THEN LEFT UNLABELLED. Item ๑ prints (หญิงว่า อะนะตีตา) - 'a woman says anatītā' - and items ๒ and ๓ print the bare (อะนะตีตา) with no label at all. Read at 3.2x. The book explains the device the first time and then assumes it. Both forms kept exactly. This is the same device as page 201's เต (ตา) but with an instruction word inside the bracket, and it is why the roman line for item 1 reads (women say: anatītā): หญิงว่า is Thai instruction, not Pali, so it is glossed rather than transliterated."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0486.PNG",
+     "issue": "‼ ITEM ๕ IS NINE LINES LONG AND ONLY ITS FIRST CARRIES THE NUMBER. Items ๑-๔ are single lines; ๕ runs from กัมมัสสะโกมหิ to ปัจจะเวกขิตัพพัง in nine short Pali lines with their Thai in a right-hand column. Recorded as verses 5-13, with printed_number on verse 5 alone, exactly as the book prints it."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0486.PNG",
+     "issue": "THE REPETITION MARK ๆ IS SPACED HERE, twice, and in an unusual position: เรามีกรรมเป็นของ ๆ ตน in verse 5 and พิจารณาเนือง ๆ in verse 13. The first stands for a doubled ของ inside the phrase rather than at its end. Both kept as printed - and note the FOOTNOTE on the same sheet uses the CLOSED-UP form three times (เนืองๆ, ต่างๆ, เสมอๆ), so both settings appear on one page."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0486.PNG",
+     "issue": "‼ THE FOOTNOTE RUNS ONTO PAGE 217 AND IS RECORDED WHOLE HERE. Page 216 prints it as far as …หรือความเยาว and page 217 continues วัย, then ข้อ ๒ to ข้อ ๕, a closing paragraph, and a right-aligned citation (องฺ. ปญฺจก. ๒๒/๕๗/๖๖-๗๐). IMG_0487 was opened and read to get the rest. Recorded whole on 216 under the ruling already made at 195-196 and 204-205: a unit spanning a page turn goes in whole on the page where it starts. THE COST, stated plainly: page 217's entry does not carry these lines, and page 217 was entered by hand long ago with no batch record, so nothing there was changed."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0486.PNG",
+     "issue": "NO COMMAS ANYWHERE IN THE THAI of the chant itself, as on 212 and 215. The footnote below it does use them. printed_number is stored as an integer and the app renders it as an Arabic digit, where the book prints Thai numerals ๑-๕; that is an app-wide display matter, not something this page decides."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "abhinha-paccavekkhana-plae"
+  ],
+  "continues": [],
+  "resume_from": {
+   "chant": null,
+   "next_verse": null,
+   "page": null
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0486.PNG read end to end, with items ๑-๒ and กัล๎ยาณัง re-read at 3.2x and 10x. Page number 216 printed clearly at the top centre. IMG_0487 (page 217) was ALSO opened, to read the rest of the footnote. Every Pali line was put through the app's transliterator as a cross-check. One chant, one heading, one invitation, one footnote, no rubric, no rule, no colophon.",
+  "notes": "‼ THE FEMININE ALTERNATIVE IS LABELLED ONCE - (หญิงว่า อะนะตีตา) - and then left bare in the two items that follow. ‼ ITEM ๕ IS NINE LINES LONG with the printed number on its first line only. ‼ THE FOOTNOTE SPANS 216-217 and is recorded whole here, which means page 217's hand-entered record does not carry the lines it prints - flagged rather than fixed, since 217 has no batch record. Both settings of ๆ appear on this one sheet: spaced in the chant, closed up in the footnote.",
+  "diacritic_exceptions": []
+ }
+}
