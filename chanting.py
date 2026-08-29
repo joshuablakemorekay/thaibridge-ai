@@ -51472,6 +51472,148 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0501.PNG]: ⚠ THREE FORMS OF THIS CHANT'S NAME ON ONE
+        #   PAGE AND IN THE CONTENTS. The heading reads สังฆานุสสติ, the
+        #   invitation beneath it reads สังฆานุสสะตินะยัง, and the สารบัญ
+        #   prints สังฆานุสสะติ. Checked at magnification. The title follows
+        #   THIS PAGE'S HEADING, as it does on 236; none has been made to
+        #   match another. This is the second title in the translated section
+        #   to be spelt three ways, after the dedication chant on 239.
+        # ‼ CHECK [IMG_0501.PNG]: ⚠ THE FIRST PRINTING IS UNDER A DIFFERENT
+        #   NAME. Page 54 gives this same text as พระสังฆคุณ, `phra-
+        #   sangkhakhun`, in 8 units where this copy has 12 — page 54 runs
+        #   ยะทิทัง together with จัตตาริ, and runs อาหุเนยโย ปาหุเนยโย
+        #   ทักขิเณยโย อัญชะลีกะระณีโย as one line. The translated copy splits
+        #   them so each can carry its own Thai, which is the same reason the
+        #   reflection passage is 25 units on 234-236 against 20 on page 60.
+        'id': 'sanghanussati-plae',
+        'title_thai': 'สังฆานุสสติ',
+        'title_pali': '',
+        'title_roman': 'Saṅghānussati',
+        'title_english': 'The Recollection of the Sangha',
+        'page_start': 231,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': 'หันทะ มะยัง สังฆานุสสะตินะยัง กะโรมะ เส.',
+            'pali_roman': 'Handa mayaṃ saṅghānussatinayaṃ karoma se.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us make the recollection of the Sangha.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 231,
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติดีแล้ว,',
+                'paiboon': '',
+                'english': "The Sangha of the Blessed One's disciples has practised well,",
+            },
+            {
+                'number': 2,
+                'pali': 'อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ujupaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติตรงแล้ว,',
+                'paiboon': '',
+                'english': "the Sangha of the Blessed One's disciples has practised straightly,",
+            },
+            {
+                'number': 3,
+                'pali': 'ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Ñāyapaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติเพื่อรู้ธรรมเป็นเครื่องออกจากทุกข์แล้ว,',
+                'paiboon': '',
+                'english': "the Sangha of the Blessed One's disciples has practised for knowing the Dhamma, the means of release from suffering,",
+            },
+            {
+                'number': 4,
+                'pali': 'สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Sāmīcipaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติสมควรแล้ว,',
+                'paiboon': '',
+                'english': "the Sangha of the Blessed One's disciples has practised fittingly,",
+            },
+            # ‼ CHECK [IMG_0501.PNG]: THE THAI ENDS WITH THE MARK :- —
+            #   'ได้แก่บุคคลเหล่านี้ คือ :-' — introducing the list that
+            #   follows. The same mark, written .-, closes the introductions
+            #   on pages 256 and 259. Kept as printed.
+            {
+                'number': 5,
+                'pali': 'ยะทิทัง,',
+                'pali_roman': 'Yadidaṃ,',
+                'thai': 'ได้แก่บุคคลเหล่านี้ คือ :-',
+                'paiboon': '',
+                'english': 'namely, these persons:',
+            },
+            {
+                'number': 6,
+                'pali': 'จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,',
+                'pali_roman': 'Cattāri purisayugāni aṭṭha purisapuggalā,',
+                'thai': 'คู่แห่งบุรุษ ๔ คู่, นับเรียงตัวบุรุษได้ ๘ บุรุษ,',
+                'paiboon': '',
+                'english': 'four pairs of persons, eight individuals counted singly,',
+            },
+            {
+                'number': 7,
+                'pali': 'เอสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Esa bhagavato sāvakasaṅgho,',
+                'thai': 'นั่นแหละ สงฆ์สาวกของพระผู้มีพระภาคเจ้า,',
+                'paiboon': '',
+                'english': "that is the Sangha of the Blessed One's disciples —",
+            },
+            {
+                'number': 8,
+                'pali': 'อาหุเนยโย,',
+                'pali_roman': 'Āhuneyyo,',
+                'thai': 'เป็นสงฆ์ควรแก่สักการะที่เขานำมาบูชา,',
+                'paiboon': '',
+                'english': 'worthy of the offerings people bring,',
+            },
+            {
+                'number': 9,
+                'pali': 'ปาหุเนยโย,',
+                'pali_roman': 'Pāhuneyyo,',
+                'thai': 'เป็นสงฆ์ควรแก่สักการะที่เขาจัดไว้ต้อนรับ,',
+                'paiboon': '',
+                'english': 'worthy of the offerings people set out in welcome,',
+            },
+            {
+                'number': 10,
+                'pali': 'ทักขิเณยโย,',
+                'pali_roman': 'Dakkhiṇeyyo,',
+                'thai': 'เป็นผู้ควรรับทักษิณาทาน,',
+                'paiboon': '',
+                'english': 'worthy of gifts given in faith,',
+            },
+            {
+                'number': 11,
+                'pali': 'อัญชะลีกะระณีโย,',
+                'pali_roman': 'Añjalīkaraṇīyo,',
+                'thai': 'เป็นผู้ที่บุคคลทั่วไปควรทำอัญชลี,',
+                'paiboon': '',
+                'english': 'worthy of reverent salutation by anyone,',
+            },
+            # ‼ CHECK [IMG_0501.PNG]: THE LAST LINE ENDS โลกัสสาติ. WITH THE
+            #   -ติ CLOSING, as page 54 does; สังฆาภิถุติ at 197 ends its
+            #   corresponding line โลกัสสะ, and carries on for two more units.
+            #   The two chants are different lengths and neither has been made
+            #   to match the other.
+            {
+                'number': 12,
+                'pali': 'อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.',
+                'pali_roman': 'Anuttaraṃ puññakkhettaṃ lokassāti.',
+                'thai': 'เป็นเนื้อนาบุญของโลก, ไม่มีนาบุญอื่นยิ่งกว่า ดังนี้.',
+                'paiboon': '',
+                'english': 'the unsurpassed field of merit for the world — no field of merit is greater,',
+            },
+        ],
+    },
 ]
 
 

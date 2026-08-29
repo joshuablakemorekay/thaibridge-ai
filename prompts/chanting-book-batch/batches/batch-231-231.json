@@ -1,0 +1,198 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "sanghanussati-plae"
+  ],
+  "pages": [
+   {
+    "page": 231,
+    "file": "IMG_0501.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "sanghanussati-plae",
+    "verses": "1-12",
+    "starts_here": true,
+    "note": "The page opens with the chant's centred bold heading สังฆานุสสติ and its invitation, then twelve PALI lines in bold with their Thai translations. The chant starts and ends here and the rest of the sheet is blank."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "sanghanussati-plae",
+   "title_thai": "สังฆานุสสติ",
+   "title_pali": "",
+   "title_roman": "Saṅghānussati",
+   "title_english": "The Recollection of the Sangha",
+   "page_start": 231,
+   "layout": "lines",
+   "english_unverified": true,
+   "invitation": {
+    "pali": "หันทะ มะยัง สังฆานุสสะตินะยัง กะโรมะ เส.",
+    "pali_roman": "Handa mayaṃ saṅghānussatinayaṃ karoma se.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us make the recollection of the Sangha."
+   },
+   "working_notes": {
+    "invitation": "printed in brackets under the heading.",
+    "units": "12 Pali lines, each with its printed Thai translation.",
+    "ordering": "One column, but the Thai sits in TWO different places on this sheet — indented on the line beneath for the four long units and for 6, 7 and 12, and BESIDE the Pali on the same line for the short ones, 5 and 8 to 11. The app has one `thai` field either way, so the difference is recorded here rather than in the data.",
+    "conventions": "The id takes a -plae suffix for the translated section. The app holds this chant's first printing at page 54 as `phra-sangkhakhun`, under a different name. paiboon left empty.",
+    "pages": "IMG_0501, page 231. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+     "pali_roman": "Supaṭipanno bhagavato sāvakasaṅgho,",
+     "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติดีแล้ว,",
+     "paiboon": "",
+     "english": "The Sangha of the Blessed One's disciples has practised well,",
+     "page": 231
+    },
+    {
+     "number": 2,
+     "pali": "อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+     "pali_roman": "Ujupaṭipanno bhagavato sāvakasaṅgho,",
+     "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติตรงแล้ว,",
+     "paiboon": "",
+     "english": "the Sangha of the Blessed One's disciples has practised straightly,"
+    },
+    {
+     "number": 3,
+     "pali": "ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+     "pali_roman": "Ñāyapaṭipanno bhagavato sāvakasaṅgho,",
+     "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติเพื่อรู้ธรรมเป็นเครื่องออกจากทุกข์แล้ว,",
+     "paiboon": "",
+     "english": "the Sangha of the Blessed One's disciples has practised for knowing the Dhamma, the means of release from suffering,"
+    },
+    {
+     "number": 4,
+     "pali": "สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+     "pali_roman": "Sāmīcipaṭipanno bhagavato sāvakasaṅgho,",
+     "thai": "สงฆ์สาวกของพระผู้มีพระภาคเจ้าหมู่ใด, ปฏิบัติสมควรแล้ว,",
+     "paiboon": "",
+     "english": "the Sangha of the Blessed One's disciples has practised fittingly,"
+    },
+    {
+     "number": 5,
+     "pali": "ยะทิทัง,",
+     "pali_roman": "Yadidaṃ,",
+     "thai": "ได้แก่บุคคลเหล่านี้ คือ :-",
+     "paiboon": "",
+     "english": "namely, these persons:"
+    },
+    {
+     "number": 6,
+     "pali": "จัตตาริ ปุริสะยุคานิ อัฏฐะ ปุริสะปุคคะลา,",
+     "pali_roman": "Cattāri purisayugāni aṭṭha purisapuggalā,",
+     "thai": "คู่แห่งบุรุษ ๔ คู่, นับเรียงตัวบุรุษได้ ๘ บุรุษ,",
+     "paiboon": "",
+     "english": "four pairs of persons, eight individuals counted singly,"
+    },
+    {
+     "number": 7,
+     "pali": "เอสะ ภะคะวะโต สาวะกะสังโฆ,",
+     "pali_roman": "Esa bhagavato sāvakasaṅgho,",
+     "thai": "นั่นแหละ สงฆ์สาวกของพระผู้มีพระภาคเจ้า,",
+     "paiboon": "",
+     "english": "that is the Sangha of the Blessed One's disciples —"
+    },
+    {
+     "number": 8,
+     "pali": "อาหุเนยโย,",
+     "pali_roman": "Āhuneyyo,",
+     "thai": "เป็นสงฆ์ควรแก่สักการะที่เขานำมาบูชา,",
+     "paiboon": "",
+     "english": "worthy of the offerings people bring,"
+    },
+    {
+     "number": 9,
+     "pali": "ปาหุเนยโย,",
+     "pali_roman": "Pāhuneyyo,",
+     "thai": "เป็นสงฆ์ควรแก่สักการะที่เขาจัดไว้ต้อนรับ,",
+     "paiboon": "",
+     "english": "worthy of the offerings people set out in welcome,"
+    },
+    {
+     "number": 10,
+     "pali": "ทักขิเณยโย,",
+     "pali_roman": "Dakkhiṇeyyo,",
+     "thai": "เป็นผู้ควรรับทักษิณาทาน,",
+     "paiboon": "",
+     "english": "worthy of gifts given in faith,"
+    },
+    {
+     "number": 11,
+     "pali": "อัญชะลีกะระณีโย,",
+     "pali_roman": "Añjalīkaraṇīyo,",
+     "thai": "เป็นผู้ที่บุคคลทั่วไปควรทำอัญชลี,",
+     "paiboon": "",
+     "english": "worthy of reverent salutation by anyone,"
+    },
+    {
+     "number": 12,
+     "pali": "อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.",
+     "pali_roman": "Anuttaraṃ puññakkhettaṃ lokassāti.",
+     "thai": "เป็นเนื้อนาบุญของโลก, ไม่มีนาบุญอื่นยิ่งกว่า ดังนี้.",
+     "paiboon": "",
+     "english": "the unsurpassed field of merit for the world — no field of merit is greater,"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะนุสสะติ",
+     "pali_roman": "anussati",
+     "meaning": "recollection — a subject called repeatedly to mind. This is the third of the three, after the Buddha and the Dhamma"
+    },
+    {
+     "pali": "ปุญญักเขตตัง",
+     "pali_roman": "puññakkhettaṃ",
+     "meaning": "a field of merit; the image is of ground in which what is given grows"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0501.PNG",
+     "issue": "⚠ THREE FORMS OF THIS CHANT'S NAME ON ONE PAGE AND IN THE CONTENTS. The heading reads สังฆานุสสติ, the invitation beneath it reads สังฆานุสสะตินะยัง, and the สารบัญ prints สังฆานุสสะติ. Checked at magnification. The title follows THIS PAGE'S HEADING, as it does on 236; none has been made to match another. This is the second title in the translated section to be spelt three ways, after the dedication chant on 239."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0501.PNG",
+     "issue": "⚠ THE FIRST PRINTING IS UNDER A DIFFERENT NAME. Page 54 gives this same text as พระสังฆคุณ, `phra-sangkhakhun`, in 8 units where this copy has 12 — page 54 runs ยะทิทัง together with จัตตาริ, and runs อาหุเนยโย ปาหุเนยโย ทักขิเณยโย อัญชะลีกะระณีโย as one line. The translated copy splits them so each can carry its own Thai, which is the same reason the reflection passage is 25 units on 234-236 against 20 on page 60."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0501.PNG",
+     "issue": "THE THAI ENDS WITH THE MARK :- — 'ได้แก่บุคคลเหล่านี้ คือ :-' — introducing the list that follows. The same mark, written .-, closes the introductions on pages 256 and 259. Kept as printed."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0501.PNG",
+     "issue": "THE LAST LINE ENDS โลกัสสาติ. WITH THE -ติ CLOSING, as page 54 does; สังฆาภิถุติ at 197 ends its corresponding line โลกัสสะ, and carries on for two more units. The two chants are different lengths and neither has been made to match the other."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "sanghanussati-plae"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 230,
+  "resume_from_file": "IMG_0500.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from the sheet and read against the first printing at page 54 and against สังฆาภิถุติ at 197, which splits the same epithets the same way.",
+  "page_scan": "agrees. One row, one chant, complete on the sheet.",
+  "notes": "⚠ A SECOND TITLE SPELT THREE WAYS: heading สังฆานุสสติ, invitation สังฆานุสสะติ-, contents สังฆานุสสะติ. The title follows the page's heading. ⚠ Its first printing is under a DIFFERENT NAME, พระสังฆคุณ at page 54, and in 8 units against these 12 — the translated copy splits the epithets so each can carry a Thai line.",
+  "diacritic_exceptions": []
+ }
+}
