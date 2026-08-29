@@ -50961,7 +50961,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 8; the rest is not in the app yet.
         'id': 'buddha-jayamangala-gatha-plae',
         'title_thai': 'พุทธชัยมังคลคาถา (ถวายพรพระ)',
         'page_start': 203,
@@ -51126,6 +51125,30 @@ CHANTS = [
                 'thai': 'พระจอมมุนีได้ชนะพรหมผู้มีนามว่าพกะ ผู้มีฤทธิ์ สำคัญตนว่ารุ่งเรืองด้วยคุณอันบริสุทธิ์, มีมืออันท้าวภุชงค์คือทิฏฐิที่ตนถือผิด รัดรึงไว้แน่นแฟ้นแล้ว, ด้วยวิธีวางยาอันพิเศษ คือเทศนาญาณ, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná prom pûu mii naam wâa pá-gà pûu mii rít sǎm-kan dton wâa rûŋ-rʉaŋ dûay kun an bɔɔ-rí-sùt, mii mʉʉ an táao pú-choŋ kʉʉ tít-tì tîi dton tʉ̌ʉ pìt rát-rʉŋ wái nɛ̂n-fɛ́n lɛ́ɛo, dûay wí-tii waaŋ yaa an pí-sèet kʉʉ têet-sà-nǎa-yaan, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
                 'english': 'The Lord of Sages defeated the brahma named Baka, of great power, who supposed himself radiant with purity, his hand gripped fast by the serpent that is his own wrong view, by the way of the antidote that is knowledge. By that power may the blessings of victory be yours.',
+            },
+            # ‼ CHECK [IMG_0475.PNG]: ‼ THE REPETITION MARK ๆ IS SET TWO
+            #   DIFFERENT WAYS IN THIS CHANT, and both are kept. Here it is
+            #   CLOSED UP - คาถาเหล่านี้ทุกๆ วัน - where page 203's verse 52
+            #   has it SPACED, นั้น ๆ. Read at 3.2x. The book is inconsistent
+            #   with itself; neither was tidied to match the other.
+            # ‼ CHECK [IMG_0475.PNG]: THAI NUMERAL REPRODUCED AS PRINTED:
+            #   พระพุทธชัยมงคล ๘ คาถา. The book uses ๘, not 8. The paiboon
+            #   reads it as bpɛ̀ɛt.
+            # ‼ CHECK [IMG_0475.PNG]: THE THAI PARAGRAPH AT THE VERY TOP OF
+            #   THIS SHEET IS NOT HERE, AND THAT IS DELIBERATE. It completes
+            #   stanza 8, whose Pali is printed on 204, and the whole unit
+            #   went in with page 204's batch under the ruling made at
+            #   195-196. This page therefore starts at verse 9 - the เอตาปิ
+            #   stanza - and renders without the paragraph the book prints
+            #   above it.
+            {
+                'number': 9,
+                'page': 205,
+                'pali': 'เอตาปิ พุทธะชะยะมังคะละอัฏฐะคาถา, โย วาจะโน ทินะทิเน สะระเตมะตันที, หิต์วานะเนกะวิวิธานิ จุปัททะวานิ, โมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.',
+                'pali_roman': 'Etāpi buddhajayamaṅgalaaṭṭhagāthā, Yo vācano dinadine saratematandī, Hitvānanekavividhāni cupaddavāni, Mokkhaṃ sukhaṃ adhigameyya naro sapañño.',
+                'thai': 'นรชนใดมีปัญญา ไม่เกียจคร้าน, สวดก็ดี ระลึกก็ดี, ซึ่งพระพุทธชัยมงคล ๘ คาถาเหล่านี้ทุกๆ วัน, นรชนนั้นจะขจัดอุปัทวันตรายทั้งหลาย เป็นอเนกประการเสียได้, ถึงซึ่งพระนิพพาน อันเป็นบรมสุขแล.',
+                'paiboon': 'ná-rá-chon dai mii bpan-yaa mâi gìat-kráan, sùat gɔ̂ dii rá-lʉ́k gɔ̂ dii, sʉ̂ŋ prá-pút-tá-chai-moŋ-kon bpɛ̀ɛt kaa-tǎa lào níi túk-túk wan, ná-rá-chon nán jà kà-jàt ù-bpàt-dtà-wan-dtà-raai táŋ-lǎai bpen à-nèek bprà-gaan sǐa dâai, tʉ̌ŋ sʉ̂ŋ prá-níp-paan an bpen bɔɔ-rom-má-sùk lɛɛ.',
+                'english': 'Whatever wise and unwearied person recites or calls to mind these eight Buddha-victory verses day after day will put away obstacles many and various, and reach liberation, the highest happiness.',
             },
         ],
     },
@@ -51342,6 +51365,110 @@ CHANTS = [
                 'thai': 'เพื่อการสำรวมระวัง ในพระสงฆ์ ในกาลต่อไป.',
                 'paiboon': '',
                 'english': 'that in time to come I may be restrained towards the Sangha.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
+        'id': 'tangkhanika-paccavekkhana-patho-plae',
+        'title_thai': 'ตังขะณิกะปัจจะเวกขะณะปาโฐ',
+        'title_pali': '',
+        'title_roman': 'Taṅkhaṇikapaccavekkhaṇapāṭho',
+        'page_start': 205,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '(หันทะ มะยัง ตังขะณิกะปัจจะเวกขะณะปาฐัง ภะณามะ เส.)',
+            'pali_roman': '(Handa mayaṃ taṅkhaṇikapaccavekkhaṇapāṭhaṃ bhaṇāma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us recite the reflection at the moment of use.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0475.PNG]: ‼ RUBRICS THAT NAME THE OCCASION, not
+            #   the chanter. (ขณะใช้สอยจีวร), 'while making use of the robe',
+            #   stands over verse 1, and (ขณะฉันบิณฑบาต), 'while eating alms
+            #   food', over verse 6. Both centred and italic, both read at
+            #   3.2x. Unlike page 202's rubrics, which split one chant into
+            #   alternatives for different people, these mark successive
+            #   SECTIONS of one continuous reflection - the four requisites
+            #   taken in turn - so all of them are chanted, not one or the
+            #   other. Recorded as verse rubrics so each prints where the book
+            #   prints it.
+            # ‼ CHECK [IMG_0475.PNG]: THIS IS THE CHANT'S SECOND PRINTING. The
+            #   first is tangkhanika-paccavekkhana-patho at page 6, eighteen
+            #   verses, Pali only; the สารบัญ lists this one separately at
+            #   ๒๐๕. Kept as its own entry, per the precedent set at 113/273
+            #   and 193/254. The page heading and the สารบัญ agree on the
+            #   spelling here, so title_roman is TAKEN from the table rather
+            #   than composed.
+            {
+                'number': 1,
+                'page': 205,
+                'rubric': '(ขณะใช้สอยจีวร)',
+                'pali': 'ปะฏิสังขา โยนิโส จีวะรัง ปะฏิเสวามิ,',
+                'pali_roman': 'Paṭisaṅkhā yoniso cīvaraṃ paṭisevāmi,',
+                'thai': 'เราย่อมพิจารณา โดยแยบคายแล้ว นุ่งห่มจีวร,',
+                'paiboon': 'rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo nûŋ-hòm jii-wɔɔn,',
+                'english': 'Reflecting wisely, I make use of the robe:',
+            },
+            {
+                'number': 2,
+                'page': 205,
+                'pali': 'ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Yāvadeva sītassa paṭighātāya,',
+                'thai': 'เพียงเพื่อบำบัดความหนาว,',
+                'paiboon': 'piaŋ pʉ̂a bam-bàt kwaam-nǎao,',
+                'english': 'only to ward off cold,',
+            },
+            # ‼ CHECK [IMG_0475.PNG]: NO COMMA AT THE END OF VERSE 3's THAI.
+            #   Read at 3.6x: เพื่อบำบัดความร้อน is followed by nothing, where
+            #   verse 2 above it ends เพียงเพื่อบำบัดความหนาว, with a comma.
+            #   Reproduced bare. The Pali line does end in a comma.
+            {
+                'number': 3,
+                'page': 205,
+                'pali': 'อุณ์หัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Uṇhassa paṭighātāya,',
+                'thai': 'เพื่อบำบัดความร้อน',
+                'paiboon': 'pʉ̂a bam-bàt kwaam-rɔ́ɔn',
+                'english': 'to ward off heat,',
+            },
+            {
+                'number': 4,
+                'page': 205,
+                'pali': 'ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,',
+                'pali_roman': 'Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃ paṭighātāya,',
+                'thai': 'เพื่อบำบัดสัมผัสอันเกิดจาก เหลือบ ยุง ลม แดด และสัตว์เลื้อยคลานทั้งหลาย,',
+                'paiboon': 'pʉ̂a bam-bàt sǎm-pàt an gə̀ət jàak lʉ̀ap yuŋ lom dɛ̀ɛt lɛ́ sàt lʉ́ay-klaan táŋ-lǎai,',
+                'english': 'to ward off the touch of gadflies, mosquitoes, wind, sun and creeping things,',
+            },
+            # ‼ CHECK [IMG_0475.PNG]: A FULL STOP MID-CHANT, at verse 5's
+            #   Thai, ความละอาย. - it closes the robe section, and verse 6
+            #   begins the food section under its own rubric. The chant runs
+            #   on to page 206.
+            {
+                'number': 5,
+                'page': 205,
+                'pali': 'ยาวะเทวะ หิริโกปินะปะฏิจฉาทะนัตถัง,',
+                'pali_roman': 'Yāvadeva hirikopinapaṭicchādanatthaṃ,',
+                'thai': 'และเพียงเพื่อปกปิดอวัยวะ อันให้เกิดความละอาย.',
+                'paiboon': 'lɛ́ piaŋ pʉ̂a bpòk-bpìt à-wai-yá-wá an hâi gə̀ət kwaam lá-aai.',
+                'english': 'and only to cover the parts that bring shame.',
+            },
+            # ‼ CHECK [IMG_0475.PNG]: CUT AT THE PAGE TURN. Verse 6 is the
+            #   last thing on the sheet and the chant runs on to page 206. No
+            #   […] is used: it ends at a comma the book itself prints.
+            {
+                'number': 6,
+                'page': 205,
+                'rubric': '(ขณะฉันบิณฑบาต)',
+                'pali': 'ปะฏิสังขา โยนิโส ปิณฑะปาตัง ปะฏิเสวามิ,',
+                'pali_roman': 'Paṭisaṅkhā yoniso piṇḍapātaṃ paṭisevāmi,',
+                'thai': 'เราย่อมพิจารณา โดยแยบคายแล้ว ฉันบิณฑบาต,',
+                'paiboon': 'rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo chǎn bin-tá-bàat,',
+                'english': 'Reflecting wisely, I take alms food,',
             },
         ],
     },

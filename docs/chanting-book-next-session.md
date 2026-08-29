@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-204 went in.
+205 went in.
 
 ## Read first, in this order
 
@@ -80,12 +80,20 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 205, `IMG_0475`.** ⚠️ `buddha-jayamangala-gatha-plae` IS OPEN —
-**8 stanzas in, resume at verse 9**. ⚠️ **Verse 8 is ALREADY IN, recorded whole
-on page 204**, so do NOT enter the Thai paragraph at the head of 205 — it
-belongs to a unit the app already holds. 205 also carries the chant's closing
-เอตาปิ verse and then a NEW chant, `ตังขะณิกะปัจจะเวกขะณะปาโฐ`, with an
-invitation and the rubric `(ขณะใช้สอยจีวร)`. `samvega-parikittana-patha-plae` CLOSED on
+**Next: page 206, `IMG_0476`.** ⚠️ `tangkhanika-paccavekkhana-patho-plae` IS
+OPEN — **6 units in, resume at verse 7**. `buddha-jayamangala-gatha-plae`
+CLOSED on 205 with its เอตาปิ stanza.
+
+The chant now running is the reflection on the four requisites, and the book
+marks each one with its OWN centred italic rubric — `(ขณะใช้สอยจีวร)` at verse
+1 and `(ขณะฉันบิณฑบาต)` at verse 6, with the lodging and the medicine still to
+come. **These rubrics are a third kind**, distinct from both earlier sorts:
+
+| kind | example | what it means |
+|---|---|---|
+| an **alternative** | 202 — `(สำหรับภิกษุ-สามเณรสวด)` / `(สำหรับอุบาสก-อุบาสิกาสวด)` | chant one run **or** the other |
+| a **section marker** | 205 — `(ขณะใช้สอยจีวร)` / `(ขณะฉันบิณฑบาต)` | chant **all** of them, in order |
+| an **invitation** | 205 — `(หันทะ มะยัง … ภะณามะ เส.)` | the call that opens the chant | `samvega-parikittana-patha-plae` CLOSED on
 203, and the whole morning service closed with it.
 
 Three things page 203 turned up that change how later pages are read:

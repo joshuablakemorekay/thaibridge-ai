@@ -1,0 +1,219 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "buddha-jayamangala-gatha-plae",
+   "tangkhanika-paccavekkhana-patho-plae"
+  ],
+  "pages": [
+   {
+    "page": 205,
+    "file": "IMG_0475.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "buddha-jayamangala-gatha-plae",
+    "verses": "9",
+    "starts_here": false,
+    "note": "The top of the sheet. The Thai paragraph above verse 9 completes stanza 8 and was entered with page 204, so it is NOT recorded again here. Verse 9 is the chant's closing stanza and it ENDS here."
+   },
+   {
+    "page": 205,
+    "file": "IMG_0475.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "tangkhanika-paccavekkhana-patho-plae",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "The lower half. A centred bold heading, a bracketed invitation beneath it, then a centred italic rubric and six Pali lines each with its Thai - short ones in a right-hand column, long ones indented beneath. A second rubric at verse 6. The chant CONTINUES onto page 206."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "buddha-jayamangala-gatha-plae",
+   "continuation_of": "buddha-jayamangala-gatha-plae",
+   "working_notes": {
+    "invitation": "none printed.",
+    "units": "One, verse 9 - the chant's closing stanza, on the benefit of reciting the eight.",
+    "ordering": "Pali stanza first, then its Thai.",
+    "conventions": "Same stanza shape as 203-204.",
+    "pages": "IMG_0475.PNG, page 205. The chant arrived from page 204 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 9,
+     "page": 205,
+     "pali": "เอตาปิ พุทธะชะยะมังคะละอัฏฐะคาถา, โย วาจะโน ทินะทิเน สะระเตมะตันที, หิต์วานะเนกะวิวิธานิ จุปัททะวานิ, โมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.",
+     "pali_roman": "Etāpi buddhajayamaṅgalaaṭṭhagāthā, Yo vācano dinadine saratematandī, Hitvānanekavividhāni cupaddavāni, Mokkhaṃ sukhaṃ adhigameyya naro sapañño.",
+     "thai": "นรชนใดมีปัญญา ไม่เกียจคร้าน, สวดก็ดี ระลึกก็ดี, ซึ่งพระพุทธชัยมงคล ๘ คาถาเหล่านี้ทุกๆ วัน, นรชนนั้นจะขจัดอุปัทวันตรายทั้งหลาย เป็นอเนกประการเสียได้, ถึงซึ่งพระนิพพาน อันเป็นบรมสุขแล.",
+     "paiboon": "ná-rá-chon dai mii bpan-yaa mâi gìat-kráan, sùat gɔ̂ dii rá-lʉ́k gɔ̂ dii, sʉ̂ŋ prá-pút-tá-chai-moŋ-kon bpɛ̀ɛt kaa-tǎa lào níi túk-túk wan, ná-rá-chon nán jà kà-jàt ù-bpàt-dtà-wan-dtà-raai táŋ-lǎai bpen à-nèek bprà-gaan sǐa dâai, tʉ̌ŋ sʉ̂ŋ prá-níp-paan an bpen bɔɔ-rom-má-sùk lɛɛ.",
+     "english": "Whatever wise and unwearied person recites or calls to mind these eight Buddha-victory verses day after day will put away obstacles many and various, and reach liberation, the highest happiness."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อัฏฐะคาถา",
+     "pali_roman": "aṭṭhagāthā",
+     "meaning": "'the eight verses'. The closing stanza counts the chant for you, and the Thai gives the number in Thai script, ๘"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 9,
+     "file": "IMG_0475.PNG",
+     "issue": "‼ THE REPETITION MARK ๆ IS SET TWO DIFFERENT WAYS IN THIS CHANT, and both are kept. Here it is CLOSED UP - คาถาเหล่านี้ทุกๆ วัน - where page 203's verse 52 has it SPACED, นั้น ๆ. Read at 3.2x. The book is inconsistent with itself; neither was tidied to match the other."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0475.PNG",
+     "issue": "THAI NUMERAL REPRODUCED AS PRINTED: พระพุทธชัยมงคล ๘ คาถา. The book uses ๘, not 8. The paiboon reads it as bpɛ̀ɛt."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0475.PNG",
+     "issue": "THE THAI PARAGRAPH AT THE VERY TOP OF THIS SHEET IS NOT HERE, AND THAT IS DELIBERATE. It completes stanza 8, whose Pali is printed on 204, and the whole unit went in with page 204's batch under the ruling made at 195-196. This page therefore starts at verse 9 - the เอตาปิ stanza - and renders without the paragraph the book prints above it."
+    }
+   ]
+  },
+  {
+   "id": "tangkhanika-paccavekkhana-patho-plae",
+   "title_thai": "ตังขะณิกะปัจจะเวกขะณะปาโฐ",
+   "title_pali": "",
+   "title_roman": "Taṅkhaṇikapaccavekkhaṇapāṭho",
+   "page_start": 205,
+   "continues": true,
+   "invitation": {
+    "pali": "(หันทะ มะยัง ตังขะณิกะปัจจะเวกขะณะปาฐัง ภะณามะ เส.)",
+    "pali_roman": "(Handa mayaṃ taṅkhaṇikapaccavekkhaṇapāṭhaṃ bhaṇāma se.)",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us recite the reflection at the moment of use."
+   },
+   "working_notes": {
+    "invitation": "printed, in brackets, directly under the heading.",
+    "units": "Six, verses 1-6, one per PALI line with its Thai. Two carry a rubric above.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "Rubrics naming WHICH requisite is being used - see the checks.",
+    "pages": "IMG_0475.PNG, page 205. The chant STARTS here and CONTINUES onto page 206."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 205,
+     "pali": "ปะฏิสังขา โยนิโส จีวะรัง ปะฏิเสวามิ,",
+     "pali_roman": "Paṭisaṅkhā yoniso cīvaraṃ paṭisevāmi,",
+     "thai": "เราย่อมพิจารณา โดยแยบคายแล้ว นุ่งห่มจีวร,",
+     "paiboon": "rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo nûŋ-hòm jii-wɔɔn,",
+     "english": "Reflecting wisely, I make use of the robe:",
+     "rubric": "(ขณะใช้สอยจีวร)"
+    },
+    {
+     "number": 2,
+     "page": 205,
+     "pali": "ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,",
+     "pali_roman": "Yāvadeva sītassa paṭighātāya,",
+     "thai": "เพียงเพื่อบำบัดความหนาว,",
+     "paiboon": "piaŋ pʉ̂a bam-bàt kwaam-nǎao,",
+     "english": "only to ward off cold,"
+    },
+    {
+     "number": 3,
+     "page": 205,
+     "pali": "อุณ์หัสสะ ปะฏิฆาตายะ,",
+     "pali_roman": "Uṇhassa paṭighātāya,",
+     "thai": "เพื่อบำบัดความร้อน",
+     "paiboon": "pʉ̂a bam-bàt kwaam-rɔ́ɔn",
+     "english": "to ward off heat,"
+    },
+    {
+     "number": 4,
+     "page": 205,
+     "pali": "ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,",
+     "pali_roman": "Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃ paṭighātāya,",
+     "thai": "เพื่อบำบัดสัมผัสอันเกิดจาก เหลือบ ยุง ลม แดด และสัตว์เลื้อยคลานทั้งหลาย,",
+     "paiboon": "pʉ̂a bam-bàt sǎm-pàt an gə̀ət jàak lʉ̀ap yuŋ lom dɛ̀ɛt lɛ́ sàt lʉ́ay-klaan táŋ-lǎai,",
+     "english": "to ward off the touch of gadflies, mosquitoes, wind, sun and creeping things,"
+    },
+    {
+     "number": 5,
+     "page": 205,
+     "pali": "ยาวะเทวะ หิริโกปินะปะฏิจฉาทะนัตถัง,",
+     "pali_roman": "Yāvadeva hirikopinapaṭicchādanatthaṃ,",
+     "thai": "และเพียงเพื่อปกปิดอวัยวะ อันให้เกิดความละอาย.",
+     "paiboon": "lɛ́ piaŋ pʉ̂a bpòk-bpìt à-wai-yá-wá an hâi gə̀ət kwaam lá-aai.",
+     "english": "and only to cover the parts that bring shame."
+    },
+    {
+     "number": 6,
+     "page": 205,
+     "pali": "ปะฏิสังขา โยนิโส ปิณฑะปาตัง ปะฏิเสวามิ,",
+     "pali_roman": "Paṭisaṅkhā yoniso piṇḍapātaṃ paṭisevāmi,",
+     "thai": "เราย่อมพิจารณา โดยแยบคายแล้ว ฉันบิณฑบาต,",
+     "paiboon": "rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo chǎn bin-tá-bàat,",
+     "english": "Reflecting wisely, I take alms food,",
+     "rubric": "(ขณะฉันบิณฑบาต)"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปะฏิสังขา โยนิโส",
+     "pali_roman": "paṭisaṅkhā yoniso",
+     "meaning": "'having reflected wisely'. It opens the reflection on every requisite in turn, which is why it is printed again at verse 6 for the food"
+    },
+    {
+     "pali": "หิริโกปินะ",
+     "pali_roman": "hirikopina",
+     "meaning": "the parts of the body that cause hiri, moral shame, if uncovered. The Thai renders it อวัยวะ อันให้เกิดความละอาย rather than naming them"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0475.PNG",
+     "issue": "‼ RUBRICS THAT NAME THE OCCASION, not the chanter. (ขณะใช้สอยจีวร), 'while making use of the robe', stands over verse 1, and (ขณะฉันบิณฑบาต), 'while eating alms food', over verse 6. Both centred and italic, both read at 3.2x. Unlike page 202's rubrics, which split one chant into alternatives for different people, these mark successive SECTIONS of one continuous reflection - the four requisites taken in turn - so all of them are chanted, not one or the other. Recorded as verse rubrics so each prints where the book prints it."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0475.PNG",
+     "issue": "NO COMMA AT THE END OF VERSE 3's THAI. Read at 3.6x: เพื่อบำบัดความร้อน is followed by nothing, where verse 2 above it ends เพียงเพื่อบำบัดความหนาว, with a comma. Reproduced bare. The Pali line does end in a comma."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0475.PNG",
+     "issue": "A FULL STOP MID-CHANT, at verse 5's Thai, ความละอาย. - it closes the robe section, and verse 6 begins the food section under its own rubric. The chant runs on to page 206."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0475.PNG",
+     "issue": "THIS IS THE CHANT'S SECOND PRINTING. The first is tangkhanika-paccavekkhana-patho at page 6, eighteen verses, Pali only; the สารบัญ lists this one separately at ๒๐๕. Kept as its own entry, per the precedent set at 113/273 and 193/254. The page heading and the สารบัญ agree on the spelling here, so title_roman is TAKEN from the table rather than composed."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0475.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 6 is the last thing on the sheet and the chant runs on to page 206. No […] is used: it ends at a comma the book itself prints."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "buddha-jayamangala-gatha-plae"
+  ],
+  "continues": [
+   "tangkhanika-paccavekkhana-patho-plae"
+  ],
+  "resume_from": {
+   "chant": "tangkhanika-paccavekkhana-patho-plae",
+   "next_verse": 7,
+   "page": 206
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0475.PNG read end to end, with the closing stanza's Thai, the heading, the invitation, the first rubric and verses 2-3 all re-read at 3.2-3.6x. Page number 205 printed clearly at the top centre. Every Pali line was also put through the app's transliterator as a cross-check. Two chants, one heading, one invitation, two rubrics, no footnote, no rule, no colophon.",
+  "notes": "‼ THE REPETITION MARK ๆ IS SET BOTH WAYS IN ONE CHANT - closed up here (ทุกๆ), spaced on page 203 (นั้น ๆ) - and both are kept as printed. Also a third KIND of rubric: 202's split one chant into alternatives for different people, while 205's mark successive sections of one continuous reflection, so all are chanted. The Thai paragraph at the head of this sheet belongs to stanza 8 and was entered with page 204.",
+  "diacritic_exceptions": []
+ }
+}
