@@ -1,0 +1,540 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 3,
+  "files_read": 3,
+  "received": 3,
+  "manifest": [
+   "buddhanussati-plae",
+   "buddhabhigiti-plae",
+   "dhammanussati-plae"
+  ],
+  "pages": [
+   {
+    "page": 226,
+    "file": "IMG_0496.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "buddhanussati-plae",
+    "verses": "1-11",
+    "starts_here": true,
+    "note": "The page opens with พุทธานุสสติ and its invitation, then eleven Pali lines with their Thai. Complete here."
+   },
+   {
+    "page": 226,
+    "file": "IMG_0496.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "buddhabhigiti-plae",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "Below it, พุทธาภิคีติ with its own invitation; only three lines fit before the page ends."
+   },
+   {
+    "page": 227,
+    "file": "IMG_0497.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "buddhabhigiti-plae",
+    "verses": "4-14",
+    "starts_here": false,
+    "note": "The chant continuing; no heading. Eleven lines."
+   },
+   {
+    "page": 228,
+    "file": "IMG_0498.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "buddhabhigiti-plae",
+    "verses": "15-19",
+    "starts_here": false,
+    "note": "The chant ENDING: the centred rubric and the four lines of asking pardon."
+   },
+   {
+    "page": 228,
+    "file": "IMG_0498.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "dhammanussati-plae",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "Below it, ธัมมานุสสติ with its invitation, six Pali lines with their Thai, and the page ends."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "buddhanussati-plae",
+   "title_thai": "พุทธานุสสติ",
+   "title_pali": "",
+   "title_roman": "Buddhānussati",
+   "title_english": "The Recollection of the Buddha",
+   "page_start": 226,
+   "layout": "lines",
+   "english_unverified": true,
+   "invitation": {
+    "pali": "หันทะ มะยัง พุทธานุสสะตินะยัง กะโรมะ เส.",
+    "pali_roman": "Handa mayaṃ buddhānussatinayaṃ karoma se.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us make the recollection of the Buddha."
+   },
+   "working_notes": {
+    "invitation": "printed in brackets under the heading.",
+    "units": "11 Pali lines, each with its printed Thai.",
+    "ordering": "One column; the Thai sits beside the short units and beneath the long ones.",
+    "conventions": "-plae suffix for the translated section; the first printing is page 52's `phra-phuttakhun`, under a different name and in 4 units.",
+    "pages": "IMG_0496, page 226. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ตัง โข ปะนะ ภะคะวันตัง เอวัง กัล์ยาโณ กิตติสัทโท อัพภุคคะโต,",
+     "pali_roman": "Taṃ kho pana bhagavantaṃ evaṃ kalyāṇo kittisaddo abbhuggato,",
+     "thai": "ก็กิตติศัพท์อันงามของพระผู้มีพระภาคเจ้า, ได้ฟุ้งไปแล้วอย่างนี้ว่า :-",
+     "paiboon": "",
+     "english": "And this good report has gone abroad concerning that Blessed One:",
+     "page": 226
+    },
+    {
+     "number": 2,
+     "pali": "อิติปิ โส ภะคะวา,",
+     "pali_roman": "Itipi so bhagavā,",
+     "thai": "เพราะเหตุอย่างนี้ ๆ พระผู้มีพระภาคเจ้านั้น,",
+     "paiboon": "",
+     "english": "So indeed is he, the Blessed One —"
+    },
+    {
+     "number": 3,
+     "pali": "อะระหัง,",
+     "pali_roman": "Arahaṃ,",
+     "thai": "เป็นผู้ไกลจากกิเลส,",
+     "paiboon": "",
+     "english": "worthy,"
+    },
+    {
+     "number": 4,
+     "pali": "สัมมาสัมพุทโธ,",
+     "pali_roman": "Sammāsambuddho,",
+     "thai": "เป็นผู้ตรัสรู้ชอบได้โดยพระองค์เอง,",
+     "paiboon": "",
+     "english": "perfectly enlightened by himself,"
+    },
+    {
+     "number": 5,
+     "pali": "วิชชาจะระณะสัมปันโน,",
+     "pali_roman": "Vijjācaraṇasampanno,",
+     "thai": "เป็นผู้ถึงพร้อมด้วยวิชชาและจรณะ,",
+     "paiboon": "",
+     "english": "accomplished in knowledge and conduct,"
+    },
+    {
+     "number": 6,
+     "pali": "สุคะโต,",
+     "pali_roman": "Sugato,",
+     "thai": "เป็นผู้ไปแล้วด้วยดี,",
+     "paiboon": "",
+     "english": "well-farer,"
+    },
+    {
+     "number": 7,
+     "pali": "โลกะวิทู,",
+     "pali_roman": "Lokavidū,",
+     "thai": "เป็นผู้รู้โลกอย่างแจ่มแจ้ง,",
+     "paiboon": "",
+     "english": "knower of the worlds,"
+    },
+    {
+     "number": 8,
+     "pali": "อะนุตตะโร ปุริสะทัมมะสาระถิ,",
+     "pali_roman": "Anuttaro purisadammasārathi,",
+     "thai": "เป็นผู้สามารถฝึกบุรุษที่สมควรฝึกได้อย่างไม่มีใครยิ่งกว่า,",
+     "paiboon": "",
+     "english": "unsurpassed trainer of those who can be trained,"
+    },
+    {
+     "number": 9,
+     "pali": "สัตถา เทวะมะนุสสานัง,",
+     "pali_roman": "Satthā devamanussānaṃ,",
+     "thai": "เป็นครูผู้สอนของเทวดาและมนุษย์ทั้งหลาย,",
+     "paiboon": "",
+     "english": "teacher of devas and humans,"
+    },
+    {
+     "number": 10,
+     "pali": "พุทโธ,",
+     "pali_roman": "Buddho,",
+     "thai": "เป็นผู้รู้ ผู้ตื่น ผู้เบิกบานด้วยธรรม,",
+     "paiboon": "",
+     "english": "awakened,"
+    },
+    {
+     "number": 11,
+     "pali": "ภะคะวาติ.",
+     "pali_roman": "Bhagavāti.",
+     "thai": "เป็นผู้มีความจำเริญ จำแนกธรรมสั่งสอนสัตว์ ดังนี้.",
+     "paiboon": "",
+     "english": "blessed."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "กิตติสัทโท",
+     "pali_roman": "kittisaddo",
+     "meaning": "the sound of report, a reputation carried abroad; the chant opens by saying the report has spread"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0496.PNG",
+     "issue": "⚠ THE HEADING DROPS A ะ THAT THE สารบัญ PRINTS, and it does so for ALL THREE of the -anussati chants: the pages head them พุทธานุสสติ, ธัมมานุสสติ and สังฆานุสสติ while the contents lists พุทธานุสสะติ, ธัมมานุสสะติ and สังฆานุสสะติ, and each chant's own invitation uses the contents' form. Three chants doing the same thing makes it the section's habit, not a slip. The title follows THIS PAGE'S HEADING in every case and nothing has been normalised."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0496.PNG",
+     "issue": "⚠ THE TRANSLATED COPY SPLITS WHAT THE FIRST PRINTING RUNS TOGETHER, so the unit counts do not match and that is not a fault. Page 52 sets the Buddha's epithets as four units; this page sets eleven, one per line, so each can carry its own Thai. The same thing happens to the Dhamma's on 228 — three units on page 53, six here — and to the reflection passage on 234-236."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0496.PNG",
+     "issue": "THE THAI ENDS WITH THE MARK :- introducing the list of epithets, as ยะทิทัง does on 231."
+    }
+   ]
+  },
+  {
+   "id": "buddhabhigiti-plae",
+   "title_thai": "พุทธาภิคีติ",
+   "title_pali": "",
+   "title_roman": "Buddhābhigīti",
+   "title_english": "The Chant in Praise of the Buddha",
+   "page_start": 226,
+   "layout": "lines",
+   "english_unverified": true,
+   "invitation": {
+    "pali": "หันทะ มะยัง พุทธาภิคีติง กะโรมะ เส.",
+    "pali_roman": "Handa mayaṃ buddhābhigītiṃ karoma se.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us make the chant in praise of the Buddha."
+   },
+   "working_notes": {
+    "invitation": "printed in brackets under the heading.",
+    "units": "19 — eighteen Pali lines with their Thai, and one centred rubric entered as a verse.",
+    "ordering": "Pali in bold flush left, Thai indented beneath.",
+    "conventions": "-plae suffix; English from page 52's `buddhabhigiti`, whose 18 units are 1:1 with the 18 Pali lines here.",
+    "pages": "IMG_0496 to IMG_0498, pages 226-228. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "พุทธ์วาระหันตะวะระตาทิคุณาภิยุตโต,",
+     "pali_roman": "Buddhvārahantavaratādiguṇābhiyutto,",
+     "thai": "พระพุทธเจ้าประกอบด้วยคุณ มีความประเสริฐแห่งอรหันตคุณ เป็นต้น,",
+     "paiboon": "",
+     "english": "The Buddha, joined to the highest qualities, arahantship foremost among them,",
+     "page": 226
+    },
+    {
+     "number": 2,
+     "pali": "สุทธาภิญาณะกะรุณาหิ สะมาคะตัตโต,",
+     "pali_roman": "Suddhābhiñāṇakaruṇāhi samāgatatto,",
+     "thai": "มีพระองค์อันประกอบด้วยพระญาณ และพระกรุณาอันบริสุทธิ์,",
+     "paiboon": "",
+     "english": "in whose being purity, higher knowing and compassion have come together,"
+    },
+    {
+     "number": 3,
+     "pali": "โพเธสิ โย สุชะนะตัง กะมะลังวะ สูโร,",
+     "pali_roman": "Bodhesi yo sujanataṃ kamalaṃva sūro,",
+     "thai": "พระองค์ใด ทรงกระทำชนที่ดีให้เบิกบาน ดุจอาทิตย์ทำบัวให้บาน,",
+     "paiboon": "",
+     "english": "who awakened the good folk as the sun awakens the lotus,"
+    },
+    {
+     "number": 4,
+     "pali": "วันทามะหัง ตะมะระณัง สิระสา ชิเนนทัง,",
+     "pali_roman": "Vandāmahaṃ tamaraṇaṃ sirasā jinendaṃ,",
+     "thai": "ข้าพเจ้าไหว้พระชินสีห์ ผู้ไม่มีกิเลส พระองค์นั้น ด้วยเศียรเกล้า,",
+     "paiboon": "",
+     "english": "that Peaceful One, Lord of Conquerors, I salute with my head.",
+     "page": 227
+    },
+    {
+     "number": 5,
+     "pali": "พุทโธ โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง,",
+     "pali_roman": "Buddho yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ,",
+     "thai": "พระพุทธเจ้าพระองค์ใด เป็นสรณะอันเกษมสูงสุด ของสัตว์ทั้งหลาย,",
+     "paiboon": "",
+     "english": "The Buddha, who is for all breathing things the refuge, safe and supreme,"
+    },
+    {
+     "number": 6,
+     "pali": "ปะฐะมานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง,",
+     "pali_roman": "Paṭhamānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ,",
+     "thai": "ข้าพเจ้าไหว้พระพุทธเจ้าพระองค์นั้น, อันเป็นที่ตั้งแห่งความระลึก องค์ที่หนึ่ง, ด้วยเศียรเกล้า,",
+     "paiboon": "",
+     "english": "the first of the objects of recollection — him I revere with my head."
+    },
+    {
+     "number": 7,
+     "pali": "พุทธัสสาหัส์มิ ทาโส (ทาสี) วะ พุทโธ เม สามิกิสสะโร,",
+     "pali_roman": "Buddhassāhasmi dāso (dāsī) va buddho me sāmikissaro,",
+     "thai": "ข้าพเจ้าเป็นทาสของพระพุทธเจ้า, พระพุทธเจ้าเป็นนายมีอิสระเหนือข้าพเจ้า,",
+     "paiboon": "",
+     "english": "I am the Buddha's servant; the Buddha is my lord and master."
+    },
+    {
+     "number": 8,
+     "pali": "พุทโธ ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม,",
+     "pali_roman": "Buddho dukkhassa ghātā ca vidhātā ca hitassa me,",
+     "thai": "พระพุทธเจ้าเป็นเครื่องกำจัดทุกข์ และทรงไว้ซึ่งประโยชน์แก่ข้าพเจ้า,",
+     "paiboon": "",
+     "english": "The Buddha destroys suffering, and brings about what is for my welfare."
+    },
+    {
+     "number": 9,
+     "pali": "พุทธัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง,",
+     "pali_roman": "Buddhassāhaṃ niyyādemi sarīrañjīvitañcidaṃ,",
+     "thai": "ข้าพเจ้ามอบกายถวายชีวิตนี้ แด่พระพุทธเจ้า,",
+     "paiboon": "",
+     "english": "To the Buddha I surrender this body and this life,"
+    },
+    {
+     "number": 10,
+     "pali": "วันทันโตหัง (ตีหัง) จะริสสามิ พุทธัสเสวะ สุโพธิตัง,",
+     "pali_roman": "Vandantohaṃ (tīhaṃ) carissāmi buddhasseva subodhitaṃ,",
+     "thai": "ข้าพเจ้าผู้ไหว้อยู่จักประพฤติตาม, ซึ่งความตรัสรู้ดีของพระพุทธเจ้า,",
+     "paiboon": "",
+     "english": "Revering him, I shall walk on by the Buddha's own true awakening."
+    },
+    {
+     "number": 11,
+     "pali": "นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง,",
+     "pali_roman": "Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ,",
+     "thai": "สรณะอื่นของข้าพเจ้าไม่มี, พระพุทธเจ้าเป็นสรณะอันประเสริฐของข้าพเจ้า,",
+     "paiboon": "",
+     "english": "For me there is no other refuge; the Buddha is my refuge, the best of them."
+    },
+    {
+     "number": 12,
+     "pali": "เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน,",
+     "pali_roman": "Etena saccavajjena vaḍḍheyyaṃ satthusāsane,",
+     "thai": "ด้วยการกล่าวคำสัตย์นี้ ข้าพเจ้าพึงเจริญในพระศาสนาของพระศาสดา,",
+     "paiboon": "",
+     "english": "By the speaking of this truth, may I grow in the Teacher's dispensation."
+    },
+    {
+     "number": 13,
+     "pali": "พุทธัง เม วันทะมาเนนะ (มานายะ) ยัง ปุญญัง ปะสุตัง อิธะ,",
+     "pali_roman": "Buddhaṃ me vandamānena (mānāya) yaṃ puññaṃ pasutaṃ idha,",
+     "thai": "ข้าพเจ้าผู้ไหว้อยู่ซึ่งพระพุทธเจ้า ได้ขวนขวายบุญใด ในบัดนี้,",
+     "paiboon": "",
+     "english": "Whatever merit I have gained here in revering the Buddha —"
+    },
+    {
+     "number": 14,
+     "pali": "สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.",
+     "pali_roman": "Sabbepi antarāyā me māhesuṃ tassa tejasā.",
+     "thai": "อันตรายทั้งปวง อย่าได้มีแก่ข้าพเจ้า ด้วยเดชแห่งบุญนั้น.",
+     "paiboon": "",
+     "english": "by the power of it, may all obstacles for me come to nothing."
+    },
+    {
+     "number": 15,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(กราบพร้อมกับหมอบลงว่า)",
+     "paiboon": "",
+     "english": "(bow, and while bowing low say:)",
+     "page": 228
+    },
+    {
+     "number": 16,
+     "pali": "กาเยนะ วาจายะ วะ เจตะสา วา,",
+     "pali_roman": "Kāyena vācāya va cetasā vā,",
+     "thai": "ด้วยกายก็ดี ด้วยวาจาก็ดี ด้วยใจก็ดี,",
+     "paiboon": "",
+     "english": "By body, by speech, or by mind,"
+    },
+    {
+     "number": 17,
+     "pali": "พุทเธ กุกัมมัง ปะกะตัง มะยา ยัง,",
+     "pali_roman": "Buddhe kukammaṃ pakataṃ mayā yaṃ,",
+     "thai": "กรรมน่าติเตียนอันใด ที่ข้าพเจ้ากระทำแล้วในพระพุทธเจ้า,",
+     "paiboon": "",
+     "english": "whatever wrong has been done by me towards the Buddha —"
+    },
+    {
+     "number": 18,
+     "pali": "พุทโธ ปะฏิคคัณหะตุ อัจจะยันตัง,",
+     "pali_roman": "Buddho paṭiggaṇhatu accayantaṃ,",
+     "thai": "ขอพระพุทธเจ้า จงงดซึ่งโทษล่วงเกินอันนั้น,",
+     "paiboon": "",
+     "english": "may the Buddha accept that transgression,"
+    },
+    {
+     "number": 19,
+     "pali": "กาลันตะเร สังวะริตุง วะ พุทเธ,",
+     "pali_roman": "Kālantare saṃvarituṃ va buddhe,",
+     "thai": "เพื่อการสำรวมระวัง ในพระพุทธเจ้า ในกาลต่อไป.",
+     "paiboon": "",
+     "english": "that in time to come I may be restrained towards the Buddha."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ชิเนนทัง",
+     "pali_roman": "jinendaṃ",
+     "meaning": "lord of conquerors; the epithet the opening verse salutes"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 15,
+     "file": "IMG_0498.PNG",
+     "issue": "THE RUBRIC (กราบพร้อมกับหมอบลงว่า) IS ENTERED AS A VERSE, as in ธัมมาภิคีติ on 229-230 and สังฆาภิคีติ on 232-233. All three abhigīti copies are built to the same 19-unit pattern."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0497.PNG",
+     "issue": "⚠ AND HERE THE FIRST PRINTING IS NOT UNIFORM. Page 52 already prints วันทันโตหัง (ตีหัง) at its verse 10, so ONE of the three bracketed feminine forms is in the first printing after all — but ทาโส (ทาสี) at 7 and วันทะมาเนนะ (มานายะ) at 13 are not. Pages 53 and 54 print none of the three. The earlier batches said the first printings carry none; that holds for the Dhamma and Sangha chants but NOT for the Buddha one."
+    },
+    {
+     "verse": 19,
+     "file": "IMG_0498.PNG",
+     "issue": "⚠ THE LAST LINE ENDS ON A COMMA — วะ พุทเธ, — as ธัมมาภิคีติ does on 230, while สังฆาภิคีติ on 233 ends its parallel line with a full stop and page 52 ends this one with a stop too. Checked at magnification. Two of the three copies comma and one stops; all are entered as printed, under Josh's ruling of 2026-08-28 that these endings do not matter."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0497.PNG",
+     "issue": "PAGE 52 AND THIS COPY PUNCTUATE DIFFERENTLY — 9 line(s) differ in a comma or full stop alone (verses 4, 5, 6, 8, 9, 10, 11, 12, 19). Recorded once; neither side has been repunctuated."
+    },
+    {
+     "verse": 7,
+     "file": "IMG_0497.PNG",
+     "issue": "⚠ A REAL DIFFERENCE FROM THE FIRST PRINTING. This page sets `พุทธัสสาหัส์มิ ทาโส (ทาสี) วะ พุทโธ เม สามิกิสสะโร,`; page 52 sets `พุทธัสสาหัส์มิ ทาโส วะ พุทโธ เม สามิกิสสะโร`."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0497.PNG",
+     "issue": "⚠ A REAL DIFFERENCE FROM THE FIRST PRINTING. This page sets `พุทธัง เม วันทะมาเนนะ (มานายะ) ยัง ปุญญัง ปะสุตัง อิธะ,`; page 52 sets `พุทธัง เม วันทะมาเนนะ ยัง ปุญญัง ปะสุตัง อิธะ`."
+    }
+   ]
+  },
+  {
+   "id": "dhammanussati-plae",
+   "title_thai": "ธัมมานุสสติ",
+   "title_pali": "",
+   "title_roman": "Dhammānussati",
+   "title_english": "The Recollection of the Dhamma",
+   "page_start": 228,
+   "layout": "lines",
+   "english_unverified": true,
+   "invitation": {
+    "pali": "หันทะ มะยัง ธัมมานุสสะตินะยัง กะโรมะ เส.",
+    "pali_roman": "Handa mayaṃ dhammānussatinayaṃ karoma se.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us make the recollection of the Dhamma."
+   },
+   "working_notes": {
+    "invitation": "printed in brackets under the heading.",
+    "units": "6 Pali lines, each with its printed Thai.",
+    "ordering": "One column; the Thai sits beside every unit but the first.",
+    "conventions": "-plae suffix; the first printing is page 53's `phra-thammakhun`, in 3 units.",
+    "pages": "IMG_0498, page 228. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ส์วากขาโต ภะคะวะตา ธัมโม,",
+     "pali_roman": "Svākkhāto bhagavatā dhammo,",
+     "thai": "พระธรรม เป็นสิ่งที่พระผู้มีพระภาคเจ้าได้ตรัสไว้ดีแล้ว,",
+     "paiboon": "",
+     "english": "The Dhamma is well proclaimed by the Blessed One,",
+     "page": 228
+    },
+    {
+     "number": 2,
+     "pali": "สันทิฏฐิโก,",
+     "pali_roman": "Sandiṭṭhiko,",
+     "thai": "เป็นสิ่งที่ผู้ศึกษาและปฏิบัติ พึงเห็นได้ด้วยตนเอง,",
+     "paiboon": "",
+     "english": "visible here and now,"
+    },
+    {
+     "number": 3,
+     "pali": "อะกาลิโก,",
+     "pali_roman": "Akāliko,",
+     "thai": "เป็นสิ่งที่ปฏิบัติได้ และให้ผลได้ ไม่จำกัดกาล,",
+     "paiboon": "",
+     "english": "timeless,"
+    },
+    {
+     "number": 4,
+     "pali": "เอหิปัสสิโก,",
+     "pali_roman": "Ehipassiko,",
+     "thai": "เป็นสิ่งที่ควรกล่าวกะผู้อื่นว่า ท่านจงมาดูเถิด,",
+     "paiboon": "",
+     "english": "inviting all to come and see,"
+    },
+    {
+     "number": 5,
+     "pali": "โอปะนะยิโก,",
+     "pali_roman": "Opanayiko,",
+     "thai": "เป็นสิ่งที่ควรน้อมเข้ามาใส่ตัว,",
+     "paiboon": "",
+     "english": "leading onwards,"
+    },
+    {
+     "number": 6,
+     "pali": "ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.",
+     "pali_roman": "Paccattaṃ veditabbo viññūhīti.",
+     "thai": "เป็นสิ่งที่ผู้รู้ก็รู้ได้เฉพาะตน ดังนี้.",
+     "paiboon": "",
+     "english": "to be known each for himself by the wise."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "โอปะนะยิโก",
+     "pali_roman": "opanayiko",
+     "meaning": "leading onwards, or to be brought inwards; the Thai here takes the second sense — 'ควรน้อมเข้ามาใส่ตัว'"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0498.PNG",
+     "issue": "⚠ THE HEADING DROPS A ะ THAT THE สารบัญ PRINTS, and it does so for ALL THREE of the -anussati chants: the pages head them พุทธานุสสติ, ธัมมานุสสติ and สังฆานุสสติ while the contents lists พุทธานุสสะติ, ธัมมานุสสะติ and สังฆานุสสะติ, and each chant's own invitation uses the contents' form. Three chants doing the same thing makes it the section's habit, not a slip. The title follows THIS PAGE'S HEADING in every case and nothing has been normalised."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0498.PNG",
+     "issue": "⚠ THE TRANSLATED COPY SPLITS WHAT THE FIRST PRINTING RUNS TOGETHER, so the unit counts do not match and that is not a fault. Page 52 sets the Buddha's epithets as four units; this page sets eleven, one per line, so each can carry its own Thai. The same thing happens to the Dhamma's on 228 — three units on page 53, six here — and to the reflection passage on 234-236."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "buddhanussati-plae",
+   "buddhabhigiti-plae",
+   "dhammanussati-plae"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 225,
+  "resume_from_file": "IMG_0495.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from the sheets and read against the first printings at pages 52 and 53.",
+  "page_scan": "agrees. Five rows across three sheets: two chants complete, one running 226 to 228.",
+  "notes": "THE THIRD AND LAST OF THE ABHIGĪTI COPIES, and it corrects something the earlier two batches said. ⚠ PAGE 52 DOES PRINT ONE OF THE BRACKETED FEMININE FORMS — วันทันโตหัง (ตีหัง) — where pages 53 and 54 print none. The claim that the first printings carry none of them holds for the Dhamma and Sangha chants only. ⚠ ALL THREE -anussati HEADINGS drop a ะ the สารบัญ prints; three chants doing it makes it the section's habit.",
+  "diacritic_exceptions": [
+   "va/vā — NOT one word romanised two ways, and the same exception batch-014-014, batch-229-230 and batch-232-233 declare. Two different Pali words, both meaning 'or', both in one printed line: 'กาเยนะ วาจายะ วะ เจตะสา วา'."
+  ]
+ }
+}
