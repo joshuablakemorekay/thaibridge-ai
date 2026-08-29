@@ -53722,6 +53722,95 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'khemakhema-saranadipika-plae',
+        'title_thai': 'เขมาเขมะสะระณะทีปิกะคาถา',
+        'title_pali': '',
+        'title_roman': 'Khemākhemasaraṇadīpikagāthā',
+        'page_start': 215,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '(หันทะ มะยัง เขมาเขมะสะระณะทีปิกะคาถาโย ภะณามะ เส.)',
+            'pali_roman': '(Handa mayaṃ khemākhemasaraṇadīpikagāthāyo bhaṇāma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us recite the verses showing the safe refuge and the unsafe.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0485.PNG]: TWO-COLUMN PĀDA LAYOUT AGAIN, as on page
+            #   212, and handled the same way: one verse per stanza with the
+            #   four pādas joined by single spaces. The column break is a
+            #   layout device the app cannot show and is not stored.
+            # ‼ CHECK [IMG_0485.PNG]: NOT ONE THAI PARAGRAPH ON THIS SHEET
+            #   CONTAINS A COMMA, and none of the first four ends in
+            #   punctuation; the fifth ends with ฯ. That matches page 212
+            #   exactly and is unlike the comma-heavy Thai of the chants on
+            #   205-211. Reproduced as printed.
+            # ‼ CHECK [IMG_0485.PNG]: YAMAKKAN CONFIRMED on เจต๎ยานิ at 12x -
+            #   the angular zig-zag over the ต, clearly distinct from the
+            #   vowel marks on either side.
+            # ‼ CHECK [IMG_0485.PNG]: THIS IS THE CHANT'S SECOND PRINTING. The
+            #   first, khemakhema-saranadipika, is already in the app with
+            #   five verses and NO page_start, so it cannot be placed in the
+            #   book view; this one is the translated printing the สารบัญ
+            #   lists at ๒๑๕. Kept as its own entry. The heading and the table
+            #   agree on the spelling, so title_roman is TAKEN from the table.
+            {
+                'number': 1,
+                'page': 215,
+                'pali': 'พะหุง เว สะระณัง ยันติ ปัพพะตานิ วะนานิ จะ อารามะรุกขะ เจต๎ยานิ มะนุสสา ภะยะตัชชิตา',
+                'pali_roman': 'Bahuṃ ve saraṇaṃ yanti pabbatāni vanāni ca ārāmarukkha cetyāni manussā bhayatajjitā',
+                'thai': 'มนุษย์เป็นอันมาก เมื่อเกิดมีภัยคุกคามแล้ว ก็ถือเอาภูเขาบ้าง ป่าไม้บ้าง อารามและรุกขเจดีย์บ้าง เป็นสรณะ',
+                'paiboon': 'má-nút bpen an mâak mʉ̂a gə̀ət mii pai kúk-kaam lɛ́ɛo gɔ̂ tʉ̌ʉ ao puu-kǎo bâaŋ bpàa-máai bâaŋ aa-raam lɛ́ rúk-kà-jee-dii bâaŋ bpen sà-rá-ná',
+                'english': 'Driven by fear, many people take as refuge mountains, forests, parks and tree shrines',
+            },
+            # ‼ CHECK [IMG_0485.PNG]: ‼ STANZAS 2 AND 5 ARE THE SAME WORDS
+            #   WITH ONE SYLLABLE CHANGED - เนตัง against เอตัง, 'that is not'
+            #   against 'that indeed is' - and their Thai differs only by
+            #   มิใช่ against เป็น and ไม่พ้น against พ้น. Both were read off
+            #   the sheet separately rather than one copied from the other,
+            #   precisely because they look identical at a glance. Stanza 5
+            #   also ends with ฯ where stanza 2 ends bare.
+            {
+                'number': 2,
+                'page': 215,
+                'pali': 'เนตัง โข สะระณัง เขมัง เนตัง สะระณะมุตตะมัง เนตัง สะระณะมาคัมมะ สัพพะทุกขา ปะมุจจะติ',
+                'pali_roman': 'Netaṃ kho saraṇaṃ khemaṃ netaṃ saraṇamuttamaṃ netaṃ saraṇamāgamma sabbadukkhā pamuccati',
+                'thai': 'นั่นมิใช่สรณะอันเกษมเลย นั่นมิใช่สรณะอันสูงสุด เขาอาศัยสรณะนั่นแล้ว ย่อมไม่พ้นจากทุกข์ทั้งปวงได้',
+                'paiboon': 'nân mí châi sà-rá-ná an gà-sěem ləəi nân mí châi sà-rá-ná an sǔuŋ-sùt kǎo aa-sǎi sà-rá-ná nân lɛ́ɛo yɔ̂m mâi pón jàak túk táŋ-bpuaŋ dâai',
+                'english': 'that is no safe refuge, that is no supreme refuge; coming to that refuge one is not freed from all suffering',
+            },
+            {
+                'number': 3,
+                'page': 215,
+                'pali': 'โย จะ พุทธัญจะ ธัมมัญจะ สังฆัญจะ สะระณัง คะโต จัตตาริ อะริยะสัจจานิ สัมมัปปัญญายะ ปัสสะติ',
+                'pali_roman': 'Yo ca buddhañca dhammañca saṅghañca saraṇaṃ gato cattāri ariyasaccāni sammappaññāya passati',
+                'thai': 'ส่วนผู้ใดถือเอาพระพุทธ พระธรรม พระสงฆ์ เป็นสรณะแล้ว เห็นอริยสัจ คือความจริงอันประเสริฐสี่ ด้วยปัญญาอันชอบ',
+                'paiboon': 'sùan pûu dai tʉ̌ʉ ao prá-pút prá-tam prá-sǒŋ bpen sà-rá-ná lɛ́ɛo hěn à-rí-yá-sàt kʉʉ kwaam-jiŋ an bprà-sə̀ət sìi dûay bpan-yaa an chɔ̂ɔp',
+                'english': 'but whoever has gone to the Buddha, the Dhamma and the Sangha as refuge sees with right wisdom the four noble truths',
+            },
+            {
+                'number': 4,
+                'page': 215,
+                'pali': 'ทุกขัง ทุกขะสะมุปปาทัง ทุกขัสสะ จะ อะติกกะมัง อะริยัญจัฏฐังคิกัง มัคคัง ทุกขูปะสะมะคามินัง',
+                'pali_roman': 'Dukkhaṃ dukkhasamuppādaṃ dukkhassa ca atikkamaṃ ariyañcaṭṭhaṅgikaṃ maggaṃ dukkhūpasamagāminaṃ',
+                'thai': 'คือ เห็นความทุกข์ เหตุให้เกิดทุกข์ ความก้าวล่วงทุกข์เสียได้ และหนทางมีองค์แปดอันประเสริฐ เครื่องถึงความระงับทุกข์',
+                'paiboon': 'kʉʉ hěn kwaam-túk hèet hâi gə̀ət túk kwaam gâao-lûaŋ túk sǐa dâai lɛ́ hǒn-taaŋ mii oŋ bpɛ̀ɛt an bprà-sə̀ət krʉ̂aŋ tʉ̌ŋ kwaam rá-ŋáp túk',
+                'english': 'suffering, its arising, the going beyond it, and the noble eightfold path that leads to its stilling',
+            },
+            {
+                'number': 5,
+                'page': 215,
+                'pali': 'เอตัง โข สะระณัง เขมัง เอตัง สะระณะมุตตะมัง เอตัง สะระณะมาคัมมะ สัพพะทุกขา ปะมุจจะติ ฯ',
+                'pali_roman': 'Etaṃ kho saraṇaṃ khemaṃ etaṃ saraṇamuttamaṃ etaṃ saraṇamāgamma sabbadukkhā pamuccati.',
+                'thai': 'นั่นแหละ เป็นสรณะอันเกษม นั่นเป็นสรณะอันสูงสุด เขาอาศัยสรณะนั่นแล้ว ย่อมพ้นจากทุกข์ทั้งปวงได้ ฯ',
+                'paiboon': 'nân-lɛ̀ bpen sà-rá-ná an gà-sěem nân bpen sà-rá-ná an sǔuŋ-sùt kǎo aa-sǎi sà-rá-ná nân lɛ́ɛo yɔ̂m pón jàak túk táŋ-bpuaŋ dâai',
+                'english': 'that indeed is the safe refuge, that is the supreme refuge; coming to that refuge one is freed from all suffering.',
+            },
+        ],
+    },
 ]
 
 

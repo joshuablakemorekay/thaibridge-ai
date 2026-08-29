@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-214 went in.
+215 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,15 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 215, `IMG_0485`.** ✅ **NOTHING IS OPEN** —
-`patthana-thapana-gatha-plae` CLOSED on 214 at verse 12. The สารบัญ puts
-`เขมาเขมะสะระณะทีปิกะคาถา` at ๒๑๕.
+**Next: page 216, `IMG_0486`.** ✅ **NOTHING IS OPEN** —
+`khemakhema-saranadipika-plae` began and ended on 215. The สารบัญ puts
+`อะภิณหะปัจจะเวกขะณะ ๕` at ๒๑๖.
+
+⚠️ **The two-column pāda layout is now the norm for the gāthā chants here**
+(212 and 215 both). One verse per stanza, pādas joined by single spaces, column
+break recorded in `checks` and not stored. Their Thai also runs **without any
+commas at all**, unlike the comma-heavy prose chants on 205-211 — do not add
+punctuation the page does not print.
 
 ⚠️ **The photo map already has rows for some pages ahead** (213 and 215 were
 anchored long before this run reached them). **Check before adding a row** —
