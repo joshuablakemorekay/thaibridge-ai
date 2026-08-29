@@ -51793,6 +51793,221 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0499.PNG]: PAGE 53 AND THIS COPY PUNCTUATE DIFFERENTLY
+        #   — 11 line(s) differ in a comma or full stop alone (verses 1, 2, 3,
+        #   4, 5, 6, 8, 9, 11, 12, 19). Recorded once; neither side has been
+        #   repunctuated.
+        'id': 'dhammabhigiti-plae',
+        'title_thai': 'ธัมมาภิคีติ',
+        'title_pali': '',
+        'title_roman': 'Dhammābhigīti',
+        'title_english': 'The Chant in Praise of the Dhamma',
+        'page_start': 229,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': 'หันทะ มะยัง ธัมมาภิคีติง กะโรมะ เส.',
+            'pali_roman': 'Handa mayaṃ dhammābhigītiṃ karoma se.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us make the chant in praise of the Dhamma.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 229,
+                'pali': 'ส์วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย,',
+                'pali_roman': 'Svākkhātatādiguṇayogavasena seyyo,',
+                'thai': 'พระธรรม เป็นสิ่งที่ประเสริฐเพราะประกอบด้วยคุณ คือความที่พระผู้มีพระภาคเจ้า ตรัสไว้ดีแล้ว เป็นต้น,',
+                'paiboon': '',
+                'english': 'Better than all else, by reason of its being well proclaimed and the other qualities that go with it,',
+            },
+            {
+                'number': 2,
+                'pali': 'โย มัคคะปากะปะริยัตติวิโมกขะเภโท,',
+                'pali_roman': 'Yo maggapākapariyattivimokkhabhedo,',
+                'thai': 'เป็นธรรมอันจำแนกเป็น มรรค ผล ปริยัติ และนิพพาน ส่วนใด,',
+                'paiboon': '',
+                'english': 'divided into path, fruit, scripture and release,',
+            },
+            {
+                'number': 3,
+                'pali': 'ธัมโม กุโลกะปะตะนา ตะทะธาริธารี,',
+                'pali_roman': 'Dhammo kulokapatanā tadadhāridhārī,',
+                'thai': 'เป็นธรรมทรงไว้ซึ่งผู้ทรงธรรม จากการตกไปสู่โลกที่ชั่ว,',
+                'paiboon': '',
+                'english': 'the Dhamma, which holds up those who hold to it and keeps them from falling into the wretched worlds —',
+            },
+            {
+                'number': 4,
+                'pali': 'วันทามะหัง ตะมะหะรัง วะระธัมมะเมตัง,',
+                'pali_roman': 'Vandāmahaṃ tamaharaṃ varadhammametaṃ,',
+                'thai': 'ข้าพเจ้าไหว้พระธรรมอันประเสริฐนั้น อันเป็นเครื่องขจัดเสีย ซึ่งความมืด,',
+                'paiboon': '',
+                'english': 'that excellent Dhamma, dispeller of darkness, I salute with my head.',
+            },
+            {
+                'number': 5,
+                'pali': 'ธัมโม โย สัพพะปาณีนัง สะระณัง เขมะมุตตะมัง,',
+                'pali_roman': 'Dhammo yo sabbapāṇīnaṃ saraṇaṃ khemamuttamaṃ,',
+                'thai': 'พระธรรมใด เป็นสรณะอันเกษมสูงสุดของสัตว์ทั้งหลาย,',
+                'paiboon': '',
+                'english': 'The Dhamma, which is for all breathing things the refuge, safe and supreme,',
+            },
+            {
+                'number': 6,
+                'pali': 'ทุติยานุสสะติฏฐานัง วันทามิ ตัง สิเรนะหัง,',
+                'pali_roman': 'Dutiyānussatiṭṭhānaṃ vandāmi taṃ sirenahaṃ,',
+                'thai': 'ข้าพเจ้าไหว้พระธรรมนั้น อันเป็นที่ตั้งแห่งความระลึก องค์ที่สอง ด้วยเศียรเกล้า,',
+                'paiboon': '',
+                'english': 'the second of the objects of recollection — it I revere with my head.',
+            },
+            # ‼ CHECK [IMG_0499.PNG]: ⚠ THREE BRACKETED ALTERNATIVES INSIDE
+            #   THE PALI that page 53 does not print: ทาโส (ทาสี) at 7,
+            #   วันทันโตหัง (ตีหัง) at 10, and วันทะมาเนนะ (มานายะ) at 13 —
+            #   the forms a woman says. The same three, in the same three
+            #   places, as สังฆาภิคีติ on 232-233. Kept where the book sets
+            #   them.
+            # ‼ CHECK [IMG_0499.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
+            #   PRINTING. This page sets `ธัมมัสสาหัส์มิ ทาโส (ทาสี) วะ ธัมโม
+            #   เม สามิกิสสะโร,`; page 53 sets `ธัมมัสสาหัส์มิ ทาโส วะ ธัมโม
+            #   เม สามิกิสสะโร`. Each is entered as its own page prints it.
+            {
+                'number': 7,
+                'pali': 'ธัมมัสสาหัส์มิ ทาโส (ทาสี) วะ ธัมโม เม สามิกิสสะโร,',
+                'pali_roman': 'Dhammassāhasmi dāso (dāsī) va dhammo me sāmikissaro,',
+                'thai': 'ข้าพเจ้าเป็นทาสของพระธรรม, พระธรรมเป็นนาย มีอิสระเหนือข้าพเจ้า,',
+                'paiboon': '',
+                'english': "I am the Dhamma's servant; the Dhamma is my lord and master.",
+            },
+            {
+                'number': 8,
+                'pali': 'ธัมโม ทุกขัสสะ ฆาตา จะ วิธาตา จะ หิตัสสะ เม,',
+                'pali_roman': 'Dhammo dukkhassa ghātā ca vidhātā ca hitassa me,',
+                'thai': 'พระธรรมเป็นเครื่องกำจัดทุกข์และทรงไว้ซึ่งประโยชน์แก่ข้าพเจ้า,',
+                'paiboon': '',
+                'english': 'The Dhamma destroys suffering, and brings about what is for my welfare.',
+            },
+            {
+                'number': 9,
+                'pali': 'ธัมมัสสาหัง นิยยาเทมิ สะรีรัญชีวิตัญจิทัง,',
+                'pali_roman': 'Dhammassāhaṃ niyyādemi sarīrañjīvitañcidaṃ,',
+                'thai': 'ข้าพเจ้ามอบกายถวายชีวิตนี้ แด่พระธรรม,',
+                'paiboon': '',
+                'english': 'To the Dhamma I surrender this body and this life,',
+            },
+            # ‼ CHECK [IMG_0499.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
+            #   PRINTING. This page sets `วันทันโตหัง (ตีหัง) จะริสสามิ
+            #   ธัมมัสเสวะ สุธัมมะตัง,`; page 53 sets `วันทันโตหัง จะริสสามิ
+            #   ธัมมัสเสวะ สุธัมมะตัง`. Each is entered as its own page prints
+            #   it.
+            {
+                'number': 10,
+                'pali': 'วันทันโตหัง (ตีหัง) จะริสสามิ ธัมมัสเสวะ สุธัมมะตัง,',
+                'pali_roman': 'Vandantohaṃ (tīhaṃ) carissāmi dhammasseva sudhammataṃ,',
+                'thai': 'ข้าพเจ้าผู้ไหว้อยู่จักประพฤติตาม, ซึ่งความเป็นธรรมดีของพระธรรม,',
+                'paiboon': '',
+                'english': "Revering it, I shall walk on by the Dhamma's own true excellence.",
+            },
+            {
+                'number': 11,
+                'page': 230,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง,',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ,',
+                'thai': 'สรณะอื่นของข้าพเจ้าไม่มี, พระธรรมเป็นสรณะอันประเสริฐของข้าพเจ้า,',
+                'paiboon': '',
+                'english': 'For me there is no other refuge; the Dhamma is my refuge, the best of them.',
+            },
+            {
+                'number': 12,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ วัฑเฒยยัง สัตถุสาสะเน,',
+                'pali_roman': 'Etena saccavajjena vaḍḍheyyaṃ satthusāsane,',
+                'thai': 'ด้วยการกล่าวคำสัตย์นี้ ข้าพเจ้าพึงเจริญในพระศาสนาของพระศาสดา,',
+                'paiboon': '',
+                'english': "By the speaking of this truth, may I grow in the Teacher's dispensation.",
+            },
+            # ‼ CHECK [IMG_0499.PNG]: ⚠ A REAL DIFFERENCE FROM THE FIRST
+            #   PRINTING. This page sets `ธัมมัง เม วันทะมาเนนะ (มานายะ) ยัง
+            #   ปุญญัง ปะสุตัง อิธะ,`; page 53 sets `ธัมมัง เม วันทะมาเนนะ ยัง
+            #   ปุญญัง ปะสุตัง อิธะ`. Each is entered as its own page prints
+            #   it.
+            {
+                'number': 13,
+                'pali': 'ธัมมัง เม วันทะมาเนนะ (มานายะ) ยัง ปุญญัง ปะสุตัง อิธะ,',
+                'pali_roman': 'Dhammaṃ me vandamānena (mānāya) yaṃ puññaṃ pasutaṃ idha,',
+                'thai': 'ข้าพเจ้าผู้ไหว้อยู่ซึ่งพระธรรม ได้ขวนขวายบุญใดในบัดนี้,',
+                'paiboon': '',
+                'english': 'Whatever merit I have gained here in revering the Dhamma —',
+            },
+            {
+                'number': 14,
+                'pali': 'สัพเพปิ อันตะรายา เม มาเหสุง ตัสสะ เตชะสา.',
+                'pali_roman': 'Sabbepi antarāyā me māhesuṃ tassa tejasā.',
+                'thai': 'อันตรายทั้งปวง อย่าได้มีแก่ข้าพเจ้า ด้วยเดชแห่งบุญนั้น.',
+                'paiboon': '',
+                'english': 'by the power of it, may all obstacles for me come to nothing.',
+            },
+            # ‼ CHECK [IMG_0500.PNG]: THE RUBRIC (กราบพร้อมกับหมอบลงว่า) IS
+            #   ENTERED AS A VERSE, as in สังฆาภิคีติ on 232-233. It sits
+            #   inside the chant and a page block cannot anchor there. It is
+            #   why this copy has 19 units where page 53 has 18.
+            {
+                'number': 15,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(กราบพร้อมกับหมอบลงว่า)',
+                'paiboon': '',
+                'english': '(bow, and while bowing low say:)',
+            },
+            {
+                'number': 16,
+                'pali': 'กาเยนะ วาจายะ วะ เจตะสา วา,',
+                'pali_roman': 'Kāyena vācāya va cetasā vā,',
+                'thai': 'ด้วยกายก็ดี ด้วยวาจาก็ดี ด้วยใจก็ดี,',
+                'paiboon': '',
+                'english': 'By body, by speech, or by mind,',
+            },
+            # ‼ CHECK [IMG_0500.PNG]: THE THAI OF VERSE 17 ENDS WITH NO MARK
+            #   AT ALL — 'ในพระธรรม' — where every other Thai line in the
+            #   chant ends in a comma or a full stop. The parallel line on 233
+            #   ends 'ในพระสงฆ์,' with a comma. Entered as printed.
+            {
+                'number': 17,
+                'pali': 'ธัมเม กุกัมมัง ปะกะตัง มะยา ยัง,',
+                'pali_roman': 'Dhamme kukammaṃ pakataṃ mayā yaṃ,',
+                'thai': 'กรรมน่าติเตียนอันใด ที่ข้าพเจ้ากระทำแล้ว ในพระธรรม',
+                'paiboon': '',
+                'english': 'whatever wrong has been done by me towards the Dhamma —',
+            },
+            {
+                'number': 18,
+                'pali': 'ธัมโม ปะฏิคคัณหะตุ อัจจะยันตัง,',
+                'pali_roman': 'Dhammo paṭiggaṇhatu accayantaṃ,',
+                'thai': 'ขอพระธรรม จงงดซึ่งโทษล่วงเกินอันนั้น,',
+                'paiboon': '',
+                'english': 'may the Dhamma accept that transgression,',
+            },
+            # ‼ CHECK [IMG_0500.PNG]: ⚠ THE CHANT'S LAST LINE ENDS ON A COMMA
+            #   — กาลันตะเร สังวะริตุง วะ ธัมเม, — where page 53 ends it วะ
+            #   ธัมเม. with a full stop and สังฆาภิคีติ on 233 ends its
+            #   parallel line วะ สังเฆ. with one too. Checked at
+            #   magnification. Entered as printed; Josh ruled on 2026-08-28
+            #   that the comma endings in this stretch do not matter and stay
+            #   as the page sets them.
+            {
+                'number': 19,
+                'pali': 'กาลันตะเร สังวะริตุง วะ ธัมเม,',
+                'pali_roman': 'Kālantare saṃvarituṃ va dhamme,',
+                'thai': 'เพื่อการสำรวมระวัง ในพระธรรม ในกาลต่อไป.',
+                'paiboon': '',
+                'english': 'that in time to come I may be restrained towards the Dhamma.',
+            },
+        ],
+    },
 ]
 
 
