@@ -1,0 +1,259 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "tangkhanika-paccavekkhana-patho-plae",
+   "dhatupatikula-paccavekkhana-plae"
+  ],
+  "pages": [
+   {
+    "page": 207,
+    "file": "IMG_0477.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "tangkhanika-paccavekkhana-patho-plae",
+    "verses": "23-25",
+    "starts_here": false,
+    "note": "The top of the sheet, under a centred italic rubric: the fourth requisite, finishing the chant that began on 205."
+   },
+   {
+    "page": 207,
+    "file": "IMG_0477.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "dhatupatikula-paccavekkhana-plae",
+    "verses": "1-9",
+    "starts_here": true,
+    "note": "The lower two thirds. A centred bold heading, a bracketed invitation, a centred italic rubric, then nine Pali lines each with its Thai - short ones in a right-hand column, long ones indented beneath. The chant CONTINUES onto page 208."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "tangkhanika-paccavekkhana-patho-plae",
+   "continuation_of": "tangkhanika-paccavekkhana-patho-plae",
+   "working_notes": {
+    "invitation": "printed on 205, under the heading.",
+    "units": "Three, verses 23-25, the fourth requisite, finishing the chant.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "Yamakkan on the cluster in verse 25.",
+    "pages": "IMG_0477.PNG, page 207. The chant arrived from page 206 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 23,
+     "page": 207,
+     "pali": "ปะฏิสังขา โยนิโส คิลานะปัจจะยะเภสัชชะปะริกขารัง ปะฏิเสวามิ,",
+     "pali_roman": "Paṭisaṅkhā yoniso gilānapaccayabhesajjaparikkhāraṃ paṭisevāmi,",
+     "thai": "เราย่อมพิจารณา โดยแยบคายแล้ว บริโภคเภสัชบริขารอันเกื้อกูลแก่คนไข้,",
+     "paiboon": "rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo bɔɔ-rí-pôok pee-sàt bɔɔ-rí-kǎan an gʉ̂a-gùun gɛ̀ɛ kon-kâi,",
+     "english": "Reflecting wisely, I make use of medicine as a support for the sick,",
+     "rubric": "(ขณะบริโภคคิลานเภสัช)"
+    },
+    {
+     "number": 24,
+     "page": 207,
+     "pali": "ยาวะเทวะ อุปปันนานัง เวยยาพาธิกานัง เวทะนานัง ปะฏิฆาตายะ,",
+     "pali_roman": "Yāvadeva uppannānaṃ veyyābādhikānaṃ vedanānaṃ paṭighātāya,",
+     "thai": "เพียงเพื่อบำบัดทุกขเวทนาอันบังเกิดขึ้นแล้วมีอาพาธต่างๆ เป็นมูล",
+     "paiboon": "piaŋ pʉ̂a bam-bàt túk-kà-wêet-tà-naa an baŋ-gə̀ət kʉ̂n lɛ́ɛo mii aa-pâat dtàaŋ-dtàaŋ bpen muun",
+     "english": "only to ward off the painful feelings that have arisen from various ailments,"
+    },
+    {
+     "number": 25,
+     "page": 207,
+     "pali": "อัพ๎ยาปัชฌะปะระมะตายาติ.",
+     "pali_roman": "Abyāpajjhaparamatāyāti.",
+     "thai": "เพื่อความเป็นผู้ไม่มีโรคเบียดเบียนเป็นอย่างยิ่ง ดังนี้.",
+     "paiboon": "pʉ̂a kwaam bpen pûu mâi mii rôok bìat-bian bpen yàaŋ-yîŋ daŋ-níi.",
+     "english": "and for the utmost freedom from affliction."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "คิลานะปัจจะยะเภสัชชะปะริกขารัง",
+     "pali_roman": "gilānapaccayabhesajjaparikkhāraṃ",
+     "meaning": "'the requisite of medicine for the sick'. The Thai unpacks it as เภสัชบริขารอันเกื้อกูลแก่คนไข้ - the medicine-requisite that is a help to a sick person"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 23,
+     "file": "IMG_0477.PNG",
+     "issue": "THE FOURTH AND LAST REQUISITE, under its own section rubric (ขณะบริโภคคิลานเภสัช), 'while consuming medicine for the sick'. That completes the set the chant has been working through since 205 - robe, alms food, lodging, medicine - each with a rubric of the same kind, all of them chanted in order."
+    },
+    {
+     "verse": 24,
+     "file": "IMG_0477.PNG",
+     "issue": "‼ NO PUNCTUATION AT ALL AT THE END OF VERSE 24's THAI. Read at 3.4x: …มีอาพาธต่างๆ เป็นมูล and then nothing - no comma, no full stop - where the Pali line above it ends in a comma. Reproduced bare. The same verse also carries ต่างๆ with the repetition mark CLOSED UP, matching page 205's ทุกๆ and not page 203's spaced นั้น ๆ."
+    },
+    {
+     "verse": 25,
+     "file": "IMG_0477.PNG",
+     "issue": "YAMAKKAN CONFIRMED AGAIN, on อัพ๎ยาปัชฌะปะระมะตายาติ at 14x. This word is a useful one to have seen, because it carries BOTH marks: the angular zig-zag of yamakkan over the พ, and the hook of ั over the opening อ, a few millimetres apart in one word. They are plainly different shapes at that magnification."
+    }
+   ]
+  },
+  {
+   "id": "dhatupatikula-paccavekkhana-plae",
+   "title_thai": "ธาตุปะฏิกูละปัจจะเวกขะณะปาโฐ",
+   "title_pali": "",
+   "title_roman": "Dhātupaṭikūlapaccavekkhaṇapāṭho",
+   "page_start": 207,
+   "continues": true,
+   "invitation": {
+    "pali": "(หันทะ มะยัง ธาตุปะฏิกูละปัจจะเวกขะณะปาฐัง ภะณามะ เส.)",
+    "pali_roman": "(Handa mayaṃ dhātupaṭikūlapaccavekkhaṇapāṭhaṃ bhaṇāma se.)",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us recite the reflection on the elements and on repulsiveness."
+   },
+   "working_notes": {
+    "invitation": "printed, in brackets, directly under the heading.",
+    "units": "Nine, verses 1-9, one per PALI line with its Thai. One carries a rubric above.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "A rubric naming the moment, as in the chant before it.",
+    "pages": "IMG_0477.PNG, page 207. The chant STARTS here and CONTINUES onto page 208."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 207,
+     "pali": "ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,",
+     "pali_roman": "Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,",
+     "thai": "สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,",
+     "paiboon": "sìŋ lào níi nîi bpen sàk wâa tâat dtaam tam-má-châat tâo-nán, gam-laŋ bpen bpai dtaam hèet dtaam bpàt-jai yùu nʉaŋ-nít,",
+     "english": "These are mere elements, occurring according to their conditions,",
+     "rubric": "(ขณะรับจีวร)"
+    },
+    {
+     "number": 2,
+     "page": 207,
+     "pali": "ยะทิทัง จีวะรัง, ตะทุปะภุญชะโก จะ ปุคคะโล,",
+     "pali_roman": "Yadidaṃ cīvaraṃ, tadupabhuñjako ca puggalo,",
+     "thai": "สิ่งเหล่านี้คือจีวร, และคนผู้ใช้สอยจีวรนั้น,",
+     "paiboon": "sìŋ lào níi kʉʉ jii-wɔɔn, lɛ́ kon pûu chái-sɔ̌ɔi jii-wɔɔn nán,",
+     "english": "that is, this robe, and the person using it,"
+    },
+    {
+     "number": 3,
+     "page": 207,
+     "pali": "ธาตุมัตตะโก,",
+     "pali_roman": "Dhātumattako,",
+     "thai": "เป็นสักว่าธาตุตามธรรมชาติ,",
+     "paiboon": "bpen sàk wâa tâat dtaam tam-má-châat,",
+     "english": "are mere elements,"
+    },
+    {
+     "number": 4,
+     "page": 207,
+     "pali": "นิสสัตโต,",
+     "pali_roman": "Nissatto,",
+     "thai": "มิได้เป็นสัตวะอันยั่งยืน,",
+     "paiboon": "mí dâai bpen sàt-dtà-wá an yâŋ-yʉʉn,",
+     "english": "not a lasting being,"
+    },
+    {
+     "number": 5,
+     "page": 207,
+     "pali": "นิชชีโว,",
+     "pali_roman": "Nijjīvo,",
+     "thai": "มิได้เป็นชีวะ อันเป็นบุรุษบุคคล,",
+     "paiboon": "mí dâai bpen chii-wá an bpen bù-rùt bùk-kon,",
+     "english": "not a soul, not a person,"
+    },
+    {
+     "number": 6,
+     "page": 207,
+     "pali": "สุญโญ,",
+     "pali_roman": "Suñño,",
+     "thai": "ว่างเปล่าจากความหมายแห่งความเป็นตัวตน,",
+     "paiboon": "wâaŋ-bplàao jàak kwaam-mǎai hɛ̀ŋ kwaam bpen dtua-dton,",
+     "english": "empty of any meaning of selfhood,"
+    },
+    {
+     "number": 7,
+     "page": 207,
+     "pali": "สัพพานิ ปะนะ อิมานิ จีวะรานิ อะชิคุจฉะนียานิ,",
+     "pali_roman": "Sabbāni pana imāni cīvarāni ajigucchanīyāni,",
+     "thai": "ก็จีวรทั้งหมดนี้, ไม่เป็นของน่าเกลียดมาแต่เดิม,",
+     "paiboon": "gɔ̂ jii-wɔɔn táŋ-mòt níi, mâi bpen kɔ̌ɔŋ nâa-glìat maa dtɛ̀ɛ dəəm,",
+     "english": "and all these robes are not in themselves repulsive,"
+    },
+    {
+     "number": 8,
+     "page": 207,
+     "pali": "อิมัง ปูติกายัง ปัต๎วา",
+     "pali_roman": "Imaṃ pūtikāyaṃ patvā",
+     "thai": "ครั้นมาถูกเข้ากับกายอันเน่าอยู่เป็นนิจนี้แล้ว,",
+     "paiboon": "krán maa tùuk kâo gàp gaai an nâo yùu bpen nít níi lɛ́ɛo,",
+     "english": "but on reaching this putrid body,"
+    },
+    {
+     "number": 9,
+     "page": 207,
+     "pali": "อะติวิยะ ชิคุจฉะนียานิ ชายันติ,",
+     "pali_roman": "Ativiya jigucchanīyāni jāyanti,",
+     "thai": "ย่อมกลายเป็นของน่าเกลียดอย่างยิ่งไปด้วยกัน.",
+     "paiboon": "yɔ̂m glaai bpen kɔ̌ɔŋ nâa-glìat yàaŋ-yîŋ bpai dûay gan.",
+     "english": "they become exceedingly repulsive along with it."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "นิสสัตโต นิชชีโว สุญโญ",
+     "pali_roman": "nissatto nijjīvo suñño",
+     "meaning": "'not a being, not a soul, empty' - the three together are the standard formula for not-self. The Thai gives each its own line and its own gloss rather than running them into one"
+    },
+    {
+     "pali": "อะชิคุจฉะนียานิ",
+     "pali_roman": "ajigucchanīyāni",
+     "meaning": "'not repulsive'. The point of the verse turns on it: the cloth is not repulsive in itself, and becomes so only on meeting the body"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0477.PNG",
+     "issue": "‼ THE RUBRIC HERE SAYS รับ, NOT ใช้สอย, and the difference is easy to lose. This chant opens (ขณะรับจีวร), 'at the moment of RECEIVING the robe', read at 6x, where the chant just finished opened (ขณะใช้สอยจีวร), 'while MAKING USE of the robe', on page 205. Two different moments, two different chants, one word apart. Neither was normalised to the other."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0477.PNG",
+     "issue": "NO COMMA AFTER ปัต๎วา, read at 9x - verse 8's Pali ends bare where every other Pali line on the sheet ends in a comma, and its Thai below does have one. Reproduced as printed. The yamakkan on ปัต๎วา is clear at the same magnification."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0477.PNG",
+     "issue": "THIS IS THE CHANT'S THIRD APPEARANCE IN THE APP. dhatupatikula-paccavekkhana has 36 verses and no page, and dhatupatikula-paccavekkhana-p61 has 16 at page 61; this is the translated printing the สารบัญ lists at ๒๐๗. Kept as its own entry. The page heading and the table agree on the spelling, so title_roman is TAKEN from the table."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0477.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 9 is the last thing on the sheet and the chant runs on to page 208, where the alms food, the lodging and the medicine will each get the same treatment the robe has just had. Its Thai ends on a full stop, closing the robe section without closing the chant - the same pattern as 205's verse 5 and 206's verse 22."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "tangkhanika-paccavekkhana-patho-plae"
+  ],
+  "continues": [
+   "dhatupatikula-paccavekkhana-plae"
+  ],
+  "resume_from": {
+   "chant": "dhatupatikula-paccavekkhana-plae",
+   "next_verse": 10,
+   "page": 208
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0477.PNG read end to end, with both rubrics, อัพ๎ยาปัชฌะ and ปัต๎วา re-read at 6-14x. Page number 207 printed clearly at the top centre. Every Pali line was also put through the app's transliterator as a cross-check, the yamakkan words excepted since that script does not handle the character. Two chants, one heading, one invitation, two rubrics, no footnote, no rule, no colophon.",
+  "notes": "‼ THE NEW CHANT'S RUBRIC SAYS รับ WHERE THE OLD ONE SAID ใช้สอย - receiving the robe against making use of it, one word apart on the same sheet, and neither was normalised. Also verse 24's Thai ends with NO punctuation at all, and อัพ๎ยาปัชฌะ shows yamakkan and mai han akat a few millimetres apart in one word, which is the clearest side-by-side of the two marks the run has produced.",
+  "diacritic_exceptions": []
+ }
+}
