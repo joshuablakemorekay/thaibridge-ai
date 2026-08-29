@@ -53811,6 +53811,319 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'abhinha-paccavekkhana-plae',
+        'title_thai': 'อะภิณหะปัจจะเวกขะณะ ๕',
+        'title_pali': '',
+        'title_roman': 'Abhiṇhapaccavekkhaṇa 5',
+        'page_start': 216,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '(หันทะ มะยัง อะภิณหะปัจจะเวกขะณะปาฐัง ภะณามะ เส.)',
+            'pali_roman': '(Handa mayaṃ abhiṇhapaccavekkhaṇapāṭhaṃ bhaṇāma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us recite the passage on the five frequent recollections.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0486.PNG]: ‼ THE FEMININE ALTERNATIVE IS LABELLED
+            #   ONCE AND THEN LEFT UNLABELLED. Item ๑ prints (หญิงว่า
+            #   อะนะตีตา) - 'a woman says anatītā' - and items ๒ and ๓ print
+            #   the bare (อะนะตีตา) with no label at all. Read at 3.2x. The
+            #   book explains the device the first time and then assumes it.
+            #   Both forms kept exactly. This is the same device as page 201's
+            #   เต (ตา) but with an instruction word inside the bracket, and
+            #   it is why the roman line for item 1 reads (women say:
+            #   anatītā): หญิงว่า is Thai instruction, not Pali, so it is
+            #   glossed rather than transliterated.
+            # ‼ CHECK [IMG_0486.PNG]: ‼ THE FOOTNOTE RUNS ONTO PAGE 217 AND IS
+            #   RECORDED WHOLE HERE. Page 216 prints it as far as
+            #   …หรือความเยาว and page 217 continues วัย, then ข้อ ๒ to ข้อ ๕,
+            #   a closing paragraph, and a right-aligned citation (องฺ. ปญฺจก.
+            #   ๒๒/๕๗/๖๖-๗๐). IMG_0487 was opened and read to get the rest.
+            #   Recorded whole on 216 under the ruling already made at 195-196
+            #   and 204-205: a unit spanning a page turn goes in whole on the
+            #   page where it starts. THE COST, stated plainly: page 217's
+            #   entry does not carry these lines, and page 217 was entered by
+            #   hand long ago with no batch record, so nothing there was
+            #   changed.
+            # ‼ CHECK [IMG_0486.PNG]: NO COMMAS ANYWHERE IN THE THAI of the
+            #   chant itself, as on 212 and 215. The footnote below it does
+            #   use them. printed_number is stored as an integer and the app
+            #   renders it as an Arabic digit, where the book prints Thai
+            #   numerals ๑-๕; that is an app-wide display matter, not
+            #   something this page decides.
+            {
+                'number': 1,
+                'page': 216,
+                'printed_number': 1,
+                'pali': 'ชะราธัมโมมหิ ชะรัง อะนะตีโต (หญิงว่า อะนะตีตา)',
+                'pali_roman': 'Jarādhammomhi jaraṃ anatīto (women say: anatītā)',
+                'thai': 'เรามีความแก่เป็นธรรมดา ไม่ล่วงพ้นความแก่ไปได้',
+                'paiboon': 'rao mii kwaam-gɛ̀ɛ bpen tam-má-daa mâi lûaŋ-pón kwaam-gɛ̀ɛ bpai dâai',
+                'english': 'I am of the nature to grow old; I have not gone beyond ageing.',
+            },
+            {
+                'number': 2,
+                'page': 216,
+                'printed_number': 2,
+                'pali': 'พ๎ยาธิธัมโมมหิ พ๎ยาธิง อะนะตีโต (อะนะตีตา)',
+                'pali_roman': 'Byādhidhammomhi byādhiṃ anatīto (anatītā)',
+                'thai': 'เรามีความเจ็บไข้เป็นธรรมดา ไม่ล่วงพ้นความเจ็บไข้ไปได้',
+                'paiboon': 'rao mii kwaam jèp-kâi bpen tam-má-daa mâi lûaŋ-pón kwaam jèp-kâi bpai dâai',
+                'english': 'I am of the nature to fall ill; I have not gone beyond illness.',
+            },
+            {
+                'number': 3,
+                'page': 216,
+                'printed_number': 3,
+                'pali': 'มะระณะธัมโมมหิ มะระณัง อะนะตีโต (อะนะตีตา)',
+                'pali_roman': 'Maraṇadhammomhi maraṇaṃ anatīto (anatītā)',
+                'thai': 'เรามีความตายเป็นธรรมดา ไม่ล่วงพ้นความตายไปได้',
+                'paiboon': 'rao mii kwaam-dtaai bpen tam-má-daa mâi lûaŋ-pón kwaam-dtaai bpai dâai',
+                'english': 'I am of the nature to die; I have not gone beyond dying.',
+            },
+            {
+                'number': 4,
+                'page': 216,
+                'printed_number': 4,
+                'pali': 'สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว',
+                'pali_roman': 'Sabbehi me piyehi manāpehi nānābhāvo vinābhāvo',
+                'thai': 'เราจักต้องพลัดพรากจากของรักของชอบใจทั้งหลายทั้งปวง',
+                'paiboon': 'rao jàk dtɔ̂ŋ plát-prâak jàak kɔ̌ɔŋ rák kɔ̌ɔŋ chɔ̂ɔp-jai táŋ-lǎai táŋ-bpuaŋ',
+                'english': 'I must be parted from all that is dear and pleasing to me.',
+            },
+            # ‼ CHECK [IMG_0486.PNG]: ‼ ITEM ๕ IS NINE LINES LONG AND ONLY ITS
+            #   FIRST CARRIES THE NUMBER. Items ๑-๔ are single lines; ๕ runs
+            #   from กัมมัสสะโกมหิ to ปัจจะเวกขิตัพพัง in nine short Pali
+            #   lines with their Thai in a right-hand column. Recorded as
+            #   verses 5-13, with printed_number on verse 5 alone, exactly as
+            #   the book prints it.
+            # ‼ CHECK [IMG_0486.PNG]: THE REPETITION MARK ๆ IS SPACED HERE,
+            #   twice, and in an unusual position: เรามีกรรมเป็นของ ๆ ตน in
+            #   verse 5 and พิจารณาเนือง ๆ in verse 13. The first stands for a
+            #   doubled ของ inside the phrase rather than at its end. Both
+            #   kept as printed - and note the FOOTNOTE on the same sheet uses
+            #   the CLOSED-UP form three times (เนืองๆ, ต่างๆ, เสมอๆ), so both
+            #   settings appear on one page.
+            {
+                'number': 5,
+                'page': 216,
+                'printed_number': 5,
+                'pali': 'กัมมัสสะโกมหิ',
+                'pali_roman': 'Kammassakomhi',
+                'thai': 'เรามีกรรมเป็นของ ๆ ตน',
+                'paiboon': 'rao mii gam bpen kɔ̌ɔŋ kɔ̌ɔŋ dton',
+                'english': 'I am the owner of my kamma,',
+            },
+            {
+                'number': 6,
+                'page': 216,
+                'pali': 'กัมมะทายาโท',
+                'pali_roman': 'Kammadāyādo',
+                'thai': 'เรามีกรรมเป็นทายาท',
+                'paiboon': 'rao mii gam bpen taa-yâat',
+                'english': 'heir to my kamma,',
+            },
+            {
+                'number': 7,
+                'page': 216,
+                'pali': 'กัมมะโยนิ',
+                'pali_roman': 'Kammayoni',
+                'thai': 'เรามีกรรมเป็นกำเนิด',
+                'paiboon': 'rao mii gam bpen gam-nə̀ət',
+                'english': 'born of my kamma,',
+            },
+            {
+                'number': 8,
+                'page': 216,
+                'pali': 'กัมมะพันธุ',
+                'pali_roman': 'Kammabandhu',
+                'thai': 'เรามีกรรมเป็นเผ่าพันธุ์',
+                'paiboon': 'rao mii gam bpen pào-pan',
+                'english': 'related to my kamma,',
+            },
+            {
+                'number': 9,
+                'page': 216,
+                'pali': 'กัมมะปะฏิสะระโณ',
+                'pali_roman': 'Kammapaṭisaraṇo',
+                'thai': 'เรามีกรรมเป็นที่พึ่งอาศัย',
+                'paiboon': 'rao mii gam bpen tîi-pʉ̂ŋ aa-sǎi',
+                'english': 'abiding supported by my kamma.',
+            },
+            {
+                'number': 10,
+                'page': 216,
+                'pali': 'ยัง กัมมัง กะริสสามิ',
+                'pali_roman': 'Yaṃ kammaṃ karissāmi',
+                'thai': 'เราทำกรรมอันใดไว้',
+                'paiboon': 'rao tam gam an dai wái',
+                'english': 'Whatever kamma I do,',
+            },
+            {
+                'number': 11,
+                'page': 216,
+                'pali': 'กัล๎ยาณัง วา ปาปะกัง วา',
+                'pali_roman': 'Kalyāṇaṃ vā pāpakaṃ vā',
+                'thai': 'ดีก็ตาม ชั่วก็ตาม',
+                'paiboon': 'dii gɔ̂ dtaam chûa gɔ̂ dtaam',
+                'english': 'for good or for ill,',
+            },
+            {
+                'number': 12,
+                'page': 216,
+                'pali': 'ตัสสะ ทายาโท ภะวิสสามิ',
+                'pali_roman': 'Tassa dāyādo bhavissāmi',
+                'thai': 'เราจักต้องรับผลของกรรมนั้น',
+                'paiboon': 'rao jàk dtɔ̂ŋ ráp pǒn kɔ̌ɔŋ gam nán',
+                'english': 'to that I shall be heir.',
+            },
+            {
+                'number': 13,
+                'page': 216,
+                'pali': 'เอวัง อะภิณหัง อัมเหหิ ปัจจะเวกขิตัพพัง',
+                'pali_roman': 'Evaṃ abhiṇhaṃ amhehi paccavekkhitabbaṃ',
+                'thai': 'เราทั้งหลาย พึงพิจารณาเนือง ๆ อย่างนี้แล ฯ',
+                'paiboon': 'rao táŋ-lǎai pʉŋ pí-jaa-rá-naa nʉaŋ nʉaŋ yàaŋ níi lɛɛ',
+                'english': 'Thus should we often reflect.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0458.PNG]: ⚠ PAGE 187 IS ENTERED IN PART, ON PURPOSE.
+        #   โลกะธัมมะสุตตัง begins below this chant and runs to 190 — four
+        #   sheets of dense, highly repetitive Pali prose whose repetitions
+        #   are NOT uniform. It is left for its own batch so it can be read at
+        #   magnification formula by formula, rather than squeezed in after
+        #   this one.
+        # ‼ CHECK [IMG_0458.PNG]: ⚠ THE SECTION HEADING DISAGREES WITH THE
+        #   สารบัญ IN TWO WAYS. The page sets ในวันแรม 13 ค่ำหรือ 14 เวลาเย็น
+        #   with ARABIC numerals and only ONE ค่ำ; the contents prints
+        #   ในวันแรม ๑๓ ค่ำหรือ ๑๔ ค่ำ เวลาเย็น with THAI numerals and ค่ำ
+        #   after both. The block follows the page.
+        # ‼ CHECK [IMG_0458.PNG]: THE HEADING AND THE สารบัญ NAME THIS CHANT
+        #   DIFFERENTLY TOO: the page heads it บทขัด โลกะธัมมะสุตตะ, with a
+        #   space and ending -สุตตะ, and the contents lists
+        #   บทขัดโลกะธัมมะสุตตัง, joined and ending -สุตตัง. The title follows
+        #   the page; title_roman follows the contents, which is what the
+        #   title test compares against.
+        # ‼ CHECK [IMG_0458.PNG]: THE THAI PARAGRAPH AT THE TOP OF THE SHEET
+        #   is the tail of a note running on from 186 — about whether to read
+        #   อะนิจฉะสัญญา or อะนิฏฐะสัญญา — and belongs to that page. It is
+        #   left for 186.
+        'id': 'bot-khat-lokadhamma-suttam',
+        'title_thai': 'บทขัด โลกะธัมมะสุตตะ',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt loo-gà-tam-má-sùt-dtaŋ',
+        'title_english': 'The Introductory Verses to the Lokadhamma Sutta',
+        'page_start': 187,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 187,
+                'pali': 'ยาวะตา วัตตะเต โลโก อะเนกาการะจิตตะโก',
+                'pali_roman': 'Yāvatā vattate loko anekākāracittako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For as long as the world goes on, in its many-shaped variety,',
+            },
+            {
+                'number': 2,
+                'pali': 'ตาวะ ตัง อะนุปะริวัตตันติ เย ธัมมา สะหะจาริโน.',
+                'pali_roman': 'Tāva taṃ anuparivattanti ye dhammā sahacārino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so long do those states that travel with it turn about it.',
+            },
+            {
+                'number': 3,
+                'pali': 'เย ธัมเม สะมุปายันโต โลโก อะนุปะริวัตตะเต',
+                'pali_roman': 'Ye dhamme samupāyanto loko anuparivattate',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The states that the world, in taking them up, turns about —',
+            },
+            {
+                'number': 4,
+                'pali': 'เต ธัมมา โลกันตะคุณา โลกะธัมมาติ กิตติตา.',
+                'pali_roman': 'Te dhammā lokantaguṇā lokadhammāti kittitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "those states, bound to the world's end, are called the worldly conditions.",
+            },
+            {
+                'number': 5,
+                'pali': 'โลกัสสิฏฐา อะนิฏฐา จะ อะนุโรธะวิโรธิกา',
+                'pali_roman': 'Lokassiṭṭhā aniṭṭhā ca anurodhavirodhikā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Welcome to the world and unwelcome, making for liking and aversion —',
+            },
+            {
+                'number': 6,
+                'pali': 'เยส์วานุโรธะวิโรเธ วิปปะหันต์วานะ ปัณฑิตา.',
+                'pali_roman': 'Yesvānurodhavirodhe vippahantvāna paṇḍitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the wise, having cast out liking and aversion among them,',
+            },
+            {
+                'number': 7,
+                'pali': 'ปะริมุจจันติ ทุกขัส์มา สัมมา ภะวัสสะ ปาระคู',
+                'pali_roman': 'Parimuccanti dukkhasmā sammā bhavassa pāragū',
+                'thai': '',
+                'paiboon': '',
+                'english': 'are freed from suffering, rightly gone beyond becoming.',
+            },
+            {
+                'number': 8,
+                'pali': 'เตสุ มิจฉาปะฏิปัตติ โยนิโส ปะฏิปัตติ จะ.',
+                'pali_roman': 'Tesu micchāpaṭipatti yoniso paṭipatti ca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Wrong practice towards them, and wise practice too,',
+            },
+            {
+                'number': 9,
+                'pali': 'ยัส์มิง เตนะ มุนินเทนะ สุตตันตัส์มิง ปะกาสิตา',
+                'pali_roman': 'Yasmiṃ tena munindena suttantasmiṃ pakāsitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'were made known by that lord of sages in a discourse,',
+            },
+            {
+                'number': 10,
+                'pali': 'ญาณัง สัญจาระยิต์วานะ ยะถาภูตัง ปะชานิตุง.',
+                'pali_roman': 'Ñāṇaṃ sañcārayitvāna yathābhūtaṃ pajānituṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'so that knowledge might range abroad and know things as they are.',
+            },
+            {
+                'number': 11,
+                'pali': 'สาธูนัง อัตถะสิทธัตถัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Sādhūnaṃ atthasiddhatthaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': "For the good folk's welfare and accomplishment, let us recite that discourse.",
+            },
+        ],
+    },
 ]
 
 
@@ -56221,6 +56534,32 @@ PAGE_BLOCKS = [
                 'type': 'heading',
                 'thai': 'บทสวดมนต์ ทำวัตรเช้า -เย็น แปล',
                 'english': 'The Chanting Book: the Morning and Evening Services, Translated',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 216 ───────────────────────────────────────────────────
+    # Written from batch-216-216.json.
+    {
+        'page': 216,
+        'after': 'abhinha-paccavekkhana-plae',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'thai': '*ข้อที่ควรพิจารณาเนืองๆ ๕ อย่างนี้ มีวัตถุประสงค์เพื่อละสาเหตุต่างๆ มีความมัวเมา เป็นต้น ที่ทำให้สัตว์ทั้งหลายตกอยู่ในความประมาท และประพฤติทุจริตทางไตรทวาร กล่าวคือ :- ข้อ ๑ เป็นเหตุละ หรือบรรเทาความเมาในความเป็นหนุ่มสาว หรือความเยาววัย ข้อ ๒ เป็นเหตุละ หรือบรรเทาความเมาในความไม่มีโรค คือ ความแข็งแรงมีสุขภาพดี ข้อ ๓ เป็นเหตุละ หรือบรรเทาความเมาในชีวิต ข้อ ๔ เป็นเหตุละ หรือบรรเทาความยึดติดผูกพันในของรักทั้งหลาย ข้อ ๕ เป็นเหตุละ หรือบรรเทาความทุจริตต่างๆ โดยตรง เมื่อพิจารณาขยายวงออกไป เห็นว่ามิใช่ตนผู้เดียวที่ต้องเป็นอย่างนี้ แต่เป็นคติธรรมดาของสัตว์ทั้งปวงที่จะต้องเป็นไป เมื่อพิจารณาเห็นอย่างนี้เสมอๆ มรรคก็จะเกิดขึ้น เมื่อเจริญมรรคนั้นมากเข้า ก็จะละสังโยชน์ทั้งหลาย สิ้นอนุสัยได้ (องฺ. ปญฺจก. ๒๒/๕๗/๖๖-๗๐)',
+                'english': "A note on why these five are recollected: to loosen the intoxications of youth, health and life, the clinging to what is dear, and misconduct itself; and on seeing that this is the way of all beings, not one's own case alone.",
+            },
+        ],
+    },
+    # ── Page 187 ───────────────────────────────────────────────────
+    # Written from batch-187-187.json.
+    {
+        'page': 187,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'พระสูตรที่กำหนดสวด ในวันแรม 13 ค่ำหรือ 14 เวลาเย็น',
+                'english': 'The discourse appointed for chanting on the 13th or 14th of the waning moon, in the evening',
                 'english_unverified': True,
             },
         ],

@@ -1,0 +1,191 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "bot-khat-lokadhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 187,
+    "file": "IMG_0458.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-lokadhamma-suttam",
+    "verses": "1-11",
+    "starts_here": true,
+    "note": "The sheet opens with the TAIL of a Thai note running on from 186, then a two-line SECTION HEADING, then this chant's centred bold heading and eleven TWO-COLUMN rows read across. Below it โลกะธัมมะสุตตัง begins and runs to 190 — that chant is NOT in this batch, so page 187 is deliberately entered in part.",
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "พระสูตรที่กำหนดสวด ในวันแรม 13 ค่ำหรือ 14 เวลาเย็น",
+      "english": "The discourse appointed for chanting on the 13th or 14th of the waning moon, in the evening",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-lokadhamma-suttam",
+   "title_thai": "บทขัด โลกะธัมมะสุตตะ",
+   "title_pali": "",
+   "title_roman": "bòt-kàt loo-gà-tam-má-sùt-dtaŋ",
+   "title_english": "The Introductory Verses to the Lokadhamma Sutta",
+   "page_start": 187,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent as a separate line — the chant IS the invitation, closing ตัง สุตตันตัง ภะณามะ เส, 'let us recite that discourse', which is what a บทขัด does.",
+    "units": "11 lines, each printed as a pair of half-lines in two columns and joined, as page 273 does.",
+    "ordering": "Pure Pali. No Thai translation — this is the book's FIRST, Pali-only printing, not the translated section.",
+    "conventions": "pali_roman mechanical from translit_pali; paiboon left empty. No -plae suffix: nothing of this chant is in the app yet.",
+    "pages": "IMG_0458, page 187. Offset 271."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ยาวะตา วัตตะเต โลโก อะเนกาการะจิตตะโก",
+     "pali_roman": "Yāvatā vattate loko anekākāracittako",
+     "thai": "",
+     "paiboon": "",
+     "english": "For as long as the world goes on, in its many-shaped variety,",
+     "page": 187
+    },
+    {
+     "number": 2,
+     "pali": "ตาวะ ตัง อะนุปะริวัตตันติ เย ธัมมา สะหะจาริโน.",
+     "pali_roman": "Tāva taṃ anuparivattanti ye dhammā sahacārino.",
+     "thai": "",
+     "paiboon": "",
+     "english": "so long do those states that travel with it turn about it."
+    },
+    {
+     "number": 3,
+     "pali": "เย ธัมเม สะมุปายันโต โลโก อะนุปะริวัตตะเต",
+     "pali_roman": "Ye dhamme samupāyanto loko anuparivattate",
+     "thai": "",
+     "paiboon": "",
+     "english": "The states that the world, in taking them up, turns about —"
+    },
+    {
+     "number": 4,
+     "pali": "เต ธัมมา โลกันตะคุณา โลกะธัมมาติ กิตติตา.",
+     "pali_roman": "Te dhammā lokantaguṇā lokadhammāti kittitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "those states, bound to the world's end, are called the worldly conditions."
+    },
+    {
+     "number": 5,
+     "pali": "โลกัสสิฏฐา อะนิฏฐา จะ อะนุโรธะวิโรธิกา",
+     "pali_roman": "Lokassiṭṭhā aniṭṭhā ca anurodhavirodhikā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Welcome to the world and unwelcome, making for liking and aversion —"
+    },
+    {
+     "number": 6,
+     "pali": "เยส์วานุโรธะวิโรเธ วิปปะหันต์วานะ ปัณฑิตา.",
+     "pali_roman": "Yesvānurodhavirodhe vippahantvāna paṇḍitā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the wise, having cast out liking and aversion among them,"
+    },
+    {
+     "number": 7,
+     "pali": "ปะริมุจจันติ ทุกขัส์มา สัมมา ภะวัสสะ ปาระคู",
+     "pali_roman": "Parimuccanti dukkhasmā sammā bhavassa pāragū",
+     "thai": "",
+     "paiboon": "",
+     "english": "are freed from suffering, rightly gone beyond becoming."
+    },
+    {
+     "number": 8,
+     "pali": "เตสุ มิจฉาปะฏิปัตติ โยนิโส ปะฏิปัตติ จะ.",
+     "pali_roman": "Tesu micchāpaṭipatti yoniso paṭipatti ca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Wrong practice towards them, and wise practice too,"
+    },
+    {
+     "number": 9,
+     "pali": "ยัส์มิง เตนะ มุนินเทนะ สุตตันตัส์มิง ปะกาสิตา",
+     "pali_roman": "Yasmiṃ tena munindena suttantasmiṃ pakāsitā",
+     "thai": "",
+     "paiboon": "",
+     "english": "were made known by that lord of sages in a discourse,"
+    },
+    {
+     "number": 10,
+     "pali": "ญาณัง สัญจาระยิต์วานะ ยะถาภูตัง ปะชานิตุง.",
+     "pali_roman": "Ñāṇaṃ sañcārayitvāna yathābhūtaṃ pajānituṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "so that knowledge might range abroad and know things as they are."
+    },
+    {
+     "number": 11,
+     "pali": "สาธูนัง อัตถะสิทธัตถัง ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Sādhūnaṃ atthasiddhatthaṃ taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For the good folk's welfare and accomplishment, let us recite that discourse."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "โลกะธัมมา",
+     "pali_roman": "lokadhammā",
+     "meaning": "the worldly conditions — gain and loss, fame and obscurity, blame and praise, pleasure and pain; the eight the sutta turns on"
+    },
+    {
+     "pali": "อะนุโรธะวิโรธะ",
+     "pali_roman": "anurodhavirodha",
+     "meaning": "liking and aversion, being for and being against; the pair the wise cast out"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0458.PNG",
+     "issue": "⚠ PAGE 187 IS ENTERED IN PART, ON PURPOSE. โลกะธัมมะสุตตัง begins below this chant and runs to 190 — four sheets of dense, highly repetitive Pali prose whose repetitions are NOT uniform. It is left for its own batch so it can be read at magnification formula by formula, rather than squeezed in after this one."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0458.PNG",
+     "issue": "⚠ THE SECTION HEADING DISAGREES WITH THE สารบัญ IN TWO WAYS. The page sets ในวันแรม 13 ค่ำหรือ 14 เวลาเย็น with ARABIC numerals and only ONE ค่ำ; the contents prints ในวันแรม ๑๓ ค่ำหรือ ๑๔ ค่ำ เวลาเย็น with THAI numerals and ค่ำ after both. The block follows the page."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0458.PNG",
+     "issue": "THE HEADING AND THE สารบัญ NAME THIS CHANT DIFFERENTLY TOO: the page heads it บทขัด โลกะธัมมะสุตตะ, with a space and ending -สุตตะ, and the contents lists บทขัดโลกะธัมมะสุตตัง, joined and ending -สุตตัง. The title follows the page; title_roman follows the contents, which is what the title test compares against."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0458.PNG",
+     "issue": "THE THAI PARAGRAPH AT THE TOP OF THE SHEET is the tail of a note running on from 186 — about whether to read อะนิจฉะสัญญา or อะนิฏฐะสัญญา — and belongs to that page. It is left for 186."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-lokadhamma-suttam"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 187,
+  "resume_from_file": "IMG_0458.PNG",
+  "resume_from": "โลกะธัมมะสุตตัง, which begins on 187 below this chant and runs to 190",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence on the verses; the only Paiboon is title_roman, taken from the สารบัญ.",
+  "pali_untouched": "Typed from the sheet and romanised mechanically. Nothing of this chant was in the app to read it against — it has ONE witness only.",
+  "page_scan": "agrees, with page 187 deliberately entered in part; the row claims the บทขัด and the section heading and nothing else.",
+  "notes": "THE FIRST PAGE OF THE PALI-ONLY STRETCH 115-190, which neither pass had reached. ⚠ Page 187 is entered IN PART: โลกะธัมมะสุตตัง begins below this chant and runs to 190, and is left for its own batch. It is four sheets of dense repetitive prose whose repetitions are NOT uniform — ลาโภ takes อะนิจโจ but อะลาโภ takes อะนิจจัง, both before ทุกโข, verified at magnification on 188 — so it needs reading formula by formula rather than pattern-filling.",
+  "diacritic_exceptions": []
+ }
+}
