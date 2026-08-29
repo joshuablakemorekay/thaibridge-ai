@@ -122,6 +122,47 @@ Three things page 203 turned up that change how later pages are read:
    the book. Expect the same shape on 204 onward — the chant has eight
    stanzas.
 
+## ‼️ OPEN FOR JOSH — the cluster mark: yamakkan ๎, not thanthakhat ์
+
+**What the book prints.** A Pali consonant cluster written in Thai script takes
+**yamakkan ๎** (U+0E4E) — an angular zig-zag. It is NOT thanthakhat ์
+(U+0E4C), which is a closed ring with a tail and means "this letter is silent".
+At ordinary zoom the two are indistinguishable, which is how the drift happened.
+
+**Proved on the photographs at 12–18×**, five words on two pages:
+
+| page | word | mark |
+|---|---|---|
+| 206 | `ท๎วายะ` | yamakkan |
+| 206 | `พ๎รัห๎มะจะริยานุคคะหายะ` | yamakkan, twice |
+| 206 | `ยาต๎รา` | yamakkan |
+| 203 | `ค๎รีเมขะลัง` | yamakkan |
+| 205/206 | `อุณหัสสะ` | **no mark at all** — ณ is bare; the hook belongs to ห as ั |
+
+Render the three marks large in any Thai font and compare — that is what settled
+it, and it takes one minute if you want to check.
+
+**What was corrected: pages 193–205 only, 25 words.** Every `-plae` chant in
+this lane. The photographs above cover five of them; the rest were corrected by
+the same convention, NOT re-photographed word by word. Independent support: the
+app's own first-pass transcriptions of the same words already use yamakkan —
+`ส๎วากขาโต` ×6, `กัล๎ยาณัง` ×5, `สุต๎วา` ×2, `อุณ๎หัสสะ` ×3.
+
+**⚠️ WHAT WAS NOT TOUCHED, AND WHY.** The rest of `chanting.py` still holds
+roughly **670 distinct words** spelling clusters with thanthakhat — 34×
+`ส์วากขาโต`, 29× `ตัส์มา`, 24× `อายัส์มะตา`, 19× `ตัส์มิง`, and so on — against
+99 uses of yamakkan. Those belong to other pages and other sessions, several of
+them with comment blocks arguing the case for thanthakhat from the photographs.
+**Fixing them is a decision for Josh, not something to do quietly**, because it
+is a few hundred edits to a file another session is working in, and because
+those comment blocks would need rewriting rather than silently contradicting.
+
+**The question:** do the same five-word photographic check on any page from the
+Pali-only half of the book. If it is yamakkan there too, the rest of the file
+should be brought over in one deliberate pass. If that half genuinely prints
+thanthakhat, then the book changes convention between its two printings, and
+both stay as they are.
+
 ## ✍️ Typography this section uses that must not be tidied
 
 Collected as they turn up, all reproduced exactly:

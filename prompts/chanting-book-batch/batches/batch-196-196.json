@@ -54,7 +54,7 @@
     },
     {
      "number": 13,
-     "pali": "อาทิกัล์ยาณัง,",
+     "pali": "อาทิกัล๎ยาณัง,",
      "pali_roman": "Ādikalyāṇaṃ,",
      "thai": "ไพเราะในเบื้องต้น,",
      "paiboon": "pai-rɔ́ nai bʉ̂aŋ-dtôn,",
@@ -63,7 +63,7 @@
     },
     {
      "number": 14,
-     "pali": "มัชเฌกัล์ยาณัง,",
+     "pali": "มัชเฌกัล๎ยาณัง,",
      "pali_roman": "Majjhekalyāṇaṃ,",
      "thai": "ไพเราะในท่ามกลาง,",
      "paiboon": "pai-rɔ́ nai tâam-glaaŋ,",
@@ -72,7 +72,7 @@
     },
     {
      "number": 15,
-     "pali": "ปะริโยสานะกัล์ยาณัง,",
+     "pali": "ปะริโยสานะกัล๎ยาณัง,",
      "pali_roman": "Pariyosānakalyāṇaṃ,",
      "thai": "ไพเราะในที่สุด,",
      "paiboon": "pai-rɔ́ nai tîi-sùt,",
@@ -81,7 +81,7 @@
     },
     {
      "number": 16,
-     "pali": "สาตถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง ปะกาเสสิ,",
+     "pali": "สาตถัง สะพ๎ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ๎รัห๎มะจะริยัง ปะกาเสสิ,",
      "pali_roman": "Sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ pakāsesi,",
      "thai": "ทรงประกาศพรหมจรรย์ คือแบบแห่งการปฏิบัติอันประเสริฐ บริสุทธิ์ บริบูรณ์สิ้นเชิง, พร้อมทั้งอรรถะ พร้อมทั้งพยัญชนะ,",
      "paiboon": "soŋ bprà-gàat prom-má-jan kʉʉ bɛ̀ɛp hɛ̀ŋ gaan bpà-dtì-bàt an bprà-sə̀ət bɔɔ-rí-sùt bɔɔ-rí-buun sîn-chəəŋ, prɔ́ɔm táŋ àt-tà prɔ́ɔm táŋ pá-yan-chá-ná,",
@@ -110,7 +110,7 @@
    ],
    "vocabulary": [
     {
-     "pali": "สาตถัง สะพ์ยัญชะนัง",
+     "pali": "สาตถัง สะพ๎ยัญชะนัง",
      "pali_roman": "sātthaṃ sabyañjanaṃ",
      "meaning": "'with its meaning and its phrasing'. The Thai keeps both Pali words as อรรถะ and พยัญชนะ rather than translating them"
     }
@@ -164,7 +164,7 @@
    "verses": [
     {
      "number": 1,
-     "pali": "โย โส ส์วากขาโต ภะคะวะตา ธัมโม,",
+     "pali": "โย โส ส๎วากขาโต ภะคะวะตา ธัมโม,",
      "pali_roman": "Yo so svākkhāto bhagavatā dhammo,",
      "thai": "พระธรรมนั้นใด, เป็นสิ่งที่พระผู้มีพระภาคเจ้าได้ตรัสไว้ดีแล้ว,",
      "paiboon": "prá-tam nán dai, bpen sìŋ tîi prá-pûu-mii-prá-pâak-jâo dâai dtràt wái dii lɛ́ɛo,",

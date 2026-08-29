@@ -170,7 +170,7 @@
     },
     {
      "number": 37,
-     "pali": "เต (ตา) มะยัง โอติณณาม์หะ,",
+     "pali": "เต (ตา) มะยัง โอติณณาม๎หะ,",
      "pali_roman": "Te (tā) mayaṃ otiṇṇāmha,",
      "thai": "พวกเราทั้งหลาย เป็นผู้ถูกครอบงำแล้ว,",
      "paiboon": "pûak rao táŋ-lǎai bpen pûu tùuk krɔ̂ɔp-ŋam lɛ́ɛo,",
@@ -212,7 +212,7 @@
      "meaning": "'we' — masculine, with the FEMININE form printed beside it in brackets. Men chant เต, women ตา. The book prints both so one page serves a mixed assembly"
     },
     {
-     "pali": "โอติณณาม์หะ",
+     "pali": "โอติณณาม๎หะ",
      "pali_roman": "otiṇṇāmha",
      "meaning": "'we are sunk in, overwhelmed'. The Thai renders it ถูกครอบงำ — overpowered — which is what the whole passage on urgency turns on"
     }
@@ -221,7 +221,7 @@
     {
      "verse": 37,
      "file": "IMG_0471.PNG",
-     "issue": "‼ THE BOOK PRINTS A BRACKETED ALTERNATIVE INSIDE THE PALI: เต (ตา) มะยัง โอติณณาม์หะ. Read at 5x. เต is the masculine 'we' and (ตา) the feminine, so the same printed line serves men and women in one assembly. Reproduced exactly, brackets included — this is the FIRST bracketed variant to appear inside a chanted Pali line in this run, as distinct from the bracketed invitations and rubrics. The Thai translation below it is not doubled; only the Pali is."
+     "issue": "‼ THE BOOK PRINTS A BRACKETED ALTERNATIVE INSIDE THE PALI: เต (ตา) มะยัง โอติณณาม๎หะ. Read at 5x. เต is the masculine 'we' and (ตา) the feminine, so the same printed line serves men and women in one assembly. Reproduced exactly, brackets included — this is the FIRST bracketed variant to appear inside a chanted Pali line in this run, as distinct from the bracketed invitations and rubrics. The Thai translation below it is not doubled; only the Pali is."
     },
     {
      "verse": 25,
@@ -254,7 +254,7 @@
   "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
   "pali_untouched": true,
   "page_scan": "IMG_0471.PNG read end to end. Page number 201 printed clearly at the top centre. One chant throughout, no heading, no footnote, no rule, no colophon. A hand holds the sheet at the right margin and obscures nothing.",
-  "notes": "‼ FIRST BRACKETED VARIANT INSIDE A CHANTED PALI LINE: เต (ตา) มะยัง โอติณณาม์หะ — masculine เต with the feminine ตา beside it, so one printed line serves a mixed assembly. Reproduced with its brackets. The Thai below is NOT doubled. Also the colon-dash :- again, and the five aggregates set twice over, once against impermanence and once against not-self.",
+  "notes": "‼ FIRST BRACKETED VARIANT INSIDE A CHANTED PALI LINE: เต (ตา) มะยัง โอติณณาม๎หะ — masculine เต with the feminine ตา beside it, so one printed line serves a mixed assembly. Reproduced with its brackets. The Thai below is NOT doubled. Also the colon-dash :- again, and the five aggregates set twice over, once against impermanence and once against not-self.",
   "diacritic_exceptions": []
  }
 }

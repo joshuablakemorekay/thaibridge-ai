@@ -48105,7 +48105,7 @@ CHANTS = [
             {
                 'number': 2,
                 'page': 193,
-                'pali': 'ส์วากขาโต เยนะ ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต เยนะ ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto yena bhagavatā dhammo,',
                 'thai': 'พระธรรมเป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,',
                 'paiboon': 'prá-tam bpen tam tîi prá-pûu-mii-prá-pâak-jâo, dtràt wái dii lɛ́ɛo,',
@@ -48286,14 +48286,14 @@ CHANTS = [
                 'paiboon': 'kâa-pá-jâo à-pí-wâat prá-pûu-mii-prá-pâak-jâo, pûu-rúu pûu-dtʉ̀ʉn pûu-bə̀ək-baan.',
                 'english': 'I bow low to the Blessed One, the one who knows, who is awake, who has blossomed.',
             },
-            # ‼ CHECK [IMG_0464.PNG]: ‼ ส์วากขาโต CARRIES THE CLUSTER MARK
+            # ‼ CHECK [IMG_0464.PNG]: ‼ ส๎วากขาโต CARRIES THE CLUSTER MARK
             #   HERE, where page 1's copy prints สวากขาโต WITHOUT it and page
             #   51's prints it WITH. Three printings, two spellings. All
             #   reproduced as printed.
             {
                 'number': 3,
                 'page': 194,
-                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo,',
                 'thai': 'พระธรรม เป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,',
                 'paiboon': 'prá-tam bpen tam tîi prá-pûu-mii-prá-pâak-jâo, dtràt wái dii lɛ́ɛo,',
@@ -48866,7 +48866,7 @@ CHANTS = [
             {
                 'number': 11,
                 'page': 195,
-                'pali': 'โย อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ์รัห์มะกัง, สัสสะมะณะพ์ราห์มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต์วา ปะเวเทสิ,',
+                'pali': 'โย อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ๎รัห๎มะกัง, สัสสะมะณะพ๎ราห๎มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต๎วา ปะเวเทสิ,',
                 'pali_roman': 'Yo imaṃ lokaṃ sadevakaṃ samārakaṃ sabrahmakaṃ, sassamaṇabrāhmaṇiṃ pajaṃ sadevamanussaṃ sayaṃ abhiññā sacchikatvā pavedesi,',
                 'thai': 'พระผู้มีพระภาคเจ้าพระองค์ใด, ได้ทรงทำความดับทุกข์ให้แจ้งด้วยพระปัญญา อันยิ่งเองแล้ว, ทรงสอนโลกนี้ พร้อมทั้งเทวดา, มาร, พรหม, และหมู่สัตว์พร้อมทั้งสมณพราหมณ์, พร้อมทั้งเทวดา และมนุษย์ให้รู้ตาม,',
                 'paiboon': 'prá-pûu-mii-prá-pâak-jâo prá-oŋ dai, dâai soŋ tam kwaam-dàp-túk hâi jɛ̂ɛŋ dûay prá-bpan-yaa an yîŋ eeŋ lɛ́ɛo, soŋ sɔ̌ɔn lôok níi prɔ́ɔm táŋ têe-wá-daa, maan, prom, lɛ́ mùu sàt prɔ́ɔm táŋ sà-má-ná-praam, prɔ́ɔm táŋ têe-wá-daa lɛ́ má-nút hâi rúu dtaam,',
@@ -48899,7 +48899,7 @@ CHANTS = [
             {
                 'number': 13,
                 'page': 196,
-                'pali': 'อาทิกัล์ยาณัง,',
+                'pali': 'อาทิกัล๎ยาณัง,',
                 'pali_roman': 'Ādikalyāṇaṃ,',
                 'thai': 'ไพเราะในเบื้องต้น,',
                 'paiboon': 'pai-rɔ́ nai bʉ̂aŋ-dtôn,',
@@ -48908,7 +48908,7 @@ CHANTS = [
             {
                 'number': 14,
                 'page': 196,
-                'pali': 'มัชเฌกัล์ยาณัง,',
+                'pali': 'มัชเฌกัล๎ยาณัง,',
                 'pali_roman': 'Majjhekalyāṇaṃ,',
                 'thai': 'ไพเราะในท่ามกลาง,',
                 'paiboon': 'pai-rɔ́ nai tâam-glaaŋ,',
@@ -48917,7 +48917,7 @@ CHANTS = [
             {
                 'number': 15,
                 'page': 196,
-                'pali': 'ปะริโยสานะกัล์ยาณัง,',
+                'pali': 'ปะริโยสานะกัล๎ยาณัง,',
                 'pali_roman': 'Pariyosānakalyāṇaṃ,',
                 'thai': 'ไพเราะในที่สุด,',
                 'paiboon': 'pai-rɔ́ nai tîi-sùt,',
@@ -48926,7 +48926,7 @@ CHANTS = [
             {
                 'number': 16,
                 'page': 196,
-                'pali': 'สาตถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง ปะกาเสสิ,',
+                'pali': 'สาตถัง สะพ๎ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ๎รัห๎มะจะริยัง ปะกาเสสิ,',
                 'pali_roman': 'Sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ pakāsesi,',
                 'thai': 'ทรงประกาศพรหมจรรย์ คือแบบแห่งการปฏิบัติอันประเสริฐ บริสุทธิ์ บริบูรณ์สิ้นเชิง, พร้อมทั้งอรรถะ พร้อมทั้งพยัญชนะ,',
                 'paiboon': 'soŋ bprà-gàat prom-má-jan kʉʉ bɛ̀ɛp hɛ̀ŋ gaan bpà-dtì-bàt an bprà-sə̀ət bɔɔ-rí-sùt bɔɔ-rí-buun sîn-chəəŋ, prɔ́ɔm táŋ àt-tà prɔ́ɔm táŋ pá-yan-chá-ná,',
@@ -48992,7 +48992,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 196,
-                'pali': 'โย โส ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali': 'โย โส ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Yo so svākkhāto bhagavatā dhammo,',
                 'thai': 'พระธรรมนั้นใด, เป็นสิ่งที่พระผู้มีพระภาคเจ้าได้ตรัสไว้ดีแล้ว,',
                 'paiboon': 'prá-tam nán dai, bpen sìŋ tîi prá-pûu-mii-prá-pâak-jâo dâai dtràt wái dii lɛ́ɛo,',
@@ -49884,7 +49884,7 @@ CHANTS = [
             {
                 'number': 9,
                 'page': 199,
-                'pali': 'สังโฆ สุเขตตาภ์ยะติเขตตะสัญญิโต,',
+                'pali': 'สังโฆ สุเขตตาภ๎ยะติเขตตะสัญญิโต,',
                 'pali_roman': 'Saṅgho sukhettābhyatikhettasaññito,',
                 'thai': 'พระสงฆ์เป็นนาบุญอันยิ่งใหญ่กว่านาบุญอันดีทั้งหลาย,',
                 'paiboon': 'prá-sǒŋ bpen naa-bun an yîŋ-yài gwàa naa-bun an dii táŋ-lǎai,',
@@ -50036,7 +50036,7 @@ CHANTS = [
             {
                 'number': 6,
                 'page': 200,
-                'pali': 'มะยันตัง ธัมมัง สุต์วา เอวัง ชานามะ :-',
+                'pali': 'มะยันตัง ธัมมัง สุต๎วา เอวัง ชานามะ :-',
                 'pali_roman': 'Mayantaṃ dhammaṃ sutvā evaṃ jānāma :-',
                 'thai': 'พวกเราเมื่อได้ฟังธรรมนั้นแล้ว, จึงได้รู้อย่างนี้ว่า :-',
                 'paiboon': 'pûak rao mʉ̂a dâai faŋ tam nán lɛ́ɛo, jʉŋ dâai rúu yàaŋ-níi wâa :-',
@@ -50339,7 +50339,7 @@ CHANTS = [
                 'english': 'all things are not-self — thus,',
             },
             # ‼ CHECK [IMG_0471.PNG]: ‼ THE BOOK PRINTS A BRACKETED
-            #   ALTERNATIVE INSIDE THE PALI: เต (ตา) มะยัง โอติณณาม์หะ. Read
+            #   ALTERNATIVE INSIDE THE PALI: เต (ตา) มะยัง โอติณณาม๎หะ. Read
             #   at 5x. เต is the masculine 'we' and (ตา) the feminine, so the
             #   same printed line serves men and women in one assembly.
             #   Reproduced exactly, brackets included — this is the FIRST
@@ -50350,7 +50350,7 @@ CHANTS = [
             {
                 'number': 37,
                 'page': 201,
-                'pali': 'เต (ตา) มะยัง โอติณณาม์หะ,',
+                'pali': 'เต (ตา) มะยัง โอติณณาม๎หะ,',
                 'pali_roman': 'Te (tā) mayaṃ otiṇṇāmha,',
                 'thai': 'พวกเราทั้งหลาย เป็นผู้ถูกครอบงำแล้ว,',
                 'paiboon': 'pûak rao táŋ-lǎai bpen pûu tùuk krɔ̂ɔp-ŋam lɛ́ɛo,',
@@ -50442,7 +50442,7 @@ CHANTS = [
             {
                 'number': 45,
                 'page': 202,
-                'pali': 'สัทธา อะคารัส์มา อะนะคาริยัง ปัพพะชิตา,',
+                'pali': 'สัทธา อะคารัส๎มา อะนะคาริยัง ปัพพะชิตา,',
                 'pali_roman': 'Saddhā agārasmā anagāriyaṃ pabbajitā,',
                 'thai': 'เป็นผู้มีศรัทธา ออกบวชจากเรือน ไม่เกี่ยวข้องด้วยเรือนแล้ว,',
                 'paiboon': 'bpen pûu mii sàt-taa ɔ̀ɔk-bùat jàak rʉan mâi gìao-kɔ̂ɔŋ dûay rʉan lɛ́ɛo,',
@@ -50451,7 +50451,7 @@ CHANTS = [
             {
                 'number': 46,
                 'page': 202,
-                'pali': 'ตัส์มิง ภะคะวะติ พ์รัห์มะจะริยัง จะรามะ,',
+                'pali': 'ตัส๎มิง ภะคะวะติ พ๎รัห๎มะจะริยัง จะรามะ,',
                 'pali_roman': 'Tasmiṃ bhagavati brahmacariyaṃ carāma,',
                 'thai': 'ประพฤติอยู่ซึ่งพรหมจรรย์ ในพระผู้มีพระภาคเจ้าพระองค์นั้น,',
                 'paiboon': 'bprà-prʉ́t yùu sʉ̂ŋ prom-má-jan nai prá-pûu-mii-prá-pâak-jâo prá-oŋ nán,',
@@ -50478,7 +50478,7 @@ CHANTS = [
             {
                 'number': 48,
                 'page': 202,
-                'pali': 'ตัง โน พ์รัห์มะจะริยัง อิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยายะ สังวัตตะตุ.',
+                'pali': 'ตัง โน พ๎รัห๎มะจะริยัง อิมัสสะ เกวะลัสสะ ทุกขักขันธัสสะ อันตะกิริยายะ สังวัตตะตุ.',
                 'pali_roman': 'Taṃ no brahmacariyaṃ imassa kevalassa dukkhakkhandhassa antakiriyāya saṃvattatu.',
                 'thai': 'ขอให้พรหมจรรย์ของเราทั้งหลายนั้น, จงเป็นไปเพื่อการทำที่สุด แห่งกองทุกข์ทั้งสิ้นนี้ เทอญ.',
                 'paiboon': 'kɔ̌ɔ hâi prom-má-jan kɔ̌ɔŋ rao táŋ-lǎai nán, joŋ bpen bpai pʉ̂a gaan tam tîi-sùt hɛ̀ŋ gɔɔŋ-túk táŋ-sîn níi təən.',
@@ -51010,7 +51010,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 203,
-                'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค๎รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'Bāhuṃ sahassamabhinimmitasāvudhantaṃ, Grīmekhalaṃ uditaghorasasenamāraṃ, Dānādidhammavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีได้ชนะพญามารผู้เนรมิตแขนมากตั้งพัน, ถืออาวุธครบมือ ขี่คชสารครีเมขละ, พร้อมด้วยเสนามารโห่ร้องก้องกึก, ด้วยธรรมวิธีมีทานบารมีเป็นต้น, ขอชัยมงคลทั้งหลาย จงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná pá-yaa-maan pûu neen-rá-mít kɛ̌ɛn mâak dtâŋ pan, tʉ̌ʉ aa-wút króp mʉʉ kìi ká-chá-sǎan kriimeekálá, prɔ́ɔm dûay sěe-naa-maan hòo-rɔ́ɔŋ gɔ̂ŋ-gʉ́k, dûay tam-má wí-tii mii taan baa-rá-mii bpen dtôn, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
@@ -51072,7 +51072,7 @@ CHANTS = [
                 'english': 'The Lord of Sages, his mind set on a display of power, defeated the bandit Angulimala - he of the garland made of human fingers - vicious and skilled, who chased him sword in hand for three leagues. By that power may the blessings of victory be yours.',
             },
             # ‼ CHECK [IMG_0474.PNG]: THE THANTHAKHAT CLUSTERS ARE AS PRINTED,
-            #   checked at 4x: กัต์วานะ (verse 5) and พ์รัห์มัง (verse 8).
+            #   checked at 4x: กัต๎วานะ (verse 5) and พ๎รัห๎มัง (verse 8).
             #   Every Pali line on this sheet was also put through the app's
             #   own transliterator as a cross-check, and all fifteen came back
             #   as the standard Jayamangala readings - Katvāna kaṭṭhamudaraṃ
@@ -51082,7 +51082,7 @@ CHANTS = [
             {
                 'number': 5,
                 'page': 204,
-                'pali': 'กัต์วานะ กัฏฐะมุทะรัง อิวะ คัพภินียา, จิญจายะ ทุฏฐะวะจะนัง ชะนะกายะมัชเฌ, สันเตนะ โสมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali': 'กัต๎วานะ กัฏฐะมุทะรัง อิวะ คัพภินียา, จิญจายะ ทุฏฐะวะจะนัง ชะนะกายะมัชเฌ, สันเตนะ โสมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'Katvāna kaṭṭhamudaraṃ iva gabbhinīyā, Ciñcāya duṭṭhavacanaṃ janakāyamajjhe, Santena somavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีได้ชนะคำกล่าวร้ายของนางจิญจมาณวิกา, ผู้เอาไม้กลมผูกที่ท้อง ทำอาการประหนึ่งว่ามีครรภ์, ด้วยวิธีสงบระงับอันงาม ในท่ามกลางหมู่ชน, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná kam glàao ráai kɔ̌ɔŋ naaŋ jin-já-maa-ná-wí-gaa, pûu ao máai glom pùuk tîi tɔ́ɔŋ tam aa-gaan bprà-nʉ̀ŋ wâa mii kan, dûay wí-tii sà-ŋòp rá-ŋáp an ŋaam nai tâam-glaaŋ mùu chon, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
@@ -51120,7 +51120,7 @@ CHANTS = [
             {
                 'number': 8,
                 'page': 204,
-                'pali': 'ทุคคาหะทิฏฐิภุชะเคนะ สุทัฏฐะหัตถัง, พ์รัห์มัง วิสุทธิชุติมิทธิพะกาภิธานัง, ญาณาคะเทนะ วิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali': 'ทุคคาหะทิฏฐิภุชะเคนะ สุทัฏฐะหัตถัง, พ๎รัห๎มัง วิสุทธิชุติมิทธิพะกาภิธานัง, ญาณาคะเทนะ วิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'Duggāhadiṭṭhibhujagena sudaṭṭhahatthaṃ, Brahmaṃ visuddhijutimiddhibakābhidhānaṃ, Ñāṇāgadena vidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.',
                 'thai': 'พระจอมมุนีได้ชนะพรหมผู้มีนามว่าพกะ ผู้มีฤทธิ์ สำคัญตนว่ารุ่งเรืองด้วยคุณอันบริสุทธิ์, มีมืออันท้าวภุชงค์คือทิฏฐิที่ตนถือผิด รัดรึงไว้แน่นแฟ้นแล้ว, ด้วยวิธีวางยาอันพิเศษ คือเทศนาญาณ, ขอชัยมงคลทั้งหลายจงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.',
                 'paiboon': 'prá-jɔɔm-mú-nii dâai chá-ná prom pûu mii naam wâa pá-gà pûu mii rít sǎm-kan dton wâa rûŋ-rʉaŋ dûay kun an bɔɔ-rí-sùt, mii mʉʉ an táao pú-choŋ kʉʉ tít-tì tîi dton tʉ̌ʉ pìt rát-rʉŋ wái nɛ̂n-fɛ́n lɛ́ɛo, dûay wí-tii waaŋ yaa an pí-sèet kʉʉ têet-sà-nǎa-yaan, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.',
@@ -51144,7 +51144,7 @@ CHANTS = [
             {
                 'number': 9,
                 'page': 205,
-                'pali': 'เอตาปิ พุทธะชะยะมังคะละอัฏฐะคาถา, โย วาจะโน ทินะทิเน สะระเตมะตันที, หิต์วานะเนกะวิวิธานิ จุปัททะวานิ, โมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.',
+                'pali': 'เอตาปิ พุทธะชะยะมังคะละอัฏฐะคาถา, โย วาจะโน ทินะทิเน สะระเตมะตันที, หิต๎วานะเนกะวิวิธานิ จุปัททะวานิ, โมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.',
                 'pali_roman': 'Etāpi buddhajayamaṅgalaaṭṭhagāthā, Yo vācano dinadine saratematandī, Hitvānanekavividhāni cupaddavāni, Mokkhaṃ sukhaṃ adhigameyya naro sapañño.',
                 'thai': 'นรชนใดมีปัญญา ไม่เกียจคร้าน, สวดก็ดี ระลึกก็ดี, ซึ่งพระพุทธชัยมงคล ๘ คาถาเหล่านี้ทุกๆ วัน, นรชนนั้นจะขจัดอุปัทวันตรายทั้งหลาย เป็นอเนกประการเสียได้, ถึงซึ่งพระนิพพาน อันเป็นบรมสุขแล.',
                 'paiboon': 'ná-rá-chon dai mii bpan-yaa mâi gìat-kráan, sùat gɔ̂ dii rá-lʉ́k gɔ̂ dii, sʉ̂ŋ prá-pút-tá-chai-moŋ-kon bpɛ̀ɛt kaa-tǎa lào níi túk-túk wan, ná-rá-chon nán jà kà-jàt ù-bpàt-dtà-wan-dtà-raai táŋ-lǎai bpen à-nèek bprà-gaan sǐa dâai, tʉ̌ŋ sʉ̂ŋ prá-níp-paan an bpen bɔɔ-rom-má-sùk lɛɛ.',
@@ -51429,7 +51429,7 @@ CHANTS = [
             {
                 'number': 3,
                 'page': 205,
-                'pali': 'อุณ์หัสสะ ปะฏิฆาตายะ,',
+                'pali': 'อุณหัสสะ ปะฏิฆาตายะ,',
                 'pali_roman': 'Uṇhassa paṭighātāya,',
                 'thai': 'เพื่อบำบัดความร้อน',
                 'paiboon': 'pʉ̂a bam-bàt kwaam-rɔ́ɔn',

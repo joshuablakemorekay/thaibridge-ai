@@ -109,7 +109,7 @@
    "verses": [
     {
      "number": 1,
-     "pali": "พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.",
+     "pali": "พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง, ค๎รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ทานาทิธัมมะวิธินา ชิตะวา มุนินโท, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.",
      "pali_roman": "Bāhuṃ sahassamabhinimmitasāvudhantaṃ, Grīmekhalaṃ uditaghorasasenamāraṃ, Dānādidhammavidhinā jitavā munindo, Tantejasā bhavatu te jayamaṅgalāni.",
      "thai": "พระจอมมุนีได้ชนะพญามารผู้เนรมิตแขนมากตั้งพัน, ถืออาวุธครบมือ ขี่คชสารครีเมขละ, พร้อมด้วยเสนามารโห่ร้องก้องกึก, ด้วยธรรมวิธีมีทานบารมีเป็นต้น, ขอชัยมงคลทั้งหลาย จงมีแก่ท่าน, ด้วยเดชแห่งพระพุทธชัยมงคลนั้น.",
      "paiboon": "prá-jɔɔm-mú-nii dâai chá-ná pá-yaa-maan pûu neen-rá-mít kɛ̌ɛn mâak dtâŋ pan, tʉ̌ʉ aa-wút króp mʉʉ kìi ká-chá-sǎan kriimeekálá, prɔ́ɔm dûay sěe-naa-maan hòo-rɔ́ɔŋ gɔ̂ŋ-gʉ́k, dûay tam-má wí-tii mii taan baa-rá-mii bpen dtôn, kɔ̌ɔ chai-moŋ-kon táŋ-lǎai joŋ mii gɛ̀ɛ tâan, dûay dèet hɛ̀ŋ prá-pút-tá-chai-moŋ-kon nán.",
@@ -142,7 +142,7 @@
      "meaning": "'the blessings of victory'. Every stanza ends on the same line, ตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ - by that power, may the blessings of victory be yours - so the chant is eight victories with one refrain"
     },
     {
-     "pali": "ค์รีเมขะลัง",
+     "pali": "ค๎รีเมขะลัง",
      "pali_roman": "Grīmekhalaṃ",
      "meaning": "Girimekhala, the elephant Mara rode. The book writes the cluster with a thanthakhat over the ค, ค์รี, which the app's transliterator reads as Grī - so the roman line follows the book rather than the more usual Giri-"
     }
@@ -161,7 +161,7 @@
     {
      "verse": 1,
      "file": "IMG_0473.PNG",
-     "issue": "‼ A PAGE-FIDELITY DEPARTURE, AND IT IS DELIBERATE. The book prints each stanza as TWO Pali lines with a single Thai prose paragraph translating both. The app has no way to show that: a verse renders its pali as one paragraph, and the paragraph mechanism groups whole verses rather than lines within one, so a stanza cannot hold two Pali lines over one shared translation. Storing the break as a newline was tried first and check_render rejected it - correctly, because the CSS has no white-space rule, so the app would have been claiming a break the page never shows. The stanza is therefore recorded as ONE unit with the two printed lines joined by a space, which reads exactly as the book reads. WHERE THE BREAKS FALL, so nothing is lost from the record: stanza 1 after สาวุธันตัง, ค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ; stanza 2 after มะถัทธะยักขัง, ; stanza 3 after สุทารุณันตัง, . The alternative - splitting each stanza into two verses and hanging the shared Thai off the second - was rejected because it would print a verse with four empty layers, which reads as unfinished work rather than as the book."
+     "issue": "‼ A PAGE-FIDELITY DEPARTURE, AND IT IS DELIBERATE. The book prints each stanza as TWO Pali lines with a single Thai prose paragraph translating both. The app has no way to show that: a verse renders its pali as one paragraph, and the paragraph mechanism groups whole verses rather than lines within one, so a stanza cannot hold two Pali lines over one shared translation. Storing the break as a newline was tried first and check_render rejected it - correctly, because the CSS has no white-space rule, so the app would have been claiming a break the page never shows. The stanza is therefore recorded as ONE unit with the two printed lines joined by a space, which reads exactly as the book reads. WHERE THE BREAKS FALL, so nothing is lost from the record: stanza 1 after สาวุธันตัง, ค๎รีเมขะลัง อุทิตะโฆระสะเสนะมารัง, ; stanza 2 after มะถัทธะยักขัง, ; stanza 3 after สุทารุณันตัง, . The alternative - splitting each stanza into two verses and hanging the shared Thai off the second - was rejected because it would print a verse with four empty layers, which reads as unfinished work rather than as the book."
     },
     {
      "verse": 1,
@@ -190,7 +190,7 @@
   },
   "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
   "pali_untouched": true,
-  "page_scan": "IMG_0473.PNG read end to end, with the heading, the semicolon, the service closing, ค์รีเมขะลัง, อาฬวก and นาฬาคิรี all re-read zoomed 3.2-9x. Page number 203 printed clearly at the top centre. Front-matter page 41, IMG_0259, was also opened to check the contents spelling of the title. Two chants, one service closing, one heading, no footnote, no rule, no colophon.",
+  "page_scan": "IMG_0473.PNG read end to end, with the heading, the semicolon, the service closing, ค๎รีเมขะลัง, อาฬวก and นาฬาคิรี all re-read zoomed 3.2-9x. Page number 203 printed clearly at the top centre. Front-matter page 41, IMG_0259, was also opened to check the contents spelling of the title. Two chants, one service closing, one heading, no footnote, no rule, no colophon.",
   "notes": "‼ THE MORNING SERVICE CLOSES AND A NEW CHANT OPENS ON ONE SHEET. Three things worth carrying forward: the book spells the new chant's title one way on the page (มังคล) and another in its own สารบัญ (มงคล), both verified from photographs and handled by the settled page-wins rule; the first semicolon in the run, in verse 52's Thai; and a way of PROVING a ฬ - the light Thai translation face keeps the ascender the bold Pali face loses, and it settled อาฬวก and นาฬาคิรี here without recourse to the canon.",
   "diacritic_exceptions": []
  }
