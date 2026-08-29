@@ -56212,6 +56212,19 @@ PAGE_BLOCKS = [
             },
         ],
     },
+    # ── Page 191 ───────────────────────────────────────────────────
+    # Written from batch-191-191.json.
+    {
+        'page': 191,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'บทสวดมนต์ ทำวัตรเช้า -เย็น แปล',
+                'english': 'The Chanting Book: the Morning and Evening Services, Translated',
+                'english_unverified': True,
+            },
+        ],
+    },
 ]
 
 

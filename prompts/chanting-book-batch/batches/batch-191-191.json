@@ -1,0 +1,44 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 0,
+  "manifest": [],
+  "pages": [
+   {
+    "page": 191,
+    "file": "IMG_0462.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "gatha-jut-thian-chai-plae",
+    "verses": "none",
+    "starts_here": false,
+    "note": "A SECTION DIVIDER and nothing else: บทสวดมนต์ on one line and ทำวัตรเช้า -เย็น แปล on a second, larger line beneath, centred on an otherwise blank sheet with NO PAGE NUMBER printed. The row carries no verses and exists only to place the heading. The chant it names is the first of the section that follows.",
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "บทสวดมนต์ ทำวัตรเช้า -เย็น แปล",
+      "english": "The Chanting Book: the Morning and Evening Services, Translated",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 190,
+  "resume_from_file": "IMG_0461.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence. Nothing but a heading was written.",
+  "pali_untouched": "No Pali on the sheet at all.",
+  "page_scan": "agrees. One row, one sheet, no verses.",
+  "notes": "⚠ A FOURTH UNPHOTOGRAPHED PAGE, AND IT IS OUTSIDE THE STRETCH THE PHOTO MAP WAS TRACKING. IMG_0461 prints 190, IMG_0462 is this numberless divider, and IMG_0463 prints 193 — one photograph for two pages. The สารบัญ puts บทสวดมนต์ ทำวัตรเช้า-เย็น แปล at ๑๙๑, so THIS SHEET IS 191 AND PAGE 192 IS ITS BLANK VERSO, never photographed. The offset steps 271 to 270 across it, which is the confirming arithmetic. It is the SAME SHAPE as 247/248/249 and 277/278/279: content ends on a verso, divider on the recto, blank verso, content resumes on the next recto. The photo map's 'three pages between 224 and 316' count is unaffected — this one is at 192, outside that range, and was not predicted by it.",
+  "diacritic_exceptions": []
+ }
+}

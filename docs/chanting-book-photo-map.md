@@ -202,9 +202,22 @@ That is an ordinary book structure — a section ends, a blank verso, a divider
 recto, a blank verso, the new section opening on a recto — and it accounts for
 **two of the three gaps in one place**.
 
-**ALL THREE ARE NOW FOUND: 246, 248 and 278.** The arithmetic closes exactly:
-page 223 sits at offset 270 and page 317 at offset 267, a fall of three, and
-three pages have no photograph. Nothing else is missing between 224 and 316.
+**ALL THREE ARE NOW FOUND: 246, 248 and 278.** The arithmetic closes exactly: page 223 sits at offset 270 and page 317 at offset 267, a fall of three, and three pages have no photograph. Nothing else is missing between 224 and 316.
+
+## ⚠ A FOURTH unphotographed page, at 192 — OUTSIDE that stretch
+
+Found on 2026-08-29 walking back from 193. `IMG_0461` prints **190**, `IMG_0462` is a numberless section divider, and `IMG_0463` prints **193** — one photograph for two pages. The สารบัญ puts บทสวดมนต์ ทำวัตรเช้า-เย็น แปล at **๑๙๑**, so `IMG_0462` is page 191 and **page 192 is its blank verso, never photographed.**
+
+Same shape as the other two: content ends on a verso, divider on the recto, blank verso, content resumes on the next recto.
+
+| page | photo | offset |
+|---|---|---|
+| 193 | `IMG_0463` | 270 |
+| **192** | **— never photographed (blank verso)** | |
+| **191** | **`IMG_0462`** | **271** ⟵ offset changes here |
+| 190 | `IMG_0461` | 271 |
+
+**So the three-page count applied only to 224–316.** Anywhere a numberless divider turns up, expect a blank verso beside it and READ THE NUMBERS off the sheets either side.
 
 | page | photo | offset |
 |---|---|---|
