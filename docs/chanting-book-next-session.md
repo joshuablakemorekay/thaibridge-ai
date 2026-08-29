@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-212 went in.
+213 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,13 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 213, `IMG_0483`.** ✅ **NOTHING IS OPEN** —
-`sabbapattidana-gatha-plae` began and ended on 212. The สารบัญ puts
-`ปัฏฐะนะฐะปะนะคาถา` at ๒๑๓.
+**Next: page 214, `IMG_0484`.** ⚠️ `patthana-thapana-gatha-plae` IS OPEN —
+**6 stanzas in, resume at verse 7**.
+
+⚠️ **The photo map already has rows for some pages ahead** (213 and 215 were
+anchored long before this run reached them). **Check before adding a row** —
+appending one blindly after entering a page creates a duplicate, which has now
+happened twice, at 207 and at 213.
 
 ⚠️ **A TWO-COLUMN PĀDA LAYOUT appeared on 212** and may well continue. The Pali
 is set as half-lines in two columns with one Thai prose paragraph under each
@@ -222,6 +226,7 @@ Collected as they turn up, all reproduced exactly:
 | brackets on invitations | 195–198 | `(หันทะ มะยัง … เส.)` — the brackets are printed |
 | brackets on rubrics | 194–198 | `(กราบ)`, `(๓ ครั้ง)`, `(กราบระลึกถึง…)` |
 | a printed full stop in a title | 112 | `บทขัด อัคคัปปะสาทะสุตตัง.` |
+| a **hyphen breaking a word MID-LINE** | 213 v6 | `สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร` — not a line-end break; both halves are on one line and the hyphen marks a pāda boundary inside the word. Kept in the roman too |
 | a **bracketed variant inside chanted Pali** | 201 v37 | `เต (ตา) มะยัง …` — masculine with the feminine beside it, so one line serves a mixed assembly. The **Thai is not doubled**, only the Pali |
 | a **rubric splitting one chant into two endings** | 202 v44, v49 | `(สำหรับภิกษุ-สามเณรสวด)` then `(สำหรับอุบาสก-อุบาสิกาสวด)` — alternatives, not a sequence. Both runs kept in full, each rubric on the verse it heads |
 | a **full stop that closes an alternative, not the chant** | 202 v48 | `สังวัตตะตุ.` / `เทอญ.` — the monastic run ends, the lay run starts at 49, the chant carries on to 203 |
