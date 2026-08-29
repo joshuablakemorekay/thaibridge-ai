@@ -320,6 +320,7 @@ CHANTS = [
 
     {
         'id': 'sankhara-contemplation',
+        'page_start': 222,
         'title_thai': 'บทพิจารณาสังขาร',
         # Josh's source prints no Pali title for this chant, so there is none
         # here. The template skips the line rather than showing a blank.
@@ -394,7 +395,7 @@ CHANTS = [
             {
                 'number': 1,
                 'section': 'Reflection on impermanence',
-                'pali': 'สัพเพ สังขารา อะนิจจา',
+                'pali': 'สัพเพ สังขารา อะนิจจา,',
                 'pali_roman': 'Sabbe saṅkhārā aniccā',
                 'thai': 'สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง, เกิดขึ้นแล้วดับไป มีแล้ว หายไป',
                 'paiboon': 'sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man mâi tîaŋ, gə̀ət-kʉ̂n lɛ́ɛo dàp bpai mii lɛ́ɛo hǎai bpai',
@@ -402,7 +403,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'สัพเพ สังขารา ทุกขา',
+                'pali': 'สัพเพ สังขารา ทุกขา,',
                 'pali_roman': 'Sabbe saṅkhārā dukkhā',
                 'thai': 'สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันเป็นทุกข์ทนได้ยากเพราะเกิดขึ้นแล้ว, แก่ เจ็บ ตายไป',
                 'paiboon': 'sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man bpen túk ton dâai yâak prɔ́ gə̀ət-kʉ̂n lɛ́ɛo, gɛ̀ɛ jèp dtaai bpai',
@@ -410,7 +411,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'สัพเพ ธัมมา อะนัตตา',
+                'pali': 'สัพเพ ธัมมา อะนัตตา,',
                 'pali_roman': 'Sabbe dhammā anattā',
                 'thai': 'สิ่งทั้งหลายทั้งปวง, ทั้งที่เป็นสังขารและมิใช่สังขาร ทั้งหมดทั้งสิ้น, ไม่ใช่ตัวไม่ใช่ตน, ไม่ควรถือว่าเรา ว่า ของเรา ว่าตัวว่าตนของเรา',
                 'paiboon': 'sìŋ táŋ-lǎai táŋ-bpuaŋ, táŋ tîi bpen sǎŋ-kǎan lɛ́ mí-châi sǎŋ-kǎan táŋ-mòt táŋ-sîn, mâi-châi dtua mâi-châi dton, mâi kuan tʉ̌ʉ wâa rao wâa kɔ̌ɔŋ rao wâa dtua wâa dton kɔ̌ɔŋ rao',
@@ -419,7 +420,7 @@ CHANTS = [
             {
                 'number': 4,
                 'section': 'Reflection on life and death',
-                'pali': 'อะธุวัง ชีวิตัง',
+                'pali': 'อะธุวัง ชีวิตัง,',
                 'pali_roman': 'Adhuvaṃ jīvitaṃ',
                 'thai': 'ชีวิตเป็นของไม่ยั่งยืน',
                 'paiboon': 'chii-wít bpen kɔ̌ɔŋ mâi yâŋ-yʉʉn',
@@ -427,7 +428,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'ธุวัง มะระณัง',
+                'pali': 'ธุวัง มะระณัง,',
                 'pali_roman': 'Dhuvaṃ maraṇaṃ',
                 'thai': 'ความตายเป็นของยั่งยืน',
                 'paiboon': 'kwaam-dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn',
@@ -435,7 +436,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'อะวัสสัง มะยา มะริตัพพัง',
+                'pali': 'อะวัสสัง มะยา มะริตัพพัง,',
                 'pali_roman': 'Avassaṃ mayā maritabbaṃ',
                 'thai': 'อันเราจะพึงตายเป็นแน่',
                 'paiboon': 'an rao jà pʉŋ dtaai bpen nɛ̂ɛ',
@@ -443,7 +444,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'มะระณะปะริโยสานัง เม ชีวิตัง',
+                'pali': 'มะระณะปะริโยสานัง เม ชีวิตัง,',
                 'pali_roman': 'Maraṇapariyosānaṃ me jīvitaṃ',
                 'thai': 'ชีวิตของเรา มีความตายเป็นที่สุดรอบ',
                 'paiboon': 'chii-wít kɔ̌ɔŋ rao mii kwaam-dtaai bpen tîi-sùt rɔ̂ɔp',
@@ -451,7 +452,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'ชีวิตัง เม อะนิยะตัง',
+                'pali': 'ชีวิตัง เม อะนิยะตัง,',
                 'pali_roman': 'Jīvitaṃ me aniyataṃ',
                 'thai': 'ชีวิตของเรา เป็นของไม่เที่ยง',
                 'paiboon': 'chii-wít kɔ̌ɔŋ rao bpen kɔ̌ɔŋ mâi tîaŋ',
@@ -459,7 +460,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'มะระณัง เม นิยะตัง',
+                'pali': 'มะระณัง เม นิยะตัง,',
                 'pali_roman': 'Maraṇaṃ me niyataṃ',
                 'thai': 'ความตายของเรา เป็นของเที่ยง',
                 'paiboon': 'kwaam-dtaai kɔ̌ɔŋ rao bpen kɔ̌ɔŋ tîaŋ',
@@ -468,7 +469,7 @@ CHANTS = [
             {
                 'number': 10,
                 'section': 'Reflection on the body',
-                'pali': 'อะจิรัง วะตะ อะยัง กาโย',
+                'pali': 'อะจิรัง วะตะ อะยัง กาโย,',
                 'pali_roman': 'Aciraṃ vata ayaṃ kāyo',
                 'thai': 'ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย',
                 'paiboon': 'râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi',
@@ -476,7 +477,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'ปะฐะวิง อะธิเสสสะติ',
+                'pali': 'ปะฐะวิง อะธิเสสสะติ,',
                 'pali_roman': 'Paṭhaviṃ adhisessati',
                 'thai': 'จักนอนทับบนแผ่นดิน',
                 'paiboon': 'jàk nɔɔn táp bon pɛ̀n-din',
@@ -486,7 +487,7 @@ CHANTS = [
                 'number': 12,
                 # ฉุฑโท exactly as Josh's source prints it, so the
                 # romanisation follows it letter for letter.
-                'pali': 'ฉุฑโท อะเปตะวิญญาโณ',
+                'pali': 'ฉุฑโท อะเปตะวิญญาโณ,',
                 'pali_roman': 'Chuḍdo apetaviññāṇo',
                 'thai': 'ครั้นปราศจากวิญญาณ, อันเขาทิ้งเสียแล้ว',
                 'paiboon': 'krán bpràat-sà-jàak win-yaan, an kǎo tíŋ sǐa lɛ́ɛo',
@@ -1310,11 +1311,12 @@ CHANTS = [
         #          handled in the app.
 
         'id': 'abhinha-paccavekkhana',
+        'page_start': 223,
         'title_thai': 'อะภิณหะปัจจะเวกขะณะ',
         'title_pali': 'Abhiṇhapaccavekkhaṇa',
         # The book prints no separate romanised Thai title, so this
         # stays empty and the template falls back to `title_pali`.
-        'title_roman': '',
+        'title_roman': 'Abhiṇhapaccavekkhaṇa',
         'title_english': 'The Subjects for Frequent Recollection',
         # Left empty on purpose: the book text gives no canonical
         # attribution and none has been supplied from memory.

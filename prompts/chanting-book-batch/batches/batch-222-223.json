@@ -1,0 +1,333 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 2,
+  "files_read": 2,
+  "received": 2,
+  "manifest": [
+   "sankhara-contemplation",
+   "abhinha-paccavekkhana"
+  ],
+  "pages": [
+   {
+    "page": 222,
+    "file": "IMG_0492.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "sankhara-contemplation",
+    "verses": "1-13",
+    "starts_here": true,
+    "note": "The page opens with บทพิจารณาสังขาร and a bracketed subtitle (ทุกเวลาทำวัตรเช้าและเข้านอน), then thirteen Pali lines with their Thai beside them. Complete on the sheet."
+   },
+   {
+    "page": 223,
+    "file": "IMG_0493.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "abhinha-paccavekkhana",
+    "verses": "1-16",
+    "starts_here": true,
+    "note": "The page opens with อะภิณหะปัจจะเวกขะณะ and a Thai subtitle ธรรมที่ควรพิจารณาเนืองๆ, then sixteen Pali lines with their Thai. Complete on the sheet."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "sankhara-contemplation",
+   "verses": [
+    {
+     "number": 1,
+     "pali": "สัพเพ สังขารา อะนิจจา,",
+     "pali_roman": "Sabbe saṅkhārā aniccā",
+     "thai": "สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันไม่เที่ยง, เกิดขึ้นแล้วดับไป มีแล้ว หายไป",
+     "paiboon": "sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man mâi tîaŋ, gə̀ət-kʉ̂n lɛ́ɛo dàp bpai mii lɛ́ɛo hǎai bpai",
+     "english": "All conditioned things — body and mind, and all material and mental phenomena without exception — are impermanent. Having arisen they cease; having been, they vanish.",
+     "page": 222
+    },
+    {
+     "number": 2,
+     "pali": "สัพเพ สังขารา ทุกขา,",
+     "pali_roman": "Sabbe saṅkhārā dukkhā",
+     "thai": "สังขารคือร่างกายจิตใจ, และรูปธรรมนามธรรม ทั้งหมดทั้งสิ้น, มันเป็นทุกข์ทนได้ยากเพราะเกิดขึ้นแล้ว, แก่ เจ็บ ตายไป",
+     "paiboon": "sǎŋ-kǎan kʉʉ râaŋ-gaai jìt-jai, lɛ́ rûup-bpà-tam naam-má-tam táŋ-mòt táŋ-sîn, man bpen túk ton dâai yâak prɔ́ gə̀ət-kʉ̂n lɛ́ɛo, gɛ̀ɛ jèp dtaai bpai",
+     "english": "All conditioned things — body and mind, and all material and mental phenomena without exception — are suffering, hard to bear, because having arisen they age, sicken and die."
+    },
+    {
+     "number": 3,
+     "pali": "สัพเพ ธัมมา อะนัตตา,",
+     "pali_roman": "Sabbe dhammā anattā",
+     "thai": "สิ่งทั้งหลายทั้งปวง, ทั้งที่เป็นสังขารและมิใช่สังขาร ทั้งหมดทั้งสิ้น, ไม่ใช่ตัวไม่ใช่ตน, ไม่ควรถือว่าเรา ว่า ของเรา ว่าตัวว่าตนของเรา",
+     "paiboon": "sìŋ táŋ-lǎai táŋ-bpuaŋ, táŋ tîi bpen sǎŋ-kǎan lɛ́ mí-châi sǎŋ-kǎan táŋ-mòt táŋ-sîn, mâi-châi dtua mâi-châi dton, mâi kuan tʉ̌ʉ wâa rao wâa kɔ̌ɔŋ rao wâa dtua wâa dton kɔ̌ɔŋ rao",
+     "english": "All things whatsoever, conditioned and unconditioned alike, are not self. They should not be held to as \"I\", as \"mine\", or as \"my self\"."
+    },
+    {
+     "number": 4,
+     "pali": "อะธุวัง ชีวิตัง,",
+     "pali_roman": "Adhuvaṃ jīvitaṃ",
+     "thai": "ชีวิตเป็นของไม่ยั่งยืน",
+     "paiboon": "chii-wít bpen kɔ̌ɔŋ mâi yâŋ-yʉʉn",
+     "english": "Life is not enduring."
+    },
+    {
+     "number": 5,
+     "pali": "ธุวัง มะระณัง,",
+     "pali_roman": "Dhuvaṃ maraṇaṃ",
+     "thai": "ความตายเป็นของยั่งยืน",
+     "paiboon": "kwaam-dtaai bpen kɔ̌ɔŋ yâŋ-yʉʉn",
+     "english": "Death is enduring."
+    },
+    {
+     "number": 6,
+     "pali": "อะวัสสัง มะยา มะริตัพพัง,",
+     "pali_roman": "Avassaṃ mayā maritabbaṃ",
+     "thai": "อันเราจะพึงตายเป็นแน่",
+     "paiboon": "an rao jà pʉŋ dtaai bpen nɛ̂ɛ",
+     "english": "It is certain that I must die."
+    },
+    {
+     "number": 7,
+     "pali": "มะระณะปะริโยสานัง เม ชีวิตัง,",
+     "pali_roman": "Maraṇapariyosānaṃ me jīvitaṃ",
+     "thai": "ชีวิตของเรา มีความตายเป็นที่สุดรอบ",
+     "paiboon": "chii-wít kɔ̌ɔŋ rao mii kwaam-dtaai bpen tîi-sùt rɔ̂ɔp",
+     "english": "My life has death as its end."
+    },
+    {
+     "number": 8,
+     "pali": "ชีวิตัง เม อะนิยะตัง,",
+     "pali_roman": "Jīvitaṃ me aniyataṃ",
+     "thai": "ชีวิตของเรา เป็นของไม่เที่ยง",
+     "paiboon": "chii-wít kɔ̌ɔŋ rao bpen kɔ̌ɔŋ mâi tîaŋ",
+     "english": "My life is uncertain."
+    },
+    {
+     "number": 9,
+     "pali": "มะระณัง เม นิยะตัง,",
+     "pali_roman": "Maraṇaṃ me niyataṃ",
+     "thai": "ความตายของเรา เป็นของเที่ยง",
+     "paiboon": "kwaam-dtaai kɔ̌ɔŋ rao bpen kɔ̌ɔŋ tîaŋ",
+     "english": "My death is certain."
+    },
+    {
+     "number": 10,
+     "pali": "อะจิรัง วะตะ อะยัง กาโย,",
+     "pali_roman": "Aciraṃ vata ayaṃ kāyo",
+     "thai": "ร่างกายนี้หนอ, เป็นภาวะที่ตั้งอยู่ไม่นานเลย",
+     "paiboon": "râaŋ-gaai níi nɔ̌ɔ, bpen paa-wá tîi dtâŋ yùu mâi naan ləəi",
+     "english": "This body, alas, is a thing that does not remain long."
+    },
+    {
+     "number": 11,
+     "pali": "ปะฐะวิง อะธิเสสสะติ,",
+     "pali_roman": "Paṭhaviṃ adhisessati",
+     "thai": "จักนอนทับบนแผ่นดิน",
+     "paiboon": "jàk nɔɔn táp bon pɛ̀n-din",
+     "english": "It will lie upon the earth."
+    },
+    {
+     "number": 12,
+     "pali": "ฉุฑโท อะเปตะวิญญาโณ,",
+     "pali_roman": "Chuḍdo apetaviññāṇo",
+     "thai": "ครั้นปราศจากวิญญาณ, อันเขาทิ้งเสียแล้ว",
+     "paiboon": "krán bpràat-sà-jàak win-yaan, an kǎo tíŋ sǐa lɛ́ɛo",
+     "english": "Once bereft of consciousness, cast aside."
+    },
+    {
+     "number": 13,
+     "pali": "นิรัตถัง วะ กะลิงคะรัง",
+     "pali_roman": "Niratthaṃ va kaliṅgaraṃ",
+     "thai": "ประดุจดังว่าท่อนไม้และท่อนฟืน ซึ่งไร้ประโยชน์ แล้วนั้นแล",
+     "paiboon": "bprà-dùt daŋ wâa tɔ̂n-máai lɛ́ tɔ̂n-fʉʉn sʉ̂ŋ rái bprà-yòot lɛ́ɛo nán-lɛɛ",
+     "english": "Just like a log of wood or firewood, which is without use."
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0492.PNG",
+     "issue": "⚠ THIS CHANT WAS ALREADY IN THE APP WITH NO PAGE. It is one of the four chants `build_page_index` was returning as unplaceable — hand-written original data with full commentary fields, not entered from a batch, and carrying its Thai translation, which is what identifies it as the TRANSLATED section's copy. Reading the sheet placed it. No duplicate `-plae` chant was created; the existing chant was given its `page_start` instead. Two of the four remain unplaced: khemakhema-saranadipika and dhatupatikula-paccavekkhana."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0492.PNG",
+     "issue": "⚠ A PRINTED SUBTITLE THE DATA MODEL HAS NOWHERE TO PUT. The sheet sets a second line under the chant's title — (ทุกเวลาทำวัตรเช้าและเข้านอน) — between the title and the first verse. A page block cannot go there: with no `after` it renders ABOVE the chant's title, and anchored to the chant it renders below all its verses. Neither is where the book puts it. It is recorded here rather than placed wrongly, and it is the same class of gap the page-fidelity note describes for headings and instruction paragraphs."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0492.PNG",
+     "issue": "⚠ TWELVE TRAILING COMMAS WERE MISSING. The app held verses 1 to 12 with no closing mark; the sheet prints a comma on every one of them and NONE on verse 13. Checked at magnification. The commas have been added and verse 13 left bare."
+    }
+   ]
+  },
+  {
+   "id": "abhinha-paccavekkhana",
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ชะราธัมโมมหิ,",
+     "pali_roman": "jarādhammomhi,",
+     "thai": "เรามีความแก่เป็นธรรมดา",
+     "paiboon": "rao mii kwaam gɛ̀ɛ bpen tam-má-daa",
+     "english": "I am of the nature to age,",
+     "page": 223
+    },
+    {
+     "number": 2,
+     "pali": "ชะรัง อะนะตีโต (อะนะตีตา),",
+     "pali_roman": "jaraṃ anatīto (anatītā),",
+     "thai": "จักล่วงพ้นความแก่ไปไม่ได้",
+     "paiboon": "jàk lûaŋ pón kwaam gɛ̀ɛ bpai mâi dâai",
+     "english": "I have not gone beyond ageing,"
+    },
+    {
+     "number": 3,
+     "pali": "พ์ยาธิธัมโมมหิ,",
+     "pali_roman": "byādhidhammomhi,",
+     "thai": "เรามีความเจ็บไข้เป็นธรรมดา",
+     "paiboon": "rao mii kwaam jèp kâi bpen tam-má-daa",
+     "english": "I am of the nature to sicken,"
+    },
+    {
+     "number": 4,
+     "pali": "พ์ยาธิง อะนะตีโต (อะนะตีตา),",
+     "pali_roman": "byādhiṃ anatīto (anatītā),",
+     "thai": "จักล่วงพ้นความเจ็บไข้ไปไม่ได้",
+     "paiboon": "jàk lûaŋ pón kwaam jèp kâi bpai mâi dâai",
+     "english": "I have not gone beyond sickness,"
+    },
+    {
+     "number": 5,
+     "pali": "มะระณะธัมโมมหิ,",
+     "pali_roman": "maraṇadhammomhi,",
+     "thai": "เรามีความตายเป็นธรรมดา",
+     "paiboon": "rao mii kwaam dtaai bpen tam-má-daa",
+     "english": "I am of the nature to die,"
+    },
+    {
+     "number": 6,
+     "pali": "มะระณัง อะนะตีโต (อะนะตีตา),",
+     "pali_roman": "maraṇaṃ anatīto (anatītā),",
+     "thai": "จักล่วงพ้นความตายไปไม่ได้",
+     "paiboon": "jàk lûaŋ pón kwaam dtaai bpai mâi dâai",
+     "english": "I have not gone beyond death,"
+    },
+    {
+     "number": 7,
+     "pali": "สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.",
+     "pali_roman": "sabbehi me piyehi manāpehi nānābhāvo vinābhāvo.",
+     "thai": "เราจักต้องพลัดพรากจากของรักของชอบใจทั้งหลายทั้งปวง",
+     "paiboon": "rao jàk dtɔ̂ŋ plát prâak jàak kɔ̌ɔŋ rák kɔ̌ɔŋ chɔ̂ɔp jai táŋ-lǎai táŋ-bpuaŋ",
+     "english": "I must be parted and separated from all that is dear and pleasing to me."
+    },
+    {
+     "number": 8,
+     "pali": "กัมมัสสะโกมหิ,",
+     "pali_roman": "kammassakomhi,",
+     "thai": "เราเป็นผู้มีกรรมเป็นของๆ ตน",
+     "paiboon": "rao bpen pûu mii gam bpen kɔ̌ɔŋ kɔ̌ɔŋ dton",
+     "english": "I am the owner of my kamma,"
+    },
+    {
+     "number": 9,
+     "pali": "กัมมะทายาโท,",
+     "pali_roman": "kammadāyādo,",
+     "thai": "เรามีกรรมเป็นทายาท",
+     "paiboon": "rao mii gam bpen taa-yâat",
+     "english": "I am the heir to my kamma,"
+    },
+    {
+     "number": 10,
+     "pali": "กัมมะโยนิ,",
+     "pali_roman": "kammayoni,",
+     "thai": "เราเป็นผู้มีกรรมเป็นกำเนิด",
+     "paiboon": "rao bpen pûu mii gam bpen gam-nə̀ət",
+     "english": "I am born of my kamma,"
+    },
+    {
+     "number": 11,
+     "pali": "กัมมะพันธุ,",
+     "pali_roman": "kammabandhu,",
+     "thai": "เราเป็นผู้มีกรรมเป็นเผ่าพันธุ์",
+     "paiboon": "rao bpen pûu mii gam bpen pào-pan",
+     "english": "I am kin to my kamma,"
+    },
+    {
+     "number": 12,
+     "pali": "กัมมะปะฏิสะระโณ,",
+     "pali_roman": "kammapaṭisaraṇo,",
+     "thai": "เราเป็นผู้มีกรรมเป็นที่พึ่งอาศัย",
+     "paiboon": "rao bpen pûu mii gam bpen tîi pʉ̂ŋ aa-sǎi",
+     "english": "I abide supported by my kamma,"
+    },
+    {
+     "number": 13,
+     "pali": "ยัง กัมมัง กะริสสามิ,",
+     "pali_roman": "yaṃ kammaṃ karissāmi,",
+     "thai": "เราจักทำกรรมอันใดไว้",
+     "paiboon": "rao jàk tam gam an dai wái",
+     "english": "Whatever kamma I shall do,"
+    },
+    {
+     "number": 14,
+     "pali": "กัล์ยาณัง วา ปาปะกัง วา,",
+     "pali_roman": "kalyāṇaṃ vā pāpakaṃ vā,",
+     "thai": "ดีก็ตาม ชั่วก็ตาม",
+     "paiboon": "dii gɔ̂ dtaam chûa gɔ̂ dtaam",
+     "english": "whether fair or foul,"
+    },
+    {
+     "number": 15,
+     "pali": "ตัสสะ ทายาโท (ทายาทา) ภะวิสสามิ.",
+     "pali_roman": "tassa dāyādo (dāyādā) bhavissāmi.",
+     "thai": "เราจักเป็นผู้รับผลของกรรมอันนั้น",
+     "paiboon": "rao jàk bpen pûu ráp pǒn kɔ̌ɔŋ gam an nán",
+     "english": "of that I shall be the heir."
+    },
+    {
+     "number": 16,
+     "pali": "เอวัง อัมเหหิ อะภิณหัง ปัจจะเวกขิตัพพัง.",
+     "pali_roman": "evaṃ amhehi abhiṇhaṃ paccavekkhitabbaṃ.",
+     "thai": "เราทั้งหลาย พึงพิจารณาเนืองๆ อย่างนี้ แล.",
+     "paiboon": "rao táŋ-lǎai pʉŋ pí-jaa-rá-naa nʉaŋ nʉaŋ yàaŋ níi lɛɛ.",
+     "english": "Thus should we reflect, frequently and in this way."
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0493.PNG",
+     "issue": "⚠ THIS CHANT WAS ALREADY IN THE APP WITH NO PAGE. It is one of the four chants `build_page_index` was returning as unplaceable — hand-written original data with full commentary fields, not entered from a batch, and carrying its Thai translation, which is what identifies it as the TRANSLATED section's copy. Reading the sheet placed it. No duplicate `-plae` chant was created; the existing chant was given its `page_start` instead. Two of the four remain unplaced: khemakhema-saranadipika and dhatupatikula-paccavekkhana."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0493.PNG",
+     "issue": "⚠ A PRINTED SUBTITLE THE DATA MODEL HAS NOWHERE TO PUT. The sheet sets a second line under the chant's title — ธรรมที่ควรพิจารณาเนืองๆ — between the title and the first verse. A page block cannot go there: with no `after` it renders ABOVE the chant's title, and anchored to the chant it renders below all its verses. Neither is where the book puts it. It is recorded here rather than placed wrongly, and it is the same class of gap the page-fidelity note describes for headings and instruction paragraphs."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0493.PNG",
+     "issue": "THE TEXT MATCHED THE SHEET EXACTLY, punctuation and all, including the four bracketed feminine forms (อะนะตีตา) at verses 2, 4 and 6 and (ทายาทา) at 15. Only the page number and the title_roman were missing; title_roman is taken from the สารบัญ, which lists this chant at ๒๒๓."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "sankhara-contemplation",
+   "abhinha-paccavekkhana"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 221,
+  "resume_from_file": "IMG_0491.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence on the verses; sankhara-contemplation's title_roman was already Paiboon and matches the สารบัญ.",
+  "pali_untouched": "The Pali was already in the app and was read against the sheets line by line. The only change is twelve trailing commas on page 222, which the sheet prints and the app lacked.",
+  "page_scan": "agrees. Two rows, one chant each, both complete on their sheet.",
+  "notes": "⚠ NOTHING NEW WAS ENTERED HERE. Both chants were already in the app as hand-written originals with no page number — two of the four `build_page_index` was returning as unplaceable. Reading the sheets placed them, so they were given `page_start` rather than duplicated as `-plae` copies. Twelve missing commas were corrected on 222. TWO CHANTS REMAIN UNPLACED: khemakhema-saranadipika and dhatupatikula-paccavekkhana — both worth looking for in the pages still to be entered.",
+  "diacritic_exceptions": [
+   "va/vā — NOT one word romanised two ways, and the same exception batch-014-014, batch-226-228, batch-229-230 and batch-232-233 declare. They are two different Pali words, both meaning 'or'. Here they stand in two lines of one chant: 'กัล์ยาณัง วา ปาปะกัง วา' on 223 and 'นิรัตถัง วะ กะลิงคะรัง' on 222."
+  ]
+ }
+}
