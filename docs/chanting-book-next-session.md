@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-207 went in.
+208 went in.
 
 ## Read first, in this order
 
@@ -80,14 +80,31 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 208, `IMG_0478`.** ⚠️ `dhatupatikula-paccavekkhana-plae` IS OPEN —
-**9 units in, resume at verse 10**. `tangkhanika-paccavekkhana-patho-plae`
+**Next: page 209, `IMG_0479`.** ⚠️ `dhatupatikula-paccavekkhana-plae` IS OPEN —
+**23 units in, resume at verse 24**, and the LODGING SECTION IS ONLY HALF DONE:
+`สุญโญ` and the two closing lines are still to come, then the medicine. `tangkhanika-paccavekkhana-patho-plae`
 CLOSED on 207 with the medicine, its fourth requisite.
 
 The chant now running takes the SAME four requisites again, but through the
-elements and repulsiveness rather than the purpose of use. The robe is done;
-expect the alms food, the lodging and the medicine to follow, each with its own
-`(ขณะ…)` rubric. ⚠️ **Write clusters with yamakkan ๎** — see the open question
+elements and repulsiveness rather than the purpose of use. Robe and alms food
+are done, the lodging is half done, the medicine is still to come.
+
+⚠️⚠️ **DO NOT COPY ONE SECTION FROM ANOTHER.** The formula is printed four
+times and the book punctuates it differently each time. Six differences are
+already confirmed between the robe (207) and the alms food and lodging (208):
+
+| | robe | alms food | lodging |
+|---|---|---|---|
+| `ยะทิทัง X` | `จีวะรัง,` | `ปิณฑะปาโต,` | `เสนาสะนัง` — **no comma** |
+| its Thai | `คือจีวร,` | `คือบิณฑบาต` — **no comma** | `คือเสนาสนะ,` |
+| `นิชชีโว` Thai | `ชีวะ อันเป็น` — **spaced** | `ชีวะอันเป็น` | `ชีวะอันเป็น` |
+| `ก็X ทั้งหมดนี้` | `นี้,` | `นี้` — **no comma** | — |
+| `ปัต๎วา` | **bare** | `ปัต๎วา,` | — |
+| closing line | `ชายันติ,` | `ชายะติ ฯ` — **paiyannoi** | — |
+
+One of those is the book being careful rather than careless: `จีวะรานิ` is
+plural and `ปิณฑะปาโต` singular, so `สัพพานิ … อะชิคุจฉะนียานิ` becomes
+`สัพโพ … อะชิคุจฉะนีโย`. **Read every line off the sheet.** ⚠️ **Write clusters with yamakkan ๎** — see the open question
 above.
 
 ⚠️ **Watch the rubric verb.** 205's chant says `ใช้สอย` (making use of) and

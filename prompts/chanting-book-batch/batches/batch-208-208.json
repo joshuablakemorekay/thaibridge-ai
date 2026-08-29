@@ -1,0 +1,222 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "dhatupatikula-paccavekkhana-plae"
+  ],
+  "pages": [
+   {
+    "page": 208,
+    "file": "IMG_0478.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "dhatupatikula-paccavekkhana-plae",
+    "verses": "10-23",
+    "starts_here": false,
+    "note": "The whole sheet, one chant. Two centred italic rubrics opening the alms-food and lodging sections, and fourteen Pali lines each with its Thai - short ones in a right-hand column, long ones indented beneath. No heading, no invitation, no footnote. The chant CONTINUES onto page 209."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "dhatupatikula-paccavekkhana-plae",
+   "continuation_of": "dhatupatikula-paccavekkhana-plae",
+   "continues": true,
+   "working_notes": {
+    "invitation": "printed on 207, under the heading.",
+    "units": "Fourteen, verses 10-23. Two complete sections - the alms food and the start of the lodging - each opening under its own rubric.",
+    "ordering": "The Pali and Thai run in step.",
+    "conventions": "The same formula three times over, punctuated differently each time - see the checks.",
+    "pages": "IMG_0478.PNG, page 208. The chant arrived from page 207 and CONTINUES onto page 209."
+   },
+   "verses": [
+    {
+     "number": 10,
+     "page": 208,
+     "pali": "ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,",
+     "pali_roman": "Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,",
+     "thai": "สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,",
+     "paiboon": "sìŋ lào níi nîi bpen sàk wâa tâat dtaam tam-má-châat tâo-nán, gam-laŋ bpen bpai dtaam hèet dtaam bpàt-jai yùu nʉaŋ-nít,",
+     "english": "These are mere elements, occurring according to their conditions,",
+     "rubric": "(ขณะรับบิณฑบาต)"
+    },
+    {
+     "number": 11,
+     "page": 208,
+     "pali": "ยะทิทัง ปิณฑะปาโต, ตะทุปะภุญชะโก จะ ปุคคะโล,",
+     "pali_roman": "Yadidaṃ piṇḍapāto, tadupabhuñjako ca puggalo,",
+     "thai": "สิ่งเหล่านี้คือบิณฑบาต และคนบริโภคบิณฑบาตนั้น,",
+     "paiboon": "sìŋ lào níi kʉʉ bin-tá-bàat lɛ́ kon bɔɔ-rí-pôok bin-tá-bàat nán,",
+     "english": "that is, this alms food, and the person consuming it,"
+    },
+    {
+     "number": 12,
+     "page": 208,
+     "pali": "ธาตุมัตตะโก,",
+     "pali_roman": "Dhātumattako,",
+     "thai": "เป็นสักว่าธาตุตามธรรมชาติ,",
+     "paiboon": "bpen sàk wâa tâat dtaam tam-má-châat,",
+     "english": "are mere elements,"
+    },
+    {
+     "number": 13,
+     "page": 208,
+     "pali": "นิสสัตโต,",
+     "pali_roman": "Nissatto,",
+     "thai": "มิได้เป็นสัตวะอันยั่งยืน,",
+     "paiboon": "mí dâai bpen sàt-dtà-wá an yâŋ-yʉʉn,",
+     "english": "not a lasting being,"
+    },
+    {
+     "number": 14,
+     "page": 208,
+     "pali": "นิชชีโว,",
+     "pali_roman": "Nijjīvo,",
+     "thai": "มิได้เป็นชีวะอันเป็นบุรุษบุคคล,",
+     "paiboon": "mí dâai bpen chii-wá an bpen bù-rùt bùk-kon,",
+     "english": "not a soul, not a person,"
+    },
+    {
+     "number": 15,
+     "page": 208,
+     "pali": "สุญโญ,",
+     "pali_roman": "Suñño,",
+     "thai": "ว่างเปล่าจากความหมายแห่งความเป็นตัวตน,",
+     "paiboon": "wâaŋ-bplàao jàak kwaam-mǎai hɛ̀ŋ kwaam bpen dtua-dton,",
+     "english": "empty of any meaning of selfhood,"
+    },
+    {
+     "number": 16,
+     "page": 208,
+     "pali": "สัพโพ ปะนายัง ปิณฑะปาโต อะชิคุจฉะนีโย,",
+     "pali_roman": "Sabbo panāyaṃ piṇḍapāto ajigucchanīyo,",
+     "thai": "ก็บิณฑบาตทั้งหมดนี้ ไม่เป็นของน่าเกลียดมาแต่เดิม,",
+     "paiboon": "gɔ̂ bin-tá-bàat táŋ-mòt níi mâi bpen kɔ̌ɔŋ nâa-glìat maa dtɛ̀ɛ dəəm,",
+     "english": "and all this alms food is not in itself repulsive,"
+    },
+    {
+     "number": 17,
+     "page": 208,
+     "pali": "อิมัง ปูติกายัง ปัต๎วา,",
+     "pali_roman": "Imaṃ pūtikāyaṃ patvā,",
+     "thai": "ครั้นมาถูกเข้ากับกายอันเน่าอยู่เป็นนิจนี้แล้ว,",
+     "paiboon": "krán maa tùuk kâo gàp gaai an nâo yùu bpen nít níi lɛ́ɛo,",
+     "english": "but on reaching this putrid body,"
+    },
+    {
+     "number": 18,
+     "page": 208,
+     "pali": "อะติวิยะ ชิคุจฉะนีโย ชายะติ ฯ",
+     "pali_roman": "Ativiya jigucchanīyo jāyati.",
+     "thai": "ย่อมกลายเป็นของน่าเกลียดอย่างยิ่งไปด้วยกัน.",
+     "paiboon": "yɔ̂m glaai bpen kɔ̌ɔŋ nâa-glìat yàaŋ-yîŋ bpai dûay gan.",
+     "english": "it becomes exceedingly repulsive along with it."
+    },
+    {
+     "number": 19,
+     "page": 208,
+     "pali": "ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,",
+     "pali_roman": "Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,",
+     "thai": "สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,",
+     "paiboon": "sìŋ lào níi nîi bpen sàk wâa tâat dtaam tam-má-châat tâo-nán, gam-laŋ bpen bpai dtaam hèet dtaam bpàt-jai yùu nʉaŋ-nít,",
+     "english": "These are mere elements, occurring according to their conditions,",
+     "rubric": "(ขณะรับเสนาสนะ)"
+    },
+    {
+     "number": 20,
+     "page": 208,
+     "pali": "ยะทิทัง เสนาสะนัง ตะทุปะภุญชะโก จะ ปุคคะโล,",
+     "pali_roman": "Yadidaṃ senāsanaṃ tadupabhuñjako ca puggalo,",
+     "thai": "สิ่งเหล่านี้คือเสนาสนะ, และบุคคลผู้ใช้สอยเสนาสนะนั้น,",
+     "paiboon": "sìŋ lào níi kʉʉ sěe-naa-sà-ná, lɛ́ bùk-kon pûu chái-sɔ̌ɔi sěe-naa-sà-ná nán,",
+     "english": "that is, this lodging, and the person making use of it,"
+    },
+    {
+     "number": 21,
+     "page": 208,
+     "pali": "ธาตุมัตตะโก,",
+     "pali_roman": "Dhātumattako,",
+     "thai": "เป็นสักว่าธาตุตามธรรมชาติ,",
+     "paiboon": "bpen sàk wâa tâat dtaam tam-má-châat,",
+     "english": "are mere elements,"
+    },
+    {
+     "number": 22,
+     "page": 208,
+     "pali": "นิสสัตโต,",
+     "pali_roman": "Nissatto,",
+     "thai": "มิได้เป็นสัตวะอันยั่งยืน,",
+     "paiboon": "mí dâai bpen sàt-dtà-wá an yâŋ-yʉʉn,",
+     "english": "not a lasting being,"
+    },
+    {
+     "number": 23,
+     "page": 208,
+     "pali": "นิชชีโว,",
+     "pali_roman": "Nijjīvo,",
+     "thai": "มิได้เป็นชีวะอันเป็นบุรุษบุคคล,",
+     "paiboon": "mí dâai bpen chii-wá an bpen bù-rùt bùk-kon,",
+     "english": "not a soul, not a person,"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ตะทุปะภุญชะโก",
+     "pali_roman": "tadupabhuñjako",
+     "meaning": "'the one who makes use of it'. One Pali word, but the Thai renders it THREE different ways across the three sections - คนผู้ใช้สอย for the robe, คนบริโภค for the food, บุคคลผู้ใช้สอย for the lodging"
+    },
+    {
+     "pali": "ฯ",
+     "pali_roman": ".",
+     "meaning": "paiyannoi, the Thai end-of-passage mark. The book closes verse 18 with it where the matching line in the robe section, verse 9, ends in a comma"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 11,
+     "file": "IMG_0478.PNG",
+     "issue": "‼ THE SAME FORMULA RUNS THREE TIMES AND IS PUNCTUATED DIFFERENTLY EACH TIME. Every difference below was read off the sheet at 3-6x, and NONE was tidied to match the others. Robe = verses 1-9 on page 207, alms food = 10-18 here, lodging = 19- here. (a) ยะทิทัง X: จีวะรัง, and ปิณฑะปาโต, take a comma, เสนาสะนัง does NOT. (b) Its Thai: คือจีวร, and คือเสนาสนะ, take a comma, คือบิณฑบาต does NOT. (c) นิชชีโว's Thai: the robe has ชีวะ อันเป็น with a SPACE, the other two have ชีวะอันเป็น closed up. (d) ก็X ทั้งหมดนี้: the robe has a comma after นี้, the alms food does not. (e) ปัต๎วา: bare in the robe section, WITH a comma here. (f) The closing line: the robe ends ชายันติ, and this one ends ชายะติ ฯ - plural against singular, comma against paiyannoi."
+    },
+    {
+     "verse": 16,
+     "file": "IMG_0478.PNG",
+     "issue": "SINGULAR HERE, PLURAL IN THE ROBE SECTION, and that is the book being correct rather than careless: จีวะรานิ is a plural, so verse 7 reads สัพพานิ ปะนะ อิมานิ … อะชิคุจฉะนียานิ; ปิณฑะปาโต is a singular, so this one reads สัพโพ ปะนายัง … อะชิคุจฉะนีโย. The Thai follows suit. Both were read separately rather than copied from one another."
+    },
+    {
+     "verse": 18,
+     "file": "IMG_0478.PNG",
+     "issue": "PAIYANNOI ฯ KEPT IN THE PALI AND RENDERED AS A FULL STOP IN THE ROMAN, which is what the app already does in 25 other places - the first printing of this very line is stored as ชายะติ ฯ against jāyati. So the convention was followed rather than invented."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0478.PNG",
+     "issue": "TWO MORE SECTION RUBRICS, both saying รับ: (ขณะรับบิณฑบาต) at verse 10 and (ขณะรับเสนาสนะ) at verse 19. This chant uses รับ throughout where the chant before it used ใช้สอย - see page 207's note. The medicine section has not appeared yet."
+    },
+    {
+     "verse": 23,
+     "file": "IMG_0478.PNG",
+     "issue": "CUT AT THE PAGE TURN, MID-SECTION. Verse 23 is the last thing on the sheet and the lodging section is only half done - สุญโญ and the two closing lines are still to come, then the medicine. No […] is used: it ends at a comma the book itself prints."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "continues": [
+   "dhatupatikula-paccavekkhana-plae"
+  ],
+  "resume_from": {
+   "chant": "dhatupatikula-paccavekkhana-plae",
+   "next_verse": 24,
+   "page": 209
+  },
+  "paiboon_scan": "Scanned every paiboon value for 'kh', 'th', 'ph' and 'ng'. None present. Written from the app's Paiboon+ table; the book prints no romanisation of its own.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0478.PNG read end to end, with verses 11, 14, 16-18 and 20 re-read at 3-6x specifically to compare them against the matching lines in the robe section on 207. Page number 208 printed clearly at the top centre. One chant throughout, two rubrics, no heading, no footnote, no rule, no colophon. A hand holds the sheet at the left margin and obscures nothing.",
+  "notes": "‼ THE SAME FORMULA IS PRINTED THREE TIMES AND PUNCTUATED DIFFERENTLY EACH TIME - six separate differences between the robe, alms-food and lodging runs, all listed in the checks and none of them tidied. One of them is not an inconsistency at all but the book being careful: จีวะรานิ is plural and ปิณฑะปาโต singular, so the whole line changes number with it.",
+  "diacritic_exceptions": []
+ }
+}

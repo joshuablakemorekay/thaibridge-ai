@@ -52056,7 +52056,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 23; the rest is not in the app yet.
         'id': 'dhatupatikula-paccavekkhana-plae',
         'title_thai': 'ธาตุปะฏิกูละปัจจะเวกขะณะปาโฐ',
         'title_pali': '',
@@ -52176,6 +52176,168 @@ CHANTS = [
                 'thai': 'ย่อมกลายเป็นของน่าเกลียดอย่างยิ่งไปด้วยกัน.',
                 'paiboon': 'yɔ̂m glaai bpen kɔ̌ɔŋ nâa-glìat yàaŋ-yîŋ bpai dûay gan.',
                 'english': 'they become exceedingly repulsive along with it.',
+            },
+            # ‼ CHECK [IMG_0478.PNG]: TWO MORE SECTION RUBRICS, both saying
+            #   รับ: (ขณะรับบิณฑบาต) at verse 10 and (ขณะรับเสนาสนะ) at verse
+            #   19. This chant uses รับ throughout where the chant before it
+            #   used ใช้สอย - see page 207's note. The medicine section has
+            #   not appeared yet.
+            {
+                'number': 10,
+                'page': 208,
+                'rubric': '(ขณะรับบิณฑบาต)',
+                'pali': 'ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,',
+                'pali_roman': 'Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,',
+                'thai': 'สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,',
+                'paiboon': 'sìŋ lào níi nîi bpen sàk wâa tâat dtaam tam-má-châat tâo-nán, gam-laŋ bpen bpai dtaam hèet dtaam bpàt-jai yùu nʉaŋ-nít,',
+                'english': 'These are mere elements, occurring according to their conditions,',
+            },
+            # ‼ CHECK [IMG_0478.PNG]: ‼ THE SAME FORMULA RUNS THREE TIMES AND
+            #   IS PUNCTUATED DIFFERENTLY EACH TIME. Every difference below
+            #   was read off the sheet at 3-6x, and NONE was tidied to match
+            #   the others. Robe = verses 1-9 on page 207, alms food = 10-18
+            #   here, lodging = 19- here. (a) ยะทิทัง X: จีวะรัง, and
+            #   ปิณฑะปาโต, take a comma, เสนาสะนัง does NOT. (b) Its Thai:
+            #   คือจีวร, and คือเสนาสนะ, take a comma, คือบิณฑบาต does NOT.
+            #   (c) นิชชีโว's Thai: the robe has ชีวะ อันเป็น with a SPACE,
+            #   the other two have ชีวะอันเป็น closed up. (d) ก็X ทั้งหมดนี้:
+            #   the robe has a comma after นี้, the alms food does not. (e)
+            #   ปัต๎วา: bare in the robe section, WITH a comma here. (f) The
+            #   closing line: the robe ends ชายันติ, and this one ends ชายะติ
+            #   ฯ - plural against singular, comma against paiyannoi.
+            {
+                'number': 11,
+                'page': 208,
+                'pali': 'ยะทิทัง ปิณฑะปาโต, ตะทุปะภุญชะโก จะ ปุคคะโล,',
+                'pali_roman': 'Yadidaṃ piṇḍapāto, tadupabhuñjako ca puggalo,',
+                'thai': 'สิ่งเหล่านี้คือบิณฑบาต และคนบริโภคบิณฑบาตนั้น,',
+                'paiboon': 'sìŋ lào níi kʉʉ bin-tá-bàat lɛ́ kon bɔɔ-rí-pôok bin-tá-bàat nán,',
+                'english': 'that is, this alms food, and the person consuming it,',
+            },
+            {
+                'number': 12,
+                'page': 208,
+                'pali': 'ธาตุมัตตะโก,',
+                'pali_roman': 'Dhātumattako,',
+                'thai': 'เป็นสักว่าธาตุตามธรรมชาติ,',
+                'paiboon': 'bpen sàk wâa tâat dtaam tam-má-châat,',
+                'english': 'are mere elements,',
+            },
+            {
+                'number': 13,
+                'page': 208,
+                'pali': 'นิสสัตโต,',
+                'pali_roman': 'Nissatto,',
+                'thai': 'มิได้เป็นสัตวะอันยั่งยืน,',
+                'paiboon': 'mí dâai bpen sàt-dtà-wá an yâŋ-yʉʉn,',
+                'english': 'not a lasting being,',
+            },
+            {
+                'number': 14,
+                'page': 208,
+                'pali': 'นิชชีโว,',
+                'pali_roman': 'Nijjīvo,',
+                'thai': 'มิได้เป็นชีวะอันเป็นบุรุษบุคคล,',
+                'paiboon': 'mí dâai bpen chii-wá an bpen bù-rùt bùk-kon,',
+                'english': 'not a soul, not a person,',
+            },
+            {
+                'number': 15,
+                'page': 208,
+                'pali': 'สุญโญ,',
+                'pali_roman': 'Suñño,',
+                'thai': 'ว่างเปล่าจากความหมายแห่งความเป็นตัวตน,',
+                'paiboon': 'wâaŋ-bplàao jàak kwaam-mǎai hɛ̀ŋ kwaam bpen dtua-dton,',
+                'english': 'empty of any meaning of selfhood,',
+            },
+            # ‼ CHECK [IMG_0478.PNG]: SINGULAR HERE, PLURAL IN THE ROBE
+            #   SECTION, and that is the book being correct rather than
+            #   careless: จีวะรานิ is a plural, so verse 7 reads สัพพานิ ปะนะ
+            #   อิมานิ … อะชิคุจฉะนียานิ; ปิณฑะปาโต is a singular, so this one
+            #   reads สัพโพ ปะนายัง … อะชิคุจฉะนีโย. The Thai follows suit.
+            #   Both were read separately rather than copied from one another.
+            {
+                'number': 16,
+                'page': 208,
+                'pali': 'สัพโพ ปะนายัง ปิณฑะปาโต อะชิคุจฉะนีโย,',
+                'pali_roman': 'Sabbo panāyaṃ piṇḍapāto ajigucchanīyo,',
+                'thai': 'ก็บิณฑบาตทั้งหมดนี้ ไม่เป็นของน่าเกลียดมาแต่เดิม,',
+                'paiboon': 'gɔ̂ bin-tá-bàat táŋ-mòt níi mâi bpen kɔ̌ɔŋ nâa-glìat maa dtɛ̀ɛ dəəm,',
+                'english': 'and all this alms food is not in itself repulsive,',
+            },
+            {
+                'number': 17,
+                'page': 208,
+                'pali': 'อิมัง ปูติกายัง ปัต๎วา,',
+                'pali_roman': 'Imaṃ pūtikāyaṃ patvā,',
+                'thai': 'ครั้นมาถูกเข้ากับกายอันเน่าอยู่เป็นนิจนี้แล้ว,',
+                'paiboon': 'krán maa tùuk kâo gàp gaai an nâo yùu bpen nít níi lɛ́ɛo,',
+                'english': 'but on reaching this putrid body,',
+            },
+            # ‼ CHECK [IMG_0478.PNG]: PAIYANNOI ฯ KEPT IN THE PALI AND
+            #   RENDERED AS A FULL STOP IN THE ROMAN, which is what the app
+            #   already does in 25 other places - the first printing of this
+            #   very line is stored as ชายะติ ฯ against jāyati. So the
+            #   convention was followed rather than invented.
+            {
+                'number': 18,
+                'page': 208,
+                'pali': 'อะติวิยะ ชิคุจฉะนีโย ชายะติ ฯ',
+                'pali_roman': 'Ativiya jigucchanīyo jāyati.',
+                'thai': 'ย่อมกลายเป็นของน่าเกลียดอย่างยิ่งไปด้วยกัน.',
+                'paiboon': 'yɔ̂m glaai bpen kɔ̌ɔŋ nâa-glìat yàaŋ-yîŋ bpai dûay gan.',
+                'english': 'it becomes exceedingly repulsive along with it.',
+            },
+            {
+                'number': 19,
+                'page': 208,
+                'rubric': '(ขณะรับเสนาสนะ)',
+                'pali': 'ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,',
+                'pali_roman': 'Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,',
+                'thai': 'สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,',
+                'paiboon': 'sìŋ lào níi nîi bpen sàk wâa tâat dtaam tam-má-châat tâo-nán, gam-laŋ bpen bpai dtaam hèet dtaam bpàt-jai yùu nʉaŋ-nít,',
+                'english': 'These are mere elements, occurring according to their conditions,',
+            },
+            {
+                'number': 20,
+                'page': 208,
+                'pali': 'ยะทิทัง เสนาสะนัง ตะทุปะภุญชะโก จะ ปุคคะโล,',
+                'pali_roman': 'Yadidaṃ senāsanaṃ tadupabhuñjako ca puggalo,',
+                'thai': 'สิ่งเหล่านี้คือเสนาสนะ, และบุคคลผู้ใช้สอยเสนาสนะนั้น,',
+                'paiboon': 'sìŋ lào níi kʉʉ sěe-naa-sà-ná, lɛ́ bùk-kon pûu chái-sɔ̌ɔi sěe-naa-sà-ná nán,',
+                'english': 'that is, this lodging, and the person making use of it,',
+            },
+            {
+                'number': 21,
+                'page': 208,
+                'pali': 'ธาตุมัตตะโก,',
+                'pali_roman': 'Dhātumattako,',
+                'thai': 'เป็นสักว่าธาตุตามธรรมชาติ,',
+                'paiboon': 'bpen sàk wâa tâat dtaam tam-má-châat,',
+                'english': 'are mere elements,',
+            },
+            {
+                'number': 22,
+                'page': 208,
+                'pali': 'นิสสัตโต,',
+                'pali_roman': 'Nissatto,',
+                'thai': 'มิได้เป็นสัตวะอันยั่งยืน,',
+                'paiboon': 'mí dâai bpen sàt-dtà-wá an yâŋ-yʉʉn,',
+                'english': 'not a lasting being,',
+            },
+            # ‼ CHECK [IMG_0478.PNG]: CUT AT THE PAGE TURN, MID-SECTION. Verse
+            #   23 is the last thing on the sheet and the lodging section is
+            #   only half done - สุญโญ and the two closing lines are still to
+            #   come, then the medicine. No […] is used: it ends at a comma
+            #   the book itself prints.
+            {
+                'number': 23,
+                'page': 208,
+                'pali': 'นิชชีโว,',
+                'pali_roman': 'Nijjīvo,',
+                'thai': 'มิได้เป็นชีวะอันเป็นบุรุษบุคคล,',
+                'paiboon': 'mí dâai bpen chii-wá an bpen bù-rùt bùk-kon,',
+                'english': 'not a soul, not a person,',
             },
         ],
     },
