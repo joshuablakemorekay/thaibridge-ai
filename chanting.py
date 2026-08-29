@@ -53554,7 +53554,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
         'id': 'patthana-thapana-gatha-plae',
         'title_thai': 'ปัฏฐะนะฐะปะนะคาถา',
         'title_pali': '',
@@ -53645,6 +53644,81 @@ CHANTS = [
                 'thai': 'ขอให้ข้าพเจ้าเป็นบ่อที่เกิดแห่งคุณ, คือ ศรัทธา สติ หิริ โอตตัปปะ ความเพียร และขันติ, พึงเป็นผู้ที่ศัตรูครอบงำไม่ได้, ไม่เป็นคนเขลา คนหลงงมงาย,',
                 'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo bpen bɔ̀ɔ tîi gə̀ət hɛ̀ŋ kun, kʉʉ sàt-taa sà-dtì hì-rí oo-dtàt-dtà-bpà kwaam-piian lɛ́ kǎn-dtì, pʉŋ bpen pûu tîi sàt-dtruu krɔ̂ɔp-ŋam mâi dâai, mâi bpen kon klǎo kon lǒŋ ŋom-ŋaai,',
                 'english': 'may I be a mine of good qualities - faith, mindfulness, moral shame and dread, energy and patience - unconquerable by enemies, neither dull nor deluded,',
+            },
+            # ‼ CHECK [IMG_0484.PNG]: YAMAKKAN AGAIN, on วัตตัต๎วะสัชชัง at
+            #   10x and ละภิต๎วา in verse 10. The first of those carries four
+            #   marks in one word - hook, hook, zig-zag, hook - and at that
+            #   magnification the zig-zag is unmistakable against its
+            #   neighbours.
+            {
+                'number': 7,
+                'page': 214,
+                'pali': 'สัพพายาปายุปาเยสุ เฉโก ธัมมัตถะโกวิโท เญยเย วัตตัต๎วะสัชชัง เม ญาณัง อะเมวะ มาลุโต,',
+                'pali_roman': 'Sabbāyāpāyupāyesu cheko dhammatthakovido ñeyye vattatvasajjaṃ me ñāṇaṃ ameva māluto,',
+                'thai': 'ขอให้ข้าพเจ้าเป็นผู้ฉลาดในอุบายแห่งความเสื่อมและความเจริญ, เป็นผู้เฉียบแหลมในอรรถและธรรม, ขอให้ญาณของข้าพเจ้าเป็นไป ไม่ข้องขัดในธรรมที่ควรรู้, ดุจลมพัดไปในอากาศ ฉะนั้น,',
+                'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo bpen pûu chà-làat nai ù-baai hɛ̀ŋ kwaam sʉ̀am lɛ́ kwaam jà-rəən, bpen pûu chìap-lɛ̌ɛm nai àt lɛ́ tam, kɔ̌ɔ hâi yaan kɔ̌ɔŋ kâa-pá-jâo bpen bpai mâi kɔ̂ɔŋ-kàt nai tam tîi kuan rúu, dùt lom pát bpai nai aa-gàat chà-nán,',
+                'english': 'may I be skilled in the ways of decline and growth, sharp in meaning and in Dhamma, and may my knowledge move unobstructed through what should be known, as the wind moves through the air,',
+            },
+            # ‼ CHECK [IMG_0484.PNG]: THE REPETITION MARK ๆ APPEARS TWICE IN
+            #   ONE VERSE, both CLOSED UP: ความปรารถนาใดๆ and ทุกๆ ภพ. That
+            #   matches 205, 207 and 212 and not the spaced form of 203 and
+            #   210.
+            {
+                'number': 8,
+                'page': 214,
+                'pali': 'ยา กาจิ กุสะลา มะยาสา สุเขนะ สิชฌะตัง สะทา เอวัง วุตตา คุณา สัพเพ โหนตุ มัยหัง ภะเว ภะเว,',
+                'pali_roman': 'Yā kāci kusalā mayāsā sukhena sijjhataṃ sadā evaṃ vuttā guṇā sabbe hontu mayhaṃ bhave bhave,',
+                'thai': 'ความปรารถนาใดๆ ของข้าพเจ้าที่เป็นกุศล, ขอให้สำเร็จโดยง่ายทุกเมื่อ, คุณที่ข้าพเจ้ากล่าวมาแล้วทั้งปวงนี้, จงมีแก่ข้าพเจ้าทุกๆ ภพ,',
+                'paiboon': 'kwaam bpràat-tà-nǎa dai-dai kɔ̌ɔŋ kâa-pá-jâo tîi bpen gù-sǒn, kɔ̌ɔ hâi sǎm-rèt dooy ŋâai túk mʉ̂a, kun tîi kâa-pá-jâo glàao maa lɛ́ɛo táŋ-bpuaŋ níi, joŋ mii gɛ̀ɛ kâa-pá-jâo túk-túk pôp,',
+                'english': 'whatever wholesome wishes I have, may they always be easily fulfilled, and may all the qualities spoken of be mine in every existence,',
+            },
+            {
+                'number': 9,
+                'page': 214,
+                'pali': 'ยะทา อุปปัชชะติ โลเก สัมพุทโธ โมกขะเทสะโก ตะทา มุตโต กุกัมเมหิ ลัทโธกาโส ภะเวยยะหัง,',
+                'pali_roman': 'Yadā uppajjati loke sambuddho mokkhadesako tadā mutto kukammehi laddhokāso bhaveyyahaṃ,',
+                'thai': 'เมื่อใด, พระสัมมาสัมพุทธเจ้า ผู้แสดงธรรมเครื่องพ้นทุกข์, เกิดขึ้นแล้วในโลก, เมื่อนั้น, ขอให้ข้าพเจ้าพ้นจากกรรมอันชั่วช้าทั้งหลาย, เป็นผู้ได้โอกาสแห่งการบรรลุธรรม,',
+                'paiboon': 'mʉ̂a dai, prá-sǎm-maa-sǎm-pút-tá-jâo pûu sà-dɛɛŋ tam krʉ̂aŋ pón túk, gə̀ət kʉ̂n lɛ́ɛo nai lôok, mʉ̂a nán, kɔ̌ɔ hâi kâa-pá-jâo pón jàak gam an chûa-cháa táŋ-lǎai, bpen pûu dâai oo-gàat hɛ̀ŋ gaan ban-lú tam,',
+                'english': 'when a Perfectly Awakened One who teaches release arises in the world, may I then be free from evil deeds and gain the opportunity to realise it,',
+            },
+            {
+                'number': 10,
+                'page': 214,
+                'pali': 'มะนุสสัตตัญจะ ลิงคัญจะ ปัพพัชชัญจุปะสัมปะทัง ละภิต๎วา เปสะโล สีลี ธาเรยยัง สัตถุ สาสะนัง,',
+                'pali_roman': 'Manussattañca liṅgañca pabbajjañcupasampadaṃ labhitvā pesalo sīlī dhāreyyaṃ satthu sāsanaṃ,',
+                'thai': 'ขอให้ข้าพเจ้าพึงได้ความเป็นมนุษย์, ได้เพศบริสุทธิ์, ได้บรรพชาอุปสมบทแล้ว, เป็นคนรักศีล, มีศีล, ทรงไว้ซึ่งพระศาสนาของพระศาสดา,',
+                'paiboon': 'kɔ̌ɔ hâi kâa-pá-jâo pʉŋ dâai kwaam bpen má-nút, dâai pêet bɔɔ-rí-sùt, dâai bàn-pá-chaa ù-bpà-sǒm-bòt lɛ́ɛo, bpen kon rák sǐin, mii sǐin, soŋ wái sʉ̂ŋ prá-sàat-sà-nǎa kɔ̌ɔŋ prá-sàat-sà-daa,',
+                'english': "having gained human birth, the pure form, the going forth and full ordination, may I be of good conduct, virtuous, upholding the Teacher's dispensation,",
+            },
+            # ‼ CHECK [IMG_0484.PNG]: ‼ A SECOND MID-LINE HYPHEN, so it is a
+            #   convention of this chant and not a one-off. Verse 11 prints
+            #   ขิปปา- ภิญโญ, read at 6x - hyphen, then a space, then the rest
+            #   of the word - exactly as verse 6 on page 213 printed
+            #   สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร. Both fall where a
+            #   pāda boundary cuts through a compound. Kept in the Thai script
+            #   and mirrored in the roman.
+            {
+                'number': 11,
+                'page': 214,
+                'pali': 'สุขาปะฏิปะโท ขิปปา- ภิญโญ สัจฉิกะเรยยะหัง อะระหัตตัปผะลัง อัคคัง วิชชาทิคุณะลังกะตัง,',
+                'pali_roman': 'Sukhāpaṭipado khippā- bhiñño sacchikareyyahaṃ arahattapphalaṃ aggaṃ vijjādiguṇalaṅkataṃ,',
+                'thai': 'ขอให้เป็นผู้มีการปฏิบัติโดยสะดวก, ตรัสรู้ได้พลัน, กระทำให้แจ้งซึ่งอรหัตผลอันเลิศ, อันประดับด้วยธรรม มีวิชชาเป็นต้น,',
+                'paiboon': 'kɔ̌ɔ hâi bpen pûu mii gaan bpà-dtì-bàt dooy sà-dùak, dtràt-rúu dâai plan, grà-tam hâi jɛ̂ɛŋ sʉ̂ŋ à-rá-hàt-dtà-pǒn an lə̂ət, an bprà-dàp dûay tam mii wít-chaa bpen dtôn,',
+                'english': 'may my practice be easy and my realisation swift, and may I realise the highest fruit of arahantship, adorned with the knowledges and the rest,',
+            },
+            # ‼ CHECK [IMG_0484.PNG]: THE CHANT ENDS ON A FULL STOP in both
+            #   the Pali and the Thai - ปัจเจกะโพธิมุตตะมันติ. and เทอญ. -
+            #   unlike ปัตติทานะคาถา on 211, which ended on ฯ, and unlike the
+            #   chant on 207-209, which ended on a comma. Three consecutive
+            #   chants, three different closings, all as printed.
+            {
+                'number': 12,
+                'page': 214,
+                'pali': 'ยะทิ นุปปัชชะติ พุทโธ กัมมัง ปะริปูรัญจะ เม เอวัง สันเต ละเภยยาหัง ปัจเจกะโพธิมุตตะมันติ.',
+                'pali_roman': 'Yadi nuppajjati buddho kammaṃ paripūrañca me evaṃ sante labheyyāhaṃ paccekabodhimuttamanti.',
+                'thai': 'ถ้าหากพระพุทธเจ้าไม่บังเกิดขึ้น, แต่กุศลกรรมของข้าพเจ้าเต็มเปี่ยมแล้ว, เมื่อเป็นเช่นนั้น, ขอให้ข้าพเจ้าพึงได้ญาณ เครื่องรู้เฉพาะตนอันสูงสุด เทอญ.',
+                'paiboon': 'tâa-hàak prá-pút-tá-jâo mâi baŋ-gə̀ət kʉ̂n, dtɛ̀ɛ gù-sǒn-lá-gam kɔ̌ɔŋ kâa-pá-jâo dtem-bpìam lɛ́ɛo, mʉ̂a bpen chên nán, kɔ̌ɔ hâi kâa-pá-jâo pʉŋ dâai yaan krʉ̂aŋ rúu chà-pɔ́ dton an sǔuŋ-sùt təən.',
+                'english': 'but if no Buddha arises and my good kamma is complete, then may I gain the highest self-awakening of a Paccekabuddha.',
             },
         ],
     },
