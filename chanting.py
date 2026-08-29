@@ -53215,7 +53215,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 10; the rest is not in the app yet.
         'id': 'pattidana-gatha-plae',
         'title_thai': 'ปัตติทานะคาถา',
         'title_pali': '',
@@ -53342,6 +53341,118 @@ CHANTS = [
                 'thai': 'ที่เป็นสังเสทชะกำเนิดก็ดี, ที่เป็นโอปปาติกะกำเนิดก็ดี,',
                 'paiboon': 'tîi bpen sǎŋ-sèet-tá-chá gam-nə̀ət gɔ̂ dii, tîi bpen oo-bpà-bpaa-dtì-gà gam-nə̀ət gɔ̂ dii,',
                 'english': 'moisture-born or spontaneously arisen,',
+            },
+            # ‼ CHECK [IMG_0481.PNG]: VERSE 11 CARRIES AN INTERNAL COMMA IN
+            #   THE PALI - ปะฏิจจะ เต, สัพเพปิ - splitting one printed line
+            #   into two clauses. Kept where the book puts it. Its Thai runs
+            #   to four clauses over three printed lines and was read line by
+            #   line.
+            {
+                'number': 11,
+                'page': 211,
+                'pali': 'นิยยานิกัง ธัมมะวะรัง ปะฏิจจะ เต, สัพเพปิ ทุกขัสสะ กะโรนตุ สังขะยัง,',
+                'pali_roman': 'Niyyānikaṃ dhammavaraṃ paṭicca te, sabbepi dukkhassa karontu saṅkhayaṃ,',
+                'thai': 'สัตว์ทั้งหลายแม้ทั้งปวงเหล่านั้น, ได้อาศัยซึ่งธรรมอันประเสริฐ, อันนำผู้ปฏิบัติให้ออกไปจากสังสารทุกข์, จงกระทำซึ่งความสิ้นไปพร้อมแห่งทุกข์เถิด,',
+                'paiboon': 'sàt táŋ-lǎai mɛ́ɛ táŋ-bpuaŋ lào nán, dâai aa-sǎi sʉ̂ŋ tam an bprà-sə̀ət, an nam pûu bpà-dtì-bàt hâi ɔ̀ɔk bpai jàak sǎŋ-sǎan-ná-túk, joŋ grà-tam sʉ̂ŋ kwaam sîn bpai prɔ́ɔm hɛ̀ŋ túk tə̀ət,',
+                'english': 'may all those beings, depending on the excellent Dhamma that leads out, make an end of suffering,',
+            },
+            # ‼ CHECK [IMG_0481.PNG]: ‼ NO PUNCTUATION AT ALL AT THE END OF
+            #   VERSE 12's THAI. Read at 6x: …ผู้ทรงไว้ซึ่งธรรมจงดำรงอยู่นาน
+            #   and then nothing, where the Pali line above it ends in a comma
+            #   and every other Thai line on the sheet ends in one. Reproduced
+            #   bare. This is the third such bare ending in the run, after
+            #   page 202's verse 47 and page 207's verse 24.
+            {
+                'number': 12,
+                'page': 211,
+                'pali': 'ฐาตุ จิรัง สะตัง ธัมโม ธัมมัทธะรา จะ ปุคคะลา,',
+                'pali_roman': 'Ṭhātu ciraṃ sataṃ dhammo dhammaddharā ca puggalā,',
+                'thai': 'ขอธรรมของสัตบุรุษทั้งหลายจงตั้งอยู่นาน, อนึ่ง ขอบุคคลทั้งหลายผู้ทรงไว้ซึ่งธรรมจงดำรงอยู่นาน',
+                'paiboon': 'kɔ̌ɔ tam kɔ̌ɔŋ sàt-bù-rùt táŋ-lǎai joŋ dtâŋ yùu naan, à-nʉ̀ŋ kɔ̌ɔ bùk-kon táŋ-lǎai pûu soŋ wái sʉ̂ŋ tam joŋ dam-roŋ yùu naan',
+                'english': 'may the Dhamma of the good long endure, and those who uphold it long remain,',
+            },
+            {
+                'number': 13,
+                'page': 211,
+                'pali': 'สังโฆ โหตุ สะมัคโค วะ อัตถายะ จะ หิตายะ จะ,',
+                'pali_roman': 'Saṅgho hotu samaggo va atthāya ca hitāya ca,',
+                'thai': 'ขอพระสงฆ์ จงมีความสามัคคีพร้อมเพรียงกัน, ในอันทำซึ่งประโยชน์ และสิ่งอันเกื้อกูลเถิด,',
+                'paiboon': 'kɔ̌ɔ prá-sǒŋ joŋ mii kwaam sǎa-mák-kii prɔ́ɔm-priaŋ gan, nai an tam sʉ̂ŋ bprà-yòot lɛ́ sìŋ an gʉ̂a-gùun tə̀ət,',
+                'english': 'may the Sangha be united, for welfare and for benefit,',
+            },
+            {
+                'number': 14,
+                'page': 211,
+                'pali': 'อัมเห รักขะตุ สัทธัมโม สัพเพปิ ธัมมะจาริโน,',
+                'pali_roman': 'Amhe rakkhatu saddhammo sabbepi dhammacārino,',
+                'thai': 'ขอพระสัทธรรมจงรักษาไว้ซึ่งเราทั้งหลาย, และจงรักษาไว้ซึ่งบุคคลทั้งหลายผู้ประพฤติซึ่งธรรมแม้ทั้งปวง,',
+                'paiboon': 'kɔ̌ɔ prá-sàt-tam joŋ rák-sǎa wái sʉ̂ŋ rao táŋ-lǎai, lɛ́ joŋ rák-sǎa wái sʉ̂ŋ bùk-kon táŋ-lǎai pûu bprà-prʉ́t sʉ̂ŋ tam mɛ́ɛ táŋ-bpuaŋ,',
+                'english': 'may the true Dhamma protect us, and all who practise it,',
+            },
+            {
+                'number': 15,
+                'page': 211,
+                'pali': 'วุฑฒิง สัมปาปุเณยยามะ ธัมเม อะริยัปปะเวทิเต,',
+                'pali_roman': 'Vuḍḍhiṃ sampāpuṇeyyāma dhamme ariyappavedite,',
+                'thai': 'ขอเราทั้งหลายพึงถึงพร้อมซึ่งความเจริญในธรรม, ที่พระอริยเจ้าประกาศไว้แล้ว,',
+                'paiboon': 'kɔ̌ɔ rao táŋ-lǎai pʉŋ tʉ̌ŋ prɔ́ɔm sʉ̂ŋ kwaam jà-rəən nai tam, tîi prá-à-rí-yá-jâo bprà-gàat wái lɛ́ɛo,',
+                'english': 'may we attain growth in the Dhamma the Noble Ones have declared,',
+            },
+            {
+                'number': 16,
+                'page': 211,
+                'pali': 'ปะสันนา โหนตุ สัพเพปิ ปาณิโน พุทธะสาสะเน,',
+                'pali_roman': 'Pasannā hontu sabbepi pāṇino buddhasāsane,',
+                'thai': 'ขอสรรพสัตว์ทั้งหลายแม้ทั้งปวง, จงเป็นผู้เลื่อมใสแล้วในพระพุทธศาสนา,',
+                'paiboon': 'kɔ̌ɔ sàp-pá-sàt táŋ-lǎai mɛ́ɛ táŋ-bpuaŋ, joŋ bpen pûu lʉ̂am-sǎi lɛ́ɛo nai prá-pút-tá-sàat-sà-nǎa,',
+                'english': "may all living beings have faith in the Buddha's teaching,",
+            },
+            {
+                'number': 17,
+                'page': 211,
+                'pali': 'สัมมา ธารัง ปะเวจฉันโต กาเล เทโว ปะวัสสะตุ,',
+                'pali_roman': 'Sammā dhāraṃ pavecchanto kāle devo pavassatu,',
+                'thai': 'ขอฝนจงเพิ่มให้อุทกธาร, ตกต้องในกาลโดยชอบ,',
+                'paiboon': 'kɔ̌ɔ fǒn joŋ pə̂əm hâi ù-tók-gà-taan, dtòk dtɔ̂ŋ nai gaan dooy chɔ̂ɔp,',
+                'english': 'may the rain fall in season, giving its streams of water,',
+            },
+            {
+                'number': 18,
+                'page': 211,
+                'pali': 'วุฑฒิภาวายะ สัตตานัง สะมิทธัง เนตุ เมทะนิง,',
+                'pali_roman': 'Vuḍḍhibhāvāya sattānaṃ samiddhaṃ netu medaniṃ,',
+                'thai': 'ขอฝนจงนำความสำเร็จมาสู่พื้นปฐพี, เพื่อความเจริญแก่สัตว์ทั้งหลาย,',
+                'paiboon': 'kɔ̌ɔ fǒn joŋ nam kwaam sǎm-rèt maa sùu pʉ́ʉn bpà-tà-pii, pʉ̂a kwaam jà-rəən gɛ̀ɛ sàt táŋ-lǎai,',
+                'english': 'may it bring the earth to plenty, for the growth of beings,',
+            },
+            # ‼ CHECK [IMG_0481.PNG]: YAMAKKAN CONFIRMED AGAIN, on อัต๎ระชัง
+            #   at 14x, and this word is the clearest specimen so far: it
+            #   carries THREE marks - the hook of ั over the อ, the angular
+            #   zig-zag of yamakkan over the ต, and the hook of ั again over
+            #   the ช - so both kinds sit in one short word, a few millimetres
+            #   apart, and cannot be confused at that magnification.
+            {
+                'number': 19,
+                'page': 211,
+                'pali': 'มาตาปิตา จะ อัต๎ระชัง นิจจัง รักขันติ ปุตตะกัง,',
+                'pali_roman': 'Mātāpitā ca atrajaṃ niccaṃ rakkhanti puttakaṃ,',
+                'thai': 'มารดาและบิดา, ย่อมถนอมบุตรน้อย ผู้บังเกิดในตนเป็นนิตย์ ฉันใด,',
+                'paiboon': 'maan-daa lɛ́ bì-daa, yɔ̂m tà-nɔ̌ɔm bùt nɔ́ɔi pûu baŋ-gə̀ət nai dton bpen nít chǎn dai,',
+                'english': 'as a mother and father always cherish the little child born of them,',
+            },
+            # ‼ CHECK [IMG_0481.PNG]: PAIYANNOI ฯ CLOSES THE CHANT in the Pali
+            #   and a full stop closes it in the Thai - รักขันตุ สัพพะทา ฯ
+            #   against ฉันนั้น เทอญ. Rendered as a full stop in the roman,
+            #   per the app's convention. Note the contrast with the chant on
+            #   207-209, which ended on a comma.
+            {
+                'number': 20,
+                'page': 211,
+                'pali': 'เอวัง ธัมเมนะ ราชาโน ปะชัง รักขันตุ สัพพะทา ฯ',
+                'pali_roman': 'Evaṃ dhammena rājāno pajaṃ rakkhantu sabbadā.',
+                'thai': 'ขอพระราชาทั้งหลาย, จงทรงรักษาประชาราษฎร์ โดยชอบธรรม ในกาลทุกเมื่อฉันนั้น เทอญ.',
+                'paiboon': 'kɔ̌ɔ prá-raa-chaa táŋ-lǎai, joŋ soŋ rák-sǎa bprà-chaa-râat dooy chɔ̂ɔp-tam nai gaan túk mʉ̂a chǎn nán təən.',
+                'english': 'so may rulers always protect their people by what is right.',
             },
         ],
     },
