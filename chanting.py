@@ -51371,7 +51371,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 22; the rest is not in the app yet.
         'id': 'tangkhanika-paccavekkhana-patho-plae',
         'title_thai': 'ตังขะณิกะปัจจะเวกขะณะปาโฐ',
         'title_pali': '',
@@ -51469,6 +51469,185 @@ CHANTS = [
                 'thai': 'เราย่อมพิจารณา โดยแยบคายแล้ว ฉันบิณฑบาต,',
                 'paiboon': 'rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo chǎn bin-tá-bàat,',
                 'english': 'Reflecting wisely, I take alms food,',
+            },
+            # ‼ CHECK [IMG_0476.PNG]: ‼ THE CLUSTER MARK IS YAMAKKAN ๎
+            #   (U+0E4E), NOT THANTHAKHAT ์ (U+0E4C), and this page is where
+            #   that was settled. ท๎วายะ at 16x, พ๎รัห๎มะจะริยานุคคะหายะ at
+            #   12x (both marks) and ยาต๎รา at 14x all show the ANGULAR ZIG-
+            #   ZAG of yamakkan, not the closed ring and tail of thanthakhat.
+            #   The two are indistinguishable below about 10x, which is how
+            #   five earlier pages were written with the wrong one; those were
+            #   corrected in a separate commit, and the brief carries the open
+            #   question about the ~670 places elsewhere in the file that
+            #   still use thanthakhat.
+            {
+                'number': 7,
+                'page': 206,
+                'pali': 'เนวะ ท๎วายะ,',
+                'pali_roman': 'Neva davāya,',
+                'thai': 'ไม่ให้เป็นไปเพื่อความเพลิดเพลิน สนุกสนาน,',
+                'paiboon': 'mâi hâi bpen bpai pʉ̂a kwaam plə̂ət-pləən sà-nùk-sà-nǎan,',
+                'english': 'not for play, not for amusement,',
+            },
+            {
+                'number': 8,
+                'page': 206,
+                'pali': 'นะ มะทายะ,',
+                'pali_roman': 'Na madāya,',
+                'thai': 'ไม่ให้เป็นไปเพื่อความเมามัน เกิดกำลังพลังทางกาย,',
+                'paiboon': 'mâi hâi bpen bpai pʉ̂a kwaam mao-man gə̀ət gam-laŋ pá-laŋ taaŋ gaai,',
+                'english': 'not for intoxication, for putting on bodily strength,',
+            },
+            {
+                'number': 9,
+                'page': 206,
+                'pali': 'นะ มัณฑะนายะ,',
+                'pali_roman': 'Na maṇḍanāya,',
+                'thai': 'ไม่ให้เป็นไปเพื่อประดับ,',
+                'paiboon': 'mâi hâi bpen bpai pʉ̂a bprà-dàp,',
+                'english': 'not for adornment,',
+            },
+            {
+                'number': 10,
+                'page': 206,
+                'pali': 'นะ วิภูสะนายะ,',
+                'pali_roman': 'Na vibhūsanāya,',
+                'thai': 'ไม่ให้เป็นไปเพื่อตกแต่ง,',
+                'paiboon': 'mâi hâi bpen bpai pʉ̂a dtòk-dtɛ̀ŋ,',
+                'english': 'not for beautification,',
+            },
+            {
+                'number': 11,
+                'page': 206,
+                'pali': 'ยาวะเทวะ อิมัสสะ กายัสสะ ฐิติยา,',
+                'pali_roman': 'Yāvadeva imassa kāyassa ṭhitiyā,',
+                'thai': 'แต่ให้เป็นไปเพียงเพื่อความตั้งอยู่ได้แห่งกายนี้,',
+                'paiboon': 'dtɛ̀ɛ hâi bpen bpai piaŋ pʉ̂a kwaam dtâŋ yùu dâai hɛ̀ŋ gaai níi,',
+                'english': 'but only for the maintaining of this body,',
+            },
+            {
+                'number': 12,
+                'page': 206,
+                'pali': 'ยาปะนายะ,',
+                'pali_roman': 'Yāpanāya,',
+                'thai': 'เพื่อความเป็นไปได้ของอัตภาพ,',
+                'paiboon': 'pʉ̂a kwaam bpen bpai dâai kɔ̌ɔŋ àt-dtà-pâap,',
+                'english': 'for keeping it going,',
+            },
+            {
+                'number': 13,
+                'page': 206,
+                'pali': 'วิหิงสุปะระติยา,',
+                'pali_roman': 'Vihiṃsuparatiyā,',
+                'thai': 'เพื่อความสิ้นไปแห่งความลำบากทางกาย,',
+                'paiboon': 'pʉ̂a kwaam sîn bpai hɛ̀ŋ kwaam lam-bàak taaŋ gaai,',
+                'english': 'for the ending of bodily hardship,',
+            },
+            {
+                'number': 14,
+                'page': 206,
+                'pali': 'พ๎รัห๎มะจะริยานุคคะหายะ,',
+                'pali_roman': 'Brahmacariyānuggahāya,',
+                'thai': 'เพื่ออนุเคราะห์แก่การประพฤติพรหมจรรย์,',
+                'paiboon': 'pʉ̂a à-nú-krɔ́ gɛ̀ɛ gaan bprà-prʉ́t prom-má-jan,',
+                'english': 'for the support of the holy life,',
+            },
+            {
+                'number': 15,
+                'page': 206,
+                'pali': 'อิติปุราณัญจะ เวทะนัง ปะฏิหังขามิ,',
+                'pali_roman': 'Iti purāṇañca vedanaṃ paṭihaṅkhāmi,',
+                'thai': 'ด้วยการทำอย่างนี้ เราย่อมระงับเสียได้ซึ่งทุกขเวทนาเก่า คือความหิว,',
+                'paiboon': 'dûay gaan tam yàaŋ-níi rao yɔ̂m rá-ŋáp sǐa dâai sʉ̂ŋ túk-kà-wêet-tà-naa gào kʉʉ kwaam hǐu,',
+                'english': 'thus I put an end to the old feeling, which is hunger,',
+            },
+            {
+                'number': 16,
+                'page': 206,
+                'pali': 'นะวัญจะ เวทะนัง นะ อุปปาเทสสามิ,',
+                'pali_roman': 'Navañca vedanaṃ na uppādessāmi,',
+                'thai': 'และไม่ทำทุกขเวทนาใหม่ให้เกิดขึ้น,',
+                'paiboon': 'lɛ́ mâi tam túk-kà-wêet-tà-naa mài hâi gə̀ət kʉ̂n,',
+                'english': 'and do not give rise to a new feeling,',
+            },
+            {
+                'number': 17,
+                'page': 206,
+                'pali': 'ยาต๎รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ,',
+                'pali_roman': 'Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti,',
+                'thai': 'อนึ่ง, ความเป็นไปโดยสะดวกแห่งอัตภาพนี้ด้วย, ความเป็นผู้หาโทษมิได้ด้วย, และความเป็นอยู่โดยผาสุกด้วย, จักมีแก่เรา ดังนี้.',
+                'paiboon': 'à-nʉ̀ŋ, kwaam bpen bpai dooy sà-dùak hɛ̀ŋ àt-dtà-pâap níi dûay, kwaam bpen pûu hǎa tôot mí dâai dûay, lɛ́ kwaam bpen yùu dooy pǎa-sùk dûay, jàk mii gɛ̀ɛ rao daŋ-níi.',
+                'english': 'and so there will be for me ease of living, blamelessness, and dwelling in comfort.',
+            },
+            # ‼ CHECK [IMG_0476.PNG]: THE THIRD REQUISITE GETS ITS OWN RUBRIC:
+            #   (ขณะใช้สอยเสนาสนะ), 'while making use of the lodging', over
+            #   verse 18 - the same kind of section marker as page 205's two,
+            #   so all of them are chanted in order rather than one instead of
+            #   another. The fourth, the medicine, has not appeared yet.
+            {
+                'number': 18,
+                'page': 206,
+                'rubric': '(ขณะใช้สอยเสนาสนะ)',
+                'pali': 'ปะฏิสังขา โยนิโส เสนาสะนัง ปะฏิเสวามิ,',
+                'pali_roman': 'Paṭisaṅkhā yoniso senāsanaṃ paṭisevāmi,',
+                'thai': 'เราย่อมพิจารณา โดยแยบคายแล้ว ใช้สอยเสนาสนะ,',
+                'paiboon': 'rao yɔ̂m pí-jaa-rá-naa dooy yɛ̂ɛp-kaai lɛ́ɛo chái-sɔ̌ɔi sěe-naa-sà-ná,',
+                'english': 'Reflecting wisely, I make use of the lodging,',
+            },
+            {
+                'number': 19,
+                'page': 206,
+                'pali': 'ยาวะเทวะ สีตัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Yāvadeva sītassa paṭighātāya,',
+                'thai': 'เพียงเพื่อบำบัดความหนาว,',
+                'paiboon': 'piaŋ pʉ̂a bam-bàt kwaam-nǎao,',
+                'english': 'only to ward off cold,',
+            },
+            # ‼ CHECK [IMG_0476.PNG]: ‼ อุณหัสสะ HAS NO MARK AFTER ณ. At 18x
+            #   the ณ is bare; the hook above the word belongs to ห, as its ั.
+            #   Page 205's verse 3 is the same word and was entered with an
+            #   invented ์, now corrected. The app's first printing at page 6
+            #   has อุณ๎หัสสะ WITH a yamakkan - that is a different page and
+            #   its photograph has not been re-read, so it was left alone.
+            # ‼ CHECK [IMG_0476.PNG]: THE SAME LINES ARE PUNCTUATED
+            #   DIFFERENTLY HERE THAN ON 205, and both are kept. Verse 20's
+            #   Thai ends เพื่อบำบัดความร้อน, WITH a comma, where page 205's
+            #   verse 3 has none. Verse 21's Thai reads เกิดจากเหลือบ CLOSED
+            #   UP, where page 205's verse 4 has เกิดจาก เหลือบ with a space.
+            #   Read at 3.2x. The book is inconsistent between two printings
+            #   of one formula a page apart; neither was tidied to match the
+            #   other.
+            {
+                'number': 20,
+                'page': 206,
+                'pali': 'อุณหัสสะ ปะฏิฆาตายะ,',
+                'pali_roman': 'Uṇhassa paṭighātāya,',
+                'thai': 'เพื่อบำบัดความร้อน,',
+                'paiboon': 'pʉ̂a bam-bàt kwaam-rɔ́ɔn,',
+                'english': 'to ward off heat,',
+            },
+            {
+                'number': 21,
+                'page': 206,
+                'pali': 'ฑังสะมะกะสะวาตาตะปะสิริงสะปะสัมผัสสานัง ปะฏิฆาตายะ,',
+                'pali_roman': 'Ḍaṃsamakasavātātapasiriṃsapasamphassānaṃ paṭighātāya,',
+                'thai': 'เพื่อบำบัดสัมผัสอันเกิดจากเหลือบ ยุง ลม แดด และสัตว์เลื้อยคลานทั้งหลาย,',
+                'paiboon': 'pʉ̂a bam-bàt sǎm-pàt an gə̀ət jàak lʉ̀ap yuŋ lom dɛ̀ɛt lɛ́ sàt lʉ́ay-klaan táŋ-lǎai,',
+                'english': 'to ward off the touch of gadflies, mosquitoes, wind, sun and creeping things,',
+            },
+            # ‼ CHECK [IMG_0476.PNG]: CUT AT THE PAGE TURN. Verse 22 is the
+            #   last thing on the sheet and the chant runs on to page 207,
+            #   where the medicine reflection is still to come. Its Thai ends
+            #   on a full stop, closing the lodging section without closing
+            #   the chant - the same pattern as verse 5 on page 205.
+            {
+                'number': 22,
+                'page': 206,
+                'pali': 'ยาวะเทวะ อุตุปะริสสะยะวิโนทะนัง ปะฏิสัลลานารามัตถัง,',
+                'pali_roman': 'Yāvadeva utuparissayavinodanaṃ paṭisallānārāmatthaṃ,',
+                'thai': 'เพียงเพื่อบรรเทาอันตรายอันจะพึงมีจากดินฟ้าอากาศ, และเพื่อความเป็นผู้ยินดีอยู่ได้ในที่หลีกเร้นสำหรับภาวนา.',
+                'paiboon': 'piaŋ pʉ̂a ban-tao an-dtà-raai an jà pʉŋ mii jàak din-fáa-aa-gàat, lɛ́ pʉ̂a kwaam bpen pûu yin-dii yùu dâai nai tîi lìik-rén sǎm-ràp paa-wá-naa.',
+                'english': 'only to dispel the dangers of the weather, and for delight in seclusion for meditation.',
             },
         ],
     },

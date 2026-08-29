@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-205 went in.
+206 went in.
 
 ## Read first, in this order
 
@@ -80,8 +80,11 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 206, `IMG_0476`.** ⚠️ `tangkhanika-paccavekkhana-patho-plae` IS
-OPEN — **6 units in, resume at verse 7**. `buddha-jayamangala-gatha-plae`
+**Next: page 207, `IMG_0477`.** ⚠️ `tangkhanika-paccavekkhana-patho-plae` IS
+OPEN — **22 units in, resume at verse 23**. Three requisites are done (robe,
+alms food, lodging); **the medicine is still to come**, and it will have its own
+rubric like the other three. ⚠️ **Write clusters with yamakkan ๎** — see the
+open question above. `buddha-jayamangala-gatha-plae`
 CLOSED on 205 with its เอตาปิ stanza.
 
 The chant now running is the reflection on the four requisites, and the book
