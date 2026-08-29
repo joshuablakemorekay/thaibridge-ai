@@ -1806,9 +1806,14 @@ heading above as applying to it.
 
 ## Where it is
 
-Coverage is **1–114, 193–203, 217–221, 232–245, 247, 249–277 and 279–325**.
-**101 pages are left: 115–192, 204–216 and 222–231.** Pages 246, 248 and 278
-are absent ON PURPOSE — see the photo map.
+Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
+**76 pages are left, and they are ALL in one stretch: 115–186, 188–190, 192.**
+Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
+photo map.
+
+**193–245 is finished and continuous.** The translated section is done: the
+forward pass took 193–216 and the backward pass met it at 217. Nothing in that
+range is open, and no chant spans out of it.
 
 **Resume at page 231 = `IMG_0501`, but READ THE NUMBER off the sheet.** The
 offset is **270** from 245 down and **268** from 249 up; two unphotographed
