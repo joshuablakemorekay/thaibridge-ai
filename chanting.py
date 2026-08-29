@@ -52056,7 +52056,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 23; the rest is not in the app yet.
         'id': 'dhatupatikula-paccavekkhana-plae',
         'title_thai': 'ธาตุปะฏิกูละปัจจะเวกขะณะปาโฐ',
         'title_pali': '',
@@ -52338,6 +52337,155 @@ CHANTS = [
                 'thai': 'มิได้เป็นชีวะอันเป็นบุรุษบุคคล,',
                 'paiboon': 'mí dâai bpen chii-wá an bpen bù-rùt bùk-kon,',
                 'english': 'not a soul, not a person,',
+            },
+            {
+                'number': 24,
+                'page': 209,
+                'pali': 'สุญโญ,',
+                'pali_roman': 'Suñño,',
+                'thai': 'ว่างเปล่าจากความหมายแห่งความเป็นตัวตน,',
+                'paiboon': 'wâaŋ-bplàao jàak kwaam-mǎai hɛ̀ŋ kwaam bpen dtua-dton,',
+                'english': 'empty of any meaning of selfhood,',
+            },
+            # ‼ CHECK [IMG_0479.PNG]: PLURAL AGAIN FOR THE LODGING: สัพพานิ
+            #   ปะนะ อิมานิ เสนาสะนานิ อะชิคุจฉะนียานิ, matching the robe and
+            #   unlike the alms food. Its Thai has NO comma after ทั้งหมดนี้,
+            #   matching the alms food and unlike the robe. The two features
+            #   vary independently, which is why every line was read off the
+            #   sheet rather than carried across.
+            {
+                'number': 25,
+                'page': 209,
+                'pali': 'สัพพานิ ปะนะ อิมานิ เสนาสะนานิ อะชิคุจฉะนียานิ,',
+                'pali_roman': 'Sabbāni pana imāni senāsanāni ajigucchanīyāni,',
+                'thai': 'ก็เสนาสนะทั้งหมดนี้ ไม่เป็นของน่าเกลียดมาแต่เดิม,',
+                'paiboon': 'gɔ̂ sěe-naa-sà-ná táŋ-mòt níi mâi bpen kɔ̌ɔŋ nâa-glìat maa dtɛ̀ɛ dəəm,',
+                'english': 'and all these lodgings are not in themselves repulsive,',
+            },
+            {
+                'number': 26,
+                'page': 209,
+                'pali': 'อิมัง ปูติกายัง ปัต๎วา,',
+                'pali_roman': 'Imaṃ pūtikāyaṃ patvā,',
+                'thai': 'ครั้นมาถูกเข้ากับกายอันเน่าอยู่เป็นนิจนี้แล้ว,',
+                'paiboon': 'krán maa tùuk kâo gàp gaai an nâo yùu bpen nít níi lɛ́ɛo,',
+                'english': 'but on reaching this putrid body,',
+            },
+            {
+                'number': 27,
+                'page': 209,
+                'pali': 'อะติวิยะ ชิคุจฉะนียานิ ชายันติ ฯ',
+                'pali_roman': 'Ativiya jigucchanīyāni jāyanti.',
+                'thai': 'ย่อมกลายเป็นของน่าเกลียดอย่างยิ่งไปด้วยกัน.',
+                'paiboon': 'yɔ̂m glaai bpen kɔ̌ɔŋ nâa-glìat yàaŋ-yîŋ bpai dûay gan.',
+                'english': 'they become exceedingly repulsive along with it.',
+            },
+            # ‼ CHECK [IMG_0479.PNG]: THE FOURTH AND LAST SECTION RUBRIC:
+            #   (ขณะรับคิลานเภสัช). All four in this chant use รับ, where the
+            #   chant before it used ใช้สอย for all four - so the two chants
+            #   differ consistently rather than at random.
+            {
+                'number': 28,
+                'page': 209,
+                'rubric': '(ขณะรับคิลานเภสัช)',
+                'pali': 'ยะถาปัจจะยัง ปะวัตตะมานัง ธาตุมัตตะเมเวตัง,',
+                'pali_roman': 'Yathāpaccayaṃ pavattamānaṃ dhātumattamevetaṃ,',
+                'thai': 'สิ่งเหล่านี้ นี่เป็นสักว่าธาตุตามธรรมชาติเท่านั้น, กำลังเป็นไปตามเหตุตามปัจจัยอยู่เนืองนิจ,',
+                'paiboon': 'sìŋ lào níi nîi bpen sàk wâa tâat dtaam tam-má-châat tâo-nán, gam-laŋ bpen bpai dtaam hèet dtaam bpàt-jai yùu nʉaŋ-nít,',
+                'english': 'These are mere elements, occurring according to their conditions,',
+            },
+            # ‼ CHECK [IMG_0479.PNG]: A FOURTH THAI RENDERING OF ONE PALI
+            #   WORD. ตะทุปะภุญชะโก is คนผู้บริโภค here, against
+            #   บุคคลผู้ใช้สอย for the lodging, คนบริโภค for the alms food and
+            #   คนผู้ใช้สอย for the robe - four wordings for one word in one
+            #   chant. All four kept.
+            {
+                'number': 29,
+                'page': 209,
+                'pali': 'ยะทิทัง คิลานะปัจจะยะเภสัชชะปะริกขาโร, ตะทุปะภุญชะโก จะ ปุคคะโล,',
+                'pali_roman': 'Yadidaṃ gilānapaccayabhesajjaparikkhāro, tadupabhuñjako ca puggalo,',
+                'thai': 'สิ่งเหล่านี้คือเภสัชบริขารอันเกื้อกูลแก่คนไข้, และคนผู้บริโภคเภสัชบริขารนั้น,',
+                'paiboon': 'sìŋ lào níi kʉʉ pee-sàt bɔɔ-rí-kǎan an gʉ̂a-gùun gɛ̀ɛ kon-kâi, lɛ́ kon pûu bɔɔ-rí-pôok pee-sàt bɔɔ-rí-kǎan nán,',
+                'english': 'that is, this medicine as a support for the sick, and the person using it,',
+            },
+            {
+                'number': 30,
+                'page': 209,
+                'pali': 'ธาตุมัตตะโก,',
+                'pali_roman': 'Dhātumattako,',
+                'thai': 'เป็นสักว่าธาตุตามธรรมชาติ,',
+                'paiboon': 'bpen sàk wâa tâat dtaam tam-má-châat,',
+                'english': 'are mere elements,',
+            },
+            {
+                'number': 31,
+                'page': 209,
+                'pali': 'นิสสัตโต,',
+                'pali_roman': 'Nissatto,',
+                'thai': 'มิได้เป็นสัตวะอันยั่งยืน,',
+                'paiboon': 'mí dâai bpen sàt-dtà-wá an yâŋ-yʉʉn,',
+                'english': 'not a lasting being,',
+            },
+            {
+                'number': 32,
+                'page': 209,
+                'pali': 'นิชชีโว,',
+                'pali_roman': 'Nijjīvo,',
+                'thai': 'มิได้เป็นชีวะอันเป็นบุรุษบุคคล,',
+                'paiboon': 'mí dâai bpen chii-wá an bpen bù-rùt bùk-kon,',
+                'english': 'not a soul, not a person,',
+            },
+            {
+                'number': 33,
+                'page': 209,
+                'pali': 'สุญโญ,',
+                'pali_roman': 'Suñño,',
+                'thai': 'ว่างเปล่าจากความหมายแห่งความเป็นตัวตน,',
+                'paiboon': 'wâaŋ-bplàao jàak kwaam-mǎai hɛ̀ŋ kwaam bpen dtua-dton,',
+                'english': 'empty of any meaning of selfhood,',
+            },
+            {
+                'number': 34,
+                'page': 209,
+                'pali': 'สัพโพ ปะนายัง คิลานะปัจจะยะเภสัชชะปะริกขาโร อะชิคุจฉะนีโย,',
+                'pali_roman': 'Sabbo panāyaṃ gilānapaccayabhesajjaparikkhāro ajigucchanīyo,',
+                'thai': 'ก็คิลานเภสัชบริขารทั้งหมดนี้ ไม่เป็นของน่าเกลียดมาแต่เดิม,',
+                'paiboon': 'gɔ̂ kí-laa-ná-pee-sàt bɔɔ-rí-kǎan táŋ-mòt níi mâi bpen kɔ̌ɔŋ nâa-glìat maa dtɛ̀ɛ dəəm,',
+                'english': 'and all this medicine is not in itself repulsive,',
+            },
+            {
+                'number': 35,
+                'page': 209,
+                'pali': 'อิมัง ปูติกายัง ปัต๎วา,',
+                'pali_roman': 'Imaṃ pūtikāyaṃ patvā,',
+                'thai': 'ครั้นมาถูกเข้ากับกายอันเน่าอยู่เป็นนิจนี้แล้ว,',
+                'paiboon': 'krán maa tùuk kâo gàp gaai an nâo yùu bpen nít níi lɛ́ɛo,',
+                'english': 'but on reaching this putrid body,',
+            },
+            # ‼ CHECK [IMG_0479.PNG]: ‼ THE CLOSING LINE IS PRINTED FOUR TIMES
+            #   AND NO TWO ARE ALIKE. Read off all four sheets: robe (207 v9)
+            #   อะติวิยะ ชิคุจฉะนียานิ ชายันติ, - PLURAL and a COMMA; alms
+            #   food (208 v18) ชิคุจฉะนีโย ชายะติ ฯ - SINGULAR and a
+            #   PAIYANNOI; lodging (209 v27) ชิคุจฉะนียานิ ชายันติ ฯ - PLURAL
+            #   and a PAIYANNOI; medicine (209 v36) ชิคุจฉะนีโย ชายะติ, -
+            #   SINGULAR and a COMMA. The book uses every one of the four
+            #   possible combinations. The number is grammar, following
+            #   จีวะรานิ / เสนาสะนานิ against ปิณฑะปาโต / ปะริกขาโร; the
+            #   punctuation is not. Nothing was normalised.
+            # ‼ CHECK [IMG_0479.PNG]: THE CHANT ENDS ON A COMMA, not a full
+            #   stop. Verse 36's Thai closes ไปด้วยกัน ดังนี้, - read at 8x,
+            #   and it is a comma - even though the chant finishes there and
+            #   page 210 starts ปัตติทานะคาถา. The ดังนี้ ('thus') is the
+            #   closing word and appears in this section only; the other three
+            #   end without it.
+            {
+                'number': 36,
+                'page': 209,
+                'pali': 'อะติวิยะ ชิคุจฉะนีโย ชายะติ,',
+                'pali_roman': 'Ativiya jigucchanīyo jāyati,',
+                'thai': 'ย่อมกลายเป็นของน่าเกลียดอย่างยิ่งไปด้วยกัน ดังนี้,',
+                'paiboon': 'yɔ̂m glaai bpen kɔ̌ɔŋ nâa-glìat yàaŋ-yîŋ bpai dûay gan daŋ-níi,',
+                'english': 'it becomes exceedingly repulsive along with it - thus.',
             },
         ],
     },
@@ -52758,6 +52906,309 @@ CHANTS = [
                 'thai': 'เป็นสิ่งที่ผู้รู้ก็รู้ได้เฉพาะตน ดังนี้.',
                 'paiboon': '',
                 'english': 'to be known each for himself by the wise.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0494.PNG]: ⚠ A ONE-CHARACTER CONFLICT RUNNING THROUGH
+        #   THE WHOLE BOOK, AND IT NEEDS JOSH AT THE PAGE. Thai-script Pali
+        #   marks a consonant cluster with either YAMAKKAN ๎ (U+0E4E) or
+        #   THANTHAKHAT ์ (U+0E4C), and the two are nearly identical at
+        #   photograph resolution. The app is currently SPLIT: 84 yamakkan
+        #   against 1054 thanthakhat, and the split is not random — the
+        #   earliest pages 2-20 and the forward pass's translated-section work
+        #   at 193-207 use ๎, and everything else, including all of this
+        #   backward pass, uses ์. So this very section is inconsistent with
+        #   itself: page 194 has ส๎วากขาโต and page 225 here has ส์วากขาโต for
+        #   the same word. NOTHING HAS BEEN CHANGED EITHER WAY. This entry
+        #   follows the house majority. Magnifying page 224 shows a mark
+        #   shaped like a small loop with a rising tail, which matches the
+        #   thanthakhat over ฆ in พระสงฆ์ in the Thai text on 225 — but that
+        #   is the same 'it looks like a known X' argument the ฬ/พ rule was
+        #   settled against as circular, so it is offered as evidence and not
+        #   acted on.
+        # ‼ CHECK [IMG_0494.PNG]: THE SHEET PRINTS NO PAGE NUMBER. It is 224
+        #   by position: 223 and 225 both print theirs. Section openers in
+        #   this book are numberless — 193 does the same for the morning
+        #   service, and the two DIVIDERS at 247 and 277 are numberless too,
+        #   though those are blank otherwise and this one is not.
+        # ‼ CHECK [IMG_0494.PNG]: THE MORNING AND EVENING OFFERINGS ARE THE
+        #   SAME EIGHT UNITS WORD FOR WORD as far as the app can tell; the two
+        #   are entered as separate chants because the book prints them
+        #   separately, under their own headings, in their own services.
+        'id': 'kham-bucha-phra-ratanattaya-yen-plae',
+        'title_thai': 'คำบูชาพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': 'kam buu-chaa prá-rát-dtà-ná-dtrai',
+        'title_english': 'The Words of Offering to the Triple Gem',
+        'page_start': 224,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 224,
+                'pali': 'โย โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,',
+                'pali_roman': 'Yo so bhagavā arahaṃ sammāsambuddho,',
+                'thai': 'พระผู้มีพระภาคเจ้านั้น พระองค์ใด, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,',
+                'paiboon': '',
+                'english': 'That Blessed One, whoever he is, is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,',
+            },
+            {
+                'number': 2,
+                'pali': 'ส์วากขาโต เยนะ ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto yena bhagavatā dhammo,',
+                'thai': 'พระธรรมเป็นธรรมที่พระผู้มีพระภาคเจ้า พระองค์ใด, ตรัสไว้ดีแล้ว,',
+                'paiboon': '',
+                'english': 'The Dhamma is the teaching well proclaimed by that Blessed One,',
+            },
+            {
+                'number': 3,
+                'pali': 'สุปะฏิปันโน ยัสสะ ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno yassa bhagavato sāvakasaṅgho,',
+                'thai': 'พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า พระองค์ใด, ปฏิบัติดีแล้ว,',
+                'paiboon': '',
+                'english': "The Sangha of that Blessed One's disciples has practised well,",
+            },
+            {
+                'number': 4,
+                'pali': 'ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง, อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยามะ,',
+                'pali_roman': 'Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ, imehi sakkārehi yathārahaṃ āropitehi abhipūjayāma,',
+                'thai': 'ข้าพเจ้าทั้งหลาย, ขอบูชาอย่างยิ่ง, ซึ่งพระผู้มีพระภาคเจ้าพระองค์นั้น, พร้อมทั้งพระธรรมและพระสงฆ์, ด้วยเครื่องสักการะทั้งหลายเหล่านี้, อันยกขึ้นตามสมควรแล้วอย่างไร,',
+                'paiboon': '',
+                'english': 'We pay the highest homage to that Blessed One, together with the Dhamma and the Sangha, with these offerings raised up as is fitting,',
+            },
+            {
+                'number': 5,
+                'pali': 'สาธุ โน ภันเต ภะคะวา สุจิระปะรินิพพุโตปิ,',
+                'pali_roman': 'Sādhu no bhante bhagavā suciraparinibbutopi,',
+                'thai': 'ข้าแต่พระองค์ผู้เจริญ, พระผู้มีพระภาคเจ้าแม้ปรินิพพานนานแล้ว, ทรงสร้างคุณอันสำเร็จประโยชน์ไว้แก่ข้าพเจ้าทั้งหลาย,',
+                'paiboon': '',
+                'english': 'Venerable sir, though the Blessed One long ago attained final Nibbāna, he brought into being what is of benefit to us,',
+            },
+            {
+                'number': 6,
+                'pali': 'ปัจฉิมาชะนะตานุกัมปะมานะสา,',
+                'pali_roman': 'Pacchimājanatānukampamānasā,',
+                'thai': 'ทรงมีพระหฤทัยอนุเคราะห์แก่พวกข้าพเจ้า, อันเป็นชนรุ่นหลัง,',
+                'paiboon': '',
+                'english': 'whose heart is compassionate towards us, who are of a later generation,',
+            },
+            {
+                'number': 7,
+                'pali': 'อิเม สักกาเร ทุคคะตะปัณณาการะภูเต ปะฏิคคัณหาตุ,',
+                'pali_roman': 'Ime sakkāre duggatapaṇṇākārabhūte paṭiggaṇhātu,',
+                'thai': 'ขอพระผู้มีพระภาคเจ้า จงรับเครื่องสักการะ, อันเป็นบรรณาการของคนยากทั้งหลายเหล่านี้,',
+                'paiboon': '',
+                'english': 'may the Blessed One accept these offerings, which are the poor gifts of the needy,',
+            },
+            {
+                'number': 8,
+                'page': 225,
+                'pali': 'อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ.',
+                'pali_roman': 'Amhākaṃ dīgharattaṃ hitāya sukhāya.',
+                'thai': 'เพื่อประโยชน์และความสุข แก่ข้าพเจ้าทั้งหลาย, ตลอดกาลนาน เทอญ.',
+                'paiboon': '',
+                'english': 'for our welfare and happiness, for a long time to come.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0495.PNG]: ⚠ A ONE-CHARACTER CONFLICT RUNNING THROUGH
+        #   THE WHOLE BOOK, AND IT NEEDS JOSH AT THE PAGE. Thai-script Pali
+        #   marks a consonant cluster with either YAMAKKAN ๎ (U+0E4E) or
+        #   THANTHAKHAT ์ (U+0E4C), and the two are nearly identical at
+        #   photograph resolution. The app is currently SPLIT: 84 yamakkan
+        #   against 1054 thanthakhat, and the split is not random — the
+        #   earliest pages 2-20 and the forward pass's translated-section work
+        #   at 193-207 use ๎, and everything else, including all of this
+        #   backward pass, uses ์. So this very section is inconsistent with
+        #   itself: page 194 has ส๎วากขาโต and page 225 here has ส์วากขาโต for
+        #   the same word. NOTHING HAS BEEN CHANGED EITHER WAY. This entry
+        #   follows the house majority. Magnifying page 224 shows a mark
+        #   shaped like a small loop with a rising tail, which matches the
+        #   thanthakhat over ฆ in พระสงฆ์ in the Thai text on 225 — but that
+        #   is the same 'it looks like a known X' argument the ฬ/พ rule was
+        #   settled against as circular, so it is offered as evidence and not
+        #   acted on.
+        # ‼ CHECK [IMG_0495.PNG]: ⚠ NO HEADING IS PRINTED. The chant follows
+        #   the offering with nothing between them, and the สารบัญ does not
+        #   list it at 225 either. It is entered as its own chant because the
+        #   book treats it as one everywhere else — page 51 in the first
+        #   printing and page 194 in the morning translated copy, both under
+        #   this heading. The title is therefore borrowed, not read off this
+        #   page.
+        'id': 'kham-namatsakan-phra-ratanattaya-yen-plae',
+        'title_thai': 'คำนมัสการพระรัตนตรัย',
+        'title_pali': '',
+        'title_roman': 'kam ná-mát-sà-gaan prá-rát-dtà-ná-dtrai',
+        'title_english': 'The Words of Homage to the Triple Gem',
+        'page_start': 225,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 225,
+                'pali': 'อะระหัง สัมมาสัมพุทโธ ภะคะวา,',
+                'pali_roman': 'Arahaṃ sammāsambuddho bhagavā,',
+                'thai': 'พระผู้มีพระภาคเจ้า, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,',
+                'paiboon': '',
+                'english': 'The Blessed One is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,',
+            },
+            {
+                'number': 2,
+                'pali': 'พุทธัง ภะคะวันตัง อะภิวาเทมิ.',
+                'pali_roman': 'Buddhaṃ bhagavantaṃ abhivādemi.',
+                'thai': 'ข้าพเจ้าอภิวาทพระผู้มีพระภาคเจ้า, ผู้รู้ ผู้ตื่น ผู้เบิกบาน.',
+                'paiboon': '',
+                'english': 'I bow low to the Blessed One, the one who knows, who is awake, who has blossomed.',
+            },
+            # ‼ CHECK [IMG_0495.PNG]: ⚠ THE THREE (กราบ) MARKERS ARE ENTERED
+            #   AS VERSES, and the morning copy at 194 HAS NONE — it holds six
+            #   units where this holds nine. Whether page 194 prints them and
+            #   they were dropped, or the morning page genuinely lacks them,
+            #   is worth a look; they are plainly printed here.
+            {
+                'number': 3,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(กราบ)',
+                'paiboon': '',
+                'english': '(bow)',
+            },
+            {
+                'number': 4,
+                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali_roman': 'Svākkhāto bhagavatā dhammo,',
+                'thai': 'พระธรรม เป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,',
+                'paiboon': '',
+                'english': 'The Dhamma is the teaching well proclaimed by the Blessed One,',
+            },
+            {
+                'number': 5,
+                'pali': 'ธัมมัง นะมัสสามิ.',
+                'pali_roman': 'Dhammaṃ namassāmi.',
+                'thai': 'ข้าพเจ้านมัสการพระธรรม.',
+                'paiboon': '',
+                'english': 'I pay homage to the Dhamma.',
+            },
+            {
+                'number': 6,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(กราบ)',
+                'paiboon': '',
+                'english': '(bow)',
+            },
+            {
+                'number': 7,
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,',
+                'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho,',
+                'thai': 'พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า, ปฏิบัติดีแล้ว,',
+                'paiboon': '',
+                'english': "The Sangha of the Blessed One's disciples has practised well,",
+            },
+            {
+                'number': 8,
+                'pali': 'สังฆัง นะมามิ.',
+                'pali_roman': 'Saṅghaṃ namāmi.',
+                'thai': 'ข้าพเจ้านอบน้อมพระสงฆ์.',
+                'paiboon': '',
+                'english': 'I bow to the Sangha.',
+            },
+            {
+                'number': 9,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(กราบ)',
+                'paiboon': '',
+                'english': '(bow)',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0495.PNG]: THE FORMULA IS SPLIT INTO THREE PHRASES so
+        #   each can carry its Thai, where page 77 sets it as one unbroken
+        #   line. The same splitting as the epithets on 226 and 228.
+        'id': 'pubbabhaga-namakara-yen-plae',
+        'title_thai': 'ปุพพะภาคะนะมะการ',
+        'title_pali': '',
+        'title_roman': 'pùp-pá-paa-ká-ná-má-gaan',
+        'title_english': 'The Preliminary Homage',
+        'page_start': 225,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': 'หันทะ มะยัง พุทธัสสะ ภะคะวะโต ปุพพะภาคะนะมะการัง กะโรมะ เส.',
+            'pali_roman': 'Handa mayaṃ buddhassa bhagavato pubbabhāganamakāraṃ karoma se.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us make the preliminary homage to the Buddha, the Blessed One.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 225,
+                'pali': 'นะโม ตัสสะ ภะคะวะโต,',
+                'pali_roman': 'Namo tassa bhagavato,',
+                'thai': 'ขอนอบน้อมแด่พระผู้มีพระภาคเจ้า พระองค์นั้น,',
+                'paiboon': '',
+                'english': 'Homage to the Blessed One,',
+            },
+            {
+                'number': 2,
+                'pali': 'อะระหะโต,',
+                'pali_roman': 'Arahato,',
+                'thai': 'ซึ่งเป็นผู้ไกลจากกิเลส,',
+                'paiboon': '',
+                'english': 'the worthy one,',
+            },
+            {
+                'number': 3,
+                'pali': 'สัมมาสัมพุทธัสสะ.',
+                'pali_roman': 'Sammāsambuddhassa.',
+                'thai': 'ตรัสรู้ชอบได้โดยพระองค์เอง.',
+                'paiboon': '',
+                'english': 'perfectly enlightened by himself.',
+            },
+            # ‼ CHECK [IMG_0495.PNG]: ⚠ THE REPEAT IS A MARKER HERE, NOT A
+            #   REPETITION. The page prints the formula ONCE and puts (๓
+            #   ครั้ง) beneath it in Thai numerals; page 77 prints the line
+            #   three times over as three verses. The marker is entered as a
+            #   verse because a page block cannot anchor inside a chant, and
+            #   the line is NOT repeated three times in the data — that would
+            #   be printing something the page does not.
+            {
+                'number': 4,
+                'pali': '',
+                'pali_roman': '',
+                'thai': '(๓ ครั้ง)',
+                'paiboon': '',
+                'english': '(three times)',
             },
         ],
     },
@@ -55146,6 +55597,19 @@ PAGE_BLOCKS = [
             {
                 'type': 'service_closing',
                 'thai': '(จบคำทำวัตรเย็น)',
+            },
+        ],
+    },
+    # ── Page 224 ───────────────────────────────────────────────────
+    # Written from batch-224-225.json.
+    {
+        'page': 224,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'ทำวัตรเย็นแปล',
+                'english': 'The Evening Service, Translated',
+                'english_unverified': True,
             },
         ],
     },

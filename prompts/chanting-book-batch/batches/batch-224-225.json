@@ -1,0 +1,386 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 2,
+  "files_read": 2,
+  "received": 3,
+  "manifest": [
+   "kham-bucha-phra-ratanattaya-yen-plae",
+   "kham-namatsakan-phra-ratanattaya-yen-plae",
+   "pubbabhaga-namakara-yen-plae"
+  ],
+  "pages": [
+   {
+    "page": 224,
+    "file": "IMG_0494.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-bucha-phra-ratanattaya-yen-plae",
+    "verses": "1-7",
+    "starts_here": true,
+    "note": "⚠ THE SHEET PRINTS NO PAGE NUMBER — it is the section opener, carrying ทำวัตรเย็นแปล in large decorative type with an ornament beneath, exactly as page 193 opens ทำวัตรเช้าแปล. Then a centred bold คำบูชาพระรัตนตรัย and seven Pali lines with their Thai.",
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "ทำวัตรเย็นแปล",
+      "english": "The Evening Service, Translated",
+      "english_unverified": true
+     }
+    ]
+   },
+   {
+    "page": 225,
+    "file": "IMG_0495.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-bucha-phra-ratanattaya-yen-plae",
+    "verses": "8-8",
+    "starts_here": false,
+    "note": "One line completing the offering, at the head of the sheet."
+   },
+   {
+    "page": 225,
+    "file": "IMG_0495.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "kham-namatsakan-phra-ratanattaya-yen-plae",
+    "verses": "1-9",
+    "starts_here": true,
+    "note": "⚠ NO HEADING IS PRINTED FOR THIS CHANT. It follows the offering directly, three Pali couplets each with its Thai and each closed by a centred (กราบ). Page 194 gives the morning's copy of the same chant a heading; this one has none."
+   },
+   {
+    "page": 225,
+    "file": "IMG_0495.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "pubbabhaga-namakara-yen-plae",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "A centred bold ปุพพะภาคะนะมะการ with its invitation, three short Pali lines with their Thai beside them, and a centred (๓ ครั้ง) beneath. The page ends there."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "kham-bucha-phra-ratanattaya-yen-plae",
+   "title_thai": "คำบูชาพระรัตนตรัย",
+   "title_pali": "",
+   "title_roman": "kam buu-chaa prá-rát-dtà-ná-dtrai",
+   "title_english": "The Words of Offering to the Triple Gem",
+   "page_start": 224,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "8 Pali lines, each with its printed Thai beneath.",
+    "ordering": "One column, Pali bold flush left, Thai indented.",
+    "conventions": "-yen- marks the EVENING copy: the app already holds the morning one from 193 as `kham-bucha-phra-ratanattaya-plae`, whose eight units are 1:1 with these and whose English is used.",
+    "pages": "IMG_0494 and IMG_0495, pages 224-225. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "โย โส ภะคะวา อะระหัง สัมมาสัมพุทโธ,",
+     "pali_roman": "Yo so bhagavā arahaṃ sammāsambuddho,",
+     "thai": "พระผู้มีพระภาคเจ้านั้น พระองค์ใด, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,",
+     "paiboon": "",
+     "english": "That Blessed One, whoever he is, is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,",
+     "page": 224
+    },
+    {
+     "number": 2,
+     "pali": "ส์วากขาโต เยนะ ภะคะวะตา ธัมโม,",
+     "pali_roman": "Svākkhāto yena bhagavatā dhammo,",
+     "thai": "พระธรรมเป็นธรรมที่พระผู้มีพระภาคเจ้า พระองค์ใด, ตรัสไว้ดีแล้ว,",
+     "paiboon": "",
+     "english": "The Dhamma is the teaching well proclaimed by that Blessed One,"
+    },
+    {
+     "number": 3,
+     "pali": "สุปะฏิปันโน ยัสสะ ภะคะวะโต สาวะกะสังโฆ,",
+     "pali_roman": "Supaṭipanno yassa bhagavato sāvakasaṅgho,",
+     "thai": "พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า พระองค์ใด, ปฏิบัติดีแล้ว,",
+     "paiboon": "",
+     "english": "The Sangha of that Blessed One's disciples has practised well,"
+    },
+    {
+     "number": 4,
+     "pali": "ตัมมะยัง ภะคะวันตัง สะธัมมัง สะสังฆัง, อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยามะ,",
+     "pali_roman": "Tammayaṃ bhagavantaṃ sadhammaṃ sasaṅghaṃ, imehi sakkārehi yathārahaṃ āropitehi abhipūjayāma,",
+     "thai": "ข้าพเจ้าทั้งหลาย, ขอบูชาอย่างยิ่ง, ซึ่งพระผู้มีพระภาคเจ้าพระองค์นั้น, พร้อมทั้งพระธรรมและพระสงฆ์, ด้วยเครื่องสักการะทั้งหลายเหล่านี้, อันยกขึ้นตามสมควรแล้วอย่างไร,",
+     "paiboon": "",
+     "english": "We pay the highest homage to that Blessed One, together with the Dhamma and the Sangha, with these offerings raised up as is fitting,"
+    },
+    {
+     "number": 5,
+     "pali": "สาธุ โน ภันเต ภะคะวา สุจิระปะรินิพพุโตปิ,",
+     "pali_roman": "Sādhu no bhante bhagavā suciraparinibbutopi,",
+     "thai": "ข้าแต่พระองค์ผู้เจริญ, พระผู้มีพระภาคเจ้าแม้ปรินิพพานนานแล้ว, ทรงสร้างคุณอันสำเร็จประโยชน์ไว้แก่ข้าพเจ้าทั้งหลาย,",
+     "paiboon": "",
+     "english": "Venerable sir, though the Blessed One long ago attained final Nibbāna, he brought into being what is of benefit to us,"
+    },
+    {
+     "number": 6,
+     "pali": "ปัจฉิมาชะนะตานุกัมปะมานะสา,",
+     "pali_roman": "Pacchimājanatānukampamānasā,",
+     "thai": "ทรงมีพระหฤทัยอนุเคราะห์แก่พวกข้าพเจ้า, อันเป็นชนรุ่นหลัง,",
+     "paiboon": "",
+     "english": "whose heart is compassionate towards us, who are of a later generation,"
+    },
+    {
+     "number": 7,
+     "pali": "อิเม สักกาเร ทุคคะตะปัณณาการะภูเต ปะฏิคคัณหาตุ,",
+     "pali_roman": "Ime sakkāre duggatapaṇṇākārabhūte paṭiggaṇhātu,",
+     "thai": "ขอพระผู้มีพระภาคเจ้า จงรับเครื่องสักการะ, อันเป็นบรรณาการของคนยากทั้งหลายเหล่านี้,",
+     "paiboon": "",
+     "english": "may the Blessed One accept these offerings, which are the poor gifts of the needy,"
+    },
+    {
+     "number": 8,
+     "pali": "อัมหากัง ทีฆะรัตตัง หิตายะ สุขายะ.",
+     "pali_roman": "Amhākaṃ dīgharattaṃ hitāya sukhāya.",
+     "thai": "เพื่อประโยชน์และความสุข แก่ข้าพเจ้าทั้งหลาย, ตลอดกาลนาน เทอญ.",
+     "paiboon": "",
+     "english": "for our welfare and happiness, for a long time to come.",
+     "page": 225
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ทุคคะตะปัณณาการะภูเต",
+     "pali_roman": "duggatapaṇṇākārabhūte",
+     "meaning": "being the gift of the poor; the offering names itself a poor person's present"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0494.PNG",
+     "issue": "⚠ A ONE-CHARACTER CONFLICT RUNNING THROUGH THE WHOLE BOOK, AND IT NEEDS JOSH AT THE PAGE. Thai-script Pali marks a consonant cluster with either YAMAKKAN ๎ (U+0E4E) or THANTHAKHAT ์ (U+0E4C), and the two are nearly identical at photograph resolution. The app is currently SPLIT: 84 yamakkan against 1054 thanthakhat, and the split is not random — the earliest pages 2-20 and the forward pass's translated-section work at 193-207 use ๎, and everything else, including all of this backward pass, uses ์. So this very section is inconsistent with itself: page 194 has ส๎วากขาโต and page 225 here has ส์วากขาโต for the same word. NOTHING HAS BEEN CHANGED EITHER WAY. This entry follows the house majority. Magnifying page 224 shows a mark shaped like a small loop with a rising tail, which matches the thanthakhat over ฆ in พระสงฆ์ in the Thai text on 225 — but that is the same 'it looks like a known X' argument the ฬ/พ rule was settled against as circular, so it is offered as evidence and not acted on."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0494.PNG",
+     "issue": "THE SHEET PRINTS NO PAGE NUMBER. It is 224 by position: 223 and 225 both print theirs. Section openers in this book are numberless — 193 does the same for the morning service, and the two DIVIDERS at 247 and 277 are numberless too, though those are blank otherwise and this one is not."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0494.PNG",
+     "issue": "THE MORNING AND EVENING OFFERINGS ARE THE SAME EIGHT UNITS WORD FOR WORD as far as the app can tell; the two are entered as separate chants because the book prints them separately, under their own headings, in their own services."
+    }
+   ]
+  },
+  {
+   "id": "kham-namatsakan-phra-ratanattaya-yen-plae",
+   "title_thai": "คำนมัสการพระรัตนตรัย",
+   "title_pali": "",
+   "title_roman": "kam ná-mát-sà-gaan prá-rát-dtà-ná-dtrai",
+   "title_english": "The Words of Homage to the Triple Gem",
+   "page_start": 225,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent, and none written.",
+    "units": "9 — six Pali lines with their Thai, and three centred (กราบ) markers entered as verses.",
+    "ordering": "One column.",
+    "conventions": "-yen- marks the evening copy; the morning one is at 194. Its English is used, the six Pali lines being identical.",
+    "pages": "IMG_0495, page 225. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "อะระหัง สัมมาสัมพุทโธ ภะคะวา,",
+     "pali_roman": "Arahaṃ sammāsambuddho bhagavā,",
+     "thai": "พระผู้มีพระภาคเจ้า, เป็นพระอรหันต์, ดับเพลิงกิเลส เพลิงทุกข์สิ้นเชิง, ตรัสรู้ชอบได้โดยพระองค์เอง,",
+     "paiboon": "",
+     "english": "The Blessed One is an arahant, who has quenched the fires of defilement and of suffering utterly, and who awakened rightly by himself,",
+     "page": 225
+    },
+    {
+     "number": 2,
+     "pali": "พุทธัง ภะคะวันตัง อะภิวาเทมิ.",
+     "pali_roman": "Buddhaṃ bhagavantaṃ abhivādemi.",
+     "thai": "ข้าพเจ้าอภิวาทพระผู้มีพระภาคเจ้า, ผู้รู้ ผู้ตื่น ผู้เบิกบาน.",
+     "paiboon": "",
+     "english": "I bow low to the Blessed One, the one who knows, who is awake, who has blossomed."
+    },
+    {
+     "number": 3,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(กราบ)",
+     "paiboon": "",
+     "english": "(bow)"
+    },
+    {
+     "number": 4,
+     "pali": "ส์วากขาโต ภะคะวะตา ธัมโม,",
+     "pali_roman": "Svākkhāto bhagavatā dhammo,",
+     "thai": "พระธรรม เป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,",
+     "paiboon": "",
+     "english": "The Dhamma is the teaching well proclaimed by the Blessed One,"
+    },
+    {
+     "number": 5,
+     "pali": "ธัมมัง นะมัสสามิ.",
+     "pali_roman": "Dhammaṃ namassāmi.",
+     "thai": "ข้าพเจ้านมัสการพระธรรม.",
+     "paiboon": "",
+     "english": "I pay homage to the Dhamma."
+    },
+    {
+     "number": 6,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(กราบ)",
+     "paiboon": "",
+     "english": "(bow)"
+    },
+    {
+     "number": 7,
+     "pali": "สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ,",
+     "pali_roman": "Supaṭipanno bhagavato sāvakasaṅgho,",
+     "thai": "พระสงฆ์สาวกของพระผู้มีพระภาคเจ้า, ปฏิบัติดีแล้ว,",
+     "paiboon": "",
+     "english": "The Sangha of the Blessed One's disciples has practised well,"
+    },
+    {
+     "number": 8,
+     "pali": "สังฆัง นะมามิ.",
+     "pali_roman": "Saṅghaṃ namāmi.",
+     "thai": "ข้าพเจ้านอบน้อมพระสงฆ์.",
+     "paiboon": "",
+     "english": "I bow to the Sangha."
+    },
+    {
+     "number": 9,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(กราบ)",
+     "paiboon": "",
+     "english": "(bow)"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะภิวาเทมิ",
+     "pali_roman": "abhivādemi",
+     "meaning": "I salute with reverence; the Buddha gets this verb where the Dhamma gets นะมัสสามิ and the Sangha นะมามิ — three different words, kept distinct"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0495.PNG",
+     "issue": "⚠ A ONE-CHARACTER CONFLICT RUNNING THROUGH THE WHOLE BOOK, AND IT NEEDS JOSH AT THE PAGE. Thai-script Pali marks a consonant cluster with either YAMAKKAN ๎ (U+0E4E) or THANTHAKHAT ์ (U+0E4C), and the two are nearly identical at photograph resolution. The app is currently SPLIT: 84 yamakkan against 1054 thanthakhat, and the split is not random — the earliest pages 2-20 and the forward pass's translated-section work at 193-207 use ๎, and everything else, including all of this backward pass, uses ์. So this very section is inconsistent with itself: page 194 has ส๎วากขาโต and page 225 here has ส์วากขาโต for the same word. NOTHING HAS BEEN CHANGED EITHER WAY. This entry follows the house majority. Magnifying page 224 shows a mark shaped like a small loop with a rising tail, which matches the thanthakhat over ฆ in พระสงฆ์ in the Thai text on 225 — but that is the same 'it looks like a known X' argument the ฬ/พ rule was settled against as circular, so it is offered as evidence and not acted on."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0495.PNG",
+     "issue": "⚠ NO HEADING IS PRINTED. The chant follows the offering with nothing between them, and the สารบัญ does not list it at 225 either. It is entered as its own chant because the book treats it as one everywhere else — page 51 in the first printing and page 194 in the morning translated copy, both under this heading. The title is therefore borrowed, not read off this page."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0495.PNG",
+     "issue": "⚠ THE THREE (กราบ) MARKERS ARE ENTERED AS VERSES, and the morning copy at 194 HAS NONE — it holds six units where this holds nine. Whether page 194 prints them and they were dropped, or the morning page genuinely lacks them, is worth a look; they are plainly printed here."
+    }
+   ]
+  },
+  {
+   "id": "pubbabhaga-namakara-yen-plae",
+   "title_thai": "ปุพพะภาคะนะมะการ",
+   "title_pali": "",
+   "title_roman": "pùp-pá-paa-ká-ná-má-gaan",
+   "title_english": "The Preliminary Homage",
+   "page_start": 225,
+   "layout": "lines",
+   "english_unverified": true,
+   "invitation": {
+    "pali": "หันทะ มะยัง พุทธัสสะ ภะคะวะโต ปุพพะภาคะนะมะการัง กะโรมะ เส.",
+    "pali_roman": "Handa mayaṃ buddhassa bhagavato pubbabhāganamakāraṃ karoma se.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Now let us make the preliminary homage to the Buddha, the Blessed One."
+   },
+   "working_notes": {
+    "invitation": "printed in brackets under the heading.",
+    "units": "4 — three short Pali lines with their Thai, and the centred repeat marker entered as a verse.",
+    "ordering": "One column; the Thai sits beside each Pali line.",
+    "conventions": "-yen- marks the evening copy. The first printing at page 77 sets the whole formula as ONE line repeated three times, three verses; this copy prints it once, split into three phrases so each can carry a Thai gloss, with the count given as a marker instead.",
+    "pages": "IMG_0495, page 225. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "นะโม ตัสสะ ภะคะวะโต,",
+     "pali_roman": "Namo tassa bhagavato,",
+     "thai": "ขอนอบน้อมแด่พระผู้มีพระภาคเจ้า พระองค์นั้น,",
+     "paiboon": "",
+     "english": "Homage to the Blessed One,",
+     "page": 225
+    },
+    {
+     "number": 2,
+     "pali": "อะระหะโต,",
+     "pali_roman": "Arahato,",
+     "thai": "ซึ่งเป็นผู้ไกลจากกิเลส,",
+     "paiboon": "",
+     "english": "the worthy one,"
+    },
+    {
+     "number": 3,
+     "pali": "สัมมาสัมพุทธัสสะ.",
+     "pali_roman": "Sammāsambuddhassa.",
+     "thai": "ตรัสรู้ชอบได้โดยพระองค์เอง.",
+     "paiboon": "",
+     "english": "perfectly enlightened by himself."
+    },
+    {
+     "number": 4,
+     "pali": "",
+     "pali_roman": "",
+     "thai": "(๓ ครั้ง)",
+     "paiboon": "",
+     "english": "(three times)"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปุพพะภาคะ",
+     "pali_roman": "pubbabhāga",
+     "meaning": "the preliminary part; this homage opens almost every service in the book"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 4,
+     "file": "IMG_0495.PNG",
+     "issue": "⚠ THE REPEAT IS A MARKER HERE, NOT A REPETITION. The page prints the formula ONCE and puts (๓ ครั้ง) beneath it in Thai numerals; page 77 prints the line three times over as three verses. The marker is entered as a verse because a page block cannot anchor inside a chant, and the line is NOT repeated three times in the data — that would be printing something the page does not."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0495.PNG",
+     "issue": "THE FORMULA IS SPLIT INTO THREE PHRASES so each can carry its Thai, where page 77 sets it as one unbroken line. The same splitting as the epithets on 226 and 228."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "kham-bucha-phra-ratanattaya-yen-plae",
+   "kham-namatsakan-phra-ratanattaya-yen-plae",
+   "pubbabhaga-namakara-yen-plae"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 223,
+  "resume_from_file": "IMG_0493.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence on the verses; the only Paiboon is each chant's title_roman, taken from the สารบัญ.",
+  "pali_untouched": "Typed from the sheets and read against the morning copies at 193 and 194.",
+  "page_scan": "agrees. Four rows across two sheets, one of which prints no page number.",
+  "notes": "THE OPENING OF THE TRANSLATED EVENING SERVICE. ⚠ THE BIGGEST THING IN THIS BATCH IS NOT ON THESE PAGES: the app is split between YAMAKKAN ๎ and THANTHAKHAT ์ for the cluster mark in Thai-script Pali — 84 against 1054, split cleanly between the two passes — so this very section disagrees with itself, page 194 setting ส๎วากขาโต and page 225 ส์วากขาโต for the same word. Nothing has been changed. It needs Josh at the page. ⚠ Page 224 prints NO page number, and the namatsakan on 225 prints NO heading.",
+  "diacritic_exceptions": []
+ }
+}
