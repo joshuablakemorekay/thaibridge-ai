@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-209 went in.
+210 went in.
 
 ## Read first, in this order
 
@@ -80,9 +80,10 @@ Measured on every line. One Pali line, then its translation, always in step.
 prints no romanisation of its own**, so there is nothing to copy and nothing to
 be tempted by.
 
-**Next: page 210, `IMG_0480`.** ✅ **NOTHING IS OPEN** —
-`dhatupatikula-paccavekkhana-plae` CLOSED on 209 with the medicine, its fourth
-section. 210 starts fresh, and the สารบัญ puts `ปัตติทานะคาถา` at ๒๑๐. `tangkhanika-paccavekkhana-patho-plae`
+**Next: page 211, `IMG_0481`.** ⚠️ `pattidana-gatha-plae` IS OPEN — **10 units
+in, resume at verse 11**. Its first printing at page 7 has 21 verses, so expect
+roughly another eleven. This chant has **no rubric** — heading, invitation, then
+straight into the verses. `tangkhanika-paccavekkhana-patho-plae`
 CLOSED on 207 with the medicine, its fourth requisite.
 
 The chant now running takes the SAME four requisites again, but through the

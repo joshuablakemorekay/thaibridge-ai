@@ -53212,6 +53212,139 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 10; the rest is not in the app yet.
+        'id': 'pattidana-gatha-plae',
+        'title_thai': 'ปัตติทานะคาถา',
+        'title_pali': '',
+        'title_roman': 'Pattidānagāthā',
+        'page_start': 210,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '(หันทะ มะยัง ปัตติทานะคาถาโย ภะณามะ เส.)',
+            'pali_roman': '(Handa mayaṃ pattidānagāthāyo bhaṇāma se.)',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Now let us recite the verses for sharing merit.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0480.PNG]: NO RUBRIC ON THIS CHANT. The two chants
+            #   before it, on 205-209, carried a (ขณะ…) rubric over every
+            #   section; this one has a heading and an invitation and nothing
+            #   else. Recorded that way rather than assumed to be missing.
+            # ‼ CHECK [IMG_0480.PNG]: THIS IS THE CHANT'S SECOND PRINTING. The
+            #   first is pattidana-gatha at page 7, twenty-one verses; the
+            #   สารบัญ lists this one separately at ๒๑๐. Kept as its own
+            #   entry. The page heading and the table agree on the spelling,
+            #   so title_roman is TAKEN from the table.
+            {
+                'number': 1,
+                'page': 210,
+                'pali': 'ยา เทวะตา สันติ วิหาระวาสินี,',
+                'pali_roman': 'Yā devatā santi vihāravāsinī,',
+                'thai': 'เทวดาทั้งหลายเหล่าใด, มีปกติอยู่ในวิหาร,',
+                'paiboon': 'têe-wá-daa táŋ-lǎai lào dai, mii bpòk-gà-dtì yùu nai wí-hǎan,',
+                'english': 'Whatever devas dwell in this monastery,',
+            },
+            # ‼ CHECK [IMG_0480.PNG]: THE REPETITION MARK ๆ IS SPACED HERE -
+            #   ในที่นั้น ๆ, - which is the page-203 setting, not the closed-
+            #   up ทุกๆ of 205 and ต่างๆ of 207. Third and fourth instances of
+            #   the same inconsistency; both forms are kept wherever they
+            #   fall.
+            {
+                'number': 2,
+                'page': 210,
+                'pali': 'ถูเป ฆะเร โพธิฆะเร ตะหิง ตะหิง,',
+                'pali_roman': 'Thūpe ghare bodhighare tahiṃ tahiṃ,',
+                'thai': 'สิงสถิตที่เรือนพระสถูป ที่เรือนโพธิ์ ในที่นั้น ๆ,',
+                'paiboon': 'sǐŋ-sà-tìt tîi rʉan prá-sà-tǔup tîi rʉan poo nai tîi nán nán,',
+                'english': 'at the shrine, at the Bodhi enclosure, here and there,',
+            },
+            {
+                'number': 3,
+                'page': 210,
+                'pali': 'ตา ธัมมะทาเนนะ ภะวันตุ ปูชิตา,',
+                'pali_roman': 'Tā dhammadānena bhavantu pūjitā,',
+                'thai': 'เทวดาทั้งหลายเหล่านั้น, เป็นผู้อันเราทั้งหลายบูชาแล้วด้วยธรรมทาน,',
+                'paiboon': 'têe-wá-daa táŋ-lǎai lào nán, bpen pûu an rao táŋ-lǎai buu-chaa lɛ́ɛo dûay tam-má-taan,',
+                'english': 'may those devas be honoured by us with the gift of Dhamma,',
+            },
+            {
+                'number': 4,
+                'page': 210,
+                'pali': 'โสตถิง กะโรนเตธะ วิหาระมัณฑะเล,',
+                'pali_roman': 'Sotthiṃ karontedha vihāramaṇḍale,',
+                'thai': 'ขอจงทำซึ่งความสวัสดี ความเจริญ ในมณฑลวิหารนี้,',
+                'paiboon': 'kɔ̌ɔ joŋ tam sʉ̂ŋ kwaam sà-wàt-dii kwaam jà-rəən nai mon-ton wí-hǎan níi,',
+                'english': 'and may they bring safety and growth to this monastery precinct,',
+            },
+            {
+                'number': 5,
+                'page': 210,
+                'pali': 'เถรา จะ มัชฌา นะวะกา จะ ภิกขะโว,',
+                'pali_roman': 'Therā ca majjhā navakā ca bhikkhavo,',
+                'thai': 'พระภิกษุทั้งหลายที่เป็นเถระก็ดี, ที่เป็นปานกลางก็ดี, ที่เป็นผู้บวชใหม่ก็ดี,',
+                'paiboon': 'prá-pík-sù táŋ-lǎai tîi bpen těe-rá gɔ̂ dii, tîi bpen bpaan-glaaŋ gɔ̂ dii, tîi bpen pûu bùat mài gɔ̂ dii,',
+                'english': 'the bhikkhus, whether elders, of middle standing, or newly ordained,',
+            },
+            {
+                'number': 6,
+                'page': 210,
+                'pali': 'สารามิกา ทานะปะตี อุปาสะกา,',
+                'pali_roman': 'Sārāmikā dānapatī upāsakā,',
+                'thai': 'อุบาสกอุบาสิกาทั้งหลาย, ที่เป็นทานบดีพร้อมด้วยอารามิกชนก็ดี,',
+                'paiboon': 'ù-baa-sòk ù-baa-sì-gaa táŋ-lǎai, tîi bpen taan-ná-bɔɔ-dii prɔ́ɔm dûay aa-raa-mí-gà-chon gɔ̂ dii,',
+                'english': 'the laymen and laywomen who are donors, together with the monastery attendants,',
+            },
+            # ‼ CHECK [IMG_0480.PNG]: ‼ A MISSING SPACE AFTER A COMMA, AND IT
+            #   IS REPRODUCED. Verse 7's Thai reads
+            #   ที่เป็นชาวบ้านก็ดี,ที่เป็นชาวประเทศก็ดี, with NO space after
+            #   the first comma, where the two joins on either side of it both
+            #   have one. Read at 3.6x. It is a typesetting slip rather than a
+            #   convention, and it is kept exactly as printed.
+            {
+                'number': 7,
+                'page': 210,
+                'pali': 'คามา จะ เทสา นิคะมา จะ อิสสะรา,',
+                'pali_roman': 'Gāmā ca desā nigamā ca issarā,',
+                'thai': 'ชนทั้งหลายเหล่าใด, ที่เป็นชาวบ้านก็ดี,ที่เป็นชาวประเทศก็ดี, ที่เป็นชาวนิคมก็ดี, ที่เป็นอิสระเป็นใหญ่ก็ดี,',
+                'paiboon': 'chon táŋ-lǎai lào dai, tîi bpen chaao-bâan gɔ̂ dii, tîi bpen chaao bprà-têet gɔ̂ dii, tîi bpen chaao ní-kom gɔ̂ dii, tîi bpen ìt-sà-rà bpen yài gɔ̂ dii,',
+                'english': 'whatever people are villagers, country folk, townspeople, or rulers,',
+            },
+            {
+                'number': 8,
+                'page': 210,
+                'pali': 'สัปปาณะภูตา สุขิตา ภะวันตุ เต,',
+                'pali_roman': 'Sappāṇabhūtā sukhitā bhavantu te,',
+                'thai': 'ขอชนทั้งหลายเหล่านั้น จงเป็นผู้มีความสุขเถิด,',
+                'paiboon': 'kɔ̌ɔ chon táŋ-lǎai lào nán joŋ bpen pûu mii kwaam-sùk tə̀ət,',
+                'english': 'may all those living beings be happy,',
+            },
+            {
+                'number': 9,
+                'page': 210,
+                'pali': 'ชะลาพุชา เยปิ จะ อัณฑะสัมภะวา,',
+                'pali_roman': 'Jalābujā yepi ca aṇḍasambhavā,',
+                'thai': 'สัตว์ทั้งหลายเหล่าใด, ที่เป็นชลาพุชะกำเนิดก็ดี, ที่เป็นอัณฑชะกำเนิดก็ดี,',
+                'paiboon': 'sàt táŋ-lǎai lào dai, tîi bpen chá-laa-pú-chá gam-nə̀ət gɔ̂ dii, tîi bpen an-tá-chá gam-nə̀ət gɔ̂ dii,',
+                'english': 'whatever beings are womb-born or egg-born,',
+            },
+            # ‼ CHECK [IMG_0480.PNG]: CUT AT THE PAGE TURN. Verse 10 is the
+            #   last thing on the sheet and the chant runs on to page 211. No
+            #   […] is used: it ends at a comma the book itself prints.
+            {
+                'number': 10,
+                'page': 210,
+                'pali': 'สังเสทะชาตา อะถะโวปะปาติกา,',
+                'pali_roman': 'Saṃsedajātā athavopapātikā,',
+                'thai': 'ที่เป็นสังเสทชะกำเนิดก็ดี, ที่เป็นโอปปาติกะกำเนิดก็ดี,',
+                'paiboon': 'tîi bpen sǎŋ-sèet-tá-chá gam-nə̀ət gɔ̂ dii, tîi bpen oo-bpà-bpaa-dtì-gà gam-nə̀ət gɔ̂ dii,',
+                'english': 'moisture-born or spontaneously arisen,',
+            },
+        ],
+    },
 ]
 
 
