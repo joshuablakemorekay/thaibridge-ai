@@ -1830,6 +1830,55 @@ offset is **270** from 245 down and **268** from 249 up; two unphotographed
 blanks sit between. Page 232 opens with its own centred heading, so nothing
 runs back from it — 231 is a clean start.
 
+## ⚠ THE GIRIMĀNANDA SUTTA, 183–186 — read, PARTLY verified, NOT entered
+
+The next thing to do. Four sheets, ten saññās, and the same shape as the
+Lokadhamma Sutta: no `บทขัด`, no Thai translation, and **only one witness** —
+nothing of it is anywhere else in the app.
+
+### Already verified at magnification — do not redo
+
+**The 31 body parts (184)**, which are the highest-risk stretch because there
+is no sense to check them against:
+
+> `เกสา โลมา นะขา ทันตา ตะโจ, มังสัง นะหารู อัฏฐี อัฏฐิมัญชัง วักกัง, หะทะยัง`
+> `ยะกะนัง กิโลมะกัง ปิหะกัง ปัปผาสัง, อันตัง อันตะคุณัง อุทะริยัง กะรีสัง,`
+> `ปิตตัง เสมหัง ปุพโพ โลหิตัง เสโท เมโท, อัสสุ วะสา เขโฬ สิงฆานิกา ละสิกา`
+> `มุตตันติ.`
+
+31 parts, not 32 — the list ends at `มุตตัง` with no `มัตถะลุงคัง`. Note
+`อัฏฐิมัญชัง`, where the canon has *aṭṭhimiñjaṃ*; the book prints `มัญ`.
+`เขโฬ` takes ฬ and it is plainly legible.
+
+**The disease list (184)**, the other stretch with nothing to check against:
+
+> `จักขุโรโค โสตะโรโค, ฆานะโรโค ชิวหาโรโค กายะโรโค สีสะโรโค กัณณะโรโค`
+> `มุขะโรโค, ทันตะโรโค, กาโส สาโส ปินาโส ฑะโห ชะโร กุจฉิโรโค, มุจฉา`
+> `ปักขันทิกา สุลา วิสูจิกา, กุฏฐัง คัณโฑ กิลาโส โสโส อะปะมาโร, ทัททุ กัณฑุ`
+> `กัจฉุ ระขะสา วิตัจฉิกา, โลหิตัง ปิตตัง มะธุเมโห อังสา ปิพะกา ภะคัณฑะลา,`
+
+⚠ `ปิพะกา` IS A ฬ CANDIDATE — the canon has *piḷakā*, boils, so by the rule
+settled at the book on 2026-08-25 it should be written **`ปิฬะกา`**. It was
+NOT changed; decide it when entering, and record it either way.
+
+**One difference between two near-identical paragraphs (185):** `วิราคะสัญญา`
+sets `ยะทิทัง,` with a comma and `สัพพูปะธิ ปะฏินิสสัคโค` spaced;
+`นิโรธะสัญญา`, two paragraphs later, sets `ยะทิทัง.` with a full stop and
+`สัพพูปะธิปะฏินิสสัคโค` joined. Keep both.
+
+### Still to verify before entering
+
+The 16-step ānāpānasati on 185–186 — **highly repetitive, so treat it exactly
+as the Lokadhamma formulas were treated: magnify every step.** Also 183's
+opening and its two saññās, 184's `ปะหานะสัญญา` with its four repetitions, and
+186's two closing paragraphs. 186 ends with the colophon
+`คิริมานันทะสุตตัง นิฏฐิตัง.`, then **a Pali note and a Thai note** about
+whether the ninth saññā reads `อะนิจจะสัญญา` or `อะนิฏฐะสัญญา` — the Thai one
+runs onto 187 and was left for this chant. Footnote: `1. อํ. ทสก. 24/115-120`.
+
+The section heading on 183 uses ARABIC `7` where the สารบัญ has Thai `๗`, the
+same disagreement as 187.
+
 ## The Lokadhamma Sutta, 187–190 — DONE, and what it taught
 
 Entered in `ccfe95a` as four chained batches, because the page turn cuts a
