@@ -1812,14 +1812,18 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**68 pages are left: 120–186 and 192.**
+**67 pages are left: 121–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–119 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 120, `IMG_0385`** — ⚠️
-`dhammaniyama-suttam` IS OPEN, **2 units in**, and ⚠️⚠️ **verse 2 is CUT with
-`[…]`** after the single word `ตัง`: COMPLETE it from 120, do not restart it.
+**115–120 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 121, `IMG_0386`** — ✅ nothing is
+open; `บทขัด อะนัตตะลักขะณะสุตตัง` finished on 120 and the sutta it invites
+should start on 121.
+
+**A COLOPHON'S ENDING IS NOT PREDICTABLE.** Three in four pages, three different:
+`นิฏฐิตัง.` on 117, `นิฏฐิโต.` on 119 (masculine, agreeing with `ปาโฐ`), and
+`นิฏฐิตัง` with **no stop at all** on 120. Read each one.
 
 ⚠️ **WHEN YOU COMPLETE A CUT VERSE, FIX ITS ENGLISH IN THE EARLIER BATCH TOO.**
 The app stores one verse, so its English must be the whole sentence; the batch

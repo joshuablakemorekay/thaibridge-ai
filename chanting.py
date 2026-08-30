@@ -55428,7 +55428,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
         'id': 'dhammaniyama-suttam',
         'title_thai': 'ธัมมะนิยามะสุตตัง',
         'title_pali': '',
@@ -55442,6 +55441,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'ธัมมะนิยามะสุตตัง นิฏฐิตัง',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'The Discourse on the Lawfulness of Things is ended.',
         },
         'verses': [
             # ‼ CHECK [IMG_0384.PNG]: THE HEADING CARRIES THE BOOK'S OWN
@@ -55464,14 +55470,171 @@ CHANTS = [
             #   ends …สัพเพ สังขารา อะนิจจาติ. ตัง and page 120 continues from
             #   there. It must be COMPLETED from 120 rather than a new verse
             #   started.
+            # ‼ COMPLETED FROM p120: this line was cut by the page break and
+            #   is now whole. Was: อุปปาทา วา ภิกขะเว ตะถาคะตานัง อะนุปปาทา วา
+            #   ตะถาคะตานัง, ฐิตา วะ สา ธาตุ ธัมมัฏฐิตะตา ธัมมะนิยามะตา สัพเพ
+            #   สังขารา อะนิจจาติ. ตัง […]
+            # ‼ CHECK [IMG_0385.PNG]: COMPLETES THE LINE PAGE 119 CUT. That
+            #   sheet ended …สัพเพ สังขารา อะนิจจาติ. ตัง […] and this one
+            #   opens ตะถาคะโต อะภิสัมพุชฌะติ… The whole line is given here so
+            #   the […] is replaced, and verse 2 keeps page 119, where its
+            #   text begins. ⚠️ Its ENGLISH in batch-119 was the hanging half
+            #   and has been brought up to the finished sentence, as the brief
+            #   now requires.
             {
                 'number': 2,
                 'page': 119,
-                'pali': 'อุปปาทา วา ภิกขะเว ตะถาคะตานัง อะนุปปาทา วา ตะถาคะตานัง, ฐิตา วะ สา ธาตุ ธัมมัฏฐิตะตา ธัมมะนิยามะตา สัพเพ สังขารา อะนิจจาติ. ตัง […]',
-                'pali_roman': 'Uppādā vā bhikkhave tathāgatānaṃ anuppādā vā tathāgatānaṃ, ṭhitā va sā dhātu dhammaṭṭhitatā dhammaniyāmatā sabbe saṅkhārā aniccāti. Taṃ […]',
+                'pali': 'อุปปาทา วา ภิกขะเว ตะถาคะตานัง อะนุปปาทา วา ตะถาคะตานัง, ฐิตา วะ สา ธาตุ ธัมมัฏฐิตะตา ธัมมะนิยามะตา สัพเพ สังขารา อะนิจจาติ. ตัง ตะถาคะโต อะภิสัมพุชฌะติ อะภิสะเมติ, อะภิสัมพุชฌิต๎วา อะภิสะเมต๎วา อาจิกขะติ เทเสติ, ปัญญะเปติ ปัฏฐะเปติ, วิวะระติ วิภะชะติ อุตตานีกะโรติ สัพเพ สังขารา อะนิจจาติ.',
+                'pali_roman': 'Uppādā vā bhikkhave tathāgatānaṃ anuppādā vā tathāgatānaṃ, ṭhitā va sā dhātu dhammaṭṭhitatā dhammaniyāmatā sabbe saṅkhārā aniccāti. Taṃ tathāgato abhisambujjhati abhisameti, abhisambujjhitvā abhisametvā ācikkhati deseti, paññapeti paṭṭhapeti, vivarati vibhajati uttānīkaroti sabbe saṅkhārā aniccāti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'Whether Tathagatas arise or do not arise, monks, that element stands: the stableness of things, the lawfulness of things — that all formations are impermanent. That',
+                'english': 'Whether Tathagatas arise or do not arise, monks, that element stands: the stableness of things, the lawfulness of things — that all formations are impermanent. That a Tathagata awakens to and penetrates; and having awakened to and penetrated it, he announces it, teaches it, makes it known, establishes it, discloses it, analyses it, makes it plain: that all formations are impermanent.',
+            },
+            {
+                'number': 3,
+                'page': 120,
+                'pali': 'อุปปาทา วา ภิกขะเว ตะถาคะตานัง อะนุปปาทา วา ตะถาคะตานัง, ฐิตา วะ สา ธาตุ ธัมมัฏฐิตะตา ธัมมะนิยามะตา สัพเพ สังขารา ทุกขาติ. ตัง ตะถาคะโต อะภิสัมพุชฌะติ อะภิสะเมติ, อะภิสัมพุชฌิต๎วา อะภิสะเมต๎วา อาจิกขะติ เทเสติ, ปัญญะเปติ ปัฏฐะเปติ, วิวะระติ วิภะชะติ อุตตานีกะโรติ สัพเพ สังขารา ทุกขาติ.',
+                'pali_roman': 'Uppādā vā bhikkhave tathāgatānaṃ anuppādā vā tathāgatānaṃ, ṭhitā va sā dhātu dhammaṭṭhitatā dhammaniyāmatā sabbe saṅkhārā dukkhāti. Taṃ tathāgato abhisambujjhati abhisameti, abhisambujjhitvā abhisametvā ācikkhati deseti, paññapeti paṭṭhapeti, vivarati vibhajati uttānīkaroti sabbe saṅkhārā dukkhāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whether Tathagatas arise or do not arise, monks, that element stands: the stableness of things, the lawfulness of things — that all formations are suffering. That a Tathagata awakens to and penetrates; and having awakened to and penetrated it, he announces it, teaches it, makes it known, establishes it, discloses it, analyses it, makes it plain: that all formations are suffering.',
+            },
+            # ‼ CHECK [IMG_0385.PNG]: ‼ ตถาคะตานัง WITHOUT THE ะ, ONCE ONLY.
+            #   Verse 4's first occurrence reads อุปปาทา วา ภิกขะเว
+            #   ตถาคะตานัง, read at 5x, where the second occurrence on the
+            #   same line and every other occurrence in verses 2 and 3 read
+            #   ตะถาคะตานัง. Reproduced as printed. It looks like a dropped
+            #   syllable in the setting, but the page is what is reproduced.
+            {
+                'number': 4,
+                'page': 120,
+                'pali': 'อุปปาทา วา ภิกขะเว ตถาคะตานัง อะนุปปาทา วา ตะถาคะตานัง, ฐิตา วะ สา ธาตุ ธัมมัฏฐิตะตา ธัมมะนิยามะตา สัพเพ ธัมมา อะนัตตาติ. ตัง ตะถาคะโต อะภิสัมพุชฌะติ อะภิสะเมติ, อะภิสัมพุชฌิต๎วา อะภิสะเมต๎วา อาจิกขะติ เทเสติ, ปัญญะเปติ ปัฏฐะเปติ, วิวะระติ วิภะชะติ อุตตานีกะโรติ สัพเพ ธัมมา อะนัตตาติ.',
+                'pali_roman': 'Uppādā vā bhikkhave tthāgatānaṃ anuppādā vā tathāgatānaṃ, ṭhitā va sā dhātu dhammaṭṭhitatā dhammaniyāmatā sabbe dhammā anattāti. Taṃ tathāgato abhisambujjhati abhisameti, abhisambujjhitvā abhisametvā ācikkhati deseti, paññapeti paṭṭhapeti, vivarati vibhajati uttānīkaroti sabbe dhammā anattāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whether Tathagatas arise or do not arise, monks, that element stands: the stableness of things, the lawfulness of things — that all things are not-self. That a Tathagata awakens to and penetrates; and having awakened to and penetrated it, he announces it, teaches it, makes it known, establishes it, discloses it, analyses it, makes it plain: that all things are not-self.',
+            },
+            # ‼ CHECK [IMG_0385.PNG]: ‼ THE COLOPHON HAS NO FULL STOP:
+            #   ธัมมะนิยามะสุตตัง นิฏฐิตัง, read at 6x. Page 117's ends
+            #   นิฏฐิตัง. and page 119's ends นิฏฐิโต. — three colophons in
+            #   four pages, three different endings. Kept bare.
+            # ‼ CHECK [IMG_0385.PNG]: AN EDITORIAL NOTE IN THAI beneath the
+            #   colophon: ที่ ปัญญะเปติ นั้นเป็น ปัญญาเปติบ้าง — 'where it
+            #   reads ปัญญะเปติ, some have ปัญญาเปติ'. The book is flagging a
+            #   variant reading of a word inside the sutta, in ordinary Thai.
+            #   Recorded as a prose block, not as a verse variant, because it
+            #   is the book talking about the text rather than part of the
+            #   chant.
+            # ‼ CHECK [IMG_0385.PNG]: A FOOTNOTE below a rule at the page
+            #   foot: 1. อํ. ติก. 20/368-9. Arabic numerals again in the
+            #   citation.
+            {
+                'number': 5,
+                'page': 120,
+                'pali': 'อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.',
+                'pali_roman': 'Idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus spoke the Blessed One, and those monks delighted in his words.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'bot-khat-anattalakkhana-suttam',
+        'title_thai': 'บทขัด อะนัตตะลักขะณะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt à-nát-dtà-lák-kà-ná-sùt-dtaŋ',
+        'page_start': 120,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0385.PNG]: THE PAGE HEADING IS SPACED, บทขัด
+            #   อะนัตตะลักขะณะสุตตัง, where the สารบัญ has it unspaced — the
+            #   rule settled for every บทขัด from page 82 on. The PAGE is
+            #   reproduced.
+            {
+                'number': 1,
+                'page': 120,
+                'pali': 'ยันตัง สัตเตหิ ทุกเขนะ เญยยัง อะนัตตะลักขะณัง',
+                'pali_roman': 'Yantaṃ sattehi dukkhena ñeyyaṃ anattalakkhaṇaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'That mark of not-self, hard for beings to know,',
+            },
+            # ‼ CHECK [IMG_0385.PNG]: FULL STOPS FALL ON THE EVEN ROWS — 2, 4,
+            #   6 and 8 — so the eight rows are four closed couplets. That is
+            #   the same shape as page 114's บทขัด, and unlike page 119's,
+            #   whose stops fell on 1, 4 and 6.
+            {
+                'number': 2,
+                'page': 120,
+                'pali': 'อัตตะวาทาตตะสัญญานัง สัมมะเทวะ วิโมจะนัง.',
+                'pali_roman': 'Attavādāttasaññānaṃ sammadeva vimocanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the right release from self-doctrine and the perception of self.',
+            },
+            {
+                'number': 3,
+                'page': 120,
+                'pali': 'สัมพุทโธ ตัง ปะกาเสสิ ทิฏฐะสัจจานะ โยคินัง',
+                'pali_roman': 'Sambuddho taṃ pakāsesi diṭṭhasaccāna yoginaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Awakened One made it known to those strivers who had seen the truth,',
+            },
+            {
+                'number': 4,
+                'page': 120,
+                'pali': 'อุตตะริง ปะฏิเวธายะ ภาเวตุง ญาณะมุตตะมัง.',
+                'pali_roman': 'Uttariṃ paṭivedhāya bhāvetuṃ ñāṇamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for further penetration, to develop the highest knowledge.',
+            },
+            {
+                'number': 5,
+                'page': 120,
+                'pali': 'ยันเตสัง ทิฏฐะธัมมานัง ญาเณนุปะปะริกขะตัง',
+                'pali_roman': 'Yantesaṃ diṭṭhadhammānaṃ ñāṇenupaparikkhataṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By which, for those who had seen the Dhamma, examined with knowledge,',
+            },
+            {
+                'number': 6,
+                'page': 120,
+                'pali': 'สัพพาสะเวหิ จิตตานิ วิมุจจิงสุ อะเสสะโต.',
+                'pali_roman': 'Sabbāsavehi cittāni vimucciṃsu asesato.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'their minds were released from all taints, without remainder.',
+            },
+            {
+                'number': 7,
+                'page': 120,
+                'pali': 'ตะถา ญาณานุสาเรนะ สาสะนัง กาตุมิจฉะตัง',
+                'pali_roman': 'Tathā ñāṇānusārena sāsanaṃ kātumicchataṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So, following that knowledge, for those wishing to practise the teaching,',
+            },
+            {
+                'number': 8,
+                'page': 120,
+                'pali': 'สาธูนัง อัตถะสิทธัตถัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Sādhūnaṃ atthasiddhatthaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and for the good, that their aim be accomplished — let us recite that discourse.',
             },
         ],
     },
@@ -58014,6 +58177,33 @@ PAGE_BLOCKS = [
                 'type': 'footnote',
                 'thai': '1. อํ. ทุก. 20/74-75',
                 'english': 'Aṅguttara Nikāya, Book of Twos, 20/74-75.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 120 ───────────────────────────────────────────────────
+    # Written from batch-120-120.json.
+    {
+        'page': 120,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'ที่ ปัญญะเปติ นั้นเป็น ปัญญาเปติบ้าง',
+                'english': 'Where the text reads ปัญญะเปติ, some copies have ปัญญาเปติ.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 120 ───────────────────────────────────────────────────
+    # Written from batch-120-120.json.
+    {
+        'page': 120,
+        'after': 'bot-khat-anattalakkhana-suttam',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'thai': '1. อํ. ติก. 20/368-9',
+                'english': 'Aṅguttara Nikāya, Book of Threes, 20/368-9.',
                 'english_unverified': True,
             },
         ],
