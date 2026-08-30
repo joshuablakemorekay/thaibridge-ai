@@ -1,0 +1,186 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamaya-suttam"
+  ],
+  "pages": [
+   {
+    "page": 176,
+    "file": "IMG_0446.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "mahasamaya-suttam",
+    "verses": "2-16",
+    "starts_here": false,
+    "note": "The chant continuing. The cut paragraph completes, then three pairs of two-column verse each introduced by its own prose line, a fourth group of four CENTRED single-column lines, and a long closing paragraph."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamaya-suttam",
+   "verses": [
+    {
+     "number": 2,
+     "pali": "อะถะโข ตา เทวะตา, เสยยะถาปิ นามะ พะละวา ปุริโส สัมมิญชิตัง วา พาหัง ปะสาเรยยะ, ปะสาริตัง วา พาหัง สัมมิญเชยยะ, เอวะเมวะ สุทธาวาเสสุ เทเวสุ อันตะระหิตา ภะคะวะโต ปุระโต ปาตุระหังสุ. อะถะโข ตา เทวะตา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง อัฏฐังสุ, เอกะมันตัง ฐิตา โข เอกา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ,",
+     "pali_roman": "Athakho tā devatā, seyyathāpi nāma balavā puriso sammiñjitaṃ vā bāhaṃ pasāreyya, pasāritaṃ vā bāhaṃ sammiñjeyya, evameva suddhāvāsesu devesu antarahitā bhagavato purato pāturahaṃsu. athakho tā devatā bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhaṃsu, ekamantaṃ ṭhitā kho ekā devatā bhagavato santike imaṃ gāthaṃ abhāsi,",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then those deities, as swiftly as a strong man might extend his flexed arm or flex his extended arm, vanished from among the deities of the Pure Abodes and appeared before the Blessed One. They paid homage to him and stood to one side; and standing there, one deity spoke this verse in his presence:"
+    },
+    {
+     "number": 3,
+     "pali": "มะหาสะมะโย ปะวะนัส์มิง เทวะกายา สะมาคะตา",
+     "pali_roman": "Mahāsamayo pavanasmiṃ devakāyā samāgatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "A great gathering in the woodland! The hosts of devas have assembled.",
+     "page": 176
+    },
+    {
+     "number": 4,
+     "pali": "อาคะตัมหะ อิมัง ธัมมะสะมะยัง ทักขิตาเยวะ อะปะราชิตะสังฆันติ",
+     "pali_roman": "Āgatamha imaṃ dhammasamayaṃ dakkhitāyeva aparājitasaṅghanti",
+     "thai": "",
+     "paiboon": "",
+     "english": "We have come to this gathering of Dhamma to see the unconquered Sangha."
+    },
+    {
+     "number": 5,
+     "pali": "อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ.",
+     "pali_roman": "Athakho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then another deity spoke this verse in the presence of the Blessed One:"
+    },
+    {
+     "number": 6,
+     "pali": "ตัต์ระ ภิกขะโว สะมาทะหังสุ จิตตัง อัตตะโน อุชุกะมะกังสุ",
+     "pali_roman": "Tatra bhikkhavo samādahaṃsu cittaṃ attano ujukamakaṃsu",
+     "thai": "",
+     "paiboon": "",
+     "english": "There the bhikkhus have composed themselves and made their own minds straight."
+    },
+    {
+     "number": 7,
+     "pali": "สาระถีวะ เนตตานิ คะเหต์วา อินท์ริยานิ รักขันติ ปัณฑิตาติ.",
+     "pali_roman": "Sārathīva nettāni gahetvā indriyāni rakkhanti paṇḍitāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Like a charioteer taking up the reins, the wise ones guard their faculties."
+    },
+    {
+     "number": 8,
+     "pali": "อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ.",
+     "pali_roman": "Athakho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then another deity spoke this verse in the presence of the Blessed One:"
+    },
+    {
+     "number": 9,
+     "pali": "เฉต์วา ขีลัง เฉต์วา ปะลีฆัง อินทะขีลัง โอหัจจะมะเนชา",
+     "pali_roman": "Chetvā khīlaṃ chetvā palīghaṃ indakhīlaṃ ohaccamanejā",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having cut the stake, cut the bar, uprooted the boundary post, unstirred,"
+    },
+    {
+     "number": 10,
+     "pali": "เต จะรันติ สุทธา วิมะลา จักขุมะตา สุทันตา สุสู นาคาติ.",
+     "pali_roman": "Te caranti suddhā vimalā cakkhumatā sudantā susū nāgāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "they walk pure and stainless, well tamed by the One with Vision — young nagas."
+    },
+    {
+     "number": 11,
+     "pali": "อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ.",
+     "pali_roman": "Athakho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then another deity spoke this verse in the presence of the Blessed One:"
+    },
+    {
+     "number": 12,
+     "pali": "เย เกจิ พุทธัง สะระณัง คะตา เส",
+     "pali_roman": "Ye keci buddhaṃ saraṇaṃ gatā se",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whoever have gone to the Buddha for refuge,"
+    },
+    {
+     "number": 13,
+     "pali": "นะ เต คะมิสสันติ อะปายะภูมิง",
+     "pali_roman": "Na te gamissanti apāyabhūmiṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "they will not go to a state of woe;"
+    },
+    {
+     "number": 14,
+     "pali": "ปะหายะ มานุสัง เทหัง",
+     "pali_roman": "Pahāya mānusaṃ dehaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "laying down the human body,"
+    },
+    {
+     "number": 15,
+     "pali": "เทวะกายัง ปะริปูเรสสันตีติ.",
+     "pali_roman": "Devakāyaṃ paripūressantīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "they will fill out the hosts of devas."
+    },
+    {
+     "number": 16,
+     "pali": "อะถะโข ภะคะวา ภิกขู อามันเตสิ. เยภุยเยนะ ภิกขะเว ทะสะสุ โลกะธาตูสุ เทวะตา สันนิปะติตา ตะถาคะตัง ทัสสะนายะ ภิกขุสังฆัญจะ. เยปิ เต ภิกขะเว อะเหสุง อะตีตะมัทธานัง อะระหันโต สัมมาสัมพุทธา, เตสัมปิ ภะคะวันตานัง เอตะปะระมาเยวะ เทวะตา สันนิปะติตา อะเหสุง. เสยยะถาปิ มัยหัง เอตะระหิ, เยปิ เต ภิกขะเว ภะวิสสันติ, อะนาคะตะมัทธานัง อะระหันโต สัมมาสัมพุทธา, เตสัมปิ ภะคะวันตานัง เอตะปะระมาเยวะ เทวะตา สันนิปะติตา ภะวิสสันติ. เสยยะถาปิ มัยหัง เอตะระหิ, อาจิกขิสสามิ ภิกขะเว เทวะกายานัง นามานิ, กิตตะยิสสามิ ภิกขะเว เทวะกายานัง นามานิ, เทสิสสามิ ภิกขะเว เทวะกายานัง นามานิ. ตัง สุณาถะ สาธุกัง มะนะสิกะโรถะ ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ.",
+     "pali_roman": "Athakho bhagavā bhikkhū āmantesi. yebhuyyena bhikkhave dasasu lokadhātūsu devatā sannipatitā tathāgataṃ dassanāya bhikkhusaṅghañca. yepi te bhikkhave ahesuṃ atītamaddhānaṃ arahanto sammāsambuddhā, tesampi bhagavantānaṃ etaparamāyeva devatā sannipatitā ahesuṃ. seyyathāpi mayhaṃ etarahi, yepi te bhikkhave bhavissanti, anāgatamaddhānaṃ arahanto sammāsambuddhā, tesampi bhagavantānaṃ etaparamāyeva devatā sannipatitā bhavissanti. seyyathāpi mayhaṃ etarahi, ācikkhissāmi bhikkhave devakāyānaṃ nāmāni, kittayissāmi bhikkhave devakāyānaṃ nāmāni, desissāmi bhikkhave devakāyānaṃ nāmāni. taṃ suṇātha sādhukaṃ manasikarotha bhāsissāmīti. evambhanteti kho te bhikkhū bhagavato paccassosuṃ. bhagavā etadavoca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then the Blessed One addressed the bhikkhus: bhikkhus, deities from ten world-systems have for the most part gathered to see the Tathagata and the Sangha of bhikkhus. Just so did deities gather in this same number for those Blessed Ones who in time past were arahants, perfectly awakened — as they have for me now; and just so will they gather for those who in time to come will be arahants, perfectly awakened — as they have for me now. I shall tell you the names of the hosts of devas, I shall proclaim them, I shall teach them. Listen, attend closely, I shall speak. Even so, venerable sir, those bhikkhus replied to the Blessed One; and the Blessed One said this:"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0446.PNG",
+     "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN from 175."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0446.PNG",
+     "issue": "⚠ THE FOURTH VERSE GROUP IS SET IN ONE CENTRED COLUMN, four lines, where the three before it are two columns read across. The column count changes inside the page; the row records 2, which is what most of the sheet uses."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0446.PNG",
+     "issue": "THE PROSE LINE อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ. IS PRINTED THREE TIMES, once before each of the second, third and fourth verse groups, and is entered each time. The repetition is the book's."
+    }
+   ],
+   "continues": true,
+   "continuation_of": "mahasamaya-suttam"
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamaya-suttam"
+  ],
+  "resume_from_page": 177,
+  "resume_from_file": "IMG_0447.PNG",
+  "resume_from": "mahasamaya-suttam",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from the sheet; the roman twin was used to check the TEXT, not the unit boundaries.",
+  "page_scan": "agrees.",
+  "notes": "The chant continuing. The cut paragraph completes, then three pairs of two-column verse each introduced by its own prose line, a fourth group of four CENTRED single-column lines, and a long closing paragraph.",
+  "diacritic_exceptions": []
+ }
+}

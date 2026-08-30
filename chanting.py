@@ -56021,6 +56021,368 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 16; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0445.PNG]: ⚠ THIS CHANT HAS A TWIN AT 317-325, BUT ITS
+        #   UNIT DIVISION DOES NOT TRANSFER. `mahasamayasutta-roman` sets the
+        #   opening prose as ELEVEN short units — `Evaṃ me sutaṃ:` alone is
+        #   its verse 1 — where this Thai printing sets the same words as ONE
+        #   running paragraph. Same words, different setting, so the verse
+        #   numbers will NOT line up and that is not a fault. Use the twin to
+        #   check the TEXT; never to number the units. The units come from
+        #   this page's own layout.
+        'id': 'mahasamaya-suttam',
+        'title_thai': 'มะหาสะมะยะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Mahāsamayasuttaṃ',
+        'title_english': 'The Discourse on the Great Gathering',
+        'page_start': 175,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 175,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สักเกสุ วิหะระติ กะปิละวัตถุส์มิง มะหาวะเน มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ สัพเพเหวะ อะระหันเตหิ. ทะสะหิ จะ โลกะธาตูหิ เทวะตา เยภุยเยนะ สันนิปะติตา โหนติ ภะคะวันตัง ทัสสะนายะ ภิกขุสังฆัญจะ. อะถะโข จะตุนนัง สุทธาวาสะกายิกานัง เทวานัง เอตะทะโหสิ. อะยัง โข ภะคะวา สักเกสุ วิหะระติ กะปิละวัตถุส์มิง มะหาวะเน มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ สัพเพเหวะ อะระหันเตหิ, ทะสะหิ จะ โลกะธาตูหิ เทวะตา เยภุยเยนะ สันนิปะติตา โหนติ ภะคะวันตัง ทัสสะนายะ ภิกขุสังฆัญจะ, ยันนูนะ มะยัมปิ, เยนะ ภะคะวา, เตนุปะสังกะเมยยามะ, อุปะสังกะมิต์วา ภะคะวะโต สันติเก ปัจเจกะคาถา ภาเสยยามาติ.',
+                'pali_roman': 'Evamme sutaṃ. ekaṃ samayaṃ bhagavā sakkesu viharati kapilavatthusmiṃ mahāvane mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi sabbeheva arahantehi. dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṃ dassanāya bhikkhusaṅghañca. athakho catunnaṃ suddhāvāsakāyikānaṃ devānaṃ etadahosi. ayaṃ kho bhagavā sakkesu viharati kapilavatthusmiṃ mahāvane mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi sabbeheva arahantehi, dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṃ dassanāya bhikkhusaṅghañca, yannūna mayampi, yena bhagavā, tenupasaṅkameyyāma, upasaṅkamitvā bhagavato santike paccekagāthā bhāseyyāmāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus have I heard. At one time the Blessed One was dwelling among the Sakyans at Kapilavatthu, in the Great Wood, with a great Sangha of bhikkhus, five hundred of them, all arahants; and deities from ten world-systems had for the most part gathered to see the Blessed One and the Sangha of bhikkhus. Then it occurred to four deities of the Pure Abodes: the Blessed One is dwelling among the Sakyans at Kapilavatthu, and deities have gathered to see him; let us go to him, and each speak a verse in his presence.',
+            },
+            # ‼ CHECK [IMG_0445.PNG]: INCOMPLETE LINE, cut by the turn to 176
+            #   and completed there.
+            # ‼ COMPLETED FROM p176: this line was cut by the page break and
+            #   is now whole. Was: อะถะโข ตา เทวะตา, เสยยะถาปิ นามะ พะละวา
+            #   ปุริโส สัมมิญชิตัง วา พาหัง ปะสาเรยยะ, ปะสาริตัง วา พาหัง
+            #   สัมมิญเชยยะ, เอวะเมวะ สุทธาวาเสสุ เทเวสุ […]
+            # ‼ CHECK [IMG_0446.PNG]: COMPLETES THE LINE CUT BY THE PAGE TURN
+            #   from 175.
+            {
+                'number': 2,
+                'pali': 'อะถะโข ตา เทวะตา, เสยยะถาปิ นามะ พะละวา ปุริโส สัมมิญชิตัง วา พาหัง ปะสาเรยยะ, ปะสาริตัง วา พาหัง สัมมิญเชยยะ, เอวะเมวะ สุทธาวาเสสุ เทเวสุ อันตะระหิตา ภะคะวะโต ปุระโต ปาตุระหังสุ. อะถะโข ตา เทวะตา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง อัฏฐังสุ, เอกะมันตัง ฐิตา โข เอกา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ,',
+                'pali_roman': 'Athakho tā devatā, seyyathāpi nāma balavā puriso sammiñjitaṃ vā bāhaṃ pasāreyya, pasāritaṃ vā bāhaṃ sammiñjeyya, evameva suddhāvāsesu devesu antarahitā bhagavato purato pāturahaṃsu. athakho tā devatā bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhaṃsu, ekamantaṃ ṭhitā kho ekā devatā bhagavato santike imaṃ gāthaṃ abhāsi,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then those deities, as swiftly as a strong man might extend his flexed arm or flex his extended arm, vanished from among the deities of the Pure Abodes and appeared before the Blessed One. They paid homage to him and stood to one side; and standing there, one deity spoke this verse in his presence:',
+            },
+            {
+                'number': 3,
+                'page': 176,
+                'pali': 'มะหาสะมะโย ปะวะนัส์มิง เทวะกายา สะมาคะตา',
+                'pali_roman': 'Mahāsamayo pavanasmiṃ devakāyā samāgatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'A great gathering in the woodland! The hosts of devas have assembled.',
+            },
+            {
+                'number': 4,
+                'pali': 'อาคะตัมหะ อิมัง ธัมมะสะมะยัง ทักขิตาเยวะ อะปะราชิตะสังฆันติ',
+                'pali_roman': 'Āgatamha imaṃ dhammasamayaṃ dakkhitāyeva aparājitasaṅghanti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'We have come to this gathering of Dhamma to see the unconquered Sangha.',
+            },
+            # ‼ CHECK [IMG_0446.PNG]: THE PROSE LINE อะถะโข อะปะรา เทวะตา
+            #   ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ. IS PRINTED THREE TIMES,
+            #   once before each of the second, third and fourth verse groups,
+            #   and is entered each time. The repetition is the book's.
+            {
+                'number': 5,
+                'pali': 'อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ.',
+                'pali_roman': 'Athakho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then another deity spoke this verse in the presence of the Blessed One:',
+            },
+            {
+                'number': 6,
+                'pali': 'ตัต์ระ ภิกขะโว สะมาทะหังสุ จิตตัง อัตตะโน อุชุกะมะกังสุ',
+                'pali_roman': 'Tatra bhikkhavo samādahaṃsu cittaṃ attano ujukamakaṃsu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There the bhikkhus have composed themselves and made their own minds straight.',
+            },
+            {
+                'number': 7,
+                'pali': 'สาระถีวะ เนตตานิ คะเหต์วา อินท์ริยานิ รักขันติ ปัณฑิตาติ.',
+                'pali_roman': 'Sārathīva nettāni gahetvā indriyāni rakkhanti paṇḍitāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Like a charioteer taking up the reins, the wise ones guard their faculties.',
+            },
+            {
+                'number': 8,
+                'pali': 'อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ.',
+                'pali_roman': 'Athakho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then another deity spoke this verse in the presence of the Blessed One:',
+            },
+            {
+                'number': 9,
+                'pali': 'เฉต์วา ขีลัง เฉต์วา ปะลีฆัง อินทะขีลัง โอหัจจะมะเนชา',
+                'pali_roman': 'Chetvā khīlaṃ chetvā palīghaṃ indakhīlaṃ ohaccamanejā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having cut the stake, cut the bar, uprooted the boundary post, unstirred,',
+            },
+            {
+                'number': 10,
+                'pali': 'เต จะรันติ สุทธา วิมะลา จักขุมะตา สุทันตา สุสู นาคาติ.',
+                'pali_roman': 'Te caranti suddhā vimalā cakkhumatā sudantā susū nāgāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they walk pure and stainless, well tamed by the One with Vision — young nagas.',
+            },
+            {
+                'number': 11,
+                'pali': 'อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ.',
+                'pali_roman': 'Athakho aparā devatā bhagavato santike imaṃ gāthaṃ abhāsi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then another deity spoke this verse in the presence of the Blessed One:',
+            },
+            {
+                'number': 12,
+                'pali': 'เย เกจิ พุทธัง สะระณัง คะตา เส',
+                'pali_roman': 'Ye keci buddhaṃ saraṇaṃ gatā se',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever have gone to the Buddha for refuge,',
+            },
+            # ‼ CHECK [IMG_0446.PNG]: ⚠ THE FOURTH VERSE GROUP IS SET IN ONE
+            #   CENTRED COLUMN, four lines, where the three before it are two
+            #   columns read across. The column count changes inside the page;
+            #   the row records 2, which is what most of the sheet uses.
+            {
+                'number': 13,
+                'pali': 'นะ เต คะมิสสันติ อะปายะภูมิง',
+                'pali_roman': 'Na te gamissanti apāyabhūmiṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they will not go to a state of woe;',
+            },
+            {
+                'number': 14,
+                'pali': 'ปะหายะ มานุสัง เทหัง',
+                'pali_roman': 'Pahāya mānusaṃ dehaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'laying down the human body,',
+            },
+            {
+                'number': 15,
+                'pali': 'เทวะกายัง ปะริปูเรสสันตีติ.',
+                'pali_roman': 'Devakāyaṃ paripūressantīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they will fill out the hosts of devas.',
+            },
+            {
+                'number': 16,
+                'pali': 'อะถะโข ภะคะวา ภิกขู อามันเตสิ. เยภุยเยนะ ภิกขะเว ทะสะสุ โลกะธาตูสุ เทวะตา สันนิปะติตา ตะถาคะตัง ทัสสะนายะ ภิกขุสังฆัญจะ. เยปิ เต ภิกขะเว อะเหสุง อะตีตะมัทธานัง อะระหันโต สัมมาสัมพุทธา, เตสัมปิ ภะคะวันตานัง เอตะปะระมาเยวะ เทวะตา สันนิปะติตา อะเหสุง. เสยยะถาปิ มัยหัง เอตะระหิ, เยปิ เต ภิกขะเว ภะวิสสันติ, อะนาคะตะมัทธานัง อะระหันโต สัมมาสัมพุทธา, เตสัมปิ ภะคะวันตานัง เอตะปะระมาเยวะ เทวะตา สันนิปะติตา ภะวิสสันติ. เสยยะถาปิ มัยหัง เอตะระหิ, อาจิกขิสสามิ ภิกขะเว เทวะกายานัง นามานิ, กิตตะยิสสามิ ภิกขะเว เทวะกายานัง นามานิ, เทสิสสามิ ภิกขะเว เทวะกายานัง นามานิ. ตัง สุณาถะ สาธุกัง มะนะสิกะโรถะ ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ.',
+                'pali_roman': 'Athakho bhagavā bhikkhū āmantesi. yebhuyyena bhikkhave dasasu lokadhātūsu devatā sannipatitā tathāgataṃ dassanāya bhikkhusaṅghañca. yepi te bhikkhave ahesuṃ atītamaddhānaṃ arahanto sammāsambuddhā, tesampi bhagavantānaṃ etaparamāyeva devatā sannipatitā ahesuṃ. seyyathāpi mayhaṃ etarahi, yepi te bhikkhave bhavissanti, anāgatamaddhānaṃ arahanto sammāsambuddhā, tesampi bhagavantānaṃ etaparamāyeva devatā sannipatitā bhavissanti. seyyathāpi mayhaṃ etarahi, ācikkhissāmi bhikkhave devakāyānaṃ nāmāni, kittayissāmi bhikkhave devakāyānaṃ nāmāni, desissāmi bhikkhave devakāyānaṃ nāmāni. taṃ suṇātha sādhukaṃ manasikarotha bhāsissāmīti. evambhanteti kho te bhikkhū bhagavato paccassosuṃ. bhagavā etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then the Blessed One addressed the bhikkhus: bhikkhus, deities from ten world-systems have for the most part gathered to see the Tathagata and the Sangha of bhikkhus. Just so did deities gather in this same number for those Blessed Ones who in time past were arahants, perfectly awakened — as they have for me now; and just so will they gather for those who in time to come will be arahants, perfectly awakened — as they have for me now. I shall tell you the names of the hosts of devas, I shall proclaim them, I shall teach them. Listen, attend closely, I shall speak. Even so, venerable sir, those bhikkhus replied to the Blessed One; and the Blessed One said this:',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'bot-khat-adittapariyaya-suttam',
+        'title_thai': 'บทขัด อาทิตตะปะริยายะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt aa-tít-dtà-bpà-rí-yaa-yá-sùt-dtaŋ',
+        'page_start': 124,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 124,
+                'pali': 'เวเนยยะทะมะโนปาเย สัพพะโส ปาระมิง คะโต',
+                'pali_roman': 'Veneyyadamanopāye sabbaso pāramiṃ gato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Gone wholly to perfection in the means of taming those who can be led,',
+            },
+            # ‼ CHECK [IMG_0389.PNG]: FULL STOPS FALL ON THE EVEN ROWS — 2, 4,
+            #   6 and 8 — so the eight rows are four closed couplets, as on
+            #   pages 114 and 120.
+            {
+                'number': 2,
+                'page': 124,
+                'pali': 'อะโมฆะวะจะโน พุทโธ อะภิญญายานุสาสะโก.',
+                'pali_roman': 'Amoghavacano buddho abhiññāyānusāsako.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Buddha, whose word is never in vain, who instructs from direct knowledge.',
+            },
+            # ‼ CHECK [IMG_0389.PNG]: ‼ A PHINTHU — THE MARK BELOW THE LETTER
+            #   — AND IT IS NEW TO THIS RUN. Row 3 prints จิณฺณานุรูปะโต with
+            #   a dot under the first ณ, read at 10x. That is phinthu, U+0E3A,
+            #   which sits BELOW and marks a doubled consonant; it is a third
+            #   mark, distinct from yamakkan ๎ (above, for clusters) and
+            #   thanthakhat ์ (above, for silence). It already appears 22
+            #   times elsewhere in the data, mostly in citations like ฉกฺก.,
+            #   but this is the first time in a chanted line here. The
+            #   yamakkan pass did not touch it — different character.
+            {
+                'number': 3,
+                'page': 124,
+                'pali': 'จิณฺณานุรูปะโต จาปิ ธัมเมนะ วินะยัง ปะชัง',
+                'pali_roman': 'Ciṇṇānurūpato cāpi dhammena vinayaṃ pajaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And in accordance with what they had practised, training the people by Dhamma,',
+            },
+            # ‼ CHECK [IMG_0389.PNG]: ‼ AND THE VERY NEXT ROW HAS NO PHINTHU
+            #   ON THE SAME CLUSTER. Row 4 prints จิณณาคคิปาริจะริยานัง with a
+            #   plain ณณ, read at 10x — the same doubled ณ that row 3 marks.
+            #   Marked once, unmarked once, one line apart. Both reproduced as
+            #   printed.
+            {
+                'number': 4,
+                'page': 124,
+                'pali': 'จิณณาคคิปาริจะริยานัง สัมโพชฌาระหะโยคินัง.',
+                'pali_roman': 'Ciṇṇāggipāricariyānaṃ sambojjhārahayoginaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for those strivers ripe for awakening who had tended the fire.',
+            },
+            {
+                'number': 5,
+                'page': 124,
+                'pali': 'ยะมาทิตตะปะริยายัง เทสะยันโต มะโนหะรัง',
+                'pali_roman': 'Yamādittapariyāyaṃ desayanto manoharaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Teaching that captivating discourse on burning,',
+            },
+            {
+                'number': 6,
+                'page': 124,
+                'pali': 'เต โสตาโร วิโมเจสิ อะเสกขายะ วิมุตติยา.',
+                'pali_roman': 'Te sotāro vimocesi asekkhāya vimuttiyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he freed those hearers with the release of the adept.',
+            },
+            {
+                'number': 7,
+                'page': 124,
+                'pali': 'ตะเถโวปะปะริกขายะ วิญญูนัง โสตุมิจฉะตัง',
+                'pali_roman': 'Tathevopaparikkhāya viññūnaṃ sotumicchataṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So too, for the wise who wish to hear and examine it,',
+            },
+            {
+                'number': 8,
+                'page': 124,
+                'pali': 'ทุกขะตาลักขะโณปายัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Dukkhatālakkhaṇopāyaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that discourse, the means to the mark of suffering — let us recite it.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        'id': 'adittapariyaya-suttam',
+        'title_thai': 'อาทิตตะปะริยายะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Ādittapariyāyasuttaṃ',
+        'book_number': '27',
+        'page_start': 124,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0389.PNG]: THE HEADING CARRIES THE BOOK'S OWN
+            #   NUMBER, 27. อาทิตตะปะริยายะสุตตัง, recorded as book_number
+            #   '27'. The nidāna names Gaya and a thousand monks — the fire-
+            #   worshipping ascetics of the บทขัด's fourth row.
+            {
+                'number': 1,
+                'page': 124,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา คะยายัง วิหะระติ คะยาสีเส สัทธิง ภิกขุสะหัสเสนะ. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā gayāyaṃ viharati gayāsīse saddhiṃ bhikkhusahassena. Tatra kho bhagavā bhikkhū āmantesi.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying at Gaya, at Gaya's Head, together with a thousand monks. There he addressed them.",
+            },
+            # ‼ CHECK [IMG_0389.PNG]: THE EYE PARAGRAPH CARRIES THE FRAMING
+            #   SENTENCE AND AN EXTRA ภิกขะเว: it opens สัพพัง ภิกขะเว
+            #   อาทิตตัง. กิญจะ ภิกขะเว สัพพัง อาทิตตัง, จักขุง ภิกขะเว
+            #   อาทิตตัง, where the ear and nose paragraphs simply begin โสตัง
+            #   อาทิตตัง, and ฆานัง อาทิตตัง,. Read off the sheet rather than
+            #   assumed parallel.
+            {
+                'number': 2,
+                'page': 124,
+                'pali': 'สัพพัง ภิกขะเว อาทิตตัง. กิญจะ ภิกขะเว สัพพัง อาทิตตัง, จักขุง ภิกขะเว อาทิตตัง, รูปา อาทิตตา, จักขุวิญญาณัง อาทิตตัง, จักขุสัมผัสโส อาทิตโต, ยัมปิทัง จักขุสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.',
+                'pali_roman': 'Sabbaṃ bhikkhave ādittaṃ. Kiñca bhikkhave sabbaṃ ādittaṃ, cakkhuṃ bhikkhave ādittaṃ, rūpā ādittā, cakkhuviññāṇaṃ ādittaṃ, cakkhusamphasso āditto, yampidaṃ cakkhusamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Monks, all is burning. And what is the all that is burning? The eye is burning, forms are burning, eye-consciousness is burning, eye-contact is burning; and whatever feeling arises dependent on eye-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say.',
+            },
+            # ‼ CHECK [IMG_0389.PNG]: ‼ A COMMA WITH NO SPACE AFTER IT:
+            #   โสตะวิญญาณัง อาทิตตัง,โสตะสัมผัสโส, read at 6x. The eye
+            #   paragraph above it and the nose paragraph below both have a
+            #   space at the same point. Reproduced as printed — the third
+            #   such spaceless comma in this stretch, after page 116's and
+            #   page 210's.
+            {
+                'number': 3,
+                'page': 124,
+                'pali': 'โสตัง อาทิตตัง, สัททา อาทิตตา, โสตะวิญญาณัง อาทิตตัง,โสตะสัมผัสโส อาทิตโต, ยัมปิทัง โสตะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.',
+                'pali_roman': 'Sotaṃ ādittaṃ, saddā ādittā, sotaviññāṇaṃ ādittaṃ,sotasamphasso āditto, yampidaṃ sotasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The ear is burning, sounds are burning, ear-consciousness is burning, ear-contact is burning; and whatever feeling arises dependent on ear-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say.',
+            },
+            # ‼ CHECK [IMG_0389.PNG]: CUT MID-CLAUSE AT THE PAGE FOOT, so […]
+            #   is used: the sheet ends …อาทิตตัง ราคัคคินา โทสัคคินา and page
+            #   125 continues with โมหัคคินา. COMPLETE it from 125, and bring
+            #   this record's ENGLISH up to the finished sentence when you do.
+            {
+                'number': 4,
+                'page': 124,
+                'pali': 'ฆานัง อาทิตตัง, คันธา อาทิตตา, ฆานะวิญญาณัง อาทิตตัง, ฆานะสัมผัสโส อาทิตโต, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา […]',
+                'pali_roman': 'Ghānaṃ ādittaṃ, gandhā ādittā, ghānaviññāṇaṃ ādittaṃ, ghānasamphasso āditto, yampidaṃ ghānasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The nose is burning, odours are burning, nose-consciousness is burning, nose-contact is burning; and whatever feeling arises dependent on nose-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair,',
+            },
+        ],
+    },
 ]
 
 

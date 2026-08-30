@@ -1,0 +1,102 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamaya-suttam"
+  ],
+  "pages": [
+   {
+    "page": 175,
+    "file": "IMG_0445.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "mahasamaya-suttam",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "The sutta begins below the บทขัด already entered for this page. Two prose paragraphs, the second CUT BY THE PAGE TURN at เอวะเมวะ สุทธาวาเสสุ เทเวสุ."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamaya-suttam",
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สักเกสุ วิหะระติ กะปิละวัตถุส์มิง มะหาวะเน มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ สัพเพเหวะ อะระหันเตหิ. ทะสะหิ จะ โลกะธาตูหิ เทวะตา เยภุยเยนะ สันนิปะติตา โหนติ ภะคะวันตัง ทัสสะนายะ ภิกขุสังฆัญจะ. อะถะโข จะตุนนัง สุทธาวาสะกายิกานัง เทวานัง เอตะทะโหสิ. อะยัง โข ภะคะวา สักเกสุ วิหะระติ กะปิละวัตถุส์มิง มะหาวะเน มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ สัพเพเหวะ อะระหันเตหิ, ทะสะหิ จะ โลกะธาตูหิ เทวะตา เยภุยเยนะ สันนิปะติตา โหนติ ภะคะวันตัง ทัสสะนายะ ภิกขุสังฆัญจะ, ยันนูนะ มะยัมปิ, เยนะ ภะคะวา, เตนุปะสังกะเมยยามะ, อุปะสังกะมิต์วา ภะคะวะโต สันติเก ปัจเจกะคาถา ภาเสยยามาติ.",
+     "pali_roman": "Evamme sutaṃ. ekaṃ samayaṃ bhagavā sakkesu viharati kapilavatthusmiṃ mahāvane mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi sabbeheva arahantehi. dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṃ dassanāya bhikkhusaṅghañca. athakho catunnaṃ suddhāvāsakāyikānaṃ devānaṃ etadahosi. ayaṃ kho bhagavā sakkesu viharati kapilavatthusmiṃ mahāvane mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi sabbeheva arahantehi, dasahi ca lokadhātūhi devatā yebhuyyena sannipatitā honti bhagavantaṃ dassanāya bhikkhusaṅghañca, yannūna mayampi, yena bhagavā, tenupasaṅkameyyāma, upasaṅkamitvā bhagavato santike paccekagāthā bhāseyyāmāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was dwelling among the Sakyans at Kapilavatthu, in the Great Wood, with a great Sangha of bhikkhus, five hundred of them, all arahants; and deities from ten world-systems had for the most part gathered to see the Blessed One and the Sangha of bhikkhus. Then it occurred to four deities of the Pure Abodes: the Blessed One is dwelling among the Sakyans at Kapilavatthu, and deities have gathered to see him; let us go to him, and each speak a verse in his presence.",
+     "page": 175
+    },
+    {
+     "number": 2,
+     "pali": "อะถะโข ตา เทวะตา, เสยยะถาปิ นามะ พะละวา ปุริโส สัมมิญชิตัง วา พาหัง ปะสาเรยยะ, ปะสาริตัง วา พาหัง สัมมิญเชยยะ, เอวะเมวะ สุทธาวาเสสุ เทเวสุ […]",
+     "pali_roman": "Athakho tā devatā, seyyathāpi nāma balavā puriso sammiñjitaṃ vā bāhaṃ pasāreyya, pasāritaṃ vā bāhaṃ sammiñjeyya, evameva suddhāvāsesu devesu […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then those deities, as swiftly as a strong man might extend his flexed arm or flex his extended arm, vanished from among the deities of the Pure Abodes and appeared before the Blessed One. They paid homage to him and stood to one side; and standing there, one deity spoke this verse in his presence:"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0445.PNG",
+     "issue": "⚠ THIS CHANT HAS A TWIN AT 317-325, BUT ITS UNIT DIVISION DOES NOT TRANSFER. `mahasamayasutta-roman` sets the opening prose as ELEVEN short units — `Evaṃ me sutaṃ:` alone is its verse 1 — where this Thai printing sets the same words as ONE running paragraph. Same words, different setting, so the verse numbers will NOT line up and that is not a fault. Use the twin to check the TEXT; never to number the units. The units come from this page's own layout."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0445.PNG",
+     "issue": "INCOMPLETE LINE, cut by the turn to 176 and completed there."
+    }
+   ],
+   "continues": true,
+   "title_thai": "มะหาสะมะยะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Mahāsamayasuttaṃ",
+   "title_english": "The Discourse on the Great Gathering",
+   "page_start": 175,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent as a line of its own; the บทขัด above it on 175 is the invitation, closing ตัง สุตตันตัง ภะณามะ เส.",
+    "units": "Prose paragraphs interleaved with verse, most of it in two columns read ACROSS.",
+    "ordering": "Pure Pali. The book's FIRST printing.",
+    "conventions": "pali_roman mechanical from translit_pali; paiboon empty. ⚠ The twin's unit division does NOT transfer — see the checks.",
+    "pages": "IMG_0445 onwards, pages 175-182. Offset 270, stepping to 271 at page 180."
+   },
+   "vocabulary": [
+    {
+     "pali": "มะหาสะมะโย",
+     "pali_roman": "mahāsamayo",
+     "meaning": "the great gathering; the sutta's whole subject, and the phrase the first deity opens with"
+    },
+    {
+     "pali": "ปัจเจกะคาถา",
+     "pali_roman": "paccekagāthā",
+     "meaning": "a verse each, one apiece; what the four deities of the Pure Abodes come to speak"
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamaya-suttam"
+  ],
+  "resume_from_page": 176,
+  "resume_from_file": "IMG_0446.PNG",
+  "resume_from": "mahasamaya-suttam",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from the sheet; the roman twin was used to check the TEXT, not the unit boundaries.",
+  "page_scan": "agrees.",
+  "notes": "The sutta begins below the บทขัด already entered for this page. Two prose paragraphs, the second CUT BY THE PAGE TURN at เอวะเมวะ สุทธาวาเสสุ เทเวสุ.",
+  "diacritic_exceptions": []
+ }
+}
