@@ -56309,7 +56309,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 8; the rest is not in the app yet.
         'id': 'adittapariyaya-suttam',
         'title_thai': 'อาทิตตะปะริยายะสุตตัง',
         'title_pali': '',
@@ -56372,14 +56372,83 @@ CHANTS = [
             #   is used: the sheet ends …อาทิตตัง ราคัคคินา โทสัคคินา and page
             #   125 continues with โมหัคคินา. COMPLETE it from 125, and bring
             #   this record's ENGLISH up to the finished sentence when you do.
+            # ‼ COMPLETED FROM p125: this line was cut by the page break and
+            #   is now whole. Was: ฆานัง อาทิตตัง, คันธา อาทิตตา, ฆานะวิญญาณัง
+            #   อาทิตตัง, ฆานะสัมผัสโส อาทิตโต, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา
+            #   อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา,
+            #   ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา
+            #   […]
+            # ‼ CHECK [IMG_0390.PNG]: COMPLETES THE PARAGRAPH PAGE 124 CUT.
+            #   That sheet ended …อาทิตตัง ราคัคคินา โทสัคคินา […] and this
+            #   one opens โมหัคคินา… The whole paragraph is given here so the
+            #   […] is replaced, and verse 4 keeps page 124. ⚠️ Its ENGLISH in
+            #   batch-124 was the hanging half and is brought up to the
+            #   finished sentence at the same time.
             {
                 'number': 4,
                 'page': 124,
-                'pali': 'ฆานัง อาทิตตัง, คันธา อาทิตตา, ฆานะวิญญาณัง อาทิตตัง, ฆานะสัมผัสโส อาทิตโต, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา […]',
-                'pali_roman': 'Ghānaṃ ādittaṃ, gandhā ādittā, ghānaviññāṇaṃ ādittaṃ, ghānasamphasso āditto, yampidaṃ ghānasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā […]',
+                'pali': 'ฆานัง อาทิตตัง, คันธา อาทิตตา, ฆานะวิญญาณัง อาทิตตัง, ฆานะสัมผัสโส อาทิตโต, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.',
+                'pali_roman': 'Ghānaṃ ādittaṃ, gandhā ādittā, ghānaviññāṇaṃ ādittaṃ, ghānasamphasso āditto, yampidaṃ ghānasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'The nose is burning, odours are burning, nose-consciousness is burning, nose-contact is burning; and whatever feeling arises dependent on nose-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair,',
+                'english': 'The nose is burning, odours are burning, nose-consciousness is burning, nose-contact is burning; and whatever feeling arises dependent on nose-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say.',
+            },
+            # ‼ CHECK [IMG_0390.PNG]: THE ORGAN'S OWN ADJECTIVE CHANGES GENDER
+            #   WITH IT and the others do not: ชิวหา อาทิตตา (feminine), กาโย
+            #   อาทิตโต and มะโน อาทิตโต (masculine), against
+            #   จักขุง/โสตัง/ฆานัง อาทิตตัง (neuter) on 124. The object word
+            #   after it is อาทิตตา in every one. All four read off the sheet.
+            {
+                'number': 5,
+                'page': 125,
+                'pali': 'ชิวหา อาทิตตา, ระสา อาทิตตา, ชิวหาวิญญาณัง อาทิตตัง, ชิวหาสัมผัสโส อาทิตโต, ยัมปิทัง ชิวหาสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.',
+                'pali_roman': 'Jivhā ādittā, rasā ādittā, jivhāviññāṇaṃ ādittaṃ, jivhāsamphasso āditto, yampidaṃ jivhāsamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The tongue is burning, tastes are burning, tongue-consciousness is burning, tongue-contact is burning; and whatever feeling arises dependent on tongue-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say.',
+            },
+            {
+                'number': 6,
+                'page': 125,
+                'pali': 'กาโย อาทิตโต, โผฏฐัพพา อาทิตตา, กายะวิญญาณัง อาทิตตัง, กายะสัมผัสโส อาทิตโต, ยัมปิทัง กายะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.',
+                'pali_roman': 'Kāyo āditto, phoṭṭhabbā ādittā, kāyaviññāṇaṃ ādittaṃ, kāyasamphasso āditto, yampidaṃ kāyasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The body is burning, tangibles are burning, body-consciousness is burning, body-contact is burning; and whatever feeling arises dependent on body-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say.',
+            },
+            {
+                'number': 7,
+                'page': 125,
+                'pali': 'มะโน อาทิตโต, ธัมมา อาทิตตา, มะโนวิญญาณัง อาทิตตัง, มะโนสัมผัสโส อาทิตโต, ยัมปิทัง มะโนสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.',
+                'pali_roman': 'Mano āditto, dhammā ādittā, manoviññāṇaṃ ādittaṃ, manosamphasso āditto, yampidaṃ manosamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The mind is burning, mental objects are burning, mind-consciousness is burning, mind-contact is burning; and whatever feeling arises dependent on mind-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say.',
+            },
+            # ‼ CHECK [IMG_0390.PNG]: ‼ TWO LINE-BREAK HYPHENS, BOTH DROPPED.
+            #   The passage prints ยัมปิทัง จักขุ- at a right margin with
+            #   สัมผัสสะปัจจะยา on the next line, and ฆานะ- likewise with
+            #   สัมผัสเสปิ following. Both are word-wrap, so by the rule
+            #   settled at 116 they are dropped and the words stored whole.
+            #   Contrast the column-gap hyphen on 118, which IS kept because
+            #   both halves sit on one printed line.
+            # ‼ CHECK [IMG_0390.PNG]: ‼ A MISSING COMMA IN THE NOSE SECTION,
+            #   and it is kept. The passage reads ฆานะวิญญาเณปิ นิพพินทะติ
+            #   ฆานะสัมผัสเสปิ with NO comma between them, read at 4x, where
+            #   the eye and ear sections both have one at the same point.
+            #   Reproduced as printed.
+            # ‼ CHECK [IMG_0390.PNG]: CUT AFTER THE TONGUE'S FIRST CLAUSE, so
+            #   […] is used: the sheet ends …ชิวหายะปิ นิพพินทะติ, and page
+            #   126 continues. COMPLETE it from 126, and bring this record's
+            #   ENGLISH up when you do.
+            {
+                'number': 8,
+                'page': 125,
+                'pali': 'เอวัง ปัสสัง ภิกขะเว สุต๎วา อะริยะสาวะโก จักขุส๎มิงปิ นิพพินทะติ, รูเปสุปิ นิพพินทะติ, จักขุวิญญาเณปิ นิพพินทะติ, จักขุสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง จักขุสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. โสตัส๎มิงปิ นิพพินทะติ, สัทเทสุปิ นิพพินทะติ, โสตะวิญญาเณปิ นิพพินทะติ, โสตะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง โสตะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. ฆานัส๎มิงปิ นิพพินทะติ, คันเธสุปิ นิพพินทะติ, ฆานะวิญญาเณปิ นิพพินทะติ ฆานะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. ชิวหายะปิ นิพพินทะติ, […]',
+                'pali_roman': 'Evaṃ passaṃ bhikkhave sutvā ariyasāvako cakkhusmiṃpi nibbindati, rūpesupi nibbindati, cakkhuviññāṇepi nibbindati, cakkhusamphassepi nibbindati, yampidaṃ cakkhusamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Sotasmiṃpi nibbindati, saddesupi nibbindati, sotaviññāṇepi nibbindati, sotasamphassepi nibbindati, yampidaṃ sotasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Ghānasmiṃpi nibbindati, gandhesupi nibbindati, ghānaviññāṇepi nibbindati ghānasamphassepi nibbindati, yampidaṃ ghānasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Jivhāyapi nibbindati, […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Seeing thus, monks, the instructed noble disciple grows disenchanted with the eye, with forms, with eye-consciousness, with eye-contact, and with whatever feeling arises dependent on eye-contact; so too with the ear and sounds, with the nose and odours; and with the tongue',
             },
         ],
     },
