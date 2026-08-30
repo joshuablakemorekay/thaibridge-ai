@@ -1825,51 +1825,29 @@ offset is **270** from 245 down and **268** from 249 up; two unphotographed
 blanks sit between. Page 232 opens with its own centred heading, so nothing
 runs back from it — 231 is a clean start.
 
-## ⚠ THE LOKADHAMMA SUTTA, 187–190 — read and verified, NOT entered
+## The Lokadhamma Sutta, 187–190 — DONE, and what it taught
 
-Page 187's `บทขัด` is in. **`โลกะธัมมะสุตตัง` itself is not.** All four sheets
-have been read and the hard part — checking the repetitions — is done and
-recorded here so it does not have to be done twice.
+Entered in `ccfe95a` as four chained batches, because the page turn cuts a
+sentence three times. **Its lesson is the one worth carrying forward.**
 
-**Do not pattern-fill this chant.** Its eight worldly conditions each repeat one
-formula, twice over — once for the unlearned worldling on 188 and once for the
-noble disciple on 189 — and **the book is irregular in DIFFERENT places on each
-side.** Verified at magnification:
+Its eight worldly conditions each repeat one formula twice — once for the
+unlearned worldling on 188, once for the noble disciple on 189 — and **the book
+is irregular in DIFFERENT places on each side**:
 
 | | 188, worldling | 189, noble disciple |
 |---|---|---|
 | `อะลาโภ` | `อะนิจจัง` — neuter, irregular | `อะนิจโจ` — regular |
 | `ยะโส` | `ทุกโข` — regular | `ทุกขัง` — neuter, irregular |
-| `อะยะโส` | `อุปปันโน โข เม อะยัง `**`ยะโส`** — the `อะ` dropped | written in full |
+| `อะยะโส` | `อุปปันโน โข เม อะยัง `**`ยะโส`** — `อะ` dropped | written in full |
 
-Also on 189: **`ปะฏิสัญจิก-ขะติ` is hyphenated across a line break** and must be
-rejoined, like `ปัณณะ-ระสี` on 252.
+**Filling the pattern would have corrected all four out of existence.** Every
+agreement form was read from a magnified crop instead. Do the same for any
+repetitive passage: the repetition is what makes it look safe to skim, and it
+is exactly what makes an error invisible once made.
 
-The invariant parts, both sides: `โส นะ อิติ ปะฏิสัญจิกขะติ` for the worldling
-against `โส อิติ ปะฏิสัญจิกขะติ` for the noble disciple, and `นัปปะชานาติ`
-against `ปะชานาติ`. The agreement otherwise follows the noun — `อุปปันโน/โส จะ
-โข/…ธัมโมติ/อะยัง` for the masculines, `อุปปันนา/สา จะ โข/…ธัมมาติ/อะยัง` for
-`นินทา` and `ปะสังสา`, `อุปปันนัง/ตัญจะ โข/…ธัมมันติ/`**`อิทัง`** for `สุขัง`
-and `ทุกขัง`.
-
-**⚠ THIS CHANT HAS ONLY ONE WITNESS.** Nothing of it is anywhere else in the
-app, so the twin comparison that caught four real errors this session cannot
-help. The photographs are the only check, which is why the table above was
-worth the crops.
-
-### What is left to do
-
-Mechanical, but not small: assemble roughly forty prose units and fourteen
-verse lines, write English (the app has none for this text), and apply. The
-sutta's opening paragraph on 187 is **cut by the page turn** — 187 ends at
-`…โลกะธัมมา โลกัง` and 188 opens `อะนุปะริวัตตันติ` — so it needs the `[…]`
-partial-and-completion mechanism across two batches, as pages 244/245 did.
-Page 190 ends with `โลกะธัมมะสุตตัง นิฏฐิตัง.` and a footnote,
-`1. อํ. อฏฐก. 23/158-162`.
-
-**Type the connecting paragraphs from MAGNIFIED crops, not from a whole-page
-read.** The agreement forms above were verified that way; the long prose
-between them was not.
+It also had **only one witness** — nothing of it was anywhere else in the app —
+so the twin comparison that caught four real errors elsewhere in this pass
+could not help. Where there is no twin, magnify.
 
 ## ⚠ The backward pass has reached the TRANSLATED section
 
