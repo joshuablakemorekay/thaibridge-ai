@@ -159,6 +159,42 @@ photograph.
 The offset is 262–263 through the low pages and 270 by page 207, so seven pages
 somewhere between 74 and 207 were shot twice. Those stretches are unmapped.
 
+## The whole of 121–182 is MAPPED, and nothing is missing there
+
+Done on 2026-08-30 by reading the page number off **every** sheet in the range
+at once, rather than a page at a time. **No page is missing anywhere in
+121–182.** Six filenames are absent and all six are deleted duplicates; the
+printed numbers run continuously across every one of them.
+
+| pages | files | offset |
+|---|---|---|
+| 119–128 | `IMG_0384`–`IMG_0393` | **265** |
+| — | `IMG_0394`, `0395`, `0396` absent | |
+| 129 | `IMG_0397` | **268** |
+| — | `IMG_0398`, `0399` absent | |
+| 130–179 | `IMG_0400`–`IMG_0449` | **270** |
+| — | `IMG_0450` absent | |
+| 180–183 | `IMG_0451`–`IMG_0454` | **271** |
+
+So the offset steps **three times** inside this block — 265, 268, 270, 271 —
+and every step is a deleted duplicate, not a lost page. Calculating a filename
+from an offset anywhere in here will be wrong.
+
+### How this was done, and do it again
+
+One composite image of the page-number strip from every sheet in a range reads
+sixty page numbers in a couple of glances, instead of sixty full-page reads:
+
+```python
+tiles = [(n, Image.open(d + 'IMG_%04d.PNG' % n).crop((640, 70, 1400, 215)))
+         for n in existing_files]
+# paste them down one tall image, label each with its filename, read it once
+```
+
+It also catches the absent filenames for free, because you build the list from
+`os.path.exists`. **Do this for any new stretch before entering it** — it is
+far cheaper than discovering an offset step by mis-reading a page.
+
 ## ⚠ Three pages between 224 and 316 were never photographed — ALL THREE FOUND
 
 The back of the book was mapped on 2026-08-24 by working backwards from the
