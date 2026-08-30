@@ -1812,14 +1812,23 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**64 pages are left: 124–186 and 192.**
+**63 pages are left: 125–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–123 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 124, `IMG_0389`** — ✅ nothing is
-open; `อะนัตตะลักขะณะสุตตัง` finished on 123, so 124 should open a new `บทขัด`
-or sutta 27.
+**115–124 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 125, `IMG_0390`** — ⚠️
+`adittapariyaya-suttam` (the Fire Sermon) IS OPEN, **4 units in**, and ⚠️⚠️
+**verse 4 is CUT with `[…]`** after `…อาทิตตัง ราคัคคินา โทสัคคินา`: COMPLETE
+it, and bring its ENGLISH up at the same time. Three sense bases done, three to
+go, then mind.
+
+⚠️ **A THIRD MARK EXISTS: PHINTHU ฺ (U+0E3A), BELOW the letter.** It marks a
+doubled consonant and is NOT the same as yamakkan ๎ (above, for clusters) or
+thanthakhat ์ (above, for silence). Page 124 row 3 prints `จิณฺณานุรูปะโต` with
+one and row 4 prints the same `ณณ` **without** it, one line apart. The yamakkan
+pass never touched phinthu — different character — so nothing there needs
+revisiting.
 
 ⚠️ **THIS BOOK REPEATS A FORMULA AND THEN QUIETLY CHANGES IT.** In one sutta
 across three sheets: the formations paragraph turned plural in six words (121);

@@ -1,0 +1,250 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "bot-khat-adittapariyaya-suttam",
+   "adittapariyaya-suttam"
+  ],
+  "pages": [
+   {
+    "page": 124,
+    "file": "IMG_0389.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-adittapariyaya-suttam",
+    "verses": "1-8",
+    "starts_here": true,
+    "note": "The top third. A centred bold heading and eight rows of Pali as pādas in two columns. Row 3 carries a phinthu below its ณ; row 4 does not, on the same cluster."
+   },
+   {
+    "page": 124,
+    "file": "IMG_0389.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "adittapariyaya-suttam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "The lower two thirds. A centred bold heading carrying the book's number 27, the nidāna at Gaya, then the eye, ear and nose. The nose paragraph is CUT mid-clause at the page foot."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-adittapariyaya-suttam",
+   "title_thai": "บทขัด อาทิตตะปะริยายะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt aa-tít-dtà-bpà-rí-yaa-yá-sùt-dtaŋ",
+   "page_start": 124,
+   "working_notes": {
+    "invitation": "none of its own; a บทขัด IS the invitation to what follows.",
+    "units": "Eight, one per printed ROW — two pādas in two columns, joined by a space.",
+    "ordering": "Pali only.",
+    "conventions": "A PHINTHU, below the letter — new to this run. See the checks.",
+    "pages": "IMG_0389.PNG, page 124. STARTS and ENDS on this sheet."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 124,
+     "pali": "เวเนยยะทะมะโนปาเย สัพพะโส ปาระมิง คะโต",
+     "pali_roman": "Veneyyadamanopāye sabbaso pāramiṃ gato",
+     "thai": "",
+     "paiboon": "",
+     "english": "Gone wholly to perfection in the means of taming those who can be led,"
+    },
+    {
+     "number": 2,
+     "page": 124,
+     "pali": "อะโมฆะวะจะโน พุทโธ อะภิญญายานุสาสะโก.",
+     "pali_roman": "Amoghavacano buddho abhiññāyānusāsako.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the Buddha, whose word is never in vain, who instructs from direct knowledge."
+    },
+    {
+     "number": 3,
+     "page": 124,
+     "pali": "จิณฺณานุรูปะโต จาปิ ธัมเมนะ วินะยัง ปะชัง",
+     "pali_roman": "Ciṇṇānurūpato cāpi dhammena vinayaṃ pajaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "And in accordance with what they had practised, training the people by Dhamma,"
+    },
+    {
+     "number": 4,
+     "page": 124,
+     "pali": "จิณณาคคิปาริจะริยานัง สัมโพชฌาระหะโยคินัง.",
+     "pali_roman": "Ciṇṇāggipāricariyānaṃ sambojjhārahayoginaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "for those strivers ripe for awakening who had tended the fire."
+    },
+    {
+     "number": 5,
+     "page": 124,
+     "pali": "ยะมาทิตตะปะริยายัง เทสะยันโต มะโนหะรัง",
+     "pali_roman": "Yamādittapariyāyaṃ desayanto manoharaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Teaching that captivating discourse on burning,"
+    },
+    {
+     "number": 6,
+     "page": 124,
+     "pali": "เต โสตาโร วิโมเจสิ อะเสกขายะ วิมุตติยา.",
+     "pali_roman": "Te sotāro vimocesi asekkhāya vimuttiyā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "he freed those hearers with the release of the adept."
+    },
+    {
+     "number": 7,
+     "page": 124,
+     "pali": "ตะเถโวปะปะริกขายะ วิญญูนัง โสตุมิจฉะตัง",
+     "pali_roman": "Tathevopaparikkhāya viññūnaṃ sotumicchataṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "So too, for the wise who wish to hear and examine it,"
+    },
+    {
+     "number": 8,
+     "page": 124,
+     "pali": "ทุกขะตาลักขะโณปายัง ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Dukkhatālakkhaṇopāyaṃ taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "that discourse, the means to the mark of suffering — let us recite it."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "จิณณาคคิปาริจะริยานัง",
+     "pali_roman": "ciṇṇaggipāricariyānaṃ",
+     "meaning": "'of those who had tended the fire' — the thousand fire-worshipping ascetics this sutta was preached to, which is why it is the FIRE sermon"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0389.PNG",
+     "issue": "‼ A PHINTHU — THE MARK BELOW THE LETTER — AND IT IS NEW TO THIS RUN. Row 3 prints จิณฺณานุรูปะโต with a dot under the first ณ, read at 10x. That is phinthu, U+0E3A, which sits BELOW and marks a doubled consonant; it is a third mark, distinct from yamakkan ๎ (above, for clusters) and thanthakhat ์ (above, for silence). It already appears 22 times elsewhere in the data, mostly in citations like ฉกฺก., but this is the first time in a chanted line here. The yamakkan pass did not touch it — different character."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0389.PNG",
+     "issue": "‼ AND THE VERY NEXT ROW HAS NO PHINTHU ON THE SAME CLUSTER. Row 4 prints จิณณาคคิปาริจะริยานัง with a plain ณณ, read at 10x — the same doubled ณ that row 3 marks. Marked once, unmarked once, one line apart. Both reproduced as printed."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0389.PNG",
+     "issue": "FULL STOPS FALL ON THE EVEN ROWS — 2, 4, 6 and 8 — so the eight rows are four closed couplets, as on pages 114 and 120."
+    }
+   ]
+  },
+  {
+   "id": "adittapariyaya-suttam",
+   "title_thai": "อาทิตตะปะริยายะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Ādittapariyāyasuttaṃ",
+   "book_number": "27",
+   "page_start": 124,
+   "continues": true,
+   "working_notes": {
+    "invitation": "the บทขัด above it on this sheet.",
+    "units": "Four: the nidāna and the first three sense bases, the third cut.",
+    "ordering": "Pali only.",
+    "conventions": "A comma with no space — see the checks.",
+    "pages": "IMG_0389.PNG, page 124. STARTS here and CONTINUES onto page 125."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 124,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา คะยายัง วิหะระติ คะยาสีเส สัทธิง ภิกขุสะหัสเสนะ. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ.",
+     "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā gayāyaṃ viharati gayāsīse saddhiṃ bhikkhusahassena. Tatra kho bhagavā bhikkhū āmantesi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was staying at Gaya, at Gaya's Head, together with a thousand monks. There he addressed them."
+    },
+    {
+     "number": 2,
+     "page": 124,
+     "pali": "สัพพัง ภิกขะเว อาทิตตัง. กิญจะ ภิกขะเว สัพพัง อาทิตตัง, จักขุง ภิกขะเว อาทิตตัง, รูปา อาทิตตา, จักขุวิญญาณัง อาทิตตัง, จักขุสัมผัสโส อาทิตโต, ยัมปิทัง จักขุสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.",
+     "pali_roman": "Sabbaṃ bhikkhave ādittaṃ. Kiñca bhikkhave sabbaṃ ādittaṃ, cakkhuṃ bhikkhave ādittaṃ, rūpā ādittā, cakkhuviññāṇaṃ ādittaṃ, cakkhusamphasso āditto, yampidaṃ cakkhusamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, all is burning. And what is the all that is burning? The eye is burning, forms are burning, eye-consciousness is burning, eye-contact is burning; and whatever feeling arises dependent on eye-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say."
+    },
+    {
+     "number": 3,
+     "page": 124,
+     "pali": "โสตัง อาทิตตัง, สัททา อาทิตตา, โสตะวิญญาณัง อาทิตตัง,โสตะสัมผัสโส อาทิตโต, ยัมปิทัง โสตะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา โมหัคคินา, อาทิตตัง ชาติยา ชะรามะระเณนะ, โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ อาทิตตันติ วะทามิ.",
+     "pali_roman": "Sotaṃ ādittaṃ, saddā ādittā, sotaviññāṇaṃ ādittaṃ,sotasamphasso āditto, yampidaṃ sotasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā mohagginā, ādittaṃ jātiyā jarāmaraṇena, sokehi paridevehi dukkhehi domanassehi upāyāsehi ādittanti vadāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The ear is burning, sounds are burning, ear-consciousness is burning, ear-contact is burning; and whatever feeling arises dependent on ear-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair, I say."
+    },
+    {
+     "number": 4,
+     "page": 124,
+     "pali": "ฆานัง อาทิตตัง, คันธา อาทิตตา, ฆานะวิญญาณัง อาทิตตัง, ฆานะสัมผัสโส อาทิตโต, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัมปิ อาทิตตัง. เกนะ อาทิตตัง. อาทิตตัง ราคัคคินา โทสัคคินา […]",
+     "pali_roman": "Ghānaṃ ādittaṃ, gandhā ādittā, ghānaviññāṇaṃ ādittaṃ, ghānasamphasso āditto, yampidaṃ ghānasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tampi ādittaṃ. Kena ādittaṃ. Ādittaṃ rāgagginā dosagginā […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "The nose is burning, odours are burning, nose-consciousness is burning, nose-contact is burning; and whatever feeling arises dependent on nose-contact — pleasant, painful or neither — that too is burning. Burning with what? Burning with the fire of greed, the fire of hatred, the fire of delusion; burning with birth, ageing and death, with sorrow, lamentation, pain, grief and despair,"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ราคัคคินา โทสัคคินา โมหัคคินา",
+     "pali_roman": "rāgagginā dosagginā mohagginā",
+     "meaning": "'with the fire of greed, of hatred, of delusion' — the three fires the sermon names, preached to ascetics whose practice was tending fires"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0389.PNG",
+     "issue": "‼ A COMMA WITH NO SPACE AFTER IT: โสตะวิญญาณัง อาทิตตัง,โสตะสัมผัสโส, read at 6x. The eye paragraph above it and the nose paragraph below both have a space at the same point. Reproduced as printed — the third such spaceless comma in this stretch, after page 116's and page 210's."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0389.PNG",
+     "issue": "THE EYE PARAGRAPH CARRIES THE FRAMING SENTENCE AND AN EXTRA ภิกขะเว: it opens สัพพัง ภิกขะเว อาทิตตัง. กิญจะ ภิกขะเว สัพพัง อาทิตตัง, จักขุง ภิกขะเว อาทิตตัง, where the ear and nose paragraphs simply begin โสตัง อาทิตตัง, and ฆานัง อาทิตตัง,. Read off the sheet rather than assumed parallel."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0389.PNG",
+     "issue": "CUT MID-CLAUSE AT THE PAGE FOOT, so […] is used: the sheet ends …อาทิตตัง ราคัคคินา โทสัคคินา and page 125 continues with โมหัคคินา. COMPLETE it from 125, and bring this record's ENGLISH up to the finished sentence when you do."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0389.PNG",
+     "issue": "THE HEADING CARRIES THE BOOK'S OWN NUMBER, 27. อาทิตตะปะริยายะสุตตัง, recorded as book_number '27'. The nidāna names Gaya and a thousand monks — the fire-worshipping ascetics of the บทขัด's fourth row."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-adittapariyaya-suttam"
+  ],
+  "continues": [
+   "adittapariyaya-suttam"
+  ],
+  "resume_from": {
+   "chant": "adittapariyaya-suttam",
+   "next_verse": 4,
+   "page": 125,
+   "note": "verse 4 is CUT with […] and must be COMPLETED, not restarted; bring its English up at the same time."
+  },
+  "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0389.PNG read end to end, with the บทขัด's rows 3 and 4 re-read at 10x and the ear paragraph's comma at 6x. Page number 124 printed clearly at the top centre. Two chants, two headings, no footnote, no rubric, no colophon.",
+  "notes": "‼ A PHINTHU ฺ (U+0E3A, BELOW the letter) appears in a chanted line for the first time in this run — จิณฺณานุรูปะโต — and the NEXT ROW prints the same ณณ cluster without it. A third mark, distinct from yamakkan (above, clusters) and thanthakhat (above, silence); the yamakkan pass did not touch it. Also a comma with no space in the ear paragraph where the eye and nose paragraphs have one.",
+  "diacritic_exceptions": []
+ }
+}
