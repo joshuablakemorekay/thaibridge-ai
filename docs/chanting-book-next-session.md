@@ -1812,15 +1812,21 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**69 pages are left: 119–186 and 192.**
+**68 pages are left: 120–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–118 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 119, `IMG_0384`** — ⚠️
-`caturappamanna-patho` IS OPEN, **3 units in**, and ⚠️⚠️ **verse 3 is CUT with
-`[…]`**: it must be COMPLETED from 119, not restarted as a new verse. Two of the
-four immeasurables are still to come.
+**115–119 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 120, `IMG_0385`** — ⚠️
+`dhammaniyama-suttam` IS OPEN, **2 units in**, and ⚠️⚠️ **verse 2 is CUT with
+`[…]`** after the single word `ตัง`: COMPLETE it from 120, do not restart it.
+
+⚠️ **WHEN YOU COMPLETE A CUT VERSE, FIX ITS ENGLISH IN THE EARLIER BATCH TOO.**
+The app stores one verse, so its English must be the whole sentence; the batch
+that cut it recorded a hanging half. `check_pages` compares the two and fails
+until they agree. This bit page 118→119 and cost a round trip — the Pali keeps
+its `[…]` in the earlier record (that mark is what tells the completion where to
+join), but the English has to be brought up to the finished text.
 
 ⚠️ **A บทขัด IS COMPLETE WHEN IT REACHES `ภะณามะ เส.`** — that is its closing
 formula, and the sutta printed after it is a DIFFERENT chant, not a

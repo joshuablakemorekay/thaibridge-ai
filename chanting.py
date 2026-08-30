@@ -55228,7 +55228,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
         'id': 'caturappamanna-patho',
         'title_thai': 'จะตุรัปปะมัญญาปาโฐ',
         'title_pali': '',
@@ -55242,6 +55241,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'จะตุรัปปะมัญญาปาโฐ นิฏฐิโต.',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'The Passage on the Four Immeasurables is ended.',
         },
         'verses': [
             # ‼ CHECK [IMG_0383.PNG]: THE HEADING CARRIES THE BOOK'S OWN
@@ -55273,14 +55279,199 @@ CHANTS = [
             #   the formula unfinished; page 119 completes it. This is the
             #   first […] cut of this stretch and it must be COMPLETED from
             #   119 rather than a new verse started there.
+            # ‼ COMPLETED FROM p119: this line was cut by the page break and
+            #   is now whole. Was: กะรุณาสะหะคะเตนะ เจตะสา เอกัง ทิสัง
+            #   ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง.
+            #   อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง,
+            #   กะรุณาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ […]
+            # ‼ CHECK [IMG_0384.PNG]: COMPLETES THE LINE PAGE 118 CUT. That
+            #   sheet ended …เจตะสา วิปุเลนะ มะหัคคะเตนะ […] and this one
+            #   opens อัปปะมาเณนะ อะเวเรนะ… mid-formula. The whole line is
+            #   given here so the […] is replaced, and verse 3 keeps page 118,
+            #   where its text begins.
             {
                 'number': 3,
                 'page': 118,
-                'pali': 'กะรุณาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, กะรุณาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ […]',
-                'pali_roman': 'Karuṇāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, karuṇāsahagatena cetasā vipulena mahaggatena […]',
+                'pali': 'กะรุณาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, กะรุณาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ อัปปะมาเณนะ อะเวเรนะ อัพ๎ยาปัชเฌนะ ผะริต๎วา วิหะระติ.',
+                'pali_roman': 'Karuṇāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, karuṇāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjhena pharitvā viharati.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'He dwells pervading one direction with a heart imbued with compassion, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with compassion — abundant, exalted,',
+                'english': 'He dwells pervading one direction with a heart imbued with compassion, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with compassion — abundant, exalted, measureless, without hostility, without ill will.',
+            },
+            {
+                'number': 4,
+                'page': 119,
+                'pali': 'มุทิตาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, มุทิตาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ อัปปะมาเณนะ อะเวเรนะ อัพ๎ยาปัชเฌนะ ผะริต๎วา วิหะระติ.',
+                'pali_roman': 'Muditāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, muditāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjhena pharitvā viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He dwells pervading one direction with a heart imbued with gladness, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with gladness — abundant, exalted, measureless, without hostility, without ill will.',
+            },
+            # ‼ CHECK [IMG_0384.PNG]: ‼ THE FOUR FORMULAS ARE NOT PUNCTUATED
+            #   ALIKE. Verses 2, 3 and 4 read …ผะริต๎วา วิหะระติ, with a COMMA
+            #   before ตะถา ทุติยัง; verse 5, the equanimity one, has a FULL
+            #   STOP there. All four were read off their sheets separately,
+            #   which is the only reason the difference was caught.
+            {
+                'number': 5,
+                'page': 119,
+                'pali': 'อุเปกขาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ. ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, อุเปกขาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ อัปปะมาเณนะ อะเวเรนะ อัพ๎ยาปัชเฌนะ ผะริต๎วา วิหะระติ.',
+                'pali_roman': 'Upekkhāsahagatena cetasā ekaṃ disaṃ pharitvā viharati. Tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjhena pharitvā viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He dwells pervading one direction with a heart imbued with equanimity, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with equanimity — abundant, exalted, measureless, without hostility, without ill will.',
+            },
+            # ‼ CHECK [IMG_0384.PNG]: ‼ AN EXTRA โย, AND IT IS REPRODUCED. The
+            #   closing sentence reads จะตัสโส อัปปะมัญญาโย โย สัมมะทักขาตาติ,
+            #   read at 5x — a separate โย standing between อัปปะมัญญาโย and
+            #   สัมมะทักขาตาติ. The opening sentence on 118 has จะตัสโส
+            #   อัปปะมัญญาโย สัมมะทักขาตา with no such word. It looks like a
+            #   printer's doubling, but the page prints it and the page is
+            #   what is reproduced.
+            # ‼ CHECK [IMG_0384.PNG]: A COLOPHON, จะตุรัปปะมัญญาปาโฐ นิฏฐิโต.,
+            #   centred below the closing sentence — note นิฏฐิโต, masculine,
+            #   agreeing with ปาโฐ, where the suttas ending in -สุตตัง take
+            #   นิฏฐิตัง. Recorded as the chant's `closing`.
+            {
+                'number': 6,
+                'page': 119,
+                'pali': 'อิมา โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ, จะตัสโส อัปปะมัญญาโย โย สัมมะทักขาตาติ.',
+                'pali_roman': 'Imā kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena, catasso appamaññāyo yo sammadakkhātāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These are the four immeasurables rightly proclaimed by the Blessed One who knows and sees, the Arahant, the Perfectly Awakened One.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'bot-khat-dhammaniyama-suttam',
+        'title_thai': 'บทขัด ธัมมะนิยามะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt tam-má-ní-yaa-má-sùt-dtaŋ',
+        'page_start': 119,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0384.PNG]: THE PAGE HEADING IS SPACED, บทขัด
+            #   ธัมมะนิยามะสุตตัง, where the สารบัญ has it unspaced — the rule
+            #   settled for every บทขัด from page 82 on. The PAGE is
+            #   reproduced, so title_thai is not a key in _CONTENTS_ROMAN and
+            #   the contents test cannot see this chant.
+            # ‼ CHECK [IMG_0384.PNG]: FULL STOPS FALL ON ROWS 1, 4 AND 6 and
+            #   the rest end bare, so the six rows group as 1 / 2-4 / 5-6
+            #   rather than into even couplets. Each row's ending was read
+            #   separately.
+            {
+                'number': 1,
+                'page': 119,
+                'pali': 'ยัง เว นิพพานะญาณัสสะ ญาณัง ปุพเพ ปะวัตตะเต.',
+                'pali_roman': 'Yaṃ ve nibbānañāṇassa ñāṇaṃ pubbe pavattate.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The knowledge that arises before the knowledge of Nibbana —',
+            },
+            {
+                'number': 2,
+                'page': 119,
+                'pali': 'ตัสเสวะ วิสะยีภูตา ยายัง ธัมมะนิยามะตา',
+                'pali_roman': 'Tasseva visayībhūtā yāyaṃ dhammaniyāmatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'that very lawfulness of things which is its object,',
+            },
+            {
+                'number': 3,
+                'page': 119,
+                'pali': 'อะนิจจะตา ทุกขะตา จะ สัพเพสัง จะ อะนัตตะตา',
+                'pali_roman': 'Aniccatā dukkhatā ca sabbesaṃ ca anattatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'impermanence, suffering, and the not-self of all things:',
+            },
+            {
+                'number': 4,
+                'page': 119,
+                'pali': 'ตัสสา ปะกาสะกัง สุตตัง ยัง สัมพุทเธนะ ภาสิตัง.',
+                'pali_roman': 'Tassā pakāsakaṃ suttaṃ yaṃ sambuddhena bhāsitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the discourse that makes it known, spoken by the Awakened One.',
+            },
+            {
+                'number': 5,
+                'page': 119,
+                'pali': 'สาธูนัง ญาณะจาเรนะ ยะถา พุทเธนะ เทสิตัง',
+                'pali_roman': 'Sādhūnaṃ ñāṇacārena yathā buddhena desitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For the good, by the course of knowledge, as the Buddha taught it,',
+            },
+            {
+                'number': 6,
+                'page': 119,
+                'pali': 'โยนิโส ปะฏิปัต๎ยัตถัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Yoniso paṭipatyatthaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and for the sake of wise practice — let us recite that discourse.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
+        'id': 'dhammaniyama-suttam',
+        'title_thai': 'ธัมมะนิยามะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Dhammaniyāmasuttaṃ',
+        'book_number': '25',
+        'page_start': 119,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0384.PNG]: THE HEADING CARRIES THE BOOK'S OWN
+            #   NUMBER, 25. ธัมมะนิยามะสุตตัง, recorded as book_number '25'.
+            #   The nidāna is identical in wording to sutta 23's on page 117
+            #   except for its final punctuation — 117 has ปัจจัสโสสุง, with a
+            #   comma, this has ปัจจัสโสสุง. with a full stop — so it was read
+            #   off this sheet rather than copied.
+            {
+                'number': 1,
+                'page': 119,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying near Savatthi, in Jeta's Grove, Anathapindika's park. There he addressed the monks: 'Monks.' 'Venerable sir,' they replied, and the Blessed One said this.",
+            },
+            # ‼ CHECK [IMG_0384.PNG]: ‼ CUT MID-SENTENCE AT THE PAGE FOOT, so
+            #   […] is used, and the cut falls after a single word: the sheet
+            #   ends …สัพเพ สังขารา อะนิจจาติ. ตัง and page 120 continues from
+            #   there. It must be COMPLETED from 120 rather than a new verse
+            #   started.
+            {
+                'number': 2,
+                'page': 119,
+                'pali': 'อุปปาทา วา ภิกขะเว ตะถาคะตานัง อะนุปปาทา วา ตะถาคะตานัง, ฐิตา วะ สา ธาตุ ธัมมัฏฐิตะตา ธัมมะนิยามะตา สัพเพ สังขารา อะนิจจาติ. ตัง […]',
+                'pali_roman': 'Uppādā vā bhikkhave tathāgatānaṃ anuppādā vā tathāgatānaṃ, ṭhitā va sā dhātu dhammaṭṭhitatā dhammaniyāmatā sabbe saṅkhārā aniccāti. Taṃ […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whether Tathagatas arise or do not arise, monks, that element stands: the stableness of things, the lawfulness of things — that all formations are impermanent. That',
             },
         ],
     },

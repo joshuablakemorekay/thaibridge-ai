@@ -1,0 +1,298 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "caturappamanna-patho",
+   "bot-khat-dhammaniyama-suttam",
+   "dhammaniyama-suttam"
+  ],
+  "pages": [
+   {
+    "page": 119,
+    "file": "IMG_0384.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "caturappamanna-patho",
+    "verses": "3-6",
+    "starts_here": false,
+    "note": "The top half: the tail of the compassion formula that 118 cut, then gladness, equanimity, the closing sentence and a centred colophon."
+   },
+   {
+    "page": 119,
+    "file": "IMG_0384.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-dhammaniyama-suttam",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "The middle. A centred bold heading and six rows of Pali as pādas in two columns."
+   },
+   {
+    "page": 119,
+    "file": "IMG_0384.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "dhammaniyama-suttam",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "The foot. A centred bold heading carrying the book's number 25, the nidāna, and the opening of the first statement, CUT mid-sentence."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "caturappamanna-patho",
+   "continuation_of": "caturappamanna-patho",
+   "closing": {
+    "pali": "จะตุรัปปะมัญญาปาโฐ นิฏฐิโต.",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "The Passage on the Four Immeasurables is ended."
+   },
+   "working_notes": {
+    "invitation": "the บทขัด on 118.",
+    "units": "Four. Verse 3 is COMPLETED here — 118 cut it with […] — and verses 4-6 finish the sutta.",
+    "ordering": "Pali only.",
+    "conventions": "None new.",
+    "pages": "IMG_0384.PNG, page 119. Arrived from 118 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 3,
+     "page": 118,
+     "pali": "กะรุณาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, กะรุณาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ อัปปะมาเณนะ อะเวเรนะ อัพ๎ยาปัชเฌนะ ผะริต๎วา วิหะระติ.",
+     "pali_roman": "Karuṇāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, karuṇāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjhena pharitvā viharati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "He dwells pervading one direction with a heart imbued with compassion, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with compassion — abundant, exalted, measureless, without hostility, without ill will."
+    },
+    {
+     "number": 4,
+     "page": 119,
+     "pali": "มุทิตาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, มุทิตาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ อัปปะมาเณนะ อะเวเรนะ อัพ๎ยาปัชเฌนะ ผะริต๎วา วิหะระติ.",
+     "pali_roman": "Muditāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, muditāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjhena pharitvā viharati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "He dwells pervading one direction with a heart imbued with gladness, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with gladness — abundant, exalted, measureless, without hostility, without ill will."
+    },
+    {
+     "number": 5,
+     "page": 119,
+     "pali": "อุเปกขาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ. ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, อุเปกขาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ อัปปะมาเณนะ อะเวเรนะ อัพ๎ยาปัชเฌนะ ผะริต๎วา วิหะระติ.",
+     "pali_roman": "Upekkhāsahagatena cetasā ekaṃ disaṃ pharitvā viharati. Tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, upekkhāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjhena pharitvā viharati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "He dwells pervading one direction with a heart imbued with equanimity, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with equanimity — abundant, exalted, measureless, without hostility, without ill will."
+    },
+    {
+     "number": 6,
+     "page": 119,
+     "pali": "อิมา โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ, จะตัสโส อัปปะมัญญาโย โย สัมมะทักขาตาติ.",
+     "pali_roman": "Imā kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena, catasso appamaññāyo yo sammadakkhātāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "These are the four immeasurables rightly proclaimed by the Blessed One who knows and sees, the Arahant, the Perfectly Awakened One."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "มุทิตา / อุเปกขา",
+     "pali_roman": "muditā / upekkhā",
+     "meaning": "gladness at another's good fortune, and equanimity — the third and fourth immeasurables, completing the set the บทขัด on 118 announced"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0384.PNG",
+     "issue": "COMPLETES THE LINE PAGE 118 CUT. That sheet ended …เจตะสา วิปุเลนะ มะหัคคะเตนะ […] and this one opens อัปปะมาเณนะ อะเวเรนะ… mid-formula. The whole line is given here so the […] is replaced, and verse 3 keeps page 118, where its text begins."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0384.PNG",
+     "issue": "‼ THE FOUR FORMULAS ARE NOT PUNCTUATED ALIKE. Verses 2, 3 and 4 read …ผะริต๎วา วิหะระติ, with a COMMA before ตะถา ทุติยัง; verse 5, the equanimity one, has a FULL STOP there. All four were read off their sheets separately, which is the only reason the difference was caught."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0384.PNG",
+     "issue": "‼ AN EXTRA โย, AND IT IS REPRODUCED. The closing sentence reads จะตัสโส อัปปะมัญญาโย โย สัมมะทักขาตาติ, read at 5x — a separate โย standing between อัปปะมัญญาโย and สัมมะทักขาตาติ. The opening sentence on 118 has จะตัสโส อัปปะมัญญาโย สัมมะทักขาตา with no such word. It looks like a printer's doubling, but the page prints it and the page is what is reproduced."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0384.PNG",
+     "issue": "A COLOPHON, จะตุรัปปะมัญญาปาโฐ นิฏฐิโต., centred below the closing sentence — note นิฏฐิโต, masculine, agreeing with ปาโฐ, where the suttas ending in -สุตตัง take นิฏฐิตัง. Recorded as the chant's `closing`."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-dhammaniyama-suttam",
+   "title_thai": "บทขัด ธัมมะนิยามะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt tam-má-ní-yaa-má-sùt-dtaŋ",
+   "page_start": 119,
+   "working_notes": {
+    "invitation": "none of its own; a บทขัด IS the invitation to what follows.",
+    "units": "Six, one per printed ROW — two pādas in two columns, joined by a space.",
+    "ordering": "Pali only.",
+    "conventions": "Two-column pādas.",
+    "pages": "IMG_0384.PNG, page 119. STARTS and ENDS on this sheet."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 119,
+     "pali": "ยัง เว นิพพานะญาณัสสะ ญาณัง ปุพเพ ปะวัตตะเต.",
+     "pali_roman": "Yaṃ ve nibbānañāṇassa ñāṇaṃ pubbe pavattate.",
+     "thai": "",
+     "paiboon": "",
+     "english": "The knowledge that arises before the knowledge of Nibbana —"
+    },
+    {
+     "number": 2,
+     "page": 119,
+     "pali": "ตัสเสวะ วิสะยีภูตา ยายัง ธัมมะนิยามะตา",
+     "pali_roman": "Tasseva visayībhūtā yāyaṃ dhammaniyāmatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "that very lawfulness of things which is its object,"
+    },
+    {
+     "number": 3,
+     "page": 119,
+     "pali": "อะนิจจะตา ทุกขะตา จะ สัพเพสัง จะ อะนัตตะตา",
+     "pali_roman": "Aniccatā dukkhatā ca sabbesaṃ ca anattatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "impermanence, suffering, and the not-self of all things:"
+    },
+    {
+     "number": 4,
+     "page": 119,
+     "pali": "ตัสสา ปะกาสะกัง สุตตัง ยัง สัมพุทเธนะ ภาสิตัง.",
+     "pali_roman": "Tassā pakāsakaṃ suttaṃ yaṃ sambuddhena bhāsitaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "the discourse that makes it known, spoken by the Awakened One."
+    },
+    {
+     "number": 5,
+     "page": 119,
+     "pali": "สาธูนัง ญาณะจาเรนะ ยะถา พุทเธนะ เทสิตัง",
+     "pali_roman": "Sādhūnaṃ ñāṇacārena yathā buddhena desitaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "For the good, by the course of knowledge, as the Buddha taught it,"
+    },
+    {
+     "number": 6,
+     "page": 119,
+     "pali": "โยนิโส ปะฏิปัต๎ยัตถัง ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Yoniso paṭipatyatthaṃ taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and for the sake of wise practice — let us recite that discourse."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ธัมมะนิยามะตา",
+     "pali_roman": "dhammaniyāmatā",
+     "meaning": "'the lawfulness of things' — that impermanence, suffering and not-self hold whether or not a Buddha arises. The sutta it introduces states exactly that"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0384.PNG",
+     "issue": "THE PAGE HEADING IS SPACED, บทขัด ธัมมะนิยามะสุตตัง, where the สารบัญ has it unspaced — the rule settled for every บทขัด from page 82 on. The PAGE is reproduced, so title_thai is not a key in _CONTENTS_ROMAN and the contents test cannot see this chant."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0384.PNG",
+     "issue": "FULL STOPS FALL ON ROWS 1, 4 AND 6 and the rest end bare, so the six rows group as 1 / 2-4 / 5-6 rather than into even couplets. Each row's ending was read separately."
+    }
+   ]
+  },
+  {
+   "id": "dhammaniyama-suttam",
+   "title_thai": "ธัมมะนิยามะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Dhammaniyāmasuttaṃ",
+   "book_number": "25",
+   "page_start": 119,
+   "continues": true,
+   "working_notes": {
+    "invitation": "the บทขัด above it on this sheet.",
+    "units": "Two: the nidāna and the opening of the first of the three statements.",
+    "ordering": "Pali only.",
+    "conventions": "None new.",
+    "pages": "IMG_0384.PNG, page 119. STARTS here and CONTINUES onto page 120."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 119,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ.",
+     "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was staying near Savatthi, in Jeta's Grove, Anathapindika's park. There he addressed the monks: 'Monks.' 'Venerable sir,' they replied, and the Blessed One said this."
+    },
+    {
+     "number": 2,
+     "page": 119,
+     "pali": "อุปปาทา วา ภิกขะเว ตะถาคะตานัง อะนุปปาทา วา ตะถาคะตานัง, ฐิตา วะ สา ธาตุ ธัมมัฏฐิตะตา ธัมมะนิยามะตา สัพเพ สังขารา อะนิจจาติ. ตัง […]",
+     "pali_roman": "Uppādā vā bhikkhave tathāgatānaṃ anuppādā vā tathāgatānaṃ, ṭhitā va sā dhātu dhammaṭṭhitatā dhammaniyāmatā sabbe saṅkhārā aniccāti. Taṃ […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "Whether Tathagatas arise or do not arise, monks, that element stands: the stableness of things, the lawfulness of things — that all formations are impermanent. That"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ฐิตา วะ สา ธาตุ",
+     "pali_roman": "ṭhitā va sā dhātu",
+     "meaning": "'that element just stands' — the point of the sutta. What the Buddha discovers he does not invent; it holds whether or not anyone teaches it"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0384.PNG",
+     "issue": "‼ CUT MID-SENTENCE AT THE PAGE FOOT, so […] is used, and the cut falls after a single word: the sheet ends …สัพเพ สังขารา อะนิจจาติ. ตัง and page 120 continues from there. It must be COMPLETED from 120 rather than a new verse started."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0384.PNG",
+     "issue": "THE HEADING CARRIES THE BOOK'S OWN NUMBER, 25. ธัมมะนิยามะสุตตัง, recorded as book_number '25'. The nidāna is identical in wording to sutta 23's on page 117 except for its final punctuation — 117 has ปัจจัสโสสุง, with a comma, this has ปัจจัสโสสุง. with a full stop — so it was read off this sheet rather than copied."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "caturappamanna-patho",
+   "bot-khat-dhammaniyama-suttam"
+  ],
+  "continues": [
+   "dhammaniyama-suttam"
+  ],
+  "resume_from": {
+   "chant": "dhammaniyama-suttam",
+   "next_verse": 2,
+   "page": 120,
+   "note": "verse 2 is CUT with […] and must be COMPLETED, not restarted."
+  },
+  "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0384.PNG read end to end, with the closing sentence of sutta 24 re-read at 5x. Page number 119 printed clearly at the top centre. Three chants, one colophon, two headings, no footnote, no rubric.",
+  "notes": "‼ AN EXTRA โย in sutta 24's closing sentence — จะตัสโส อัปปะมัญญาโย โย สัมมะทักขาตาติ — where its opening sentence on 118 has none. Looks like a printer's doubling; reproduced because the page prints it. ‼ The four immeasurable formulas are NOT punctuated alike: the equanimity one takes a full stop where the other three take a comma.",
+  "diacritic_exceptions": [
+   "va/vā — different words, not a spelling slip: va is the emphatic particle in ฐิตา วะ สา ธาตุ, 'that element JUST stands', and vā is 'or' in อุปปาทา วา … อะนุปปาทา วา. Both are printed in sutta 25's opening sentence."
+  ]
+ }
+}

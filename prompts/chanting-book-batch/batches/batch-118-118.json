@@ -227,7 +227,7 @@
      "pali_roman": "Karuṇāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, karuṇāsahagatena cetasā vipulena mahaggatena […]",
      "thai": "",
      "paiboon": "",
-     "english": "He dwells pervading one direction with a heart imbued with compassion, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with compassion — abundant, exalted,"
+     "english": "He dwells pervading one direction with a heart imbued with compassion, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with compassion — abundant, exalted, measureless, without hostility, without ill will."
     }
    ],
    "vocabulary": [
@@ -252,6 +252,11 @@
      "verse": 1,
      "file": "IMG_0383.PNG",
      "issue": "THE HEADING CARRIES THE BOOK'S OWN NUMBER, 24. จะตุรัปปะมัญญาปาโฐ, recorded as book_number '24'."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0383.PNG",
+     "issue": "‼ THE ENGLISH HERE IS THE COMPLETED ONE, not the hanging half this page prints. Page 118 cuts the Pali mid-formula with […] and page 119 finishes it; the app stores ONE verse, so its English has to be the whole sentence or it would read as a fragment. This record was updated when 119 supplied the rest — check_pages caught the disagreement, which is what it is for. The Pali on this page still carries its […], because that mark is what tells the completion where to join."
     }
    ]
   }
