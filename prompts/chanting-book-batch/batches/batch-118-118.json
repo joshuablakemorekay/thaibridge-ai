@@ -1,0 +1,281 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "pahana-bhavana-suttam",
+   "bot-khat-caturappamanna-patha",
+   "caturappamanna-patho"
+  ],
+  "pages": [
+   {
+    "page": 118,
+    "file": "IMG_0383.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "pahana-bhavana-suttam",
+    "verses": "3-4",
+    "starts_here": false,
+    "blocks": [
+     {
+      "type": "footnote",
+      "thai": "1. อํ. ทุก. 20/74-75",
+      "english": "Aṅguttara Nikāya, Book of Twos, 20/74-75.",
+      "english_unverified": true
+     }
+    ],
+    "note": "The top third: the develop-the-wholesome paragraph and the closing sentence, with a footnote below a rule at the page foot. NO colophon is printed for this sutta."
+   },
+   {
+    "page": 118,
+    "file": "IMG_0383.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-caturappamanna-patha",
+    "verses": "1-5",
+    "starts_here": true,
+    "note": "The middle. A centred bold heading and five rows of Pali as pādas in two columns, the last row breaking a compound across the column gap with a hyphen."
+   },
+   {
+    "page": 118,
+    "file": "IMG_0383.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "caturappamanna-patho",
+    "verses": "1-3",
+    "starts_here": true,
+    "note": "The lower third. A centred bold heading carrying the book's number 24, the framing sentence, then loving-kindness and compassion. Verse 3 is CUT mid-sentence at the page foot."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "pahana-bhavana-suttam",
+   "continuation_of": "pahana-bhavana-suttam",
+   "working_notes": {
+    "invitation": "the บทขัด on 117.",
+    "units": "Two, verses 3-4, finishing the sutta.",
+    "ordering": "Pali only.",
+    "conventions": "No colophon — see the checks.",
+    "pages": "IMG_0383.PNG, page 118. Arrived from 117 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 3,
+     "page": 118,
+     "pali": "กุสะลัง ภิกขะเว ภาเวถะ, สักกา ภิกขะเว กุสะลัง ภาเวตุง, โน เจตัง ภิกขะเว สักกา อะภะวิสสะ กุสะลัง ภาเวตุง. นาหัง เอวัง วะเทยยัง กุสะลัง ภิกขะเว ภาเวถาติ. ยัส๎มา จะ โข ภิกขะเว สักกา กุสะลัง ภาเวตุง. ตัส๎มาหัง เอวัง วะทามิ กุสะลัง ภิกขะเว ภาเวถาติ. กุสะลัญจะ หิทัง ภิกขะเว ภาวิตัง อะหิตายะ ทุกขายะ สังวัตเตยยะ, นาหัง เอวัง วะเทยยัง กุสะลัง ภิกขะเว ภาเวถาติ, ยัส๎มา จะ โข ภิกขะเว กุสะลัง ภาวิตัง หิตายะ สุขายะ สังวัตตะติ, ตัส๎มาหัง เอวัง วะทามิ กุสะลัง ภิกขะเว ภาเวถาติ.",
+     "pali_roman": "Kusalaṃ bhikkhave bhāvetha, sakkā bhikkhave kusalaṃ bhāvetuṃ, no cetaṃ bhikkhave sakkā abhavissa kusalaṃ bhāvetuṃ. Nāhaṃ evaṃ vadeyyaṃ kusalaṃ bhikkhave bhāvethāti. Yasmā ca kho bhikkhave sakkā kusalaṃ bhāvetuṃ. Tasmāhaṃ evaṃ vadāmi kusalaṃ bhikkhave bhāvethāti. Kusalañca hidaṃ bhikkhave bhāvitaṃ ahitāya dukkhāya saṃvatteyya, nāhaṃ evaṃ vadeyyaṃ kusalaṃ bhikkhave bhāvethāti, yasmā ca kho bhikkhave kusalaṃ bhāvitaṃ hitāya sukhāya saṃvattati, tasmāhaṃ evaṃ vadāmi kusalaṃ bhikkhave bhāvethāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Develop the wholesome, monks. It can be done. If it could not be done I would not say so; but because it can, I say: develop the wholesome. And if developing it led to harm and suffering I would not say so; but because developing it leads to welfare and happiness, I say: develop the wholesome."
+    },
+    {
+     "number": 4,
+     "page": 118,
+     "pali": "อิทะมะโวจะ ภะคะวา อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.",
+     "pali_roman": "Idamavoca bhagavā attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus spoke the Blessed One, and those monks delighted in his words."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปะชะหะถะ / ภาเวถะ",
+     "pali_roman": "pajahatha / bhāvetha",
+     "meaning": "'abandon' and 'develop' — the two imperatives the sutta is built on, one paragraph each, and the two words its title takes as ปะหานะ and ภาวะนา"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0383.PNG",
+     "issue": "THE SECOND PARAGRAPH IS THE FIRST ONE INVERTED, word for word, with ปะชะหะถะ replaced by ภาเวถะ and อะกุสะลัง by กุสะลัง throughout. It was read off the sheet in full rather than derived from page 117's paragraph, because the two differ in more than those two words: this one has a FULL STOP after สักกา กุสะลัง ภาเวตุง where 117 has a comma, and a COMMA after สังวัตเตยยะ where 117 has one too but then a different break. Punctuation was taken from this sheet alone."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0383.PNG",
+     "issue": "‼ NO COLOPHON FOR THIS SUTTA. Page 117's sutta closed with a centred ภิกขุอะปะริหานิยะธัมมะสุตตัง นิฏฐิตัง.; this one simply ends and the next บทขัด's heading follows. Recorded as having no `closing` — that is what the page shows, not an omission."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0383.PNG",
+     "issue": "A FOOTNOTE, marked with a superscript 1 on verse 4 and printed below a rule at the page foot: 1. อํ. ทุก. 20/74-75. Note the citation uses ARABIC numerals, as page 117's instruction line did, and that ทุก. carries no phinthu where page 115's ฉกฺก. does. Recorded as a page block."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-caturappamanna-patha",
+   "title_thai": "บทขัด จะตุรัปปะมัญญาปาฐะ",
+   "title_pali": "",
+   "title_roman": "bòt-kàt jà-dtù-ràp-bpà-man-yaa-bpaa-tà",
+   "page_start": 118,
+   "working_notes": {
+    "invitation": "none of its own; a บทขัด IS the invitation to what follows.",
+    "units": "Five, one per printed ROW — two pādas in two columns, joined by a space.",
+    "ordering": "Pali only.",
+    "conventions": "A hyphen at the column gap — see the checks.",
+    "pages": "IMG_0383.PNG, page 118. STARTS and ENDS on this sheet."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 118,
+     "pali": "ยาสาปะมาณะกา สัตตา ภาวะนานัง หิ โคจะโร",
+     "pali_roman": "Yāsāpamāṇakā sattā bhāvanānaṃ hi gocaro",
+     "thai": "",
+     "paiboon": "",
+     "english": "Beings without measure are the range of these developments;"
+    },
+    {
+     "number": 2,
+     "page": 118,
+     "pali": "ตัพพาหะสาปะมัญญาติ ตา ภาวะนา สุวิสสุตา.",
+     "pali_roman": "Tabbāhasāpamaññāti tā bhāvanā suvissutā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and so those developments are well known as the immeasurables."
+    },
+    {
+     "number": 3,
+     "page": 118,
+     "pali": "วิยาปาทะวิเหสานัง อะรัต๎ยา ปะฏิฆัสสะ จะ",
+     "pali_roman": "Viyāpādavihesānaṃ aratyā paṭighassa ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "For ill will, for cruelty, for discontent and for aversion,"
+    },
+    {
+     "number": 4,
+     "page": 118,
+     "pali": "สัมมะเทวะ ปะหานายะ สังวัตตันติ ยะถากะมัง.",
+     "pali_roman": "Sammadeva pahānāya saṃvattanti yathākamaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "they lead to right abandoning, each in its own order."
+    },
+    {
+     "number": 5,
+     "page": 118,
+     "pali": "ตาสัมปะกาสะกัง ธัมมะ- ปะริยายัง ภะณามะ เส",
+     "pali_roman": "Tāsampakāsakaṃ dhamma- pariyāyaṃ bhaṇāma se",
+     "thai": "",
+     "paiboon": "",
+     "english": "Let us recite the exposition of the Dhamma that makes them known."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อะปะมัญญา",
+     "pali_roman": "appamaññā",
+     "meaning": "'the immeasurables' — so called, this verse says, because their object is beings without measure. The sutta that follows gives all four"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 5,
+     "file": "IMG_0383.PNG",
+     "issue": "‼ A HYPHEN AT THE COLUMN GAP, AND IT IS KEPT. The left column ends ตาสัมปะกาสะกัง ธัมมะ- and the right begins ปะริยายัง, splitting ธัมมะปะริยายัง across the two columns. Read at 5x. Both halves sit on the same printed LINE — the columns are one line, not two — so this is the mid-line case ruled on at 213 and 214 and it is reproduced, hyphen and space. Contrast page 116, where the hyphen fell at the right MARGIN with the rest on the next line: that is word-wrap and was dropped."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0383.PNG",
+     "issue": "FULL STOPS FALL ON THE EVEN ROWS — verses 2 and 4 end in one, verses 1 and 3 end bare — so the five rows are really two closed couplets and a fifth line. Verse 5 ends WITHOUT a stop even though it closes the บทขัด."
+    }
+   ]
+  },
+  {
+   "id": "caturappamanna-patho",
+   "title_thai": "จะตุรัปปะมัญญาปาโฐ",
+   "title_pali": "",
+   "title_roman": "Caturappamaññāpāṭho",
+   "book_number": "24",
+   "page_start": 118,
+   "continues": true,
+   "working_notes": {
+    "invitation": "the บทขัด above it on this sheet.",
+    "units": "Three: the framing sentence, then loving-kindness and compassion. Two more of the four are still to come.",
+    "ordering": "Pali only.",
+    "conventions": "None new.",
+    "pages": "IMG_0383.PNG, page 118. STARTS here and CONTINUES onto page 119."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 118,
+     "pali": "อัตถิ โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ, จะตัสโส อัปปะมัญญาโย สัมมะทักขาตา.",
+     "pali_roman": "Atthi kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena, catasso appamaññāyo sammadakkhātā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "There are, declared by the Blessed One who knows and sees, the Arahant, the Perfectly Awakened One, four immeasurables rightly proclaimed."
+    },
+    {
+     "number": 2,
+     "page": 118,
+     "pali": "อิธะ ภิกขุ เมตตาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, เมตตาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ อัปปะมาเณนะ อะเวเรนะ อัพ๎ยาปัชเฌนะ ผะริต๎วา วิหะระติ.",
+     "pali_roman": "Idha bhikkhu mettāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, mettāsahagatena cetasā vipulena mahaggatena appamāṇena averena abyāpajjhena pharitvā viharati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Here a monk dwells pervading one direction with a heart imbued with loving-kindness, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with loving-kindness — abundant, exalted, measureless, without hostility, without ill will."
+    },
+    {
+     "number": 3,
+     "page": 118,
+     "pali": "กะรุณาสะหะคะเตนะ เจตะสา เอกัง ทิสัง ผะริต๎วา วิหะระติ, ตะถา ทุติยัง ตะถา ตะติยัง ตะถา จะตุตถัง. อิติ อุทธะมะโธ ติริยัง สัพพะธิ สัพพัตตะตายะ สัพพาวันตัง โลกัง, กะรุณาสะหะคะเตนะ เจตะสา วิปุเลนะ มะหัคคะเตนะ […]",
+     "pali_roman": "Karuṇāsahagatena cetasā ekaṃ disaṃ pharitvā viharati, tathā dutiyaṃ tathā tatiyaṃ tathā catutthaṃ. Iti uddhamadho tiriyaṃ sabbadhi sabbattatāya sabbāvantaṃ lokaṃ, karuṇāsahagatena cetasā vipulena mahaggatena […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "He dwells pervading one direction with a heart imbued with compassion, likewise the second, the third and the fourth; so above, below, across, everywhere, to all as to himself, he dwells pervading the whole world with a heart imbued with compassion — abundant, exalted,"
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อัพ๎ยาปัชเฌนะ",
+     "pali_roman": "abyāpajjhena",
+     "meaning": "'without ill will'. It closes the formula for each of the four, and the บทขัด above names วิยาปาทะ, ill will, as the first thing they abandon"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 3,
+     "file": "IMG_0383.PNG",
+     "issue": "‼ CUT MID-SENTENCE AT THE PAGE FOOT, so […] is used. The sheet ends …เจตะสา วิปุเลนะ มะหัคคะเตนะ with the formula unfinished; page 119 completes it. This is the first […] cut of this stretch and it must be COMPLETED from 119 rather than a new verse started there."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0383.PNG",
+     "issue": "THE FORMULA IS PRINTED IN FULL FOR EACH OF THE FOUR, never abbreviated with ฯเปฯ. Verses 2 and 3 are identical but for เมตตา against กะรุณา, and both were read off the sheet separately."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0383.PNG",
+     "issue": "THE HEADING CARRIES THE BOOK'S OWN NUMBER, 24. จะตุรัปปะมัญญาปาโฐ, recorded as book_number '24'."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "pahana-bhavana-suttam",
+   "bot-khat-caturappamanna-patha"
+  ],
+  "continues": [
+   "caturappamanna-patho"
+  ],
+  "resume_from": {
+   "chant": "caturappamanna-patho",
+   "next_verse": 3,
+   "page": 119,
+   "note": "verse 3 is CUT with […] and must be COMPLETED, not restarted."
+  },
+  "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0383.PNG read end to end, with the column-gap hyphen and the footnote re-read at 5x. Page number 118 printed clearly at the top centre. Three chants, one footnote, two headings, no colophon, no rubric.",
+  "notes": "‼ A HYPHEN AT THE COLUMN GAP — ธัมมะ- / ปะริยายัง — and it IS kept, because both halves sit on one printed line. That is the mid-line case from 213-214, not page 116's word-wrap at the right margin, which was dropped. Also: sutta 23 ends with NO colophon where 22 had one, and verse 3 of sutta 24 is cut mid-sentence with […].",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — different words, not a spelling slip: bhikkhu is the nominative singular, in อิธะ ภิกขุ, and bhikkhū the plural, in เต ภิกขู closing sutta 23. Both are printed on this sheet."
+  ]
+ }
+}

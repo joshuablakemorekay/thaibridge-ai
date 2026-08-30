@@ -1812,13 +1812,15 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**70 pages are left: 118–186 and 192.**
+**69 pages are left: 119–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–117 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 118, `IMG_0383`** — ⚠️
-`pahana-bhavana-suttam` IS OPEN, **2 units in, resume at verse 3**.
+**115–118 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 119, `IMG_0384`** — ⚠️
+`caturappamanna-patho` IS OPEN, **3 units in**, and ⚠️⚠️ **verse 3 is CUT with
+`[…]`**: it must be COMPLETED from 119, not restarted as a new verse. Two of the
+four immeasurables are still to come.
 
 ⚠️ **A บทขัด IS COMPLETE WHEN IT REACHES `ภะณามะ เส.`** — that is its closing
 formula, and the sutta printed after it is a DIFFERENT chant, not a
@@ -1826,12 +1828,13 @@ continuation. Page 115's บทขัด was wrongly left marked as continuing f
 because of this; the marker was cleared on 117.
 
 ⚠️ **A HYPHEN MEANS TWO DIFFERENT THINGS in this book, and they are handled
-oppositely.** At a **line end** it is word-wrap — `สันนิปาตะ-` / `พะหุลา` on
-116 — and it is DROPPED, because the app stores no line breaks and keeping it
-would corrupt a word the book does not break. **Mid-line**, with both halves on
-the same printed line, it marks a pāda boundary inside a compound —
-`สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร` on 213, `ขิปปา- ภิญโญ` on 214 — and
-it is KEPT, in the Thai and in the roman alike.
+oppositely. The test is WHERE IT FALLS.**
+
+| where | example | what to do |
+|---|---|---|
+| at the **right margin**, rest on the next line | 116 `สันนิปาตะ-` / `พะหุลา` | **DROP it** — word-wrap. The app stores no line breaks, so keeping it corrupts a word the book does not break |
+| **mid-line**, both halves on one printed line | 213 `สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร`, 214 `ขิปปา- ภิญโญ` | **KEEP it** — a pāda boundary falling inside a compound |
+| **at the column gap** in a two-column setting | 118 `ธัมมะ-` / `ปะริยายัง` | **KEEP it** — the two columns are ONE line, so this is the mid-line case |
 
 **193–245 is finished and continuous.** The translated section is done: the
 forward pass took 193–216 and the backward pass met it at 217. Nothing in that
