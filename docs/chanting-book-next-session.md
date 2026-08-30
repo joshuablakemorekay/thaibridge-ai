@@ -189,46 +189,51 @@ Three things page 203 turned up that change how later pages are read:
    the book. Expect the same shape on 204 onward — the chant has eight
    stanzas.
 
-## ‼️ OPEN FOR JOSH — the cluster mark: yamakkan ๎, not thanthakhat ์
+## ✅ SETTLED — the cluster mark is YAMAKKAN ๎, and the whole book now uses it
 
-**What the book prints.** A Pali consonant cluster written in Thai script takes
-**yamakkan ๎** (U+0E4E) — an angular zig-zag. It is NOT thanthakhat ์
-(U+0E4C), which is a closed ring with a tail and means "this letter is silent".
-At ordinary zoom the two are indistinguishable, which is how the drift happened.
+A Pali consonant cluster in Thai script takes **yamakkan ๎ (U+0E4E)**, an
+angular zig-zag — NOT thanthakhat ์ (U+0E4C), a closed ring with a tail, which
+in Thai means the letter under it is **silent**. Below about 10× the two are
+indistinguishable; that is how a large part of this file came to use the wrong
+one.
 
-**Proved on the photographs at 12–18×**, five words on two pages:
+**Proved at 12–18× at BOTH ends of the book**, so it is the printer's
+convention throughout, not a feature of one section:
 
-| page | word | mark |
-|---|---|---|
-| 206 | `ท๎วายะ` | yamakkan |
-| 206 | `พ๎รัห๎มะจะริยานุคคะหายะ` | yamakkan, twice |
-| 206 | `ยาต๎รา` | yamakkan |
-| 203 | `ค๎รีเมขะลัง` | yamakkan |
-| 205/206 | `อุณหัสสะ` | **no mark at all** — ณ is bare; the hook belongs to ห as ั |
+| Pali-only half | translated half |
+|---|---|
+| p2 `พ๎รัห๎มะจะริยัง` | p203 `ค๎รีเมขะลัง` |
+| p44 `ส๎วากขาโต` | p206 `ท๎วายะ`, `ยาต๎รา` |
+| p115 `สุต๎วานุปะฏิปัต๎ยัตถัง` | p211 `อัต๎ระชัง`, p216 `กัล๎ยาณัง` |
 
-Render the three marks large in any Thai font and compare — that is what settled
-it, and it takes one minute if you want to check.
+To see it yourself: render `ั`, `์` and `๎` large in any Thai font and hold them
+against a crop. Hook, ring-with-tail, zig-zag — three plainly different shapes.
 
-**What was corrected: pages 193–205 only, 25 words.** Every `-plae` chant in
-this lane. The photographs above cover five of them; the rest were corrected by
-the same convention, NOT re-photographed word by word. Independent support: the
-app's own first-pass transcriptions of the same words already use yamakkan —
-`ส๎วากขาโต` ×6, `กัล๎ยาณัง` ×5, `สุต๎วา` ×2, `อุณ๎หัสสะ` ×3.
+**Done 2026-08-30 in one pass (`501547f`): ~700 marks, data and batch records
+together.** ⚠️ **WRITE ALL NEW PALI WITH ๎.** Nine marks came back into the file
+between the pass being written and it being committed, from pages entered
+meanwhile; they were converted too, but a session working in the old habit will
+keep reintroducing them.
 
-**⚠️ WHAT WAS NOT TOUCHED, AND WHY.** The rest of `chanting.py` still holds
-roughly **670 distinct words** spelling clusters with thanthakhat — 34×
-`ส์วากขาโต`, 29× `ตัส์มา`, 24× `อายัส์มะตา`, 19× `ตัส์มิง`, and so on — against
-99 uses of yamakkan. Those belong to other pages and other sessions, several of
-them with comment blocks arguing the case for thanthakhat from the photographs.
-**Fixing them is a decision for Josh, not something to do quietly**, because it
-is a few hundred edits to a file another session is working in, and because
-those comment blocks would need rewriting rather than silently contradicting.
+**The rule, which is also its own safety check.** Convert a mark **only when a
+consonant follows it** — that is what makes it the first member of a cluster. A
+mark that ENDS its word is a Thai silent letter and must be left alone. That is
+what protects `พระวิภังค์`, `อานิสงส์`, `ด้ายสายสิญจน์`, `นพเคราะห์` and
+`อุตตราสงค์` — eleven Thai words that sit in `pali` slots. A first, broader pass
+corrupted all eleven; `check_render` and the variants test caught it.
 
-**The question:** do the same five-word photographic check on any page from the
-Pali-only half of the book. If it is yamakkan there too, the rest of the file
-should be brought over in one deliberate pass. If that half genuinely prints
-thanthakhat, then the book changes convention between its two printings, and
-both stay as they are.
+Two further traps, both hit and both worth knowing:
+
+* **`variants` use `word` and `reading`, not `pali`.** A variant whose word no
+  longer matches its verse fails `TestVariantReadings`.
+* **Do not round-trip the batch JSON through `json.dumps`.** It re-indents the
+  file. The first attempt turned 700 character changes into a 30,000-line diff
+  across 114 files; it was reverted and redone textually, one line per line.
+
+⚠️ The older per-verse comments arguing for thanthakhat are **superseded** —
+chanting.py's module docstring says so at the top. They were written in good
+faith from photographs read at too low a magnification. **Do not change the data
+back to match them.**
 
 ## ✍️ Typography this section uses that must not be tidied
 
