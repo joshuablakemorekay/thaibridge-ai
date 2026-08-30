@@ -1,0 +1,153 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "anattalakkhana-suttam"
+  ],
+  "pages": [
+   {
+    "page": 121,
+    "file": "IMG_0386.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "anattalakkhana-suttam",
+    "verses": "1-6",
+    "starts_here": true,
+    "note": "The whole sheet, one chant. A centred bold heading carrying the book's number 26, the nidāna, then the five aggregates one paragraph each. The last is CUT mid-formula at the page foot. No footnote, no rubric, no colophon."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "anattalakkhana-suttam",
+   "title_thai": "อะนัตตะลักขะณะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Anattalakkhaṇasuttaṃ",
+   "book_number": "26",
+   "page_start": 121,
+   "continues": true,
+   "working_notes": {
+    "invitation": "the บทขัด on 120.",
+    "units": "Six: the nidāna and the five aggregates, the last of them cut.",
+    "ordering": "Pali only.",
+    "conventions": "One formula five times over, with real differences — see the checks.",
+    "pages": "IMG_0386.PNG, page 121. STARTS here and CONTINUES onto page 122."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 121,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา พาราณะสิยัง วิหะระติ อิสิปะตะเน มิคะทาเย. ตัตระ โข ภะคะวา ปัญจะวัคคิเย ภิกขู อามันเตสิ.",
+     "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā bārāṇasiyaṃ viharati isipatane migadāye. Tatra kho bhagavā pañcavaggiye bhikkhū āmantesi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was staying at Benares, in the Deer Park at Isipatana. There he addressed the group of five monks."
+    },
+    {
+     "number": 2,
+     "page": 121,
+     "pali": "รูปัง อะนัตตา, รูปัญจะ หิทัง ภิกขะเว อัตตา อะภะวิสสะ, นะยิทัง รูปัง อาพาธายะ สังวัตเตยยะ, ลัพเภถะ จะ รูเป, เอวัง เม รูปัง โหตุ, เอวัง เม รูปัง มา อะโหสีติ. ยัส๎มา จะ โข ภิกขะเว รูปัง อะนัตตา, ตัส๎มา รูปัง อาพาธายะ สังวัตตะติ, นะ จะ ลัพภะติ รูเป, เอวัง เม รูปัง โหตุ, เอวัง เม รูปัง มา อะโหสีติ.",
+     "pali_roman": "Rūpaṃ anattā, rūpañca hidaṃ bhikkhave attā abhavissa, nayidaṃ rūpaṃ ābādhāya saṃvatteyya, labbhetha ca rūpe, evaṃ me rūpaṃ hotu, evaṃ me rūpaṃ mā ahosīti. Yasmā ca kho bhikkhave rūpaṃ anattā, tasmā rūpaṃ ābādhāya saṃvattati, na ca labbhati rūpe, evaṃ me rūpaṃ hotu, evaṃ me rūpaṃ mā ahosīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, form is not-self. If form were self, it would not lead to affliction, and it would be possible to say of form: 'let my form be thus, let my form not be thus.' But because form is not-self, it leads to affliction, and it is not possible to say of form: 'let my form be thus, let my form not be thus.'"
+    },
+    {
+     "number": 3,
+     "page": 121,
+     "pali": "เวทะนา อะนัตตา, เวทะนา จะ หิทัง ภิกขะเว อัตตา อะภะวิสสะ, นะยิทัง เวทะนา อาพาธายะ สังวัตเตยยะ, ลัพเภถะ จะ เวทะนายะ, เอวัง เม เวทะนา โหตุ, เอวัง เม เวทะนา มา อะโหสีติ. ยัส๎มา จะ โข ภิกขะเว เวทะนา อะนัตตา, ตัส๎มา เวทะนา อาพาธายะ สังวัตตะติ, นะ จะ ลัพภะติ เวทะนายะ, เอวัง เม เวทะนา โหตุ, เอวัง เม เวทะนา มา อะโหสีติ.",
+     "pali_roman": "Vedanā anattā, vedanā ca hidaṃ bhikkhave attā abhavissa, nayidaṃ vedanā ābādhāya saṃvatteyya, labbhetha ca vedanāya, evaṃ me vedanā hotu, evaṃ me vedanā mā ahosīti. Yasmā ca kho bhikkhave vedanā anattā, tasmā vedanā ābādhāya saṃvattati, na ca labbhati vedanāya, evaṃ me vedanā hotu, evaṃ me vedanā mā ahosīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, feeling is not-self. If feeling were self, it would not lead to affliction, and it would be possible to say of feeling: 'let my feeling be thus, let my feeling not be thus.' But because feeling is not-self, it leads to affliction, and it is not possible to say of feeling: 'let my feeling be thus, let my feeling not be thus.'"
+    },
+    {
+     "number": 4,
+     "page": 121,
+     "pali": "สัญญา อะนัตตา, สัญญา จะ หิทัง ภิกขะเว อัตตา อะภะวิสสะ, นะยิทัง สัญญา อาพาธายะ สังวัตเตยยะ, ลัพเภถะ จะ สัญญายะ, เอวัง เม สัญญา โหตุ, เอวัง เม สัญญา มา อะโหสีติ. ยัส๎มา จะ โข ภิกขะเว สัญญา อะนัตตา, ตัส๎มา สัญญา อาพาธายะ สังวัตตะติ, นะ จะ ลัพภะติ สัญญายะ, เอวัง เม สัญญา โหตุ, เอวัง เม สัญญา มา อะโหสีติ.",
+     "pali_roman": "Saññā anattā, saññā ca hidaṃ bhikkhave attā abhavissa, nayidaṃ saññā ābādhāya saṃvatteyya, labbhetha ca saññāya, evaṃ me saññā hotu, evaṃ me saññā mā ahosīti. Yasmā ca kho bhikkhave saññā anattā, tasmā saññā ābādhāya saṃvattati, na ca labbhati saññāya, evaṃ me saññā hotu, evaṃ me saññā mā ahosīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, perception is not-self. If perception were self, it would not lead to affliction, and it would be possible to say of perception: 'let my perception be thus, let my perception not be thus.' But because perception is not-self, it leads to affliction, and it is not possible to say of perception: 'let my perception be thus, let my perception not be thus.'"
+    },
+    {
+     "number": 5,
+     "page": 121,
+     "pali": "สังขารา อะนัตตา, สังขารา จะ หิทัง ภิกขะเว อัตตา อะภะวิสสังสุ, นะยิทัง สังขารา อาพาธายะ สังวัตเตยยุง, ลัพเภถะ จะ สังขาเรสุ, เอวัง เม สังขารา โหนตุ, เอวัง เม สังขารา มา อะเหสุนติ. ยัส๎มา จะ โข ภิกขะเว สังขารา อะนัตตา, ตัส๎มา สังขารา อาพาธายะ สังวัตตันติ, นะ จะ ลัพภะติ สังขาเรสุ, เอวัง เม สังขารา โหนตุ, เอวัง เม สังขารา มา อะเหสุนติ.",
+     "pali_roman": "Saṅkhārā anattā, saṅkhārā ca hidaṃ bhikkhave attā abhavissaṃsu, nayidaṃ saṅkhārā ābādhāya saṃvatteyyuṃ, labbhetha ca saṅkhāresu, evaṃ me saṅkhārā hontu, evaṃ me saṅkhārā mā ahesunti. Yasmā ca kho bhikkhave saṅkhārā anattā, tasmā saṅkhārā ābādhāya saṃvattanti, na ca labbhati saṅkhāresu, evaṃ me saṅkhārā hontu, evaṃ me saṅkhārā mā ahesunti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, formations is not-self. If formations were self, it would not lead to affliction, and it would be possible to say of formations: 'let my formations be thus, let my formations not be thus.' But because formations is not-self, it leads to affliction, and it is not possible to say of formations: 'let my formations be thus, let my formations not be thus.'"
+    },
+    {
+     "number": 6,
+     "page": 121,
+     "pali": "วิญญาณัง อะนัตตา, วิญญาณัญจะ หิทัง ภิกขะเว อัตตา อะภะวิสสะ, นะยิทัง วิญญาณัง อาพาธายะ สังวัตเตยยะ, ลัพเภถะ จะ วิญญาเณ, เอวัง เม วิญญาณัง โหตุ, เอวัง เม วิญญาณัง มา อะโหสีติ, ยัส๎มา จะ โข ภิกขะเว วิญญาณัง อะนัตตา, ตัส๎มา วิญญาณัง อาพาธายะ สังวัตตะติ, นะ จะ ลัพภะติ วิญญาเณ, เอวัง […]",
+     "pali_roman": "Viññāṇaṃ anattā, viññāṇañca hidaṃ bhikkhave attā abhavissa, nayidaṃ viññāṇaṃ ābādhāya saṃvatteyya, labbhetha ca viññāṇe, evaṃ me viññāṇaṃ hotu, evaṃ me viññāṇaṃ mā ahosīti, yasmā ca kho bhikkhave viññāṇaṃ anattā, tasmā viññāṇaṃ ābādhāya saṃvattati, na ca labbhati viññāṇe, evaṃ […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "Monks, consciousness is not-self. If consciousness were self, it would not lead to affliction, and it would be possible to say of consciousness: 'let my consciousness be thus, let my consciousness not be thus.' But because consciousness is not-self, it leads to affliction, and it is not possible to say of consciousness: 'let my consciousness be thus, let my consciousness not be thus. — cut here."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "อาพาธายะ สังวัตเตยยะ",
+     "pali_roman": "ābādhāya saṃvatteyya",
+     "meaning": "'would lead to affliction'. The argument turns on it: what is truly one's own would not turn against one, and could be ordered about"
+    },
+    {
+     "pali": "ปัญจะวัคคิเย ภิกขู",
+     "pali_roman": "pañcavaggiye bhikkhū",
+     "meaning": "the group of five — the first disciples. This sutta is the second discourse, preached to them at Isipatana"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 5,
+     "file": "IMG_0386.PNG",
+     "issue": "‼ THE FORMATIONS VERSE IS PLURAL THROUGHOUT, and the plurals are not guessable from the singular ones: อะภะวิสสังสุ for อะภะวิสสะ, สังวัตเตยยุง for สังวัตเตยยะ, สังขาเรสุ for the locative, โหนตุ for โหตุ, อะเหสุนติ for อะโหสีติ, and สังวัตตันติ for สังวัตตะติ. Six changes in one verse. Read off the sheet word by word rather than derived."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0386.PNG",
+     "issue": "‼ A COMMA WHERE THE OTHERS HAVE A FULL STOP. Verse 6 reads …เอวัง เม วิญญาณัง มา อะโหสีติ, ยัส๎มา… with a COMMA, read at 3.5x, where verses 2, 3 and 4 all have a full stop at the same point in the formula. Reproduced as printed."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0386.PNG",
+     "issue": "CUT MID-FORMULA AT THE PAGE FOOT, so […] is used: the sheet ends …นะ จะ ลัพภะติ วิญญาเณ, เอวัง and page 122 continues. COMPLETE it from 122 rather than starting a new verse, and bring this record's ENGLISH up to the finished sentence when you do."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0386.PNG",
+     "issue": "JUSTIFICATION SPACING IS NOT REPRODUCED. Several lines carry a visibly wider gap between words — นะ จะ  ลัพภะติ in verse 2, สังวัตตันติ, นะ จะ  ลัพภะติ in verse 5 — where the setter has stretched a line to reach the right margin. That is the same class of thing as a line break, which this app stores nowhere, so single spaces are used throughout."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0386.PNG",
+     "issue": "THE HEADING CARRIES THE BOOK'S OWN NUMBER, 26. อะนัตตะลักขะณะสุตตัง, recorded as book_number '26'. The nidāna names Benares and the group of five, not Savatthi — this is the second discourse, and the wording differs from the nidānas on 117 and 119 accordingly."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "continues": [
+   "anattalakkhana-suttam"
+  ],
+  "resume_from": {
+   "chant": "anattalakkhana-suttam",
+   "next_verse": 6,
+   "page": 122,
+   "note": "verse 6 is CUT with […] and must be COMPLETED, not restarted; its English needs bringing up to the finished sentence at the same time."
+  },
+  "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0386.PNG read end to end, with verse 6's punctuation re-read at 3.5x. Page number 121 printed clearly at the top centre. One chant, one heading, no invitation, no rubric, no footnote, no colophon.",
+  "notes": "‼ THE FORMATIONS VERSE IS PLURAL THROUGHOUT — six separate word changes from the singular formula, none of them guessable — and verse 6 takes a COMMA where verses 2-4 take a full stop at the same point. Both found only by reading each paragraph off the sheet. Justification spacing is deliberately NOT reproduced; it belongs to the typesetting, like a line break.",
+  "diacritic_exceptions": []
+ }
+}

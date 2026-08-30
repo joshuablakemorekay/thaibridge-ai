@@ -1812,14 +1812,21 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**67 pages are left: 121–186 and 192.**
+**66 pages are left: 122–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–120 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 121, `IMG_0386`** — ✅ nothing is
-open; `บทขัด อะนัตตะลักขะณะสุตตัง` finished on 120 and the sutta it invites
-should start on 121.
+**115–121 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 122, `IMG_0387`** — ⚠️
+`anattalakkhana-suttam` IS OPEN, **6 units in**, and ⚠️⚠️ **verse 6 is CUT with
+`[…]`** after `…นะ จะ ลัพภะติ วิญญาเณ, เอวัง`: COMPLETE it, and bring its
+ENGLISH up to the finished sentence at the same time.
+
+⚠️ **THE AGGREGATE FORMULA IS NOT COPYABLE.** In `อะนัตตะลักขะณะสุตตัง` the
+formations paragraph is **plural throughout** — `อะภะวิสสังสุ`, `สังวัตเตยยุง`,
+`สังขาเรสุ`, `โหนตุ`, `อะเหสุนติ`, `สังวัตตันติ`: six changes from the singular
+— and the consciousness paragraph takes a **comma** where the others take a full
+stop. Read every paragraph off the sheet.
 
 **A COLOPHON'S ENDING IS NOT PREDICTABLE.** Three in four pages, three different:
 `นิฏฐิตัง.` on 117, `นิฏฐิโต.` on 119 (masculine, agreeing with `ปาโฐ`), and
