@@ -54609,6 +54609,133 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 8; the rest is not in the app yet.
+        'id': 'bhikkhu-aparihaniyadhamma-suttam',
+        'title_thai': 'ภิกขุอะปะริหานิยะธัมมะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Bhikkhuaparihāniyadhammasuttaṃ',
+        'book_number': '22',
+        'page_start': 116,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0381.PNG]: A COMMA WITH NO SPACE AFTER IT:
+            #   มะนะสิกะโรถะ,ภาสิสสามีติ. Read at 4.5x. Every other comma on
+            #   the sheet has a space. Reproduced as printed, the same way
+            #   page 210's ก็ดี,ที่เป็น was.
+            # ‼ CHECK [IMG_0381.PNG]: THE HEADING CARRIES THE BOOK'S OWN
+            #   NUMBER, 22. ภิกขุอะปะริหานิยะธัมมะสุตตัง, recorded as
+            #   book_number '22' — a string, as page 114's sutta records '21'.
+            #   The nidāna itself is unnumbered, so the book's item 1 is the
+            #   app's verse 2 and printed_number carries the book's figure.
+            {
+                'number': 1,
+                'page': 116,
+                'pali': 'เอวัมเม สุตัง เอกัง สะมะยัง ภะคะวา ราชะคะเห วิหะระติ คิชฌะกูเฏ ปัพพะเต. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ. สัตตะ โว ภิกขะเว อะปะริหานิเย ธัมเม เทเสสสามิ, ตัง สุณาถะ สาธุกัง มะนะสิกะโรถะ,ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. กะตะเม จะ ภิกขะเว สัตตะ อะปะริหานิยา ธัมมา.',
+                'pali_roman': 'Evamme sutaṃ ekaṃ samayaṃ bhagavā rājagahe viharati gijjhakūṭe pabbate. Tatra kho bhagavā bhikkhū āmantesi. Satta vo bhikkhave aparihāniye dhamme desessāmi, taṃ suṇātha sādhukaṃ manasikarotha,bhāsissāmīti. Evambhanteti kho te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Katame ca bhikkhave satta aparihāniyā dhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying at Rajagaha, on the Vulture's Peak. There he addressed the monks: 'Monks, I shall teach you seven conditions that lead to no decline. Listen and attend closely; I shall speak.' 'Yes, venerable sir,' those monks replied. The Blessed One said this: And what, monks, are the seven conditions that lead to no decline?",
+            },
+            # ‼ CHECK [IMG_0381.PNG]: ‼ A LINE-BREAK HYPHEN, AND IT IS NOT
+            #   KEPT — which is the OPPOSITE of the ruling on 213 and 214, so
+            #   the difference matters. Here the printed line ends สันนิปาตะ-
+            #   at the right margin and the next line begins พะหุลา: ordinary
+            #   word-wrap hyphenation, read at 6x. The word is สันนิปาตะพะหุลา
+            #   and it is stored whole. On 213 v6 and 214 v11 the hyphen sat
+            #   MID-LINE with both halves on the same line, marking a pāda
+            #   boundary inside a compound, and those ARE kept. The test is
+            #   where the hyphen falls: at a line end it belongs to the
+            #   typesetting, and this app stores no line breaks, so keeping it
+            #   would corrupt a word the book does not actually break.
+            # ‼ CHECK [IMG_0381.PNG]: THE REFRAIN IS PRINTED IN FULL AFTER
+            #   EVERY ITEM, never abbreviated: วุฑฒิเยวะ ภิกขะเว ภิกขูนัง
+            #   ปาฏิกังขา, โน ปะริหานิ. All seven were read off the sheet
+            #   rather than copied from one another.
+            {
+                'number': 2,
+                'page': 116,
+                'printed_number': 1,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว ภิกขู อะภิณหะสันนิปาตา ภะวิสสันติ สันนิปาตะพะหุลา. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานิ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave bhikkhū abhiṇhasannipātā bhavissanti sannipātabahulā. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So long, monks, as the monks meet often and meet in large numbers, growth is to be expected for the monks, not decline.',
+            },
+            {
+                'number': 3,
+                'page': 116,
+                'printed_number': 2,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว ภิกขู สะมัคคา สันนิปะติสสันติ สะมัคคา วุฏฐะหิสสันติ สะมัคคา สังฆะกะระณียานิ กะริสสันติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานิ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave bhikkhū samaggā sannipatissanti samaggā vuṭṭhahissanti samaggā saṅghakaraṇīyāni karissanti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': "So long as they assemble in concord, rise in concord, and do the Sangha's business in concord, growth is to be expected for the monks, not decline.",
+            },
+            {
+                'number': 4,
+                'page': 116,
+                'printed_number': 3,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว ภิกขู อะปัญญัตตัง นะ ปัญญะเปสสันติ ปัญญัตตัง นะ สะมุจฉินทิสสันติ, ยะถาปัญญัตเตสุ สิกขาปะเทสุ สะมาทายะ วัตติสสันติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานิ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave bhikkhū apaññattaṃ na paññapessanti paññattaṃ na samucchindissanti, yathāpaññattesu sikkhāpadesu samādāya vattissanti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So long as they neither lay down what has not been laid down nor abolish what has been, but undertake and train in the training rules as they stand, growth is to be expected for the monks, not decline.',
+            },
+            {
+                'number': 5,
+                'page': 116,
+                'printed_number': 4,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว ภิกขู เย เต ภิกขู เถรา รัตตัญญู จิระปัพพะชิตา สังฆะปิตะโร สังฆะปะริณายะกา, เต สักกะริสสันติ คะรุกะริสสันติ มาเนสสันติ ปูเชสสันติ เตสัญจะ โสตัพพัง มัญญิสสันติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานิ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave bhikkhū ye te bhikkhū therā rattaññū cirapabbajitā saṅghapitaro saṅghapariṇāyakā, te sakkarissanti garukarissanti mānessanti pūjessanti tesañca sotabbaṃ maññissanti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So long as they honour, respect, revere and venerate those monks who are elders, of long standing, long gone forth, fathers and leaders of the Sangha, and think their word worth hearing, growth is to be expected for the monks, not decline.',
+            },
+            {
+                'number': 6,
+                'page': 116,
+                'printed_number': 5,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว ภิกขู อุปปันนายะ ตัณหายะ โปโนพภะวิกายะ โน วะสัง คัจฉิสสันติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานิ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave bhikkhū uppannāya taṇhāya ponobbhavikāya no vasaṃ gacchissanti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So long as they do not fall under the sway of craving that has arisen and leads to renewed being, growth is to be expected for the monks, not decline.',
+            },
+            {
+                'number': 7,
+                'page': 116,
+                'printed_number': 6,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว ภิกขู อารัญญะเกสุ เสนาสะเนสุ สาเปกขา ภะวิสสันติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานิ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave bhikkhū āraññakesu senāsanesu sāpekkhā bhavissanti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So long as they care for lodgings in the forest, growth is to be expected for the monks, not decline.',
+            },
+            # ‼ CHECK [IMG_0381.PNG]: CUT AT THE PAGE TURN. Item 7 is the last
+            #   thing on the sheet and the sutta runs on to page 117. No […]
+            #   is used: the item is complete, ending on its refrain.
+            {
+                'number': 8,
+                'page': 116,
+                'printed_number': 7,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว ภิกขู ปัจจัตตัญเญวะ สะติง อุปัฏฐะเปสสันติ, กินติ อะนาคะตา จะ เปสะลา สะพ๎รัห๎มะจารี อาคัจเฉยยุง, อาคะตา จะ เปสะลา สะพ๎รัห๎มะจารี ผาสุง วิหะเรยยุนติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานิ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave bhikkhū paccattaññeva satiṃ upaṭṭhapessanti, kinti anāgatā ca pesalā sabrahmacārī āgaccheyyuṃ, āgatā ca pesalā sabrahmacārī phāsuṃ vihareyyunti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': "So long as they each establish mindfulness, thinking 'may well-behaved companions in the holy life who have not come, come; and may those who have come dwell at ease', growth is to be expected for the monks, not decline.",
+            },
+        ],
+    },
 ]
 
 

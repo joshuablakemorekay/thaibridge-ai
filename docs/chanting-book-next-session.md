@@ -1812,14 +1812,24 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**75 pages are left: 116–186, 188–190, 192.**
+**71 pages are left: 117–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115 is done** — the forward pass has started into the last stretch from the
-bottom while the backward pass works down from 191. **Resume at 116,
-`IMG_0381`** — ⚠️ `bot-khat-bhikkhu-aparihaniyadhamma-suttam` IS OPEN, 4 rows
-in, resume at verse 5; the sutta itself follows it on 116.
+**115–116 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 190. **Resume at 117, `IMG_0382`** — ⚠️ TWO
+chants are open: `bot-khat-bhikkhu-aparihaniyadhamma-suttam` (4 rows in, but
+the sutta has started, so it may well be finished) and
+`bhikkhu-aparihaniyadhamma-suttam` itself, **8 units in, resume at verse 9**;
+its seven numbered items are done and 117 continues from there.
+
+⚠️ **A HYPHEN MEANS TWO DIFFERENT THINGS in this book, and they are handled
+oppositely.** At a **line end** it is word-wrap — `สันนิปาตะ-` / `พะหุลา` on
+116 — and it is DROPPED, because the app stores no line breaks and keeping it
+would corrupt a word the book does not break. **Mid-line**, with both halves on
+the same printed line, it marks a pāda boundary inside a compound —
+`สัทธาสะติหิโรตตัปปา- ตาปักขันติคุณากะโร` on 213, `ขิปปา- ภิญโญ` on 214 — and
+it is KEPT, in the Thai and in the roman alike.
 
 **193–245 is finished and continuous.** The translated section is done: the
 forward pass took 193–216 and the backward pass met it at 217. Nothing in that
