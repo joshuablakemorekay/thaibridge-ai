@@ -1,0 +1,264 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "bhikkhu-aparihaniyadhamma-suttam",
+   "bot-khat-pahana-bhavana-suttam",
+   "pahana-bhavana-suttam"
+  ],
+  "pages": [
+   {
+    "page": 117,
+    "file": "IMG_0382.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "bhikkhu-aparihaniyadhamma-suttam",
+    "verses": "9-10",
+    "starts_here": false,
+    "blocks": [
+     {
+      "type": "prose",
+      "thai": "สูตรนี้สวดต่อ สีลุทเทสะปาฐะ เมื่อสวดปาติโมกข์ ในวันขึ้น 15 ค่ำ แรม 14 ค่ำ แรม 15 ค่ำ",
+      "english": "This discourse is chanted after the Sīluddesa passage, when the Patimokkha is recited, on the 15th day of the waxing moon and the 14th and 15th of the waning.",
+      "english_unverified": true
+     }
+    ],
+    "note": "The top of the sheet: two units finishing the sutta, its centred colophon, and a Thai instruction line below it saying when the sutta is chanted."
+   },
+   {
+    "page": 117,
+    "file": "IMG_0382.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-pahana-bhavana-suttam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "The middle. A centred bold heading and four rows of Pali set as pādas in two columns. Complete on this sheet."
+   },
+   {
+    "page": 117,
+    "file": "IMG_0382.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "pahana-bhavana-suttam",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "The lower third. A centred bold heading carrying the book's number 23, the nidāna, and one long paragraph. The sutta CONTINUES onto page 118."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bhikkhu-aparihaniyadhamma-suttam",
+   "continuation_of": "bhikkhu-aparihaniyadhamma-suttam",
+   "closing": {
+    "pali": "ภิกขุอะปะริหานิยะธัมมะสุตตัง นิฏฐิตัง.",
+    "pali_roman": "",
+    "thai": "",
+    "paiboon": "",
+    "english": "The Discourse on the Conditions of No Decline for Monks is ended."
+   },
+   "working_notes": {
+    "invitation": "the บทขัด on 115.",
+    "units": "Two, verses 9-10, finishing the sutta.",
+    "ordering": "Pali only.",
+    "conventions": "A colophon, and a Thai instruction paragraph beneath it.",
+    "pages": "IMG_0382.PNG, page 117. Arrived from 116 and ENDS here."
+   },
+   "verses": [
+    {
+     "number": 9,
+     "page": 117,
+     "pali": "ยาวะกีวัญจะ ภิกขะเว อิเม สัตตะ อะปะริหานิยา ธัมมา ภิกขูสุ ฐัสสันติ, อิเมสุ จะ สัตตะสุ อะปะริหานิเยสุ ธัมเมสุ ภิกขู สันทิสสิสสันติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานีติ.",
+     "pali_roman": "Yāvakīvañca bhikkhave ime satta aparihāniyā dhammā bhikkhūsu ṭhassanti, imesu ca sattasu aparihāniyesu dhammesu bhikkhū sandississanti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihānīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "So long as these seven conditions of no decline stand among the monks, and the monks are seen in them, growth is to be expected for the monks, not decline."
+    },
+    {
+     "number": 10,
+     "page": 117,
+     "pali": "อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.",
+     "pali_roman": "Idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus spoke the Blessed One, and those monks delighted in his words."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สันทิสสิสสันติ",
+     "pali_roman": "sandississanti",
+     "meaning": "'will be seen', in the sense of being found present in them. The closing turns on both halves: the conditions must stand, and the monks must be seen to stand in the conditions"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 10,
+     "file": "IMG_0382.PNG",
+     "issue": "A COLOPHON AND A THAI INSTRUCTION, in that order. The centred bold ภิกขุอะปะริหานิยะธัมมะสุตตัง นิฏฐิตัง. closes the sutta and is recorded as the chant's `closing`. Below it the book prints a line of ordinary THAI telling you when to chant it, recorded as a prose block on the page."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0382.PNG",
+     "issue": "‼ ARABIC NUMERALS IN THE INSTRUCTION, where this book normally sets Thai ones. It reads …ในวันขึ้น 15 ค่ำ แรม 14 ค่ำ แรม 15 ค่ำ with 15, 14 and 15 in Arabic figures, read at 3.2x — against ๕ on page 200, ๘ on 205, ๑๘ on 213 and ๑-๕ on 216, all Thai. Reproduced as printed. The pattern so far is that CHANTED text takes Thai numerals and an editorial instruction may take Arabic, but that is an observation from one instance, not a rule."
+    }
+   ]
+  },
+  {
+   "id": "bot-khat-pahana-bhavana-suttam",
+   "title_thai": "บทขัด ปะหานะภาวะนาสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt bpà-hǎa-ná-paa-wá-naa-sùt-dtaŋ",
+   "page_start": 117,
+   "working_notes": {
+    "invitation": "none of its own; a บทขัด IS the invitation to the sutta after it.",
+    "units": "Four, one per printed ROW — two pādas in two columns, joined by a space.",
+    "ordering": "Pali only.",
+    "conventions": "Two-column pādas, as on 114 and 115.",
+    "pages": "IMG_0382.PNG, page 117. STARTS and ENDS on this sheet."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 117,
+     "pali": "สัมพุทโธ ทิปะทัง เสฏโฐ มะหาการุณิโก มุนิ",
+     "pali_roman": "Sambuddho dipadaṃ seṭṭho mahākāruṇiko muni",
+     "thai": "",
+     "paiboon": "",
+     "english": "The Awakened One, best of men, the Sage of great compassion,"
+    },
+    {
+     "number": 2,
+     "page": 117,
+     "pali": "สามัตถิยัง ทัสเสต๎วานะ ปะหาเน ภาวะนายะ จะ",
+     "pali_roman": "Sāmatthiyaṃ dassetvāna pahāne bhāvanāya ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "having shown what can be done in abandoning and in developing,"
+    },
+    {
+     "number": 3,
+     "page": 117,
+     "pali": "สัมมานุปะฏิปัต๎ยัตถัง ยัง สุตตันตัง อะภาสะยิ",
+     "pali_roman": "Sammānupaṭipatyatthaṃ yaṃ suttantaṃ abhāsayi",
+     "thai": "",
+     "paiboon": "",
+     "english": "spoke that discourse for the sake of right practice;"
+    },
+    {
+     "number": 4,
+     "page": 117,
+     "pali": "สุต๎วา ตะถานุการายะ ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Sutvā tathānukārāya taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "having heard it, that we may act accordingly — let us recite that discourse."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ปะหาเน ภาวะนายะ จะ",
+     "pali_roman": "pahāne bhāvanāya ca",
+     "meaning": "'in abandoning and in developing' — the two halves the sutta it introduces is built from, and the two words its title takes"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 1,
+     "file": "IMG_0382.PNG",
+     "issue": "THE PAGE HEADING IS SPACED, บทขัด ปะหานะภาวะนาสุตตัง, where the สารบัญ has it unspaced. The PAGE is reproduced, per the rule settled for every บทขัด from page 82 on, so title_thai is not a key in _CONTENTS_ROMAN and the contents test cannot see this chant. title_roman is composed to match the page, which gives the table's Paiboon reading unchanged since a space does not alter it."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0382.PNG",
+     "issue": "FOUR ROWS AND COMPLETE, closing on ตัง สุตตันตัง ภะณามะ เส. — a บทขัด's own closing formula. It does NOT continue: the sutta that follows on this same sheet is a different chant. Page 115's บทขัด was wrongly left marked as continuing for exactly this reason, and that marker was cleared."
+    }
+   ]
+  },
+  {
+   "id": "pahana-bhavana-suttam",
+   "title_thai": "ปะหานะภาวะนาสุตตัง",
+   "title_pali": "",
+   "title_roman": "Pahānabhāvanāsuttaṃ",
+   "book_number": "23",
+   "page_start": 117,
+   "continues": true,
+   "working_notes": {
+    "invitation": "none of its own; the บทขัด above it on this sheet serves.",
+    "units": "Two so far: the nidāna and the first paragraph on abandoning the unwholesome.",
+    "ordering": "Pali only.",
+    "conventions": "None new.",
+    "pages": "IMG_0382.PNG, page 117. STARTS here and CONTINUES onto page 118."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "page": 117,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง, ภะคะวา เอตะทะโวจะ.",
+     "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ, bhagavā etadavoca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was staying near Savatthi, in Jeta's Grove, Anathapindika's park. There he addressed the monks: 'Monks.' 'Venerable sir,' they replied, and the Blessed One said this."
+    },
+    {
+     "number": 2,
+     "page": 117,
+     "pali": "อะกุสะลัง ภิกขะเว ปะชะหะถะ, สักกา ภิกขะเว อะกุสะลัง ปะชะหิตุง, โน เจตัง ภิกขะเว สักกา อะภะวิสสะ อะกุสะลัง ปะชะหิตุง. นาหัง เอวัง วะเทยยัง อะกุสะลัง ภิกขะเว ปะชะหะถาติ. ยัส๎มา จะ โข ภิกขะเว สักกา อะกุสะลัง ปะชะหิตุง, ตัส๎มาหัง เอวัง วะทามิ อะกุสะลัง ภิกขะเว ปะชะหะถาติ. อะกุสะลัญจะ หิทัง ภิกขะเว ปะหีนัง อะหิตายะ ทุกขายะ สังวัตเตยยะ, นาหัง เอวัง วะเทยยัง อะกุสะลัง ภิกขะเว ปะชะหะถาติ. ยัส๎มา จะ โข ภิกขะเว อะกุสะลัง ปะหีนัง, หิตายะ สุขายะ สังวัตตะติ, ตัส๎มาหัง เอวัง วะทามิ, อะกุสะลัง ภิกขะเว ปะชะหะถาติ.",
+     "pali_roman": "Akusalaṃ bhikkhave pajahatha, sakkā bhikkhave akusalaṃ pajahituṃ, no cetaṃ bhikkhave sakkā abhavissa akusalaṃ pajahituṃ. Nāhaṃ evaṃ vadeyyaṃ akusalaṃ bhikkhave pajahathāti. Yasmā ca kho bhikkhave sakkā akusalaṃ pajahituṃ, tasmāhaṃ evaṃ vadāmi akusalaṃ bhikkhave pajahathāti. Akusalañca hidaṃ bhikkhave pahīnaṃ ahitāya dukkhāya saṃvatteyya, nāhaṃ evaṃ vadeyyaṃ akusalaṃ bhikkhave pajahathāti. Yasmā ca kho bhikkhave akusalaṃ pahīnaṃ, hitāya sukhāya saṃvattati, tasmāhaṃ evaṃ vadāmi, akusalaṃ bhikkhave pajahathāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Abandon the unwholesome, monks. It can be done. If it could not be done I would not say so; but because it can, I say: abandon the unwholesome. And if abandoning it led to harm and suffering I would not say so; but because abandoning it leads to welfare and happiness, I say: abandon the unwholesome."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "สักกา",
+     "pali_roman": "sakkā",
+     "meaning": "'it can be done'. The whole paragraph is built on it twice over: the Buddha argues that he only asks what is possible, and only what leads to good"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0382.PNG",
+     "issue": "THE ARGUMENT IS PRINTED IN FULL BOTH WAYS ROUND, not abbreviated. The paragraph states the negative case (if it could not be done, I would not say so) and then the positive (because it can, I say so), and does the same again for whether abandoning leads to harm or to welfare. Four parallel clauses, all read off the sheet separately."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0382.PNG",
+     "issue": "THE HEADING CARRIES THE BOOK'S OWN NUMBER, 23. ปะหานะภาวะนาสุตตัง, recorded as book_number '23'. The nidāna is unnumbered and this sutta prints no numbered items on this sheet."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0382.PNG",
+     "issue": "CUT AT THE PAGE TURN. Verse 2 is the last thing on the sheet and the sutta runs on to page 118. No […] is used: the paragraph ends at a full stop the book prints."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bhikkhu-aparihaniyadhamma-suttam",
+   "bot-khat-pahana-bhavana-suttam"
+  ],
+  "continues": [
+   "pahana-bhavana-suttam"
+  ],
+  "resume_from": {
+   "chant": "pahana-bhavana-suttam",
+   "next_verse": 3,
+   "page": 118
+  },
+  "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse. The one Thai on the sheet is an editorial instruction, recorded as a prose block.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0382.PNG read end to end, with the Thai instruction line re-read at 3.2x for its numerals. Page number 117 printed clearly at the top centre. Three chants, one colophon, one prose block, two headings, no rubric, no footnote.",
+  "notes": "‼ ARABIC NUMERALS in the Thai instruction line — 15, 14, 15 — where this book sets Thai numerals in its chanted text. Reproduced as printed. Also: page 115's บทขัด was wrongly marked as continuing; a บทขัด closing on ภะณามะ เส. is complete, and the sutta after it is a different chant. That marker was cleared as part of this page.",
+  "diacritic_exceptions": [
+   "bhikkhu/bhikkhū — different words, not a spelling slip: bhikkhu is the nominative singular, bhikkhū the plural, and both are printed on this sheet."
+  ]
+ }
+}

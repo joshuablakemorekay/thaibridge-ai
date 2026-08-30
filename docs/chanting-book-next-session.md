@@ -1812,16 +1812,18 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**71 pages are left: 117–186 and 192.**
+**70 pages are left: 118–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–116 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 190. **Resume at 117, `IMG_0382`** — ⚠️ TWO
-chants are open: `bot-khat-bhikkhu-aparihaniyadhamma-suttam` (4 rows in, but
-the sutta has started, so it may well be finished) and
-`bhikkhu-aparihaniyadhamma-suttam` itself, **8 units in, resume at verse 9**;
-its seven numbered items are done and 117 continues from there.
+**115–117 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 118, `IMG_0383`** — ⚠️
+`pahana-bhavana-suttam` IS OPEN, **2 units in, resume at verse 3**.
+
+⚠️ **A บทขัด IS COMPLETE WHEN IT REACHES `ภะณามะ เส.`** — that is its closing
+formula, and the sutta printed after it is a DIFFERENT chant, not a
+continuation. Page 115's บทขัด was wrongly left marked as continuing for a day
+because of this; the marker was cleared on 117.
 
 ⚠️ **A HYPHEN MEANS TWO DIFFERENT THINGS in this book, and they are handled
 oppositely.** At a **line end** it is word-wrap — `สันนิปาตะ-` / `พะหุลา` on

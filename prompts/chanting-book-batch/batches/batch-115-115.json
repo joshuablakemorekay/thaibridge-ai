@@ -138,13 +138,12 @@
    "title_pali": "",
    "title_roman": "bòt-kàt pík-kù-à-bpà-rí-hǎa-ní-yá-tam-má-sùt-dtaŋ",
    "page_start": 115,
-   "continues": true,
    "working_notes": {
     "invitation": "none of its own; a บทขัด IS the invitation to the sutta that follows.",
     "units": "Four, one per printed ROW - two pādas in two columns, joined by a space, as page 114's บทขัด was.",
     "ordering": "Pali only.",
     "conventions": "Two-column pādas; a full stop mid-stanza.",
-    "pages": "IMG_0380.PNG, page 115. The chant STARTS here and CONTINUES onto page 116."
+    "pages": "IMG_0380.PNG, page 115. The chant STARTS and ENDS on this sheet: four rows, closing on ตัง สุตตันตัง ภะณามะ เส., which is a บทขัด's own closing formula. Page 116 carries the SUTTA, a different chant."
    },
    "verses": [
     {
@@ -222,14 +221,13 @@
  ],
  "batch_status": {
   "completed": [
+   "bot-khat-bhikkhu-aparihaniyadhamma-suttam",
    "chasaraniyadhamma-suttam"
   ],
-  "continues": [
-   "bot-khat-bhikkhu-aparihaniyadhamma-suttam"
-  ],
+  "continues": [],
   "resume_from": {
-   "chant": "bot-khat-bhikkhu-aparihaniyadhamma-suttam",
-   "next_verse": 5,
+   "chant": null,
+   "next_verse": null,
    "page": 116
   },
   "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse. That is a fact about the page, not a gap.",

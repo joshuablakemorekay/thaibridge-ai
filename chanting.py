@@ -54219,7 +54219,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
         'id': 'bot-khat-bhikkhu-aparihaniyadhamma-suttam',
         'title_thai': 'บทขัด ภิกขุอะปะริหานิยะธัมมะสุตตัง',
         'title_pali': '',
@@ -54612,7 +54611,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 8; the rest is not in the app yet.
         'id': 'bhikkhu-aparihaniyadhamma-suttam',
         'title_thai': 'ภิกขุอะปะริหานิยะธัมมะสุตตัง',
         'title_pali': '',
@@ -54626,6 +54624,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'ภิกขุอะปะริหานิยะธัมมะสุตตัง นิฏฐิตัง.',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'The Discourse on the Conditions of No Decline for Monks is ended.',
         },
         'verses': [
             # ‼ CHECK [IMG_0381.PNG]: A COMMA WITH NO SPACE AFTER IT:
@@ -54733,6 +54738,378 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "So long as they each establish mindfulness, thinking 'may well-behaved companions in the holy life who have not come, come; and may those who have come dwell at ease', growth is to be expected for the monks, not decline.",
+            },
+            {
+                'number': 9,
+                'page': 117,
+                'pali': 'ยาวะกีวัญจะ ภิกขะเว อิเม สัตตะ อะปะริหานิยา ธัมมา ภิกขูสุ ฐัสสันติ, อิเมสุ จะ สัตตะสุ อะปะริหานิเยสุ ธัมเมสุ ภิกขู สันทิสสิสสันติ. วุฑฒิเยวะ ภิกขะเว ภิกขูนัง ปาฏิกังขา, โน ปะริหานีติ.',
+                'pali_roman': 'Yāvakīvañca bhikkhave ime satta aparihāniyā dhammā bhikkhūsu ṭhassanti, imesu ca sattasu aparihāniyesu dhammesu bhikkhū sandississanti. Vuḍḍhiyeva bhikkhave bhikkhūnaṃ pāṭikaṅkhā, no parihānīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So long as these seven conditions of no decline stand among the monks, and the monks are seen in them, growth is to be expected for the monks, not decline.',
+            },
+            # ‼ CHECK [IMG_0382.PNG]: A COLOPHON AND A THAI INSTRUCTION, in
+            #   that order. The centred bold ภิกขุอะปะริหานิยะธัมมะสุตตัง
+            #   นิฏฐิตัง. closes the sutta and is recorded as the chant's
+            #   `closing`. Below it the book prints a line of ordinary THAI
+            #   telling you when to chant it, recorded as a prose block on the
+            #   page.
+            # ‼ CHECK [IMG_0382.PNG]: ‼ ARABIC NUMERALS IN THE INSTRUCTION,
+            #   where this book normally sets Thai ones. It reads …ในวันขึ้น
+            #   15 ค่ำ แรม 14 ค่ำ แรม 15 ค่ำ with 15, 14 and 15 in Arabic
+            #   figures, read at 3.2x — against ๕ on page 200, ๘ on 205, ๑๘ on
+            #   213 and ๑-๕ on 216, all Thai. Reproduced as printed. The
+            #   pattern so far is that CHANTED text takes Thai numerals and an
+            #   editorial instruction may take Arabic, but that is an
+            #   observation from one instance, not a rule.
+            {
+                'number': 10,
+                'page': 117,
+                'pali': 'อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.',
+                'pali_roman': 'Idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus spoke the Blessed One, and those monks delighted in his words.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'bot-khat-pahana-bhavana-suttam',
+        'title_thai': 'บทขัด ปะหานะภาวะนาสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt bpà-hǎa-ná-paa-wá-naa-sùt-dtaŋ',
+        'page_start': 117,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0382.PNG]: THE PAGE HEADING IS SPACED, บทขัด
+            #   ปะหานะภาวะนาสุตตัง, where the สารบัญ has it unspaced. The PAGE
+            #   is reproduced, per the rule settled for every บทขัด from page
+            #   82 on, so title_thai is not a key in _CONTENTS_ROMAN and the
+            #   contents test cannot see this chant. title_roman is composed
+            #   to match the page, which gives the table's Paiboon reading
+            #   unchanged since a space does not alter it.
+            {
+                'number': 1,
+                'page': 117,
+                'pali': 'สัมพุทโธ ทิปะทัง เสฏโฐ มะหาการุณิโก มุนิ',
+                'pali_roman': 'Sambuddho dipadaṃ seṭṭho mahākāruṇiko muni',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Awakened One, best of men, the Sage of great compassion,',
+            },
+            {
+                'number': 2,
+                'page': 117,
+                'pali': 'สามัตถิยัง ทัสเสต๎วานะ ปะหาเน ภาวะนายะ จะ',
+                'pali_roman': 'Sāmatthiyaṃ dassetvāna pahāne bhāvanāya ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having shown what can be done in abandoning and in developing,',
+            },
+            {
+                'number': 3,
+                'page': 117,
+                'pali': 'สัมมานุปะฏิปัต๎ยัตถัง ยัง สุตตันตัง อะภาสะยิ',
+                'pali_roman': 'Sammānupaṭipatyatthaṃ yaṃ suttantaṃ abhāsayi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'spoke that discourse for the sake of right practice;',
+            },
+            # ‼ CHECK [IMG_0382.PNG]: FOUR ROWS AND COMPLETE, closing on ตัง
+            #   สุตตันตัง ภะณามะ เส. — a บทขัด's own closing formula. It does
+            #   NOT continue: the sutta that follows on this same sheet is a
+            #   different chant. Page 115's บทขัด was wrongly left marked as
+            #   continuing for exactly this reason, and that marker was
+            #   cleared.
+            {
+                'number': 4,
+                'page': 117,
+                'pali': 'สุต๎วา ตะถานุการายะ ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Sutvā tathānukārāya taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'having heard it, that we may act accordingly — let us recite that discourse.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
+        'id': 'pahana-bhavana-suttam',
+        'title_thai': 'ปะหานะภาวะนาสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Pahānabhāvanāsuttaṃ',
+        'book_number': '23',
+        'page_start': 117,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0382.PNG]: THE HEADING CARRIES THE BOOK'S OWN
+            #   NUMBER, 23. ปะหานะภาวะนาสุตตัง, recorded as book_number '23'.
+            #   The nidāna is unnumbered and this sutta prints no numbered
+            #   items on this sheet.
+            {
+                'number': 1,
+                'page': 117,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง, ภะคะวา เอตะทะโวจะ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ, bhagavā etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying near Savatthi, in Jeta's Grove, Anathapindika's park. There he addressed the monks: 'Monks.' 'Venerable sir,' they replied, and the Blessed One said this.",
+            },
+            # ‼ CHECK [IMG_0382.PNG]: THE ARGUMENT IS PRINTED IN FULL BOTH
+            #   WAYS ROUND, not abbreviated. The paragraph states the negative
+            #   case (if it could not be done, I would not say so) and then
+            #   the positive (because it can, I say so), and does the same
+            #   again for whether abandoning leads to harm or to welfare. Four
+            #   parallel clauses, all read off the sheet separately.
+            # ‼ CHECK [IMG_0382.PNG]: CUT AT THE PAGE TURN. Verse 2 is the
+            #   last thing on the sheet and the sutta runs on to page 118. No
+            #   […] is used: the paragraph ends at a full stop the book
+            #   prints.
+            {
+                'number': 2,
+                'page': 117,
+                'pali': 'อะกุสะลัง ภิกขะเว ปะชะหะถะ, สักกา ภิกขะเว อะกุสะลัง ปะชะหิตุง, โน เจตัง ภิกขะเว สักกา อะภะวิสสะ อะกุสะลัง ปะชะหิตุง. นาหัง เอวัง วะเทยยัง อะกุสะลัง ภิกขะเว ปะชะหะถาติ. ยัส๎มา จะ โข ภิกขะเว สักกา อะกุสะลัง ปะชะหิตุง, ตัส๎มาหัง เอวัง วะทามิ อะกุสะลัง ภิกขะเว ปะชะหะถาติ. อะกุสะลัญจะ หิทัง ภิกขะเว ปะหีนัง อะหิตายะ ทุกขายะ สังวัตเตยยะ, นาหัง เอวัง วะเทยยัง อะกุสะลัง ภิกขะเว ปะชะหะถาติ. ยัส๎มา จะ โข ภิกขะเว อะกุสะลัง ปะหีนัง, หิตายะ สุขายะ สังวัตตะติ, ตัส๎มาหัง เอวัง วะทามิ, อะกุสะลัง ภิกขะเว ปะชะหะถาติ.',
+                'pali_roman': 'Akusalaṃ bhikkhave pajahatha, sakkā bhikkhave akusalaṃ pajahituṃ, no cetaṃ bhikkhave sakkā abhavissa akusalaṃ pajahituṃ. Nāhaṃ evaṃ vadeyyaṃ akusalaṃ bhikkhave pajahathāti. Yasmā ca kho bhikkhave sakkā akusalaṃ pajahituṃ, tasmāhaṃ evaṃ vadāmi akusalaṃ bhikkhave pajahathāti. Akusalañca hidaṃ bhikkhave pahīnaṃ ahitāya dukkhāya saṃvatteyya, nāhaṃ evaṃ vadeyyaṃ akusalaṃ bhikkhave pajahathāti. Yasmā ca kho bhikkhave akusalaṃ pahīnaṃ, hitāya sukhāya saṃvattati, tasmāhaṃ evaṃ vadāmi, akusalaṃ bhikkhave pajahathāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Abandon the unwholesome, monks. It can be done. If it could not be done I would not say so; but because it can, I say: abandon the unwholesome. And if abandoning it led to harm and suffering I would not say so; but because abandoning it leads to welfare and happiness, I say: abandon the unwholesome.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0454.PNG]: ⚠ THIS CHANT HAS ONLY ONE WITNESS. Nothing
+        #   of it is anywhere else in the app, so the twin comparison that
+        #   caught real errors elsewhere in this pass cannot help. The
+        #   photographs are the only check, which is why the two lists and the
+        #   sixteen breathing steps were magnified rather than read off the
+        #   whole page.
+        # ‼ CHECK [IMG_0454.PNG]: THE SECTION HEADING USES ARABIC 7 where the
+        #   สารบัญ prints Thai ๗ — the same disagreement as page 187's
+        #   heading.
+        'id': 'girimananda-suttam',
+        'title_thai': 'คิริมานันทะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Girimānandasuttaṃ',
+        'title_english': 'The Discourse to Girimānanda',
+        'page_start': 183,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'คิริมานันทะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'Girimānandasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse to Girimānanda.',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 183,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. เตนะ โข ปะนะ สะมะเยนะ อายัส์มา คิริมานันโท อาพาธิโก โหติ ทุกขิโต พาฬ์หะคิลาโน. อะถะโข อายัส์มา อานันโท, เยนะ ภะคะวา, เตนุปะสังกะมิ, อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง นิสีทิ, เอกะมันตัง นิสินโน โข อายัส์มา อานันโท ภะคะวันตัง เอตะทะโวจะ.',
+                'pali_roman': 'Evamme sutaṃ. ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. tena kho pana samayena āyasmā girimānando ābādhiko hoti dukkhito bāḷhagilāno. athakho āyasmā ānando, yena bhagavā, tenupasaṅkami, upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ nisīdi, ekamantaṃ nisinno kho āyasmā ānando bhagavantaṃ etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was dwelling at Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. Now on that occasion the venerable Girimānanda was sick, afflicted, gravely ill. Then the venerable Ānanda went to the Blessed One, paid homage, sat down to one side, and said this to him:",
+            },
+            # ‼ CHECK [IMG_0454.PNG]: ⚠ THE LIST OF TEN ENDS WITH NO MARK AT
+            #   ALL — the tenth, อานาปานัสสะติ, is followed by nothing, no
+            #   comma and no full stop, where the other nine are each followed
+            #   by a comma. Read at magnification. Entered as printed.
+            {
+                'number': 2,
+                'pali': 'อายัส์มา ภันเต คิริมานันโท อาพาธิโก โหติ ทุกขิโต พาฬ์หะคิลาโน, สาธุ ภันเต ภะคะวา, เยนายัส์มา คิริมานันโท, เตนุปะสังกะมะตุ อะนุกัมปัง อุปาทายาติ. สะเจ โข ต์วัง อานันทะ คิริมานันทัสสะ ภิกขุโน อุปะสังกะมิต์วา ทะสะ สัญญา ภาเสยยาสิ, ฐานัง โข ปะเนตัง วิชชะติ, ยัง คิริมานันทัสสะ ภิกขุโน ทะสะ สัญญา สุต์วา โส อาพาโธ ฐานะโส ปะฏิปปัสสัมเภยยะ. กะตะมา ทะสะ. อะนิจจะสัญญา, อะนัตตะสัญญา, อะสุภะสัญญา, อาทีนะวะสัญญา, ปะหานะสัญญา, วิราคะสัญญา, นิโรธะสัญญา, สัพพะโลเก อะนะภิระตะสัญญา, สัพพะสังขาเรสุ อะนิจจะสัญญา, อานาปานัสสะติ',
+                'pali_roman': 'Āyasmā bhante girimānando ābādhiko hoti dukkhito bāḷhagilāno, sādhu bhante bhagavā, yenāyasmā girimānando, tenupasaṅkamatu anukampaṃ upādāyāti. sace kho tvaṃ ānanda girimānandassa bhikkhuno upasaṅkamitvā dasa saññā bhāseyyāsi, ṭhānaṃ kho panetaṃ vijjati, yaṃ girimānandassa bhikkhuno dasa saññā sutvā so ābādho ṭhānaso paṭippassambheyya. katamā dasa. aniccasaññā, anattasaññā, asubhasaññā, ādīnavasaññā, pahānasaññā, virāgasaññā, nirodhasaññā, sabbaloke anabhiratasaññā, sabbasaṅkhāresu aniccasaññā, ānāpānassati',
+                'thai': '',
+                'paiboon': '',
+                'english': "'Venerable sir, the venerable Girimānanda is sick, afflicted, gravely ill. It would be good if the Blessed One would go to him, out of compassion.' 'If, Ānanda, you go to the bhikkhu Girimānanda and speak to him of ten perceptions, it is possible that on hearing them his affliction will subside on the spot. Which ten? The perception of impermanence, of not-self, of unattractiveness, of danger, of abandoning, of dispassion, of cessation, of disenchantment with the whole world, of impermanence in all formations, and mindfulness of breathing.",
+            },
+            {
+                'number': 3,
+                'pali': 'กะตะมา จานันทะ อะนิจจะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. รูปัง อะนิจจัง, เวทะนา อะนิจจา, สัญญา อะนิจจา, สังขารา อะนิจจา, วิญญาณัง อะนิจจันติ. อิติ อิเมสุ ปัญจะสุ อุปาทานักขันเธสุ อะนิจจานุปัสสี วิหะระติ, อะยัง วุจจะตานันทะ อะนิจจะสัญญา.',
+                'pali_roman': 'Katamā cānanda aniccasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. rūpaṃ aniccaṃ, vedanā aniccā, saññā aniccā, saṅkhārā aniccā, viññāṇaṃ aniccanti. iti imesu pañcasu upādānakkhandhesu aniccānupassī viharati, ayaṃ vuccatānanda aniccasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, Ānanda, is the perception of impermanence? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: form is impermanent, feeling is impermanent, perception is impermanent, formations are impermanent, consciousness is impermanent. Thus he dwells contemplating impermanence in these five aggregates of clinging. This, Ānanda, is called the perception of impermanence.',
+            },
+            {
+                'number': 4,
+                'pali': 'กะตะมา จานันทะ อะนัตตะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. จักขุง อะนัตตา, รูปา อะนัตตา, โสตัง อะนัตตา, สัททา อะนัตตา, ฆานัง อะนัตตา, คันธา อะนัตตา, ชิวหา อะนัตตา, ระสา อะนัตตา, กาโย อะนัตตา, โผฏฐัพพา อะนัตตา, มะโน อะนัตตา, ธัมมา อะนัตตาติ. อิติ อิเมสุ ฉะสุ อัชฌัตติกะพาหิเรสุ อายะตะเนสุ อะนัตตานุปัสสี วิหะระติ. อะยัง วุจจะตานันทะ อะนัตตะสัญญา.',
+                'pali_roman': 'Katamā cānanda anattasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. cakkhuṃ anattā, rūpā anattā, sotaṃ anattā, saddā anattā, ghānaṃ anattā, gandhā anattā, jivhā anattā, rasā anattā, kāyo anattā, phoṭṭhabbā anattā, mano anattā, dhammā anattāti. iti imesu chasu ajjhattikabāhiresu āyatanesu anattānupassī viharati. ayaṃ vuccatānanda anattasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of not-self? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: the eye is not-self, forms are not-self; the ear is not-self, sounds are not-self; the nose is not-self, odours are not-self; the tongue is not-self, tastes are not-self; the body is not-self, tangibles are not-self; the mind is not-self, mind-objects are not-self. Thus he dwells contemplating not-self in these six internal and external sense bases. This is called the perception of not-self.',
+            },
+            # ‼ CHECK [IMG_0455.PNG]: ⚠ THE BODY-PART LIST IS 31, NOT 32 — it
+            #   ends at มุตตัง with no มัตถะลุงคัง. Read at magnification,
+            #   since a list of bare nouns has no sense to check it against.
+            #   Note อัฏฐิมัญชัง, where the canon has aṭṭhimiñjaṃ; the book
+            #   prints มัญ. เขโฬ takes ฬ and it is plainly legible here.
+            {
+                'number': 5,
+                'page': 184,
+                'pali': 'กะตะมา จานันทะ อะสุภะสัญญา. อิธานันทะ ภิกขุ อิมะเมวะ กายัง อุทธัง ปาทะตะลา, อะโธ เกสะมัตถะกา, ตะจะปะริยันตัง ปูรันนานัปปะการัสสะ อะสุจิโน ปัจจะเวกขะติ. อัตถิ อิมัส์มิง กาเย เกสา โลมา นะขา ทันตา ตะโจ, มังสัง นะหารู อัฏฐี อัฏฐิมัญชัง วักกัง, หะทะยัง ยะกะนัง กิโลมะกัง ปิหะกัง ปัปผาสัง, อันตัง อันตะคุณัง อุทะริยัง กะรีสัง, ปิตตัง เสมหัง ปุพโพ โลหิตัง เสโท เมโท, อัสสุ วะสา เขโฬ สิงฆานิกา ละสิกา มุตตันติ. อิติ อิมัส์มิง กาเย อะสุภานุปัสสี วิหะระติ, อะยัง วุจจะตานันทะ อะสุภะสัญญา.',
+                'pali_roman': 'Katamā cānanda asubhasaññā. idhānanda bhikkhu imameva kāyaṃ uddhaṃ pādatalā, adho kesamatthakā, tacapariyantaṃ pūrannānappakārassa asucino paccavekkhati. atthi imasmiṃ kāye kesā lomā nakhā dantā taco, maṃsaṃ nahārū aṭṭhī aṭṭhimañjaṃ vakkaṃ, hadayaṃ yakanaṃ kilomakaṃ pihakaṃ papphāsaṃ, antaṃ antaguṇaṃ udariyaṃ karīsaṃ, pittaṃ semhaṃ pubbo lohitaṃ sedo medo, assu vasā kheḷo siṅghānikā lasikā muttanti. iti imasmiṃ kāye asubhānupassī viharati, ayaṃ vuccatānanda asubhasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of unattractiveness? Here a bhikkhu reviews this very body, upward from the soles of the feet and downward from the tips of the hair, bounded by skin and full of many kinds of impurity: in this body there are head-hairs, body-hairs, nails, teeth, skin; flesh, sinews, bones, bone-marrow, kidneys; heart, liver, membrane, spleen, lungs; bowels, entrails, undigested food, excrement; bile, phlegm, pus, blood, sweat, fat; tears, grease, spittle, snot, oil of the joints, urine. Thus he dwells contemplating unattractiveness in this body. This is called the perception of unattractiveness.',
+            },
+            # ‼ CHECK [IMG_0455.PNG]: ⚠ ปิฬะกา IS WRITTEN WITH ฬ AGAINST THE
+            #   PHOTOGRAPH, which shows ปิพะกา. The canon has piḷakā, boils,
+            #   and the ฬ-as-พ rule settled at the book on 2026-08-25 applies.
+            #   The rest of the disease list was read at magnification and
+            #   entered as printed.
+            {
+                'number': 6,
+                'pali': 'กะตะมา จานันทะ อาทีนะวะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. พะหุทุกโข โข อะยัง กาโย พะหุอาทีนะโวติ. อิติ อิมัส์มิง กาเย วิวิธา อาพาธา อุปปัชชันติ. เสยยะถีทัง, จักขุโรโค โสตะโรโค, ฆานะโรโค ชิวหาโรโค กายะโรโค สีสะโรโค กัณณะโรโค มุขะโรโค, ทันตะโรโค, กาโส สาโส ปินาโส ฑะโห ชะโร กุจฉิโรโค, มุจฉา ปักขันทิกา สุลา วิสูจิกา, กุฏฐัง คัณโฑ กิลาโส โสโส อะปะมาโร, ทัททุ กัณฑุ กัจฉุ ระขะสา วิตัจฉิกา, โลหิตัง ปิตตัง มะธุเมโห อังสา ปิฬะกา ภะคัณฑะลา, ปิตตะสะมุฏฐานา อาพาธา, เสมหะสะมุฏฐานา อาพาธา, วาตะสะมุฏฐานา อาพาธา, สันนิปาติกา อาพาธา, อุตุปะริณามะชา อาพาธา, วิสะมะปะริหาระชา อาพาธา, โอปักกะมิกา อาพาธา, กัมมะวิปากะชา อาพาธา, สีตัง อุณหัง ชิฆัจฉา ปิปาสา อุจจาโร ปัสสาโวติ. อิติ อิมัส์มิง กาเย อาทีนะวานุปัสสี วิหะระติ, อะยัง วุจจะตานันทะ อาทีนะวะสัญญา.',
+                'pali_roman': 'Katamā cānanda ādīnavasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. bahudukkho kho ayaṃ kāyo bahuādīnavoti. iti imasmiṃ kāye vividhā ābādhā uppajjanti. seyyathīdaṃ, cakkhurogo sotarogo, ghānarogo jivhārogo kāyarogo sīsarogo kaṇṇarogo mukharogo, dantarogo, kāso sāso pināso ḍaho jaro kucchirogo, mucchā pakkhandikā sulā visūcikā, kuṭṭhaṃ gaṇḍo kilāso soso apamāro, daddu kaṇḍu kacchu rakhasā vitacchikā, lohitaṃ pittaṃ madhumeho aṃsā piḷakā bhagaṇḍalā, pittasamuṭṭhānā ābādhā, semhasamuṭṭhānā ābādhā, vātasamuṭṭhānā ābādhā, sannipātikā ābādhā, utupariṇāmajā ābādhā, visamaparihārajā ābādhā, opakkamikā ābādhā, kammavipākajā ābādhā, sītaṃ uṇhaṃ jighacchā pipāsā uccāro passāvoti. iti imasmiṃ kāye ādīnavānupassī viharati, ayaṃ vuccatānanda ādīnavasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of danger? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: this body is a mass of suffering, beset with much danger; for in this body many kinds of affliction arise — diseases of the eye, ear, nose, tongue, body, head, ear, mouth and teeth; cough, asthma, catarrh, fever, ague, stomach ache, fainting, dysentery, gripes, cholera, leprosy, boils, skin disease, consumption, epilepsy, ringworm, itch, scab, chapping, scabies, blood and bile disorders, diabetes, cancer, fistula; afflictions arising from bile, from phlegm, from wind, from their conjunction, from change of season, from careless behaviour, from assault, from the ripening of kamma; cold, heat, hunger, thirst, excrement and urine. Thus he dwells contemplating danger in this body. This is called the perception of danger.',
+            },
+            {
+                'number': 7,
+                'pali': 'กะตะมา จานันทะ ปะหานะสัญญา. อิธานันทะ ภิกขุ อุปปันนัง กามะวิตักกัง นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ, อุปปันนัง พ์ยาปาทะวิตักกัง นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ. อุปปันนัง วิหิงสาวิตักกัง นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ, อุปปันนุปปันเน ปาปะเก อะกุสะเล ธัมเม นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ, อะยัง วุจจะตานันทะ ปะหานะสัญญา.',
+                'pali_roman': 'Katamā cānanda pahānasaññā. idhānanda bhikkhu uppannaṃ kāmavitakkaṃ nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti, uppannaṃ byāpādavitakkaṃ nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti. uppannaṃ vihiṃsāvitakkaṃ nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti, uppannuppanne pāpake akusale dhamme nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti, ayaṃ vuccatānanda pahānasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of abandoning? Here a bhikkhu does not tolerate an arisen thought of sensuality but abandons it, dispels it, makes an end of it, brings it to non-existence; nor an arisen thought of ill will; nor an arisen thought of cruelty; nor evil, unwholesome states whenever they arise. This is called the perception of abandoning.',
+            },
+            # ‼ CHECK [IMG_0455.PNG]: INCOMPLETE LINE, cut by the turn to 185
+            #   and completed there.
+            # ‼ COMPLETED FROM p185: this line was cut by the page break and
+            #   is now whole. Was: กะตะมา จานันทะ วิราคะสัญญา. อิธานันทะ ภิกขุ
+            #   อะรัญญะคะโต วา […]
+            # ‼ CHECK [IMG_0456.PNG]: COMPLETES THE LINE CUT BY THE PAGE TURN
+            #   from 184.
+            {
+                'number': 8,
+                'pali': 'กะตะมา จานันทะ วิราคะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. เอตัง สันตัง เอตัง ปะณีตัง. ยะทิทัง, สัพพะสังขาระสะมะโถ สัพพูปะธิ ปะฏินิสสัคโค ตัณหักขะโย วิราโค นิพพานันติ, อะยัง วุจจะตานันทะ วิราคะสัญญา.',
+                'pali_roman': 'Katamā cānanda virāgasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. etaṃ santaṃ etaṃ paṇītaṃ. yadidaṃ, sabbasaṅkhārasamatho sabbūpadhi paṭinissaggo taṇhakkhayo virāgo nibbānanti, ayaṃ vuccatānanda virāgasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of dispassion? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: this is peaceful, this is sublime — namely, the stilling of all formations, the relinquishing of all attachments, the destruction of craving, dispassion, Nibbāna. This is called the perception of dispassion.',
+            },
+            # ‼ CHECK [IMG_0456.PNG]: ⚠ TWO NEAR-IDENTICAL PARAGRAPHS,
+            #   PUNCTUATED DIFFERENTLY. วิราคะสัญญา sets ยะทิทัง, with a COMMA
+            #   and สัพพูปะธิ ปะฏินิสสัคโค SPACED; นิโรธะสัญญา, two paragraphs
+            #   later, sets ยะทิทัง. with a FULL STOP and joins them as
+            #   สัพพูปะธิปะฏินิสสัคโค. Read at magnification. Neither has been
+            #   made to match the other.
+            {
+                'number': 9,
+                'page': 185,
+                'pali': 'กะตะมา จานันทะ นิโรธะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. เอตัง สันตัง เอตัง ปะณีตัง. ยะทิทัง. สัพพะสังขาระสะมะโถ สัพพูปะธิปะฏินิสสัคโค ตัณหักขะโย นิโรโธ นิพพานันติ, อะยัง วุจจะตานันทะ นิโรธะสัญญา.',
+                'pali_roman': 'Katamā cānanda nirodhasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. etaṃ santaṃ etaṃ paṇītaṃ. yadidaṃ. sabbasaṅkhārasamatho sabbūpadhipaṭinissaggo taṇhakkhayo nirodho nibbānanti, ayaṃ vuccatānanda nirodhasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of cessation? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: this is peaceful, this is sublime — namely, the stilling of all formations, the relinquishing of all attachments, the destruction of craving, cessation, Nibbāna. This is called the perception of cessation.',
+            },
+            # ‼ CHECK [IMG_0456.PNG]: THIS SAÑÑĀ'S OPENING ENDS WITH A COMMA —
+            #   สัพพะโลเก อะนะภิระตะสัญญา, — where the other nine open with a
+            #   full stop before อิธานันทะ. So does อานาปานัสสะติ at verse 12.
+            #   Entered as printed.
+            {
+                'number': 10,
+                'pali': 'กะตะมา จานันทะ สัพพะโลเก อะนะภิระตะสัญญา, อิธานันทะ ภิกขุ เย โลเก อุปายุปาทานา เจตะโส อะธิฏฐานาภินิเวสานุสะยา, เต ปะชะหันโต วิระมะติ นะ อุปาทิยันโต, อะยัง วุจจะตานันทะ สัพพะโลเก อะนะภิระตะสัญญา.',
+                'pali_roman': 'Katamā cānanda sabbaloke anabhiratasaññā, idhānanda bhikkhu ye loke upāyupādānā cetaso adhiṭṭhānābhinivesānusayā, te pajahanto viramati na upādiyanto, ayaṃ vuccatānanda sabbaloke anabhiratasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of disenchantment with the whole world? Here a bhikkhu, abandoning any engagement and clinging in the world, any mental standpoints, adherences and underlying tendencies, refrains and does not cling. This is called the perception of disenchantment with the whole world.',
+            },
+            {
+                'number': 11,
+                'pali': 'กะตะมา จานันทะ สัพพะสังขาเรสุ อะนิจจะสัญญา. อิธานันทะ ภิกขุ สัพพะสังขาเรหิ อัฏฏิยะติ หะรายะติ ชิคุจฉะติ, อะยัง วุจจะตานันทะ สัพพะสังขาเรสุ อะนิจจะสัญญา.',
+                'pali_roman': 'Katamā cānanda sabbasaṅkhāresu aniccasaññā. idhānanda bhikkhu sabbasaṅkhārehi aṭṭiyati harāyati jigucchati, ayaṃ vuccatānanda sabbasaṅkhāresu aniccasaññā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is the perception of impermanence in all formations? Here a bhikkhu is troubled by all formations, ashamed of them, disgusted with them. This is called the perception of impermanence in all formations.',
+            },
+            # ‼ CHECK [IMG_0456.PNG]: INCOMPLETE LINE. The seventh breathing
+            #   step is cut by the turn — 185 ends at จิตตะปะฏิสังเวที and 186
+            #   opens ปัสสะสิสสามีติ — so verse 12 ends […] and is completed
+            #   by batch-186-186.
+            # ‼ COMPLETED FROM p186: this line was cut by the page break and
+            #   is now whole. Was: กะตะมา จานันทะ อานาปานัสสะติ, อิธานันทะ
+            #   ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา
+            #   นิสีทะติ ปัลลังกัง อาภุชิต์วา, อุชุง กายัง ปะณิธายะ ปะริมุขัง
+            #   สะติง อุปัฏฐะเปต์วา, โส สะโตวะ อัสสะสะติ, สะโต ปัสสะสะติ.
+            #   ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ, ทีฆัง วา
+            #   ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ. รัสสัง วา อัสสะสันโต
+            #   รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง
+            #   ปัสสะสามีติ ปะชานาติ, สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ
+            #   สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ.
+            #   ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง
+            #   กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. ปีติปะฏิสังเวที
+            #   อัสสะสิสสามีติ สิกขะติ, ปีติปะฏิสังเวที ปัสสะสิสสามีติ
+            #   สิกขะติ. สุขะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ,
+            #   สุขะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ.
+            #   จิตตะสังขาระปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ,
+            #   จิตตะสังขาระปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง
+            #   จิตตะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง
+            #   จิตตะสังขารัง ปัสสะสิสสามีติ สิกขะติ. จิตตะปะฏิสังเวที
+            #   อัสสะสิสสามีติ สิกขะติ, จิตตะปะฏิสังเวที […]
+            # ‼ CHECK [IMG_0457.PNG]: COMPLETES THE LINE CUT BY THE PAGE TURN
+            #   from 185.
+            # ‼ CHECK [IMG_0457.PNG]: ⚠ THE SIXTEEN BREATHING STEPS ARE
+            #   PUNCTUATED IRREGULARLY AND EVERY MARK WAS READ FROM A
+            #   MAGNIFIED CROP. The pattern is mostly pair-comma then pair-
+            #   stop, but it breaks: ปัสสัมภะยัง กายะสังขารัง takes a FULL
+            #   STOP after its first half, วิโมจะยัง จิตตัง takes a COMMA
+            #   after its second where a stop is due, and วิราคานุปัสสี takes
+            #   a FULL STOP after its first half and a COMMA after its second.
+            #   Nothing has been normalised.
+            {
+                'number': 12,
+                'pali': 'กะตะมา จานันทะ อานาปานัสสะติ, อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา นิสีทะติ ปัลลังกัง อาภุชิต์วา, อุชุง กายัง ปะณิธายะ ปะริมุขัง สะติง อุปัฏฐะเปต์วา, โส สะโตวะ อัสสะสะติ, สะโต ปัสสะสะติ. ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ, ทีฆัง วา ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ. รัสสัง วา อัสสะสันโต รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง ปัสสะสามีติ ปะชานาติ, สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. ปีติปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, ปีติปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. สุขะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สุขะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. จิตตะสังขาระปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, จิตตะสังขาระปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง จิตตะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง จิตตะสังขารัง ปัสสะสิสสามีติ สิกขะติ. จิตตะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, จิตตะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. อะภิปปะโมทะยัง จิตตัง อัสสะสิสสามีติ สิกขะติ, อะภิปปะโมทะยัง จิตตัง ปัสสะสิสสามีติ สิกขะติ. สะมาทะหัง จิตตัง อัสสะสิสสามีติ สิกขะติ, สะมาทะหัง จิตตัง ปัสสะสิสสามีติ สิกขะติ. วิโมจะยัง จิตตัง อัสสะสิสสามีติ สิกขะติ, วิโมจะยัง จิตตัง ปัสสะสิสสามีติ สิกขะติ, อะนิจจานุปัสสี อัสสะสิสสามีติ สิกขะติ, อะนิจจานุปัสสี ปัสสะสิสสามีติ สิกขะติ. วิราคานุปัสสี อัสสะสิสสามีติ สิกขะติ. วิราคานุปัสสี ปัสสะสิสสามีติ สิกขะติ, นิโรธานุปัสสี อัสสะสิสสามีติ สิกขะติ, นิโรธานุปัสสี ปัสสะสิสสามีติ สิกขะติ. ปะฏินิสสัคคานุปัสสี อัสสะสิสสามีติ สิกขะติ, ปะฏินิสสัคคานุปัสสี ปัสสะสิสสามีติ สิกขะติ, อะยัง วุจจะตานันทะ อานาปานัสสะติ.',
+                'pali_roman': 'Katamā cānanda ānāpānassati, idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā nisīdati pallaṅkaṃ ābhujitvā, ujuṃ kāyaṃ paṇidhāya parimukhaṃ satiṃ upaṭṭhapetvā, so satova assasati, sato passasati. dīghaṃ vā assasanto dīghaṃ assasāmīti pajānāti, dīghaṃ vā passasanto dīghaṃ passasāmīti pajānāti. rassaṃ vā assasanto rassaṃ assasāmīti pajānāti, rassaṃ vā passasanto rassaṃ passasāmīti pajānāti, sabbakāyapaṭisaṃvedī assasissāmīti sikkhati, sabbakāyapaṭisaṃvedī passasissāmīti sikkhati. passambhayaṃ kāyasaṅkhāraṃ assasissāmīti sikkhati. passambhayaṃ kāyasaṅkhāraṃ passasissāmīti sikkhati. pītipaṭisaṃvedī assasissāmīti sikkhati, pītipaṭisaṃvedī passasissāmīti sikkhati. sukhapaṭisaṃvedī assasissāmīti sikkhati, sukhapaṭisaṃvedī passasissāmīti sikkhati. cittasaṅkhārapaṭisaṃvedī assasissāmīti sikkhati, cittasaṅkhārapaṭisaṃvedī passasissāmīti sikkhati. passambhayaṃ cittasaṅkhāraṃ assasissāmīti sikkhati. passambhayaṃ cittasaṅkhāraṃ passasissāmīti sikkhati. cittapaṭisaṃvedī assasissāmīti sikkhati, cittapaṭisaṃvedī passasissāmīti sikkhati. abhippamodayaṃ cittaṃ assasissāmīti sikkhati, abhippamodayaṃ cittaṃ passasissāmīti sikkhati. samādahaṃ cittaṃ assasissāmīti sikkhati, samādahaṃ cittaṃ passasissāmīti sikkhati. vimocayaṃ cittaṃ assasissāmīti sikkhati, vimocayaṃ cittaṃ passasissāmīti sikkhati, aniccānupassī assasissāmīti sikkhati, aniccānupassī passasissāmīti sikkhati. virāgānupassī assasissāmīti sikkhati. virāgānupassī passasissāmīti sikkhati, nirodhānupassī assasissāmīti sikkhati, nirodhānupassī passasissāmīti sikkhati. paṭinissaggānupassī assasissāmīti sikkhati, paṭinissaggānupassī passasissāmīti sikkhati, ayaṃ vuccatānanda ānāpānassati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what is mindfulness of breathing? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, sits down, folds his legs crosswise, holds his body erect, and sets up mindfulness before him. Ever mindful he breathes in, mindful he breathes out. Breathing in long, he knows he breathes in long; and so through the sixteen steps, to contemplating relinquishment. This is called mindfulness of breathing.',
+            },
+            {
+                'number': 13,
+                'page': 186,
+                'pali': 'สะเจ โข ต์วัง อานันทะ คิริมานันทัสสะ ภิกขุโน อุปะสังกะมิต์วา อิมา ทะสะ สัญญา ภาเสยยาสิ, ฐานัง โข ปะเนตัง วิชชะติ, ยัง คิริมานันทัสสะ ภิกขุโน อิมา ทะสะ สัญญา สุต์วา โส อาพาโธ ฐานะโส ปะฏิปปัสสัมเภยยาติ.',
+                'pali_roman': 'Sace kho tvaṃ ānanda girimānandassa bhikkhuno upasaṅkamitvā imā dasa saññā bhāseyyāsi, ṭhānaṃ kho panetaṃ vijjati, yaṃ girimānandassa bhikkhuno imā dasa saññā sutvā so ābādho ṭhānaso paṭippassambheyyāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "If, Ānanda, you go to the bhikkhu Girimānanda and speak to him of these ten perceptions, it is possible that on hearing them his affliction will subside on the spot.'",
+            },
+            {
+                'number': 14,
+                'pali': 'อะถะโข อายัส์มา อานันโท ภะคะวะโต สันติเก อิมา ทะสะ สัญญา อุคคะเหต์วา, เยนายัส์มา คิริมานันโท, เตนุปะสังกะมิ, อุปะสังกะมิต์วา อายัส์มะโต คิริมานันทัสสะ อิมา ทะสะ สัญญา อะภาสิ. อะถะโข อายัส์มะโต คิริมานันทัสสะ อิมา ทะสะ สัญญา สุต์วา โส อาพาโธ ฐานะโส ปะฏิปปัสสัมภิ, วุฏฐะหิ จายัส์มา คิริมานันโท ตัมหา อาพาธา ตะถาปะหีโน จะ ปะนายัส์มะโต คิริมานันทัสสะ โส อาพาโธ อะโหสีติ.',
+                'pali_roman': 'Athakho āyasmā ānando bhagavato santike imā dasa saññā uggahetvā, yenāyasmā girimānando, tenupasaṅkami, upasaṅkamitvā āyasmato girimānandassa imā dasa saññā abhāsi. athakho āyasmato girimānandassa imā dasa saññā sutvā so ābādho ṭhānaso paṭippassambhi, vuṭṭhahi cāyasmā girimānando tamhā ābādhā tathāpahīno ca panāyasmato girimānandassa so ābādho ahosīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then the venerable Ānanda, having learned these ten perceptions from the Blessed One, went to the venerable Girimānanda and spoke to him of them. And when the venerable Girimānanda had heard these ten perceptions, his affliction subsided on the spot; and the venerable Girimānanda rose up from that affliction, and that was how his affliction was abandoned.',
             },
         ],
     },
@@ -57202,6 +57579,65 @@ PAGE_BLOCKS = [
                 'marker': '1',
                 'thai': 'อํ. อฏฐก. 23/158-162',
                 'english': '',
+            },
+        ],
+    },
+    # ── Page 117 ───────────────────────────────────────────────────
+    # Written from batch-117-117.json.
+    {
+        'page': 117,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'สูตรนี้สวดต่อ สีลุทเทสะปาฐะ เมื่อสวดปาติโมกข์ ในวันขึ้น 15 ค่ำ แรม 14 ค่ำ แรม 15 ค่ำ',
+                'english': 'This discourse is chanted after the Sīluddesa passage, when the Patimokkha is recited, on the 15th day of the waxing moon and the 14th and 15th of the waning.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 186 ───────────────────────────────────────────────────
+    # Written from batch-186-186.json.
+    {
+        'page': 186,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'อิมัส์มิญหิ สุตเต สัพพะสังขาเรสุ อะนิจจะสัญญาติ เอวัง อะยัง โปตถะเกสุ เลขากาเรนะ ทัสสิโต ปาโฐ ทิสสะติ. สุขุมากาเรนะ ปะนะ อุปะปะริกขะตัง วิญญูนัง อะนิจจะสัญญาติ วา อะนิฏฐะสัญญาติ วา ปาเฐนะ ภะวิตัพพันติ ปาฐันตะระปะริกัปโป อุปปันโน. ยุตตะตะรัง หิ อัตถะวัณณะนัง ละภิต์วา อะนิจจะสัญญาติ วา อะนิฏฐะสัญญาติ วา ธาเรตุง ยุชชะติ.',
+                'english': "An editorial note in PALI, printed after the colophon: in this sutta the ninth perception appears in the manuscripts, by the scribes' hand, as sabbasaṅkhāresu aniccasaññā; but to those who examine it closely the reading ought to be either aniccasaññā or aniṭṭhasaññā, and a variant reading has arisen. Having found the more fitting commentary, it is proper to keep either aniccasaññā or aniṭṭhasaññā.",
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'ชื่อสัญญาที่ครบ 9 ว่า สัพพะสังขาเรสุ อะนิจจะสัญญา ในคิริมานันทสูตรนี้ เห็นอยู่ตามที่จารไว้ในใบลานทั้งฉบับอักษรสีหลเป็น อะนิจอะนิจจะสัญญา ฉะนี้ ก็เมื่อได้ที่',
+                'english': 'A note in THAI, running on to page 187: the name of the ninth perception, sabbasaṅkhāresu aniccasaññā, is found in this Girimānanda Sutta as it was inscribed on the palm leaves — the Sinhalese-letter edition too — as anicca-aniccasaññā. And when one has found',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 186 ───────────────────────────────────────────────────
+    # Written from batch-186-186.json.
+    {
+        'page': 186,
+        'after': 'girimananda-suttam',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'อํ. ทสก. 24/115-120',
+                'english': '',
+            },
+        ],
+    },
+    # ── Page 187 ───────────────────────────────────────────────────
+    # Written from batch-186-186.json.
+    {
+        'page': 187,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'แก้ส่องความตามรูปพยัญชนะ ว่า อะนิจฉะสัญญา หรือ อะนิฏฐะสัญญา เป็นแน่แล้ว จะทรงไว้ตามอรรถวรรณนา นั้นก็ชอบ.',
+                'english': 'the emendation that throws light on the sense according to the letter — that it is certainly aniccha-saññā or aniṭṭha-saññā — then to keep it according to the commentary is proper.',
+                'english_unverified': True,
             },
         ],
     },
