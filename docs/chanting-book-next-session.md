@@ -1842,54 +1842,27 @@ offset is **270** from 245 down and **268** from 249 up; two unphotographed
 blanks sit between. Page 232 opens with its own centred heading, so nothing
 runs back from it — 231 is a clean start.
 
-## ⚠ THE GIRIMĀNANDA SUTTA, 183–186 — read, PARTLY verified, NOT entered
+## The Girimānanda Sutta, 183–186 — DONE
 
-The next thing to do. Four sheets, ten saññās, and the same shape as the
-Lokadhamma Sutta: no `บทขัด`, no Thai translation, and **only one witness** —
-nothing of it is anywhere else in the app.
+Entered in `db1fc42`. Same treatment as the Lokadhamma Sutta and it paid off
+the same way: the two lists and the sixteen breathing steps were magnified
+because a list of bare nouns and a repeated formula both have nothing to check
+them against, and the chant has **only one witness**.
 
-### Already verified at magnification — do not redo
+* The body-part list is **31, not 32** — it ends at `มุตตัง`, no `มัตถะลุงคัง`.
+  The book prints `อัฏฐิมัญชัง` where the canon has *aṭṭhimiñjaṃ*.
+* `ปิฬะกา` written with ฬ **against** the photograph, which shows `ปิพะกา` —
+  the fifth use of the ฬ rule, all five of which have held.
+* The sixteen breathing steps are punctuated **irregularly**; every mark was
+  read individually and nothing normalised.
+* The list of ten perceptions ends with **no mark at all**.
 
-**The 31 body parts (184)**, which are the highest-risk stretch because there
-is no sense to check them against:
-
-> `เกสา โลมา นะขา ทันตา ตะโจ, มังสัง นะหารู อัฏฐี อัฏฐิมัญชัง วักกัง, หะทะยัง`
-> `ยะกะนัง กิโลมะกัง ปิหะกัง ปัปผาสัง, อันตัง อันตะคุณัง อุทะริยัง กะรีสัง,`
-> `ปิตตัง เสมหัง ปุพโพ โลหิตัง เสโท เมโท, อัสสุ วะสา เขโฬ สิงฆานิกา ละสิกา`
-> `มุตตันติ.`
-
-31 parts, not 32 — the list ends at `มุตตัง` with no `มัตถะลุงคัง`. Note
-`อัฏฐิมัญชัง`, where the canon has *aṭṭhimiñjaṃ*; the book prints `มัญ`.
-`เขโฬ` takes ฬ and it is plainly legible.
-
-**The disease list (184)**, the other stretch with nothing to check against:
-
-> `จักขุโรโค โสตะโรโค, ฆานะโรโค ชิวหาโรโค กายะโรโค สีสะโรโค กัณณะโรโค`
-> `มุขะโรโค, ทันตะโรโค, กาโส สาโส ปินาโส ฑะโห ชะโร กุจฉิโรโค, มุจฉา`
-> `ปักขันทิกา สุลา วิสูจิกา, กุฏฐัง คัณโฑ กิลาโส โสโส อะปะมาโร, ทัททุ กัณฑุ`
-> `กัจฉุ ระขะสา วิตัจฉิกา, โลหิตัง ปิตตัง มะธุเมโห อังสา ปิพะกา ภะคัณฑะลา,`
-
-⚠ `ปิพะกา` IS A ฬ CANDIDATE — the canon has *piḷakā*, boils, so by the rule
-settled at the book on 2026-08-25 it should be written **`ปิฬะกา`**. It was
-NOT changed; decide it when entering, and record it either way.
-
-**One difference between two near-identical paragraphs (185):** `วิราคะสัญญา`
-sets `ยะทิทัง,` with a comma and `สัพพูปะธิ ปะฏินิสสัคโค` spaced;
-`นิโรธะสัญญา`, two paragraphs later, sets `ยะทิทัง.` with a full stop and
-`สัพพูปะธิปะฏินิสสัคโค` joined. Keep both.
-
-### Still to verify before entering
-
-The 16-step ānāpānasati on 185–186 — **highly repetitive, so treat it exactly
-as the Lokadhamma formulas were treated: magnify every step.** Also 183's
-opening and its two saññās, 184's `ปะหานะสัญญา` with its four repetitions, and
-186's two closing paragraphs. 186 ends with the colophon
-`คิริมานันทะสุตตัง นิฏฐิตัง.`, then **a Pali note and a Thai note** about
-whether the ninth saññā reads `อะนิจจะสัญญา` or `อะนิฏฐะสัญญา` — the Thai one
-runs onto 187 and was left for this chant. Footnote: `1. อํ. ทสก. 24/115-120`.
-
-The section heading on 183 uses ARABIC `7` where the สารบัญ has Thai `๗`, the
-same disagreement as 187.
+⚠ **Block order had to be forced twice here, and the reason generalises.** A
+non-footnote block declared on its own chant's row renders ABOVE that chant,
+because the anchor is the PREVIOUS chant on the page — put such blocks on a
+chant-less row placed after the chant. And two unanchored blocks on one page
+order by their position in `PAGE_BLOCKS`, nothing else. **Always look at the
+rendered page, not just at whether the blocks landed.**
 
 ## The Lokadhamma Sutta, 187–190 — DONE, and what it taught
 
