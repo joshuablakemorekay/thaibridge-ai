@@ -1,0 +1,157 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "girimananda-suttam"
+  ],
+  "pages": [
+   {
+    "page": 186,
+    "file": "IMG_0457.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "girimananda-suttam",
+    "verses": "12-14",
+    "starts_here": false,
+    "note": "The chant ENDING. The breathing steps complete, then the Buddha's instruction to Ānanda and what came of it, the colophon คิริมานันทะสุตตัง นิฏฐิตัง., a note in PALI and a note in THAI about the ninth perception's name, and a footnote.",
+    "blocks": [
+     {
+      "type": "footnote",
+      "marker": "1",
+      "thai": "อํ. ทสก. 24/115-120",
+      "english": "",
+      "note": "A canonical citation, reproduced exactly as printed and NOT expanded. Its marker sits on the last word of verse 14, อะโหสีติ."
+     }
+    ]
+   },
+   {
+    "page": 186,
+    "file": "IMG_0457.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "",
+    "verses": "none",
+    "note": "The two editorial notes printed BELOW the colophon. They carry no chant so that they anchor AFTER the chant above them; declared on the chant's own row they would render above its title, which is not where the book puts them.",
+    "blocks": [
+     {
+      "type": "prose",
+      "thai": "อิมัส์มิญหิ สุตเต สัพพะสังขาเรสุ อะนิจจะสัญญาติ เอวัง อะยัง โปตถะเกสุ เลขากาเรนะ ทัสสิโต ปาโฐ ทิสสะติ. สุขุมากาเรนะ ปะนะ อุปะปะริกขะตัง วิญญูนัง อะนิจจะสัญญาติ วา อะนิฏฐะสัญญาติ วา ปาเฐนะ ภะวิตัพพันติ ปาฐันตะระปะริกัปโป อุปปันโน. ยุตตะตะรัง หิ อัตถะวัณณะนัง ละภิต์วา อะนิจจะสัญญาติ วา อะนิฏฐะสัญญาติ วา ธาเรตุง ยุชชะติ.",
+      "english": "An editorial note in PALI, printed after the colophon: in this sutta the ninth perception appears in the manuscripts, by the scribes' hand, as sabbasaṅkhāresu aniccasaññā; but to those who examine it closely the reading ought to be either aniccasaññā or aniṭṭhasaññā, and a variant reading has arisen. Having found the more fitting commentary, it is proper to keep either aniccasaññā or aniṭṭhasaññā.",
+      "english_unverified": true
+     },
+     {
+      "type": "prose",
+      "thai": "ชื่อสัญญาที่ครบ 9 ว่า สัพพะสังขาเรสุ อะนิจจะสัญญา ในคิริมานันทสูตรนี้ เห็นอยู่ตามที่จารไว้ในใบลานทั้งฉบับอักษรสีหลเป็น อะนิจอะนิจจะสัญญา ฉะนี้ ก็เมื่อได้ที่",
+      "english": "A note in THAI, running on to page 187: the name of the ninth perception, sabbasaṅkhāresu aniccasaññā, is found in this Girimānanda Sutta as it was inscribed on the palm leaves — the Sinhalese-letter edition too — as anicca-aniccasaññā. And when one has found",
+      "english_unverified": true
+     }
+    ]
+   },
+   {
+    "page": 187,
+    "file": "IMG_0458.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "",
+    "verses": "none",
+    "note": "The TAIL of the Thai note begun on 186, printed at the very top of 187 above the section heading. It carries no chant so that it anchors above everything else on that page, which is where the book puts it.",
+    "blocks": [
+     {
+      "type": "prose",
+      "thai": "แก้ส่องความตามรูปพยัญชนะ ว่า อะนิจฉะสัญญา หรือ อะนิฏฐะสัญญา เป็นแน่แล้ว จะทรงไว้ตามอรรถวรรณนา นั้นก็ชอบ.",
+      "english": "the emendation that throws light on the sense according to the letter — that it is certainly aniccha-saññā or aniṭṭha-saññā — then to keep it according to the commentary is proper.",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "girimananda-suttam",
+   "verses": [
+    {
+     "number": 12,
+     "pali": "กะตะมา จานันทะ อานาปานัสสะติ, อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา นิสีทะติ ปัลลังกัง อาภุชิต์วา, อุชุง กายัง ปะณิธายะ ปะริมุขัง สะติง อุปัฏฐะเปต์วา, โส สะโตวะ อัสสะสะติ, สะโต ปัสสะสะติ. ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ, ทีฆัง วา ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ. รัสสัง วา อัสสะสันโต รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง ปัสสะสามีติ ปะชานาติ, สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. ปีติปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, ปีติปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. สุขะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สุขะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. จิตตะสังขาระปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, จิตตะสังขาระปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง จิตตะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง จิตตะสังขารัง ปัสสะสิสสามีติ สิกขะติ. จิตตะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, จิตตะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. อะภิปปะโมทะยัง จิตตัง อัสสะสิสสามีติ สิกขะติ, อะภิปปะโมทะยัง จิตตัง ปัสสะสิสสามีติ สิกขะติ. สะมาทะหัง จิตตัง อัสสะสิสสามีติ สิกขะติ, สะมาทะหัง จิตตัง ปัสสะสิสสามีติ สิกขะติ. วิโมจะยัง จิตตัง อัสสะสิสสามีติ สิกขะติ, วิโมจะยัง จิตตัง ปัสสะสิสสามีติ สิกขะติ, อะนิจจานุปัสสี อัสสะสิสสามีติ สิกขะติ, อะนิจจานุปัสสี ปัสสะสิสสามีติ สิกขะติ. วิราคานุปัสสี อัสสะสิสสามีติ สิกขะติ. วิราคานุปัสสี ปัสสะสิสสามีติ สิกขะติ, นิโรธานุปัสสี อัสสะสิสสามีติ สิกขะติ, นิโรธานุปัสสี ปัสสะสิสสามีติ สิกขะติ. ปะฏินิสสัคคานุปัสสี อัสสะสิสสามีติ สิกขะติ, ปะฏินิสสัคคานุปัสสี ปัสสะสิสสามีติ สิกขะติ, อะยัง วุจจะตานันทะ อานาปานัสสะติ.",
+     "pali_roman": "Katamā cānanda ānāpānassati, idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā nisīdati pallaṅkaṃ ābhujitvā, ujuṃ kāyaṃ paṇidhāya parimukhaṃ satiṃ upaṭṭhapetvā, so satova assasati, sato passasati. dīghaṃ vā assasanto dīghaṃ assasāmīti pajānāti, dīghaṃ vā passasanto dīghaṃ passasāmīti pajānāti. rassaṃ vā assasanto rassaṃ assasāmīti pajānāti, rassaṃ vā passasanto rassaṃ passasāmīti pajānāti, sabbakāyapaṭisaṃvedī assasissāmīti sikkhati, sabbakāyapaṭisaṃvedī passasissāmīti sikkhati. passambhayaṃ kāyasaṅkhāraṃ assasissāmīti sikkhati. passambhayaṃ kāyasaṅkhāraṃ passasissāmīti sikkhati. pītipaṭisaṃvedī assasissāmīti sikkhati, pītipaṭisaṃvedī passasissāmīti sikkhati. sukhapaṭisaṃvedī assasissāmīti sikkhati, sukhapaṭisaṃvedī passasissāmīti sikkhati. cittasaṅkhārapaṭisaṃvedī assasissāmīti sikkhati, cittasaṅkhārapaṭisaṃvedī passasissāmīti sikkhati. passambhayaṃ cittasaṅkhāraṃ assasissāmīti sikkhati. passambhayaṃ cittasaṅkhāraṃ passasissāmīti sikkhati. cittapaṭisaṃvedī assasissāmīti sikkhati, cittapaṭisaṃvedī passasissāmīti sikkhati. abhippamodayaṃ cittaṃ assasissāmīti sikkhati, abhippamodayaṃ cittaṃ passasissāmīti sikkhati. samādahaṃ cittaṃ assasissāmīti sikkhati, samādahaṃ cittaṃ passasissāmīti sikkhati. vimocayaṃ cittaṃ assasissāmīti sikkhati, vimocayaṃ cittaṃ passasissāmīti sikkhati, aniccānupassī assasissāmīti sikkhati, aniccānupassī passasissāmīti sikkhati. virāgānupassī assasissāmīti sikkhati. virāgānupassī passasissāmīti sikkhati, nirodhānupassī assasissāmīti sikkhati, nirodhānupassī passasissāmīti sikkhati. paṭinissaggānupassī assasissāmīti sikkhati, paṭinissaggānupassī passasissāmīti sikkhati, ayaṃ vuccatānanda ānāpānassati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is mindfulness of breathing? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, sits down, folds his legs crosswise, holds his body erect, and sets up mindfulness before him. Ever mindful he breathes in, mindful he breathes out. Breathing in long, he knows he breathes in long; and so through the sixteen steps, to contemplating relinquishment. This is called mindfulness of breathing."
+    },
+    {
+     "number": 13,
+     "pali": "สะเจ โข ต์วัง อานันทะ คิริมานันทัสสะ ภิกขุโน อุปะสังกะมิต์วา อิมา ทะสะ สัญญา ภาเสยยาสิ, ฐานัง โข ปะเนตัง วิชชะติ, ยัง คิริมานันทัสสะ ภิกขุโน อิมา ทะสะ สัญญา สุต์วา โส อาพาโธ ฐานะโส ปะฏิปปัสสัมเภยยาติ.",
+     "pali_roman": "Sace kho tvaṃ ānanda girimānandassa bhikkhuno upasaṅkamitvā imā dasa saññā bhāseyyāsi, ṭhānaṃ kho panetaṃ vijjati, yaṃ girimānandassa bhikkhuno imā dasa saññā sutvā so ābādho ṭhānaso paṭippassambheyyāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "If, Ānanda, you go to the bhikkhu Girimānanda and speak to him of these ten perceptions, it is possible that on hearing them his affliction will subside on the spot.'",
+     "page": 186
+    },
+    {
+     "number": 14,
+     "pali": "อะถะโข อายัส์มา อานันโท ภะคะวะโต สันติเก อิมา ทะสะ สัญญา อุคคะเหต์วา, เยนายัส์มา คิริมานันโท, เตนุปะสังกะมิ, อุปะสังกะมิต์วา อายัส์มะโต คิริมานันทัสสะ อิมา ทะสะ สัญญา อะภาสิ. อะถะโข อายัส์มะโต คิริมานันทัสสะ อิมา ทะสะ สัญญา สุต์วา โส อาพาโธ ฐานะโส ปะฏิปปัสสัมภิ, วุฏฐะหิ จายัส์มา คิริมานันโท ตัมหา อาพาธา ตะถาปะหีโน จะ ปะนายัส์มะโต คิริมานันทัสสะ โส อาพาโธ อะโหสีติ.",
+     "pali_roman": "Athakho āyasmā ānando bhagavato santike imā dasa saññā uggahetvā, yenāyasmā girimānando, tenupasaṅkami, upasaṅkamitvā āyasmato girimānandassa imā dasa saññā abhāsi. athakho āyasmato girimānandassa imā dasa saññā sutvā so ābādho ṭhānaso paṭippassambhi, vuṭṭhahi cāyasmā girimānando tamhā ābādhā tathāpahīno ca panāyasmato girimānandassa so ābādho ahosīti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Then the venerable Ānanda, having learned these ten perceptions from the Blessed One, went to the venerable Girimānanda and spoke to him of them. And when the venerable Girimānanda had heard these ten perceptions, his affliction subsided on the spot; and the venerable Girimānanda rose up from that affliction, and that was how his affliction was abandoned."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 12,
+     "file": "IMG_0457.PNG",
+     "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN from 185."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0457.PNG",
+     "issue": "⚠ THE SIXTEEN BREATHING STEPS ARE PUNCTUATED IRREGULARLY AND EVERY MARK WAS READ FROM A MAGNIFIED CROP. The pattern is mostly pair-comma then pair-stop, but it breaks: ปัสสัมภะยัง กายะสังขารัง takes a FULL STOP after its first half, วิโมจะยัง จิตตัง takes a COMMA after its second where a stop is due, and วิราคานุปัสสี takes a FULL STOP after its first half and a COMMA after its second. Nothing has been normalised."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0457.PNG",
+     "issue": "⚠ TWO EDITORIAL NOTES FOLLOW THE COLOPHON, one in PALI and one in THAI, both about whether the ninth perception should read อะนิจจะสัญญา or อะนิฏฐะสัญญา. They are page blocks, not verses — they are ABOUT the chant, not part of it. THE THAI ONE RUNS ONTO 187 and its tail is entered as a block at the top of that page, which is where the book prints it."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0457.PNG",
+     "issue": "THE COLOPHON IS CARRIED AS THE CHANT'S `closing`, the field nineteen other chants already use for their นิฏฐิตัง line."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0457.PNG",
+     "issue": "⚠ BLOCK ORDER HAD TO BE FORCED, TWICE, AND IT IS WORTH KNOWING WHY. A non-footnote block anchors after the PREVIOUS chant on its page, computed from the rows of its own batch. Declared on the chant's row here the two notes rendered ABOVE the chant's title; they now sit on a chant-less row placed after it. And on 187 the note's tail and the section heading are BOTH unanchored, so they order by position in PAGE_BLOCKS — the tail had to be moved before the heading, which is where the book prints it. Check the rendered page, not just that the blocks landed."
+    }
+   ],
+   "continuation_of": "girimananda-suttam",
+   "closing": {
+    "pali": "คิริมานันทะสุตตัง นิฏฐิตัง.",
+    "pali_roman": "Girimānandasuttaṃ niṭṭhitaṃ.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Discourse to Girimānanda."
+   }
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "girimananda-suttam"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 182,
+  "resume_from_file": "IMG_0453.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from magnified crops and romanised mechanically.",
+  "page_scan": "agrees.",
+  "notes": "The chant ENDING. The breathing steps complete, then the Buddha's instruction to Ānanda and what came of it, the colophon คิริมานันทะสุตตัง นิฏฐิตัง., a note in PALI and a note in THAI about the ninth perception's name, and a footnote.",
+  "diacritic_exceptions": [
+   "atthi/aṭṭhī — NOT one word romanised two ways. They are two different Pali words standing a few words apart in the same sentence of the body-part passage: อัตถิ อิมัส์มิง กาเย, 'there is in this body', and อัฏฐี, 'bones', the eighth part in the list. The Thai script distinguishes them plainly and both were read at magnification."
+  ]
+ }
+}

@@ -1,0 +1,183 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 2,
+  "files_read": 2,
+  "received": 1,
+  "manifest": [
+   "girimananda-suttam"
+  ],
+  "pages": [
+   {
+    "page": 183,
+    "file": "IMG_0454.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "girimananda-suttam",
+    "verses": "1-4",
+    "starts_here": true,
+    "note": "The page opens with a two-line SECTION HEADING and the chant's centred bold heading, then the frame, the list of ten perceptions, and the first two of them."
+   },
+   {
+    "page": 184,
+    "file": "IMG_0455.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "girimananda-suttam",
+    "verses": "5-8",
+    "starts_here": false,
+    "note": "The chant continuing. อะสุภะสัญญา with its 31 body parts, อาทีนะวะสัญญา with its list of diseases, ปะหานะสัญญา, and วิราคะสัญญา begun and cut by the page turn."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "girimananda-suttam",
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. เตนะ โข ปะนะ สะมะเยนะ อายัส์มา คิริมานันโท อาพาธิโก โหติ ทุกขิโต พาฬ์หะคิลาโน. อะถะโข อายัส์มา อานันโท, เยนะ ภะคะวา, เตนุปะสังกะมิ, อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง นิสีทิ, เอกะมันตัง นิสินโน โข อายัส์มา อานันโท ภะคะวันตัง เอตะทะโวจะ.",
+     "pali_roman": "Evamme sutaṃ. ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. tena kho pana samayena āyasmā girimānando ābādhiko hoti dukkhito bāḷhagilāno. athakho āyasmā ānando, yena bhagavā, tenupasaṅkami, upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ nisīdi, ekamantaṃ nisinno kho āyasmā ānando bhagavantaṃ etadavoca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was dwelling at Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. Now on that occasion the venerable Girimānanda was sick, afflicted, gravely ill. Then the venerable Ānanda went to the Blessed One, paid homage, sat down to one side, and said this to him:",
+     "page": 183
+    },
+    {
+     "number": 2,
+     "pali": "อายัส์มา ภันเต คิริมานันโท อาพาธิโก โหติ ทุกขิโต พาฬ์หะคิลาโน, สาธุ ภันเต ภะคะวา, เยนายัส์มา คิริมานันโท, เตนุปะสังกะมะตุ อะนุกัมปัง อุปาทายาติ. สะเจ โข ต์วัง อานันทะ คิริมานันทัสสะ ภิกขุโน อุปะสังกะมิต์วา ทะสะ สัญญา ภาเสยยาสิ, ฐานัง โข ปะเนตัง วิชชะติ, ยัง คิริมานันทัสสะ ภิกขุโน ทะสะ สัญญา สุต์วา โส อาพาโธ ฐานะโส ปะฏิปปัสสัมเภยยะ. กะตะมา ทะสะ. อะนิจจะสัญญา, อะนัตตะสัญญา, อะสุภะสัญญา, อาทีนะวะสัญญา, ปะหานะสัญญา, วิราคะสัญญา, นิโรธะสัญญา, สัพพะโลเก อะนะภิระตะสัญญา, สัพพะสังขาเรสุ อะนิจจะสัญญา, อานาปานัสสะติ",
+     "pali_roman": "Āyasmā bhante girimānando ābādhiko hoti dukkhito bāḷhagilāno, sādhu bhante bhagavā, yenāyasmā girimānando, tenupasaṅkamatu anukampaṃ upādāyāti. sace kho tvaṃ ānanda girimānandassa bhikkhuno upasaṅkamitvā dasa saññā bhāseyyāsi, ṭhānaṃ kho panetaṃ vijjati, yaṃ girimānandassa bhikkhuno dasa saññā sutvā so ābādho ṭhānaso paṭippassambheyya. katamā dasa. aniccasaññā, anattasaññā, asubhasaññā, ādīnavasaññā, pahānasaññā, virāgasaññā, nirodhasaññā, sabbaloke anabhiratasaññā, sabbasaṅkhāresu aniccasaññā, ānāpānassati",
+     "thai": "",
+     "paiboon": "",
+     "english": "'Venerable sir, the venerable Girimānanda is sick, afflicted, gravely ill. It would be good if the Blessed One would go to him, out of compassion.' 'If, Ānanda, you go to the bhikkhu Girimānanda and speak to him of ten perceptions, it is possible that on hearing them his affliction will subside on the spot. Which ten? The perception of impermanence, of not-self, of unattractiveness, of danger, of abandoning, of dispassion, of cessation, of disenchantment with the whole world, of impermanence in all formations, and mindfulness of breathing."
+    },
+    {
+     "number": 3,
+     "pali": "กะตะมา จานันทะ อะนิจจะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. รูปัง อะนิจจัง, เวทะนา อะนิจจา, สัญญา อะนิจจา, สังขารา อะนิจจา, วิญญาณัง อะนิจจันติ. อิติ อิเมสุ ปัญจะสุ อุปาทานักขันเธสุ อะนิจจานุปัสสี วิหะระติ, อะยัง วุจจะตานันทะ อะนิจจะสัญญา.",
+     "pali_roman": "Katamā cānanda aniccasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. rūpaṃ aniccaṃ, vedanā aniccā, saññā aniccā, saṅkhārā aniccā, viññāṇaṃ aniccanti. iti imesu pañcasu upādānakkhandhesu aniccānupassī viharati, ayaṃ vuccatānanda aniccasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what, Ānanda, is the perception of impermanence? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: form is impermanent, feeling is impermanent, perception is impermanent, formations are impermanent, consciousness is impermanent. Thus he dwells contemplating impermanence in these five aggregates of clinging. This, Ānanda, is called the perception of impermanence."
+    },
+    {
+     "number": 4,
+     "pali": "กะตะมา จานันทะ อะนัตตะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. จักขุง อะนัตตา, รูปา อะนัตตา, โสตัง อะนัตตา, สัททา อะนัตตา, ฆานัง อะนัตตา, คันธา อะนัตตา, ชิวหา อะนัตตา, ระสา อะนัตตา, กาโย อะนัตตา, โผฏฐัพพา อะนัตตา, มะโน อะนัตตา, ธัมมา อะนัตตาติ. อิติ อิเมสุ ฉะสุ อัชฌัตติกะพาหิเรสุ อายะตะเนสุ อะนัตตานุปัสสี วิหะระติ. อะยัง วุจจะตานันทะ อะนัตตะสัญญา.",
+     "pali_roman": "Katamā cānanda anattasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. cakkhuṃ anattā, rūpā anattā, sotaṃ anattā, saddā anattā, ghānaṃ anattā, gandhā anattā, jivhā anattā, rasā anattā, kāyo anattā, phoṭṭhabbā anattā, mano anattā, dhammā anattāti. iti imesu chasu ajjhattikabāhiresu āyatanesu anattānupassī viharati. ayaṃ vuccatānanda anattasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of not-self? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: the eye is not-self, forms are not-self; the ear is not-self, sounds are not-self; the nose is not-self, odours are not-self; the tongue is not-self, tastes are not-self; the body is not-self, tangibles are not-self; the mind is not-self, mind-objects are not-self. Thus he dwells contemplating not-self in these six internal and external sense bases. This is called the perception of not-self."
+    },
+    {
+     "number": 5,
+     "pali": "กะตะมา จานันทะ อะสุภะสัญญา. อิธานันทะ ภิกขุ อิมะเมวะ กายัง อุทธัง ปาทะตะลา, อะโธ เกสะมัตถะกา, ตะจะปะริยันตัง ปูรันนานัปปะการัสสะ อะสุจิโน ปัจจะเวกขะติ. อัตถิ อิมัส์มิง กาเย เกสา โลมา นะขา ทันตา ตะโจ, มังสัง นะหารู อัฏฐี อัฏฐิมัญชัง วักกัง, หะทะยัง ยะกะนัง กิโลมะกัง ปิหะกัง ปัปผาสัง, อันตัง อันตะคุณัง อุทะริยัง กะรีสัง, ปิตตัง เสมหัง ปุพโพ โลหิตัง เสโท เมโท, อัสสุ วะสา เขโฬ สิงฆานิกา ละสิกา มุตตันติ. อิติ อิมัส์มิง กาเย อะสุภานุปัสสี วิหะระติ, อะยัง วุจจะตานันทะ อะสุภะสัญญา.",
+     "pali_roman": "Katamā cānanda asubhasaññā. idhānanda bhikkhu imameva kāyaṃ uddhaṃ pādatalā, adho kesamatthakā, tacapariyantaṃ pūrannānappakārassa asucino paccavekkhati. atthi imasmiṃ kāye kesā lomā nakhā dantā taco, maṃsaṃ nahārū aṭṭhī aṭṭhimañjaṃ vakkaṃ, hadayaṃ yakanaṃ kilomakaṃ pihakaṃ papphāsaṃ, antaṃ antaguṇaṃ udariyaṃ karīsaṃ, pittaṃ semhaṃ pubbo lohitaṃ sedo medo, assu vasā kheḷo siṅghānikā lasikā muttanti. iti imasmiṃ kāye asubhānupassī viharati, ayaṃ vuccatānanda asubhasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of unattractiveness? Here a bhikkhu reviews this very body, upward from the soles of the feet and downward from the tips of the hair, bounded by skin and full of many kinds of impurity: in this body there are head-hairs, body-hairs, nails, teeth, skin; flesh, sinews, bones, bone-marrow, kidneys; heart, liver, membrane, spleen, lungs; bowels, entrails, undigested food, excrement; bile, phlegm, pus, blood, sweat, fat; tears, grease, spittle, snot, oil of the joints, urine. Thus he dwells contemplating unattractiveness in this body. This is called the perception of unattractiveness.",
+     "page": 184
+    },
+    {
+     "number": 6,
+     "pali": "กะตะมา จานันทะ อาทีนะวะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. พะหุทุกโข โข อะยัง กาโย พะหุอาทีนะโวติ. อิติ อิมัส์มิง กาเย วิวิธา อาพาธา อุปปัชชันติ. เสยยะถีทัง, จักขุโรโค โสตะโรโค, ฆานะโรโค ชิวหาโรโค กายะโรโค สีสะโรโค กัณณะโรโค มุขะโรโค, ทันตะโรโค, กาโส สาโส ปินาโส ฑะโห ชะโร กุจฉิโรโค, มุจฉา ปักขันทิกา สุลา วิสูจิกา, กุฏฐัง คัณโฑ กิลาโส โสโส อะปะมาโร, ทัททุ กัณฑุ กัจฉุ ระขะสา วิตัจฉิกา, โลหิตัง ปิตตัง มะธุเมโห อังสา ปิฬะกา ภะคัณฑะลา, ปิตตะสะมุฏฐานา อาพาธา, เสมหะสะมุฏฐานา อาพาธา, วาตะสะมุฏฐานา อาพาธา, สันนิปาติกา อาพาธา, อุตุปะริณามะชา อาพาธา, วิสะมะปะริหาระชา อาพาธา, โอปักกะมิกา อาพาธา, กัมมะวิปากะชา อาพาธา, สีตัง อุณหัง ชิฆัจฉา ปิปาสา อุจจาโร ปัสสาโวติ. อิติ อิมัส์มิง กาเย อาทีนะวานุปัสสี วิหะระติ, อะยัง วุจจะตานันทะ อาทีนะวะสัญญา.",
+     "pali_roman": "Katamā cānanda ādīnavasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. bahudukkho kho ayaṃ kāyo bahuādīnavoti. iti imasmiṃ kāye vividhā ābādhā uppajjanti. seyyathīdaṃ, cakkhurogo sotarogo, ghānarogo jivhārogo kāyarogo sīsarogo kaṇṇarogo mukharogo, dantarogo, kāso sāso pināso ḍaho jaro kucchirogo, mucchā pakkhandikā sulā visūcikā, kuṭṭhaṃ gaṇḍo kilāso soso apamāro, daddu kaṇḍu kacchu rakhasā vitacchikā, lohitaṃ pittaṃ madhumeho aṃsā piḷakā bhagaṇḍalā, pittasamuṭṭhānā ābādhā, semhasamuṭṭhānā ābādhā, vātasamuṭṭhānā ābādhā, sannipātikā ābādhā, utupariṇāmajā ābādhā, visamaparihārajā ābādhā, opakkamikā ābādhā, kammavipākajā ābādhā, sītaṃ uṇhaṃ jighacchā pipāsā uccāro passāvoti. iti imasmiṃ kāye ādīnavānupassī viharati, ayaṃ vuccatānanda ādīnavasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of danger? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: this body is a mass of suffering, beset with much danger; for in this body many kinds of affliction arise — diseases of the eye, ear, nose, tongue, body, head, ear, mouth and teeth; cough, asthma, catarrh, fever, ague, stomach ache, fainting, dysentery, gripes, cholera, leprosy, boils, skin disease, consumption, epilepsy, ringworm, itch, scab, chapping, scabies, blood and bile disorders, diabetes, cancer, fistula; afflictions arising from bile, from phlegm, from wind, from their conjunction, from change of season, from careless behaviour, from assault, from the ripening of kamma; cold, heat, hunger, thirst, excrement and urine. Thus he dwells contemplating danger in this body. This is called the perception of danger."
+    },
+    {
+     "number": 7,
+     "pali": "กะตะมา จานันทะ ปะหานะสัญญา. อิธานันทะ ภิกขุ อุปปันนัง กามะวิตักกัง นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ, อุปปันนัง พ์ยาปาทะวิตักกัง นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ. อุปปันนัง วิหิงสาวิตักกัง นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ, อุปปันนุปปันเน ปาปะเก อะกุสะเล ธัมเม นาธิวาเสติ ปะชะหะติ, วิโนเทติ พ์ยันตีกะโรติ อะนะภาวัง คะเมติ, อะยัง วุจจะตานันทะ ปะหานะสัญญา.",
+     "pali_roman": "Katamā cānanda pahānasaññā. idhānanda bhikkhu uppannaṃ kāmavitakkaṃ nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti, uppannaṃ byāpādavitakkaṃ nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti. uppannaṃ vihiṃsāvitakkaṃ nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti, uppannuppanne pāpake akusale dhamme nādhivāseti pajahati, vinodeti byantīkaroti anabhāvaṃ gameti, ayaṃ vuccatānanda pahānasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of abandoning? Here a bhikkhu does not tolerate an arisen thought of sensuality but abandons it, dispels it, makes an end of it, brings it to non-existence; nor an arisen thought of ill will; nor an arisen thought of cruelty; nor evil, unwholesome states whenever they arise. This is called the perception of abandoning."
+    },
+    {
+     "number": 8,
+     "pali": "กะตะมา จานันทะ วิราคะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา […]",
+     "pali_roman": "Katamā cānanda virāgasaññā. idhānanda bhikkhu araññagato vā […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of dispassion? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: this is peaceful, this is sublime — namely, the stilling of all formations, the relinquishing of all attachments, the destruction of craving, dispassion, Nibbāna. This is called the perception of dispassion."
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0454.PNG",
+     "issue": "⚠ THIS CHANT HAS ONLY ONE WITNESS. Nothing of it is anywhere else in the app, so the twin comparison that caught real errors elsewhere in this pass cannot help. The photographs are the only check, which is why the two lists and the sixteen breathing steps were magnified rather than read off the whole page."
+    },
+    {
+     "verse": 2,
+     "file": "IMG_0454.PNG",
+     "issue": "⚠ THE LIST OF TEN ENDS WITH NO MARK AT ALL — the tenth, อานาปานัสสะติ, is followed by nothing, no comma and no full stop, where the other nine are each followed by a comma. Read at magnification. Entered as printed."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0455.PNG",
+     "issue": "⚠ THE BODY-PART LIST IS 31, NOT 32 — it ends at มุตตัง with no มัตถะลุงคัง. Read at magnification, since a list of bare nouns has no sense to check it against. Note อัฏฐิมัญชัง, where the canon has aṭṭhimiñjaṃ; the book prints มัญ. เขโฬ takes ฬ and it is plainly legible here."
+    },
+    {
+     "verse": 6,
+     "file": "IMG_0455.PNG",
+     "issue": "⚠ ปิฬะกา IS WRITTEN WITH ฬ AGAINST THE PHOTOGRAPH, which shows ปิพะกา. The canon has piḷakā, boils, and the ฬ-as-พ rule settled at the book on 2026-08-25 applies. The rest of the disease list was read at magnification and entered as printed."
+    },
+    {
+     "verse": 8,
+     "file": "IMG_0455.PNG",
+     "issue": "INCOMPLETE LINE, cut by the turn to 185 and completed there."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0454.PNG",
+     "issue": "THE SECTION HEADING USES ARABIC 7 where the สารบัญ prints Thai ๗ — the same disagreement as page 187's heading."
+    }
+   ],
+   "title_thai": "คิริมานันทะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Girimānandasuttaṃ",
+   "title_english": "The Discourse to Girimānanda",
+   "page_start": 183,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent. Unlike the Lokadhamma Sutta this one has no บทขัด, and the สารบัญ lists none.",
+    "units": "14 paragraphs of Pali prose, plus a closing.",
+    "ordering": "Pure Pali, the book's FIRST printing. No Thai translation and no second copy anywhere in the app.",
+    "conventions": "pali_roman mechanical from translit_pali; paiboon left empty. The two lists and the sixteen breathing steps were read from MAGNIFIED crops.",
+    "pages": "IMG_0454 to IMG_0457, pages 183-186. Offset 271."
+   },
+   "vocabulary": [
+    {
+     "pali": "สัญญา",
+     "pali_roman": "saññā",
+     "meaning": "perception, a way of seeing deliberately taken up; the sutta gives ten of them to a sick monk"
+    },
+    {
+     "pali": "ปะฏิปปัสสัมภิ",
+     "pali_roman": "paṭippassambhi",
+     "meaning": "subsided, was allayed; what the illness did on hearing them"
+    }
+   ],
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "girimananda-suttam"
+  ],
+  "resume_from_page": 185,
+  "resume_from_file": "IMG_0456.PNG",
+  "resume_from": "girimananda-suttam",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from magnified crops and romanised mechanically.",
+  "page_scan": "agrees.",
+  "notes": "The page opens with a two-line SECTION HEADING and the chant's centred bold heading, then the frame, the list of ten perceptions, and the first two of them.",
+  "diacritic_exceptions": [
+   "atthi/aṭṭhī — NOT one word romanised two ways. They are two different Pali words standing a few words apart in the same sentence of the body-part passage: อัตถิ อิมัส์มิง กาเย, 'there is in this body', and อัฏฐี, 'bones', the eighth part in the list. The Thai script distinguishes them plainly and both were read at magnification."
+  ]
+ }
+}

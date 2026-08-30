@@ -57542,6 +57542,19 @@ PAGE_BLOCKS = [
         ],
     },
     # ── Page 187 ───────────────────────────────────────────────────
+    # Written from batch-186-186.json.
+    {
+        'page': 187,
+        'blocks': [
+            {
+                'type': 'prose',
+                'thai': 'แก้ส่องความตามรูปพยัญชนะ ว่า อะนิจฉะสัญญา หรือ อะนิฏฐะสัญญา เป็นแน่แล้ว จะทรงไว้ตามอรรถวรรณนา นั้นก็ชอบ.',
+                'english': 'the emendation that throws light on the sense according to the letter — that it is certainly aniccha-saññā or aniṭṭha-saññā — then to keep it according to the commentary is proper.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 187 ───────────────────────────────────────────────────
     # Written from batch-187-187.json.
     {
         'page': 187,
@@ -57599,6 +57612,7 @@ PAGE_BLOCKS = [
     # Written from batch-186-186.json.
     {
         'page': 186,
+        'after': 'girimananda-suttam',
         'blocks': [
             {
                 'type': 'prose',
@@ -57625,19 +57639,6 @@ PAGE_BLOCKS = [
                 'marker': '1',
                 'thai': 'อํ. ทสก. 24/115-120',
                 'english': '',
-            },
-        ],
-    },
-    # ── Page 187 ───────────────────────────────────────────────────
-    # Written from batch-186-186.json.
-    {
-        'page': 187,
-        'blocks': [
-            {
-                'type': 'prose',
-                'thai': 'แก้ส่องความตามรูปพยัญชนะ ว่า อะนิจฉะสัญญา หรือ อะนิฏฐะสัญญา เป็นแน่แล้ว จะทรงไว้ตามอรรถวรรณนา นั้นก็ชอบ.',
-                'english': 'the emendation that throws light on the sense according to the letter — that it is certainly aniccha-saññā or aniṭṭha-saññā — then to keep it according to the commentary is proper.',
-                'english_unverified': True,
             },
         ],
     },

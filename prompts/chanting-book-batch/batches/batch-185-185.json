@@ -1,0 +1,113 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "girimananda-suttam"
+  ],
+  "pages": [
+   {
+    "page": 185,
+    "file": "IMG_0456.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "girimananda-suttam",
+    "verses": "8-12",
+    "starts_here": false,
+    "note": "The chant continuing. วิราคะสัญญา completes, then นิโรธะสัญญา, สัพพะโลเก อะนะภิระตะสัญญา, สัพพะสังขาเรสุ อะนิจจะสัญญา, and อานาปานัสสะติ begun and cut by the page turn."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "girimananda-suttam",
+   "verses": [
+    {
+     "number": 8,
+     "pali": "กะตะมา จานันทะ วิราคะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. เอตัง สันตัง เอตัง ปะณีตัง. ยะทิทัง, สัพพะสังขาระสะมะโถ สัพพูปะธิ ปะฏินิสสัคโค ตัณหักขะโย วิราโค นิพพานันติ, อะยัง วุจจะตานันทะ วิราคะสัญญา.",
+     "pali_roman": "Katamā cānanda virāgasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. etaṃ santaṃ etaṃ paṇītaṃ. yadidaṃ, sabbasaṅkhārasamatho sabbūpadhi paṭinissaggo taṇhakkhayo virāgo nibbānanti, ayaṃ vuccatānanda virāgasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of dispassion? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: this is peaceful, this is sublime — namely, the stilling of all formations, the relinquishing of all attachments, the destruction of craving, dispassion, Nibbāna. This is called the perception of dispassion."
+    },
+    {
+     "number": 9,
+     "pali": "กะตะมา จานันทะ นิโรธะสัญญา. อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา อิติ ปะฏิสัญจิกขะติ. เอตัง สันตัง เอตัง ปะณีตัง. ยะทิทัง. สัพพะสังขาระสะมะโถ สัพพูปะธิปะฏินิสสัคโค ตัณหักขะโย นิโรโธ นิพพานันติ, อะยัง วุจจะตานันทะ นิโรธะสัญญา.",
+     "pali_roman": "Katamā cānanda nirodhasaññā. idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā iti paṭisañcikkhati. etaṃ santaṃ etaṃ paṇītaṃ. yadidaṃ. sabbasaṅkhārasamatho sabbūpadhipaṭinissaggo taṇhakkhayo nirodho nibbānanti, ayaṃ vuccatānanda nirodhasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of cessation? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects thus: this is peaceful, this is sublime — namely, the stilling of all formations, the relinquishing of all attachments, the destruction of craving, cessation, Nibbāna. This is called the perception of cessation.",
+     "page": 185
+    },
+    {
+     "number": 10,
+     "pali": "กะตะมา จานันทะ สัพพะโลเก อะนะภิระตะสัญญา, อิธานันทะ ภิกขุ เย โลเก อุปายุปาทานา เจตะโส อะธิฏฐานาภินิเวสานุสะยา, เต ปะชะหันโต วิระมะติ นะ อุปาทิยันโต, อะยัง วุจจะตานันทะ สัพพะโลเก อะนะภิระตะสัญญา.",
+     "pali_roman": "Katamā cānanda sabbaloke anabhiratasaññā, idhānanda bhikkhu ye loke upāyupādānā cetaso adhiṭṭhānābhinivesānusayā, te pajahanto viramati na upādiyanto, ayaṃ vuccatānanda sabbaloke anabhiratasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of disenchantment with the whole world? Here a bhikkhu, abandoning any engagement and clinging in the world, any mental standpoints, adherences and underlying tendencies, refrains and does not cling. This is called the perception of disenchantment with the whole world."
+    },
+    {
+     "number": 11,
+     "pali": "กะตะมา จานันทะ สัพพะสังขาเรสุ อะนิจจะสัญญา. อิธานันทะ ภิกขุ สัพพะสังขาเรหิ อัฏฏิยะติ หะรายะติ ชิคุจฉะติ, อะยัง วุจจะตานันทะ สัพพะสังขาเรสุ อะนิจจะสัญญา.",
+     "pali_roman": "Katamā cānanda sabbasaṅkhāresu aniccasaññā. idhānanda bhikkhu sabbasaṅkhārehi aṭṭiyati harāyati jigucchati, ayaṃ vuccatānanda sabbasaṅkhāresu aniccasaññā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is the perception of impermanence in all formations? Here a bhikkhu is troubled by all formations, ashamed of them, disgusted with them. This is called the perception of impermanence in all formations."
+    },
+    {
+     "number": 12,
+     "pali": "กะตะมา จานันทะ อานาปานัสสะติ, อิธานันทะ ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา นิสีทะติ ปัลลังกัง อาภุชิต์วา, อุชุง กายัง ปะณิธายะ ปะริมุขัง สะติง อุปัฏฐะเปต์วา, โส สะโตวะ อัสสะสะติ, สะโต ปัสสะสะติ. ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ, ทีฆัง วา ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ. รัสสัง วา อัสสะสันโต รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง ปัสสะสามีติ ปะชานาติ, สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. ปีติปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, ปีติปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. สุขะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สุขะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. จิตตะสังขาระปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, จิตตะสังขาระปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง จิตตะสังขารัง อัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง จิตตะสังขารัง ปัสสะสิสสามีติ สิกขะติ. จิตตะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, จิตตะปะฏิสังเวที […]",
+     "pali_roman": "Katamā cānanda ānāpānassati, idhānanda bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā nisīdati pallaṅkaṃ ābhujitvā, ujuṃ kāyaṃ paṇidhāya parimukhaṃ satiṃ upaṭṭhapetvā, so satova assasati, sato passasati. dīghaṃ vā assasanto dīghaṃ assasāmīti pajānāti, dīghaṃ vā passasanto dīghaṃ passasāmīti pajānāti. rassaṃ vā assasanto rassaṃ assasāmīti pajānāti, rassaṃ vā passasanto rassaṃ passasāmīti pajānāti, sabbakāyapaṭisaṃvedī assasissāmīti sikkhati, sabbakāyapaṭisaṃvedī passasissāmīti sikkhati. passambhayaṃ kāyasaṅkhāraṃ assasissāmīti sikkhati. passambhayaṃ kāyasaṅkhāraṃ passasissāmīti sikkhati. pītipaṭisaṃvedī assasissāmīti sikkhati, pītipaṭisaṃvedī passasissāmīti sikkhati. sukhapaṭisaṃvedī assasissāmīti sikkhati, sukhapaṭisaṃvedī passasissāmīti sikkhati. cittasaṅkhārapaṭisaṃvedī assasissāmīti sikkhati, cittasaṅkhārapaṭisaṃvedī passasissāmīti sikkhati. passambhayaṃ cittasaṅkhāraṃ assasissāmīti sikkhati. passambhayaṃ cittasaṅkhāraṃ passasissāmīti sikkhati. cittapaṭisaṃvedī assasissāmīti sikkhati, cittapaṭisaṃvedī […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "And what is mindfulness of breathing? Here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, sits down, folds his legs crosswise, holds his body erect, and sets up mindfulness before him. Ever mindful he breathes in, mindful he breathes out. Breathing in long, he knows he breathes in long; and so through the sixteen steps, to contemplating relinquishment. This is called mindfulness of breathing."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 8,
+     "file": "IMG_0456.PNG",
+     "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN from 184."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0456.PNG",
+     "issue": "⚠ TWO NEAR-IDENTICAL PARAGRAPHS, PUNCTUATED DIFFERENTLY. วิราคะสัญญา sets ยะทิทัง, with a COMMA and สัพพูปะธิ ปะฏินิสสัคโค SPACED; นิโรธะสัญญา, two paragraphs later, sets ยะทิทัง. with a FULL STOP and joins them as สัพพูปะธิปะฏินิสสัคโค. Read at magnification. Neither has been made to match the other."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0456.PNG",
+     "issue": "THIS SAÑÑĀ'S OPENING ENDS WITH A COMMA — สัพพะโลเก อะนะภิระตะสัญญา, — where the other nine open with a full stop before อิธานันทะ. So does อานาปานัสสะติ at verse 12. Entered as printed."
+    },
+    {
+     "verse": 12,
+     "file": "IMG_0456.PNG",
+     "issue": "INCOMPLETE LINE. The seventh breathing step is cut by the turn — 185 ends at จิตตะปะฏิสังเวที and 186 opens ปัสสะสิสสามีติ — so verse 12 ends […] and is completed by batch-186-186."
+    }
+   ],
+   "continuation_of": "girimananda-suttam",
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "girimananda-suttam"
+  ],
+  "resume_from_page": 186,
+  "resume_from_file": "IMG_0457.PNG",
+  "resume_from": "girimananda-suttam",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from magnified crops and romanised mechanically.",
+  "page_scan": "agrees.",
+  "notes": "The chant continuing. วิราคะสัญญา completes, then นิโรธะสัญญา, สัพพะโลเก อะนะภิระตะสัญญา, สัพพะสังขาเรสุ อะนิจจะสัญญา, and อานาปานัสสะติ begun and cut by the page turn.",
+  "diacritic_exceptions": [
+   "atthi/aṭṭhī — NOT one word romanised two ways. They are two different Pali words standing a few words apart in the same sentence of the body-part passage: อัตถิ อิมัส์มิง กาเย, 'there is in this body', and อัฏฐี, 'bones', the eighth part in the list. The Thai script distinguishes them plainly and both were read at magnification."
+  ]
+ }
+}
