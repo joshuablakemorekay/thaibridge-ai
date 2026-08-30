@@ -55741,6 +55741,116 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0445.PNG]: ⚠ PAGE 175 IS ENTERED IN PART, ON PURPOSE.
+        #   มะหาสะมะยะสุตตัง begins below this chant and runs to 182 — EIGHT
+        #   sheets of two-column verse, the largest single chant left. It is
+        #   left for its own batches. Unlike the last two suttas it HAS A
+        #   TWIN: the same text in roman at 317-325 as `mahasamayasutta-
+        #   roman`, 192 verses, which gives the verse count, order and
+        #   English.
+        # ‼ CHECK [IMG_0445.PNG]: THE SECTION HEADING USES ARABIC 14 where the
+        #   สารบัญ prints Thai ๑๔ — the same disagreement as the headings on
+        #   183 and 187. The block follows the page.
+        # ‼ CHECK [IMG_0445.PNG]: THE HEADING AND THE สารบัญ NAME THIS CHANT
+        #   DIFFERENTLY: the page heads it บทขัด มะหาสะมะยะสุตตัง with a
+        #   space, the contents lists บทขัดมะหาสะมะยะสุตตัง joined. The title
+        #   follows the page; title_roman follows the contents, which is what
+        #   the title test compares.
+        'id': 'bot-khat-mahasamaya-suttam',
+        'title_thai': 'บทขัด มะหาสะมะยะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt má-hǎa-sà-má-yá-sùt-dtaŋ',
+        'title_english': 'The Introductory Verses to the Mahāsamaya Sutta',
+        'page_start': 175,
+        'layout': 'lines',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 175,
+                'pali': 'ทุลละภัง ทัสสะนัง ยัสสะ สัมพุทธัสสะ อะภิณหะโส',
+                'pali_roman': 'Dullabhaṃ dassanaṃ yassa sambuddhassa abhiṇhaso',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Hard to come by, and not often, is the sight of that Fully Awakened One,',
+            },
+            {
+                'number': 2,
+                'pali': 'โลกัมหิ อันธะภูตัส์มิง ทุลละภุปปาทะสัตถุโน.',
+                'pali_roman': 'Lokamhi andhabhūtasmiṃ dullabhuppādasatthuno.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and hard the arising of the Teacher in a world grown blind.',
+            },
+            {
+                'number': 3,
+                'pali': 'สักเกสุ กะปิละวัตถุส์มิง วิหะรันตัง มะหาวะเน',
+                'pali_roman': 'Sakkesu kapilavatthusmiṃ viharantaṃ mahāvane',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Dwelling among the Sakyans at Kapilavatthu, in the Great Wood,',
+            },
+            {
+                'number': 4,
+                'pali': 'ตันทัสสะนายะ สัมพุทธัง ภิกขุสังฆัญจะ นิมมะลัง.',
+                'pali_roman': 'Tandassanāya sambuddhaṃ bhikkhusaṅghañca nimmalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'to see that Awakened One and the spotless Sangha of bhikkhus,',
+            },
+            {
+                'number': 5,
+                'pali': 'ทะสะธา สังคะเณยยาสุ โลกะธาตูสุ เทวะตา',
+                'pali_roman': 'Dasadhā saṅgaṇeyyāsu lokadhātūsu devatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'from world-systems reckoned in ten ways the deities came,',
+            },
+            {
+                'number': 6,
+                'pali': 'อะเนกา อัปปะเมยยา วะ โมทะมานา สะมาคะตา.',
+                'pali_roman': 'Anekā appameyyā va modamānā samāgatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'many, past measuring, gathered together and rejoicing.',
+            },
+            {
+                'number': 7,
+                'pali': 'ตาสัง ปิยัง มะนาปัญจะ จิตตัสโสทัคคิยาวะหัง',
+                'pali_roman': 'Tāsaṃ piyaṃ manāpañca cittassodaggiyāvahaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Dear to them and agreeable, bringing elation to the mind,',
+            },
+            {
+                'number': 8,
+                'pali': 'ยัง โส เทเสสิ สัมพุทโธ หาสะยันโตติ เม สุตัง.',
+                'pali_roman': 'Yaṃ so desesi sambuddho hāsayantoti me sutaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'was what that Awakened One taught, gladdening them — so I have heard.',
+            },
+            {
+                'number': 9,
+                'pali': 'เทวะกายัปปะหาสัตถัง ตัง สุตตันตัง ภะณามะ เส.',
+                'pali_roman': 'Devakāyappahāsatthaṃ taṃ suttantaṃ bhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For the gladdening of the hosts of devas, let us recite that discourse.',
+            },
+        ],
+    },
 ]
 
 
@@ -58307,6 +58417,19 @@ PAGE_BLOCKS = [
                 'type': 'footnote',
                 'thai': '1. อํ. ติก. 20/368-9',
                 'english': 'Aṅguttara Nikāya, Book of Threes, 20/368-9.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 175 ───────────────────────────────────────────────────
+    # Written from batch-175-175.json.
+    {
+        'page': 175,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'พระสูตรที่กำหนดสวดในวันขึ้น 14 ค่ำ เวลาเย็น',
+                'english': 'The discourse appointed for chanting on the 14th of the waxing moon, in the evening',
                 'english_unverified': True,
             },
         ],

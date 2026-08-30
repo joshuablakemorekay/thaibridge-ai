@@ -1,0 +1,170 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "bot-khat-mahasamaya-suttam"
+  ],
+  "pages": [
+   {
+    "page": 175,
+    "file": "IMG_0445.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "bot-khat-mahasamaya-suttam",
+    "verses": "1-9",
+    "starts_here": true,
+    "note": "The page opens with a SECTION HEADING, then this chant's centred bold heading and nine TWO-COLUMN rows read across. Below it มะหาสะมะยะสุตตัง begins and runs to 182 — that chant is NOT in this batch, so page 175 is deliberately entered in part.",
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "พระสูตรที่กำหนดสวดในวันขึ้น 14 ค่ำ เวลาเย็น",
+      "english": "The discourse appointed for chanting on the 14th of the waxing moon, in the evening",
+      "english_unverified": true
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "bot-khat-mahasamaya-suttam",
+   "title_thai": "บทขัด มะหาสะมะยะสุตตัง",
+   "title_pali": "",
+   "title_roman": "bòt-kàt má-hǎa-sà-má-yá-sùt-dtaŋ",
+   "title_english": "The Introductory Verses to the Mahāsamaya Sutta",
+   "page_start": 175,
+   "layout": "lines",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent as a separate line — the chant IS the invitation, closing ตัง สุตตันตัง ภะณามะ เส, which is what a บทขัด does.",
+    "units": "9 lines, each a pair of half-lines in two columns and joined.",
+    "ordering": "Pure Pali. The book's FIRST, Pali-only printing.",
+    "conventions": "pali_roman mechanical from translit_pali; paiboon empty.",
+    "pages": "IMG_0445, page 175. Offset 270."
+   },
+   "verses": [
+    {
+     "number": 1,
+     "pali": "ทุลละภัง ทัสสะนัง ยัสสะ สัมพุทธัสสะ อะภิณหะโส",
+     "pali_roman": "Dullabhaṃ dassanaṃ yassa sambuddhassa abhiṇhaso",
+     "thai": "",
+     "paiboon": "",
+     "english": "Hard to come by, and not often, is the sight of that Fully Awakened One,",
+     "page": 175
+    },
+    {
+     "number": 2,
+     "pali": "โลกัมหิ อันธะภูตัส์มิง ทุลละภุปปาทะสัตถุโน.",
+     "pali_roman": "Lokamhi andhabhūtasmiṃ dullabhuppādasatthuno.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and hard the arising of the Teacher in a world grown blind."
+    },
+    {
+     "number": 3,
+     "pali": "สักเกสุ กะปิละวัตถุส์มิง วิหะรันตัง มะหาวะเน",
+     "pali_roman": "Sakkesu kapilavatthusmiṃ viharantaṃ mahāvane",
+     "thai": "",
+     "paiboon": "",
+     "english": "Dwelling among the Sakyans at Kapilavatthu, in the Great Wood,"
+    },
+    {
+     "number": 4,
+     "pali": "ตันทัสสะนายะ สัมพุทธัง ภิกขุสังฆัญจะ นิมมะลัง.",
+     "pali_roman": "Tandassanāya sambuddhaṃ bhikkhusaṅghañca nimmalaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "to see that Awakened One and the spotless Sangha of bhikkhus,"
+    },
+    {
+     "number": 5,
+     "pali": "ทะสะธา สังคะเณยยาสุ โลกะธาตูสุ เทวะตา",
+     "pali_roman": "Dasadhā saṅgaṇeyyāsu lokadhātūsu devatā",
+     "thai": "",
+     "paiboon": "",
+     "english": "from world-systems reckoned in ten ways the deities came,"
+    },
+    {
+     "number": 6,
+     "pali": "อะเนกา อัปปะเมยยา วะ โมทะมานา สะมาคะตา.",
+     "pali_roman": "Anekā appameyyā va modamānā samāgatā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "many, past measuring, gathered together and rejoicing."
+    },
+    {
+     "number": 7,
+     "pali": "ตาสัง ปิยัง มะนาปัญจะ จิตตัสโสทัคคิยาวะหัง",
+     "pali_roman": "Tāsaṃ piyaṃ manāpañca cittassodaggiyāvahaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Dear to them and agreeable, bringing elation to the mind,"
+    },
+    {
+     "number": 8,
+     "pali": "ยัง โส เทเสสิ สัมพุทโธ หาสะยันโตติ เม สุตัง.",
+     "pali_roman": "Yaṃ so desesi sambuddho hāsayantoti me sutaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "was what that Awakened One taught, gladdening them — so I have heard."
+    },
+    {
+     "number": 9,
+     "pali": "เทวะกายัปปะหาสัตถัง ตัง สุตตันตัง ภะณามะ เส.",
+     "pali_roman": "Devakāyappahāsatthaṃ taṃ suttantaṃ bhaṇāma se.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For the gladdening of the hosts of devas, let us recite that discourse."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "มะหาสะมะยะ",
+     "pali_roman": "mahāsamaya",
+     "meaning": "the great gathering — of devas come to see the Buddha at Kapilavatthu, which the sutta then names host by host"
+    },
+    {
+     "pali": "ทุลละภัง",
+     "pali_roman": "dullabhaṃ",
+     "meaning": "hard to come by; the บทขัด opens on how rarely a Buddha is seen at all"
+    }
+   ],
+   "checks": [
+    {
+     "verse": null,
+     "file": "IMG_0445.PNG",
+     "issue": "⚠ PAGE 175 IS ENTERED IN PART, ON PURPOSE. มะหาสะมะยะสุตตัง begins below this chant and runs to 182 — EIGHT sheets of two-column verse, the largest single chant left. It is left for its own batches. Unlike the last two suttas it HAS A TWIN: the same text in roman at 317-325 as `mahasamayasutta-roman`, 192 verses, which gives the verse count, order and English."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0445.PNG",
+     "issue": "THE SECTION HEADING USES ARABIC 14 where the สารบัญ prints Thai ๑๔ — the same disagreement as the headings on 183 and 187. The block follows the page."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0445.PNG",
+     "issue": "THE HEADING AND THE สารบัญ NAME THIS CHANT DIFFERENTLY: the page heads it บทขัด มะหาสะมะยะสุตตัง with a space, the contents lists บทขัดมะหาสะมะยะสุตตัง joined. The title follows the page; title_roman follows the contents, which is what the title test compares."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "bot-khat-mahasamaya-suttam"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 175,
+  "resume_from_file": "IMG_0445.PNG",
+  "resume_from": "มะหาสะมะยะสุตตัง, which begins on 175 below this chant and runs to 182",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence on the verses; the only Paiboon is title_roman, from the สารบัญ.",
+  "pali_untouched": "Typed from the sheet and romanised mechanically.",
+  "page_scan": "agrees, with page 175 deliberately entered in part.",
+  "notes": "The บทขัด to the Mahāsamaya. ⚠ Page 175 is entered IN PART: the sutta itself begins below it and runs to 182, eight sheets, and is left for its own batches. It HAS A TWIN at 317-325, which makes it the safest of the remaining suttas — but the twin must not be allowed to do the reading.",
+  "diacritic_exceptions": []
+ }
+}
