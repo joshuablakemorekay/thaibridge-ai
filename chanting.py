@@ -56309,7 +56309,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 8; the rest is not in the app yet.
         'id': 'adittapariyaya-suttam',
         'title_thai': 'อาทิตตะปะริยายะสุตตัง',
         'title_pali': '',
@@ -56323,6 +56322,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'อาทิตตะปะริยายะสุตตัง นิฏฐิตัง.',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'The Discourse on Burning is ended.',
         },
         'verses': [
             # ‼ CHECK [IMG_0389.PNG]: THE HEADING CARRIES THE BOOK'S OWN
@@ -56441,14 +56447,160 @@ CHANTS = [
             #   […] is used: the sheet ends …ชิวหายะปิ นิพพินทะติ, and page
             #   126 continues. COMPLETE it from 126, and bring this record's
             #   ENGLISH up when you do.
+            # ‼ COMPLETED FROM p126: this line was cut by the page break and
+            #   is now whole. Was: เอวัง ปัสสัง ภิกขะเว สุต๎วา อะริยะสาวะโก
+            #   จักขุส๎มิงปิ นิพพินทะติ, รูเปสุปิ นิพพินทะติ, จักขุวิญญาเณปิ
+            #   นิพพินทะติ, จักขุสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง
+            #   จักขุสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา
+            #   อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. โสตัส๎มิงปิ
+            #   นิพพินทะติ, สัทเทสุปิ นิพพินทะติ, โสตะวิญญาเณปิ นิพพินทะติ,
+            #   โสตะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง โสตะสัมผัสสะปัจจะยา
+            #   อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา,
+            #   ตัส๎มิงปิ นิพพินทะติ. ฆานัส๎มิงปิ นิพพินทะติ, คันเธสุปิ
+            #   นิพพินทะติ, ฆานะวิญญาเณปิ นิพพินทะติ ฆานะสัมผัสเสปิ
+            #   นิพพินทะติ, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง
+            #   สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ.
+            #   ชิวหายะปิ นิพพินทะติ, […]
+            # ‼ CHECK [IMG_0391.PNG]: COMPLETES THE PASSAGE PAGE 125 CUT. That
+            #   sheet ended …ชิวหายะปิ นิพพินทะติ, […] and this one opens
+            #   ระเสสุปิ นิพพินทะติ… The whole passage is given here so the
+            #   […] is replaced, and verse 8 keeps page 125. ⚠️ Its ENGLISH in
+            #   batch-125 was the hanging half and is brought up at the same
+            #   time.
+            # ‼ CHECK [IMG_0391.PNG]: ‼ THE BODY SECTION ENDS ON A COMMA WHERE
+            #   THE OTHERS END ON A FULL STOP: …ตัส๎มิงปิ นิพพินทะติ,
+            #   มะนัส๎มิงปิ นิพพินทะติ, read at 5x. The eye, ear, nose and
+            #   tongue sections all close with นิพพินทะติ. Reproduced as
+            #   printed. Together with the nose section's missing comma on
+            #   125, that is two punctuation slips in one passage.
+            # ‼ CHECK [IMG_0391.PNG]: TWO MORE LINE-BREAK HYPHENS, both
+            #   dropped as word-wrap: อะทุกขะ- with มะสุขัง on the next line,
+            #   and กายะสัมผัสสะ- with ปัจจะยา. Same rule as 116 and 125.
             {
                 'number': 8,
                 'page': 125,
-                'pali': 'เอวัง ปัสสัง ภิกขะเว สุต๎วา อะริยะสาวะโก จักขุส๎มิงปิ นิพพินทะติ, รูเปสุปิ นิพพินทะติ, จักขุวิญญาเณปิ นิพพินทะติ, จักขุสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง จักขุสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. โสตัส๎มิงปิ นิพพินทะติ, สัทเทสุปิ นิพพินทะติ, โสตะวิญญาเณปิ นิพพินทะติ, โสตะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง โสตะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. ฆานัส๎มิงปิ นิพพินทะติ, คันเธสุปิ นิพพินทะติ, ฆานะวิญญาเณปิ นิพพินทะติ ฆานะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. ชิวหายะปิ นิพพินทะติ, […]',
-                'pali_roman': 'Evaṃ passaṃ bhikkhave sutvā ariyasāvako cakkhusmiṃpi nibbindati, rūpesupi nibbindati, cakkhuviññāṇepi nibbindati, cakkhusamphassepi nibbindati, yampidaṃ cakkhusamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Sotasmiṃpi nibbindati, saddesupi nibbindati, sotaviññāṇepi nibbindati, sotasamphassepi nibbindati, yampidaṃ sotasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Ghānasmiṃpi nibbindati, gandhesupi nibbindati, ghānaviññāṇepi nibbindati ghānasamphassepi nibbindati, yampidaṃ ghānasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Jivhāyapi nibbindati, […]',
+                'pali': 'เอวัง ปัสสัง ภิกขะเว สุต๎วา อะริยะสาวะโก จักขุส๎มิงปิ นิพพินทะติ, รูเปสุปิ นิพพินทะติ, จักขุวิญญาเณปิ นิพพินทะติ, จักขุสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง จักขุสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. โสตัส๎มิงปิ นิพพินทะติ, สัทเทสุปิ นิพพินทะติ, โสตะวิญญาเณปิ นิพพินทะติ, โสตะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง โสตะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. ฆานัส๎มิงปิ นิพพินทะติ, คันเธสุปิ นิพพินทะติ, ฆานะวิญญาเณปิ นิพพินทะติ ฆานะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง ฆานะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. ชิวหายะปิ นิพพินทะติ, ระเสสุปิ นิพพินทะติ, ชิวหาวิญญาเณปิ นิพพินทะติ, ชิวหาสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง ชิวหาสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. กายัส๎มิงปิ นิพพินทะติ, โผฏฐัพเพสุปิ นิพพินทะติ, กายะวิญญาเณปิ นิพพินทะติ, กายะสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง กายะสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ, มะนัส๎มิงปิ นิพพินทะติ, ธัมเมสุปิ นิพพินทะติ, มะโนวิญญาเณปิ นิพพินทะติ, มะโนสัมผัสเสปิ นิพพินทะติ, ยัมปิทัง มะโนสัมผัสสะปัจจะยา อุปปัชชะติ, เวทะยิตัง สุขัง วา ทุกขัง วา อะทุกขะมะสุขัง วา, ตัส๎มิงปิ นิพพินทะติ. นิพพินทัง วิรัชชะติ, วิราคา วิมุจจะติ. วิมุตตัส๎มิง วิมุตตะมีติ. ญาณัง โหติ ขีณา ชาติ, วุสิตัง พ๎รัห๎มะจะริยัง, กะตัง กะระณียัง, นาปะรัง อิตถัตตายาติ ปะชานาตีติ.',
+                'pali_roman': 'Evaṃ passaṃ bhikkhave sutvā ariyasāvako cakkhusmiṃpi nibbindati, rūpesupi nibbindati, cakkhuviññāṇepi nibbindati, cakkhusamphassepi nibbindati, yampidaṃ cakkhusamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Sotasmiṃpi nibbindati, saddesupi nibbindati, sotaviññāṇepi nibbindati, sotasamphassepi nibbindati, yampidaṃ sotasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Ghānasmiṃpi nibbindati, gandhesupi nibbindati, ghānaviññāṇepi nibbindati ghānasamphassepi nibbindati, yampidaṃ ghānasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Jivhāyapi nibbindati, rasesupi nibbindati, jivhāviññāṇepi nibbindati, jivhāsamphassepi nibbindati, yampidaṃ jivhāsamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Kāyasmiṃpi nibbindati, phoṭṭhabbesupi nibbindati, kāyaviññāṇepi nibbindati, kāyasamphassepi nibbindati, yampidaṃ kāyasamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati, manasmiṃpi nibbindati, dhammesupi nibbindati, manoviññāṇepi nibbindati, manosamphassepi nibbindati, yampidaṃ manosamphassapaccayā uppajjati, vedayitaṃ sukhaṃ vā dukkhaṃ vā adukkhamasukhaṃ vā, tasmiṃpi nibbindati. Nibbindaṃ virajjati, virāgā vimuccati. Vimuttasmiṃ vimuttamīti. Ñāṇaṃ hoti khīṇā jāti, vusitaṃ brahmacariyaṃ, kataṃ karaṇīyaṃ, nāparaṃ itthattāyāti pajānātīti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'Seeing thus, monks, the instructed noble disciple grows disenchanted with the eye, with forms, with eye-consciousness, with eye-contact, and with whatever feeling arises dependent on eye-contact; so too with the ear and sounds, with the nose and odours; and with the tongue',
+                'english': 'Seeing thus, monks, the instructed noble disciple grows disenchanted with the eye, with forms, with eye-consciousness, with eye-contact, and with whatever feeling arises dependent on eye-contact; so too with the ear, the nose, the tongue, the body and the mind, and with all their objects, consciousnesses, contacts and feelings. Being disenchanted he becomes dispassionate; through dispassion he is released; in release there is the knowledge that he is released. He knows: birth is exhausted, the holy life has been lived, what had to be done is done, there is no more of this state.',
+            },
+            # ‼ CHECK [IMG_0391.PNG]: ‼ A SPACE BEFORE THE FINAL FULL STOP:
+            #   …จิตตานิ วิมุจจิงสูติ . — read at 5x, and the gap is
+            #   unmistakable. Reproduced as printed. Page 123's parallel
+            #   sentence ends วิมุจจิงสูติ. closed up.
+            # ‼ CHECK [IMG_0391.PNG]: THE COLOPHON HAS A FULL STOP:
+            #   อาทิตตะปะริยายะสุตตัง นิฏฐิตัง. — unlike pages 120 and 123,
+            #   which have none. Five colophons now, and the ending still has
+            #   to be read every time.
+            {
+                'number': 9,
+                'page': 126,
+                'pali': 'อิทะมะโวจะ ภะคะวา, อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุง. อิมัส๎มิญจะ ปะนะ เวยยากะระณัส๎มิง ภัญญะมาเน, ตัสสะ ภิกขุสะหัสสัสสะ อะนุปาทายะ อาสะเวหิ จิตตานิ วิมุจจิงสูติ .',
+                'pali_roman': 'Idamavoca bhagavā, attamanā te bhikkhū bhagavato bhāsitaṃ abhinanduṃ. Imasmiñca pana veyyākaraṇasmiṃ bhaññamāne, tassa bhikkhusahassassa anupādāya āsavehi cittāni vimucciṃsūti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus spoke the Blessed One, and those monks delighted in his words. And while this discourse was being spoken, the minds of that thousand of monks were released from the taints through non-clinging.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        'id': 'bot-khat-satipatthana-patha',
+        'title_thai': 'บทขัด สะติปัฏฐานะปาฐะ',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt sà-dtì-bpàt-tǎan-ná-bpaa-tà',
+        'page_start': 126,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0391.PNG]: THE PAGE HEADING IS SPACED, บทขัด
+            #   สะติปัฏฐานะปาฐะ, where the สารบัญ has it unspaced — the rule
+            #   settled for every บทขัด from page 82 on. The PAGE is
+            #   reproduced.
+            {
+                'number': 1,
+                'page': 126,
+                'pali': 'สัมพุทโธ ทิปะทัง เสฏโฐ มะหาการุณิโก มุนิ',
+                'pali_roman': 'Sambuddho dipadaṃ seṭṭho mahākāruṇiko muni',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Awakened One, best of the two-footed, the Sage of great compassion,',
+            },
+            # ‼ CHECK [IMG_0391.PNG]: FULL STOPS FALL ON THE EVEN ROWS — 2, 4,
+            #   6 and 8 — four closed couplets, as on pages 114, 120 and 124.
+            {
+                'number': 2,
+                'page': 126,
+                'pali': 'เอกายะนัง มัคคัง นามะ เวเนยยานัง อะเทสะยิ.',
+                'pali_roman': 'Ekāyanaṃ maggaṃ nāma veneyyānaṃ adesayi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'taught to those who could be led the path called the one way.',
+            },
+            # ‼ CHECK [IMG_0391.PNG]: จิตตะเก๎ลสะ CARRIES A YAMAKKAN on its ก,
+            #   and the same word appears again in row 8. Written with ๎ per
+            #   the settled ruling; the cluster is kl.
+            {
+                'number': 3,
+                'page': 126,
+                'pali': 'กิลิฏฐะจิตตะสัตตานัง จิตตะเก๎ลสะวิสุทธิยา',
+                'pali_roman': 'Kiliṭṭhacittasattānaṃ cittakelsavisuddhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': "For beings of defiled mind, for the purifying of the mind's defilements,",
+            },
+            {
+                'number': 4,
+                'page': 126,
+                'pali': 'โสกานัง ปะริเทวานัง อะติกกะมายะ สัพพะโส.',
+                'pali_roman': 'Sokānaṃ paridevānaṃ atikkamāya sabbaso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the wholly going beyond sorrow and lamentation.',
+            },
+            {
+                'number': 5,
+                'page': 126,
+                'pali': 'ทุกขานัง โทมะนัสสานัง อัตถังคะมายะ อัฏฐิตัง',
+                'pali_roman': 'Dukkhānaṃ domanassānaṃ atthaṅgamāya aṭṭhitaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Set forth for the ending of pain and grief,',
+            },
+            {
+                'number': 6,
+                'page': 126,
+                'pali': 'ญายัสเสวาธิคะมายะ นิพพานัสสาภิปัตติยา.',
+                'pali_roman': 'Ñāyassevādhigamāya nibbānassābhipattiyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the attaining of the method, for the reaching of Nibbana.',
+            },
+            {
+                'number': 7,
+                'page': 126,
+                'pali': 'สะติปัฏฐานะนาเมนะ วิสสุตัง วิธะ สาสะเน',
+                'pali_roman': 'Satipaṭṭhānanāmena vissutaṃ vidha sāsane',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Famous in this dispensation under the name of the foundations of mindfulness,',
+            },
+            {
+                'number': 8,
+                'page': 126,
+                'pali': 'จิตตะเก๎ลสะวิสุทธัตถัง ตัง มัคคันตัมภะณามะ เส.',
+                'pali_roman': 'Cittakelsavisuddhatthaṃ taṃ maggantambhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': "for the purifying of the mind's defilements — let us recite that path.",
             },
         ],
     },

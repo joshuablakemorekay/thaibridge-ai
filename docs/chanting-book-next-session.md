@@ -1812,16 +1812,14 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**62 pages are left: 126–186 and 192.**
+**61 pages are left: 127–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–125 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 126, `IMG_0391`** — ⚠️
-`adittapariyaya-suttam` IS OPEN, **8 units in**, and ⚠️⚠️ **verse 8 is CUT with
-`[…]`** after `…ชิวหายะปิ นิพพินทะติ,`: COMPLETE it, and bring its ENGLISH up.
-All six bases have burned; the disenchantment passage is running through them
-and is three and a bit in.
+**115–126 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 127, `IMG_0392`** — ✅ nothing is
+open; `บทขัด สะติปัฏฐานะปาฐะ` finished on 126, so 127 should open sutta 28, the
+Satipatthana.
 
 ⚠️ **A THIRD MARK EXISTS: PHINTHU ฺ (U+0E3A), BELOW the letter.** It marks a
 doubled consonant and is NOT the same as yamakkan ๎ (above, for clusters) or
