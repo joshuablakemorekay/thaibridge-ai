@@ -53,7 +53,7 @@
    "verses": [
     {
      "number": 9,
-     "pali": "ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา ตัสสะ ทายาโท ภะวิสสามีติ.",
+     "pali": "ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ๎ยาธิธัมโมมหิ พ๎ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล๎ยาณัง วา ปาปะกัง วา ตัสสะ ทายาโท ภะวิสสามีติ.",
      "pali_roman": "Jarādhammomhi jaraṃ anatīto, byādhidhammomhi byādhiṃ anatīto, maraṇadhammomhi maraṇaṃ anatīto, sabbehi me piyehi manāpehi nānābhāvo vinābhāvo, kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā tassa dāyādo bhavissāmīti.",
      "thai": "",
      "paiboon": "",
@@ -90,7 +90,7 @@
     },
     {
      "number": 13,
-     "pali": "นะ โข ปะนาหะเมวะ พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต.",
+     "pali": "นะ โข ปะนาหะเมวะ พ๎ยาธิธัมโมมหิ พ๎ยาธิง อะนะตีโต.",
      "pali_roman": "Na kho panāhameva byādhidhammomhi byādhiṃ anatīto.",
      "thai": "",
      "paiboon": "",
@@ -108,7 +108,7 @@
     },
     {
      "number": 15,
-     "pali": "สัพเพ สัตตา พ์ยาธิธัมมา พ์ยาธิง อะนะตีตา, ตัง กุเตตถะ ลัพภา.",
+     "pali": "สัพเพ สัตตา พ๎ยาธิธัมมา พ๎ยาธิง อะนะตีตา, ตัง กุเตตถะ ลัพภา.",
      "pali_roman": "Sabbe sattā byādhidhammā byādhiṃ anatītā, taṃ kutettha labbhā.",
      "thai": "",
      "paiboon": "",
@@ -144,7 +144,7 @@
     },
     {
      "number": 19,
-     "pali": "นะ โข ปะนะ มัย์หะเมวะ สัพเพหิ ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.",
+     "pali": "นะ โข ปะนะ มัย๎หะเมวะ สัพเพหิ ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.",
      "pali_roman": "Na kho pana mayhameva sabbehi piyehi manāpehi nānābhāvo vinābhāvo.",
      "thai": "",
      "paiboon": "",
@@ -180,7 +180,7 @@
     },
     {
      "number": 23,
-     "pali": "นะ โข ปะนาหะเมวะ กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามิ.",
+     "pali": "นะ โข ปะนาหะเมวะ กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล๎ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามิ.",
      "pali_roman": "Na kho panāhameva kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmi.",
      "thai": "",
      "paiboon": "",
@@ -198,7 +198,7 @@
     },
     {
      "number": 25,
-     "pali": "สัพเพ สัตตา กัมมัสสะกา กัมมะทายาทา กัมมะโยนี กัมมะพันธุ กัมมะปะฏิสะระณา, ยัง กัมมัง กะริสสันติ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาทา ภะวิสสันติ, ตัง กุเตตถะ ลัพภาติ.",
+     "pali": "สัพเพ สัตตา กัมมัสสะกา กัมมะทายาทา กัมมะโยนี กัมมะพันธุ กัมมะปะฏิสะระณา, ยัง กัมมัง กะริสสันติ กัล๎ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาทา ภะวิสสันติ, ตัง กุเตตถะ ลัพภาติ.",
      "pali_roman": "Sabbe sattā kammassakā kammadāyādā kammayonī kammabandhu kammapaṭisaraṇā, yaṃ kammaṃ karissanti kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādā bhavissanti, taṃ kutettha labbhāti.",
      "thai": "",
      "paiboon": "",
@@ -285,7 +285,7 @@
    "verses": [
     {
      "number": 1,
-     "pali": "สะเทวะโก อะยัง โลโก สะมาระโก สะพ์รัห์มะโก",
+     "pali": "สะเทวะโก อะยัง โลโก สะมาระโก สะพ๎รัห๎มะโก",
      "pali_roman": "Sadevako ayaṃ loko samārako sabrahmako",
      "thai": "",
      "paiboon": "",

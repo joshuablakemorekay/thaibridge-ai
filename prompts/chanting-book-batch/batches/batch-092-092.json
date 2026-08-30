@@ -97,7 +97,7 @@
     },
     {
      "number": 70,
-     "pali": "วีตะราโค วีตะโทโส วีตะโมโห อะภิรุ อัจฉัมภี อะนุต์ราสี อะปะลายีติ.",
+     "pali": "วีตะราโค วีตะโทโส วีตะโมโห อะภิรุ อัจฉัมภี อะนุต๎ราสี อะปะลายีติ.",
      "pali_roman": "Vītarāgo vītadoso vītamoho abhiru acchambhī anutrāsī apalāyīti.",
      "thai": "",
      "paiboon": "",
@@ -113,7 +113,7 @@
     },
     {
      "number": 72,
-     "pali": "อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.",
+     "pali": "อิทัง วัต๎วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.",
      "pali_roman": "Idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.",
      "thai": "",
      "paiboon": "",
@@ -188,7 +188,7 @@
    ],
    "vocabulary": [
     {
-     "pali": "อะภิรุ / อัจฉัมภี / อะนุต์ราสี / อะปะลายี",
+     "pali": "อะภิรุ / อัจฉัมภี / อะนุต๎ราสี / อะปะลายี",
      "pali_roman": "abhiru / acchambhī / anutrāsī / apalāyī",
      "meaning": "unafraid, not startled, not fearful, one who does not flee — the exact negations of the four words said of Sakka on page 91"
     },
@@ -362,7 +362,7 @@
     },
     {
      "number": 3,
-     "pali": "เวสสะภุสสะ นะมัตถุ น์หาตะกัสสะ ตะปัสสิโน",
+     "pali": "เวสสะภุสสะ นะมัตถุ น๎หาตะกัสสะ ตะปัสสิโน",
      "pali_roman": "Vessabhussa namatthu nhātakassa tapassino",
      "thai": "",
      "paiboon": "",
@@ -378,7 +378,7 @@
     },
     {
      "number": 5,
-     "pali": "โกนาคะมะนัสสะ นะมัตถุ พ์ราห์มะณัสสะ วุสีมะโต",
+     "pali": "โกนาคะมะนัสสะ นะมัตถุ พ๎ราห๎มะณัสสะ วุสีมะโต",
      "pali_roman": "Konāgamanassa namatthu brāhmaṇassa vusīmato",
      "thai": "",
      "paiboon": "",
@@ -392,7 +392,7 @@
      "meaning": "five of the seven Buddhas of the past, saluted one per line and in order. Kassapa and Gotama should follow on page 93"
     },
     {
-     "pali": "น์หาตะกะ",
+     "pali": "น๎หาตะกะ",
      "pali_roman": "nhātaka",
      "meaning": "one who has bathed; cleansed. Said of Vessabhū — a brahminical image turned to the arahant's purity"
     },

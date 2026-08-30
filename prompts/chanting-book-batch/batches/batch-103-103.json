@@ -67,7 +67,7 @@
     },
     {
      "number": 12,
-     "pali": "ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.",
+     "pali": "ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.",
      "pali_roman": "Parittassānubhāvena hantvā tesaṃ upaddave.",
      "thai": "",
      "paiboon": "",
@@ -86,7 +86,7 @@
     },
     {
      "number": 14,
-     "pali": "ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.",
+     "pali": "ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.",
      "pali_roman": "Parittassānubhāvena hantvā tesaṃ upaddave.",
      "thai": "",
      "paiboon": "",
@@ -254,7 +254,7 @@
    "verses": [
     {
      "number": 1,
-     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ สะนาถา ภิกขะเว วิหะระถะ มา อะนาถา, ทุกขัง ภิกขะเว อะนาโถ วิหะระติ. ทะสะยิเม ภิกขะเว นาถะกะระณา ธัมมา. กะตะเม ทะสะ.",
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ สะนาถา ภิกขะเว วิหะระถะ มา อะนาถา, ทุกขัง ภิกขะเว อะนาโถ วิหะระติ. ทะสะยิเม ภิกขะเว นาถะกะระณา ธัมมา. กะตะเม ทะสะ.",
      "pali_roman": "Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca sanāthā bhikkhave viharatha mā anāthā, dukkhaṃ bhikkhave anātho viharati. Dasayime bhikkhave nāthakaraṇā dhammā. Katame dasa.",
      "thai": "",
      "paiboon": "",
@@ -276,7 +276,7 @@
     },
     {
      "number": 3,
-     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา สาตัถัง […]",
+     "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล๎ยาณา มัชเฌกัล๎ยาณา ปะริโยสานะกัล๎ยาณา สาตัถัง […]",
      "pali_roman": "Puna caparaṃ bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā sātthaṃ […]",
      "thai": "",
      "paiboon": "",
@@ -298,7 +298,7 @@
      "meaning": "dasa + ime, 'these ten'. The Buddha announces the count before listing, as the numbered suttas usually do"
     },
     {
-     "pali": "อาทิกัล์ยาณา",
+     "pali": "อาทิกัล๎ยาณา",
      "pali_roman": "ādikalyāṇā",
      "meaning": "'good in the beginning'. One of the stock triad — beginning, middle and end — describing a well-taught Dhamma"
     }

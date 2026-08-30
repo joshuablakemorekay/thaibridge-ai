@@ -96,7 +96,7 @@
       "verses": [
         {
           "number": 1,
-          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง จีวะรัง ปะริภุตตัง,",
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง จีวะรัง ปะริภุตตัง,",
           "pali_roman": "Ajja mayā apaccavekkhitvā yaṃ cīvaraṃ paribhuttaṃ,",
           "thai": "",
           "paiboon": "",
@@ -137,7 +137,7 @@
         {
           "number": 6,
           "para_start": true,
-          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา โย ปิณฑะปาโต ปะริภุตโต,",
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต๎วา โย ปิณฑะปาโต ปะริภุตโต,",
           "pali_roman": "Ajja mayā apaccavekkhitvā yo piṇḍapāto paribhutto,",
           "thai": "",
           "paiboon": "",
@@ -145,7 +145,7 @@
         },
         {
           "number": 7,
-          "pali": "โส เนวะ ท์วายะ นะ มะทายะ นะ มัณฑะนายะ นะ วิภูสะนายะ,",
+          "pali": "โส เนวะ ท๎วายะ นะ มะทายะ นะ มัณฑะนายะ นะ วิภูสะนายะ,",
           "pali_roman": "So neva dvāya na madāya na maṇḍanāya na vibhūsanāya,",
           "thai": "",
           "paiboon": "",
@@ -161,7 +161,7 @@
         },
         {
           "number": 9,
-          "pali": "วิหิงสุปะระติยา พ์รัห์มะจะริยานุคคะหายะ,",
+          "pali": "วิหิงสุปะระติยา พ๎รัห๎มะจะริยานุคคะหายะ,",
           "pali_roman": "Vihiṃsuparatiyā brahmacariyānuggahāya,",
           "thai": "",
           "paiboon": "",
@@ -185,7 +185,7 @@
         },
         {
           "number": 12,
-          "pali": "ยาต์รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.",
+          "pali": "ยาต๎รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.",
           "pali_roman": "Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti.",
           "thai": "",
           "paiboon": "",
@@ -194,7 +194,7 @@
         {
           "number": 13,
           "para_start": true,
-          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง เสนาสะนัง ปะริภุตตัง,",
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง เสนาสะนัง ปะริภุตตัง,",
           "pali_roman": "Ajja mayā apaccavekkhitvā yaṃ senāsanaṃ paribhuttaṃ,",
           "thai": "",
           "paiboon": "",
@@ -235,7 +235,7 @@
         {
           "number": 18,
           "para_start": true,
-          "pali": "อัชชะ มะยา อะปัจจะเวกขิต์วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,",
+          "pali": "อัชชะ มะยา อะปัจจะเวกขิต๎วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,",
           "pali_roman": "Ajja mayā apaccavekkhitvā yo gilānapaccayabhesajjaparikkhāro paribhutto,",
           "thai": "",
           "paiboon": "",
@@ -251,7 +251,7 @@
         },
         {
           "number": 20,
-          "pali": "อัพ์ยาปัชฌะปะระมะตายาติ.",
+          "pali": "อัพ๎ยาปัชฌะปะระมะตายาติ.",
           "pali_roman": "Abyāpajjhaparamatāyāti.",
           "thai": "",
           "paiboon": "",
@@ -260,7 +260,7 @@
       ],
       "vocabulary": [
         {
-          "pali": "อะปัจจะเวกขิต์วา",
+          "pali": "อะปัจจะเวกขิต๎วา",
           "pali_roman": "apaccavekkhitvā",
           "meaning": "not having reflected; the whole chant exists because the reflection was meant to be made at the time of use and was not"
         },
@@ -285,7 +285,7 @@
           "meaning": "seclusion, going apart to be alone — the purpose a dwelling serves beyond shelter"
         },
         {
-          "pali": "อัพ์ยาปัชฌะ",
+          "pali": "อัพ๎ยาปัชฌะ",
           "pali_roman": "abyāpajjha",
           "meaning": "freedom from affliction; the aim medicine serves, stated as the highest of its purposes"
         }

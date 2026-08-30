@@ -61,7 +61,7 @@
    "verses": [
     {
      "number": 1,
-     "pali": "อัตถิ อุณ์หิสสะ วิชะโย ธัมโม โลเก อะนุตตะโร",
+     "pali": "อัตถิ อุณ๎หิสสะ วิชะโย ธัมโม โลเก อะนุตตะโร",
      "pali_roman": "atthi uṇhissa vijayo dhammo loke anuttaro",
      "thai": "",
      "paiboon": "",
@@ -70,7 +70,7 @@
     },
     {
      "number": 2,
-     "pali": "สัพพะสัตตะหิตัตถายะ ตัง ต์วัง คัณหาหิ เทวะเต",
+     "pali": "สัพพะสัตตะหิตัตถายะ ตัง ต๎วัง คัณหาหิ เทวะเต",
      "pali_roman": "sabbasattahitatthāya taṃ tvaṃ gaṇhāhi devate",
      "thai": "",
      "paiboon": "",
@@ -86,7 +86,7 @@
     },
     {
      "number": 4,
-     "pali": "พ์ยัคเฆ นาเค วิเส ภูเต อะกาละมะระเณนะ วา",
+     "pali": "พ๎ยัคเฆ นาเค วิเส ภูเต อะกาละมะระเณนะ วา",
      "pali_roman": "byagghe nāge vise bhūte akālamaraṇena vā",
      "thai": "",
      "paiboon": "",
@@ -94,7 +94,7 @@
     },
     {
      "number": 5,
-     "pali": "สัพพัส์มา มะระณา มุตโต ฐะเปต์วา กาละมาริตัง",
+     "pali": "สัพพัส๎มา มะระณา มุตโต ฐะเปต๎วา กาละมาริตัง",
      "pali_roman": "sabbasmā maraṇā mutto ṭhapetvā kālamāritaṃ",
      "thai": "",
      "paiboon": "",
@@ -134,7 +134,7 @@
     },
     {
      "number": 10,
-     "pali": "ปะเรสัง เทสะนัง สุต์วา ตัสสะ อายุ ปะวัฑฒะติ ฯ",
+     "pali": "ปะเรสัง เทสะนัง สุต๎วา ตัสสะ อายุ ปะวัฑฒะติ ฯ",
      "pali_roman": "paresaṃ desanaṃ sutvā tassa āyu pavaḍḍhati",
      "thai": "",
      "paiboon": "",
@@ -143,7 +143,7 @@
    ],
    "vocabulary": [
     {
-     "pali": "อุณ์หิสสะ วิชะโย",
+     "pali": "อุณ๎หิสสะ วิชะโย",
      "pali_roman": "uṇhissa vijayo",
      "meaning": "the victory of the crown of the head; a verse taught to a deity whose life was ending, and chanted for length of life"
     }
@@ -205,7 +205,7 @@
     },
     {
      "number": 4,
-     "pali": "ชะยาสะนาคะตา พุทธา เชต์วา มารัง สะวาหะนัง",
+     "pali": "ชะยาสะนาคะตา พุทธา เชต๎วา มารัง สะวาหะนัง",
      "pali_roman": "jayāsanāgatā buddhā jetvā māraṃ savāhanaṃ",
      "thai": "",
      "paiboon": "",
@@ -239,7 +239,7 @@
     },
     {
      "number": 8,
-     "pali": "สีเส ปะติฏฐิโต มัยหัง พุทโธ ธัมโม ท์วิโลจะเน",
+     "pali": "สีเส ปะติฏฐิโต มัยหัง พุทโธ ธัมโม ท๎วิโลจะเน",
      "pali_roman": "sīse patiṭṭhito mayhaṃ buddho dhammo dvilocane",
      "thai": "",
      "paiboon": "",
@@ -265,7 +265,7 @@
     },
     {
      "number": 11,
-     "pali": "โกณฑัญโญ ปิฏฐิภาคัส์มิง โมคคัลลาโน จะ วามะเก",
+     "pali": "โกณฑัญโญ ปิฏฐิภาคัส๎มิง โมคคัลลาโน จะ วามะเก",
      "pali_roman": "koṇḍañño piṭṭhibhāgasmiṃ moggallāno ca vāmake",
      "thai": "",
      "paiboon": "",
@@ -291,7 +291,7 @@
     },
     {
      "number": 14,
-     "pali": "เกสะโต ปิฏฐิภาคัส์มิง สุริโยวะ ปะภังกะโร",
+     "pali": "เกสะโต ปิฏฐิภาคัส๎มิง สุริโยวะ ปะภังกะโร",
      "pali_roman": "kesato piṭṭhibhāgasmiṃ suriyova pabhaṅkaro",
      "thai": "",
      "paiboon": "",

@@ -54338,7 +54338,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 187,
-                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ, เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. อัฏฐิเม ภิกขะเว โลกะธัมมา โลกัง อะนุปะริวัตตันติ, โลโก จะ อัฏฐะ โลกะธัมเม อะนุปะริวัตตะติ.',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ, เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. อัฏฐิเม ภิกขะเว โลกะธัมมา โลกัง อะนุปะริวัตตันติ, โลโก จะ อัฏฐะ โลกะธัมเม อะนุปะริวัตตะติ.',
                 'pali_roman': 'Evamme sutaṃ. ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. bhadanteti, te bhikkhū bhagavato paccassosuṃ. bhagavā etadavoca. aṭṭhime bhikkhave lokadhammā lokaṃ anuparivattanti, loko ca aṭṭha lokadhamme anuparivattati.',
                 'thai': '',
                 'paiboon': '',
@@ -54373,7 +54373,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'ตัต์ระ ภิกขะเว โก วิเสโส โก อะธิปปายะโส กิง นานากะระณัง, สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. ภะคะวังมูละกา โน ภันเต ธัมมา ภะคะวังเนตติกา ภะคะวังปะฏิสะระณา, สาธุ วะตะ ภันเต ภะคะวันตังเยวะ ปะฏิภาตุ เอตัสสะ ภาสิตัสสะ อัตโถ, ภะคะวะโต สุต์วา ภิกขู ธาเรสสันตีติ. เตนะหิ ภิกขะเว สุณาถะ สาธุกัง มะนะสิกะโรถะ ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง ภะคะวา เอตะทะโวจะ.',
+                'pali': 'ตัต๎ระ ภิกขะเว โก วิเสโส โก อะธิปปายะโส กิง นานากะระณัง, สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. ภะคะวังมูละกา โน ภันเต ธัมมา ภะคะวังเนตติกา ภะคะวังปะฏิสะระณา, สาธุ วะตะ ภันเต ภะคะวันตังเยวะ ปะฏิภาตุ เอตัสสะ ภาสิตัสสะ อัตโถ, ภะคะวะโต สุต๎วา ภิกขู ธาเรสสันตีติ. เตนะหิ ภิกขะเว สุณาถะ สาธุกัง มะนะสิกะโรถะ ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง ภะคะวา เอตะทะโวจะ.',
                 'pali_roman': 'Tatra bhikkhave ko viseso ko adhippāyaso kiṃ nānākaraṇaṃ, sutavato ariyasāvakassa assutavatā puthujjanenāti. bhagavaṃmūlakā no bhante dhammā bhagavaṃnettikā bhagavaṃpaṭisaraṇā, sādhu vata bhante bhagavantaṃyeva paṭibhātu etassa bhāsitassa attho, bhagavato sutvā bhikkhū dhāressantīti. tenahi bhikkhave suṇātha sādhukaṃ manasikarotha bhāsissāmīti. evambhanteti kho te bhikkhū bhagavato paccassosuṃ bhagavā etadavoca.',
                 'thai': '',
                 'paiboon': '',
@@ -54443,7 +54443,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'โส เอวัง อะนุโรธะวิโรธะสะมาปันโน, นะ ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, นะ ปะริมุจจะติ ทุกขัส์มาติ วะทามิ.',
+                'pali': 'โส เอวัง อะนุโรธะวิโรธะสะมาปันโน, นะ ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, นะ ปะริมุจจะติ ทุกขัส๎มาติ วะทามิ.',
                 'pali_roman': 'So evaṃ anurodhavirodhasamāpanno, na parimuccati jātiyā jarāmaraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, na parimuccati dukkhasmāti vadāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -54492,7 +54492,7 @@ CHANTS = [
             {
                 'number': 11,
                 'page': 190,
-                'pali': 'โส เอวัง อะนุโรธะวิโรธะวิปปะหีโน ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, ปะริมุจจะติ ทุกขัส์มาติ วะทามิ.',
+                'pali': 'โส เอวัง อะนุโรธะวิโรธะวิปปะหีโน ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, ปะริมุจจะติ ทุกขัส๎มาติ วะทามิ.',
                 'pali_roman': 'So evaṃ anurodhavirodhavippahīno parimuccati jātiyā jarāmaraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, parimuccati dukkhasmāti vadāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -54500,7 +54500,7 @@ CHANTS = [
             },
             {
                 'number': 12,
-                'pali': 'อะยัง โข ภิกขะเว วิเสโส อะยัง อะธิปปายะโส อิทัง นานากะระณัง สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
+                'pali': 'อะยัง โข ภิกขะเว วิเสโส อะยัง อะธิปปายะโส อิทัง นานากะระณัง สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต๎วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
                 'pali_roman': 'Ayaṃ kho bhikkhave viseso ayaṃ adhippāyaso idaṃ nānākaraṇaṃ sutavato ariyasāvakassa assutavatā puthujjanenāti. idamavoca bhagavā. idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.',
                 'thai': '',
                 'paiboon': '',
@@ -54545,7 +54545,7 @@ CHANTS = [
             },
             {
                 'number': 17,
-                'pali': 'เอเต จะ ญัต์วา สะติมา สุเมโธ',
+                'pali': 'เอเต จะ ญัต๎วา สะติมา สุเมโธ',
                 'pali_roman': 'Ete ca ñatvā satimā sumedho',
                 'thai': '',
                 'paiboon': '',
@@ -54593,7 +54593,7 @@ CHANTS = [
             },
             {
                 'number': 23,
-                'pali': 'ปะทัญจะ ญัต์วา วิระชัง อะโสกัง',
+                'pali': 'ปะทัญจะ ญัต๎วา วิระชัง อะโสกัง',
                 'pali_roman': 'Padañca ñatvā virajaṃ asokaṃ',
                 'thai': '',
                 'paiboon': '',
