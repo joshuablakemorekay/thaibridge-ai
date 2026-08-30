@@ -132,6 +132,40 @@ as two words rather than the sandhi form `ariyañcaṭṭhaṅgikaṃ` — becau
 how the Thai script reads once Josh's OCR corrections were applied. The layers
 have to agree with each other line for line, which matters more here than
 matching any one printed edition.
+
+THE CLUSTER MARK IS YAMAKKAN, NOT THANTHAKHAT — settled 2026-08-30.
+--------------------------------------------------------------------
+A Pali consonant cluster written in Thai script takes YAMAKKAN, U+0E4E, an
+angular zig-zag: sabrahmacārī is สะพ๎รัห๎มะจารี. It is NOT thanthakhat, U+0E4C,
+a closed ring with a tail, which in Thai means the opposite thing — that the
+letter it sits over is SILENT. Below about 10x magnification the two are
+indistinguishable, and a great deal of this file was written with the wrong one
+before anybody noticed.
+
+PROVED ON THE PHOTOGRAPHS at 12-18x, at both ends of the book, so it is the
+printer's convention throughout and not a feature of one section:
+
+    page 2    พ๎รัห๎มะจะริยัง      page 203  ค๎รีเมขะลัง
+    page 44   ส๎วากขาโต           page 206  ท๎วายะ, ยาต๎รา
+    page 115  สุต๎วานุปะฏิปัต๎ยัตถัง  page 211  อัต๎ระชัง
+    page 216  กัล๎ยาณัง
+
+The way to check for yourself: render ั, ์ and ๎ large in any Thai font and hold
+them against a crop. The hook, the ring-with-tail and the zig-zag are three
+plainly different shapes once they are big enough.
+
+605 marks were corrected across 288 words, in this file and in the batch
+records together. ⚠️ EARLIER PER-VERSE COMMENTS THAT ARGUE FOR THANTHAKHAT ARE
+SUPERSEDED BY THIS NOTE. They were written in good faith from photographs read
+at too low a magnification; the reasoning in them is worth keeping, but the
+conclusion is wrong, and the data must not be changed back to match them.
+
+WHAT IS NOT A CLUSTER MARK, and must keep its thanthakhat: an ordinary THAI
+word with a silent final letter — พระองค์, ทุกข์, สัตว์, อานิสงส์, พระวิภังค์.
+The test is what FOLLOWS the mark. A yamakkan is always followed by the second
+member of the cluster; a thanthakhat ends its word, so a space, a comma or
+nothing comes next. Eleven Thai words sitting in `pali` slots were caught that
+way and left alone.
 """
 
 CHANTS = [
@@ -1227,7 +1261,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'ตัตราภิระติมิจเฉยยะ หิต์วา กาเม อะกิญจะโน',
+                'pali': 'ตัตราภิระติมิจเฉยยะ หิต๎วา กาเม อะกิญจะโน',
                 'pali_roman': 'tatrābhiratimiccheyya hitvā kāme akiñcano',
                 'thai': '',
                 'paiboon': '',
@@ -1413,7 +1447,7 @@ CHANTS = [
             #          verse 4.
             {
                 'number': 3,
-                'pali': 'พ์ยาธิธัมโมมหิ,',
+                'pali': 'พ๎ยาธิธัมโมมหิ,',
                 'pali_roman': 'byādhidhammomhi,',
                 'thai': 'เรามีความเจ็บไข้เป็นธรรมดา',
                 'paiboon': 'rao mii kwaam jèp kâi bpen tam-má-daa',
@@ -1421,7 +1455,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'พ์ยาธิง อะนะตีโต (อะนะตีตา),',
+                'pali': 'พ๎ยาธิง อะนะตีโต (อะนะตีตา),',
                 'pali_roman': 'byādhiṃ anatīto (anatītā),',
                 'thai': 'จักล่วงพ้นความเจ็บไข้ไปไม่ได้',
                 'paiboon': 'jàk lûaŋ pón kwaam jèp kâi bpai mâi dâai',
@@ -1523,7 +1557,7 @@ CHANTS = [
             #              book. Verify against the printed page.
             {
                 'number': 14,
-                'pali': 'กัล์ยาณัง วา ปาปะกัง วา,',
+                'pali': 'กัล๎ยาณัง วา ปาปะกัง วา,',
                 'pali_roman': 'kalyāṇaṃ vā pāpakaṃ vā,',
                 'thai': 'ดีก็ตาม ชั่วก็ตาม',
                 'paiboon': 'dii gɔ̂ dtaam chûa gɔ̂ dtaam',
@@ -1696,7 +1730,7 @@ CHANTS = [
             #         settles which. Worth a look while page 26 is open.
             {
                 'number': 1,
-                'pali': 'ยัส์มิง ปะเทเส กัปเปติ วาสัง ปัณฑิตะชาติโย',
+                'pali': 'ยัส๎มิง ปะเทเส กัปเปติ วาสัง ปัณฑิตะชาติโย',
                 'pali_roman': 'yasmiṃ padese kappeti vāsaṃ paṇḍitajātiyo',
                 'thai': '',
                 'paiboon': '',
@@ -1707,7 +1741,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'สีละวันเตตถะ โภเชต์วา สัญญะเต พ์รัห์มะจาริโน.',
+                'pali': 'สีละวันเตตถะ โภเชต๎วา สัญญะเต พ๎รัห๎มะจาริโน.',
                 'pali_roman': 'sīlavantettha bhojetvā saññate brahmacārino.',
                 'thai': '',
                 'paiboon': '',
@@ -1721,8 +1755,8 @@ CHANTS = [
                 'variants': [
                     {
                         'marker': '๒',
-                        'word': 'พ์รัห์มะจาริโน',
-                        'reading': 'พ์รัห์มจาระโย',
+                        'word': 'พ๎รัห๎มะจาริโน',
+                        'reading': 'พ๎รัห๎มจาระโย',
                         # -jāro is not a form this reader can vouch for, and a
                         # guessed romanisation of a variant would be a second
                         # invention on top of a disputed transcription. Left
@@ -1766,7 +1800,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'เทวะตานุกัมปิโต โปโส สะทา ภัท์รานิ ปัสสะติ.',
+                'pali': 'เทวะตานุกัมปิโต โปโส สะทา ภัท๎รานิ ปัสสะติ.',
                 'pali_roman': 'devatānukampito poso sadā bhadrāni passati.',
                 'thai': '',
                 'paiboon': '',
@@ -1983,7 +2017,7 @@ CHANTS = [
             #              Verify against the printed page.
             {
                 'number': 8,
-                'pali': 'ตัส์มา หิ ภูตานิ สะเมนตุ สัพเพ',
+                'pali': 'ตัส๎มา หิ ภูตานิ สะเมนตุ สัพเพ',
                 'pali_roman': 'tasmā hi bhūtāni samentu sabbe',
                 'thai': '',
                 'paiboon': '',
@@ -2002,7 +2036,7 @@ CHANTS = [
             #          ฬ with thanthakhat is unusual.
             {
                 'number': 10,
-                'pali': 'ภูเตสุ พาฬ์หัง กะตะภัตติกายะ',
+                'pali': 'ภูเตสุ พาฬ๎หัง กะตะภัตติกายะ',
                 'pali_roman': 'bhūtesu bāḷhaṃ katabhattikāya',
                 'thai': '',
                 'paiboon': '',
@@ -2061,7 +2095,7 @@ CHANTS = [
             #              apostrophe removal. Verify against the printed page.
             {
                 'number': 16,
-                'pali': 'ตัส์มา หิ เน รักขะถะ อัปปะมัตตา.',
+                'pali': 'ตัส๎มา หิ เน รักขะถะ อัปปะมัตตา.',
                 'pali_roman': 'tasmā hi ne rakkhatha appamattā.',
                 'thai': '',
                 'paiboon': '',
@@ -2644,7 +2678,7 @@ CHANTS = [
             #          ways across the book. Transliterated as brahma- in both.
             {
                 'number': 20,
-                'pali': 'อุตตะริง อัปปะฏิวิชฌัน โต พรห์มะโลกูปะโค โหติ.',
+                'pali': 'อุตตะริง อัปปะฏิวิชฌัน โต พรห๎มะโลกูปะโค โหติ.',
                 'pali_roman': 'uttariṃ appaṭivijjhan to brahmalokūpago hoti.',
                 'thai': '',
                 'paiboon': '',
@@ -2932,7 +2966,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'สักกัต์วา สักกะโต โหติ คะรุ โหติ สะคาระโว',
+                'pali': 'สักกัต๎วา สักกะโต โหติ คะรุ โหติ สะคาระโว',
                 'pali_roman': 'sakkatvā sakkato hoti garu hoti sagāravo',
                 'thai': '',
                 'paiboon': '',
@@ -3071,7 +3105,7 @@ CHANTS = [
             #             page. The reading below was already right.
             {
                 'number': 19,
-                'pali': 'วิรุฬหะมูละสันตานัง นิโค์รธะมิวะ มาลุโต',
+                'pali': 'วิรุฬหะมูละสันตานัง นิโค๎รธะมิวะ มาลุโต',
                 'pali_roman': 'viruḷhamūlasantānaṃ nigrodhamiva māluto',
                 'thai': '',
                 'paiboon': '',
@@ -3262,7 +3296,7 @@ CHANTS = [
         # The leader's invitation. Pali, so it carries no Thai and no
         # Paiboon.
         'invitation': {
-            'pali': 'หันทะ มะยัง ท์วัตติงสาการะปาฐัง ภะณามะ เส.',
+            'pali': 'หันทะ มะยัง ท๎วัตติงสาการะปาฐัง ภะณามะ เส.',
             'pali_roman': 'handa mayaṃ dvattiṃsākārapāṭhaṃ bhaṇāma se.',
             'thai': '',
             'paiboon': '',
@@ -3342,7 +3376,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'อัตถิ อิมัส์มิง กาเย,',
+                'pali': 'อัตถิ อิมัส๎มิง กาเย,',
                 'pali_roman': 'atthi imasmiṃ kāye,',
                 'thai': 'ในร่างกายนี้มี,',
                 'paiboon': 'nai râaŋ-gaai níi mii,',
@@ -3823,7 +3857,7 @@ CHANTS = [
             {
                 'number': 5,
                 'page': 219,
-                'pali': 'นิกขิปิต์วา คะรุง ภารัง,',
+                'pali': 'นิกขิปิต๎วา คะรุง ภารัง,',
                 'pali_roman': 'nikkhipitvā garuṃ bhāraṃ,',
                 'thai': 'พระอริยเจ้า สลัดทิ้งของหนัก ลงเสียแล้ว,',
                 'paiboon': 'prá à-rí-yá-jâo sà-làt tíŋ kɔ̌ɔŋ nàk loŋ sǐa lɛ́ɛo,',
@@ -4016,7 +4050,7 @@ CHANTS = [
             #          3 close with a full stop. Reproduced as pasted.
             {
                 'number': 4,
-                'pali': 'ขัตติเย พ์ราห์มะเณ เวสเส สุทเท จัณฑาละปุกกุเส',
+                'pali': 'ขัตติเย พ๎ราห๎มะเณ เวสเส สุทเท จัณฑาละปุกกุเส',
                 'pali_roman': 'khattiye brāhmaṇe vesse sudde caṇḍālapukkuse',
                 'thai': '',
                 'paiboon': '',
@@ -4097,7 +4131,7 @@ CHANTS = [
             {
                 'number': 8,
                 'section': 'สัทธัง นิเวสะเย: Where Faith Is Placed',
-                'pali': 'ตัส์มา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.',
+                'pali': 'ตัส๎มา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.',
                 'pali_roman': 'tasmā hi paṇḍito poso sampassaṃ atthamattano.',
                 'thai': '',
                 'paiboon': '',
@@ -4293,7 +4327,7 @@ CHANTS = [
             #          reproduced exactly as printed rather than regularised.
             {
                 'number': 2,
-                'pali': 'สีลัญจะ ยัสสะ กัล์ยาณัง อะริยะกันตัง ปะสังสิตัง,',
+                'pali': 'สีลัญจะ ยัสสะ กัล๎ยาณัง อะริยะกันตัง ปะสังสิตัง,',
                 'pali_roman': 'sīlañca yassa kalyāṇaṃ ariyakantaṃ pasaṃsitaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -4335,7 +4369,7 @@ CHANTS = [
             {
                 'number': 5,
                 'section': 'อะนุยุญเชถะ: The Exhortation',
-                'pali': 'ตัส์มา สัทธัญจะ สีลัญจะ ปะสาทัง ธัมมะทัสสะนัง',
+                'pali': 'ตัส๎มา สัทธัญจะ สีลัญจะ ปะสาทัง ธัมมะทัสสะนัง',
                 'pali_roman': 'tasmā saddhañca sīlañca pasādaṃ dhammadassanaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -4629,7 +4663,7 @@ CHANTS = [
                 'number': 13,
                 'section': 'นิโรธะวาระ: The Section on Cessation',
                 'page': 32,
-                'pali': 'อะวิชชายะเต์ววะ อะเสสะวิราคะนิโรธา สังขาระนิโรโธ,',
+                'pali': 'อะวิชชายะเต๎ววะ อะเสสะวิราคะนิโรธา สังขาระนิโรโธ,',
                 'pali_roman': (
                     "avijjāyatevva asesavirāganirodhā saṅkhāranirodho,"
                 ),
@@ -4917,7 +4951,7 @@ CHANTS = [
             #          brāhma- throughout, consistent with the earlier chants.
             {
                 'number': 2,
-                'pali': 'อาตาปิโน ฌายะโต พ์ราห์มะณัสสะ',
+                'pali': 'อาตาปิโน ฌายะโต พ๎ราห๎มะณัสสะ',
                 'pali_roman': 'ātāpino jhāyato brāhmaṇassa',
                 'thai': '',
                 'paiboon': '',
@@ -4959,7 +4993,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'อาตาปิโน ฌายะโต พ์ราห์มะณัสสะ',
+                'pali': 'อาตาปิโน ฌายะโต พ๎ราห๎มะณัสสะ',
                 'pali_roman': 'ātāpino jhāyato brāhmaṇassa',
                 'thai': '',
                 'paiboon': '',
@@ -4992,7 +5026,7 @@ CHANTS = [
             },
             {
                 'number': 10,
-                'pali': 'อาตาปิโน ฌายะโต พ์ราห์มะณัสสะ',
+                'pali': 'อาตาปิโน ฌายะโต พ๎ราห๎มะณัสสะ',
                 'pali_roman': 'ātāpino jhāyato brāhmaṇassa',
                 'thai': '',
                 'paiboon': '',
@@ -5161,7 +5195,7 @@ CHANTS = [
             {
                 'number': 1,
                 'section': 'อะตีตัง นาน์วาคะเมยยะ: Neither Past nor Future',
-                'pali': 'อะตีตัง นาน์วาคะเมยยะ นัปปะฏิกังเข อะนาคะตัง',
+                'pali': 'อะตีตัง นาน๎วาคะเมยยะ นัปปะฏิกังเข อะนาคะตัง',
                 'pali_roman': 'atītaṃ nānvāgameyya nappaṭikaṅkhe anāgataṃ',
                 'thai': '',
                 'paiboon': '',
@@ -5208,7 +5242,7 @@ CHANTS = [
             #          manubrūhaye, following the printed form.
             {
                 'number': 4,
-                'pali': 'อะสังหิรัง อะสังกุปปัง ตัง วิทธา มะนุพ์รูหะเย.',
+                'pali': 'อะสังหิรัง อะสังกุปปัง ตัง วิทธา มะนุพ๎รูหะเย.',
                 'pali_roman': 'asaṃharaṃ asaṃkuppaṃ taṃ viddhā manubrūhaye',
                 'thai': '',
                 'paiboon': '',
@@ -5492,7 +5526,7 @@ CHANTS = [
             #   are where I have put them.
             {
                 'number': 2,
-                'pali': 'โย โน ภะคะวา สัตถา, ยัส์มิง ภะคะวะติ พ์รัห์มะจะริยัง จะรามะ,',
+                'pali': 'โย โน ภะคะวา สัตถา, ยัส๎มิง ภะคะวะติ พ๎รัห๎มะจะริยัง จะรามะ,',
                 'pali_roman': 'Yo no bhagavā satthā, yasmiṃ bhagavati brahmacariyaṃ carāma,',
                 'thai': '',
                 'paiboon': '',
@@ -5510,7 +5544,7 @@ CHANTS = [
             #   Reproduced as printed.
             {
                 'number': 4,
-                'pali': 'อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยิต์วา',
+                'pali': 'อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยิต๎วา',
                 'pali_roman': 'Imehi sakkārehi yathārahaṃ āropitehi abhipūjayitvā',
                 'thai': '',
                 'paiboon': '',
@@ -5655,7 +5689,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'โย อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ์รัห์มะกัง,',
+                'pali': 'โย อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ๎รัห๎มะกัง,',
                 'pali_roman': 'Yo imaṃ lokaṃ sadevakaṃ samārakaṃ sabrahmakaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -5663,7 +5697,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'สัสสะมะณะพ์ราห์มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต์วา ปะเวเทสิ,',
+                'pali': 'สัสสะมะณะพ๎ราห๎มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต๎วา ปะเวเทสิ,',
                 'pali_roman': 'Sassamaṇa-brāhmaṇiṃ pajaṃ sadeva-manussaṃ sayaṃ abhiññā sacchikatvā pavedesi,',
                 'thai': '',
                 'paiboon': '',
@@ -5682,7 +5716,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'สาตถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง ปะกาเสสิ,',
+                'pali': 'สาตถัง สะพ๎ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ๎รัห๎มะจะริยัง ปะกาเสสิ,',
                 'pali_roman': 'Sātthaṃ sabyañjanaṃ kevala-paripuṇṇaṃ parisuddhaṃ brahmacariyaṃ pakāsesi,',
                 'thai': '',
                 'paiboon': '',
@@ -7092,7 +7126,7 @@ CHANTS = [
             },
             {
                 'number': 14,
-                'pali': 'อิเม สักกาเร อิมัส์มิง สีหาสะเน อาโรเปต์วา,',
+                'pali': 'อิเม สักกาเร อิมัส๎มิง สีหาสะเน อาโรเปต๎วา,',
                 'pali_roman': 'ime sakkāre imasmiṃ sīhāsane āropetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -7108,7 +7142,7 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'สักการัง กะริต์วา อะภิวาทะนัง กะริมหา,',
+                'pali': 'สักการัง กะริต๎วา อะภิวาทะนัง กะริมหา,',
                 'pali_roman': 'sakkāraṃ karitvā abhivādanaṃ karimhā,',
                 'thai': '',
                 'paiboon': '',
@@ -7445,7 +7479,7 @@ CHANTS = [
             {
                 'number': 3,
                 'printed_number': 3,
-                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali': 'อะพ๎รัห๎มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -8278,7 +8312,7 @@ CHANTS = [
             {
                 'number': 10,
                 'printed_number': 10,
-                'pali': 'นะ สูปัง วา พ์ยัญชะนัง วา โอทะเนนะ ปะฏิจฉาเทสสามิ ภิยโยกัม๎ยะตัง อุปาทายาติ สิกขา กะระณียา.',
+                'pali': 'นะ สูปัง วา พ๎ยัญชะนัง วา โอทะเนนะ ปะฏิจฉาเทสสามิ ภิยโยกัม๎ยะตัง อุปาทายาติ สิกขา กะระณียา.',
                 'pali_roman': 'na sūpaṃ vā byañjanaṃ vā odanena paṭicchādessāmi bhiyyokamyataṃ upādāyāti sikkhā karaṇīyā.',
                 'thai': '',
                 'paiboon': '',
@@ -8344,7 +8378,7 @@ CHANTS = [
             {
                 'number': 17,
                 'printed_number': 17,
-                'pali': 'นะ สะกะวะเฬนะ มุเขนะ พ์ยาหะริสสามีติ สิกขา กะระณียา.',
+                'pali': 'นะ สะกะวะเฬนะ มุเขนะ พ๎ยาหะริสสามีติ สิกขา กะระณียา.',
                 'pali_roman': 'na sakabaḷena mukhena byāharissāmīti sikkhā karaṇīyā.',
                 'thai': '',
                 'paiboon': '',
@@ -8875,7 +8909,7 @@ CHANTS = [
             {
                 'number': 7,
                 'printed_number': 5,
-                'pali': 'กัจจิ นุ โข มัง อะนุวิจจะ วิญญู สะพ์รัห์มะจารี สีละโต นะ อุปะวะทันตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali': 'กัจจิ นุ โข มัง อะนุวิจจะ วิญญู สะพ๎รัห๎มะจารี สีละโต นะ อุปะวะทันตีติ ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
                 'pali_roman': 'kacci nu kho maṃ anuvicca viññū sabrahmacārī sīlato na upavadantīti pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -8931,7 +8965,7 @@ CHANTS = [
             {
                 'number': 12,
                 'printed_number': 10,
-                'pali': 'อัตถิ นุ โข เม อุตตะริมะนุสสะธัมมา อะละมะริยะญาณะทัสสะนะวิเสโส, อะธิคะโต โสหัง ปัจฉิเม กาเล สะพ์รัห์มะจารีหิ ปุฏโฐ นะ มังกุ ภะวิสสามีติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
+                'pali': 'อัตถิ นุ โข เม อุตตะริมะนุสสะธัมมา อะละมะริยะญาณะทัสสะนะวิเสโส, อะธิคะโต โสหัง ปัจฉิเม กาเล สะพ๎รัห๎มะจารีหิ ปุฏโฐ นะ มังกุ ภะวิสสามีติ, ปัพพะชิเตนะ อะภิณ๎หัง ปัจจะเวกขิตัพพัง.',
                 'pali_roman': 'atthi nu kho me uttarimanussadhammā alamariyañāṇadassanaviseso, adhigato sohaṃ pacchime kāle sabrahmacārīhi puṭṭho na maṅku bhavissāmīti, pabbajitena abhiṇhaṃ paccavekkhitabbaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -9029,7 +9063,7 @@ CHANTS = [
             {
                 'number': 4,
                 'page': 21,
-                'pali': 'ขะยัง วิราคัง อะมะตัง ปะณีตัง\nยะทัชฌะคา สัก์ยะมุนี สะมาหิโต\nนะ เตนะ ธัมเมนะ สะมัตถิ กิญจิ\nอิทัมปิ ธัมเม ระตะนัง ปะณีตัง\nเอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali': 'ขะยัง วิราคัง อะมะตัง ปะณีตัง\nยะทัชฌะคา สัก๎ยะมุนี สะมาหิโต\nนะ เตนะ ธัมเมนะ สะมัตถิ กิญจิ\nอิทัมปิ ธัมเม ระตะนัง ปะณีตัง\nเอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
                 'pali_roman': 'khayaṃ virāgaṃ amataṃ paṇītaṃ\nyadajjhagā sakyamunī samāhito\nna tena dhammena samatthi kiñci\nidampi dhamme ratanaṃ paṇītaṃ\netena saccena suvatthi hotu.',
                 'thai': '',
                 'paiboon': '',
@@ -9117,7 +9151,7 @@ CHANTS = [
             {
                 'number': 10,
                 'page': 22,
-                'pali': 'ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง\nวิรัตตะจิตตายะติเก ภะวัส์มิง\nเต ขีณะพีชา อะวิรุฬหิฉันทา\nนิพพันติ ธีรา ยะถายัมปะทีโป\nอิทัมปิ สังเฆ ระตะนัง ปะณีตัง\nเอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
+                'pali': 'ขีณัง ปุราณัง นะวัง นัตถิ สัมภะวัง\nวิรัตตะจิตตายะติเก ภะวัส๎มิง\nเต ขีณะพีชา อะวิรุฬหิฉันทา\nนิพพันติ ธีรา ยะถายัมปะทีโป\nอิทัมปิ สังเฆ ระตะนัง ปะณีตัง\nเอเตนะ สัจเจนะ สุวัตถิ โหตุ.',
                 'pali_roman': 'khīṇaṃ purāṇaṃ navaṃ natthi sambhavaṃ\nvirattacittāyatike bhavasmiṃ\nte khīṇabījā avirūḷhichandā\nnibbanti dhīrā yathāyampadīpo\nidampi saṅghe ratanaṃ paṇītaṃ\netena saccena suvatthi hotu.',
                 'thai': '',
                 'paiboon': '',
@@ -9204,7 +9238,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'เอตะทัตถายะ โลกัส์มิง นิธิ นามะ นิธิยยะติ.',
+                'pali': 'เอตะทัตถายะ โลกัส๎มิง นิธิ นามะ นิธิยยะติ.',
                 'pali_roman': 'etadatthāya lokasmiṃ nidhi nāma nidhiyyati.',
                 'thai': '',
                 'paiboon': '',
@@ -9444,7 +9478,7 @@ CHANTS = [
             #   typography and is not reproduced.
             {
                 'number': 33,
-                'pali': 'ตัส์มา ธีรา ปะสังสันติ ปัณฑิตา กะตะปุญญะตันติ.',
+                'pali': 'ตัส๎มา ธีรา ปะสังสันติ ปัณฑิตา กะตะปุญญะตันติ.',
                 'pali_roman': 'tasmā dhīrā pasaṃsanti paṇḍitā katapuññatanti.',
                 'thai': '',
                 'paiboon': '',
@@ -9523,7 +9557,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'ตัส์มา หิ อัตตะกาเมนะ มะหัตตะมะภิกังขะตา',
+                'pali': 'ตัส๎มา หิ อัตตะกาเมนะ มะหัตตะมะภิกังขะตา',
                 'pali_roman': 'tasmā hi attakāmena mahattamabhikaṅkhatā',
                 'thai': '',
                 'paiboon': '',
@@ -9555,7 +9589,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'ตัส์มา สะตัญจะ อะสะตัญจะ นานา โหติ อิโต คะติ',
+                'pali': 'ตัส๎มา สะตัญจะ อะสะตัญจะ นานา โหติ อิโต คะติ',
                 'pali_roman': 'tasmā satañca asatañca nānā hoti ito gati',
                 'thai': '',
                 'paiboon': '',
@@ -9683,7 +9717,7 @@ CHANTS = [
             #   Reproduced as printed, not lengthened.
             {
                 'number': 23,
-                'pali': 'อัปปะมัตโต อะยัง คันโธ ย์วายัง ตะคะระจันทะนิ',
+                'pali': 'อัปปะมัตโต อะยัง คันโธ ย๎วายัง ตะคะระจันทะนิ',
                 'pali_roman': 'appamatto ayaṃ gandho yvāyaṃ tagaracandani',
                 'thai': '',
                 'paiboon': '',
@@ -9715,7 +9749,7 @@ CHANTS = [
             },
             {
                 'number': 27,
-                'pali': 'ยะถา สังการะธานัส์มิง อุชฌิตัส์มิง มะหาปะเถ',
+                'pali': 'ยะถา สังการะธานัส๎มิง อุชฌิตัส๎มิง มะหาปะเถ',
                 'pali_roman': 'yathā saṅkāradhānasmiṃ ujjhitasmiṃ mahāpathe',
                 'thai': '',
                 'paiboon': '',
@@ -9787,7 +9821,7 @@ CHANTS = [
             #   and one character decides it.
             {
                 'number': 1,
-                'pali': 'สีตัง อุณ์หัง ปะฏิหันติ ตะโต วาฬะมิคานิ จะ',
+                'pali': 'สีตัง อุณ๎หัง ปะฏิหันติ ตะโต วาฬะมิคานิ จะ',
                 'pali_roman': 'sītaṃ uṇhaṃ paṭihanti tato vāḷamigāni ca',
                 'thai': '',
                 'paiboon': '',
@@ -9827,7 +9861,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'ตัส์มา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.',
+                'pali': 'ตัส๎มา หิ ปัณฑิโต โปโส สัมปัสสัง อัตถะมัตตะโน.',
                 'pali_roman': 'tasmā hi paṇḍito poso sampassaṃ atthamattano.',
                 'thai': '',
                 'paiboon': '',
@@ -9874,7 +9908,7 @@ CHANTS = [
             #   exactly rather than reformatted.
             {
                 'number': 11,
-                'pali': 'ยัง โส ธัมมะมิธัญญายะ ปะรินิพพาต์ยะนาสะโวติ.',
+                'pali': 'ยัง โส ธัมมะมิธัญญายะ ปะรินิพพาต๎ยะนาสะโวติ.',
                 'pali_roman': 'yaṃ so dhammamidhaññāya parinibbātyanāsavoti.',
                 'thai': '',
                 'paiboon': '',
@@ -9911,7 +9945,7 @@ CHANTS = [
         },
         'source_printed': 'ขุ.สุ. 25/360-361',
         'closing': {
-            'pali': 'สัจจะปานะวิธ์ยานุรูปะคาถา นิฏฐิตา',
+            'pali': 'สัจจะปานะวิธ๎ยานุรูปะคาถา นิฏฐิตา',
             'pali_roman': 'saccapānavidhyānurūpagāthā niṭṭhitā',
             'thai': '',
             'paiboon': '',
@@ -10026,7 +10060,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'อิงฆะ อัญเญปิ ปุจฉัสสุ ปุถู สะมะณะพ์ราห์มะเณ',
+                'pali': 'อิงฆะ อัญเญปิ ปุจฉัสสุ ปุถู สะมะณะพ๎ราห๎มะเณ',
                 'pali_roman': 'iṅgha aññepi pucchassu puthū samaṇabrāhmaṇe',
                 'thai': '',
                 'paiboon': '',
@@ -10038,7 +10072,7 @@ CHANTS = [
             #   chant below.
             {
                 'number': 14,
-                'pali': 'ยะทิ สัจจา ทะมา จาคา ขันต์ยา ภิยโยธะ วิชชะตีติ.',
+                'pali': 'ยะทิ สัจจา ทะมา จาคา ขันต๎ยา ภิยโยธะ วิชชะตีติ.',
                 'pali_roman': 'yadi saccā damā cāgā khantyā bhiyyodha vijjatīti.',
                 'thai': '',
                 'paiboon': '',
@@ -10102,7 +10136,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อุปัฏฐิตา สีละวันโต สัญญะตา พ์รัห์มะจาริโน',
+                'pali': 'อุปัฏฐิตา สีละวันโต สัญญะตา พ๎รัห๎มะจาริโน',
                 'pali_roman': 'upaṭṭhitā sīlavanto saññatā brahmacārino',
                 'thai': '',
                 'paiboon': '',
@@ -10212,7 +10246,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'เตนะ โข ปะนะ สะมะเยนะ, อายัส์มา มะหากัสสะโป ปิปผะลิคุหายัง วิหะระติ, อาพาธิโก ทุกขิโต พาฬ์หะคิลาโน.',
+                'pali': 'เตนะ โข ปะนะ สะมะเยนะ, อายัส๎มา มะหากัสสะโป ปิปผะลิคุหายัง วิหะระติ, อาพาธิโก ทุกขิโต พาฬ๎หะคิลาโน.',
                 'pali_roman': 'tena kho pana samayena, āyasmā mahākassapo pipphaliguhāyaṃ viharati, ābādhiko dukkhito bāḷhagilāno.',
                 'thai': '',
                 'paiboon': '',
@@ -10220,7 +10254,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'อะถะโข ภะคะวา สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต, เยนายัส์มา มะหากัสสะโป, เตนุปะสังกะมิ,',
+                'pali': 'อะถะโข ภะคะวา สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต, เยนายัส๎มา มะหากัสสะโป, เตนุปะสังกะมิ,',
                 'pali_roman': 'athakho bhagavā sāyaṇhasamayaṃ paṭisallānā vuṭṭhito, yenāyasmā mahākassapo, tenupasaṅkami,',
                 'thai': '',
                 'paiboon': '',
@@ -10228,7 +10262,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'อุปะสังกะมิต์วา ปัญญัตเต อาสะเน นิสีทิ,',
+                'pali': 'อุปะสังกะมิต๎วา ปัญญัตเต อาสะเน นิสีทิ,',
                 'pali_roman': 'upasaṅkamitvā paññatte āsane nisīdi,',
                 'thai': '',
                 'paiboon': '',
@@ -10236,7 +10270,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'นิสัชชะ โข ภะคะวา อายัส์มันตัง มะหากัสสะปัง เอตะทะโวจะ.',
+                'pali': 'นิสัชชะ โข ภะคะวา อายัส๎มันตัง มะหากัสสะปัง เอตะทะโวจะ.',
                 'pali_roman': 'nisajja kho bhagavā āyasmantaṃ mahākassapaṃ etadavoca.',
                 'thai': '',
                 'paiboon': '',
@@ -10281,7 +10315,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'พาฬ์หา เม ทุกขา เวทะนา อะภิกกะมันติ, โน ปะฏิกกะมันติ,',
+                'pali': 'พาฬ๎หา เม ทุกขา เวทะนา อะภิกกะมันติ, โน ปะฏิกกะมันติ,',
                 'pali_roman': 'bāḷhā me dukkhā vedanā abhikkamanti, no paṭikkamanti,',
                 'thai': '',
                 'paiboon': '',
@@ -10425,7 +10459,7 @@ CHANTS = [
             },
             {
                 'number': 26,
-                'pali': 'อัตตะมะโน อายัส์มา มะหากัสสะโป ภะคะวะโต ภาสิตัง อะภินันทิ.',
+                'pali': 'อัตตะมะโน อายัส๎มา มะหากัสสะโป ภะคะวะโต ภาสิตัง อะภินันทิ.',
                 'pali_roman': 'attamano āyasmā mahākassapo bhagavato bhāsitaṃ abhinandi.',
                 'thai': '',
                 'paiboon': '',
@@ -10440,7 +10474,7 @@ CHANTS = [
             #   some other way, say so and I will move it.
             {
                 'number': 27,
-                'pali': 'วุฏฐะหิ จายัส์มา มะหากัสสะโป ตัมหา อาพาธา, ตะถาปะหีโน จายัส์มะโต มะหากัสสะปัสสะ โส (ลากเสียง) อาพาโธ อะโหสีติ.',
+                'pali': 'วุฏฐะหิ จายัส๎มา มะหากัสสะโป ตัมหา อาพาธา, ตะถาปะหีโน จายัส๎มะโต มะหากัสสะปัสสะ โส (ลากเสียง) อาพาโธ อะโหสีติ.',
                 'pali_roman': 'vuṭṭhahi cāyasmā mahākassapo tamhā ābādhā, tathāpahīno cāyasmato mahākassapassa so (lâak sǐiaŋ) ābādho ahosīti.',
                 'thai': '',
                 'paiboon': '',
@@ -10501,7 +10535,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'เตนะ โข ปะนะ สะมะเยนะ, อายัส์มา มะหาโมคคัลลาโน คิชฌะกูเฏ ปัพพะเต วิหะระติ, อาพาธิโก ทุกขิโต พาฬ์หะคิลาโน.',
+                'pali': 'เตนะ โข ปะนะ สะมะเยนะ, อายัส๎มา มะหาโมคคัลลาโน คิชฌะกูเฏ ปัพพะเต วิหะระติ, อาพาธิโก ทุกขิโต พาฬ๎หะคิลาโน.',
                 'pali_roman': 'tena kho pana samayena, āyasmā mahāmoggallāno gijjhakūṭe pabbate viharati, ābādhiko dukkhito bāḷhagilāno.',
                 'thai': '',
                 'paiboon': '',
@@ -10519,7 +10553,7 @@ CHANTS = [
             #   Reproduced as printed on each page rather than made to agree.
             {
                 'number': 4,
-                'pali': 'อะถะโข ภะคะวา สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต เยนายัส์มา มะหาโมคคัลลาโน, เตนุปะสังกะมิ',
+                'pali': 'อะถะโข ภะคะวา สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต เยนายัส๎มา มะหาโมคคัลลาโน, เตนุปะสังกะมิ',
                 'pali_roman': 'athakho bhagavā sāyaṇhasamayaṃ paṭisallānā vuṭṭhito yenāyasmā mahāmoggallāno, tenupasaṅkami',
                 'thai': '',
                 'paiboon': '',
@@ -10528,7 +10562,7 @@ CHANTS = [
             {
                 'number': 5,
                 'page': 35,
-                'pali': 'อุปะสังกะมิต์วา ปัญญัตเต อาสะเน นิสีทิ,',
+                'pali': 'อุปะสังกะมิต๎วา ปัญญัตเต อาสะเน นิสีทิ,',
                 'pali_roman': 'upasaṅkamitvā paññatte āsane nisīdi,',
                 'thai': '',
                 'paiboon': '',
@@ -10536,7 +10570,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'นิสัชชะ โข ภะคะวา อายัส์มันตัง มะหาโมคคัลลานัง เอตะทะโวจะ.',
+                'pali': 'นิสัชชะ โข ภะคะวา อายัส๎มันตัง มะหาโมคคัลลานัง เอตะทะโวจะ.',
                 'pali_roman': 'nisajja kho bhagavā āyasmantaṃ mahāmoggallānaṃ etadavoca.',
                 'thai': '',
                 'paiboon': '',
@@ -10590,7 +10624,7 @@ CHANTS = [
             },
             {
                 'number': 12,
-                'pali': 'พาฬ์หา เม ทุกขา เวทะนา อะภิกกะมันติ, โน ปะฏิกกะมันติ,',
+                'pali': 'พาฬ๎หา เม ทุกขา เวทะนา อะภิกกะมันติ, โน ปะฏิกกะมันติ,',
                 'pali_roman': 'bāḷhā me dukkhā vedanā abhikkamanti, no paṭikkamanti,',
                 'thai': '',
                 'paiboon': '',
@@ -10716,7 +10750,7 @@ CHANTS = [
             },
             {
                 'number': 26,
-                'pali': 'อัตตะมะโน อายัส์มา มะหาโมคคัลลาโน ภะคะวะโต ภาสิตัง อะภินันทิ.',
+                'pali': 'อัตตะมะโน อายัส๎มา มะหาโมคคัลลาโน ภะคะวะโต ภาสิตัง อะภินันทิ.',
                 'pali_roman': 'attamano āyasmā mahāmoggallāno bhagavato bhāsitaṃ abhinandi.',
                 'thai': '',
                 'paiboon': '',
@@ -10724,7 +10758,7 @@ CHANTS = [
             },
             {
                 'number': 27,
-                'pali': 'วุฏฐะหิ จายัส์มา มะหาโมคคัลลาโน ตัมหา อาพาธา, ตะถาปะหีโน จายัส์มะโต มะหาโมคคัลลานัสสะ โส อาพาโธ อะโหสีติ.',
+                'pali': 'วุฏฐะหิ จายัส๎มา มะหาโมคคัลลาโน ตัมหา อาพาธา, ตะถาปะหีโน จายัส๎มะโต มะหาโมคคัลลานัสสะ โส อาพาโธ อะโหสีติ.',
                 'pali_roman': 'vuṭṭhahi cāyasmā mahāmoggallāno tamhā ābādhā, tathāpahīno cāyasmato mahāmoggallānassa so ābādho ahosīti.',
                 'thai': '',
                 'paiboon': '',
@@ -10798,7 +10832,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'เตนะ โข ปะนะ สะมะเยนะ ภะคะวา อาพาธิโก โหติ ทุกขิโต พาฬ์หะคิลาโน.',
+                'pali': 'เตนะ โข ปะนะ สะมะเยนะ ภะคะวา อาพาธิโก โหติ ทุกขิโต พาฬ๎หะคิลาโน.',
                 'pali_roman': 'tena kho pana samayena bhagavā ābādhiko hoti dukkhito bāḷhagilāno.',
                 'thai': '',
                 'paiboon': '',
@@ -10806,7 +10840,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'อะถะโข อายัส์มา มะหาจุนโท สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต, เยนะ ภะคะวา, เตนุปะสังกะมิ',
+                'pali': 'อะถะโข อายัส๎มา มะหาจุนโท สายัณหะสะมะยัง ปะฏิสัลลานา วุฏฐิโต, เยนะ ภะคะวา, เตนุปะสังกะมิ',
                 'pali_roman': 'athakho āyasmā mahācundo sāyaṇhasamayaṃ paṭisallānā vuṭṭhito, yena bhagavā, tenupasaṅkami',
                 'thai': '',
                 'paiboon': '',
@@ -10814,7 +10848,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง นิสีทิ.',
+                'pali': 'อุปะสังกะมิต๎วา ภะคะวันตัง อะภิวาเทต๎วา เอกะมันตัง นิสีทิ.',
                 'pali_roman': 'upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ nisīdi.',
                 'thai': '',
                 'paiboon': '',
@@ -10822,7 +10856,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'เอกะมันตัง นิสินนัง โข อายัส์มันตัง มะหาจุนทัง ภะคะวา เอตะทะโวจะ.',
+                'pali': 'เอกะมันตัง นิสินนัง โข อายัส๎มันตัง มะหาจุนทัง ภะคะวา เอตะทะโวจะ.',
                 'pali_roman': 'ekamantaṃ nisinnaṃ kho āyasmantaṃ mahācundaṃ bhagavā etadavoca.',
                 'thai': '',
                 'paiboon': '',
@@ -10943,7 +10977,7 @@ CHANTS = [
             },
             {
                 'number': 19,
-                'pali': 'อิทะมะโวจายัส์มา มะหาจุนโท.',
+                'pali': 'อิทะมะโวจายัส๎มา มะหาจุนโท.',
                 'pali_roman': 'idamavocāyasmā mahācundo.',
                 'thai': '',
                 'paiboon': '',
@@ -11032,7 +11066,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'กิส์มิง วัตถุส์มินติ สุทินโน กะลันทะปุตโต ปุราณะทุติยิกายะ เมถุนัง ธัมมัง ปะฏิเสวิ ตัส์มิง วัตถุส์มินติ.',
+                'pali': 'กิส๎มิง วัตถุส๎มินติ สุทินโน กะลันทะปุตโต ปุราณะทุติยิกายะ เมถุนัง ธัมมัง ปะฏิเสวิ ตัส๎มิง วัตถุส๎มินติ.',
                 'pali_roman': 'kismiṃ vatthusminti sudinno kalandaputto purāṇadutiyikāya methunaṃ dhammaṃ paṭisevi tasmiṃ vatthusminti.',
                 'thai': '',
                 'paiboon': '',
@@ -11053,7 +11087,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'อัสโสสิ โข เวรัญโช พ์ราห์มะโณ สะมะโณ ขะลุ โภ โคตะโม สัก์ยะปุตโต สัก์ยะกุลา ปัพพะชิโต, เวรัญชายัง วิหะระติ นะเพรุปุจิมันทะมูเล มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ.',
+                'pali': 'อัสโสสิ โข เวรัญโช พ๎ราห๎มะโณ สะมะโณ ขะลุ โภ โคตะโม สัก๎ยะปุตโต สัก๎ยะกุลา ปัพพะชิโต, เวรัญชายัง วิหะระติ นะเพรุปุจิมันทะมูเล มะหะตา ภิกขุสังเฆนะ สัทธิง ปัญจะมัตเตหิ ภิกขุสะเตหิ.',
                 'pali_roman': 'assosi kho verañjo brāhmaṇo samaṇo khalu bho gotamo sakyaputto sakyakulā pabbajito, verañjāyaṃ viharati naḷerupucimandamūle mahatā bhikkhusaṅghena saddhiṃ pañcamattehi bhikkhusatehi.',
                 'thai': '',
                 'paiboon': '',
@@ -11061,7 +11095,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'ตัง โข ปะนะ ภะวันตัง โคตะมัง เอวัง กัล์ยาโณ กิตติสัทโท อัพภุคคะโต, อิติปิ โส ภะคะวา อะระหัง สัมมาสัมพุทโธ, วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู, อะนุตตะโร ปุริสะทัมมะสาระถิ สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวาติ.',
+                'pali': 'ตัง โข ปะนะ ภะวันตัง โคตะมัง เอวัง กัล๎ยาโณ กิตติสัทโท อัพภุคคะโต, อิติปิ โส ภะคะวา อะระหัง สัมมาสัมพุทโธ, วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู, อะนุตตะโร ปุริสะทัมมะสาระถิ สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวาติ.',
                 'pali_roman': 'taṃ kho pana bhavantaṃ gotamaṃ evaṃ kalyāṇo kittisaddo abbhuggato, itipi so bhagavā arahaṃ sammāsambuddho, vijjācaraṇasampanno sugato lokavidū, anuttaro purisadammasārathi satthā devamanussānaṃ buddho bhagavāti.',
                 'thai': '',
                 'paiboon': '',
@@ -11073,7 +11107,7 @@ CHANTS = [
             #   a break with no hyphen is easier to mis-join than one with.
             {
                 'number': 7,
-                'pali': 'โส อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ์รัห์มะกัง, สัสสะมะณะพ์ราห์มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต์วา ปะเวเทติ.',
+                'pali': 'โส อิมัง โลกัง สะเทวะกัง สะมาระกัง สะพ๎รัห๎มะกัง, สัสสะมะณะพ๎ราห๎มะณิง ปะชัง สะเทวะมะนุสสัง สะยัง อะภิญญา สัจฉิกัต๎วา ปะเวเทติ.',
                 'pali_roman': 'so imaṃ lokaṃ sadevakaṃ samārakaṃ sabrahmakaṃ, sassamaṇabrāhmaṇiṃ pajaṃ sadevamanussaṃ sayaṃ abhiññā sacchikatvā pavedeti.',
                 'thai': '',
                 'paiboon': '',
@@ -11087,7 +11121,7 @@ CHANTS = [
             #   printing, so it is reproduced as it stands.
             {
                 'number': 8,
-                'pali': 'โส ธัมมัง เทเสติ อาทิกัล์ยาณัง มัชเฌกัล์ยาณัง ปะริโย-สานะกัล์ยาณัง สาตถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง ปะกาเสติ.',
+                'pali': 'โส ธัมมัง เทเสติ อาทิกัล๎ยาณัง มัชเฌกัล๎ยาณัง ปะริโย-สานะกัล๎ยาณัง สาตถัง สะพ๎ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ๎รัห๎มะจะริยัง ปะกาเสติ.',
                 'pali_roman': 'so dhammaṃ deseti ādikalyāṇaṃ majjhekalyāṇaṃ pariyo-sānakalyāṇaṃ sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ pakāseti.',
                 'thai': '',
                 'paiboon': '',
@@ -11155,7 +11189,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'สุปปิโยปิ โข ปะริพพาชะโก อันตะรา จะ ราชะคะหัง อันตะรา จะ นาลันทัง อัทธานะมัคคะปะฏิปันโน โหติ สัทธิง อันเตวาสินา พ์รัห์มะทัตเตนะ มาณะเวนะ.',
+                'pali': 'สุปปิโยปิ โข ปะริพพาชะโก อันตะรา จะ ราชะคะหัง อันตะรา จะ นาลันทัง อัทธานะมัคคะปะฏิปันโน โหติ สัทธิง อันเตวาสินา พ๎รัห๎มะทัตเตนะ มาณะเวนะ.',
                 'pali_roman': 'suppiyopi kho paribbājako antarā ca rājagahaṃ antarā ca nāḷandaṃ addhānamaggapaṭipanno hoti saddhiṃ antevāsinā brahmadattena māṇavena.',
                 'thai': '',
                 'paiboon': '',
@@ -11167,7 +11201,7 @@ CHANTS = [
             #   the same verse, printed whole within one line.
             {
                 'number': 3,
-                'pali': 'ตัต์ระ สุทัง, สุปปิโย ปะริพพาชะโก อะเนกะปะริยาเยนะ พุทธัสสะ อะวัณณัง ภาสะติ, ธัมมัสสะ อะวัณณัง ภาสะติ, สังฆัสสะ อะวัณณัง ภาสะติ, สุปปิยัสสะ ปะนะ ปะริพพาชะกัสสะ อันเตวาสี พ์รัห์มะทัตโต มาณะโว อะเนกะปะริยาเยนะ พุทธัสสะ วัณณัง ภาสะติ, ธัมมัสสะ วัณณัง ภาสะติ, สังฆัสสะ วัณณัง ภาสะติ.',
+                'pali': 'ตัต๎ระ สุทัง, สุปปิโย ปะริพพาชะโก อะเนกะปะริยาเยนะ พุทธัสสะ อะวัณณัง ภาสะติ, ธัมมัสสะ อะวัณณัง ภาสะติ, สังฆัสสะ อะวัณณัง ภาสะติ, สุปปิยัสสะ ปะนะ ปะริพพาชะกัสสะ อันเตวาสี พ๎รัห๎มะทัตโต มาณะโว อะเนกะปะริยาเยนะ พุทธัสสะ วัณณัง ภาสะติ, ธัมมัสสะ วัณณัง ภาสะติ, สังฆัสสะ วัณณัง ภาสะติ.',
                 'pali_roman': 'tatra sudaṃ, suppiyo paribbājako anekapariyāyena buddhassa avaṇṇaṃ bhāsati, dhammassa avaṇṇaṃ bhāsati, saṅghassa avaṇṇaṃ bhāsati, suppiyassa pana paribbājakassa antevāsī brahmadatto māṇavo anekapariyāyena buddhassa vaṇṇaṃ bhāsati, dhammassa vaṇṇaṃ bhāsati, saṅghassa vaṇṇaṃ bhāsati.',
                 'thai': '',
                 'paiboon': '',
@@ -11246,7 +11280,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อัพ์ยากะตา ธัมมา,',
+                'pali': 'อัพ๎ยากะตา ธัมมา,',
                 'pali_roman': 'abyākatā dhammā,',
                 'thai': '',
                 'paiboon': '',
@@ -11262,7 +11296,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'ยัส์มิง สะมะเย กามาวะจะรัง กุสะลัง จิตตัง อุปปันนัง โหติ โสมะนัสสะสะหะคะตัง ญาณะสัมปะยุตตัง,',
+                'pali': 'ยัส๎มิง สะมะเย กามาวะจะรัง กุสะลัง จิตตัง อุปปันนัง โหติ โสมะนัสสะสะหะคะตัง ญาณะสัมปะยุตตัง,',
                 'pali_roman': 'yasmiṃ samaye kāmāvacaraṃ kusalaṃ cittaṃ uppannaṃ hoti somanassasahagataṃ ñāṇasampayuttaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -11270,7 +11304,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'รูปารัมมะณัง วา สัททารัมมะณัง วา คันธารัมมะณัง วา ระสารัมมะณัง วา โผฏฐัพพารัมมะณัง วา ธัมมารัมมะณัง วา ยัง ยัง วา ปะนารัพภะ ตัส์มิง สะมะเย ผัสโส โหติ อะวิกเขโป โหติ เย วา ปะนะ ตัส์มิง สะมะเย,',
+                'pali': 'รูปารัมมะณัง วา สัททารัมมะณัง วา คันธารัมมะณัง วา ระสารัมมะณัง วา โผฏฐัพพารัมมะณัง วา ธัมมารัมมะณัง วา ยัง ยัง วา ปะนารัพภะ ตัส๎มิง สะมะเย ผัสโส โหติ อะวิกเขโป โหติ เย วา ปะนะ ตัส๎มิง สะมะเย,',
                 'pali_roman': 'rūpārammaṇaṃ vā saddārammaṇaṃ vā gandhārammaṇaṃ vā rasārammaṇaṃ vā phoṭṭhabbārammaṇaṃ vā dhammārammaṇaṃ vā yaṃ yaṃ vā panārabbha tasmiṃ samaye phasso hoti avikkhepo hoti ye vā pana tasmiṃ samaye,',
                 'thai': '',
                 'paiboon': '',
@@ -11394,7 +11428,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'ตะเทกัชฌัง อะภิสัญญูหิต์วา อะภิสังขิปิต์วา อะยัง วุจจะติ รูปักขันโธ.',
+                'pali': 'ตะเทกัชฌัง อะภิสัญญูหิต๎วา อะภิสังขิปิต๎วา อะยัง วุจจะติ รูปักขันโธ.',
                 'pali_roman': 'tadekajjhaṃ abhisaññūhitvā abhisaṅkhipitvā ayaṃ vuccati rūpakkhandho.',
                 'thai': '',
                 'paiboon': '',
@@ -11583,7 +11617,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'อินท์ริยะปัญญัตติ,',
+                'pali': 'อินท๎ริยะปัญญัตติ,',
                 'pali_roman': 'indriyapaññatti,',
                 'thai': '',
                 'paiboon': '',
@@ -11643,7 +11677,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'ปุถุชชะโน โคต์ระภู,',
+                'pali': 'ปุถุชชะโน โคต๎ระภู,',
                 'pali_roman': 'puthujjano gotrabhū,',
                 'thai': '',
                 'paiboon': '',
@@ -12017,7 +12051,7 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'อินท์ริยะปัจจะโย,',
+                'pali': 'อินท๎ริยะปัจจะโย,',
                 'pali_roman': 'indriyapaccayo,',
                 'thai': '',
                 'paiboon': '',
@@ -12128,7 +12162,7 @@ CHANTS = [
         'verses': [
             {
                 'number': 1,
-                'pali': 'กุสะลา ธัมมา, อะกุสะลา ธัมมา, อัพ์ยากะตา ธัมมา.',
+                'pali': 'กุสะลา ธัมมา, อะกุสะลา ธัมมา, อัพ๎ยากะตา ธัมมา.',
                 'pali_roman': 'kusalā dhammā, akusalā dhammā, abyākatā dhammā.',
                 'thai': '',
                 'paiboon': '',
@@ -12373,7 +12407,7 @@ CHANTS = [
             #   printed.
             {
                 'number': 2,
-                'pali': 'ท์วาทะสายะตะนานิ จักข์วายะตะนัง รูปายะตะนัง, โสตายะตะนัง สัททายะตะนัง, ฆานายะตะนัง คันธายะตะนัง, ชิวหายะตะนัง ระสายะตะนัง, กายายะตะนัง โผฏฐัพพายะตะนัง, มะนายะตะนัง ธัมมายะตะนัง,',
+                'pali': 'ท๎วาทะสายะตะนานิ จักข๎วายะตะนัง รูปายะตะนัง, โสตายะตะนัง สัททายะตะนัง, ฆานายะตะนัง คันธายะตะนัง, ชิวหายะตะนัง ระสายะตะนัง, กายายะตะนัง โผฏฐัพพายะตะนัง, มะนายะตะนัง ธัมมายะตะนัง,',
                 'pali_roman': 'dvādasāyatanāni cakkhvāyatanaṃ rūpāyatanaṃ, sotāyatanaṃ saddāyatanaṃ, ghānāyatanaṃ gandhāyatanaṃ, jivhāyatanaṃ rasāyatanaṃ, kāyāyatanaṃ phoṭṭhabbāyatanaṃ, manāyatanaṃ dhammāyatanaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -12395,7 +12429,7 @@ CHANTS = [
             #   Reproduced as printed.
             {
                 'number': 4,
-                'pali': 'พาวีสะตินท์ริยานิ: จักขุนท์ริยัง, โสตินท์ริยัง, ฆานินท์ริยัง, ชิวหินท์ริยัง, กายินท์ริยัง, มะนินท์ริยัง, อิตถินท์ริยัง, ปุริสินท์ริยัง, ชีวิตินท์ริยัง, สุขินท์ริยัง, ทุกขินท์ริยัง, โสมะนัสสินท์ริยัง, โทมะนัสสินท์ริยัง, อุเปกขินท์ริยัง, สัทธินท์ริยัง, วิริยินท์ริยัง, สะตินท์ริยัง, สมาธินท์ริยัง, ปัญญินท์ริยัง, อะนัญญะตัญญัสสามีตินท์ริยัง, อัญญินท์ริยัง, อัญญาตาวินท์ริยัง.',
+                'pali': 'พาวีสะตินท๎ริยานิ: จักขุนท๎ริยัง, โสตินท๎ริยัง, ฆานินท๎ริยัง, ชิวหินท๎ริยัง, กายินท๎ริยัง, มะนินท๎ริยัง, อิตถินท๎ริยัง, ปุริสินท๎ริยัง, ชีวิตินท๎ริยัง, สุขินท๎ริยัง, ทุกขินท๎ริยัง, โสมะนัสสินท๎ริยัง, โทมะนัสสินท๎ริยัง, อุเปกขินท๎ริยัง, สัทธินท๎ริยัง, วิริยินท๎ริยัง, สะตินท๎ริยัง, สมาธินท๎ริยัง, ปัญญินท๎ริยัง, อะนัญญะตัญญัสสามีตินท๎ริยัง, อัญญินท๎ริยัง, อัญญาตาวินท๎ริยัง.',
                 'pali_roman': 'bāvīsatindriyāni: cakkhundriyaṃ, sotindriyaṃ, ghānindriyaṃ, jivhindriyaṃ, kāyindriyaṃ, manindriyaṃ, itthindriyaṃ, purisindriyaṃ, jīvitindriyaṃ, sukhindriyaṃ, dukkhindriyaṃ, somanassindriyaṃ, domanassindriyaṃ, upekkhindriyaṃ, saddhindriyaṃ, vīriyindriyaṃ, satindriyaṃ, samādhindriyaṃ, paññindriyaṃ, anaññatañassāmītindriyaṃ, aññindriyaṃ, aññātāvindriyaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -12455,7 +12489,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม, สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก, โอปะนะยิโก ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.',
+                'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม, สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก, โอปะนะยิโก ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.',
                 'pali_roman': 'svākkhāto bhagavatā dhammo, sandiṭṭhiko akāliko ehipassiko, opanayiko paccattaṃ veditabbo viññūhīti.',
                 'thai': '',
                 'paiboon': '',
@@ -12518,7 +12552,7 @@ CHANTS = [
         'verses': [
             {
                 'number': 1,
-                'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง\nค์รีเมขะลัง อุทิตะโฆระสะเสนะมารัง\nทานาทิธัมมะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali': 'พาหุง สะหัสสะมะภินิมมิตะสาวุธันตัง\nค๎รีเมขะลัง อุทิตะโฆระสะเสนะมารัง\nทานาทิธัมมะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'bāhuṃ sahassamabhinimmitasāvudhantaṃ\ngirimekhalaṃ uditaghorasasenamāraṃ\ndānādidhammavidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
                 'thai': '',
                 'paiboon': '',
@@ -12551,7 +12585,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'กัต์วานะ กัฏฐะมุทะรัง อิวะ คัพภินียา\nจิญจายะ ทุฏฐะวะจะนัง ชะนะกายะมัชเฌ\nสันเตนะ โสมะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali': 'กัต๎วานะ กัฏฐะมุทะรัง อิวะ คัพภินียา\nจิญจายะ ทุฏฐะวะจะนัง ชะนะกายะมัชเฌ\nสันเตนะ โสมะวิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'katvāna kaṭṭhamudaraṃ iva gabbhinīyā\nciñcāya duṭṭhavacanaṃ janakāyamajjhe\nsantena somavidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
                 'thai': '',
                 'paiboon': '',
@@ -12575,7 +12609,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'ทุคคาหะทิฏฐิภุชะเคนะ สุทัฏฐะหัตถัง\nพ์รัห์มัง วิสุทธิชุติมิทธิพะกาภิธานัง\nญาณาคะเทนะ วิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
+                'pali': 'ทุคคาหะทิฏฐิภุชะเคนะ สุทัฏฐะหัตถัง\nพ๎รัห๎มัง วิสุทธิชุติมิทธิพะกาภิธานัง\nญาณาคะเทนะ วิธินา ชิตะวา มุนินโท\nตันเตชะสา ภะวะตุ เต ชะยะมังคะลานิ.',
                 'pali_roman': 'duggāhadiṭṭhibhujagena sudaṭṭhahatthaṃ\nbrahmaṃ visuddhijutimiddhibakābhidhānaṃ\nñāṇāgadena vidhinā jitavā munindo\ntantejasā bhavatu te jayamaṅgalāni.',
                 'thai': '',
                 'paiboon': '',
@@ -12589,7 +12623,7 @@ CHANTS = [
             #   closing line.
             {
                 'number': 9,
-                'pali': 'เอตาปิ พุทธะชะยะมังคะละอัฏฐะคาถา\nโย วาจะโน ทินะทิเน สะระเต มะตันที\nหิต์วานะเนกะวิวิธานิ จุปัททะวานิ\nโมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.',
+                'pali': 'เอตาปิ พุทธะชะยะมังคะละอัฏฐะคาถา\nโย วาจะโน ทินะทิเน สะระเต มะตันที\nหิต๎วานะเนกะวิวิธานิ จุปัททะวานิ\nโมกขัง สุขัง อะธิคะเมยยะ นะโร สะปัญโญ.',
                 'pali_roman': 'etāpi buddhajayamaṅgalaaṭṭhagāthā\nyo vācano dinadine sarate matandī\nhitvānanekavividhāni cupaddavāni\nmokkhaṃ sukhaṃ adhigameyya naro sapañño.',
                 'thai': '',
                 'paiboon': '',
@@ -12649,7 +12683,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'ปูเรต์วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง.',
+                'pali': 'ปูเรต๎วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง.',
                 'pali_roman': 'pūretvā pāramī sabbā patto sambodhimuttamaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -12665,7 +12699,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'ชะยันโต โพธิยา มูเล สัก์ยานัง นันทิวัฑฒะโน',
+                'pali': 'ชะยันโต โพธิยา มูเล สัก๎ยานัง นันทิวัฑฒะโน',
                 'pali_roman': 'jayanto bodhiyā mūle sakyānaṃ nandivaḍḍhano',
                 'thai': '',
                 'paiboon': '',
@@ -12673,7 +12707,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'เอวัง ต์วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล',
+                'pali': 'เอวัง ต๎วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล',
                 'pali_roman': 'evaṃ tvaṃ vijayo hohi jayassu jayamaṅgale',
                 'thai': '',
                 'paiboon': '',
@@ -12705,7 +12739,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ์รัห์มะจาริสุ',
+                'pali': 'สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ๎รัห๎มะจาริสุ',
                 'pali_roman': 'sukhaṇo sumuhutto ca suyiṭṭhaṃ brahmacārisu',
                 'thai': '',
                 'paiboon': '',
@@ -12729,7 +12763,7 @@ CHANTS = [
             },
             {
                 'number': 12,
-                'pali': 'ปะทักขิณานิ กัต์วานะ ละภันตัตเถ ปะทักขิเณ.',
+                'pali': 'ปะทักขิณานิ กัต๎วานะ ละภันตัตเถ ปะทักขิเณ.',
                 'pali_roman': 'padakkhiṇāni katvāna labhantatthe padakkhiṇe.',
                 'thai': '',
                 'paiboon': '',
@@ -13029,7 +13063,7 @@ CHANTS = [
             },
             {
                 'number': 24,
-                'pali': 'ชะยะสิทธิ ธะนัง ลาภัง โสตถิ ภาค์ยัง สุขัง พะลัง',
+                'pali': 'ชะยะสิทธิ ธะนัง ลาภัง โสตถิ ภาค๎ยัง สุขัง พะลัง',
                 'pali_roman': 'jayasiddhi dhanaṃ lābhaṃ sotthi bhāgyaṃ sukhaṃ balaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -13183,7 +13217,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'ตัส์มา ทะเท อัปปะฏิวานะจิตโต ยัตถะ ทินนัง มะหัปผะลัง',
+                'pali': 'ตัส๎มา ทะเท อัปปะฏิวานะจิตโต ยัตถะ ทินนัง มะหัปผะลัง',
                 'pali_roman': 'tasmā dade appaṭivānacitto yattha dinnaṃ mahapphalaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -13204,7 +13238,7 @@ CHANTS = [
             #   frame.
             {
                 'number': 7,
-                'pali': 'ปุญญานิ ปะระโลกัส์มิง ปะติฏฐา โหนติ ปาณินันติ.',
+                'pali': 'ปุญญานิ ปะระโลกัส๎มิง ปะติฏฐา โหนติ ปาณินันติ.',
                 'pali_roman': 'puññāni paralokasmiṃ patiṭṭhā honti pāṇinanti.',
                 'thai': '',
                 'paiboon': '',
@@ -13297,7 +13331,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'ยัส์มา จะ สังคะหา เอเต สะมะเวกขันติ ปัณฑิตา',
+                'pali': 'ยัส๎มา จะ สังคะหา เอเต สะมะเวกขันติ ปัณฑิตา',
                 'pali_roman': 'yasmā ca saṅgahā ete samavekkhanti paṇḍitā',
                 'thai': '',
                 'paiboon': '',
@@ -13311,7 +13345,7 @@ CHANTS = [
             #   the things being recorded.
             {
                 'number': 7,
-                'pali': 'ตัส์มา มะหัตตัง ปัปโปนติ ปาสังสา จะ ภะวันติ เตติ.',
+                'pali': 'ตัส๎มา มะหัตตัง ปัปโปนติ ปาสังสา จะ ภะวันติ เตติ.',
                 'pali_roman': 'tasmā mahattaṃ papponti pāsaṃsā ca bhavanti teti.',
                 'thai': '',
                 'paiboon': '',
@@ -13358,7 +13392,7 @@ CHANTS = [
             #   to right พุทธะธัมมะคะณัตตะยัง.
             {
                 'number': 1,
-                'pali': 'สัพพะวัตถุตตะมัง นัต์วา พุทธะธัมมะคะณัตตะยัง',
+                'pali': 'สัพพะวัตถุตตะมัง นัต๎วา พุทธะธัมมะคะณัตตะยัง',
                 'pali_roman': 'sabbavatthuttamaṃ natvā buddhadhammagaṇattayaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -13374,7 +13408,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'ปาฏิโมกขัง ปูเรตัพพัง อะโถ อินท์ริยะสังวะโร',
+                'pali': 'ปาฏิโมกขัง ปูเรตัพพัง อะโถ อินท๎ริยะสังวะโร',
                 'pali_roman': 'pāṭimokkhaṃ pūretabbaṃ atho indriyasaṃvaro',
                 'thai': '',
                 'paiboon': '',
@@ -13481,7 +13515,7 @@ CHANTS = [
             {
                 'number': 15,
                 'page': 49,
-                'pali': 'ชีวิตินท์ริยุปัจเฉทะ สังขาตะมะระณัง สิยา',
+                'pali': 'ชีวิตินท๎ริยุปัจเฉทะ สังขาตะมะระณัง สิยา',
                 'pali_roman': 'jīvitindriyupaccheda saṅkhātamaraṇaṃ siyā',
                 'thai': '',
                 'paiboon': '',
@@ -13513,7 +13547,7 @@ CHANTS = [
             },
             {
                 'number': 19,
-                'pali': 'อุปปัชชันติ นิรุชฌันติ เอวัง หุต์วา อะภาวะโต',
+                'pali': 'อุปปัชชันติ นิรุชฌันติ เอวัง หุต๎วา อะภาวะโต',
                 'pali_roman': 'uppajjanti nirujjhanti evaṃ hutvā abhāvato',
                 'thai': '',
                 'paiboon': '',
@@ -13596,7 +13630,7 @@ CHANTS = [
             },
             {
                 'number': 29,
-                'pali': 'เอตตะกานังปิ ปาฐานัง อัตถัง ญัต์วา ยะถาระหัง',
+                'pali': 'เอตตะกานังปิ ปาฐานัง อัตถัง ญัต๎วา ยะถาระหัง',
                 'pali_roman': 'ettakānaṃpi pāṭhānaṃ atthaṃ ñatvā yathārahaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -13664,7 +13698,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'ส์วากขาโต อุตตะโม ธัมโม โลกานัง ตะมะทาละโก',
+                'pali': 'ส๎วากขาโต อุตตะโม ธัมโม โลกานัง ตะมะทาละโก',
                 'pali_roman': 'svākkhāto uttamo dhammo lokānaṃ tamadālako',
                 'thai': '',
                 'paiboon': '',
@@ -13672,7 +13706,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'นิยยานิโก จะ ทุกขัส์มา ธัมมะจารีนุปาละโก.',
+                'pali': 'นิยยานิโก จะ ทุกขัส๎มา ธัมมะจารีนุปาละโก.',
                 'pali_roman': 'niyyāniko ca dukkhasmā dhammacārīnupālako.',
                 'thai': '',
                 'paiboon': '',
@@ -13745,7 +13779,7 @@ CHANTS = [
             },
             {
                 'number': 12,
-                'pali': 'อัคคะเมตัง ติระตะนัง คะรุง กัต์วานะ รักขิตัง.',
+                'pali': 'อัคคะเมตัง ติระตะนัง คะรุง กัต๎วานะ รักขิตัง.',
                 'pali_roman': 'aggametaṃ tiratanaṃ garuṃ katvāna rakkhitaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -13753,7 +13787,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'ธะชัง กัต์วา ปะเทสัสสะ ทัยยะเทเสนะ อุทธะตัง',
+                'pali': 'ธะชัง กัต๎วา ปะเทสัสสะ ทัยยะเทเสนะ อุทธะตัง',
                 'pali_roman': 'dhajaṃ katvā padesassa dayyadesena uddhataṃ',
                 'thai': '',
                 'paiboon': '',
@@ -13777,7 +13811,7 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'เอวัง สาสะนะกิจเจสุ สังฆัง กัต์วานะธิสสะรัง.',
+                'pali': 'เอวัง สาสะนะกิจเจสุ สังฆัง กัต๎วานะธิสสะรัง.',
                 'pali_roman': 'evaṃ sāsanakiccesu saṅghaṃ katvānadhissaraṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -13841,7 +13875,7 @@ CHANTS = [
             },
             {
                 'number': 22,
-                'pali': 'จิรัง ติฏฐะตุ โลกัส์มิง สัมมาสัมพุทธะสาสะนัง.',
+                'pali': 'จิรัง ติฏฐะตุ โลกัส๎มิง สัมมาสัมพุทธะสาสะนัง.',
                 'pali_roman': 'ciraṃ tiṭṭhatu lokasmiṃ sammāsambuddhasāsanaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -13962,7 +13996,7 @@ CHANTS = [
             #   ส๎วากขาโต. One decision would settle all of them.
             {
                 'number': 2,
-                'pali': 'ส์วากขาโต เยนะ ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต เยนะ ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto yena bhagavatā dhammo,',
                 'thai': '',
                 'paiboon': '',
@@ -14080,7 +14114,7 @@ CHANTS = [
             {
                 'number': 2,
                 'rubric': '(กราบพร้อมกัน)',
-                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม, ธัมมัง นะมัสสามิ,',
+                'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม, ธัมมัง นะมัสสามิ,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo, dhammaṃ namassāmi,',
                 'thai': '',
                 'paiboon': '',
@@ -14155,7 +14189,7 @@ CHANTS = [
             #   line starts.
             {
                 'number': 2,
-                'pali': 'โย โน ภะคะวา สัตถา, ยัส์มิง ภะคะวะติ พ์รัห์มะจะริยัง จะรามะ,',
+                'pali': 'โย โน ภะคะวา สัตถา, ยัส๎มิง ภะคะวะติ พ๎รัห๎มะจะริยัง จะรามะ,',
                 'pali_roman': 'Yo no bhagavā satthā, yasmiṃ bhagavati brahmacariyaṃ carāma,',
                 'thai': '',
                 'paiboon': '',
@@ -14172,7 +14206,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยิต์วา',
+                'pali': 'อิเมหิ สักกาเรหิ ยะถาระหัง อาโรปิเตหิ อะภิปูชะยิต๎วา',
                 'pali_roman': 'Imehi sakkārehi yathārahaṃ āropitehi abhipūjayitvā',
                 'thai': '',
                 'paiboon': '',
@@ -14302,7 +14336,7 @@ CHANTS = [
             #   time.
             {
                 'number': 1,
-                'pali': 'ตัง โข ปะนะ ภะคะวันตัง เอวัง กัล์ยาโณ กิตติสัทโท อัพภุคคะโต,',
+                'pali': 'ตัง โข ปะนะ ภะคะวันตัง เอวัง กัล๎ยาโณ กิตติสัทโท อัพภุคคะโต,',
                 'pali_roman': 'Taṃ kho pana bhagavantaṃ evaṃ kalyāṇo kittisaddo abbhuggato,',
                 'thai': '',
                 'paiboon': '',
@@ -14384,7 +14418,7 @@ CHANTS = [
             #   above.
             {
                 'number': 1,
-                'pali': 'พุทธ์วาระหันตะวะระตาทิคุณาภิยุตโต,',
+                'pali': 'พุทธ๎วาระหันตะวะระตาทิคุณาภิยุตโต,',
                 'pali_roman': 'Buddhvārahanta-varatādiguṇābhiyutto,',
                 'thai': '',
                 'paiboon': '',
@@ -14435,7 +14469,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'พุทธัสสาหัส์มิ ทาโส วะ พุทโธ เม สามิกิสสะโร',
+                'pali': 'พุทธัสสาหัส๎มิ ทาโส วะ พุทโธ เม สามิกิสสะโร',
                 'pali_roman': 'Buddhassāhasmi dāso va buddho me sāmikissaro',
                 'thai': '',
                 'paiboon': '',
@@ -14598,7 +14632,7 @@ CHANTS = [
             #   chanted line.
             {
                 'number': 1,
-                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo,',
                 'thai': '',
                 'paiboon': '',
@@ -14658,7 +14692,7 @@ CHANTS = [
             #   Same open question as ส์วากขาโต above.
             {
                 'number': 1,
-                'pali': 'ส์วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย',
+                'pali': 'ส๎วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย',
                 'pali_roman': 'Svākkhātatādiguṇayogavasena seyyo',
                 'thai': '',
                 'paiboon': '',
@@ -14716,7 +14750,7 @@ CHANTS = [
             #   onward and does NOT complete verse 7.
             {
                 'number': 7,
-                'pali': 'ธัมมัสสาหัส์มิ ทาโส วะ ธัมโม เม สามิกิสสะโร',
+                'pali': 'ธัมมัสสาหัส๎มิ ทาโส วะ ธัมโม เม สามิกิสสะโร',
                 'pali_roman': 'Dhammassāhasmi dāso va dhammo me sāmikissaro',
                 'thai': '',
                 'paiboon': '',
@@ -15379,7 +15413,7 @@ CHANTS = [
             #   open question about which of the two marks this printer uses.
             {
                 'number': 5,
-                'pali': 'ตัส์มาติหัมเหหิ สิกขิตัพพัง,',
+                'pali': 'ตัส๎มาติหัมเหหิ สิกขิตัพพัง,',
                 'pali_roman': 'Tasmātihamhehi sikkhitabbaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -15465,7 +15499,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'ธัมมะจักกัง ปะวัตเตต์วา โลเก อัปปะฏิวัตติยัง.',
+                'pali': 'ธัมมะจักกัง ปะวัตเตต๎วา โลเก อัปปะฏิวัตติยัง.',
                 'pali_roman': 'Dhammacakkaṃ pavattetvā loke appaṭivattiyaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -15473,7 +15507,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'โลกัสสะ สังคะหัง กาตุง จะริต์วา โลกะจาริกัง,',
+                'pali': 'โลกัสสะ สังคะหัง กาตุง จะริต๎วา โลกะจาริกัง,',
                 'pali_roman': 'Lokassa saṅgahaṃ kātuṃ caritvā lokacārikaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -15489,7 +15523,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'อะนุปุพเพนะ สาวัตถิง ปัต์วา เชตะวะเน วะสัง,',
+                'pali': 'อะนุปุพเพนะ สาวัตถิง ปัต๎วา เชตะวะเน วะสัง,',
                 'pali_roman': 'Anupubbena sāvatthiṃ patvā jetavane vasaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -15611,7 +15645,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี,',
+                'pali': 'อะพ๎รัห๎มะจะริยา เวระมะณี,',
                 'pali_roman': 'Abrahmacariyā veramaṇī,',
                 'thai': '',
                 'paiboon': '',
@@ -15719,7 +15753,7 @@ CHANTS = [
             #   which is a reading and not a transcription.
             {
                 'number': 1,
-                'pali': 'เตนะ โข ปะนะ สะมะเยนะ สัก์ยะปุตโต ปะนันทะสะ,',
+                'pali': 'เตนะ โข ปะนะ สะมะเยนะ สัก๎ยะปุตโต ปะนันทะสะ,',
                 'pali_roman': 'Tena kho pana samayena sakyaputto panandassa,',
                 'thai': '',
                 'paiboon': '',
@@ -15737,7 +15771,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'ญัต์วา ตะมัตถัง ภะคะวา ภิกขูนัญเญวะ สันติกา,',
+                'pali': 'ญัต๎วา ตะมัตถัง ภะคะวา ภิกขูนัญเญวะ สันติกา,',
                 'pali_roman': 'Ñatvā tamatthaṃ bhagavā bhikkhūnaññeva santikā,',
                 'thai': '',
                 'paiboon': '',
@@ -15850,7 +15884,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'อะพ์รัห์มะจารี โหติ,',
+                'pali': 'อะพ๎รัห๎มะจารี โหติ,',
                 'pali_roman': 'Abrahmacārī hoti,',
                 'thai': '',
                 'paiboon': '',
@@ -15999,7 +16033,7 @@ CHANTS = [
             {
                 'number': 3,
                 'page': 59,
-                'pali': 'ญัต์วา ตะมัตถัง ภะคะวา ภิกขูนัญเญวะ สันติกา,',
+                'pali': 'ญัต๎วา ตะมัตถัง ภะคะวา ภิกขูนัญเญวะ สันติกา,',
                 'pali_roman': 'Ñatvā tamatthaṃ bhagavā bhikkhūnaññeva santikā,',
                 'thai': '',
                 'paiboon': '',
@@ -16229,7 +16263,7 @@ CHANTS = [
         'verses': [
             {
                 'number': 1,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง จีวะรัง ปะริภุตตัง,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง จีวะรัง ปะริภุตตัง,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ cīvaraṃ paribhuttaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -16288,7 +16322,7 @@ CHANTS = [
             {
                 'number': 6,
             'para_start': True,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย ปิณฑะปาโต ปะริภุตโต,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา โย ปิณฑะปาโต ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo piṇḍapāto paribhutto,',
                 'thai': '',
                 'paiboon': '',
@@ -16301,7 +16335,7 @@ CHANTS = [
             #   syllable differ by one small mark.
             {
                 'number': 7,
-                'pali': 'โส เนวะ ท์วายะ นะ มะทายะ นะ มัณฑะนายะ นะ วิภูสะนายะ,',
+                'pali': 'โส เนวะ ท๎วายะ นะ มะทายะ นะ มัณฑะนายะ นะ วิภูสะนายะ,',
                 'pali_roman': 'So neva dvāya na madāya na maṇḍanāya na vibhūsanāya,',
                 'thai': '',
                 'paiboon': '',
@@ -16320,7 +16354,7 @@ CHANTS = [
             #   long ū. Kept as printed.
             {
                 'number': 9,
-                'pali': 'วิหิงสุปะระติยา พ์รัห์มะจะริยานุคคะหายะ,',
+                'pali': 'วิหิงสุปะระติยา พ๎รัห๎มะจะริยานุคคะหายะ,',
                 'pali_roman': 'Vihiṃsuparatiyā brahmacariyānuggahāya,',
                 'thai': '',
                 'paiboon': '',
@@ -16344,7 +16378,7 @@ CHANTS = [
             },
             {
                 'number': 12,
-                'pali': 'ยาต์รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.',
+                'pali': 'ยาต๎รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.',
                 'pali_roman': 'Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti.',
                 'thai': '',
                 'paiboon': '',
@@ -16353,7 +16387,7 @@ CHANTS = [
             {
                 'number': 13,
             'para_start': True,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง เสนาสะนัง ปะริภุตตัง,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง เสนาสะนัง ปะริภุตตัง,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ senāsanaṃ paribhuttaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -16394,7 +16428,7 @@ CHANTS = [
             {
                 'number': 18,
             'para_start': True,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo gilānapaccayabhesajjaparikkhāro paribhutto,',
                 'thai': '',
                 'paiboon': '',
@@ -16410,7 +16444,7 @@ CHANTS = [
             },
             {
                 'number': 20,
-                'pali': 'อัพ์ยาปัชฌะปะระมะตายาติ.',
+                'pali': 'อัพ๎ยาปัชฌะปะระมะตายาติ.',
                 'pali_roman': 'Abyāpajjhaparamatāyāti.',
                 'thai': '',
                 'paiboon': '',
@@ -16529,7 +16563,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนียานิ ชายันติ.',
+                'pali': 'อิมัง ปูติกายัง ปัต๎วา อะติวิยะ ชิคุจฉะนียานิ ชายันติ.',
                 'pali_roman': 'Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyāni jāyanti.',
                 'thai': '',
                 'paiboon': '',
@@ -16562,7 +16596,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนีโย ชายะติ.',
+                'pali': 'อิมัง ปูติกายัง ปัต๎วา อะติวิยะ ชิคุจฉะนีโย ชายะติ.',
                 'pali_roman': 'Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyo jāyati.',
                 'thai': '',
                 'paiboon': '',
@@ -16600,7 +16634,7 @@ CHANTS = [
             #   Reproduced without the stop.
             {
                 'number': 12,
-                'pali': 'อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนียานิ ชายันติ',
+                'pali': 'อิมัง ปูติกายัง ปัต๎วา อะติวิยะ ชิคุจฉะนียานิ ชายันติ',
                 'pali_roman': 'Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyāni jāyanti',
                 'thai': '',
                 'paiboon': '',
@@ -16647,7 +16681,7 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'อิมัง ปูติกายัง ปัต์วา อะติวิยะ ชิคุจฉะนีโย ชายะติ.',
+                'pali': 'อิมัง ปูติกายัง ปัต๎วา อะติวิยะ ชิคุจฉะนีโย ชายะติ.',
                 'pali_roman': 'Imaṃ pūtikāyaṃ patvā ativiya jigucchanīyo jāyati.',
                 'thai': '',
                 'paiboon': '',
@@ -16770,7 +16804,7 @@ CHANTS = [
             #   printer cuts.
             {
                 'number': 4,
-                'pali': 'พ์รัห์มะมารา จะ อินทา จะ โลกะปาลา จะ เทวะตา.',
+                'pali': 'พ๎รัห๎มะมารา จะ อินทา จะ โลกะปาลา จะ เทวะตา.',
                 'pali_roman': 'Brahmamārā ca indā ca lokapālā ca devatā.',
                 'thai': '',
                 'paiboon': '',
@@ -16975,7 +17009,7 @@ CHANTS = [
             #   mark this printer cuts; still not a verdict on กัล๎ยาณัง.
             {
                 'number': 5,
-                'pali': 'ขัตติโย ชาติยา โคตะโม โคตเตนะ สัก์ยะปุตโต สัก์ยะกุลา ปัพพะชิโต,',
+                'pali': 'ขัตติโย ชาติยา โคตะโม โคตเตนะ สัก๎ยะปุตโต สัก๎ยะกุลา ปัพพะชิโต,',
                 'pali_roman': 'Khattiyo jātiyā gotamo gottena sakyaputto sakyakulā pabbajito,',
                 'thai': '',
                 'paiboon': '',
@@ -16983,7 +17017,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'สัมมาปะโยคะมาคัมมะ สัมมาปะธานะมัน์วายะ,',
+                'pali': 'สัมมาปะโยคะมาคัมมะ สัมมาปะธานะมัน๎วายะ,',
                 'pali_roman': 'Sammāpayogamāgamma sammāpadhānamanvāya,',
                 'thai': '',
                 'paiboon': '',
@@ -16991,7 +17025,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'สัมมานะมะสิการะมัน์วายะ อุรุเวลายัง นัชชา เนรัญชะรายะ ตีเร อัสสัตถะโพธิรุกขะมูเล,',
+                'pali': 'สัมมานะมะสิการะมัน๎วายะ อุรุเวลายัง นัชชา เนรัญชะรายะ ตีเร อัสสัตถะโพธิรุกขะมูเล,',
                 'pali_roman': 'Sammānamasikāramanvāya uruvelāyaṃ najjā nerañjarāya tīre assatthabodhirukkhamūle,',
                 'thai': '',
                 'paiboon': '',
@@ -17007,7 +17041,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'สะเทวะเก โลเก สามาระเก สะพ์รัห์มะเก สัสสะมะณะพ์ราห์มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
+                'pali': 'สะเทวะเก โลเก สามาระเก สะพ๎รัห๎มะเก สัสสะมะณะพ๎ราห๎มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
                 'pali_roman': 'Sadevake loke sāmārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya,',
                 'thai': '',
                 'paiboon': '',
@@ -17078,7 +17112,7 @@ CHANTS = [
             #   27), which confirms the joins.
             {
                 'number': 17,
-                'pali': 'ตันตะทะนุรูปัง ธัมมัญจะ เทเสนโต วินะยัญจะ ปัญญะเปนโต โลกะจาริกัง จะริต์วา,',
+                'pali': 'ตันตะทะนุรูปัง ธัมมัญจะ เทเสนโต วินะยัญจะ ปัญญะเปนโต โลกะจาริกัง จะริต๎วา,',
                 'pali_roman': 'Tantadanurūpaṃ dhammañca desento vinayañca paññapento lokacārikaṃ caritvā,',
                 'thai': '',
                 'paiboon': '',
@@ -17086,7 +17120,7 @@ CHANTS = [
             },
             {
                 'number': 18,
-                'pali': 'ปะริยัตติปะฏิปัตติปะฏิเวธะสังขาตัง ติวิธัง สัทธัมมัง สัมมะเทวะ โลเก ปะวัตตะยิต์วา,',
+                'pali': 'ปะริยัตติปะฏิปัตติปะฏิเวธะสังขาตัง ติวิธัง สัทธัมมัง สัมมะเทวะ โลเก ปะวัตตะยิต๎วา,',
                 'pali_roman': 'Pariyattipaṭipattipaṭivedhasaṅkhātaṃ tividhaṃ saddhammaṃ sammadeva loke pavattayitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -17129,7 +17163,7 @@ CHANTS = [
             #   what the parenthesis is telling the reader to fix.
             {
                 'number': 21,
-                'pali': 'ตะโต ปัฏฐายะ ยาวัชชะตะนา จุททะสุตตะระปัญจะสะตาธิกานิ (เปลี่ยนตาม พ.ศ.) เท์ว สังวัจฉะระสะหัสสานิ อะติกกันตานิ,',
+                'pali': 'ตะโต ปัฏฐายะ ยาวัชชะตะนา จุททะสุตตะระปัญจะสะตาธิกานิ (เปลี่ยนตาม พ.ศ.) เท๎ว สังวัจฉะระสะหัสสานิ อะติกกันตานิ,',
                 'pali_roman': 'Tato paṭṭhāya yāvajjatanā cuddasuttarapañcasatādhikāni (change according to the B.E. year) dve saṃvaccharasahassāni atikkantāni,',
                 'thai': '',
                 'paiboon': '',
@@ -17145,7 +17179,7 @@ CHANTS = [
             },
             {
                 'number': 23,
-                'pali': 'โส อัมหากัง ปัจฉิมาชะนะตาภูตานัง สัตถา หุต์วา ยะถากะถัญจิ ติฏฐะติ,',
+                'pali': 'โส อัมหากัง ปัจฉิมาชะนะตาภูตานัง สัตถา หุต๎วา ยะถากะถัญจิ ติฏฐะติ,',
                 'pali_roman': 'So amhākaṃ pacchimājanatābhūtānaṃ satthā hutvā yathākathañci tiṭṭhati,',
                 'thai': '',
                 'paiboon': '',
@@ -17224,7 +17258,7 @@ CHANTS = [
             },
             {
                 'number': 30,
-                'pali': 'ยาวะเทวะ ทัสสะเนนะ ตัง ภะคะวันตัง อะนุสสะริต์วา ปะสาทะสังเวคะปะฏิลาภายะ เจวะ,',
+                'pali': 'ยาวะเทวะ ทัสสะเนนะ ตัง ภะคะวันตัง อะนุสสะริต๎วา ปะสาทะสังเวคะปะฏิลาภายะ เจวะ,',
                 'pali_roman': 'Yāvadeva dassanena taṃ bhagavantaṃ anussaritvā pasādasaṃvegapaṭilābhāya ceva,',
                 'thai': '',
                 'paiboon': '',
@@ -17248,7 +17282,7 @@ CHANTS = [
             },
             {
                 'number': 33,
-                'pali': 'อิเม ทัณฑะทีปะธูปะปุปผาทิสักกาเร อิมัส์มิง สีหาสะเน อาโรเปต์วา,',
+                'pali': 'อิเม ทัณฑะทีปะธูปะปุปผาทิสักกาเร อิมัส๎มิง สีหาสะเน อาโรเปต๎วา,',
                 'pali_roman': 'Ime daṇḍadīpadhūpapupphādisakkāre imasmiṃ sīhāsane āropetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -17264,7 +17298,7 @@ CHANTS = [
             },
             {
                 'number': 35,
-                'pali': 'สักการัง กะริต์วา อะภิวาทะนัง กะริมหา,',
+                'pali': 'สักการัง กะริต๎วา อะภิวาทะนัง กะริมหา,',
                 'pali_roman': 'Sakkāraṃ karitvā abhivādanaṃ karimhā,',
                 'thai': '',
                 'paiboon': '',
@@ -17370,7 +17404,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'อะยัญจะ ปะริสา สัพพา อัฏฐิกัต์วา สุณาตุ ตันติ.',
+                'pali': 'อะยัญจะ ปะริสา สัพพา อัฏฐิกัต๎วา สุณาตุ ตันติ.',
                 'pali_roman': 'Ayañca parisā sabbā aṭṭhikatvā suṇātu tanti.',
                 'thai': '',
                 'paiboon': '',
@@ -17534,7 +17568,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'สัก์ยะปุตโต สัก์ยะกุลา ปัพพะชิโต,',
+                'pali': 'สัก๎ยะปุตโต สัก๎ยะกุลา ปัพพะชิโต,',
                 'pali_roman': 'Sakyaputto sakyakulā pabbajito,',
                 'thai': '',
                 'paiboon': '',
@@ -17542,7 +17576,7 @@ CHANTS = [
             },
             {
                 'number': 10,
-                'pali': 'สะเทวะเก โลเก สะมาระเก สะพ์รัห์มะเก,',
+                'pali': 'สะเทวะเก โลเก สะมาระเก สะพ๎รัห๎มะเก,',
                 'pali_roman': 'Sadevake loke samārake sabrahmake,',
                 'thai': '',
                 'paiboon': '',
@@ -17550,7 +17584,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'สัสสะมะณะพ์ราห์มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
+                'pali': 'สัสสะมะณะพ๎ราห๎มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
                 'pali_roman': 'Sassamaṇabrāhmaṇiyā pajāya sadevamanussāya,',
                 'thai': '',
                 'paiboon': '',
@@ -17649,7 +17683,7 @@ CHANTS = [
             #   early.
             {
                 'number': 22,
-                'pali': 'ส์วากขาโต โข ปะนะ เตนะ ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต โข ปะนะ เตนะ ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto kho pana tena bhagavatā dhammo,',
                 'thai': '',
                 'paiboon': '',
@@ -17821,7 +17855,7 @@ CHANTS = [
             },
             {
                 'number': 41,
-                'pali': 'ตัง ภะคะวันตัง อะนุสสะริต์วา,',
+                'pali': 'ตัง ภะคะวันตัง อะนุสสะริต๎วา,',
                 'pali_roman': 'Taṃ bhagavantaṃ anussaritvā,',
                 'thai': '',
                 'paiboon': '',
@@ -17861,7 +17895,7 @@ CHANTS = [
             },
             {
                 'number': 46,
-                'pali': 'ชาติสัมโพธินิพพานะกาละสัมมะตัง ปัต์วา,',
+                'pali': 'ชาติสัมโพธินิพพานะกาละสัมมะตัง ปัต๎วา,',
                 'pali_roman': 'Jātisambodhinibbānakālasammataṃ patvā,',
                 'thai': '',
                 'paiboon': '',
@@ -17877,7 +17911,7 @@ CHANTS = [
             },
             {
                 'number': 48,
-                'pali': 'อิเม ทัณฑะทีปะธูปะปุปผาทิสักกาเร คะเหต์วา,',
+                'pali': 'อิเม ทัณฑะทีปะธูปะปุปผาทิสักกาเร คะเหต๎วา,',
                 'pali_roman': 'Ime daṇḍadīpadhūpapupphādisakkāre gahetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -17885,7 +17919,7 @@ CHANTS = [
             },
             {
                 'number': 49,
-                'pali': 'อัตตะโน กายัง สักการุปะธานัง กะริต์วา,',
+                'pali': 'อัตตะโน กายัง สักการุปะธานัง กะริต๎วา,',
                 'pali_roman': 'Attano kāyaṃ sakkārupadhānaṃ karitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -17993,7 +18027,7 @@ CHANTS = [
             },
             {
                 'number': 59,
-                'pali': 'สักกาเร ปะฏิคคัณ์หาตุ,',
+                'pali': 'สักกาเร ปะฏิคคัณ๎หาตุ,',
                 'pali_roman': 'Sakkāre paṭiggaṇhātu,',
                 'thai': '',
                 'paiboon': '',
@@ -18087,7 +18121,7 @@ CHANTS = [
             #   not something the page states.
             {
                 'number': 3,
-                'pali': 'โลเก อะนุตตะโร สัตถา ท์ยาญาณัณณะวาสะโย',
+                'pali': 'โลเก อะนุตตะโร สัตถา ท๎ยาญาณัณณะวาสะโย',
                 'pali_roman': 'Loke anuttaro satthā dyāñāṇaṇṇavāsayo',
                 'thai': '',
                 'paiboon': '',
@@ -18095,7 +18129,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'นายะโก โมกขะมัคคัส์มิง ติวิธัตถูปะเทสะโก.',
+                'pali': 'นายะโก โมกขะมัคคัส๎มิง ติวิธัตถูปะเทสะโก.',
                 'pali_roman': 'Nāyako mokkhamaggasmiṃ tividhatthūpadesako.',
                 'thai': '',
                 'paiboon': '',
@@ -18203,7 +18237,7 @@ CHANTS = [
             #   form.
             {
                 'number': 15,
-                'pali': 'สะมาหะริต์วา เอกัตตะ ฐะปะยิมหา ยะถาระหัง',
+                'pali': 'สะมาหะริต๎วา เอกัตตะ ฐะปะยิมหา ยะถาระหัง',
                 'pali_roman': 'Samāharitvā ekatta ṭhapayimhā yathārahaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -18243,7 +18277,7 @@ CHANTS = [
             },
             {
                 'number': 20,
-                'pali': 'สักกัจจันตัง นะมัสสามะ สัมพุทธัง โคตะมะว์หะยัง.',
+                'pali': 'สักกัจจันตัง นะมัสสามะ สัมพุทธัง โคตะมะว๎หะยัง.',
                 'pali_roman': 'Sakkaccantaṃ namassāma sambuddhaṃ gotamavhayaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -18259,7 +18293,7 @@ CHANTS = [
             },
             {
                 'number': 22,
-                'pali': 'ตัส์มิง เจติยัฏฐาเน อะภิปูเชมะ สาธุกัง.',
+                'pali': 'ตัส๎มิง เจติยัฏฐาเน อะภิปูเชมะ สาธุกัง.',
                 'pali_roman': 'Tasmiṃ cetiyaṭṭhāne abhipūjema sādhukaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -18292,7 +18326,7 @@ CHANTS = [
             },
             {
                 'number': 25,
-                'pali': 'ปะวัตติต์วา นิรุทเธนะ อะนันตารัมมะเณนะปิ',
+                'pali': 'ปะวัตติต๎วา นิรุทเธนะ อะนันตารัมมะเณนะปิ',
                 'pali_roman': 'Pavattitvā niruddhena anantārammaṇenapi',
                 'thai': '',
                 'paiboon': '',
@@ -18459,7 +18493,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'สัก์ยะปุตโต สัก์ยะกุลา ปัพพะชิโต,',
+                'pali': 'สัก๎ยะปุตโต สัก๎ยะกุลา ปัพพะชิโต,',
                 'pali_roman': 'Sakyaputto sakyakulā pabbajito,',
                 'thai': '',
                 'paiboon': '',
@@ -18490,7 +18524,7 @@ CHANTS = [
             #   cuts that pages 51 to 60 raised, not a new one.
             {
                 'number': 9,
-                'pali': 'สะเทวะเก โลเก สะมาระเก สะพ์รัห์มะเก,',
+                'pali': 'สะเทวะเก โลเก สะมาระเก สะพ๎รัห๎มะเก,',
                 'pali_roman': 'Sadevake loke samārake sabrahmake,',
                 'thai': '',
                 'paiboon': '',
@@ -18499,7 +18533,7 @@ CHANTS = [
             {
                 'number': 10,
                 'page': 69,
-                'pali': 'สัสสะมะณะพ์ราห์มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
+                'pali': 'สัสสะมะณะพ๎ราห๎มะณิยา ปะชายะ สะเทวะมะนุสสายะ,',
                 'pali_roman': 'Sassamaṇabrāhmaṇiyā pajāya sadevamanussāya,',
                 'thai': '',
                 'paiboon': '',
@@ -18600,7 +18634,7 @@ CHANTS = [
             },
             {
                 'number': 21,
-                'pali': 'ส์วากขาโต โข ปะนะ เตนะ ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต โข ปะนะ เตนะ ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto kho pana tena bhagavatā dhammo,',
                 'thai': '',
                 'paiboon': '',
@@ -18766,7 +18800,7 @@ CHANTS = [
             },
             {
                 'number': 40,
-                'pali': 'ตัง ภะคะวันตัง อะนุสสะริต์วา,',
+                'pali': 'ตัง ภะคะวันตัง อะนุสสะริต๎วา,',
                 'pali_roman': 'Taṃ bhagavantaṃ anussaritvā,',
                 'thai': '',
                 'paiboon': '',
@@ -18825,7 +18859,7 @@ CHANTS = [
             #   differently.
             {
                 'number': 45,
-                'pali': 'สะรีรัชฌาปะนะกาละสัมมะตัง ปัต์วา อิมัง ฐานัง สัมปัตตา,',
+                'pali': 'สะรีรัชฌาปะนะกาละสัมมะตัง ปัต๎วา อิมัง ฐานัง สัมปัตตา,',
                 'pali_roman': 'Sarīrajjhāpanakālasammataṃ patvā imaṃ ṭhānaṃ sampattā,',
                 'thai': '',
                 'paiboon': '',
@@ -18833,7 +18867,7 @@ CHANTS = [
             },
             {
                 'number': 46,
-                'pali': 'อิเม ทัณฑะทีปะธูปะปุปผาทิสักกาเร คะเหต์วา,',
+                'pali': 'อิเม ทัณฑะทีปะธูปะปุปผาทิสักกาเร คะเหต๎วา,',
                 'pali_roman': 'Ime daṇḍadīpadhūpapupphādisakkāre gahetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -18841,7 +18875,7 @@ CHANTS = [
             },
             {
                 'number': 47,
-                'pali': 'อัตตะโน กายัง สักการุปะธานัง กะริต์วา,',
+                'pali': 'อัตตะโน กายัง สักการุปะธานัง กะริต๎วา,',
                 'pali_roman': 'Attano kāyaṃ sakkārupadhānaṃ karitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -19225,7 +19259,7 @@ CHANTS = [
             #   verse 12 — the other page is what settles it.
             {
                 'number': 15,
-                'pali': 'สะมาหะริต์วา เอกัตถะ ฐะปะยิมหา ยะถาระหัง',
+                'pali': 'สะมาหะริต๎วา เอกัตถะ ฐะปะยิมหา ยะถาระหัง',
                 'pali_roman': 'Samāharitvā ekattha ṭhapayimhā yathārahaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -19265,7 +19299,7 @@ CHANTS = [
             },
             {
                 'number': 20,
-                'pali': 'สักกัจจันตัง นะมัสสามะ สัมพุทธัง โคตะมะว์หะยัง.',
+                'pali': 'สักกัจจันตัง นะมัสสามะ สัมพุทธัง โคตะมะว๎หะยัง.',
                 'pali_roman': 'Sakkaccantaṃ namassāma sambuddhaṃ gotamavhayaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -19281,7 +19315,7 @@ CHANTS = [
             },
             {
                 'number': 22,
-                'pali': 'ตัส์มิง เจติยัฏฐาเน อะภิปูเชมะ สาธุกัง.',
+                'pali': 'ตัส๎มิง เจติยัฏฐาเน อะภิปูเชมะ สาธุกัง.',
                 'pali_roman': 'Tasmiṃ cetiyaṭṭhāne abhipūjema sādhukaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -19305,7 +19339,7 @@ CHANTS = [
             },
             {
                 'number': 25,
-                'pali': 'ปะวัตติต์วา นิรุทเธนะ อะนันตารัมมะเณนะปิ',
+                'pali': 'ปะวัตติต๎วา นิรุทเธนะ อะนันตารัมมะเณนะปิ',
                 'pali_roman': 'Pavattitvā niruddhena anantārammaṇenapi',
                 'thai': '',
                 'paiboon': '',
@@ -19573,7 +19607,7 @@ CHANTS = [
             },
             {
                 'number': 15,
-                'pali': 'ตัส์มิง สันนิปาเต ภะคะวา วิสุทธุโปสะถัง อะกาสิ,',
+                'pali': 'ตัส๎มิง สันนิปาเต ภะคะวา วิสุทธุโปสะถัง อะกาสิ,',
                 'pali_roman': 'Tasmiṃ sannipāte bhagavā visuddhuposathaṃ akāsi,',
                 'thai': '',
                 'paiboon': '',
@@ -19621,7 +19655,7 @@ CHANTS = [
             },
             {
                 'number': 21,
-                'pali': 'สุจิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง อะนุสสะระมานา อิมัส์มิง ตัสสะ ภะคะวะโต,',
+                'pali': 'สุจิระปะรินิพพุตัมปิ ตัง ภะคะวันตัง อะนุสสะระมานา อิมัส๎มิง ตัสสะ ภะคะวะโต,',
                 'pali_roman': 'Suciraparinibbutampi taṃ bhagavantaṃ anussaramānā imasmiṃ tassa bhagavato,',
                 'thai': '',
                 'paiboon': '',
@@ -20189,7 +20223,7 @@ CHANTS = [
             },
             {
                 'number': 15,
-                'pali': 'มัตตัญญุตา จะ ภัตตัส์มิง ปันตัญจะ สะยะนาสะนัง',
+                'pali': 'มัตตัญญุตา จะ ภัตตัส๎มิง ปันตัญจะ สะยะนาสะนัง',
                 'pali_roman': 'Mattaññutā ca bhattasmiṃ pantañca sayanāsanaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -20409,7 +20443,7 @@ CHANTS = [
             },
             {
                 'number': 38,
-                'pali': 'อิธะ อะริยะสาวะโก โวสัคคารัมมะณัง กะริต์วา ละภะติ สะมาธิง ละภะติ จิตตัสเสกัคคะตันติ.',
+                'pali': 'อิธะ อะริยะสาวะโก โวสัคคารัมมะณัง กะริต๎วา ละภะติ สะมาธิง ละภะติ จิตตัสเสกัคคะตันติ.',
                 'pali_roman': 'Idha ariyasāvako vossaggārammaṇaṃ karitvā labhati samādhiṃ labhati cittassekaggatanti.',
                 'thai': '',
                 'paiboon': '',
@@ -20840,7 +20874,7 @@ CHANTS = [
             #   it at once.
             {
                 'number': 82,
-                'pali': 'ตัส์มาติหัมเหหิ สิกขิตัพพัง ติพพาเปกขา ภะวิสสามะ,',
+                'pali': 'ตัส๎มาติหัมเหหิ สิกขิตัพพัง ติพพาเปกขา ภะวิสสามะ,',
                 'pali_roman': 'Tasmātihamhehi sikkhitabbaṃ tibbāpekkhā bhavissāma,',
                 'thai': '',
                 'paiboon': '',
@@ -21002,7 +21036,7 @@ CHANTS = [
             #   gives no earlier break — read across both sheets to be sure.
             {
                 'number': 6,
-                'pali': 'อาสาฬ์หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย ปัญจะวัคคิยานัง ภิกขูนัง อะนุตตะรัง ธัมมะจักกัง ปะฐะมัง ปะวัตเตต์วา จัตตาริ อะริยะสัจจานิ ปะกาเสสิ.',
+                'pali': 'อาสาฬ๎หะปุณณะมิยัง พาราณะสิยัง อิสิปะตะเน มิคะทาเย ปัญจะวัคคิยานัง ภิกขูนัง อะนุตตะรัง ธัมมะจักกัง ปะฐะมัง ปะวัตเตต๎วา จัตตาริ อะริยะสัจจานิ ปะกาเสสิ.',
                 'pali_roman': 'Āsāḷhapuṇṇamiyaṃ bārāṇasiyaṃ isipatane migadāye pañcavaggiyānaṃ bhikkhūnaṃ anuttaraṃ dhammacakkaṃ paṭhamaṃ pavattetvā cattāri ariyasaccāni pakāsesi.',
                 'thai': '',
                 'paiboon': '',
@@ -21017,7 +21051,7 @@ CHANTS = [
                 'number': 7,
                 'page': 76,
                 'para_start': True,
-                'pali': 'ตัส์มิญจะ โข สะมะเย ปัญจะวัคคิยานัง ภิกขูนัง ปะมุโข อายัส์มา อัญญาโกณฑัญโญ ภะคะวะโต ธัมมัง สุต์วา,',
+                'pali': 'ตัส๎มิญจะ โข สะมะเย ปัญจะวัคคิยานัง ภิกขูนัง ปะมุโข อายัส๎มา อัญญาโกณฑัญโญ ภะคะวะโต ธัมมัง สุต๎วา,',
                 'pali_roman': 'Tasmiñca kho samaye pañcavaggiyānaṃ bhikkhūnaṃ pamukho āyasmā aññākoṇḍañño bhagavato dhammaṃ sutvā,',
                 'thai': '',
                 'paiboon': '',
@@ -21025,7 +21059,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'วิระชัง วีตะมะลัง ธัมมะจักขุง ปะฏิละภิต์วา,',
+                'pali': 'วิระชัง วีตะมะลัง ธัมมะจักขุง ปะฏิละภิต๎วา,',
                 'pali_roman': 'Virajaṃ vītamalaṃ dhammacakkhuṃ paṭilabhitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -21041,7 +21075,7 @@ CHANTS = [
             },
             {
                 'number': 10,
-                'pali': 'ภะคะวันตัง อุปะสัมปะทัง ยาจิต์วา,',
+                'pali': 'ภะคะวันตัง อุปะสัมปะทัง ยาจิต๎วา,',
                 'pali_roman': 'Bhagavantaṃ upasampadaṃ yācitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -21049,7 +21083,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'ภะคะวะโตเยวะ สันติกา เอหิภิกขุอุปะสัมปะทัง ปะฏิละภิต์วา,',
+                'pali': 'ภะคะวะโตเยวะ สันติกา เอหิภิกขุอุปะสัมปะทัง ปะฏิละภิต๎วา,',
                 'pali_roman': 'Bhagavatoyeva santikā ehibhikkhuupasampadaṃ paṭilabhitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -21066,7 +21100,7 @@ CHANTS = [
             {
                 'number': 13,
                 'para_start': True,
-                'pali': 'ตัส์มิญจาปิ โข สะมะเย สังฆะระตะนัง โลเก ปะฐะมัง อุปปันนัง อะโหสิ.',
+                'pali': 'ตัส๎มิญจาปิ โข สะมะเย สังฆะระตะนัง โลเก ปะฐะมัง อุปปันนัง อะโหสิ.',
                 'pali_roman': 'Tasmiñcāpi kho samaye saṅgharatanaṃ loke paṭhamaṃ uppannaṃ ahosi.',
                 'thai': '',
                 'paiboon': '',
@@ -21111,7 +21145,7 @@ CHANTS = [
             {
                 'number': 15,
                 'para_start': True,
-                'pali': 'มะยัง โข เอตะระหิ อิมัง อาสาฬ์หะปุณณะมีกาลัง ตัสสะ ภะคะวะโต ธัมมะจักกัปปะวัตตะนะกาละสัมมะตัง อะริยะสาวะกะสังฆะอุปปัตติกาละสัมมะตัญจะ ระตะนัตตะยะสัมปุระณะกาละสัมมะตัญจะ ปัต์วา,',
+                'pali': 'มะยัง โข เอตะระหิ อิมัง อาสาฬ๎หะปุณณะมีกาลัง ตัสสะ ภะคะวะโต ธัมมะจักกัปปะวัตตะนะกาละสัมมะตัง อะริยะสาวะกะสังฆะอุปปัตติกาละสัมมะตัญจะ ระตะนัตตะยะสัมปุระณะกาละสัมมะตัญจะ ปัต๎วา,',
                 'pali_roman': 'Mayaṃ kho etarahi imaṃ āsāḷhapuṇṇamīkālaṃ tassa bhagavato dhammacakkappavattanakālasammataṃ ariyasāvakasaṅghauppattikālasammatañca ratanattayasampuraṇakālasammatañca patvā,',
                 'thai': '',
                 'paiboon': '',
@@ -21127,7 +21161,7 @@ CHANTS = [
             },
             {
                 'number': 17,
-                'pali': 'อิเม สักกาเร คะเหต์วา,',
+                'pali': 'อิเม สักกาเร คะเหต๎วา,',
                 'pali_roman': 'Ime sakkāre gahetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -21142,7 +21176,7 @@ CHANTS = [
             #   can corroborate it.
             {
                 'number': 18,
-                'pali': 'อัตตะโน กายัง สักการุปะธานัง กะริต์วา,',
+                'pali': 'อัตตะโน กายัง สักการุปะธานัง กะริต๎วา,',
                 'pali_roman': 'Attano kāyaṃ sakkārupadhānaṃ karitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -21302,7 +21336,7 @@ CHANTS = [
             #   still agree.
             {
                 'number': 2,
-                'pali': 'ผะริต์วานะ เมตตัง สะเมตตา ภะทันตา, อะวิกขิตตะจิตตา ปะริตตัง ภะณันตุ.',
+                'pali': 'ผะริต๎วานะ เมตตัง สะเมตตา ภะทันตา, อะวิกขิตตะจิตตา ปะริตตัง ภะณันตุ.',
                 'pali_roman': 'Pharitvāna mettaṃ samettā bhadantā, avikkhittacittā parittaṃ bhaṇantu.',
                 'thai': '',
                 'paiboon': '',
@@ -21330,7 +21364,7 @@ CHANTS = [
             #   magnification.
             {
                 'number': 3,
-                'pali': 'สะมันตา จักกะวาเฬสุ อัต์ราคัจฉันตุ เทวะตา',
+                'pali': 'สะมันตา จักกะวาเฬสุ อัต๎ราคัจฉันตุ เทวะตา',
                 'pali_roman': 'Samantā cakkavāḷesu atrāgacchantu devatā',
                 'thai': '',
                 'paiboon': '',
@@ -21670,7 +21704,7 @@ CHANTS = [
                 'number': 1,
                 'page': 78,
                 'para_start': True,
-                'pali': 'สัมพุทเธ อัฏฐะวีสัญจะ ท์วาทะสัญจะ สะหัสสะเก',
+                'pali': 'สัมพุทเธ อัฏฐะวีสัญจะ ท๎วาทะสัญจะ สะหัสสะเก',
                 'pali_roman': 'Sambuddhe aṭṭhavīsañca dvādasañca sahassake',
                 'thai': '',
                 'paiboon': '',
@@ -21701,7 +21735,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'นะมะการานุภาเวนะ หันต์วา สัพเพ อุปัททะเว',
+                'pali': 'นะมะการานุภาเวนะ หันต๎วา สัพเพ อุปัททะเว',
                 'pali_roman': 'Namakārānubhāvena hantvā sabbe upaddave',
                 'thai': '',
                 'paiboon': '',
@@ -21742,7 +21776,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'นะมะการานุภาเวนะ หันต์วา สัพเพ อุปัททะเว',
+                'pali': 'นะมะการานุภาเวนะ หันต๎วา สัพเพ อุปัททะเว',
                 'pali_roman': 'Namakārānubhāvena hantvā sabbe upaddave',
                 'thai': '',
                 'paiboon': '',
@@ -21796,7 +21830,7 @@ CHANTS = [
             },
             {
                 'number': 14,
-                'pali': 'นะมะการานุภาเวนะ หันต์วา สัพเพ อุปัททะเว',
+                'pali': 'นะมะการานุภาเวนะ หันต๎วา สัพเพ อุปัททะเว',
                 'pali_roman': 'Namakārānubhāvena hantvā sabbe upaddave',
                 'thai': '',
                 'paiboon': '',
@@ -22033,7 +22067,7 @@ CHANTS = [
             #   instances here.
             {
                 'number': 20,
-                'pali': 'ส์วากขาตะธัมมัง วิทิตัง กะโรติ.',
+                'pali': 'ส๎วากขาตะธัมมัง วิทิตัง กะโรติ.',
                 'pali_roman': 'Svākkhātadhammaṃ viditaṃ karoti.',
                 'thai': '',
                 'paiboon': '',
@@ -22128,7 +22162,7 @@ CHANTS = [
             #   is what the app already does everywhere else.
             {
                 'number': 2,
-                'pali': 'นะโม อุตตะมะธัมมัสสะ ส์วากขาตัสเสวะ เตนิธะ',
+                'pali': 'นะโม อุตตะมะธัมมัสสะ ส๎วากขาตัสเสวะ เตนิธะ',
                 'pali_roman': 'Namo uttamadhammassa svākkhātasseva tenidha',
                 'thai': '',
                 'paiboon': '',
@@ -22157,7 +22191,7 @@ CHANTS = [
             {
                 'number': 4,
                 'page': 80,
-                'pali': 'นะโม โอมาต์ยารัทธัสสะ ระตะนัตตะยัสสะ สาธุกัง',
+                'pali': 'นะโม โอมาต๎ยารัทธัสสะ ระตะนัตตะยัสสะ สาธุกัง',
                 'pali_roman': 'Namo omātyāraddhassa ratanattayassa sādhukaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -22260,7 +22294,7 @@ CHANTS = [
             #   single word on the page and worth a look.
             {
                 'number': 2,
-                'pali': 'ภุมมาภุมมา จะ เทวา คุณะคะณะคะหะณัพ์ยาวะฏา สัพพะกาลัง,',
+                'pali': 'ภุมมาภุมมา จะ เทวา คุณะคะณะคะหะณัพ๎ยาวะฏา สัพพะกาลัง,',
                 'pali_roman': 'Bhummābhummā ca devā guṇagaṇagahaṇabyāvaṭā sabbakālaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -22296,7 +22330,7 @@ CHANTS = [
             {
                 'number': 5,
                 'para_start': True,
-                'pali': 'สัพเพสุ จักกะวาเฬสุ ยักขา เทวา จะ พ์รัห์มุโน',
+                'pali': 'สัพเพสุ จักกะวาเฬสุ ยักขา เทวา จะ พ๎รัห๎มุโน',
                 'pali_roman': 'Sabbesu cakkavāḷesu yakkhā devā ca brahmuno',
                 'thai': '',
                 'paiboon': '',
@@ -22312,7 +22346,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'สัพเพ ตัง อะนุโมทิต์วา สะมัคคา สาสะเน ระตา',
+                'pali': 'สัพเพ ตัง อะนุโมทิต๎วา สะมัคคา สาสะเน ระตา',
                 'pali_roman': 'Sabbe taṃ anumoditvā samaggā sāsane ratā',
                 'thai': '',
                 'paiboon': '',
@@ -22403,7 +22437,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 80,
-                'pali': 'ยัญจะ ท์วาทะสะ วัสสานิ จินตะยิงสุ สะเทวะกา',
+                'pali': 'ยัญจะ ท๎วาทะสะ วัสสานิ จินตะยิงสุ สะเทวะกา',
                 'pali_roman': 'Yañca dvādasa vassāni cintayiṃsu sadevakā',
                 'thai': '',
                 'paiboon': '',
@@ -22431,7 +22465,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'กาลัง โกลาหะลัง ชาตัง ยาวะ พ์รัห์มะนิเวสะนา.',
+                'pali': 'กาลัง โกลาหะลัง ชาตัง ยาวะ พ๎รัห๎มะนิเวสะนา.',
                 'pali_roman': 'Kālaṃ kolāhalaṃ jātaṃ yāva brahmanivesanā.',
                 'thai': '',
                 'paiboon': '',
@@ -22447,7 +22481,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'ยัง สุต์วา สัพพะทุกเขหิ มุจจันตาสังขิยา นะรา',
+                'pali': 'ยัง สุต๎วา สัพพะทุกเขหิ มุจจันตาสังขิยา นะรา',
                 'pali_roman': 'Yaṃ sutvā sabbadukkhehi muccantāsaṅkhiyā narā',
                 'thai': '',
                 'paiboon': '',
@@ -22542,7 +22576,7 @@ CHANTS = [
             #   confirming against the book that no stop was missed inside it.
             {
                 'number': 3,
-                'pali': 'อะถะโข อัญญะตะรา เทวะตา อะภิกกันตายะ รัตติยา อะภิกกันตะวัณณา เกวะละกัปปัง เชตะวะนัง โอภาเสต์วา เยนะ ภะคะวา เตนุปะสังกะมิ อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง อัฏฐาสิ.',
+                'pali': 'อะถะโข อัญญะตะรา เทวะตา อะภิกกันตายะ รัตติยา อะภิกกันตะวัณณา เกวะละกัปปัง เชตะวะนัง โอภาเสต๎วา เยนะ ภะคะวา เตนุปะสังกะมิ อุปะสังกะมิต๎วา ภะคะวันตัง อะภิวาเทต๎วา เอกะมันตัง อัฏฐาสิ.',
                 'pali_roman': 'Athakho aññatarā devatā abhikkantāya rattiyā abhikkantavaṇṇā kevalakappaṃ jetavanaṃ obhāsetvā yena bhagavā tenupasaṅkami upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ aṭṭhāsi.',
                 'thai': '',
                 'paiboon': '',
@@ -22582,7 +22616,7 @@ CHANTS = [
             #   the other instance on this sheet.
             {
                 'number': 6,
-                'pali': 'อากังขะมานา โสตถานัง พ์รูหิ มังคะละมุตตะมัง',
+                'pali': 'อากังขะมานา โสตถานัง พ๎รูหิ มังคะละมุตตะมัง',
                 'pali_roman': 'Ākaṅkhamānā sotthānaṃ brūhi maṅgalamuttamaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -22725,7 +22759,7 @@ CHANTS = [
             },
             {
                 'number': 23,
-                'pali': 'ตะโป จะ พ์รัห์มะจะริยัญจะ อะริยะสัจจานะทัสสะนัง',
+                'pali': 'ตะโป จะ พ๎รัห๎มะจะริยัญจะ อะริยะสัจจานะทัสสะนัง',
                 'pali_roman': 'Tapo ca brahmacariyañca ariyasaccānadassanaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -22768,7 +22802,7 @@ CHANTS = [
             },
             {
                 'number': 27,
-                'pali': 'เอตาทิสานิ กัต์วานะ สัพพัตถะมะปะราชิตา',
+                'pali': 'เอตาทิสานิ กัต๎วานะ สัพพัตถะมะปะราชิตา',
                 'pali_roman': 'Etādisāni katvāna sabbatthamaparājitā',
                 'thai': '',
                 'paiboon': '',
@@ -22910,7 +22944,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'อาวัชชิต์วา เวสาลิยา ตีสุ ปาการันตะเรสุ,',
+                'pali': 'อาวัชชิต๎วา เวสาลิยา ตีสุ ปาการันตะเรสุ,',
                 'pali_roman': 'Āvajjitvā vesāliyā tīsu pākārantaresu,',
                 'thai': '',
                 'paiboon': '',
@@ -22926,7 +22960,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'อายัส์มา อานันทัตเถโร วิยะ,',
+                'pali': 'อายัส๎มา อานันทัตเถโร วิยะ,',
                 'pali_roman': 'Āyasmā ānandatthero viya,',
                 'thai': '',
                 'paiboon': '',
@@ -22934,7 +22968,7 @@ CHANTS = [
             },
             {
                 'number': 12,
-                'pali': 'การุญญะจิตตัง อุปัฏฐะเปต์วา.',
+                'pali': 'การุญญะจิตตัง อุปัฏฐะเปต๎วา.',
                 'pali_roman': 'Kāruññacittaṃ upaṭṭhapetvā.',
                 'thai': '',
                 'paiboon': '',
@@ -23065,7 +23099,7 @@ CHANTS = [
             #   question about which mark this printer cuts.
             {
                 'number': 5,
-                'pali': 'ตัส์มา หิ ภูตา นิสาเมถะ สัพเพ',
+                'pali': 'ตัส๎มา หิ ภูตา นิสาเมถะ สัพเพ',
                 'pali_roman': 'Tasmā hi bhūtā nisāmetha sabbe',
                 'thai': '',
                 'paiboon': '',
@@ -23108,7 +23142,7 @@ CHANTS = [
             {
                 'number': 8,
                 'page': 83,
-                'pali': 'ตัส์มา หิ เน รักขะถะ อัปปะมัตตา.',
+                'pali': 'ตัส๎มา หิ เน รักขะถะ อัปปะมัตตา.',
                 'pali_roman': 'Tasmā hi ne rakkhatha appamattā.',
                 'thai': '',
                 'paiboon': '',
@@ -23189,7 +23223,7 @@ CHANTS = [
             #   the app gives สัก์ยะปุตโต on page 66.
             {
                 'number': 15,
-                'pali': 'ยะทัชฌะคา สัก์ยะมุนี สะมาหิโต',
+                'pali': 'ยะทัชฌะคา สัก๎ยะมุนี สะมาหิโต',
                 'pali_roman': 'Yadajjhagā sakyamunī samāhito',
                 'thai': '',
                 'paiboon': '',
@@ -23331,7 +23365,7 @@ CHANTS = [
             {
                 'number': 30,
                 'para_start': True,
-                'pali': 'เย สุปปะยุตตา มะนะสา ทัฬ์เหนะ',
+                'pali': 'เย สุปปะยุตตา มะนะสา ทัฬ๎เหนะ',
                 'pali_roman': 'Ye suppayuttā manasā daḷhena',
                 'thai': '',
                 'paiboon': '',
@@ -23537,7 +23571,7 @@ CHANTS = [
             #   it.
             {
                 'number': 49,
-                'pali': 'ต์ยัสสุ ธัมมา ชะหิตา ภะวันติ',
+                'pali': 'ต๎ยัสสุ ธัมมา ชะหิตา ภะวันติ',
                 'pali_roman': 'Tyassu dhammā jahitā bhavanti',
                 'thai': '',
                 'paiboon': '',
@@ -23668,7 +23702,7 @@ CHANTS = [
             },
             {
                 'number': 63,
-                'pali': 'คิมหานะมาเส ปะฐะมัส์มิง คิมเห',
+                'pali': 'คิมหานะมาเส ปะฐะมัส๎มิง คิมเห',
                 'pali_roman': 'Gimhānamāse paṭhamasmiṃ gimhe',
                 'thai': '',
                 'paiboon': '',
@@ -23750,7 +23784,7 @@ CHANTS = [
             },
             {
                 'number': 73,
-                'pali': 'วิรัตตะจิตตายะติเก ภะวัส์มิง',
+                'pali': 'วิรัตตะจิตตายะติเก ภะวัส๎มิง',
                 'pali_roman': 'Virattacittāyatike bhavasmiṃ',
                 'thai': '',
                 'paiboon': '',
@@ -24086,7 +24120,7 @@ CHANTS = [
             #   this chant, romanised byārosanā.
             {
                 'number': 4,
-                'pali': 'สันตินท์ริโย จะ นิปะโก จะ อัปปะคัพโภ กุเลสุ อะนะนุคิทโธ,',
+                'pali': 'สันตินท๎ริโย จะ นิปะโก จะ อัปปะคัพโภ กุเลสุ อะนะนุคิทโธ,',
                 'pali_roman': 'Santindriyo ca nipako ca appagabbho kulesu ananugiddho,',
                 'thai': '',
                 'paiboon': '',
@@ -24160,7 +24194,7 @@ CHANTS = [
             #   the vowel differences already recorded on pages 61, 62 and 85.
             {
                 'number': 12,
-                'pali': 'พ์ยาโรสะนา ปะฏีฆะสัญญา นาญญะมัญญัสสะ ทุกขะมิจเฉยยะ,',
+                'pali': 'พ๎ยาโรสะนา ปะฏีฆะสัญญา นาญญะมัญญัสสะ ทุกขะมิจเฉยยะ,',
                 'pali_roman': 'Byārosanā paṭīghasaññā nāññamaññassa dukkhamiccheyya,',
                 'thai': '',
                 'paiboon': '',
@@ -24198,7 +24232,7 @@ CHANTS = [
             #   because check_render walks strings in printed order.
             {
                 'number': 15,
-                'pali': 'เมตตัญจะ สัพพะโลกัส์มิง มานะสัมภาวะเย อะปะริมาณัง,',
+                'pali': 'เมตตัญจะ สัพพะโลกัส๎มิง มานะสัมภาวะเย อะปะริมาณัง,',
                 'pali_roman': 'Mettañca sabbalokasmiṃ mānasambhāvaye aparimāṇaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -24225,7 +24259,7 @@ CHANTS = [
             #   both dropped — the same treatment as สะพ์รัห์มะเก on page 66.
             {
                 'number': 18,
-                'pali': 'เอตัง สะติง อะธิฏเฐยยะ พ์รัห์มะเมตัง วิหารัง อิธะมาหุ,',
+                'pali': 'เอตัง สะติง อะธิฏเฐยยะ พ๎รัห๎มะเมตัง วิหารัง อิธะมาหุ,',
                 'pali_roman': 'Etaṃ satiṃ adhiṭṭheyya brahmametaṃ vihāraṃ idhamāhu,',
                 'thai': '',
                 'paiboon': '',
@@ -24371,7 +24405,7 @@ CHANTS = [
             #   bhadrāni, so both agree once the mark is read as a cluster.
             {
                 'number': 2,
-                'pali': 'ฉัพ์ยาปุตเตหิ เม เมตตัง เมตตัง กัณหาโคตะมะเกหิ จะ',
+                'pali': 'ฉัพ๎ยาปุตเตหิ เม เมตตัง เมตตัง กัณหาโคตะมะเกหิ จะ',
                 'pali_roman': 'Chabyāputtehi me mettaṃ mettaṃ kaṇhāgotamakehi ca',
                 'thai': '',
                 'paiboon': '',
@@ -24419,7 +24453,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'สัพเพ ภัท์รานิ ปัสสันตุ มา กิญจิ ปาปะมาคะมา.',
+                'pali': 'สัพเพ ภัท๎รานิ ปัสสันตุ มา กิญจิ ปาปะมาคะมา.',
                 'pali_roman': 'Sabbe bhadrāni passantu mā kiñci pāpamāgamā.',
                 'thai': '',
                 'paiboon': '',
@@ -24635,7 +24669,7 @@ CHANTS = [
             #   a cluster.
             {
                 'number': 5,
-                'pali': 'สัลเลนะ วิทโธ พ์ยะถิโตปิ สันโต,',
+                'pali': 'สัลเลนะ วิทโธ พ๎ยะถิโตปิ สันโต,',
                 'pali_roman': 'Sallena viddho byathitopi santo,',
                 'thai': '',
                 'paiboon': '',
@@ -24733,7 +24767,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'พ์รัห์มะมันตันติ อักขาตัง ปะริตตันตัมภะณามะ เห.',
+                'pali': 'พ๎รัห๎มะมันตันติ อักขาตัง ปะริตตันตัมภะณามะ เห.',
                 'pali_roman': 'Brahmamantanti akkhātaṃ parittantambhaṇāma he.',
                 'thai': '',
                 'paiboon': '',
@@ -24822,7 +24856,7 @@ CHANTS = [
             #   dropped — the same treatment as page 87's พ์รัห์มะเมตัง.
             {
                 'number': 5,
-                'pali': 'เย พ์ราห์มะณา เวทะคุ สัพพะธัมเม',
+                'pali': 'เย พ๎ราห๎มะณา เวทะคุ สัพพะธัมเม',
                 'pali_roman': 'Ye brāhmaṇā vedagu sabbadhamme',
                 'thai': '',
                 'paiboon': '',
@@ -24855,7 +24889,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'อิมัง โส ปะริตตัง กัต์วา โมโร จะระติ เอสะนา.',
+                'pali': 'อิมัง โส ปะริตตัง กัต๎วา โมโร จะระติ เอสะนา.',
                 'pali_roman': 'Imaṃ so parittaṃ katvā moro carati esanā.',
                 'thai': '',
                 'paiboon': '',
@@ -24910,7 +24944,7 @@ CHANTS = [
             },
             {
                 'number': 14,
-                'pali': 'เย พ์ราห์มะณา เวทะคุ สัพพะธัมเม',
+                'pali': 'เย พ๎ราห๎มะณา เวทะคุ สัพพะธัมเม',
                 'pali_roman': 'Ye brāhmaṇā vedagu sabbadhamme',
                 'thai': '',
                 'paiboon': '',
@@ -24948,7 +24982,7 @@ CHANTS = [
             },
             {
                 'number': 18,
-                'pali': 'อิมัง โส ปะริตตัง กัต์วา โมโร วาสะมะกัปปะยีติ.',
+                'pali': 'อิมัง โส ปะริตตัง กัต๎วา โมโร วาสะมะกัปปะยีติ.',
                 'pali_roman': 'Imaṃ so parittaṃ katvā moro vāsamakappayīti.',
                 'thai': '',
                 'paiboon': '',
@@ -25083,7 +25117,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อาวัชชิต์วา ธัมมะพะลัง สะริต์วา ปุพพะเก ชิเน',
+                'pali': 'อาวัชชิต๎วา ธัมมะพะลัง สะริต๎วา ปุพพะเก ชิเน',
                 'pali_roman': 'Āvajjitvā dhammabalaṃ saritvā pubbake jine',
                 'thai': '',
                 'paiboon': '',
@@ -25141,7 +25175,7 @@ CHANTS = [
             #   RULE: bare letter photographing as พ + canon has ḷ => write ฬ.
             {
                 'number': 8,
-                'pali': 'วัชเชสิ โสฬะสะ กะรีสานิ อุทะกัง ปัต์วา ยะถา สิขี',
+                'pali': 'วัชเชสิ โสฬะสะ กะรีสานิ อุทะกัง ปัต๎วา ยะถา สิขี',
                 'pali_roman': 'Vajjesi soḷasa karīsāni udakaṃ patvā yathā sikhī',
                 'thai': '',
                 'paiboon': '',
@@ -25305,7 +25339,7 @@ CHANTS = [
             #   decision as pages 82 and 83.
             {
                 'number': 3,
-                'pali': 'ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ.',
+                'pali': 'ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ.',
                 'pali_roman': 'Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti.',
                 'thai': '',
                 'paiboon': '',
@@ -25343,7 +25377,7 @@ CHANTS = [
                 'number': 6,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'ภูตะปุพพัง ภิกขะเว เทวาสุระสังคาโม สะมุปัพ์ยุพโห อะโหสิ,',
+                'pali': 'ภูตะปุพพัง ภิกขะเว เทวาสุระสังคาโม สะมุปัพ๎ยุพโห อะโหสิ,',
                 'pali_roman': 'Bhūtapubbaṃ bhikkhave devāsurasaṅgāmo samupabyupho ahosi,',
                 'thai': '',
                 'paiboon': '',
@@ -25367,7 +25401,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'มะเมวะ ตัส์มิง สะมะเย ธะชัคคัง อุลโลเกยยาถะ,',
+                'pali': 'มะเมวะ ตัส๎มิง สะมะเย ธะชัคคัง อุลโลเกยยาถะ,',
                 'pali_roman': 'Mameva tasmiṃ samaye dhajaggaṃ ullokeyyātha,',
                 'thai': '',
                 'paiboon': '',
@@ -25655,7 +25689,7 @@ CHANTS = [
             },
             {
                 'number': 37,
-                'pali': 'ภิรุ ฉัมภี อุต์ราสี ปะลายีติ.',
+                'pali': 'ภิรุ ฉัมภี อุต๎ราสี ปะลายีติ.',
                 'pali_roman': 'Bhiru chambhī utrāsī palāyīti.',
                 'thai': '',
                 'paiboon': '',
@@ -25687,7 +25721,7 @@ CHANTS = [
             },
             {
                 'number': 41,
-                'pali': 'มะเมวะ ตัส์มิง สะมะเย อะนุสสะเรยยาถะ.',
+                'pali': 'มะเมวะ ตัส๎มิง สะมะเย อะนุสสะเรยยาถะ.',
                 'pali_roman': 'Mameva tasmiṃ samaye anussareyyātha.',
                 'thai': '',
                 'paiboon': '',
@@ -25777,7 +25811,7 @@ CHANTS = [
             #   once.
             {
                 'number': 50,
-                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo,',
                 'thai': '',
                 'paiboon': '',
@@ -25966,7 +26000,7 @@ CHANTS = [
             #   rather than smoothing it.
             {
                 'number': 70,
-                'pali': 'วีตะราโค วีตะโทโส วีตะโมโห อะภิรุ อัจฉัมภี อะนุต์ราสี อะปะลายีติ.',
+                'pali': 'วีตะราโค วีตะโทโส วีตะโมโห อะภิรุ อัจฉัมภี อะนุต๎ราสี อะปะลายีติ.',
                 'pali_roman': 'Vītarāgo vītadoso vītamoho abhiru acchambhī anutrāsī apalāyīti.',
                 'thai': '',
                 'paiboon': '',
@@ -25990,7 +26024,7 @@ CHANTS = [
             #   the next line — and it would be invisible as a fault once in.
             {
                 'number': 72,
-                'pali': 'อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
+                'pali': 'อิทัง วัต๎วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
                 'pali_roman': 'Idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.',
                 'thai': '',
                 'paiboon': '',
@@ -26218,7 +26252,7 @@ CHANTS = [
             #   cluster mark. Read at 2.2x.
             {
                 'number': 3,
-                'pali': 'เวสสะภุสสะ นะมัตถุ น์หาตะกัสสะ ตะปัสสิโน',
+                'pali': 'เวสสะภุสสะ นะมัตถุ น๎หาตะกัสสะ ตะปัสสิโน',
                 'pali_roman': 'Vessabhussa namatthu nhātakassa tapassino',
                 'thai': '',
                 'paiboon': '',
@@ -26240,7 +26274,7 @@ CHANTS = [
             #   continuation, not to write it.
             {
                 'number': 5,
-                'pali': 'โกนาคะมะนัสสะ นะมัตถุ พ์ราห์มะณัสสะ วุสีมะโต',
+                'pali': 'โกนาคะมะนัสสะ นะมัตถุ พ๎ราห๎มะณัสสะ วุสีมะโต',
                 'pali_roman': 'Konāgamanassa namatthu brāhmaṇassa vusīmato',
                 'thai': '',
                 'paiboon': '',
@@ -26264,7 +26298,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'อังคีระสัสสะ นะมัตถุ สัก์ยะปุตตัสสะ สิรีมะโต',
+                'pali': 'อังคีระสัสสะ นะมัตถุ สัก๎ยะปุตตัสสะ สิรีมะโต',
                 'pali_roman': 'Aṅgīrasassa namatthu sakyaputtassa sirīmato',
                 'thai': '',
                 'paiboon': '',
@@ -26445,7 +26479,7 @@ CHANTS = [
             #   rather than stopping. Read at 1.25x. Reproduced as printed.
             {
                 'number': 27,
-                'pali': 'กัสสะโป สิริสัมปันโน โคตะโม สัก์ยะปุงคะโว,',
+                'pali': 'กัสสะโป สิริสัมปันโน โคตะโม สัก๎ยะปุงคะโว,',
                 'pali_roman': 'Kassapo sirisampanno gotamo sakyapuṅgavo,',
                 'thai': '',
                 'paiboon': '',
@@ -26533,7 +26567,7 @@ CHANTS = [
             },
             {
                 'number': 33,
-                'pali': 'พ์รัห์มะจักกัง ปะวัตเตนติ โลเก อัปปะฏิวัตติยัง.',
+                'pali': 'พ๎รัห๎มะจักกัง ปะวัตเตนติ โลเก อัปปะฏิวัตติยัง.',
                 'pali_roman': 'Brahmacakkaṃ pavattenti loke appaṭivattiyaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -26557,7 +26591,7 @@ CHANTS = [
             #   of this block on its own.
             {
                 'number': 35,
-                'pali': 'ท์วัตติงสะลักขะณูเปตาสีต์ยานุพ์ยัญชะนาธะรา',
+                'pali': 'ท๎วัตติงสะลักขะณูเปตาสีต๎ยานุพ๎ยัญชะนาธะรา',
                 'pali_roman': 'Dvattiṃsalakkhaṇūpetāsītyānubyañjanādharā',
                 'thai': '',
                 'paiboon': '',
@@ -26569,7 +26603,7 @@ CHANTS = [
             #   is there.
             {
                 'number': 36,
-                'pali': 'พ์ยามัปปะภายะ สุปปะภา สัพเพ เต มุนิกุญชะรา',
+                'pali': 'พ๎ยามัปปะภายะ สุปปะภา สัพเพ เต มุนิกุญชะรา',
                 'pali_roman': 'Byāmappabhāya suppabhā sabbe te munikuñjarā',
                 'thai': '',
                 'paiboon': '',
@@ -26657,7 +26691,7 @@ CHANTS = [
             },
             {
                 'number': 47,
-                'pali': 'เตหิ ต์วัง รักขิโต สันโต มุตโต สัพพะภะเยนะ จะ.',
+                'pali': 'เตหิ ต๎วัง รักขิโต สันโต มุตโต สัพพะภะเยนะ จะ.',
                 'pali_roman': 'Tehi tvaṃ rakkhito santo mutto sabbabhayena ca.',
                 'thai': '',
                 'paiboon': '',
@@ -26702,7 +26736,7 @@ CHANTS = [
             #   order.
             {
                 'number': 51,
-                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค๎เยนะ สุเขนะ จะ',
                 'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
                 'thai': '',
                 'paiboon': '',
@@ -26719,7 +26753,7 @@ CHANTS = [
             #   someone comparing them would think the rows had been swapped.
             {
                 'number': 52,
-                'pali': 'ปุรัตถิมัส์มิง ทิสาภาเค สันติ ภูตา มะหิทธิกา',
+                'pali': 'ปุรัตถิมัส๎มิง ทิสาภาเค สันติ ภูตา มะหิทธิกา',
                 'pali_roman': 'Puratthimasmiṃ disābhāge santi bhūtā mahiddhikā',
                 'thai': '',
                 'paiboon': '',
@@ -26727,7 +26761,7 @@ CHANTS = [
             },
             {
                 'number': 53,
-                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค๎เยนะ สุเขนะ จะ',
                 'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
                 'thai': '',
                 'paiboon': '',
@@ -26735,7 +26769,7 @@ CHANTS = [
             },
             {
                 'number': 54,
-                'pali': 'ทักขิณัส์มิง ทิสาภาเค สันติ เทวา มะหิทธิกา',
+                'pali': 'ทักขิณัส๎มิง ทิสาภาเค สันติ เทวา มะหิทธิกา',
                 'pali_roman': 'Dakkhiṇasmiṃ disābhāge santi devā mahiddhikā',
                 'thai': '',
                 'paiboon': '',
@@ -26743,7 +26777,7 @@ CHANTS = [
             },
             {
                 'number': 55,
-                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค๎เยนะ สุเขนะ จะ',
                 'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
                 'thai': '',
                 'paiboon': '',
@@ -26755,7 +26789,7 @@ CHANTS = [
             #   quarter. Page 95 numbers from 57.
             {
                 'number': 56,
-                'pali': 'ปัจฉิมัส์มิง ทิสาภาเค สันติ นาคา มะหิทธิกา',
+                'pali': 'ปัจฉิมัส๎มิง ทิสาภาเค สันติ นาคา มะหิทธิกา',
                 'pali_roman': 'Pacchimasmiṃ disābhāge santi nāgā mahiddhikā',
                 'thai': '',
                 'paiboon': '',
@@ -26769,7 +26803,7 @@ CHANTS = [
             {
                 'number': 57,
                 'page': 95,
-                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค๎เยนะ สุเขนะ จะ',
                 'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
                 'thai': '',
                 'paiboon': '',
@@ -26777,7 +26811,7 @@ CHANTS = [
             },
             {
                 'number': 58,
-                'pali': 'อุตตะรัส์มิง ทิสาภาเค สันติ ยักขา มะหิทธิกา',
+                'pali': 'อุตตะรัส๎มิง ทิสาภาเค สันติ ยักขา มะหิทธิกา',
                 'pali_roman': 'Uttarasmiṃ disābhāge santi yakkhā mahiddhikā',
                 'thai': '',
                 'paiboon': '',
@@ -26785,7 +26819,7 @@ CHANTS = [
             },
             {
                 'number': 59,
-                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค๎เยนะ สุเขนะ จะ',
                 'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
                 'thai': '',
                 'paiboon': '',
@@ -26831,7 +26865,7 @@ CHANTS = [
             #   marks the end of a section. Reproduced as printed on all four.
             {
                 'number': 63,
-                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ.',
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค๎เยนะ สุเขนะ จะ.',
                 'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca.',
                 'thai': '',
                 'paiboon': '',
@@ -26847,7 +26881,7 @@ CHANTS = [
             },
             {
                 'number': 65,
-                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค์เยนะ สุเขนะ จะ',
+                'pali': 'เตปิ ตุมเห อะนุรักขันตุ อาโรค๎เยนะ สุเขนะ จะ',
                 'pali_roman': 'Tepi tumhe anurakkhantu ārogyena sukhena ca',
                 'thai': '',
                 'paiboon': '',
@@ -26927,7 +26961,7 @@ CHANTS = [
             },
             {
                 'number': 73,
-                'pali': 'ระตะนัง พุทธะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.',
+                'pali': 'ระตะนัง พุทธะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.',
                 'pali_roman': 'Ratanaṃ buddhasamaṃ natthi tasmā sotthī bhavantu te.',
                 'thai': '',
                 'paiboon': '',
@@ -26943,7 +26977,7 @@ CHANTS = [
             },
             {
                 'number': 75,
-                'pali': 'ระตะนัง ธัมมะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.',
+                'pali': 'ระตะนัง ธัมมะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.',
                 'pali_roman': 'Ratanaṃ dhammasamaṃ natthi tasmā sotthī bhavantu te.',
                 'thai': '',
                 'paiboon': '',
@@ -26959,7 +26993,7 @@ CHANTS = [
             },
             {
                 'number': 77,
-                'pali': 'ระตะนัง สังฆะสะมัง นัตถิ ตัส์มา โสตถี ภะวันตุ เต.',
+                'pali': 'ระตะนัง สังฆะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.',
                 'pali_roman': 'Ratanaṃ saṅghasamaṃ natthi tasmā sotthī bhavantu te.',
                 'thai': '',
                 'paiboon': '',
@@ -26968,7 +27002,7 @@ CHANTS = [
             {
                 'number': 78,
                 'para_start': True,
-                'pali': 'สักกัต์วา พุทธะระตะนัง โอสะถัง อุตตะมัง วะรัง',
+                'pali': 'สักกัต๎วา พุทธะระตะนัง โอสะถัง อุตตะมัง วะรัง',
                 'pali_roman': 'Sakkatvā buddharatanaṃ osathaṃ uttamaṃ varaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -26992,7 +27026,7 @@ CHANTS = [
             },
             {
                 'number': 81,
-                'pali': 'สักกัต์วา ธัมมะระตะนัง โอสะถัง อุตตะมัง วะรัง',
+                'pali': 'สักกัต๎วา ธัมมะระตะนัง โอสะถัง อุตตะมัง วะรัง',
                 'pali_roman': 'Sakkatvā dhammaratanaṃ osathaṃ uttamaṃ varaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -27032,7 +27066,7 @@ CHANTS = [
             {
                 'number': 84,
                 'page': 96,
-                'pali': 'สักกัต์วา สังฆะระตะนัง โอสะถัง อุตตะมัง วะรัง',
+                'pali': 'สักกัต๎วา สังฆะระตะนัง โอสะถัง อุตตะมัง วะรัง',
                 'pali_roman': 'Sakkatvā saṅgharatanaṃ osathaṃ uttamaṃ varaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -30140,7 +30174,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'พุชฌิต์วา เยปิเม สัตตา ติภะวามุตตะกุตตะมา',
+                'pali': 'พุชฌิต๎วา เยปิเม สัตตา ติภะวามุตตะกุตตะมา',
                 'pali_roman': 'Bujjhitvā yepime sattā tibhavāmuttakuttamā',
                 'thai': '',
                 'paiboon': '',
@@ -30152,7 +30186,7 @@ CHANTS = [
             #   mark is read as a cluster.
             {
                 'number': 4,
-                'pali': 'อะชาติง อะชะราพ์ยาธิง อะมะตัง นิพภะยัง คะตา.',
+                'pali': 'อะชาติง อะชะราพ๎ยาธิง อะมะตัง นิพภะยัง คะตา.',
                 'pali_roman': 'Ajātiṃ ajarābyādhiṃ amataṃ nibbhayaṃ gatā.',
                 'thai': '',
                 'paiboon': '',
@@ -30276,7 +30310,7 @@ CHANTS = [
             {
                 'number': 7,
                 'para_start': True,
-                'pali': 'เอกัส์มิง สะมะเย นาโถ โมคคัลลานัญจะ กัสสะปัง',
+                'pali': 'เอกัส๎มิง สะมะเย นาโถ โมคคัลลานัญจะ กัสสะปัง',
                 'pali_roman': 'Ekasmiṃ samaye nātho moggallānañca kassapaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -30284,7 +30318,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'คิลาเน ทุกขิเต ทิส์วา โพชฌังเค สัตตะ เทสะยิ.',
+                'pali': 'คิลาเน ทุกขิเต ทิส๎วา โพชฌังเค สัตตะ เทสะยิ.',
                 'pali_roman': 'Gilāne dukkhite disvā bojjhaṅge satta desayi.',
                 'thai': '',
                 'paiboon': '',
@@ -30292,7 +30326,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'เต จะ ตัง อะภินันทิต์วา โรคา มุจจิงสุ ตังขะเณ',
+                'pali': 'เต จะ ตัง อะภินันทิต๎วา โรคา มุจจิงสุ ตังขะเณ',
                 'pali_roman': 'Te ca taṃ abhinanditvā rogā mucciṃsu taṅkhaṇe',
                 'thai': '',
                 'paiboon': '',
@@ -30326,7 +30360,7 @@ CHANTS = [
             },
             {
                 'number': 12,
-                'pali': 'จุนทัตเถเรนะ ตัญเญวะ ภะณาเปต์วานะ สาทะรัง.',
+                'pali': 'จุนทัตเถเรนะ ตัญเญวะ ภะณาเปต๎วานะ สาทะรัง.',
                 'pali_roman': 'Cundattherena taññeva bhaṇāpetvāna sādaraṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -30334,7 +30368,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'สัมโมทิต์วา จะ อาพาธา ตัมหา วุฏฐาสิ ฐานะโส',
+                'pali': 'สัมโมทิต๎วา จะ อาพาธา ตัมหา วุฏฐาสิ ฐานะโส',
                 'pali_roman': 'Sammoditvā ca ābādhā tamhā vuṭṭhāsi ṭhānaso',
                 'thai': '',
                 'paiboon': '',
@@ -31241,7 +31275,7 @@ CHANTS = [
             {
                 'number': 2,
                 'page': 99,
-                'pali': 'มาระเสนา อะภิกกันตา สะมันตา ท์วาทะสะโยชะนา',
+                'pali': 'มาระเสนา อะภิกกันตา สะมันตา ท๎วาทะสะโยชะนา',
                 'pali_roman': 'Mārasenā abhikkantā samantā dvādasayojanā',
                 'thai': '',
                 'paiboon': '',
@@ -31250,7 +31284,7 @@ CHANTS = [
             {
                 'number': 3,
                 'page': 99,
-                'pali': 'ขันติเมตตาอะธิฏฐานา วิทธังเสต์วานะ จักขุมา',
+                'pali': 'ขันติเมตตาอะธิฏฐานา วิทธังเสต๎วานะ จักขุมา',
                 'pali_roman': 'Khantimettā-adhiṭṭhānā vidhaṃsetvāna cakkhumā',
                 'thai': '',
                 'paiboon': '',
@@ -31281,7 +31315,7 @@ CHANTS = [
             {
                 'number': 6,
                 'page': 99,
-                'pali': 'พุทธะกิจจัง วิโสเธต์วา ปะริตตันตัมภะณามะ เห ฯ',
+                'pali': 'พุทธะกิจจัง วิโสเธต๎วา ปะริตตันตัมภะณามะ เห ฯ',
                 'pali_roman': 'Buddhakiccaṃ visodhetvā parittantambhaṇāma he.',
                 'thai': '',
                 'paiboon': '',
@@ -31331,7 +31365,7 @@ CHANTS = [
             {
                 'number': 2,
                 'page': 99,
-                'pali': 'ปูเรต์วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง',
+                'pali': 'ปูเรต๎วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง',
                 'pali_roman': 'Pūretvā pāramī sabbā patto sambodhimuttamaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -31361,7 +31395,7 @@ CHANTS = [
                 'number': 4,
                 'page': 99,
                 'para_start': True,
-                'pali': 'ชะยันโต โพธิยา มูเล สัก์ยานัง นันทิวัฑฒะโน',
+                'pali': 'ชะยันโต โพธิยา มูเล สัก๎ยานัง นันทิวัฑฒะโน',
                 'pali_roman': 'Jayanto bodhiyā mūle sakyānaṃ nandivaḍḍhano',
                 'thai': '',
                 'paiboon': '',
@@ -31370,7 +31404,7 @@ CHANTS = [
             {
                 'number': 5,
                 'page': 99,
-                'pali': 'เอวัง ต์วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล.',
+                'pali': 'เอวัง ต๎วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล.',
                 'pali_roman': 'Evaṃ tvaṃ vijayo hohi jayassu jayamaṅgale.',
                 'thai': '',
                 'paiboon': '',
@@ -31406,7 +31440,7 @@ CHANTS = [
             {
                 'number': 9,
                 'page': 99,
-                'pali': 'สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ์รัห์มะจาริสุ.',
+                'pali': 'สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ๎รัห๎มะจาริสุ.',
                 'pali_roman': 'Sukhaṇo sumuhutto ca suyiṭṭhaṃ brahmacārisu.',
                 'thai': '',
                 'paiboon': '',
@@ -31433,7 +31467,7 @@ CHANTS = [
             {
                 'number': 12,
                 'page': 99,
-                'pali': 'ปะทักขิณานิ กัต์วานะ ละภันตัตเถ ปะทักขิเณ.',
+                'pali': 'ปะทักขิณานิ กัต๎วานะ ละภันตัตเถ ปะทักขิเณ.',
                 'pali_roman': 'Padakkhiṇāni katvāna labhantatthe padakkhiṇe.',
                 'thai': '',
                 'paiboon': '',
@@ -31603,7 +31637,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'อายัส์มะโต (อิตถันนามัสสะ) ทะเทยยะ,',
+                'pali': 'อายัส๎มะโต (อิตถันนามัสสะ) ทะเทยยะ,',
                 'pali_roman': 'Āyasmato (itthannāmassa) dadeyya,',
                 'thai': '',
                 'paiboon': '',
@@ -31645,7 +31679,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'สังโฆ อิมัง กะฐินะทุสสัง อายัส์มะโต (อิตถันนามัสสะ) เทติ,',
+                'pali': 'สังโฆ อิมัง กะฐินะทุสสัง อายัส๎มะโต (อิตถันนามัสสะ) เทติ,',
                 'pali_roman': 'Saṅgho imaṃ kaṭhinadussaṃ āyasmato (itthannāmassa) deti,',
                 'thai': '',
                 'paiboon': '',
@@ -31661,7 +31695,7 @@ CHANTS = [
             },
             {
                 'number': 15,
-                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali': 'ยัสสายัส๎มะโต ขะมะติ,',
                 'pali_roman': 'Yassāyasmato khamati,',
                 'thai': '',
                 'paiboon': '',
@@ -31682,7 +31716,7 @@ CHANTS = [
             #   four.
             {
                 'number': 17,
-                'pali': 'อายัส์มะโต (อิตถันนามัสสะ.) ทานัง,',
+                'pali': 'อายัส๎มะโต (อิตถันนามัสสะ.) ทานัง,',
                 'pali_roman': 'Āyasmato (itthannāmassa.) dānaṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -31698,7 +31732,7 @@ CHANTS = [
             },
             {
                 'number': 19,
-                'pali': 'โส ตุณ์หัสสะ,',
+                'pali': 'โส ตุณ๎หัสสะ,',
                 'pali_roman': 'So tuṇhassa,',
                 'thai': '',
                 'paiboon': '',
@@ -31740,7 +31774,7 @@ CHANTS = [
             },
             {
                 'number': 24,
-                'pali': 'อายัส์มะโต (อิตถันนามัสสะ) กะฐินัง อัตถะริตุง,',
+                'pali': 'อายัส๎มะโต (อิตถันนามัสสะ) กะฐินัง อัตถะริตุง,',
                 'pali_roman': 'Āyasmato (itthannāmassa) kaṭhinaṃ attharituṃ,',
                 'thai': '',
                 'paiboon': '',
@@ -31756,7 +31790,7 @@ CHANTS = [
             },
             {
                 'number': 26,
-                'pali': 'ตัส์มา ตุณ์หี,',
+                'pali': 'ตัส๎มา ตุณ๎หี,',
                 'pali_roman': 'Tasmā tuṇhī,',
                 'thai': '',
                 'paiboon': '',
@@ -32284,7 +32318,7 @@ CHANTS = [
             {
                 'number': 7,
                 'page': 100,
-                'pali': 'วิสุทธัง อุตตะมัง เสฏฐัง โลกัส์มิง ระตะนัตตะยัง',
+                'pali': 'วิสุทธัง อุตตะมัง เสฏฐัง โลกัส๎มิง ระตะนัตตะยัง',
                 'pali_roman': 'Visuddhaṃ uttamaṃ seṭṭhaṃ lokasmiṃ ratanattayaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -32311,7 +32345,7 @@ CHANTS = [
             {
                 'number': 10,
                 'page': 100,
-                'pali': 'วิสุทธิ สัพพะเก์ลเสหิ โหติ ทุกเขหิ นิพพุติ.',
+                'pali': 'วิสุทธิ สัพพะเก๎ลเสหิ โหติ ทุกเขหิ นิพพุติ.',
                 'pali_roman': 'Visuddhi sabbaklesehi hoti dukkhehi nibbuti.',
                 'thai': '',
                 'paiboon': '',
@@ -32361,7 +32395,7 @@ CHANTS = [
             {
                 'number': 15,
                 'page': 100,
-                'pali': 'มา กะทาจิ สัมผุสิงสุ รัฏฐัง ส์ยามานะเมวิทัง',
+                'pali': 'มา กะทาจิ สัมผุสิงสุ รัฏฐัง ส๎ยามานะเมวิทัง',
                 'pali_roman': 'Mā kadāci samphusiṃsu raṭṭhaṃ syāmānamevidaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -32388,7 +32422,7 @@ CHANTS = [
             {
                 'number': 18,
                 'page': 100,
-                'pali': 'ภะวันตุ สัมปะวัตตันตุ ส์ยามานัง รัฏฐะปาลินัง.',
+                'pali': 'ภะวันตุ สัมปะวัตตันตุ ส๎ยามานัง รัฏฐะปาลินัง.',
                 'pali_roman': 'Bhavantu sampavattantu syāmānaṃ raṭṭhapālinaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -32397,7 +32431,7 @@ CHANTS = [
             {
                 'number': 19,
                 'page': 100,
-                'pali': 'เต จะ รัฏฐัญจะ รักขันตุ ส์ยามะรัฏฐิกะเทวะตา',
+                'pali': 'เต จะ รัฏฐัญจะ รักขันตุ ส๎ยามะรัฏฐิกะเทวะตา',
                 'pali_roman': 'Te ca raṭṭhañca rakkhantu syāmaraṭṭhikadevatā',
                 'thai': '',
                 'paiboon': '',
@@ -32406,7 +32440,7 @@ CHANTS = [
             {
                 'number': 20,
                 'page': 100,
-                'pali': 'ส์ยามานัง รัฏฐะปาลีหิ ธัมมามิเสหิ ปูชิตา.',
+                'pali': 'ส๎ยามานัง รัฏฐะปาลีหิ ธัมมามิเสหิ ปูชิตา.',
                 'pali_roman': 'Syāmānaṃ raṭṭhapālīhi dhammāmisehi pūjitā.',
                 'thai': '',
                 'paiboon': '',
@@ -32424,7 +32458,7 @@ CHANTS = [
             {
                 'number': 22,
                 'page': 100,
-                'pali': 'เอตัส์มิง ระตะนัตตะยัส์มิง สัมปะสาทะนะเจตะโส.',
+                'pali': 'เอตัส๎มิง ระตะนัตตะยัส๎มิง สัมปะสาทะนะเจตะโส.',
                 'pali_roman': 'Etasmiṃ ratanattayasmiṃ sampasādanacetaso.',
                 'thai': '',
                 'paiboon': '',
@@ -32642,7 +32676,7 @@ CHANTS = [
             {
                 'number': 5,
                 'page': 101,
-                'pali': 'สะทา ภัท์รานิ ปัสสันตุ สุขิตา โหนตุ นิพภะยา',
+                'pali': 'สะทา ภัท๎รานิ ปัสสันตุ สุขิตา โหนตุ นิพภะยา',
                 'pali_roman': 'Sadā bhadrāni passantu sukhitā hontu nibbhayā',
                 'thai': '',
                 'paiboon': '',
@@ -32705,7 +32739,7 @@ CHANTS = [
             {
                 'number': 12,
                 'page': 101,
-                'pali': 'จิรัง ติฏฐะตุ โลกัส์มิง สัมมาสัมพุทธะสาสะนัง.',
+                'pali': 'จิรัง ติฏฐะตุ โลกัส๎มิง สัมมาสัมพุทธะสาสะนัง.',
                 'pali_roman': 'Ciraṃ tiṭṭhatu lokasmiṃ sammāsambuddhasāsanaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -32768,7 +32802,7 @@ CHANTS = [
             {
                 'number': 19,
                 'page': 101,
-                'pali': 'มาตา ปิตา จะ อัต์ระชัง นิจจัง รักขันติ ปุตตะกัง',
+                'pali': 'มาตา ปิตา จะ อัต๎ระชัง นิจจัง รักขันติ ปุตตะกัง',
                 'pali_roman': 'Mātā pitā ca attajaṃ niccaṃ rakkhanti puttakaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -32960,7 +32994,7 @@ CHANTS = [
                 'number': 1,
                 'page': 303,
                 'para_start': True,
-                'pali': 'อิมัส์มิง อาวาเส อิมัง เตมาสัง วัสสัง อุเปมิ. (ว่า ๓ ครั้ง)',
+                'pali': 'อิมัส๎มิง อาวาเส อิมัง เตมาสัง วัสสัง อุเปมิ. (ว่า ๓ ครั้ง)',
                 'pali_roman': 'Imasmiṃ āvāse imaṃ temāsaṃ vassaṃ upemi.',
                 'thai': '',
                 'paiboon': '',
@@ -32999,7 +33033,7 @@ CHANTS = [
                 'page': 303,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'สังฆัมภันเต ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
+                'pali': 'สังฆัมภันเต ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส๎มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
                 'pali_roman': 'Saṅghambhante pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -33009,7 +33043,7 @@ CHANTS = [
                 'number': 2,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'ทุติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
+                'pali': 'ทุติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส๎มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
                 'pali_roman': 'Dutiyampi bhante saṅghaṃ pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -33019,7 +33053,7 @@ CHANTS = [
                 'number': 3,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'ตะติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส์มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
+                'pali': 'ตะติยัมปิ ภันเต สังฆัง ปะวาเรมิ, ทิฏเฐนะ วา สุเตนะ วา ปะริสังกายะ วา, วะทันตุ มัง อายัส๎มันโต อะนุกัมปัง อุปาทายะ, ปัสสันโต ปะฏิกกะริสสามิ.',
                 'pali_roman': 'Tatiyampi bhante saṅghaṃ pavāremi, diṭṭhena vā sutena vā parisaṅkāya vā, vadantu maṃ āyasmanto anukampaṃ upādāya, passanto paṭikkarissāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -33052,7 +33086,7 @@ CHANTS = [
                 'page': 303,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'สัตตาหะกะระณียัง กิจจัง เม อัตถิ ตัส์มา มะยา คันตัพพัง อิมัส์มิง สัตตาหัพภันตะเร นิวัตติสสามิ.',
+                'pali': 'สัตตาหะกะระณียัง กิจจัง เม อัตถิ ตัส๎มา มะยา คันตัพพัง อิมัส๎มิง สัตตาหัพภันตะเร นิวัตติสสามิ.',
                 'pali_roman': 'Sattāhakaraṇīyaṃ kiccaṃ me atthi tasmā mayā gantabbaṃ imasmiṃ sattāhabbhantare nivattissāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -33336,7 +33370,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อัญญัต์ระ ภิกขุสัมมะติยา นิสสัคคิยัง',
+                'pali': 'อัญญัต๎ระ ภิกขุสัมมะติยา นิสสัคคิยัง',
                 'pali_roman': 'Aññatra bhikkhusammatiyā nissaggiyaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -33344,7 +33378,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'อิมาหัง อายัส์มะโต นิสสัชชามิ.',
+                'pali': 'อิมาหัง อายัส๎มะโต นิสสัชชามิ.',
                 'pali_roman': 'Imāhaṃ āyasmato nissajjāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -33390,7 +33424,7 @@ CHANTS = [
                 'number': 1,
                 'page': 302,
                 'para_start': True,
-                'pali': 'อิมัง จีวะรัง อายัส์มะโต ทัมมิ.',
+                'pali': 'อิมัง จีวะรัง อายัส๎มะโต ทัมมิ.',
                 'pali_roman': 'Imaṃ cīvaraṃ āyasmato dammi.',
                 'thai': '',
                 'paiboon': '',
@@ -33586,7 +33620,7 @@ CHANTS = [
                 'page': 102,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'สิริธิติมะติเตโชชะยะสิทธิมะหิทธิมะหาคุณาปะริมิตะปุญญาธิการัสสะ สัพพันตะรายะนิวาระณะสะมัตถัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ ท์วัตติงสะมะหาปุริสะลักขะณานุภาเวนะ อะสีต์ยานุพ์ยัญชะนานุภาเวนะ อัฏฐุตตะระสะตะมังคะลานุภาเวนะ ฉัพพัณณะรังสิยานุภาเวนะ เกตุมาลานุภาเวนะ ทะสะปาระมิตานุภาเวนะ ทะสะอุปะปาระมิตานุภาเวนะ ทะสะปะระมัตถะปาระมิตานุภาเวนะ สีละสะมาธิปัญญานุภาเวนะ พุทธานุภาเวนะ ธัมมานุภาเวนะ สังฆานุภาเวนะ เตชานุภาเวนะ อิทธานุภาเวนะ พะลานุภาเวนะ เญยยะธัมมานุภาเวนะ จะตุราสีติสะหัสสะธัมมักขันธานุภาเวนะ นะวะโลกุตตะระธัมมานุภาเวนะ อัฏฐังคิกะมัคคานุภาเวนะ อัฏฐะสะมาปัตติยานุภาเวนะ ฉะฬะภิญญานุภาเวนะ จะตุสัจจะญาณานุภาเวนะ ทะสะพะละญาณานุภาเวนะ สัพพัญญุตะญาณานุภาเวนะ เมตตากะรุณามุทิตาอุเปกขานุภาเวนะ สัพพะปะริตตานุภาเวนะ ระตะนัตตะยะสะระณานุภาเวนะ ตุย์หัง สัพพะโรคะโสกุปัททะวะทุกขะโทมะนัสสุปายาสา วินัสสันตุ สัพพะอันตะรายาปิ วินัสสันตุ สัพพะสังกัปปา ตุยหัง สะมิชฌันตุ ทีฆายุตา ตุยหัง โหตุ สะตะวัสสะชีเวนะ สะมังคิโก โหตุ สัพพะทา.',
+                'pali': 'สิริธิติมะติเตโชชะยะสิทธิมะหิทธิมะหาคุณาปะริมิตะปุญญาธิการัสสะ สัพพันตะรายะนิวาระณะสะมัตถัสสะ ภะคะวะโต อะระหะโต สัมมาสัมพุทธัสสะ ท๎วัตติงสะมะหาปุริสะลักขะณานุภาเวนะ อะสีต๎ยานุพ๎ยัญชะนานุภาเวนะ อัฏฐุตตะระสะตะมังคะลานุภาเวนะ ฉัพพัณณะรังสิยานุภาเวนะ เกตุมาลานุภาเวนะ ทะสะปาระมิตานุภาเวนะ ทะสะอุปะปาระมิตานุภาเวนะ ทะสะปะระมัตถะปาระมิตานุภาเวนะ สีละสะมาธิปัญญานุภาเวนะ พุทธานุภาเวนะ ธัมมานุภาเวนะ สังฆานุภาเวนะ เตชานุภาเวนะ อิทธานุภาเวนะ พะลานุภาเวนะ เญยยะธัมมานุภาเวนะ จะตุราสีติสะหัสสะธัมมักขันธานุภาเวนะ นะวะโลกุตตะระธัมมานุภาเวนะ อัฏฐังคิกะมัคคานุภาเวนะ อัฏฐะสะมาปัตติยานุภาเวนะ ฉะฬะภิญญานุภาเวนะ จะตุสัจจะญาณานุภาเวนะ ทะสะพะละญาณานุภาเวนะ สัพพัญญุตะญาณานุภาเวนะ เมตตากะรุณามุทิตาอุเปกขานุภาเวนะ สัพพะปะริตตานุภาเวนะ ระตะนัตตะยะสะระณานุภาเวนะ ตุย๎หัง สัพพะโรคะโสกุปัททะวะทุกขะโทมะนัสสุปายาสา วินัสสันตุ สัพพะอันตะรายาปิ วินัสสันตุ สัพพะสังกัปปา ตุยหัง สะมิชฌันตุ ทีฆายุตา ตุยหัง โหตุ สะตะวัสสะชีเวนะ สะมังคิโก โหตุ สัพพะทา.',
                 'pali_roman': 'Siridhitimatitejojayasiddhimahiddhimahāguṇāparimitapuññādhikārassa sabbantarāyanivāraṇasamatthassa bhagavato arahato sammāsambuddhassa dvattiṃsamahāpurisalakkhaṇānubhāvena asītyānubyañjanānubhāvena aṭṭhuttarasatamaṅgalānubhāvena chabbaṇṇaraṃsiyānubhāvena ketumālānubhāvena dasapāramitānubhāvena dasa-upapāramitānubhāvena dasaparamatthapāramitānubhāvena sīlasamādhipaññānubhāvena buddhānubhāvena dhammānubhāvena saṅghānubhāvena tejānubhāvena iddhānubhāvena balānubhāvena neyyadhammānubhāvena caturāsītisahassadhammakkhandhānubhāvena navalokuttaradhammānubhāvena aṭṭhaṅgikamaggānubhāvena aṭṭhasamāpattiyānubhāvena chaḷabhiññānubhāvena catusaccañāṇānubhāvena dasabalañāṇānubhāvena sabbaññutañāṇānubhāvena mettākaruṇāmuditā-upekkhānubhāvena sabbaparittānubhāvena ratanattayasaraṇānubhāvena tuyhaṃ sabbarogasokupaddavadukkhadomanassupāyāsā vinassantu sabba-antarāyāpi vinassantu sabbasaṅkappā tuyhaṃ samijjhantu dīghāyutā tuyhaṃ hotu satavassajīvena samaṅgiko hotu sabbadā.',
                 'thai': '',
                 'paiboon': '',
@@ -33683,7 +33717,7 @@ CHANTS = [
             {
                 'number': 10,
                 'page': 102,
-                'pali': 'ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.',
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.',
                 'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
                 'thai': '',
                 'paiboon': '',
@@ -33719,7 +33753,7 @@ CHANTS = [
             {
                 'number': 12,
                 'page': 103,
-                'pali': 'ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.',
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.',
                 'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
                 'thai': '',
                 'paiboon': '',
@@ -33738,7 +33772,7 @@ CHANTS = [
             {
                 'number': 14,
                 'page': 103,
-                'pali': 'ปะริตตัสสานุภาเวนะ หันต์วา เตสัง อุปัททะเว.',
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.',
                 'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
                 'thai': '',
                 'paiboon': '',
@@ -34105,7 +34139,7 @@ CHANTS = [
             {
                 'number': 3,
                 'printed_number': 3,
-                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali': 'อะพ๎รัห๎มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '(ข้าพเจ้าสมาทานซึ่งสิกขาบท คือเว้นจากอสัทธรรม กรรมอันเป็นข้าศึกแก่พรหมจรรย์)',
                 'paiboon': '',
@@ -34460,7 +34494,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'ปุณโณ จะ สุโภ จะ อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
+                'pali': 'ปุณโณ จะ สุโภ จะ อายัส๎มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
                 'pali_roman': 'Puṇṇo ca subho ca āyasmato manussanāgassa upasampadāpekkhā,',
                 'thai': '',
                 'paiboon': '',
@@ -34534,7 +34568,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'ปุณโณ จะ สุโภ จะ อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
+                'pali': 'ปุณโณ จะ สุโภ จะ อายัส๎มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
                 'pali_roman': 'Puṇṇo ca subho ca āyasmato manussanāgassa upasampadāpekkhā,',
                 'thai': '',
                 'paiboon': '',
@@ -34669,7 +34703,7 @@ CHANTS = [
             },
             {
                 'number': 10,
-                'pali': 'อันตะรายิเก ธัมเม ปุจฉิต์วา,',
+                'pali': 'อันตะรายิเก ธัมเม ปุจฉิต๎วา,',
                 'pali_roman': 'Antarāyike dhamme pucchitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -34677,7 +34711,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'ตัตถะ ปัตตะกัลลัตตัง ญัต์วา,',
+                'pali': 'ตัตถะ ปัตตะกัลลัตตัง ญัต๎วา,',
                 'pali_roman': 'Tattha pattakallattaṃ ñatvā,',
                 'thai': '',
                 'paiboon': '',
@@ -34702,7 +34736,7 @@ CHANTS = [
             {
                 'number': 14,
                 'para_start': True,
-                'pali': '(ที่ประชุมสงฆ์รับพร้อมกันว่า) สาธุ',
+                'pali': '(ที่ประชุมสงฆ๎รับพร้อมกันว่า) สาธุ',
                 'pali_roman': 'Sādhu',
                 'thai': '',
                 'paiboon': '',
@@ -34774,7 +34808,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
+                'pali': 'อายัส๎มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
                 'pali_roman': 'Āyasmato manussanāgassa upasampadāpekkhā,',
                 'thai': '',
                 'paiboon': '',
@@ -34806,7 +34840,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -34830,7 +34864,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -34873,7 +34907,7 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
+                'pali': 'อายัส๎มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
                 'pali_roman': 'Āyasmato manussanāgassa upasampadāpekkhā,',
                 'thai': '',
                 'paiboon': '',
@@ -34905,7 +34939,7 @@ CHANTS = [
             },
             {
                 'number': 20,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -34921,7 +34955,7 @@ CHANTS = [
             },
             {
                 'number': 22,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -34929,7 +34963,7 @@ CHANTS = [
             },
             {
                 'number': 23,
-                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali': 'ยัสสายัส๎มะโต ขะมะติ,',
                 'pali_roman': 'Yassāyasmato khamati,',
                 'thai': '',
                 'paiboon': '',
@@ -34945,7 +34979,7 @@ CHANTS = [
             },
             {
                 'number': 25,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -34953,7 +34987,7 @@ CHANTS = [
             },
             {
                 'number': 26,
-                'pali': 'โส ตุณ์หัสสะ,',
+                'pali': 'โส ตุณ๎หัสสะ,',
                 'pali_roman': 'So tuṇhassa,',
                 'thai': '',
                 'paiboon': '',
@@ -35011,7 +35045,7 @@ CHANTS = [
             },
             {
                 'number': 33,
-                'pali': 'อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
+                'pali': 'อายัส๎มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
                 'pali_roman': 'Āyasmato manussanāgassa upasampadāpekkhā,',
                 'thai': '',
                 'paiboon': '',
@@ -35043,7 +35077,7 @@ CHANTS = [
             },
             {
                 'number': 37,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35059,7 +35093,7 @@ CHANTS = [
             },
             {
                 'number': 39,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35067,7 +35101,7 @@ CHANTS = [
             },
             {
                 'number': 40,
-                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali': 'ยัสสายัส๎มะโต ขะมะติ,',
                 'pali_roman': 'Yassāyasmato khamati,',
                 'thai': '',
                 'paiboon': '',
@@ -35083,7 +35117,7 @@ CHANTS = [
             },
             {
                 'number': 42,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35091,7 +35125,7 @@ CHANTS = [
             },
             {
                 'number': 43,
-                'pali': 'โส ตุณ์หัสสะ,',
+                'pali': 'โส ตุณ๎หัสสะ,',
                 'pali_roman': 'So tuṇhassa,',
                 'thai': '',
                 'paiboon': '',
@@ -35149,7 +35183,7 @@ CHANTS = [
             },
             {
                 'number': 50,
-                'pali': 'อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
+                'pali': 'อายัส๎มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
                 'pali_roman': 'Āyasmato manussanāgassa upasampadāpekkhā,',
                 'thai': '',
                 'paiboon': '',
@@ -35181,7 +35215,7 @@ CHANTS = [
             },
             {
                 'number': 54,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35197,7 +35231,7 @@ CHANTS = [
             },
             {
                 'number': 56,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35205,7 +35239,7 @@ CHANTS = [
             },
             {
                 'number': 57,
-                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali': 'ยัสสายัส๎มะโต ขะมะติ,',
                 'pali_roman': 'Yassāyasmato khamati,',
                 'thai': '',
                 'paiboon': '',
@@ -35221,7 +35255,7 @@ CHANTS = [
             },
             {
                 'number': 59,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35229,7 +35263,7 @@ CHANTS = [
             },
             {
                 'number': 60,
-                'pali': 'โส ตุณ์หัสสะ,',
+                'pali': 'โส ตุณ๎หัสสะ,',
                 'pali_roman': 'So tuṇhassa,',
                 'thai': '',
                 'paiboon': '',
@@ -35271,7 +35305,7 @@ CHANTS = [
             },
             {
                 'number': 65,
-                'pali': 'อายัส์มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา มะนุสสะนาเคนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā manussanāgena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35287,7 +35321,7 @@ CHANTS = [
             },
             {
                 'number': 67,
-                'pali': 'ตัส์มา ตุณ์หี,',
+                'pali': 'ตัส๎มา ตุณ๎หี,',
                 'pali_roman': 'Tasmā tuṇhī,',
                 'thai': '',
                 'paiboon': '',
@@ -35344,7 +35378,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali': 'อายัส๎มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
                 'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
                 'thai': '',
                 'paiboon': '',
@@ -35458,7 +35492,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': '(ตอบ) นัตถิ ภันเต ฯลฯ อุปัชฌาโย เม ภันเต อายัส์มา โสภะโณ นามะ.',
+                'pali': '(ตอบ) นัตถิ ภันเต ฯลฯ อุปัชฌาโย เม ภันเต อายัส๎มา โสภะโณ นามะ.',
                 'pali_roman': 'Natthi bhante … upajjhāyo me bhante āyasmā sobhaṇo nāma.',
                 'thai': '',
                 'paiboon': '',
@@ -35523,7 +35557,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali': 'อายัส๎มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
                 'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
                 'thai': '',
                 'paiboon': '',
@@ -35555,7 +35589,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35579,7 +35613,7 @@ CHANTS = [
             },
             {
                 'number': 10,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ เอสา ญัตติ',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ เอสา ญัตติ',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena esā ñatti',
                 'thai': '',
                 'paiboon': '',
@@ -35605,7 +35639,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali': 'อายัส๎มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
                 'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
                 'thai': '',
                 'paiboon': '',
@@ -35637,7 +35671,7 @@ CHANTS = [
             },
             {
                 'number': 17,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35653,7 +35687,7 @@ CHANTS = [
             },
             {
                 'number': 19,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35661,7 +35695,7 @@ CHANTS = [
             },
             {
                 'number': 20,
-                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali': 'ยัสสายัส๎มะโต ขะมะติ,',
                 'pali_roman': 'Yassāyasmato khamati,',
                 'thai': '',
                 'paiboon': '',
@@ -35677,7 +35711,7 @@ CHANTS = [
             },
             {
                 'number': 22,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35685,7 +35719,7 @@ CHANTS = [
             },
             {
                 'number': 23,
-                'pali': 'โส ตุณ์หัสสะ,',
+                'pali': 'โส ตุณ๎หัสสะ,',
                 'pali_roman': 'So tuṇhassa,',
                 'thai': '',
                 'paiboon': '',
@@ -35735,7 +35769,7 @@ CHANTS = [
             },
             {
                 'number': 29,
-                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali': 'อายัส๎มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
                 'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
                 'thai': '',
                 'paiboon': '',
@@ -35767,7 +35801,7 @@ CHANTS = [
             },
             {
                 'number': 33,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35785,7 +35819,7 @@ CHANTS = [
             },
             {
                 'number': 35,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35793,7 +35827,7 @@ CHANTS = [
             },
             {
                 'number': 36,
-                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali': 'ยัสสายัส๎มะโต ขะมะติ,',
                 'pali_roman': 'Yassāyasmato khamati,',
                 'thai': '',
                 'paiboon': '',
@@ -35809,7 +35843,7 @@ CHANTS = [
             },
             {
                 'number': 38,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35817,7 +35851,7 @@ CHANTS = [
             },
             {
                 'number': 39,
-                'pali': 'โส ตุณ์หัสสะ,',
+                'pali': 'โส ตุณ๎หัสสะ,',
                 'pali_roman': 'So tuṇhassa,',
                 'thai': '',
                 'paiboon': '',
@@ -35867,7 +35901,7 @@ CHANTS = [
             },
             {
                 'number': 45,
-                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali': 'อายัส๎มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
                 'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
                 'thai': '',
                 'paiboon': '',
@@ -35899,7 +35933,7 @@ CHANTS = [
             },
             {
                 'number': 49,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35915,7 +35949,7 @@ CHANTS = [
             },
             {
                 'number': 51,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35923,7 +35957,7 @@ CHANTS = [
             },
             {
                 'number': 52,
-                'pali': 'ยัสสายัส์มะโต ขะมะติ,',
+                'pali': 'ยัสสายัส๎มะโต ขะมะติ,',
                 'pali_roman': 'Yassāyasmato khamati,',
                 'thai': '',
                 'paiboon': '',
@@ -35939,7 +35973,7 @@ CHANTS = [
             },
             {
                 'number': 54,
-                'pali': 'อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35947,7 +35981,7 @@ CHANTS = [
             },
             {
                 'number': 55,
-                'pali': 'โส ตุณ์หัสสะ,',
+                'pali': 'โส ตุณ๎หัสสะ,',
                 'pali_roman': 'So tuṇhassa,',
                 'thai': '',
                 'paiboon': '',
@@ -35981,7 +36015,7 @@ CHANTS = [
             },
             {
                 'number': 59,
-                'pali': 'โอภาโส อายัส์มะตา โสภะเณนะ อุปัชฌาเยนะ,',
+                'pali': 'โอภาโส อายัส๎มะตา โสภะเณนะ อุปัชฌาเยนะ,',
                 'pali_roman': 'Obhāso āyasmatā sobhaṇena upajjhāyena,',
                 'thai': '',
                 'paiboon': '',
@@ -35997,7 +36031,7 @@ CHANTS = [
             },
             {
                 'number': 61,
-                'pali': 'ตัส์มา ตุณ์หี,',
+                'pali': 'ตัส๎มา ตุณ๎หี,',
                 'pali_roman': 'Tasmā tuṇhī,',
                 'thai': '',
                 'paiboon': '',
@@ -36063,7 +36097,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'ปุณโณ จะ สุโภ จะ อายัส์มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
+                'pali': 'ปุณโณ จะ สุโภ จะ อายัส๎มะโต มะนุสสะนาคัสสะ อุปะสัมปะทาเปกขา,',
                 'pali_roman': 'Puṇṇo ca subho ca āyasmato manussanāgassa upasampadāpekkhā,',
                 'thai': '',
                 'paiboon': '',
@@ -36097,7 +36131,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'ยัง ชาตัง ฯลฯ อุปัชฌาโย เม ภันเต อายัส์มา มะนุสสะนาโค นามะ',
+                'pali': 'ยัง ชาตัง ฯลฯ อุปัชฌาโย เม ภันเต อายัส๎มา มะนุสสะนาโค นามะ',
                 'pali_roman': 'Yaṃ jātaṃ … upajjhāyo me bhante āyasmā manussanāgo nāma',
                 'thai': '',
                 'paiboon': '',
@@ -36156,7 +36190,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali': 'อายัส๎มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
                 'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
                 'thai': '',
                 'paiboon': '',
@@ -36278,7 +36312,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'อันตะรายิเก ธัมเม ปุจฉิต์วา,',
+                'pali': 'อันตะรายิเก ธัมเม ปุจฉิต๎วา,',
                 'pali_roman': 'Antarāyike dhamme pucchitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -36286,7 +36320,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'ตัตถะ ปัตตะกัลลัตตัง ญัต์วา,',
+                'pali': 'ตัตถะ ปัตตะกัลลัตตัง ญัต๎วา,',
                 'pali_roman': 'Tattha pattakallattaṃ ñatvā,',
                 'thai': '',
                 'paiboon': '',
@@ -36311,7 +36345,7 @@ CHANTS = [
             {
                 'number': 10,
                 'para_start': True,
-                'pali': '(ที่ประชุมสงฆ์รับพร้อมกันว่า) สาธุ',
+                'pali': '(ที่ประชุมสงฆ๎รับพร้อมกันว่า) สาธุ',
                 'pali_roman': 'Sādhu',
                 'thai': '',
                 'paiboon': '',
@@ -36415,7 +36449,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'อายัส์มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
+                'pali': 'อายัส๎มะโต โสภะณัสสะ อุปะสัมปะทาเปกโข,',
                 'pali_roman': 'Āyasmato sobhaṇassa upasampadāpekkho,',
                 'thai': '',
                 'paiboon': '',
@@ -36825,7 +36859,7 @@ CHANTS = [
             },
             {
                 'number': 41,
-                'pali': 'อุปัชฌาโย เม ภันเต อายัส์มา โสภะโณ นามะ',
+                'pali': 'อุปัชฌาโย เม ภันเต อายัส๎มา โสภะโณ นามะ',
                 'pali_roman': 'Upajjhāyo me bhante āyasmā sobhaṇo nāma',
                 'thai': '',
                 'paiboon': '',
@@ -37133,7 +37167,7 @@ CHANTS = [
                 'page': 290,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'อะนุญญาสิ โข ภะคะวา อุปะสัมปาเทต์วา จัตตาโร นิสสะเย จัตตาริ จะ อะกะระณียานิ อาจิกขิตุง',
+                'pali': 'อะนุญญาสิ โข ภะคะวา อุปะสัมปาเทต๎วา จัตตาโร นิสสะเย จัตตาริ จะ อะกะระณียานิ อาจิกขิตุง',
                 'pali_roman': 'Anuññāsi kho bhagavā upasampādetvā cattāro nissaye cattāri ca akaraṇīyāni ācikkhituṃ',
                 'thai': '',
                 'paiboon': '',
@@ -37333,7 +37367,7 @@ CHANTS = [
                 'number': 24,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวะเมวะ ภิกขุ เมถุนัง ธัมมัง ปะฏิเสวิต์วา,',
+                'pali': 'เอวะเมวะ ภิกขุ เมถุนัง ธัมมัง ปะฏิเสวิต๎วา,',
                 'pali_roman': 'Evameva bhikkhu methunaṃ dhammaṃ paṭisevitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -37409,7 +37443,7 @@ CHANTS = [
                 'number': 32,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวะเมวะ ภิกขุ ปาทัง วา ปาทาระหัง วา อะติเรกะปาทัง วา อะทินนัง เถยยะสังขาตัง อาทิยิต์วา,',
+                'pali': 'เอวะเมวะ ภิกขุ ปาทัง วา ปาทาระหัง วา อะติเรกะปาทัง วา อะทินนัง เถยยะสังขาตัง อาทิยิต๎วา,',
                 'pali_roman': 'Evameva bhikkhu pādaṃ vā pādārahaṃ vā atirekapādaṃ vā adinnaṃ theyyasaṅkhātaṃ ādiyitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -37474,7 +37508,7 @@ CHANTS = [
                 'number': 39,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เสยยะถาปิ นามะ ปุถุสิลา ท์วิธา ภินนา อัปปะฏิสันธิกา โหติ,',
+                'pali': 'เสยยะถาปิ นามะ ปุถุสิลา ท๎วิธา ภินนา อัปปะฏิสันธิกา โหติ,',
                 'pali_roman': 'Seyyathāpi nāma puthusilā dvidhā bhinnā appaṭisandhikā hoti,',
                 'thai': '',
                 'paiboon': '',
@@ -37484,7 +37518,7 @@ CHANTS = [
                 'number': 40,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวะเมวะ ภิกขุ สัญจิจจะ มะนุสสะวิคคะหัง ชีวิตา โวโรเปต์วา,',
+                'pali': 'เอวะเมวะ ภิกขุ สัญจิจจะ มะนุสสะวิคคะหัง ชีวิตา โวโรเปต๎วา,',
                 'pali_roman': 'Evameva bhikkhu sañcicca manussaviggahaṃ jīvitā voropetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -37559,7 +37593,7 @@ CHANTS = [
                 'number': 48,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวะเมวะ ภิกขุ ปาปิจโฉ อิจฉาปะกะโต อะสันตัง อะภูตัง อุตตะริมะนุสสะธัมมัง อุลละปิต์วา,',
+                'pali': 'เอวะเมวะ ภิกขุ ปาปิจโฉ อิจฉาปะกะโต อะสันตัง อะภูตัง อุตตะริมะนุสสะธัมมัง อุลละปิต๎วา,',
                 'pali_roman': 'Evameva bhikkhu pāpiccho icchāpakato asantaṃ abhūtaṃ uttarimanussadhammaṃ ullapitvā,',
                 'thai': '',
                 'paiboon': '',
@@ -37666,7 +37700,7 @@ CHANTS = [
                 'number': 59,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'ตัส์มาติหะ เต (ถ้าหลายรูปเปลี่ยน เต เป็น โว) อิมัส์มิง ตะถาคะตัปปะเวทิเต ธัมมะวินะเย,',
+                'pali': 'ตัส๎มาติหะ เต (ถ้าหลายรูปเปลี่ยน เต เป็น โว) อิมัส๎มิง ตะถาคะตัปปะเวทิเต ธัมมะวินะเย,',
                 'pali_roman': 'Tasmātiha te imasmiṃ tathāgatappavedite dhammavinaye, …',
                 'thai': '',
                 'paiboon': '',
@@ -37978,7 +38012,7 @@ CHANTS = [
             },
             {
                 'number': 28,
-                'pali': 'อิมานิ กาสายานิ วัตถานิ คะเหต์วา,',
+                'pali': 'อิมานิ กาสายานิ วัตถานิ คะเหต๎วา,',
                 'pali_roman': 'Imāni kāsāyāni vatthāni gahetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -38020,7 +38054,7 @@ CHANTS = [
             },
             {
                 'number': 33,
-                'pali': 'อิมานิ กาสายานิ วัตถานิ คะเหต์วา,',
+                'pali': 'อิมานิ กาสายานิ วัตถานิ คะเหต๎วา,',
                 'pali_roman': 'Imāni kāsāyāni vatthāni gahetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -38062,7 +38096,7 @@ CHANTS = [
             },
             {
                 'number': 38,
-                'pali': 'อิมานิ กาสายานิ วัตถานิ คะเหต์วา,',
+                'pali': 'อิมานิ กาสายานิ วัตถานิ คะเหต๎วา,',
                 'pali_roman': 'Imāni kāsāyāni vatthāni gahetvā,',
                 'thai': '',
                 'paiboon': '',
@@ -38225,7 +38259,7 @@ CHANTS = [
                 'page': 103,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ สะนาถา ภิกขะเว วิหะระถะ มา อะนาถา, ทุกขัง ภิกขะเว อะนาโถ วิหะระติ. ทะสะยิเม ภิกขะเว นาถะกะระณา ธัมมา. กะตะเม ทะสะ.',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ สะนาถา ภิกขะเว วิหะระถะ มา อะนาถา, ทุกขัง ภิกขะเว อะนาโถ วิหะระติ. ทะสะยิเม ภิกขะเว นาถะกะระณา ธัมมา. กะตะเม ทะสะ.',
                 'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca sanāthā bhikkhave viharatha mā anāthā, dukkhaṃ bhikkhave anātho viharati. Dasayime bhikkhave nāthakaraṇā dhammā. Katame dasa.',
                 'thai': '',
                 'paiboon': '',
@@ -38269,7 +38303,7 @@ CHANTS = [
                 'number': 3,
                 'printed_number': 2,
                 'para_start': True,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา สาตัถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, ยัมปิ ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล์ยาณา มัชเฌกัล์ยาณา ปะริโยสานะกัล์ยาณา, สาตัถัง สะพ์ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ์รัห์มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล๎ยาณา มัชเฌกัล๎ยาณา ปะริโยสานะกัล๎ยาณา สาตัถัง สะพ๎ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ๎รัห๎มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, ยัมปิ ภิกขะเว ภิกขุ พะหุสสุโต โหติ, สุตะธะโร สุตะสันนิจจะโย, เย เต ธัมมา อาทิกัล๎ยาณา มัชเฌกัล๎ยาณา ปะริโยสานะกัล๎ยาณา, สาตัถัง สะพ๎ยัญชะนัง เกวะละปะริปุณณัง ปะริสุทธัง พ๎รัห๎มะจะริยัง อะภิวะทันติ, ตะถารูปัสสะ ธัมมา พะหุสสุตา โหนติ, ธะตา วะจะสา ปะริจิตา มะนะสานุเปกขิตา ทิฏฐิยา สุปะฏิวิทธา, อะยัมปิ ธัมโม นาถะกะระโณ.',
                 'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ abhivadanti, tathārūpassa dhammā bahussutā honti, dhatā vacasā paricitā manasānupekkhitā diṭṭhiyā suppaṭividdhā, yampi bhikkhave bhikkhu bahussuto hoti, sutadharo sutasannicayo, ye te dhammā ādikalyāṇā majjhekalyāṇā pariyosānakalyāṇā, sātthaṃ sabyañjanaṃ kevalaparipuṇṇaṃ parisuddhaṃ brahmacariyaṃ abhivadanti, tathārūpassa dhammā bahussutā honti, dhatā vacasā paricitā manasānupekkhitā diṭṭhiyā suppaṭividdhā, ayampi dhammo nāthakaraṇo.',
                 'thai': '',
                 'paiboon': '',
@@ -38286,7 +38320,7 @@ CHANTS = [
                 'page': 104,
                 'printed_number': 3,
                 'para_start': True,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ กัล์ยาณะมิตโต โหติ, กัล์ยาณะสะหาโย กัล์ยาณะสัมปะวังโก, ยัมปิ ภิกขะเว ภิกขุ กัล์ยาณะมิตโต โหติ, กัล์ยาณะสะหาโย กัล์ยาณะสัมปะวังโก, อะยัมปิ ธัมโม นาถะกะระโณ,',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ กัล๎ยาณะมิตโต โหติ, กัล๎ยาณะสะหาโย กัล๎ยาณะสัมปะวังโก, ยัมปิ ภิกขะเว ภิกขุ กัล๎ยาณะมิตโต โหติ, กัล๎ยาณะสะหาโย กัล๎ยาณะสัมปะวังโก, อะยัมปิ ธัมโม นาถะกะระโณ,',
                 'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu kalyāṇamitto hoti, kalyāṇasahāyo kalyāṇasampavaṅko, yampi bhikkhave bhikkhu kalyāṇamitto hoti, kalyāṇasahāyo kalyāṇasampavaṅko, ayampi dhammo nāthakaraṇo,',
                 'thai': '',
                 'paiboon': '',
@@ -38308,7 +38342,7 @@ CHANTS = [
                 'page': 104,
                 'printed_number': 5,
                 'para_start': True,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ์รัห์มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต์รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง. ยัมปิ ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ์รัห์มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต์รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง, อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ๎รัห๎มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต๎รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง. ยัมปิ ภิกขะเว ภิกขุ, ยานิ ตานิ สะพ๎รัห๎มะจารีนัง อุจจาวะจานิ กิงกะระณียานิ, ตัตถะ ทักโข โหติ อะนะละโส, ตัต๎รุปายายะ วิมังสายะ สะมันนาคะโต, อะลัง กาตุง อะลัง สังวิธาตุง, อะยัมปิ ธัมโม นาถะกะระโณ.',
                 'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu, yāni tāni sabrahmacārīnaṃ uccāvacāni kiṃkaraṇīyāni, tattha dakkho hoti analaso, tatrupāyāya vīmaṃsāya samannāgato, alaṃ kātuṃ alaṃ saṃvidhātuṃ. Yampi bhikkhave bhikkhu, yāni tāni sabrahmacārīnaṃ uccāvacāni kiṃkaraṇīyāni, tattha dakkho hoti analaso, tatrupāyāya vīmaṃsāya samannāgato, alaṃ kātuṃ alaṃ saṃvidhātuṃ, ayampi dhammo nāthakaraṇo.',
                 'thai': '',
                 'paiboon': '',
@@ -38369,7 +38403,7 @@ CHANTS = [
                 'number': 8,
                 'printed_number': 7,
                 'para_start': True,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬ์หะปะรักกะโม อะนิกขิตตะธุโร กุสะเลสุ ธัมเมสุ. ยัมปิ ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬหะปะรักกะโม อะนิกขิตตะธุโร กุสะเลสุ ธัมเมสุ. อะยัมปิ ธัมโม นาถะกะระโณ.',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬ๎หะปะรักกะโม อะนิกขิตตะธุโร กุสะเลสุ ธัมเมสุ. ยัมปิ ภิกขะเว ภิกขุ อารัทธะวิริโย วิหะระติ, อะกุสะลานัง ธัมมานัง ปะหานายะ, กุสะลานัง ธัมมานัง อุปะสัมปะทายะ, ถามะวา ทัฬหะปะรักกะโม อะนิกขิตตะธุโร กุสะเลสุ ธัมเมสุ. อะยัมปิ ธัมโม นาถะกะระโณ.',
                 'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu āraddhavīriyo viharati, akusalānaṃ dhammānaṃ pahānāya, kusalānaṃ dhammānaṃ upasampadāya, thāmavā daḷhaparakkamo anikkhittadhuro kusalesu dhammesu. Yampi bhikkhave bhikkhu āraddhavīriyo viharati, akusalānaṃ dhammānaṃ pahānāya, kusalānaṃ dhammānaṃ upasampadāya, thāmavā daḷhaparakkamo anikkhittadhuro kusalesu dhammesu. Ayampi dhammo nāthakaraṇo.',
                 'thai': '',
                 'paiboon': '',
@@ -38535,7 +38569,7 @@ CHANTS = [
                 'number': 5,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'อะหัง ภันเต, ปัพพัชชัง ยาจามิ, อิมานิ กาสายานิ วัตถานิ คะเหต์วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
+                'pali': 'อะหัง ภันเต, ปัพพัชชัง ยาจามิ, อิมานิ กาสายานิ วัตถานิ คะเหต๎วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
                 'pali_roman': 'Ahaṃ bhante, pabbajjaṃ yācāmi, imāni kāsāyāni vatthāni gahetvā, pabbājetha maṃ bhante, anukampaṃ upādāya.',
                 'thai': '',
                 'paiboon': '',
@@ -38545,7 +38579,7 @@ CHANTS = [
                 'number': 6,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'ทุติยัมปิ อะหัง ภันเต, ปัพพัชชัง ยาจามิ, อิมานิ กาสายานิ วัตถานิ คะเหต์วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
+                'pali': 'ทุติยัมปิ อะหัง ภันเต, ปัพพัชชัง ยาจามิ, อิมานิ กาสายานิ วัตถานิ คะเหต๎วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
                 'pali_roman': 'Dutiyampi ahaṃ bhante, pabbajjaṃ yācāmi, imāni kāsāyāni vatthāni gahetvā, pabbājetha maṃ bhante, anukampaṃ upādāya.',
                 'thai': '',
                 'paiboon': '',
@@ -38555,7 +38589,7 @@ CHANTS = [
                 'number': 7,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'ตะติยัมปิ อะหัง ภันเต, ปัพพัชชัง ยาจามิ, อิมานิ กาสายานิ วัตถานิ คะเหต์วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
+                'pali': 'ตะติยัมปิ อะหัง ภันเต, ปัพพัชชัง ยาจามิ, อิมานิ กาสายานิ วัตถานิ คะเหต๎วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
                 'pali_roman': 'Tatiyampi ahaṃ bhante, pabbajjaṃ yācāmi, imāni kāsāyāni vatthāni gahetvā, pabbājetha maṃ bhante, anukampaṃ upādāya.',
                 'thai': '',
                 'paiboon': '',
@@ -38799,7 +38833,7 @@ CHANTS = [
                 'printed_number': 3,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี.',
+                'pali': 'อะพ๎รัห๎มะจะริยา เวระมะณี.',
                 'pali_roman': 'Abrahmacariyā veramaṇī.',
                 'thai': '',
                 'paiboon': '',
@@ -39375,7 +39409,7 @@ CHANTS = [
             },
             {
                 'number': 90,
-                'pali': 'อุปัชฌาโย เม ภันเต อายัส์มา.................. นามะ',
+                'pali': 'อุปัชฌาโย เม ภันเต อายัส๎มา.................. นามะ',
                 'pali_roman': 'Upajjhāyo me bhante āyasmā.................. nāma',
                 'thai': '',
                 'paiboon': '',
@@ -39526,7 +39560,7 @@ CHANTS = [
                 'number': 3,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'อุกาสะ การุญญัง กัต์วา, ปัพพัชชัง เทถะ เม ภันเต,',
+                'pali': 'อุกาสะ การุญญัง กัต๎วา, ปัพพัชชัง เทถะ เม ภันเต,',
                 'pali_roman': 'Ukāsa kāruññaṃ katvā, pabbajjaṃ detha me bhante,',
                 'thai': '',
                 'paiboon': '',
@@ -39576,7 +39610,7 @@ CHANTS = [
                 'number': 8,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'สัพพะทุกขะ, นิสสะระณะนิพพานะ, สัจฉิกะระณัตถายะ, อิมัง กาสาวัง คะเหต์วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
+                'pali': 'สัพพะทุกขะ, นิสสะระณะนิพพานะ, สัจฉิกะระณัตถายะ, อิมัง กาสาวัง คะเหต๎วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
                 'pali_roman': 'Sabbadukkha, nissaraṇanibbāna, sacchikaraṇatthāya, imaṃ kāsāvaṃ gahetvā, pabbājetha maṃ bhante, anukampaṃ upādāya.',
                 'thai': '',
                 'paiboon': '',
@@ -39596,7 +39630,7 @@ CHANTS = [
                 'number': 10,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'สัพพะทุกขะ, นิสสะระณะนิพพานะ, สัจฉิกะระณัตถายะ, เอตัง กาสาวัง ทัต์วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
+                'pali': 'สัพพะทุกขะ, นิสสะระณะนิพพานะ, สัจฉิกะระณัตถายะ, เอตัง กาสาวัง ทัต๎วา, ปัพพาเชถะ มัง ภันเต, อะนุกัมปัง อุปาทายะ.',
                 'pali_roman': 'Sabbadukkha, nissaraṇanibbāna, sacchikaraṇatthāya, etaṃ kāsāvaṃ datvā, pabbājetha maṃ bhante, anukampaṃ upādāya.',
                 'thai': '',
                 'paiboon': '',
@@ -39667,7 +39701,7 @@ CHANTS = [
                 'number': 17,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'อุกาสะ การุญญัง กัต์วา, ติสะระเณนะ สะหะ, สีลานิ เทถะ เม ภันเต.',
+                'pali': 'อุกาสะ การุญญัง กัต๎วา, ติสะระเณนะ สะหะ, สีลานิ เทถะ เม ภันเต.',
                 'pali_roman': 'Ukāsa kāruññaṃ katvā, tisaraṇena saha, sīlāni detha me bhante.',
                 'thai': '',
                 'paiboon': '',
@@ -39881,7 +39915,7 @@ CHANTS = [
                 'printed_number': 3,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'อะพ์รัห์มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
+                'pali': 'อะพ๎รัห๎มะจะริยา เวระมะณี สิกขาปะทัง สะมาทิยามิ.',
                 'pali_roman': 'Abrahmacariyā veramaṇī sikkhāpadaṃ samādiyāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -40008,7 +40042,7 @@ CHANTS = [
                 'number': 50,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'อุกาสะ การุญญัง กัต์วา นิสสะยัง เทถะ เม ภันเต.',
+                'pali': 'อุกาสะ การุญญัง กัต๎วา นิสสะยัง เทถะ เม ภันเต.',
                 'pali_roman': 'Ukāsa kāruññaṃ katvā nissayaṃ detha me bhante.',
                 'thai': '',
                 'paiboon': '',
@@ -40109,7 +40143,7 @@ CHANTS = [
                 'number': 60,
                 'para_start': True,
                 'para_layout': 'lines',
-                'pali': 'ปะฐะมัง อุปัชฌัง คาหาเปตัพโพ อุปัชฌัง คาหาเปต์วา ปัตตะจีวะรัง อาจิกขิตัพพัง',
+                'pali': 'ปะฐะมัง อุปัชฌัง คาหาเปตัพโพ อุปัชฌัง คาหาเปต๎วา ปัตตะจีวะรัง อาจิกขิตัพพัง',
                 'pali_roman': 'Paṭhamaṃ upajjhaṃ gāhāpetabbo upajjhaṃ gāhāpetvā pattacīvaraṃ ācikkhitabbaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -40517,7 +40551,7 @@ CHANTS = [
             },
             {
                 'number': 103,
-                'pali': 'อุปัชฌาโย เม ภันเต อายัส์มา...................นามะ',
+                'pali': 'อุปัชฌาโย เม ภันเต อายัส๎มา...................นามะ',
                 'pali_roman': 'Upajjhāyo me bhante āyasmā...................nāma',
                 'thai': '',
                 'paiboon': '',
@@ -41195,7 +41229,7 @@ CHANTS = [
             {
                 'number': 2,
                 'page': 106,
-                'pali': 'เวเนยยานัง ปะกาเสสิ อะภิณ์หัง ปัจจะเวกขิตุง',
+                'pali': 'เวเนยยานัง ปะกาเสสิ อะภิณ๎หัง ปัจจะเวกขิตุง',
                 'pali_roman': 'Veneyyānaṃ pakāsesi abhiṇhaṃ paccavekkhituṃ',
                 'thai': '',
                 'paiboon': '',
@@ -41323,7 +41357,7 @@ CHANTS = [
             {
                 'number': 3,
                 'page': 106,
-                'pali': 'พ์ยาธิธัมโมมหิ พยาธิง อะนะตีโตติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.',
+                'pali': 'พ๎ยาธิธัมโมมหิ พยาธิง อะนะตีโตติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.',
                 'pali_roman': 'Byādhidhammomhi byādhiṃ anatītoti abhiṇhaṃ paccavekkhitabbaṃ itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.',
                 'thai': '',
                 'paiboon': '',
@@ -41350,7 +41384,7 @@ CHANTS = [
             {
                 'number': 6,
                 'page': 106,
-                'pali': 'กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามีติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.',
+                'pali': 'กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล๎ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามีติ อะภิณหัง ปัจจะเวกขิตัพพัง อิตถิยา วา ปุริเสนะ วา คะหัฏเฐนะ วา ปัพพะชิเตนะ วา.',
                 'pali_roman': 'Kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmīti abhiṇhaṃ paccavekkhitabbaṃ itthiyā vā purisena vā gahaṭṭhena vā pabbajitena vā.',
                 'thai': '',
                 'paiboon': '',
@@ -41368,7 +41402,7 @@ CHANTS = [
             {
                 'number': 8,
                 'page': 106,
-                'pali': 'ตัส์มาติหัมเหหิ เอวัง อะภิณหัง ปัจจะเวกขิตัพพัง.',
+                'pali': 'ตัส๎มาติหัมเหหิ เอวัง อะภิณหัง ปัจจะเวกขิตัพพัง.',
                 'pali_roman': 'Tasmātihamhehi evaṃ abhiṇhaṃ paccavekkhitabbaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -41396,7 +41430,7 @@ CHANTS = [
             #   104's cut was joined.
             {
                 'number': 9,
-                'pali': 'ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา ตัสสะ ทายาโท ภะวิสสามีติ.',
+                'pali': 'ชะราธัมโมมหิ ชะรัง อะนะตีโต, พ๎ยาธิธัมโมมหิ พ๎ยาธิง อะนะตีโต, มะระณะธัมโมมหิ มะระณัง อะนะตีโต, สัพเพหิ เม ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว, กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล๎ยาณัง วา ปาปะกัง วา ตัสสะ ทายาโท ภะวิสสามีติ.',
                 'pali_roman': 'Jarādhammomhi jaraṃ anatīto, byādhidhammomhi byādhiṃ anatīto, maraṇadhammomhi maraṇaṃ anatīto, sabbehi me piyehi manāpehi nānābhāvo vinābhāvo, kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā tassa dāyādo bhavissāmīti.',
                 'thai': '',
                 'paiboon': '',
@@ -41447,7 +41481,7 @@ CHANTS = [
             {
                 'number': 13,
                 'page': 107,
-                'pali': 'นะ โข ปะนาหะเมวะ พ์ยาธิธัมโมมหิ พ์ยาธิง อะนะตีโต.',
+                'pali': 'นะ โข ปะนาหะเมวะ พ๎ยาธิธัมโมมหิ พ๎ยาธิง อะนะตีโต.',
                 'pali_roman': 'Na kho panāhameva byādhidhammomhi byādhiṃ anatīto.',
                 'thai': '',
                 'paiboon': '',
@@ -41465,7 +41499,7 @@ CHANTS = [
             {
                 'number': 15,
                 'page': 107,
-                'pali': 'สัพเพ สัตตา พ์ยาธิธัมมา พ์ยาธิง อะนะตีตา, ตัง กุเตตถะ ลัพภา.',
+                'pali': 'สัพเพ สัตตา พ๎ยาธิธัมมา พ๎ยาธิง อะนะตีตา, ตัง กุเตตถะ ลัพภา.',
                 'pali_roman': 'Sabbe sattā byādhidhammā byādhiṃ anatītā, taṃ kutettha labbhā.',
                 'thai': '',
                 'paiboon': '',
@@ -41501,7 +41535,7 @@ CHANTS = [
             {
                 'number': 19,
                 'page': 107,
-                'pali': 'นะ โข ปะนะ มัย์หะเมวะ สัพเพหิ ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.',
+                'pali': 'นะ โข ปะนะ มัย๎หะเมวะ สัพเพหิ ปิเยหิ มะนาเปหิ นานาภาโว วินาภาโว.',
                 'pali_roman': 'Na kho pana mayhameva sabbehi piyehi manāpehi nānābhāvo vinābhāvo.',
                 'thai': '',
                 'paiboon': '',
@@ -41537,7 +41571,7 @@ CHANTS = [
             {
                 'number': 23,
                 'page': 107,
-                'pali': 'นะ โข ปะนาหะเมวะ กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามิ.',
+                'pali': 'นะ โข ปะนาหะเมวะ กัมมัสสะโกมหิ กัมมะทายาโท กัมมะโยนิ กัมมะพันธุ กัมมะปะฏิสะระโณ, ยัง กัมมัง กะริสสามิ กัล๎ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาโท ภะวิสสามิ.',
                 'pali_roman': 'Na kho panāhameva kammassakomhi kammadāyādo kammayoni kammabandhu kammapaṭisaraṇo, yaṃ kammaṃ karissāmi kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādo bhavissāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -41555,7 +41589,7 @@ CHANTS = [
             {
                 'number': 25,
                 'page': 107,
-                'pali': 'สัพเพ สัตตา กัมมัสสะกา กัมมะทายาทา กัมมะโยนี กัมมะพันธุ กัมมะปะฏิสะระณา, ยัง กัมมัง กะริสสันติ กัล์ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาทา ภะวิสสันติ, ตัง กุเตตถะ ลัพภาติ.',
+                'pali': 'สัพเพ สัตตา กัมมัสสะกา กัมมะทายาทา กัมมะโยนี กัมมะพันธุ กัมมะปะฏิสะระณา, ยัง กัมมัง กะริสสันติ กัล๎ยาณัง วา ปาปะกัง วา, ตัสสะ ทายาทา ภะวิสสันติ, ตัง กุเตตถะ ลัพภาติ.',
                 'pali_roman': 'Sabbe sattā kammassakā kammadāyādā kammayonī kammabandhu kammapaṭisaraṇā, yaṃ kammaṃ karissanti kalyāṇaṃ vā pāpakaṃ vā, tassa dāyādā bhavissanti, taṃ kutettha labbhāti.',
                 'thai': '',
                 'paiboon': '',
@@ -41624,7 +41658,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'อัคคัส์มิง ทานัง ทะทะตัง อัคคัง ปุญญัง ปะวัฑฒะติ',
+                'pali': 'อัคคัส๎มิง ทานัง ทะทะตัง อัคคัง ปุญญัง ปะวัฑฒะติ',
                 'pali_roman': 'Aggasmiṃ dānaṃ dadataṃ aggaṃ puññaṃ pavaḍḍhati',
                 'thai': '',
                 'paiboon': '',
@@ -41722,7 +41756,7 @@ CHANTS = [
             #   Saṅgha'. The indent is the book's own paragraphing.
             {
                 'number': 5,
-                'pali': 'อะยัญจะ โข ทักขิณา ทินนา สังฆัม์หิ สุปะติฏฐิตา',
+                'pali': 'อะยัญจะ โข ทักขิณา ทินนา สังฆัม๎หิ สุปะติฏฐิตา',
                 'pali_roman': 'Ayañca kho dakkhiṇā dinnā saṅghamhi supatiṭṭhitā',
                 'thai': '',
                 'paiboon': '',
@@ -41817,7 +41851,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อายุง ทัต์วา พะลัง วัณณัง สุขัญจะ ปะฏิภาณะโท',
+                'pali': 'อายุง ทัต๎วา พะลัง วัณณัง สุขัญจะ ปะฏิภาณะโท',
                 'pali_roman': 'Āyuṃ datvā balaṃ vaṇṇaṃ sukhañca paṭibhāṇado',
                 'thai': '',
                 'paiboon': '',
@@ -42002,7 +42036,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 107,
-                'pali': 'สะเทวะโก อะยัง โลโก สะมาระโก สะพ์รัห์มะโก',
+                'pali': 'สะเทวะโก อะยัง โลโก สะมาระโก สะพ๎รัห๎มะโก',
                 'pali_roman': 'Sadevako ayaṃ loko samārako sabrahmako',
                 'thai': '',
                 'paiboon': '',
@@ -42041,7 +42075,7 @@ CHANTS = [
             {
                 'number': 5,
                 'page': 108,
-                'pali': 'สะยัง เตเนวะ คันต์วานะ ปัตโต โพธิมะนุตตะรัง',
+                'pali': 'สะยัง เตเนวะ คันต๎วานะ ปัตโต โพธิมะนุตตะรัง',
                 'pali_roman': 'Sayaṃ teneva gantvāna patto bodhimanuttaraṃ',
                 'thai': '',
                 'paiboon': '',
@@ -42050,7 +42084,7 @@ CHANTS = [
             {
                 'number': 6,
                 'page': 108,
-                'pali': 'สัมมานุปะฏิปัต์ยัตถัง สัตตานัง โพธิกามินัง.',
+                'pali': 'สัมมานุปะฏิปัต๎ยัตถัง สัตตานัง โพธิกามินัง.',
                 'pali_roman': 'Sammānupaṭipattyatthaṃ sattānaṃ bodhikāminaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -42411,7 +42445,7 @@ CHANTS = [
                 'page': 108,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. อะริยัง โว ภิกขะเว อัฏฐังคิกัง มัคคัง เทสิสสามิ วิภะชิสสามิ, ตัง สุณาถะ สาธุกัง มะนะสิกะโรถะ, ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. กะตะโม จะ ภิกขะเว อะริโย อัฏฐังคิโก มัคโค เสยยะถีทัง สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ.',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. อะริยัง โว ภิกขะเว อัฏฐังคิกัง มัคคัง เทสิสสามิ วิภะชิสสามิ, ตัง สุณาถะ สาธุกัง มะนะสิกะโรถะ, ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. กะตะโม จะ ภิกขะเว อะริโย อัฏฐังคิโก มัคโค เสยยะถีทัง สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ.',
                 'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Ariyaṃ vo bhikkhave aṭṭhaṅgikaṃ maggaṃ desissāmi vibhajissāmi, taṃ suṇātha sādhukaṃ manasikarotha, bhāsissāmīti. Evambhanteti kho te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Katamo ca bhikkhave ariyo aṭṭhaṅgiko maggo seyyathīdaṃ sammādiṭṭhi sammāsaṅkappo, sammāvācā sammākammanto sammā-ājīvo, sammāvāyāmo sammāsati sammāsamādhi.',
                 'thai': '',
                 'paiboon': '',
@@ -42431,7 +42465,7 @@ CHANTS = [
                 'number': 3,
                 'page': 108,
                 'para_start': True,
-                'pali': 'กะตะโม จะ ภิกขะเว สัมมาสังกัปโป, โย โข ภิกขะเว เนกขัมมะสังกัปโป, อัพ์ยาปาทะสังกัปโป อะวิหิงสาสังกัปโป. อะยัง วุจจะติ ภิกขะเว สัมมาสังกัปโป.',
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมาสังกัปโป, โย โข ภิกขะเว เนกขัมมะสังกัปโป, อัพ๎ยาปาทะสังกัปโป อะวิหิงสาสังกัปโป. อะยัง วุจจะติ ภิกขะเว สัมมาสังกัปโป.',
                 'pali_roman': 'Katamo ca bhikkhave sammāsaṅkappo, yo kho bhikkhave nekkhammasaṅkappo, abyāpādasaṅkappo avihiṃsāsaṅkappo. Ayaṃ vuccati bhikkhave sammāsaṅkappo.',
                 'thai': '',
                 'paiboon': '',
@@ -42470,7 +42504,7 @@ CHANTS = [
             {
                 'number': 5,
                 'para_start': True,
-                'pali': 'กะตะโม จะ ภิกขะเว สัมมากัมมันโต, ยา โข ภิกขะเว ปาณาติปาตา เวระมะณี, อะทินนาทานา เวระมะณี, อะพ์รัห์มะจะริยา เวระมะณี, อะยัง วุจจะติ ภิกขะเว สัมมากัมมันโต.',
+                'pali': 'กะตะโม จะ ภิกขะเว สัมมากัมมันโต, ยา โข ภิกขะเว ปาณาติปาตา เวระมะณี, อะทินนาทานา เวระมะณี, อะพ๎รัห๎มะจะริยา เวระมะณี, อะยัง วุจจะติ ภิกขะเว สัมมากัมมันโต.',
                 'pali_roman': 'Katamo ca bhikkhave sammākammanto, yā kho bhikkhave pāṇātipātā veramaṇī, adinnādānā veramaṇī, abrahmacariyā veramaṇī, ayaṃ vuccati bhikkhave sammākammanto.',
                 'thai': '',
                 'paiboon': '',
@@ -44730,7 +44764,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 254,
-                'pali': 'เถเร ปะมาเทนะ, ท์วารัตตะเยนะ กะตัง, สัพพัง อะปะราธัง ขะมะตุ โน ภันเต.',
+                'pali': 'เถเร ปะมาเทนะ, ท๎วารัตตะเยนะ กะตัง, สัพพัง อะปะราธัง ขะมะตุ โน ภันเต.',
                 'pali_roman': 'There pamādena, dvārattayena kataṃ, sabbaṃ aparādhaṃ khamatu no bhante.',
                 'thai': '',
                 'paiboon': '',
@@ -44968,7 +45002,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'ยะทัชฌะคา สัก์ยะมุนี สะมาหิโต',
+                'pali': 'ยะทัชฌะคา สัก๎ยะมุนี สะมาหิโต',
                 'pali_roman': 'Yadajjhagā sakyamunī samāhito',
                 'thai': '',
                 'paiboon': '',
@@ -45144,7 +45178,7 @@ CHANTS = [
             },
             {
                 'number': 35,
-                'pali': 'วิรัตตะจิตตายะติเก ภะวัส์มิง',
+                'pali': 'วิรัตตะจิตตายะติเก ภะวัส๎มิง',
                 'pali_roman': 'Virattacittāyatike bhavasmiṃ',
                 'thai': '',
                 'paiboon': '',
@@ -45237,7 +45271,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 111,
-                'pali': 'วิเนตา สุขะมัคคัส์มิง เวเนยเย วินะยัง มุนิ',
+                'pali': 'วิเนตา สุขะมัคคัส๎มิง เวเนยเย วินะยัง มุนิ',
                 'pali_roman': 'Vinetā sukhamaggasmiṃ veneyye vinayaṃ muni',
                 'thai': '',
                 'paiboon': '',
@@ -45264,7 +45298,7 @@ CHANTS = [
             {
                 'number': 4,
                 'page': 111,
-                'pali': 'สุต์วา ตะถานุการายะ ตัง สุตตันตัง ภะณามะ เส.',
+                'pali': 'สุต๎วา ตะถานุการายะ ตัง สุตตันตัง ภะณามะ เส.',
                 'pali_roman': 'Sutvā tathānukārāya taṃ suttantaṃ bhaṇāma se.',
                 'thai': '',
                 'paiboon': '',
@@ -45333,7 +45367,7 @@ CHANTS = [
                 'page': 111,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. อะถะโข อายัส์มา อานันโท, เยนะ ภะคะวา เตนุปะสังกะมิ, อุปะสังกะมิต์วา ภะคะวันตัง อะภิวาเทต์วา เอกะมันตัง นิสีทิ, เอกะมันตัง นิสินนัง โข อายัส์มันตัง อานันทัง ภะคะวา เอตะทะโวจะ. เอกังเสนาหัง อานันทะ อะกะระณียัง วะทามิ. กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, โก อาทีนะโว ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข. อัตตาปิ อัตตานัง อุปะวะทะติ, อะนุวิจจะ วิญญู คะระหันติ, ปาปะโก กิตติสัทโท อัพภุคคัจฉะติ, สัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา อะปายัง ทุคคะติง วินิปาตัง นิระยัง อุปะปัชชะติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส์มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข.',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. อะถะโข อายัส๎มา อานันโท, เยนะ ภะคะวา เตนุปะสังกะมิ, อุปะสังกะมิต๎วา ภะคะวันตัง อะภิวาเทต๎วา เอกะมันตัง นิสีทิ, เอกะมันตัง นิสินนัง โข อายัส๎มันตัง อานันทัง ภะคะวา เอตะทะโวจะ. เอกังเสนาหัง อานันทะ อะกะระณียัง วะทามิ. กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส๎มิง อะกะระณีเย กะยิระมาเน, โก อาทีนะโว ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส๎มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข. อัตตาปิ อัตตานัง อุปะวะทะติ, อะนุวิจจะ วิญญู คะระหันติ, ปาปะโก กิตติสัทโท อัพภุคคัจฉะติ, สัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา อะปายัง ทุคคะติง วินิปาตัง นิระยัง อุปะปัชชะติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ อะกะระณียัง อักขาตัง, กายะทุจจะริตัง วะจีทุจจะริตัง มะโนทุจจะริตัง. ตัส๎มิง อะกะระณีเย กะยิระมาเน, อะยัง อาทีนะโว ปาฏิกังโข.',
                 'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Athakho āyasmā ānando, yena bhagavā tenupasaṅkami, upasaṅkamitvā bhagavantaṃ abhivādetvā ekamantaṃ nisīdi, ekamantaṃ nisinnaṃ kho āyasmantaṃ ānandaṃ bhagavā etadavoca. Ekaṃsenāhaṃ ānanda akaraṇīyaṃ vadāmi. kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ko ādīnavo pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ayaṃ ādīnavo pāṭikaṅkho. Attāpi attānaṃ upavadati, anuvicca viññū garahanti, pāpako kittisaddo abbhuggacchati, sammūḷho kālaṃ karoti, kāyassa bhedā parammaraṇā apāyaṃ duggatiṃ vinipātaṃ nirayaṃ upapajjati. Yamidaṃ ānanda mayā ekaṃsena akaraṇīyaṃ akkhātaṃ, kāyaduccaritaṃ vacīduccaritaṃ manoduccaritaṃ. Tasmiṃ akaraṇīye kayiramāne, ayaṃ ādīnavo pāṭikaṅkho.',
                 'thai': '',
                 'paiboon': '',
@@ -45393,7 +45427,7 @@ CHANTS = [
                 'number': 2,
                 'page': 112,
                 'para_start': True,
-                'pali': 'เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง, ตัส์มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโข. อัตตาปิ อัตตานัง นะ อุปะวะทะติ, อะนุวิจจะ วิญญู ปะสังสันติ, กัล์ยาโณ กิตติสัทโท อัพภุคคัจฉะติ, อะสัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา สุคะติง สัคคัง โลกัง อุปะปัชชะติ, ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส์มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโขติ. อิทะมะโวจะ ภะคะวา, อัตตะมะโน อายัส์มา อานันโท ภะคะวะโต ภาสิตัง อะภินันทีติ.',
+                'pali': 'เอกังเสนาหัง อานันทะ กะระณียัง วะทามิ. กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตังติ. ยะมิทัง ภันเต ภะคะวะตา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส๎มิง กะระณีเย กะยิระมาเน, โก อานิสังโส ปาฏิกังโขติ. ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง, ตัส๎มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโข. อัตตาปิ อัตตานัง นะ อุปะวะทะติ, อะนุวิจจะ วิญญู ปะสังสันติ, กัล๎ยาโณ กิตติสัทโท อัพภุคคัจฉะติ, อะสัมมุฬโห กาลัง กะโรติ, กายัสสะ เภทา ปะรัมมะระณา สุคะติง สัคคัง โลกัง อุปะปัชชะติ, ยะมิทัง อานันทะ มะยา เอกังเสนะ กะระณียัง อักขาตัง, กายะสุจะริตัง วะจีสุจะริตัง มะโนสุจะริตัง. ตัส๎มิง กะระณีเย กะยิระมาเน, อะยัง อานิสังโส ปาฏิกังโขติ. อิทะมะโวจะ ภะคะวา, อัตตะมะโน อายัส๎มา อานันโท ภะคะวะโต ภาสิตัง อะภินันทีติ.',
                 'pali_roman': 'Ekaṃsenāhaṃ ānanda karaṇīyaṃ vadāmi. kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃti. Yamidaṃ bhante bhagavatā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ko ānisaṃso pāṭikaṅkhoti. Yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ, tasmiṃ karaṇīye kayiramāne, ayaṃ ānisaṃso pāṭikaṅkho. Attāpi attānaṃ na upavadati, anuvicca viññū pasaṃsanti, kalyāṇo kittisaddo abbhuggacchati, asammūḷho kālaṃ karoti, kāyassa bhedā parammaraṇā sugatiṃ saggaṃ lokaṃ upapajjati, yamidaṃ ānanda mayā ekaṃsena karaṇīyaṃ akkhātaṃ, kāyasucaritaṃ vacīsucaritaṃ manosucaritaṃ. Tasmiṃ karaṇīye kayiramāne, ayaṃ ānisaṃso pāṭikaṅkhoti. Idamavoca bhagavā, attamano āyasmā ānando bhagavato bhāsitaṃ abhinandīti.',
                 'thai': '',
                 'paiboon': '',
@@ -45613,7 +45647,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'ยะโต จะ โข ตุมเห อัจจะยัง อัจจะยะโต ทิส์วา,',
+                'pali': 'ยะโต จะ โข ตุมเห อัจจะยัง อัจจะยะโต ทิส๎วา,',
                 'pali_roman': 'yato ca kho tumhe accayaṃ accayato disvā,',
                 'thai': '',
                 'paiboon': '',
@@ -45653,7 +45687,7 @@ CHANTS = [
             },
             {
                 'number': 14,
-                'pali': 'โย อัจจะยัง อัจจะยะโต ทิส์วา ยะถาธัมมัง ปะฏิกกะโรติ,',
+                'pali': 'โย อัจจะยัง อัจจะยะโต ทิส๎วา ยะถาธัมมัง ปะฏิกกะโรติ,',
                 'pali_roman': 'yo accayaṃ accayato disvā yathādhammaṃ paṭikkaroti,',
                 'thai': '',
                 'paiboon': '',
@@ -45708,7 +45742,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'ตัง ตัง อายัส์มันตานัง อาทิสสามิ,',
+                'pali': 'ตัง ตัง อายัส๎มันตานัง อาทิสสามิ,',
                 'pali_roman': 'taṃ taṃ āyasmantānaṃ ādissāmi,',
                 'thai': '',
                 'paiboon': '',
@@ -45716,7 +45750,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'สาธายัส์มันโต อัส์มิง อัส์มิง ปุญเญ ปัตติกา หุต์วา อะนุโมทันตุ,',
+                'pali': 'สาธายัส๎มันโต อัส๎มิง อัส๎มิง ปุญเญ ปัตติกา หุต๎วา อะนุโมทันตุ,',
                 'pali_roman': 'sādhāyasmanto asmiṃ asmiṃ puññe pattikā hutvā anumodantu,',
                 'thai': '',
                 'paiboon': '',
@@ -45732,7 +45766,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'จิรัง ทีฆะมัทธานัง อิมัส์มิง ตะถาคะตัปปะเวทิเต ธัมมะวินะเย,',
+                'pali': 'จิรัง ทีฆะมัทธานัง อิมัส๎มิง ตะถาคะตัปปะเวทิเต ธัมมะวินะเย,',
                 'pali_roman': 'ciraṃ dīghamaddhānaṃ imasmiṃ tathāgatappavedite dhammavinaye,',
                 'thai': '',
                 'paiboon': '',
@@ -45794,7 +45828,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 112,
-                'pali': 'ยานิ ยาน์ยัคคะภูตานิ สัมมะตานิ ตะถา ตะถา',
+                'pali': 'ยานิ ยาน๎ยัคคะภูตานิ สัมมะตานิ ตะถา ตะถา',
                 'pali_roman': 'Yāni yānyaggabhūtāni sammatāni tathā tathā',
                 'thai': '',
                 'paiboon': '',
@@ -45892,7 +45926,7 @@ CHANTS = [
                 'page': 112,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. จัตตาโร เม ภิกขะเว อัคคัปปะสาทา. กะตะเม จัตตาโร.',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. จัตตาโร เม ภิกขะเว อัคคัปปะสาทา. กะตะเม จัตตาโร.',
                 'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Cattāro me bhikkhave aggappasādā. Katame cattāro.',
                 'thai': '',
                 'paiboon': '',
@@ -45907,7 +45941,7 @@ CHANTS = [
                 'number': 2,
                 'page': 112,
                 'para_start': True,
-                'pali': 'ยาวะตา ภิกขะเว สัตตา อะปะทา วา ท์วิปะทา วา จะตุปปะทา วา พะหุปปะทา วา, รูปิโน วา อะรูปิโน วา, สัญญิโน วา อะสัญญิโน วา เนวะสัญญีนาสัญญิโน วา, ตะถาคะโต เตสัง อัคคะมักขายะติ อะระหัง สัมมาสัมพุทโธ. เย ภิกขะเว พุทเธ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.',
+                'pali': 'ยาวะตา ภิกขะเว สัตตา อะปะทา วา ท๎วิปะทา วา จะตุปปะทา วา พะหุปปะทา วา, รูปิโน วา อะรูปิโน วา, สัญญิโน วา อะสัญญิโน วา เนวะสัญญีนาสัญญิโน วา, ตะถาคะโต เตสัง อัคคะมักขายะติ อะระหัง สัมมาสัมพุทโธ. เย ภิกขะเว พุทเธ ปะสันนา อัคเค เต ปะสันนา, อัคเค โข ปะนะ ปะสันนานัง อัคโค วิปาโก โหติ.',
                 'pali_roman': 'Yāvatā bhikkhave sattā apadā vā dvipadā vā catuppadā vā bahuppadā vā, rūpino vā arūpino vā, saññino vā asaññino vā nevasaññīnāsaññino vā, tathāgato tesaṃ aggamakkhāyati arahaṃ sammāsambuddho. Ye bhikkhave buddhe pasannā agge te pasannā, agge kho pana pasannānaṃ aggo vipāko hoti.',
                 'thai': '',
                 'paiboon': '',
@@ -45954,7 +45988,7 @@ CHANTS = [
                 'number': 6,
                 'page': 113,
                 'para_start': True,
-                'pali': 'อิเม โข ภิกขะเว จัตตาโร อัคคัปปะสาทาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
+                'pali': 'อิเม โข ภิกขะเว จัตตาโร อัคคัปปะสาทาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต๎วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
                 'pali_roman': 'Ime kho bhikkhave cattāro aggappasādāti. Idamavoca bhagavā. Idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.',
                 'thai': '',
                 'paiboon': '',
@@ -46016,7 +46050,7 @@ CHANTS = [
             {
                 'number': 11,
                 'page': 113,
-                'pali': 'อัคคัส์มิง ทานัง ทะทะตัง อัคคัง ปุญญัง ปะวัฑฒะติ',
+                'pali': 'อัคคัส๎มิง ทานัง ทะทะตัง อัคคัง ปุญญัง ปะวัฑฒะติ',
                 'pali_roman': 'Aggasmiṃ dānaṃ dadataṃ aggaṃ puññaṃ pavaḍḍhati',
                 'thai': '',
                 'paiboon': '',
@@ -46099,7 +46133,7 @@ CHANTS = [
             },
             {
                 'number': 3,
-                'pali': 'อุปปัชชิต์วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.',
+                'pali': 'อุปปัชชิต๎วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.',
                 'pali_roman': 'Uppajjitvā nirujjhanti tesaṃ vūpasamo sukho.',
                 'thai': '',
                 'paiboon': '',
@@ -46123,7 +46157,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'อุปปัชชิต์วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.',
+                'pali': 'อุปปัชชิต๎วา นิรุชฌันติ เตสัง วูปะสะโม สุโข.',
                 'pali_roman': 'Uppajjitvā nirujjhanti tesaṃ vūpasamo sukho.',
                 'thai': '',
                 'paiboon': '',
@@ -46376,7 +46410,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'สัพพะทุกขะวินาสายะ ปะริตตัง พ์รูถะ มังคะลัง.',
+                'pali': 'สัพพะทุกขะวินาสายะ ปะริตตัง พ๎รูถะ มังคะลัง.',
                 'pali_roman': 'Sabbadukkhavināsāya parittaṃ brūtha maṅgalaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -46392,7 +46426,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'สัพพะภะยะวินาสายะ ปะริตตัง พ์รูถะ มังคะลัง.',
+                'pali': 'สัพพะภะยะวินาสายะ ปะริตตัง พ๎รูถะ มังคะลัง.',
                 'pali_roman': 'Sabbabhayavināsāya parittaṃ brūtha maṅgalaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -46408,7 +46442,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'สัพพะโรคะวินาสายะ ปะริตตัง พ์รูถะ มังคะลัง.',
+                'pali': 'สัพพะโรคะวินาสายะ ปะริตตัง พ๎รูถะ มังคะลัง.',
                 'pali_roman': 'Sabbarogavināsāya parittaṃ brūtha maṅgalaṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -46439,7 +46473,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 250,
-                'pali': 'พ์รัห์มา จะ โลกาธิปะตี สะหัมปะติ',
+                'pali': 'พ๎รัห๎มา จะ โลกาธิปะตี สะหัมปะติ',
                 'pali_roman': 'Brahmā ca lokādhipatī sahampati',
                 'thai': '',
                 'paiboon': '',
@@ -46508,7 +46542,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 250,
-                'pali': 'พ์รัห์มา จะ โลกาธิปะตี สะหัมปะติ',
+                'pali': 'พ๎รัห๎มา จะ โลกาธิปะตี สะหัมปะติ',
                 'pali_roman': 'Brahmā ca lokādhipatī sahampati',
                 'thai': '',
                 'paiboon': '',
@@ -46543,7 +46577,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'เอวัญหิ โลกาภิมะเตนะ พ์รัห์มุนา',
+                'pali': 'เอวัญหิ โลกาภิมะเตนะ พ๎รัห๎มุนา',
                 'pali_roman': 'Evañhi lokābhimatena brahmunā',
                 'thai': '',
                 'paiboon': '',
@@ -46608,7 +46642,7 @@ CHANTS = [
             },
             {
                 'number': 13,
-                'pali': 'อะปารุตา เต อะมะตัสสะ ท์วารา',
+                'pali': 'อะปารุตา เต อะมะตัสสะ ท๎วารา',
                 'pali_roman': 'Apārutā te amatassa dvārā',
                 'thai': '',
                 'paiboon': '',
@@ -46632,7 +46666,7 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'ธัมมัง ปะณีตัง มะนุเชสุ พ์รัห์เม.',
+                'pali': 'ธัมมัง ปะณีตัง มะนุเชสุ พ๎รัห๎เม.',
                 'pali_roman': 'Dhammaṃ paṇītaṃ manujesu brahme.',
                 'thai': '',
                 'paiboon': '',
@@ -46744,7 +46778,7 @@ CHANTS = [
             },
             {
                 'number': 30,
-                'pali': 'อะยัญจะ ปะริสา สัพพา อัฏฐิกัต์วา สุณาตุ ตัง.',
+                'pali': 'อะยัญจะ ปะริสา สัพพา อัฏฐิกัต๎วา สุณาตุ ตัง.',
                 'pali_roman': 'Ayañca parisā sabbā aṭṭhikatvā suṇātu taṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -47004,7 +47038,7 @@ CHANTS = [
             {
                 'number': 7,
                 'page': 114,
-                'pali': 'สุต์วานานุกะระเณนะ ยะถา พุทเธนะ เทสิตัง',
+                'pali': 'สุต๎วานานุกะระเณนะ ยะถา พุทเธนะ เทสิตัง',
                 'pali_roman': 'Sutvānānukaraṇena yathā buddhena desitaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -47061,7 +47095,7 @@ CHANTS = [
                 'page': 114,
                 'para_start': True,
                 'para_layout': 'prose',
-                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. ฉะยิเม ภิกขะเว ธัมมา สาราณียา ปิยะกะระณา คะรุกะระณา, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตันติ กะตะเม ฉะ.',
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต๎ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. ฉะยิเม ภิกขะเว ธัมมา สาราณียา ปิยะกะระณา คะรุกะระณา, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตันติ กะตะเม ฉะ.',
                 'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca. Chayime bhikkhave dhammā sārāṇīyā piyakaraṇā garukaraṇā, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattanti katame cha.',
                 'thai': '',
                 'paiboon': '',
@@ -47080,7 +47114,7 @@ CHANTS = [
                 'page': 114,
                 'printed_number': 1,
                 'para_start': True,
-                'pali': 'อิธะ ภิกขะเว ภิกขุโน เมตตัง กายะกัมมัง ปัจจุปัฏฐิตัง โหติ. สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
+                'pali': 'อิธะ ภิกขะเว ภิกขุโน เมตตัง กายะกัมมัง ปัจจุปัฏฐิตัง โหติ. สะพ๎รัห๎มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
                 'pali_roman': 'Idha bhikkhave bhikkhuno mettaṃ kāyakammaṃ paccupaṭṭhitaṃ hoti. Sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.',
                 'thai': '',
                 'paiboon': '',
@@ -47091,7 +47125,7 @@ CHANTS = [
                 'page': 114,
                 'printed_number': 2,
                 'para_start': True,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง วะจีกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง วะจีกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ๎รัห๎มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
                 'pali_roman': 'Puna caparaṃ bhikkhave bhikkhuno mettaṃ vacīkammaṃ paccupaṭṭhitaṃ hoti, sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.',
                 'thai': '',
                 'paiboon': '',
@@ -47102,7 +47136,7 @@ CHANTS = [
                 'page': 114,
                 'printed_number': 3,
                 'para_start': True,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง มะโนกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ์รัห์มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุโน เมตตัง มะโนกัมมัง ปัจจุปัฏฐิตัง โหติ, สะพ๎รัห๎มะจารีสุ อาวิ เจวะ ระโห จะ, อะยัมปิ ธัมโม สาราณีโย ปิยะกะระโณ คะรุกะระโณ, สังคะหายะ อะวิวาทายะ สามัคคิยา เอกีภาวายะ สังวัตตะติ.',
                 'pali_roman': 'Puna caparaṃ bhikkhave bhikkhuno mettaṃ manokammaṃ paccupaṭṭhitaṃ hoti, sabrahmacārīsu āvi ceva raho ca, ayampi dhammo sārāṇīyo piyakaraṇo garukaraṇo, saṅgahāya avivādāya sāmaggiyā ekībhāvāya saṃvattati.',
                 'thai': '',
                 'paiboon': '',
@@ -47885,7 +47919,7 @@ CHANTS = [
             },
             {
                 'number': 74,
-                'pali': 'ยามา อิสสะโร กุสะลา ธัมมา พ์รัห์มาสัททะ ปัญจะ สัตตา สัตตาปาระมี อะนุตตะโร ยะมะกะขะ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
+                'pali': 'ยามา อิสสะโร กุสะลา ธัมมา พ๎รัห๎มาสัททะ ปัญจะ สัตตา สัตตาปาระมี อะนุตตะโร ยะมะกะขะ ยาวะชีวัง พุทธัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'yāmā issaro kusalā dhammā brahmāsadda pañca sattā sattāpāramī anuttaro yamakakha yāvajīvaṃ buddhaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -47928,7 +47962,7 @@ CHANTS = [
             #   as printed.
             {
                 'number': 78,
-                'pali': 'พ์รัห์มา อิสสะโร กุสะลา ธัมมา นัตถิปัจจะยา วินะปัญจะ ภะคะวะตา ยาวะนิพพานัง สะระณัง คัจฉามิ.',
+                'pali': 'พ๎รัห๎มา อิสสะโร กุสะลา ธัมมา นัตถิปัจจะยา วินะปัญจะ ภะคะวะตา ยาวะนิพพานัง สะระณัง คัจฉามิ.',
                 'pali_roman': 'brahmā issaro kusalā dhammā natthipaccayā vinapañca bhagavatā yāvanibbānaṃ saraṇaṃ gacchāmi.',
                 'thai': '',
                 'paiboon': '',
@@ -47958,7 +47992,7 @@ CHANTS = [
             },
             {
                 'number': 81,
-                'pali': 'อินทะสาวัง มะหาอินทะสาวัง พ์รัห์มะสาวัง มะหาพ์รัห์มะสาวัง จักกะวัตติสาวัง มะหาจักกะวัตติสาวัง เทวาสาวัง มะหาเทวาสาวัง อิสิสาวัง มะหาอิสิสาวัง มุนีสาวัง มะหามุนีสาวัง สัปปุริสะสาวัง มะหาสัปปุริสะสาวัง พุทธะสาวัง ปัจเจกะพุทธะสาวัง อะระหัตตะสาวัง สัพพะสิทธิวิชชาธาระณังสาวัง สัพพะโลกา อิริยานังสาวัง เอเตนะ สัจเจนะ สุวัตถิ โหนตุ.',
+                'pali': 'อินทะสาวัง มะหาอินทะสาวัง พ๎รัห๎มะสาวัง มะหาพ๎รัห๎มะสาวัง จักกะวัตติสาวัง มะหาจักกะวัตติสาวัง เทวาสาวัง มะหาเทวาสาวัง อิสิสาวัง มะหาอิสิสาวัง มุนีสาวัง มะหามุนีสาวัง สัปปุริสะสาวัง มะหาสัปปุริสะสาวัง พุทธะสาวัง ปัจเจกะพุทธะสาวัง อะระหัตตะสาวัง สัพพะสิทธิวิชชาธาระณังสาวัง สัพพะโลกา อิริยานังสาวัง เอเตนะ สัจเจนะ สุวัตถิ โหนตุ.',
                 'pali_roman': 'indasāvaṃ mahāindasāvaṃ brahmasāvaṃ mahābrahmasāvaṃ cakkavattisāvaṃ mahācakkavattisāvaṃ devāsāvaṃ mahādevāsāvaṃ isisāvaṃ mahāisisāvaṃ munīsāvaṃ mahāmunīsāvaṃ sappurisasāvaṃ mahāsappurisasāvaṃ buddhasāvaṃ paccekabuddhasāvaṃ arahattasāvaṃ sabbasiddhivijjādhāraṇaṃsāvaṃ sabbalokā iriyānaṃsāvaṃ etena saccena suvatthi hontu.',
                 'thai': '',
                 'paiboon': '',
@@ -48001,7 +48035,7 @@ CHANTS = [
             #   ธัมโม. The verse belongs to 244, where it starts.
             {
                 'number': 84,
-                'pali': 'นะโม ธัมมัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม ส์วากขาโต ภะคะวะตา ธัมโม.',
+                'pali': 'นะโม ธัมมัสสะ ทุกขัง อะนิจจัง อะนัตตา รูปะขันโธ เวทะนาขันโธ สัญญาขันโธ สังขาระขันโธ วิญญาณะขันโธ นะโม ส๎วากขาโต ภะคะวะตา ธัมโม.',
                 'pali_roman': 'namo dhammassa dukkhaṃ aniccaṃ anattā rūpakhandho vedanākhandho saññākhandho saṅkhārakhandho viññāṇakhandho namo svākkhāto bhagavatā dhammo.',
                 'thai': '',
                 'paiboon': '',
@@ -48472,7 +48506,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'พ์รัห์มะมารา จะ อินทา จะ',
+                'pali': 'พ๎รัห๎มะมารา จะ อินทา จะ',
                 'pali_roman': 'Brahmamārā ca indā ca',
                 'thai': 'พรหม มาร และอินทราช',
                 'paiboon': '',
@@ -49171,7 +49205,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 237,
-                'pali': 'อัตถิ อุณ์หิสสะ วิชะโย ธัมโม โลเก อะนุตตะโร',
+                'pali': 'อัตถิ อุณ๎หิสสะ วิชะโย ธัมโม โลเก อะนุตตะโร',
                 'pali_roman': 'atthi uṇhissa vijayo dhammo loke anuttaro',
                 'thai': '',
                 'paiboon': '',
@@ -49179,7 +49213,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'สัพพะสัตตะหิตัตถายะ ตัง ต์วัง คัณหาหิ เทวะเต',
+                'pali': 'สัพพะสัตตะหิตัตถายะ ตัง ต๎วัง คัณหาหิ เทวะเต',
                 'pali_roman': 'sabbasattahitatthāya taṃ tvaṃ gaṇhāhi devate',
                 'thai': '',
                 'paiboon': '',
@@ -49195,7 +49229,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'พ์ยัคเฆ นาเค วิเส ภูเต อะกาละมะระเณนะ วา',
+                'pali': 'พ๎ยัคเฆ นาเค วิเส ภูเต อะกาละมะระเณนะ วา',
                 'pali_roman': 'byagghe nāge vise bhūte akālamaraṇena vā',
                 'thai': '',
                 'paiboon': '',
@@ -49203,7 +49237,7 @@ CHANTS = [
             },
             {
                 'number': 5,
-                'pali': 'สัพพัส์มา มะระณา มุตโต ฐะเปต์วา กาละมาริตัง',
+                'pali': 'สัพพัส๎มา มะระณา มุตโต ฐะเปต๎วา กาละมาริตัง',
                 'pali_roman': 'sabbasmā maraṇā mutto ṭhapetvā kālamāritaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -49247,7 +49281,7 @@ CHANTS = [
             #   Latin only.
             {
                 'number': 10,
-                'pali': 'ปะเรสัง เทสะนัง สุต์วา ตัสสะ อายุ ปะวัฑฒะติ ฯ',
+                'pali': 'ปะเรสัง เทสะนัง สุต๎วา ตัสสะ อายุ ปะวัฑฒะติ ฯ',
                 'pali_roman': 'paresaṃ desanaṃ sutvā tassa āyu pavaḍḍhati',
                 'thai': '',
                 'paiboon': '',
@@ -49329,7 +49363,7 @@ CHANTS = [
             {
                 'number': 4,
                 'printed_number': 1,
-                'pali': 'ชะยาสะนาคะตา พุทธา เชต์วา มารัง สะวาหะนัง',
+                'pali': 'ชะยาสะนาคะตา พุทธา เชต๎วา มารัง สะวาหะนัง',
                 'pali_roman': 'jayāsanāgatā buddhā jetvā māraṃ savāhanaṃ',
                 'thai': '',
                 'paiboon': '',
@@ -49371,7 +49405,7 @@ CHANTS = [
             {
                 'number': 8,
                 'printed_number': 3,
-                'pali': 'สีเส ปะติฏฐิโต มัยหัง พุทโธ ธัมโม ท์วิโลจะเน',
+                'pali': 'สีเส ปะติฏฐิโต มัยหัง พุทโธ ธัมโม ท๎วิโลจะเน',
                 'pali_roman': 'sīse patiṭṭhito mayhaṃ buddho dhammo dvilocane',
                 'thai': '',
                 'paiboon': '',
@@ -49396,7 +49430,7 @@ CHANTS = [
             },
             {
                 'number': 11,
-                'pali': 'โกณฑัญโญ ปิฏฐิภาคัส์มิง โมคคัลลาโน จะ วามะเก',
+                'pali': 'โกณฑัญโญ ปิฏฐิภาคัส๎มิง โมคคัลลาโน จะ วามะเก',
                 'pali_roman': 'koṇḍañño piṭṭhibhāgasmiṃ moggallāno ca vāmake',
                 'thai': '',
                 'paiboon': '',
@@ -49427,7 +49461,7 @@ CHANTS = [
             {
                 'number': 14,
                 'printed_number': 6,
-                'pali': 'เกสะโต ปิฏฐิภาคัส์มิง สุริโยวะ ปะภังกะโร',
+                'pali': 'เกสะโต ปิฏฐิภาคัส๎มิง สุริโยวะ ปะภังกะโร',
                 'pali_roman': 'kesato piṭṭhibhāgasmiṃ suriyova pabhaṅkaro',
                 'thai': '',
                 'paiboon': '',
@@ -50650,7 +50684,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง จีวะรัง ปะริภุตตัง,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง จีวะรัง ปะริภุตตัง,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ cīvaraṃ paribhuttaṃ,',
                 'thai': 'จีวรใด อันเรานุ่งห่มแล้ว, ไม่ทันพิจารณา ในวันนี้,',
                 'paiboon': '',
@@ -50706,7 +50740,7 @@ CHANTS = [
             },
             {
                 'number': 8,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย ปิณฑะปาโต ปะริภุตโต,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา โย ปิณฑะปาโต ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo piṇḍapāto paribhutto,',
                 'thai': 'บิณฑบาตใด อันเราบริโภคแล้ว, ไม่ทันพิจารณาในวันนี้,',
                 'paiboon': '',
@@ -50714,7 +50748,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'โส เนวะ ท์วายะ,',
+                'pali': 'โส เนวะ ท๎วายะ,',
                 'pali_roman': 'So neva dvāya,',
                 'thai': 'บิณฑบาตนั้นเราบริโภคแล้ว, ไม่ใช่เป็นไปเพื่อความเพลิดเพลิน สนุกสนาน,',
                 'paiboon': '',
@@ -50771,7 +50805,7 @@ CHANTS = [
             },
             {
                 'number': 16,
-                'pali': 'พ์รัห์มะจะริยานุคคะหายะ,',
+                'pali': 'พ๎รัห๎มะจะริยานุคคะหายะ,',
                 'pali_roman': 'Brahmacariyānuggahāya,',
                 'thai': 'เพื่ออนุเคราะห์แก่การประพฤติพรหมจรรย์,',
                 'paiboon': '',
@@ -50795,7 +50829,7 @@ CHANTS = [
             },
             {
                 'number': 19,
-                'pali': 'ยาต์รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.',
+                'pali': 'ยาต๎รา จะ เม ภะวิสสะติ อะนะวัชชะตา จะ ผาสุวิหาโร จาติ.',
                 'pali_roman': 'Yātrā ca me bhavissati anavajjatā ca phāsuvihāro cāti.',
                 'thai': 'อนึ่ง ความเป็นไปโดยสะดวกแห่งอัตภาพนี้ด้วย, ความเป็นผู้หาโทษมิได้ด้วย, และความเป็นอยู่โดยผาสุกด้วย, จักมีแก่เรา ดังนี้.',
                 'paiboon': '',
@@ -50811,7 +50845,7 @@ CHANTS = [
             },
             {
                 'number': 21,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา ยัง เสนาสะนัง ปะริภุตตัง,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา ยัง เสนาสะนัง ปะริภุตตัง,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yaṃ senāsanaṃ paribhuttaṃ,',
                 'thai': 'เสนาสนะใด อันเราใช้สอยแล้ว, ไม่ทันพิจารณาในวันนี้,',
                 'paiboon': '',
@@ -50860,7 +50894,7 @@ CHANTS = [
             },
             {
                 'number': 27,
-                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต์วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,',
+                'pali': 'อัชชะ มะยา อะปัจจะเวกขิต๎วา โย คิลานะปัจจะยะเภสัชชะปะริกขาโร ปะริภุตโต,',
                 'pali_roman': 'Ajja mayā apaccavekkhitvā yo gilānapaccayabhesajjaparikkhāro paribhutto,',
                 'thai': 'คิลานเภสัชบริขารใด อันเราบริโภคแล้ว, ไม่ทันพิจารณา ในวันนี้,',
                 'paiboon': '',
@@ -50876,7 +50910,7 @@ CHANTS = [
             },
             {
                 'number': 29,
-                'pali': 'อัพ์ยาปัชฌะปะระมะตายาติ.',
+                'pali': 'อัพ๎ยาปัชฌะปะระมะตายาติ.',
                 'pali_roman': 'Abyāpajjhaparamatāyāti.',
                 'thai': 'เพื่อความเป็นผู้ไม่มีโรคเบียดเบียนเป็นอย่างยิ่ง ดังนี้.',
                 'paiboon': '',
@@ -51308,7 +51342,7 @@ CHANTS = [
             #   232; the mark is plainly there.
             {
                 'number': 7,
-                'pali': 'สังฆัสสาหัส์มิ ทาโส (ทาสี) วะ สังโฆ เม สามิกิสสะโร,',
+                'pali': 'สังฆัสสาหัส๎มิ ทาโส (ทาสี) วะ สังโฆ เม สามิกิสสะโร,',
                 'pali_roman': 'Saṅghassāhasmi dāso (dāsī) va saṅgho me sāmikissaro,',
                 'thai': 'ข้าพเจ้าเป็นทาสของพระสงฆ์, พระสงฆ์เป็นนาย มีอิสระเหนือข้าพเจ้า,',
                 'paiboon': '',
@@ -51925,7 +51959,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 229,
-                'pali': 'ส์วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย,',
+                'pali': 'ส๎วากขาตะตาทิคุณะโยคะวะเสนะ เสยโย,',
                 'pali_roman': 'Svākkhātatādiguṇayogavasena seyyo,',
                 'thai': 'พระธรรม เป็นสิ่งที่ประเสริฐเพราะประกอบด้วยคุณ คือความที่พระผู้มีพระภาคเจ้า ตรัสไว้ดีแล้ว เป็นต้น,',
                 'paiboon': '',
@@ -51983,7 +52017,7 @@ CHANTS = [
             #   เม สามิกิสสะโร`. Each is entered as its own page prints it.
             {
                 'number': 7,
-                'pali': 'ธัมมัสสาหัส์มิ ทาโส (ทาสี) วะ ธัมโม เม สามิกิสสะโร,',
+                'pali': 'ธัมมัสสาหัส๎มิ ทาโส (ทาสี) วะ ธัมโม เม สามิกิสสะโร,',
                 'pali_roman': 'Dhammassāhasmi dāso (dāsī) va dhammo me sāmikissaro,',
                 'thai': 'ข้าพเจ้าเป็นทาสของพระธรรม, พระธรรมเป็นนาย มีอิสระเหนือข้าพเจ้า,',
                 'paiboon': '',
@@ -52588,7 +52622,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 226,
-                'pali': 'ตัง โข ปะนะ ภะคะวันตัง เอวัง กัล์ยาโณ กิตติสัทโท อัพภุคคะโต,',
+                'pali': 'ตัง โข ปะนะ ภะคะวันตัง เอวัง กัล๎ยาโณ กิตติสัทโท อัพภุคคะโต,',
                 'pali_roman': 'Taṃ kho pana bhagavantaṃ evaṃ kalyāṇo kittisaddo abbhuggato,',
                 'thai': 'ก็กิตติศัพท์อันงามของพระผู้มีพระภาคเจ้า, ได้ฟุ้งไปแล้วอย่างนี้ว่า :-',
                 'paiboon': '',
@@ -52703,7 +52737,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 226,
-                'pali': 'พุทธ์วาระหันตะวะระตาทิคุณาภิยุตโต,',
+                'pali': 'พุทธ๎วาระหันตะวะระตาทิคุณาภิยุตโต,',
                 'pali_roman': 'Buddhvārahantavaratādiguṇābhiyutto,',
                 'thai': 'พระพุทธเจ้าประกอบด้วยคุณ มีความประเสริฐแห่งอรหันตคุณ เป็นต้น,',
                 'paiboon': '',
@@ -52764,7 +52798,7 @@ CHANTS = [
             #   เม สามิกิสสะโร`.
             {
                 'number': 7,
-                'pali': 'พุทธัสสาหัส์มิ ทาโส (ทาสี) วะ พุทโธ เม สามิกิสสะโร,',
+                'pali': 'พุทธัสสาหัส๎มิ ทาโส (ทาสี) วะ พุทโธ เม สามิกิสสะโร,',
                 'pali_roman': 'Buddhassāhasmi dāso (dāsī) va buddho me sāmikissaro,',
                 'thai': 'ข้าพเจ้าเป็นทาสของพระพุทธเจ้า, พระพุทธเจ้าเป็นนายมีอิสระเหนือข้าพเจ้า,',
                 'paiboon': '',
@@ -52921,7 +52955,7 @@ CHANTS = [
             {
                 'number': 1,
                 'page': 228,
-                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo,',
                 'thai': 'พระธรรม เป็นสิ่งที่พระผู้มีพระภาคเจ้าได้ตรัสไว้ดีแล้ว,',
                 'paiboon': '',
@@ -53026,7 +53060,7 @@ CHANTS = [
             },
             {
                 'number': 2,
-                'pali': 'ส์วากขาโต เยนะ ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต เยนะ ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto yena bhagavatā dhammo,',
                 'thai': 'พระธรรมเป็นธรรมที่พระผู้มีพระภาคเจ้า พระองค์ใด, ตรัสไว้ดีแล้ว,',
                 'paiboon': '',
@@ -53159,7 +53193,7 @@ CHANTS = [
             },
             {
                 'number': 4,
-                'pali': 'ส์วากขาโต ภะคะวะตา ธัมโม,',
+                'pali': 'ส๎วากขาโต ภะคะวะตา ธัมโม,',
                 'pali_roman': 'Svākkhāto bhagavatā dhammo,',
                 'thai': 'พระธรรม เป็นธรรมที่พระผู้มีพระภาคเจ้า, ตรัสไว้ดีแล้ว,',
                 'paiboon': '',
@@ -54134,7 +54168,7 @@ CHANTS = [
             },
             {
                 'number': 6,
-                'pali': 'เยส์วานุโรธะวิโรเธ วิปปะหันต์วานะ ปัณฑิตา.',
+                'pali': 'เยส๎วานุโรธะวิโรเธ วิปปะหันต๎วานะ ปัณฑิตา.',
                 'pali_roman': 'Yesvānurodhavirodhe vippahantvāna paṇḍitā.',
                 'thai': '',
                 'paiboon': '',
@@ -54142,7 +54176,7 @@ CHANTS = [
             },
             {
                 'number': 7,
-                'pali': 'ปะริมุจจันติ ทุกขัส์มา สัมมา ภะวัสสะ ปาระคู',
+                'pali': 'ปะริมุจจันติ ทุกขัส๎มา สัมมา ภะวัสสะ ปาระคู',
                 'pali_roman': 'Parimuccanti dukkhasmā sammā bhavassa pāragū',
                 'thai': '',
                 'paiboon': '',
@@ -54158,7 +54192,7 @@ CHANTS = [
             },
             {
                 'number': 9,
-                'pali': 'ยัส์มิง เตนะ มุนินเทนะ สุตตันตัส์มิง ปะกาสิตา',
+                'pali': 'ยัส๎มิง เตนะ มุนินเทนะ สุตตันตัส๎มิง ปะกาสิตา',
                 'pali_roman': 'Yasmiṃ tena munindena suttantasmiṃ pakāsitā',
                 'thai': '',
                 'paiboon': '',
@@ -54166,7 +54200,7 @@ CHANTS = [
             },
             {
                 'number': 10,
-                'pali': 'ญาณัง สัญจาระยิต์วานะ ยะถาภูตัง ปะชานิตุง.',
+                'pali': 'ญาณัง สัญจาระยิต๎วานะ ยะถาภูตัง ปะชานิตุง.',
                 'pali_roman': 'Ñāṇaṃ sañcārayitvāna yathābhūtaṃ pajānituṃ.',
                 'thai': '',
                 'paiboon': '',
@@ -54262,6 +54296,316 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'so that, having heard, we may practise accordingly — let us recite that discourse.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0458.PNG]: ⚠ THIS CHANT HAS ONLY ONE WITNESS. Nothing
+        #   of it is anywhere else in the app, so the twin comparison that
+        #   caught four real errors elsewhere in this pass cannot help here.
+        #   The photographs are the only check, which is why every agreement
+        #   form was magnified rather than read off the whole page.
+        'id': 'lokadhamma-suttam',
+        'title_thai': 'โลกะธัมมะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'Lokadhammasuttaṃ',
+        'title_english': 'The Discourse on the Eight Worldly Conditions',
+        'page_start': 187,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'closing': {
+            'pali': 'โลกะธัมมะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'Lokadhammasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on the Worldly Conditions.',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0458.PNG]: ภะทันเตติ, IS FOLLOWED BY A COMMA here
+            #   where the Dhajagga Sutta on page 90 sets ภะทันเตติ เต ภิกขู
+            #   with none. Read at magnification; entered as this page prints
+            #   it.
+            {
+                'number': 1,
+                'page': 187,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ, เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. อัฏฐิเม ภิกขะเว โลกะธัมมา โลกัง อะนุปะริวัตตันติ, โลโก จะ อัฏฐะ โลกะธัมเม อะนุปะริวัตตะติ.',
+                'pali_roman': 'Evamme sutaṃ. ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. bhadanteti, te bhikkhū bhagavato paccassosuṃ. bhagavā etadavoca. aṭṭhime bhikkhave lokadhammā lokaṃ anuparivattanti, loko ca aṭṭha lokadhamme anuparivattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was dwelling at Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the bhikkhus: 'Bhikkhus.' 'Venerable sir,' those bhikkhus replied to the Blessed One. The Blessed One said this: 'Bhikkhus, these eight worldly conditions turn about the world, and the world turns about these eight worldly conditions.",
+            },
+            # ‼ CHECK [IMG_0458.PNG]: INCOMPLETE LINE. Verse 2 is the last
+            #   thing printed on 187 and its sentence runs onto 188, so it
+            #   ends […] and is completed there under the same verse number.
+            # ‼ COMPLETED FROM p188: this line was cut by the page break and
+            #   is now whole. Was: กะตะเม อัฏฐะ, ลาโภ จะ อะลาโภ จะ, ยะโส จะ
+            #   อะยะโส จะ, นินทา จะ ปะสังสา จะ, สุขัญจะ ทุกขัญจะ. อิเม โข
+            #   ภิกขะเว อัฏฐะ โลกะธัมมา โลกัง […]
+            # ‼ CHECK [IMG_0459.PNG]: COMPLETES THE LINE CUT BY THE PAGE TURN.
+            #   187 ended at โลกะธัมมา โลกัง and this sheet opens
+            #   อะนุปะริวัตตันติ. The verse belongs to 187, where it starts.
+            {
+                'number': 2,
+                'pali': 'กะตะเม อัฏฐะ, ลาโภ จะ อะลาโภ จะ, ยะโส จะ อะยะโส จะ, นินทา จะ ปะสังสา จะ, สุขัญจะ ทุกขัญจะ. อิเม โข ภิกขะเว อัฏฐะ โลกะธัมมา โลกัง อะนุปะริวัตตันติ, โลโก จะ อิเม อัฏฐะ โลกะธัมเม อะนุปะริวัตตะติ.',
+                'pali_roman': 'Katame aṭṭha, lābho ca alābho ca, yaso ca ayaso ca, nindā ca pasaṃsā ca, sukhañca dukkhañca. ime kho bhikkhave aṭṭha lokadhammā lokaṃ anuparivattanti, loko ca ime aṭṭha lokadhamme anuparivattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Which eight? Gain and loss, fame and obscurity, blame and praise, pleasure and pain. These, bhikkhus, are the eight worldly conditions that turn about the world, and the world turns about these eight worldly conditions.',
+            },
+            {
+                'number': 3,
+                'page': 188,
+                'pali': 'อัสสุตะวะโต ภิกขะเว ปุถุชชะนัสสะ อุปปัชชะติ, ลาโภปิ อะลาโภปิ, ยะโสปิ อะยะโสปิ, นินทาปิ ปะสังสาปิ, สุขังปิ ทุกขังปิ. สุตะวะโตปิ ภิกขะเว อะริยะสาวะกัสสะ อุปปัชชะติ, ลาโภปิ อะลาโภปิ, ยะโสปิ อะยะโสปิ, นินทาปิ ปะสังสาปิ, สุขังปิ ทุกขังปิ.',
+                'pali_roman': 'Assutavato bhikkhave puthujjanassa uppajjati, lābhopi alābhopi, yasopi ayasopi, nindāpi pasaṃsāpi, sukhaṃpi dukkhaṃpi. sutavatopi bhikkhave ariyasāvakassa uppajjati, lābhopi alābhopi, yasopi ayasopi, nindāpi pasaṃsāpi, sukhaṃpi dukkhaṃpi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For an unlearned ordinary person, bhikkhus, there arise gain and loss, fame and obscurity, blame and praise, pleasure and pain. For a learned noble disciple too, bhikkhus, there arise gain and loss, fame and obscurity, blame and praise, pleasure and pain.',
+            },
+            {
+                'number': 4,
+                'pali': 'ตัต์ระ ภิกขะเว โก วิเสโส โก อะธิปปายะโส กิง นานากะระณัง, สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. ภะคะวังมูละกา โน ภันเต ธัมมา ภะคะวังเนตติกา ภะคะวังปะฏิสะระณา, สาธุ วะตะ ภันเต ภะคะวันตังเยวะ ปะฏิภาตุ เอตัสสะ ภาสิตัสสะ อัตโถ, ภะคะวะโต สุต์วา ภิกขู ธาเรสสันตีติ. เตนะหิ ภิกขะเว สุณาถะ สาธุกัง มะนะสิกะโรถะ ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง ภะคะวา เอตะทะโวจะ.',
+                'pali_roman': 'Tatra bhikkhave ko viseso ko adhippāyaso kiṃ nānākaraṇaṃ, sutavato ariyasāvakassa assutavatā puthujjanenāti. bhagavaṃmūlakā no bhante dhammā bhagavaṃnettikā bhagavaṃpaṭisaraṇā, sādhu vata bhante bhagavantaṃyeva paṭibhātu etassa bhāsitassa attho, bhagavato sutvā bhikkhū dhāressantīti. tenahi bhikkhave suṇātha sādhukaṃ manasikarotha bhāsissāmīti. evambhanteti kho te bhikkhū bhagavato paccassosuṃ bhagavā etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': "What then, bhikkhus, is the distinction, what the difference, what the distinguishing mark between the learned noble disciple and the unlearned ordinary person? 'Venerable sir, for us these things have the Blessed One as their root, the Blessed One as their guide, the Blessed One as their resort. It would be good if the meaning of this saying might occur to the Blessed One himself; hearing it from him, the bhikkhus will bear it in mind.' 'Then listen, bhikkhus, attend closely, I shall speak.' 'Even so, venerable sir,' those bhikkhus replied to the Blessed One, and the Blessed One said this:",
+            },
+            # ‼ CHECK [IMG_0459.PNG]: ⚠ THE BOOK IS IRREGULAR IN DIFFERENT
+            #   PLACES ON EACH SIDE OF THE CONTRAST, and none of it has been
+            #   smoothed. On 188, for the worldling: อะลาโภ takes อะนิจจัง,
+            #   neuter, where every other masculine takes อะนิจโจ; and อะยะโส
+            #   is answered by อุปปันโน โข เม อะยัง ยะโส, with the อะ DROPPED.
+            #   On 189, for the noble disciple, NEITHER of those recurs —
+            #   อะลาโภ takes อะนิจโจ and อะยะโส is written in full — but ยะโส
+            #   there takes ทุกขัง, neuter, where 188 has ทุกโข. All four were
+            #   read from magnified crops. Filling the pattern would have
+            #   silently corrected every one of them.
+            # ‼ CHECK [IMG_0459.PNG]: INCOMPLETE LINE. The eighth formula is
+            #   cut by the turn — 188 ends at ตัญจะ โข อะนิจจัง ทุกขัง and 189
+            #   opens วิปะริณามะธัมมันติ — so verse 5 ends […] and is
+            #   completed by batch-189-189.
+            # ‼ COMPLETED FROM p189: this line was cut by the page break and
+            #   is now whole. Was: อัสสุตะวะโต ภิกขะเว ปุถุชชะนัสสะ อุปปัชชะติ
+            #   ลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ลาโภ, โส
+            #   จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ.
+            #   อุปปัชชะติ อะลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม
+            #   อะยัง อะลาโภ, โส จะ โข อะนิจจัง ทุกโข วิปะริณามะธัมโมติ
+            #   ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ยะโส, โส นะ อิติ
+            #   ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ
+            #   ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ
+            #   อะยะโส, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส,
+            #   โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง
+            #   นัปปะชานาติ. อุปปัชชะติ นินทา, โส นะ อิติ ปะฏิสัญจิกขะติ.
+            #   อุปปันนา โข เม อะยัง นินทา, สา จะ โข อะนิจจา ทุกขา
+            #   วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ปะสังสา,
+            #   โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง ปะสังสา, สา จะ
+            #   โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ.
+            #   อุปปัชชะติ สุขัง, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม
+            #   อิทัง สุขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ
+            #   ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ทุกขัง, โส นะ อิติ
+            #   ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง ทุกขัง, ตัญจะ โข
+            #   อะนิจจัง ทุกขัง […]
+            # ‼ CHECK [IMG_0460.PNG]: COMPLETES THE LINE CUT BY THE PAGE TURN
+            #   from 188.
+            {
+                'number': 5,
+                'pali': 'อัสสุตะวะโต ภิกขะเว ปุถุชชะนัสสะ อุปปัชชะติ ลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ลาโภ, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ อะลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง อะลาโภ, โส จะ โข อะนิจจัง ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ยะโส, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ อะยะโส, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ นินทา, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง นินทา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ปะสังสา, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง ปะสังสา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ สุขัง, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง สุขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ทุกขัง, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง ทุกขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง นัปปะชานาติ.',
+                'pali_roman': 'Assutavato bhikkhave puthujjanassa uppajjati lābho, so na iti paṭisañcikkhati. uppanno kho me ayaṃ lābho, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati alābho, so na iti paṭisañcikkhati. uppanno kho me ayaṃ alābho, so ca kho aniccaṃ dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati yaso, so na iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati ayaso, so na iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati nindā, so na iti paṭisañcikkhati. uppannā kho me ayaṃ nindā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ nappajānāti. uppajjati pasaṃsā, so na iti paṭisañcikkhati. uppannā kho me ayaṃ pasaṃsā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ nappajānāti. uppajjati sukhaṃ, so na iti paṭisañcikkhati. uppannaṃ kho me idaṃ sukhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ nappajānāti. uppajjati dukkhaṃ, so na iti paṭisañcikkhati. uppannaṃ kho me idaṃ dukkhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ nappajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "For an unlearned ordinary person, bhikkhus, gain arises, and he does not reflect thus: 'This gain of mine has arisen; it is impermanent, suffering, of the nature to change' — he does not know it as it really is. And so for loss, fame, obscurity, blame, praise, pleasure and pain.",
+            },
+            {
+                'number': 6,
+                'page': 189,
+                'pali': 'ตัสสะ ลาโภปิ จิตตัง ปะริยาทายะ ติฏฐะติ, อะลาโภปิ จิตตัง ปะริยาทายะ ติฏฐะติ. ยะโสปิ จิตตัง ปะริยาทายะ ติฏฐะติ, อะยะโสปิ จิตตัง ปะริยาทายะ ติฏฐะติ. นินทาปิ จิตตัง ปะริยาทายะ ติฏฐะติ, ปะสังสาปิ จิตตัง ปะริยาทายะ ติฏฐะติ. สุขังปิ จิตตัง ปะริยาทายะ ติฏฐะติ, ทุกขังปิ จิตตัง ปะริยาทายะ ติฏฐะติ.',
+                'pali_roman': 'Tassa lābhopi cittaṃ pariyādāya tiṭṭhati, alābhopi cittaṃ pariyādāya tiṭṭhati. yasopi cittaṃ pariyādāya tiṭṭhati, ayasopi cittaṃ pariyādāya tiṭṭhati. nindāpi cittaṃ pariyādāya tiṭṭhati, pasaṃsāpi cittaṃ pariyādāya tiṭṭhati. sukhaṃpi cittaṃ pariyādāya tiṭṭhati, dukkhaṃpi cittaṃ pariyādāya tiṭṭhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Gain takes hold of his mind and remains, and loss takes hold of his mind and remains; and so with fame and obscurity, blame and praise, pleasure and pain.',
+            },
+            {
+                'number': 7,
+                'pali': 'โส จะ อุปปันนัง ลาภัง อะนุรุชฌะติ อะลาเภ ปะฏิวิรุชฌะติ, อุปปันนัง ยะสัง อะนุรุชฌะติ อะยะเส ปะฏิวิรุชฌะติ, อุปปันนัง ปะสังสัง อะนุรุชฌะติ นินทายะ ปะฏิวิรุชฌะติ, อุปปันนัง สุขัง อะนุรุชฌะติ ทุกเข ปะฏิวิรุชฌะติ.',
+                'pali_roman': 'So ca uppannaṃ lābhaṃ anurujjhati alābhe paṭivirujjhati, uppannaṃ yasaṃ anurujjhati ayase paṭivirujjhati, uppannaṃ pasaṃsaṃ anurujjhati nindāya paṭivirujjhati, uppannaṃ sukhaṃ anurujjhati dukkhe paṭivirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He welcomes the gain that has arisen and resists the loss; he welcomes the fame that has arisen and resists the obscurity; he welcomes the praise that has arisen and resists the blame; he welcomes the pleasure that has arisen and resists the pain.',
+            },
+            {
+                'number': 8,
+                'pali': 'โส เอวัง อะนุโรธะวิโรธะสะมาปันโน, นะ ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, นะ ปะริมุจจะติ ทุกขัส์มาติ วะทามิ.',
+                'pali_roman': 'So evaṃ anurodhavirodhasamāpanno, na parimuccati jātiyā jarāmaraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, na parimuccati dukkhasmāti vadāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Being thus taken up with welcoming and resisting, he is not freed from birth, from ageing and death, from sorrow, lamentation, pain, grief and despair; he is not freed from suffering, I say.',
+            },
+            # ‼ CHECK [IMG_0460.PNG]: ⚠ THE BOOK IS IRREGULAR IN DIFFERENT
+            #   PLACES ON EACH SIDE OF THE CONTRAST, and none of it has been
+            #   smoothed. On 188, for the worldling: อะลาโภ takes อะนิจจัง,
+            #   neuter, where every other masculine takes อะนิจโจ; and อะยะโส
+            #   is answered by อุปปันโน โข เม อะยัง ยะโส, with the อะ DROPPED.
+            #   On 189, for the noble disciple, NEITHER of those recurs —
+            #   อะลาโภ takes อะนิจโจ and อะยะโส is written in full — but ยะโส
+            #   there takes ทุกขัง, neuter, where 188 has ทุกโข. All four were
+            #   read from magnified crops. Filling the pattern would have
+            #   silently corrected every one of them.
+            # ‼ CHECK [IMG_0460.PNG]: ⚠ ปะฏิสัญจิก-ขะติ IS HYPHENATED ACROSS A
+            #   LINE END in the third formula and has been REJOINED, as ปัณณะ-
+            #   ระสี was on 252. The same word is printed whole in the other
+            #   fifteen formulas, which is what settles it.
+            {
+                'number': 9,
+                'pali': 'สุตะวะโต จะ โข ภิกขะเว อะริยะสาวะกัสสะ อุปปัชชะติ ลาโภ, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ลาโภ, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ อะลาโภ, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง อะลาโภ, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ ยะโส, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกขัง วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ อะยะโส, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง อะยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ นินทา, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง นินทา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ ปะสังสา, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง ปะสังสา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ สุขัง, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง สุขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ ทุกขัง, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง ทุกขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง ปะชานาติ.',
+                'pali_roman': 'Sutavato ca kho bhikkhave ariyasāvakassa uppajjati lābho, so iti paṭisañcikkhati. uppanno kho me ayaṃ lābho, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati alābho, so iti paṭisañcikkhati. uppanno kho me ayaṃ alābho, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati yaso, so iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkhaṃ vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati ayaso, so iti paṭisañcikkhati. uppanno kho me ayaṃ ayaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati nindā, so iti paṭisañcikkhati. uppannā kho me ayaṃ nindā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ pajānāti. uppajjati pasaṃsā, so iti paṭisañcikkhati. uppannā kho me ayaṃ pasaṃsā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ pajānāti. uppajjati sukhaṃ, so iti paṭisañcikkhati. uppannaṃ kho me idaṃ sukhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ pajānāti. uppajjati dukkhaṃ, so iti paṭisañcikkhati. uppannaṃ kho me idaṃ dukkhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "For a learned noble disciple, bhikkhus, gain arises, and he DOES reflect thus: 'This gain of mine has arisen; it is impermanent, suffering, of the nature to change' — and he knows it as it really is. And so for loss, fame, obscurity, blame, praise, pleasure and pain.",
+            },
+            # ‼ CHECK [IMG_0460.PNG]: INCOMPLETE LINE, cut by the turn to 190,
+            #   completed there.
+            # ‼ COMPLETED FROM p190: this line was cut by the page break and
+            #   is now whole. Was: ตัสสะ ลาโภปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ,
+            #   อะลาโภปิ จิตตัง นะ […]
+            # ‼ CHECK [IMG_0461.PNG]: COMPLETES THE LINE CUT BY THE PAGE TURN
+            #   from 189. ⚠ NOTE THE JOIN: on 189 the worldling's parallel
+            #   paragraph ends ติฏฐะติ. with a FULL STOP before โส จะ
+            #   อุปปันนัง; here on 190 the same join is a COMMA. Entered as
+            #   each page prints it.
+            {
+                'number': 10,
+                'pali': 'ตัสสะ ลาโภปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, อะลาโภปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, ยะโสปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, อะยะโสปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ. นินทาปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, ปะสังสาปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ. สุขังปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, ทุกขังปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, โส จะ อุปปันนัง ลาภัง นานุรุชฌะติ อะลาเภ นัปปะฏิวิรุชฌะติ, อุปปันนัง ยะสัง นานุรุชฌะติ อะยะเส นัปปะฏิวิรุชฌะติ, อุปปันนัง ปะสังสัง นานุรุชฌะติ นินทายะ นัปปะฏิวิรุชฌะติ, อุปปันนัง สุขัง นานุรุชฌะติ ทุกเข นัปปะฏิวิรุชฌะติ.',
+                'pali_roman': 'Tassa lābhopi cittaṃ na pariyādāya tiṭṭhati, alābhopi cittaṃ na pariyādāya tiṭṭhati, yasopi cittaṃ na pariyādāya tiṭṭhati, ayasopi cittaṃ na pariyādāya tiṭṭhati. nindāpi cittaṃ na pariyādāya tiṭṭhati, pasaṃsāpi cittaṃ na pariyādāya tiṭṭhati. sukhaṃpi cittaṃ na pariyādāya tiṭṭhati, dukkhaṃpi cittaṃ na pariyādāya tiṭṭhati, so ca uppannaṃ lābhaṃ nānurujjhati alābhe nappaṭivirujjhati, uppannaṃ yasaṃ nānurujjhati ayase nappaṭivirujjhati, uppannaṃ pasaṃsaṃ nānurujjhati nindāya nappaṭivirujjhati, uppannaṃ sukhaṃ nānurujjhati dukkhe nappaṭivirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Gain does not take hold of his mind and remain, nor loss, nor fame nor obscurity, nor blame nor praise, nor pleasure nor pain; and he does not welcome the gain that has arisen nor resist the loss, nor welcome the fame nor resist the obscurity, nor welcome the praise nor resist the blame, nor welcome the pleasure nor resist the pain.',
+            },
+            {
+                'number': 11,
+                'page': 190,
+                'pali': 'โส เอวัง อะนุโรธะวิโรธะวิปปะหีโน ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, ปะริมุจจะติ ทุกขัส์มาติ วะทามิ.',
+                'pali_roman': 'So evaṃ anurodhavirodhavippahīno parimuccati jātiyā jarāmaraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, parimuccati dukkhasmāti vadāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having thus abandoned welcoming and resisting, he is freed from birth, from ageing and death, from sorrow, lamentation, pain, grief and despair; he is freed from suffering, I say.',
+            },
+            {
+                'number': 12,
+                'pali': 'อะยัง โข ภิกขะเว วิเสโส อะยัง อะธิปปายะโส อิทัง นานากะระณัง สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.',
+                'pali_roman': 'Ayaṃ kho bhikkhave viseso ayaṃ adhippāyaso idaṃ nānākaraṇaṃ sutavato ariyasāvakassa assutavatā puthujjanenāti. idamavoca bhagavā. idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.',
+                'thai': '',
+                'paiboon': '',
+                'english': "This, bhikkhus, is the distinction, this the difference, this the distinguishing mark between the learned noble disciple and the unlearned ordinary person.' This is what the Blessed One said. Having said this, the Well-gone One, the Teacher, further said this:",
+            },
+            # ‼ CHECK [IMG_0461.PNG]: THE VERSE OPENS ลาโภ อะลาโภ อะยะโส ยะโส
+            #   จะ — obscurity BEFORE fame — where the prose throughout lists
+            #   ยะโส จะ อะยะโส จะ, fame first. Entered as printed; the metre
+            #   is presumably why.
+            {
+                'number': 13,
+                'page': 190,
+                'pali': 'ลาโภ อะลาโภ อะยะโส ยะโส จะ',
+                'pali_roman': 'Lābho alābho ayaso yaso ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Gain and loss, obscurity and fame,',
+            },
+            {
+                'number': 14,
+                'pali': 'นินทา ปะสังสา จะ สุขัง จะ ทุกขัง',
+                'pali_roman': 'Nindā pasaṃsā ca sukhaṃ ca dukkhaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'blame and praise, and pleasure and pain —',
+            },
+            {
+                'number': 15,
+                'pali': 'เอเต อะนิจจา มะนุเชสุ ธัมมา',
+                'pali_roman': 'Ete aniccā manujesu dhammā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'these states among human beings are impermanent,',
+            },
+            {
+                'number': 16,
+                'pali': 'อะสัสสะตา วิปะริณามะธัมมา.',
+                'pali_roman': 'Asassatā vipariṇāmadhammā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'not lasting, of the nature to change.',
+            },
+            {
+                'number': 17,
+                'pali': 'เอเต จะ ญัต์วา สะติมา สุเมโธ',
+                'pali_roman': 'Ete ca ñatvā satimā sumedho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Knowing them, the mindful one, wise,',
+            },
+            {
+                'number': 18,
+                'pali': 'อะเวกขะติ วิปะริณามะธัมเม',
+                'pali_roman': 'Avekkhati vipariṇāmadhamme',
+                'thai': '',
+                'paiboon': '',
+                'english': 'looks on at states that change:',
+            },
+            {
+                'number': 19,
+                'pali': 'อิฏฐัสสะ ธัมมา นะ มะเถนติ จิตตัง',
+                'pali_roman': 'Iṭṭhassa dhammā na mathenti cittaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the welcome ones do not stir his mind,',
+            },
+            {
+                'number': 20,
+                'pali': 'อะนิฏฐะโต โน ปะฏิฆาตะเมติ.',
+                'pali_roman': 'Aniṭṭhato no paṭighātameti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the unwelcome bring him no resistance.',
+            },
+            {
+                'number': 21,
+                'pali': 'ตัสสานุโรธา อะถะวา วิโรธา',
+                'pali_roman': 'Tassānurodhā athavā virodhā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His liking, and his aversion too,',
+            },
+            {
+                'number': 22,
+                'pali': 'วิธูปิตา อัตถะคะตา นะ สันติ',
+                'pali_roman': 'Vidhūpitā atthagatā na santi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'are scattered, gone to their end, not there;',
+            },
+            {
+                'number': 23,
+                'pali': 'ปะทัญจะ ญัต์วา วิระชัง อะโสกัง',
+                'pali_roman': 'Padañca ñatvā virajaṃ asokaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and knowing the state that is stainless, sorrowless,',
+            },
+            {
+                'number': 24,
+                'pali': 'สัมมัปปะชานาติ ภะวัสสะ ปาระคูติ.',
+                'pali_roman': 'Sammappajānāti bhavassa pāragūti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'he understands rightly, gone beyond becoming.',
             },
         ],
     },
@@ -56717,6 +57061,20 @@ PAGE_BLOCKS = [
                 'thai': '1. อํ. ฉกฺก. 22/322',
                 'english': 'Aṅguttara Nikāya, Book of Sixes, 22/322.',
                 'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 190 ───────────────────────────────────────────────────
+    # Written from batch-190-190.json.
+    {
+        'page': 190,
+        'after': 'lokadhamma-suttam',
+        'blocks': [
+            {
+                'type': 'footnote',
+                'marker': '1',
+                'thai': 'อํ. อฏฐก. 23/158-162',
+                'english': '',
             },
         ],
     },

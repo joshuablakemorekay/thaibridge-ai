@@ -1,0 +1,98 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "lokadhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 188,
+    "file": "IMG_0459.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "lokadhamma-suttam",
+    "verses": "2-5",
+    "starts_here": false,
+    "note": "The chant continuing. The first line completes the paragraph cut by the turn from 187; then two paragraphs of frame, and the WORLDLING'S eight formulas, whose last is cut by the turn to 189."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "lokadhamma-suttam",
+   "verses": [
+    {
+     "number": 2,
+     "pali": "กะตะเม อัฏฐะ, ลาโภ จะ อะลาโภ จะ, ยะโส จะ อะยะโส จะ, นินทา จะ ปะสังสา จะ, สุขัญจะ ทุกขัญจะ. อิเม โข ภิกขะเว อัฏฐะ โลกะธัมมา โลกัง อะนุปะริวัตตันติ, โลโก จะ อิเม อัฏฐะ โลกะธัมเม อะนุปะริวัตตะติ.",
+     "pali_roman": "Katame aṭṭha, lābho ca alābho ca, yaso ca ayaso ca, nindā ca pasaṃsā ca, sukhañca dukkhañca. ime kho bhikkhave aṭṭha lokadhammā lokaṃ anuparivattanti, loko ca ime aṭṭha lokadhamme anuparivattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Which eight? Gain and loss, fame and obscurity, blame and praise, pleasure and pain. These, bhikkhus, are the eight worldly conditions that turn about the world, and the world turns about these eight worldly conditions."
+    },
+    {
+     "number": 3,
+     "pali": "อัสสุตะวะโต ภิกขะเว ปุถุชชะนัสสะ อุปปัชชะติ, ลาโภปิ อะลาโภปิ, ยะโสปิ อะยะโสปิ, นินทาปิ ปะสังสาปิ, สุขังปิ ทุกขังปิ. สุตะวะโตปิ ภิกขะเว อะริยะสาวะกัสสะ อุปปัชชะติ, ลาโภปิ อะลาโภปิ, ยะโสปิ อะยะโสปิ, นินทาปิ ปะสังสาปิ, สุขังปิ ทุกขังปิ.",
+     "pali_roman": "Assutavato bhikkhave puthujjanassa uppajjati, lābhopi alābhopi, yasopi ayasopi, nindāpi pasaṃsāpi, sukhaṃpi dukkhaṃpi. sutavatopi bhikkhave ariyasāvakassa uppajjati, lābhopi alābhopi, yasopi ayasopi, nindāpi pasaṃsāpi, sukhaṃpi dukkhaṃpi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For an unlearned ordinary person, bhikkhus, there arise gain and loss, fame and obscurity, blame and praise, pleasure and pain. For a learned noble disciple too, bhikkhus, there arise gain and loss, fame and obscurity, blame and praise, pleasure and pain.",
+     "page": 188
+    },
+    {
+     "number": 4,
+     "pali": "ตัต์ระ ภิกขะเว โก วิเสโส โก อะธิปปายะโส กิง นานากะระณัง, สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. ภะคะวังมูละกา โน ภันเต ธัมมา ภะคะวังเนตติกา ภะคะวังปะฏิสะระณา, สาธุ วะตะ ภันเต ภะคะวันตังเยวะ ปะฏิภาตุ เอตัสสะ ภาสิตัสสะ อัตโถ, ภะคะวะโต สุต์วา ภิกขู ธาเรสสันตีติ. เตนะหิ ภิกขะเว สุณาถะ สาธุกัง มะนะสิกะโรถะ ภาสิสสามีติ. เอวัมภันเตติ โข เต ภิกขู ภะคะวะโต ปัจจัสโสสุง ภะคะวา เอตะทะโวจะ.",
+     "pali_roman": "Tatra bhikkhave ko viseso ko adhippāyaso kiṃ nānākaraṇaṃ, sutavato ariyasāvakassa assutavatā puthujjanenāti. bhagavaṃmūlakā no bhante dhammā bhagavaṃnettikā bhagavaṃpaṭisaraṇā, sādhu vata bhante bhagavantaṃyeva paṭibhātu etassa bhāsitassa attho, bhagavato sutvā bhikkhū dhāressantīti. tenahi bhikkhave suṇātha sādhukaṃ manasikarotha bhāsissāmīti. evambhanteti kho te bhikkhū bhagavato paccassosuṃ bhagavā etadavoca.",
+     "thai": "",
+     "paiboon": "",
+     "english": "What then, bhikkhus, is the distinction, what the difference, what the distinguishing mark between the learned noble disciple and the unlearned ordinary person? 'Venerable sir, for us these things have the Blessed One as their root, the Blessed One as their guide, the Blessed One as their resort. It would be good if the meaning of this saying might occur to the Blessed One himself; hearing it from him, the bhikkhus will bear it in mind.' 'Then listen, bhikkhus, attend closely, I shall speak.' 'Even so, venerable sir,' those bhikkhus replied to the Blessed One, and the Blessed One said this:"
+    },
+    {
+     "number": 5,
+     "pali": "อัสสุตะวะโต ภิกขะเว ปุถุชชะนัสสะ อุปปัชชะติ ลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ลาโภ, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ อะลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง อะลาโภ, โส จะ โข อะนิจจัง ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ยะโส, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ อะยะโส, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ นินทา, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง นินทา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ปะสังสา, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง ปะสังสา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ สุขัง, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง สุขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ทุกขัง, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง ทุกขัง, ตัญจะ โข อะนิจจัง ทุกขัง […]",
+     "pali_roman": "Assutavato bhikkhave puthujjanassa uppajjati lābho, so na iti paṭisañcikkhati. uppanno kho me ayaṃ lābho, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati alābho, so na iti paṭisañcikkhati. uppanno kho me ayaṃ alābho, so ca kho aniccaṃ dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati yaso, so na iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati ayaso, so na iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati nindā, so na iti paṭisañcikkhati. uppannā kho me ayaṃ nindā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ nappajānāti. uppajjati pasaṃsā, so na iti paṭisañcikkhati. uppannā kho me ayaṃ pasaṃsā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ nappajānāti. uppajjati sukhaṃ, so na iti paṭisañcikkhati. uppannaṃ kho me idaṃ sukhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ nappajānāti. uppajjati dukkhaṃ, so na iti paṭisañcikkhati. uppannaṃ kho me idaṃ dukkhaṃ, tañca kho aniccaṃ dukkhaṃ […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "For an unlearned ordinary person, bhikkhus, gain arises, and he does not reflect thus: 'This gain of mine has arisen; it is impermanent, suffering, of the nature to change' — he does not know it as it really is. And so for loss, fame, obscurity, blame, praise, pleasure and pain."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0459.PNG",
+     "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN. 187 ended at โลกะธัมมา โลกัง and this sheet opens อะนุปะริวัตตันติ. The verse belongs to 187, where it starts."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0459.PNG",
+     "issue": "⚠ THE BOOK IS IRREGULAR IN DIFFERENT PLACES ON EACH SIDE OF THE CONTRAST, and none of it has been smoothed. On 188, for the worldling: อะลาโภ takes อะนิจจัง, neuter, where every other masculine takes อะนิจโจ; and อะยะโส is answered by อุปปันโน โข เม อะยัง ยะโส, with the อะ DROPPED. On 189, for the noble disciple, NEITHER of those recurs — อะลาโภ takes อะนิจโจ and อะยะโส is written in full — but ยะโส there takes ทุกขัง, neuter, where 188 has ทุกโข. All four were read from magnified crops. Filling the pattern would have silently corrected every one of them."
+    },
+    {
+     "verse": 5,
+     "file": "IMG_0459.PNG",
+     "issue": "INCOMPLETE LINE. The eighth formula is cut by the turn — 188 ends at ตัญจะ โข อะนิจจัง ทุกขัง and 189 opens วิปะริณามะธัมมันติ — so verse 5 ends […] and is completed by batch-189-189."
+    }
+   ],
+   "continuation_of": "lokadhamma-suttam",
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "lokadhamma-suttam"
+  ],
+  "resume_from_page": 189,
+  "resume_from_file": "IMG_0460.PNG",
+  "resume_from": "lokadhamma-suttam, continuing on 189",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from MAGNIFIED crops of this sheet and romanised mechanically.",
+  "page_scan": "agrees. One row, one chant.",
+  "notes": "The chant continuing. The first line completes the paragraph cut by the turn from 187; then two paragraphs of frame, and the WORLDLING'S eight formulas, whose last is cut by the turn to 189.",
+  "diacritic_exceptions": []
+ }
+}

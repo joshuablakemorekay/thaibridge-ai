@@ -1,0 +1,202 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "lokadhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 190,
+    "file": "IMG_0461.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "lokadhamma-suttam",
+    "verses": "10-24",
+    "starts_here": false,
+    "note": "The chant ENDING. The cut paragraph completes, then the closing frame, twelve verse lines, and the colophon โลกะธัมมะสุตตัง นิฏฐิตัง. with a footnote beneath a rule at the page foot.",
+    "blocks": [
+     {
+      "type": "footnote",
+      "marker": "1",
+      "thai": "อํ. อฏฐก. 23/158-162",
+      "english": "",
+      "note": "A canonical citation, reproduced exactly as printed and NOT expanded. Its marker sits on the last word of the closing verse, ปาระคูติ."
+     }
+    ]
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "lokadhamma-suttam",
+   "verses": [
+    {
+     "number": 10,
+     "pali": "ตัสสะ ลาโภปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, อะลาโภปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, ยะโสปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, อะยะโสปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ. นินทาปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, ปะสังสาปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ. สุขังปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, ทุกขังปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, โส จะ อุปปันนัง ลาภัง นานุรุชฌะติ อะลาเภ นัปปะฏิวิรุชฌะติ, อุปปันนัง ยะสัง นานุรุชฌะติ อะยะเส นัปปะฏิวิรุชฌะติ, อุปปันนัง ปะสังสัง นานุรุชฌะติ นินทายะ นัปปะฏิวิรุชฌะติ, อุปปันนัง สุขัง นานุรุชฌะติ ทุกเข นัปปะฏิวิรุชฌะติ.",
+     "pali_roman": "Tassa lābhopi cittaṃ na pariyādāya tiṭṭhati, alābhopi cittaṃ na pariyādāya tiṭṭhati, yasopi cittaṃ na pariyādāya tiṭṭhati, ayasopi cittaṃ na pariyādāya tiṭṭhati. nindāpi cittaṃ na pariyādāya tiṭṭhati, pasaṃsāpi cittaṃ na pariyādāya tiṭṭhati. sukhaṃpi cittaṃ na pariyādāya tiṭṭhati, dukkhaṃpi cittaṃ na pariyādāya tiṭṭhati, so ca uppannaṃ lābhaṃ nānurujjhati alābhe nappaṭivirujjhati, uppannaṃ yasaṃ nānurujjhati ayase nappaṭivirujjhati, uppannaṃ pasaṃsaṃ nānurujjhati nindāya nappaṭivirujjhati, uppannaṃ sukhaṃ nānurujjhati dukkhe nappaṭivirujjhati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Gain does not take hold of his mind and remain, nor loss, nor fame nor obscurity, nor blame nor praise, nor pleasure nor pain; and he does not welcome the gain that has arisen nor resist the loss, nor welcome the fame nor resist the obscurity, nor welcome the praise nor resist the blame, nor welcome the pleasure nor resist the pain."
+    },
+    {
+     "number": 11,
+     "pali": "โส เอวัง อะนุโรธะวิโรธะวิปปะหีโน ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, ปะริมุจจะติ ทุกขัส์มาติ วะทามิ.",
+     "pali_roman": "So evaṃ anurodhavirodhavippahīno parimuccati jātiyā jarāmaraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, parimuccati dukkhasmāti vadāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Having thus abandoned welcoming and resisting, he is freed from birth, from ageing and death, from sorrow, lamentation, pain, grief and despair; he is freed from suffering, I say.",
+     "page": 190
+    },
+    {
+     "number": 12,
+     "pali": "อะยัง โข ภิกขะเว วิเสโส อะยัง อะธิปปายะโส อิทัง นานากะระณัง สุตะวะโต อะริยะสาวะกัสสะ อัสสุตะวะตา ปุถุชชะเนนาติ. อิทะมะโวจะ ภะคะวา. อิทัง วัต์วานะ สุคะโต, อะถาปะรัง เอตะทะโวจะ สัตถา.",
+     "pali_roman": "Ayaṃ kho bhikkhave viseso ayaṃ adhippāyaso idaṃ nānākaraṇaṃ sutavato ariyasāvakassa assutavatā puthujjanenāti. idamavoca bhagavā. idaṃ vatvāna sugato, athāparaṃ etadavoca satthā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "This, bhikkhus, is the distinction, this the difference, this the distinguishing mark between the learned noble disciple and the unlearned ordinary person.' This is what the Blessed One said. Having said this, the Well-gone One, the Teacher, further said this:"
+    },
+    {
+     "number": 13,
+     "pali": "ลาโภ อะลาโภ อะยะโส ยะโส จะ",
+     "pali_roman": "Lābho alābho ayaso yaso ca",
+     "thai": "",
+     "paiboon": "",
+     "english": "Gain and loss, obscurity and fame,",
+     "page": 190
+    },
+    {
+     "number": 14,
+     "pali": "นินทา ปะสังสา จะ สุขัง จะ ทุกขัง",
+     "pali_roman": "Nindā pasaṃsā ca sukhaṃ ca dukkhaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "blame and praise, and pleasure and pain —"
+    },
+    {
+     "number": 15,
+     "pali": "เอเต อะนิจจา มะนุเชสุ ธัมมา",
+     "pali_roman": "Ete aniccā manujesu dhammā",
+     "thai": "",
+     "paiboon": "",
+     "english": "these states among human beings are impermanent,"
+    },
+    {
+     "number": 16,
+     "pali": "อะสัสสะตา วิปะริณามะธัมมา.",
+     "pali_roman": "Asassatā vipariṇāmadhammā.",
+     "thai": "",
+     "paiboon": "",
+     "english": "not lasting, of the nature to change."
+    },
+    {
+     "number": 17,
+     "pali": "เอเต จะ ญัต์วา สะติมา สุเมโธ",
+     "pali_roman": "Ete ca ñatvā satimā sumedho",
+     "thai": "",
+     "paiboon": "",
+     "english": "Knowing them, the mindful one, wise,"
+    },
+    {
+     "number": 18,
+     "pali": "อะเวกขะติ วิปะริณามะธัมเม",
+     "pali_roman": "Avekkhati vipariṇāmadhamme",
+     "thai": "",
+     "paiboon": "",
+     "english": "looks on at states that change:"
+    },
+    {
+     "number": 19,
+     "pali": "อิฏฐัสสะ ธัมมา นะ มะเถนติ จิตตัง",
+     "pali_roman": "Iṭṭhassa dhammā na mathenti cittaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "the welcome ones do not stir his mind,"
+    },
+    {
+     "number": 20,
+     "pali": "อะนิฏฐะโต โน ปะฏิฆาตะเมติ.",
+     "pali_roman": "Aniṭṭhato no paṭighātameti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "and the unwelcome bring him no resistance."
+    },
+    {
+     "number": 21,
+     "pali": "ตัสสานุโรธา อะถะวา วิโรธา",
+     "pali_roman": "Tassānurodhā athavā virodhā",
+     "thai": "",
+     "paiboon": "",
+     "english": "His liking, and his aversion too,"
+    },
+    {
+     "number": 22,
+     "pali": "วิธูปิตา อัตถะคะตา นะ สันติ",
+     "pali_roman": "Vidhūpitā atthagatā na santi",
+     "thai": "",
+     "paiboon": "",
+     "english": "are scattered, gone to their end, not there;"
+    },
+    {
+     "number": 23,
+     "pali": "ปะทัญจะ ญัต์วา วิระชัง อะโสกัง",
+     "pali_roman": "Padañca ñatvā virajaṃ asokaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "and knowing the state that is stainless, sorrowless,"
+    },
+    {
+     "number": 24,
+     "pali": "สัมมัปปะชานาติ ภะวัสสะ ปาระคูติ.",
+     "pali_roman": "Sammappajānāti bhavassa pāragūti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "he understands rightly, gone beyond becoming."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 10,
+     "file": "IMG_0461.PNG",
+     "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN from 189. ⚠ NOTE THE JOIN: on 189 the worldling's parallel paragraph ends ติฏฐะติ. with a FULL STOP before โส จะ อุปปันนัง; here on 190 the same join is a COMMA. Entered as each page prints it."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0461.PNG",
+     "issue": "THE COLOPHON IS CARRIED AS THE CHANT'S `closing`, not as a verse — the field nineteen other chants already use for their นิฏฐิตัง line."
+    },
+    {
+     "verse": 13,
+     "file": "IMG_0461.PNG",
+     "issue": "THE VERSE OPENS ลาโภ อะลาโภ อะยะโส ยะโส จะ — obscurity BEFORE fame — where the prose throughout lists ยะโส จะ อะยะโส จะ, fame first. Entered as printed; the metre is presumably why."
+    }
+   ],
+   "continuation_of": "lokadhamma-suttam",
+   "closing": {
+    "pali": "โลกะธัมมะสุตตัง นิฏฐิตัง.",
+    "pali_roman": "Lokadhammasuttaṃ niṭṭhitaṃ.",
+    "thai": "",
+    "paiboon": "",
+    "english": "Here ends the Discourse on the Worldly Conditions."
+   }
+  }
+ ],
+ "batch_status": {
+  "completed": [
+   "lokadhamma-suttam"
+  ],
+  "not_started": [],
+  "continues": [],
+  "resume_from_page": 186,
+  "resume_from_file": "IMG_0457.PNG",
+  "resume_from": null,
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from MAGNIFIED crops of this sheet and romanised mechanically.",
+  "page_scan": "agrees. One row, one chant.",
+  "notes": "The chant ENDING. The cut paragraph completes, then the closing frame, twelve verse lines, and the colophon โลกะธัมมะสุตตัง นิฏฐิตัง. with a footnote beneath a rule at the page foot.",
+  "diacritic_exceptions": []
+ }
+}

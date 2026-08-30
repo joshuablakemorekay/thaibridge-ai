@@ -1,0 +1,107 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "lokadhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 187,
+    "file": "IMG_0458.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "lokadhamma-suttam",
+    "verses": "1-2",
+    "starts_here": true,
+    "note": "The sutta begins below the บทขัด already entered for this page. Its SECOND paragraph is CUT BY THE PAGE TURN — the sheet ends at โลกะธัมมา โลกัง and 188 opens อะนุปะริวัตตันติ — so it is recorded here ending […] and completed by batch-188-188."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "lokadhamma-suttam",
+   "verses": [
+    {
+     "number": 1,
+     "pali": "เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา สาวัตถิยัง วิหะระติ เชตะวะเน อะนาถะปิณฑิกัสสะ อาราเม. ตัต์ระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ, เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ. อัฏฐิเม ภิกขะเว โลกะธัมมา โลกัง อะนุปะริวัตตันติ, โลโก จะ อัฏฐะ โลกะธัมเม อะนุปะริวัตตะติ.",
+     "pali_roman": "Evamme sutaṃ. ekaṃ samayaṃ bhagavā sāvatthiyaṃ viharati jetavane anāthapiṇḍikassa ārāme. tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. bhadanteti, te bhikkhū bhagavato paccassosuṃ. bhagavā etadavoca. aṭṭhime bhikkhave lokadhammā lokaṃ anuparivattanti, loko ca aṭṭha lokadhamme anuparivattati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Thus have I heard. At one time the Blessed One was dwelling at Sāvatthī, in Jeta's Grove, Anāthapiṇḍika's park. There the Blessed One addressed the bhikkhus: 'Bhikkhus.' 'Venerable sir,' those bhikkhus replied to the Blessed One. The Blessed One said this: 'Bhikkhus, these eight worldly conditions turn about the world, and the world turns about these eight worldly conditions.",
+     "page": 187
+    },
+    {
+     "number": 2,
+     "pali": "กะตะเม อัฏฐะ, ลาโภ จะ อะลาโภ จะ, ยะโส จะ อะยะโส จะ, นินทา จะ ปะสังสา จะ, สุขัญจะ ทุกขัญจะ. อิเม โข ภิกขะเว อัฏฐะ โลกะธัมมา โลกัง […]",
+     "pali_roman": "Katame aṭṭha, lābho ca alābho ca, yaso ca ayaso ca, nindā ca pasaṃsā ca, sukhañca dukkhañca. ime kho bhikkhave aṭṭha lokadhammā lokaṃ […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "Which eight? Gain and loss, fame and obscurity, blame and praise, pleasure and pain. These, bhikkhus, are the eight worldly conditions that turn about the world, and the world turns about these eight worldly conditions."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0458.PNG",
+     "issue": "INCOMPLETE LINE. Verse 2 is the last thing printed on 187 and its sentence runs onto 188, so it ends […] and is completed there under the same verse number."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0458.PNG",
+     "issue": "⚠ THIS CHANT HAS ONLY ONE WITNESS. Nothing of it is anywhere else in the app, so the twin comparison that caught four real errors elsewhere in this pass cannot help here. The photographs are the only check, which is why every agreement form was magnified rather than read off the whole page."
+    },
+    {
+     "verse": 1,
+     "file": "IMG_0458.PNG",
+     "issue": "ภะทันเตติ, IS FOLLOWED BY A COMMA here where the Dhajagga Sutta on page 90 sets ภะทันเตติ เต ภิกขู with none. Read at magnification; entered as this page prints it."
+    }
+   ],
+   "title_thai": "โลกะธัมมะสุตตัง",
+   "title_pali": "",
+   "title_roman": "Lokadhammasuttaṃ",
+   "title_english": "The Discourse on the Eight Worldly Conditions",
+   "page_start": 187,
+   "layout": "prose",
+   "english_unverified": true,
+   "working_notes": {
+    "invitation": "absent as a line of its own; the บทขัด above it on 187 is the invitation, closing ตัง สุตตันตัง ภะณามะ เส.",
+    "units": "25 — twelve of prose and twelve of verse, plus a closing.",
+    "ordering": "Pure Pali. This is the book's FIRST, Pali-only printing; there is no Thai translation and no second copy anywhere in the app.",
+    "conventions": "pali_roman mechanical from translit_pali; paiboon left empty. EVERY AGREEMENT FORM was read from a magnified crop, never pattern-filled.",
+    "pages": "IMG_0458 to IMG_0461, pages 187-190. Offset 271."
+   },
+   "vocabulary": [
+    {
+     "pali": "โลกะธัมมา",
+     "pali_roman": "lokadhammā",
+     "meaning": "the eight worldly conditions — gain and loss, fame and obscurity, blame and praise, pleasure and pain"
+    },
+    {
+     "pali": "ปะริยาทายะ ติฏฐะติ",
+     "pali_roman": "pariyādāya tiṭṭhati",
+     "meaning": "takes hold and remains, occupies; what the eight do to an untrained mind and do not do to a trained one"
+    }
+   ],
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "lokadhamma-suttam"
+  ],
+  "resume_from_page": 188,
+  "resume_from_file": "IMG_0459.PNG",
+  "resume_from": "lokadhamma-suttam, continuing on 188",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from MAGNIFIED crops of this sheet and romanised mechanically.",
+  "page_scan": "agrees. One row, one chant.",
+  "notes": "The sutta begins below the บทขัด already entered for this page. Its SECOND paragraph is CUT BY THE PAGE TURN — the sheet ends at โลกะธัมมา โลกัง and 188 opens อะนุปะริวัตตันติ — so it is recorded here ending […] and completed by batch-188-188.",
+  "diacritic_exceptions": []
+ }
+}

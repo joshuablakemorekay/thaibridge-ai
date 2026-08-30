@@ -1,0 +1,119 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "lokadhamma-suttam"
+  ],
+  "pages": [
+   {
+    "page": 189,
+    "file": "IMG_0460.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "lokadhamma-suttam",
+    "verses": "5-10",
+    "starts_here": false,
+    "note": "The chant continuing. The worldling's eighth formula completes, then what the eight do to his mind and where that leaves him; then the NOBLE DISCIPLE'S eight formulas, and a paragraph cut by the turn."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "lokadhamma-suttam",
+   "verses": [
+    {
+     "number": 5,
+     "pali": "อัสสุตะวะโต ภิกขะเว ปุถุชชะนัสสะ อุปปัชชะติ ลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ลาโภ, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ อะลาโภ, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง อะลาโภ, โส จะ โข อะนิจจัง ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ยะโส, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ อะยะโส, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ นินทา, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง นินทา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ปะสังสา, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง ปะสังสา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ สุขัง, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง สุขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง นัปปะชานาติ. อุปปัชชะติ ทุกขัง, โส นะ อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง ทุกขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง นัปปะชานาติ.",
+     "pali_roman": "Assutavato bhikkhave puthujjanassa uppajjati lābho, so na iti paṭisañcikkhati. uppanno kho me ayaṃ lābho, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati alābho, so na iti paṭisañcikkhati. uppanno kho me ayaṃ alābho, so ca kho aniccaṃ dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati yaso, so na iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati ayaso, so na iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ nappajānāti. uppajjati nindā, so na iti paṭisañcikkhati. uppannā kho me ayaṃ nindā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ nappajānāti. uppajjati pasaṃsā, so na iti paṭisañcikkhati. uppannā kho me ayaṃ pasaṃsā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ nappajānāti. uppajjati sukhaṃ, so na iti paṭisañcikkhati. uppannaṃ kho me idaṃ sukhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ nappajānāti. uppajjati dukkhaṃ, so na iti paṭisañcikkhati. uppannaṃ kho me idaṃ dukkhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ nappajānāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For an unlearned ordinary person, bhikkhus, gain arises, and he does not reflect thus: 'This gain of mine has arisen; it is impermanent, suffering, of the nature to change' — he does not know it as it really is. And so for loss, fame, obscurity, blame, praise, pleasure and pain."
+    },
+    {
+     "number": 6,
+     "pali": "ตัสสะ ลาโภปิ จิตตัง ปะริยาทายะ ติฏฐะติ, อะลาโภปิ จิตตัง ปะริยาทายะ ติฏฐะติ. ยะโสปิ จิตตัง ปะริยาทายะ ติฏฐะติ, อะยะโสปิ จิตตัง ปะริยาทายะ ติฏฐะติ. นินทาปิ จิตตัง ปะริยาทายะ ติฏฐะติ, ปะสังสาปิ จิตตัง ปะริยาทายะ ติฏฐะติ. สุขังปิ จิตตัง ปะริยาทายะ ติฏฐะติ, ทุกขังปิ จิตตัง ปะริยาทายะ ติฏฐะติ.",
+     "pali_roman": "Tassa lābhopi cittaṃ pariyādāya tiṭṭhati, alābhopi cittaṃ pariyādāya tiṭṭhati. yasopi cittaṃ pariyādāya tiṭṭhati, ayasopi cittaṃ pariyādāya tiṭṭhati. nindāpi cittaṃ pariyādāya tiṭṭhati, pasaṃsāpi cittaṃ pariyādāya tiṭṭhati. sukhaṃpi cittaṃ pariyādāya tiṭṭhati, dukkhaṃpi cittaṃ pariyādāya tiṭṭhati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Gain takes hold of his mind and remains, and loss takes hold of his mind and remains; and so with fame and obscurity, blame and praise, pleasure and pain.",
+     "page": 189
+    },
+    {
+     "number": 7,
+     "pali": "โส จะ อุปปันนัง ลาภัง อะนุรุชฌะติ อะลาเภ ปะฏิวิรุชฌะติ, อุปปันนัง ยะสัง อะนุรุชฌะติ อะยะเส ปะฏิวิรุชฌะติ, อุปปันนัง ปะสังสัง อะนุรุชฌะติ นินทายะ ปะฏิวิรุชฌะติ, อุปปันนัง สุขัง อะนุรุชฌะติ ทุกเข ปะฏิวิรุชฌะติ.",
+     "pali_roman": "So ca uppannaṃ lābhaṃ anurujjhati alābhe paṭivirujjhati, uppannaṃ yasaṃ anurujjhati ayase paṭivirujjhati, uppannaṃ pasaṃsaṃ anurujjhati nindāya paṭivirujjhati, uppannaṃ sukhaṃ anurujjhati dukkhe paṭivirujjhati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "He welcomes the gain that has arisen and resists the loss; he welcomes the fame that has arisen and resists the obscurity; he welcomes the praise that has arisen and resists the blame; he welcomes the pleasure that has arisen and resists the pain."
+    },
+    {
+     "number": 8,
+     "pali": "โส เอวัง อะนุโรธะวิโรธะสะมาปันโน, นะ ปะริมุจจะติ ชาติยา ชะรามะระเณนะ โสเกหิ ปะริเทเวหิ ทุกเขหิ โทมะนัสเสหิ อุปายาเสหิ, นะ ปะริมุจจะติ ทุกขัส์มาติ วะทามิ.",
+     "pali_roman": "So evaṃ anurodhavirodhasamāpanno, na parimuccati jātiyā jarāmaraṇena sokehi paridevehi dukkhehi domanassehi upāyāsehi, na parimuccati dukkhasmāti vadāmi.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Being thus taken up with welcoming and resisting, he is not freed from birth, from ageing and death, from sorrow, lamentation, pain, grief and despair; he is not freed from suffering, I say."
+    },
+    {
+     "number": 9,
+     "pali": "สุตะวะโต จะ โข ภิกขะเว อะริยะสาวะกัสสะ อุปปัชชะติ ลาโภ, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ลาโภ, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ อะลาโภ, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง อะลาโภ, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ ยะโส, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง ยะโส, โส จะ โข อะนิจโจ ทุกขัง วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ อะยะโส, โส อิติ ปะฏิสัญจิกขะติ. อุปปันโน โข เม อะยัง อะยะโส, โส จะ โข อะนิจโจ ทุกโข วิปะริณามะธัมโมติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ นินทา, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง นินทา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ ปะสังสา, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนา โข เม อะยัง ปะสังสา, สา จะ โข อะนิจจา ทุกขา วิปะริณามะธัมมาติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ สุขัง, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง สุขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง ปะชานาติ. อุปปัชชะติ ทุกขัง, โส อิติ ปะฏิสัญจิกขะติ. อุปปันนัง โข เม อิทัง ทุกขัง, ตัญจะ โข อะนิจจัง ทุกขัง วิปะริณามะธัมมันติ ยะถาภูตัง ปะชานาติ.",
+     "pali_roman": "Sutavato ca kho bhikkhave ariyasāvakassa uppajjati lābho, so iti paṭisañcikkhati. uppanno kho me ayaṃ lābho, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati alābho, so iti paṭisañcikkhati. uppanno kho me ayaṃ alābho, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati yaso, so iti paṭisañcikkhati. uppanno kho me ayaṃ yaso, so ca kho anicco dukkhaṃ vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati ayaso, so iti paṭisañcikkhati. uppanno kho me ayaṃ ayaso, so ca kho anicco dukkho vipariṇāmadhammoti yathābhūtaṃ pajānāti. uppajjati nindā, so iti paṭisañcikkhati. uppannā kho me ayaṃ nindā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ pajānāti. uppajjati pasaṃsā, so iti paṭisañcikkhati. uppannā kho me ayaṃ pasaṃsā, sā ca kho aniccā dukkhā vipariṇāmadhammāti yathābhūtaṃ pajānāti. uppajjati sukhaṃ, so iti paṭisañcikkhati. uppannaṃ kho me idaṃ sukhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ pajānāti. uppajjati dukkhaṃ, so iti paṭisañcikkhati. uppannaṃ kho me idaṃ dukkhaṃ, tañca kho aniccaṃ dukkhaṃ vipariṇāmadhammanti yathābhūtaṃ pajānāti.",
+     "thai": "",
+     "paiboon": "",
+     "english": "For a learned noble disciple, bhikkhus, gain arises, and he DOES reflect thus: 'This gain of mine has arisen; it is impermanent, suffering, of the nature to change' — and he knows it as it really is. And so for loss, fame, obscurity, blame, praise, pleasure and pain."
+    },
+    {
+     "number": 10,
+     "pali": "ตัสสะ ลาโภปิ จิตตัง นะ ปะริยาทายะ ติฏฐะติ, อะลาโภปิ จิตตัง นะ […]",
+     "pali_roman": "Tassa lābhopi cittaṃ na pariyādāya tiṭṭhati, alābhopi cittaṃ na […]",
+     "thai": "",
+     "paiboon": "",
+     "english": "Gain does not take hold of his mind and remain, nor loss, nor fame nor obscurity, nor blame nor praise, nor pleasure nor pain; and he does not welcome the gain that has arisen nor resist the loss, nor welcome the fame nor resist the obscurity, nor welcome the praise nor resist the blame, nor welcome the pleasure nor resist the pain."
+    }
+   ],
+   "checks": [
+    {
+     "verse": 5,
+     "file": "IMG_0460.PNG",
+     "issue": "COMPLETES THE LINE CUT BY THE PAGE TURN from 188."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0460.PNG",
+     "issue": "⚠ THE BOOK IS IRREGULAR IN DIFFERENT PLACES ON EACH SIDE OF THE CONTRAST, and none of it has been smoothed. On 188, for the worldling: อะลาโภ takes อะนิจจัง, neuter, where every other masculine takes อะนิจโจ; and อะยะโส is answered by อุปปันโน โข เม อะยัง ยะโส, with the อะ DROPPED. On 189, for the noble disciple, NEITHER of those recurs — อะลาโภ takes อะนิจโจ and อะยะโส is written in full — but ยะโส there takes ทุกขัง, neuter, where 188 has ทุกโข. All four were read from magnified crops. Filling the pattern would have silently corrected every one of them."
+    },
+    {
+     "verse": 9,
+     "file": "IMG_0460.PNG",
+     "issue": "⚠ ปะฏิสัญจิก-ขะติ IS HYPHENATED ACROSS A LINE END in the third formula and has been REJOINED, as ปัณณะ-ระสี was on 252. The same word is printed whole in the other fifteen formulas, which is what settles it."
+    },
+    {
+     "verse": 10,
+     "file": "IMG_0460.PNG",
+     "issue": "INCOMPLETE LINE, cut by the turn to 190, completed there."
+    }
+   ],
+   "continuation_of": "lokadhamma-suttam",
+   "continues": true
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "lokadhamma-suttam"
+  ],
+  "resume_from_page": 190,
+  "resume_from_file": "IMG_0461.PNG",
+  "resume_from": "lokadhamma-suttam, continuing on 190",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from MAGNIFIED crops of this sheet and romanised mechanically.",
+  "page_scan": "agrees. One row, one chant.",
+  "notes": "The chant continuing. The worldling's eighth formula completes, then what the eight do to his mind and where that leaves him; then the NOBLE DISCIPLE'S eight formulas, and a paragraph cut by the turn.",
+  "diacritic_exceptions": []
+ }
+}
