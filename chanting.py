@@ -55641,7 +55641,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 13; the rest is not in the app yet.
         'id': 'anattalakkhana-suttam',
         'title_thai': 'อะนัตตะลักขะณะสุตตัง',
         'title_pali': '',
@@ -55730,14 +55730,105 @@ CHANTS = [
             #   122 continues. COMPLETE it from 122 rather than starting a new
             #   verse, and bring this record's ENGLISH up to the finished
             #   sentence when you do.
+            # ‼ COMPLETED FROM p122: this line was cut by the page break and
+            #   is now whole. Was: วิญญาณัง อะนัตตา, วิญญาณัญจะ หิทัง ภิกขะเว
+            #   อัตตา อะภะวิสสะ, นะยิทัง วิญญาณัง อาพาธายะ สังวัตเตยยะ,
+            #   ลัพเภถะ จะ วิญญาเณ, เอวัง เม วิญญาณัง โหตุ, เอวัง เม วิญญาณัง
+            #   มา อะโหสีติ, ยัส๎มา จะ โข ภิกขะเว วิญญาณัง อะนัตตา, ตัส๎มา
+            #   วิญญาณัง อาพาธายะ สังวัตตะติ, นะ จะ ลัพภะติ วิญญาเณ, เอวัง […]
+            # ‼ CHECK [IMG_0387.PNG]: COMPLETES THE LINE PAGE 121 CUT. That
+            #   sheet ended …นะ จะ ลัพภะติ วิญญาเณ, เอวัง […] and this one
+            #   opens เม วิญญาณัง โหตุ… The whole line is given here so the
+            #   […] is replaced, and verse 6 keeps page 121. ⚠️ Its ENGLISH in
+            #   batch-121 was the hanging half and has been brought up to the
+            #   finished sentence at the same time.
             {
                 'number': 6,
                 'page': 121,
-                'pali': 'วิญญาณัง อะนัตตา, วิญญาณัญจะ หิทัง ภิกขะเว อัตตา อะภะวิสสะ, นะยิทัง วิญญาณัง อาพาธายะ สังวัตเตยยะ, ลัพเภถะ จะ วิญญาเณ, เอวัง เม วิญญาณัง โหตุ, เอวัง เม วิญญาณัง มา อะโหสีติ, ยัส๎มา จะ โข ภิกขะเว วิญญาณัง อะนัตตา, ตัส๎มา วิญญาณัง อาพาธายะ สังวัตตะติ, นะ จะ ลัพภะติ วิญญาเณ, เอวัง […]',
-                'pali_roman': 'Viññāṇaṃ anattā, viññāṇañca hidaṃ bhikkhave attā abhavissa, nayidaṃ viññāṇaṃ ābādhāya saṃvatteyya, labbhetha ca viññāṇe, evaṃ me viññāṇaṃ hotu, evaṃ me viññāṇaṃ mā ahosīti, yasmā ca kho bhikkhave viññāṇaṃ anattā, tasmā viññāṇaṃ ābādhāya saṃvattati, na ca labbhati viññāṇe, evaṃ […]',
+                'pali': 'วิญญาณัง อะนัตตา, วิญญาณัญจะ หิทัง ภิกขะเว อัตตา อะภะวิสสะ, นะยิทัง วิญญาณัง อาพาธายะ สังวัตเตยยะ, ลัพเภถะ จะ วิญญาเณ, เอวัง เม วิญญาณัง โหตุ, เอวัง เม วิญญาณัง มา อะโหสีติ, ยัส๎มา จะ โข ภิกขะเว วิญญาณัง อะนัตตา, ตัส๎มา วิญญาณัง อาพาธายะ สังวัตตะติ, นะ จะ ลัพภะติ วิญญาเณ, เอวัง เม วิญญาณัง โหตุ, เอวัง เม วิญญาณัง มา อะโหสีติ.',
+                'pali_roman': 'Viññāṇaṃ anattā, viññāṇañca hidaṃ bhikkhave attā abhavissa, nayidaṃ viññāṇaṃ ābādhāya saṃvatteyya, labbhetha ca viññāṇe, evaṃ me viññāṇaṃ hotu, evaṃ me viññāṇaṃ mā ahosīti, yasmā ca kho bhikkhave viññāṇaṃ anattā, tasmā viññāṇaṃ ābādhāya saṃvattati, na ca labbhati viññāṇe, evaṃ me viññāṇaṃ hotu, evaṃ me viññāṇaṃ mā ahosīti.',
                 'thai': '',
                 'paiboon': '',
-                'english': "Monks, consciousness is not-self. If consciousness were self, it would not lead to affliction, and it would be possible to say of consciousness: 'let my consciousness be thus, let my consciousness not be thus.' But because consciousness is not-self, it leads to affliction, and it is not possible to say of consciousness: 'let my consciousness be thus, let my consciousness not be thus. — cut here.",
+                'english': "Monks, consciousness is not-self. If consciousness were self, it would not lead to affliction, and it would be possible to say of consciousness: 'let my consciousness be thus, let my consciousness not be thus.' But because consciousness is not-self, it leads to affliction, and it is not possible to say of consciousness: 'let my consciousness be thus, let my consciousness not be thus.'",
+            },
+            {
+                'number': 7,
+                'page': 122,
+                'pali': 'ตัง กิง มัญญะถะ ภิกขะเว รูปัง นิจจัง วา อะนิจจัง วาติ. อะนิจจัง ภันเต. ยัมปะนานิจจัง ทุกขัง วา ตัง สุขัง วาติ. ทุกขัง ภันเต. ยัมปะนานิจจัง ทุกขัง วิปะริณามะธัมมัง, กัลลัง นุ ตัง สะมะนุปัสสิตุง, เอตัง มะมะ เอโสหะมัส๎มิ เอโส เม อัตตาติ. โน เหตัง ภันเต.',
+                'pali_roman': 'Taṃ kiṃ maññatha bhikkhave rūpaṃ niccaṃ vā aniccaṃ vāti. Aniccaṃ bhante. Yampanāniccaṃ dukkhaṃ vā taṃ sukhaṃ vāti. Dukkhaṃ bhante. Yampanāniccaṃ dukkhaṃ vipariṇāmadhammaṃ, kallaṃ nu taṃ samanupassituṃ, etaṃ mama esohamasmi eso me attāti. No hetaṃ bhante.',
+                'thai': '',
+                'paiboon': '',
+                'english': "What do you think, monks — is form permanent or impermanent? Impermanent, venerable sir. And what is impermanent, is it suffering or happiness? Suffering, venerable sir. And what is impermanent, suffering, of a nature to change — is it fit to be regarded thus: 'this is mine, this I am, this is my self'? No, venerable sir.",
+            },
+            # ‼ CHECK [IMG_0387.PNG]: THE QUESTIONING CHANGES ONLY ITS
+            #   ADJECTIVE ENDINGS. รูปัง and วิญญาณัง take นิจจัง / อะนิจจัง;
+            #   เวทะนา, สัญญา and สังขารา take นิจจา / อะนิจจา. Everything
+            #   after the first question — ยัมปะนานิจจัง ทุกขัง วา… — is
+            #   identical in all five, including its ทุกขัง, which does NOT
+            #   change with the subject. All five were read off the sheet.
+            {
+                'number': 8,
+                'page': 122,
+                'pali': 'ตัง กิง มัญญะถะ ภิกขะเว เวทะนา นิจจา วา อะนิจจา วาติ. อะนิจจา ภันเต. ยัมปะนานิจจัง ทุกขัง วา ตัง สุขัง วาติ. ทุกขัง ภันเต. ยัมปะนานิจจัง ทุกขัง วิปะริณามะธัมมัง, กัลลัง นุ ตัง สะมะนุปัสสิตุง, เอตัง มะมะ เอโสหะมัส๎มิ เอโส เม อัตตาติ. โน เหตัง ภันเต.',
+                'pali_roman': 'Taṃ kiṃ maññatha bhikkhave vedanā niccā vā aniccā vāti. Aniccā bhante. Yampanāniccaṃ dukkhaṃ vā taṃ sukhaṃ vāti. Dukkhaṃ bhante. Yampanāniccaṃ dukkhaṃ vipariṇāmadhammaṃ, kallaṃ nu taṃ samanupassituṃ, etaṃ mama esohamasmi eso me attāti. No hetaṃ bhante.',
+                'thai': '',
+                'paiboon': '',
+                'english': "What do you think, monks — is feeling permanent or impermanent? Impermanent, venerable sir. And what is impermanent, is it suffering or happiness? Suffering, venerable sir. And what is impermanent, suffering, of a nature to change — is it fit to be regarded thus: 'this is mine, this I am, this is my self'? No, venerable sir.",
+            },
+            {
+                'number': 9,
+                'page': 122,
+                'pali': 'ตัง กิง มัญญะถะ ภิกขะเว สัญญา นิจจา วา อะนิจจา วาติ. อะนิจจา ภันเต. ยัมปะนานิจจัง ทุกขัง วา ตัง สุขัง วาติ. ทุกขัง ภันเต. ยัมปะนานิจจัง ทุกขัง วิปะริณามะธัมมัง, กัลลัง นุ ตัง สะมะนุปัสสิตุง, เอตัง มะมะ เอโสหะมัส๎มิ เอโส เม อัตตาติ. โน เหตัง ภันเต.',
+                'pali_roman': 'Taṃ kiṃ maññatha bhikkhave saññā niccā vā aniccā vāti. Aniccā bhante. Yampanāniccaṃ dukkhaṃ vā taṃ sukhaṃ vāti. Dukkhaṃ bhante. Yampanāniccaṃ dukkhaṃ vipariṇāmadhammaṃ, kallaṃ nu taṃ samanupassituṃ, etaṃ mama esohamasmi eso me attāti. No hetaṃ bhante.',
+                'thai': '',
+                'paiboon': '',
+                'english': "What do you think, monks — is perception permanent or impermanent? Impermanent, venerable sir. And what is impermanent, is it suffering or happiness? Suffering, venerable sir. And what is impermanent, suffering, of a nature to change — is it fit to be regarded thus: 'this is mine, this I am, this is my self'? No, venerable sir.",
+            },
+            {
+                'number': 10,
+                'page': 122,
+                'pali': 'ตัง กิง มัญญะถะ ภิกขะเว สังขารา นิจจา วา อะนิจจา วาติ. อะนิจจา ภันเต. ยัมปะนานิจจัง ทุกขัง วา ตัง สุขัง วาติ. ทุกขัง ภันเต. ยัมปะนานิจจัง ทุกขัง วิปะริณามะธัมมัง, กัลลัง นุ ตัง สะมะนุปัสสิตุง, เอตัง มะมะ เอโสหะมัส๎มิ เอโส เม อัตตาติ. โน เหตัง ภันเต.',
+                'pali_roman': 'Taṃ kiṃ maññatha bhikkhave saṅkhārā niccā vā aniccā vāti. Aniccā bhante. Yampanāniccaṃ dukkhaṃ vā taṃ sukhaṃ vāti. Dukkhaṃ bhante. Yampanāniccaṃ dukkhaṃ vipariṇāmadhammaṃ, kallaṃ nu taṃ samanupassituṃ, etaṃ mama esohamasmi eso me attāti. No hetaṃ bhante.',
+                'thai': '',
+                'paiboon': '',
+                'english': "What do you think, monks — is formations permanent or impermanent? Impermanent, venerable sir. And what is impermanent, is it suffering or happiness? Suffering, venerable sir. And what is impermanent, suffering, of a nature to change — is it fit to be regarded thus: 'this is mine, this I am, this is my self'? No, venerable sir.",
+            },
+            {
+                'number': 11,
+                'page': 122,
+                'pali': 'ตัง กิง มัญญะถะ ภิกขะเว วิญญาณัง นิจจัง วา อะนิจจัง วาติ. อะนิจจัง ภันเต. ยัมปะนานิจจัง ทุกขัง วา ตัง สุขัง วาติ. ทุกขัง ภันเต. ยัมปะนานิจจัง ทุกขัง วิปะริณามะธัมมัง, กัลลัง นุ ตัง สะมะนุปัสสิตุง, เอตัง มะมะ เอโสหะมัส๎มิ เอโส เม อัตตาติ. โน เหตัง ภันเต.',
+                'pali_roman': 'Taṃ kiṃ maññatha bhikkhave viññāṇaṃ niccaṃ vā aniccaṃ vāti. Aniccaṃ bhante. Yampanāniccaṃ dukkhaṃ vā taṃ sukhaṃ vāti. Dukkhaṃ bhante. Yampanāniccaṃ dukkhaṃ vipariṇāmadhammaṃ, kallaṃ nu taṃ samanupassituṃ, etaṃ mama esohamasmi eso me attāti. No hetaṃ bhante.',
+                'thai': '',
+                'paiboon': '',
+                'english': "What do you think, monks — is consciousness permanent or impermanent? Impermanent, venerable sir. And what is impermanent, is it suffering or happiness? Suffering, venerable sir. And what is impermanent, suffering, of a nature to change — is it fit to be regarded thus: 'this is mine, this I am, this is my self'? No, venerable sir.",
+            },
+            # ‼ CHECK [IMG_0387.PNG]: โอฬาริกัง IS WRITTEN WITH ฬ BY RULE, NOT
+            #   BY SIGHT. At 14x the letter shows as พ with no ascender, which
+            #   by the settled rule proves nothing either way, and this is a
+            #   Pali-only page so there is no lighter Thai face to check it
+            #   against. The canon has oḷārika, so ฬ. Recorded as rule-based
+            #   rather than photographed.
+            {
+                'number': 12,
+                'page': 122,
+                'pali': 'ตัส๎มาติหะ ภิกขะเว ยังกิญจิ รูปัง อะตีตานาคะตะปัจจุปปันนัง, อัชฌัตตัง วา พะหิทธา วา, โอฬาริกัง วา สุขุมัง วา, หีนัง วา ปะณีตัง วา, ยันทูเร สันติเก วา, สัพพัง รูปัง, เนตัง มะมะ เนโสหะมัส๎มิ นะ เมโส อัตตาติ. เอวะเมตัง ยะถาภูตัง สัมมัปปัญญายะ ทัฏฐัพพัง.',
+                'pali_roman': 'Tasmātiha bhikkhave yaṅkiñci rūpaṃ atītānāgatapaccuppannaṃ, ajjhattaṃ vā bahiddhā vā, oḷārikaṃ vā sukhumaṃ vā, hīnaṃ vā paṇītaṃ vā, yandūre santike vā, sabbaṃ rūpaṃ, netaṃ mama nesohamasmi na meso attāti. Evametaṃ yathābhūtaṃ sammappaññāya daṭṭhabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Therefore, monks, whatever form there is — past, future or present, internal or external, gross or subtle, inferior or superior, far or near — all form should be seen as it actually is with right wisdom: 'this is not mine, this I am not, this is not my self.'",
+            },
+            # ‼ CHECK [IMG_0387.PNG]: CUT AFTER THE SECOND PAIR, so […] is
+            #   used: the sheet ends …อัชฌัตตา วา พะหิทธา วา, and page 123
+            #   continues. COMPLETE it from 123, and bring this record's
+            #   ENGLISH up to the finished sentence when you do.
+            {
+                'number': 13,
+                'page': 122,
+                'pali': 'ยา กาจิ เวทะนา อะตีตานาคะตะปัจจุปปันนา, อัชฌัตตา วา พะหิทธา วา, […]',
+                'pali_roman': 'Yā kāci vedanā atītānāgatapaccuppannā, ajjhattā vā bahiddhā vā, […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever feeling there is — past, future or present, internal or external,',
             },
         ],
     },
