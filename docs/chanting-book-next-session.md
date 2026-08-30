@@ -1869,44 +1869,41 @@ offset is **270** from 245 down and **268** from 249 up; two unphotographed
 blanks sit between. Page 232 opens with its own centred heading, so nothing
 runs back from it — 231 is a clean start.
 
-## ⚠ NEXT: THE MAHĀSAMAYA SUTTA IN THAI, 175–182 — and it HAS a twin
+## ⚠ NEXT: THE MAHĀSAMAYA SUTTA, 176–182 — all sheets READ, not entered
 
-**This is the largest single item left, and also the safest.** Pages 175–182
-are `มะหาสะมะยะสุตตัง` in Thai script, and the app already holds the same text
-in roman as `mahasamayasutta-roman` at 317–325, **192 verses**. It is the third
-doubled chant, and unlike the last two suttas this one does NOT have to be
-entered on the photographs alone.
+Page 175's `บทขัด` is in (`1dd6cf9`). **The sutta itself is not.** All eight
+sheets 175–182 have been read; what remains is the build — roughly **192
+two-column verses**, the largest single chant left.
 
-The สารบัญ lists, both at ๑๗๕: a section heading, `บทขัดมะหาสะมะยะสุตตัง`, and
-`มะหาสะมะยะสุตตัง` itself. Page 182 ends with the colophon
-`มะหาสะมะยะสุตตัง นิฏฐิตัง.` and the footnote `1. ที. มหา. 10/287`.
+**It has a full twin**: the same text in roman at 317–325 as
+`mahasamayasutta-roman`, 192 verses, giving the verse count, the order and the
+English. Reading order is settled and checked against it: **two columns, read
+ACROSS**, left half plus right half making one verse. Some left-column lines
+are indented and that does **not** mean a continuation.
 
-### The reading order is settled — TWO COLUMNS, READ ACROSS
+⚠ **Do not let the twin do the reading.** Read each sheet, romanise, THEN
+compare; where they differ, re-read BOTH. A scaffold makes a missing line
+invisible — that is exactly how the page-242 error happened.
 
-Confirmed against the twin, not guessed. Page 182's left column reads
-`สะมันตา ปะริวาเรถะ` and its right `มา โว มุญจิตถะ โกจิ นัง.`, which is roman
-verse 181 `Samantā parivāretha. Mā vo muñcittha koci naṃ.'` — left half plus
-right half makes one verse. The next row down likewise gives roman 182.
+### What reading the sheets already turned up
 
-Some left-column lines are INDENTED, which looks like it might mean a
-continuation. It does not — the indent is the verse's own shape. Check each
-against the twin rather than inferring from the indent.
+**1. A second witness for the names the roman pass could not check.** The notes
+for 317–325 flagged page 321 verses 100–105 as a dense run of proper names with
+nothing to verify them against. **Page 179 gives them in Thai**:
+`กุเฏณฑุ เวเฏณฑุ`, `วิฏู จะ วิฏุโฏ สะหะ`, `กินนุฆัณฑุ นิฆัณฑุ จะ`,
+`โอปะมัญโญ จะ`, `ติมพะรู สุริยะวัจฉะสา`. Compare them line by line when
+entering — this closes one of that pass's open concerns.
 
-### How to do it
+**2. A second witness for a declared diacritic exception.** `varuṇā/vāruṇā` was
+declared on page 322 as genuinely two words side by side in one line. **Page
+180 prints `วะรุณา วารุณา เทวา`** — the Thai confirms it independently.
 
-Read each sheet, then romanise and compare against `mahasamayasutta-roman`
-verse by verse, exactly as `scripts/crosscheck_repeated_lines.py` does for
-single lines. The twin gives the verse count, the order and the English.
-
-⚠ **But do not let the twin do the reading.** That is the trap that produced
-the page-242 error: a scaffold makes a whole missing line invisible, because
-what you expect is what you see. Read the Thai off the sheet first, THEN
-compare — and when they differ, re-read BOTH.
-
-Expect real differences: the Mahāsamaya's roman copy already carries several
-of the book's own inconsistencies, recorded when 317–325 went in — `tap` for
-`taṃ` on two sheets, `viruḷho` against `viruḷhako`, `bhikkhu` against
-`bhikkhū`, `Evam` against `Evaṃ`, `āmantayi` against `āmantayī`.
+**3. Two more ฬ candidates**, both the Great King Virūḷhaka, both showing พ in
+the photograph: `วิรุพโห` on 178 and `วิรุพหะโก` on 179. By the rule settled at
+the book they should be **`วิรุฬโห`** and **`วิรุฬหะโก`**. The roman copy
+already records `viruḷho` against `viruḷhako` as one of the book's own
+inconsistencies, so check which form each Thai sheet actually intends before
+writing it.
 
 ## The Girimānanda Sutta, 183–186 — DONE
 
