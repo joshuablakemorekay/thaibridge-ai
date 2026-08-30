@@ -103,6 +103,7 @@ photograph.
 | 121 | IMG_0386 | 265 |
 | 122 | IMG_0387 | 265 |
 | 123 | IMG_0388 | 265 |
+| 124 | IMG_0389 | 265 |
 | 190 | IMG_0461 | 271 |
 | — | **IMG_0462** | section divider, UNNUMBERED — `บทสวดมนต์ / ทำวัตรเช้า -เย็น แปล`, nothing else on the sheet. Is 191 or 192; its blank pair was NOT photographed |
 | 193 | **IMG_0463** | number NOT printed on the sheet — 193 on the authority of the สารบัญ (`ทำวัตรเช้า แปล` at ๑๙๓), confirmed by IMG_0464 carrying a printed 194 |

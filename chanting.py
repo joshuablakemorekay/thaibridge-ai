@@ -55641,7 +55641,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 13; the rest is not in the app yet.
         'id': 'anattalakkhana-suttam',
         'title_thai': 'อะนัตตะลักขะณะสุตตัง',
         'title_pali': '',
@@ -55655,6 +55654,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'อะนัตตะลักขะณะสุตตัง นิฏฐิตัง',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'The Discourse on the Mark of Not-Self is ended.',
         },
         'verses': [
             # ‼ CHECK [IMG_0386.PNG]: THE HEADING CARRIES THE BOOK'S OWN
@@ -55821,14 +55827,87 @@ CHANTS = [
             #   used: the sheet ends …อัชฌัตตา วา พะหิทธา วา, and page 123
             #   continues. COMPLETE it from 123, and bring this record's
             #   ENGLISH up to the finished sentence when you do.
+            # ‼ COMPLETED FROM p123: this line was cut by the page break and
+            #   is now whole. Was: ยา กาจิ เวทะนา อะตีตานาคะตะปัจจุปปันนา,
+            #   อัชฌัตตา วา พะหิทธา วา, […]
+            # ‼ CHECK [IMG_0388.PNG]: COMPLETES THE LINE PAGE 122 CUT. That
+            #   sheet ended …อัชฌัตตา วา พะหิทธา วา, […] and this one opens
+            #   โอฬาริกา วา สุขุมา วา… The whole line is given here so the […]
+            #   is replaced, and verse 13 keeps page 122. ⚠️ Its ENGLISH in
+            #   batch-122 was the hanging half and is brought up to the
+            #   finished sentence at the same time.
+            # ‼ CHECK [IMG_0388.PNG]: A COMMA WHERE PAGE 122's VERSE 12 HAD A
+            #   FULL STOP. All four conclusions on this sheet end …อัตตาติ,
+            #   เอวะเมตัง… with a comma; the form conclusion on 122 ends
+            #   …อัตตาติ. เอวะเมตัง… with a full stop. The five were read off
+            #   their own sheets, which is how the difference showed.
             {
                 'number': 13,
                 'page': 122,
-                'pali': 'ยา กาจิ เวทะนา อะตีตานาคะตะปัจจุปปันนา, อัชฌัตตา วา พะหิทธา วา, […]',
-                'pali_roman': 'Yā kāci vedanā atītānāgatapaccuppannā, ajjhattā vā bahiddhā vā, […]',
+                'pali': 'ยา กาจิ เวทะนา อะตีตานาคะตะปัจจุปปันนา, อัชฌัตตา วา พะหิทธา วา, โอฬาริกา วา สุขุมา วา, หีนา วา ปะณีตา วา, ยา ทูเร สันติเก วา, สัพพา เวทะนา, เนตัง มะมะ เนโสหะมัส๎มิ นะ เมโส อัตตาติ, เอวะเมตัง ยะถาภูตัง สัมมัปปัญญายะ ทัฏฐัพพัง.',
+                'pali_roman': 'Yā kāci vedanā atītānāgatapaccuppannā, ajjhattā vā bahiddhā vā, oḷārikā vā sukhumā vā, hīnā vā paṇītā vā, yā dūre santike vā, sabbā vedanā, netaṃ mama nesohamasmi na meso attāti, evametaṃ yathābhūtaṃ sammappaññāya daṭṭhabbaṃ.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'Whatever feeling there is — past, future or present, internal or external,',
+                'english': "Whatever feeling there is — past, future or present, internal or external, gross or subtle, inferior or superior, far or near — all feeling should be seen as it actually is with right wisdom: 'this is not mine, this I am not, this is not my self.'",
+            },
+            {
+                'number': 14,
+                'page': 123,
+                'pali': 'ยา กาจิ สัญญา อะตีตานาคะตะปัจจุปปันนา, อัชฌัตตา วา พะหิทธา วา, โอฬาริกา วา สุขุมา วา, หีนา วา ปะณีตา วา, ยา ทูเร สันติเก วา, สัพพา สัญญา, เนตัง มะมะ เนโสหะมัส๎มิ นะ เมโส อัตตาติ, เอวะเมตัง ยะถาภูตัง สัมมัปปัญญายะ ทัฏฐัพพัง.',
+                'pali_roman': 'Yā kāci saññā atītānāgatapaccuppannā, ajjhattā vā bahiddhā vā, oḷārikā vā sukhumā vā, hīnā vā paṇītā vā, yā dūre santike vā, sabbā saññā, netaṃ mama nesohamasmi na meso attāti, evametaṃ yathābhūtaṃ sammappaññāya daṭṭhabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Whatever perception there is — past, future or present, internal or external, gross or subtle, inferior or superior, far or near — all perception should be seen as it actually is with right wisdom: 'this is not mine, this I am not, this is not my self.'",
+            },
+            # ‼ CHECK [IMG_0388.PNG]: ‼ A SPACE INSIDE เมโส, ONCE ONLY. Verse
+            #   15 reads นะ เม โส อัตตาติ, read at 5x, where verses 13, 14 and
+            #   16 all read นะ เมโส อัตตาติ closed up. Reproduced as printed.
+            {
+                'number': 15,
+                'page': 123,
+                'pali': 'เย เกจิ สังขารา อะตีตานาคะตะปัจจุปปันนา, อัชฌัตตา วา พะหิทธา วา, โอฬาริกา วา สุขุมา วา, หีนา วา ปะณีตา วา, เย ทูเร สันติเก วา, สัพเพ สังขารา, เนตัง มะมะ เนโสหะมัส๎มิ นะ เม โส อัตตาติ, เอวะเมตัง ยะถาภูตัง สัมมัปปัญญายะ ทัฏฐัพพัง.',
+                'pali_roman': 'Ye keci saṅkhārā atītānāgatapaccuppannā, ajjhattā vā bahiddhā vā, oḷārikā vā sukhumā vā, hīnā vā paṇītā vā, ye dūre santike vā, sabbe saṅkhārā, netaṃ mama nesohamasmi na me so attāti, evametaṃ yathābhūtaṃ sammappaññāya daṭṭhabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Whatever formations there is — past, future or present, internal or external, gross or subtle, inferior or superior, far or near — all formations should be seen as it actually is with right wisdom: 'this is not mine, this I am not, this is not my self.'",
+            },
+            # ‼ CHECK [IMG_0388.PNG]: ‼ THE CONSCIOUSNESS PARAGRAPH IS
+            #   PUNCTUATED DIFFERENTLY FROM THE OTHER FOUR, and it is not a
+            #   small difference: it DROPS the commas after
+            #   อะตีตานาคะตะปัจจุปปันนัง, after พะหิทธา วา and after ปะณีตัง
+            #   วา, and ADDS one after หีนัง วา, where verses 13-15 have none
+            #   there. Read at 3.2x and 3.4x. Four changes in one paragraph,
+            #   all reproduced.
+            {
+                'number': 16,
+                'page': 123,
+                'pali': 'ยังกิญจิ วิญญาณัง อะตีตานาคะตะปัจจุปปันนัง อัชฌัตตัง วา พะหิทธา วา โอฬาริกัง วา สุขุมัง วา, หีนัง วา, ปะณีตัง วา ยันทูเร สันติเก วา, สัพพัง วิญญาณัง, เนตัง มะมะ เนโสหะมัส๎มิ นะ เมโส อัตตาติ, เอวะเมตัง ยะถาภูตัง สัมมัปปัญญายะ ทัฏฐัพพัง.',
+                'pali_roman': 'Yaṅkiñci viññāṇaṃ atītānāgatapaccuppannaṃ ajjhattaṃ vā bahiddhā vā oḷārikaṃ vā sukhumaṃ vā, hīnaṃ vā, paṇītaṃ vā yandūre santike vā, sabbaṃ viññāṇaṃ, netaṃ mama nesohamasmi na meso attāti, evametaṃ yathābhūtaṃ sammappaññāya daṭṭhabbaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Whatever consciousness there is — past, future or present, internal or external, gross or subtle, inferior or superior, far or near — all consciousness should be seen as it actually is with right wisdom: 'this is not mine, this I am not, this is not my self.'",
+            },
+            {
+                'number': 17,
+                'page': 123,
+                'pali': 'เอวัง ปัสสัง ภิกขะเว สุต๎วา อะริยะสาวะโก รูปัส๎มิงปิ นิพพินทะติ, เวทะนายะปิ นิพพินทะติ, สัญญายะปิ นิพพินทะติ, สังขาเรสุปิ นิพพินทะติ, วิญญาณัส๎มิงปิ นิพพินทะติ, นิพพินทัง วิรัชชะติ, วิราคา วิมุจจะติ, วิมุตตัส๎มิง วิมุตตะมีติ. ญาณัง โหติ ขีณา ชาติ, วุสิตัง พ๎รัห๎มะจะริยัง กะตัง กะระณียัง, นาปะรัง อิตถัตตายาติ ปะชานาตีติ.',
+                'pali_roman': 'Evaṃ passaṃ bhikkhave sutvā ariyasāvako rūpasmiṃpi nibbindati, vedanāyapi nibbindati, saññāyapi nibbindati, saṅkhāresupi nibbindati, viññāṇasmiṃpi nibbindati, nibbindaṃ virajjati, virāgā vimuccati, vimuttasmiṃ vimuttamīti. Ñāṇaṃ hoti khīṇā jāti, vusitaṃ brahmacariyaṃ kataṃ karaṇīyaṃ, nāparaṃ itthattāyāti pajānātīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Seeing thus, monks, the instructed noble disciple grows disenchanted with form, disenchanted with feeling, disenchanted with perception, disenchanted with formations, disenchanted with consciousness. Being disenchanted he becomes dispassionate; through dispassion he is released; in release there is the knowledge that he is released. He knows: birth is exhausted, the holy life has been lived, what had to be done is done, there is no more of this state.',
+            },
+            # ‼ CHECK [IMG_0388.PNG]: THE COLOPHON HAS NO FULL STOP:
+            #   อะนัตตะลักขะณะสุตตัง นิฏฐิตัง, matching page 120's and unlike
+            #   117's and 119's. Four colophons now, and the ending has to be
+            #   read every time.
+            {
+                'number': 18,
+                'page': 123,
+                'pali': 'อิทะมะโวจะ ภะคะวา, อัตตะมะนา ปัญจะวัคคิยา ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุง. อิมัส๎มิญจะ ปะนะ เวยยากะระณัส๎มิง ภัญญะมาเน ปัญจะวัคคิยานัง ภิกขูนัง อะนุปาทายะ อาสะเวหิ จิตตานิ วิมุจจิงสูติ.',
+                'pali_roman': 'Idamavoca bhagavā, attamanā pañcavaggiyā bhikkhū bhagavato bhāsitaṃ abhinanduṃ. Imasmiñca pana veyyākaraṇasmiṃ bhaññamāne pañcavaggiyānaṃ bhikkhūnaṃ anupādāya āsavehi cittāni vimucciṃsūti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus spoke the Blessed One, and the group of five monks delighted in his words. And while this discourse was being spoken, the minds of the five were released from the taints through non-clinging.',
             },
         ],
     },

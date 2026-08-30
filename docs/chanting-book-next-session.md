@@ -1812,16 +1812,22 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**65 pages are left: 123–186 and 192.**
+**64 pages are left: 124–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–122 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 123, `IMG_0388`** — ⚠️
-`anattalakkhana-suttam` IS OPEN, **13 units in**, and ⚠️⚠️ **verse 13 is CUT
-with `[…]`** after `…อัชฌัตตา วา พะหิทธา วา,`: COMPLETE it, and bring its
-ENGLISH up at the same time. The conclusion is being run through the five
-aggregates; form is done, feeling is half done, three to go.
+**115–123 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 124, `IMG_0389`** — ✅ nothing is
+open; `อะนัตตะลักขะณะสุตตัง` finished on 123, so 124 should open a new `บทขัด`
+or sutta 27.
+
+⚠️ **THIS BOOK REPEATS A FORMULA AND THEN QUIETLY CHANGES IT.** In one sutta
+across three sheets: the formations paragraph turned plural in six words (121);
+the consciousness questioning took a comma where three others took a full stop
+(121); the consciousness conclusion **dropped three commas and added one** (123);
+and one paragraph put a space inside `เมโส` that no other has (123). Every one
+was found only by reading the paragraph off the sheet. **Never derive a
+paragraph from its neighbour.**
 
 ⚠️ **THE AGGREGATE FORMULA IS NOT COPYABLE.** In `อะนัตตะลักขะณะสุตตัง` the
 formations paragraph is **plural throughout** — `อะภะวิสสังสุ`, `สังวัตเตยยุง`,
