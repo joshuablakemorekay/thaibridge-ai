@@ -1876,41 +1876,59 @@ offset is **270** from 245 down and **268** from 249 up; two unphotographed
 blanks sit between. Page 232 opens with its own centred heading, so nothing
 runs back from it — 231 is a clean start.
 
-## ⚠ NEXT: THE MAHĀSAMAYA SUTTA, 176–182 — all sheets READ, not entered
+## ⚠ IN PROGRESS: THE MAHĀSAMAYA SUTTA — 175–176 IN, 177–182 TO GO
 
-Page 175's `บทขัด` is in (`1dd6cf9`). **The sutta itself is not.** All eight
-sheets 175–182 have been read; what remains is the build — roughly **192
-two-column verses**, the largest single chant left.
+**A chant is mid-build.** `mahasamaya-suttam` holds **16 units** (pages
+175–176, commit `3de46d2`) and carries a `‼ CONTINUES` marker saying so. The
+`บทขัด` above it on 175 is complete and separate. All eight sheets 175–182 have
+been read; six remain to enter.
 
-**It has a full twin**: the same text in roman at 317–325 as
-`mahasamayasutta-roman`, 192 verses, giving the verse count, the order and the
-English. Reading order is settled and checked against it: **two columns, read
-ACROSS**, left half plus right half making one verse. Some left-column lines
-are indented and that does **not** mean a continuation.
+**Resume by entering 177**, then 178, 179, 180, 181, 182 as chained batches.
+Files: 177–179 are `IMG_0447`–`0449`, then **`IMG_0450` DOES NOT EXIST** and
+180–182 are `IMG_0451`–`0453`. Page 182 ends with the colophon
+`มะหาสะมะยะสุตตัง นิฏฐิตัง.` and the footnote `1. ที. มหา. 10/287`.
 
-⚠ **Do not let the twin do the reading.** Read each sheet, romanise, THEN
-compare; where they differ, re-read BOTH. A scaffold makes a missing line
-invisible — that is exactly how the page-242 error happened.
+### ⚠ The twin helps LESS than expected — read this before relying on it
 
-### What reading the sheets already turned up
+There is a twin, `mahasamayasutta-roman` at 317–325, 192 verses. **But its unit
+division does not transfer.** The roman copy sets the opening prose as ELEVEN
+short units — `Evaṃ me sutaṃ:` alone is its verse 1 — where the Thai sets the
+same words as ONE running paragraph.
 
-**1. A second witness for the names the roman pass could not check.** The notes
-for 317–325 flagged page 321 verses 100–105 as a dense run of proper names with
-nothing to verify them against. **Page 179 gives them in Thai**:
-`กุเฏณฑุ เวเฏณฑุ`, `วิฏู จะ วิฏุโฏ สะหะ`, `กินนุฆัณฑุ นิฆัณฑุ จะ`,
-`โอปะมัญโญ จะ`, `ติมพะรู สุริยะวัจฉะสา`. Compare them line by line when
-entering — this closes one of that pass's open concerns.
+Two consequences, and the second is the one that bites:
 
-**2. A second witness for a declared diacritic exception.** `varuṇā/vāruṇā` was
-declared on page 322 as genuinely two words side by side in one line. **Page
-180 prints `วะรุณา วารุณา เทวา`** — the Thai confirms it independently.
+1. Verse numbers will **not** line up between the copies. Not a fault.
+2. **A count mismatch will NOT reveal a dropped line.** That was the safety net
+   I expected the twin to provide, and it is not there. Every sheet still has
+   to be read on its own terms, with the same care the Lokadhamma and
+   Girimānanda suttas needed.
 
-**3. Two more ฬ candidates**, both the Great King Virūḷhaka, both showing พ in
-the photograph: `วิรุพโห` on 178 and `วิรุพหะโก` on 179. By the rule settled at
-the book they should be **`วิรุฬโห`** and **`วิรุฬหะโก`**. The roman copy
-already records `viruḷho` against `viruḷhako` as one of the book's own
-inconsistencies, so check which form each Thai sheet actually intends before
-writing it.
+Use the twin to check the **text** of a line you have already read. Never to
+decide how many lines there are.
+
+### Settled about the layout
+
+* **Two columns, read ACROSS** — left half plus right half is one verse.
+  Confirmed against the twin on page 182.
+* Some left-column lines are **indented**; that is the verse's own shape and
+  does NOT mean a continuation.
+* The column count changes **inside** a page: 176's fourth verse group is one
+  centred column of four lines where the three before it are two columns.
+* `อะถะโข อะปะรา เทวะตา ภะคะวะโต สันติเก อิมัง คาถัง อะภาสิ.` is printed once
+  before each verse group and is entered each time.
+
+### Three findings from reading the sheets
+
+1. **A second witness for page 321's proper names**, which the roman pass
+   flagged as uncheckable. Page 179 has them in Thai: `กุเฏณฑุ เวเฏณฑุ`,
+   `วิฏู จะ วิฏุโฏ สะหะ`, `กินนุฆัณฑุ นิฆัณฑุ จะ`, `โอปะมัญโญ จะ`,
+   `ติมพะรู สุริยะวัจฉะสา`.
+2. **`varuṇā/vāruṇā` confirmed independently** — page 180 prints
+   `วะรุณา วารุณา เทวา`, backing the exception declared on 322.
+3. **Two ฬ candidates**, both Virūḷhaka, both showing พ: `วิรุพโห` (178) and
+   `วิรุพหะโก` (179) → `วิรุฬโห`, `วิรุฬหะโก`. The roman copy separately
+   records `viruḷho` against `viruḷhako` as one of the book's own
+   inconsistencies, so check which each sheet intends.
 
 ## The Girimānanda Sutta, 183–186 — DONE
 
