@@ -56858,7 +56858,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
         'id': 'satipatthana-patho',
         'title_thai': 'สะติปัฏฐานะปาโฐ',
         'title_pali': '',
@@ -56872,6 +56871,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'สะติปัฏฐานะปาโฐ นิฏฐิโต.',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': 'The Passage on the Foundations of Mindfulness is ended.',
         },
         'verses': [
             # ‼ CHECK [IMG_0392.PNG]: ‼ A FULL STOP AFTER ยะทิทัง, AND IT IS
@@ -56930,14 +56936,120 @@ CHANTS = [
             #   used: the sheet ends mid-clause and page 128 continues.
             #   COMPLETE it from 128, and bring this record's ENGLISH up when
             #   you do.
+            # ‼ COMPLETED FROM p128: this line was cut by the page break and
+            #   is now whole. Was: กะถัญจะ ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ.
+            #   อิธะ ภิกขุ อัชฌัตตัง วา จิตเต จิตตานุปัสสี วิหะระติ, พะหิทธา
+            #   วา จิตเต จิตตานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา […]
+            # ‼ CHECK [IMG_0393.PNG]: COMPLETES THE PASSAGE PAGE 127 CUT. That
+            #   sheet ended …อัชฌัตตะพะหิทธา […] and this one opens วา จิตเต
+            #   จิตตานุปัสสี… The whole passage is given here so the […] is
+            #   replaced, and verse 5 keeps page 127. ⚠️ Its ENGLISH in
+            #   batch-127 was the hanging half and is brought up at the same
+            #   time.
+            # ‼ CHECK [IMG_0393.PNG]: THE MIND AND MIND-OBJECT SECTIONS ARE
+            #   PUNCTUATED DIFFERENTLY FROM THE BODY AND FEELING ONES ON 127.
+            #   Here กะถัญจะ… วิหะระติ, takes a COMMA where 127 has a full
+            #   stop, and the sequence of สะมุทะยะ… clauses is broken by a
+            #   full stop after วะยะธัมมานุปัสสี in the mind section but not
+            #   the mind-object one. Each read off the sheet.
             {
                 'number': 5,
                 'page': 127,
-                'pali': 'กะถัญจะ ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ. อิธะ ภิกขุ อัชฌัตตัง วา จิตเต จิตตานุปัสสี วิหะระติ, พะหิทธา วา จิตเต จิตตานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา […]',
-                'pali_roman': 'Kathañca bhikkhu citte cittānupassī viharati. Idha bhikkhu ajjhattaṃ vā citte cittānupassī viharati, bahiddhā vā citte cittānupassī viharati, ajjhattabahiddhā […]',
+                'pali': 'กะถัญจะ ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ. อิธะ ภิกขุ อัชฌัตตัง วา จิตเต จิตตานุปัสสี วิหะระติ, พะหิทธา วา จิตเต จิตตานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา จิตเต จิตตานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา จิตตัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา จิตตัส๎มิง วิหะระติ. สะมุทะยะวะยะธัมมานุปัสสี วา จิตตัส๎มิง วิหะระติ, อัตถิ จิตตันติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัง โข ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ.',
+                'pali_roman': 'Kathañca bhikkhu citte cittānupassī viharati. Idha bhikkhu ajjhattaṃ vā citte cittānupassī viharati, bahiddhā vā citte cittānupassī viharati, ajjhattabahiddhā vā citte cittānupassī viharati. Samudayadhammānupassī vā cittasmiṃ viharati, vayadhammānupassī vā cittasmiṃ viharati. Samudayavayadhammānupassī vā cittasmiṃ viharati, atthi cittanti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evaṃ kho bhikkhu citte cittānupassī viharati.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'And how does a monk dwell contemplating mind in mind? Here a monk dwells contemplating mind in mind internally, or externally, or',
+                'english': "And how does a monk dwell contemplating mind in mind? Here a monk dwells contemplating mind in mind internally, or externally, or both; contemplating its arising, or its passing away, or both. Or his mindfulness that 'there is mind' is established just far enough for knowing and remembering. And he dwells independent, clinging to nothing in the world. That is how a monk dwells contemplating mind in mind.",
+            },
+            {
+                'number': 6,
+                'page': 128,
+                'pali': 'กะถัญจะ ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อิธะ ภิกขุ อัชฌัตตัง วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, วะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ. อัตถิ ธัมมาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ, อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัง โข ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ.',
+                'pali_roman': 'Kathañca bhikkhu dhammesu dhammānupassī viharati, idha bhikkhu ajjhattaṃ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati. Samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya, anissito ca viharati, na ca kiñci loke upādiyati, evaṃ kho bhikkhu dhammesu dhammānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And how does a monk dwell contemplating mind-objects in mind-objects? Here a monk dwells contemplating mind-objects in mind-objects internally, or externally, or both; contemplating their arising, or their passing away, or both. Or his mindfulness that 'there are mind-objects' is established just far enough for knowing and remembering. And he dwells independent, clinging to nothing in the world. That is how a monk dwells contemplating mind-objects in mind-objects.",
+            },
+            # ‼ CHECK [IMG_0393.PNG]: ‼ THE CLOSING FRAMING IS REPUNCTUATED
+            #   FROM THE OPENING ONE, and the differences are not small. Page
+            #   127's verse 1 has เอกายะโน อะยัง มัคโค with no commas inside
+            #   it, a full stop after สัจฉิกิริยายะ and another after ยะทิทัง;
+            #   this one has เอกายะโน, มัคโค — a comma splitting the phrase
+            #   and อะยัง gone — commas where 127 had full stops, and ยะทิทัง,
+            #   with a comma. Read off the sheet rather than carried across.
+            {
+                'number': 7,
+                'page': 128,
+                'pali': 'อะยัง โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ, เอกายะโน, มัคโค สัมมะทักขาโต, สัตตานัง วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง อัตถังคะมายะ, ญายัสสะ อะธิคะมายะ, นิพพานัสสะ สัจฉิกิริยายะ, ยะทิทัง, จัตตาโร สะติปัฏฐานาติ.',
+                'pali_roman': 'Ayaṃ kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena, ekāyano, maggo sammadakkhāto, sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ atthaṅgamāya, ñāyassa adhigamāya, nibbānassa sacchikiriyāya, yadidaṃ, cattāro satipaṭṭhānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is the one-way path declared by the Blessed One who knows and sees, the Arahant, the Perfectly Awakened One, rightly proclaimed: for the purification of beings, for the surmounting of sorrow and lamentation, for the ending of pain and grief, for the attaining of the method, for the realising of Nibbana — namely, the four foundations of mindfulness.',
+            },
+            # ‼ CHECK [IMG_0393.PNG]: A TWO-LINE VERSE IN TWO COLUMNS closes
+            #   the passage — เอกายะนัง ชาติขะยันตะทัสสี | มัคคัง ปะชานาติ
+            #   หิตานุกัมปี and เอเตนะ มัคเคนะ ตะริงสุ ปุพเพ | ตะริสสะเร เจวะ
+            #   ตะรันติ โจฆันติ. Recorded as one unit with the pādas space-
+            #   joined, as the two-column gāthās on 212 and 215 were.
+            {
+                'number': 8,
+                'page': 128,
+                'pali': 'เอกายะนัง ชาติขะยันตะทัสสี มัคคัง ปะชานาติ หิตานุกัมปี เอเตนะ มัคเคนะ ตะริงสุ ปุพเพ ตะริสสะเร เจวะ ตะรันติ โจฆันติ.',
+                'pali_roman': 'Ekāyanaṃ jātikhayantadassī maggaṃ pajānāti hitānukampī etena maggena tariṃsu pubbe tarissare ceva taranti coghanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Seeing the ending of birth, compassionate for welfare, he knows the one-way path. By this path they crossed over before, they will cross over, and they cross over now — the flood.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
+        'id': 'mahasatipatthana-sutta-patho',
+        'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
+        'title_pali': '',
+        'title_roman': 'Mahāsatipaṭṭhānasuttapāṭho',
+        'book_number': '29',
+        'page_start': 128,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0393.PNG]: THE HEADING CARRIES THE BOOK'S OWN
+            #   NUMBER, 29. มะหาสะติปัฏฐานะสุตตะปาโฐ, recorded as book_number
+            #   '29'. This one has a full nidāna naming Kammasadhamma, where
+            #   sutta 28 opened with no setting at all.
+            {
+                'number': 1,
+                'page': 128,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา กุรูสุ วิหะระติ กัมมาสะธัมมัง นามะ กุรูนัง นิคะโม. ตัตระ โข ภะคะวา ภิกขู อามันเตสิ ภิกขะโวติ. ภะทันเตติ เต ภิกขู ภะคะวะโต ปัจจัสโสสุง. ภะคะวา เอตะทะโวจะ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā kurūsu viharati kammāsadhammaṃ nāma kurūnaṃ nigamo. Tatra kho bhagavā bhikkhū āmantesi bhikkhavoti. Bhadanteti te bhikkhū bhagavato paccassosuṃ. Bhagavā etadavoca.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus have I heard. At one time the Blessed One was staying among the Kurus, at a market town of the Kurus called Kammasadhamma. There he addressed the monks: 'Monks.' 'Venerable sir,' they replied, and the Blessed One said this.",
+            },
+            # ‼ CHECK [IMG_0393.PNG]: ‼ อัฏฐังคะมายะ HERE, อัตถังคะมายะ ONE
+            #   PAGE EARLIER. Sutta 29 spells it with ฏฐ, read at 6x; sutta 28
+            #   on page 127 spells the same word with ตถ, and so does sutta
+            #   28's own closing framing at verse 7 on THIS sheet. Two
+            #   spellings of one word on one page. Both reproduced.
+            # ‼ CHECK [IMG_0393.PNG]: CUT AFTER ญายัสสะ อะธิคะมายะ, so […] is
+            #   used, and page 129 continues. COMPLETE it from 129, and bring
+            #   this record's ENGLISH up when you do.
+            {
+                'number': 2,
+                'page': 128,
+                'pali': 'เอกายะโน อะยัง ภิกขะเว มัคโค สัตตานัง วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง อัฏฐังคะมายะ, ญายัสสะ อะธิคะมายะ, […]',
+                'pali_roman': 'Ekāyano ayaṃ bhikkhave maggo sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ aṭṭhaṅgamāya, ñāyassa adhigamāya, […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This, monks, is the one-way path for the purification of beings, for the surmounting of sorrow and lamentation, for the ending of pain and grief, for the attaining of the method,',
             },
         ],
     },
