@@ -56604,6 +56604,92 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 5; the rest is not in the app yet.
+        'id': 'satipatthana-patho',
+        'title_thai': 'สะติปัฏฐานะปาโฐ',
+        'title_pali': '',
+        'title_roman': 'Satipaṭṭhānapāṭho',
+        'book_number': '28',
+        'page_start': 127,
+        'group': 'General chanting',
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0392.PNG]: ‼ A FULL STOP AFTER ยะทิทัง, AND IT IS
+            #   KEPT: …นิพพานัสสะ สัจฉิกิริยายะ. ยะทิทัง. จัตตาโร สะติปัฏฐานา.
+            #   The word means 'namely' and would normally run straight into
+            #   what it introduces; the book stops it. Reproduced as printed.
+            # ‼ CHECK [IMG_0392.PNG]: THE HEADING CARRIES THE BOOK'S OWN
+            #   NUMBER, 28. สะติปัฏฐานะปาโฐ, recorded as book_number '28'.
+            #   Note this is the PĀṬHA — a passage — not the full Satipatthana
+            #   Sutta: it gives the framing and the four foundations in brief,
+            #   without the long expositions.
+            {
+                'number': 1,
+                'page': 127,
+                'pali': 'อัตถิ โข เตนะ ภะคะวะตา ชานะตา ปัสสะตา อะระหะตา สัมมาสัมพุทเธนะ. เอกายะโน อะยัง มัคโค สัมมะทักขาโต, สัตตานัง วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง อัตถังคะมายะ, ญายัสสะ อะธิคะมายะ, นิพพานัสสะ สัจฉิกิริยายะ. ยะทิทัง. จัตตาโร สะติปัฏฐานา. กะตะเม จัตตาโร.',
+                'pali_roman': 'Atthi kho tena bhagavatā jānatā passatā arahatā sammāsambuddhena. Ekāyano ayaṃ maggo sammadakkhāto, sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ atthaṅgamāya, ñāyassa adhigamāya, nibbānassa sacchikiriyāya. Yadidaṃ. Cattāro satipaṭṭhānā. Katame cattāro.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There is, declared by the Blessed One who knows and sees, the Arahant, the Perfectly Awakened One, this one-way path, rightly proclaimed: for the purification of beings, for the surmounting of sorrow and lamentation, for the ending of pain and grief, for the attaining of the method, for the realising of Nibbana — namely, the four foundations of mindfulness. Which four?',
+            },
+            # ‼ CHECK [IMG_0392.PNG]: THE FOUR FOUNDATIONS ARE NAMED WITH THE
+            #   SAME CLAUSE FOUR TIMES, printed in full each time and never
+            #   abbreviated: อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก
+            #   อะภิชฌาโทมะนัสสัง. All four read off the sheet.
+            {
+                'number': 2,
+                'page': 127,
+                'pali': 'อิธะ ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. จิตเต จิตตานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง.',
+                'pali_roman': 'Idha bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Citte cittānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Dhammesu dhammānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here a monk dwells contemplating the body in the body, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; contemplating feelings in feelings; contemplating mind in mind; contemplating mind-objects in mind-objects — each in the same way.',
+            },
+            {
+                'number': 3,
+                'page': 127,
+                'pali': 'กะถัญจะ ภิกขุ กาเย กายานุปัสสี วิหะระติ. อิธะ ภิกขุ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ, สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัง โข ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Kathañca bhikkhu kāye kāyānupassī viharati. Idha bhikkhu ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati, samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evaṃ kho bhikkhu kāye kāyānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And how does a monk dwell contemplating the body in the body? Here a monk dwells contemplating the body in the body internally, or externally, or both; contemplating its arising, or its passing away, or both. Or his mindfulness that 'there is a body' is established just far enough for knowing and remembering. And he dwells independent, clinging to nothing in the world. That is how a monk dwells contemplating the body in the body.",
+            },
+            # ‼ CHECK [IMG_0392.PNG]: A LINE-BREAK HYPHEN, dropped as word-
+            #   wrap: สะมุทะยะวะยะ- at a right margin with ธัมมานุปัสสี on the
+            #   next line. Same rule as 116, 125 and 126.
+            {
+                'number': 4,
+                'page': 127,
+                'pali': 'กะถัญจะ ภิกขุ เวทะนาสุ เวทะนานุปัสสี วิหะระติ. อิธะ ภิกขุ อัชฌัตตัง วา เวทะนาสุ เวทะนานุปัสสี วิหะระติ, พะหิทธา วา เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา เวทะนาสุ เวทะนานุปัสสี วิหะระติ, สะมุทะยะธัมมานุปัสสี วา เวทะนาสุ วิหะระติ, วะยะธัมมานุปัสสี วา เวทะนาสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา เวทะนาสุ วิหะระติ. อัตถิ เวทะนาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัง โข ภิกขุ เวทะนาสุ เวทะนานุปัสสี วิหะระติ.',
+                'pali_roman': 'Kathañca bhikkhu vedanāsu vedanānupassī viharati. Idha bhikkhu ajjhattaṃ vā vedanāsu vedanānupassī viharati, bahiddhā vā vedanāsu vedanānupassī viharati, ajjhattabahiddhā vā vedanāsu vedanānupassī viharati, samudayadhammānupassī vā vedanāsu viharati, vayadhammānupassī vā vedanāsu viharati, samudayavayadhammānupassī vā vedanāsu viharati. Atthi vedanāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evaṃ kho bhikkhu vedanāsu vedanānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And how does a monk dwell contemplating feelings in feelings? Here a monk dwells contemplating feelings in feelings internally, or externally, or both; contemplating their arising, or their passing away, or both. Or his mindfulness that 'there is feeling' is established just far enough for knowing and remembering. And he dwells independent, clinging to nothing in the world. That is how a monk dwells contemplating feelings in feelings.",
+            },
+            # ‼ CHECK [IMG_0392.PNG]: CUT AFTER อัชฌัตตะพะหิทธา, so […] is
+            #   used: the sheet ends mid-clause and page 128 continues.
+            #   COMPLETE it from 128, and bring this record's ENGLISH up when
+            #   you do.
+            {
+                'number': 5,
+                'page': 127,
+                'pali': 'กะถัญจะ ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ. อิธะ ภิกขุ อัชฌัตตัง วา จิตเต จิตตานุปัสสี วิหะระติ, พะหิทธา วา จิตเต จิตตานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา […]',
+                'pali_roman': 'Kathañca bhikkhu citte cittānupassī viharati. Idha bhikkhu ajjhattaṃ vā citte cittānupassī viharati, bahiddhā vā citte cittānupassī viharati, ajjhattabahiddhā […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how does a monk dwell contemplating mind in mind? Here a monk dwells contemplating mind in mind internally, or externally, or',
+            },
+        ],
+    },
 ]
 
 

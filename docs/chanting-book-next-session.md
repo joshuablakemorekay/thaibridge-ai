@@ -1812,14 +1812,15 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**61 pages are left: 127–186 and 192.**
+**60 pages are left: 128–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–126 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 127, `IMG_0392`** — ✅ nothing is
-open; `บทขัด สะติปัฏฐานะปาฐะ` finished on 126, so 127 should open sutta 28, the
-Satipatthana.
+**115–127 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 128, `IMG_0393`** — ⚠️
+`satipatthana-patho` IS OPEN, **5 units in**, and ⚠️⚠️ **verse 5 is CUT with
+`[…]`** after `…อัชฌัตตะพะหิทธา`: COMPLETE it, and bring its ENGLISH up. Body
+and feelings are treated in full; mind is half done and mind-objects to come.
 
 ⚠️ **A THIRD MARK EXISTS: PHINTHU ฺ (U+0E3A), BELOW the letter.** It marks a
 doubled consonant and is NOT the same as yamakkan ๎ (above, for clusters) or
