@@ -1,0 +1,304 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasamaya-suttam"
+  ],
+  "pages": [
+   {
+    "page": 178,
+    "file": "IMG_0448.PNG",
+    "script": "thai",
+    "columns": 2,
+    "chant": "mahasamaya-suttam",
+    "verses": "43-68",
+    "starts_here": false,
+    "note": "The chant continuing; no heading. Twenty-six TWO-COLUMN rows: the last yakkha companies, Kumbhīra of Rājagaha, and then the Four Great Kings named one to each quarter."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasamaya-suttam",
+   "continuation_of": "mahasamaya-suttam",
+   "continues": true,
+   "verses": [
+    {
+     "number": 43,
+     "pali": "อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,",
+     "page": 178
+    },
+    {
+     "number": 44,
+     "pali": "โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 45,
+     "pali": "เวสสามิตตา ปัญจะสะตา ยักขา นานัตตะวัณณิโน",
+     "pali_roman": "Vessāmittā pañcasatā yakkhā nānattavaṇṇino",
+     "thai": "",
+     "paiboon": "",
+     "english": "Five hundred Vessāmitta yakkhas, of varied hues,"
+    },
+    {
+     "number": 46,
+     "pali": "อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 47,
+     "pali": "โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 48,
+     "pali": "กุมภิโร ราชะคะหิโก เวปุลลัสสะ นิเวสะนัง",
+     "pali_roman": "Kumbhiro rājagahiko vepullassa nivesanaṃ",
+     "thai": "",
+     "paiboon": "",
+     "english": "Kumbhīra of Rājagaha — his dwelling is Mount Vepulla —"
+    },
+    {
+     "number": 49,
+     "pali": "ภิยโย นัง สะตะสะหัสสัง ยักขานัง ปะยิรุปาสะติ.",
+     "pali_roman": "Bhiyyo naṃ satasahassaṃ yakkhānaṃ payirupāsati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "more than a hundred thousand yakkhas attend upon him —"
+    },
+    {
+     "number": 50,
+     "pali": "กุมภิโร ราชะคะหิโก โสปาคะ สะมิติง วะนัง.",
+     "pali_roman": "Kumbhiro rājagahiko sopāga samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Kumbhīra of Rājagaha, he too came to the wood, to the assembly."
+    },
+    {
+     "number": 51,
+     "pali": "ปุริมัญจะ ทิสัง ราชา ธะตะรัฏโฐ ปะสาสะติ",
+     "pali_roman": "Purimañca disaṃ rājā dhataraṭṭho pasāsati",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the eastern quarter is Dhataraṭṭha,"
+    },
+    {
+     "number": 52,
+     "pali": "คันธัพพานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.",
+     "pali_roman": "Gandhabbānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "lord of the gandhabbas, a great king of renown."
+    },
+    {
+     "number": 53,
+     "pali": "ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา",
+     "pali_roman": "Puttāpi tassa bahavo indanāmā mahabbalā",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,"
+    },
+    {
+     "number": 54,
+     "pali": "อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 55,
+     "pali": "โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 56,
+     "pali": "ทักขิณัญจะ ทิสัง ราชา วิรุฬโห ตัปปะสาสะติ",
+     "pali_roman": "Dakkhiṇañca disaṃ rājā viruḷho tappasāsati",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the southern quarter is Viruḷha."
+    },
+    {
+     "number": 57,
+     "pali": "กุมภัณฑานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.",
+     "pali_roman": "Kumbhaṇḍānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the kumbhaṇḍas, a great king of renown."
+    },
+    {
+     "number": 58,
+     "pali": "ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา",
+     "pali_roman": "Puttāpi tassa bahavo indanāmā mahabbalā",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,"
+    },
+    {
+     "number": 59,
+     "pali": "อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 60,
+     "pali": "โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 61,
+     "pali": "ปัจฉิมัญจะ ทิสัง ราชา วิรูปักโข ปะสาสะติ",
+     "pali_roman": "Pacchimañca disaṃ rājā virūpakkho pasāsati",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the western quarter is Virūpakkha."
+    },
+    {
+     "number": 62,
+     "pali": "นาคานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.",
+     "pali_roman": "Nāgānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the nāgas, a great king of renown."
+    },
+    {
+     "number": 63,
+     "pali": "ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา",
+     "pali_roman": "Puttāpi tassa bahavo indanāmā mahabbalā",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,"
+    },
+    {
+     "number": 64,
+     "pali": "อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน",
+     "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino",
+     "thai": "",
+     "paiboon": "",
+     "english": "possessed of power, of radiance, of beauty and of renown,"
+    },
+    {
+     "number": 65,
+     "pali": "โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.",
+     "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "came rejoicing to the wood, to the assembly of bhikkhus."
+    },
+    {
+     "number": 66,
+     "pali": "อุตตะรัญจะ ทิสัง ราชา กุเวโร ตัปปะสาสะติ",
+     "pali_roman": "Uttarañca disaṃ rājā kuvero tappasāsati",
+     "thai": "",
+     "paiboon": "",
+     "english": "And the king who rules the northern quarter is Kuvera."
+    },
+    {
+     "number": 67,
+     "pali": "ยักขานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.",
+     "pali_roman": "Yakkhānaṃ ādhipati mahārājā yasassi so.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Lord of the yakkhas, a great king of renown."
+    },
+    {
+     "number": 68,
+     "pali": "ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา",
+     "pali_roman": "Puttāpi tassa bahavo indanāmā mahabbalā",
+     "thai": "",
+     "paiboon": "",
+     "english": "His sons too are many, all named Inda, of great strength,"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 56,
+     "file": "IMG_0448.PNG",
+     "issue": "⚠ วิรุฬโห IS WRITTEN WITH ฬ AGAINST THE PHOTOGRAPH, which shows วิรุพโห. He is Virūḷha, Great King of the South, and the canon has ḷ. ⚠ BUT NOTE: the roman twin's own notes record `viruḷho` AGAINST `viruḷhako` as one of the book's inconsistencies, so the two copies do not agree on his name's ending. This sheet gives the SHORT form, วิรุฬโห; page 179 gives วิรุฬหะโก. Both are entered as their own line prints them and neither has been normalised."
+    },
+    {
+     "verse": 43,
+     "file": "IMG_0448.PNG",
+     "issue": "THE SHEET OPENS MID-GROUP. Verses 43 and 44 complete the sixteen-thousand yakkhas counted at the foot of 177; the page turn falls between the count and its two closing lines."
+    },
+    {
+     "verse": 48,
+     "file": "IMG_0448.PNG",
+     "issue": "⚠ กุมภิโร HAS A SHORT ิ ON THIS SHEET where the roman twin sets Kumbhīro with a long ī — and it does so BOTH times the name appears, verses 48 and 50. Read from two separate magnified crops, both plain. Entered as this page prints it; neither copy has been normalised to the other."
+    },
+    {
+     "verse": 48,
+     "file": "IMG_0448.PNG",
+     "issue": "กุมภิโร ราชะคะหิโก IS PRINTED TWICE, two verses apart — once naming his dwelling on Vepulla and once saying he came to the assembly. Entered both times; the twin repeats it too."
+    },
+    {
+     "verse": 62,
+     "file": "IMG_0448.PNG",
+     "issue": "THE FOUR GREAT KINGS ARE NAMED IN TURN, one to each quarter — ธะตะรัฏโฐ east, วิรุฬโห south, วิรูปักโข west, กุเวโร north — and each is followed by the same three lines. The repetition is the book's."
+    },
+    {
+     "verse": null,
+     "file": "IMG_0448.PNG",
+     "issue": "THE TWO PRINTINGS PUNCTUATE 8 line(s) differently and nothing else (verses 43, 46, 54, 56, 59, 61, 64, 66). Recorded once."
+    },
+    {
+     "verse": 48,
+     "file": "IMG_0448.PNG",
+     "issue": "A DIFFERENCE FROM THE TWIN. This sheet romanises to `Kumbhiro rājagahiko vepullassa nivesanaṃ`; the roman copy sets `Kumbhīro rājagahiko — vepull’assa nivesanaṃ`. Checked; entered as this page prints it."
+    },
+    {
+     "verse": 49,
+     "file": "IMG_0448.PNG",
+     "issue": "A DIFFERENCE FROM THE TWIN. This sheet romanises to `Bhiyyo naṃ satasahassaṃ yakkhānaṃ payirupāsati.`; the roman copy sets `Bhiyyo naṃ satasahassaṃ yakkhānaṃ payirupāsati —`. Checked; entered as this page prints it."
+    },
+    {
+     "verse": 50,
+     "file": "IMG_0448.PNG",
+     "issue": "A DIFFERENCE FROM THE TWIN. This sheet romanises to `Kumbhiro rājagahiko sopāga samitiṃ vanaṃ.`; the roman copy sets `Kumbhīro rājagahiko sopāga samitiṃ vanaṃ.`. Checked; entered as this page prints it."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "not_started": [],
+  "continues": [
+   "mahasamaya-suttam"
+  ],
+  "resume_from_page": 179,
+  "resume_from_file": "IMG_0449.PNG",
+  "resume_from": "mahasamaya-suttam",
+  "unreadable": [],
+  "paiboon_scan": "clean by absence.",
+  "pali_untouched": "Typed from MAGNIFIED crops of this sheet, in four bands, and then compared with the twin.",
+  "page_scan": "agrees. One row, twenty-six verses.",
+  "notes": "Page 178: the Four Great Kings. ⚠ วิรุฬโห written with ฬ against the photograph — and the two copies do not agree on his name's ending, the roman recording viruḷho against viruḷhako. This sheet has the short form; 179 has the long. Neither normalised.",
+  "diacritic_exceptions": []
+ }
+}

@@ -56024,7 +56024,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 42; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 68; the rest is not in the app yet.
         # ‼ CHECK [IMG_0445.PNG]: ⚠ THIS CHANT HAS A TWIN AT 317-325, BUT ITS
         #   UNIT DIVISION DOES NOT TRANSFER. `mahasamayasutta-roman` sets the
         #   opening prose as ELEVEN short units — `Evaṃ me sutaṃ:` alone is
@@ -56446,6 +56446,253 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'These sixteen thousand yakkhas, of varied hues,',
+            },
+            # ‼ CHECK [IMG_0448.PNG]: THE SHEET OPENS MID-GROUP. Verses 43 and
+            #   44 complete the sixteen-thousand yakkhas counted at the foot
+            #   of 177; the page turn falls between the count and its two
+            #   closing lines.
+            {
+                'number': 43,
+                'page': 178,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 44,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 45,
+                'pali': 'เวสสามิตตา ปัญจะสะตา ยักขา นานัตตะวัณณิโน',
+                'pali_roman': 'Vessāmittā pañcasatā yakkhā nānattavaṇṇino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Five hundred Vessāmitta yakkhas, of varied hues,',
+            },
+            {
+                'number': 46,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 47,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0448.PNG]: ⚠ กุมภิโร HAS A SHORT ิ ON THIS SHEET
+            #   where the roman twin sets Kumbhīro with a long ī — and it does
+            #   so BOTH times the name appears, verses 48 and 50. Read from
+            #   two separate magnified crops, both plain. Entered as this page
+            #   prints it; neither copy has been normalised to the other.
+            # ‼ CHECK [IMG_0448.PNG]: กุมภิโร ราชะคะหิโก IS PRINTED TWICE, two
+            #   verses apart — once naming his dwelling on Vepulla and once
+            #   saying he came to the assembly. Entered both times; the twin
+            #   repeats it too.
+            # ‼ CHECK [IMG_0448.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   romanises to `Kumbhiro rājagahiko vepullassa nivesanaṃ`; the
+            #   roman copy sets `Kumbhīro rājagahiko — vepull’assa nivesanaṃ`.
+            #   Checked; entered as this page prints it.
+            {
+                'number': 48,
+                'pali': 'กุมภิโร ราชะคะหิโก เวปุลลัสสะ นิเวสะนัง',
+                'pali_roman': 'Kumbhiro rājagahiko vepullassa nivesanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Kumbhīra of Rājagaha — his dwelling is Mount Vepulla —',
+            },
+            # ‼ CHECK [IMG_0448.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   romanises to `Bhiyyo naṃ satasahassaṃ yakkhānaṃ
+            #   payirupāsati.`; the roman copy sets `Bhiyyo naṃ satasahassaṃ
+            #   yakkhānaṃ payirupāsati —`. Checked; entered as this page
+            #   prints it.
+            {
+                'number': 49,
+                'pali': 'ภิยโย นัง สะตะสะหัสสัง ยักขานัง ปะยิรุปาสะติ.',
+                'pali_roman': 'Bhiyyo naṃ satasahassaṃ yakkhānaṃ payirupāsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'more than a hundred thousand yakkhas attend upon him —',
+            },
+            # ‼ CHECK [IMG_0448.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   romanises to `Kumbhiro rājagahiko sopāga samitiṃ vanaṃ.`; the
+            #   roman copy sets `Kumbhīro rājagahiko sopāga samitiṃ vanaṃ.`.
+            #   Checked; entered as this page prints it.
+            {
+                'number': 50,
+                'pali': 'กุมภิโร ราชะคะหิโก โสปาคะ สะมิติง วะนัง.',
+                'pali_roman': 'Kumbhiro rājagahiko sopāga samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Kumbhīra of Rājagaha, he too came to the wood, to the assembly.',
+            },
+            {
+                'number': 51,
+                'pali': 'ปุริมัญจะ ทิสัง ราชา ธะตะรัฏโฐ ปะสาสะติ',
+                'pali_roman': 'Purimañca disaṃ rājā dhataraṭṭho pasāsati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the eastern quarter is Dhataraṭṭha,',
+            },
+            {
+                'number': 52,
+                'pali': 'คันธัพพานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.',
+                'pali_roman': 'Gandhabbānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'lord of the gandhabbas, a great king of renown.',
+            },
+            {
+                'number': 53,
+                'pali': 'ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา',
+                'pali_roman': 'Puttāpi tassa bahavo indanāmā mahabbalā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            {
+                'number': 54,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 55,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0448.PNG]: ⚠ วิรุฬโห IS WRITTEN WITH ฬ AGAINST THE
+            #   PHOTOGRAPH, which shows วิรุพโห. He is Virūḷha, Great King of
+            #   the South, and the canon has ḷ. ⚠ BUT NOTE: the roman twin's
+            #   own notes record `viruḷho` AGAINST `viruḷhako` as one of the
+            #   book's inconsistencies, so the two copies do not agree on his
+            #   name's ending. This sheet gives the SHORT form, วิรุฬโห; page
+            #   179 gives วิรุฬหะโก. Both are entered as their own line prints
+            #   them and neither has been normalised.
+            {
+                'number': 56,
+                'pali': 'ทักขิณัญจะ ทิสัง ราชา วิรุฬโห ตัปปะสาสะติ',
+                'pali_roman': 'Dakkhiṇañca disaṃ rājā viruḷho tappasāsati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the southern quarter is Viruḷha.',
+            },
+            {
+                'number': 57,
+                'pali': 'กุมภัณฑานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.',
+                'pali_roman': 'Kumbhaṇḍānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the kumbhaṇḍas, a great king of renown.',
+            },
+            {
+                'number': 58,
+                'pali': 'ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา',
+                'pali_roman': 'Puttāpi tassa bahavo indanāmā mahabbalā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            {
+                'number': 59,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 60,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 61,
+                'pali': 'ปัจฉิมัญจะ ทิสัง ราชา วิรูปักโข ปะสาสะติ',
+                'pali_roman': 'Pacchimañca disaṃ rājā virūpakkho pasāsati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the western quarter is Virūpakkha.',
+            },
+            # ‼ CHECK [IMG_0448.PNG]: THE FOUR GREAT KINGS ARE NAMED IN TURN,
+            #   one to each quarter — ธะตะรัฏโฐ east, วิรุฬโห south, วิรูปักโข
+            #   west, กุเวโร north — and each is followed by the same three
+            #   lines. The repetition is the book's.
+            {
+                'number': 62,
+                'pali': 'นาคานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.',
+                'pali_roman': 'Nāgānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the nāgas, a great king of renown.',
+            },
+            {
+                'number': 63,
+                'pali': 'ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา',
+                'pali_roman': 'Puttāpi tassa bahavo indanāmā mahabbalā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            {
+                'number': 64,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 65,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 66,
+                'pali': 'อุตตะรัญจะ ทิสัง ราชา กุเวโร ตัปปะสาสะติ',
+                'pali_roman': 'Uttarañca disaṃ rājā kuvero tappasāsati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the king who rules the northern quarter is Kuvera.',
+            },
+            {
+                'number': 67,
+                'pali': 'ยักขานัง อาธิปะติ มะหาราชา ยะสัสสิ โส.',
+                'pali_roman': 'Yakkhānaṃ ādhipati mahārājā yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Lord of the yakkhas, a great king of renown.',
+            },
+            {
+                'number': 68,
+                'pali': 'ปุตตาปิ ตัสสะ พะหะโว อินทะนามา มะหัพพะลา',
+                'pali_roman': 'Puttāpi tassa bahavo indanāmā mahabbalā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'His sons too are many, all named Inda, of great strength,',
             },
         ],
     },
@@ -57005,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 2; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57042,14 +57289,59 @@ CHANTS = [
             # ‼ CHECK [IMG_0393.PNG]: CUT AFTER ญายัสสะ อะธิคะมายะ, so […] is
             #   used, and page 129 continues. COMPLETE it from 129, and bring
             #   this record's ENGLISH up when you do.
+            # ‼ COMPLETED FROM p129: this line was cut by the page break and
+            #   is now whole. Was: เอกายะโน อะยัง ภิกขะเว มัคโค สัตตานัง
+            #   วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง
+            #   อัฏฐังคะมายะ, ญายัสสะ อะธิคะมายะ, […]
+            # ‼ CHECK [IMG_0397.PNG]: COMPLETES THE SENTENCE PAGE 128 CUT.
+            #   That sheet ended …ญายัสสะ อะธิคะมายะ, […] and this one opens
+            #   นิพพานัสสะ สัจฉิกิริยายะ… The whole sentence is given here so
+            #   the […] is replaced, and verse 2 keeps page 128. ⚠️ Its
+            #   ENGLISH in batch-128 was the hanging half and is brought up at
+            #   the same time. Note the completion carries อัฏฐังคะมายะ, sutta
+            #   29's spelling, not sutta 28's อัตถังคะมายะ.
             {
                 'number': 2,
                 'page': 128,
-                'pali': 'เอกายะโน อะยัง ภิกขะเว มัคโค สัตตานัง วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง อัฏฐังคะมายะ, ญายัสสะ อะธิคะมายะ, […]',
-                'pali_roman': 'Ekāyano ayaṃ bhikkhave maggo sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ aṭṭhaṅgamāya, ñāyassa adhigamāya, […]',
+                'pali': 'เอกายะโน อะยัง ภิกขะเว มัคโค สัตตานัง วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง อัฏฐังคะมายะ, ญายัสสะ อะธิคะมายะ, นิพพานัสสะ สัจฉิกิริยายะ. ยะทิทัง. จัตตาโร สะติปัฏฐานา. กะตะเม จัตตาโร.',
+                'pali_roman': 'Ekāyano ayaṃ bhikkhave maggo sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ aṭṭhaṅgamāya, ñāyassa adhigamāya, nibbānassa sacchikiriyāya. Yadidaṃ. Cattāro satipaṭṭhānā. Katame cattāro.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'This, monks, is the one-way path for the purification of beings, for the surmounting of sorrow and lamentation, for the ending of pain and grief, for the attaining of the method,',
+                'english': 'This, monks, is the one-way path for the purification of beings, for the surmounting of sorrow and lamentation, for the ending of pain and grief, for the attaining of the method, for the realising of Nibbana — namely, the four foundations of mindfulness. Which four?',
+            },
+            # ‼ CHECK [IMG_0397.PNG]: อิธะ ภิกขะเว ภิกขุ HERE, อิธะ ภิกขุ ON
+            #   PAGE 127. The long sutta keeps ภิกขะเว in the clause where the
+            #   short ปาโฐ drops it, and does the same at the start of verse
+            #   4. Reproduced as printed.
+            {
+                'number': 3,
+                'page': 129,
+                'pali': 'อิธะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. จิตเต จิตตานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง.',
+                'pali_roman': 'Idha bhikkhave bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Citte cittānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Dhammesu dhammānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Here, monks, a monk dwells contemplating the body in the body, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; contemplating feelings in feelings; contemplating mind in mind; contemplating mind-objects in mind-objects — each in the same way.',
+            },
+            # ‼ CHECK [IMG_0397.PNG]: ‼ A SECTION HEADING INSIDE THE SUTTA: a
+            #   centred bold อุทเทโส. — 'the summary' — stands between verse 3
+            #   and verse 4, marking the end of the brief statement and the
+            #   start of the detailed exposition. Recorded as a heading block
+            #   on the page, not as a verse. It is the first heading to appear
+            #   inside a chant in this stretch.
+            # ‼ CHECK [IMG_0397.PNG]: ‼ THE SAME FOUR สิกขะติ CLAUSES ARE
+            #   PUNCTUATED DIFFERENTLY IN THEIR TWO RUNS. Before the turner
+            #   simile they read …ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง… with a
+            #   FULL STOP; after it they read …ปัสสะสิสสามีติ สิกขะติ,
+            #   ปัสสัมภะยัง… with a COMMA. Both runs read off the sheet
+            #   separately.
+            {
+                'number': 4,
+                'page': 129,
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อิธะ ภิกขะเว ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา, นิสีทะติ ปัลลังกัง อาภุชิต๎วา อุชุง กายัง ปะณิธายะ, ปะริมุขัง สะติง อุปัฏฐะเปต๎วา. โส สะโต วะ อัสสะสะติ, สะโต ปัสสะสะติ. ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ. ทีฆัง วา ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ, รัสสัง วา อัสสะสันโต รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง ปัสสะสามีติ ปะชานาติ. สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ, ปัสสัมภะยัง กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. เสยยะถาปิ ภิกขะเว ทักโข ภะมะกาโร วา ภะมะการันเตวาสี วา ทีฆัง วา อัญฉันโต ทีฆัง อัญฉามีติ ปะชานาติ, รัสสัง วา อัญฉันโต รัสสัง อัญฉามีติ ปะชานาติ. เอวะเมวะ โข ภิกขะเว ภิกขุ ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ. ทีฆัง วา ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ, รัสสัง วา อัสสะสันโต รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง ปัสสะสามีติ ปะชานาติ. สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ, ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ, ปัสสัมภะยัง กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu kāye kāyānupassī viharati, idha bhikkhave bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā, nisīdati pallaṅkaṃ ābhujitvā ujuṃ kāyaṃ paṇidhāya, parimukhaṃ satiṃ upaṭṭhapetvā. So sato va assasati, sato passasati. Dīghaṃ vā assasanto dīghaṃ assasāmīti pajānāti. Dīghaṃ vā passasanto dīghaṃ passasāmīti pajānāti, rassaṃ vā assasanto rassaṃ assasāmīti pajānāti, rassaṃ vā passasanto rassaṃ passasāmīti pajānāti. Sabbakāyapaṭisaṃvedī assasissāmīti sikkhati, sabbakāyapaṭisaṃvedī passasissāmīti sikkhati. Passambhayaṃ kāyasaṅkhāraṃ assasissāmīti sikkhati, passambhayaṃ kāyasaṅkhāraṃ passasissāmīti sikkhati. Seyyathāpi bhikkhave dakkho bhamakāro vā bhamakārantevāsī vā dīghaṃ vā añchanto dīghaṃ añchāmīti pajānāti, rassaṃ vā añchanto rassaṃ añchāmīti pajānāti. Evameva kho bhikkhave bhikkhu dīghaṃ vā assasanto dīghaṃ assasāmīti pajānāti. Dīghaṃ vā passasanto dīghaṃ passasāmīti pajānāti, rassaṃ vā assasanto rassaṃ assasāmīti pajānāti, rassaṃ vā passasanto rassaṃ passasāmīti pajānāti. Sabbakāyapaṭisaṃvedī assasissāmīti sikkhati, sabbakāyapaṭisaṃvedī passasissāmīti sikkhati, passambhayaṃ kāyasaṅkhāraṃ assasissāmīti sikkhati, passambhayaṃ kāyasaṅkhāraṃ passasissāmīti sikkhati. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And how does a monk dwell contemplating the body in the body? Here a monk, gone to the forest, to the root of a tree or to an empty place, sits down cross-legged, holding his body straight and setting mindfulness before him. Mindful he breathes in, mindful he breathes out. Breathing in long he knows 'I breathe in long'; breathing out long he knows 'I breathe out long'; breathing in short he knows 'I breathe in short'; breathing out short he knows 'I breathe out short'. He trains: 'sensitive to the whole body I shall breathe in'; he trains: 'sensitive to the whole body I shall breathe out'. He trains: 'calming the bodily formation I shall breathe in'; he trains: 'calming the bodily formation I shall breathe out'. Just as a skilled turner or his apprentice, making a long turn, knows 'I make a long turn', and making a short turn knows 'I make a short turn' — so too the monk knows his breathing, long and short, and trains in the same way. Thus he dwells contemplating the body in the body internally, or externally, or both.",
             },
         ],
     },
@@ -59632,6 +59924,19 @@ PAGE_BLOCKS = [
                 'type': 'heading',
                 'thai': 'พระสูตรที่กำหนดสวดในวันขึ้น 14 ค่ำ เวลาเย็น',
                 'english': 'The discourse appointed for chanting on the 14th of the waxing moon, in the evening',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 129 ───────────────────────────────────────────────────
+    # Written from batch-129-129.json.
+    {
+        'page': 129,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'อุทเทโส.',
+                'english': 'The summary.',
                 'english_unverified': True,
             },
         ],
