@@ -56024,7 +56024,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 16; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 42; the rest is not in the app yet.
         # ‼ CHECK [IMG_0445.PNG]: ⚠ THIS CHANT HAS A TWIN AT 317-325, BUT ITS
         #   UNIT DIVISION DOES NOT TRANSFER. `mahasamayasutta-roman` sets the
         #   opening prose as ELEVEN short units — `Evaṃ me sutaṃ:` alone is
@@ -56195,6 +56195,257 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Then the Blessed One addressed the bhikkhus: bhikkhus, deities from ten world-systems have for the most part gathered to see the Tathagata and the Sangha of bhikkhus. Just so did deities gather in this same number for those Blessed Ones who in time past were arahants, perfectly awakened — as they have for me now; and just so will they gather for those who in time to come will be arahants, perfectly awakened — as they have for me now. I shall tell you the names of the hosts of devas, I shall proclaim them, I shall teach them. Listen, attend closely, I shall speak. Even so, venerable sir, those bhikkhus replied to the Blessed One; and the Blessed One said this:',
+            },
+            # ‼ CHECK [IMG_0447.PNG]: THE LEFT HALF OF THIS ROW IS INDENTED,
+            #   as are those at verses 33, 36, 39 and 42. The indent is the
+            #   verse's own shape and does NOT mean a continuation — checked
+            #   against the twin, where each is a full verse of its own.
+            {
+                'number': 17,
+                'page': 177,
+                'pali': 'สิโลกะมะนุกัสสามิ ยัตถะ ภุมมา ตะทัสสิตา',
+                'pali_roman': 'Silokamanukassāmi yattha bhummā tadassitā',
+                'thai': '',
+                'paiboon': '',
+                'english': '“I shall recite a verse in praise, telling where the earth-devas dwell:',
+            },
+            {
+                'number': 18,
+                'pali': 'เย สิตา คิริคัพภะรัง ปะหิตัตตา สะมาหิตา.',
+                'pali_roman': 'Ye sitā girigabbharaṃ pahitattā samāhitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those who cling to the mountain cleft, resolute and composed.',
+            },
+            {
+                'number': 19,
+                'pali': 'ปุถู สีหาวะ สัลลีนา โลมะหังสาภิสัมภุโน',
+                'pali_roman': 'Puthū sīhāva sallīnā lomahaṃsābhisambhuno',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Many, withdrawn like lions, whose hair stands on end in awe,',
+            },
+            {
+                'number': 20,
+                'pali': 'โอทาตะมะนะสา สุทธา วิปปะสันนะมะนาวิลา.',
+                'pali_roman': 'Odātamanasā suddhā vippasannamanāvilā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'bright of mind, pure, serene and untroubled.”',
+            },
+            {
+                'number': 21,
+                'pali': 'ภิยโย ปัญจะสะเต ญัต์วา วะเน กาปิละวัตถะเว',
+                'pali_roman': 'Bhiyyo pañcasate ñatvā vane kāpilavatthave',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Knowing that more than five hundred were in the Kapilavatthu wood,',
+            },
+            {
+                'number': 22,
+                'pali': 'ตะโต อามันตะยิ สัตถา สาวะเก สาสะเน ระเต.',
+                'pali_roman': 'Tato āmantayi satthā sāvake sāsane rate.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Teacher then addressed the disciples who delight in the teaching:',
+            },
+            # ‼ CHECK [IMG_0447.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   romanises to `Devakāyā abhikkantā te vijānātha bhikkhavo`; the
+            #   roman copy at 317-325 sets `“Devakāyā abhikkantā. Te vijānātha
+            #   bhikkhavo”.`. The difference is the roman copy's own marks — a
+            #   mid-line full stop, speech marks or an elision apostrophe —
+            #   none of which this Thai page sets. Not a letter difference.
+            {
+                'number': 23,
+                'pali': 'เทวะกายา อะภิกกันตา เต วิชานาถะ ภิกขะโว',
+                'pali_roman': 'Devakāyā abhikkantā te vijānātha bhikkhavo',
+                'thai': '',
+                'paiboon': '',
+                'english': '“The hosts of devas have come. Know them, bhikkhus.”',
+            },
+            {
+                'number': 24,
+                'pali': 'เต จะ อาตัปปะมะกะรุง สุต์วา พุทธัสสะ สาสะนัง.',
+                'pali_roman': 'Te ca ātappamakaruṃ sutvā buddhassa sāsanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And they made an ardent effort, having heard the Buddha's instruction.",
+            },
+            # ‼ CHECK [IMG_0447.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   romanises to `Tesampāturahe ñāṇaṃ amanussāna dassanaṃ`; the
+            #   roman copy at 317-325 sets `Tesaṃ pāturahu ñāṇaṃ amanussāna
+            #   dassanaṃ.`. ⚠ THIS ONE IS A LETTER DIFFERENCE, NOT
+            #   PUNCTUATION, and it was verified at magnification: the sheet
+            #   plainly prints เตสัมปาตุระเห, ending -rahe, where the roman
+            #   copy sets -rahu. Entered as this page prints it.
+            {
+                'number': 25,
+                'pali': 'เตสัมปาตุระเห ญาณัง อะมะนุสสานะ ทัสสะนัง',
+                'pali_roman': 'Tesampāturahe ñāṇaṃ amanussāna dassanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Knowledge appeared to them, the seeing of non-human beings.',
+            },
+            {
+                'number': 26,
+                'pali': 'อัปเปเก สะตะมัททักขุง สะหัสสัง อะถะ สัตตะริง.',
+                'pali_roman': 'Appeke satamaddakkhuṃ sahassaṃ atha sattariṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Some saw a hundred, some a thousand, and some seventy thousand.',
+            },
+            {
+                'number': 27,
+                'pali': 'สะตัง เอเก สะหัสสานัง อะมะนุสสานะมัททะสุง',
+                'pali_roman': 'Sataṃ eke sahassānaṃ amanussānamaddasuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Some saw a hundred thousand non-human beings,',
+            },
+            # ‼ CHECK [IMG_0447.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   romanises to `Appekenantamaddakkhuṃ disā sabbā phuṭā ahuṃ.`;
+            #   the roman copy at 317-325 sets `Appeke ’nanta-maddakkhuṃ: disā
+            #   sabbā phuṭā ahuṃ.`. The difference is the roman copy's own
+            #   marks — a mid-line full stop, speech marks or an elision
+            #   apostrophe — none of which this Thai page sets. Not a letter
+            #   difference.
+            {
+                'number': 28,
+                'pali': 'อัปเปเกนันตะมัททักขุง ทิสา สัพพา ผุฏา อะหุง.',
+                'pali_roman': 'Appekenantamaddakkhuṃ disā sabbā phuṭā ahuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and some saw them without end: every direction was filled.',
+            },
+            {
+                'number': 29,
+                'pali': 'ตัญจะ สัพพัง อะภิญญายะ วะวักขิต์วานะ จักขุมา',
+                'pali_roman': 'Tañca sabbaṃ abhiññāya vavakkhitvāna cakkhumā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having directly known all of that, having surveyed it, the One with vision',
+            },
+            {
+                'number': 30,
+                'pali': 'ตะโต อามันตะยิ สัตถา สาวะเก สาสะเน ระเต.',
+                'pali_roman': 'Tato āmantayi satthā sāvake sāsane rate.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then addressed, as Teacher, the disciples who delight in the teaching:',
+            },
+            # ‼ CHECK [IMG_0447.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   romanises to `Devakāyā abhikkantā te vijānātha bhikkhavo`; the
+            #   roman copy at 317-325 sets `“Devakāyā abhikkantā. Te vijānātha
+            #   bhikkhavo,`. The difference is the roman copy's own marks — a
+            #   mid-line full stop, speech marks or an elision apostrophe —
+            #   none of which this Thai page sets. Not a letter difference.
+            {
+                'number': 31,
+                'pali': 'เทวะกายา อะภิกกันตา เต วิชานาถะ ภิกขะโว',
+                'pali_roman': 'Devakāyā abhikkantā te vijānātha bhikkhavo',
+                'thai': '',
+                'paiboon': '',
+                'english': '“The hosts of devas have come. Know them, bhikkhus —',
+            },
+            {
+                'number': 32,
+                'pali': 'เย โวหัง กิตตะยิสสามิ คิราหิ อะนุปุพพะโส.',
+                'pali_roman': 'Ye vohaṃ kittayissāmi girāhi anupubbaso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those whom I shall proclaim to you in words, one after another.',
+            },
+            {
+                'number': 33,
+                'pali': 'สัตตะสะหัสสาวะ ยักขา ภุมมา กาปิละวัตถะวา',
+                'pali_roman': 'Sattasahassāva yakkhā bhummā kāpilavatthavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Seven thousand yakkhas, earth-dwellers of Kapilavatthu,',
+            },
+            # ‼ CHECK [IMG_0447.PNG]: THREE LINES ARE PRINTED THREE TIMES OVER
+            #   — อิทธิมันโต ชุติมันโต…, โมทะมานา อะภิกกามุง… and the pair
+            #   before them — once for each host of yakkhas counted. Entered
+            #   every time; the repetition is the book's, and the twin repeats
+            #   it too.
+            {
+                'number': 34,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 35,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 36,
+                'pali': 'ฉะสะหัสสา เหมะวะตา ยักขา นานัตตะวัณณิโน',
+                'pali_roman': 'Chasahassā hemavatā yakkhā nānattavaṇṇino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Six thousand yakkhas from the Himavā, of varied hues,',
+            },
+            {
+                'number': 37,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 38,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 39,
+                'pali': 'สาตาคิรา ติสะหัสสา ยักขา นานัตตะวัณณิโน',
+                'pali_roman': 'Sātāgirā tisahassā yakkhā nānattavaṇṇino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Three thousand Sātāgira yakkhas, of varied hues,',
+            },
+            {
+                'number': 40,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 41,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0447.PNG]: ⚠ โสฬะสะ IS WRITTEN WITH ฬ AGAINST THE
+            #   PHOTOGRAPH, which shows โสพะ. Two things settle it
+            #   independently of the ฬ rule: the twin at 317-325 reads
+            #   `soḷasa`, and THE ARITHMETIC AGREES — 7,000 yakkhas of
+            #   Kapilavatthu plus 6,000 of the Himavā plus 3,000 Sātāgira is
+            #   SIXTEEN thousand, which is what soḷasa means. The line is the
+            #   sum of the three before it.
+            {
+                'number': 42,
+                'pali': 'อิจเจเต โสฬะสะสะหัสสา ยักขา นานัตตะวัณณิโน',
+                'pali_roman': 'Iccete soḷasasahassā yakkhā nānattavaṇṇino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These sixteen thousand yakkhas, of varied hues,',
             },
         ],
     },
