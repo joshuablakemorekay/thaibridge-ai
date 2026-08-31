@@ -1,0 +1,127 @@
+{
+ "batch": {
+  "depth": "DATA-ONLY",
+  "files_given": 1,
+  "files_read": 1,
+  "received": 1,
+  "manifest": [
+   "mahasatipatthana-sutta-patho"
+  ],
+  "pages": [
+   {
+    "page": 129,
+    "file": "IMG_0397.PNG",
+    "script": "thai",
+    "columns": 1,
+    "chant": "mahasatipatthana-sutta-patho",
+    "verses": "2-4",
+    "starts_here": false,
+    "blocks": [
+     {
+      "type": "heading",
+      "thai": "อุทเทโส.",
+      "english": "The summary.",
+      "english_unverified": true
+     }
+    ],
+    "note": "The whole sheet, one chant. The tail of the one-way path statement 128 cut, the four foundations named, then a centred bold heading อุทเทโส. and the breathing section, which ends complete at the page foot."
+   }
+  ]
+ },
+ "chants": [
+  {
+   "id": "mahasatipatthana-sutta-patho",
+   "continuation_of": "mahasatipatthana-sutta-patho",
+   "continues": true,
+   "working_notes": {
+    "invitation": "none printed.",
+    "units": "Three. Verse 2 is COMPLETED here — 128 cut it — then the four foundations named, and the breathing section under its own heading.",
+    "ordering": "Pali only.",
+    "conventions": "A section heading, อุทเทโส. — new to this chant.",
+    "pages": "IMG_0397.PNG, page 129. Arrived from 128 and CONTINUES onto page 130."
+   },
+   "verses": [
+    {
+     "number": 2,
+     "page": 128,
+     "pali": "เอกายะโน อะยัง ภิกขะเว มัคโค สัตตานัง วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง อัฏฐังคะมายะ, ญายัสสะ อะธิคะมายะ, นิพพานัสสะ สัจฉิกิริยายะ. ยะทิทัง. จัตตาโร สะติปัฏฐานา. กะตะเม จัตตาโร.",
+     "pali_roman": "Ekāyano ayaṃ bhikkhave maggo sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ aṭṭhaṅgamāya, ñāyassa adhigamāya, nibbānassa sacchikiriyāya. Yadidaṃ. Cattāro satipaṭṭhānā. Katame cattāro.",
+     "thai": "",
+     "paiboon": "",
+     "english": "This, monks, is the one-way path for the purification of beings, for the surmounting of sorrow and lamentation, for the ending of pain and grief, for the attaining of the method, for the realising of Nibbana — namely, the four foundations of mindfulness. Which four?"
+    },
+    {
+     "number": 3,
+     "page": 129,
+     "pali": "อิธะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. จิตเต จิตตานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง.",
+     "pali_roman": "Idha bhikkhave bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Citte cittānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Dhammesu dhammānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ.",
+     "thai": "",
+     "paiboon": "",
+     "english": "Here, monks, a monk dwells contemplating the body in the body, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; contemplating feelings in feelings; contemplating mind in mind; contemplating mind-objects in mind-objects — each in the same way."
+    },
+    {
+     "number": 4,
+     "page": 129,
+     "pali": "กะถัญจะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อิธะ ภิกขะเว ภิกขุ อะรัญญะคะโต วา รุกขะมูละคะโต วา สุญญาคาระคะโต วา, นิสีทะติ ปัลลังกัง อาภุชิต๎วา อุชุง กายัง ปะณิธายะ, ปะริมุขัง สะติง อุปัฏฐะเปต๎วา. โส สะโต วะ อัสสะสะติ, สะโต ปัสสะสะติ. ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ. ทีฆัง วา ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ, รัสสัง วา อัสสะสันโต รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง ปัสสะสามีติ ปะชานาติ. สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ, ปัสสัมภะยัง กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. เสยยะถาปิ ภิกขะเว ทักโข ภะมะกาโร วา ภะมะการันเตวาสี วา ทีฆัง วา อัญฉันโต ทีฆัง อัญฉามีติ ปะชานาติ, รัสสัง วา อัญฉันโต รัสสัง อัญฉามีติ ปะชานาติ. เอวะเมวะ โข ภิกขะเว ภิกขุ ทีฆัง วา อัสสะสันโต ทีฆัง อัสสะสามีติ ปะชานาติ. ทีฆัง วา ปัสสะสันโต ทีฆัง ปัสสะสามีติ ปะชานาติ, รัสสัง วา อัสสะสันโต รัสสัง อัสสะสามีติ ปะชานาติ, รัสสัง วา ปัสสะสันโต รัสสัง ปัสสะสามีติ ปะชานาติ. สัพพะกายะปะฏิสังเวที อัสสะสิสสามีติ สิกขะติ, สัพพะกายะปะฏิสังเวที ปัสสะสิสสามีติ สิกขะติ, ปัสสัมภะยัง กายะสังขารัง อัสสะสิสสามีติ สิกขะติ, ปัสสัมภะยัง กายะสังขารัง ปัสสะสิสสามีติ สิกขะติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ.",
+     "pali_roman": "Kathañca bhikkhave bhikkhu kāye kāyānupassī viharati, idha bhikkhave bhikkhu araññagato vā rukkhamūlagato vā suññāgāragato vā, nisīdati pallaṅkaṃ ābhujitvā ujuṃ kāyaṃ paṇidhāya, parimukhaṃ satiṃ upaṭṭhapetvā. So sato va assasati, sato passasati. Dīghaṃ vā assasanto dīghaṃ assasāmīti pajānāti. Dīghaṃ vā passasanto dīghaṃ passasāmīti pajānāti, rassaṃ vā assasanto rassaṃ assasāmīti pajānāti, rassaṃ vā passasanto rassaṃ passasāmīti pajānāti. Sabbakāyapaṭisaṃvedī assasissāmīti sikkhati, sabbakāyapaṭisaṃvedī passasissāmīti sikkhati. Passambhayaṃ kāyasaṅkhāraṃ assasissāmīti sikkhati, passambhayaṃ kāyasaṅkhāraṃ passasissāmīti sikkhati. Seyyathāpi bhikkhave dakkho bhamakāro vā bhamakārantevāsī vā dīghaṃ vā añchanto dīghaṃ añchāmīti pajānāti, rassaṃ vā añchanto rassaṃ añchāmīti pajānāti. Evameva kho bhikkhave bhikkhu dīghaṃ vā assasanto dīghaṃ assasāmīti pajānāti. Dīghaṃ vā passasanto dīghaṃ passasāmīti pajānāti, rassaṃ vā assasanto rassaṃ assasāmīti pajānāti, rassaṃ vā passasanto rassaṃ passasāmīti pajānāti. Sabbakāyapaṭisaṃvedī assasissāmīti sikkhati, sabbakāyapaṭisaṃvedī passasissāmīti sikkhati, passambhayaṃ kāyasaṅkhāraṃ assasissāmīti sikkhati, passambhayaṃ kāyasaṅkhāraṃ passasissāmīti sikkhati. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati.",
+     "thai": "",
+     "paiboon": "",
+     "english": "And how does a monk dwell contemplating the body in the body? Here a monk, gone to the forest, to the root of a tree or to an empty place, sits down cross-legged, holding his body straight and setting mindfulness before him. Mindful he breathes in, mindful he breathes out. Breathing in long he knows 'I breathe in long'; breathing out long he knows 'I breathe out long'; breathing in short he knows 'I breathe in short'; breathing out short he knows 'I breathe out short'. He trains: 'sensitive to the whole body I shall breathe in'; he trains: 'sensitive to the whole body I shall breathe out'. He trains: 'calming the bodily formation I shall breathe in'; he trains: 'calming the bodily formation I shall breathe out'. Just as a skilled turner or his apprentice, making a long turn, knows 'I make a long turn', and making a short turn knows 'I make a short turn' — so too the monk knows his breathing, long and short, and trains in the same way. Thus he dwells contemplating the body in the body internally, or externally, or both."
+    }
+   ],
+   "vocabulary": [
+    {
+     "pali": "ภะมะกาโร",
+     "pali_roman": "bhamakāro",
+     "meaning": "a turner, one who works a lathe. The simile turns on his knowing the length of his own stroke, as the meditator knows the length of a breath"
+    },
+    {
+     "pali": "ปะริมุขัง สะติง อุปัฏฐะเปต๎วา",
+     "pali_roman": "parimukhaṃ satiṃ upaṭṭhapetvā",
+     "meaning": "'having set mindfulness before him' — the posture clause that opens every breathing instruction in the canon"
+    }
+   ],
+   "checks": [
+    {
+     "verse": 2,
+     "file": "IMG_0397.PNG",
+     "issue": "COMPLETES THE SENTENCE PAGE 128 CUT. That sheet ended …ญายัสสะ อะธิคะมายะ, […] and this one opens นิพพานัสสะ สัจฉิกิริยายะ… The whole sentence is given here so the […] is replaced, and verse 2 keeps page 128. ⚠️ Its ENGLISH in batch-128 was the hanging half and is brought up at the same time. Note the completion carries อัฏฐังคะมายะ, sutta 29's spelling, not sutta 28's อัตถังคะมายะ."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0397.PNG",
+     "issue": "‼ A SECTION HEADING INSIDE THE SUTTA: a centred bold อุทเทโส. — 'the summary' — stands between verse 3 and verse 4, marking the end of the brief statement and the start of the detailed exposition. Recorded as a heading block on the page, not as a verse. It is the first heading to appear inside a chant in this stretch."
+    },
+    {
+     "verse": 4,
+     "file": "IMG_0397.PNG",
+     "issue": "‼ THE SAME FOUR สิกขะติ CLAUSES ARE PUNCTUATED DIFFERENTLY IN THEIR TWO RUNS. Before the turner simile they read …ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง… with a FULL STOP; after it they read …ปัสสะสิสสามีติ สิกขะติ, ปัสสัมภะยัง… with a COMMA. Both runs read off the sheet separately."
+    },
+    {
+     "verse": 3,
+     "file": "IMG_0397.PNG",
+     "issue": "อิธะ ภิกขะเว ภิกขุ HERE, อิธะ ภิกขุ ON PAGE 127. The long sutta keeps ภิกขะเว in the clause where the short ปาโฐ drops it, and does the same at the start of verse 4. Reproduced as printed."
+    }
+   ]
+  }
+ ],
+ "batch_status": {
+  "completed": [],
+  "continues": [
+   "mahasatipatthana-sutta-patho"
+  ],
+  "resume_from": {
+   "chant": "mahasatipatthana-sutta-patho",
+   "next_verse": 5,
+   "page": 130
+  },
+  "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse.",
+  "pali_untouched": true,
+  "page_scan": "IMG_0397.PNG read end to end. Page number 129 printed clearly at the top centre — ⚠️ this sheet is IMG_0397, NOT IMG_0394: files 0394-0396 do not exist and the offset jumps here. One chant, one heading block, no footnote, no rubric, no colophon.",
+  "notes": "‼ A SECTION HEADING INSIDE A CHANT — อุทเทโส. — the first in this stretch, recorded as a heading block. ‼ The four สิกขะติ clauses take a FULL STOP in their first run and a COMMA in their second, either side of the turner simile. Also ⚠️ THE PHOTO OFFSET JUMPS HERE: 128 is IMG_0393 at offset 265, 129 is IMG_0397 at 268, 130 is IMG_0400 at 270. The photo map now carries a warning.",
+  "diacritic_exceptions": [
+   "atthaṅgamāya/aṭṭhaṅgamāya — NOT a slip: the completion of verse 2 carries sutta 29's spelling อัฏฐังคะมายะ, where sutta 28 on page 127 has อัตถังคะมายะ. Both are the book's own, one page apart.",
+   "va/vā — different words: va is the emphatic particle in โส สะโต วะ อัสสะสะติ, 'mindful he JUST breathes in', and vā is 'or' throughout อะรัญญะคะโต วา รุกขะมูละคะโต วา and the ทีฆัง วา / รัสสัง วา clauses."
+  ]
+ }
+}

@@ -108,7 +108,12 @@ photograph.
 | 126 | IMG_0391 | 265 |
 | 127 | IMG_0392 | 265 |
 | 128 | IMG_0393 | 265 |
-| 129 | IMG_0394 | 265 |
+<!-- ⚠️ THE OFFSET JUMPS TWICE HERE. IMG_0394-0396 and IMG_0398-0399 do
+     NOT EXIST — re-shot pages whose spares were deleted. 128 is at
+     offset 265, 129 at 268, 130 at 270. Do not calculate a filename
+     across this gap; read the number off the sheet. -->
+| 129 | **IMG_0397** | 268 |
+| 130 | **IMG_0400** | 270 |
 | 190 | IMG_0461 | 271 |
 | — | **IMG_0462** | section divider, UNNUMBERED — `บทสวดมนต์ / ทำวัตรเช้า -เย็น แปล`, nothing else on the sheet. Is 191 or 192; its blank pair was NOT photographed |
 | 193 | **IMG_0463** | number NOT printed on the sheet — 193 on the authority of the สารบัญ (`ทำวัตรเช้า แปล` at ๑๙๓), confirmed by IMG_0464 carrying a printed 194 |

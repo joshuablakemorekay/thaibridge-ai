@@ -1812,15 +1812,20 @@ heading above as applying to it.
 ## Where it is
 
 Coverage is **1–114, 187, 191, 193–245, 247, 249–277 and 279–325**.
-**59 pages are left: 129–186 and 192.**
+**58 pages are left: 130–186 and 192.**
 Pages 246, 248 and 278 are absent ON PURPOSE — never photographed; see the
 photo map.
 
-**115–128 are done.** The forward pass works up from the bottom while the
-backward pass comes down from 183. **Resume at 129, `IMG_0394`** — ⚠️
-`mahasatipatthana-sutta-patho` IS OPEN, **2 units in**, and ⚠️⚠️ **verse 2 is
-CUT with `[…]`** after `…ญายัสสะ อะธิคะมายะ,`: COMPLETE it, and bring its
-ENGLISH up. This is the LONG Satipaṭṭhāna; expect it to run for several sheets.
+**115–129 are done.** The forward pass works up from the bottom while the
+backward pass comes down from 183. **Resume at 130, `IMG_0400`** — ⚠️
+`mahasatipatthana-sutta-patho` IS OPEN, **4 units in**, nothing cut. This is the
+LONG Satipaṭṭhāna and it will run for several sheets.
+
+⚠️⚠️ **THE PHOTO OFFSET JUMPS TWICE AROUND HERE, and `IMG_0394-0396` and
+`IMG_0398-0399` DO NOT EXIST** — re-shot sheets whose spares were deleted.
+**128 = IMG_0393 (offset 265), 129 = IMG_0397 (268), 130 = IMG_0400 (270).**
+I anchored 129 to IMG_0394 by calculating and it was wrong; the photo map now
+carries a warning at that row. **Read the number off the sheet.**
 
 ⚠️ **THE BOOK SPELLS ONE WORD TWO WAYS ON ONE SHEET.** Page 128 has
 `อัตถังคะมายะ` in sutta 28's closing framing and `อัฏฐังคะมายะ` in sutta 29's
