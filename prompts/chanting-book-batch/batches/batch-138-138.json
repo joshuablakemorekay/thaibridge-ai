@@ -1,0 +1,159 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 137,
+        "file": "IMG_0407.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "22",
+        "starts_here": false,
+        "note": "NOT a fresh reading of page 137 — that sheet is entered, as batch-137-137.json. The row is here because verse 22 is re-sent in this batch to complete the line the page turn cut, and the completed verse still belongs to page 137, where it began."
+      },
+      {
+        "page": 138,
+        "file": "IMG_0408.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "23",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "heading",
+            "thai": "นีวะระณะปัพพัง",
+            "english": "The Section on the Hindrances.",
+            "english_unverified": true
+          }
+        ],
+        "note": "The whole sheet, one chant, Pali only, one column, no footnote. The rest of verse 22 — sloth and torpor finished, then restlessness-and-remorse, then doubt — then นีวะระณะปัพพัง closing the hindrances, then the second subject of the fourth foundation, the five aggregates of clinging, reaching as far as สัญญา. ⚠️ The label is MINOR, not major — it closes a subsection of the foundation, not the foundation itself, and it measures 54px against page 135's minor at 48 and the majors at 71-77. It closes verse 22, which began on 137, so it is an unanchored page block with NO `major` flag."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "One new one, plus the completion of verse 22. The aggregates are set as ONE indented paragraph here — announcement and exposition together — where the hindrances on page 137 were set as two. So they are one verse, not two, and that is the sheet's decision rather than a rule.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "The hindrance formula's five clauses were read block by block again. Two of the five hindrances use commas throughout and two put full stops after the third and fourth clauses; doubt also switches to FEMININE endings, which is grammar and not a variant.",
+        "pages": "IMG_0408.PNG, page 138, the number printed clearly at the top centre. Arrived from page 137 and CONTINUES onto 139."
+      },
+      "verses": [
+        {
+          "number": 22,
+          "page": 137,
+          "pali": "กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ นีวะระเณสุ. อิธะ ภิกขะเว ภิกขุ สันตัง วา อัชฌัตตัง กามะฉันทัง อัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง กามะฉันทัง นัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ กามะฉันทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ กามะฉันทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ กามะฉันทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง พ๎ยาปาทัง อัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง พ๎ยาปาทัง นัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ พ๎ยาปาทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ พ๎ยาปาทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ พ๎ยาปาทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง ถีนะมิทธัง อัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ถีนะมิทธัง นัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ ถีนะมิทธัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ ถีนะมิทธัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ ถีนะมิทธัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง อุทธัจจะกุกกุจจัง อัตถิ เม อัชฌัตตัง อุทธัจจะกุกกุจจันติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง อุทธัจจะกุกกุจจัง นัตถิ เม อัชฌัตตัง อุทธัจจะกุกกุจจันติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ อุทธัจจะกุกกุจจัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ อุทธัจจะกุกกุจจัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ อุทธัจจะกุกกุจจัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง วิจิกิจฉัง อัตถิ เม อัชฌัตตัง วิจิกิจฉาติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง วิจิกิจฉัง นัตถิ เม อัชฌัตตัง วิจิกิจฉาติ ปะชานาติ, ยะถา จะ อะนุปปันนายะ วิจิกิจฉายะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนายะ วิจิกิจฉายะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนายะ วิจิกิจฉายะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. อิติ อัชฌัตตัง วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, วะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ. อัตถิ ธัมมาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ นีวะระเณสุ.",
+          "pali_roman": "Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu nīvaraṇesu. Idha bhikkhave bhikkhu santaṃ vā ajjhattaṃ kāmacchandaṃ atthi me ajjhattaṃ kāmacchandoti pajānāti, asantaṃ vā ajjhattaṃ kāmacchandaṃ natthi me ajjhattaṃ kāmacchandoti pajānāti, yathā ca anuppannassa kāmacchandassa uppādo hoti, tañca pajānāti, yathā ca uppannassa kāmacchandassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa kāmacchandassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ byāpādaṃ atthi me ajjhattaṃ byāpādoti pajānāti, asantaṃ vā ajjhattaṃ byāpādaṃ natthi me ajjhattaṃ byāpādoti pajānāti. Yathā ca anuppannassa byāpādassa uppādo hoti, tañca pajānāti, yathā ca uppannassa byāpādassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa byāpādassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ thīnamiddhaṃ atthi me ajjhattaṃ thīnamiddhanti pajānāti, asantaṃ vā ajjhattaṃ thīnamiddhaṃ natthi me ajjhattaṃ thīnamiddhanti pajānāti, yathā ca anuppannassa thīnamiddhassa uppādo hoti, tañca pajānāti, yathā ca uppannassa thīnamiddhassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa thīnamiddhassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ uddhaccakukkuccaṃ atthi me ajjhattaṃ uddhaccakukkuccanti pajānāti, asantaṃ vā ajjhattaṃ uddhaccakukkuccaṃ natthi me ajjhattaṃ uddhaccakukkuccanti pajānāti, yathā ca anuppannassa uddhaccakukkuccassa uppādo hoti, tañca pajānāti, yathā ca uppannassa uddhaccakukkuccassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa uddhaccakukkuccassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ vicikicchaṃ atthi me ajjhattaṃ vicikicchāti pajānāti, asantaṃ vā ajjhattaṃ vicikicchaṃ natthi me ajjhattaṃ vicikicchāti pajānāti, yathā ca anuppannāya vicikicchāya uppādo hoti, tañca pajānāti. Yathā ca uppannāya vicikicchāya pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnāya vicikicchāya āyatiṃ anuppādo hoti, tañca pajānāti. Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati. Samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu nīvaraṇesu.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And how, monks, does a monk dwell contemplating mind-objects in mind-objects as regards the five hindrances? Here, monks, a monk, when sensual desire is present in him, knows 'there is sensual desire in me'; when it is absent, knows 'there is no sensual desire in me'; and he knows how unarisen sensual desire comes to arise, how arisen sensual desire is abandoned, and how what has been abandoned does not arise again in future. So too with ill will; so too with sloth and torpor; so too with restlessness and remorse; and so too with doubt — each known as present or absent, and each known in its arising, its abandoning, and its not arising again. Thus he dwells contemplating mind-objects in mind-objects internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in mind-objects, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there are mind-objects' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating mind-objects in mind-objects, as regards the five hindrances."
+        },
+        {
+          "number": 23,
+          "page": 138,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ อุปาทานักขันเธสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ. ปัญจะสุ อุปาทานักขันเธสุ. อิธะ ภิกขะเว ภิกขุ อิติ รูปัง, อิติ รูปัสสะ สะมุทะโย, อิติ รูปัสสะ อัตถังคะโม. อิติ เวทะนา, อิติ เวทะนายะ สะมุทะโย, อิติ เวทะนายะ อัตถังคะโม. อิติ สัญญา, อิติ สัญญายะ สะมุทะโย, อิติ สัญญายะ อัตถังคะโม.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu upādānakkhandhesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati. Pañcasu upādānakkhandhesu. Idha bhikkhave bhikkhu iti rūpaṃ, iti rūpassa samudayo, iti rūpassa atthaṅgamo. Iti vedanā, iti vedanāya samudayo, iti vedanāya atthaṅgamo. Iti saññā, iti saññāya samudayo, iti saññāya atthaṅgamo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the five aggregates of clinging. And how does a monk dwell contemplating mind-objects in mind-objects as regards the five aggregates of clinging? Here, monks, a monk knows: 'such is form, such the arising of form, such the passing away of form; such is feeling, such the arising of feeling, such the passing away of feeling; such is perception, such the arising of perception, such the passing away of perception.'"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "อุทธัจจะกุกกุจจะ",
+          "pali_roman": "uddhaccakukkucca",
+          "meaning": "restlessness and remorse, treated as one hindrance — the mind agitated about the future together with regret over the past. The fourth"
+        },
+        {
+          "pali": "วิจิกิจฉา",
+          "pali_roman": "vicikicchā",
+          "meaning": "doubt; not honest questioning but the wavering that cannot settle enough to practise. The fifth and last hindrance"
+        },
+        {
+          "pali": "นีวะระณะ",
+          "pali_roman": "nīvaraṇa",
+          "meaning": "a hindrance, literally something that shuts off or obstructs — what stands between the mind and concentration"
+        },
+        {
+          "pali": "ปัญจะสุ อุปาทานักขันเธสุ",
+          "pali_roman": "pañcasu upādānakkhandhesu",
+          "meaning": "as regards the five aggregates of clinging — form, feeling, perception, formations and consciousness, considered not as parts of a person but as what clinging fastens onto"
+        },
+        {
+          "pali": "สะมุทะโย / อัตถังคะโม",
+          "pali_roman": "samudayo / atthaṅgamo",
+          "meaning": "the arising and the going-down. Each aggregate is known three ways — what it is, how it comes to be, and how it ceases — which is what makes this contemplation rather than a list"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 22,
+          "file": "IMG_0408.PNG",
+          "issue": "COMPLETES THE LINE PAGE 137 CUT. That sheet ended …ตัญจะ ปะชานาติ, ยะถา […] and this one opens จะ อุปปันนัสสะ ถีนะมิทธัสสะ. The verse keeps page 137, where it began. ⚠️ It carries `page: 137` explicitly, because the completion path replaces the verse and a missing page key moves it — the bug page 137 found."
+        },
+        {
+          "verse": 22,
+          "file": "IMG_0408.PNG",
+          "issue": "‼ THE FIVE HINDRANCES, FIVE BLOCKS OF THE SAME FORMULA, PUNCTUATED TWO WAYS. กามะฉันทะ, ถีนะมิทธะ and อุทธัจจะกุกกุจจะ run , / , / , / , / . — commas throughout with one full stop at the end. พ๎ยาปาทะ and วิจิกิจฉา run , / . / , / . / . — full stops after the second and fourth clauses as well. Each block read separately at 2.7x rather than copied from the one above. Three against two, and nothing harmonised."
+        },
+        {
+          "verse": 22,
+          "file": "IMG_0408.PNG",
+          "issue": "‼ DOUBT TAKES FEMININE ENDINGS, and this is grammar, not a variant. วิจิกิจฉา is a feminine noun, so its three clauses read อะนุปปันนายะ / อุปปันนายะ / ปะหีนายะ วิจิกิจฉายะ where all four hindrances before it take the masculine -นัสสะ …-ัสสะ. The book has it right; recorded because the odd ending in an otherwise identical formula is exactly what a later pass would 'correct'."
+        },
+        {
+          "verse": 22,
+          "file": "IMG_0408.PNG",
+          "issue": "เอวัมปิ โข ภิกขะเว, and it REFINES the pattern rather than continuing it. Verse 18 closed the BODY with เอวัมปิ โข; verses 19 and 20 closed the feelings and the mind with เอวัง โข; this closes a SUBSECTION — the hindrances, not the whole foundation — and returns to เอวัมปิ โข. It also repeats ปัญจะสุ นีวะระเณสุ after วิหะระติ, which no earlier closing does. So the form appears to follow what is being closed, not simply where it falls."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0408.PNG",
+          "issue": "‼ นีวะระณะปัพพัง IS A MINOR LABEL, and the distinction now matters in both directions. It closes a SUBSECTION of the fourth foundation, not a foundation, and it measures 54px against page 135's minor นะวะสีวะถิกาปัพพัง at 48px and the two majors at 71 and 77. So it is recorded WITHOUT the `major` flag. Like the last three labels it closes a verse that began on the previous sheet, so it is an unanchored page block."
+        },
+        {
+          "verse": 23,
+          "file": "IMG_0408.PNG",
+          "issue": "‼ THE AGGREGATES ARE SET AS ONE PARAGRAPH, where the hindrances on page 137 took two. There the announcement ปุนะ จะปะรัง… and the exposition กะถัญจะ… were separately indented; here both sit in a single indented block, so this is one verse and page 137's was two. The sheet decides, not the formula — and the same question will arise at each of the fourth foundation's remaining three subjects."
+        },
+        {
+          "verse": 23,
+          "file": "IMG_0408.PNG",
+          "issue": "NO […] ON THIS VERSE, because the page does NOT cut a line: it ends at a full stop after อิติ สัญญายะ อัตถังคะโม. The aggregate list is only three of five — สังขารา and วิญญาณัง are overleaf — so the chant continues, but the sentence does not. Same treatment batch-112 gave the Aggappasada, which also ended a page at a sentence boundary. Page 139 should therefore open a NEW verse rather than complete this one."
+        },
+        {
+          "verse": 23,
+          "file": "IMG_0408.PNG",
+          "issue": "วิหะระติ. ปัญจะสุ อุปาทานักขันเธสุ. — A FULL STOP BETWEEN THEM, where the same phrase two sentences earlier reads วิหะระติ, ปัญจะสุ อุปาทานักขันเธสุ. with a comma. One line apart, same words, different stop. Read at 2.7x and reproduced both ways."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 139,
+    "resume_from_file": "IMG_0409.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on both verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0408.PNG.",
+    "page_scan": "agrees — two rows. Page 137 claims verse 22, re-sent here only to complete the line the turn cut and keeping its own page, which it now states explicitly; page 138 claims verse 23, which is what lands on it. Numbering runs 22, 23 with no gap and no overlap.",
+    "notes": "‼ The first subject of the fourth foundation is complete and the second is open. Two things this sheet settles. The hindrance formula is printed FIVE times and punctuated two ways, three blocks against two — read block by block, nothing carried over. And นีวะระณะปัพพัง is the first MINOR label to be stranded across a page turn, so it goes in as an unanchored block with no `major` flag: the two sizes now have to be told apart in both directions. ⚠️ All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}

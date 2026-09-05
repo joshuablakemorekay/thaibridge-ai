@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 22; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 23; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57885,13 +57885,90 @@ CHANTS = [
             #   hindrance's fourth clause. Marked […] and completed from page
             #   138. Its remaining stops must be read there: this sheet has
             #   just shown the same formula punctuated two ways.
+            # ‼ COMPLETED FROM p137: this line was cut by the page break and
+            #   is now whole. Was: กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี
+            #   วิหะระติ, ปัญจะสุ นีวะระเณสุ. อิธะ ภิกขะเว ภิกขุ สันตัง วา
+            #   อัชฌัตตัง กามะฉันทัง อัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ,
+            #   อะสันตัง วา อัชฌัตตัง กามะฉันทัง นัตถิ เม อัชฌัตตัง
+            #   กามะฉันโทติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ กามะฉันทัสสะ
+            #   อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ กามะฉันทัสสะ
+            #   ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ กามะฉันทัสสะ
+            #   อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง
+            #   พ๎ยาปาทัง อัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ, อะสันตัง วา
+            #   อัชฌัตตัง พ๎ยาปาทัง นัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ.
+            #   ยะถา จะ อะนุปปันนัสสะ พ๎ยาปาทัสสะ อุปปาโท โหติ, ตัญจะ
+            #   ปะชานาติ, ยะถา จะ อุปปันนัสสะ พ๎ยาปาทัสสะ ปะหานัง โหติ, ตัญจะ
+            #   ปะชานาติ. ยะถา จะ ปะหีนัสสะ พ๎ยาปาทัสสะ อายะติง อะนุปปาโท
+            #   โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง ถีนะมิทธัง อัตถิ เม
+            #   อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง
+            #   ถีนะมิทธัง นัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, ยะถา จะ
+            #   อะนุปปันนัสสะ ถีนะมิทธัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา
+            #   […]
+            # ‼ CHECK [IMG_0408.PNG]: COMPLETES THE LINE PAGE 137 CUT. That
+            #   sheet ended …ตัญจะ ปะชานาติ, ยะถา […] and this one opens จะ
+            #   อุปปันนัสสะ ถีนะมิทธัสสะ. The verse keeps page 137, where it
+            #   began. ⚠️ It carries `page: 137` explicitly, because the
+            #   completion path replaces the verse and a missing page key
+            #   moves it — the bug page 137 found.
+            # ‼ CHECK [IMG_0408.PNG]: ‼ THE FIVE HINDRANCES, FIVE BLOCKS OF
+            #   THE SAME FORMULA, PUNCTUATED TWO WAYS. กามะฉันทะ, ถีนะมิทธะ
+            #   and อุทธัจจะกุกกุจจะ run , / , / , / , / . — commas throughout
+            #   with one full stop at the end. พ๎ยาปาทะ and วิจิกิจฉา run , /
+            #   . / , / . / . — full stops after the second and fourth clauses
+            #   as well. Each block read separately at 2.7x rather than copied
+            #   from the one above. Three against two, and nothing harmonised.
+            # ‼ CHECK [IMG_0408.PNG]: ‼ DOUBT TAKES FEMININE ENDINGS, and this
+            #   is grammar, not a variant. วิจิกิจฉา is a feminine noun, so
+            #   its three clauses read อะนุปปันนายะ / อุปปันนายะ / ปะหีนายะ
+            #   วิจิกิจฉายะ where all four hindrances before it take the
+            #   masculine -นัสสะ …-ัสสะ. The book has it right; recorded
+            #   because the odd ending in an otherwise identical formula is
+            #   exactly what a later pass would 'correct'.
+            # ‼ CHECK [IMG_0408.PNG]: เอวัมปิ โข ภิกขะเว, and it REFINES the
+            #   pattern rather than continuing it. Verse 18 closed the BODY
+            #   with เอวัมปิ โข; verses 19 and 20 closed the feelings and the
+            #   mind with เอวัง โข; this closes a SUBSECTION — the hindrances,
+            #   not the whole foundation — and returns to เอวัมปิ โข. It also
+            #   repeats ปัญจะสุ นีวะระเณสุ after วิหะระติ, which no earlier
+            #   closing does. So the form appears to follow what is being
+            #   closed, not simply where it falls.
             {
                 'number': 22,
-                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ นีวะระเณสุ. อิธะ ภิกขะเว ภิกขุ สันตัง วา อัชฌัตตัง กามะฉันทัง อัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง กามะฉันทัง นัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ กามะฉันทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ กามะฉันทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ กามะฉันทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง พ๎ยาปาทัง อัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง พ๎ยาปาทัง นัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ พ๎ยาปาทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ พ๎ยาปาทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ พ๎ยาปาทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง ถีนะมิทธัง อัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ถีนะมิทธัง นัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ ถีนะมิทธัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา […]',
-                'pali_roman': 'Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu nīvaraṇesu. Idha bhikkhave bhikkhu santaṃ vā ajjhattaṃ kāmacchandaṃ atthi me ajjhattaṃ kāmacchandoti pajānāti, asantaṃ vā ajjhattaṃ kāmacchandaṃ natthi me ajjhattaṃ kāmacchandoti pajānāti, yathā ca anuppannassa kāmacchandassa uppādo hoti, tañca pajānāti, yathā ca uppannassa kāmacchandassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa kāmacchandassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ byāpādaṃ atthi me ajjhattaṃ byāpādoti pajānāti, asantaṃ vā ajjhattaṃ byāpādaṃ natthi me ajjhattaṃ byāpādoti pajānāti. Yathā ca anuppannassa byāpādassa uppādo hoti, tañca pajānāti, yathā ca uppannassa byāpādassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa byāpādassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ thīnamiddhaṃ atthi me ajjhattaṃ thīnamiddhanti pajānāti, asantaṃ vā ajjhattaṃ thīnamiddhaṃ natthi me ajjhattaṃ thīnamiddhanti pajānāti, yathā ca anuppannassa thīnamiddhassa uppādo hoti, tañca pajānāti, yathā […]',
+                'page': 137,
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ นีวะระเณสุ. อิธะ ภิกขะเว ภิกขุ สันตัง วา อัชฌัตตัง กามะฉันทัง อัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง กามะฉันทัง นัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ กามะฉันทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ กามะฉันทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ กามะฉันทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง พ๎ยาปาทัง อัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง พ๎ยาปาทัง นัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ พ๎ยาปาทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ พ๎ยาปาทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ พ๎ยาปาทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง ถีนะมิทธัง อัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ถีนะมิทธัง นัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ ถีนะมิทธัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ ถีนะมิทธัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ ถีนะมิทธัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง อุทธัจจะกุกกุจจัง อัตถิ เม อัชฌัตตัง อุทธัจจะกุกกุจจันติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง อุทธัจจะกุกกุจจัง นัตถิ เม อัชฌัตตัง อุทธัจจะกุกกุจจันติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ อุทธัจจะกุกกุจจัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ อุทธัจจะกุกกุจจัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ อุทธัจจะกุกกุจจัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง วิจิกิจฉัง อัตถิ เม อัชฌัตตัง วิจิกิจฉาติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง วิจิกิจฉัง นัตถิ เม อัชฌัตตัง วิจิกิจฉาติ ปะชานาติ, ยะถา จะ อะนุปปันนายะ วิจิกิจฉายะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนายะ วิจิกิจฉายะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนายะ วิจิกิจฉายะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. อิติ อัชฌัตตัง วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, วะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ. อัตถิ ธัมมาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ นีวะระเณสุ.',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu nīvaraṇesu. Idha bhikkhave bhikkhu santaṃ vā ajjhattaṃ kāmacchandaṃ atthi me ajjhattaṃ kāmacchandoti pajānāti, asantaṃ vā ajjhattaṃ kāmacchandaṃ natthi me ajjhattaṃ kāmacchandoti pajānāti, yathā ca anuppannassa kāmacchandassa uppādo hoti, tañca pajānāti, yathā ca uppannassa kāmacchandassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa kāmacchandassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ byāpādaṃ atthi me ajjhattaṃ byāpādoti pajānāti, asantaṃ vā ajjhattaṃ byāpādaṃ natthi me ajjhattaṃ byāpādoti pajānāti. Yathā ca anuppannassa byāpādassa uppādo hoti, tañca pajānāti, yathā ca uppannassa byāpādassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa byāpādassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ thīnamiddhaṃ atthi me ajjhattaṃ thīnamiddhanti pajānāti, asantaṃ vā ajjhattaṃ thīnamiddhaṃ natthi me ajjhattaṃ thīnamiddhanti pajānāti, yathā ca anuppannassa thīnamiddhassa uppādo hoti, tañca pajānāti, yathā ca uppannassa thīnamiddhassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa thīnamiddhassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ uddhaccakukkuccaṃ atthi me ajjhattaṃ uddhaccakukkuccanti pajānāti, asantaṃ vā ajjhattaṃ uddhaccakukkuccaṃ natthi me ajjhattaṃ uddhaccakukkuccanti pajānāti, yathā ca anuppannassa uddhaccakukkuccassa uppādo hoti, tañca pajānāti, yathā ca uppannassa uddhaccakukkuccassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa uddhaccakukkuccassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ vicikicchaṃ atthi me ajjhattaṃ vicikicchāti pajānāti, asantaṃ vā ajjhattaṃ vicikicchaṃ natthi me ajjhattaṃ vicikicchāti pajānāti, yathā ca anuppannāya vicikicchāya uppādo hoti, tañca pajānāti. Yathā ca uppannāya vicikicchāya pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnāya vicikicchāya āyatiṃ anuppādo hoti, tañca pajānāti. Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati. Samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu nīvaraṇesu.',
                 'thai': '',
                 'paiboon': '',
-                'english': "And how, monks, does a monk dwell contemplating mind-objects in mind-objects as regards the five hindrances? Here, monks, a monk, when sensual desire is present in him, knows 'there is sensual desire in me'; when it is absent, knows 'there is no sensual desire in me'; and he knows how unarisen sensual desire comes to arise, how arisen sensual desire is abandoned, and how what has been abandoned does not arise again in future. When ill will is present in him, he knows it is present; when absent, that it is absent; and he knows how unarisen ill will comes to arise, how arisen ill will is abandoned, and how what has been abandoned does not arise again in future. When sloth and torpor are present in him, he knows they are present; when absent, that they are absent; and he knows how unarisen sloth and torpor come to arise […]",
+                'english': "And how, monks, does a monk dwell contemplating mind-objects in mind-objects as regards the five hindrances? Here, monks, a monk, when sensual desire is present in him, knows 'there is sensual desire in me'; when it is absent, knows 'there is no sensual desire in me'; and he knows how unarisen sensual desire comes to arise, how arisen sensual desire is abandoned, and how what has been abandoned does not arise again in future. So too with ill will; so too with sloth and torpor; so too with restlessness and remorse; and so too with doubt — each known as present or absent, and each known in its arising, its abandoning, and its not arising again. Thus he dwells contemplating mind-objects in mind-objects internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in mind-objects, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there are mind-objects' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating mind-objects in mind-objects, as regards the five hindrances.",
+            },
+            # ‼ CHECK [IMG_0408.PNG]: ‼ THE AGGREGATES ARE SET AS ONE
+            #   PARAGRAPH, where the hindrances on page 137 took two. There
+            #   the announcement ปุนะ จะปะรัง… and the exposition กะถัญจะ…
+            #   were separately indented; here both sit in a single indented
+            #   block, so this is one verse and page 137's was two. The sheet
+            #   decides, not the formula — and the same question will arise at
+            #   each of the fourth foundation's remaining three subjects.
+            # ‼ CHECK [IMG_0408.PNG]: NO […] ON THIS VERSE, because the page
+            #   does NOT cut a line: it ends at a full stop after อิติ สัญญายะ
+            #   อัตถังคะโม. The aggregate list is only three of five — สังขารา
+            #   and วิญญาณัง are overleaf — so the chant continues, but the
+            #   sentence does not. Same treatment batch-112 gave the
+            #   Aggappasada, which also ended a page at a sentence boundary.
+            #   Page 139 should therefore open a NEW verse rather than
+            #   complete this one.
+            # ‼ CHECK [IMG_0408.PNG]: วิหะระติ. ปัญจะสุ อุปาทานักขันเธสุ. — A
+            #   FULL STOP BETWEEN THEM, where the same phrase two sentences
+            #   earlier reads วิหะระติ, ปัญจะสุ อุปาทานักขันเธสุ. with a
+            #   comma. One line apart, same words, different stop. Read at
+            #   2.7x and reproduced both ways.
+            {
+                'number': 23,
+                'page': 138,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ อุปาทานักขันเธสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ. ปัญจะสุ อุปาทานักขันเธสุ. อิธะ ภิกขะเว ภิกขุ อิติ รูปัง, อิติ รูปัสสะ สะมุทะโย, อิติ รูปัสสะ อัตถังคะโม. อิติ เวทะนา, อิติ เวทะนายะ สะมุทะโย, อิติ เวทะนายะ อัตถังคะโม. อิติ สัญญา, อิติ สัญญายะ สะมุทะโย, อิติ สัญญายะ อัตถังคะโม.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu upādānakkhandhesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati. Pañcasu upādānakkhandhesu. Idha bhikkhave bhikkhu iti rūpaṃ, iti rūpassa samudayo, iti rūpassa atthaṅgamo. Iti vedanā, iti vedanāya samudayo, iti vedanāya atthaṅgamo. Iti saññā, iti saññāya samudayo, iti saññāya atthaṅgamo.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the five aggregates of clinging. And how does a monk dwell contemplating mind-objects in mind-objects as regards the five aggregates of clinging? Here, monks, a monk knows: 'such is form, such the arising of form, such the passing away of form; such is feeling, such the arising of feeling, such the passing away of feeling; such is perception, such the arising of perception, such the passing away of perception.'",
             },
         ],
     },
@@ -60536,6 +60613,19 @@ PAGE_BLOCKS = [
                 'major': True,
                 'thai': 'จิตตานุปัสสะนาสะติปัฏฐานัง',
                 'english': 'The Establishing of Mindfulness through Contemplation of Mind.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 138 ───────────────────────────────────────────────────
+    # Written from batch-138-138.json.
+    {
+        'page': 138,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'นีวะระณะปัพพัง',
+                'english': 'The Section on the Hindrances.',
                 'english_unverified': True,
             },
         ],

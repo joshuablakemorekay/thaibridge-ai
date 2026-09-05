@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-137 went in.
+138 went in.
 
 ## Read first, in this order
 
@@ -21,25 +21,30 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 280 pages.** The gaps are
-**138–174, 179–182, 192, 246, 248 and 278** — and 138 and 179 are the live
+As of 2026-09-05: **287 chants across 281 pages.** The gaps are
+**139–174, 179–182, 192, 246, 248 and 278** — and 139 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 22, page 137 | **page 138 = IMG_0408** |
+| `mahasatipatthana-sutta-patho` | 23, page 138 | **page 139 = IMG_0409** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
-MIND-OBJECTS, the FOURTH and last foundation, at its first subject — the five
-hindrances. Verse 22 is cut mid-formula. The body (135), the feelings (136)
-and the mind (137) are all CLOSED, each under its own label.
+MIND-OBJECTS, the FOURTH and last foundation, at its SECOND subject — the five
+aggregates, three of five in. The body (135), the feelings (136) and the mind
+(137) are all CLOSED, and so is this foundation's first subject, the hindrances
+(138).
 
-The fourth foundation has five subjects in turn — hindrances, aggregates,
-sense bases, factors of awakening, truths — so it is the longest of the four
-and will run for several sheets yet.
+The fourth foundation has five subjects in turn — hindrances ✅, aggregates
+(running), sense bases, factors of awakening, truths — so it is the longest of
+the four and will run for several sheets yet.
+
+⚠️ **Its subsections close with MINOR labels** (`นีวะระณะปัพพัง`, 54px), and the
+foundation itself will close with a MAJOR one at the end. Measure before
+choosing — the sizes now have to be told apart in both directions.
 
 ## ⚠️ A COMPLETION REPLACES THE VERSE — check what the first half carried
 
