@@ -1,0 +1,163 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 134,
+        "file": "IMG_0404.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "16",
+        "starts_here": false,
+        "note": "NOT a fresh reading of page 134 — that sheet is entered, as batch-134-134.json. The row is here because verse 16 is re-sent in this batch to complete the line the page turn cut, and the completed verse still belongs to page 134, where it began."
+      },
+      {
+        "page": 135,
+        "file": "IMG_0405.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "17-19",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, one column, no footnote. ‼ THE BIGGEST STRUCTURAL PAGE SINCE 129: the eighth and ninth charnel grounds finish the set, and then the book closes TWO nested sections at once — นะวะสีวะถิกาปัพพัง, and beneath it, set about half again as large, กายานุปัสสะนาสะติปัฏฐานัง, which ends the whole Contemplation of the Body. The second foundation, the contemplation of FEELINGS, then begins on the same sheet and is cut at ทุกขัง เวทะนัง. Both labels close what precedes them, so both ride on verse 18: the inner as `section_end`, the outer as `section_end_major`."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Three new ones, plus the completion of verse 16. Verses 17 and 18 are the eighth and ninth charnel grounds; verse 19 opens the contemplation of feelings and is cut by the page foot. Verse 18 carries both closing labels.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "Verse 18 is the closing verse of the whole body section and the book marks it as such in the text, not only in the labels: it reads เอวัมปิ โข ภิกขะเว where all eighteen verses before it read เอวัมปิ ภิกขะเว. Read at 4x. Its โส อิมะเมวะ กายัง อุปะสังหะระติ also takes a comma where verses 10-17 take a full stop.",
+        "pages": "IMG_0405.PNG, page 135, the number printed clearly at the top centre. Arrived from page 134 and CONTINUES onto 136, now inside the second foundation."
+      },
+      "verses": [
+        {
+          "number": 16,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ เสตานิ สังขะวัณณุปะนิภานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, aṭṭhikāni setāni saṅkhavaṇṇupanibhāni. So imameva kāyaṃ upasaṃharati. Ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — the bones gone white, the colour of shells — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body."
+        },
+        {
+          "number": 17,
+          "page": 135,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ ปุญชะกิตานิ เตโรวัสสิกานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, aṭṭhikāni puñjakitāni terovassikāni. So imameva kāyaṃ upasaṃharati. Ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — the bones heaped together, more than a year old — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body."
+        },
+        {
+          "number": 18,
+          "section_end": "นะวะสีวะถิกาปัพพัง",
+          "section_end_major": "กายานุปัสสะนาสะติปัฏฐานัง",
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ ปูตีนิ จุณณะกะชาตานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ, อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, aṭṭhikāni pūtīni cuṇṇakajātāni. So imameva kāyaṃ upasaṃharati, ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu kāye kāyānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — the bones rotted away and gone to powder — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Just so, monks, does a monk dwell contemplating the body in the body."
+        },
+        {
+          "number": 19,
+          "pali": "กะถัญจะ ภิกขะเว ภิกขุ เวทะนาสุ เวทะนานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สุขัง เวทะนัง เวทิยะมาโน, สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. ทุกขัง เวทะนัง […]",
+          "pali_roman": "Kathañca bhikkhave bhikkhu vedanāsu vedanānupassī viharati. Idha bhikkhave bhikkhu sukhaṃ vedanaṃ vediyamāno, sukhaṃ vedanaṃ vediyāmīti pajānāti. Dukkhaṃ vedanaṃ […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "And how, monks, does a monk dwell contemplating feelings in feelings? Here, monks, a monk, feeling a pleasant feeling, knows 'I feel a pleasant feeling'. A painful feeling […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ปุญชะกิตานิ เตโรวัสสิกานิ",
+          "pali_roman": "puñjakitāni terovassikāni",
+          "meaning": "heaped together and more than a year old — the eighth state, the bones no longer even scattered but piled and weathered"
+        },
+        {
+          "pali": "ปูตีนิ จุณณะกะชาตานิ",
+          "pali_roman": "pūtīni cuṇṇakajātāni",
+          "meaning": "rotted and gone to powder — the ninth and last state, where nothing recognisable is left"
+        },
+        {
+          "pali": "นะวะสีวะถิกาปัพพัง",
+          "pali_roman": "navasīvathikapabbaṃ",
+          "meaning": "the section of the nine charnel grounds; the label that closes all nine contemplations together"
+        },
+        {
+          "pali": "กายานุปัสสะนาสะติปัฏฐานัง",
+          "pali_roman": "kāyānupassanāsatipaṭṭhānaṃ",
+          "meaning": "the establishing of mindfulness through contemplation of the body — the whole first foundation, closed here after breathing, postures, clear comprehension, the parts, the elements and the charnel grounds"
+        },
+        {
+          "pali": "เวทะนานุปัสสี",
+          "pali_roman": "vedanānupassī",
+          "meaning": "one contemplating feeling. The second foundation, which begins on this sheet: not the objects felt but the bare tone of feeling — pleasant, painful, neither"
+        },
+        {
+          "pali": "เวทิยะมาโน",
+          "pali_roman": "vediyamāno",
+          "meaning": "while feeling; in the very act of feeling, which is what makes this a contemplation rather than a recollection"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 16,
+          "file": "IMG_0405.PNG",
+          "issue": "COMPLETES THE LINE PAGE 134 CUT. That sheet ended …สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง […] and this one opens วิหะระติ. The verse keeps page 134, where it began. Its refrain uses the ordinary comma pattern, not verse 15's run-on."
+        },
+        {
+          "verse": 18,
+          "file": "IMG_0405.PNG",
+          "issue": "‼‼ TWO NESTED CLOSES AT ONE POINT, AND THE BOOK SETS THEM AT TWO SIZES. After verse 18 come นะวะสีวะถิกาปัพพัง — bold, centred, the size of every other ปัพพัง label — and then, beneath it and about half again as large, กายานุปัสสะนาสะติปัฏฐานัง. The first closes the nine charnel grounds; the second closes the whole first foundation. Both name what PRECEDES them, and verse 19 follows on the same sheet, so neither could be a page block. Recorded as `section_end` and `section_end_major` on verse 18, a key added for this page. ⚠️ Expect the same shape three more times — feelings, mind and mind-objects each end this way."
+        },
+        {
+          "verse": 18,
+          "file": "IMG_0405.PNG",
+          "issue": "‼ เอวัมปิ โข ภิกขะเว — WITH โข, and this is a WORD difference, not punctuation. Read at 4x. All eighteen verses before it close เอวัมปิ ภิกขะเว ภิกขุ; only this one, the last of the nine and the last of the whole body section, inserts โข. Reproduced, and romanised evampi kho bhikkhave."
+        },
+        {
+          "verse": 18,
+          "file": "IMG_0405.PNG",
+          "issue": "AND ITS โส อิมะเมวะ กายัง อุปะสังหะระติ, TAKES A COMMA, where verses 10 to 17 all print a full stop there and run อะยัมปิ โข กาโย as a new sentence. Two departures in one verse, both on the sheet that closes the section."
+        },
+        {
+          "verse": 19,
+          "file": "IMG_0405.PNG",
+          "issue": "THE SECOND FOUNDATION BEGINS ON THIS SHEET, with no invitation, no number and no heading of its own — the text simply starts กะถัญจะ ภิกขะเว ภิกขุ เวทะนาสุ… under the label that closed the first. The page foot cuts it at ทุกขัง เวทะนัง, so the verse is marked […] and completed from page 136."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0405.PNG",
+          "issue": "NO FOOTNOTE AND NO COLOPHON on this sheet, despite it closing a whole foundation of the sutta. The two labels are all the book gives; there is no จบ line and no citation. Recorded because a section ending is exactly where one would be expected."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 136,
+    "resume_from_file": "IMG_0406.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all four verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0405.PNG.",
+    "page_scan": "agrees — two rows. Page 134 claims verse 16, re-sent here only to complete the line the turn cut and keeping its own page; page 135 claims verses 17-19, which is what lands on it. Verse 17 carries page 135; verses 18 and 19 carry none and sit on 135 by carry-forward. Numbering runs 16 to 19 with no gap and no overlap.",
+    "notes": "‼ THE FIRST FOUNDATION CLOSES HERE, and it needed a new key: two labels at two sizes, both closing, with a verse of the NEXT foundation following them on the same sheet. `section_end_major` was added for the outer one — a second key rather than a list, because a nested close always runs inner then outer, so the order is fixed by the nesting and not by the data. ⚠️ Three more of these are coming. ‼ Verse 18 also differs in its WORDS, not just its stops: เอวัมปิ โข ภิกขะเว where every earlier verse has เอวัมปิ ภิกขะเว. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}

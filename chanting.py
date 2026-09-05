@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 16; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 19; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57674,13 +57674,83 @@ CHANTS = [
             #   english and completed from page 135. On this sheet's evidence
             #   its remaining stops must be read, not inferred — verse 15 has
             #   just shown the refrain can drop a mark entirely.
+            # ‼ COMPLETED FROM p134: this line was cut by the page break and
+            #   is now whole. Was: ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ
+            #   ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ เสตานิ
+            #   สังขะวัณณุปะนิภานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ
+            #   โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง
+            #   วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี
+            #   วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ.
+            #   สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี
+            #   วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง
+            #   […]
+            # ‼ CHECK [IMG_0405.PNG]: COMPLETES THE LINE PAGE 134 CUT. That
+            #   sheet ended …สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง […] and
+            #   this one opens วิหะระติ. The verse keeps page 134, where it
+            #   began. Its refrain uses the ordinary comma pattern, not verse
+            #   15's run-on.
             {
                 'number': 16,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ เสตานิ สังขะวัณณุปะนิภานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง […]',
-                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, aṭṭhikāni setāni saṅkhavaṇṇupanibhāni. So imameva kāyaṃ upasaṃharati. Ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ […]',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ เสตานิ สังขะวัณณุปะนิภานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, aṭṭhikāni setāni saṅkhavaṇṇupanibhāni. So imameva kāyaṃ upasaṃharati. Ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.',
                 'thai': '',
                 'paiboon': '',
-                'english': "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — the bones gone white, the colour of shells — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away […]",
+                'english': "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — the bones gone white, the colour of shells — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body.",
+            },
+            {
+                'number': 17,
+                'page': 135,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ ปุญชะกิตานิ เตโรวัสสิกานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, aṭṭhikāni puñjakitāni terovassikāni. So imameva kāyaṃ upasaṃharati. Ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — the bones heaped together, more than a year old — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body.",
+            },
+            # ‼ CHECK [IMG_0405.PNG]: ‼‼ TWO NESTED CLOSES AT ONE POINT, AND
+            #   THE BOOK SETS THEM AT TWO SIZES. After verse 18 come
+            #   นะวะสีวะถิกาปัพพัง — bold, centred, the size of every other
+            #   ปัพพัง label — and then, beneath it and about half again as
+            #   large, กายานุปัสสะนาสะติปัฏฐานัง. The first closes the nine
+            #   charnel grounds; the second closes the whole first foundation.
+            #   Both name what PRECEDES them, and verse 19 follows on the same
+            #   sheet, so neither could be a page block. Recorded as
+            #   `section_end` and `section_end_major` on verse 18, a key added
+            #   for this page. ⚠️ Expect the same shape three more times —
+            #   feelings, mind and mind-objects each end this way.
+            # ‼ CHECK [IMG_0405.PNG]: ‼ เอวัมปิ โข ภิกขะเว — WITH โข, and this
+            #   is a WORD difference, not punctuation. Read at 4x. All
+            #   eighteen verses before it close เอวัมปิ ภิกขะเว ภิกขุ; only
+            #   this one, the last of the nine and the last of the whole body
+            #   section, inserts โข. Reproduced, and romanised evampi kho
+            #   bhikkhave.
+            # ‼ CHECK [IMG_0405.PNG]: AND ITS โส อิมะเมวะ กายัง อุปะสังหะระติ,
+            #   TAKES A COMMA, where verses 10 to 17 all print a full stop
+            #   there and run อะยัมปิ โข กาโย as a new sentence. Two
+            #   departures in one verse, both on the sheet that closes the
+            #   section.
+            {
+                'number': 18,
+                'section_end': 'นะวะสีวะถิกาปัพพัง',
+                'section_end_major': 'กายานุปัสสะนาสะติปัฏฐานัง',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, อัฏฐิกานิ ปูตีนิ จุณณะกะชาตานิ. โส อิมะเมวะ กายัง อุปะสังหะระติ, อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, aṭṭhikāni pūtīni cuṇṇakajātāni. So imameva kāyaṃ upasaṃharati, ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu kāye kāyānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — the bones rotted away and gone to powder — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Just so, monks, does a monk dwell contemplating the body in the body.",
+            },
+            # ‼ CHECK [IMG_0405.PNG]: THE SECOND FOUNDATION BEGINS ON THIS
+            #   SHEET, with no invitation, no number and no heading of its own
+            #   — the text simply starts กะถัญจะ ภิกขะเว ภิกขุ เวทะนาสุ… under
+            #   the label that closed the first. The page foot cuts it at
+            #   ทุกขัง เวทะนัง, so the verse is marked […] and completed from
+            #   page 136.
+            {
+                'number': 19,
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ เวทะนาสุ เวทะนานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สุขัง เวทะนัง เวทิยะมาโน, สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. ทุกขัง เวทะนัง […]',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu vedanāsu vedanānupassī viharati. Idha bhikkhave bhikkhu sukhaṃ vedanaṃ vediyamāno, sukhaṃ vedanaṃ vediyāmīti pajānāti. Dukkhaṃ vedanaṃ […]',
+                'thai': '',
+                'paiboon': '',
+                'english': "And how, monks, does a monk dwell contemplating feelings in feelings? Here, monks, a monk, feeling a pleasant feeling, knows 'I feel a pleasant feeling'. A painful feeling […]",
             },
         ],
     },

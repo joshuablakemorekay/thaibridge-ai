@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-134 went in.
+135 went in.
 
 ## Read first, in this order
 
@@ -21,22 +21,22 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 277 pages.** The gaps are
-**135–174, 179–182, 192, 246, 248 and 278** — and 135 and 179 are the live
+As of 2026-09-05: **287 chants across 278 pages.** The gaps are
+**136–174, 179–182, 192, 246, 248 and 278** — and 136 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 16, page 134 | **page 135 = IMG_0405** |
+| `mahasatipatthana-sutta-patho` | 19, page 135 | **page 136 = IMG_0406** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
-**What is running in the Mahāsatipaṭṭhāna right now:** the nine charnel-ground
-contemplations. Seven are in (verses 10 to 16) and verse 16 is cut mid-refrain.
-They are ONE section in the book's eyes and share a single closing label some
-pages ahead — so do not expect a `ปัพพัง` after each one, and do not read its
-absence as a dropped line.
+**What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
+FEELINGS, the second of the four foundations. It began on page 135 and its
+first verse (19) is cut mid-sentence. The first foundation — the body — is
+COMPLETE, all nine charnel grounds included, and closed on 135 under two
+labels.
 
 The 193–245 translated run is **CLOSED and complete**. 246, 248 and 278 are
 single unentered sheets left behind by it; 192 is one more.
@@ -98,6 +98,19 @@ the way `.verse-section` sets an app heading. Touched four files:
 it had been rendering above verse 3 since the day it went in.
 
 **Write it on the verse the label CLOSES, never the one it precedes.**
+
+### Two closes at once: `section_end_major`
+
+Page 135 shuts two nested sections at one point — `นะวะสีวะถิกาปัพพัง` ending
+the nine charnel grounds, and beneath it, **about half again as large**,
+`กายานุปัสสะนาสะติปัฏฐานัง` ending the whole contemplation of the body. A verse
+can carry both: `section_end` for the inner, **`section_end_major`** for the
+outer, which renders larger.
+
+Two keys rather than a list, because a nested close always runs inner first
+then outer, so the nesting fixes the order and the data cannot get it wrong.
+**Three more of these are coming** — feelings, mind and mind-objects each end
+the same way.
 
 ### ⚠️ Except when the verse it closes is on the PREVIOUS page
 
