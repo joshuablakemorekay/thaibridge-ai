@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-132 went in.
+133 went in.
 
 ## Read first, in this order
 
@@ -21,19 +21,19 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 275 pages.** The gaps are
-**133–174, 179–182, 192, 246, 248 and 278** — and 133 and 179 are the live
+As of 2026-09-05: **287 chants across 276 pages.** The gaps are
+**134–174, 179–182, 192, 246, 248 and 278** — and 134 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 11, page 132 | **page 133 = IMG_0403** |
+| `mahasatipatthana-sutta-patho` | 14, page 133 | **page 134 = IMG_0404** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the nine charnel-ground
-contemplations. Two are in (verses 10 and 11) and verse 11 is cut mid-refrain.
+contemplations. Five are in (verses 10 to 14) and verse 14 is cut mid-sentence.
 They are ONE section in the book's eyes and share a single closing label some
 pages ahead — so do not expect a `ปัพพัง` after each one, and do not read its
 absence as a dropped line.
@@ -107,6 +107,20 @@ verse since.
 This refrain closes every movement of the sutta, so it will be typed dozens
 more times. **Read its stops off the sheet on every single one** — it is exactly
 the passage a long session starts reproducing from memory.
+
+**Page 133 settled it beyond argument: three refrains on ONE sheet, punctuated
+three different ways**, and two of the three match nothing earlier in the sutta.
+
+| verse | what it does differently |
+|---|---|
+| 11 | full stop after `วะยะธัมมานุปัสสี…วิหะระติ` **and** after `อุปาทิยะติ` |
+| 12 | full stop after the **first** `อิติ อัชฌัตตัง วา…วิหะระติ` |
+| 13 | commas throughout — the pattern verses 6–9 use |
+
+The proof for verse 11 is on one printed line: a comma after `วิหะระติ` with
+its tail below the baseline, and four words later a round dot on the baseline
+after `อุปาทิยะติ`, same size and same face. **There is no pattern to carry
+forward. Read every mark.**
 
 ## How to work — this matters more than the tasks
 
