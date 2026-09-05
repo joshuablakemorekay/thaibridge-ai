@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-133 went in.
+134 went in.
 
 ## Read first, in this order
 
@@ -21,19 +21,19 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 276 pages.** The gaps are
-**134–174, 179–182, 192, 246, 248 and 278** — and 134 and 179 are the live
+As of 2026-09-05: **287 chants across 277 pages.** The gaps are
+**135–174, 179–182, 192, 246, 248 and 278** — and 135 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 14, page 133 | **page 134 = IMG_0404** |
+| `mahasatipatthana-sutta-patho` | 16, page 134 | **page 135 = IMG_0405** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the nine charnel-ground
-contemplations. Five are in (verses 10 to 14) and verse 14 is cut mid-sentence.
+contemplations. Seven are in (verses 10 to 16) and verse 16 is cut mid-refrain.
 They are ONE section in the book's eyes and share a single closing label some
 pages ahead — so do not expect a `ปัพพัง` after each one, and do not read its
 absence as a dropped line.
@@ -50,6 +50,27 @@ a page, and never `git checkout chanting.py`** — see the rule further down.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
   Tamnan parittas appointed for evening chanting. Everything from there is
   paritta until the book says otherwise.
+
+## 📋 A FULL REVIEW PASS IS PLANNED FOR THE END — don't do it piecemeal
+
+Josh's decision, 2026-09-05: **once the last page is in, we go over every
+chanting page in the app together, correcting and polishing.** So while the
+first pass is running, the job is COVERAGE AND FIDELITY, not finish. Record
+what the sheet says, raise the check, move to the next page. Do not stop the
+run to tidy something that the review pass will reach anyway.
+
+What that pass will have waiting for it, as of page 133:
+
+| | count | what it means |
+|---|---:|---|
+| `‼ CHECK` comments | 1,752 | every doubt raised against a photograph, each naming its image |
+| `‼ COMMENTARY PENDING` | 270 | chants set DATA-ONLY; stage 3 writes their prose |
+| `english_unverified` | 257 of 287 | the book prints Pali only, so the English is this edition's own |
+| pages with no batch record | 1, 23, 27, 28, 217–221 | entered before this workflow existed; never checked against a photograph |
+
+**The one thing that does NOT wait for the review pass** is a photograph that
+needs retaking — name it the day you meet it, because the book goes back on its
+shelf and that only gets harder.
 
 ## ✅ `section_end` — a label that CLOSES a movement instead of heading it
 
@@ -116,6 +137,7 @@ three different ways**, and two of the three match nothing earlier in the sutta.
 | 11 | full stop after `วะยะธัมมานุปัสสี…วิหะระติ` **and** after `อุปาทิยะติ` |
 | 12 | full stop after the **first** `อิติ อัชฌัตตัง วา…วิหะระติ` |
 | 13 | commas throughout — the pattern verses 6–9 use |
+| 15 | a **comma inside** `ญาณะมัตตายะ, ปะติสสะติมัตตายะ`, then **no mark at all** before `อะนิสสิโต` — the only run in the sutta with no full stop anywhere in it |
 
 The proof for verse 11 is on one printed line: a comma after `วิหะระติ` with
 its tail below the baseline, and four words later a round dot on the baseline
