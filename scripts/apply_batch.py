@@ -70,6 +70,12 @@ CHANT_KEYS = ("id", "title_thai", "title_pali", "title_roman", "title_english",
               "book_number", "book_number_printed", "page_start", "layout",
               "source_printed")
 LAYERS = ("pali", "pali_roman", "thai", "paiboon", "english")
+# Everything a verse carries BESIDES its layers: where it sits on the page and
+# how the book sets it. Named once because two places need the same list — the
+# writer, and the completion path, which replaces a verse wholesale and would
+# otherwise drop any of these the incoming half does not repeat.
+STRUCTURAL_KEYS = ("page", "section", "section_end", "section_end_major",
+                   "printed_number", "rubric", "para_start", "para_layout")
 # What a merge may bring. Scalars first, in the order CHANT_KEYS writes them;
 # `closing` is separate because it renders as a block rather than a line.
 MERGE_SCALARS = ("book_number", "book_number_printed", "page_start", "layout",
@@ -437,8 +443,7 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
     # กายานุปัสสะนาสะติปัฏฐานัง. One `section_end` cannot hold both, and a list
     # would leave their order to the data when the nesting already fixes it —
     # inner close first, outer second, always.
-    for key in ("page", "section", "section_end", "section_end_major",
-                "printed_number", "rubric", "para_start", "para_layout"):
+    for key in STRUCTURAL_KEYS:
         if key in verse:
             out += f"{indent}{INDENT}'{key}': {verse[key]!r},\n"
     for layer in LAYERS:
@@ -963,6 +968,27 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
             is_completion = existing and GAP in existing.group(0)
             if is_completion:
                 was = re.search(r"'pali': '(.*?)',", existing.group(0)).group(1)
+                # A completion REPLACES the verse, so anything the first half
+                # carried and the second half does not repeat is destroyed.
+                # Page 137 proved it: verse 20 held `page: 136` because it
+                # opened that sheet, the completing half named no page, and
+                # the verse silently moved back to 135. Nothing failed — the
+                # file imported, the suite passed, and only `check_pages`
+                # noticed, because it compares the app against the photograph
+                # rather than against itself.
+                #
+                # So carry forward every structural key the incoming half is
+                # silent about. It cannot mask a deliberate change: a
+                # completion says what a page break cut off, and a page break
+                # does not move a verse or restyle it.
+                for key in STRUCTURAL_KEYS:
+                    if key in verse:
+                        continue
+                    held = re.search(rf"'{key}': (.+?),\n", existing.group(0))
+                    if held:
+                        verse[key] = ast.literal_eval(held.group(1))
+                        report.setdefault("carried", []).append(
+                            (target, verse["number"], key, verse[key]))
                 # NOT verse['page'] — a completing verse has none, by design,
                 # so reading one there wrote a literal "p?" and lost the fact
                 # the comment exists to record. `page_of` asks the page map.
@@ -1119,6 +1145,11 @@ def main(argv=None) -> int:
         print(f"  CONTINUES refreshed on {cid} -> last verse {last}")
     for page, kind, thai in report.get("blocks", []):
         print(f"  page block  {page:>3}  {kind:<9} {thai}")
+    # Printed rather than done quietly. Carrying a key forward is the right
+    # answer, but it is still the writer supplying something the batch did not
+    # say, and that should never happen out of sight.
+    for cid, number, key, value in report.get("carried", []):
+        print(f"  carried {key}={value!r} onto completed {cid} verse {number}")
     # Reported rather than passed over. A closing that was offered and not
     # written is a thing the batch believed and the file overruled, and it
     # should be visible without reading the diff.

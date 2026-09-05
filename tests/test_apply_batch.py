@@ -400,6 +400,81 @@ class TestWhatItPlansAndWrites:
         assert verse_range(spec) == expected
 
 
+class TestACompletionKeepsWhatTheFirstHalfCarried:
+    """A completion REPLACES the verse, so anything it omits is destroyed.
+
+    Page 137 found this and nothing failed. Verse 20 of the Mahāsatipaṭṭhāna
+    held `page: 136` because it opened that sheet; the completing half named
+    no page, the verse was replaced without one, and it moved back to 135 by
+    carry-forward. The file imported, every test passed, and the whole suite
+    was green — only `check_pages` noticed, because it is the one check that
+    compares the app against what the photograph recorded rather than against
+    the app itself.
+
+    A page number is the field a reader meets in public, mid-chant, so this
+    gets a test rather than only a fix.
+    """
+
+    PRESENT = ("[\n    {\n"
+               "        # ‼ CONTINUES: last verse here is 1; the rest is not in the app yet.\n"
+               "        'id': 'a',\n"
+               "        'invitation': {\n        },\n"
+               "        'verses': [\n"
+               "            {\n"
+               "                'number': 1,\n"
+               "                'page': 136,\n"
+               "                'section_end': 'อานาปานะปัพพัง',\n"
+               f"                'pali': 'ฑังสะมะกะสะ {GAP}',\n"
+               "            },\n"
+               "        ],\n    },\n]\n")
+
+    def _completed(self):
+        b = batch([chant('a', [verse(1, 'ฑังสะมะกะสะ ปะฏิฆาตายะ,')],
+                         continuation_of='a')],
+                  pages=[{'page': 136, 'chant': 'a', 'verses': '1'}])
+        return apply(b, self.PRESENT)
+
+    def test_the_page_marker_survives(self):
+        out, _ = self._completed()
+
+        assert "'page': 136," in out
+
+    def test_every_structural_key_survives_not_just_the_page(self):
+        out, _ = self._completed()
+
+        assert "'section_end': 'อานาปานะปัพพัง'," in out
+
+    def test_the_line_really_was_completed(self):
+        """The carry-forward must not have come at the cost of the join.
+
+        The gap marker is still expected in the output — the COMPLETED FROM
+        comment quotes the cut line verbatim, which is the point of it. What
+        must be gone is the gap in the `pali` VALUE.
+        """
+        out, report = self._completed()
+
+        assert "'pali': 'ฑังสะมะกะสะ ปะฏิฆาตายะ,'," in out
+        assert f"'pali': 'ฑังสะมะกะสะ {GAP}'," not in out
+        assert ('a', 1) in report['completed']
+
+    def test_what_was_carried_is_reported_rather_than_done_quietly(self):
+        _, report = self._completed()
+
+        carried = {(key, value) for _, _, key, value in report.get('carried', [])}
+        assert ('page', 136) in carried
+
+    def test_an_incoming_key_still_wins_over_the_one_held(self):
+        """Carrying forward fills silence. It never overrules what was sent."""
+        b = batch([chant('a', [verse(1, 'ฑังสะมะกะสะ ปะฏิฆาตายะ,', page=137)],
+                         continuation_of='a')],
+                  pages=[{'page': 137, 'chant': 'a', 'verses': '1'}])
+
+        out, _ = apply(b, self.PRESENT)
+
+        assert "'page': 137," in out
+        assert "'page': 136," not in out
+
+
 class TestAgainstTheRealBatchFiles:
     """The three batches already applied must still reconcile against the app."""
 
