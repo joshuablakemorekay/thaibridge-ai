@@ -421,8 +421,18 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
     # flag rides on the verse that opens a paragraph and says how that
     # paragraph alone is set. Left off this list the page would render its
     # gāthās flowed into a justified block, which is not what the book prints.
-    for key in ("page", "section", "printed_number", "rubric", "para_start",
-                "para_layout"):
+    # `section_end` is the same story a sixth time, found on page 130: the
+    # Mahāsatipaṭṭhāna prints a centred bold label BELOW each movement to
+    # close it — อานาปานะปัพพัง under the breathing section, อิริยาปะถะปัพพัง
+    # under the postures — and it marks every movement of that sutta that way.
+    # `section` cannot carry it, because that sits above a verse and names what
+    # follows; a page block cannot either, because a block goes above every
+    # chant on the page or after a whole one, and these fall between two verses
+    # of the same chant. Left off this list the labels would be dropped in
+    # transit and page 130 would go live showing two fewer lines than the sheet
+    # prints.
+    for key in ("page", "section", "section_end", "printed_number", "rubric",
+                "para_start", "para_layout"):
         if key in verse:
             out += f"{indent}{INDENT}'{key}': {verse[key]!r},\n"
     for layer in LAYERS:

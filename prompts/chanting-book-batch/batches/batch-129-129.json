@@ -16,15 +16,7 @@
     "chant": "mahasatipatthana-sutta-patho",
     "verses": "2-4",
     "starts_here": false,
-    "blocks": [
-     {
-      "type": "heading",
-      "thai": "อุทเทโส.",
-      "english": "The summary.",
-      "english_unverified": true
-     }
-    ],
-    "note": "The whole sheet, one chant. The tail of the one-way path statement 128 cut, the four foundations named, then a centred bold heading อุทเทโส. and the breathing section, which ends complete at the page foot."
+    "note": "The whole sheet, one chant. The tail of the one-way path statement 128 cut, the four foundations named, then a centred bold อุทเทโส. and the breathing section, which ends complete at the page foot. ⚠️ AMENDED 2026-09-05: อุทเทโส. was first recorded here as a heading BLOCK, which rendered it above verse 3 instead of after it. It closes verse 3 rather than heading verse 4, so it is now `section_end` on verse 3 — the key page 130 introduced. This row no longer declares any block."
    }
   ]
  },
@@ -37,7 +29,7 @@
     "invitation": "none printed.",
     "units": "Three. Verse 2 is COMPLETED here — 128 cut it — then the four foundations named, and the breathing section under its own heading.",
     "ordering": "Pali only.",
-    "conventions": "A section heading, อุทเทโส. — new to this chant.",
+    "conventions": "A section label, อุทเทโส. — new to this chant. It closes the movement above it rather than heading the one below.",
     "pages": "IMG_0397.PNG, page 129. Arrived from 128 and CONTINUES onto page 130."
    },
    "verses": [
@@ -53,6 +45,7 @@
     {
      "number": 3,
      "page": 129,
+     "section_end": "อุทเทโส.",
      "pali": "อิธะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. จิตเต จิตตานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง.",
      "pali_roman": "Idha bhikkhave bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Citte cittānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Dhammesu dhammānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ.",
      "thai": "",
@@ -90,7 +83,7 @@
     {
      "verse": 4,
      "file": "IMG_0397.PNG",
-     "issue": "‼ A SECTION HEADING INSIDE THE SUTTA: a centred bold อุทเทโส. — 'the summary' — stands between verse 3 and verse 4, marking the end of the brief statement and the start of the detailed exposition. Recorded as a heading block on the page, not as a verse. It is the first heading to appear inside a chant in this stretch."
+     "issue": "‼ A SECTION LABEL INSIDE THE SUTTA: a centred bold อุทเทโส. — 'the summary' — stands between verse 3 and verse 4, closing the brief statement before the detailed exposition begins. First recorded as a heading block on the page, which rendered it above verse 3 rather than after it. Moved to `section_end` on verse 3 on 2026-09-05, when page 130 brought two more of these; it now prints where the book prints it. The Mahāsatipaṭṭhāna marks every one of its movements this way."
     },
     {
      "verse": 4,
@@ -118,7 +111,7 @@
   "paiboon_scan": "No paiboon on this page: the Pali-only section prints no Thai translation, so `thai` and `paiboon` are empty on every verse.",
   "pali_untouched": true,
   "page_scan": "IMG_0397.PNG read end to end. Page number 129 printed clearly at the top centre — ⚠️ this sheet is IMG_0397, NOT IMG_0394: files 0394-0396 do not exist and the offset jumps here. One chant, one heading block, no footnote, no rubric, no colophon.",
-  "notes": "‼ A SECTION HEADING INSIDE A CHANT — อุทเทโส. — the first in this stretch, recorded as a heading block. ‼ The four สิกขะติ clauses take a FULL STOP in their first run and a COMMA in their second, either side of the turner simile. Also ⚠️ THE PHOTO OFFSET JUMPS HERE: 128 is IMG_0393 at offset 265, 129 is IMG_0397 at 268, 130 is IMG_0400 at 270. The photo map now carries a warning.",
+  "notes": "‼ A SECTION LABEL INSIDE A CHANT — อุทเทโส. — the first in this stretch; recorded as a heading block at the time, and moved to `section_end` on verse 3 on 2026-09-05. ‼ The four สิกขะติ clauses take a FULL STOP in their first run and a COMMA in their second, either side of the turner simile. Also ⚠️ THE PHOTO OFFSET JUMPS HERE: 128 is IMG_0393 at offset 265, 129 is IMG_0397 at 268, 130 is IMG_0400 at 270. The photo map now carries a warning.",
   "diacritic_exceptions": [
    "atthaṅgamāya/aṭṭhaṅgamāya — NOT a slip: the completion of verse 2 carries sutta 29's spelling อัฏฐังคะมายะ, where sutta 28 on page 127 has อัตถังคะมายะ. Both are the book's own, one page apart.",
    "va/vā — different words: va is the emphatic particle in โส สะโต วะ อัสสะสะติ, 'mindful he JUST breathes in', and vā is 'or' throughout อะรัญญะคะโต วา รุกขะมูละคะโต วา and the ทีฆัง วา / รัสสัง วา clauses."

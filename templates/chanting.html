@@ -421,6 +421,14 @@
             </p>
             {% endfor %}
         </div>
+        {# The label the book prints BELOW a movement to close it, rather than
+           above it to head it. Rendered here as well as in the page-by-page
+           view, because without it the Mahāsatipaṭṭhāna reads by title as one
+           undivided run of prose — the book's own divisions being exactly
+           these lines. #}
+        {% if verse.section_end %}
+        <h4 class="verse-section-end">{{ verse.section_end }}</h4>
+        {% endif %}
         {% endfor %}
         </div><!-- /.chant-body -->
     </details>

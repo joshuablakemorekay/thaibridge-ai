@@ -823,6 +823,20 @@
         {% if verse.rubric %}
         <p class="block-rubric verse-rubric">{{ verse.rubric }}</p>
         {% endif %}
+        {# A label the book prints BELOW the movement it names, closing it
+           rather than heading it — อานาปานะปัพพัง under the breathing
+           section, อิริยาปะถะปัพพัง under the postures. The Mahāsatipaṭṭhāna
+           marks every one of its movements this way.
+
+           It is not `section`, which sits ABOVE a verse and names what
+           follows; putting one of these there would head the postures with
+           the word for breathing. It is not a page block either: a block can
+           only be placed above every chant on the page or after a whole one,
+           and these fall between two verses of the SAME chant, so both of
+           page 130's would have stacked at the top of the sheet. #}
+        {% if verse.section_end %}
+        <h4 class="verse-section-end">{{ verse.section_end }}</h4>
+        {% endif %}
         {% endfor %}
         </div>
         {% endfor %}

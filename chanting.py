@@ -57316,18 +57316,23 @@ CHANTS = [
             {
                 'number': 3,
                 'page': 129,
+                'section_end': 'อุทเทโส.',
                 'pali': 'อิธะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. จิตเต จิตตานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง. ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง.',
                 'pali_roman': 'Idha bhikkhave bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Citte cittānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ. Dhammesu dhammānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ.',
                 'thai': '',
                 'paiboon': '',
                 'english': 'Here, monks, a monk dwells contemplating the body in the body, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; contemplating feelings in feelings; contemplating mind in mind; contemplating mind-objects in mind-objects — each in the same way.',
             },
-            # ‼ CHECK [IMG_0397.PNG]: ‼ A SECTION HEADING INSIDE THE SUTTA: a
+            # ‼ CHECK [IMG_0397.PNG]: ‼ A SECTION LABEL INSIDE THE SUTTA: a
             #   centred bold อุทเทโส. — 'the summary' — stands between verse 3
-            #   and verse 4, marking the end of the brief statement and the
-            #   start of the detailed exposition. Recorded as a heading block
-            #   on the page, not as a verse. It is the first heading to appear
-            #   inside a chant in this stretch.
+            #   and verse 4, closing the brief statement before the detailed
+            #   exposition begins. It was first recorded as a heading BLOCK on
+            #   the page, which rendered it above verse 3 rather than after it,
+            #   because a block can only sit above every chant on the page or
+            #   after a whole one. Moved to `section_end` on verse 3 when page
+            #   130 brought two more of these (2026-09-05); it now prints where
+            #   the book prints it. The Mahāsatipaṭṭhāna marks every one of its
+            #   movements this way, so expect one per section from here.
             # ‼ CHECK [IMG_0397.PNG]: ‼ THE SAME FOUR สิกขะติ CLAUSES ARE
             #   PUNCTUATED DIFFERENTLY IN THEIR TWO RUNS. Before the turner
             #   simile they read …ปัสสะสิสสามีติ สิกขะติ. ปัสสัมภะยัง… with a
@@ -59929,18 +59934,13 @@ PAGE_BLOCKS = [
         ],
     },
     # ── Page 129 ───────────────────────────────────────────────────
-    # Written from batch-129-129.json.
-    {
-        'page': 129,
-        'blocks': [
-            {
-                'type': 'heading',
-                'thai': 'อุทเทโส.',
-                'english': 'The summary.',
-                'english_unverified': True,
-            },
-        ],
-    },
+    # Written from batch-129-129.json, and since REMOVED. Its one block was
+    # อุทเทโส., which the book prints between verses 3 and 4 of the
+    # Mahāsatipaṭṭhāna — inside a chant, where a block cannot go. It rendered
+    # above verse 3 for as long as it lived here. It is now `section_end` on
+    # verse 3 instead, which prints it where the book does. The row is kept as
+    # this comment rather than deleted, so the next reader of batch-129-129.json
+    # can see why its `blocks` key has no counterpart in the file.
 ]
 
 

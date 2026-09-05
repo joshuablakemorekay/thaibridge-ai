@@ -162,6 +162,24 @@
     }
     .verse-section:first-of-type { margin-top: 1.25rem; }
 
+    /* The mirror of `.verse-section`, and deliberately styled nothing like it.
+       A `section` heading is usually the app's own grouping of a long chant,
+       so it is set as an app heading: uppercase, ranged left, under a dashed
+       rule. A `section_end` is a line the BOOK prints — อานาปานะปัพพัง closing
+       the breathing section of the Mahāsatipaṭṭhāna, and so on down that
+       sutta — so it is set the way the book sets it, centred and bold, and it
+       matches `.block-heading` rather than the section rule above.
+
+       No `view-book` rule hides it, because it is on the page in the book. */
+    .verse-section-end {
+        text-align: center;
+        font-size: 1.15rem;
+        font-weight: bold;
+        color: var(--royal-purple);
+        margin: 1.25rem 0 1.5rem;
+        max-width: 70ch;
+    }
+
     /* Where a new page begins in the physical book. Deliberately quiet — it is
        a wayfinding mark, not a heading, and it must not compete with a section
        title or break the read down the page. A verse carries `page` only where
