@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 11; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57484,13 +57484,73 @@ CHANTS = [
             #   line stops there, so the verse is marked […] in pali,
             #   pali_roman and english and is completed from page 132. The
             #   fourth element and the simile that follows it are overleaf.
+            # ‼ COMPLETED FROM p131: this line was cut by the page break and
+            #   is now whole. Was: ปุนะ จะปะรัง ภิกขะเว ภิกขุ อิมะเมวะ กายัง
+            #   ยะถาฐิตัง ยะถาปะณิหิตัง ธาตุโส ปัจจะเวกขะติ. อัตถิ อิมัส๎มิง
+            #   กาเย ปะฐะวีธาตุ อาโปธาตุ เตโชธาตุ […]
+            # ‼ CHECK [IMG_0402.PNG]: COMPLETES THE LINE PAGE 131 CUT. That
+            #   sheet ended …ปะฐะวีธาตุ อาโปธาตุ เตโชธาตุ […] and this one
+            #   opens วาโยธาตูติ. The verse keeps page 131, where it began.
+            #   Its refrain is punctuated like verses 6 to 8: โหติ, with a
+            #   comma and ปะติสสะติมัตตายะ. with a full stop.
+            # ‼ CHECK [IMG_0402.PNG]: THE BUTCHER SIMILE, read word by word
+            #   because it is short and easy to smooth over: ทักโข โคฆาตะโก วา
+            #   โคฆาตะกันเตวาสี วา คาวิง วะธิต๎วา จาตุมมะหาปะเถ วิละโส
+            #   ปะฏิวิภะชิต๎วา นิสินโน อัสสะ. วิละโส in particular is one word
+            #   here, not วิ ละโส, and the cluster marks on วะธิต๎วา and
+            #   ปะฏิวิภะชิต๎วา are both present on the sheet.
             {
                 'number': 9,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ อิมะเมวะ กายัง ยะถาฐิตัง ยะถาปะณิหิตัง ธาตุโส ปัจจะเวกขะติ. อัตถิ อิมัส๎มิง กาเย ปะฐะวีธาตุ อาโปธาตุ เตโชธาตุ […]',
-                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu imameva kāyaṃ yathāṭhitaṃ yathāpaṇihitaṃ dhātuso paccavekkhati. Atthi imasmiṃ kāye paṭhavīdhātu āpodhātu tejodhātu […]',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ อิมะเมวะ กายัง ยะถาฐิตัง ยะถาปะณิหิตัง ธาตุโส ปัจจะเวกขะติ. อัตถิ อิมัส๎มิง กาเย ปะฐะวีธาตุ อาโปธาตุ เตโชธาตุ วาโยธาตูติ. เสยยะถาปิ ภิกขะเว ทักโข โคฆาตะโก วา โคฆาตะกันเตวาสี วา คาวิง วะธิต๎วา จาตุมมะหาปะเถ วิละโส ปะฏิวิภะชิต๎วา นิสินโน อัสสะ. เอวะเมวะ โข ภิกขะเว ภิกขุ อิมะเมวะ กายัง ยะถาฐิตัง ยะถาปะณิหิตัง ธาตุโส ปัจจะเวกขะติ. อัตถิ อิมัส๎มิง กาเย ปะฐะวีธาตุ อาโปธาตุ เตโชธาตุ วาโยธาตูติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu imameva kāyaṃ yathāṭhitaṃ yathāpaṇihitaṃ dhātuso paccavekkhati. Atthi imasmiṃ kāye paṭhavīdhātu āpodhātu tejodhātu vāyodhātūti. Seyyathāpi bhikkhave dakkho goghātako vā goghātakantevāsī vā gāviṃ vadhitvā cātummahāpathe vilaso paṭivibhajitvā nisinno assa. Evameva kho bhikkhave bhikkhu imameva kāyaṃ yathāṭhitaṃ yathāpaṇihitaṃ dhātuso paccavekkhati. Atthi imasmiṃ kāye paṭhavīdhātu āpodhātu tejodhātu vāyodhātūti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.',
                 'thai': '',
                 'paiboon': '',
-                'english': "And again, monks, a monk reviews this very body, however it stands and however it is disposed, by way of the elements: 'In this body there is the earth element, the water element, the fire element […]'",
+                'english': "And again, monks, a monk reviews this very body, however it stands and however it is disposed, by way of the elements: 'In this body there is the earth element, the water element, the fire element, the air element.' Just as a skilled butcher or his apprentice, having slaughtered a cow, might sit at a crossroads with it divided into portions — even so a monk reviews this very body, however it stands and however it is disposed, by way of the elements: 'In this body there is the earth element, the water element, the fire element, the air element.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body.",
+            },
+            # ‼ CHECK [IMG_0402.PNG]: ‼ ปะติสสะติมัตตายะ TAKES A COMMA HERE,
+            #   NOT A FULL STOP. Read at 8x: the mark has the curved tail of a
+            #   comma and sits on the baseline, and the sentence runs straight
+            #   on into อะนิสสิโต จะ วิหะระติ,. Every other run of this
+            #   refrain in this chant — verses 5, 6, 7, 8 and 9 — ends that
+            #   clause with a full stop. First occurrence in the sutta,
+            #   reproduced as printed.
+            # ‼ CHECK [IMG_0402.PNG]: ‼ THE CHARNEL GROUNDS CARRY NO LABEL OF
+            #   THEIR OWN ON THIS SHEET, and that is not an omission. Every
+            #   movement so far has closed with its own ปัพพัง, but the book
+            #   runs the nine charnel-ground contemplations together as one
+            #   section and closes the whole set with a single label some
+            #   pages ahead. So verses 10 and 11 have no `section_end`, and
+            #   the next few pages should not be expected to produce one per
+            #   contemplation.
+            {
+                'number': 10,
+                'page': 132,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, เอกาหะมะตัง วา ท๎วีหะมะตัง วา ตีหะมะตัง วา, อุทธุมาตะกัง วินีละกัง วิปุพพะกะชาตัง. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ, อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, ekāhamataṃ vā dvīhamataṃ vā tīhamataṃ vā, uddhumātakaṃ vinīlakaṃ vipubbakajātaṃ. So imameva kāyaṃ upasaṃharati. Ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya, anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk, as though he were to see a body cast away in a charnel ground — one day dead, or two days dead, or three days dead, bloated, discoloured and festering — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance, and he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body.",
+            },
+            # ‼ CHECK [IMG_0402.PNG]: THE PAGE FOOT CUTS THIS SENTENCE. The
+            #   last words printed are …อิติ อัชฌัตตัง วา กาเย กายานุปัสสี
+            #   วิหะระติ, พะหิทธา วา กาเย and the line stops there, so the
+            #   verse is marked […] in pali, pali_roman and english and is
+            #   completed from page 133. Its refrain's punctuation — which the
+            #   last verse has just shown can vary — cannot be read until that
+            #   page is in.
+            # ‼ CHECK [IMG_0402.PNG]: THE SIX EATERS ARE EACH GIVEN THEIR OWN
+            #   ขัชชะมานัง, and the book repeats the word six times rather
+            #   than listing the creatures and saying it once: กาเกหิ,
+            #   คิชเฌหิ, กุละเลหิ, สุวาเณหิ, สิงคาเลหิ, วิวิเธหิ วา
+            #   ปาณะกะชาเตหิ. Reproduced in full; the repetition is the
+            #   chanted form and must not be contracted.
+            {
+                'number': 11,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ เสยยะถาปิ ปัสเสยยะ สะรีรัง สีวะถิกายะ ฉัฑฑิตัง, กาเกหิ วา ขัชชะมานัง, คิชเฌหิ วา ขัชชะมานัง, กุละเลหิ วา ขัชชะมานัง, สุวาเณหิ วา ขัชชะมานัง, สิงคาเลหิ วา ขัชชะมานัง, วิวิเธหิ วา ปาณะกะชาเตหิ ขัชชะมานัง. โส อิมะเมวะ กายัง อุปะสังหะระติ. อะยัมปิ โข กาโย เอวังธัมโม เอวังภาวี เอวัง อะนะตีโตติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย […]',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu seyyathāpi passeyya sarīraṃ sīvathikāya chaḍḍitaṃ, kākehi vā khajjamānaṃ, gijjhehi vā khajjamānaṃ, kulalehi vā khajjamānaṃ, suvāṇehi vā khajjamānaṃ, siṅgālehi vā khajjamānaṃ, vividhehi vā pāṇakajātehi khajjamānaṃ. So imameva kāyaṃ upasaṃharati. Ayampi kho kāyo evaṃdhammo evaṃbhāvī evaṃ anatītoti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye […]',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk, as though he were to see a body cast away in a charnel ground, being eaten by crows, or eaten by vultures, or eaten by hawks, or eaten by dogs, or eaten by jackals, or eaten by various kinds of small creatures — compares this very body with it: 'This body too is of such a nature, will come to be like that, and is not exempt from it.' Thus he dwells contemplating the body in the body internally, or he dwells contemplating the body in the body externally […]",
             },
         ],
     },
@@ -60094,6 +60154,19 @@ PAGE_BLOCKS = [
                 'type': 'heading',
                 'thai': 'สัมปะชัญญะปัพพัง',
                 'english': 'The Section on Clear Comprehension.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 132 ───────────────────────────────────────────────────
+    # Written from batch-132-132.json.
+    {
+        'page': 132,
+        'blocks': [
+            {
+                'type': 'heading',
+                'thai': 'ธาตุปัพพัง',
+                'english': 'The Section on the Elements.',
                 'english_unverified': True,
             },
         ],

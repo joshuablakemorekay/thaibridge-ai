@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-131 went in.
+132 went in.
 
 ## Read first, in this order
 
@@ -21,16 +21,22 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 274 pages.** The gaps are
-**132–174, 179–182, 192, 246, 248 and 278** — and 132 and 179 are the live
+As of 2026-09-05: **287 chants across 275 pages.** The gaps are
+**133–174, 179–182, 192, 246, 248 and 278** — and 133 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 9, page 131 | **page 132 = IMG_0402** |
+| `mahasatipatthana-sutta-patho` | 11, page 132 | **page 133 = IMG_0403** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
+
+**What is running in the Mahāsatipaṭṭhāna right now:** the nine charnel-ground
+contemplations. Two are in (verses 10 and 11) and verse 11 is cut mid-refrain.
+They are ONE section in the book's eyes and share a single closing label some
+pages ahead — so do not expect a `ปัพพัง` after each one, and do not read its
+absence as a dropped line.
 
 The 193–245 translated run is **CLOSED and complete**. 246, 248 and 278 are
 single unentered sheets left behind by it; 192 is one more.
@@ -85,6 +91,22 @@ closes is not on that page, "above the first entry" is exactly where the book
 prints it. Use `section_end` whenever the verse is on the same sheet as the
 label; fall back to an unanchored block only across a page turn, and say which
 you did in a check.
+
+**It has now happened twice running** — `สัมปะชัญญะปัพพัง` at the top of 131
+and `ธาตุปัพพัง` at the top of 132 — so in this sutta it is the normal case,
+not the exception. Each movement runs off the foot of its sheet and its label
+opens the next one.
+
+## ⚠️ The refrain's punctuation is NOT settled — check it every time
+
+`…ญาณะมัตตายะ ปะติสสะติมัตตายะ` ends with a **full stop** in verses 5–9 and
+with a **COMMA** in verse 10 (page 132, read at 8×). The clause before it,
+`…สะติ ปัจจุปัฏฐิตา โหติ`, took a full stop in verse 5 and a comma in every
+verse since.
+
+This refrain closes every movement of the sutta, so it will be typed dozens
+more times. **Read its stops off the sheet on every single one** — it is exactly
+the passage a long session starts reproducing from memory.
 
 ## How to work — this matters more than the tasks
 
