@@ -632,8 +632,16 @@
         {% endif %}
 
         {% for block in entry.blocks %}
+        {# `major` sizes a heading block the way `section_end_major` sizes a
+           verse's closing label — the book sets a foundation's closing line
+           about half again as large as a section's. It is needed on a BLOCK
+           and not only on a verse because such a label can fall on the far
+           side of a page turn from the verse it closes, and then it has to be
+           an unanchored block to stay on the sheet that prints it. Page 136 is
+           the case: เวทะนานุปัสสะนาสะติปัฏฐานัง closes verse 19, which began
+           on 135. #}
         {% if block.type == 'heading' %}
-        <h3 class="block-heading">
+        <h3 class="block-heading{% if block.major %} is-major{% endif %}">
             <span class="layer layer-thai">{{ block.thai }}</span>
             {% if block.english %}<span class="layer layer-english{% if block.english_printed %} is-printed{% endif %}">{{ block.english }}</span>{% endif %}
         </h3>

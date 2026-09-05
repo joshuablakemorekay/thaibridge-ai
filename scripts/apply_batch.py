@@ -818,7 +818,10 @@ def render_block(block: dict, indent: str) -> str:
     # `english_printed` marks English the BOOK sets, as against the working
     # translations every other block carries. Without it in this list the key
     # is silently dropped and the book's own words are hidden in book mode.
-    keys = ["type", "marker", "number", "chant", "thai", "english",
+    # `major` is the same story for blocks that `english_printed` is: left off
+    # this list the key vanishes in transit and a foundation's closing label
+    # renders at a section's size, which is not what the sheet shows.
+    keys = ["type", "major", "marker", "number", "chant", "thai", "english",
             "english_printed", "english_unverified"]
     lines = [f"{indent}{{"]
     for key in keys:
