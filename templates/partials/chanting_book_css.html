@@ -165,10 +165,15 @@
     /* The mirror of `.verse-section`, and deliberately styled nothing like it.
        A `section` heading is usually the app's own grouping of a long chant,
        so it is set as an app heading: uppercase, ranged left, under a dashed
-       rule. A `section_end` is a line the BOOK prints — อานาปานะปัพพัง closing
+       rule. A `section_end` is a line the BOOK prints — Ānāpānapabbaṃ closing
        the breathing section of the Mahāsatipaṭṭhāna, and so on down that
        sutta — so it is set the way the book sets it, centred and bold, and it
        matches `.block-heading` rather than the section rule above.
+
+       That example is named in ROMAN on purpose. This partial is included on
+       every chanting page, so Thai script in a CSS comment is served on all
+       of them — and then "does page N print this label?" answers yes
+       everywhere. It cost one live check a wrong answer already.
 
        No `view-book` rule hides it, because it is on the page in the book. */
     .verse-section-end {
