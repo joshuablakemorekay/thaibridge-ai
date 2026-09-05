@@ -837,6 +837,19 @@
         {% if verse.section_end %}
         <h4 class="verse-section-end">{{ verse.section_end }}</h4>
         {% endif %}
+        {# The OUTER close, where the book shuts two nested sections at once.
+           Page 135 ends the last of the nine charnel grounds and, with it, the
+           whole Contemplation of the Body: นะวะสีวะถิกาปัพพัง on one line and
+           then, larger, กายานุปัสสะนาสะติปัฏฐานัง.
+
+           A second key rather than a list, because the ORDER is not a matter
+           of data: a nested close always runs inner first, then outer, so the
+           two keys can only come out in the order the book prints them. It is
+           set larger to match, and there are three more of these to come —
+           feelings, mind and mind-objects each end the same way. #}
+        {% if verse.section_end_major %}
+        <h4 class="verse-section-end is-major">{{ verse.section_end_major }}</h4>
+        {% endif %}
         {% endfor %}
         </div>
         {% endfor %}

@@ -431,8 +431,14 @@ def render_verse(verse: dict, checks: dict, indent: str) -> str:
     # of the same chant. Left off this list the labels would be dropped in
     # transit and page 130 would go live showing two fewer lines than the sheet
     # prints.
-    for key in ("page", "section", "section_end", "printed_number", "rubric",
-                "para_start", "para_layout"):
+    # `section_end_major` is the same story a seventh time, found on page 135:
+    # the last charnel ground closes TWO nested sections at once, so the sheet
+    # prints นะวะสีวะถิกาปัพพัง and then, half again as large,
+    # กายานุปัสสะนาสะติปัฏฐานัง. One `section_end` cannot hold both, and a list
+    # would leave their order to the data when the nesting already fixes it —
+    # inner close first, outer second, always.
+    for key in ("page", "section", "section_end", "section_end_major",
+                "printed_number", "rubric", "para_start", "para_layout"):
         if key in verse:
             out += f"{indent}{INDENT}'{key}': {verse[key]!r},\n"
     for layer in LAYERS:

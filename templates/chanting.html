@@ -429,6 +429,11 @@
         {% if verse.section_end %}
         <h4 class="verse-section-end">{{ verse.section_end }}</h4>
         {% endif %}
+        {# The outer close, printed larger, where two nested sections end at
+           the same point. See the note in chanting_page.html. #}
+        {% if verse.section_end_major %}
+        <h4 class="verse-section-end is-major">{{ verse.section_end_major }}</h4>
+        {% endif %}
         {% endfor %}
         </div><!-- /.chant-body -->
     </details>
