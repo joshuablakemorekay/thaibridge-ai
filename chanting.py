@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 19; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 20; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57744,13 +57744,83 @@ CHANTS = [
             #   the label that closed the first. The page foot cuts it at
             #   ทุกขัง เวทะนัง, so the verse is marked […] and completed from
             #   page 136.
+            # ‼ COMPLETED FROM p135: this line was cut by the page break and
+            #   is now whole. Was: กะถัญจะ ภิกขะเว ภิกขุ เวทะนาสุ
+            #   เวทะนานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สุขัง เวทะนัง
+            #   เวทิยะมาโน, สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. ทุกขัง เวทะนัง
+            #   […]
+            # ‼ CHECK [IMG_0406.PNG]: COMPLETES THE LINE PAGE 135 CUT. That
+            #   sheet ended …สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. ทุกขัง เวทะนัง
+            #   […] and this one opens เวทิยะมาโน,. The verse keeps page 135,
+            #   where it began.
+            # ‼ CHECK [IMG_0406.PNG]: ‼ A THIRD FORM OF THE CLOSING FORMULA,
+            #   and this one is words again, not stops. The sutta has now used
+            #   all three: เอวัมปิ ภิกขะเว ภิกขุ in verses 5-17, เอวัมปิ โข
+            #   ภิกขะเว ภิกขุ in verse 18 which closed the body, and here
+            #   เอวัง โข ภิกขะเว ภิกขุ closing the feelings. Read at 2.7x. ⚠️
+            #   Do not normalise them to each other; the closing verse of each
+            #   foundation appears to take its own form, which the third and
+            #   fourth foundations will test.
+            # ‼ CHECK [IMG_0406.PNG]: ‼ ONE LABEL HERE, NOT TWO, AND IT IS THE
+            #   MAJOR SIZE. เวทะนานุปัสสะนาสะติปัฏฐานัง stands alone: the
+            #   feelings foundation has no sub-sections, so there is no ปัพพัง
+            #   to close before it, where page 135 had นะวะสีวะถิกาปัพพัง
+            #   first. Its size was MEASURED rather than judged — ink band
+            #   71px, against page 135's major label at 77px and its minor at
+            #   48px, the two majors sharing the suffix นุปัสสะนาสะติปัฏฐานัง
+            #   so the comparison is fair. ⚠️ BUT IT CANNOT RIDE ON THE VERSE:
+            #   it closes verse 19, and verse 19 BEGAN ON PAGE 135, so a
+            #   `section_end_major` rendered it on 135 — off the sheet that
+            #   prints it. That was tried first and the render caught it. It
+            #   is an unanchored page block on 136 with `major: true`, which
+            #   is the rule pages 131 and 132 set for a label stranded across
+            #   a turn; `major` on a block is new and was added for it.
+            # ‼ CHECK [IMG_0406.PNG]: THE REFRAIN CHANGES ITS OBJECT WITH THE
+            #   FOUNDATION, and this is grammar rather than a variant reading:
+            #   สะมุทะยะธัมมานุปัสสี วา เวทะนาสุ วิหะระติ where the body
+            #   section had วา กายัส๎มิง วิหะระติ, and อัตถิ เวทะนาติ where it
+            #   had อัตถิ กาโยติ. Reproduced; nothing here should be matched
+            #   back to the body's wording. Its stops are the ordinary comma
+            #   pattern.
+            # ‼ CHECK [IMG_0406.PNG]: A LINE-END HYPHEN REJOINED at
+            #   สะมุทะยะวะยะ- / ธัมมานุปัสสี. The typesetter's, so the word is
+            #   written whole, per the run-on-passage rule.
+            # ‼ CHECK [IMG_0406.PNG]: THE NINE FEELINGS ARE ALL PRESENT AND IN
+            #   THIS ORDER: the three bare tones first — สุขัง, ทุกขัง,
+            #   อะทุกขะมะสุขัง — and then the same three again doubled by
+            #   สามิสัง and นิรามิสัง, six more. Counted on the sheet rather
+            #   than assumed, because a formula repeated nine times with two
+            #   words changing is where a line goes missing without looking
+            #   wrong.
             {
                 'number': 19,
-                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ เวทะนาสุ เวทะนานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สุขัง เวทะนัง เวทิยะมาโน, สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. ทุกขัง เวทะนัง […]',
-                'pali_roman': 'Kathañca bhikkhave bhikkhu vedanāsu vedanānupassī viharati. Idha bhikkhave bhikkhu sukhaṃ vedanaṃ vediyamāno, sukhaṃ vedanaṃ vediyāmīti pajānāti. Dukkhaṃ vedanaṃ […]',
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ เวทะนาสุ เวทะนานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สุขัง เวทะนัง เวทิยะมาโน, สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. ทุกขัง เวทะนัง เวทิยะมาโน, ทุกขัง เวทะนัง เวทิยามีติ ปะชานาติ. อะทุกขะมะสุขัง เวทะนัง เวทิยะมาโน, อะทุกขะมะสุขัง เวทะนัง เวทิยามีติ ปะชานาติ. สามิสัง วา สุขัง เวทะนัง เวทิยะมาโน, สามิสัง สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. นิรามิสัง วา สุขัง เวทะนัง เวทิยะมาโน, นิรามิสัง สุขัง เวทะนัง เวทิยามีติ ปะชานาติ. สามิสัง วา ทุกขัง เวทะนัง เวทิยะมาโน, สามิสัง ทุกขัง เวทะนัง เวทิยามีติ ปะชานาติ. นิรามิสัง วา ทุกขัง เวทะนัง เวทิยะมาโน, นิรามิสัง ทุกขัง เวทะนัง เวทิยามีติ ปะชานาติ. สามิสัง วา อะทุกขะมะสุขัง เวทะนัง เวทิยะมาโน, สามิสัง อะทุกขะมะสุขัง เวทะนัง เวทิยามีติ ปะชานาติ. นิรามิสัง วา อะทุกขะมะสุขัง เวทะนัง เวทิยะมาโน, นิรามิสัง อะทุกขะมะสุขัง เวทะนัง เวทิยามีติ ปะชานาติ. อิติ อัชฌัตตัง วา เวทะนาสุ เวทะนานุปัสสี วิหะระติ, พะหิทธา วา เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา เวทะนาสุ เวทะนานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา เวทะนาสุ วิหะระติ, วะยะธัมมานุปัสสี วา เวทะนาสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา เวทะนาสุ วิหะระติ. อัตถิ เวทะนาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัง โข ภิกขะเว ภิกขุ เวทะนาสุ เวทะนานุปัสสี วิหะระติ.',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu vedanāsu vedanānupassī viharati. Idha bhikkhave bhikkhu sukhaṃ vedanaṃ vediyamāno, sukhaṃ vedanaṃ vediyāmīti pajānāti. Dukkhaṃ vedanaṃ vediyamāno, dukkhaṃ vedanaṃ vediyāmīti pajānāti. Adukkhamasukhaṃ vedanaṃ vediyamāno, adukkhamasukhaṃ vedanaṃ vediyāmīti pajānāti. Sāmisaṃ vā sukhaṃ vedanaṃ vediyamāno, sāmisaṃ sukhaṃ vedanaṃ vediyāmīti pajānāti. Nirāmisaṃ vā sukhaṃ vedanaṃ vediyamāno, nirāmisaṃ sukhaṃ vedanaṃ vediyāmīti pajānāti. Sāmisaṃ vā dukkhaṃ vedanaṃ vediyamāno, sāmisaṃ dukkhaṃ vedanaṃ vediyāmīti pajānāti. Nirāmisaṃ vā dukkhaṃ vedanaṃ vediyamāno, nirāmisaṃ dukkhaṃ vedanaṃ vediyāmīti pajānāti. Sāmisaṃ vā adukkhamasukhaṃ vedanaṃ vediyamāno, sāmisaṃ adukkhamasukhaṃ vedanaṃ vediyāmīti pajānāti. Nirāmisaṃ vā adukkhamasukhaṃ vedanaṃ vediyamāno, nirāmisaṃ adukkhamasukhaṃ vedanaṃ vediyāmīti pajānāti. Iti ajjhattaṃ vā vedanāsu vedanānupassī viharati, bahiddhā vā vedanāsu vedanānupassī viharati, ajjhattabahiddhā vā vedanāsu vedanānupassī viharati. Samudayadhammānupassī vā vedanāsu viharati, vayadhammānupassī vā vedanāsu viharati, samudayavayadhammānupassī vā vedanāsu viharati. Atthi vedanāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evaṃ kho bhikkhave bhikkhu vedanāsu vedanānupassī viharati.',
                 'thai': '',
                 'paiboon': '',
-                'english': "And how, monks, does a monk dwell contemplating feelings in feelings? Here, monks, a monk, feeling a pleasant feeling, knows 'I feel a pleasant feeling'. A painful feeling […]",
+                'english': "And how, monks, does a monk dwell contemplating feelings in feelings? Here, monks, a monk, feeling a pleasant feeling, knows 'I feel a pleasant feeling'; feeling a painful feeling, knows 'I feel a painful feeling'; feeling a feeling neither painful nor pleasant, knows 'I feel a feeling neither painful nor pleasant'. Feeling a pleasant feeling of the flesh, he knows it as such; feeling a pleasant feeling not of the flesh, he knows it as such; and so with the painful, and with the neither-painful-nor-pleasant — each known as of the flesh or not of the flesh. Thus he dwells contemplating feelings in feelings internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in feelings, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is feeling' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Just so, monks, does a monk dwell contemplating feelings in feelings.",
+            },
+            # ‼ CHECK [IMG_0406.PNG]: THE THIRD FOUNDATION BEGINS ON THIS
+            #   SHEET, with no invitation, no number and no heading of its
+            #   own, exactly as the second did on page 135. The page foot cuts
+            #   it at สะมาหิตัง, mid-pair, so the verse is marked […] and
+            #   completed from page 137. Its remaining pairs —
+            #   concentrated/unconcentrated and liberated/unliberated — must
+            #   be read off that sheet, not supplied.
+            # ‼ CHECK [IMG_0406.PNG]: THE MIND-STATE PAIRS ARE PUNCTUATED
+            #   CONSISTENTLY, which is worth recording because so little else
+            #   in this chant is: within a pair the two halves take a COMMA,
+            #   and between pairs the book prints a FULL STOP. Six pairs on
+            #   this sheet, all six the same. If page 137 breaks the pattern,
+            #   that is a finding.
+            {
+                'number': 20,
+                'page': 136,
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สะราคัง วา จิตตัง สะราคัง จิตตันติ ปะชานาติ, วีตะราคัง วา จิตตัง วีตะราคัง จิตตันติ ปะชานาติ. สะโทสัง วา จิตตัง สะโทสัง จิตตันติ ปะชานาติ, วีตะโทสัง วา จิตตัง วีตะโทสัง จิตตันติ ปะชานาติ. สะโมหัง วา จิตตัง สะโมหัง จิตตันติ ปะชานาติ, วีตะโมหัง วา จิตตัง วีตะโมหัง จิตตันติ ปะชานาติ. สังขิตตัง วา จิตตัง สังขิตตัง จิตตันติ ปะชานาติ, วิกขิตตัง วา จิตตัง วิกขิตตัง จิตตันติ ปะชานาติ. มะหัคคะตัง วา จิตตัง มะหัคคะตัง จิตตันติ ปะชานาติ, อะมะหัคคะตัง วา จิตตัง อะมะหัคคะตัง จิตตันติ ปะชานาติ. สะอุตตะรัง วา จิตตัง สะอุตตะรัง จิตตันติ ปะชานาติ, อะนุตตะรัง วา จิตตัง อะนุตตะรัง จิตตันติ ปะชานาติ. สะมาหิตัง […]',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu citte cittānupassī viharati. Idha bhikkhave bhikkhu sarāgaṃ vā cittaṃ sarāgaṃ cittanti pajānāti, vītarāgaṃ vā cittaṃ vītarāgaṃ cittanti pajānāti. Sadosaṃ vā cittaṃ sadosaṃ cittanti pajānāti, vītadosaṃ vā cittaṃ vītadosaṃ cittanti pajānāti. Samohaṃ vā cittaṃ samohaṃ cittanti pajānāti, vītamohaṃ vā cittaṃ vītamohaṃ cittanti pajānāti. Saṅkhittaṃ vā cittaṃ saṅkhittaṃ cittanti pajānāti, vikkhittaṃ vā cittaṃ vikkhittaṃ cittanti pajānāti. Mahaggataṃ vā cittaṃ mahaggataṃ cittanti pajānāti, amahaggataṃ vā cittaṃ amahaggataṃ cittanti pajānāti. Sauttaraṃ vā cittaṃ sauttaraṃ cittanti pajānāti, anuttaraṃ vā cittaṃ anuttaraṃ cittanti pajānāti. Samāhitaṃ […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how, monks, does a monk dwell contemplating mind in mind? Here, monks, a monk knows a mind with lust as a mind with lust, and a mind without lust as a mind without lust; a mind with hate as a mind with hate, and a mind without hate as a mind without hate; a mind with delusion as a mind with delusion, and a mind without delusion as a mind without delusion; a contracted mind as contracted, and a distracted mind as distracted; an exalted mind as exalted, and an unexalted mind as unexalted; a surpassable mind as surpassable, and an unsurpassable mind as unsurpassable. A concentrated mind […]',
             },
         ],
     },
@@ -60367,6 +60437,20 @@ PAGE_BLOCKS = [
                 'type': 'heading',
                 'thai': 'ธาตุปัพพัง',
                 'english': 'The Section on the Elements.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 136 ───────────────────────────────────────────────────
+    # Written from batch-136-136.json.
+    {
+        'page': 136,
+        'blocks': [
+            {
+                'type': 'heading',
+                'major': True,
+                'thai': 'เวทะนานุปัสสะนาสะติปัฏฐานัง',
+                'english': 'The Establishing of Mindfulness through Contemplation of Feeling.',
                 'english_unverified': True,
             },
         ],

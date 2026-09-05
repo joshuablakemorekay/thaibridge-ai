@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-135 went in.
+136 went in.
 
 ## Read first, in this order
 
@@ -21,22 +21,21 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 278 pages.** The gaps are
-**136–174, 179–182, 192, 246, 248 and 278** — and 136 and 179 are the live
+As of 2026-09-05: **287 chants across 279 pages.** The gaps are
+**137–174, 179–182, 192, 246, 248 and 278** — and 137 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 19, page 135 | **page 136 = IMG_0406** |
+| `mahasatipatthana-sutta-patho` | 20, page 136 | **page 137 = IMG_0407** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
-FEELINGS, the second of the four foundations. It began on page 135 and its
-first verse (19) is cut mid-sentence. The first foundation — the body — is
-COMPLETE, all nine charnel grounds included, and closed on 135 under two
-labels.
+MIND, the third of the four foundations. It began on page 136 and its first
+verse (20) is cut at `สะมาหิตัง`. The body (closed on 135, under two labels)
+and the feelings (closed on 136, under one) are both COMPLETE.
 
 The 193–245 translated run is **CLOSED and complete**. 246, 248 and 278 are
 single unentered sheets left behind by it; 192 is one more.
@@ -109,8 +108,23 @@ outer, which renders larger.
 
 Two keys rather than a list, because a nested close always runs inner first
 then outer, so the nesting fixes the order and the data cannot get it wrong.
-**Three more of these are coming** — feelings, mind and mind-objects each end
-the same way.
+
+### ⚠️ …but ONLY when the verse began on the same sheet
+
+**Page 136 caught this the hard way.** `เวทะนานุปัสสะนาสะติปัฏฐานัง` closes
+verse 19 — but verse 19 BEGAN on page 135, so a `section_end_major` on it
+rendered the label on 135, off the sheet that prints it. `check_render` passed;
+only reading the rendered page caught it.
+
+**The rule, in full:**
+
+| where the verse it closes began | how to record the label |
+|---|---|
+| the **same** sheet as the label | `section_end` / `section_end_major` on that verse |
+| an **earlier** sheet | an **unanchored page block** on the sheet that prints it |
+
+A block takes `major: true` for the larger size. Not every foundation closes
+the same way, either: the body took two labels, the feelings one.
 
 ### ⚠️ Except when the verse it closes is on the PREVIOUS page
 
