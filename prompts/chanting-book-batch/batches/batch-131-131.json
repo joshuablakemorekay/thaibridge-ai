@@ -1,0 +1,185 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 130,
+        "file": "IMG_0400.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "7",
+        "starts_here": false,
+        "note": "NOT a fresh reading of page 130 — that sheet is entered, as batch-130-130.json. The row is here because verse 7 is re-sent in this batch to complete the line the page turn cut, and the completed verse still belongs to page 130, where it began. Saying so here is what keeps the map honest: every verse this batch carries falls on exactly one page, and verse 7's page is 130."
+      },
+      {
+        "page": 131,
+        "file": "IMG_0401.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "8-9",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "heading",
+            "thai": "สัมปะชัญญะปัพพัง",
+            "english": "The Section on Clear Comprehension.",
+            "english_unverified": true
+          }
+        ],
+        "note": "The whole sheet, one chant, Pali only, one column, no footnote and no colophon. Down the page: the last two lines of verse 7, then สัมปะชัญญะปัพพัง, then the reflection on the thirty-one parts with its sack-of-grain simile, then ปะฏิกูละปัพพัง, then the reflection on the elements, which the page foot cuts at เตโชธาตุ. ⚠️ The row claims verses 8-9 ONLY. Verse 7's last two lines are printed here but the verse belongs to page 130, where it began — the rule pages 111-112 settled. สัมปะชัญญะปัพพัง therefore cannot ride on verse 7 as a `section_end` without being carried back to page 130 with it, so it is recorded as an UNANCHORED page block, which renders at the top of page 131 — exactly where the book prints it. ปะฏิกูละปัพพัง needs no such handling: verse 8 is on this page, so it is a plain `section_end`."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Two new ones, plus the completion of verse 7. Verse 8 is the reflection on the parts of the body entire, simile and repeat included, as the sheet sets it in one run. Verse 9 is the reflection on the elements as far as the page foot.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "Three letters on this page were read at 12-14x against a known พ on the same line, because the bold Pali face is where ฬ has been misread before: เขโพ and มูโตพี have NO ascender and are พ; สิงฆาณิกา has a plain ณ. All three are romanised faithfully, and the second and third disagree with the app's other copy of this list at page 217.",
+        "pages": "IMG_0401.PNG, page 131, the number printed clearly at the top centre. Arrived from page 130 and CONTINUES onto 132."
+      },
+      "verses": [
+        {
+          "number": 7,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ อะภิกกันเต ปะฏิกกันเต สัมปะชานะการี โหติ, อาโลกิเต วิโลกิเต สัมปะชานะการี โหติ, สัมมิญชิเต ปะสาริเต สัมปะชานะการี โหติ, สังฆาฏิปัตตะจีวะระธาระเณ สัมปะชานะการี โหติ, อะสิเต ปีเต ขายิเต สายิเต สัมปะชานะการี โหติ, อุจจาระปัสสาวะกัมเม สัมปะชานะการี โหติ, คะเต ฐิเต นิสินเน สุตเต ชาคะริเต ภาสิเต ตุณ๎หีภาเว สัมปะชานะการี โหติ, อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu abhikkante paṭikkante sampajānakārī hoti, ālokite vilokite sampajānakārī hoti, samiñjite pasārite sampajānakārī hoti, saṅghāṭipattacīvaradhāraṇe sampajānakārī hoti, asite pīte khāyite sāyite sampajānakārī hoti, uccārapassāvakamme sampajānakārī hoti, gate ṭhite nisinne sutte jāgarite bhāsite tuṇhībhāve sampajānakārī hoti, iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk is one who acts in clear comprehension when going forward and returning; who acts in clear comprehension when looking ahead and looking away; who acts in clear comprehension when bending and stretching his limbs; who acts in clear comprehension in carrying his outer cloak, his robes and his bowl; who acts in clear comprehension when eating, drinking, chewing and tasting; who acts in clear comprehension in passing excrement and urine; who acts in clear comprehension in walking, standing, sitting, falling asleep, waking, speaking and keeping silent. Thus he dwells contemplating the body in the body internally, or he dwells contemplating the body in the body externally, or he dwells contemplating the body in the body both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away in the body, or the nature of both arising and passing away in the body. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body."
+        },
+        {
+          "number": 8,
+          "page": 131,
+          "section_end": "ปะฏิกูละปัพพัง",
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ อิมะเมวะ กายัง อุทธัง ปาทะตะลา อะโธ เกสะมัตถะกา, ตะจะปะริยันตัง ปูรันนานัปปะการัสสะ อะสุจิโน ปัจจะเวกขะติ. อัตถิ อิมัส๎มิง กาเย เกสา โลมา นะขา ทันตา ตะโจ, มังสัง นะหารู อัฏฐี อัฏฐิมิญชัง วักกัง, หะทะยัง ยะกะนัง กิโลมะกัง ปิหะกัง ปัปผาสัง, อันตัง อันตะคุณัง อุทะริยัง กะรีสัง, ปิตตัง เสมหัง ปุพโพ โลหิตัง เสโท เมโท, อัสสุ วะสา เขโพ สิงฆาณิกา ละสิกา มุตตันติ. เสยยะถาปิ ภิกขะเว อุภะโตมุขา มูโตพี ปูรา นานาวิหิตัสสะ ธัญญัสสะ. เสยยะถีทัง. สาลีนัง วีหีนัง มุคคานัง มาสานัง ติลานัง ตัณฑุลานัง. ตะเมนัง จักขุมา ปุริโส มุญจิต๎วา ปัจจะเวกเขยยะ. อิเม สาลี, อิเม วีหี, อิเม มุคคา, อิเม มาสา, อิเม ติลา, อิเม ตัณฑุลาติ. เอวะเมวะ โข ภิกขะเว ภิกขุ อิมะเมวะ กายัง อุทธัง ปาทะตะลา อะโธ เกสะมัตถะกา, ตะจะปะริยันตัง ปูรันนานัปปะการัสสะ อะสุจิโน ปัจจะเวกขะติ. อัตถิ อิมัส๎มิง กาเย เกสา โลมา นะขา ทันตา ตะโจ, มังสัง นะหารู อัฏฐี อัฏฐิมิญชัง วักกัง, หะทะยัง ยะกะนัง กิโลมะกัง ปิหะกัง ปัปผาสัง, อันตัง อันตะคุณัง อุทะริยัง กะรีสัง, ปิตตัง เสมหัง ปุพโพ โลหิตัง เสโท เมโท, อัสสุ วะสา เขโพ สิงฆาณิกา ละสิกา มุตตันติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu imameva kāyaṃ uddhaṃ pādatalā adho kesamatthakā, tacapariyantaṃ pūrannānappakārassa asucino paccavekkhati. Atthi imasmiṃ kāye kesā lomā nakhā dantā taco, maṃsaṃ nahārū aṭṭhī aṭṭhimiñjaṃ vakkaṃ, hadayaṃ yakanaṃ kilomakaṃ pihakaṃ papphāsaṃ, antaṃ antaguṇaṃ udariyaṃ karīsaṃ, pittaṃ semhaṃ pubbo lohitaṃ sedo medo, assu vasā khepo siṅghāṇikā lasikā muttanti. Seyyathāpi bhikkhave ubhatomukhā mūtopī pūrā nānāvihitassa dhaññassa. Seyyathīdaṃ. Sālīnaṃ vīhīnaṃ muggānaṃ māsānaṃ tilānaṃ taṇḍulānaṃ. Tamenaṃ cakkhumā puriso muñcitvā paccavekkheyya. Ime sālī, ime vīhī, ime muggā, ime māsā, ime tilā, ime taṇḍulāti. Evameva kho bhikkhave bhikkhu imameva kāyaṃ uddhaṃ pādatalā adho kesamatthakā, tacapariyantaṃ pūrannānappakārassa asucino paccavekkhati. Atthi imasmiṃ kāye kesā lomā nakhā dantā taco, maṃsaṃ nahārū aṭṭhī aṭṭhimiñjaṃ vakkaṃ, hadayaṃ yakanaṃ kilomakaṃ pihakaṃ papphāsaṃ, antaṃ antaguṇaṃ udariyaṃ karīsaṃ, pittaṃ semhaṃ pubbo lohitaṃ sedo medo, assu vasā khepo siṅghāṇikā lasikā muttanti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk reviews this very body, upward from the soles of the feet and downward from the crown of the head, bounded by skin and full of impurity of many kinds: 'In this body there are head hairs, body hairs, nails, teeth, skin; flesh, sinews, bones, bone marrow, kidneys; heart, liver, membrane, spleen, lungs; bowels, mesentery, undigested food, excrement; bile, phlegm, pus, blood, sweat, fat; tears, grease, spittle, mucus, joint fluid, urine.' Just as though there were a sack open at both ends, filled with grain of many kinds — that is to say, hill rice, paddy, mung beans, kidney beans, sesame and husked rice — and a man with eyes to see were to open it and review it: 'These are hill rice, these paddy, these mung beans, these kidney beans, these sesame, these husked rice' — even so a monk reviews this very body, upward from the soles of the feet and downward from the crown of the head, bounded by skin and full of impurity of many kinds, and names the same parts over again. Thus he dwells contemplating the body in the body internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body."
+        },
+        {
+          "number": 9,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ อิมะเมวะ กายัง ยะถาฐิตัง ยะถาปะณิหิตัง ธาตุโส ปัจจะเวกขะติ. อัตถิ อิมัส๎มิง กาเย ปะฐะวีธาตุ อาโปธาตุ เตโชธาตุ […]",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu imameva kāyaṃ yathāṭhitaṃ yathāpaṇihitaṃ dhātuso paccavekkhati. Atthi imasmiṃ kāye paṭhavīdhātu āpodhātu tejodhātu […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk reviews this very body, however it stands and however it is disposed, by way of the elements: 'In this body there is the earth element, the water element, the fire element […]'"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ปะฏิกูละ",
+          "pali_roman": "paṭikūla",
+          "meaning": "repulsive, going against the grain; the word this section's label is built from, naming the reflection on the body's parts"
+        },
+        {
+          "pali": "ตะจะปะริยันตัง",
+          "pali_roman": "tacapariyantaṃ",
+          "meaning": "bounded by skin — the body considered as a bag whose only boundary is its own hide"
+        },
+        {
+          "pali": "อะสุจิโน",
+          "pali_roman": "asucino",
+          "meaning": "of what is unclean. Not a moral word: it names what the body is actually full of, which is the point of the reflection"
+        },
+        {
+          "pali": "อัฏฐิมิญชัง",
+          "pali_roman": "aṭṭhimiñjaṃ",
+          "meaning": "the marrow within the bones"
+        },
+        {
+          "pali": "อุภะโตมุขา มูโตพี",
+          "pali_roman": "ubhatomukhā mūtopī",
+          "meaning": "a sack open at both ends — the simile's vessel, which can be untied and looked into from either side"
+        },
+        {
+          "pali": "เสยยะถีทัง",
+          "pali_roman": "seyyathīdaṃ",
+          "meaning": "that is to say — the formula that introduces a list in the canon, and here introduces the six grains"
+        },
+        {
+          "pali": "ธาตุโส",
+          "pali_roman": "dhātuso",
+          "meaning": "by way of the elements; the reflection verse 9 begins, which takes the same body apart a second way"
+        },
+        {
+          "pali": "ยะถาฐิตัง ยะถาปะณิหิตัง",
+          "pali_roman": "yathāṭhitaṃ yathāpaṇihitaṃ",
+          "meaning": "however it stands, however it is disposed — the body in whatever posture it happens to be, so the reflection needs no special position"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 7,
+          "file": "IMG_0401.PNG",
+          "issue": "COMPLETES THE LINE PAGE 130 CUT. That sheet ended …ปะนัสสะ สะติ ปัจจุปัฏฐิตา […] and this one opens โหติ, ยาวะเทวะ… The verse keeps page 130, where it began. ⚠️ Its punctuation is now settled and it follows verse 6's run, not verse 5's: โหติ takes a COMMA here, and อะนิสสิโต จะ วิหะระติ, takes one too. So of the three runs of this refrain on page 130, two are punctuated one way and one the other."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0401.PNG",
+          "issue": "‼ สัมปะชัญญะปัพพัง IS PRINTED ON THIS SHEET BUT CLOSES A VERSE ON THE LAST ONE. It closes verse 7, and verse 7 belongs to page 130 by the rule pages 111-112 settled — a verse lives on the page it starts on. A `section_end` would therefore have carried the label back to page 130 with it, off the sheet that prints it. Recorded instead as an UNANCHORED page block on 131, which renders above the page's first chant entry — and since verse 7 is not on this page, that is exactly where the book prints it: at the top, before the parts of the body. ⚠️ Do not read it as a heading for what follows; it names what precedes."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0401.PNG",
+          "issue": "‼ TWO LETTERS SETTLED AT 14x AGAINST A KNOWN พ ON THE SAME LINE. เขโพ and มูโตพี both show two humps with the right stem stopping at x-height and NO ascender, where the ป of ปูรา beside มูโตพี plainly rises. So both are พ, not ฬ — the canon has kheḷo and mūtoḷī, and this is exactly the reading the book's bold Pali face has fooled before, which is why it was checked at that magnification. Romanised faithfully as khepo and mūtopī. เขโพ AGREES with the app's other copy of this list at page 217, which Josh typed from the book."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0401.PNG",
+          "issue": "‼ สิงฆาณิกา HERE, สิงฆานิกา AT PAGE 217 — ณ against น. Read at 12x on this sheet; the left curl and the foot of ณ are unmistakable. Page 217's copy is Josh's own typing and is left exactly as it is, per the rule that the file wins. Both printings stand, as the อัคคัปปะสาทะ gatha does at 113 and 273. ⚠️ Worth one look at the physical book, since one of the two is likely a slip and only the book can say which."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0401.PNG",
+          "issue": "ปูรันนานัปปะการัสสะ IS SET AS ONE WORD, twice on this sheet, where page 217 sets ปูโร นานัปปะการัสสะ as two. Not the same form either: 217 has the nominative ปูโร ตะจะปะริยันโต describing อะยัง กาโย, and this page has the accusative ปูรัน… ตะจะปะริยันตัง describing อิมะเมวะ กายัง, because here the body is the OBJECT of ปัจจะเวกขะติ. Both are correct grammar and neither is to be normalised to the other. Romanised letter for letter as pūrannānappakārassa."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0401.PNG",
+          "issue": "THE LIST HAS THIRTY-ONE PARTS AND ENDS AT มุตตันติ. The brain — มัตถะเก มัตถะลุงคัง — which page 217's ทะวัตติงสาการ prints as its thirty-second, is NOT here. That is correct for this sutta rather than a dropped line, and it is recorded because a missing final item is exactly what a later pass would try to restore."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0401.PNG",
+          "issue": "THE LIST IS PRINTED TWICE ON THIS SHEET, once before the sack simile and once after it, and the two runs were read separately. They agree word for word AND comma for comma — unusual for this book, which has punctuated repeated formulas differently four times running elsewhere. Recorded because the agreement, not the difference, is what is surprising here."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0401.PNG",
+          "issue": "THE PAGE FOOT CUTS THIS SENTENCE. The last words printed are …ปะฐะวีธาตุ อาโปธาตุ เตโชธาตุ and the line stops there, so the verse is marked […] in pali, pali_roman and english and is completed from page 132. The fourth element and the simile that follows it are overleaf."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 132,
+    "resume_from_file": "IMG_0402.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "diacritic_exceptions": [
+      "atthi/aṭṭhī — different words, not drift. atthi is the verb 'there is', opening อัตถิ อิมัส๎มิง กาเย; aṭṭhī is อัฏฐี, 'bones', the eighth of the parts listed in the same sentence. They sit four words apart and the book spells them differently in Thai script too."
+    ],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all three verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0401.PNG.",
+    "page_scan": "agrees — one page row, page 131, claiming verses 8-9, and those are the two verses that land on it. Verse 8 carries page 131; verse 9 carries none and sits on 131 by carry-forward. Verse 7 is re-sent to complete the line page 130 cut and keeps page 130, so it is deliberately NOT claimed by this row — the same treatment batch-111 gave its cut verse. Numbering runs 7, 8, 9 with no gap and no overlap.",
+    "notes": "‼ Three letters on this sheet were checked at 12-14x rather than read at reading size, because two of them are the ones the bold Pali face has misled on before. เขโพ and มูโตพี are พ; สิงฆาณิกา is ณ, and that last one DISAGREES with the app's other copy of the same list at page 217. ⚠️ All Pali here is an unreviewed draft until Josh checks it against the physical book, and the สิงฆาณิกา/สิงฆานิกา split is the one line on this page that most wants his eye."
+  }
+}

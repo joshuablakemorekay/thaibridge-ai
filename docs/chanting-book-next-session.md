@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-130 went in.
+131 went in.
 
 ## Read first, in this order
 
@@ -21,15 +21,15 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 273 pages.** The gaps are
-**131–174, 179–182, 192, 246, 248 and 278** — and 131 and 179 are the live
+As of 2026-09-05: **287 chants across 274 pages.** The gaps are
+**132–174, 179–182, 192, 246, 248 and 278** — and 132 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 7, page 130 | **page 131 = IMG_0401** |
+| `mahasatipatthana-sutta-patho` | 9, page 131 | **page 132 = IMG_0402** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 The 193–245 translated run is **CLOSED and complete**. 246, 248 and 278 are
@@ -71,6 +71,20 @@ the way `.verse-section` sets an app heading. Touched four files:
 it had been rendering above verse 3 since the day it went in.
 
 **Write it on the verse the label CLOSES, never the one it precedes.**
+
+### ⚠️ Except when the verse it closes is on the PREVIOUS page
+
+Page 131 hit this at once. `สัมปะชัญญะปัพพัง` is printed at the top of 131 but
+closes verse 7, and verse 7 belongs to page 130 because that is where it began
+— the rule pages 111–112 settled. A `section_end` would have carried the label
+back to 130 with its verse, off the sheet that prints it.
+
+**The answer is an UNANCHORED page block on the later page.** A block with no
+`after` renders above every chant entry on its page, and since the verse it
+closes is not on that page, "above the first entry" is exactly where the book
+prints it. Use `section_end` whenever the verse is on the same sheet as the
+label; fall back to an unanchored block only across a page turn, and say which
+you did in a check.
 
 ## How to work — this matters more than the tasks
 
