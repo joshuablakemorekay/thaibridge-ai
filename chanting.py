@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 7; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57347,6 +57347,68 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': "And how does a monk dwell contemplating the body in the body? Here a monk, gone to the forest, to the root of a tree or to an empty place, sits down cross-legged, holding his body straight and setting mindfulness before him. Mindful he breathes in, mindful he breathes out. Breathing in long he knows 'I breathe in long'; breathing out long he knows 'I breathe out long'; breathing in short he knows 'I breathe in short'; breathing out short he knows 'I breathe out short'. He trains: 'sensitive to the whole body I shall breathe in'; he trains: 'sensitive to the whole body I shall breathe out'. He trains: 'calming the bodily formation I shall breathe in'; he trains: 'calming the bodily formation I shall breathe out'. Just as a skilled turner or his apprentice, making a long turn, knows 'I make a long turn', and making a short turn knows 'I make a short turn' — so too the monk knows his breathing, long and short, and trains in the same way. Thus he dwells contemplating the body in the body internally, or externally, or both.",
+            },
+            # ‼ CHECK [IMG_0400.PNG]: ‼ A HYPHEN MID-LINE, NOT AT A LINE END.
+            #   Line 2 reads สะมุทะยะวะยะ-ธัมมานุปัสสี with the whole word on
+            #   one line and text continuing after it. Read at 3x. So it is
+            #   NOT the typesetter's line-break hyphen the run-on-passage rule
+            #   says to drop, and it is reproduced as printed, in the roman
+            #   too. ⚠️ The SAME word is printed three times on this one sheet
+            #   and set three ways: hyphenated mid-line here, bare in verse 6,
+            #   and broken across a line end in verse 7.
+            # ‼ CHECK [IMG_0400.PNG]: ปะติสสะติมัตตายะ WITH ต, NOT ฏ, in both
+            #   places it is printed on this sheet. That agrees with the short
+            #   satipaṭṭhāna ปาโฐ already in the app at pages 127-128, which
+            #   prints the same spelling four times, so the roman keeps
+            #   patissatimattāya rather than the canonical paṭissati-.
+            {
+                'number': 5,
+                'page': 130,
+                'section_end': 'อานาปานะปัพพัง',
+                'pali': 'สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะ-ธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ. ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ. นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavaya-dhammānupassī vā kāyasmiṃ viharati, atthi kāyoti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati. Na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "He dwells contemplating the nature of arising in the body, or he dwells contemplating the nature of passing away in the body, or he dwells contemplating the nature of both arising and passing away in the body. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body.",
+            },
+            # ‼ CHECK [IMG_0400.PNG]: NO CLUSTER MARK ON ฐิโตมหีติ,
+            #   นิสินโนมหีติ OR สะยาโนมหีติ. Read at 5x — the space above ม is
+            #   plainly empty in all three. Reproduced bare. The roman gives
+            #   ṭhitomhīti / nisinnomhīti / sayānomhīti, following the
+            #   decision already recorded in the file for พ๎ยาธิธัมโมมหิ →
+            #   byādhidhammomhi, where the book also leaves the mark off and
+            #   the roman does not.
+            # ‼ CHECK [IMG_0400.PNG]: อิติ อัชฌัตตัง is set with a visibly
+            #   wider space after อิติ than the words around it, in verse 6
+            #   only. Taken as justification rather than as anything the book
+            #   means, and written with a single space. Verse 7 sets the same
+            #   phrase tight.
+            {
+                'number': 6,
+                'section_end': 'อิริยาปะถะปัพพัง',
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ คัจฉันโต วา คัจฉามีติ ปะชานาติ, ฐิโต วา ฐิโตมหีติ ปะชานาติ, นิสินโน วา นิสินโนมหีติ ปะชานาติ, สะยาโน วา สะยาโนมหีติ ปะชานาติ, ยะถา ยะถา วา ปะนัสสะ กาโย ปะณิหิโต โหติ, ตะถา ตะถา สัมปะชานาติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu gacchanto vā gacchāmīti pajānāti, ṭhito vā ṭhitomhīti pajānāti, nisinno vā nisinnomhīti pajānāti, sayāno vā sayānomhīti pajānāti, yathā yathā vā panassa kāyo paṇihito hoti, tathā tathā sampajānāti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk, when walking, knows 'I am walking'; when standing, knows 'I am standing'; when sitting, knows 'I am sitting'; when lying down, knows 'I am lying down'. In whatever way his body is disposed, so he understands it. Thus he dwells contemplating the body in the body internally, or he dwells contemplating the body in the body externally, or he dwells contemplating the body in the body both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away in the body, or the nature of both arising and passing away in the body. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body.",
+            },
+            # ‼ CHECK [IMG_0400.PNG]: A LINE-END HYPHEN REJOINED. The second-
+            #   to-last line of the page ends สะมุทะยะวะยะ- and the last line
+            #   opens ธัมมานุปัสสี. That one IS typesetting, so the word is
+            #   written whole as สะมุทะยะวะยะธัมมานุปัสสี, per the run-on-
+            #   passage rule. Compare the mid-line hyphen kept in verse 5.
+            # ‼ CHECK [IMG_0400.PNG]: THE PAGE FOOT CUTS THIS SENTENCE. The
+            #   last words printed are …สะติ ปัจจุปัฏฐิตา and the line stops
+            #   there, so the verse is marked […] in pali, pali_roman and
+            #   english and is completed from page 131. Its refrain's
+            #   punctuation cannot be read until that page is in.
+            {
+                'number': 7,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ อะภิกกันเต ปะฏิกกันเต สัมปะชานะการี โหติ, อาโลกิเต วิโลกิเต สัมปะชานะการี โหติ, สัมมิญชิเต ปะสาริเต สัมปะชานะการี โหติ, สังฆาฏิปัตตะจีวะระธาระเณ สัมปะชานะการี โหติ, อะสิเต ปีเต ขายิเต สายิเต สัมปะชานะการี โหติ, อุจจาระปัสสาวะกัมเม สัมปะชานะการี โหติ, คะเต ฐิเต นิสินเน สุตเต ชาคะริเต ภาสิเต ตุณ๎หีภาเว สัมปะชานะการี โหติ, อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา […]',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu abhikkante paṭikkante sampajānakārī hoti, ālokite vilokite sampajānakārī hoti, samiñjite pasārite sampajānakārī hoti, saṅghāṭipattacīvaradhāraṇe sampajānakārī hoti, asite pīte khāyite sāyite sampajānakārī hoti, uccārapassāvakamme sampajānakārī hoti, gate ṭhite nisinne sutte jāgarite bhāsite tuṇhībhāve sampajānakārī hoti, iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā […]',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk is one who acts in clear comprehension when going forward and returning; who acts in clear comprehension when looking ahead and looking away; who acts in clear comprehension when bending and stretching his limbs; who acts in clear comprehension in carrying his outer cloak, his robes and his bowl; who acts in clear comprehension when eating, drinking, chewing and tasting; who acts in clear comprehension in passing excrement and urine; who acts in clear comprehension in walking, standing, sitting, falling asleep, waking, speaking and keeping silent. Thus he dwells contemplating the body in the body internally, or he dwells contemplating the body in the body externally, or he dwells contemplating the body in the body both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away in the body, or the nature of both arising and passing away in the body. Or else mindfulness that 'there is a body' is established […]",
             },
         ],
     },

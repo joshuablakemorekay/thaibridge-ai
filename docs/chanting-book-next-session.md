@@ -1,39 +1,76 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-08-24 after page
-216 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
+130 went in.
 
 ## Read first, in this order
 
 1. `docs/chanting-book-photo-map.md` — the brief, read it fully
-2. `prompts/chanting-book-batch/README.md` — the two-stage workflow
-3. `C:\Users\joshk\OneDrive\Documents\Documents\Digital Chanting Book\chanting-book-batch-prompts.pdf`
+2. `prompts/chanting-book-batch/prompt.md` — the canonical two-stage workflow
+3. `C:\Users\joshk\OneDrive\Documents\Documents\thaibridge-ai\Digital Chanting Book\chanting-book-batch-prompts.pdf`
    — the Stage 1 and Stage 2 prompts. **Read it before any fresh page read.**
+   (There is no `prompts/chanting-book-batch/README.md`; earlier versions of
+   this file sent people looking for one.)
 
-## State — verify with git, don't take this file's word
+## State — DERIVE IT, don't take this file's word
 
-- **Pages 1–114 are in and unbroken**, plus 217–221. **151 chants and 2,221
-  verses in the Thai-script run**, and **NOTHING IS LEFT OPEN** — there is no
-  `‼ CONTINUES` marker anywhere in `chanting.py`. `/chanting` derives its own coverage
-  line, so it is never stale — read it rather than this bullet.
-- ⚠️ **A SECOND SESSION IS WORKING IN THIS SAME CLONE**, on the ROMAN-SCRIPT
-  pages (317, 318). It has `chanting.py`, `scripts/check_render.py`,
-  `templates/chanting_page.html` and `tests/test_chanting_pages.py` open. Page
-  94, 95 and 96's data is applied and verified but their `chanting.py` changes
-  are NOT committed, because one file cannot be split between two sessions'
-  commits — see below.
-- ⚠️ **TEST RESULTS ARE MOMENTARILY UNRELIABLE while the other session is
-  writing.** Page 96's run showed two failures that vanished on a re-run seconds
-  later — they were mid-write on `chanting.py`. **Re-run before believing a red
-  suite**, and check whether the failing names are theirs
-  (`mahasamayasutta-roman`) before investigating anything.
+Every count below goes stale. The two commands that do not:
+
+```
+python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page'] for x in r}); print(len(chanting.CHANTS),'chants,',len(p),'pages')"
+grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
+```
+
+As of 2026-09-05: **287 chants across 273 pages.** The gaps are
+**131–174, 179–182, 192, 246, 248 and 278** — and 131 and 179 are the live
+edges of two runs, not holes.
+
+Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
+
+| chant | last verse in | resumes at |
+|---|---|---|
+| `mahasatipatthana-sutta-patho` | 7, page 130 | **page 131 = IMG_0401** |
+| `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
+
+The 193–245 translated run is **CLOSED and complete**. 246, 248 and 278 are
+single unentered sheets left behind by it; 192 is one more.
+
+⚠️ **Two sessions have worked this book in one clone**, on the two fronts
+above. Nothing has been committed by either since 2026-08-31, so a red suite
+today is a real failure, not a mid-write. **Still run `git log` before starting
+a page, and never `git checkout chanting.py`** — see the rule further down.
+
 - 11 of the 17 pre-page chants are verified against their photographs.
-- Pages 92 to 114 were applied 2026-08-24/28; pages 83 to 91 on 2026-08-23; pages 78 to 82 on 2026-08-22; pages 75 to 77 on 2026-08-21;
-  pages 69 to 74 on 2026-08-19; pages 66–68 over the days before them; 61–65 on
-  2026-08-14 and 2026-08-15; 55–60 on 2026-08-11 and 2026-08-12.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
-  Tamnan parittas appointed for evening chanting. Everything from here is
+  Tamnan parittas appointed for evening chanting. Everything from there is
   paritta until the book says otherwise.
+
+## ✅ `section_end` — a label that CLOSES a movement instead of heading it
+
+New on 2026-09-05, on Josh's decision, and it governs the whole
+Mahāsatipaṭṭhāna ahead.
+
+That sutta prints a centred bold label **below** each movement to close it —
+`อุทเทโส.` under the summary (129), `อานาปานะปัพพัง` under the breathing
+section and `อิริยาปะถะปัพพัง` under the postures (both 130). **Read one as a
+heading and you attach the word for breathing to the postures.**
+
+Neither existing mechanism could hold them:
+
+| mechanism | why it fails here |
+|---|---|
+| a page **block** | goes above every chant on the page or after a whole one. Both of page 130's would have stacked at the top of the sheet. |
+| a verse **`section`** | renders in the right place but names what FOLLOWS. |
+
+So a verse may now carry **`section_end`**, rendered as an `<h4>` below that
+verse, centred and bold like `.block-heading` — the way the book sets it, not
+the way `.verse-section` sets an app heading. Touched four files:
+`templates/chanting_page.html`, `templates/chanting.html`,
+`templates/partials/chanting_book_css.html` and the key list in
+`scripts/apply_batch.py`. Page 129's `อุทเทโส.` moved to it in the same pass;
+it had been rendering above verse 3 since the day it went in.
+
+**Write it on the verse the label CLOSES, never the one it precedes.**
 
 ## How to work — this matters more than the tasks
 

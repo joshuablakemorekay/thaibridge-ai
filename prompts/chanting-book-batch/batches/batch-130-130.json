@@ -1,0 +1,165 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 130,
+        "file": "IMG_0400.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "5-7",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, one column, no footnote and no colophon. Three prose units and TWO centred bold labels, and the labels do not head what follows them — each one closes the section ABOVE it, the way อุทเทโส. does on 129. Down the page: the tail of the breathing refrain, then อานาปานะปัพพัง, then the four postures with their refrain, then อิริยาปะถะปัพพัง, then clear comprehension, which the page foot cuts mid-sentence at ปัจจุปัฏฐิตา. The two labels are NOT page blocks — they ride on the verses they close, as `section_end` on verses 5 and 6."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Three, each a whole movement of the sutta as the sheet sets it: the refrain that closes the breathing section, the postures section entire, and the clear-comprehension section as far as the page foot. Same unit size as verse 4 on page 129.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "The book prints no cluster mark on ฐิโตมหีติ / นิสินโนมหีติ / สะยาโนมหีติ, and spells ปะติสสะติมัตตายะ with ต. Both are romanised to the standard Pali, following the พ๎ยาธิธัมโมมหิ → byādhidhammomhi decision already recorded in the file, and both are raised as checks.",
+        "pages": "IMG_0400.PNG, page 130, the number printed clearly at the top centre. Arrived from page 129 and CONTINUES onto 131. ⚠️ Its two section labels have nowhere in the app to sit — see the check on the chant as a whole."
+      },
+      "verses": [
+        {
+          "number": 5,
+          "page": 130,
+          "section_end": "อานาปานะปัพพัง",
+          "pali": "สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะ-ธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ. ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ. นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.",
+          "pali_roman": "Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavaya-dhammānupassī vā kāyasmiṃ viharati, atthi kāyoti vā panassa sati paccupaṭṭhitā hoti. Yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati. Na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "He dwells contemplating the nature of arising in the body, or he dwells contemplating the nature of passing away in the body, or he dwells contemplating the nature of both arising and passing away in the body. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body."
+        },
+        {
+          "number": 6,
+          "section_end": "อิริยาปะถะปัพพัง",
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ คัจฉันโต วา คัจฉามีติ ปะชานาติ, ฐิโต วา ฐิโตมหีติ ปะชานาติ, นิสินโน วา นิสินโนมหีติ ปะชานาติ, สะยาโน วา สะยาโนมหีติ ปะชานาติ, ยะถา ยะถา วา ปะนัสสะ กาโย ปะณิหิโต โหติ, ตะถา ตะถา สัมปะชานาติ. อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu gacchanto vā gacchāmīti pajānāti, ṭhito vā ṭhitomhīti pajānāti, nisinno vā nisinnomhīti pajānāti, sayāno vā sayānomhīti pajānāti, yathā yathā vā panassa kāyo paṇihito hoti, tathā tathā sampajānāti. Iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi bhikkhave bhikkhu kāye kāyānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk, when walking, knows 'I am walking'; when standing, knows 'I am standing'; when sitting, knows 'I am sitting'; when lying down, knows 'I am lying down'. In whatever way his body is disposed, so he understands it. Thus he dwells contemplating the body in the body internally, or he dwells contemplating the body in the body externally, or he dwells contemplating the body in the body both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away in the body, or the nature of both arising and passing away in the body. Or else mindfulness that 'there is a body' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating the body in the body."
+        },
+        {
+          "number": 7,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ อะภิกกันเต ปะฏิกกันเต สัมปะชานะการี โหติ, อาโลกิเต วิโลกิเต สัมปะชานะการี โหติ, สัมมิญชิเต ปะสาริเต สัมปะชานะการี โหติ, สังฆาฏิปัตตะจีวะระธาระเณ สัมปะชานะการี โหติ, อะสิเต ปีเต ขายิเต สายิเต สัมปะชานะการี โหติ, อุจจาระปัสสาวะกัมเม สัมปะชานะการี โหติ, คะเต ฐิเต นิสินเน สุตเต ชาคะริเต ภาสิเต ตุณ๎หีภาเว สัมปะชานะการี โหติ, อิติ อัชฌัตตัง วา กาเย กายานุปัสสี วิหะระติ, พะหิทธา วา กาเย กายานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา กาเย กายานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา กายัส๎มิง วิหะระติ. อัตถิ กาโยติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา […]",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu abhikkante paṭikkante sampajānakārī hoti, ālokite vilokite sampajānakārī hoti, samiñjite pasārite sampajānakārī hoti, saṅghāṭipattacīvaradhāraṇe sampajānakārī hoti, asite pīte khāyite sāyite sampajānakārī hoti, uccārapassāvakamme sampajānakārī hoti, gate ṭhite nisinne sutte jāgarite bhāsite tuṇhībhāve sampajānakārī hoti, iti ajjhattaṃ vā kāye kāyānupassī viharati, bahiddhā vā kāye kāyānupassī viharati, ajjhattabahiddhā vā kāye kāyānupassī viharati. Samudayadhammānupassī vā kāyasmiṃ viharati, vayadhammānupassī vā kāyasmiṃ viharati, samudayavayadhammānupassī vā kāyasmiṃ viharati. Atthi kāyoti vā panassa sati paccupaṭṭhitā […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk is one who acts in clear comprehension when going forward and returning; who acts in clear comprehension when looking ahead and looking away; who acts in clear comprehension when bending and stretching his limbs; who acts in clear comprehension in carrying his outer cloak, his robes and his bowl; who acts in clear comprehension when eating, drinking, chewing and tasting; who acts in clear comprehension in passing excrement and urine; who acts in clear comprehension in walking, standing, sitting, falling asleep, waking, speaking and keeping silent. Thus he dwells contemplating the body in the body internally, or he dwells contemplating the body in the body externally, or he dwells contemplating the body in the body both internally and externally. He dwells contemplating the nature of arising in the body, or the nature of passing away in the body, or the nature of both arising and passing away in the body. Or else mindfulness that 'there is a body' is established […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สัมปะชานะการี",
+          "pali_roman": "sampajānakārī",
+          "meaning": "one who acts in clear comprehension — doing each ordinary act knowing what one is doing and why, rather than by habit"
+        },
+        {
+          "pali": "อิริยาปะถะ",
+          "pali_roman": "iriyāpatha",
+          "meaning": "the four postures — walking, standing, sitting, lying down — taken together as the whole of bodily bearing"
+        },
+        {
+          "pali": "ปัพพัง",
+          "pali_roman": "pabbaṃ",
+          "meaning": "a section or joint of a discourse; the word this book prints as the label closing each movement of the sutta"
+        },
+        {
+          "pali": "สังฆาฏิปัตตะจีวะระธาระเณ",
+          "pali_roman": "saṅghāṭipattacīvaradhāraṇe",
+          "meaning": "in the carrying of the outer cloak, the bowl and the robes — three of the monk's requisites named together"
+        },
+        {
+          "pali": "ตุณ๎หีภาเว",
+          "pali_roman": "tuṇhībhāve",
+          "meaning": "in the state of silence; keeping silent, listed here as an act to be done in clear comprehension like any other"
+        },
+        {
+          "pali": "อะนิสสิโต",
+          "pali_roman": "anissito",
+          "meaning": "independent, leaning on nothing — neither on craving nor on views"
+        },
+        {
+          "pali": "สะมุทะยะธัมมานุปัสสี",
+          "pali_roman": "samudayadhammānupassī",
+          "meaning": "contemplating the nature of arising — watching the body as something that comes to be, rather than as a thing that simply is"
+        },
+        {
+          "pali": "ญาณะมัตตายะ ปะติสสะติมัตตายะ",
+          "pali_roman": "ñāṇamattāya patissatimattāya",
+          "meaning": "just so far as is needed for knowledge and for remembrance — the measure this refrain sets, no more than bare knowing"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0400.PNG",
+          "issue": "‼ TWO SECTION LABELS INSIDE ONE CHANT, AND THEY CLOSE RATHER THAN HEAD. อานาปานะปัพพัง is printed between verse 5 and verse 6, and อิริยาปะถะปัพพัง between verse 6 and verse 7 — both centred and bold. Each names the movement ABOVE it, not the one below. Neither existing mechanism could hold them: a page block goes above every chant on the page or after a whole one, so both would have stacked at the top of the sheet, and a verse `section` renders in the right place but names what FOLLOWS, which would have headed the postures with the word for breathing. A `section_end` key was added for them on Josh's decision (2026-09-05) and renders the label below its verse, centred and bold as the book sets it. The same key retro-fixes page 129, whose อุทเทโส. had been rendering a verse too high. Expect these on every remaining page of this sutta."
+        },
+        {
+          "verse": 5,
+          "file": "IMG_0400.PNG",
+          "issue": "‼ A HYPHEN MID-LINE, NOT AT A LINE END. Line 2 reads สะมุทะยะวะยะ-ธัมมานุปัสสี with the whole word on one line and text continuing after it. Read at 3x. So it is NOT the typesetter's line-break hyphen the run-on-passage rule says to drop, and it is reproduced as printed, in the roman too. ⚠️ The SAME word is printed three times on this one sheet and set three ways: hyphenated mid-line here, bare in verse 6, and broken across a line end in verse 7."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0400.PNG",
+          "issue": "A LINE-END HYPHEN REJOINED. The second-to-last line of the page ends สะมุทะยะวะยะ- and the last line opens ธัมมานุปัสสี. That one IS typesetting, so the word is written whole as สะมุทะยะวะยะธัมมานุปัสสี, per the run-on-passage rule. Compare the mid-line hyphen kept in verse 5."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0400.PNG",
+          "issue": "‼ ONE REFRAIN, THREE PUNCTUATIONS, ONE SHEET. The closing refrain is printed three times here and no two agree. Verse 5: …วิหะระติ, อัตถิ / …โหติ. ยาวะเทวะ / …วิหะระติ. นะ จะ. Verse 6: …วิหะระติ. อัตถิ / …โหติ, ยาวะเทวะ / …วิหะระติ, นะ จะ. Verse 7 is cut before its second half. Each read off the sheet separately at 2.6x, and nothing harmonised."
+        },
+        {
+          "verse": 6,
+          "file": "IMG_0400.PNG",
+          "issue": "NO CLUSTER MARK ON ฐิโตมหีติ, นิสินโนมหีติ OR สะยาโนมหีติ. Read at 5x — the space above ม is plainly empty in all three. Reproduced bare. The roman gives ṭhitomhīti / nisinnomhīti / sayānomhīti, following the decision already recorded in the file for พ๎ยาธิธัมโมมหิ → byādhidhammomhi, where the book also leaves the mark off and the roman does not."
+        },
+        {
+          "verse": 5,
+          "file": "IMG_0400.PNG",
+          "issue": "ปะติสสะติมัตตายะ WITH ต, NOT ฏ, in both places it is printed on this sheet. That agrees with the short satipaṭṭhāna ปาโฐ already in the app at pages 127-128, which prints the same spelling four times, so the roman keeps patissatimattāya rather than the canonical paṭissati-."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0400.PNG",
+          "issue": "THE PAGE FOOT CUTS THIS SENTENCE. The last words printed are …สะติ ปัจจุปัฏฐิตา and the line stops there, so the verse is marked […] in pali, pali_roman and english and is completed from page 131. Its refrain's punctuation cannot be read until that page is in."
+        },
+        {
+          "verse": 6,
+          "file": "IMG_0400.PNG",
+          "issue": "อิติ อัชฌัตตัง is set with a visibly wider space after อิติ than the words around it, in verse 6 only. Taken as justification rather than as anything the book means, and written with a single space. Verse 7 sets the same phrase tight."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 131,
+    "resume_from_file": "IMG_0401.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all three verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0400.PNG.",
+    "page_scan": "agrees — one page row, page 130, claiming verses 5-7, and the entry holds exactly verses 5, 6 and 7. Verse 5 carries page 130; verses 6 and 7 carry none, so they sit on 130 by carry-forward. The numbering runs on from page 129's verse 4 with no gap and no overlap.",
+    "notes": "The sheet's two section labels needed a mechanism the app did not have. Josh chose to add one (2026-09-05) rather than defer the content or mislabel it, so they ride on verses 5 and 6 as `section_end` and render below the movement each closes, centred and bold as the book sets them. Page 129's อุทเทโส. moves to the same key in the same pass — it had been rendering above verse 3 where the book prints it between 3 and 4. Everything else on this page is complete and checked. ⚠️ All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
