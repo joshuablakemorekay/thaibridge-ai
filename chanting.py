@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 20; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 22; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57813,14 +57813,85 @@ CHANTS = [
             #   and between pairs the book prints a FULL STOP. Six pairs on
             #   this sheet, all six the same. If page 137 breaks the pattern,
             #   that is a finding.
+            # ‼ COMPLETED FROM p136: this line was cut by the page break and
+            #   is now whole. Was: กะถัญจะ ภิกขะเว ภิกขุ จิตเต จิตตานุปัสสี
+            #   วิหะระติ. อิธะ ภิกขะเว ภิกขุ สะราคัง วา จิตตัง สะราคัง
+            #   จิตตันติ ปะชานาติ, วีตะราคัง วา จิตตัง วีตะราคัง จิตตันติ
+            #   ปะชานาติ. สะโทสัง วา จิตตัง สะโทสัง จิตตันติ ปะชานาติ,
+            #   วีตะโทสัง วา จิตตัง วีตะโทสัง จิตตันติ ปะชานาติ. สะโมหัง วา
+            #   จิตตัง สะโมหัง จิตตันติ ปะชานาติ, วีตะโมหัง วา จิตตัง
+            #   วีตะโมหัง จิตตันติ ปะชานาติ. สังขิตตัง วา จิตตัง สังขิตตัง
+            #   จิตตันติ ปะชานาติ, วิกขิตตัง วา จิตตัง วิกขิตตัง จิตตันติ
+            #   ปะชานาติ. มะหัคคะตัง วา จิตตัง มะหัคคะตัง จิตตันติ ปะชานาติ,
+            #   อะมะหัคคะตัง วา จิตตัง อะมะหัคคะตัง จิตตันติ ปะชานาติ.
+            #   สะอุตตะรัง วา จิตตัง สะอุตตะรัง จิตตันติ ปะชานาติ, อะนุตตะรัง
+            #   วา จิตตัง อะนุตตะรัง จิตตันติ ปะชานาติ. สะมาหิตัง […]
+            # ‼ CHECK [IMG_0407.PNG]: COMPLETES THE LINE PAGE 136 CUT. That
+            #   sheet ended …อะนุตตะรัง จิตตันติ ปะชานาติ. สะมาหิตัง […] and
+            #   this one opens วา จิตตัง สะมาหิตัง จิตตันติ. The verse keeps
+            #   page 136, where it began. Its last two pairs are
+            #   สะมาหิตัง/อะสะมาหิตัง and วิมุตตัง/อะวิมุตตัง, making EIGHT
+            #   pairs in all, and the pair punctuation page 136 reported —
+            #   comma within a pair, full stop between pairs — holds for both
+            #   of them. That is the first formula in this chant to stay
+            #   consistent across a page turn.
+            # ‼ CHECK [IMG_0407.PNG]: เอวัง โข ภิกขะเว AGAIN, matching verse
+            #   19. So the closing formula now reads: เอวัมปิ ภิกขะเว in
+            #   verses 5-17, เอวัมปิ โข ภิกขะเว in verse 18 which closed the
+            #   body, and เอวัง โข ภิกขะเว in verses 19 and 20, closing the
+            #   feelings and the mind. The body's is the odd one; the last two
+            #   agree. Whether the fourth foundation joins them is still open.
+            # ‼ CHECK [IMG_0407.PNG]: จิตตัส๎มิง IN THE REFRAIN, with the
+            #   cluster mark, matching กายัส๎มิง in the body section — and
+            #   against เวทะนาสุ in the feelings, which takes a plain locative
+            #   plural. The book varies the case with the noun and not by any
+            #   rule of its own; reproduced as printed in each foundation.
             {
                 'number': 20,
                 'page': 136,
-                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สะราคัง วา จิตตัง สะราคัง จิตตันติ ปะชานาติ, วีตะราคัง วา จิตตัง วีตะราคัง จิตตันติ ปะชานาติ. สะโทสัง วา จิตตัง สะโทสัง จิตตันติ ปะชานาติ, วีตะโทสัง วา จิตตัง วีตะโทสัง จิตตันติ ปะชานาติ. สะโมหัง วา จิตตัง สะโมหัง จิตตันติ ปะชานาติ, วีตะโมหัง วา จิตตัง วีตะโมหัง จิตตันติ ปะชานาติ. สังขิตตัง วา จิตตัง สังขิตตัง จิตตันติ ปะชานาติ, วิกขิตตัง วา จิตตัง วิกขิตตัง จิตตันติ ปะชานาติ. มะหัคคะตัง วา จิตตัง มะหัคคะตัง จิตตันติ ปะชานาติ, อะมะหัคคะตัง วา จิตตัง อะมะหัคคะตัง จิตตันติ ปะชานาติ. สะอุตตะรัง วา จิตตัง สะอุตตะรัง จิตตันติ ปะชานาติ, อะนุตตะรัง วา จิตตัง อะนุตตะรัง จิตตันติ ปะชานาติ. สะมาหิตัง […]',
-                'pali_roman': 'Kathañca bhikkhave bhikkhu citte cittānupassī viharati. Idha bhikkhave bhikkhu sarāgaṃ vā cittaṃ sarāgaṃ cittanti pajānāti, vītarāgaṃ vā cittaṃ vītarāgaṃ cittanti pajānāti. Sadosaṃ vā cittaṃ sadosaṃ cittanti pajānāti, vītadosaṃ vā cittaṃ vītadosaṃ cittanti pajānāti. Samohaṃ vā cittaṃ samohaṃ cittanti pajānāti, vītamohaṃ vā cittaṃ vītamohaṃ cittanti pajānāti. Saṅkhittaṃ vā cittaṃ saṅkhittaṃ cittanti pajānāti, vikkhittaṃ vā cittaṃ vikkhittaṃ cittanti pajānāti. Mahaggataṃ vā cittaṃ mahaggataṃ cittanti pajānāti, amahaggataṃ vā cittaṃ amahaggataṃ cittanti pajānāti. Sauttaraṃ vā cittaṃ sauttaraṃ cittanti pajānāti, anuttaraṃ vā cittaṃ anuttaraṃ cittanti pajānāti. Samāhitaṃ […]',
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ สะราคัง วา จิตตัง สะราคัง จิตตันติ ปะชานาติ, วีตะราคัง วา จิตตัง วีตะราคัง จิตตันติ ปะชานาติ. สะโทสัง วา จิตตัง สะโทสัง จิตตันติ ปะชานาติ, วีตะโทสัง วา จิตตัง วีตะโทสัง จิตตันติ ปะชานาติ. สะโมหัง วา จิตตัง สะโมหัง จิตตันติ ปะชานาติ, วีตะโมหัง วา จิตตัง วีตะโมหัง จิตตันติ ปะชานาติ. สังขิตตัง วา จิตตัง สังขิตตัง จิตตันติ ปะชานาติ, วิกขิตตัง วา จิตตัง วิกขิตตัง จิตตันติ ปะชานาติ. มะหัคคะตัง วา จิตตัง มะหัคคะตัง จิตตันติ ปะชานาติ, อะมะหัคคะตัง วา จิตตัง อะมะหัคคะตัง จิตตันติ ปะชานาติ. สะอุตตะรัง วา จิตตัง สะอุตตะรัง จิตตันติ ปะชานาติ, อะนุตตะรัง วา จิตตัง อะนุตตะรัง จิตตันติ ปะชานาติ. สะมาหิตัง วา จิตตัง สะมาหิตัง จิตตันติ ปะชานาติ, อะสะมาหิตัง วา จิตตัง อะสะมาหิตัง จิตตันติ ปะชานาติ. วิมุตตัง วา จิตตัง วิมุตตัง จิตตันติ ปะชานาติ, อะวิมุตตัง วา จิตตัง อะวิมุตตัง จิตตันติ ปะชานาติ. อิติ อัชฌัตตัง วา จิตเต จิตตานุปัสสี วิหะระติ, พะหิทธา วา จิตเต จิตตานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา จิตเต จิตตานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา จิตตัส๎มิง วิหะระติ, วะยะธัมมานุปัสสี วา จิตตัส๎มิง วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา จิตตัส๎มิง วิหะระติ. อัตถิ จิตตันติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัง โข ภิกขะเว ภิกขุ จิตเต จิตตานุปัสสี วิหะระติ.',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu citte cittānupassī viharati. Idha bhikkhave bhikkhu sarāgaṃ vā cittaṃ sarāgaṃ cittanti pajānāti, vītarāgaṃ vā cittaṃ vītarāgaṃ cittanti pajānāti. Sadosaṃ vā cittaṃ sadosaṃ cittanti pajānāti, vītadosaṃ vā cittaṃ vītadosaṃ cittanti pajānāti. Samohaṃ vā cittaṃ samohaṃ cittanti pajānāti, vītamohaṃ vā cittaṃ vītamohaṃ cittanti pajānāti. Saṅkhittaṃ vā cittaṃ saṅkhittaṃ cittanti pajānāti, vikkhittaṃ vā cittaṃ vikkhittaṃ cittanti pajānāti. Mahaggataṃ vā cittaṃ mahaggataṃ cittanti pajānāti, amahaggataṃ vā cittaṃ amahaggataṃ cittanti pajānāti. Sauttaraṃ vā cittaṃ sauttaraṃ cittanti pajānāti, anuttaraṃ vā cittaṃ anuttaraṃ cittanti pajānāti. Samāhitaṃ vā cittaṃ samāhitaṃ cittanti pajānāti, asamāhitaṃ vā cittaṃ asamāhitaṃ cittanti pajānāti. Vimuttaṃ vā cittaṃ vimuttaṃ cittanti pajānāti, avimuttaṃ vā cittaṃ avimuttaṃ cittanti pajānāti. Iti ajjhattaṃ vā citte cittānupassī viharati, bahiddhā vā citte cittānupassī viharati, ajjhattabahiddhā vā citte cittānupassī viharati. Samudayadhammānupassī vā cittasmiṃ viharati, vayadhammānupassī vā cittasmiṃ viharati, samudayavayadhammānupassī vā cittasmiṃ viharati. Atthi cittanti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evaṃ kho bhikkhave bhikkhu citte cittānupassī viharati.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'And how, monks, does a monk dwell contemplating mind in mind? Here, monks, a monk knows a mind with lust as a mind with lust, and a mind without lust as a mind without lust; a mind with hate as a mind with hate, and a mind without hate as a mind without hate; a mind with delusion as a mind with delusion, and a mind without delusion as a mind without delusion; a contracted mind as contracted, and a distracted mind as distracted; an exalted mind as exalted, and an unexalted mind as unexalted; a surpassable mind as surpassable, and an unsurpassable mind as unsurpassable. A concentrated mind […]',
+                'english': "And how, monks, does a monk dwell contemplating mind in mind? Here, monks, a monk knows a mind with lust as a mind with lust, and a mind without lust as a mind without lust; a mind with hate as such, and a mind without hate as such; a mind with delusion as such, and a mind without delusion as such; a contracted mind as contracted, and a distracted mind as distracted; an exalted mind as exalted, and an unexalted mind as unexalted; a surpassable mind as surpassable, and an unsurpassable mind as unsurpassable; a concentrated mind as concentrated, and an unconcentrated mind as unconcentrated; a liberated mind as liberated, and an unliberated mind as unliberated. Thus he dwells contemplating mind in mind internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in mind, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there is mind' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Just so, monks, does a monk dwell contemplating mind in mind.",
+            },
+            # ‼ CHECK [IMG_0407.PNG]: TWO PARAGRAPHS, NOT ONE, and the
+            #   sentence is printed twice. Verse 21 is a one-sentence
+            #   statement ending ปัญจะสุ นีวะระเณสุ., and verse 22 opens by
+            #   repeating กะถัญจะ… ปัญจะสุ นีวะระเณสุ. before the exposition.
+            #   The book indents both, so they are set as two paragraphs and
+            #   recorded as two verses. Not a duplication to tidy away — it is
+            #   the sutta's own uddesa-then-niddesa shape, the same one page
+            #   129 showed with อุทเทโส.
+            {
+                'number': 21,
+                'page': 137,
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ. อิธะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ นีวะระเณสุ.',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati. Idha bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu nīvaraṇesu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And how, monks, does a monk dwell contemplating mind-objects in mind-objects? Here, monks, a monk dwells contemplating mind-objects in mind-objects as regards the five hindrances.',
+            },
+            # ‼ CHECK [IMG_0407.PNG]: ‼ THE SAME FIVE-CLAUSE HINDRANCE
+            #   FORMULA, PRINTED TWICE ON THIS SHEET AND PUNCTUATED
+            #   DIFFERENTLY. For กามะฉันทะ the five clauses end , / , / , / ,
+            #   / . — commas throughout and a full stop only at the end. For
+            #   พ๎ยาปาทะ they end , / . / , / . / . — a full stop after the
+            #   second and the fourth as well. Each block was read on its own
+            #   at 2.7x rather than copied from the one above. ถีนะมิทธะ so
+            #   far reads , / , / , and is cut before its fourth.
+            # ‼ CHECK [IMG_0407.PNG]: THE PAGE FOOT CUTS THIS SENTENCE mid-
+            #   formula, after ตัญจะ ปะชานาติ, ยะถา — inside the third
+            #   hindrance's fourth clause. Marked […] and completed from page
+            #   138. Its remaining stops must be read there: this sheet has
+            #   just shown the same formula punctuated two ways.
+            {
+                'number': 22,
+                'pali': 'กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ นีวะระเณสุ. อิธะ ภิกขะเว ภิกขุ สันตัง วา อัชฌัตตัง กามะฉันทัง อัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง กามะฉันทัง นัตถิ เม อัชฌัตตัง กามะฉันโทติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ กามะฉันทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ กามะฉันทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ กามะฉันทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง พ๎ยาปาทัง อัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง พ๎ยาปาทัง นัตถิ เม อัชฌัตตัง พ๎ยาปาโทติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ พ๎ยาปาทัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ พ๎ยาปาทัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ พ๎ยาปาทัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. สันตัง วา อัชฌัตตัง ถีนะมิทธัง อัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ถีนะมิทธัง นัตถิ เม อัชฌัตตัง ถีนะมิทธันติ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ ถีนะมิทธัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา […]',
+                'pali_roman': 'Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu nīvaraṇesu. Idha bhikkhave bhikkhu santaṃ vā ajjhattaṃ kāmacchandaṃ atthi me ajjhattaṃ kāmacchandoti pajānāti, asantaṃ vā ajjhattaṃ kāmacchandaṃ natthi me ajjhattaṃ kāmacchandoti pajānāti, yathā ca anuppannassa kāmacchandassa uppādo hoti, tañca pajānāti, yathā ca uppannassa kāmacchandassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa kāmacchandassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ byāpādaṃ atthi me ajjhattaṃ byāpādoti pajānāti, asantaṃ vā ajjhattaṃ byāpādaṃ natthi me ajjhattaṃ byāpādoti pajānāti. Yathā ca anuppannassa byāpādassa uppādo hoti, tañca pajānāti, yathā ca uppannassa byāpādassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa byāpādassa āyatiṃ anuppādo hoti, tañca pajānāti. Santaṃ vā ajjhattaṃ thīnamiddhaṃ atthi me ajjhattaṃ thīnamiddhanti pajānāti, asantaṃ vā ajjhattaṃ thīnamiddhaṃ natthi me ajjhattaṃ thīnamiddhanti pajānāti, yathā ca anuppannassa thīnamiddhassa uppādo hoti, tañca pajānāti, yathā […]',
+                'thai': '',
+                'paiboon': '',
+                'english': "And how, monks, does a monk dwell contemplating mind-objects in mind-objects as regards the five hindrances? Here, monks, a monk, when sensual desire is present in him, knows 'there is sensual desire in me'; when it is absent, knows 'there is no sensual desire in me'; and he knows how unarisen sensual desire comes to arise, how arisen sensual desire is abandoned, and how what has been abandoned does not arise again in future. When ill will is present in him, he knows it is present; when absent, that it is absent; and he knows how unarisen ill will comes to arise, how arisen ill will is abandoned, and how what has been abandoned does not arise again in future. When sloth and torpor are present in him, he knows they are present; when absent, that they are absent; and he knows how unarisen sloth and torpor come to arise […]",
             },
         ],
     },
@@ -60451,6 +60522,20 @@ PAGE_BLOCKS = [
                 'major': True,
                 'thai': 'เวทะนานุปัสสะนาสะติปัฏฐานัง',
                 'english': 'The Establishing of Mindfulness through Contemplation of Feeling.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 137 ───────────────────────────────────────────────────
+    # Written from batch-137-137.json.
+    {
+        'page': 137,
+        'blocks': [
+            {
+                'type': 'heading',
+                'major': True,
+                'thai': 'จิตตานุปัสสะนาสะติปัฏฐานัง',
+                'english': 'The Establishing of Mindfulness through Contemplation of Mind.',
                 'english_unverified': True,
             },
         ],

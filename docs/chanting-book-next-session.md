@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-136 went in.
+137 went in.
 
 ## Read first, in this order
 
@@ -21,21 +21,42 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 279 pages.** The gaps are
-**137–174, 179–182, 192, 246, 248 and 278** — and 137 and 179 are the live
+As of 2026-09-05: **287 chants across 280 pages.** The gaps are
+**138–174, 179–182, 192, 246, 248 and 278** — and 138 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 20, page 136 | **page 137 = IMG_0407** |
+| `mahasatipatthana-sutta-patho` | 22, page 137 | **page 138 = IMG_0408** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
-MIND, the third of the four foundations. It began on page 136 and its first
-verse (20) is cut at `สะมาหิตัง`. The body (closed on 135, under two labels)
-and the feelings (closed on 136, under one) are both COMPLETE.
+MIND-OBJECTS, the FOURTH and last foundation, at its first subject — the five
+hindrances. Verse 22 is cut mid-formula. The body (135), the feelings (136)
+and the mind (137) are all CLOSED, each under its own label.
+
+The fourth foundation has five subjects in turn — hindrances, aggregates,
+sense bases, factors of awakening, truths — so it is the longest of the four
+and will run for several sheets yet.
+
+## ⚠️ A COMPLETION REPLACES THE VERSE — check what the first half carried
+
+Page 137 found this the expensive way. Verse 20 held `page: 136` because it
+opened that sheet; the completing half named no page, `apply_batch` replaced
+the verse without one, and it moved silently back to page 135.
+
+**Nothing failed.** The file imported, the whole suite was green, and
+`check_render` passed. Only `check_pages` caught it — it is the one check that
+compares the app against what the PHOTOGRAPH recorded rather than against the
+app's own data.
+
+`apply_batch` now carries a completed verse's structural keys forward when the
+incoming half is silent about them, prints each one it supplies, and
+`tests/test_apply_batch.py` has five tests that fail without the fix. But the
+lesson is more general than the fix: **run `check_pages` after every apply, and
+believe it over a green suite.**
 
 The 193–245 translated run is **CLOSED and complete**. 246, 248 and 278 are
 single unentered sheets left behind by it; 192 is one more.
