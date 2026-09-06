@@ -1,0 +1,200 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 157,
+        "file": "IMG_0427.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "193-201",
+        "starts_here": false,
+        "blocks": [
+          {
+            "type": "heading",
+            "major": true,
+            "thai": "ธัมมานุปัสสะนาสะติปัฏฐานัง",
+            "english": "The Establishing of Mindfulness through Contemplation of Mind-Objects.",
+            "english_unverified": true
+          }
+        ],
+        "note": "The sheet opens with a centred bold label CLOSING the fourth foundation, and then runs the guarantee of fruit as continuous justified prose to the foot, where it is cut. ⚠️ The label closes verse 192, which is on page 156, so it is an UNANCHORED page block with major: true — the same treatment pages 136 and 137 gave the labels closing the feelings and the mind. No footnote and no rule anywhere."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Nine, one per DURATION. The passage is a list of lengths of practice — seven years down to six months — and each item is one complete statement running โย หิ โกจิ … ภาเวยยะ <duration>. ตัสสะ … อะนาคามิตา. ติฏฐันตุ ภิกขะเว <duration>. The ninth is cut by the page edge.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "The formula is printed nine times and differs only in the duration. Each duration word was read separately at 3.0x and each block's closing mark was read individually, which is how the comma on the ninth was found. ท๎วินนัง and ท๎เว take the yamakkan cluster mark, per the convention settled across the book.",
+        "pages": "IMG_0427.PNG, page 157, the number printed clearly at the top centre. Arrived from page 156 and CONTINUES onto 158, where verse 201 must be completed. Three fingers appear at the right edge of the photograph; all sit outside the text block and cover no text."
+      },
+      "verses": [
+        {
+          "number": 193,
+          "page": 157,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ สัตตะ วัสสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว สัตตะ วัสสานิ.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya satta vassāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave satta vassāni.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for seven years, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone seven years, monks."
+        },
+        {
+          "number": 194,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ฉะ วัสสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ฉะ วัสสานิ.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya cha vassāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave cha vassāni.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for six years, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone six years, monks."
+        },
+        {
+          "number": 195,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ปัญจะ วัสสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ปัญจะ วัสสานิ.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya pañca vassāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave pañca vassāni.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for five years, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone five years, monks."
+        },
+        {
+          "number": 196,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ จัตตาริ วัสสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว จัตตาริ วัสสานิ.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya cattāri vassāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave cattāri vassāni.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for four years, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone four years, monks."
+        },
+        {
+          "number": 197,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ตีณิ วัสสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ตีณิ วัสสานิ.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya tīṇi vassāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave tīṇi vassāni.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for three years, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone three years, monks."
+        },
+        {
+          "number": 198,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ท๎เว วัสสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ท๎เว วัสสานิ.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya dve vassāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave dve vassāni.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for two years, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone two years, monks."
+        },
+        {
+          "number": 199,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ เอกัง วัสสัง. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว เอกัง วัสสัง.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya ekaṃ vassaṃ. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave ekaṃ vassaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for one year, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone one year, monks."
+        },
+        {
+          "number": 200,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ สัตตะ มาสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว สัตตะ มาสานิ.",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya satta māsāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave satta māsāni.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for seven months, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone seven months, monks."
+        },
+        {
+          "number": 201,
+          "pali": "โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ฉะ มาสานิ, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ […]",
+          "pali_roman": "Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya cha māsāni, tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whoever, monks, should develop these four foundations of mindfulness in this way for six months, one of two fruits may be expected for him: here and now […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ปาฏิกังขัง",
+          "pali_roman": "pāṭikaṅkhaṃ",
+          "meaning": "to be expected, confidently looked for. The word that makes this passage a guarantee rather than an encouragement"
+        },
+        {
+          "pali": "ทิฏเฐวะ ธัมเม อัญญา",
+          "pali_roman": "diṭṭheva dhamme aññā",
+          "meaning": "final knowledge here and now — arahantship in this very life, the first of the two fruits"
+        },
+        {
+          "pali": "สะติ วา อุปาทิเสเส อะนาคามิตา",
+          "pali_roman": "sati vā upādisese anāgāmitā",
+          "meaning": "or, if a trace of clinging remains, the state of non-returning. The second fruit, and the one the passage allows for"
+        },
+        {
+          "pali": "ติฏฐันตุ",
+          "pali_roman": "tiṭṭhantu",
+          "meaning": "let them stand aside; let alone. It opens the shortening — seven years set aside, then six, and so on down"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0427.PNG",
+          "issue": "‼ THE CENTRED BOLD LABEL ธัมมานุปัสสะนาสะติปัฏฐานัง AT THE TOP OF THIS SHEET CLOSES THE FOURTH FOUNDATION, and it closes verse 192, which is on page 156 — so it is recorded as an UNANCHORED page block with major: true, NOT as section_end. An unanchored block renders above every chant entry on its page, which is exactly where the book prints this one. Same treatment pages 136 and 137 gave เวทะนานุปัสสะนาสะติปัฏฐานัง and จิตตานุปัสสะนาสะติปัฏฐานัง. ⚠️ CLASSIFIED BY PARALLEL, NOT BY MEASUREMENT: it is the fourth in a set of four labels of identical construction, three of which are already in the app as major. Pixel measurement was attempted and was INCONCLUSIVE — the label's band is 73px against 84-90px for body lines, but body bands are inflated by ascenders and descenders this label happens to lack, so the comparison does not settle anything. The parallel does. Worth Josh confirming with the book open, since a major label read as minor renders at the wrong size."
+        },
+        {
+          "verse": 201,
+          "file": "IMG_0427.PNG",
+          "issue": "‼‼ THE PAGE IS CUT MID-SENTENCE. The last printed words are ปาฏิกังขัง, ทิฏเฐวะ, with clear white paper below. […] is marked in pali and pali_roman and the english stops with it. Page 158 must COMPLETE this verse. Three of the last four sheets have now ended mid-sentence."
+        },
+        {
+          "verse": 201,
+          "file": "IMG_0427.PNG",
+          "issue": "‼ THE NINTH BLOCK TAKES A COMMA AFTER ITS DURATION WHERE THE OTHER EIGHT TAKE A FULL STOP — ภาเวยยะ ฉะ มาสานิ, ตัสสะ, against ภาเวยยะ สัตตะ วัสสานิ. ตัสสะ and the seven like it. Read at 3.0x on the last line of the sheet. Reproduced as printed. It is the same kind of single-mark exception this book produced at verse 138 on page 151 and verse 184 on page 155."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0427.PNG",
+          "issue": "‼ THE BOOK SETS THIS PASSAGE AS CONTINUOUS JUSTIFIED PROSE, and the app will not. Only the first line after the label is indented; the nine statements run on without a break, wrapping wherever the measure ends. They are recorded as NINE VERSES, one per duration, because that is what the passage is a list of — but `layout` is a CHANT-level key and the other 192 verses of this chant are set as indented paragraphs, so it cannot be set to 'prose' without reflowing all of them. The cost is real and is recorded here: the app will set these nine as separate lines where the book runs them together. ⚠️ Josh's call whether that matters enough to want a per-verse or per-page prose flag."
+        },
+        {
+          "verse": 193,
+          "file": "IMG_0427.PNG",
+          "issue": "ท๎วินนัง carries the CLUSTER MARK on ท with ว following, so it is yamakkan ๎ and written ท๎วินนัง, romanised dvinnaṃ. The same applies to ท๎เว at verse 198. Both read at 3.0x, and both follow the convention settled across the whole book."
+        },
+        {
+          "verse": 199,
+          "file": "IMG_0427.PNG",
+          "issue": "THE ONE-YEAR BLOCK TAKES THE SINGULAR — เอกัง วัสสัง, not วัสสานิ, in both places it appears. Correct Pali, and recorded because eight blocks of วัสสานิ / มาสานิ around it make the singular look like a slip. Read at 3.0x."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0427.PNG",
+          "issue": "THE NINE DURATIONS RUN 7, 6, 5, 4, 3, 2, 1 YEARS, THEN 7 AND 6 MONTHS, with none skipped. Each duration word was read separately rather than inferred from the sequence, because a descending list is exactly the shape a reader completes from memory. Page 158 should carry on with five months and downward."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0427.PNG",
+          "issue": "NOTHING ELSE ON THIS SHEET. No title, no invitation, no rubric, no footnote and no rule at the foot — only the centred label at the top and the prose below it. Walked top to bottom against the photograph: page number 157 at the top centre, the label, thirty lines of prose, blank paper below the cut. Three fingers appear at the right edge, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 158,
+    "resume_from_file": "IMG_0428.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all nine verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0427.PNG.",
+    "page_scan": "agrees — one row, page 157, claiming verses 193-201 and carrying one unanchored page block. Verse 193 carries page 157; 194 to 201 carry none and sit on 157 by carry-forward. Numbering runs on from page 156 verse 192 with no gap and no overlap, and no verse is re-sent because 156 ended at a sentence boundary.",
+    "notes": "‼ THE FOURTH AND LAST FOUNDATION CLOSES HERE, with a centred bold label at the top of the sheet. Because it closes verse 192 on page 156 it is an UNANCHORED page block with major: true, as pages 136 and 137 did. ⚠️ It was classified BY PARALLEL with three labels of identical construction already in the app, not by measurement — pixel measurement was attempted and was inconclusive, and that is recorded rather than dressed up. ‼ The sutta now moves to the guarantee of fruit: seven years down to six months, nine durations, cut mid-sentence at the foot. ‼ The ninth block takes a COMMA after its duration where the other eight take a full stop. ⚠️ The book sets the whole passage as continuous prose and the app will set it as nine separate lines, because `layout` is chant-level and the rest of this chant is not prose — the cost is recorded and is Josh's call. All Pali here is an unreviewed draft until he checks it against the physical book."
+  }
+}
