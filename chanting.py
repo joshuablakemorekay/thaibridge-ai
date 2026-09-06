@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 65; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 78; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58628,6 +58628,140 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Forms in the world are dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0416.PNG]: THE SURVEY CROSSES THREE SETS OF SIX ON
+            #   THIS ONE SHEET, with nothing printed to mark the joins. รูปา
+            #   opened the six EXTERNAL BASES at the foot of page 145, so
+            #   สัททา คันธา ระสา โผฏฐัพพา ธัมมา close that set here (verses
+            #   66-70); จักขุวิญญาณัง to มะโนวิญญาณัง are the six
+            #   CONSCIOUSNESSES (71-76); จักขุสัมผัสโส and โสตะสัมผัสโส open
+            #   the six CONTACTS (77-78) and the page runs out after two. No
+            #   heading, no label and no extra space anywhere between the
+            #   three groups — the paragraphs are indented identically down
+            #   the whole sheet.
+            {
+                'number': 66,
+                'page': 146,
+                'pali': 'สัททา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Saddā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sounds in the world are dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 67,
+                'pali': 'คันธา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Gandhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Odours in the world are dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 68,
+                'pali': 'ระสา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Rasā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Tastes in the world are dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0416.PNG]: โผฏฐัพพา read at 4x — โ ผ ฏ ฐ ั พ พ า,
+            #   with ฏ's descender loop and ฐ's two-legged base both clear.
+            #   The most involved spelling on the sheet and the one most
+            #   likely to be misread at low magnification.
+            {
+                'number': 69,
+                'pali': 'โผฏฐัพพา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Phoṭṭhabbā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Tangibles in the world are dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0416.PNG]: ธัมมา HERE IS THE SIXTH SENSE OBJECT,
+            #   not a section label. The word that names this whole foundation
+            #   (ธัมมานุปัสสะนา) appears as an ordinary paragraph opener
+            #   meaning mind-objects. Recorded because a lone ธัมมา at the
+            #   head of a paragraph is exactly what a section heading looks
+            #   like in this sutta, and reading it as one would lose a verse.
+            {
+                'number': 70,
+                'pali': 'ธัมมา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Dhammā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Mind-objects in the world are dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 71,
+                'pali': 'จักขุวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Cakkhuviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Eye-consciousness in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 72,
+                'pali': 'โสตะวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Sotaviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Ear-consciousness in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0416.PNG]: ฆานะวิญญาณัง — the opening letter read
+            #   as ฆ (kho ra-khang) at 3x, not ฒ. Flagged only because the two
+            #   are close in this face at page scale and the word appears
+            #   nowhere else on the sheet to check it against.
+            {
+                'number': 73,
+                'pali': 'ฆานะวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Ghānaviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Nose-consciousness in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 74,
+                'pali': 'ชิวหาวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Jivhāviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Tongue-consciousness in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 75,
+                'pali': 'กายะวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Kāyaviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Body-consciousness in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 76,
+                'pali': 'มะโนวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Manoviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Mind-consciousness in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 77,
+                'pali': 'จักขุสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Cakkhusamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Eye-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0416.PNG]: THE PAGE ENDS AT A FULL STOP after เอตถะ
+            #   นิวีสะมานา นิวีสะติ., with clear white paper below it, so NO
+            #   […] is marked and page 147 should open a new verse rather than
+            #   complete this one. Fourth time in this chant, after pages 138,
+            #   143 and 145. Expect 147 to carry on with ฆานะสัมผัสโส.
+            {
+                'number': 78,
+                'pali': 'โสตะสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Sotasamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Ear-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
             },
         ],
     },
