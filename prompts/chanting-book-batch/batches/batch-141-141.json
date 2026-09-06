@@ -1,0 +1,183 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 140,
+        "file": "IMG_0410.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "31",
+        "starts_here": false,
+        "note": "NOT a fresh reading of page 140 — that sheet is entered, as batch-140-140.json. The row is here because verse 31 is re-sent in this batch to complete the line the page turn cut, and the completed verse still belongs to page 140, where it began."
+      },
+      {
+        "page": 141,
+        "file": "IMG_0411.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "32-36",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, one column, no footnote, no heading and no label. One word — โพชฌังเคสุ. — finishes verse 31, then five of the seven factors of awakening: mindfulness, investigation, energy, rapture, and tranquillity, which the page foot cuts at ยะถา จะ อุปปันนัสสะ. One indented paragraph per factor, as the sense bases were set. ⚠️ The factor formula has FOUR clauses, not the hindrances' five: present, absent, how it arises, and how it comes to fulfilment — ภาวะนาปาริปูริ, not ปะหานัง, because these are to be developed rather than abandoned."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Five new, plus the completion of verse 31. One factor to a verse, because the book gives each its own indented paragraph — the same setting the six sense bases had on 139-140, and not the single block the hindrances and the aggregates were given.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "This sheet breaks long compounds across line ends CONSTANTLY, and it does so two ways — with a hyphen for สะติสัมโพช-, ธัมมะวิจะยะ- and ปัสสัทธิ-, and with NO hyphen at all for the three วิริยะ splits. All are the typesetter's, so every word is written whole; the check records which was which.",
+        "pages": "IMG_0411.PNG, page 141, the number printed clearly at the top centre. Arrived from page 140 and CONTINUES onto 142."
+      },
+      "verses": [
+        {
+          "number": 31,
+          "page": 140,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu bojjhaṅgesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu bojjhaṅgesu.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the seven factors of awakening. And how does a monk dwell contemplating mind-objects in mind-objects as regards the seven factors of awakening?"
+        },
+        {
+          "number": 32,
+          "page": 141,
+          "pali": "อิธะ ภิกขะเว ภิกขุ สันตัง วา อัชฌัตตัง สะติสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง สะติสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง สะติสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง สะติสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สะติสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ สะติสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ",
+          "pali_roman": "Idha bhikkhave bhikkhu santaṃ vā ajjhattaṃ satisambojjhaṅgaṃ atthi me ajjhattaṃ satisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ satisambojjhaṅgaṃ natthi me ajjhattaṃ satisambojjhaṅgoti pajānāti. Yathā ca anuppannassa satisambojjhaṅgassa uppādo hoti, tañca pajānāti, yathā ca uppannassa satisambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti",
+          "thai": "",
+          "paiboon": "",
+          "english": "Here, monks, when the awakening factor of mindfulness is present in him, a monk knows 'the awakening factor of mindfulness is present in me'; when it is absent, he knows 'the awakening factor of mindfulness is absent in me'; and he knows how the unarisen awakening factor of mindfulness comes to arise, and how the arisen awakening factor of mindfulness comes to fulfilment by development."
+        },
+        {
+          "number": 33,
+          "pali": "สันตัง วา อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ธัมมะวิจะยะสัมโพชฌังคัสสะ อุปปาโท โหติ. ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ ธัมมะวิจะยะสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.",
+          "pali_roman": "Santaṃ vā ajjhattaṃ dhammavicayasambojjhaṅgaṃ atthi me ajjhattaṃ dhammavicayasambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ dhammavicayasambojjhaṅgaṃ natthi me ajjhattaṃ dhammavicayasambojjhaṅgoti pajānāti. Yathā ca anuppannassa dhammavicayasambojjhaṅgassa uppādo hoti. Tañca pajānāti, yathā ca uppannassa dhammavicayasambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "When the awakening factor of investigation of states is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of investigation comes to arise, and how the arisen awakening factor of investigation comes to fulfilment by development."
+        },
+        {
+          "number": 34,
+          "pali": "สันตัง วา อัชฌัตตัง วิริยะสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง วิริยะสัมโพชฌังโคติ ปะชานาติ อะสันตัง วา อัชฌัตตัง วิริยะสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง วิริยะสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ วิริยะสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ วิริยะสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.",
+          "pali_roman": "Santaṃ vā ajjhattaṃ viriyasambojjhaṅgaṃ atthi me ajjhattaṃ viriyasambojjhaṅgoti pajānāti asantaṃ vā ajjhattaṃ viriyasambojjhaṅgaṃ natthi me ajjhattaṃ viriyasambojjhaṅgoti pajānāti. Yathā ca anuppannassa viriyasambojjhaṅgassa uppādo hoti, tañca pajānāti, yathā ca uppannassa viriyasambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "When the awakening factor of energy is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of energy comes to arise, and how the arisen awakening factor of energy comes to fulfilment by development."
+        },
+        {
+          "number": 35,
+          "pali": "สันตัง วา อัชฌัตตัง ปีติสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ปีติสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ปีติสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ปีติสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ปีติสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ ปีติสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.",
+          "pali_roman": "Santaṃ vā ajjhattaṃ pītisambojjhaṅgaṃ atthi me ajjhattaṃ pītisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ pītisambojjhaṅgaṃ natthi me ajjhattaṃ pītisambojjhaṅgoti pajānāti. Yathā ca anuppannassa pītisambojjhaṅgassa uppādo hoti, tañca pajānāti, yathā ca uppannassa pītisambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "When the awakening factor of rapture is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of rapture comes to arise, and how the arisen awakening factor of rapture comes to fulfilment by development."
+        },
+        {
+          "number": 36,
+          "pali": "สันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ปัสสัทธิสัมโพชฌังคัสสะ อุปปาโท โหติ. ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ […]",
+          "pali_roman": "Santaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ atthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ natthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti. Yathā ca anuppannassa passaddhisambojjhaṅgassa uppādo hoti. Tañca pajānāti, yathā ca uppannassa […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "When the awakening factor of tranquillity is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of tranquillity comes to arise […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สัมโพชฌังคะ",
+          "pali_roman": "sambojjhaṅga",
+          "meaning": "a factor of awakening — a limb of the awakening itself, not a means to it. Seven in all, and the fourth foundation's fourth subject"
+        },
+        {
+          "pali": "ภาวะนาปาริปูริ",
+          "pali_roman": "bhāvanāpāripūri",
+          "meaning": "fulfilment by development. The word that replaces ปะหานัง here: a hindrance is known in its abandoning, an awakening factor in its coming to completion"
+        },
+        {
+          "pali": "ธัมมะวิจะยะ",
+          "pali_roman": "dhammavicaya",
+          "meaning": "investigation of states — the mind examining what it meets rather than accepting or rejecting it. The second factor"
+        },
+        {
+          "pali": "ปีติ",
+          "pali_roman": "pīti",
+          "meaning": "rapture; the gladness that rises in a settled mind, counted here as a limb of awakening rather than a distraction from it"
+        },
+        {
+          "pali": "ปัสสัทธิ",
+          "pali_roman": "passaddhi",
+          "meaning": "tranquillity, the stilling of body and mind. The fifth factor, and the one this sheet is cut in the middle of"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 31,
+          "file": "IMG_0411.PNG",
+          "issue": "COMPLETES THE LINE PAGE 140 CUT with a single word: that sheet ended …วิหะระติ, สัตตะสุ […] and this one opens โพชฌังเคสุ. on a line of its own. The verse keeps page 140 and carries `page: 140` explicitly."
+        },
+        {
+          "verse": 32,
+          "file": "IMG_0411.PNG",
+          "issue": "‼ THE MINDFULNESS BLOCK ENDS WITH NO FULL STOP AT ALL — …ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ and then the paragraph simply ends. Read at 2.7x. Every other factor block on this sheet closes ปะชานาติ. with a stop. Reproduced without one."
+        },
+        {
+          "verse": 34,
+          "file": "IMG_0411.PNG",
+          "issue": "‼ THE ENERGY BLOCK HAS NO COMMA after its first ปะชานาติ — …วิริยะสัมโพชฌังโคติ ปะชานาติ อะสันตัง วา… where mindfulness, investigation, rapture and tranquillity all print ปะชานาติ, อะสันตัง. Read at 2.7x, and it is a plain word space, not a faint mark."
+        },
+        {
+          "verse": 33,
+          "file": "IMG_0411.PNG",
+          "issue": "‼ อุปปาโท โหติ. ตัญจะ — A FULL STOP MID-CLAUSE, in the investigation block and again in the tranquillity block, where mindfulness, energy and rapture all print โหติ, ตัญจะ with a comma. Read at 7x: a round dot on the baseline with no tail, against a clear comma four words earlier on the same line. It splits ตัญจะ ปะชานาติ from the clause it answers, which is why it is worth recording rather than smoothing."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0411.PNG",
+          "issue": "‼ THIS SHEET BREAKS WORDS AT LINE ENDS BOTH WITH AND WITHOUT A HYPHEN, and the difference is not random by compound: สะติสัมโพช- / ฌังคัสสะ (twice), ธัมมะวิจะยะ- / สัมโพชฌังคัง and ปัสสัทธิ- / สัมโพชฌังโคติ and ปัสสัทธิ- / สัมโพชฌังคัสสะ all carry one; but วิริยะสัมโพ / ชฌังโคติ, วิริยะสัม / โพชฌังคัสสะ and วิริยะ / สัมโพชฌังคัสสะ carry NONE. Every one is the typesetter's, so every word is written whole per the run-on-passage rule — but the hyphenless splits are recorded because a reader checking the page will see a word ending mid-syllable with nothing to mark it."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0411.PNG",
+          "issue": "THE FACTOR FORMULA HAS FOUR CLAUSES, NOT FIVE. The hindrances took present / absent / arising / abandoning / not-arising-again; the awakening factors take present / absent / arising / ภาวะนาปาริปูริ — coming to fulfilment. There is no fifth clause and none is missing: a hindrance is watched out of the mind and a factor is watched into it. Recorded because the shorter formula looks like a dropped line beside the hindrances."
+        },
+        {
+          "verse": 36,
+          "file": "IMG_0411.PNG",
+          "issue": "THE PAGE FOOT CUTS THIS SENTENCE after ยะถา จะ อุปปันนัสสะ, before its ปัสสัทธิสัมโพชฌังคัสสะ. Marked […] and completed from page 142, where concentration and equanimity — the sixth and seventh factors — should follow, and then the subject's closing label."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0411.PNG",
+          "issue": "NO LABEL, HEADING, FOOTNOTE OR COLOPHON anywhere on this sheet — the whole page is one run of the same formula. Expected: the factors of awakening are one subject and close with a single label once all seven are given."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 142,
+    "resume_from_file": "IMG_0412.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all six verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0411.PNG.",
+    "page_scan": "agrees — two rows. Page 140 claims verse 31, re-sent here only to complete the line the turn cut and keeping its own page; page 141 claims verses 32-36, which is what lands on it. Verse 32 carries page 141; 33 to 36 carry none and sit on 141 by carry-forward. Numbering runs 31 to 36 with no gap and no overlap.",
+    "notes": "‼ Five of the seven awakening factors are in, and the same four-clause formula is printed five times with three different faults in it: mindfulness ends with NO full stop, energy has NO comma after its first ปะชานาติ, and investigation and tranquillity both put a FULL STOP mid-clause at อุปปาโท โหติ. where the others have a comma. Every block read on its own at 2.7x, the disputed stop at 7x. ‼ The sheet also splits long compounds across line ends both with a hyphen and without one, in the same paragraph run. ⚠️ All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}

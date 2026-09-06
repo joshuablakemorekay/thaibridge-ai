@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 31; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 36; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58113,13 +58113,86 @@ CHANTS = [
             #   วิหะระติ, สัตตะสุ, before its โพชฌังเคสุ. Marked […] and
             #   completed from page 141. The seven factors themselves are all
             #   overleaf.
+            # ‼ COMPLETED FROM p140: this line was cut by the page break and
+            #   is now whole. Was: ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ
+            #   ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ. กะถัญจะ ภิกขะเว
+            #   ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ […]
+            # ‼ CHECK [IMG_0411.PNG]: COMPLETES THE LINE PAGE 140 CUT with a
+            #   single word: that sheet ended …วิหะระติ, สัตตะสุ […] and this
+            #   one opens โพชฌังเคสุ. on a line of its own. The verse keeps
+            #   page 140 and carries `page: 140` explicitly.
             {
                 'number': 31,
-                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ […]',
-                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu bojjhaṅgesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu […]',
+                'page': 140,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu bojjhaṅgesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu bojjhaṅgesu.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the seven factors of awakening. And how does a monk dwell contemplating mind-objects in mind-objects as regards the seven […]',
+                'english': 'And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the seven factors of awakening. And how does a monk dwell contemplating mind-objects in mind-objects as regards the seven factors of awakening?',
+            },
+            # ‼ CHECK [IMG_0411.PNG]: ‼ THE MINDFULNESS BLOCK ENDS WITH NO
+            #   FULL STOP AT ALL — …ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ and
+            #   then the paragraph simply ends. Read at 2.7x. Every other
+            #   factor block on this sheet closes ปะชานาติ. with a stop.
+            #   Reproduced without one.
+            {
+                'number': 32,
+                'page': 141,
+                'pali': 'อิธะ ภิกขะเว ภิกขุ สันตัง วา อัชฌัตตัง สะติสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง สะติสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง สะติสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง สะติสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สะติสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ สะติสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ',
+                'pali_roman': 'Idha bhikkhave bhikkhu santaṃ vā ajjhattaṃ satisambojjhaṅgaṃ atthi me ajjhattaṃ satisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ satisambojjhaṅgaṃ natthi me ajjhattaṃ satisambojjhaṅgoti pajānāti. Yathā ca anuppannassa satisambojjhaṅgassa uppādo hoti, tañca pajānāti, yathā ca uppannassa satisambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti',
+                'thai': '',
+                'paiboon': '',
+                'english': "Here, monks, when the awakening factor of mindfulness is present in him, a monk knows 'the awakening factor of mindfulness is present in me'; when it is absent, he knows 'the awakening factor of mindfulness is absent in me'; and he knows how the unarisen awakening factor of mindfulness comes to arise, and how the arisen awakening factor of mindfulness comes to fulfilment by development.",
+            },
+            # ‼ CHECK [IMG_0411.PNG]: ‼ อุปปาโท โหติ. ตัญจะ — A FULL STOP MID-
+            #   CLAUSE, in the investigation block and again in the
+            #   tranquillity block, where mindfulness, energy and rapture all
+            #   print โหติ, ตัญจะ with a comma. Read at 7x: a round dot on the
+            #   baseline with no tail, against a clear comma four words
+            #   earlier on the same line. It splits ตัญจะ ปะชานาติ from the
+            #   clause it answers, which is why it is worth recording rather
+            #   than smoothing.
+            {
+                'number': 33,
+                'pali': 'สันตัง วา อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ธัมมะวิจะยะสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ธัมมะวิจะยะสัมโพชฌังคัสสะ อุปปาโท โหติ. ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ ธัมมะวิจะยะสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Santaṃ vā ajjhattaṃ dhammavicayasambojjhaṅgaṃ atthi me ajjhattaṃ dhammavicayasambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ dhammavicayasambojjhaṅgaṃ natthi me ajjhattaṃ dhammavicayasambojjhaṅgoti pajānāti. Yathā ca anuppannassa dhammavicayasambojjhaṅgassa uppādo hoti. Tañca pajānāti, yathā ca uppannassa dhammavicayasambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When the awakening factor of investigation of states is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of investigation comes to arise, and how the arisen awakening factor of investigation comes to fulfilment by development.',
+            },
+            # ‼ CHECK [IMG_0411.PNG]: ‼ THE ENERGY BLOCK HAS NO COMMA after
+            #   its first ปะชานาติ — …วิริยะสัมโพชฌังโคติ ปะชานาติ อะสันตัง
+            #   วา… where mindfulness, investigation, rapture and tranquillity
+            #   all print ปะชานาติ, อะสันตัง. Read at 2.7x, and it is a plain
+            #   word space, not a faint mark.
+            {
+                'number': 34,
+                'pali': 'สันตัง วา อัชฌัตตัง วิริยะสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง วิริยะสัมโพชฌังโคติ ปะชานาติ อะสันตัง วา อัชฌัตตัง วิริยะสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง วิริยะสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ วิริยะสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ วิริยะสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Santaṃ vā ajjhattaṃ viriyasambojjhaṅgaṃ atthi me ajjhattaṃ viriyasambojjhaṅgoti pajānāti asantaṃ vā ajjhattaṃ viriyasambojjhaṅgaṃ natthi me ajjhattaṃ viriyasambojjhaṅgoti pajānāti. Yathā ca anuppannassa viriyasambojjhaṅgassa uppādo hoti, tañca pajānāti, yathā ca uppannassa viriyasambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When the awakening factor of energy is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of energy comes to arise, and how the arisen awakening factor of energy comes to fulfilment by development.',
+            },
+            {
+                'number': 35,
+                'pali': 'สันตัง วา อัชฌัตตัง ปีติสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ปีติสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ปีติสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ปีติสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ปีติสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ ปีติสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Santaṃ vā ajjhattaṃ pītisambojjhaṅgaṃ atthi me ajjhattaṃ pītisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ pītisambojjhaṅgaṃ natthi me ajjhattaṃ pītisambojjhaṅgoti pajānāti. Yathā ca anuppannassa pītisambojjhaṅgassa uppādo hoti, tañca pajānāti, yathā ca uppannassa pītisambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When the awakening factor of rapture is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of rapture comes to arise, and how the arisen awakening factor of rapture comes to fulfilment by development.',
+            },
+            # ‼ CHECK [IMG_0411.PNG]: THE PAGE FOOT CUTS THIS SENTENCE after
+            #   ยะถา จะ อุปปันนัสสะ, before its ปัสสัทธิสัมโพชฌังคัสสะ. Marked
+            #   […] and completed from page 142, where concentration and
+            #   equanimity — the sixth and seventh factors — should follow,
+            #   and then the subject's closing label.
+            {
+                'number': 36,
+                'pali': 'สันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ปัสสัทธิสัมโพชฌังคัสสะ อุปปาโท โหติ. ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ […]',
+                'pali_roman': 'Santaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ atthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ natthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti. Yathā ca anuppannassa passaddhisambojjhaṅgassa uppādo hoti. Tañca pajānāti, yathā ca uppannassa […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When the awakening factor of tranquillity is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of tranquillity comes to arise […]',
             },
         ],
     },
