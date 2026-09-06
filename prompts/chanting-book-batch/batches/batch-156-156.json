@@ -1,0 +1,167 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 155,
+        "file": "IMG_0426.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "189",
+        "starts_here": false,
+        "note": "NOT a fresh reading of page 155 — that sheet is entered, as batch-155-155.json. The row is here because verse 189 is re-sent to COMPLETE the line the page turn cut at วิเนยยะ โลเก, and the completed verse still belongs to page 155, where its paragraph began."
+      },
+      {
+        "page": 156,
+        "file": "IMG_0426.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "190-192",
+        "starts_here": false,
+        "note": "After the completion, THREE paragraphs and then a centred bold label. Right concentration is given as the four jhanas in one twelve-line paragraph; the fourth noble truth is closed in a single line; the refrain closes the contemplation of mind-objects. Then จะตูสุ อะริยะสัจเจสุ สัจจะปัพพัง. is set centred and bold BELOW the last paragraph — a section_end closing the truths, recorded on verse 192, which began on this sheet. No footnote and no rule anywhere."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Four. One completes verse 189, and three are the new paragraphs — the jhana formula, the closing of the fourth truth, and the refrain. The centred label is not a verse: it goes on verse 192 as section_end, because that verse began on this sheet and the label closes it.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "Read line by line at 3.0x across both halves of the measure. The centred label was measured before being classified: it runs x 816-1344 with an optical centre of 1080, against 1085 for the full-measure body lines, so it is centred; and it stands 70px where body text stands 65px, so it is a MINOR label and takes section_end rather than section_end_major.",
+        "pages": "IMG_0426.PNG, page 156, the number printed clearly at the top centre. Completes verse 189 from page 155 and CONTINUES onto 157. A hand grips the left edge of the sheet with two fingers visible; both sit outside the text block and cover no text."
+      },
+      "verses": [
+        {
+          "number": 189,
+          "pali": "กะตะมา จะ ภิกขะเว สัมมาสะติ. อิธะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง, จิตเต จิตตานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง, ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง, อะยัง วุจจะติ ภิกขะเว สัมมาสะติ.",
+          "pali_roman": "Katamā ca bhikkhave sammāsati. Idha bhikkhave bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ, citte cittānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ, dhammesu dhammānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ, ayaṃ vuccati bhikkhave sammāsati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right mindfulness? Here, monks, a monk dwells contemplating the body in the body, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; he dwells contemplating feelings in feelings, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; he dwells contemplating mind in mind, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; he dwells contemplating mind-objects in mind-objects, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world. This, monks, is called right mindfulness."
+        },
+        {
+          "number": 190,
+          "page": 156,
+          "pali": "กะตะโม จะ ภิกขะเว สัมมาสะมาธิ, อิธะ ภิกขะเว ภิกขุ วิวิจเจวะ กาเมหิ วิวิจจะ อะกุสะเลหิ ธัมเมหิ, สะวิตักกัง สะวิจารัง วิเวกะชัมปีติสุขัง ปะฐะมัง ฌานัง อุปะสัมปัชชะ วิหะระติ. วิตักกะวิจารานัง วูปะสะมา, อัชฌัตตัง สัมปะสาทะนัง เจตะโส เอโกทิภาวัง อะวิตักกัง อะวิจารัง, สะมาธิชัมปีติสุขัง ทุติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ. ปีติยา จะ วิราคา, อุเปกขะโก จะ วิหะระติ, สะโต จะ สัมปะชาโน สุขัญจะ กาเยนะ ปะฏิสังเวเทติ, ยันตัง อะริยา อาจิกขันติ อุเปกขะโก สะติมา สุขะวิหารีติ, ตะติยัง ฌานัง อุปะสัมปัชชะ วิหะระติ. สุขัสสะ จะ ปะหานา ทุกขัสสะ จะ ปะหานา, ปุพเพวะ โสมะนัสสะโทมะนัสสานัง อัตถังคะมา, อะทุกขะมะสุขัง อุเปกขาสะติปาริสุทธิง, จะตุตถัง ฌานัง อุปะสัมปัชชะ วิหะระติ, อะยัง วุจจะติ ภิกขะเว สัมมาสะมาธิ.",
+          "pali_roman": "Katamo ca bhikkhave sammāsamādhi, idha bhikkhave bhikkhu vivicceva kāmehi vivicca akusalehi dhammehi, savitakkaṃ savicāraṃ vivekajampītisukhaṃ paṭhamaṃ jhānaṃ upasampajja viharati. Vitakkavicārānaṃ vūpasamā, ajjhattaṃ sampasādanaṃ cetaso ekodibhāvaṃ avitakkaṃ avicāraṃ, samādhijampītisukhaṃ dutiyaṃ jhānaṃ upasampajja viharati. Pītiyā ca virāgā, upekkhako ca viharati, sato ca sampajāno sukhañca kāyena paṭisaṃvedeti, yantaṃ ariyā ācikkhanti upekkhako satimā sukhavihārīti, tatiyaṃ jhānaṃ upasampajja viharati. Sukhassa ca pahānā dukkhassa ca pahānā, pubbeva somanassadomanassānaṃ atthaṅgamā, adukkhamasukhaṃ upekkhāsatipārisuddhiṃ, catutthaṃ jhānaṃ upasampajja viharati, ayaṃ vuccati bhikkhave sammāsamādhi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right concentration? Here, monks, quite secluded from sensual pleasures, secluded from unwholesome states, a monk enters and dwells in the first jhāna, which is accompanied by thought and examination, with rapture and pleasure born of seclusion. With the stilling of thought and examination, he enters and dwells in the second jhāna, which has inner confidence and unification of mind, is without thought and without examination, and has rapture and pleasure born of concentration. With the fading away of rapture he dwells equanimous, mindful and clearly comprehending, and experiences pleasure with the body; he enters and dwells in the third jhāna, of which the noble ones declare: equanimous and mindful, he dwells pleasantly. With the abandoning of pleasure and the abandoning of pain, and with the earlier disappearance of gladness and grief, he enters and dwells in the fourth jhāna, which is neither painful nor pleasant and has purity of mindfulness through equanimity. This, monks, is called right concentration."
+        },
+        {
+          "number": 191,
+          "pali": "อิทัง วุจจะติ ภิกขะเว ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง.",
+          "pali_roman": "Idaṃ vuccati bhikkhave dukkhanirodhagāminī paṭipadā ariyasaccaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "This, monks, is called the noble truth of the way leading to the cessation of suffering."
+        },
+        {
+          "number": 192,
+          "section_end": "จะตูสุ อะริยะสัจเจสุ สัจจะปัพพัง.",
+          "pali": "อิติ อัชฌัตตัง วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, วะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ. อัตถิ ธัมมาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ.",
+          "pali_roman": "Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati. Samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya paṭissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu dhammesu dhammānupassī viharati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "So he dwells contemplating mind-objects in mind-objects internally, or he dwells contemplating mind-objects in mind-objects externally, or he dwells contemplating mind-objects in mind-objects both internally and externally. He dwells contemplating the nature of arising in mind-objects, or he dwells contemplating the nature of passing away in mind-objects, or he dwells contemplating the nature of both arising and passing away in mind-objects. Or else mindfulness that there are mind-objects is established in him just to the extent necessary for knowledge and remembrance. And he dwells independent, not clinging to anything in the world. That too, monks, is how a monk dwells contemplating mind-objects in mind-objects."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ฌานัง",
+          "pali_roman": "jhānaṃ",
+          "meaning": "a state of deep collectedness. Right concentration is defined here as four of them in sequence, each named by what has fallen away from the one before"
+        },
+        {
+          "pali": "เอโกทิภาวัง",
+          "pali_roman": "ekodibhāvaṃ",
+          "meaning": "unification, the mind become single. What the second jhāna gains when thought and examination are stilled"
+        },
+        {
+          "pali": "อุเปกขาสะติปาริสุทธิง",
+          "pali_roman": "upekkhāsatipārisuddhiṃ",
+          "meaning": "purity of mindfulness through equanimity — the mark of the fourth jhāna, where pleasure and pain have both been left behind"
+        },
+        {
+          "pali": "สัจจะปัพพัง",
+          "pali_roman": "saccapabbaṃ",
+          "meaning": "the section on the truths. The centred label that closes this movement, parallel to นีวะระณะปัพพัง closing the hindrances on page 138"
+        },
+        {
+          "pali": "อะนิสสิโต",
+          "pali_roman": "anissito",
+          "meaning": "independent, not leaning on anything. The refrain that ends every movement of this sutta ends on it"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 189,
+          "file": "IMG_0426.PNG",
+          "issue": "COMPLETES THE LINE PAGE 155 CUT. That sheet ended …สะติมา, วิเนยยะ โลเก […] and this one opens อะภิชฌาโทมะนัสสัง, จิตเต. The verse keeps page 155, where its paragraph began, and carries no page key. ⚠️ THE FOUR FOUNDATIONS ARE JOINED DIFFERENTLY THE FIRST TIME THAN THE OTHER THREE: …โลเก อะภิชฌาโทมะนัสสัง เวทะนาสุ has NO comma before the next foundation, while …อะภิชฌาโทมะนัสสัง, จิตเต and …อะภิชฌาโทมะนัสสัง, ธัมเมสุ and …อะภิชฌาโทมะนัสสัง, อะยัง all take one. Read at 3.0x. Three commas and one bare join, in one sentence."
+        },
+        {
+          "verse": 190,
+          "file": "IMG_0426.PNG",
+          "issue": "‼ A COMMA CLOSES THE OPENING QUESTION HERE, not a full stop — กะตะโม จะ ภิกขะเว สัมมาสะมาธิ, อิธะ ภิกขะเว. That makes THREE different marks across the eight limbs of the path: six take a full stop (verses 183, 185, 186, 187, 188, 189), verse 184 takes NOTHING, and this one takes a comma. Read at 3.0x. Reproduced as printed; the eight are otherwise set to one pattern, which is what makes the two exceptions worth recording."
+        },
+        {
+          "verse": 190,
+          "file": "IMG_0426.PNG",
+          "issue": "วิเวกะชัมปีติสุขัง and สะมาธิชัมปีติสุขัง are printed as SINGLE WORDS with ชัม, where most editions set vivekajaṃ pītisukhaṃ and samādhijaṃ pītisukhaṃ as two. Read at 3.0x on both. Transliterated faithfully as vivekajampītisukhaṃ and samādhijampītisukhaṃ rather than silently split, per the rule that the printed form wins over the standard one."
+        },
+        {
+          "verse": 191,
+          "file": "IMG_0426.PNG",
+          "issue": "‼ THIS CLOSING LINE HAS A FULL STOP, and the THIRD truth's identical line on page 154 verse 181 does NOT. The second truth's line, verse 119 on page 150, does. So of the three truths closed so far the book punctuates two with a stop and one without. Read at 3.0x. Neither was levelled to the other."
+        },
+        {
+          "verse": 192,
+          "file": "IMG_0426.PNG",
+          "issue": "‼ THE CENTRED LABEL จะตูสุ อะริยะสัจเจสุ สัจจะปัพพัง. CLOSES THE TRUTHS and is recorded as section_end on this verse, which began on this sheet — so the same-sheet rule applies and no unanchored page block is needed. MEASURED BEFORE BEING CLASSIFIED: it runs x 816-1344 with an optical centre of 1080 against 1085 for the full-measure body lines, so it is centred; and it stands 70px against 65px for body text, a ratio of 1.08, so it is a MINOR label like นีวะระณะปัพพัง and NOT the major kind page 135 used, which was about half again as large. The foundation itself should still close with a major label further on."
+        },
+        {
+          "verse": 192,
+          "file": "IMG_0426.PNG",
+          "issue": "THE REFRAIN'S PUNCTUATION ON THIS SHEET, read mark by mark at 3.0x because it cannot be carried between verses: comma, comma, FULL STOP after the third วิหะระติ; comma, comma, FULL STOP after the second group; then โหติ, ยาวะเทวะ … ปะติสสะติมัตตายะ. with a full stop; then วิหะระติ, … อุปาทิยะติ, … วิหะระติ. ปะติสสะติ is printed with ต, not the ฏ of paṭissati in most editions, matching how this book has set it throughout."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0426.PNG",
+          "issue": "‼ THE FOURTH FOUNDATION IS NOW NEARLY DONE. This sheet closes the fourth noble truth, and with it the fifth and last subject of the contemplation of mind-objects. The label closes the truths only; the FOUNDATION should close with its own major label on 157, as the body did on 135 and the feelings on 136. Recorded so the next sheet is read expecting a label, and its size measured rather than assumed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0426.PNG",
+          "issue": "NOTHING ELSE ON THIS SHEET. No title, no invitation, no section heading, no rubric, no footnote and no rule at the foot. Walked top to bottom against the photograph: page number 156 at the top centre, the completion, three paragraphs, the centred label, blank paper. A hand grips the left edge with two fingers visible, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 157,
+    "resume_from_file": "IMG_0427.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all four verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0426.PNG.",
+    "page_scan": "agrees — two rows. Page 155 claims verse 189, re-sent here only to complete the line the turn cut and keeping its own page by carry-forward; page 156 claims verses 190-192, which is what lands on it. Verse 190 carries page 156; 191 and 192 carry none and sit on 156 by carry-forward. Numbering runs 189 to 192 with no gap and no overlap.",
+    "notes": "‼ THE FOUR NOBLE TRUTHS CLOSE ON THIS SHEET, and a centred bold label closes them: จะตูสุ อะริยะสัจเจสุ สัจจะปัพพัง. It was MEASURED before being classified — centred to within 5px of the body's optical centre, and 70px against 65px, so a MINOR section_end rather than the major kind. ‼ Right concentration takes a COMMA after its opening question where six of the eight limbs take a full stop and one takes nothing — three different marks in one formula. ‼ The fourth truth's closing line HAS a full stop where the third truth's identical line on page 154 does not. ⚠️ วิเวกะชัมปีติสุขัง is printed as one word where most editions set two. ⚠️ The four foundations are joined with three commas and one bare join inside verse 189. Expect the FOUNDATION itself to close with a MAJOR label on 157 — measure it. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
