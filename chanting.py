@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 155; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 168; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -59721,6 +59721,156 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Perception of tangibles in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            # ‼ CHECK [IMG_0423.PNG]: PAGE 153 — ‼ ALL THIRTEEN PARAGRAPHS
+            #   CLOSE WITH A FULL STOP — checked one by one at 2.9x rather
+            #   than assumed, the same reading made of page 152. Recorded as a
+            #   POSITIVE finding: page 151 punctuated its ninth paragraph with
+            #   a comma in exactly this position, so the closing mark is now
+            #   something this sutta has to be read for on every sheet, and a
+            #   clean result is only worth anything if it was actually looked
+            #   at. Round dots on the baseline throughout, no tails.
+            # ‼ CHECK [IMG_0423.PNG]: PAGE 153 — ‼ THIS SHEET CLOSES THREE
+            #   SETS, which no earlier sheet in either run has done. The six
+            #   PERCEPTIONS finish at verse 156 — the other five were 151-155
+            #   on page 152. Then the six VOLITIONS run COMPLETE, 157 to 162.
+            #   Then the six CRAVINGS run COMPLETE, 163 to 168. Two whole sets
+            #   of six on one sheet is new; every sheet from 146 onward has
+            #   straddled its sets. Still no heading, no label and no extra
+            #   space anywhere between them.
+            # ‼ CHECK [IMG_0423.PNG]: PAGE 153 — NOTHING ON THIS SHEET BUT
+            #   BODY TEXT. No title, no invitation, no section heading, no
+            #   section_end label, no rubric, no footnote and no rule at the
+            #   foot. Walked top to bottom against the photograph: page number
+            #   153 at the top centre, thirteen paragraphs, blank paper. Two
+            #   fingers at the right edge and a thumb at the foot, all outside
+            #   the text block.
+            # ‼ CHECK [IMG_0423.PNG]: NOT A COMPLETION — page 152 ended at a
+            #   full stop, so this verse OPENS a paragraph rather than
+            #   finishing one, and the batch carries no completion row and no
+            #   […]. Tenth time in this chant.
+            {
+                'number': 156,
+                'page': 153,
+                'pali': 'ธัมมะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Dhammasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of mind-objects in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 157,
+                'pali': 'รูปะสัญเจตะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Rūpasañcetanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Volition regarding forms in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 158,
+                'pali': 'สัททะสัญเจตะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Saddasañcetanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Volition regarding sounds in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 159,
+                'pali': 'คันธะสัญเจตะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Gandhasañcetanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Volition regarding odours in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 160,
+                'pali': 'ระสะสัญเจตะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Rasasañcetanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Volition regarding tastes in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            # ‼ CHECK [IMG_0423.PNG]: โผฏฐัพพะสัญเจตะนา is the longest term on
+            #   the sheet and its paragraph wraps one word later than the
+            #   rest, so the second line opens ปะหิยยะมานา ปะหิยยะติ where the
+            #   others open ปะหิยยะติ. That is the measure, not the text — the
+            #   words and their order are identical to the other twelve. The
+            #   same thing happened to the same word at verse 99 on page 148.
+            {
+                'number': 161,
+                'pali': 'โผฏฐัพพะสัญเจตะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Phoṭṭhabbasañcetanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Volition regarding tangibles in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 162,
+                'pali': 'ธัมมะสัญเจตะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Dhammasañcetanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Volition regarding mind-objects in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            # ‼ CHECK [IMG_0423.PNG]: ‼ ตัณหา STANDS ON BOTH SIDES OF THE
+            #   SENTENCE AGAIN — รูปะตัณหา โลเก … เอตเถสา ตัณหา ปะหิยยะมานา.
+            #   Craving for forms is itself named as a place where craving is
+            #   abandoned and ceases. Read at 2.7x and reproduced as printed.
+            #   The same construction was flagged at verse 101 on page 148 in
+            #   the first run; it reads as a doubled word and is not one.
+            {
+                'number': 163,
+                'pali': 'รูปะตัณหา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Rūpataṇhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Craving for forms in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 164,
+                'pali': 'สัททะตัณหา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Saddataṇhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Craving for sounds in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 165,
+                'pali': 'คันธะตัณหา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Gandhataṇhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Craving for odours in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 166,
+                'pali': 'ระสะตัณหา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Rasataṇhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Craving for tastes in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 167,
+                'pali': 'โผฏฐัพพะตัณหา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Phoṭṭhabbataṇhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Craving for tangibles in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            # ‼ CHECK [IMG_0423.PNG]: THE PAGE ENDS AT A FULL STOP after เอตถะ
+            #   นิรุชฌะมานา นิรุชฌะติ., with clear white paper below it, so NO
+            #   […] is marked and page 154 should open a new verse. Eleventh
+            #   time in this chant. Two sets remain in the cessation survey —
+            #   the six thoughts and the six examinations, twelve items — so
+            #   154 should carry them and then close the third truth.
+            {
+                'number': 168,
+                'pali': 'ธัมมะตัณหา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Dhammataṇhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Craving for mind-objects in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
             },
         ],
     },
