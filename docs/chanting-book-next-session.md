@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-143 went in.
+144 went in.
 
 ## Read first, in this order
 
@@ -21,21 +21,21 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 286 pages.** The gaps are
-**144–174, 179–182, 192, 246, 248 and 278** — and 144 and 179 are the live
+As of 2026-09-05: **287 chants across 287 pages.** The gaps are
+**145–174, 179–182, 192, 246, 248 and 278** — and 145 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 48, page 143 | **page 144 = IMG_0414** |
+| `mahasatipatthana-sutta-patho` | 55, page 144 | **page 145 = IMG_0415** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
 MIND-OBJECTS, the FOURTH and last foundation, at its FIFTH and LAST subject —
 the four noble truths. The first truth is defined and each of its terms taken
-in turn (143); three truths remain.
+in turn (143-144); three truths remain.
 The body (135), the feelings (136) and the mind (137) are all CLOSED, and so
 are this foundation's first four subjects: hindrances (138), aggregates (139),
 sense bases (140), factors of awakening (142).
@@ -58,6 +58,11 @@ same printed line. All three are reproduced as printed and romanised faithfully
 ⚠️ **This is now a pattern, not three oddities.** Worth putting to Josh as ONE
 question against the physical book rather than three — and worth expecting
 again wherever the canon has ḷ.
+
+**A SEPARATE kind of oddity, not this one:** page 144 prints `อะมัจฉา` where
+the canon has `อะมัจจา` (*amaccā*). จ and ฉ are NOT lookalikes — ฉ carries an
+obvious upper-left flag — so that reads as the book's own slip rather than a
+house habit. Reproduced as `amacchā` and flagged separately.
 
 ## ‼ A RECITATION-PORTION MARKER shares a line with a section label
 

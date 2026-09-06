@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 48; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 55; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58398,6 +58398,105 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'And what, monks, is despair? The distress and despair of one visited by some misfortune or other, touched by some painful state or other; the state of distress, the state of despair — this, monks, is called despair.',
+            },
+            # ‼ CHECK [IMG_0414.PNG]: NOT A COMPLETION — page 143 ended at a
+            #   full stop after อะยัง วุจจะติ ภิกขะเว อุปายาโส., so this verse
+            #   OPENS rather than finishes one and the batch carries no
+            #   completion row. Second time in this chant, after page 139.
+            # ‼ CHECK [IMG_0414.PNG]: THE NEGATED DEFINITION MIRRORS THE
+            #   POSITIVE ONE WORD FOR WORD — อะนิฏฐา อะกันตา อะมะนาปา against
+            #   อิฏฐา กันตา มะนาปา, and อะสังคะติ อะสะมาคะโม อะสะโมธานัง
+            #   อะมิสสีภาโว against สังคะติ สะมาคะโม สะโมธานัง มิสสีภาโว. Both
+            #   lists read separately rather than one derived from the other,
+            #   and they agree exactly apart from the อะ- prefixes.
+            {
+                'number': 49,
+                'page': 144,
+                'pali': 'กะตะโม จะ ภิกขะเว อัปปิเยหิ สัมปะโยโค ทุกโข. อิธะ ภิกขะเว ยัสสะ เต โหนติ, อะนิฏฐา อะกันตา อะมะนาปา, รูปา สัททา คันธา ระสา โผฏฐัพพา, เย วา ปะนัสสะ เต โหนติ อะนัตถะกามา อะหิตะกามา อะผาสุกามา อะโยคักเขมะกามา, ยา เตหิ สังคะติ สะมาคะโม สะโมธานัง มิสสีภาโว, อะยัง วุจจะติ ภิกขะเว อัปปิเยหิ สัมปะโยโค ทุกโข.',
+                'pali_roman': 'Katamo ca bhikkhave appiyehi sampayogo dukkho. Idha bhikkhave yassa te honti, aniṭṭhā akantā amanāpā, rūpā saddā gandhā rasā phoṭṭhabbā, ye vā panassa te honti anatthakāmā ahitakāmā aphāsukāmā ayogakkhemakāmā, yā tehi saṅgati samāgamo samodhānaṃ missībhāvo, ayaṃ vuccati bhikkhave appiyehi sampayogo dukkho.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is union with what is disliked being suffering? Here, monks, whoever has sights, sounds, odours, tastes and tangibles that are unwished for, unwanted, disagreeable; or whoever has those who desire his loss, his harm, his discomfort, his insecurity — the meeting, coming together, association and mingling with them: this, monks, is called union with what is disliked being suffering.',
+            },
+            # ‼ CHECK [IMG_0414.PNG]: ‼ อะมัจฉา WITH ฉ, where the canon has
+            #   อะมัจจา (amaccā, companions). Read at 7x after several failed
+            #   crops: the fifth glyph is จ and the sixth carries the upper-
+            #   left flag of ฉ, plainly. Reproduced as printed and romanised
+            #   amacchā. ⚠️ Unlike the พ/ฬ cases this is not a lookalike pair
+            #   — จ and ฉ are easy to tell apart — so it reads as the book's
+            #   own slip rather than a house habit. Worth checking against the
+            #   physical page.
+            # ‼ CHECK [IMG_0414.PNG]: เต โหนติ. อัตถะกามา — A FULL STOP, where
+            #   verse 49's parallel line reads เต โหนติ อะนัตถะกามา with NO
+            #   mark at all. The two definitions are otherwise word-for-word
+            #   mirrors, one negated, so the stop is a difference in the
+            #   printing rather than in the sense. Verse 50 also opens ทุกโข,
+            #   with a comma where verse 49 opens ทุกโข. with a full stop.
+            {
+                'number': 50,
+                'pali': 'กะตะโม จะ ภิกขะเว ปิเยหิ วิปปะโยโค ทุกโข, อิธะ ภิกขะเว ยัสสะ เต โหนติ อิฏฐา กันตา มะนาปา, รูปา สัททา คันธา ระสา โผฏฐัพพา, เย วา ปะนัสสะ เต โหนติ. อัตถะกามา หิตะกามา ผาสุกามา โยคักเขมะกามา, มาตา วา ปิตา วา, ภาตา วา ภะคินี วา, มิตตา วา อะมัจฉา วา ญาติสาโลหิตา วา, ยา เตหิ อะสังคะติ อะสะมาคะโม อะสะโมธานัง อะมิสสีภาโว, อะยัง วุจจะติ ภิกขะเว ปิเยหิ วิปปะโยโค ทุกโข.',
+                'pali_roman': 'Katamo ca bhikkhave piyehi vippayogo dukkho, idha bhikkhave yassa te honti iṭṭhā kantā manāpā, rūpā saddā gandhā rasā phoṭṭhabbā, ye vā panassa te honti. Atthakāmā hitakāmā phāsukāmā yogakkhemakāmā, mātā vā pitā vā, bhātā vā bhaginī vā, mittā vā amacchā vā ñātisālohitā vā, yā tehi asaṅgati asamāgamo asamodhānaṃ amissībhāvo, ayaṃ vuccati bhikkhave piyehi vippayogo dukkho.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is separation from what is liked being suffering? Here, monks, whoever has sights, sounds, odours, tastes and tangibles that are wished for, wanted, agreeable; or whoever has those who desire his good, his benefit, his comfort, his security — mother or father, brother or sister, friends, companions or kinsmen — the not meeting, not coming together, not associating and not mingling with them: this, monks, is called separation from what is liked being suffering.',
+            },
+            # ‼ CHECK [IMG_0414.PNG]: ‼ FIVE SEPARATE INDENTED PARAGRAPHS FOR
+            #   ONE TERM. The fifth kind of suffering — not getting what one
+            #   wants — is not defined once but five times over, once for each
+            #   thing that cannot be wished away: birth, ageing, sickness,
+            #   death, and sorrow-and-the-rest. Each is indented, so each is
+            #   its own verse. Read off the indentation on a curved sheet, so
+            #   worth confirming.
+            {
+                'number': 51,
+                'pali': 'กะตะมัญจะ ภิกขะเว ยัมปิจฉัง นะ ละภะติ ตัมปิ ทุกขัง, ชาติธัมมานัง ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ ชาติธัมมา อัสสามะ, นะ จะ วะตะ โน ชาติ อาคัจเฉยยาติ, นะ โข ปะเนตัง อิจฉายะ ปัตตัพพัง, อิทัมปิ ยัมปิจฉัง นะ ละภะติ, ตัมปิ ทุกขัง.',
+                'pali_roman': 'Katamañca bhikkhave yampicchaṃ na labhati tampi dukkhaṃ, jātidhammānaṃ bhikkhave sattānaṃ evaṃ icchā uppajjati. Aho vata mayaṃ na jātidhammā assāma, na ca vata no jāti āgaccheyyāti, na kho panetaṃ icchāya pattabbaṃ, idampi yampicchaṃ na labhati, tampi dukkhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And what, monks, is not getting what one wants being suffering? In beings subject to birth, monks, this wish arises: 'Oh that we were not subject to birth, that birth might not come to us!' But this is not to be got by wishing. This too is not getting what one wants, and that is suffering.",
+            },
+            {
+                'number': 52,
+                'pali': 'ชะราธัมมานัง ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ ชะราธัมมา อัสสามะ, นะ จะ วะตะ โน ชะรา อาคัจเฉยยาติ, นะ โข ปะเนตัง อิจฉายะ ปัตตัพพัง, อิทัมปิ ยัมปิจฉัง นะ ละภะติ, ตัมปิ ทุกขัง.',
+                'pali_roman': 'Jarādhammānaṃ bhikkhave sattānaṃ evaṃ icchā uppajjati. Aho vata mayaṃ na jarādhammā assāma, na ca vata no jarā āgaccheyyāti, na kho panetaṃ icchāya pattabbaṃ, idampi yampicchaṃ na labhati, tampi dukkhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "In beings subject to ageing, monks, this wish arises: 'Oh that we were not subject to ageing, that ageing might not come to us!' But this is not to be got by wishing. This too is not getting what one wants, and that is suffering.",
+            },
+            # ‼ CHECK [IMG_0414.PNG]: ‼ THE SICKNESS WISH TAKES A PLURAL VERB
+            #   where the other four take a singular: …โน พ๎ยาธี อาคัจเฉยยุนติ
+            #   against ชาติ / ชะรา / มะระณัง อาคัจเฉยยาติ. Read at 2.7x. It
+            #   is correct Pali — พ๎ยาธี is a plural nominative, sicknesses
+            #   rather than sickness — and the long ี is visible. Recorded
+            #   because one differing verb inside five otherwise identical
+            #   paragraphs is exactly what a later pass would regularise.
+            {
+                'number': 53,
+                'pali': 'พ๎ยาธิธัมมานัง ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ พ๎ยาธิธัมมา อัสสามะ, นะ จะ วะตะ โน พ๎ยาธี อาคัจเฉยยุนติ, นะ โข ปะเนตัง อิจฉายะ ปัตตัพพัง, อิทัมปิ ยัมปิจฉัง นะ ละภะติ, ตัมปิ ทุกขัง.',
+                'pali_roman': 'Byādhidhammānaṃ bhikkhave sattānaṃ evaṃ icchā uppajjati. Aho vata mayaṃ na byādhidhammā assāma, na ca vata no byādhī āgaccheyyunti, na kho panetaṃ icchāya pattabbaṃ, idampi yampicchaṃ na labhati, tampi dukkhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "In beings subject to sickness, monks, this wish arises: 'Oh that we were not subject to sickness, that sicknesses might not come to us!' But this is not to be got by wishing. This too is not getting what one wants, and that is suffering.",
+            },
+            {
+                'number': 54,
+                'pali': 'มะระณะธัมมานัง ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ มะระณะธัมมา อัสสามะ, นะ จะ วะตะ โน มะระณัง อาคัจเฉยยาติ, นะ โข ปะเนตัง อิจฉายะ ปัตตัพพัง, อิทัมปิ ยัมปิจฉัง นะ ละภะติ, ตัมปิ ทุกขัง.',
+                'pali_roman': 'Maraṇadhammānaṃ bhikkhave sattānaṃ evaṃ icchā uppajjati. Aho vata mayaṃ na maraṇadhammā assāma, na ca vata no maraṇaṃ āgaccheyyāti, na kho panetaṃ icchāya pattabbaṃ, idampi yampicchaṃ na labhati, tampi dukkhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "In beings subject to death, monks, this wish arises: 'Oh that we were not subject to death, that death might not come to us!' But this is not to be got by wishing. This too is not getting what one wants, and that is suffering.",
+            },
+            # ‼ CHECK [IMG_0414.PNG]: THE PAGE FOOT CUTS THIS SENTENCE after
+            #   นะ โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมา, mid-compound and
+            #   before อัสสามะ. Marked […] and completed from page 145, where
+            #   the first noble truth should also close and the second open.
+            {
+                'number': 55,
+                'pali': 'โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมานัง ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมา […]',
+                'pali_roman': 'Sokaparidevadukkhadomanassupāyāsadhammānaṃ bhikkhave sattānaṃ evaṃ icchā uppajjati. Aho vata mayaṃ na sokaparidevadukkhadomanassupāyāsadhammā […]',
+                'thai': '',
+                'paiboon': '',
+                'english': "In beings subject to sorrow, lamentation, pain, grief and despair, monks, this wish arises: 'Oh that we were not subject to sorrow, lamentation, pain, grief and despair […]",
             },
         ],
     },
