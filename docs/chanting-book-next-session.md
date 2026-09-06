@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-145 went in.
+146 went in.
 
 ## Read first, in this order
 
@@ -21,22 +21,24 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 288 pages.** The gaps are
-**146–174, 179–182, 192, 246, 248 and 278** — and 146 and 179 are the live
+As of 2026-09-06: **287 chants across 289 pages.** The gaps are
+**147–174, 179–182, 192, 246, 248 and 278** — and 147 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 65, page 145 | **page 146 = IMG_0416** |
+| `mahasatipatthana-sutta-patho` | 78, page 146 | **page 147 = IMG_0417** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
 MIND-OBJECTS, the FOURTH and last foundation, at its FIFTH and LAST subject —
 the four noble truths. The FIRST truth is CLOSED (145) and the SECOND is
 running — craving, its three kinds, and a long survey of every place craving
-lodges, which is only seven items in. Two truths remain after it.
+lodges. The survey has crossed three sets of six (external bases,
+consciousnesses, contacts) and is two contacts in at the foot of 146. Two
+truths remain after it.
 The body (135), the feelings (136) and the mind (137) are all CLOSED, and so
 are this foundation's first four subjects: hindrances (138), aggregates (139),
 sense bases (140), factors of awakening (142).
@@ -141,6 +143,23 @@ a page, and never `git checkout chanting.py`** — see the rule further down.
 - **Page 77 opens a whole new part of the book** — `สิบสองตำนาน`, the Twelve
   Tamnan parittas appointed for evening chanting. Everything from there is
   paritta until the book says otherwise.
+
+## 🤝 The collision on 146 — and the one good thing that came of it
+
+On 2026-09-06 two sessions read `IMG_0416` independently within minutes of each
+other. One generated its thirteen verses from a single verified tail string;
+the other typed all thirteen out by hand. **The two agree character for
+character, every comma included.**
+
+That is worth more than either reading alone, and it answered a question the
+first session had flagged as open — whether generating repeated text is
+acceptable. On this page it is *proved* correct, not merely unchallenged.
+
+**But do not plan to work this way.** `chanting.py` is one file and both
+sessions write it. What saved page 146 was `apply_batch`'s overlap guard
+refusing a second apply; nothing would have saved two concurrent *commits* of
+the same file. **One session works `chanting.py` at a time.** If a second is
+needed, give it work that does not touch that file at all.
 
 ## 📋 A FULL REVIEW PASS IS PLANNED FOR THE END — don't do it piecemeal
 
