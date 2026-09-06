@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 41; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 48; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58284,13 +58284,120 @@ CHANTS = [
             #   ทุกขา is feminine plural. Four items, three endings, all
             #   correct Pali. Recorded because it looks like inconsistency in
             #   a list that is otherwise word-for-word parallel.
+            # ‼ COMPLETED FROM p142: this line was cut by the page break and
+            #   is now whole. Was: กะตะมัญจะ ภิกขะเว ทุกขัง อะริยะสัจจัง.
+            #   ชาติปิ ทุกขา, ชะราปิ ทุกขา, มะระณัมปิ ทุกขัง,
+            #   โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา, อัปปิเยหิ […]
+            # ‼ CHECK [IMG_0413.PNG]: COMPLETES THE LINE PAGE 142 CUT. That
+            #   sheet ended …โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา,
+            #   อัปปิเยหิ […] and this one opens สัมปะโยโค ทุกโข,. The verse
+            #   keeps page 142 and carries `page: 142` explicitly.
             {
                 'number': 41,
-                'pali': 'กะตะมัญจะ ภิกขะเว ทุกขัง อะริยะสัจจัง. ชาติปิ ทุกขา, ชะราปิ ทุกขา, มะระณัมปิ ทุกขัง, โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา, อัปปิเยหิ […]',
-                'pali_roman': 'Katamañca bhikkhave dukkhaṃ ariyasaccaṃ. Jātipi dukkhā, jarāpi dukkhā, maraṇampi dukkhaṃ, sokaparidevadukkhadomanassupāyāsāpi dukkhā, appiyehi […]',
+                'page': 142,
+                'pali': 'กะตะมัญจะ ภิกขะเว ทุกขัง อะริยะสัจจัง. ชาติปิ ทุกขา, ชะราปิ ทุกขา, มะระณัมปิ ทุกขัง, โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา, อัปปิเยหิ สัมปะโยโค ทุกโข, ปิเยหิ วิปปะโยโค ทุกโข, ยัมปิจฉัง นะ ละภะติ, ตัมปิ ทุกขัง. สังขิตเตนะ ปัญจุปาทานักขันธา ทุกขา.',
+                'pali_roman': 'Katamañca bhikkhave dukkhaṃ ariyasaccaṃ. Jātipi dukkhā, jarāpi dukkhā, maraṇampi dukkhaṃ, sokaparidevadukkhadomanassupāyāsāpi dukkhā, appiyehi sampayogo dukkho, piyehi vippayogo dukkho, yampicchaṃ na labhati, tampi dukkhaṃ. Saṅkhittena pañcupādānakkhandhā dukkhā.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'And what, monks, is the noble truth of suffering? Birth is suffering, ageing is suffering, death is suffering; sorrow, lamentation, pain, grief and despair are suffering; […]',
+                'english': 'And what, monks, is the noble truth of suffering? Birth is suffering, ageing is suffering, death is suffering; sorrow, lamentation, pain, grief and despair are suffering; union with what is disliked is suffering, separation from what is liked is suffering, not getting what one wants is suffering. In short, the five aggregates of clinging are suffering.',
+            },
+            # ‼ CHECK [IMG_0413.PNG]: อะยัง / อิทัง FOLLOWS THE GENDER OF THE
+            #   TERM DEFINED and is not a slip: ชาติ, ชะรา, โสโก, ปะริเทโว and
+            #   อุปายาโส take อะยัง; มะระณัง, ทุกขัง and โทมะนัสสัง take
+            #   อิทัง. Eight definitions, two demonstratives, all correct.
+            #   Recorded because it reads as inconsistency in a set of
+            #   otherwise identical closing formulas — the same shape page
+            #   142's ทุกขา/ทุกขัง list raised.
+            {
+                'number': 42,
+                'page': 143,
+                'pali': 'กะตะมา จะ ภิกขะเว ชาติ. ยา เตสัง เตสัง สัตตานัง ตัมหิ ตัมหิ สัตตะนิกาเย ชาติ สัญชาติ โอกกันติ, นิพพัตติ อะภินิพพัตติ, ขันธานัง ปาตุภาโว, อายะตะนานัง ปะฏิลาโภ, อะยัง วุจจะติ ภิกขะเว ชาติ.',
+                'pali_roman': 'Katamā ca bhikkhave jāti. Yā tesaṃ tesaṃ sattānaṃ tamhi tamhi sattanikāye jāti sañjāti okkanti, nibbatti abhinibbatti, khandhānaṃ pātubhāvo, āyatanānaṃ paṭilābho, ayaṃ vuccati bhikkhave jāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is birth? The birth of beings into this or that order of beings, their being born, their descent into the womb, their production, their coming forth, the appearing of the aggregates, the obtaining of the sense bases — this, monks, is called birth.',
+            },
+            {
+                'number': 43,
+                'pali': 'กะตะมา จะ ภิกขะเว ชะรา. ยา เตสัง เตสัง สัตตานัง ตัมหิ ตัมหิ สัตตะนิกาเย ชะรา ชีระณะตา, ขัณฑิจจัง ปาลิจจัง วะลิตะจะตา, อายุโน สังหานิ อินท๎ริยานัง ปะริปาโก, อะยัง วุจจะติ ภิกขะเว ชะรา.',
+                'pali_roman': 'Katamā ca bhikkhave jarā. Yā tesaṃ tesaṃ sattānaṃ tamhi tamhi sattanikāye jarā jīraṇatā, khaṇḍiccaṃ pāliccaṃ valitacatā, āyuno saṅhāni indriyānaṃ paripāko, ayaṃ vuccati bhikkhave jarā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is ageing? The ageing of beings in this or that order of beings, their growing old, brokenness of teeth, greyness of hair, wrinkling of skin, the dwindling of the life span, the wearing out of the faculties — this, monks, is called ageing.',
+            },
+            # ‼ CHECK [IMG_0413.PNG]: ‼ กะเพวะรัสสะ WITH พ, WHERE THE CANON
+            #   HAS ฬ (kaḷevarassa). Read at 7x: the letter after เ has no
+            #   ascender, against the clear ascender on the ป of นิกเขโป four
+            #   words later on the same line. ⚠️ THIS IS THE THIRD TIME this
+            #   printer has set พ in a ฬ position — เขโพ and มูโตพี on page
+            #   131 were the first two, and both were settled the same way at
+            #   14x. Reproduced as printed and romanised kapevarassa. It is
+            #   now enough of a pattern to be worth telling Josh as one
+            #   question rather than three.
+            # ‼ CHECK [IMG_0413.PNG]: ตัมหา ตัมหา สัตตะนิกายา IN THE DEATH
+            #   DEFINITION, against ตัมหิ ตัมหิ สัตตะนิกาเย in birth and
+            #   ageing. Ablative for the passing OUT of an order of beings,
+            #   locative for birth and ageing WITHIN one. Correct Pali, and
+            #   reproduced; it is the kind of one-letter difference a later
+            #   pass would level.
+            {
+                'number': 44,
+                'pali': 'กะตะมัญจะ ภิกขะเว มะระณัง. ยา เตสัง เตสัง สัตตานัง ตัมหา ตัมหา สัตตะนิกายา จุติ จะวะนะตา เภโท อันตะระธานัง, มัจจุ มะระณัง กาละกิริยา, ขันธานัง เภโท, กะเพวะรัสสะ นิกเขโป, ชีวิตินท๎ริยัสสะ อุปัจเฉโท, อิทัง วุจจะติ ภิกขะเว มะระณัง.',
+                'pali_roman': 'Katamañca bhikkhave maraṇaṃ. Yā tesaṃ tesaṃ sattānaṃ tamhā tamhā sattanikāyā cuti cavanatā bhedo antaradhānaṃ, maccu maraṇaṃ kālakiriyā, khandhānaṃ bhedo, kapevarassa nikkhepo, jīvitindriyassa upacchedo, idaṃ vuccati bhikkhave maraṇaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is death? The passing of beings out of this or that order of beings, their passing away, breaking up, disappearance, dying, death, completion of time, the breaking up of the aggregates, the laying down of the body, the cutting off of the life faculty — this, monks, is called death.',
+            },
+            # ‼ CHECK [IMG_0413.PNG]: SORROW, LAMENTATION AND DESPAIR ALL USE
+            #   THE SAME OPENING FORMULA, word for word, and all three were
+            #   read separately rather than copied: อัญญะตะรัญญะตะเรนะ
+            #   พ๎ยะสะเนนะ สะมันนาคะตัสสะ อัญญะตะรัญญะตะเรนะ ทุกขะธัมเมนะ
+            #   ผุฏฐัสสะ. They agree exactly, which on this sheet is worth
+            #   saying — the last four pages have had no two repetitions
+            #   alike.
+            {
+                'number': 45,
+                'pali': 'กะตะโม จะ ภิกขะเว โสโก. โย โข ภิกขะเว อัญญะตะรัญญะตะเรนะ พ๎ยะสะเนนะ สะมันนาคะตัสสะ อัญญะตะรัญญะตะเรนะ ทุกขะธัมเมนะ ผุฏฐัสสะ โสโก โสจะนา โสจิตัตตัง, อันโตโสโก อันโตปะริโสโก, อะยัง วุจจะติ ภิกขะเว โสโก.',
+                'pali_roman': 'Katamo ca bhikkhave soko. Yo kho bhikkhave aññataraññatarena byasanena samannāgatassa aññataraññatarena dukkhadhammena phuṭṭhassa soko socanā socitattaṃ, antosoko antoparisoko, ayaṃ vuccati bhikkhave soko.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is sorrow? The sorrow, sorrowing and sorrowfulness of one visited by some misfortune or other, touched by some painful state or other; the inward sorrow, the inward grieving — this, monks, is called sorrow.',
+            },
+            {
+                'number': 46,
+                'pali': 'กะตะโม จะ ภิกขะเว ปะริเทโว. โย โข ภิกขะเว อัญญะตะรัญญะตะเรนะ พ๎ยะสะเนนะ สะมันนาคะตัสสะ อัญญะตะรัญญะตะเรนะ ทุกขะธัมเมนะ ผุฏฐัสสะ อาเทโว ปะริเทโว, อาเทวะนา ปะริเทวะนา, อาเทวิตัตตัง ปะริเทวิตัตตัง, อะยัง วุจจะติ ภิกขะเว ปะริเทโว.',
+                'pali_roman': 'Katamo ca bhikkhave paridevo. Yo kho bhikkhave aññataraññatarena byasanena samannāgatassa aññataraññatarena dukkhadhammena phuṭṭhassa ādevo paridevo, ādevanā paridevanā, ādevitattaṃ paridevitattaṃ, ayaṃ vuccati bhikkhave paridevo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is lamentation? The wailing and lamenting of one visited by some misfortune or other, touched by some painful state or other; the state of wailing, the state of lamenting — this, monks, is called lamentation.',
+            },
+            # ‼ CHECK [IMG_0413.PNG]: ‼ PAIN AND GRIEF SHARE ONE PARAGRAPH,
+            #   where birth, ageing, death, sorrow, lamentation and despair
+            #   each get their own. So seven indented paragraphs define EIGHT
+            #   terms, and this is one verse carrying two definitions. Read
+            #   off the indentation. Its join is a COMMA too — …อิทัง วุจจะติ
+            #   ภิกขะเว ทุกขัง, กะตะมัญจะ ภิกขะเว โทมะนัสสัง, — where every
+            #   other definition opens after a full stop.
+            {
+                'number': 47,
+                'pali': 'กะตะมัญจะ ภิกขะเว ทุกขัง. ยัง โข ภิกขะเว กายิกัง ทุกขัง กายิกัง อะสาตัง, กายะสัมผัสสะชัง ทุกขัง อะสาตัง เวทะยิตัง, อิทัง วุจจะติ ภิกขะเว ทุกขัง, กะตะมัญจะ ภิกขะเว โทมะนัสสัง, ยัง โข ภิกขะเว เจตะสิกัง ทุกขัง, เจตะสิกัง อะสาตัง, เจโตสัมผัสสะชัง ทุกขัง อะสาตัง เวทะยิตัง, อิทัง วุจจะติ ภิกขะเว โทมะนัสสัง.',
+                'pali_roman': 'Katamañca bhikkhave dukkhaṃ. Yaṃ kho bhikkhave kāyikaṃ dukkhaṃ kāyikaṃ asātaṃ, kāyasamphassajaṃ dukkhaṃ asātaṃ vedayitaṃ, idaṃ vuccati bhikkhave dukkhaṃ, katamañca bhikkhave domanassaṃ, yaṃ kho bhikkhave cetasikaṃ dukkhaṃ, cetasikaṃ asātaṃ, cetosamphassajaṃ dukkhaṃ asātaṃ vedayitaṃ, idaṃ vuccati bhikkhave domanassaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is pain? Whatever bodily pain there is, whatever bodily unpleasantness, whatever painful or unpleasant feeling born of bodily contact — this, monks, is called pain. And what, monks, is grief? Whatever mental pain there is, whatever mental unpleasantness, whatever painful or unpleasant feeling born of mental contact — this, monks, is called grief.',
+            },
+            # ‼ CHECK [IMG_0413.PNG]: THE PAGE ENDS AT A FULL STOP after อะยัง
+            #   วุจจะติ ภิกขะเว อุปายาโส., so NO […] is marked and page 144
+            #   should open a new verse rather than complete this one. Same
+            #   treatment page 138 had. The chant continues — the remaining
+            #   three truths are still to come.
+            {
+                'number': 48,
+                'pali': 'กะตะโม จะ ภิกขะเว อุปายาโส. โย โข ภิกขะเว อัญญะตะรัญญะตะเรนะ พ๎ยะสะเนนะ สะมันนาคะตัสสะ อัญญะตะรัญญะตะเรนะ ทุกขะธัมเมนะ ผุฏฐัสสะ อายาโส อุปายาโส, อายาสิตัตตัง อุปายาสิตัตตัง, อะยัง วุจจะติ ภิกขะเว อุปายาโส.',
+                'pali_roman': 'Katamo ca bhikkhave upāyāso. Yo kho bhikkhave aññataraññatarena byasanena samannāgatassa aññataraññatarena dukkhadhammena phuṭṭhassa āyāso upāyāso, āyāsitattaṃ upāyāsitattaṃ, ayaṃ vuccati bhikkhave upāyāso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is despair? The distress and despair of one visited by some misfortune or other, touched by some painful state or other; the state of distress, the state of despair — this, monks, is called despair.',
             },
         ],
     },
