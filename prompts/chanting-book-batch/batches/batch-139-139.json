@@ -1,0 +1,147 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 139,
+        "file": "IMG_0409.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "24-27",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, one column, no footnote. The last two aggregates and their refrain, then ขันธะปัพพัง. closing the second subject, then the third subject — the six internal and external sense bases — set as ONE indented paragraph per sense: the eye, the ear, and the nose, which the page foot cuts at สัญโญชะนัสสะ. ⚠️ NO completion row this batch: page 138 ended at a full stop, not mid-line, so verse 24 opens rather than completes. ⚠️ And the label rides on verse 24 as a `section_end`, because for the first time since page 135 the verse it closes is on the SAME sheet."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Four. Verse 24 finishes the aggregates and carries their closing label; verses 25, 26 and 27 are the eye, the ear and the nose, one to a verse because the book gives each its own indented paragraph — unlike the hindrances and the aggregates, which each ran as one block.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "สัญโญชะนัง is spelt with ญโญ, read at 6x, so it romanises saññojanaṃ and not the saṃyojanaṃ most editions print. It is the word's first appearance in this app, so this sets the spelling; a check records it.",
+        "pages": "IMG_0409.PNG, page 139, the number printed clearly at the top centre. Arrived from page 138 and CONTINUES onto 140."
+      },
+      "verses": [
+        {
+          "number": 24,
+          "page": 139,
+          "section_end": "ขันธะปัพพัง.",
+          "pali": "อิติ สังขารา, อิติ สังขารานัง สะมุทะโย, อิติ สังขารานัง อัตถังคะโม. อิติ วิญญาณัง, อิติ วิญญาณัสสะ สะมุทะโย, อิติ วิญญาณัสสะ อัตถังคะโมติ. อิติ อัชฌัตตัง วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, วะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ. อัตถิ ธัมมาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ปัญจะสุ อุปาทานักขันเธสุ.",
+          "pali_roman": "Iti saṅkhārā, iti saṅkhārānaṃ samudayo, iti saṅkhārānaṃ atthaṅgamo. Iti viññāṇaṃ, iti viññāṇassa samudayo, iti viññāṇassa atthaṅgamoti. Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati. Samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu dhammesu dhammānupassī viharati, pañcasu upādānakkhandhesu.",
+          "thai": "",
+          "paiboon": "",
+          "english": "'Such are formations, such the arising of formations, such the passing away of formations; such is consciousness, such the arising of consciousness, such the passing away of consciousness.' Thus he dwells contemplating mind-objects in mind-objects internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in mind-objects, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there are mind-objects' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating mind-objects in mind-objects, as regards the five aggregates of clinging."
+        },
+        {
+          "number": 25,
+          "pali": "ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ฉะสุ อัชฌัตติกะพาหิเรสุ อายะตะเนสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ ฉะสุ อัชฌัตติกะพาหิเรสุ อายะตะเนสุ. อิธะ ภิกขะเว ภิกขุ จักขุญจะ ปะชานาติ, รูเป จะ ปะชานาติ. ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ สัญโญชะนัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ.",
+          "pali_roman": "Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, chasu ajjhattikabāhiresu āyatanesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati chasu ajjhattikabāhiresu āyatanesu. Idha bhikkhave bhikkhu cakkhuñca pajānāti, rūpe ca pajānāti. Yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti. Yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti, yathā ca uppannassa saññojanassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa saññojanassa āyatiṃ anuppādo hoti, tañca pajānāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the six internal and external sense bases. And how does a monk dwell contemplating mind-objects in mind-objects as regards the six internal and external sense bases? Here, monks, a monk knows the eye, and knows forms, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise, how the arisen fetter is abandoned, and how what has been abandoned does not arise again in future."
+        },
+        {
+          "number": 26,
+          "pali": "โสตัญจะ ปะชานาติ, สัทเท จะ ปะชานาติ. ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ, ยะถา จะ ปะหีนัสสะ สัญโญชะนัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ.",
+          "pali_roman": "Sotañca pajānāti, sadde ca pajānāti. Yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti. Yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti, yathā ca uppannassa saññojanassa pahānaṃ hoti, tañca pajānāti, yathā ca pahīnassa saññojanassa āyatiṃ anuppādo hoti, tañca pajānāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "He knows the ear, and knows sounds, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise, how the arisen fetter is abandoned, and how what has been abandoned does not arise again in future."
+        },
+        {
+          "number": 27,
+          "pali": "ฆานัญจะ ปะชานาติ คันเธ จะ ปะชานาติ, ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ […]",
+          "pali_roman": "Ghānañca pajānāti gandhe ca pajānāti, yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti. Yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa saññojanassa […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "He knows the nose, and knows odours, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สัญโญชะนัง",
+          "pali_roman": "saññojanaṃ",
+          "meaning": "a fetter — what binds the mind to what it meets. Here it is what arises from the meeting of a sense and its object, and the contemplation watches that arising rather than the sense or the object"
+        },
+        {
+          "pali": "ฉะสุ อัชฌัตติกะพาหิเรสุ อายะตะเนสุ",
+          "pali_roman": "chasu ajjhattikabāhiresu āyatanesu",
+          "meaning": "the six internal and external sense bases — eye and forms, ear and sounds, nose and odours, tongue and tastes, body and touches, mind and mind-objects: six pairs, not twelve separate things"
+        },
+        {
+          "pali": "ตะทุภะยัง ปะฏิจจะ",
+          "pali_roman": "tadubhayaṃ paṭicca",
+          "meaning": "dependent on them both. The fetter belongs to neither the sense nor its object but to their meeting, which is the whole point of pairing them"
+        },
+        {
+          "pali": "ขันธะปัพพัง",
+          "pali_roman": "khandhapabbaṃ",
+          "meaning": "the section on the aggregates; the label closing the fourth foundation's second subject"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 24,
+          "file": "IMG_0409.PNG",
+          "issue": "NOT A COMPLETION — page 138 ended at a full stop after อิติ สัญญายะ อัตถังคะโม, so this verse OPENS rather than finishes one, and the batch carries no completion row. The aggregate list runs across the turn as three sentences on 138 and two here, and the fifth closes with the quotative: อัตถังคะโมติ., which none of the four before it has."
+        },
+        {
+          "verse": 24,
+          "file": "IMG_0409.PNG",
+          "issue": "‼ ขันธะปัพพัง. IS PRINTED WITH A FULL STOP, where นีวะระณะปัพพัง on page 138 has none. Read at 3.2x. Reproduced with the stop, and the two labels are otherwise the same size — measured at true scale side by side, and by ink band 67px against 61px, the difference being letter shapes rather than size. ⚠️ It rides on the verse as `section_end` and NOT as a page block, because verse 24 begins on this same sheet — the first label since 135 where that is true."
+        },
+        {
+          "verse": 25,
+          "file": "IMG_0409.PNG",
+          "issue": "‼ สัญโญชะนัง WITH ญโญ, read at 6x — so it romanises saññojanaṃ, NOT the saṃyojanaṃ most editions print. Both spellings are canonical Pali. This is the word's first appearance anywhere in the app, so this batch sets it; it recurs four times on this sheet and will recur on every remaining sense base. Worth one look at the book, because getting it wrong now would propagate."
+        },
+        {
+          "verse": 25,
+          "file": "IMG_0409.PNG",
+          "issue": "วิหะระติ, ฉะสุ THEN วิหะระติ ฉะสุ — the first has a comma and the second, one line later, has NOTHING. Read at 2.7x. Page 138 did the same thing at the aggregates with a comma then a full stop, so the book varies this join every time it prints it and never the same way twice."
+        },
+        {
+          "verse": 27,
+          "file": "IMG_0409.PNG",
+          "issue": "‼ THE NOSE IS PUNCTUATED UNLIKE THE EYE AND THE EAR, in two places. It reads ฆานัญจะ ปะชานาติ คันเธ — NO comma, where จักขุญจะ ปะชานาติ, รูเป and โสตัญจะ ปะชานาติ, สัทเท both have one; and it then reads ปะชานาติ, ยัญจะ with a comma where both have a full stop. Its later clauses also take full stops where the eye's and the ear's take commas. Three departures in one block, all read at 2.7x, none harmonised."
+        },
+        {
+          "verse": 25,
+          "file": "IMG_0409.PNG",
+          "issue": "ONE INDENTED PARAGRAPH PER SENSE, so one verse per sense. The hindrances on 137-138 ran as a single block of five and the aggregates as a single block of five; the sense bases do not. The book decides the unit sheet by sheet, and the two subjects still to come will have to be read the same way rather than assumed."
+        },
+        {
+          "verse": 27,
+          "file": "IMG_0409.PNG",
+          "issue": "THE PAGE FOOT CUTS THIS SENTENCE after ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ, before its ปะหานัง. Marked […] and completed from page 140, where the tongue, the body and the mind should also follow."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 140,
+    "resume_from_file": "IMG_0410.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all four verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0409.PNG.",
+    "page_scan": "agrees — one row, page 139, claiming verses 24-27, and the entry holds exactly those four. Verse 24 carries page 139; 25, 26 and 27 carry none and sit on 139 by carry-forward. Numbering runs on from page 138's verse 23 with no gap and no overlap, and no verse is re-sent because 138 ended at a sentence boundary.",
+    "notes": "‼ สัญโญชะนัง is spelt ญโญ, so saññojanaṃ rather than saṃyojanaṃ — the word's first appearance in the app, so this sets it, and it will recur on every sense base. ‼ The nose block differs from the eye's and the ear's in THREE places, all punctuation, and the sense bases take one paragraph each where the hindrances and the aggregates each took one block for all five. ⚠️ All Pali here is an unreviewed draft until Josh checks it against the physical book; the saññojanaṃ spelling is the line most worth his eye, because it propagates."
+  }
+}
