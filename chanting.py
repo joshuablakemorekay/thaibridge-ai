@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 142; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 155; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -59577,6 +59577,150 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Tongue-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            # ‼ CHECK [IMG_0422.PNG]: PAGE 152 — ‼ ALL THIRTEEN PARAGRAPHS
+            #   CLOSE WITH A FULL STOP — checked one by one at 2.9x rather
+            #   than assumed. This is worth recording as a POSITIVE finding,
+            #   not a routine one: page 151 punctuated its ninth paragraph
+            #   with a comma in exactly this position, so the closing mark is
+            #   now something this sutta has to be read for on every sheet.
+            #   Here the answer is uniform. Round dots on the baseline
+            #   throughout, no tails.
+            # ‼ CHECK [IMG_0422.PNG]: PAGE 152 — THREE SETS MEET ON THIS SHEET
+            #   WITH NO PRINTED JOIN, as on 146 to 151. The six CONTACTS close
+            #   here — the eye, ear, nose and tongue were verses 139-142 on
+            #   page 151, and the body and mind follow as 143-144. Then the
+            #   six FEELINGS born of contact (145-150), complete on this
+            #   sheet. Then the PERCEPTIONS open (151-155) and one remains for
+            #   153. No heading, no label and no extra space anywhere between
+            #   the three groups; the paragraph indents are identical down the
+            #   whole sheet.
+            # ‼ CHECK [IMG_0422.PNG]: PAGE 152 — NOTHING ON THIS SHEET BUT
+            #   BODY TEXT. No title, no invitation, no section heading, no
+            #   section_end label, no rubric, no footnote and no rule at the
+            #   foot. Walked top to bottom against the photograph: page number
+            #   152 at the top centre, thirteen paragraphs, blank paper. A
+            #   hand grips the left edge with three fingers visible, all
+            #   outside the text block.
+            # ‼ CHECK [IMG_0422.PNG]: NOT A COMPLETION — page 151 ended at a
+            #   full stop, so this verse OPENS a paragraph rather than
+            #   finishing one, and the batch carries no completion row and no
+            #   […]. Ninth time in this chant.
+            {
+                'number': 143,
+                'page': 152,
+                'pali': 'กายะสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Kāyasamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Body-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 144,
+                'pali': 'มะโนสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Manosamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Mind-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            # ‼ CHECK [IMG_0422.PNG]: THE FEELING PARAGRAPHS TAKE A TWO-WORD
+            #   SUBJECT, จักขุสัมผัสสะชา เวทะนา, where every other paragraph
+            #   in this survey takes one. The space between สัมผัสสะชา and
+            #   เวทะนา is a real word space, not justification — read at 2.7x
+            #   on all six, the same reading page 147 made of the same six
+            #   paragraphs in the first run.
+            {
+                'number': 145,
+                'pali': 'จักขุสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Cakkhusamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of eye-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 146,
+                'pali': 'โสตะสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Sotasamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of ear-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 147,
+                'pali': 'ฆานะสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Ghānasamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of nose-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 148,
+                'pali': 'ชิวหาสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Jivhāsamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of tongue-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 149,
+                'pali': 'กายะสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Kāyasamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of body-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 150,
+                'pali': 'มะโนสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Manosamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of mind-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 151,
+                'pali': 'รูปะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Rūpasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of forms in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 152,
+                'pali': 'สัททะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Saddasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of sounds in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 153,
+                'pali': 'คันธะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Gandhasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of odours in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            {
+                'number': 154,
+                'pali': 'ระสะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Rasasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of tastes in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
+            },
+            # ‼ CHECK [IMG_0422.PNG]: THE PAGE ENDS AT A FULL STOP after เอตถะ
+            #   นิรุชฌะมานา นิรุชฌะติ., with clear white paper below it, so NO
+            #   […] is marked and page 153 should open a new verse. Tenth time
+            #   in this chant. One perception remains, ธัมมะสัญญา, so 153
+            #   should close that set and move on to the volitions.
+            {
+                'number': 155,
+                'pali': 'โผฏฐัพพะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.',
+                'pali_roman': 'Phoṭṭhabbasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of tangibles in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases.',
             },
         ],
     },
