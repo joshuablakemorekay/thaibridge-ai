@@ -1,0 +1,221 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 154,
+        "file": "IMG_0424.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "169-182",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, one column. FOURTEEN paragraphs, and the last two break the pattern the sheet begins in: twelve repeated paragraphs finish the cessation survey, then a ONE-LINE paragraph closes the THIRD noble truth, and then the FOURTH truth opens and RUNS OFF THE FOOT OF THE PAGE mid-sentence at อะยะเมวะ. Verse 182 is therefore CUT and marked […]. NO completion row at the top — page 153 ended at a full stop."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Fourteen, one per indented paragraph. Twelve are the survey formula; verse 181 is a single printed line closing the third truth; verse 182 opens the fourth truth and is cut by the page edge. Each is set as its own indented paragraph, so each is its own verse.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "Third truth tail on the twelve repeated paragraphs. Every opening term read separately at 2.7x, every closing mark read individually at 2.9x, and the last two paragraphs read at 3.4x across both halves of the measure because their punctuation carries the structure.",
+        "pages": "IMG_0424.PNG, page 154, the number printed clearly at the top centre. Arrived from page 153 and CONTINUES onto 155, where verse 182 must be completed. A hand grips the left edge of the sheet with two fingers and a thumb visible; all sit outside the text block and cover no text."
+      },
+      "verses": [
+        {
+          "number": 169,
+          "page": 154,
+          "pali": "รูปะวิตักโก โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Rūpavitakko loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thought about forms in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 170,
+          "pali": "สัททะวิตักโก โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Saddavitakko loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thought about sounds in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 171,
+          "pali": "คันธะวิตักโก โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Gandhavitakko loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thought about odours in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 172,
+          "pali": "ระสะวิตักโก โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Rasavitakko loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thought about tastes in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 173,
+          "pali": "โผฏฐัพพะวิตักโก โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Phoṭṭhabbavitakko loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thought about tangibles in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 174,
+          "pali": "ธัมมะวิตักโก โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Dhammavitakko loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Thought about mind-objects in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 175,
+          "pali": "รูปะวิจาโร โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Rūpavicāro loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Examination of forms in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 176,
+          "pali": "สัททะวิจาโร โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Saddavicāro loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Examination of sounds in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 177,
+          "pali": "คันธะวิจาโร โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Gandhavicāro loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Examination of odours in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 178,
+          "pali": "ระสะวิจาโร โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Rasavicāro loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Examination of tastes in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 179,
+          "pali": "โผฏฐัพพะวิจาโร โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Phoṭṭhabbavicāro loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Examination of tangibles in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 180,
+          "pali": "ธัมมะวิจาโร โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Dhammavicāro loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Examination of mind-objects in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 181,
+          "pali": "อิทัง วุจจะติ ภิกขะเว ทุกขะนิโรโธ อะริยะสัจจัง",
+          "pali_roman": "Idaṃ vuccati bhikkhave dukkhanirodho ariyasaccaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "This, monks, is called the noble truth of the cessation of suffering."
+        },
+        {
+          "number": 182,
+          "pali": "กะตะมัญจะ ภิกขะเว ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง. อะยะเมวะ […]",
+          "pali_roman": "Katamañca bhikkhave dukkhanirodhagāminī paṭipadā ariyasaccaṃ. Ayameva […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is the noble truth of the way leading to the cessation of suffering? It is this very […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ทุกขะนิโรธะคามินี ปะฏิปะทา",
+          "pali_roman": "dukkhanirodhagāminī paṭipadā",
+          "meaning": "the way of practice leading to the cessation of suffering — the fourth noble truth, which opens on this sheet and is cut by the page turn"
+        },
+        {
+          "pali": "อะยะเมวะ",
+          "pali_roman": "ayameva",
+          "meaning": "this very one. The emphatic that opens the fourth truth: not a way but THIS way. The page ends on this word"
+        },
+        {
+          "pali": "วิตักโก / วิจาโร",
+          "pali_roman": "vitakko / vicāro",
+          "meaning": "thought and examination — the mind taking a thing up, and the mind staying with it. The ninth and tenth sets of the survey, closing here"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 182,
+          "file": "IMG_0424.PNG",
+          "issue": "‼‼ THE PAGE IS CUT MID-SENTENCE AND THIS VERSE IS INCOMPLETE. The last printed words are อะยะเมวะ, with clear white paper below and the sheet simply ending — read at 3.4x and confirmed against a wider crop of the whole foot. […] is marked in pali and pali_roman, and the english stops where the Pali stops. Page 155 must COMPLETE this verse rather than open a new one, which is the opposite of the last ten sheets. Nothing after อะยะเมวะ has been written from memory of the canon."
+        },
+        {
+          "verse": 181,
+          "file": "IMG_0424.PNG",
+          "issue": "‼ NO FULL STOP after อะริยะสัจจัง where the parallel line closing the SECOND truth has one. Verse 119 on page 150 reads อิทัง วุจจะติ ภิกขะเว ทุกขะสะมุทะโย อะริยะสัจจัง. — with a stop. This line ends with clear paper after จัง and no mark at all, read at 3.4x. Same formula, one truth apart, punctuated differently. Reproduced as printed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0424.PNG",
+          "issue": "‼ THE SIXTY-ITEM SURVEY OF THE THIRD TRUTH CLOSES AT VERSE 180. Ten sets of six, begun at verse 121 on page 150 and ending here — the same sixty items the second truth ran through at verses 59 to 118. Both runs are now complete and neither was levelled to the other: the second asks where craving arises and settles, the third where it is abandoned and ceases."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0424.PNG",
+          "issue": "‼ THREE DIFFERENT KINDS OF PARAGRAPH ON ONE SHEET, where the last nine sheets have been uniform. Twelve survey paragraphs of two lines each, then a ONE-LINE paragraph closing the third truth, then the fourth truth opening and running off the page. A reader scanning for the familiar shape would take the last two for more of the same; they are not, and the closing mark of each was read separately."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0424.PNG",
+          "issue": "ALL TWELVE SURVEY PARAGRAPHS CLOSE WITH A FULL STOP — checked one by one at 2.9x, as on pages 152 and 153, because page 151 turned up a comma in that position. Round dots on the baseline throughout, no tails."
+        },
+        {
+          "verse": 173,
+          "file": "IMG_0424.PNG",
+          "issue": "โผฏฐัพพะวิตักโก and โผฏฐัพพะวิจาโร are the two longest terms on the sheet and both were read at 2.7x. โผฏฐัพพะ keeps the ฏ and ฐ it has throughout this chant."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0424.PNG",
+          "issue": "NOTHING ON THIS SHEET BUT BODY TEXT, even though the third noble truth ends and the fourth begins on it. No title, no invitation, no section heading, no section_end label, no rubric, no footnote and no rule at the foot. Walked top to bottom against the photograph: page number 154 at the top centre, fourteen paragraphs, blank paper below the cut line. A hand grips the left edge, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 155,
+    "resume_from_file": "IMG_0425.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all fourteen verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0424.PNG.",
+    "page_scan": "agrees — one row, page 154, claiming verses 169-182, and the entry holds exactly those fourteen. Verse 169 carries page 154; 170 to 182 carry none and sit on 154 by carry-forward. Numbering runs on from page 153 verse 168 with no gap and no overlap, and no verse is re-sent because 153 ended at a sentence boundary. Verse 182 is CUT and will be completed from page 155, keeping its number and its page.",
+    "notes": "‼‼ THE PAGE IS CUT MID-SENTENCE at อะยะเมวะ, so verse 182 is marked […] and page 155 must COMPLETE it rather than open a new verse — the opposite of the last ten sheets, every one of which ended at a full stop. ‼ The sixty-item survey of the THIRD truth closes at verse 180, and the truth itself at 181; the FOURTH truth opens at 182. ‼ Verse 181 has NO full stop where the second truth's identical closing line, verse 119 on page 150, has one. ⚠️ Three different kinds of paragraph on one sheet after nine uniform ones. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
