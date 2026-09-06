@@ -1,0 +1,203 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 154,
+        "file": "IMG_0425.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "182",
+        "starts_here": false,
+        "note": "NOT a fresh reading of page 154 — that sheet is entered, as batch-154-154.json. The row is here because verse 182 is re-sent to COMPLETE the line the page turn cut at อะยะเมวะ, and the completed verse still belongs to page 154, where its paragraph began."
+      },
+      {
+        "page": 155,
+        "file": "IMG_0425.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "183-189",
+        "starts_here": false,
+        "note": "Dense prose, one chant, Pali only, one column. After the completion, SEVEN indented paragraphs define the limbs of the eightfold path one at a time — view, intention, speech, action, livelihood, effort, mindfulness. Nothing like the survey sheets that came before: the paragraphs run from two lines to ten. The last one, right mindfulness, RUNS OFF THE FOOT OF THE PAGE at วิเนยยะ โลเก, so verse 189 is CUT and marked […]. No footnote, heading or rule anywhere."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Eight. One completes verse 182, and seven are the new indented paragraphs, one per limb of the path. The paragraph is still the unit, but the paragraphs are wildly uneven here — verse 184 is two printed lines and verse 188 is ten — so the shape that held from 145 to 154 has gone.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "Read line by line at 3.0x across both halves of the measure, with the sentence-boundary marks and the โ/ั diacritics checked separately at 3.6x and 4.5x. This is not a sheet that could be read at page scale: it is continuous prose with internal full stops that decide where one limb ends and the next begins.",
+        "pages": "IMG_0425.PNG, page 155, the number printed clearly at the top centre. Completes verse 182 from page 154 and CONTINUES onto 156, where verse 189 must be completed. Two fingers appear at the right edge of the photograph; both sit outside the text block and cover no text."
+      },
+      "verses": [
+        {
+          "number": 182,
+          "pali": "กะตะมัญจะ ภิกขะเว ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง. อะยะเมวะ อะริโย อัฏฐังคิโก มัคโค. เสยยะถีทัง. สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ.",
+          "pali_roman": "Katamañca bhikkhave dukkhanirodhagāminī paṭipadā ariyasaccaṃ. Ayameva ariyo aṭṭhaṅgiko maggo. Seyyathīdaṃ. Sammādiṭṭhi sammāsaṅkappo, sammāvācā sammākammanto sammāājīvo, sammāvāyāmo sammāsati sammāsamādhi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is the noble truth of the way leading to the cessation of suffering? It is this very noble eightfold path. That is to say: right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, right concentration."
+        },
+        {
+          "number": 183,
+          "page": 155,
+          "pali": "กะตะมา จะ ภิกขะเว สัมมาทิฏฐิ. ยัง โข ภิกขะเว ทุกเข ญาณัง, ทุกขะสะมุทะเย ญาณัง, ทุกขะนิโรเธ ญาณัง, ทุกขะนิโรธะคามินิยา ปะฏิปะทายะ ญาณัง, อะยัง วุจจะติ ภิกขะเว สัมมาทิฏฐิ.",
+          "pali_roman": "Katamā ca bhikkhave sammādiṭṭhi. Yaṃ kho bhikkhave dukkhe ñāṇaṃ, dukkhasamudaye ñāṇaṃ, dukkhanirodhe ñāṇaṃ, dukkhanirodhagāminiyā paṭipadāya ñāṇaṃ, ayaṃ vuccati bhikkhave sammādiṭṭhi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right view? Knowledge of suffering, knowledge of the arising of suffering, knowledge of the cessation of suffering, knowledge of the way leading to the cessation of suffering — this, monks, is called right view."
+        },
+        {
+          "number": 184,
+          "pali": "กะตะโม จะ ภิกขะเว สัมมาสังกัปโป เนกขัมมะสังกัปโป อัพ๎ยาปาทะสังกัปโป อะวิหิงสาสังกัปโป, อะยัง วุจจะติ ภิกขะเว สัมมาสังกัปโป.",
+          "pali_roman": "Katamo ca bhikkhave sammāsaṅkappo nekkhammasaṅkappo abyāpādasaṅkappo avihiṃsāsaṅkappo, ayaṃ vuccati bhikkhave sammāsaṅkappo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right intention? The intention of renunciation, the intention of non-ill-will, the intention of harmlessness — this, monks, is called right intention."
+        },
+        {
+          "number": 185,
+          "pali": "กะตะมา จะ ภิกขะเว สัมมาวาจา. มุสาวาทา เวระมะณี, ปิสุณายะ วาจายะ เวระมะณี, ผะรุสายะ วาจายะ เวระมะณี, สัมผัปปะลาปา เวระมะณี, อะยัง วุจจะติ ภิกขะเว สัมมาวาจา.",
+          "pali_roman": "Katamā ca bhikkhave sammāvācā. Musāvādā veramaṇī, pisuṇāya vācāya veramaṇī, pharusāya vācāya veramaṇī, samphappalāpā veramaṇī, ayaṃ vuccati bhikkhave sammāvācā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right speech? Refraining from false speech, refraining from malicious speech, refraining from harsh speech, refraining from idle chatter — this, monks, is called right speech."
+        },
+        {
+          "number": 186,
+          "pali": "กะตะโม จะ ภิกขะเว สัมมากัมมันโต. ปาณาติปาตา เวระมะณี, อะทินนาทานา เวระมะณี, กาเมสุ มิจฉาจารา เวระมะณี, อะยัง วุจจะติ ภิกขะเว สัมมากัมมันโต.",
+          "pali_roman": "Katamo ca bhikkhave sammākammanto. Pāṇātipātā veramaṇī, adinnādānā veramaṇī, kāmesu micchācārā veramaṇī, ayaṃ vuccati bhikkhave sammākammanto.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right action? Refraining from killing living beings, refraining from taking what is not given, refraining from sexual misconduct — this, monks, is called right action."
+        },
+        {
+          "number": 187,
+          "pali": "กะตะโม จะ ภิกขะเว สัมมาอาชีโว. อิธะ ภิกขะเว อะริยะสาวะโก มิจฉาอาชีวัง ปะหายะ, สัมมาอาชีเวนะ ชีวิกัง กัปเปติ, อะยัง วุจจะติ ภิกขะเว สัมมาอาชีโว.",
+          "pali_roman": "Katamo ca bhikkhave sammāājīvo. Idha bhikkhave ariyasāvako micchāājīvaṃ pahāya, sammāājīvena jīvikaṃ kappeti, ayaṃ vuccati bhikkhave sammāājīvo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right livelihood? Here, monks, a noble disciple abandons wrong livelihood and makes his living by right livelihood — this, monks, is called right livelihood."
+        },
+        {
+          "number": 188,
+          "pali": "กะตะโม จะ ภิกขะเว สัมมาวายาโม. อิธะ ภิกขะเว ภิกขุ อะนุปปันนานัง ปาปะกานัง อะกุสะลานัง ธัมมานัง อะนุปปาทายะ, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. อุปปันนานัง ปาปะกานัง อะกุสะลานัง ธัมมานัง ปะหานายะ, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. อะนุปปันนานัง กุสะลานัง ธัมมานัง อุปปาทายะ, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. อุปปันนานัง กุสะลานัง ธัมมานัง ฐิติยา อะสัมโมสายะ ภิยโยภาวายะ เวปุลลายะ ภาวะนายะ ปาริปูริยา, ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. อะยัง วุจจะติ ภิกขะเว สัมมาวายาโม.",
+          "pali_roman": "Katamo ca bhikkhave sammāvāyāmo. Idha bhikkhave bhikkhu anuppannānaṃ pāpakānaṃ akusalānaṃ dhammānaṃ anuppādāya, chandaṃ janeti vāyamati viriyaṃ ārabhati cittaṃ paggaṇhāti padahati. Uppannānaṃ pāpakānaṃ akusalānaṃ dhammānaṃ pahānāya, chandaṃ janeti vāyamati viriyaṃ ārabhati cittaṃ paggaṇhāti padahati. Anuppannānaṃ kusalānaṃ dhammānaṃ uppādāya, chandaṃ janeti vāyamati viriyaṃ ārabhati cittaṃ paggaṇhāti padahati. Uppannānaṃ kusalānaṃ dhammānaṃ ṭhitiyā asammosāya bhiyyobhāvāya vepullāya bhāvanāya pāripūriyā, chandaṃ janeti vāyamati viriyaṃ ārabhati cittaṃ paggaṇhāti padahati. Ayaṃ vuccati bhikkhave sammāvāyāmo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right effort? Here, monks, a monk generates desire for the non-arising of unarisen evil unwholesome states, and he makes an effort, rouses energy, applies his mind and strives. He generates desire for the abandoning of arisen evil unwholesome states, and he makes an effort, rouses energy, applies his mind and strives. He generates desire for the arising of unarisen wholesome states, and he makes an effort, rouses energy, applies his mind and strives. He generates desire for the continuance, non-confusion, increase, expansion, development and fulfilment of arisen wholesome states, and he makes an effort, rouses energy, applies his mind and strives. This, monks, is called right effort."
+        },
+        {
+          "number": 189,
+          "pali": "กะตะมา จะ ภิกขะเว สัมมาสะติ. อิธะ ภิกขะเว ภิกขุ กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง เวทะนาสุ เวทะนานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก […]",
+          "pali_roman": "Katamā ca bhikkhave sammāsati. Idha bhikkhave bhikkhu kāye kāyānupassī viharati, ātāpī sampajāno satimā, vineyya loke abhijjhādomanassaṃ vedanāsu vedanānupassī viharati, ātāpī sampajāno satimā, vineyya loke […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is right mindfulness? Here, monks, a monk dwells contemplating the body in the body, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world; he dwells contemplating feelings in feelings, ardent, clearly comprehending and mindful, having put away for the world […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "อัฏฐังคิโก มัคโค",
+          "pali_roman": "aṭṭhaṅgiko maggo",
+          "meaning": "the eightfold path — literally the path having eight limbs. อะยะเมวะ, this very one, is emphatic: the fourth truth names one path, not a choice of them"
+        },
+        {
+          "pali": "เนกขัมมะสังกัปโป",
+          "pali_roman": "nekkhammasaṅkappo",
+          "meaning": "the intention of renunciation — the first of the three right intentions, and the one that gives the other two their direction"
+        },
+        {
+          "pali": "สัมผัปปะลาปา",
+          "pali_roman": "samphappalāpā",
+          "meaning": "idle chatter; talk that serves no purpose. The fourth kind of wrong speech, and the mildest-sounding of the four"
+        },
+        {
+          "pali": "ปัคคัณหาติ ปะทะหะติ",
+          "pali_roman": "paggaṇhāti padahati",
+          "meaning": "applies the mind and strives. The pair closes each of the four right efforts, and the whole clause is printed four times unchanged"
+        },
+        {
+          "pali": "ภิยโยภาวายะ เวปุลลายะ",
+          "pali_roman": "bhiyyobhāvāya vepullāya",
+          "meaning": "for increase and for expansion. The fourth right effort alone takes a chain of six datives, where the other three take one"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 182,
+          "file": "IMG_0425.PNG",
+          "issue": "COMPLETES THE LINE PAGE 154 CUT. That sheet ended …ปะฏิปะทา อะริยะสัจจัง. อะยะเมวะ […] and this one opens อะริโย อัฏฐังคิโก มัคโค. The verse keeps page 154, where its paragraph began, and carries no page key — verse 169 opens that sheet, so carry-forward already places it. ⚠️ THE EIGHT LIMBS ARE PUNCTUATED IN GROUPS OF TWO, THREE AND THREE: สัมมาทิฏฐิ สัมมาสังกัปโป, then สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, then สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ. Commas fall after the second and fifth limbs and nowhere else. Read at 3.0x. That is not the wisdom/virtue/concentration division the commentaries use, which would group 2-3-3 the other way round, so it is recorded rather than explained."
+        },
+        {
+          "verse": 184,
+          "file": "IMG_0425.PNG",
+          "issue": "‼ NO FULL STOP after สัมมาสังกัปโป, where the six other limbs on this sheet all take one after their opening question. Verses 183, 185, 186, 187, 188 and 189 read สัมมาทิฏฐิ. / สัมมาวาจา. / สัมมากัมมันโต. / สัมมาอาชีโว. / สัมมาวายาโม. / สัมมาสะติ. and this one runs straight on into เนกขัมมะสังกัปโป with no mark at all. Read at 3.6x. Reproduced as printed; it is the second time in three sheets this book has dropped a stop from a formula it otherwise punctuates consistently."
+        },
+        {
+          "verse": 184,
+          "file": "IMG_0425.PNG",
+          "issue": "อัพ๎ยาปาทะสังกัปโป carries the CLUSTER MARK on พ, read at 4.5x, and a consonant follows it — so it is yamakkan ๎ and written อัพ๎ยาปาทะ, per the convention settled across the whole book. Romanised abyāpāda-."
+        },
+        {
+          "verse": 186,
+          "file": "IMG_0425.PNG",
+          "issue": "‼ RIGHT ACTION IS GIVEN IN ITS LAY FORM HERE — กาเมสุ มิจฉาจารา, sexual misconduct. Page 109 of this same book gives the MONASTIC form, อะพ๎รัห๎มะจะริยา, unchastity, and was flagged there for having three abstentions where a lay list has a different third. Both are printed in this one book, in two different chants. Read at 3.0x. Reproduced as printed and recorded because the two look like an inconsistency and are two genuine formulations."
+        },
+        {
+          "verse": 188,
+          "file": "IMG_0425.PNG",
+          "issue": "TEN PRINTED LINES IN ONE PARAGRAPH, and the clause ฉันทัง ชะเนติ วายะมะติ วิริยัง อาระภะติ จิตตัง ปัคคัณหาติ ปะทะหะติ. is printed FOUR times, word for word and stop for stop. Each of the four was read separately rather than copied forward, and all four agree. The fourth effort alone takes a chain of six datives — ฐิติยา อะสัมโมสายะ ภิยโยภาวายะ เวปุลลายะ ภาวะนายะ ปาริปูริยา — where the other three take one, which is correct and not a run-on."
+        },
+        {
+          "verse": 189,
+          "file": "IMG_0425.PNG",
+          "issue": "‼‼ THE PAGE IS CUT MID-SENTENCE AGAIN. The last printed words are วิเนยยะ โลเก, with clear white paper below — read at 1.5x across the whole foot and confirmed. […] is marked in pali and pali_roman and the english stops with it. Page 156 must COMPLETE this verse. Two sheets running now end mid-sentence, after ten that ended at a full stop."
+        },
+        {
+          "verse": 189,
+          "file": "IMG_0425.PNG",
+          "issue": "‼ THE FOUR FOUNDATIONS REAPPEAR INSIDE THE FOURTH TRUTH. Right mindfulness is defined by the same กาเย กายานุปัสสี วิหะระติ, อาตาปี สัมปะชาโน สะติมา, วิเนยยะ โลเก อะภิชฌาโทมะนัสสัง formula this whole chant opened with at its uddesa. So the sutta quotes itself, and page 156 should carry the mind and the mind-objects to finish the set of four. Recorded because it reads as a duplication of the chant's own opening and is not one."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0425.PNG",
+          "issue": "‼ THE SHEET SHAPE CHANGES COMPLETELY. Pages 145 to 154 were uniform two-line paragraphs of one repeated formula; this sheet is continuous prose whose paragraphs run from two lines to ten, with internal full stops deciding where one limb of the path ends and the next begins. It cannot be read at page scale and was not: every line was read at 3.0x across both halves of the measure, and each sentence boundary separately."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0425.PNG",
+          "issue": "NOTHING ON THIS SHEET BUT BODY TEXT. No title, no invitation, no section heading, no section_end label, no rubric, no footnote and no rule at the foot. Walked top to bottom against the photograph: page number 155 at the top centre, the completion, seven paragraphs, blank paper below the cut line. Two fingers appear at the right edge, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 156,
+    "resume_from_file": "IMG_0426.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all eight verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0425.PNG.",
+    "page_scan": "agrees — two rows. Page 154 claims verse 182, re-sent here only to complete the line the turn cut and keeping its own page by carry-forward; page 155 claims verses 183-189, which is what lands on it. Verse 183 carries page 155; 184 to 189 carry none and sit on 155 by carry-forward. Numbering runs 182 to 189 with no gap and no overlap.",
+    "notes": "‼‼ TWO SHEETS RUNNING NOW END MID-SENTENCE: verse 182 is completed here from page 154, and verse 189 is itself cut at วิเนยยะ โลเก for page 156 to finish. ‼ The sheet shape changes completely — ten pages of uniform two-line survey paragraphs give way to continuous prose defining the eight limbs of the path, paragraphs running from two lines to ten. ‼ Verse 184 has NO full stop where the other six limbs all take one. ‼ Right action is given in its LAY form here (กาเมสุ มิจฉาจารา) where page 109 of this same book gives the MONASTIC form — both printed, neither harmonised. ‼ The four foundations reappear inside the fourth truth, so the sutta quotes its own opening. ⚠️ อัพ๎ยาปาทะ takes the yamakkan cluster mark. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
