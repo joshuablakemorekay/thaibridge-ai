@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-144 went in.
+145 went in.
 
 ## Read first, in this order
 
@@ -21,21 +21,22 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 287 pages.** The gaps are
-**145–174, 179–182, 192, 246, 248 and 278** — and 145 and 179 are the live
+As of 2026-09-05: **287 chants across 288 pages.** The gaps are
+**146–174, 179–182, 192, 246, 248 and 278** — and 146 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 55, page 144 | **page 145 = IMG_0415** |
+| `mahasatipatthana-sutta-patho` | 65, page 145 | **page 146 = IMG_0416** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
 MIND-OBJECTS, the FOURTH and last foundation, at its FIFTH and LAST subject —
-the four noble truths. The first truth is defined and each of its terms taken
-in turn (143-144); three truths remain.
+the four noble truths. The FIRST truth is CLOSED (145) and the SECOND is
+running — craving, its three kinds, and a long survey of every place craving
+lodges, which is only seven items in. Two truths remain after it.
 The body (135), the feelings (136) and the mind (137) are all CLOSED, and so
 are this foundation's first four subjects: hindrances (138), aggregates (139),
 sense bases (140), factors of awakening (142).

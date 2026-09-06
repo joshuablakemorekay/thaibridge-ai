@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 55; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 65; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58490,13 +58490,144 @@ CHANTS = [
             #   นะ โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมา, mid-compound and
             #   before อัสสามะ. Marked […] and completed from page 145, where
             #   the first noble truth should also close and the second open.
+            # ‼ COMPLETED FROM p144: this line was cut by the page break and
+            #   is now whole. Was: โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมานัง
+            #   ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ
+            #   โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมา […]
+            # ‼ CHECK [IMG_0415.PNG]: COMPLETES THE LINE PAGE 144 CUT. That
+            #   sheet ended …นะ โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมา […] and
+            #   this one opens อัสสามะ,. The verse keeps page 144 and carries
+            #   `page: 144` explicitly. ⚠️ It takes อาคัจเฉยยุนติ, the PLURAL
+            #   verb — so of the five wishes, sickness and this one take a
+            #   plural and birth, ageing and death take a singular. That
+            #   refines the check raised on page 144, which had only the
+            #   sickness one to go on.
             {
                 'number': 55,
-                'pali': 'โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมานัง ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมา […]',
-                'pali_roman': 'Sokaparidevadukkhadomanassupāyāsadhammānaṃ bhikkhave sattānaṃ evaṃ icchā uppajjati. Aho vata mayaṃ na sokaparidevadukkhadomanassupāyāsadhammā […]',
+                'page': 144,
+                'pali': 'โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมานัง ภิกขะเว สัตตานัง เอวัง อิจฉา อุปปัชชะติ. อะโห วะตะ มะยัง นะ โสกะปะริเทวะทุกขะโทมะนัสสุปายาสะธัมมา อัสสามะ, นะ จะ วะตะ โน โสกะปะริเทวะทุกขะโทมะนัสสุปายาสา อาคัจเฉยยุนติ, นะ โข ปะเนตัง อิจฉายะ ปัตตัพพัง, อิทัมปิ ยัมปิจฉัง นะ ละภะติ, ตัมปิ ทุกขัง.',
+                'pali_roman': 'Sokaparidevadukkhadomanassupāyāsadhammānaṃ bhikkhave sattānaṃ evaṃ icchā uppajjati. Aho vata mayaṃ na sokaparidevadukkhadomanassupāyāsadhammā assāma, na ca vata no sokaparidevadukkhadomanassupāyāsā āgaccheyyunti, na kho panetaṃ icchāya pattabbaṃ, idampi yampicchaṃ na labhati, tampi dukkhaṃ.',
                 'thai': '',
                 'paiboon': '',
-                'english': "In beings subject to sorrow, lamentation, pain, grief and despair, monks, this wish arises: 'Oh that we were not subject to sorrow, lamentation, pain, grief and despair […]",
+                'english': "In beings subject to sorrow, lamentation, pain, grief and despair, monks, this wish arises: 'Oh that we were not subject to sorrow, lamentation, pain, grief and despair, that they might not come to us!' But this is not to be got by wishing. This too is not getting what one wants, and that is suffering.",
+            },
+            # ‼ CHECK [IMG_0415.PNG]: THE FIRST NOBLE TRUTH CLOSES HERE, with
+            #   อิทัง วุจจะติ ภิกขะเว ทุกขัง อะริยะสัจจัง., and the second
+            #   opens in the very next paragraph with no label, no heading and
+            #   no space between them. The four truths are one subject and
+            #   will close with one label when all four are given.
+            {
+                'number': 56,
+                'page': 145,
+                'pali': 'กะตะเม จะ ภิกขะเว สังขิตเตนะ ปัญจุปาทานักขันธา ทุกขา. เสยยะถีทัง. รูปูปาทานักขันโธ, เวทะนูปาทานักขันโธ, สัญญูปาทานักขันโธ, สังขารูปาทานักขันโธ, วิญญาณูปาทานักขันโธ. อิเม วุจจันติ ภิกขะเว สังขิตเตนะ ปัญจุปาทานักขันธา ทุกขา, อิทัง วุจจะติ ภิกขะเว ทุกขัง อะริยะสัจจัง.',
+                'pali_roman': 'Katame ca bhikkhave saṅkhittena pañcupādānakkhandhā dukkhā. Seyyathīdaṃ. Rūpupādānakkhandho, vedanupādānakkhandho, saññupādānakkhandho, saṅkhārupādānakkhandho, viññāṇupādānakkhandho. Ime vuccanti bhikkhave saṅkhittena pañcupādānakkhandhā dukkhā, idaṃ vuccati bhikkhave dukkhaṃ ariyasaccaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, are the five aggregates of clinging that are suffering? They are these: the form aggregate of clinging, the feeling aggregate of clinging, the perception aggregate of clinging, the formations aggregate of clinging, the consciousness aggregate of clinging. These, monks, are called the five aggregates of clinging that are suffering. This, monks, is called the noble truth of suffering.',
+            },
+            # ‼ CHECK [IMG_0415.PNG]: ‼ THE THREE CRAVINGS ARE PUNCTUATED ,
+            #   THEN . THEN . — กามะตัณหา, ภะวะตัณหา. วิภะวะตัณหา. Read at
+            #   2.7x. A comma between the first and second and a FULL STOP
+            #   between the second and third, in a three-item list the book
+            #   elsewhere runs on commas. Reproduced; the stop after ภะวะตัณหา
+            #   is not a sentence boundary in any grammatical sense.
+            # ‼ CHECK [IMG_0415.PNG]: อะริยะสัจจัง, ยายัง — A COMMA, where the
+            #   first truth's parallel opening on page 142 reads ทุกขัง
+            #   อะริยะสัจจัง. with a full stop before its definition. Same
+            #   formula, one truth apart, punctuated differently.
+            # ‼ CHECK [IMG_0415.PNG]: A LINE-END HYPHEN REJOINED at โปโนพ- /
+            #   ภะวิกา. The typesetter's, so the word is written whole as
+            #   โปโนพภะวิกา, per the run-on-passage rule.
+            {
+                'number': 57,
+                'pali': 'กะตะมัญจะ ภิกขะเว ทุกขะสะมุทะโย อะริยะสัจจัง, ยายัง ตัณหา โปโนพภะวิกา นันทิราคะสะหะคะตา ตัต๎ระตัต๎ราภินันทินี เสยยะถีทัง. กามะตัณหา, ภะวะตัณหา. วิภะวะตัณหา.',
+                'pali_roman': 'Katamañca bhikkhave dukkhasamudayo ariyasaccaṃ, yāyaṃ taṇhā ponobbhavikā nandirāgasahagatā tatratatrābhinandinī seyyathīdaṃ. Kāmataṇhā, bhavataṇhā. Vibhavataṇhā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is the noble truth of the arising of suffering? It is this craving which leads to renewed becoming, accompanied by delight and lust, delighting now here now there — namely, craving for sensual pleasures, craving for becoming, craving for non-becoming.',
+            },
+            {
+                'number': 58,
+                'pali': 'สา โข ปะเนสา ภิกขะเว ตัณหา กัตถะ อุปปัชชะมานา อุปปัชชะติ, กัตถะ นิวีสะมานา นิวีสะติ. ยัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ. กิญจะ โลเก ปิยะรูปัง สาตะรูปัง.',
+                'pali_roman': 'Sā kho panesā bhikkhave taṇhā kattha uppajjamānā uppajjati, kattha nivīsamānā nivīsati. Yaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati. Kiñca loke piyarūpaṃ sātarūpaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And where, monks, does this craving arise when it arises, and where does it settle when it settles? Wherever in the world there is what is dear and agreeable, there this craving arises when it arises, and there it settles when it settles. And what in the world is dear and agreeable?',
+            },
+            # ‼ CHECK [IMG_0415.PNG]: ‼ SEVEN PARAGRAPHS, ONE FORMULA, AND ALL
+            #   SEVEN AGREE EXACTLY — จักขุง, โสตัง, ฆานัง, ชิวหา, กาโย, มะโน,
+            #   รูปา, each followed word for word and comma for comma by โลเก
+            #   ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ,
+            #   เอตถะ นิวีสะมานา นิวีสะติ. Every one read separately rather
+            #   than copied. On this book that agreement is the surprise, not
+            #   the rule — the six sense blocks on pages 139-140 were
+            #   punctuated six different ways.
+            {
+                'number': 59,
+                'pali': 'จักขุง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Cakkhuṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The eye in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 60,
+                'pali': 'โสตัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Sotaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The ear in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 61,
+                'pali': 'ฆานัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Ghānaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The nose in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 62,
+                'pali': 'ชิวหา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Jivhā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The tongue in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 63,
+                'pali': 'กาโย โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Kāyo loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The body in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 64,
+                'pali': 'มะโน โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Mano loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The mind in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0415.PNG]: THE SEVENTH PARAGRAPH IS รูปา — FORMS,
+            #   NOT A SENSE. The six senses are followed immediately by their
+            #   first object, so the survey has moved from the internal bases
+            #   to the external ones without a break or a heading. Page 146
+            #   should continue with sounds, odours and the rest. Recorded
+            #   because a list of 'six' that runs to seven items looks like a
+            #   duplication.
+            # ‼ CHECK [IMG_0415.PNG]: THE PAGE ENDS AT A FULL STOP after เอตถะ
+            #   นิวีสะมานา นิวีสะติ., so NO […] is marked and page 146 should
+            #   open a new verse rather than complete this one. Third time in
+            #   this chant, after pages 138 and 143.
+            {
+                'number': 65,
+                'pali': 'รูปา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Rūpā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Forms in the world are dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
             },
         ],
     },
