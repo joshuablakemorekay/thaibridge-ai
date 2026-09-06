@@ -475,6 +475,89 @@ class TestACompletionKeepsWhatTheFirstHalfCarried:
         assert "'page': 136," not in out
 
 
+class TestAPageLevelCheckOnAContinuation:
+    """A `"verse": null` check arriving with a continuation must land.
+
+    It did not, for the whole first pass of the book. `render_chant` writes
+    these at the top of a chant's dict, but that runs only when a chant is
+    FIRST ADDED — and a continuation appends verses to a dict that already
+    exists, so nothing ever wrote them. 105 checks were read off photographs,
+    recorded in their batch files, and silently dropped on the way in.
+
+    Nothing failed when it happened: the file imported, the suite passed, and
+    check_pages compares verses and blocks rather than comments. It surfaced
+    only by counting the batch files against the file they had been applied
+    to. These tests are what makes it fail loudly next time.
+    """
+
+    PRESENT = ("[\n    {\n"
+               "        # ‼ CONTINUES: last verse here is 1.\n"
+               "        'id': 'a',\n"
+               "        'invitation': {\n        },\n"
+               "        'verses': [\n"
+               "            {\n                'number': 1,\n            },\n"
+               "        ],\n    },\n]\n")
+    PAGES = [{'page': 42, 'chant': 'a', 'verses': '2-3'}]
+
+    def chant_level(self, issue='NOTHING BUT BODY TEXT on this sheet.'):
+        c = chant('a', [verse(2), verse(3)], continuation_of='a')
+        c['checks'] = [{'verse': None, 'file': 'IMG_0416.PNG', 'issue': issue}]
+        return batch([c], pages=self.PAGES)
+
+    def test_it_reaches_the_file_at_all(self):
+        out, _ = apply(self.chant_level(), self.PRESENT)
+
+        assert 'NOTHING BUT BODY TEXT' in out
+
+    def test_it_is_named_as_a_page_level_check_not_a_verse_one(self):
+        """The PAGE prefix is what stops it being read as a note on one line."""
+        out, _ = apply(self.chant_level(), self.PRESENT)
+
+        assert 'PAGE 42 — NOTHING BUT BODY TEXT' in out
+
+    def test_it_sits_above_the_first_verse_this_batch_brought_in(self):
+        """Not at the head of the dict — that can be hundreds of lines away.
+
+        A chant continued across nineteen sheets would stack forty page-level
+        checks above verse 1, nowhere near the page each describes.
+        """
+        out, _ = apply(self.chant_level(), self.PRESENT)
+
+        assert out.index('NOTHING BUT BODY TEXT') < out.index("'number': 2,")
+        assert out.index("'number': 1,") < out.index('NOTHING BUT BODY TEXT')
+
+    def test_it_is_reported_rather_than_written_quietly(self):
+        _, report = apply(self.chant_level(), self.PRESENT)
+
+        assert report['page_checks'] == [('a', 42, 'NOTHING BUT BODY TEXT on this sheet.'[:60])]
+
+    def test_verse_level_checks_still_follow_the_page_level_one(self):
+        c = chant('a', [verse(2), verse(3)], continuation_of='a')
+        c['checks'] = [{'verse': 2, 'file': 'i.PNG', 'issue': 'ABOUT ONE LINE'},
+                       {'verse': None, 'file': 'i.PNG', 'issue': 'ABOUT THE SHEET'}]
+
+        out, _ = apply(batch([c], pages=self.PAGES), self.PRESENT)
+
+        assert out.index('ABOUT THE SHEET') < out.index('ABOUT ONE LINE')
+        assert out.index('ABOUT ONE LINE') < out.index("'number': 2,")
+
+    def test_a_page_the_map_cannot_place_still_lands(self):
+        """A verse with no page row must not swallow the check silently."""
+        c = chant('a', [verse(2)], continuation_of='a')
+        c['checks'] = [{'verse': None, 'file': 'i.PNG', 'issue': 'STILL RECORDED'}]
+
+        out, _ = apply(batch([c], pages=[]), self.PRESENT)
+
+        assert 'THIS PAGE — STILL RECORDED' in out
+
+    def test_a_continuation_with_no_page_level_check_reports_nothing(self):
+        b = batch([chant('a', [verse(2)], continuation_of='a')], pages=self.PAGES)
+
+        _, report = apply(b, self.PRESENT)
+
+        assert 'page_checks' not in report
+
+
 class TestAgainstTheRealBatchFiles:
     """The three batches already applied must still reconcile against the app."""
 

@@ -956,6 +956,36 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
             if k["verse"] is not None:
                 per_verse.setdefault(k["verse"], []).append(k)
 
+        # A chant-level check (`"verse": null`) on a CONTINUATION used to go
+        # nowhere at all. `render_chant` writes them at the top of the dict,
+        # but that runs only when a chant is FIRST ADDED; this path appends
+        # verses to a dict that already exists and never touched its head. So
+        # every one of them was read off a photograph, written to the batch
+        # file, and then silently dropped — 105 of them across the run before
+        # anyone noticed, and not one in `chanting.py`. Nothing failed: the
+        # file imported, the suite passed, and check_pages compares verses and
+        # blocks rather than comments. It was found only by counting the batch
+        # files against the file they had been applied to.
+        #
+        # They go beside the FIRST verse this batch brings in, NOT at the head
+        # of the dict. A chant continued across nineteen sheets would stack
+        # forty page-level checks above verse 1, hundreds of lines away from
+        # the page each one describes; beside the first verse of its own page
+        # they sit where the review pass actually meets them. The PAGE prefix
+        # keeps the two kinds apart, so a check about a whole sheet is never
+        # read as a check about the one line it happens to sit above.
+        opening = chant["verses"][0]["number"]
+        page_here = page_of(batch, target, opening)
+        where = f"PAGE {page_here}" if page_here else "THIS PAGE"
+        raw = [k for k in chant.get("checks", []) if k["verse"] is None]
+        if raw:
+            per_verse[opening] = ([dict(k, issue=f"{where} — {k['issue']}")
+                                   for k in raw] + per_verse.get(opening, []))
+            # The gist is reported WITHOUT the prefix this writer just added,
+            # so the console line quotes the check as stage 1 wrote it.
+            report.setdefault("page_checks", []).extend(
+                (target, page_here, k["issue"][:60]) for k in raw)
+
         for verse in chant["verses"]:
             # The trailing newline is optional. `block` is sliced to stop at the
             # verses list's own closing bracket, so the LAST verse's `},` sits at
@@ -1156,6 +1186,11 @@ def main(argv=None) -> int:
     for cid in report.get("closings_skipped", []):
         print(f"  closing NOT written for {cid}: its last verse already is the "
               f"formula, and writing it would print it twice")
+    # Printed because these are the checks that were silently dropped for the
+    # whole first pass of the book. Saying how many landed, and where, is what
+    # stops the same loss happening again without anyone noticing.
+    for cid, page, gist in report.get("page_checks", []):
+        print(f"  page-level check kept on {cid} (page {page}): {gist}…")
     for word, (before, after) in report["markers"].items():
         print(f"  {word} markers: {before} -> {after}")
     return 0
