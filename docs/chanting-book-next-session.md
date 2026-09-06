@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-146 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-09-06 after page
+150 went in.
 
 ## Read first, in this order
 
@@ -21,30 +21,68 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-06: **287 chants across 289 pages.** The gaps are
-**147–174, 179–182, 192, 246, 248 and 278** — and 147 and 179 are the live
-edges of two runs, not holes.
+As of 2026-09-06: **287 chants across 293 pages.** The gaps are
+**151–174, 179–182, 192, 246, 248 and 278** — 32 sheets in all, and 151 and 179
+are the live edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 78, page 146 | **page 147 = IMG_0417** |
+| `mahasatipatthana-sutta-patho` | 129, page 150 | **page 151 = IMG_0421** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
 MIND-OBJECTS, the FOURTH and last foundation, at its FIFTH and LAST subject —
-the four noble truths. The FIRST truth is CLOSED (145) and the SECOND is
-running — craving, its three kinds, and a long survey of every place craving
-lodges. The survey has crossed three sets of six (external bases,
-consciousnesses, contacts) and is two contacts in at the foot of 146. Two
-truths remain after it.
+the four noble truths. The FIRST truth is CLOSED (142–145) and so is the
+**SECOND, at verse 119 on page 150**. The **THIRD is running** — the cessation
+of suffering — and it is nine items into its survey at the foot of 150, having
+given the six internal bases and three of the six external. One truth remains
+after it.
 The body (135), the feelings (136) and the mind (137) are all CLOSED, and so
 are this foundation's first four subjects: hindrances (138), aggregates (139),
 sense bases (140), factors of awakening (142).
 
 **The sutta's exposition is nearly done** — one subject left, then whatever
 closing the book gives it.
+
+## ‼‼ READ THIS BEFORE PAGE 151 — THE FORMULA CHANGED AT VERSE 121
+
+**This is the single most likely error left in this run**, and nothing in the
+tooling can catch it: `check_render` and `check_pages` compare the app against
+the batch file, and the batch file would be wrong too.
+
+Pages 145–150 gave the SAME sixty items twice, under two different truths, and
+the tail is different each time:
+
+| truth | verses | the tail every paragraph ends with |
+|---|---|---|
+| **second** (arising) | 59–118 | `เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.` |
+| **third** (cessation) | 121– | `เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.` |
+
+*arises and settles* becomes *is abandoned and ceases*. **Pages 151 onward all
+take the SECOND form.** After five sheets of the first one, typing it from
+memory is the natural mistake and it would read as perfectly ordinary Pali.
+
+The sixty items run in this order, six at a time — internal bases, external
+bases, consciousness, contact, feeling, perception, volition, craving, thought
+(`วิตักโก`), examination (`วิจาโร`) — and the third truth is nine in, so **151
+opens at `ระสา`**, the fourth external base.
+
+⚠️ **`ปะหิยยะ` is spelt with DOUBLE ย** in this book, so it transliterates
+`pahiyyati` / `pahiyyamānā`, NOT the `pahīyati` most editions print. Read at
+2.8× on page 150. It is about to appear sixty more times — keep it consistent.
+
+⚠️ **The truths are not labelled.** The second closed and the third opened in
+the middle of page 150 with no heading, no `section_end` and not even extra
+space. Expect the fourth truth to arrive the same way, and expect the survey to
+be followed by the closing formula `อิทัง วุจจะติ ภิกขะเว ทุกขะนิโรโธ
+อะริยะสัจจัง.` — the shape verses 56 and 119 both used.
+
+⚠️ **The two runs are punctuated differently in at least one place.** Verse 58
+(page 145) ends `เอตถะ นิวีสะมานา นิวีสะติ. กิญจะ โลเก` with a FULL STOP; the
+same sentence in verse 120 (page 150) has **no mark at all** before `กิญจะ`.
+Read at 3.4×. Do not level them.
 
 ## ‼ THE PRINTER SETS พ WHERE THE CANON HAS ฬ — three times now
 
@@ -161,6 +199,11 @@ refusing a second apply; nothing would have saved two concurrent *commits* of
 the same file. **One session works `chanting.py` at a time.** If a second is
 needed, give it work that does not touch that file at all.
 
+**How it was settled, 2026-09-06.** Josh assigned 147 onward to one session and
+the other stood down of its own accord, saying his word beat its claim. Pages
+147–150 were then entered by that one session alone, with no further collision.
+**That is the arrangement to keep.**
+
 ## 📋 A FULL REVIEW PASS IS PLANNED FOR THE END — don't do it piecemeal
 
 Josh's decision, 2026-09-05: **once the last page is in, we go over every
@@ -169,14 +212,39 @@ first pass is running, the job is COVERAGE AND FIDELITY, not finish. Record
 what the sheet says, raise the check, move to the next page. Do not stop the
 run to tidy something that the review pass will reach anyway.
 
-What that pass will have waiting for it, as of page 133:
+What that pass will have waiting for it, as of page 150:
 
 | | count | what it means |
 |---|---:|---|
-| `‼ CHECK` comments | 1,752 | every doubt raised against a photograph, each naming its image |
+| `‼ CHECK` comments | 1,870 | every doubt raised against a photograph, each naming its image |
 | `‼ COMMENTARY PENDING` | 270 | chants set DATA-ONLY; stage 3 writes their prose |
 | `english_unverified` | 257 of 287 | the book prints Pali only, so the English is this edition's own |
 | pages with no batch record | 1, 23, 27, 28, 217–221 | entered before this workflow existed; never checked against a photograph |
+| page-level checks in batch files only | 105 | see below — they were dropped on the way in, and stay where they are |
+
+### 🐛 105 page-level checks never reached the code, and the fix landed 2026-09-06
+
+A check with `"verse": null` reached `chanting.py` only when a chant was **first
+added**. `render_chant` writes them at the head of the dict, and that function
+never runs on a continuation — which appends verses to a dict that already
+exists. So every chant-level check on every continuing chant was read off a
+photograph, written to its batch file, and then silently dropped: **105 of them
+across 67 continuation entries, none in the code.**
+
+Nothing failed when it happened. The file imported, the suite passed, and
+`check_pages` compares verses and blocks rather than comments. It surfaced only
+by counting the batch files against the file they had been applied to.
+
+`a164a90` fixes it, with seven tests, six of which fail without it. They now land
+**above the first verse the batch brings in**, prefixed `PAGE <n> —`, rather than
+at the head of the dict: a chant continued across nineteen sheets would otherwise
+stack forty page-level checks above verse 1, hundreds of lines from the page each
+describes. Page 147 was the first to carry them.
+
+**The 105 already lost are NOT being back-filled** — Josh's call. They are safe in
+their batch files, which are the permanent record, and the review pass can read
+them there. Re-applying old batches into a shared 60,000-line file to recover
+comments that already exist somewhere was judged the worse risk.
 
 **The one thing that does NOT wait for the review pass** is a photograph that
 needs retaking — name it the day you meet it, because the book goes back on its
