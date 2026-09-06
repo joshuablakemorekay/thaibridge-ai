@@ -974,8 +974,16 @@ def apply(batch: dict, source: str) -> tuple[str, dict]:
         # they sit where the review pass actually meets them. The PAGE prefix
         # keeps the two kinds apart, so a check about a whole sheet is never
         # read as a check about the one line it happens to sit above.
+        # The page named is the HIGHEST the incoming verses touch, not the
+        # first. Page 155 caught the difference: its batch opens with a verse
+        # COMPLETING a line cut on 154, so that verse belongs to 154 — and
+        # keying the prefix off the first verse stamped "PAGE 154" on checks
+        # describing the 155 sheet. Whenever a batch carries a completion it
+        # spans two pages, and the sheet it is a reading OF is the later one.
         opening = chant["verses"][0]["number"]
-        page_here = page_of(batch, target, opening)
+        pages_here = [p for p in (page_of(batch, target, v["number"])
+                                  for v in chant["verses"]) if p]
+        page_here = max(pages_here) if pages_here else None
         where = f"PAGE {page_here}" if page_here else "THIS PAGE"
         raw = [k for k in chant.get("checks", []) if k["verse"] is None]
         if raw:

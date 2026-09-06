@@ -550,6 +550,34 @@ class TestAPageLevelCheckOnAContinuation:
 
         assert 'THIS PAGE — STILL RECORDED' in out
 
+    def test_a_batch_that_completes_a_cut_line_names_the_LATER_page(self):
+        """The sheet a batch is a reading OF is the later page, not the first.
+
+        Page 155 caught this. Its batch opens with a verse completing a line
+        cut on 154, so that verse belongs to 154 — and naming the page off the
+        FIRST verse stamped "PAGE 154" on checks describing the 155 sheet.
+        """
+        present = ("[\n    {\n"
+                   "        # ‼ CONTINUES: last verse here is 2.\n"
+                   "        'id': 'a',\n"
+                   "        'invitation': {\n        },\n"
+                   "        'verses': [\n"
+                   "            {\n                'number': 1,\n            },\n"
+                   "            {\n                'number': 2,\n"
+                   f"                'pali': 'ปะฏิสังขา {GAP}',\n            }},\n"
+                   "        ],\n    },\n]\n")
+        c = chant('a', [verse(2, 'ปะฏิสังขา โยนิโส'), verse(3)],
+                  continuation_of='a')
+        c['checks'] = [{'verse': None, 'file': 'i.PNG', 'issue': 'ABOUT THE SHEET'}]
+        b = batch([c], pages=[{'page': 154, 'chant': 'a', 'verses': '2'},
+                              {'page': 155, 'chant': 'a', 'verses': '3'}])
+
+        out, report = apply(b, present)
+
+        assert 'PAGE 155 — ABOUT THE SHEET' in out
+        assert 'PAGE 154 — ABOUT THE SHEET' not in out
+        assert report['page_checks'] == [('a', 155, 'ABOUT THE SHEET')]
+
     def test_a_continuation_with_no_page_level_check_reports_nothing(self):
         b = batch([chant('a', [verse(2)], continuation_of='a')], pages=self.PAGES)
 
