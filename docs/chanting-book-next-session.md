@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-141 went in.
+142 went in.
 
 ## Read first, in this order
 
@@ -21,23 +21,37 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 284 pages.** The gaps are
-**142–174, 179–182, 192, 246, 248 and 278** — and 142 and 179 are the live
+As of 2026-09-05: **287 chants across 285 pages.** The gaps are
+**143–174, 179–182, 192, 246, 248 and 278** — and 143 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 36, page 141 | **page 142 = IMG_0412** |
+| `mahasatipatthana-sutta-patho` | 41, page 142 | **page 143 = IMG_0413** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
-MIND-OBJECTS, the FOURTH and last foundation, at its FOURTH subject — the seven
-factors of awakening, FIVE of seven in (mindfulness, investigation, energy,
-rapture, tranquillity), tranquillity cut mid-clause. The body (135), the
-feelings (136) and the mind (137) are all CLOSED, and so are this foundation's
-first three subjects: hindrances (138), aggregates (139), sense bases (140).
+MIND-OBJECTS, the FOURTH and last foundation, at its FIFTH and LAST subject —
+the four noble truths, opened on 142 and cut inside the definition of dukkha.
+The body (135), the feelings (136) and the mind (137) are all CLOSED, and so
+are this foundation's first four subjects: hindrances (138), aggregates (139),
+sense bases (140), factors of awakening (142).
+
+**The sutta's exposition is nearly done** — one subject left, then whatever
+closing the book gives it.
+
+## ‼ A RECITATION-PORTION MARKER shares a line with a section label
+
+Page 142 prints ONE centred bold line reading
+`โพชฌังคะปัพพัง ปะฐะมะภาณะวาโร.` — the label closing the seven factors, and
+then the first **bhāṇavāra**, a measured portion for chanting aloud. That is a
+division of the RECITING, not of the teaching, and it is new to this book.
+
+Kept as ONE `section_end` string, because splitting it would put two lines
+where the sheet has one. **Expect a second bhāṇavāra later** — handle it the
+same way and flag it again.
 
 ⚠️ **The awakening-factor formula has FOUR clauses, not the hindrances' five** —
 present / absent / how it arises / `ภาวะนาปาริปูริ`, its coming to fulfilment.

@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 36; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 41; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58186,13 +58186,111 @@ CHANTS = [
             #   […] and completed from page 142, where concentration and
             #   equanimity — the sixth and seventh factors — should follow,
             #   and then the subject's closing label.
+            # ‼ COMPLETED FROM p141: this line was cut by the page break and
+            #   is now whole. Was: สันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง
+            #   อัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา
+            #   อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง
+            #   ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ
+            #   ปัสสัทธิสัมโพชฌังคัสสะ อุปปาโท โหติ. ตัญจะ ปะชานาติ, ยะถา จะ
+            #   อุปปันนัสสะ […]
+            # ‼ CHECK [IMG_0412.PNG]: COMPLETES THE LINE PAGE 141 CUT. That
+            #   sheet ended …ยะถา จะ อุปปันนัสสะ […] and this one opens
+            #   ปัสสัทธิสัมโพชฌังคัสสะ ภาวะนาปาริปูริ. The verse keeps page
+            #   141 and carries `page: 141` explicitly. Its mid-clause full
+            #   stop at อุปปาโท โหติ. is preserved from the 141 reading.
             {
                 'number': 36,
-                'pali': 'สันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ปัสสัทธิสัมโพชฌังคัสสะ อุปปาโท โหติ. ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ […]',
-                'pali_roman': 'Santaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ atthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ natthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti. Yathā ca anuppannassa passaddhisambojjhaṅgassa uppādo hoti. Tañca pajānāti, yathā ca uppannassa […]',
+                'page': 141,
+                'pali': 'สันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง ปัสสัทธิสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง ปัสสัทธิสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ ปัสสัทธิสัมโพชฌังคัสสะ อุปปาโท โหติ. ตัญจะ ปะชานาติ, ยะถา จะ อุปปันนัสสะ ปัสสัทธิสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Santaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ atthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ passaddhisambojjhaṅgaṃ natthi me ajjhattaṃ passaddhisambojjhaṅgoti pajānāti. Yathā ca anuppannassa passaddhisambojjhaṅgassa uppādo hoti. Tañca pajānāti, yathā ca uppannassa passaddhisambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'When the awakening factor of tranquillity is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of tranquillity comes to arise […]',
+                'english': 'When the awakening factor of tranquillity is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of tranquillity comes to arise, and how the arisen awakening factor of tranquillity comes to fulfilment by development.',
+            },
+            # ‼ CHECK [IMG_0412.PNG]: CONCENTRATION AND EQUANIMITY BOTH PUT A
+            #   FULL STOP after their third clause — …อุปปาโท โหติ, ตัญจะ
+            #   ปะชานาติ. ยะถา จะ อุปปันนัสสะ… — where mindfulness, energy and
+            #   rapture on page 141 all use a comma there. So of the seven
+            #   factors, two of the four-clause blocks break at that point and
+            #   three do not, and two more (investigation, tranquillity) break
+            #   one word earlier instead. No two of the seven are punctuated
+            #   alike.
+            {
+                'number': 37,
+                'page': 142,
+                'pali': 'สันตัง วา อัชฌัตตัง สะมาธิสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง สะมาธิสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง สะมาธิสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง สะมาธิสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สะมาธิสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ สะมาธิสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Santaṃ vā ajjhattaṃ samādhisambojjhaṅgaṃ atthi me ajjhattaṃ samādhisambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ samādhisambojjhaṅgaṃ natthi me ajjhattaṃ samādhisambojjhaṅgoti pajānāti. Yathā ca anuppannassa samādhisambojjhaṅgassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa samādhisambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When the awakening factor of concentration is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of concentration comes to arise, and how the arisen awakening factor of concentration comes to fulfilment by development.',
+            },
+            {
+                'number': 38,
+                'pali': 'สันตัง วา อัชฌัตตัง อุเปกขาสัมโพชฌังคัง อัตถิ เม อัชฌัตตัง อุเปกขาสัมโพชฌังโคติ ปะชานาติ, อะสันตัง วา อัชฌัตตัง อุเปกขาสัมโพชฌังคัง นัตถิ เม อัชฌัตตัง อุเปกขาสัมโพชฌังโคติ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ อุเปกขาสัมโพชฌังคัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ อุเปกขาสัมโพชฌังคัสสะ ภาวะนาปาริปูริ โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Santaṃ vā ajjhattaṃ upekkhāsambojjhaṅgaṃ atthi me ajjhattaṃ upekkhāsambojjhaṅgoti pajānāti, asantaṃ vā ajjhattaṃ upekkhāsambojjhaṅgaṃ natthi me ajjhattaṃ upekkhāsambojjhaṅgoti pajānāti. Yathā ca anuppannassa upekkhāsambojjhaṅgassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa upekkhāsambojjhaṅgassa bhāvanāpāripūri hoti, tañca pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'When the awakening factor of equanimity is present in him, he knows it is present; when it is absent, he knows it is absent; and he knows how the unarisen awakening factor of equanimity comes to arise, and how the arisen awakening factor of equanimity comes to fulfilment by development.',
+            },
+            # ‼ CHECK [IMG_0412.PNG]: ‼‼ ONE CENTRED BOLD LINE CARRYING TWO
+            #   DIFFERENT THINGS: โพชฌังคะปัพพัง ปะฐะมะภาณะวาโร. — the section
+            #   label closing the seven factors, and then a RECITATION-PORTION
+            #   marker, the first bhāṇavāra, which is a division of the
+            #   chanting rather than of the teaching. New to this book. Read
+            #   at 3.2x, both halves the same size, with a full stop only at
+            #   the very end. ⚠️ Recorded as ONE `section_end` string because
+            #   the book prints them as one line and splitting them would put
+            #   two lines where the sheet has one. The next bhāṇavāra marker,
+            #   wherever it falls, should be handled the same way and flagged
+            #   again.
+            # ‼ CHECK [IMG_0412.PNG]: ‼ THE REFRAIN IS ITS OWN INDENTED
+            #   PARAGRAPH HERE, which no earlier subject did. The hindrances,
+            #   aggregates and sense bases all ran the refrain on from the
+            #   last item's paragraph; here อิติ อัชฌัตตัง วา… starts fresh
+            #   and indented. So it is its own verse and it carries the
+            #   closing label. Read off the indentation, not assumed.
+            {
+                'number': 39,
+                'section_end': 'โพชฌังคะปัพพัง ปะฐะมะภาณะวาโร.',
+                'pali': 'อิติ อัชฌัตตัง วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, อัชฌัตตะพะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, วะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ. อัตถิ ธัมมาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ.',
+                'pali_roman': 'Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati, ajjhattabahiddhā vā dhammesu dhammānupassī viharati. Samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu bojjhaṅgesu.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Thus he dwells contemplating mind-objects in mind-objects internally, or externally, or both internally and externally. He dwells contemplating the nature of arising in mind-objects, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there are mind-objects' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating mind-objects in mind-objects, as regards the seven factors of awakening.",
+            },
+            # ‼ CHECK [IMG_0412.PNG]: วิหะระติ, จะตูสุ TWICE, BOTH COMMAS —
+            #   matching the factors of awakening on page 140 and unlike the
+            #   aggregates on 138 (comma then full stop) or the sense bases on
+            #   139 (comma then no mark). Fourth subject, and the third
+            #   different answer to the same repeated join; the truths agree
+            #   with the factors.
+            {
+                'number': 40,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, จะตูสุ อะริยะสัจเจสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, จะตูสุ อะริยะสัจเจสุ. อิธะ ภิกขะเว ภิกขุ อิทัง ทุกขันติ ยะถาภูตัง ปะชานาติ, อะยัง ทุกขะสะมุทะโยติ ยะถาภูตัง ปะชานาติ, อะยัง ทุกขะนิโรโธติ ยะถาภูตัง ปะชานาติ, อะยัง ทุกขะนิโรธะคามินี ปะฏิปะทาติ ยะถาภูตัง ปะชานาติ.',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, catūsu ariyasaccesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, catūsu ariyasaccesu. Idha bhikkhave bhikkhu idaṃ dukkhanti yathābhūtaṃ pajānāti, ayaṃ dukkhasamudayoti yathābhūtaṃ pajānāti, ayaṃ dukkhanirodhoti yathābhūtaṃ pajānāti, ayaṃ dukkhanirodhagāminī paṭipadāti yathābhūtaṃ pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the four noble truths. And how does a monk dwell contemplating mind-objects in mind-objects as regards the four noble truths? Here, monks, a monk knows as it really is: 'this is suffering'; he knows as it really is: 'this is the arising of suffering'; he knows as it really is: 'this is the ceasing of suffering'; he knows as it really is: 'this is the way leading to the ceasing of suffering'.",
+            },
+            # ‼ CHECK [IMG_0412.PNG]: THE PAGE FOOT CUTS THIS SENTENCE mid-
+            #   list after …ทุกขะโทมะนัสสุปายาสาปิ ทุกขา, อัปปิเยหิ, inside
+            #   the definition of dukkha. Marked […] and completed from page
+            #   143. The remaining items — union with the unloved, separation
+            #   from the loved, not getting what one wants, and the five
+            #   aggregates — are all overleaf.
+            # ‼ CHECK [IMG_0412.PNG]: ทุกขา / ทุกขัง — the gender follows its
+            #   subject and is NOT a slip: ชาติปิ ทุกขา and ชะราปิ ทุกขา are
+            #   feminine, มะระณัมปิ ทุกขัง is neuter, and โสกะ…สุปายาสาปิ
+            #   ทุกขา is feminine plural. Four items, three endings, all
+            #   correct Pali. Recorded because it looks like inconsistency in
+            #   a list that is otherwise word-for-word parallel.
+            {
+                'number': 41,
+                'pali': 'กะตะมัญจะ ภิกขะเว ทุกขัง อะริยะสัจจัง. ชาติปิ ทุกขา, ชะราปิ ทุกขา, มะระณัมปิ ทุกขัง, โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา, อัปปิเยหิ […]',
+                'pali_roman': 'Katamañca bhikkhave dukkhaṃ ariyasaccaṃ. Jātipi dukkhā, jarāpi dukkhā, maraṇampi dukkhaṃ, sokaparidevadukkhadomanassupāyāsāpi dukkhā, appiyehi […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And what, monks, is the noble truth of suffering? Birth is suffering, ageing is suffering, death is suffering; sorrow, lamentation, pain, grief and despair are suffering; […]',
             },
         ],
     },
