@@ -58639,6 +58639,29 @@ CHANTS = [
             #   heading, no label and no extra space anywhere between the
             #   three groups — the paragraphs are indented identically down
             #   the whole sheet.
+            # ‼ CHECK [IMG_0416.PNG]: ‼ HOW THIS PAGE'S THIRTEEN VERSES WERE
+            #   PRODUCED, recorded because it is a departure. The sheet prints
+            #   ONE formula thirteen times, changing only its opening word, so
+            #   the first session GENERATED the thirteen from a single verified
+            #   tail string rather than typing it out thirteen times. The tail
+            #   was read at 2.6x on the first, sixth and thirteenth paragraphs;
+            #   every opening word was read separately. The reason: nothing in
+            #   this workflow compares one verse against another, so a slip in
+            #   one of thirteen identical clauses would pass every check.
+            #   ✅ RESOLVED — a SECOND session read the same sheet independently
+            #   the same day and TYPED all thirteen out by hand, and the two
+            #   readings agree character for character, every comma included.
+            #   So this page has been transcribed twice, independently, and the
+            #   generated text is confirmed by a hand-typed one. No redo needed.
+            # ‼ CHECK [IMG_0416.PNG]: NOT A COMPLETION — page 145 ended at a
+            #   full stop, so verse 66 OPENS rather than finishes a line and
+            #   batch-146 carries no completion row. Third time in this chant,
+            #   after pages 139 and 144.
+            # ‼ CHECK [IMG_0416.PNG]: NOTHING ON THIS SHEET BUT BODY TEXT — the
+            #   page number, thirteen paragraphs, and blank paper. No title,
+            #   invitation, heading, section label, rubric, footnote or rule
+            #   anywhere, and the thumb in the left margin covers no text.
+            #   Recorded because 'nothing else on the page' is a finding.
             {
                 'number': 66,
                 'page': 146,
