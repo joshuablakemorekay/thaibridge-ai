@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 78; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 91; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58785,6 +58785,167 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'Ear-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0417.PNG]: PAGE 147 — ‼ THIRTEEN PARAGRAPHS, ONE
+            #   TAIL, AND ALL THIRTEEN AGREE EXACTLY — โลเก ปิยะรูปัง
+            #   สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ
+            #   นิวีสะมานา นิวีสะติ., word for word and comma for comma under
+            #   every opening term. Every opening term read separately at
+            #   2.9x; the tail read at 2.6x on paragraphs 1, 5, 9 and 13 —
+            #   four points down the sheet rather than once at the top. That
+            #   is now the THIRD sheet running where a repeated formula agrees
+            #   with itself throughout, after 145's seven and 146's thirteen.
+            #   Worth Josh confirming at the book, because on this printing
+            #   agreement is the surprise: the six sense blocks on pages
+            #   139-140 were punctuated six different ways.
+            # ‼ CHECK [IMG_0417.PNG]: PAGE 147 — THREE SETS MEET ON THIS SHEET
+            #   WITH NO PRINTED JOIN. The six CONTACTS close here — the eye
+            #   and the ear were verses 77-78 on page 146, and the nose,
+            #   tongue, body and mind follow as 79-82. Then the six FEELINGS
+            #   born of contact (83-88), complete on this sheet. Then the
+            #   PERCEPTIONS open (89-91) and run onto 148. No heading, no
+            #   label and no extra space anywhere between the three groups;
+            #   the paragraph indents are identical down the whole sheet.
+            #   Recorded because a set of six split across a page turn reads
+            #   as a dropped line at one end and a duplication at the other.
+            # ‼ CHECK [IMG_0417.PNG]: PAGE 147 — NOTHING ON THIS SHEET BUT
+            #   BODY TEXT. No title, no invitation, no section heading, no
+            #   section_end label, no rubric, no footnote and no rule at the
+            #   foot. Walked top to bottom against the photograph: page number
+            #   147 at the top centre, thirteen paragraphs, blank paper. A
+            #   thumb appears twice at the right edge and covers no text.
+            # ‼ CHECK [IMG_0417.PNG]: NOT A COMPLETION — page 146 ended at a
+            #   full stop after เอตถะ นิวีสะมานา นิวีสะติ., so this verse
+            #   OPENS a paragraph rather than finishing one, and the batch
+            #   carries no completion row and no […]. Fourth time in this
+            #   chant, after pages 139, 144 and 146.
+            {
+                'number': 79,
+                'page': 147,
+                'pali': 'ฆานะสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Ghānasamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Nose-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 80,
+                'pali': 'ชิวหาสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Jivhāsamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Tongue-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 81,
+                'pali': 'กายะสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Kāyasamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Body-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0417.PNG]: มะโนสัมผัสโส CLOSES THE SIX CONTACTS and
+            #   มะโนสัมผัสสะชา เวทะนา closes the six feelings six paragraphs
+            #   later. The two are one syllable apart at page scale and sit in
+            #   the same column position; both read at 2.9x and confirmed
+            #   distinct.
+            {
+                'number': 82,
+                'pali': 'มะโนสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Manosamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Mind-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0417.PNG]: THE FEELING PARAGRAPHS TAKE A TWO-WORD
+            #   SUBJECT, จักขุสัมผัสสะชา เวทะนา, where every other paragraph
+            #   in this survey takes one. The space between สัมผัสสะชา and
+            #   เวทะนา is a real word space, not justification — read at 2.9x
+            #   on all six. The paragraph is still the unit and the tail is
+            #   unchanged, so the six are one verse each as before.
+            {
+                'number': 83,
+                'pali': 'จักขุสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Cakkhusamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of eye-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0417.PNG]: THE GAP BEFORE นิวีสะติ LOOKS WIDER ON
+            #   THIS PARAGRAPH THAN THE OTHERS. Read at 2.6x: it is line
+            #   justification stretching the word spaces on a short last line,
+            #   not a double space or a mark. Reproduced with a single space
+            #   like the rest, and recorded because it is visible at page
+            #   scale and looks like something.
+            {
+                'number': 84,
+                'pali': 'โสตะสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Sotasamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of ear-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 85,
+                'pali': 'ฆานะสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Ghānasamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of nose-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 86,
+                'pali': 'ชิวหาสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Jivhāsamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of tongue-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 87,
+                'pali': 'กายะสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Kāyasamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of body-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 88,
+                'pali': 'มะโนสัมผัสสะชา เวทะนา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Manosamphassajā vedanā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Feeling born of mind-contact in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 89,
+                'pali': 'รูปะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Rūpasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of forms in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            {
+                'number': 90,
+                'pali': 'สัททะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Saddasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of sounds in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
+            },
+            # ‼ CHECK [IMG_0417.PNG]: THE PAGE ENDS AT A FULL STOP after เอตถะ
+            #   นิวีสะมานา นิวีสะติ., with clear white paper below it, so NO
+            #   […] is marked and page 148 should open a new verse rather than
+            #   complete this one. Fifth time in this chant, after pages 138,
+            #   143, 145 and 146. Expect 148 to carry on with ระสะสัญญา, the
+            #   perception of tastes.
+            {
+                'number': 91,
+                'pali': 'คันธะสัญญา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.',
+                'pali_roman': 'Gandhasaññā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā uppajjamānā uppajjati, ettha nivīsamānā nivīsati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Perception of odours in the world is dear and agreeable; there this craving arises when it arises, and there it settles when it settles.',
             },
         ],
     },
