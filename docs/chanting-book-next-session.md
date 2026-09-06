@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-05 after page
-139 went in.
+140 went in.
 
 ## Read first, in this order
 
@@ -21,26 +21,26 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-05: **287 chants across 282 pages.** The gaps are
-**140–174, 179–182, 192, 246, 248 and 278** — and 140 and 179 are the live
+As of 2026-09-05: **287 chants across 283 pages.** The gaps are
+**141–174, 179–182, 192, 246, 248 and 278** — and 141 and 179 are the live
 edges of two runs, not holes.
 
 Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 27, page 139 | **page 140 = IMG_0410** |
+| `mahasatipatthana-sutta-patho` | 31, page 140 | **page 141 = IMG_0411** |
 | `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
 
 **What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
-MIND-OBJECTS, the FOURTH and last foundation, at its THIRD subject — the six
-sense bases, three of six in (eye, ear, nose). The body (135), the feelings
-(136) and the mind (137) are all CLOSED, and so are this foundation's first two
-subjects: the hindrances (138) and the aggregates (139).
+MIND-OBJECTS, the FOURTH and last foundation, at its FOURTH subject — the seven
+factors of awakening, just opened and cut at `สัตตะสุ`. The body (135), the
+feelings (136) and the mind (137) are all CLOSED, and so are this foundation's
+first three subjects: hindrances (138), aggregates (139), sense bases (140).
 
-The fourth foundation has five subjects in turn — hindrances ✅, aggregates ✅,
-sense bases (running), factors of awakening, truths — so it is the longest of
-the four and will run for several sheets yet.
+The fourth foundation has five subjects — hindrances ✅, aggregates ✅, sense
+bases ✅, factors of awakening (running), truths — so **two subjects remain**
+and then the sutta closes.
 
 ⚠️ **The UNIT changes with the subject and must be read, not assumed.** The
 hindrances ran as one block of five and the aggregates as one block of five; the
@@ -49,7 +49,20 @@ subjects still to come will have to be read the same way.
 
 ⚠️ **`สัญโญชะนัง` is spelt ญโญ**, so it romanises `saññojanaṃ`, not the
 `saṃyojanaṃ` most editions print. Read at 6× on page 139, its first appearance
-anywhere in the app. It recurs on every sense base — keep it consistent.
+anywhere in the app. Used on all six sense bases — keep it consistent.
+
+### 🔁 The repeated join is set a different way every subject
+
+`…ธัมมานุปัสสี วิหะระติ[?] <N>ะสุ <subject>` is printed twice per subject, and
+the book has now given three different answers:
+
+| subject | first | second |
+|---|---|---|
+| aggregates (138) | `วิหะระติ,` | `วิหะระติ.` |
+| sense bases (139) | `วิหะระติ,` | `วิหะระติ` — no mark |
+| factors of awakening (140) | `วิหะระติ,` | `วิหะระติ,` |
+
+**Read both, every subject.** Two remain.
 
 ⚠️ **Its subsections close with MINOR labels** (`นีวะระณะปัพพัง`, 54px), and the
 foundation itself will close with a MAJOR one at the end. Measure before

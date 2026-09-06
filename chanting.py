@@ -57252,7 +57252,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 27; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 31; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -58040,13 +58040,86 @@ CHANTS = [
             #   ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ, before its ปะหานัง. Marked
             #   […] and completed from page 140, where the tongue, the body
             #   and the mind should also follow.
+            # ‼ COMPLETED FROM p139: this line was cut by the page break and
+            #   is now whole. Was: ฆานัญจะ ปะชานาติ คันเธ จะ ปะชานาติ, ยัญจะ
+            #   ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา
+            #   จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ.
+            #   ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ […]
+            # ‼ CHECK [IMG_0410.PNG]: COMPLETES THE LINE PAGE 139 CUT. That
+            #   sheet ended …ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ […] and this one
+            #   opens ปะหานัง โหติ,. The verse keeps page 139, and carries
+            #   `page: 139` explicitly.
             {
                 'number': 27,
-                'pali': 'ฆานัญจะ ปะชานาติ คันเธ จะ ปะชานาติ, ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ […]',
-                'pali_roman': 'Ghānañca pajānāti gandhe ca pajānāti, yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti. Yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa saññojanassa […]',
+                'page': 139,
+                'pali': 'ฆานัญจะ ปะชานาติ คันเธ จะ ปะชานาติ, ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ สัญโญชะนัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Ghānañca pajānāti gandhe ca pajānāti, yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti. Yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa saññojanassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa saññojanassa āyatiṃ anuppādo hoti, tañca pajānāti.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'He knows the nose, and knows odours, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise […]',
+                'english': 'He knows the nose, and knows odours, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise, how the arisen fetter is abandoned, and how what has been abandoned does not arise again in future.',
+            },
+            # ‼ CHECK [IMG_0410.PNG]: THE SIX SENSES ARE ALL PRESENT AND IN
+            #   ORDER across pages 139 and 140: จักขุ, โสตะ, ฆานะ, ชิวหา,
+            #   กายะ, มะโน, each with its own object — รูเป, สัทเท, คันเธ,
+            #   ระเส, โผฏฐัพเพ, ธัมเม. Counted on the sheets rather than
+            #   assumed, because a formula repeated six times with two words
+            #   changing is where a block goes missing without looking wrong.
+            {
+                'number': 28,
+                'page': 140,
+                'pali': 'ชิวหัญจะ ปะชานาติ, ระเส จะ ปะชานาติ, ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ, ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ สัญโญชะนัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Jivhañca pajānāti, rase ca pajānāti, yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti, yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa saññojanassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa saññojanassa āyatiṃ anuppādo hoti, tañca pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He knows the tongue, and knows tastes, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise, how the arisen fetter is abandoned, and how what has been abandoned does not arise again in future.',
+            },
+            {
+                'number': 29,
+                'pali': 'กายัญจะ ปะชานาติ, โผฏฐัพเพ จะ ปะชานาติ, ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ สัญโญชะนัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ.',
+                'pali_roman': 'Kāyañca pajānāti, phoṭṭhabbe ca pajānāti, yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti. Yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa saññojanassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa saññojanassa āyatiṃ anuppādo hoti, tañca pajānāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He knows the body, and knows tangibles, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise, how the arisen fetter is abandoned, and how what has been abandoned does not arise again in future.',
+            },
+            # ‼ CHECK [IMG_0410.PNG]: ‼ THE REFRAIN BREAKS ITS OWN PATTERN
+            #   HERE: …พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ.
+            #   อัชฌัตตะพะหิทธา… takes a FULL STOP, where every other run of
+            #   this refrain in the chant puts a comma between the second and
+            #   third members. Read at 2.6x. The three อัชฌัตตัง / พะหิทธา /
+            #   อัชฌัตตะพะหิทธา members are one sentence everywhere else.
+            # ‼ CHECK [IMG_0410.PNG]: อายะตะนะปัพพัง IS PRINTED WITHOUT A FULL
+            #   STOP, where ขันธะปัพพัง. on page 139 has one and
+            #   นีวะระณะปัพพัง on 138 does not. Two of the three subject
+            #   labels are bare and one is stopped. Minor size, ink band 50px.
+            #   It rides on verse 30 as a `section_end` because that verse is
+            #   on this sheet.
+            {
+                'number': 30,
+                'section_end': 'อายะตะนะปัพพัง',
+                'pali': 'มะนัญจะ ปะชานาติ, ธัมเม จะ ปะชานาติ, ยัญจะ ตะทุภะยัง ปะฏิจจะ อุปปัชชะติ สัญโญชะนัง, ตัญจะ ปะชานาติ. ยะถา จะ อะนุปปันนัสสะ สัญโญชะนัสสะ อุปปาโท โหติ, ตัญจะ ปะชานาติ. ยะถา จะ อุปปันนัสสะ สัญโญชะนัสสะ ปะหานัง โหติ, ตัญจะ ปะชานาติ. ยะถา จะ ปะหีนัสสะ สัญโญชะนัสสะ อายะติง อะนุปปาโท โหติ, ตัญจะ ปะชานาติ. อิติ อัชฌัตตัง วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ, พะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. อัชฌัตตะพะหิทธา วา ธัมเมสุ ธัมมานุปัสสี วิหะระติ. สะมุทะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, วะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ, สะมุทะยะวะยะธัมมานุปัสสี วา ธัมเมสุ วิหะระติ. อัตถิ ธัมมาติ วา ปะนัสสะ สะติ ปัจจุปัฏฐิตา โหติ, ยาวะเทวะ ญาณะมัตตายะ ปะติสสะติมัตตายะ. อะนิสสิโต จะ วิหะระติ, นะ จะ กิญจิ โลเก อุปาทิยะติ, เอวัมปิ โข ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, ฉะสุ อัชฌัตติกะพาหิเรสุ อายะตะเนสุ.',
+                'pali_roman': 'Manañca pajānāti, dhamme ca pajānāti, yañca tadubhayaṃ paṭicca uppajjati saññojanaṃ, tañca pajānāti. Yathā ca anuppannassa saññojanassa uppādo hoti, tañca pajānāti. Yathā ca uppannassa saññojanassa pahānaṃ hoti, tañca pajānāti. Yathā ca pahīnassa saññojanassa āyatiṃ anuppādo hoti, tañca pajānāti. Iti ajjhattaṃ vā dhammesu dhammānupassī viharati, bahiddhā vā dhammesu dhammānupassī viharati. Ajjhattabahiddhā vā dhammesu dhammānupassī viharati. Samudayadhammānupassī vā dhammesu viharati, vayadhammānupassī vā dhammesu viharati, samudayavayadhammānupassī vā dhammesu viharati. Atthi dhammāti vā panassa sati paccupaṭṭhitā hoti, yāvadeva ñāṇamattāya patissatimattāya. Anissito ca viharati, na ca kiñci loke upādiyati, evampi kho bhikkhave bhikkhu dhammesu dhammānupassī viharati, chasu ajjhattikabāhiresu āyatanesu.',
+                'thai': '',
+                'paiboon': '',
+                'english': "He knows the mind, and knows mind-objects, and knows the fetter that arises dependent on them both; and he knows how the unarisen fetter comes to arise, how the arisen fetter is abandoned, and how what has been abandoned does not arise again in future. Thus he dwells contemplating mind-objects in mind-objects internally, or externally. Or he dwells contemplating them both internally and externally. He dwells contemplating the nature of arising in mind-objects, or the nature of passing away, or the nature of both arising and passing away. Or else mindfulness that 'there are mind-objects' is established in him just so far as is needed for knowledge and for remembrance. And he dwells independent, clinging to nothing in the world. Thus too, monks, does a monk dwell contemplating mind-objects in mind-objects, as regards the six internal and external sense bases.",
+            },
+            # ‼ CHECK [IMG_0410.PNG]: ‼ วิหะระติ, สัตตะสุ TWICE, BOTH WITH A
+            #   COMMA — and that is a third answer to the same join. Page 138
+            #   gave the aggregates วิหะระติ, ปัญจะสุ then วิหะระติ. ปัญจะสุ;
+            #   page 139 gave the sense bases วิหะระติ, ฉะสุ then วิหะระติ
+            #   ฉะสุ with no mark at all; page 140 gives the factors of
+            #   awakening a comma both times. Three subjects, three different
+            #   treatments of the same repeated sentence.
+            # ‼ CHECK [IMG_0410.PNG]: THE PAGE FOOT CUTS THIS SENTENCE after
+            #   วิหะระติ, สัตตะสุ, before its โพชฌังเคสุ. Marked […] and
+            #   completed from page 141. The seven factors themselves are all
+            #   overleaf.
+            {
+                'number': 31,
+                'pali': 'ปุนะ จะปะรัง ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ โพชฌังเคสุ. กะถัญจะ ภิกขะเว ภิกขุ ธัมเมสุ ธัมมานุปัสสี วิหะระติ, สัตตะสุ […]',
+                'pali_roman': 'Puna caparaṃ bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu bojjhaṅgesu. Kathañca bhikkhave bhikkhu dhammesu dhammānupassī viharati, sattasu […]',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And again, monks, a monk dwells contemplating mind-objects in mind-objects as regards the seven factors of awakening. And how does a monk dwell contemplating mind-objects in mind-objects as regards the seven […]',
             },
         ],
     },
