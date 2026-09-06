@@ -1,0 +1,208 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "pages": [
+      {
+        "page": 151,
+        "file": "IMG_0421.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "mahasatipatthana-sutta-patho",
+        "verses": "130-142",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, one column. Thirteen indented paragraphs of two lines each, all in the THIRD truth and so all taking the abandoned-and-ceases tail. THREE sets meet here with nothing printed to mark the joins: the three external bases that CLOSE the six begun on page 150, the six consciousnesses, and four of the six contacts. ⚠️ ONE paragraph, มะโนวิญญาณัง, ends with a COMMA where the other twelve end with a full stop. NO completion row — page 150 ended at a full stop. The page also ends at a full stop, so nothing is cut."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasatipatthana-sutta-patho",
+      "continuation_of": "mahasatipatthana-sutta-patho",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Thirteen, one per indented paragraph, the same setting the whole survey has used since page 145. The paragraph is the unit throughout.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "This is the SECOND run of the sixty-item survey and it takes the third truth's tail — ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ. — not the arises-and-settles tail of pages 145 to 150. Every opening term was read separately at 2.7x and the closing mark of every one of the thirteen paragraphs was read at 3.2x, which is how the comma on มะโนวิญญาณัง was found.",
+        "pages": "IMG_0421.PNG, page 151, the number printed clearly at the top centre. Arrived from page 150 and CONTINUES onto 152. A thumb holds the right edge of the sheet in two places in the photograph; both sit in the margin and cover no text."
+      },
+      "verses": [
+        {
+          "number": 130,
+          "page": 151,
+          "pali": "ระสา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Rasā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Tastes in the world are dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 131,
+          "pali": "โผฏฐัพพา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Phoṭṭhabbā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Tangibles in the world are dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 132,
+          "pali": "ธัมมา โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Dhammā loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Mind-objects in the world are dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 133,
+          "pali": "จักขุวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Cakkhuviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Eye-consciousness in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 134,
+          "pali": "โสตะวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Sotaviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Ear-consciousness in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 135,
+          "pali": "ฆานะวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Ghānaviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Nose-consciousness in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 136,
+          "pali": "ชิวหาวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Jivhāviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Tongue-consciousness in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 137,
+          "pali": "กายะวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Kāyaviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Body-consciousness in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 138,
+          "pali": "มะโนวิญญาณัง โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ,",
+          "pali_roman": "Manoviññāṇaṃ loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Mind-consciousness in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 139,
+          "pali": "จักขุสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Cakkhusamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Eye-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 140,
+          "pali": "โสตะสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Sotasamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Ear-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 141,
+          "pali": "ฆานะสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Ghānasamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Nose-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        },
+        {
+          "number": 142,
+          "pali": "ชิวหาสัมผัสโส โลเก ปิยะรูปัง สาตะรูปัง, เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.",
+          "pali_roman": "Jivhāsamphasso loke piyarūpaṃ sātarūpaṃ, etthesā taṇhā pahiyyamānā pahiyyati, ettha nirujjhamānā nirujjhati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Tongue-contact in the world is dear and agreeable; there this craving is abandoned when it is abandoned, and there it ceases when it ceases."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "นิรุชฌะติ",
+          "pali_roman": "nirujjhati",
+          "meaning": "it ceases. With ปะหิยยะติ it is the third truth answering the second: where craving arose and settled, it is now abandoned and ceases"
+        },
+        {
+          "pali": "ธัมมา",
+          "pali_roman": "dhammā",
+          "meaning": "mind-objects — the sixth external base, closing the set page 150 opened with forms. Not the ธัมมา that names this foundation"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 138,
+          "file": "IMG_0421.PNG",
+          "issue": "‼‼ THIS PARAGRAPH ENDS WITH A COMMA WHERE THE OTHER TWELVE ON THE SHEET END WITH A FULL STOP. มะโนวิญญาณัง closes นิรุชฌะมานา นิรุชฌะติ, — read at 3.2x, and compared side by side at the same magnification with the paragraph directly below it, which ends นิรุชฌะติ. The comma has a tail hooking clearly below the baseline; the full stop is a round dot sitting on it. Two plainly different marks in the same face at the same size. Reproduced as printed, and it is carried into pali_roman as well so the two chanted layers agree. ⚠️ Compare against page 146 verse 76, the SAME word in the same position in the first run of this survey, which ends with a full stop — so the two runs disagree here."
+        },
+        {
+          "verse": 130,
+          "file": "IMG_0421.PNG",
+          "issue": "NOT A COMPLETION — page 150 ended at a full stop, so this verse OPENS a paragraph rather than finishing one, and the batch carries no completion row and no […]. Eighth time in this chant."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0421.PNG",
+          "issue": "‼ THE THIRD TRUTH TAIL THROUGHOUT, and this is the first FULL sheet of it. Every one of the thirteen paragraphs ends ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ — abandoned and ceases — NOT the อุปปัชชะมานา อุปปัชชะติ / นิวีสะมานา นิวีสะติ of pages 145 to 150. Twelve of the thirteen then take a full stop and one takes a comma. The two runs give the same sixty items and must never be levelled to each other."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0421.PNG",
+          "issue": "THREE SETS MEET ON THIS SHEET WITH NO PRINTED JOIN, as on 146 to 149. The six EXTERNAL BASES close here — forms, sounds and odours were verses 127-129 on page 150, and tastes, tangibles and mind-objects follow as 130-132. Then the six CONSCIOUSNESSES (133-138), complete on this sheet. Then the CONTACTS open (139-142) and two remain for 152. No heading, no label and no extra space anywhere between the three groups."
+        },
+        {
+          "verse": 136,
+          "file": "IMG_0421.PNG",
+          "issue": "The second line of this paragraph sets a visibly wider gap before นิรุชฌะมานา than its neighbours do. Read at 2.7x: it is line justification on a short last line, not a double space or a mark. Reproduced with a single space like the rest, and recorded because it is visible at page scale."
+        },
+        {
+          "verse": 142,
+          "file": "IMG_0421.PNG",
+          "issue": "THE PAGE ENDS AT A FULL STOP after เอตถะ นิรุชฌะมานา นิรุชฌะติ., with clear white paper below it, so NO […] is marked and page 152 should open a new verse. Ninth time in this chant. Two contacts remain — กายะสัมผัสโส and มะโนสัมผัสโส — so 152 should close that set and move on to the feelings."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0421.PNG",
+          "issue": "NOTHING ON THIS SHEET BUT BODY TEXT. No title, no invitation, no section heading, no section_end label, no rubric, no footnote and no rule at the foot. Walked top to bottom against the photograph: page number 151 at the top centre, thirteen paragraphs, blank paper. A thumb appears twice at the right edge and covers no text."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasatipatthana-sutta-patho"
+    ],
+    "resume_from_page": 152,
+    "resume_from_file": "IMG_0422.PNG",
+    "resume_from": "mahasatipatthana-sutta-patho",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, with no Thai translation anywhere, so thai and paiboon are \"\" on all thirteen verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0421.PNG.",
+    "page_scan": "agrees — one row, page 151, claiming verses 130-142, and the entry holds exactly those thirteen. Verse 130 carries page 151; 131 to 142 carry none and sit on 151 by carry-forward. Numbering runs on from page 150 verse 129 with no gap and no overlap, and no verse is re-sent because 150 ended at a sentence boundary.",
+    "notes": "‼‼ ONE PARAGRAPH ENDS WITH A COMMA where the other twelve end with a full stop — มะโนวิญญาณัง, verse 138, read at 3.2x and compared side by side with its neighbour. The SAME word in the SAME position in the first run of this survey, page 146 verse 76, ends with a full stop, so the two runs disagree. Reproduced as printed in both chanted layers. ‼ This is the first full sheet of the THIRD truth and every paragraph takes the abandoned-and-ceases tail. ‼ Three sets meet with no printed join: the external bases close, the six consciousnesses complete, and four of the six contacts follow. ⚠️ The sheet carries no heading, label, footnote or rule of any kind. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
