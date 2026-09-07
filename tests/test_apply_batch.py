@@ -586,6 +586,85 @@ class TestAPageLevelCheckOnAContinuation:
         assert 'page_checks' not in report
 
 
+class TestTheDryRunShowsWhatTheRealRunWouldDo:
+    """A dry run that cannot show the page-level checks is not a gate.
+
+    Those checks were dropped silently for the whole first pass of the book
+    (see TestAPageLevelCheckOnAContinuation). The dry run is the step run
+    BEFORE anything is written, so it was the one place the loss could have
+    been caught early — and it could not have been, because it returned after
+    printing the plan and never did the work that computes them.
+
+    It now does the whole job and simply declines to write. These tests hold
+    both halves of that: the report is complete, and the file is untouched.
+    """
+
+    # Carries a PAGE_BLOCKS anchor because the dry run now walks the same path
+    # a real write does, `apply_blocks` included. That is the point of the
+    # change: a rehearsal that skips a step cannot vouch for it.
+    SOURCE = ("[\n    {\n"
+              "        # ‼ CONTINUES: last verse here is 1.\n"
+              "        'id': 'a',\n"
+              "        'invitation': {\n        },\n"
+              "        'verses': [\n"
+              "            {\n                'number': 1,\n            },\n"
+              "        ],\n    },\n]\n"
+              "\n\nPAGE_BLOCKS = [\n]\n")
+
+    def run(self, tmp_path, monkeypatch, *flags):
+        """Drive main() against a throwaway chanting.py and a fake module."""
+        import types
+
+        import apply_batch
+
+        target = tmp_path / 'chanting.py'
+        target.write_text(self.SOURCE, encoding='utf-8')
+        monkeypatch.setattr(apply_batch, 'CHANTING', target)
+
+        # main() does `import chanting` to read what is already in the app.
+        # Seeding sys.modules keeps the test off the real 60,000-line file.
+        fake = types.ModuleType('chanting')
+        fake.CHANTS = [{'id': 'a', 'verses': [{'number': 1}]}]
+        fake.PAGE_BLOCKS = []
+        monkeypatch.setitem(sys.modules, 'chanting', fake)
+
+        c = chant('a', [verse(2), verse(3)], continuation_of='a')
+        c['checks'] = [{'verse': None, 'file': 'IMG_0416.PNG',
+                        'issue': 'NOTHING BUT BODY TEXT on this sheet.'}]
+        path = tmp_path / 'batch-042-042.json'
+        path.write_text(json.dumps(
+            batch([c], pages=[{'page': 42, 'chant': 'a', 'verses': '2-3'}])),
+            encoding='utf-8')
+
+        code = apply_batch.main([str(path), *flags])
+        return code, target.read_text(encoding='utf-8')
+
+    def test_it_names_the_page_level_check_it_would_keep(self, tmp_path, monkeypatch, capsys):
+        code, _ = self.run(tmp_path, monkeypatch, '--dry-run')
+
+        assert code == 0
+        assert 'page-level check kept' in capsys.readouterr().out
+
+    def test_it_writes_absolutely_nothing(self, tmp_path, monkeypatch):
+        _, after = self.run(tmp_path, monkeypatch, '--dry-run')
+
+        assert after == self.SOURCE
+
+    def test_it_says_plainly_that_nothing_was_written(self, tmp_path, monkeypatch, capsys):
+        self.run(tmp_path, monkeypatch, '--dry-run')
+        out = capsys.readouterr().out
+
+        assert 'nothing written' in out
+        assert 'would have' in out
+
+    def test_without_the_flag_the_same_run_does_write(self, tmp_path, monkeypatch):
+        """The guard is the flag, not luck — the identical batch lands."""
+        _, after = self.run(tmp_path, monkeypatch)
+
+        assert after != self.SOURCE
+        assert 'NOTHING BUT BODY TEXT' in after
+
+
 class TestAgainstTheRealBatchFiles:
     """The three batches already applied must still reconcile against the app."""
 

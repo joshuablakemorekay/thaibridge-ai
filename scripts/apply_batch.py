@@ -1160,16 +1160,25 @@ def main(argv=None) -> int:
     print(f"  append   : {len(steps['appended'])} verses")
     print(f"  complete : {steps['completed'] or 'none'}")
     print(f"  merge    : {steps['merged'] or 'none'}")
-    if args.dry_run:
-        print("\ndry run — nothing written")
-        return 0
-
+    # `apply` and `apply_blocks` are pure — each takes the source and hands back
+    # a new one — so the dry run does the WHOLE job and simply declines to
+    # write. Running them rather than returning early is the point of the
+    # exercise: every line below is worked out in here, the page-level checks
+    # included, and a dry run that skipped the step could not tell you whether
+    # those were about to land. Being unable to see that is exactly how 105 of
+    # them were lost across the first pass of the book.
     source, report = apply(batch, CHANTING.read_text(encoding="utf-8"))
     source = apply_blocks(batch, source, args.batch.name, report)
-    CHANTING.write_text(source, encoding="utf-8")
-    print(f"\nwritten. added {len(report['added'])}, appended {report['appended']} "
-          f"verses, completed {len(report['completed'])} line(s), merged "
-          f"{len(report.get('merged', []))} field(s)")
+    tally = (f"added {len(report['added'])}, appended {report['appended']} "
+             f"verses, completed {len(report['completed'])} line(s), merged "
+             f"{len(report.get('merged', []))} field(s)")
+    if args.dry_run:
+        # The heading says nothing was written, so the lines under it read as
+        # what a real run WOULD do. That is the whole value of the dry run.
+        print(f"\ndry run — nothing written. it would have: {tally}")
+    else:
+        CHANTING.write_text(source, encoding="utf-8")
+        print(f"\nwritten. {tally}")
     for field in report.get("merged", []):
         print(f"  merged {field}")
     for field in report.get("corrected", []):
