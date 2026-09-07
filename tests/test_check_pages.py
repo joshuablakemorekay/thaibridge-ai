@@ -18,7 +18,8 @@ sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, 'scripts'))
 
 import chanting                                            # noqa: E402
-from check_pages import check, is_completion                # noqa: E402
+from check_pages import (BLANK_VERSOS, check, gaps_in,       # noqa: E402
+                         is_completion)
 
 
 def verse(n, pali='ปะฏิสังขา', english='y', **kw):
@@ -204,6 +205,48 @@ class TestALineCutByAPageBreak:
     ])
     def test_what_counts_as_healing_a_cut_line(self, recorded, written, expected):
         assert is_completion(recorded, written) is expected
+
+
+class TestAPageMissingFromTheMiddleOfTheBook:
+    """A gap in the page numbers is either a blank sheet or a dropped page.
+
+    Nothing used to tell the two apart, so four blank versos looked exactly
+    like four sheets of unfinished work and were queued as such. The reasons
+    now live in code beside the check that reads them.
+
+    The failing half matters more than the passing half: a page quietly
+    dropped from the app leaves no other trace. Its verses are simply not
+    there, so there is no row to disagree with and no fault to raise.
+    """
+
+    def test_a_known_blank_verso_is_named_and_forgiven(self):
+        known, unexplained = gaps_in({190, 191, 193, 194})
+
+        assert known == [192]
+        assert unexplained == []
+
+    def test_a_page_nobody_has_explained_is_reported(self):
+        known, unexplained = gaps_in({200, 201, 203, 204})
+
+        assert known == []
+        assert unexplained == [202]
+
+    def test_it_tells_the_two_apart_in_one_run(self):
+        known, unexplained = gaps_in({190, 191, 193, 194, 196})
+
+        assert known == [192]
+        assert unexplained == [195]
+
+    def test_every_blank_verso_carries_its_reason(self):
+        """A bare list of numbers is what sent the last reader to the docs."""
+        assert all(len(why) > 20 for why in BLANK_VERSOS.values())
+
+    def test_the_real_book_has_no_unexplained_gap(self):
+        served = {e['page'] for e in chanting.build_page_index()[0]}
+        known, unexplained = gaps_in(served)
+
+        assert unexplained == [], f'page(s) dropped from the app: {unexplained}'
+        assert known == [192, 246, 248, 278]
 
 
 def test_the_real_book_matches_its_own_photographs():

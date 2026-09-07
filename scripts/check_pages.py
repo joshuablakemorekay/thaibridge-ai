@@ -52,6 +52,45 @@ LAYERS = ("pali", "pali_roman", "thai", "paiboon", "english")
 CUT = "[…]"
 
 
+# Page numbers the book uses but the app will never serve, and WHY — because
+# "why" is the part that keeps getting re-derived. Each is the blank verso of a
+# section divider, and blank pages were not photographed, so there is nothing
+# on them to enter. The photo map proves it by arithmetic rather than by
+# assertion: page 223 sits at photograph offset 270 and page 317 at 267, a fall
+# of exactly three, and exactly three pages in that stretch have no photograph.
+# 192 is the same shape but outside it.
+#
+# This lives in code rather than only in the docs because it was costing time.
+# The gap is invisible until you diff the served pages against their own range,
+# at which point four numbers appear and look like unfinished work — they were
+# queued as four sheets to read at the start of 2026-09-07 and only ruled out
+# by going back to the photo map.
+#
+# ⚠️ If a NEW section is ever entered page by page, its unread pages will show
+# up here as unexplained and fail the run. That is the intended behaviour and
+# not a reason to widen this dict: add pages here only once it is established
+# that the sheet is BLANK, never merely because it has not been read yet.
+BLANK_VERSOS = {
+    192: "blank verso of the บทสวดมนต์ ทำวัตรเช้า-เย็น แปล divider (page 191, IMG_0462)",
+    246: "blank verso closing the section before the ภาคปกิณกะ divider",
+    248: "blank verso of the ภาคปกิณกะ divider (page 247, IMG_0516)",
+    278: "blank verso of the ภาคผนวก divider (page 277, IMG_0545)",
+}
+
+
+def gaps_in(served):
+    """Page numbers missing from the middle of the range the app serves.
+
+    Split into the ones on record as blank and the ones nobody has explained.
+    A book that is fully entered should have none of the second kind, and one
+    appearing means a page has been dropped — the failure this whole toolchain
+    exists to catch, and the one kind that leaves no other trace.
+    """
+    missing = set(range(min(served), max(served) + 1)) - set(served)
+    return (sorted(missing & set(BLANK_VERSOS)),
+            sorted(missing - set(BLANK_VERSOS)))
+
+
 def verse_range(spec):
     """'1-6' -> [1..6]; '7' -> [7]. The same grammar the other scripts read."""
     lo, _, hi = spec.partition("-")
@@ -219,7 +258,9 @@ def check(chanting, batch_files):
                     # page appearing in it would teach everyone to ignore it.
                     "unrecorded": sorted(served
                                          - {p for v in claims.values() for p in v}
-                                         - set(declared_blocks))}
+                                         - set(declared_blocks)),
+                    "blank_versos": gaps_in(served)[0],
+                    "unexplained_gaps": gaps_in(served)[1]}
 
 
 def main(argv=None):
@@ -247,6 +288,19 @@ def main(argv=None):
     print(f"blocks compared      : {counts['blocks']}")
     print(f"pages the app serves : {counts['served']}")
     print(f"served with no batch record: {counts['unrecorded'] or 'none'}")
+    # Named every run, not only when something is wrong. Four numbers absent
+    # from a finished book invite exactly one question, and answering it in the
+    # output is cheaper than answering it again from the photo map.
+    print(f"blank versos, nothing to enter: "
+          f"{counts['blank_versos'] or 'none'}")
+
+    if counts["unexplained_gaps"]:
+        print(f"\nFAIL — {len(counts['unexplained_gaps'])} page(s) missing from "
+              f"the middle of the book with no reason on record: "
+              f"{counts['unexplained_gaps']}")
+        print("  Either the page was dropped, or it is a blank sheet — in "
+              "which case add it to BLANK_VERSOS with its evidence.")
+        return 1
 
     if not faults:
         print("\nPASS — every page shows the chants, verses and blocks its "
