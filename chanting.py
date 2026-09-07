@@ -57252,7 +57252,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 201; the rest is not in the app yet.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
@@ -57266,6 +57265,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'ที. มหา. 10/324, ม. มู. 12/303',
+        'closing': {
+            'pali': 'มะหาสะติปัฏฐานะสุตตะปาโฐ นิฏฐิโต',
+            'pali_roman': 'Mahāsatipaṭṭhānasuttapāṭho niṭṭhito',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the recitation of the Mahāsatipaṭṭhāna Sutta.',
         },
         'verses': [
             # ‼ CHECK [IMG_0393.PNG]: THE HEADING CARRIES THE BOOK'S OWN
@@ -60385,13 +60392,145 @@ CHANTS = [
             #   Reproduced as printed. It is the same kind of single-mark
             #   exception this book produced at verse 138 on page 151 and
             #   verse 184 on page 155.
+            # ‼ COMPLETED FROM p157: this line was cut by the page break and
+            #   is now whole. Was: โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน
+            #   เอวัง ภาเวยยะ ฉะ มาสานิ, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง
+            #   ผะลัง ปาฏิกังขัง, ทิฏเฐวะ […]
+            # ‼ CHECK [IMG_0428.PNG]: PAGE 158 — ‼‼ THE CHANT ENDS HERE and
+            #   its ‼ CONTINUES marker comes off. mahasatipatthana-sutta-patho
+            #   has run from page 128 to page 158 — thirty-one sheets and 209
+            #   verses — and this is its last. A centred bold colophon closes
+            #   it and a numbered footnote cites it. Nothing on this sheet is
+            #   left open.
+            # ‼ CHECK [IMG_0428.PNG]: PAGE 158 — ‼ THE DURATIONS ARE
+            #   PUNCTUATED WITHOUT ANY PATTERN. Reading the mark after each
+            #   duration in ภาเวยยะ <D>: six months COMMA (from page 157),
+            #   five months STOP, four months COMMA, three months STOP, two
+            #   months COMMA, one month COMMA, half a month STOP, seven days
+            #   COMMA. The alternation that looks like it is forming breaks at
+            #   two months / one month, which are both commas. Each was read
+            #   separately at 3.0x. Reproduced as printed; there is no rule to
+            #   carry forward.
+            # ‼ CHECK [IMG_0428.PNG]: PAGE 158 — THE COLOPHON
+            #   มะหาสะติปัฏฐานะสุตตะปาโฐ นิฏฐิโต is centred and bold with NO
+            #   full stop, and is recorded as the chant's `closing`. ⚠️
+            #   นิฏฐิโต is MASCULINE and agrees correctly with ปาโฐ — unlike
+            #   page 110, where นิฏฐิตา was printed against the neuter สุตตัง.
+            #   This book gets it right here.
+            # ‼ CHECK [IMG_0428.PNG]: PAGE 158 — THE FOOTNOTE IS A CANONICAL
+            #   CITATION and goes in `source_printed`: ที. มหา. 10/324, ม. มู.
+            #   12/303. It is numbered 1 in ARABIC digits, keyed to a
+            #   superscript ¹ after อะภินันทุนติ. at the end of verse 209, and
+            #   sits under a rule at the foot. ⚠️ IT CITES TWO PLACES, not one
+            #   — the Dīgha and the Majjhima — because this sutta stands in
+            #   both collections. Reproduced verbatim, abbreviations and all.
+            # ‼ CHECK [IMG_0428.PNG]: PAGE 158 — NOTHING ELSE ON THIS SHEET.
+            #   No title, no invitation, no section heading, no section_end
+            #   label and no rubric. Walked top to bottom against the
+            #   photograph: page number 158 at the top centre, the completion,
+            #   seven durations, the ekāyana paragraph, the centred colophon,
+            #   the rule, the footnote. A hand grips the left edge with three
+            #   fingers visible, outside the text block.
+            # ‼ CHECK [IMG_0428.PNG]: COMPLETES THE LINE PAGE 157 CUT. That
+            #   sheet ended …ปาฏิกังขัง, ทิฏเฐวะ […] and this one opens ธัมเม
+            #   อัญญา. The verse keeps page 157, where its statement began,
+            #   and carries no page key.
             {
                 'number': 201,
-                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ฉะ มาสานิ, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ […]',
-                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya cha māsāni, tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva […]',
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ฉะ มาสานิ, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ฉะ มาสานิ.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya cha māsāni, tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave cha māsāni.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for six months, one of two fruits may be expected for him: here and now […]',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for six months, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone six months, monks.',
+            },
+            {
+                'number': 202,
+                'page': 158,
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ปัญจะ มาสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ปัญจะ มาสานิ.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya pañca māsāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave pañca māsāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for five months, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone five months, monks.',
+            },
+            {
+                'number': 203,
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ จัตตาริ มาสานิ, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว จัตตาริ มาสานิ.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya cattāri māsāni, tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave cattāri māsāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for four months, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone four months, monks.',
+            },
+            {
+                'number': 204,
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ตีณิ มาสานิ. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ตีณิ มาสานิ.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya tīṇi māsāni. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave tīṇi māsāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for three months, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone three months, monks.',
+            },
+            {
+                'number': 205,
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ ท๎เว มาสานิ, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐันตุ ภิกขะเว ท๎เว มาสานิ.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya dve māsāni, tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhantu bhikkhave dve māsāni.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for two months, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone two months, monks.',
+            },
+            # ‼ CHECK [IMG_0428.PNG]: ‼ THE SINGULAR DURATIONS TAKE A SINGULAR
+            #   VERB HERE — ติฏฐะตุ ภิกขะเว มาโส. and ติฏฐะตุ ภิกขะเว
+            #   อัฑฒะมาโส. at verse 207, where every plural duration takes
+            #   ติฏฐันตุ. Correct Pali. ⚠️ BUT PAGE 157 DOES NOT DO THIS: its
+            #   one-year block reads ติฏฐันตุ ภิกขะเว เอกัง วัสสัง. — a PLURAL
+            #   verb with a singular accusative — and that was re-checked at
+            #   3.6x on IMG_0427 after this sheet raised the question, rather
+            #   than corrected to match. So the book handles singular
+            #   durations two different ways, one page apart. Both stand as
+            #   printed.
+            {
+                'number': 206,
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ มาสัง, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐะตุ ภิกขะเว มาโส.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya māsaṃ, tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhatu bhikkhave māso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for a month, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone a month, monks.',
+            },
+            {
+                'number': 207,
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ อัฑฒะมาสัง. ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา. ติฏฐะตุ ภิกขะเว อัฑฒะมาโส.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya aḍḍhamāsaṃ. Tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā. Tiṭṭhatu bhikkhave aḍḍhamāso.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for half a month, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning. Let alone half a month, monks.',
+            },
+            # ‼ CHECK [IMG_0428.PNG]: THE SEVEN-DAY BLOCK HAS NO ติฏฐันตุ
+            #   CLAUSE. Every other duration is followed by let-alone-that-
+            #   long; the shortest has nothing left to set aside, so the
+            #   sentence simply ends at อะนาคามิตา. and the ekāyana paragraph
+            #   begins. Read at 3.0x. Recorded because a missing closing
+            #   clause reads as a dropped line.
+            {
+                'number': 208,
+                'pali': 'โย หิ โกจิ ภิกขะเว อิเม จัตตาโร สะติปัฏฐาเน เอวัง ภาเวยยะ สัตตาหัง, ตัสสะ ท๎วินนัง ผะลานัง อัญญะตะรัง ผะลัง ปาฏิกังขัง, ทิฏเฐวะ ธัมเม อัญญา, สะติ วา อุปาทิเสเส อะนาคามิตา.',
+                'pali_roman': 'Yo hi koci bhikkhave ime cattāro satipaṭṭhāne evaṃ bhāveyya sattāhaṃ, tassa dvinnaṃ phalānaṃ aññataraṃ phalaṃ pāṭikaṅkhaṃ, diṭṭheva dhamme aññā, sati vā upādisese anāgāmitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whoever, monks, should develop these four foundations of mindfulness in this way for seven days, one of two fruits may be expected for him: final knowledge here and now, or, if there is a trace of clinging left, the state of non-returning.',
+            },
+            # ‼ CHECK [IMG_0428.PNG]: ‼ อัฏฐังคะมายะ IS SPELT WITH RETROFLEX
+            #   ฏฐ HERE, and the same root at verse 190 on page 156 is spelt
+            #   with DENTAL ตถ — อัตถังคะมา. BOTH were read at 4.2x and
+            #   compared directly, with the ฏ and ฐ descender loops plainly
+            #   visible on this sheet and plainly absent on 156.
+            #   Transliterated aṭṭhaṅgamāya here and atthaṅgamā there. Neither
+            #   was harmonised, and page 156 was re-checked rather than
+            #   assumed to be the misreading.
+            {
+                'number': 209,
+                'pali': 'เอกายะโน อะยัง ภิกขะเว มัคโค, สัตตานัง วิสุทธิยา, โสกะปะริเทวานัง สะมะติกกะมายะ, ทุกขะโทมะนัสสานัง อัฏฐังคะมายะ, ญายัสสะ อะธิคะมายะ, นิพพานัสสะ สัจฉิกิริยายะ, ยะทิทัง จัตตาโร สะติปัฏฐานาติ. อิติ ยันตัง วุตตัง อิทะเมตัง ปะฏิจจะ วุตตันติ. อิทะมะโวจะ ภะคะวา. อัตตะมะนา เต ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุนติ.',
+                'pali_roman': 'Ekāyano ayaṃ bhikkhave maggo, sattānaṃ visuddhiyā, sokaparidevānaṃ samatikkamāya, dukkhadomanassānaṃ aṭṭhaṅgamāya, ñāyassa adhigamāya, nibbānassa sacchikiriyāya, yadidaṃ cattāro satipaṭṭhānāti. Iti yantaṃ vuttaṃ idametaṃ paṭicca vuttanti. Idamavoca bhagavā. Attamanā te bhikkhū bhagavato bhāsitaṃ abhinandunti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "This is the one and only way, monks, for the purification of beings, for the surmounting of sorrow and lamentation, for the disappearance of pain and grief, for the attainment of the true way, for the realisation of Nibbāna — namely, the four foundations of mindfulness. So it was with reference to this that it was said. This is what the Blessed One said. Satisfied, those monks delighted in the Blessed One's words.",
             },
         ],
     },
