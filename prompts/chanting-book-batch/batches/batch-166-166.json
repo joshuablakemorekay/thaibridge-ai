@@ -1,0 +1,246 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 3,
+    "manifest": [
+      "namakarasiddhi-gatha-chet-tamnan",
+      "namokara-atthaka-gatha-chet-tamnan",
+      "mangala-suttam-chet-tamnan"
+    ],
+    "pages": [
+      {
+        "page": 166,
+        "file": "IMG_0436.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "namakarasiddhi-gatha-chet-tamnan",
+        "verses": "23-24",
+        "starts_here": false,
+        "note": "The two lines that finish the third stanza, single column and flush left. The chant ENDS here at 24 verses and its ‼ CONTINUES marker comes off."
+      },
+      {
+        "page": 166,
+        "file": "IMG_0436.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "namokara-atthaka-gatha-chet-tamnan",
+        "verses": "1-8",
+        "starts_here": true,
+        "blocks": [
+          {
+            "type": "rubric",
+            "after": "namokara-atthaka-gatha-chet-tamnan",
+            "thai": "นะโมการะอัฏฐะกะคาถา ๔ คาถานี้ สวดในกาลสมัยที่ควร",
+            "english": "These four verses of the Namokāra-aṭṭhaka-gāthā are chanted on suitable occasions.",
+            "english_unverified": true
+          }
+        ],
+        "note": "TWO COLUMNS, eight rows, gutter measured at x 922-1123. A centred bold rubric follows the chant and is recorded as a page block anchored after it."
+      },
+      {
+        "page": 166,
+        "file": "IMG_0436.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "mangala-suttam-chet-tamnan",
+        "verses": "1-12",
+        "starts_here": true,
+        "note": "TWO COLUMNS, twelve rows, gutter measured at x 889-1118. ⚠️ This printing OPENS AT THE GATHA — there is no เอวัมเม สุตัง preamble, which the page-81 printing has. The chant CONTINUES onto 167."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "namakarasiddhi-gatha-chet-tamnan",
+      "continuation_of": "namakarasiddhi-gatha-chet-tamnan",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Two, one per printed pada, closing the third stanza.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "Single column and flush left, as the non-opening lines of each stanza are throughout.",
+        "pages": "IMG_0436.PNG, page 166. Completes the chant begun on 165."
+      },
+      "verses": [
+        {
+          "number": 23,
+          "page": 166,
+          "pali": "ตันเตชะสา เต ชะยะสิทธิ โหตุ",
+          "pali_roman": "Tantejasā te jayasiddhi hotu",
+          "thai": "",
+          "paiboon": "",
+          "english": "By that power may victory and success be yours,"
+        },
+        {
+          "number": 24,
+          "pali": "สัพพันตะรายา จะ วินาสะเมนตุ.",
+          "pali_roman": "Sabbantarāyā ca vināsamentu.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and may all dangers come to nothing."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 23,
+          "file": "IMG_0436.PNG",
+          "issue": "NOT A COMPLETION — page 165 ended on a complete pada, so these two lines OPEN rather than finish one, and no […] was marked there."
+        },
+        {
+          "verse": 24,
+          "file": "IMG_0436.PNG",
+          "issue": "THE CHANT ENDS HERE at 24 verses and its ‼ CONTINUES marker comes off. That matches the page-78 printing's count exactly, and the closing couplet is the same refrain that ends the first two stanzas. No colophon and no footnote are printed for it."
+        }
+      ]
+    },
+    {
+      "id": "namokara-atthaka-gatha-chet-tamnan",
+      "title_thai": "นะโมการะอัฏฐะกะคาถา",
+      "title_pali": "Namokāraaṭṭhakagāthā",
+      "title_roman": "",
+      "title_english": "The Eight Verses of Homage",
+      "page_start": 166,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Eight, one per printed ROW read across both columns.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "ส๎วากขาตัสเสวะ and โอมาต๎ยารัทธัสสะ take the yamakkan. One word is hyphenated across the gutter and rejoined — see the checks.",
+        "pages": "IMG_0436.PNG, page 166. Two columns, gutter measured at x 922-1123."
+      },
+      "verses": [
+        {"number": 1, "page": 166, "pali": "นะโม อะระหะโต สัมมาสัมพุทธัสสะ มะเหสิโน", "pali_roman": "Namo arahato sammāsambuddhassa mahesino", "thai": "", "paiboon": "", "english": "Homage to the Worthy One, the Perfectly Self-Awakened, the Great Seer."},
+        {"number": 2, "pali": "นะโม อุตตะมะธัมมัสสะ ส๎วากขาตัสเสวะ เตนิธะ", "pali_roman": "Namo uttamadhammassa svākkhātasseva tenidha", "thai": "", "paiboon": "", "english": "Homage to the supreme Dhamma, well proclaimed by him here."},
+        {"number": 3, "pali": "นะโม มะหาสังฆัสสาปิ วิสุทธะสีละทิฏฐิโน", "pali_roman": "Namo mahāsaṅghassāpi visuddhasīladiṭṭhino", "thai": "", "paiboon": "", "english": "Homage also to the great Sangha, pure in virtue and in view."},
+        {"number": 4, "pali": "นะโม โอมาต๎ยารัทธัสสะ ระตะนัตตะยัสสะ สาธุกัง", "pali_roman": "Namo omātyāraddhassa ratanattayassa sādhukaṃ", "thai": "", "paiboon": "", "english": "Homage, well made, to the Triple Gem begun with the syllable OM."},
+        {"number": 5, "pali": "นะโม โอมะกาตีตัสสะ ตัสสะ วัตถุตตะยัสสะปิ", "pali_roman": "Namo omakātītassa tassa vatthuttayassāpi", "thai": "", "paiboon": "", "english": "Homage also to that threefold object, which has gone beyond all that is low."},
+        {"number": 6, "pali": "นะโม การัปปะภาเวนะ วิคัจฉันตุ อุปัททะวา", "pali_roman": "Namo kārappabhāvena vigacchantu upaddavā", "thai": "", "paiboon": "", "english": "By the power of this homage, may misfortunes depart."},
+        {"number": 7, "pali": "นะโม การานุภาเวนะ สุวัตถิ โหตุ สัพพะทา", "pali_roman": "Namo kārānubhāvena suvatthi hotu sabbadā", "thai": "", "paiboon": "", "english": "By the might of this homage, may there always be well-being."},
+        {"number": 8, "pali": "นะโม การัสสะ เตเชนะ วิธิมหิ โหมิ เตชะวา.", "pali_roman": "Namo kārassa tejena vidhimhi homi tejavā.", "thai": "", "paiboon": "", "english": "By the force of this homage, may I be strong in what I undertake."}
+      ],
+      "vocabulary": [
+        {
+          "pali": "โอมาต๎ยารัทธัสสะ",
+          "pali_roman": "omātyāraddhassa",
+          "meaning": "begun with OM — a reference to the syllable that opens the homage formula, and one of the few places this book acknowledges it"
+        },
+        {
+          "pali": "โอมะกาตีตัสสะ",
+          "pali_roman": "omakātītassa",
+          "meaning": "gone beyond the low, beyond the inferior. Set against omāt- in the line before it as a deliberate play"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0436.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. The gutter was MEASURED before a word was read: a white corridor 202px wide at x 922-1123, with the left column at 451-922 and the right at 1123-1611. Every row read ACROSS. First pairing: นะโม อะระหะโต สัมมา- + สัมพุทธัสสะ มะเหสิโน."
+        },
+        {
+          "verse": 1,
+          "file": "IMG_0436.PNG",
+          "issue": "‼ A HYPHEN SPLITS A WORD ACROSS THE GUTTER. The left column of row 1 ends สัมมา- and the right column opens สัมพุทธัสสะ; read across, the word is สัมมาสัมพุทธัสสะ. Rejoined and the hyphen dropped, exactly as page 106's ธัมมะ- / ปะริยายัง was. Read at 2.4x across the full row. It is the typesetter's mark, not spelling."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0436.PNG",
+          "issue": "ALREADY IN THE APP as namokara-atthaka-gatha from page 79, with the same eight verses. Entered here as a SECOND chant per the standing precedent. ⚠️ ORDER OF WORK: both columns were read off this photograph and joined BEFORE the page-79 entry was consulted; the eight joined rows then agreed with it word for word, including the rejoined สัมมาสัมพุทธัสสะ. That agreement is independent corroboration of the column pairing and of the hyphen decision, not the source of either."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0436.PNG",
+          "issue": "‼ A CENTRED BOLD RUBRIC FOLLOWS THIS CHANT — นะโมการะอัฏฐะกะคาถา ๔ คาถานี้ สวดในกาลสมัยที่ควร, roughly: these four verses of the Namokāra-aṭṭhaka are chanted on suitable occasions. Recorded as a page block of type rubric anchored AFTER this chant, because it sits between this chant and the มังคะละสุตตัง title. ⚠️ It says FOUR verses where the chant prints EIGHT lines — the book counts by four-line stanzas here and by lines elsewhere. Reproduced as printed with the Thai numeral ๔; do not convert it and do not reconcile the count."
+        }
+      ]
+    },
+    {
+      "id": "mangala-suttam-chet-tamnan",
+      "continues": true,
+      "title_thai": "มังคะละสุตตัง",
+      "title_pali": "Maṅgalasuttaṃ",
+      "title_roman": "",
+      "title_english": "The Discourse on Blessings",
+      "page_start": 166,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Twelve, one per printed ROW read across both columns.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "พ๎รูหิ takes the yamakkan. ⚠️ One word pair runs together here where the page-81 printing spaces it — see the checks.",
+        "pages": "IMG_0436.PNG, page 166. Two columns, gutter measured at x 889-1118. CONTINUES onto 167."
+      },
+      "verses": [
+        {"number": 1, "page": 166, "pali": "พะหู เทวา มะนุสสา จะ มังคะลานิ อะจินตะยุง", "pali_roman": "Bahū devā manussā ca maṅgalāni acintayuṃ", "thai": "", "paiboon": "", "english": "Many devas and humans have pondered on blessings,"},
+        {"number": 2, "pali": "อากังขะมานา โสตถานัง พ๎รูหิ มังคะละมุตตะมัง", "pali_roman": "Ākaṅkhamānā sotthānaṃ brūhi maṅgalamuttamaṃ", "thai": "", "paiboon": "", "english": "longing for well-being: tell us the highest blessing."},
+        {"number": 3, "pali": "อะเสวะนา จะ พาลานัง ปัณฑิตานัญจะ เสวะนา", "pali_roman": "Asevanā ca bālānaṃ paṇḍitānañca sevanā", "thai": "", "paiboon": "", "english": "Not to associate with fools, but to associate with the wise,"},
+        {"number": 4, "pali": "ปูชา จะ ปูชะนียานัง เอตัมมังคะละมุตตะมัง.", "pali_roman": "Pūjā ca pūjanīyānaṃ etammaṅgalamuttamaṃ.", "thai": "", "paiboon": "", "english": "and to honour those worthy of honour — this is the highest blessing."},
+        {"number": 5, "pali": "ปะฏิรูปะเทสะวาโส จะ ปุพเพ จะ กะตะปุญญะตา", "pali_roman": "Paṭirūpadesavāso ca pubbe ca katapuññatā", "thai": "", "paiboon": "", "english": "To live in a suitable place, and to have done merit in the past,"},
+        {"number": 6, "pali": "อัตตะสัมมาปะณิธิ จะ เอตัมมังคะละมุตตะมัง.", "pali_roman": "Attasammāpaṇidhi ca etammaṅgalamuttamaṃ.", "thai": "", "paiboon": "", "english": "and to set oneself rightly — this is the highest blessing."},
+        {"number": 7, "pali": "พาหุสัจจัญจะ สิปปัญจะ วินะโย จะสุสิกขิโต", "pali_roman": "Bāhusaccañca sippañca vinayo casusikkhito", "thai": "", "paiboon": "", "english": "Much learning, skill in craft, and discipline well trained,"},
+        {"number": 8, "pali": "สุภาสิตา จะ ยา วาจา เอตัมมังคะละมุตตะมัง.", "pali_roman": "Subhāsitā ca yā vācā etammaṅgalamuttamaṃ.", "thai": "", "paiboon": "", "english": "and whatever speech is well spoken — this is the highest blessing."},
+        {"number": 9, "pali": "มาตาปิตุอุปัฏฐานัง ปุตตะทารัสสะ สังคะโห", "pali_roman": "Mātāpitu-upaṭṭhānaṃ puttadārassa saṅgaho", "thai": "", "paiboon": "", "english": "Supporting mother and father, caring for wife and children,"},
+        {"number": 10, "pali": "อะนากุลา จะ กัมมันตา เอตัมมังคะละมุตตะมัง.", "pali_roman": "Anākulā ca kammantā etammaṅgalamuttamaṃ.", "thai": "", "paiboon": "", "english": "and work that is free of confusion — this is the highest blessing."},
+        {"number": 11, "pali": "ทานัญจะ ธัมมะจะริยา จะ ญาตะกานัญจะ สังคะโห", "pali_roman": "Dānañca dhammacariyā ca ñātakānañca saṅgaho", "thai": "", "paiboon": "", "english": "Giving, living by the Dhamma, caring for one's relatives,"},
+        {"number": 12, "pali": "อะนะวัชชานิ กัมมานิ เอตัมมังคะละมุตตะมัง.", "pali_roman": "Anavajjāni kammāni etammaṅgalamuttamaṃ.", "thai": "", "paiboon": "", "english": "and blameless actions — this is the highest blessing."}
+      ],
+      "vocabulary": [
+        {
+          "pali": "มังคะละมุตตะมัง",
+          "pali_roman": "maṅgalamuttamaṃ",
+          "meaning": "the highest blessing. The refrain closing every second line, and the phrase the whole sutta is built around"
+        },
+        {
+          "pali": "ปะฏิรูปะเทสะวาโส",
+          "pali_roman": "paṭirūpadesavāso",
+          "meaning": "living in a suitable place — the first of the blessings that concerns circumstance rather than conduct"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0436.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. The gutter was MEASURED separately from the chant above it: a white corridor 230px wide at x 889-1118. Every row read ACROSS. First pairing: พะหู เทวา มะนุสสา จะ + มังคะลานิ อะจินตะยุง. Twelve rows on this sheet."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0436.PNG",
+          "issue": "‼‼ THIS PRINTING OPENS AT THE GATHA — there is NO เอวัมเม สุตัง preamble. The page-81 printing has four prose verses before the verse beginning พะหู เทวา: เอวัมเม สุตัง. / เอกัง สะมะยัง ภะคะวา สาวัตถิยัง… / อะถะโข อัญญะตะรา เทวะตา… / เอกะมันตัง ฐิตา โข สา เทวะตา… None of them is on this sheet; the bold title is followed immediately by the gatha. That is the abridgement the section heading เจ็ดตำนานย่อ announces, and it must not be filled in from the other printing."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0436.PNG",
+          "issue": "‼ จะสุสิกขิโต RUNS TOGETHER HERE with no space, where the page-81 printing sets วินะโย จะ สุสิกขิโต with one. Read at 4.6x: there is a clear word space after วินะโย and none after จะ. Reproduced as printed and romanised casusikkhito to match, rather than normalised to ca susikkhito. Checked against chanting.py rather than assumed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0436.PNG",
+          "issue": "THE TITLE IS มังคะละสุตตัง, without the ปะฐะมัง the page-81 printing carries in its title (มังคะละสุตตัง ปะฐะมัง). Read off the sheet at page scale and confirmed in the bold heading. The two printings are therefore titled differently as well as set differently."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0436.PNG",
+          "issue": "NO FOOTNOTE AND NO RULE on this sheet, so no source_printed is set — the page-81 printing carries ขุ. ขุ. 25/3 ขุ. สุ. 25/376 and this one prints nothing. Walked top to bottom: page number 166 at the top centre, two closing lines, a bold title, eight rows, a centred rubric, a bold title, twelve rows. A hand grips the left edge, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "namakarasiddhi-gatha-chet-tamnan",
+      "namokara-atthaka-gatha-chet-tamnan"
+    ],
+    "not_started": [],
+    "continues": [
+      "mangala-suttam-chet-tamnan"
+    ],
+    "resume_from_page": 167,
+    "resume_from_file": "IMG_0437.PNG",
+    "resume_from": "mangala-suttam-chet-tamnan",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all twenty-two verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0436.PNG.",
+    "page_scan": "agrees — three rows, all page 166. The นะมะการะสิทธิ claims verses 23-24 and the entry now holds 24; the นะโมการ claims 1-8 and holds eight; the มังคะละ claims 1-12 and holds twelve. Verse 23 of the first and verse 1 of the other two carry page 166. Numbering on the นะมะการะสิทธิ runs on from page 165 verse 22 with no gap.",
+    "notes": "‼ นะมะการะสิทธิคาถา CLOSES at 24 verses, matching the page-78 count. ‼ TWO SEPARATE TWO-COLUMN BLOCKS on one sheet, and each gutter was measured on its own — 202px at x 922-1123 for the นะโมการ, 230px at x 889-1118 for the มังคะละ. ‼ A HYPHEN SPLITS สัมมาสัมพุทธัสสะ ACROSS THE GUTTER in the นะโมการ's first row; rejoined per the page-106 precedent, and the page-79 entry independently confirms the join. ‼‼ THE มังคะละ OPENS AT THE GATHA with NO เอวัมเม สุตัง preamble, where the page-81 printing has four prose verses first — that is the abridgement the heading announces and it must not be filled in. ‼ จะสุสิกขิโต runs together where page 81 spaces it, read at 4.6x. ⚠️ The rubric says FOUR verses where the chant prints eight lines; reproduced as printed and not reconciled. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}

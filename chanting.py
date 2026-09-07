@@ -61565,7 +61565,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 22; the rest is not in the app yet.
         # ‼ CHECK [IMG_0435.PNG]: ‼ ALREADY IN THE APP AS namakarasiddhi-gatha
         #   FROM PAGE 78, with 24 verses. Entered here as a SECOND chant per
         #   the standing precedent that a chant the book prints twice appears
@@ -61788,6 +61787,294 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'awakened after the Awakened One, equal in virtue and in view.',
+            },
+            # ‼ CHECK [IMG_0436.PNG]: NOT A COMPLETION — page 165 ended on a
+            #   complete pada, so these two lines OPEN rather than finish one,
+            #   and no […] was marked there.
+            {
+                'number': 23,
+                'page': 166,
+                'pali': 'ตันเตชะสา เต ชะยะสิทธิ โหตุ',
+                'pali_roman': 'Tantejasā te jayasiddhi hotu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By that power may victory and success be yours,',
+            },
+            # ‼ CHECK [IMG_0436.PNG]: THE CHANT ENDS HERE at 24 verses and its
+            #   ‼ CONTINUES marker comes off. That matches the page-78
+            #   printing's count exactly, and the closing couplet is the same
+            #   refrain that ends the first two stanzas. No colophon and no
+            #   footnote are printed for it.
+            {
+                'number': 24,
+                'pali': 'สัพพันตะรายา จะ วินาสะเมนตุ.',
+                'pali_roman': 'Sabbantarāyā ca vināsamentu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may all dangers come to nothing.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0436.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. The
+        #   gutter was MEASURED before a word was read: a white corridor 202px
+        #   wide at x 922-1123, with the left column at 451-922 and the right
+        #   at 1123-1611. Every row read ACROSS. First pairing: นะโม อะระหะโต
+        #   สัมมา- + สัมพุทธัสสะ มะเหสิโน.
+        # ‼ CHECK [IMG_0436.PNG]: ALREADY IN THE APP as namokara-atthaka-gatha
+        #   from page 79, with the same eight verses. Entered here as a SECOND
+        #   chant per the standing precedent. ⚠️ ORDER OF WORK: both columns
+        #   were read off this photograph and joined BEFORE the page-79 entry
+        #   was consulted; the eight joined rows then agreed with it word for
+        #   word, including the rejoined สัมมาสัมพุทธัสสะ. That agreement is
+        #   independent corroboration of the column pairing and of the hyphen
+        #   decision, not the source of either.
+        # ‼ CHECK [IMG_0436.PNG]: ‼ A CENTRED BOLD RUBRIC FOLLOWS THIS CHANT —
+        #   นะโมการะอัฏฐะกะคาถา ๔ คาถานี้ สวดในกาลสมัยที่ควร, roughly: these
+        #   four verses of the Namokāra-aṭṭhaka are chanted on suitable
+        #   occasions. Recorded as a page block of type rubric anchored AFTER
+        #   this chant, because it sits between this chant and the
+        #   มังคะละสุตตัง title. ⚠️ It says FOUR verses where the chant prints
+        #   EIGHT lines — the book counts by four-line stanzas here and by
+        #   lines elsewhere. Reproduced as printed with the Thai numeral ๔; do
+        #   not convert it and do not reconcile the count.
+        'id': 'namokara-atthaka-gatha-chet-tamnan',
+        'title_thai': 'นะโมการะอัฏฐะกะคาถา',
+        'title_pali': 'Namokāraaṭṭhakagāthā',
+        'title_roman': '',
+        'title_english': 'The Eight Verses of Homage',
+        'page_start': 166,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0436.PNG]: ‼ A HYPHEN SPLITS A WORD ACROSS THE
+            #   GUTTER. The left column of row 1 ends สัมมา- and the right
+            #   column opens สัมพุทธัสสะ; read across, the word is
+            #   สัมมาสัมพุทธัสสะ. Rejoined and the hyphen dropped, exactly as
+            #   page 106's ธัมมะ- / ปะริยายัง was. Read at 2.4x across the
+            #   full row. It is the typesetter's mark, not spelling.
+            {
+                'number': 1,
+                'page': 166,
+                'pali': 'นะโม อะระหะโต สัมมาสัมพุทธัสสะ มะเหสิโน',
+                'pali_roman': 'Namo arahato sammāsambuddhassa mahesino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the Worthy One, the Perfectly Self-Awakened, the Great Seer.',
+            },
+            {
+                'number': 2,
+                'pali': 'นะโม อุตตะมะธัมมัสสะ ส๎วากขาตัสเสวะ เตนิธะ',
+                'pali_roman': 'Namo uttamadhammassa svākkhātasseva tenidha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to the supreme Dhamma, well proclaimed by him here.',
+            },
+            {
+                'number': 3,
+                'pali': 'นะโม มะหาสังฆัสสาปิ วิสุทธะสีละทิฏฐิโน',
+                'pali_roman': 'Namo mahāsaṅghassāpi visuddhasīladiṭṭhino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage also to the great Sangha, pure in virtue and in view.',
+            },
+            {
+                'number': 4,
+                'pali': 'นะโม โอมาต๎ยารัทธัสสะ ระตะนัตตะยัสสะ สาธุกัง',
+                'pali_roman': 'Namo omātyāraddhassa ratanattayassa sādhukaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage, well made, to the Triple Gem begun with the syllable OM.',
+            },
+            {
+                'number': 5,
+                'pali': 'นะโม โอมะกาตีตัสสะ ตัสสะ วัตถุตตะยัสสะปิ',
+                'pali_roman': 'Namo omakātītassa tassa vatthuttayassāpi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage also to that threefold object, which has gone beyond all that is low.',
+            },
+            {
+                'number': 6,
+                'pali': 'นะโม การัปปะภาเวนะ วิคัจฉันตุ อุปัททะวา',
+                'pali_roman': 'Namo kārappabhāvena vigacchantu upaddavā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the power of this homage, may misfortunes depart.',
+            },
+            {
+                'number': 7,
+                'pali': 'นะโม การานุภาเวนะ สุวัตถิ โหตุ สัพพะทา',
+                'pali_roman': 'Namo kārānubhāvena suvatthi hotu sabbadā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the might of this homage, may there always be well-being.',
+            },
+            {
+                'number': 8,
+                'pali': 'นะโม การัสสะ เตเชนะ วิธิมหิ โหมิ เตชะวา.',
+                'pali_roman': 'Namo kārassa tejena vidhimhi homi tejavā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By the force of this homage, may I be strong in what I undertake.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 12; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0436.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. The
+        #   gutter was MEASURED separately from the chant above it: a white
+        #   corridor 230px wide at x 889-1118. Every row read ACROSS. First
+        #   pairing: พะหู เทวา มะนุสสา จะ + มังคะลานิ อะจินตะยุง. Twelve rows
+        #   on this sheet.
+        # ‼ CHECK [IMG_0436.PNG]: ‼‼ THIS PRINTING OPENS AT THE GATHA — there
+        #   is NO เอวัมเม สุตัง preamble. The page-81 printing has four prose
+        #   verses before the verse beginning พะหู เทวา: เอวัมเม สุตัง. /
+        #   เอกัง สะมะยัง ภะคะวา สาวัตถิยัง… / อะถะโข อัญญะตะรา เทวะตา… /
+        #   เอกะมันตัง ฐิตา โข สา เทวะตา… None of them is on this sheet; the
+        #   bold title is followed immediately by the gatha. That is the
+        #   abridgement the section heading เจ็ดตำนานย่อ announces, and it
+        #   must not be filled in from the other printing.
+        # ‼ CHECK [IMG_0436.PNG]: THE TITLE IS มังคะละสุตตัง, without the
+        #   ปะฐะมัง the page-81 printing carries in its title (มังคะละสุตตัง
+        #   ปะฐะมัง). Read off the sheet at page scale and confirmed in the
+        #   bold heading. The two printings are therefore titled differently
+        #   as well as set differently.
+        # ‼ CHECK [IMG_0436.PNG]: NO FOOTNOTE AND NO RULE on this sheet, so no
+        #   source_printed is set — the page-81 printing carries ขุ. ขุ. 25/3
+        #   ขุ. สุ. 25/376 and this one prints nothing. Walked top to bottom:
+        #   page number 166 at the top centre, two closing lines, a bold
+        #   title, eight rows, a centred rubric, a bold title, twelve rows. A
+        #   hand grips the left edge, outside the text block.
+        'id': 'mangala-suttam-chet-tamnan',
+        'title_thai': 'มังคะละสุตตัง',
+        'title_pali': 'Maṅgalasuttaṃ',
+        'title_roman': '',
+        'title_english': 'The Discourse on Blessings',
+        'page_start': 166,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 166,
+                'pali': 'พะหู เทวา มะนุสสา จะ มังคะลานิ อะจินตะยุง',
+                'pali_roman': 'Bahū devā manussā ca maṅgalāni acintayuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Many devas and humans have pondered on blessings,',
+            },
+            {
+                'number': 2,
+                'pali': 'อากังขะมานา โสตถานัง พ๎รูหิ มังคะละมุตตะมัง',
+                'pali_roman': 'Ākaṅkhamānā sotthānaṃ brūhi maṅgalamuttamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'longing for well-being: tell us the highest blessing.',
+            },
+            {
+                'number': 3,
+                'pali': 'อะเสวะนา จะ พาลานัง ปัณฑิตานัญจะ เสวะนา',
+                'pali_roman': 'Asevanā ca bālānaṃ paṇḍitānañca sevanā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Not to associate with fools, but to associate with the wise,',
+            },
+            {
+                'number': 4,
+                'pali': 'ปูชา จะ ปูชะนียานัง เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Pūjā ca pūjanīyānaṃ etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and to honour those worthy of honour — this is the highest blessing.',
+            },
+            {
+                'number': 5,
+                'pali': 'ปะฏิรูปะเทสะวาโส จะ ปุพเพ จะ กะตะปุญญะตา',
+                'pali_roman': 'Paṭirūpadesavāso ca pubbe ca katapuññatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'To live in a suitable place, and to have done merit in the past,',
+            },
+            {
+                'number': 6,
+                'pali': 'อัตตะสัมมาปะณิธิ จะ เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Attasammāpaṇidhi ca etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and to set oneself rightly — this is the highest blessing.',
+            },
+            # ‼ CHECK [IMG_0436.PNG]: ‼ จะสุสิกขิโต RUNS TOGETHER HERE with no
+            #   space, where the page-81 printing sets วินะโย จะ สุสิกขิโต
+            #   with one. Read at 4.6x: there is a clear word space after
+            #   วินะโย and none after จะ. Reproduced as printed and romanised
+            #   casusikkhito to match, rather than normalised to ca
+            #   susikkhito. Checked against chanting.py rather than assumed.
+            {
+                'number': 7,
+                'pali': 'พาหุสัจจัญจะ สิปปัญจะ วินะโย จะสุสิกขิโต',
+                'pali_roman': 'Bāhusaccañca sippañca vinayo casusikkhito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Much learning, skill in craft, and discipline well trained,',
+            },
+            {
+                'number': 8,
+                'pali': 'สุภาสิตา จะ ยา วาจา เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Subhāsitā ca yā vācā etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and whatever speech is well spoken — this is the highest blessing.',
+            },
+            {
+                'number': 9,
+                'pali': 'มาตาปิตุอุปัฏฐานัง ปุตตะทารัสสะ สังคะโห',
+                'pali_roman': 'Mātāpitu-upaṭṭhānaṃ puttadārassa saṅgaho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Supporting mother and father, caring for wife and children,',
+            },
+            {
+                'number': 10,
+                'pali': 'อะนากุลา จะ กัมมันตา เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Anākulā ca kammantā etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and work that is free of confusion — this is the highest blessing.',
+            },
+            {
+                'number': 11,
+                'pali': 'ทานัญจะ ธัมมะจะริยา จะ ญาตะกานัญจะ สังคะโห',
+                'pali_roman': 'Dānañca dhammacariyā ca ñātakānañca saṅgaho',
+                'thai': '',
+                'paiboon': '',
+                'english': "Giving, living by the Dhamma, caring for one's relatives,",
+            },
+            {
+                'number': 12,
+                'pali': 'อะนะวัชชานิ กัมมานิ เอตัมมังคะละมุตตะมัง.',
+                'pali_roman': 'Anavajjāni kammāni etammaṅgalamuttamaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and blameless actions — this is the highest blessing.',
             },
         ],
     },
@@ -64511,6 +64798,20 @@ PAGE_BLOCKS = [
                 'type': 'heading',
                 'thai': 'เจ็ดตำนานย่อ',
                 'english': 'The Seven Tamnan, abridged.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 166 ───────────────────────────────────────────────────
+    # Written from batch-166-166.json.
+    {
+        'page': 166,
+        'after': 'namakarasiddhi-gatha-chet-tamnan',
+        'blocks': [
+            {
+                'type': 'rubric',
+                'thai': 'นะโมการะอัฏฐะกะคาถา ๔ คาถานี้ สวดในกาลสมัยที่ควร',
+                'english': 'These four verses of the Namokāra-aṭṭhaka-gāthā are chanted on suitable occasions.',
                 'english_unverified': True,
             },
         ],
