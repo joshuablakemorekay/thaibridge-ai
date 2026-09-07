@@ -56024,7 +56024,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 94; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 120; the rest is not in the app yet.
         # ‼ CHECK [IMG_0445.PNG]: ⚠ THIS CHANT HAS A TWIN AT 317-325, BUT ITS
         #   UNIT DIVISION DOES NOT TRANSFER. `mahasamayasutta-roman` sets the
         #   opening prose as ELEVEN short units — `Evaṃ me sutaṃ:` alone is
@@ -57016,6 +57016,328 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'nāgas and supaṇṇas took the Buddha as their refuge.',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: PAGE 180 — THE GUTTER ON THIS SHEET IS
+            #   165px AT x 943-1107 — page 179's was 251px at x 801-1051.
+            #   Three consecutive sheets of the same chant, set by the same
+            #   printer, with different column measures. Both were ink-
+            #   profiled rather than judged, and the row count was confirmed a
+            #   second way: a profile of the RIGHT column alone returns
+            #   exactly 26 bands, matching the 26 rows read. This is why the
+            #   gutter is measured per sheet and never carried over.
+            # ‼ CHECK [IMG_0451.PNG]: PAGE 180 — THE ROMAN TWIN MAPS ONTO THIS
+            #   SHEET AS ITS VERSES 120-145, one for one across all 26 rows.
+            #   Every reading below was checked against it. ⚠ The two copies
+            #   DISAGREE ON PUNCTUATION at seven points and on word division
+            #   at three more; the differences are listed against their own
+            #   verses and NONE has been levelled. Remember the twin is
+            #   useless for numbering — it divides the same words its own way
+            #   — and is only being used on the text.
+            # ‼ CHECK [IMG_0451.PNG]: A PUNCTUATION DIFFERENCE FROM THE TWIN.
+            #   This sheet ends the line with NO mark; the roman copy's verse
+            #   120 closes it with a full stop. The same happens at verses
+            #   106, 110 and 114, where the twin punctuates and this sheet
+            #   does not. Recorded here once for the group; each is entered as
+            #   its own line prints it.
+            {
+                'number': 95,
+                'page': 180,
+                'pali': 'ชิตา วะชิระหัตเถนะ สะมุททัง อะสุรา สิตา',
+                'pali_roman': 'Jitā vajirahatthena samuddaṃ asurā sitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Conquered by him of the thunderbolt in hand, the asuras dwell in the sea —',
+            },
+            {
+                'number': 96,
+                'page': 180,
+                'pali': 'ภาตะโร วาสะวัสเสเต อิทธิมันโต ยะสัสสิโน.',
+                'pali_roman': 'Bhātaro vāsavassete iddhimanto yasassino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'brothers of Vāsava are these, possessed of power and of renown.',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: ⚠ กาละกัญชา IS PRINTED WITH ช, giving
+            #   `kālakañjā`, where the roman twin verse 122 sets `Kālakañchā`
+            #   with ch. Read at 5×: the glyph carries no upper-left flag, so
+            #   it is ช and not ฉ, and the two are not lookalikes. HERE THE
+            #   THAI SHEET AGREES WITH THE CANON — the asura clan is the
+            #   Kālakañjā — so the twin is the copy at fault. Entered as this
+            #   page prints it; the twin has not been touched.
+            # ‼ CHECK [IMG_0451.PNG]: THE CLUSTER MARK IS THANTHAKHAT ์ ON
+            #   THIS SHEET TOO — มะหาภิส์มา at verse 97, สันนัยหิต์วา at verse
+            #   100, ปุรักขิต์วา at verse 111. That matches the rest of this
+            #   chant, which sets ์ and never yamakkan ๎, so the chant stays
+            #   internally consistent.
+            {
+                'number': 97,
+                'page': 180,
+                'pali': 'กาละกัญชา มะหาภิส์มา อะสุรา ทานะเวฆะสา',
+                'pali_roman': 'Kālakañjā mahābhismā asurā dānaveghasā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Kālakañjas, fearsome of form, and the Dānaveghasa asuras,',
+            },
+            {
+                'number': 98,
+                'page': 180,
+                'pali': 'เวปะจิตติ สุจิตติ จะ ปะหาราโท นะมุจี สะหะ.',
+                'pali_roman': 'Vepacitti sucitti ca pahārādo namucī saha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Vepacitti and Sucitti, Pahārāda and Namucī with them.',
+            },
+            {
+                'number': 99,
+                'page': 180,
+                'pali': 'สะตัญจะ พะลิปุตตานัง สัพเพ เวโรจะนามะกา',
+                'pali_roman': 'Satañca baliputtānaṃ sabbe verocanāmakā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And a hundred sons of Bali, all of them named Verocana —',
+            },
+            {
+                'number': 100,
+                'page': 180,
+                'pali': 'สันนัยหิต์วา พะลิง เสนัง ราหุภัททะมุปาคะมุง.',
+                'pali_roman': 'Sannayhitvā baliṃ senaṃ rāhubhaddamupāgamuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "they armed Bali's host and went to Rāhubhadda, saying:",
+            },
+            # ‼ CHECK [IMG_0451.PNG]: THE ASURAS' SPEECH IS UNMARKED ON THIS
+            #   SHEET. The roman twin's verse 126 wraps this line in quotation
+            #   marks — `’Samayo ’dāni bhaddante bhikkhūnaṃ samitiṃ vanaṃ.’` —
+            #   where this page prints it plain, with no quotes and no elision
+            #   marks. Entered as printed; the English keeps the sense of
+            #   direct speech even though the Pali line carries no marks.
+            {
+                'number': 101,
+                'page': 180,
+                'pali': 'สะมะโยทานิ ภัททันเต ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Samayodāni bhaddante bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Now is the time, venerable sir — the assembly of bhikkhus in the wood.',
+            },
+            {
+                'number': 102,
+                'page': 180,
+                'pali': 'อาโป จะ เทวา ปะฐะวี จะ เตโช วาโย ตะทาคะมุง',
+                'pali_roman': 'Āpo ca devā paṭhavī ca tejo vāyo tadāgamuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The devas of water and of earth, of fire and of wind, came then,',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: วะรุณา AND วารุณา STAND IN THE SAME LINE
+            #   and differ only in the length of the first vowel — `varuṇā
+            #   vāruṇā`. They are two different things, the Varuṇa devas and
+            #   the vāruṇa class, and the twin's verse 128 has the same pair.
+            #   Read separately at 2.6×; NOT a doubled word and not to be
+            #   levelled. วะรุณา appears again alone at verse 118.
+            {
+                'number': 103,
+                'page': 180,
+                'pali': 'วะรุณา วารุณา เทวา โสโม จะ ยะสะสา สะหะ.',
+                'pali_roman': 'Varuṇā vāruṇā devā somo ca yasasā saha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Varuṇa devas and the Vāruṇas, and Soma together with Yasa.',
+            },
+            {
+                'number': 104,
+                'page': 180,
+                'pali': 'เมตตากะรุณากายิกา อาคู เทวา ยะสัสสิโน',
+                'pali_roman': 'Mettākaruṇākāyikā āgū devā yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The devas of the hosts of loving-kindness and compassion came, devas of renown.',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: ⚠ THE SAME LINE IS PUNCTUATED THREE
+            #   DIFFERENT WAYS ON ONE SHEET. `สัพเพ นานัตตะวัณณิโน` closes the
+            #   count three times — verses 105, 113 and 120 — and this sheet
+            #   ends it with a FULL STOP, a FULL STOP and then a COMMA. All
+            #   three were read at 6× and the marks are plain: the first two
+            #   are round dots with no tail, the third has an unmistakable
+            #   descending tail. The roman twin sets a COMMA at all three (its
+            #   verses 130, 138, 145), so the twin is consistent and this
+            #   sheet is not. Entered as printed at each of the three; none
+            #   levelled to the others.
+            # ‼ CHECK [IMG_0451.PNG]: THE THREE-LINE REFRAIN RUNS THREE TIMES
+            #   ON THIS SHEET — verses 105-107, 113-115 and 120 onward, each
+            #   closing a group of the roll-call. The repetition is the
+            #   book's. Each occurrence was read from its own crop rather than
+            #   copied from the one above, which is how the punctuation
+            #   difference at 105, 113 and 120 was caught.
+            {
+                'number': 105,
+                'page': 180,
+                'pali': 'ทะเสเต ทะสะธา กายา สัพเพ นานัตตะวัณณิโน.',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, ten kinds of hosts, all of them of varied hues,',
+            },
+            {
+                'number': 106,
+                'page': 180,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 107,
+                'page': 180,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 108,
+                'page': 180,
+                'pali': 'เวณฑู จะ เทวา สะหะลี จะ อะสะมา จะ ทุเว ยะมา',
+                'pali_roman': 'Veṇḍū ca devā sahalī ca asamā ca duve yamā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Veṇḍū devas and the Sahalīs, the Asamas and the two Yamas,',
+            },
+            {
+                'number': 109,
+                'page': 180,
+                'pali': 'จันทัสสูปะนิสา เทวา จันทะมาคู ปุรักขิตา.',
+                'pali_roman': 'Candassūpanisā devā candamāgū purakkhitā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the devas who attend upon the moon came, with the moon before them.',
+            },
+            {
+                'number': 110,
+                'page': 180,
+                'pali': 'สุริยัสสูปะนิสา เทวา สุริยะมาคู ปุรักขิตา',
+                'pali_roman': 'Suriyassūpanisā devā suriyamāgū purakkhitā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The devas who attend upon the sun came, with the sun before them;',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: มันทะพะลาหะกา IS PRINTED WITH พ, giving
+            #   `mandabalāhakā`, where most editions have `mandavalāhakā` with
+            #   v. ⚠ BUT THE TWIN AGREES — its verse 136 also reads
+            #   `mandabalāhakā`. Both copies of this book say b, so unlike the
+            #   ฬ→พ failures on page 179 this is the book's own reading
+            #   throughout and not a setting fault in one copy. Entered as
+            #   printed and not normalised to the canon.
+            {
+                'number': 111,
+                'page': 180,
+                'pali': 'นักขัตตานิ ปุรักขิต์วา อาคู มันทะพะลาหะกา.',
+                'pali_roman': 'Nakkhattāni purakkhitvā āgū mandabalāhakā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and putting the constellations before them, the Mandabalāhakas came.',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: A WORD-DIVISION DIFFERENCE FROM THE
+            #   TWIN, letters identical. This sheet sets สักโก ปาคะ as two
+            #   words, giving `sakko pāga`; the roman copy sets `sakkopāga` as
+            #   one. Entered as this page prints it.
+            {
+                'number': 112,
+                'page': 180,
+                'pali': 'วะสูนัง วาสะโว เสฏโฐ สักโก ปาคะ ปุรินทะโท',
+                'pali_roman': 'Vasūnaṃ vāsavo seṭṭho sakko pāga purindado',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Vāsava, best of the Vasus, came too — Sakka, the giver of gifts.',
+            },
+            {
+                'number': 113,
+                'page': 180,
+                'pali': 'ทะเสเต ทะสะธา กายา สัพเพ นานัตตะวัณณิโน.',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, ten kinds of hosts, all of them of varied hues,',
+            },
+            {
+                'number': 114,
+                'page': 180,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 115,
+                'page': 180,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            {
+                'number': 116,
+                'page': 180,
+                'pali': 'อะถาคู สะหะภู เทวา ชะละมัคคิสิขาริวะ',
+                'pali_roman': 'Athāgū sahabhū devā jalamaggisikhāriva',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then came the Sahabhū devas, blazing like the crest of a flame,',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: A WORD-DIVISION DIFFERENCE FROM THE
+            #   TWIN, letters identical. This sheet sets อุมมา ปุปผะนิภาสิโน
+            #   as two words, giving `ummā pupphanibhāsino`; the roman copy
+            #   sets `ummāpupphanibhāsino` as one. Entered as this page prints
+            #   it.
+            {
+                'number': 117,
+                'page': 180,
+                'pali': 'อะริฏฐะกา จะ โรชา จะ อุมมา ปุปผะนิภาสิโน.',
+                'pali_roman': 'Ariṭṭhakā ca rojā ca ummā pupphanibhāsino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Ariṭṭhakas and the Rojas, shining like the flax flower,',
+            },
+            {
+                'number': 118,
+                'page': 180,
+                'pali': 'วะรุณา สะหะธัมมา จะ อัจจุตา จะ อะเนชะกา',
+                'pali_roman': 'Varuṇā sahadhammā ca accutā ca anejakā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Varuṇas and the Sahadhammas, the Accutas and the Anejakas,',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: A PUNCTUATION DIFFERENCE FROM THE TWIN.
+            #   The roman copy breaks this line with a full stop in the middle
+            #   — `Sūleyya-rucirā āgū. Āgū vāsavanesino.` — where this sheet
+            #   runs it straight through with no mark at all and none at the
+            #   end. Entered as this page prints it.
+            {
+                'number': 119,
+                'page': 180,
+                'pali': 'สุเลยยะรุจิรา อาคู อาคู วาสะวะเนสิโน',
+                'pali_roman': 'Sūleyyarucirā āgū āgū vāsavanesino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Sūleyyas and the Ruciras came, and those who seek after Vāsava came.',
+            },
+            # ‼ CHECK [IMG_0451.PNG]: THE SHEET ENDS ON A COMMA, so the
+            #   sentence runs on to page 181 — but the VERSE is complete. The
+            #   last row is a whole two-column row, left half and right half
+            #   both present, so this is not a cut line and nothing is left
+            #   half-entered. The comma is recorded as part of the line.
+            {
+                'number': 120,
+                'page': 180,
+                'pali': 'ทะเสเต ทะสะธา กายา สัพเพ นานัตตะวัณณิโน,',
+                'pali_roman': 'Dasete dasadhā kāyā sabbe nānattavaṇṇino,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These ten, ten kinds of hosts, all of them of varied hues,',
             },
         ],
     },

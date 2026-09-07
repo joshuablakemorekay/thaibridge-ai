@@ -1,0 +1,356 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "mahasamaya-suttam"
+    ],
+    "pages": [
+      {
+        "page": 180,
+        "file": "IMG_0451.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "mahasamaya-suttam",
+        "verses": "95-120",
+        "starts_here": false,
+        "note": "The chant continuing; no heading. Twenty-six TWO-COLUMN rows throughout, no single-column block on this sheet (gutter measured at 165px, x 943-1107 — NOT the 251px of page 179). The asuras conquered by Indra, then the devas of the four elements, then the hosts attending moon and sun, then the Sahabhū devas — the roll-call broken three times by the same three-line refrain."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mahasamaya-suttam",
+      "continuation_of": "mahasamaya-suttam",
+      "continues": true,
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0451.PNG",
+          "issue": "THE GUTTER ON THIS SHEET IS 165px AT x 943-1107 — page 179's was 251px at x 801-1051. Three consecutive sheets of the same chant, set by the same printer, with different column measures. Both were ink-profiled rather than judged, and the row count was confirmed a second way: a profile of the RIGHT column alone returns exactly 26 bands, matching the 26 rows read. This is why the gutter is measured per sheet and never carried over."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0451.PNG",
+          "issue": "THE ROMAN TWIN MAPS ONTO THIS SHEET AS ITS VERSES 120-145, one for one across all 26 rows. Every reading below was checked against it. ⚠ The two copies DISAGREE ON PUNCTUATION at seven points and on word division at three more; the differences are listed against their own verses and NONE has been levelled. Remember the twin is useless for numbering — it divides the same words its own way — and is only being used on the text."
+        },
+        {
+          "verse": 97,
+          "file": "IMG_0451.PNG",
+          "issue": "⚠ กาละกัญชา IS PRINTED WITH ช, giving `kālakañjā`, where the roman twin verse 122 sets `Kālakañchā` with ch. Read at 5×: the glyph carries no upper-left flag, so it is ช and not ฉ, and the two are not lookalikes. HERE THE THAI SHEET AGREES WITH THE CANON — the asura clan is the Kālakañjā — so the twin is the copy at fault. Entered as this page prints it; the twin has not been touched."
+        },
+        {
+          "verse": 105,
+          "file": "IMG_0451.PNG",
+          "issue": "⚠ THE SAME LINE IS PUNCTUATED THREE DIFFERENT WAYS ON ONE SHEET. `สัพเพ นานัตตะวัณณิโน` closes the count three times — verses 105, 113 and 120 — and this sheet ends it with a FULL STOP, a FULL STOP and then a COMMA. All three were read at 6× and the marks are plain: the first two are round dots with no tail, the third has an unmistakable descending tail. The roman twin sets a COMMA at all three (its verses 130, 138, 145), so the twin is consistent and this sheet is not. Entered as printed at each of the three; none levelled to the others."
+        },
+        {
+          "verse": 120,
+          "file": "IMG_0451.PNG",
+          "issue": "THE SHEET ENDS ON A COMMA, so the sentence runs on to page 181 — but the VERSE is complete. The last row is a whole two-column row, left half and right half both present, so this is not a cut line and nothing is left half-entered. The comma is recorded as part of the line."
+        },
+        {
+          "verse": 111,
+          "file": "IMG_0451.PNG",
+          "issue": "มันทะพะลาหะกา IS PRINTED WITH พ, giving `mandabalāhakā`, where most editions have `mandavalāhakā` with v. ⚠ BUT THE TWIN AGREES — its verse 136 also reads `mandabalāhakā`. Both copies of this book say b, so unlike the ฬ→พ failures on page 179 this is the book's own reading throughout and not a setting fault in one copy. Entered as printed and not normalised to the canon."
+        },
+        {
+          "verse": 112,
+          "file": "IMG_0451.PNG",
+          "issue": "A WORD-DIVISION DIFFERENCE FROM THE TWIN, letters identical. This sheet sets สักโก ปาคะ as two words, giving `sakko pāga`; the roman copy sets `sakkopāga` as one. Entered as this page prints it."
+        },
+        {
+          "verse": 117,
+          "file": "IMG_0451.PNG",
+          "issue": "A WORD-DIVISION DIFFERENCE FROM THE TWIN, letters identical. This sheet sets อุมมา ปุปผะนิภาสิโน as two words, giving `ummā pupphanibhāsino`; the roman copy sets `ummāpupphanibhāsino` as one. Entered as this page prints it."
+        },
+        {
+          "verse": 119,
+          "file": "IMG_0451.PNG",
+          "issue": "A PUNCTUATION DIFFERENCE FROM THE TWIN. The roman copy breaks this line with a full stop in the middle — `Sūleyya-rucirā āgū. Āgū vāsavanesino.` — where this sheet runs it straight through with no mark at all and none at the end. Entered as this page prints it."
+        },
+        {
+          "verse": 95,
+          "file": "IMG_0451.PNG",
+          "issue": "A PUNCTUATION DIFFERENCE FROM THE TWIN. This sheet ends the line with NO mark; the roman copy's verse 120 closes it with a full stop. The same happens at verses 106, 110 and 114, where the twin punctuates and this sheet does not. Recorded here once for the group; each is entered as its own line prints it."
+        },
+        {
+          "verse": 97,
+          "file": "IMG_0451.PNG",
+          "issue": "THE CLUSTER MARK IS THANTHAKHAT ์ ON THIS SHEET TOO — มะหาภิส์มา at verse 97, สันนัยหิต์วา at verse 100, ปุรักขิต์วา at verse 111. That matches the rest of this chant, which sets ์ and never yamakkan ๎, so the chant stays internally consistent."
+        },
+        {
+          "verse": 103,
+          "file": "IMG_0451.PNG",
+          "issue": "วะรุณา AND วารุณา STAND IN THE SAME LINE and differ only in the length of the first vowel — `varuṇā vāruṇā`. They are two different things, the Varuṇa devas and the vāruṇa class, and the twin's verse 128 has the same pair. Read separately at 2.6×; NOT a doubled word and not to be levelled. วะรุณา appears again alone at verse 118."
+        },
+        {
+          "verse": 101,
+          "file": "IMG_0451.PNG",
+          "issue": "THE ASURAS' SPEECH IS UNMARKED ON THIS SHEET. The roman twin's verse 126 wraps this line in quotation marks — `’Samayo ’dāni bhaddante bhikkhūnaṃ samitiṃ vanaṃ.’` — where this page prints it plain, with no quotes and no elision marks. Entered as printed; the English keeps the sense of direct speech even though the Pali line carries no marks."
+        },
+        {
+          "verse": 105,
+          "file": "IMG_0451.PNG",
+          "issue": "THE THREE-LINE REFRAIN RUNS THREE TIMES ON THIS SHEET — verses 105-107, 113-115 and 120 onward, each closing a group of the roll-call. The repetition is the book's. Each occurrence was read from its own crop rather than copied from the one above, which is how the punctuation difference at 105, 113 and 120 was caught."
+        }
+      ],
+      "verses": [
+        {
+          "number": 95,
+          "pali": "ชิตา วะชิระหัตเถนะ สะมุททัง อะสุรา สิตา",
+          "pali_roman": "Jitā vajirahatthena samuddaṃ asurā sitā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Conquered by him of the thunderbolt in hand, the asuras dwell in the sea —",
+          "page": 180
+        },
+        {
+          "number": 96,
+          "pali": "ภาตะโร วาสะวัสเสเต อิทธิมันโต ยะสัสสิโน.",
+          "pali_roman": "Bhātaro vāsavassete iddhimanto yasassino.",
+          "thai": "",
+          "paiboon": "",
+          "english": "brothers of Vāsava are these, possessed of power and of renown.",
+          "page": 180
+        },
+        {
+          "number": 97,
+          "pali": "กาละกัญชา มะหาภิส์มา อะสุรา ทานะเวฆะสา",
+          "pali_roman": "Kālakañjā mahābhismā asurā dānaveghasā",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Kālakañjas, fearsome of form, and the Dānaveghasa asuras,",
+          "page": 180
+        },
+        {
+          "number": 98,
+          "pali": "เวปะจิตติ สุจิตติ จะ ปะหาราโท นะมุจี สะหะ.",
+          "pali_roman": "Vepacitti sucitti ca pahārādo namucī saha.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Vepacitti and Sucitti, Pahārāda and Namucī with them.",
+          "page": 180
+        },
+        {
+          "number": 99,
+          "pali": "สะตัญจะ พะลิปุตตานัง สัพเพ เวโรจะนามะกา",
+          "pali_roman": "Satañca baliputtānaṃ sabbe verocanāmakā",
+          "thai": "",
+          "paiboon": "",
+          "english": "And a hundred sons of Bali, all of them named Verocana —",
+          "page": 180
+        },
+        {
+          "number": 100,
+          "pali": "สันนัยหิต์วา พะลิง เสนัง ราหุภัททะมุปาคะมุง.",
+          "pali_roman": "Sannayhitvā baliṃ senaṃ rāhubhaddamupāgamuṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "they armed Bali's host and went to Rāhubhadda, saying:",
+          "page": 180
+        },
+        {
+          "number": 101,
+          "pali": "สะมะโยทานิ ภัททันเต ภิกขูนัง สะมิติง วะนัง.",
+          "pali_roman": "Samayodāni bhaddante bhikkhūnaṃ samitiṃ vanaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now is the time, venerable sir — the assembly of bhikkhus in the wood.",
+          "page": 180
+        },
+        {
+          "number": 102,
+          "pali": "อาโป จะ เทวา ปะฐะวี จะ เตโช วาโย ตะทาคะมุง",
+          "pali_roman": "Āpo ca devā paṭhavī ca tejo vāyo tadāgamuṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "The devas of water and of earth, of fire and of wind, came then,",
+          "page": 180
+        },
+        {
+          "number": 103,
+          "pali": "วะรุณา วารุณา เทวา โสโม จะ ยะสะสา สะหะ.",
+          "pali_roman": "Varuṇā vāruṇā devā somo ca yasasā saha.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Varuṇa devas and the Vāruṇas, and Soma together with Yasa.",
+          "page": 180
+        },
+        {
+          "number": 104,
+          "pali": "เมตตากะรุณากายิกา อาคู เทวา ยะสัสสิโน",
+          "pali_roman": "Mettākaruṇākāyikā āgū devā yasassino",
+          "thai": "",
+          "paiboon": "",
+          "english": "The devas of the hosts of loving-kindness and compassion came, devas of renown.",
+          "page": 180
+        },
+        {
+          "number": 105,
+          "pali": "ทะเสเต ทะสะธา กายา สัพเพ นานัตตะวัณณิโน.",
+          "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino.",
+          "thai": "",
+          "paiboon": "",
+          "english": "These ten, ten kinds of hosts, all of them of varied hues,",
+          "page": 180
+        },
+        {
+          "number": 106,
+          "pali": "อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน",
+          "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino",
+          "thai": "",
+          "paiboon": "",
+          "english": "possessed of power, of radiance, of beauty and of renown,",
+          "page": 180
+        },
+        {
+          "number": 107,
+          "pali": "โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.",
+          "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "came rejoicing to the wood, to the assembly of bhikkhus.",
+          "page": 180
+        },
+        {
+          "number": 108,
+          "pali": "เวณฑู จะ เทวา สะหะลี จะ อะสะมา จะ ทุเว ยะมา",
+          "pali_roman": "Veṇḍū ca devā sahalī ca asamā ca duve yamā",
+          "thai": "",
+          "paiboon": "",
+          "english": "The Veṇḍū devas and the Sahalīs, the Asamas and the two Yamas,",
+          "page": 180
+        },
+        {
+          "number": 109,
+          "pali": "จันทัสสูปะนิสา เทวา จันทะมาคู ปุรักขิตา.",
+          "pali_roman": "Candassūpanisā devā candamāgū purakkhitā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the devas who attend upon the moon came, with the moon before them.",
+          "page": 180
+        },
+        {
+          "number": 110,
+          "pali": "สุริยัสสูปะนิสา เทวา สุริยะมาคู ปุรักขิตา",
+          "pali_roman": "Suriyassūpanisā devā suriyamāgū purakkhitā",
+          "thai": "",
+          "paiboon": "",
+          "english": "The devas who attend upon the sun came, with the sun before them;",
+          "page": 180
+        },
+        {
+          "number": 111,
+          "pali": "นักขัตตานิ ปุรักขิต์วา อาคู มันทะพะลาหะกา.",
+          "pali_roman": "Nakkhattāni purakkhitvā āgū mandabalāhakā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and putting the constellations before them, the Mandabalāhakas came.",
+          "page": 180
+        },
+        {
+          "number": 112,
+          "pali": "วะสูนัง วาสะโว เสฏโฐ สักโก ปาคะ ปุรินทะโท",
+          "pali_roman": "Vasūnaṃ vāsavo seṭṭho sakko pāga purindado",
+          "thai": "",
+          "paiboon": "",
+          "english": "Vāsava, best of the Vasus, came too — Sakka, the giver of gifts.",
+          "page": 180
+        },
+        {
+          "number": 113,
+          "pali": "ทะเสเต ทะสะธา กายา สัพเพ นานัตตะวัณณิโน.",
+          "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino.",
+          "thai": "",
+          "paiboon": "",
+          "english": "These ten, ten kinds of hosts, all of them of varied hues,",
+          "page": 180
+        },
+        {
+          "number": 114,
+          "pali": "อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน",
+          "pali_roman": "Iddhimanto jutimanto vaṇṇavanto yasassino",
+          "thai": "",
+          "paiboon": "",
+          "english": "possessed of power, of radiance, of beauty and of renown,",
+          "page": 180
+        },
+        {
+          "number": 115,
+          "pali": "โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.",
+          "pali_roman": "Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "came rejoicing to the wood, to the assembly of bhikkhus.",
+          "page": 180
+        },
+        {
+          "number": 116,
+          "pali": "อะถาคู สะหะภู เทวา ชะละมัคคิสิขาริวะ",
+          "pali_roman": "Athāgū sahabhū devā jalamaggisikhāriva",
+          "thai": "",
+          "paiboon": "",
+          "english": "Then came the Sahabhū devas, blazing like the crest of a flame,",
+          "page": 180
+        },
+        {
+          "number": 117,
+          "pali": "อะริฏฐะกา จะ โรชา จะ อุมมา ปุปผะนิภาสิโน.",
+          "pali_roman": "Ariṭṭhakā ca rojā ca ummā pupphanibhāsino.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Ariṭṭhakas and the Rojas, shining like the flax flower,",
+          "page": 180
+        },
+        {
+          "number": 118,
+          "pali": "วะรุณา สะหะธัมมา จะ อัจจุตา จะ อะเนชะกา",
+          "pali_roman": "Varuṇā sahadhammā ca accutā ca anejakā",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Varuṇas and the Sahadhammas, the Accutas and the Anejakas,",
+          "page": 180
+        },
+        {
+          "number": 119,
+          "pali": "สุเลยยะรุจิรา อาคู อาคู วาสะวะเนสิโน",
+          "pali_roman": "Sūleyyarucirā āgū āgū vāsavanesino",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Sūleyyas and the Ruciras came, and those who seek after Vāsava came.",
+          "page": 180
+        },
+        {
+          "number": 120,
+          "pali": "ทะเสเต ทะสะธา กายา สัพเพ นานัตตะวัณณิโน,",
+          "pali_roman": "Dasete dasadhā kāyā sabbe nānattavaṇṇino,",
+          "thai": "",
+          "paiboon": "",
+          "english": "These ten, ten kinds of hosts, all of them of varied hues,",
+          "page": 180
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "mahasamaya-suttam"
+    ],
+    "resume_from_page": 181,
+    "resume_from_file": "IMG_0452.PNG",
+    "resume_from": "mahasamaya-suttam",
+    "unreadable": [],
+    "paiboon_scan": "clean by absence.",
+    "pali_untouched": "Typed from MAGNIFIED crops of this sheet — each column in three bands at 2.6×, plus four further crops at 5×-6× for the contested glyph and the three punctuation marks — and then compared line by line with the roman twin at verses 120-145.",
+    "page_scan": "agrees. One block, twenty-six verses. The row count was confirmed independently by an ink profile of the right column, which returns exactly 26 bands.",
+    "notes": "Page 180: the asuras, the devas of the four elements, the hosts of moon and sun, and the Sahabhū devas. ⚠ THE GUTTER IS 165px HERE against 179's 251px — same chant, same printer, adjacent sheets, different measure; profiled per block as always. ⚠ THE SAME LINE IS PUNCTUATED . / . / , at verses 105, 113 and 120 where the twin has a comma at all three. ⚠ กาละกัญชา at verse 97 has ช where the twin has ch, and here the THAI sheet agrees with the canon. ⚠ The sheet ends on a comma, so the sentence runs on to 181, but the last verse is a whole row and nothing is left half-entered. Nothing normalised in either direction.",
+    "diacritic_exceptions": [
+      "varuṇā/vāruṇā — NOT one word romanised two ways. They are two different Pali words standing side by side in the SAME printed line at verse 103, วะรุณา วารุณา เทวา: the Varuṇa devas and the vāruṇa class. The Thai script distinguishes them, วะ being short and วา long, and the roman twin's verse 128 sets exactly the same pair. Read separately at 2.6×. วะรุณา appears alone again at verse 118 and is romanised varuṇā there too."
+    ]
+  }
+}
