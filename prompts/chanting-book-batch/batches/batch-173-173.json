@@ -1,0 +1,117 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "jaya-parittam-chet-tamnan"
+    ],
+    "pages": [
+      {
+        "page": 173,
+        "file": "IMG_0443.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "jaya-parittam-chet-tamnan",
+        "verses": "4-29",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, TWO COLUMNS throughout, gutter measured at x 850-1039. Twenty-six rows. ⚠️ THIS PRINTING IS LONGER THAN THE PAGE-99 ONE, not shorter — it carries the ratana-osadha stanzas and the นัตถิ เม สะระณัง couplet, which that entry does not. It ends on a complete row and CONTINUES onto 174."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "jaya-parittam-chet-tamnan",
+      "continuation_of": "jaya-parittam-chet-tamnan",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Twenty-six, one per printed ROW read across both columns. Stanza openings are indented at rows 4, 13, 19 and 28.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "ต๎วัง, พ๎รัห๎มะจาริสุ, กัต๎วานะ and สักกัต๎วา take the yamakkan. ⚠️ FOUR words on this sheet print พ where the canon and the page-99 printing have ฬ — see the checks.",
+        "pages": "IMG_0443.PNG, page 173. Two columns throughout. CONTINUES onto 174."
+      },
+      "verses": [
+        {"number": 4, "page": 173, "pali": "ชะยันโต โพธิยา มูเล สัก๎ยานัง นันทิวัฑฒะโน", "pali_roman": "Jayanto bodhiyā mūle sakyānaṃ nandivaḍḍhano", "thai": "", "paiboon": "", "english": "Victorious at the foot of the Bodhi tree, increasing the joy of the Sakyans,"},
+        {"number": 5, "pali": "เอวัง ต๎วัง วิชะโย โหหิ ชะยัสสุ ชะยะมังคะเล.", "pali_roman": "Evaṃ tvaṃ vijayo hohi jayassu jayamaṅgale.", "thai": "", "paiboon": "", "english": "so may you be victorious; may you win the blessing of victory."},
+        {"number": 6, "pali": "อะปะราชิตะปัลลังเก สีเส ปะฐะวิโปกขะเร", "pali_roman": "Aparājitapallaṅke sīse pathavipokkhare", "thai": "", "paiboon": "", "english": "On the unconquered seat, on the crown of the earth's lotus,"},
+        {"number": 7, "pali": "อะภิเสเก สัพพะพุทธานัง อัคคัปปัตโต ปะโมทะติ ฯ", "pali_roman": "Abhiseke sabbabuddhānaṃ aggappatto pamodati.", "thai": "", "paiboon": "", "english": "the consecration place of all the Buddhas, he rejoices, having reached the summit."},
+        {"number": 8, "pali": "สุนักขัตตัง สุมังคะลัง สุปะภาตัง สุหุฏฐิตัง", "pali_roman": "Sunakkhattaṃ sumaṅgalaṃ supabhātaṃ suhuṭṭhitaṃ", "thai": "", "paiboon": "", "english": "A good star, a good blessing, a good dawn, a good rising,"},
+        {"number": 9, "pali": "สุขะโณ สุมุหุตโต จะ สุยิฏฐัง พ๎รัห๎มะจาริสุ.", "pali_roman": "Sukhaṇo sumuhutto ca suyiṭṭhaṃ brahmacārisu.", "thai": "", "paiboon": "", "english": "a good moment, a good instant, and a good offering to those who live the holy life."},
+        {"number": 10, "pali": "ปะทักขิณัง กายะกัมมัง วาจากัมมัง ปะทักขิณัง", "pali_roman": "Padakkhiṇaṃ kāyakammaṃ vācākammaṃ padakkhiṇaṃ", "thai": "", "paiboon": "", "english": "Auspicious is bodily action, auspicious is verbal action,"},
+        {"number": 11, "pali": "ปะทักขิณัง มะโนกัมมัง ปะณิธี เต ปะทักขิณา.", "pali_roman": "Padakkhiṇaṃ manokammaṃ paṇidhī te padakkhiṇā.", "thai": "", "paiboon": "", "english": "auspicious is mental action, and auspicious are your aspirations."},
+        {"number": 12, "pali": "ปะทักขิณานิ กัต๎วานะ ละภันตัตเถ ปะทักขิเณ.", "pali_roman": "Padakkhiṇāni katvāna labhantatthe padakkhiṇe.", "thai": "", "paiboon": "", "english": "Having done what is auspicious, they gain auspicious benefits."},
+        {"number": 13, "pali": "โส อัตถะลัทโธ สุขิโต วิรุพโห พุทธะสาสะเน", "pali_roman": "So atthaladdho sukhito virubho buddhasāsane", "thai": "", "paiboon": "", "english": "May he gain the benefit and be happy, flourishing in the Buddha's teaching,"},
+        {"number": 14, "pali": "อะโรโค สุขิโต โหหิ สะหะ สัพเพหิ ญาติภิ.", "pali_roman": "Arogo sukhito hohi saha sabbehi ñātibhi.", "thai": "", "paiboon": "", "english": "free of illness and happy, together with all his kin."},
+        {"number": 15, "pali": "สา อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน", "pali_roman": "Sā atthaladdhā sukhitā virubhā buddhasāsane", "thai": "", "paiboon": "", "english": "May she gain the benefit and be happy, flourishing in the Buddha's teaching,"},
+        {"number": 16, "pali": "อะโรคา สุขิตา โหหิ สะหะ สัพเพหิ ญาติภิ.", "pali_roman": "Arogā sukhitā hohi saha sabbehi ñātibhi.", "thai": "", "paiboon": "", "english": "free of illness and happy, together with all her kin."},
+        {"number": 17, "pali": "เต อัตถะลัทธา สุขิตา วิรุพหา พุทธะสาสะเน", "pali_roman": "Te atthaladdhā sukhitā virubhā buddhasāsane", "thai": "", "paiboon": "", "english": "May they gain the benefit and be happy, flourishing in the Buddha's teaching,"},
+        {"number": 18, "pali": "อะโรคา สุขิตา โหถะ สะหะ สัพเพหิ ญาติภิ.", "pali_roman": "Arogā sukhitā hotha saha sabbehi ñātibhi.", "thai": "", "paiboon": "", "english": "free of illness and happy, together with all your kin."},
+        {"number": 19, "pali": "สักกัต๎วา พุทธะระตะนัง โอสะถัง อุตตะมัง วะรัง", "pali_roman": "Sakkatvā buddharatanaṃ osathaṃ uttamaṃ varaṃ", "thai": "", "paiboon": "", "english": "Having honoured the jewel of the Buddha, the supreme and excellent medicine,"},
+        {"number": 20, "pali": "หิตัง เทวะมะนุสสานัง พุทธะเตเชนะ โสตถินา", "pali_roman": "Hitaṃ devamanussānaṃ buddhatejena sotthinā", "thai": "", "paiboon": "", "english": "the welfare of devas and humans — by the Buddha's might and its safety,"},
+        {"number": 21, "pali": "นัสสันตุปัททะวา สัพเพ ทุกขา วูปะสะเมนตุ เต.", "pali_roman": "Nassantupaddavā sabbe dukkhā vūpasamentu te.", "thai": "", "paiboon": "", "english": "may all misfortunes perish, may your sufferings be stilled."},
+        {"number": 22, "pali": "สักกัต๎วา ธัมมะระตะนัง โอสะถัง อุตตะมัง วะรัง", "pali_roman": "Sakkatvā dhammaratanaṃ osathaṃ uttamaṃ varaṃ", "thai": "", "paiboon": "", "english": "Having honoured the jewel of the Dhamma, the supreme and excellent medicine,"},
+        {"number": 23, "pali": "ปะริพาหูปะสะมะนัง ธัมมะเตเชนะ โสตถินา", "pali_roman": "Paribāhūpasamanaṃ dhammatejena sotthinā", "thai": "", "paiboon": "", "english": "the stilling of fever — by the Dhamma's might and its safety,"},
+        {"number": 24, "pali": "นัสสันตุปัททะวา สัพเพ ภะยา วูปะสะเมนตุ เต.", "pali_roman": "Nassantupaddavā sabbe bhayā vūpasamentu te.", "thai": "", "paiboon": "", "english": "may all misfortunes perish, may your fears be stilled."},
+        {"number": 25, "pali": "สักกัต๎วา สังฆะระตะนัง โอสะถัง อุตตะมัง วะรัง", "pali_roman": "Sakkatvā saṅgharatanaṃ osathaṃ uttamaṃ varaṃ", "thai": "", "paiboon": "", "english": "Having honoured the jewel of the Sangha, the supreme and excellent medicine,"},
+        {"number": 26, "pali": "อาหุเนยยัง ปาหุเนยยัง สังฆะเตเชนะ โสตถินา", "pali_roman": "Āhuneyyaṃ pāhuneyyaṃ saṅghatejena sotthinā", "thai": "", "paiboon": "", "english": "worthy of gifts and hospitality — by the Sangha's might and its safety,"},
+        {"number": 27, "pali": "นัสสันตุปัททะวา สัพเพ โรคา วูปะสะเมนตุ เต.", "pali_roman": "Nassantupaddavā sabbe rogā vūpasamentu te.", "thai": "", "paiboon": "", "english": "may all misfortunes perish, may your illnesses be stilled."},
+        {"number": 28, "pali": "นัตถิ เม สะระณัง อัญญัง พุทโธ เม สะระณัง วะรัง", "pali_roman": "Natthi me saraṇaṃ aññaṃ buddho me saraṇaṃ varaṃ", "thai": "", "paiboon": "", "english": "I have no other refuge; the Buddha is my excellent refuge."},
+        {"number": 29, "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.", "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.", "thai": "", "paiboon": "", "english": "By this utterance of truth, may you have the blessing of victory."}
+      ],
+      "vocabulary": [
+        {"pali": "ปะทักขิณัง", "pali_roman": "padakkhiṇaṃ", "meaning": "auspicious; literally to the right, from the practice of circumambulating a shrine keeping it on one's right"},
+        {"pali": "โอสะถัง", "pali_roman": "osathaṃ", "meaning": "medicine. Each of the Three Jewels is called the supreme medicine in turn"},
+        {"pali": "อุปัททะวา", "pali_roman": "upaddavā", "meaning": "misfortunes, calamities. What each stanza asks to perish"}
+      ],
+      "checks": [
+        {
+          "verse": 13,
+          "file": "IMG_0443.PNG",
+          "issue": "‼‼ วิรุพโห / วิรุพหา ARE PRINTED WITH พ THREE TIMES, at verses 13, 15 and 17, where the page-99 printing has วิรุฬโห / วิรุฬหา with ฬ and the canon has virūḷho. All three read at 4x on one crop and checked against chanting.py. THIS IS THE THIRD ฬ/พ PAIR BETWEEN TWO PRINTINGS OF ONE CHANT, after ทัฬ๎เหนะ/ทัพเหนะ (82 vs 168) and อะวิรุฬหิฉันทา/อะวิรุพหิฉันทา (82 vs 169) — and the first to occur three times on a single sheet. Romanised virubho / virubhā by the project's dominant พ→b rule."
+        },
+        {
+          "verse": 23,
+          "file": "IMG_0443.PNG",
+          "issue": "‼ ปะริพาหูปะสะมะนัง IS A FOURTH ฬ/พ WORD ON THIS SHEET. The canon has pariḷāhūpasamanaṃ, the stilling of fever, from pariḷāha. Printed here with พ. Read at 2.6x. Romanised paribāhūpasamanaṃ, faithful to what is printed. ⚠️ The page-99 printing does NOT contain this stanza at all, so there is no in-book comparison for this one — unlike the three above it, this rests on the canon rather than on the book contradicting itself."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0443.PNG",
+          "issue": "‼‼ THIS PRINTING IS LONGER THAN THE PAGE-99 ONE, WHICH REVERSES THE PATTERN OF THIS WHOLE SECTION. jaya-parittam-dvadasamam ends at 18 verses with อะโรคา สุขิตา โหถะ; this sheet carries on past that point with the three ratana-osadha stanzas (สักกัต๎วา พุทธะ / ธัมมะ / สังฆะระตะนัง) and the นัตถิ เม สะระณัง couplet, none of which is in that entry. Every other chant in เจ็ดตำนานย่อ has been shorter than its counterpart; this one is longer. Counted against chanting.py, not assumed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0443.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter MEASURED at 190px, x 850-1039, over the whole sheet — it is one block throughout, unlike the last three pages. Every row read ACROSS. First pairing: ชะยันโต โพธิยา มูเล + สัก๎ยานัง นันทิวัฑฒะโน. Rows 4-18 agree word for word with verses 4-18 of the page-99 entry apart from the ฬ/พ words, which is independent corroboration of the pairing."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0443.PNG",
+          "issue": "THE PAIYANNOI ฯ closes this row, as it does at verse 7 of the page-99 printing. Reproduced as printed; pali_roman renders it as a full stop, matching how the app romanises ฯ elsewhere."
+        },
+        {
+          "verse": 29,
+          "file": "IMG_0443.PNG",
+          "issue": "THE SHEET ENDS ON A COMPLETE ROW at a full stop, so NO […] is marked. Two thumbs appear below the last line and cover no text. The นัตถิ เม สะระณัง couplet normally runs three times, once per Jewel, so page 174 should carry the Dhamma and Sangha versions."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "jaya-parittam-chet-tamnan"
+    ],
+    "resume_from_page": 174,
+    "resume_from_file": "IMG_0444.PNG",
+    "resume_from": "jaya-parittam-chet-tamnan",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all twenty-six verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0443.PNG.",
+    "page_scan": "agrees — one row, page 173, claiming verses 4-29, and the entry holds exactly those twenty-six. Verse 4 carries page 173; 5 to 29 carry none and sit on 173 by carry-forward. Numbering runs on from page 172 verse 3 with no gap and no overlap.",
+    "notes": "‼‼ FOUR ฬ/พ WORDS ON ONE SHEET. วิรุพโห / วิรุพหา appear three times where page 99 has วิรุฬโห / วิรุฬหา — the THIRD such pair between two printings of one chant, and the first to occur three times on a single page. ปะริพาหูปะสะมะนัง is a fourth, resting on the canon rather than on the book contradicting itself, because page 99 does not contain that stanza. ‼‼ THIS PRINTING IS LONGER THAN THE PAGE-99 ONE, which reverses the pattern of the whole เจ็ดตำนานย่อ section — every other chant here has been shorter than its counterpart, and this one carries three extra stanzas and a couplet that entry lacks. Counted, not assumed. ⚠️ One block, two columns throughout, gutter 190px at x 850-1039; rows 4-18 agree with page 99 word for word apart from the ฬ/พ words, which corroborates the pairing. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
