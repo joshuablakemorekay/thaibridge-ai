@@ -1,0 +1,488 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 4,
+    "manifest": [
+      "ratana-suttam-chet-tamnan",
+      "karaniyametta-suttam-chet-tamnan",
+      "khandha-parittam-chet-tamnan",
+      "dhajagga-parittam-chet-tamnan"
+    ],
+    "pages": [
+      {
+        "page": 169,
+        "file": "IMG_0439.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "ratana-suttam-chet-tamnan",
+        "verses": "38-41",
+        "starts_here": false,
+        "note": "Four lines close the Ratana Sutta at 41 verses; its ‼ CONTINUES marker comes off. No colophon and no footnote."
+      },
+      {
+        "page": 169,
+        "file": "IMG_0439.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "karaniyametta-suttam-chet-tamnan",
+        "verses": "1-6",
+        "starts_here": true,
+        "note": "TWO COLUMNS, six rows, gutter measured at x 857-989. Heavily abridged — it opens at เมตตัญจะ สัพพะโลกัส๎มิง, the ninth stanza of the full sutta, and gives only the closing stanzas. Complete in six rows."
+      },
+      {
+        "page": 169,
+        "file": "IMG_0439.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "khandha-parittam-chet-tamnan",
+        "verses": "1-11",
+        "starts_here": true,
+        "note": "SINGLE column run-on prose, re-profiled: no internal gutter. Abridged — it opens at อัปปะมาโณ พุทโธ and omits the whole วิรูปักเขหิ gatha the page-87 printing begins with. Complete in eleven units."
+      },
+      {
+        "page": 169,
+        "file": "IMG_0439.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "dhajagga-parittam-chet-tamnan",
+        "verses": "1-4",
+        "starts_here": true,
+        "note": "SINGLE column run-on prose. Its printed title carries (แบบย่อ), abridged form, and it opens straight at อิติปิ โส ภะคะวา with none of the narrative the page-90 printing begins with. CUT mid-sentence at the foot; CONTINUES onto 170."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "ratana-suttam-chet-tamnan",
+      "continuation_of": "ratana-suttam-chet-tamnan",
+      "working_notes": {
+        "invitation": "None printed; this is the end of the chant.",
+        "units": "Four, one per printed pada.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "Single column, first line of the stanza indented.",
+        "pages": "IMG_0439.PNG, page 169. Completes the chant begun on 167."
+      },
+      "verses": [
+        {
+          "number": 38,
+          "page": 169,
+          "pali": "เต ขีณะพีชา อะวิรุพหิฉันทา",
+          "pali_roman": "Te khīṇabījā avirubhicchandā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Their seeds destroyed, their wanting no longer growing,"
+        },
+        {
+          "number": 39,
+          "pali": "นิพพันติ ธีรา ยะถายัมปะทีโป.",
+          "pali_roman": "Nibbanti dhīrā yathāyampadīpo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the wise go out, just as this lamp does."
+        },
+        {
+          "number": 40,
+          "pali": "อิทัมปิ สังเฆ ระตะนัง ปะณีตัง",
+          "pali_roman": "Idampi saṅghe ratanaṃ paṇītaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "This too is an excellent jewel in the Sangha."
+        },
+        {
+          "number": 41,
+          "pali": "เอเตนะ สัจเจนะ สุวัตถิ โหตุ.",
+          "pali_roman": "Etena saccena suvatthi hotu.",
+          "thai": "",
+          "paiboon": "",
+          "english": "By this truth, may there be well-being."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 38,
+          "file": "IMG_0439.PNG",
+          "issue": "‼‼ อะวิรุพหิฉันทา IS PRINTED WITH พ WHERE THE PAGE-82 PRINTING HAS ฬ — that sheet reads อะวิรุฬหิฉันทา at its verse 74, and the canon has avirūḷhicchandā. Read at 3x and checked against chanting.py. THIS IS THE SECOND SUCH PAIR IN TWO SHEETS, after ทัพเหนะ / ทัฬ๎เหนะ on page 168, and both are in the same chant. Two independent instances of the same book printing ฬ in one copy and พ in the other put the ฬ/พ question beyond doubt: the glyph exists and the abridged setting keeps losing it."
+        },
+        {
+          "verse": 39,
+          "file": "IMG_0439.PNG",
+          "issue": "A FULL STOP closes this line where the page-82 printing has none at its verse 75. Read at 3x."
+        },
+        {
+          "verse": 41,
+          "file": "IMG_0439.PNG",
+          "issue": "THE CHANT ENDS HERE at 41 verses and its ‼ CONTINUES marker comes off. The page-82 printing runs to 89, so this abridgement is under half its length. No colophon and no footnote are printed for it."
+        }
+      ]
+    },
+    {
+      "id": "karaniyametta-suttam-chet-tamnan",
+      "title_thai": "กะระณียะเมตตะสุตตัง.",
+      "title_pali": "Karaṇīyamettasuttaṃ",
+      "title_roman": "",
+      "title_english": "The Discourse on Loving-Kindness",
+      "page_start": 169,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written — the บทขัด the page-86 printing carries is not printed here.",
+        "units": "Six, one per printed ROW read across both columns.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "สัพพะโลกัส๎มิง and พ๎รัห๎มะเมตัง take the yamakkan.",
+        "pages": "IMG_0439.PNG, page 169. Two columns, gutter measured at x 857-989."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "page": 169,
+          "pali": "เมตตัญจะ สัพพะโลกัส๎มิง มานะสัมภาวะเย อะปะริมาณัง,",
+          "pali_roman": "Mettañca sabbalokasmiṃ mānasambhāvaye aparimāṇaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "And let him cultivate boundless loving-kindness towards the whole world,"
+        },
+        {
+          "number": 2,
+          "pali": "อุทธัง อะโธ จะ ติริยัญจะ อะสัมพาธัง อะเวรัง อะสะปัตตัง,",
+          "pali_roman": "Uddhaṃ adho ca tiriyañca asambādhaṃ averaṃ asapattaṃ,",
+          "thai": "",
+          "paiboon": "",
+          "english": "above, below and across, unobstructed, without hatred, without enmity."
+        },
+        {
+          "number": 3,
+          "pali": "ติฏฐัญจะรัง นิสินโน วา สะยาโน วา ยาวะ ตัสสะ วิคะตะมิทโธ,",
+          "pali_roman": "Tiṭṭhañcaraṃ nisinno vā sayāno vā yāva tassa vigatamiddho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Standing, walking, seated or lying down, as long as he is free of drowsiness,"
+        },
+        {
+          "number": 4,
+          "pali": "เอตัง สะติง อะธิฏเฐยยะ พ๎รัห๎มะเมตัง วิหารัง อิธะมาหุ,",
+          "pali_roman": "Etaṃ satiṃ adhiṭṭheyya brahmametaṃ vihāraṃ idhamāhu,",
+          "thai": "",
+          "paiboon": "",
+          "english": "he should keep to this mindfulness; this, they say, is the divine abiding here."
+        },
+        {
+          "number": 5,
+          "pali": "ทิฏฐิญจะ อะนุปะคัมมะ สีละวา ทัสสะเนนะ สัมปันโน,",
+          "pali_roman": "Diṭṭhiñca anupagamma sīlavā dassanena sampanno,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Not falling into views, virtuous and accomplished in vision,"
+        },
+        {
+          "number": 6,
+          "pali": "กาเมสุ วิเนยยะ เคธัง นะ หิ ชาตุ คัพภะเสยยัง ปุนะเรตีติ,",
+          "pali_roman": "Kāmesu vineyya gedhaṃ na hi jātu gabbhaseyyaṃ punaretīti,",
+          "thai": "",
+          "paiboon": "",
+          "english": "having removed greed for sensual pleasures, he comes no more to any womb."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "พ๎รัห๎มะเมตัง วิหารัง",
+          "pali_roman": "brahmametaṃ vihāraṃ",
+          "meaning": "this divine abiding — the state of boundless loving-kindness, called the dwelling of the Brahmās"
+        },
+        {
+          "pali": "คัพภะเสยยัง",
+          "pali_roman": "gabbhaseyyaṃ",
+          "meaning": "lying in a womb; rebirth. The last line promises no further one"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. The gutter was MEASURED: a white corridor 133px wide at x 857-989. Every row read ACROSS. First pairing: เมตตัญจะ สัพพะโลกัส๎มิง + มานะสัมภาวะเย อะปะริมาณัง,."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "‼‼ HEAVILY ABRIDGED — IT OPENS PART WAY THROUGH THE SUTTA. The chant begins at เมตตัญจะ สัพพะโลกัส๎มิง, which is the ninth stanza of the full text, and gives only the closing stanzas. The page-86 printing, karaniyametta-suttam-tatiyam, has 20 verses beginning กะระณียะมัตถะกุสะเลนะ; none of that opening is on this sheet. Six rows in all, and the chant is COMPLETE at six — it ends on ปุนะเรตีติ, which is the sutta's last words. Entered as a second chant per the standing precedent."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ THE PRINTED TITLE CARRIES A FULL STOP — กะระณียะเมตตะสุตตัง. — where the page-86 printing titles it กะระณียะเมตตะสุตตัง ตะติยัง with no stop. Reproduced in title_thai exactly as printed, stop and all."
+        },
+        {
+          "verse": 6,
+          "file": "IMG_0439.PNG",
+          "issue": "THE CHANT ENDS ON A COMMA, not a full stop — ปุนะเรตีติ, — even though it is the last line of the chant and the next thing on the page is a new bold title. Read at 3.2x. Reproduced as printed."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "THE CONTENTS LISTS THIS TITLE WITHOUT THE PRINTED FULL STOP — its สารบัญ entry is กะระณียะเมตตะสุตตัง, giving Karaṇīyamettasuttaṃ, while the chant page prints กะระณียะเมตตะสุตตัง. with a stop. title_thai keeps the page's form, per the pages-80-99 rule that the page wins for the title itself; title_pali carries the contents reading, which is what a reader searching from the contents will have."
+        }
+      ]
+    },
+    {
+      "id": "khandha-parittam-chet-tamnan",
+      "title_thai": "ขันธะปะริตตัง",
+      "title_pali": "Khandhaparittaṃ",
+      "title_roman": "",
+      "title_english": "The Aggregates Protection",
+      "page_start": 169,
+      "layout": "prose",
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Eleven, one per clause, matching how the page-87 printing splits the same passage so the two can be compared unit for unit.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "Set as run-on justified prose, so layout is 'prose'. One line-break hyphen rejoined — see the checks.",
+        "pages": "IMG_0439.PNG, page 169. Single column, re-profiled."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "page": 169,
+          "pali": "อัปปะมาโณ พุทโธ,",
+          "pali_roman": "Appamāṇo buddho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Measureless is the Buddha,"
+        },
+        {
+          "number": 2,
+          "pali": "อัปปะมาโณ ธัมโม,",
+          "pali_roman": "Appamāṇo dhammo,",
+          "thai": "",
+          "paiboon": "",
+          "english": "measureless is the Dhamma,"
+        },
+        {
+          "number": 3,
+          "pali": "อัปปะมาโณ สังโฆ,",
+          "pali_roman": "Appamāṇo saṅgho,",
+          "thai": "",
+          "paiboon": "",
+          "english": "measureless is the Sangha."
+        },
+        {
+          "number": 4,
+          "pali": "ปะมาณะวันตานิ สิริงสะปานิ,",
+          "pali_roman": "Pamāṇavantāni siriṃsapāni,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Limited are creeping things —"
+        },
+        {
+          "number": 5,
+          "pali": "อะหิ วิจฉิกา สะตะปะที อุณณานาภี,",
+          "pali_roman": "Ahi vicchikā satapadī uṇṇānābhī,",
+          "thai": "",
+          "paiboon": "",
+          "english": "snakes, scorpions, centipedes, spiders,"
+        },
+        {
+          "number": 6,
+          "pali": "สะระพู มูสิกา.",
+          "pali_roman": "Sarabū mūsikā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "lizards and mice."
+        },
+        {
+          "number": 7,
+          "pali": "กะตา เม รักขา,",
+          "pali_roman": "Katā me rakkhā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "I have made my protection,"
+        },
+        {
+          "number": 8,
+          "pali": "กะตา เม ปะริตตา,",
+          "pali_roman": "Katā me parittā,",
+          "thai": "",
+          "paiboon": "",
+          "english": "I have made my safeguard."
+        },
+        {
+          "number": 9,
+          "pali": "ปะฏิกกะมันตุ ภูตานิ,",
+          "pali_roman": "Paṭikkamantu bhūtāni,",
+          "thai": "",
+          "paiboon": "",
+          "english": "Let the creatures withdraw."
+        },
+        {
+          "number": 10,
+          "pali": "โสหัง นะโม ภะคะวะโต,",
+          "pali_roman": "Sohaṃ namo bhagavato,",
+          "thai": "",
+          "paiboon": "",
+          "english": "I pay homage to the Blessed One,"
+        },
+        {
+          "number": 11,
+          "pali": "นะโม สัตตันนัง สัมมาสัมพุทธานัง.",
+          "pali_roman": "Namo sattannaṃ sammāsambuddhānaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "homage to the seven Perfectly Self-Awakened Ones."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "สิริงสะปานิ",
+          "pali_roman": "siriṃsapāni",
+          "meaning": "creeping things — the class of creatures the paritta is chanted against"
+        },
+        {
+          "pali": "ปะริตตา",
+          "pali_roman": "parittā",
+          "meaning": "a safeguard, a protection. The word that names this whole class of chant"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ ABRIDGED — IT OPENS AT อัปปะมาโณ พุทโธ. The page-87 printing, khandha-parittam-catuttham, begins with the eight-line วิรูปักเขหิ เม เมตตัง gatha and only reaches อัปปะมาโณ at its verse 9. None of that gatha is on this sheet. Entered as a second chant per the standing precedent."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0439.PNG",
+          "issue": "A LINE-END HYPHEN REJOINED at ปะมาณะ- / วันตานิ. The typesetter's, so the word is written whole as ปะมาณะวันตานิ, per the run-on-passage rule, and the page-87 printing has it unbroken."
+        },
+        {
+          "verse": 5,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ อุณณานาภี IS PRINTED HERE WHERE THE PAGE-87 PRINTING HAS อุณณะนาภี — นา against นะ. Read at 2.4x and checked against chanting.py. Reproduced as printed."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ THREE CLAUSES TAKE A COMMA HERE WHERE THE PAGE-87 PRINTING TAKES A FULL STOP — ปะฏิกกะมันตุ ภูตานิ, and โสหัง นะโม ภะคะวะโต, against ภูตานิ. and ภะคะวะโต. there. Read at 2.4x across the run-on line. Reproduced as printed; neither levelled."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "SET AS RUN-ON JUSTIFIED PROSE, so layout is 'prose' and the app flows it back into a block. Split into eleven clause units, which is the unit the page-87 printing uses, so the two can be compared unit for unit. Single column confirmed by re-profiling the ink."
+        }
+      ]
+    },
+    {
+      "id": "dhajagga-parittam-chet-tamnan",
+      "continues": true,
+      "title_thai": "ธะชัคคะปะริตตัง (แบบย่อ)",
+      "title_pali": "",
+      "title_roman": "tá-chák-ká-bpà-rít-dtaŋ (bɛ̀ɛp yɔ̂ɔ)",
+      "title_english": "The Banner Crest Protection (abridged form)",
+      "page_start": 169,
+      "layout": "prose",
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Four, one per sentence, matching how the page-90 printing splits this passage.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "ส๎วากขาโต takes the yamakkan. Set as run-on justified prose in two indented paragraphs.",
+        "pages": "IMG_0439.PNG, page 169. CUT mid-sentence at the foot; CONTINUES onto 170."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "page": 169,
+          "pali": "อิติปิ โส ภะคะวา, อะระหัง สัมมาสัมพุทโธ, วิชชาจะระณะสัมปันโน สุคะโต โลกะวิทู, อะนุตตะโร ปุริสะทัมมะสาระถิ สัตถา เทวะมะนุสสานัง พุทโธ ภะคะวาติ.",
+          "pali_roman": "Itipi so bhagavā, arahaṃ sammāsambuddho, vijjācaraṇasampanno sugato lokavidū, anuttaro purisadammasārathi satthā devamanussānaṃ buddho bhagavāti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Such indeed is the Blessed One: worthy, perfectly self-awakened, accomplished in knowledge and conduct, well-gone, knower of the world, unexcelled trainer of those who can be trained, teacher of devas and humans, awakened, blessed."
+        },
+        {
+          "number": 2,
+          "pali": "มะมัง หิ โว ภิกขะเว อะนุสสะระตัง ยัมภะวิสสะติ ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา โส ปะหิยยิสสะติ โน เจ ธัมมัง อะนุสสะเรยยาถะ อะถะ สังฆัง อะนุสสะเรยยาถะ.",
+          "pali_roman": "Mamaṃ hi vo bhikkhave anussarataṃ yambhavissati bhayaṃ vā chambhitattaṃ vā lomahaṃso vā so pahiyyissati no ce dhammaṃ anussareyyātha atha saṅghaṃ anussareyyātha.",
+          "thai": "",
+          "paiboon": "",
+          "english": "For, monks, when you recollect me, whatever fear or terror or standing of the hair may arise will be abandoned. If you do not recollect the Dhamma, then recollect the Sangha."
+        },
+        {
+          "number": 3,
+          "pali": "ส๎วากขาโต ภะคะวะตา ธัมโม, สันทิฏฐิโก อะกาลิโก เอหิปัสสิโก, โอปะนะยิโก ปัจจัตตัง เวทิตัพโพ วิญญูหีติ.",
+          "pali_roman": "Svākkhāto bhagavatā dhammo, sandiṭṭhiko akāliko ehipassiko, opanayiko paccattaṃ veditabbo viññūhīti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Well proclaimed by the Blessed One is the Dhamma: visible here and now, timeless, inviting one to come and see, leading onward, to be known for oneself by the wise."
+        },
+        {
+          "number": 4,
+          "pali": "มะมัง หิ โว ภิกขะเว อะนุสสะระตัง […]",
+          "pali_roman": "Mamaṃ hi vo bhikkhave anussarataṃ […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "For, monks, when you recollect […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ธะชัคคะ",
+          "pali_roman": "dhajagga",
+          "meaning": "the crest of a banner. The sutta tells of Sakka telling his devas to look at his banner-top in battle, and the Buddha offering the recollection of the Triple Gem instead"
+        },
+        {
+          "pali": "ฉัมภิตัตตัง",
+          "pali_roman": "chambhitattaṃ",
+          "meaning": "terror, the state of being paralysed by fear — the middle term of the fear/terror/bristling triad"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 2,
+          "file": "IMG_0439.PNG",
+          "issue": "‼‼ THE CLAUSE HERE IS โน เจ ธัมมัง อะนุสสะเรยยาถะ อะถะ สังฆัง อะนุสสะเรยยาถะ — if you do not recollect the DHAMMA, then recollect the SANGHA — inside the paragraph about the BUDDHA. The page-90 printing has โน เจ มัง อะนุสสะเรยยาถะ, อะถะ ธัมมัง อะนุสสะเรยยาถะ. at that point, which is what the canon has and what the sense requires: if not ME, then the Dhamma. Read at 3.8x specifically because the sense looked wrong; the word is plainly ธัมมัง and not มัง. Reproduced EXACTLY as printed and NOT corrected. ⚠️ This looks like the abridgement pasting the Dhamma section's clause into the Buddha section, and it is the most substantive textual difference found between any two printings so far."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ THE PRINTED TITLE SAYS SO ITSELF — ธะชัคคะปะริตตัง (แบบย่อ), abridged form, with the bracket printed. Reproduced in title_thai exactly. The page-90 printing is titled ธะชัคคะปะริตตัง ธะชัคคะสุตตัง สัตตะมัง and runs to 80 verses beginning เอวัมเม สุตัง; this one opens straight at อิติปิ โส ภะคะวา with none of the narrative frame."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ THE PAGE IS CUT MID-SENTENCE at อะนุสสะระตัง, with the sheet simply ending. […] is marked in pali and pali_roman and the english stops with it. Page 170 must COMPLETE this verse."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "SET AS RUN-ON JUSTIFIED PROSE in two indented paragraphs, so layout is 'prose'. Split into sentence units, which is the unit the page-90 printing uses. Single column confirmed by re-profiling the ink; three of the four blocks on this sheet are single-column and one is two-column, and each was measured separately."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0439.PNG",
+          "issue": "‼ title_roman COMES FROM THE BOOK'S OWN สารบัญ, NOT FROM THE PAIBOON+ TABLE OR FROM IAST. The contents lists this chant as tá-chák-ká-bpà-rít-dtaŋ (bɛ̀ɛp yɔ̂ɔ) — a PAIBOON reading, because the title ends in the Thai words (แบบย่อ) rather than being Pali throughout. title_pali is therefore left empty. ⚠️ I first wrote title_pali as Dhajaggaparittaṃ and tests/test_contents_roman.py refused it, correctly: a reader must reach the same spelling from the contents and from the chant page. The other three chants entered from this sheet were checked against the same table and all match it."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "ratana-suttam-chet-tamnan",
+      "karaniyametta-suttam-chet-tamnan",
+      "khandha-parittam-chet-tamnan"
+    ],
+    "not_started": [],
+    "continues": [
+      "dhajagga-parittam-chet-tamnan"
+    ],
+    "resume_from_page": 170,
+    "resume_from_file": "IMG_0440.PNG",
+    "resume_from": "dhajagga-parittam-chet-tamnan",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all twenty-five verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0439.PNG.",
+    "page_scan": "agrees — four rows, all page 169, one per chant. The Ratana claims 38-41 and the entry now holds 41; the Metta claims 1-6 and holds six; the Khandha claims 1-11 and holds eleven; the Dhajagga claims 1-4 and holds four. Verse 38 of the first and verse 1 of the other three carry page 169.",
+    "diacritic_exceptions": [
+      "va/vā — two different Pali words, not one romanised twice. Verified on this sheet: วา → vā at metta verse 3 (นิสินโน วา and สะยาโน วา) and metta verse 3's ยาวะ is a separate word; วะ appears in no roman va position here except inside words. Every roman vā sits where the book prints วา. The same pair was declared for the same reason in batch-014-014 and batch-167-167."
+    ],
+    "notes": "‼‼ อะวิรุพหิฉันทา is printed with พ where page 82 has อะวิรุฬหิฉันทา with ฬ — the SECOND such pair in two sheets, after ทัพเหนะ/ทัฬ๎เหนะ on 168, and both in the same chant. Two independent instances put the ฬ/พ question beyond doubt. ‼‼ THE DHAJAGGA PRINTS โน เจ ธัมมัง … อะถะ สังฆัง inside the BUDDHA paragraph, where page 90 and the canon have โน เจ มัง … อะถะ ธัมมัง. Read at 3.8x because the sense looked wrong; the word is plainly ธัมมัง. Reproduced and NOT corrected — the most substantive textual difference found between two printings so far. ‼ FOUR CHANTS ON ONE SHEET, three single-column and one two-column, and EACH block's layout was measured separately rather than carried down the page. ‼ All three new chants are heavily abridged: the Metta opens at its ninth stanza, the Khandha omits its opening gatha, and the Dhajagga's own title says (แบบย่อ). All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
