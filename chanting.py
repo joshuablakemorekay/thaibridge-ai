@@ -56024,7 +56024,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 146; the rest is not in the app yet.
         # ‼ CHECK [IMG_0445.PNG]: ⚠ THIS CHANT HAS A TWIN AT 317-325, BUT ITS
         #   UNIT DIVISION DOES NOT TRANSFER. `mahasamayasutta-roman` sets the
         #   opening prose as ELEVEN short units — `Evaṃ me sutaṃ:` alone is
@@ -56048,6 +56047,14 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'source_printed': 'ที. มหา. 10/287',
+        'closing': {
+            'pali': 'มะหาสะมะยะสุตตัง นิฏฐิตัง.',
+            'pali_roman': 'Mahāsamayasuttaṃ niṭṭhitaṃ.',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on the Great Gathering.',
         },
         'verses': [
             {
@@ -57642,6 +57649,281 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'let us see the Nāga who has crossed the flood, like the moon come clear of cloud.',
+            },
+            # ‼ CHECK [IMG_0453.PNG]: PAGE 182 — ⚠ THE WHOLE-PAGE GUTTER
+            #   PROFILE FINDS NO CORRIDOR ON THIS SHEET, and the page is
+            #   nevertheless in two columns. The centred bold colophon at the
+            #   foot spans the gutter — its ink runs x 816-1322, straight
+            #   across the corridor — so a profile taken over the full height
+            #   reports a single column and would have merged the two columns
+            #   into one reading. Re-profiled over the TWO-COLUMN BLOCK ALONE
+            #   (y 240-2125) the gutter appears plainly: 216px at x 920-1135.
+            #   This is the same failure that page 170 produced, where a
+            #   centred title closed the corridor. Profile per BLOCK, never
+            #   per page.
+            # ‼ CHECK [IMG_0453.PNG]: PAGE 182 — THE CHANT ENDS HERE and its ‼
+            #   CONTINUES marker comes off. The centred bold line
+            #   มะหาสะมะยะสุตตัง นิฏฐิตัง. is the chant's `closing`, not a
+            #   verse and not a page block; the footnote under the rule is a
+            #   CANONICAL CITATION and goes in `source_printed`. That is the
+            #   division page 158 used for the identical arrangement at the
+            #   end of the Mahāsatipaṭṭhāna, and it is followed here.
+            # ‼ CHECK [IMG_0453.PNG]: PAGE 182 — NOTHING ELSE ON THIS SHEET.
+            #   Walked top to bottom against the photograph: the page number
+            #   182 at the top centre, twenty-one two-column rows, the centred
+            #   colophon, the rule, the footnote. No title, no invitation, no
+            #   section heading, no section_end label and no rubric. An ink-
+            #   profile of the full width returns exactly 24 bands — the page
+            #   number, twenty-one rows with one pair merged, the colophon,
+            #   the rule and the footnote line — and nothing unaccounted for.
+            # ‼ CHECK [IMG_0453.PNG]: PAGE 182 — THE COLOPHON CARRIES A FULL
+            #   STOP, where page 158's did not — that sheet printed
+            #   มะหาสะติปัฏฐานะสุตตะปาโฐ นิฏฐิโต bare. Both are entered as
+            #   their own sheet prints them. ⚠ NOTE ALSO that the agreement
+            #   here is CORRECT: สุตตัง is neuter and takes นิฏฐิตัง, which is
+            #   what this sheet gives. That is worth recording because page
+            #   110 got the same agreement wrong, printing a feminine นิฏฐิตา
+            #   against a neuter สุตตัง.
+            # ‼ CHECK [IMG_0453.PNG]: THE CLUSTER MARK IS THANTHAKHAT ์
+            #   THROUGHOUT, and this sheet carries more of them than any other
+            #   in the chant — สุพ์รัห์มา and สะหัสสะพ์รัห์มะโลกานัง and
+            #   มะหาพ์รัห์มาภิติฏฐะติ and สะพ์รัห์มะเก each take TWO, on พ and
+            #   on ห; then ภิส์มากาโย, กัต์วานะ, วะวักขิต์วานะ and สุต์วา take
+            #   one each. All read from magnified crops. Consistent with the
+            #   rest of the chant, which never uses yamakkan ๎.
+            {
+                'number': 147,
+                'page': 182,
+                'pali': 'สุพ์รัห์มา ปะระมัตโต จะ ปุตตา อิทธิมะโต สะหะ',
+                'pali_roman': 'Subrahmā paramatto ca puttā iddhimato saha',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Subrahmā and Paramatta, and the sons of the Mighty One with them,',
+            },
+            # ‼ CHECK [IMG_0453.PNG]: ⚠ สันนังกุมาโร IS PRINTED WITH DOUBLE น,
+            #   giving `sannaṅkumāro`, where the roman twin verse 173 sets
+            #   `Sanaṅkumāro` with a single n. He is Sanaṅkumāra, the Ever-
+            #   Young Brahmā, and the canon has the single n. Read at 2.6×;
+            #   the two น are plainly separate letters. Entered as this page
+            #   prints it.
+            {
+                'number': 148,
+                'page': 182,
+                'pali': 'สันนังกุมาโร ติสโส จะ โสปาคะ สะมิติง วะนัง.',
+                'pali_roman': 'Sannaṅkumāro tisso ca sopāga samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sanaṅkumāra and Tissa — he too came to the wood, to the assembly.',
+            },
+            {
+                'number': 149,
+                'page': 182,
+                'pali': 'สะหัสสะพ์รัห์มะโลกานัง มะหาพ์รัห์มาภิติฏฐะติ',
+                'pali_roman': 'Sahassabrahmalokānaṃ mahābrahmābhitiṭṭhati',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Over a thousand Brahmā-worlds the Great Brahmā presides,',
+            },
+            # ‼ CHECK [IMG_0453.PNG]: ⚠ อุปปันโน IS PRINTED WITH DOUBLE ป,
+            #   giving `uppanno`, where the roman twin verse 175 sets
+            #   `Upapanno` and the canon has upapanno, 'reborn'. Read at 2.6×.
+            #   The two readings are different words, not a spelling variant —
+            #   uppanna is 'arisen' and upapanna is 'reborn' — so this is
+            #   worth putting to the book rather than settling from the twin.
+            #   Entered as this page prints it.
+            {
+                'number': 150,
+                'page': 182,
+                'pali': 'อุปปันโน ชุติมันโต ภิส์มากาโย ยะสัสสิ โส.',
+                'pali_roman': 'Uppanno jutimanto bhismākāyo yasassi so.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'arisen there, radiant, awesome of form, and glorious.',
+            },
+            {
+                'number': 151,
+                'page': 182,
+                'pali': 'ทะเสตถะ อิสสะรา อาคู ปัจเจกะวะสะวัตติโน',
+                'pali_roman': 'Dasettha issarā āgū paccekavasavattino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Ten lords came here, each wielding his own power,',
+            },
+            {
+                'number': 152,
+                'page': 182,
+                'pali': 'เตสัญจะ มัชฌะโต อาคา หาริโต ปะริวาริโต.',
+                'pali_roman': 'Tesañca majjhato āgā hārito parivārito.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and in the midst of them came Hārita with his retinue about him.',
+            },
+            {
+                'number': 153,
+                'page': 182,
+                'pali': 'เต จะ สัพเพ อะภิกกันเต สินเท เทเว สะพ์รัห์มะเก',
+                'pali_roman': 'Te ca sabbe abhikkante sinde deve sabrahmake',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And when all these had come, the devas with Inda and with Brahmā,',
+            },
+            {
+                'number': 154,
+                'page': 182,
+                'pali': 'มาระเสนา อะภิกกามิ ปัสสะ กัณหัสสะ มันทิยัง.',
+                'pali_roman': 'Mārasenā abhikkāmi passa kaṇhassa mandiyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Māra's army came on — see the folly of the Dark One!",
+            },
+            # ‼ CHECK [IMG_0453.PNG]: MĀRA'S COMMAND IS UNPUNCTUATED AND
+            #   UNMARKED ON THIS SHEET. The roman twin sets it as separate
+            #   sentences inside quotation marks — `’Etha. Gaṇhatha.
+            #   Bandhatha. Rāgena bandhamatthu vo.` at 180 and `Samantā
+            #   parivāretha. Mā vo muñcittha koci naṃ.’` at 181 — where this
+            #   page prints เอถะ คัณหะถะ พันธะถะ and สะมันตา ปะริวาเรถะ with
+            #   no internal stops and no quotes at all. Entered as printed, at
+            #   both verses 155 and 156; the English keeps the sense of a
+            #   shouted order.
+            {
+                'number': 155,
+                'page': 182,
+                'pali': 'เอถะ คัณหะถะ พันธะถะ ราเคนะ พันธะมัตถุ โว',
+                'pali_roman': 'Etha gaṇhatha bandhatha rāgena bandhamatthu vo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Come, seize them, bind them — let them be bound to you by lust!',
+            },
+            {
+                'number': 156,
+                'page': 182,
+                'pali': 'สะมันตา ปะริวาเรถะ มา โว มุญจิตถะ โกจิ นัง.',
+                'pali_roman': 'Samantā parivāretha mā vo muñcittha koci naṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Surround them on every side — let not one of them escape you!',
+            },
+            {
+                'number': 157,
+                'page': 182,
+                'pali': 'อิติ ตัตถะ มะหาเสโน กัณหะเสนัง อะเปสะยิ',
+                'pali_roman': 'Iti tattha mahāseno kaṇhasenaṃ apesayi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So there the great commander sent forth his dark army,',
+            },
+            # ‼ CHECK [IMG_0453.PNG]: A WORD-DIVISION DIFFERENCE FROM THE
+            #   TWIN, letters identical. This sheet sets ตะละมาหัจจะ as one
+            #   word, giving `talamāhacca`; the roman copy's verse 183
+            #   hyphenates it `tala-māhacca`. The twin hyphenates several
+            #   compounds this sheet runs together; recorded once here for the
+            #   group.
+            {
+                'number': 158,
+                'page': 182,
+                'pali': 'ปาณินา ตะละมาหัจจะ สะรัง กัต์วานะ เภระวัง.',
+                'pali_roman': 'Pāṇinā talamāhacca saraṃ katvāna bheravaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'striking the ground with his hand and making a terrible sound —',
+            },
+            {
+                'number': 159,
+                'page': 182,
+                'pali': 'ยะถา ปาวุสสะโก เมโฆ ถะนะยันโต สะวิชชุโก',
+                'pali_roman': 'Yathā pāvussako megho thanayanto savijjuko',
+                'thai': '',
+                'paiboon': '',
+                'english': 'as a storm-cloud of the rains thunders with its lightning.',
+            },
+            {
+                'number': 160,
+                'page': 182,
+                'pali': 'ตะทา โส ปัจจุทาวัตติ สังกุทโธ อะสะยังวะเส.',
+                'pali_roman': 'Tadā so paccudāvatti saṅkuddho asayaṃvase.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then he drew back, enraged and not master of himself.',
+            },
+            # ‼ CHECK [IMG_0453.PNG]: A PUNCTUATION DIFFERENCE FROM THE TWIN.
+            #   This sheet closes the line with a FULL STOP after จักขุมา,
+            #   where the roman copy's verse 186 has no mark and runs straight
+            #   on into 187. Entered as this page prints it.
+            {
+                'number': 161,
+                'page': 182,
+                'pali': 'ตัญจะ สัพพัง อะภิญญายะ วะวักขิต์วานะ จักขุมา.',
+                'pali_roman': 'Tañca sabbaṃ abhiññāya vavakkhitvāna cakkhumā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And knowing all that, the One with Vision considered it,',
+            },
+            # ‼ CHECK [IMG_0453.PNG]: THE BUDDHA'S ADDRESS IS UNMARKED ON THIS
+            #   SHEET. The roman twin ends its verse 187 with a COLON and
+            #   wraps 188 in quotation marks, making `Mārasenā abhikkantā. Te
+            #   vijānātha bhikkhavo` the Buddha's own words; and it does the
+            #   same again at 191-192 for the closing verse. This page prints
+            #   all of them plain. Entered as printed; the English keeps the
+            #   sense of direct speech.
+            {
+                'number': 162,
+                'page': 182,
+                'pali': 'ตะโต อามันตะยิ สัตถา สาวะเก สาสะเน ระเต',
+                'pali_roman': 'Tato āmantayi satthā sāvake sāsane rate',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and then the Teacher addressed the disciples who delight in his teaching:',
+            },
+            {
+                'number': 163,
+                'page': 182,
+                'pali': 'มาระเสนา อะภิกกันตา เต วิชานาถะ ภิกขะโว.',
+                'pali_roman': 'Mārasenā abhikkantā te vijānātha bhikkhavo.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Māra's army has come on — know them, bhikkhus!",
+            },
+            {
+                'number': 164,
+                'page': 182,
+                'pali': 'เต จะ อาตัปปะมะกะรุง สุต์วา พุทธัสสะ สาสะนัง',
+                'pali_roman': 'Te ca ātappamakaruṃ sutvā buddhassa sāsanaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': "And they roused their ardour, hearing the Buddha's teaching.",
+            },
+            {
+                'number': 165,
+                'page': 182,
+                'pali': 'วีตะราเคหิ ปักกามุง เนสัง โลมัมปิ อิญชะยุง.',
+                'pali_roman': 'Vītarāgehi pakkāmuṃ nesaṃ lomampi iñjayuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The army withdrew from those free of lust; not a hair of them stirred.',
+            },
+            {
+                'number': 166,
+                'page': 182,
+                'pali': 'สัพเพ วิชิตะสังคามา ภะยาตีตา ยะสัสสิโน',
+                'pali_roman': 'Sabbe vijitasaṅgāmā bhayātītā yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'All of them have won the battle, gone beyond fear, and are glorious;',
+            },
+            # ‼ CHECK [IMG_0453.PNG]: A WORD-DIVISION DIFFERENCE FROM THE TWIN
+            #   on the chant's last line, letters identical. This sheet sets
+            #   ชะเนสุตาติ as one word, giving `janesutāti`; the roman copy's
+            #   verse 192 sets `jane sutā`ti` as two with a closing quotation
+            #   mark. Entered as this page prints it. The superscript ¹ keying
+            #   the footnote sits immediately after this word's full stop.
+            {
+                'number': 167,
+                'page': 182,
+                'pali': 'โมทันติ สะหะ ภูเตหิ สาวะกา เต ชะเนสุตาติ.',
+                'pali_roman': 'Modanti saha bhūtehi sāvakā te janesutāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'they rejoice together with the spirits — those disciples of yours, renowned among people.',
             },
         ],
     },
