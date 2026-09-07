@@ -1,0 +1,348 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "mangala-suttam-chet-tamnan",
+      "ratana-suttam-chet-tamnan"
+    ],
+    "pages": [
+      {
+        "page": 167,
+        "file": "IMG_0437.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "mangala-suttam-chet-tamnan",
+        "verses": "13-24",
+        "starts_here": false,
+        "note": "TWO COLUMNS, twelve rows, gutter measured at x 759-1052. The chant ENDS here at 24 verses with a footnote citation under a rule at the foot, and its ‼ CONTINUES marker comes off. ⚠️ NO colophon is printed, where the page-81 printing closes with มังคะละสุตตัง นิฏฐิตัง."
+      },
+      {
+        "page": 167,
+        "file": "IMG_0437.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "ratana-suttam-chet-tamnan",
+        "verses": "1-11",
+        "starts_here": true,
+        "note": "ระตะนะสุตตัง under its own bold centred title. ⚠️ SINGLE column — the ink was re-profiled and there is NO internal gutter, unlike the two-column chant directly above it on the same sheet. One pada per line, the first line of each stanza indented. Eleven lines land here and the chant CONTINUES onto 168."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "mangala-suttam-chet-tamnan",
+      "continuation_of": "mangala-suttam-chet-tamnan",
+      "source_printed": "ขุ. ขุ. 25/3 ขุ. สุ. 25/376",
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Twelve, one per printed ROW read across both columns.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "พ๎รัห๎มะจะริยัญจะ and กัต๎วานะ take the yamakkan. One word pair is spaced here where the page-81 printing runs it together — see the checks.",
+        "pages": "IMG_0437.PNG, page 167. Two columns, gutter measured at x 759-1052."
+      },
+      "verses": [
+        {
+          "number": 13,
+          "page": 167,
+          "pali": "อาระตี วิระตี ปาปา มัชชะปานา จะ สัญญะโม",
+          "pali_roman": "Āratī viratī pāpā majjapānā ca saññamo",
+          "thai": "",
+          "paiboon": "",
+          "english": "Refraining and abstaining from evil, and restraint from intoxicants,"
+        },
+        {
+          "number": 14,
+          "pali": "อัปปะมาโท จะ ธัมเมสุ เอตัมมังคะละมุตตะมัง.",
+          "pali_roman": "Appamādo ca dhammesu etammaṅgalamuttamaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and diligence in wholesome states — this is the highest blessing."
+        },
+        {
+          "number": 15,
+          "pali": "คาระโว จะ นิวาโต จะ สันตุฏฐี จะ กะตัญญุตา",
+          "pali_roman": "Gāravo ca nivāto ca santuṭṭhī ca kataññutā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Reverence, humility, contentment and gratitude,"
+        },
+        {
+          "number": 16,
+          "pali": "กาเลนะ ธัมมัสสะวะนัง เอตัมมังคะละมุตตะมัง.",
+          "pali_roman": "Kālena dhammassavanaṃ etammaṅgalamuttamaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and hearing the Dhamma at the right time — this is the highest blessing."
+        },
+        {
+          "number": 17,
+          "pali": "ขันตี จะ โสวะจัสสะตา สะมะณานัญจะ ทัสสะนัง",
+          "pali_roman": "Khantī ca sovacassatā samaṇānañca dassanaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "Patience, willingness to be corrected, the sight of contemplatives,"
+        },
+        {
+          "number": 18,
+          "pali": "กาเลนะ ธัมมะสากัจฉา เอตัมมังคะละมุตตะมัง.",
+          "pali_roman": "Kālena dhammasākacchā etammaṅgalamuttamaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and discussion of the Dhamma at the right time — this is the highest blessing."
+        },
+        {
+          "number": 19,
+          "pali": "ตะโป จะ พ๎รัห๎มะจะริยัญจะ อะริยะสัจจานะ ทัสสะนัง",
+          "pali_roman": "Tapo ca brahmacariyañca ariyasaccāna dassanaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "Austerity, the holy life, seeing the noble truths,"
+        },
+        {
+          "number": 20,
+          "pali": "นิพพานะสัจฉิกิริยา จะ เอตัมมังคะละมุตตะมัง.",
+          "pali_roman": "Nibbānasacchikiriyā ca etammaṅgalamuttamaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and the realisation of Nibbāna — this is the highest blessing."
+        },
+        {
+          "number": 21,
+          "pali": "ผุฏฐัสสะ โลกะธัมเมหิ จิตตัง ยัสสะ นะ กัมปะติ",
+          "pali_roman": "Phuṭṭhassa lokadhammehi cittaṃ yassa na kampati",
+          "thai": "",
+          "paiboon": "",
+          "english": "The mind that does not shake when touched by the ways of the world,"
+        },
+        {
+          "number": 22,
+          "pali": "อะโสกัง วิระชัง เขมัง เอตัมมังคะละมุตตะมัง.",
+          "pali_roman": "Asokaṃ virajaṃ khemaṃ etammaṅgalamuttamaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "sorrowless, stainless, secure — this is the highest blessing."
+        },
+        {
+          "number": 23,
+          "pali": "เอตาทิสานิ กัต๎วานะ สัพพัตถะมะปะราชิตา",
+          "pali_roman": "Etādisāni katvāna sabbatthamaparājitā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Having done such things, undefeated everywhere,"
+        },
+        {
+          "number": 24,
+          "pali": "สัพพัตถะ โสตถิง คัจฉันติ ตันเตสัง มังคะละมุตตะมันติ.",
+          "pali_roman": "Sabbattha sotthiṃ gacchanti tantesaṃ maṅgalamuttamanti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "they go everywhere in safety — for them this is the highest blessing."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "โสวะจัสสะตา",
+          "pali_roman": "sovacassatā",
+          "meaning": "being easy to speak to — the willingness to be corrected, listed among the blessings in its own right"
+        },
+        {
+          "pali": "ผุฏฐัสสะ โลกะธัมเมหิ",
+          "pali_roman": "phuṭṭhassa lokadhammehi",
+          "meaning": "touched by the worldly conditions — gain and loss, fame and disrepute, praise and blame, pleasure and pain"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0437.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. The gutter was MEASURED before a word was read: a white corridor 294px wide at x 759-1052, with the left column at 230-759 and the right at 1052-1593. Every row read ACROSS. First pairing: อาระตี วิระตี ปาปา + มัชชะปานา จะ สัญญะโม."
+        },
+        {
+          "verse": 19,
+          "file": "IMG_0437.PNG",
+          "issue": "‼ อะริยะสัจจานะ ทัสสะนัง IS SPACED HERE where the page-81 printing runs it together as อะริยะสัจจานะทัสสะนัง. Read at 4.2x: there is a clear word space between นะ and ทัส. Reproduced as printed and romanised with the space to match. Checked against chanting.py rather than assumed. That is the SECOND spacing difference between these two printings, after จะสุสิกขิโต on page 166 — and the two go in opposite directions, one printing joining where the other spaces and vice versa."
+        },
+        {
+          "verse": 24,
+          "file": "IMG_0437.PNG",
+          "issue": "THE CHANT ENDS HERE at 24 verses and its ‼ CONTINUES marker comes off. ⚠️ NO COLOPHON IS PRINTED. The page-81 printing closes with a centred มังคะละสุตตัง นิฏฐิตัง.; this sheet goes straight from ตันเตสัง มังคะละมุตตะมันติ.¹ to the next chant's bold title. Recorded because an absent colophon reads as an oversight and is the abridgement."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0437.PNG",
+          "issue": "THE FOOTNOTE IS A CANONICAL CITATION and goes in source_printed: ขุ. ขุ. 25/3 ขุ. สุ. 25/376, numbered 1 in Arabic under a rule at the foot, keyed to a superscript after มังคะละมุตตะมันติ. at verse 24. Read at 3.4x. ⚠️ It is the SAME citation the page-81 printing carries, so the two entries agree on their source even though they differ in setting."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0437.PNG",
+          "issue": "THE GATHA COUNT MATCHES THE OTHER PRINTING EXACTLY — 24 rows here, and verses 5-28 of the page-81 entry are the same 24. The abridgement removed only the four prose verses of the preamble, not any of the verse. Counted, not assumed."
+        }
+      ]
+    },
+    {
+      "id": "ratana-suttam-chet-tamnan",
+      "continues": true,
+      "title_thai": "ระตะนะสุตตัง",
+      "title_pali": "Ratanasuttaṃ",
+      "title_roman": "",
+      "title_english": "The Discourse on the Jewels",
+      "page_start": 167,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written — the บทขัด that precedes this chant in the page-82 printing is not printed here.",
+        "units": "Eleven, one per printed pada. The first line of each stanza is indented and the rest are flush.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "ตัส๎มา takes the yamakkan. One line carries a double space — see the checks.",
+        "pages": "IMG_0437.PNG, page 167. Single column, confirmed by re-profiling the ink. CONTINUES onto 168."
+      },
+      "verses": [
+        {
+          "number": 1,
+          "page": 167,
+          "pali": "ยานีธะ ภูตานิ สะมาคะตานิ",
+          "pali_roman": "Yānīdha bhūtāni samāgatāni",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever beings are gathered here,"
+        },
+        {
+          "number": 2,
+          "pali": "ภุมมานิ วา ยานิวะ อันตะลิกเข",
+          "pali_roman": "Bhummāni vā yāniva antalikkhe",
+          "thai": "",
+          "paiboon": "",
+          "english": "whether of the earth or of the sky,"
+        },
+        {
+          "number": 3,
+          "pali": "สัพเพ วะ  ภูตา สุมะนา ภะวันตุ",
+          "pali_roman": "Sabbe va  bhūtā sumanā bhavantu",
+          "thai": "",
+          "paiboon": "",
+          "english": "may all those beings be glad,"
+        },
+        {
+          "number": 4,
+          "pali": "อะโถปิ สักกัจจะ สุณันตุ ภาสิตัง.",
+          "pali_roman": "Athopi sakkacca suṇantu bhāsitaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "and moreover listen attentively to what is said."
+        },
+        {
+          "number": 5,
+          "pali": "ตัส๎มา หิ ภูตา นิสาเมถะ สัพเพ",
+          "pali_roman": "Tasmā hi bhūtā nisāmetha sabbe",
+          "thai": "",
+          "paiboon": "",
+          "english": "Therefore, all you beings, attend:"
+        },
+        {
+          "number": 6,
+          "pali": "เมตตัง กะโรถะ มานุสิยา ปะชายะ",
+          "pali_roman": "Mettaṃ karotha mānusiyā pajāya",
+          "thai": "",
+          "paiboon": "",
+          "english": "show loving-kindness to the human race,"
+        },
+        {
+          "number": 7,
+          "pali": "ทิวา จะ รัตโต จะ หะรันติ เย พะลิง",
+          "pali_roman": "Divā ca ratto ca haranti ye baliṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "who day and night bring you offerings;"
+        },
+        {
+          "number": 8,
+          "pali": "ตัส๎มา หิ เน รักขะถะ อัปปะมัตตา.",
+          "pali_roman": "Tasmā hi ne rakkhatha appamattā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "therefore guard them diligently."
+        },
+        {
+          "number": 9,
+          "pali": "ยังกิญจิ วิตตัง อิธะ วา หุรัง วา",
+          "pali_roman": "Yaṃkiñci vittaṃ idha vā huraṃ vā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Whatever wealth there is here or beyond,"
+        },
+        {
+          "number": 10,
+          "pali": "สัคเคสุ วา ยัง ระตะนัง ปะณีตัง",
+          "pali_roman": "Saggesu vā yaṃ ratanaṃ paṇītaṃ",
+          "thai": "",
+          "paiboon": "",
+          "english": "or whatever excellent jewel is in the heavens,"
+        },
+        {
+          "number": 11,
+          "pali": "นะ โน สะมัง อัตถิ ตะถาคะเตนะ",
+          "pali_roman": "Na no samaṃ atthi tathāgatena",
+          "thai": "",
+          "paiboon": "",
+          "english": "there is none equal to the Tathāgata."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ระตะนัง",
+          "pali_roman": "ratanaṃ",
+          "meaning": "a jewel, a treasure. The sutta names the Buddha, the Dhamma and the Sangha as the three, and each stanza ends by declaring their worth"
+        },
+        {
+          "pali": "พะลิง",
+          "pali_roman": "baliṃ",
+          "meaning": "an offering. The reason given for the devas to protect people: they are already being honoured by them"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0437.PNG",
+          "issue": "‼ SINGLE COLUMN, AND THIS WAS MEASURED NOT ASSUMED. The chant directly above it on the same sheet is set in two columns, so the ink was re-profiled for this block: the only white corridors are at x 275-505 and x 1203-1772, which are the margins, and there is NO internal gutter. A column change part way down a page is the failure this workflow warns hardest about, and it happens on this sheet in the other direction."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0437.PNG",
+          "issue": "‼ A DOUBLE SPACE IS PRINTED between วะ and ภูตา — สัพเพ วะ  ภูตา — where the page-82 printing sets a single one. Read at 4x and compared against the other word spaces on the same line, which are visibly narrower. This is a ragged line, not a justified one, so it is not the measure stretching. Reproduced as printed in both chanted layers. ⚠️ It will look like an error in the app, and it is the book's."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0437.PNG",
+          "issue": "‼ ALREADY IN THE APP as ratana-suttam-dutiyam from page 82, with 89 verses and the title ระตะนะสุตตัง ทุติยัง. This sheet titles it just ระตะนะสุตตัง, without ทุติยัง, and prints NO บทขัด before it where page 82 has one (bot-khat-ratana-suttam, 16 verses). Entered as a SECOND chant per the standing precedent. ⚠️ ORDER OF WORK: all eleven lines were read off this photograph FIRST and only then compared against the page-82 entry; they agree except for the double space at verse 3, which is why that difference is trustworthy."
+        },
+        {
+          "verse": 11,
+          "file": "IMG_0437.PNG",
+          "issue": "THE SHEET ENDS ON A COMPLETE PADA, with the footnote rule below it, so NO […] is marked. The stanza is one line short — อิทัมปิ พุทเธ ระตะนัง ปะณีตัง in the page-82 printing — and page 168 should open with it."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "mangala-suttam-chet-tamnan"
+    ],
+    "not_started": [],
+    "continues": [
+      "ratana-suttam-chet-tamnan"
+    ],
+    "resume_from_page": 168,
+    "resume_from_file": "IMG_0438.PNG",
+    "resume_from": "ratana-suttam-chet-tamnan",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all twenty-three verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0437.PNG.",
+    "page_scan": "agrees — two rows, both page 167. The มังคะละ claims verses 13-24 and the entry now holds 24; the ระตะนะ claims 1-11 and holds eleven. Verse 13 of the first and verse 1 of the second carry page 167. Numbering on the มังคะละ runs on from page 166 verse 12 with no gap and no overlap.",
+    "notes": "‼ TWO DIFFERENT COLUMN SETTINGS ON ONE SHEET — the มังคะละ in two columns (gutter measured at 294px, x 759-1052) and the ระตะนะ in one, confirmed by re-profiling the ink for the second block rather than carrying the first block's answer down the page. ‼ มังคะละ ENDS at 24 verses, the same gatha count as the page-81 printing, so the abridgement removed only the four prose preamble verses. ⚠️ It prints NO colophon where page 81 closes with มังคะละสุตตัง นิฏฐิตัง. ‼ อะริยะสัจจานะ ทัสสะนัง is SPACED here where page 81 joins it — the second spacing difference between these printings, and it runs the opposite way to page 166's จะสุสิกขิโต. ‼ A DOUBLE SPACE at ระตะนะ verse 3, read at 4x on a ragged line so not justification; reproduced in both chanted layers. All Pali here is an unreviewed draft until Josh checks it against the physical book.",
+    "diacritic_exceptions": [
+      "va/vā — NOT one word romanised two ways. They are two different Pali words and the Thai script distinguishes them, วะ being short and วา long. Verified line by line across this batch: วา → vā at ratana verse 2 (ภุมมานิ วา), verse 9 (อิธะ วา หุรัง วา, twice) and verse 10 (สัคเคสุ วา); วะ → va at verse 3 (สัพเพ วะ) and inside ยานิวะ at verse 2. Every roman va sits where the book prints วะ and every vā where it prints วา, with no exceptions. The same pair was declared for the same reason in batch-014-014."
+    ]
+  }
+}
