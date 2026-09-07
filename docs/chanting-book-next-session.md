@@ -1,7 +1,7 @@
 # Chanting book — next session
 
-Paste-ready brief for picking this work up cold. Updated 2026-09-06 after page
-150 went in.
+Paste-ready brief for picking this work up cold. Updated 2026-09-07 after page
+179 went in.
 
 ## Read first, in this order
 
@@ -21,84 +21,95 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-06: **287 chants across 293 pages.** The gaps are
-**151–174, 179–182, 192, 246, 248 and 278** — 32 sheets in all, and 151 and 179
-are the live edges of two runs, not holes.
+As of 2026-09-07: **305 chants across 318 pages.** The gaps are
+**180–182, 192, 246, 248 and 278** — SEVEN sheets in all, and 180 is the live
+edge of a run, not a hole. The four after it (192, 246, 248, 278) are orphan
+sheets scattered through parts of the book that are otherwise complete.
 
-Two chants carry a live `‼ CONTINUES` marker, and they are the two work fronts:
+**ONE chant carries a live `‼ CONTINUES` marker**, and it is the only work
+front left:
 
 | chant | last verse in | resumes at |
 |---|---|---|
-| `mahasatipatthana-sutta-patho` | 129, page 150 | **page 151 = IMG_0421** |
-| `mahasamayasutta` (the Thai printing) | 68, page 178 | **page 179 = IMG_0449** |
+| `mahasamaya-suttam` (the Thai printing) | 94, page 179 | **page 180 = IMG_0451** |
 
-**What is running in the Mahāsatipaṭṭhāna right now:** the CONTEMPLATION OF
-MIND-OBJECTS, the FOURTH and last foundation, at its FIFTH and LAST subject —
-the four noble truths. The FIRST truth is CLOSED (142–145) and so is the
-**SECOND, at verse 119 on page 150**. The **THIRD is running** — the cessation
-of suffering — and it is nine items into its survey at the foot of 150, having
-given the six internal bases and three of the six external. One truth remains
-after it.
-The body (135), the feelings (136) and the mind (137) are all CLOSED, and so
-are this foundation's first four subjects: hindrances (138), aggregates (139),
-sense bases (140), factors of awakening (142).
+Note the id is `mahasamaya-suttam`, not `mahasamayasutta` — earlier versions of
+this file gave the wrong one. `mahasamayasutta-roman` is its TWIN, a separate
+chant holding the roman printing at pages 317–325.
 
-**The sutta's exposition is nearly done** — one subject left, then whatever
-closing the book gives it.
+**The Mahāsatipaṭṭhāna front is CLOSED.** `mahasatipatthana-sutta-patho` ran
+out at page 174 and its marker came off; pages 151–174 all went in.
 
-## ‼‼ READ THIS BEFORE PAGE 151 — THE FORMULA CHANGED AT VERSE 121
+**What is running in the Mahāsamaya right now:** the roll-call of who came to
+the gathering. Page 179 finished the Four Great Kings and their conjuring
+servants, the gandhabba companies, and the nāga hosts, then turned in a
+single-column block to the supaṇṇas making peace with the nāgas. The twin says
+what comes next: **page 180 opens at the ASURAS** — `Jitā vajirahatthena
+samuddaṃ asurā sitā` — at twin verse 120. Use the twin to check the text, never
+to number the units.
 
-**This is the single most likely error left in this run**, and nothing in the
-tooling can catch it: `check_render` and `check_pages` compare the app against
-the batch file, and the batch file would be wrong too.
+⚠️ **The grep in the block above finds ~24 lines, but only ONE is live.** The
+rest are `‼ CHECK` comments that quote the phrase "its ‼ CONTINUES marker comes
+off". Search for `# ‼ CONTINUES:` with the colon to get the real one.
 
-Pages 145–150 gave the SAME sixty items twice, under two different truths, and
-the tail is different each time:
+## ‼‼ READ THIS BEFORE PAGE 180 — THE VERSE UNIT CHANGES WITH THE SETTING
 
-| truth | verses | the tail every paragraph ends with |
+The Mahāsamaya is set in TWO ways and **the verse unit follows the setting, not
+the metre**:
+
+| setting | unit | example |
 |---|---|---|
-| **second** (arising) | 59–118 | `เอตเถสา ตัณหา อุปปัชชะมานา อุปปัชชะติ, เอตถะ นิวีสะมานา นิวีสะติ.` |
-| **third** (cessation) | 121– | `เอตเถสา ตัณหา ปะหิยยะมานา ปะหิยยะติ, เอตถะ นิรุชฌะมานา นิรุชฌะติ.` |
+| **two columns** | one **ROW**, read left half then right half, joined by a space | v69 `อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน` |
+| **single column, centred** | one **LINE** — one pāda | v87–v94 on page 179 |
 
-*arises and settles* becomes *is abandoned and ceases*. **Pages 151 onward all
-take the SECOND form.** After five sheets of the first one, typing it from
-memory is the natural mistake and it would read as perfectly ordinary Pali.
+Page 179 had BOTH, switching part way down. Pages 176 and 179 each did the same
+thing. **Profile the gutter per BLOCK, never per page** — 179's two-column band
+had a clean 251px corridor at x 801–1051 and the foot band had none at all, and
+a single profile over the whole sheet would have blurred the two together.
 
-The sixty items run in this order, six at a time — internal bases, external
-bases, consciousness, contact, feeling, perception, volition, craving, thought
-(`วิตักโก`), examination (`วิจาโร`) — and the third truth is nine in, so **151
-opens at `ระสา`**, the fourth external base.
+⚠️ **Do not take the unit from the roman twin.** `mahasamayasutta-roman`
+(pages 317–325) sets the same words with its own divisions, so the numbers do
+not line up and that is not a fault. It is the best possible check on the TEXT
+and useless for the numbering. Page 179 was read against twin verses 94–119 and
+the mapping was exact, which is what made seven small divergences provable
+rather than guessed.
 
-⚠️ **`ปะหิยยะ` is spelt with DOUBLE ย** in this book, so it transliterates
-`pahiyyati` / `pahiyyamānā`, NOT the `pahīyati` most editions print. Read at
-2.8× on page 150. It is about to appear sixty more times — keep it consistent.
+⚠️ **This chant sets THANTHAKHAT ์, not yamakkan ๎** — against the rule
+elsewhere in the book. `กะปิละวัตถุส์มิง`, `อุปะสังกะมิต์วา`, `ปะวะนัส์มิง`,
+`ตัต์ระ`, and on 179 `จิต์รา` and `อุปะว์หะยันตา`. It is consistent within the
+chant, so keep it. At 8× the interpolation makes a plain `ั` look curled and
+`์`-like — **compare against a known `ั` on the same line at 5× instead**, which
+is how 179's `สัญหาหิ` was proved to carry no cluster mark at all.
 
-⚠️ **The truths are not labelled.** The second closed and the third opened in
-the middle of page 150 with no heading, no `section_end` and not even extra
-space. Expect the fourth truth to arrive the same way, and expect the survey to
-be followed by the closing formula `อิทัง วุจจะติ ภิกขะเว ทุกขะนิโรโธ
-อะริยะสัจจัง.` — the shape verses 56 and 119 both used.
-
-⚠️ **The two runs are punctuated differently in at least one place.** Verse 58
-(page 145) ends `เอตถะ นิวีสะมานา นิวีสะติ. กิญจะ โลเก` with a FULL STOP; the
-same sentence in verse 120 (page 150) has **no mark at all** before `กิญจะ`.
-Read at 3.4×. Do not level them.
-
-## ‼ THE PRINTER SETS พ WHERE THE CANON HAS ฬ — three times now
+## ‼ THE PRINTER SETS พ WHERE THE CANON HAS ฬ — nine words now
 
 | page | printed | canon | read at |
 |---|---|---|---|
 | 131 | `เขโพ` | *kheḷo* | 14× |
 | 131 | `มูโตพี` | *mūtoḷī* | 14× |
 | 143 | `กะเพวะรัสสะ` | *kaḷevarassa* | 7× |
+| 168 | `ทัพเหนะ` | *daḷhena* | — |
+| 169 | `อะวิรุพหิฉันทา` | *avirūḷhichandā* | — |
+| 173 | `วิรุพโห` | *viruḷho* | — |
+| 173 | `วิรุพหา` (twice) | *viruḷhā* | — |
+| **179** | **`วิรุพหะโก`** | *viruḷhako* | 4.2× |
+| **179** | **`นะโพราชา`** | *naḷo rājā* | 4.2× |
 
-Each was settled the same way: against a letter WITH a known ascender on the
-same printed line. All three are reproduced as printed and romanised faithfully
-(`khepo`, `mūtopī`, `kapevarassa`).
+Each was settled against a letter WITH a known ascender on the same printed
+line. All are reproduced as printed and romanised by the same พ→b rule
+(`khepo`, `mūtopī`, `kapevarassa`, `dabhena`, `avirubhicchandā`, `virubho`,
+`virubhako`, `nabo rājā`).
 
-⚠️ **This is now a pattern, not three oddities.** Worth putting to Josh as ONE
-question against the physical book rather than three — and worth expecting
-again wherever the canon has ḷ.
+⚠️ **THE QUESTION IS SETTLED, and the answer is that it is a PRINTING FAULT,
+not a house convention.** The same book sets ฬ correctly in the same words
+elsewhere: `ทัฬ๎เหนะ` at 82 against `ทัพเหนะ` at 168; `อะวิรุฬหิฉันทา` at 82
+against `อะวิรุพหิฉันทา` at 169; `วิรุฬโห` at 99 **and at page 178 verse 56 of
+this very chant** against `วิรุพโห` at 173 and `วิรุพหะโก` at 179. The printer
+HAS the glyph. Reproduce what each sheet shows; never normalise one to another.
+
+⚠️ **Page 178's batch note predicted `วิรุฬหะโก` on 179 and was WRONG on the
+consonant** (right on the long `-ako` ending). A prediction written into a
+previous batch file is not evidence — read the sheet.
 
 **A SEPARATE kind of oddity, not this one:** page 144 prints `อะมัจฉา` where
 the canon has `อะมัจจา` (*amaccā*). จ and ฉ are NOT lookalikes — ฉ carries an
@@ -212,13 +223,13 @@ first pass is running, the job is COVERAGE AND FIDELITY, not finish. Record
 what the sheet says, raise the check, move to the next page. Do not stop the
 run to tidy something that the review pass will reach anyway.
 
-What that pass will have waiting for it, as of page 150:
+What that pass will have waiting for it, as of page 179:
 
 | | count | what it means |
 |---|---:|---|
-| `‼ CHECK` comments | 1,870 | every doubt raised against a photograph, each naming its image |
-| `‼ COMMENTARY PENDING` | 270 | chants set DATA-ONLY; stage 3 writes their prose |
-| `english_unverified` | 257 of 287 | the book prints Pali only, so the English is this edition's own |
+| `‼ CHECK` comments | 2,079 | every doubt raised against a photograph, each naming its image |
+| `‼ COMMENTARY PENDING` | 288 | chants set DATA-ONLY; stage 3 writes their prose |
+| `english_unverified` | 275 of 305 | the book prints Pali only, so the English is this edition's own |
 | pages with no batch record | 1, 23, 27, 28, 217–221 | entered before this workflow existed; never checked against a photograph |
 | page-level checks in batch files only | 105 | see below — they were dropped on the way in, and stay where they are |
 
@@ -378,6 +389,13 @@ on every measurement — so nothing was redone.
 Josh's instruction when told: *"I'm happy as long as it is kept exactly as is in
 the book."* So the split is by convenience, not by principle — but **do not work
 the other lane without checking `git log` first.**
+
+⚠️ **BOTH LANES ARE NOW SPENT** (2026-09-07). The forward pass and the
+translated section have both run out; only **180–182, 192, 246, 248, 278**
+remain, and there is not enough left to divide. With seven sheets between two
+sessions the collision risk is now higher than the speed gain — **check
+`git status` and `git log` before touching `chanting.py`, every time.** Page 146
+is the standing example of what happens otherwise (see the section below).
 
 ## ✅ THE TRANSLATED SECTION HAS STARTED — five layers from page 193
 
