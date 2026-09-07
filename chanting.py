@@ -63736,7 +63736,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 29; the rest is not in the app yet.
         # ‼ CHECK [IMG_0442.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter
         #   MEASURED at 299px, x 843-1141 — a THIRD distinct corridor on this
         #   one sheet, after the Abhaya's none and the Devatā's 958-1149.
@@ -64036,6 +64035,212 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'By this utterance of truth, may you have the blessing of victory.',
+            },
+            # ‼ CHECK [IMG_0444.PNG]: PAGE 174 — ‼ TWO-COLUMN READING, PLEASE
+            #   CONFIRM. Gutter MEASURED at 242px, x 857-1098, over the whole
+            #   sheet. Every row read ACROSS. First pairing: นัตถิ เม สะระณัง
+            #   อัญญัง + ธัมโม เม สะระณัง วะรัง.
+            # ‼ CHECK [IMG_0444.PNG]: PAGE 174 — ‼ THREE TRIADS ON ONE SHEET,
+            #   EACH REPEATING A LINE THREE TIMES WITH ONE WORD CHANGED —
+            #   ยังกิญจิ ระตะนัง โลเก at verses 34, 36 and 38; ภะวะตุ
+            #   สัพพะมังคะลัง at 40, 42 and 44; and นักขัตตะยักขะภูตานัง with
+            #   ปะริตตัสสานุภาเวนะ at 46-51, where NOTHING changes at all
+            #   between the three. Every row was read separately at 2.6x
+            #   rather than the first of each triad being read and the rest
+            #   assumed. The third triad is the riskiest, because its three
+            #   pairs are word for word identical and a dropped or doubled
+            #   pair would be invisible afterwards; the row count was taken
+            #   from the crop and is six.
+            # ‼ CHECK [IMG_0444.PNG]: PAGE 174 — ‼‼ A CENTRED BOLD LINE CLOSES
+            #   THE WHOLE SECTION — จบเจ็ดตำนานย่อ, here ends the abridged
+            #   Seven Tamnan. It is recorded as the page row's service_closing
+            #   and NOT as this chant's `closing`, per the rule that a จบ line
+            #   naming a SERVICE belongs to the page while one naming a CHANT
+            #   belongs to the chant. This one names the section that opened
+            #   on page 164, so it reaches back eleven sheets.
+            {
+                'number': 30,
+                'page': 174,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have no other refuge; the Dhamma is my excellent refuge.',
+            },
+            {
+                'number': 31,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you have the blessing of victory.',
+            },
+            {
+                'number': 32,
+                'pali': 'นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง',
+                'pali_roman': 'Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I have no other refuge; the Sangha is my excellent refuge.',
+            },
+            {
+                'number': 33,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.',
+                'pali_roman': 'Etena saccavajjena hotu te jayamaṅgalaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you have the blessing of victory.',
+            },
+            {
+                'number': 34,
+                'pali': 'ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ',
+                'pali_roman': 'Yaṃkiñci ratanaṃ loke vijjati vividhaṃ puthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever jewels exist in the world, various and many,',
+            },
+            {
+                'number': 35,
+                'pali': 'ระตะนัง พุทธะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Ratanaṃ buddhasamaṃ natthi tasmā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is no jewel equal to the Buddha; therefore may you be well.',
+            },
+            {
+                'number': 36,
+                'pali': 'ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ',
+                'pali_roman': 'Yaṃkiñci ratanaṃ loke vijjati vividhaṃ puthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever jewels exist in the world, various and many,',
+            },
+            {
+                'number': 37,
+                'pali': 'ระตะนัง ธัมมะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Ratanaṃ dhammasamaṃ natthi tasmā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is no jewel equal to the Dhamma; therefore may you be well.',
+            },
+            {
+                'number': 38,
+                'pali': 'ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ',
+                'pali_roman': 'Yaṃkiñci ratanaṃ loke vijjati vividhaṃ puthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Whatever jewels exist in the world, various and many,',
+            },
+            {
+                'number': 39,
+                'pali': 'ระตะนัง สังฆะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Ratanaṃ saṅghasamaṃ natthi tasmā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'there is no jewel equal to the Sangha; therefore may you be well.',
+            },
+            {
+                'number': 40,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May there be every blessing, may all the devas protect you;',
+            },
+            {
+                'number': 41,
+                'pali': 'สัพพะพุทธานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Sabbabuddhānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Buddhas, may you always be well.',
+            },
+            {
+                'number': 42,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May there be every blessing, may all the devas protect you;',
+            },
+            {
+                'number': 43,
+                'pali': 'สัพพะธัมมานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Sabbadhammānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Dhamma, may you always be well.',
+            },
+            {
+                'number': 44,
+                'pali': 'ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา',
+                'pali_roman': 'Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'May there be every blessing, may all the devas protect you;',
+            },
+            {
+                'number': 45,
+                'pali': 'สัพพะสังฆานุภาเวนะ สะทา โสตถี ภะวันตุ เต.',
+                'pali_roman': 'Sabbasaṅghānubhāvena sadā sotthī bhavantu te.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of all the Sangha, may you always be well.',
+            },
+            {
+                'number': 46,
+                'pali': 'นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา',
+                'pali_roman': 'Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Warding off the evil influences of stars, yakkhas and spirits,',
+            },
+            {
+                'number': 47,
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.',
+                'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the paritta, may their misfortunes be destroyed.',
+            },
+            {
+                'number': 48,
+                'pali': 'นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา',
+                'pali_roman': 'Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Warding off the evil influences of stars, yakkhas and spirits,',
+            },
+            {
+                'number': 49,
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.',
+                'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the paritta, may their misfortunes be destroyed.',
+            },
+            {
+                'number': 50,
+                'pali': 'นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา',
+                'pali_roman': 'Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Warding off the evil influences of stars, yakkhas and spirits,',
+            },
+            # ‼ CHECK [IMG_0444.PNG]: THE CHANT ENDS HERE at 51 verses and its
+            #   ‼ CONTINUES marker comes off. ⚠️ The page-99 printing has 18.
+            #   Everything from verse 19 onward — the ratana-osadha stanzas,
+            #   the refuge couplets, the jewels triad, the blessing triad and
+            #   the warding triad — is in THIS printing and not in that one.
+            #   Recorded because the whole of pages 173 and 174 beyond verse
+            #   18 has no counterpart in the app to check against.
+            {
+                'number': 51,
+                'pali': 'ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.',
+                'pali_roman': 'Parittassānubhāvena hantvā tesaṃ upaddave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'by the power of the paritta, may their misfortunes be destroyed.',
             },
         ],
     },
@@ -66774,6 +66979,18 @@ PAGE_BLOCKS = [
                 'thai': 'นะโมการะอัฏฐะกะคาถา ๔ คาถานี้ สวดในกาลสมัยที่ควร',
                 'english': 'These four verses of the Namokāra-aṭṭhaka-gāthā are chanted on suitable occasions.',
                 'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 174 ───────────────────────────────────────────────────
+    # Written from batch-174-174.json.
+    {
+        'page': 174,
+        'after': 'jaya-parittam-chet-tamnan',
+        'blocks': [
+            {
+                'type': 'service_closing',
+                'thai': 'จบเจ็ดตำนานย่อ',
             },
         ],
     },

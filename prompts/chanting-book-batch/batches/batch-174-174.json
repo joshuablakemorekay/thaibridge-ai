@@ -1,0 +1,102 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "jaya-parittam-chet-tamnan"
+    ],
+    "pages": [
+      {
+        "page": 174,
+        "file": "IMG_0444.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "jaya-parittam-chet-tamnan",
+        "verses": "30-51",
+        "starts_here": false,
+        "service_closing": "จบเจ็ดตำนานย่อ",
+        "note": "TWO COLUMNS, twenty-two rows, gutter measured at x 857-1098. The chant ENDS at 51 verses and its ‼ CONTINUES marker comes off. Then a CENTRED BOLD LINE closes the whole section: จบเจ็ดตำนานย่อ. That closes เจ็ดตำนานย่อ, not this chant, so it is recorded as the page row's service_closing and NOT as the chant's closing."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "jaya-parittam-chet-tamnan",
+      "continuation_of": "jaya-parittam-chet-tamnan",
+      "working_notes": {
+        "invitation": "None printed; this is the end of the chant.",
+        "units": "Twenty-two, one per printed ROW read across both columns. Stanza openings are indented at rows 34, 40 and 46.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "ตัส๎มา and หันต๎วา take the yamakkan. Every row was read across the gutter, and the three repeated triads were each read separately rather than the first copied down.",
+        "pages": "IMG_0444.PNG, page 174. Two columns throughout. Completes the chant begun on 172."
+      },
+      "verses": [
+        {"number": 30, "page": 174, "pali": "นัตถิ เม สะระณัง อัญญัง ธัมโม เม สะระณัง วะรัง", "pali_roman": "Natthi me saraṇaṃ aññaṃ dhammo me saraṇaṃ varaṃ", "thai": "", "paiboon": "", "english": "I have no other refuge; the Dhamma is my excellent refuge."},
+        {"number": 31, "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.", "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.", "thai": "", "paiboon": "", "english": "By this utterance of truth, may you have the blessing of victory."},
+        {"number": 32, "pali": "นัตถิ เม สะระณัง อัญญัง สังโฆ เม สะระณัง วะรัง", "pali_roman": "Natthi me saraṇaṃ aññaṃ saṅgho me saraṇaṃ varaṃ", "thai": "", "paiboon": "", "english": "I have no other refuge; the Sangha is my excellent refuge."},
+        {"number": 33, "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.", "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.", "thai": "", "paiboon": "", "english": "By this utterance of truth, may you have the blessing of victory."},
+        {"number": 34, "pali": "ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ", "pali_roman": "Yaṃkiñci ratanaṃ loke vijjati vividhaṃ puthu", "thai": "", "paiboon": "", "english": "Whatever jewels exist in the world, various and many,"},
+        {"number": 35, "pali": "ระตะนัง พุทธะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.", "pali_roman": "Ratanaṃ buddhasamaṃ natthi tasmā sotthī bhavantu te.", "thai": "", "paiboon": "", "english": "there is no jewel equal to the Buddha; therefore may you be well."},
+        {"number": 36, "pali": "ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ", "pali_roman": "Yaṃkiñci ratanaṃ loke vijjati vividhaṃ puthu", "thai": "", "paiboon": "", "english": "Whatever jewels exist in the world, various and many,"},
+        {"number": 37, "pali": "ระตะนัง ธัมมะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.", "pali_roman": "Ratanaṃ dhammasamaṃ natthi tasmā sotthī bhavantu te.", "thai": "", "paiboon": "", "english": "there is no jewel equal to the Dhamma; therefore may you be well."},
+        {"number": 38, "pali": "ยังกิญจิ ระตะนัง โลเก วิชชะติ วิวิธัง ปุถุ", "pali_roman": "Yaṃkiñci ratanaṃ loke vijjati vividhaṃ puthu", "thai": "", "paiboon": "", "english": "Whatever jewels exist in the world, various and many,"},
+        {"number": 39, "pali": "ระตะนัง สังฆะสะมัง นัตถิ ตัส๎มา โสตถี ภะวันตุ เต.", "pali_roman": "Ratanaṃ saṅghasamaṃ natthi tasmā sotthī bhavantu te.", "thai": "", "paiboon": "", "english": "there is no jewel equal to the Sangha; therefore may you be well."},
+        {"number": 40, "pali": "ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา", "pali_roman": "Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā", "thai": "", "paiboon": "", "english": "May there be every blessing, may all the devas protect you;"},
+        {"number": 41, "pali": "สัพพะพุทธานุภาเวนะ สะทา โสตถี ภะวันตุ เต.", "pali_roman": "Sabbabuddhānubhāvena sadā sotthī bhavantu te.", "thai": "", "paiboon": "", "english": "by the power of all the Buddhas, may you always be well."},
+        {"number": 42, "pali": "ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา", "pali_roman": "Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā", "thai": "", "paiboon": "", "english": "May there be every blessing, may all the devas protect you;"},
+        {"number": 43, "pali": "สัพพะธัมมานุภาเวนะ สะทา โสตถี ภะวันตุ เต.", "pali_roman": "Sabbadhammānubhāvena sadā sotthī bhavantu te.", "thai": "", "paiboon": "", "english": "by the power of all the Dhamma, may you always be well."},
+        {"number": 44, "pali": "ภะวะตุ สัพพะมังคะลัง รักขันตุ สัพพะเทวะตา", "pali_roman": "Bhavatu sabbamaṅgalaṃ rakkhantu sabbadevatā", "thai": "", "paiboon": "", "english": "May there be every blessing, may all the devas protect you;"},
+        {"number": 45, "pali": "สัพพะสังฆานุภาเวนะ สะทา โสตถี ภะวันตุ เต.", "pali_roman": "Sabbasaṅghānubhāvena sadā sotthī bhavantu te.", "thai": "", "paiboon": "", "english": "by the power of all the Sangha, may you always be well."},
+        {"number": 46, "pali": "นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา", "pali_roman": "Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā", "thai": "", "paiboon": "", "english": "Warding off the evil influences of stars, yakkhas and spirits,"},
+        {"number": 47, "pali": "ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.", "pali_roman": "Parittassānubhāvena hantvā tesaṃ upaddave.", "thai": "", "paiboon": "", "english": "by the power of the paritta, may their misfortunes be destroyed."},
+        {"number": 48, "pali": "นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา", "pali_roman": "Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā", "thai": "", "paiboon": "", "english": "Warding off the evil influences of stars, yakkhas and spirits,"},
+        {"number": 49, "pali": "ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.", "pali_roman": "Parittassānubhāvena hantvā tesaṃ upaddave.", "thai": "", "paiboon": "", "english": "by the power of the paritta, may their misfortunes be destroyed."},
+        {"number": 50, "pali": "นักขัตตะยักขะภูตานัง ปาปัคคะหะนิวาระณา", "pali_roman": "Nakkhattayakkhabhūtānaṃ pāpaggahanivāraṇā", "thai": "", "paiboon": "", "english": "Warding off the evil influences of stars, yakkhas and spirits,"},
+        {"number": 51, "pali": "ปะริตตัสสานุภาเวนะ หันต๎วา เตสัง อุปัททะเว.", "pali_roman": "Parittassānubhāvena hantvā tesaṃ upaddave.", "thai": "", "paiboon": "", "english": "by the power of the paritta, may their misfortunes be destroyed."}
+      ],
+      "vocabulary": [
+        {"pali": "ปุถุ", "pali_roman": "puthu", "meaning": "many, manifold — said of the world's jewels, against which the Three Jewels are set"},
+        {"pali": "นักขัตตะ", "pali_roman": "nakkhatta", "meaning": "a star or constellation; the astrological influences the paritta wards off, named alongside yakkhas and spirits"}
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0444.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter MEASURED at 242px, x 857-1098, over the whole sheet. Every row read ACROSS. First pairing: นัตถิ เม สะระณัง อัญญัง + ธัมโม เม สะระณัง วะรัง."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0444.PNG",
+          "issue": "‼ THREE TRIADS ON ONE SHEET, EACH REPEATING A LINE THREE TIMES WITH ONE WORD CHANGED — ยังกิญจิ ระตะนัง โลเก at verses 34, 36 and 38; ภะวะตุ สัพพะมังคะลัง at 40, 42 and 44; and นักขัตตะยักขะภูตานัง with ปะริตตัสสานุภาเวนะ at 46-51, where NOTHING changes at all between the three. Every row was read separately at 2.6x rather than the first of each triad being read and the rest assumed. The third triad is the riskiest, because its three pairs are word for word identical and a dropped or doubled pair would be invisible afterwards; the row count was taken from the crop and is six."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0444.PNG",
+          "issue": "‼‼ A CENTRED BOLD LINE CLOSES THE WHOLE SECTION — จบเจ็ดตำนานย่อ, here ends the abridged Seven Tamnan. It is recorded as the page row's service_closing and NOT as this chant's `closing`, per the rule that a จบ line naming a SERVICE belongs to the page while one naming a CHANT belongs to the chant. This one names the section that opened on page 164, so it reaches back eleven sheets."
+        },
+        {
+          "verse": 51,
+          "file": "IMG_0444.PNG",
+          "issue": "THE CHANT ENDS HERE at 51 verses and its ‼ CONTINUES marker comes off. ⚠️ The page-99 printing has 18. Everything from verse 19 onward — the ratana-osadha stanzas, the refuge couplets, the jewels triad, the blessing triad and the warding triad — is in THIS printing and not in that one. Recorded because the whole of pages 173 and 174 beyond verse 18 has no counterpart in the app to check against."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "jaya-parittam-chet-tamnan"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 175,
+    "resume_from_file": "",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all twenty-two verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0444.PNG.",
+    "page_scan": "agrees — one row, page 174, claiming verses 30-51, and the entry holds exactly those twenty-two. Verse 30 carries page 174; 31 to 51 carry none and sit on 174 by carry-forward. Numbering runs on from page 173 verse 29 with no gap and no overlap.",
+    "notes": "‼‼ เจ็ดตำนานย่อ CLOSES HERE. A centred bold จบเจ็ดตำนานย่อ ends the section that opened on page 164 — recorded as the page row's service_closing, not as the chant's closing, because it names the SECTION and reaches back eleven sheets. ‼ The Jaya ends at 51 verses against the page-99 printing's 18, so everything from verse 19 on has no counterpart in the app to check against. ‼ THREE TRIADS on one sheet, and the third repeats a pair word for word THREE TIMES with nothing changed — the riskiest shape on any page in this run, because a dropped or doubled pair would be invisible afterwards. Every row was read separately and the count taken from the crop. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
