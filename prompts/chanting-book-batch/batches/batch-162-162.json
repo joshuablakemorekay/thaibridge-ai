@@ -1,0 +1,189 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "dhammacakkappavattana-suttam"
+    ],
+    "pages": [
+      {
+        "page": 162,
+        "file": "IMG_0432.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "dhammacakkappavattana-suttam",
+        "verses": "23-32",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, one column. Ten indented paragraphs: the twelfth turning closes, the Buddha declares his awakening was not claimed until the knowledge was pure, Kondanna's dhamma-eye opens, and the devas begin passing the news up through their tiers. NO completion row — page 161 ended at a full stop. ⚠️ AND THE PAGE IS NOT CUT EITHER, though its last words look like it: see the checks."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "dhammacakkappavattana-suttam",
+      "continuation_of": "dhammacakkappavattana-suttam",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Ten, one per indented paragraph. Two of them are single short lines (verses 31 and 32's shape), which is the setting the deva passage uses throughout.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "ท๎วาทะสาการัง, สะพ๎รัห๎มะเก, พ๎ราห๎มะณิยา, อิมัส๎มิญจะ, เวยยากะระณัส๎มิง, อายัส๎มะโต, โลกัส๎มินติ and สุต๎วา all take the yamakkan cluster mark. One line-break hyphen was rejoined — see the checks.",
+        "pages": "IMG_0432.PNG, page 162, the number printed clearly at the top centre. Arrived from page 161 and CONTINUES onto 163. A hand grips the left edge with three fingers visible; all sit outside the text block and cover no text."
+      },
+      "verses": [
+        {
+          "number": 23,
+          "page": 162,
+          "pali": "ตัง โข ปะนิทัง ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง ภาวิตันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ .",
+          "pali_roman": "Taṃ kho panidaṃ dukkhanirodhagāminī paṭipadā ariyasaccaṃ bhāvitanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi .",
+          "thai": "",
+          "paiboon": "",
+          "english": "This noble truth of the way leading to the cessation of suffering has been developed — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light."
+        },
+        {
+          "number": 24,
+          "pali": "ยาวะกีวัญจะ เม ภิกขะเว อิเมสุ จะตูสุ อะริยะสัจเจสุ เอวันติปะริวัฏฏัง ท๎วาทะสาการัง ยะถาภูตัง ญาณะทัสสะนัง นะ สุวิสุทธัง อะโหสิ.",
+          "pali_roman": "Yāvakīvañca me bhikkhave imesu catūsu ariyasaccesu evantiparivaṭṭaṃ dvādasākāraṃ yathābhūtaṃ ñāṇadassanaṃ na suvisuddhaṃ ahosi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "So long, monks, as my knowledge and vision of these four noble truths as they really are, in these three turnings and twelve aspects, was not thoroughly purified —"
+        },
+        {
+          "number": 25,
+          "pali": "เนวะ ตาวาหัง ภิกขะเว สะเทวะเก โลเก สะมาระเก สะพ๎รัห๎มะเก สัสสะมะณะพ๎ราห๎มะณิยา ปะชายะ สะเทวะมะนุสสายะ อะนุตตะรัง สัมมาสัมโพธิง อะภิสัมพุทโธ ปัจจัญญาสิง.",
+          "pali_roman": "Neva tāvāhaṃ bhikkhave sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya anuttaraṃ sammāsambodhiṃ abhisambuddho paccaññāsiṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "for that long, monks, I did not claim to have awakened to the unsurpassed perfect enlightenment in this world with its devas, its Māras and its Brahmās, in this generation with its ascetics and brahmins, its rulers and its people."
+        },
+        {
+          "number": 26,
+          "pali": "ยะโต จะ โข เม ภิกขะเว อิเมสุ จะตูสุ อะริยะสัจเจสุ เอวันติปะริวัฏฏัง ท๎วาทะสาการัง ยะถาภูตัง ญาณะทัสสะนัง สุวิสุทธัง อะโหสิ.",
+          "pali_roman": "Yato ca kho me bhikkhave imesu catūsu ariyasaccesu evantiparivaṭṭaṃ dvādasākāraṃ yathābhūtaṃ ñāṇadassanaṃ suvisuddhaṃ ahosi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "But when, monks, my knowledge and vision of these four noble truths as they really are, in these three turnings and twelve aspects, was thoroughly purified —"
+        },
+        {
+          "number": 27,
+          "pali": "อะถาหัง ภิกขะเว สะเทวะเก โลเก สะมาระเก สะพ๎รัห๎มะเก สัสสะมะณะพ๎ราห๎มะณิยา ปะชายะ สะเทวะมะนุสสายะ อะนุตตะรัง สัมมาสัมโพธิง อะภิสัมพุทโธ ปัจจัญญาสิง.",
+          "pali_roman": "Athāhaṃ bhikkhave sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya anuttaraṃ sammāsambodhiṃ abhisambuddho paccaññāsiṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "then, monks, I claimed to have awakened to the unsurpassed perfect enlightenment in this world with its devas, its Māras and its Brahmās, in this generation with its ascetics and brahmins, its rulers and its people."
+        },
+        {
+          "number": 28,
+          "pali": "ญาณัญจะ ปะนะ เม ทัสสะนัง อุทะปาทิ, อะกุปปา เม วิมุตติ, อะยะมันติมา ชาติ, นัตถิทานิ ปุนัพภะโวติ.",
+          "pali_roman": "Ñāṇañca pana me dassanaṃ udapādi, akuppā me vimutti, ayamantimā jāti, natthidāni punabbhavoti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And the knowledge and vision arose in me: unshakeable is my liberation; this is my last birth; there is now no renewed becoming."
+        },
+        {
+          "number": 29,
+          "pali": "อิทะมะโวจะ ภะคะวา. อัตตะมะนา ปัญจะวัคคิยา ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุง อิมัส๎มิญจะ ปะนะ เวยยากะระณัส๎มิง ภัญญะมาเน, อายัส๎มะโต โกณฑัญญัสสะ วิระชัง วีตะมะลัง ธัมมะจักขุง อุทะปาทิ ยังกิญจิ สะมุทะยะธัมมัง สัพพันตัง นิโรธะธัมมันติ.",
+          "pali_roman": "Idamavoca bhagavā. Attamanā pañcavaggiyā bhikkhū bhagavato bhāsitaṃ abhinanduṃ imasmiñca pana veyyākaraṇasmiṃ bhaññamāne, āyasmato koṇḍaññassa virajaṃ vītamalaṃ dhammacakkhuṃ udapādi yaṃkiñci samudayadhammaṃ sabbantaṃ nirodhadhammanti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "This is what the Blessed One said. Satisfied, the group of five monks delighted in his words. And while this exposition was being spoken, there arose in the venerable Koṇḍañña the dust-free, stainless eye of Dhamma: whatever is subject to arising is subject to cessation."
+        },
+        {
+          "number": 30,
+          "pali": "ปะวัตติเต จะ ภะคะวะตา ธัมมะจักเก, ภุมมา เทวา สัททะมะนุสสาเวสุง. เอตัมภะคะวะตา พาราณะสิยัง อิสิปะตะเน มิคะทาเย อะนุตตะรัง ธัมมะจักกัง ปะวัตติตัง อัปปะฏิวัตติยัง สะมะเณนะ วา พ๎ราห๎มะเณนะ วา เทเวนะ วา มาเรนะ วา พ๎รัห๎มุนา วา เกนะจิ วา โลกัส๎มินติ.",
+          "pali_roman": "Pavattite ca bhagavatā dhammacakke, bhummā devā saddamanussāvesuṃ. Etambhagavatā bārāṇasiyaṃ isipatane migadāye anuttaraṃ dhammacakkaṃ pavattitaṃ appaṭivattiyaṃ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasminti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And when the Wheel of Dhamma had been set rolling by the Blessed One, the earth-dwelling devas cried out: at Bārāṇasī, in the deer park at Isipatana, the unsurpassed Wheel of Dhamma has been set rolling by the Blessed One, and it cannot be stopped by any ascetic or brahmin, by any deva or Māra or Brahmā, by anyone at all in the world."
+        },
+        {
+          "number": 31,
+          "pali": "ภุมมานัง เทวานัง สัททัง สุต๎วา",
+          "pali_roman": "Bhummānaṃ devānaṃ saddaṃ sutvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "Having heard the cry of the earth-dwelling devas,"
+        },
+        {
+          "number": 32,
+          "pali": "จาตุมมะหาราชิกา เทวา สัททะมะนุสสาเวสุง. จาตุมมะหาราชิกานัง เทวานัง สัททัง สุต๎วา",
+          "pali_roman": "Cātummahārājikā devā saddamanussāvesuṃ. Cātummahārājikānaṃ devānaṃ saddaṃ sutvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "the devas of the Four Great Kings cried out. Having heard the cry of the devas of the Four Great Kings,"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "เอวันติปะริวัฏฏัง ท๎วาทะสาการัง",
+          "pali_roman": "evantiparivaṭṭaṃ dvādasākāraṃ",
+          "meaning": "in three turnings and twelve aspects — four truths, each stated, given its task, and declared done. The phrase that names what pages 160 to 162 have just set out"
+        },
+        {
+          "pali": "ปัจจัญญาสิง",
+          "pali_roman": "paccaññāsiṃ",
+          "meaning": "I declared, I claimed. The word the Buddha withholds until the knowledge is pure, and then uses"
+        },
+        {
+          "pali": "วิระชัง วีตะมะลัง ธัมมะจักขุง",
+          "pali_roman": "virajaṃ vītamalaṃ dhammacakkhuṃ",
+          "meaning": "the dust-free, stainless eye of Dhamma. What opened in Koṇḍañña, and the moment the Sangha begins"
+        },
+        {
+          "pali": "สัททะมะนุสสาเวสุง",
+          "pali_roman": "saddamanussāvesuṃ",
+          "meaning": "they sent up a cry. Repeated tier by tier as the news of the Wheel passes upward through the deva realms"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 32,
+          "file": "IMG_0432.PNG",
+          "issue": "‼‼ THIS PAGE IS **NOT** CUT, though its last words look exactly as if it were. The sheet ends จาตุมมะหาราชิกานัง เทวานัง สัททัง สุต๎วา — an absolutive with no main clause and no punctuation — which is the shape of a page break. It is not one. THE PROOF IS ON THE SAME SHEET: verse 31, ภุมมานัง เทวานัง สัททัง สุต๎วา, is set as its own complete indented paragraph and ends the identical way, mid-sentence and unpunctuated, with a full paragraph following it. The indents were MEASURED: both paragraphs begin at x 460 against x 335-341 for continuation lines. So the deva passage is set one tier per paragraph, each closing on สุต๎วา, and page 163 opens a new paragraph rather than completing this one. NO […] is marked."
+        },
+        {
+          "verse": 23,
+          "file": "IMG_0432.PNG",
+          "issue": "‼ A SPACE IS PRINTED BEFORE THE FULL STOP — อาโลโก อุทะปาทิ . — where all nine other occurrences of this formula on pages 160 and 161 set the stop tight against the word. Read at 4.4x; the gap is a clear word-space and this is the last line of its paragraph, so it is not justification stretching. Reproduced exactly as printed, space and all, per the rule that unusual spacing is reproduced rather than tidied. ⚠️ It will look like an error in the app, and it is the book's."
+        },
+        {
+          "verse": 27,
+          "file": "IMG_0432.PNG",
+          "issue": "A LINE-END HYPHEN REJOINED at สัสสะมะณะ- / พ๎ราห๎มะณิยา. The typesetter's, so the word is written whole as สัสสะมะณะพ๎ราห๎มะณิยา, per the run-on-passage rule. PROVED ON THE SAME SHEET: verse 25 prints the identical word unbroken on one line, so the hyphen carries no meaning."
+        },
+        {
+          "verse": 24,
+          "file": "IMG_0432.PNG",
+          "issue": "VERSES 24 AND 26 ARE THE SAME SENTENCE NEGATED AND AFFIRMED — นะ สุวิสุทธัง อะโหสิ against สุวิสุทธัง อะโหสิ — and verses 25 and 27 are their consequences, differing only in เนวะ ตาวาหัง against อะถาหัง. Each was read separately at 3.0x rather than copied from its pair, because a single dropped นะ would reverse the meaning and read perfectly well."
+        },
+        {
+          "verse": 29,
+          "file": "IMG_0432.PNG",
+          "issue": "โกณฑัญญัสสะ is spelt with ฑ, read at 3.0x. This is the verse the Sangha begins at, so the name is worth confirming against the book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0432.PNG",
+          "issue": "NOTHING ON THIS SHEET BUT BODY TEXT. No title, no invitation, no section heading, no rubric, no footnote and no rule at the foot. Walked top to bottom against the photograph: page number 162 at the top centre, ten paragraphs, blank paper below the last short line. A hand grips the left edge with three fingers, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "dhammacakkappavattana-suttam"
+    ],
+    "resume_from_page": 163,
+    "resume_from_file": "IMG_0433.PNG",
+    "resume_from": "dhammacakkappavattana-suttam",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all ten verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0432.PNG.",
+    "page_scan": "agrees — one row, page 162, claiming verses 23-32, and the entry holds exactly those ten. Verse 23 carries page 162; 24 to 32 carry none and sit on 162 by carry-forward. Numbering runs on from page 161 verse 22 with no gap and no overlap, and no verse is re-sent because 161 ended at a sentence boundary.",
+    "notes": "‼‼ THE PAGE LOOKS CUT AND IS NOT. It ends on an absolutive with no main clause and no punctuation — the shape of a page break — but verse 31 on the same sheet is a complete indented paragraph ending the identical way. The indents were MEASURED (both at x 460 against 335-341 for continuation lines), which is what settles it. No […] is marked and 163 opens a new paragraph. ‼ A SPACE is printed before the full stop at verse 23, where nine other occurrences of the same formula set it tight. Read at 4.4x on the last line of its paragraph, so not justification. Reproduced space and all; it will look like an error in the app and it is the book's. ⚠️ One line-break hyphen rejoined, proved by the same word printed unbroken two paragraphs earlier. ⚠️ Verses 24/26 and 25/27 are near-identical pairs turning on a single นะ; each was read separately. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}

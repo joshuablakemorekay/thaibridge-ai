@@ -60650,7 +60650,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 22; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 32; the rest is not in the app yet.
         # ‼ CHECK [IMG_0429.PNG]: TWO NUMBERED FOOTNOTES sit under a rule at
         #   the foot, and they are DIFFERENT KINDS. ‼ FOOTNOTE 1, keyed to a
         #   superscript after วิหะระติ in verse 1, is a canonical citation —
@@ -60981,6 +60981,131 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'This noble truth of the way leading to the cessation of suffering is to be developed — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            # ‼ CHECK [IMG_0432.PNG]: PAGE 162 — NOTHING ON THIS SHEET BUT
+            #   BODY TEXT. No title, no invitation, no section heading, no
+            #   rubric, no footnote and no rule at the foot. Walked top to
+            #   bottom against the photograph: page number 162 at the top
+            #   centre, ten paragraphs, blank paper below the last short line.
+            #   A hand grips the left edge with three fingers, outside the
+            #   text block.
+            # ‼ CHECK [IMG_0432.PNG]: ‼ A SPACE IS PRINTED BEFORE THE FULL
+            #   STOP — อาโลโก อุทะปาทิ . — where all nine other occurrences of
+            #   this formula on pages 160 and 161 set the stop tight against
+            #   the word. Read at 4.4x; the gap is a clear word-space and this
+            #   is the last line of its paragraph, so it is not justification
+            #   stretching. Reproduced exactly as printed, space and all, per
+            #   the rule that unusual spacing is reproduced rather than
+            #   tidied. ⚠️ It will look like an error in the app, and it is
+            #   the book's.
+            {
+                'number': 23,
+                'page': 162,
+                'pali': 'ตัง โข ปะนิทัง ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง ภาวิตันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ .',
+                'pali_roman': 'Taṃ kho panidaṃ dukkhanirodhagāminī paṭipadā ariyasaccaṃ bhāvitanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi .',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This noble truth of the way leading to the cessation of suffering has been developed — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            # ‼ CHECK [IMG_0432.PNG]: VERSES 24 AND 26 ARE THE SAME SENTENCE
+            #   NEGATED AND AFFIRMED — นะ สุวิสุทธัง อะโหสิ against สุวิสุทธัง
+            #   อะโหสิ — and verses 25 and 27 are their consequences,
+            #   differing only in เนวะ ตาวาหัง against อะถาหัง. Each was read
+            #   separately at 3.0x rather than copied from its pair, because a
+            #   single dropped นะ would reverse the meaning and read perfectly
+            #   well.
+            {
+                'number': 24,
+                'pali': 'ยาวะกีวัญจะ เม ภิกขะเว อิเมสุ จะตูสุ อะริยะสัจเจสุ เอวันติปะริวัฏฏัง ท๎วาทะสาการัง ยะถาภูตัง ญาณะทัสสะนัง นะ สุวิสุทธัง อะโหสิ.',
+                'pali_roman': 'Yāvakīvañca me bhikkhave imesu catūsu ariyasaccesu evantiparivaṭṭaṃ dvādasākāraṃ yathābhūtaṃ ñāṇadassanaṃ na suvisuddhaṃ ahosi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So long, monks, as my knowledge and vision of these four noble truths as they really are, in these three turnings and twelve aspects, was not thoroughly purified —',
+            },
+            {
+                'number': 25,
+                'pali': 'เนวะ ตาวาหัง ภิกขะเว สะเทวะเก โลเก สะมาระเก สะพ๎รัห๎มะเก สัสสะมะณะพ๎ราห๎มะณิยา ปะชายะ สะเทวะมะนุสสายะ อะนุตตะรัง สัมมาสัมโพธิง อะภิสัมพุทโธ ปัจจัญญาสิง.',
+                'pali_roman': 'Neva tāvāhaṃ bhikkhave sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya anuttaraṃ sammāsambodhiṃ abhisambuddho paccaññāsiṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for that long, monks, I did not claim to have awakened to the unsurpassed perfect enlightenment in this world with its devas, its Māras and its Brahmās, in this generation with its ascetics and brahmins, its rulers and its people.',
+            },
+            {
+                'number': 26,
+                'pali': 'ยะโต จะ โข เม ภิกขะเว อิเมสุ จะตูสุ อะริยะสัจเจสุ เอวันติปะริวัฏฏัง ท๎วาทะสาการัง ยะถาภูตัง ญาณะทัสสะนัง สุวิสุทธัง อะโหสิ.',
+                'pali_roman': 'Yato ca kho me bhikkhave imesu catūsu ariyasaccesu evantiparivaṭṭaṃ dvādasākāraṃ yathābhūtaṃ ñāṇadassanaṃ suvisuddhaṃ ahosi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But when, monks, my knowledge and vision of these four noble truths as they really are, in these three turnings and twelve aspects, was thoroughly purified —',
+            },
+            # ‼ CHECK [IMG_0432.PNG]: A LINE-END HYPHEN REJOINED at สัสสะมะณะ-
+            #   / พ๎ราห๎มะณิยา. The typesetter's, so the word is written whole
+            #   as สัสสะมะณะพ๎ราห๎มะณิยา, per the run-on-passage rule. PROVED
+            #   ON THE SAME SHEET: verse 25 prints the identical word unbroken
+            #   on one line, so the hyphen carries no meaning.
+            {
+                'number': 27,
+                'pali': 'อะถาหัง ภิกขะเว สะเทวะเก โลเก สะมาระเก สะพ๎รัห๎มะเก สัสสะมะณะพ๎ราห๎มะณิยา ปะชายะ สะเทวะมะนุสสายะ อะนุตตะรัง สัมมาสัมโพธิง อะภิสัมพุทโธ ปัจจัญญาสิง.',
+                'pali_roman': 'Athāhaṃ bhikkhave sadevake loke samārake sabrahmake sassamaṇabrāhmaṇiyā pajāya sadevamanussāya anuttaraṃ sammāsambodhiṃ abhisambuddho paccaññāsiṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then, monks, I claimed to have awakened to the unsurpassed perfect enlightenment in this world with its devas, its Māras and its Brahmās, in this generation with its ascetics and brahmins, its rulers and its people.',
+            },
+            {
+                'number': 28,
+                'pali': 'ญาณัญจะ ปะนะ เม ทัสสะนัง อุทะปาทิ, อะกุปปา เม วิมุตติ, อะยะมันติมา ชาติ, นัตถิทานิ ปุนัพภะโวติ.',
+                'pali_roman': 'Ñāṇañca pana me dassanaṃ udapādi, akuppā me vimutti, ayamantimā jāti, natthidāni punabbhavoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And the knowledge and vision arose in me: unshakeable is my liberation; this is my last birth; there is now no renewed becoming.',
+            },
+            # ‼ CHECK [IMG_0432.PNG]: โกณฑัญญัสสะ is spelt with ฑ, read at
+            #   3.0x. This is the verse the Sangha begins at, so the name is
+            #   worth confirming against the book.
+            {
+                'number': 29,
+                'pali': 'อิทะมะโวจะ ภะคะวา. อัตตะมะนา ปัญจะวัคคิยา ภิกขู ภะคะวะโต ภาสิตัง อะภินันทุง อิมัส๎มิญจะ ปะนะ เวยยากะระณัส๎มิง ภัญญะมาเน, อายัส๎มะโต โกณฑัญญัสสะ วิระชัง วีตะมะลัง ธัมมะจักขุง อุทะปาทิ ยังกิญจิ สะมุทะยะธัมมัง สัพพันตัง นิโรธะธัมมันติ.',
+                'pali_roman': 'Idamavoca bhagavā. Attamanā pañcavaggiyā bhikkhū bhagavato bhāsitaṃ abhinanduṃ imasmiñca pana veyyākaraṇasmiṃ bhaññamāne, āyasmato koṇḍaññassa virajaṃ vītamalaṃ dhammacakkhuṃ udapādi yaṃkiñci samudayadhammaṃ sabbantaṃ nirodhadhammanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is what the Blessed One said. Satisfied, the group of five monks delighted in his words. And while this exposition was being spoken, there arose in the venerable Koṇḍañña the dust-free, stainless eye of Dhamma: whatever is subject to arising is subject to cessation.',
+            },
+            {
+                'number': 30,
+                'pali': 'ปะวัตติเต จะ ภะคะวะตา ธัมมะจักเก, ภุมมา เทวา สัททะมะนุสสาเวสุง. เอตัมภะคะวะตา พาราณะสิยัง อิสิปะตะเน มิคะทาเย อะนุตตะรัง ธัมมะจักกัง ปะวัตติตัง อัปปะฏิวัตติยัง สะมะเณนะ วา พ๎ราห๎มะเณนะ วา เทเวนะ วา มาเรนะ วา พ๎รัห๎มุนา วา เกนะจิ วา โลกัส๎มินติ.',
+                'pali_roman': 'Pavattite ca bhagavatā dhammacakke, bhummā devā saddamanussāvesuṃ. Etambhagavatā bārāṇasiyaṃ isipatane migadāye anuttaraṃ dhammacakkaṃ pavattitaṃ appaṭivattiyaṃ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasminti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And when the Wheel of Dhamma had been set rolling by the Blessed One, the earth-dwelling devas cried out: at Bārāṇasī, in the deer park at Isipatana, the unsurpassed Wheel of Dhamma has been set rolling by the Blessed One, and it cannot be stopped by any ascetic or brahmin, by any deva or Māra or Brahmā, by anyone at all in the world.',
+            },
+            {
+                'number': 31,
+                'pali': 'ภุมมานัง เทวานัง สัททัง สุต๎วา',
+                'pali_roman': 'Bhummānaṃ devānaṃ saddaṃ sutvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Having heard the cry of the earth-dwelling devas,',
+            },
+            # ‼ CHECK [IMG_0432.PNG]: ‼‼ THIS PAGE IS **NOT** CUT, though its
+            #   last words look exactly as if it were. The sheet ends
+            #   จาตุมมะหาราชิกานัง เทวานัง สัททัง สุต๎วา — an absolutive with
+            #   no main clause and no punctuation — which is the shape of a
+            #   page break. It is not one. THE PROOF IS ON THE SAME SHEET:
+            #   verse 31, ภุมมานัง เทวานัง สัททัง สุต๎วา, is set as its own
+            #   complete indented paragraph and ends the identical way, mid-
+            #   sentence and unpunctuated, with a full paragraph following it.
+            #   The indents were MEASURED: both paragraphs begin at x 460
+            #   against x 335-341 for continuation lines. So the deva passage
+            #   is set one tier per paragraph, each closing on สุต๎วา, and
+            #   page 163 opens a new paragraph rather than completing this
+            #   one. NO […] is marked.
+            {
+                'number': 32,
+                'pali': 'จาตุมมะหาราชิกา เทวา สัททะมะนุสสาเวสุง. จาตุมมะหาราชิกานัง เทวานัง สัททัง สุต๎วา',
+                'pali_roman': 'Cātummahārājikā devā saddamanussāvesuṃ. Cātummahārājikānaṃ devānaṃ saddaṃ sutvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the devas of the Four Great Kings cried out. Having heard the cry of the devas of the Four Great Kings,',
             },
         ],
     },
