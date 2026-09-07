@@ -63096,7 +63096,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
         # ‼ CHECK [IMG_0440.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. ⚠️ THE
         #   GUTTER NEEDED MEASURING TWICE. A first profile over y 1800-2480
         #   found only a 59px gap at x 1057-1115 and no real corridor, because
@@ -63211,6 +63210,291 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'And those who are quenched in the world, who saw things as they are,',
+            },
+            # ‼ CHECK [IMG_0441.PNG]: PAGE 171 — ‼ TWO-COLUMN READING, PLEASE
+            #   CONFIRM. Gutter MEASURED at 399px, x 658-1056, over this block
+            #   alone. First pairing: เต ชะนา อะปิสุณา + มะหันตา วีตะสาระทา.
+            {
+                'number': 10,
+                'page': 171,
+                'pali': 'เต ชะนา อะปิสุณา มะหันตา วีตะสาระทา.',
+                'pali_roman': 'Te janā apisuṇā mahantā vītasāradā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'those people, free of slander, great and fearless,',
+            },
+            {
+                'number': 11,
+                'pali': 'หิตัง เทวะมะนุสสานัง ยัง นะมัสสันติ โคตะมัง',
+                'pali_roman': 'Hitaṃ devamanussānaṃ yaṃ namassanti gotamaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'revere Gotama, the benefit of devas and humans,',
+            },
+            # ‼ CHECK [IMG_0441.PNG]: ‼ วิชชาจะระณะสัมปันนัง OPENS TWO
+            #   CONSECUTIVE ROWS, 12 and 13, with different right halves —
+            #   มะหันตัง วีตะสาระทัง. and then พุทธัง วันทามะ โคตะมันติ. Read
+            #   at 3.4x on both. That repetition is canonical and not a
+            #   typesetting slip, but two identical left halves in a two-
+            #   column setting is exactly what a mis-paired reading would look
+            #   like, so it is recorded.
+            {
+                'number': 12,
+                'pali': 'วิชชาจะระณะสัมปันนัง มะหันตัง วีตะสาระทัง.',
+                'pali_roman': 'Vijjācaraṇasampannaṃ mahantaṃ vītasāradaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'accomplished in knowledge and conduct, great and fearless.',
+            },
+            # ‼ CHECK [IMG_0441.PNG]: THE CHANT ENDS HERE at 13 verses and its
+            #   ‼ CONTINUES marker comes off. The page-92 printing runs to 90
+            #   verses, so this abridgement keeps only its opening homage. No
+            #   colophon and no footnote.
+            {
+                'number': 13,
+                'pali': 'วิชชาจะระณะสัมปันนัง พุทธัง วันทามะ โคตะมันติ.',
+                'pali_roman': 'Vijjācaraṇasampannaṃ buddhaṃ vandāma gotamanti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Accomplished in knowledge and conduct, we revere the Buddha Gotama.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0441.PNG]: ‼ PRINTED ONCE WHERE THE PAGE-96 PRINTING
+        #   PRINTS IT THREE TIMES. angulimala-parittam-navamam has nine
+        #   verses, being this same three-clause sentence repeated three times
+        #   over; this sheet gives it once, in three clause units. Checked
+        #   against chanting.py rather than assumed. That is the abridgement,
+        #   not a dropped line.
+        # ‼ CHECK [IMG_0441.PNG]: SINGLE COLUMN, profiled separately from the
+        #   two-column blocks above and below it on the same sheet — no
+        #   internal gutter, only the right margin. Three different column
+        #   settings on one page, each measured on its own.
+        'id': 'angulimala-parittam-chet-tamnan',
+        'title_thai': 'อังคุลิมาละปะริตตัง',
+        'title_pali': 'Aṅgulimālaparittaṃ',
+        'title_roman': '',
+        'title_english': 'The Aṅgulimāla Protection',
+        'page_start': 171,
+        'layout': 'prose',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 171,
+                'pali': 'ยะโตหัง ภะคินิ อะริยายะ ชาติยา ชาโต,',
+                'pali_roman': 'Yatohaṃ bhagini ariyāya jātiyā jāto,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sister, since I was born with the noble birth,',
+            },
+            {
+                'number': 2,
+                'pali': 'นาภิชานามิ สัญจิจจะ ปาณัง ชีวิตา โวโรเปตา,',
+                'pali_roman': 'Nābhijānāmi sañcicca pāṇaṃ jīvitā voropetā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'I am not aware of having intentionally deprived any living being of life.',
+            },
+            {
+                'number': 3,
+                'pali': 'เตนะ สัจเจนะ โสตถิ เต โหตุ โสตถิ คัพภัสสะ.',
+                'pali_roman': 'Tena saccena sotthi te hotu sotthi gabbhassa.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this truth, may you be well, and may your child be well.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0441.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter
+        #   MEASURED at 244px, x 807-1050, over this block alone — a different
+        #   corridor from the Atanatiya's on the same sheet. Every row read
+        #   ACROSS. First pairing: โพชฌังโค สะติสังขาโต + ธัมมานัง วิจะโย
+        #   ตะถา. ⚠️ The seventeen joined rows agree word for word with the
+        #   page-97 printing's seventeen verses, which is independent
+        #   corroboration of the pairing.
+        # ‼ CHECK [IMG_0441.PNG]: COMPLETE ON THIS SHEET at seventeen verses,
+        #   the same count as the page-97 printing — so unlike the other
+        #   chants in this section, this one is NOT abridged. Counted, not
+        #   assumed. The บทขัด that precedes it on page 97 is absent here,
+        #   which is the only difference in extent.
+        # ‼ CHECK [IMG_0441.PNG]: THE STANZA OPENINGS ARE INDENTED at rows 7,
+        #   11 and 15, so the setting marks the three narrative stanzas off
+        #   from the doctrinal opening. The line is the unit, matching the
+        #   page-97 entry.
+        'id': 'bojjhanga-parittam-chet-tamnan',
+        'title_thai': 'โพชฌังคะปะริตตัง',
+        'title_pali': 'Bojjhaṅgaparittaṃ',
+        'title_roman': '',
+        'title_english': 'The Factors of Awakening Protection',
+        'page_start': 171,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 171,
+                'pali': 'โพชฌังโค สะติสังขาโต ธัมมานัง วิจะโย ตะถา',
+                'pali_roman': 'Bojjhaṅgo satisaṅkhāto dhammānaṃ vicayo tathā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The factor of awakening called mindfulness, and likewise investigation of states,',
+            },
+            {
+                'number': 2,
+                'pali': 'วิริยัมปีติปัสสัทธิ โพชฌังคา จะ ตะถาปะเร.',
+                'pali_roman': 'Viriyampītipassaddhi bojjhaṅgā ca tathāpare.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'energy, rapture and tranquillity — these too are factors of awakening,',
+            },
+            {
+                'number': 3,
+                'pali': 'สะมาธุเปกขะโพชฌังคา สัตเตเต สัพพะทัสสินา',
+                'pali_roman': 'Samādhupekkhabojjhaṅgā sattete sabbadassinā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'with concentration and equanimity: these seven, by the All-Seeing',
+            },
+            {
+                'number': 4,
+                'pali': 'มุนินา สัมมะทักขาตา ภาวิตา พะหุลีกะตา.',
+                'pali_roman': 'Muninā sammadakkhātā bhāvitā bahulīkatā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Sage rightly taught, developed and made much of,',
+            },
+            {
+                'number': 5,
+                'pali': 'สังวัตตันติ อะภิญญายะ นิพพานายะ จะ โพธิยา',
+                'pali_roman': 'Saṃvattanti abhiññāya nibbānāya ca bodhiyā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'lead to direct knowledge, to Nibbāna and to awakening.',
+            },
+            {
+                'number': 6,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you always be well.',
+            },
+            {
+                'number': 7,
+                'pali': 'เอกัส๎มิง สะมะเย นาโถ โมคคัลลานัญจะ กัสสะปัง',
+                'pali_roman': 'Ekasmiṃ samaye nātho moggallānañca kassapaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'At one time the Protector, seeing Moggallāna and Kassapa',
+            },
+            {
+                'number': 8,
+                'pali': 'คิลาเน ทุกขิเต ทิส๎วา โพชฌังเค สัตตะ เทสะยิ.',
+                'pali_roman': 'Gilāne dukkhite disvā bojjhaṅge satta desayi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'sick and in pain, taught them the seven factors of awakening.',
+            },
+            {
+                'number': 9,
+                'pali': 'เต จะ ตัง อะภินันทิต๎วา โรคา มุจจิงสุ ตังขะเณ',
+                'pali_roman': 'Te ca taṃ abhinanditvā rogā mucciṃsu taṅkhaṇe',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And they, delighting in it, were freed from illness that very moment.',
+            },
+            {
+                'number': 10,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you always be well.',
+            },
+            # ‼ CHECK [IMG_0441.PNG]: ‼ เคลัญเญนาภิปีฬิโต IS PRINTED WITH ฬ,
+            #   clearly. Recorded because it is a THIRD place in three sheets
+            #   where this book shows it has the ฬ glyph and uses it — after
+            #   ทัฬ๎เหนะ on page 82 against 168's ทัพเหนะ, and อะวิรุฬหิฉันทา
+            #   on 82 against 169's อะวิรุพหิฉันทา. The glyph is available to
+            #   this printer; where พ appears in its place, the printing has
+            #   failed.
+            {
+                'number': 11,
+                'pali': 'เอกะทา ธัมมะราชาปิ เคลัญเญนาภิปีฬิโต',
+                'pali_roman': 'Ekadā dhammarājāpi gelaññenābhipīḷito',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Once the King of Dhamma himself, oppressed by sickness,',
+            },
+            {
+                'number': 12,
+                'pali': 'จุนทัตเถเรนะ ตัญเญวะ ภะณาเปต๎วานะ สาทะรัง.',
+                'pali_roman': 'Cundattherena taññeva bhaṇāpetvāna sādaraṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'had the venerable Cunda recite that very teaching with care.',
+            },
+            {
+                'number': 13,
+                'pali': 'สัมโมทิต๎วา จะ อาพาธา ตัมหา วุฏฐาสิ ฐานะโส',
+                'pali_roman': 'Sammoditvā ca ābādhā tamhā vuṭṭhāsi ṭhānaso',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and being gladdened, he rose up from that affliction there and then.',
+            },
+            {
+                'number': 14,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you always be well.',
+            },
+            {
+                'number': 15,
+                'pali': 'ปะหีนา เต จะ อาพาธา ติณณันนัมปิ มะเหสินัง',
+                'pali_roman': 'Pahīnā te ca ābādhā tiṇṇannampi mahesinaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those afflictions of the three great seers were abandoned,',
+            },
+            {
+                'number': 16,
+                'pali': 'มัคคาหะตะกิเลสา วะ ปัตตานุปัตติธัมมะตัง.',
+                'pali_roman': 'Maggāhatakilesā va pattānupattidhammataṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'as defilements struck down by the path reach their natural end.',
+            },
+            {
+                'number': 17,
+                'pali': 'เอเตนะ สัจจะวัชเชนะ โสตถิ เต โหตุ สัพพะทา.',
+                'pali_roman': 'Etena saccavajjena sotthi te hotu sabbadā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By this utterance of truth, may you always be well.',
             },
         ],
     },
