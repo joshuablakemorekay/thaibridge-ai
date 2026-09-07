@@ -56024,7 +56024,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 68; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 94; the rest is not in the app yet.
         # ‼ CHECK [IMG_0445.PNG]: ⚠ THIS CHANT HAS A TWIN AT 317-325, BUT ITS
         #   UNIT DIVISION DOES NOT TRANSFER. `mahasamayasutta-roman` sets the
         #   opening prose as ELEVEN short units — `Evaṃ me sutaṃ:` alone is
@@ -56693,6 +56693,329 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'His sons too are many, all named Inda, of great strength,',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: PAGE 179 — THE SHEET CHANGES SETTING
+            #   PART WAY DOWN. Rows 1-18 are set in TWO COLUMNS, one gāthā-
+            #   half to each column, so a verse is one ROW read left then
+            #   right — the same unit as pages 176-178. The last eight lines
+            #   are set SINGLE COLUMN and centred, one pāda to a line, because
+            #   they are in the longer tuṭṭhubha metre. Both blocks were ink-
+            #   profiled separately: the two-column band has a clear 251px
+            #   corridor at x 801-1051, the foot band has none. The verse unit
+            #   therefore changes from a row to a line at verse 87, which is
+            #   the book's own layout and not a fault. The same split was
+            #   handled the same way at verses 12-15 on page 176.
+            # ‼ CHECK [IMG_0449.PNG]: THE SHEET OPENS MID-GROUP. Verses 69 and
+            #   70 complete Kuvera's sons, counted in the last row of 178; the
+            #   page turn falls between the count and its two closing lines,
+            #   exactly as it did between 177 and 178.
+            {
+                'number': 69,
+                'page': 179,
+                'pali': 'อิทธิมันโต ชุติมันโต วัณณะวันโต ยะสัสสิโน',
+                'pali_roman': 'Iddhimanto jutimanto vaṇṇavanto yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'possessed of power, of radiance, of beauty and of renown,',
+            },
+            {
+                'number': 70,
+                'page': 179,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิติง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: ⚠ วิรุพหะโก IS PRINTED WITH พ, not ฬ. He
+            #   is Virūḷhaka, Great King of the South, and both the canon and
+            #   the roman twin have ḷ — twin verse 96 reads `Purimadisaṃ
+            #   dhataraṭṭho, dakkhiṇena viruḷhako`. ⚠ NOTE ALSO that page
+            #   178's own batch note asserted `page 179 gives วิรุฬหะโก`; the
+            #   photograph does NOT bear that out — this sheet gives พ. Read
+            #   from a 4.2× crop and confirmed a second time against the
+            #   neighbouring rows. Entered as this page prints it, romanised
+            #   `virubhako` by the same พ→b rule already used for
+            #   วิรุพโห→virubho and ทัพเหนะ→dabhena. The LONG ending -ako that
+            #   178 predicted IS correct; only the consonant differs.
+            # ‼ CHECK [IMG_0449.PNG]: ROWS 3 AND 15 ARE INDENTED on the sheet,
+            #   marking the start of a new group — the Four Great Kings named
+            #   together at row 3, and the nāga hosts at row 15. The indent is
+            #   the book's paragraphing; it carries no label, so nothing has
+            #   been added to the page blocks for it.
+            {
+                'number': 71,
+                'page': 179,
+                'pali': 'ปุริมะทิสัง ธะตะรัฏโฐ ทักขิเณนะ วิรุพหะโก',
+                'pali_roman': 'Purimadisaṃ dhataraṭṭho dakkhiṇena virubhako',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Dhataraṭṭha to the eastern quarter, Viruḷhaka to the south,',
+            },
+            {
+                'number': 72,
+                'page': 179,
+                'pali': 'ปัจฉิเมนะ วิรูปักโข กุเวโร อุตตะรัง ทิสัง.',
+                'pali_roman': 'Pacchimena virūpakkho kuvero uttaraṃ disaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Virūpakkha to the west, and Kuvera to the northern quarter.',
+            },
+            {
+                'number': 73,
+                'page': 179,
+                'pali': 'จัตตาโร เต มะหาราชา สะมันตา จะตุโร ทิสา',
+                'pali_roman': 'Cattāro te mahārājā samantā caturo disā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These four great kings, on every side, in the four directions,',
+            },
+            {
+                'number': 74,
+                'page': 179,
+                'pali': 'ทัททัลละมานา อัฏฐังสุ วะเน กาปิละวัตถะเว.',
+                'pali_roman': 'Daddallamānā aṭṭhaṃsu vane kāpilavatthave.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'stood there blazing, in the wood at Kapilavatthu.',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: อาคู IS SET WITH A LONG ู throughout
+            #   this sheet — verses 75, 80, 83, 84 and 85. The roman twin
+            #   agrees, reading `āgū` at each. This is the first time the word
+            #   enters the app, so the long ū is the precedent it sets.
+            {
+                'number': 75,
+                'page': 179,
+                'pali': 'เตสัง มายาวิโน ทาสา อาคู วัญจะนิกา สะฐา',
+                'pali_roman': 'Tesaṃ māyāvino dāsā āgū vañcanikā saṭhā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Their conjuring servants came too, deceivers and tricksters:',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   sets วิฏู จะ วิฏุโต — long ู on the first, and a PLAIN ต
+            #   closing the second, checked at 5× against the ฏ earlier in the
+            #   same word, which carries the loop this one lacks. The roman
+            #   copy sets `viṭuca viṭuṭo`: short u, the two words run
+            #   together, and a retroflex ṭ at the end. Entered as this page
+            #   prints it, `viṭū ca viṭuto`.
+            {
+                'number': 76,
+                'page': 179,
+                'pali': 'มายา กุเฏณฑุ เวเฏณฑุ วิฏู จะ วิฏุโต สะหะ.',
+                'pali_roman': 'Māyā kuṭeṇḍu veṭeṇḍu viṭū ca viṭuto saha.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Māyā, Kuṭeṇḍu and Veṭeṇḍu, Viṭū and Viṭuta with them.',
+            },
+            {
+                'number': 77,
+                'page': 179,
+                'pali': 'จันทะโน กามะเสฏโฐ จะ กินนุฆัณฑุ นิฆัณฑุ จะ',
+                'pali_roman': 'Candano kāmaseṭṭho ca kinnughaṇḍu nighaṇḍu ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Candana and Kāmaseṭṭha, Kinnughaṇḍu and Nighaṇḍu,',
+            },
+            {
+                'number': 78,
+                'page': 179,
+                'pali': 'ปะนาโท โอปะมัญโญ จะ เทวะสูโต จะ มาตะลิ.',
+                'pali_roman': 'Panādo opamañño ca devasūto ca mātali.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Panāda and Opamañña, and Mātali the charioteer of the devas.',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: ⚠ นะโพราชา IS PRINTED WITH พ, not ฬ —
+            #   the second ฬ→พ failure on this one sheet. He is Naḷa, and the
+            #   roman twin verse 104 reads `Cittaseno ca gandhabbo naḷo rājā
+            #   janosabho`. Read from a 4.2× crop; the glyph has no ascender
+            #   and is identical in shape to the พ of คันธัพโพ earlier in the
+            #   same row, while this same printing DOES set ฬ correctly at
+            #   verse 56 on page 178 (วิรุฬโห). The glyph is available to the
+            #   printer, so this is a setting failure and not a house
+            #   convention. Entered as printed, romanised `nabo rājā`. The
+            #   twin corroborates ชะโนสะโภ → janosabho.
+            {
+                'number': 79,
+                'page': 179,
+                'pali': 'จิตตะเสโน จะ คันธัพโพ นะโพราชา ชะโนสะโภ',
+                'pali_roman': 'Cittaseno ca gandhabbo nabo rājā janosabho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Cittasena the gandhabba, Naḷa the king, and Janosabha,',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   sets สุริยะวัจฉะสา, giving `suriyavacchasā` with จฉ = cch; the
+            #   roman copy sets `suriyavaccasā` with cc. Entered as this page
+            #   prints it.
+            {
+                'number': 80,
+                'page': 179,
+                'pali': 'อาคู ปัญจะสิโข เจวะ ติมพะรู สุริยะวัจฉะสา.',
+                'pali_roman': 'Āgū pañcasikho ceva timbarū suriyavacchasā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Pañcasikha came, and Timbarū, and Suriyavacchasā.',
+            },
+            {
+                'number': 81,
+                'page': 179,
+                'pali': 'เอเต จัญเญ จะ ราชาโน คันธัพพา สะหะ ราชุภิ',
+                'pali_roman': 'Ete caññe ca rājāno gandhabbā saha rājubhi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'These and other kings, gandhabbas together with their rulers,',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: ⚠ สะมิตัง IS PRINTED WITH ั HERE where
+            #   verses 70 and 86 on this SAME SHEET print สะมิติง, and where
+            #   every earlier occurrence of the refrain (verses 35, 38, 41,
+            #   44, 47, 55, 60, 65) has สะมิติง. The roman twin verse 107 has
+            #   `samitiṃ`. Read at 5× against the วะนัง of its own line, whose
+            #   ั is the same shape, and against the สะมิติง of rows 2 and 18.
+            #   The difference is real and on the page. Entered as printed,
+            #   `samitaṃ`; not normalised to its neighbours.
+            {
+                'number': 82,
+                'page': 179,
+                'pali': 'โมทะมานา อะภิกกามุง ภิกขูนัง สะมิตัง วะนัง.',
+                'pali_roman': 'Modamānā abhikkāmuṃ bhikkhūnaṃ samitaṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'came rejoicing to the wood, to the assembly of bhikkhus.',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: A WORD-DIVISION DIFFERENCE FROM THE
+            #   TWIN, letters identical. This sheet sets สะหะตัจฉะกา as one
+            #   word, giving `sahatacchakā`; the roman copy sets `saha
+            #   tacchakā` as two. Entered as this page prints it.
+            {
+                'number': 83,
+                'page': 179,
+                'pali': 'อะถาคู นาภะสา นาคา เวสาลา สะหะตัจฉะกา',
+                'pali_roman': 'Athāgū nābhasā nāgā vesālā sahatacchakā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then came the nāgas of Nābhasa, and those of Vesālī with the Tacchakas,',
+            },
+            {
+                'number': 84,
+                'page': 179,
+                'pali': 'กัมพะลัสสะตะรา อาคู ปายาคา สะหะ ญาติภิ.',
+                'pali_roman': 'Kambalassatarā āgū pāyāgā saha ñātibhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Kambalas and Assataras came, and those of Payāga with their kin.',
+            },
+            {
+                'number': 85,
+                'page': 179,
+                'pali': 'ยามูนา ธะตะรัฏฐา จะ อาคู นาคา ยะสัสสิโน',
+                'pali_roman': 'Yāmūnā dhataraṭṭhā ca āgū nāgā yasassino',
+                'thai': '',
+                'paiboon': '',
+                'english': "The nāgas of the Yamunā and of Dhataraṭṭha's line came too, nāgas of renown,",
+            },
+            {
+                'number': 86,
+                'page': 179,
+                'pali': 'เอราวัณโณ มะหานาโค โสปาคะ สะมิติง วะนัง.',
+                'pali_roman': 'Erāvaṇṇo mahānāgo sopāga samitiṃ vanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and Erāvaṇa the great nāga — he too came to the wood, to the assembly.',
+            },
+            {
+                'number': 87,
+                'page': 179,
+                'pali': 'เย นาคะราเช สะหะสา หะรันติ',
+                'pali_roman': 'Ye nāgarāje sahasā haranti',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Those who carry off the nāga kings by force,',
+            },
+            {
+                'number': 88,
+                'page': 179,
+                'pali': 'ทิพพา ทิชา ปักขิ วิสุทธะจักขู',
+                'pali_roman': 'Dibbā dijā pakkhi visuddhacakkhū',
+                'thai': '',
+                'paiboon': '',
+                'english': 'divine twice-born winged ones, of pure sight —',
+            },
+            {
+                'number': 89,
+                'page': 179,
+                'pali': 'เวหายะสา เต วะนะมัชฌะปัตตา',
+                'pali_roman': 'Vehāyasā te vanamajjhapattā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'through the air they came, and reached the middle of the wood:',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: THE CLUSTER MARK ON THIS SHEET IS
+            #   THANTHAKHAT ์, NOT YAMAKKAN ๎ — จิต์รา at verse 90 and
+            #   อุปะว์หะยันตา at verse 93. Checked at 5× against the ั of
+            #   อะภะยันตะทา one line above: the ั is a plain small hook, while
+            #   these marks carry the loop and rising tail of ์. That matches
+            #   the rest of this chant, which sets ์ throughout
+            #   (กะปิละวัตถุส์มิง, อุปะสังกะมิต์วา, ปะวะนัส์มิง, ตัต์ระ), so
+            #   the chant is internally consistent.
+            {
+                'number': 90,
+                'page': 179,
+                'pali': 'จิต์รา สุปัณณา อิติ เตสะนามัง.',
+                'pali_roman': 'Citrā supaṇṇā iti tesanāmaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Citrā and Supaṇṇā, these are their names.',
+            },
+            {
+                'number': 91,
+                'page': 179,
+                'pali': 'อะภะยันตะทา นาคะราชานะมาสิ',
+                'pali_roman': 'Abhayantadā nāgarājānamāsi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'But the nāga kings were made fearless then,',
+            },
+            {
+                'number': 92,
+                'page': 179,
+                'pali': 'สุปัณณะโต เขมะมะกาสิ พุทโธ',
+                'pali_roman': 'Supaṇṇato khemamakāsi buddho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'for the Buddha made them safe from the supaṇṇas;',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: ⚠ สัญหาหิ IS PRINTED WITH ญ where the
+            #   roman twin verse 118 has `Saṇhāhi` with ṇ, and it carries NO
+            #   cluster mark at all — where ṇh would want one. Read at 5× and
+            #   compared glyph-for-glyph with the ณ of สุปัณณา one line below:
+            #   the ณ sits on the baseline with small feet, while this glyph
+            #   hangs a full descender loop below it. It is ญ. Entered as
+            #   printed, `sañhāhi`.
+            {
+                'number': 93,
+                'page': 179,
+                'pali': 'สัญหาหิ วาจาหิ อุปะว์หะยันตา',
+                'pali_roman': 'Sañhāhi vācāhi upavhayantā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and calling upon one another with gentle words,',
+            },
+            # ‼ CHECK [IMG_0449.PNG]: A DIFFERENCE FROM THE TWIN. This sheet
+            #   sets สะระณะมะกังสุ with ก, giving `saraṇamakaṃsu`; the roman
+            #   copy sets `saraṇa-magaṃsu` with g. Here the THAI sheet agrees
+            #   with the canon — akaṃsu is the aorist of karoti — so the twin
+            #   is the copy at fault. Entered as this page prints it; the twin
+            #   has not been touched.
+            {
+                'number': 94,
+                'page': 179,
+                'pali': 'นาคา สุปัณณา สะระณะมะกังสุ พุทธัง.',
+                'pali_roman': 'Nāgā supaṇṇā saraṇamakaṃsu buddhaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'nāgas and supaṇṇas took the Buddha as their refuge.',
             },
         ],
     },
