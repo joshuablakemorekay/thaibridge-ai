@@ -1,0 +1,195 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 3,
+    "manifest": [
+      "abhaya-parittam-chet-tamnan",
+      "devata-uyyojana-gatha-chet-tamnan",
+      "jaya-parittam-chet-tamnan"
+    ],
+    "pages": [
+      {
+        "page": 172,
+        "file": "IMG_0442.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "abhaya-parittam-chet-tamnan",
+        "verses": "1-12",
+        "starts_here": true,
+        "note": "SINGLE column, twelve lines in three stanzas that differ only in พุทธา / ธัมมา / สังฆานุภาเวนะ. Profiled: no internal gutter, only the margins. Complete, and the same twelve as the page-98 printing."
+      },
+      {
+        "page": 172,
+        "file": "IMG_0442.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "devata-uyyojana-gatha-chet-tamnan",
+        "verses": "1-8",
+        "starts_here": true,
+        "note": "TWO COLUMNS, eight rows, gutter measured at x 958-1149. Complete. ⚠️ Its printed title is IDENTICAL to the page-98 entry's — see the checks."
+      },
+      {
+        "page": 172,
+        "file": "IMG_0442.PNG",
+        "script": "thai",
+        "columns": 2,
+        "chant": "jaya-parittam-chet-tamnan",
+        "verses": "1-3",
+        "starts_here": true,
+        "note": "TWO COLUMNS, three rows, gutter measured at x 843-1141 — a different corridor again from the block above it. The chant CONTINUES onto 173."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "abhaya-parittam-chet-tamnan",
+      "title_thai": "อะภะยะปะริตตัง",
+      "title_pali": "Abhayaparittaṃ",
+      "title_roman": "",
+      "title_english": "The Fearlessness Protection",
+      "page_start": 172,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written — the บทขัด the page-98 printing carries is not printed here.",
+        "units": "Twelve, one per printed line, three stanzas of four.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "Single column throughout; profiled rather than assumed, because both chants below it on this sheet are two-column.",
+        "pages": "IMG_0442.PNG, page 172."
+      },
+      "verses": [
+        {"number": 1, "page": 172, "pali": "ยันทุนนิมิตตัง อะวะมังคะลัญจะ", "pali_roman": "Yandunnimittaṃ avamaṅgalañca", "thai": "", "paiboon": "", "english": "Whatever ill omen or inauspicious thing there is,"},
+        {"number": 2, "pali": "โย จามะนาโป สะกุณัสสะ สัทโท", "pali_roman": "Yo cāmanāpo sakuṇassa saddo", "thai": "", "paiboon": "", "english": "whatever unpleasant cry of a bird,"},
+        {"number": 3, "pali": "ปาปัคคะโห ทุสสุปินัง อะกันตัง", "pali_roman": "Pāpaggaho dussupinaṃ akantaṃ", "thai": "", "paiboon": "", "english": "evil planet or unwelcome bad dream —"},
+        {"number": 4, "pali": "พุทธานุภาเวนะ วินาสะเมนตุ.", "pali_roman": "Buddhānubhāvena vināsamentu.", "thai": "", "paiboon": "", "english": "by the power of the Buddha may they come to nothing."},
+        {"number": 5, "pali": "ยันทุนนิมิตตัง อะวะมังคะลัญจะ", "pali_roman": "Yandunnimittaṃ avamaṅgalañca", "thai": "", "paiboon": "", "english": "Whatever ill omen or inauspicious thing there is,"},
+        {"number": 6, "pali": "โย จามะนาโป สะกุณัสสะ สัทโท", "pali_roman": "Yo cāmanāpo sakuṇassa saddo", "thai": "", "paiboon": "", "english": "whatever unpleasant cry of a bird,"},
+        {"number": 7, "pali": "ปาปัคคะโห ทุสสุปินัง อะกันตัง", "pali_roman": "Pāpaggaho dussupinaṃ akantaṃ", "thai": "", "paiboon": "", "english": "evil planet or unwelcome bad dream —"},
+        {"number": 8, "pali": "ธัมมานุภาเวนะ วินาสะเมนตุ.", "pali_roman": "Dhammānubhāvena vināsamentu.", "thai": "", "paiboon": "", "english": "by the power of the Dhamma may they come to nothing."},
+        {"number": 9, "pali": "ยันทุนนิมิตตัง อะวะมังคะลัญจะ", "pali_roman": "Yandunnimittaṃ avamaṅgalañca", "thai": "", "paiboon": "", "english": "Whatever ill omen or inauspicious thing there is,"},
+        {"number": 10, "pali": "โย จามะนาโป สะกุณัสสะ สัทโท", "pali_roman": "Yo cāmanāpo sakuṇassa saddo", "thai": "", "paiboon": "", "english": "whatever unpleasant cry of a bird,"},
+        {"number": 11, "pali": "ปาปัคคะโห ทุสสุปินัง อะกันตัง", "pali_roman": "Pāpaggaho dussupinaṃ akantaṃ", "thai": "", "paiboon": "", "english": "evil planet or unwelcome bad dream —"},
+        {"number": 12, "pali": "สังฆานุภาเวนะ วินาสะเมนตุ.", "pali_roman": "Saṅghānubhāvena vināsamentu.", "thai": "", "paiboon": "", "english": "by the power of the Sangha may they come to nothing."}
+      ],
+      "vocabulary": [
+        {"pali": "ทุนนิมิตตัง", "pali_roman": "dunnimittaṃ", "meaning": "an ill omen — the class of things this paritta is chanted against"},
+        {"pali": "ปาปัคคะโห", "pali_roman": "pāpaggaho", "meaning": "an evil planet or grasping influence; the astrological sense is meant, and the chant sets the Triple Gem against it"}
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0442.PNG",
+          "issue": "‼ THREE STANZAS DIFFERING IN ONE WORD EACH — พุทธานุภาเวนะ, ธัมมานุภาเวนะ, สังฆานุภาเวนะ at verses 4, 8 and 12, with the three preceding lines identical each time. All twelve lines were read separately at 2.6x rather than the first stanza being read and the other two assumed, because that is where a silent slip would hide and nothing downstream compares one verse to another."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0442.PNG",
+          "issue": "SINGLE COLUMN, profiled for this block alone — only the margins at x 273-640 and 1362-1849, no internal corridor. Worth measuring because both chants below it on this same sheet ARE two-column, with gutters at different positions again."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0442.PNG",
+          "issue": "ALREADY IN THE APP as abhaya-parittam-ekadasamam from page 98, with the same twelve verses and the title อะภะยะปะริตตัง เอกาทะสะมัง. This sheet titles it อะภะยะปะริตตัง with no qualifier. Entered as a second chant per the standing precedent; NOT abridged, the count matches."
+        }
+      ]
+    },
+    {
+      "id": "devata-uyyojana-gatha-chet-tamnan",
+      "title_thai": "เทวะตาอุยโยชะนะคาถา",
+      "title_pali": "Devatāuyyojanagāthā",
+      "title_roman": "",
+      "title_english": "The Verses for Dismissing the Devas",
+      "page_start": 172,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Eight, one per printed ROW read across both columns.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "Two columns, gutter measured at x 958-1149.",
+        "pages": "IMG_0442.PNG, page 172."
+      },
+      "verses": [
+        {"number": 1, "page": 172, "pali": "ทุกขัปปัตตา จะ นิททุกขา ภะยัปปัตตา จะ นิพภะยา", "pali_roman": "Dukkhappattā ca niddukkhā bhayappattā ca nibbhayā", "thai": "", "paiboon": "", "english": "May those who have come to suffering be free of suffering, those who have come to fear be free of fear,"},
+        {"number": 2, "pali": "โสกัปปัตตา จะ นิสโสกา โหนตุ สัพเพปิ ปาณิโน.", "pali_roman": "Sokappattā ca nissokā hontu sabbepi pāṇino.", "thai": "", "paiboon": "", "english": "and those who have come to sorrow be free of sorrow — may all living beings be so."},
+        {"number": 3, "pali": "เอตตาวะตา จะ อัมเหหิ สัมภะตัง ปุญญะสัมปะทัง", "pali_roman": "Ettāvatā ca amhehi sambhataṃ puññasampadaṃ", "thai": "", "paiboon": "", "english": "And in the merit we have gathered thus far,"},
+        {"number": 4, "pali": "สัพเพ เทวานุโมทันตุ สัพพะสัมปัตติสิทธิยา.", "pali_roman": "Sabbe devānumodantu sabbasampattisiddhiyā.", "thai": "", "paiboon": "", "english": "may all the devas rejoice, for the attainment of every blessing."},
+        {"number": 5, "pali": "ทานัง ทะทันตุ สัทธายะ สีลัง รักขันตุ สัพพะทา", "pali_roman": "Dānaṃ dadantu saddhāya sīlaṃ rakkhantu sabbadā", "thai": "", "paiboon": "", "english": "May they give gifts with faith and always guard their virtue,"},
+        {"number": 6, "pali": "ภาวะนาภิระตา โหนตุ คัจฉันตุ เทวะตาคะตา.", "pali_roman": "Bhāvanābhiratā hontu gacchantu devatāgatā.", "thai": "", "paiboon": "", "english": "may they delight in meditation, and may the devas who came now go."},
+        {"number": 7, "pali": "สัพเพ พุทธา พะลัปปัตตา ปัจเจกานัญจะ ยัง พะลัง", "pali_roman": "Sabbe buddhā balappattā paccekānañca yaṃ balaṃ", "thai": "", "paiboon": "", "english": "By the power attained by all the Buddhas, and the power of the Paccekabuddhas,"},
+        {"number": 8, "pali": "อะระหันตานัญจะ เตเชนะ รักขัง พันธามิ สัพพะโส.", "pali_roman": "Arahantānañca tejena rakkhaṃ bandhāmi sabbaso.", "thai": "", "paiboon": "", "english": "and by the might of the arahants, I bind a protection on every side."}
+      ],
+      "vocabulary": [
+        {"pali": "อุยโยชะนะ", "pali_roman": "uyyojana", "meaning": "dismissing, sending on their way. The devas invited at the start of the chanting are formally released at its end"},
+        {"pali": "รักขัง พันธามิ", "pali_roman": "rakkhaṃ bandhāmi", "meaning": "I bind a protection — the closing act of the paritta, spoken in the first person"}
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0442.PNG",
+          "issue": "‼‼ THE PRINTED TITLE IS IDENTICAL TO AN ENTRY ALREADY IN THE APP. devata-uyyojana-gatha at page 98 carries exactly เทวะตาอุยโยชะนะคาถา, with the same eight verses. Every other repeat in this section has differed in its title by a qualifier — เอกาทะสะมัง, ท์วาทะสะมัง and so on — and this one does not. It is still entered as a SECOND chant, because the book prints it twice on two different pages and the standing precedent is that both stay; the id is suffixed -chet-tamnan and title_thai is left exactly as printed. ⚠️ Worth Josh's eye: two chants now share a title_thai, which nothing in the app forbids but which no earlier pair does."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0442.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter MEASURED at 192px, x 958-1149, over this block alone. First pairing: ทุกขัปปัตตา จะ นิททุกขา + ภะยัปปัตตา จะ นิพภะยา."
+        }
+      ]
+    },
+    {
+      "id": "jaya-parittam-chet-tamnan",
+      "continues": true,
+      "title_thai": "ชะยะปะริตตัง",
+      "title_pali": "Jayaparittaṃ",
+      "title_roman": "",
+      "title_english": "The Victory Protection",
+      "page_start": 172,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written — the บทขัด the page-99 printing carries is not printed here.",
+        "units": "Three, one per printed ROW read across both columns.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "ปูเรต๎วา takes the yamakkan. Two columns, gutter measured at x 843-1141.",
+        "pages": "IMG_0442.PNG, page 172. CONTINUES onto 173."
+      },
+      "verses": [
+        {"number": 1, "page": 172, "pali": "มะหาการุณิโก นาโถ หิตายะ สัพพะปาณินัง", "pali_roman": "Mahākāruṇiko nātho hitāya sabbapāṇinaṃ", "thai": "", "paiboon": "", "english": "The Protector of great compassion, for the welfare of all beings,"},
+        {"number": 2, "pali": "ปูเรต๎วา ปาระมี สัพพา ปัตโต สัมโพธิมุตตะมัง", "pali_roman": "Pūretvā pāramī sabbā patto sambodhimuttamaṃ", "thai": "", "paiboon": "", "english": "having fulfilled all the perfections, attained the highest awakening."},
+        {"number": 3, "pali": "เอเตนะ สัจจะวัชเชนะ โหตุ เต ชะยะมังคะลัง.", "pali_roman": "Etena saccavajjena hotu te jayamaṅgalaṃ.", "thai": "", "paiboon": "", "english": "By this utterance of truth, may you have the blessing of victory."}
+      ],
+      "vocabulary": [
+        {"pali": "ชะยะมังคะลัง", "pali_roman": "jayamaṅgalaṃ", "meaning": "the blessing of victory — the refrain this paritta returns to, and what gives it its name"}
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0442.PNG",
+          "issue": "‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter MEASURED at 299px, x 843-1141 — a THIRD distinct corridor on this one sheet, after the Abhaya's none and the Devatā's 958-1149. Three blocks, three separate profiles, and no two the same. First pairing: มะหาการุณิโก นาโถ + หิตายะ สัพพะปาณินัง."
+        },
+        {
+          "verse": 3,
+          "file": "IMG_0442.PNG",
+          "issue": "THE SHEET ENDS ON A COMPLETE ROW at a full stop, so NO […] is marked. The page-99 printing runs to 18 verses, so page 173 should carry fifteen more."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "abhaya-parittam-chet-tamnan",
+      "devata-uyyojana-gatha-chet-tamnan"
+    ],
+    "not_started": [],
+    "continues": [
+      "jaya-parittam-chet-tamnan"
+    ],
+    "resume_from_page": 173,
+    "resume_from_file": "IMG_0443.PNG",
+    "resume_from": "jaya-parittam-chet-tamnan",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all twenty-three verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0442.PNG.",
+    "page_scan": "agrees — three rows, all page 172, one per chant. The Abhaya claims 1-12 and holds twelve; the Devatā claims 1-8 and holds eight; the Jaya claims 1-3 and holds three. Verse 1 of each carries page 172 and all three chants start on this sheet.",
+    "notes": "‼‼ TWO CHANTS NOW SHARE A title_thai. เทวะตาอุยโยชะนะคาถา is printed here with EXACTLY the title the page-98 entry already carries — every other repeat in this section has differed by a qualifier and this one does not. Entered as a second chant per the standing precedent, with the id suffixed and the title left as printed, but it is worth Josh's eye. ‼ THREE BLOCKS ON ONE SHEET, THREE SEPARATE PROFILES, NO TWO ALIKE — the Abhaya has no gutter, the Devatā's is at x 958-1149 and the Jaya's at x 843-1141. ⚠️ The Abhaya's three stanzas differ in one word each and all twelve lines were read separately rather than the first stanza being copied down. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
