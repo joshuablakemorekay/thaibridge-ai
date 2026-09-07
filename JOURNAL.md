@@ -3016,3 +3016,110 @@ Confidence reads as neutral; over-explaining reads as guilty.
   after it had been cut. The substantive calls — reject the short hero, keep the
   welcoming clause, don't add a justification page — were recommendations I
   accepted rather than decisions I reached on my own.
+
+---
+
+## 7 September 2026 — Finishing the book, and the 105 notes that never arrived
+
+**Type:** Milestone
+
+The Digital Chanting Book is fully transcribed. 305 chants, 5,181 verses, 321
+pages covering 1–325, and not one chant left half-entered. It's taken since
+30 July, one photographed sheet at a time.
+
+I came into this session having lost my place entirely, and asked how many
+pages were left — guessing 39. It wasn't 39. The note I keep had gone stale,
+which is the whole problem with a state file: it's true until you forget to
+update it. So we stopped trusting the note and derived the answer from the
+code, by diffing the pages the app serves against the pages the book has. That
+version can't lie, and it's now the first thing in the brief.
+
+### The rule the whole thing hangs off
+
+Everything here comes back to one instruction I keep repeating: what goes into
+the app must be exactly what the book prints, consistently.
+
+That's why nothing gets tidied. The book misprints things — it sets พ where the
+canon has ฬ in nine different words, punctuates the same repeated line three
+different ways on one sheet, spells สะมิตัง once and สะมิติง everywhere else. All
+of it goes in exactly as printed, with a note saying what I saw and which
+photograph I saw it on. There are 2,116 of those notes.
+
+The ฬ/พ question is settled, and I'm glad we didn't guess. The printer *has* the
+letter — the same book sets it correctly in the same words elsewhere, sometimes
+on the page immediately before. A setting fault, not a house style.
+
+Partway through I stopped wanting each finding raised as it appeared and asked
+for them to be batched up instead, to be worked through once the pages were all
+in. That was the right call: the interruptions were costing more than the
+findings were worth mid-run, and none of them were lost — they go into the
+batch file either way.
+
+### The bug that failed silently for the whole book
+
+Mid-run we found 105 of those notes had never reached the file. The writer puts
+chant-level notes at the top of a chant's entry, but that step only runs when a
+chant is *first added* — and most pages continue a chant that's already there.
+So every chant-level note on every continuing page was read off a photograph,
+written into its batch file, and dropped on the way in.
+
+Nothing broke. The file imported, the tests passed, the page checker compares
+verses and blocks and never looks at comments. It was found by counting batch
+files against the file they'd been applied to — by reading, not by tooling.
+
+**What I learned:** the errors that survive are the ones nothing is watching.
+Every gate I had checked output against output. None checked that something I'd
+deliberately written down still existed. I chose not to backfill the 105 — they
+are safe in the batch files, and rewriting applied history to insert comments
+risked more than it recovered — but the script is fixed and the tests now fail
+loudly if it recurs.
+
+### Measuring instead of looking
+
+Two-column pages are the dangerous ones: get the split wrong and you don't get a
+mess, you get plausible-looking Pali in the wrong order. So the gutter is found
+by counting ink down each pixel column, never by eye. On four consecutive sheets
+of *one* chant by *one* printer it measured 251px, 165px, 248px and 216px.
+
+Page 182 was the sharpest lesson. A whole-page scan found no gap at all — which
+reads as "one column" — and the page is plainly two. The centred colophon at the
+foot spans the gutter and closes it. Measuring the two-column block alone found
+it at once. Page 170 had set the same trap with a centred title.
+
+### Where it actually stands
+
+My bar for this was always that the main content of every page is in exactly as
+the book has it. Mostly yes, with one honest hole. Nine pages — 1, 23, 27, 28
+and 217–221 — went in before this photograph-by-photograph process existed and
+have never been checked against their photos. Everything else was read from a
+magnified crop of its own sheet. That's the next job.
+
+The rest isn't fidelity, it's polish: 288 chants still need commentary, and the
+English, the romanised Pali and the Paiboon are drafts I haven't verified. The
+chanted text is the book's. The translations are not yet.
+
+**Engineering Contribution**
+
+- *Decisions made:* Fixed the dropped-notes bug but chose **not** to backfill
+  the 105 — preserved in the batch files, and rewriting applied history to
+  insert comments risked more than it recovered. Made the page checker **fail**
+  on an unexplained gap rather than only report one: a page silently dropped
+  from the app leaves no other trace, because there's no row left to disagree
+  with.
+- *Improvements made to generated code:* `apply_batch --dry-run` used to stop
+  before doing the work, so it could never show whether page-level notes would
+  land — exactly the blind spot that lost the 105. It now runs the full job and
+  declines to write, so the rehearsal covers the same ground as the real thing.
+  Taught `check_pages` which four page numbers are blank versos and why, with
+  the evidence beside them, because I'd queued all four as sheets of work this
+  morning before ruling them out from the photo map.
+- *Roughly how much was accepted as-is vs engineered on:* The page-reading is
+  mechanical and mostly went in as produced. The tooling changes did not — both
+  came out of watching the process fail rather than from a brief, and both
+  landed with tests written against the failure first. Tests 1,353 → 1,362.
+
+**References / Conversations**
+`docs/chanting-book-next-session.md` (the brief, rewritten to lead with
+completion), `docs/chanting-book-photo-map.md` (the offset arithmetic proving
+the four gaps are blanks), `prompts/chanting-book-batch/` (the prompt, its
+reasoning, and 262 batch files).
