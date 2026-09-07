@@ -60534,6 +60534,210 @@ CHANTS = [
             },
         ],
     },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CHECK [IMG_0429.PNG]: ‼‼ TWO-COLUMN READING, PLEASE CONFIRM. The
+        #   gutter was MEASURED before a word was read: a white corridor 220px
+        #   wide running x 876-1095 through the whole gatha block, with ink
+        #   from x 300 to 876 on the left and x 1095 to 1544 on the right.
+        #   Every row is read ACROSS the gutter. First pairing: อะนุตตะรัง
+        #   อะภิสัมโพธิง + สัมพุชฌิต๎วา ตะถาคะโต,. The honest test was applied
+        #   — read straight down the left column alone it gives eight
+        #   unfinished half-lines, and read across it gives coherent Pali.
+        #   Eight rows, eight verses.
+        # ‼ CHECK [IMG_0429.PNG]: NO INVITATION IS PRINTED as a separate line,
+        #   and none has been written. The gatha's last row ends ภะณามะ เส.,
+        #   which is the invitation formula folded into the verse itself — the
+        #   same shape this book uses for other บทขัด. Recorded so the empty
+        #   invitation is read as a fact rather than a gap.
+        # ‼ CHECK [IMG_0429.PNG]: title_roman IS PAIBOON+ OF THE THAI TITLE,
+        #   matching all twelve บทขัด entries already in the app. ⚠️ The
+        #   book's สารบัญ was NOT consulted for this title — it is not on this
+        #   sheet — so if the contents page romanises it differently the
+        #   contents should win, per the rule pages 195 onward established.
+        'id': 'bot-khat-dhammacakkappavattana-suttam',
+        'title_thai': 'บทขัด ธัมมะจักกัปปะวัตตะนะสุตตัง',
+        'title_pali': '',
+        'title_roman': 'bòt-kàt tam-má-jàk-gàp-bpà-wát-dtà-ná-sùt-dtaŋ',
+        'title_english': 'The Preliminary Chant to the Discourse on Setting the Wheel of Dhamma Rolling',
+        'page_start': 159,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 159,
+                'pali': 'อะนุตตะรัง อะภิสัมโพธิง สัมพุชฌิต๎วา ตะถาคะโต,',
+                'pali_roman': 'Anuttaraṃ abhisambodhiṃ sambujjhitvā tathāgato,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Tathāgata, having fully awakened to the unsurpassed perfect enlightenment,',
+            },
+            # ‼ CHECK [IMG_0429.PNG]: อะเทเสสิ was misread as อะเทเทสิ at page
+            #   scale and corrected at 4.6x, where the third consonant is
+            #   plainly ส. Recorded because the two differ by one letter and
+            #   the wrong one would have produced a word that does not exist.
+            # ‼ CHECK [IMG_0429.PNG]: ‼ THIS ROW ENDS WITH NO PUNCTUATION
+            #   where six of the other seven end with a comma and the last
+            #   with a full stop. ธัมมะจักกัง อะนุตตะรัง simply stops. Read at
+            #   3.0x. Reproduced as printed.
+            {
+                'number': 2,
+                'pali': 'ปะฐะมัง ยัง อะเทเสสิ ธัมมะจักกัง อะนุตตะรัง',
+                'pali_roman': 'Paṭhamaṃ yaṃ adesesi dhammacakkaṃ anuttaraṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'first taught that unsurpassed Wheel of Dhamma,',
+            },
+            {
+                'number': 3,
+                'pali': 'สัมมะเทวะ ปะวัตเตนโต โลเก อัปปะฏิวัตติยัง,',
+                'pali_roman': 'Sammadeva pavattento loke appaṭivattiyaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'setting it rolling rightly, unstoppable in the world,',
+            },
+            {
+                'number': 4,
+                'pali': 'ยัตถากขาตา อุโภ อันตา ปะฏิปัตติ จะ มัชฌิมา,',
+                'pali_roman': 'Yatthākkhātā ubho antā paṭipatti ca majjhimā,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'wherein both extremes are declared, and the middle way of practice,',
+            },
+            {
+                'number': 5,
+                'pali': 'จะตูส๎วาริยะสัจเจสุ วิสุทธัง ญาณะทัสสะนัง,',
+                'pali_roman': 'Catūsvāriyasaccesu visuddhaṃ ñāṇadassanaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and the purified knowledge and vision of the four noble truths,',
+            },
+            {
+                'number': 6,
+                'pali': 'เทสิตัง ธัมมะราเชนะ สัมมาสัมโพธิกิตตะนัง,',
+                'pali_roman': 'Desitaṃ dhammarājena sammāsambodhikittanaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'taught by the King of Dhamma, proclaiming his perfect enlightenment,',
+            },
+            {
+                'number': 7,
+                'pali': 'นาเมนะ วิสสุตัง สุตตัง ธัมมะจักกัปปะวัตตะนัง,',
+                'pali_roman': 'Nāmena vissutaṃ suttaṃ dhammacakkappavattanaṃ,',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the discourse renowned by the name Dhammacakkappavattana —',
+            },
+            {
+                'number': 8,
+                'pali': 'เวยยากะระณะปาเฐนะ สังคีตันตัมภะณามะ เส.',
+                'pali_roman': 'Veyyākaraṇapāṭhena saṅgītantambhaṇāma se.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'let us now recite it, as it was rehearsed, in the manner of a prose exposition.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 3; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0429.PNG]: TWO NUMBERED FOOTNOTES sit under a rule at
+        #   the foot, and they are DIFFERENT KINDS. ‼ FOOTNOTE 1, keyed to a
+        #   superscript after วิหะระติ in verse 1, is a canonical citation —
+        #   วิ. มหา. 4/17-23 — and goes in source_printed. ‼ FOOTNOTE 2, keyed
+        #   after เสวิตัพพา. in verse 2, is an EDITORIAL NOTE about a variant
+        #   reading and is deliberately NOT filed as a source: it reads
+        #   สพฺพตฺถ "กตเม เท๎ว" ติปทท๎วยํ ทิสฺสติ. — roughly, everywhere the
+        #   phrase "katame dve" is found. Recorded here in full per the rule
+        #   that an editorial note never enters source_printed.
+        # ‼ CHECK [IMG_0429.PNG]: ‼ FOOTNOTE 2 MIXES PHINTHU AND YAMAKKAN IN
+        #   ONE LINE. Read at 5x: สพฺพตฺถ and ทิสฺสติ take the PHINTHU, the
+        #   subscript dot, while เท๎ว and ท๎วยํ take the YAMAKKAN above — and
+        #   the body of this page uses yamakkan throughout. The book's
+        #   footnote face has used phinthu before, on pages 93 and 107, but
+        #   this is the first place BOTH appear together. ⚠️ One mark in
+        #   ติปทท๎วยํ could not be resolved even at 5x — there may be a
+        #   phinthu on the first ท that the print has filled in. The footnote
+        #   is quoted here rather than stored, so nothing downstream depends
+        #   on it, but it is worth Josh's eye with the book open.
+        # ‼ CHECK [IMG_0429.PNG]: THE SUTTA IS SET IN ONE COLUMN, and the two-
+        #   column setting stops at the บทขัด's last row. The change was
+        #   checked by re-profiling the ink below the gatha: no gutter, ink
+        #   filling the measure from x 300 to 1899. Recorded because a column
+        #   change part way down a page is the failure this prompt warns
+        #   hardest about.
+        # ‼ CHECK [IMG_0429.PNG]: english_unverified is set on both chants.
+        #   The book prints Pali only on this sheet, with no Thai translation
+        #   anywhere, so thai and paiboon are "" throughout and the English is
+        #   a working translation made for this edition.
+        'id': 'dhammacakkappavattana-suttam',
+        'title_thai': 'ธัมมะจักกัปปะวัตตะนะสุตตัง',
+        'title_pali': 'Dhammacakkappavattanasuttaṃ',
+        'title_roman': '',
+        'title_english': 'The Discourse on Setting the Wheel of Dhamma Rolling',
+        'page_start': 159,
+        'source_printed': 'วิ. มหา. 4/17-23',
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            # ‼ CHECK [IMG_0429.PNG]: THE FOOTNOTE MARKER SITS INSIDE THE
+            #   SENTENCE, after วิหะระติ and before อิสิปะตะเน, not at the end
+            #   of it. The marker itself is not stored in the pali layer; the
+            #   citation it points to is in source_printed. Recorded so the
+            #   marker's position is not lost.
+            {
+                'number': 1,
+                'page': 159,
+                'pali': 'เอวัมเม สุตัง. เอกัง สะมะยัง ภะคะวา พาราณะสิยัง วิหะระติ อิสิปะตะเน มิคะทาเย. ตัต๎ระ โข ภะคะวา ปัญจะวัคคิเย ภิกขู อามันเตสิ.',
+                'pali_roman': 'Evamme sutaṃ. Ekaṃ samayaṃ bhagavā bārāṇasiyaṃ viharati isipatane migadāye. Tatra kho bhagavā pañcavaggiye bhikkhū āmantesi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Thus have I heard. At one time the Blessed One was dwelling at Bārāṇasī, in the deer park at Isipatana. There the Blessed One addressed the group of five monks.',
+            },
+            # ‼ CHECK [IMG_0429.PNG]: ‼ อะนัตถะสัญ๎หิโต IS PRINTED WITH THE
+            #   CLUSTER MARK AT ITS FIRST APPEARANCE AND WITHOUT IT AT ITS
+            #   SECOND, in consecutive sentences of the same paragraph. Both
+            #   read at 4.6x and compared directly: the mark sits plainly
+            #   above ญ in the first and is plainly absent in the second.
+            #   Reproduced exactly as printed, neither harmonised. This is the
+            #   same behaviour page 106 showed with ตุย์หัง / ตุยหัง and page
+            #   102 before it — the printer does not apply the mark
+            #   consistently.
+            {
+                'number': 2,
+                'pali': 'เท๎วเม ภิกขะเว อันตา ปัพพะชิเตนะ นะ เสวิตัพพา. โย จายัง กาเมสุ กามะสุขัลลิกานุโยโค หีโน คัมโม โปถุชชะนิโก อะนะริโย อะนัตถะสัญ๎หิโต. โย จายัง อัตตะกิละมะถานุโยโค ทุกโข อะนะริโย อะนัตถะสัญหิโต.',
+                'pali_roman': 'Dveme bhikkhave antā pabbajitena na sevitabbā. Yo cāyaṃ kāmesu kāmasukhallikānuyogo hīno gammo pothujjaniko anariyo anatthasañhito. Yo cāyaṃ attakilamathānuyogo dukkho anariyo anatthasañhito.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'There are these two extremes, monks, that should not be followed by one who has gone forth. There is this pursuit of sensual happiness in sensual pleasures, which is low, coarse, the way of ordinary people, ignoble, and brings no good. And there is this pursuit of self-mortification, which is painful, ignoble, and brings no good.',
+            },
+            {
+                'number': 3,
+                'pali': 'เอเต เต ภิกขะเว อุโภ อันเต อะนุปะคัมมะ, มัชฌิมา ปะฏิปะทา ตะถาคะเตนะ อะภิสัมพุทธา, จักขุกะระณี ญาณะกะระณี, อุปะสะมายะ อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.',
+                'pali_roman': 'Ete te bhikkhave ubho ante anupagamma, majjhimā paṭipadā tathāgatena abhisambuddhā, cakkhukaraṇī ñāṇakaraṇī, upasamāya abhiññāya sambodhāya nibbānāya saṃvattati.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Avoiding both these extremes, monks, the middle way discovered by the Tathāgata gives rise to vision and to knowledge, and leads to peace, to direct knowledge, to enlightenment, to Nibbāna.',
+            },
+        ],
+    },
 ]
 
 
@@ -63202,6 +63406,32 @@ PAGE_BLOCKS = [
                 'major': True,
                 'thai': 'ธัมมานุปัสสะนาสะติปัฏฐานัง',
                 'english': 'The Establishing of Mindfulness through Contemplation of Mind-Objects.',
+                'english_unverified': True,
+            },
+        ],
+    },
+    # ── Page 159 ───────────────────────────────────────────────────
+    # Written from batch-159-159.json.
+    {
+        'page': 159,
+        'blocks': [
+            {
+                'type': 'heading',
+                'major': True,
+                'thai': 'พระสูตร พระปริตร พระปาฐะ',
+                'english': 'The Suttas, the Parittas and the Passages.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'prose',
+                'thai': 'ที่กำหนดสวดในวันโกน วันพระ เวลาเย็น',
+                'english': 'Appointed for chanting on the eve of the observance day and on the observance day, in the evening.',
+                'english_unverified': True,
+            },
+            {
+                'type': 'heading',
+                'thai': 'พระสูตรที่กำหนดสวดในวันขึ้น 7 ค่ำ',
+                'english': 'The sutta appointed for chanting on the seventh day of the waxing moon.',
                 'english_unverified': True,
             },
         ],
