@@ -62890,7 +62890,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 4; the rest is not in the app yet.
         # ‼ CHECK [IMG_0439.PNG]: ‼ THE PRINTED TITLE SAYS SO ITSELF —
         #   ธะชัคคะปะริตตัง (แบบย่อ), abridged form, with the bracket printed.
         #   Reproduced in title_thai exactly. The page-90 printing is titled
@@ -62929,6 +62928,7 @@ CHANTS = [
             'paiboon': '',
             'english': '',
         },
+        'source_printed': 'สํ. ส. 15/320-223',
         'verses': [
             {
                 'number': 1,
@@ -62971,13 +62971,246 @@ CHANTS = [
             #   อะนุสสะระตัง, with the sheet simply ending. […] is marked in
             #   pali and pali_roman and the english stops with it. Page 170
             #   must COMPLETE this verse.
+            # ‼ COMPLETED FROM p169: this line was cut by the page break and
+            #   is now whole. Was: มะมัง หิ โว ภิกขะเว อะนุสสะระตัง […]
+            # ‼ CHECK [IMG_0440.PNG]: PAGE 170 — ‼ TWO-COLUMN READING, PLEASE
+            #   CONFIRM, for verses 6-13. The gatha block's gutter was
+            #   MEASURED at 249px, x 864-1112, and the prose block above it
+            #   profiled SEPARATELY and found to have none. Every gatha row
+            #   read ACROSS. First pairing: อะรัญเญ รุกขะมูเล วา + สุญญาคาเร
+            #   วะ ภิกขะโว.
+            # ‼ CHECK [IMG_0440.PNG]: PAGE 170 — THE CHANT ENDS HERE at 13
+            #   verses and its ‼ CONTINUES marker comes off. THE FOOTNOTE IS A
+            #   CANONICAL CITATION and goes in source_printed: สํ. ส.
+            #   15/320-223, numbered 1 under a rule at the foot. ⚠️ It is the
+            #   same reference the page-90 printing carries, though that entry
+            #   stores it without the space after สํ.
+            # ‼ CHECK [IMG_0440.PNG]: COMPLETES THE LINE PAGE 169 CUT. That
+            #   sheet ended …ภิกขะเว อะนุสสะระตัง […] and this one opens
+            #   ยัมภะวิสสะติ. The verse keeps page 169 and carries no page
+            #   key. ⚠️ THIS CLAUSE IS CORRECT HERE. โน เจ ธัมมัง … อะถะ
+            #   สังฆัง belongs to the DHAMMA paragraph, which this is. Page
+            #   169's BUDDHA paragraph printed the identical clause, where the
+            #   canon and the page-90 printing have โน เจ มัง … อะถะ ธัมมัง.
+            #   So the book prints the sentence twice: rightly here, and
+            #   apparently mis-set there. That comparison is what makes the
+            #   page-169 finding trustworthy rather than a guess.
+            # ‼ CHECK [IMG_0440.PNG]: ⚠️ I FIRST GAVE THIS COMPLETING VERSE
+            #   page: 170 AND check_pages REFUSED IT — 'verse 4 is printed on
+            #   page 169 but the app puts it on page 170'. A completing verse
+            #   belongs to the page its paragraph BEGAN on and must carry NO
+            #   page key; the page map gets a row for the earlier page
+            #   instead. That is the rule page 137 established the expensive
+            #   way, and the check caught the slip immediately. Recorded
+            #   because the mistake is invisible in the rendered page and only
+            #   check_pages sees it.
             {
                 'number': 4,
-                'pali': 'มะมัง หิ โว ภิกขะเว อะนุสสะระตัง […]',
-                'pali_roman': 'Mamaṃ hi vo bhikkhave anussarataṃ […]',
+                'pali': 'มะมัง หิ โว ภิกขะเว อะนุสสะระตัง ยัมภะวิสสะติ ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส วา โส ปะหิยยิสสะติ โน เจ ธัมมัง อะนุสสะเรยยาถะ อะถะ สังฆัง อะนุสสะเรยยาถะ.',
+                'pali_roman': 'Mamaṃ hi vo bhikkhave anussarataṃ yambhavissati bhayaṃ vā chambhitattaṃ vā lomahaṃso vā so pahiyyissati no ce dhammaṃ anussareyyātha atha saṅghaṃ anussareyyātha.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'For, monks, when you recollect […]',
+                'english': 'For, monks, when you recollect this, whatever fear or terror or standing of the hair may arise will be abandoned. If you do not recollect the Dhamma, then recollect the Sangha.',
+            },
+            {
+                'number': 5,
+                'page': 170,
+                'pali': 'สุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, อุชุปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, ญายะปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ, สามีจิปะฏิปันโน ภะคะวะโต สาวะกะสังโฆ. ยะทิทัง. จัตตาริ ปุริสะยุคานิ, อัฏฐะ ปุริสะปุคคะลา, เอสะ ภะคะวะโต สาวะกะสังโฆ, อาหุเนยโย ปาหุเนยโย, ทักขิเณยโย, อัญชะลีกะระณีโย, อะนุตตะรัง ปุญญักเขตตัง โลกัสสาติ.',
+                'pali_roman': 'Supaṭipanno bhagavato sāvakasaṅgho, ujupaṭipanno bhagavato sāvakasaṅgho, ñāyapaṭipanno bhagavato sāvakasaṅgho, sāmīcipaṭipanno bhagavato sāvakasaṅgho. Yadidaṃ. Cattāri purisayugāni, aṭṭha purisapuggalā, esa bhagavato sāvakasaṅgho, āhuneyyo pāhuneyyo, dakkhiṇeyyo, añjalikaraṇīyo, anuttaraṃ puññakkhettaṃ lokassāti.',
+                'thai': '',
+                'paiboon': '',
+                'english': "The Sangha of the Blessed One's disciples has practised well, has practised straightly, has practised rightly, has practised properly — that is, the four pairs of persons, the eight kinds of individuals. This Sangha of the Blessed One's disciples is worthy of gifts, of hospitality, of offerings, of reverential salutation; it is the unsurpassed field of merit for the world.",
+            },
+            {
+                'number': 6,
+                'pali': 'อะรัญเญ รุกขะมูเล วา สุญญาคาเร วะ ภิกขะโว',
+                'pali_roman': 'Araññe rukkhamūle vā suññāgāre va bhikkhavo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'In the forest, at the root of a tree, or in an empty dwelling, monks,',
+            },
+            {
+                'number': 7,
+                'pali': 'อะนุสสะเรถะ สัมพุทธัง ภะยัง ตุมหากะ โน สิยา.',
+                'pali_roman': 'Anussaretha sambuddhaṃ bhayaṃ tumhāka no siyā.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'recollect the Perfectly Awakened One, and no fear will be yours.',
+            },
+            {
+                'number': 8,
+                'pali': 'โน เจ พุทธัง สะเรยยาถะ โลกะเชฏฐัง นะราสะภัง',
+                'pali_roman': 'No ce buddhaṃ sareyyātha lokajeṭṭhaṃ narāsabhaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If you do not recollect the Buddha, chief of the world, bull among men,',
+            },
+            {
+                'number': 9,
+                'pali': 'อะถะ ธัมมัง สะเรยยาถะ นิยยานิกัง สุเทสิตัง.',
+                'pali_roman': 'Atha dhammaṃ sareyyātha niyyānikaṃ sudesitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then recollect the Dhamma, leading out, well proclaimed.',
+            },
+            # ‼ CHECK [IMG_0440.PNG]: นิยยานิกัง สุเทสิตัง. IS PRINTED TWICE,
+            #   at the end of verse 9 and again at the end of verse 10, both
+            #   with full stops. That is correct — it is the object of then-
+            #   recollect-the-Dhamma and then the subject of if-not-the-Dhamma
+            #   — but two identical consecutive half-lines look like a
+            #   duplication, so it is recorded. Both read separately at 3.2x.
+            {
+                'number': 10,
+                'pali': 'โน เจ ธัมมัง สะเรยยาถะ นิยยานิกัง สุเทสิตัง.',
+                'pali_roman': 'No ce dhammaṃ sareyyātha niyyānikaṃ sudesitaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'If you do not recollect the Dhamma, leading out, well proclaimed,',
+            },
+            {
+                'number': 11,
+                'pali': 'อะถะ สังฆัง สะเรยยาถะ ปุญญักเขตตัง อะนุตตะรัง.',
+                'pali_roman': 'Atha saṅghaṃ sareyyātha puññakkhettaṃ anuttaraṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'then recollect the Sangha, the unsurpassed field of merit.',
+            },
+            {
+                'number': 12,
+                'pali': 'เอวัมพุทธัง สะรันตานัง ธัมมัง สังฆัญจะ ภิกขะโว',
+                'pali_roman': 'Evambuddhaṃ sarantānaṃ dhammaṃ saṅghañca bhikkhavo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For those who thus recollect the Buddha, the Dhamma and the Sangha, monks,',
+            },
+            {
+                'number': 13,
+                'pali': 'ภะยัง วา ฉัมภิตัตตัง วา โลมะหังโส นะ เหสสะตีติ.',
+                'pali_roman': 'Bhayaṃ vā chambhitattaṃ vā lomahaṃso na hessatīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'no fear, no terror, no standing of the hair will there be.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 9; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0440.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. ⚠️ THE
+        #   GUTTER NEEDED MEASURING TWICE. A first profile over y 1800-2480
+        #   found only a 59px gap at x 1057-1115 and no real corridor, because
+        #   the CENTRED BOLD TITLE bridges the gutter and was inside the
+        #   window. Re-profiled over y 1810-2470, below the title, the true
+        #   corridor appears: x 791-1000, 210px. Left column 300-791, right
+        #   column 1115-1567. Recorded because a centred heading inside the
+        #   measuring window will hide a gutter and make a two-column page
+        #   look like one column, which is the worst mistake available on
+        #   these pages.
+        # ‼ CHECK [IMG_0440.PNG]: ‼ ALREADY IN THE APP TWICE — as atanatiya-
+        #   parittam-atthamam from page 92 (90 verses, titled
+        #   อาฏานาฏิยะปะริตตัง อัฏฐะมัง) and as atanatiya-parittam-yo from
+        #   page 274 (6 verses, titled อาฏานาฏิยะปะริตตัง (ย่อ)). This sheet
+        #   titles it อาฏานาฏิยะปะริตตัง with no qualifier at all, which is a
+        #   third distinct title. Entered as a third chant per the standing
+        #   precedent.
+        # ‼ CHECK [IMG_0440.PNG]: title_pali IS TAKEN FROM THE BOOK'S OWN
+        #   สารบัญ, which gives Āṭānāṭiyaparittaṃ for this title. Checked
+        #   against chanting._CONTENTS_ROMAN before writing, after page 169's
+        #   Dhajagga title was refused by tests/test_contents_roman.py for
+        #   being IAST where the contents gives Paiboon.
+        'id': 'atanatiya-parittam-chet-tamnan',
+        'title_thai': 'อาฏานาฏิยะปะริตตัง',
+        'title_pali': 'Āṭānāṭiyaparittaṃ',
+        'title_roman': '',
+        'title_english': 'The Āṭānāṭiya Protection',
+        'page_start': 170,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 170,
+                'pali': 'วิปัสสิสสะ นะมัตถุ จักขุมันตัสสะ สิรีมะโต',
+                'pali_roman': 'Vipassissa namatthu cakkhumantassa sirīmato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to Vipassī, possessed of vision and glory.',
+            },
+            {
+                'number': 2,
+                'pali': 'สิขิสสะปิ นะมัตถุ สัพพะภูตานุกัมปิโน.',
+                'pali_roman': 'Sikhissapi namatthu sabbabhūtānukampino.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage also to Sikhī, compassionate towards all beings.',
+            },
+            {
+                'number': 3,
+                'pali': 'เวสสะภุสสะ นะมัตถุ น๎หาตะกัสสะ ตะปัสสิโน',
+                'pali_roman': 'Vessabhussa namatthu nhātakassa tapassino',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to Vessabhū, cleansed and ardent.',
+            },
+            {
+                'number': 4,
+                'pali': 'นะมัตถุ กะกุสันธัสสะ มาระเสนัปปะมัททิโน.',
+                'pali_roman': 'Namatthu kakusandhassa mārasenappamaddino.',
+                'thai': '',
+                'paiboon': '',
+                'english': "Homage to Kakusandha, crusher of Māra's host.",
+            },
+            {
+                'number': 5,
+                'pali': 'โกนาคะมะนัสสะ นะมัตถุ พ๎ราห๎มะณัสสะ วุสีมะโต',
+                'pali_roman': 'Konāgamanassa namatthu brāhmaṇassa vusīmato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to Koṇāgamana, the brahmin who has lived the life.',
+            },
+            {
+                'number': 6,
+                'pali': 'กัสสะปัสสะ นะมัตถุ วิปปะมุตตัสสะ สัพพะธิ.',
+                'pali_roman': 'Kassapassa namatthu vippamuttassa sabbadhi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to Kassapa, wholly released in every way.',
+            },
+            {
+                'number': 7,
+                'pali': 'อังคีระสัสสะ นะมัตถุ สัก๎ยะปุตตัสสะ สิรีมะโต',
+                'pali_roman': 'Aṅgīrasassa namatthu sakyaputtassa sirīmato',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Homage to Aṅgīrasa, the glorious son of the Sakyans,',
+            },
+            {
+                'number': 8,
+                'pali': 'โย อิมัง ธัมมะมะเทเสสิ สัพพะทุกขา ปะนูทะนัง.',
+                'pali_roman': 'Yo imaṃ dhammamadesesi sabbadukkhā panūdanaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'who taught this Dhamma, the dispelling of all suffering.',
+            },
+            # ‼ CHECK [IMG_0440.PNG]: THE SHEET ENDS ON A COMPLETE ROW, with
+            #   the footnote rule below the left column, so NO […] is marked.
+            #   The stanza runs on and page 171 should open with its second
+            #   half.
+            {
+                'number': 9,
+                'pali': 'เย จาปิ นิพพุตา โลเก ยะถาภูตัง วิปัสสิสุง',
+                'pali_roman': 'Ye cāpi nibbutā loke yathābhūtaṃ vipassisuṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And those who are quenched in the world, who saw things as they are,',
             },
         ],
     },
