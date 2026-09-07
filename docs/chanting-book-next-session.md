@@ -1,7 +1,7 @@
 # Chanting book — next session
 
 Paste-ready brief for picking this work up cold. Updated 2026-09-07 after page
-179 went in.
+182 went in and **the first pass reached the end of the book**.
 
 ## Read first, in this order
 
@@ -21,38 +21,65 @@ python -c "import chanting; r,_=chanting.build_page_index(); p=sorted({x['page']
 grep -n "^\s*# ‼ CONTINUES" chanting.py      # what is still half in
 ```
 
-As of 2026-09-07: **305 chants across 318 pages.** The gaps are
-**180–182, 192, 246, 248 and 278** — SEVEN sheets in all, and 180 is the live
-edge of a run, not a hole. The four after it (192, 246, 248, 278) are orphan
-sheets scattered through parts of the book that are otherwise complete.
+## ✅ THE TRANSCRIPTION IS COMPLETE — 2026-09-07
 
-**ONE chant carries a live `‼ CONTINUES` marker**, and it is the only work
-front left:
+As of 2026-09-07: **305 chants across 321 pages, spanning 1–325.**
 
-| chant | last verse in | resumes at |
-|---|---|---|
-| `mahasamaya-suttam` (the Thai printing) | 94, page 179 | **page 180 = IMG_0451** |
+**There is no page left to enter, and no chant is half-entered.** Page 182 went
+in on 2026-09-07, closing the Mahāsamaya Sutta and taking the LAST
+`‼ CONTINUES` marker off the file. `grep -c "# ‼ CONTINUES:" chanting.py`
+returns **0**.
 
-Note the id is `mahasamaya-suttam`, not `mahasamayasutta` — earlier versions of
-this file gave the wrong one. `mahasamayasutta-roman` is its TWIN, a separate
-chant holding the roman printing at pages 317–325.
+Only four page numbers in the whole book are absent, and **all four are blank
+versos that were never photographed** — established in the photo map, not
+guessed:
 
-**The Mahāsatipaṭṭhāna front is CLOSED.** `mahasatipatthana-sutta-patho` ran
-out at page 174 and its marker came off; pages 151–174 all went in.
+| page | why it is absent |
+|---|---|
+| **192** | blank verso of the `บทสวดมนต์ ทำวัตรเช้า-เย็น แปล` divider, which is page 191 on `IMG_0462` |
+| **246** | blank verso before the `ภาคปกิณกะ` divider |
+| **248** | blank verso of that divider, which is page 247 on `IMG_0516` |
+| **278** | blank verso of the `ภาคผนวก` divider, which is page 277 on `IMG_0545` |
 
-**What is running in the Mahāsamaya right now:** the roll-call of who came to
-the gathering. Page 179 finished the Four Great Kings and their conjuring
-servants, the gandhabba companies, and the nāga hosts, then turned in a
-single-column block to the supaṇṇas making peace with the nāgas. The twin says
-what comes next: **page 180 opens at the ASURAS** — `Jitā vajirahatthena
-samuddaṃ asurā sitā` — at twin verse 120. Use the twin to check the text, never
-to number the units.
+All four are the same shape — content ends on a verso, divider on the recto,
+blank verso, content resumes on the next recto — and the offset arithmetic in
+the photo map closes exactly on them. **There is nothing on these sheets to
+transcribe.**
 
-⚠️ **The grep in the block above finds ~24 lines, but only ONE is live.** The
-rest are `‼ CHECK` comments that quote the phrase "its ‼ CONTINUES marker comes
-off". Search for `# ‼ CONTINUES:` with the colon to get the real one.
+⚠️ **ONE DECISION IS OPEN AND IT IS JOSH'S:** the app currently SKIPS these four
+numbers, so a reader paging through goes 191 → 193. The alternative is to serve
+an explicitly blank page. Nothing has been invented either way; do not add them
+without asking.
 
-## ‼‼ READ THIS BEFORE PAGE 180 — THE VERSE UNIT CHANGES WITH THE SETTING
+⚠️ **The `‼ CONTINUES` grep above finds ~24 lines and NONE is live.** They are
+all `‼ CHECK` comments quoting the phrase "its ‼ CONTINUES marker comes off".
+Search for `# ‼ CONTINUES:` **with the colon** to get the real count, which is
+now zero.
+
+Note the id of the last chant entered is `mahasamaya-suttam`, not
+`mahasamayasutta` — earlier versions of this file gave the wrong one.
+`mahasamayasutta-roman` is its TWIN, a separate chant holding the roman
+printing at pages 317–325.
+
+## What is left, now that coverage is done
+
+Coverage and fidelity are finished; **quality is not**. What remains is the
+review pass described further down this file, and it has never been started:
+
+- **2,116 `‼ CHECK` comments**, each naming its photograph
+- **288 chants set `‼ COMMENTARY PENDING`** — stage 3 writes their prose
+- **275 of 305 chants `english_unverified`**
+- **105 page-level checks that live only in batch files** (pre-fix; see below)
+- the nine pages entered before this workflow existed and never checked against
+  a photograph: **1, 23, 27, 28, 217–221**
+
+Do that as ONE pass, not piecemeal — see the section on the review pass.
+
+## ‼‼ THE VERSE UNIT FOLLOWS THE SETTING — kept for the review pass
+
+*(Written while pages 179–182 were going in. The run is finished, but this is
+the thing most likely to have gone wrong in it, so the review pass should read
+it before checking the Mahāsamaya.)*
 
 The Mahāsamaya is set in TWO ways and **the verse unit follows the setting, not
 the metre**:
@@ -223,11 +250,11 @@ first pass is running, the job is COVERAGE AND FIDELITY, not finish. Record
 what the sheet says, raise the check, move to the next page. Do not stop the
 run to tidy something that the review pass will reach anyway.
 
-What that pass will have waiting for it, as of page 179:
+What that pass will have waiting for it, as of page 182 — the whole book:
 
 | | count | what it means |
 |---|---:|---|
-| `‼ CHECK` comments | 2,079 | every doubt raised against a photograph, each naming its image |
+| `‼ CHECK` comments | 2,116 | every doubt raised against a photograph, each naming its image |
 | `‼ COMMENTARY PENDING` | 288 | chants set DATA-ONLY; stage 3 writes their prose |
 | `english_unverified` | 275 of 305 | the book prints Pali only, so the English is this edition's own |
 | pages with no batch record | 1, 23, 27, 28, 217–221 | entered before this workflow existed; never checked against a photograph |
@@ -390,10 +417,11 @@ Josh's instruction when told: *"I'm happy as long as it is kept exactly as is in
 the book."* So the split is by convenience, not by principle — but **do not work
 the other lane without checking `git log` first.**
 
-⚠️ **BOTH LANES ARE NOW SPENT** (2026-09-07). The forward pass and the
-translated section have both run out; only **180–182, 192, 246, 248, 278**
-remain, and there is not enough left to divide. With seven sheets between two
-sessions the collision risk is now higher than the speed gain — **check
+⚠️ **BOTH LANES ARE SPENT AND THE BOOK IS DONE** (2026-09-07). The forward pass
+and the translated section both ran out, and page 182 finished the last of them.
+There is no lane left to divide. If two sessions now work the REVIEW pass at
+once they will be editing the same chants rather than different sheets, so the
+collision risk is higher than it ever was during the first pass — **check
 `git status` and `git log` before touching `chanting.py`, every time.** Page 146
 is the standing example of what happens otherwise (see the section below).
 
