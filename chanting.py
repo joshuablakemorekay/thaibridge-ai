@@ -61447,7 +61447,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 6; the rest is not in the app yet.
         # ‼ CHECK [IMG_0434.PNG]: ‼ THE BOOK SETS THE REFUGES AS RUN-ON PROSE
         #   HERE, three to an indented paragraph, not as nine separate lines.
         #   Recorded as six verses, one per refuge sentence, which is the unit
@@ -61527,6 +61526,268 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'For a second time, I go to the Sangha for refuge.',
+            },
+            # ‼ CHECK [IMG_0435.PNG]: NOT A COMPLETION — page 164 ended at a
+            #   full stop after the ทุติยัมปิ set, so this verse OPENS the
+            #   ตะติยัมปิ paragraph rather than finishing a cut line. No […]
+            #   was marked on 164 and none is needed here.
+            {
+                'number': 7,
+                'page': 165,
+                'pali': 'ตะติยัมปิ พุทธัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Tatiyampi buddhaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time, I go to the Buddha for refuge.',
+            },
+            {
+                'number': 8,
+                'pali': 'ตะติยัมปิ ธัมมัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Tatiyampi dhammaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time, I go to the Dhamma for refuge.',
+            },
+            # ‼ CHECK [IMG_0435.PNG]: THE CHANT ENDS HERE and its ‼ CONTINUES
+            #   marker comes off. Nine refuges in all, matching the page-77
+            #   printing's count exactly. No colophon and no footnote are
+            #   printed for it on either sheet.
+            {
+                'number': 9,
+                'pali': 'ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.',
+                'pali_roman': 'Tatiyampi saṅghaṃ saraṇaṃ gacchāmi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'For a third time, I go to the Sangha for refuge.',
+            },
+        ],
+    },
+    {
+        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
+        #   when_chanted and source still to be written. Verses are complete.
+        # ‼ CONTINUES: last verse here is 22; the rest is not in the app yet.
+        # ‼ CHECK [IMG_0435.PNG]: ‼ ALREADY IN THE APP AS namakarasiddhi-gatha
+        #   FROM PAGE 78, with 24 verses. Entered here as a SECOND chant per
+        #   the standing precedent that a chant the book prints twice appears
+        #   twice. ⚠️ ORDER OF WORK, stated plainly because it matters: all
+        #   twenty-two lines were read off this photograph FIRST, and only
+        #   then compared against the page-78 entry. They agree line for line
+        #   and mark for mark, including the full stops closing verses 4, 8,
+        #   12, 16 and 20. That agreement is corroboration, not the source of
+        #   the reading. Four lines were additionally re-cropped at 2.6x
+        #   afterwards — verses 1, 2, 20 and 22 — and all four confirmed.
+        # ‼ CHECK [IMG_0435.PNG]: THE STANZA BOUNDARIES ARE VISIBLE IN THE
+        #   SETTING — the first line of each stanza is indented and the rest
+        #   are flush, so verses 1, 9 and 17 open stanzas. The line is the
+        #   unit, matching the page-78 entry, and no para_start is declared
+        #   because the chant carries no prose layout.
+        # ‼ CHECK [IMG_0435.PNG]: NO FOOTNOTE, NO RULE, NO COLOPHON on this
+        #   sheet, and none for the refuges above it either. Walked top to
+        #   bottom against the photograph: page number 165 at the top centre,
+        #   the ตะติยัมปิ paragraph, the bold title, twenty-two lines, blank
+        #   paper. A hand grips the right edge with two fingers, outside the
+        #   text block.
+        'id': 'namakarasiddhi-gatha-chet-tamnan',
+        'title_thai': 'นะมะการะสิทธิคาถา',
+        'title_pali': 'Namakārasiddhigāthā',
+        'title_roman': '',
+        'title_english': 'The Verses on the Success of Homage',
+        'page_start': 165,
+        'group': 'General chanting',
+        'english_unverified': True,
+        'invitation': {
+            'pali': '',
+            'pali_roman': '',
+            'thai': '',
+            'paiboon': '',
+            'english': '',
+        },
+        'verses': [
+            {
+                'number': 1,
+                'page': 165,
+                'pali': 'โย จักขุมา โมหะมะลาปะกัฏโฐ',
+                'pali_roman': 'Yo cakkhumā mohamalāpakaṭṭho',
+                'thai': '',
+                'paiboon': '',
+                'english': 'He who has vision, with the stain of delusion removed,',
+            },
+            {
+                'number': 2,
+                'pali': 'สามัง วะ พุทโธ สุคะโต วิมุตโต',
+                'pali_roman': 'Sāmaṃ va buddho sugato vimutto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'awakened by himself, well-gone, released,',
+            },
+            {
+                'number': 3,
+                'pali': 'มารัสสะ ปาสา วินิโมจะยันโต',
+                'pali_roman': 'Mārassa pāsā vinimocayanto',
+                'thai': '',
+                'paiboon': '',
+                'english': 'freeing beings from the snares of Māra,',
+            },
+            {
+                'number': 4,
+                'pali': 'ปาเปสิ เขมัง ชะนะตัง วิเนยยัง.',
+                'pali_roman': 'Pāpesi khemaṃ janataṃ vineyyaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'led the people who were to be trained to safety.',
+            },
+            {
+                'number': 5,
+                'pali': 'พุทธัง วะรันตัง สิระสา นะมามิ',
+                'pali_roman': 'Buddhaṃ varantaṃ sirasā namāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'With my head I revere that excellent Buddha,',
+            },
+            {
+                'number': 6,
+                'pali': 'โลกัสสะ นาถัญจะ วินายะกัญจะ',
+                'pali_roman': 'Lokassa nāthañca vināyakañca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the protector and the guide of the world.',
+            },
+            {
+                'number': 7,
+                'pali': 'ตันเตชะสา เต ชะยะสิทธิ โหตุ',
+                'pali_roman': 'Tantejasā te jayasiddhi hotu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By that power may victory and success be yours,',
+            },
+            {
+                'number': 8,
+                'pali': 'สัพพันตะรายา จะ วินาสะเมนตุ.',
+                'pali_roman': 'Sabbantarāyā ca vināsamentu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may all dangers come to nothing.',
+            },
+            {
+                'number': 9,
+                'pali': 'ธัมโม ธะโช โย วิยะ ตัสสะ สัตถุ',
+                'pali_roman': 'Dhammo dhajo yo viya tassa satthu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The Dhamma, which is like the banner of that Teacher,',
+            },
+            {
+                'number': 10,
+                'pali': 'ทัสเสสิ โลกัสสะ วิสุทธิมัคคัง',
+                'pali_roman': 'Dassesi lokassa visuddhimaggaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'showed the world the path of purification,',
+            },
+            {
+                'number': 11,
+                'pali': 'นิยยานิโก ธัมมะธะรัสสะ ธารี',
+                'pali_roman': 'Niyyāniko dhammadharassa dhārī',
+                'thai': '',
+                'paiboon': '',
+                'english': 'leading out, upholding the one who upholds it,',
+            },
+            {
+                'number': 12,
+                'pali': 'สาตาวะโห สันติกะโร สุจิณโณ.',
+                'pali_roman': 'Sātāvaho santikaro suciṇṇo.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'bringing sweetness, making peace, well practised.',
+            },
+            {
+                'number': 13,
+                'pali': 'ธัมมัง วะรันตัง สิระสา นะมามิ',
+                'pali_roman': 'Dhammaṃ varantaṃ sirasā namāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'With my head I revere that excellent Dhamma,',
+            },
+            {
+                'number': 14,
+                'pali': 'โมหัปปะทาลัง อุปะสันตะทาหัง',
+                'pali_roman': 'Mohappadālaṃ upasantadāhaṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'which shatters delusion and stills the burning.',
+            },
+            {
+                'number': 15,
+                'pali': 'ตันเตชะสา เต ชะยะสิทธิ โหตุ',
+                'pali_roman': 'Tantejasā te jayasiddhi hotu',
+                'thai': '',
+                'paiboon': '',
+                'english': 'By that power may victory and success be yours,',
+            },
+            {
+                'number': 16,
+                'pali': 'สัพพันตะรายา จะ วินาสะเมนตุ.',
+                'pali_roman': 'Sabbantarāyā ca vināsamentu.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'and may all dangers come to nothing.',
+            },
+            {
+                'number': 17,
+                'pali': 'สัทธัมมะเสนา สุคะตานุโค โย',
+                'pali_roman': 'Saddhammasenā sugatānugo yo',
+                'thai': '',
+                'paiboon': '',
+                'english': 'The army of the true Dhamma, which follows the Well-Gone One,',
+            },
+            {
+                'number': 18,
+                'pali': 'โลกัสสะ ปาปูปะกิเลสะเชตา',
+                'pali_roman': 'Lokassa pāpūpakilesajetā',
+                'thai': '',
+                'paiboon': '',
+                'english': "conqueror of the world's evil and defilements,",
+            },
+            {
+                'number': 19,
+                'pali': 'สันโต สะยัง สันตินิโยชะโก จะ',
+                'pali_roman': 'Santo sayaṃ santiniyojako ca',
+                'thai': '',
+                'paiboon': '',
+                'english': 'peaceful in itself and joining others to peace,',
+            },
+            # ‼ CHECK [IMG_0435.PNG]: ส๎วากขาตะธัมมัง carries the yamakkan on
+            #   ส with ว following, read at 2.6x, matching how the page-78
+            #   printing stores it and the convention settled across the book.
+            {
+                'number': 20,
+                'pali': 'ส๎วากขาตะธัมมัง วิทิตัง กะโรติ.',
+                'pali_roman': 'Svākkhātadhammaṃ viditaṃ karoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'makes known the well-proclaimed Dhamma.',
+            },
+            {
+                'number': 21,
+                'pali': 'สังฆัง วะรันตัง สิระสา นะมามิ',
+                'pali_roman': 'Saṅghaṃ varantaṃ sirasā namāmi',
+                'thai': '',
+                'paiboon': '',
+                'english': 'With my head I revere that excellent Sangha,',
+            },
+            # ‼ CHECK [IMG_0435.PNG]: THE PAGE ENDS ON A COMPLETE PADA, not
+            #   mid-line: พุทธานุพุทธัง สะมะสีละทิฏฐิง with clear white paper
+            #   below, read at 1.5x across the whole foot. So NO […] is
+            #   marked. The third stanza is two lines short — ตันเตชะสา and
+            #   สัพพันตะรายา — and page 166 should open with them, giving this
+            #   printing 24 lines like the page-78 one.
+            {
+                'number': 22,
+                'pali': 'พุทธานุพุทธัง สะมะสีละทิฏฐิง',
+                'pali_roman': 'Buddhānubuddhaṃ samasīladiṭṭhiṃ',
+                'thai': '',
+                'paiboon': '',
+                'english': 'awakened after the Awakened One, equal in virtue and in view.',
             },
         ],
     },

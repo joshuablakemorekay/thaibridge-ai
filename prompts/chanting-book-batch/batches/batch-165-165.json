@@ -1,0 +1,188 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 2,
+    "manifest": [
+      "sarana-gamana-patha-chet-tamnan",
+      "namakarasiddhi-gatha-chet-tamnan"
+    ],
+    "pages": [
+      {
+        "page": 165,
+        "file": "IMG_0435.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "sarana-gamana-patha-chet-tamnan",
+        "verses": "7-9",
+        "starts_here": false,
+        "note": "The ตะติยัมปิ set closes the refuges, set as one run-on indented paragraph like the two on page 164. The chant ENDS here and its ‼ CONTINUES marker comes off."
+      },
+      {
+        "page": 165,
+        "file": "IMG_0435.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "namakarasiddhi-gatha-chet-tamnan",
+        "verses": "1-22",
+        "starts_here": true,
+        "note": "นะมะการะสิทธิคาถา under its own bold centred title, single column, one pada per printed line with the first line of each stanza indented. Twenty-two lines land on this sheet; the last stanza is two lines short and the chant CONTINUES onto 166. ⚠️ Already in the app from page 78 — entered as a second chant, see the checks."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "sarana-gamana-patha-chet-tamnan",
+      "continuation_of": "sarana-gamana-patha-chet-tamnan",
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Three, one per refuge sentence, matching how the first six were taken on page 164 and how the page-77 printing is stored.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "Set as run-on prose in one indented paragraph, as on page 164; layout 'prose' is already on the chant.",
+        "pages": "IMG_0435.PNG, page 165. Completes the chant begun on 164."
+      },
+      "verses": [
+        {
+          "number": 7,
+          "page": 165,
+          "pali": "ตะติยัมปิ พุทธัง สะระณัง คัจฉามิ.",
+          "pali_roman": "Tatiyampi buddhaṃ saraṇaṃ gacchāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "For a third time, I go to the Buddha for refuge."
+        },
+        {
+          "number": 8,
+          "pali": "ตะติยัมปิ ธัมมัง สะระณัง คัจฉามิ.",
+          "pali_roman": "Tatiyampi dhammaṃ saraṇaṃ gacchāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "For a third time, I go to the Dhamma for refuge."
+        },
+        {
+          "number": 9,
+          "pali": "ตะติยัมปิ สังฆัง สะระณัง คัจฉามิ.",
+          "pali_roman": "Tatiyampi saṅghaṃ saraṇaṃ gacchāmi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "For a third time, I go to the Sangha for refuge."
+        }
+      ],
+      "checks": [
+        {
+          "verse": 7,
+          "file": "IMG_0435.PNG",
+          "issue": "NOT A COMPLETION — page 164 ended at a full stop after the ทุติยัมปิ set, so this verse OPENS the ตะติยัมปิ paragraph rather than finishing a cut line. No […] was marked on 164 and none is needed here."
+        },
+        {
+          "verse": 9,
+          "file": "IMG_0435.PNG",
+          "issue": "THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. Nine refuges in all, matching the page-77 printing's count exactly. No colophon and no footnote are printed for it on either sheet."
+        }
+      ]
+    },
+    {
+      "id": "namakarasiddhi-gatha-chet-tamnan",
+      "continues": true,
+      "title_thai": "นะมะการะสิทธิคาถา",
+      "title_pali": "Namakārasiddhigāthā",
+      "title_roman": "",
+      "title_english": "The Verses on the Success of Homage",
+      "page_start": 165,
+      "english_unverified": true,
+      "working_notes": {
+        "invitation": "Absent, and none written.",
+        "units": "Twenty-two, one per printed pada. The first line of each stanza is indented and the rest are flush, so the stanza boundaries are visible in the setting; the line is the unit, as it is in the page-78 printing.",
+        "ordering": "Pali only. No Thai translation is printed.",
+        "conventions": "ส๎วากขาตะธัมมัง takes the yamakkan cluster mark. Read independently from the photograph BEFORE the page-78 entry was consulted — see the checks.",
+        "pages": "IMG_0435.PNG, page 165. Two lines of the third stanza fall on 166, so the chant CONTINUES."
+      },
+      "verses": [
+        {"number": 1, "page": 165, "pali": "โย จักขุมา โมหะมะลาปะกัฏโฐ", "pali_roman": "Yo cakkhumā mohamalāpakaṭṭho", "thai": "", "paiboon": "", "english": "He who has vision, with the stain of delusion removed,"},
+        {"number": 2, "pali": "สามัง วะ พุทโธ สุคะโต วิมุตโต", "pali_roman": "Sāmaṃ va buddho sugato vimutto", "thai": "", "paiboon": "", "english": "awakened by himself, well-gone, released,"},
+        {"number": 3, "pali": "มารัสสะ ปาสา วินิโมจะยันโต", "pali_roman": "Mārassa pāsā vinimocayanto", "thai": "", "paiboon": "", "english": "freeing beings from the snares of Māra,"},
+        {"number": 4, "pali": "ปาเปสิ เขมัง ชะนะตัง วิเนยยัง.", "pali_roman": "Pāpesi khemaṃ janataṃ vineyyaṃ.", "thai": "", "paiboon": "", "english": "led the people who were to be trained to safety."},
+        {"number": 5, "pali": "พุทธัง วะรันตัง สิระสา นะมามิ", "pali_roman": "Buddhaṃ varantaṃ sirasā namāmi", "thai": "", "paiboon": "", "english": "With my head I revere that excellent Buddha,"},
+        {"number": 6, "pali": "โลกัสสะ นาถัญจะ วินายะกัญจะ", "pali_roman": "Lokassa nāthañca vināyakañca", "thai": "", "paiboon": "", "english": "the protector and the guide of the world."},
+        {"number": 7, "pali": "ตันเตชะสา เต ชะยะสิทธิ โหตุ", "pali_roman": "Tantejasā te jayasiddhi hotu", "thai": "", "paiboon": "", "english": "By that power may victory and success be yours,"},
+        {"number": 8, "pali": "สัพพันตะรายา จะ วินาสะเมนตุ.", "pali_roman": "Sabbantarāyā ca vināsamentu.", "thai": "", "paiboon": "", "english": "and may all dangers come to nothing."},
+        {"number": 9, "pali": "ธัมโม ธะโช โย วิยะ ตัสสะ สัตถุ", "pali_roman": "Dhammo dhajo yo viya tassa satthu", "thai": "", "paiboon": "", "english": "The Dhamma, which is like the banner of that Teacher,"},
+        {"number": 10, "pali": "ทัสเสสิ โลกัสสะ วิสุทธิมัคคัง", "pali_roman": "Dassesi lokassa visuddhimaggaṃ", "thai": "", "paiboon": "", "english": "showed the world the path of purification,"},
+        {"number": 11, "pali": "นิยยานิโก ธัมมะธะรัสสะ ธารี", "pali_roman": "Niyyāniko dhammadharassa dhārī", "thai": "", "paiboon": "", "english": "leading out, upholding the one who upholds it,"},
+        {"number": 12, "pali": "สาตาวะโห สันติกะโร สุจิณโณ.", "pali_roman": "Sātāvaho santikaro suciṇṇo.", "thai": "", "paiboon": "", "english": "bringing sweetness, making peace, well practised."},
+        {"number": 13, "pali": "ธัมมัง วะรันตัง สิระสา นะมามิ", "pali_roman": "Dhammaṃ varantaṃ sirasā namāmi", "thai": "", "paiboon": "", "english": "With my head I revere that excellent Dhamma,"},
+        {"number": 14, "pali": "โมหัปปะทาลัง อุปะสันตะทาหัง", "pali_roman": "Mohappadālaṃ upasantadāhaṃ", "thai": "", "paiboon": "", "english": "which shatters delusion and stills the burning."},
+        {"number": 15, "pali": "ตันเตชะสา เต ชะยะสิทธิ โหตุ", "pali_roman": "Tantejasā te jayasiddhi hotu", "thai": "", "paiboon": "", "english": "By that power may victory and success be yours,"},
+        {"number": 16, "pali": "สัพพันตะรายา จะ วินาสะเมนตุ.", "pali_roman": "Sabbantarāyā ca vināsamentu.", "thai": "", "paiboon": "", "english": "and may all dangers come to nothing."},
+        {"number": 17, "pali": "สัทธัมมะเสนา สุคะตานุโค โย", "pali_roman": "Saddhammasenā sugatānugo yo", "thai": "", "paiboon": "", "english": "The army of the true Dhamma, which follows the Well-Gone One,"},
+        {"number": 18, "pali": "โลกัสสะ ปาปูปะกิเลสะเชตา", "pali_roman": "Lokassa pāpūpakilesajetā", "thai": "", "paiboon": "", "english": "conqueror of the world's evil and defilements,"},
+        {"number": 19, "pali": "สันโต สะยัง สันตินิโยชะโก จะ", "pali_roman": "Santo sayaṃ santiniyojako ca", "thai": "", "paiboon": "", "english": "peaceful in itself and joining others to peace,"},
+        {"number": 20, "pali": "ส๎วากขาตะธัมมัง วิทิตัง กะโรติ.", "pali_roman": "Svākkhātadhammaṃ viditaṃ karoti.", "thai": "", "paiboon": "", "english": "makes known the well-proclaimed Dhamma."},
+        {"number": 21, "pali": "สังฆัง วะรันตัง สิระสา นะมามิ", "pali_roman": "Saṅghaṃ varantaṃ sirasā namāmi", "thai": "", "paiboon": "", "english": "With my head I revere that excellent Sangha,"},
+        {"number": 22, "pali": "พุทธานุพุทธัง สะมะสีละทิฏฐิง", "pali_roman": "Buddhānubuddhaṃ samasīladiṭṭhiṃ", "thai": "", "paiboon": "", "english": "awakened after the Awakened One, equal in virtue and in view."}
+      ],
+      "vocabulary": [
+        {
+          "pali": "นะมะการะสิทธิ",
+          "pali_roman": "namakārasiddhi",
+          "meaning": "the success that comes of paying homage — the gatha asks that the power of the homage itself bring victory and remove danger"
+        },
+        {
+          "pali": "ตันเตชะสา",
+          "pali_roman": "tantejasā",
+          "meaning": "by that power. The refrain that closes each stanza, turning the homage into a blessing spoken over the hearer"
+        },
+        {
+          "pali": "พุทธานุพุทธัง",
+          "pali_roman": "buddhānubuddhaṃ",
+          "meaning": "awakened after the Awakened One — the Sangha described by its relation to the Buddha rather than by its members"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0435.PNG",
+          "issue": "‼ ALREADY IN THE APP AS namakarasiddhi-gatha FROM PAGE 78, with 24 verses. Entered here as a SECOND chant per the standing precedent that a chant the book prints twice appears twice. ⚠️ ORDER OF WORK, stated plainly because it matters: all twenty-two lines were read off this photograph FIRST, and only then compared against the page-78 entry. They agree line for line and mark for mark, including the full stops closing verses 4, 8, 12, 16 and 20. That agreement is corroboration, not the source of the reading. Four lines were additionally re-cropped at 2.6x afterwards — verses 1, 2, 20 and 22 — and all four confirmed."
+        },
+        {
+          "verse": 22,
+          "file": "IMG_0435.PNG",
+          "issue": "THE PAGE ENDS ON A COMPLETE PADA, not mid-line: พุทธานุพุทธัง สะมะสีละทิฏฐิง with clear white paper below, read at 1.5x across the whole foot. So NO […] is marked. The third stanza is two lines short — ตันเตชะสา and สัพพันตะรายา — and page 166 should open with them, giving this printing 24 lines like the page-78 one."
+        },
+        {
+          "verse": 20,
+          "file": "IMG_0435.PNG",
+          "issue": "ส๎วากขาตะธัมมัง carries the yamakkan on ส with ว following, read at 2.6x, matching how the page-78 printing stores it and the convention settled across the book."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0435.PNG",
+          "issue": "THE STANZA BOUNDARIES ARE VISIBLE IN THE SETTING — the first line of each stanza is indented and the rest are flush, so verses 1, 9 and 17 open stanzas. The line is the unit, matching the page-78 entry, and no para_start is declared because the chant carries no prose layout."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0435.PNG",
+          "issue": "NO FOOTNOTE, NO RULE, NO COLOPHON on this sheet, and none for the refuges above it either. Walked top to bottom against the photograph: page number 165 at the top centre, the ตะติยัมปิ paragraph, the bold title, twenty-two lines, blank paper. A hand grips the right edge with two fingers, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "sarana-gamana-patha-chet-tamnan"
+    ],
+    "not_started": [],
+    "continues": [
+      "namakarasiddhi-gatha-chet-tamnan"
+    ],
+    "resume_from_page": 166,
+    "resume_from_file": "IMG_0436.PNG",
+    "resume_from": "namakarasiddhi-gatha-chet-tamnan",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all twenty-five verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0435.PNG.",
+    "page_scan": "agrees — two rows, both page 165. The refuges claim verses 7-9 and the entry holds those three; the gatha claims 1-22 and holds twenty-two. Verse 7 of the first and verse 1 of the second carry page 165; the rest carry none. Numbering on the refuges runs on from page 164 verse 6 with no gap and no overlap.",
+    "notes": "‼ The refuges CLOSE with the ตะติยัมปิ set and that chant's ‼ CONTINUES marker comes off — nine refuges, matching the page-77 printing's count. ‼ นะมะการะสิทธิคาถา opens and is ALREADY IN THE APP from page 78; entered as a second chant per the standing precedent. ⚠️ ORDER OF WORK: all twenty-two lines were read off the photograph FIRST and only then compared against the page-78 entry, which agrees line for line and mark for mark — corroboration, not the source. Four lines were re-cropped at 2.6x afterwards and confirmed. The page ends on a COMPLETE pada, so no […] is marked and 166 should bring the two lines that finish the third stanza. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
