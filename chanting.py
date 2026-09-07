@@ -60650,7 +60650,7 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 14; the rest is not in the app yet.
+        # ‼ CONTINUES: last verse here is 22; the rest is not in the app yet.
         # ‼ CHECK [IMG_0429.PNG]: TWO NUMBERED FOOTNOTES sit under a rule at
         #   the foot, and they are DIFFERENT KINDS. ‼ FOOTNOTE 1, keyed to a
         #   superscript after วิหะระติ in verse 1, is a canonical citation —
@@ -60869,13 +60869,118 @@ CHANTS = [
             #   below — read at 1.5x across the whole foot. […] is marked in
             #   pali and pali_roman and the english stops with it. Page 161
             #   must COMPLETE this verse.
+            # ‼ COMPLETED FROM p160: this line was cut by the page break and
+            #   is now whole. Was: ตัง โข ปะนิทัง ทุกขัง อะริยะสัจจัง
+            #   ปะริญญาตันติ เม ภิกขะเว ปุพเพ […]
+            # ‼ CHECK [IMG_0431.PNG]: PAGE 161 — ‼ NINE PARAGRAPHS SHARING ONE
+            #   LONG TAIL, AND ONLY THE OPENING CLAUSE DIFFERS. Every opening
+            #   was read SEPARATELY at 2.6x to 4.0x, because that clause is
+            #   the only thing distinguishing one paragraph from the next and
+            #   several differ by a single word — ปะหาตัพพันติ against
+            #   ปะหีนันติ, สัจฉิกาตัพพันติ against สัจฉิกะตันติ. Reading the
+            #   tail once and assuming the openings would have produced eight
+            #   plausible and wrong verses.
+            # ‼ CHECK [IMG_0431.PNG]: PAGE 161 — ‼ THE TWELVEFOLD TURNING IS
+            #   THREE-PER-TRUTH, and this sheet carries seven of the twelve.
+            #   The first truth was stated, given its task and declared done
+            #   on page 160 (verses 12-14); the second and third are completed
+            #   here (15-17, 18-20); the fourth is stated and given its task
+            #   (21-22) and its completion should open page 162. Recorded so a
+            #   reader counting paragraphs does not read the pattern as a
+            #   repetition.
+            # ‼ CHECK [IMG_0431.PNG]: PAGE 161 — NOTHING ON THIS SHEET BUT
+            #   BODY TEXT. No title, no invitation, no section heading, no
+            #   rubric, no footnote and no rule at the foot. Walked top to
+            #   bottom against the photograph: page number 161 at the top
+            #   centre, the completion, eight paragraphs, blank paper. A hand
+            #   grips the right edge with two fingers, outside the text block.
+            # ‼ CHECK [IMG_0431.PNG]: COMPLETES THE LINE PAGE 160 CUT. That
+            #   sheet ended …เม ภิกขะเว ปุพเพ […] and this one opens
+            #   อะนะนุสสุเตสุ ธัมเมสุ. The verse keeps page 160, where its
+            #   paragraph began, and carries no page key.
             {
                 'number': 14,
-                'pali': 'ตัง โข ปะนิทัง ทุกขัง อะริยะสัจจัง ปะริญญาตันติ เม ภิกขะเว ปุพเพ […]',
-                'pali_roman': 'Taṃ kho panidaṃ dukkhaṃ ariyasaccaṃ pariññātanti me bhikkhave pubbe […]',
+                'pali': 'ตัง โข ปะนิทัง ทุกขัง อะริยะสัจจัง ปะริญญาตันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Taṃ kho panidaṃ dukkhaṃ ariyasaccaṃ pariññātanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
                 'thai': '',
                 'paiboon': '',
-                'english': 'This noble truth of suffering has been fully understood — so, monks, in regard to […]',
+                'english': 'This noble truth of suffering has been fully understood — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            # ‼ CHECK [IMG_0431.PNG]: ทุกขะสะมุทะโย อะริยะสัจจัง pairs a
+            #   MASCULINE nominative with a NEUTER one, and ทุกขะนิโรโธ
+            #   อะริยะสัจจัง does the same at verse 18. That is how this sutta
+            #   is set throughout and it is not a slip; recorded because the
+            #   mismatch looks like one, and because the parallel first truth
+            #   at verse 12 has ทุกขัง อะริยะสัจจัง where both agree.
+            {
+                'number': 15,
+                'page': 161,
+                'pali': 'อิทัง ทุกขะสะมุทะโย อะริยะสัจจันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Idaṃ dukkhasamudayo ariyasaccanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is the noble truth of the arising of suffering — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            {
+                'number': 16,
+                'pali': 'ตัง โข ปะนิทัง ทุกขะสะมุทะโย อะริยะสัจจัง ปะหาตัพพันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Taṃ kho panidaṃ dukkhasamudayo ariyasaccaṃ pahātabbanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This noble truth of the arising of suffering is to be abandoned — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            {
+                'number': 17,
+                'pali': 'ตัง โข ปะนิทัง ทุกขะสะมุทะโย อะริยะสัจจัง ปะหีนันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Taṃ kho panidaṃ dukkhasamudayo ariyasaccaṃ pahīnanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This noble truth of the arising of suffering has been abandoned — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            {
+                'number': 18,
+                'pali': 'อิทัง ทุกขะนิโรโธ อะริยะสัจจันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Idaṃ dukkhanirodho ariyasaccanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is the noble truth of the cessation of suffering — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            {
+                'number': 19,
+                'pali': 'ตัง โข ปะนิทัง ทุกขะนิโรโธ อะริยะสัจจัง สัจฉิกาตัพพันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Taṃ kho panidaṃ dukkhanirodho ariyasaccaṃ sacchikātabbanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This noble truth of the cessation of suffering is to be realised — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            {
+                'number': 20,
+                'pali': 'ตัง โข ปะนิทัง ทุกขะนิโรโธ อะริยะสัจจัง สัจฉิกะตันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Taṃ kho panidaṃ dukkhanirodho ariyasaccaṃ sacchikatanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This noble truth of the cessation of suffering has been realised — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            {
+                'number': 21,
+                'pali': 'อิทัง ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Idaṃ dukkhanirodhagāminī paṭipadā ariyasaccanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This is the noble truth of the way leading to the cessation of suffering — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
+            },
+            # ‼ CHECK [IMG_0431.PNG]: THE PAGE ENDS AT A FULL STOP after
+            #   อาโลโก อุทะปาทิ., with clear white paper below, so NO […] is
+            #   marked and page 162 should open a new verse rather than
+            #   complete this one. Expect 162 to begin ตัง โข ปะนิทัง …
+            #   ภาวิตันติ, closing the twelfth turning.
+            {
+                'number': 22,
+                'pali': 'ตัง โข ปะนิทัง ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง ภาเวตัพพันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.',
+                'pali_roman': 'Taṃ kho panidaṃ dukkhanirodhagāminī paṭipadā ariyasaccaṃ bhāvetabbanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'This noble truth of the way leading to the cessation of suffering is to be developed — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light.',
             },
         ],
     },
