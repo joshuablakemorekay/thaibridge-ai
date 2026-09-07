@@ -60650,7 +60650,6 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CONTINUES: last verse here is 32; the rest is not in the app yet.
         # ‼ CHECK [IMG_0429.PNG]: TWO NUMBERED FOOTNOTES sit under a rule at
         #   the foot, and they are DIFFERENT KINDS. ‼ FOOTNOTE 1, keyed to a
         #   superscript after วิหะระติ in verse 1, is a canonical citation —
@@ -60695,6 +60694,13 @@ CHANTS = [
             'thai': '',
             'paiboon': '',
             'english': '',
+        },
+        'closing': {
+            'pali': 'ธัมมะจักกัปปะวัตตะนะสุตตัง นิฏฐิตัง',
+            'pali_roman': 'Dhammacakkappavattanasuttaṃ niṭṭhitaṃ',
+            'thai': '',
+            'paiboon': '',
+            'english': 'Here ends the Discourse on Setting the Wheel of Dhamma Rolling.',
         },
         'verses': [
             # ‼ CHECK [IMG_0429.PNG]: THE FOOTNOTE MARKER SITS INSIDE THE
@@ -61106,6 +61112,137 @@ CHANTS = [
                 'thai': '',
                 'paiboon': '',
                 'english': 'the devas of the Four Great Kings cried out. Having heard the cry of the devas of the Four Great Kings,',
+            },
+            # ‼ CHECK [IMG_0433.PNG]: PAGE 163 — ‼‼ THE CHANT ENDS HERE and
+            #   its ‼ CONTINUES marker comes off. dhammacakkappavattana-suttam
+            #   has run from page 159 to page 163 — five sheets and 42 verses
+            #   — and this is its last. A centred bold colophon closes it.
+            #   Nothing on this sheet is left open.
+            # ‼ CHECK [IMG_0433.PNG]: PAGE 163 — THE DEVA-TIER PARAGRAPHS END
+            #   ON สุต๎วา WITH NO PUNCTUATION, five of them, exactly as verses
+            #   31 and 32 did on page 162 — confirming that reading was right
+            #   and that page 162 was not cut. The SIXTH, พ๎รัห๎มะกายิกา at
+            #   verse 38, closes with a FULL STOP instead, because it is the
+            #   last tier and nothing hears it in turn. Read at 3.0x.
+            # ‼ CHECK [IMG_0433.PNG]: PAGE 163 — THE FOOTNOTE REPEATS PAGE
+            #   159's CITATION EXACTLY — 1. วิ. มหา. 4/17-23, under a rule at
+            #   the foot. source_printed already holds it from the chant's
+            #   opening sheet, so it is deliberately NOT re-sent in this batch
+            #   and nothing is overwritten. Recorded because the book printing
+            #   the same citation at both ends of a chant is new, and a later
+            #   pass might read the omission here as a miss.
+            # ‼ CHECK [IMG_0433.PNG]: PAGE 163 — THE COLOPHON
+            #   ธัมมะจักกัปปะวัตตะนะสุตตัง นิฏฐิตัง is centred and bold with
+            #   NO full stop, and is recorded as the chant's `closing`. ⚠️
+            #   นิฏฐิตัง is NEUTER and agrees correctly with สุตตัง — unlike
+            #   page 110, where นิฏฐิตา was printed against the same neuter
+            #   noun. This book gets it right here, as it did on page 158.
+            # ‼ CHECK [IMG_0433.PNG]: PAGE 163 — NOTHING ELSE ON THIS SHEET.
+            #   No title, no invitation, no section heading, no rubric. Walked
+            #   top to bottom against the photograph: page number 163 at the
+            #   top centre, ten paragraphs, the centred colophon, the rule,
+            #   the footnote. A hand grips the right edge with three fingers,
+            #   outside the text block.
+            {
+                'number': 33,
+                'page': 163,
+                'pali': 'ตาวะติงสา เทวา สัททะมะนุสสาเวสุง. ตาวะติงสานัง เทวานัง สัททัง สุต๎วา',
+                'pali_roman': 'Tāvatiṃsā devā saddamanussāvesuṃ. Tāvatiṃsānaṃ devānaṃ saddaṃ sutvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the devas of the Thirty-Three cried out. Having heard the cry of the devas of the Thirty-Three,',
+            },
+            {
+                'number': 34,
+                'pali': 'ยามา เทวา สัททะมะนุสสาเวสุง. ยามานัง เทวานัง สัททัง สุต๎วา',
+                'pali_roman': 'Yāmā devā saddamanussāvesuṃ. Yāmānaṃ devānaṃ saddaṃ sutvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Yāma devas cried out. Having heard the cry of the Yāma devas,',
+            },
+            {
+                'number': 35,
+                'pali': 'ตุสิตา เทวา สัททะมะนุสสาเวสุง. ตุสิตานัง เทวานัง สัททัง สุต๎วา',
+                'pali_roman': 'Tusitā devā saddamanussāvesuṃ. Tusitānaṃ devānaṃ saddaṃ sutvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Tusita devas cried out. Having heard the cry of the Tusita devas,',
+            },
+            {
+                'number': 36,
+                'pali': 'นิมมานะระตี เทวา สัททะมะนุสสาเวสุง. นิมมานะระตีนัง เทวานัง สัททัง สุต๎วา',
+                'pali_roman': 'Nimmānaratī devā saddamanussāvesuṃ. Nimmānaratīnaṃ devānaṃ saddaṃ sutvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Nimmānaratī devas cried out. Having heard the cry of the Nimmānaratī devas,',
+            },
+            {
+                'number': 37,
+                'pali': 'ปะระนิมมิตะวะสะวัตตี เทวา สัททะมะนุสสาเวสุง. ปะระนิมมิตะวะสะวัตตีนัง เทวานัง สัททัง สุต๎วา',
+                'pali_roman': 'Paranimmitavasavattī devā saddamanussāvesuṃ. Paranimmitavasavattīnaṃ devānaṃ saddaṃ sutvā',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the Paranimmitavasavattī devas cried out. Having heard the cry of the Paranimmitavasavattī devas,',
+            },
+            {
+                'number': 38,
+                'pali': 'พ๎รัห๎มะกายิกา เทวา สัททะมะนุสสาเวสุง.',
+                'pali_roman': 'Brahmakāyikā devā saddamanussāvesuṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'the devas of the Brahmā host cried out.',
+            },
+            {
+                'number': 39,
+                'pali': 'เอตัมภะคะวะตา พาราณะสิยัง อิสิปะตะเน มิคะทาเย อะนุตตะรัง ธัมมะจักกัง ปะวัตติตัง อัปปะฏิวัตติยัง สะมะเณนะ วา พ๎ราห๎มะเณนะ วา เทเวนะ วา มาเรนะ วา พ๎รัห๎มุนา วา เกนะจิ วา โลกัส๎มินติ.',
+                'pali_roman': 'Etambhagavatā bārāṇasiyaṃ isipatane migadāye anuttaraṃ dhammacakkaṃ pavattitaṃ appaṭivattiyaṃ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasminti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'At Bārāṇasī, in the deer park at Isipatana, the unsurpassed Wheel of Dhamma has been set rolling by the Blessed One, and it cannot be stopped by any ascetic or brahmin, by any deva or Māra or Brahmā, by anyone at all in the world.',
+            },
+            # ‼ CHECK [IMG_0433.PNG]: ‼‼ โอพาโร IS PRINTED WITH พ WHERE THE
+            #   CANON HAS ฬ — oḷāro. Read at 4.6x and tested the way the state
+            #   carrier prescribes, against letters WITH known ascenders on
+            #   the SAME printed line: โอภาโส two words later has ภ with its
+            #   tall stroke plainly present, and this letter has none. ฬ would
+            #   carry one. So this is the FOURTH instance of the printer
+            #   setting พ for ฬ, after เขโพ and มูโตพี on page 131 and
+            #   กะเพวะรัสสะ on page 143. Reproduced as printed. ⚠️ AND THE
+            #   ROMANISATION IS A CONFLICT JOSH SHOULD SETTLE: this project
+            #   romanises พ as **b** everywhere else — พาราณะสิยัง is
+            #   bārāṇasiyaṃ four words away, พ๎ราห๎มะเณนะ is brāhmaṇena — but
+            #   the three earlier ฬ/พ cases were romanised with **p** (khepo,
+            #   mūtopī, kapevarassa). I have followed the DOMINANT rule and
+            #   written obāro, because that is what ~289 chants do; the three
+            #   earlier ones are the exception. Either they should become
+            #   khebo / mūtobī / kabevarassa, or this should become opāro. It
+            #   should not stay as it is now, split four ways.
+            {
+                'number': 40,
+                'pali': 'อิติหะ เตนะ ขะเณนะ เตนะ มุหุตเตนะ ยาวะ พ๎รัห๎มะโลกา สัทโท อัพภุคคัจฉิ. อะยัญจะ ทะสะสะหัสสี โลกะธาตุ สังกัมปิ สัมปะกัมปิ สัมปะเวธิ. อัปปะมาโณ จะ โอพาโร โอภาโส โลเก ปาตุระโหสิ อะติกกัมเมวะ เทวานัง เทวานุภาวัง.',
+                'pali_roman': 'Itiha tena khaṇena tena muhuttena yāva brahmalokā saddo abbhuggacchi. Ayañca dasasahassī lokadhātu saṅkampi sampakampi sampavedhi. Appamāṇo ca obāro obhāso loke pāturahosi atikkammeva devānaṃ devānubhāvaṃ.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'So in that moment, in that instant, the cry reached as far as the Brahmā world. And this ten-thousandfold world system shook, quaked and trembled, and a boundless, magnificent radiance appeared in the world, surpassing the majesty of the devas.',
+            },
+            {
+                'number': 41,
+                'pali': 'อะถะโข ภะคะวา อุทานัง อุทาเนสิ. อัญญาสิ วะตะ โภ โกณฑัญโญ, อัญญาสิ วะตะ โภ โกณฑัญโญติ.',
+                'pali_roman': 'Athakho bhagavā udānaṃ udānesi. Aññāsi vata bho koṇḍañño, aññāsi vata bho koṇḍaññoti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'Then the Blessed One uttered this exclamation: Koṇḍañña has indeed understood! Koṇḍañña has indeed understood!',
+            },
+            # ‼ CHECK [IMG_0433.PNG]: อัญญาโกณฑัญโญเต๎ววะ takes the yamakkan
+            #   on ต with ว following, read at 3.0x. It is the run-together of
+            #   อัญญาโกณฑัญโญ + เต๎ววะ and is printed as one word.
+            {
+                'number': 42,
+                'pali': 'อิติหิทัง อายัส๎มะโต โกณฑัญญัสสะ อัญญาโกณฑัญโญเต๎ววะ นามัง อะโหสีติ.',
+                'pali_roman': 'Itihidaṃ āyasmato koṇḍaññassa aññākoṇḍaññotveva nāmaṃ ahosīti.',
+                'thai': '',
+                'paiboon': '',
+                'english': 'And so it was that the venerable Koṇḍañña came to be called Aññā Koṇḍañña — Koṇḍañña Who Understood.',
             },
         ],
     },

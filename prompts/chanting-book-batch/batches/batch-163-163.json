@@ -1,0 +1,200 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "dhammacakkappavattana-suttam"
+    ],
+    "pages": [
+      {
+        "page": 163,
+        "file": "IMG_0433.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "dhammacakkappavattana-suttam",
+        "verses": "33-42",
+        "starts_here": false,
+        "note": "‼ THE CHANT ENDS ON THIS SHEET. The cry passes up through six more deva tiers to the Brahmā world, the proclamation is repeated in full, the ten-thousandfold world system shakes, the Buddha utters his exclamation and Koṇḍañña gets his name. Then a CENTRED BOLD COLOPHON, ธัมมะจักกัปปะวัตตะนะสุตตัง นิฏฐิตัง, and beneath a rule the SAME footnote citation page 159 already carries. The ‼ CONTINUES marker comes off this chant."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "dhammacakkappavattana-suttam",
+      "continuation_of": "dhammacakkappavattana-suttam",
+      "closing": {
+        "pali": "ธัมมะจักกัปปะวัตตะนะสุตตัง นิฏฐิตัง",
+        "pali_roman": "Dhammacakkappavattanasuttaṃ niṭṭhitaṃ",
+        "thai": "",
+        "paiboon": "",
+        "english": "Here ends the Discourse on Setting the Wheel of Dhamma Rolling."
+      },
+      "working_notes": {
+        "invitation": "None printed; this is the end of the chant.",
+        "units": "Ten, one per indented paragraph. Five carry the deva-tier formula and close on สุต๎วา with no punctuation, exactly as verses 31 and 32 did on page 162; the sixth closes with a full stop because it is the last tier.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "Every tier name was read separately at 3.0x. ⚠️ One word needed the ฬ/พ test and failed it in the printer's usual direction — see the checks. The colophon and the footnote are not verses: the first is the chant's `closing`, and the second is a REPEAT of the citation already in source_printed from page 159, so it is deliberately not re-sent.",
+        "pages": "IMG_0433.PNG, page 163, the number printed clearly at the top centre. Arrived from page 162 and ENDS the chant. A hand grips the right edge with three fingers visible; all sit outside the text block and cover no text."
+      },
+      "verses": [
+        {
+          "number": 33,
+          "page": 163,
+          "pali": "ตาวะติงสา เทวา สัททะมะนุสสาเวสุง. ตาวะติงสานัง เทวานัง สัททัง สุต๎วา",
+          "pali_roman": "Tāvatiṃsā devā saddamanussāvesuṃ. Tāvatiṃsānaṃ devānaṃ saddaṃ sutvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "the devas of the Thirty-Three cried out. Having heard the cry of the devas of the Thirty-Three,"
+        },
+        {
+          "number": 34,
+          "pali": "ยามา เทวา สัททะมะนุสสาเวสุง. ยามานัง เทวานัง สัททัง สุต๎วา",
+          "pali_roman": "Yāmā devā saddamanussāvesuṃ. Yāmānaṃ devānaṃ saddaṃ sutvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Yāma devas cried out. Having heard the cry of the Yāma devas,"
+        },
+        {
+          "number": 35,
+          "pali": "ตุสิตา เทวา สัททะมะนุสสาเวสุง. ตุสิตานัง เทวานัง สัททัง สุต๎วา",
+          "pali_roman": "Tusitā devā saddamanussāvesuṃ. Tusitānaṃ devānaṃ saddaṃ sutvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Tusita devas cried out. Having heard the cry of the Tusita devas,"
+        },
+        {
+          "number": 36,
+          "pali": "นิมมานะระตี เทวา สัททะมะนุสสาเวสุง. นิมมานะระตีนัง เทวานัง สัททัง สุต๎วา",
+          "pali_roman": "Nimmānaratī devā saddamanussāvesuṃ. Nimmānaratīnaṃ devānaṃ saddaṃ sutvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Nimmānaratī devas cried out. Having heard the cry of the Nimmānaratī devas,"
+        },
+        {
+          "number": 37,
+          "pali": "ปะระนิมมิตะวะสะวัตตี เทวา สัททะมะนุสสาเวสุง. ปะระนิมมิตะวะสะวัตตีนัง เทวานัง สัททัง สุต๎วา",
+          "pali_roman": "Paranimmitavasavattī devā saddamanussāvesuṃ. Paranimmitavasavattīnaṃ devānaṃ saddaṃ sutvā",
+          "thai": "",
+          "paiboon": "",
+          "english": "the Paranimmitavasavattī devas cried out. Having heard the cry of the Paranimmitavasavattī devas,"
+        },
+        {
+          "number": 38,
+          "pali": "พ๎รัห๎มะกายิกา เทวา สัททะมะนุสสาเวสุง.",
+          "pali_roman": "Brahmakāyikā devā saddamanussāvesuṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "the devas of the Brahmā host cried out."
+        },
+        {
+          "number": 39,
+          "pali": "เอตัมภะคะวะตา พาราณะสิยัง อิสิปะตะเน มิคะทาเย อะนุตตะรัง ธัมมะจักกัง ปะวัตติตัง อัปปะฏิวัตติยัง สะมะเณนะ วา พ๎ราห๎มะเณนะ วา เทเวนะ วา มาเรนะ วา พ๎รัห๎มุนา วา เกนะจิ วา โลกัส๎มินติ.",
+          "pali_roman": "Etambhagavatā bārāṇasiyaṃ isipatane migadāye anuttaraṃ dhammacakkaṃ pavattitaṃ appaṭivattiyaṃ samaṇena vā brāhmaṇena vā devena vā mārena vā brahmunā vā kenaci vā lokasminti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "At Bārāṇasī, in the deer park at Isipatana, the unsurpassed Wheel of Dhamma has been set rolling by the Blessed One, and it cannot be stopped by any ascetic or brahmin, by any deva or Māra or Brahmā, by anyone at all in the world."
+        },
+        {
+          "number": 40,
+          "pali": "อิติหะ เตนะ ขะเณนะ เตนะ มุหุตเตนะ ยาวะ พ๎รัห๎มะโลกา สัทโท อัพภุคคัจฉิ. อะยัญจะ ทะสะสะหัสสี โลกะธาตุ สังกัมปิ สัมปะกัมปิ สัมปะเวธิ. อัปปะมาโณ จะ โอพาโร โอภาโส โลเก ปาตุระโหสิ อะติกกัมเมวะ เทวานัง เทวานุภาวัง.",
+          "pali_roman": "Itiha tena khaṇena tena muhuttena yāva brahmalokā saddo abbhuggacchi. Ayañca dasasahassī lokadhātu saṅkampi sampakampi sampavedhi. Appamāṇo ca obāro obhāso loke pāturahosi atikkammeva devānaṃ devānubhāvaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "So in that moment, in that instant, the cry reached as far as the Brahmā world. And this ten-thousandfold world system shook, quaked and trembled, and a boundless, magnificent radiance appeared in the world, surpassing the majesty of the devas."
+        },
+        {
+          "number": 41,
+          "pali": "อะถะโข ภะคะวา อุทานัง อุทาเนสิ. อัญญาสิ วะตะ โภ โกณฑัญโญ, อัญญาสิ วะตะ โภ โกณฑัญโญติ.",
+          "pali_roman": "Athakho bhagavā udānaṃ udānesi. Aññāsi vata bho koṇḍañño, aññāsi vata bho koṇḍaññoti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Then the Blessed One uttered this exclamation: Koṇḍañña has indeed understood! Koṇḍañña has indeed understood!"
+        },
+        {
+          "number": 42,
+          "pali": "อิติหิทัง อายัส๎มะโต โกณฑัญญัสสะ อัญญาโกณฑัญโญเต๎ววะ นามัง อะโหสีติ.",
+          "pali_roman": "Itihidaṃ āyasmato koṇḍaññassa aññākoṇḍaññotveva nāmaṃ ahosīti.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And so it was that the venerable Koṇḍañña came to be called Aññā Koṇḍañña — Koṇḍañña Who Understood."
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "อัพภุคคัจฉิ",
+          "pali_roman": "abbhuggacchi",
+          "meaning": "went up, rose. Said of the cry travelling tier by tier from the earth-dwelling devas to the Brahmā world"
+        },
+        {
+          "pali": "สังกัมปิ สัมปะกัมปิ สัมปะเวธิ",
+          "pali_roman": "saṅkampi sampakampi sampavedhi",
+          "meaning": "shook, quaked and trembled. Three verbs of one root intensifying, a formula the canon reserves for the greatest moments"
+        },
+        {
+          "pali": "อุทานัง อุทาเนสิ",
+          "pali_roman": "udānaṃ udānesi",
+          "meaning": "uttered an exclamation — speech that breaks out on its own rather than being addressed to anyone"
+        },
+        {
+          "pali": "อัญญาโกณฑัญโญ",
+          "pali_roman": "aññākoṇḍañño",
+          "meaning": "Koṇḍañña Who Understood. The name he keeps from this moment, and the first name given to a member of the Sangha"
+        }
+      ],
+      "checks": [
+        {
+          "verse": null,
+          "file": "IMG_0433.PNG",
+          "issue": "‼‼ THE CHANT ENDS HERE and its ‼ CONTINUES marker comes off. dhammacakkappavattana-suttam has run from page 159 to page 163 — five sheets and 42 verses — and this is its last. A centred bold colophon closes it. Nothing on this sheet is left open."
+        },
+        {
+          "verse": 40,
+          "file": "IMG_0433.PNG",
+          "issue": "‼‼ โอพาโร IS PRINTED WITH พ WHERE THE CANON HAS ฬ — oḷāro. Read at 4.6x and tested the way the state carrier prescribes, against letters WITH known ascenders on the SAME printed line: โอภาโส two words later has ภ with its tall stroke plainly present, and this letter has none. ฬ would carry one. So this is the FOURTH instance of the printer setting พ for ฬ, after เขโพ and มูโตพี on page 131 and กะเพวะรัสสะ on page 143. Reproduced as printed. ⚠️ AND THE ROMANISATION IS A CONFLICT JOSH SHOULD SETTLE: this project romanises พ as **b** everywhere else — พาราณะสิยัง is bārāṇasiyaṃ four words away, พ๎ราห๎มะเณนะ is brāhmaṇena — but the three earlier ฬ/พ cases were romanised with **p** (khepo, mūtopī, kapevarassa). I have followed the DOMINANT rule and written obāro, because that is what ~289 chants do; the three earlier ones are the exception. Either they should become khebo / mūtobī / kabevarassa, or this should become opāro. It should not stay as it is now, split four ways."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0433.PNG",
+          "issue": "THE DEVA-TIER PARAGRAPHS END ON สุต๎วา WITH NO PUNCTUATION, five of them, exactly as verses 31 and 32 did on page 162 — confirming that reading was right and that page 162 was not cut. The SIXTH, พ๎รัห๎มะกายิกา at verse 38, closes with a FULL STOP instead, because it is the last tier and nothing hears it in turn. Read at 3.0x."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0433.PNG",
+          "issue": "THE FOOTNOTE REPEATS PAGE 159's CITATION EXACTLY — 1. วิ. มหา. 4/17-23, under a rule at the foot. source_printed already holds it from the chant's opening sheet, so it is deliberately NOT re-sent in this batch and nothing is overwritten. Recorded because the book printing the same citation at both ends of a chant is new, and a later pass might read the omission here as a miss."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0433.PNG",
+          "issue": "THE COLOPHON ธัมมะจักกัปปะวัตตะนะสุตตัง นิฏฐิตัง is centred and bold with NO full stop, and is recorded as the chant's `closing`. ⚠️ นิฏฐิตัง is NEUTER and agrees correctly with สุตตัง — unlike page 110, where นิฏฐิตา was printed against the same neuter noun. This book gets it right here, as it did on page 158."
+        },
+        {
+          "verse": 42,
+          "file": "IMG_0433.PNG",
+          "issue": "อัญญาโกณฑัญโญเต๎ววะ takes the yamakkan on ต with ว following, read at 3.0x. It is the run-together of อัญญาโกณฑัญโญ + เต๎ววะ and is printed as one word."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0433.PNG",
+          "issue": "NOTHING ELSE ON THIS SHEET. No title, no invitation, no section heading, no rubric. Walked top to bottom against the photograph: page number 163 at the top centre, ten paragraphs, the centred colophon, the rule, the footnote. A hand grips the right edge with three fingers, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [
+      "dhammacakkappavattana-suttam"
+    ],
+    "not_started": [],
+    "continues": [],
+    "resume_from_page": 164,
+    "resume_from_file": "IMG_0434.PNG",
+    "resume_from": "",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all ten verses and on the closing.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0433.PNG.",
+    "page_scan": "agrees — one row, page 163, claiming verses 33-42, and the entry holds exactly those ten. Verse 33 carries page 163; 34 to 42 carry none and sit on 163 by carry-forward. Numbering runs on from page 162 verse 32 with no gap and no overlap, and no verse is re-sent because 162 ended a paragraph rather than cutting one.",
+    "notes": "‼‼ THE DHAMMACAKKAPPAVATTANA ENDS HERE — five sheets, pages 159 to 163, 42 verses. Its ‼ CONTINUES marker comes off and a centred colophon closes it. ‼ โอพาโร is printed with พ where the canon has ฬ — the FOURTH such case, tested against ภ's ascender on the same line. ⚠️⚠️ ITS ROMANISATION IS A CONFLICT FOR JOSH: the project romanises พ as b everywhere (bārāṇasiyaṃ, brāhmaṇena) but the three earlier ฬ/พ cases used p. I followed the dominant rule and wrote obāro; either those three change or this one does, but the four should not stay split. ‼ The five deva-tier paragraphs end on สุต๎วา with no punctuation, which confirms page 162 was not cut; the sixth takes a full stop because nothing hears it in turn. ⚠️ The footnote repeats page 159's citation exactly and is deliberately not re-sent. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
