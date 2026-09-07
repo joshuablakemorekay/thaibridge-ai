@@ -1,0 +1,202 @@
+{
+  "batch": {
+    "depth": "DATA-ONLY",
+    "files_given": 1,
+    "files_read": 1,
+    "received": 1,
+    "manifest": [
+      "dhammacakkappavattana-suttam"
+    ],
+    "pages": [
+      {
+        "page": 160,
+        "file": "IMG_0430.PNG",
+        "script": "thai",
+        "columns": 1,
+        "chant": "dhammacakkappavattana-suttam",
+        "verses": "4-14",
+        "starts_here": false,
+        "note": "The whole sheet, one chant, Pali only, ONE column — the two-column setting belonged to the บทขัด on 159 and does not return. Eleven indented paragraphs: the middle way named and its eight limbs listed, then the four noble truths one by one, then the eightfold path listed a SECOND time, then the knowledge-arising formula begins. NO completion row — page 159 ended at a full stop. The last paragraph RUNS OFF THE FOOT at ปุพเพ, so verse 14 is CUT."
+      }
+    ]
+  },
+  "chants": [
+    {
+      "id": "dhammacakkappavattana-suttam",
+      "continuation_of": "dhammacakkappavattana-suttam",
+      "continues": true,
+      "working_notes": {
+        "invitation": "None printed; this is the middle of the chant.",
+        "units": "Eleven, one per indented paragraph. Paragraph lengths vary from one printed line (verse 10) to six (verse 7), and the paragraph is the unit throughout.",
+        "ordering": "Pali only. No Thai translation is printed anywhere on this sheet.",
+        "conventions": "Read line by line at 3.0x with every sentence boundary checked separately at 4.4x. THREE readings on this sheet were compared against text already in the app rather than assumed, and two of them disagree with it — see the checks. ตัต๎ระตัต๎รา takes the yamakkan.",
+        "pages": "IMG_0430.PNG, page 160, the number printed clearly at the top centre. Arrived from page 159 and CONTINUES onto 161. A hand grips the left edge with three fingers visible; all sit outside the text block and cover no text."
+      },
+      "verses": [
+        {
+          "number": 4,
+          "page": 160,
+          "pali": "กะตะมา จะ สา ภิกขะเว มัชฌิมา ปะฏิปะทา ตะถาคะเตนะ อะภิสัมพุทธา, จักขุกะระณี ญาณะกะระณี, อุปะสะมายะ อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.",
+          "pali_roman": "Katamā ca sā bhikkhave majjhimā paṭipadā tathāgatena abhisambuddhā, cakkhukaraṇī ñāṇakaraṇī, upasamāya abhiññāya sambodhāya nibbānāya saṃvattati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "And what, monks, is that middle way discovered by the Tathāgata, which gives rise to vision and to knowledge, and leads to peace, to direct knowledge, to enlightenment, to Nibbāna?"
+        },
+        {
+          "number": 5,
+          "pali": "อะยะเมวะ อะริโย อัฏฐังคิโก มัคโค. เสยยะถีทัง, สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ.",
+          "pali_roman": "Ayameva ariyo aṭṭhaṅgiko maggo. Seyyathīdaṃ, sammādiṭṭhi sammāsaṅkappo, sammāvācā sammākammanto sammāājīvo, sammāvāyāmo sammāsati sammāsamādhi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "It is this very noble eightfold path. That is to say: right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, right concentration."
+        },
+        {
+          "number": 6,
+          "pali": "อะยัง โข สา ภิกขะเว มัชฌิมา ปะฏิปะทา ตะถาคะเตนะ อะภิสัมพุทธา, จักขุกะระณี ญาณะกะระณี, อุปะสะมายะ อะภิญญายะ สัมโพธายะ นิพพานายะ สังวัตตะติ.",
+          "pali_roman": "Ayaṃ kho sā bhikkhave majjhimā paṭipadā tathāgatena abhisambuddhā, cakkhukaraṇī ñāṇakaraṇī, upasamāya abhiññāya sambodhāya nibbānāya saṃvattati.",
+          "thai": "",
+          "paiboon": "",
+          "english": "This, monks, is that middle way discovered by the Tathāgata, which gives rise to vision and to knowledge, and leads to peace, to direct knowledge, to enlightenment, to Nibbāna."
+        },
+        {
+          "number": 7,
+          "pali": "อิทัง โข ปะนะ ภิกขะเว ทุกขัง อะริยะสัจจัง. ชาติปิ ทุกขา, ชะราปิ ทุกขา, มะระณัมปิ ทุกขัง, โสกะปะริเทวะทุกขะโทมะนัสสุปายาสาปิ ทุกขา, อัปปิเยหิ สัมปะโยโค ทุกโข, ปิเยหิ วิปปะโยโค ทุกโข, ยัมปิจฉัง นะ ละภะติ ตัมปิ ทุกขัง, สังขิตเตนะ ปัญจุปปาทานักขันธา ทุกขา.",
+          "pali_roman": "Idaṃ kho pana bhikkhave dukkhaṃ ariyasaccaṃ. Jātipi dukkhā, jarāpi dukkhā, maraṇampi dukkhaṃ, sokaparidevadukkhadomanassupāyāsāpi dukkhā, appiyehi sampayogo dukkho, piyehi vippayogo dukkho, yampicchaṃ na labhati tampi dukkhaṃ, saṅkhittena pañcuppādānakkhandhā dukkhā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now this, monks, is the noble truth of suffering. Birth is suffering, ageing is suffering, death is suffering; sorrow, lamentation, pain, grief and despair are suffering; union with what is disliked is suffering, separation from what is liked is suffering, not getting what one wants is suffering; in short, the five aggregates of clinging are suffering."
+        },
+        {
+          "number": 8,
+          "pali": "อิทัง โข ปะนะ ภิกขะเว ทุกขะสะมุทะโย อะริยะสัจจัง. ยายัง ตัณหา โปโนพภะวิกา นันทิราคะสะหะคะตา ตัต๎ระตัต๎ราภินันทินี. เสยยะถีทัง กามะตัณหา ภะวะตัณหา วิภะวะตัณหา.",
+          "pali_roman": "Idaṃ kho pana bhikkhave dukkhasamudayo ariyasaccaṃ. Yāyaṃ taṇhā ponobbhavikā nandirāgasahagatā tatratatrābhinandinī. Seyyathīdaṃ kāmataṇhā bhavataṇhā vibhavataṇhā.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now this, monks, is the noble truth of the arising of suffering. It is this craving which leads to renewed becoming, accompanied by delight and lust, delighting now here now there — that is to say, craving for sensual pleasures, craving for becoming, craving for non-becoming."
+        },
+        {
+          "number": 9,
+          "pali": "อิทัง โข ปะนะ ภิกขะเว ทุกขะนิโรโธ อะริยะสัจจัง. โย ตัสสาเยวะ ตัณหายะ อะเสสะวิราคะนิโรโธ จาโค ปะฏินิสสัคโค มุตติ อะนาละโย.",
+          "pali_roman": "Idaṃ kho pana bhikkhave dukkhanirodho ariyasaccaṃ. Yo tassāyeva taṇhāya asesavirāganirodho cāgo paṭinissaggo mutti anālayo.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now this, monks, is the noble truth of the cessation of suffering. It is the remainderless fading away and cessation of that same craving, the giving up of it, the letting go of it, freedom from it, non-reliance upon it."
+        },
+        {
+          "number": 10,
+          "pali": "อิทัง โข ปะนะ ภิกขะเว ทุกขะนิโรธะคามินี ปะฏิปะทา อะริยะสัจจัง.",
+          "pali_roman": "Idaṃ kho pana bhikkhave dukkhanirodhagāminī paṭipadā ariyasaccaṃ.",
+          "thai": "",
+          "paiboon": "",
+          "english": "Now this, monks, is the noble truth of the way leading to the cessation of suffering."
+        },
+        {
+          "number": 11,
+          "pali": "อะยะเมวะ อะริโย อัฏฐังคิโก มัคโค. เสยยะถีทัง สัมมาทิฏฐิ สัมมาสังกัปโป, สัมมาวาจา สัมมากัมมันโต สัมมาอาชีโว, สัมมาวายาโม สัมมาสะติ สัมมาสะมาธิ.",
+          "pali_roman": "Ayameva ariyo aṭṭhaṅgiko maggo. Seyyathīdaṃ sammādiṭṭhi sammāsaṅkappo, sammāvācā sammākammanto sammāājīvo, sammāvāyāmo sammāsati sammāsamādhi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "It is this very noble eightfold path. That is to say: right view, right intention, right speech, right action, right livelihood, right effort, right mindfulness, right concentration."
+        },
+        {
+          "number": 12,
+          "pali": "อิทัง ทุกขัง อะริยะสัจจันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.",
+          "pali_roman": "Idaṃ dukkhaṃ ariyasaccanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "This is the noble truth of suffering — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light."
+        },
+        {
+          "number": 13,
+          "pali": "ตัง โข ปะนิทัง ทุกขัง อะริยะสัจจัง ปะริญเญยยันติ เม ภิกขะเว ปุพเพ อะนะนุสสุเตสุ ธัมเมสุ จักขุง อุทะปาทิ ญาณัง อุทะปาทิ ปัญญา อุทะปาทิ วิชชา อุทะปาทิ อาโลโก อุทะปาทิ.",
+          "pali_roman": "Taṃ kho panidaṃ dukkhaṃ ariyasaccaṃ pariññeyyanti me bhikkhave pubbe ananussutesu dhammesu cakkhuṃ udapādi ñāṇaṃ udapādi paññā udapādi vijjā udapādi āloko udapādi.",
+          "thai": "",
+          "paiboon": "",
+          "english": "This noble truth of suffering is to be fully understood — so, monks, in regard to things unheard of before, there arose in me vision, there arose knowledge, there arose wisdom, there arose true knowledge, there arose light."
+        },
+        {
+          "number": 14,
+          "pali": "ตัง โข ปะนิทัง ทุกขัง อะริยะสัจจัง ปะริญญาตันติ เม ภิกขะเว ปุพเพ […]",
+          "pali_roman": "Taṃ kho panidaṃ dukkhaṃ ariyasaccaṃ pariññātanti me bhikkhave pubbe […]",
+          "thai": "",
+          "paiboon": "",
+          "english": "This noble truth of suffering has been fully understood — so, monks, in regard to […]"
+        }
+      ],
+      "vocabulary": [
+        {
+          "pali": "ปะริญเญยยัง / ปะริญญาตัง",
+          "pali_roman": "pariññeyyaṃ / pariññātaṃ",
+          "meaning": "to be fully understood / has been fully understood. The pair drives the sutta's threefold turning: each truth is stated, then given its task, then declared done"
+        },
+        {
+          "pali": "อุทะปาทิ",
+          "pali_roman": "udapādi",
+          "meaning": "there arose. Repeated five times per paragraph — vision, knowledge, wisdom, true knowledge, light — and the repetition is the point"
+        },
+        {
+          "pali": "อะนะนุสสุเตสุ ธัมเมสุ",
+          "pali_roman": "ananussutesu dhammesu",
+          "meaning": "in regard to things not heard before. The claim that the four truths were not learnt from anyone"
+        }
+      ],
+      "checks": [
+        {
+          "verse": 5,
+          "file": "IMG_0430.PNG",
+          "issue": "‼ เสยยะถีทัง TAKES A COMMA HERE AND NOT AT VERSES 8 OR 11, and all three sit on this one sheet. Verse 5 reads มัคโค. เสยยะถีทัง, สัมมาทิฏฐิ; verse 11 reads the IDENTICAL sentence as มัคโค. เสยยะถีทัง สัมมาทิฏฐิ with no comma; verse 8 also has none. Verses 5 and 11 were cropped at 4.4x and compared side by side. The same sentence, printed twice on one page, punctuated two ways. Reproduced as printed; neither levelled."
+        },
+        {
+          "verse": 7,
+          "file": "IMG_0430.PNG",
+          "issue": "‼ ปัญจุปปาทานักขันธา IS PRINTED WITH A DOUBLED ป HERE, where the app already holds ปัญจุปาทานักขันธา with a single one at verses 41 and 56 of the Mahāsatipaṭṭhāna, read from pages 139 and 145. Read at 4.4x on this sheet and checked against chanting.py rather than assumed. Different chants on different sheets, so both stand as printed — but a later pass comparing the two would see a typo where there is a genuine difference in the book. Standard editions have the single ป."
+        },
+        {
+          "verse": 8,
+          "file": "IMG_0430.PNG",
+          "issue": "‼ THE THREE CRAVINGS ARE SET WITH NO PUNCTUATION AT ALL BETWEEN THEM — กามะตัณหา ภะวะตัณหา วิภะวะตัณหา. — where the same list at verse 57 on page 145 reads กามะตัณหา, ภะวะตัณหา. วิภะวะตัณหา., a comma then a full stop. Read at 4.4x. Two chants, two sheets, the identical three-item list punctuated in two completely different ways, and neither harmonised."
+        },
+        {
+          "verse": 4,
+          "file": "IMG_0430.PNG",
+          "issue": "NOT A COMPLETION — page 159 ended at a full stop after สังวัตตะติ., so this verse OPENS a paragraph rather than finishing one, and the batch carries no completion row and no […]."
+        },
+        {
+          "verse": 14,
+          "file": "IMG_0430.PNG",
+          "issue": "‼ THE PAGE IS CUT MID-SENTENCE. The last printed words are เม ภิกขะเว ปุพเพ, with clear white paper below — read at 1.5x across the whole foot. […] is marked in pali and pali_roman and the english stops with it. Page 161 must COMPLETE this verse."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0430.PNG",
+          "issue": "ONE COLUMN THROUGHOUT. The two-column setting belonged to the บทขัด on page 159 and does not return here; the ink fills the measure with no gutter anywhere on the sheet. Checked rather than assumed, because a column change part way down a page is what this workflow warns hardest about."
+        },
+        {
+          "verse": 6,
+          "file": "IMG_0430.PNG",
+          "issue": "VERSES 4 AND 6 ARE THE SAME SENTENCE ASKED AND THEN ANSWERED — กะตะมา จะ สา … and อะยัง โข สา … — with identical tails. Both read separately at 3.0x and they agree word for word and comma for comma. Recorded because on this book agreement between repeated formulas is the surprise, not the rule."
+        },
+        {
+          "verse": null,
+          "file": "IMG_0430.PNG",
+          "issue": "NOTHING ON THIS SHEET BUT BODY TEXT. No title, no invitation, no section heading, no rubric, no footnote and no rule at the foot — the two footnotes belong to page 159. Walked top to bottom against the photograph: page number 160 at the top centre, eleven paragraphs, blank paper below the cut. A hand grips the left edge with three fingers, outside the text block."
+        }
+      ]
+    }
+  ],
+  "batch_status": {
+    "completed": [],
+    "not_started": [],
+    "continues": [
+      "dhammacakkappavattana-suttam"
+    ],
+    "resume_from_page": 161,
+    "resume_from_file": "IMG_0431.PNG",
+    "resume_from": "dhammacakkappavattana-suttam",
+    "unreadable": [],
+    "paiboon_scan": "clean — there is no paiboon on this sheet. The page prints Pali only, so thai and paiboon are \"\" on all eleven verses.",
+    "pali_untouched": "Confirmed. No pali value was run through Paiboon+; pali_roman is IAST throughout and every layer was read off IMG_0430.PNG.",
+    "page_scan": "agrees — one row, page 160, claiming verses 4-14, and the entry holds exactly those eleven. Verse 4 carries page 160; 5 to 14 carry none and sit on 160 by carry-forward. Numbering runs on from page 159 verse 3 with no gap and no overlap, and no verse is re-sent because 159 ended at a sentence boundary.",
+    "notes": "‼ THREE READINGS ON THIS SHEET WERE CHECKED AGAINST TEXT ALREADY IN THE APP, and two disagree with it. ปัญจุปปาทานักขันธา is printed with a DOUBLED ป here where the Mahāsatipaṭṭhāna has a single one at verses 41 and 56; and the three cravings are set with NO punctuation between them where page 145 gives a comma then a full stop. Both stand as printed, in both places. ‼ เสยยะถีทัง takes a comma at verse 5 and none at verses 8 and 11 — the identical sentence, twice on one page, punctuated two ways. ‼ The page is CUT mid-sentence at ปุพเพ, so 161 must complete verse 14. ⚠️ One column throughout; the two-column setting on 159 belonged to the บทขัด and does not return. All Pali here is an unreviewed draft until Josh checks it against the physical book."
+  }
+}
