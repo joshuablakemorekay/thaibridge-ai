@@ -1813,12 +1813,12 @@ GENDER_VARIANTS = {
             'male': {
                 'formal': {'thai': 'ลาก่อนครับ', 'paiboon': 'laa gɔ̀ɔn kráp', 'english': 'Goodbye'},
                 'polite': {'thai': 'ลาก่อนครับ', 'paiboon': 'laa gɔ̀ɔn kráp', 'english': 'Goodbye'},
-                'casual': {'thai': 'บ้าย', 'paiboon': 'bâai', 'english': 'Bye'},
+                'casual': {'thai': 'บาย', 'paiboon': 'baai', 'english': 'Bye'},
             },
             'female': {
                 'formal': {'thai': 'ลาก่อนค่ะ', 'paiboon': 'laa gɔ̀ɔn kâ', 'english': 'Goodbye'},
                 'polite': {'thai': 'ลาก่อนค่ะ', 'paiboon': 'laa gɔ̀ɔn kâ', 'english': 'Goodbye'},
-                'casual': {'thai': 'บ้าย', 'paiboon': 'bâai', 'english': 'Bye'},
+                'casual': {'thai': 'บาย', 'paiboon': 'baai', 'english': 'Bye'},
             }
         },
         'excuse_me': {
@@ -2359,8 +2359,9 @@ THAI_VOWELS_32 = {
             'paiboon': 'uạ',
             'type': 'short',
             'sound': 'short "ua"',
-            'example_word': {'thai': 'กัวน', 'paiboon': 'guan', 'english': 'bother'},
-            'length_note': 'Quick gliding vowel'
+            'example_word': {'thai': 'ผัวะ', 'paiboon': 'pùa', 'english': 'smack (a slapping sound)'},
+            'length_note': 'Rare — this short vowel survives mostly in exclamations. '
+                           'With a final consonant you get the long อัว instead, as in กวน (guan, to stir).'
         },
         {
             'number': 27,
@@ -3745,18 +3746,18 @@ GRAMMAR = {
                 'title': 'Common Usage Patterns',
                 'patterns': [
                     {
-                        'pattern': 'Number + Classifier + Noun',
-                        'thai': 'สามคนนักเรียน',
-                        'paiboon': 'sǎam kon nák-riian',
-                        'english': 'three students',
-                        'note': 'Most common pattern for counting'
-                    },
-                    {
                         'pattern': 'Noun + Number + Classifier',
                         'thai': 'นักเรียนสามคน',
                         'paiboon': 'nák-riian sǎam kon',
                         'english': 'three students',
-                        'note': 'Alternative pattern, also common'
+                        'note': 'The standard order for counting anything'
+                    },
+                    {
+                        'pattern': 'Noun + Classifier + นี้ / นั้น',
+                        'thai': 'เสื้อตัวนี้',
+                        'paiboon': 'sʉ̂a dtuua níi',
+                        'english': 'this shirt',
+                        'note': 'How you point at one specific thing'
                     },
                     {
                         'pattern': 'Classifier alone = "one"',
@@ -4372,10 +4373,10 @@ PAIBOON_GUIDE = {
             'long': {'thai': 'อื', 'paiboon': 'ʉʉ'},
             'examples': [
                 {
-                    'thai': 'ึง / ืด',
-                    'paiboon': 'sʉ̀ŋ / dʉ̀ʉt',
-                    'english': 'tall building / pull',
-                    'context': 'Descriptions, actions',
+                    'thai': 'ตึก / มือ',
+                    'paiboon': 'dtʉ̀k / mʉʉ',
+                    'english': 'building / hand',
+                    'context': 'Places, the body',
                     'formality': 'Polite'
                 },
                 {
@@ -4386,10 +4387,10 @@ PAIBOON_GUIDE = {
                     'formality': 'Casual'
                 },
                 {
-                    'thai': 'ึก / ื้อ',
-                    'paiboon': 'sʉ̀k / sʉ́ʉ',
-                    'english': 'study / buy',
-                    'context': 'Daily activities',
+                    'thai': 'หนึ่ง / ซื้อ',
+                    'paiboon': 'nʉ̀ŋ / sʉ́ʉ',
+                    'english': 'one / to buy',
+                    'context': 'Counting, shopping',
                     'formality': 'Polite'
                 }
             ]
@@ -4402,24 +4403,24 @@ PAIBOON_GUIDE = {
             'long': {'thai': 'อู', 'paiboon': 'uu'},
             'examples': [
                 {
-                    'thai': 'ุก / ูป',
-                    'paiboon': 'tùk / rûup',
-                    'english': 'doll / picture, photo',
-                    'context': 'Objects',
+                    'thai': 'ทุก / รูป',
+                    'paiboon': 'túk / rûup',
+                    'english': 'every / picture, photo',
+                    'context': 'Everyday words',
                     'formality': 'Polite'
                 },
                 {
-                    'thai': 'หนุม / หนู',
+                    'thai': 'หนุ่ม / หนู',
                     'paiboon': 'nùm / nǔu',
                     'english': 'young man / mouse, I (humble)',
                     'context': 'People, pronouns',
                     'formality': 'Casual/Polite'
                 },
                 {
-                    'thai': 'ุก / ู้',
-                    'paiboon': 'jùk / jûu',
-                    'english': 'hurt, sore / kiss',
-                    'context': 'Feelings, actions',
+                    'thai': 'สุก / ดู',
+                    'paiboon': 'sùk / duu',
+                    'english': 'ripe, cooked / to look',
+                    'context': 'Food, actions',
                     'formality': 'Casual'
                 }
             ]
