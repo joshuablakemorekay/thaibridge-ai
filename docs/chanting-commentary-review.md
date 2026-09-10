@@ -2,7 +2,7 @@
 
 Generated 2026-09-10 from `chanting.py`. Read-only extract: editing this file changes nothing.
 
-**222 of 305 chants have commentary. 83 still to write.**
+**242 of 305 chants have commentary. 63 still to write.**
 
 Everything below is prose written for this edition. The Pali, Thai and English of the verses themselves are not reproduced here — this is only the commentary, so that it can be read as writing rather than checked as data.
 
@@ -3888,6 +3888,195 @@ The closing verses draw the practical conclusion, and it is about giving rather 
 
 ---
 
+## บทขัด ฉะสาราณียะธัมมะสุตตัง — The Prefatory Verse for the Discourse on the Six States to be Remembered
+
+*page 114 · English is a working translation*  
+`bot-khat-chasaraniyadhamma-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to the discourse on the six states that make a community cohere.
+
+**When it is chanted.** Chanted immediately before the Chāsarāṇīyadhamma Sutta, introducing it.
+
+**Historical background**
+
+The introduction names the Buddha by an epithet used nowhere else in this book: maker of concord, who yokes people to harmony. What follows is a text about living together.
+
+The list of benefits it gives is unusually social — affection, respect, cohesion, freedom from dispute, unity — and none of them is about an individual's progress.
+
+**Meaning and purpose**
+
+The verse states the purpose before the content, as these introductions do: for affection one for another, and for respect that brings success, for cohesion, for freedom from dispute, and for concord and unity.
+
+Then a qualification worth noticing: they lead onward for monks who practise by the Dhamma. The six work for people already trying, which is a limit the verse states rather than implies.
+
+And the reason for reciting is given as action rather than merit: having heard it, so as to act as the Buddha taught. The introduction is asking the assembly to change how they behave towards each other, which is a large thing for eight lines to attempt.
+
+---
+
+## ฉะสาราณียะธัมมะสุตตัง — The Discourse on the Six States to be Remembered
+
+*pages 114–115 · chant 21 in the book · English is a working translation*  
+`chasaraniyadhamma-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Six principles of cordiality — acts of loving-kindness by body, speech and mind, sharing gains, common virtue and common view.
+
+**When it is chanted.** Chanted after its prefatory verse, among the discourses in the collection.
+
+**Historical background**
+
+The six are given in the standard sutta frame, each introduced with and further, monks, and each closed with the same phrase: this too is a state to be remembered.
+
+สาราณียะ means to be remembered or borne in mind, and the six are what a community is supposed to keep in view about itself.
+
+**Meaning and purpose**
+
+The first three are the same act repeated through the three doors: bodily acts of loving-kindness towards his fellows, then verbal, then mental. Each carries the same qualification — both openly and in private — which is the phrase that does the work. What is asked is that behaviour be the same when nobody is watching.
+
+The fourth is material and is the most concrete thing in the list: a monk shares without reserve whatever gains are righteously obtained, down to the mere contents of his bowl. Not surplus, and not what he can spare.
+
+The last two are the ones a modern reader may find strangest, because they are about agreement: dwelling possessed, in common with his companions, of the same virtues and of the same view. A community is held together not only by kindness and sharing but by people actually holding the same things to be true — and the discourse names that as a principle of cordiality rather than as an imposition.
+
+---
+
+## คาถาจุดเทียนชัย — The Verse for Lighting the Victory Candle
+
+*page 193 · English is a working translation*  
+`gatha-jut-thian-chai-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The verse for lighting the victory candle, in the book's translated printing with Thai beside the Pali.
+
+**When it is chanted.** Chanted at the lighting of the victory candle; this is the printing that carries a Thai translation.
+
+**Historical background**
+
+From page 193 the book starts again and prints the same chants a second time, now with a Thai translation set beneath each Pali line. This is one of those second printings.
+
+Nothing in the Pali has changed. What the reader gains is the คำแปล — the rendering — which the first printing did not carry.
+
+**Meaning and purpose**
+
+The verse itself is the same four lines: the Buddha whose knowing is all-knowing, the Dhamma supreme and beyond the world, the Sangha standing in the paths and their fruits, and then the wish that all dangers perish.
+
+What the Thai adds is not information but access. Somebody following the second half of this book can hear what they are chanting as they chant it, line by line, without knowing Pali.
+
+That is worth saying plainly because it changes what the book is. The first half is a service book for people who already know what the words mean or do not need to; the second half is the same material offered to somebody who wants to understand it.
+
+---
+
+## คำบูชาพระรัตนตรัย — The Offering of Homage to the Triple Gem
+
+*pages 193–194 · English is a working translation*  
+`kham-bucha-phra-ratanattaya-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The offering of homage to the Triple Gem in the translated printing, with Thai beneath each Pali line.
+
+**When it is chanted.** Chanted at the opening of a service; this is the printing that carries a Thai translation.
+
+**Historical background**
+
+The same chant that opens the whole book at page 1, printed again here with its Thai. The two printings differ in one small mark, which is recorded in the file's notes.
+
+It is the first chant of the translated half, so it is where a reader working through the second pass begins.
+
+**Meaning and purpose**
+
+The Pali is unchanged: the Buddha, the Dhamma and the Sangha named by their epithets, the offering made with these gifts, and then the request that the Blessed One accept them though he attained final Nibbāna long ago.
+
+The Thai rendering is not literal and is more helpful for that. Where the Pali says อะระหัง, the Thai expands it — having quenched entirely the fires of defilement and of suffering — so the epithet arrives as a description rather than a title.
+
+Reading the two printings side by side is the best short demonstration of what this book is doing. The same words, chanted the same way, first as sound to be learned and then as meaning to be followed.
+
+---
+
+## คำนมัสการพระรัตนตรัย — Homage to the Triple Gem
+
+*page 194 · English is a working translation*  
+`kham-namatsakan-phra-ratanattaya-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The threefold salutation to the Triple Gem in the translated printing, each line followed by a bow.
+
+**When it is chanted.** Chanted at the opening of a service after the offering; this is the printing that carries a Thai translation.
+
+**Historical background**
+
+The second chant of the translated half, matching the salutation printed at page 1. The rubric telling the assembly to bow together appears here as it does there.
+
+Like its counterpart, this printing carries the mark on ส๎วากขาโต where the page-1 printing does not — one of the small differences between the two passes.
+
+**Meaning and purpose**
+
+The three lines work as they do everywhere: a statement about one of the Three Jewels in the third person, then a first-person act of homage, then a prostration made by everybody at once.
+
+The three verbs remain distinct in the Pali — to salute, to pay homage, to bow — and the Thai keeps them distinct too, which a looser rendering could easily have flattened.
+
+For somebody learning, this is the chant where the Thai layer earns its place. The English of all three lines looks nearly identical; the Thai shows that the tradition does not treat them as the same act.
+
+---
+
+## ปุพพะภาคะนะมะการ — The Preliminary Homage
+
+*page 195 · English is a working translation*  
+`pubbabhaga-namakara-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The preliminary homage in the translated printing, the single line said three times.
+
+**When it is chanted.** Chanted three times at the opening of a service; this is the printing that carries a Thai translation.
+
+**Historical background**
+
+The third printing of this line in the book and the first with a Thai rendering beside it. It is set out three times in full, as in every other printing.
+
+For most readers of the translated half this is the first place they will see, in their own language, what the sentence they have said all their lives actually means.
+
+**Meaning and purpose**
+
+The line contains no request and no doctrine: homage, and then the Blessed One under three epithets — fortunate, worthy, perfectly enlightened by himself.
+
+The Thai has to make a choice the Pali does not force, which is how to render ตัสสะ — that one. The grammar keeps the Buddha at a distance, spoken of rather than spoken to, and a translation that smoothed it into an address would lose the whole posture of the sentence.
+
+Three times, as everywhere. What the translated printing adds is that somebody saying it for the third time now knows what they have said twice.
+
+---
+
+## พุทธาภิถุติ — Praise of the Buddha
+
+*pages 195–196 · English is a working translation*  
+`buddhabhithuti-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Praise of the Buddha in the translated printing: one long sentence of epithets and deeds, landing on an offering and a bow.
+
+**When it is chanted.** Chanted in the morning service after the preliminary homage; this is the printing that carries a Thai translation.
+
+**Historical background**
+
+The same chant printed at page 2 without a translation. This printing divides it into eighteen units against the earlier nine, because the Thai is set as its own units.
+
+The file records that the two passes divide the same text differently, and that this is not a discrepancy to be reconciled.
+
+**Meaning and purpose**
+
+The chant is one suspended sentence. It opens โย โส ตะถาคะโต — that Tathāgata — and does not complete itself until the reciter says what he does about it: to that Blessed One I make offering, to that Blessed One I bow my head.
+
+Between them come the epithets and then the deeds — he made this world known with its gods, its Māras and its Brahmās, having realised it himself through direct knowledge, and taught a Dhamma admirable in beginning, middle and end.
+
+The Thai layer changes how the suspension is experienced. In Pali the sentence hangs unresolved for nine clauses; with a rendering beneath each, a reader can follow what is being accumulated and feel the sentence land, which is the effect the original assumes and only a Pali speaker would otherwise get.
+
+---
+
 ## ท์วัตติงสาการะปาโฐ — The Passage on the Thirty-Two Parts of the Body
 
 *pages 217–218*  
@@ -4030,6 +4219,357 @@ The first five subjects proceed by a single repeated construction: I am of such 
 The fifth subject shifts from the body to what surrounds it. นานาภาโว วินาภาโว — becoming otherwise, becoming separate — is rendered by the Thai as พลัดพรากจาก, to be parted from all that is loved and pleasing. The reflection does not ask the reciter to love less; it asks them to hold what they love in the knowledge that parting is already contained in the having.
 
 The sixth subject answers the first five. Where they describe what cannot be escaped, this one names what remains one's own: kamma as possession, inheritance, origin, kin and refuge. The construction is deliberate — each is a relationship one might otherwise claim with property, family or a protector, and each is here assigned to one's own action instead. The closing lines draw the consequence: whatever deed I do, fair or foul, of that I shall be the heir.
+
+---
+
+## อุททิสะนาธิฏฐานะคาถา — The Verses of Dedication and Resolve
+
+*pages 239–240 · English is a working translation*  
+`uddissanadhitthana-gatha-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The verses of dedication and resolve in the translated printing, dedicating merit to a very wide list of beings.
+
+**When it is chanted.** Chanted at the close of a period of practice or a ceremony; this is the printing that carries a Thai translation.
+
+**Historical background**
+
+The same verses printed earlier in the book without a translation, here given with Thai beneath. The book spells the title with a doubled letter in both printings on the page, though its own contents page spells it with a single one.
+
+At thirty-four units this printing is longer than the earlier one, because the Thai is set as its own units rather than beside the Pali.
+
+**Meaning and purpose**
+
+The dedication list is what the chant is remembered for and the Thai makes its reach unmistakable: preceptors, teachers, mother and father, kin; the sun, the moon, the king; brahmās, māras, indras, the guardians of the world; Yama, friends, the indifferent — and the hostile.
+
+Then the resolve, which turns from the list to the speaker: may I swiftly come to the cutting off of craving and clinging, and may whatever base states are in my mind-stream perish, in birth after birth.
+
+It closes by asking only that the māras find no opening. Not victory over them — room to keep working, which is how a great many chants in this book end.
+
+---
+
+## ยอดพระกัณฑ์ไตรปิฎก — The Peak of the Tipiṭaka
+
+*pages 241–245 · English is a working translation*  
+`yod-phrakantraipidok-thai`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The Peak of the Tipiṭaka in Thai script, the same chant the appendix prints in roman.
+
+**When it is chanted.** Chanted where a condensed form of the whole canon is wanted; this is the Thai-script printing.
+
+**Historical background**
+
+The book prints this chant twice: here in Thai script, and again in the roman-script appendix at the back. The two are the same text, and neither carries a Thai translation.
+
+Its title claims the summit of the Tipiṭaka, and the method is compression — the standard recollections taken apart into their epithets, then reduced further to syllables.
+
+**Meaning and purpose**
+
+It begins by breaking the familiar formula into separate acts of recollection: such is the Blessed One, worthy indeed; then fully enlightened; then perfect in knowledge and conduct. Each epithet is given a line and a reverence of its own.
+
+Then the refuge, taken epithet by epithet rather than to the person as a whole — to the Worthy One I go for refuge. What is normally one act becomes a series.
+
+The last verses reduce to heart syllables set beside suffering, impermanence and not-self. This belongs to a tradition of Thai esoteric practice in which the syllables are held to carry the whole of what they abbreviate, and the book prints it without comment on either side.
+
+---
+
+## วิปัสสิต — Vipassit
+
+*page 245 · English is a working translation*  
+`vipassit-thai`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The one-line Vipassit blessing in Thai script, asking that all suffering, fear and illness perish.
+
+**When it is chanted.** Chanted as a brief blessing; this is the Thai-script printing.
+
+**Historical background**
+
+The book prints this single line twice, here in Thai script and again in the roman-script appendix. Neither printing carries a Thai translation.
+
+At nine words of Pali it is the shortest chant in the book, and it has a title and an entry of its own in both places.
+
+**Meaning and purpose**
+
+Three things are named and the same thing is asked of each: สัพพะทุกขา สัพพะภะยา สัพพะโรคา วินาสสันตุ — may all suffering, all fear and all illness perish.
+
+The three are the categories the whole protective collection works over: the doctrinal, the one that brings people to a temple, and the bodily. Nothing else is asked for.
+
+That the book keeps it as a chant in its own right, twice, rather than folding it into something longer, is the interesting decision. Somebody wanted a blessing short enough to say in a doorway.
+
+---
+
+## คำอาราธนาศีล 5 ปรกติ — The Words for Requesting the Ordinary Five Precepts
+
+*page 249 · English is a working translation*  
+`kham-aradhana-sin-5-prokati`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The request for the ordinary five precepts, each to be kept separately, said three times.
+
+**When it is chanted.** Spoken by lay people asking a monk for the five precepts.
+
+**Historical background**
+
+The commonest formula in Thai lay Buddhist life, said at the start of almost every ceremony. The book gives it first of the four requests on these pages.
+
+Its distinguishing phrase is วิสุง วิสุง รักขะณัตถายะ — to keep each one separately — and that is what makes it the ordinary form.
+
+**Meaning and purpose**
+
+What is asked for is the five precepts together with the three refuges, in one request. Refuge and precepts are never separated in this book.
+
+Keeping them separately means each stands on its own. A person who breaks one has broken one, and the other four remain intact and still binding.
+
+That is a more forgiving arrangement than it first appears, and it is the arrangement most lay people live under. The alternative is printed on the same page, and choosing between them is the point of the two formulas.
+
+---
+
+## คำอาราธนาศีล 5 พิเศษ คือนิจศีล — The Words for Requesting the Special Five Precepts, the Constant Precepts
+
+*page 249 · English is a working translation*  
+`kham-aradhana-sin-5-phiset`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The request for the constant precepts, complete in their five factors, taken as a single undertaking.
+
+**When it is chanted.** Spoken by lay people undertaking the five precepts as a permanent commitment rather than for an occasion.
+
+**Historical background**
+
+นิจศีล is the constant virtue — the five precepts held not for a ceremony or a day but continuously. The book names it in the title so nobody mistakes what is being asked.
+
+It is the special counterpart of the ordinary five, and it differs in one phrase.
+
+**Meaning and purpose**
+
+Where the ordinary request asks to keep each precept separately, this asks for ปัญจังคะสะมันนาคะตัง — complete in their five factors. The five are taken as one thing.
+
+The consequence is the one the other formula avoids: break a factor and what was undertaken is no longer complete. It is a harder undertaking, and the difference is not visible in the precepts themselves but only in these words.
+
+That a tradition prints both, on the same page, in the same shape, and lets the person asking choose, is a fair summary of how it handles lay commitment throughout this book.
+
+---
+
+## คำอาราธนาศีล 8 ปรกติ — The Words for Requesting the Ordinary Eight Precepts
+
+*page 249 · English is a working translation*  
+`kham-aradhana-sin-8-prokati`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The request for the ordinary eight precepts, each to be kept separately, said three times.
+
+**When it is chanted.** Spoken by lay people asking a monk for the eight precepts outside an observance day.
+
+**Historical background**
+
+The third of the four requests on these pages, and the eight-precept counterpart of the ordinary five. The distinguishing phrase is identical — to keep each one separately.
+
+It is used when somebody wants the eight but is not undertaking them as an uposatha.
+
+**Meaning and purpose**
+
+The wording differs from the ordinary five in one word: eight in place of five. Everything else, including the request for the refuges in the same breath, is unchanged.
+
+Keeping them separately again means each stands alone. Somebody who eats after noon has broken that one rule and not the undertaking as a whole.
+
+Set beside the uposatha form on the facing page, the pair shows the tradition distinguishing two quite different things that a bystander would see as identical — eight rules, kept by a lay person, for a period. What separates them is only which sentence was said at the start.
+
+---
+
+## คำอาราธนาศีล 8 พิเศษ คืออุโบสถศีล — The Words for Requesting the Special Eight Precepts, the Uposatha Precepts
+
+*page 250 · English is a working translation*  
+`kham-aradhana-sin-8-phiset`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The request for the uposatha observance complete in its eight factors, distinguished from the ordinary eight precepts.
+
+**When it is chanted.** Spoken by lay people on an observance day, asking for the eight precepts as an uposatha.
+
+**Historical background**
+
+The book prints four requests for precepts on these two pages, in two pairs: five ordinary and five special, eight ordinary and eight special. This is the last of the four.
+
+What makes an eight พิเศษ rather than ปรกติ is not the content — the eight rules are the same — but how they are held and for how long.
+
+**Meaning and purpose**
+
+The special form asks for อัฏฐังคะสะมันนาคะตัง อุโปสะถัง — the uposatha complete in its eight factors. The eight are taken as a single indivisible undertaking.
+
+The ordinary form printed a page earlier asks instead for the eight precepts วิสุง วิสุง รักขะณัตถายะ, to keep each one separately. Breaking one there does not break the rest; breaking one here breaks the observance.
+
+That distinction is the whole reason for printing four requests where two would seem to do. The words a person uses decide what they have taken on, and the book will not let somebody blur it by accident.
+
+---
+
+## คำอาราธนาสวดพระปริตร — The Words for Requesting the Chanting of the Parittas
+
+*page 250 · English is a working translation*  
+`kham-aradhana-suat-phra-paritta`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The lay request for the chanting of the parittas, made three times with a different danger named each time.
+
+**When it is chanted.** Spoken by a lay person to the Sangha to request a paritta chanting, before the monks begin.
+
+**Historical background**
+
+Every running order in this book begins the same way: when the layman has finished requesting the parittas. These are the words of that request.
+
+It is three couplets, and the first line of each is identical. Only the danger changes.
+
+**Meaning and purpose**
+
+The unchanging line states the purpose twice over, negatively and positively: for the warding off of misfortune, for the achieving of every good fortune. Both halves are asked for every time.
+
+What changes is the third clause, and the three make a set: for the destruction of all suffering; of all fear; of all illness. ทุกขะ, ภะยะ, โรคะ — the doctrinal, the mental and the bodily.
+
+Then the imperative, which is the same in all three and is genuinely an instruction: ปะริตตัง พ๎รูถะ มังคะลัง, chant the auspicious paritta. The whole protective apparatus of this book is set in motion by a lay person telling the monks to start.
+
+---
+
+## คำอาราธนาแสดงธรรม — The Words for Requesting a Teaching of the Dhamma
+
+*page 250 · English is a working translation*  
+`kham-aradhana-sadaeng-tham`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The short request for a Dhamma teaching, recalling Brahmā Sahampati's request that the Buddha teach at all.
+
+**When it is chanted.** Spoken by a lay person before a sermon, requesting it.
+
+**Historical background**
+
+Four lines, and they are the most quoted request in Thai Buddhism. A sermon is asked for, not offered, and this is how it is asked.
+
+The words do not ask on the assembly's own behalf. They recount somebody else's request — the one made after the awakening, when the Buddha was inclined not to teach.
+
+**Meaning and purpose**
+
+Brahmā Sahampati, lord of the world, with hands joined in reverence, made his request of the Excellent One. The posture is named, and it is the posture the person chanting is in.
+
+The argument he made is given in one line: there are beings here with little dust in their eyes. Not that all will understand, only that some might — which is the smallest claim that could have worked.
+
+And the request itself asks for compassion rather than instruction: may he teach the Dhamma, out of compassion for these people. Every sermon in this tradition is therefore requested in words that remember it might not have been given at all.
+
+---
+
+## คำอาราธนาแสดงธรรมอย่างพิสดาร — The Words for Requesting a Teaching of the Dhamma, the Elaborate Form
+
+*pages 250–251 · English is a working translation*  
+`kham-aradhana-sadaeng-tham-phisadan`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The long form of the request for a teaching, telling the whole story of Brahmā's entreaty before asking.
+
+**When it is chanted.** Spoken before a sermon on formal occasions, in place of the short request.
+
+**Historical background**
+
+Thirty units where the short form has four. As with the other pairs in this book, the long version does not add a different request — it tells the story the short one alludes to.
+
+It ends by joining that story to the present room, which the short form never does.
+
+**Meaning and purpose**
+
+It opens exactly as the short form does, with Brahmā's request, and then goes on to what happened next: so it was that the Blessed One, unsurpassed, was entreated, and out of compassion, entering into pity for beings, he looked upon this world with the eye of wisdom.
+
+That look is the moment the tradition turns on, and the long form is printed so that it can be recounted rather than assumed. Everything that follows in this book — every discourse, every paritta — depends on the decision made in that verse.
+
+Then the join: and so this assembly has gathered here to hear the Dhamma. The room is placed at the end of a line that begins with Brahmā, and the request is made in the same terms as the short form — that the Sangha teach, and that everyone present attend closely and listen.
+
+---
+
+## คำบังสุกุลศพหรืออัฐิ — The Words of the Paṃsukūla for a Body or for Relics
+
+*page 252 · English is a working translation*  
+`kham-bangsukun-sop-rue-atthi`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The verse chanted while drawing the paṃsukūla cloth over a body or relics, given in both the Mahānikāya and Dhammayut forms.
+
+**When it is chanted.** Chanted by the monks as they take hold of the cloth at a funeral or at a bone-relic ceremony.
+
+**Historical background**
+
+The book prints the verse twice, once under แบบมหานิกาย and once under แบบธรรมยุต — the two monastic fraternities of Thai Buddhism. It is one of very few places in this book where a difference of school is named at all.
+
+This is the verse most Thai people have heard more often than any other, because it is chanted at every funeral, and it is four lines long.
+
+**Meaning and purpose**
+
+อะนิจจา วะตะ สังขารา — impermanent, alas, are formations. The วะตะ is a particle of lament, and the tradition does not usually allow itself one. Here it does.
+
+What follows is stated as a general law rather than as anything about the person on the bier: of the nature to arise and pass away; having arisen, they cease. Nobody is named and nothing is said about where they have gone.
+
+Then the last line, which is the whole of the consolation offered: เตสัง วูปะสะโม สุโข — their stilling is happiness. Not that death is happiness, and not that the dead are at peace, but that the coming to rest of what rises and falls is what happiness means. Chanted over a coffin, with the cloth in hand.
+
+---
+
+## คำบังสุกุลคนเป็น — The Words of the Paṃsukūla for the Living
+
+*page 252 · English is a working translation*  
+`kham-bangsukun-khon-pen`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The paṃsukūla verse for the living: that before long this body will lie on the earth like a useless log.
+
+**When it is chanted.** Chanted at a paṃsukūla performed for somebody still alive, commonly at a long-life or life-extension ceremony.
+
+**Historical background**
+
+The book prints this immediately after the verse for the dead, and the pairing is the point. The same rite is performed for the living, with two lines changed.
+
+A paṃsukūla for a living person is done at ceremonies for prolonging life or turning misfortune — the person lies under the cloth as a corpse would.
+
+**Meaning and purpose**
+
+อะจิรัง วะตะยัง กาโย — before long, alas, this body. The lament particle appears again, and the demonstrative is doing the work: this body, the one under the cloth, the one listening.
+
+The image given is deliberately without dignity: cast aside, bereft of consciousness, like a useless log. กะลิงคะรัง is a piece of firewood — not a fallen tree, but the offcut nobody wants.
+
+Chanted over somebody who has come to have their life extended, it is a startling thing to say. That is the tradition's answer to the occasion: the ceremony may be for long life, but the words used are the ones that describe what long life is postponing.
+
+---
+
+## คำขอขมาโทษพระรัตนตรัย — The Words for Asking Pardon of the Triple Gem
+
+*page 252 · English is a working translation*  
+`kham-kho-khama-thot-phra-ratanatrai`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The formula for asking pardon of the Buddha, the Dhamma and the Sangha for every disrespect shown since birth.
+
+**When it is chanted.** Spoken by lay people or monastics before a ceremony, or wherever a period of practice is about to begin.
+
+**Historical background**
+
+The same shape as the pardon asked of a Great Elder, redirected. Where that named a person who could reply, this is addressed to the Three Jewels, which cannot.
+
+It is the widest of the pardon formulas in scope, and the phrase that widens it is ชาติโต ปัฏฐายะ — from birth onwards.
+
+**Meaning and purpose**
+
+The self-description is the same unsparing one used to a Great Elder: as fools, as deluded, as unskilful. Nothing is adjusted for the fact that the hearer is a teaching and a community rather than a man.
+
+The offence is named as disrespect — towards the Buddha, or the Dhamma, or the Sangha — done by body, by speech, or by mind. Three objects and three doors, which between them exhaust the possibilities.
+
+And the request is the same as everywhere else in this book: that the transgression be accepted as a transgression, for the sake of restraint in future. Since nothing here can answer, what the formula actually produces is the statement itself — which is all the other pardon formulas produce too, said aloud in front of somebody who then agrees.
 
 ---
 
@@ -6060,10 +6600,8 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 
 ## Still to write
 
-83 chants, in book order:
+63 chants, in book order:
 
-- page 114 — บทขัด ฉะสาราณียะธัมมะสุตตัง — The Prefatory Verse for the Discourse on the Six States to be Remembered (`bot-khat-chasaraniyadhamma-suttam`)
-- pages 114–115 — ฉะสาราณียะธัมมะสุตตัง — The Discourse on the Six States to be Remembered (`chasaraniyadhamma-suttam`)
 - page 115 — บทขัด ภิกขุอะปะริหานิยะธัมมะสุตตัง (`bot-khat-bhikkhu-aparihaniyadhamma-suttam`)
 - pages 116–117 — ภิกขุอะปะริหานิยะธัมมะสุตตัง (`bhikkhu-aparihaniyadhamma-suttam`)
 - page 117 — บทขัด ปะหานะภาวะนาสุตตัง (`bot-khat-pahana-bhavana-suttam`)
@@ -6102,11 +6640,6 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 - pages 183–186 — คิริมานันทะสุตตัง — The Discourse to Girimānanda (`girimananda-suttam`)
 - page 187 — บทขัด โลกะธัมมะสุตตะ — The Introductory Verses to the Lokadhamma Sutta (`bot-khat-lokadhamma-suttam`)
 - pages 187–190 — โลกะธัมมะสุตตัง — The Discourse on the Eight Worldly Conditions (`lokadhamma-suttam`)
-- page 193 — คาถาจุดเทียนชัย — The Verse for Lighting the Victory Candle (`gatha-jut-thian-chai-plae`)
-- pages 193–194 — คำบูชาพระรัตนตรัย — The Offering of Homage to the Triple Gem (`kham-bucha-phra-ratanattaya-plae`)
-- page 194 — คำนมัสการพระรัตนตรัย — Homage to the Triple Gem (`kham-namatsakan-phra-ratanattaya-plae`)
-- page 195 — ปุพพะภาคะนะมะการ — The Preliminary Homage (`pubbabhaga-namakara-plae`)
-- pages 195–196 — พุทธาภิถุติ — Praise of the Buddha (`buddhabhithuti-plae`)
 - pages 196–197 — ธัมมาภิถุติ — Praise of the Dhamma (`dhammabhithuti-plae`)
 - pages 197–198 — สังฆาภิถุติ — Praise of the Sangha (`sanghabhithuti-plae`)
 - pages 198–199 — ระตะนัตตะยัปปะณามะคาถา — Verses of Homage to the Triple Gem (`ratanattayappanamagatha-plae`)
@@ -6132,16 +6665,3 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 - page 236 — นมัสการพระอรหันต์ 8 ทิศ — Homage to the Arahants of the Eight Directions (`buddhamangala-gatha-plae`)
 - page 237 — อุณ์หิสสะวิชะยะคาถา — The Uṇhissavijaya Verses (`unhissavijaya-gatha`)
 - pages 237–238 — พระคาถาชินบัญชร — The Verses of the Victor's Cage (`gathajinabanjara-thai`)
-- pages 239–240 — อุททิสะนาธิฏฐานะคาถา — The Verses of Dedication and Resolve (`uddissanadhitthana-gatha-plae`)
-- pages 241–245 — ยอดพระกัณฑ์ไตรปิฎก — The Peak of the Tipiṭaka (`yod-phrakantraipidok-thai`)
-- page 245 — วิปัสสิต — Vipassit (`vipassit-thai`)
-- page 249 — คำอาราธนาศีล 5 ปรกติ — The Words for Requesting the Ordinary Five Precepts (`kham-aradhana-sin-5-prokati`)
-- page 249 — คำอาราธนาศีล 5 พิเศษ คือนิจศีล — The Words for Requesting the Special Five Precepts, the Constant Precepts (`kham-aradhana-sin-5-phiset`)
-- page 249 — คำอาราธนาศีล 8 ปรกติ — The Words for Requesting the Ordinary Eight Precepts (`kham-aradhana-sin-8-prokati`)
-- page 250 — คำอาราธนาศีล 8 พิเศษ คืออุโบสถศีล — The Words for Requesting the Special Eight Precepts, the Uposatha Precepts (`kham-aradhana-sin-8-phiset`)
-- page 250 — คำอาราธนาสวดพระปริตร — The Words for Requesting the Chanting of the Parittas (`kham-aradhana-suat-phra-paritta`)
-- page 250 — คำอาราธนาแสดงธรรม — The Words for Requesting a Teaching of the Dhamma (`kham-aradhana-sadaeng-tham`)
-- pages 250–251 — คำอาราธนาแสดงธรรมอย่างพิสดาร — The Words for Requesting a Teaching of the Dhamma, the Elaborate Form (`kham-aradhana-sadaeng-tham-phisadan`)
-- page 252 — คำบังสุกุลศพหรืออัฐิ — The Words of the Paṃsukūla for a Body or for Relics (`kham-bangsukun-sop-rue-atthi`)
-- page 252 — คำบังสุกุลคนเป็น — The Words of the Paṃsukūla for the Living (`kham-bangsukun-khon-pen`)
-- page 252 — คำขอขมาโทษพระรัตนตรัย — The Words for Asking Pardon of the Triple Gem (`kham-kho-khama-thot-phra-ratanatrai`)

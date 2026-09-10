@@ -53339,8 +53339,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0520.PNG]: TWO SUB-HEADINGS SIT INSIDE ONE CHANT.
         #   แบบมหานิกาย and แบบธรรมยุต are printed under a single bold
         #   heading, คำบังสุกุลศพหรืออัฐิ, so this is one chant and they are
@@ -53355,6 +53353,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words of the Paṃsukūla for a Body or for Relics',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The verse chanted while drawing the paṃsukūla cloth over a body or relics, given in both the Mahānikāya and Dhammayut forms."
+        ),
+
+        'when_chanted': (
+            "Chanted by the monks as they take hold of the cloth at a funeral or at a bone-relic ceremony."
+        ),
+
+        'background': [
+            "The book prints the verse twice, once under แบบมหานิกาย and once under แบบธรรมยุต — the two monastic fraternities of Thai Buddhism. It is one of very few places in this book where a difference of school is named at all.",
+
+            "This is the verse most Thai people have heard more often than any other, because it is chanted at every funeral, and it is four lines long.",
+        ],
+
+        'meaning': [
+            "อะนิจจา วะตะ สังขารา — impermanent, alas, are formations. The วะตะ is a particle of lament, and the tradition does not usually allow itself one. Here it does.",
+
+            "What follows is stated as a general law rather than as anything about the person on the bier: of the nature to arise and pass away; having arisen, they cease. Nobody is named and nothing is said about where they have gone.",
+
+            "Then the last line, which is the whole of the consolation offered: เตสัง วูปะสะโม สุโข — their stilling is happiness. Not that death is happiness, and not that the dead are at peace, but that the coming to rest of what rises and falls is what happiness means. Chanted over a coffin, with the cloth in hand.",
+        ],
         'page_start': 252,
         'layout': 'lines',
         'group': 'General chanting',
@@ -53435,13 +53458,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-bangsukun-khon-pen',
         'title_thai': 'คำบังสุกุลคนเป็น',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words of the Paṃsukūla for the Living',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The paṃsukūla verse for the living: that before long this body will lie on the earth like a useless log."
+        ),
+
+        'when_chanted': (
+            "Chanted at a paṃsukūla performed for somebody still alive, commonly at a long-life or life-extension ceremony."
+        ),
+
+        'background': [
+            "The book prints this immediately after the verse for the dead, and the pairing is the point. The same rite is performed for the living, with two lines changed.",
+
+            "A paṃsukūla for a living person is done at ceremonies for prolonging life or turning misfortune — the person lies under the cloth as a corpse would.",
+        ],
+
+        'meaning': [
+            "อะจิรัง วะตะยัง กาโย — before long, alas, this body. The lament particle appears again, and the demonstrative is doing the work: this body, the one under the cloth, the one listening.",
+
+            "The image given is deliberately without dignity: cast aside, bereft of consciousness, like a useless log. กะลิงคะรัง is a piece of firewood — not a fallen tree, but the offcut nobody wants.",
+
+            "Chanted over somebody who has come to have their life extended, it is a startling thing to say. That is the tradition's answer to the occasion: the ceremony may be for long life, but the words used are the ones that describe what long life is postponing.",
+        ],
         'page_start': 252,
         'layout': 'lines',
         'group': 'General chanting',
@@ -53474,13 +53520,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-kho-khama-thot-phra-ratanatrai',
         'title_thai': 'คำขอขมาโทษพระรัตนตรัย',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Asking Pardon of the Triple Gem',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The formula for asking pardon of the Buddha, the Dhamma and the Sangha for every disrespect shown since birth."
+        ),
+
+        'when_chanted': (
+            "Spoken by lay people or monastics before a ceremony, or wherever a period of practice is about to begin."
+        ),
+
+        'background': [
+            "The same shape as the pardon asked of a Great Elder, redirected. Where that named a person who could reply, this is addressed to the Three Jewels, which cannot.",
+
+            "It is the widest of the pardon formulas in scope, and the phrase that widens it is ชาติโต ปัฏฐายะ — from birth onwards.",
+        ],
+
+        'meaning': [
+            "The self-description is the same unsparing one used to a Great Elder: as fools, as deluded, as unskilful. Nothing is adjusted for the fact that the hearer is a teaching and a community rather than a man.",
+
+            "The offence is named as disrespect — towards the Buddha, or the Dhamma, or the Sangha — done by body, by speech, or by mind. Three objects and three doors, which between them exhaust the possibilities.",
+
+            "And the request is the same as everywhere else in this book: that the transgression be accepted as a transgression, for the sake of restraint in future. Since nothing here can answer, what the formula actually produces is the statement itself — which is all the other pardon formulas produce too, said aloud in front of somebody who then agrees.",
+        ],
         'page_start': 252,
         'layout': 'prose',
         'group': 'General chanting',
@@ -53582,13 +53651,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-aradhana-sin-8-phiset',
         'title_thai': 'คำอาราธนาศีล 8 พิเศษ คืออุโบสถศีล',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Requesting the Special Eight Precepts, the Uposatha Precepts',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The request for the uposatha observance complete in its eight factors, distinguished from the ordinary eight precepts."
+        ),
+
+        'when_chanted': (
+            "Spoken by lay people on an observance day, asking for the eight precepts as an uposatha."
+        ),
+
+        'background': [
+            "The book prints four requests for precepts on these two pages, in two pairs: five ordinary and five special, eight ordinary and eight special. This is the last of the four.",
+
+            "What makes an eight พิเศษ rather than ปรกติ is not the content — the eight rules are the same — but how they are held and for how long.",
+        ],
+
+        'meaning': [
+            "The special form asks for อัฏฐังคะสะมันนาคะตัง อุโปสะถัง — the uposatha complete in its eight factors. The eight are taken as a single indivisible undertaking.",
+
+            "The ordinary form printed a page earlier asks instead for the eight precepts วิสุง วิสุง รักขะณัตถายะ, to keep each one separately. Breaking one there does not break the rest; breaking one here breaks the observance.",
+
+            "That distinction is the whole reason for printing four requests where two would seem to do. The words a person uses decide what they have taken on, and the book will not let somebody blur it by accident.",
+        ],
         'page_start': 250,
         'layout': 'prose',
         'group': 'General chanting',
@@ -53629,8 +53721,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0518.PNG]: THE FIRST HALF-LINE IS PRINTED THREE TIMES,
         #   unchanged, and only the second half-line changes — ทุกขะ, then
         #   ภะยะ, then โรคะ. All three are entered in full; the repetition is
@@ -53640,6 +53730,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Requesting the Chanting of the Parittas',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The lay request for the chanting of the parittas, made three times with a different danger named each time."
+        ),
+
+        'when_chanted': (
+            "Spoken by a lay person to the Sangha to request a paritta chanting, before the monks begin."
+        ),
+
+        'background': [
+            "Every running order in this book begins the same way: when the layman has finished requesting the parittas. These are the words of that request.",
+
+            "It is three couplets, and the first line of each is identical. Only the danger changes.",
+        ],
+
+        'meaning': [
+            "The unchanging line states the purpose twice over, negatively and positively: for the warding off of misfortune, for the achieving of every good fortune. Both halves are asked for every time.",
+
+            "What changes is the third clause, and the three make a set: for the destruction of all suffering; of all fear; of all illness. ทุกขะ, ภะยะ, โรคะ — the doctrinal, the mental and the bodily.",
+
+            "Then the imperative, which is the same in all three and is genuinely an instruction: ปะริตตัง พ๎รูถะ มังคะลัง, chant the auspicious paritta. The whole protective apparatus of this book is set in motion by a lay person telling the monks to start.",
+        ],
         'page_start': 250,
         'layout': 'lines',
         'group': 'General chanting',
@@ -53704,13 +53819,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-aradhana-sadaeng-tham',
         'title_thai': 'คำอาราธนาแสดงธรรม',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Requesting a Teaching of the Dhamma',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The short request for a Dhamma teaching, recalling Brahmā Sahampati's request that the Buddha teach at all."
+        ),
+
+        'when_chanted': (
+            "Spoken by a lay person before a sermon, requesting it."
+        ),
+
+        'background': [
+            "Four lines, and they are the most quoted request in Thai Buddhism. A sermon is asked for, not offered, and this is how it is asked.",
+
+            "The words do not ask on the assembly's own behalf. They recount somebody else's request — the one made after the awakening, when the Buddha was inclined not to teach.",
+        ],
+
+        'meaning': [
+            "Brahmā Sahampati, lord of the world, with hands joined in reverence, made his request of the Excellent One. The posture is named, and it is the posture the person chanting is in.",
+
+            "The argument he made is given in one line: there are beings here with little dust in their eyes. Not that all will understand, only that some might — which is the smallest claim that could have worked.",
+
+            "And the request itself asks for compassion rather than instruction: may he teach the Dhamma, out of compassion for these people. Every sermon in this tradition is therefore requested in words that remember it might not have been given at all.",
+        ],
         'page_start': 250,
         'layout': 'lines',
         'group': 'General chanting',
@@ -53763,8 +53901,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0519.PNG]: THE COLUMN COUNT CHANGES INSIDE THE CHANT.
         #   Nineteen lines on page 251 are set in one centred column and the
         #   last six in two columns. The row records 1, which is what most of
@@ -53780,6 +53916,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Requesting a Teaching of the Dhamma, the Elaborate Form',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The long form of the request for a teaching, telling the whole story of Brahmā's entreaty before asking."
+        ),
+
+        'when_chanted': (
+            "Spoken before a sermon on formal occasions, in place of the short request."
+        ),
+
+        'background': [
+            "Thirty units where the short form has four. As with the other pairs in this book, the long version does not add a different request — it tells the story the short one alludes to.",
+
+            "It ends by joining that story to the present room, which the short form never does.",
+        ],
+
+        'meaning': [
+            "It opens exactly as the short form does, with Brahmā's request, and then goes on to what happened next: so it was that the Blessed One, unsurpassed, was entreated, and out of compassion, entering into pity for beings, he looked upon this world with the eye of wisdom.",
+
+            "That look is the moment the tradition turns on, and the long form is printed so that it can be recounted rather than assumed. Everything that follows in this book — every discourse, every paritta — depends on the decision made in that verse.",
+
+            "Then the join: and so this assembly has gathered here to hear the Dhamma. The room is placed at the end of a line that begins with Brahmā, and the request is made in the same terms as the short form — that the Sangha teach, and that everyone present attend closely and listen.",
+        ],
         'page_start': 250,
         'layout': 'lines',
         'group': 'General chanting',
@@ -54040,13 +54201,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-aradhana-sin-5-prokati',
         'title_thai': 'คำอาราธนาศีล 5 ปรกติ',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Requesting the Ordinary Five Precepts',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The request for the ordinary five precepts, each to be kept separately, said three times."
+        ),
+
+        'when_chanted': (
+            "Spoken by lay people asking a monk for the five precepts."
+        ),
+
+        'background': [
+            "The commonest formula in Thai lay Buddhist life, said at the start of almost every ceremony. The book gives it first of the four requests on these pages.",
+
+            "Its distinguishing phrase is วิสุง วิสุง รักขะณัตถายะ — to keep each one separately — and that is what makes it the ordinary form.",
+        ],
+
+        'meaning': [
+            "What is asked for is the five precepts together with the three refuges, in one request. Refuge and precepts are never separated in this book.",
+
+            "Keeping them separately means each stands on its own. A person who breaks one has broken one, and the other four remain intact and still binding.",
+
+            "That is a more forgiving arrangement than it first appears, and it is the arrangement most lay people live under. The alternative is printed on the same page, and choosing between them is the point of the two formulas.",
+        ],
         'page_start': 249,
         'layout': 'prose',
         'group': 'General chanting',
@@ -54093,8 +54277,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0517.PNG]: THIS REQUEST DROPS วิสุง วิสุง รักขะณัตถายะ,
         #   which both the chants either side of it keep. That is the
         #   difference between asking for precepts to keep SEPARATELY and
@@ -54105,6 +54287,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Requesting the Special Five Precepts, the Constant Precepts',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The request for the constant precepts, complete in their five factors, taken as a single undertaking."
+        ),
+
+        'when_chanted': (
+            "Spoken by lay people undertaking the five precepts as a permanent commitment rather than for an occasion."
+        ),
+
+        'background': [
+            "นิจศีล is the constant virtue — the five precepts held not for a ceremony or a day but continuously. The book names it in the title so nobody mistakes what is being asked.",
+
+            "It is the special counterpart of the ordinary five, and it differs in one phrase.",
+        ],
+
+        'meaning': [
+            "Where the ordinary request asks to keep each precept separately, this asks for ปัญจังคะสะมันนาคะตัง — complete in their five factors. The five are taken as one thing.",
+
+            "The consequence is the one the other formula avoids: break a factor and what was undertaken is no longer complete. It is a harder undertaking, and the difference is not visible in the precepts themselves but only in these words.",
+
+            "That a tradition prints both, on the same page, in the same shape, and lets the person asking choose, is a fair summary of how it handles lay commitment throughout this book.",
+        ],
         'page_start': 249,
         'layout': 'prose',
         'group': 'General chanting',
@@ -54145,8 +54352,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0517.PNG]: THIS IS THE ORDINARY EIGHT, and the uposatha
         #   eight on page 250 is a DIFFERENT CHANT — that one asks
         #   อัฏฐังคะสะมันนาคะตัง อุโปสะถัง, the observance complete in eight
@@ -54157,6 +54362,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Requesting the Ordinary Eight Precepts',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The request for the ordinary eight precepts, each to be kept separately, said three times."
+        ),
+
+        'when_chanted': (
+            "Spoken by lay people asking a monk for the eight precepts outside an observance day."
+        ),
+
+        'background': [
+            "The third of the four requests on these pages, and the eight-precept counterpart of the ordinary five. The distinguishing phrase is identical — to keep each one separately.",
+
+            "It is used when somebody wants the eight but is not undertaking them as an uposatha.",
+        ],
+
+        'meaning': [
+            "The wording differs from the ordinary five in one word: eight in place of five. Everything else, including the request for the refuges in the same breath, is unchanged.",
+
+            "Keeping them separately again means each stands alone. Somebody who eats after noon has broken that one rule and not the undertaking as a whole.",
+
+            "Set beside the uposatha form on the facing page, the pair shows the tradition distinguishing two quite different things that a bystander would see as identical — eight rules, kept by a lay person, for a period. What separates them is only which sentence was said at the start.",
+        ],
         'page_start': 249,
         'layout': 'prose',
         'group': 'General chanting',
@@ -54197,8 +54427,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0379.PNG]: A NINETEENTH TITLE THE CONTENTS TEST CANNOT
         #   SEE. The page prints บทขัด ฉะสาราณียะธัมมะสุตตัง with a SPACE
         #   after บทขัด; the สารบัญ has it without one. Every บทขัด from page
@@ -54212,6 +54440,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt chà-sǎa-raa-nii-yá-tam-má-sùt-dtaŋ',
         'title_english': 'The Prefatory Verse for the Discourse on the Six States to be Remembered',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the discourse on the six states that make a community cohere."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Chāsarāṇīyadhamma Sutta, introducing it."
+        ),
+
+        'background': [
+            "The introduction names the Buddha by an epithet used nowhere else in this book: maker of concord, who yokes people to harmony. What follows is a text about living together.",
+
+            "The list of benefits it gives is unusually social — affection, respect, cohesion, freedom from dispute, unity — and none of them is about an individual's progress.",
+        ],
+
+        'meaning': [
+            "The verse states the purpose before the content, as these introductions do: for affection one for another, and for respect that brings success, for cohesion, for freedom from dispute, and for concord and unity.",
+
+            "Then a qualification worth noticing: they lead onward for monks who practise by the Dhamma. The six work for people already trying, which is a limit the verse states rather than implies.",
+
+            "And the reason for reciting is given as action rather than merit: having heard it, so as to act as the Buddha taught. The introduction is asking the assembly to change how they behave towards each other, which is a large thing for eight lines to attempt.",
+        ],
         'page_start': 114,
         'group': 'General chanting',
         'english_unverified': True,
@@ -54309,8 +54562,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0379.PNG]: english_unverified is set. The book prints
         #   this chant in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -54320,6 +54571,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Chasārāṇīyadhammasuttaṃ',
         'title_english': 'The Discourse on the Six States to be Remembered',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Six principles of cordiality — acts of loving-kindness by body, speech and mind, sharing gains, common virtue and common view."
+        ),
+
+        'when_chanted': (
+            "Chanted after its prefatory verse, among the discourses in the collection."
+        ),
+
+        'background': [
+            "The six are given in the standard sutta frame, each introduced with and further, monks, and each closed with the same phrase: this too is a state to be remembered.",
+
+            "สาราณียะ means to be remembered or borne in mind, and the six are what a community is supposed to keep in view about itself.",
+        ],
+
+        'meaning': [
+            "The first three are the same act repeated through the three doors: bodily acts of loving-kindness towards his fellows, then verbal, then mental. Each carries the same qualification — both openly and in private — which is the phrase that does the work. What is asked is that behaviour be the same when nobody is watching.",
+
+            "The fourth is material and is the most concrete thing in the list: a monk shares without reserve whatever gains are righteously obtained, down to the mere contents of his bowl. Not surplus, and not what he can spare.",
+
+            "The last two are the ones a modern reader may find strangest, because they are about agreement: dwelling possessed, in common with his companions, of the same virtues and of the same view. A community is held together not only by kindness and sharing but by people actually holding the same things to be true — and the discourse names that as a principle of cordiality rather than as an imposition.",
+        ],
         'book_number': '21',
         'page_start': 114,
         'group': 'General chanting',
@@ -54466,8 +54742,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0511.PNG]: ⚠ THIS CHANT IS IN THE BOOK TWICE, IN TWO
         #   SCRIPTS. It is ยอดพระกัณฑ์ไตรปิฎก here at 241-245 in Thai script
         #   and `yod-phrakantraipidok` at 312-316 in roman. Mahāsamaya is the
@@ -54492,6 +54766,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'yɔ̂ɔt prá-gan dtrai-bpì-dòk',
         'title_english': 'The Peak of the Tipiṭaka',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Peak of the Tipiṭaka in Thai script, the same chant the appendix prints in roman."
+        ),
+
+        'when_chanted': (
+            "Chanted where a condensed form of the whole canon is wanted; this is the Thai-script printing."
+        ),
+
+        'background': [
+            "The book prints this chant twice: here in Thai script, and again in the roman-script appendix at the back. The two are the same text, and neither carries a Thai translation.",
+
+            "Its title claims the summit of the Tipiṭaka, and the method is compression — the standard recollections taken apart into their epithets, then reduced further to syllables.",
+        ],
+
+        'meaning': [
+            "It begins by breaking the familiar formula into separate acts of recollection: such is the Blessed One, worthy indeed; then fully enlightened; then perfect in knowledge and conduct. Each epithet is given a line and a reverence of its own.",
+
+            "Then the refuge, taken epithet by epithet rather than to the person as a whole — to the Worthy One I go for refuge. What is normally one act becomes a series.",
+
+            "The last verses reduce to heart syllables set beside suffering, impermanence and not-self. This belongs to a tradition of Thai esoteric practice in which the syllables are held to carry the whole of what they abbreviate, and the book prints it without comment on either side.",
+        ],
         'page_start': 241,
         'layout': 'lines',
         'group': 'General chanting',
@@ -55321,8 +55620,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0463.PNG]: NOT A DUPLICATE TO MERGE. The สารบัญ lists
         #   คาถาจุดเทียนชัย at page ๒๕๔, and the app holds that copy; this is
         #   the SECOND printing, inside the translated section. Reproducing
@@ -55338,6 +55635,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kaa-tǎa jùt tiian-chai',
         'title_english': 'The Verse for Lighting the Victory Candle',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The verse for lighting the victory candle, in the book's translated printing with Thai beside the Pali."
+        ),
+
+        'when_chanted': (
+            "Chanted at the lighting of the victory candle; this is the printing that carries a Thai translation."
+        ),
+
+        'background': [
+            "From page 193 the book starts again and prints the same chants a second time, now with a Thai translation set beneath each Pali line. This is one of those second printings.",
+
+            "Nothing in the Pali has changed. What the reader gains is the คำแปล — the rendering — which the first printing did not carry.",
+        ],
+
+        'meaning': [
+            "The verse itself is the same four lines: the Buddha whose knowing is all-knowing, the Dhamma supreme and beyond the world, the Sangha standing in the paths and their fruits, and then the wish that all dangers perish.",
+
+            "What the Thai adds is not information but access. Somebody following the second half of this book can hear what they are chanting as they chant it, line by line, without knowing Pali.",
+
+            "That is worth saying plainly because it changes what the book is. The first half is a service book for people who already know what the words mean or do not need to; the second half is the same material offered to somebody who wants to understand it.",
+        ],
         'page_start': 193,
         'group': 'General chanting',
         'english_unverified': True,
@@ -55403,8 +55725,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0463.PNG]: NOT A DUPLICATE TO MERGE. The app already
         #   holds คำบูชาพระรัตนตรัย from page 1, in Pali only. This is the
         #   book's SECOND printing of it, in the translated section, and it
@@ -55422,6 +55742,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam buu-chaa prá-rát-dtà-ná-dtrai',
         'title_english': 'The Offering of Homage to the Triple Gem',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The offering of homage to the Triple Gem in the translated printing, with Thai beneath each Pali line."
+        ),
+
+        'when_chanted': (
+            "Chanted at the opening of a service; this is the printing that carries a Thai translation."
+        ),
+
+        'background': [
+            "The same chant that opens the whole book at page 1, printed again here with its Thai. The two printings differ in one small mark, which is recorded in the file's notes.",
+
+            "It is the first chant of the translated half, so it is where a reader working through the second pass begins.",
+        ],
+
+        'meaning': [
+            "The Pali is unchanged: the Buddha, the Dhamma and the Sangha named by their epithets, the offering made with these gifts, and then the request that the Blessed One accept them though he attained final Nibbāna long ago.",
+
+            "The Thai rendering is not literal and is more helpful for that. Where the Pali says อะระหัง, the Thai expands it — having quenched entirely the fires of defilement and of suffering — so the epithet arrives as a description rather than a title.",
+
+            "Reading the two printings side by side is the best short demonstration of what this book is doing. The same words, chanted the same way, first as sound to be learned and then as meaning to be followed.",
+        ],
         'page_start': 193,
         'group': 'General chanting',
         'english_unverified': True,
@@ -55533,8 +55878,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0515.PNG]: ⚠ THIS ANSWERS AN OPEN QUESTION FROM THE
         #   ROMAN PASS. `VIPASSIT` on page 316 was entered as its own chant
         #   but the notes recorded a doubt about whether it was a title or a
@@ -55546,6 +55889,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'Vipassit',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The one-line Vipassit blessing in Thai script, asking that all suffering, fear and illness perish."
+        ),
+
+        'when_chanted': (
+            "Chanted as a brief blessing; this is the Thai-script printing."
+        ),
+
+        'background': [
+            "The book prints this single line twice, here in Thai script and again in the roman-script appendix. Neither printing carries a Thai translation.",
+
+            "At nine words of Pali it is the shortest chant in the book, and it has a title and an entry of its own in both places.",
+        ],
+
+        'meaning': [
+            "Three things are named and the same thing is asked of each: สัพพะทุกขา สัพพะภะยา สัพพะโรคา วินาสสันตุ — may all suffering, all fear and all illness perish.",
+
+            "The three are the categories the whole protective collection works over: the doctrinal, the one that brings people to a temple, and the bodily. Nothing else is asked for.",
+
+            "That the book keeps it as a chant in its own right, twice, rather than folding it into something longer, is the interesting decision. Somebody wanted a blessing short enough to say in a doorway.",
+        ],
         'page_start': 245,
         'layout': 'lines',
         'group': 'General chanting',
@@ -55572,8 +55940,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0464.PNG]: ‼ THE PAGE PRINTS NO TITLE FOR THIS CHANT.
         #   It begins straight after the ornament with อะระหัง สัมมาสัมพุทโธ
         #   ภะคะวา, in bold, and the book's own สารบัญ does not list it in the
@@ -55599,6 +55965,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam ná-mát-sà-gaan prá-rát-dtà-ná-dtrai',
         'title_english': 'Homage to the Triple Gem',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The threefold salutation to the Triple Gem in the translated printing, each line followed by a bow."
+        ),
+
+        'when_chanted': (
+            "Chanted at the opening of a service after the offering; this is the printing that carries a Thai translation."
+        ),
+
+        'background': [
+            "The second chant of the translated half, matching the salutation printed at page 1. The rubric telling the assembly to bow together appears here as it does there.",
+
+            "Like its counterpart, this printing carries the mark on ส๎วากขาโต where the page-1 printing does not — one of the small differences between the two passes.",
+        ],
+
+        'meaning': [
+            "The three lines work as they do everywhere: a statement about one of the Three Jewels in the third person, then a first-person act of homage, then a prostration made by everybody at once.",
+
+            "The three verbs remain distinct in the Pali — to salute, to pay homage, to bow — and the Thai keeps them distinct too, which a looser rendering could easily have flattened.",
+
+            "For somebody learning, this is the chant where the Thai layer earns its place. The English of all three lines looks nearly identical; the Thai shows that the tradition does not treat them as the same act.",
+        ],
         'page_start': 194,
         'group': 'General chanting',
         'english_unverified': True,
@@ -55678,8 +56069,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0509.PNG]: ⚠ THE HEADING IS SPELT DIFFERENTLY FROM THE
         #   FIRST PRINTING. This page prints อุททิสะนาธิฏฐานะคาถา with ONE ส;
         #   page 62 prints อุททิสสะนาธิฏฐานะคาถา with two. Checked at
@@ -55696,6 +56085,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Uddisanādhiṭṭhānagāthā',
         'title_english': 'The Verses of Dedication and Resolve',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The verses of dedication and resolve in the translated printing, dedicating merit to a very wide list of beings."
+        ),
+
+        'when_chanted': (
+            "Chanted at the close of a period of practice or a ceremony; this is the printing that carries a Thai translation."
+        ),
+
+        'background': [
+            "The same verses printed earlier in the book without a translation, here given with Thai beneath. The book spells the title with a doubled letter in both printings on the page, though its own contents page spells it with a single one.",
+
+            "At thirty-four units this printing is longer than the earlier one, because the Thai is set as its own units rather than beside the Pali.",
+        ],
+
+        'meaning': [
+            "The dedication list is what the chant is remembered for and the Thai makes its reach unmistakable: preceptors, teachers, mother and father, kin; the sun, the moon, the king; brahmās, māras, indras, the guardians of the world; Yama, friends, the indifferent — and the hostile.",
+
+            "Then the resolve, which turns from the list to the speaker: may I swiftly come to the cutting off of craving and clinging, and may whatever base states are in my mind-stream perish, in birth after birth.",
+
+            "It closes by asking only that the māras find no opening. Not victory over them — room to keep working, which is how a great many chants in this book end.",
+        ],
         'page_start': 239,
         'layout': 'lines',
         'group': 'General chanting',
@@ -55996,8 +56410,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0465.PNG]: THE INVITATION IS PRINTED IN BRACKETS and
         #   set centred over TWO lines beneath the title. Reproduced with its
         #   brackets, as printed. It is Pali only — the book gives no Thai for
@@ -56021,6 +56433,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'pùp-pá-paa-ká-ná-má-gaan',
         'title_english': 'The Preliminary Homage',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The preliminary homage in the translated printing, the single line said three times."
+        ),
+
+        'when_chanted': (
+            "Chanted three times at the opening of a service; this is the printing that carries a Thai translation."
+        ),
+
+        'background': [
+            "The third printing of this line in the book and the first with a Thai rendering beside it. It is set out three times in full, as in every other printing.",
+
+            "For most readers of the translated half this is the first place they will see, in their own language, what the sentence they have said all their lives actually means.",
+        ],
+
+        'meaning': [
+            "The line contains no request and no doctrine: homage, and then the Blessed One under three epithets — fortunate, worthy, perfectly enlightened by himself.",
+
+            "The Thai has to make a choice the Pali does not force, which is how to render ตัสสะ — that one. The grammar keeps the Buddha at a distance, spoken of rather than spoken to, and a translation that smoothed it into an address would lose the whole posture of the sentence.",
+
+            "Three times, as everywhere. What the translated printing adds is that somebody saying it for the third time now knows what they have said twice.",
+        ],
         'page_start': 195,
         'group': 'General chanting',
         'english_unverified': True,
@@ -56073,8 +56510,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0465.PNG]: ‼ title_roman IS THE CONTENTS' VALUE. The
         #   สารบัญ gives Buddhābhithuti — an IAST reading, not a Paiboon one,
         #   unlike the chant above it whose contents entry IS Paiboon. The
@@ -56091,6 +56526,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Buddhābhithuti',
         'title_english': 'Praise of the Buddha',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Praise of the Buddha in the translated printing: one long sentence of epithets and deeds, landing on an offering and a bow."
+        ),
+
+        'when_chanted': (
+            "Chanted in the morning service after the preliminary homage; this is the printing that carries a Thai translation."
+        ),
+
+        'background': [
+            "The same chant printed at page 2 without a translation. This printing divides it into eighteen units against the earlier nine, because the Thai is set as its own units.",
+
+            "The file records that the two passes divide the same text differently, and that this is not a discrepancy to be reconciled.",
+        ],
+
+        'meaning': [
+            "The chant is one suspended sentence. It opens โย โส ตะถาคะโต — that Tathāgata — and does not complete itself until the reciter says what he does about it: to that Blessed One I make offering, to that Blessed One I bow my head.",
+
+            "Between them come the epithets and then the deeds — he made this world known with its gods, its Māras and its Brahmās, having realised it himself through direct knowledge, and taught a Dhamma admirable in beginning, middle and end.",
+
+            "The Thai layer changes how the suspension is experienced. In Pali the sentence hangs unresolved for nine clauses; with a rendering beneath each, a reader can follow what is being accumulated and feel the sentence land, which is the effect the original assumes and only a Pali speaker would otherwise get.",
+        ],
         'page_start': 195,
         'group': 'General chanting',
         'english_unverified': True,
