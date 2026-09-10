@@ -1764,7 +1764,7 @@ GENDER_VARIANTS = {
         },
         'second_person': {
             # Same for all genders when addressing others
-            'formal': {'thai': 'ท่าน', 'paiboon': 'tân', 'english': 'you'},
+            'formal': {'thai': 'ท่าน', 'paiboon': 'tâan', 'english': 'you'},
             'polite': {'thai': 'คุณ', 'paiboon': 'kun', 'english': 'you'},
             'neutral': {'thai': 'เธอ', 'paiboon': 'təə', 'english': 'you'},
             'casual': {'thai': 'มึง', 'paiboon': 'mʉŋ', 'english': 'you'},
@@ -2005,7 +2005,7 @@ FORMALITY_LEVELS = {
         'examples': [
             {'thai': 'อนุภาค', 'paiboon': 'à-nú-pàak', 'english': 'particle (physics)'},
             {'thai': 'เซลล์', 'paiboon': 'seen', 'english': 'cell (biology)'},
-            {'thai': 'ปฏิจจสมุปบาท', 'paiboon': 'bpà-dtìt-jà-sà-mùp-bpàat', 'english': 'Dependent Origination'},
+            {'thai': 'ปฏิจจสมุปบาท', 'paiboon': 'bpà-dtìt-jà-sà-mùp-bàat', 'english': 'Dependent Origination'},
             {'thai': 'โมเลกุล', 'paiboon': 'moo-lee-gun', 'english': 'molecule'},
             {'thai': 'พันธุกรรม', 'paiboon': 'pan-tú-gam', 'english': 'genetics'},
         ]
@@ -2021,7 +2021,7 @@ FORMALITY_LEVELS = {
         'examples': [
             {'thai': 'ดิฉัน', 'paiboon': 'dì-chǎn', 'english': 'I (female formal)'},
             {'thai': 'ผม', 'paiboon': 'pǒm', 'english': 'I (male polite)'},
-            {'thai': 'ท่าน', 'paiboon': 'tân', 'english': 'you (honorific)'},
+            {'thai': 'ท่าน', 'paiboon': 'tâan', 'english': 'you (honorific)'},
             {'thai': 'รับประทาน', 'paiboon': 'ráp-bprà-taan', 'english': 'to eat (formal)'},
             {'thai': 'พิจารณา', 'paiboon': 'pí-jaa-rá-naa', 'english': 'to consider (formal)'},
         ]
@@ -2686,7 +2686,7 @@ VOCABULARY = {
         {'thai': 'ปัญญา', 'paiboon': 'bpan-yaa', 'english': 'Wisdom (Panna)', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'อริยสัจสี่', 'paiboon': 'à-rí-yá-sàt sìi', 'english': 'Four Noble Truths', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'มรรคมีองค์แปด', 'paiboon': 'mák mii oŋ bpàet', 'english': 'Eightfold Path', 'category': 'buddhist_formal', 'formality': 'formal'},
-        {'thai': 'บิณฑบาต', 'paiboon': 'bìn-tá-bàat', 'english': 'Alms round', 'category': 'buddhist_formal', 'formality': 'monastic'},
+        {'thai': 'บิณฑบาต', 'paiboon': 'bin-tá-bàat', 'english': 'Alms round', 'category': 'buddhist_formal', 'formality': 'monastic'},
         {'thai': 'อุโบสถ', 'paiboon': 'ù-boo-sòt', 'english': 'Ordination hall', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'เจดีย์', 'paiboon': 'jee-dii', 'english': 'Stupa/Pagoda', 'category': 'buddhist_formal', 'formality': 'neutral'},
         {'thai': 'พระพุทธรูป', 'paiboon': 'prá-pút-tá-rûup', 'english': 'Buddha statue', 'category': 'buddhist_formal', 'formality': 'formal'},
@@ -3207,7 +3207,7 @@ GRAMMAR = {
                         'category': 'Polite / Formal',
                         'entries': [
                             {'thai': 'คุณ', 'paiboon': 'kun', 'formality': 'polite', 'context': 'Standard polite "you"', 'usage': 'Safe default for strangers'},
-                            {'thai': 'ท่าน', 'paiboon': 'tân', 'formality': 'formal', 'context': 'Very respectful', 'usage': 'Elders, authority figures'},
+                            {'thai': 'ท่าน', 'paiboon': 'tâan', 'formality': 'formal', 'context': 'Very respectful', 'usage': 'Elders, authority figures'},
                             {'thai': 'พี่', 'paiboon': 'pîi', 'formality': 'neutral', 'context': 'Older sibling/person', 'usage': 'Anyone slightly older'},
                             {'thai': 'น้อง', 'paiboon': 'nɔ́ɔŋ', 'formality': 'neutral', 'context': 'Younger sibling/person', 'usage': 'Anyone younger'},
                         ]
@@ -3246,7 +3246,7 @@ GRAMMAR = {
                         'category': 'People - Gender Neutral',
                         'entries': [
                             {'thai': 'เขา', 'paiboon': 'kǎo', 'formality': 'neutral', 'context': 'He/She/They', 'usage': 'Most common third person'},
-                            {'thai': 'ท่าน', 'paiboon': 'tân', 'formality': 'formal', 'context': 'He/She (respectful)', 'usage': 'For respected persons'},
+                            {'thai': 'ท่าน', 'paiboon': 'tâan', 'formality': 'formal', 'context': 'He/She (respectful)', 'usage': 'For respected persons'},
                             {'thai': 'คนนั้น', 'paiboon': 'kon nán', 'formality': 'neutral', 'context': 'That person', 'usage': 'Neutral, descriptive'},
                         ]
                     },
@@ -3355,7 +3355,7 @@ GRAMMAR = {
                     },
                     {
                         'thai': 'ท่าน',
-                        'paiboon': 'tân',
+                        'paiboon': 'tâan',
                         'usage': 'Monks, respected teachers, high-status individuals',
                         'examples': ['พระ (monks)', 'อาจารย์ (teachers)', 'ผู้นำ (leaders)'],
                         'sample_sentence': {
@@ -6512,7 +6512,7 @@ CONVERSATIONS = {
         'dialogue': [
             {'speaker': 'customer_female', 'thai': 'อันนี้เท่าไหร่คะ', 'paiboon': 'an níi tâo-rài ká', 'english': 'How much is this one?', 'note': 'อันนี้ = this one'},
             {'speaker': 'vendor_male', 'thai': 'สองร้อยบาทครับ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔi bàat kráp', 'english': 'Two hundred baht.', 'note': ''},
-            {'speaker': 'customer_female', 'thai': 'แพงไปหน่อยค่ะ ลดได้ไหมคะ', 'paiboon': 'pɛɛŋ bpai nɔ̀i kâ, lót dâi mǎi ká', 'english': "It's a bit expensive. Can you lower it?", 'note': 'ลด = to reduce the price'},
+            {'speaker': 'customer_female', 'thai': 'แพงไปหน่อยค่ะ ลดได้ไหมคะ', 'paiboon': 'pɛɛŋ bpai nɔ̀ɔi kâ, lót dâi mǎi ká', 'english': "It's a bit expensive. Can you lower it?", 'note': 'ลด = to reduce the price'},
             {'speaker': 'vendor_male', 'thai': 'ลดให้ห้าสิบ เหลือร้อยห้าสิบครับ', 'paiboon': 'lót hâi hâa-sìp, lʉ̌a rɔ́ɔi hâa-sìp kráp', 'english': "I'll take off fifty — a hundred and fifty.", 'note': 'เหลือ = leaving (remaining)'},
             {'speaker': 'customer_female', 'thai': 'ร้อยยี่สิบได้ไหมคะ', 'paiboon': 'rɔ́ɔi yîi-sìp dâi mǎi ká', 'english': 'Could you do a hundred and twenty?', 'note': 'A counter-offer'},
             {'speaker': 'vendor_male', 'thai': 'ได้ครับ เอาไปเลย', 'paiboon': 'dâi kráp, ao bpai ləəi', 'english': "Alright, it's yours.", 'note': 'Agreeing to the deal'}
