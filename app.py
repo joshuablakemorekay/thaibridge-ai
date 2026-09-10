@@ -726,7 +726,7 @@ SUBSCRIPTION_TIERS = {
         'features': [
             '✓ Thai alphabet — chart, flashcards & quiz',
             '✓ Theravada Buddhism teachings',
-            '✓ Dhamma talks in Thai & English',
+            '✓ Dhamma talks, in Thai and English wherever a translation exists',
             '✓ Pra Kru Bob Dhamma articles',
             '✓ Guided meditation sessions, timer & techniques',
             f'✓ AI Thai tutor — {FREE_AI_DAILY_LIMIT} messages a day',
