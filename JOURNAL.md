@@ -3123,3 +3123,77 @@ chanted text is the book's. The translations are not yet.
 completion), `docs/chanting-book-photo-map.md` (the offset arithmetic proving
 the four gaps are blanks), `prompts/chanting-book-batch/` (the prompt, its
 reasoning, and 262 batch files).
+
+---
+
+## 10 September 2026 — One heading, forty defects, and a rule I'd already written
+
+I asked about a single line on the home page:
+
+> On Homepage here does the Thai script match the English?
+
+It didn't. `พระธรรมและภาษาไทย` is *"the Dhamma and the Thai language"* — a noun
+phrase sitting under three English instructions. Grammatical Thai, wrong Thai for
+that line, and invisible to a spellchecker.
+
+If one heading could be wrong without anyone noticing, so could the rest.
+Sweeping all 707 Thai/English pairs found around forty defects — five vowel
+examples that had lost their opening consonant and rendered as orphan marks on a
+page people pay for, an ungrammatical counting pattern taught as the main rule,
+and the velar nasal written `ng` in twenty-six places including all ten in the
+44-consonant chart.
+
+The uncomfortable part is that most of it was **my own house style**, written
+down in `prompts/romanization-system` and then quietly ignored. A test already
+asserted one of those rules — for the chanting contents only.
+
+Half the broken rows could only be repaired by inventing Thai, so:
+
+> Do the ones you can verify, hold the rest for my teacher
+
+Six rows are still wrong in production on purpose, with a bilingual review sheet
+beside them.
+
+The other thread started with me asking for a Premium tier and, in the same
+breath, asking:
+
+> Have we not already done some of these?
+
+It already existed. Building the plan as written would have been a price cut
+wearing a launch announcement. The one real gap was annual billing, so that got
+built instead.
+
+**What I learned:** a standard nobody enforces isn't a standard, it's a
+preference. Writing it down in a prompt folder felt like the work; it wasn't.
+
+**Engineering Contribution**
+
+- *Decisions made:* Kept two tiers at £9.99/£19.99 and added annual rather than
+  restructuring to one £8.99 tier — the restructure meant unpicking free/Basic/Pro
+  gating across the whole app, and I was shown that trade-off before choosing.
+  Rejected my own opening plan once the codebase showed it was already built.
+  Fixed only what could be checked against words already in the repo, and sent
+  the rest to a teacher instead of inventing Thai to repair Thai.
+- *Improvements made to generated code:* Overruled the plan to reconstruct five
+  corrupt vowel entries from their surviving romanisation — two were wrong in the
+  English gloss as well, so reconstruction would have shipped confident nonsense
+  onto a paid page. Ruled on each of the five romanisation conflicts myself
+  rather than leaving it to the auditor's taste. Then wrote the guard that should
+  have existed all along: `tests/test_thai_romanisation.py` walks every Paiboon
+  field in the app and fails on `ng`. It immediately found ten more in the
+  reading stories and a sixth broken vowel row that the hand audit had missed —
+  which is the whole argument for writing it. Tests 1,362 → 1,461.
+- *Roughly how much was accepted as-is vs engineered on:* The analysis was
+  accepted; the scope was cut. My contribution was scope control and per-item
+  rulings rather than reworking generated code — recorded that way rather than
+  dressed up as refactoring I didn't do.
+
+**Still open, deliberately:** the PayPal 365-day annual branch is unverified
+because PayPal isn't configured here; six vowel rows await the teacher; and
+`survival.py` has 79 lines of unaudited Thai, which matters more than it sounds
+because it's the free front door since the home page redesign.
+
+**References / Conversations**
+`prompts/thai-pair-audit/` (the prompt, three versions, and the reasoning),
+`prompts/annual-billing-option/`, `docs/vowel-review-2026-09-10.md` (the sheet
+going to the teacher), `tests/test_thai_romanisation.py` (the guard).
