@@ -1,0 +1,71 @@
+name: Tests
+
+# The prompt library has had CI since it was created; the application it
+# documents has not. Every guard in tests/ — the paywall checks, the XP
+# arithmetic, the Thai romanisation rules — only ever ran when somebody
+# remembered to type pytest.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pytest:
+    name: pytest
+    runs-on: ubuntu-latest
+
+    env:
+      # app.py refuses to import without this and exits with a clear error,
+      # which is the right behaviour in production and fatal in CI. Nothing in
+      # the suite makes a real API call, so a placeholder is enough — and a
+      # value that could never be mistaken for a key is safer than a blank one.
+      ANTHROPIC_API_KEY: ci-not-a-real-key
+
+      # Left unset ON PURPOSE. tests/conftest.py pins the suite to a local
+      # SQLite file, and it does that by setting DATABASE_URL to an empty
+      # string rather than deleting it — python-dotenv will not overwrite a
+      # variable that already exists, and the app treats empty as "not
+      # configured". A real value here would point the whole suite at
+      # production, where it would pass just as happily.
+      #
+      # Stripe and PayPal keys are absent too. Tests that need a configured
+      # provider set one themselves; any test that reads the environment for it
+      # is a test that passes or fails on whose machine it runs.
+      DISABLE_RATE_LIMITS: "1"
+      PYTHONIOENCODING: utf-8
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          # Matches .python-version, which is what Render builds with. A suite
+          # green on a different minor version proves less than it looks.
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-dev.txt
+
+      - name: Run the suite
+        run: python -m pytest -q --junitxml=pytest-results.xml
+
+      - name: Upload results
+        # Runs even when the suite fails — a red build is exactly when the
+        # per-test detail is worth having.
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pytest-results
+          path: pytest-results.xml
+          if-no-files-found: warn

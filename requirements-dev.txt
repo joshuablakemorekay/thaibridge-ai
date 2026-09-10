@@ -1,0 +1,16 @@
+# Everything needed to RUN the test suite, on top of what the app needs to run.
+#
+# Kept separate from requirements.txt because that file is the deploy manifest —
+# Render installs it on every build, and shipping a PDF toolkit to production
+# for the sake of one developer script would make every deploy slower for no
+# benefit to anyone using the site.
+#
+#     pip install -r requirements-dev.txt
+#
+-r requirements.txt
+
+# scripts/make_prompt_pdf.py builds the printable prompt sheets, and
+# tests/test_prompt_sheets.py imports it. Without this the whole suite fails at
+# collection rather than at that one test, which is how it stayed missing:
+# every developer machine already had it installed by hand.
+reportlab==4.2.5
