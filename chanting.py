@@ -5320,8 +5320,6 @@ CHANTS = [
         },
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0264.PNG]: This page carries NO printed page number.
         #   From the file sequence it precedes page 2 (IMG_0265.PNG), but that
         #   is inference, so page_start has been left off entirely. Please
@@ -5343,9 +5341,77 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam buu-chaa prá-rát-dtà-ná-dtrai',
         'title_english': 'Words of Offering to the Triple Gem',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant, and it is a liturgical composition of the tradition rather
+        # than a passage of the canon, so none has been supplied.
+        'source': '',
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The opening offering of the service: the Buddha, the Dhamma and "
+            "the Sangha are named by their epithets, and gifts are set out "
+            "before them."
+        ),
+
+        'when_chanted': (
+            "Chanted at the opening of the morning and evening services, with "
+            "the offerings already set out before the shrine."
+        ),
+
+        'background': [
+            "This is the first chant in the book, and the book prints three "
+            "headings above it — ระเบียบ, ทำวัตร - สวดมนต์, ทำวัตรเช้า — "
+            "which name the morning service as a whole rather than this "
+            "chant. They belong to the page rather than to the text and are "
+            "recorded in the page note.",
+
+            "บูชา, from the Pali pūjā, is honouring done by an act rather "
+            "than by a feeling: something is brought and set down. The gifts "
+            "of the fifth line — สักกาเรหิ, with these gifts — are the "
+            "candles, incense and flowers arranged before the shrine, and "
+            "the chant is spoken over them once they are in place. The "
+            "wording is the tradition's own; the epithets it uses are "
+            "canonical, but the arrangement into an offering formula is the "
+            "work of the liturgy that built this service.",
+
+            "The book prints no Thai rendering here, so the chant stands at "
+            "two of the five layers: the Pali as it is chanted, and an "
+            "English translation written for this edition rather than taken "
+            "from the book. The page closes with an instruction to the "
+            "leader, who invites the assembly to make the offering and chant "
+            "the Namo; that instruction is a rubric and is kept in the page "
+            "note.",
+        ],
+
+        'meaning': [
+            "The first three clauses do not address anyone. They identify. "
+            "Each of the Three Jewels is named by the epithet that belongs "
+            "to it — the Buddha as arahaṃ sammāsambuddho, worthy and "
+            "perfectly enlightened by himself; the Dhamma as svākkhāto, well "
+            "proclaimed; the Sangha as supaṭipanno, having practised well. "
+            "Only in the fourth clause are the three gathered together, and "
+            "only in the fifth does anything happen: we make offering with "
+            "these gifts, set out as befits them.",
+
+            "The second movement turns and asks. It grants at once what "
+            "might otherwise be passed over — สุจิระปะรินิพพุโตปิ, though the "
+            "Blessed One long ago attained final Nibbāna, the complete "
+            "quenching at the end of an awakened life — and asks anyway, on "
+            "the ground of his compassion for later generations. The gifts "
+            "are described in the same candid register: ทุคคะตะปัณณาการะภูเต, "
+            "poor gifts though they are. Neither the distance nor the "
+            "smallness of the offering is hidden.",
+
+            "That candour is the point of the chant. It is not an attempt to "
+            "reach someone, and it does not claim that the offering is worth "
+            "much. What is being arranged is the assembly: a room in which "
+            "gifts have been set out and this has been said aloud is a room "
+            "in which a service can begin. The closing line names who "
+            "benefits, and it is not the one receiving — for our lasting "
+            "welfare and happiness.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -5434,8 +5500,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0264.PNG]: Each of the three lines is followed by the
         #   printed rubric (กราบพร้อมกัน) — 'bow together' — on its own
         #   centred line. It is an instruction to the chanters rather than
@@ -5450,8 +5514,63 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam ná-mát-sà-gaan prá-rát-dtà-ná-dtrai',
         'title_english': 'Words of Salutation to the Triple Gem',
+        # Left empty on purpose: the phrases are canonical but the chant is
+        # the tradition's arrangement of them, the book prints no
+        # attribution, and none has been supplied from memory.
+        'source': '',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Three lines of salutation, one to each of the Three Jewels, "
+            "each followed by a bow made by the assembly together."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately after the opening offering in the morning "
+            "and evening services, and often on its own as a brief act of "
+            "homage."
+        ),
+
+        'background': [
+            "The three lines are built from the same three phrases as the "
+            "offering that precedes them — อะระหัง สัมมาสัมพุทโธ, "
+            "สวากขาโต and สุปะฏิปันโน. Those phrases belong to the standard "
+            "recollections of the Buddha, the Dhamma and the Sangha and "
+            "recur widely in the canon; what the tradition composed here is "
+            "the arrangement of them into three salutations short enough to "
+            "bow after.",
+
+            "The bows are printed. Each line is followed by "
+            "(กราบพร้อมกัน), bow together, set on its own centred line — an "
+            "instruction to the chanters rather than words to be chanted, "
+            "and it is what gives this chant its shape: three statements, "
+            "three prostrations. It is recorded in this file as a rubric "
+            "rather than as a verse, since nobody says it aloud.",
+        ],
+
+        'meaning': [
+            "Each line has two halves, and they are grammatically unlike. "
+            "The first half states something in the third person: the "
+            "Blessed One is worthy and perfectly enlightened by himself; the "
+            "Dhamma is well proclaimed; the Sangha of his disciples has "
+            "practised well. Nothing is asked and nothing is claimed. Only "
+            "in the second half does a speaker appear, and then only to say "
+            "what they are doing.",
+
+            "The three verbs of that second half are not the same word three "
+            "times. อะภิวาเทมิ is the salutation made to a person, "
+            "นะมัสสามิ the homage paid to what is revered, นะมามิ the plain "
+            "act of bowing. A translation flattens them into one gesture; "
+            "the Pali keeps three, and the difference tracks the difference "
+            "between a teacher, a teaching and a community.",
+
+            "The chant is short because it is not principally words. Its "
+            "purpose is the three bows, and the lines exist to give each bow "
+            "something to be about — a reason stated immediately before the "
+            "body performs it. Coming where it does, it settles an assembly "
+            "into the posture of the service before anything longer begins.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -5490,8 +5609,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0265.PNG]: No Thai translation printed;
         #   english_unverified set.
         'id': 'kham-choen-bucha-lae-suat-namo',
@@ -5499,10 +5616,70 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam chəən buu-chaa lɛ́ sùat ná-moo',
         'title_english': 'The Invitation to Make Offering and Chant the Namo',
+        # Left empty on purpose: this is a liturgical invitation composed for
+        # the service, the book gives no attribution, and none has been
+        # supplied from memory.
+        'source': '',
         'page_start': 2,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The leader's invitation: having gone for refuge and made the "
+            "offering, the assembly is called to praise the Blessed One and "
+            "chant the salutation."
+        ),
+
+        'when_chanted': (
+            "Spoken by the leader of the assembly once the offering has been "
+            "made, to bring the others into the preliminary salutation that "
+            "follows it."
+        ),
+
+        'background': [
+            "คำเชิญ means an invitation, and this is one of a family of "
+            "lines in the book that belong to whoever is leading rather than "
+            "to everyone. They are the joints of a service: one voice says "
+            "what is about to happen, and the assembly takes up the chant "
+            "named. This one is longer than most because it also gathers up "
+            "what has just been done.",
+
+            "The wording places the speakers precisely. They are those who "
+            "have gone for refuge, who have ปัพพะชิตา — gone forth, left "
+            "the household life — for the Blessed One's sake, and who live "
+            "the พ๎รัห๎มะจะริยัง, the holy life, under him as teacher. The "
+            "chant is therefore phrased for a monastic assembly, which is "
+            "worth knowing before it is read as everybody's words.",
+
+            "No Thai rendering is printed for this chant, so it stands at "
+            "the Pali and an English translation written for this edition "
+            "rather than taken from the book.",
+        ],
+
+        'meaning': [
+            "The first two clauses say nothing about the Buddha and "
+            "everything about the relation to him. He is the one they went "
+            "to for refuge, the one for whose sake they went forth, their "
+            "teacher, the one under whom the holy life is lived. Four "
+            "descriptions, none of them a quality of his — each is a "
+            "position the speakers themselves occupy.",
+
+            "The middle clauses then narrate the service back to itself: the "
+            "offering made with these gifts, set out as befits them, and the "
+            "respects paid. Only after that comes หันทะทานิ, now then, and "
+            "with it the turn to what is next — to extol the Blessed One in "
+            "words, and to make the ปุพพะภาคะนะมะการัง, the preliminary "
+            "salutation, which is the chant printed immediately below.",
+
+            "What the invitation marks is a change of medium. Up to this "
+            "point the service has been conducted with the hands and the "
+            "body: gifts carried in, arranged, bowed to. From here it is "
+            "carried in speech. A line that says so aloud keeps an assembly "
+            "of many people moving together, and it gives the reason the "
+            "book prints this text at all — it is not a chant to be "
+            "meditated on, but the hinge that lets the next one begin.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -5577,8 +5754,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0265.PNG]: The book prints NO title for this chant. The
         #   id and English title are mine, taken from the phrase
         #   ปุพพะภาคะนะมะการัง in the invitation above it. title_thai and
@@ -5592,9 +5767,66 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Preliminary Salutation',
+        # Left empty on purpose. The line is canonical and occurs in many
+        # places rather than one, the book prints no attribution here, and no
+        # single reference can be given honestly, so none is claimed.
+        'source': '',
         'page_start': 2,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The single line of homage to the Blessed One, chanted three "
+            "times, which opens almost every other chant in the book."
+        ),
+
+        'when_chanted': (
+            "Chanted three times before nearly any formal recitation, and "
+            "before a talk, the taking of the precepts, or an ordination."
+        ),
+
+        'background': [
+            "The book prints no title above this chant. The name used here "
+            "is taken from the word ปุพพะภาคะนะมะการัง in the invitation on "
+            "the same page, and title_thai and title_pali are left empty "
+            "rather than invented.",
+
+            "It is also printed three times in full rather than marked as a "
+            "repeat, and entered here the same way, with an instruction "
+            "beside it that the deputy leader begins and the others join, "
+            "three times, pausing for one breath after each. The book is "
+            "specific about the breath because the line is chanted by a room "
+            "rather than a person, and a shared pause is what keeps a room "
+            "together.",
+
+            "This is very likely the most often recited sentence in "
+            "Theravāda Buddhism. In the canon it is the phrase spoken by "
+            "those declaring their confidence in the Buddha, and it appears "
+            "in a great many places, which is exactly why no single "
+            "reference is given for it above.",
+        ],
+
+        'meaning': [
+            "The line contains no request, no doctrine and no promise. It is "
+            "one word of homage followed by its object: นะโม, homage, and "
+            "then the Blessed One under three epithets — ภะคะวะโต, the "
+            "fortunate or blessed one; อะระหะโต, worthy, one in whom the "
+            "defilements are ended; สัมมาสัมพุทธัสสะ, perfectly enlightened "
+            "by himself, that is, awakened without being taught it by "
+            "anyone.",
+
+            "The grammar keeps its distance. ตัสสะ means that one — the "
+            "Buddha is spoken about, not spoken to. Nothing in the sentence "
+            "supposes a presence in the room or expects an answer, and this "
+            "is one of the reasons it can be said equally at a funeral, "
+            "before a lesson, and at the start of an ordinary morning.",
+
+            "Its work is to mark a threshold. Said three times, it separates "
+            "ordinary speech from chanting, so that whatever follows begins "
+            "already inside the act rather than drifting into it. For most "
+            "learners it is also the first Pali they meet, and the sentence "
+            "by which the rest of the language is later recognised.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -5630,8 +5862,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0265.PNG]: RESOLVED: the page map claimed verses 1-12
         #   while this entry had 9. Stage 2 refused to write on that
         #   disagreement. Re-read from the photograph confirms nine clauses,
@@ -5651,10 +5881,73 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'In Praise of the Buddha',
+        # Left empty on purpose: the phrases are canonical and widely
+        # distributed, but this arrangement of them is the liturgy's, the
+        # book prints no attribution, and none has been supplied from memory.
+        'source': '',
         'page_start': 2,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Praise of the Buddha by his epithets and by what he did — made "
+            "this world known, taught the Dhamma, and proclaimed the holy "
+            "life entire."
+        ),
+
+        'when_chanted': (
+            "Chanted in the morning service, the first of three praises "
+            "given in turn to the Buddha, the Dhamma and the Sangha."
+        ),
+
+        'background': [
+            "The book prints no title above this chant. The name used here "
+            "is taken from the word พุทธาภิถุติง in its own invitation line "
+            "— หันทะ มะยัง พุทธาภิถุติง กะโรมะ เส, now let us give praise "
+            "to the Buddha — which the leader says to open it. title_thai "
+            "and title_pali are left empty rather than invented.",
+
+            "The material is not new. The string of epithets belongs to the "
+            "standard recollection of the Buddha, and the passages about "
+            "making this world known and teaching a Dhamma admirable in "
+            "beginning, middle and end are stock formulas that recur widely "
+            "in the canon. What the liturgy composed is the frame: the "
+            "relative pronoun โย โส, that one who, opened at the start and "
+            "left unresolved across every clause that follows.",
+
+            "No Thai rendering is printed here either, so this chant too "
+            "stands at the Pali and an English translation written for this "
+            "edition rather than taken from the book.",
+        ],
+
+        'meaning': [
+            "The whole chant is one sentence. It opens with โย โส "
+            "ตะถาคะโต, that Tathāgata — the term the Buddha used of himself "
+            "rather than a title given to him — and then withholds its main "
+            "verb through eight clauses of description before landing, in "
+            "the ninth, on what the reciter does about it. Read as English "
+            "it looks like a list. Chanted, it is a single held breath of a "
+            "sentence that has to arrive somewhere.",
+
+            "What is praised comes in two kinds. First the epithets: "
+            "accomplished in knowledge and conduct, well-gone, knower of "
+            "worlds, unexcelled trainer of those who can be taught, teacher "
+            "of gods and men. Then the deeds, which are more specific — he "
+            "made this world known with its gods, its Māras and its Brahmās, "
+            "Māra being the figure of death and temptation and Brahmā a god "
+            "of the higher heavens; he did so having realised it himself "
+            "through direct knowledge, not on anyone's authority; and he "
+            "taught in a way that was complete in meaning and in letter both.",
+
+            "The sentence ends in two acts rather than a conclusion: to that "
+            "Blessed One I make offering, to that Blessed One I bow my head. "
+            "That is the reason the chant survives in daily use. It is not "
+            "recited to inform anyone of the Buddha's qualities, which the "
+            "assembly already knows, but so that the bow at the end is made "
+            "by someone who has just said, at length and out loud, what the "
+            "bow is for.",
+        ],
         'invitation': {
             'pali': 'หันทะ มะยัง พุทธาภิถุติง กะโรมะ เส.',
             'pali_roman': 'Handa mayaṃ buddhābhithutiṃ karoma se.',
@@ -5741,8 +6034,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0265.PNG]: The book prints no title. The name is taken
         #   from ธัมมาภิถุติง in the invitation.
         # ‼ CHECK [IMG_0266.PNG]: Followed by the printed rubric
@@ -5752,10 +6043,69 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'In Praise of the Dhamma',
+        # Left empty on purpose: the phrases are canonical and occur in many
+        # places rather than one, the book prints no attribution here, and
+        # none has been supplied from memory.
+        'source': '',
         'page_start': 2,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Praise of the Dhamma by the six qualities traditionally "
+            "recollected of it, closing with an offering and a bow."
+        ),
+
+        'when_chanted': (
+            "Chanted in the morning service, second of the three praises "
+            "given in turn to the Buddha, the Dhamma and the Sangha."
+        ),
+
+        'background': [
+            "The book prints no title above this chant. The name used here "
+            "is taken from the word ธัมมาภิถุติง in its own invitation "
+            "line, and title_thai and title_pali are left empty rather than "
+            "invented.",
+
+            "It is the middle panel of a set of three, and the three are "
+            "built to the same plan: โย โส, that one which, followed by "
+            "the qualities, and closing on ตะมะหัง — to that I make "
+            "offering, to that I bow my head. Read alone it looks abrupt at "
+            "three verses; read in place it is one third of a single "
+            "movement, and its brevity is what sets off the nine clauses "
+            "given to the Buddha.",
+
+            "The qualities themselves are the standard recollection of the "
+            "Dhamma and recur widely in the canon; what is composed here is "
+            "their setting as praise. No Thai rendering is printed, so the "
+            "chant stands at the Pali and an English translation written for "
+            "this edition.",
+        ],
+
+        'meaning': [
+            "Six qualities are named, and they describe the teaching by what "
+            "can be done with it rather than by what it asserts. "
+            "สันทิฏฐิโก, visible here and now — its results are met in "
+            "this life, not in a report about another. อะกาลิโก, "
+            "timeless, not waiting on a season or an age. เอหิปัสสิโก, "
+            "inviting all to come and see, which is an unusual thing for a "
+            "teaching to say of itself. โอปะนะยิโก, leading onwards, "
+            "taking whoever follows it somewhere.",
+
+            "The sixth is the one the others rest on: ปัจจัตตัง "
+            "เวทิตัพโพ วิญญูหิ, to be known each for himself by the "
+            "wise. The knowledge is not transferable. Nobody can hold it on "
+            "another's behalf, which is why the list ends there, and why an "
+            "assembly can chant this together without any of them speaking "
+            "for the rest.",
+
+            "That is also why it is still recited. The verse is not "
+            "information about the Dhamma — an assembly chanting it daily "
+            "knows the six words already. It is a description read back over "
+            "one's own practice, and each recitation is an occasion to ask "
+            "whether what is being practised still answers to it.",
+        ],
         'invitation': {
             'pali': 'หันทะ มะยัง ธัมมาภิถุติง กะโรมะ เส.',
             'pali_roman': 'Handa mayaṃ dhammābhithutiṃ karoma se.',
@@ -5797,8 +6147,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0266.PNG]: The book prints no title. The name is taken
         #   from สังฆาภิถุติง in the invitation.
         # ‼ CHECK [IMG_0266.PNG]: Followed by the rubric (กราบพร้อมกัน
@@ -5809,10 +6157,68 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'In Praise of the Sangha',
+        # Left empty on purpose: the phrases are canonical and occur in many
+        # places rather than one, the book prints no attribution here, and
+        # none has been supplied from memory.
+        'source': '',
         'page_start': 3,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Praise of the Sangha by the four ways it has practised and the "
+            "four kinds of honour owed it, closing with an offering and a "
+            "bow."
+        ),
+
+        'when_chanted': (
+            "Chanted in the morning service, the last of the three praises "
+            "given in turn to the Buddha, the Dhamma and the Sangha."
+        ),
+
+        'background': [
+            "The book prints no title here either; the name is taken from "
+            "the word สังฆาภิถุติง in the invitation, and title_thai "
+            "and title_pali are left empty rather than invented. The chant "
+            "is followed by a fuller rubric than the two before it — bow "
+            "together, then all sit in the side-resting posture — which "
+            "marks the close of the whole opening movement rather than of "
+            "this chant alone.",
+
+            "สังโฆ here does not mean the monastic community in the "
+            "ordinary sense. The fifth line defines it: the four pairs, the "
+            "eight types of noble ones — those who have reached each of the "
+            "four stages of awakening and those established in them. "
+            "Membership is by attainment rather than by ordination, and the "
+            "praise is addressed to that body wherever its members happen to "
+            "be.",
+        ],
+
+        'meaning': [
+            "The chant opens with four ways of practising, laid out in a "
+            "single repeated frame. สุปะฏิปันโน, having practised well; "
+            "อุชุปะฏิปันโน, straightforwardly; ญายะปะฏิปันโน, "
+            "methodically, by the right method; สามีจิปะฏิปันโน, "
+            "masterfully, as is fitting. These are not four groups but four "
+            "aspects of one practice, and the whole phrase is repeated each "
+            "time so that no shorthand creeps in.",
+
+            "The second half turns from what the Sangha has done to what is "
+            "therefore owed it: worthy of gifts, of hospitality, of "
+            "offerings, of respect. It closes on the phrase that explains "
+            "all four — อะนุตตะรัง ปุญญักเขตตัง โลกัสสะ, the "
+            "unexcelled field of merit for the world. The image is "
+            "agricultural: a field is not honoured for its own sake but "
+            "because what is planted in it grows.",
+
+            "That image is the practical point of the chant, and it is why a "
+            "lay assembly recites it as readily as a monastic one. It gives "
+            "an account of why supporting a community of practitioners is "
+            "worth doing, in terms of what such support produces rather than "
+            "of obligation. The chant then does what it has just described, "
+            "and makes its own offering and bow.",
+        ],
         'invitation': {
             'pali': 'หันทะ มะยัง สังฆาภิถุติง กะโรมะ เส.',
             'pali_roman': 'Handa mayaṃ saṅghābhithutiṃ karoma se.',
@@ -5900,8 +6306,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ COMPLETED: this chant arrived in two halves — verses 1-4 from
         #   batch-001-003 (page 3, IMG_0266.PNG) and verses 5-16 from
         #   batch-004-006 (page 4, IMG_0267.PNG). Joined and verified to run
@@ -5914,12 +6318,73 @@ CHANTS = [
         #   you would rather it were dropped.
         'id': 'ratanattayappanamagatha',
         'title_thai': 'ระตะนัตตะยัปปะณามะคาถา',
-        'title_pali': '',
         'title_pali': 'Ratanattayappaṇāmagāthā',
         'title_english': 'Verses in Salutation to the Triple Gem',
+        # Left empty on purpose: these are composed verses rather than a
+        # passage of the canon, the book prints no attribution, and none has
+        # been supplied from memory.
+        'source': '',
         'page_start': 3,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Sixteen verses of salutation, four each to the Buddha, the "
+            "Dhamma and the Sangha, closing by dedicating the merit of "
+            "having made them."
+        ),
+
+        'when_chanted': (
+            "Chanted in the morning service after the three praises, sharing "
+            "one invitation with the passage on urgency that follows it."
+        ),
+
+        'background': [
+            "This is the first chant on these pages whose title the book "
+            "actually prints, centred and in bold. It is also the first in "
+            "metre rather than prose: where the praises before it accumulate "
+            "clauses, these move in stanzas of four lines — three of "
+            "description and one of response.",
+
+            "The verses are a composition rather than a canonical passage, "
+            "and their vocabulary is more ornamented than the formulas that "
+            "precede them: the Buddha as กะรุณามะหัณณะโว, a great ocean "
+            "of compassion, the Dhamma as ปะทีโป วิยะ, like a lamp. The "
+            "figures are the work of a poet drawing on the tradition rather "
+            "than a text being quoted.",
+
+            "The three section labels inside this chant are editorial, added "
+            "for this edition. The book separates the salutations by layout "
+            "alone and prints no headings between them.",
+        ],
+
+        'meaning': [
+            "Each of the three salutations is built the same way: three "
+            "lines of description, then the same closing line with one word "
+            "changed — วันทามิ พุทธัง, วันทามิ ธัมมัง, วันทามิ "
+            "สังฆัง, I revere that Buddha, that Dhamma, that Sangha, "
+            "อะหะมาทะเรนะ, with devotion. The repetition makes the "
+            "three parallel without stating that they are, and a reciter "
+            "arrives at the same act three times having come by three "
+            "different roads.",
+
+            "The images are chosen to say what each one does. The Buddha is "
+            "an ocean of compassion whose eye of knowledge is purified — "
+            "capacity and sight. The Dhamma is a lamp: not the destination "
+            "but what makes the way visible, and the verse then divides it "
+            "into path, fruit and the Deathless — the practice, its "
+            "results, and what lies beyond both. The Sangha is a field "
+            "surpassing all fields, and those in it have seen peace and "
+            "awakened after the Well-Gone One, followers rather than "
+            "originators.",
+
+            "The last stanza changes register entirely. Having made the "
+            "salutations, it asks that the merit of having made them clear "
+            "away obstacles. This is a dedication, and it is why the chant "
+            "sits where it does: the reverence just offered is not left as a "
+            "feeling but turned into something with a use, so that the "
+            "passage which follows can begin from a mind already settled.",
+        ],
         'invitation': {
             'pali': 'หันทะ มะยัง ระตะนัตตะยัปปะณามะคาถาโย เจวะ สังเวคะปะริกิตตะนะปาฐัญจะ ภะณามะ เส.',
             'pali_roman': 'Handa mayaṃ ratanattayappaṇāma-gāthāyo ceva saṃvega-parikittana-pāṭhañca bhaṇāma se.',
@@ -6082,8 +6547,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0267.PNG]: The title is printed, centred and bold. The
         #   chant shares its invitation with ratanattayappanamagatha — one
         #   invitation on page 3 covers both — so invitation is left empty
@@ -6100,13 +6563,80 @@ CHANTS = [
         #   note; no chant entered for them.
         'id': 'samvega-parikittana-patha',
         'title_thai': 'สังเวคะปะริกิตตะนะปาฐะ',
-        'title_pali': '',
         'title_pali': 'Saṃvegaparikittanapāṭha',
         'title_english': 'The Passage on Spiritual Urgency',
+        # Left empty on purpose: much of the wording is canonical and occurs
+        # in many places, but this arrangement of it is the liturgy's, the
+        # book prints no attribution, and none has been supplied from memory.
+        'source': '',
         'page_start': 4,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A long passage stating what the Buddha taught about suffering "
+            "and impermanence, and why those reciting it have taken up the "
+            "training."
+        ),
+
+        'when_chanted': (
+            "Chanted in the morning service directly after the verses of "
+            "salutation, with which it shares a single invitation."
+        ),
+
+        'background': [
+            "สังเวคะ, saṃvega, has no comfortable English equivalent. It "
+            "names the jolt of recognising that the situation is serious and "
+            "that time is limited — not despair, which stops a person, but "
+            "the thing that starts one. The title says the passage exists to "
+            "bring that about, which is unusual: most chants say what they "
+            "are about rather than what they are for.",
+
+            "The passage shares its invitation with the verses before it — "
+            "one line on page 3 covers both — so the two are chanted as a "
+            "single unbroken stretch, and this chant's own invitation is "
+            "left empty in the file rather than duplicated.",
+
+            "Much of the wording is canonical and will be recognised: the "
+            "statement of the first noble truth, the list of the five "
+            "aggregates, and the formulas of impermanence and not-self. What "
+            "the liturgy has done is set them in the first person plural and "
+            "close them with a statement of the reciters' own position.",
+        ],
+
+        'meaning': [
+            "The passage moves in three stages. First it establishes the "
+            "situation: a Tathāgata has arisen and a Dhamma has been taught "
+            "that leads out. Then it states what has been learned from it — "
+            "birth, ageing and death are ทุกขา, suffering, and so is being "
+            "joined to what is disliked, parted from what is liked, and not "
+            "getting what one wants; in short, the five aggregates of "
+            "clinging are suffering. The five are then named one by one, "
+            "unhurried.",
+
+            "The second stage repeats those same five twice more, first as "
+            "อะนิจจัง, impermanent, then as อะนัตตา, not-self — not "
+            "one's own, not a self, not something a person finally is. The "
+            "repetition is deliberate and slow. The passage is not arguing "
+            "the point; it goes through the list item by item, in a way that "
+            "gives the recognition time to land.",
+
+            "The third stage brings it home to the people chanting. เต "
+            "มะยัง — all of us — are beset by birth, ageing and death and "
+            "overcome by suffering; and then comes the line that turns the "
+            "whole passage: perhaps an end to this whole mass of suffering "
+            "might be found. Everything after it is consequence. It is "
+            "because that possibility exists that the reciters have gone "
+            "forth, live the holy life and have taken up the training, and "
+            "the closing line asks that the life so taken up should lead "
+            "where it was undertaken to lead.",
+
+            "It is chanted daily rather than studied because its work is not "
+            "to establish anything new. It is a statement of position, made "
+            "aloud every morning, that keeps the reason for the day's "
+            "practice from quietly going missing.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -6452,28 +6982,82 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
-        #   Last verse here is 14; the rest is not in the app yet.
-        # ‼ CHECK [IMG_0269.PNG]: This chant CONTINUES past the batch. The
-        #   rest of the reflection on lodging and the whole fourth reflection,
-        #   on medicine, are on page 7 onward. Pick it up rather than starting
-        #   it again — verse numbering resumes at 15, and verse 14 needs
-        #   finishing.
+        # ‼ COMPLETED [IMG_0269.PNG]: this chant once continued past its
+        #   batch — the rest of the lodging reflection and the whole fourth
+        #   reflection, on medicine, were on page 7. Page 7 is in. The chant
+        #   now runs 1-18 with no gap, verse 14 is finished, and all four
+        #   sections are present: robe, almsfood, lodging, medicine. It no
+        #   longer continues.
         # ‼ CHECK [IMG_0269.PNG]: The section labels on verses 1, 6 and 11 are
         #   MINE. The book separates the reflections by a blank line only,
         #   with no printed headings.
         
 'id': 'tangkhanika-paccavekkhana-patho',
         'title_thai': 'ตังขะณิกะปัจจะเวกขะณะปาโฐ',
-        'title_pali': '',
         'title_pali': 'Taṅkhaṇikapaccavekkhaṇapāṭho',
         'title_english': 'The Reflection at the Moment of Use',
+        # Left empty on purpose: the book prints its own reference for this
+        # chant and it is kept verbatim in source_printed, which the page
+        # view renders. Nothing has been attributed on top of it.
+        'source': '',
         'page_start': 6,
         'source_printed': 'นัย ม. มู ๑๒/๑๓-๘',
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Four reflections on the four requisites — robe, almsfood, "
+            "lodging and medicine — each stating the proper reason for "
+            "using it."
+        ),
+
+        'when_chanted': (
+            "Chanted in the morning service, and used again by monastics at "
+            "the moment a requisite is actually taken up."
+        ),
+
+        'background': [
+            "Unlike the chants around it, this one carries a reference "
+            "printed in the book itself — นัย ม. มู ๑๒/๑๓-๘ — so its "
+            "source is the book's own, and nothing has been attributed on "
+            "top of it.",
+
+            "ตังขะณิกะ means at that moment, and the title is doing real "
+            "work. This is not a reflection on requisites in general but one "
+            "made at the instant of use: while putting on the robe, before "
+            "eating, on entering the lodging, when taking medicine. Chanting "
+            "it in the morning rehearses a form meant to be used again "
+            "during the day.",
+
+            "The four section labels are editorial, added for this edition. "
+            "The book separates the reflections by a blank line only and "
+            "prints no headings between them.",
+        ],
+
+        'meaning': [
+            "Each of the four opens the same way — ปะฏิสังขา โยนิโส, "
+            "reflecting wisely — then names its requisite and gives its "
+            "purposes. The construction that follows is the important one: "
+            "ยาวะเทวะ, only so far as, for just this much and no more. The "
+            "robe is for warding off cold and heat and the touch of "
+            "gadflies, mosquitoes, wind, sun and creeping things, and for "
+            "covering the body. A limit is set before a use is granted.",
+
+            "The purposes given are deliberately modest and physical. "
+            "Nothing is said about the quality of the robe, the taste of the "
+            "food or the comfort of the lodging; the reflections name only "
+            "what the requisite is needed for. The effect is to leave the "
+            "thing in use while removing the reasons for wanting a better "
+            "one, without requiring the practitioner to go without.",
+
+            "This is why it survives as a daily chant rather than a rule. A "
+            "rule can be kept while the wanting continues underneath it; a "
+            "reflection made at the moment of use puts the question in the "
+            "middle of the act itself, where it can actually be answered. "
+            "Recited by an assembly each morning, it keeps the form ready "
+            "for the occasions during the day when it is meant to be used.",
+        ],
         'invitation': {
             'pali': 'หันทะ มะยัง ตังขะณิกะปัจจะเวกขะณะปาฐัง ภะณามะ เส.',
             'pali_roman': 'Handa mayaṃ taṅkhaṇika-paccavekkhaṇa-pāṭhaṃ bhaṇāma se.',
@@ -6673,20 +7257,78 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0271.PNG]: Below verse 21 the book prints
         #   จบพิธีทำวัตรเช้า, centred and bold — the end of the whole morning
         #   service, not of this chant. It has no field and is recorded in the
         #   page note.
         'id': 'pattidana-gatha',
         'title_thai': 'ปัตติทานะคาถา',
-        'title_pali': '',
         'title_pali': 'Pattidānagāthā',
         'title_english': 'The Verses for Sharing Merit',
+        # Left empty on purpose: these are composed verses rather than a
+        # passage of the canon, the book prints no attribution, and none has
+        # been supplied from memory.
+        'source': '',
         'page_start': 7,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses sharing the merit of the service with the devas and with "
+            "all beings, closing in a blessing on the Dhamma, the Sangha, "
+            "the rains and those who rule."
+        ),
+
+        'when_chanted': (
+            "Chanted at the very end of the morning service, after which the "
+            "book marks the service complete."
+        ),
+
+        'background': [
+            "ปัตติทานะ is the giving over of merit — puñña, the good "
+            "accumulated by an action. The tradition holds that merit is not "
+            "spent by being shared, so a service ends by handing on what it "
+            "has just made rather than by keeping it. Almost every formal "
+            "chanting in this book closes with some form of this.",
+
+            "It is the last chant of the morning service, and the book says "
+            "so on the page: below the final verse it prints "
+            "จบพิธีทำวัตรเช้า, centred and bold. That line closes the "
+            "whole service rather than this chant, so it has no field here "
+            "and is kept in the page note.",
+
+            "The chant falls into two movements of different character, and "
+            "the second begins at ฐาตุ จิรัง. No Thai rendering is "
+            "printed, so the chant stands at the Pali and an English "
+            "translation written for this edition.",
+        ],
+
+        'meaning': [
+            "The first movement addresses the devas of the place — those "
+            "dwelling in the stupa, the dwelling and the Bodhi enclosure, "
+            "here and there — and what is offered them is ธัมมะทาเนนะ, "
+            "the gift of Dhamma. Not goods, and not praise: the merit of the "
+            "service just completed. What is asked in return is modest, that "
+            "they bring safety within the monastery.",
+
+            "It then widens in a deliberate order, and the order is the "
+            "argument. Elder, middling and newly ordained bhikkhus; then "
+            "monastery helpers, donors and lay followers; then villages, "
+            "lands, towns and their rulers; then all living beings; and "
+            "finally the four ways of being born — from the womb, from "
+            "eggs, from moisture, or spontaneously arisen. By the end "
+            "nothing that lives has been left outside the sentence.",
+
+            "The closing movement stops sharing and starts blessing, and it "
+            "asks for ordinary conditions rather than spiritual ones: that "
+            "the Dhamma stand long and the Sangha be united, that rain fall "
+            "in season and the earth come to plenty, and that rulers protect "
+            "their people as a mother and father protect their own child. "
+            "This is why the chant is kept for the end. A service that "
+            "closed on its own praise would finish facing inward; this one "
+            "finishes by turning what was made in the room outward, to the "
+            "weather and the government and everyone not present.",
+        ],
         'invitation': {
             'pali': 'หันทะ มะยัง ปัตติทานะคาถาโย ภะณามะ เส.',
             'pali_roman': 'Handa mayaṃ pattidāna-gāthāyo bhaṇāma se.',
@@ -6884,8 +7526,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0271.PNG]: THIS IS A VARIANT, NOT A NEW CHANT. It is
         #   the closing of สังเวคะปะริกิตตะนะปาฐะ rewritten for lay chanters,
         #   printed inside the explanatory section คำอธิบายประกอบทำวัตรเช้า.
@@ -6903,10 +7543,63 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': "The Passage on Spiritual Urgency — lay chanters' version",
+        # Left empty on purpose: this is a liturgical rewording printed
+        # inside an explanatory section, the book gives no attribution, and
+        # none has been supplied from memory.
+        'source': '',
         'page_start': 8,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The closing of the passage on urgency, reworded for lay "
+            "chanters who have gone for refuge rather than gone forth."
+        ),
+
+        'when_chanted': (
+            "Chanted by lay people in place of the closing lines of the "
+            "passage on urgency, which are phrased for those who have gone "
+            "forth."
+        ),
+
+        'background': [
+            "This is a variant rather than a chant of its own. The book "
+            "prints it not among the chants but inside the explanatory "
+            "section on the morning service, alongside notes on which words "
+            "lay chanters substitute.",
+
+            "It exists because the parent passage ends in words only a "
+            "monastic can say honestly. Its closing lines describe having "
+            "gone forth from home into homelessness and having taken up the "
+            "training and livelihood of the bhikkhus — a description of a "
+            "life, not a wish. A lay chanter reciting them would be "
+            "describing somebody else.",
+
+            "The book prints no Thai rendering and no title for it. The "
+            "title and identifier used in this app are the app's own.",
+        ],
+
+        'meaning': [
+            "The substitution is precise. Where the monastic version has the "
+            "reciters going forth for the sake of the Blessed One, this has "
+            "them going to him for refuge, and to the Dhamma and the Bhikkhu "
+            "Sangha with him. Refuge is available to anyone; going forth is "
+            "not. Everything else in the sentence is left standing.",
+
+            "The phrase that carries the change is ยะถาสัตติ ยะถาพะลัง, "
+            "as far as ability and strength allow. It is not a lowering of "
+            "the standard but a statement of scope, and it is what makes the "
+            "sentence sayable by someone with a household, work and "
+            "obligations that a monastic does not have.",
+
+            "The last line is then identical to the monastic one, word for "
+            "word: that this practice lead to the ending of this whole mass "
+            "of suffering. That is the point of printing the variant at all. "
+            "What is adjusted is the description of the life; the aim it is "
+            "pointed at is not adjusted, and the book takes some trouble to "
+            "show that it is not.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -6980,9 +7673,6 @@ CHANTS = [
         # ‼ CHECK [IMG_0272.PNG] VERSE SEGMENTATION: split at the printed
         #   commas, following the book's own instruction elsewhere to
         #   หยุดตามจุดลูกน้ำ (stop at the commas). 18 units.
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written by stage 3. Verses
-        #   are complete.
         # ‼ CHECK [IMG_0272.PNG] RELATION TO PAGE 2: this is the พิสดาร
         #   (elaborate) form of the invitation, used on วันธรรมสวนะ and
         #   Sundays. The ordinary form is kham-choen-bucha-lae-suat-namo on
@@ -6993,10 +7683,73 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Elaborate Invitation to Revere the Triple Gem',
+        # Left empty on purpose: this is a liturgical composition written for
+        # a particular shrine, the book prints no attribution, and none has
+        # been supplied from memory.
+        'source': '',
         'group': 'Morning chanting',
         'page_start': 9,
         'layout': 'prose',
         'english_unverified': True,
+
+        'summary': (
+            "The long form of the opening invitation, used on observance "
+            "days, which stops to explain why an image of the Buddha stands "
+            "where the offerings are placed."
+        ),
+
+        'when_chanted': (
+            "Spoken by the leader in place of the ordinary invitation on "
+            "observance days (วันธรรมสวนะ) and on Sundays."
+        ),
+
+        'background': [
+            "This is the พิสดาร, the elaborate, form of an invitation "
+            "whose ordinary form stands earlier in the book. The two open "
+            "with the same words and then part company, and they are kept as "
+            "two chants here rather than merged.",
+
+            "What makes it elaborate is not ornament but explanation. The "
+            "short form goes from refuge to offering in a handful of "
+            "clauses. This one takes eighteen, because between those two "
+            "points it stops to give an account of the shrine that the "
+            "offering is being made at.",
+
+            "It is unusual in naming its own object. The image is identified "
+            "as one made and established by a named prince, dedicated to the "
+            "Blessed One, which ties the text to a particular hall rather "
+            "than to chanting in general. The book prints it in Pali only, "
+            "and the verse divisions here follow the printed commas, as the "
+            "book itself instructs elsewhere.",
+        ],
+
+        'meaning': [
+            "The opening clauses establish a line of descent: the Blessed "
+            "One to whom we have gone for refuge, for whose sake we have "
+            "gone forth, who is our teacher, in whose Dhamma we delight. "
+            "Then a clause that is more candid than it first appears — "
+            "this Dhamma and Discipline is still carried on, in one way or "
+            "another, even to this day. The qualification is not smoothed "
+            "over. Transmission has been uneven, and the chant says so.",
+
+            "The middle explains the shrine, and it does so as a chain of "
+            "permissions. Out of compassion for later generations the "
+            "Blessed One allowed a shrine to be established after his "
+            "passing; on the strength of that permission this image was "
+            "made; and its purpose is then stated exactly — solely so "
+            "that, seeing it and calling him to mind, one may gain "
+            "confidence and a sense of urgency, and on that account fulfil "
+            "the right practice. The image is described as an aid to "
+            "recollection, and nothing more is claimed for it.",
+
+            "Only after all that does the chant do what the short form does "
+            "in a line: offerings placed on the lion-throne, homage paid, "
+            "and the assembly handed on to the preliminary salutation. That "
+            "order is the reason it is kept for observance days. On a day "
+            "when people come who may not come often, the room raises an "
+            "obvious question about what the image is for, and this "
+            "invitation answers it before anyone is asked to bow to it.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7167,8 +7920,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0273.PNG]: THE MOST IMPORTANT CHECK ON THIS PAGE. The
         #   book prints the whole Pali passage as one prose block, then the
         #   whole คำแปล as another. The Thai is a free, expanded rendering,
@@ -7194,10 +7945,70 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam bprà-gàat u-boo-sòt',
         'title_english': 'The Announcement of the Uposatha',
+        # Left empty on purpose: the book prints no attribution for this
+        # announcement and none has been supplied from memory.
+        'source': '',
         'page_start': 10,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The announcement made before the eight precepts are undertaken, "
+            "stating that today is an observance day and calling those "
+            "present to keep it."
+        ),
+
+        'when_chanted': (
+            "Spoken on the observance day before the precepts are requested, "
+            "to tell the assembly what day it is and what is about to be "
+            "undertaken."
+        ),
+
+        'background': [
+            "อุโบสถ, Uposatha, is the observance day that falls at the "
+            "quarters of the lunar month. On it lay people may undertake "
+            "eight precepts rather than the usual five, for one night and "
+            "one day, and spend the day at the monastery hearing the "
+            "Dhamma. This passage is the announcement made before any of "
+            "that begins.",
+
+            "The Thai printed with it is not a translation. The book sets "
+            "the whole Pali as one block and the whole คำแปล as another, "
+            "and the Thai is a free and much expanded rendering — it opens "
+            "with a preamble that has no Pali behind it at all, and where "
+            "the Pali says only that each abstention should be made the "
+            "object of the mind, the Thai spells out all eight of them one "
+            "by one. The pairing of Pali units to Thai chunks in this "
+            "edition was made by meaning rather than by line.",
+
+            "The two layers also sit on different pages: all the Pali is on "
+            "page 10, while the Thai runs over onto page 11.",
+        ],
+
+        'meaning': [
+            "The first line does something no other chant in this part of "
+            "the book does — it states the date. Today is the fifteenth "
+            "day of the lunar fortnight. The observance is fixed to the "
+            "calendar rather than to inclination, and saying the date aloud "
+            "is what separates this day from the one before it.",
+
+            "The second and third lines give the reason and then the "
+            "invitation: such a day is the time appointed by the Buddha for "
+            "hearing the Dhamma, and for that same purpose the time of the "
+            "Uposatha for laymen and laywomen; come then, let all of us "
+            "gathered here keep it for this night and this day. The period "
+            "is bounded on purpose. What is being proposed is a day, not a "
+            "change of life.",
+
+            "The fourth line is the method — mark out the period, make "
+            "each abstention the object of the mind, keep the mind "
+            "undistracted — and the fifth is the sentence people remember: "
+            "for to us who have reached such an Uposatha as this, may our "
+            "life not be barren of fruit. That is why the announcement is "
+            "made at all. It puts an ordinary day on the record as one that "
+            "could be spent or used.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7269,8 +8080,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0274.PNG]: The book prints this in Pali only, with no
         #   Thai translation, so `thai` and `paiboon` are empty and
         #   english_unverified is set — the English is a working translation
@@ -7285,9 +8094,63 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam aa-râat-tá-naa u-boo-sòt-sǐin',
         'title_english': 'The Request for the Uposatha Precepts',
+        # Left empty on purpose: the book prints no attribution for this
+        # request and none has been supplied from memory.
+        'source': '',
         'page_start': 11,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The request made to a monk for the eight-factored Uposatha "
+            "together with the Three Refuges, spoken three times."
+        ),
+
+        'when_chanted': (
+            "Spoken by the lay assembly on the observance day, after the "
+            "announcement and before the precepts are administered."
+        ),
+
+        'background': [
+            "คำอาราธนา means a request or an invitation, and the word "
+            "sets out the shape of what happens next. Precepts in this "
+            "tradition are not handed down unasked. Someone who wants them "
+            "asks a monk for them, and only then are they given, line by "
+            "line, to be repeated.",
+
+            "What is asked for is one thing in two parts: the Uposatha "
+            "อัฏฐังคะสะมันนาคะตัง, endowed with eight factors, "
+            "ติสะระเณนะ สะหะ, together with the Three Refuges. Refuge "
+            "and precepts are requested in a single breath rather than as "
+            "two transactions.",
+
+            "All three repetitions are printed in full. The book does not "
+            "shorten the second and third, and neither does this edition. "
+            "It is printed in Pali only, so the English is a working "
+            "translation made here rather than the book's.",
+        ],
+
+        'meaning': [
+            "Almost nothing changes across the three lines. Only "
+            "ทุติยัมปิ and ตะติยัมปิ are added — for a second "
+            "time, for a third time. Saying a thing three times is the "
+            "tradition's way of marking that it has been formally done "
+            "rather than merely said, and the same device appears elsewhere "
+            "in this book wherever something needs to be unmistakable.",
+
+            "The grammar is collective and it is a request, not a "
+            "declaration. มะยัง, we, and ยาจามะ, we ask. Nothing has "
+            "been undertaken at this point. The assembly has asked to be "
+            "given the chance to undertake it, and the precepts themselves "
+            "come afterwards.",
+
+            "That order is the whole substance of the chant, and the reason "
+            "it is worth its three lines. A precept that is asked for "
+            "belongs to the person who asked; one that is simply "
+            "administered can be received without ever having been chosen. "
+            "The request is short because it only has to establish who is "
+            "doing the choosing.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7326,8 +8189,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0275.PNG]: The book prints NO title for this passage.
         #   The id and the English title are mine; title_thai and title_pali
         #   are left empty rather than invented. Same treatment as
@@ -7346,9 +8207,61 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Going to the Three Refuges, for the Uposatha',
+        # Left empty on purpose: the formula is canonical and occurs in many
+        # places rather than one, the book prints no attribution, and none
+        # has been supplied from memory.
+        'source': '',
         'page_start': 12,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The threefold homage followed by the threefold going for "
+            "refuge, taken before the eight precepts on the observance day."
+        ),
+
+        'when_chanted': (
+            "Recited on the observance day after the request for the "
+            "precepts, repeated line by line after the monk who gives them."
+        ),
+
+        'background': [
+            "Going for refuge is the act by which a person becomes a "
+            "follower of this tradition rather than an admirer of it. "
+            "Refuge here does not mean rescue: what is taken is not "
+            "shelter from difficulty but a direction — the Buddha as the "
+            "one who found the way, the Dhamma as the way itself, and the "
+            "Sangha as those who have walked it.",
+
+            "The book prints no title for the passage; the name used in this "
+            "app records where it sits, in the sequence for the observance "
+            "day. The same words are used at every other occasion when "
+            "refuge is taken, so nothing here is peculiar to the Uposatha "
+            "except its position.",
+
+            "The homage is printed in full at the head, three times, and "
+            "each refuge is then said three times over. Nothing is "
+            "abbreviated, and the file follows the page.",
+        ],
+
+        'meaning': [
+            "The central word is a verb. คัจฉามิ — I go. Not I believe, "
+            "not I accept, not I agree with. Something is being done rather "
+            "than assented to, and it is done in the first person singular: "
+            "in a hall of a hundred people, each one says I.",
+
+            "The second and third rounds are marked only by ทุติยัมปิ and "
+            "ตะติยัมปิ, for a second time and for a third. The words are "
+            "otherwise unchanged. Saying a thing three times is how this "
+            "tradition marks that it has been formally done and not merely "
+            "spoken, and the device recurs throughout the book.",
+
+            "Its position explains why it matters. The precepts that follow "
+            "are undertaken by somebody who has just said where they stand. "
+            "Without the refuge, eight rules kept for a day would be a set "
+            "of resolutions; with it, they are the shape of a day given to "
+            "something in particular.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7434,8 +8347,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0275.PNG]: Pali only — the book prints no Thai
         #   translation anywhere on page 12, so `thai` and `paiboon` are empty
         #   on every verse and english_unverified is set.
@@ -7444,9 +8355,64 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'u-boo-sòt-sǐin',
         'title_english': 'The Eight Uposatha Precepts',
+        # Left empty on purpose: the formula is canonical and widely
+        # distributed, the book prints no attribution, and none has been
+        # supplied from memory.
+        'source': '',
         'page_start': 12,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The eight precepts undertaken for a single night and day of the "
+            "observance, with the closing line that binds them to that "
+            "period."
+        ),
+
+        'when_chanted': (
+            "Undertaken on the observance day after the refuges, repeated "
+            "line by line after the monk who administers them."
+        ),
+
+        'background': [
+            "Lay people ordinarily keep five precepts. อุโบสถศีล is the "
+            "eight kept on the observance day instead, and the difference is "
+            "not simply three more rules. The third is changed rather than "
+            "added to — abstaining from unchastity altogether, in place of "
+            "the usual rule against misconduct — and the three that follow "
+            "are new.",
+
+            "Every line has the same ending: เวระมะณี สิกขาปะทัง "
+            "สะมาทิยามิ, I undertake the training rule to abstain "
+            "from. A สิกขาปะทัง is a training rule, not a "
+            "commandment, and สะมาทิยามิ means I take it up. Nobody "
+            "imposes these; they are picked up by the person keeping them "
+            "and put down again at the end of the day.",
+        ],
+
+        'meaning': [
+            "The first five are the familiar ones: not taking life, not "
+            "taking what is not given, not unchastity, not false speech, no "
+            "intoxicants. The three that follow are of a different kind "
+            "altogether — no eating at the wrong time, no dancing, singing, "
+            "music, shows, garlands, scents or adornment, and no high or "
+            "large bed. Nobody is harmed by a soft mattress, and that is "
+            "precisely the point of including it.",
+
+            "These three are there to make the day feel unlike other days. "
+            "Take away the afternoon meal, the entertainment and the "
+            "comfortable bed, and what is left is a great deal of time and "
+            "very little to fill it with, which is the condition the "
+            "observance is arranged to produce. It is a narrowing for a "
+            "purpose, not a verdict on ordinary comforts.",
+
+            "The ninth line is what keeps the whole thing honest. It names "
+            "what is being undertaken — this Uposatha endowed with eight "
+            "factors and appointed by the Buddha — and then bounds it: for "
+            "this night and this day. The undertaking has its ending written "
+            "into it, which is what makes it something a person with a "
+            "household can actually promise.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7555,8 +8521,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0276.PNG]: The book prints NO title for this line. The
         #   id and English title are mine; title_thai and title_pali are left
         #   empty rather than invented. It is set as its own chant because the
@@ -7571,9 +8535,46 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Charge to Guard the Eight Precepts',
+        # Left empty on purpose: the book prints no attribution for this line
+        # and none has been supplied from memory.
+        'source': '',
         'page_start': 13,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A single line spoken by the monk after the precepts, charging "
+            "those who have taken them to guard them with care."
+        ),
+
+        'when_chanted': (
+            "Spoken once by the monk immediately after the eight precepts "
+            "have been undertaken."
+        ),
+
+        'background': [
+            "One sentence, and it belongs to the giver rather than to those "
+            "receiving. The exchange on these pages has a definite shape — "
+            "the request, the refuges, the precepts, and then this line, "
+            "which closes it. The book prints no title; the name used here "
+            "is taken from its opening words.",
+        ],
+
+        'meaning': [
+            "The line names what has just happened and says what is now to "
+            "be done with it: these eight training rules, well undertaken as "
+            "the virtue of the observance, are to be guarded — "
+            "อัปปะมาเทนะ, with heedfulness. The word is worth pausing "
+            "on. Its opposite is not wickedness but inattention, and the "
+            "tradition treats inattention as the way most undertakings are "
+            "actually lost.",
+
+            "That is why the sentence exists at all. Taking a precept costs "
+            "nothing and takes a moment; keeping one through an ordinary "
+            "afternoon is the whole of the work. The charge marks the "
+            "difference, so that the ceremony is not mistaken for the thing "
+            "it begins.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7596,8 +8597,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0276.PNG]: The book prints no title. The id and English
         #   title are mine. This is the well-known two-line gatha on sila,
         #   spoken by the elder after the assembly's āma bhante.
@@ -7606,9 +8605,52 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Verse on Virtue',
+        # Left empty on purpose: the verse is widely quoted and no single
+        # attribution could be given with confidence, the book prints none,
+        # and none has been supplied from memory.
+        'source': '',
         'page_start': 13,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A short verse on what virtue leads to — a good destination, "
+            "prosperity and peace — closing with the reason to purify it."
+        ),
+
+        'when_chanted': (
+            "Chanted at the close of the precept-giving, after the charge to "
+            "guard them."
+        ),
+
+        'background': [
+            "Four lines, and among the most often heard in Thai temples. It "
+            "is short enough to be remembered by people who chant nothing "
+            "else, which is a large part of why it has lasted. The book "
+            "prints no title; the name used here is taken from its opening "
+            "words.",
+
+            "Its place in the sequence gives it its job. Everything before "
+            "it has been the taking of virtue — request, refuge, precepts, "
+            "charge — and this is the one piece that says what all of that "
+            "is for.",
+        ],
+
+        'meaning': [
+            "Three results are named and they climb. สุคะติง, a good "
+            "destination, meaning a favourable rebirth. โภคะสัมปะทา, "
+            "the attainment of wealth, here and now. นิพพุติง, going to "
+            "peace, the cooling of what burns. The verse moves from the next "
+            "life to this one and then past both, and it does so in half a "
+            "dozen words.",
+
+            "The last line is not a fourth claim but a conclusion drawn from "
+            "the first three: ตัส๎มา, therefore — let virtue be "
+            "purified. That is the whole architecture of the verse. It gives "
+            "the reasons first and the instruction last, so that a person "
+            "who has just undertaken eight precepts is told why before being "
+            "told what.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7643,8 +8685,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0276.PNG]: The invitation 'หันทะ มะยัง
         #   สะระณะคะมะนานุสสะระณะคาถาโย ภะณามะ เส.' IS printed, but inside the
         #   prose paragraph above rather than on its own line. It is left in
@@ -7660,9 +8700,67 @@ CHANTS = [
         'title_pali': 'Saraṇagamanānussaraṇagāthā',
         'title_roman': '',
         'title_english': 'Verses Recollecting the Going for Refuge',
+        # Left empty on purpose. The middle verses closely echo a well known
+        # canonical verse on refuge but do not reproduce it — the wording
+        # here is first-person — so citing that text would be citing
+        # something this chant does not quite say. The book gives no
+        # attribution and none has been supplied from memory.
+        'source': '',
         'page_start': 13,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses recalling that one has gone for refuge and declared "
+            "oneself a lay follower, and resolving to practise as far as "
+            "strength allows."
+        ),
+
+        'when_chanted': (
+            "Chanted after the refuges and precepts have been taken, as a "
+            "recollection of what has just been undertaken."
+        ),
+
+        'background': [
+            "The title names it a recollection, and that is the distinction "
+            "worth holding on to: this is not the going for refuge but the "
+            "calling of it to mind afterwards. The tradition treats such "
+            "recollection as a practice in its own right rather than as a "
+            "commemoration.",
+
+            "The second verse says who is speaking. อุปาสะกัตตัง is the "
+            "state of being a lay follower, and it was declared "
+            "ภิกขุสังฆัสสะ สัมมุขา, in the presence of the Sangha of "
+            "bhikkhus. This is a lay person's chant and it states as much in "
+            "its own words rather than leaving it to be inferred.",
+
+            "Its middle verses closely echo one of the best known canonical "
+            "verses on refuge, reworded in the first person — เม, my, "
+            "where the familiar form is impersonal. That is why no source is "
+            "attributed above: what is printed here is a near relative of "
+            "that verse rather than the verse itself.",
+        ],
+
+        'meaning': [
+            "The claim in the middle is a large one, stated without "
+            "qualification: this is my safe refuge, this is the supreme "
+            "refuge, and coming to it one is freed from all suffering. "
+            "เขมัง means safe in the sense of secure, out of danger. "
+            "Nothing is hedged.",
+
+            "The last two verses then measure what the speaker can actually "
+            "promise, and the contrast is deliberate. ยะถาพะลัง — as "
+            "far as my strength allows — is the same qualification the book "
+            "uses elsewhere when a chant is put into lay mouths. What is "
+            "claimed for the refuge is unlimited; what is claimed for the "
+            "person is not.",
+
+            "That pairing is the reason the verses are recited rather than "
+            "simply known. Between them the two halves say that the refuge "
+            "is complete and the practitioner is not, and the chant closes "
+            "looking forward — อะนาคะเต, in time to come — rather "
+            "than on anything already achieved.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7742,8 +8840,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0277.PNG]: SINGLE COLUMN, checked deliberately because
         #   page 13 was two-column throughout and the switch is exactly the
         #   kind that goes unnoticed. Each line here is a complete centred
@@ -7775,9 +8871,57 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam kɔ̌ɔ kà-maa prá-rát-dtà-ná-dtrai',
         'title_english': 'The Request for Forgiveness from the Triple Gem',
+        # Left empty on purpose: this is a liturgical formula of the
+        # tradition, the book prints no attribution, and none has been
+        # supplied from memory.
+        'source': '',
         'page_start': 14,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A request for pardon for any wrong done by body, speech or mind "
+            "towards the Buddha, the Dhamma and the Sangha, made to each in "
+            "turn."
+        ),
+
+        'when_chanted': (
+            "Chanted before undertaking a period of practice or an important "
+            "occasion, and commonly at the close of the day's chanting."
+        ),
+
+        'background': [
+            "ขอขมา is to ask pardon. The chant is a single stanza said "
+            "three times with only its object changed — the Buddha, then "
+            "the Dhamma, then the Sangha — which is the same shape as "
+            "several of the salutations earlier in the book.",
+
+            "What is asked for is narrower than it may appear. This "
+            "tradition has no mechanism by which a fault is cancelled "
+            "because it has been confessed, and the chant does not ask for "
+            "one. What the formula does is bring a fault into the open and "
+            "make a statement about the future.",
+        ],
+
+        'meaning': [
+            "Each stanza has four movements. First the three doors through "
+            "which anything at all is done — กาเยนะ วาจายะ วะ "
+            "เจตะสา วา, by body, by speech, or by mind. Then the fault. "
+            "Then the request that it be accepted. Then the reason for "
+            "asking, which is the line that carries the weight.",
+
+            "That reason is กาลันตะเร สังวะริตุง — that in time to "
+            "come I may be restrained. The pardon is asked for the sake of "
+            "future restraint, not for relief from the past, and nothing in "
+            "the chant asks for anything to be undone. What is sought is "
+            "permission to go on rather than absolution for having "
+            "stumbled.",
+
+            "Its use follows from that. Someone about to begin something — "
+            "a retreat, a residence, a day of precepts — starts by naming "
+            "what has gone wrong instead of carrying it unspoken. The chant "
+            "is short because its work is only to get the thing said.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -7890,12 +9034,13 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CHECK [IMG_0278.PNG]: CONTINUES. The heading reads สารุปปะ 26
-        #   สิกขาบท but only 23 are printed on this page, so rules 24-26 are
-        #   on page 16 and have NOT been written from memory. Rule 23 is the
-        #   going half of a pair; its sitting half should be rule 24.
+        # ‼ COMPLETED [IMG_0278.PNG]: this group once continued past its
+        #   batch — the heading reads สารุปปะ 26 สิกขาบท and only 23
+        #   were printed on page 15, so rules 24-26 were on page 16. Page 16
+        #   is in. The group now runs 1-26 with no gap, matching the
+        #   heading's own count, and the prediction held: rule 23 is the
+        #   going half of the head-covered pair and rule 24 is its sitting
+        #   half. It no longer continues.
         # ‼ CHECK [IMG_0278.PNG]: ENGLISH NEEDS A VINAYA CHECK. These are
         #   Pali-only, so the English is a working translation for this
         #   edition. Four terms carry established renderings I would not want
@@ -7915,9 +9060,67 @@ CHANTS = [
         'title_pali': 'Sekhiyavatta',
         'title_roman': '',
         'title_english': 'The Sekhiya Rules of Training',
+        # Left empty on purpose. These are the sekhiya section of the
+        # monastic training rules, which the book's own headings name and
+        # count, but no precise reference has been attributed on top of that.
+        'source': '',
         'page_start': 15,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The first group of the training observances — twenty-six "
+            "rules on how a monk wears the robe, walks and sits among "
+            "houses."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics after the morning service, following the "
+            "book's own instruction, as a periodic review of the training "
+            "rules."
+        ),
+
+        'background': [
+            "เสขิยวัตร are the training observances, the last and "
+            "largest section of the monastic rule and also the mildest. "
+            "Falling short of one is not an offence calling for any formal "
+            "remedy. They govern deportment — how a monk appears to the "
+            "households he walks among every morning.",
+
+            "The book divides them into four groups and this is the first, "
+            "สารุปปะ, on what is fitting, with twenty-six rules. Its "
+            "heading and count are the book's own, printed at the head of "
+            "the group.",
+
+            "It is printed in Pali only, so the English here is a working "
+            "translation made for this edition. Several of the terms in this "
+            "group are technical and carry established renderings in "
+            "translations of the monastic code, which would repay comparison "
+            "before anyone leans on the English.",
+        ],
+
+        'meaning': [
+            "Every rule is built the same way: a statement in the first "
+            "person about what one will do, closing with สิกขา "
+            "กะระณียา, this is a training to be observed. It is not a "
+            "prohibition issued to somebody. It is a sentence the monk says "
+            "about himself, and the grammar turns each rule into a "
+            "resolution rather than an order.",
+
+            "What they cover is strikingly ordinary. The lower robe and the "
+            "upper robe worn evenly all round; going among the houses well "
+            "covered; not walking on the heels or on tiptoe; not sitting "
+            "lolling or clasping the knees. None of it is morality. All of "
+            "it is about being unremarkable in someone else's street.",
+
+            "That is why they are worth reciting. A community that eats by "
+            "alms lives on the goodwill of the villages it walks through, "
+            "and a monk who is careless in a doorway is not committing a "
+            "wrong so much as spending something that is not only his. "
+            "Saying the list aloud keeps a long catalogue of small things "
+            "where it can actually act — in the memory, before the moment "
+            "arrives.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -8182,15 +9385,15 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0279.PNG]: The book prints NO title for this group,
         #   only the heading โภชะนะปะฏิสังยุต 30 สิกขาบท, which is carried as
         #   the section on verse 1. title_thai and title_pali are left empty;
         #   title_english is the app's own.
-        # ‼ CHECK [IMG_0279.PNG]: CONTINUES. The heading says 30 and 18 are
-        #   printed here, so rules 19-30 are on page 17 and have not been
-        #   written from memory.
+        # ‼ COMPLETED [IMG_0279.PNG]: this group once continued past its
+        #   batch — the heading says 30 and only 18 were printed on page 16,
+        #   so rules 19-30 were on page 17. Page 17 is in. The group now runs
+        #   1-30 with no gap, matching the heading's own count. It no longer
+        #   continues.
         # ‼ CHECK [IMG_0279.PNG]: Rules 1-8 were generated from a table of
         #   four stems paired with receiving and eating, as page 15's were;
         #   9-18 were transcribed individually because each differs. Spot-
@@ -8200,9 +9403,58 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Sekhiya Rules — Bhojanapaṭisaṃyutta',
+        # Left empty on purpose: the second group of the sekhiya section,
+        # which the book's heading names and counts; no precise reference has
+        # been attributed on top of that.
+        'source': '',
         'page_start': 16,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Thirty training rules on receiving and eating almsfood — how "
+            "the bowl is taken, how the meal is eaten, and what is not done "
+            "at it."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics after the morning service, with the other "
+            "three groups of the training observances."
+        ),
+
+        'background': [
+            "The second and largest of the four groups. The book prints no "
+            "title for it, only the heading โภชะนะปะฏิสังยุต 30 "
+            "สิกขาบท with its count; the English title used here is the "
+            "app's own.",
+
+            "Its size is not an accident. The almsround and the meal are "
+            "where the monastic and lay worlds actually touch, every single "
+            "morning and in somebody's house rather than in a monastery. "
+            "More rules attach to that hour than to any other part of the "
+            "day.",
+        ],
+
+        'meaning': [
+            "The group opens with attention rather than restriction. "
+            "Almsfood is to be received สักกัจจัง, attentively; with "
+            "attention on the bowl; with a due proportion of curry. Nothing "
+            "is said about how much food or how good it is. What is governed "
+            "is the manner of receiving it.",
+
+            "The later rules become specific to the point of seeming trivial "
+            "— not taking a water vessel with a hand soiled by food, not "
+            "throwing out bowl-rinsing water with rice grains in it among "
+            "the houses. Read as a legal code that is odd. Read as a "
+            "description of somebody eating carefully in another person's "
+            "home, it is ordinary good manners written down and committed to "
+            "memory.",
+
+            "The meal is the one moment of the day when a monk is wholly "
+            "dependent and wholly visible, receiving from people who may "
+            "have little. These rules take that exposure and make it "
+            "something practised in advance rather than handled on the spot.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -8527,19 +9779,66 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CHECK [IMG_0280.PNG]: CONTINUES. The heading says 16 and 7 are
-        #   printed here, so rules 8-16 are on page 18 and have not been
-        #   written from memory.
+        # ‼ COMPLETED [IMG_0280.PNG]: this group once continued past its
+        #   batch — the heading says 16 and only 7 were printed on page 17,
+        #   so rules 8-16 were on page 18. Page 18 is in. The group now runs
+        #   1-16 with no gap, matching the heading's own count. It no longer
+        #   continues.
         'id': 'sekhiya-dhammadesanapatisamyutta',
         'title_thai': '',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Sekhiya Rules — Dhammadesanāpaṭisaṃyutta',
+        # Left empty on purpose: the third group of the sekhiya section,
+        # which the book's heading names and counts; no precise reference has
+        # been attributed on top of that.
+        'source': '',
         'page_start': 17,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Sixteen training rules on teaching the Dhamma, each declining "
+            "to teach someone whose posture or conduct shows they are not "
+            "there to listen."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics after the morning service, with the other "
+            "three groups of the training observances."
+        ),
+
+        'background': [
+            "The third of the four groups. As with the second, the book "
+            "prints no title, only the heading with its count, and the "
+            "English title is the app's own.",
+
+            "One feature runs through every rule and is easy to read past: "
+            "อะคิลานัสสะ, someone who is not ill. The exception is "
+            "restated in all sixteen rather than declared once at the head, "
+            "so that no rule can be quoted without it. Illness suspends the "
+            "whole group.",
+        ],
+
+        'meaning': [
+            "Each rule names a listener and declines. Someone holding a "
+            "sunshade, a staff or a knife. Someone walking in front while "
+            "the teacher walks behind, or on the path while the teacher is "
+            "off it. The refusal is never about the person's worth — it is "
+            "about the arrangement they are standing in.",
+
+            "What the group protects is the teaching rather than the "
+            "teacher. Somebody armed, or striding ahead, or being addressed "
+            "from below is not placed to receive anything; teaching them in "
+            "that moment spends the Dhamma on an occasion that cannot hold "
+            "it. The rules describe the conditions under which speech is "
+            "worth making.",
+
+            "Taken together they amount to a rule against speaking merely "
+            "because one has something to say. And the exception says what "
+            "the whole group is for: where there is real need, every one of "
+            "these arrangements stops mattering at once.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -8729,8 +10028,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0281.PNG]: The book prints no Thai translation anywhere
         #   on page 18, so thai and paiboon are empty and english_unverified
         #   is set.
@@ -8739,9 +10036,49 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Sekhiya Rules — Pakiṇṇaka',
+        # Left empty on purpose: the fourth group of the sekhiya section,
+        # which the book's heading names and counts; no precise reference has
+        # been attributed on top of that.
+        'source': '',
         'page_start': 18,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The three miscellaneous training rules, on not relieving "
+            "oneself standing, or on living greenery, or in water."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics after the morning service, closing the "
+            "four groups of the training observances."
+        ),
+
+        'background': [
+            "ปกิณณะกะ means miscellaneous — what is left once the other "
+            "categories are full. Three rules, and with them the training "
+            "observances come to an end.",
+
+            "With the groups before it, the book's own counts run "
+            "twenty-six, thirty, sixteen and three. Each of these last three "
+            "carries the same exception for illness that runs through the "
+            "group before it.",
+        ],
+
+        'meaning': [
+            "All three concern the disposal of what the body produces, and "
+            "two of them are plainly about other people rather than about "
+            "the monk: greenery that somebody tends, water that somebody "
+            "drinks from or washes in. The third, not standing, is about "
+            "how it looks.",
+
+            "It is a fitting close to the section. Having worked through "
+            "robes, walking, sitting, receiving food, eating and teaching, "
+            "the rule finishes on the least dignified part of ordinary life "
+            "and treats it exactly as it treated everything else — as "
+            "something that can be done carelessly or with attention, and "
+            "that other people live downstream of.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -8800,14 +10137,16 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0282.PNG]: FIRST CHANT WITH A BOOK NUMBER. The book
         #   prints '1.' before the title, so book_number is 1. This is the
         #   book's own chant numbering, not a page number and not a verse
         #   number, and it has not been derived by counting.
-        # ‼ CHECK [IMG_0282.PNG]: CONTINUES. Reflections 9 and 10 are on page
-        #   20 and have not been written from memory of the canon.
+        # ‼ COMPLETED [IMG_0282.PNG]: this chant once continued past its
+        #   batch — reflections 9 and 10 were on page 20. Page 20 is in. The
+        #   chant now runs 1-13 with no gap, verses 11 and 12 carry the
+        #   book's own printed numbers 9 and 10, and the colophon
+        #   ทะสะธัมมะสุตตัง นิฏฐิตัง. is stored as its closing.
+        #   It no longer continues.
         # ‼ CHECK [IMG_0282.PNG]: Pali only — no Thai translation printed on
         #   this page, so thai and paiboon are empty and english_unverified is
         #   set. Worth watching whether page 20 prints a คำแปล for it, as page
@@ -8817,10 +10156,62 @@ CHANTS = [
         'title_pali': 'Dasadhammasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on the Ten Things',
+        # Left empty on purpose: a discourse of the Buddha, but the book
+        # prints no attribution here and no precise reference has been
+        # supplied from memory.
+        'source': '',
         'book_number': 1,
         'page_start': 19,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A discourse listing ten things one who has gone forth should "
+            "reflect on again and again, from the loss of caste to how the "
+            "days and nights are passing."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics among the regular reflections, and printed "
+            "here as the first numbered chant in the book."
+        ),
+
+        'background': [
+            "This is the first chant the book gives a number to — '1.' is "
+            "printed before the title. It is a discourse rather than a "
+            "composed verse, and it is entered with its whole frame intact: "
+            "it opens เอวัมเม สุตัง, thus have I heard, gives the "
+            "setting at Sāvatthi in Jeta's Grove, and closes with the "
+            "listeners' response.",
+
+            "The ten are the monastic counterpart of the five recollections "
+            "given to everyone. Where those name what nobody escapes — "
+            "ageing, sickness, death — these name what somebody has taken "
+            "on by choice, and can therefore be asked whether they are "
+            "living up to.",
+        ],
+
+        'meaning': [
+            "The first reflections are about position. One has come to a "
+            "state without caste; one's life is dependent on others; one's "
+            "bearing should be other than it was. These describe a change "
+            "already made and ask whether it has actually been noticed by "
+            "the person who made it.",
+
+            "Two then turn to conscience and they are deliberately paired: "
+            "does my own conscience reproach me as to virtue, and do my wise "
+            "companions in the holy life, having examined me, reproach me. "
+            "The second is the harder, because it cannot be settled "
+            "privately.",
+
+            "The last three ask what the life is actually being spent on. "
+            "How do the days and nights pass for me. Do I delight in empty "
+            "dwellings. Have I attained anything such that, questioned in my "
+            "last days, I should not be embarrassed. These are not "
+            "rhetorical, and the discourse says how to use them: อะภิณ๎หัง, "
+            "again and again. Their whole work is done by returning to them, "
+            "which is why the text is chanted rather than read once.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -8991,12 +10382,12 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CHECK [IMG_0283.PNG]: CONTINUES. The passage sets out the Buddha
-        #   as foremost of beings and dispassion as foremost of dhammas; the
-        #   parallel for the Sangha is not on this page, so the rest is on
-        #   page 21 and has not been written from memory.
+        # ‼ COMPLETED [IMG_0283.PNG]: this chant once continued past its
+        #   batch — the page set out the Buddha as foremost of beings and
+        #   dispassion as foremost of dhammas, but the parallel for the
+        #   Sangha was on page 21. Pages 21 and 22 are in. The chant now runs
+        #   1-10 with no gap and the colophon ปะริตตะกะระณะปาโฐ
+        #   นิฏฐิโต is stored as its closing. It no longer continues.
         # ‼ CHECK [IMG_0283.PNG]: Book number 2, printed as '2.' before the
         #   title. The second numbered chant in the book.
         'id': 'parittakarana-patha',
@@ -9004,10 +10395,71 @@ CHANTS = [
         'title_pali': 'Parittakaraṇapāṭha',
         'title_roman': '',
         'title_english': 'The Passage for Making a Protection',
+        # ‼ UNVERIFIED SOURCE: attributed by Claude, not taken from Josh's
+        #   book. Established by matching this chant's Pali against other
+        #   chants in this same file, not from memory: its verses are
+        #   character-for-character those of the ระตะนะสุตตัง at page 82,
+        #   and its prose carries the อัคคะมักขายะติ formula of the
+        #   อัคคัปปะสาทะสุตตัง at page 112. The two references quoted
+        #   are those books' own printed footnotes, copied verbatim.
+        'source': (
+            "Composite. The verses are those of ระตะนะสุตตัง ทุติยัง, print"
+            "ed at page 82 of this book with the reference ขุ. ขุ. 25/5 ขุ."
+            "สุ. 25/367; the prose passages are those of อัคคัปปะสาทะสุตตัง"
+            ", printed at page 112 with อํ. จตุกฺก. 21/44."
+        ),
         'book_number': 2,
         'page_start': 20,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A protection text alternating prose declarations that the "
+            "Buddha, dispassion and the Sangha are foremost with verses "
+            "invoking the truth of each."
+        ),
+
+        'when_chanted': (
+            "Chanted when a protection is being made — at a blessing, over "
+            "a new house, or for someone who is ill."
+        ),
+
+        'background': [
+            "ปะริตตะ, paritta, means a protection: a text chanted for "
+            "safety rather than for instruction. The tradition's own account "
+            "of how it works is not magical but a matter of truth — a true "
+            "statement is made, and its truth is then invoked. That is why "
+            "each verse here ends by naming a truth and asking well-being on "
+            "the strength of it.",
+
+            "The chant is an assembly rather than a text. Three prose "
+            "passages, each declaring one thing foremost of its kind, "
+            "alternate with verses that close on a common refrain. Both "
+            "halves appear elsewhere in this same book as complete chants in "
+            "their own right, which is how the source above was established.",
+        ],
+
+        'meaning': [
+            "The three prose passages are built identically. Of all beings, "
+            "footless, two-footed, four-footed or many-footed, with form or "
+            "formless, the Tathāgata is declared foremost. Of all things "
+            "conditioned or unconditioned, dispassion. Of all communities "
+            "and assemblies, the Sangha of the Tathāgata's disciples. Each "
+            "is a superlative, and each is then handed over to a verse.",
+
+            "The verses close on the same two moves: this too is an "
+            "excellent treasure, and by this truth may there be well-being. "
+            "Nothing is requested as a favour and nobody is petitioned. The "
+            "well-being is claimed as a consequence of something being the "
+            "case.",
+
+            "That structure is the reason the chant is used where it is. "
+            "What is offered to a frightened household or a sick person is "
+            "not an incantation but a series of statements the reciters hold "
+            "to be true, said aloud in their presence — and the last verse "
+            "makes the tone plain, ending on the wise going out like a lamp "
+            "rather than on any promise of rescue.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -9160,8 +10612,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0286.PNG]: TWO COLUMNS on both pages, read across the
         #   row. First pairing on page 24: นิธิง นิเธติ ปุริโส (left) +
         #   คัมภีเร อุทะกันติเก (right) = verse 1. Reading down the left
@@ -9178,11 +10628,62 @@ CHANTS = [
         'title_pali': 'Nidhikaṇḍagāthā',
         'title_roman': '',
         'title_english': 'The Verses on the Treasure Store',
+        # Left empty on purpose: the book prints its own reference for these
+        # verses and it is kept verbatim in source_printed, which the page
+        # view renders. Nothing has been attributed on top of it.
+        'source': '',
         'book_number': 5,
         'page_start': 24,
         'source_printed': 'ขุ.ขุ. เตมิย. 2/11',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses contrasting a buried treasure, which can be lost every "
+            "way at once, with the store laid up by giving and virtue, which "
+            "follows a person beyond death."
+        ),
+
+        'when_chanted': (
+            "Chanted at ceremonies of giving, and commonly after a donation "
+            "has been made."
+        ),
+
+        'background': [
+            "The book prints its own reference for these verses, so nothing "
+            "has been attributed on top of it here.",
+
+            "The chant is a single extended simile and it takes its time. A "
+            "man buries treasure deep down at the water's edge against a "
+            "future need — a king's displeasure, a thief, a debt, a famine "
+            "— and eleven verses stay with that picture before the argument "
+            "turns.",
+        ],
+
+        'meaning': [
+            "The first movement is a catalogue of ways the buried store "
+            "fails. It shifts from its place. The memory of it is "
+            "confounded. Nāgas carry it off, or yakkhas take it, or heirs "
+            "he has no love for dig it up while he is not looking. And when "
+            "his merit is exhausted, the whole of it is lost. The objection "
+            "is not that treasure is wicked but that it is unreliable in "
+            "every direction at once.",
+
+            "The turn names the alternative and, more usefully, says where "
+            "it is laid: by giving, by virtue, by restraint and "
+            "self-mastery, in a shrine, in the Sangha, in a person, in "
+            "guests, in a mother, in a father, in an elder brother. The list "
+            "moves between the sacred and the domestic without marking any "
+            "difference, which is itself the teaching.",
+
+            "The claim then escalates a very long way — from a fair "
+            "complexion and a good voice, through sovereignty and the "
+            "happiness of a wheel-turning monarch, to the attainment of "
+            "Nibbāna itself, all of it obtained by this. Chanted after a "
+            "donation, it tells the giver what has just happened in terms "
+            "they can hold on to, and it does so without asking them for "
+            "anything further.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -9487,8 +10988,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0288.PNG]: This chant has no footnote and no citation
         #   marker on either page. Page 25's footnote belongs to Nidhikaṇḍa
         #   above it and page 26's to Devatādissa below it. `source_printed`
@@ -9504,10 +11003,62 @@ CHANTS = [
         'title_pali': 'Dhammagāravādigāthā',
         'title_roman': '',
         'title_english': 'The Verses on Reverence for the Dhamma',
+        # Left empty on purpose: the book prints no footnote and no citation
+        # for this chant, and none has been supplied from memory.
+        'source': '',
         'book_number': 6,
         'page_start': 25,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses on revering the Dhamma, and on the fragrance of virtue, "
+            "which unlike sandalwood or jasmine travels against the wind."
+        ),
+
+        'when_chanted': (
+            "Chanted among the general chants of the book, following the "
+            "verses on the treasure store."
+        ),
+
+        'background': [
+            "The chant opens by settling its argument before making it. "
+            "Those fully awakened ones who have been, those yet to come, and "
+            "the one awakened now — all of them dwelt, dwell and will dwell "
+            "revering the true Dhamma, and this, it says, is "
+            "เอสา พุทธานะ ธัมมะตา, the nature of Buddhas.",
+
+            "After that opening it is plainly a compilation. The verses move "
+            "through several distinct subjects, each finished before the "
+            "next begins: how hard the good path is to follow, where the "
+            "good and the bad end up, the protection that Dhamma gives, and "
+            "then a long sequence on fragrance. The book prints no footnote "
+            "and no citation for any of it.",
+        ],
+
+        'meaning': [
+            "The opening argues from precedent rather than from authority. "
+            "It does not say the Dhamma should be revered because it is "
+            "true; it says that every Buddha there has been or will be "
+            "revered it, and therefore one who wishes for greatness should "
+            "do likewise.",
+
+            "The hinge of the chant is ธัมโม หะเว รักขะติ "
+            "ธัมมะจาริง — Dhamma protects the one who lives by Dhamma. "
+            "Read carefully it is a statement about consequence rather than "
+            "a promise of intervention: what protects is the living by it, "
+            "not a power that watches over those who do.",
+
+            "The fragrance sequence is the part people remember, and it "
+            "earns its place. The scent of flowers does not travel against "
+            "the wind, nor sandalwood, nor tagara, nor jasmine — but the "
+            "fragrance of the good does, and perfumes every quarter. Then "
+            "the closing image: a lotus springing up on a rubbish heap "
+            "beside the highway, and so the disciple among blind ordinary "
+            "folk. The verses give virtue a public dimension without making "
+            "it a performance. They say a life is noticed, not that it "
+            "should set out to be.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -9782,8 +11333,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0291.PNG]: The closing วิหาระทานะคาถา นิฏฐิตา is
         #   printed with NO full stop, where every other closing in this batch
         #   ends in one. Reproduced as printed rather than regularised.
@@ -9794,11 +11343,58 @@ CHANTS = [
         'title_pali': 'Vihāradānagāthā',
         'title_roman': '',
         'title_english': 'The Verses on the Gift of a Dwelling',
+        # Left empty on purpose: the book prints its own reference for these
+        # verses and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'book_number': 11,
         'page_start': 29,
         'source_printed': 'วิ.จู. 7/87-88-121-2',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses in praise of giving a dwelling to the Sangha, listing "
+            "what shelter keeps off and what follows from providing it."
+        ),
+
+        'when_chanted': (
+            "Chanted when a building or a lodging is offered to the Sangha, "
+            "and at ceremonies marking such a gift."
+        ),
+
+        'background': [
+            "A short chant for one occasion: the giving of a dwelling, "
+            "whether a single hut, a hall, or a whole monastery. The book "
+            "prints its own reference for it.",
+
+            "Its subject is unusually concrete. Most of the chants around it "
+            "concern virtue, merit or truth in general; this one is about a "
+            "roof, and about what a roof makes possible.",
+        ],
+
+        'meaning': [
+            "The first verses are entirely practical and do not hurry to a "
+            "moral. A dwelling keeps off cold and heat, beasts of prey, "
+            "creeping things, mosquitoes and the cold-season rains, and the "
+            "fierce wind and heat once they have arisen. Only after all that "
+            "comes the purpose clause — for shelter and for ease, and in "
+            "order to meditate and to see clearly. The physical facts are "
+            "named first and what they are for is named last.",
+
+            "The middle draws the practical conclusion: a wise man seeing "
+            "his own good should have pleasant dwellings built, settle the "
+            "deeply learned in them, and give them food, drink, robes and "
+            "lodging. Nothing here is presented as sacrifice. It is "
+            "presented as sense.",
+
+            "The closing verses complete the exchange, and the direction of "
+            "the return is worth noticing. They teach him the Dhamma that "
+            "dispels all suffering, and having understood that Dhamma he "
+            "attains final Nibbāna. What comes back to the donor is not "
+            "merit in the abstract but teaching — which is the one thing "
+            "the people he housed have to give.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -9917,11 +11513,11 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CHECK [IMG_0291.PNG]: CONTINUES. The chant runs off the foot of
-        #   page 29 and is NOT finished here. Verse 10 is the last complete
-        #   line on the page. Do not write the rest.
+        # ‼ COMPLETED [IMG_0291.PNG]: this chant once ran off the foot of
+        #   page 29 with verse 10 as the last complete line. Page 30 is in.
+        #   The chant now runs 1-14 with no gap and the colophon
+        #   สัจจะปานะวิธ๎ยานุรูปะคาถา นิฏฐิตา is stored as its
+        #   closing. It no longer continues.
         # ‼ CHECK [IMG_0291.PNG]: The title สัจจะปานะวิธ์ยานุรูปะคาถา is
         #   unusual and its thanthakhat cluster วิธ์ยา is hard to parse. The
         #   สารบัญ prints the same form at page 29, so the two agree.
@@ -9932,10 +11528,62 @@ CHANTS = [
         'title_pali': 'Saccapānavidhyānurūpagāthā',
         'title_roman': '',
         'title_english': 'The Verses Befitting the Drinking of Truth',
+        # Left empty on purpose: the book prints its own reference for these
+        # verses and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'book_number': 12,
         'page_start': 29,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses on truth as the sweetest of flavours, and on the four "
+            "things — truth, Dhamma, steadfastness, generosity — that "
+            "keep a householder from grief."
+        ),
+
+        'when_chanted': (
+            "Chanted at an occasion where truth is pledged, which is what "
+            "the title's drinking of truth names."
+        ),
+
+        'background': [
+            "The title names an occasion rather than a subject: verses "
+            "befitting the drinking of truth. The chant was therefore "
+            "assembled for a rite at which an undertaking is sworn, and its "
+            "contents were chosen to suit that rather than to expound a "
+            "doctrine.",
+
+            "What holds the verses together is theme rather than "
+            "provenance. Every one of them turns on truth, on faith, or on "
+            "what a person living at home should stand on. The book prints "
+            "its own reference for the group.",
+        ],
+
+        'meaning': [
+            "It opens on its largest claim and does not build up to it: "
+            "สัจจัง เว อะมะตา วาจา, truth indeed is deathless "
+            "speech, and this is the ancient law. Deathless, not merely "
+            "long-lasting — the word is the same one used of Nibbāna.",
+
+            "The middle sets out four bests in a row: faith is a person's "
+            "best wealth, Dhamma well practised brings happiness, truth is "
+            "the sweetest of flavours, and the life lived by wisdom is "
+            "called the best life. Then it turns practical — doing what is "
+            "fitting, bearing the burden, rising to the task — and says "
+            "what those produce: wealth, renown, and friends bound by "
+            "giving.",
+
+            "The close is the reason the verses suit their occasion. In the "
+            "faithful householder in whom truth, Dhamma, steadfastness and "
+            "generosity are found, he does not grieve when he has passed on. "
+            "And then something rare in a chant: an invitation to check the "
+            "claim. Come now, ask others also, the many ascetics and "
+            "brahmins, whether anything greater than truth, self-control, "
+            "generosity and patience is found here. It ends by inviting "
+            "contradiction, which is a confident way to finish a pledge.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -10081,8 +11729,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0292.PNG]: NEW CHANT, not previously in the app.
         #   Numbered 13 in the book, printed between Saccapanavidhyanurupa and
         #   Pabbatopama.
@@ -10098,11 +11744,58 @@ CHANTS = [
         'title_pali': 'Ādiyasuttagāthā',
         'title_roman': '',
         'title_english': 'The Verses of the Discourse on What is to be Taken Up',
+        # Left empty on purpose: the book prints its own reference for these
+        # verses and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'book_number': 13,
         'page_start': 30,
         'source_printed': 'ส.ส. 15/315-6',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses in which a householder reviews what his wealth has been "
+            "used for and finds nothing in the account to regret."
+        ),
+
+        'when_chanted': (
+            "Chanted at ceremonies of giving, and as a reflection for lay "
+            "people on the use of wealth."
+        ),
+
+        'background': [
+            "The book prints its own reference for these verses. The title "
+            "names what is to be taken up or made use of, and the chant is "
+            "spoken throughout in the voice of a householder taking stock of "
+            "what he has done with what he had.",
+
+            "That voice is unusual in this book. The speaker is a lay person "
+            "with property, and nothing in the verses suggests he ought not "
+            "to have had it. The question they put is not whether to hold "
+            "wealth but what it was spent on.",
+        ],
+
+        'meaning': [
+            "The first half is simply an account, item by item. Wealth "
+            "enjoyed. Dependants supported. Adversities overcome. Offerings "
+            "given and the five oblations made. The virtuous and the "
+            "restrained waited upon. Every line names something the money "
+            "actually went on, and none of them is an intention.",
+
+            "The turn comes in the middle and it is the whole argument: that "
+            "purpose for which a wise man dwelling at home would wish for "
+            "wealth — that purpose I have attained. Wealth is treated as "
+            "instrumental from beginning to end, and the only test applied "
+            "to it is whether it was used for what it is for.",
+
+            "The line the chant exists for is the next one: "
+            "กะตัง อะนะนุตาปิยัง, what has been done brings no "
+            "remorse. These are not verses about generosity as a virtue. "
+            "They are about reaching the end of a life able to look at the "
+            "account without flinching, which is why they are given to lay "
+            "people rather than to monastics.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -10179,12 +11872,10 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CHECK [IMG_0296.PNG]: NEW CHANT, and NOT FINISHED. The page prints
-        #   it as far as the question katame satta and the answer runs onto
-        #   page 34, so `continues` is set. Nothing beyond what the photograph
-        #   shows has been written, however well known the seven factors are.
+        # ‼ COMPLETED [IMG_0296.PNG]: this chant once stopped at the question
+        #   katame satta, with the answer running onto page 34. Page 34 is in.
+        #   The chant now runs 1-27 with no gap, names all seven factors in
+        #   full, and closes with its own colophon. It no longer continues.
         # ‼ CHECK [IMG_0296.PNG]: READING HAZARD, AND WORSE HERE THAN ANYWHERE
         #   SO FAR. Four words in this chant turn on the lo-chula/pho
         #   distinction this typeface cannot photograph: veluvane at verse 2,
@@ -10208,11 +11899,63 @@ CHANTS = [
         'title_pali': 'Mahākassapabojjhaṅgasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on the Factors of Awakening, to Mahākassapa',
+        # Left empty on purpose: a discourse of the Buddha, but the book
+        # prints no attribution for this one and no precise reference has
+        # been supplied from memory.
+        'source': '',
         'book_number': 17,
         'page_start': 33,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The Buddha visits the gravely ill Mahākassapa, recites the "
+            "seven factors of awakening, and Mahākassapa rises from the "
+            "illness."
+        ),
+
+        'when_chanted': (
+            "Chanted at the bedside of the sick, the first of three such "
+            "discourses the book prints together."
+        ),
+
+        'background': [
+            "โพชฌังคะ are the factors of awakening, seven of them: "
+            "mindfulness, investigation of states, energy, rapture, "
+            "tranquillity, concentration and equanimity. This chant names "
+            "all seven in full, each in its own clause, with nothing "
+            "abbreviated.",
+
+            "It is the first of three parallel discourses printed one after "
+            "another in the book — to Mahākassapa, to Mahāmoggallāna and "
+            "to Mahācunda. All three share the setting at Rājagaha in the "
+            "Bamboo Grove and very nearly the same words, and they are "
+            "chanted as a set.",
+        ],
+
+        'meaning': [
+            "The exchange at the opening repays reading slowly. The Buddha "
+            "asks whether the pain is subsiding rather than increasing. "
+            "Kassapa answers that it is not: the feelings are severe and "
+            "increasing, and their increase is what is apparent. Nothing is "
+            "softened on either side, and no comfort is offered in reply to "
+            "it.",
+
+            "What is offered instead is the list. The Buddha does not say "
+            "the factors will cure anything — he says they lead to direct "
+            "knowledge, to full awakening, to Nibbāna. Kassapa's reply is "
+            "not a request but a confirmation: assuredly, Blessed One, they "
+            "are factors of awakening. He is agreeing with something he "
+            "already knows.",
+
+            "Then the last line, reported flatly: he rose up from that "
+            "illness, and in that way the illness was abandoned. The "
+            "recovery is recorded, not promised, and the whole use of the "
+            "chant at sickbeds rests on that distinction. What is recited to "
+            "someone ill is a description of what leads to awakening. That a "
+            "recovery followed is left standing as a thing that happened.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -10483,8 +12226,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0297.PNG]: This discourse and the Mahākassapa one on
         #   page 33 share almost all their wording, differing in the elder's
         #   name and the place. It is NOT a repeat — the book prints it as its
@@ -10497,11 +12238,56 @@ CHANTS = [
         'title_pali': 'Mahāmoggallānabojjhaṅgasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on the Factors of Awakening, to Mahāmoggallāna',
+        # Left empty on purpose: a discourse of the Buddha, but the book
+        # prints no attribution for this one and no precise reference has
+        # been supplied from memory.
+        'source': '',
         'book_number': 18,
         'page_start': 34,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The same visit and the same seven factors, this time to "
+            "Mahāmoggallāna on the Vulture's Peak, who likewise rises from "
+            "his illness."
+        ),
+
+        'when_chanted': (
+            "Chanted at the bedside of the sick, the second of the three "
+            "such discourses the book prints together."
+        ),
+
+        'background': [
+            "The second of the set, and structurally identical to the first. "
+            "What differs is the patient and the place: Mahāmoggallāna, on "
+            "the Vulture's Peak rather than in the Pipphali Cave.",
+
+            "The book prints all three discourses in full rather than "
+            "abbreviating the repeated passages, and this edition follows "
+            "the page. Somebody chanting the set therefore says the seven "
+            "factors through three times in one sitting.",
+        ],
+
+        'meaning': [
+            "Because so much repeats, what stands out is what repeats. The "
+            "seven factors are named again one by one, each in the same "
+            "clause, rightly declared by the Blessed One, developed and made "
+            "much of, leading to direct knowledge, to full awakening, to "
+            "Nibbāna. Nothing is compressed on the second telling.",
+
+            "The exchange is the same too: the question about whether the "
+            "pain is receding, the plain answer that it is not, and then the "
+            "list. In neither discourse does the Buddha respond to the pain "
+            "itself. He responds by naming what he has taught.",
+
+            "The reason to chant the set rather than one of them is in that "
+            "sameness. Two of the most senior disciples in the tradition, in "
+            "different places and separately, are given exactly the same "
+            "thing, in the same words, and both recover. Nothing is tailored "
+            "to the person, and the consistency is the point being made.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -10767,8 +12553,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0300.PNG]: The footnote marker 1 sits on the last word
         #   of verse 21, and the footnote under the rule reads ที.ปา 11/209.
         #   Filed as source_printed because it is a canonical citation, not an
@@ -10788,12 +12572,58 @@ CHANTS = [
         'title_pali': 'Mahācundabojjhaṅgasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on the Factors of Awakening, to Mahācunda',
+        # Left empty on purpose: the book prints its own reference for this
+        # one and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'book_number': 19,
         'page_start': 36,
         'layout': 'prose',
         'source_printed': 'ที.ปา 11/209',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The third of the set, and the one that turns around: here the "
+            "Buddha is the one who is ill, and Mahācunda recites the "
+            "factors to him."
+        ),
+
+        'when_chanted': (
+            "Chanted at the bedside of the sick, closing the set of three."
+        ),
+
+        'background': [
+            "The third and last of the set, shorter than the two before it, "
+            "and different in a way that is easy to read past: the sick "
+            "person here is the Buddha himself. The setting is the same "
+            "Bamboo Grove at Rājagaha.",
+
+            "Alone of the three, this one carries a printed reference in the "
+            "book, which is kept verbatim in source_printed.",
+        ],
+
+        'meaning': [
+            "The reversal changes how the whole set reads. In the first two "
+            "the Buddha comes to a sick disciple. Here Mahācunda comes to "
+            "the sick Buddha, and the Buddha says only ปะฏิภันตุ ตัง "
+            "จุนทะ โพชฌังคาติ — let the factors of awakening come to "
+            "mind for you, Cunda. He asks to be recited to.",
+
+            "Cunda gives the same list back, and the attribution runs the "
+            "other way throughout: rightly declared by the Blessed One, "
+            "developed and made much of. Then the Buddha answers with the "
+            "same formula his disciples used to him in the first two — "
+            "assuredly, Cunda, they are factors of awakening.",
+
+            "The close is briefer and stranger than the others: this the "
+            "venerable Mahācunda said; the Teacher approved; and the Blessed "
+            "One rose up from that illness. Chanting the three together is "
+            "what makes the point available. The recitation is not something "
+            "the well do for the sick, or the senior for the junior. Even "
+            "the one who taught the list is, on the third telling, the one "
+            "being recited to.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11002,8 +12832,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0301.PNG]: TWO footnotes on this page, so
         #   source_printed is deliberately left off — a chant carries one
         #   printed source and neither of these is obviously it. Both are
@@ -11028,11 +12856,61 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-wí-nai sǎŋ-kèep',
         'title_english': 'The Vinaya in summary',
+        # Left empty on purpose: the book prints footnotes on this page but
+        # no attribution has been carried into this field, and none has been
+        # supplied from memory.
+        'source': '',
         'book_number': 20,
         'page_start': 38,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The Vinaya in summary: where the first grave offence was laid "
+            "down and concerning whom, followed by the opening of the "
+            "Verañjā account."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, opening the Suat Jaeng service in which "
+            "the Vinaya, the Suttas and the seven books of the Abhidhamma "
+            "are recited in turn."
+        ),
+
+        'background': [
+            "Suat Jaeng is the funeral chanting in which the three divisions "
+            "of the canon are each represented, one after another, by a "
+            "short extract. This is the first of them and stands for the "
+            "whole of the monastic discipline.",
+
+            "The point of such a service is not to recite the Vinaya, which "
+            "would take weeks, but to have it present. Each extract is "
+            "chosen to be recognisably the beginning of the thing it stands "
+            "for, so that naming the opening serves for the whole.",
+        ],
+
+        'meaning': [
+            "The extract opens as a catechism, question and answer. Where "
+            "was the first pārājika laid down? At Vesālī. Concerning "
+            "whom? Sudinna, son of Kalanda. In what matter? In the matter of "
+            "his having gone back to his former wife. A pārājika is the "
+            "gravest class of monastic offence, the kind that ends a monastic "
+            "life rather than requiring amends for it.",
+
+            "Then, without any transition, the passage turns into narrative: "
+            "the Buddha at Verañjā with some five hundred monks, the "
+            "brahmin of that place hearing the report of him, and the long "
+            "string of epithets that report carried. Both halves are "
+            "openings — the first rule, and the first scene — which is "
+            "what qualifies them to stand for a whole division of the canon.",
+
+            "What it does at a funeral is stand in for a body of text far "
+            "too large to recite, and it does so by naming the very first "
+            "thing in it. The chant is a gesture towards completeness rather "
+            "than an argument, and the closing line makes the same point "
+            "plainly: here ends the Vinaya.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11138,8 +13016,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0302.PNG]: This chant's title carries NO number, where
         #   the chants either side of it are numbered 20 and 21. book_number
         #   is therefore omitted rather than guessed. The book's own contents
@@ -11156,11 +13032,57 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-sùut sǎŋ-kèep',
         'title_english': 'The Suttas in summary',
+        # Left empty on purpose: the book prints its own reference for this
+        # extract and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'page_start': 39,
         'layout': 'prose',
         'source_printed': 'ที. สี. 9/1',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The Suttas in summary: the opening of a discourse, in which a "
+            "wanderer abuses the Buddha and his own pupil praises him along "
+            "the same road."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, the second part of the Suat Jaeng "
+            "service, standing for the whole collection of discourses."
+        ),
+
+        'background': [
+            "The second extract of the set, standing for the Suttas as the "
+            "one before it stood for the Vinaya. The book prints its own "
+            "reference for it, and — alone among the chants around it — "
+            "gives its title no number.",
+
+            "Four sentences is all it takes. Like the Vinaya extract it is "
+            "chosen for being an opening rather than for its content, and it "
+            "stops well before anything is settled.",
+        ],
+
+        'meaning': [
+            "The scene is set economically: the Buddha travelling the high "
+            "road between Rājagaha and Nāḷandā with some five hundred "
+            "monks, and behind him the wanderer Suppiya with his pupil, the "
+            "youth Brahmadatta, on the same road.",
+
+            "What follows is the detail the passage exists for. Suppiya "
+            "speaks in many ways in dispraise of the Buddha, the Dhamma and "
+            "the Sangha; his pupil, walking with him, speaks in praise of "
+            "all three. Teacher and pupil, contradicting each other "
+            "outright, follow close behind.",
+
+            "The extract ends there, with nothing resolved and no comment "
+            "offered on either of them. It is the first paragraph of a "
+            "discourse rather than a discourse, and standing at a funeral "
+            "for the whole of the Suttas, what it puts in the room is the "
+            "characteristic way they begin: a road, a company, and somebody "
+            "saying something that will have to be answered.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11222,8 +13144,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0302.PNG]: The whole passage carries ONE full stop, at
         #   the very end. Every other break in it is a comma, so the eight
         #   verses here are my clause divisions, not the book's punctuation.
@@ -11243,10 +13163,61 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-sǎŋ-ká-nii',
         'title_english': 'The Dhammasaṅgaṇī',
+        # Left empty on purpose: the book prints no attribution for this
+        # extract and none has been supplied from memory.
+        'source': '',
         'page_start': 39,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The opening of the first book of the Abhidhamma: the threefold "
+            "division of states into wholesome, unwholesome and "
+            "indeterminate."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, in the Suat Jaeng service, where the "
+            "Vinaya, the Suttas and the seven books of the Abhidhamma "
+            "are each represented in turn."
+        ),
+
+        'background': [
+            "The Abhidhamma is the third division of the canon, and where "
+            "the Suttas teach in narrative and dialogue it restates the same "
+            "material analytically, in lists. Its seven books are each "
+            "represented here by their opening lines, and this is the first "
+            "of them.",
+
+            "The extract is one sentence. The book prints a single full stop "
+            "in the whole passage, at the very end, and this edition follows "
+            "the page.",
+        ],
+
+        'meaning': [
+            "It opens on the triad the entire book is built from: "
+            "กุสะลา ธัมมา, wholesome states; อะกุสะลา ธัมมา, "
+            "unwholesome; อัพ๎ยากะตา ธัมมา, indeterminate, which is "
+            "neither. ธัมมา here does not mean the teaching. It means "
+            "states — the constituents of experience, taken one at a time.",
+
+            "Then comes the method, and it is worth watching. The question "
+            "is which states are wholesome, and the answer does not define "
+            "anything. It describes an occasion: when a wholesome "
+            "consciousness of the sense sphere has arisen, accompanied by "
+            "gladness and associated with knowledge, having as its object a "
+            "form or a sound or an odour or a taste or a tangible or a "
+            "mental object — on that occasion there is contact, there is "
+            "feeling. Only after all the conditions are laid out does it "
+            "conclude: these are wholesome states.",
+
+            "None of this consoles, and that is close to the reason it is "
+            "recited at a death. The Abhidhamma sets out what a person "
+            "consists of, in categories that do not include the person. "
+            "Chanting it over a body is a way of stating, in the tradition's "
+            "most exact language, what has actually ended.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11329,8 +13300,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0303.PNG]: No Thai translation is printed, so
         #   english_unverified is true and the English is a working
         #   translation.
@@ -11339,10 +13308,53 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-wí-paŋ',
         'title_english': 'The Vibhaṅga',
+        # Left empty on purpose: the book prints no attribution for this
+        # extract and none has been supplied from memory.
+        'source': '',
         'page_start': 40,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The opening of the second book of the Abhidhamma: the five "
+            "aggregates named, and then the first of them taken apart."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, in the Suat Jaeng service, where the "
+            "Vinaya, the Suttas and the seven books of the Abhidhamma "
+            "are each represented in turn."
+        ),
+
+        'background': [
+            "วิภังค์ means analysis, a taking apart. Where the first book "
+            "lists, this one divides, and the extract performs that in "
+            "miniature: it names a set, then analyses one member of it.",
+
+            "No Thai translation is printed for the passage, so the chant "
+            "stands at the Pali and an English translation written for this "
+            "edition rather than taken from the book.",
+        ],
+
+        'meaning': [
+            "The five are named first — form, feeling, perception, "
+            "formations, consciousness. The tradition treats these as what a "
+            "person is exhaustively made of, with nothing left over that is "
+            "not one of the five.",
+
+            "Then the first is analysed, and the definition is unusual. "
+            "Whatever form there is, past, future or present, internal or "
+            "external, gross or subtle, inferior or superior, far or near — "
+            "gathering all this together and comprising it as one, this is "
+            "called the aggregate of form. An aggregate is defined by "
+            "collection rather than by essence. It is not a thing but a heap "
+            "of instances gathered under a single word.",
+
+            "In a room where a body is present that is not an abstraction. "
+            "The passage says what the word covers, and one of the things it "
+            "covers, explicitly, is form that is past.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11437,8 +13449,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0303.PNG]: No Thai translation is printed, so
         #   english_unverified is true and the English is a working
         #   translation. The paired terms here are technical Abhidhamma
@@ -11449,10 +13459,54 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-tâat-gà-tǎa',
         'title_english': 'The Dhātukathā',
+        # Left empty on purpose: the book prints no attribution for this
+        # extract and none has been supplied from memory.
+        'source': '',
         'page_start': 40,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The opening of the third book of the Abhidhamma: the terms of "
+            "inclusion and association in which all its questions are put."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, in the Suat Jaeng service, where the "
+            "Vinaya, the Suttas and the seven books of the Abhidhamma "
+            "are each represented in turn."
+        ),
+
+        'background': [
+            "ธาตุกะถา is the discussion of elements. Its extract is the "
+            "shortest of the set and the most forbidding, because what the "
+            "book opens with is not a teaching but the vocabulary it will "
+            "use to ask its questions.",
+
+            "No Thai translation is printed for it either, so the English "
+            "here is a working translation made for this edition.",
+        ],
+
+        'meaning': [
+            "What is recited is a grammar rather than a doctrine. "
+            "สังคะโห อะสังคะโห, included and not included; then all "
+            "four combinations of those two, each given its own line; then "
+            "สัมปะโยโค วิปปะโยโค, association and dissociation, and "
+            "their combinations in turn.",
+
+            "Read as English it is very nearly content-free, and that is an "
+            "accurate impression rather than a failure of translation. The "
+            "book asks of every element whether it is included in, or "
+            "associated with, every other, and these lines are the frame "
+            "that question is poured into.",
+
+            "It is here because the service represents each book by its "
+            "opening, and this book's opening happens to be its apparatus. "
+            "What the chant puts in the room is not a thought but an "
+            "instrument for thinking, which is a fair account of what the "
+            "Abhidhamma is.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11540,8 +13594,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0303.PNG]: The footnote marker 1 sits on the last word
         #   of verse 18 and reads อภิ.ปุ. 36/1-2-3 — a canonical citation, so
         #   filed as source_printed. Reproduced verbatim, including the 1-2-3
@@ -11555,11 +13607,56 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-púk-ká-lá-ban-yàt',
         'title_english': 'The Puggalapaññatti',
+        # Left empty on purpose: the book prints its own reference for this
+        # extract and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'page_start': 40,
         'layout': 'prose',
         'source_printed': 'อภิ.ปุ. 36/1-2-3',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The opening of the fourth book of the Abhidhamma: six kinds of "
+            "designation, and then the kinds of person set out in pairs."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, in the Suat Jaeng service, where the "
+            "Vinaya, the Suttas and the seven books of the Abhidhamma "
+            "are each represented in turn."
+        ),
+
+        'background': [
+            "ปุคคะละบัญญัติ is the designation of persons, and the book "
+            "is the odd one out among the seven for speaking of persons at "
+            "all. The others deal in impersonal states; this one asks on "
+            "what basis a person may be spoken of.",
+
+            "The book prints its own reference for the extract.",
+        ],
+
+        'meaning': [
+            "It opens with six designations — of aggregates, sense bases, "
+            "elements, truths, faculties, and persons — and then takes up "
+            "only the last, asking to what extent there is a designation of "
+            "persons at all.",
+
+            "The answer is a run of pairs, and what they have in common is "
+            "worth noticing. One liberated on occasion and one not. One "
+            "liable to fall away and one not. One subject to decline and one "
+            "not. The ordinary person and one of the change of lineage. One "
+            "fixed in destiny and one not. One practising the way and one "
+            "established in the fruit. The Worthy One, and one practising "
+            "for Worthiness.",
+
+            "Not one of these describes a personality, a history or a name. "
+            "Every distinction is a position on the path and nothing else. "
+            "At a funeral this is the book in the set that speaks about "
+            "people, and it does so by declining every other way of "
+            "describing them.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11730,8 +13827,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0303.PNG]: No Thai translation is printed, so
         #   english_unverified is true. The Kathavatthu is set as a debate in
         #   question and answer, and the English marks the speakers with
@@ -11742,10 +13837,57 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-gà-tǎa-wát-tù',
         'title_english': 'The Kathāvatthu',
+        # Left empty on purpose: the book prints no attribution in this
+        # field for the extract, and none has been supplied from memory.
+        'source': '',
         'page_start': 40,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The opening of the fifth book of the Abhidhamma: a debate over "
+            "whether a person is apprehended as a real and ultimate fact."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, in the Suat Jaeng service, where the "
+            "Vinaya, the Suttas and the seven books of the Abhidhamma "
+            "are each represented in turn."
+        ),
+
+        'background': [
+            "กะถาวัตถุ means points of controversy, and alone among the "
+            "seven this book is a record of disputes. The extract is a "
+            "fragment of an actual exchange and is printed with both voices "
+            "in it, question and answer.",
+
+            "No Thai translation is printed, so the English here is a "
+            "working translation made for this edition — which matters "
+            "more than usual in this chant, because its argument turns on a "
+            "distinction that is hard to carry into English at all.",
+        ],
+
+        'meaning': [
+            "The exchange runs in four moves. Is the person apprehended as a "
+            "real and ultimate fact? Yes. Is the person apprehended in the "
+            "same way as that which is a real and ultimate fact? It should "
+            "not be said so. And then the refutation: acknowledge it — if "
+            "the first was granted, the second follows, and to deny it is to "
+            "be wrong.",
+
+            "The whole argument turns on the difference between speaking of "
+            "a person and finding one. The tradition allows the first freely "
+            "and denies the second, and the opponent here is caught trying "
+            "to hold both at once.",
+
+            "That this sits inside a funeral service is remarkable and worth "
+            "sitting with. It is the one place in the set where the question "
+            "of whether there is a person at all is put directly, and what "
+            "is recited is not a consoling answer but a refutation — a "
+            "text that declines, at exactly the moment one would expect it, "
+            "to say the obvious thing.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11815,8 +13957,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0304.PNG]: source_printed is อภิ.ป. 40/1 from marker 2
         #   — a Patthana reference on the Yamaka. See the check on the
         #   Kathavatthu above: the three citations on this page look shifted
@@ -11826,11 +13966,57 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-yá-má-gà',
         'title_english': 'The Yamaka',
+        # Left empty on purpose: a reference is printed on the page and kept
+        # verbatim in source_printed, and the file's own check notes that the
+        # citations on this page look shifted by one against their texts.
+        # Nothing has been attributed on top of that.
+        'source': '',
         'page_start': 41,
         'layout': 'prose',
         'source_printed': 'อภิ.ป. 40/1',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The opening of the sixth book of the Abhidhamma: paired "
+            "questions, each put forwards and then immediately backwards."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, in the Suat Jaeng service, where the "
+            "Vinaya, the Suttas and the seven books of the Abhidhamma "
+            "are each represented in turn."
+        ),
+
+        'background': [
+            "ยะมะกะ means a pair, and the book's method is announced by "
+            "its name. Every question is asked twice, once in each "
+            "direction, so that a proposition and its converse are both put "
+            "to the test rather than one being assumed from the other.",
+
+            "A reference is printed on the page for it. The file's own check "
+            "on this page records that the citations here look shifted by "
+            "one against the texts they sit on, which is a question for the "
+            "book rather than for this edition.",
+        ],
+
+        'meaning': [
+            "The four lines are two pairs. Whatever states are wholesome, "
+            "all of them have wholesome roots — and then the converse: "
+            "whatever have wholesome roots, all those states are wholesome. "
+            "Then the same operation on sharing a single root.",
+
+            "The converse is not a restatement, and this is the point a "
+            "reader is most likely to miss. In this opening pair both "
+            "directions happen to hold. The book's entire interest lies in "
+            "the many cases where they do not, and the method exists to "
+            "catch precisely those.",
+
+            "Like the third book, what the extract puts in the room is "
+            "machinery rather than a conclusion — a habit of checking a "
+            "statement in both directions before believing it, recited over "
+            "the dead as part of the tradition's account of itself.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -11887,8 +14073,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0304.PNG]: The service closing จบสวดแจงเท่านี้ is
         #   printed centred below this chant's own closing. It closes the
         #   whole Suat Jaeng service rather than this chant, so it is recorded
@@ -11903,11 +14087,60 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'prá-má-hǎa-bpàt-tǎan',
         'title_english': 'The Mahāpaṭṭhāna',
+        # Left empty on purpose: the book prints its own reference for this
+        # extract and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'page_start': 41,
         'layout': 'prose',
         'source_printed': 'อภิ.ป. 40/1',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The last book of the Abhidhamma, represented by its list of the "
+            "twenty-four conditions by which anything stands in relation to "
+            "anything else."
+        ),
+
+        'when_chanted': (
+            "Chanted at a funeral, the last of the seven books of the "
+            "Abhidhamma, after which the book marks the whole Suat Jaeng "
+            "service complete."
+        ),
+
+        'background': [
+            "ปัฏฐาน is the great book of conditional relations, the "
+            "largest of the seven and by tradition the most demanding. It is "
+            "represented here by nothing at all except its list of "
+            "conditions, recited straight through without comment.",
+
+            "Below this chant the book prints จบสวดแจงเท่านี้, "
+            "centred — here ends the Suat Jaeng. That line closes the "
+            "whole service rather than this chant, so it is recorded on the "
+            "page and not as a second closing here.",
+        ],
+
+        'meaning': [
+            "Twenty-four conditions are named one after another with nothing "
+            "between them: root, object, predominance, proximity, "
+            "contiguity, conascence, mutuality, support, decisive support, "
+            "prenascence, postnascence, repetition, kamma, result, "
+            "nutriment, faculty, jhāna, path, association, dissociation, "
+            "presence, absence, disappearance, non-disappearance.",
+
+            "No explanation is offered and none is expected. Each names a "
+            "way in which one thing can condition another, and the book "
+            "itself works out the combinations at a length nobody recites "
+            "and few read.",
+
+            "It is a fitting close. Having named the wholesome and the "
+            "unwholesome, the aggregates, the elements, the kinds of person, "
+            "the disputes and the paired questions, the service ends by "
+            "naming every way in which one thing can bring about another — "
+            "and then simply stops, which at a funeral is the most exact "
+            "thing it could do.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -12124,8 +14357,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0306.PNG]: The closing line prints จบ AND นิฏฐิโต
         #   together — จบธัมมะสังคะณีมาติกาปาโฐ นิฏฐิโต — where the closings
         #   earlier in this service use จบ alone and the Bojjhanga discourses
@@ -12139,12 +14370,61 @@ CHANTS = [
         'title_pali': 'Dhammasaṅgaṇīmātikāpāṭho',
         'title_roman': '',
         'title_english': 'The Matika of the Dhammasaṅgaṇī',
+        # Left empty on purpose: the book prints its own reference for this
+        # chant and it is kept verbatim in source_printed. Nothing has been
+        # attributed on top of it.
+        'source': '',
         'book_number': 22,
         'page_start': 41,
         'layout': 'prose',
         'source_printed': 'อภิ.สํ. 34/1-2',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The table of headings of the first book of the Abhidhamma — "
+            "the triads under which every state is classified, recited in "
+            "full."
+        ),
+
+        'when_chanted': (
+            "Chanted at funerals and memorial services, where it is known "
+            "simply as the Mātikā."
+        ),
+
+        'background': [
+            "มาติกา means a matrix or table: the list of headings under "
+            "which a treatise is organised. This is the mātikā of the "
+            "first book of the Abhidhamma, whose opening lines were chanted "
+            "a few pages earlier in the Suat Jaeng set.",
+
+            "Here it stands on its own, with its own number and its own "
+            "printed reference, and is recited in full rather than as an "
+            "extract. It is among the most familiar of all funeral chants in "
+            "Thailand.",
+        ],
+
+        'meaning': [
+            "Every line is a triad, and the first is the one the whole "
+            "Abhidhamma rests on: wholesome, unwholesome, indeterminate. "
+            "Then states associated with pleasant feeling, with painful, "
+            "with neither. States that are results, that are of a nature to "
+            "give results, that are neither. And so on through the whole "
+            "list, ending on states visible and impinging, invisible and "
+            "impinging, and invisible and non-impinging.",
+
+            "The pattern almost never varies: two opposed terms, and then a "
+            "third that is neither. That third is where the work is done. It "
+            "is what forces the scheme to cover the whole of experience "
+            "rather than only the clear cases at either end, and it is why "
+            "the list can claim to be exhaustive.",
+
+            "That claim is what makes it a funeral chant. What is recited is "
+            "a scheme complete enough that nothing whatever falls outside "
+            "it. Said over a death, it amounts to a statement that the "
+            "person who has died was, all the way through and at every "
+            "moment, describable in these terms — and in no others.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -12356,8 +14636,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0306.PNG]: This chant's closing prints NO จบ — it reads
         #   วิปัสสะนาภูมิปาโฐ นิฏฐิโต, where the chant above it on the same
         #   page prints จบ…นิฏฐิโต. Reproduced as printed on each.
@@ -12369,11 +14647,59 @@ CHANTS = [
         'title_pali': 'Vipassanābhūmipāṭho',
         'title_roman': '',
         'title_english': 'The Passage on the Grounds of Insight',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'book_number': 23,
         'page_start': 43,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The five sets that insight practice works over — aggregates, "
+            "sense bases, elements, faculties and the four noble truths — "
+            "named in full."
+        ),
+
+        'when_chanted': (
+            "Chanted among the general chants, following the Abhidhamma "
+            "material, which it restates as the ground for practice."
+        ),
+
+        'background': [
+            "วิปัสสะนาภูมิ means the grounds, or the terrain, of "
+            "insight. This is not a teaching about how to practise insight "
+            "but a list of what insight examines — the ground it is to be "
+            "worked over.",
+
+            "Nothing in it is new. Every one of the five sets appears "
+            "elsewhere in this book, and the aggregates were set out a few "
+            "pages earlier in the Abhidhamma extracts. What this chant does "
+            "is gather them into one place and fix their order.",
+        ],
+
+        'meaning': [
+            "The five sets are given from the coarsest analysis to the "
+            "finest. The five aggregates. Then the twelve sense bases, each "
+            "sense paired with its object, with mind counted as a sense and "
+            "mental objects as its field. Then the eighteen elements, which "
+            "are those same twelve with the consciousness that arises at "
+            "each added — seeing counted alongside eye and form.",
+
+            "Then the twenty-two faculties, which take in not only the "
+            "senses but life itself, femininity and masculinity, and the "
+            "feelings; and last the four noble truths. The order is the "
+            "argument. Each set divides the same experience more finely than "
+            "the one before it, and the truths come last because they are "
+            "what all the dividing was for.",
+
+            "This is why it is worth reciting a list. Insight in this "
+            "tradition is not a mood or a state that arrives, but attention "
+            "paid to specified things in a specified order. The chant is "
+            "that specification, held in the memory where it can be reached "
+            "for.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -12449,8 +14775,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0307.PNG]: No number is printed with this title, where
         #   the chant below it carries 24. book_number is therefore omitted
         #   rather than guessed. The book's contents lists ถวายพรพระ at page
@@ -12467,10 +14791,58 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'tà-wǎai pɔɔn prá',
         'title_english': 'Offering blessings to the Buddha',
+        # Left empty on purpose: the formulas are canonical and occur in many
+        # places rather than one, the book prints no attribution, and none
+        # has been supplied from memory.
+        'source': '',
         'page_start': 44,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The three recollections — of the Buddha, the Dhamma and the "
+            "Sangha by their standard qualities — which open the blessing "
+            "given at a meal offering."
+        ),
+
+        'when_chanted': (
+            "Chanted by monks at the offering of a meal, before the food is "
+            "taken, and at ceremonies where a blessing is given."
+        ),
+
+        'background': [
+            "ถวายพรพระ names the occasion rather than the text: the "
+            "blessing offered by the monks. These three verses open it, and "
+            "the sequence continues on the pages that follow with the "
+            "eight verses of victory and the blessings after them.",
+
+            "The three are the standard recollections, and a reader will "
+            "have met all of them already — they are the same qualities "
+            "the three praises at the front of the book set out at length. "
+            "Here they are compressed into one sentence each. No closing is "
+            "printed for the chant, because what follows it is a "
+            "continuation rather than a new thing.",
+        ],
+
+        'meaning': [
+            "The first verse is the recollection of the Buddha: such indeed "
+            "is the Blessed One — worthy, perfectly enlightened by "
+            "himself, accomplished in knowledge and conduct, well-farer, "
+            "knower of the worlds, unsurpassed trainer, teacher of gods and "
+            "men, awakened, blessed. Nine epithets, said without pause.",
+
+            "The second gives the Dhamma its six qualities and the third "
+            "gives the Sangha its four ways of practising and the honour due "
+            "to it. Across all three, nothing whatever is asked for. The "
+            "chant is entirely description.",
+
+            "That is what makes it a blessing rather than a request. What is "
+            "offered to those present is recollection — the qualities "
+            "named aloud — and the blessing is held to follow from the "
+            "recollecting. Chanted over a meal about to be eaten, it puts "
+            "the reason for the meal into words before anyone touches it.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -12506,8 +14878,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0307.PNG]: Each verse here is one printed STANZA of
         #   four lines, not one printed line. The four lines are kept inside
         #   the verse as escaped line breaks so the page reproduces exactly,
@@ -12530,11 +14900,64 @@ CHANTS = [
         'title_pali': 'Jayamaṅgalaṭṭhakagāthā',
         'title_roman': '',
         'title_english': 'The Eight Verses of Victory and Blessing',
+        # Left empty on purpose: a composed poem rather than a passage of the
+        # canon, the book prints no attribution, and none has been supplied
+        # from memory.
+        'source': '',
         'book_number': 24,
         'page_start': 44,
         'layout': '',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Eight verses on eight occasions when the Buddha overcame an "
+            "adversary, each by a different quality, with a closing verse on "
+            "reciting them."
+        ),
+
+        'when_chanted': (
+            "Chanted after the recollections at a meal offering, and at "
+            "almost any ceremony of blessing; widely known by its opening "
+            "word, พาหุง."
+        ),
+
+        'background': [
+            "Eight adversaries, one to a verse: Māra on the elephant "
+            "Girimekhala; the yakkha Āḷavaka; the elephant Nāḷāgiri, "
+            "crazed with drink; Aṅgulimāla with his raised sword; Ciñcā "
+            "with her false accusation; Saccaka the debater; the nāga "
+            "Nandopananda; and the Brahmā Baka.",
+
+            "Every verse closes in the same shape — the danger, the "
+            "quality that answered it, and then the wish that by that power "
+            "victory and blessing be the hearer's. The eight are one poem "
+            "rather than eight, and are almost never chanted apart.",
+        ],
+
+        'meaning': [
+            "The design is in the answers, and no two are the same. Māra "
+            "was overcome by the way of giving and the rest; Āḷavaka by "
+            "patience and self-taming; the maddened elephant by sprinkling "
+            "the water of loving-kindness; Aṅgulimāla by a mind of psychic "
+            "power; Ciñcā's slander by peaceful and gentle means; Saccaka "
+            "by the lamp of wisdom; the nāga by instruction in psychic "
+            "power; and Baka's wrong view by the medicine of knowledge.",
+
+            "Not one of the eight is overcome by force, and the adversaries "
+            "are deliberately unlike each other — a temptation, a rage, an "
+            "animal, a murderer, a lie, an argument, a spirit and a god with "
+            "a mistaken idea. Read as a list it is a catalogue of eight "
+            "kinds of trouble and eight different answers, which is why it "
+            "is reached for wherever a blessing is wanted.",
+
+            "The ninth verse turns to the person reciting: whoever says and "
+            "recalls these day by day without slackness will leave behind "
+            "manifold misfortunes. The poem ends by recommending itself. "
+            "That is unusual enough to notice, and it is a fair description "
+            "of how the chant has actually been used — daily, by people "
+            "who want the eight answers close to hand.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -12632,8 +15055,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0309.PNG]: The two-column setting stops at this chant's
         #   closing line and the page returns to a single column for chant 26
         #   below. Recorded on the page map as columns 2 for this chant's row
@@ -12646,11 +15067,63 @@ CHANTS = [
         'title_pali': 'Jayaparittagāthā',
         'title_roman': '',
         'title_english': 'The Victory Protection verses',
+        # Left empty on purpose: composed verses of blessing, the book prints
+        # no attribution, and none has been supplied from memory.
+        'source': '',
         'book_number': 25,
         'page_start': 46,
         'layout': '',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses of blessing spoken over the hearer — victory at the "
+            "Bodhi tree, a good dawn, and auspicious acts of body, speech "
+            "and mind."
+        ),
+
+        'when_chanted': (
+            "Chanted after the verses of victory, continuing the sequence of "
+            "blessing at a meal offering or a ceremony."
+        ),
+
+        'background': [
+            "This follows directly on from the eight verses of victory, and "
+            "the change between them is a change of address. Those described "
+            "what the Buddha did. These turn to the person standing in front "
+            "of the reciters and say เต, yours.",
+
+            "The last six lines are a single triad said three times over, "
+            "changing only the Buddha, the Dhamma and the Sangha — the "
+            "same refrain that closes the chant after this one, which is how "
+            "the whole sequence is stitched together.",
+        ],
+
+        'meaning': [
+            "The opening takes the Buddha's own victory and uses it as "
+            "ground for a wish: victorious at the foot of the Bodhi tree, "
+            "increasing the joy of the Sakyans — so may you too be "
+            "victorious. The blessing works by likeness rather than by "
+            "transfer. Nothing is said to pass from him to the hearer; the "
+            "hearer is invited to stand in the same relation.",
+
+            "The middle is the best-known part and the most practical. A "
+            "good star, a good blessing, a good dawn, a good rising, a good "
+            "moment. Then, immediately: auspicious the act of body, "
+            "auspicious the act of speech, auspicious the act of mind, "
+            "auspicious your aspirations — and having done what is "
+            "auspicious, one gains auspicious benefits. Good fortune is "
+            "moved off the calendar and onto conduct. The good day is made "
+            "rather than found, and that is the whole argument of the "
+            "passage.",
+
+            "The closing triad then asks protection by the power of the "
+            "Buddhas, of the Dhamma, of the Sangha. Coming where it does in "
+            "a ceremony, this is the point at which attention turns from the "
+            "tradition to the people in the room, and what it tells them is "
+            "not that a day has been made lucky but that they will make it "
+            "so themselves.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -12825,8 +15298,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0309.PNG]: No Thai translation is printed, so
         #   english_unverified is true and the English is a working
         #   translation.
@@ -12835,11 +15306,59 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'moŋ-kon jàk-grà-waan nɔ́ɔi',
         'title_english': 'The Lesser Universal Blessing',
+        # Left empty on purpose: a composed blessing, the book prints no
+        # attribution, and none has been supplied from memory.
+        'source': '',
         'book_number': 26,
         'page_start': 46,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A blessing invoking every power in turn, that all illness, "
+            "fear, danger and ill omen be destroyed and every good thing "
+            "grow."
+        ),
+
+        'when_chanted': (
+            "Chanted at the close of a sequence of blessing, and wherever a "
+            "comprehensive blessing is wanted."
+        ),
+
+        'background': [
+            "จักรวาฬ is the world-system, and this is the lesser of a "
+            "pair — the greater blessing of the same name is longer. It "
+            "works by accumulation rather than by argument: it names powers "
+            "until there are no more to name, then names troubles until "
+            "there are no more of those.",
+
+            "It closes on the same triad as the chant before it, by the "
+            "power of the Buddhas, the Dhamma and the Sangha in turn, which "
+            "binds the sequence of blessing into one piece.",
+        ],
+
+        'meaning': [
+            "The first movement is a list of what is being invoked: all the "
+            "Buddhas, the whole Dhamma, the whole Sangha, then the three "
+            "jewels together, then the eighty-four thousand divisions of the "
+            "Dhamma, the three baskets of the canon, and the Conqueror's "
+            "disciples. The accumulation is the method. Nothing available is "
+            "left uninvoked.",
+
+            "Then the two lists the chant exists for. What is to be "
+            "destroyed: all your illnesses, fears, dangers, misfortunes, ill "
+            "omens, inauspicious things. What is to grow: long life, wealth, "
+            "good fortune, renown, strength, beauty, happiness — may it be "
+            "so always.",
+
+            "Both lists are entirely worldly and the chant is not "
+            "embarrassed by that. No doctrine is taught here and nothing is "
+            "asked of the hearer. This is the tradition doing the thing "
+            "people most often actually come to it for, on an ordinary "
+            "difficult day, and doing it without pretending to be doing "
+            "something more refined.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -13141,8 +15660,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0310.PNG]: No Thai translation is printed, so
         #   english_unverified is true and the English is a working
         #   translation.
@@ -13151,11 +15668,57 @@ CHANTS = [
         'title_pali': 'Kāladānasuttagāthā',
         'title_roman': '',
         'title_english': 'Verses from the Kāladāna Sutta — giving at the right time',
+        # Left empty on purpose: the title names the discourse the verses
+        # come from, but the book prints no reference and no precise one has
+        # been supplied from memory.
+        'source': '',
         'book_number': 27,
         'page_start': 47,
         'layout': '',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses on giving at the right time, and on how those who "
+            "rejoice in a gift or help with it share its merit without "
+            "lessening it."
+        ),
+
+        'when_chanted': (
+            "Chanted at ceremonies of giving, particularly where many people "
+            "have had a hand in one offering."
+        ),
+
+        'background': [
+            "กาละทานะ is timely giving, and the title names the "
+            "discourse the verses are taken from. The book prints the verses "
+            "only, without the prose that would have framed them.",
+
+            "They are short, and their argument is almost entirely about "
+            "other people — which is unusual in a text about giving, "
+            "where the giver is normally the subject.",
+        ],
+
+        'meaning': [
+            "The first claim concerns timing. The wise give at the right "
+            "time, responsive and free from meanness; and a gift given at "
+            "the right time to those who are upright becomes abundant. What "
+            "makes a gift large is not its size but its moment and its "
+            "recipient.",
+
+            "The second is the reason these verses are chanted at all. Those "
+            "who rejoice in the gift, or who lend their service to it, do "
+            "not thereby lessen it — they too share in the merit. Merit is "
+            "explicitly not divided by being shared, and nothing is taken "
+            "from the giver by others joining in.",
+
+            "That is a practical doctrine in a practical place. At a "
+            "ceremony where one household has paid and a dozen have "
+            "carried, cooked and arranged, or where many have contributed "
+            "and one hands the thing over, this is the text that says nobody "
+            "in the room is a spectator. It ends by making the point plainly "
+            "— so let one give with an unhesitating mind.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -13247,8 +15810,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0311.PNG]: The Thai line under the title —
         #   อนุโมทนาในวันทรงเริ่มเบี้ยหวัดแลสังคหมัยบุญสมัยอื่น — says WHEN
         #   the chant is used; it is not a translation of the verses. Recorded
@@ -13265,11 +15826,62 @@ CHANTS = [
         'title_pali': 'Saṅgahavatthugāthā',
         'title_roman': '',
         'title_english': 'Verses on the grounds of kindness',
+        # Left empty on purpose: the book prints a Thai line naming the
+        # occasion but no canonical attribution, and none has been supplied
+        # from memory.
+        'source': '',
         'book_number': 28,
         'page_start': 48,
         'layout': '',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Four grounds of kindness — giving, kindly speech, helpful "
+            "conduct and treating others as equals — called the linchpin "
+            "that holds the world together."
+        ),
+
+        'when_chanted': (
+            "Chanted in thanksgiving at occasions of communal giving; the "
+            "book prints a Thai line beneath the title naming when it is "
+            "used."
+        ),
+
+        'background': [
+            "สังคะหะวัตถุ are the grounds of kindness, or the bases of "
+            "drawing people together. There are four of them, and they are "
+            "among the most quoted lists in Thai Buddhism for lay life — "
+            "the part of the teaching that is about living with others "
+            "rather than about the mind.",
+
+            "Beneath the title the book prints a Thai line naming the "
+            "occasion the verses belong to, which is recorded in the file "
+            "with the chant.",
+        ],
+
+        'meaning': [
+            "The four are named at once and without elaboration. ทานัญจะ, "
+            "giving. เปยยะวัชญัจะ, kindly speech. อัตถะจะริยา, "
+            "conduct that is for the good of others. And สะมานัตตะตา, "
+            "treating all alike, each as is fitting — the least obvious of "
+            "the four and the one that does the most work, since it means "
+            "making no exception of oneself.",
+
+            "The image given for them is mechanical and exact: they are the "
+            "grounds of kindness in the world as the linchpin is to a moving "
+            "chariot. A linchpin is small and unremarkable, and without it "
+            "the wheel comes off while the chariot is still going.",
+
+            "Then an argument that is startling for a devotional text. Were "
+            "these four not to be, no mother would gain honour for her "
+            "child's sake, nor a father for his. Even the bond usually "
+            "treated as the most natural in the world is said to rest on "
+            "them. Kindness is made structural rather than sentimental — "
+            "not a decoration on human life but the thing without which none "
+            "of it holds — and that is why the wise, considering them "
+            "well, attain greatness.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -13354,8 +15966,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0311.PNG]: The chant runs on to page 49 with no closing
         #   line on this page, so continues is set and no closing key is
         #   written.
@@ -13367,11 +15977,69 @@ CHANTS = [
         'title_pali': 'Mokkhupāyagāthā',
         'title_roman': '',
         'title_english': 'Verses on the way to liberation',
+        # Left empty on purpose: a composed summary of practice rather than a
+        # passage of the canon, the book prints no attribution, and none has
+        # been supplied from memory.
+        'source': '',
         'book_number': 29,
         'page_start': 48,
         'layout': '',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A whole course of practice compressed into thirty verses — "
+            "the fourfold purity, the four protections, the three "
+            "characteristics and the four truths."
+        ),
+
+        'when_chanted': (
+            "Chanted among the general chants; a summary of the practice "
+            "rather than a chant belonging to any one occasion."
+        ),
+
+        'background': [
+            "โมกขุปายะ is the way to liberation, and the chant is a "
+            "manual in verse. It opens by saying what it is about to do — "
+            "I shall tell the way to liberation — and then does it, in "
+            "order, without digression.",
+
+            "That makes it unlike almost everything around it. Most of the "
+            "chants in this book are lists, narratives or blessings. This "
+            "one is an argument, in which each step is offered as following "
+            "from the last.",
+        ],
+
+        'meaning': [
+            "It begins with conduct, on the ground that nothing else stands "
+            "without it: the Pātimokkha to be fulfilled, restraint of the "
+            "faculties, purity of livelihood, and reflection on the "
+            "requisites — the fourfold purity of virtue, to be made "
+            "spotless by doing and by not doing.",
+
+            "Then the four protections to be developed: recollection of the "
+            "Buddha, loving-kindness, the contemplation of the body's "
+            "foulness, and mindfulness of death — and insight along with "
+            "them. Each is then given a verse or two of its own as the chant "
+            "proceeds, so the list is not merely named but worked through.",
+
+            "The analysis follows, and it is reasoned rather than asserted. "
+            "The five aggregates arise and cease; having been thus, they are "
+            "no more, so they are impermanent. Being oppressed again and "
+            "again by that arising and passing, they are suffering. Not "
+            "bending to one's will, and being empty and ownerless, they are "
+            "not-self. The three characteristics are reached by argument, "
+            "which is rare in a chanted text, and the conclusion is an image "
+            "— they are like a house on fire, enough to make one seek "
+            "release.",
+
+            "It closes with the four truths in a single verse and then an "
+            "instruction with a telling word in it: knowing the meaning of "
+            "even these few passages, let the wise one practise. The chant "
+            "does not claim to be sufficient. It claims only to be enough to "
+            "begin on, which is a modest thing for a summary of the whole "
+            "path to say about itself.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -13647,8 +16315,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0312.PNG]: No Thai translation is printed, so
         #   english_unverified is true and the English is a working
         #   translation.
@@ -13657,11 +16323,67 @@ CHANTS = [
         'title_pali': 'Ratanattayappabhāvasiddhigāthā',
         'title_roman': '',
         'title_english': 'Verses on the accomplishing power of the Triple Gem',
+        # Left empty on purpose: a modern composition for state occasions
+        # rather than a passage of the canon, the book prints no attribution,
+        # and none has been supplied from memory.
+        'source': '',
         'book_number': 30,
         'page_start': 49,
         'layout': '',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses on the power of the Triple Gem which turn, halfway "
+            "through, into a prayer for the Thai nation, its sovereign and "
+            "the standing of the dispensation."
+        ),
+
+        'when_chanted': (
+            "Chanted on state and national occasions, and wherever a "
+            "blessing on the country is wanted."
+        ),
+
+        'background': [
+            "The chant opens as many others do, with the three jewels "
+            "described in turn. Then it does something no other chant in "
+            "this book does: it names a country. ทัยยะเทโส, the Thai "
+            "land; ทัยยะชาติ, the Thai nation; and ธัมมะขัตติโย, its "
+            "righteous sovereign.",
+
+            "It is therefore a composition of a particular time and place. "
+            "The Pali is the tradition's language but the subject is a "
+            "modern kingdom, and the verses were written for a state that "
+            "had taken the Triple Gem as the banner of its realm and the "
+            "sanction of its law.",
+        ],
+
+        'meaning': [
+            "The first third is conventional and carefully made: the Buddha "
+            "as compassionate awakener of those ready to be trained; the "
+            "Dhamma as the render of the world's darkness, leading out from "
+            "suffering; the Sangha as a mine of merit, purified in virtue "
+            "and in view. Together they are the highest refuge, and — a "
+            "nice touch — fit for the ranging of the knowledge of wise "
+            "examiners. The claim is that it will bear inspection.",
+
+            "Then the turn. The Thai land, having come to this, stands "
+            "established in the happiness of peace; it has honoured and "
+            "guarded the Triple Gem, made it the banner of the realm and the "
+            "Dhamma's sanction for its law, and made the Sangha sovereign in "
+            "the affairs of the dispensation. Every clause joins the "
+            "religion to the state and says the arrangement works.",
+
+            "The last third is prayer rather than description: may the Thai "
+            "nation shine and reach abundance and growth; long may the "
+            "dispensation stand in the world; long may the sovereign live, "
+            "free from illness and from fear; and for those who guard the "
+            "realm, may every success be lasting. It is worth reading "
+            "carefully, because it shows something a preface would only "
+            "assert — the relation this tradition has actually had with "
+            "the state in this country, set out in the tradition's own "
+            "liturgical language.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -13948,8 +16670,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0314.PNG]: This is the same nine-unit text the app
         #   already holds from page 1 as kham-bucha-phra-ratanattaya, but the
         #   book prints it here under a DIFFERENT title — คาถาบูชาพระรัตนตรัย,
@@ -13967,10 +16687,61 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kaa-tǎa buu-chaa prá-rát-dtà-ná-dtrai',
         'title_english': 'The Verse of Offering to the Triple Gem',
+        # Left empty on purpose: the same liturgical composition as the
+        # offering at page 1, for which the book also prints no attribution.
+        'source': '',
         'page_start': 51,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The offering to the Triple Gem, printed a second time under a "
+            "different title, and set here to be used on its own rather than "
+            "to open a service."
+        ),
+
+        'when_chanted': (
+            "Chanted when an offering is made to the Triple Gem outside the "
+            "daily services, where the opening of the morning service is not "
+            "being used."
+        ),
+
+        'background': [
+            "This is the same text as the offering printed at the very "
+            "beginning of the book — the same nine clauses, word for word "
+            "in seven of them. Two differ, and only in small marks: the book "
+            "prints ส๎วากขาโต here where page 1 prints สวากขาโต, and "
+            "this printing closes on a full stop where page 1 uses ฯ.",
+
+            "The titles differ too, and the difference is the point of the "
+            "second printing. Page 1 calls it คำบูชา, the words of "
+            "offering; here it is คาถาบูชา, the verse of offering. It "
+            "is set out with no service around it, which is what makes it "
+            "usable by itself.",
+        ],
+
+        'meaning': [
+            "The reading is the reading of page 1, because the words are the "
+            "same. Three clauses identify the Three Jewels by the epithet "
+            "belonging to each; a fourth gathers them; a fifth makes the "
+            "offering with these gifts, set out as befits them. Then the "
+            "request — that the Blessed One, though long since gone to "
+            "final nibbāna, accept these poor gifts out of compassion for "
+            "later generations, for our lasting welfare and happiness.",
+
+            "What changes is the setting, and it changes the weight. At page "
+            "1 this text opens a whole morning service and everything else "
+            "follows it. Here nothing follows. The closing line about "
+            "lasting welfare is the last thing said rather than the first, "
+            "and a reader who meets the chant in this second place is meeting "
+            "a complete act rather than an opening.",
+
+            "That the book prints it twice, in two places and under two "
+            "titles, is worth knowing rather than puzzling over. A book of "
+            "this kind is arranged by occasion, not by text, and a chant "
+            "needed on two different occasions is simply printed twice.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14065,8 +16836,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0314.PNG]: The book prints this under the SAME title as
         #   the page-1 chant the app already holds (kham-namatsakan-phra-
         #   ratanattaya), so it is entered with an -evening suffix on its id
@@ -14082,9 +16851,54 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam ná-mát-sà-gaan prá-rát-dtà-ná-dtrai',
         'title_english': 'Words of Salutation to the Triple Gem',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 51,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The threefold salutation to the Triple Gem, each line followed "
+            "by a bow, opening the evening service."
+        ),
+
+        'when_chanted': (
+            "Chanted at the opening of the evening service, as its "
+            "counterpart opens the morning."
+        ),
+
+        'background': [
+            "The book prints this under the same title as the chant at the "
+            "very front of the book, and the three salutations are the same "
+            "three. What makes this the evening service is where it stands, "
+            "not what it says. The rubric (กราบพร้อมกัน), bow "
+            "together, follows each line here exactly as it does there.",
+
+            "One small difference is worth recording, because it is the kind "
+            "that decides a question. This printing has ส๎วากขาโต in "
+            "the second line where the page-1 printing has สวากขาโต, "
+            "without the mark.",
+        ],
+
+        'meaning': [
+            "The three lines work as they do in the morning. Each opens with "
+            "a statement in the third person about one of the Three Jewels, "
+            "closes with a first-person act of homage, and is answered by a "
+            "prostration made by everyone at once.",
+
+            "What differs is the hour, and what the salutation opens onto. "
+            "In the morning it leads into praise and then into reflection on "
+            "what has been undertaken. In the evening it leads into praise "
+            "and then, at the quietest point of the service, into asking "
+            "pardon.",
+
+            "That the words are identical is the point rather than an "
+            "economy. The tradition distinguishes its two daily services by "
+            "what they contain, not by how they begin, so a person arriving "
+            "at either does the same thing first — states what the Three "
+            "Jewels are, and bows three times.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14135,8 +16949,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0314.PNG]: The title is taken from the PAGE:
         #   คำเชิญบูชาและสวดนะโมและพระพุทธคุณ. The book's own contents lists
         #   the same item at page ๕๑ as คำเชิญบูชาสวดนะโม และพระพุทธคุณ — no
@@ -14152,10 +16964,55 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'kam chəən buu-chaa lɛ́ sùat ná-moo lɛ́ prá-pút-tá-kun',
         'title_english': 'The Invitation to Make Offering and Chant the Namo and the Qualities of the Buddha',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 51,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The leader's invitation for the evening: refuge and going forth "
+            "recalled, the offering made, and the assembly called on to the "
+            "salutation."
+        ),
+
+        'when_chanted': (
+            "Spoken by the leader at the opening of the evening service, "
+            "after the salutation and its bows."
+        ),
+
+        'background': [
+            "This is the evening counterpart of the invitation near the "
+            "front of the book, and its clauses are the same ones. As there, "
+            "it is a line belonging to whoever leads rather than to the "
+            "assembly, and it is phrased for people who have gone forth.",
+
+            "Its title is much longer than the morning one, and the extra "
+            "length is doing a job. It names not only this line but the two "
+            "things it leads into — the Namo, and the qualities of the "
+            "Buddha — because from here on the book stops printing titles "
+            "for the pieces of the evening service.",
+        ],
+
+        'meaning': [
+            "The clauses are those of the morning invitation. The Blessed "
+            "One gone to for refuge, for whose sake the reciters went forth, "
+            "who is their teacher and under whom the holy life is lived; "
+            "then the offering made with these gifts and the respects paid; "
+            "then หันทะทานิ, now then, and the handover to what follows.",
+
+            "Because the words are unchanged, what the evening printing "
+            "actually adds is a signpost. A reader meeting an untitled run "
+            "of short passages needs to know where they are going, and this "
+            "heading tells them before the run begins.",
+
+            "It is a small piece of editing rather than of doctrine, but it "
+            "is the sort of thing that makes a chanting book usable in a "
+            "hall. The leader speaks one line, and everyone knows which "
+            "three things come next without turning a page to find out.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14247,8 +17104,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0315.PNG]: The book prints NO title for this passage on
         #   page 52 — the rubric above it is the only thing that names it.
         #   title_thai is therefore empty, matching how the app already holds
@@ -14265,9 +17120,51 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Preliminary Salutation',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 52,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The homage to the Blessed One, chanted three times, opening the "
+            "evening service as it opens the morning."
+        ),
+
+        'when_chanted': (
+            "Chanted three times at the opening of the evening service, "
+            "after the leader's invitation calls for it."
+        ),
+
+        'background': [
+            "The same single line as earlier in the book, and printed here "
+            "the same way — three times in full, rather than once with a "
+            "note to repeat it. The book gives it no title in either place; "
+            "the name used in this app is taken from the invitation that "
+            "calls for it.",
+
+            "That it is set out again at all, rather than cross-referenced, "
+            "says something about what kind of book this is.",
+        ],
+
+        'meaning': [
+            "The line is unchanged, so the reading is unchanged: homage, and "
+            "then the Blessed One under three epithets — fortunate, "
+            "worthy, perfectly enlightened by himself — spoken of rather "
+            "than spoken to.",
+
+            "What is worth noticing in the evening printing is the "
+            "repetition itself. A book economising on paper would have "
+            "written 'as on page 2'. This one prints the whole thing again, "
+            "and will go on doing so for the rest of the evening service.",
+
+            "The reason is practical and it governs everything that follows. "
+            "The page has to be usable by somebody chanting from it in a dim "
+            "hall, at speed, with no free hand to turn back. A chanting book "
+            "is not a reference work, and where the two aims conflict this "
+            "one chooses the hall.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14303,8 +17200,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0315.PNG]: The book prints NO title for this passage.
         #   The id and the English title come from the name the page 51 rubric
         #   gives it — พระพุทธคุณ, the qualities of the Buddha. Josh may want
@@ -14314,10 +17209,54 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Qualities of the Buddha',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 52,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The good report of the Buddha and his nine epithets, recited as "
+            "the first of the three recollections of the evening service."
+        ),
+
+        'when_chanted': (
+            "Chanted in the evening service, the first of three "
+            "recollections, each answered immediately by a hymn."
+        ),
+
+        'background': [
+            "พระพุทธคุณ is the name in use for this passage; the book "
+            "prints no title for it. The evening service is built as three "
+            "such recollections, of the Buddha, the Dhamma and the Sangha, "
+            "each followed by a longer hymn that responds to it.",
+
+            "The passage opens differently from the other printings of these "
+            "same epithets in this book. It begins ตัง โข ปะนะ — and "
+            "this good report has gone abroad concerning that Blessed One — "
+            "so the qualities arrive as something said of him.",
+        ],
+
+        'meaning': [
+            "The nine follow in one breath: worthy; perfectly enlightened by "
+            "himself; accomplished in knowledge and conduct; well-farer; "
+            "knower of the worlds; unsurpassed trainer of those who can be "
+            "trained; teacher of gods and humans; awakened; blessed.",
+
+            "The frame around them changes what reciting them amounts to. "
+            "Because they are introduced as a report that has gone abroad, "
+            "the reciter is not asserting these things on their own "
+            "authority but repeating what has been said. The passage is an "
+            "act of recollection rather than a claim, which is exactly what "
+            "its position in the service asks of it.",
+
+            "That is also why it is so short. The recollection states; the "
+            "hymn that follows responds. Keeping the two apart stops the "
+            "statement from being swallowed by the response, and lets an "
+            "assembly hear the plain list before it hears the praise.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14377,8 +17316,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0315.PNG]: TWO-COLUMN READING, please confirm. From
         #   verse 5 the page is set in two columns and has been read ACROSS
         #   the row, not down the column. The first pairing made is verse 5:
@@ -14401,9 +17338,61 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Hymn to the Buddha',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 52,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The hymn answering the recollection of the Buddha — "
+            "salutation, refuge, the surrender of one's life, and a request "
+            "for pardon."
+        ),
+
+        'when_chanted': (
+            "Chanted in the evening service immediately after the "
+            "recollection of the Buddha's qualities."
+        ),
+
+        'background': [
+            "The first of the three hymns of the evening service, and the "
+            "one that sets their pattern. All three are eighteen verses; "
+            "from the fifth onward they run word for word alike, changing "
+            "only their object. Understanding this one is understanding all "
+            "three.",
+
+            "Its shape has three parts: an opening stanza in ornate metre, "
+            "then a series of short couplets that grow steadily more "
+            "personal, and then — marked on the page by an instruction "
+            "rather than by a word — a change of posture and of voice.",
+        ],
+
+        'meaning': [
+            "The opening is in a register found nowhere else in the daily "
+            "services: joined to the highest qualities, in whose being "
+            "purity and higher knowing and compassion have come together, "
+            "who awakened the good folk as the sun awakens the lotus. Then "
+            "the salutation, made with the head.",
+
+            "What follows turns personal in a way the morning service never "
+            "does. The Buddha is named the first of the objects of "
+            "recollection; then พุทธัสสาหัส๎มิ ทาโส วะ — I am the "
+            "Buddha's servant, the Buddha is my lord and master; then the "
+            "surrender of this body and this life; then นัตถิ เม "
+            "สะระณัง อัญญัง, for me there is no other refuge. Nothing "
+            "in these lines is hedged.",
+
+            "The last movement is announced by a rubric printed in the book "
+            "rather than by anything chanted: "
+            "หมอบลงพร้อมกันแล้วสวดลดเสียงเบาลง — prostrate "
+            "together, then chant with the voice lowered. What is said in "
+            "that lowered voice is not praise but the request for pardon, in "
+            "the same words the book uses elsewhere for asking forgiveness "
+            "of the Triple Gem. The day's last act of the service is to ask "
+            "to be excused the day.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14595,8 +17584,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0316.PNG]: The book prints NO title for this passage.
         #   The id and the English title come from the name the rubric above
         #   it gives it — พระธรรมคุณ, the qualities of the Dhamma. Same
@@ -14611,10 +17598,52 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Qualities of the Dhamma',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 53,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The six qualities of the Dhamma, recited as the second of the "
+            "three recollections of the evening service."
+        ),
+
+        'when_chanted': (
+            "Chanted in the evening service after the hymn to the Buddha, as "
+            "the second recollection."
+        ),
+
+        'background': [
+            "พระธรรมคุณ is the name in use; the book prints no title "
+            "here either. It is the shortest passage in the evening service "
+            "— three lines, six qualities, and no frame around them at "
+            "all.",
+
+            "The same six qualities appear twice more in this book, in the "
+            "morning praise and in the blessing given at a meal offering. "
+            "This is their barest printing, and the bareness is deliberate.",
+        ],
+
+        'meaning': [
+            "The six describe the teaching by what can be done with it "
+            "rather than by what it asserts: well proclaimed; visible here "
+            "and now; timeless; inviting all to come and see; leading "
+            "onwards; and to be known each for himself by the wise.",
+
+            "The last of them carries the others, and it is the reason the "
+            "recollection can be recited by a whole hall at once. "
+            "ปัจจัตตัง เวทิตัพโพ — the knowing is each person's "
+            "own and cannot be held on anyone else's behalf, so nobody "
+            "chanting it is speaking for the person beside them.",
+
+            "Set between two long hymns, its shortness does real work. The "
+            "recollection states the thing plainly; the hymn then answers "
+            "it. Keeping the statement this bare is what stops it from "
+            "disappearing into the praise on either side.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14657,8 +17686,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0316.PNG]: TWO-COLUMN READING, please confirm. From
         #   verse 5 the page is set in two columns and has been read ACROSS
         #   the row. The first pairing made is verse 5: left cell ธัมโม โย
@@ -14676,9 +17703,58 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Hymn to the Dhamma',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 53,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The hymn answering the recollection of the Dhamma, built on the "
+            "same pattern as the hymn to the Buddha before it."
+        ),
+
+        'when_chanted': (
+            "Chanted in the evening service immediately after the "
+            "recollection of the Dhamma's qualities."
+        ),
+
+        'background': [
+            "The second of the three hymns. Its opening stanza is its own; "
+            "from the fifth verse it follows the first hymn word for word, "
+            "changing only its object. The three are meant to be "
+            "recognisably one form, and the book prints each in full rather "
+            "than abbreviating the repeats.",
+
+            "The opening divides the Dhamma four ways — into path, fruit, "
+            "scripture and release — where the morning verses divided it "
+            "into three. The extra term is scripture, the teaching as it has "
+            "been handed down and can be studied.",
+        ],
+
+        'meaning': [
+            "The image in the opening is of holding rather than of light, "
+            "though it uses both: the Dhamma holds up those who hold to it "
+            "and keeps them from falling into the wretched worlds, and it is "
+            "saluted as the dispeller of darkness. What it does is described "
+            "before what it is.",
+
+            "Then the shared template returns, and its force is different "
+            "when the object is a teaching rather than a person. The second "
+            "of the objects of recollection; I am the Dhamma's servant, the "
+            "Dhamma is my lord and master; the Dhamma destroys suffering; to "
+            "the Dhamma I surrender this body and this life. Calling oneself "
+            "the servant of a teaching is a stranger thing than calling "
+            "oneself the servant of a teacher, and the verses do not soften "
+            "it.",
+
+            "Then the same prostration, the same lowering of the voice, and "
+            "the same request for pardon with ธัมเม in place of พุทเธ. "
+            "Whatever wrong has been done by body, speech or mind towards "
+            "the Dhamma — which in practice means neglect of it — is "
+            "brought into the open before the service goes on.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14861,8 +17937,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0317.PNG]: The book prints NO title for this passage.
         #   The id and the English title come from the name the rubric above
         #   it gives it — พระสังฆคุณ. Same treatment as พระพุทธคุณ on page 52
@@ -14872,10 +17946,56 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Qualities of the Sangha',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 54,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The qualities of the Sangha — four ways of practising, the "
+            "four pairs, and the honours due — the third of the evening "
+            "recollections."
+        ),
+
+        'when_chanted': (
+            "Chanted in the evening service after the hymn to the Dhamma, as "
+            "the third recollection."
+        ),
+
+        'background': [
+            "พระสังฆคุณ is the name in use, and this is the longest of "
+            "the three recollections. The same words stand in the morning "
+            "service inside a frame of praise; here they are given plain, "
+            "with nothing added.",
+
+            "It is longer than the other two for a structural reason rather "
+            "than an emphatic one, and the fifth line is where the extra "
+            "length goes.",
+        ],
+
+        'meaning': [
+            "Four ways of practising open it, and the whole phrase is "
+            "repeated for each rather than shortened: having practised well, "
+            "straightforwardly, methodically, masterfully. Four aspects of "
+            "one practice, deliberately not collapsed into a list.",
+
+            "Then the definition, which is what the other two recollections "
+            "do not need: that is, the four pairs, the eight types of noble "
+            "ones. Without that line the word Sangha would mean whatever "
+            "monks happen to be in the room. With it, the recollection is "
+            "addressed to those who have reached the stages of awakening, "
+            "wherever they are.",
+
+            "Only after being defined is it praised — worthy of gifts, of "
+            "hospitality, of offerings, of respect — and then given the "
+            "phrase that explains all four: the unexcelled field of merit "
+            "for the world. The Buddha and the Dhamma can be recollected by "
+            "naming their qualities. The Sangha has to be said what it is "
+            "first, because the word is used loosely everywhere else.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -14964,8 +18084,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0317.PNG]: The book prints NO title for this chant. The
         #   rubric above it names it สังฆาภิคีติ (Saṅghābhigīti), and that is
         #   where the id comes from. Same treatment as the other two abhigīti
@@ -14979,9 +18097,56 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Hymn to the Sangha',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 54,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The last of the three hymns, answering the recollection of the "
+            "Sangha and closing the central movement of the evening "
+            "service."
+        ),
+
+        'when_chanted': (
+            "Chanted in the evening service immediately after the "
+            "recollection of the Sangha's qualities."
+        ),
+
+        'background': [
+            "The third hymn, completing the set. Its opening stanza calls "
+            "the Sangha born of the true Dhamma, of eight kinds, whose body "
+            "and mind are the dwelling place of virtue and the other "
+            "excellent qualities, and salutes that wholly pure company.",
+
+            "From the fifth verse it repeats the shared template for the "
+            "third time. Anyone who has chanted the evening service through "
+            "has by this point said the same fourteen lines three times "
+            "over, changing one word in each.",
+        ],
+
+        'meaning': [
+            "By now the template is familiar, and its familiarity is the "
+            "point rather than a weakness. The third of the objects of "
+            "recollection; I am the Sangha's servant; the Sangha destroys "
+            "suffering and brings about what is for my welfare; to the "
+            "Sangha I surrender this body and this life; there is no other "
+            "refuge.",
+
+            "Read across all three hymns the effect is cumulative. The same "
+            "complete devotion, in identical words, is offered three times "
+            "to three different objects, with nothing ranked above anything "
+            "else. A tradition that wanted to place the Buddha above the "
+            "other two had an obvious opportunity here and did not take it.",
+
+            "Then the last prostration and the last lowering of the voice, "
+            "and the request for pardon with สังเฆ. The evening service "
+            "reaches its quietest point here, and what is said in that quiet "
+            "is not praise at all but an apology — which is how a day, in "
+            "this tradition, is properly put down.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -15170,8 +18335,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0318.PNG]: The FIRST chant since page 51 that the book
         #   gives a printed title — พุทธะมังคะละคาถา, centred and bold above
         #   the verses. Everything on pages 52 to 54 had to take its name from
@@ -15195,9 +18358,59 @@ CHANTS = [
         'title_pali': 'Buddhamaṅgalagāthā',
         'title_roman': '',
         'title_english': 'The Auspicious Verses of the Buddha',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 55,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses placing the Buddha at the centre and eight great "
+            "disciples in the eight directions, and asking a blessing by "
+            "their power."
+        ),
+
+        'when_chanted': (
+            "Chanted for blessing and protection, where the arrangement of "
+            "the eight directions is being invoked."
+        ),
+
+        'background': [
+            "What these verses set out is an arrangement rather than a "
+            "teaching. The Perfectly Awakened One is seated in the middle, "
+            "and eight named disciples are placed at the eight points of the "
+            "compass around him.",
+
+            "The eight are Koṇḍañña in the east, Kassapa in the "
+            "south-east, Sāriputta in the south, Upāli in the south-west, "
+            "Ānanda in the west, Gavampati in the north-west, Moggallāna in "
+            "the north and Rāhula in the north-east. It is also the first "
+            "chant in several pages that the book gives a printed title.",
+        ],
+
+        'meaning': [
+            "The verses build a diagram in words. Each disciple is given a "
+            "direction and nothing else — no quality, no story, not even "
+            "an epithet — so what a reciter assembles while chanting is "
+            "not a set of characters but a place: a centre, and a complete "
+            "circle around it with no gap left open.",
+
+            "Then the claim that makes it a protection. These are all "
+            "established here, revered by us and honoured with offerings, "
+            "and by their power may every blessing be ours. The word doing "
+            "the work is here. The arrangement is not being described at a "
+            "distance; it is being asserted of the room the chanting is "
+            "happening in.",
+
+            "The closing four lines step back from the circle to the Triple "
+            "Gem, and end where a great deal of this book ends — with "
+            "merit gained by the act of salutation, and obstacles asked to "
+            "be destroyed by the power of it. It is protection by "
+            "population: a space with the Buddha at its centre and eight of "
+            "his disciples at its edges has, on this account, no room left "
+            "for anything else.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -15330,8 +18543,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0319.PNG]: The book prints the colophon สีลุทเทสะปาโฐ
         #   นิฏฐิโต centred and bold beneath the chant. Recorded in the
         #   closing field, not as a verse. No full stop is printed after
@@ -15341,10 +18552,57 @@ CHANTS = [
         'title_pali': 'Sīluddesapāṭho',
         'title_roman': '',
         'title_english': 'The Summary of Virtue',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 56,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The Buddha's instruction to dwell accomplished in virtue, "
+            "quoted in full and then taken up by the reciters as their own "
+            "undertaking."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics among the regular reflections, as a "
+            "periodic restatement of what the training asks."
+        ),
+
+        'background': [
+            "สีลุทเทสะ is a summary or setting-out of virtue. The passage "
+            "is short and its construction is unusual: four lines of the "
+            "Buddha's words, and then the same four lines again, spoken by "
+            "the assembly about itself.",
+
+            "Nothing is added in the second half and nothing is left out. "
+            "What changes is who is speaking and what mood the verbs are "
+            "in.",
+        ],
+
+        'meaning': [
+            "The quoted instruction has four parts. Dwell accomplished in "
+            "virtue and in the Pāṭimokkha. Dwell restrained by that "
+            "restraint, accomplished in conduct and in resort — that is, "
+            "in how one behaves and where one goes. And, seeing danger in "
+            "the slightest fault, train in the rules of training already "
+            "undertaken.",
+
+            "Then the turn: therefore we should train ourselves thus. The "
+            "four are repeated with every verb moved out of the imperative "
+            "and into the first person plural future — we shall dwell, we "
+            "shall train. The instruction has become an undertaking without "
+            "a word of it being altered.",
+
+            "That is the whole point of the passage, and the reason it is "
+            "recited rather than read. An instruction heard is not the same "
+            "as an undertaking made, and the gap between the two is where "
+            "most training quietly goes. This text closes the gap in a "
+            "single breath, and ends on a line that is neither quotation nor "
+            "promise but agreement: thus indeed should we train ourselves.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -15454,8 +18712,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0320.PNG]: The 10 in the title บทขัดสิกขาบท 10 is part
         #   of the TITLE — the ten training rules — and not a chant number.
         #   The book's chant numbers are printed before the title and followed
@@ -15470,9 +18726,53 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt sìk-kǎa-bòt sìp',
         'title_english': 'The Introductory Verse to the Ten Training Rules',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 57,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The introductory verse to the ten training rules, setting out "
+            "how the Buddha came to allow them for novices."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the ten training rules, as the piece "
+            "that introduces them."
+        ),
+
+        'background': [
+            "บทขัด is an introductory verse: a short piece in metre set "
+            "before a chant to say what it is and why it exists. The book "
+            "prints three of them in a row on these pages, each followed by "
+            "the passage it introduces.",
+
+            "They all end the same way, with ภะณามะ เส — let us now "
+            "recite — handing the assembly over to the chant itself. The "
+            "form is a hinge, and it exists because a bare list of rules "
+            "arrives without any context of its own.",
+        ],
+
+        'meaning': [
+            "It gives a compressed history before the rules. The Perfectly "
+            "Awakened One arose in the world; he set rolling the Wheel of "
+            "Dhamma that none can turn back; and to show kindness to the "
+            "world he walked it on his journeys, setting the threefold true "
+            "Dhamma rightly going.",
+
+            "Then it narrows, in two lines, to one place and one reason: "
+            "coming in due course to Sāvatthī and dwelling in the Jeta "
+            "Grove, and having regard for the novices' minds and for how "
+            "they were to train. Only then are the ten allowed.",
+
+            "That narrowing is what the introduction is for. It makes the "
+            "rules an answer to a situation rather than a code handed down "
+            "from nowhere — somebody young needed training, and ten rules "
+            "were permitted for them. The verse then steps aside and invites "
+            "the assembly to recite what was allowed.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -15563,8 +18863,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0320.PNG]: The 10 in the title สิกขาบท 10 is part of
         #   the TITLE, not a chant number, on the same reasoning as the chant
         #   above. No book_number recorded.
@@ -15581,9 +18879,54 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'sìk-kǎa-bòt sìp',
         'title_english': 'The Ten Training Rules',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 57,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The ten training rules of a novice, from refraining from "
+            "killing to refraining from accepting gold and silver."
+        ),
+
+        'when_chanted': (
+            "Chanted after its introductory verse, and recited when novices "
+            "take or renew their training."
+        ),
+
+        'background': [
+            "These are the ten a novice undertakes. Read beside the eight "
+            "kept by lay people on the observance day, also printed in this "
+            "book, the relationship between the two lists becomes clear — "
+            "and it is not simply that two rules have been added.",
+
+            "The passage is framed at both ends by the same formula: he "
+            "allowed, that Blessed One, ten training rules for novices, and "
+            "that novices should train in them.",
+        ],
+
+        'meaning': [
+            "The first difference from the eight-precept list is a division "
+            "rather than an addition. There, dancing, singing, music and "
+            "unseemly shows are joined to garlands, scents and adornment in "
+            "one rule. Here they are separated into two. That alone takes "
+            "eight to nine, without adding anything new to abstain from.",
+
+            "The tenth is genuinely new, and it is the one that marks a life "
+            "rather than a day: refraining from accepting gold and silver. "
+            "Somebody keeping eight precepts for a night and a day still "
+            "owns what they own. A novice does not handle money at all, and "
+            "that single rule does more to change how a person lives than "
+            "the other nine together.",
+
+            "The framing matters too. The list opens อะนุญญาสิ โข — "
+            "he allowed — not he commanded. Throughout these pages the "
+            "monastic rule is presented as a series of permissions granted "
+            "in response to something that happened, and the grammar is kept "
+            "even for the rules that are least negotiable.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -15718,8 +19061,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0321.PNG]: TWO-COLUMN READING, please confirm. The
         #   whole chant is set in two columns and has been read ACROSS the
         #   row. The first pairing made is verse 1: left cell เตนะ โข ปะนะ
@@ -15733,9 +19074,52 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt naa-sà-naŋ-ká',
         'title_english': 'The Introductory Verse to the Grounds of Expulsion',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 58,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The introductory verse to the grounds of expulsion, naming the "
+            "incident that led the Buddha to allow a novice to be expelled."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the ten grounds for expelling a "
+            "novice."
+        ),
+
+        'background': [
+            "The second of the three introductory verses on these pages, and "
+            "the shortest. Where the first gave a general history, this one "
+            "gives a single case.",
+
+            "It names names, which chants rarely do: a novice called "
+            "Kaṇṭaka, belonging to Upananda the Sakyan son, and the nun "
+            "Kaṇṭakī. The offence is stated without euphemism and without "
+            "elaboration.",
+        ],
+
+        'meaning': [
+            "Five lines carry an entire case. An offence occurred. The "
+            "Blessed One learnt of it from the monks themselves. And on that "
+            "occasion he allowed the expulsion of a novice on ten grounds. "
+            "Then the handover: let us now recite the grounds.",
+
+            "The phrase ญัท๎วา ตะมัตถัง — having learnt of that "
+            "matter — is the hinge of all three of these introductions, "
+            "and it says something about how this tradition understands its "
+            "own rules. Nothing is legislated in advance. Each rule has an "
+            "occasion, and the occasion is remembered alongside it.",
+
+            "That is why the case is chanted and not merely known. A list of "
+            "ten grounds with no story attached would be a code, and codes "
+            "invite lawyers. Kept with its occasion, the rule stays what it "
+            "was — a response — and the reciter is reminded that "
+            "something had to go wrong before anybody thought of it.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -15802,8 +19186,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0321.PNG]: TWO-COLUMN LIST, please confirm — and note
         #   this is the OTHER kind of two-column setting. Verses 5-14 are one
         #   ground PER CELL, not one line read across two cells, so each cell
@@ -15823,9 +19205,56 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'naa-sà-naŋ-ká sìp sìk-kǎa-bòt',
         'title_english': 'The Ten Grounds for Expelling a Novice',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 58,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The ten grounds on which a novice may be expelled — the five "
+            "gravest offences, dispraise of the Three Jewels, wrong view, "
+            "and seducing a nun."
+        ),
+
+        'when_chanted': (
+            "Chanted after its introductory verse, among the passages on "
+            "novice discipline."
+        ),
+
+        'background': [
+            "The list is enclosed at both ends by the same sentence — that "
+            "a novice possessed of ten factors be expelled — with the ten "
+            "set out between. Saying the frame twice, before and after, is "
+            "how these passages mark a list as complete.",
+
+            "Expulsion here is นาเสตุง, a sending away. It ends a "
+            "novice's standing rather than punishing them, and the book "
+            "prints the milder alternative on the very next page so that the "
+            "two are read together.",
+        ],
+
+        'meaning': [
+            "The first five are the gravest of the training rules restated, "
+            "and the grammar has changed in a way worth noticing. The rules "
+            "say refraining from killing; this list says he is one who "
+            "kills. It has moved from what a person abstains from to what a "
+            "person is, and that shift is what makes expulsion the "
+            "consequence rather than a penalty.",
+
+            "The next three are of a different kind altogether: he speaks in "
+            "dispraise of the Buddha, of the Dhamma, of the Sangha. Speech "
+            "against the three is placed at exactly the same level as "
+            "killing and stealing, which tells you plainly what the "
+            "community understood itself to be held together by.",
+
+            "The last two are wrong view, and seducing a nun — which is "
+            "the offence the introductory verse has just finished "
+            "describing. The list ends where its own story began, and a "
+            "reciter who has chanted both pieces in order arrives at the "
+            "tenth ground already knowing whose case it was.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -15974,8 +19403,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0321.PNG]: TWO-COLUMN READING, please confirm. The
         #   first pairing made is verse 1: left cell เตนะ โข ปะนะ สะมะเยนะ +
         #   right cell สามะเณรา อะคาระวา.
@@ -15989,9 +19416,53 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt tan-tá-gam',
         'title_english': 'The Introductory Verse to the Penalties',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 58,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The introductory verse to the penalties, on novices who were "
+            "without respect towards the monks."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the five grounds for imposing a "
+            "penalty on a novice."
+        ),
+
+        'background': [
+            "The third and last of the introductory verses, following the "
+            "same shape as the one before it: an occasion, the Blessed One "
+            "learning of it, and an allowance made in response.",
+
+            "What differs is the scale of the trouble. The previous verse "
+            "answered a grave offence with expulsion. This one answers "
+            "something a great deal smaller, and the pair is printed "
+            "together so the difference is visible.",
+        ],
+
+        'meaning': [
+            "The occasion is given in a single line and is strikingly "
+            "ordinary: the novices were without respect, undeferential "
+            "towards the monks, and behaving unbecomingly towards them. No "
+            "incident, no names, no offence — just a general "
+            "deterioration in how a group of young people were carrying "
+            "themselves.",
+
+            "What was allowed in answer is a ทัณฑะกัมมัง, a penalty: a "
+            "corrective imposed on someone who stays, not a removal. That "
+            "single distinction is the reason these two verses sit side by "
+            "side in the book.",
+
+            "Read as a pair they set out a graded response, which is easy to "
+            "miss when either is read alone. Ten grounds end a novice's "
+            "standing. Five grounds earn a penalty. Printing both, with "
+            "their occasions, keeps a reader from mistaking the second sort "
+            "of failing for the first.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -16067,8 +19538,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0322.PNG]: LAYOUT, please confirm. This chant is set in
         #   a SINGLE column throughout, where its page-58 counterpart
         #   นาสะนังคะ 10 สิกขาบท set its ten grounds as a two-column list.
@@ -16085,10 +19554,53 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'tan-tá-gam hâa sìk-kǎa-bòt',
         'title_english': 'The Five Grounds for Imposing a Penalty on a Novice',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
         'page_start': 59,
         'source_printed': 'วิ.มหา. 4/171',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The five grounds on which a novice may be given a penalty, all "
+            "of them acts against the monks rather than breaches of virtue."
+        ),
+
+        'when_chanted': (
+            "Chanted after its introductory verse, completing the passages "
+            "on novice discipline."
+        ),
+
+        'background': [
+            "The book prints its own reference for this list. It uses the "
+            "same enclosing frame as the grounds of expulsion — the "
+            "allowance stated, the five given, the allowance restated — "
+            "so that the two lists can be compared line for line.",
+
+            "The comparison is the point of reading them together, and what "
+            "it shows is that these five are not lesser versions of the "
+            "ten. They are about something else entirely.",
+        ],
+
+        'meaning': [
+            "All five concern the community rather than conduct in general. "
+            "He exerts himself for the monks' loss of gain; for their harm; "
+            "to deprive them of a dwelling. He abuses and reviles them. He "
+            "sets monks at variance with monks.",
+
+            "Not one is a moral failing of the kind the ten training rules "
+            "cover. A novice could keep all ten rules perfectly and still do "
+            "every one of these five, which is exactly why they needed a "
+            "separate allowance and a separate penalty.",
+
+            "The last of the five is the gravest thing on the list, and it "
+            "is placed last deliberately: setting monks at variance with "
+            "monks. Theft can be returned and abuse can be apologised for. A "
+            "division worked into a community is the one injury on either "
+            "list that nobody can simply undo.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -16205,8 +19717,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0323.PNG]: THE MARK, and this page answers the standing
         #   question better than any so far. อะปัจจะเวกขิต์วา, ท์วายะ,
         #   พ์รัห์มะ, ยาต์รา and อัพ์ยา all carry it, and on ท์วายะ it stands
@@ -16241,11 +19751,62 @@ CHANTS = [
         'title_pali': 'Atītapaccavekkhaṇapāṭho',
         'title_roman': '',
         'title_english': 'The Reflection on the Requisites Already Used',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
         'page_start': 60,
         'layout': 'prose',
         'source_printed': 'นัย ม.มู. 12/17-8',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "The reflection made at the end of the day on the four "
+            "requisites that were used during it without reflecting at the "
+            "time."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics in the evening, on the requisites used "
+            "during the day."
+        ),
+
+        'background': [
+            "อะตีตะ means past, and that is the whole difference between "
+            "this reflection and the one made at the moment of use. It "
+            "covers the same four requisites in the same order, but "
+            "afterwards. The book prints its own reference for it.",
+
+            "It exists because the reflection at the moment of use is very "
+            "often not made. Rather than treat that as a failure to be "
+            "corrected, the tradition wrote a second text for it and gave it "
+            "a place in the evening.",
+        ],
+
+        'meaning': [
+            "Every section opens with the same admission built into its "
+            "grammar: อัชชะ มะยา อะปัจจะเวกขิต๎วา — whatever I "
+            "have used today without reflecting. The text does not ask "
+            "whether the reflection was made. It assumes it was not, and "
+            "starts from there.",
+
+            "What follows is word for word the purpose clause of the "
+            "earlier reflection, moved into the past: that was only for "
+            "warding off cold, heat, the touch of gadflies, mosquitoes, wind "
+            "and creeping things; that food was not for amusement or "
+            "intoxication or adornment but for the endurance of this body. "
+            "The reflection is applied retrospectively to acts already "
+            "finished.",
+
+            "Why a tradition would print such a thing is the interesting "
+            "part. It could have insisted the reflection be made at the time "
+            "and left the matter there. Instead it wrote a second text for "
+            "the commoner case and put it at the end of the day, where the "
+            "day can be gone back over. It is a rule that expects to be "
+            "forgotten, and makes provision for it rather than pretending "
+            "otherwise.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -16453,8 +20014,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0324.PNG]: THIS CHANT IS ALREADY IN THE APP, AND THIS
         #   IS NOT THAT PRINTING. The book prints Dhātupaṭikūlapaccavekkhaṇa
         #   twice — its own สารบัญ lists it at ๖๑ and at ๒๐๗, and both lines
@@ -16512,10 +20071,62 @@ CHANTS = [
         'title_pali': 'Dhātupaṭikūlapaccavekkhaṇapāṭho',
         'title_roman': '',
         'title_english': 'The Reflection on the Elements and on Repulsiveness',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 61,
         'layout': 'prose',
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "A reflection that the four requisites and the person using them "
+            "are alike merely elements, and that what is not repulsive "
+            "becomes so on reaching the body."
+        ),
+
+        'when_chanted': (
+            "Recited by monastics among the reflections on the requisites, "
+            "alongside those made at the time of use and at the end of the "
+            "day."
+        ),
+
+        'background': [
+            "ธาตุปะฏิกูละ names the two things the reflection does. It "
+            "reduces the requisite to ธาตุ, elements, and then it "
+            "observes ปะฏิกูละ, repulsiveness. Both moves are applied "
+            "to all four requisites in turn.",
+
+            "With the reflection made at the moment of use and the one made "
+            "at the end of the day, this completes a set of three. One asks "
+            "what a requisite is for, one goes back over a day of not "
+            "asking, and this one asks what the requisite and its user "
+            "actually are. The book prints the same reflection again later "
+            "on, with a Thai translation beside it.",
+        ],
+
+        'meaning': [
+            "The first move is applied evenly, and the evenness is what "
+            "gives it force. Proceeding as its conditions proceed, this is "
+            "merely elements — that is to say, this robe; and the person "
+            "who makes use of it is merely elements, not a being, not a "
+            "soul, empty. The user is taken apart in the same sentence as "
+            "the thing used, and in exactly the same terms.",
+
+            "The second move is stranger and more exact than it first looks. "
+            "All these robes are not in themselves repulsive; yet on "
+            "reaching this foul body they become exceedingly so. The "
+            "repulsiveness is not located in the object, and not quite in "
+            "the body either. It arises at the contact between them.",
+
+            "None of this is disgust at food or clothing, which the text "
+            "rules out by saying plainly that they are not repulsive in "
+            "themselves. What is being undercut is the sense of there being "
+            "someone to whom nice things are happening. The four requisites "
+            "are the last place where a monastic's preferences can still "
+            "quietly operate — which robe, which almsfood, which lodging "
+            "— and this reflection goes to exactly that place.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -16690,8 +20301,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0325.PNG]: TWO COLUMNS, AND THIS IS THE READING THAT
         #   MOST NEEDS CONFIRMING. Every line of this chant runs ACROSS both
         #   columns: the left holds the first pāda, the right the second. The
@@ -16754,9 +20363,59 @@ CHANTS = [
         'title_pali': 'Uddissanādhiṭṭhānagāthā',
         'title_roman': '',
         'title_english': 'The Verses of Dedication and Resolve',
+        # Left empty on purpose: the book prints no attribution for this
+        # passage and none has been supplied from memory.
+        'source': '',
         'page_start': 62,
         'group': 'General chanting',
         'english_unverified': True,
+
+        'summary': (
+            "Verses dedicating merit to a very long list of beings, then "
+            "resolving on the cutting off of craving and asking that Māra "
+            "find no opening."
+        ),
+
+        'when_chanted': (
+            "Chanted at the close of a period of practice or a ceremony, "
+            "where merit is dedicated and a resolve made."
+        ),
+
+        'background': [
+            "The title names two acts rather than one. อุททิสสะนะ is "
+            "dedication, the giving away of merit; อธิฏฐานะ is resolve, "
+            "a determination made for oneself. The verses do the first and "
+            "then the second, and the join between them is easy to hear.",
+
+            "The book sets the chant in two stanza groups separated by a "
+            "blank line, seven lines then nine, which corresponds to that "
+            "division of subject.",
+        ],
+
+        'meaning': [
+            "The dedication list is remarkable for how wide it casts, and "
+            "for the order it casts in. Preceptors, teachers who have "
+            "helped, mother and father and kinsfolk. Then the sun, the moon, "
+            "the king, and people of virtue. Then brahmās, māras and "
+            "indras, the guardians of the world and the devas. Then Yama, "
+            "friends, human beings, the indifferent — and the hostile.",
+
+            "Māra and the hostile are included by name, with nothing said "
+            "to justify it and no exception carved out, and then the line "
+            "that gathers them: may all beings be happy. A list that has "
+            "just named one's enemies and the personification of temptation "
+            "arrives at that sentence without flinching.",
+
+            "The resolve then turns inward and the scale changes. May I "
+            "swiftly come to the cutting off of craving and clinging; may "
+            "whatever base states are in my mind-stream perish always, "
+            "wherever I am born, in birth after birth. And the last request "
+            "is the practical one, made twice: that the māras find no "
+            "opening to act against these efforts. Not that they be beaten "
+            "— only that they find no way in. Ending on room to keep "
+            "working, rather than on a victory, is characteristic of this "
+            "whole book.",
+        ],
         'invitation': {
             'pali': '',
             'pali_roman': '',
@@ -33562,11 +37221,14 @@ CHANTS = [
     {
         # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
         #   when_chanted and source still to be written. Verses are complete.
-        # ‼ CHECK [IMG_0367.PNG]: THE CHANT CONTINUES ONTO PAGE 103, which
-        #   prints four more rows — นักขัตตะยักขะภูตานัง / ปะริตตัสสานุภาเวนะ
-        #   twice more — and then the centred bold THAI colophon
-        #   จบสิบสองตำนาน, 'here end the Twelve Tamnan'. continues is set and
-        #   no closing is given here.
+        # ‼ COMPLETED [IMG_0367.PNG]: this chant once continued onto page
+        #   103. Page 103 is in. The chant now runs 1-14 across pages 102 and
+        #   103, ending on the couplet the note predicted.
+        # ‼ CHECK: no `closing` is set on this chant, and that is
+        #   DELIBERATE. The colophon จบสิบสองตำนาน, 'here end the
+        #   Twelve Tamnan', closes the whole set rather than this chant, so
+        #   it is stored as a page-103 service_closing block instead. Do not
+        #   move it into `closing` without deciding that question first.
         # ‼ CHECK [IMG_0367.PNG]: The title is THAI, not Pali, so title_roman
         #   carries the สารบัญ's Paiboon value moŋ-kon jàk-grà-waan yài rather
         #   than an IAST transliteration. Same treatment as มงคลจักรวาฬน้อย,
@@ -42002,11 +45664,12 @@ CHANTS = [
         #   SEE. The page prints บทขัด มัคคะวิภังคะสุตตัง with a SPACE after
         #   บทขัด; the สารบัญ has it without one. Every บทขัด from page 82 on
         #   has done this.
-        # ‼ CHECK [IMG_0372.PNG]: THE CHANT CONTINUES ONTO PAGE 108. Four rows
-        #   here; page 108 was peeked at and carries more, closing ตัง
-        #   สุตตันตัง ภะณามะ เส. continues is set and no closing is given
-        #   here. Verse 4 ends on a full stop and is NOT cut mid-line, so no
-        #   […] marker is used.
+        # ‼ COMPLETED [IMG_0372.PNG]: this chant once continued onto page
+        #   108. Page 108 is in. The chant now runs 1-11 across pages 107 and
+        #   108 and ends exactly where the note predicted, on ตัง
+        #   สุตตันตัง ภะณามะ เส. No `closing` is set, and that is
+        #   correct: no colophon is printed under it — the next numbered
+        #   title follows after a gap, as บทขัด endings usually do.
         # ‼ CHECK [IMG_0372.PNG]: english_unverified is set. The book prints
         #   this chant in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -69991,6 +73654,30 @@ def chant_page_spans(chants=None, page_blocks=None):
             if entry['kind'] == 'chant':
                 spans.setdefault(entry['chant']['id'], []).append(page['page'])
     return spans
+
+
+def chants_in_book_order(chants=None):
+    """CHANTS as the book prints them, lowest page first.
+
+    CHANTS is stored in the order the pages were photographed, which is not
+    the order they are bound in — the list opens at page 222, drops to 27,
+    climbs to 223 and does that 59 times over. Reading a chant works fine that
+    way round; scrolling the index does not.
+
+    Sorted HERE rather than by moving the dicts in the file, because reordering
+    305 blocks of verified Pali is exactly the edit this workflow exists to
+    avoid, and it would make every later review diff unreadable.
+
+    A chant with no `page_start` cannot be placed and goes last rather than
+    being guessed onto a page — the same rule build_page_index() follows.
+    Within one page the stored order is kept, so two chants beginning on the
+    same page stay in the order the book prints them.
+    """
+    if chants is None:
+        chants = CHANTS
+    placed = [c for c in chants if isinstance(c.get('page_start'), int)]
+    unplaced = [c for c in chants if not isinstance(c.get('page_start'), int)]
+    return sorted(placed, key=lambda c: c['page_start']) + unplaced
 
 
 def page_coverage(chants=None, page_blocks=None):

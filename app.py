@@ -6902,11 +6902,15 @@ def chanting_book():
     Content comes from chanting.py so the same data can generate a printed
     book later. Adding a chant means appending to CHANTS; this route and the
     template never change.
+
+    The index is listed in BOOK order, not storage order — CHANTS is in the
+    order the pages were photographed. Sorted at render time so the file keeps
+    the verified dicts exactly where they are.
     """
     coverage = chanting.page_coverage()
     spans = chanting.chant_page_spans()
     return render_template('chanting.html',
-                           chants=chanting.CHANTS,
+                           chants=chanting.chants_in_book_order(),
                            layers=chanting.CHANT_LAYERS,
                            sections=chanting.CHANT_SECTIONS,
                            how_to_use=chanting.HOW_TO_USE,
