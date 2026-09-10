@@ -13,15 +13,21 @@ These tests close that gap. They cannot tell you a reading is *right* — only a
 native speaker can — but they can tell you it is written in the system this app
 claims to use, and that a vowel row demonstrates its own vowel.
 """
+import glob
+import json
+import os
 import unicodedata
 
 import pytest
 
 import app
 import register_levels
+import survival
 import thai_consonants
 import thai_reading
 import thai_registers
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Combining marks that say nothing about WHICH vowel a letter is: the four tone
 # marks, which sit on top, and the dot below, which this table uses on the row
@@ -59,11 +65,31 @@ def module_paiboon(module):
     return out
 
 
+def json_paiboon():
+    """The same fields, in the content files loaded at runtime.
+
+    These are the ones no grep over the .py files will ever find. A missing
+    tone mark on ขอโทษ sat in a monk lesson for months for exactly that
+    reason — the data is real, and it lived somewhere nothing looked.
+    """
+    out = []
+    pattern = os.path.join(REPO, "content", "**", "*.json")
+    for path in sorted(glob.glob(pattern, recursive=True)):
+        with open(path, encoding="utf-8") as fh:
+            data = json.load(fh)
+        walk_paiboon(data, os.path.relpath(path, REPO), out)
+    return out
+
+
+JSON_PAIBOON = json_paiboon()
+
 ALL_PAIBOON = (
     module_paiboon(app)
+    + module_paiboon(survival)
     + module_paiboon(thai_reading)
     + module_paiboon(thai_registers)
     + module_paiboon(register_levels)
+    + JSON_PAIBOON
 )
 
 
@@ -72,6 +98,10 @@ def test_the_walker_actually_found_the_data():
     below would pass by finding nothing at all, which is the worst kind of
     green."""
     assert len(ALL_PAIBOON) > 500, f"only found {len(ALL_PAIBOON)} paiboon fields"
+    # Counted separately: the content files are found by globbing a directory
+    # rather than by importing a module, so they can go missing without any
+    # import error to say so, and the rest of the total would hide it.
+    assert len(JSON_PAIBOON) > 100, f"only found {len(JSON_PAIBOON)} in content/"
 
 
 def test_paiboon_fields_use_the_paiboon_alphabet():
