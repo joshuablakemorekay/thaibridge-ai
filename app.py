@@ -2166,7 +2166,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ee',
             'type': 'long',
             'sound': 'long "ay" as in "day"',
-            'example_word': {'thai': 'เล่น', 'paiboon': 'lên', 'english': 'play'},
+            'example_word': {'thai': 'เมตตา', 'paiboon': 'mêet-dtaa', 'english': 'loving-kindness'},
             'length_note': 'Like "ay" held longer'
         },
         {
