@@ -2,180 +2,214 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<title>ตรวจตารางสระและคำอ่าน — Vowels &amp; readings</title>
+<title>ขอความช่วยเหลือเรื่องตารางสระ — ThaiBridge AI</title>
 <style>
   body { font-family: "Noto Sans Thai", "Leelawadee UI", Tahoma, "Segoe UI", sans-serif;
-         max-width: 52rem; margin: 2rem auto; padding: 0 1.2rem; color: #222;
-         line-height: 1.65; font-size: 15px; }
-  h1 { font-size: 1.45rem; margin-bottom: .2rem; }
-  .sub { color: #666; margin-top: 0; }
-  .notice { background: #fff6e8; border: 1px solid #f0d9ad; border-radius: 8px;
-            padding: .8rem 1rem; margin: 1rem 0; }
-  .entry { border: 1px solid #e3ddd2; border-radius: 8px; padding: .7rem .9rem .8rem;
-           margin: .9rem 0; break-inside: avoid; page-break-inside: avoid; }
-  .entry h3 { margin: 0 0 .45rem; font-size: 1.08rem; }
-  .vowel { font-size: 1.4em; color: #b34700; }
-  .now { background: #fdf2f2; border-left: 4px solid #d98b8b; border-radius: 0 6px 6px 0;
-         padding: .35rem .6rem; margin: .3rem 0; }
-  .why { background: #f2f8ee; border-left: 4px solid #7fa86a; border-radius: 0 6px 6px 0;
-         padding: .35rem .6rem; margin: .3rem 0; }
-  .en { color: #666; font-size: .9em; }
-  .lbl { font-weight: 700; color: #2c6e2f; }
-  .now .lbl { color: #9c3b3b; }
-  .q { background: #fffdf6; border: 1px dashed #d6b26a; border-radius: 6px;
-       padding: .4rem .6rem; margin: .4rem 0; }
-  .fix { margin-top: .55rem; }
-  .fix .line { display: inline-block; width: 68%; border-bottom: 1.5px dotted #aaa;
-               height: 1.15em; }
-  .foot { color: #666; font-size: .92em; margin-top: 2rem; }
+         max-width: 50rem; margin: 2rem auto; padding: 0 1.3rem; color: #222;
+         line-height: 1.7; font-size: 15.5px; }
+  h1 { font-size: 1.5rem; margin: 0 0 .2rem; color: #7a3b00; }
+  .sub { color: #666; margin-top: 0; font-size: .95rem; }
+  .en { color: #666; font-size: .89em; font-style: italic; }
+
+  .intro { background: #fff8ee; border: 1px solid #f0d9ad; border-radius: 10px;
+           padding: 1rem 1.2rem; margin: 1.2rem 0; }
+  .time { background: #fff; border-left: 5px solid #FF9933; border-radius: 0 8px 8px 0;
+          padding: .6rem .9rem; margin: .9rem 0 .3rem; font-weight: 700; }
+
+  .worked { background: #f2f8ee; border: 2px dashed #7fa86a; border-radius: 10px;
+            padding: .9rem 1.1rem; margin: 1.4rem 0 2rem; }
+  .worked h2 { margin: 0 0 .5rem; font-size: 1.05rem; color: #2c6e2f; }
+  .worked .done { color: #2c6e2f; font-weight: 700; }
+
+  h2.part { margin: 2.6rem 0 .3rem; font-size: 1.25rem; color: #fff;
+            background: #7a3b00; border-radius: 8px; padding: .5rem .9rem; }
+  .part-how { color: #444; margin: .4rem 0 1.2rem; }
+
+  .q { border: 1px solid #ddd6c9; border-radius: 10px; padding: .85rem 1rem 1rem;
+       margin: 1rem 0; break-inside: avoid; page-break-inside: avoid; }
+  .q.key { border-color: #d6a02a; background: #fffdf5; border-width: 2px; }
+  .q h3 { margin: 0 0 .6rem; font-size: 1.06rem; }
+  .vowel { font-size: 1.5em; color: #b34700; font-weight: 700; }
+  .flag { background: #d6a02a; color: #fff; font-size: .72em; font-weight: 700;
+          border-radius: 4px; padding: .1em .5em; vertical-align: middle;
+          margin-left: .4em; }
+
+  table { border-collapse: collapse; width: 100%; margin: .3rem 0 .2rem; }
+  td { padding: .35rem .55rem; vertical-align: top; border-bottom: 1px solid #efe9de; }
+  td.k { width: 11.5rem; font-weight: 700; white-space: nowrap; }
+  tr.now td.k { color: #9c3b3b; }
+  tr.now td   { background: #fdf3f3; }
+  tr.why td.k { color: #7a5c00; }
+  tr.need td.k { color: #2c6e2f; }
+  tr.need td   { background: #f4faf1; }
+  code { background: #f2f0ea; border-radius: 4px; padding: .05em .4em; font-size: 1.02em; }
+
+  .ans { margin-top: .8rem; font-weight: 700; }
+  .ans .line { display: inline-block; width: 74%; border-bottom: 2px dotted #999;
+               height: 1.5em; }
+  .foot { color: #555; margin-top: 2.5rem; border-top: 2px solid #eee; padding-top: 1rem; }
+
   @media print {
     body { margin: 0 auto; font-size: 12.5px; }
-    .entry { margin: .5rem 0; }
+    .q { margin: .55rem 0; }
+    h2.part { break-after: avoid; page-break-after: avoid; }
   }
 </style>
 </head>
 <body>
-<h1>ตรวจตารางสระและคำอ่าน — Vowels &amp; readings</h1>
-<p class="sub">Vowel table and disputed readings · 2026-09-10 · ThaiBridge AI</p>
 
-<div class="notice">
-ตารางสระในแอปมี 32 แถว ผมตรวจพบว่าบางแถวยกตัวอย่างคำผิด คือคำที่ยกมาไม่มีสระนั้นอยู่ในคำเลย
-แก้ไปแล้ว 8 แถวที่มั่นใจ เพราะมีคำที่ใช้อยู่แล้วในแอป เหลืออีก 6 แถวที่ผมยังแก้ไม่ได้ครับ<br>
-<span class="en">The app's vowel table has 32 rows. Several illustrated a vowel with a word
-that does not contain that vowel at all. Eight are now fixed, using words already used
-elsewhere in the app. These six could not be.</span><br><br>
-ขอความกรุณาอาจารย์ช่วย 3 อย่าง / Please give me three things:<br>
-1. <strong>คำตัวอย่าง</strong> — คำไทยที่ใช้สระนี้จริง ๆ ที่คนไทยใช้บ่อย <span class="en">— a common word that really uses this vowel</span><br>
-2. <strong>คำอ่าน</strong> — เขียนแบบไหนก็ได้ที่อาจารย์ถนัด <span class="en">— its pronunciation, written however you prefer</span><br>
-3. <strong>คำแปล</strong> — ภาษาอังกฤษสั้น ๆ <span class="en">— a short English meaning</span><br>
-<br>เขียนแก้ตรงบรรทัด <strong>แก้เป็น:</strong> ได้เลย / Write corrections on the dotted line.<br><br>
-ตารางนี้ผมให้ AI ช่วยทำไว้ก่อน ยังไม่มีเจ้าของภาษาตรวจเลยครับ ขอบพระคุณมากครับ 🙏
+<h1>ขอความช่วยเหลือเรื่องตารางสระครับ</h1>
+<p class="sub">Thai vowel table — 10 questions · ThaiBridge AI · 2026-09-10</p>
+
+<div class="intro">
+เรียน อาจารย์ครับ 🙏<br><br>
+ผมทำแอปสอนภาษาไทยให้ชาวต่างชาติ ในแอปมี <strong>ตารางสระ 32 ตัว</strong>
+แต่ละแถวมีสระ 1 ตัว พร้อม <strong>คำตัวอย่าง 1 คำ</strong> เพื่อให้ผู้เรียนเห็นว่าสระนั้นใช้ยังไง<br><br>
+ผมตรวจสอบตารางแล้วพบว่า <strong>บางแถวใส่คำตัวอย่างผิด</strong> —
+คือคำที่ยกมาไม่มีสระตัวนั้นอยู่ในคำเลย
+ผมแก้เองไปแล้ว 8 แถว เพราะมีคำที่ใช้อยู่แล้วในแอปมายืนยันได้
+แต่เหลืออีก <strong>10 ข้อ</strong> ที่ผมไม่กล้าเดาครับ ต้องขอความรู้จากอาจารย์
+<div class="time">⏱️ ใช้เวลาประมาณ 15 นาที — เขียนตอบตรงบรรทัด <u>ตอบ:</u> ได้เลยครับ<br>
+ถ้าข้อไหนไม่แน่ใจ ข้ามได้เลยนะครับ ไม่ต้องตอบทุกข้อ</div>
+<span class="en">I teach Thai to foreigners through an app. It has a table of the 32
+Thai vowels; each row shows one vowel and one example word. Some rows use an example
+word that does not contain that vowel at all. I fixed 8 myself where the app already
+had evidence for the answer. These 10 I will not guess at. About 15 minutes — please
+skip anything you are unsure of.</span>
 </div>
 
-<div class="entry">
-<h3>แถวที่ 20 — สระ <span class="vowel">แอะ</span> <span class="en">(ɛ, เสียงสั้น / short)</span></h3>
-<div class="now"><span class="lbl">ตอนนี้แอปยกตัวอย่างว่า:</span> แก้ว (gɛ̂ɛo) = glass<br>
-<span class="en">what the app currently shows — this is the wrong word</span></div>
-<div class="why"><span class="lbl">ปัญหา:</span> แก้ว ใช้สระ แอ เสียงยาว บวก ว ไม่ใช่ สระ แอะ<br>
-<span class="en">แก้ว is long แอ plus a ว glide, not short แอะ.</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<div class="worked">
+<h2>ตัวอย่างการตอบ / What a filled-in answer looks like</h2>
+<strong>แถวที่ 12 — สระ อัว</strong><br>
+<span style="color:#9c3b3b;"><strong>ตอนนี้แอปแสดง:</strong> เรือ</span> ←
+ผิด เพราะ เรือ ใช้สระ เอือ ไม่ใช่ อัว<br>
+<span style="color:#2c6e2f;"><strong>ผมต้องการ:</strong></span>
+คำที่ใช้สระ อัว จริง ๆ + คำอ่าน + คำแปลอังกฤษ<br>
+<strong>ตอบ:</strong> <span class="done">ตัว · dtuua · body, classifier</span><br>
+<span class="en">(This row I already fixed myself — shown only as an example of the
+kind of answer that helps.)</span>
 </div>
 
-<div class="entry">
-<h3>แถวที่ 24 — สระ <span class="vowel">เอียะ</span> <span class="en">(iạ, เสียงสั้น / short)</span></h3>
-<div class="now"><span class="lbl">ตอนนี้แอปยกตัวอย่างว่า:</span> เปรี้ยว (bprîao) = sour<br>
-<span class="en">what the app currently shows — this is the wrong word</span></div>
-<div class="why"><span class="lbl">ปัญหา:</span> เปรี้ยว ใช้สระ เอีย เสียงยาว ไม่ใช่ เอียะ<br>
-<span class="en">เปรี้ยว is long เอีย, not short เอียะ.</span></div>
-<div class="q">คำถามเพิ่มครับ — สระ เอียะ แทบไม่มีใช้ในคำจริงใช่ไหมครับ ถ้าไม่มีคำที่คนใช้บ่อย
-ควรตัดแถวนี้ออกจากตาราง หรือเก็บไว้แล้วเขียนกำกับว่าพบน้อยดีครับ<br>
-<span class="en">Does เอียะ occur in any everyday word? If not, should the row be removed,
-or kept with a note saying it is rare?</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<h2 class="part">ก. ขอคำตัวอย่างใหม่ครับ — 4 ข้อ</h2>
+<p class="part-how"><strong>แต่ละข้อขอ 3 อย่างครับ: คำไทย + คำอ่าน + คำแปลอังกฤษสั้น ๆ</strong><br>
+<span class="en">For each one: a Thai word, how it is pronounced, and a short English meaning.</span></p>
+
+<div class="q">
+<h3>1. แถวที่ 20 — สระ <span class="vowel">แอะ</span> (เสียงสั้น)</h3>
+<table>
+<tr class="now"><td class="k">ตอนนี้แอปแสดง</td><td>แก้ว (gɛ̂ɛo) = glass</td></tr>
+<tr class="why"><td class="k">ทำไมถึงผิด</td><td>แก้ว ใช้สระ <strong>แอ เสียงยาว</strong> + ว ไม่ใช่ แอะ เสียงสั้น</td></tr>
+<tr class="need"><td class="k">ผมต้องการ</td><td>คำที่ใช้สระ <strong>แอะ</strong> จริง ๆ ที่คนไทยใช้บ่อย</td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>แถวที่ 25 — สระ <span class="vowel">เอือะ</span> <span class="en">(ʉạ, เสียงสั้น / short)</span></h3>
-<div class="now"><span class="lbl">ตอนนี้แอปยกตัวอย่างว่า:</span> เหนือ (nʉ̌a) = above / north<br>
-<span class="en">what the app currently shows — this is the wrong word</span></div>
-<div class="why"><span class="lbl">ปัญหา:</span> เหนือ ใช้สระ เอือ เสียงยาว ไม่ใช่ เอือะ<br>
-<span class="en">เหนือ is long เอือ, not short เอือะ.</span></div>
-<div class="q">คำถามเดียวกับแถวที่ 24 ครับ — สระ เอือะ มีคำที่ใช้บ่อยไหม ถ้าไม่มี
-ควรตัดออกหรือเขียนกำกับว่าพบน้อยครับ<br>
-<span class="en">Same question as row 24: is there a common เอือะ word? If not, remove the
-row or mark it rare?</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<div class="q">
+<h3>2. แถวที่ 29 — สระ <span class="vowel">อิว</span></h3>
+<table>
+<tr class="now"><td class="k">ตอนนี้แอปแสดง</td><td>เขียว (kǐao) = green</td></tr>
+<tr class="why"><td class="k">ทำไมถึงผิด</td><td>เขียว ใช้สระ <strong>เอีย + ว (เอียว)</strong> ไม่ใช่ อิว</td></tr>
+<tr class="need"><td class="k">ผมต้องการ</td><td>คำที่ใช้สระ <strong>อิว</strong> จริง ๆ</td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>แถวที่ 29 — สระ <span class="vowel">อิว</span> <span class="en">(io, เสียงสั้น / short)</span></h3>
-<div class="now"><span class="lbl">ตอนนี้แอปยกตัวอย่างว่า:</span> เขียว (kǐao) = green<br>
-<span class="en">what the app currently shows — this is the wrong word</span></div>
-<div class="why"><span class="lbl">ปัญหา:</span> เขียว ใช้สระ เอีย บวก ว (เอียว) ไม่ใช่ อิว<br>
-<span class="en">เขียว is เอีย plus ว (เอียว), not อิว.</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<div class="q">
+<h3>3. แถวที่ 30 — สระ <span class="vowel">เอว</span></h3>
+<table>
+<tr class="now"><td class="k">ตอนนี้แอปแสดง</td><td>แถว (tɛ̌ɛo) = row, line</td></tr>
+<tr class="why"><td class="k">ทำไมถึงผิด</td><td>แถว ใช้สระ <strong>แอว</strong> ไม่ใช่ เอว (แถว ย้ายไปอยู่แถวที่ 31 แล้วครับ)</td></tr>
+<tr class="need"><td class="k">ผมต้องการ</td><td>คำที่ใช้สระ <strong>เอว</strong> จริง ๆ</td></tr>
+<tr class="need"><td class="k">คำถามเพิ่ม</td><td>สระ เอว นับเป็น <strong>เสียงสั้นหรือเสียงยาว</strong> ครับ</td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>แถวที่ 30 — สระ <span class="vowel">เอว</span> <span class="en">(eeo, ตอนนี้เขียนว่าเสียงสั้น / currently marked short)</span></h3>
-<div class="now"><span class="lbl">ตอนนี้แอปยกตัวอย่างว่า:</span> แถว (tɛ̌ɛo) = row, line<br>
-<span class="en">what the app currently shows — this is the wrong word</span></div>
-<div class="why"><span class="lbl">ปัญหา:</span> แถว ใช้สระ แอว ไม่ใช่ เอว<br>
-<span class="en">แถว is แอว, not เอว. (แอว is row 31, which is now fixed and uses แก้ว.)</span></div>
-<div class="q">ขอถามเพิ่มครับ — สระ เอว นับเป็นเสียงสั้นหรือเสียงยาวครับ
-ในตารางเขียนว่าสั้น แต่คำอ่านเขียน eeo ซึ่งเป็นเสียงยาว<br>
-<span class="en">Also: is เอว short or long? The table says short but writes the
-romanisation as a long vowel.</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<div class="q">
+<h3>4. แถวที่ 32 — สระ <span class="vowel">อุย</span></h3>
+<table>
+<tr class="now"><td class="k">ตอนนี้แอปแสดง</td><td>ฝุ่น (fùn) = dust</td></tr>
+<tr class="why"><td class="k">ทำไมถึงผิด</td><td>ฝุ่น เป็น อุ + น — <strong>ไม่มี ย เลยครับ</strong></td></tr>
+<tr class="need"><td class="k">ผมต้องการ</td><td>คำที่ใช้สระ <strong>อุย</strong> จริง ๆ</td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>แถวที่ 32 — สระ <span class="vowel">อุย</span> <span class="en">(ui, เสียงสั้น / short)</span></h3>
-<div class="now"><span class="lbl">ตอนนี้แอปยกตัวอย่างว่า:</span> ฝุ่น (fùn) = dust<br>
-<span class="en">what the app currently shows — this is the wrong word</span></div>
-<div class="why"><span class="lbl">ปัญหา:</span> ฝุ่น เป็น อุ บวก น ไม่มี ย เลย<br>
-<span class="en">ฝุ่น is อุ plus น — there is no ย in it at all.</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<h2 class="part">ข. สระสองตัวนี้ควรสอนไหมครับ — 2 ข้อ</h2>
+<p class="part-how"><strong>ตอบว่า “ตัดออก” หรือ “เก็บไว้ + คำตัวอย่าง” ก็ได้ครับ</strong><br>
+<span class="en">Either “remove it” or “keep it, and here is a word”.</span></p>
+
+<div class="q">
+<h3>5. แถวที่ 24 — สระ <span class="vowel">เอียะ</span> (เสียงสั้น)</h3>
+<table>
+<tr class="now"><td class="k">ตอนนี้แอปแสดง</td><td>เปรี้ยว (bprîao) = sour</td></tr>
+<tr class="why"><td class="k">ทำไมถึงผิด</td><td>เปรี้ยว ใช้สระ <strong>เอีย เสียงยาว</strong> ไม่ใช่ เอียะ</td></tr>
+<tr class="why"><td class="k">ปัญหาคือ</td><td>ผมหาคำที่ใช้สระ เอียะ ที่คนใช้บ่อยไม่เจอเลยครับ</td></tr>
+<tr class="need"><td class="k">ผมต้องการ</td><td>สระนี้มีคำที่ใช้จริงไหมครับ ถ้าไม่มี <strong>ควรตัดแถวนี้ออกไหม</strong></td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<h1 style="margin-top:2.5rem;border-top:3px solid #FF9933;padding-top:1.2rem;">
-ส่วนที่ 2 — คำอ่านที่เขียนไว้สองแบบ</h1>
-<p class="sub">Part 2 — readings that need an ear</p>
-
-<div class="notice">
-ผมตรวจคำอ่านทั้งแอปแล้วพบว่ามี 11 คำที่เขียนไว้สองแบบ แก้ไปได้ 6 คำ
-เพราะมีหลักฐานในแอปเองที่ชี้ขาดได้ อีก 1 คำ (ณ) ไม่ใช่ปัญหา เพราะเป็นทั้งพยัญชนะและคำ
-เหลือ 4 คำนี้ที่ต้องใช้หูฟัง ไม่ใช่กฎครับ<br>
-<span class="en">Eleven words were written two ways. Six could be settled from evidence
-already in the app, and one (ณ) was never a conflict — it is both a letter and a word.
-These four need an ear rather than a rule.</span>
+<div class="q">
+<h3>6. แถวที่ 25 — สระ <span class="vowel">เอือะ</span> (เสียงสั้น)</h3>
+<table>
+<tr class="now"><td class="k">ตอนนี้แอปแสดง</td><td>เหนือ (nʉ̌a) = above, north</td></tr>
+<tr class="why"><td class="k">ทำไมถึงผิด</td><td>เหนือ ใช้สระ <strong>เอือ เสียงยาว</strong> ไม่ใช่ เอือะ</td></tr>
+<tr class="need"><td class="k">ผมต้องการ</td><td>คำถามเดียวกับข้อ 5 ครับ — มีคำที่ใช้จริงไหม หรือควรตัดออก</td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>1. <span class="vowel">ศรัทธา</span></h3>
-<div class="now"><span class="lbl">เขียนไว้สองแบบ:</span> <code>sà-rát-taa</code> / <code>sàt-taa</code></div>
-<div class="q">ออกเสียง ร ด้วยไหมครับ เป็นสามพยางค์หรือสองพยางค์<br>
-<span class="en">Is the ร sounded — three syllables or two?</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<h2 class="part">ค. คำอ่านแบบไหนถูกครับ — 4 ข้อ</h2>
+<p class="part-how"><strong>วงกลมคำที่ถูก หรือเขียนคำที่ถูกลงไปก็ได้ครับ</strong><br>
+<span class="en">Circle the right one, or write the correct form.</span><br><br>
+⚠️ <strong>ข้อ 8 กับ ข้อ 10 สำคัญเป็นพิเศษครับ — ตอบข้อเดียวแก้ได้หลายสิบคำเลย</strong><br>
+<span class="en">Questions 8 and 10 each settle dozens of words at once.</span></p>
+
+<div class="q">
+<h3>7. <span class="vowel">ศรัทธา</span></h3>
+<table>
+<tr class="now"><td class="k">ในแอปเขียนไว้ 2 แบบ</td><td><code>sà-rát-taa</code> &nbsp;<strong>หรือ</strong>&nbsp; <code>sàt-taa</code></td></tr>
+<tr class="need"><td class="k">คำถาม</td><td>ออกเสียง <strong>ร</strong> ด้วยไหมครับ — 3 พยางค์ หรือ 2 พยางค์</td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>2 และ 3. สระ <span class="vowel">อัว</span> — สวดมนต์ และ ดวงอาทิตย์</h3>
-<div class="now"><span class="lbl">เขียนไว้สองแบบ:</span>
-สวดมนต์ = <code>sùat-mon</code> / <code>sùuat mon</code> ·
-ดวงอาทิตย์ = <code>duaŋ</code> / <code>duuaŋ</code></div>
-<div class="q">สระ อัว ควรเขียนเป็น <code>ua</code> หรือ <code>uua</code> ครับ —
-ในตารางสระเขียนว่า <code>ua</code> แต่ตัวอย่างในแอปเขียน <code>dtuua</code> ซึ่งขัดกันเอง
-<strong>ตอบข้อนี้ข้อเดียวใช้ได้กับทุกคำที่มีสระ อัว เลยครับ</strong><br>
-<span class="en">Should อัว be written <code>ua</code> or <code>uua</code>? The vowel table
-says one and its own examples say the other. One answer settles every อัว word at once.</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<div class="q key">
+<h3>8. สระ <span class="vowel">อัว</span> — เขียนว่า <code>ua</code> หรือ <code>uua</code> ครับ<span class="flag">สำคัญ</span></h3>
+<table>
+<tr class="now"><td class="k">ในแอปเขียนไว้ 2 แบบ</td><td>สวดมนต์ = <code>sùat-mon</code> <strong>หรือ</strong> <code>sùuat-mon</code><br>
+ดวงอาทิตย์ = <code>duaŋ</code> <strong>หรือ</strong> <code>duuaŋ</code></td></tr>
+<tr class="why"><td class="k">ทำไมถึงสับสน</td><td>ตารางสระเขียนว่า <code>ua</code> แต่คำตัวอย่างในแอปเขียน <code>dtuua</code> — <strong>ขัดกันเองครับ</strong></td></tr>
+<tr class="need"><td class="k">ทำไมสำคัญ</td><td>ตอบข้อเดียว <strong>ใช้ได้กับทุกคำที่มีสระ อัว ทั้งแอป</strong></td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>4. <span class="vowel">เสวย</span></h3>
-<div class="now"><span class="lbl">เขียนไว้สองแบบ:</span> <code>sà-wəəi</code> / <code>sà-wə̌əi</code></div>
-<div class="q">พยางค์หลังเป็นเสียงสามัญหรือเสียงจัตวาครับ (คำราชาศัพท์)<br>
-<span class="en">Is the second syllable mid tone or rising? (royal vocabulary)</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<div class="q">
+<h3>9. <span class="vowel">เสวย</span> <span class="en">(คำราชาศัพท์)</span></h3>
+<table>
+<tr class="now"><td class="k">ในแอปเขียนไว้ 2 แบบ</td><td><code>sà-wəəi</code> &nbsp;<strong>หรือ</strong>&nbsp; <code>sà-wə̌əi</code></td></tr>
+<tr class="need"><td class="k">คำถาม</td><td>พยางค์หลังเป็น <strong>เสียงสามัญ</strong> หรือ <strong>เสียงจัตวา</strong> ครับ</td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<div class="entry">
-<h3>5. สระ <span class="vowel">ออ + ง</span> — ห้อง กับ ต้อง เขียนไม่เหมือนกัน</h3>
-<div class="now"><span class="lbl">ตอนนี้เขียนไว้ว่า:</span>
-ห้อง = <code>hɔ̂ɔŋ</code> (เสียงยาว) · ต้อง = <code>dtɔ̂ŋ</code> (เสียงสั้น)</div>
-<div class="q">สองคำนี้สะกดเหมือนกันทุกอย่าง — พยัญชนะ + ไม้โท + อ + ง —
-แต่ในแอปเขียนคำอ่านคนละแบบ คำไหนถูกครับ หรือควรเป็นเสียงเดียวกันทั้งคู่
-<strong>ตอบข้อนี้ใช้ได้กับทุกคำที่ลงท้ายแบบนี้เลยครับ</strong><br>
-<span class="en">These two are spelled identically — consonant + mai tho + อ + ง —
-yet the app writes one long and the other short. Which is right, or should they match?
-One answer covers every word ending this way.</span></div>
-<div class="why"><span class="lbl">หมายเหตุ:</span> ข้อนี้ไม่ได้อยู่ใน 11 คำข้างบน เพิ่งเจอทีหลังครับ<br>
-<span class="en">Not one of the eleven above — found separately.</span></div>
-<div class="fix"><strong>แก้เป็น:</strong> <span class="line"></span></div>
+<div class="q key">
+<h3>10. <span class="vowel">ห้อง</span> กับ <span class="vowel">ต้อง</span> — เสียงสั้นหรือยาวครับ<span class="flag">สำคัญ</span></h3>
+<table>
+<tr class="now"><td class="k">ในแอปเขียนไม่เหมือนกัน</td><td>ห้อง = <code>hɔ̂ɔŋ</code> (<strong>ยาว</strong>) &nbsp;·&nbsp; ต้อง = <code>dtɔ̂ŋ</code> (<strong>สั้น</strong>)</td></tr>
+<tr class="why"><td class="k">ทำไมถึงแปลก</td><td>สองคำนี้สะกดเหมือนกันทุกอย่าง — พยัญชนะ + <strong>ไม้โท</strong> + อ + ง</td></tr>
+<tr class="need"><td class="k">คำถาม</td><td>คำไหนถูกครับ หรือควรเป็นเสียงเดียวกันทั้งคู่</td></tr>
+<tr class="need"><td class="k">ทำไมสำคัญ</td><td>ตอบข้อเดียว <strong>ใช้ได้กับทุกคำที่ลงท้ายแบบนี้</strong></td></tr>
+</table>
+<div class="ans">ตอบ: <span class="line"></span></div>
 </div>
 
-<p class="foot">ถ้าอาจารย์เห็นแถวอื่นในตารางที่ผิดอีก บอกผมได้เลยนะครับ<br>
-<span class="en">If you spot anything else wrong in the table, please tell me.</span></p>
+<p class="foot">ขอบพระคุณอาจารย์มากครับที่สละเวลา 🙏<br>
+ถ้าอาจารย์เห็นอะไรผิดอีกในตาราง บอกผมได้เลยนะครับ<br>
+<span class="en">Thank you very much for your time. If you spot anything else wrong in
+the table, please tell me.</span></p>
+
 </body>
 </html>
