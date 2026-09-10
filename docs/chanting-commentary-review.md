@@ -2,7 +2,7 @@
 
 Generated 2026-09-10 from `chanting.py`. Read-only extract: editing this file changes nothing.
 
-**262 of 305 chants have commentary. 43 still to write.**
+**282 of 305 chants have commentary. 23 still to write.**
 
 Everything below is prose written for this edition. The Pali, Thai and English of the verses themselves are not reproduced here — this is only the commentary, so that it can be read as writing rather than checked as data.
 
@@ -3942,6 +3942,411 @@ The last two are the ones a modern reader may find strangest, because they are a
 
 ---
 
+## บทขัด ภิกขุอะปะริหานิยะธัมมะสุตตัง
+
+*page 115*  
+`bot-khat-bhikkhu-aparihaniyadhamma-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The introductory verse to the discourse on the things that lead to no decline for a community.
+
+**When it is chanted.** Chanted immediately before the Bhikkhu Aparihaṇiyadhamma Sutta, introducing it.
+
+**Historical background**
+
+Four lines, and it names its subject by a negative: อะปะริหานิยะ — the things that do not lead to decline. What is promised is the absence of a decline rather than a gain.
+
+Like the other prefatory verses it states the occasion and hands over.
+
+**Meaning and purpose**
+
+The Buddha is described by motive rather than by epithet: of great compassion, seeking the welfare of his disciples, wishing only for their growth in the Dhamma. Nothing is said about his attainments.
+
+What he declared is put as plainly as the title — the things that lead to no decline — and the audience is named as the monks, which the discourse itself will keep insisting on.
+
+The closing is the standard one, and it asks for practice rather than merit: so that, having heard, we may practise accordingly.
+
+---
+
+## ภิกขุอะปะริหานิยะธัมมะสุตตัง
+
+*pages 116–117 · chant 22 in the book*  
+`bhikkhu-aparihaniyadhamma-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Seven conditions under which a community can be expected to grow rather than decline, from meeting often to protecting its guests.
+
+**When it is chanted.** Chanted after its introductory verse, among the discourses in the collection.
+
+**Historical background**
+
+Spoken at Rājagaha on the Vulture's Peak, and each of the seven is introduced by the same phrase — so long as. The whole discourse is a set of conditions rather than instructions.
+
+Nothing in it is about meditation or attainment. It is about how a group of people conduct their business.
+
+**Meaning and purpose**
+
+The first three concern meeting: so long as the monks meet often and in large numbers; so long as they assemble in concord, rise in concord, and do the Sangha's business in concord; and so long as they neither lay down what has not been laid down nor abolish what has been.
+
+The third of those is a rule about rules, and it cuts both ways. A community declines by inventing new requirements as readily as by abandoning old ones.
+
+The rest concern deference to elders, resistance to craving, attachment to forest dwellings, and the care of fellow monks who have not yet come. Seven conditions, none of them spiritual in the usual sense, and the promise attached is modest: growth is to be expected, not decline.
+
+---
+
+## บทขัด ปะหานะภาวะนาสุตตัง
+
+*page 117*  
+`bot-khat-pahana-bhavana-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The introductory verse to the discourse on what is to be abandoned and what developed.
+
+**When it is chanted.** Chanted immediately before the Pahānabhāvanā Sutta, introducing it.
+
+**Historical background**
+
+Four lines, built on the pair its title names: ปะหานะ, abandoning, and ภาวะนา, developing. The two are treated as one operation with two halves.
+
+It is among the shortest of the prefatory verses and does not elaborate.
+
+**Meaning and purpose**
+
+The Buddha is named by three descriptions in the first line alone — the Awakened One, best of men, the Sage of great compassion — which is more than most of these verses spend before getting to the point.
+
+The point is put as a demonstration rather than a teaching: having shown what can be done in abandoning and in developing. What is offered is not a doctrine about them but a showing of what is possible.
+
+And the reason for the discourse is given as สัมมาปะฏิปัตติ — for the sake of right practice — with the usual closing: having heard it, that we may act accordingly.
+
+---
+
+## ปะหานะภาวะนาสุตตัง
+
+*pages 117–118 · chant 23 in the book*  
+`pahana-bhavana-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** A four-line discourse: abandon the unwholesome and develop the wholesome, because both can be done.
+
+**When it is chanted.** Chanted after its introductory verse, among the short discourses.
+
+**Historical background**
+
+One of the shortest discourses in the book, and its whole argument turns on a conditional the Buddha puts twice.
+
+The book gives it no English title of its own, so the name used in the app is supplied.
+
+**Meaning and purpose**
+
+The instruction itself is unremarkable: abandon the unwholesome; develop the wholesome. What follows each is the interesting part.
+
+It can be done. If it could not be done I would not say so; but because it can, I say: abandon it. The teacher explicitly rules out asking for what is impossible, and does so before making the request.
+
+That is a small piece of reasoning with a large consequence. A person who fails at this cannot conclude that the thing was never possible, because the discourse has closed that exit in advance — which is either encouraging or uncomfortable depending on the day.
+
+---
+
+## บทขัด จะตุรัปปะมัญญาปาฐะ
+
+*page 118*  
+`bot-khat-caturappamanna-patha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The introductory verse to the passage on the four immeasurables, naming what each of them abandons.
+
+**When it is chanted.** Chanted immediately before the Caturappamaññā passage, introducing it.
+
+**Historical background**
+
+อัปปะมัญญา means immeasurable, and the verse explains the name in its first two lines: beings without measure are the range of these developments, and so the developments are called immeasurable.
+
+The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+**Meaning and purpose**
+
+What the introduction adds to the passage is a list of what each of the four is for: for ill will, for cruelty, for discontent and for aversion, they lead to right abandoning, each in its own order.
+
+The pairing is exact and is not stated in the passage itself. Loving-kindness answers ill will, compassion answers cruelty, gladness answers discontent, equanimity answers aversion. Four practices, four specific ailments.
+
+That turns the four from a devotional exercise into something diagnostic. A person who knows which of the four states they are in knows which of the four to develop, and the introduction supplies the key the passage leaves out.
+
+---
+
+## จะตุรัปปะมัญญาปาโฐ
+
+*pages 118–119 · chant 24 in the book*  
+`caturappamanna-patho`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The four immeasurables set out in full: loving-kindness, compassion, gladness and equanimity pervading every direction.
+
+**When it is chanted.** Chanted after its introductory verse, among the passages on practice.
+
+**Historical background**
+
+Each of the four is given the same paragraph with one word changed, and the paragraph is long. The repetition is the practice rather than a stylistic habit.
+
+The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+**Meaning and purpose**
+
+The pattern is spatial and exhaustive: dwelling pervading one direction with a heart imbued with loving-kindness, likewise the second, the third and the fourth; so above, below and around, everywhere and to all as to himself.
+
+Then the same again for compassion, for gladness, and for equanimity. Nothing is added and nothing abbreviated, so a reciter goes round the compass four times.
+
+Read as text it is repetitive; chanted, it is a set of instructions being followed in real time. The four directions, then above and below, then everywhere — a person doing this properly is not reciting a description of the practice but performing it while saying so.
+
+---
+
+## บทขัด ธัมมะนิยามะสุตตัง
+
+*page 119*  
+`bot-khat-dhammaniyama-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The introductory verse to the discourse on the lawfulness of things, on the knowledge that comes before the knowledge of Nibbāna.
+
+**When it is chanted.** Chanted immediately before the Dhammaniyāma Sutta, introducing it.
+
+**Historical background**
+
+ธัมมะนิยามะ is the lawfulness or fixed order of things — that certain things hold whether or not anybody notices them.
+
+The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+**Meaning and purpose**
+
+The verse places the discourse in a sequence of knowledges: the knowledge that arises before the knowledge of Nibbāna, and the lawfulness of things which is its object. What is being introduced is a preliminary rather than a culmination.
+
+The content of that lawfulness is named in one line: impermanence, suffering, and the not-self of all things. Three items, and the discourse will do nothing but state them.
+
+Calling this the knowledge that comes first is a claim about order. The three characteristics are not a conclusion drawn at the end of the path but the thing seen before anything else can be, which is why they are recited so often in this book.
+
+---
+
+## ธัมมะนิยามะสุตตัง
+
+*pages 119–120 · chant 25 in the book*  
+`dhammaniyama-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Three statements that hold whether or not a Buddha arises: all formations are impermanent, all are suffering, all things are not-self.
+
+**When it is chanted.** Chanted after its introductory verse; also used at the second and third seven-day observances after a death.
+
+**Historical background**
+
+Five units, three of which are the same sentence with one word changed. It is among the most compressed discourses in the collection and among the most consequential.
+
+The book's own running order for inauspicious occasions names it as the discourse for the second and third seven-day observances after a death.
+
+**Meaning and purpose**
+
+The formula is stated three times: whether Tathāgatas arise or do not arise, that element stands, the stableness of things, the lawfulness of things — that all formations are impermanent; that all formations are suffering; that all things are not-self.
+
+The opening clause is the whole point and is easy to read past. These three are not held to be true because a Buddha said them. They are said to stand whether or not anybody ever appears to notice, which makes the Buddha a discoverer rather than a legislator.
+
+The third of the three is deliberately wider than the other two. Formations are impermanent and suffering; but all things are not-self — a larger category, which the tradition takes to include what is unconditioned. Chanted at a death, that widening is the whole difference between consolation and this.
+
+---
+
+## บทขัด อะนัตตะลักขะณะสุตตัง
+
+*page 120*  
+`bot-khat-anattalakkhana-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The introductory verse to the discourse on the mark of not-self, called hard for beings to know.
+
+**When it is chanted.** Chanted immediately before the Anattalakkhaṇa Sutta, introducing it.
+
+**Historical background**
+
+The introduction says at the outset what the discourse is up against: that mark of not-self, hard for beings to know. No other prefatory verse in the book concedes difficulty in its first line.
+
+The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+**Meaning and purpose**
+
+What it promises is release from a particular thing, named twice: the right release from self-doctrine and from the perception of self. A doctrine and a perception are two different targets, and the verse keeps them apart.
+
+The audience is specified narrowly — those strivers who had already seen the truth, for further penetration. This was not a teaching for beginners, and the introduction does not pretend otherwise.
+
+Only in its last lines does it widen to the people chanting: for those wishing to practise the teaching, and for the good, that their aim be accomplished. The difficulty is stated first and the invitation second.
+
+---
+
+## อะนัตตะลักขะณะสุตตัง
+
+*pages 121–123 · chant 26 in the book*  
+`anattalakkhana-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The discourse on not-self, argued through each of the five aggregates in turn, at the end of which the five monks were liberated.
+
+**When it is chanted.** Chanted after its introductory verse, and at merit-making seven days after a death.
+
+**Historical background**
+
+Spoken at Benares in the Deer Park to the group of five — the same audience as the first sermon, and by tradition the second teaching given.
+
+The book's running order names it as the discourse for the seventh day after a death, which is when a family is at its rawest.
+
+**Meaning and purpose**
+
+The argument is made five times, once per aggregate, and it is an argument rather than an assertion. Form is not-self. If form were self, it would not lead to affliction, and it would be possible to say of form: let my form be thus, let it not be thus.
+
+The test offered is control. What is truly one's own would obey; the body does not obey, and neither do feeling, perception, formations or consciousness. Each is put through the same test and each fails it.
+
+What follows is not despair but disenchantment: seeing thus, the instructed noble disciple grows disenchanted with form, with feeling, and the rest. And the last line reports the outcome — while this discourse was being spoken, the minds of the five were freed. It is chanted at a death partly because it is the text in which somebody heard this and was finished with it.
+
+---
+
+## บทขัด มะหาสะมะยะสุตตัง — The Introductory Verses to the Mahāsamaya Sutta
+
+*page 175 · English is a working translation*  
+`bot-khat-mahasamaya-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The introductory verses to the discourse on the great gathering, on how rare the sight of a Buddha is.
+
+**When it is chanted.** Chanted immediately before the Mahāsamaya Sutta, introducing it.
+
+**Historical background**
+
+Nine units, and they open not with the gathering but with its occasion: hard to come by, and not often, is the sight of that Fully Awakened One, and hard the arising of the Teacher in a world grown blind.
+
+The rarity is what explains the crowd. The deities came because such a thing does not happen often.
+
+**Meaning and purpose**
+
+The setting is given exactly as the discourse gives it — among the Sakyans at Kapilavatthu, in the Great Wood — and the reason for coming is stated twice: to see that Awakened One, and to see the spotless Sangha of bhikkhus. The community is named alongside the teacher.
+
+From world-systems reckoned in ten ways the deities came. The introduction supplies the scale before the discourse begins its hundred and sixty-seven units of naming them.
+
+And the purpose given for reciting is unusual: for the gladdening of the hosts of devas. Not for the reciters' merit, and not for their protection — the chant is offered to the audience the discourse describes.
+
+---
+
+## มะหาสะมะยะสุตตัง — The Discourse on the Great Gathering
+
+*pages 175–182 · English is a working translation*  
+`mahasamaya-suttam`
+
+**Source (printed in the book):** ที. มหา. 10/287
+
+**What it is.** The great gathering: deities from ten world-systems assembling to see the Buddha and five hundred arahants, named host by host.
+
+**When it is chanted.** Chanted where the largest possible assembly is invoked; the longest discourse in the Thai-script collection.
+
+**Historical background**
+
+The book prints its own reference. At a hundred and sixty-seven units this is the longest chant in the Thai-script half, and the book prints it again in roman script in the appendix.
+
+It is a catalogue: deva after deva, host after host, named and placed. Read as a list it is impossible; chanted, the length is the content.
+
+**Meaning and purpose**
+
+The setting is given in a few lines and then the human scale is abandoned. The Blessed One among the Sakyans with five hundred bhikkhus, all arahants — and deities gathering from ten world-systems to see them.
+
+What follows is the naming. An hour of unfamiliar names delivered without pause builds a sense of scale that no summary can, and the room fills up as the chant goes on. That is the whole effect and it cannot be had by reading.
+
+The last verses turn to what Māra's army found when it came: from those free of lust it withdrew, and not one hair was stirred. All of them have won the battle, gone beyond fear, and are glorious. The enormous assembly turns out to have been gathered to witness people who could not be frightened.
+
+---
+
+## คิริมานันทะสุตตัง — The Discourse to Girimānanda
+
+*pages 183–186 · English is a working translation*  
+`girimananda-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The ten perceptions the Buddha gave Ānanda to recite to the sick Girimānanda, on hearing which his illness subsided.
+
+**When it is chanted.** Chanted for the sick, and among the longer discourses in the collection.
+
+**Historical background**
+
+Ānanda asks the Buddha to visit a gravely ill monk, and instead of going he sends a list. The discourse is what he sent.
+
+It belongs with the Bojjhaṅga discourses printed earlier in the book — the same use, the same reported outcome — but where those name seven factors, this names ten perceptions.
+
+**Meaning and purpose**
+
+Each perception is introduced with the same question and set in the same place: here a bhikkhu, gone to a forest, to the root of a tree, or to an empty hut, reflects. What is being described is a practice done alone and deliberately, not a mood.
+
+The ten run from impermanence and not-self through unattractiveness — reviewing this very body upward from the soles of the feet and downward from the crown — to danger, dispassion, cessation and the mindfulness of breathing. None of them is consoling and none mentions the illness.
+
+The frame is what makes the chant usable. If, Ānanda, you go to the bhikkhu Girimānanda and speak to him of these ten perceptions, it is possible that on hearing them his affliction may subside. It is possible — not it will. And the last line reports what happened when Ānanda did it.
+
+---
+
+## บทขัด โลกะธัมมะสุตตะ — The Introductory Verses to the Lokadhamma Sutta
+
+*page 187 · English is a working translation*  
+`bot-khat-lokadhamma-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The introductory verses to the discourse on the eight worldly conditions, on the states that turn about the world.
+
+**When it is chanted.** Chanted immediately before the Lokadhamma Sutta, introducing it.
+
+**Historical background**
+
+Longer than most of these introductions at eleven units, and more abstract. It spends its length defining the term rather than telling a story.
+
+โลกะธัมมะ are the worldly conditions — the eight things that happen to everybody and that the discourse is about.
+
+**Meaning and purpose**
+
+The definition is given as a circle, deliberately: for as long as the world goes on, so long do those states that travel with it turn about it; and the states that the world, in taking them up, turns about are called the worldly conditions.
+
+Then the pairing that makes them difficult: welcome to the world and unwelcome, making for liking and aversion. They come in opposites, and each opposite pulls.
+
+The purpose is stated as knowledge rather than escape — so that knowledge might range abroad and know things as they are. The discourse that follows does not promise the eight will stop coming.
+
+---
+
+## โลกะธัมมะสุตตัง — The Discourse on the Eight Worldly Conditions
+
+*pages 187–190 · English is a working translation*  
+`lokadhamma-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The eight worldly conditions — gain and loss, fame and obscurity, blame and praise, pleasure and pain — and what separates the noble disciple from the ordinary person.
+
+**When it is chanted.** Chanted after its introductory verses, among the discourses in the collection.
+
+**Historical background**
+
+The eight are named in the second unit and then never left. What the discourse actually examines is not the eight but the difference between two people to whom the same eight happen.
+
+It is one of the most quoted discourses in lay teaching, because the eight are the whole of what most people worry about.
+
+**Meaning and purpose**
+
+The eight come in four pairs and each pair is an opposite: gain and loss, fame and obscurity, blame and praise, pleasure and pain. Nobody is exempt from any of them.
+
+The question the discourse turns on is put directly: what then is the distinction, what the difference, what the distinguishing mark between the learned noble disciple and the unlearned ordinary person? Both have all eight. Something else must separate them.
+
+The answer is reflection, and it is almost disappointingly small. The ordinary person, when gain arises, does not reflect that this gain is impermanent and bound to change; the noble disciple does. Nothing is prevented and nothing is escaped. What differs is whether the eight are recognised for what they are while they are happening.
+
+---
+
 ## คาถาจุดเทียนชัย — The Verse for Lighting the Victory Candle
 
 *page 193 · English is a working translation*  
@@ -4263,6 +4668,141 @@ The first move is applied evenly, and the evenness is what gives it force. These
 The second move is stranger and more exact. The robes are not in themselves repulsive; yet on reaching this foul body they become exceedingly so. The repulsiveness is not in the object and not quite in the body either — it arises at the contact.
 
 None of this is disgust at food or clothing, which the text rules out by saying they are not repulsive in themselves. What is undercut is the sense of there being someone to whom nice things are happening, and the four requisites are the last place a monastic's preferences can quietly operate.
+
+---
+
+## ปัตติทานะคาถา
+
+*pages 210–211*  
+`pattidana-gatha-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The verses for sharing merit in the translated printing, from the devas of the monastery outward to every living thing.
+
+**When it is chanted.** Chanted at the end of the morning service; this is the translated printing.
+
+**Historical background**
+
+From page 193 the book prints its material a second time with a Thai rendering beneath each Pali line. This is one of those second printings. The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+ปัตติทานะ is the giving over of merit. The tradition holds that merit is not spent by being shared, so a service ends by handing on what it has just made.
+
+**Meaning and purpose**
+
+The first movement addresses the devas of the place — at the shrine, at the Bodhi enclosure, here and there — and what is offered them is the gift of Dhamma. Not goods and not praise: the merit of the service just completed.
+
+It then widens in a deliberate order, and the order is the argument: the monks by seniority, then helpers and donors and lay followers, then villages and lands and their rulers, then all living beings, then the four ways of being born. By the end nothing that lives is outside the sentence.
+
+The closing verses stop sharing and start blessing, asking for ordinary conditions rather than spiritual ones — rain in season, and rulers who protect their people as a mother and father cherish their own child. A service that closed on its own praise would finish facing inward; this one finishes facing the weather and the government.
+
+---
+
+## สัพพะปัตติทานะคาถา
+
+*page 212*  
+`sabbapattidana-gatha-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The verses sharing merit with all beings without exception, including those who will never know of it.
+
+**When it is chanted.** Chanted at the close of a service where merit is dedicated; this is the translated printing.
+
+**Historical background**
+
+From page 193 the book prints its material a second time with a Thai rendering beneath each Pali line. This is one of those second printings. The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+สัพพะปัตติทานะ is the giving of merit to all. Where the verses before it begin with the devas of one monastery, these begin with beings without end and without measure.
+
+**Meaning and purpose**
+
+The list is built to exclude nobody, and it says so twice over. Those dear and full of virtue, such as mother and father, seen or unseen; and others, neutral or hostile. The hostile are named and not qualified.
+
+Then the cosmology, which is there to close the last gaps: beings in the three planes, in the four kinds of birth, with five aggregates, with one, or with four. Every category the tradition recognises is listed so that none can be argued out.
+
+The last verse handles the obvious objection. Those who know of the merit shared may rejoice in it themselves; and for those who do not know, may the devas carry word to them. The dedication does not depend on the recipient hearing about it — and where hearing matters, arrangements are made.
+
+---
+
+## ปัฏฐะนะฐะปะนะคาถา
+
+*pages 213–214*  
+`patthana-thapana-gatha-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Verses setting out an aspiration: swift realisation if possible, and if not, a long list of conditions for the lives in between.
+
+**When it is chanted.** Chanted after the sharing of merit, where an aspiration is being made; this is the translated printing.
+
+**Historical background**
+
+From page 193 the book prints its material a second time with a Thai rendering beneath each Pali line. This is one of those second printings. The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+ปัฏฐะนะฐะปะนะ is the setting down of an aspiration. What makes these verses unusual is that they plan for the aspiration not being granted.
+
+**Meaning and purpose**
+
+The first request is the direct one: by whatever merit I have made, may I quickly realise the nine supramundane states. Two lines, and then the concession that shapes everything after it — but if I am still incapable of it and must wander on.
+
+What follows is a specification for that wandering, and it is extraordinarily detailed: not to fall into the eighteen states of incapacity, to avoid the five enmities, to delight in keeping the precepts, to be unattached to the five strands of sense pleasure. Somebody has thought carefully about what would make the next several lives usable.
+
+The last verse plans even for the worst case. If no Buddha arises and the good kamma is complete, then may I gain the awakening of a Paccekabuddha — an awakening with nobody to teach it to. The aspiration works its way down through every contingency and refuses to end in nothing.
+
+---
+
+## เขมาเขมะสะระณะทีปิกะคาถา
+
+*page 215*  
+`khemakhema-saranadipika-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Verses distinguishing the refuges that are not safe from the one that is, in the translated printing.
+
+**When it is chanted.** Chanted among the reflections; this is the translated printing.
+
+**Historical background**
+
+From page 193 the book prints its material a second time with a Thai rendering beneath each Pali line. This is one of those second printings. The book gives this printing no English title of its own, so the name used in the app is supplied.
+
+เขมาเขมะ pairs the safe with the unsafe, and the verses are built on that contrast. They are among the most quoted lines in the canon on what refuge means.
+
+**Meaning and purpose**
+
+The observation is made without contempt: driven by fear, many people take as refuge mountains, forests, parks and tree shrines. The motive is named first, and it is fear rather than foolishness.
+
+Then the verdict, stated flatly and three times over: that is no safe refuge, that is no supreme refuge; coming to that refuge one is not freed from all suffering. The claim is specific — not that such refuges do nothing, but that they do not free.
+
+What is offered instead is not a better shrine but a way of seeing. Whoever has gone to the Buddha, the Dhamma and the Sangha as refuge sees with right wisdom the four noble truths — and the truths are then listed. The refuge turns out to consist in understanding something, which is why the verses can say the mountains do not work.
+
+---
+
+## อะภิณหะปัจจะเวกขะณะ ๕
+
+*page 216*  
+`abhinha-paccavekkhana-plae`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The five constant reflections in the translated printing, closing with the instruction to reflect on them often.
+
+**When it is chanted.** Recited among the daily reflections by lay people and monastics alike; this is the translated printing.
+
+**Historical background**
+
+From page 193 the book prints its material a second time with a Thai rendering beneath each Pali line. This is one of those second printings. The book gives this printing no English title of its own, so the name used in the app is supplied. Its Thai title names the number — the five constant reflections.
+
+The book prints these five three times over. This printing is the briefest, giving the formulas without the discourse that explains them.
+
+**Meaning and purpose**
+
+The first three proceed by a single repeated construction: I am of the nature to grow old, and I have not gone beyond ageing. Then illness, then death. They are not presented as misfortunes that may arrive but as the ordinary constitution of a life.
+
+The fourth shifts from the body to everything around it — I must be parted from all that is dear and pleasing to me. It does not ask the reciter to love less; it asks them to hold what they love knowing that parting is already contained in the having.
+
+The fifth answers the first four. Where they describe what cannot be escaped, it names what remains one's own: whatever kamma I do, to that I shall be heir. And then the closing line, which is the instruction rather than the content — thus should we often reflect.
 
 ---
 
@@ -7140,18 +7680,8 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 
 ## Still to write
 
-43 chants, in book order:
+23 chants, in book order:
 
-- page 115 — บทขัด ภิกขุอะปะริหานิยะธัมมะสุตตัง (`bot-khat-bhikkhu-aparihaniyadhamma-suttam`)
-- pages 116–117 — ภิกขุอะปะริหานิยะธัมมะสุตตัง (`bhikkhu-aparihaniyadhamma-suttam`)
-- page 117 — บทขัด ปะหานะภาวะนาสุตตัง (`bot-khat-pahana-bhavana-suttam`)
-- pages 117–118 — ปะหานะภาวะนาสุตตัง (`pahana-bhavana-suttam`)
-- page 118 — บทขัด จะตุรัปปะมัญญาปาฐะ (`bot-khat-caturappamanna-patha`)
-- pages 118–119 — จะตุรัปปะมัญญาปาโฐ (`caturappamanna-patho`)
-- page 119 — บทขัด ธัมมะนิยามะสุตตัง (`bot-khat-dhammaniyama-suttam`)
-- pages 119–120 — ธัมมะนิยามะสุตตัง (`dhammaniyama-suttam`)
-- page 120 — บทขัด อะนัตตะลักขะณะสุตตัง (`bot-khat-anattalakkhana-suttam`)
-- pages 121–123 — อะนัตตะลักขะณะสุตตัง (`anattalakkhana-suttam`)
 - page 124 — บทขัด อาทิตตะปะริยายะสุตตัง (`bot-khat-adittapariyaya-suttam`)
 - pages 124–126 — อาทิตตะปะริยายะสุตตัง (`adittapariyaya-suttam`)
 - page 126 — บทขัด สะติปัฏฐานะปาฐะ (`bot-khat-satipatthana-patha`)
@@ -7175,13 +7705,3 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 - page 172 — อะภะยะปะริตตัง — The Fearlessness Protection (`abhaya-parittam-chet-tamnan`)
 - page 172 — เทวะตาอุยโยชะนะคาถา — The Verses for Dismissing the Devas (`devata-uyyojana-gatha-chet-tamnan`)
 - pages 172–174 — ชะยะปะริตตัง — The Victory Protection (`jaya-parittam-chet-tamnan`)
-- page 175 — บทขัด มะหาสะมะยะสุตตัง — The Introductory Verses to the Mahāsamaya Sutta (`bot-khat-mahasamaya-suttam`)
-- pages 175–182 — มะหาสะมะยะสุตตัง — The Discourse on the Great Gathering (`mahasamaya-suttam`)
-- pages 183–186 — คิริมานันทะสุตตัง — The Discourse to Girimānanda (`girimananda-suttam`)
-- page 187 — บทขัด โลกะธัมมะสุตตะ — The Introductory Verses to the Lokadhamma Sutta (`bot-khat-lokadhamma-suttam`)
-- pages 187–190 — โลกะธัมมะสุตตัง — The Discourse on the Eight Worldly Conditions (`lokadhamma-suttam`)
-- pages 210–211 — ปัตติทานะคาถา (`pattidana-gatha-plae`)
-- page 212 — สัพพะปัตติทานะคาถา (`sabbapattidana-gatha-plae`)
-- pages 213–214 — ปัฏฐะนะฐะปะนะคาถา (`patthana-thapana-gatha-plae`)
-- page 215 — เขมาเขมะสะระณะทีปิกะคาถา (`khemakhema-saranadipika-plae`)
-- page 216 — อะภิณหะปัจจะเวกขะณะ ๕ (`abhinha-paccavekkhana-plae`)
