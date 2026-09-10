@@ -1,5 +1,5 @@
-# ตรวจตารางสระ — Vowels & Syllables
-## Vowel table review · 2026-09-10 · ThaiBridge AI
+# ตรวจตารางสระและคำอ่าน — Vowels & readings
+## Vowel table and disputed readings · 2026-09-10 · ThaiBridge AI
 
 ตารางสระในแอปมี 32 แถว ผมตรวจพบว่าบางแถวยกตัวอย่างคำผิด คือคำที่ยกมาไม่มีสระนั้นอยู่ในคำเลย
 แก้ไปแล้ว 8 แถวที่มั่นใจ เพราะมีคำที่ใช้อยู่แล้วในแอป เหลืออีก 6 แถวที่ผมยังแก้ไม่ได้ครับ
@@ -67,6 +67,41 @@ itself barely occurs in real Thai.*
 - **ตอนนี้แอปยกตัวอย่างว่า / the app currently shows:** ฝุ่น (fùn) = dust
 - **ปัญหา:** ฝุ่น เป็น อุ บวก น ไม่มี ย เลย
   - *ฝุ่น is อุ plus น — there is no ย in it at all.*
+- แก้เป็น: __________________________________________
+
+---
+
+# ส่วนที่ 2 — คำอ่านที่เขียนไว้สองแบบ
+## Part 2 — four words written two different ways
+
+ผมตรวจคำอ่านทั้งแอปแล้วพบว่ามี 11 คำที่เขียนไว้สองแบบ แก้ไปได้ 6 คำ
+เพราะมีหลักฐานในแอปเองที่ชี้ขาดได้ อีก 1 คำ (ณ) ไม่ใช่ปัญหา เพราะเป็นทั้งพยัญชนะและคำ
+เหลือ 4 คำนี้ที่ต้องใช้หูฟัง ไม่ใช่กฎครับ
+
+*I checked every reading in the app and found eleven words written two ways.
+Six could be settled from evidence already in the app, and one (ณ) was never a
+conflict — it is both a letter and a word. These four need an ear, not a rule.*
+
+### 1. ศรัทธา — `sà-rát-taa` หรือ `sàt-taa`
+
+- **คำถาม:** ออกเสียง ร ด้วยไหมครับ เป็นสามพยางค์หรือสองพยางค์
+  - *Is the ร sounded? Three syllables or two?*
+- แก้เป็น: __________________________________________
+
+### 2 และ 3. สระ อัว — `สวดมนต์` และ `ดวงอาทิตย์`
+
+- **ตอนนี้เขียนไว้ว่า:** สวดมนต์ = `sùat-mon` / `sùuat mon`  ·  ดวงอาทิตย์ = `duaŋ` / `duuaŋ`
+- **คำถาม:** สระ อัว ควรเขียนเป็น `ua` หรือ `uua` ครับ
+  ในตารางสระเขียนว่า `ua` แต่ตัวอย่างในแอปเขียน `dtuua` — ขัดกันเอง
+  ตอบข้อนี้ข้อเดียวใช้ได้กับทุกคำที่มีสระ อัว เลยครับ
+  - *Should อัว be written `ua` or `uua`? The vowel table says `ua` but the
+    examples write `dtuua`. One answer settles every อัว word at once.*
+- แก้เป็น: __________________________________________
+
+### 4. เสวย — `sà-wəəi` หรือ `sà-wə̌əi`
+
+- **คำถาม:** พยางค์หลังเป็นเสียงสามัญหรือเสียงจัตวาครับ (คำราชาศัพท์)
+  - *Is the second syllable mid tone or rising? (royal vocabulary)*
 - แก้เป็น: __________________________________________
 
 ---
