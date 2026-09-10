@@ -739,6 +739,10 @@ SUBSCRIPTION_TIERS = {
     'basic': {
         'name': 'Thai Reader (Basic)',
         'price': 9.99,
+        # Annual is priced at ten months, so a year up front saves two. It is a
+        # separate number rather than a computed discount because the round
+        # figure is the offer — £99 reads as a price, £99.90 reads as arithmetic.
+        'price_year': 99.00,
         'features': [
             '✓ Everything in FREE',
             '✓ Vowels, syllables & Read & Write Script',
@@ -756,6 +760,7 @@ SUBSCRIPTION_TIERS = {
     'pro': {
         'name': 'Thai Master (Pro)',
         'price': 19.99,
+        'price_year': 199.00,
         'features': [
             '✓ Everything in Thai Reader',
             f'✓ Unlimited AI chat — every mode, fair use up to {PRO_FAIR_USE_DAILY}/day',
@@ -7765,6 +7770,41 @@ def signup():
         'redirect': '/'
     })
 
+# ── Billing period ───────────────────────────────────────────────────────
+#
+# A tier can be bought by the month or by the year. The period is carried in the
+# query string (?period=year) rather than in the URL path, because it is not a
+# different product — it is the same tier billed on a different clock, and the
+# webhook does not care which one was chosen. Stripe reports the real
+# current_period_end either way, so nothing downstream needs to know.
+#
+# Anything that is not exactly "year" is treated as monthly. That keeps a typo,
+# a stale bookmark or a hand-edited URL on the cheaper-to-commit-to option
+# rather than silently charging someone for twelve months.
+BILLING_PERIODS = ('month', 'year')
+
+
+def _billing_period(default='month'):
+    """Read the billing period from the request. Only 'year' opts in."""
+    return 'year' if request.args.get('period') == 'year' else default
+
+
+def _tier_amount(tier_info, period):
+    """What this tier costs for one billing period, in pounds.
+
+    Falls back to the monthly price if a tier has no annual price set, so adding
+    a new tier without one degrades to monthly rather than charging £0.
+    """
+    if period == 'year':
+        return tier_info.get('price_year') or tier_info['price'] * 12
+    return tier_info['price']
+
+
+def _period_words(period):
+    """(noun, adjective) for a billing period, for use in copy and Stripe."""
+    return ('year', 'annual') if period == 'year' else ('month', 'monthly')
+
+
 @app.route('/subscribe/<tier>')
 @login_required
 def subscribe(tier):
@@ -7789,10 +7829,16 @@ def subscribe(tier):
                                tier_info=SUBSCRIPTION_TIERS['free'],
                                expires=None)
 
-    # Paid tier — let the user pick how they want to pay.
+    # Paid tier — let the user pick the billing period and how they want to pay.
+    period = _billing_period()
+    tier_info = SUBSCRIPTION_TIERS[tier]
     return render_template('subscribe_choose.html',
                            tier=tier,
-                           tier_info=SUBSCRIPTION_TIERS[tier],
+                           tier_info=tier_info,
+                           period=period,
+                           amount=_tier_amount(tier_info, period),
+                           monthly_amount=tier_info['price'],
+                           yearly_amount=_tier_amount(tier_info, 'year'),
                            stripe_enabled=bool(stripe.api_key),
                            paypal_enabled=paypal_configured())
 
@@ -7814,22 +7860,27 @@ def subscribe_stripe(tier):
 
     tier_info = SUBSCRIPTION_TIERS[tier]
     base_url = request.url_root.rstrip('/')
+    period = _billing_period()
+    amount = _tier_amount(tier_info, period)
+    period_noun, period_adj = _period_words(period)
 
     # Identity tags so the webhook (Phase 3) knows WHOSE payment this is.
     # We attach the user id in three places: on the Checkout Session (metadata +
     # client_reference_id) and on the Subscription itself (subscription_data),
     # so later renewal/cancellation events also carry it.
-    user_meta = {'tier': tier, 'user_id': str(current_user.id)}
+    # The period rides along in the metadata purely so an invoice can be read
+    # back later and understood; nothing keys off it.
+    user_meta = {'tier': tier, 'user_id': str(current_user.id), 'period': period}
 
     checkout_kwargs = dict(
         mode='subscription',
         line_items=[{
             'price_data': {
                 'currency': 'gbp',
-                'unit_amount': int(round(tier_info['price'] * 100)),  # pence
-                'recurring': {'interval': 'month'},
+                'unit_amount': int(round(amount * 100)),  # pence
+                'recurring': {'interval': period_noun},
                 'product_data': {
-                    'name': f"ThaiBridge AI — {tier_info['name']}",
+                    'name': f"ThaiBridge AI — {tier_info['name']} ({period_adj})",
                     'tax_code': TAX_CODE_COURSE,
                 },
             },
@@ -8018,6 +8069,9 @@ def subscribe_paypal(tier):
 
     tier_info = SUBSCRIPTION_TIERS[tier]
     base_url = request.url_root.rstrip('/')
+    period = _billing_period()
+    amount = _tier_amount(tier_info, period)
+    period_noun, period_adj = _period_words(period)
 
     try:
         token = _paypal_access_token()
@@ -8030,9 +8084,9 @@ def subscribe_paypal(tier):
                 "purchase_units": [{
                     "amount": {
                         "currency_code": "GBP",
-                        "value": f"{tier_info['price']:.2f}",
+                        "value": f"{amount:.2f}",
                     },
-                    "description": f"ThaiBridge AI — {tier_info['name']} (monthly)",
+                    "description": f"ThaiBridge AI — {tier_info['name']} ({period_adj})",
                     # Tie the order to the logged-in user (and tier) so the
                     # return handler can update the right account.
                     "custom_id": f"{current_user.id}:{tier}",
@@ -8056,6 +8110,9 @@ def subscribe_paypal(tier):
     # Remember which tier this order is for; we re-check the payment with PayPal
     # before trusting it on the way back.
     session['pending_paypal_tier'] = tier
+    # Stored alongside the tier because the PayPal return handler has no query
+    # string of its own to read the period back out of.
+    session['pending_paypal_period'] = period
     session.modified = True
 
     approve_url = next(
@@ -8285,14 +8342,21 @@ def paypal_success():
     if result.get('status') != 'COMPLETED':
         return redirect('/subscribe/cancel')
 
-    # PayPal here is a one-off 30-day access grant (this demo doesn't use PayPal's
+    # PayPal here is a one-off access grant (this demo doesn't use PayPal's
     # recurring billing, so there's no webhook to renew it). We record it on the
     # user's account — the database, not the cookie, is the source of truth.
-    expires_dt = utcnow() + timedelta(days=30)
+    #
+    # The length has to match what they were actually charged: the period was
+    # stashed in the session when the order was created, because PayPal sends
+    # them back to a bare return_url with no query string of ours on it. If it
+    # has gone missing, fall back to a month — the cheaper of the two to honour.
+    paid_period = session.get('pending_paypal_period', 'month')
+    expires_dt = utcnow() + timedelta(days=365 if paid_period == 'year' else 30)
     _apply_subscription(current_user, tier=tier, status='active',
                         current_period_end=expires_dt)
     _mirror_tier_to_session(current_user)
     session.pop('pending_paypal_tier', None)
+    session.pop('pending_paypal_period', None)
     session.modified = True
 
     return render_template('subscription_success.html',

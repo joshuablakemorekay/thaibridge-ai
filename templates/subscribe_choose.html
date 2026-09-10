@@ -7,9 +7,36 @@
     <div class="choose-container">
         <h1>Almost there 🙏</h1>
         <p class="choose-sub">
-            You're subscribing to <strong>{{ tier_info.name }}</strong> —
-            <strong>£{{ tier_info.price }}/month</strong>.
-            Pick how you'd like to pay:
+            You're subscribing to <strong>{{ tier_info.name }}</strong>.
+            Pick how often you'd like to be billed, then how you'd like to pay:
+        </p>
+
+        {# Billing period. Two plain links rather than a JS toggle: the period is
+           already a query-string round trip to the server, so a link is the whole
+           mechanism and it still works with scripting off. #}
+        <div class="period-options" role="group" aria-label="Billing period">
+            <a href="/subscribe/{{ tier }}?period=month"
+               class="period-card {% if period != 'year' %}is-active{% endif %}"
+               {% if period != 'year' %}aria-current="true"{% endif %}>
+                <span class="period-name">Monthly</span>
+                <span class="period-price">£{{ '%.2f'|format(monthly_amount) }}</span>
+                <span class="period-unit">per month</span>
+            </a>
+            <a href="/subscribe/{{ tier }}?period=year"
+               class="period-card {% if period == 'year' %}is-active{% endif %}"
+               {% if period == 'year' %}aria-current="true"{% endif %}>
+                <span class="period-badge">2 months free</span>
+                <span class="period-name">Yearly</span>
+                <span class="period-price">£{{ '%.2f'|format(yearly_amount) }}</span>
+                <span class="period-unit">
+                    per year — works out at £{{ '%.2f'|format(yearly_amount / 12) }}/month
+                </span>
+            </a>
+        </div>
+
+        <p class="choose-total">
+            Paying <strong>£{{ '%.2f'|format(amount) }}</strong>
+            {% if period == 'year' %}a year{% else %}a month{% endif %}.
         </p>
 
         <div class="pay-options">
@@ -19,7 +46,7 @@
                 <h3>Card (Stripe)</h3>
                 <p>Pay by debit or credit card via Stripe.</p>
                 {% if stripe_enabled %}
-                <a href="/subscribe/{{ tier }}/stripe" class="btn btn-stripe">Pay with Stripe</a>
+                <a href="/subscribe/{{ tier }}/stripe?period={{ period }}" class="btn btn-stripe">Pay with Stripe</a>
                 {% else %}
                 <button class="btn btn-disabled" disabled>Stripe not set up</button>
                 <p class="pay-note">Add <code>STRIPE_SECRET_KEY</code> to <code>.env</code></p>
@@ -32,7 +59,7 @@
                 <h3>PayPal</h3>
                 <p>Pay with your PayPal balance or a linked account.</p>
                 {% if paypal_enabled %}
-                <a href="/subscribe/{{ tier }}/paypal" class="btn btn-paypal">Pay with PayPal</a>
+                <a href="/subscribe/{{ tier }}/paypal?period={{ period }}" class="btn btn-paypal">Pay with PayPal</a>
                 {% else %}
                 <button class="btn btn-disabled" disabled>PayPal not set up</button>
                 <p class="pay-note">Add <code>PAYPAL_CLIENT_ID</code> + <code>PAYPAL_CLIENT_SECRET</code> to <code>.env</code></p>
@@ -102,6 +129,51 @@
         border-radius: 8px;
     }
     .info-note p { margin: 0; font-size: 0.9rem; color: #666; }
+    .period-options {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+    }
+    .period-card {
+        position: relative;
+        flex: 1 1 200px;
+        max-width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        padding: 1.25rem 1rem;
+        border: 2px solid #eee;
+        border-radius: 16px;
+        background: #fafafa;
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.2s ease;
+    }
+    .period-card:hover { border-color: #ccc; transform: translateY(-2px); }
+    .period-card.is-active {
+        border-color: var(--royal-purple);
+        background: rgba(75, 0, 130, 0.05);
+        box-shadow: 0 6px 18px rgba(75, 0, 130, 0.15);
+    }
+    .period-name { font-weight: bold; color: var(--royal-purple); }
+    .period-price { font-size: 1.8rem; font-weight: bold; color: #333; }
+    .period-unit { font-size: 0.85rem; color: #777; }
+    .period-badge {
+        position: absolute;
+        top: -0.7rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--monk-saffron, #ff9933);
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: bold;
+        padding: 0.2rem 0.7rem;
+        border-radius: 999px;
+        white-space: nowrap;
+    }
+    .choose-total { color: #555; margin-bottom: 2rem; }
     @media (max-width: 600px) {
         .choose-container { padding: 2rem 1rem; }
     }

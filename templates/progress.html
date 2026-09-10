@@ -183,6 +183,15 @@
                         £{{ tier_info.price }}/month
                     {% endif %}
                 </p>
+                {# The annual price is shown here but not chosen here — picking
+                   the period happens on the next page, where it sits next to the
+                   amount actually being charged. #}
+                {% if tier_info.price_year %}
+                <p class="price-year">
+                    or <strong>£{{ '%.2f'|format(tier_info.price_year) }}/year</strong>
+                    <span class="price-save">save 2 months</span>
+                </p>
+                {% endif %}
                 <ul class="features">
                     {% for feature in tier_info.features %}
                     <li>{{ feature }}</li>
@@ -381,6 +390,22 @@
         box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
     }
     
+    .price-year {
+        margin: -0.4rem 0 0.6rem;
+        font-size: 0.9rem;
+        color: #666;
+        text-align: center;
+    }
+    .price-save {
+        display: inline-block;
+        margin-left: 0.3rem;
+        padding: 0.1rem 0.5rem;
+        border-radius: 999px;
+        background: rgba(255, 153, 51, 0.18);
+        color: #a05a00;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
     .price {
         font-size: 2.5rem;
         color: var(--royal-purple);
