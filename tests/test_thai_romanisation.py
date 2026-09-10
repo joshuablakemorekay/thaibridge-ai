@@ -195,3 +195,100 @@ def test_rows_awaiting_the_teacher_are_still_actually_broken(number):
         f'row {number} ({row["thai"]}) now looks correct — remove {number} from '
         f'AWAITING_TEACHER so it is checked from here on'
     )
+
+
+# ── One word, one reading ────────────────────────────────────────────────
+#
+# The audit's most productive check, made permanent. It is what found ตรง
+# written three ways (dtroŋ, troŋ, droŋ), ห้อง long in three places and short
+# in two, and a missing tone on ขอโทษ. None of those are `ng`, so the check
+# above would never have caught them, and without this one today's fixes are
+# free to drift straight back.
+#
+# The imported dictionary is excluded. Its 4,894 entries come from a third
+# party and carry their own romanisation — kh, a superscript ʰ, an IPA length
+# mark — so measuring them against house style produces 131 findings about
+# somebody else's transcription rather than about this app's teaching.
+IMPORTED_CORPORA = {"YAITRON_ENTRIES"}
+
+# ณ is a letter AND a word. 'n' is the consonant's sound on the alphabet
+# chart; 'ná' is the preposition meaning "at". One glyph, two different
+# things, so this was never a disagreement.
+NOT_ONE_WORD = {"ณ"}
+
+# Four readings that evidence in this repo cannot settle — they need an ear,
+# not a rule. Sent to the teacher alongside the vowel rows.
+#   ศรัทธา    sà-rát-taa / sàt-taa   — is the ร sounded?
+#   สวดมนต์   sùat-mon / sùuat mon   — and ดวงอาทิตย์ duaŋ / duuaŋ: this app
+#   ดวงอาทิตย์                         writes อัว as 'ua' in the vowel table but
+#                                     'uua' in its examples, and that has to be
+#                                     decided once for every word at a time.
+#   เสวย      sà-wəəi / sà-wə̌əi      — royal vocabulary, irregular tone.
+AWAITING_TEACHER_WORDS = {"ศรัทธา", "สวดมนต์", "ดวงอาทิตย์", "เสวย"}
+
+
+def readings_by_word():
+    """Every Thai string mapped to the set of readings given for it."""
+    found = {}
+    def collect(node):
+        if isinstance(node, dict):
+            thai, paiboon = node.get("thai"), node.get("paiboon")
+            if (isinstance(thai, str) and isinstance(paiboon, str)
+                    and thai.strip() and paiboon.strip()):
+                found.setdefault(thai, set()).add(paiboon)
+            for value in node.values():
+                collect(value)
+        elif isinstance(node, (list, tuple)):
+            for item in node:
+                collect(item)
+
+    for module in (app, survival, thai_reading, thai_registers, register_levels):
+        for name in dir(module):
+            if name.isupper() and name not in IMPORTED_CORPORA:
+                collect(getattr(module, name))
+    for path in sorted(glob.glob(os.path.join(REPO, "content", "**", "*.json"),
+                                 recursive=True)):
+        with open(path, encoding="utf-8") as fh:
+            collect(json.load(fh))
+    return found
+
+
+def disagreements(words):
+    """Words whose readings differ by more than hyphenation.
+
+    Hyphen and space are treated as the same character throughout, because
+    whether a hyphen joins syllables inside a word is an open style question
+    here and not a correctness one. Twelve words differ only that way.
+    """
+    out = {}
+    for thai, readings in words.items():
+        if thai in NOT_ONE_WORD:
+            continue
+        bare = {r.replace("-", " ").strip() for r in readings}
+        if len(bare) > 1:
+            out[thai] = sorted(readings)
+    return out
+
+
+ALL_DISAGREEMENTS = disagreements(readings_by_word())
+
+
+def test_each_word_has_one_reading():
+    """ตรง was written dtroŋ, troŋ and droŋ in three different places, and a
+    learner meeting two of them has no way to know which to trust."""
+    faults = {k: v for k, v in ALL_DISAGREEMENTS.items()
+              if k not in AWAITING_TEACHER_WORDS}
+    assert not faults, (
+        f"{len(faults)} word(s) romanised more than one way:\n  "
+        + "\n  ".join(f"{k} -> {v}" for k, v in sorted(faults.items()))
+    )
+
+
+@pytest.mark.parametrize("word", sorted(AWAITING_TEACHER_WORDS))
+def test_words_awaiting_the_teacher_still_disagree(word):
+    """Same purpose as the vowel-row version: if one of these is settled and
+    left on the list, it silently stops being checked from then on."""
+    assert word in ALL_DISAGREEMENTS, (
+        f"{word} now has one reading — remove it from AWAITING_TEACHER_WORDS "
+        f"so it is checked from here on"
+    )
