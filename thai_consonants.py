@@ -96,18 +96,18 @@ CONSONANTS = [
     _c('ฃ', 'ขอ ขวด',   'kɔ̌ɔ kùat',     'bottle',      'k',  CLASS_HIGH,   'khor-khuat',  '🍾', obsolete=True, emoji_approx=True),
     _c('ค', 'คอ ควาย',  'kɔɔ kwaai',    'buffalo',     'k',  CLASS_LOW,    'khor-khwai',  '🐃'),
     _c('ฅ', 'คอ คน',    'kɔɔ kon',      'person',      'k',  CLASS_LOW,    'khor-khon',   '🧑', obsolete=True),
-    _c('ฆ', 'ฆอ ระฆัง',  'kɔɔ rá-kang',  'bell',        'k',  CLASS_LOW,    'khor-rakhang','🔔'),
-    _c('ง', 'งอ งู',     'ngɔɔ nguu',    'snake',       'ng', CLASS_LOW,    'ngor-ngu',    '🐍'),
+    _c('ฆ', 'ฆอ ระฆัง',  'kɔɔ rá-kaŋ',  'bell',        'k',  CLASS_LOW,    'khor-rakhang','🔔'),
+    _c('ง', 'งอ งู',     'ŋɔɔ ŋuu',    'snake',       'ng', CLASS_LOW,    'ngor-ngu',    '🐍'),
     _c('จ', 'จอ จาน',   'jɔɔ jaan',     'plate',       'j',  CLASS_MIDDLE, 'chor-chan',   '🍽️'),
     # ฉิ่ง are small hand cymbals. Unicode has NO cymbals character, and a drum
     # is a different instrument, not a near miss — so the chart shows the drawn
     # picture here. 🥁 survives only as the fallback if that file goes missing.
-    _c('ฉ', 'ฉอ ฉิ่ง',    'chɔ̌ɔ chìng',   'cymbals',     'ch', CLASS_HIGH,   'chor-ching',  '🥁',
+    _c('ฉ', 'ฉอ ฉิ่ง',    'chɔ̌ɔ chìŋ',   'cymbals',     'ch', CLASS_HIGH,   'chor-ching',  '🥁',
        emoji_approx=True, no_emoji=True),
-    _c('ช', 'ชอ ช้าง',   'chɔɔ cháang',  'elephant',    'ch', CLASS_LOW,    'chor-chang',  '🐘'),
+    _c('ช', 'ชอ ช้าง',   'chɔɔ cháaŋ',  'elephant',    'ch', CLASS_LOW,    'chor-chang',  '🐘'),
     _c('ซ', 'ซอ โซ่',    'sɔɔ sôo',      'chain',       's',  CLASS_LOW,    'sor-so',      '⛓️'),
     _c('ฌ', 'ฌอ เฌอ',  'chɔɔ chəə',    'tree',        'ch', CLASS_LOW,    'chor-choe',   '🌳'),
-    _c('ญ', 'ญอ หญิง',  'yɔɔ yǐng',     'woman',       'y',  CLASS_LOW,    'yor-ying',    '👩'),
+    _c('ญ', 'ญอ หญิง',  'yɔɔ yǐŋ',     'woman',       'y',  CLASS_LOW,    'yor-ying',    '👩'),
     # A ชฎา is the tall ceremonial headdress — a crown reads it well enough.
     _c('ฎ', 'ฎอ ชฎา',   'dɔɔ chá-daa',  'headdress',   'd',  CLASS_MIDDLE, 'dor-chada',   '👑'),
     # A ปฏัก is a cattle goad; a trident is the nearest pointed-stick glyph.
@@ -123,9 +123,9 @@ CONSONANTS = [
        speak='นอ เนน', emoji_approx=True),
     _c('ด', 'ดอ เด็ก',   'dɔɔ dèk',      'child',       'd',  CLASS_MIDDLE, 'dor-dek',     '🧒'),
     _c('ต', 'ตอ เต่า',   'dtɔɔ dtào',    'turtle',      'dt', CLASS_MIDDLE, 'tor-tao',     '🐢'),
-    _c('ถ', 'ถอ ถุง',    'tɔ̌ɔ tǔng',     'bag',         't',  CLASS_HIGH,   'thor-thung',  '👝'),
+    _c('ถ', 'ถอ ถุง',    'tɔ̌ɔ tǔŋ',     'bag',         't',  CLASS_HIGH,   'thor-thung',  '👝'),
     _c('ท', 'ทอ ทหาร',  'tɔɔ tá-hǎan',  'soldier',     't',  CLASS_LOW,    'thor-thahan', '🪖'),
-    _c('ธ', 'ธอ ธง',     'tɔɔ tong',     'flag',        't',  CLASS_LOW,    'thor-thong',  '🚩'),
+    _c('ธ', 'ธอ ธง',     'tɔɔ toŋ',     'flag',        't',  CLASS_LOW,    'thor-thong',  '🚩'),
     _c('น', 'นอ หนู',    'nɔɔ nǔu',      'mouse',       'n',  CLASS_LOW,    'nor-nu',      '🐭'),
     _c('บ', 'บอ ใบไม้',  'bɔɔ bai-máai', 'leaf',        'b',  CLASS_MIDDLE, 'bor-baimai',  '🍃'),
     _c('ป', 'ปอ ปลา',   'bpɔɔ bplaa',   'fish',        'bp', CLASS_MIDDLE, 'por-pla',     '🐟'),
@@ -133,7 +133,7 @@ CONSONANTS = [
     # ("pɔ̌ɔ ɔɔ pʉ̂ng"). พอ IS a word, so it comes out as one syllable. The
     # trade-off, chosen deliberately by Josh after listening: พอ is mid tone,
     # not the rising tone of ผอ. Slightly flat beats a whole spare syllable.
-    _c('ผ', 'ผอ ผึ้ง',    'pɔ̌ɔ pʉ̂ng',     'bee',         'p',  CLASS_HIGH,   'phor-phueng', '🐝',
+    _c('ผ', 'ผอ ผึ้ง',    'pɔ̌ɔ pʉ̂ŋ',     'bee',         'p',  CLASS_HIGH,   'phor-phueng', '🐝',
        speak='พอ ผึ้ง'),
     # ฝา is a pot lid. No lid emoji exists, so the pot itself stands in.
     _c('ฝ', 'ฝอ ฝา',     'fɔ̌ɔ fǎa',      'lid',         'f',  CLASS_HIGH,   'for-fa',      '🍲', emoji_approx=True),
@@ -149,7 +149,7 @@ CONSONANTS = [
     _c('ย', 'ยอ ยักษ์',   'yɔɔ yák',      'giant',       'y',  CLASS_LOW,    'yor-yak',     '👹',
        speak='ยอ ยัก'),
     _c('ร', 'รอ เรือ',    'rɔɔ rʉa',      'boat',        'r',  CLASS_LOW,    'ror-ruea',    '🛶'),
-    _c('ล', 'ลอ ลิง',    'lɔɔ ling',     'monkey',      'l',  CLASS_LOW,    'lor-ling',    '🐒'),
+    _c('ล', 'ลอ ลิง',    'lɔɔ liŋ',     'monkey',      'l',  CLASS_LOW,    'lor-ling',    '🐒'),
     _c('ว', 'วอ แหวน',  'wɔɔ wɛ̌ɛn',     'ring',        'w',  CLASS_LOW,    'wor-waen',    '💍'),
     # A ศาลา is an open-sided pavilion; the temple glyph is the nearest thing.
     _c('ศ', 'ศอ ศาลา',  'sɔ̌ɔ sǎa-laa',  'pavilion',    's',  CLASS_HIGH,   'sor-sala',    '🛕', emoji_approx=True),
@@ -160,7 +160,7 @@ CONSONANTS = [
     _c('ห', 'หอ หีบ',    'hɔ̌ɔ hìip',     'chest',       'h',  CLASS_HIGH,   'hor-hip',     '🧰', emoji_approx=True),
     _c('ฬ', 'ฬอ จุฬา',   'lɔɔ jù-laa',   'kite',        'l',  CLASS_LOW,    'lor-chula',   '🪁'),
     # อ่าง is a washing basin; the bucket is the nearest vessel.
-    _c('อ', 'ออ อ่าง',   'ɔɔ àang',      'basin',       '-',  CLASS_MIDDLE, 'or-ang',      '🪣', emoji_approx=True),
+    _c('อ', 'ออ อ่าง',   'ɔɔ àaŋ',      'basin',       '-',  CLASS_MIDDLE, 'or-ang',      '🪣', emoji_approx=True),
     _c('ฮ', 'ฮอ นกฮูก',  'hɔɔ nók-hûuk', 'owl',         'h',  CLASS_LOW,    'hor-nokhuk',  '🦉'),
 ]
 

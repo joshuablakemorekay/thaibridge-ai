@@ -71,7 +71,7 @@ REGISTER_LEVELS = {
             },
             {
                 'thai': 'พระฉันข้าวแล้วหรือยังครับ',
-                'paiboon': 'prá chǎn kâao lɛ́ɛo rʉ̌ʉ yang kráp',
+                'paiboon': 'prá chǎn kâao lɛ́ɛo rʉ̌ʉ yaŋ kráp',
                 'english': 'Has the venerable eaten yet?',
                 'note': 'ฉัน is the monastic word for eating. กิน would be wrong here.',
             },
@@ -113,7 +113,7 @@ REGISTER_LEVELS = {
         'examples': [
             {
                 'thai': 'ทรงพระเจริญ',
-                'paiboon': 'song prá jà-rəən',
+                'paiboon': 'soŋ prá jà-rəən',
                 'english': 'Long may he/she live.',
                 'note': 'The standard acclamation. ทรง marks the verb that follows as royal.',
             },
@@ -173,13 +173,13 @@ REGISTER_LEVELS = {
             },
             {
                 'thai': 'อนึ่ง',
-                'paiboon': 'à-nʉ̀ng',
+                'paiboon': 'à-nʉ̀ŋ',
                 'english': 'furthermore; moreover',
                 'note': 'Opens an additional clause in legal and official writing.',
             },
             {
                 'thai': 'ข้า / เอ็ง',
-                'paiboon': 'kâa / eng',
+                'paiboon': 'kâa / eŋ',
                 'english': 'I / you (archaic)',
                 'note': 'Heard constantly in historical drama, never in a modern conversation.',
             },
@@ -226,7 +226,7 @@ REGISTER_LEVELS = {
             },
             {
                 'thai': 'ดวงใจ',
-                'paiboon': 'duang-jai',
+                'paiboon': 'duaŋ-jai',
                 'english': 'beloved; heart',
                 'note': 'Literally "orb of the heart" — everywhere in love songs.',
             },
@@ -403,7 +403,7 @@ REGISTER_LEVELS = {
             },
             {
                 'thai': 'กินข้าวยัง',
-                'paiboon': 'gin kâao yang',
+                'paiboon': 'gin kâao yaŋ',
                 'english': 'Eaten yet?',
                 'polite': 'ทานข้าวหรือยังครับ',
             },
@@ -475,7 +475,7 @@ REGISTER_LEVELS = {
             },
             {
                 'thai': 'มึง',
-                'paiboon': 'mʉng',
+                'paiboon': 'mʉŋ',
                 'english': 'you (vulgar)',
                 'note': 'The partner of กู. The two travel together.',
             },

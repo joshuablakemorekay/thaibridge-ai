@@ -122,10 +122,10 @@ VARIANTS = {
     },
     'สวัสดีค่ะ ดิฉันชื่อนิดา ยินดีที่ได้รู้จักค่ะ': {
         'neutral': {'thai': 'สวัสดีค่ะ ชื่อนิดาค่ะ ยินดีที่ได้รู้จักนะคะ',
-                    'paiboon': 'sà-wàt-dii kâ, chûu Nida kâ, yin-dii tîi dâi rúu-jàk ná ká',
+                    'paiboon': 'sà-wàt-dii kâ, chʉ̂ʉ Nida kâ, yin-dii tîi dâi rúu-jàk ná ká',
                     'note': 'Pronoun dropped; นะ before คะ makes it warmer.'},
         'casual': {'thai': 'หวัดดี เราชื่อนิดา ยินดีที่ได้รู้จักนะ',
-                   'paiboon': 'wàt-dii, rao chûu Nida, yin-dii tîi dâi rúu-jàk ná',
+                   'paiboon': 'wàt-dii, rao chʉ̂ʉ Nida, yin-dii tîi dâi rúu-jàk ná',
                    'note': 'เรา is the friendly "I" a lot of women use with people their own age.'},
     },
     'ยินดีที่ได้รู้จักเช่นกันครับ คุณมาจากไหนครับ': {
@@ -577,8 +577,8 @@ VARIANTS = {
     # Questions — wh-
     # ---------------------------------------------------------------
     'คุณชื่ออะไรครับ': {
-        'neutral': {'thai': 'ชื่ออะไรครับ', 'paiboon': 'chûu à-rai kráp'},
-        'casual': {'thai': 'ชื่ออะไร', 'paiboon': 'chûu à-rai'},
+        'neutral': {'thai': 'ชื่ออะไรครับ', 'paiboon': 'chʉ̂ʉ à-rai kráp'},
+        'casual': {'thai': 'ชื่ออะไร', 'paiboon': 'chʉ̂ʉ à-rai'},
     },
     'คุณไปไหนครับ': {
         'neutral': {'thai': 'ไปไหนครับ', 'paiboon': 'bpai nǎi kráp'},
@@ -592,8 +592,8 @@ VARIANTS = {
                    'note': 'ล่ะ stops the bare question sounding like a challenge.'},
     },
     'คุณชื่ออะไรคะ': {
-        'neutral': {'thai': 'ชื่ออะไรคะ', 'paiboon': 'chûu à-rai ká'},
-        'casual': {'thai': 'ชื่ออะไร', 'paiboon': 'chûu à-rai'},
+        'neutral': {'thai': 'ชื่ออะไรคะ', 'paiboon': 'chʉ̂ʉ à-rai ká'},
+        'casual': {'thai': 'ชื่ออะไร', 'paiboon': 'chʉ̂ʉ à-rai'},
     },
     'คุณไปไหนคะ': {
         'neutral': {'thai': 'ไปไหนคะ', 'paiboon': 'bpai nǎi ká'},

@@ -74,8 +74,8 @@ VOWEL_POSITIONS = [
         'syllables': [
             _syl('ไป', 'bpai', 'to go', 'ป', 'ไ' + '◌',
                  'You SEE ไ first, but you SAY ป (bp) first: "bpai", not "ai-bp".'),
-            _syl('เธอ', 'thəə', 'you (friendly)', 'ธ', 'เ' + '◌' + 'อ',
-                 'เ is written before ธ, but ธ (th) is spoken first: "thəə".'),
+            _syl('เธอ', 'təə', 'you (friendly)', 'ธ', 'เ' + '◌' + 'อ',
+                 'เ is written before ธ, but ธ (t) is spoken first: "təə".'),
             _syl('โต', 'dtoo', 'big / to grow', 'ต', 'โ' + '◌',
                  'โ sits on the left; ต (dt) is still said first: "dtoo".'),
         ],
@@ -102,8 +102,8 @@ VOWEL_POSITIONS = [
         'syllables': [
             _syl('หมู', 'mǔu', 'pig', 'ม', '◌' + 'ู',
                  'Read ม (m) then the ู (uu) hanging below: "mǔu". (ห is a silent tone helper.)'),
-            _syl('ครู', 'khruu', 'teacher', 'ค', '◌' + 'ู',
-                 'ค+ร blend then the ู (uu) below: "khruu".'),
+            _syl('ครู', 'kruu', 'teacher', 'ค', '◌' + 'ู',
+                 'ค+ร blend then the ู (uu) below: "kruu".'),
             _syl('ดุ', 'dù', 'fierce', 'ด', '◌' + 'ุ',
                  'ด (d) then the short ุ (u) below: "dù".'),
         ],
@@ -116,7 +116,7 @@ VOWEL_POSITIONS = [
         'syllables': [
             _syl('เขา', 'kǎo', 'he / she / mountain', 'ข', 'เ' + '◌' + 'า',
                  'The vowel is เ…า wrapped around ข. Say ข (k) first: "kǎo".'),
-            _syl('เมือง', 'mʉang', 'town / city', 'ม', 'เ' + '◌' + 'ือ',
+            _syl('เมือง', 'mʉaŋ', 'town / city', 'ม', 'เ' + '◌' + 'ือ',
                  'เ…ือ wraps around ม. Consonant in the middle first: "mʉang".'),
             _syl('เกาะ', 'gɔ̀', 'island', 'ก', 'เ' + '◌' + 'าะ',
                  'เ…าะ wraps around ก. Say ก (g) first: "gɔ̀".'),
@@ -136,14 +136,14 @@ def _word(thai, paiboon, english):
 
 DHARMA_WORDS = [
     _word('บุญ',    'bun',        'merit'),
-    _word('ทาน',    'thaan',      'giving / alms'),
+    _word('ทาน',    'taan',      'giving / alms'),
     _word('กรรม',   'gam',        'kamma (action & its result)'),
-    _word('ธรรมะ',  'tham-má',    'the Dhamma; the teaching'),
+    _word('ธรรมะ',  'tam-má',    'the Dhamma; the teaching'),
     _word('เมตตา',  'mêet-dtaa',  'loving-kindness'),
     _word('ใจ',     'jai',        'heart / mind'),
     _word('สุข',    'sùk',        'happiness / ease'),
-    _word('สงบ',    'sà-ngòp',    'peaceful / calm'),
-    _word('พระ',    'phrá',       'monk / a Buddha image'),
+    _word('สงบ',    'sà-ŋòp',    'peaceful / calm'),
+    _word('พระ',    'prá',       'monk / a Buddha image'),
     _word('วัด',    'wát',        'temple / monastery'),
 ]
 
@@ -483,7 +483,7 @@ STORIES = [
             },
             {
                 'thai': 'อหิงสา',
-                'paiboon': 'à-hǐng-sǎa',
+                'paiboon': 'à-hǐŋ-sǎa',
                 'english': 'non-violence',
                 'in_story_th': 'ยอมถูกจับโดยไม่ทำร้ายผู้ใด',
                 'in_story_en': 'He allows himself to be captured rather than '
@@ -491,7 +491,7 @@ STORIES = [
             },
             {
                 'thai': 'ปรีชาแห่งผู้ปกครอง',
-                'paiboon': 'bprii-chaa hɛ̀ng phûu bpòk-krɔɔng',
+                'paiboon': 'bprii-chaa hɛ̀ŋ pûu bpòk-krɔɔŋ',
                 'english': 'wise rule',
                 'in_story_th': 'พระราชาทรงรับฟังก่อนครอบครอง',
                 'in_story_en': 'The king listens before he claims.',
@@ -499,12 +499,12 @@ STORIES = [
         ],
 
         'vocabulary': [
-            _word('ช้างเผือก',      'cháang pʉ̀ak',      'white elephant'),
+            _word('ช้างเผือก',      'cháaŋ pʉ̀ak',      'white elephant'),
             _word('กตัญญู',         'gà-dtan-yuu',       'filial devotion, gratitude'),
             _word('เมตตา',          'mêet-dtaa',         'loving-kindness'),
             _word('ชาดก',           'chaa-dòk',          'Jataka, a past-life story of the Buddha'),
-            _word('พระโพธิสัตว์',   'phrá-poo-thí-sàt',  'Bodhisatta, a being on the path to Buddhahood'),
-            _word('ป่าหิมพานต์',    'bpàa hǐm-má-phaan', 'the Himalayan forest of Buddhist legend'),
+            _word('พระโพธิสัตว์',   'prá-poo-tí-sàt',  'Bodhisatta, a being on the path to Buddhahood'),
+            _word('ป่าหิมพานต์',    'bpàa hǐm-má-paan', 'the Himalayan forest of Buddhist legend'),
             _word('ตาบอด',          'dtaa bɔ̀ɔt',        'blind'),
             _word('มารดา',          'maan-daa',          'mother (formal register)'),
         ],

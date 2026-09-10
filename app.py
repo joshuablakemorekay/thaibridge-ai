@@ -2139,7 +2139,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ii',
             'type': 'long',
             'sound': 'long "ee" as in "see"',
-            'example_word': {'thai': 'ที่', 'paiboon': 'têe', 'english': 'at/place'},
+            'example_word': {'thai': 'ที่', 'paiboon': 'tîi', 'english': 'at/place'},
             'length_note': 'Like English "eee" held longer'
         },
         {
@@ -2157,7 +2157,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'uu',
             'type': 'long',
             'sound': 'long "oo" as in "moon"',
-            'example_word': {'thai': 'ที่นู่น', 'paiboon': 'têe nûun', 'english': 'over there'},
+            'example_word': {'thai': 'ที่นู่น', 'paiboon': 'tîi nûun', 'english': 'over there'},
             'length_note': 'Round lips, like "ooo" in "food"'
         },
         {
@@ -2229,7 +2229,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ua',
             'type': 'long',
             'sound': 'long "ua" - gliding vowel',
-            'example_word': {'thai': 'เรือ', 'paiboon': 'rua', 'english': 'boat (alternate)'},
+            'example_word': {'thai': 'เรือ', 'paiboon': 'rʉa', 'english': 'boat (alternate)'},
             'length_note': 'Diphthong: "uu" + "a"'
         },
         {
@@ -2520,7 +2520,7 @@ def get_vocab_with_mode(vocab_list, beginner_mode=False):
 
 TOUR_VOCAB = {
     'transport': [
-        {'english': 'Where?', 'thai': 'ที่ไหน', 'paiboon': 'têe-nǎi', 'note': 'Common question for locations'},
+        {'english': 'Where?', 'thai': 'ที่ไหน', 'paiboon': 'tîi-nǎi', 'note': 'Common question for locations'},
         {'english': 'Go', 'thai': 'ไป', 'paiboon': 'bpai', 'note': 'Basic movement verb'},
         {'english': 'Taxi', 'thai': 'แท็กซี่', 'paiboon': 'tɛ́k-sêe', 'note': 'Borrowed from English'},
         {'english': 'Turn left', 'thai': 'เลี้ยวซ้าย', 'paiboon': 'líao sáai', 'note': 'Essential for giving directions'},
@@ -2561,7 +2561,7 @@ TOUR_VOCAB = {
 BUSINESS_VOCAB = {
     'greetings': [
         {'english': 'Polite greeting', 'thai': 'สวัสดี', 'paiboon': 'sà-wàt-dii', 'note': 'Add ครับ (kráp) male or ค่ะ (kâ) female'},
-        {'english': 'Nice to meet you', 'thai': 'ยินดีที่ได้รู้จัก', 'paiboon': 'yin-dii-têe-dâi-rúu-jàk', 'note': 'Formal introduction phrase'},
+        {'english': 'Nice to meet you', 'thai': 'ยินดีที่ได้รู้จัก', 'paiboon': 'yin-dii-tîi-dâi-rúu-jàk', 'note': 'Formal introduction phrase'},
         {'english': 'Business card', 'thai': 'นามบัตร', 'paiboon': 'naam-bàt', 'note': 'Exchange with both hands — essential for networking'},
         {'english': 'Company', 'thai': 'บริษัท', 'paiboon': 'bɔɔ-rí-sàt', 'note': 'Formal term for company'},
     ],
@@ -2617,7 +2617,7 @@ VOCABULARY = {
         {'thai': 'วันจักรี', 'paiboon': 'wan jàk-grii', 'english': 'Chakri Day', 'category': 'festivals', 'formality': 'royal'},
         {'thai': 'วันฉัตรมงคล', 'paiboon': 'wan chàt-moŋ-kon', 'english': 'Coronation Day', 'category': 'festivals', 'formality': 'royal'},
         {'thai': 'วันพืชมงคล', 'paiboon': 'wan pʉ̂ʉt-moŋ-kon', 'english': 'Royal Ploughing Ceremony', 'category': 'festivals', 'formality': 'royal'},
-        {'thai': 'ผีตาโขน', 'paiboon': 'pǐi dtaa kǒon', 'english': 'Ghost Festival', 'category': 'festivals', 'formality': 'casual'},
+        {'thai': 'ผีตาโขน', 'paiboon': 'pǐi dtaa kǒon', 'english': 'Phi Ta Khon (masked festival, Loei)', 'category': 'festivals', 'formality': 'casual'},
         {'thai': 'เทศกาลกินเจ', 'paiboon': 'tâyt-sà-gaan gin jee', 'english': 'Vegetarian Festival', 'category': 'festivals', 'formality': 'neutral'},
         {'thai': 'งานบุญ', 'paiboon': 'ŋaan bun', 'english': 'Merit-making ceremony', 'category': 'festivals', 'formality': 'neutral'},
     ],
@@ -2675,9 +2675,9 @@ VOCABULARY = {
         {'thai': 'วัด', 'paiboon': 'wát', 'english': 'Temple', 'category': 'buddhist_formal', 'formality': 'neutral'},
         {'thai': 'สวดมนต์', 'paiboon': 'sùuat mon', 'english': 'Chant prayers', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'กราบ', 'paiboon': 'gràap', 'english': 'Prostrate', 'category': 'buddhist_formal', 'formality': 'formal'},
-        {'thai': 'พระธรรม', 'paiboon': 'prá-tam', 'english': 'The Dharma', 'category': 'buddhist_formal', 'formality': 'formal'},
+        {'thai': 'พระธรรม', 'paiboon': 'prá-tam', 'english': 'The Dhamma', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'พระไตรปิฎก', 'paiboon': 'prá-dtrai-bpì-dòk', 'english': 'Tripitaka', 'category': 'buddhist_formal', 'formality': 'formal'},
-        {'thai': 'นิพพาน', 'paiboon': 'níp-paan', 'english': 'Nirvana', 'category': 'buddhist_formal', 'formality': 'formal'},
+        {'thai': 'นิพพาน', 'paiboon': 'níp-paan', 'english': 'Nibbāna (Nirvana)', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'สังสารวัฏ', 'paiboon': 'sǎŋ-sǎa-rá-wát', 'english': 'Samsara', 'category': 'buddhist_formal', 'formality': 'formal'},
         {'thai': 'กรรม', 'paiboon': 'gam', 'english': 'Karma', 'category': 'buddhist_formal', 'formality': 'neutral'},
         {'thai': 'ศีล', 'paiboon': 'sǐin', 'english': 'Precepts (Sila)', 'category': 'buddhist_formal', 'formality': 'formal'},
@@ -2711,7 +2711,7 @@ VOCABULARY = {
         {'thai': 'สัมมาสติ', 'paiboon': 'sǎm-maa-sà-dtì', 'english': 'Right Mindfulness', 'category': 'theravada_dhamma', 'formality': 'formal'},
         {'thai': 'สัมมาสมาธิ', 'paiboon': 'sǎm-maa-sà-maa-tí', 'english': 'Right Concentration', 'category': 'theravada_dhamma', 'formality': 'formal'},
         {'thai': 'วิปัสสนา', 'paiboon': 'wí-bpàt-sà-naa', 'english': 'Insight (Vipassana)', 'category': 'theravada_dhamma', 'formality': 'formal'},
-        {'thai': 'เมตตา', 'paiboon': 'mâyt-dtaa', 'english': 'Loving-kindness (Metta)', 'category': 'theravada_dhamma', 'formality': 'formal'},
+        {'thai': 'เมตตา', 'paiboon': 'mêet-dtaa', 'english': 'Loving-kindness (Metta)', 'category': 'theravada_dhamma', 'formality': 'formal'},
     ],
     
     'everyday': [
@@ -2722,7 +2722,7 @@ VOCABULARY = {
         {'thai': 'ไม่ใช่', 'paiboon': 'mâi châi', 'english': 'No (not so)', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ไม่เป็นไร', 'paiboon': 'mâi bpen rai', 'english': "It's okay", 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'เท่าไหร่', 'paiboon': 'tâo rài', 'english': 'How much?', 'category': 'everyday', 'formality': 'neutral'},
-        {'thai': 'อร่อย', 'paiboon': 'à-ròi', 'english': 'Delicious', 'category': 'everyday', 'formality': 'neutral'},
+        {'thai': 'อร่อย', 'paiboon': 'à-rɔ̀i', 'english': 'Delicious', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'ร้อน', 'paiboon': 'rɔ́ɔn', 'english': 'Hot', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'เย็น', 'paiboon': 'yen', 'english': 'Cold/Cool', 'category': 'everyday', 'formality': 'neutral'},
         {'thai': 'น้ำ', 'paiboon': 'náam', 'english': 'Water', 'category': 'everyday', 'formality': 'neutral'},
@@ -3896,7 +3896,7 @@ GRAMMAR = {
         'adjective_position': 'Adjectives come AFTER nouns',
         'adj_examples': [
             {'thai': 'รถสีแดง', 'paiboon': 'rót sǐi dɛɛŋ', 'english': 'red car'},
-            {'thai': 'อาหารอร่อย', 'paiboon': 'aa-hǎan à-ròi', 'english': 'delicious food'},
+            {'thai': 'อาหารอร่อย', 'paiboon': 'aa-hǎan à-rɔ̀i', 'english': 'delicious food'},
         ]
     },
     
@@ -4047,7 +4047,7 @@ TONES_AND_CLASSES = {
             'examples': [
                 {'thai': 'ขา', 'paiboon': 'kǎa', 'tone': 'Rising', 'english': 'leg'},
                 {'thai': 'ข่า', 'paiboon': 'kàa', 'tone': 'Low', 'english': 'galangal'},
-                {'thai': 'ข้า', 'paiboon': 'kâa', 'tone': 'Falling', 'english': 'I (formal)'},
+                {'thai': 'ข้า', 'paiboon': 'kâa', 'tone': 'Falling', 'english': 'I (archaic)'},
                 {'thai': 'สอง', 'paiboon': 'sɔ̌ɔŋ', 'tone': 'Rising', 'english': 'two'},
             ],
         },
@@ -4209,7 +4209,7 @@ TONES_AND_CLASSES = {
             {'thai': 'ไก่', 'tone': 'Low', 'class': 'MID', 'level': 1, 'english': 'chicken'},
             {'thai': 'ขา', 'tone': 'Rising', 'class': 'HIGH', 'level': 2, 'english': 'leg'},
             {'thai': 'ข่า', 'tone': 'Low', 'class': 'HIGH', 'level': 2, 'english': 'galangal'},
-            {'thai': 'ข้า', 'tone': 'Falling', 'class': 'HIGH', 'level': 2, 'english': 'I (formal)'},
+            {'thai': 'ข้า', 'tone': 'Falling', 'class': 'HIGH', 'level': 2, 'english': 'I (archaic)'},
             {'thai': 'สอง', 'tone': 'Rising', 'class': 'HIGH', 'level': 2, 'english': 'two'},
             {'thai': 'คา', 'tone': 'Mid', 'class': 'LOW', 'level': 3, 'english': 'stuck'},
             {'thai': 'ค่า', 'tone': 'Falling', 'class': 'LOW', 'level': 3, 'english': 'value'},
@@ -4630,7 +4630,7 @@ LESSONS = [
         'objectives': ['Order food', 'Express taste preferences'],
         'sentences': {
             'short': [
-                {'thai': 'อร่อยมาก', 'paiboon': 'à-ròi mâak', 'english': 'Very delicious'},
+                {'thai': 'อร่อยมาก', 'paiboon': 'à-rɔ̀i mâak', 'english': 'Very delicious'},
             ],
             'long': [
                 {'thai': 'ขอผัดไทยไม่ใส่ถั่วครับ', 'paiboon': 'kɔ̌ɔ pàt-tai mâi sài tùa kráp', 'english': 'Pad Thai without peanuts'},
@@ -4763,13 +4763,13 @@ LESSONS = [
         'title': 'Buddhist Concepts',
         'thai_title': 'แนวคิดพุทธ',
         'level': 'Advanced',
-        'objectives': ['Discuss Buddhist teachings', 'Use Dharma vocabulary'],
+        'objectives': ['Discuss Buddhist teachings', 'Use Dhamma vocabulary'],
         'sentences': {
             'short': [
                 {'thai': 'ทำดีได้ดี', 'paiboon': 'tam dii dâi dii', 'english': 'Do good, receive good'},
             ],
             'long': [
-                {'thai': 'การปฏิบัติธรรมช่วยให้มีสติ', 'paiboon': 'gaan bpà-dtì-bàt tam chûuai hâi mii sà-dtì', 'english': 'Practicing Dharma helps develop mindfulness'},
+                {'thai': 'การปฏิบัติธรรมช่วยให้มีสติ', 'paiboon': 'gaan bpà-dtì-bàt tam chûuai hâi mii sà-dtì', 'english': 'Practising Dhamma helps develop mindfulness'},
             ]
         }
     },
@@ -4862,7 +4862,7 @@ found water for a spring. The elephant spent his final days in peace beneath the
         'story': '''After enlightenment, the Buddha walked to Deer Park to teach his five former companions.
 He delivered the Dhammacakkappavattana Sutta, teaching the Middle Way and Four Noble Truths.
 Kondanna immediately understood and became the first enlightened disciple.''',
-        'lesson': 'The Middle Way, Four Noble Truths, and the Dharma is available to all.',
+        'lesson': 'The Middle Way, Four Noble Truths, and the Dhamma is available to all.',
     },
     'theravada_dhamma': {
         'practice': {'href': '/exercise/theravada_dhamma',
@@ -5105,9 +5105,9 @@ CULTURAL_FEATURE_STORIES = [
              'english': 'loving-kindness, compassion'},
             {'thai': 'ชาดก', 'paiboon': 'chaa-dòk',
              'english': 'Jataka, a past-life story of the Buddha'},
-            {'thai': 'พระโพธิสัตว์', 'paiboon': 'phrá-poo-thí-sàt',
+            {'thai': 'พระโพธิสัตว์', 'paiboon': 'prá-poo-tí-sàt',
              'english': 'Bodhisatta, a being on the path to Buddhahood'},
-            {'thai': 'ป่าหิมพานต์', 'paiboon': 'bpàa hǐm-má-phaan',
+            {'thai': 'ป่าหิมพานต์', 'paiboon': 'bpàa hǐm-má-paan',
              'english': 'the Himalayan forest of Buddhist legend'},
         ],
     },
@@ -5523,7 +5523,7 @@ CULTURAL_INFO = {
                 'notes': 'They wai to you; returning is optional'
             },
             {
-                'scenario': 'Leaving monk after Dharma talk',
+                'scenario': 'Leaving monk after Dhamma talk',
                 'action': 'Deep wai with forehead to ground if sitting',
                 'level': 'Level 3 - prostration possible',
                 'words': 'ขอบพระคุณครับ/ค่ะ (kɔ̀ɔp prá-kun kráp/kâ)',
@@ -6118,7 +6118,7 @@ SENTENCE_PATTERNS = {
                 'male': [
                     {
                         'thai': 'คุณชื่ออะไรครับ',
-                        'paiboon': 'kun chûu à-rai kráp',
+                        'paiboon': 'kun chʉ̂ʉ à-rai kráp',
                         'english': "What's your name?",
                         'breakdown': 'คุณ (you) + ชื่อ (name) + อะไร (what) + ครับ (polite)',
                         'note': 'อะไร (à-rai) = what'
@@ -6141,7 +6141,7 @@ SENTENCE_PATTERNS = {
                 'female': [
                     {
                         'thai': 'คุณชื่ออะไรคะ',
-                        'paiboon': 'kun chûu à-rai ká',
+                        'paiboon': 'kun chʉ̂ʉ à-rai ká',
                         'english': "What's your name?",
                         'breakdown': 'คุณ (you) + ชื่อ (name) + อะไร (what) + คะ (polite)',
                         'note': 'อะไร (à-rai) = what'
@@ -6274,14 +6274,14 @@ CONVERSATIONS = {
             {
                 'speaker': 'person1_male',
                 'thai': 'สวัสดีครับ ผมชื่อจอห์น',
-                'paiboon': 'sà-wàt-dii kráp, pǒm chûu John',
+                'paiboon': 'sà-wàt-dii kráp, pǒm chʉ̂ʉ John',
                 'english': "Hello, I'm John",
                 'note': 'Male introduction'
             },
             {
                 'speaker': 'person2_female',
                 'thai': 'สวัสดีค่ะ ดิฉันชื่อนิดา ยินดีที่ได้รู้จักค่ะ',
-                'paiboon': 'sà-wàt-dii kâ, dì-chǎn chûu Nida, yin-dii tîi dâi rúu-jàk kâ',
+                'paiboon': 'sà-wàt-dii kâ, dì-chǎn chʉ̂ʉ Nida, yin-dii tîi dâi rúu-jàk kâ',
                 'english': "Hello, I'm Nida, nice to meet you",
                 'note': 'Female introduction'
             },
@@ -6488,7 +6488,7 @@ CONVERSATIONS = {
     },
 
     # ── Phase 2 additions (2026-07-23) — DRAFT Thai, pending native-speaker
-    # review (esp. the Dharma dialogues' monastic register). ────────────────
+    # review (esp. the Dhamma dialogues' monastic register). ────────────────
     'taxi': {
         'title': 'Taking a Taxi (นั่งแท็กซี่)',
         'setting': 'Getting a taxi to a destination and paying by the meter',
