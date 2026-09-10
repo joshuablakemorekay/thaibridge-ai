@@ -47,10 +47,10 @@ jobs:
       PYTHONIOENCODING: utf-8
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           # Matches .python-version, which is what Render builds with. A suite
           # green on a different minor version proves less than it looks.
@@ -72,7 +72,7 @@ jobs:
         # Runs even when the suite fails — a red build is exactly when the
         # per-test detail is worth having.
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: pytest-results
           path: pytest-results.xml
