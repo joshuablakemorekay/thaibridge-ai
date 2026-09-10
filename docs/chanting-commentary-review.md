@@ -2,7 +2,7 @@
 
 Generated 2026-09-10 from `chanting.py`. Read-only extract: editing this file changes nothing.
 
-**92 of 305 chants have commentary. 213 still to write.**
+**122 of 305 chants have commentary. 183 still to write.**
 
 Everything below is prose written for this edition. The Pali, Thai and English of the verses themselves are not reproduced here — this is only the commentary, so that it can be read as writing rather than checked as data.
 
@@ -2349,6 +2349,816 @@ The resolve then turns inward and the scale changes. May I swiftly come to the c
 
 ---
 
+## คำเชิญบูชาพระรัตนตรัยพิเศษ — The Special Invitation to Worship the Triple Gem
+
+*pages 64–65 · English is a working translation*  
+`kham-choen-bucha-phra-ratanattaya-phiset`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The long form of the opening invitation, which pauses to give an outline of the Buddha's life before handing over to the salutation.
+
+**When it is chanted.** Spoken by the leader on festival days, in place of the ordinary invitation, opening the section of the book kept for them.
+
+**Historical background**
+
+This is the third and fullest form of an invitation the book prints three times over. The short one opens the daily services; the elaborate one is used on observance days; this one opens the festivals. All three begin with the same clauses and then diverge according to how much they stop to explain.
+
+What this version stops for is a biography. Between the refuge and the offering it sets out where the Blessed One was born, into what family, what he did, and what he taught — the only connected account of his life anywhere in this part of the book.
+
+**Meaning and purpose**
+
+The biographical clauses are careful about what kind of claim they are making. He was born in the Middle Country among the Ariyan people, a khattiya by birth, a Gotama by clan, a son of the Sakyans, gone forth from the Sakyan family. Place, caste, clan and family, in that order: a person locatable in the world, not a figure out of it.
+
+Then the turn from birth to effort — having come to right application, having followed right endeavour — which is the hinge of the whole passage. What follows was reached rather than possessed, and the account gives the work before it gives the result.
+
+The close is the same as the shorter invitations: the offering made, the homage paid, and the handover. But this one hands over to two things rather than one — the preliminary salutation and the way of recollection of the Buddha — because on a festival day what follows is longer, and the assembly needs telling.
+
+---
+
+## คาถาอาราธนาธรรม — The Verses Inviting the Teaching of the Dhamma
+
+*page 65 · English is a working translation*  
+`khatha-aradhana-dhamma`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Six lines asking the Sangha to give a Dhamma talk, on the ground that today is one of the days appointed for hearing it.
+
+**When it is chanted.** Chanted by the lay assembly before a sermon, to request it.
+
+**Historical background**
+
+A sermon in this tradition is not simply delivered. It is asked for, and these are the words that ask. The same shape governs the precepts, which are also requested rather than administered unbidden.
+
+The chant is short enough to be known by heart by people who chant little else, and it is heard at almost every occasion where a monk is about to speak.
+
+**Meaning and purpose**
+
+It opens by establishing the day rather than the need. The fourteenth, the fifteenth and the eighth of the fortnight are the times appointed by the Buddha for hearing the true Dhamma — so the request rests on a calendar, not on a mood.
+
+Then the particular: now this fifteenth day has come, a day marked out for it, and therefore this assembly has gathered here to hear the Dhamma. The word therefore is doing the work. The gathering is presented as the consequence of the day, not as a favour being sought.
+
+Only then the request itself, and it asks two things at once: that the Sangha would give a teaching, and that this whole assembly, giving it their full attention, would listen. The second half is the reason the chant is worth its six lines. The people asking commit themselves in the same breath, so nobody can request a sermon and then not attend to it.
+
+---
+
+## คำถวายดอกไม้ ธูป เทียน ในวันวิสาขบูชา — The Words for Offering Flowers, Incense and Candles on Visākha Pūjā Day
+
+*pages 66–67 · English is a working translation*  
+`kham-tawai-dokmai-thup-thian-visakha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The offering made on Visākha Pūjā, the day that commemorates the Buddha's birth, awakening and final passing together.
+
+**When it is chanted.** Chanted on Visākha Pūjā while flowers, incense and candles are offered, usually before the circumambulation.
+
+**Historical background**
+
+The four festival offerings are built to one plan. Each opens with the same clauses — the Blessed One gone to for refuge, our teacher, in whose Dhamma we delight — then recounts what the day commemorates, and closes by asking that the offerings taken up be accepted, for our welfare and happiness for a long time to come.
+
+Visākha is the first and largest of the four. What it commemorates is a coincidence of dates rather than one event: the tradition holds that the Buddha was born, reached awakening, and passed to final nibbāna on the same full moon, and the chant treats all three together.
+
+**Meaning and purpose**
+
+The recital of the life follows the invitation of the page before, but at greater length and in shorter units — the book sets much of it a few words to a line, which is how it is chanted: slowly, with the assembly holding flowers.
+
+What the offering asks for is stated with the same candour found throughout this book. The Blessed One is long since gone; he is known now only by his qualities and discerned only as an object belonging to the past. That concession is made explicitly, in the sentence immediately before the request.
+
+And then the request anyway: that these offerings, taken up by us, be accepted, for our welfare and happiness for a long time to come. Nothing is claimed about where the flowers go. What the chant establishes is that they were offered knowingly, by people who had just said aloud that the one they are offered to is not there.
+
+---
+
+## สะระภัญญะคาถา สำหรับสวดในวันวิสาขบูชา — The Saraphañña Verses for Chanting on Visākha Pūjā Day
+
+*pages 67–68 · English is a working translation*  
+`sarabhanna-gatha-visakha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Verses in the saraphañña style for Visākha Pūjā, on the one who was born, awakened and quenched on the same full moon.
+
+**When it is chanted.** Chanted on Visākha Pūjā after the offering, in the saraphañña manner rather than the ordinary reciting tone.
+
+**Historical background**
+
+สะระภัญญะ names a way of chanting rather than a subject. It is sung, in a melody with real intervals, and is used for verse rather than for prose. Each of the three festivals with its own set is given one.
+
+Because the manner is fixed, the sets are recognisably a series: the same length, the same metre, and the same closing petition, with only the day's own events changed.
+
+**Meaning and purpose**
+
+The first verse states the coincidence the day rests on in a single line: he who on the Visākha full moon was born into his final birth, who reached full awakening, and who likewise passed to final nibbāna. Three events, one date, no comment offered on the fact.
+
+The middle verses turn to what he was rather than what happened to him — the unsurpassed teacher, whose dwelling is the ocean of compassion and knowledge, the guide upon the path of release — and then to what the reciters have done about it: to that Buddha of great compassion we have gone for refuge.
+
+The close is the same petition the offering made, now in verse: that the offerings, thus and thus well prepared, be accepted for our welfare and our happiness for a long time to come, for the avoiding of loss and the increase of gain. Sung rather than said, it is the part of the day most people remember.
+
+---
+
+## คำถวายดอกไม้ ธูป เทียน ในวันอัฏฐมีบูชา — The Words for Offering Flowers, Incense and Candles on Aṭṭhamī Pūjā Day
+
+*pages 68–69 · English is a working translation*  
+`kham-tawai-dokmai-thup-thian-atthami`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The offering made on Aṭṭhamī Pūjā, the eighth day after Visākha, which commemorates the cremation of the Buddha's body.
+
+**When it is chanted.** Chanted on Aṭṭhamī Pūjā while flowers, incense and candles are offered.
+
+**Historical background**
+
+The four festival offerings are built to one plan. Each opens with the same clauses — the Blessed One gone to for refuge, our teacher, in whose Dhamma we delight — then recounts what the day commemorates, and closes by asking that the offerings taken up be accepted, for our welfare and happiness for a long time to come.
+
+Aṭṭhamī is the second of the four and much the least observed. Its own verses say what it marks: the eighth day from the Visākha full moon, when the body was burnt. It is the only one of the four days that commemorates something that happened to the Buddha after his death rather than during his life.
+
+**Meaning and purpose**
+
+The offering runs parallel to the Visākha one almost line for line, which is the point of reading them together. What changes is the event recounted in the middle, and everything around it stays put.
+
+The effect of that sameness is worth noticing on a day like this one. The same refuge, the same list of qualities, the same concession that he is known now only as an object belonging to the past, and the same request — said over a day whose subject is a funeral pyre.
+
+The chant does not raise its voice for the occasion. It ends as the others do, asking that the offerings taken up be accepted for our welfare and happiness for a long time to come, which on this particular day reads less like a petition than a statement about what is left.
+
+---
+
+## สะระภัญญะคาถา สำหรับสวดในวันอัฏฐมีบูชา — The Saraphañña Verses for Chanting on Aṭṭhamī Pūjā Day
+
+*pages 69–71 · English is a working translation*  
+`sarabhanna-gatha-atthami`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Sung verses for Aṭṭhamī Pūjā, on the pyre of the Mallas and the burning of the Buddha's final body.
+
+**When it is chanted.** Chanted on Aṭṭhamī Pūjā after the offering, in the saraphañña manner.
+
+**Historical background**
+
+The second of the three sung sets, and the most narrative of them. Where the Visākha verses state a coincidence of dates and move on, these tell what happened on one afternoon.
+
+They are also the plainest evidence of what Aṭṭhamī marks, which its name alone does not say. The opening line counts the days: today, from the Visākha full moon, is the eighth.
+
+**Meaning and purpose**
+
+The account is given in concrete detail and without consolation. A pyre of all fragrant woods was made by the faithful Mallas. Showing a marvel, it took flame of itself. And what was burnt is named exactly: that which was his final body, bearing the thirty-two excellent marks.
+
+The phrase ธาตุภูเตนะ เตเชสา — by that elemental fire — puts the event in the same terms the reflections on the requisites use. The body of the Great Seer is burnt by the fire element, and both the body and the fire are named as elements. Nothing is exempted from the analysis, least of all here.
+
+That is what these verses are for, and why a day given to a cremation is kept at all. The tradition sings, on this occasion, about the one thing it might have been tempted to make an exception of — and it does not make one.
+
+---
+
+## คำถวายดอกไม้ ธูป เทียน ในวันมาฆบูชา — The Words for Offering Flowers, Incense and Candles on Māgha Pūjā Day
+
+*page 71 · English is a working translation*  
+`kham-tawai-dokmai-thup-thian-magha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The offering made on Māgha Pūjā, which commemorates the gathering of twelve hundred and fifty arahants who came unsummoned.
+
+**When it is chanted.** Chanted on Māgha Pūjā while flowers, incense and candles are offered.
+
+**Historical background**
+
+The four festival offerings are built to one plan. Each opens with the same clauses — the Blessed One gone to for refuge, our teacher, in whose Dhamma we delight — then recounts what the day commemorates, and closes by asking that the offerings taken up be accepted, for our welfare and happiness for a long time to come.
+
+Māgha is the third of the four, and alone among them it commemorates an assembly rather than an event in the Buddha's own life. What the day marks is a coincidence of four things at once, which the chant sets out one by one.
+
+**Meaning and purpose**
+
+The four conditions are given as a list and their force is cumulative. They were twelve hundred and fifty. All of them were arahants whose taints were destroyed. All of them had gone forth at the Buddha's own summons. And every one of them came without being called.
+
+The setting is then fixed as precisely as a legal record: in the Bamboo Grove, at the squirrels' feeding place, on the Māgha full moon, as the shadows were lengthening. The chant is more interested in when and where than in what was felt about it.
+
+What makes the day worth an offering is the last of the four conditions rather than the first. A large gathering can be arranged and an accomplished one can be selected; a gathering that assembles without being summoned cannot. That is what is being marked, and the exhortation the Buddha gave them is printed a few pages further on.
+
+---
+
+## สะระภัญญะคาถา สำหรับสวดในวันมาฆบูชา — The Saraphañña Verses for Chanting on Māgha Pūjā Day
+
+*pages 71–72 · English is a working translation*  
+`sarabhanna-gatha-magha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Sung verses for Māgha Pūjā, on the Buddha at Rājagaha delivering the Pāṭimokkha to the assembly that came unsummoned.
+
+**When it is chanted.** Chanted on Māgha Pūjā after the offering, in the saraphañña manner.
+
+**Historical background**
+
+The third and shortest of the sung sets. Like the others it opens by naming the day by its moon — the full-moon day joined with the Māgha asterism — and then places the Buddha in a particular monastery on it.
+
+It is the only one of the three whose closing petition asks for something beyond the reciters' own welfare.
+
+**Meaning and purpose**
+
+The scene is built in stages, each verse adding one thing: the day, then who he was, then what he was like, then where he was — dwelling at Rājagaha, in the hill-girt stronghold of the Magadhans, in the monastery of the Bamboo Grove, at the squirrels' feeding place. Four descriptions of one address.
+
+The act the verses build to is not a miracle or a discourse but an administrative one: delivering the Pāṭimokkha at the pure and patient Uposatha. What is being celebrated is a community meeting, held properly.
+
+And the closing petition follows from that. May there always be well-being for us, and may the dispensation of our Teacher long endure. Having spent the whole set on an assembly rather than on a person, the verses end by asking for the survival of what such assemblies exist to keep going.
+
+---
+
+## โอวาทะปาติโมกขาทิปาฐะ สำหรับสวดในวันมาฆบูชา — The Passage of the Exhortation Pāṭimokkha and What Follows, for Chanting on Māgha Pūjā Day
+
+*pages 72–75 · English is a working translation*  
+`ovada-patimokkhadi-patha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The exhortation the Buddha gave to the Māgha assembly, followed by a long exposition of virtue, concentration and wisdom.
+
+**When it is chanted.** Chanted on Māgha Pūjā after the sung verses, as the longest chant of the day.
+
+**Historical background**
+
+This is the text the whole Māgha observance points at, and the book prints it in two parts: a prefatory verse, and then the passage itself with a good deal of further material attached — which is what the title's 'and what follows' refers to.
+
+The prefatory verse says where the exhortation comes from and how it is held: of the seven Blessed Ones, the Fully Awakened, the Great Seers, it was shown by way of recitation, and three verses of it are recorded. It is presented as something older than the Buddha of this era rather than as his invention.
+
+**Meaning and purpose**
+
+The exhortation proper is three verses and everything the day is for is in them. Not to do any evil; to take up what is skilful; to purify one's own mind — this is the teaching of the Buddhas. Three clauses, and the tradition has never found a shorter way to say what it is.
+
+Around them sit the harder lines. One gone forth does not strike down another, and one who harms another is no ascetic. Not to speak against, not to injure, restraint under the Pāṭimokkha. Read on the day commemorating an assembly, these are about how people who agree with each other are still capable of doing damage.
+
+What follows is far longer and does the unpacking. Virtue, concentration and wisdom are each expounded twice — once by a lower exposition and once by a higher — so that the same three trainings are given at the level of a lay disciple abstaining from killing, and again at the level of the absorptions. The whole thing closes on diligence: whatever wholesome states there are, all of them are rooted in it, and the last line has the assembly resolve to bring about their welfare with it.
+
+---
+
+## คำถวายดอกไม้ ธูป เทียน ในวันอาสาฬหบูชา — The Words for Offering Flowers, Incense and Candles on Āsāḷha Pūjā Day
+
+*pages 75–76 · English is a working translation*  
+`kham-tawai-dokmai-thup-thian-asalha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The offering made on Āsāḷha Pūjā, the day of the first teaching, and the shortest of the four festival offerings.
+
+**When it is chanted.** Chanted on Āsāḷha Pūjā while flowers, incense and candles are offered.
+
+**Historical background**
+
+The four festival offerings are built to one plan. Each opens with the same clauses — the Blessed One gone to for refuge, our teacher, in whose Dhamma we delight — then recounts what the day commemorates, and closes by asking that the offerings taken up be accepted, for our welfare and happiness for a long time to come.
+
+Āsāḷha is the last of the four and its offering is much the shortest — twenty-five units against the sixty of Visākha. What it recounts is not a life but a decision: that the Blessed One, out of compassion for beings, being merciful, a seeker of their welfare and taking up sympathy, taught.
+
+**Meaning and purpose**
+
+Four words are used where one would do — compassion, mercy, seeking their welfare, taking up sympathy — and the repetition is the argument. The day marks a choice to speak rather than the content of what was spoken, and the chant spends its length on the motive.
+
+That is why it can afford to be short. The other three days commemorate events that need recounting: a birth and a death, a cremation, a gathering of twelve hundred and fifty. This one commemorates a teacher deciding that it was worth trying, which takes one sentence.
+
+The close is identical to the others, and by the fourth festival the reader will know it by heart: known now only by your qualities, discerned as an object belonging to the past, accept these offerings taken up by us, for our welfare and happiness for a long time to come.
+
+---
+
+## บทขัดชุมนุมเทวดา — The Prefatory Verse for Assembling the Devas
+
+*page 77 · English is a working translation*  
+`bot-khat-chumnum-thewada`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The verse that opens paritta chanting by inviting the devas of every world-system to come and hear the Dhamma.
+
+**When it is chanted.** Chanted at the very start of a paritta service, before the salutation, to summon those who are to listen.
+
+**Historical background**
+
+ชุมนุมเทวดา, the assembling of the devas, opens every protective chanting. A paritta is a text chanted for safety, and the large collection that begins here is the one this book calls the Twelve Tamnan.
+
+The verse is addressed to two audiences at once, which is unusual. It tells the monks how to chant, and it tells the devas to come and listen.
+
+**Meaning and purpose**
+
+The opening line is printed in parentheses and is a petition on behalf of the ruler: may the power of the paritta ever protect him, together with his realm, his forces and his kin. That the whole collection opens on a political request rather than a spiritual one is worth noticing before anything else.
+
+Then the instruction to the reciters, which is a condition and not a courtesy. Suffusing loving-kindness, venerable sirs, full of loving-kindness and with undistracted minds, may you recite the paritta. The protective power is held to depend on the state of the people chanting, so the state is specified first.
+
+The invitation is then cast as widely as the cosmology allows — from all around the world-systems, in the heavens of sense-desire and of form, on mountain peaks and crags, in mansions in the sky — and ends with a summons said three times: this is the time to hear the Dhamma. Note what the devas are asked for. Not protection, and not favour. Attention.
+
+---
+
+## ปุพพะภาคะนะมะการะปาโฐ — The Preliminary Salutation
+
+*page 77 · English is a working translation*  
+`pubbabhaga-namakara-sipsong-tamnan`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The homage to the Blessed One, chanted three times, opening the Twelve Tamnan as it opens the daily services.
+
+**When it is chanted.** Chanted three times at the opening of a paritta service, after the devas have been assembled.
+
+**Historical background**
+
+The third full printing of this single line in the book, after the morning service and the evening. It is set out in full again for the same reason as before: this section is used on its own, and the page has to work for somebody chanting from it without turning back.
+
+What is different here is not the words but the company. By the time it is said, an audience has already been called.
+
+**Meaning and purpose**
+
+The line is unchanged — homage, and then the Blessed One under three epithets, spoken of rather than spoken to.
+
+Its position changes what it does. In the daily services this is the first thing anybody says. Here something has happened first: the devas of every world-system have been invited, and the homage is made in front of them.
+
+Three times, as everywhere else in the book, marking that something has been formally begun rather than merely started.
+
+---
+
+## สะระณะคะมะนะปาโฐ — The Going for Refuge
+
+*pages 77–78 · English is a working translation*  
+`sarana-gamana-patha-sipsong-tamnan`
+
+**Source (printed in the book):** ขุ. ขุ. มหา. 25/1
+
+**What it is.** The going for refuge, each of the three said three times over, taken at the opening of the paritta chanting.
+
+**When it is chanted.** Chanted after the salutation at the opening of a paritta service.
+
+**Historical background**
+
+The book prints its own reference for this passage. The words are those of the refuge everywhere else in the book, but the setting differs: here each of the nine statements is given its own line, where other printings group the three and mark the repetition at the end of each round.
+
+It is a small typographic decision with an audible consequence.
+
+**Meaning and purpose**
+
+I go to the Buddha for refuge; to the Dhamma; to the Saṅgha. Then the same three a second time, and a third.
+
+Setting each on its own line changes the pace rather than the sense. Nine separate statements take longer to say than three groups of three, and in a service meant to run for an hour or more that slowness is not incidental.
+
+Why the refuge opens a protective chanting at all is worth asking, because everything that follows will be asking for safety. The tradition is careful about where safety is sought from, so it states the answer before making any of the requests.
+
+---
+
+## สัมพัทเธ — The Perfectly Awakened Ones
+
+*page 78 · English is a working translation*  
+`sambuddhe`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Homage to an immense number of Buddhas, counted in thousands and hundreds of thousands, with a request that all dangers be destroyed.
+
+**When it is chanted.** Chanted in the paritta service among the opening verses, before the suttas themselves.
+
+**Historical background**
+
+This chant works by number rather than by name. Twenty-eight, then twelve thousand, then five hundred thousand — and the figures change again as the verses go on.
+
+Its refrain returns three times, once after each group: by the power of this homage, having destroyed all misfortunes, may the many dangers too be destroyed without remainder.
+
+**Meaning and purpose**
+
+What is being invoked is quantity, and the chant is not shy about saying so. The twenty-eight are the Buddhas the tradition names and can list. The larger figures are not a list anybody could recite; they are an assertion that the number is past listing.
+
+Each group is followed by the same two moves. Their Dhamma and their Saṅgha too I revere and bow to — so each Buddha brings a teaching and a community with him. Then the request. Homage, then consequence, three times over.
+
+That structure is why it stands where it does. A protective chanting rests on the power of what is honoured, so before anything is asked for, this chant establishes the sheer size of what is being appealed to.
+
+---
+
+## นะมะการะสิทธิคาถา — The Verses on the Success of Paying Homage
+
+*pages 78–79 · English is a working translation*  
+`namakarasiddhi-gatha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Verses saluting the Buddha, the Dhamma and the Sangha in turn, each salutation closing in a wish for victory and the ending of danger.
+
+**When it is chanted.** Chanted in the paritta service after the homage verses.
+
+**Historical background**
+
+The title states the chant's premise rather than its subject: the success, or accomplishment, of paying homage. The claim is that the act of salutation itself brings something about.
+
+It falls into three movements, one for each of the Three Jewels, and each is built the same way — a description of what is being saluted, the salutation, and then the wish.
+
+**Meaning and purpose**
+
+The description of the Buddha is unusually active for a verse of homage. He has vision, the stain of delusion stripped away, awakened of himself, well-gone, released. Then what he did with it: freeing others from the snares of Māra, he brought to safety the people fit to be trained.
+
+ชะนะตัง วิเนยยัง — the people fit to be trained — is a limit, stated without apology or explanation. Not everyone. Those who could be. The verse makes a large claim and bounds it in the same line.
+
+Each movement closes on the same formula: by the power of that, may victory and success be yours, and may all dangers come to nothing. Note the pronoun. The blessing is directed at the hearer, not at the reciter, which is what makes this a chant said for other people rather than for oneself.
+
+---
+
+## นะโมการะอัฏฐะกะคาถา — The Eightfold Homage Verses
+
+*pages 79–80 · English is a working translation*  
+`namokara-atthaka-gatha`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Eight lines of homage, each opening with the word namo, closing in a wish for well-being and for strength in the task at hand.
+
+**When it is chanted.** Chanted in the paritta service among the opening homages.
+
+**Historical background**
+
+Every one of the eight lines begins with นะโม, homage, and the chant is named for that. It is the most compressed of the opening homages: eight statements, no narrative, no argument.
+
+Two of the eight are unusual in this book, because what they salute is not a person or a community but a form of words.
+
+**Meaning and purpose**
+
+The first three are conventional and quick: homage to the Worthy One, the great Seeker; to the supreme Dhamma, well proclaimed by him; to the great Saṅgha, pure in virtue and in view.
+
+Then it turns to the utterance itself. Homage, duly made, to the Triple Gem that is begun with a syllable; homage too to that threefold object, which has passed beyond all that is low. What is honoured here is the formula, not only what the formula names — which is precisely the premise a protective chanting rests on, stated openly for once.
+
+The last two verses say what the homage is for, and they ask two different things. By the might of this homage, may there be well-being at all times. And then, more narrowly: by its power, may I be mighty in the undertaking. The second is the practical one — not safety in general but strength for the thing being done now.
+
+---
+
+## บทขัดต้นตำนาน — The Prefatory Verse Opening the Tamnan
+
+*page 80 · English is a working translation*  
+`bot-khat-ton-tamnan`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The verse opening the Tamnan proper, calling the peaceful devas of every world-system to come in harmony and listen.
+
+**When it is chanted.** Chanted at the start of the Tamnan collection, after the opening homages.
+
+**Historical background**
+
+A second invitation to the devas, after the one that opened the service three pages earlier. This one begins the Tamnan itself, so the collection has two openings and calls its audience twice.
+
+The manner is quite different. The first was brisk and repeated its summons three times. This one is descriptive, and spends most of its length on who is being called.
+
+**Meaning and purpose**
+
+The invitation is qualified from its first word, and the qualification is the whole point. Those who are at peace, peaceful in mind, who have the Three Refuges as their refuge. The devas invited are those already disposed to listen, not whichever happen to be nearby.
+
+The description then widens without dropping the condition: devas of the earth and above it, dwelling on Meru the king made of the finest gold, and in all the world-systems the yakkhas, the devas and the brahmās. And the condition is said again, twice over — at peace, at peace, and together in harmony.
+
+It closes by turning from summoning to blessing: may all be happy, together with their own retinues, free from trouble and glad in mind, along with all their kin. Before a single protective text is chanted, the beings called to hear it are themselves wished well.
+
+---
+
+## บทขัดมังคะละสุตตะ — The Prefatory Verse for the Maṅgala Sutta
+
+*page 80 · English is a working translation*  
+`bot-khat-mangkhala-sutta`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to the Maṅgala Sutta, on the twelve years of argument about what a blessing is.
+
+**When it is chanted.** Chanted immediately before the Maṅgala Sutta, introducing it.
+
+**Historical background**
+
+Each sutta in the Tamnan is introduced by a verse of this kind, and this is the first of them. What such a verse does is say why the text that follows was needed — the occasion, not the content.
+
+These introductions are not part of the suttas they precede. They are the tradition explaining its own collection to the people chanting it, which is a different kind of writing altogether.
+
+**Meaning and purpose**
+
+The story is told in four lines, and it is a story about failure. For twelve years, beings together with their devas pondered what a blessing is; and though they pondered long, they never came to know.
+
+The scale of the argument is then given, and it is deliberately absurd: throughout ten thousand world-systems an uproar arose over the question, reaching as far as the dwellings of the brahmās. The verse is making a point about how hard an apparently simple question turns out to be.
+
+Then the resolution, in a single line — that which the Refuge of the World taught, the destroyer of all evil — and the handover. Twelve years of confusion have been built up in order to make the plain list that follows land as an answer rather than as advice.
+
+---
+
+## มังคะละสุตตัง ปะฐะมัง — The Maṅgala Sutta, the First
+
+*pages 81–82 · English is a working translation*  
+`mangala-suttam-pathamam`
+
+**Source (printed in the book):** ขุ. ขุ. 25/3 ขุ. สุ. 25/376
+
+**What it is.** The Discourse on Blessings: a deity asks what the highest blessing is, and is answered with a list running from good company to an unshaken mind.
+
+**When it is chanted.** Chanted in the paritta service after its prefatory verse; among the best known of all Buddhist texts.
+
+**Historical background**
+
+The book prints its own reference for it, and calls it the first Maṅgala Sutta because it prints the text again later in the book.
+
+The frame is the standard one for a discourse, and it is worth reading rather than skipping: thus have I heard, the setting at Sāvatthī, and then a deity arriving in the far reaches of the night, of surpassing beauty, having lit up the whole of Jeta's Grove.
+
+**Meaning and purpose**
+
+The question comes in the deity's own verse and repeats exactly the failure the prefatory verse described: many devas and human beings have pondered what blessings are, longing for well-being. Tell us, then, the highest blessing.
+
+The answer is a list, and the order of it is the argument. It starts where anybody can start — not keeping company with fools, keeping company with the wise, honouring those worthy of honour — and then moves through living in a fitting place, much learning and skill, a discipline well trained, speech well spoken, supporting mother and father, caring for wife and children, work free of confusion, giving, blameless action, restraint from strong drink, reverence, humility, contentment and gratitude. Nothing exotic appears until a long way down.
+
+The closing verse is why it is chanted for protection: having done such things as these, undefeated everywhere, they go in safety everywhere. Safety is presented as the consequence of conduct rather than of the chanting — and the text is nonetheless chanted for safety. The tradition holds both of those at once and has never seemed troubled by it.
+
+---
+
+## บทขัด ระตะนะสุตตัง — The Prefatory Verse for the Ratana Sutta
+
+*page 82 · English is a working translation*  
+`bot-khat-ratana-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to the Ratana Sutta, which recounts the Buddha's whole career and the three fears the sutta is said to have dispelled.
+
+**When it is chanted.** Chanted immediately before the Ratana Sutta, introducing it.
+
+**Historical background**
+
+The longest and most ambitious of the prefatory verses. Before introducing a single text it summarises an entire career: from the time of his aspiration onwards, the ten perfections, the ten higher perfections and the ten ultimate perfections, five great renunciations, three kinds of conduct.
+
+Then the last existence, in sequence — the descent into the womb, the birth, the going forth, the striving, and the victory over Māra on the seat of awakening.
+
+**Meaning and purpose**
+
+The catalogue is doing something specific rather than showing off. What is being enumerated, item by item, is the accumulated power standing behind the words about to be chanted — and it is all set out before a single line of the sutta is said.
+
+The pay-off names an occasion rather than a doctrine, and it is unexpectedly concrete: the threefold fear arisen from disease, from non-human beings and from famine, it swiftly made to vanish. An epidemic, a haunting and a hunger — three ordinary disasters.
+
+Then the handover: that paritta let us now recite. Everything before it has been an argument for why what comes next is worth chanting, and the argument is historical rather than doctrinal. It rests entirely on what the text is said to have done once before.
+
+---
+
+## ระตะนะสุตตัง ทุติยัง — The Ratana Sutta, the Second
+
+*pages 82–86 · English is a working translation*  
+`ratana-suttam-dutiyam`
+
+**Source (printed in the book):** ขุ. ขุ. 25/5 ขุ.สุ. 25/367
+
+**What it is.** The Discourse on the Jewels: seventeen verses each closing on the truth of the Buddha, the Dhamma or the Sangha, and a wish for well-being.
+
+**When it is chanted.** Chanted in the paritta service after its prefatory verse; among the most used of all protective texts.
+
+**Historical background**
+
+The book prints its own reference, and calls this the second Ratana Sutta because the text appears again later. The prefatory verse before it has already said what the sutta is held to have done: dispelled a threefold fear of disease, non-human beings and famine.
+
+Its construction is the plainest example in the book of how a paritta is thought to work. Each verse states something held to be true, and then asks for well-being on the strength of it having been said.
+
+**Meaning and purpose**
+
+The opening is an address rather than a claim, and it is the same move that opens the whole service: whatever beings are gathered here, whether of the earth or of the sky, may all of them be glad of mind and listen carefully to what is spoken. Nothing is asked of them but attention.
+
+Then the long middle, where each verse builds to the same kind of close. Something is asserted about the Buddha, or the Dhamma, or the Sangha; the verse names it a jewel; and then, by this truth, may there be well-being. The pattern repeats until it becomes the sound of the thing rather than an argument in it.
+
+The last verses turn from asserting to saluting, and the beings called at the start are addressed once more. The Tathagata, honoured by devas and humans, we salute: may there be well-being. It ends where it began, with the audience it summoned, having spent eighty-nine lines giving them something true to hear.
+
+---
+
+## บทขัด กะระณียะเมตตะสุตตัง — The Prefatory Verse for the Karaṇīya-metta Sutta
+
+*page 86 · English is a working translation*  
+`bot-khat-karaniyametta-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to the discourse on loving-kindness, on what its practice keeps away and what it gives.
+
+**When it is chanted.** Chanted immediately before the Karaṇīya-metta Sutta, introducing it.
+
+**Historical background**
+
+Like the other prefatory verses this one says why the text matters rather than what it contains, and it does so by listing results.
+
+What it promises is unusually domestic. Not victory, not liberation, but an untroubled night.
+
+**Meaning and purpose**
+
+The first claim is protective in the ordinary sense: by the power of this text the yakkhas show nothing frightful. The verse is introducing a chant used where people are afraid, and it says so at once.
+
+The second is the one worth pausing on. One who applies himself to it, night and day untiring, sleeps happily, and sleeping sees no evil thing at all. The benefit named is sleep — and the condition attached to it is continuous practice, not recitation.
+
+That pairing sets up the sutta exactly. What follows is not a spell against spirits but a description of how to hold every living thing in mind, and the introduction quietly says that the protection and the practice are the same thing.
+
+---
+
+## กะระณียะเมตตะสุตตัง ตะติยัง — The Karaṇīya-metta Sutta, the Third
+
+*pages 86–87 · English is a working translation*  
+`karaniyametta-suttam-tatiyam`
+
+**Source (printed in the book):** ขุ. ขุ. 25/13 ขุ.สุ. 25/353
+
+**What it is.** The discourse on loving-kindness: what a practitioner should be like, whom to extend it to, and how to sustain it.
+
+**When it is chanted.** Chanted in the paritta service after its prefatory verse, and widely used on its own as a meditation text.
+
+**Historical background**
+
+The book prints its own reference. It is titled the third because of its position in the Tamnan, not because there are other versions of it.
+
+It is one of the few texts in this book that is as much used outside chanting as in it. What it sets out is a practice, in order, and the order survives being read as instructions.
+
+**Meaning and purpose**
+
+It does not begin with loving-kindness at all. The first five verses are about character: able, upright, easy to speak to, gentle, without conceit, contented, easily supported, with few duties and a frugal way of life, with senses calmed, not forward, not greedy among families. Only somebody already like that is considered ready for what follows.
+
+Then the extension, and its reach is the point. Every living thing whatever, weak or strong, long or short, seen or unseen, near or far, born or seeking birth. The list is built to leave no category out, and it is followed by the image the sutta is remembered for — as a mother would protect her only child with her life.
+
+The close moves it from feeling to posture. Standing, walking, sitting or lying down, let him resolve upon this mindfulness: this, they say here, is the divine abiding. And then, in the last verse, what it leads to — not falling into views, virtuous and endowed with vision, he comes never again to lie in a womb. A text chanted to make people feel safe ends by describing the end of rebirth.
+
+---
+
+## บทขัด ขันธะปะริตตัง ฉัททันตะปะริตตัง — The Prefatory Verse for the Khandha Paritta and the Chaddanta Paritta
+
+*page 87 · English is a working translation*  
+`bot-khat-khandha-chaddanta-parittam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** One prefatory verse introducing two parittas together, on warding off venom and every remaining danger.
+
+**When it is chanted.** Chanted immediately before the Khandha and Chaddanta parittas, which it introduces as a pair.
+
+**Historical background**
+
+Alone among the prefatory verses in this section, this one introduces two chants rather than one — and the book later closes both with a single colophon, so the pairing is the book's, not this edition's.
+
+The two it introduces are quite unlike each other: one is a declaration of loving-kindness towards snakes, the other a story about an elephant. What they share is that both concern an animal and a danger.
+
+**Meaning and purpose**
+
+The image it opens with is medical rather than magical: like a divine spell and antidote against all kinds of venomous creatures. Both halves of that are offered at once — the spell and the remedy — without any attempt to choose between them.
+
+What it claims is then made deliberately total: it destroys dreadful poison and every remaining danger too; everywhere within its domain, at all times, for all breathing beings, it wards off everything.
+
+อาณักเขตตัมหิ — within its domain — is the one word that keeps the claim honest. The protection is said to hold within a range rather than everywhere without qualification, which is a more careful thing to say than the sentence around it first appears to.
+
+---
+
+## ขันธะปะริตตัง จะตุตถัง — The Khandha Paritta, the Fourth
+
+*pages 87–88 · English is a working translation*  
+`khandha-parittam-catuttham`
+
+**Source (printed in the book):** วิ.จู. 7/11-12 อํ.จตุกก. 21/94-95
+
+**What it is.** A declaration of loving-kindness towards the four royal families of snakes and towards all creatures, asking that none come to harm.
+
+**When it is chanted.** Chanted in the paritta service, and traditionally used as a protection against snakes and venomous creatures.
+
+**Historical background**
+
+The book prints its own reference for it. The chant is addressed to snakes by family name — the Virūpakkhas, the Erāpathas, the Chabyāputtas and the Kaṇhāgotamakas — which is why it is reached for where snakes are a real danger.
+
+Its method is worth stating plainly, because it is not what a protective charm usually does. Nothing is commanded and nothing is repelled. Loving-kindness is declared, and the safety is said to follow from the declaring.
+
+**Meaning and purpose**
+
+The first movement extends metta by name and then by shape. Loving-kindness for each of the four snake families; then for the footless, the two-footed, the four-footed and the many-footed. Between them those two lists cover everything that moves.
+
+Only then the request, and it is symmetrical with what was just given: let no footless creature harm me, let no two-footed harm me. The chant asks for exactly what it has offered, in the same words and the same order, which is the whole of its argument.
+
+It closes by widening past the bargain — let the creatures depart — and then by homage: to the Blessed One, and to the seven Perfectly Awakened Ones. Having spent itself on snakes, it ends where every other chant in this collection ends, and the protection is left resting on that rather than on the snakes having agreed to anything.
+
+---
+
+## ฉัททันตะปะริตตัง — The Chaddanta Paritta
+
+*page 88 · English is a working translation*  
+`chaddanta-parittam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** A few verses from the story of the elephant who, pierced by a hunter's dart, sees the ochre robe and will not strike back.
+
+**When it is chanted.** Chanted in the paritta service, paired with the Khandha Paritta and closed by the same colophon.
+
+**Historical background**
+
+The shortest of the parittas in this stretch, and the only one that is purely narrative. It takes a scene from a birth story rather than a formula, and does not explain itself.
+
+The elephant of the story is the Great Being, the Buddha in an earlier life. The hunter has come to kill him for his tusks.
+
+**Meaning and purpose**
+
+The scene turns on a moment of recognition. As he touched him, thinking I shall kill him, he caught sight of the ochre robe, the banner of the seers — the hunter is wearing a monk's robe as a disguise, and the elephant sees it while being killed.
+
+The thought that arises is given as a maxim rather than a feeling: the banner of the arahants is not to be slain by the good. What restrains the elephant is not affection for the hunter but a rule about what the robe means, held to even when the robe is being used to murder him.
+
+That is why it is chanted for protection, and the logic is unlike the other parittas here. The others declare loving-kindness or state a truth. This one simply shows what somebody did while pierced by a dart and afflicted — and offers that as the thing worth having power in the world.
+
+---
+
+## บทขัด โมระปะริตตัง — The Prefatory Verse for the Mora Paritta
+
+*page 88 · English is a working translation*  
+`bot-khat-mora-parittam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to the peacock's paritta, on the Great Being whom hunters could never catch.
+
+**When it is chanted.** Chanted immediately before the Mora Paritta, introducing it.
+
+**Historical background**
+
+Born in the womb of a peacock while fulfilling the requisites of awakening — the verse places the story in the same series as the elephant of the chant before it. Both are the Buddha in an earlier birth, in animal form.
+
+It is the second of three consecutive parittas attributed to an animal, which is a distinctive feature of this part of the collection.
+
+**Meaning and purpose**
+
+The claim is empirical in form: the forest-dwellers, though they strove for a long while, were never able to catch him. The proof offered is a record of failed attempts rather than an assertion of power.
+
+What did the protecting is named carefully — the Great Being whose protection was arranged by it. The paritta is the arrangement, not the peacock, and the verse is precise about which of the two the chanters are being offered.
+
+It is then called พ๎รัห๎มะมันตันติ, declared to be a Brahma-spell, before the handover. That is an old and frank word for what a paritta is, and this collection does not avoid it.
+
+---
+
+## โมระปะริตตัง ปัญจะมัง — The Mora Paritta, the Fifth
+
+*pages 88–89 · English is a working translation*  
+`mora-parittam-pancamam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The peacock's salutation to the rising and setting sun, and to the Buddhas, chanted morning and evening for a safe day and night.
+
+**When it is chanted.** Chanted in the paritta service; traditionally said at dawn and at dusk, as the peacock is said to have said it.
+
+**Historical background**
+
+The chant is a pair of matched halves and its structure is a timetable. One half salutes the sun as it rises and asks for safety through the day; the other salutes it as it sets and asks for safety through the night.
+
+Between them the two halves cover the whole of a day, which is what the story requires: the peacock is said to have chanted the first on waking and the second before sleeping.
+
+**Meaning and purpose**
+
+The sun is addressed with real warmth and no theology: here he rises, the one with vision, the sole king, golden-hued, illumining the earth. It is saluted as a benefactor rather than worshipped as a god, and then asked plainly — guarded by you this day, may we dwell through the daylight.
+
+The petition is then handed on from the sun to those who know: those brahmins who are masters of knowledge in all things. The protection is asked for twice over, once from the light and once from the wise, and the chant does not treat these as competing.
+
+The close is the part that carries the day into the tradition: homage to the Buddhas, homage to the awakening; homage to the liberated, homage to liberation. And then a last line that is almost domestic — having made this paritta, the peacock settles down to rest. The chant ends by describing somebody going to sleep.
+
+---
+
+## บทขัด วัฏฏะกะปะริตตัง — The Prefatory Verse for the Vaṭṭaka Paritta
+
+*page 89 · English is a working translation*  
+`bot-khat-vattaka-parittam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to the quail's paritta, on the forest fire that turned aside from a helpless chick.
+
+**When it is chanted.** Chanted immediately before the Vaṭṭaka Paritta, introducing it.
+
+**Historical background**
+
+The third of the three animal parittas, and the verse places it in the same series: born as a quail while fulfilling the requisites of awakening.
+
+It adds one detail the other two do not — who told the story. It was spoken by the Refuge of the World to the elder Sāriputta, so the chant comes with an attribution built into its introduction.
+
+**Meaning and purpose**
+
+The event is given in a single line and needs no elaboration: by whose power the forest fire turned aside from the Great Being. A fire changed course.
+
+The claim made for it afterwards is the largest in this section — กัปปัฏฐายิ, lasting an aeon, and of great power. The protection is said to persist not for the chanting or for the day but for an age.
+
+Set against the chant it introduces, that claim is deliberately out of proportion to its occasion. What follows is a small bird that cannot fly or walk, and the verse has just said the consequence lasts an aeon.
+
+---
+
+## วัฏฏะกะปะริตตัง ฉัฏฐัง — The Vaṭṭaka Paritta, the Sixth
+
+*pages 89–90 · English is a working translation*  
+`vattaka-parittam-chattham`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The quail's act of truth: having neither wings that fly nor feet that walk, it states what is so, and the fire turns aside.
+
+**When it is chanted.** Chanted in the paritta service, and traditionally used as a protection against fire.
+
+**Historical background**
+
+This is the clearest example in the book of a สัจจะกิริยะ, an act of truth: a formal statement of something true, made in order that its being true should have an effect.
+
+Everything in the chant is arranged to show the mechanism working, which is why it is short. There is a helpless creature, a true statement, and a result.
+
+**Meaning and purpose**
+
+It begins by establishing that truth is a thing with force in the world at all: there is in the world the quality of virtue, truth, purity and compassion; by that truth I shall make an unsurpassed act of truth. The claim is made before it is used.
+
+The truth then stated is startling for its plainness. There are wings, but they cannot fly; there are feet, but they cannot walk. The quail asserts nothing about its virtue or its destiny. It states its own helplessness accurately, and that is the whole of the act.
+
+The result is reported in the same flat register: when my act of truth was made, the great blazing flame spared sixteen karīsas, as a flame does on reaching water. And the closing line names what the chick is said to have been practising all along — there is nothing equal to my truth: this is my perfection of truth. Not courage and not power. Accuracy.
+
+---
+
 ## ท์วัตติงสาการะปาโฐ — The Passage on the Thirty-Two Parts of the Body
 
 *pages 217–218*  
@@ -2550,38 +3360,8 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 
 ## Still to write
 
-213 chants, in book order:
+183 chants, in book order:
 
-- pages 64–65 — คำเชิญบูชาพระรัตนตรัยพิเศษ — The Special Invitation to Worship the Triple Gem (`kham-choen-bucha-phra-ratanattaya-phiset`)
-- page 65 — คาถาอาราธนาธรรม — The Verses Inviting the Teaching of the Dhamma (`khatha-aradhana-dhamma`)
-- pages 66–67 — คำถวายดอกไม้ ธูป เทียน ในวันวิสาขบูชา — The Words for Offering Flowers, Incense and Candles on Visākha Pūjā Day (`kham-tawai-dokmai-thup-thian-visakha`)
-- pages 67–68 — สะระภัญญะคาถา สำหรับสวดในวันวิสาขบูชา — The Saraphañña Verses for Chanting on Visākha Pūjā Day (`sarabhanna-gatha-visakha`)
-- pages 68–69 — คำถวายดอกไม้ ธูป เทียน ในวันอัฏฐมีบูชา — The Words for Offering Flowers, Incense and Candles on Aṭṭhamī Pūjā Day (`kham-tawai-dokmai-thup-thian-atthami`)
-- pages 69–71 — สะระภัญญะคาถา สำหรับสวดในวันอัฏฐมีบูชา — The Saraphañña Verses for Chanting on Aṭṭhamī Pūjā Day (`sarabhanna-gatha-atthami`)
-- page 71 — คำถวายดอกไม้ ธูป เทียน ในวันมาฆบูชา — The Words for Offering Flowers, Incense and Candles on Māgha Pūjā Day (`kham-tawai-dokmai-thup-thian-magha`)
-- pages 71–72 — สะระภัญญะคาถา สำหรับสวดในวันมาฆบูชา — The Saraphañña Verses for Chanting on Māgha Pūjā Day (`sarabhanna-gatha-magha`)
-- pages 72–75 — โอวาทะปาติโมกขาทิปาฐะ สำหรับสวดในวันมาฆบูชา — The Passage of the Exhortation Pāṭimokkha and What Follows, for Chanting on Māgha Pūjā Day (`ovada-patimokkhadi-patha`)
-- pages 75–76 — คำถวายดอกไม้ ธูป เทียน ในวันอาสาฬหบูชา — The Words for Offering Flowers, Incense and Candles on Āsāḷha Pūjā Day (`kham-tawai-dokmai-thup-thian-asalha`)
-- page 77 — บทขัดชุมนุมเทวดา — The Prefatory Verse for Assembling the Devas (`bot-khat-chumnum-thewada`)
-- page 77 — ปุพพะภาคะนะมะการะปาโฐ — The Preliminary Salutation (`pubbabhaga-namakara-sipsong-tamnan`)
-- pages 77–78 — สะระณะคะมะนะปาโฐ — The Going for Refuge (`sarana-gamana-patha-sipsong-tamnan`)
-- page 78 — สัมพัทเธ — The Perfectly Awakened Ones (`sambuddhe`)
-- pages 78–79 — นะมะการะสิทธิคาถา — The Verses on the Success of Paying Homage (`namakarasiddhi-gatha`)
-- pages 79–80 — นะโมการะอัฏฐะกะคาถา — The Eightfold Homage Verses (`namokara-atthaka-gatha`)
-- page 80 — บทขัดต้นตำนาน — The Prefatory Verse Opening the Tamnan (`bot-khat-ton-tamnan`)
-- page 80 — บทขัดมังคะละสุตตะ — The Prefatory Verse for the Maṅgala Sutta (`bot-khat-mangkhala-sutta`)
-- pages 81–82 — มังคะละสุตตัง ปะฐะมัง — The Maṅgala Sutta, the First (`mangala-suttam-pathamam`)
-- page 82 — บทขัด ระตะนะสุตตัง — The Prefatory Verse for the Ratana Sutta (`bot-khat-ratana-suttam`)
-- pages 82–86 — ระตะนะสุตตัง ทุติยัง — The Ratana Sutta, the Second (`ratana-suttam-dutiyam`)
-- page 86 — บทขัด กะระณียะเมตตะสุตตัง — The Prefatory Verse for the Karaṇīya-metta Sutta (`bot-khat-karaniyametta-suttam`)
-- pages 86–87 — กะระณียะเมตตะสุตตัง ตะติยัง — The Karaṇīya-metta Sutta, the Third (`karaniyametta-suttam-tatiyam`)
-- page 87 — บทขัด ขันธะปะริตตัง ฉัททันตะปะริตตัง — The Prefatory Verse for the Khandha Paritta and the Chaddanta Paritta (`bot-khat-khandha-chaddanta-parittam`)
-- pages 87–88 — ขันธะปะริตตัง จะตุตถัง — The Khandha Paritta, the Fourth (`khandha-parittam-catuttham`)
-- page 88 — ฉัททันตะปะริตตัง — The Chaddanta Paritta (`chaddanta-parittam`)
-- page 88 — บทขัด โมระปะริตตัง — The Prefatory Verse for the Mora Paritta (`bot-khat-mora-parittam`)
-- pages 88–89 — โมระปะริตตัง ปัญจะมัง — The Mora Paritta, the Fifth (`mora-parittam-pancamam`)
-- page 89 — บทขัด วัฏฏะกะปะริตตัง — The Prefatory Verse for the Vaṭṭaka Paritta (`bot-khat-vattaka-parittam`)
-- pages 89–90 — วัฏฏะกะปะริตตัง ฉัฏฐัง — The Vaṭṭaka Paritta, the Sixth (`vattaka-parittam-chattham`)
 - page 90 — บทขัด ธะชัคคะสุตตัง — The Prefatory Verse for the Dhajagga Sutta (`bot-khat-dhajagga-suttam`)
 - pages 90–92 — ธะชัคคะปะริตตัง ธะชัคคะสุตตัง สัตตะมัง — The Dhajagga Paritta, the Dhajagga Sutta, the Seventh (`dhajagga-parittam-sattamam`)
 - page 92 — บทขัด อาฏานาฏิยะปะริตตัง — The Prefatory Verse for the Āṭānāṭiya Paritta (`bot-khat-atanatiya-parittam`)
