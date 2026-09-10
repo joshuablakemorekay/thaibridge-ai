@@ -103,7 +103,12 @@ jobs:
 
       - uses: actions/setup-python@v7
         with:
-          python-version: '3.11'
+          # Taken from .python-version, the same as the app's own workflow and
+          # the same as Render builds with. This job had been pinned to 3.11
+          # while the project ran 3.12.8 — harmless, since the eval runner
+          # imports nothing from the app, but a second version number nobody
+          # is maintaining is exactly how the first one goes stale.
+          python-version-file: .python-version
 
       - name: Install dependencies
         run: |
