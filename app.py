@@ -2554,7 +2554,7 @@ TOUR_VOCAB = {
     ],
     'emergencies': [
         {'english': 'Help!', 'thai': 'ช่วยด้วย', 'paiboon': 'chûai-dûai', 'note': 'Emergency cry for help'},
-        {'english': 'Hospital', 'thai': 'โรงพยาบาล', 'paiboon': 'rooŋ-pa-yaa-baan', 'note': 'Important for emergencies'},
+        {'english': 'Hospital', 'thai': 'โรงพยาบาล', 'paiboon': 'rooŋ-pá-yaa-baan', 'note': 'Important for emergencies'},
         {'english': 'Police', 'thai': 'ตำรวจ', 'paiboon': 'dam-rùat', 'note': 'For reporting issues'},
     ],
 }
@@ -4650,7 +4650,7 @@ LESSONS = [
                 {'thai': 'เลี้ยวขวา', 'paiboon': 'líao kwǎa', 'english': 'Turn right'},
             ],
             'long': [
-                {'thai': 'ห้องน้ำอยู่ที่ไหนครับ', 'paiboon': 'hɔ̂ŋ-náam yùu tîi nǎi kráp', 'english': 'Where is the bathroom?'},
+                {'thai': 'ห้องน้ำอยู่ที่ไหนครับ', 'paiboon': 'hɔ̂ɔŋ-náam yùu tîi nǎi kráp', 'english': 'Where is the bathroom?'},
             ]
         }
     },
@@ -6499,7 +6499,7 @@ CONVERSATIONS = {
             {'speaker': 'driver_male', 'thai': 'ได้ครับ เชิญขึ้นเลยครับ', 'paiboon': 'dâi kráp, chəən kʉ̂n ləəi kráp', 'english': 'Sure, please get in.', 'note': 'เชิญ = please (inviting)'},
             {'speaker': 'passenger_male', 'thai': 'ใช้มิเตอร์ได้ไหมครับ', 'paiboon': 'chái mí-təə dâi mǎi kráp', 'english': 'Can you use the meter?', 'note': 'Helps get a fair fare'},
             {'speaker': 'driver_male', 'thai': 'ได้ครับ รถติดนิดหน่อยนะครับ', 'paiboon': 'dâi kráp, rót tìt nít-nɔ̀i ná kráp', 'english': "Sure. There's a bit of traffic.", 'note': 'รถติด = traffic jam'},
-            {'speaker': 'passenger_male', 'thai': 'ไม่เป็นไรครับ จอดตรงนี้ได้ไหมครับ', 'paiboon': 'mâi bpen rai kráp, jɔ̀ɔt troŋ níi dâi mǎi kráp', 'english': "It's fine. Can you stop right here?", 'note': 'จอด = to stop/park'},
+            {'speaker': 'passenger_male', 'thai': 'ไม่เป็นไรครับ จอดตรงนี้ได้ไหมครับ', 'paiboon': 'mâi bpen rai kráp, jɔ̀ɔt dtroŋ níi dâi mǎi kráp', 'english': "It's fine. Can you stop right here?", 'note': 'จอด = to stop/park'},
             {'speaker': 'passenger_male', 'thai': 'เท่าไหร่ครับ', 'paiboon': 'tâo-rài kráp', 'english': 'How much is it?', 'note': ''},
             {'speaker': 'driver_male', 'thai': 'เก้าสิบบาทครับ', 'paiboon': 'gâo-sìp bàat kráp', 'english': 'Ninety baht.', 'note': ''}
         ]
