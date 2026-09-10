@@ -16,10 +16,12 @@ claims to use, and that a vowel row demonstrates its own vowel.
 import glob
 import json
 import os
+import re
 import unicodedata
 
 import pytest
 
+import ai_agent
 import app
 import register_levels
 import survival
@@ -292,3 +294,86 @@ def test_words_awaiting_the_teacher_still_disagree(word):
         f"{word} now has one reading — remove it from AWAITING_TEACHER_WORDS "
         f"so it is checked from here on"
     )
+
+
+# ── The AI tutor's system prompt ─────────────────────────────────────────
+#
+# Errors here never appear on a page. They are instructions to the model, so
+# they reach the learner as something the tutor says — which is why this block
+# sat wrong from the first commit until it was read line by line.
+with open(os.path.join(REPO, "ai_agent.py"), encoding="utf-8") as _fh:
+    AGENT_SOURCE = _fh.read()
+
+
+def consonant_rules_block():
+    """Just the Consonant Rules section, not the whole file.
+
+    Scoped deliberately: the prose elsewhere legitimately contains the letters
+    "ng" while explaining what ŋ sounds like, and a check over the whole file
+    would either trip on that or be watered down until it caught nothing.
+    """
+    start = AGENT_SOURCE.index("**Consonant Rules")
+    end = AGENT_SOURCE.index("**", AGENT_SOURCE.index("\n", start))
+    return AGENT_SOURCE[start:end]
+
+
+def test_tutor_prompt_agrees_with_the_alphabet_page():
+    """The prompt taught ข = kh, พ = ph and ถ = th while the Alphabet page
+    taught k, p and t, so the tutor and the chart disagreed about three
+    letters — and the prompt's own examples quietly sided with the chart."""
+    by_letter = {c["char"]: c["sound"] for c in thai_consonants.CONSONANTS}
+    faults = []
+    for line in consonant_rules_block().splitlines():
+        for chunk in line.split("·"):
+            if "=" not in chunk:
+                continue
+            left, _, right = chunk.partition("=")
+            letters = [ch for ch in left if "ก" <= ch <= "ฮ"]
+            words = right.strip().split()
+            if not letters or not words or not words[0].isalpha():
+                continue
+            for letter in letters:
+                expected = by_letter.get(letter)
+                if expected and expected != words[0]:
+                    faults.append(
+                        f"prompt says {letter} = {words[0]}, "
+                        f"alphabet page says {expected}")
+    assert not faults, "; ".join(faults)
+
+
+def test_no_anti_example_forbids_its_own_answer():
+    """Six examples read like 'ครับ = kráp (NOT khrap or kráp)', telling the
+    model the correct answer was also wrong. Cheap to write, near-invisible to
+    review, and it degrades every reply the tutor gives."""
+    faults = []
+    for match in re.finditer(r"- (\S+) = ([^(]+?)\s*\(NOT ([^)]+)\)",
+                             AGENT_SOURCE):
+        right = match.group(2).strip()
+        alternatives = [a.strip() for a in re.split(r"\bor\b", match.group(3))]
+        if right in alternatives:
+            faults.append(f"{match.group(1)} = {right} (NOT {match.group(3)})")
+    assert not faults, ("an example forbids the answer it gives: "
+                        + "; ".join(faults))
+
+
+def test_tutor_prompt_examples_use_the_paiboon_alphabet():
+    """The prompt instructed the model to always write ŋ and then wrote "ng"
+    itself, in dtɔ̀ɔng-gaan. A rule broken by its own example teaches the
+    example."""
+    # Finding these is fiddlier than it looks. The prompt says «ŋ = ng sound
+    # (as in "sing")» and «never write "ng"» in ordinary English, so a plain
+    # search for the letters reports the rule itself. What marks a token as
+    # romanisation rather than prose is a Paiboon-only character: ɔ ɛ ʉ ə ŋ or
+    # a combining tone mark. A token carrying one of those AND "ng" is the
+    # contradiction.
+    #
+    # The first version of this test looked for Thai script before the token,
+    # and passed while catching nothing — dtɔ̀ɔng-gaan sits in an English
+    # sentence with no Thai anywhere near it.
+    paiboon_only = "ɔɛʉə" + "ŋ" + "̀́̂̌"
+    faults = []
+    for token in re.findall(r"[^\s,;:()\"]+", AGENT_SOURCE):
+        if "ng" in token and any(ch in token for ch in paiboon_only):
+            faults.append(token)
+    assert not faults, ("prompt examples using 'ng' where Paiboon writes ŋ: "
+                        + "; ".join(sorted(set(faults))))
