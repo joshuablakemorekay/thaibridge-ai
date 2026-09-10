@@ -97,7 +97,7 @@ CONSONANTS = [
     _c('ค', 'คอ ควาย',  'kɔɔ kwaai',    'buffalo',     'k',  CLASS_LOW,    'khor-khwai',  '🐃'),
     _c('ฅ', 'คอ คน',    'kɔɔ kon',      'person',      'k',  CLASS_LOW,    'khor-khon',   '🧑', obsolete=True),
     _c('ฆ', 'ฆอ ระฆัง',  'kɔɔ rá-kaŋ',  'bell',        'k',  CLASS_LOW,    'khor-rakhang','🔔'),
-    _c('ง', 'งอ งู',     'ŋɔɔ ŋuu',    'snake',       'ng', CLASS_LOW,    'ngor-ngu',    '🐍'),
+    _c('ง', 'งอ งู',     'ŋɔɔ ŋuu',    'snake',       'ŋ', CLASS_LOW,    'ngor-ngu',    '🐍'),
     _c('จ', 'จอ จาน',   'jɔɔ jaan',     'plate',       'j',  CLASS_MIDDLE, 'chor-chan',   '🍽️'),
     # ฉิ่ง are small hand cymbals. Unicode has NO cymbals character, and a drum
     # is a different instrument, not a near miss — so the chart shows the drawn
