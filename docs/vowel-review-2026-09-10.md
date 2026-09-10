@@ -72,7 +72,7 @@ itself barely occurs in real Thai.*
 ---
 
 # ส่วนที่ 2 — คำอ่านที่เขียนไว้สองแบบ
-## Part 2 — four words written two different ways
+## Part 2 — readings that need an ear
 
 ผมตรวจคำอ่านทั้งแอปแล้วพบว่ามี 11 คำที่เขียนไว้สองแบบ แก้ไปได้ 6 คำ
 เพราะมีหลักฐานในแอปเองที่ชี้ขาดได้ อีก 1 คำ (ณ) ไม่ใช่ปัญหา เพราะเป็นทั้งพยัญชนะและคำ
@@ -102,6 +102,19 @@ conflict — it is both a letter and a word. These four need an ear, not a rule.
 
 - **คำถาม:** พยางค์หลังเป็นเสียงสามัญหรือเสียงจัตวาครับ (คำราชาศัพท์)
   - *Is the second syllable mid tone or rising? (royal vocabulary)*
+- แก้เป็น: __________________________________________
+
+### 5. สระ ออ + ง — `ห้อง` กับ `ต้อง` เขียนไม่เหมือนกัน
+
+- **ตอนนี้เขียนไว้ว่า:** ห้อง = `hɔ̂ɔŋ` (เสียงยาว)  ·  ต้อง = `dtɔ̂ŋ` (เสียงสั้น)
+- **คำถาม:** สองคำนี้สะกดเหมือนกันทุกอย่าง — พยัญชนะ + ไม้โท + อ + ง —
+  แต่ในแอปเขียนคำอ่านคนละแบบ คำไหนถูกครับ หรือควรเป็นเสียงเดียวกันทั้งคู่
+  ตอบข้อนี้ใช้ได้กับทุกคำที่ลงท้ายแบบนี้เลยครับ
+  - *These two are spelled identically — consonant + mai tho + อ + ง — yet the
+    app writes one long and the other short. Which is right, or should they
+    match? One answer covers every word ending this way.*
+- **หมายเหตุ:** ข้อนี้ไม่ได้อยู่ใน 11 คำข้างบน เพิ่งเจอทีหลังครับ
+  - *Not one of the eleven above — found separately.*
 - แก้เป็น: __________________________________________
 
 ---
