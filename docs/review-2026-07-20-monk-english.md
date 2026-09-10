@@ -1,3 +1,10 @@
+> ⚠️ **เอกสารนี้เก่าแล้ว / SUPERSEDED** — ใช้ `review-2026-09-10-monk-english` แทนครับ
+> ฉบับใหม่ครอบคลุมบทเรียนครบ 13 บท (277 ข้อ) ฉบับนี้มีแค่ 10 บท
+>
+> *Superseded by `review-2026-09-10-monk-english`, which covers all 13
+> lessons (277 items) rather than the 10 here, and is easier to answer.
+> This one was never sent.*
+
 # ตรวจเนื้อหาใหม่ — Monk Mode English
 ## Review of new material — 2026-07-20
 

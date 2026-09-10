@@ -230,6 +230,46 @@ ASK = [
     ("คำแปล", "คำแปลภาษาไทยตรงกับประโยคภาษาอังกฤษไหม"),
 ]
 
+# How to answer. The tick is the important half: on a sheet this long most
+# items will be fine, and without a way to say so quickly a blank line is
+# ambiguous — it cannot be told apart from an item she never reached.
+HOW_TH = "ถ้าถูกแล้ว ติ๊ก ✓ ได้เลยครับ   ·   ถ้าต้องแก้ เขียนตรงบรรทัด แก้เป็น:"
+HOW_EN = ("If it is already right, just tick it. If not, write the correction "
+          "on the line. A blank means you have not looked at it yet, so please "
+          "do tick the ones that are fine.")
+
+# Minutes per item, used only to turn a count into an honest estimate. A
+# tick-and-move-on item is a few seconds; the ones needing a rewrite are the
+# minority. Deliberately rounded up when shown.
+MINUTES_PER_ITEM = 0.25
+
+SKIP_TH = ("ไม่ต้องตอบทุกข้อครับ ข้อไหนไม่แน่ใจข้ามได้เลย "
+           "และทำทีละบทก็ได้ ไม่ต้องทำรวดเดียว")
+SKIP_EN = ("Please skip anything you are unsure of, and feel free to do one "
+           "lesson at a time rather than all of it at once.")
+
+# Shown once, so the format of a useful answer is demonstrated rather than
+# described. Uses the shape of a real entry.
+EXAMPLE_TH = [
+    ("หัวข้อ", "food   ·   `คำอ่าน: FUUD`   ·   `คำไทย: อาหาร`"),
+    ("คำอธิบายการออกเสียง", "สระ UU ยาว เหมือน อู — ท้ายคำ D ต้องมีเสียงก้อง ไม่ใช่ ต"),
+    ("ถ้าถูกแล้ว", "ติ๊ก ✓ แล้วข้ามไปข้อถัดไปได้เลยครับ"),
+    ("ถ้าต้องแก้", "เขียนที่ถูกลงตรงบรรทัด เช่น *แก้เป็น: ท้ายคำ D ออกเสียงเบา ๆ ไม่ใช่ ต*"),
+]
+
+
+def estimate(total):
+    """An honest reading of how long the sheet takes, in Thai and English."""
+    minutes = int(total * MINUTES_PER_ITEM)
+    if minutes >= 60:
+        hours = minutes / 60.0
+        th = "ประมาณ {:.0f} ชั่วโมง".format(round(hours))
+        en = "roughly {:.0f} hour{}".format(round(hours), "" if round(hours) == 1 else "s")
+    else:
+        th = "ประมาณ {} นาที".format(max(5, (minutes // 5) * 5))
+        en = "roughly {} minutes".format(max(5, (minutes // 5) * 5))
+    return th, en
+
 
 def meta_line(item):
     """The English + pronunciation line, as plain text pieces."""
@@ -254,13 +294,35 @@ def render_md(sections, base_ref, review_all):
     L.append("**{}**".format(INTRO_TH))
     L.append(INTRO_EN)
     L.append("")
+    th_time, en_time = estimate(total)
+    L.append("**ทั้งหมด {} ข้อ · {} บท · {}**".format(total, len(sections), th_time))
+    L.append("")
+    L.append("*{} items across {} lessons — {}.*".format(total, len(sections), en_time))
+    L.append("")
+    L.append("> {}".format(SKIP_TH))
+    L.append(">")
+    L.append("> *{}*".format(SKIP_EN))
+    L.append("")
     L.append("ช่วยตรวจ {} อย่าง / Please check:".format(len(ASK)))
     L.append("")
     for i, (head, detail) in enumerate(ASK, 1):
         L.append("{}. **{}** — {}".format(i, head, detail))
     L.append("")
-    L.append("**เขียนแก้ตรงบรรทัด \"แก้เป็น:\" ได้เลย / "
-             "Write corrections on the \"แก้เป็น:\" line.**")
+    L.append("**{}**".format(HOW_TH))
+    L.append("")
+    L.append("*{}*".format(HOW_EN))
+    L.append("")
+    L.append("### ตัวอย่างการตอบ / What answering looks like")
+    L.append("")
+    for lbl, val in EXAMPLE_TH:
+        L.append("- **{}:** {}".format(lbl, val))
+    L.append("")
+    L.append("### บทเรียนในเอกสารนี้ / What is in here")
+    L.append("")
+    L.append("| บท / Lesson | จำนวนข้อ |")
+    L.append("|---|---|")
+    for title, items in sections:
+        L.append("| {} | {} |".format(title, len(items)))
     L.append("")
     L.append("> เนื้อหาทั้งหมดนี้สร้างขึ้นจากสิ่งที่อาจารย์ให้มา — บทฝึกลิ้น บทอ่านธรรมะ "
              "และคำแนะนำเรื่องเสียง V, F, TH การนำคำไปใส่ในประโยค และการอ่านเอาความ "
@@ -289,7 +351,7 @@ def render_md(sections, base_ref, review_all):
                     L.append("- *เดิม — {}:* {}".format(lbl, val))
             for lbl, val in item["thai_bits"]:
                 L.append("- **{}:** {}".format(lbl, val))
-            L.append("- แก้เป็น: __________________________________________")
+            L.append("- ถูกแล้ว ☐   ·   แก้เป็น: ______________________________")
 
     L.append("")
     L.append("---")
@@ -322,6 +384,24 @@ HTML_CSS = """
   .th .lbl { display: inline-block; min-width: 10.5em; font-weight: 700; color: #2c6e2f; }
   .old { color: #888; font-size: .9em; }
   .old .lbl { display: inline-block; min-width: 10.5em; font-weight: 700; }
+  .en { color: #666; font-size: .89em; font-style: italic; }
+  .scale { background: #fff; border-left: 5px solid #FF9933; border-radius: 0 8px 8px 0;
+           padding: .55rem .9rem; margin: .9rem 0 .6rem; font-size: 1.05em; }
+  .skip { background: #fdfaf3; border: 1px dashed #d6b26a; border-radius: 8px;
+          padding: .5rem .8rem; margin: .6rem 0 .9rem; }
+  .how { background: #f2f8ee; border-radius: 8px; padding: .55rem .8rem;
+         margin: .8rem 0; }
+  .worked { background: #f2f8ee; border: 2px dashed #7fa86a; border-radius: 10px;
+            padding: .8rem 1rem; margin: 1.2rem 0 1.6rem; }
+  .worked h2 { margin: 0 0 .5rem; font-size: 1.05rem; color: #2c6e2f; }
+  .worked .wlbl { display: inline-block; min-width: 12rem; font-weight: 700;
+                  color: #2c6e2f; }
+  .contents-h { font-size: 1.05rem; margin: 1.6rem 0 .5rem; color: #7a3b00; }
+  table.contents { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; }
+  table.contents td { padding: .3rem .6rem; border-bottom: 1px solid #eee; }
+  table.contents td.n { text-align: right; color: #666; white-space: nowrap; }
+  .tick { display: inline-block; margin-right: 1.2rem; font-weight: 700;
+          color: #2c6e2f; }
   .fix { margin-top: .4rem; }
   .fix .line { display: inline-block; width: 70%; border-bottom: 1.5px dotted #aaa;
                height: 1.15em; }
@@ -345,15 +425,33 @@ def render_html(sections, base_ref, review_all):
              .format(TODAY))
     L.append('<div class="notice">')
     L.append('<strong>{}</strong><br>{}<br><br>'.format(INTRO_TH, INTRO_EN))
+    th_time, en_time = estimate(total)
+    L.append('<div class="scale">ทั้งหมด <strong>{} ข้อ</strong> · {} บท · {}<br>'
+             '<span class="en">{} items across {} lessons — {}.</span></div>'
+             .format(total, len(sections), th_time, total, len(sections), en_time))
+    L.append('<div class="skip">{}<br><span class="en">{}</span></div>'
+             .format(SKIP_TH, SKIP_EN))
     L.append('ช่วยตรวจ {} อย่าง / Please check:<br>'.format(len(ASK)))
     for i, (head, detail) in enumerate(ASK, 1):
         L.append('{}. <strong>{}</strong> — {}<br>'.format(i, head, detail))
-    L.append('<br>เขียนแก้ตรงบรรทัด <strong>แก้เป็น:</strong> ได้เลย / '
-             'Write corrections on the dotted line.<br><br>')
+    L.append('<div class="how"><strong>{}</strong><br>'
+             '<span class="en">{}</span></div>'.format(HOW_TH, HOW_EN))
     L.append('เนื้อหานี้สร้างขึ้นจากคำแนะนำของอาจารย์เมื่อวันที่ 20 กรกฎาคม — '
              'เรื่องเสียง V, F, TH การนำคำไปใส่ในประโยค และการอ่านเอาความ '
              'ขอบพระคุณมากครับ 🙏')
     L.append('</div>')
+
+    L.append('<div class="worked"><h2>ตัวอย่างการตอบ / What answering looks like</h2>')
+    for lbl, val in EXAMPLE_TH:
+        L.append('<div><span class="wlbl">{}</span>{}</div>'.format(e(lbl), val))
+    L.append('</div>')
+
+    L.append('<h2 class="contents-h">บทเรียนในเอกสารนี้ / What is in here</h2>')
+    L.append('<table class="contents">')
+    for title, items in sections:
+        L.append('<tr><td>{}</td><td class="n">{} ข้อ</td></tr>'
+                 .format(e(title), len(items)))
+    L.append('</table>')
 
     for title, items in sections:
         L.append('<h1 class="lessontitle">{}</h1>'.format(e(title)))
@@ -377,8 +475,7 @@ def render_html(sections, base_ref, review_all):
             for lbl, val in item["thai_bits"]:
                 L.append('<div class="th"><span class="lbl">{}</span>{}</div>'
                          .format(e(lbl), e(val)))
-            L.append('<div class="fix"><strong>แก้เป็น:</strong> '
-                     '<span class="line"></span></div>')
+            L.append('<div class="fix"><span class="tick">☐ ถูกแล้ว</span><strong>แก้เป็น:</strong> <span class="line"></span></div>')
             L.append('</div>')
 
     L.append('<hr><p>รวม {} ข้อ · ขอบคุณมากครับ 🙏</p>'.format(total))
