@@ -30131,8 +30131,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0355.PNG]: A SEVENTH TITLE THE CONTENTS TEST CANNOT
         #   SEE. The page prints บทขัด ธะชัคคะสุตตัง with a SPACE after บทขัด;
         #   the สารบัญ has บทขัดธะชัคคะสุตตัง without one. Same as pages 82,
@@ -30147,6 +30145,38 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt tá-chák-ká-sùt-dtaŋ',
         'title_english': 'The Prefatory Verse for the Dhajagga Sutta',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the Dhajagga Sutta, on the recollection that "
+            "gives a footing to those with nothing to stand on."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Dhajagga Sutta, introducing it."
+        ),
+
+        'background': [
+            "The image it opens with is the one the sutta is remembered for, and "
+            "it is unusually vivid for an introduction: by the mere recollection "
+            "of which even creatures in mid-air always find a footing, as though "
+            "upon the ground.",
+
+            "A footing in mid-air is a precise description of what the sutta "
+            "offers. It is chanted where somebody has nothing solid under them.",
+        ],
+
+        'meaning': [
+            "The claim is made twice over, in two registers. First the "
+            "impossible-sounding one about creatures in the air; then a plain one — from the net of all misfortunes arising from yakkhas, "
+            "thieves and the like, those freed are beyond counting.",
+
+            "The second is offered as evidence for the first, and its form is worth noticing: not a promise about what will happen, but a claim about how many people it has already happened to.",
+
+            "อนุสสะรณะ, the mere recollection, is the operative word. What the introduction promises is not from chanting the words but from calling something to mind, and the sutta that follows is entirely about what to call to mind and why.",
+        ],
         'page_start': 90,
         'group': 'General chanting',
         'english_unverified': True,
@@ -30199,8 +30229,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0355.PNG]: english_unverified is set. The book prints
         #   this sutta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -30212,6 +30240,34 @@ CHANTS = [
         'title_pali': 'Dhajaggaparittaṃ dhajaggasuttaṃ sattamaṃ',
         'title_roman': '',
         'title_english': 'The Dhajagga Paritta, the Dhajagga Sutta, the Seventh',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "The Buddha tells how the devas were told to look at their king's "
+            "banner in battle, and gives his followers a better thing to look at."
+        ),
+
+        'when_chanted': (
+            "Chanted in the paritta service after its prefatory verse, and used "
+            "wherever fear needs answering."
+        ),
+
+        'background': [
+            "The book prints its own reference. ธะชัคคะ means the top of a banner, and the whole sutta turns on that image — what a frightened person is told to look up at.",
+
+            "It is built as a story with a correction inside it. The Buddha recounts what Sakka told the devas to do when afraid, and then says why that advice was not good enough.",
+        ],
+
+        'meaning': [
+            "In the story, Sakka tells the devas that if fear arises in battle they should look at the top of his banner, or at the banner of one of the other deva kings, and their fear will go. The Buddha repeats the advice fully and fairly before touching it.",
+
+            "Then the correction, and it is not a rejection but a diagnosis. Looking at Sakka's banner may or may not remove fear, because Sakka is not free of lust, hatred and delusion — he is frightened himself. Advice is only as good as the person giving it, and the sutta says so about a god.",
+
+            "What is offered instead is the recollection of the Buddha, the Dhamma or the Sangha, and the promise attached is stated three times over in the same words: there will be no fear, no trembling and no horripilation. The last of those is the detail that makes it credible — the sutta is talking about the body's response, not about being brave.",
+        ],
         'page_start': 90,
         'source_printed': 'สํ.ส. 15/320-223',
         'group': 'General chanting',
@@ -31052,8 +31108,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0357.PNG]: AN EIGHTH TITLE THE CONTENTS TEST CANNOT
         #   SEE. The page prints บทขัด อาฏานาฏิยะปะริตตัง with a SPACE after
         #   บทขัด; the สารบัญ has บทขัดอาฏานาฏิยะปะริตตัง without one. Same as
@@ -31071,6 +31125,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt aa-dtaa-naa-dtì-yá-bpà-rít-dtaŋ',
         'title_english': 'The Prefatory Verse for the Āṭānāṭiya Paritta',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the Āṭānāṭiya Paritta, on the fierce non-human beings who were never persuaded."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Āṭānāṭiya Paritta, introducing it."
+        ),
+
+        'background': [
+            "This introduction is unusual in naming an unsolved problem rather than a triumph. There are beings unconvinced of the Teaching, though it is held good, and they are forever doing harm.",
+
+            "The paritta that follows is presented as a practical response to that fact: not a way of converting such beings, but a way of being left alone by them.",
+        ],
+
+        'meaning': [
+            "The phrase that carries it is อะปะสันนะ — unconvinced. The verse concedes at the outset that the Teaching does not persuade everyone, which is a candid thing for a devotional text to open with.",
+
+            "What was taught in response was taught for a purpose the verse states plainly: for the safety and protection of his assemblies. Not for their advancement, and not for anyone's conversion.",
+
+            "That makes this the most defensive text in the collection, and it is why the chant it introduces is essentially a long list of names. If a being cannot be reasoned with, what remains is knowing who they are and who outranks them.",
+        ],
         'page_start': 92,
         'group': 'General chanting',
         'english_unverified': True,
@@ -31124,8 +31203,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0357.PNG]: english_unverified is set. The book prints
         #   this paritta in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -31136,6 +31213,32 @@ CHANTS = [
         'title_pali': 'Āṭānāṭiyaparittaṃ aṭṭhamaṃ',
         'title_roman': '',
         'title_english': 'The Āṭānāṭiya Paritta, the Eighth',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "Homage to the seven Buddhas by name, followed by a long protective formula against harm from non-human beings."
+        ),
+
+        'when_chanted': (
+            "Chanted in the paritta service, and used where protection from unseen harm is wanted."
+        ),
+
+        'background': [
+            "The book prints its own reference. The chant opens by naming the seven Buddhas of the past in order — Vipassī, Sikhī, Vessabhū, Kakusandha, Koṇāgamana, and so on to Gotama — each with an epithet of his own.",
+
+            "Naming is the method of the whole chant. Where other parittas declare loving-kindness or state a truth, this one establishes authority by reciting who holds it.",
+        ],
+
+        'meaning': [
+            "The epithets given to the seven are short and each is different: possessed of vision and of glory; compassionate to all beings; cleansed and ardent; crusher of Māra's army; the brahmin who has lived the life. They are not interchangeable, and the chant takes care to distinguish beings most people will never think about again.",
+
+            "What follows is protective in the most literal sense — a formula asserting that these names are known, that the beings addressed are subject to them, and that harm should therefore not come. It is the least meditative text in the collection and does not pretend otherwise.",
+
+            "The closing verses turn domestic and almost gentle: may no obstacle be yours, be happy and long-lived. And then a proverb — for one whose habit is to salute, who constantly honours the elders, four things increase: long life, beauty, happiness and strength. After ninety verses of naming powers, it ends by recommending good manners.",
+        ],
         'page_start': 92,
         'group': 'General chanting',
         'english_unverified': True,
@@ -32062,8 +32165,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0584.PNG]: THE BOOK PRINTS THIS SECTION IN ROMAN PALI
         #   WITH NO THAI SCRIPT — the first page in the whole book to do so.
         #   Every verse therefore has an EMPTY pali and carries its text in
@@ -32085,6 +32186,31 @@ CHANTS = [
         'title_pali': 'Mahāsamayasutta',
         'title_roman': '',
         'title_english': 'The Discourse on the Great Assembly',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The great gathering of devas from ten world-systems who came to see the Buddha and the five hundred arahants at Kapilavatthu."
+        ),
+
+        'when_chanted': (
+            "Chanted on occasions where the largest possible assembly is being invoked; printed here in the book's roman-script appendix."
+        ),
+
+        'background': [
+            "This is one of two chants in this book printed in ROMAN Pali rather than Thai script. It sits in the appendix at the back, where the layers a reader meets are the romanised Pali and the English — the Thai script and Paiboon columns are empty because the page has none.",
+
+            "At a hundred and ninety-two verses it is the longest chant in the book. The Mahāsamaya is a catalogue: deva after deva, host after host, named and placed.",
+        ],
+
+        'meaning': [
+            "The setting is given in four lines and then never returns to the human scale. The Blessed One among the Sakyans at Kapilavatthu in the Great Wood, with five hundred bhikkhus, all of them arahants — and from ten world-systems the deities had for the most part gathered to see them.",
+
+            "What follows is the naming, and the naming is the point. Reading it as a list is possible but misses what chanting it does: an hour of unfamiliar names, delivered without pause, builds a sense of scale that no summary can. The room fills up as the chant goes on.",
+
+            "The last verses turn to what Māra's army found when it came. From those free of lust it withdrew; not one hair of theirs was stirred. All of them victors in the battle, gone beyond fear, of renown, they rejoice together with the beings. The enormous assembly turns out to have been gathered to witness people who could not be frightened.",
+        ],
         'page_start': 317,
         'layout': 'prose',
         'group': 'General chanting',
@@ -33948,8 +34074,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0361.PNG]: A NINTH TITLE THE CONTENTS TEST CANNOT SEE.
         #   The page prints บทขัด อังคุลิมาละปะริตตัง with a SPACE after
         #   บทขัด; the สารบัญ has บทขัดอังคุลิมาละปะริตตัง without one. Same
@@ -33966,6 +34090,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt aŋ-kú-lí-maa-lá-bpà-rít-dtaŋ',
         'title_english': 'The Prefatory Verse for the Aṅgulimāla Paritta',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the Aṅgulimāla Paritta, on the words that bring about a safe delivery."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Aṅgulimāla Paritta, introducing it."
+        ),
+
+        'background': [
+            "The most practical of the introductions, and the most specific. It names one use and one occasion: the safe delivery of a child, in that very moment.",
+
+            "It also describes a physical practice, which is rare in this book — the water that washes the place where the reciter sat is itself held to destroy danger.",
+        ],
+
+        'meaning': [
+            "That detail about the washing water is worth not glossing over. The power is treated as something that settles on a place and can be carried away in a bowl, which is a much more concrete idea of blessing than most of this collection uses.",
+
+            "The occasion named — childbirth — explains why this paritta has stayed in constant use where others are chanted only in full services. It answers a need that recurs and cannot be postponed.",
+
+            "The introduction closes as the Vaṭṭaka one did, with the same phrase: lasting an aeon and of great power. The two chants it links are both acts of truth spoken by a particular person on a particular day, and the tradition rates both the same way.",
+        ],
         'page_start': 96,
         'group': 'General chanting',
         'english_unverified': True,
@@ -34030,8 +34179,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0361.PNG]: A FINGER IS IN THIS PHOTOGRAPH AND IT COVERS
         #   NO TEXT — checked, not assumed. Skin tone occupies y 2600 to the
         #   bottom edge; the last printed line, the colophon, ends at y 2380.
@@ -34048,6 +34195,31 @@ CHANTS = [
         'title_pali': 'Aṅgulimālaparittaṃ navamaṃ',
         'title_roman': '',
         'title_english': 'The Aṅgulimāla Paritta, the Ninth',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Aṅgulimāla's act of truth, spoken to a woman in difficult labour, said three times over."
+        ),
+
+        'when_chanted': (
+            "Chanted for a woman in labour, and in the paritta service in its place as the ninth."
+        ),
+
+        'background': [
+            "Three sentences, repeated three times, and that is the whole chant. It is the shortest text in the Tamnan and among the most used.",
+
+            "Who says it matters more here than in any other chant in the book. Aṅgulimāla had been a murderer who wore a garland of his victims' fingers before he was ordained, which is what makes his sentence difficult.",
+        ],
+
+        'meaning': [
+            "The truth he states is bounded with great care: sister, since I was born in the noble birth, I am not aware of having intentionally deprived any living being of life. Every clause of it is doing work.",
+
+            "อะริยายะ ชาติยา — the noble birth — means his ordination, not his birth from a mother, and the qualification is what makes the statement true. He is not claiming never to have killed. He is dating the claim.",
+
+            "And then a second hedge: I am not aware of. Not I have not, but I am not aware of having. A man with his history states only what he can actually vouch for, and the tradition holds that this scrupulously limited sentence is what has the power in it. By that truth, may you be well and may your child be well.",
+        ],
         'page_start': 96,
         'group': 'General chanting',
         'english_unverified': True,
@@ -34165,8 +34337,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0579.PNG]: THE BOOK PRINTS ENGLISH ON THIS PAGE, and it
         #   is the first page in the book to do so. Beneath the title, centred
         #   and in square brackets: [The Peak of Tipitaka]. chanting.py states
@@ -34189,6 +34359,31 @@ CHANTS = [
         'title_pali': 'YOD PHRAKANTRAIPIDOK',
         'title_roman': '',
         'title_english': 'The Peak of Tipitaka',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "A chant built from the epithets of the Buddha, the Dhamma and the Sangha broken down to their heart syllables."
+        ),
+
+        'when_chanted': (
+            "Chanted where a condensed form of the whole canon is wanted; printed in the book's roman-script appendix."
+        ),
+
+        'background': [
+            "The second of the two chants this book prints in ROMAN Pali rather than Thai script, in the appendix at the back. The Thai and Paiboon layers are empty because the printed page has none.",
+
+            "Its title claims a great deal — the peak, or summit, of the Tipitaka — and the chant works by compression: the standard recollections first in full, then progressively reduced.",
+        ],
+
+        'meaning': [
+            "It opens by taking the familiar formula apart. Such is the Blessed One: worthy indeed is that Blessed One. Then fully enlightened. Then perfect in knowledge and conduct. Each epithet is given a line of its own and turned into its own act of recollection.",
+
+            "Then the refuge, epithet by epithet: to the Worthy One I go for refuge. What is normally one act performed towards a person becomes a series of acts performed towards qualities.",
+
+            "The last verses reduce further still, to syllables — ma-a-u, and the heart syllables that follow — set beside suffering, impermanence and not-self. Whether that compression is illuminating or merely ingenious is a fair question, and the chant belongs to a tradition of Thai esoteric practice that answers it confidently. The book prints it without comment.",
+        ],
         'page_start': 312,
         'layout': 'lines',
         'group': 'General chanting',
@@ -35058,8 +35253,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0362.PNG]: A TENTH TITLE THE CONTENTS TEST CANNOT SEE.
         #   The page prints บทขัด โพชฌังคะปะริตตัง with a SPACE after บทขัด;
         #   the สารบัญ has บทขัดโพชฌังคะปะริตตัง without one. Same as pages
@@ -35073,6 +35266,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt poot-chaŋ-ká-bpà-rít-dtaŋ',
         'title_english': 'The Prefatory Verse for the Bojjhaṅga Paritta',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the Bojjhaṅga Paritta, calling the seven factors of awakening both a medicine and a spell."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Bojjhaṅga Paritta, introducing it."
+        ),
+
+        'background': [
+            "The seven factors of awakening have already appeared in this book as three discourses chanted at sickbeds. Here they return as a paritta, and the introduction explains the promotion.",
+
+            "Its last line is the most revealing phrase in the whole collection about what a paritta is taken to be.",
+        ],
+
+        'meaning': [
+            "The claim made for the seven is soteriological before it is protective: for those wandering on in saṃsāra, in the destruction of all suffering, the seven states, crushers of Māra's army. Those who have awakened by them have gone to the unborn, the ageless and diseaseless, the deathless, the fearless.",
+
+            "Only after that does it turn to use. Endowed with such qualities as these, a collection of many virtues — and then the phrase: โอสะถัญจะ อิมัง มันตัง, a medicine and a spell.",
+
+            "The two words are set side by side without any attempt to reconcile them, and that is the tradition being honest about what it is doing. The same seven factors are a course of treatment and an incantation, and the chant that follows is used as both.",
+        ],
         'page_start': 97,
         'group': 'General chanting',
         'english_unverified': True,
@@ -35143,8 +35361,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0362.PNG]: A COLOPHON AND NO CITATION. โพชฌังคะปะริตตัง
         #   นิฏฐิตัง. is printed centred under verse 17 and goes in as
         #   `closing`. No footnote and no marker anywhere on the sheet, so
@@ -35162,6 +35378,31 @@ CHANTS = [
         'title_pali': 'Bojjhaṅgaparittaṃ dasamaṃ',
         'title_roman': '',
         'title_english': 'The Bojjhaṅga Paritta, the Tenth',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The seven factors of awakening recited as a paritta, with the three occasions on which reciting them is said to have ended an illness."
+        ),
+
+        'when_chanted': (
+            "Chanted for the sick, and in the paritta service in its place as the tenth."
+        ),
+
+        'background': [
+            "The last of the ten parittas, and it gathers up material printed much earlier in the book. The three Bojjhaṅga discourses — to Mahākassapa, to Mahāmoggallāna and to Mahācunda — are compressed here into a handful of verses.",
+
+            "Where those were narratives with an outcome reported at the end, this is a verse form built to be chanted over somebody who is ill.",
+        ],
+
+        'meaning': [
+            "It begins by naming the seven in a single sentence: mindfulness, investigation of states, energy, rapture, tranquillity, concentration and equanimity — rightly proclaimed by the Sage, developed and made much of, leading to direct knowledge, to Nibbāna and to awakening.",
+
+            "Then the refrain that makes it a paritta rather than a summary: เอเตนะ สัจจะวัชเชนะ — by this utterance of truth, may you be well at all times. It returns after each movement, and the protection is grounded on the seven being genuinely what the verse says they are.",
+
+            "The three recoveries are then given together, which the original discourses never do: those afflictions of all three great Seekers were abandoned, just as the defilements struck down by the path reach the state of not returning. The simile is the interesting part. The illnesses are said to have gone the way defilements go — not suppressed, but made incapable of coming back.",
+        ],
         'page_start': 97,
         'group': 'General chanting',
         'english_unverified': True,
@@ -35348,8 +35589,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0363.PNG]: AN ELEVENTH TITLE THE CONTENTS TEST CANNOT
         #   SEE. The page prints บทขัด อะภะยะปะริตตัง with a SPACE after
         #   บทขัด; the สารบัญ has บทขัดอะภะยะปะริตตัง without one. The page
@@ -35365,6 +35604,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt à-pá-yá-bpà-rít-dtaŋ',
         'title_english': 'The Prefatory Verse for the Abhaya Paritta',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the paritta against fear, on a text said to have arisen for the good of self and others alike."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Abhaya Paritta, introducing it."
+        ),
+
+        'background': [
+            "The shortest introduction in the collection, at three lines. By this point in a paritta service the assembly has been chanting for a long while, and the introductions have grown briefer as the service has gone on.",
+
+            "What it promises is worldly and it does not disguise that: gain of merit, great majesty, beauty, fame and great renown.",
+        ],
+
+        'meaning': [
+            "The list of benefits is the sort a modern reader may expect a religious text to be embarrassed by, and this one is not. Beauty and fame are named alongside merit, in the same breath and with the same weight.",
+
+            "The second line then widens it past the reciter — arisen for the welfare of all beings — and asks that every one of them, without exception, should listen.",
+
+            "The last line puts the two together in a single phrase: อัตตัปปะระหิตัง, arisen for the good of self and others. That balance is the tradition's usual answer to the charge that asking for beauty and renown is self-serving, and it is made here without argument, as though obvious.",
+        ],
         'page_start': 98,
         'group': 'General chanting',
         'english_unverified': True,
@@ -35413,8 +35677,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0363.PNG]: SINGLE column, unlike the two chants around
         #   it. Twelve lines, block left edge measured at x 612.
         # ‼ CHECK [IMG_0363.PNG]: The three stanzas are IDENTICAL except for
@@ -35431,6 +35693,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Abhayaparittaṃ ekādasamaṃ',
         'title_english': 'The Abhaya Paritta, the Eleventh',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "A short chant asking that ill omens, unwelcome bird-cries, evil planets and bad dreams come to nothing, by the power of each of the Three Jewels in turn."
+        ),
+
+        'when_chanted': (
+            "Chanted for someone troubled by omens or bad dreams, and in the paritta service in its place as the eleventh."
+        ),
+
+        'background': [
+            "Twelve lines, which are really four lines said three times over, changing only the last word: by the power of the Buddha, then of the Dhamma, then of the Sangha.",
+
+            "อะภะยะ means without fear, and the chant is named for what it is meant to produce rather than for its subject.",
+        ],
+
+        'meaning': [
+            "The four things named are worth listing exactly, because together they describe a particular kind of distress: whatever ill omen there is, whatever is inauspicious, whatever cry of a bird is unwelcome, an evil planet, an unpleasant bad dream.",
+
+            "None of these is a real danger. They are signs — a bird calling at the wrong moment, a dream that will not leave, a planet in the wrong house — and what they do is frighten. The chant is aimed at the fear rather than at anything the fear is about.",
+
+            "That is why the request is worded as it is: may they come to nothing. Not may they be false, and not may they not happen. The omens are not argued with. They are asked to lose their force, which is a more exact description of what actually helps somebody who cannot stop thinking about a dream.",
+        ],
         'page_start': 98,
         'group': 'General chanting',
         'english_unverified': True,
@@ -35564,8 +35851,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0363.PNG]: No colophon and no citation. The page ends
         #   with row 8 and the next printed thing is page 99's heading; the
         #   ink below y 2582 on the photograph is the page edge, not text.
@@ -35578,6 +35863,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Devatāuyyojanagāthā',
         'title_english': 'The Verses for Taking Leave of the Devas',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The verses that close a paritta service by sharing its merit with the devas and sending them away."
+        ),
+
+        'when_chanted': (
+            "Chanted at the very end of a paritta service, after the last paritta."
+        ),
+
+        'background': [
+            "The service opened by calling the devas of every world-system to come and listen. This is the other half of that: อุยโยชะนะ means dismissing or sending away, and the chant releases them.",
+
+            "A gathering that has been formally convened has to be formally closed. These eight verses are how the tradition does it, and they make the whole service a bracket rather than a stream of texts.",
+        ],
+
+        'meaning': [
+            "It opens by wishing well to everyone rather than to the guests: may those who have met with suffering be free of suffering, those who have met with fear be free of fear, those who have met with grief be free of grief — may every living being be so. The three are specific and they cover most of why anybody attends such a service.",
+
+            "Then the merit is handed over. By this much of the attainment of merit gathered by us, may all the devas rejoice, for the winning of every blessing. The word เอตตาวะตา, by this much, is a measured phrase — no claim is made about how much merit there was.",
+
+            "The last verses do something unexpected with the departing guests: may they give gifts with faith, may they keep the precepts always. The devas are not merely thanked and dismissed. They are wished a practice of their own, on the way out.",
+        ],
         'page_start': 98,
         'group': 'General chanting',
         'english_unverified': True,
@@ -35677,8 +35987,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0583.PNG]: ⚠ ENTERED AS ITS OWN CHANT, AND THAT IS A
         #   JUDGEMENT RATHER THAN A CERTAINTY. VIPASSIT is centred, in
         #   capitals, with white space above it and a single centred line
@@ -35694,6 +36002,31 @@ CHANTS = [
         'title_pali': 'VIPASSIT',
         'title_roman': '',
         'title_english': 'The Vipassit Blessing',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "A single line asking that all suffering, all fear and all illness perish; printed in the book's roman-script appendix."
+        ),
+
+        'when_chanted': (
+            "Chanted as a brief blessing, often closing a longer sequence."
+        ),
+
+        'background': [
+            "One verse, nine words of Pali, and the shortest chant in the book. It is printed in the roman-script appendix, so the Thai and Paiboon layers are empty.",
+
+            "Its title in the book is given as VIPASSIT, set in capitals, and no Thai-script title is printed for it at all.",
+        ],
+
+        'meaning': [
+            "The line names three things and asks the same of each: sabbadukkhā sabbabhayā sabbarogā vinassantu — may all suffering, all fear and all illness perish.",
+
+            "The three are the categories the whole paritta collection has been working over. Suffering is the doctrinal one, illness the bodily one, and fear the one that sits between them and is the reason most people come.",
+
+            "Reduced to a single line, it is what all the protective chanting amounts to when the stories, the lists of names and the acts of truth are stripped away. That the book keeps it as a chant in its own right, rather than folding it into something longer, is the interesting decision.",
+        ],
         'page_start': 316,
         'layout': 'lines',
         'group': 'General chanting',
@@ -35723,8 +36056,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0577.PNG]: ⚠ THE BOOK PRINTS A WHOLE PARAGRAPH OF
         #   ENGLISH HERE, and it is not a gloss. Three justified lines of
         #   instruction: 'To make more holy before chanting
@@ -35749,6 +36080,31 @@ CHANTS = [
         'title_pali': 'PHRAGATHACHINBANCHORN',
         'title_roman': '',
         'title_english': "The Verses of the Victor's Cage",
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Three lines printed in the appendix under the Victor's Cage heading, opening with a promise of sons and wealth."
+        ),
+
+        'when_chanted': (
+            "Chanted with the longer Victor's Cage verses that follow it on the same page."
+        ),
+
+        'background': [
+            "The book prints two chants under this name on the same page, in roman script. This is the shorter of the two, and it functions as an opening to the thirty-four verses that follow rather than as a separate text.",
+
+            "Its register is markedly unlike the collection it sits beside. Where the parittas ask for safety, this opens by promising what people want.",
+        ],
+
+        'meaning': [
+            "The first line is the frankest sentence in the book: one who wants a son gains a son; one who wants wealth gains wealth. No condition is attached and no qualification follows it.",
+
+            "The second line is harder to follow and the English here is a working translation of a compressed and difficult text — in the body of what is sought, by knowledge of the body, the learned one is dear to the devas. It is worth knowing that the Pali itself is unclear at this point, not only the rendering.",
+
+            "The third runs a string of names and epithets together without separation — the Blessed One, Yama the king, Vessuvaṇṇa, the ease of death, the worthy one, the well-gone — and closes on homage to the Buddha. This running-together is characteristic of chants used as formulas rather than read as sentences.",
+        ],
         'page_start': 310,
         'layout': 'lines',
         'group': 'General chanting',
@@ -35799,8 +36155,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0577.PNG]: ⚠ ENTERED AS A SEPARATE CHANT FROM THE ONE
         #   ABOVE, AND THAT IS A JUDGEMENT. The book sets 'gāthājinabañjara'
         #   as a BOLD LEFT-ALIGNED heading at x 330 — smaller and less
@@ -35816,6 +36170,31 @@ CHANTS = [
         'title_pali': 'gāthājinabañjara',
         'title_roman': '',
         'title_english': "The Verses of the Victor's Cage",
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Jinapañjara: the Buddhas and the great disciples stationed at every part of the body and every direction, forming a cage of protection."
+        ),
+
+        'when_chanted': (
+            "Chanted for protection, and among the most widely recited texts in Thailand; printed here in the roman-script appendix."
+        ),
+
+        'background': [
+            "ชินบัญชร is the Victor's cage or lattice — a structure built out of holy beings, with the reciter inside it. Like the Buddhamaṅgala verses earlier in the book, it works by placing figures at fixed points, but where those used the compass this one uses the body.",
+
+            "It is printed in roman script in the appendix, and is probably the best known text in this book outside the daily services.",
+        ],
+
+        'meaning': [
+            "It begins with the whole company arriving: the Buddhas, having come to the seat of victory, having conquered Māra with his mount, those chief among men who drank the excellent nectar of the four truths. Then the twenty-eight, beginning with Taṇhaṅkara, all established upon my head.",
+
+            "The stationing then becomes anatomical and precise: the Buddha on the head, the Dhamma in the two eyes, and onwards through the body, with named disciples assigned to shoulders, chest, limbs. Recited attentively, it is a guided tour of one's own body with a protector placed at each stop.",
+
+            "The closing verses say what has been built and what it does: by the power of the Buddha, of the Dhamma, of the Sangha, the host of enemies is conquered and dangers are conquered — guarded by the power of the true Dhamma, I live in the Victor's cage. The last line is in the present tense, and describes a place the reciter is now inside.",
+        ],
         'page_start': 310,
         'layout': 'lines',
         'group': 'General chanting',
@@ -36162,8 +36541,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0364.PNG]: A TWELFTH TITLE THE CONTENTS TEST CANNOT
         #   SEE. The page prints บทขัด ชะยะปะริตตัง with a SPACE after บทขัด;
         #   the สารบัญ has บทขัดชะยะปะริตตัง without one. The page wins, so
@@ -36181,6 +36558,32 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt chá-yá-bpà-rít-dtaŋ',
         'title_english': 'The Prefatory Verse for the Jaya Paritta',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the paritta of victory, on Māra's army scattered by patience and loving-kindness."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Jaya Paritta, introducing it."
+        ),
+
+        'background': [
+            "The last of the prefatory verses in the Twelve Tamnan, introducing the twelfth and final paritta. It returns to the scene under the Bodhi tree that the collection has referred to throughout.",
+
+            "What it emphasises about that scene is not the awakening but the defence.",
+        ],
+
+        'meaning': [
+            "The scale of the attack is given first and it is specific: Māra's army came on, twelve leagues deep on every side. A number is supplied where a vaguer word would have done."
+            "",
+
+            "What met it is named just as specifically, and it is not power. ขันติเมตตาอะธิฏฐานา — resolved on patience and loving-kindness — and with that the One with Vision scattered them. The victory the whole final paritta is named for was won by two qualities anybody could in principle practise.",
+
+            "The verse then widens past the event: for the safety, the welfare and the happiness of all, beginning with those still bound to the round. Having brought the Buddha's work to completion, it hands over — and the collection ends on the same terms it began on, with safety asked for everybody rather than for the reciters.",
+        ],
         'page_start': 99,
         'group': 'General chanting',
         'english_unverified': True,
@@ -36256,8 +36659,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0364.PNG]: No colophon and no citation. An ink profile
         #   below the last row found marks only at x 150-201 and x 1911+,
         #   which are the page edge and the binding shadow, not text.
@@ -36270,6 +36671,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Jayaparittaṃ dvādasamaṃ',
         'title_english': 'The Jaya Paritta, the Twelfth',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The paritta of victory, which turns the Buddha's victory at the Bodhi tree into a blessing spoken over the hearer."
+        ),
+
+        'when_chanted': (
+            "Chanted at the close of the paritta service as the last of the twelve, and at ceremonies where a blessing is given."
+        ),
+
+        'background': [
+            "The last of the twelve. Its opening verses are the same ones the book prints much earlier as the Victory Protection verses, so a reader will meet this text twice — once in the daily blessings and once here, closing the great collection.",
+
+            "What is added at the end is not in the earlier printing, and it is the reason this version runs longer.",
+        ],
+
+        'meaning': [
+            "The blessing works by likeness, as it did before: the Protector of great compassion, having fulfilled all the perfections, reached the supreme awakening — by the speaking of this truth, may the blessing of victory be yours. Then, victorious at the foot of the Bodhi tree, so may you too be victorious.",
+
+            "Nothing is said to pass from him to the hearer. A true thing is stated, and the hearer is invited to stand in the same relation to it that he did.",
+
+            "The closing verses turn to particular people in a way the rest of the collection never does — wishes for a woman, that she be free of illness and happy together with all her kin, and then for the assembly, that having gained the goal they be happy and thriving in the Buddha's teaching. After twelve parittas addressed to beings, world-systems and armies, the last words are for the people actually in the room.",
+        ],
         'page_start': 99,
         'group': 'General chanting',
         'english_unverified': True,
@@ -36479,8 +36905,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0575.PNG]: THE IAST ON THIS SHEET IS MECHANICAL, not
         #   hand-written: every pali_roman was produced by
         #   scripts/romanise_contents.translit_pali from the pali beside it.
@@ -36492,6 +36916,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Form of the Kammavācā for Giving the Kathina Cloth',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The formal act by which the Sangha assigns the kathina cloth to one monk, put as a motion and carried by silence."
+        ),
+
+        'when_chanted': (
+            "Recited by the Sangha at the kathina ceremony, once a year at the end of the rains."
+        ),
+
+        'background': [
+            "A กรรมวาจา is a formal act of the Sangha, and this is the only one printed in this part of the book. It is not devotional writing at all — it is procedure, and it reads like it.",
+
+            "The kathina cloth is offered to the community once a year and cannot be given to an individual by the donors. The Sangha has to assign it, and this is the form by which that is done.",
+        ],
+
+        'meaning': [
+            "After the threefold homage the motion is put in the fixed form such acts take: let the Sangha hear me; this kathina cloth has come to the Sangha; if the Sangha is ready, then such-and-such is proposed. Nothing is decided until it has been stated aloud in those terms.",
+
+            "The decision itself is then taken by silence, and the text says so explicitly: it is acceptable to the Sangha, therefore it is silent. Consent is registered as an absence of objection rather than as agreement.",
+
+            "The last line is the one that makes it binding — เอวัมเมตัง ธาระยามิ, thus do I hold it. One person records what the silence meant, and the act is complete. Chanted rather than minuted, it is the oldest continuously used meeting procedure most people will ever hear.",
+        ],
         'page_start': 308,
         'layout': 'lines',
         'group': 'General chanting',
@@ -36739,13 +37188,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-athitthan-pha-kathin',
         'title_thai': 'คำอธิษฐานผ้ากฐิน',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Determining the Kathina Cloth',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Three short formulas by which the monk who receives the kathina cloth determines it as one of his three robes."
+        ),
+
+        'when_chanted': (
+            "Spoken by the monk who has been given the kathina cloth, immediately after the formal act."
+        ),
+
+        'background': [
+            "What follows the Sangha's decision is the recipient's own act. อธิษฐาน is determining — formally deciding what a thing is to be — and a robe has to be determined before it can be used.",
+
+            "The book prints one formula for each of the three robes, and names them: the outer robe, the upper robe, and the inner robe. Each is marked to be said three times.",
+        ],
+
+        'meaning': [
+            "The three lines are identical apart from the robe named: with this outer robe I spread the kathina, and so for the upper and the inner. Only one of the three is actually said, according to which garment the cloth has been made into.",
+
+            "กะฐินัง อัตถะรามิ — I spread the kathina — uses the old image the ceremony is named for. The kathina was the frame on which cloth was stretched to be sewn, and the phrase keeps the workshop in view long after the sewing stopped being done that way.",
+
+            "Said three times, by one person, immediately after a decision the whole community took in silence, it completes a sequence that has moved from the donors to the Sangha to a single monk and a single piece of cloth.",
+        ],
         'page_start': 308,
         'layout': 'lines',
         'group': 'General chanting',
