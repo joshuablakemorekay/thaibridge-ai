@@ -121,14 +121,19 @@ def test_choose_page_shows_both_prices():
     assert "2 months free" in body
 
 
-def test_choose_page_carries_the_period_into_the_pay_links():
+def test_choose_page_carries_the_period_into_the_pay_links(monkeypatch):
     """Every payment link on the page must keep the chosen period.
 
-    Which providers appear depends on which keys are configured, so this asserts
-    over whatever links are actually rendered rather than naming Stripe and
-    PayPal — otherwise the test passes or fails on the contents of .env.
+    A provider only renders a link when its keys are configured, so Stripe is
+    forced on here rather than relying on the environment. The first version of
+    this test read whatever links happened to render, which passed locally off
+    a populated .env and failed in CI, where there are no keys and therefore no
+    links at all — an empty list is not a passing case.
     """
     import re
+
+    import app as app_module
+    monkeypatch.setattr(app_module.stripe, "api_key", "sk_test_fake")
 
     client = signed_up_client()
     body = client.get("/subscribe/basic?period=year").get_data(as_text=True)
