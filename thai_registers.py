@@ -350,12 +350,12 @@ VARIANTS = {
     # ---------------------------------------------------------------
     'ขอโทษค่ะ ต้องถอดรองเท้าไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ต้องถอดรองเท้าไหม', 'paiboon': 'tɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mǎi'},
+        'casual': {'thai': 'ต้องถอดรองเท้าไหม', 'paiboon': 'dtɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mǎi'},
         'warn': 'Fine asking the friend you came with. Not to the temple attendant.',
     },
     'ต้องถอดครับ ก่อนเข้าในโบสถ์': {
         'neutral': SAME,
-        'casual': {'thai': 'ต้องถอด ก่อนเข้าโบสถ์', 'paiboon': 'tɔ̂ŋ tɔ̀ɔt, gɔ̀ɔn kâo bòot'},
+        'casual': {'thai': 'ต้องถอด ก่อนเข้าโบสถ์', 'paiboon': 'dtɔ̂ŋ tɔ̀ɔt, gɔ̀ɔn kâo bòot'},
     },
     'แต่งตัวแบบนี้เข้าได้ไหมคะ': {
         'neutral': SAME,

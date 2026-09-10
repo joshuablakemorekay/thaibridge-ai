@@ -2938,7 +2938,7 @@ THERAVADA_TEACHINGS = {
         {
             'rule': 'Rupiya-sikkhapada',
             'thai': 'รูปิยสิกขาบท',
-            'paiboon': 'ruu-bpì-yá sìk-khǎa-bòt',
+            'paiboon': 'ruu-bpì-yá sìk-kǎa-bòt',
             'english': 'The Money Rule',
             'description': 'Nissaggiya Pacittiya 18: a monk may not accept gold or '
                            'silver — money — whether taken by his own hand, taken on '
@@ -2951,7 +2951,7 @@ THERAVADA_TEACHINGS = {
         {
             'rule': 'Vikala-bhojana',
             'thai': 'วิกาลโภชน์',
-            'paiboon': 'wí-gaan-lá-phôot',
+            'paiboon': 'wí-gaan-lá-pôot',
             'english': 'Eating at the Wrong Time',
             'description': 'Pacittiya 37: no food from midday until dawn. Pacittiya 38 '
                            'forbids eating food stored overnight, and Pacittiya 40 '
@@ -6524,8 +6524,8 @@ CONVERSATIONS = {
         'setting': 'Asking about temple etiquette before going in',
         'difficulty': 'beginner',
         'dialogue': [
-            {'speaker': 'visitor_female', 'thai': 'ขอโทษค่ะ ต้องถอดรองเท้าไหมคะ', 'paiboon': 'kɔ̌ɔ-tôot kâ, tɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mǎi ká', 'english': 'Excuse me, do I need to take off my shoes?', 'note': 'ถอดรองเท้า = remove shoes'},
-            {'speaker': 'attendant_male', 'thai': 'ต้องถอดครับ ก่อนเข้าในโบสถ์', 'paiboon': 'tɔ̂ŋ tɔ̀ɔt kráp, gɔ̀ɔn kâo nai bòot', 'english': 'Yes, before entering the ordination hall.', 'note': 'โบสถ์ = the ubosot (ordination hall)'},
+            {'speaker': 'visitor_female', 'thai': 'ขอโทษค่ะ ต้องถอดรองเท้าไหมคะ', 'paiboon': 'kɔ̌ɔ-tôot kâ, dtɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mǎi ká', 'english': 'Excuse me, do I need to take off my shoes?', 'note': 'ถอดรองเท้า = remove shoes'},
+            {'speaker': 'attendant_male', 'thai': 'ต้องถอดครับ ก่อนเข้าในโบสถ์', 'paiboon': 'dtɔ̂ŋ tɔ̀ɔt kráp, gɔ̀ɔn kâo nai bòot', 'english': 'Yes, before entering the ordination hall.', 'note': 'โบสถ์ = the ubosot (ordination hall)'},
             {'speaker': 'visitor_female', 'thai': 'แต่งตัวแบบนี้เข้าได้ไหมคะ', 'paiboon': 'tɛ̀ŋ-tua bɛ̀ɛp níi kâo dâi mǎi ká', 'english': 'Is it ok to go in dressed like this?', 'note': 'Asking about the dress code'},
             {'speaker': 'attendant_male', 'thai': 'ควรปิดไหล่กับหัวเข่าครับ', 'paiboon': 'kuan bpìt lài gàp hǔa-kào kráp', 'english': 'You should cover your shoulders and knees.', 'note': 'Temple dress etiquette'},
             {'speaker': 'visitor_female', 'thai': 'ถ่ายรูปได้ไหมคะ', 'paiboon': 'tàai-rûup dâi mǎi ká', 'english': 'Can I take photos?', 'note': ''},
@@ -6555,7 +6555,7 @@ CONVERSATIONS = {
             {'speaker': 'monk', 'thai': 'เจริญพร โยม', 'paiboon': 'jà-rəən pɔɔn, yoom', 'english': 'Blessings, layperson.', 'note': 'โยม = how a monk addresses a lay person'},
             {'speaker': 'layperson_male', 'thai': 'ผมอยากเริ่มนั่งสมาธิครับ ควรเริ่มยังไงดีครับ', 'paiboon': 'pǒm yàak rə̂əm nâŋ sà-maa-tí kráp, kuan rə̂əm yaŋ-ŋai dii kráp', 'english': 'I would like to start meditating. How should I begin?', 'note': 'นั่งสมาธิ = to meditate'},
             {'speaker': 'monk', 'thai': 'เริ่มจากลมหายใจ หายใจเข้าก็รู้ หายใจออกก็รู้', 'paiboon': 'rə̂əm jàak lom hǎai-jai, hǎai-jai kâo gɔ̂ɔ rúu, hǎai-jai ɔ̀ɔk gɔ̂ɔ rúu', 'english': 'Begin with the breath. Breathing in, know it; breathing out, know it.', 'note': 'Mindfulness of breathing (ānāpānasati)'},
-            {'speaker': 'layperson_male', 'thai': 'ต้องนั่งนานไหมครับ', 'paiboon': 'tɔ̂ŋ nâŋ naan mǎi kráp', 'english': 'Do I need to sit for long?', 'note': 'Yes/no question'},
+            {'speaker': 'layperson_male', 'thai': 'ต้องนั่งนานไหมครับ', 'paiboon': 'dtɔ̂ŋ nâŋ naan mǎi kráp', 'english': 'Do I need to sit for long?', 'note': 'Yes/no question'},
             {'speaker': 'monk', 'thai': 'เริ่มจากสิบนาทีก่อน แล้วค่อยๆ เพิ่มขึ้น', 'paiboon': 'rə̂əm jàak sìp naa-tii gɔ̀ɔn, lɛ́ɛo kɔ̂i-kɔ̂i pə̂əm kʉ̂n', 'english': 'Start with ten minutes, then gradually increase.', 'note': 'ค่อยๆ = gradually'}
         ]
     }

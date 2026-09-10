@@ -221,7 +221,7 @@ STORIES = [
             [
                 _tok('เขา', 'kǎo', 'he'),
                 _tok('เสียสละ', 'sǐa-sà-là', 'sacrificed himself'),
-                _tok('เพื่อ', 'phʉ̂a', 'for'),
+                _tok('เพื่อ', 'pʉ̂a', 'for'),
                 _tok('ฝูง', 'fǔuŋ', 'the troop'),
             ],
         ],
