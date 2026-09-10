@@ -67,13 +67,104 @@ Coverage and fidelity are finished; **quality is not**. What remains is the
 review pass described further down this file, and it has never been started:
 
 - **2,116 `‼ CHECK` comments**, each naming its photograph
-- **288 chants set `‼ COMMENTARY PENDING`** — stage 3 writes their prose
+- **213 chants set `‼ COMMENTARY PENDING`** — stage 3 has started; see below
 - **275 of 305 chants `english_unverified`**
 - **105 page-level checks that live only in batch files** (pre-fix; see below)
 - the nine pages entered before this workflow existed and never checked against
   a photograph: **1, 23, 27, 28, 217–221**
 
 Do that as ONE pass, not piecemeal — see the section on the review pass.
+
+## ✅ STAGE 3 HAS STARTED — 92 of 305 chants have commentary (2026-09-10)
+
+The commentary pass is under way and is being done in batches of ten, in FILE
+order, straight down the book. **92 chants written up, 213 `‼ COMMENTARY
+PENDING` markers left.** Nothing else about the pass has changed: verses are
+never touched, and `source` is left `''` wherever a citation cannot be given
+honestly, which so far is nearly everywhere.
+
+**Read the prose here, not in `chanting.py`:**
+
+```
+PYTHONIOENCODING=utf-8 DATABASE_URL="" python scripts/build_commentary_review.py
+```
+
+writes `docs/chanting-commentary-review.md` — every chant's five commentary
+fields in BOOK order, plus the list still to write. It only reads chanting.py.
+Re-run it after every batch. About 30,000 words at 92 chants, so expect roughly
+100,000 when it is finished.
+
+**The proof that runs after every batch**, and it is the reason this pass is
+safe to keep running:
+
+1. dump every chant dict before and after, strip the five commentary keys, and
+   the two dumps must be byte-identical
+2. `git diff` must show NO non-comment line removed from chanting.py
+3. no Lao codepoints, and every run of Thai in the new prose must trace back to
+   text already in the file
+
+All three have caught real errors: three Thai words typed with wrong
+characters, two Lao characters inside a Pali citation, and a placeholder that
+broke the import outright.
+
+## ‼ THE YAMAKKAN PASS LEFT RESIDUE — 53 places, 15 words
+
+`501547f` converted ~700 marks and the rule is settled (see the SETTLED
+section below). But **15 words still appear in the file BOTH with and without
+their yamakkan**, in 53 places. This is exactly the leak that section
+predicted: "nine marks came back into the file between the pass being written
+and it being committed."
+
+Every one of these is a genuine cluster — the mark is followed by a consonant —
+so none is protected by the silent-letter rule that saved `พระวิภังค์`.
+
+| unmarked form | times | marked form | times | pages carrying the unmarked form |
+|---|---|---|---|---|
+| `ปะฏิคคัณหาตุ` | 11 | `ปะฏิคคัณ๎หาตุ` | 1 | 1, 51, 67, 68, 69, 71, 75, 193, 224, 252, 253 |
+| `อะภิณหัง` | 10 | `อะภิณ๎หัง` | 13 | 106, 216, 223 |
+| `ตัตระ` | 7 | `ตัต๎ระ` | 10 | 22, 116, 117, 119, 121, 124, 128 |
+| `อุณหัสสะ` | 6 | `อุณ๎หัสสะ` | 2 | 60, 205, 234 |
+| `ปัตวา` | 4 | `ปัต๎วา` | 13 | (no page) |
+| `ตุยหัง` | 4 | `ตุย๎หัง` | 1 | 102, 302 |
+| `สวากขาโต` | 2 | `ส๎วากขาโต` | 17 | 1 |
+| `ทัฬเหนะ` | 2 | `ทัฬ๎เหนะ` | 1 | 20, 254 |
+| `อุณหัง` | 1 | `อุณ๎หัง` | 1 | 183 |
+| `อะนุสสะริตวา` | 1 | `อะนุสสะริต๎วา` | 3 | 9 |
+| `อะนัตถะสัญหิโต` | 1 | `อะนัตถะสัญ๎หิโต` | 1 | 159 |
+| `สังฆัสสาหัสมิ` | 1 | `สังฆัสสาหัส๎มิ` | 1 | 54 |
+| `ภาคยัง` | 1 | `ภาค๎ยัง` | 1 | 272 |
+| `พยาธิง` | 1 | `พ๎ยาธิง` | 5 | 106 |
+| `ทัฬหะปะรักกะโม` | 1 | `ทัฬ๎หะปะรักกะโม` | 1 | 103 |
+
+
+Two of these matter beyond tidiness:
+
+* **`ปะฏิคคัณหาตุ` runs the OTHER way** — the unmarked spelling is the
+  majority, 11 to 1. So this is not simply "convert the odd ones out"; each
+  word needs deciding on its own evidence.
+* **`ส๎วากขาโต` on page 1** is the one that is nearly settled already. Page 1's
+  two chants are the ONLY unmarked instances out of nineteen, and both are
+  printed a second time later in the book — at pages 193 and 194 — where they
+  DO carry the mark. One glance at page 1 decides it.
+
+⚠️ The per-verse CHECK comments on pages 60 and 61 argue at length for
+thanthakhat ์ from photographs. They are **superseded** by the SETTLED section
+and the module docstring. The data on those pages is already correct; do not
+change it back to match the comments.
+
+## 🔁 THREE ENTRIES FOR TWO PRINTINGS of Dhātupaṭikūlapaccavekkhaṇa
+
+`dhatupatikula-paccavekkhana-p61` (page 61, 16 verses, no Thai) and
+`dhatupatikula-paccavekkhana-plae` (page 207, 36 verses, with Thai) are the
+book's two printings, and both are placed. **`dhatupatikula-paccavekkhana` is a
+third entry with no `page_start` at all** — 36 verses, with Thai, identical to
+the page-207 one except for four verses that lack the yamakkan on `ปัต๎วา`.
+
+It is one of the seventeen set from pasted text before the page workflow
+existed, and its own CHECK says it would take page_start 207 once the pass
+reached page 207 — but a separate entry took that page instead. It is now one
+of only two chants in the file with no page number. **Josh's call whether it
+retires.**
 
 ## ‼‼ THE VERSE UNIT FOLLOWS THE SETTING — kept for the review pass
 
