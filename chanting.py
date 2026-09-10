@@ -15966,9 +15966,10 @@ CHANTS = [
         ],
     },
     {
-        # ‼ CHECK [IMG_0311.PNG]: The chant runs on to page 49 with no closing
-        #   line on this page, so continues is set and no closing key is
-        #   written.
+        # ‼ COMPLETED [IMG_0311.PNG]: this chant once ran on to page 49 with
+        #   no closing line on page 48. Page 49 is in. The chant now runs 1-30
+        #   with no gap and its colophon is stored as `closing`. It no longer
+        #   continues.
         # ‼ CHECK [IMG_0311.PNG]: No Thai translation is printed, so
         #   english_unverified is true and the English is a working
         #   translation.
@@ -19406,11 +19407,11 @@ CHANTS = [
         # ‼ CHECK [IMG_0321.PNG]: TWO-COLUMN READING, please confirm. The
         #   first pairing made is verse 1: left cell เตนะ โข ปะนะ สะมะเยนะ +
         #   right cell สามะเณรา อะคาระวา.
-        # ‼ CHECK [IMG_0321.PNG]: The chant is cut off by the end of the page
-        #   after two rows, so it is marked as continuing. The rubric above it
-        #   says the next chant is ทัณฑกรรม 5, the five penalties, so this
-        #   introductory verse should run a few rows more on page 59 before
-        #   that chant begins.
+        # ‼ COMPLETED [IMG_0321.PNG]: this verse was once cut off after two
+        #   rows at the foot of page 58. Page 59 is in, and the prediction
+        #   held — the verse runs three rows more there and then
+        #   ทัณฑกรรม 5 begins, exactly as the rubric said it would. Five
+        #   verses in all, no gap. It no longer continues.
         'id': 'bot-khat-thanthakam',
         'title_thai': 'บทขัดทัณฑะกรรม',
         'title_pali': '',
@@ -21195,13 +21196,12 @@ CHANTS = [
         #   rule a printing that differs at all is a separate chant, and the
         #   whole point of these four is that they differ in exactly one
         #   respect.
-        # ‼ CHECK [IMG_0329.PNG]: THE CHANT IS NOT FINISHED ON THIS PAGE. It
-        #   ends at ทักขิเณยโย, with a comma, and the standard formula
-        #   continues อัญชะลิกะระณีโย… — which is NOT written here, from
-        #   memory or otherwise. `continues` is set, no closing is written,
-        #   and page 67 carries the rest. The foot of the sheet below the last
-        #   line is clear white paper; a thumb is in the frame over the blank
-        #   lower-left margin and hides nothing.
+        # ‼ COMPLETED [IMG_0329.PNG]: this chant once stopped at
+        #   ทักขิเณยโย with a comma, mid-formula, and the rest was on
+        #   page 67. Page 67 is in. The chant now runs 1-60 with no gap, and
+        #   the continuation was read from the page rather than completed from
+        #   memory, which is what the original note was protecting. It no
+        #   longer continues.
         # ‼ CHECK [IMG_0329.PNG]: The first prose block quotes two short Pali
         #   formulas inside the Thai instruction — หันทะทานิ มะยัง ภันเต
         #   คัจฉามะ, พะหุกิจจา มะยัง พะหุกะระณียา. and ยัสสะทานิ ตุมเห กาลัง
@@ -21855,12 +21855,11 @@ CHANTS = [
         #   matching how the book's own สารบัญ lists it at page ๖๗. The
         #   romanisation is taken from that contents entry rather than written
         #   fresh, so a reader meets one spelling in both places.
-        # ‼ CHECK [IMG_0330.PNG]: THE CHANT IS NOT FINISHED. Ten rows are
-        #   printed here and page 68 opens with more of the same two-column
-        #   setting, beginning ตัง สัมมานุสสะระมานา / สุจิรัง นิพพุตามะปิ.
-        #   Page 68 was looked at ONLY far enough to establish that this chant
-        #   continues onto it; none of its rows are written in this batch.
-        #   `continues` is set and no closing is written.
+        # ‼ COMPLETED [IMG_0330.PNG]: this chant once stopped after ten rows
+        #   on page 67, with page 68 carrying the rest. Page 68 is in. The
+        #   chant now runs 1-30 with no gap, and the rows on page 68 were read
+        #   from the page when the pass reached it rather than written from
+        #   the glance that established it continued. It no longer continues.
         # ‼ CHECK [IMG_0330.PNG]: Several words in this chant are unusual and
         #   were read without corroboration — อะโธปิ, วิสาโขพูกะยัตเตนะ,
         #   ติวิธัตถูปะเทสะโก and อิมันทานิ among them. The English given for
@@ -22904,14 +22903,12 @@ CHANTS = [
         ],
     },
     {
-        # ‼ CHECK [IMG_0332.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Only
-        #   two rows of it are printed, and beneath them is the footnote rule
-        #   and the three notes — so the page simply runs out. It is listed in
-        #   batch_status.continues and carries continues: true. Page 70 has
-        #   not been read, so how many more rows there are is not known; the
-        #   Visākha Saraphañña that opens the same way on page 67 ran to
-        #   thirty. If page 70 turns out to start something else instead, the
-        #   CONTINUES marker comes off then.
+        # ‼ COMPLETED [IMG_0332.PNG]: this chant once stopped after two rows
+        #   on page 69, with page 70 unread. Pages 70 and 71 are in. The chant
+        #   now runs 1-30 with no gap — the same thirty the Visākha
+        #   Saraphañña ran to, which the original note offered as an
+        #   expectation and explicitly refused to assume. It no longer
+        #   continues.
         # ‼ CHECK [IMG_0332.PNG]: NO CHANT NUMBER. The book prints no number
         #   before this title, exactly as it printed none before the Visākha
         #   Saraphañña on page 67, so book_number is left off rather than
@@ -23699,12 +23696,11 @@ CHANTS = [
         ],
     },
     {
-        # ‼ CHECK [IMG_0334.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Five
-        #   rows are printed and then the sheet runs out — the sentence has no
-        #   main verb yet, so it plainly carries on. It is listed in
-        #   batch_status.continues and carries continues: true. Its two
-        #   predecessors ran to thirty rows each, which is a reason to expect
-        #   more and never a reason to assume how many.
+        # ‼ COMPLETED [IMG_0334.PNG]: this chant once stopped after five rows
+        #   on page 71, mid-sentence with no main verb. Page 72 is in. The
+        #   chant now runs 1-20 with no gap — and note that it is TWENTY,
+        #   not the thirty its two predecessors ran to. The original note was
+        #   right to refuse to assume the length. It no longer continues.
         # ‼ CHECK [IMG_0334.PNG]: NO FULL STOP ANYWHERE IN THE FIVE ROWS,
         #   which differs from both its predecessors. The Visākha and Aṭṭhamī
         #   Saraphañña verses close a couplet with a stop at the end of every
@@ -24007,12 +24003,11 @@ CHANTS = [
         ],
     },
     {
-        # ‼ CHECK [IMG_0335.PNG]: THE CHANT DOES NOT END ON THIS PAGE. Three
-        #   rows are printed under the บทขัด heading and the sheet runs out;
-        #   verse 3 ends with no full stop and the sentence is unfinished. It
-        #   is listed in batch_status.continues and carries continues: true.
-        #   The บทขัด is only the prefatory verse, so the main text of the
-        #   chant is still entirely to come.
+        # ‼ COMPLETED [IMG_0335.PNG]: this chant once stopped after three
+        #   rows of its บทขัด on page 72, with the main text entirely to
+        #   come. Pages 73, 74 and 75 are in. The chant now runs 1-85 with no
+        #   gap, in two sections — the prefatory verse and then the
+        #   Exhortation Pāṭimokkha passage itself. It no longer continues.
         # ‼ CHECK [IMG_0335.PNG]: NO CHANT NUMBER. The title is set on TWO
         #   printed lines — โอวาทะปาติโมกขาทิปาฐะ above and
         #   สำหรับสวดในวันมาฆบูชา below — joined with a single space into one
