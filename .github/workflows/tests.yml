@@ -19,11 +19,19 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # app.py refuses to import without this and exits with a clear error,
-      # which is the right behaviour in production and fatal in CI. Nothing in
-      # the suite makes a real API call, so a placeholder is enough — and a
-      # value that could never be mistaken for a key is safer than a blank one.
+      # app.py raises on import if either of these is missing — the right
+      # behaviour in production and fatal in CI. Nothing in the suite makes a
+      # real API call or checks a signature it did not just make, so
+      # placeholders are enough, and values that could never be mistaken for
+      # real credentials are safer than blank ones.
+      #
+      # These two are the complete set: they are the only `raise` statements
+      # app.py has at import time. Found by reading the source rather than by
+      # pushing and seeing what broke — a local dry run had already missed
+      # FLASK_SECRET_KEY, because it was set on the machine doing the
+      # simulating and so never looked missing.
       ANTHROPIC_API_KEY: ci-not-a-real-key
+      FLASK_SECRET_KEY: ci-not-a-real-secret
 
       # Left unset ON PURPOSE. tests/conftest.py pins the suite to a local
       # SQLite file, and it does that by setting DATABASE_URL to an empty
