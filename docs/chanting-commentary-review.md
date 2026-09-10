@@ -2,7 +2,7 @@
 
 Generated 2026-09-10 from `chanting.py`. Read-only extract: editing this file changes nothing.
 
-**202 of 305 chants have commentary. 103 still to write.**
+**222 of 305 chants have commentary. 83 still to write.**
 
 Everything below is prose written for this edition. The Pali, Thai and English of the verses themselves are not reproduced here — this is only the commentary, so that it can be read as writing rather than checked as data.
 
@@ -3753,6 +3753,141 @@ The last three are the ones that describe activity rather than restraint — rig
 
 ---
 
+## อัฏฐังคิกะมัคคะคาถา — Verses on the Eightfold Path
+
+*page 110 · English is a working translation*  
+`atthangikamagga-gatha`
+
+**Source (printed in the book):** ขุ.ธ. 25/51
+
+**What it is.** Verses declaring the eightfold path the best of paths, and telling the hearer that the walking of it is theirs to do.
+
+**When it is chanted.** Chanted among the discourses in the collection, following the analysis of the path.
+
+**Historical background**
+
+The book prints its own reference. These verses come after the discourse that defines the eight factors, and they do the opposite job — where that analysed, these urge.
+
+They are among the most quoted verses in the tradition, and the last line of the first pair is the reason.
+
+**Meaning and purpose**
+
+The opening is a set of superlatives, each in the same form: of paths the eightfold is best; of truths, the four sayings; of states, dispassion; of two-footed beings, the One with Vision. Four claims in two lines.
+
+Then the exclusive claim, which the tradition has never softened: this is the only path, there is no other for the purifying of vision. Follow this path, then, which bewilders Māra's army.
+
+And then the line that qualifies everything before it — ตุมเหหิ กิจจมาตัปปัง, the work of striving is yours; the Tathāgatas only make it known. Having declared one path and no other, the verses immediately say that nobody will be carried along it. It is the clearest statement in the book of what the tradition thinks a teacher can and cannot do.
+
+---
+
+## บทขัด กะระณียากะระณียะสุตตัง — The Prefatory Verse for the Discourse on What Should and Should Not Be Done
+
+*page 111 · English is a working translation*  
+`bot-khat-karaniyakaraniya-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to a short discourse on what is to be done and what abandoned, addressed to Ānanda.
+
+**When it is chanted.** Chanted immediately before the Karaṇīyākaraṇīya Sutta, introducing it.
+
+**Historical background**
+
+The introduction states the discourse's purpose in a single pairing: so that what should not be done be abandoned, and what should be done be done. The Pali sets the two words side by side, as the title does.
+
+It also names the person taught — the Sage of Videha — which is Ānanda, the Buddha's attendant, and the discourse itself is cast as an exchange with him.
+
+**Meaning and purpose**
+
+The Buddha is described by function rather than by epithet here: the Sage, training those fit to be trained in the path of happiness. สุขะมัคคัส๎มิง, in the path of happiness, is an unusual way to name the training and worth noticing.
+
+The purpose clause is symmetrical and covers the whole of conduct in four words. Nothing needs to be added to should be done and should not be done to have a complete ethics.
+
+It closes as these verses do, with the reason for reciting: having heard it, so as to act accordingly. The recitation is not offered as merit but as the first step of doing what the discourse says.
+
+---
+
+## กะระณียากะระณียะสุตตัง — The Discourse on What Should and Should Not Be Done
+
+*pages 111–112 · chant 19 in the book · English is a working translation*  
+`karaniyakaraniya-suttam`
+
+**Source (printed in the book):** อํ. ทุก. 20/73-74
+
+**What it is.** A short exchange with Ānanda: good conduct of body, speech and mind should be done, and bad conduct abandoned.
+
+**When it is chanted.** Chanted after its prefatory verse, among the short discourses.
+
+**Historical background**
+
+The book prints its own reference. The discourse is two units long and is among the shortest in the collection.
+
+Its form is an exchange rather than a teaching: the Buddha states something categorically, and Ānanda asks him to expand it.
+
+**Meaning and purpose**
+
+The word that carries it is เอกังเสนาหัง — categorically, one-sidedly, without qualification. The Buddha is elsewhere careful to say that most questions need distinguishing before they can be answered, and here he says the opposite.
+
+What is stated so flatly is unremarkable in itself: good conduct of body, speech and mind should be done. The interest is entirely in the register — that this, and not much else, is offered without conditions.
+
+Ānanda then asks what follows from such conduct, which is what turns the statement into a discourse. Two units, and the whole of it is one claim and one question about it.
+
+---
+
+## บทขัด อัคคัปปะสาทะสุตตัง. — The Prefatory Verse for the Discourse on Faith in the Foremost
+
+*page 112 · English is a working translation*  
+`bot-khat-aggappasada-suttam`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The prefatory verse to the discourse on faith in what is foremost, and what such faith brings.
+
+**When it is chanted.** Chanted immediately before the Aggappasāda Sutta, introducing it.
+
+**Historical background**
+
+The introduction turns entirely on one word, อัคคะ, the foremost, which it uses in almost every line. The discourse it introduces does the same.
+
+What it sets up is a proportion rather than a story: faith in the best yields the best.
+
+**Meaning and purpose**
+
+The premise is put first and is broader than the Buddhist case: whatever things are reckoned foremost, in this way and that, of all those, by the highest and foremost measure. The argument begins with the general idea of a superlative.
+
+Then the application: for beings who have faith in the foremost as foremost, it brings foremost state — and the three named as foremost are the Buddha, the Dhamma and the Sangha.
+
+The purpose clause is the sharpest phrase in it: so that faith may rest on the foremost alone. The verse is not recommending faith in general. It is recommending that faith be placed carefully, and the discourse that follows is the argument for where.
+
+---
+
+## อัคคัปปะสาทะสุตตัง — The Discourse on Faith in the Foremost
+
+*pages 112–113 · chant 20 in the book · English is a working translation*  
+`aggappasada-suttam`
+
+**Source (printed in the book):** อํ. จตุกฺก. 21/44
+
+**What it is.** The four foremost objects of faith — the Tathāgata, dispassion, the eightfold path and the Sangha — each argued from a whole class.
+
+**When it is chanted.** Chanted after its prefatory verse, among the discourses in the collection.
+
+**Historical background**
+
+The book prints its own reference. This is the discourse whose prose passages also appear, cut into another chant, in the Parittakaraṇa passage near the front of the book.
+
+Its method is to take a whole category, however wide, and then name one member of it as foremost.
+
+**Meaning and purpose**
+
+Each of the four is built the same way and the categories are made as large as language allows. As far as there are beings — footless, two-footed, four-footed, many-footed, with form or formless, percipient or not — the Tathāgata is reckoned foremost.
+
+Then, of all states conditioned or unconditioned, dispassion. Of all conditioned states, the noble eightfold path. Of all communities or groups, the Sangha of the Tathāgata's disciples. Nothing is excluded from the comparison before the winner is named.
+
+The closing verses draw the practical conclusion, and it is about giving rather than believing: the wise giver of what is foremost, composed in the foremost Dhamma, whether become a deva or a human, rejoices having reached the foremost. Faith placed in the best is treated as an investment, and the discourse is honest that this is the shape of the argument.
+
+---
+
 ## ท์วัตติงสาการะปาโฐ — The Passage on the Thirty-Two Parts of the Body
 
 *pages 217–218*  
@@ -3895,6 +4030,411 @@ The first five subjects proceed by a single repeated construction: I am of such 
 The fifth subject shifts from the body to what surrounds it. นานาภาโว วินาภาโว — becoming otherwise, becoming separate — is rendered by the Thai as พลัดพรากจาก, to be parted from all that is loved and pleasing. The reflection does not ask the reciter to love less; it asks them to hold what they love in the knowledge that parting is already contained in the having.
 
 The sixth subject answers the first five. Where they describe what cannot be escaped, this one names what remains one's own: kamma as possession, inheritance, origin, kin and refuge. The construction is deliberate — each is a relationship one might otherwise claim with property, family or a protector, and each is here assigned to one's own action instead. The closing lines draw the consequence: whatever deed I do, fair or foul, of that I shall be the heir.
+
+---
+
+## คำขอขมาโทษแด่พระมหาเถระ — The Words for Asking Pardon of a Great Elder
+
+*page 253 · English is a working translation*  
+`kham-kho-khama-thot-dae-phra-maha-thera`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The formal address asking a Great Elder to accept a transgression as a transgression, for the sake of future restraint.
+
+**When it is chanted.** Spoken to a Great Elder by monks asking pardon, on formal occasions.
+
+**Historical background**
+
+The fullest of the pardon formulas, and the one used towards the most senior. Where the general form is a sentence, this takes eleven units to say the same thing.
+
+It is printed with the reply and the elder's rejoicing on the same page, so the whole exchange can be read as one.
+
+**Meaning and purpose**
+
+The self-description is unsparing and is the reason for the length: as fools, as deluded, as unskilful. Three words, none of them softened, applied by the speakers to themselves.
+
+The cause is then named twice over — having come under the sway of heedlessness, or of unwise attention. Not malice. The formula assumes that what goes wrong between people in a monastery goes wrong through inattention, and says so.
+
+The request is put with unusual precision: may the Great Elder accept our transgression as a transgression, for the sake of restraint in future. Nothing is asked to be excused or forgotten. What is asked is that it be correctly classified — and the reason given is entirely about what happens next.
+
+---
+
+## คำรับขมาโทษของพระมหาเถระ — The Great Elder's Words Accepting the Asking of Pardon
+
+*page 253 · English is a working translation*  
+`kham-rap-khama-thot-khong-phra-maha-thera`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The Great Elder's reply, which grants the pardon and repeats the fault back before naming what makes amends possible.
+
+**When it is chanted.** Spoken by a Great Elder in reply to monks asking pardon.
+
+**Historical background**
+
+The other half of the exchange, and it is longer than the request. That is unusual: in most such pairs in this book the reply is a single sentence.
+
+It follows the request clause for clause, which is what gives it its particular effect when the two are heard together.
+
+**Meaning and purpose**
+
+It begins by agreeing, and it does not moderate the terms: indeed, friends, a transgression has overcome you, as fools, as deluded, as unskilful. The elder repeats the self-accusation back rather than waving it away.
+
+He then names what was done, which the request did not: you have shown disrespect towards me. The vague formula is made specific by the person who was wronged, not by the people apologising.
+
+And then the principle that makes the whole exchange work, stated as a general rule rather than as a personal concession: one who sees a transgression as a transgression makes amends for it according to the Dhamma, and undertakes restraint in future. The pardon is granted because the rule says so, not because the elder feels generous — which is precisely what makes it possible to ask for.
+
+---
+
+## คำอนุโมทนาของพระมหาเถระ — The Great Elder's Words of Rejoicing
+
+*page 253 · English is a working translation*  
+`kham-anumothana-khong-phra-maha-thera`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The Great Elder's dedication of his own merit to those who asked pardon, closing the exchange.
+
+**When it is chanted.** Spoken by a Great Elder after accepting the asking of pardon.
+
+**Historical background**
+
+The third part of the exchange, and the one that turns it from a procedure into something else. Having been apologised to and having granted pardon, the elder gives something away.
+
+It is the same act of dedication printed elsewhere in this book for donors and for the dead, here directed at the people who have just admitted wronging him.
+
+**Meaning and purpose**
+
+Whatever merit I have made and gathered, by body, by speech, or by mind — the same three doors through which the offence was done are the three through which the merit was made.
+
+All of it is dedicated to the venerable ones, so that they may become sharers in it and rejoice. And then the line that names what rejoicing is worth: by that merit, which is itself made of rejoicing, may they be happy, free of illness and free of harm.
+
+The exchange therefore ends with the wronged party handing over everything he has accumulated to the people who wronged him. Read as procedure it is one more formula; read in sequence, immediately after an accusation has been agreed to, it is the point of the whole arrangement.
+
+---
+
+## คำขอขมาโทษพระเถรานุเถระทั่วไป — The Words for Asking Pardon of the Elders and Junior Elders Generally
+
+*page 254 · English is a working translation*  
+`kham-kho-khama-thot-phra-therauthera`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The short form for asking pardon of the elders as a body, with the elder's reply and a note on the singular.
+
+**When it is chanted.** Spoken to the assembled elders, commonly before the rains or at occasions where the community gathers.
+
+**Historical background**
+
+The shortest of the pardon formulas in this book, and the one for everyday use. Where the address to a Great Elder runs to eleven units, this does the same work in one sentence.
+
+It is printed as an exchange, with the elder's answer and the junior monks' reply given as part of the entry rather than left to be known.
+
+**Meaning and purpose**
+
+What is asked pardon for is described only by how it was done: through heedlessness, by way of the three doors. No offence is named, and the three doors — body, speech and mind — between them cover everything a person could have done.
+
+The elder's reply is the part worth noticing: ahaṃ khamāmi, āyasmantehipi me khamitabbaṃ — I forgive, and you should forgive me too. Pardon is not granted downward. It is exchanged, and the senior asks for it in the same breath he gives it.
+
+The closing note handles the grammar: this is for several monks asking together, and for one alone the wording changes as usage requires. As everywhere in this book, the practical adjustment is printed rather than assumed.
+
+---
+
+## คาถาจุดเทียนชัย — The Verses for Lighting the Victory Candle
+
+*page 254 · English is a working translation*  
+`gatha-jut-thian-chai`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Four lines chanted as the victory candle is lit, naming the Three Jewels and asking that dangers perish.
+
+**When it is chanted.** Chanted at the lighting of the victory candle, at the start of a major auspicious ceremony.
+
+**Historical background**
+
+เทียนชัย is the victory candle: a large candle lit at the beginning of a great ceremony and kept burning throughout, then quenched at the end with its own chant.
+
+The pair of chants — lighting and quenching — bracket the occasion, and the difference in their length is striking. Four lines to light it, forty-one to put it out.
+
+**Meaning and purpose**
+
+The lighting verse does the minimum. It names each of the Three Jewels with one epithet: the Buddha whose knowing is all-knowing, the Dhamma supreme and beyond the world, the Sangha standing in the paths and their fruits.
+
+Then the consequence, in the form the book uses everywhere: by the power of these, may all sufferings and misfortunes and dangers perish, and may every blessing be yours.
+
+Nothing is said about the candle. What is being marked is not the flame but the start, and the words could open any ceremony at all — which is presumably why they are short enough to say while somebody is holding a taper.
+
+---
+
+## คาถาดับเทียนชัย — The Verses for Quenching the Victory Candle
+
+*pages 254–256 · English is a working translation*  
+`gatha-dap-thian-chai`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The long chant for putting out the victory candle, ending by wishing the hearer quenched as the lamp is quenched.
+
+**When it is chanted.** Chanted at the quenching of the victory candle, closing a major auspicious ceremony.
+
+**Historical background**
+
+Forty-one units against the four that lit it. The disproportion is the point: the ceremony has happened in between, and the closing gathers up everything that was chanted during it.
+
+Much of it is assembled from chants printed elsewhere in the book — the refuge verses, the Jayaparitta, the Āṭānāṭiya blessing — which is why a reader will keep meeting familiar lines.
+
+**Meaning and purpose**
+
+It opens on the threefold declaration of refuge, one Jewel at a time, each followed by the same line: by the speaking of this truth, may the blessing of victory be yours. Three truths, three blessings.
+
+The body of it then runs through the protective material of the whole occasion in compressed form, so that a ceremony which has taken hours is recapitulated as it ends.
+
+The last line is the one the chant exists for, and it turns the candle into the simile: freed from every illness, spared every burning torment, having passed beyond all enmity — may you be quenched as this lamp is quenched. The flame is put out at that moment, and นิพพุติ, the quenching, is the tradition's own word for the goal. A ceremony about prosperity ends by wishing somebody extinguished.
+
+---
+
+## ระเบียบสวดมนต์งานพิธีมงคล — The Order of Chanting at an Auspicious Ceremony
+
+*pages 256–258 · chant 1 in the book · English is a working translation*  
+`rabiap-suat-mon-ngan-phithi-mongkhon`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The order for a birthday merit-making, in which the Dhammacakka is chanted with the short Seven Tamnan added at the end.
+
+**When it is chanted.** Followed at a birthday merit-making ceremony.
+
+**Historical background**
+
+The birthday ceremony gets an order of its own, and the reason is in the first line: it is usual to chant the Dhammacakkappavattana Sutta, with the short Seven Tamnan added at the end.
+
+That pairing is the point. The discourse of the first teaching is chanted on the anniversary of somebody's own beginning.
+
+**Meaning and purpose**
+
+The sequence follows the usual shape — the layman requests the parittas, a monk raises his fan and assembles the devas, then the opening block of homage, refuge and Namakārasiddhi.
+
+What is set in the middle is the Dhammacakka, at length; and only after it the short Seven Tamnan, which on any other occasion would be the whole of the service rather than an addition to it.
+
+The closing is the familiar one, ending on the verse about the stars, the yakkhas and the spirits. A birthday is treated as an auspicious occasion needing protection like any other, and the difference from an ordinary one is the discourse chosen for the middle.
+
+---
+
+## ระเบียบสวดมนต์ในงานพิธีมงคลอื่น ๆ — The Order of Chanting at Other Auspicious Ceremonies
+
+*pages 258–259 · chant 2 in the book · English is a working translation*  
+`rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** A short note that for auspicious occasions other than a birthday, the Seven Tamnan alone is chanted, in one of its three forms.
+
+**When it is chanted.** Consulted when planning the chanting for an auspicious occasion other than a birthday.
+
+**Historical background**
+
+Six lines, and it exists to answer one question: what is chanted at everything else. The birthday ceremony has its own order on the page before; this covers the rest.
+
+The answer is simple enough that the page is mostly a pointer to the three orders that follow it.
+
+**Meaning and purpose**
+
+Apart from the birthday merit-making, it is usual to chant the Seven Tamnan only. One collection covers house blessings, weddings, new businesses and the rest, with no text chosen for the particular occasion.
+
+What varies instead is length, and the page lists the three forms by name: in full, middling, and short. The decision to be made is not what to chant but how long to chant it.
+
+That is a quietly practical piece of design. A tradition that assigned a different text to every kind of occasion would need somebody to know them all; this one needs somebody to know one collection and three lengths.
+
+---
+
+## ระเบียบสวดเจ็ดตำนานอย่างเต็มที่ — The Order of Chanting the Seven Tamnan, the Full Form
+
+*pages 259–260 · chant 3 in the book · English is a working translation*  
+`rabiap-suat-chet-tamnan-yang-tem-thi`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The complete order for the Seven Tamnan, from the assembling of the devas to the closing verses.
+
+**When it is chanted.** Followed when the Seven Tamnan is chanted in full, at a major auspicious ceremony.
+
+**Historical background**
+
+The Seven Tamnan is the shorter of the two great paritta collections — the Twelve Tamnan being the other — and the book gives it three running orders of decreasing length. This is the longest.
+
+Everything in it is printed elsewhere in the book. What this page supplies is the sequence and the joins.
+
+**Meaning and purpose**
+
+It begins before the collection does, with one monk raising his fan to chant the assembling of the devas. Only after the audience has been called does the opening proper start.
+
+The opening is then given as a named block — the homage, the refuge, the Namakārasiddhi verses — and the same block serves all three forms, which is why the shorter orders can simply refer back to it.
+
+The closing is fixed too: bhavatu sabbamaṅgalaṃ, and then the verse about the stars, the yakkhas and the spirits. What varies between the three forms is only the middle, which is the part that takes the time.
+
+---
+
+## ระเบียบสวดเจ็ดตำนานอย่างปานกลาง — The Order of Chanting the Seven Tamnan, the Middling Form
+
+*page 261 · chant 4 in the book · English is a working translation*  
+`rabiap-suat-chet-tamnan-yang-pan-klang`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The middling order, which keeps the same opening and closing and shortens the suttas in the middle.
+
+**When it is chanted.** Followed when there is not time for the full Seven Tamnan but more than for the short form.
+
+**Historical background**
+
+The middling form exists because a ceremony has to fit an evening. Its opening and closing are the same in every respect as the full form, and the page says so rather than reprinting them.
+
+What is shortened is each individual sutta, and the page is precise about where the cuts fall.
+
+**Meaning and purpose**
+
+The method of shortening is not to drop texts but to cut inside them. The Ratana Sutta begins at yaṃ kiñci vittaṃ and then skips ahead to khīṇaṃ purāṇaṃ — the opening and the ending, with the middle left out.
+
+Some are not cut at all, and the page marks them: the Karaṇīyametta and the Khandha Paritta are chanted in full. Not everything is thought fit to abbreviate.
+
+One instruction on this page has nothing to do with length. For the Aṅgulimāla Paritta, at a lay occasion begin at yatohaṃ bhagini; at a monastic occasion begin at bojjhaṅgo satisaṅkhāto instead. The verse about a woman in childbirth is not chanted to a room of monks, and a different text is substituted.
+
+---
+
+## ระเบียบสวดเจ็ดตำนานอย่างย่อ — The Order of Chanting the Seven Tamnan, the Short Form
+
+*pages 261–264 · chant 5 in the book · English is a working translation*  
+`rabiap-suat-chet-tamnan-yang-yo`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The shortest order, cutting each sutta to a few lines while keeping the same opening and closing.
+
+**When it is chanted.** Followed where the Seven Tamnan is wanted but time is short.
+
+**Historical background**
+
+The third and briefest of the three orders. As with the middling form, the opening is the same in every respect and the page does not reprint it.
+
+Where the middling form cut the suttas, this one cuts them further, and in some cases starts them at a different place.
+
+**Meaning and purpose**
+
+The Karaṇīyametta shows the method clearly. In the middling form it is chanted in full from karaṇīyamatthakusalena. Here it begins at mettañca sabbalokasmiṃ — more than halfway through, at the verse about extending loving-kindness to the whole world.
+
+The choice is not arbitrary. What is kept is the part everybody knows and the part that states the practice; what goes is the list of qualifications at the front.
+
+Three orders for one collection, differing only in the middle, is a practical answer to a real difficulty. A ceremony may have twenty minutes or two hours, and the tradition would rather shorten the chanting properly than have somebody improvise a stopping place.
+
+---
+
+## ระเบียบสวดถวายพรพระก่อนฉัน — The Order of Chanting the Blessing of the Buddha before the Meal
+
+*page 264 · chant 6 in the book · English is a working translation*  
+`rabiap-suat-thawai-phon-phra-kon-chan`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The short running order for the chanting before a meal, four items long.
+
+**When it is chanted.** Followed by the Sangha after the precepts have been given and before the meal is taken.
+
+**Historical background**
+
+The briefest running order in the book, and the one used most often. It picks up exactly where the giving of the precepts ends.
+
+Each item is named by its opening words and its closing words, which is how every order in this section identifies a chant.
+
+**Meaning and purpose**
+
+Four things, in fixed order: the homage three times; the virtues of the Buddha, the Dhamma and the Sangha beginning itipi so bhagavā; the Jayamaṅgala verses beginning bāhuṃ; and the Jayaparitta beginning mahākāruṇiko nātho.
+
+It runs on without a break into bhavatu sabbamaṅgalaṃ, so the blessing and the closing are treated as one item rather than two.
+
+Nothing is optional and nothing is chosen. Where the anumodanā after the meal varies with the occasion, the chanting before it does not — which is why this page can be four lines long and the pages around it run to twenty.
+
+---
+
+## ระเบียบสวดมนต์ในงานพิธีอวมงคล — The Order of Chanting at Inauspicious Ceremonies
+
+*pages 264–266 · chant 7 in the book · English is a working translation*  
+`rabiap-suat-mon-nai-ngan-phithi-awamongkhon`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** Which discourse is chanted at which stage of mourning, from the seventh day to the hundredth, and how each is broken.
+
+**When it is chanted.** Followed at merit-making for the dead, and at the funeral itself.
+
+**Historical background**
+
+อวมงคล is the inauspicious — the word the tradition uses for funerals and mourning rather than any word for death. The page sets out what is chanted at each stage.
+
+Mourning here is measured in named intervals, and each has its own text: the seventh day, the fiftieth, the hundredth.
+
+**Meaning and purpose**
+
+The assignments are specific and are not interchangeable. At seven days, the Anattalakkhaṇa Sutta. At fifty days, the Ādittapariyāya. At a hundred days, the Satipaṭṭhāna passage. For the second and third seven-day observances, the Dhammaniyāma.
+
+Two of those choices are worth pausing on. The discourse on not-self is given at the first week, when a family is at its rawest; and the fire sermon at fifty days. Neither is consoling, and neither was chosen to be.
+
+The page then explains how each is broken for chanting — where to pause, where to run straight through. For the Satipaṭṭhāna it is not usual to break in the middle. Somebody has thought about how long a room can sit.
+
+---
+
+## อธิบายระเบียบสวดมนต์พิเศษ — An Explanation of the Special Chanting Procedures
+
+*pages 266–268 · chant 8 in the book · English is a working translation*  
+`athibai-rabiap-suat-mon-phiset`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The explanation behind the running orders: what the chanting is for, and how the lustral water and the sacred thread are handled.
+
+**When it is chanted.** Read by those learning to conduct ceremonies, alongside the orders it explains.
+
+**Historical background**
+
+Where the pages around it list what to chant, this one says why, and it is the nearest thing in the book to an editorial preface for the whole ceremonial section.
+
+It also covers the two objects that appear at almost every auspicious occasion and are nowhere else explained — the lustral water and the sacred thread.
+
+**Meaning and purpose**
+
+The purpose is stated in the first line and it is double: that the chanting may bring about auspiciousness and blessing for the host, and that it may be orderly and fitting to the occasion. The second half is about the monks' own conduct — rising, standing and walking in such gatherings so that it accords with the Dhamma and Discipline.
+
+The practical rules are tied to the objects. When lustral water is being made, the Namokāra-aṭṭhaka verses must be chanted; if no water is being made, they need not be. If the sacred thread is used, chant the passage nakkhattayakkhabhūtānaṃ — and the last monk should be ready to gather and wind the thread.
+
+That last detail is the character of the whole page. Somebody has to wind the thread up at the end, and the book says which monk, so that nobody is left holding it. The instructions are written by people who have watched ceremonies go slightly wrong.
+
+---
+
+## ระเบียบสวดมนต์นพเคราะห์ — The Procedure for the Navagraha Chanting
+
+*pages 268–270 · chant 9 in the book · English is a working translation*  
+`rabiap-suat-mon-noppakhro`
+
+**Source:** *left empty — none could be given honestly.*
+
+**What it is.** The order for the Navagraha chanting, in which nine monks chant the parittas in the order of the nine planets.
+
+**When it is chanted.** Followed when the Navagraha chanting is requested, usually at the instance of an astrologer.
+
+**Historical background**
+
+นพเคราะห์ is the nine planets of Indian astrology, and this is the one order of service in the book arranged around them rather than around an event.
+
+Nine monks are wanted, one to a planet, and the parittas are assigned to the planets in sequence. It is the clearest instance in this book of Buddhist chanting fitted to a frame that is not Buddhist in origin.
+
+**Meaning and purpose**
+
+The page is candid about who calls for it. When the astrologer or the learned layman has requested the parittas, the presiding elder leads the opening. The occasion is diagnosed by somebody outside the Sangha, and the Sangha then supplies the remedy.
+
+What is chanted is entirely orthodox — the homage, the refuge, the Namakārasiddhi and Namokāra-aṭṭhaka verses, then the parittas. Nothing has been invented for the occasion; the material is the ordinary collection, re-ordered.
+
+It closes as the other protective services do, with bhavatu sabbamaṅgalaṃ and then the verse about the stars, the yakkhas and the spirits. The astrology decides the arrangement; the tradition decides the words.
 
 ---
 
@@ -5520,13 +6060,8 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 
 ## Still to write
 
-103 chants, in book order:
+83 chants, in book order:
 
-- page 110 — อัฏฐังคิกะมัคคะคาถา — Verses on the Eightfold Path (`atthangikamagga-gatha`)
-- page 111 — บทขัด กะระณียากะระณียะสุตตัง — The Prefatory Verse for the Discourse on What Should and Should Not Be Done (`bot-khat-karaniyakaraniya-suttam`)
-- pages 111–112 — กะระณียากะระณียะสุตตัง — The Discourse on What Should and Should Not Be Done (`karaniyakaraniya-suttam`)
-- page 112 — บทขัด อัคคัปปะสาทะสุตตัง. — The Prefatory Verse for the Discourse on Faith in the Foremost (`bot-khat-aggappasada-suttam`)
-- pages 112–113 — อัคคัปปะสาทะสุตตัง — The Discourse on Faith in the Foremost (`aggappasada-suttam`)
 - page 114 — บทขัด ฉะสาราณียะธัมมะสุตตัง — The Prefatory Verse for the Discourse on the Six States to be Remembered (`bot-khat-chasaraniyadhamma-suttam`)
 - pages 114–115 — ฉะสาราณียะธัมมะสุตตัง — The Discourse on the Six States to be Remembered (`chasaraniyadhamma-suttam`)
 - page 115 — บทขัด ภิกขุอะปะริหานิยะธัมมะสุตตัง (`bot-khat-bhikkhu-aparihaniyadhamma-suttam`)
@@ -5610,18 +6145,3 @@ The closing movement turns to repulsiveness, and does so with a precision worth 
 - page 252 — คำบังสุกุลศพหรืออัฐิ — The Words of the Paṃsukūla for a Body or for Relics (`kham-bangsukun-sop-rue-atthi`)
 - page 252 — คำบังสุกุลคนเป็น — The Words of the Paṃsukūla for the Living (`kham-bangsukun-khon-pen`)
 - page 252 — คำขอขมาโทษพระรัตนตรัย — The Words for Asking Pardon of the Triple Gem (`kham-kho-khama-thot-phra-ratanatrai`)
-- page 253 — คำขอขมาโทษแด่พระมหาเถระ — The Words for Asking Pardon of a Great Elder (`kham-kho-khama-thot-dae-phra-maha-thera`)
-- page 253 — คำรับขมาโทษของพระมหาเถระ — The Great Elder's Words Accepting the Asking of Pardon (`kham-rap-khama-thot-khong-phra-maha-thera`)
-- page 253 — คำอนุโมทนาของพระมหาเถระ — The Great Elder's Words of Rejoicing (`kham-anumothana-khong-phra-maha-thera`)
-- page 254 — คำขอขมาโทษพระเถรานุเถระทั่วไป — The Words for Asking Pardon of the Elders and Junior Elders Generally (`kham-kho-khama-thot-phra-therauthera`)
-- page 254 — คาถาจุดเทียนชัย — The Verses for Lighting the Victory Candle (`gatha-jut-thian-chai`)
-- pages 254–256 — คาถาดับเทียนชัย — The Verses for Quenching the Victory Candle (`gatha-dap-thian-chai`)
-- pages 256–258 — ระเบียบสวดมนต์งานพิธีมงคล — The Order of Chanting at an Auspicious Ceremony (`rabiap-suat-mon-ngan-phithi-mongkhon`)
-- pages 258–259 — ระเบียบสวดมนต์ในงานพิธีมงคลอื่น ๆ — The Order of Chanting at Other Auspicious Ceremonies (`rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen`)
-- pages 259–260 — ระเบียบสวดเจ็ดตำนานอย่างเต็มที่ — The Order of Chanting the Seven Tamnan, the Full Form (`rabiap-suat-chet-tamnan-yang-tem-thi`)
-- page 261 — ระเบียบสวดเจ็ดตำนานอย่างปานกลาง — The Order of Chanting the Seven Tamnan, the Middling Form (`rabiap-suat-chet-tamnan-yang-pan-klang`)
-- pages 261–264 — ระเบียบสวดเจ็ดตำนานอย่างย่อ — The Order of Chanting the Seven Tamnan, the Short Form (`rabiap-suat-chet-tamnan-yang-yo`)
-- page 264 — ระเบียบสวดถวายพรพระก่อนฉัน — The Order of Chanting the Blessing of the Buddha before the Meal (`rabiap-suat-thawai-phon-phra-kon-chan`)
-- pages 264–266 — ระเบียบสวดมนต์ในงานพิธีอวมงคล — The Order of Chanting at Inauspicious Ceremonies (`rabiap-suat-mon-nai-ngan-phithi-awamongkhon`)
-- pages 266–268 — อธิบายระเบียบสวดมนต์พิเศษ — An Explanation of the Special Chanting Procedures (`athibai-rabiap-suat-mon-phiset`)
-- pages 268–270 — ระเบียบสวดมนต์นพเคราะห์ — The Procedure for the Navagraha Chanting (`rabiap-suat-mon-noppakhro`)

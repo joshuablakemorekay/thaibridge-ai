@@ -49392,8 +49392,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0536.PNG]: ⚠ THREE NUMBERED LISTS INSIDE ONE ENTRY —
         #   1-5 for the opening passages, then 1-9 for the nine planets, then
         #   1-3 for the closing. printed_number restarts TWICE, which is the
@@ -49420,6 +49418,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Procedure for the Navagraha Chanting',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The order for the Navagraha chanting, in which nine monks chant the parittas in the order of the nine planets."
+        ),
+
+        'when_chanted': (
+            "Followed when the Navagraha chanting is requested, usually at the instance of an astrologer."
+        ),
+
+        'background': [
+            "นพเคราะห์ is the nine planets of Indian astrology, and this is the one order of service in the book arranged around them rather than around an event.",
+
+            "Nine monks are wanted, one to a planet, and the parittas are assigned to the planets in sequence. It is the clearest instance in this book of Buddhist chanting fitted to a frame that is not Buddhist in origin.",
+        ],
+
+        'meaning': [
+            "The page is candid about who calls for it. When the astrologer or the learned layman has requested the parittas, the presiding elder leads the opening. The occasion is diagnosed by somebody outside the Sangha, and the Sangha then supplies the remedy.",
+
+            "What is chanted is entirely orthodox — the homage, the refuge, the Namakārasiddhi and Namokāra-aṭṭhaka verses, then the parittas. Nothing has been invented for the occasion; the material is the ordinary collection, re-ordered.",
+
+            "It closes as the other protective services do, with bhavatu sabbamaṅgalaṃ and then the verse about the stars, the yakkhas and the spirits. The astrology decides the arrangement; the tradition decides the words.",
+        ],
         'book_number': 9,
         'book_number_printed': '9',
         'page_start': 268,
@@ -49667,8 +49690,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0534.PNG]: ⚠ THE OPENING PARAGRAPH RUNS ACROSS TWO
         #   SHEETS AND IS CUT MID-PHRASE. Page 266 ends 'ตลอดถึง' and page 267
         #   opens 'การลุกและยืนเดิน' — together 'even in rising and standing
@@ -49692,6 +49713,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'An Explanation of the Special Chanting Procedures',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The explanation behind the running orders: what the chanting is for, and how the lustral water and the sacred thread are handled."
+        ),
+
+        'when_chanted': (
+            "Read by those learning to conduct ceremonies, alongside the orders it explains."
+        ),
+
+        'background': [
+            "Where the pages around it list what to chant, this one says why, and it is the nearest thing in the book to an editorial preface for the whole ceremonial section.",
+
+            "It also covers the two objects that appear at almost every auspicious occasion and are nowhere else explained — the lustral water and the sacred thread.",
+        ],
+
+        'meaning': [
+            "The purpose is stated in the first line and it is double: that the chanting may bring about auspiciousness and blessing for the host, and that it may be orderly and fitting to the occasion. The second half is about the monks' own conduct — rising, standing and walking in such gatherings so that it accords with the Dhamma and Discipline.",
+
+            "The practical rules are tied to the objects. When lustral water is being made, the Namokāra-aṭṭhaka verses must be chanted; if no water is being made, they need not be. If the sacred thread is used, chant the passage nakkhattayakkhabhūtānaṃ — and the last monk should be ready to gather and wind the thread.",
+
+            "That last detail is the character of the whole page. Somebody has to wind the thread up at the end, and the book says which monk, so that nobody is left holding it. The instructions are written by people who have watched ceremonies go slightly wrong.",
+        ],
         'book_number': 8,
         'book_number_printed': '8',
         'page_start': 266,
@@ -49833,8 +49879,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0532.PNG]: ⚠ A NEARLY IDENTICAL CHANT ALREADY EXISTS.
         #   ระเบียบถวายพรพระ was entered from pages 270-271 with its own
         #   contents line at ๒๗๐; this one, ระเบียบสวดถวายพรพระก่อนฉัน, is
@@ -49847,6 +49891,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Order of Chanting the Blessing of the Buddha before the Meal',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The short running order for the chanting before a meal, four items long."
+        ),
+
+        'when_chanted': (
+            "Followed by the Sangha after the precepts have been given and before the meal is taken."
+        ),
+
+        'background': [
+            "The briefest running order in the book, and the one used most often. It picks up exactly where the giving of the precepts ends.",
+
+            "Each item is named by its opening words and its closing words, which is how every order in this section identifies a chant.",
+        ],
+
+        'meaning': [
+            "Four things, in fixed order: the homage three times; the virtues of the Buddha, the Dhamma and the Sangha beginning itipi so bhagavā; the Jayamaṅgala verses beginning bāhuṃ; and the Jayaparitta beginning mahākāruṇiko nātho.",
+
+            "It runs on without a break into bhavatu sabbamaṅgalaṃ, so the blessing and the closing are treated as one item rather than two.",
+
+            "Nothing is optional and nothing is chosen. Where the anumodanā after the meal varies with the occasion, the chanting before it does not — which is why this page can be four lines long and the pages around it run to twenty.",
+        ],
         'book_number': 6,
         'book_number_printed': '6',
         'page_start': 264,
@@ -49919,8 +49988,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0532.PNG]: TWO SUTTA NAMES ARE HYPHENATED ACROSS LINE
         #   ENDS — 'อะนัตตะลักขะณะ-สุตตัง' in item 1 and 'อาทิตตะ-
         #   ปะริยายะสุตตัง' in item 2. Both rejoined; they are compositor's
@@ -49935,6 +50002,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Order of Chanting at Inauspicious Ceremonies',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Which discourse is chanted at which stage of mourning, from the seventh day to the hundredth, and how each is broken."
+        ),
+
+        'when_chanted': (
+            "Followed at merit-making for the dead, and at the funeral itself."
+        ),
+
+        'background': [
+            "อวมงคล is the inauspicious — the word the tradition uses for funerals and mourning rather than any word for death. The page sets out what is chanted at each stage.",
+
+            "Mourning here is measured in named intervals, and each has its own text: the seventh day, the fiftieth, the hundredth.",
+        ],
+
+        'meaning': [
+            "The assignments are specific and are not interchangeable. At seven days, the Anattalakkhaṇa Sutta. At fifty days, the Ādittapariyāya. At a hundred days, the Satipaṭṭhāna passage. For the second and third seven-day observances, the Dhammaniyāma.",
+
+            "Two of those choices are worth pausing on. The discourse on not-self is given at the first week, when a family is at its rawest; and the fire sermon at fifty days. Neither is consoling, and neither was chosen to be.",
+
+            "The page then explains how each is broken for chanting — where to pause, where to run straight through. For the Satipaṭṭhāna it is not usual to break in the middle. Somebody has thought about how long a room can sit.",
+        ],
         'book_number': 7,
         'book_number_printed': '7',
         'page_start': 264,
@@ -50190,8 +50282,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0529.PNG]: TWO ITEMS ARE MARKED '(สวดเต็ม)' — CHANTED
         #   IN FULL — where the rest of the list gives an opening and a
         #   closing with ฯเปฯ between. The middling form is therefore not
@@ -50202,6 +50292,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Order of Chanting the Seven Tamnan, the Middling Form',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The middling order, which keeps the same opening and closing and shortens the suttas in the middle."
+        ),
+
+        'when_chanted': (
+            "Followed when there is not time for the full Seven Tamnan but more than for the short form."
+        ),
+
+        'background': [
+            "The middling form exists because a ceremony has to fit an evening. Its opening and closing are the same in every respect as the full form, and the page says so rather than reprinting them.",
+
+            "What is shortened is each individual sutta, and the page is precise about where the cuts fall.",
+        ],
+
+        'meaning': [
+            "The method of shortening is not to drop texts but to cut inside them. The Ratana Sutta begins at yaṃ kiñci vittaṃ and then skips ahead to khīṇaṃ purāṇaṃ — the opening and the ending, with the middle left out.",
+
+            "Some are not cut at all, and the page marks them: the Karaṇīyametta and the Khandha Paritta are chanted in full. Not everything is thought fit to abbreviate.",
+
+            "One instruction on this page has nothing to do with length. For the Aṅgulimāla Paritta, at a lay occasion begin at yatohaṃ bhagini; at a monastic occasion begin at bojjhaṅgo satisaṅkhāto instead. The verse about a woman in childbirth is not chanted to a room of monks, and a different text is substituted.",
+        ],
         'book_number': 4,
         'book_number_printed': '4',
         'page_start': 261,
@@ -50317,8 +50432,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0530.PNG]: ⚠ THREE NUMBERED LISTS INSIDE ONE ENTRY —
         #   1-7 for the short Seven Tamnan, 1-5 for its closing, then 1-11 for
         #   the same-day order. printed_number restarts TWICE, matching the
@@ -50344,6 +50457,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Order of Chanting the Seven Tamnan, the Short Form',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The shortest order, cutting each sutta to a few lines while keeping the same opening and closing."
+        ),
+
+        'when_chanted': (
+            "Followed where the Seven Tamnan is wanted but time is short."
+        ),
+
+        'background': [
+            "The third and briefest of the three orders. As with the middling form, the opening is the same in every respect and the page does not reprint it.",
+
+            "Where the middling form cut the suttas, this one cuts them further, and in some cases starts them at a different place.",
+        ],
+
+        'meaning': [
+            "The Karaṇīyametta shows the method clearly. In the middling form it is chanted in full from karaṇīyamatthakusalena. Here it begins at mettañca sabbalokasmiṃ — more than halfway through, at the verse about extending loving-kindness to the whole world.",
+
+            "The choice is not arbitrary. What is kept is the part everybody knows and the part that states the practice; what goes is the list of qualifications at the front.",
+
+            "Three orders for one collection, differing only in the middle, is a practical answer to a real difficulty. A ceremony may have twenty minutes or two hours, and the tradition would rather shorten the chanting properly than have somebody improvise a stopping place.",
+        ],
         'book_number': 5,
         'book_number_printed': '5',
         'page_start': 261,
@@ -50685,8 +50823,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0528.PNG]: ⚠ A FOURTH ENUMERATION SYSTEM. Item 5's sub-
         #   list is lettered ก. ข. ค. ง. — Thai LETTERS — where the rest of
         #   the book uses Arabic digits and, elsewhere, Thai numerals.
@@ -50714,6 +50850,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Order of Chanting the Seven Tamnan, the Full Form',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The complete order for the Seven Tamnan, from the assembling of the devas to the closing verses."
+        ),
+
+        'when_chanted': (
+            "Followed when the Seven Tamnan is chanted in full, at a major auspicious ceremony."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections — the Twelve Tamnan being the other — and the book gives it three running orders of decreasing length. This is the longest.",
+
+            "Everything in it is printed elsewhere in the book. What this page supplies is the sequence and the joins.",
+        ],
+
+        'meaning': [
+            "It begins before the collection does, with one monk raising his fan to chant the assembling of the devas. Only after the audience has been called does the opening proper start.",
+
+            "The opening is then given as a named block — the homage, the refuge, the Namakārasiddhi verses — and the same block serves all three forms, which is why the shorter orders can simply refer back to it.",
+
+            "The closing is fixed too: bhavatu sabbamaṅgalaṃ, and then the verse about the stars, the yakkhas and the spirits. What varies between the three forms is only the middle, which is the part that takes the time.",
+        ],
         'book_number': 3,
         'book_number_printed': '3',
         'page_start': 259,
@@ -51010,8 +51171,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0375.PNG]: NO NUMBER is printed on this heading, unlike
         #   16., 17. and 18. before it. So book_number is absent and
         #   title_thai matches _CONTENTS_ROMAN exactly — the contents test CAN
@@ -51033,6 +51192,32 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Aṭṭhaṅgikamaggagāthā',
         'title_english': 'Verses on the Eightfold Path',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "Verses declaring the eightfold path the best of paths, and telling the hearer that the walking of it is theirs to do."
+        ),
+
+        'when_chanted': (
+            "Chanted among the discourses in the collection, following the analysis of the path."
+        ),
+
+        'background': [
+            "The book prints its own reference. These verses come after the discourse that defines the eight factors, and they do the opposite job — where that analysed, these urge.",
+
+            "They are among the most quoted verses in the tradition, and the last line of the first pair is the reason.",
+        ],
+
+        'meaning': [
+            "The opening is a set of superlatives, each in the same form: of paths the eightfold is best; of truths, the four sayings; of states, dispassion; of two-footed beings, the One with Vision. Four claims in two lines.",
+
+            "Then the exclusive claim, which the tradition has never softened: this is the only path, there is no other for the purifying of vision. Follow this path, then, which bewilders Māra's army.",
+
+            "And then the line that qualifies everything before it — ตุมเหหิ กิจจมาตัปปัง, the work of striving is yours; the Tathāgatas only make it known. Having declared one path and no other, the verses immediately say that nobody will be carried along it. It is the clearest statement in the book of what the tradition thinks a teacher can and cannot do.",
+        ],
         'page_start': 110,
         'source_printed': 'ขุ.ธ. 25/51',
         'group': 'General chanting',
@@ -51133,8 +51318,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0526.PNG]: ⚠ CORRECTED ON JOSH'S RULING AT THE BOOK,
         #   2026-08-28. Item 6 on pages 258 and 260 PRINTS สีรีมะโต, with a
         #   LONG ี in the first syllable, where the Āṭānāṭiya Paritta set out
@@ -51156,6 +51339,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Order of Chanting at an Auspicious Ceremony',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The order for a birthday merit-making, in which the Dhammacakka is chanted with the short Seven Tamnan added at the end."
+        ),
+
+        'when_chanted': (
+            "Followed at a birthday merit-making ceremony."
+        ),
+
+        'background': [
+            "The birthday ceremony gets an order of its own, and the reason is in the first line: it is usual to chant the Dhammacakkappavattana Sutta, with the short Seven Tamnan added at the end.",
+
+            "That pairing is the point. The discourse of the first teaching is chanted on the anniversary of somebody's own beginning.",
+        ],
+
+        'meaning': [
+            "The sequence follows the usual shape — the layman requests the parittas, a monk raises his fan and assembles the devas, then the opening block of homage, refuge and Namakārasiddhi.",
+
+            "What is set in the middle is the Dhammacakka, at length; and only after it the short Seven Tamnan, which on any other occasion would be the whole of the service rather than an addition to it.",
+
+            "The closing is the familiar one, ending on the verse about the stars, the yakkhas and the spirits. A birthday is treated as an auspicious occasion needing protection like any other, and the difference from an ordinary one is the discourse chosen for the middle.",
+        ],
         'book_number': 1,
         'book_number_printed': '1',
         'page_start': 256,
@@ -51431,8 +51639,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0526.PNG]: THIS CHANT IS THE HINGE OF THE WHOLE
         #   SECTION. It names the three forms of the Seven Tamnan in order,
         #   and the next three numbered chants — 3. on page 259, and the two
@@ -51451,6 +51657,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Order of Chanting at Other Auspicious Ceremonies',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "A short note that for auspicious occasions other than a birthday, the Seven Tamnan alone is chanted, in one of its three forms."
+        ),
+
+        'when_chanted': (
+            "Consulted when planning the chanting for an auspicious occasion other than a birthday."
+        ),
+
+        'background': [
+            "Six lines, and it exists to answer one question: what is chanted at everything else. The birthday ceremony has its own order on the page before; this covers the rest.",
+
+            "The answer is simple enough that the page is mostly a pointer to the three orders that follow it.",
+        ],
+
+        'meaning': [
+            "Apart from the birthday merit-making, it is usual to chant the Seven Tamnan only. One collection covers house blessings, weddings, new businesses and the rest, with no text chosen for the particular occasion.",
+
+            "What varies instead is length, and the page lists the three forms by name: in full, middling, and short. The decision to be made is not what to chant but how long to chant it.",
+
+            "That is a quietly practical piece of design. A tradition that assigned a different text to every kind of occasion would need somebody to know them all; this one needs somebody to know one collection and three lengths.",
+        ],
         'book_number': 2,
         'book_number_printed': '2',
         'page_start': 258,
@@ -51532,13 +51763,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-kho-khama-thot-phra-therauthera',
         'title_thai': 'คำขอขมาโทษพระเถรานุเถระทั่วไป',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Asking Pardon of the Elders and Junior Elders Generally',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The short form for asking pardon of the elders as a body, with the elder's reply and a note on the singular."
+        ),
+
+        'when_chanted': (
+            "Spoken to the assembled elders, commonly before the rains or at occasions where the community gathers."
+        ),
+
+        'background': [
+            "The shortest of the pardon formulas in this book, and the one for everyday use. Where the address to a Great Elder runs to eleven units, this does the same work in one sentence.",
+
+            "It is printed as an exchange, with the elder's answer and the junior monks' reply given as part of the entry rather than left to be known.",
+        ],
+
+        'meaning': [
+            "What is asked pardon for is described only by how it was done: through heedlessness, by way of the three doors. No offence is named, and the three doors — body, speech and mind — between them cover everything a person could have done.",
+
+            "The elder's reply is the part worth noticing: ahaṃ khamāmi, āyasmantehipi me khamitabbaṃ — I forgive, and you should forgive me too. Pardon is not granted downward. It is exchanged, and the senior asks for it in the same breath he gives it.",
+
+            "The closing note handles the grammar: this is for several monks asking together, and for one alone the wording changes as usage requires. As everywhere in this book, the practical adjustment is printed rather than assumed.",
+        ],
         'page_start': 254,
         'layout': 'lines',
         'group': 'General chanting',
@@ -51599,8 +51853,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0522.PNG]: NO ENGLISH IS WRITTEN FOR THESE VERSES. The
         #   book prints none, and this batch is DATA-ONLY, so the `english`
         #   layer is left empty rather than invented.
@@ -51609,6 +51861,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Verses for Lighting the Victory Candle',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Four lines chanted as the victory candle is lit, naming the Three Jewels and asking that dangers perish."
+        ),
+
+        'when_chanted': (
+            "Chanted at the lighting of the victory candle, at the start of a major auspicious ceremony."
+        ),
+
+        'background': [
+            "เทียนชัย is the victory candle: a large candle lit at the beginning of a great ceremony and kept burning throughout, then quenched at the end with its own chant.",
+
+            "The pair of chants — lighting and quenching — bracket the occasion, and the difference in their length is striking. Four lines to light it, forty-one to put it out.",
+        ],
+
+        'meaning': [
+            "The lighting verse does the minimum. It names each of the Three Jewels with one epithet: the Buddha whose knowing is all-knowing, the Dhamma supreme and beyond the world, the Sangha standing in the paths and their fruits.",
+
+            "Then the consequence, in the form the book uses everywhere: by the power of these, may all sufferings and misfortunes and dangers perish, and may every blessing be yours.",
+
+            "Nothing is said about the candle. What is being marked is not the flame but the start, and the words could open any ceremony at all — which is presumably why they are short enough to say while somebody is holding a taper.",
+        ],
         'page_start': 254,
         'layout': 'lines',
         'group': 'General chanting',
@@ -51657,8 +51934,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0523.PNG]: ⚠ THE BOOK PRINTS THIS SAME VERSE THREE WAYS
         #   AND ALL THREE ARE KEPT. Page 20 has เย ปุคคะลา อัฏฐะสะตัง ปะสัฏฐา
         #   as one word with ฏ; page 82 and this page have อัฏฐะ สะตัง ปะสัตถา
@@ -51680,6 +51955,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Verses for Quenching the Victory Candle',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The long chant for putting out the victory candle, ending by wishing the hearer quenched as the lamp is quenched."
+        ),
+
+        'when_chanted': (
+            "Chanted at the quenching of the victory candle, closing a major auspicious ceremony."
+        ),
+
+        'background': [
+            "Forty-one units against the four that lit it. The disproportion is the point: the ceremony has happened in between, and the closing gathers up everything that was chanted during it.",
+
+            "Much of it is assembled from chants printed elsewhere in the book — the refuge verses, the Jayaparitta, the Āṭānāṭiya blessing — which is why a reader will keep meeting familiar lines.",
+        ],
+
+        'meaning': [
+            "It opens on the threefold declaration of refuge, one Jewel at a time, each followed by the same line: by the speaking of this truth, may the blessing of victory be yours. Three truths, three blessings.",
+
+            "The body of it then runs through the protective material of the whole occasion in compressed form, so that a ceremony which has taken hours is recapitulated as it ends.",
+
+            "The last line is the one the chant exists for, and it turns the candle into the simile: freed from every illness, spared every burning torment, having passed beyond all enmity — may you be quenched as this lamp is quenched. The flame is put out at that moment, and นิพพุติ, the quenching, is the tradition's own word for the goal. A ceremony about prosperity ends by wishing somebody extinguished.",
+        ],
         'page_start': 254,
         'layout': 'lines',
         'group': 'General chanting',
@@ -52026,8 +52326,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0376.PNG]: A SEVENTEENTH TITLE THE CONTENTS TEST CANNOT
         #   SEE. The page prints บทขัด กะระณียากะระณียะสุตตัง with a SPACE
         #   after บทขัด; the สารบัญ has it without one. Every บทขัด from page
@@ -52041,6 +52339,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt gà-rá-nii-yaa-gà-rá-nii-yá-sùt-dtaŋ',
         'title_english': 'The Prefatory Verse for the Discourse on What Should and Should Not Be Done',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to a short discourse on what is to be done and what abandoned, addressed to Ānanda."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Karaṇīyākaraṇīya Sutta, introducing it."
+        ),
+
+        'background': [
+            "The introduction states the discourse's purpose in a single pairing: so that what should not be done be abandoned, and what should be done be done. The Pali sets the two words side by side, as the title does.",
+
+            "It also names the person taught — the Sage of Videha — which is Ānanda, the Buddha's attendant, and the discourse itself is cast as an exchange with him.",
+        ],
+
+        'meaning': [
+            "The Buddha is described by function rather than by epithet here: the Sage, training those fit to be trained in the path of happiness. สุขะมัคคัส๎มิง, in the path of happiness, is an unusual way to name the training and worth noticing.",
+
+            "The purpose clause is symmetrical and covers the whole of conduct in four words. Nothing needs to be added to should be done and should not be done to have a complete ethics.",
+
+            "It closes as these verses do, with the reason for reciting: having heard it, so as to act accordingly. The recitation is not offered as merit but as the first step of doing what the discourse says.",
+        ],
         'page_start': 111,
         'group': 'General chanting',
         'english_unverified': True,
@@ -52097,8 +52420,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0376.PNG]: english_unverified is set. The book prints
         #   this chant in Pali only, so thai and paiboon are empty on every
         #   verse and the English is a working translation made for this
@@ -52108,6 +52429,32 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Karaṇīyākaraṇīyasuttaṃ',
         'title_english': 'The Discourse on What Should and Should Not Be Done',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "A short exchange with Ānanda: good conduct of body, speech and mind should be done, and bad conduct abandoned."
+        ),
+
+        'when_chanted': (
+            "Chanted after its prefatory verse, among the short discourses."
+        ),
+
+        'background': [
+            "The book prints its own reference. The discourse is two units long and is among the shortest in the collection.",
+
+            "Its form is an exchange rather than a teaching: the Buddha states something categorically, and Ānanda asks him to expand it.",
+        ],
+
+        'meaning': [
+            "The word that carries it is เอกังเสนาหัง — categorically, one-sidedly, without qualification. The Buddha is elsewhere careful to say that most questions need distinguishing before they can be answered, and here he says the opposite.",
+
+            "What is stated so flatly is unremarkable in itself: good conduct of body, speech and mind should be done. The interest is entirely in the register — that this, and not much else, is offered without conditions.",
+
+            "Ānanda then asks what follows from such conduct, which is what turns the statement into a discourse. Two units, and the whole of it is one claim and one question about it.",
+        ],
         'book_number': '19',
         'page_start': 111,
         'group': 'General chanting',
@@ -52227,13 +52574,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-kho-khama-thot-dae-phra-maha-thera',
         'title_thai': 'คำขอขมาโทษแด่พระมหาเถระ',
         'title_pali': '',
         'title_roman': '',
         'title_english': 'The Words for Asking Pardon of a Great Elder',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The formal address asking a Great Elder to accept a transgression as a transgression, for the sake of future restraint."
+        ),
+
+        'when_chanted': (
+            "Spoken to a Great Elder by monks asking pardon, on formal occasions."
+        ),
+
+        'background': [
+            "The fullest of the pardon formulas, and the one used towards the most senior. Where the general form is a sentence, this takes eleven units to say the same thing.",
+
+            "It is printed with the reply and the elder's rejoicing on the same page, so the whole exchange can be read as one.",
+        ],
+
+        'meaning': [
+            "The self-description is unsparing and is the reason for the length: as fools, as deluded, as unskilful. Three words, none of them softened, applied by the speakers to themselves.",
+
+            "The cause is then named twice over — having come under the sway of heedlessness, or of unwise attention. Not malice. The formula assumes that what goes wrong between people in a monastery goes wrong through inattention, and says so.",
+
+            "The request is put with unusual precision: may the Great Elder accept our transgression as a transgression, for the sake of restraint in future. Nothing is asked to be excused or forgotten. What is asked is that it be correctly classified — and the reason given is entirely about what happens next.",
+        ],
         'page_start': 253,
         'layout': 'prose',
         'group': 'General chanting',
@@ -52345,13 +52715,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-rap-khama-thot-khong-phra-maha-thera',
         'title_thai': 'คำรับขมาโทษของพระมหาเถระ',
         'title_pali': '',
         'title_roman': '',
         'title_english': "The Great Elder's Words Accepting the Asking of Pardon",
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Great Elder's reply, which grants the pardon and repeats the fault back before naming what makes amends possible."
+        ),
+
+        'when_chanted': (
+            "Spoken by a Great Elder in reply to monks asking pardon."
+        ),
+
+        'background': [
+            "The other half of the exchange, and it is longer than the request. That is unusual: in most such pairs in this book the reply is a single sentence.",
+
+            "It follows the request clause for clause, which is what gives it its particular effect when the two are heard together.",
+        ],
+
+        'meaning': [
+            "It begins by agreeing, and it does not moderate the terms: indeed, friends, a transgression has overcome you, as fools, as deluded, as unskilful. The elder repeats the self-accusation back rather than waving it away.",
+
+            "He then names what was done, which the request did not: you have shown disrespect towards me. The vague formula is made specific by the person who was wronged, not by the people apologising.",
+
+            "And then the principle that makes the whole exchange work, stated as a general rule rather than as a personal concession: one who sees a transgression as a transgression makes amends for it according to the Dhamma, and undertakes restraint in future. The pardon is granted because the rule says so, not because the elder feels generous — which is precisely what makes it possible to ask for.",
+        ],
         'page_start': 253,
         'layout': 'prose',
         'group': 'General chanting',
@@ -52494,13 +52887,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'kham-anumothana-khong-phra-maha-thera',
         'title_thai': 'คำอนุโมทนาของพระมหาเถระ',
         'title_pali': '',
         'title_roman': '',
         'title_english': "The Great Elder's Words of Rejoicing",
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Great Elder's dedication of his own merit to those who asked pardon, closing the exchange."
+        ),
+
+        'when_chanted': (
+            "Spoken by a Great Elder after accepting the asking of pardon."
+        ),
+
+        'background': [
+            "The third part of the exchange, and the one that turns it from a procedure into something else. Having been apologised to and having granted pardon, the elder gives something away.",
+
+            "It is the same act of dedication printed elsewhere in this book for donors and for the dead, here directed at the people who have just admitted wronging him.",
+        ],
+
+        'meaning': [
+            "Whatever merit I have made and gathered, by body, by speech, or by mind — the same three doors through which the offence was done are the three through which the merit was made.",
+
+            "All of it is dedicated to the venerable ones, so that they may become sharers in it and rejoice. And then the line that names what rejoicing is worth: by that merit, which is itself made of rejoicing, may they be happy, free of illness and free of harm.",
+
+            "The exchange therefore ends with the wronged party handing over everything he has accumulated to the people who wronged him. Read as procedure it is one more formula; read in sequence, immediately after an accusation has been agreed to, it is the point of the whole arrangement.",
+        ],
         'page_start': 253,
         'layout': 'prose',
         'group': 'General chanting',
@@ -52578,8 +52994,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0377.PNG]: ‼ THE TITLE CARRIES A PRINTED FULL STOP —
         #   บทขัด อัคคัปปะสาทะสุตตัง. — and no other title in this run has
         #   done that. The numbered heading four lines below, 20.
@@ -52596,6 +53010,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt àk-kàp-bpà-sǎa-tà-sùt-dtaŋ',
         'title_english': 'The Prefatory Verse for the Discourse on Faith in the Foremost',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The prefatory verse to the discourse on faith in what is foremost, and what such faith brings."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Aggappasāda Sutta, introducing it."
+        ),
+
+        'background': [
+            "The introduction turns entirely on one word, อัคคะ, the foremost, which it uses in almost every line. The discourse it introduces does the same.",
+
+            "What it sets up is a proportion rather than a story: faith in the best yields the best.",
+        ],
+
+        'meaning': [
+            "The premise is put first and is broader than the Buddhist case: whatever things are reckoned foremost, in this way and that, of all those, by the highest and foremost measure. The argument begins with the general idea of a superlative.",
+
+            "Then the application: for beings who have faith in the foremost as foremost, it brings foremost state — and the three named as foremost are the Buddha, the Dhamma and the Sangha.",
+
+            "The purpose clause is the sharpest phrase in it: so that faith may rest on the foremost alone. The verse is not recommending faith in general. It is recommending that faith be placed carefully, and the discourse that follows is the argument for where.",
+        ],
         'page_start': 112,
         'group': 'General chanting',
         'english_unverified': True,
@@ -52672,8 +53111,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0377.PNG]: ‼ NOT THE SAME CHANT AS akkappasada-
         #   suttagatha ALREADY IN THE APP. The สารบัญ lists อัคคัปปะสาทะสุตตัง
         #   and อัคคัปปะสาทะสุตตะคาถา separately; the app holds the CAATHAA.
@@ -52687,6 +53124,32 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'Aggappasādasuttaṃ',
         'title_english': 'The Discourse on Faith in the Foremost',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "The four foremost objects of faith — the Tathāgata, dispassion, the eightfold path and the Sangha — each argued from a whole class."
+        ),
+
+        'when_chanted': (
+            "Chanted after its prefatory verse, among the discourses in the collection."
+        ),
+
+        'background': [
+            "The book prints its own reference. This is the discourse whose prose passages also appear, cut into another chant, in the Parittakaraṇa passage near the front of the book.",
+
+            "Its method is to take a whole category, however wide, and then name one member of it as foremost.",
+        ],
+
+        'meaning': [
+            "Each of the four is built the same way and the categories are made as large as language allows. As far as there are beings — footless, two-footed, four-footed, many-footed, with form or formless, percipient or not — the Tathāgata is reckoned foremost.",
+
+            "Then, of all states conditioned or unconditioned, dispassion. Of all conditioned states, the noble eightfold path. Of all communities or groups, the Sangha of the Tathāgata's disciples. Nothing is excluded from the comparison before the winner is named.",
+
+            "The closing verses draw the practical conclusion, and it is about giving rather than believing: the wise giver of what is foremost, composed in the foremost Dhamma, whether become a deva or a human, rejoices having reached the foremost. Faith placed in the best is treated as an investment, and the discourse is honest that this is the shape of the argument.",
+        ],
         'book_number': '20',
         'page_start': 112,
         'group': 'General chanting',
