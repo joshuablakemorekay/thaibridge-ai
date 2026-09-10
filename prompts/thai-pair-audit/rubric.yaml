@@ -1,0 +1,54 @@
+# Evaluation rubric for: Thai/English Pair Audit
+
+prompt: thai-pair-audit
+version: 1
+criteria:
+  - name: reports_what_was_checked
+    description: States how much was actually audited rather than implying everything was
+    weight: 5
+    pass_condition: "any(c.isdigit() for c in output) and any(s in output.lower() for s in ['pair', 'entr', 'row', 'checked'])"
+
+  - name: names_what_was_excluded
+    description: Says explicitly what was NOT audited, so coverage is not overstated
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['not audited', 'excluded', 'out of scope', \"didn't cover\", 'did not cover', 'chanting'])"
+
+  - name: separates_errors_from_preferences
+    description: Distinguishes outright errors from inconsistencies and judgement calls
+    weight: 5
+    pass_condition: "sum(s in output.lower() for s in ['error', 'inconsisten', 'judgement', 'judgment', 'preference', 'decision']) >= 2"
+
+  - name: cites_locations
+    description: Every finding is traceable to a file and line
+    weight: 4
+    pass_condition: "any(s in output for s in ['.py:', '.html:', 'line ']) and any(c.isdigit() for c in output)"
+
+  - name: evidences_replacements
+    description: Proposed fixes are backed by the word already existing elsewhere, or flagged as new
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['already used', 'attested', 'elsewhere', 'appears nowhere', 'not attested', 'unreviewed'])"
+
+  - name: escalates_what_it_cannot_verify
+    description: Refuses to invent replacements it cannot evidence, and says so
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['teacher', 'native speaker', 'cannot verify', \"can't verify\", 'held', 'escalate'])"
+
+  - name: reports_its_own_false_positives
+    description: Findings withdrawn on checking are reported as withdrawn
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['was wrong', 'i was wrong', 'withdrawn', 'turned out', 'correct after all', 'no change needed'])"
+
+  - name: is_substantial
+    description: A real audit, not a spot check
+    weight: 2
+    pass_condition: "len(output.split()) >= 80"
+
+test_cases:
+  - input:
+      task: "Audit every Thai/English pair in a language-learning app for mismatches"
+    expected_traits:
+      - states how many pairs were checked and what was left out
+      - separates outright errors from stylistic inconsistencies
+      - gives file and line for each finding
+      - refuses to invent replacement Thai it cannot evidence, escalating instead
+      - reports any of its own findings that proved wrong

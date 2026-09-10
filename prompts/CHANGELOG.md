@@ -7,6 +7,24 @@ Each entry follows this format:
 
 ---
 
+## thai-pair-audit
+
+### 2026-09-10 — v1 → v3
+**Change:** v1 asked whether one home page heading matched its English. v2 (*"Do it."*) generalised that into an AST-based sweep of all 707 Thai/English pairs plus every page heading. v3 (*"Do the ones you can verify, hold the rest for my teacher"*) added the constraint that decided what shipped: only replace a word if that word **and** its romanisation already appear elsewhere in the codebase.
+**Reason:** `พระธรรมและภาษาไทย` under *"Learn the Dhamma. Learn Thai. Find Your Own Path."* means "the Dhamma and the Thai language" — grammatical Thai, wrong Thai for that line, and invisible to a spellchecker. If one heading could be wrong without anyone noticing, so could the rest.
+**Impact:** Five commits, all live and verified on the deployed site. `94ba71d` settled one romanisation per word and normalised the velar nasal to ŋ in 26 places including all ten in the 44-consonant chart; `691dcab` repaired five vowel examples that had lost their opening consonant and rendered as orphan marks, plus an ungrammatical counting pattern taught as the main rule; `f41cf23` caught ง's `sound` field, missed by the first pass because the extraction only looked at dict keys; `9ea83b6` corrected the vowel table's inverted length labels; `74ff5ff` added a bilingual teacher review sheet for six rows deliberately left broken. Three lessons recorded rather than tidied away: the rules being violated were already the project's own documented house style from [`romanization-system`](./romanization-system/), and `tests/test_contents_roman.py` already asserted one of them for the chanting contents only; two of the audit's own findings were wrong and are reported as withdrawn; and normalising `rua`→`rʉa` made a latent bug visible by turning two vowel rows into exact duplicates, exposing an example word that had always been wrong.
+
+---
+
+## annual-billing-option
+
+### 2026-09-10 — v1 → v2
+**Change:** v1 was *"Add a Premium tier — £8.99/month or £59/year, with the AI chat gated as the paid feature"* and was never built. v2 is *"leave £9.99/£19.99 and add an annual option (~£99/yr Basic, ~£199/yr Pro, i.e. two months free)"*.
+**Reason:** The same message that carried the plan also asked *"Have we not already done some of these?"* — so the code was checked first. Two paid tiers already existed at £9.99 and £19.99, the AI chat was already the paid hook, and progress tracking was already shipped. Building v1 as written would have introduced a tier *below* the existing one and called a price cut a launch. Exactly one item on the roadmap was genuinely missing.
+**Impact:** `8325d4a` shipped `price_year` on both paid tiers with the period carried as `?period=year` rather than as a fourth product, so no webhook, access check or database column changed. Anything that is not exactly `"year"` falls back to monthly, so a stale bookmark cannot commit somebody to twelve months. PayPal's one-off grant became 365 days when that is what was paid. 23 tests pin the amount and interval actually sent to Stripe, and one guards against a mistyped price by asserting a year saves between 1.8 and 2.3 months. Verified afterwards against the real Stripe test API rather than the mock — GBP 99.00/year and GBP 199.00/year, both `mode=subscription`. The PayPal 365-day branch remains unverified because PayPal is not configured in this environment, and that is recorded rather than glossed.
+
+---
+
 ## critique-to-product-decision
 
 ### 2026-08-20 — v1

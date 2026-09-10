@@ -1,0 +1,35 @@
+Audited 707 Thai/English pairs across app.py, register_levels.py and
+thai_reading.py, plus every page heading in templates/. Not audited, and worth
+saying so: chanting.py (22,000 lines of Thai, excluded because it has its own
+review pass), survival.py, ai_agent.py and the monk lesson content files.
+
+Roughly 40 findings, in three kinds.
+
+Outright errors:
+- app.py:4364 — five vowel examples have lost their opening consonant and render
+  as orphan vowel marks ('ึง / ืด', 'ุก / ูป').
+- app.py:3743 — สามคนนักเรียน is taught as "Most common pattern for counting".
+  Thai counts Noun + Number + Classifier; that order is not grammatical.
+- app.py:2357 — กัวน is not a word.
+- app.py:1811 and 1816 — บ้าย is not the standard spelling of "bye".
+
+Inconsistencies, where the same word is written two ways:
+- เรือ as rʉa (line 2218) and rua (line 2227)
+- ชื่อ as chʉ̂ʉ and chûu; ที่ as tîi and têe
+- the velar nasal written ng in 26 places, including all ten in the
+  44-consonant chart, where the rest of the app uses ŋ
+
+Judgement calls, which are decisions rather than defects: Sanskrit spellings
+(Dharma, Nirvana) in a Theravada app that uses Pali elsewhere; ผีตาโขน glossed
+as "Ghost Festival".
+
+On fixes: every replacement proposed is a word already used elsewhere in the
+codebase, with the romanisation it already carries there, so nothing new is
+asserted about Thai. Six rows could not be fixed that way — the right word
+appears nowhere in the repo — so they are left visibly broken and escalated to a
+native speaker rather than guessed at. An audit should not invent Thai to repair
+Thai.
+
+Two of my own findings were wrong and are withdrawn: เซลล์ romanised "seen" is
+correct, because the app maps เอ to ee; and the English inside class="thai" on
+the monk pronunciation page is the site-wide subtitle style, not a font bug.

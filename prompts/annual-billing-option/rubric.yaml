@@ -1,0 +1,49 @@
+# Evaluation rubric for: Annual Billing Option
+
+prompt: annual-billing-option
+version: 1
+criteria:
+  - name: checks_the_premise_first
+    description: Verifies what already exists before building what was asked for
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['already', 'exists', 'existing', 'currently'])"
+
+  - name: keeps_period_out_of_the_tier
+    description: Billing period is a property of the purchase, not a new product
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['same tier', 'not a new tier', 'query', 'period=', 'same product'])"
+
+  - name: safe_default_on_bad_input
+    description: An unrecognised period falls back to the smaller commitment
+    weight: 5
+    pass_condition: "any(s in output.lower() for s in ['fall back', 'falls back', 'default', 'monthly'])"
+
+  - name: covers_both_providers
+    description: Both payment routes handle the period, not just the convenient one
+    weight: 4
+    pass_condition: "'stripe' in output.lower() and 'paypal' in output.lower()"
+
+  - name: states_the_amount_and_interval
+    description: Names the actual amount and billing interval sent to the processor
+    weight: 4
+    pass_condition: "any(c.isdigit() for c in output) and any(s in output.lower() for s in ['year', 'annual', 'month'])"
+
+  - name: guards_against_a_mistyped_price
+    description: Something checks the annual price is plausible relative to monthly
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['test', 'assert', 'guard', 'check', 'typo'])"
+
+  - name: admits_what_is_unverified
+    description: States which paths were actually exercised and which were not
+    weight: 4
+    pass_condition: "any(s in output.lower() for s in ['unverified', 'not tested', 'untested', 'could not', 'mock', 'not configured'])"
+
+test_cases:
+  - input:
+      task: "Add yearly billing to existing monthly subscription tiers"
+    expected_traits:
+      - checks what the codebase already has before building
+      - treats the period as a property of the purchase, not a new tier
+      - defaults to monthly when the period is missing or malformed
+      - handles both payment providers
+      - says which paths remain unverified

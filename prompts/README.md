@@ -32,6 +32,8 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`alphabet-gate-audit`](./alphabet-gate-audit/) | analysis | Answers whether the alphabet should be free, then asks the harder question underneath — is the prerequisite drawn in the right place? | Yes (v1 answer → v2 breadth) |
 | [`hero-copy-rewrite`](./hero-copy-rewrite/) | content | Rewrites the home page hero from a description of the site's structure into a promise — and records the three AI wordings that were rejected before the author wrote the final copy himself, then a second round where a tightening nearly deleted the same commitment again | Yes (v1 → v4, author-written) |
 | [`critique-to-product-decision`](./critique-to-product-decision/) | analysis | Turns a hostile critique into a product decision instead of defensive copy — one section added, and one change explicitly refused | No (single version) |
+| [`thai-pair-audit`](./thai-pair-audit/) | analysis | Turns one mismatched heading into a sweep of all 707 Thai/English pairs — and refuses to repair the half it would have to invent Thai for, escalating those to a teacher instead | Yes (v1 one heading → v3 verify-or-escalate) |
+| [`annual-billing-option`](./annual-billing-option/) | code-generation | Adds yearly billing to existing tiers — after checking the codebase and finding the requested "new Premium tier" already existed, so building it as written would have been a price cut | Yes (v1 rejected → v2 built) |
 
 ## Featured iterations
 
@@ -113,6 +115,28 @@ The first attempt quietly dropped paragraphs and reworded a Buddhist essay I'd a
 ### [`wireframe-layout-system`](./wireframe-layout-system/)
 
 This started as "should I put the wireframe on *every* page?" and became a small **design system**. The key shift was realising a **wireframe is a planning tool, not a feature** — so instead of forcing one layout everywhere, I wrote a content-first outline and gave each page the shape that fits its job (Landing, 3-column content, Simple centered, Full-width tool), built from reusable partials. It also taught me that "tests pass / 200 OK" proves a page *loads*, not that it *looks right*.
+
+### [`thai-pair-audit`](./thai-pair-audit/)
+
+The entry where **the most valuable output was the list of things it refused to
+fix.** One question about one home page heading — *"does the Thai script match
+the English?"* — generalised into a sweep of all 707 Thai/English pairs and found
+roughly 40 defects, including five vowel examples that had lost their opening
+consonant and rendered as orphan marks on a page people pay for.
+
+Half of those could only have been repaired by writing new Thai. The ruling
+*"do the ones you can verify, hold the rest for my teacher"* split the findings
+by evidence instead: fix it only if the word **and** its romanisation already
+appear elsewhere in the codebase, otherwise leave it visibly broken and escalate
+to a native speaker. Six rows are still wrong in production on purpose, with a
+bilingual review sheet sitting next to them.
+
+Two other lessons are recorded rather than tidied away. The romanisation rules
+being violated were already this project's own documented house style, written
+down in [`romanization-system`](./romanization-system/) and then quietly ignored
+in forty-odd places — the best audits check work against a rule the project
+already agreed to. And two of the audit's own findings turned out to be wrong on
+closer inspection, so they are reported as withdrawn instead of deleted.
 
 ## Skills demonstrated
 

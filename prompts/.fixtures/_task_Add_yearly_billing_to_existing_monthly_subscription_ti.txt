@@ -1,0 +1,27 @@
+Before building: the codebase already has two paid tiers, Basic at £9.99/month
+and Pro at £19.99/month, and the AI chat is already the paid hook. So this is not
+a new tier — the only thing genuinely missing is an annual option.
+
+Implementation. price_year is stored on each paid tier (£99 and £199), rather
+than computed, because the round number is the offer. The billing period travels
+as a query parameter, ?period=year, so it stays the same tier on a different
+clock rather than becoming a new product; Stripe reports the real period end
+either way, so no webhook or access check needed changing.
+
+Anything that is not exactly "year" falls back to monthly — "YEAR", "yearly",
+"annual", "12" and an empty value all default to the smaller commitment, so a
+stale bookmark cannot talk somebody into twelve months.
+
+Both providers handle it. Stripe receives unit_amount 9900 with a recurring
+interval of year for Basic, and 19900 for Pro. PayPal is a one-off grant here
+rather than a real subscription, so its access window becomes 365 days instead of
+30, read back from the session because PayPal returns the user to a bare URL.
+
+Testing. 23 new tests pin the amount and interval actually sent to Stripe, not
+just the page copy, and one guards against a mistyped price by asserting a year
+must save between 1.8 and 2.3 months.
+
+Unverified, and recorded as such: the unit tests mock Stripe, so a live call was
+made afterwards to confirm the real API accepts the parameters. The PayPal
+365-day branch could not be tested because PayPal is not configured in this
+environment.

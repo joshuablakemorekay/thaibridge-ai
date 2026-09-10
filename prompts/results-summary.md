@@ -1,11 +1,12 @@
 # Eval Results Summary
 
-_Generated: 2026-08-20 09:36 UTC_
+_Generated: 2026-09-10 13:28 UTC_
 
 | Prompt | Cases | Avg Score | Status |
 |---|---|---|---|
 | `ai-tutor-integration` | 1 | 100.0% | ✅ pass |
 | `alphabet-gate-audit` | 1 | 100.0% | ✅ pass |
+| `annual-billing-option` | 1 | 100.0% | ✅ pass |
 | `buddhist-pdf-integration` | 1 | 100.0% | ✅ pass |
 | `chanting-book-batch` | 1 | 100.0% | ✅ pass |
 | `chanting-book-entry` | 1 | 100.0% | ✅ pass |
@@ -23,6 +24,7 @@ _Generated: 2026-08-20 09:36 UTC_
 | `register-levels-draft` | 1 | 100.0% | ✅ pass |
 | `romanization-system` | 1 | 100.0% | ✅ pass |
 | `survival-thai` | 1 | 100.0% | ✅ pass |
+| `thai-pair-audit` | 1 | 100.0% | ✅ pass |
 | `tones-consonant-classes` | 1 | 100.0% | ✅ pass |
 | `wireframe-layout-system` | 1 | 100.0% | ✅ pass |
 | `xp-economy-audit` | 1 | 100.0% | ✅ pass |
