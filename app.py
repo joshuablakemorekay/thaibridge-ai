@@ -2229,15 +2229,15 @@ THAI_VOWELS_32 = {
             'paiboon': 'ua',
             'type': 'long',
             'sound': 'long "ua" - gliding vowel',
-            'example_word': {'thai': 'เรือ', 'paiboon': 'rʉa', 'english': 'boat (alternate)'},
+            'example_word': {'thai': 'ตัว', 'paiboon': 'dtuua', 'english': 'body / classifier'},
             'length_note': 'Diphthong: "uu" + "a"'
         },
         {
             'number': 13,
             'thai': 'ไอ/ใอ',
             'paiboon': 'ai',
-            'type': 'long',
-            'sound': 'long "ai" as in "Thai"',
+            'type': 'short',
+            'sound': 'short "ai" as in "Thai"',
             'example_word': {'thai': 'ใคร', 'paiboon': 'krai', 'english': 'who'},
             'length_note': 'Diphthong: "a" + "i"'
         },
@@ -2245,8 +2245,8 @@ THAI_VOWELS_32 = {
             'number': 14,
             'thai': 'เอา',
             'paiboon': 'ao',
-            'type': 'long',
-            'sound': 'long "ao" as in "Lao"',
+            'type': 'short',
+            'sound': 'short "ao" as in "Lao"',
             'example_word': {'thai': 'เก่า', 'paiboon': 'gào', 'english': 'old'},
             'length_note': 'Diphthong: "a" + "o"'
         },
@@ -2323,7 +2323,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ɔ',
             'type': 'short',
             'sound': 'short "aw"',
-            'example_word': {'thai': 'พอ', 'paiboon': 'pɔɔ', 'english': 'enough'},
+            'example_word': {'thai': 'เกาะ', 'paiboon': 'gɔ̀', 'english': 'island'},
             'length_note': 'Quick "ɔ" - half length of "ɔɔ"'
         },
         {
@@ -2332,7 +2332,7 @@ THAI_VOWELS_32 = {
             'paiboon': 'ə',
             'type': 'short',
             'sound': 'short "er" as in "the"',
-            'example_word': {'thai': 'เมิน', 'paiboon': 'məən', 'english': 'ignore'},
+            'example_word': {'thai': 'เลอะ', 'paiboon': 'lə́', 'english': 'messy, dirty'},
             'length_note': 'Quick neutral vowel - half length of "əə"'
         },
         {
@@ -2365,21 +2365,21 @@ THAI_VOWELS_32 = {
         },
         {
             'number': 27,
-            'thai': 'ไอย',
-            'paiboon': 'ai',
-            'type': 'short',
-            'sound': 'short "ai"',
-            'example_word': {'thai': 'ไก่', 'paiboon': 'gài', 'english': 'chicken'},
-            'length_note': 'Quick diphthong'
+            'thai': 'อาย',
+            'paiboon': 'aai',
+            'type': 'long',
+            'sound': 'long "ai" - hold the "aa"',
+            'example_word': {'thai': 'สบาย', 'paiboon': 'sà-baai', 'english': 'comfortable, well'},
+            'length_note': 'The long partner of ไอ/ใอ'
         },
         {
             'number': 28,
             'thai': 'อาว',
             'paiboon': 'aao',
-            'type': 'short',
-            'sound': 'short "ao"',
+            'type': 'long',
+            'sound': 'long "ao" - hold the "aa"',
             'example_word': {'thai': 'กาว', 'paiboon': 'gaao', 'english': 'glue'},
-            'length_note': 'Quick diphthong'
+            'length_note': 'The long partner of เอา'
         },
         {
             'number': 29,
@@ -2403,9 +2403,9 @@ THAI_VOWELS_32 = {
             'number': 31,
             'thai': 'แอว',
             'paiboon': 'ɛɛo',
-            'type': 'short',
-            'sound': 'short "aeo"',
-            'example_word': {'thai': 'แว่น', 'paiboon': 'wɛ̂ɛn', 'english': 'glasses'},
+            'type': 'long',
+            'sound': 'long "aeo"',
+            'example_word': {'thai': 'แก้ว', 'paiboon': 'gɛ̂ɛo', 'english': 'glass'},
             'length_note': 'Quick gliding vowel'
         },
         {
