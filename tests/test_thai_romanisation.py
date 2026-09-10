@@ -296,6 +296,50 @@ def test_words_awaiting_the_teacher_still_disagree(word):
     )
 
 
+# ── Aspiration ───────────────────────────────────────────────────────────
+#
+# This romanisation marks no aspiration: ข and ค are both k, ผ and พ are
+# both p, ถ ท ธ are all t. Writing kh, ph or th is RTGS leaking in.
+#
+# Never scanned across the whole corpus until the monk-lesson audit, which
+# is how three survived: sìk-khǎa-bòt, wí-gaan-lá-phôot and phʉ̂a. Each sat
+# in a different file, and none contains ng, so no existing check saw them.
+def teaching_paiboon():
+    """Readings this project wrote, without the imported dictionary.
+
+    The exclusion is the whole reason this check is possible: the Yaitron
+    corpus uses kh, ph and th throughout by design, so measuring it here
+    would bury three real faults under 312 false ones.
+    """
+    out = []
+    for module in (app, survival, thai_reading, thai_registers, register_levels):
+        for name in dir(module):
+            if name.isupper() and name not in IMPORTED_CORPORA:
+                walk_paiboon(getattr(module, name), f"{module.__name__}.{name}", out)
+    return out + JSON_PAIBOON
+
+
+TEACHING_PAIBOON = teaching_paiboon()
+
+
+def test_the_aspiration_walker_found_the_data():
+    """Guard on the guard: excluding one large structure by name is exactly
+    the sort of filter that can quietly exclude everything."""
+    assert len(TEACHING_PAIBOON) > 1000, (
+        f"only found {len(TEACHING_PAIBOON)} readings outside the dictionary")
+
+
+def test_no_reading_marks_aspiration():
+    """ข = k, พ = p, ถ = t. A reading with kh, ph or th in it is written in
+    RTGS, which spells three of the app's letters differently from the
+    Alphabet page the learner is being taught from."""
+    faults = [f"{where} → {reading}" for where, reading in TEACHING_PAIBOON
+              if re.search(r"(kh|ph|th)", reading)]
+    assert not faults, (
+        f"{len(faults)} reading(s) mark aspiration, which this system does not:\n  "
+        + "\n  ".join(faults[:20]))
+
+
 # ── The AI tutor's system prompt ─────────────────────────────────────────
 #
 # Errors here never appear on a page. They are instructions to the model, so
