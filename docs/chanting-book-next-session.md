@@ -67,7 +67,7 @@ Coverage and fidelity are finished; **quality is not**. What remains is the
 review pass described further down this file, and it has never been started:
 
 - **2,116 `‼ CHECK` comments**, each naming its photograph
-- **213 chants set `‼ COMMENTARY PENDING`** — stage 3 has started; see below
+- ~~288 chants awaiting commentary~~ — **STAGE 3 IS DONE**; see below
 - **275 of 305 chants `english_unverified`**
 - **105 page-level checks that live only in batch files** (pre-fix; see below)
 - the nine pages entered before this workflow existed and never checked against
@@ -75,13 +75,11 @@ review pass described further down this file, and it has never been started:
 
 Do that as ONE pass, not piecemeal — see the section on the review pass.
 
-## ✅ STAGE 3 HAS STARTED — 92 of 305 chants have commentary (2026-09-10)
+## ✅ STAGE 3 IS COMPLETE — all 305 chants have commentary (2026-09-10)
 
-The commentary pass is under way and is being done in batches of ten, in FILE
-order, straight down the book. **92 chants written up, 213 `‼ COMMENTARY
-PENDING` markers left.** Nothing else about the pass has changed: verses are
-never touched, and `source` is left `''` wherever a citation cannot be given
-honestly, which so far is nearly everywhere.
+**Every chant in the book now has its five commentary fields.** `grep -c
+"COMMENTARY PENDING" chanting.py` returns **0**. The pass ran in thirty
+batches, ten chants at a time, in file order.
 
 **Read the prose here, not in `chanting.py`:**
 
@@ -89,23 +87,42 @@ honestly, which so far is nearly everywhere.
 PYTHONIOENCODING=utf-8 DATABASE_URL="" python scripts/build_commentary_review.py
 ```
 
-writes `docs/chanting-commentary-review.md` — every chant's five commentary
-fields in BOOK order, plus the list still to write. It only reads chanting.py.
-Re-run it after every batch. About 30,000 words at 92 chants, so expect roughly
-100,000 when it is finished.
+writes `docs/chanting-commentary-review.md` — every chant's five fields in
+BOOK order. About 76,000 words. It only reads chanting.py, so it is safe to
+re-run any time.
 
-**The proof that runs after every batch**, and it is the reason this pass is
-safe to keep running:
+**What was proven at the end, not just per batch:**
 
-1. dump every chant dict before and after, strip the five commentary keys, and
-   the two dumps must be byte-identical
-2. `git diff` must show NO non-comment line removed from chanting.py
-3. no Lao codepoints, and every run of Thai in the new prose must trace back to
-   text already in the file
+1. `import chanting` clean; all 321 pages render 200; all 305 index cards show
+   their sections and are still in book order
+2. against the commit this session started from (`bb3bd3d`), **every
+   non-commentary field of every chant is identical** — checked by importing
+   both module versions and diffing the dicts with the five commentary keys
+   stripped
+3. zero Lao codepoints anywhere in the prose, and every run of Thai in it
+   traces back to text already in the file
+4. all five keys present on all 305, right types, no empty strings
 
-All three have caught real errors: three Thai words typed with wrong
-characters, two Lao characters inside a Pali citation, and a placeholder that
-broke the import outright.
+⚠️ **DO NOT use `git diff | grep '^-'` as the proof.** A large insertion makes
+git re-align a hunk and report untouched lines as removed; that produced a
+false alarm mid-pass. The module comparison above cannot have that failure.
+`scripts/` has no copy of it — it lives in the session scratchpad — so rewrite
+it if you need it again; it is twenty lines.
+
+**What is left in Stage 3's own territory:**
+
+- `source` is empty on 297 of 305. Only eight carry one, and only ONE was
+  attributed rather than copied: `parittakarana-patha`, which carries an
+  `‼ UNVERIFIED SOURCE` comment and was established by matching its Pali
+  against other chants in this file, not from memory. Everywhere else a
+  citation could not be given honestly, so the field was left empty. Filling
+  them needs the book's footnotes.
+- `buddhaudana-gatha` has a 36-word summary against the 30-word cap. It is one
+  of the seventeen written before this pass and was not touched.
+- 255 verses across 17 chants in the ordination section (pages 289–297) have
+  `…continues.` as their English. That is the convention — the English is
+  given once per printed unit — but a reader on those pages sees it repeated
+  down the column.
 
 ## ‼ THE YAMAKKAN PASS LEFT RESIDUE — 53 places, 15 words
 

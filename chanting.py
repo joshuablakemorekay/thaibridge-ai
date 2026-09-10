@@ -66562,12 +66562,35 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'bot-khat-adittapariyaya-suttam',
         'title_thai': 'บทขัด อาทิตตะปะริยายะสุตตัง',
         'title_pali': '',
         'title_roman': 'bòt-kàt aa-tít-dtà-bpà-rí-yaa-yá-sùt-dtaŋ',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The introductory verse to the Fire Sermon, on a discourse taught to men who had tended the fire."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Ādittapariyāya Sutta, introducing it."
+        ),
+
+        'background': [
+            "The book gives this printing no English title of its own, so the name used in the app is supplied.",
+
+            "The verse names the audience, and the detail is the whole point: those strivers ripe for awakening who had tended the fire. The thousand monks at Gayā had been fire-worshipping ascetics, and what they were taught was about burning.",
+        ],
+
+        'meaning': [
+            "The Buddha is described by method rather than by attainment: gone wholly to perfection in the means of taming those who can be led, whose word is never in vain, who instructs from direct knowledge.",
+
+            "Then the principle that explains the sermon's imagery — in accordance with what they had practised, training the people by Dhamma. Men who had spent their lives at a fire altar were taught in the language of fire.",
+
+            "The verse calls it a captivating discourse on burning, and then names what it is for: the means to the mark of suffering. A sermon chosen for one audience is offered to the reciters as a way into a general truth.",
+        ],
         'page_start': 124,
         'group': 'General chanting',
         'invitation': {
@@ -66670,12 +66693,35 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'adittapariyaya-suttam',
         'title_thai': 'อาทิตตะปะริยายะสุตตัง',
         'title_pali': '',
         'title_roman': 'Ādittapariyāyasuttaṃ',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Fire Sermon: everything is burning — the senses, their objects, the consciousness and the feeling that arise from them."
+        ),
+
+        'when_chanted': (
+            "Chanted after its introductory verse, and at merit-making fifty days after a death."
+        ),
+
+        'background': [
+            "The book gives this printing no English title of its own, so the name used in the app is supplied.",
+
+            "Spoken at Gayā to a thousand monks, and by tradition the third teaching given. The book's running order names it as the discourse for the fiftieth day after a death.",
+        ],
+
+        'meaning': [
+            "The claim is made at once and then unpacked exhaustively: all is burning. And what is the all that is burning? The eye is burning, forms are burning, eye-consciousness is burning, eye-contact is burning — and whatever feeling arises dependent on it.",
+
+            "Then the same for the ear, the nose, the tongue, the body and the mind. Six senses, each with five things burning, and nothing left over. It is the most systematic destruction of a comfortable position in the book.",
+
+            "What follows is not extinguishing the fire but turning away from it: seeing thus, the instructed noble disciple grows disenchanted with the eye, with forms, with eye-consciousness. And the closing line reports what happened while it was being spoken — the minds of the thousand were freed.",
+        ],
         'book_number': '27',
         'page_start': 124,
         'group': 'General chanting',
@@ -66868,12 +66914,35 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'bot-khat-satipatthana-patha',
         'title_thai': 'บทขัด สะติปัฏฐานะปาฐะ',
         'title_pali': '',
         'title_roman': 'bòt-kàt sà-dtì-bpàt-tǎan-ná-bpaa-tà',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The introductory verse to the passage on the foundations of mindfulness, calling it the one way."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Satipaṭṭhāna passage, introducing it."
+        ),
+
+        'background': [
+            "The book gives this printing no English title of its own, so the name used in the app is supplied.",
+
+            "The phrase the verse turns on is เอกายะนอ — the one way, or the only way — and it is repeated in the passage that follows and again at its close.",
+        ],
+
+        'meaning': [
+            "The purposes are listed exactly as the discourse lists them: for beings of defiled mind, for the purifying of the mind's defilements, for the wholly going beyond sorrow and lamentation, for the ending of pain and grief.",
+
+            "That list is not general. Each item names a specific thing the practice is supposed to end, and the verse gives them before naming the practice at all.",
+
+            "Only then the name — famous in this dispensation under the name of the foundations of mindfulness — and the handover. What is introduced is presented as a remedy identified by what it cures.",
+        ],
         'page_start': 126,
         'group': 'General chanting',
         'invitation': {
@@ -66968,12 +67037,35 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'satipatthana-patho',
         'title_thai': 'สะติปัฏฐานะปาโฐ',
         'title_pali': '',
         'title_roman': 'Satipaṭṭhānapāṭho',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The four foundations of mindfulness in brief: body, feelings, mind and mental objects, contemplated internally and externally."
+        ),
+
+        'when_chanted': (
+            "Chanted after its introductory verse, and at merit-making a hundred days after a death."
+        ),
+
+        'background': [
+            "The book gives this printing no English title of its own, so the name used in the app is supplied.",
+
+            "The short form. The book prints the full Mahāsatipaṭṭhāna a page later at two hundred and nine units; this gives the same structure in eight.",
+        ],
+
+        'meaning': [
+            "The frame is stated first and is the same for all four: dwelling contemplating the body in the body, ardent, clearly comprehending and mindful, having put away covetousness and grief for the world.",
+
+            "Then each of the four is asked after in turn, and each answer adds the same three dimensions — internally, or externally, or both. The practice is applied to oneself and to others by the same method.",
+
+            "It closes by repeating the claim it opened with: this is the one-way path. And then a line that puts it in company — by this path they crossed over before, they cross now, and they will cross. The practice is offered as the one everybody who has ever finished used.",
+        ],
         'book_number': '28',
         'page_start': 127,
         'group': 'General chanting',
@@ -67115,12 +67207,36 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         'id': 'mahasatipatthana-sutta-patho',
         'title_thai': 'มะหาสะติปัฏฐานะสุตตะปาโฐ',
         'title_pali': '',
         'title_roman': 'Mahāsatipaṭṭhānasuttapāṭho',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "The Great Discourse on the Foundations of Mindfulness in full: the one-way path set out at length, ending in a promise about seven days."
+        ),
+
+        'when_chanted': (
+            "Chanted where the full text is wanted; the longest single discourse in the book."
+        ),
+
+        'background': [
+            "The book gives this printing no English title of its own, so the name used in the app is supplied. The book prints its own reference.",
+
+            "At two hundred and nine units it runs to thirty-one printed pages, and it is the discourse the whole practice tradition of this book rests on.",
+        ],
+
+        'meaning': [
+            "It opens with the claim and the list of purposes: this is the one-way path for the purification of beings, for the surmounting of sorrow and lamentation, for the ending of pain and grief, for attaining the method, for realising Nibbāna.",
+
+            "Then the four foundations are worked through at length, and the refrain returns after every section — he dwells contemplating the nature of arising, or of passing away, or of both. The same observation is applied to breath, to postures, to the parts of the body, to feelings, to states of mind, and to the hindrances and the factors of awakening in turn.",
+
+            "The closing is the most concrete promise in the book, and it is graded. Whoever develops these four in this way for seven years may expect one of two fruits; then seven months; and at last seven days. A discourse of this length ends by saying that the shortest reasonable trial is a week.",
+        ],
         'book_number': '29',
         'page_start': 128,
         'group': 'General chanting',
@@ -70400,8 +70516,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0429.PNG]: ‼‼ TWO-COLUMN READING, PLEASE CONFIRM. The
         #   gutter was MEASURED before a word was read: a white corridor 220px
         #   wide running x 876-1095 through the whole gatha block, with ink
@@ -70426,6 +70540,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt tam-má-jàk-gàp-bpà-wát-dtà-ná-sùt-dtaŋ',
         'title_english': 'The Preliminary Chant to the Discourse on Setting the Wheel of Dhamma Rolling',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The preliminary chant to the first sermon, naming the two extremes, the middle way and the four truths."
+        ),
+
+        'when_chanted': (
+            "Chanted immediately before the Dhammacakkappavattana Sutta, introducing it."
+        ),
+
+        'background': [
+            "The introduction to the discourse the tradition counts as the first teaching. It summarises the contents rather than the occasion, which is unusual for these verses.",
+
+            "Its last line is a stage direction: let us now recite it, as it was rehearsed, in the manner of a prose exposition.",
+        ],
+
+        'meaning': [
+            "The summary is accurate and complete in five lines: the Wheel of Dhamma set rolling and unstoppable in the world, wherein both extremes are declared, and the middle way of practice, and the purified knowledge and vision of the four noble truths.",
+
+            "Calling the wheel unstoppable is a claim about what happened at Isipatana rather than about the text. Once set rolling it does not stop, and the verse states that before the discourse begins.",
+
+            "The closing instruction about manner is worth noticing. This discourse can be chanted in more than one way, and the verse specifies which — as prose exposition, as it was rehearsed. The introduction is doing an editor's job as well as a devotional one.",
+        ],
         'page_start': 159,
         'group': 'General chanting',
         'english_unverified': True,
@@ -70513,8 +70652,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0429.PNG]: TWO NUMBERED FOOTNOTES sit under a rule at
         #   the foot, and they are DIFFERENT KINDS. ‼ FOOTNOTE 1, keyed to a
         #   superscript after วิหะระติ in verse 1, is a canonical citation —
@@ -70549,6 +70686,32 @@ CHANTS = [
         'title_pali': 'Dhammacakkappavattanasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on Setting the Wheel of Dhamma Rolling',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "The first sermon: the two extremes, the middle way, the four noble truths in three phases, and Koṇḍañña's understanding."
+        ),
+
+        'when_chanted': (
+            "Chanted at birthday merit-making and wherever the first teaching is wanted; among the most chanted discourses in the tradition."
+        ),
+
+        'background': [
+            "The book prints its own reference. This is the discourse everything else in the collection refers back to, and the one the tradition dates its beginning from.",
+
+            "Its structure is unusually tight for a sutta: a rejection, a definition, a fourfold analysis worked through three times, and then a result.",
+        ],
+
+        'meaning': [
+            "It opens by clearing the ground. There are two extremes that should not be followed — the pursuit of sensual happiness, and the pursuit of self-mortification — and the middle way avoids both. The middle way is then defined, and it turns out to be the noble eightfold path already familiar from elsewhere in this book.",
+
+            "The four truths are then each taken through three phases: what the truth is, what it requires, and that it has been done. Suffering is to be understood, and has been understood; its origin is to be abandoned, and has been abandoned. Twelve moves in all, and the Buddha says his awakening was not claimed until all twelve were complete.",
+
+            "The end is narrative and is why this discourse is loved. Koṇḍañña understands, and the Blessed One exclaims twice — Koṇḍañña has indeed understood. And so he came to be called Aññā Koṇḍañña, Koṇḍañña Who Understood. A man is renamed for having followed an argument.",
+        ],
         'page_start': 159,
         'source_printed': 'วิ. มหา. 4/17-23',
         'group': 'General chanting',
@@ -71112,8 +71275,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0434.PNG]: ‼‼ THIS CHANT IS ALREADY IN THE APP AS bot-
         #   khat-chumnum-thewada FROM PAGE 77, and this is a SECOND, DIFFERENT
         #   PRINTING — entered as its own chant, per the precedent set by the
@@ -71147,6 +71308,31 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'bòt-kàt chum-num tee-wá-daa',
         'title_english': 'The Prefatory Verse for Assembling the Devas',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The verse assembling the devas at the opening of the Seven Tamnan."
+        ),
+
+        'when_chanted': (
+            "Chanted at the very start of a Seven Tamnan service, before the salutation."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections, and the book prints its opening block separately so that all three of its running orders can refer back to it.",
+
+            "The same function as the assembling verse that opens the Twelve Tamnan, printed again here because this collection is chanted on its own.",
+        ],
+
+        'meaning': [
+            "It is addressed to two audiences at once. The monks are told how to chant — suffusing loving-kindness, with undistracted minds — and the devas are told to come and listen.",
+
+            "The invitation is cast as widely as the cosmology allows: from all around the world-systems, in the heavens of sense-desire and of form, on mountain peaks and crags, in mansions in the sky.",
+
+            "What the devas are asked for is worth noticing, because it is not protection and not favour. They are asked to attend, and the summons — this is the time to hear the Dhamma — is repeated.",
+        ],
         'page_start': 164,
         'group': 'General chanting',
         'english_unverified': True,
@@ -71253,8 +71439,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0434.PNG]: ALREADY IN THE APP as pubbabhaga-namakara-
         #   sipsong-tamnan from page 77. Entered as a SECOND chant, not a
         #   merge and not a repeat stub, per the precedent that a chant the
@@ -71264,6 +71448,31 @@ CHANTS = [
         'title_pali': 'Pubbabhāganamakārapāṭho',
         'title_roman': '',
         'title_english': 'The Preliminary Salutation',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The homage to the Blessed One, chanted three times, opening the Seven Tamnan."
+        ),
+
+        'when_chanted': (
+            "Chanted three times at the opening of a Seven Tamnan service, after the devas have been assembled."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections, and the book prints its opening block separately so that all three of its running orders can refer back to it.",
+
+            "Yet another full printing of this single line. The book sets it out in every collection that uses it rather than cross-referencing, because each is chanted from its own pages.",
+        ],
+
+        'meaning': [
+            "The line contains no request and no doctrine: homage, and then the Blessed One under three epithets — the fortunate, the worthy, the perfectly enlightened by himself.",
+
+            "Its position here is what gives it its particular character. The devas have already been called, so the homage is the first thing said in their presence rather than the first thing said at all.",
+
+            "Three times, marking that something has been formally begun rather than merely started.",
+        ],
         'page_start': 164,
         'group': 'General chanting',
         'english_unverified': True,
@@ -71310,8 +71519,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0434.PNG]: ‼ THE BOOK SETS THE REFUGES AS RUN-ON PROSE
         #   HERE, three to an indented paragraph, not as nine separate lines.
         #   Recorded as six verses, one per refuge sentence, which is the unit
@@ -71328,6 +71535,31 @@ CHANTS = [
         'title_pali': 'Saraṇagamanapāṭho',
         'title_roman': '',
         'title_english': 'The Going for Refuge',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The going for refuge at the opening of the Seven Tamnan, each of the three said three times."
+        ),
+
+        'when_chanted': (
+            "Chanted after the salutation at the opening of a Seven Tamnan service."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections, and the book prints its opening block separately so that all three of its running orders can refer back to it.",
+
+            "Nine lines, one statement to a line, as in the Twelve Tamnan printing. Other printings in this book group the three and mark the repetition at the end of each round.",
+        ],
+
+        'meaning': [
+            "I go to the Buddha for refuge; to the Dhamma; to the Saṅgha. Then the same three a second time, and a third.",
+
+            "Setting each on its own line changes the pace rather than the sense, and in a service meant to run for an hour or more that slowness is not incidental.",
+
+            "Why refuge opens a protective chanting is worth asking, because everything that follows will be asking for safety. The tradition is careful about where safety is sought from, and states the answer before making any of the requests.",
+        ],
         'page_start': 164,
         'layout': 'prose',
         'group': 'General chanting',
@@ -71428,8 +71660,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0435.PNG]: ‼ ALREADY IN THE APP AS namakarasiddhi-gatha
         #   FROM PAGE 78, with 24 verses. Entered here as a SECOND chant per
         #   the standing precedent that a chant the book prints twice appears
@@ -71456,6 +71686,31 @@ CHANTS = [
         'title_pali': 'Namakārasiddhigāthā',
         'title_roman': '',
         'title_english': 'The Verses on the Success of Homage',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Verses saluting the Buddha, the Dhamma and the Sangha in turn, each closing in a wish for victory and the ending of danger."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan after the opening homages."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "The title states the premise: the success, or accomplishment, of paying homage. The claim is that the act of salutation itself brings something about.",
+        ],
+
+        'meaning': [
+            "Three movements, one to each of the Three Jewels, each built the same way — a description, the salutation, and then the wish.",
+
+            "The description of the Buddha is unusually active for a verse of homage: he who has vision, with the stain of delusion removed, awakened by himself, well-gone, released. Then what he did with it, which is to free others.",
+
+            "Each movement closes on the same formula, and the pronoun is the point: may victory and success be yours, and may all dangers come to nothing. The blessing is aimed at the hearer rather than the reciter, which is what makes this a chant said for other people.",
+        ],
         'page_start': 165,
         'group': 'General chanting',
         'english_unverified': True,
@@ -71681,8 +71936,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0436.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. The
         #   gutter was MEASURED before a word was read: a white corridor 202px
         #   wide at x 922-1123, with the left column at 451-922 and the right
@@ -71710,6 +71963,31 @@ CHANTS = [
         'title_pali': 'Namokāraaṭṭhakagāthā',
         'title_roman': '',
         'title_english': 'The Eight Verses of Homage',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Eight lines of homage, each opening with namo, closing in a wish for well-being and strength in the undertaking."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan among the opening homages."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "Every one of the eight lines begins with the word homage, and the chant is named for that. It is the most compressed of the opening verses.",
+        ],
+
+        'meaning': [
+            "The first three are conventional: homage to the Worthy One, the Great Seer; to the supreme Dhamma, well proclaimed; to the great Sangha, pure in virtue and view.",
+
+            "Then it turns to the utterance itself, saluting the Triple Gem as a form of words rather than only as what the words name — which is the premise a protective chanting rests on, stated openly.",
+
+            "The last line asks something narrower than general safety: by the force of this homage, may I be strong in what I undertake. Not protection but capacity, for the thing being done now.",
+        ],
         'page_start': 166,
         'group': 'General chanting',
         'english_unverified': True,
@@ -71795,8 +72073,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0436.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. The
         #   gutter was MEASURED separately from the chant above it: a white
         #   corridor 230px wide at x 889-1118. Every row read ACROSS. First
@@ -71826,6 +72102,32 @@ CHANTS = [
         'title_pali': 'Maṅgalasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on Blessings',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "The Discourse on Blessings in the Seven Tamnan printing: a deity's question, answered with a list from good company to an unshaken mind."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan; among the best known of all Buddhist texts."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again. This printing opens at the deity's question rather than at the narrative frame.",
+
+            "The book prints its own reference. Dropping the frame is the commonest of the Seven Tamnan's abbreviations — the setting goes and the verse begins.",
+        ],
+
+        'meaning': [
+            "The question repeats the failure its prefatory verse describes: many devas and humans have pondered on blessings, longing for well-being. Tell us the highest blessing.",
+
+            "The answer is a list and its order is the argument. It begins where anybody can begin — not keeping company with fools, keeping company with the wise, honouring those worthy of honour — and moves out through learning, craft, discipline, supporting one's parents, giving and blameless action.",
+
+            "The closing verse is why it is chanted for protection: having done such things, undefeated everywhere, they go everywhere in safety. Safety is presented as the consequence of conduct rather than of the chanting, and the text is nonetheless chanted for safety.",
+        ],
         'page_start': 166,
         'group': 'General chanting',
         'english_unverified': True,
@@ -72074,8 +72376,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0437.PNG]: ‼ SINGLE COLUMN, AND THIS WAS MEASURED NOT
         #   ASSUMED. The chant directly above it on the same sheet is set in
         #   two columns, so the ink was re-profiled for this block: the only
@@ -72097,6 +72397,31 @@ CHANTS = [
         'title_pali': 'Ratanasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on the Jewels',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Discourse on the Jewels in the Seven Tamnan printing, each verse closing on a truth and a wish for well-being."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan; among the most used of all protective texts."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "The clearest example in the book of how a paritta is thought to work. Each verse states something held to be true, then asks for well-being on the strength of it having been said.",
+        ],
+
+        'meaning': [
+            "The opening is an address rather than a claim: whatever beings are gathered here, whether of the earth or of the sky. The same move that opened the service is made again inside the text.",
+
+            "Then the long middle, where each verse builds to the same close. Something is asserted about the Buddha, or the Dhamma, or the Sangha; it is named a jewel; and then, by this truth, may there be well-being. The pattern repeats until it becomes the sound of the thing rather than an argument in it.",
+
+            "It ends where it began, with the beings it summoned, having spent its length giving them something true to hear.",
+        ],
         'page_start': 167,
         'group': 'General chanting',
         'english_unverified': True,
@@ -72523,8 +72848,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0439.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. The
         #   gutter was MEASURED: a white corridor 133px wide at x 857-989.
         #   Every row read ACROSS. First pairing: เมตตัญจะ สัพพะโลกัส๎มิง +
@@ -72553,6 +72876,31 @@ CHANTS = [
         'title_pali': 'Karaṇīyamettasuttaṃ',
         'title_roman': '',
         'title_english': 'The Discourse on Loving-Kindness',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Discourse on Loving-Kindness in the Seven Tamnan printing, beginning at the extension to the whole world."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan, and widely used on its own as a meditation text."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "This printing begins more than halfway through the full discourse, at the verse about extending loving-kindness to the whole world. The list of qualifications at the front is left out.",
+        ],
+
+        'meaning': [
+            "What is kept is the practice rather than the preparation: let him cultivate boundless loving-kindness towards the whole world, above, below and across, unobstructed, without hatred, without enmity.",
+
+            "The three directions and the three negatives between them close every gap. Nothing is above it, below it or outside it, and no exception is allowed for people one has reason to dislike.",
+
+            "The close is unchanged from the full version, and it is the line that shows what the chant is finally about: not falling into views, virtuous and endowed with vision, having removed greed for sensual pleasures, he comes no more to any womb. A text chanted to make people feel safe ends by describing the end of rebirth.",
+        ],
         'page_start': 169,
         'group': 'General chanting',
         'english_unverified': True,
@@ -72620,8 +72968,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0439.PNG]: ‼ ABRIDGED — IT OPENS AT อัปปะมาโณ พุทโธ.
         #   The page-87 printing, khandha-parittam-catuttham, begins with the
         #   eight-line วิรูปักเขหิ เม เมตตัง gatha and only reaches อัปปะมาโณ
@@ -72637,6 +72983,31 @@ CHANTS = [
         'title_pali': 'Khandhaparittaṃ',
         'title_roman': '',
         'title_english': 'The Aggregates Protection',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Aggregates Protection in the Seven Tamnan printing, opening on the measurelessness of the Three Jewels."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan, and used as a protection against snakes and venomous creatures."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "This printing opens differently from the page-87 one. Where that began by extending loving-kindness to the snake families by name, this begins with a statement about measure.",
+        ],
+
+        'meaning': [
+            "Measureless is the Buddha, measureless is the Dhamma, measureless is the Sangha — and set against them, the creeping things are measurable. The protection is argued from a difference of scale before any kindness is offered.",
+
+            "The extension of loving-kindness follows, and its method is worth stating plainly because it is not what a protective charm usually does. Nothing is commanded and nothing repelled. Metta is declared, and the safety is said to follow from the declaring.",
+
+            "It closes as the fuller printing does, with homage to the Blessed One and to the seven Perfectly Self-Awakened Ones. Having spent itself on snakes, it ends where every chant in this collection ends.",
+        ],
         'page_start': 169,
         'layout': 'prose',
         'group': 'General chanting',
@@ -72753,8 +73124,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0439.PNG]: ‼ THE PRINTED TITLE SAYS SO ITSELF —
         #   ธะชัคคะปะริตตัง (แบบย่อ), abridged form, with the bracket printed.
         #   Reproduced in title_thai exactly. The page-90 printing is titled
@@ -72782,6 +73151,32 @@ CHANTS = [
         'title_pali': '',
         'title_roman': 'tá-chák-ká-bpà-rít-dtaŋ (bɛ̀ɛp yɔ̂ɔ)',
         'title_english': 'The Banner Crest Protection (abridged form)',
+        # Left empty on purpose: the book prints its own reference and it is
+        # kept verbatim in source_printed. Nothing has been attributed on top
+        # of it.
+        'source': '',
+
+        'summary': (
+            "The Banner Crest Protection abridged: the Buddha's instruction to recollect him, the Dhamma or the Sangha when afraid."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan, and wherever fear needs answering."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again. The book marks this printing as the abridged form in its own title.",
+
+            "The book prints its own reference. What the abridgement drops is the story of Sakka and the banner; what it keeps is the instruction that story was told to correct.",
+        ],
+
+        'meaning': [
+            "It opens on the recollection itself — such indeed is the Blessed One: worthy, perfectly self-awakened, accomplished in knowledge and conduct, well-gone — the same formula recited every evening.",
+
+            "Then the promise attached to it, stated directly: when you recollect me, whatever fear or terror or standing of the hair may arise will be abandoned. The third item is the detail that makes it credible. The sutta is talking about the body's response, not about being brave.",
+
+            "The same is then said of the Dhamma and of the Sangha, and the chant ends by repeating the promise in the negative: no fear, no terror, no standing of the hair will there be.",
+        ],
         'page_start': 169,
         'layout': 'prose',
         'group': 'General chanting',
@@ -72959,8 +73354,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0440.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. ⚠️ THE
         #   GUTTER NEEDED MEASURING TWICE. A first profile over y 1800-2480
         #   found only a 59px gap at x 1057-1115 and no real corridor, because
@@ -72988,6 +73381,31 @@ CHANTS = [
         'title_pali': 'Āṭānāṭiyaparittaṃ',
         'title_roman': '',
         'title_english': 'The Āṭānāṭiya Protection',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Āṭānāṭiya Protection in the Seven Tamnan printing: homage to the seven Buddhas by name."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan, where protection from unseen harm is wanted."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "Thirteen units against the ninety of the fuller printing. What survives the cut is the naming, which is the method of the whole chant.",
+        ],
+
+        'meaning': [
+            "The seven Buddhas of the past are named in order, each with an epithet of his own: Vipassī possessed of vision and glory; Sikhī compassionate towards all beings; and so on to Gotama.",
+
+            "The epithets are short and none is interchangeable. The chant takes care to distinguish beings most people will never think about again, which is the point of a text that establishes authority by reciting who holds it.",
+
+            "It closes on the present teacher: accomplished in knowledge and conduct, we revere the Buddha Gotama. Six predecessors named, and then the one whose dispensation the reciters are actually inside.",
+        ],
         'page_start': 170,
         'group': 'General chanting',
         'english_unverified': True,
@@ -73126,8 +73544,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0441.PNG]: ‼ PRINTED ONCE WHERE THE PAGE-96 PRINTING
         #   PRINTS IT THREE TIMES. angulimala-parittam-navamam has nine
         #   verses, being this same three-clause sentence repeated three times
@@ -73143,6 +73559,31 @@ CHANTS = [
         'title_pali': 'Aṅgulimālaparittaṃ',
         'title_roman': '',
         'title_english': 'The Aṅgulimāla Protection',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "Aṅgulimāla's act of truth in the Seven Tamnan printing, said once rather than three times."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan, and for a woman in labour."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "Three units, where the page-96 printing repeats the same three sentences three times over. This is the shortest chant in the collection.",
+        ],
+
+        'meaning': [
+            "The truth stated is bounded with great care: sister, since I was born with the noble birth, I am not aware of having intentionally deprived any living being of life.",
+
+            "Every clause is doing work. The noble birth means his ordination, not his birth from a mother — and the qualification is what makes the statement true, because the man saying it had been a murderer. He is not claiming never to have killed. He is dating the claim.",
+
+            "Then a second hedge: I am not aware of. Not I have not. The tradition holds that this scrupulously limited sentence is what has the power in it, and the request follows — by this truth, may you be well, and may your child be well.",
+        ],
         'page_start': 171,
         'layout': 'prose',
         'group': 'General chanting',
@@ -73183,8 +73624,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0441.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter
         #   MEASURED at 244px, x 807-1050, over this block alone — a different
         #   corridor from the Atanatiya's on the same sheet. Every row read
@@ -73206,6 +73645,31 @@ CHANTS = [
         'title_pali': 'Bojjhaṅgaparittaṃ',
         'title_roman': '',
         'title_english': 'The Factors of Awakening Protection',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Factors of Awakening Protection in the Seven Tamnan printing, with the three recoveries it reports."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan, and for the sick."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "The seven factors have already appeared in this book as three discourses chanted at sickbeds. Here they are compressed into verse and made a paritta.",
+        ],
+
+        'meaning': [
+            "It begins by naming the seven in a single sentence: mindfulness, investigation of states, energy, rapture, tranquillity, concentration and equanimity — rightly proclaimed by the Sage, developed and made much of.",
+
+            "Then the refrain that makes it a paritta rather than a summary: by this utterance of truth, may you always be well. It returns after each movement, and the protection is grounded on the seven being genuinely what the verse says they are.",
+
+            "The three recoveries are given together, which the original discourses never do — Mahākassapa, Mahāmoggallāna and the Buddha himself, all reported in a few lines as having risen from illness on hearing these seven named.",
+        ],
         'page_start': 171,
         'group': 'General chanting',
         'english_unverified': True,
@@ -73364,8 +73828,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0442.PNG]: ‼ THREE STANZAS DIFFERING IN ONE WORD EACH —
         #   พุทธานุภาเวนะ, ธัมมานุภาเวนะ, สังฆานุภาเวนะ at verses 4, 8 and 12,
         #   with the three preceding lines identical each time. All twelve
@@ -73388,6 +73850,31 @@ CHANTS = [
         'title_pali': 'Abhayaparittaṃ',
         'title_roman': '',
         'title_english': 'The Fearlessness Protection',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Fearlessness Protection in the Seven Tamnan printing: that ill omens and bad dreams come to nothing."
+        ),
+
+        'when_chanted': (
+            "Chanted in the Seven Tamnan, and for somebody troubled by omens or bad dreams."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "Twelve lines, which are four lines said three times over, changing only the last word — by the power of the Buddha, then of the Dhamma, then of the Sangha.",
+        ],
+
+        'meaning': [
+            "The four things named describe one particular kind of distress: whatever ill omen or inauspicious thing there is, whatever unpleasant cry of a bird, an evil planet, an unwelcome bad dream.",
+
+            "None of them is a real danger. They are signs — a bird calling at the wrong moment, a dream that will not leave — and what they do is frighten. The chant is aimed at the fear rather than at anything the fear is about.",
+
+            "Which is why the request is worded as it is: may they come to nothing. Not may they be false, and not may they not happen. The omens are not argued with; they are asked to lose their force, which is a more exact description of what actually helps.",
+        ],
         'page_start': 172,
         'group': 'General chanting',
         'english_unverified': True,
@@ -73499,8 +73986,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0442.PNG]: ‼‼ THE PRINTED TITLE IS IDENTICAL TO AN
         #   ENTRY ALREADY IN THE APP. devata-uyyojana-gatha at page 98 carries
         #   exactly เทวะตาอุยโยชะนะคาถา, with the same eight verses. Every
@@ -73520,6 +74005,31 @@ CHANTS = [
         'title_pali': 'Devatāuyyojanagāthā',
         'title_roman': '',
         'title_english': 'The Verses for Dismissing the Devas',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The verses dismissing the devas at the close of the Seven Tamnan, ending by binding a protection on every side."
+        ),
+
+        'when_chanted': (
+            "Chanted at the very end of a Seven Tamnan service."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "The service opened by calling the devas of every world-system. This is the other half of that: a gathering formally convened has to be formally closed.",
+        ],
+
+        'meaning': [
+            "It opens by wishing well to everyone rather than to the guests: may those who have come to suffering be free of suffering, those who have come to fear be free of fear, those who have come to sorrow be free of sorrow — may all living beings be so.",
+
+            "Then the merit of the service is handed over to the devas, and they are wished a practice of their own on the way out. They are not merely thanked and dismissed.",
+
+            "The last line is what this printing adds and it is the strongest sentence in the chant: by the might of the arahants, I bind a protection on every side. The service ends by describing what the whole of it has built.",
+        ],
         'page_start': 172,
         'group': 'General chanting',
         'english_unverified': True,
@@ -73599,8 +74109,6 @@ CHANTS = [
         ],
     },
     {
-        # ‼ COMMENTARY PENDING: set DATA-ONLY. background, meaning, summary,
-        #   when_chanted and source still to be written. Verses are complete.
         # ‼ CHECK [IMG_0442.PNG]: ‼ TWO-COLUMN READING, PLEASE CONFIRM. Gutter
         #   MEASURED at 299px, x 843-1141 — a THIRD distinct corridor on this
         #   one sheet, after the Abhaya's none and the Devatā's 958-1149.
@@ -73611,6 +74119,31 @@ CHANTS = [
         'title_pali': 'Jayaparittaṃ',
         'title_roman': '',
         'title_english': 'The Victory Protection',
+        # Left empty on purpose: the book prints no attribution for this
+        # chant and none has been supplied from memory.
+        'source': '',
+
+        'summary': (
+            "The Victory Protection closing the Seven Tamnan, turning the Buddha's victory into a blessing spoken over the hearer."
+        ),
+
+        'when_chanted': (
+            "Chanted at the close of the Seven Tamnan, and at ceremonies where a blessing is given."
+        ),
+
+        'background': [
+            "The Seven Tamnan is the shorter of the two great paritta collections. Its texts are the same as those of the Twelve Tamnan; what differs is which are included and how far each is cut, and the book's three running orders shorten them further again.",
+
+            "The last and longest of the Seven Tamnan parittas at fifty-one units. It gathers up the closing material of the whole collection, which is why a reader keeps meeting familiar lines.",
+        ],
+
+        'meaning': [
+            "The blessing works by likeness. The Protector of great compassion, having fulfilled all the perfections, attained the highest awakening — by the speaking of this truth, may the blessing of victory be yours. Nothing is said to pass from him to the hearer; the hearer is invited to stand in the same relation.",
+
+            "Then the middle, which relocates good fortune from the calendar to conduct: a good star, a good dawn, a good moment — and auspicious the act of body, of speech, of mind. The good day is made rather than found.",
+
+            "And the closing, which is where the whole collection ends: by the power of the paritta, may their misfortunes be destroyed. After an hour or more of chanting, the last thing said is a plain request on behalf of the people in the room — which is what they came for.",
+        ],
         'page_start': 172,
         'group': 'General chanting',
         'english_unverified': True,
