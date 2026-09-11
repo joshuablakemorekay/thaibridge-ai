@@ -3294,3 +3294,58 @@ residue of fifteen words in fifty-three places.
 `prompts/chanting-book-batch/prompt.md`, `docs/chanting-commentary-review.md`
 (all 305 in book order, for reading), `docs/chanting-book-next-session.md`,
 `scripts/check_commentary.py`, `tests/test_check_commentary.py`.
+
+
+## 11 September 2026 — The database knew who had paid, but not what
+
+**Type:** Feature
+
+> We built and intergrated the neon database, right? So how can we build and
+> intergrate the Storage system as to keep track of all the users and all
+> payments?
+
+The users were already there — every account is a row, and the Stripe webhook
+writes tier, status and period end onto it. What that row could never say was
+the *history*: a renewal overwrote the date, a cancellation wiped the tier, and
+a dāna gift never touched the database at all — it went to the logs.
+
+**How we did it.** One new table, `payments`, written by the same five handlers
+that already grant the access (Stripe checkout, add-on, invoice, dāna, PayPal).
+The design question was duplicates: the webhook and the success redirect both
+sync the same Checkout Session, and Stripe re-sends events it thinks were
+missed. So the provider's own reference is `UNIQUE`, and whichever path arrives
+second finds the row instead of making another. Stripe also fires *two* events
+for the first payment of a plan — the session and its first invoice — so the
+first invoice is recognised and skipped. Fourteen tests, one of which found
+that the "does it exist already?" query sat outside the `try`, where a
+database hiccup would have 500'd a paid customer's webhook.
+
+> If you mean we are building the storage system, then Yes, build it
+
+**What I learned:** "storage" was already half-built; the missing piece wasn't
+a place to put users, it was a place to put *time*.
+
+**Engineering Contribution**
+
+- *Decisions made:* Dedupe on the provider's reference, not on Stripe's event
+  id — the redirect path has no event id, and both paths must agree. Skip the
+  `subscription_create` invoice rather than skip the Checkout Session, because
+  the session is the only record the add-on and dāna paths have. Rejected a
+  `user.payments` relationship: nothing reads it yet. Chose to update
+  `docs/DATABASE_RUNBOOK.md` in the same commit — its own last section says an
+  unmentioned table means the document is wrong, and its delete-a-user recipe
+  would now fail on the new foreign key.
+- *Improvements made to generated code:* Moved the existence check inside the
+  `try` after a test proved a raised query would fail the webhook. Replaced
+  `float("9.99") * 100` with `Decimal` in the PayPal amount parser — the
+  `/dana` route already had that rule, and money should follow it everywhere.
+  Tests 1,513 → 1,514.
+- *Roughly how much was accepted as-is vs engineered on:* Most of the table
+  and recorder went in as drafted. My part was the question that named the
+  gap, the yes, and picking the two engineering-pass items from a shortlist
+  of three. This entry is under the 40% quote floor because there were only
+  two sentences of mine to quote; recorded as such rather than padded.
+
+**References / Conversations**
+`tests/test_payments.py`, `docs/DATABASE_RUNBOOK.md` ("What has come in, per
+month"), commit `919e58f`.

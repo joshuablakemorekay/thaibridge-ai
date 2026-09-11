@@ -92,6 +92,41 @@ GROUP BY 1, 2
 ORDER BY 1 DESC;
 ```
 
+**What has come in, per month**
+
+```sql
+SELECT to_char(created_at, 'YYYY-MM')          AS month,
+       kind,
+       count(*)                                AS payments,
+       round(sum(amount_pence) / 100.0, 2)     AS gbp
+FROM payments
+GROUP BY 1, 2
+ORDER BY 1 DESC, 2;
+```
+
+`kind` is one of `subscription` (first payment of a plan), `renewal` (each one
+after), `addon` (the Instant Access Pass) or `dana` (a gift that grants
+nothing). The amount is whole pence, so the division happens in the query.
+`amount_pence` can be NULL when the provider did not say — the row still
+counts as a payment, it just cannot be summed.
+
+This table is a **mirror**. Stripe and PayPal remain the accounting record;
+this is what the app can see without logging into either. It started empty on
+11 September 2026 — payments before that exist only in Stripe.
+
+**What one person has paid**
+
+```sql
+SELECT p.created_at, p.kind, p.tier, p.amount_pence, p.provider, p.provider_ref
+FROM payments p
+JOIN users u ON u.id = p.user_id
+WHERE u.username = 'someone'
+ORDER BY p.created_at DESC;
+```
+
+`user_id` is NULL for a dāna gift from someone with no account, so those rows
+will never appear here — use the monthly query for the full picture.
+
 **What one person has been doing**
 
 ```sql
@@ -124,21 +159,28 @@ DELETE  FROM users WHERE username = 'testaccount';    -- then delete it
 If the `SELECT` returns forty rows when you expected one, you have just saved
 yourself. This costs three seconds and is the single most useful habit here.
 
-**Deleting a user who has AI usage rows** — remove the usage first, or the
-foreign key will refuse:
+**Deleting a user who has AI usage or payment rows** — remove those first, or
+the foreign keys will refuse:
 
 ```sql
+DELETE FROM payments WHERE user_id = (SELECT id FROM users WHERE username = 'x');
 DELETE FROM ai_usage WHERE user_id = (SELECT id FROM users WHERE username = 'x');
 DELETE FROM users    WHERE username = 'x';
 ```
 
-**Starting genuinely fresh** (empties both tables and restarts ids at 1):
+Think twice before the first line: a payment row is a record of real money.
+Deleting a test account is fine; deleting a paying customer's history is not
+something to do to make a foreign key stop complaining.
+
+**Starting genuinely fresh** (empties all three tables and restarts ids at 1):
 
 ```sql
+DELETE FROM payments;
 DELETE FROM ai_usage;
 DELETE FROM users;
 ALTER SEQUENCE users_id_seq    RESTART WITH 1;
 ALTER SEQUENCE ai_usage_id_seq RESTART WITH 1;
+ALTER SEQUENCE payments_id_seq RESTART WITH 1;
 ```
 
 ---
@@ -228,5 +270,6 @@ If that returns tables or columns this document does not mention, **this documen
 is out of date and the database is right.** Update it in the same commit as
 whatever changed.
 
-At the time of writing there are two tables: `users` (accounts, subscription
-state, and a `progress` JSON column) and `ai_usage` (one row per AI request).
+At the time of writing there are three tables: `users` (accounts, subscription
+state, and a `progress` JSON column), `ai_usage` (one row per AI request) and
+`payments` (one row per time money moved, unique on the provider's reference).
