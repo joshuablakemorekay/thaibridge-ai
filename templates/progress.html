@@ -105,6 +105,35 @@
         </div>
     </div>
     
+    {# Receipts: only drawn when there is something to show. A free learner
+       with no history gets no empty table asking to be filled. #}
+    {% if receipts %}
+    <div class="receipts-section">
+        <h2>🧾 Receipts</h2>
+        <div class="receipts-scroll">
+        <table class="receipts-table">
+            <thead>
+                <tr><th scope="col">Date</th><th scope="col">What</th><th scope="col">Amount</th><th scope="col">Reference</th></tr>
+            </thead>
+            <tbody>
+            {% for r in receipts %}
+                <tr>
+                    <td>{{ r.created_at.strftime('%d %b %Y') }}</td>
+                    <td>{{ r.label }}</td>
+                    <td>{{ r.amount_display or '—' }}</td>
+                    <td class="receipts-ref">{{ r.provider_ref }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        </div>
+        <p class="receipts-note">
+            Quote the reference if you ever need to ask about a payment.
+            Payments made before September 2026 aren't listed here — they're safe with Stripe or PayPal, just not on this page.
+        </p>
+    </div>
+    {% endif %}
+
     <!-- Achievements -->
     <div class="achievements-section">
         <h2>🏆 Achievements</h2>
@@ -296,6 +325,30 @@
         margin: 0;
     }
     
+    .receipts-section {
+        background: white;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        border-left: 4px solid var(--royal-gold);
+    }
+    .receipts-scroll { overflow-x: auto; }
+    .receipts-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.95rem;
+    }
+    .receipts-table th, .receipts-table td {
+        text-align: left;
+        padding: 0.6rem 0.75rem;
+        border-bottom: 1px solid #eee;
+        white-space: nowrap;
+    }
+    .receipts-table th { color: var(--royal-purple); }
+    .receipts-ref { font-family: monospace; font-size: 0.85rem; color: #666; }
+    .receipts-note { margin: 1rem 0 0; font-size: 0.9rem; color: #666; line-height: 1.5; }
+
     .achievements-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

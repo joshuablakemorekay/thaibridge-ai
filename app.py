@@ -349,6 +349,28 @@ class Payment(db.Model):
     # it, 'addon' the Instant Access Pass, 'dana' a gift that grants nothing.
     KINDS = ('subscription', 'renewal', 'addon', 'dana')
 
+    @property
+    def label(self):
+        """What the receipt calls this — the plan's public name, not our kind code."""
+        tier_name = SUBSCRIPTION_TIERS.get(self.tier, {}).get('name', self.tier or '')
+        return {
+            'subscription': f"{tier_name} — new subscription",
+            'renewal':      f"{tier_name} — renewal",
+            'addon':        INSTANT_ACCESS_ADDON['name'],
+            'dana':         'Dāna gift',
+        }.get(self.kind, self.kind)
+
+    @property
+    def amount_display(self):
+        """'£9.99', or None when the provider never told us the figure. The
+        symbol is looked up rather than assumed: PayPal can settle in other
+        currencies, and '£' on a dollar amount is a wrong receipt."""
+        if self.amount_pence is None:
+            return None
+        symbol = {'gbp': '£', 'usd': '$', 'eur': '€'}.get(
+            self.currency, f"{(self.currency or '').upper()} ")
+        return f"{symbol}{self.amount_pence / 100:.2f}"
+
 
 def _ensure_user_columns():
     """create_all() adds new TABLES but never new COLUMNS to a table that already
@@ -7703,8 +7725,16 @@ def progress_dashboard():
         else:
             locked_sections.append(section_info)
     
+    # Receipts come from the payments table, so only an account can have any —
+    # a cookie-only visitor has never been through Checkout with a user_id.
+    receipts = []
+    if current_user.is_authenticated:
+        receipts = (Payment.query.filter_by(user_id=current_user.id)
+                    .order_by(Payment.created_at.desc()).all())
+
     return render_template('progress.html',
                          user=user,
+                         receipts=receipts,
                          next_level_xp=next_level_xp,
                          progress_to_next=progress_to_next,
                          available_sections=available_sections,

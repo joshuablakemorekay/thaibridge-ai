@@ -252,3 +252,75 @@ def test_paypal_amount_goes_through_decimal_not_float():
     exact = {"purchase_units": [{"payments": {"captures": [
         {"amount": {"value": "0.29", "currency_code": "GBP"}}]}}]}
     assert A._paypal_captured_amount(exact)["amount_pence"] == 29
+
+
+# ---------------------------------------------------------------------------
+# The receipts view on /progress
+# ---------------------------------------------------------------------------
+
+PASSWORD = "ReceiptPass123"
+
+
+def signed_in(user_id):
+    """A client logged in as the given user row, via the real /login route."""
+    with app.app_context():
+        u = db.session.get(User, user_id)
+        u.set_password(PASSWORD)
+        db.session.commit()
+        identifier = u.username
+    c = app.test_client()
+    r = c.post("/login", json={"identifier": identifier, "password": PASSWORD})
+    assert r.status_code == 200, r.get_data(as_text=True)
+    return c
+
+
+def add_payment(**fields):
+    with app.app_context():
+        db.session.add(Payment(provider="stripe", **fields))
+        db.session.commit()
+
+
+def test_a_learner_sees_their_own_receipts(user):
+    add_payment(provider_ref="cs_r1", kind="subscription", tier="pro",
+                amount_pence=999, currency="gbp", user_id=user["id"])
+    add_payment(provider_ref="cs_r2", kind="addon",
+                amount_pence=1499, currency="gbp", user_id=user["id"])
+    body = signed_in(user["id"]).get("/progress").get_data(as_text=True)
+    assert "Receipts" in body
+    assert "Thai Master (Pro) — new subscription" in body
+    assert "Instant Access Pass" in body
+    assert "£9.99" in body and "£14.99" in body
+    assert "cs_r1" in body and "cs_r2" in body
+
+
+def test_someone_elses_payments_never_appear(user):
+    add_payment(provider_ref="cs_other", kind="dana", amount_pence=500,
+                currency="gbp", user_id=None)
+    body = signed_in(user["id"]).get("/progress").get_data(as_text=True)
+    assert "cs_other" not in body
+
+
+def test_no_payments_means_no_receipts_section(user):
+    body = signed_in(user["id"]).get("/progress").get_data(as_text=True)
+    assert "Receipts" not in body
+
+
+def test_a_visitor_without_an_account_gets_no_receipts_section():
+    body = app.test_client().get("/progress").get_data(as_text=True)
+    assert "Receipts" not in body
+
+
+def test_a_missing_amount_shows_a_dash_not_a_crash(user):
+    add_payment(provider_ref="paypal_x", kind="subscription", tier="basic",
+                amount_pence=None, currency=None, user_id=user["id"])
+    resp = signed_in(user["id"]).get("/progress")
+    assert resp.status_code == 200
+    assert "Thai Reader (Basic) — new subscription" in resp.get_data(as_text=True)
+
+
+def test_the_currency_symbol_follows_the_currency():
+    with app.app_context():
+        assert Payment(amount_pence=999, currency="gbp").amount_display == "£9.99"
+        assert Payment(amount_pence=1250, currency="usd").amount_display == "$12.50"
+        assert Payment(amount_pence=700, currency="thb").amount_display == "THB 7.00"
+        assert Payment(amount_pence=None).amount_display is None
