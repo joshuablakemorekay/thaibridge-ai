@@ -3197,3 +3197,100 @@ because it's the free front door since the home page redesign.
 `prompts/thai-pair-audit/` (the prompt, three versions, and the reasoning),
 `prompts/annual-billing-option/`, `docs/vowel-review-2026-09-10.md` (the sheet
 going to the teacher), `tests/test_thai_romanisation.py` (the guard).
+
+---
+## 10 September 2026 — Stage 3: every chant in the book now says what it is
+
+**Type:** Milestone
+
+The chanting book has 305 chants transcribed from a physical copy; seventeen said
+what they are. This session wrote the other 288, in thirty batches of ten.
+
+My own prompt set the rule that outranked everything else in it:
+
+> DO NOT TOUCH A SINGLE CHARACTER OF ANY VERSE.
+>
+> NEVER quote, reconstruct or 'restore' any Pali or Thai that is not already in
+> the file
+>
+> If you are NOT certain, write ""
+
+and named the check, while refusing the easy one:
+
+> Check the character counts Stage 2 reports, both ways: every Thai and Pali
+> character from your paste should appear in the file, and none should appear
+> that was not in your paste. That the page loads and the file imports proves
+> neither
+
+So the work was never the prose, it was the harness: dump all 305 chant dicts
+before and after each batch, strip the five new keys, require the rest to be
+identical. Between batches I kept asking:
+
+> do the next 5 and tell me is this process keeping everything in app chanting
+> pages exactly as is in the book still?
+
+It caught three Thai words typed with a wrong character, and two Lao codepoints
+in a Pali citation — identical to Thai at reading size. It also cried wolf once:
+`git diff | grep '^-'` reports untouched lines as removed when a large insertion
+re-aligns a hunk. So the proof now imports both revisions of the module and
+compares the parsed dicts. A hunk can't be misaligned when there are no hunks.
+
+Two calls were mine. Before the first batch:
+
+> when should we put all of the app chanting pages 1-325 into correct order while
+> keeping everything exactly as is in the book?
+
+It wasn't in order — the index listed chants in the order I photographed the
+pages, which jumps backwards fifty-nine times. Sorted at render time rather than
+by moving 305 blocks of verified Pali. Then, thirty-two chants in:
+
+> Before carrying on to do the next 10, can you tell me if it is worth
+> summarising all of this instead as to keep it concise in the Digital Chanting
+> Book?
+
+Not worth it — it already sits behind two clicks and never appears in the page
+view at all.
+
+> lets continue until we finish Stage 3
+
+**What I learned:** the check that feels like proof usually isn't the one that is.
+
+**Engineering Contribution**
+
+- *Decisions made:* Sorted the index at render time instead of reordering the
+  file — moving 305 blocks of verified Pali is the exact edit this workflow
+  exists to prevent, and it would make every later review diff unreadable.
+  Turned down summarising the commentary once I saw where it actually renders.
+  Left `source` empty on 297 of 305 rather than attributing a citation I couldn't
+  verify; the single attribution made carries an `UNVERIFIED SOURCE` comment
+  saying so in the file. And chose to keep going rather than stop at each
+  finding — "can we just continue for now and we can make all the corrections
+  once it is finished?"
+- *Improvements made to generated code:* Dropped `git diff | grep '^-'` as the
+  safety proof after it cried wolf, and wrote its replacement down properly
+  instead of leaving a fourth scratch checker to be re-improvised next session:
+  `scripts/check_commentary.py` imports both revisions of `chanting.py` and diffs
+  the parsed dicts, and also checks the five fields' shape and every Thai run's
+  provenance. Then pinned it — `tests/test_check_commentary.py` breaks a chant in
+  each way that actually went wrong this session, and asserts against the real
+  book that nothing outside the commentary has moved since the commit before
+  Stage 3 began. Added tests for the render-time sort too, including one that
+  reads the rendered index, because the function was right while the page was
+  still wrong. Tests 1,461 → 1,500.
+- *Roughly how much was accepted as-is vs engineered on:* The prose was
+  generated. My contribution was the constraints it had to survive, the two
+  design calls above, and the harness that proves the verses didn't move —
+  recorded that way rather than dressed up as refactoring I didn't do.
+
+**Still open, deliberately:**
+
+> Do not commit. I'll read the prose before it goes in.
+
+All 305 chants of commentary are **unreviewed**. So is the pass behind them:
+~2,100 `CHECK` comments, 275 of 305 with unverified English, and a yamakkan
+residue of fifteen words in fifty-three places.
+
+**References / Conversations**
+`prompts/chanting-book-batch/prompt.md`, `docs/chanting-commentary-review.md`
+(all 305 in book order, for reading), `docs/chanting-book-next-session.md`,
+`scripts/check_commentary.py`, `tests/test_check_commentary.py`.
