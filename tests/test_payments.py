@@ -324,3 +324,16 @@ def test_the_currency_symbol_follows_the_currency():
         assert Payment(amount_pence=1250, currency="usd").amount_display == "$12.50"
         assert Payment(amount_pence=700, currency="thb").amount_display == "THB 7.00"
         assert Payment(amount_pence=None).amount_display is None
+
+
+def test_receipts_in_the_same_second_keep_a_stable_order(user):
+    """Two rows can share a timestamp (webhook and redirect land together).
+    The later insert must always render first, not whichever the DB felt like."""
+    from datetime import datetime
+    same = datetime(2026, 9, 11, 12, 0, 0)
+    add_payment(provider_ref="cs_first", kind="subscription", tier="pro",
+                amount_pence=999, currency="gbp", user_id=user["id"], created_at=same)
+    add_payment(provider_ref="in_second", kind="renewal", tier="pro",
+                amount_pence=999, currency="gbp", user_id=user["id"], created_at=same)
+    body = signed_in(user["id"]).get("/progress").get_data(as_text=True)
+    assert body.index("in_second") < body.index("cs_first")

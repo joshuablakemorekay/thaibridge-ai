@@ -7729,8 +7729,10 @@ def progress_dashboard():
     # a cookie-only visitor has never been through Checkout with a user_id.
     receipts = []
     if current_user.is_authenticated:
+        # id breaks the tie when two rows share a second — the webhook and
+        # the redirect can land that close — so the order never flips.
         receipts = (Payment.query.filter_by(user_id=current_user.id)
-                    .order_by(Payment.created_at.desc()).all())
+                    .order_by(Payment.created_at.desc(), Payment.id.desc()).all())
 
     return render_template('progress.html',
                          user=user,
