@@ -139,7 +139,8 @@
             {% if tier.price == 0 %}
                 <span class="price-big">FREE</span>
             {% else %}
-                <span class="price-big">£{{ tier.price }}</span><span class="price-per">/month</span>
+                <span class="price-big">£{{ tier.price | inc_vat }}</span><span class="price-per">/month</span>
+                <span class="price-tax">UK price, VAT included</span>
             {% endif %}
         </div>
 
@@ -171,7 +172,8 @@
     </div>
     <div class="addon-banner-buy">
         <div class="addon-price">
-            <span class="addon-price-big">£{{ addon.price }}</span><span class="addon-price-per">one-time</span>
+            <span class="addon-price-big">£{{ addon.price | inc_vat }}</span><span class="addon-price-per">one-time</span>
+            <span class="price-tax">UK price, VAT included</span>
         </div>
         {% if has_addon %}
             <span class="btn price-btn price-btn-current">✓ Unlocked</span>
@@ -212,7 +214,7 @@
         <header class="curriculum-tier-head">
             <h3>{{ group.label }}</h3>
             <span class="curriculum-price">
-                {% if group.price == 0 %}FREE{% else %}£{{ group.price }}/mo{% endif %}
+                {% if group.price == 0 %}FREE{% else %}£{{ group.price | inc_vat }}/mo{% endif %}
             </span>
             <span class="curriculum-count">
                 {{ group.sections|length }} page{{ '' if group.sections|length == 1 else 's' }}
@@ -639,6 +641,8 @@
     .addon-price { margin-bottom: 0.6rem; }
     .addon-price-big { font-size: 2rem; font-weight: 700; color: var(--royal-gold); }
     .addon-price-per { color: #cbb8e6; font-size: 0.9rem; margin-left: 0.25rem; }
+    /* The banner is dark, so the shared .price-tax grey would disappear. */
+    .addon-banner .price-tax { color: #cbb8e6; }
     .addon-need-pro { display: block; font-size: 0.85rem; color: #cbb8e6; max-width: 190px; }
 
     @media (max-width: 600px) {

@@ -1977,3 +1977,14 @@ html.rs-picking main figcaption:hover {
     background: rgba(212, 175, 55, 0.15);
     cursor: pointer;
 }
+/* ── VAT label under a price ────────────────────────────────────────────────
+   Shown wherever a product price appears (plans, add-on, subscription
+   success). Quiet, but it has to be legible: the advertised figure must be
+   the total payable, so the page says so rather than leaving it to checkout. */
+.price-tax {
+    display: block;
+    color: #8a7f95;
+    font-size: 0.78rem;
+    margin-top: 0.15rem;
+    letter-spacing: 0.01em;
+}

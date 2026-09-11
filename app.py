@@ -866,6 +866,34 @@ INSTANT_ACCESS_ADDON = {
 TAX_CODE_COURSE = 'txcd_20060058'    # Training Services - Self-study Web-based
 TAX_CODE_DONATION = 'txcd_90000001'  # Cash Donation
 
+# The prices above (SUBSCRIPTION_TIERS, INSTANT_ACCESS_ADDON) are what we hand
+# Stripe, and
+# Stripe adds tax ON TOP of them — so they are NOT what the customer pays. A
+# £9.99 plan takes £11.99 at a UK checkout.
+#
+# For consumer sales in the UK the advertised price has to be the total
+# payable, tax included ("£9.99 + VAT" is only allowed business-to-business),
+# so every price shown to a learner goes through price_inc_vat() and the
+# ex-tax figure stays internal, for Stripe.
+#
+# 20% is the UK standard rate. Stripe charges by the customer's own location
+# under Managed Payments, so a learner elsewhere may pay a different amount —
+# which is why the pages say "UK price" and point at the checkout for the rest.
+UK_VAT_RATE = Decimal('0.20')
+
+
+def price_inc_vat(amount):
+    """A tax-exclusive price as the UK total the customer actually pays.
+
+    Rounded to the penny the same way Stripe rounds it, so the figure on the
+    page matches the figure on the card statement: £9.99 -> £11.99.
+    """
+    gross = (Decimal(str(amount)) * (Decimal('1') + UK_VAT_RATE))
+    return gross.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
+
+
+app.jinja_env.filters['inc_vat'] = price_inc_vat
+
 # Dāna (generosity) — a voluntary one-off gift that buys NOTHING.
 #
 # This is deliberately not a product and must never become one. It grants no
