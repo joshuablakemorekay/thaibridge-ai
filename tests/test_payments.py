@@ -240,3 +240,15 @@ def test_paypal_amount_missing_yields_nones_not_a_crash():
     assert A._paypal_captured_amount({}) == {"amount_pence": None, "currency": None}
     assert A._paypal_captured_amount({"purchase_units": []}) == \
         {"amount_pence": None, "currency": None}
+
+
+def test_paypal_amount_goes_through_decimal_not_float():
+    """Money is parsed as Decimal — a non-numeric string is caught as
+    InvalidOperation rather than crashing the success page."""
+    bad = {"purchase_units": [{"payments": {"captures": [
+        {"amount": {"value": "nine ninety-nine", "currency_code": "GBP"}}]}}]}
+    assert A._paypal_captured_amount(bad) == {"amount_pence": None, "currency": None}
+    # 0.29 * 100 is 28.999999999999996 in float; Decimal has no such drift.
+    exact = {"purchase_units": [{"payments": {"captures": [
+        {"amount": {"value": "0.29", "currency_code": "GBP"}}]}}]}
+    assert A._paypal_captured_amount(exact)["amount_pence"] == 29

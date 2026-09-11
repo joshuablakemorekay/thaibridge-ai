@@ -8417,15 +8417,16 @@ def _paypal_captured_amount(capture_result):
     """Pull {amount_pence, currency} out of a PayPal capture response.
 
     The figure is nested five levels down and PayPal sends it as a decimal
-    STRING ("9.99"), so it is converted to whole pence here rather than stored
-    as a float. Any missing piece yields Nones — the payment is still recorded,
-    just without a figure, which is the honest answer.
+    STRING ("9.99"). It goes through Decimal, never float, on the way to whole
+    pence — the same rule /dana follows for the amount a giver types. Any
+    missing piece yields Nones: the payment is still recorded, just without a
+    figure, which is the honest answer.
     """
     try:
         cap = capture_result['purchase_units'][0]['payments']['captures'][0]['amount']
-        pence = int(round(float(cap['value']) * 100))
+        pence = int((Decimal(cap['value']) * 100).quantize(Decimal('1'), ROUND_HALF_UP))
         return {'amount_pence': pence, 'currency': cap.get('currency_code', '').lower() or None}
-    except (KeyError, IndexError, TypeError, ValueError):
+    except (KeyError, IndexError, TypeError, InvalidOperation):
         return {'amount_pence': None, 'currency': None}
 
 
