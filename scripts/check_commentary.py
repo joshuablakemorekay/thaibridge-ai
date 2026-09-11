@@ -150,7 +150,17 @@ def strip_commentary(chants):
 
 def against(rev, chants):
     """Non-commentary differences between `rev` and the chants given."""
-    blob = subprocess.check_output(['git', 'show', '%s:chanting.py' % rev], cwd=REPO)
+    try:
+        blob = subprocess.check_output(['git', 'show', '%s:chanting.py' % rev],
+                                       cwd=REPO, stderr=subprocess.STDOUT)
+    except subprocess.CalledProcessError as err:
+        # A shallow clone — CI's default — has only the newest commit, so the
+        # revision to compare against is simply not there. Say that, rather
+        # than leaving a git exit code to be read as "the verses changed".
+        raise RuntimeError(
+            'git cannot show %s:chanting.py — if this is a shallow clone, fetch '
+            'the history (fetch-depth: 0 in CI) so the comparison has something '
+            'to compare against.\n%s' % (rev, err.output.decode('utf-8', 'replace')))
     handle, path = tempfile.mkstemp(suffix='.py', prefix='chanting_%s_' % re.sub(r'\W', '_', rev))
     os.close(handle)
     try:

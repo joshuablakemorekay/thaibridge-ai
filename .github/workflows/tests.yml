@@ -48,6 +48,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+        with:
+          # Full history, not the default single commit. The chanting suite
+          # proves no verified verse has changed by importing chanting.py as it
+          # was BEFORE the commentary pass and comparing it with today's — a
+          # shallow clone has nothing to compare against, and the one check
+          # that guards the book's text would be the one that never ran here.
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v7
