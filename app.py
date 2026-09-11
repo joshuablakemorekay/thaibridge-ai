@@ -38,6 +38,7 @@ load_dotenv()  # Load .env file before anything else reads environment variables
 from urllib.parse import urlparse  # only-our-own-host check on redirect targets
 from flask import Flask, render_template, request, jsonify, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.exc import IntegrityError
 from flask_login import (
     LoginManager, UserMixin, login_user, logout_user,
     login_required, current_user,
@@ -301,6 +302,52 @@ class AiUsage(db.Model):
     # Blocked rows carry zero tokens on purpose: they cost nothing and are
     # conversion data, not spend. Logging only successes would lose them.
     OUTCOMES = ('ok', 'error', 'blocked_cap', 'blocked_mode', 'blocked_fairuse')
+
+
+class Payment(db.Model):
+    """One row per time money moved — the payment HISTORY, which User does not keep.
+
+    The User row holds the current standing only: tier, status, period end,
+    full_unlock. Every renewal overwrites current_period_end, a cancellation
+    drops the tier to free and the old one is gone, and a dāna gift never
+    touched the database at all — it went to the logs. So until this table
+    existed the app could not answer "what has this person paid?" or "how much
+    dāna came in this month?" without logging into Stripe.
+
+    Stripe (and PayPal) remain the accounting record. This is a mirror the app
+    can read: it is written by the same webhook handlers that already grant
+    the access, at the moment they grant it.
+
+    provider_ref is the dedupe key. A Checkout Session id, an invoice id or a
+    PayPal order id is unique per purchase, and the same one reaches us more
+    than once by design — the webhook and the success redirect both sync it,
+    and Stripe re-delivers events it thinks we missed. The UNIQUE constraint
+    means a second arrival records nothing, whichever path got there first.
+
+    The amount is stored in the smallest unit (pence) as an integer, never a
+    float — the same reason /dana range-checks in pence.
+    """
+    __tablename__ = 'payments'
+
+    id           = db.Column(db.Integer, primary_key=True)
+    created_at   = db.Column(db.DateTime, default=utcnow,
+                             nullable=False, index=True)
+
+    # Nullable: a dāna gift needs no account, and a logged-out giver is a real
+    # payment with no user to hang it on.
+    user_id      = db.Column(db.Integer, db.ForeignKey('users.id'),
+                             nullable=True, index=True)
+
+    provider     = db.Column(db.String(10), nullable=False)   # 'stripe' | 'paypal'
+    provider_ref = db.Column(db.String(128), nullable=False, unique=True)
+    kind         = db.Column(db.String(20), nullable=False)   # see KINDS below
+    tier         = db.Column(db.String(20))                   # 'basic' | 'pro' — subscription/renewal only
+    amount_pence = db.Column(db.Integer)                      # None when the provider did not say
+    currency     = db.Column(db.String(3))                    # ISO code, lower-case as Stripe sends it
+
+    # 'subscription' is the first payment of a plan, 'renewal' each one after
+    # it, 'addon' the Instant Access Pass, 'dana' a gift that grants nothing.
+    KINDS = ('subscription', 'renewal', 'addon', 'dana')
 
 
 def _ensure_user_columns():
@@ -8208,6 +8255,42 @@ def _apply_subscription(user, *, tier, status, customer_id=None,
     return True
 
 
+def _record_payment(*, provider_ref, kind, user=None, tier=None,
+                    amount_pence=None, currency=None, provider='stripe'):
+    """Write one Payment row. Idempotent on provider_ref. Returns the row, or
+    None if nothing could be written.
+
+    Never raises: the access grant has already been committed by the caller,
+    and a bookkeeping failure must not turn a paid customer's webhook into a
+    500 (which Stripe would then retry forever). If the row is already there —
+    the redirect beat the webhook, or Stripe re-sent the event — that IS the
+    happy path, not an error.
+    """
+    if not provider_ref or kind not in Payment.KINDS:
+        app.logger.warning("Payment not recorded: ref=%r kind=%r", provider_ref, kind)
+        return None
+    try:
+        existing = Payment.query.filter_by(provider_ref=provider_ref).first()
+        if existing:
+            return existing
+        row = Payment(provider=provider, provider_ref=provider_ref, kind=kind,
+                      user_id=user.id if user else None, tier=tier,
+                      amount_pence=amount_pence, currency=currency)
+        db.session.add(row)
+        db.session.commit()
+    except IntegrityError:
+        # Lost the race with the other path — its row is the one we wanted.
+        db.session.rollback()
+        return Payment.query.filter_by(provider_ref=provider_ref).first()
+    except Exception:
+        db.session.rollback()
+        app.logger.exception("Failed to record payment %s", provider_ref)
+        return None
+    app.logger.info("Recorded %s payment %s for user %s",
+                    kind, provider_ref, user.id if user else None)
+    return row
+
+
 def _sync_checkout_session(cs):
     """A Stripe Checkout finished -> activate the user's tier. Returns the User."""
     meta = cs.get('metadata') or {}
@@ -8236,9 +8319,13 @@ def _sync_checkout_session(cs):
         except Exception:
             app.logger.exception("Could not retrieve subscription %s", sub_id)
 
-    _apply_subscription(user, tier=tier, status=status,
-                        customer_id=cs.get('customer'),
-                        subscription_id=sub_id, current_period_end=period_end)
+    if not _apply_subscription(user, tier=tier, status=status,
+                               customer_id=cs.get('customer'),
+                               subscription_id=sub_id, current_period_end=period_end):
+        return None
+    _record_payment(provider_ref=cs.get('id'), kind='subscription', user=user,
+                    tier=tier, amount_pence=cs.get('amount_total'),
+                    currency=cs.get('currency'))
     app.logger.info("Activated tier '%s' for user %s", tier, user.id)
     return user
 
@@ -8263,6 +8350,9 @@ def _sync_addon_session(cs):
             db.session.rollback()
             app.logger.exception("Failed to grant full_unlock for user %s", user.id)
             return None
+    _record_payment(provider_ref=cs.get('id'), kind='addon', user=user,
+                    amount_pence=cs.get('amount_total'),
+                    currency=cs.get('currency'))
     app.logger.info("Granted Instant Access Pass (full_unlock) to user %s", user.id)
     return user
 
@@ -8307,13 +8397,38 @@ def _sync_invoice_paid(invoice):
         except Exception:
             app.logger.exception("Could not retrieve subscription %s", sub_id)
 
-    _apply_subscription(user, tier=user.subscription_tier, status=status,
-                        current_period_end=period_end)
+    if not _apply_subscription(user, tier=user.subscription_tier, status=status,
+                               current_period_end=period_end):
+        return None
+    # The very first invoice of a subscription is the same money as the
+    # Checkout Session that created it, and that session is already recorded
+    # as the 'subscription' row. Only later invoices are renewals.
+    if invoice.get('billing_reason') != 'subscription_create':
+        _record_payment(provider_ref=invoice.get('id'), kind='renewal',
+                        user=user, tier=user.subscription_tier,
+                        amount_pence=invoice.get('amount_paid'),
+                        currency=invoice.get('currency'))
     app.logger.info("Renewal recorded for user %s (sub %s)", user.id, sub_id)
     return user
 
 
 @app.route('/paypal/success')
+def _paypal_captured_amount(capture_result):
+    """Pull {amount_pence, currency} out of a PayPal capture response.
+
+    The figure is nested five levels down and PayPal sends it as a decimal
+    STRING ("9.99"), so it is converted to whole pence here rather than stored
+    as a float. Any missing piece yields Nones — the payment is still recorded,
+    just without a figure, which is the honest answer.
+    """
+    try:
+        cap = capture_result['purchase_units'][0]['payments']['captures'][0]['amount']
+        pence = int(round(float(cap['value']) * 100))
+        return {'amount_pence': pence, 'currency': cap.get('currency_code', '').lower() or None}
+    except (KeyError, IndexError, TypeError, ValueError):
+        return {'amount_pence': None, 'currency': None}
+
+
 @login_required
 def paypal_success():
     """PayPal redirects here after the user approves the payment.
@@ -8355,6 +8470,9 @@ def paypal_success():
     expires_dt = utcnow() + timedelta(days=365 if paid_period == 'year' else 30)
     _apply_subscription(current_user, tier=tier, status='active',
                         current_period_end=expires_dt)
+    _record_payment(provider='paypal', provider_ref=order_id, kind='subscription',
+                    user=current_user, tier=tier,
+                    **_paypal_captured_amount(result))
     _mirror_tier_to_session(current_user)
     session.pop('pending_paypal_tier', None)
     session.pop('pending_paypal_period', None)
@@ -8548,8 +8666,14 @@ def stripe_webhook():
     if etype == 'checkout.session.completed':
         meta = obj.get('metadata') or {}
         if meta.get('kind') == 'dana':
-            # A gift grants nothing, so there is no entitlement to write. Logged
-            # only so donations are visible in the logs alongside sales.
+            # A gift grants nothing, so there is no entitlement to write — only
+            # the payment itself, so dāna is countable alongside sales. The
+            # giver may have no account; if they were logged in, /dana passed
+            # their Stripe customer id, which is the only link back to them.
+            _record_payment(provider_ref=obj.get('id'), kind='dana',
+                            user=_find_user_for_stripe(customer_id=obj.get('customer')),
+                            amount_pence=obj.get('amount_total'),
+                            currency=obj.get('currency'))
             app.logger.info("Received dāna gift (session %s)", obj.get('id'))
         elif meta.get('addon') == 'full_unlock':
             _sync_addon_session(obj)
