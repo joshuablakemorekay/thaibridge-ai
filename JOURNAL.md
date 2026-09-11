@@ -3349,3 +3349,51 @@ a place to put users, it was a place to put *time*.
 **References / Conversations**
 `tests/test_payments.py`, `docs/DATABASE_RUNBOOK.md` ("What has come in, per
 month"), commit `919e58f`.
+
+
+## 11 September 2026 — Something finally reads the payments table
+
+**Type:** Feature
+
+> Ok what now? Have we built the storage system yet like I asked?
+
+Yes — but a table nobody reads is a promise, not a feature. The portfolio
+check at the end of the last entry named it: the weakest spot was that
+nothing looked at the rows.
+
+> Build the receipts view on /progress
+
+**How we did it.** A `🧾 Receipts` card on the Progress page, between the
+stats and the achievements, for a signed-in learner: date, what it was in
+the plan's public name ("Thai Master (Pro) — renewal", "Instant Access
+Pass", "Dāna gift"), the amount with a symbol that follows the currency
+rather than assuming pounds, and the Stripe or PayPal reference to quote.
+Drawn only when there is history — a free learner gets no empty table.
+Seven tests, including that another person's rows never appear and that a
+payment with no amount renders a dash rather than a crash.
+
+**What I learned:** "built" has two ends. The write side went in last time;
+until the read side existed, the only proof the table worked was a SQL
+query I ran myself.
+
+**Engineering Contribution**
+
+- *Decisions made:* Hide the card when empty rather than show "no payments
+  yet" — the page already has enough furniture for a free learner. Put the
+  presentation (`label`, `amount_display`) on the model rather than in the
+  template, the way `User.effective_tier` already works. Left the `label`
+  property reaching into `SUBSCRIPTION_TIERS` alone: it's a single-file app
+  and that is the house style.
+- *Improvements made to generated code:* Corrected the receipt footnote —
+  the first draft claimed the reference was "the one on your card
+  statement", which a Checkout Session id is not. Added `id` as a sort
+  tiebreak after noticing the webhook and the redirect can write two rows in
+  the same second, pinned with a test. Tests 1,514 → 1,521.
+- *Roughly how much was accepted as-is vs engineered on:* The card and the
+  query went in as drafted. Mine were the ask, the "hide when empty" call,
+  and picking both engineering-pass items — "Yes, do both". Under the quote
+  floor again, for the same reason as the entry above; recorded, not padded.
+
+**References / Conversations**
+`templates/progress.html` (receipts card), `tests/test_payments.py`,
+commit `1af9e6d`.
