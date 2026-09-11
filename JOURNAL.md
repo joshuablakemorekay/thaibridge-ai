@@ -3397,3 +3397,68 @@ query I ran myself.
 **References / Conversations**
 `templates/progress.html` (receipts card), `tests/test_payments.py`,
 commit `1af9e6d`.
+
+
+## 11 September 2026 — Proving it with real money, and the three clicks that went nowhere
+
+**Type:** Milestone
+
+> Make a Stripe test-card payment and check /progress
+
+The table and the receipts card were tested; they had never seen a real
+payment. This did it live, the way a learner would — with two steps that
+had to be Josh's, because the browser rules don't let me log in or type a
+card number, even a test one.
+
+**How we did it.** Josh logged in; I drove the tab to the Basic plan and
+onto Stripe Checkout (`cs_test_…`, so test mode confirmed); Josh typed the
+4242 card; I reloaded Progress. The receipt was there: *Thai Reader (Basic)
+— new subscription, £11.99*. Then the run earned its keep:
+
+- **£11.99, not £9.99.** Stripe Tax adds 20% UK VAT at checkout. The
+  receipt is right — that is what was charged — but the plans page says
+  £9.99. Left open on purpose; it's a pricing decision (see below).
+- **The table header was invisible.** My CSS set the labels purple; the
+  base stylesheet had already put them on a purple gradient. Deleting my
+  line was the fix.
+- **The cancel went nowhere. Three times.**
+
+> Cancelled, commit-message-pro to main and push
+
+> It bounced back to Progress, check the Render logs
+
+The logs showed the payment, both webhooks and the redirect — and no cancel
+request at all. Not a failed one: none. The confirm popup had been
+dismissed, and a dismissed popup and a failed Stripe call both land you on
+Progress looking identical. In the end I submitted the form from the
+automation tab with the popup pre-answered; the POST, Stripe's
+`subscription.deleted` webhook and the goodbye page all landed in the same
+second.
+
+**What I learned:** a silent redirect is a bug even when the code is
+right, because the person reading it can't tell which of two things
+happened.
+
+**Engineering Contribution**
+
+- *Decisions made:* Cancel the test subscription through the site's own
+  button rather than the Stripe dashboard, so the whole loop was exercised.
+  Flag the VAT gap as Josh's call — "show £11.99 inc. VAT" or "make the
+  Stripe price tax-inclusive" are different business decisions — rather
+  than picking one. Fix the header by deleting my override, not by adding
+  a stronger one.
+- *Improvements made to generated code:* A failed cancel now redirects to
+  `/progress?cancel=failed` and the tier card says so, in the codebase's
+  own style (query flag, no flash machinery to bolt on). Two tests: a
+  refused Stripe call shows the message and leaves the subscription
+  untouched; a good one still reaches the goodbye page. Tests 1,521 →
+  1,523.
+- *Roughly how much was accepted as-is vs engineered on:* The fixes were
+  small; the value was the live run and reading the logs properly. Two of
+  the three findings came from looking at the page rather than the tests.
+
+**Still open, deliberately:** the £9.99 / £11.99 question.
+
+**References / Conversations**
+Render logs 14:06–14:19 UTC; `tests/test_payments.py` (cancel tests);
+commits `7b44cae` (header) and the cancel-notice commit.
