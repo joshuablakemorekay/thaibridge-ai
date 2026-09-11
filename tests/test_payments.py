@@ -337,3 +337,43 @@ def test_receipts_in_the_same_second_keep_a_stable_order(user):
                 amount_pence=999, currency="gbp", user_id=user["id"], created_at=same)
     body = signed_in(user["id"]).get("/progress").get_data(as_text=True)
     assert body.index("in_second") < body.index("cs_first")
+
+
+# ---------------------------------------------------------------------------
+# Cancelling: a failure must say so, not bounce silently
+# ---------------------------------------------------------------------------
+
+def test_a_failed_cancel_tells_the_learner_instead_of_bouncing(user):
+    """A silent redirect to /progress is indistinguishable from the confirm
+    popup being dismissed — which is exactly what happened on the first live
+    test. If Stripe refuses, the page has to say so."""
+    with app.app_context():
+        u = db.session.get(User, user["id"])
+        u.subscription_tier, u.subscription_status = "basic", "active"
+        u.stripe_subscription_id = "sub_fail"
+        db.session.commit()
+    c = signed_in(user["id"])
+    with patch("app.stripe.api_key", "sk_test_fake"), \
+         patch("app.stripe.Subscription.cancel", side_effect=RuntimeError("stripe down")):
+        resp = c.post("/subscribe/cancel-subscription")
+    assert resp.status_code == 302
+    assert resp.headers["Location"].endswith("/progress?cancel=failed")
+    body = c.get("/progress?cancel=failed").get_data(as_text=True)
+    assert "couldn't cancel your subscription" in body
+    with app.app_context():
+        assert db.session.get(User, user["id"]).subscription_status == "active"
+
+
+def test_a_successful_cancel_still_goes_to_the_goodbye_page(user):
+    with app.app_context():
+        u = db.session.get(User, user["id"])
+        u.subscription_tier, u.subscription_status = "basic", "active"
+        u.stripe_subscription_id = "sub_ok"
+        db.session.commit()
+    c = signed_in(user["id"])
+    with patch("app.stripe.api_key", "sk_test_fake"), \
+         patch("app.stripe.Subscription.cancel", return_value={"status": "canceled"}):
+        resp = c.post("/subscribe/cancel-subscription")
+    assert resp.headers["Location"].endswith("/subscription-goodbye")
+    with app.app_context():
+        assert db.session.get(User, user["id"]).subscription_status == "canceled"

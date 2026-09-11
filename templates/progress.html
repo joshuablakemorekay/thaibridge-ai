@@ -75,6 +75,12 @@
                 {% endif %}
             </a>
             {% endif %}
+            {% if request.args.get('cancel') == 'failed' %}
+            <p class="earned-unlock-note cancel-failed" role="alert">
+                Sorry — we couldn't cancel your subscription just now. Nothing has changed.
+                Please try again in a minute, or email us and we'll do it by hand.
+            </p>
+            {% endif %}
             {% if current_user.is_authenticated and current_user.stripe_subscription_id and current_user.effective_tier != 'free' %}
             <form action="/subscribe/cancel-subscription" method="post"
                   onsubmit="return confirm('Cancel your subscription? You will be moved back to the free plan.');"
@@ -282,6 +288,10 @@
         background: rgba(255, 255, 255, 0.18);
         font-size: 0.95rem;
         line-height: 1.6;
+    }
+    .cancel-failed {
+        background: rgba(255, 235, 235, 0.95);
+        color: #7a1f1f;
     }
     .earned-unlock-ready {
         background: rgba(255, 248, 220, 0.95);

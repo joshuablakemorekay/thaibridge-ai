@@ -8645,7 +8645,10 @@ def cancel_subscription():
         stripe.Subscription.cancel(sub_id)
     except Exception:
         app.logger.exception("Failed to cancel subscription %s", sub_id)
-        return redirect('/progress')
+        # Say so on the page. A silent bounce back to /progress looks exactly
+        # like the confirm popup being dismissed, and it took three rounds of
+        # log-reading to tell the two apart when this was first tested live.
+        return redirect('/progress?cancel=failed')
 
     # Mark them canceled now (the webhook will also do this — both are idempotent).
     _apply_subscription(current_user, tier=current_user.subscription_tier,
