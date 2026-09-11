@@ -21,9 +21,9 @@ import pytest
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from chanting import (  # noqa: E402
-    BOOK_LAST_PAGE, build_page_index, chant_page_spans, check_page_blocks,
-    check_variants, contents_for_front_page, contents_stretches,
-    describe_coverage, describe_pages, page_coverage)
+    BOOK_LAST_PAGE, build_page_index, chant_page_spans, chants_in_book_order,
+    check_page_blocks, check_variants, contents_for_front_page,
+    contents_stretches, describe_coverage, describe_pages, page_coverage)
 
 
 def verse(number, page=None):
@@ -1659,6 +1659,107 @@ class TestEveryDeclaredBlockReachedThePage:
             'blocks recorded from the photographs but never written into '
             'PAGE_BLOCKS, so the page shows less than the book prints:\n  '
             + '\n  '.join(missing))
+
+
+class TestTheIndexListsTheBookInOrder:
+    """`/chanting` used to list the chants in the order they were photographed.
+
+    CHANTS opens at page 222, drops to 27, climbs to 223, and does that
+    fifty-nine times over. Reading any one chant worked perfectly; scrolling
+    the index did not, and a reader looking for what comes next had no way to
+    tell that the list was not the book.
+
+    The sort happens at render time rather than by moving the dicts, because
+    reordering 305 blocks of verified Pali is exactly the edit the chanting
+    workflow exists to avoid. So these tests hold the FUNCTION to book order
+    and leave the file alone — which is the same division `build_page_index`
+    already works to.
+    """
+
+    def test_a_shuffled_file_comes_back_in_page_order(self):
+        ordered = chants_in_book_order([
+            chant('third', 90, [verse(1)]),
+            chant('first', 12, [verse(1)]),
+            chant('second', 47, [verse(1)]),
+        ])
+        assert [c['id'] for c in ordered] == ['first', 'second', 'third']
+
+    def test_a_chant_with_no_page_goes_last_rather_than_being_guessed(self):
+        """The same rule build_page_index follows, for the same reason.
+
+        A chant with no page_start cannot be placed. Dropping it would lose it
+        from the index entirely, and sorting it to the front would put it on a
+        page it is not printed on.
+        """
+        ordered = chants_in_book_order([
+            {'id': 'unplaced', 'title_english': 'unplaced', 'verses': [verse(1)]},
+            chant('placed', 47, [verse(1)]),
+        ])
+        assert [c['id'] for c in ordered] == ['placed', 'unplaced']
+
+    def test_two_chants_on_one_page_keep_the_order_the_file_has_them_in(self):
+        """A stable sort, so the book's own order down a shared page survives.
+
+        Half the pages in this book hold two chants. If the sort reshuffled
+        them, the index would disagree with the page view about which of the
+        two comes first — and the page view is the one that matches the book.
+        """
+        ordered = chants_in_book_order([
+            chant('top-of-page', 30, [verse(1)]),
+            chant('below-it', 30, [verse(1)]),
+        ])
+        assert [c['id'] for c in ordered] == ['top-of-page', 'below-it']
+
+    def test_nothing_is_added_or_dropped(self):
+        """Sorting is the only thing it may do. Checked as a set, not a count.
+
+        A sort that silently dropped a chant would still return a list in
+        ascending order, and the index would look entirely correct with a
+        chant missing from it.
+        """
+        from chanting import CHANTS
+        assert ({c['id'] for c in chants_in_book_order()}
+                == {c['id'] for c in CHANTS})
+        assert len(chants_in_book_order()) == len(CHANTS)
+
+    def test_the_real_book_comes_back_ascending(self):
+        pages = [c['page_start'] for c in chants_in_book_order()
+                 if isinstance(c.get('page_start'), int)]
+        assert pages == sorted(pages)
+
+    def test_the_file_itself_is_left_alone(self):
+        """The whole point of sorting here: CHANTS must not be mutated.
+
+        `sorted()` returns a new list, but a careless `.sort()` would reorder
+        the module-level data for every other reader of it — including
+        build_page_index and the batch tooling.
+        """
+        from chanting import CHANTS
+        before = [c['id'] for c in CHANTS]
+        chants_in_book_order()
+        assert [c['id'] for c in CHANTS] == before
+
+    def test_the_index_page_really_renders_in_that_order(self):
+        """End to end, because the sort is only worth anything if the view uses it.
+
+        The function was right and the template was still handing out
+        photograph order until app.py was changed to call it. Reading the
+        rendered HTML is the only thing that proves the two are joined up.
+        """
+        import app as flask_app
+
+        page = flask_app.app.test_client().get(
+            '/chanting', follow_redirects=True).get_data(as_text=True)
+
+        positions = []
+        for chant_data in chants_in_book_order():
+            marker = f'class="chant-card" id="{chant_data["id"]}"'
+            at = page.find(marker)
+            if at != -1:
+                positions.append(at)
+        assert len(positions) > 100, 'the index is not listing chants at all'
+        assert positions == sorted(positions), (
+            'the index lists chants in a different order from the book')
 
 
 if __name__ == '__main__':
