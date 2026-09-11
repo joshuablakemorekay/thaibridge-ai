@@ -3462,3 +3462,88 @@ happened.
 **References / Conversations**
 Render logs 14:06–14:19 UTC; `tests/test_payments.py` (cancel tests);
 commits `7b44cae` (header) and the cancel-notice commit.
+
+---
+
+## 11 September 2026 — The price on the page wasn't the price being charged
+
+The live payment run threw up a number I hadn't expected: a **£9.99 plan took
+£11.99**. Stripe was adding 20% UK VAT on top. That mattered for a reason
+bigger than the app — **I'm not VAT registered**, so my first thought was that
+something was collecting tax in my name that had no business doing so.
+
+**It turned out to be neither a bug nor a problem — but proving that took
+three wrong turns, and the wrong turns are the useful part.**
+
+**Wrong turn one: I assumed, from a code comment, that Managed Payments was
+switched on.** The comment at `app.py:857` says new Stripe accounts enable it
+by default. Plausible, and probably how the `tax_code` requirement first
+appeared — but a comment describing why code exists is not evidence about how
+an account is configured *today*. I nearly built a fix on top of it.
+
+**Wrong turn two: I checked the wrong account.** The Stripe key in my local
+`.env` belongs to `acct_1TfGHz…`, email `joshkay.project@gmail.com` —
+**singular "project"**, the typo'd address that locked me out months ago. Every
+answer it gave was internally consistent and completely irrelevant: zero
+registrations, Stripe Tax pending, every invoice £9.99 with £0.00 tax. It all
+looked reassuring, and none of it described the account that actually charged
+me. **A confident answer from the wrong source is worse than no answer**, because
+nothing about it feels wrong.
+
+**Wrong turn three: the transaction isn't there either.** Checked against the
+right account (`acct_1U5pG0…`, "SMOALD"), there are **zero** charges, invoices,
+payment intents, subscriptions and checkout sessions. The £11.99 happened
+somewhere I still can't see — most likely a **Stripe Sandbox**, which is
+isolated from ordinary test mode and carries its own keys. Telling, given the
+old account was literally named "SMOLD & Co. sandbox".
+
+**What the configuration proves anyway.** On the real account:
+
+| | |
+|---|---|
+| Tax registrations in my name | **zero** |
+| Stripe Tax status | **active** |
+| Tax provider | **`stripe`** |
+| Tax behaviour | `exclusive` — added on top of my price |
+
+Ordinary Stripe Tax only charges VAT where **I** hold a registration. I hold
+none, so under my own liability the tax would be £0.00. Yet tax is charged, and
+the provider is Stripe. The only arrangement where both are true is **Stripe
+acting as merchant of record** — collecting and remitting under *Stripe's*
+registration, not mine. It never becomes my money and never lands on a return I
+have to file.
+
+**So "I'm not VAT registered" and "VAT appears at checkout" are both true at
+once.** That felt like a contradiction and isn't one. The question was never
+*is tax being charged* — it was **who is doing the selling**.
+
+**The real fault was smaller, and entirely mine.** The plans page advertised
+£9.99 while checkout took £11.99. For consumer sales in the UK the advertised
+price has to be the total payable — "+ VAT" is a business-to-business form. So
+every product price now renders through a `price_inc_vat()` filter that rounds
+to the penny exactly as Stripe rounds it, and the ex-tax figures stay internal,
+for Stripe. Dāna is deliberately untouched: it carries a Cash Donation tax
+code, buys nothing, and is not a product.
+
+**What I learned:** three things, and the middle one is the one I'll actually
+carry.
+
+1. **Check which account a key belongs to before trusting a word it says.** One
+   call to `/v1/account` would have saved the whole detour.
+2. **A stale credential fails silently and cheerfully.** Local payment testing
+   has been running against a locked-out account and reporting "paid" the whole
+   time. Nothing errored. Nothing looked wrong. That's the dangerous kind of
+   broken, and it's still to fix.
+3. **State plainly what's inferred versus what's seen.** I never found the
+   £11.99 itself. The conclusion rests on configuration, which is good
+   evidence — but it isn't the receipt, and the difference is worth saying out
+   loud rather than rounding up to certainty.
+
+**Still open:** confirm Managed Payments in the dashboard, get the tax codes
+past an accountant before any live payment, and replace the local `.env` keys
+with the ones for the account I actually use.
+
+**References / Conversations**
+Read-only Stripe API checks against both accounts (`/v1/account`,
+`/v1/tax/registrations`, `/v1/tax/settings`, charges, invoices);
+branch `fix/vat-inclusive-pricing`; `tests/test_vat_display.py` (10 tests).
