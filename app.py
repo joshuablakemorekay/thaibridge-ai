@@ -866,33 +866,24 @@ INSTANT_ACCESS_ADDON = {
 TAX_CODE_COURSE = 'txcd_20060058'    # Training Services - Self-study Web-based
 TAX_CODE_DONATION = 'txcd_90000001'  # Cash Donation
 
-# The prices above (SUBSCRIPTION_TIERS, INSTANT_ACCESS_ADDON) are what we hand
-# Stripe, and
-# Stripe adds tax ON TOP of them — so they are NOT what the customer pays. A
-# £9.99 plan takes £11.99 at a UK checkout.
+# PRICES ARE TAX-INCLUSIVE. The figures in SUBSCRIPTION_TIERS and
+# INSTANT_ACCESS_ADDON are the totals a customer actually pays — £9.99 means
+# £9.99 on the card, not £9.99 plus whatever tax gets added afterwards.
 #
-# For consumer sales in the UK the advertised price has to be the total
-# payable, tax included ("£9.99 + VAT" is only allowed business-to-business),
-# so every price shown to a learner goes through price_inc_vat() and the
-# ex-tax figure stays internal, for Stripe.
+# That is enforced by `'tax_behavior': 'inclusive'` on each price_data below,
+# set in code on purpose. Leaving it to the Stripe account default would mean
+# the advertised price could change because somebody flipped a dashboard
+# toggle, which is how this went wrong the first time: the pages said £9.99
+# while checkout took £11.99, because tax was being added on top.
 #
-# 20% is the UK standard rate. Stripe charges by the customer's own location
-# under Managed Payments, so a learner elsewhere may pay a different amount —
-# which is why the pages say "UK price" and point at the checkout for the rest.
-UK_VAT_RATE = Decimal('0.20')
-
-
-def price_inc_vat(amount):
-    """A tax-exclusive price as the UK total the customer actually pays.
-
-    Rounded to the penny the same way Stripe rounds it, so the figure on the
-    page matches the figure on the card statement: £9.99 -> £11.99.
-    """
-    gross = (Decimal(str(amount)) * (Decimal('1') + UK_VAT_RATE))
-    return gross.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
-
-
-app.jinja_env.filters['inc_vat'] = price_inc_vat
+# For UK consumer sales the advertised price has to be the total payable
+# anyway ("+ VAT" is a business-to-business form), so inclusive is both the
+# simpler and the correct model. It also keeps the round numbers that were
+# chosen deliberately — £99 a year reads as an offer; £118.80 reads as
+# arithmetic.
+#
+# Stripe is merchant of record here (Managed Payments), so the VAT inside that
+# total is collected and remitted under Stripe's registration, not ours.
 
 # Dāna (generosity) — a voluntary one-off gift that buys NOTHING.
 #
@@ -7986,6 +7977,12 @@ def subscribe_stripe(tier):
             'price_data': {
                 'currency': 'gbp',
                 'unit_amount': int(round(amount * 100)),  # pence
+                # INCLUSIVE: the figure above is the total the learner pays, and
+                # Stripe works the VAT out inside it rather than adding 20% on
+                # top. Set here rather than left to the account default, so the
+                # price cannot change because somebody flipped a dashboard
+                # toggle. See SUBSCRIPTION_TIERS for why the round numbers matter.
+                'tax_behavior': 'inclusive',
                 'recurring': {'interval': period_noun},
                 'product_data': {
                     'name': f"ThaiBridge AI — {tier_info['name']} ({period_adj})",
@@ -8048,6 +8045,7 @@ def addon_instant_access_stripe():
             'price_data': {
                 'currency': 'gbp',
                 'unit_amount': int(round(INSTANT_ACCESS_ADDON['price'] * 100)),  # pence
+                'tax_behavior': 'inclusive',   # the price shown is the price paid
                 'product_data': {
                     'name': f"ThaiBridge AI — {INSTANT_ACCESS_ADDON['name']}",
                     # The pass unlocks the same course, so it is the same thing

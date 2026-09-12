@@ -19,7 +19,7 @@
                class="period-card {% if period != 'year' %}is-active{% endif %}"
                {% if period != 'year' %}aria-current="true"{% endif %}>
                 <span class="period-name">Monthly</span>
-                <span class="period-price">£{{ monthly_amount | inc_vat }}</span>
+                <span class="period-price">£{{ '%.2f'|format(monthly_amount) }}</span>
                 <span class="period-unit">per month</span>
             </a>
             <a href="/subscribe/{{ tier }}?period=year"
@@ -27,15 +27,15 @@
                {% if period == 'year' %}aria-current="true"{% endif %}>
                 <span class="period-badge">2 months free</span>
                 <span class="period-name">Yearly</span>
-                <span class="period-price">£{{ yearly_amount | inc_vat }}</span>
+                <span class="period-price">£{{ '%.2f'|format(yearly_amount) }}</span>
                 <span class="period-unit">
-                    per year — works out at £{{ (yearly_amount / 12) | inc_vat }}/month
+                    per year — works out at £{{ '%.2f'|format(yearly_amount / 12) }}/month
                 </span>
             </a>
         </div>
 
         <p class="choose-total">
-            Paying <strong>£{{ amount | inc_vat }}</strong>
+            Paying <strong>£{{ '%.2f'|format(amount) }}</strong>
             {% if period == 'year' %}a year{% else %}a month{% endif %}.
         </p>
 

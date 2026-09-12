@@ -215,7 +215,7 @@
                     {% if tier_info.price == 0 %}
                         FREE
                     {% else %}
-                        £{{ tier_info.price | inc_vat }}/month
+                        £{{ tier_info.price }}/month
                     {% endif %}
                 </p>
                 {# The annual price is shown here but not chosen here — picking
@@ -223,7 +223,7 @@
                    amount actually being charged. #}
                 {% if tier_info.price_year %}
                 <p class="price-year">
-                    or <strong>£{{ tier_info.price_year | inc_vat }}/year</strong>
+                    or <strong>£{{ '%.2f'|format(tier_info.price_year) }}/year</strong>
                     <span class="price-save">save 2 months</span>
                 </p>
                 {% endif %}

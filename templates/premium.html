@@ -139,8 +139,8 @@
             {% if tier.price == 0 %}
                 <span class="price-big">FREE</span>
             {% else %}
-                <span class="price-big">£{{ tier.price | inc_vat }}</span><span class="price-per">/month</span>
-                <span class="price-tax">UK price, VAT included</span>
+                <span class="price-big">£{{ tier.price }}</span><span class="price-per">/month</span>
+                <span class="price-tax">VAT included</span>
             {% endif %}
         </div>
 
@@ -172,8 +172,8 @@
     </div>
     <div class="addon-banner-buy">
         <div class="addon-price">
-            <span class="addon-price-big">£{{ addon.price | inc_vat }}</span><span class="addon-price-per">one-time</span>
-            <span class="price-tax">UK price, VAT included</span>
+            <span class="addon-price-big">£{{ addon.price }}</span><span class="addon-price-per">one-time</span>
+            <span class="price-tax">VAT included</span>
         </div>
         {% if has_addon %}
             <span class="btn price-btn price-btn-current">✓ Unlocked</span>
@@ -214,7 +214,7 @@
         <header class="curriculum-tier-head">
             <h3>{{ group.label }}</h3>
             <span class="curriculum-price">
-                {% if group.price == 0 %}FREE{% else %}£{{ group.price | inc_vat }}/mo{% endif %}
+                {% if group.price == 0 %}FREE{% else %}£{{ group.price }}/mo{% endif %}
             </span>
             <span class="curriculum-count">
                 {{ group.sections|length }} page{{ '' if group.sections|length == 1 else 's' }}

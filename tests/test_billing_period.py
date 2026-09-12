@@ -116,19 +116,16 @@ def test_period_words():
 def test_choose_page_shows_both_prices():
     """Both periods, priced the way the customer will actually be charged.
 
-    These were £9.99 and £99.00 — the figures handed to Stripe, before it adds
-    tax. Showing them here meant the plans page said £11.99 and the very next
-    step of the same checkout said £9.99. The page must agree with the card
-    statement, so the assertions moved to the VAT-inclusive totals.
+    These briefly read £11.99 and £118.80, while prices were sent to Stripe
+    tax-exclusive and 20% was added on top. Prices are now inclusive at source
+    (`tax_behavior: 'inclusive'`), so the stored figure IS the total and the
+    round numbers are back — £99 a year reads as an offer, £118.80 does not.
     """
     client = signed_up_client()
     body = client.get("/subscribe/basic").get_data(as_text=True)
-    assert "£11.99" in body      # £9.99 + 20% UK VAT
-    assert "£118.80" in body     # £99.00 + 20% UK VAT
+    assert "£9.99" in body
+    assert "£99.00" in body
     assert "2 months free" in body
-    # The ex-tax figures are for Stripe, and must not be shown as a price.
-    assert "£9.99" not in body
-    assert "£99.00" not in body
 
 
 def test_choose_page_carries_the_period_into_the_pay_links(monkeypatch):
