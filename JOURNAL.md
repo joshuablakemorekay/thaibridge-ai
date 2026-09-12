@@ -3547,3 +3547,77 @@ with the ones for the account I actually use.
 Read-only Stripe API checks against both accounts (`/v1/account`,
 `/v1/tax/registrations`, `/v1/tax/settings`, charges, invoices);
 branch `fix/vat-inclusive-pricing`; `tests/test_vat_display.py` (10 tests).
+
+## 12 September 2026 — The £9.99 stays £9.99, and a key file that was one command from being public
+
+Yesterday's entry ends by saying every price now renders through a
+`price_inc_vat()` filter, so the page would advertise £11.99. **That filter is
+gone, and the prices are back to £9.99, £19.99, £99, £199 and £14.99.** The
+entry above is left as it was written, because it records what I believed at
+the time — but it describes a fix that no longer exists, and this is the
+correction.
+
+**Raising the advertised price was the wrong fix to the right problem.** There
+were two ways to make the advert and the charge agree: put the tax on the
+label, or tell Stripe the label already includes it. I took the first, which
+quietly raised every price by 20% for a business that is **not VAT
+registered**. The second is now in `app.py`, one line on each `price_data`:
+
+```python
+'tax_behavior': 'inclusive',
+```
+
+Stripe is merchant of record, so it owes the VAT out of the £9.99 rather than
+adding to it. The customer pays the number on the page. Nothing about my own
+(non-)registration changes, and the prices in the code are the prices a person
+sees — no filter in between, nothing to keep in step.
+
+**The fix missed a page, and a screenshot caught it.** After the first pass
+`/premium` said £11.99 and the very next step said £9.99. The missed file was
+`templates/subscribe_choose.html` — the checkout page, which is the worst one
+to get wrong, and the one I hadn't thought to look at because I had been
+working template by template from memory.
+
+**So the test stopped checking pages and started checking all of them.**
+`tests/test_vat_display.py` now scans the templates for price strings rather
+than asserting on the handful I remembered. Six tests. I proved it works the
+only way worth trusting: put the bug back, watch it fail, take it out again.
+
+### The other thing, which was luck rather than judgement
+
+While tidying I found **`.env.backup` sitting in the working directory of a
+public repository, holding real Stripe keys.**
+
+Checked properly before saying anything, because "keys in a public repo" and
+what actually happened are very different stories:
+
+- `git log --all -- .env.backup` → **nothing**. It was never committed, so it
+  was never pushed and never public.
+- `.gitignore` covered `.env` but not `.env.backup`. One `git add .` and it
+  would have been.
+- It duplicated `.env`, so deleting it lost nothing.
+
+`.gitignore` now carries `.env.backup*`, `.env.bak` and `.env.*.bak` with a
+comment saying why. No keys were exposed and none need rotating — but that is
+the outcome, not the margin. The margin was one careless command.
+
+**What I learned**
+
+1. **When the advert and the charge disagree, ask which one is wrong.** I
+   assumed the advert. It was the charge — or rather the instruction given to
+   Stripe about what the advert meant.
+2. **A test that checks the pages you remembered is a test of your memory.**
+   Scanning every template found the one I'd have kept missing.
+3. **`.gitignore` protects the pattern you thought of.** `.env` was ignored;
+   `.env.backup` was not, and it was the one holding the keys.
+
+**Still open:** the local `.env` still points at the dead Stripe account, so it
+needs the test keys for the live one before any more local payment testing.
+
+**References / Conversations**
+Commits `abe95a7` (the checkout page), `578fa8d` (inclusive pricing),
+`e81647a` (ignore the key backups), `9f32cc7` (licence, flagging the content
+that is not mine to license). Supersedes the `price_inc_vat()` approach in the
+entry above.
+
+---
