@@ -1,0 +1,75 @@
+Copyright (c) 2025-2026 Joshua Kay. All rights reserved.
+
+ThaiBridge AI
+https://thaibridge-ai.smoald.com
+
+
+THE SHORT VERSION
+
+This repository is public so that people can read the code — to judge the work,
+to learn from it, or to decide whether to hire me. It is not open source. You
+may read it. You may not use it.
+
+Some of what is in here is not mine to license to you at all. See THIRD-PARTY
+CONTENT below, because that part matters more than the rest.
+
+
+WHAT YOU MAY DO
+
+- Read the source code.
+- Quote short extracts in a review, article or teaching material, with
+  attribution.
+- Fork it on GitHub for the purpose of reading it or proposing a change back.
+
+
+WHAT YOU MAY NOT DO WITHOUT WRITTEN PERMISSION
+
+- Use this code, in whole or in part, in any other project, commercial or not.
+- Copy the design, layout, stylesheets or templates into another site or
+  application.
+- Redistribute, republish, sell, sublicense or host this software.
+- Train a model on this repository as a substantial part of its corpus.
+- Remove or alter this notice.
+
+
+THIRD-PARTY CONTENT — NOT LICENSED, NOT MINE TO GIVE
+
+Parts of this repository are other people's work. They are included here with
+permission for use in ThaiBridge AI only, or under the terms of their own
+licence. My permission does not extend to them, and nothing in this file grants
+you any right to use them:
+
+- Essays by Pra Kru Samu Panya Vajiro, written by him and published here with
+  his consent for this site. His words, his copyright.
+- Transcribed chant texts from a printed chanting book. The book's own
+  copyright applies to its contents, typesetting and editorial material.
+- Dhamma talks and readings attributed to their respective teachers.
+- Teacher-recorded and generated audio in static/audio/, recorded or produced
+  for this project.
+- Dictionary data derived from third-party sources, which carry their own
+  licence terms.
+
+If you are extracting anything from this repository for any purpose, assume the
+content is not available to you and ask first.
+
+
+COMMERCIAL LICENSING
+
+Parts of the underlying software — the design system, and the accounts,
+billing and AI framework — may be made available commercially. If you want to
+use any of it, ask rather than assume.
+
+joshua@smoald.com
+
+
+NO WARRANTY
+
+This software is provided "as is", without warranty of any kind, express or
+implied, including but not limited to the warranties of merchantability,
+fitness for a particular purpose and non-infringement. In no event shall the
+author be liable for any claim, damages or other liability arising from the
+software or its use.
+
+
+This notice states an intention in plain English. It is not legal advice, and
+for anything consequential you should take your own.
