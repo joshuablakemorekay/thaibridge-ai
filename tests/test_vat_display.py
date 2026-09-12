@@ -108,3 +108,44 @@ def test_dana_amounts_are_not_vat_adjusted(make_client):
     assert 'name="amount" value="5"' in html or "dana-btn" in html
     for inflated in ("£6.00", "£12.00", "£24.00"):
         assert inflated not in html, f"dāna appears VAT-inflated: {inflated}"
+
+
+def test_no_template_renders_a_raw_product_price():
+    """No page may print a price variable without the inc_vat filter.
+
+    This exists because of how the VAT fix went wrong the first time: prices
+    were corrected template by template, and subscribe_choose.html was missed.
+    The plans page then advertised £11.99 while the very next step in the same
+    checkout said £9.99 — worse than the original bug, because it looks like a
+    trick rather than a mistake.
+
+    Scanning the templates catches the whole class of it: add a new page that
+    shows a price, forget the filter, and this fails.
+    """
+    import re
+    from pathlib import Path
+
+    templates = Path(__file__).resolve().parent.parent / "templates"
+
+    # Variables that carry a tax-exclusive product price.
+    price_vars = [
+        "tier.price", "tier_info.price", "tier_info.price_year",
+        "addon.price", "group.price",
+        "monthly_amount", "yearly_amount",
+    ]
+
+    offenders = []
+    for path in sorted(templates.rglob("*.html")):
+        text = path.read_text(encoding="utf-8")
+        # Every {{ ... }} that mentions a price variable must pipe to inc_vat.
+        for expr in re.findall(r"\{\{(.*?)\}\}", text, re.S):
+            if not any(v in expr for v in price_vars):
+                continue
+            if "inc_vat" in expr:
+                continue
+            offenders.append(f"{path.name}: {{{{{expr.strip()}}}}}")
+
+    assert not offenders, (
+        "these render a tax-exclusive price straight to the page:\n  "
+        + "\n  ".join(offenders)
+    )
