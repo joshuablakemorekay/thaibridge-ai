@@ -22,3 +22,8 @@ _shots/
 _devshots.py
 _measure_all.py
 _audit.py
+
+# Backups of .env — these hold real keys and the repo is public.
+.env.backup*
+.env.bak
+.env.*.bak
