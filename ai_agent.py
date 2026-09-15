@@ -18,6 +18,10 @@ from typing import Dict, List, Optional
 import json
 from datetime import datetime
 
+# The politeness/monastic rules the Sentences page teaches, in prompt form.
+# Imported rather than copied so the tutor and the page cannot disagree.
+from thai_registers import REGISTER_RULES_FOR_AI
+
 
 # Roleplay scenarios for the conversation partner. Each puts the AI in a fixed
 # role so the learner can practise a real, bounded situation instead of an open
@@ -148,6 +152,7 @@ ROMANIZATION RULES (Paiboon+ System) - CRITICAL - FOLLOW EXACTLY:
 7. ALWAYS show romanization in parentheses after Thai script
 8. Format: Thai (romanization) = English
 
+{REGISTER_RULES_FOR_AI}
 TEACHING PRINCIPLES:
 - Be encouraging and patient
 - Adjust difficulty to student's level

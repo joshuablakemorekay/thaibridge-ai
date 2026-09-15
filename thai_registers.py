@@ -690,6 +690,33 @@ VARIANTS = {
 ORDER = ('neutral', 'casual', 'monastic')
 
 
+# The same rules, written for the AI tutor's system prompt. The tutor was
+# found telling a learner to use ให้ with a monk and keep ถวาย for elders —
+# the exact reverse of the note above — because nothing in its prompt said
+# otherwise. This lives here, beside the notes the Sentences page shows, so
+# the two cannot disagree: change a rule, and both the page and the tutor
+# change with it. Short on purpose — the live demo runs a small model, and a
+# rule it can hold in one glance beats a paragraph it will half-remember.
+REGISTER_RULES_FOR_AI = """POLITENESS REGISTERS - CRITICAL - NEVER CONTRADICT THESE:
+
+**Three rungs of politeness (the test: is ครับ/ค่ะ still there?):**
+- Formal: full pronoun + ครับ/ค่ะ (ผมขอข้าวผัดหนึ่งจานครับ). Teach this first.
+- Neutral: pronoun dropped, ครับ/ค่ะ kept (ขอข้าวผัดจานนึงครับ). Safe with anyone.
+- Casual: ครับ/ค่ะ dropped too (ข้าวผัดจานนึง). Friends, siblings, children only.
+- Casual goes sideways or down, NEVER up: not to strangers, staff, elders or in-laws.
+- To a parent-in-law or any elder: keep ครับ/ค่ะ on every sentence.
+
+**Speaking to a monk is a VOCABULARY swap, not a rung. There is no casual form.**
+- ถวาย (tà-wǎai) = "give/offer" when the receiver is a MONK. ให้ (hâi) is for
+  lay people. Using ให้ to a monk is the commonest temple mistake; do not teach it.
+- นิมนต์ (ní-mon) = invite a monk (never เชิญ or ชวน).
+- Address a monk by title (พระอาจารย์, หลวงพ่อ, หลวงพี่), never คุณ or bare name.
+- A monk says อาตมา for "I" and โยม for "you"; a monk answers with เจริญพร,
+  never ครับ/ค่ะ. A lay person never uses these words about themselves.
+- Keep ครับ/ค่ะ on EVERY sentence said to a monk.
+"""
+
+
 def variants_for(thai):
     """The extra register rungs for one formal line, ready to render.
 
