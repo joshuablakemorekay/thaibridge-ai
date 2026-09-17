@@ -3621,3 +3621,58 @@ that is not mine to license). Supersedes the `price_inc_vat()` approach in the
 entry above.
 
 ---
+
+---
+
+## 17 September 2026 — Two marketing prompts, archived — and one caught by its own rubric
+
+**TL;DR:** Archived the social-media coursework into `/prompts` as two entries
+with executable rubrics. Writing the rubric found a mistake re-reading the
+prompt hadn't.
+
+Two days ago I rebuilt the four Meta Social Media Marketing submissions for
+ThaiBridge AI. Today those prompts went into the library properly, plus the two
+Meta AI templates from this session's activity.
+
+### How we did it
+
+Pulled my actual messages out of the 15 September transcript rather than writing
+from memory, so the entries quote what I asked, typos and all. Wrote a
+`prompt.md`, `REASONING.md` and `rubric.yaml` for each, three `versions/` files
+for the coursework chain, fixtures for CI, index and changelog rows. Ran the
+rubrics against a deliberately bad post to check they'd actually fail — both
+did.
+
+### The bit worth keeping
+
+The Meta AI prompt's call to action pointed at `thaibridge-ai.onrender.com`. I'd
+read that prompt twice without noticing. It surfaced the moment I wrote the
+criterion `cta_links_to_the_live_domain` — because writing a check means asking
+what *wrong* looks like, which is a different question from "does this read
+alright?" v1 stays in `versions/` with the mistake in it.
+
+The second entry says "not tracked" where I couldn't remember what I edited.
+That's the honest answer.
+
+**Engineering Contribution**
+
+- *Decisions made:* archived the flawed v1 prompt rather than silently
+  correcting it — the record of how the error was found is worth more than a
+  clean file. Wrote the coursework as one entry with three versions rather than
+  four entries per document, because the chain is the thing being demonstrated.
+  Left the Meta AI output uncaptured and said so, instead of estimating a rework
+  proportion I don't have.
+- *Improvements made to generated code:* tightened the Meta AI fixture after
+  `length_within_the_brief` failed it at 533 characters against a 300–400 brief
+  — fixed the fixture, not the check, because the check was right.
+  Negative-tested both rubrics; all 20 criteria fail a bad post as intended.
+- *Roughly how much was accepted as-is vs engineered on:* no application code
+  changed this session. The evidence lives in
+  `prompts/social-media-coursework/REASONING.md` (documents shipped as drafted;
+  images and the tutor fix were my calls; wording edits real but not tracked)
+  and `prompts/meta-ai-post-prompts/REASONING.md` (not tracked).
+
+**References / Conversations**
+`prompts/social-media-coursework/`, `prompts/meta-ai-post-prompts/`. The
+coursework session itself is the entry for 15 September; the tutor fix it found
+is commit `a1df2f9`.
