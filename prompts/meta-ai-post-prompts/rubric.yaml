@@ -1,0 +1,60 @@
+# Evaluation rubric for: Meta AI Post Prompts (the text prompt)
+
+prompt: meta-ai-post-prompts
+version: 2
+criteria:
+  - name: opens_with_a_relatable_mistake
+    description: The first line is the moment of using the wrong Thai with a mother-in-law or a monk, before the app is named
+    weight: 5
+    pass_condition: "any(w in lines[0].lower() for w in ['mother-in-law', 'in-laws', 'monk']) and 'thaibridge' not in lines[0].lower()"
+
+  - name: no_emoji_in_the_first_line
+    description: The brief says so — the opener has to work as plain text in a feed
+    weight: 2
+    pass_condition: "re.search(r'[\\U0001F300-\\U0001FAFF\\u2600-\\u27BF]', lines[0]) is None"
+
+  - name: names_the_three_politeness_levels
+    description: Formal, neutral and casual — the thing the paid page teaches
+    weight: 5
+    pass_condition: "all(w in output.lower() for w in ['formal', 'neutral', 'casual'])"
+
+  - name: built_by_a_monk
+    description: Says a monk built the app, as the tone section requires
+    weight: 3
+    pass_condition: "'monk' in output.lower() and 'built' in output.lower()"
+
+  - name: promises_confidence_not_fluency
+    description: No fluency claim; confidence or an end to guessing instead
+    weight: 4
+    pass_condition: "'fluent' not in output.lower() and any(s in output.lower() for s in ['confiden', 'never guess', 'stop guessing'])"
+
+  - name: cta_links_to_the_live_domain
+    description: The call to action carries the custom domain — the draft prompt got this wrong and the rubric exists to catch it
+    weight: 4
+    pass_condition: "'thaibridge-ai.smoald.com' in output and 'onrender.com' not in output"
+
+  - name: carries_the_requested_hashtags
+    description: The brand and topic tags from section 6 are present
+    weight: 2
+    pass_condition: "'#thaibridgeai' in output.lower() and '#learnthai' in output.lower() and output.count('#') >= 5"
+
+  - name: british_spelling
+    description: The founder is British and the prompt asks for British spelling
+    weight: 2
+    pass_condition: "not any(w in output.lower() for w in ['color', 'favorite', 'organize', 'realize'])"
+
+  - name: length_within_the_brief
+    description: 300–400 characters of caption before hashtags, with a little tolerance for how models count
+    weight: 3
+    pass_condition: "250 <= len(re.sub(r'#\\w+', '', output).strip()) <= 520"
+
+test_cases:
+  - input:
+      brief: "Facebook post for ThaiBridge AI's paid Sentences page (formal / neutral / casual under every sentence, plus the words used with monks); audience is British adults 30-55 married into a Thai family or involved with a Thai temple; open with the mother-in-law or monk mistake, no emoji in line one, say a monk built it, promise confidence not fluency, CTA to thaibridge-ai.smoald.com, 300-400 characters plus hashtags"
+    expected_traits:
+      - opens with the relatable mistake, no emoji
+      - names formal, neutral and casual
+      - says a monk built the app
+      - promises confidence rather than fluency
+      - links to the custom domain and carries the hashtags
+      - stays within the length brief with British spelling

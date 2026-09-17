@@ -34,6 +34,8 @@ Each prompt folder contains the final version, the reasoning behind it, an execu
 | [`critique-to-product-decision`](./critique-to-product-decision/) | analysis | Turns a hostile critique into a product decision instead of defensive copy — one section added, and one change explicitly refused | No (single version) |
 | [`thai-pair-audit`](./thai-pair-audit/) | analysis | Turns one mismatched heading into a sweep of all 707 Thai/English pairs — and refuses to repair the half it would have to invent Thai for, escalating those to a teacher instead | Yes (v1 one heading → v3 verify-or-escalate) |
 | [`annual-billing-option`](./annual-billing-option/) | code-generation | Adds yearly billing to existing tiers — after checking the codebase and finding the requested "new Premium tier" already existed, so building it as written would have been a price cut | Yes (v1 rejected → v2 built) |
+| [`social-media-coursework`](./social-media-coursework/) | content / agent-workflow | Rebuilds four marketing-course submissions one at a time, each fed into the next — and the screenshot step found the live AI tutor teaching the wrong word for "give" to a monk, fixed in `a1df2f9` | Yes (v1 chain → v3 live screenshots) |
+| [`meta-ai-post-prompts`](./meta-ai-post-prompts/) | content | Fills the course's two Meta AI templates (post text + image) from the settled coursework facts and the app's real stylesheet colours — and its own rubric caught the CTA pointing at the hosting URL instead of the live domain | Yes (v1 run → v2 domain fixed) |
 
 ## Featured iterations
 
@@ -63,6 +65,22 @@ times by an argument about wording rather than about the commitment. What caught
 it the second time was not judgement but `tests/test_dhamma_open_to_all.py`,
 which asserts the clause is on the rendered page. **A position that matters
 should be guarded by a test, not by whoever is editing the file that day.**
+
+### [`social-media-coursework`](./social-media-coursework/)
+
+A marketing exercise that **found a product bug no test had.** The Facebook
+post was going to carry a screenshot of the AI tutor answering the caption's
+own question — which word for "give" to a monk — and the live tutor answered
+it backwards, twice. Its prompt had never mentioned politeness registers; the
+Sentences page two clicks away had them right. The fix (`a1df2f9`) moved the
+rules to one place both read from, and the post uses the page instead.
+
+The other lesson is about what to show. The first draft illustrated the free
+chanting book, the easiest page to screenshot. One question — *"WOuld it be
+better to show part of the paid product?"* — moved the images to the £9.99
+page, because the goal is paying subscribers and the picture has to show what
+the money buys. The free content still gets a line in the caption, as the
+low-risk first step for a persona who tries before she pays.
 
 ### [`critique-to-product-decision`](./critique-to-product-decision/)
 

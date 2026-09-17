@@ -1,0 +1,70 @@
+# Evaluation rubric for: Social Media Coursework (the Facebook post step of the chain)
+
+prompt: social-media-coursework
+version: 3
+criteria:
+  - name: opens_with_the_customers_problem
+    description: The first line is the persona's mistake, in her situation, before the product is named
+    weight: 5
+    pass_condition: "('mother-in-law' in lines[0].lower() or 'monk' in lines[0].lower()) and 'thaibridge' not in lines[0].lower()"
+
+  - name: names_the_three_politeness_levels
+    description: Says what the paid Sentences page actually teaches — formal, neutral and casual
+    weight: 5
+    pass_condition: "all(w in output.lower() for w in ['formal', 'neutral', 'casual'])"
+
+  - name: give_to_a_monk_is_the_example
+    description: Uses the one concrete example the persona hit — a different word for "give" to a monk
+    weight: 4
+    pass_condition: "'give' in output.lower() and 'monk' in output.lower()"
+
+  - name: founder_said_openly
+    description: Names the founder as a Buddhist monk and web developer, as the settled positioning requires
+    weight: 4
+    pass_condition: "'monk' in output.lower() and 'developer' in output.lower()"
+
+  - name: free_side_stated_in_words
+    description: The Buddhist side is free — said in the caption, because the images show the paid pages
+    weight: 4
+    pass_condition: "'free' in output.lower() and any(w in output.lower() for w in ['buddhist', 'dhamma', 'chanting'])"
+
+  - name: price_stated_plainly
+    description: Gives the real monthly price rather than "affordable"
+    weight: 4
+    pass_condition: "'£9.99' in output"
+
+  - name: see_before_you_pay
+    description: Says the learner can see what they unlock before paying — the persona tries before she buys
+    weight: 3
+    pass_condition: "any(s in output.lower() for s in ['before you pay', 'see every page', 'every page you', 'no card'])"
+
+  - name: cta_links_to_the_live_domain
+    description: The call to action points at the custom domain, not a hosting URL
+    weight: 4
+    pass_condition: "'thaibridge-ai.smoald.com' in output and 'onrender.com' not in output"
+
+  - name: no_pressure_selling
+    description: No urgency tricks — the persona is wary of hard sells around her faith and family
+    weight: 3
+    pass_condition: "not any(s in output.lower() for s in ['limited time', 'hurry', 'act now', \"don't miss\", 'last chance'])"
+
+  - name: carries_hashtags
+    description: Ends with a usable hashtag set for the temple / Thai-British groups
+    weight: 2
+    pass_condition: "output.count('#') >= 5 and '#learnthai' in output.lower()"
+
+  - name: is_substantial
+    description: A real post, not a slogan
+    weight: 2
+    pass_condition: "len(output.split()) >= 120"
+
+test_cases:
+  - input:
+      brief: "Write the Facebook post for ThaiBridge AI, a Thai language and Dhamma learning app, aimed at a British woman married into a Thai family who volunteers at a Thai temple; goal is new free accounts; the images will be two screenshots of the paid Sentences page (three politeness levels, and the monastic note on giving to a monk); the Buddhist side is free and the Thai course is £9.99 a month; link to thaibridge-ai.smoald.com"
+    expected_traits:
+      - opens with the persona's mistake, not the product
+      - names formal, neutral and casual
+      - uses the give-to-a-monk example
+      - says the founder is a monk and a developer
+      - states that the Buddhist side is free and the Thai course costs £9.99
+      - links to the custom domain with no urgency language

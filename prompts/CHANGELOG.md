@@ -7,6 +7,31 @@ Each entry follows this format:
 
 ---
 
+## meta-ai-post-prompts
+
+### 2026-09-17 — v1 → v2
+**Change:** The text prompt's CTA moved from `thaibridge-ai.onrender.com` to `thaibridge-ai.smoald.com`. v1 — the version actually pasted into Meta AI — is kept in `versions/`. The image prompt is unchanged; it carries no URL.
+**Reason:** The Render hosting URL advertises the scaffolding rather than the address, and would disagree with the live site, the README and all four coursework documents the moment the host changed.
+**Impact:** A rubric criterion, `cta_links_to_the_live_domain`, now fails any output carrying the hosting URL. Worth recording *how* it was found: not by re-reading the prompt but by writing the rubric and asking what a wrong output would look like.
+
+---
+
+### 2026-09-17 — v1
+**Change:** First version. The course's two GenAI templates — nine sections for the post text, ten for the image — filled in for ThaiBridge AI from the facts the four coursework documents had already settled: the same persona, the paid Sentences page, Facebook. Brand colours read from `static/css/base.css` rather than invented.
+**Reason:** *"Do this for ThaiBridge-AI."* The activity marks on every section being answered with a real constraint, and the post has to agree with the coursework it sits beside.
+**Impact:** Run in Meta AI by the author and the output reworked — what changed was not captured, and the entry records "not tracked" rather than a guess.
+
+---
+
+## social-media-coursework
+
+### 2026-09-15 — v1 → v3
+**Change:** v1 was the chain — *"one document at a time. Business description first, then feed that into the SMART goal, then the persona, and so on"* — with a read-only step first and a review gate after each document. v2 moved the Facebook post's image from the free chanting book to the paid Sentences page (*"WOuld it be better to show part of the paid product?"* … *"Can you do both?"*). v3 replaced the mock-ups with screenshots of the live site.
+**Reason:** The SMART goal is ten paying subscribers, so the pictures have to show what £9.99 buys; the free content is a line in the caption. Real screenshots because the audience checks carefully before trusting anything to do with their faith or their family.
+**Impact:** Four PDFs beside the SMOALD originals. Taking the tutor screenshot meant asking the live tutor which word for "give" to use with a monk, and it answered backwards twice — `a1df2f9` gives every tutor mode the register rules the Sentences page already renders, with tests in `tests/test_ai_register_rules.py`. The author edited wording before submitting; those edits were not recorded, and the entry says so.
+
+---
+
 ## thai-pair-audit
 
 ### 2026-09-10 — v1 → v3
