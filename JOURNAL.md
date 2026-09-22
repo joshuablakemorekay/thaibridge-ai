@@ -3676,3 +3676,80 @@ That's the honest answer.
 `prompts/social-media-coursework/`, `prompts/meta-ai-post-prompts/`. The
 coursework session itself is the entry for 15 September; the tutor fix it found
 is commit `a1df2f9`.
+
+---
+
+## 22 September 2026 — Finding a chant by name, and the 4.9MB page I found while doing it
+
+**TL;DR:** The chanting index can be searched by name now — Thai, romanised or
+English. Measuring the page while building that search turned up the real
+problem: it was 4.9MB, because all 305 chants were in it whether you opened
+them or not. It's 545KB now. And chants read by title were quietly missing
+their last line.
+
+305 chants is more than anyone scrolls. You could already jump to a page number
+the monk called out, but not to a chant by its name, which is the other half of
+how a chant gets asked for.
+
+### How we did it
+
+The whole index is already on the page, so the search filters it in the browser
+— no round trip, which matters on temple wifi. Names are folded down to what
+someone can actually type: lower case, accents stripped so "Khemakhema" finds
+"Khemākhema", spaces and hyphens ignored so "karaniya metta sutta" and
+"karaniya-metta-sutta" land in the same place. Thai script passes through
+untouched, because its vowels and tone marks are letters, not accents.
+
+Then the page weight. Every chant's verses, background and meaning were being
+rendered into the index inside a closed card — a whole book downloaded to read
+one chant. The chant body moved into its own template first, with nothing else
+changed, and the rendered page compared byte for byte to prove it. Then each
+chant got a page of its own, the cards were emptied, and a card now fetches its
+chant the first time it's opened.
+
+### The bit worth keeping
+
+Two things that only showed up by looking rather than by reasoning.
+
+The search box was sticky under the nav at a hard-coded 86px. The nav is two
+rows on a laptop and three on a phone — 202px — so on a narrow window the box
+was sitting *behind* it. Measuring the nav at runtime is four lines and is
+right at every width. The guess was one number and was wrong everywhere except
+where I happened to test it.
+
+Pressing Enter to open the single match scrolled 3,600px past it. Opening a
+chant adds thousands of pixels of verses to the page, and a smooth scroll still
+animating while the page grows underneath it lands nowhere near. A plain jump —
+which is what "jump to this chant" meant anyway — is exact.
+
+And reading the templates side by side showed that the book prints จบ… under a
+finished chant, the page-by-page view has always shown it, and reading the same
+chant by its title never did. Seventy-two chants ended a line short for anyone
+who came in that way.
+
+**Engineering Contribution**
+
+- *Decisions made:* search names before summaries, and say which — "No name
+  matches. 3 chants mention it" — so a common word like "refuge" can't bury the
+  chant actually called Refuge. The card's fallback link is a real page, not a
+  placeholder, so a reader without JavaScript follows it to the same chant from
+  the same template rather than opening a card into nothing. The closing was
+  raised as a question and added on my say-so, not slipped in with the
+  performance work.
+- *Improvements made to generated code:* the first search box was hidden behind
+  the nav and the first Enter overshot by 3,600px; both were caught by driving
+  the real page rather than trusting it. The CSS move for the closing formula
+  was checked in the browser in both book and verse-by-verse layouts, because
+  moving a rule earlier in the cascade can silently lose to a longer selector —
+  it didn't, but that needed proving rather than assuming.
+- *Roughly how much was accepted as-is vs engineered on:* the search, the
+  lazy-loading and the tests were drafted by Claude to my brief and then
+  corrected on the evidence above. The two behaviour questions — whether to
+  lazy-load at all, and whether to add the closing — were mine.
+
+**References / Conversations**
+Commits `09ff588` (search), `94ffe13` (the extraction, no behaviour change),
+`a971b09` (fetch on open, and a page per chant), `a8e57d2` (the closing).
+`tests/test_chanting_search.py` and `tests/test_chanting_chant_page.py` — the
+latter holds a guard that fails if the chants ever end up back in the index.
+Live and verified on Render the same day.
