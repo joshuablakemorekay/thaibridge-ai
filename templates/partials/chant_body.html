@@ -118,4 +118,24 @@
         <h4 class="verse-section-end is-major">{{ verse.section_end_major }}</h4>
         {% endif %}
         {% endfor %}
+
+        {# The closing formula the book prints under a finished chant — จบ… .
+           The page-by-page view has always shown it; reading the chant by
+           title did not, so 72 chants ended a line early for anyone who came
+           in that way. Shown unconditionally here because this IS the whole
+           chant — the page view has to ask whether the chant ends on the page
+           being read, and here it always does.
+
+           Gated on pali OR thai, because some colophons are THAI, not Pali:
+           จบสิบสองตำนาน closes the Twelve Tamnan, and the สวดแจง section closes
+           its chants with จบพระวินัย and the like. #}
+        {% if chant.closing and (chant.closing.pali or chant.closing.thai) %}
+        <div class="verse chant-closing">
+            {% if chant.closing.pali %}<p class="layer layer-pali">{{ chant.closing.pali }}</p>{% endif %}
+            {% if chant.closing.pali_roman %}<p class="layer layer-pali_roman">{{ chant.closing.pali_roman }}</p>{% endif %}
+            {% if chant.closing.thai %}<p class="layer layer-thai">{{ chant.closing.thai }}</p>{% endif %}
+            {% if chant.closing.paiboon %}<p class="layer layer-paiboon">{{ chant.closing.paiboon }}</p>{% endif %}
+            {% if chant.closing.english %}<p class="layer layer-english">{{ chant.closing.english }}</p>{% endif %}
+        </div>
+        {% endif %}
         </div><!-- /.chant-body -->

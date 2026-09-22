@@ -360,6 +360,16 @@
     /* The link out to the page of the printed book this chant is set on. */
     .chant-open-at-page { margin: 0 0 1rem; font-size: 0.9rem; }
 
+    /* The closing formula the book prints under a chant — จบ… . Centred and
+       quiet, as printed. Shared, because both the page-by-page view and the
+       chant itself print it, and it must look the same in both. */
+    .chant-closing {
+        text-align: center;
+        margin: 1.25rem 0 0;
+        max-width: 70ch;
+    }
+    .chant-closing .layer { border-left: none; padding-left: 0; }
+
     @media print {
         .layer-panel { display: none; }
         .verse { break-inside: avoid; }

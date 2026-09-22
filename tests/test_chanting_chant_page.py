@@ -108,6 +108,47 @@ def test_the_index_stays_light(unlocked_client):
     )
 
 
+WITH_CLOSING = [c for c in chanting.CHANTS
+                if c.get('closing')
+                and (c['closing'].get('pali') or c['closing'].get('thai'))]
+
+
+def test_the_book_still_has_chants_that_end_with_a_closing():
+    """If this ever hits zero the tests below stop proving anything."""
+    assert len(WITH_CLOSING) > 50
+
+
+@pytest.mark.parametrize('chant', WITH_CLOSING, ids=[c['id'] for c in WITH_CLOSING])
+def test_a_chant_shows_the_closing_the_book_prints_under_it(chant):
+    """จบ… — the line that ends a chant.
+
+    The page-by-page view has always printed it. Reading the chant by title
+    did not, so for 72 chants the ending was simply missing for anyone who
+    came in that way. It is the same markup in both views now.
+    """
+    from flask import render_template
+
+    import app as flask_app
+
+    with flask_app.app.test_request_context():
+        html = render_template('partials/chant_body.html', chant=chant,
+                               sections=chanting.CHANT_SECTIONS, spans={})
+
+    assert 'chant-closing' in html
+    printed = chant['closing'].get('pali') or chant['closing'].get('thai')
+    assert printed in html
+
+
+def test_a_chant_with_no_closing_prints_none(unlocked_client):
+    """Only where the book prints one — an empty formula is not a blank line."""
+    without = next(c for c in chanting.CHANTS if not c.get('closing'))
+    page = unlocked_client.get(
+        f"/chanting/chant/{without['id']}").get_data(as_text=True)
+
+    # The markup, not the stylesheet — every chant page carries the CSS rule.
+    assert 'class="verse chant-closing"' not in page
+
+
 @pytest.mark.parametrize('route', ['/chanting/chant/{}', '/chanting/chant/{}/body'])
 def test_both_chant_routes_render_the_same_words(unlocked_client, route):
     """One template, so the page and the fragment cannot drift apart."""
