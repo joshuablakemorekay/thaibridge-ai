@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{# One chant, on a page of its own.
+
+   Two jobs, both of which the index could not do. A chant now has an address
+   that can be sent to someone — "read this one" — instead of a card buried in
+   a list of 305. And it is what the index falls back to: the index no longer
+   carries every chant's words, so a reader without JavaScript follows a link
+   here rather than opening a card into nothing.
+
+   The chant itself is the shared partial, so this page and the index show the
+   same chant in the same words. #}
+
+{% block sidebar %}{% include 'partials/sidebar_buddhism.html' %}{% endblock %}
+{% block rightcol %}{% include 'partials/rightcol.html' %}{% endblock %}
+
+{% block title %}{{ chant.title_english or chant.title_pali or chant.title_thai }} — Digital Chanting Book{% endblock %}
+
+{% block extra_css %}
+{% include 'partials/chanting_book_css.html' %}
+<style>
+    .chant-crumb { margin: 0 0 1rem; font-size: 0.9rem; }
+    .chant-page-header {
+        background: #FFFDF8;
+        border: 2px solid var(--royal-gold);
+        border-left: 5px solid var(--monk-saffron);
+        border-radius: 12px;
+        padding: 1.1rem 1.25rem;
+        margin: 0 0 1.5rem;
+    }
+    .chant-page-header .title-thai {
+        display: block;
+        font-size: 1.75rem;
+        color: var(--royal-purple);
+        line-height: 1.5;
+        margin: 0;
+    }
+    .chant-page-header .title-pali {
+        display: block;
+        font-style: italic;
+        color: var(--temple-red);
+        margin-top: 0.25rem;
+    }
+    .chant-page-header .title-english {
+        display: block;
+        color: #55483a;
+        margin-top: 0.25rem;
+    }
+    .chant-page-header .title-when {
+        display: block;
+        color: var(--monk-saffron);
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+    }
+    .chant-page-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+        align-items: center;
+        margin-top: 0.7rem;
+    }
+    .chant-page-meta .card-page {
+        display: inline-block;
+        background: var(--royal-gold);
+        color: #fff;
+        border-radius: 999px;
+        padding: 0.15rem 0.75rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+    .chant-page-meta .chant-source {
+        display: inline-block;
+        background: var(--royal-purple);
+        color: #fff;
+        border-radius: 999px;
+        padding: 0.15rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    .chant-page-meta .card-count { font-size: 0.8rem; color: #777; }
+    .chant-page-summary {
+        color: #5a5a5a;
+        line-height: 1.6;
+        margin: 0.7rem 0 0;
+        max-width: 62ch;
+    }
+    .chant-page-foot { margin-top: 2rem; font-size: 0.95rem; }
+
+    @media (max-width: 600px) {
+        .chant-page-header .title-thai { font-size: 1.5rem; }
+    }
+    @media print {
+        /* The chant, and nothing that only makes sense on a screen. */
+        .chant-crumb, .chant-page-foot { display: none; }
+        .chant-page-header { border: none; padding: 0; }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<p class="chant-crumb"><a href="{{ url_for('chanting_book') }}">← All chants</a></p>
+
+<div class="chant-page-header">
+    <span class="title-thai">{{ chant.title_thai }}</span>
+    {% if chant.title_pali %}<span class="title-pali">{{ chant.title_pali }}</span>
+    {% elif chant.title_roman %}<span class="title-pali">{{ chant.title_roman }}</span>{% endif %}
+    {% if chant.title_english %}<span class="title-english">{{ chant.title_english }}</span>{% endif %}
+    {% if chant.when_chanted %}<span class="title-when">{{ chant.when_chanted }}</span>{% endif %}
+    <span class="chant-page-meta">
+        {% if span_text %}<span class="card-page">{% if spans.get(chant.id) and spans[chant.id]|length > 1 %}pages{% else %}page{% endif %} {{ span_text }}</span>
+        {% elif chant.page_start %}<span class="card-page">page {{ chant.page_start }}</span>{% endif %}
+        {% if chant.source %}<span class="chant-source">{{ chant.source }}</span>{% endif %}
+        <span class="card-count">{{ chant.verses|length }} verses</span>
+    </span>
+    {% if chant.summary %}<p class="chant-page-summary">{{ chant.summary }}</p>{% endif %}
+</div>
+
+{# The layer toggles are deliberately NOT repeated here. They are remembered
+   in the browser, so a reader who switched Paiboon off on the index finds it
+   off here too — the panel would only be a second place to say the same
+   thing. The element they act on is #chant-book, which is why it is here. #}
+<div class="chant-book" id="chant-book">
+{% include 'partials/chant_body.html' %}
+</div>
+
+<p class="chant-page-foot">
+    <a href="{{ url_for('chanting_book') }}#{{ chant.id }}">← Back to this chant in the index</a>
+</p>
+{% endblock %}
+
+{% block extra_js %}
+{% include 'partials/chanting_layers_js.html' %}
+{% endblock %}

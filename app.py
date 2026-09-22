@@ -36,7 +36,8 @@ load_dotenv()  # Load .env file before anything else reads environment variables
 # Set API key BEFORE any other imports
 
 from urllib.parse import urlparse  # only-our-own-host check on redirect targets
-from flask import Flask, render_template, request, jsonify, session, redirect, url_for
+from flask import (Flask, render_template, request, jsonify, session, redirect,
+                   url_for, abort)
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from flask_login import (
@@ -7017,6 +7018,60 @@ def chanting_book():
                            # rather than in a loop over 48 cards in Jinja.
                            span_text={cid: chanting.describe_pages(pages)
                                       for cid, pages in spans.items()})
+
+
+def _chant_or_404(chant_id):
+    """One chant and where the book prints it, or a 404.
+
+    The spans are read for the whole book because that is the only way they
+    are known — they come out of the page index, which is built from every
+    chant. Only this chant's are handed on.
+    """
+    chant = chanting.get_chant(chant_id)
+    if chant is None:
+        abort(404)
+    spans = chanting.chant_page_spans()
+    return chant, spans
+
+
+@app.route('/chanting/chant/<chant_id>')
+@require_access('chanting')
+def chanting_chant(chant_id):
+    """One chant on a page of its own.
+
+    The index used to be the only place a chant could be read, which made a
+    chant something you could point at only as a card in a list of 305. This
+    gives each one an address that can be sent to somebody.
+
+    It is also the honest fallback for the index: the index no longer ships
+    every chant's words, so without JavaScript its cards link here rather
+    than opening into nothing.
+    """
+    chant, spans = _chant_or_404(chant_id)
+    return render_template('chanting_chant.html',
+                           chant=chant,
+                           spans=spans,
+                           span_text=chanting.describe_pages(
+                               spans.get(chant_id, [])),
+                           sections=chanting.CHANT_SECTIONS,
+                           layers=chanting.CHANT_LAYERS)
+
+
+@app.route('/chanting/chant/<chant_id>/body')
+@require_access('chanting')
+def chanting_chant_body(chant_id):
+    """Just the chant itself, as a fragment for the index to drop into a card.
+
+    The index page was 4.9MB because all 305 chants were rendered into it,
+    opened or not — a whole book downloaded to read one chant, on whatever
+    signal a temple has. Now the cards arrive empty and a chant's words are
+    fetched the first time that card is opened, from exactly the same
+    template this route and the chant's own page use.
+    """
+    chant, spans = _chant_or_404(chant_id)
+    return render_template('partials/chant_body.html',
+                           chant=chant, spans=spans,
+                           sections=chanting.CHANT_SECTIONS)
 
 
 @app.route('/chanting/contents')

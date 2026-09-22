@@ -1526,7 +1526,10 @@ class TestVariantReadingsOnScreen:
         return {
             'page': client.get('/chanting/page/26',
                                follow_redirects=True).get_data(as_text=True),
-            'chant': client.get('/chanting',
+            # The chant view is the chant's own page. It used to be the index,
+            # which rendered every chant in full; the index now holds only the
+            # cards and fetches a chant when one is opened.
+            'chant': client.get('/chanting/chant/only',
                                 follow_redirects=True).get_data(as_text=True),
         }
 

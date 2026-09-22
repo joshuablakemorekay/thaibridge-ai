@@ -68,7 +68,6 @@
         max-width: 62ch;
         margin: 0 0 1.75rem;
     }
-    .chant-open-at-page { margin: 0 0 1rem; font-size: 0.9rem; }
 
     @media (max-width: 600px) {
         .open-at-page form { width: 100%; }
@@ -140,6 +139,21 @@
     /* A <details> keeps its own display rule in some browsers, so hiding a
        filtered-out card needs saying outright rather than left to `hidden`. */
     .chant-card[hidden] { display: none; }
+
+    /* ── A card waiting for its chant ────────────────────────────────
+       Three states in one line of markup. Without JavaScript only the link
+       shows, and it is a real link to a real page. While the chant is being
+       fetched the wait shows too, and if the fetch fails the reader is told
+       plainly and still has the link. */
+    .chant-pending-line {
+        margin: 1rem 0 0;
+        font-size: 0.95rem;
+        color: #55483a;
+    }
+    .chant-pending-wait,
+    .chant-pending-failed { display: none; }
+    .chant-pending.is-loading .chant-pending-wait { display: inline; }
+    .chant-pending.is-failed .chant-pending-failed { display: inline; }
     /* Jumping to a chant must not park it underneath the nav and the search
        box. How much they take up depends on the width of the window, so the
        real figure is measured and set on :root; this is the fallback. */
@@ -261,20 +275,6 @@
         line-height: 1.5;
         margin-top: 0.6rem;
     }
-
-    /* Honesty note for chants the book prints in Pali only. Deliberately
-       quiet — it informs the reader without shouting a warning at them. */
-    .chant-unverified {
-        background: #fdf6e8;
-        border-left: 3px solid var(--monk-saffron);
-        border-radius: 0 6px 6px 0;
-        padding: 0.7rem 0.9rem;
-        margin: 1rem 0 0;
-        font-size: 0.88rem;
-        line-height: 1.6;
-        color: #5a4a2a;
-    }
-
 
     @media (max-width: 600px) {
         .chant-header .title-thai { font-size: 1.5rem; }
@@ -421,7 +421,23 @@
             {% if chant.summary %}<span class="card-summary">{{ chant.summary }}</span>{% endif %}
         </summary>
 
-{% include 'partials/chant_body.html' %}
+        {# The chant's words are NOT here. Rendering all 305 into this page
+           made it 4.9MB — a whole book downloaded to read one chant. The card
+           carries the address of its chant instead, and the words arrive the
+           first time the card is opened.
+
+           The link is not a placeholder: it is what a reader without
+           JavaScript follows, and it goes to the same chant rendered from the
+           same template. #}
+        <div class="chant-pending"
+             data-chant-url="{{ url_for('chanting_chant_body', chant_id=chant.id) }}">
+            <p class="chant-pending-line">
+                <span class="chant-pending-wait">Fetching the chant…</span>
+                <span class="chant-pending-failed">That did not come through.
+                    It can still be read on its own page:</span>
+                <a href="{{ url_for('chanting_chant', chant_id=chant.id) }}">Read this chant in full →</a>
+            </p>
+        </div>
     </details>
     {% endfor %}
 </div>
@@ -470,6 +486,62 @@
             printing.addListener(onChange);
         }
     }
+})();
+
+// ── A chant arrives when its card is opened ─────────────────────────────
+// The index used to carry all 305 chants in full, opened or not, which made
+// it a 4.9MB page to read one chant on temple wifi. Now each card holds the
+// address of its chant and fetches the words the first time it is opened.
+//
+// Nothing here is required for the page to work: without fetch, or if a
+// request fails, the card shows a link to the chant's own page, which is the
+// same chant from the same template.
+(function () {
+    var grid = document.getElementById('chant-book');
+    if (!grid || !window.fetch) return;
+
+    function load(card) {
+        var pending = card.querySelector('.chant-pending');
+        if (!pending || pending.getAttribute('data-loading')) return;
+        pending.setAttribute('data-loading', '1');
+        pending.classList.add('is-loading');
+        pending.classList.remove('is-failed');
+
+        fetch(pending.getAttribute('data-chant-url'), {
+            credentials: 'same-origin',
+            headers: { 'X-Requested-With': 'fetch' }
+        }).then(function (response) {
+            if (!response.ok) throw new Error(response.status);
+            return response.text();
+        }).then(function (html) {
+            // A gate that has lapsed answers with a whole page rather than a
+            // chant. Dropping that into the card would put a second copy of
+            // the site inside it, so check it is a chant before trusting it.
+            if (html.indexOf('chant-body') === -1) throw new Error('not a chant');
+            pending.outerHTML = html;
+        }).catch(function () {
+            pending.removeAttribute('data-loading');
+            pending.classList.remove('is-loading');
+            pending.classList.add('is-failed');
+        });
+    }
+
+    // `toggle` does not bubble, so it is caught on the way down instead.
+    grid.addEventListener('toggle', function (event) {
+        var card = event.target;
+        // Every context section inside a chant is a <details> too — only the
+        // cards themselves are asking for anything.
+        if (card.classList && card.classList.contains('chant-card') && card.open) {
+            load(card);
+        }
+    }, true);
+
+    // Printing opens every chant it is given; the ones never opened have no
+    // words to print, and waiting on the network mid-print is not an option.
+    // So fetch anything already open before the print dialogue is drawn.
+    window.addEventListener('beforeprint', function () {
+        [].slice.call(grid.querySelectorAll('.chant-card[open]')).forEach(load);
+    });
 })();
 
 // ── Find a chant by name ────────────────────────────────────────────────
