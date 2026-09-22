@@ -75,6 +75,84 @@
         .open-at-page input { flex: 1; width: auto; }
     }
 
+    /* ── Find a chant by name ────────────────────────────────────────
+       The page box above answers "which page did he call out". This answers
+       the other question — "where is the Karaniya Metta Sutta" — and it has
+       to answer it whichever name the reader happens to know: the Thai, the
+       romanised Pali, or the English. There are 305 chants on this page, which
+       is far more than anyone can scroll past.
+
+       Sticky under the nav (itself sticky) so the box is still there however
+       far down the grid you have gone. The offset is a starting guess only —
+       the nav is two rows on a laptop and three on a phone, so its real height
+       is measured at runtime and written into `top`. A guess here left the box
+       hidden behind the nav on a narrow window. */
+    .chant-search {
+        position: sticky;
+        top: 86px;
+        z-index: 900;
+        background: #FFFDF8;
+        border: 2px solid var(--royal-gold);
+        border-radius: 12px;
+        padding: 0.8rem 1.1rem;
+        margin: 0 0 1.25rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    }
+    .chant-search label {
+        display: block;
+        font-size: 0.85rem;
+        color: #55483a;
+        margin-bottom: 0.4rem;
+    }
+    .chant-search-row { display: flex; gap: 0.5rem; align-items: center; }
+    .chant-search input {
+        flex: 1;
+        min-width: 0;
+        padding: 0.55rem 0.7rem;
+        border: 2px solid var(--royal-gold);
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: inherit;
+    }
+    .chant-search button {
+        padding: 0.55rem 0.85rem;
+        border: none;
+        border-radius: 8px;
+        background: var(--royal-purple);
+        color: #fff;
+        font-weight: bold;
+        font-size: 0.9rem;
+        cursor: pointer;
+        font-family: inherit;
+    }
+    /* The running count. #55483a on #FFFDF8 is 9.1:1 — well clear of AA. */
+    .chant-search-count {
+        margin: 0.5rem 0 0;
+        font-size: 0.85rem;
+        color: #55483a;
+    }
+    .chant-search-empty {
+        margin: 0.4rem 0 0;
+        font-size: 0.85rem;
+        color: #55483a;
+        max-width: 62ch;
+    }
+    /* A <details> keeps its own display rule in some browsers, so hiding a
+       filtered-out card needs saying outright rather than left to `hidden`. */
+    .chant-card[hidden] { display: none; }
+    /* Jumping to a chant must not park it underneath the nav and the search
+       box. How much they take up depends on the width of the window, so the
+       real figure is measured and set on :root; this is the fallback. */
+    .chant-card { scroll-margin-top: var(--chant-jump-offset, 170px); }
+
+    @media (max-width: 600px) {
+        /* A phone has no room to give a sticky search box: the nav already
+           takes three rows, and the two together would leave a slot of
+           screen to read 305 chants through. It stays at the top of the
+           list instead, which is where it was going to be looked for. */
+        .chant-search { position: static; }
+    }
+
     /* ── The index: a grid of chant cards ────────────────────────────
        Closed, each chant is a small box you can scan; opened, it spans the
        full width of the grid so there is room to read it. Sized so a phone
@@ -291,6 +369,29 @@
     Tap a chant to open it.
 </p>
 
+{# Hidden until the JavaScript that drives it has run. A search box that
+   silently does nothing would be worse than no search box at all — and
+   without it the page is exactly what it was: every chant, in book order. #}
+<div class="chant-search" id="chant-search" hidden>
+    <label for="chant-find">
+        Find a chant by name — Thai, romanised, or English. A page number works too.
+    </label>
+    <div class="chant-search-row">
+        <input type="search" id="chant-find" autocomplete="off" spellcheck="false"
+               placeholder="e.g. metta, กรณียเมตตสูตร, loving-kindness, 47"
+               aria-describedby="chant-search-count">
+        <button type="button" id="chant-find-clear">Clear</button>
+    </div>
+    {# role="status" so a screen reader hears the count change without the
+       focus ever leaving the box the reader is typing into. #}
+    <p class="chant-search-count" id="chant-search-count" role="status"></p>
+    <p class="chant-search-empty" id="chant-search-empty" hidden>
+        Nothing here by that name. The book holds more than the app does yet —
+        try <a href="{{ url_for('chanting_contents') }}">the book's own contents
+        page (สารบัญ)</a>, which lists every chant the printed book has.
+    </p>
+</div>
+
 <div class="chant-book chant-grid" id="chant-book">
     {% for chant in chants %}
     <!-- <details> rather than a JS panel: it opens on click or Enter, works
@@ -484,6 +585,210 @@
             printing.addListener(onChange);
         }
     }
+})();
+
+// ── Find a chant by name ────────────────────────────────────────────────
+// Pure front end. The whole index is already in the page, so filtering it
+// here is instant and asks the server for nothing — same approach as the
+// layer toggles, and it keeps working on a phone with a bad signal in the
+// middle of a service.
+(function () {
+    var panel = document.getElementById('chant-search');
+    var box = document.getElementById('chant-find');
+    var clear = document.getElementById('chant-find-clear');
+    var count = document.getElementById('chant-search-count');
+    var empty = document.getElementById('chant-search-empty');
+    var grid = document.getElementById('chant-book');
+    if (!panel || !box || !grid) return;
+
+    var cards = [].slice.call(grid.querySelectorAll('.chant-card'));
+    if (!cards.length) return;
+
+    // Fold a name down to what a reader can actually type: lower case, no
+    // accents — so "Khemakhema" finds "Khemākhema" — and no spaces, hyphens
+    // or punctuation, so "saranadipika gatha" finds "saraṇadīpikā-gāthā".
+    // Thai script passes through untouched: its vowels and tone marks are
+    // letters in their own right, not accents to be stripped.
+    function fold(text) {
+        return (text || '').toLowerCase().normalize('NFD')
+            .replace(/[̀-ͯ]/g, '')
+            .replace(/[^0-9a-z฀-๿]+/g, '');
+    }
+
+    function textOf(card, selector) {
+        return [].slice.call(card.querySelectorAll(selector))
+            .map(function (el) { return el.textContent; }).join(' ');
+    }
+
+    // Every page the chant runs across, ranges opened out. The card says
+    // "pages 47–49"; someone who was called to 48 must still find it.
+    function pagesOf(card) {
+        var pages = [];
+        textOf(card, '.card-page').replace(
+            /(\d+)\s*[–—-]\s*(\d+)|(\d+)/g,
+            function (whole, from, to, one) {
+                if (one) {
+                    pages.push(Number(one));
+                } else {
+                    for (var n = Number(from); n <= Number(to); n++) pages.push(n);
+                }
+                return whole;
+            });
+        return pages;
+    }
+
+    var index = cards.map(function (card) {
+        return {
+            card: card,
+            // Tier one: the names. This is what "find a chant" means, and it
+            // includes the card's own id — a plain romanisation that is the
+            // only typeable name some of the Pali-only chants have.
+            name: fold(textOf(card, '.card-thai, .card-pali, .card-english')
+                       + ' ' + card.id),
+            // Tier two: the rest of what the closed card says — when it is
+            // chanted, where it comes from, what it is about. Searched only
+            // when nothing matched by name, so that a common word like
+            // "refuge" cannot bury the chant actually called Refuge.
+            about: fold(textOf(card, '.card-when, .chant-source, .card-summary')),
+            pages: pagesOf(card)
+        };
+    });
+
+    function openCard(card) {
+        card.open = true;
+        // Straight there, not a smooth glide. Opening a chant adds thousands
+        // of pixels of verses to the page, and a smooth scroll that is still
+        // animating while the page grows under it lands somewhere else
+        // entirely — measured at 3,600px past the chant asked for. A jump is
+        // what was asked for anyway.
+        if (card.scrollIntoView) {
+            card.scrollIntoView({ block: 'start' });
+        }
+    }
+
+    var showing = index;
+
+    function filterToQuery() {
+        var raw = box.value.trim();
+        var terms = raw.split(/\s+/).map(fold).filter(Boolean);
+        var number = /^\d+$/.test(raw) ? Number(raw) : null;
+
+        if (!terms.length) {
+            showing = index;
+            index.forEach(function (entry) { entry.card.hidden = false; });
+            count.textContent = cards.length + ' chants, in book order.';
+            empty.hidden = true;
+            return;
+        }
+
+        function holdsAll(haystack) {
+            return terms.every(function (term) {
+                return haystack.indexOf(term) !== -1;
+            });
+        }
+
+        var byName = index.filter(function (entry) {
+            return holdsAll(entry.name)
+                || (number !== null && entry.pages.indexOf(number) !== -1);
+        });
+        var found = byName;
+        if (!found.length) {
+            found = index.filter(function (entry) { return holdsAll(entry.about); });
+        }
+
+        showing = found;
+        index.forEach(function (entry) {
+            entry.card.hidden = found.indexOf(entry) === -1;
+        });
+
+        if (!found.length) {
+            count.textContent = 'No chant found.';
+            empty.hidden = false;
+            return;
+        }
+        empty.hidden = true;
+        // "Press Enter" is only worth saying when there is one thing to open.
+        var opener = found.length === 1 ? ' — press Enter to open it.' : '.';
+        if (byName.length) {
+            count.textContent = (found.length === 1 ? '1 chant'
+                                 : found.length + ' chants') + opener;
+        } else {
+            // Said plainly, because it changes what the reader is looking at:
+            // these are not chants of that name, they are chants that talk
+            // about it. Leaving that unsaid reads as a wrong answer.
+            count.textContent = 'No name matches. '
+                + (found.length === 1 ? '1 chant mentions it'
+                   : found.length + ' chants mention it') + opener;
+        }
+    }
+
+    function run() {
+        filterToQuery();
+        // The box grows and shrinks with the message it is showing, so where
+        // a jumped-to chant has to land moves with it.
+        placeUnderNav();
+    }
+
+    box.addEventListener('input', run);
+    box.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter') return;
+        event.preventDefault();          // it is not in a form; make that plain
+        if (showing.length) openCard(showing[0].card);
+    });
+    clear.addEventListener('click', function () {
+        box.value = '';
+        run();
+        box.focus();
+    });
+
+    // A link from the contents page or from a page of the book ends in
+    // #<chant id>. The browser scrolls to the card but leaves it SHUT, because
+    // the id sits on the <details> itself rather than on something inside it —
+    // so the reader arrived at the chant they asked for and saw it closed.
+    function openFromHash() {
+        var id = (window.location.hash || '').slice(1);
+        if (!id) return;
+        try { id = decodeURIComponent(id); } catch (e) { /* leave it as typed */ }
+        var card = document.getElementById(id);
+        if (card && card.classList.contains('chant-card')) {
+            card.hidden = false;
+            openCard(card);
+        }
+    }
+    window.addEventListener('hashchange', openFromHash);
+
+    // Shown only now that it works.
+    panel.hidden = false;
+
+    // The nav is sticky, and how tall it is depends on the width of the
+    // window — two rows on a laptop, three on a phone. So measure it rather
+    // than assume: a hard-coded offset parked this box behind the nav, and a
+    // jumped-to chant behind both of them.
+    var nav = document.querySelector('nav');
+    function placeUnderNav() {
+        var navHeight = nav ? Math.round(nav.getBoundingClientRect().height) : 80;
+        var sticky = window.getComputedStyle(panel).position === 'sticky';
+        if (sticky) {
+            panel.style.top = (navHeight + 6) + 'px';
+        } else {
+            panel.style.top = '';
+        }
+        document.documentElement.style.setProperty(
+            '--chant-jump-offset',
+            (navHeight + (sticky ? panel.offsetHeight + 16 : 16)) + 'px');
+    }
+    window.addEventListener('resize', placeUnderNav);
+    window.addEventListener('orientationchange', placeUnderNav);
+
+    // ?q=metta opens the book already filtered, so a search can be bookmarked
+    // or passed to someone else.
+    var query = /[?&]q=([^&]*)/.exec(window.location.search);
+    if (query) {
+        try { box.value = decodeURIComponent(query[1].replace(/\+/g, ' ')); }
+        catch (e) { /* a mangled link is not worth failing over */ }
+    }
+    run();
+    openFromHash();
 })();
 </script>
 {% endblock %}
