@@ -104,7 +104,9 @@ class AnthropicProvider(Provider):
             max_tokens=4096,
             messages=[{"role": "user", "content": rendered}],
         )
-        return msg.content[0].text
+        # Join the text blocks rather than reading content[0]: a model that
+        # can think puts a thinking block first (same fix as ai_agent.py).
+        return ''.join(b.text for b in msg.content if b.type == 'text')
 
 
 def render_prompt(template: str, inputs: dict) -> str:
