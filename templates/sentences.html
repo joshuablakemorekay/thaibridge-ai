@@ -95,6 +95,22 @@
 .sb-tile .thai-text { font-size: 1.4rem; line-height: 1.3; }
 .sb-tile .sb-roman { font-size: 0.8rem; color: #666; }
 .sb-tile.static { cursor: default; border-color: #2e7d32; }
+.sb-levels { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.sb-level {
+    padding: 0.45rem 1rem;
+    border: 2px solid var(--saffron);
+    border-radius: 20px;
+    background: #fff;
+    color: #8a4b00;
+    font: 600 0.95rem inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+.sb-level.active { background: var(--saffron); color: #fff; }
+.sb-level-note { font-size: 0.9rem; color: #666; margin: 0.5rem 0 0; }
+/* Challenge: read the Thai, not the romanisation. It comes back on the reveal. */
+#sb-drill.challenge .sb-answer .sb-roman,
+#sb-drill.challenge .sb-pool .sb-roman { display: none; }
 .sb-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
 .sb-buttons .btn { margin: 0; }
 .sb-buttons .btn:disabled { opacity: 0.45; cursor: not-allowed; }
@@ -728,6 +744,11 @@
     <div class="section-content">
 <div class="card sb-card">
     <p style="font-size: 1.05rem; line-height: 1.7; margin-top: 0;">Now it's your turn. Read the English, then tap the Thai words in the right order. Say it out loud as you build it.</p>
+    <div class="sb-levels" role="group" aria-label="Difficulty">
+        <button type="button" class="sb-level active" data-level="starter" onclick="sbSetLevel('starter')" aria-pressed="true">🌱 Starter</button>
+        <button type="button" class="sb-level" data-level="challenge" onclick="sbSetLevel('challenge')" aria-pressed="false">🔥 Challenge</button>
+    </div>
+    <p id="sb-level-note" class="sb-level-note">Short sentences, with the romanisation on every word.</p>
     <div id="sb-drill" aria-live="polite">
         <div class="sb-prompt">
             <span id="sb-speaker" class="sb-speaker"></span>
@@ -908,6 +929,25 @@
     // The server deals the tiles shuffled and keeps the right order to
     // itself; the page only ever sends back the order the learner chose.
     var sbQuestion = null;
+    var sbLevel = 'starter';
+    var SB_LEVEL_NOTES = {
+        starter: 'Short sentences, with the romanisation on every word.',
+        challenge: 'Longer sentences that join ideas — and no romanisation. Read the Thai! '
+            + 'Some can be said more than one way round; any right order counts.'
+    };
+
+    function sbSetLevel(level) {
+        sbLevel = level;
+        document.querySelectorAll('.sb-level').forEach(function (b) {
+            var on = b.dataset.level === level;
+            b.classList.toggle('active', on);
+            b.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        document.getElementById('sb-level-note').textContent = SB_LEVEL_NOTES[level];
+        document.getElementById('sb-drill').classList.toggle('challenge', level === 'challenge');
+        try { localStorage.setItem('sbLevel', level); } catch (e) { /* private window */ }
+        sbNext();
+    }
 
     function sbTile(tile, onTap) {
         var b = document.createElement(onTap ? 'button' : 'span');
@@ -950,10 +990,16 @@
         document.getElementById('sb-result').hidden = true;
     }
 
+    var sbRequest = 0;
+
     function sbNext() {
-        fetch('/api/sentence-builder')
+        // Switching level quickly can leave an older request still in flight;
+        // only the newest one is allowed to draw.
+        var mine = ++sbRequest;
+        fetch('/api/sentence-builder?level=' + encodeURIComponent(sbLevel))
             .then(function (r) { return r.json(); })
             .then(function (q) {
+                if (mine !== sbRequest) { return; }
                 if (q.error) {
                     document.getElementById('sb-english').textContent = q.error;
                     return;
@@ -1022,7 +1068,11 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
-        if (document.getElementById('sb-drill')) { sbNext(); }
+        if (!document.getElementById('sb-drill')) { return; }
+        // Come back to the level the learner last chose (a convenience only).
+        var saved = null;
+        try { saved = localStorage.getItem('sbLevel'); } catch (e) { /* private window */ }
+        if (saved === 'challenge') { sbSetLevel('challenge'); } else { sbNext(); }
     });
 </script>
 {% endblock %}

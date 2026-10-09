@@ -7872,12 +7872,16 @@ def sentence_builder_question():
     if locked:
         return locked
     gender = session.get('user_gender', 'neutral')
-    q = sentence_builder.deal(gender)
+    level = request.args.get('level', 'starter')
+    if level not in sentence_builder.LEVELS:
+        return jsonify({'error': f'Unknown level: {level}'}), 400
+    q = sentence_builder.deal(gender, level)
     return jsonify({
         'question_id': issue_question(q['answer']),
         'english': q['sentence']['english'],
         'speaker': q['speaker'],
         'tiles': q['tiles'],
+        'level': level,
     })
 
 
@@ -7903,7 +7907,11 @@ def sentence_builder_check():
     candidates = (sentence_builder.all_answers('male')
                   + sentence_builder.all_answers('female'))
     scored, is_correct, correct_answer = redeem_question(
-        data.get('question_id'), sentence_builder.answer_text(tiles), candidates)
+        data.get('question_id'),
+        # A longer sentence may be right in more than one order; canonical()
+        # turns any accepted order into the one the question was issued with.
+        sentence_builder.canonical(sentence_builder.answer_text(tiles)),
+        candidates)
     if not scored:
         return jsonify({'error': 'That question has expired — here is a new one.',
                         'expired': True}), 409

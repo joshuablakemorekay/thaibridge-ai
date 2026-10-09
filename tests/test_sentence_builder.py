@@ -30,9 +30,57 @@ def test_particles_follow_the_speaker(sentence):
 def test_no_two_sentences_share_an_answer():
     # The marker recovers the right answer by matching strings, so two
     # sentences with the same text would make the reveal ambiguous.
+    # Alternative orders count too: one sentence's alternative must never be
+    # another sentence's answer, or canonical() would mark it as the wrong one.
     for speaker in sb.SPEAKER_WORDS:
         answers = sb.all_answers(speaker)
         assert len(answers) == len(set(answers))
+        everything = [a for s in sb.SENTENCES for a in sb.accepted(s, speaker)]
+        assert len(everything) == len(set(everything))
+
+
+# ── Challenge level ────────────────────────────────────────────────────────
+
+CHALLENGE = [s for s in sb.SENTENCES if sb.level_of(s) == 'challenge']
+
+
+def test_there_is_a_real_challenge_pool():
+    assert len(CHALLENGE) >= 12
+    starter_len = max(len(s['tiles']) for s in sb.SENTENCES if sb.level_of(s) == 'starter')
+    # Longer on average than anything at starter level.
+    assert sum(len(s['tiles']) for s in CHALLENGE) / len(CHALLENGE) > starter_len - 1
+
+
+def test_every_sentence_has_a_known_level():
+    assert {sb.level_of(s) for s in sb.SENTENCES} == set(sb.LEVELS)
+
+
+def test_each_level_only_deals_its_own_sentences():
+    rng = random.Random(3)
+    for level in sb.LEVELS:
+        assert {sb.level_of(sb.deal('female', level, rng)['sentence'])
+                for _ in range(100)} == {level}
+
+
+@pytest.mark.parametrize('sentence', [s for s in sb.SENTENCES if s.get('alternates')],
+                         ids=lambda s: s['english'])
+def test_alternatives_use_exactly_the_same_tiles(sentence):
+    for alt in sentence['alternates']:
+        assert sorted(alt) == sorted(sentence['tiles'])
+        assert alt != sentence['tiles']
+
+
+@pytest.mark.parametrize('sentence', [s for s in sb.SENTENCES if s.get('alternates')],
+                         ids=lambda s: s['english'])
+def test_an_alternative_order_maps_to_the_main_one(sentence):
+    for speaker in sb.SPEAKER_WORDS:
+        main = sb.answer_text(sb.tiles_for(sentence, speaker))
+        for alt in sentence['alternates']:
+            assert sb.canonical(sb.answer_text(sb.tiles_for(sentence, speaker, alt))) == main
+
+
+def test_canonical_leaves_a_wrong_answer_wrong():
+    assert sb.canonical('ครับไปผม') == 'ครับไปผม'
 
 
 def test_didnt_and_cant_use_the_same_tiles_in_a_different_order():
@@ -44,12 +92,14 @@ def test_didnt_and_cant_use_the_same_tiles_in_a_different_order():
 
 
 def test_a_dealt_question_is_never_already_solved():
+    # Not in the main order, and not in any accepted alternative either.
     rng = random.Random(1)
-    for _ in range(300):
-        q = sb.deal('male', rng)
-        dealt = sb.answer_text([t['thai'] for t in q['tiles']])
-        assert dealt != q['answer']
-        assert sorted(dealt) == sorted(q['answer'])
+    for level in sb.LEVELS:
+        for _ in range(300):
+            q = sb.deal('male', level, rng)
+            dealt = sb.answer_text([t['thai'] for t in q['tiles']])
+            assert dealt not in sb.accepted(q['sentence'], 'male')
+            assert sorted(dealt) == sorted(q['answer'])
 
 
 def test_neutral_learners_get_either_speaker():
@@ -80,7 +130,7 @@ def _correct_order(q):
 
 def test_the_dealt_question_does_not_contain_the_answer(unlocked_client):
     q = _deal(unlocked_client)
-    assert set(q) == {'question_id', 'english', 'speaker', 'tiles'}
+    assert set(q) == {'question_id', 'english', 'speaker', 'tiles', 'level'}
 
 
 def test_a_right_answer_is_marked_right_and_paid(make_client):
@@ -131,3 +181,35 @@ def test_the_drill_is_on_the_page(unlocked_client):
     html = unlocked_client.get('/sentences').get_data(as_text=True)
     assert 'id="sentence-builder"' in html
     assert 'id="sb-drill"' in html
+
+
+def _deal_level(client, level):
+    res = client.get(f'/api/sentence-builder?level={level}')
+    assert res.status_code == 200
+    return res.get_json()
+
+
+def test_challenge_questions_come_from_the_challenge_pool(unlocked_client):
+    english = {s['english'] for s in CHALLENGE}
+    for _ in range(10):
+        q = _deal_level(unlocked_client, 'challenge')
+        assert q['level'] == 'challenge' and q['english'] in english
+
+
+def test_an_unknown_level_is_refused(unlocked_client):
+    assert unlocked_client.get('/api/sentence-builder?level=expert').status_code == 400
+
+
+def test_an_alternative_order_is_marked_right(unlocked_client):
+    # Keep dealing until a sentence with an alternative order comes up.
+    for _ in range(200):
+        q = _deal_level(unlocked_client, 'challenge')
+        sentence = next(s for s in sb.SENTENCES if s['english'] == q['english'])
+        if sentence.get('alternates'):
+            break
+    else:
+        pytest.fail('no sentence with alternatives was dealt')
+    alt = sb.tiles_for(sentence, q['speaker'], sentence['alternates'][0])
+    body = unlocked_client.post('/api/sentence-builder/check',
+                                json={'question_id': q['question_id'], 'tiles': alt}).get_json()
+    assert body['correct'] is True
