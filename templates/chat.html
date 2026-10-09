@@ -521,7 +521,7 @@
                 ☸️ Buddhist
                 <span class="mode-tooltip">
                     <strong>☸️ Buddhist</strong>
-                    Explore Theravada teachings and temple vocabulary. Connects the language to Thailand's spiritual life, so you understand the meaning behind everyday phrases and blessings.
+                    Ask about the Dhamma your way: the universal teachings, the Dhamma as it lives in Thai culture, or culturally neutral. Pick your approach once you switch to this mode.
                 </span>
             </button>
             <button class="mode-btn" data-mode="generator" onclick="switchMode('generator')">
@@ -575,6 +575,24 @@
         {% endfor %}
         <button type="button" class="scenario-chip scenario-chip--exit" id="scenario-exit"
                 onclick="exitScenario()" hidden>✕ End roleplay</button>
+    </div>
+    {% endif %}
+
+    {% if dhamma_lenses %}
+    <style>
+        .lens-bar[hidden] { display: none; }
+        .lens-chip { border-color: var(--royal-purple); color: var(--royal-purple); }
+        .lens-chip:hover { background: #f3e5f5; }
+        .lens-chip.active { background: var(--royal-purple); color: #fff; }
+    </style>
+    {# Same three ways in as /dhamma-and-culture. Only shown in Buddhist mode. #}
+    <div id="lens-bar" class="scenario-bar lens-bar" hidden>
+        <span class="scenario-label">☸️ Your approach:</span>
+        {% for lid, ln in dhamma_lenses.items() %}
+        <button type="button" class="scenario-chip lens-chip" data-lens="{{ lid }}"
+                title="{{ ln.blurb }}"
+                onclick="setLens('{{ lid }}')">{{ ln.icon }} {{ ln.title }}</button>
+        {% endfor %}
     </div>
     {% endif %}
 
@@ -682,6 +700,24 @@
     let sessionId = 'session_' + Date.now();
     let totalTokens = 0;
     let currentScenario = null;   // active roleplay scenario id, or null
+    const DHAMMA_LENSES = {{ (dhamma_lenses or {}) | tojson }};
+    let currentLens = {{ default_dhamma_lens | tojson }};   // Buddhist mode only
+
+    // Shows the lens bar in Buddhist mode and marks the chosen lens.
+    function showLensBar() {
+        const bar = document.getElementById('lens-bar');
+        if (!bar) return;
+        bar.hidden = currentMode !== 'buddhist';
+        document.querySelectorAll('.lens-chip').forEach(c =>
+            c.classList.toggle('active', c.dataset.lens === currentLens));
+    }
+
+    function setLens(id) {
+        if (!DHAMMA_LENSES[id] || id === currentLens) return;
+        currentLens = id;
+        showLensBar();
+        addMessage('system', `Approach: ${DHAMMA_LENSES[id].icon} ${DHAMMA_LENSES[id].title}. ${DHAMMA_LENSES[id].blurb}`);
+    }
 
     function switchMode(mode) {
         // Free & Basic can only use the allowed mode(s); the rest are Pro-only.
@@ -699,6 +735,7 @@
             btn.classList.remove('active');
         });
         document.querySelector(`[data-mode="${mode}"]`).classList.add('active');
+        showLensBar();
 
         // The two modes have separate allowances, so the hint has to be redrawn
         // on every switch — not just after a message is sent.
@@ -709,7 +746,7 @@
             'conversation': '🗣️ Conversation Mode - Practice Thai dialogue',
             'tutor': '🎓 Tutor Mode - Get explanations and answers',
             'cultural': '🌏 Cultural Guide - Learn Thai customs',
-            'buddhist': '☸️ Buddhist Guide - Explore Theravada teachings',
+            'buddhist': '☸️ Buddhist Guide - Explore the Dhamma. Choose your approach above',
             'generator': '📝 Generator Mode - Create custom exercises',
             'helper': '💡 Helper Mode - Get smart hints'
         };
@@ -759,7 +796,8 @@
                     message: message,
                     mode: currentMode,
                     session_id: sessionId,
-                    scenario: currentScenario
+                    scenario: currentScenario,
+                    lens: currentLens
                 })
             });
 
@@ -812,6 +850,7 @@
         document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
         const convBtn = document.querySelector('[data-mode="conversation"]');
         if (convBtn) convBtn.classList.add('active');
+        showLensBar();
 
         currentScenario = id;
         sessionId = 'session_' + Date.now();   // fresh history per scene

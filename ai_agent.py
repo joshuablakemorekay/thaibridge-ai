@@ -8,7 +8,7 @@ Modes:
 - Tutor: Explain concepts and answer questions
 - Generator: Create custom exercises and quizzes
 - Cultural Guide: Thai culture and context
-- Buddhist Guide: Theravada teachings and Dhamma
+- Buddhist Guide: the Dhamma through one of three lenses (universal, Thai culture, neutral)
 - Helper: Intelligent hints and assistance
 """
 
@@ -51,6 +51,94 @@ ROLEPLAY_SCENARIOS = {
 }
 
 
+# The three ways into the Dhamma that /dhamma-and-culture offers, as lenses on
+# the Buddhist mode. Before these existed the mode only knew one of them: it
+# taught every teaching as Thai temple vocabulary, so a learner who asked a
+# plain Dhamma question got Thai Buddhism back whether they wanted it or not.
+# Like the roleplay scenarios, the browser sends only the id and the wording is
+# looked up here, so the prompt is never trusted from the client.
+DHAMMA_LENSES = {
+    'universal': {
+        'title': 'Universal Dhamma', 'icon': '☸️',
+        'blurb': 'The teachings themselves, for anywhere. No Thai required.',
+        'prompt': """
+MODE: BUDDHIST DHAMMA GUIDE — UNIVERSAL DHAMMA
+
+In this lens you are a Dhamma guide first. The student may not be learning
+Thai at all, so do not steer the answer back to the language.
+
+The student has chosen to focus on Buddhist teachings and practices that can be
+understood and applied anywhere. Answer from the teachings themselves, not from
+any one country's customs.
+
+- Explain in plain English first. Use a Pali term where it helps (dukkha, mettā,
+  anattā) and give its meaning in the same sentence.
+- This site follows the Theravada tradition and the Pali Canon. Where another
+  Buddhist school sees a point differently, say so briefly and fairly rather than
+  presenting one view as the only one.
+- Do NOT frame answers through Thailand, Thai temples, Thai customs or Thai
+  society, and do not assume the student will visit a temple or join a
+  community. Practice advice must work for someone at home, anywhere.
+- No Thai script or Thai vocabulary unless the student asks for it. The Thai
+  romanisation and register rules above apply only if Thai comes up.
+- Keep to clear, practical teaching at an introductory level — the Four Noble
+  Truths, the Eightfold Path, the precepts, generosity and meditation.
+""",
+    },
+    'thai': {
+        'title': 'Dhamma in Thai culture', 'icon': '🎭',
+        'blurb': 'How Buddhism lives in Thai language, temples and daily life.',
+        'prompt': """
+MODE: BUDDHIST DHAMMA GUIDE — DHAMMA IN THAI CULTURE
+
+The student wants to understand how Buddhism is expressed through Thai language,
+society, temples and traditions.
+Teach Buddhism through Thai language acquisition — Dhamma terms are vocabulary first.
+For every term give: Pali root, Thai script, Paiboon romanization, and usage context.
+Example: บุญ (bun) — from Pali "puñña" — you will hear this when Thais discuss
+going to the temple: ไปทำบุญ (bpai tam bun) = "going to make merit".
+
+Focus on everyday temple and practice language: ทำบุญ (tam bun), ตักบาตร (dtàk-bàat),
+รักษาศีล (rák-sǎa sǐin), ภาวนา (paa-wá-naa), นิพพาน (níp-paan).
+Keep Dhamma explanations at the level of the Four Noble Truths and basic precepts —
+this is a language app, not a seminary.
+
+Always connect each concept to a phrase Thais actually use in daily life or at the temple,
+so the student gains communicative competence in Thai religious contexts.
+""",
+    },
+    'neutral': {
+        'title': 'Culturally neutral', 'icon': '🕊️',
+        'blurb': 'The practice on its own — no tradition or identity to adopt.',
+        'prompt': """
+MODE: BUDDHIST DHAMMA GUIDE — CULTURALLY NEUTRAL
+
+In this lens you are a Dhamma guide first. The student may not be learning
+Thai at all, so do not steer the answer back to the language.
+
+The student wants to study and practise the Dhamma without adopting any
+particular cultural identity or tradition.
+
+- Teach the practice as practice: what it is, why it helps, and how to do it.
+  The precepts, generosity and meditation stand on their own.
+- Leave out customs, rituals, ceremonies, devotional practices and any
+  country's culture (Thai, Tibetan, Japanese or other) unless the student asks.
+- Never suggest the student needs to become a Buddhist, join a community or
+  call themselves anything. Say "the teaching" or "this practice", not
+  "we Buddhists".
+- Use plain English. Use a Pali term only where no English word does the job,
+  and give its meaning.
+- No Thai script or Thai vocabulary unless the student asks for it. The Thai
+  romanisation and register rules above apply only if Thai comes up.
+- Keep to an introductory level.
+""",
+    },
+}
+# Listed first on /dhamma-and-culture, and the lens that answers the question
+# as asked rather than adding a culture the student did not ask for.
+DEFAULT_DHAMMA_LENS = 'universal'
+
+
 class ThaiLearningAI:
     """
     Core AI Agent for Thai Language Learning
@@ -80,7 +168,8 @@ class ThaiLearningAI:
         self.conversations: Dict[str, List[Dict]] = {}
         
     def get_system_prompt(self, mode: str, user_context: Dict,
-                          scenario: Optional[str] = None) -> str:
+                          scenario: Optional[str] = None,
+                          lens: Optional[str] = None) -> str:
         """
         Generate system prompt based on mode and user context
 
@@ -88,13 +177,28 @@ class ThaiLearningAI:
             mode: AI mode (conversation, tutor, generator, cultural, buddhist, helper)
             user_context: User's learning progress, level, preferences
             scenario: optional roleplay scenario id (conversation mode only)
+            lens: Dhamma lens id from DHAMMA_LENSES (buddhist mode only);
+                  anything unknown falls back to DEFAULT_DHAMMA_LENS
         """
-        
+
         # Base context about user
         level = user_context.get('level', 1)
         xp = user_context.get('xp', 0)
         user_name = user_context.get('name', 'Student')
-        
+
+        if lens not in DHAMMA_LENSES:
+            lens = DEFAULT_DHAMMA_LENS
+        # The shared foundation tells every mode to add Thai script and tie
+        # language to Thai Buddhist culture. The universal and neutral lenses
+        # exist precisely to NOT do that, so those lines are left out for them
+        # rather than left in for their own instructions to argue with.
+        thai_principles = (
+            ''
+            if mode == 'buddhist' and lens != 'thai'
+            else ('- Use Thai script WITH romanization for reinforcement\n'
+                  '- Connect language to Buddhist/Thai culture naturally\n')
+        )
+
         # Common foundation for all modes
         base_prompt = f"""You are a Thai language learning AI assistant. You're helping {user_name} learn Thai.
 
@@ -157,9 +261,7 @@ TEACHING PRINCIPLES:
 - Be encouraging and patient
 - Adjust difficulty to student's level
 - Provide cultural context when relevant
-- Use Thai script WITH romanization for reinforcement
-- Connect language to Buddhist/Thai culture naturally
-"""
+{thai_principles}"""
         
         # Mode-specific prompts
         mode_prompts = {
@@ -231,23 +333,8 @@ social hierarchy to formality registers.
 Always leave the student with a phrase they can use immediately.
 """,
             
-            'buddhist': f"""
-MODE: BUDDHIST DHAMMA GUIDE
+            'buddhist': DHAMMA_LENSES[lens]['prompt'],
 
-Teach Buddhism through Thai language acquisition — Dhamma terms are vocabulary first.
-For every term give: Pali root, Thai script, Paiboon romanization, and usage context.
-Example: บุญ (bun) — from Pali "puñña" — you will hear this when Thais discuss
-going to the temple: ไปทำบุญ (bpai tam bun) = "going to make merit".
-
-Focus on everyday temple and practice language: ทำบุญ (tam bun), ตักบาตร (dtàk-bàat),
-รักษาศีล (rák-sǎa sǐin), ภาวนา (paa-wá-naa), นิพพาน (níp-paan).
-Keep Dhamma explanations at the level of the Four Noble Truths and basic precepts —
-this is a language app, not a seminary.
-
-Always connect each concept to a phrase Thais actually use in daily life or at the temple,
-so the student gains communicative competence in Thai religious contexts.
-""",
-            
             'helper': f"""
 MODE: INTELLIGENT HINT SYSTEM
 
@@ -302,7 +389,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         mode: str = 'conversation',
         user_context: Optional[Dict] = None,
         max_tokens: int = 2000,
-        scenario: Optional[str] = None
+        scenario: Optional[str] = None,
+        lens: Optional[str] = None
     ) -> Dict:
         """
         Send a message and get AI response
@@ -330,8 +418,9 @@ scene moving. Open the scene yourself with a natural first line in character.
                 'name': 'Student'
             }
         
-        # Get system prompt for this mode (with any active roleplay scenario)
-        system_prompt = self.get_system_prompt(mode, user_context, scenario)
+        # Get system prompt for this mode (with any active roleplay scenario
+        # or Dhamma lens)
+        system_prompt = self.get_system_prompt(mode, user_context, scenario, lens)
         
         # Add user message to history
         self.conversations[session_id].append({

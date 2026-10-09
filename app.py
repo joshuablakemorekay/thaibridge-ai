@@ -8938,11 +8938,13 @@ def chat():
                              message='AI Agent not available',
                              details='Please check setup instructions')
     try:
-        from ai_agent import ROLEPLAY_SCENARIOS
+        from ai_agent import ROLEPLAY_SCENARIOS, DHAMMA_LENSES, DEFAULT_DHAMMA_LENS
     except Exception:
-        ROLEPLAY_SCENARIOS = {}
+        ROLEPLAY_SCENARIOS, DHAMMA_LENSES, DEFAULT_DHAMMA_LENS = {}, {}, None
     return render_template('chat.html', ai_limits=ai_limits_status(),
-                           roleplay_scenarios=ROLEPLAY_SCENARIOS)
+                           roleplay_scenarios=ROLEPLAY_SCENARIOS,
+                           dhamma_lenses=DHAMMA_LENSES,
+                           default_dhamma_lens=DEFAULT_DHAMMA_LENS)
 
 @app.route('/api/ai/chat', methods=['POST'])
 # ~30 messages an hour is far more than a learner types and far less than a
@@ -8961,6 +8963,9 @@ def ai_chat():
         message = data.get('message', '')
         mode = data.get('mode', 'conversation')
         scenario = data.get('scenario') or None
+        # Only an id; ai_agent checks it against DHAMMA_LENSES and falls back
+        # to its default, so an unknown value cannot inject prompt text.
+        lens = data.get('lens') or None
         # Give this visitor a conversation id and KEEP it. Reading with a
         # default and never storing it handed out a fresh id on every request,
         # which quietly broke three things: ai_agent keys its conversation
@@ -9050,7 +9055,8 @@ def ai_chat():
             session_id=session_id,
             user_context=user_context,
             max_tokens=500,
-            scenario=scenario
+            scenario=scenario,
+            lens=lens
         )
 
         # Record what it cost. ai_agent has returned these token counts all
