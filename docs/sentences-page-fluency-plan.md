@@ -150,6 +150,5 @@ them: *Build sentences → Try a scene → Listen only*.
 
 ## Still to do
 
-- **Teacher check** of every new Thai line (Answering section and the builder) — add them to the next review sheet.
+- **Teacher check** of every new Thai line. The sheet is ready: `docs/sentences-review-2026-10-09.md` / `.html`, rebuilt from the live data by `scripts/make_sentences_review.py`. Not yet sent.
 - Steps 4 and 5 above.
-- The Question Formation and Verb Practice headings use dark text on the purple header bar and are hard to read. That was already the case before this work; the new sections use saffron instead.
