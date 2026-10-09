@@ -294,11 +294,17 @@ class AiUsage(db.Model):
     feature       = db.Column(db.String(20), nullable=False)   # 'chat' | 'hint' | ...
     mode          = db.Column(db.String(20))                   # 'tutor' | 'buddhist' | ...
 
-    # What it cost. model matters because prices differ per model, and the app
-    # runs a cheap one live and a better one locally.
+    # What it cost. model matters because prices differ per model.
     model         = db.Column(db.String(64))
     input_tokens  = db.Column(db.Integer, default=0, nullable=False)
     output_tokens = db.Column(db.Integer, default=0, nullable=False)
+    # Prompt caching (2026-10-09) moves most of a message's input out of
+    # input_tokens: the instructions and history are written to the cache at
+    # 1.25x the input price, then read back at a tenth of it. Without these two
+    # the log under-counted Sonnet's cost several times over. NULL on older
+    # rows, which is the honest answer: we were not recording it yet.
+    cache_write_tokens = db.Column(db.Integer)
+    cache_read_tokens  = db.Column(db.Integer)
 
     # How it went. tier is recorded AS IT WAS at the time — a user who upgrades
     # later must not rewrite the history of what they did on the free plan, which
@@ -409,6 +415,8 @@ def _ensure_user_columns():
         'progress':               json_,
     }
     _ensure_columns('users', wanted)
+    _ensure_columns('ai_usage', {'cache_write_tokens': 'INTEGER',
+                                 'cache_read_tokens': 'INTEGER'})
 
 
 def _ensure_columns(table_name, wanted):
@@ -1130,7 +1138,8 @@ def _pro_messages_today():
 
 
 def log_ai_usage(feature, outcome, *, mode=None, model=None,
-                 input_tokens=0, output_tokens=0, error_type=None):
+                 input_tokens=0, output_tokens=0, error_type=None,
+                 cache_write_tokens=0, cache_read_tokens=0):
     """Record one AI request. Never raises.
 
     Deliberately called from the route rather than from inside ai_agent: the AI
@@ -1152,6 +1161,8 @@ def log_ai_usage(feature, outcome, *, mode=None, model=None,
             model=model,
             input_tokens=input_tokens or 0,
             output_tokens=output_tokens or 0,
+            cache_write_tokens=cache_write_tokens or 0,
+            cache_read_tokens=cache_read_tokens or 0,
             # Recorded as it was AT THE TIME. Reading it back off the user later
             # would rewrite history every time someone upgrades, and destroy the
             # one question this column exists to answer.
@@ -9088,7 +9099,9 @@ def ai_chat():
             log_ai_usage('chat', 'ok', mode=mode,
                          model=response.get('model') or getattr(ai_agent, 'model', None),
                          input_tokens=tokens.get('input', 0),
-                         output_tokens=tokens.get('output', 0))
+                         output_tokens=tokens.get('output', 0),
+                         cache_write_tokens=tokens.get('cache_write', 0),
+                         cache_read_tokens=tokens.get('cache_read', 0))
         else:
             # The agent caught the failure itself and returned it, so no
             # exception reaches the handler below — without this branch those

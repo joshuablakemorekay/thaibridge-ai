@@ -554,7 +554,11 @@ scene moving. Open the scene yourself with a natural first line in character.
                 'model': model,
                 'tokens_used': {
                     'input': response.usage.input_tokens,
-                    'output': response.usage.output_tokens
+                    'output': response.usage.output_tokens,
+                    # With caching on, most input is counted here instead of
+                    # in 'input' above, so the cost log needs both.
+                    'cache_write': getattr(response.usage, 'cache_creation_input_tokens', 0) or 0,
+                    'cache_read': getattr(response.usage, 'cache_read_input_tokens', 0) or 0,
                 },
                 'timestamp': datetime.now().isoformat()
             }
