@@ -716,7 +716,15 @@
         if (!DHAMMA_LENSES[id] || id === currentLens) return;
         currentLens = id;
         showLensBar();
-        addMessage('system', `Approach: ${DHAMMA_LENSES[id].icon} ${DHAMMA_LENSES[id].title}. ${DHAMMA_LENSES[id].blurb}`);
+        // The tutor remembers the conversation so far, and answers written in
+        // the old approach pull the next few back towards it. Forget them on
+        // the server; the messages stay on screen so nothing is lost to read.
+        fetch('/api/ai/clear', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({})
+        }).catch(() => {});
+        addMessage('system', `Approach: ${DHAMMA_LENSES[id].icon} ${DHAMMA_LENSES[id].title}. ${DHAMMA_LENSES[id].blurb} The tutor starts fresh from here.`);
     }
 
     function switchMode(mode) {
@@ -818,7 +826,7 @@
                     updateLimitHint();
                 }
             } else if (data.gate) {
-                showUpgradeNote(data.message);
+                showUpgradeNote(data.message, data.gate !== 'ai_resting');
                 if (data.gate === 'daily_limit' && AI_LIMITS.pools) {
                     // Zero only the pool that was actually refused.
                     const pool = data.pool || currentPool();
@@ -1015,11 +1023,15 @@
         hint.style.display = 'block';
     }
 
-    function showUpgradeNote(text) {
+    // withPlansLink is false when paying would not help: when the AI budget
+    // has run out ('ai_resting'), Pro is resting too.
+    function showUpgradeNote(text, withPlansLink = true) {
         const chatBody = document.getElementById('chat-messages');
         const note = document.createElement('div');
         note.className = 'upgrade-note';
-        note.innerHTML = `${text} <a href="/premium">See Pro plans →</a>`;
+        note.innerHTML = withPlansLink
+            ? `${text} <a href="/premium">See Pro plans →</a>`
+            : text;
         chatBody.appendChild(note);
         chatBody.scrollTop = chatBody.scrollHeight;
     }

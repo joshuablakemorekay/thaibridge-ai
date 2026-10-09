@@ -54,10 +54,12 @@ services:
       - key: DEVELOPER_PASSWORD
         sync: false
 
-      # Use the cheap, fast Haiku model on the public demo so visitor AI messages
-      # cost a fraction of a cent. Local dev (no AI_MODEL set) keeps using Sonnet.
+      # Sonnet 5.5: in a side-by-side test (2026-10-09) Haiku 4.5 taught wrong
+      # tones, counted people with ตัว and confused mettā with muditā; Sonnet 5.5
+      # got the Thai and the Dhamma right. About 0.85p a fresh message, 0.3p a
+      # cached follow-up. To roll back, put "claude-haiku-4-5-20251001" here.
       - key: AI_MODEL
-        value: "claude-haiku-4-5-20251001"
+        value: "claude-sonnet-5-5"
 
       # Monk Mode access codes (comma-separated). sync:false means the VALUE is
       # set in the Render dashboard and preserved across deploys — declaring it

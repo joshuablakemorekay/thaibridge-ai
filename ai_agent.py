@@ -94,7 +94,7 @@ MODE: BUDDHIST DHAMMA GUIDE — DHAMMA IN THAI CULTURE
 The student wants to understand how Buddhism is expressed through Thai language,
 society, temples and traditions.
 Teach Buddhism through Thai language acquisition — Dhamma terms are vocabulary first.
-For every term give: Pali root, Thai script, Paiboon romanization, and usage context.
+For every term give: Pali root, Thai script, ThaiBridge Spelling, and usage context.
 Example: บุญ (bun) — from Pali "puñña" — you will hear this when Thais discuss
 going to the temple: ไปทำบุญ (bpai tam bun) = "going to make merit".
 
@@ -105,6 +105,9 @@ this is a language app, not a seminary.
 
 Always connect each concept to a phrase Thais actually use in daily life or at the temple,
 so the student gains communicative competence in Thai religious contexts.
+
+FINAL CHECK before you answer: every romanisation follows the ThaiBridge Spelling rules
+above. No "h" after p, t, k or ch — พระ is prá, พ่อ is pɔ̂ɔ, คุณ is kun.
 """,
     },
     'neutral': {
@@ -138,6 +141,71 @@ particular cultural identity or tradition.
 # as asked rather than adding a culture the student did not ask for.
 DEFAULT_DHAMMA_LENS = 'universal'
 
+# Length rules for the modes whose answers ran past the reply cap. In a
+# side-by-side test half of Haiku 4.5's replies and two thirds of Sonnet 5.5's
+# were cut off mid-sentence at 500 tokens: Thai script is token-heavy, so 500
+# tokens is only about 200 words. Asking for less gets most answers under;
+# app.py raises the cap (AI_REPLY_TOKENS) for the rest, since a model does not
+# count words exactly. Conversation and helper replies were already short.
+_EXPLAIN_LENGTH = """
+LENGTH: keep each answer under about 150 words (fewer when it includes a lot of
+Thai script). Teach the heart of the question well rather than everything about
+it, and offer to go further on one part instead of continuing.
+"""
+MODE_LENGTH = {
+    'tutor': _EXPLAIN_LENGTH,
+    'cultural': _EXPLAIN_LENGTH,
+    'buddhist': """
+LENGTH: keep every answer under about 180 words (fewer when it includes Thai
+script). Cover the heart of the question well rather than everything about
+it, and offer to go deeper on one part instead of continuing.
+""",
+    'generator': """
+LENGTH: 5 items unless the student asks for more, and keep the whole exercise,
+answer key included, under about 350 words.
+""",
+}
+
+# Shown instead of an error when the monthly AI budget is used up. The spend
+# cap on the Anthropic account is what keeps the tutor from ever costing more
+# than planned; when it bites, a visitor should read that the tutor is resting,
+# not "check your API key", which looks broken and means nothing to them.
+AI_RESTING_MESSAGE = ("🪷 The AI tutor is resting for now and will be back soon. "
+                      "Everything else on ThaiBridge (the lessons, the alphabet, "
+                      "the chanting book, the Dhamma pages) still works as normal.")
+
+
+def is_out_of_budget(error: Exception) -> bool:
+    """True when the API refused because the account's money ran out.
+
+    Covers the documented billing error (402) and the older wording the API
+    has used for a reached spend limit or an empty credit balance. Matched on
+    those words only, so a genuine fault still shows as a fault.
+    """
+    if getattr(error, 'status_code', None) == 402:
+        return True
+    body = getattr(error, 'body', None)
+    detail = body.get('error', body) if isinstance(body, dict) else {}
+    if isinstance(detail, dict) and detail.get('type') == 'billing_error':
+        return True
+    text = f"{detail.get('message', '') if isinstance(detail, dict) else ''} {error}".lower()
+    return 'usage limit' in text or 'credit balance' in text
+
+
+def thinking_off(model: str) -> Optional[Dict]:
+    """The setting that stops a model thinking before it answers, or None.
+
+    The app's small reply budget has to go on the answer itself.
+    Haiku 4.5 does not think unless asked, so it needs nothing. The 5.5 models
+    think by default and each has its own off switch: Sonnet 5.5 rejects
+    "disabled" and uses "between_tools" instead.
+    """
+    if model.startswith('claude-sonnet-5-5'):
+        return {'type': 'between_tools'}
+    if model.startswith('claude-haiku-5-5'):
+        return {'type': 'disabled'}
+    return None
+
 
 class ThaiLearningAI:
     """
@@ -157,12 +225,17 @@ class ThaiLearningAI:
         # of a cent (see render.yaml); this default is the fallback for local dev.
         #
         # The old default (claude-sonnet-4-20250514) was retired and now returns a
-        # 404, which silently broke local AI. The default is Haiku 4.5 — the same
-        # model the live demo runs, verified working with this code path. It does
-        # NOT think-by-default, so the small max_tokens budget below all goes to
-        # the reply (a newer thinking-by-default model like Sonnet 5 would need
-        # thinking disabled here first). Set AI_MODEL to override.
-        self.model = os.environ.get("AI_MODEL", "claude-haiku-4-5-20251001")
+        # 404, which silently broke local AI. The default is Sonnet 5.5 — the
+        # same model the live site runs (render.yaml), verified with this code
+        # path. It thinks by default, so chat() switches that off (thinking_off)
+        # and the whole reply budget goes to the answer. Set AI_MODEL to override.
+        self.model = os.environ.get("AI_MODEL", "claude-sonnet-5-5")
+        # Buddhist mode can run on its own model. Haiku 4.5 got Dhamma terms
+        # wrong in a side-by-side test (mettā described as muditā, an invented
+        # five-step dependent origination) where Haiku 5.5 got all ten right at
+        # a tenth of the price. It is a setting, not code, so rolling back is
+        # one change on Render. Unset, it follows AI_MODEL.
+        self.dhamma_model = os.environ.get("DHAMMA_AI_MODEL") or self.model
         
         # Conversation history by session
         self.conversations: Dict[str, List[Dict]] = {}
@@ -205,9 +278,9 @@ class ThaiLearningAI:
 STUDENT CONTEXT:
 - Current Level: {level}/10
 - Total XP: {xp}
-- Learning System: Paiboon+ Romanization (IPA-based, linguistically accurate)
+- Learning System: ThaiBridge Spelling (IPA-based, linguistically accurate)
 
-ROMANIZATION RULES (Paiboon+ System) - CRITICAL - FOLLOW EXACTLY:
+ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 
 **IPA Characters (Use these exact symbols):**
 - ɔ = open o sound (as in "law") - NOT "o" or "ô"
@@ -261,6 +334,8 @@ TEACHING PRINCIPLES:
 - Be encouraging and patient
 - Adjust difficulty to student's level
 - Provide cultural context when relevant
+- Write only your finished answer: check facts, tones and spellings first, and
+  never correct yourself partway through
 {thai_principles}"""
         
         # Mode-specific prompts
@@ -268,7 +343,7 @@ TEACHING PRINCIPLES:
             'conversation': f"""
 MODE: CONVERSATIONAL PRACTICE PARTNER
 
-Engage in natural Thai conversation using Thai script with Paiboon romanization for every utterance.
+Engage in natural Thai conversation using Thai script with ThaiBridge Spelling for every utterance.
 Match complexity to level: L1-3 use present tense and daily topics (food, greetings, family);
 L4-6 add past/future tense and reasons (dtɔ̂ŋ-gaan, lɛ́ɛo); L7-10 include proverbs, formal
 registers, and abstract topics.
@@ -288,8 +363,8 @@ Isan culture, travel and directions.
 MODE: INTELLIGENT TUTORING SYSTEM
 
 Teach Thai language concepts using a consistent three-step structure:
-(1) One-sentence core rule, (2) Two or three examples with Thai script, Paiboon
-romanization, and English meaning, (3) One pattern insight beginning with "Notice how...".
+(1) One-sentence core rule, (2) Two or three examples with Thai script, ThaiBridge
+Spelling, and English meaning, (3) One pattern insight beginning with "Notice how...".
 
 For tone rules, always establish consonant class and vowel length before giving the tone.
 For particles, show placement in a full sentence AND explain the emotional nuance
@@ -305,10 +380,10 @@ Compare to English only when it genuinely helps; never force the comparison.
 MODE: DYNAMIC CONTENT GENERATOR
 
 Create targeted Thai practice materials to these standards:
-every item must include Thai script, Paiboon romanization, and English meaning;
+every item must include Thai script, ThaiBridge Spelling, and English meaning;
 use authentic Thai contexts (markets, BTS, temples, family meals);
 mix recognition tasks (matching, multiple choice) with production tasks (translation, fill-in);
-include 5-10 items per exercise with a complete answer key that has brief explanations.
+include 5 items per exercise (up to 10 if the student asks) with a complete answer key that has brief explanations.
 
 For vocabulary quizzes, group items by semantic field (food, transport, temple vocabulary).
 For translation exercises, use complete sentences — never isolated words.
@@ -368,7 +443,7 @@ ACTIVE ROLEPLAY — STAY IN CHARACTER
 You are role-playing as {sc['ai_role']}. {sc['setting']}
 Remain fully in character as this Thai person for the whole conversation. Do NOT
 switch into being a teacher or narrator. Speak the way this person really would.
-Every line: Thai script, then Paiboon romanisation, then a short English gloss in
+Every line: Thai script, then ThaiBridge Spelling, then a short English gloss in
 brackets. Keep replies short and realistic — one or two sentences, like real speech.
 When the student slips, model the correct Thai naturally in your own reply rather
 than stopping to lecture. If they seem stuck, ask a simple question to keep the
@@ -380,8 +455,35 @@ scene moving. Open the scene yourself with a natural first line in character.
                              "does NOT use the lay politeness particles ครับ or ค่ะ at all — "
                              "use เจริญพร in their place.\n")
 
-        return base_prompt + mode_prompt + roleplay
+        return base_prompt + mode_prompt + MODE_LENGTH.get(mode, '') + roleplay
     
+    def _ask(self, model: str, system: str, messages: List[Dict],
+             max_tokens: int):
+        """One request to the API, set up the same way for every feature.
+
+        Returns (reply text, response). Thinking is switched off where the
+        model would otherwise spend the reply budget on it, and the text blocks
+        are joined rather than reading content[0]: a model that can think puts
+        a thinking block first, so content[0].text comes back empty or raises.
+        """
+        request = dict(model=model, max_tokens=max_tokens,
+                       system=system, messages=messages)
+        thinking = thinking_off(model)
+        if thinking:
+            request['thinking'] = thinking
+        # Cache the instructions and the conversation so far: each message
+        # in a chat re-sends both, and a cached re-send costs a tenth of the
+        # price. Sent as a raw field because the pinned SDK (0.75) predates
+        # top-level cache_control. Models with a higher cache minimum than
+        # this prompt (Haiku 4.5 needs 4,096 tokens) simply don't cache.
+        request['extra_body'] = {'cache_control': {'type': 'ephemeral'}}
+        response = self.client.messages.create(**request)
+        return ''.join(b.text for b in response.content if b.type == 'text'), response
+
+    def model_for(self, mode: str) -> str:
+        """The model a mode runs on: Buddhist mode may have its own."""
+        return self.dhamma_model if mode == 'buddhist' else self.model
+
     def chat(
         self,
         session_id: str,
@@ -418,6 +520,8 @@ scene moving. Open the scene yourself with a natural first line in character.
                 'name': 'Student'
             }
         
+        model = self.model_for(mode)
+
         # Get system prompt for this mode (with any active roleplay scenario
         # or Dhamma lens)
         system_prompt = self.get_system_prompt(mode, user_context, scenario, lens)
@@ -433,15 +537,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         
         try:
             # Call Claude API
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=max_tokens,
-                system=system_prompt,
-                messages=conversation_history
-            )
-            
-            # Extract response text
-            assistant_message = response.content[0].text
+            assistant_message, response = self._ask(
+                model, system_prompt, conversation_history, max_tokens)
             
             # Add assistant response to history
             self.conversations[session_id].append({
@@ -453,6 +550,7 @@ scene moving. Open the scene yourself with a natural first line in character.
                 'success': True,
                 'response': assistant_message,
                 'mode': mode,
+                'model': model,
                 'tokens_used': {
                     'input': response.usage.input_tokens,
                     'output': response.usage.output_tokens
@@ -461,6 +559,15 @@ scene moving. Open the scene yourself with a natural first line in character.
             }
             
         except anthropic.APIError as e:
+            if is_out_of_budget(e):
+                # 'gate' makes the chat page show this in its gentle note box,
+                # the same one the daily allowance uses, not as an error.
+                return {
+                    'success': False,
+                    'gate': 'ai_resting',
+                    'error_type': 'out_of_budget',
+                    'message': AI_RESTING_MESSAGE,
+                }
             return {
                 'success': False,
                 'error': str(e),
@@ -509,16 +616,13 @@ Context: {context}"""
             user_message += "\n\nStudent needs a hint to get started. Give a gentle nudge in the right direction."
         
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=500,
-                system=system_prompt,
-                messages=[{'role': 'user', 'content': user_message}]
-            )
-            
-            return response.content[0].text
-            
+            text, _ = self._ask(self.model, system_prompt,
+                                [{'role': 'user', 'content': user_message}], 500)
+            return text
+
         except Exception as e:
+            if is_out_of_budget(e):
+                return AI_RESTING_MESSAGE
             return f"Sorry, couldn't generate hint: {str(e)}"
     
     def explain_answer(
@@ -570,16 +674,13 @@ Please explain:
 Be encouraging and clear!"""
         
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=800,
-                system=system_prompt,
-                messages=[{'role': 'user', 'content': user_message}]
-            )
-            
-            return response.content[0].text
-            
+            text, _ = self._ask(self.model, system_prompt,
+                                [{'role': 'user', 'content': user_message}], 800)
+            return text
+
         except Exception as e:
+            if is_out_of_budget(e):
+                return AI_RESTING_MESSAGE
             return f"Explanation unavailable: {str(e)}"
     
     def generate_content(
@@ -616,16 +717,13 @@ Difficulty level: {difficulty}/10
 Make it engaging and appropriate for this level!"""
         
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=3000,
-                system=system_prompt,
-                messages=[{'role': 'user', 'content': user_message}]
-            )
-            
-            return response.content[0].text
-            
+            text, _ = self._ask(self.model, system_prompt,
+                                [{'role': 'user', 'content': user_message}], 3000)
+            return text
+
         except Exception as e:
+            if is_out_of_budget(e):
+                return AI_RESTING_MESSAGE
             return f"Content generation failed: {str(e)}"
     
     def clear_conversation(self, session_id: str):

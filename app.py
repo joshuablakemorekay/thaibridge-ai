@@ -142,6 +142,12 @@ if database_url:
     # costs nothing and saves a baffling error if the provider ever changes.
     if database_url.startswith('postgres://'):
         database_url = database_url.replace('postgres://', 'postgresql://', 1)
+    # Name the driver outright. A bare postgresql:// lets SQLAlchemy pick, and
+    # 2.1 picks psycopg 3, which is not installed — every deploy crashed on
+    # 2026-10-09 until SQLAlchemy was pinned. This keeps it on psycopg2 even
+    # if that pin is ever lifted.
+    if database_url.startswith('postgresql://'):
+        database_url = database_url.replace('postgresql://', 'postgresql+psycopg2://', 1)
     app.config['SQLALCHEMY_DATABASE_URI'] = database_url
     # Neon suspends its compute when idle, which quietly drops pooled
     # connections. Without pre-ping, the first request after a quiet spell dies
@@ -748,8 +754,8 @@ FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 # This is added ON TOP of the tutor's 15 rather than reserved out of it.
 # Reserving would have cut everyone's tutor allowance from 15 to 10 to fund a
 # fix for a promise we had already made; nobody should lose something so that
-# we can keep our word. At the costed 0.285p a message it is 1.4p a day for
-# someone who exhausts it daily, which almost nobody will.
+# we can keep our word. At about 0.85p a message on Sonnet 5.5 it is about 4p
+# a day for someone who exhausts it daily, which almost nobody will.
 FREE_DHAMMA_DAILY_LIMIT = 5
 DHAMMA_AI_MODES = {'buddhist'}                 # modes that draw on that pool
 
@@ -777,17 +783,28 @@ def ai_pool_limit(pool_name):
     """Today's allowance for a pool, read from the constant at call time."""
     return globals()[AI_POOLS[pool_name]['limit_name']]
 
+# The longest reply the AI may write. At the old 500, half the answers in a
+# side-by-side test were cut off mid-sentence: Thai script is token-heavy, so
+# 500 tokens is only about 200 words. The prompts now ask for short answers
+# (ai_agent.MODE_LENGTH); this is the backstop for when a model runs over. An
+# exercise with its answer key is long by nature, so the generator gets more.
+AI_REPLY_TOKENS = 800
+AI_REPLY_TOKENS_BY_MODE = {'generator': 1500}
+
 # Pro is "unlimited" in the sense that matters to a learner, but not literally:
 # without a ceiling, one subscriber could run up more in API costs than they pay.
-# At 0.285p worst case per message (a full 500-token reply on top of the ~1,100
-# token system prompt), 150 a day is £12.84 a month against £19.99 of revenue —
-# still profitable even if someone maxes it out every single day of the month.
+# Was 150 on Haiku 4.5 at 0.285p a message. Sonnet 5.5 (2026-10-09) costs about
+# 0.85p for a fresh message and 0.3p for a cached follow-up in the same chat, so
+# 150 a day could cost more than the £16.58 a month annual Pro brings in. At 75,
+# a learner who maxes it out every day costs about £10 a month on a realistic mix
+# of fresh and follow-up messages, so Pro stays profitable. 75 is also the floor
+# test_the_ceiling_is_far_above_the_free_allowance sets (five times free), so
+# Pro stays clearly worth paying for. The Anthropic Console spend limit is the
+# hard backstop if anyone ever finds a pattern that costs more.
 #
-# The number is chosen to be invisible: ten times the free allowance, and roughly
-# three times what a genuinely heavy day of study looks like. Anyone who reaches
-# it is not studying, and the reply says so kindly and invites them to get in
-# touch rather than treating them as an abuser.
-PRO_FAIR_USE_DAILY = 150
+# Anyone who reaches it is not studying, and the reply says so kindly and
+# invites them to get in touch rather than treating them as an abuser.
+PRO_FAIR_USE_DAILY = 75
 
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
@@ -802,7 +819,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Guided meditation sessions, timer & techniques',
             f'✓ AI Thai tutor — {FREE_AI_DAILY_LIMIT} messages a day',
             f'✓ Dhamma Q&A — {FREE_DHAMMA_DAILY_LIMIT} questions a day, on its own allowance',
-            '✓ Paiboon romanization guide',
+            '✓ ThaiBridge Spelling guide',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
@@ -4970,7 +4987,7 @@ eventually attaining enlightenment.''',
         # be inventing Thai. The story is really about the ə / əə vowels, so it
         # points at the page that actually teaches them.
         'practice': {'href': '/paiboon',
-                     'label': 'The Paiboon guide — the ə / əə vowels'},
+                     'label': 'The ThaiBridge Spelling guide — the ə / əə vowels'},
         'title': 'Modern Thailand and Global Connection',
         'story': '''Modern Thai has absorbed many English loanwords, especially in technology, business, and 
 education. These words often use the schwa sound (ə/əə) - that "uh" sound from English. When foreign monks 
@@ -9057,7 +9074,7 @@ def ai_chat():
             mode=mode,
             session_id=session_id,
             user_context=user_context,
-            max_tokens=500,
+            max_tokens=AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
             scenario=scenario,
             lens=lens
         )
@@ -9066,7 +9083,10 @@ def ai_chat():
         # along and nothing read them, so the spend was invisible.
         if isinstance(response, dict) and response.get('success'):
             tokens = response.get('tokens_used') or {}
-            log_ai_usage('chat', 'ok', mode=mode, model=getattr(ai_agent, 'model', None),
+            # The agent says which model answered: Buddhist mode can run on a
+            # different one, and the prices differ.
+            log_ai_usage('chat', 'ok', mode=mode,
+                         model=response.get('model') or getattr(ai_agent, 'model', None),
                          input_tokens=tokens.get('input', 0),
                          output_tokens=tokens.get('output', 0))
         else:

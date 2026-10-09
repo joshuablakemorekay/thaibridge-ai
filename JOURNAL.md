@@ -3753,3 +3753,65 @@ Commits `09ff588` (search), `94ffe13` (the extraction, no behaviour change),
 `tests/test_chanting_search.py` and `tests/test_chanting_chant_page.py` — the
 latter holds a guard that fails if the chants ever end up back in the index.
 Live and verified on Render the same day.
+
+## 9 October 2026 — The Dhamma tutor only knew one of the three ways in
+
+**TL;DR:** I suspected the AI tutor's Buddhist mode was biased towards Thai
+Buddhism. It was, and it had been told to be. It now offers the same three
+approaches as `/dhamma-and-culture`, Universal Dhamma, Dhamma in Thai culture
+and Culturally neutral, with Universal as the default.
+
+The site has promised three ways into the Dhamma since August. The tutor never
+heard about two of them. Its Buddhist prompt said "Teach Buddhism through Thai
+language acquisition", and the base prompt every mode shares added "Connect
+language to Buddhist/Thai culture naturally". Ask it what merit is and you got
+บุญ, ทำบุญ and the alms round, whether you were learning Thai or not.
+
+### How we did it
+
+Each approach is a lens on the Buddhist mode, written server-side next to the
+roleplay scenarios and picked from a bar on `/chat` that only shows in Buddhist
+mode. The browser sends just the lens id, so nothing it sends can become
+prompt text, and an unknown id falls back to Universal.
+
+The Thai-culture lens is the old prompt, unchanged. Universal teaches from the
+teachings, in plain English with Pali terms, and says so fairly when another
+school sees a point differently. Neutral teaches the practice on its own and
+never suggests anyone needs to become anything.
+
+### The bit worth keeping
+
+Adding new instructions wasn't enough on its own. The shared base still told
+the model to add Thai script and tie everything to Thai culture, so the two new
+lenses would have been arguing with their own foundation. Those two lines are
+now left out for Universal and Neutral rather than overruled.
+
+Switching approach mid-chat also needed the tutor to forget the conversation so
+far. Its earlier Thai-flavoured answers were pulling the next ones back.
+
+Asking the live tutor the same question under each lens showed the change
+working, and it also turned up a real accuracy problem. Haiku 4.5 called dāna,
+sīla and bhāvanā the "three roots" of merit; they are the grounds,
+puññakiriyavatthu. I ran ten Dhamma questions against three models to see how
+deep that goes, and the results are now my decision to make about which model
+the Dhamma deserves.
+
+**Engineering Contribution**
+
+- *Decisions made:* the bias was my suspicion, and the three lenses are the
+  site's existing three, not new ones. Reusing the site's own names meant the
+  tutor and the explainer can't drift apart. Universal as the default, because
+  it answers the question as asked.
+- *Improvements made to generated code:* the first draft added lens prompts on
+  top of a base that still demanded Thai framing. Reading the full assembled
+  prompt caught that, and the fix removes the conflicting lines instead of
+  stacking more instructions on them. A live run, not just the tests, proved the
+  three answers actually differ.
+- *Roughly how much was accepted as-is vs engineered on:* the lens wording,
+  picker and tests were drafted by Claude from the site's own copy; what counts
+  as "universal" and the default were mine.
+
+**References / Conversations**
+Commits `5dd81d9` (the three lenses) and `943e74e` (fresh start on switch).
+`tests/test_dhamma_lenses.py` guards that Universal and Neutral carry no Thai
+framing.
