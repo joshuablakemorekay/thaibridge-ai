@@ -296,8 +296,9 @@ ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 - ǎ = rising tone (tone 4) - caron/hacek
 
 **Consonant Rules - CRITICAL:**
-- NEVER add "h" after k, p, t or ch. This system does not mark aspiration
-  at all, so two letters that differ only by aspiration share one spelling.
+- NEVER add "h" after k, p, t or ch. This system shows aspiration WITHOUT an
+  "h": plain k, p, t, ch are the breathy sounds, and g, bp, dt, j are the
+  unbreathy ones (ข/ก = k/g, พ/ป = p/bp, ท/ต = t/dt, ช/จ = ch/j).
 - ข ค ฆ = k    (never kh)
 - ผ พ ภ = p    (never ph)
 - ฐ ฑ ฒ ถ ท ธ = t    (never th)
