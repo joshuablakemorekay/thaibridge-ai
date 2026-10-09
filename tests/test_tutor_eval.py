@@ -90,11 +90,18 @@ def test_a_cut_off_answer_fails():
     ("คุณ (khun)", "คุณ (kun)"),
     ("พระ (phrá)", "พระ (prá)"),
     ("ที่ (thîi)", "ที่ (tîi)"),
-    ("ลุง (lung)", "ลุง (luŋ)"),
+    ("ผู้หญิง (pûu-yǐng)", "ผู้หญิง (pûu-yǐŋ)"),
+    ("ชื่อ (chûe)", "ชื่อ (chʉ̂ʉ)"),
 ])
 def test_spelling_rule_breaks_are_caught(bad, good):
     assert tutor_eval.spelling_breaks(bad)
     assert tutor_eval.spelling_breaks(good) == []
+
+
+@pytest.mark.parametrize("gloss", ["หิว (hungry)", "ฟ้า (blue)", "เช้า (morning)"])
+def test_an_english_meaning_in_brackets_is_not_a_broken_spelling(gloss):
+    """Sonnet wrote หิว (hungry); the first cut of this check failed it for 'ng'."""
+    assert tutor_eval.spelling_breaks(gloss) == []
 
 
 def test_english_glosses_in_brackets_are_not_romanisations():

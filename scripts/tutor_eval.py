@@ -12,13 +12,16 @@ This spends real money: a full run on Sonnet 5.5 is about 20 cents. That is
 why it is a script you run on purpose, not part of the test suite.
 Exit code 0 means every case passed.
 
-It imports ai_agent only, never app: importing app connects to the live
-database, and an exam has no business there.
+The tutor's reference lookup (tutor_reference) builds its index by importing
+app, and importing app connects to whatever DATABASE_URL names — the live
+database, in .env. The script blanks DATABASE_URL first so app falls back to a
+local SQLite file: an exam has no business on the live database.
 """
 import argparse
 import os
 import re
 import sys
+import unicodedata
 from datetime import date
 from pathlib import Path
 
@@ -31,7 +34,7 @@ EXAM = ROOT / 'evals' / 'tutor_accuracy.yaml'
 RESULTS = ROOT / 'evals' / 'results'
 
 # The reply caps app.py gives each mode (AI_REPLY_TOKENS, AI_REPLY_TOKENS_BY_MODE).
-# Copied rather than imported because importing app touches the live database;
+# Copied rather than imported so these stay readable at a glance;
 # tests/test_tutor_eval.py fails if these two ever drift apart.
 REPLY_TOKENS = 800
 REPLY_TOKENS_BY_MODE = {'generator': 1500}
@@ -40,7 +43,12 @@ THAI = re.compile(r'[฀-๿]')
 # A romanisation is the bracket straight after Thai script: ครับ (kráp)
 ROMANISATION = re.compile(r'[฀-๿][฀-๿\s\-/]*\**\s*\(([^)]{1,60})\)')
 # ThaiBridge Spelling: no h after p, t, k or ch; ŋ not "ng"; ʉ not "ue".
-SPELLING_BREAK = re.compile(r'(?<![a-z])(ph|th|kh|chh)|ng|ue', re.I)
+ASPIRATED = re.compile(r'(?<![a-z])(ph|th|kh|chh)', re.I)
+NG_OR_UE = re.compile(r'ng|ue', re.I)
+# "ng" and "ue" are common in plain English ("(hungry)", "(blue)"), so they
+# only count as a break inside a bracket that is visibly a romanisation: one
+# with a tone mark, a special letter or a syllable hyphen.
+LOOKS_ROMANISED = re.compile(r'[^\x00-\x7f]|-')
 # Words that only ever appear in an English aside, never in a romanisation.
 # Without this, "(this one, near the speaker)" reads as a broken spelling of th.
 ENGLISH_ASIDE = {'the', 'a', 'an', 'this', 'that', 'these', 'those', 'is', 'of',
@@ -59,7 +67,11 @@ def spelling_breaks(text):
         if (THAI.search(rom) or len(words) > 6 or '"' in rom or ',' in rom
                 or words & ENGLISH_ASIDE):
             continue
-        if SPELLING_BREAK.search(rom):
+        # Tone marks stripped first: in "chûe" the mark sits on the u, so the
+        # letters "ue" are never side by side until it is removed.
+        bare = ''.join(ch for ch in unicodedata.normalize('NFD', rom)
+                       if not unicodedata.combining(ch))
+        if ASPIRATED.search(bare) or (NG_OR_UE.search(bare) and LOOKS_ROMANISED.search(rom)):
             found.append(rom)
     return found
 
@@ -101,6 +113,7 @@ def main():
 
     from dotenv import load_dotenv
     load_dotenv(ROOT / '.env')
+    os.environ['DATABASE_URL'] = ''  # never the live database; see the docstring
     if args.model:
         os.environ['AI_MODEL'] = args.model
     import ai_agent
@@ -132,7 +145,13 @@ def main():
 
 def write_report(rows, model, passed):
     RESULTS.mkdir(parents=True, exist_ok=True)
-    path = RESULTS / f'{date.today().isoformat()}_{model}.md'
+    # A second run on the same day gets _2, _3…: overwriting would lose the
+    # "before" whenever a change is tested the same day it is made.
+    stem = f'{date.today().isoformat()}_{model}'
+    path, n = RESULTS / f'{stem}.md', 1
+    while path.exists():
+        n += 1
+        path = RESULTS / f'{stem}_{n}.md'
     lines = [f'# Tutor accuracy exam — {model}, {date.today().isoformat()}', '',
              f'**{passed}/{len(rows)} passed.**', '',
              '| Case | Result | Why it failed |', '|---|---|---|']
