@@ -56,6 +56,54 @@
     color: var(--bodhi-green);
     text-decoration: none;
 }
+/* Sentence builder: tap tiles from the pool into the answer row. */
+.sb-prompt { margin: 1rem 0; font-size: 1.25rem; }
+.sb-english { font-weight: 600; color: #333; }
+.sb-speaker {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: #fff;
+    vertical-align: middle;
+}
+.sb-speaker.male { background: #2196F3; }
+.sb-speaker.female { background: #E91E63; }
+.sb-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    min-height: 4rem;
+    padding: 0.6rem;
+    border-radius: 8px;
+}
+.sb-answer { background: #fff8e1; border: 2px dashed var(--saffron); }
+.sb-pool { margin-top: 0.75rem; }
+.sb-tile {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid var(--royal-purple);
+    border-radius: 8px;
+    background: #fff;
+    font-family: inherit;
+    cursor: pointer;
+}
+.sb-tile:hover { background: #f3e5f5; }
+.sb-tile .thai-text { font-size: 1.4rem; line-height: 1.3; }
+.sb-tile .sb-roman { font-size: 0.8rem; color: #666; }
+.sb-tile.static { cursor: default; border-color: #2e7d32; }
+.sb-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+.sb-buttons .btn { margin: 0; }
+.sb-buttons .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn.sb-secondary { background: #fff; color: var(--royal-purple); border: 2px solid var(--royal-purple); }
+.sb-result { margin-top: 1rem; padding: 1rem; border-radius: 8px; }
+.sb-result.right { background: #e8f5e9; border-left: 4px solid #2e7d32; }
+.sb-result.wrong { background: #fdecea; border-left: 4px solid #c62828; }
+.sb-result .sb-row { min-height: 0; padding: 0.5rem 0 0; }
+
 /* Answering Questions: a question with its yes and no replies side by side. */
 .qa-pair {
     background: #fafafa;
@@ -263,6 +311,7 @@
         <a href="#questions" class="btn" style="margin: 0;">❓ Questions</a>
         <a href="#answering" class="btn" style="margin: 0;">💬 Answering</a>
         <a href="#verbs-practice" class="btn" style="margin: 0;">🔄 Verb Practice</a>
+        <a href="#sentence-builder" class="btn" style="margin: 0;">🧩 Build the Sentence</a>
         <a href="#conversations" class="btn" style="margin: 0;">💭 Conversations</a>
     </div>
 </div>
@@ -667,6 +716,35 @@
     </div>
 </div>
 
+<!-- Sentence Builder -->
+    </div>
+</div>
+
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="sentence-builder" style="color: var(--saffron); margin-top: 2rem;">🧩 Build the Sentence</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card sb-card">
+    <p style="font-size: 1.05rem; line-height: 1.7; margin-top: 0;">Now it's your turn. Read the English, then tap the Thai words in the right order. Say it out loud as you build it.</p>
+    <div id="sb-drill" aria-live="polite">
+        <div class="sb-prompt">
+            <span id="sb-speaker" class="sb-speaker"></span>
+            <span id="sb-english" class="sb-english">Loading…</span>
+        </div>
+        <div id="sb-answer" class="sb-row sb-answer" aria-label="Your sentence"></div>
+        <div id="sb-pool" class="sb-row sb-pool" aria-label="Words to choose from"></div>
+        <div class="sb-buttons">
+            <button type="button" id="sb-check" class="btn" onclick="sbCheck()" disabled>✓ Check</button>
+            <button type="button" class="btn sb-secondary" onclick="sbClear()">↺ Start again</button>
+            <button type="button" id="sb-next" class="btn sb-secondary" onclick="sbNext()">Next →</button>
+        </div>
+        <div id="sb-result" class="sb-result" hidden></div>
+    </div>
+    <p style="font-size: 0.85rem; color: #666; margin-bottom: 0;">These sentences are new and still waiting for a teacher's check.</p>
+</div>
+
 <!-- Real Conversations -->
     </div>
 </div>
@@ -825,5 +903,126 @@
             answer.classList.add('revealed');
         }
     }
+
+    // ── Build the Sentence ──────────────────────────────────────────
+    // The server deals the tiles shuffled and keeps the right order to
+    // itself; the page only ever sends back the order the learner chose.
+    var sbQuestion = null;
+
+    function sbTile(tile, onTap) {
+        var b = document.createElement(onTap ? 'button' : 'span');
+        b.className = 'sb-tile' + (onTap ? '' : ' static');
+        if (onTap) { b.type = 'button'; b.onclick = onTap; }
+        var th = document.createElement('span');
+        th.className = 'thai-text';
+        th.textContent = tile.thai;
+        var ro = document.createElement('span');
+        ro.className = 'sb-roman';
+        ro.textContent = tile.roman;
+        b.append(th, ro);
+        return b;
+    }
+
+    function sbMove(button, toRow) {
+        if (sbQuestion && sbQuestion.done) { return; }
+        document.getElementById(toRow).appendChild(button);
+        document.getElementById('sb-check').disabled =
+            document.getElementById('sb-pool').children.length > 0;
+    }
+
+    function sbRender() {
+        var pool = document.getElementById('sb-pool');
+        var answer = document.getElementById('sb-answer');
+        pool.replaceChildren();
+        answer.replaceChildren();
+        sbQuestion.tiles.forEach(function (tile) {
+            var b = sbTile(tile, function () {
+                sbMove(b, b.parentNode.id === 'sb-pool' ? 'sb-answer' : 'sb-pool');
+            });
+            b.dataset.thai = tile.thai;
+            pool.appendChild(b);
+        });
+        var speaker = document.getElementById('sb-speaker');
+        speaker.className = 'sb-speaker ' + sbQuestion.speaker;
+        speaker.textContent = sbQuestion.speaker === 'male' ? '👨 said by a man' : '👩 said by a woman';
+        document.getElementById('sb-english').textContent = sbQuestion.english;
+        document.getElementById('sb-check').disabled = true;
+        document.getElementById('sb-result').hidden = true;
+    }
+
+    function sbNext() {
+        fetch('/api/sentence-builder')
+            .then(function (r) { return r.json(); })
+            .then(function (q) {
+                if (q.error) {
+                    document.getElementById('sb-english').textContent = q.error;
+                    return;
+                }
+                sbQuestion = q;
+                sbRender();
+            })
+            .catch(function () {
+                document.getElementById('sb-english').textContent =
+                    'Could not load a sentence — check your connection and press Next.';
+            });
+    }
+
+    function sbClear() {
+        if (!sbQuestion) { return; }
+        // A checked question can't be marked twice, so start a fresh one.
+        if (sbQuestion.done) { sbNext(); } else { sbRender(); }
+    }
+
+    function sbCheck() {
+        if (!sbQuestion || sbQuestion.done) { return; }
+        var chosen = Array.from(document.getElementById('sb-answer').children)
+            .map(function (b) { return b.dataset.thai; });
+        sbQuestion.done = true;
+        document.getElementById('sb-check').disabled = true;
+        fetch('/api/sentence-builder/check', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question_id: sbQuestion.question_id, tiles: chosen })
+        })
+            .then(function (r) { return r.json(); })
+            .then(function (res) {
+                var box = document.getElementById('sb-result');
+                box.replaceChildren();
+                box.hidden = false;
+                if (res.expired || res.error) {
+                    box.className = 'sb-result wrong';
+                    box.textContent = res.error;
+                    if (res.expired) { sbNext(); }
+                    return;
+                }
+                box.className = 'sb-result ' + (res.correct ? 'right' : 'wrong');
+                var head = document.createElement('div');
+                head.style.fontWeight = '600';
+                head.textContent = res.correct
+                    ? 'ถูกต้อง! Correct!' + (res.xp_earned ? ' +' + res.xp_earned + ' XP' : '')
+                    : 'Not quite. The right order is:';
+                box.appendChild(head);
+                if (!res.correct) {
+                    var row = document.createElement('div');
+                    row.className = 'sb-row';
+                    res.correct_tiles.forEach(function (t) { row.appendChild(sbTile(t, null)); });
+                    box.appendChild(row);
+                }
+                if (res.tip) {
+                    var tip = document.createElement('div');
+                    tip.style.marginTop = '0.5rem';
+                    tip.textContent = '💡 ' + res.tip;
+                    box.appendChild(tip);
+                }
+            })
+            .catch(function () {
+                sbQuestion.done = false;
+                document.getElementById('sb-check').disabled = false;
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (document.getElementById('sb-drill')) { sbNext(); }
+    });
 </script>
 {% endblock %}

@@ -22,6 +22,7 @@ import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
 import register_levels  # the nine formality registers shown on /register
 import survival  # the free Survival Thai starter set (/survival)
+import sentence_builder  # tap-the-tiles drill on /sentences
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
 
@@ -7831,6 +7832,70 @@ def pay_drill_answer(is_correct, scored):
         'new_level': new_level,
         'total_xp': user['xp']
     }
+
+
+def _sentence_builder_gate():
+    """The Sentences page's own access rule, answered as JSON for the API."""
+    init_user_progress()
+    allowed, message = check_section_access('sentences')
+    return None if allowed else (jsonify({'error': message}), 403)
+
+
+@app.route('/api/sentence-builder')
+def sentence_builder_question():
+    """Deal one sentence-builder question: English prompt, shuffled Thai tiles.
+
+    The right order stays on the server as an issued question, the same way
+    the other drills keep their answers, so the page never holds it.
+    """
+    locked = _sentence_builder_gate()
+    if locked:
+        return locked
+    gender = session.get('user_gender', 'neutral')
+    q = sentence_builder.deal(gender)
+    return jsonify({
+        'question_id': issue_question(q['answer']),
+        'english': q['sentence']['english'],
+        'speaker': q['speaker'],
+        'tiles': q['tiles'],
+    })
+
+
+@app.route('/api/sentence-builder/check', methods=['POST'])
+@limiter.limit("120 per hour; 600 per day", key_func=_rate_limit_key)
+def sentence_builder_check():
+    """Mark a sentence-builder answer and show the right order if it was wrong.
+
+    Unlike /api/check_answer there is no "browser's word" fallback: every
+    builder question is issued here, so an unknown or replayed id is simply
+    refused rather than marked.
+    """
+    locked = _sentence_builder_gate()
+    if locked:
+        return locked
+    data = request.get_json(silent=True) or {}
+    tiles = data.get('tiles')
+    if not isinstance(tiles, list) or not all(isinstance(t, str) for t in tiles):
+        return jsonify({'error': 'Send the tiles as a list.'}), 400
+
+    # The candidates let the marker recover the right answer after a wrong
+    # guess without it ever being stored readably — see redeem_question().
+    candidates = (sentence_builder.all_answers('male')
+                  + sentence_builder.all_answers('female'))
+    scored, is_correct, correct_answer = redeem_question(
+        data.get('question_id'), sentence_builder.answer_text(tiles), candidates)
+    if not scored:
+        return jsonify({'error': 'That question has expired — here is a new one.',
+                        'expired': True}), 409
+
+    reveal = sentence_builder.explain(correct_answer)
+    return jsonify({
+        'correct': is_correct,
+        'correct_answer': correct_answer,
+        'correct_tiles': reveal['tiles'],
+        'tip': reveal['tip'],
+        **pay_drill_answer(is_correct, scored),
+    })
 
 
 @app.route('/api/vocabulary/<category>')
