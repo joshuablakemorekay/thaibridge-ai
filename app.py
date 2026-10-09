@@ -22,6 +22,7 @@ import thai_reading  # reading content for the Read & Write Thai Script page
 import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by verse
 import register_levels  # the nine formality registers shown on /register
 import survival  # the free Survival Thai starter set (/survival)
+import tour_trips  # the playable trips on the Tour Guide page
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
 
@@ -6855,10 +6856,12 @@ def lesson_detail(lesson_id):
 @app.route('/tour-guide')
 @require_access('tour_guide')
 def tour_guide():
-    """Thai for tourists and holiday makers"""
+    """Thai for anyone exploring Thailand: six playable trips, then the phrasebook."""
     audio_map = _audio_map_for(
-        w['thai'] for words in TOUR_VOCAB.values() for w in words)
-    return render_template('tour_guide.html', vocab=TOUR_VOCAB, audio_map=audio_map)
+        [w['thai'] for words in TOUR_VOCAB.values() for w in words]
+        + tour_trips.thai_strings())
+    return render_template('tour_guide.html', vocab=TOUR_VOCAB, audio_map=audio_map,
+                           trips=tour_trips.TRIPS, particles=tour_trips.PARTICLES)
 
 
 @app.route('/business-thai')

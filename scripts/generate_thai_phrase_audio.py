@@ -197,6 +197,13 @@ def collect_tour():
     return [w['thai'] for words in app.TOUR_VOCAB.values() for w in words]
 
 
+def collect_tour_trips():
+    """The Tour Guide trips — every line in the six journeys, with each of the
+    learner's own lines recorded once per polite ending (ครับ / ค่ะ / คะ)."""
+    import tour_trips
+    return tour_trips.thai_strings()
+
+
 def collect_business():
     """The Business Thai guide — every word/phrase across all categories."""
     import app
@@ -242,6 +249,7 @@ PAGES = {
     'vocabulary': collect_vocabulary,
     'lessons': collect_lessons,
     'tour': collect_tour,
+    'tour_trips': collect_tour_trips,
     'business': collect_business,
     'culture': collect_culture,
     'theravada': collect_theravada,
@@ -295,6 +303,11 @@ async def main(pages, force):
             print('  {} ok'.format(stem))
         except Exception as exc:                       # noqa: BLE001
             failed += 1
+            # edge-tts opens the file before audio arrives, so a refused request
+            # leaves an EMPTY mp3 behind. Left there, the next run counts it as
+            # "already present" and the page shows a button that plays nothing.
+            if os.path.exists(out_path):
+                os.remove(out_path)
             print('  {} FAILED: {}'.format(stem, ascii(exc)))
 
     print('\n{} made, {} already present, {} failed'.format(made, skipped, failed))
