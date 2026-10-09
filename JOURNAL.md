@@ -3815,3 +3815,74 @@ the Dhamma deserves.
 Commits `5dd81d9` (the three lenses) and `943e74e` (fresh start on switch).
 `tests/test_dhamma_lenses.py` guards that Universal and Neutral carry no Thai
 framing.
+
+## 9 October 2026 (later) — The tutor was teaching mistakes, so it got an exam
+
+**TL;DR:** A side-by-side test showed the live tutor (Haiku 4.5) teaching
+wrong Thai and wrong Dhamma. It now runs on Sonnet 5.5, sits a 17-question
+accuracy exam before any change, answers from this app's own checked lessons,
+streams its answers, and keeps each chat in the learner's own browser so the
+server stores no message text.
+
+I asked the same questions of three models through the tutor's real
+instructions. The live one called mettā "joy in a friend's success" (that is
+muditā), invented a five-step dependent origination, listed บ ด จ ป as
+low-class consonants and taught คนหนึ่งตัว for "one person". Haiku 5.5 was
+right on the Dhamma and worse on the Thai. Sonnet 5.5 got both right.
+
+### How we did it
+
+The switch came with its own costs, so I set the rule first: it must not lose
+money. Pro's daily ceiling went from 150 to 75, which still clears the
+five-times-free floor the tests guard, and the account got a $10 monthly cap.
+If that cap is ever reached, visitors read that the tutor is resting rather
+than an error about API keys.
+
+Then five upgrades, each tested and committed on its own:
+
+1. **An accuracy exam** (`evals/tutor_accuracy.yaml`). Every case records the
+   real mistake it guards against. Its first run on Sonnet caught it calling
+   ด low-class.
+2. **Answers from my own lessons.** The tutor is handed the Alphabet page's
+   consonant classes and the reviewed spellings that match each question.
+   The exam went from 14/16 to 16/16.
+3. **One cached copy of the instructions for everyone.** The student's name
+   used to open the prompt, which made every visitor's copy unique.
+4. **Streaming.** The first words show after about a second.
+5. **Chat memory in the browser.** Every deploy used to wipe every chat.
+
+### The bit worth keeping
+
+Grounding the tutor in my own content meant trusting that content, and it was
+wrong in one place: four Monk Mode lines wrote ถวาย as tà-waai. The tutor
+would have learned the mistake. Now fixing a lesson fixes the tutor too.
+
+Memory was the real decision. Saving chats in the database was the obvious
+fix, and it would have broken a promise the code already makes: message text
+is never stored, so nobody's question about their own practice gets filed
+away. Keeping the chat in the learner's browser solved the deploy problem
+without breaking it.
+
+The exam had to earn trust too. Its first spelling check failed "(hungry)"
+for containing "ng", and its first class check failed a correct sentence about
+ห. A check that fails good answers teaches you to ignore it, so both were
+narrowed before anything else was built on them.
+
+**Engineering Contribution**
+
+- *Decisions made:* the model, chosen on the test's evidence rather than on
+  price; the never-lose-money rule and the $10 cap; all five upgrades and
+  their order.
+- *Improvements made to generated code:* two false-failing exam checks found
+  and narrowed; a staging step that would have committed another session's
+  half-finished rename caught and avoided; a bad tone in my own lesson data
+  surfaced by the grounding, and fixed at the source.
+- *Roughly how much was accepted as-is vs engineered on:* the code, tests and
+  exam were drafted by Claude, then corrected on what live runs showed. The
+  model choice, the money rule and the privacy line on memory were mine.
+
+**References / Conversations**
+Model switch `1acbba7`; resting message `d70d4f6`; cache-token logging
+`39e5959`; exam `daf2ab9`; grounding `cdddc20`; ถวาย fix `d90d76f`; shared
+cache `c207d32`; streaming `bee11d1`; no tables `fc0da3a`; browser memory
+`e84f31e`. Exam reports are in `evals/results/`.
