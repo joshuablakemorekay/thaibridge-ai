@@ -70,8 +70,12 @@ SETS = [
                'The reply to ขอโทษ, and a whole Thai attitude in three words.'),
             _p('สบายดีไหม', 'sà-baai dii mǎi', 'How are you?'),
             _p('สบายดี', 'sà-baai dii', 'I\'m well'),
-            _p('ใช่', 'châi', 'Yes'),
-            _p('ไม่ใช่', 'mâi châi', 'No'),
+            _p('ใช่', 'châi', 'Yes (that\'s right)',
+               'It confirms something is true. To say yes to an offer, use เอา '
+               '(ao, "I\'ll take it") or just ครับ/ค่ะ.'),
+            _p('ไม่ใช่', 'mâi châi', 'No (that\'s not right)',
+               'It corrects something. To turn down an offer, use ไม่เอา '
+               '(mâi ao, "I don\'t want it").'),
             _p('ไม่เข้าใจ', 'mâi kâo-jai', 'I don\'t understand',
                'The most useful sentence on this page.'),
             _p('พูดช้าๆ ได้ไหม', 'pûut cháa cháa dâi mǎi',
@@ -101,7 +105,8 @@ SETS = [
             _p('เก้า', 'gâo', 'Nine'),
             _p('สิบ', 'sìp', 'Ten'),
             _p('สิบเอ็ด', 'sìp-èt', 'Eleven',
-               'Note: "one" becomes เอ็ด (èt), not หนึ่ง, in the teens and after.'),
+               'Note: "one" becomes เอ็ด (èt), not หนึ่ง, in any number above ten that '
+               'ends in one: 11, 21, 31, 101.'),
             _p('ยี่สิบ', 'yîi-sìp', 'Twenty',
                'Twenty is the one irregular: ยี่ (yîi), not สอง.'),
             _p('ร้อย', 'rɔ́ɔi', 'Hundred'),
@@ -127,7 +132,7 @@ SETS = [
             _p('น้ำ', 'náam', 'Water'),
             _p('ข้าว', 'kâao', 'Rice',
                'Also means "food" or "a meal" in general.'),
-            _p('กินเจ', 'gin jee', 'I eat vegetarian',
+            _p('กินเจ', 'gin jee', 'I eat jay (strict vegan)',
                'เจ is strict vegan-Buddhist; มังสวิรัติ (maŋ-sà-wí-rát) is ordinary '
                'vegetarian.'),
             _p('เท่าไหร่', 'tâo-rài', 'How much?'),
