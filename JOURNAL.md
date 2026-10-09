@@ -3886,3 +3886,55 @@ Model switch `1acbba7`; resting message `d70d4f6`; cache-token logging
 `39e5959`; exam `daf2ab9`; grounding `cdddc20`; ถวาย fix `d90d76f`; shared
 cache `c207d32`; streaming `bee11d1`; no tables `fc0da3a`; browser memory
 `e84f31e`. Exam reports are in `evals/results/`.
+
+
+## 9 October 2026 (evening) — The Tour Guide stopped being a list
+
+**TL;DR:** The Tour Guide page became seven short trips you play in Thai, with
+real photos, instead of a word list.
+
+I pasted in a long list of places to visit and asked:
+
+> How could we make it into an interactive, immersive Tour Guide experience rather than just information in your face?
+
+### How we did it
+
+A directory of places with prices and opening hours would go stale and turn
+the app into a travel site. So each place became a *setting* for language:
+someone speaks Thai, and you pick the reply. Claude prototyped one trip (Doi
+Suthep) as a standalone page. Then I settled who it's for:
+
+> Tourists is fine and add travellers too, maybe mention expats or a use a universal term so it welcomes anyone. Build all six now.
+
+After that I added Chiang Rai, Sampheng and Khlong Thom, and asked:
+
+> Can we add beautiful images to this Flask web app Tour Guide page or not?
+
+The answer was seven Wikimedia Commons photos, each credited as its licence
+requires.
+
+### The bit worth keeping
+
+Two bugs only showed up when things were tried for real. The audio script
+left 110 empty MP3s behind when the voice service throttled it. And ǎ ǐ ǔ in
+our romanisation were broken on every page, because three fonts claim letters
+they can't draw.
+
+**Engineering Contribution**
+
+- *Decisions made:* places as settings, not listings (no prices or opening
+  hours, so nothing goes stale); "anyone exploring Thailand" as the audience;
+  Chiang Rai as its own seventh trip rather than squeezed into the Doi Suthep
+  day; free-licence photos over drawn illustrations; a woman's คะ vs ค่ะ built
+  in rather than glossed over.
+- *Improvements made to generated code:* the 536-line template split into its
+  own CSS and JS files; keyboard focus now follows the trip; a test proves the
+  empty-MP3 cleanup works (it fails without the fix); a wrong Koh Chang photo
+  (actually Koh Wai) caught by eye; my own ร่อง romanisation slip fixed.
+- *Roughly how much was accepted as-is vs engineered on:* Claude drafted the
+  trip content and the player code. The direction, audience, places, images
+  and the ThaiBridge Spelling naming were mine. Each bug above was found by
+  checking in a real browser, not by the tests.
+
+**References / Conversations**
+PRs #21–#24; polish commits `d1fcf49`, `bb648a5`, `948952b`.
