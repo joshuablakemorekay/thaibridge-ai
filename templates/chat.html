@@ -869,6 +869,18 @@
         callAI('(The learner is ready. Please begin the scene in character.)', { showUser: false });
     }
 
+    // /chat?scenario=<id> opens straight into that roleplay. The Tour Guide
+    // trips link here at the end of each trip. Only ids that have a chip on the
+    // page are honoured (the chips come from the server's ROLEPLAY_SCENARIOS),
+    // and startScenario still applies the Pro check, so the link grants nothing.
+    document.addEventListener('DOMContentLoaded', function () {
+        const wanted = new URLSearchParams(window.location.search).get('scenario');
+        if (!wanted) return;
+        const chip = Array.from(document.querySelectorAll('.scenario-chip[data-scenario]'))
+            .find(c => c.dataset.scenario === wanted);
+        if (chip) chip.click();
+    });
+
     function exitScenario() {
         currentScenario = null;
         document.querySelectorAll('.scenario-chip').forEach(c => c.classList.remove('active'));
