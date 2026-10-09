@@ -716,7 +716,15 @@
         if (!DHAMMA_LENSES[id] || id === currentLens) return;
         currentLens = id;
         showLensBar();
-        addMessage('system', `Approach: ${DHAMMA_LENSES[id].icon} ${DHAMMA_LENSES[id].title}. ${DHAMMA_LENSES[id].blurb}`);
+        // The tutor remembers the conversation so far, and answers written in
+        // the old approach pull the next few back towards it. Forget them on
+        // the server; the messages stay on screen so nothing is lost to read.
+        fetch('/api/ai/clear', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({})
+        }).catch(() => {});
+        addMessage('system', `Approach: ${DHAMMA_LENSES[id].icon} ${DHAMMA_LENSES[id].title}. ${DHAMMA_LENSES[id].blurb} The tutor starts fresh from here.`);
     }
 
     function switchMode(mode) {

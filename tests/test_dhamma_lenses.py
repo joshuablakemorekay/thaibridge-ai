@@ -101,3 +101,13 @@ def test_the_chat_page_shows_all_three_approaches(monkeypatch):
     body = app.test_client().get("/chat").get_data(as_text=True)
     for lid in ai_agent.DHAMMA_LENSES:
         assert f'data-lens="{lid}"' in body
+
+
+def test_switching_approach_makes_the_tutor_forget_the_old_one():
+    """Old answers in the tutor's memory drag the next few back to the old
+    approach, so a switch must clear the server-side conversation."""
+    src = open(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__))), "templates", "chat.html"), encoding="utf-8").read()
+    set_lens = src[src.index("function setLens"):]
+    set_lens = set_lens[:set_lens.index("\n    }\n")]
+    assert "/api/ai/clear" in set_lens
