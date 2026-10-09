@@ -3938,3 +3938,68 @@ they can't draw.
 
 **References / Conversations**
 PRs #21–#24; polish commits `d1fcf49`, `bb648a5`, `948952b`.
+
+
+## 9 October 2026 (night) — The prompt evals ran against real Claude
+
+**TL;DR:** The prompt library's automated checks now have an API key on
+GitHub and run against real Claude. 5 of 26 prompts pass, and the scores tell
+me more about the test setup than about the prompts.
+
+I asked:
+
+> In order for automation to work it needs a token. Do I have a token yet?
+
+I didn't. The prompt-eval workflow had been running in "mock" mode, which
+checks the plumbing without calling Claude. It wasn't urgent, but I said:
+
+> lets just do it how long will it take?
+
+### How we did it
+
+Claude isn't allowed to write to a secret store, so I added
+`ANTHROPIC_API_KEY` to the repo's secrets myself. It took three tries. The
+first paste picked up a stray character ("Connection error"). The second
+picked up only part of the key, because Notepad wrapped it onto two lines
+("invalid x-api-key"). The third skipped copying altogether: one command read
+the key straight out of `.env` and saved it to GitHub.
+
+The first real run got answers but a low score (about 50%). Two fixes to
+`scripts/eval_runner.py` followed. The old model, `claude-sonnet-4-5`, is
+switched off on 30 November, so the evals moved to Sonnet 5.5, the same model
+as the tutor. The answer limit went from 1024 to 4096 tokens, because about
+half the answers were being cut off mid-way.
+
+That model switch broke every prompt. Sonnet 5.5 sends a "thinking" block
+before its answer, and the script only read the first block. The tutor had
+already hit this, and `ai_agent.py` joins the text blocks instead, so the
+eval script now does the same. The next run: 5 of 26 passing, average about
+60%, up from 3 passing at about 50%.
+
+### The bit worth keeping
+
+A score of 0% across the board is a message about the test, not the prompts.
+The errors told the real story each time: a connection error, a rejected
+key, a missing attribute. Most prompts still fail because they were written
+for Claude Code, where Claude can see the project files. The eval sends the
+prompt on its own, so Claude replies "I don't see any PDF attached".
+
+**Engineering Contribution**
+
+- *Decisions made:* set the key up now rather than later; read the key from
+  `.env` with a command instead of copying it by hand; leave the
+  file-dependent prompts for another day instead of rewriting them tonight.
+- *Improvements made to generated code:* Claude's first model switch went out
+  untested against a real call and broke every eval. The fix copies the
+  pattern the tutor already uses, and it was proven with one real call before
+  being pushed. Claude also first said the chanting rubric checks were
+  "crashing"; reading the script showed they were already counted as fails,
+  so that change was dropped.
+- *Roughly how much was accepted as-is vs engineered on:* Claude diagnosed
+  each failure from the run logs and wrote the three-line fixes. I added the
+  secret, ran the commits and pushes, and chose what to fix now and what to
+  leave.
+
+**References / Conversations**
+Commits `3c35328` (Sonnet 5.5, longer answers) and `1198ed3` (read only the
+text blocks); real eval runs 37982384804 and 37985516110.
