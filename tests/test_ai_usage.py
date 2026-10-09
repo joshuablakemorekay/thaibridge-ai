@@ -341,3 +341,17 @@ def test_the_ceiling_is_far_above_the_free_allowance(agent):
     """A sanity check on the number itself: if these ever converge, Pro has
     stopped being worth paying for."""
     assert appmod.PRO_FAIR_USE_DAILY >= appmod.FREE_AI_DAILY_LIMIT * 5
+
+
+def test_cached_tokens_are_recorded(monkeypatch):
+    """Caching moves most of a Sonnet message's input out of input_tokens; a
+    log without these columns under-counted the cost several times over."""
+    fake = FakeAgent()
+    fake.chat = lambda **kw: {
+        "success": True, "response": "ok", "model": "claude-sonnet-5-5",
+        "tokens_used": {"input": 4, "output": 300, "cache_write": 415, "cache_read": 2256},
+    }
+    monkeypatch.setattr(appmod, "ai_agent", fake)
+    send(app.test_client())
+    [row] = rows()
+    assert (row.input_tokens, row.cache_write_tokens, row.cache_read_tokens) == (4, 415, 2256)

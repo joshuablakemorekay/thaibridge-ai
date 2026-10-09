@@ -36,7 +36,10 @@ def test_conversations_without_a_roleplay_get_no_link(sentences_html):
 
 def test_chat_page_reads_the_scenario_parameter(unlocked_client):
     html = unlocked_client.get('/chat?scenario=restaurant').get_data(as_text=True)
-    assert "params.get('scenario')" in html
+    assert ".get('scenario')" in html
+    # Dropping the parameter stops a refresh from restarting (and paying for)
+    # the scene again.
+    assert 'history.replaceState' in html
     assert 'data-scenario="restaurant"' in html
 
 

@@ -826,7 +826,7 @@
                     updateLimitHint();
                 }
             } else if (data.gate) {
-                showUpgradeNote(data.message);
+                showUpgradeNote(data.message, data.gate !== 'ai_resting');
                 if (data.gate === 'daily_limit' && AI_LIMITS.pools) {
                     // Zero only the pool that was actually refused.
                     const pool = data.pool || currentPool();
@@ -877,13 +877,14 @@
         callAI('(The learner is ready. Please begin the scene in character.)', { showUser: false });
     }
 
-    // Arriving from the Sentences page with ?scenario=<id> starts that scene.
-    // Only ids that have a chip on this page are honoured — the server looks
-    // the wording up by id anyway. The parameter is then dropped from the URL
-    // so a refresh doesn't spend another message restarting the scene.
-    document.addEventListener('DOMContentLoaded', () => {
-        const params = new URLSearchParams(window.location.search);
-        const wanted = params.get('scenario');
+    // /chat?scenario=<id> opens straight into that roleplay. The Tour Guide
+    // trips and the Sentences page conversations link here. Only ids that have
+    // a chip on the page are honoured (the chips come from the server's
+    // ROLEPLAY_SCENARIOS), and startScenario still applies the Pro check, so
+    // the link grants nothing. The parameter is then dropped from the URL so a
+    // refresh doesn't spend another message restarting the scene.
+    document.addEventListener('DOMContentLoaded', function () {
+        const wanted = new URLSearchParams(window.location.search).get('scenario');
         if (!wanted) return;
         history.replaceState(null, '', window.location.pathname);
         const chip = Array.from(document.querySelectorAll('.scenario-chip[data-scenario]'))
@@ -1025,11 +1026,15 @@
         hint.style.display = 'block';
     }
 
-    function showUpgradeNote(text) {
+    // withPlansLink is false when paying would not help: when the AI budget
+    // has run out ('ai_resting'), Pro is resting too.
+    function showUpgradeNote(text, withPlansLink = true) {
         const chatBody = document.getElementById('chat-messages');
         const note = document.createElement('div');
         note.className = 'upgrade-note';
-        note.innerHTML = `${text} <a href="/premium">See Pro plans →</a>`;
+        note.innerHTML = withPlansLink
+            ? `${text} <a href="/premium">See Pro plans →</a>`
+            : text;
         chatBody.appendChild(note);
         chatBody.scrollTop = chatBody.scrollHeight;
     }

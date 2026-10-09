@@ -23,6 +23,7 @@ import chanting  # the chanting book — Pali/Thai/Paiboon/English, verse by ver
 import register_levels  # the nine formality registers shown on /register
 import survival  # the free Survival Thai starter set (/survival)
 import sentence_builder  # tap-the-tiles drill on /sentences
+import tour_trips  # the playable trips on the Tour Guide page
 import paiboon_lookup  # the Paiboon search index, served on the /paiboon page
 import curriculum  # the public curriculum outline, built from the gated routes
 
@@ -142,6 +143,12 @@ if database_url:
     # costs nothing and saves a baffling error if the provider ever changes.
     if database_url.startswith('postgres://'):
         database_url = database_url.replace('postgres://', 'postgresql://', 1)
+    # Name the driver outright. A bare postgresql:// lets SQLAlchemy pick, and
+    # 2.1 picks psycopg 3, which is not installed — every deploy crashed on
+    # 2026-10-09 until SQLAlchemy was pinned. This keeps it on psycopg2 even
+    # if that pin is ever lifted.
+    if database_url.startswith('postgresql://'):
+        database_url = database_url.replace('postgresql://', 'postgresql+psycopg2://', 1)
     app.config['SQLALCHEMY_DATABASE_URI'] = database_url
     # Neon suspends its compute when idle, which quietly drops pooled
     # connections. Without pre-ping, the first request after a quiet spell dies
@@ -288,11 +295,17 @@ class AiUsage(db.Model):
     feature       = db.Column(db.String(20), nullable=False)   # 'chat' | 'hint' | ...
     mode          = db.Column(db.String(20))                   # 'tutor' | 'buddhist' | ...
 
-    # What it cost. model matters because prices differ per model, and the app
-    # runs a cheap one live and a better one locally.
+    # What it cost. model matters because prices differ per model.
     model         = db.Column(db.String(64))
     input_tokens  = db.Column(db.Integer, default=0, nullable=False)
     output_tokens = db.Column(db.Integer, default=0, nullable=False)
+    # Prompt caching (2026-10-09) moves most of a message's input out of
+    # input_tokens: the instructions and history are written to the cache at
+    # 1.25x the input price, then read back at a tenth of it. Without these two
+    # the log under-counted Sonnet's cost several times over. NULL on older
+    # rows, which is the honest answer: we were not recording it yet.
+    cache_write_tokens = db.Column(db.Integer)
+    cache_read_tokens  = db.Column(db.Integer)
 
     # How it went. tier is recorded AS IT WAS at the time — a user who upgrades
     # later must not rewrite the history of what they did on the free plan, which
@@ -403,6 +416,8 @@ def _ensure_user_columns():
         'progress':               json_,
     }
     _ensure_columns('users', wanted)
+    _ensure_columns('ai_usage', {'cache_write_tokens': 'INTEGER',
+                                 'cache_read_tokens': 'INTEGER'})
 
 
 def _ensure_columns(table_name, wanted):
@@ -1124,7 +1139,8 @@ def _pro_messages_today():
 
 
 def log_ai_usage(feature, outcome, *, mode=None, model=None,
-                 input_tokens=0, output_tokens=0, error_type=None):
+                 input_tokens=0, output_tokens=0, error_type=None,
+                 cache_write_tokens=0, cache_read_tokens=0):
     """Record one AI request. Never raises.
 
     Deliberately called from the route rather than from inside ai_agent: the AI
@@ -1146,6 +1162,8 @@ def log_ai_usage(feature, outcome, *, mode=None, model=None,
             model=model,
             input_tokens=input_tokens or 0,
             output_tokens=output_tokens or 0,
+            cache_write_tokens=cache_write_tokens or 0,
+            cache_read_tokens=cache_read_tokens or 0,
             # Recorded as it was AT THE TIME. Reading it back off the user later
             # would rewrite history every time someone upgrades, and destroy the
             # one question this column exists to answer.
@@ -6961,10 +6979,12 @@ def lesson_detail(lesson_id):
 @app.route('/tour-guide')
 @require_access('tour_guide')
 def tour_guide():
-    """Thai for tourists and holiday makers"""
+    """Thai for anyone exploring Thailand: six playable trips, then the phrasebook."""
     audio_map = _audio_map_for(
-        w['thai'] for words in TOUR_VOCAB.values() for w in words)
-    return render_template('tour_guide.html', vocab=TOUR_VOCAB, audio_map=audio_map)
+        [w['thai'] for words in TOUR_VOCAB.values() for w in words]
+        + tour_trips.thai_strings())
+    return render_template('tour_guide.html', vocab=TOUR_VOCAB, audio_map=audio_map,
+                           trips=tour_trips.TRIPS, particles=tour_trips.PARTICLES)
 
 
 @app.route('/business-thai')
@@ -9276,7 +9296,9 @@ def ai_chat():
             log_ai_usage('chat', 'ok', mode=mode,
                          model=response.get('model') or getattr(ai_agent, 'model', None),
                          input_tokens=tokens.get('input', 0),
-                         output_tokens=tokens.get('output', 0))
+                         output_tokens=tokens.get('output', 0),
+                         cache_write_tokens=tokens.get('cache_write', 0),
+                         cache_read_tokens=tokens.get('cache_read', 0))
         else:
             # The agent caught the failure itself and returned it, so no
             # exception reaches the handler below — without this branch those
