@@ -133,7 +133,7 @@ class _FakeMessages:
         # A thinking model puts its thinking block first.
         return type("R", (), {"content": [_Block("thinking"), _Block("text", "Mettā is "),
                                           _Block("text", "goodwill.")],
-                              "usage": _Usage()})()
+                              "usage": _Usage(), "stop_reason": "end_turn"})()
 
 
 def _agent_with(monkeypatch, dhamma_model):

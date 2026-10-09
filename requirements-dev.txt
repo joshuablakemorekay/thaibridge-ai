@@ -14,3 +14,8 @@
 # collection rather than at that one test, which is how it stayed missing:
 # every developer machine already had it installed by hand.
 reportlab==4.2.5
+
+# evals/tutor_accuracy.yaml is the AI tutor's accuracy exam, read by
+# scripts/tutor_eval.py; tests/test_tutor_eval.py checks the file is well
+# formed and that its checks behave.
+PyYAML==6.0.3

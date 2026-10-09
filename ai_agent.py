@@ -552,6 +552,8 @@ scene moving. Open the scene yourself with a natural first line in character.
                 'response': assistant_message,
                 'mode': mode,
                 'model': model,
+                # 'max_tokens' means the answer was cut off mid-sentence.
+                'stop_reason': response.stop_reason,
                 'tokens_used': {
                     'input': response.usage.input_tokens,
                     'output': response.usage.output_tokens,

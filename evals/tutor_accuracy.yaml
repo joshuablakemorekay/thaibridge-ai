@@ -1,0 +1,187 @@
+# The AI tutor's accuracy exam.
+#
+# Run it before changing the tutor's instructions or model:
+#     python scripts/tutor_eval.py
+#
+# Each case is one question put to the REAL tutor (the same instructions and
+# model the live site uses), then checked automatically:
+#
+#   must_include      every entry must appear. An entry that is a list means
+#                     "any one of these" (so dāna or dana or generosity).
+#   must_not_include  none of these may appear.
+#   no_thai_script    the answer must contain no Thai letters at all.
+#
+# Two checks run on every case without being listed: the answer must not be
+# cut off mid-sentence, and every romanisation must follow ThaiBridge Spelling
+# (no "h" after p, t, k or ch; ŋ not "ng"; ʉ not "ue").
+#
+# `why` records where the case came from. Most are mistakes a model really
+# made in testing on 2026-10-09 — the point of the exam is that a mistake we
+# have already caught can never quietly come back.
+#
+# Text matching ignores upper/lower case. Keep checks to facts that any
+# correct answer must state, not one model's favourite wording, or the exam
+# fails good answers.
+
+cases:
+
+  # ── The Dhamma ────────────────────────────────────────────────────────────
+
+  - id: merit-grounds
+    mode: buddhist
+    lens: universal
+    question: What is merit, and how do I make it?
+    must_include:
+      - [dāna, dana, generosity]
+      - [sīla, sila, ethical conduct, virtue]
+      - [bhāvanā, bhavana, meditation]
+    must_not_include: [three roots]
+    no_thai_script: true
+    why: >
+      Haiku 4.5 called dāna, sīla and bhāvanā the "three roots" of merit.
+      They are the grounds (puññakiriyavatthu); the three roots are something
+      else. Universal answers also must not drift into Thai.
+
+  - id: metta-karuna
+    mode: buddhist
+    lens: universal
+    question: What is the difference between mettā and karuṇā?
+    must_include:
+      - [suffering]
+      - [happy, happiness, well-being, wellbeing, welfare, goodwill]
+    must_not_include: [mettā is the joy, metta is the joy]
+    why: >
+      Haiku 4.5 described mettā as "joy in a friend's success", which is
+      muditā. Karuṇā must be tied to suffering, mettā to wishing happiness.
+
+  - id: dependent-origination
+    mode: buddhist
+    lens: universal
+    question: Explain dependent origination simply.
+    must_include:
+      - [avijjā, avijja, ignorance]
+      - [taṇhā, tanha, craving]
+      - [twelve, "12"]
+    why: >
+      Haiku 4.5 invented a five-step "simplest version" and presented it as
+      the Buddha's twelve links.
+
+  - id: five-precepts
+    mode: buddhist
+    lens: universal
+    question: What are the five precepts?
+    must_include:
+      - [killing, taking life, harming living beings]
+      - [stealing, taking what is not given]
+      - [sexual misconduct]
+      - [false speech, lying]
+      - [intoxicants]
+    why: The foundation of lay practice; every correct answer names all five.
+
+  - id: three-marks
+    mode: buddhist
+    lens: universal
+    question: What are the three marks of existence?
+    must_include:
+      - [anicca, impermanence]
+      - [dukkha]
+      - [anattā, anatta, not-self, non-self]
+    why: Core teaching; a basic check that the universal lens stays accurate.
+
+  - id: neutral-no-identity
+    mode: buddhist
+    lens: neutral
+    question: How do I start meditating?
+    no_thai_script: true
+    must_not_include: [become a buddhist, take refuge, we buddhists]
+    why: >
+      The culturally neutral path promises no tradition or identity to adopt
+      (/dhamma-and-culture). The answer must not ask the reader to join
+      anything.
+
+  - id: sharing-merit
+    mode: buddhist
+    lens: thai
+    question: After Thais make merit, how do they share it with others? What is it called in Thai?
+    must_include:
+      - [แผ่ส่วนบุญ, อุทิศส่วนกุศล, กรวดน้ำ]
+    why: >
+      Sonnet 5.5 said sharing merit is called แผ่เมตตา, which means spreading
+      loving-kindness. Sharing merit is แผ่ส่วนบุญ / อุทิศส่วนกุศล, and the
+      water-pouring ritual is กรวดน้ำ.
+
+  - id: offer-food-to-monk
+    mode: buddhist
+    lens: thai
+    question: What do I say when I offer food to a monk?
+    must_include: [ถวาย]
+    must_not_include: [ให้อาหารพระ]
+    why: >
+      The live tutor once taught ให้ for giving to a monk (fixed in a1df2f9).
+      ถวาย is the word; ให้ to a monk is the classic learner mistake.
+
+  # ── Thai language ─────────────────────────────────────────────────────────
+
+  - id: classifier-tua
+    mode: tutor
+    question: Explain the classifier ตัว. Can I use it to count people?
+    must_include: [คน]
+    must_not_include: [คนหนึ่งตัว, คนสองตัว, คนสามตัว]
+    why: >
+      Haiku 4.5 taught คนหนึ่งตัว for "one person". People are counted with
+      คน; counting a person with ตัว treats them as an animal.
+
+  - id: tone-mai
+    mode: tutor
+    question: What tone does the word ไม่ (not) have, and what tone does ใหม่ (new) have?
+    must_include:
+      - [falling]
+      - [low]
+    why: >
+      Haiku 4.5 produced a tones table pairing words with the wrong tones and
+      meanings. ไม่ is falling, ใหม่ is low.
+
+  - id: class-of-do-dek
+    mode: tutor
+    question: Which consonant class is ด? Just the class and one example word.
+    must_include: [mid]
+    must_not_include: [low class, low-class, high class, high-class]
+    why: Haiku 4.5 listed บ ด จ ป as low-class. They are mid-class.
+
+  - id: spelling-khun
+    mode: tutor
+    question: How is คุณ written in your romanisation?
+    must_include: [kun]
+    must_not_include: [(khun)]
+    why: >
+      ThaiBridge Spelling never adds h after k. Haiku 5.5 wrote "khun" and
+      "phrá" even with the rules in its instructions.
+
+  - id: give-to-monk-register
+    mode: tutor
+    question: When I hand something to a monk, do I say ให้ or ถวาย?
+    must_include: [ถวาย]
+    why: >
+      The live tutor answered ให้, twice, in two modes, and told the learner
+      ถวาย was for elders and royalty (tests/test_ai_register_rules.py).
+
+  - id: female-particle
+    mode: tutor
+    question: What polite word does a woman put at the end of a statement?
+    must_include: [ค่ะ]
+    why: Basic politeness; every beginner needs it right.
+
+  - id: address-elder
+    mode: cultural
+    question: How should I address someone a little older than me?
+    must_include: [พี่]
+    why: The everyday kin term; a culture answer without it misses the point.
+
+  - id: food-quiz
+    mode: generator
+    question: Give me a beginner vocabulary quiz about food.
+    must_include: [answer]
+    why: >
+      An exercise must arrive with its answer key. At the old 500-token cap
+      every generated quiz was cut off before the key.
+
