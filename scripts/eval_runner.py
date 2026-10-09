@@ -79,7 +79,7 @@ class MockProvider(Provider):
 
 class AnthropicProvider(Provider):
     """Calls the Anthropic API. Lazy-imported so the runner works without the SDK."""
-    def __init__(self, model: str = "claude-sonnet-4-5"):
+    def __init__(self, model: str = "claude-sonnet-5-5"):
         try:
             import anthropic  # noqa
         except ImportError:
@@ -101,7 +101,7 @@ class AnthropicProvider(Provider):
         rendered = render_prompt(prompt, inputs)
         msg = self.client.messages.create(
             model=self.model,
-            max_tokens=1024,
+            max_tokens=4096,
             messages=[{"role": "user", "content": rendered}],
         )
         return msg.content[0].text
@@ -316,7 +316,7 @@ def main():
     parser.add_argument('--provider', default='mock',
                         choices=['mock', 'anthropic'],
                         help='LLM provider to use')
-    parser.add_argument('--model', default='claude-sonnet-4-5')
+    parser.add_argument('--model', default='claude-sonnet-5-5')
     parser.add_argument('--dry-run', action='store_true',
                         help='Validate rubrics without calling the LLM')
     parser.add_argument('--fail-under', type=float, default=None,
