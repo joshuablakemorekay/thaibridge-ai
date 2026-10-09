@@ -206,11 +206,6 @@
     /* scroll-margin: the site header is sticky, so a plain scrollIntoView
        would tuck the top of the trip card underneath it. */
     .trips { margin-bottom: 3rem; scroll-margin-top: 220px; }
-    /* The site's text faces (Noto Serif Thai, then Cormorant) have no ǎ ǐ ǔ,
-       which Paiboon needs for the rising tone: mǎi rendered as "m.i". Noto Sans
-       is already loaded by base.html and has them, so the browser borrows the
-       missing letters from it. */
-    #trip-player { font-family: 'Noto Serif Thai', 'Noto Sans', Georgia, serif; }
     .trips-intro { color: #555; margin: -0.25rem 0 1rem; font-size: 0.95rem; }
 
     .trip-grid {
