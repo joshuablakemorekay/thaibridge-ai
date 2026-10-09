@@ -482,14 +482,12 @@ scene moving. Open the scene yourself with a natural first line in character.
 
         return base_prompt + mode_prompt + MODE_LENGTH.get(mode, '') + roleplay
     
-    def _ask(self, model: str, system: List[Dict], messages: List[Dict],
-             max_tokens: int):
-        """One request to the API, set up the same way for every feature.
+    def _request(self, model: str, system: List[Dict], messages: List[Dict],
+                 max_tokens: int) -> Dict:
+        """The request every feature sends, set up the same way.
 
-        Returns (reply text, response). Thinking is switched off where the
-        model would otherwise spend the reply budget on it, and the text blocks
-        are joined rather than reading content[0]: a model that can think puts
-        a thinking block first, so content[0].text comes back empty or raises.
+        Thinking is switched off where the model would otherwise spend the
+        reply budget on it.
         """
         request = dict(model=model, max_tokens=max_tokens,
                        system=system, messages=messages)
@@ -502,7 +500,18 @@ scene moving. Open the scene yourself with a natural first line in character.
         # top-level cache_control. Models with a higher cache minimum than
         # this prompt (Haiku 4.5 needs 4,096 tokens) simply don't cache.
         request['extra_body'] = {'cache_control': {'type': 'ephemeral'}}
-        response = self.client.messages.create(**request)
+        return request
+
+    def _ask(self, model: str, system: List[Dict], messages: List[Dict],
+             max_tokens: int):
+        """One request to the API. Returns (reply text, response).
+
+        The text blocks are joined rather than reading content[0]: a model that
+        can think puts a thinking block first, so content[0].text comes back
+        empty or raises.
+        """
+        response = self.client.messages.create(
+            **self._request(model, system, messages, max_tokens))
         return ''.join(b.text for b in response.content if b.type == 'text'), response
 
     def _reference(self, message: str, mode: str, lens: Optional[str]) -> str:
@@ -524,6 +533,83 @@ scene moving. Open the scene yourself with a natural first line in character.
         """The model a mode runs on: Buddhist mode may have its own."""
         return self.dhamma_model if mode == 'buddhist' else self.model
 
+    # A turn is: record the student's message (_start_turn), get the reply in
+    # one piece (chat) or as it is written (start_chat_stream), then record the
+    # reply (_finish_turn). The two ways of getting the reply share everything
+    # else, so they cannot drift apart.
+
+    def _start_turn(self, session_id: str, message: str, mode: str,
+                    user_context: Optional[Dict], scenario: Optional[str],
+                    lens: Optional[str]):
+        """Record the student's message; return (model, system, history) to send."""
+        if session_id not in self.conversations:
+            self.conversations[session_id] = []
+        if user_context is None:
+            user_context = {'level': 1, 'xp': 0, 'name': 'Student'}
+
+        model = self.model_for(mode)
+        # The system prompt for this mode, with any roleplay scenario or lens.
+        system = self.system_blocks(mode, user_context, scenario, lens)
+
+        # The student's message, with any checked reference entries riding
+        # along. Stored exactly as sent, so the history the cache saw is the
+        # history sent next time.
+        reference = self._reference(message, mode, lens)
+        self.conversations[session_id].append({
+            'role': 'user',
+            'content': ([{'type': 'text', 'text': reference},
+                         {'type': 'text', 'text': message}]
+                        if reference else message)
+        })
+        # Keep conversation history manageable (last 20 messages)
+        return model, system, self.conversations[session_id][-20:]
+
+    def _finish_turn(self, session_id: str, mode: str, model: str, text: str,
+                     response) -> Dict:
+        """Record the reply and describe it, the same for both ways of asking."""
+        self.conversations[session_id].append({'role': 'assistant', 'content': text})
+        return {
+            'success': True,
+            'response': text,
+            'mode': mode,
+            'model': model,
+            # 'max_tokens' means the answer was cut off mid-sentence.
+            'stop_reason': response.stop_reason,
+            'tokens_used': {
+                'input': response.usage.input_tokens,
+                'output': response.usage.output_tokens,
+                # With caching on, most input is counted here instead of in
+                # 'input' above, so the cost log needs both.
+                'cache_write': getattr(response.usage, 'cache_creation_input_tokens', 0) or 0,
+                'cache_read': getattr(response.usage, 'cache_read_input_tokens', 0) or 0,
+            },
+            'timestamp': datetime.now().isoformat()
+        }
+
+    @staticmethod
+    def _failure(error: Exception) -> Dict:
+        """What the page is told when a request fails."""
+        if isinstance(error, anthropic.APIError):
+            if is_out_of_budget(error):
+                # 'gate' makes the chat page show this in its gentle note box,
+                # the same one the daily allowance uses, not as an error.
+                return {
+                    'success': False,
+                    'gate': 'ai_resting',
+                    'error_type': 'out_of_budget',
+                    'message': AI_RESTING_MESSAGE,
+                }
+            return {
+                'success': False,
+                'error': str(error),
+                'message': 'API error occurred. Please check your API key and try again.'
+            }
+        return {
+            'success': False,
+            'error': str(error),
+            'message': 'An unexpected error occurred.'
+        }
+
     def chat(
         self,
         session_id: str,
@@ -536,101 +622,69 @@ scene moving. Open the scene yourself with a natural first line in character.
     ) -> Dict:
         """
         Send a message and get AI response
-        
+
         Args:
             session_id: Unique session identifier
             message: User's message
             mode: AI mode to use
             user_context: User's learning context
             max_tokens: Maximum response length
-            
+
         Returns:
             Dict with 'response', 'mode', 'tokens_used'
         """
-        
-        # Initialize conversation history if needed
-        if session_id not in self.conversations:
-            self.conversations[session_id] = []
-        
-        # Default user context
-        if user_context is None:
-            user_context = {
-                'level': 1,
-                'xp': 0,
-                'name': 'Student'
-            }
-        
-        model = self.model_for(mode)
-
-        # Get system prompt for this mode (with any active roleplay scenario
-        # or Dhamma lens)
-        system_prompt = self.system_blocks(mode, user_context, scenario, lens)
-        
-        # Add user message to history, with any checked reference entries
-        # riding along. Stored exactly as sent, so the history the cache saw
-        # is the history sent next time.
-        reference = self._reference(message, mode, lens)
-        self.conversations[session_id].append({
-            'role': 'user',
-            'content': ([{'type': 'text', 'text': reference},
-                         {'type': 'text', 'text': message}]
-                        if reference else message)
-        })
-        
-        # Keep conversation history manageable (last 20 messages)
-        conversation_history = self.conversations[session_id][-20:]
-        
+        model, system, history = self._start_turn(
+            session_id, message, mode, user_context, scenario, lens)
         try:
-            # Call Claude API
-            assistant_message, response = self._ask(
-                model, system_prompt, conversation_history, max_tokens)
-            
-            # Add assistant response to history
-            self.conversations[session_id].append({
-                'role': 'assistant',
-                'content': assistant_message
-            })
-            
-            return {
-                'success': True,
-                'response': assistant_message,
-                'mode': mode,
-                'model': model,
-                # 'max_tokens' means the answer was cut off mid-sentence.
-                'stop_reason': response.stop_reason,
-                'tokens_used': {
-                    'input': response.usage.input_tokens,
-                    'output': response.usage.output_tokens,
-                    # With caching on, most input is counted here instead of
-                    # in 'input' above, so the cost log needs both.
-                    'cache_write': getattr(response.usage, 'cache_creation_input_tokens', 0) or 0,
-                    'cache_read': getattr(response.usage, 'cache_read_input_tokens', 0) or 0,
-                },
-                'timestamp': datetime.now().isoformat()
-            }
-            
-        except anthropic.APIError as e:
-            if is_out_of_budget(e):
-                # 'gate' makes the chat page show this in its gentle note box,
-                # the same one the daily allowance uses, not as an error.
-                return {
-                    'success': False,
-                    'gate': 'ai_resting',
-                    'error_type': 'out_of_budget',
-                    'message': AI_RESTING_MESSAGE,
-                }
-            return {
-                'success': False,
-                'error': str(e),
-                'message': 'API error occurred. Please check your API key and try again.'
-            }
+            text, response = self._ask(model, system, history, max_tokens)
         except Exception as e:
-            return {
-                'success': False,
-                'error': str(e),
-                'message': 'An unexpected error occurred.'
-            }
-    
+            return self._failure(e)
+        return self._finish_turn(session_id, mode, model, text, response)
+
+    def start_chat_stream(
+        self,
+        session_id: str,
+        message: str,
+        mode: str = 'conversation',
+        user_context: Optional[Dict] = None,
+        max_tokens: int = 2000,
+        scenario: Optional[str] = None,
+        lens: Optional[str] = None
+    ):
+        """Like chat(), but the reply arrives as it is written.
+
+        Returns (events, None) or (None, failure). The request is made HERE,
+        before any text is sent, so a refusal (an empty budget, a bad request)
+        comes back as the same failure chat() gives and the route can still
+        answer with an ordinary JSON error.
+
+        `events` yields {'type': 'text', 'text': ...} as the reply is written,
+        then one {'type': 'done', ...} carrying what chat() would have returned.
+        """
+        model, system, history = self._start_turn(
+            session_id, message, mode, user_context, scenario, lens)
+        manager = self.client.messages.stream(
+            **self._request(model, system, history, max_tokens))
+        try:
+            stream = manager.__enter__()
+        except Exception as e:
+            return None, self._failure(e)
+
+        def events():
+            parts = []
+            try:
+                # text_stream carries only the answer, never a thinking block.
+                for text in stream.text_stream:
+                    parts.append(text)
+                    yield {'type': 'text', 'text': text}
+                final = stream.get_final_message()
+            finally:
+                manager.__exit__(None, None, None)
+            done = self._finish_turn(session_id, mode, model, ''.join(parts), final)
+            yield {'type': 'done', **done}
+
+        return events(), None
+
     def get_quick_hint(
         self,
         question: str,

@@ -805,9 +805,18 @@
                     mode: currentMode,
                     session_id: sessionId,
                     scenario: currentScenario,
-                    lens: currentLens
+                    lens: currentLens,
+                    stream: true
                 })
             });
+
+            // A reply being written arrives as lines; a gate, an error or an
+            // empty budget still arrives as one ordinary JSON answer below.
+            const contentType = response.headers.get('Content-Type') || '';
+            if (contentType.includes('application/x-ndjson')) {
+                await readStreamedReply(response);
+                return;
+            }
 
             const data = await response.json();
 
@@ -843,6 +852,51 @@
             document.getElementById('send-btn').disabled = false;
             document.getElementById('thinking').classList.remove('active');
             input.focus();
+        }
+    }
+
+    // The reply as it is written: one JSON line per piece (see _stream_ai_reply
+    // in app.py). The bubble appears with the first words and is redrawn as the
+    // text grows, instead of the page sitting on "AI is thinking" throughout.
+    async function readStreamedReply(response) {
+        const chatBody = document.getElementById('chat-messages');
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        let text = '';
+        let bubble = null;
+
+        while (true) {
+            const { value, done } = await reader.read();
+            if (done) break;
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split('\n');
+            buffer = lines.pop();   // a half-received line waits for the rest
+            for (const line of lines) {
+                if (!line.trim()) continue;
+                const event = JSON.parse(line);
+                if (event.type === 'text') {
+                    if (!bubble) {
+                        document.getElementById('thinking').classList.remove('active');
+                        bubble = addMessage('assistant', '');
+                    }
+                    text += event.text;
+                    bubble.innerHTML = formatMessage(text);
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                } else if (event.type === 'done') {
+                    if (event.tokens_used) {
+                        totalTokens += event.tokens_used.input + event.tokens_used.output;
+                        document.getElementById('token-display').textContent =
+                            `Session tokens: ${totalTokens.toLocaleString()}`;
+                    }
+                    if (event.pools) {
+                        AI_LIMITS.pools = event.pools;
+                        updateLimitHint();
+                    }
+                } else if (event.type === 'error') {
+                    addMessage('system', `Error: ${event.message}`);
+                }
+            }
         }
     }
 
@@ -930,6 +984,8 @@
         
         chatBody.appendChild(messageDiv);
         chatBody.scrollTop = chatBody.scrollHeight;
+        // The text area, so a streamed reply can keep filling it in.
+        return messageDiv.querySelector('.message-content');
     }
     
     function formatMessage(content) {

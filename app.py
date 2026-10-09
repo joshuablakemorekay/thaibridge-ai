@@ -39,7 +39,7 @@ load_dotenv()  # Load .env file before anything else reads environment variables
 
 from urllib.parse import urlparse  # only-our-own-host check on redirect targets
 from flask import (Flask, render_template, request, jsonify, session, redirect,
-                   url_for, abort)
+                   url_for, abort, Response, stream_with_context)
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError
 from flask_login import (
@@ -9291,6 +9291,155 @@ def chat():
                            dhamma_lenses=DHAMMA_LENSES,
                            default_dhamma_lens=DEFAULT_DHAMMA_LENS)
 
+def _ai_chat_gate(tier, mode):
+    """The reply to send instead of an answer, or None to go ahead.
+
+    Shared by the one-piece and streamed replies so both enforce the same
+    allowances.
+    """
+    # --- Freemium gate: free & basic get a taste, Pro a fair-use ceiling ---
+    if tier != 'pro':
+        if mode not in FREE_AI_ALLOWED_MODES:
+            # Logged even though it cost nothing: a blocked request is the
+            # conversion signal, not spend. Recording only successes would
+            # lose the answer to "do people who hit a wall subscribe?"
+            log_ai_usage('chat', 'blocked_mode', mode=mode)
+            return jsonify({
+                'success': False,
+                'gate': 'mode_locked',
+                'message': "This AI mode is a Pro feature. Free and Basic plans "
+                           "include the Tutor and Dhamma modes — upgrade to Pro to "
+                           "unlock Conversation, Culture and the Exercise Generator.",
+            })
+        usage = _ai_usage_today()
+        pool_name = ai_pool_for(mode)
+        pool = AI_POOLS[pool_name]
+        pool_limit = ai_pool_limit(pool_name)
+        if usage.get(pool['key'], 0) >= pool_limit:
+            log_ai_usage('chat', 'blocked_cap', mode=mode)
+            if pool_name == 'dhamma':
+                # No upsell here. The teaching is free, and the only honest
+                # thing to say is that the day's questions are used up and
+                # the cap is a running cost, not a price on the Dhamma.
+                message = (f"That’s today’s {pool_limit} Dhamma questions. "
+                           "The teaching here is free and always will be — this "
+                           "limit is only what it costs us to run the model. "
+                           "Please come back tomorrow.")
+            else:
+                # Point at the Dhamma before pointing at the price. Someone
+                # out of tutor messages still has their Dhamma questions,
+                # and telling them to pay when they already have something
+                # left is the kind of nudge that reads as a trick.
+                dhamma_left = max(0, ai_pool_limit('dhamma')
+                                  - usage.get(AI_POOLS['dhamma']['key'], 0))
+                message = (f"You’ve used your {pool_limit} free Thai tutor "
+                           "messages for today. ")
+                if dhamma_left:
+                    message += (f"You still have {dhamma_left} Dhamma question"
+                                f"{'' if dhamma_left == 1 else 's'} left — switch to "
+                                "Dhamma mode to use them. ")
+                message += "Upgrade to Pro for a much higher daily allowance."
+            return jsonify({
+                'success': False,
+                'gate': 'daily_limit',
+                'pool': pool_name,
+                'message': message,
+            })
+
+    # Pro has no daily allowance to spend, but it does have a ceiling — see
+    # PRO_FAIR_USE_DAILY. Anonymous visitors are skipped: a Pro tier requires
+    # an account, so there is no reliable identity to count against, and the
+    # per-IP rate limit still applies to them.
+    elif current_user.is_authenticated:
+        if _pro_messages_today() >= PRO_FAIR_USE_DAILY:
+            log_ai_usage('chat', 'blocked_fairuse', mode=mode)
+            return jsonify({
+                'success': False,
+                'gate': 'fair_use',
+                'message': f"You've reached today's fair-use limit of "
+                           f"{PRO_FAIR_USE_DAILY} AI messages. It resets at "
+                           "midnight. This is here to keep the AI affordable "
+                           "to run, not to interrupt your study — if you "
+                           "regularly need more, please get in touch.",
+            })
+    return None
+
+
+def _count_ai_message(mode):
+    """Spend one message from a free or basic visitor's daily allowance.
+
+    Returns both pools, not just the one spent, so the page can redraw
+    either allowance without a second request. An earlier cut also sent
+    `pool` and `remaining` for the pool just used; the page reads neither,
+    so they were dead weight on every reply.
+    """
+    usage = _ai_usage_today()
+    pool = AI_POOLS[ai_pool_for(mode)]
+    usage[pool['key']] = usage.get(pool['key'], 0) + 1
+    session['ai_usage'] = usage
+    session.modified = True
+    return ai_limits_status()['pools']
+
+
+def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, lens):
+    """The tutor's reply sent as it is written, one JSON line per piece.
+
+    A Sonnet answer takes several seconds; sent in one piece, the page sat on
+    "AI is thinking" for all of it. Lines are {"type": "text", "text": ...}
+    while it is written, then one {"type": "done", ...} with what the
+    one-piece reply carries (tokens, pools), or {"type": "error", ...} if the
+    connection breaks partway.
+
+    The allowance is counted BEFORE the first line goes out, unlike the
+    one-piece reply, which counts after: the allowance lives in the session
+    cookie, and the cookie is sent with the response headers, so nothing
+    changed afterwards can reach the browser. The request to the AI is opened
+    first, so a refusal (an empty budget, say) still comes back as an ordinary
+    JSON error and costs the visitor nothing. Only a connection dropping
+    mid-answer, which is rare, costs a message.
+    """
+    events, failure = ai_agent.start_chat_stream(
+        message=message,
+        mode=mode,
+        session_id=session_id,
+        user_context=user_context,
+        max_tokens=AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
+        scenario=scenario,
+        lens=lens,
+    )
+    model = ai_agent.model_for(mode)
+    if failure:
+        log_ai_usage('chat', 'error', mode=mode, model=model,
+                     error_type=failure.get('error_type'))
+        return jsonify(failure)
+
+    pools = _count_ai_message(mode) if tier != 'pro' else None
+
+    def lines():
+        try:
+            for event in events:
+                if event['type'] == 'done':
+                    tokens = event.get('tokens_used') or {}
+                    log_ai_usage('chat', 'ok', mode=mode, model=event.get('model') or model,
+                                 input_tokens=tokens.get('input', 0),
+                                 output_tokens=tokens.get('output', 0),
+                                 cache_write_tokens=tokens.get('cache_write', 0),
+                                 cache_read_tokens=tokens.get('cache_read', 0))
+                    event = {**event, 'pools': pools}
+                yield json.dumps(event, ensure_ascii=False) + '\n'
+        except Exception as e:
+            app.logger.exception('AI stream broke partway')
+            log_ai_usage('chat', 'error', mode=mode, model=model,
+                         error_type=type(e).__name__)
+            yield json.dumps({'type': 'error',
+                              'message': 'The answer was interrupted. Please try again.'}) + '\n'
+
+    return Response(stream_with_context(lines()), mimetype='application/x-ndjson',
+                    # Proxies otherwise hold the lines back and send them all
+                    # at the end, which defeats the point.
+                    headers={'Cache-Control': 'no-cache', 'X-Accel-Buffering': 'no'})
+
+
 @app.route('/api/ai/chat', methods=['POST'])
 # ~30 messages an hour is far more than a learner types and far less than a
 # script manages in a second. The per-session daily cap still does the real
@@ -9319,72 +9468,10 @@ def ai_chat():
         # dead entry per message; and /api/ai/clear had nothing to clear.
         session_id = _visitor_session_id()
 
-        # --- Freemium gate: free & basic get a taste, Pro a fair-use ceiling ---
         tier = active_tier()
-        if tier != 'pro':
-            if mode not in FREE_AI_ALLOWED_MODES:
-                # Logged even though it cost nothing: a blocked request is the
-                # conversion signal, not spend. Recording only successes would
-                # lose the answer to "do people who hit a wall subscribe?"
-                log_ai_usage('chat', 'blocked_mode', mode=mode)
-                return jsonify({
-                    'success': False,
-                    'gate': 'mode_locked',
-                    'message': "This AI mode is a Pro feature. Free and Basic plans "
-                               "include the Tutor and Dhamma modes — upgrade to Pro to "
-                               "unlock Conversation, Culture and the Exercise Generator.",
-                })
-            usage = _ai_usage_today()
-            pool_name = ai_pool_for(mode)
-            pool = AI_POOLS[pool_name]
-            pool_limit = ai_pool_limit(pool_name)
-            if usage.get(pool['key'], 0) >= pool_limit:
-                log_ai_usage('chat', 'blocked_cap', mode=mode)
-                if pool_name == 'dhamma':
-                    # No upsell here. The teaching is free, and the only honest
-                    # thing to say is that the day's questions are used up and
-                    # the cap is a running cost, not a price on the Dhamma.
-                    message = (f"That’s today’s {pool_limit} Dhamma questions. "
-                               "The teaching here is free and always will be — this "
-                               "limit is only what it costs us to run the model. "
-                               "Please come back tomorrow.")
-                else:
-                    # Point at the Dhamma before pointing at the price. Someone
-                    # out of tutor messages still has their Dhamma questions,
-                    # and telling them to pay when they already have something
-                    # left is the kind of nudge that reads as a trick.
-                    dhamma_left = max(0, ai_pool_limit('dhamma')
-                                      - usage.get(AI_POOLS['dhamma']['key'], 0))
-                    message = (f"You’ve used your {pool_limit} free Thai tutor "
-                               "messages for today. ")
-                    if dhamma_left:
-                        message += (f"You still have {dhamma_left} Dhamma question"
-                                    f"{'' if dhamma_left == 1 else 's'} left — switch to "
-                                    "Dhamma mode to use them. ")
-                    message += "Upgrade to Pro for a much higher daily allowance."
-                return jsonify({
-                    'success': False,
-                    'gate': 'daily_limit',
-                    'pool': pool_name,
-                    'message': message,
-                })
-
-        # Pro has no daily allowance to spend, but it does have a ceiling — see
-        # PRO_FAIR_USE_DAILY. Anonymous visitors are skipped: a Pro tier requires
-        # an account, so there is no reliable identity to count against, and the
-        # per-IP rate limit still applies to them.
-        elif current_user.is_authenticated:
-            if _pro_messages_today() >= PRO_FAIR_USE_DAILY:
-                log_ai_usage('chat', 'blocked_fairuse', mode=mode)
-                return jsonify({
-                    'success': False,
-                    'gate': 'fair_use',
-                    'message': f"You've reached today's fair-use limit of "
-                               f"{PRO_FAIR_USE_DAILY} AI messages. It resets at "
-                               "midnight. This is here to keep the AI affordable "
-                               "to run, not to interrupt your study — if you "
-                               "regularly need more, please get in touch.",
-                })
+        blocked = _ai_chat_gate(tier, mode)
+        if blocked:
+            return blocked
 
         # Get user context from session
         user_context = {
@@ -9392,6 +9479,10 @@ def ai_chat():
             'xp': session.get('xp', 0),
             'name': session.get('username', 'Student')
         }
+
+        if data.get('stream'):
+            return _stream_ai_reply(tier, mode, message, session_id, user_context,
+                                    scenario, lens)
 
         # Get AI response (max_tokens controls API cost)
         response = ai_agent.chat(
@@ -9428,17 +9519,7 @@ def ai_chat():
         # Count this message against the daily taste for free & basic users,
         # and tell the UI how many they have left.
         if tier != 'pro' and isinstance(response, dict) and response.get('success'):
-            usage = _ai_usage_today()
-            pool_name = ai_pool_for(mode)
-            pool = AI_POOLS[pool_name]
-            usage[pool['key']] = usage.get(pool['key'], 0) + 1
-            session['ai_usage'] = usage
-            session.modified = True
-            # Both pools go back, not just the one spent, so the page can
-            # redraw either allowance without a second request. An earlier cut
-            # also sent `pool` and `remaining` for the pool just used; the page
-            # reads neither, so they were dead weight on every reply.
-            response['pools'] = ai_limits_status()['pools']
+            response['pools'] = _count_ai_message(mode)
 
         return jsonify(response)
         
