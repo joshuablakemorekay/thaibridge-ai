@@ -47,6 +47,15 @@
     background: var(--lotus-pink);
     color: #fff;
 }
+/* Off-script link to the tutor's roleplay of the same scene. Shares the
+   button shape but not the practice-on colours — it isn't a toggle. */
+.practice-toggle.offscript-link,
+.conv-card.practice-on .practice-toggle.offscript-link {
+    border-color: var(--bodhi-green);
+    background: #fff;
+    color: var(--bodhi-green);
+    text-decoration: none;
+}
 .practice-hint {
     font-size: 0.9rem;
     color: #666;
@@ -600,6 +609,9 @@
     <button type="button" class="practice-toggle" onclick="toggleConvPractice(this)">
         🎭 Practice mode: <span class="practice-state">off</span>
     </button>
+    {% if conv_id in roleplay_ids %}
+    <a href="{{ url_for('chat', scenario=conv_id) }}" class="practice-toggle offscript-link">💬 Try it off-script with the AI tutor</a>
+    {% endif %}
     <p class="practice-hint" hidden>Read the English, say the Thai out loud, then tap the grey bar to check yourself. Use 🔊 to hear the line any time.</p>
 
     {% for line in conv.dialogue %}

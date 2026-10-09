@@ -7288,8 +7288,17 @@ def sentences():
             'yes_no': SENTENCE_PATTERNS['question_patterns']['yes_no']['examples'],
             'wh_questions': SENTENCE_PATTERNS['question_patterns']['wh_questions']['examples']
         }
-    
+
+    # Conversations that have a matching tutor roleplay get a "try it
+    # off-script" link. Same guarded import as /chat: if the AI module can't
+    # load, the links simply don't appear.
+    try:
+        from ai_agent import ROLEPLAY_SCENARIOS
+    except Exception:
+        ROLEPLAY_SCENARIOS = {}
+
     return render_template('sentences.html',
+                         roleplay_ids=set(ROLEPLAY_SCENARIOS),
                          gender=gender,
                          patterns=SENTENCE_PATTERNS,
                          aspect_examples=aspect_examples,
