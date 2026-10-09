@@ -128,12 +128,25 @@
             '</div><p class="tp-draft">The Thai in these trips is a first draft awaiting a teacher’s review.</p></div>';
     }
 
-    function render() {
+    // Each render replaces the player's HTML, so the button that was just
+    // pressed no longer exists and keyboard focus would fall back to the top of
+    // the page. Put it somewhere useful instead: on the answer's feedback once
+    // one is picked (Continue is the next Tab), otherwise on the new heading,
+    // so a screen reader starts reading the new scene.
+    function moveFocus(el) {
+        if (!el) return;
+        if (!el.matches('button, a')) el.setAttribute('tabindex', '-1');
+        el.focus({ preventScroll: true });
+    }
+
+    function render(focusSelector) {
         if (!state.started) renderIntro();
         else if (state.i >= state.trip.scenes.length) renderEnd();
         else renderScene();
         if (window.wireThaiAudio) window.wireThaiAudio(player);
         document.getElementById('trips').scrollIntoView({ block: 'start' });
+        var target = focusSelector || (state.picked !== null ? '.tp-feedback' : '.tp-title');
+        moveFocus(player.querySelector(target));
     }
 
     function startTrip(key) {
@@ -147,11 +160,13 @@
     }
 
     function exitTrip() {
+        var key = state.trip.key;
         state = null;
         player.hidden = true;
         player.innerHTML = '';
         picker.hidden = false;
         showStamps();
+        moveFocus(picker.querySelector('[data-trip="' + key + '"]'));   // back where they came from
     }
 
     picker.addEventListener('click', function (e) {
@@ -173,7 +188,7 @@
         var act = b.dataset.act;
         if (act === 'exit') exitTrip();
         else if (act === 'voice') { state.started = false; render(); }
-        else if (act === 'hint') { state.showEn = !state.showEn; render(); }
+        else if (act === 'hint') { state.showEn = !state.showEn; render('[data-act="hint"]'); }
         else if (act === 'retry') { state.picked = null; render(); }
         else if (act === 'next') { state.i++; state.picked = null; state.tried = false; render(); }
     });

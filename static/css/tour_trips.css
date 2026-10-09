@@ -149,3 +149,7 @@ a.tp-btn { text-decoration: none; display: inline-block; }
     .tp-voice { grid-template-columns: 1fr; }
     .tp-stop span:last-child { font-size: 0.62rem; }
 }
+
+/* Headings and feedback take focus from the player script (for keyboard and
+   screen-reader users); no ring on them unless the visitor is using a keyboard. */
+.tp-title:focus:not(:focus-visible), .tp-feedback:focus:not(:focus-visible) { outline: none; }
