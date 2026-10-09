@@ -9381,7 +9381,8 @@ def _count_ai_message(mode):
     return ai_limits_status()['pools']
 
 
-def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, lens):
+def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, lens,
+                     history):
     """The tutor's reply sent as it is written, one JSON line per piece.
 
     A Sonnet answer takes several seconds; sent in one piece, the page sat on
@@ -9406,6 +9407,7 @@ def _stream_ai_reply(tier, mode, message, session_id, user_context, scenario, le
         max_tokens=AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
         scenario=scenario,
         lens=lens,
+        history=history,
     )
     model = ai_agent.model_for(mode)
     if failure:
@@ -9460,6 +9462,11 @@ def ai_chat():
         # Only an id; ai_agent checks it against DHAMMA_LENSES and falls back
         # to its default, so an unknown value cannot inject prompt text.
         lens = data.get('lens') or None
+        # The conversation so far, kept by the page itself so the server stores
+        # no message text (see ai_agent._history_from_browser for the caps that
+        # make an edited page harmless). A page that sends none — one still
+        # open from before this was deployed — falls back to server memory.
+        history = data.get('history') if isinstance(data.get('history'), list) else None
         # Give this visitor a conversation id and KEEP it. Reading with a
         # default and never storing it handed out a fresh id on every request,
         # which quietly broke three things: ai_agent keys its conversation
@@ -9482,7 +9489,7 @@ def ai_chat():
 
         if data.get('stream'):
             return _stream_ai_reply(tier, mode, message, session_id, user_context,
-                                    scenario, lens)
+                                    scenario, lens, history)
 
         # Get AI response (max_tokens controls API cost)
         response = ai_agent.chat(
@@ -9492,7 +9499,8 @@ def ai_chat():
             user_context=user_context,
             max_tokens=AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
             scenario=scenario,
-            lens=lens
+            lens=lens,
+            history=history
         )
 
         # Record what it cost. ai_agent has returned these token counts all

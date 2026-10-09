@@ -703,6 +703,57 @@
     const DHAMMA_LENSES = {{ (dhamma_lenses or {}) | tojson }};
     let currentLens = {{ default_dhamma_lens | tojson }};   // Buddhist mode only
 
+    // The conversation lives here, in this browser tab, not on the server.
+    // Each question sends the recent part of it back (the server caps it; see
+    // _history_from_browser in ai_agent.py). Kept here because the server
+    // forgot every chat on each deploy, and because storing it there would
+    // break the promise in app.py's AiUsage that message text is never kept.
+    // sessionStorage: it survives a refresh, and closing the tab ends it.
+    const HISTORY_KEY = 'thaibridge-chat-history';
+    let chatHistory = loadHistory();
+
+    function loadHistory() {
+        try {
+            const saved = JSON.parse(sessionStorage.getItem(HISTORY_KEY) || '[]');
+            return Array.isArray(saved) ? saved : [];
+        } catch (e) {
+            return [];
+        }
+    }
+
+    function saveHistory() {
+        try {
+            sessionStorage.setItem(HISTORY_KEY, JSON.stringify(chatHistory.slice(-40)));
+        } catch (e) { /* private browsing or storage full: the chat still works */ }
+    }
+
+    function resetHistory() {
+        chatHistory = [];
+        saveHistory();
+    }
+
+    // `hidden` marks the roleplay kickoff, which the tutor saw but the learner
+    // never typed, so it is sent again but not redrawn after a refresh.
+    function rememberTurn(question, reply, hidden) {
+        chatHistory.push({ role: 'user', content: question, hidden: !!hidden });
+        chatHistory.push({ role: 'assistant', content: reply });
+        saveHistory();
+    }
+
+    // After a refresh, put the conversation back on screen, so what the page
+    // shows and what the tutor remembers are the same thing.
+    function restoreChat() {
+        if (!chatHistory.length) return;
+        const welcome = document.querySelector('.welcome-message');
+        if (welcome) welcome.remove();
+        const placeholder = document.getElementById('chat-placeholder');
+        if (placeholder) placeholder.remove();
+        chatHistory.forEach(turn => {
+            if (!turn.hidden) addMessage(turn.role, turn.content);
+        });
+    }
+    document.addEventListener('DOMContentLoaded', restoreChat);
+
     // Shows the lens bar in Buddhist mode and marks the chosen lens.
     function showLensBar() {
         const bar = document.getElementById('lens-bar');
@@ -716,14 +767,10 @@
         if (!DHAMMA_LENSES[id] || id === currentLens) return;
         currentLens = id;
         showLensBar();
-        // The tutor remembers the conversation so far, and answers written in
-        // the old approach pull the next few back towards it. Forget them on
-        // the server; the messages stay on screen so nothing is lost to read.
-        fetch('/api/ai/clear', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({})
-        }).catch(() => {});
+        // The tutor is sent the conversation so far, and answers written in
+        // the old approach pull the next few back towards it. Start its memory
+        // afresh; the messages stay on screen so nothing is lost to read.
+        resetHistory();
         addMessage('system', `Approach: ${DHAMMA_LENSES[id].icon} ${DHAMMA_LENSES[id].title}. ${DHAMMA_LENSES[id].blurb} The tutor starts fresh from here.`);
     }
 
@@ -806,7 +853,10 @@
                     session_id: sessionId,
                     scenario: currentScenario,
                     lens: currentLens,
-                    stream: true
+                    stream: true,
+                    // The conversation so far. Only role and text: the
+                    // `hidden` flag is this page's own business.
+                    history: chatHistory.slice(-20).map(t => ({ role: t.role, content: t.content }))
                 })
             });
 
@@ -814,7 +864,8 @@
             // empty budget still arrives as one ordinary JSON answer below.
             const contentType = response.headers.get('Content-Type') || '';
             if (contentType.includes('application/x-ndjson')) {
-                await readStreamedReply(response);
+                const reply = await readStreamedReply(response);
+                if (reply !== null) rememberTurn(message, reply, !showUser);
                 return;
             }
 
@@ -822,6 +873,7 @@
 
             if (data.success) {
                 addMessage('assistant', data.response);
+                rememberTurn(message, data.response, !showUser);
 
                 if (data.tokens_used) {
                     totalTokens += data.tokens_used.input + data.tokens_used.output;
@@ -865,6 +917,7 @@
         let buffer = '';
         let text = '';
         let bubble = null;
+        let finished = false;   // only a reply that reached 'done' is remembered
 
         while (true) {
             const { value, done } = await reader.read();
@@ -884,6 +937,7 @@
                     bubble.innerHTML = formatMessage(text);
                     chatBody.scrollTop = chatBody.scrollHeight;
                 } else if (event.type === 'done') {
+                    finished = true;
                     if (event.tokens_used) {
                         totalTokens += event.tokens_used.input + event.tokens_used.output;
                         document.getElementById('token-display').textContent =
@@ -898,6 +952,9 @@
                 }
             }
         }
+        // The full reply, or null if it broke off before finishing: half an
+        // answer is not something the tutor should be shown as its own words.
+        return finished ? text : null;
     }
 
     // ── Roleplay scenarios (conversation partner) ───────────────
@@ -916,6 +973,7 @@
 
         currentScenario = id;
         sessionId = 'session_' + Date.now();   // fresh history per scene
+        resetHistory();
 
         document.querySelectorAll('.scenario-chip').forEach(c => c.classList.remove('active'));
         const chip = document.querySelector(`.scenario-chip[data-scenario="${id}"]`);
@@ -991,7 +1049,10 @@
     function formatMessage(content) {
         // Simple formatting - detect Thai script and romanization patterns
         // This is a basic implementation - can be enhanced
+        // Escaped first: this goes into innerHTML, and a reply (or a message
+        // read back from sessionStorage) holding HTML would otherwise run as it.
         return content
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
             .replace(/\n/g, '<br>')
             .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
             .replace(/\*(.*?)\*/g, '<em>$1</em>');
@@ -1017,13 +1078,9 @@
         sessionId = 'session_' + Date.now();
         totalTokens = 0;
         document.getElementById('token-display').textContent = 'Session tokens: 0';
-        
-        // Clear on server
-        fetch('/api/ai/clear', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({session_id: sessionId})
-        });
+
+        // The conversation is kept in this tab, so this is the whole clear.
+        resetHistory();
     }
     
     function exportChat() {

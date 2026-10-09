@@ -143,6 +143,12 @@ particular cultural identity or tradition.
 # as asked rather than adding a culture the student did not ask for.
 DEFAULT_DHAMMA_LENS = 'universal'
 
+# How much earlier conversation a turn carries. The page keeps the chat and
+# sends it back (see _history_from_browser); these caps are what stop an
+# edited page from sending a novel and running up the bill.
+MAX_HISTORY_MESSAGES = 20
+MAX_HISTORY_CHARS = 16000
+
 # Length rules for the modes whose answers ran past the reply cap. In a
 # side-by-side test half of Haiku 4.5's replies and two thirds of Sonnet 5.5's
 # were cut off mid-sentence at 500 tokens: Thai script is token-heavy, so 500
@@ -540,36 +546,77 @@ scene moving. Open the scene yourself with a natural first line in character.
     # reply (_finish_turn). The two ways of getting the reply share everything
     # else, so they cannot drift apart.
 
+    def _user_content(self, message: str, mode: str, lens: Optional[str]):
+        """A student's message as sent: with any checked reference entries
+        riding along. Deterministic, so a past message rebuilt from the
+        browser's history is byte-for-byte what was sent the first time, and
+        the cached conversation still matches."""
+        reference = self._reference(message, mode, lens)
+        return ([{'type': 'text', 'text': reference},
+                 {'type': 'text', 'text': message}]
+                if reference else message)
+
+    def _history_from_browser(self, history: List, mode: str,
+                              lens: Optional[str]) -> List[Dict]:
+        """The conversation so far, as the student's own browser sent it.
+
+        The page keeps the chat (see chat.html) so nothing about it is stored
+        on the server, where it would be lost on every deploy and where
+        ai_usage's promise that message text is never kept would be broken.
+        Anything a browser sends is untrusted, so: only user and assistant
+        turns with plain text, the newest MAX_HISTORY_MESSAGES of them, and no
+        more than MAX_HISTORY_CHARS in all — someone editing what their page
+        sends can only change their own answer, never run up the bill.
+        """
+        turns = [t for t in history
+                 if isinstance(t, dict) and t.get('role') in ('user', 'assistant')
+                 and isinstance(t.get('content'), str) and t['content'].strip()]
+        turns = turns[-MAX_HISTORY_MESSAGES:]
+        while turns and sum(len(t['content']) for t in turns) > MAX_HISTORY_CHARS:
+            turns = turns[1:]
+        # The API needs the conversation to open with the student.
+        while turns and turns[0]['role'] != 'user':
+            turns = turns[1:]
+        return [{'role': t['role'],
+                 'content': (self._user_content(t['content'], mode, lens)
+                             if t['role'] == 'user' else t['content'])}
+                for t in turns]
+
     def _start_turn(self, session_id: str, message: str, mode: str,
                     user_context: Optional[Dict], scenario: Optional[str],
-                    lens: Optional[str]):
-        """Record the student's message; return (model, system, history) to send."""
-        if session_id not in self.conversations:
-            self.conversations[session_id] = []
+                    lens: Optional[str], history: Optional[List] = None):
+        """Record the student's message; return (model, system, messages) to send.
+
+        `history` is the conversation so far as the browser keeps it. Without
+        it (the exam script, older callers) the conversation is remembered in
+        this process instead, as it always was.
+        """
         if user_context is None:
             user_context = {'level': 1, 'xp': 0, 'name': 'Student'}
 
         model = self.model_for(mode)
         # The system prompt for this mode, with any roleplay scenario or lens.
         system = self.system_blocks(mode, user_context, scenario, lens)
+        turn = {'role': 'user', 'content': self._user_content(message, mode, lens)}
 
-        # The student's message, with any checked reference entries riding
-        # along. Stored exactly as sent, so the history the cache saw is the
-        # history sent next time.
-        reference = self._reference(message, mode, lens)
-        self.conversations[session_id].append({
-            'role': 'user',
-            'content': ([{'type': 'text', 'text': reference},
-                         {'type': 'text', 'text': message}]
-                        if reference else message)
-        })
+        if history is not None:
+            return model, system, self._history_from_browser(history, mode, lens) + [turn]
+
+        if session_id not in self.conversations:
+            self.conversations[session_id] = []
+        self.conversations[session_id].append(turn)
         # Keep conversation history manageable (last 20 messages)
-        return model, system, self.conversations[session_id][-20:]
+        return model, system, self.conversations[session_id][-MAX_HISTORY_MESSAGES:]
 
     def _finish_turn(self, session_id: str, mode: str, model: str, text: str,
-                     response) -> Dict:
-        """Record the reply and describe it, the same for both ways of asking."""
-        self.conversations[session_id].append({'role': 'assistant', 'content': text})
+                     response, remember: bool) -> Dict:
+        """Record the reply and describe it, the same for both ways of asking.
+
+        `remember` is False when the browser keeps the conversation: it adds
+        the reply to its own copy, and the server keeps nothing.
+        """
+        if remember:
+            self.conversations[session_id].append({'role': 'assistant', 'content': text})
         return {
             'success': True,
             'response': text,
@@ -620,7 +667,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         user_context: Optional[Dict] = None,
         max_tokens: int = 2000,
         scenario: Optional[str] = None,
-        lens: Optional[str] = None
+        lens: Optional[str] = None,
+        history: Optional[List] = None
     ) -> Dict:
         """
         Send a message and get AI response
@@ -631,17 +679,20 @@ scene moving. Open the scene yourself with a natural first line in character.
             mode: AI mode to use
             user_context: User's learning context
             max_tokens: Maximum response length
+            history: the conversation so far, as the browser keeps it; None
+                     to remember it in this process instead
 
         Returns:
             Dict with 'response', 'mode', 'tokens_used'
         """
-        model, system, history = self._start_turn(
-            session_id, message, mode, user_context, scenario, lens)
+        model, system, messages = self._start_turn(
+            session_id, message, mode, user_context, scenario, lens, history)
         try:
-            text, response = self._ask(model, system, history, max_tokens)
+            text, response = self._ask(model, system, messages, max_tokens)
         except Exception as e:
             return self._failure(e)
-        return self._finish_turn(session_id, mode, model, text, response)
+        return self._finish_turn(session_id, mode, model, text, response,
+                                 remember=history is None)
 
     def start_chat_stream(
         self,
@@ -651,7 +702,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         user_context: Optional[Dict] = None,
         max_tokens: int = 2000,
         scenario: Optional[str] = None,
-        lens: Optional[str] = None
+        lens: Optional[str] = None,
+        history: Optional[List] = None
     ):
         """Like chat(), but the reply arrives as it is written.
 
@@ -663,10 +715,10 @@ scene moving. Open the scene yourself with a natural first line in character.
         `events` yields {'type': 'text', 'text': ...} as the reply is written,
         then one {'type': 'done', ...} carrying what chat() would have returned.
         """
-        model, system, history = self._start_turn(
-            session_id, message, mode, user_context, scenario, lens)
+        model, system, messages = self._start_turn(
+            session_id, message, mode, user_context, scenario, lens, history)
         manager = self.client.messages.stream(
-            **self._request(model, system, history, max_tokens))
+            **self._request(model, system, messages, max_tokens))
         try:
             stream = manager.__enter__()
         except Exception as e:
@@ -682,7 +734,8 @@ scene moving. Open the scene yourself with a natural first line in character.
                 final = stream.get_final_message()
             finally:
                 manager.__exit__(None, None, None)
-            done = self._finish_turn(session_id, mode, model, ''.join(parts), final)
+            done = self._finish_turn(session_id, mode, model, ''.join(parts), final,
+                                     remember=history is None)
             yield {'type': 'done', **done}
 
         return events(), None

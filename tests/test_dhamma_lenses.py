@@ -105,12 +105,13 @@ def test_the_chat_page_shows_all_three_approaches(monkeypatch):
 
 def test_switching_approach_makes_the_tutor_forget_the_old_one():
     """Old answers in the tutor's memory drag the next few back to the old
-    approach, so a switch must clear the server-side conversation."""
+    approach, so a switch must reset the conversation the page sends back
+    (the page keeps it now; the server holds none)."""
     src = open(os.path.join(os.path.dirname(os.path.dirname(
         os.path.abspath(__file__))), "templates", "chat.html"), encoding="utf-8").read()
     set_lens = src[src.index("function setLens"):]
     set_lens = set_lens[:set_lens.index("\n    }\n")]
-    assert "/api/ai/clear" in set_lens
+    assert "resetHistory()" in set_lens
 
 
 # ── Buddhist mode on its own model ────────────────────────────────────────
