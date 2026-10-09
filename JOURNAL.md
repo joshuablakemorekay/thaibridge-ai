@@ -4003,3 +4003,74 @@ prompt on its own, so Claude replies "I don't see any PDF attached".
 **References / Conversations**
 Commits `3c35328` (Sonnet 5.5, longer answers) and `1198ed3` (read only the
 text blocks); real eval runs 37982384804 and 37985516110.
+
+
+## 9 October 2026 (late night) — Giving the evals the files they were asked about
+
+**TL;DR:** Real eval runs went from 5 of 26 passing to 14 of 18, with 8
+prompts set aside, each with a written reason. Most of the gain came from
+showing the model the code each prompt was originally asked about.
+
+Straight after the first real runs, I asked:
+
+> fix the prompts that need project files
+
+### How we did it
+
+Two more problems in the eval script turned up first. Eleven newer prompts
+store their text as a quote under "## Final prompt", and the script didn't
+recognise that, so it sent Claude the whole write-up and Claude replied "you've
+pasted the write-up". And Sonnet 5.5 sometimes spent the entire token budget
+thinking and returned nothing. Thinking now goes off, the same switch the tutor
+uses, and an empty answer reports why instead of scoring 0%.
+
+Then each prompt can have a `context/` folder of files sent ahead of it. The
+key decision was *which version* of the code to send. An audit prompt like
+"check whether the code honours the Dhamma being free" is pointless against
+today's code, because the fix has shipped. So each snapshot is taken from git
+history at the commit **just before** the change, bug and all. The Dhamma
+prompt went from 83% to 100% on that alone.
+
+Claude sorted the failing prompts into three groups and asked before going
+on. I said:
+
+> yes do group 1 now
+
+Group 1 got snapshots for ten prompts (free tier, XP, survival Thai,
+registers, annual billing, the hero rewrite, Pra Kru Bob's essays, the
+spelling system, the product overview). The other eight needed things that
+were never kept in the repo: Chris's message, earlier chats, coursework
+templates, the competitor sites, photos of the chanting book. Their rubrics now
+carry a `real_run_skip` reason, and a real run lists them instead of failing
+them. The free mock run still checks all 26.
+
+### The bit worth keeping
+
+The four that still miss do so on single keyword checks, and which four it is
+changes from run to run. `hero-copy-rewrite` fails because the good answer
+*quotes* "Two subjects, side by side" while criticising it, and the rubric
+bans the phrase outright. That's the rubric being too blunt, not the prompt
+being bad. It's the same lesson as the chanting-book negative tests: a check
+is a claim about the answer, and it needs testing too.
+
+**Engineering Contribution**
+
+- *Decisions made:* snapshots from the commit before each fix, not from
+  today's code; fix the repo-only prompts now and set the rest aside with a
+  stated reason instead of inventing their missing inputs; the Thai pair
+  audit moved to the skip list once it was clear one message can't reproduce
+  a 707-pair back-and-forth.
+- *Improvements made to generated code:* the first thinking fix still left
+  some answers empty, which a repeat run caught, so the limit went to 8,192
+  and blanks now report their `stop_reason`. A sample word Claude glossed
+  wrongly (dtoo as "table") was taken out of the spelling snapshot rather than
+  shipped. Snapshots were checked for secrets before committing.
+- *Roughly how much was accepted as-is vs engineered on:* Claude found the
+  two script bugs, built the snapshots and wrote the skip reasons. The
+  three-group split and what to do now versus later were agreed with me; I
+  ran the commits and pushes.
+
+**References / Conversations**
+Commits `f484036` (script: prompt extraction, thinking off, `context/`,
+`real_run_skip`) and `039227b` (snapshots and skip reasons); real eval run
+37990539228.
