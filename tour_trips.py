@@ -221,7 +221,7 @@ TRIPS = [
         'title': 'White, blue and black in Chiang Rai',
         'place': 'Chiang Rai',
         'place_thai': 'วัดร่องขุ่น',
-        'place_paiboon': 'wát rɔ̂ŋ-kùn',
+        'place_paiboon': 'wát rɔ̂ɔŋ-kùn',
         'place_english': 'Wat Rong Khun, the White Temple',
         'blurb': 'Three artists’ temples in a day: the White Temple, the Blue Temple '
                  'and the Black House, then the river where three countries meet.',
@@ -253,7 +253,7 @@ TRIPS = [
                    ('Saying yes by repeating the verb',
                     'He asked ไปไหม, "going?". You answer ไป, "going", or ไม่ไป, "not going". '
                     'Two short sentences in a row is perfectly natural Thai.'),
-                   who='Driver', thai='ไปวัดร่องขุ่นไหมครับ', paiboon='bpai wát rɔ̂ŋ-kùn mǎi kráp',
+                   who='Driver', thai='ไปวัดร่องขุ่นไหมครับ', paiboon='bpai wát rɔ̂ɔŋ-kùn mǎi kráp',
                    english='Going to the White Temple?'),
             _scene(1, 'Wat Rong Khun', 'The White Temple',
                    'The artist Chalermchai Kositpipat began rebuilding this temple in 1997, '
@@ -275,7 +275,7 @@ TRIPS = [
                    who='Guard', thai='ห้ามถ่ายรูปข้างในครับ', paiboon='hâam tàai-rûup kâaŋ-nai kráp',
                    english='No photos inside.'),
             _scene(2, 'Wat Rong Suea Ten', 'The Blue Temple',
-                   'วัดร่องเสือเต้น (wát rɔ̂ŋ sʉ̌a dtên), "the temple of the dancing tiger", '
+                   'วัดร่องเสือเต้น (wát rɔ̂ɔŋ sʉ̌a dtên), "the temple of the dancing tiger", '
                    'is deep blue inside and out, with a white Buddha glowing at the end of '
                    'the hall. Outside, a stall sells little cloth bags in every colour.',
                    'Choose a colour.',
