@@ -186,5 +186,29 @@ def test_buddhist_mode_gets_room_to_finish_and_logs_the_right_model(monkeypatch)
     monkeypatch.setattr(appmod, "log_ai_usage",
                         lambda *a, **kw: logged.update(kw) if a[1] == "ok" else None)
     app.test_client().post("/api/ai/chat", json={"message": "q", "mode": "buddhist"})
-    assert fake.kwargs["max_tokens"] == appmod.DHAMMA_MAX_TOKENS
+    assert fake.kwargs["max_tokens"] == appmod.AI_REPLY_TOKENS
     assert logged["model"] == "claude-haiku-5-5"
+
+
+def test_every_request_asks_for_caching(monkeypatch):
+    """A chat re-sends its instructions and history with every message;
+    cached, that re-send costs a tenth of the price."""
+    a = _agent_with(monkeypatch, None)
+    a.chat("s4", "hello", mode="tutor")
+    assert a.client.messages.request["extra_body"] == {"cache_control": {"type": "ephemeral"}}
+
+
+@pytest.mark.parametrize("mode", ["tutor", "cultural", "buddhist", "generator"])
+def test_long_answer_modes_are_asked_to_keep_it_short(agent, mode):
+    assert ai_agent.MODE_LENGTH[mode] in agent.get_system_prompt(mode, {"level": 1, "xp": 0})
+
+
+@pytest.mark.parametrize("mode", ["tutor", "generator", "conversation"])
+def test_each_mode_gets_its_reply_limit(monkeypatch, mode):
+    fake = FakeAgent()
+    monkeypatch.setattr(appmod, "ai_agent", fake)
+    monkeypatch.setattr(appmod, "active_tier", lambda: "pro")
+    app.test_client().post("/api/ai/chat", json={"message": "q", "mode": mode})
+    assert fake.kwargs["max_tokens"] == appmod.AI_REPLY_TOKENS_BY_MODE.get(
+        mode, appmod.AI_REPLY_TOKENS)
+    assert appmod.AI_REPLY_TOKENS_BY_MODE["generator"] > appmod.AI_REPLY_TOKENS

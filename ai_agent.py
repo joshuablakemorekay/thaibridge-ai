@@ -141,21 +141,35 @@ particular cultural identity or tradition.
 # as asked rather than adding a culture the student did not ask for.
 DEFAULT_DHAMMA_LENS = 'universal'
 
-# Every lens gets the same length rule. The 5.5 models write fuller answers
-# than the old cap allowed, and were cut off mid-sentence on most questions.
-# Asking for less got most of them under; app.py gives Buddhist mode a little
-# more room (DHAMMA_MAX_TOKENS) for the rest, since the model does not count
-# words exactly.
-DHAMMA_LENGTH = """
+# Length rules for the modes whose answers ran past the reply cap. In a
+# side-by-side test half of Haiku 4.5's replies and two thirds of Sonnet 5.5's
+# were cut off mid-sentence at 500 tokens: Thai script is token-heavy, so 500
+# tokens is only about 200 words. Asking for less gets most answers under;
+# app.py raises the cap (AI_REPLY_TOKENS) for the rest, since a model does not
+# count words exactly. Conversation and helper replies were already short.
+_EXPLAIN_LENGTH = """
+LENGTH: keep each answer under about 150 words (fewer when it includes a lot of
+Thai script). Teach the heart of the question well rather than everything about
+it, and offer to go further on one part instead of continuing.
+"""
+MODE_LENGTH = {
+    'tutor': _EXPLAIN_LENGTH,
+    'cultural': _EXPLAIN_LENGTH,
+    'buddhist': """
 LENGTH: keep every answer under about 180 words (fewer when it includes Thai
 script). Cover the heart of the question well rather than everything about
 it, and offer to go deeper on one part instead of continuing.
-"""
+""",
+    'generator': """
+LENGTH: 5 items unless the student asks for more, and keep the whole exercise,
+answer key included, under about 350 words.
+""",
+}
 
 def thinking_off(model: str) -> Optional[Dict]:
     """The setting that stops a model thinking before it answers, or None.
 
-    The app's small reply budget (500 tokens) has to go on the answer itself.
+    The app's small reply budget has to go on the answer itself.
     Haiku 4.5 does not think unless asked, so it needs nothing. The 5.5 models
     think by default and each has its own off switch: Sonnet 5.5 rejects
     "disabled" and uses "between_tools" instead.
@@ -295,6 +309,8 @@ TEACHING PRINCIPLES:
 - Be encouraging and patient
 - Adjust difficulty to student's level
 - Provide cultural context when relevant
+- Write only your finished answer: check facts, tones and spellings first, and
+  never correct yourself partway through
 {thai_principles}"""
         
         # Mode-specific prompts
@@ -342,7 +358,7 @@ Create targeted Thai practice materials to these standards:
 every item must include Thai script, ThaiBridge Spelling, and English meaning;
 use authentic Thai contexts (markets, BTS, temples, family meals);
 mix recognition tasks (matching, multiple choice) with production tasks (translation, fill-in);
-include 5-10 items per exercise with a complete answer key that has brief explanations.
+include 5 items per exercise (up to 10 if the student asks) with a complete answer key that has brief explanations.
 
 For vocabulary quizzes, group items by semantic field (food, transport, temple vocabulary).
 For translation exercises, use complete sentences — never isolated words.
@@ -367,7 +383,7 @@ social hierarchy to formality registers.
 Always leave the student with a phrase they can use immediately.
 """,
             
-            'buddhist': DHAMMA_LENSES[lens]['prompt'] + DHAMMA_LENGTH,
+            'buddhist': DHAMMA_LENSES[lens]['prompt'],
 
             'helper': f"""
 MODE: INTELLIGENT HINT SYSTEM
@@ -414,7 +430,7 @@ scene moving. Open the scene yourself with a natural first line in character.
                              "does NOT use the lay politeness particles ครับ or ค่ะ at all — "
                              "use เจริญพร in their place.\n")
 
-        return base_prompt + mode_prompt + roleplay
+        return base_prompt + mode_prompt + MODE_LENGTH.get(mode, '') + roleplay
     
     def model_for(self, mode: str) -> str:
         """The model a mode runs on: Buddhist mode may have its own."""
@@ -478,6 +494,12 @@ scene moving. Open the scene yourself with a natural first line in character.
             thinking = thinking_off(model)
             if thinking:
                 request['thinking'] = thinking
+            # Cache the instructions and the conversation so far: each message
+            # in a chat re-sends both, and a cached re-send costs a tenth of the
+            # price. Sent as a raw field because the pinned SDK (0.75) predates
+            # top-level cache_control. Models with a higher cache minimum than
+            # this prompt (Haiku 4.5 needs 4,096 tokens) simply don't cache.
+            request['extra_body'] = {'cache_control': {'type': 'ephemeral'}}
             response = self.client.messages.create(**request)
 
             # Join the text blocks rather than taking content[0]: a model that

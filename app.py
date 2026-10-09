@@ -750,10 +750,6 @@ FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 # we can keep our word. At the costed 0.285p a message it is 1.4p a day for
 # someone who exhausts it daily, which almost nobody will.
 FREE_DHAMMA_DAILY_LIMIT = 5
-# A Dhamma answer gets more room than a tutor reply. At 500 tokens, answers on
-# Haiku 5.5 were cut off mid-sentence about half the time, even when asked to
-# be brief. 800 tokens on Haiku 5.5 still costs less than 500 did on Haiku 4.5.
-DHAMMA_MAX_TOKENS = 800
 DHAMMA_AI_MODES = {'buddhist'}                 # modes that draw on that pool
 
 # Which session key each pool counts in, and which constant sets its size.
@@ -779,6 +775,14 @@ def ai_pool_for(mode):
 def ai_pool_limit(pool_name):
     """Today's allowance for a pool, read from the constant at call time."""
     return globals()[AI_POOLS[pool_name]['limit_name']]
+
+# The longest reply the AI may write. At the old 500, half the answers in a
+# side-by-side test were cut off mid-sentence: Thai script is token-heavy, so
+# 500 tokens is only about 200 words. The prompts now ask for short answers
+# (ai_agent.MODE_LENGTH); this is the backstop for when a model runs over. An
+# exercise with its answer key is long by nature, so the generator gets more.
+AI_REPLY_TOKENS = 800
+AI_REPLY_TOKENS_BY_MODE = {'generator': 1500}
 
 # Pro is "unlimited" in the sense that matters to a learner, but not literally:
 # without a ceiling, one subscriber could run up more in API costs than they pay.
@@ -9058,7 +9062,7 @@ def ai_chat():
             mode=mode,
             session_id=session_id,
             user_context=user_context,
-            max_tokens=DHAMMA_MAX_TOKENS if mode == 'buddhist' else 500,
+            max_tokens=AI_REPLY_TOKENS_BY_MODE.get(mode, AI_REPLY_TOKENS),
             scenario=scenario,
             lens=lens
         )
