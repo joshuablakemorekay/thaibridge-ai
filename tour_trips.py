@@ -1,4 +1,4 @@
-"""Tour Guide trips — six short journeys you play through in Thai.
+"""Tour Guide trips — short journeys you play through in Thai.
 
 WHY THIS EXISTS
 ---------------
@@ -14,9 +14,18 @@ Phimai. At every stop someone says something in Thai and you pick the right
 reply. The words are the ones on the phrasebook below, plus a few new ones each
 trip, met in the situation where you would actually need them.
 
-One trip per region, using the six regions the Tourism Authority of Thailand
-uses (North, Central, Northeast, East, South, West). That is the whole country
-in six mornings, and enough to make the format worth judging before adding more.
+At least one trip in each of the six regions the Tourism Authority of Thailand
+uses (North, Central, Northeast, East, South, West), so the whole country is
+covered. The North has two, Chiang Mai and Chiang Rai, because Josh asked for
+Chiang Rai by name and it is a different day out from Doi Suthep.
+
+PHOTOS
+------
+One photo per trip, from Wikimedia Commons under a Creative Commons licence
+that allows reuse with credit. Each trip's `photo` keeps the photographer,
+licence and source page, and the page prints that credit under the image:
+BY and BY-SA licences require it. The files are shrunk to 1000px WebP in
+static/img/tour/. To swap a photo, keep to the same licences (no NC or ND).
 
 WHAT IS DELIBERATELY LEFT OUT
 -----------------------------
@@ -82,6 +91,14 @@ TRIPS = [
         'blurb': 'Ride a red truck up the mountain, visit Chiang Mai’s best-known '
                  'temple, and come back down for khao soi.',
         'stamp': 'ดอยสุเทพ',
+        'photo': {
+            'file': 'img/tour/doi-suthep.webp',
+            'alt': 'The golden chedi of Wat Phra That Doi Suthep under a blue sky',
+            'artist': 'เทวประภาส มากคล้าย',
+            'license': 'CC BY 3.0',
+            'license_url': 'https://creativecommons.org/licenses/by/3.0',
+            'source': 'https://commons.wikimedia.org/wiki/File:Phra_That_Doi_Suthep_01.jpg',
+        },
         'stops': ['University gate', 'Red truck', 'Naga stairs', 'The temple', 'Khao soi'],
         'tutor': 'restaurant',
         'tutor_line': 'The AI tutor plays a cook in a Thai restaurant. Order in your own words.',
@@ -198,6 +215,117 @@ TRIPS = [
         ],
     },
 
+    {
+        'key': 'chiang-rai',
+        'region': 'North',
+        'title': 'White, blue and black in Chiang Rai',
+        'place': 'Chiang Rai',
+        'place_thai': 'วัดร่องขุ่น',
+        'place_paiboon': 'wát rɔ̂ŋ-kùn',
+        'place_english': 'Wat Rong Khun, the White Temple',
+        'blurb': 'Three artists’ temples in a day: the White Temple, the Blue Temple '
+                 'and the Black House, then the river where three countries meet.',
+        'stamp': 'เชียงราย',
+        'photo': {
+            'file': 'img/tour/chiang-rai.webp',
+            'alt': 'The White Temple, Wat Rong Khun, reflected in its pond',
+            'artist': 'Chainwit',
+            'license': 'CC BY 4.0',
+            'license_url': 'https://creativecommons.org/licenses/by/4.0',
+            'source': 'https://commons.wikimedia.org/wiki/File:Chiang_Rai_-_Wat_Rong_Khun_%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B8%B8%E0%B9%88%E0%B8%99_(2026)_-_img_11.jpg',
+        },
+        'stops': ['Town', 'White Temple', 'Blue Temple', 'Black House', 'Golden Triangle'],
+        'tutor': 'meeting',
+        'tutor_line': 'The AI tutor plays a Thai traveller you have just met. Chat about your trip.',
+        'scenes': [
+            _scene(0, 'Chiang Rai clock tower', 'A ride out of town',
+                   'The White Temple is about 13 kilometres south of town. A driver '
+                   'waiting by the clock tower calls out to you.',
+                   'Say yes, and ask how much.',
+                   [_c('ไป{s} เท่าไหร่{q}', 'bpai {s}, tâo-rài {q}', 'Yes. How much?', 'good',
+                       'He names a price for there and back, and waits while you look round. '
+                       'Story money, as always.'),
+                    _c('วัด{s}', 'wát {s}', 'Temple.', 'ok',
+                       'He laughs. Chiang Rai has dozens of temples. He meant the white one, '
+                       'and you still have not asked the price.'),
+                    _c('ไม่ไป{s}', 'mâi bpai {s}', 'I’m not going.', 'miss',
+                       'He shrugs and turns to the next tourist. That was a no.')],
+                   ('Saying yes by repeating the verb',
+                    'He asked ไปไหม, "going?". You answer ไป, "going", or ไม่ไป, "not going". '
+                    'Two short sentences in a row is perfectly natural Thai.'),
+                   who='Driver', thai='ไปวัดร่องขุ่นไหมครับ', paiboon='bpai wát rɔ̂ŋ-kùn mǎi kráp',
+                   english='Going to the White Temple?'),
+            _scene(1, 'Wat Rong Khun', 'The White Temple',
+                   'The artist Chalermchai Kositpipat began rebuilding this temple in 1997, '
+                   'in white plaster and mirror glass. You cross a bridge over hundreds of '
+                   'sculpted hands reaching up from below. At the door of the main hall, '
+                   'you lift your phone.',
+                   'A guard stops you. Answer him.',
+                   [_c('ขอโทษ{s}', 'kɔ̌ɔ-tôot {s}', 'Sorry.', 'good',
+                       'He smiles and waves you in. The phone stays in your pocket.'),
+                    _c('เข้าใจแล้ว{s}', 'kâo-jai lɛ́ɛo {s}', 'Understood.', 'good',
+                       'He nods. Plenty to photograph outside.'),
+                    _c('ถ่ายรูป{s}', 'tàai-rûup {s}', 'Take a photo.', 'miss',
+                       'He shakes his head and points at the sign. That is exactly what he '
+                       'just asked you not to do.')],
+                   ('ห้าม: not allowed',
+                    'ห้าม (hâam) means "forbidden", and you will see it on signs everywhere: '
+                    'ห้ามถ่ายรูป no photos, ห้ามสูบบุหรี่ no smoking. ขอโทษ (kɔ̌ɔ-tôot) is '
+                    '"sorry" and also "excuse me".'),
+                   who='Guard', thai='ห้ามถ่ายรูปข้างในครับ', paiboon='hâam tàai-rûup kâaŋ-nai kráp',
+                   english='No photos inside.'),
+            _scene(2, 'Wat Rong Suea Ten', 'The Blue Temple',
+                   'วัดร่องเสือเต้น (wát rɔ̂ŋ sʉ̌a dtên), "the temple of the dancing tiger", '
+                   'is deep blue inside and out, with a white Buddha glowing at the end of '
+                   'the hall. Outside, a stall sells little cloth bags in every colour.',
+                   'Choose a colour.',
+                   [_c('เอาสีฟ้า{s}', 'ao sǐi fáa {s}', 'The blue one, please.', 'good',
+                       'Of course. She hands it over with a grin: blue, like the temple.'),
+                    _c('เอาสีขาว{s}', 'ao sǐi kǎao {s}', 'The white one, please.', 'good',
+                       'A souvenir of this morning’s temple. She wraps it for you.'),
+                    _c('เอาสีเผ็ด{s}', 'ao sǐi pèt {s}', 'The spicy one, please.', 'miss',
+                       'She bursts out laughing. Colours are not spicy.')],
+                   ('Colours',
+                    'สี (sǐi) is "colour", and it comes before the colour word: สีขาว white, '
+                    'สีฟ้า sky blue, สีดำ (dam) black, สีแดง (dɛɛŋ) red, as in the red trucks, '
+                    'and สีทอง (tɔɔŋ) gold.'),
+                   who='Stall-holder', thai='เอาสีไหนคะ', paiboon='ao sǐi nǎi ká',
+                   english='Which colour would you like?'),
+            _scene(3, 'Baan Dam', 'The Black House',
+                   'บ้านดำ (bâan dam), the Black House, is the opposite of the White Temple: '
+                   'dark teak buildings filled with horns, bones and skins, made by the '
+                   'artist Thawan Duchanee. It has been a long morning. You need the toilet.',
+                   'Ask a member of staff where it is.',
+                   [_c('ห้องน้ำอยู่ที่ไหน{q}', 'hɔ̂ɔŋ-náam yùu tîi-nǎi {q}', 'Where is the toilet?', 'good',
+                       'ตรงไป เลี้ยวขวาค่ะ (dtroŋ bpai, líao kwǎa kâ), "Straight on, then right."'),
+                    _c('ห้องน้ำ{s}', 'hɔ̂ɔŋ-náam {s}', 'Toilet.', 'ok',
+                       'She points the way. It works, though the full question is kinder.'),
+                    _c('มีห้องว่างไหม{q}', 'mii hɔ̂ɔŋ wâaŋ mǎi {q}', 'Do you have a free room?', 'miss',
+                       'She looks puzzled. That is what you ask at a hotel, not a museum.')],
+                   ('ห้องน้ำ: the water room',
+                    'ห้องน้ำ (hɔ̂ɔŋ-náam) is literally "water room", and it means both bathroom '
+                    'and toilet. ห้อง on its own is any room.'),
+                   who='Staff member', thai='สวัสดีค่ะ', paiboon='sà-wàt-dii kâ', english='Hello.'),
+            _scene(4, 'Sop Ruak, on the Mekong', 'The Golden Triangle',
+                   'An hour north, the Mekong and Ruak rivers meet. This is the Golden '
+                   'Triangle, where Thailand, Laos and Myanmar touch. A man by the river '
+                   'is selling boat rides.',
+                   'Point across the water and ask what country that is.',
+                   [_c('นั่นประเทศอะไร{q}', 'nân bprà-têet à-rai {q}', 'What country is that?', 'good',
+                       'ลาวครับ (laao kráp), "Laos." Then he points along the bank: พม่า (pá-mâa), Myanmar.'),
+                    _c('ที่ไหน{q}', 'tîi-nǎi {q}', 'Where?', 'ok',
+                       'He points at where you are pointing. Fair enough. Ask what country.'),
+                    _c('เช็คบิล{s}', 'chék-bin {s}', 'The bill, please.', 'miss',
+                       'You have not even got in the boat yet.')],
+                   ('Three countries',
+                    'ประเทศ (bprà-têet) is "country". ไทย (tai) Thailand, ลาว (laao) Laos, '
+                    'พม่า (pá-mâa) Myanmar. นั่น (nân) is "that", for something you can see '
+                    'over there.'),
+                   who='Boatman', thai='นั่งเรือไหมครับ', paiboon='nâŋ rʉa mǎi kráp',
+                   english='Want a boat ride?'),
+        ],
+    },
+
     # ── Central / Bangkok ────────────────────────────────────────────────
     {
         'key': 'bangkok-river',
@@ -208,8 +336,17 @@ TRIPS = [
         'place_paiboon': 'wát poo',
         'place_english': 'Wat Pho, home of the Reclining Buddha',
         'blurb': 'Take the river boat to Wat Pho, get a massage at the temple, cross '
-                 'to Wat Arun and end with dinner in Chinatown.',
+                 'to Wat Arun, haggle in Sampheng market and end with dinner in '
+                 'Chinatown.',
         'stamp': 'กรุงเทพฯ',
+        'photo': {
+            'file': 'img/tour/bangkok-river.webp',
+            'alt': 'The gold-covered Reclining Buddha at Wat Pho',
+            'artist': 'Diego Delso',
+            'license': 'CC BY-SA 3.0',
+            'license_url': 'https://creativecommons.org/licenses/by-sa/3.0',
+            'source': 'https://commons.wikimedia.org/wiki/File:Wat_Pho,_Bangkok,_Tailandia,_2013-08-22,_DD_06.jpg',
+        },
         'stops': ['The pier', 'Wat Pho', 'Massage', 'Wat Arun', 'Chinatown'],
         'tutor': 'taxi',
         'tutor_line': 'The AI tutor plays a Bangkok taxi driver. Get yourself back to your hotel.',
@@ -275,6 +412,27 @@ TRIPS = [
                    ('ช่วย…หน่อย: the polite favour',
                     'Put ช่วย (chûai, "help") before a verb and หน่อย (nɔ̀i, "a little") after '
                     'it, and any request becomes a polite favour.')),
+            _scene(4, 'Sampheng Lane, Chinatown', 'Sampheng market',
+                   'Before dinner you squeeze into สำเพ็ง (sǎm-peŋ), Chinatown’s oldest '
+                   'market: a lane barely wide enough for two people, packed with stalls '
+                   'selling everything in bulk. Hair clips, toys, fabric, phone cases. '
+                   'You like a bag of keyrings.',
+                   'Sampheng sells wholesale. Ask for a discount if you buy three.',
+                   [_c('ซื้อสามอัน ลดได้ไหม{q}', 'sʉ́ʉ sǎam an, lót dâi mǎi {q}',
+                       'If I buy three, can you lower the price?', 'good',
+                       'She taps her calculator and shows you a better price. Buying more is '
+                       'exactly how Sampheng works.'),
+                    _c('ลดได้ไหม{q}', 'lót dâi mǎi {q}', 'Can you lower the price?', 'ok',
+                       'She shakes her head for one, then holds up three fingers. Here the '
+                       'discount comes from buying more.'),
+                    _c('อร่อย{s}', 'à-rɔ̀i {s}', 'Delicious.', 'miss',
+                       'She looks at the keyrings, then at you. Please don’t eat them.')],
+                   ('Wholesale Thai',
+                    'อัน (an) is the counting word for small objects. In wholesale markets '
+                    'you will hear โหล (lǒo), "a dozen", and ส่ง (sòŋ), "wholesale price". '
+                    'Go in the morning, before the lane gets too crowded to move.'),
+                   who='Stall-holder', thai='อันละยี่สิบค่ะ', paiboon='an lá yîi-sìp kâ',
+                   english='Twenty baht each.'),
             _scene(4, 'Yaowarat Road, Chinatown', 'Dinner in Chinatown',
                    'At night Yaowarat fills with neon signs and food stalls. You point at '
                    'a pot of noodles and the vendor holds up some fingers.',
@@ -304,6 +462,14 @@ TRIPS = [
         'blurb': 'Cycle round a Khmer temple nearly a thousand years old, then eat '
                  'Isan food the way Isan eats it.',
         'stamp': 'พิมาย',
+        'photo': {
+            'file': 'img/tour/phimai.webp',
+            'alt': 'The sandstone towers of Phimai Historical Park',
+            'artist': 'Napast3379',
+            'license': 'CC BY-SA 3.0',
+            'license_url': 'https://creativecommons.org/licenses/by-sa/3.0',
+            'source': 'https://commons.wikimedia.org/wiki/File:Phimai_Historical_Park_03.JPG',
+        },
         'stops': ['Bus station', 'Bike hire', 'The sanctuary', 'Som tam', 'Sticky rice'],
         'tutor': 'restaurant',
         'tutor_line': 'The AI tutor plays a waiter. Order a full Isan meal.',
@@ -406,6 +572,14 @@ TRIPS = [
         'blurb': 'Catch the car ferry, find a room by the beach, and order seafood '
                  'as the sun goes down.',
         'stamp': 'เกาะช้าง',
+        'photo': {
+            'file': 'img/tour/koh-chang.webp',
+            'alt': 'Klong Prao Beach on Koh Chang, with forested mountains behind',
+            'artist': 'Vyacheslav Argenberg',
+            'license': 'CC BY 4.0',
+            'license_url': 'https://creativecommons.org/licenses/by/4.0',
+            'source': 'https://commons.wikimedia.org/wiki/File:Klong_Prao_Beach,_west_coast_of_Ko_Chang_Island,_Thailand.jpg',
+        },
         'stops': ['The ferry', 'Island taxi', 'A room', 'The beach', 'Seafood'],
         'tutor': 'directions',
         'tutor_line': 'The AI tutor plays a local on the street. Find your way back to the beach.',
@@ -489,15 +663,23 @@ TRIPS = [
     {
         'key': 'railay',
         'region': 'South',
-        'title': 'Longtail boat to Railay',
+        'title': 'Krabi: cliffs and jungle pools',
         'place': 'Krabi',
         'place_thai': 'ไร่เลย์',
         'place_paiboon': 'râi-lee',
         'place_english': 'Railay, the beach you can only reach by boat',
-        'blurb': 'Ride a longtail boat round the cliffs, cut your foot on the reef, '
-                 'and find a pharmacy. It happens to everyone.',
+        'blurb': 'Ride a longtail boat to Railay, find a pharmacy when the reef bites, '
+                 'then head inland to Khlong Thom’s Emerald Pool and hot springs.',
         'stamp': 'กระบี่',
-        'stops': ['Ao Nang', 'Longtail', 'The cliffs', 'Pharmacy', 'Sunset'],
+        'photo': {
+            'file': 'img/tour/railay.webp',
+            'alt': 'A longtail boat pulled up on the sand below Railay’s limestone cliffs',
+            'artist': 'Vyacheslav Argenberg',
+            'license': 'CC BY 4.0',
+            'license_url': 'https://creativecommons.org/licenses/by/4.0',
+            'source': 'https://commons.wikimedia.org/wiki/File:Railay,_Krabi,_Boat,_Thailand.jpg',
+        },
+        'stops': ['Ao Nang', 'Longtail', 'The cliffs', 'Pharmacy', 'Emerald Pool', 'Hot springs'],
         'tutor': 'market',
         'tutor_line': 'The AI tutor plays a stall-holder on Ao Nang’s beach road. Buy a souvenir.',
         'scenes': [
@@ -563,21 +745,44 @@ TRIPS = [
                     'medicine". ยา (yaa) is medicine, แผล (plɛ̌ɛ) is a cut or wound.'),
                    who='Pharmacist', thai='เป็นอะไรคะ', paiboon='bpen à-rai ká',
                    english='What’s the matter?'),
-            _scene(4, 'Railay West at sunset', 'Sunset',
-                   'Foot cleaned and patched, you sit on the sand as the sun drops behind '
-                   'the islands. The woman next to you says something.',
-                   'Agree with her.',
-                   [_c('สวยมาก{s}', 'sǔai mâak {s}', 'Very beautiful.', 'good',
-                       'She smiles. Nothing else needs saying.'),
-                    _c('ใช่ สวยมาก{s}', 'châi, sǔai mâak {s}', 'Yes, very beautiful.', 'good',
-                       'ใช่ (châi) is "that’s right". A natural way to agree.'),
-                    _c('แพง{s}', 'pɛɛŋ {s}', 'Expensive.', 'miss',
-                       'She looks confused. The sunset is free.')],
-                   ('ใช่: that’s right',
-                    'ใช่ (châi) agrees with what someone said. ใช่ไหม (châi mǎi) on the end '
-                    'of a sentence means "isn’t it?".'),
-                   who='Woman next to you', thai='สวยนะคะ', paiboon='sǔai ná ká',
-                   english='Beautiful, isn’t it?'),
+            _scene(4, 'Khlong Thom, an hour inland', 'The Emerald Pool',
+                   'Next morning, foot patched, you take a minivan inland to Khlong Thom '
+                   '(คลองท่อม). In the forest there is สระมรกต (sà mɔɔ-rá-gòt), the '
+                   'Emerald Pool: spring water so clear and green it looks lit from '
+                   'below. A boardwalk leads through the trees. After a while you wonder '
+                   'how much further it is.',
+                   'Ask a ranger if it is still far.',
+                   [_c('อีกไกลไหม{q}', 'ìik glai mǎi {q}', 'Is it much further?', 'good',
+                       'ไม่ไกลครับ (mâi glai kráp), "Not far." He points ahead. You can hear '
+                       'people splashing.'),
+                    _c('อีกใกล้ไหม{q}', 'ìik glâi mǎi {q}', 'Is it much nearer?', 'ok',
+                       'He works out what you meant. Near and far differ only by tone, so '
+                       'it is an easy slip.'),
+                    _c('เลี้ยวขวา{s}', 'líao kwǎa {s}', 'Turn right.', 'miss',
+                       'There is only one boardwalk. Turning right means walking into the trees.')],
+                   ('Near and far',
+                    'ใกล้ (glâi), falling tone, is "near". ไกล (glai), mid tone, is "far". '
+                    'อีก (ìik) means "more", so อีกไกลไหม is "is there much further to go?".'),
+                   who='Ranger', thai='สวัสดีครับ', paiboon='sà-wàt-dii kráp',
+                   english='Hello.'),
+            _scene(5, 'Khlong Thom hot springs', 'Hot springs',
+                   'Not far away, hot spring water runs down over the rocks into warm '
+                   'pools in the forest. You lower yourself in slowly. The woman in the '
+                   'next pool smiles at your face.',
+                   'Agree with her, and say it feels good.',
+                   [_c('ใช่ ร้อนแต่สบาย{s}', 'châi, rɔ́ɔn dtɛ̀ɛ sà-baai {s}',
+                       'Yes, hot but lovely.', 'good',
+                       'She laughs and nods. สบาย is exactly the word for this.'),
+                    _c('ใช่ ร้อนมาก{s}', 'châi, rɔ́ɔn mâak {s}', 'Yes, very hot.', 'good',
+                       'She nods. Give it a minute. It gets better.'),
+                    _c('หนาว{s}', 'nǎao {s}', 'Cold.', 'miss',
+                       'She raises an eyebrow. You are sitting in a hot spring.')],
+                   ('สบาย: comfortable, relaxed',
+                    'สบาย (sà-baai) is comfortable, easy, relaxed. It is the สบาย in '
+                    'สบายดีไหม, "how are you?". ใช่ (châi) means "that’s right", and '
+                    'แต่ (dtɛ̀ɛ) means "but".'),
+                   who='Woman in the next pool', thai='ร้อนไหมคะ', paiboon='rɔ́ɔn mǎi ká',
+                   english='Is it hot?'),
         ],
     },
 
@@ -593,6 +798,14 @@ TRIPS = [
         'blurb': 'Walk the bridge over the River Kwai, then climb the seven tiers of '
                  'Erawan Falls and swim with the fish.',
         'stamp': 'กาญจนบุรี',
+        'photo': {
+            'file': 'img/tour/kanchanaburi.webp',
+            'alt': 'A turquoise pool at Erawan Falls, with fish in the clear water',
+            'artist': 'Rungsilp Sasitorn',
+            'license': 'CC BY-SA 4.0',
+            'license_url': 'https://creativecommons.org/licenses/by-sa/4.0',
+            'source': 'https://commons.wikimedia.org/wiki/File:Erawan_Waterfall,_tier_1,_Erawan_National_Park,_Kanchanaburi,_Thailand.jpg',
+        },
         'stops': ['The bridge', 'The bus', 'Erawan', 'The pools', 'The way back'],
         'tutor': 'directions',
         'tutor_line': 'The AI tutor plays a friendly local. Ask your way to the night market.',

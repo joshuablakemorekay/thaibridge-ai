@@ -1,10 +1,11 @@
-"""Tour Guide trips — six short journeys played in Thai.
+"""Tour Guide trips — short journeys played in Thai.
 
 Most of these guard the CONTENT, because the player is plain JavaScript walking
 over tour_trips.TRIPS: if the data is well-formed, the page works. A missing
 right answer or a stop index past the end of the route would strand a learner
 mid-trip with no way forward, and nothing else would catch it.
 """
+import os
 import re
 
 import pytest
@@ -16,9 +17,17 @@ _HAS_THAI = re.compile('[฀-๿]')
 
 
 class TestTheTripsAreFinishable:
-    def test_one_trip_per_region(self):
-        """The six regions the Tourism Authority of Thailand uses, once each."""
-        assert sorted(t['region'] for t in tour_trips.TRIPS) == sorted(REGIONS)
+    def test_every_region_has_a_trip(self):
+        """The six regions the Tourism Authority of Thailand uses, each covered
+        at least once (the North has two: Chiang Mai and Chiang Rai)."""
+        assert {t['region'] for t in tour_trips.TRIPS} == REGIONS
+
+    def test_the_trips_josh_asked_for_are_there(self):
+        assert 'chiang-rai' in tour_trips.TRIPS_BY_KEY
+        bangkok = tour_trips.TRIPS_BY_KEY['bangkok-river']
+        assert any('Sampheng' in sc['place'] for sc in bangkok['scenes'])
+        krabi = tour_trips.TRIPS_BY_KEY['railay']
+        assert any('Khlong Thom' in sc['place'] for sc in krabi['scenes'])
 
     def test_keys_are_unique(self):
         keys = [t['key'] for t in tour_trips.TRIPS]
@@ -35,9 +44,10 @@ class TestTheTripsAreFinishable:
 
     @pytest.mark.parametrize('trip', tour_trips.TRIPS, ids=lambda t: t['key'])
     def test_every_scene_sits_on_the_route(self, trip):
-        assert len(trip['stops']) == 5, 'the route strip is drawn for five stops'
+        assert 4 <= len(trip['stops']) <= 6, 'more than six stops will not fit on a phone'
         for scene in trip['scenes']:
             assert 0 <= scene['stop'] < len(trip['stops']), scene['title']
+        assert {sc['stop'] for sc in trip['scenes']} == set(range(len(trip['stops']))),             'every stop on the route should have at least one scene'
 
     @pytest.mark.parametrize('trip', tour_trips.TRIPS, ids=lambda t: t['key'])
     def test_the_tutor_link_points_at_a_real_roleplay(self, trip):
@@ -45,6 +55,27 @@ class TestTheTripsAreFinishable:
         does not know is silently ignored, which would look like a broken link."""
         from ai_agent import ROLEPLAY_SCENARIOS
         assert trip['tutor'] in ROLEPLAY_SCENARIOS
+
+
+class TestPhotos:
+    STATIC = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'static')
+
+    @pytest.mark.parametrize('trip', tour_trips.TRIPS, ids=lambda t: t['key'])
+    def test_every_trip_has_a_photo_on_disk(self, trip):
+        path = os.path.join(self.STATIC, *trip['photo']['file'].split('/'))
+        assert os.path.getsize(path) > 10_000, 'missing or empty photo'
+        assert os.path.getsize(path) < 400_000, 'shrink it: this loads on phones'
+
+    @pytest.mark.parametrize('trip', tour_trips.TRIPS, ids=lambda t: t['key'])
+    def test_every_photo_is_credited_under_a_reusable_licence(self, trip):
+        """CC BY and BY-SA allow reuse WITH credit; NC (non-commercial) does not
+        fit a paid app, and ND is fine to show but is a trap for the next edit."""
+        photo = trip['photo']
+        for field in ('alt', 'artist', 'license', 'license_url', 'source'):
+            assert photo[field].strip(), field
+        assert photo['license'].startswith(('CC BY', 'CC0', 'Public domain'))
+        assert 'NC' not in photo['license'] and 'ND' not in photo['license']
+        assert photo['source'].startswith('https://commons.wikimedia.org/')
 
 
 class TestPoliteEndings:
@@ -98,6 +129,11 @@ class TestThePage:
         body = unlocked_client.get('/tour-guide').get_data(as_text=True)
         assert 'id="phrasebook"' in body
         assert 'แท็กซี่' in body
+
+    def test_the_photo_credits_are_printed(self, unlocked_client):
+        body = unlocked_client.get('/tour-guide').get_data(as_text=True)
+        for trip in tour_trips.TRIPS:
+            assert trip['photo']['source'] in body
 
     def test_it_welcomes_more_than_tourists(self, unlocked_client):
         body = unlocked_client.get('/tour-guide').get_data(as_text=True)
