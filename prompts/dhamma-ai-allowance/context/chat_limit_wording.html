@@ -1,0 +1,47 @@
+# templates/chat.html at b26522a, lines 681-695
+    let currentMode = AI_LIMITS.unlimited ? 'conversation' : 'tutor';
+    let sessionId = 'session_' + Date.now();
+    let totalTokens = 0;
+    let currentScenario = null;   // active roleplay scenario id, or null
+
+    function switchMode(mode) {
+        // Free & Basic can only use the allowed mode(s); the rest are Pro-only.
+        if (!AI_LIMITS.unlimited && !AI_LIMITS.allowed_modes.includes(mode)) {
+            showUpgradeNote("🔒 That AI mode is a Pro feature. Upgrade to unlock "
+                + "Conversation, Culture and the Exercise Generator.");
+            return;
+        }
+        // Leaving conversation mode ends any roleplay in progress.
+        if (mode !== 'conversation' && currentScenario) { exitScenario(); }
+        currentMode = mode;
+
+# templates/chat.html at b26522a, lines 772-782
+                if (typeof data.remaining === 'number') {
+                    AI_LIMITS.remaining = data.remaining;
+                    updateLimitHint();
+                }
+            } else if (data.gate) {
+                showUpgradeNote(data.message);
+                if (data.gate === 'daily_limit') {
+                    AI_LIMITS.remaining = 0;
+                    updateLimitHint();
+                }
+            } else {
+
+# templates/chat.html at b26522a, lines 925-940
+    // ---- Freemium UI helpers ----
+    function updateLimitHint() {
+        const hint = document.getElementById('limit-hint');
+        if (!hint || AI_LIMITS.unlimited) return;
+        const left = AI_LIMITS.remaining;
+        if (left > 0) {
+            hint.innerHTML = `🎁 Free taste: <strong>${left}</strong> AI message${left === 1 ? '' : 's'} left today · `
+                + `<a href="/premium">Go Pro for unlimited →</a>`;
+        } else {
+            hint.innerHTML = `🔒 You’ve used today’s free AI messages · `
+                + `<a href="/premium">Upgrade to Pro for unlimited →</a>`;
+        }
+        hint.style.display = 'block';
+    }
+
+    function showUpgradeNote(text) {

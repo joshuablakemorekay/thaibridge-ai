@@ -2,6 +2,7 @@
 
 prompt: social-media-coursework
 version: 3
+real_run_skip: "needed the SMOALD coursework templates and the logged-in live site, neither of them in the repo"
 criteria:
   - name: opens_with_the_customers_problem
     description: The first line is the persona's mistake, in her situation, before the product is named

@@ -9,6 +9,7 @@
 
 prompt: chanting-book-entry
 version: 4
+real_run_skip: "needs a photographed chant from the book, which would make every real run far more expensive"
 criteria:
   - name: emits_parseable_json
     description: The reply contains one JSON object that actually parses

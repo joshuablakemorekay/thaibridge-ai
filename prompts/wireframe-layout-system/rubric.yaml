@@ -2,6 +2,7 @@
 
 prompt: wireframe-layout-system
 version: 1
+real_run_skip: "follows on from an earlier chat about the wireframe; that chat was never saved"
 criteria:
   - name: writes_site_outline
     description: Response plans content first — a site outline of pages and their purpose

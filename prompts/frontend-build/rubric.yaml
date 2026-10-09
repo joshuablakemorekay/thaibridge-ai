@@ -2,6 +2,7 @@
 
 prompt: frontend-build
 version: 1
+real_run_skip: "answers an earlier chat that laid out Options A to D; that chat was never saved"
 criteria:
   - name: extends_base_template
     description: A generated page template extends the shared base.html

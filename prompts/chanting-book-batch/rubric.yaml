@@ -32,6 +32,7 @@
 
 prompt: chanting-book-batch
 version: 7
+real_run_skip: "needs photographs of the chanting book's pages, which would make every real run far more expensive"
 criteria:
   - name: emits_parseable_json
     description: The reply contains one JSON object that actually parses

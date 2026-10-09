@@ -2,6 +2,7 @@
 
 prompt: market-research-report
 version: 3
+real_run_skip: "needed the attached Product Overview, the analyst brief and three competitor sites, none of them in the repo"
 criteria:
   - name: has_all_sections
     description: Report contains all ten required sections

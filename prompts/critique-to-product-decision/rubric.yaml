@@ -2,6 +2,7 @@
 
 prompt: critique-to-product-decision
 version: 1
+real_run_skip: "needs Chris's message and the earlier replies, which were never saved in the repo"
 criteria:
   - name: separates_valid_from_invalid
     description: Concedes the parts of the criticism that hold and names the parts that do not, rather than defending or capitulating wholesale
