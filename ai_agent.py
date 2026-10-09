@@ -21,6 +21,8 @@ from datetime import datetime
 # The politeness/monastic rules the Sentences page teaches, in prompt form.
 # Imported rather than copied so the tutor and the page cannot disagree.
 from thai_registers import REGISTER_RULES_FOR_AI
+# Checked facts and per-question entries from the app's own lessons.
+import tutor_reference
 
 
 # Roleplay scenarios for the conversation partner. Each puts the AI in a fixed
@@ -331,6 +333,7 @@ ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 8. Format: Thai (romanization) = English
 
 {REGISTER_RULES_FOR_AI}
+{tutor_reference.consonant_classes()}
 TEACHING PRINCIPLES:
 - Be encouraging and patient
 - Adjust difficulty to student's level
@@ -481,6 +484,21 @@ scene moving. Open the scene yourself with a natural first line in character.
         response = self.client.messages.create(**request)
         return ''.join(b.text for b in response.content if b.type == 'text'), response
 
+    def _reference(self, message: str, mode: str, lens: Optional[str]) -> str:
+        """Checked entries for this message, or '' (see tutor_reference).
+
+        Not for the universal or neutral Dhamma lenses: those promise answers
+        with no Thai in them, and a list of Thai words would pull against that.
+        A failure here costs the reference, never the answer.
+        """
+        if mode == 'buddhist' and (lens if lens in DHAMMA_LENSES
+                                   else DEFAULT_DHAMMA_LENS) != 'thai':
+            return ''
+        try:
+            return tutor_reference.reference_for(message)
+        except Exception:
+            return ''
+
     def model_for(self, mode: str) -> str:
         """The model a mode runs on: Buddhist mode may have its own."""
         return self.dhamma_model if mode == 'buddhist' else self.model
@@ -527,10 +545,15 @@ scene moving. Open the scene yourself with a natural first line in character.
         # or Dhamma lens)
         system_prompt = self.get_system_prompt(mode, user_context, scenario, lens)
         
-        # Add user message to history
+        # Add user message to history, with any checked reference entries
+        # riding along. Stored exactly as sent, so the history the cache saw
+        # is the history sent next time.
+        reference = self._reference(message, mode, lens)
         self.conversations[session_id].append({
             'role': 'user',
-            'content': message
+            'content': ([{'type': 'text', 'text': reference},
+                         {'type': 'text', 'text': message}]
+                        if reference else message)
         })
         
         # Keep conversation history manageable (last 20 messages)

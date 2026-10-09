@@ -145,8 +145,14 @@ cases:
     mode: tutor
     question: Which consonant class is ด? Just the class and one example word.
     must_include: [mid]
-    must_not_include: [low class, low-class, high class, high-class]
-    why: Haiku 4.5 listed บ ด จ ป as low-class. They are mid-class.
+    # Worded as claims about ด, not bare class names: a good answer may say
+    # another letter is high class, as Sonnet did correctly about ห.
+    must_not_include: [is a low class, is a low-class, is a high class, is a high-class,
+                       ด is low, ด is high]
+    why: >
+      Haiku 4.5 listed บ ด จ ป as low-class, and Sonnet 5.5 called ด low-class
+      before the tutor was given the Alphabet page's class table. They are
+      mid-class.
 
   - id: spelling-khun
     mode: tutor
