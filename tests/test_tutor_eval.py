@@ -107,3 +107,9 @@ def test_an_english_meaning_in_brackets_is_not_a_broken_spelling(gloss):
 def test_english_glosses_in_brackets_are_not_romanisations():
     """A bracket of English after Thai is a gloss; 'this' must not count as 'th'."""
     assert tutor_eval.spelling_breaks("นี้ (this one, near the speaker)") == []
+
+
+def test_a_table_fails():
+    answer = "dāna, sīla and bhāvanā\n\n| Tone | Thai |\n|---|---|\n| Mid | มา |"
+    assert 'contains a table the chat cannot display' in tutor_eval.check(
+        by_id('merit-grounds'), answer.replace('มา', 'maa'), 'end_turn')

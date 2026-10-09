@@ -92,6 +92,10 @@ def check(case, answer, stop_reason):
     breaks = spelling_breaks(answer)
     if breaks:
         failures.append('spelling rule broken: ' + ', '.join(breaks[:3]))
+    # The chat cannot draw a table; it shows the raw pipes. Sonnet began one
+    # for the five tones, fumbled it, and abandoned it mid-answer.
+    if '|---' in answer or '| ---' in answer:
+        failures.append('contains a table the chat cannot display')
     if stop_reason == 'max_tokens':
         failures.append('cut off mid-sentence')
     return failures

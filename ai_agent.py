@@ -361,6 +361,8 @@ TEACHING PRINCIPLES:
 - Provide cultural context when relevant
 - Write only your finished answer: check facts, tones and spellings first, and
   never correct yourself partway through
+- Never use tables: the chat shows them as raw | characters. Use short
+  numbered or bulleted lists instead
 {thai_principles}"""
         
         # Mode-specific prompts

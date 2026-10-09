@@ -191,3 +191,20 @@ cases:
       An exercise must arrive with its answer key. At the old 500-token cap
       every generated quiz was cut off before the key.
 
+
+  - id: five-tones
+    mode: tutor
+    question: Explain the five Thai tones with one example word each.
+    must_include:
+      - [mid]
+      - [low]
+      - [falling]
+      - [high]
+      - [rising]
+    # "instead:" with its colon is the restart ("…example for each tone
+    # instead:"); plain "instead" would fail "use ค่ะ instead of ครับ".
+    must_not_include: ["instead:", see note]
+    why: >
+      Sonnet 5.5 began a table for this, fumbled the example (หมา... see note)
+      and restarted mid-answer with "Let me give you one clean, clear example
+      for each tone instead". The chat cannot draw tables either.
