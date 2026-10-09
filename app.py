@@ -805,7 +805,7 @@ SUBSCRIPTION_TIERS = {
             '✓ Guided meditation sessions, timer & techniques',
             f'✓ AI Thai tutor — {FREE_AI_DAILY_LIMIT} messages a day',
             f'✓ Dhamma Q&A — {FREE_DHAMMA_DAILY_LIMIT} questions a day, on its own allowance',
-            '✓ Paiboon romanization guide',
+            '✓ ThaiBridge Spelling guide',
             '✓ Progress tracking & levelling',
         ],
         'max_level_access': 5,
@@ -4973,7 +4973,7 @@ eventually attaining enlightenment.''',
         # be inventing Thai. The story is really about the ə / əə vowels, so it
         # points at the page that actually teaches them.
         'practice': {'href': '/paiboon',
-                     'label': 'The Paiboon guide — the ə / əə vowels'},
+                     'label': 'The ThaiBridge Spelling guide — the ə / əə vowels'},
         'title': 'Modern Thailand and Global Connection',
         'story': '''Modern Thai has absorbed many English loanwords, especially in technology, business, and 
 education. These words often use the schwa sound (ə/əə) - that "uh" sound from English. When foreign monks 
