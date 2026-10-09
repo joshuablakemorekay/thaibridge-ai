@@ -194,6 +194,14 @@ def is_out_of_budget(error: Exception) -> bool:
     return 'usage limit' in text or 'credit balance' in text
 
 
+def _student_section(user_context: Optional[Dict]) -> str:
+    """The only per-person part of the system prompt; sent after the cached part."""
+    ctx = user_context or {}
+    return (f"\n\nSTUDENT:\n- Name: {ctx.get('name', 'Student')}\n"
+            f"- Current Level: {ctx.get('level', 1)}/10\n"
+            f"- Total XP: {ctx.get('xp', 0)}\n")
+
+
 def thinking_off(model: str) -> Optional[Dict]:
     """The setting that stops a model thinking before it answers, or None.
 
@@ -245,8 +253,7 @@ class ThaiLearningAI:
     def get_system_prompt(self, mode: str, user_context: Dict,
                           scenario: Optional[str] = None,
                           lens: Optional[str] = None) -> str:
-        """
-        Generate system prompt based on mode and user context
+        """The whole system prompt as one string (see system_blocks).
 
         Args:
             mode: AI mode (conversation, tutor, generator, cultural, buddhist, helper)
@@ -255,12 +262,29 @@ class ThaiLearningAI:
             lens: Dhamma lens id from DHAMMA_LENSES (buddhist mode only);
                   anything unknown falls back to DEFAULT_DHAMMA_LENS
         """
+        return ''.join(b['text'] for b in
+                       self.system_blocks(mode, user_context, scenario, lens))
 
-        # Base context about user
-        level = user_context.get('level', 1)
-        xp = user_context.get('xp', 0)
-        user_name = user_context.get('name', 'Student')
+    def system_blocks(self, mode: str, user_context: Dict,
+                      scenario: Optional[str] = None,
+                      lens: Optional[str] = None) -> List[Dict]:
+        """The system prompt as sent: shared instructions, then the student.
 
+        The instructions are identical for every visitor in the same mode, so
+        they carry a cache breakpoint and are cached ONCE for everyone. The
+        student's name, level and XP come after it, uncached. They used to open
+        the prompt, which made every visitor's instructions unique and limited
+        the cache to one person's own chat.
+        """
+        return [
+            {'type': 'text', 'text': self._shared_prompt(mode, scenario, lens),
+             'cache_control': {'type': 'ephemeral'}},
+            {'type': 'text', 'text': _student_section(user_context)},
+        ]
+
+    def _shared_prompt(self, mode: str, scenario: Optional[str] = None,
+                       lens: Optional[str] = None) -> str:
+        """Everything in the system prompt that is not about one student."""
         if lens not in DHAMMA_LENSES:
             lens = DEFAULT_DHAMMA_LENS
         # The shared foundation tells every mode to add Thai script and tie
@@ -275,12 +299,9 @@ class ThaiLearningAI:
         )
 
         # Common foundation for all modes
-        base_prompt = f"""You are a Thai language learning AI assistant. You're helping {user_name} learn Thai.
+        base_prompt = f"""You are a Thai language learning AI assistant, helping a student learn Thai. Their name, level and XP are in the STUDENT section at the very end.
 
-STUDENT CONTEXT:
-- Current Level: {level}/10
-- Total XP: {xp}
-- Learning System: ThaiBridge Spelling (IPA-based, linguistically accurate)
+Learning System: ThaiBridge Spelling (IPA-based, linguistically accurate)
 
 ROMANIZATION RULES (ThaiBridge Spelling) - CRITICAL - FOLLOW EXACTLY:
 
@@ -391,7 +412,7 @@ include 5 items per exercise (up to 10 if the student asks) with a complete answ
 
 For vocabulary quizzes, group items by semantic field (food, transport, temple vocabulary).
 For translation exercises, use complete sentences — never isolated words.
-Level {level} guidance: L1-3 present tense only; L4+ add time markers and aspect (lɛ́ɛo, gam-laŋ, jà).
+Level guidance (the student's level is in the STUDENT section): L1-3 present tense only; L4+ add time markers and aspect (lɛ́ɛo, gam-laŋ, jà).
 
 Structure output as: Title → Instructions → Exercise items → Answer key with explanations.
 """,
@@ -461,7 +482,7 @@ scene moving. Open the scene yourself with a natural first line in character.
 
         return base_prompt + mode_prompt + MODE_LENGTH.get(mode, '') + roleplay
     
-    def _ask(self, model: str, system: str, messages: List[Dict],
+    def _ask(self, model: str, system: List[Dict], messages: List[Dict],
              max_tokens: int):
         """One request to the API, set up the same way for every feature.
 
@@ -543,7 +564,7 @@ scene moving. Open the scene yourself with a natural first line in character.
 
         # Get system prompt for this mode (with any active roleplay scenario
         # or Dhamma lens)
-        system_prompt = self.get_system_prompt(mode, user_context, scenario, lens)
+        system_prompt = self.system_blocks(mode, user_context, scenario, lens)
         
         # Add user message to history, with any checked reference entries
         # riding along. Stored exactly as sent, so the history the cache saw
@@ -633,7 +654,7 @@ scene moving. Open the scene yourself with a natural first line in character.
         if user_context is None:
             user_context = {'level': 1, 'xp': 0}
         
-        system_prompt = self.get_system_prompt('helper', user_context)
+        system_prompt = self.system_blocks('helper', user_context)
         
         user_message = f"""Question: {question}
 
@@ -678,7 +699,7 @@ Context: {context}"""
         if user_context is None:
             user_context = {'level': 1, 'xp': 0}
         
-        system_prompt = self.get_system_prompt('tutor', user_context)
+        system_prompt = self.system_blocks('tutor', user_context)
         
         is_correct = user_answer.strip().lower() == correct_answer.strip().lower()
         
@@ -738,7 +759,7 @@ Be encouraging and clear!"""
         else:
             user_context['level'] = difficulty
         
-        system_prompt = self.get_system_prompt('generator', user_context)
+        system_prompt = self.system_blocks('generator', user_context)
         
         user_message = f"""Please generate a {content_type} about: {topic}
 

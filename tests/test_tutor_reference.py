@@ -113,3 +113,22 @@ def test_a_broken_lookup_costs_the_reference_not_the_answer(agent, monkeypatch):
     monkeypatch.setattr(paiboon_lookup, 'get_index', boom)
     assert agent.chat('s4', 'Explain ตัว', mode='tutor')['success'] is True
     assert _sent(agent) == 'Explain ตัว'
+
+
+# ── One cached copy of the instructions for every visitor ─────────────────
+
+def test_two_students_share_the_cached_instructions():
+    agent = ai_agent.ThaiLearningAI(api_key='test-key-not-used')
+    ana = agent.system_blocks('tutor', {'name': 'Ana', 'level': 2, 'xp': 40})
+    ben = agent.system_blocks('tutor', {'name': 'Ben', 'level': 7, 'xp': 900})
+    assert ana[0] == ben[0]                       # the shared, cached part
+    assert ana[0]['cache_control'] == {'type': 'ephemeral'}
+    assert 'Ana' in ana[1]['text'] and 'Ana' not in ana[0]['text']
+    assert '900' in ben[1]['text'] and '900' not in ben[0]['text']
+
+
+def test_the_request_sends_both_parts(agent):
+    agent.chat('s5', 'hello', mode='tutor', user_context={'name': 'Ana', 'level': 3, 'xp': 1})
+    system = agent.client.messages.request['system']
+    assert len(system) == 2 and 'cache_control' in system[0]
+    assert 'Ana' in system[1]['text']
