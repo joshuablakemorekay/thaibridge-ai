@@ -826,7 +826,7 @@
                     updateLimitHint();
                 }
             } else if (data.gate) {
-                showUpgradeNote(data.message);
+                showUpgradeNote(data.message, data.gate !== 'ai_resting');
                 if (data.gate === 'daily_limit' && AI_LIMITS.pools) {
                     // Zero only the pool that was actually refused.
                     const pool = data.pool || currentPool();
@@ -1011,11 +1011,15 @@
         hint.style.display = 'block';
     }
 
-    function showUpgradeNote(text) {
+    // withPlansLink is false when paying would not help: when the AI budget
+    // has run out ('ai_resting'), Pro is resting too.
+    function showUpgradeNote(text, withPlansLink = true) {
         const chatBody = document.getElementById('chat-messages');
         const note = document.createElement('div');
         note.className = 'upgrade-note';
-        note.innerHTML = `${text} <a href="/premium">See Pro plans →</a>`;
+        note.innerHTML = withPlansLink
+            ? `${text} <a href="/premium">See Pro plans →</a>`
+            : text;
         chatBody.appendChild(note);
         chatBody.scrollTop = chatBody.scrollHeight;
     }

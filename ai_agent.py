@@ -166,6 +166,32 @@ answer key included, under about 350 words.
 """,
 }
 
+# Shown instead of an error when the monthly AI budget is used up. The spend
+# cap on the Anthropic account is what keeps the tutor from ever costing more
+# than planned; when it bites, a visitor should read that the tutor is resting,
+# not "check your API key", which looks broken and means nothing to them.
+AI_RESTING_MESSAGE = ("🪷 The AI tutor is resting for now and will be back soon. "
+                      "Everything else on ThaiBridge (the lessons, the alphabet, "
+                      "the chanting book, the Dhamma pages) still works as normal.")
+
+
+def is_out_of_budget(error: Exception) -> bool:
+    """True when the API refused because the account's money ran out.
+
+    Covers the documented billing error (402) and the older wording the API
+    has used for a reached spend limit or an empty credit balance. Matched on
+    those words only, so a genuine fault still shows as a fault.
+    """
+    if getattr(error, 'status_code', None) == 402:
+        return True
+    body = getattr(error, 'body', None)
+    detail = body.get('error', body) if isinstance(body, dict) else {}
+    if isinstance(detail, dict) and detail.get('type') == 'billing_error':
+        return True
+    text = f"{detail.get('message', '') if isinstance(detail, dict) else ''} {error}".lower()
+    return 'usage limit' in text or 'credit balance' in text
+
+
 def thinking_off(model: str) -> Optional[Dict]:
     """The setting that stops a model thinking before it answers, or None.
 
@@ -431,6 +457,29 @@ scene moving. Open the scene yourself with a natural first line in character.
 
         return base_prompt + mode_prompt + MODE_LENGTH.get(mode, '') + roleplay
     
+    def _ask(self, model: str, system: str, messages: List[Dict],
+             max_tokens: int):
+        """One request to the API, set up the same way for every feature.
+
+        Returns (reply text, response). Thinking is switched off where the
+        model would otherwise spend the reply budget on it, and the text blocks
+        are joined rather than reading content[0]: a model that can think puts
+        a thinking block first, so content[0].text comes back empty or raises.
+        """
+        request = dict(model=model, max_tokens=max_tokens,
+                       system=system, messages=messages)
+        thinking = thinking_off(model)
+        if thinking:
+            request['thinking'] = thinking
+        # Cache the instructions and the conversation so far: each message
+        # in a chat re-sends both, and a cached re-send costs a tenth of the
+        # price. Sent as a raw field because the pinned SDK (0.75) predates
+        # top-level cache_control. Models with a higher cache minimum than
+        # this prompt (Haiku 4.5 needs 4,096 tokens) simply don't cache.
+        request['extra_body'] = {'cache_control': {'type': 'ephemeral'}}
+        response = self.client.messages.create(**request)
+        return ''.join(b.text for b in response.content if b.type == 'text'), response
+
     def model_for(self, mode: str) -> str:
         """The model a mode runs on: Buddhist mode may have its own."""
         return self.dhamma_model if mode == 'buddhist' else self.model
@@ -488,24 +537,8 @@ scene moving. Open the scene yourself with a natural first line in character.
         
         try:
             # Call Claude API
-            request = dict(model=model, max_tokens=max_tokens,
-                           system=system_prompt, messages=conversation_history)
-            thinking = thinking_off(model)
-            if thinking:
-                request['thinking'] = thinking
-            # Cache the instructions and the conversation so far: each message
-            # in a chat re-sends both, and a cached re-send costs a tenth of the
-            # price. Sent as a raw field because the pinned SDK (0.75) predates
-            # top-level cache_control. Models with a higher cache minimum than
-            # this prompt (Haiku 4.5 needs 4,096 tokens) simply don't cache.
-            request['extra_body'] = {'cache_control': {'type': 'ephemeral'}}
-            response = self.client.messages.create(**request)
-
-            # Join the text blocks rather than taking content[0]: a model that
-            # can think puts a thinking block first, and content[0].text would
-            # come back empty or raise.
-            assistant_message = ''.join(
-                b.text for b in response.content if b.type == 'text')
+            assistant_message, response = self._ask(
+                model, system_prompt, conversation_history, max_tokens)
             
             # Add assistant response to history
             self.conversations[session_id].append({
@@ -526,6 +559,15 @@ scene moving. Open the scene yourself with a natural first line in character.
             }
             
         except anthropic.APIError as e:
+            if is_out_of_budget(e):
+                # 'gate' makes the chat page show this in its gentle note box,
+                # the same one the daily allowance uses, not as an error.
+                return {
+                    'success': False,
+                    'gate': 'ai_resting',
+                    'error_type': 'out_of_budget',
+                    'message': AI_RESTING_MESSAGE,
+                }
             return {
                 'success': False,
                 'error': str(e),
@@ -574,16 +616,13 @@ Context: {context}"""
             user_message += "\n\nStudent needs a hint to get started. Give a gentle nudge in the right direction."
         
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=500,
-                system=system_prompt,
-                messages=[{'role': 'user', 'content': user_message}]
-            )
-            
-            return response.content[0].text
-            
+            text, _ = self._ask(self.model, system_prompt,
+                                [{'role': 'user', 'content': user_message}], 500)
+            return text
+
         except Exception as e:
+            if is_out_of_budget(e):
+                return AI_RESTING_MESSAGE
             return f"Sorry, couldn't generate hint: {str(e)}"
     
     def explain_answer(
@@ -635,16 +674,13 @@ Please explain:
 Be encouraging and clear!"""
         
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=800,
-                system=system_prompt,
-                messages=[{'role': 'user', 'content': user_message}]
-            )
-            
-            return response.content[0].text
-            
+            text, _ = self._ask(self.model, system_prompt,
+                                [{'role': 'user', 'content': user_message}], 800)
+            return text
+
         except Exception as e:
+            if is_out_of_budget(e):
+                return AI_RESTING_MESSAGE
             return f"Explanation unavailable: {str(e)}"
     
     def generate_content(
@@ -681,16 +717,13 @@ Difficulty level: {difficulty}/10
 Make it engaging and appropriate for this level!"""
         
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=3000,
-                system=system_prompt,
-                messages=[{'role': 'user', 'content': user_message}]
-            )
-            
-            return response.content[0].text
-            
+            text, _ = self._ask(self.model, system_prompt,
+                                [{'role': 'user', 'content': user_message}], 3000)
+            return text
+
         except Exception as e:
+            if is_out_of_budget(e):
+                return AI_RESTING_MESSAGE
             return f"Content generation failed: {str(e)}"
     
     def clear_conversation(self, session_id: str):

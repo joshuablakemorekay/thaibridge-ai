@@ -212,3 +212,71 @@ def test_each_mode_gets_its_reply_limit(monkeypatch, mode):
     assert fake.kwargs["max_tokens"] == appmod.AI_REPLY_TOKENS_BY_MODE.get(
         mode, appmod.AI_REPLY_TOKENS)
     assert appmod.AI_REPLY_TOKENS_BY_MODE["generator"] > appmod.AI_REPLY_TOKENS
+
+
+# ── When the monthly AI budget runs out ───────────────────────────────────
+
+import anthropic  # noqa: E402
+import httpx  # noqa: E402
+
+
+def _api_error(cls, status, err_type, message):
+    response = httpx.Response(status, request=httpx.Request("POST", "https://api.anthropic.com"))
+    return cls(message, response=response,
+               body={"type": "error", "error": {"type": err_type, "message": message}})
+
+
+BUDGET_GONE = [
+    _api_error(anthropic.APIStatusError, 402, "billing_error", "Billing problem"),
+    _api_error(anthropic.BadRequestError, 400, "invalid_request_error",
+               "You have reached your specified API usage limits."),
+    _api_error(anthropic.BadRequestError, 400, "invalid_request_error",
+               "Your credit balance is too low to access the Anthropic API."),
+]
+
+
+def _agent_raising(monkeypatch, error):
+    a = _agent_with(monkeypatch, None)
+
+    def boom(**kwargs):
+        raise error
+    a.client.messages.create = boom
+    return a
+
+
+@pytest.mark.parametrize("error", BUDGET_GONE)
+def test_an_empty_budget_reads_as_resting_not_broken(monkeypatch, error):
+    r = _agent_raising(monkeypatch, error).chat("s5", "hello", mode="tutor")
+    assert r["gate"] == "ai_resting"  # the page shows a gate in its gentle note box
+    assert r["message"] == ai_agent.AI_RESTING_MESSAGE
+    assert "API key" not in r["message"]
+
+
+def test_a_real_fault_is_not_disguised_as_resting(monkeypatch):
+    error = _api_error(anthropic.BadRequestError, 400, "invalid_request_error",
+                       "messages: roles must alternate")
+    r = _agent_raising(monkeypatch, error).chat("s6", "hello", mode="tutor")
+    assert "gate" not in r
+    assert r["message"] != ai_agent.AI_RESTING_MESSAGE
+
+
+def test_hints_rest_too(monkeypatch):
+    a = _agent_raising(monkeypatch, BUDGET_GONE[0])
+    assert a.get_quick_hint("q", "c") == ai_agent.AI_RESTING_MESSAGE
+
+
+@pytest.mark.parametrize("call", [
+    lambda a: a.get_quick_hint("q", "c"),
+    lambda a: a.explain_answer("q", "right", "wrong"),
+    lambda a: a.generate_content("quiz", "food", 1),
+])
+def test_single_shot_features_skip_a_thinking_block(monkeypatch, call):
+    """These read content[0] before, which on a thinking model is the thinking."""
+    assert call(_agent_with(monkeypatch, None)) == "Mettā is goodwill."
+
+
+def test_the_resting_note_does_not_sell_pro():
+    """Upgrading can't help when the budget is gone, so no plans link."""
+    src = open(os.path.join(os.path.dirname(os.path.dirname(
+        os.path.abspath(__file__))), "templates", "chat.html"), encoding="utf-8").read()
+    assert "showUpgradeNote(data.message, data.gate !== 'ai_resting')" in src
