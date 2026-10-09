@@ -77,9 +77,15 @@
             box-sizing: border-box;
         }
         
-        /* Body - Thai script font */
+        /* Body - Thai script font.
+           Noto Sans sits second ON PURPOSE. Noto Serif Thai and Cormorant both
+           claim the Latin Extended range but cannot draw the tone-marked vowels
+           the romanisation needs for the rising tone (ǎ ǐ ǔ ɔ̌), so "mǎi" came
+           out with a squashed or detached caron. The browser borrows any letter
+           a font lacks from the next one in the list; Noto Sans has them all
+           and is already loaded. Ordinary Latin and Thai are unaffected. */
         body {
-            font-family: 'Noto Serif Thai', 'Cormorant Garamond', 'Sarabun', Georgia, serif;
+            font-family: 'Noto Serif Thai', 'Noto Sans', 'Cormorant Garamond', 'Sarabun', Georgia, serif;
             background: 
                 linear-gradient(135deg, rgba(255, 248, 220, 0.9) 0%, rgba(245, 230, 211, 0.9) 100%),
                 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="bamboo" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="%23228B22" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23bamboo)"/></svg>');
@@ -1864,11 +1870,13 @@ body {
 /* --- Effect 1: easy-to-read font ---
    Swap the decorative serif for Atkinson Hyperlegible (designed for maximum
    legibility). Thai glyphs fall through to Noto Serif Thai automatically. No
-   !important, so the earlier monospace romanization rule still wins. */
+   !important, so the earlier monospace romanization rule still wins. Noto Sans
+   comes second for the same reason as on body: Atkinson cannot draw ǎ ǐ ǔ and
+   split them into a letter plus a floating caron. */
 html.rs-font body,
 html.rs-font h1, html.rs-font h2, html.rs-font h3,
 html.rs-font h4, html.rs-font h5, html.rs-font h6 {
-    font-family: 'Atkinson Hyperlegible', 'Noto Serif Thai', Georgia, sans-serif;
+    font-family: 'Atkinson Hyperlegible', 'Noto Sans', 'Noto Serif Thai', Georgia, sans-serif;
 }
 
 /* --- Effect 2: bigger text ---
