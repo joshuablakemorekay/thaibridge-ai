@@ -250,13 +250,32 @@ def build_index():
 
     _consonants(found, seen)
 
+    for data, label in reviewed_sources():
+        _walk(data, label, found, seen)
+
+    # The chanting book last: it is the largest source by far (1,500+ verses)
+    # and its romanisation is still an unreviewed draft in places, so anything
+    # already written elsewhere should win the de-dupe over it.
+    import chanting
+    _walk(getattr(chanting, 'CHANTS', None), 'Chanting book', found, seen)
+
+    return found
+
+
+def reviewed_sources():
+    """(data, label) for every reviewed source, most-reviewed first.
+
+    The chanting book is not here: it is a draft in places (see build_index).
+    Shared with scripts/export_spelling_snapshot.py, which ships these same
+    sources to the MCP spelling checker, so the two can never disagree about
+    what counts as reviewed.
+    """
     # Imported lazily and individually so a broken or missing module degrades
     # to a smaller index rather than taking the whole page down.
     import app
     import survival
     import thai_reading
     import thai_registers
-    import chanting
 
     # (module, attribute, label shown against a result)
     sources = [
@@ -283,17 +302,9 @@ def build_index():
         (app, 'CULTURAL_INFO', 'Culture'),
         (app, 'CULTURAL_FEATURE_STORIES', 'Culture'),
     ]
-    for module, attribute, label in sources:
-        data = getattr(module, attribute, None)
-        if data is not None:
-            _walk(data, label, found, seen)
-
-    # The chanting book last: it is the largest source by far (1,500+ verses)
-    # and its romanisation is still an unreviewed draft in places, so anything
-    # already written elsewhere should win the de-dupe over it.
-    _walk(getattr(chanting, 'CHANTS', None), 'Chanting book', found, seen)
-
-    return found
+    return [(getattr(module, attribute), label)
+            for module, attribute, label in sources
+            if getattr(module, attribute, None) is not None]
 
 
 # The index is built once per process and reused. It is derived from module
