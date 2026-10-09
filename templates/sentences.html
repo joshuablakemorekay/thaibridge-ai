@@ -327,6 +327,7 @@
         <a href="#questions" class="btn" style="margin: 0;">❓ Questions</a>
         <a href="#answering" class="btn" style="margin: 0;">💬 Answering</a>
         <a href="#verbs-practice" class="btn" style="margin: 0;">🔄 Verb Practice</a>
+        <a href="#joining" class="btn" style="margin: 0;">🔗 Longer Sentences</a>
         <a href="#sentence-builder" class="btn" style="margin: 0;">🧩 Build the Sentence</a>
         <a href="#conversations" class="btn" style="margin: 0;">💭 Conversations</a>
     </div>
@@ -731,6 +732,48 @@
         <strong>💡 Practice Tip:</strong> Take any verb from this table and create your own sentences using ผม/ดิฉัน (I), คุณ (you), or เขา (he/she) as the subject!
     </div>
 </div>
+
+<!-- Joining Ideas -->
+    </div>
+</div>
+
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="joining" style="color: var(--saffron); margin-top: 2rem;">🔗 {{ patterns.joining.title }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card">
+    <p style="font-size: 1.05rem; line-height: 1.8;">{{ patterns.joining.explanation }}</p>
+    <p style="font-size: 0.95rem; color: #666;">Ready to try? Switch <a href="#sentence-builder">Build the Sentence</a> to 🔥 Challenge. These lines are new and still waiting for a teacher's check.</p>
+</div>
+
+{% for p in patterns.joining.patterns %}
+<div class="card" style="border-left: 5px solid var(--saffron);">
+    <h3 style="color: #8a4b00;">{{ p.name }}</h3>
+    <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ p.pattern }}
+    </div>
+    {% for side in ['male', 'female'] if gender == side or gender == 'neutral' %}
+        {% if gender == 'neutral' %}
+        <h4 style="color: {% if side == 'male' %}#2196F3{% else %}#E91E63{% endif %};{% if not loop.first %} margin-top: 1.5rem;{% endif %}">{% if side == 'male' %}👨 Male{% else %}👩 Female{% endif %} Examples:</h4>
+        {% endif %}
+        {% for ex in p.examples[side] %}
+        <div style="background: {% if gender == 'neutral' %}{% if side == 'male' %}#e3f2fd{% else %}#fce4ec{% endif %}{% else %}white{% endif %}; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border-left: 4px solid {% if side == 'male' %}#2196F3{% else %}#E91E63{% endif %};">
+            <div class="thai-text" style="font-size: 1.6rem; margin-bottom: 0.5rem;">{{ ex.thai }} {{ listen(ex.thai) }}</div>
+            <div class="paiboon" style="font-size: 1.2rem; color: #666; margin-bottom: 0.5rem;">{{ ex.paiboon }}</div>
+            <div style="font-size: 1.1rem; color: #333; margin-bottom: 0.75rem;"><strong>English:</strong> {{ ex.english }}</div>
+            <div style="background: white; padding: 0.75rem; border-radius: 6px; font-size: 0.95rem; color: #666;">
+                <strong>Breakdown:</strong> {{ ex.breakdown }}
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}
+    <div style="background: #fff8e1; padding: 0.75rem 1rem; border-radius: 6px; margin-top: 1rem;">
+        <strong>💡 Tip:</strong> {{ p.tip }}
+    </div>
+</div>
+{% endfor %}
 
 <!-- Sentence Builder -->
     </div>

@@ -6396,6 +6396,115 @@ SENTENCE_PATTERNS = {
         ],
     },
 
+    # Joining two ideas into one longer sentence — the step after single
+    # patterns. DRAFT Thai — not yet checked by a native speaker.
+    'joining': {
+        'title': 'Joining Ideas — Longer Sentences',
+        'explanation': 'Real conversation strings ideas together. These linking words turn two short sentences into one longer one — and Thai keeps the same word order inside each half, so everything above still applies.',
+        'patterns': [
+            {
+                'key': 'but',
+                'name': 'แต่ (dtɛ̀ɛ) — but',
+                'pattern': 'Idea 1 + แต่ + Idea 2',
+                'tip': 'The second half usually drops "I" — Thai doesn\'t repeat what\'s obvious.',
+                'examples': {
+                    'male': [
+                        {'thai': 'ผมอยากไปแต่ไม่มีเวลาครับ', 'paiboon': 'pǒm yàak bpai dtɛ̀ɛ mâi mii wee-laa kráp', 'english': "I want to go, but I don't have time.", 'breakdown': 'ผม (I) + อยาก (want) + ไป (go) + แต่ (but) + ไม่มี (not have) + เวลา (time) + ครับ (polite)'},
+                    ],
+                    'female': [
+                        {'thai': 'ดิฉันอยากไปแต่ไม่มีเวลาค่ะ', 'paiboon': 'dì-chǎn yàak bpai dtɛ̀ɛ mâi mii wee-laa kâ', 'english': "I want to go, but I don't have time.", 'breakdown': 'ดิฉัน (I) + อยาก (want) + ไป (go) + แต่ (but) + ไม่มี (not have) + เวลา (time) + ค่ะ (polite)'},
+                    ],
+                },
+            },
+            {
+                'key': 'because',
+                'name': 'เพราะ (prɔ́) — because',
+                'pattern': 'What happens + เพราะ + the reason',
+                'tip': 'ไม่สบาย — literally "not comfortable" — is how Thais say they\'re ill.',
+                'examples': {
+                    'male': [
+                        {'thai': 'ผมไม่ไปทำงานเพราะไม่สบายครับ', 'paiboon': 'pǒm mâi bpai tam ŋaan prɔ́ mâi sà-baai kráp', 'english': "I'm not going to work because I'm not well.", 'breakdown': 'ผม (I) + ไม่ไป (not go) + ทำงาน (work) + เพราะ (because) + ไม่สบาย (unwell) + ครับ (polite)'},
+                    ],
+                    'female': [
+                        {'thai': 'ดิฉันไม่ไปทำงานเพราะไม่สบายค่ะ', 'paiboon': 'dì-chǎn mâi bpai tam ŋaan prɔ́ mâi sà-baai kâ', 'english': "I'm not going to work because I'm not well.", 'breakdown': 'ดิฉัน (I) + ไม่ไป (not go) + ทำงาน (work) + เพราะ (because) + ไม่สบาย (unwell) + ค่ะ (polite)'},
+                    ],
+                },
+            },
+            {
+                'key': 'if',
+                'name': 'ถ้า … ก็ (tâa … gɔ̂ɔ) — if … then',
+                'pattern': 'ถ้า + condition, (subject) + ก็ + result',
+                'tip': 'ก็ goes after the subject of the second half and before its verb: ผมก็จะ…',
+                'examples': {
+                    'male': [
+                        {'thai': 'ถ้าฝนตก ผมก็จะอยู่บ้านครับ', 'paiboon': 'tâa fǒn dtòk pǒm gɔ̂ɔ jà yùu bâan kráp', 'english': "If it rains, I'll stay at home.", 'breakdown': 'ถ้า (if) + ฝนตก (it rains) + ผม (I) + ก็ (then) + จะ (will) + อยู่บ้าน (stay home) + ครับ (polite)'},
+                    ],
+                    'female': [
+                        {'thai': 'ถ้าฝนตก ดิฉันก็จะอยู่บ้านค่ะ', 'paiboon': 'tâa fǒn dtòk dì-chǎn gɔ̂ɔ jà yùu bâan kâ', 'english': "If it rains, I'll stay at home.", 'breakdown': 'ถ้า (if) + ฝนตก (it rains) + ดิฉัน (I) + ก็ (then) + จะ (will) + อยู่บ้าน (stay home) + ค่ะ (polite)'},
+                    ],
+                },
+            },
+            {
+                'key': 'after',
+                'name': 'หลังจาก / ก่อน (lǎŋ-jàak / gɔ̀ɔn) — after / before',
+                'pattern': 'Main idea + หลังจาก/ก่อน + the other event — or the other way round',
+                'tip': 'Either half can come first. Starting with the time word puts the stress on when.',
+                'examples': {
+                    'male': [
+                        {'thai': 'ผมจะโทรหาคุณหลังจากกินข้าวครับ', 'paiboon': 'pǒm jà too hǎa kun lǎŋ-jàak gin kâao kráp', 'english': "I'll call you after I eat.", 'breakdown': 'ผม (I) + จะ (will) + โทรหา (call) + คุณ (you) + หลังจาก (after) + กินข้าว (eat) + ครับ (polite)'},
+                        {'thai': 'ก่อนนอนผมอ่านหนังสือทุกคืนครับ', 'paiboon': 'gɔ̀ɔn nɔɔn pǒm àan nǎŋ-sʉ̌ʉ túk kʉʉn kráp', 'english': 'I read every night before bed.', 'breakdown': 'ก่อน (before) + นอน (sleep) + ผม (I) + อ่านหนังสือ (read) + ทุกคืน (every night) + ครับ (polite)'},
+                    ],
+                    'female': [
+                        {'thai': 'ดิฉันจะโทรหาคุณหลังจากกินข้าวค่ะ', 'paiboon': 'dì-chǎn jà too hǎa kun lǎŋ-jàak gin kâao kâ', 'english': "I'll call you after I eat.", 'breakdown': 'ดิฉัน (I) + จะ (will) + โทรหา (call) + คุณ (you) + หลังจาก (after) + กินข้าว (eat) + ค่ะ (polite)'},
+                        {'thai': 'ก่อนนอนดิฉันอ่านหนังสือทุกคืนค่ะ', 'paiboon': 'gɔ̀ɔn nɔɔn dì-chǎn àan nǎŋ-sʉ̌ʉ túk kʉʉn kâ', 'english': 'I read every night before bed.', 'breakdown': 'ก่อน (before) + นอน (sleep) + ดิฉัน (I) + อ่านหนังสือ (read) + ทุกคืน (every night) + ค่ะ (polite)'},
+                    ],
+                },
+            },
+            {
+                'key': 'when',
+                'name': 'ตอนที่ (dtɔɔn-tîi) — when',
+                'pattern': 'ตอนที่ + situation, then what happened',
+                'tip': 'There is no past tense — ตอนที่ already tells the listener when.',
+                'examples': {
+                    'male': [
+                        {'thai': 'ตอนที่ผมอยู่เมืองไทย ผมเรียนภาษาไทยทุกวันครับ', 'paiboon': 'dtɔɔn-tîi pǒm yùu mʉaŋ-tai pǒm riian paa-sǎa tai túk wan kráp', 'english': 'When I was in Thailand, I studied Thai every day.', 'breakdown': 'ตอนที่ (when) + ผมอยู่เมืองไทย (I was in Thailand) + ผมเรียนภาษาไทย (I studied Thai) + ทุกวัน (every day) + ครับ (polite)'},
+                    ],
+                    'female': [
+                        {'thai': 'ตอนที่ดิฉันอยู่เมืองไทย ดิฉันเรียนภาษาไทยทุกวันค่ะ', 'paiboon': 'dtɔɔn-tîi dì-chǎn yùu mʉaŋ-tai dì-chǎn riian paa-sǎa tai túk wan kâ', 'english': 'When I was in Thailand, I studied Thai every day.', 'breakdown': 'ตอนที่ (when) + ดิฉันอยู่เมืองไทย (I was in Thailand) + ดิฉันเรียนภาษาไทย (I studied Thai) + ทุกวัน (every day) + ค่ะ (polite)'},
+                    ],
+                },
+            },
+            {
+                'key': 'that_which',
+                'name': 'ที่ (tîi) — that / which / who',
+                'pattern': 'Noun + ที่ + description',
+                'tip': 'The noun comes first, then ที่ and everything that describes it — the opposite of English adjectives.',
+                'examples': {
+                    'male': [
+                        {'thai': 'ร้านที่เราไปเมื่อวานอร่อยมากครับ', 'paiboon': 'ráan tîi rao bpai mʉ̂a waan à-rɔ̀i mâak kráp', 'english': 'The restaurant we went to yesterday was really good.', 'breakdown': 'ร้าน (restaurant) + ที่ (that) + เราไปเมื่อวาน (we went yesterday) + อร่อยมาก (very tasty) + ครับ (polite)'},
+                    ],
+                    'female': [
+                        {'thai': 'ร้านที่เราไปเมื่อวานอร่อยมากค่ะ', 'paiboon': 'ráan tîi rao bpai mʉ̂a waan à-rɔ̀i mâak kâ', 'english': 'The restaurant we went to yesterday was really good.', 'breakdown': 'ร้าน (restaurant) + ที่ (that) + เราไปเมื่อวาน (we went yesterday) + อร่อยมาก (very tasty) + ค่ะ (polite)'},
+                    ],
+                },
+            },
+            {
+                'key': 'think_say',
+                'name': 'ว่า (wâa) — that (after think / say / know)',
+                'pattern': 'คิด / บอก / รู้ + ว่า + what',
+                'tip': 'ว่า follows verbs of thinking and saying: คิดว่า (think that), บอกว่า (said that), รู้ว่า (know that).',
+                'examples': {
+                    'male': [
+                        {'thai': 'ผมคิดว่าพรุ่งนี้ฝนจะตกครับ', 'paiboon': 'pǒm kít wâa prûŋ níi fǒn jà dtòk kráp', 'english': 'I think it will rain tomorrow.', 'breakdown': 'ผม (I) + คิด (think) + ว่า (that) + พรุ่งนี้ (tomorrow) + ฝนจะตก (it will rain) + ครับ (polite)'},
+                    ],
+                    'female': [
+                        {'thai': 'ดิฉันคิดว่าพรุ่งนี้ฝนจะตกค่ะ', 'paiboon': 'dì-chǎn kít wâa prûŋ níi fǒn jà dtòk kâ', 'english': 'I think it will rain tomorrow.', 'breakdown': 'ดิฉัน (I) + คิด (think) + ว่า (that) + พรุ่งนี้ (tomorrow) + ฝนจะตก (it will rain) + ค่ะ (polite)'},
+                    ],
+                },
+            },
+        ],
+    },
+
     'common_verbs': {
         'title': 'Essential Verbs in Context',
         'explanation': 'Practice common verbs with aspect markers',

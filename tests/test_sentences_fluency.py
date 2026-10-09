@@ -87,3 +87,33 @@ def test_answering_section_is_on_the_page(sentences_html):
     assert 'id="answering"' in sentences_html
     for p in ANSWER_PATTERNS:
         assert p['examples']['male'][0]['no']['thai'] in sentences_html
+
+
+# ── Joining ideas (longer sentences) ───────────────────────────────────────
+
+JOINING = SENTENCE_PATTERNS['joining']['patterns']
+JOINING_PAIRS = [
+    (p['key'], m, f)
+    for p in JOINING
+    for m, f in zip(p['examples']['male'], p['examples']['female'])
+]
+
+
+@pytest.mark.parametrize('key,male,female', JOINING_PAIRS)
+def test_joining_female_line_is_the_male_line_with_her_words(key, male, female):
+    assert male['thai'].endswith('ครับ') and female['thai'].endswith('ค่ะ')
+    assert female['thai'] == male['thai'].replace('ผม', 'ดิฉัน').replace('ครับ', 'ค่ะ')
+    assert female['paiboon'] == male['paiboon'].replace('pǒm', 'dì-chǎn').replace('kráp', 'kâ')
+    assert female['english'] == male['english']
+
+
+@pytest.mark.parametrize('key,male,female', JOINING_PAIRS)
+def test_joining_lines_are_actually_longer(key, male, female):
+    # The point of the section: two ideas in one sentence.
+    assert len(male['paiboon'].split()) >= 7
+
+
+def test_joining_section_is_on_the_page(sentences_html):
+    assert 'id="joining"' in sentences_html
+    for p in JOINING:
+        assert p['examples']['male'][0]['thai'] in sentences_html
