@@ -130,23 +130,38 @@ def build_html(markdown_text, date):
         text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
         return re.sub(r"\*(.+?)\*", r"<em>\1</em>", text)
 
+    def inline_joined(text):
+        """inline() for a paragraph that already holds <br> breaks."""
+        return "<br>".join(inline(part) for part in text.split("<br>"))
+
+    def join(lines):
+        # Markdown's rule: a line ending in two spaces is a line break,
+        # anything else carries on the same paragraph.
+        out = ""
+        for line in lines:
+            out += line.rstrip() + ("<br>" if line.endswith("  ") else " ")
+        return out.strip()
+
     body = []
-    for block in markdown_text.split("\n"):
-        line = block.rstrip()
-        if not line:
+    # Work paragraph by paragraph (blank-line separated), not line by line,
+    # so *italics* and **bold** that span a line break still close properly.
+    for block in re.split(r"\n\s*\n", markdown_text):
+        lines = [l for l in block.split("\n") if l.strip()]
+        if not lines:
             continue
-        if line == "---":
+        for heading in [l for l in lines if l.startswith("#")]:
+            level = len(heading) - len(heading.lstrip("#"))
+            body.append(f"<h{level}>{inline(heading[level + 1:])}</h{level}>")
+        lines = [l for l in lines if not l.startswith("#")]
+        if not lines:
+            continue
+        if lines == ["---"]:
             body.append("<hr>")
-        elif line.startswith("### "):
-            body.append(f"<h3>{inline(line[4:])}</h3>")
-        elif line.startswith("## "):
-            body.append(f"<h2>{inline(line[3:])}</h2>")
-        elif line.startswith("# "):
-            body.append(f"<h1>{inline(line[2:])}</h1>")
-        elif line.startswith("> "):
-            body.append(f"<blockquote>{inline(line[2:])}</blockquote>")
+        elif all(l.startswith(">") for l in lines):
+            quoted = [l[1:].lstrip() for l in lines]
+            body.append(f"<blockquote>{'<br>'.join(inline(q) for q in quoted)}</blockquote>")
         else:
-            body.append(f"<p>{inline(line.rstrip(' '))}</p>")
+            body.append(f"<p>{inline_joined(join(lines))}</p>")
     return f"""<!doctype html>
 <html lang="th"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
