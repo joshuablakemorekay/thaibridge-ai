@@ -295,6 +295,11 @@ async def main(pages, force):
             print('  {} ok'.format(stem))
         except Exception as exc:                       # noqa: BLE001
             failed += 1
+            # edge-tts opens the file before audio arrives, so a refused request
+            # leaves an EMPTY mp3 behind. Left there, the next run counts it as
+            # "already present" and the page shows a button that plays nothing.
+            if os.path.exists(out_path):
+                os.remove(out_path)
             print('  {} FAILED: {}'.format(stem, ascii(exc)))
 
     print('\n{} made, {} already present, {} failed'.format(made, skipped, failed))
