@@ -141,6 +141,12 @@ if database_url:
     # costs nothing and saves a baffling error if the provider ever changes.
     if database_url.startswith('postgres://'):
         database_url = database_url.replace('postgres://', 'postgresql://', 1)
+    # Name the driver outright. A bare postgresql:// lets SQLAlchemy pick, and
+    # 2.1 picks psycopg 3, which is not installed — every deploy crashed on
+    # 2026-10-09 until SQLAlchemy was pinned. This keeps it on psycopg2 even
+    # if that pin is ever lifted.
+    if database_url.startswith('postgresql://'):
+        database_url = database_url.replace('postgresql://', 'postgresql+psycopg2://', 1)
     app.config['SQLALCHEMY_DATABASE_URI'] = database_url
     # Neon suspends its compute when idle, which quietly drops pooled
     # connections. Without pre-ping, the first request after a quiet spell dies
