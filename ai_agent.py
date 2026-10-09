@@ -199,12 +199,11 @@ class ThaiLearningAI:
         # of a cent (see render.yaml); this default is the fallback for local dev.
         #
         # The old default (claude-sonnet-4-20250514) was retired and now returns a
-        # 404, which silently broke local AI. The default is Haiku 4.5 — the same
-        # model the live demo runs, verified working with this code path. It does
-        # NOT think-by-default, so the small max_tokens budget below all goes to
-        # the reply (a newer thinking-by-default model like Sonnet 5 would need
-        # thinking disabled here first). Set AI_MODEL to override.
-        self.model = os.environ.get("AI_MODEL", "claude-haiku-4-5-20251001")
+        # 404, which silently broke local AI. The default is Sonnet 5.5 — the
+        # same model the live site runs (render.yaml), verified with this code
+        # path. It thinks by default, so chat() switches that off (thinking_off)
+        # and the whole reply budget goes to the answer. Set AI_MODEL to override.
+        self.model = os.environ.get("AI_MODEL", "claude-sonnet-5-5")
         # Buddhist mode can run on its own model. Haiku 4.5 got Dhamma terms
         # wrong in a side-by-side test (mettā described as muditā, an invented
         # five-step dependent origination) where Haiku 5.5 got all ten right at

@@ -747,8 +747,8 @@ FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 # This is added ON TOP of the tutor's 15 rather than reserved out of it.
 # Reserving would have cut everyone's tutor allowance from 15 to 10 to fund a
 # fix for a promise we had already made; nobody should lose something so that
-# we can keep our word. At the costed 0.285p a message it is 1.4p a day for
-# someone who exhausts it daily, which almost nobody will.
+# we can keep our word. At about 0.85p a message on Sonnet 5.5 it is about 4p
+# a day for someone who exhausts it daily, which almost nobody will.
 FREE_DHAMMA_DAILY_LIMIT = 5
 DHAMMA_AI_MODES = {'buddhist'}                 # modes that draw on that pool
 
@@ -786,15 +786,18 @@ AI_REPLY_TOKENS_BY_MODE = {'generator': 1500}
 
 # Pro is "unlimited" in the sense that matters to a learner, but not literally:
 # without a ceiling, one subscriber could run up more in API costs than they pay.
-# At 0.285p worst case per message (a full 500-token reply on top of the ~1,100
-# token system prompt), 150 a day is £12.84 a month against £19.99 of revenue —
-# still profitable even if someone maxes it out every single day of the month.
+# Was 150 on Haiku 4.5 at 0.285p a message. Sonnet 5.5 (2026-10-09) costs about
+# 0.85p for a fresh message and 0.3p for a cached follow-up in the same chat, so
+# 150 a day could cost more than the £16.58 a month annual Pro brings in. At 75,
+# a learner who maxes it out every day costs about £10 a month on a realistic mix
+# of fresh and follow-up messages, so Pro stays profitable. 75 is also the floor
+# test_the_ceiling_is_far_above_the_free_allowance sets (five times free), so
+# Pro stays clearly worth paying for. The Anthropic Console spend limit is the
+# hard backstop if anyone ever finds a pattern that costs more.
 #
-# The number is chosen to be invisible: ten times the free allowance, and roughly
-# three times what a genuinely heavy day of study looks like. Anyone who reaches
-# it is not studying, and the reply says so kindly and invites them to get in
-# touch rather than treating them as an abuser.
-PRO_FAIR_USE_DAILY = 150
+# Anyone who reaches it is not studying, and the reply says so kindly and
+# invites them to get in touch rather than treating them as an abuser.
+PRO_FAIR_USE_DAILY = 75
 
 # Subscription tiers
 SUBSCRIPTION_TIERS = {
