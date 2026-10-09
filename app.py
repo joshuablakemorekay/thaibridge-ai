@@ -7779,6 +7779,21 @@ def check_answer():
         is_correct = data.get('answer') == data.get('correct')
         correct_answer = data.get('correct')
 
+    return jsonify({
+        'correct': is_correct,
+        'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {correct_answer or ''}",
+        'correct_answer': correct_answer,
+        **pay_drill_answer(is_correct, scored),
+    })
+
+
+def pay_drill_answer(is_correct, scored):
+    """Count one marked drill answer and pay its XP, under the daily cap.
+
+    Shared by every drill that marks answers, so the cap and the counters
+    can't drift apart between them. `scored` must be False for anything the
+    server didn't issue itself: those are counted but never paid.
+    """
     # Gamification: Award points for correct answers
     init_user_progress()
     user = session['user_progress']
@@ -7806,11 +7821,8 @@ def check_answer():
     user['total_answers'] = user.get('total_answers', 0) + 1
     user['quizzes_completed'] = user.get('quizzes_completed', 0) + 1
     session.modified = True
-    
-    return jsonify({
-        'correct': is_correct,
-        'message': 'ถูกต้อง! (Correct!)' if is_correct else f"ไม่ถูกต้อง. Answer: {correct_answer or ''}",
-        'correct_answer': correct_answer,
+
+    return {
         'xp_earned': xp_earned,
         'daily_cap_reached': capped,
         # False when the server did not issue this question, so the marking is
@@ -7818,7 +7830,7 @@ def check_answer():
         'scored': scored,
         'new_level': new_level,
         'total_xp': user['xp']
-    })
+    }
 
 
 @app.route('/api/vocabulary/<category>')
