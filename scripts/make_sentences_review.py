@@ -52,12 +52,17 @@ INTRO = """# ขอความช่วยเหลือตรวจประ�
 > ถ้าผิดหรือไม่เป็นธรรมชาติ เขียนแบบที่ถูกตรงบรรทัด **ตอบ:** ครับ
 > ถ้าข้อไหนไม่แน่ใจ ข้ามได้เลยนะครับ
 
+ตัวเอียงข้างหลังภาษาไทยคือ **คำอ่านแบบ ThaiBridge Spelling** ที่ผู้เรียนใช้อ่านออกเสียง
+(ปรับมาจากระบบ Paiboon) ถ้า **วรรณยุกต์หรือเสียงในคำอ่านผิด** ช่วยบอกด้วยนะครับ
+
 *I teach Thai to foreigners through an app. I've added three things to its
 Sentences page: how to answer questions, longer sentences that join two ideas,
 and a drill where learners put Thai words in the right order. I drafted every
 line myself and no Thai speaker has checked them yet. Please mark each one ✓ if
-it's correct and natural, or write the better version. About 30 minutes — skip
-anything you're unsure of.*
+it's correct and natural, or write the better version. The italic line after
+each Thai sentence is its ThaiBridge Spelling (the app's romanisation, based on
+Paiboon) — please flag any wrong tone or sound in it too. About 30 minutes —
+skip anything you're unsure of.*
 
 ---
 """
@@ -96,9 +101,11 @@ def builder_rows(level):
         if sentence_builder.level_of(s) != level:
             continue
         tiles = sentence_builder.tiles_for(s, "male")
+        spelling = " ".join(sentence_builder.ROMANISATION[t] for t in tiles)
         others = [sentence_builder.answer_text(sentence_builder.tiles_for(s, "male", alt))
                   for alt in s.get("alternates", [])]
-        yield s["english"], " · ".join(tiles), sentence_builder.answer_text(tiles), others
+        yield (s["english"], " · ".join(tiles), sentence_builder.answer_text(tiles),
+               spelling, others)
 
 
 def build_markdown(date):
@@ -139,10 +146,10 @@ def build_markdown(date):
         out.append(f"\n### {thai_title} / {en_title}\n")
         if note:
             out.append(note)
-        for english, tiles, joined, others in builder_rows(level):
+        for english, tiles, joined, spelling, others in builder_rows(level):
             n += 1
             alt = "".join(f"  \nหรือ {o}" for o in others)
-            out.append(f"**{n}.** {english}  \n{joined}  ·  ({tiles}){alt}  \n"
+            out.append(f"**{n}.** {english}  \n{joined}  ·  *{spelling}*  \n({tiles}){alt}  \n"
                        f"**ตอบ:** ✓ / {BLANK}\n")
 
     out.append("\n---\n\n# ง. คำถามเพิ่มเติม\n## D. A few questions\n")
