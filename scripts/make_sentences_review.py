@@ -41,21 +41,23 @@ INTRO = """# ขอความช่วยเหลือตรวจประ�
 
 เรียน อาจารย์ครับ 🙏
 
-ผมทำแอปสอนภาษาไทยให้ชาวต่างชาติ ในหน้า **ประโยคและบทสนทนา** ผมเพิ่มของใหม่ 2 ส่วน:
-**วิธีตอบคำถาม** (ใช่/ไม่ใช่, ยังไม่, ไม่ได้) และ **แบบฝึกเรียงประโยค** ที่ผู้เรียนต้องเรียงคำให้ถูก
+ผมทำแอปสอนภาษาไทยให้ชาวต่างชาติ ในหน้า **ประโยคและบทสนทนา** ผมเพิ่มของใหม่ 3 ส่วน:
+**วิธีตอบคำถาม** (ใช่/ไม่ใช่, ยังไม่, ไม่ได้), **ประโยคยาว** ที่เชื่อมสองความคิดด้วยคำเชื่อม
+(แต่, เพราะ, ถ้า…ก็ ฯลฯ) และ **แบบฝึกเรียงประโยค** ที่ผู้เรียนต้องเรียงคำให้ถูก
 
 ทุกประโยคผมร่างเอง **ยังไม่มีคนไทยตรวจ** เลยขอให้อาจารย์ช่วยดูว่า
 **ถูกต้องและเป็นธรรมชาติไหม** — คนไทยพูดแบบนี้จริงหรือเปล่าครับ
 
-> **ใช้เวลาประมาณ 20 นาที** — ถ้าประโยคไหนถูกแล้ว ทำเครื่องหมาย ✓ ได้เลย
+> **ใช้เวลาประมาณ 30 นาที** — ถ้าประโยคไหนถูกแล้ว ทำเครื่องหมาย ✓ ได้เลย
 > ถ้าผิดหรือไม่เป็นธรรมชาติ เขียนแบบที่ถูกตรงบรรทัด **ตอบ:** ครับ
 > ถ้าข้อไหนไม่แน่ใจ ข้ามได้เลยนะครับ
 
-*I teach Thai to foreigners through an app. I've added two things to its
-Sentences page: how to answer questions, and a drill where learners put Thai
-words in the right order. I drafted every line myself and no Thai speaker has
-checked them yet. Please mark each one ✓ if it's correct and natural, or write
-the better version. About 20 minutes — skip anything you're unsure of.*
+*I teach Thai to foreigners through an app. I've added three things to its
+Sentences page: how to answer questions, longer sentences that join two ideas,
+and a drill where learners put Thai words in the right order. I drafted every
+line myself and no Thai speaker has checked them yet. Please mark each one ✓ if
+it's correct and natural, or write the better version. About 30 minutes — skip
+anything you're unsure of.*
 
 ---
 """
@@ -82,10 +84,21 @@ def answering_rows():
                 yield pattern["name"], ex[part]
 
 
-def builder_rows():
+def joining_rows():
+    for pattern in app.SENTENCE_PATTERNS["joining"]["patterns"]:
+        for ex in pattern["examples"]["male"]:
+            yield pattern["name"], ex
+
+
+def builder_rows(level):
+    """(english, tiles, main answer, other accepted orders) for one level."""
     for s in sentence_builder.SENTENCES:
+        if sentence_builder.level_of(s) != level:
+            continue
         tiles = sentence_builder.tiles_for(s, "male")
-        yield s["english"], " · ".join(tiles), sentence_builder.answer_text(tiles)
+        others = [sentence_builder.answer_text(sentence_builder.tiles_for(s, "male", alt))
+                  for alt in s.get("alternates", [])]
+        yield s["english"], " · ".join(tiles), sentence_builder.answer_text(tiles), others
 
 
 def build_markdown(date):
@@ -103,16 +116,36 @@ def build_markdown(date):
         out.append(f"**{n}.** {line['thai']}  ·  *{line['paiboon']}*  ·  {line['english']}  \n"
                    f"**ตอบ:** ✓ / {BLANK}\n")
 
-    out.append("\n---\n\n# ข. แบบฝึกเรียงประโยค\n## B. Build the sentence\n")
+    out.append("\n---\n\n# ข. ประโยคยาว — เชื่อมสองความคิด\n## B. Longer sentences — joining two ideas\n")
+    current = None
+    for heading, line in joining_rows():
+        if heading != current:
+            out.append(f"\n### {heading}\n")
+            current = heading
+        n += 1
+        out.append(f"**{n}.** {line['thai']}  ·  *{line['paiboon']}*  ·  {line['english']}  \n"
+                   f"**ตอบ:** ✓ / {BLANK}\n")
+
+    out.append("\n---\n\n# ค. แบบฝึกเรียงประโยค\n## C. Build the sentence\n")
     out.append("*The learner sees the English and puts the Thai words in order. "
                "The words are shown split as the learner sees them — please also "
                "say if a word is split in the wrong place.*\n")
-    for english, tiles, joined in builder_rows():
-        n += 1
-        out.append(f"**{n}.** {english}  \n{joined}  ·  ({tiles})  \n"
-                   f"**ตอบ:** ✓ / {BLANK}\n")
+    for level, thai_title, en_title, note in (
+            ("starter", "ระดับง่าย", "Starter", ""),
+            ("challenge", "ระดับยาก", "Challenge",
+             "*Some of these accept a second order, shown after หรือ. Please check "
+             "that each one is really correct — and add any other order a Thai "
+             "speaker would naturally use.*\n")):
+        out.append(f"\n### {thai_title} / {en_title}\n")
+        if note:
+            out.append(note)
+        for english, tiles, joined, others in builder_rows(level):
+            n += 1
+            alt = "".join(f"  \nหรือ {o}" for o in others)
+            out.append(f"**{n}.** {english}  \n{joined}  ·  ({tiles}){alt}  \n"
+                       f"**ตอบ:** ✓ / {BLANK}\n")
 
-    out.append("\n---\n\n# ค. คำถามเพิ่มเติม\n## C. A few questions\n")
+    out.append("\n---\n\n# ง. คำถามเพิ่มเติม\n## D. A few questions\n")
     for thai, english in QUESTIONS:
         n += 1
         out.append(f"**{n}.** {thai}  \n*{english}*  \n**ตอบ:** {BLANK}\n")
