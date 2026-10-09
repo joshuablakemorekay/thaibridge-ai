@@ -6265,7 +6265,118 @@ SENTENCE_PATTERNS = {
             }
         }
     },
-    
+
+    # How to ANSWER the questions above. The page taught asking ไปไหม but
+    # never replying to it, and the reply is where Thai differs most from
+    # English: there is no all-purpose "yes" or "no". The bare rules for ไม่
+    # live on the Grammar page (Negation); this is them in use, as replies.
+    # DRAFT Thai — not yet checked by a native speaker.
+    'answering': {
+        'title': 'Answering Questions — Yes, No & Not Yet',
+        'explanation': 'Thai has no single word for "yes" or "no". You answer by '
+                       'repeating the key word from the question — on its own for '
+                       'yes, with ไม่ (mâi) in front of it for no.',
+        'patterns': [
+            {
+                'key': 'repeat_verb',
+                'name': 'Repeat the verb: ไป → ไป / ไม่ไป',
+                'pattern': 'Yes = Verb + particle  ·  No = ไม่ + Verb + particle',
+                'tip': 'Whatever word comes before ไหม is the word you answer '
+                       'with. Women: the question ends in คะ (ká, high tone), the '
+                       'answer ends in ค่ะ (kâ, falling tone).',
+                'examples': {
+                    'male': [
+                        {'q': {'thai': 'ไปไหมครับ', 'paiboon': 'bpai mǎi kráp', 'english': 'Are you going? / Want to go?'},
+                         'yes': {'thai': 'ไปครับ', 'paiboon': 'bpai kráp', 'english': 'Yes, I am. (go)'},
+                         'no': {'thai': 'ไม่ไปครับ', 'paiboon': 'mâi bpai kráp', 'english': "No, I'm not. (not go)"}},
+                        {'q': {'thai': 'คุณพูดไทยได้ไหมครับ', 'paiboon': 'kun pûut tai dâi mǎi kráp', 'english': 'Can you speak Thai?'},
+                         'yes': {'thai': 'ได้ครับ', 'paiboon': 'dâi kráp', 'english': 'Yes, I can. (can)'},
+                         'no': {'thai': 'ไม่ได้ครับ', 'paiboon': 'mâi dâi kráp', 'english': "No, I can't. (not can)"}},
+                        {'q': {'thai': 'เผ็ดไหมครับ', 'paiboon': 'pèt mǎi kráp', 'english': 'Is it spicy?'},
+                         'yes': {'thai': 'เผ็ดครับ', 'paiboon': 'pèt kráp', 'english': "Yes, it is. (spicy)"},
+                         'no': {'thai': 'ไม่เผ็ดครับ', 'paiboon': 'mâi pèt kráp', 'english': "No, it isn't. (not spicy)"}},
+                    ],
+                    'female': [
+                        {'q': {'thai': 'ไปไหมคะ', 'paiboon': 'bpai mǎi ká', 'english': 'Are you going? / Want to go?'},
+                         'yes': {'thai': 'ไปค่ะ', 'paiboon': 'bpai kâ', 'english': 'Yes, I am. (go)'},
+                         'no': {'thai': 'ไม่ไปค่ะ', 'paiboon': 'mâi bpai kâ', 'english': "No, I'm not. (not go)"}},
+                        {'q': {'thai': 'คุณพูดไทยได้ไหมคะ', 'paiboon': 'kun pûut tai dâi mǎi ká', 'english': 'Can you speak Thai?'},
+                         'yes': {'thai': 'ได้ค่ะ', 'paiboon': 'dâi kâ', 'english': 'Yes, I can. (can)'},
+                         'no': {'thai': 'ไม่ได้ค่ะ', 'paiboon': 'mâi dâi kâ', 'english': "No, I can't. (not can)"}},
+                        {'q': {'thai': 'เผ็ดไหมคะ', 'paiboon': 'pèt mǎi ká', 'english': 'Is it spicy?'},
+                         'yes': {'thai': 'เผ็ดค่ะ', 'paiboon': 'pèt kâ', 'english': "Yes, it is. (spicy)"},
+                         'no': {'thai': 'ไม่เผ็ดค่ะ', 'paiboon': 'mâi pèt kâ', 'english': "No, it isn't. (not spicy)"}},
+                    ],
+                },
+            },
+            {
+                'key': 'chai',
+                'name': '"Right?" questions: ใช่ / ไม่ใช่',
+                'pattern': 'Statement + ใช่ไหม  →  ใช่ / ไม่ใช่ + particle',
+                'tip': 'ใช่ (châi) means "that\'s right" — use it to confirm a '
+                       'fact, not to agree to an action. Answering ไปไหม with ใช่ '
+                       'is a classic learner mistake: say ไป.',
+                'examples': {
+                    'male': [
+                        {'q': {'thai': 'นี่ของคุณใช่ไหมครับ', 'paiboon': 'nîi kɔ̌ɔŋ kun châi mǎi kráp', 'english': 'This is yours, right?'},
+                         'yes': {'thai': 'ใช่ครับ', 'paiboon': 'châi kráp', 'english': "Yes, that's right."},
+                         'no': {'thai': 'ไม่ใช่ครับ', 'paiboon': 'mâi châi kráp', 'english': "No, it isn't."}},
+                    ],
+                    'female': [
+                        {'q': {'thai': 'นี่ของคุณใช่ไหมคะ', 'paiboon': 'nîi kɔ̌ɔŋ kun châi mǎi ká', 'english': 'This is yours, right?'},
+                         'yes': {'thai': 'ใช่ค่ะ', 'paiboon': 'châi kâ', 'english': "Yes, that's right."},
+                         'no': {'thai': 'ไม่ใช่ค่ะ', 'paiboon': 'mâi châi kâ', 'english': "No, it isn't."}},
+                    ],
+                },
+            },
+            {
+                'key': 'not_yet',
+                'name': 'Already or not yet: แล้ว / ยังไม่',
+                'pattern': '…แล้วหรือยัง  →  Verb + แล้ว / ยังไม่ + Verb',
+                'tip': 'A แล้ว question is never answered with plain ไม่. '
+                       'If it hasn\'t happened, it hasn\'t happened YET — ยังไม่ '
+                       '(yaŋ mâi). Just ยังครับ / ยังค่ะ on its own also works.',
+                'examples': {
+                    'male': [
+                        {'q': {'thai': 'กินข้าวแล้วหรือยังครับ', 'paiboon': 'gin kâao lɛ́ɛo rʉ̌ʉ yaŋ kráp', 'english': 'Have you eaten yet?'},
+                         'yes': {'thai': 'กินแล้วครับ', 'paiboon': 'gin lɛ́ɛo kráp', 'english': "Yes, I've eaten. (eat already)"},
+                         'no': {'thai': 'ยังไม่ได้กินครับ', 'paiboon': 'yaŋ mâi dâi gin kráp', 'english': "Not yet. (still not eaten)"}},
+                        {'q': {'thai': 'ถึงแล้วหรือยังครับ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo rʉ̌ʉ yaŋ kráp', 'english': 'Have we arrived yet?'},
+                         'yes': {'thai': 'ถึงแล้วครับ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo kráp', 'english': "Yes, we're here. (arrive already)"},
+                         'no': {'thai': 'ยังไม่ถึงครับ', 'paiboon': 'yaŋ mâi tʉ̌ŋ kráp', 'english': "Not yet. (still not arrive)"}},
+                    ],
+                    'female': [
+                        {'q': {'thai': 'กินข้าวแล้วหรือยังคะ', 'paiboon': 'gin kâao lɛ́ɛo rʉ̌ʉ yaŋ ká', 'english': 'Have you eaten yet?'},
+                         'yes': {'thai': 'กินแล้วค่ะ', 'paiboon': 'gin lɛ́ɛo kâ', 'english': "Yes, I've eaten. (eat already)"},
+                         'no': {'thai': 'ยังไม่ได้กินค่ะ', 'paiboon': 'yaŋ mâi dâi gin kâ', 'english': "Not yet. (still not eaten)"}},
+                        {'q': {'thai': 'ถึงแล้วหรือยังคะ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo rʉ̌ʉ yaŋ ká', 'english': 'Have we arrived yet?'},
+                         'yes': {'thai': 'ถึงแล้วค่ะ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo kâ', 'english': "Yes, we're here. (arrive already)"},
+                         'no': {'thai': 'ยังไม่ถึงค่ะ', 'paiboon': 'yaŋ mâi tʉ̌ŋ kâ', 'english': "Not yet. (still not arrive)"}},
+                    ],
+                },
+            },
+            {
+                'key': 'didnt',
+                'name': "Didn't: ไม่ได้ + Verb",
+                'pattern': 'ไม่ได้ + Verb = didn\'t …',
+                'tip': 'Word order changes the meaning. ไม่ได้ไป (mâi dâi bpai) '
+                       '= "didn\'t go". ไปไม่ได้ (bpai mâi dâi) = "can\'t go".',
+                'examples': {
+                    'male': [
+                        {'q': {'thai': 'เมื่อวานไปทำงานไหมครับ', 'paiboon': 'mʉ̂a waan bpai tam ŋaan mǎi kráp', 'english': 'Did you go to work yesterday?'},
+                         'yes': {'thai': 'ไปครับ', 'paiboon': 'bpai kráp', 'english': 'Yes, I did. (go)'},
+                         'no': {'thai': 'ไม่ได้ไปครับ', 'paiboon': 'mâi dâi bpai kráp', 'english': "No, I didn't. (didn't go)"}},
+                    ],
+                    'female': [
+                        {'q': {'thai': 'เมื่อวานไปทำงานไหมคะ', 'paiboon': 'mʉ̂a waan bpai tam ŋaan mǎi ká', 'english': 'Did you go to work yesterday?'},
+                         'yes': {'thai': 'ไปค่ะ', 'paiboon': 'bpai kâ', 'english': 'Yes, I did. (go)'},
+                         'no': {'thai': 'ไม่ได้ไปค่ะ', 'paiboon': 'mâi dâi bpai kâ', 'english': "No, I didn't. (didn't go)"}},
+                    ],
+                },
+            },
+        ],
+    },
+
     'common_verbs': {
         'title': 'Essential Verbs in Context',
         'explanation': 'Practice common verbs with aspect markers',

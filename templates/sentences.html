@@ -56,6 +56,39 @@
     color: var(--bodhi-green);
     text-decoration: none;
 }
+/* Answering Questions: a question with its yes and no replies side by side. */
+.qa-pair {
+    background: #fafafa;
+    border-left: 4px solid #2196F3;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+}
+.qa-pair .thai-text { font-size: 1.4rem; }
+.qa-pair .paiboon { color: #666; }
+.qa-en { color: #333; font-size: 0.95rem; }
+.qa-label {
+    display: inline-block;
+    min-width: 2.2rem;
+    margin-right: 0.4rem;
+    padding: 0.1rem 0.5rem;
+    border-radius: 12px;
+    background: #757575;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+}
+.qa-answers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+.qa-a { background: #fff; border-radius: 6px; padding: 0.75rem; }
+.qa-yes .qa-label { background: #2e7d32; }
+.qa-no .qa-label { background: #c62828; }
 .practice-hint {
     font-size: 0.9rem;
     color: #666;
@@ -228,6 +261,7 @@
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
         <a href="#aspect-markers" class="btn" style="margin: 0;">📊 Aspect Markers</a>
         <a href="#questions" class="btn" style="margin: 0;">❓ Questions</a>
+        <a href="#answering" class="btn" style="margin: 0;">💬 Answering</a>
         <a href="#verbs-practice" class="btn" style="margin: 0;">🔄 Verb Practice</a>
         <a href="#conversations" class="btn" style="margin: 0;">💭 Conversations</a>
     </div>
@@ -526,6 +560,57 @@
 </div>
 
 <!-- Verb Practice Table -->
+    </div>
+</div>
+
+<!-- Answering Questions -->
+<div class="collapsible-section">
+    <div class="section-header">
+        <h2 id="answering" style="color: var(--saffron); margin-top: 2rem;">💬 {{ patterns.answering.title }}</h2>
+        <span class="section-toggle">▼</span>
+    </div>
+    <div class="section-content">
+<div class="card">
+    <p style="font-size: 1.05rem; line-height: 1.8;">{{ patterns.answering.explanation }}</p>
+    <p style="font-size: 0.95rem; color: #666;">The rules for ไม่ on their own are on the <a href="{{ url_for('grammar') }}#negation">Grammar page → Negation</a>. These lines are new and still waiting for a teacher's check.</p>
+</div>
+
+{% for p in patterns.answering.patterns %}
+<div class="card" style="border-left: 5px solid var(--temple-red);">
+    <h3 style="color: var(--temple-red);">{{ p.name }}</h3>
+    <div style="background: #fbe9e7; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+        <strong>Pattern:</strong> {{ p.pattern }}
+    </div>
+    {% for side in ['male', 'female'] if gender == side or gender == 'neutral' %}
+        {% if gender == 'neutral' %}
+        <h4 style="color: {% if side == 'male' %}#2196F3{% else %}#E91E63{% endif %};{% if not loop.first %} margin-top: 1.5rem;{% endif %}">{% if side == 'male' %}👨 Male{% else %}👩 Female{% endif %} Examples:</h4>
+        {% endif %}
+        {% for ex in p.examples[side] %}
+        <div class="qa-pair" style="border-left-color: {% if side == 'male' %}#2196F3{% else %}#E91E63{% endif %};">
+            <div class="qa-q">
+                <span class="qa-label">Q</span>
+                <span class="thai-text">{{ ex.q.thai }}</span>{{ listen(ex.q.thai) }}
+                <div class="paiboon">{{ ex.q.paiboon }}</div>
+                <div class="qa-en">{{ ex.q.english }}</div>
+            </div>
+            <div class="qa-answers">
+                {% for kind, label in [('yes', '✓ Yes'), ('no', '✗ No')] %}
+                <div class="qa-a qa-{{ kind }}">
+                    <span class="qa-label">{{ label }}</span>
+                    <span class="thai-text">{{ ex[kind].thai }}</span>{{ listen(ex[kind].thai) }}
+                    <div class="paiboon">{{ ex[kind].paiboon }}</div>
+                    <div class="qa-en">{{ ex[kind].english }}</div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    {% endfor %}
+    <div style="background: #fff8e1; padding: 0.75rem 1rem; border-radius: 6px; margin-top: 1rem;">
+        <strong>💡 Tip:</strong> {{ p.tip }}
+    </div>
+</div>
+{% endfor %}
     </div>
 </div>
 
