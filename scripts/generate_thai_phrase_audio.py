@@ -282,7 +282,8 @@ async def main(pages, force):
         out_path = thai_audio.audio_disk_path(STATIC_DIR, thai)
         stem = thai_audio.slug(thai)
 
-        if os.path.exists(out_path) and not force:
+        # An empty file is a failed earlier attempt, not a recording — redo it.
+        if os.path.exists(out_path) and os.path.getsize(out_path) and not force:
             skipped += 1
             continue
 
@@ -296,6 +297,11 @@ async def main(pages, force):
         except Exception as exc:                       # noqa: BLE001
             failed += 1
             print('  {} FAILED: {}'.format(stem, ascii(exc)))
+            # edge-tts opens the file before audio arrives, so a failure leaves
+            # an empty MP3 behind. The page would then draw a 🔊 for it that
+            # plays nothing, and the next run would skip it as "present".
+            if os.path.exists(out_path) and not os.path.getsize(out_path):
+                os.remove(out_path)
 
     print('\n{} made, {} already present, {} failed'.format(made, skipped, failed))
     return 1 if failed else 0
