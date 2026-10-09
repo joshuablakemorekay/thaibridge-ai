@@ -99,14 +99,24 @@ class AnthropicProvider(Provider):
     def complete(self, prompt: str, inputs: dict) -> str:
         # Render {{variables}} in the prompt
         rendered = render_prompt(prompt, inputs)
-        msg = self.client.messages.create(
+        request = dict(
             model=self.model,
-            max_tokens=4096,
+            max_tokens=8192,
             messages=[{"role": "user", "content": rendered}],
         )
+        # Sonnet 5.5 thinks by default, and on a long prompt the thinking can
+        # spend the whole budget and leave an empty answer. Same off switch
+        # as ai_agent.thinking_off (it rejects "disabled").
+        if self.model.startswith('claude-sonnet-5-5'):
+            request['thinking'] = {'type': 'between_tools'}
+        msg = self.client.messages.create(**request)
         # Join the text blocks rather than reading content[0]: a model that
         # can think puts a thinking block first (same fix as ai_agent.py).
-        return ''.join(b.text for b in msg.content if b.type == 'text')
+        text = ''.join(b.text for b in msg.content if b.type == 'text')
+        if not text:
+            # Say why, rather than scoring a blank as a wrong answer.
+            raise RuntimeError(f'empty answer (stop_reason={msg.stop_reason})')
+        return text
 
 
 def render_prompt(template: str, inputs: dict) -> str:
@@ -207,13 +217,46 @@ def evaluate_output(rubric: dict, output: str) -> dict:
 
 def extract_prompt_text(prompt_md: str) -> str:
     """
-    Pull the prompt body out of the ``` fenced block in prompt.md.
-    Falls back to the whole file if no fenced block is found.
+    Pull the prompt body out of prompt.md.
+
+    Older entries hold it in the first ``` fenced block. Newer entries quote
+    it as a > blockquote under a "## Final prompt" heading. Falls back to the
+    whole file only if neither is found.
     """
+    prompt_md = prompt_md.replace('\r\n', '\n')
     match = re.search(r'```\n(.*?)\n```', prompt_md, re.DOTALL)
     if match:
         return match.group(1).strip()
+
+    section = re.search(r'^## Final prompt[^\n]*\n(.*?)(?=^## |\Z)',
+                        prompt_md, re.DOTALL | re.MULTILINE)
+    if section:
+        quoted = [line[1:].removeprefix(' ')
+                  for line in section.group(1).split('\n')
+                  if line.startswith('>')]
+        if quoted:
+            return '\n'.join(quoted).strip()
     return prompt_md.strip()
+
+
+def load_context(prompt_dir: Path) -> str:
+    """
+    Read the files in prompts/<name>/context/, if any.
+
+    These stand in for what the original session could see: excerpts of the
+    code, a page's text, an earlier turn. Without them a prompt like "check
+    whether the code honours it" can only be answered with "send me the
+    code". Each file is wrapped in <file> tags ahead of the prompt.
+    """
+    context_dir = prompt_dir / 'context'
+    if not context_dir.is_dir():
+        return ''
+    parts = []
+    for f in sorted(context_dir.iterdir()):
+        if f.is_file():
+            body = f.read_text(encoding='utf-8').strip()
+            parts.append(f'<file name="{f.name}">\n{body}\n</file>')
+    return '\n\n'.join(parts)
 
 
 def load_prompt_dir(prompt_dir: Path) -> dict | None:
@@ -225,6 +268,9 @@ def load_prompt_dir(prompt_dir: Path) -> dict | None:
         return None
 
     prompt_text = extract_prompt_text(prompt_file.read_text(encoding='utf-8'))
+    context = load_context(prompt_dir)
+    if context:
+        prompt_text = f'{context}\n\n{prompt_text}'
     rubric = yaml.safe_load(rubric_file.read_text(encoding='utf-8'))
 
     return {
@@ -288,7 +334,8 @@ def run_prompt(prompt_data: dict, provider: Provider, dry_run: bool = False) -> 
     }
 
 
-def write_summary(results: list[dict], output_path: Path) -> None:
+def write_summary(results: list[dict], output_path: Path,
+                  skipped: list[tuple[str, str]] = ()) -> None:
     """Write a markdown summary across all prompts."""
     lines = [
         '# Eval Results Summary',
@@ -304,6 +351,10 @@ def write_summary(results: list[dict], output_path: Path) -> None:
             f'| `{r["prompt"]}` | {r["cases_run"]} | '
             f'{r["avg_score"]:.1%} | {status} |'
         )
+
+    if skipped:
+        lines += ['', '**Not run against a real model:**', '']
+        lines += [f'- `{name}`: {reason}' for name, reason in skipped]
 
     overall_pass = all(r['all_passed'] for r in results)
     lines += ['', f'**Overall:** {"✅ all prompts passing" if overall_pass else "❌ failures present"}']
@@ -350,10 +401,22 @@ def main():
 
     # Run each prompt
     all_results = []
+    skipped = []
     for pdir in prompt_dirs:
         prompt_data = load_prompt_dir(pdir)
         if not prompt_data:
             print(f'WARN: {pdir.name} missing prompt.md or rubric.yaml, skipping')
+            continue
+
+        # Some prompts can't be judged by a real model from one message: they
+        # needed material that was never in the repo, or a whole back-and-forth.
+        # Their rubric says why, and a real run leaves them out of the score
+        # rather than counting "please send me the file" as a failure. The
+        # mock run still covers them.
+        skip_reason = prompt_data['rubric'].get('real_run_skip')
+        if skip_reason and isinstance(provider, AnthropicProvider):
+            print(f'Skipping {prompt_data["name"]} (real run): {skip_reason}')
+            skipped.append((prompt_data['name'], skip_reason))
             continue
 
         print(f'Running {prompt_data["name"]}... ', end='', flush=True)
@@ -376,7 +439,7 @@ def main():
 
     # Write top-level summary
     summary_path = prompts_dir / 'results-summary.md'
-    write_summary(all_results, summary_path)
+    write_summary(all_results, summary_path, skipped)
     print(f'\nSummary written to {summary_path}')
 
     # Optional fail-under threshold

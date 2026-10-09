@@ -184,7 +184,12 @@ python3 scripts/eval_runner.py --provider mock
 
 This validates every prompt against its rubric using saved sample outputs (called fixtures), so it runs for free with no API calls. See [`results-summary.md`](./results-summary.md) for the latest run.
 
-To run against the real API: set `ANTHROPIC_API_KEY` and pass `--provider anthropic`.
+To run against the real API: set `ANTHROPIC_API_KEY` and pass `--provider anthropic`. On GitHub, run the **Prompt Lint & Eval** workflow by hand and pick `anthropic`.
+
+Two things make a real run fair to prompts that were written inside a project:
+
+- **`context/` folder.** Many prompts say "read the gate in `/api/ai/chat`" or "here are two PDFs". Sent on their own, the model can only reply "please send me the file". Any files in a prompt's `context/` folder are sent ahead of the prompt. They are snapshots taken from git history at the commit *before* the change shipped, so the model sees the code as it was when the prompt was asked, bug and all.
+- **`real_run_skip` in the rubric.** A few prompts needed material that was never in the repo (a friend's message, an earlier chat, coursework templates, photographs of the chanting book). Their rubric says why, and a real run lists them separately instead of scoring "please send me the file" as a failure. The free mock run still covers them.
 
 ## Changelog
 
