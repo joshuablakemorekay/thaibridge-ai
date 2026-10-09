@@ -1169,9 +1169,12 @@
         updateLimitHint();
     }
 
-    // Focus input on load + apply freemium limits
+    // Focus input on load + apply freemium limits. preventScroll: a plain
+    // focus() scrolled the page down to the box, past the mode buttons and the
+    // approach picker, so a first visit opened on an empty chat with no
+    // choices in sight. The cursor is still in the box, ready to type.
     window.addEventListener('load', () => {
-        document.getElementById('user-input').focus();
+        document.getElementById('user-input').focus({ preventScroll: true });
         initAiLimits();
     });
 </script>
