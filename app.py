@@ -750,6 +750,10 @@ FREE_AI_ALLOWED_MODES = {'tutor', 'buddhist'}  # AI modes free & basic can use
 # we can keep our word. At the costed 0.285p a message it is 1.4p a day for
 # someone who exhausts it daily, which almost nobody will.
 FREE_DHAMMA_DAILY_LIMIT = 5
+# A Dhamma answer gets more room than a tutor reply. At 500 tokens, answers on
+# Haiku 5.5 were cut off mid-sentence about half the time, even when asked to
+# be brief. 800 tokens on Haiku 5.5 still costs less than 500 did on Haiku 4.5.
+DHAMMA_MAX_TOKENS = 800
 DHAMMA_AI_MODES = {'buddhist'}                 # modes that draw on that pool
 
 # Which session key each pool counts in, and which constant sets its size.
@@ -9054,7 +9058,7 @@ def ai_chat():
             mode=mode,
             session_id=session_id,
             user_context=user_context,
-            max_tokens=500,
+            max_tokens=DHAMMA_MAX_TOKENS if mode == 'buddhist' else 500,
             scenario=scenario,
             lens=lens
         )
@@ -9063,7 +9067,10 @@ def ai_chat():
         # along and nothing read them, so the spend was invisible.
         if isinstance(response, dict) and response.get('success'):
             tokens = response.get('tokens_used') or {}
-            log_ai_usage('chat', 'ok', mode=mode, model=getattr(ai_agent, 'model', None),
+            # The agent says which model answered: Buddhist mode can run on a
+            # different one, and the prices differ.
+            log_ai_usage('chat', 'ok', mode=mode,
+                         model=response.get('model') or getattr(ai_agent, 'model', None),
                          input_tokens=tokens.get('input', 0),
                          output_tokens=tokens.get('output', 0))
         else:

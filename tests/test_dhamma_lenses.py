@@ -111,3 +111,80 @@ def test_switching_approach_makes_the_tutor_forget_the_old_one():
     set_lens = src[src.index("function setLens"):]
     set_lens = set_lens[:set_lens.index("\n    }\n")]
     assert "/api/ai/clear" in set_lens
+
+
+# ── Buddhist mode on its own model ────────────────────────────────────────
+
+class _Block:
+    def __init__(self, type_, text=""):
+        self.type, self.text = type_, text
+
+
+class _Usage:
+    input_tokens, output_tokens = 5, 7
+
+
+class _FakeMessages:
+    def __init__(self):
+        self.request = None
+
+    def create(self, **kwargs):
+        self.request = kwargs
+        # A thinking model puts its thinking block first.
+        return type("R", (), {"content": [_Block("thinking"), _Block("text", "Mettā is "),
+                                          _Block("text", "goodwill.")],
+                              "usage": _Usage()})()
+
+
+def _agent_with(monkeypatch, dhamma_model):
+    monkeypatch.setenv("AI_MODEL", "claude-haiku-4-5-20251001")
+    if dhamma_model:
+        monkeypatch.setenv("DHAMMA_AI_MODEL", dhamma_model)
+    else:
+        monkeypatch.delenv("DHAMMA_AI_MODEL", raising=False)
+    a = ai_agent.ThaiLearningAI(api_key="test-key-not-used")
+    a.client = type("C", (), {"messages": _FakeMessages()})()
+    return a
+
+
+def test_buddhist_mode_uses_its_own_model_and_others_do_not(monkeypatch):
+    a = _agent_with(monkeypatch, "claude-haiku-5-5")
+    assert a.chat("s1", "What is mettā?", mode="buddhist")["model"] == "claude-haiku-5-5"
+    assert a.client.messages.request["thinking"] == {"type": "disabled"}
+    assert a.chat("s2", "hello", mode="tutor")["model"] == "claude-haiku-4-5-20251001"
+    assert "thinking" not in a.client.messages.request
+
+
+def test_unset_dhamma_model_falls_back_to_the_main_one(monkeypatch):
+    """Rolling back is deleting one setting on Render."""
+    a = _agent_with(monkeypatch, None)
+    assert a.model_for("buddhist") == "claude-haiku-4-5-20251001"
+
+
+def test_the_reply_skips_a_leading_thinking_block(monkeypatch):
+    a = _agent_with(monkeypatch, "claude-haiku-5-5")
+    assert a.chat("s3", "What is mettā?", mode="buddhist")["response"] == "Mettā is goodwill."
+
+
+@pytest.mark.parametrize("model, expected", [
+    ("claude-haiku-4-5-20251001", None),
+    ("claude-haiku-5-5", {"type": "disabled"}),
+    # Sonnet 5.5 rejects "disabled" with a 400.
+    ("claude-sonnet-5-5", {"type": "between_tools"}),
+])
+def test_thinking_is_switched_off_the_way_each_model_accepts(model, expected):
+    assert ai_agent.thinking_off(model) == expected
+
+
+def test_buddhist_mode_gets_room_to_finish_and_logs_the_right_model(monkeypatch):
+    fake = FakeAgent()
+    fake.chat = lambda **kw: (setattr(fake, "kwargs", kw) or
+                              {"success": True, "response": "ok", "model": "claude-haiku-5-5",
+                               "tokens_used": {"input": 1, "output": 1}})
+    logged = {}
+    monkeypatch.setattr(appmod, "ai_agent", fake)
+    monkeypatch.setattr(appmod, "log_ai_usage",
+                        lambda *a, **kw: logged.update(kw) if a[1] == "ok" else None)
+    app.test_client().post("/api/ai/chat", json={"message": "q", "mode": "buddhist"})
+    assert fake.kwargs["max_tokens"] == appmod.DHAMMA_MAX_TOKENS
+    assert logged["model"] == "claude-haiku-5-5"

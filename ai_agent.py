@@ -105,6 +105,9 @@ this is a language app, not a seminary.
 
 Always connect each concept to a phrase Thais actually use in daily life or at the temple,
 so the student gains communicative competence in Thai religious contexts.
+
+FINAL CHECK before you answer: every romanisation follows the Paiboon+ rules
+above. No "h" after p, t, k or ch — พระ is prá, พ่อ is pɔ̂ɔ, คุณ is kun.
 """,
     },
     'neutral': {
@@ -138,6 +141,31 @@ particular cultural identity or tradition.
 # as asked rather than adding a culture the student did not ask for.
 DEFAULT_DHAMMA_LENS = 'universal'
 
+# Every lens gets the same length rule. The 5.5 models write fuller answers
+# than the old cap allowed, and were cut off mid-sentence on most questions.
+# Asking for less got most of them under; app.py gives Buddhist mode a little
+# more room (DHAMMA_MAX_TOKENS) for the rest, since the model does not count
+# words exactly.
+DHAMMA_LENGTH = """
+LENGTH: keep every answer under about 180 words (fewer when it includes Thai
+script). Cover the heart of the question well rather than everything about
+it, and offer to go deeper on one part instead of continuing.
+"""
+
+def thinking_off(model: str) -> Optional[Dict]:
+    """The setting that stops a model thinking before it answers, or None.
+
+    The app's small reply budget (500 tokens) has to go on the answer itself.
+    Haiku 4.5 does not think unless asked, so it needs nothing. The 5.5 models
+    think by default and each has its own off switch: Sonnet 5.5 rejects
+    "disabled" and uses "between_tools" instead.
+    """
+    if model.startswith('claude-sonnet-5-5'):
+        return {'type': 'between_tools'}
+    if model.startswith('claude-haiku-5-5'):
+        return {'type': 'disabled'}
+    return None
+
 
 class ThaiLearningAI:
     """
@@ -163,6 +191,12 @@ class ThaiLearningAI:
         # the reply (a newer thinking-by-default model like Sonnet 5 would need
         # thinking disabled here first). Set AI_MODEL to override.
         self.model = os.environ.get("AI_MODEL", "claude-haiku-4-5-20251001")
+        # Buddhist mode can run on its own model. Haiku 4.5 got Dhamma terms
+        # wrong in a side-by-side test (mettā described as muditā, an invented
+        # five-step dependent origination) where Haiku 5.5 got all ten right at
+        # a tenth of the price. It is a setting, not code, so rolling back is
+        # one change on Render. Unset, it follows AI_MODEL.
+        self.dhamma_model = os.environ.get("DHAMMA_AI_MODEL") or self.model
         
         # Conversation history by session
         self.conversations: Dict[str, List[Dict]] = {}
@@ -333,7 +367,7 @@ social hierarchy to formality registers.
 Always leave the student with a phrase they can use immediately.
 """,
             
-            'buddhist': DHAMMA_LENSES[lens]['prompt'],
+            'buddhist': DHAMMA_LENSES[lens]['prompt'] + DHAMMA_LENGTH,
 
             'helper': f"""
 MODE: INTELLIGENT HINT SYSTEM
@@ -382,6 +416,10 @@ scene moving. Open the scene yourself with a natural first line in character.
 
         return base_prompt + mode_prompt + roleplay
     
+    def model_for(self, mode: str) -> str:
+        """The model a mode runs on: Buddhist mode may have its own."""
+        return self.dhamma_model if mode == 'buddhist' else self.model
+
     def chat(
         self,
         session_id: str,
@@ -418,6 +456,8 @@ scene moving. Open the scene yourself with a natural first line in character.
                 'name': 'Student'
             }
         
+        model = self.model_for(mode)
+
         # Get system prompt for this mode (with any active roleplay scenario
         # or Dhamma lens)
         system_prompt = self.get_system_prompt(mode, user_context, scenario, lens)
@@ -433,15 +473,18 @@ scene moving. Open the scene yourself with a natural first line in character.
         
         try:
             # Call Claude API
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=max_tokens,
-                system=system_prompt,
-                messages=conversation_history
-            )
-            
-            # Extract response text
-            assistant_message = response.content[0].text
+            request = dict(model=model, max_tokens=max_tokens,
+                           system=system_prompt, messages=conversation_history)
+            thinking = thinking_off(model)
+            if thinking:
+                request['thinking'] = thinking
+            response = self.client.messages.create(**request)
+
+            # Join the text blocks rather than taking content[0]: a model that
+            # can think puts a thinking block first, and content[0].text would
+            # come back empty or raise.
+            assistant_message = ''.join(
+                b.text for b in response.content if b.type == 'text')
             
             # Add assistant response to history
             self.conversations[session_id].append({
@@ -453,6 +496,7 @@ scene moving. Open the scene yourself with a natural first line in character.
                 'success': True,
                 'response': assistant_message,
                 'mode': mode,
+                'model': model,
                 'tokens_used': {
                     'input': response.usage.input_tokens,
                     'output': response.usage.output_tokens
