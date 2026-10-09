@@ -13,6 +13,10 @@
 >
 > *Part A is nine questions I am unsure about (about 10 minutes). Part B is every line: tick it if it is fine, or write the correction. Skip anything you are unsure of.*
 
+คำอ่านที่เขียนเป็นตัวอักษรโรมันในแอป เรียกว่า **ThaiBridge Spelling** (พัฒนาจากระบบ Paiboon+) ถ้าคำอ่านตรงไหนผิด ช่วยแก้ได้เลยครับ
+
+*The romanised pronunciation in the app is called ThaiBridge Spelling (based on Paiboon+). Please correct a reading too if it is wrong.*
+
 ---
 
 # ก. คำถามที่ผมไม่แน่ใจ
@@ -119,7 +123,7 @@ The deliberately wrong (funny) answers
 
 ### 1. A morning at Doi Suthep (Chiang Mai)
 
-| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |
+| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |
 |---|---|---|---|---|
 | ชื่อสถานที่ | วัดพระธาตุดอยสุเทพ | wát prá-tâat dɔɔi sù-têep | The temple of the relic on Suthep mountain | |
 | Driver | ไปไหนครับ | bpai nǎi kráp | Where are you going? | |
@@ -142,7 +146,7 @@ The deliberately wrong (funny) answers
 
 ### 2. White, blue and black in Chiang Rai (Chiang Rai)
 
-| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |
+| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |
 |---|---|---|---|---|
 | ชื่อสถานที่ | วัดร่องขุ่น | wát rɔ̂ɔŋ-kùn | Wat Rong Khun, the White Temple | |
 | Driver | ไปวัดร่องขุ่นไหมครับ | bpai wát rɔ̂ɔŋ-kùn mǎi kráp | Going to the White Temple? | |
@@ -163,7 +167,7 @@ The deliberately wrong (funny) answers
 
 ### 3. Bangkok by river (Bangkok)
 
-| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |
+| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |
 |---|---|---|---|---|
 | ชื่อสถานที่ | วัดโพธิ์ | wát poo | Wat Pho, home of the Reclining Buddha | |
 | Ticket seller | ไปไหนครับ | bpai nǎi kráp | Where are you going? | |
@@ -184,7 +188,7 @@ The deliberately wrong (funny) answers
 
 ### 4. Stone temples of Phimai (Nakhon Ratchasima (Korat))
 
-| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |
+| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |
 |---|---|---|---|---|
 | ชื่อสถานที่ | ปราสาทหินพิมาย | bprà-sàat hǐn pí-maai | Phimai, the stone sanctuary | |
 | Woman at the counter | ไปไหนคะ | bpai nǎi ká | Where are you going? | |
@@ -205,7 +209,7 @@ The deliberately wrong (funny) answers
 
 ### 5. An island weekend on Koh Chang (Trat)
 
-| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |
+| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |
 |---|---|---|---|---|
 | ชื่อสถานที่ | เกาะช้าง | gɔ̀ cháaŋ | Koh Chang, "Elephant Island" | |
 | Ticket seller | กี่ใบคะ | gìi bai ká | How many tickets? | |
@@ -225,7 +229,7 @@ The deliberately wrong (funny) answers
 
 ### 6. Krabi: cliffs and jungle pools (Krabi)
 
-| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |
+| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |
 |---|---|---|---|---|
 | ชื่อสถานที่ | ไร่เลย์ | râi-lee | Railay, the beach you can only reach by boat | |
 | Boatman | ไปไหนครับ | bpai nǎi kráp | Where are you going? | |
@@ -250,7 +254,7 @@ The deliberately wrong (funny) answers
 
 ### 7. River Kwai and Erawan Falls (Kanchanaburi)
 
-| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |
+| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |
 |---|---|---|---|---|
 | ชื่อสถานที่ | น้ำตกเอราวัณ | náam-dtòk ee-raa-wan | Erawan Falls, seven tiers of turquoise pools | |
 | Older man | มาจากไหนครับ | maa jàak nǎi kráp | Where are you from? | |

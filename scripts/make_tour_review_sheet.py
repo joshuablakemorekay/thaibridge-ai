@@ -110,6 +110,11 @@ HOW_TH = ('**ส่วน ก** มี 9 คำถามที่ผมไม่
           'ถ้าถูกแล้วทำเครื่องหมาย ✓ ถ้าผิดเขียนคำที่ถูกได้เลยครับ ข้อไหนไม่แน่ใจ ข้ามได้เลยนะครับ')
 HOW_EN = ('Part A is nine questions I am unsure about (about 10 minutes). Part B is every '
           'line: tick it if it is fine, or write the correction. Skip anything you are unsure of.')
+# The learner-facing name since 2026-10-09; the Paiboon+ credit stays.
+SPELLING_TH = ('คำอ่านที่เขียนเป็นตัวอักษรโรมันในแอป เรียกว่า **ThaiBridge Spelling** '
+               '(พัฒนาจากระบบ Paiboon+) ถ้าคำอ่านตรงไหนผิด ช่วยแก้ได้เลยครับ')
+SPELLING_EN = ('The romanised pronunciation in the app is called ThaiBridge Spelling '
+               '(based on Paiboon+). Please correct a reading too if it is wrong.')
 PARTICLE_TH = ('ประโยคของผู้เรียนเขียนไว้ 2 แบบ คือ **ผู้ชาย / ผู้หญิง** '
                '(ผู้หญิงใช้ "คะ" เวลาถาม และ "ค่ะ" เวลาบอก)')
 PARTICLE_EN = ('Learner lines are shown twice: as a man says it / as a woman says it '
@@ -119,7 +124,7 @@ PARTICLE_EN = ('Learner lines are shown twice: as a man says it / as a woman say
 def build_md():
     out = ['# ขอความช่วยเหลือตรวจภาษาไทยในหน้า Tour Guide ครับ',
            '## Tour Guide trips: Thai review · ThaiBridge AI · 2026-10-09', '',
-           INTRO_TH, '', '*' + INTRO_EN + '*', '', '> ' + HOW_TH, '>', '> *' + HOW_EN + '*', '',
+           INTRO_TH, '', '*' + INTRO_EN + '*', '', '> ' + HOW_TH, '>', '> *' + HOW_EN + '*', '', SPELLING_TH, '', '*' + SPELLING_EN + '*', '',
            '---', '', '# ก. คำถามที่ผมไม่แน่ใจ', '## A. Questions I am unsure about', '']
     for n, (thai, pb, en, q_th, q_en) in enumerate(QUESTIONS, 1):
         out += ['### {}. {}'.format(n, thai), '']
@@ -132,7 +137,7 @@ def build_md():
             PARTICLE_TH, '', '*' + PARTICLE_EN + '*', '']
     for n, trip in enumerate(tour_trips.TRIPS, 1):
         out += ['### {}. {} ({})'.format(n, trip['title'], trip['place']), '',
-                '| ใครพูด | ภาษาไทย | คำอ่าน | ความหมาย | ✓ / แก้เป็น |', '|---|---|---|---|---|']
+                '| ใครพูด | ภาษาไทย | ThaiBridge Spelling | ความหมาย | ✓ / แก้เป็น |', '|---|---|---|---|---|']
         for who, thai, pb, en in trip_rows(trip):
             out.append('| {} | {} | {} | {} | |'.format(who, thai, pb, en))
         out.append('')
@@ -158,7 +163,9 @@ def build_html():
         out.append('<p>{}</p>'.format(md_inline(para)))
     out += ['<p class="en">{}</p>'.format(e(INTRO_EN)),
             '<p class="time">{}</p>'.format(md_inline(HOW_TH)),
-            '<p class="en">{}</p>'.format(e(HOW_EN)), '</div>',
+            '<p class="en">{}</p>'.format(e(HOW_EN)),
+            '<p>{}</p>'.format(md_inline(SPELLING_TH)),
+            '<p class="en">{}</p>'.format(e(SPELLING_EN)), '</div>',
             '<h2 class="part">ก. คำถามที่ผมไม่แน่ใจ · A. Questions I am unsure about</h2>']
     for n, (thai, pb, en, q_th, q_en) in enumerate(QUESTIONS, 1):
         out += ['<div class="q">', '<h3>{}. <span class="thai">{}</span></h3>'.format(n, e(thai))]
@@ -170,7 +177,7 @@ def build_html():
     for n, trip in enumerate(tour_trips.TRIPS, 1):
         out += ['<h3 class="trip">{}. {} <span class="place">({})</span></h3>'.format(
                     n, e(trip['title']), e(trip['place'])),
-                '<table>', '<tr><th>ใครพูด</th><th>ภาษาไทย</th><th>คำอ่าน</th>'
+                '<table>', '<tr><th>ใครพูด</th><th>ภาษาไทย</th><th>ThaiBridge Spelling</th>'
                 '<th>ความหมาย</th><th class="mark">✓ / แก้เป็น</th></tr>']
         for who, thai, pb, en in trip_rows(trip):
             out.append('<tr><td class="who">{}</td><td class="thai">{}</td><td class="pb">{}</td>'
