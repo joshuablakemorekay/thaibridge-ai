@@ -3272,4 +3272,859 @@ SHORT = {
             'replaced by a different text.'
         ),
     },
+    'rabiap-suat-chet-tamnan-yang-yo': {
+        'background': (
+            'This is the shortest of the three running orders for the Seven Tamnan. '
+            'The opening is the same as the others; the suttas are cut further, '
+            'some starting at a different place.'
+        ),
+        'meaning': (
+            'The discourse on loving-kindness, for example, starts more than '
+            'halfway through, at extending loving-kindness to the whole world, '
+            'keeping the best-known part that states the practice. Three set '
+            'lengths mean a ceremony can be shortened properly rather than stopped '
+            'at an improvised point.'
+        ),
+    },
+    'rabiap-suat-thawai-phon-phra-kon-chan': {
+        'background': (
+            'This is the briefest and most used running order in the book, the '
+            'blessing chanted before a meal. It begins exactly where the giving of '
+            'the precepts ends.'
+        ),
+        'meaning': (
+            'Four fixed items: the homage three times, the qualities of the Three '
+            'Jewels, the eight verses of victory, and the victory protection '
+            'verses, running straight into the closing blessing. Unlike the '
+            'blessing after the meal, nothing here varies with the occasion.'
+        ),
+    },
+    'rabiap-suat-mon-nai-ngan-phithi-awamongkhon': {
+        'background': (
+            "Avamaṅgala, 'the inauspicious', is the tradition's word for funerals "
+            'and mourning. This page sets out what is chanted at each stage of '
+            'mourning, measured in named intervals.'
+        ),
+        'meaning': (
+            'The seventh day has the discourse on not-self; the second and third '
+            'weeks, the discourse on the fixed order of things; the fiftieth day, '
+            'the fire sermon; the hundredth, the foundations of mindfulness. None '
+            'was chosen to console. The page also explains where to pause in each, '
+            'mindful of how long a room can sit.'
+        ),
+    },
+    'athibai-rabiap-suat-mon-phiset': {
+        'background': (
+            'This page explains why the special chanting procedures exist, the '
+            'nearest thing the book has to a preface for its ceremonial section. It '
+            'also explains the lustral water and sacred thread used at most '
+            'auspicious occasions.'
+        ),
+        'meaning': (
+            'The aim is twofold: blessing for the host, and orderly conduct by the '
+            'monks that fits the Dhamma and Discipline. When lustral water is made, '
+            'certain verses must be chanted; if the sacred thread is used, the last '
+            'monk should be ready to wind it up. The instructions are written by '
+            'people who have watched ceremonies go slightly wrong.'
+        ),
+    },
+    'rabiap-suat-mon-noppakhro': {
+        'background': (
+            'Navagraha means the nine planets of Indian astrology. This is the one '
+            'order of service arranged around them: nine monks, one per planet, '
+            'with protective chants assigned in sequence.'
+        ),
+        'meaning': (
+            'The page openly says the astrologer or a learned lay person calls for '
+            'it, and the Sangha supplies the remedy. The texts are entirely the '
+            'ordinary collection, rearranged. The astrology decides the '
+            'arrangement; the tradition decides the words.'
+        ),
+    },
+    'rabiap-thawai-phon-phra': {
+        'background': (
+            'This is the companion to the procedure for the blessing after the '
+            'meal: it covers what is chanted before. Each chant is identified by '
+            'its first and last words.'
+        ),
+        'meaning': (
+            'The order is fixed and short: homage, the qualities of the Three '
+            'Jewels, the verses of victory and the victory protection verses. It '
+            'also says what the host does: light the candles and incense before the '
+            'chanting begins. It turns a collection of texts into an occasion.'
+        ),
+    },
+    'rabiap-anumothana': {
+        'background': (
+            'This is a page of plain Thai instructions explaining which chants are '
+            'used in the blessing after a meal, and in what order.'
+        ),
+        'meaning': (
+            'The monks raise their fans together, the presiding elder begins, and '
+            'all join the blessing. In the middle, verses suited to the occasion '
+            'are added: blessings for a happy event, or the verses on the departed '
+            'for a funeral. The same twenty minutes can serve a housewarming or a '
+            'funeral.'
+        ),
+    },
+    'anumothana-withi': {
+        'background': (
+            'These are the verses everyone in a Thai temple knows by their first '
+            "words, 'yathā' and 'sabbītiyo'. The book prints them as the standard "
+            'form, with additions for particular occasions on nearby pages.'
+        ),
+        'meaning': (
+            'As rivers fill the ocean, so what is given here reaches the departed, '
+            'with nothing lost. For the living: may your wishes swiftly come true, '
+            'full as the moon. It ends asking that misfortune, illness and danger '
+            "pass them by, covering the dead, the donors' hopes and their safety."
+        ),
+    },
+    'mongkhon-chakkrawan-noi-yo': {
+        'background': (
+            'This is the shorter universal blessing compressed into a single '
+            'passage, marked as abbreviated. The procedure page lets the leader '
+            'choose between the full and short forms.'
+        ),
+        'meaning': (
+            'By the power and majesty of the Triple Gem, may suffering, disease, '
+            'fear, enmity, sorrow and every danger be destroyed. What remains is '
+            'the naming of what people are actually afraid of, which the tradition '
+            'treats as the essential part of a blessing.'
+        ),
+    },
+    'akkappasada-suttagatha': {
+        'background': (
+            'These are the closing verses of the discourse on faith in the '
+            'foremost, printed in full elsewhere. They are chanted after a gift, so '
+            'that donors have something true to take away.'
+        ),
+        'meaning': (
+            'The Buddha, the Dhamma and the Sangha are each the highest, and '
+            'whoever gives to the highest gains the highest merit: the best yields '
+            'the best. The rewards are listed plainly: long life, beauty, fame, '
+            'happiness and strength.'
+        ),
+    },
+    'tirokuddakanda-pacchimaphak': {
+        'background': (
+            'The Tirokuḍḍa discourse concerns the departed who return to their old '
+            'homes. This is its closing part, chanted at funerals, the counterpart '
+            'of the blessing verses used at happy occasions.'
+        ),
+        'meaning': (
+            "It begins with the mourner's own thought: he gave to me, he was my "
+            'friend and kin. Weeping and lamenting do not help the dead, but a gift '
+            'well placed in the Sangha benefits them at once and for long. It ends '
+            'telling the donors they have strengthened the monks and gained no '
+            'small merit.'
+        ),
+    },
+    'bhojanadanumothana-gatha': {
+        'background': (
+            'This is the shortest and one of the most used blessings, because a '
+            'meal is the commonest gift a monastery receives.'
+        ),
+        'meaning': (
+            'It says that giving food gives five things: life, strength, beauty, '
+            'happiness and quickness of mind, since a hungry person cannot think '
+            'clearly. The giver receives the same five back, long-lived and '
+            'renowned wherever reborn.'
+        ),
+    },
+    'atanatiya-parittam-yo': {
+        'background': (
+            'This is the last section of the Āṭānāṭiya protection printed on its '
+            'own and marked as abbreviated, the form in which it is most often '
+            'heard.'
+        ),
+        'meaning': (
+            'What remains is the blessing: free of illness and torment, beyond all '
+            'enmity, may you be at peace, happy and long-lived. It keeps the '
+            'closing proverb: for one who respects and honours elders, long life, '
+            'beauty, happiness and strength increase.'
+        ),
+    },
+    'rabiap-bangsukun': {
+        'background': (
+            'Paṃsukūla, the rag robe, is the cloth laid on a coffin and taken up by '
+            'the monks. This is the procedure for that rite.'
+        ),
+        'meaning': (
+            'It sets out the chants by their first words: the homage, the '
+            'Dhammasaṅgaṇī mātikā and the passage on the grounds of insight. It '
+            'gives the actions equal weight: fans raised together, then the cloth '
+            'taken in the right hand. It supplies the choreography of a funeral as '
+            'carefully as the words.'
+        ),
+    },
+    'katha-sarathaphrot': {
+        'background': (
+            'This chant names its own setting: a response to the sermon at a royal '
+            'cremation. Śrāddha is a rite for the dead, and this is its chanted '
+            'part.'
+        ),
+        'meaning': (
+            "It begins with the Buddha's last words, then the verses on the three "
+            'characteristics: seeing that all formations are impermanent, one turns '
+            'away from suffering; this is the path to purity. It ends urging the '
+            'living to practise even these few lines, so that life is not wasted.'
+        ),
+    },
+    'kham-athibai-prakop': {
+        'background': (
+            'Five paragraphs of plain Thai with no Pali: the book speaking to '
+            'whoever has to run a funeral, about what tends to go wrong.'
+        ),
+        'meaning': (
+            'It says which passages may be left out to shorten the rite, that a '
+            'sacred thread can replace a missing connecting cloth, how to set up '
+            'the fan, and that the palm must face upward when taking the cloth. '
+            'Small details, written down because they have gone wrong before.'
+        ),
+    },
+    'withi-banphacha-upasombot-baep-ukasa': {
+        'background': (
+            'This is the longer of two methods of going forth and ordination, named '
+            "after its opening word, ukāsa, 'with your leave'. Where the other form "
+            'opens with refuge, this one opens with an apology.'
+        ),
+        'meaning': (
+            'The candidate first pays homage and asks forgiveness for all faults, '
+            'shares his merit, and only then, kneeling with palms joined, asks '
+            'three times for the going forth. The book prints both methods without '
+            'preferring either.'
+        ),
+    },
+    'withi-banphacha-upasombot-baep-esaham': {
+        'background': (
+            'This is not a chant but a method: it takes a candidate from entering '
+            'the assembly to full ordination, with the Pali to say and Thai '
+            "instructions between. It is named after its opening words, 'esāhaṃ'."
+        ),
+        'meaning': (
+            'It begins with the candidate bringing his set of robes into the '
+            'assembly and declaring refuge before asking for the going forth. It '
+            'then runs through the whole sequence: robes, precepts, dependence, '
+            'bowl, questioning and the formal act. This is the version a preceptor '
+            'would work from.'
+        ),
+    },
+    'kham-kho-banphacha-nak-khu': {
+        'background': (
+            'This page gives only what changes when two candidates are ordained '
+            'together, and leaves everything else to the two methods already '
+            'printed.'
+        ),
+        'meaning': (
+            "The words shift into the plural, 'we', with the substance unchanged: "
+            'refuge in the Buddha, and a request, holding the ochre cloths, to be '
+            'given the going forth out of compassion. Said three times, by two '
+            'voices together.'
+        ),
+    },
+    'kham-kho-nissai-nak-khu': {
+        'background': (
+            'Nissaya is dependence: a newly ordained monk lives under a senior '
+            "monk's guidance rather than on his own. It is requested before "
+            'ordination, here by two candidates together.'
+        ),
+        'meaning': (
+            'The request is four Pali words, said three times: venerable sir, we '
+            'ask for dependence. Asking to be placed under someone is not easy to '
+            'say, and saying it first means nobody is ordained into an independence '
+            'they have not yet earned.'
+        ),
+    },
+    'kham-kho-upasombot-phrom-kan': {
+        'background': (
+            'This is the request the whole ordination ceremony answers, and the '
+            'only moment the candidates speak directly to the whole Sangha.'
+        ),
+        'meaning': (
+            'They ask for ordination: may the Sangha raise us up, out of '
+            'compassion. They ask not because they are ready or have asked '
+            'correctly, but on the ground of compassion. Said three times, by '
+            'people already prepared, in the plainest terms.'
+        ),
+    },
+    'kham-bok-anusat': {
+        'background': (
+            'Anusāsana is the admonition given the moment someone becomes a monk: '
+            'the four supports of the life and the four things never to be done. '
+            'These are the terms of the life, given to someone who has been a monk '
+            'for about a minute.'
+        ),
+        'meaning': (
+            'The four supports state the minimum first, almsfood, rag robes, the '
+            'foot of a tree and simple medicine, then the comforts allowed. The '
+            'four forbidden acts each come with an image of something that cannot '
+            'be undone, like a withered leaf that cannot turn green again. It ends '
+            'with virtue, concentration and wisdom, and an instruction to strive '
+            'with diligence.'
+        ),
+    },
+    'baep-suat-kammawaca-nai-upasombotkam-samrap-nak-diao': {
+        'background': (
+            'This is a rare stage direction, printed in Thai, for the formal act of '
+            'ordinating one candidate. Two monks chant the act, one to put the '
+            'motion and one to make the announcements.'
+        ),
+        'meaning': (
+            'With the candidate waiting outside, the two monks kneel with palms '
+            'joined and say the homage three times; only then does the Pali begin. '
+            'It tells the reader what the text alone would not: the candidate '
+            'starts outside and must be sent for.'
+        ),
+    },
+    'kham-sommot-ton-phuea-son-som': {
+        'background': (
+            'This page opens by saying the names in what follows are examples: the '
+            'candidate is called Obhāsa and the preceptor Sobhaṇa. The whole '
+            'ordination section uses such sample names.'
+        ),
+        'meaning': (
+            "In the usual form, 'let the Sangha hear me', a monk asks permission to "
+            'instruct the candidate, naming him and his preceptor. Every act '
+            'restates that link. Sample names let a monk see what a correct motion '
+            'sounds like in full, rather than a form full of blanks.'
+        ),
+    },
+    'kham-son-som': {
+        'background': (
+            'This rehearsal is held apart from the formal questioning but uses the '
+            'same words, so the candidate knows what he will be asked. It includes '
+            'the answers.'
+        ),
+        'meaning': (
+            'It opens with the same warning as the real questioning: if something '
+            'is present, say so; if absent, say so. The questions follow, with '
+            'answers. It ends with the candidate saying aloud whose responsibility '
+            'he is about to become: my preceptor is the venerable Sobhaṇa.'
+        ),
+    },
+    'kham-riak-upasampathapekkha-khao-ma': {
+        'background': (
+            'This is the call to bring a single candidate in, put as a motion to '
+            'the assembly. The candidate has waited outside while the assembly '
+            'heard he was ready.'
+        ),
+        'meaning': (
+            'The only reason given is that he has been instructed; nothing is '
+            'claimed about his worth. After a page of formal Pali, the instruction '
+            'to the nervous person outside is two words: come forward.'
+        ),
+    },
+    'kham-phra-upatchaiya-klao-phadiang-song': {
+        'background': (
+            'Here the preceptor speaks for a single candidate and takes '
+            'responsibility for him, the beginning of a lasting obligation.'
+        ),
+        'meaning': (
+            "He presents the candidate as 'my candidate', seeking ordination from "
+            "the Sangha; from now on the candidate's conduct reflects on him. The "
+            'assembly answers with one word together: agreement that the matter may '
+            'go forward, not yet consent to the ordination.'
+        ),
+    },
+    'kham-sommot-ton-phuea-tham-antarayikatham': {
+        'background': (
+            'The book prints the ordination forms for one candidate and for two, '
+            'because the Pali endings change and a monk cannot invent grammar '
+            'mid-ceremony. This is the single-candidate motion to ask about '
+            'obstacles.'
+        ),
+        'meaning': (
+            "'Let the Sangha hear me': if the Sangha is ready, a monk will question "
+            'the candidate on the obstructing conditions. Printing the form twice '
+            'only to change a few endings shows the book was made to lie open on '
+            'the table during the ceremony.'
+        ),
+    },
+    'kham-tham-antarayikatham': {
+        'background': (
+            'These questions establish whether anything prevents a valid '
+            'ordination, such as certain illnesses or obligations. The candidate is '
+            'asked in front of the assembly, by his ordination name.'
+        ),
+        'meaning': (
+            'It opens not with a question but a statement: this is the time for '
+            'truth, the time for what is so. What is present, say it is present; '
+            'what is absent, say it is absent. Setting the warning first makes the '
+            'answers count.'
+        ),
+    },
+    'kammawaca-upasombot': {
+        'background': (
+            'This is the formal act of ordination for a single candidate. It is '
+            'almost all repetition: the motion put once, then announced three '
+            'times, giving the assembly three chances to object.'
+        ),
+        'meaning': (
+            'The motion names the candidate, the preceptor, and confirms the bowl '
+            'and robes. Each announcement ends: whoever agrees, be silent; whoever '
+            'does not, speak. Nothing is decided by a show of hands. The person '
+            "becomes a monk when it is stated for the record that the Sangha's "
+            'silence means consent.'
+        ),
+    },
+    'kham-suat-sommot-lae-kham-son-som': {
+        'background': (
+            'Two acts run together, for two candidates: the assembly appoints an '
+            'instructor, and the rehearsal of the questioning follows straight on.'
+        ),
+        'meaning': (
+            'Permission is asked even to instruct. The rehearsal opens with the '
+            'same warning as the real questioning: this is the time for truth. '
+            'Candidates hear it twice, so they are not caught out before the '
+            'assembly: the tradition would rather they answered well.'
+        ),
+    },
+    'kham-kho-riak-upasampathapekkha-khao-ma': {
+        'background': (
+            "Ordination is a sequence of formal acts, each opening 'let the Sangha "
+            "hear me'. This is the first: asking permission to call in two "
+            'candidates waiting outside.'
+        ),
+        'meaning': (
+            'Permission is asked, with the reason that the candidates have been '
+            'instructed, so nobody comes before the assembly unprepared. Sample '
+            'names are used throughout. It ends plainly, speaking outward to those '
+            'waiting: come forward.'
+        ),
+    },
+    'kham-sommot-ton-lae-kham-tham-antarayikatham': {
+        'background': (
+            'The obstructing conditions are what would make an ordination invalid. '
+            'No one questions candidates on their own authority; a monk must first '
+            'be appointed by a motion, and this is that motion.'
+        ),
+        'meaning': (
+            "'Let the Sangha hear me': if ready, I will question them on the "
+            'obstructing conditions. Candidates are questioned one at a time, '
+            'because what is being established is individual. The whole procedure '
+            'is built from asking permission, step by step.'
+        ),
+    },
+    'kham-phra-upatchai-klao-phadiang-song': {
+        'background': (
+            'Here the preceptor formally tells the Sangha who the candidates are '
+            'and takes responsibility for them. It is a statement rather than a '
+            'motion.'
+        ),
+        'meaning': (
+            'He names the two as his candidates, seeking ordination, a lasting '
+            'responsibility. He addresses the assembly as both friends and '
+            'venerable sirs, since it holds monks junior and senior to him. '
+            "Everyone answers 'sādhu': agreement to proceed, not yet consent to the "
+            'ordination.'
+        ),
+    },
+    'kham-suat-kammawaca-upasombot': {
+        'background': (
+            'This is the longest procedural text in the book and the formal act by '
+            'which a person becomes a monk, here for two candidates. The same '
+            'substance is stated four times: once as a motion, three times as an '
+            'announcement.'
+        ),
+        'meaning': (
+            "The motion names the candidates and preceptor and calls itself 'the "
+            "motion'. Three announcements follow, each inviting anyone who objects "
+            'to speak. It closes: the Sangha agrees, therefore it is silent; thus '
+            'do I hold it. A life changes because, asked four times, nobody spoke.'
+        ),
+    },
+    'kham-kho-buat-chi': {
+        'background': (
+            'This is the request to go forth as a mae chi, a white-robed renunciant '
+            'woman; Thailand has no bhikkhunī ordination in this lineage, and this '
+            'is the form used instead.'
+        ),
+        'meaning': (
+            'It is a declaration of refuge in the Buddha, though long passed away, '
+            'the Dhamma and the Sangha of monks, made before the Sangha. It uses '
+            "the same words as a lay follower's declaration; what differs is the "
+            'precepts taken afterwards and the life lived by them.'
+        ),
+    },
+    'kham-aradhana-sin-8': {
+        'background': (
+            'This is the request for the eight precepts at any time, not tied to an '
+            'observance day, used by anyone, including those going forth as mae '
+            'chi.'
+        ),
+        'meaning': (
+            'It asks for the eight precepts together with the Three Refuges, three '
+            "times, as 'we'. A bracketed note explains how to change two words if "
+            'asking alone, so one page works for a group or a single person.'
+        ),
+    },
+    'kham-namatsakan-phra-phutthachao': {
+        'background': (
+            'The homage and refuges, printed here in the form used when they are '
+            'formally given rather than chanted, among the ordination material.'
+        ),
+        'meaning': (
+            'The homage is said three times, then the three refuges three times '
+            'over. The monk then says the going for refuge is complete, and the '
+            'answer comes: yes, venerable sir. That confirmation makes refuge a '
+            'fact about the person, not just a recollection.'
+        ),
+    },
+    'kham-samathan-sin': {
+        'background': (
+            'This is the undertaking of the eight precepts, the second half of the '
+            'exchange begun on the previous page. A Thai explanation follows each '
+            'Pali line, so the speaker understands what they say.'
+        ),
+        'meaning': (
+            "Each line ends 'I undertake the training rule', in the first person: "
+            'the monk gives the words, but nobody is placed under anything. The '
+            'Thai spells out what each rule means. The last line takes all eight '
+            'together as one undertaking, three times.'
+        ),
+    },
+    'withi-sadaeng-abat': {
+        'background': (
+            'Most monastic offences are cleared not by penance but by telling them '
+            'to another monk. This page prints the whole exchange, marking which '
+            'monk speaks, in both directions of seniority.'
+        ),
+        'meaning': (
+            'The confession is general: I have fallen into many offences, and '
+            'confess them before you. The other asks: do you see them? Yes, I see '
+            'them. The speaker resolves not to act, speak or think so again; the '
+            'last can never be checked by a witness, and is included anyway.'
+        ),
+    },
+    'kham-phinthu-pha': {
+        'background': (
+            'A new robe cannot simply be worn: a small dot must first be marked in '
+            'a corner, and this sentence is said as the mark is made. A marked robe '
+            'is identifiable, harder to be vain about and easier to return if lost.'
+        ),
+        'meaning': (
+            'I make this mark of allowability. The mark does not bless the cloth; '
+            'it makes it permitted for use. It begins a run of short formulas about '
+            'robes that show how much of monastic life concerns handling a few '
+            'pieces of cloth correctly.'
+        ),
+    },
+    'kham-athitthan': {
+        'background': (
+            'Adhiṭṭhāna is determining: formally deciding what a thing is. A monk '
+            'may keep one bowl and three robes, and each item must be assigned to '
+            'one of these before use. One line is printed for each, plus the '
+            'rains-bathing cloth.'
+        ),
+        'meaning': (
+            'The lines differ only in the object: I determine this bowl, this outer '
+            'robe, and so on, said over the thing in hand. Determining fills a '
+            'slot, so any further cloth must be dealt with another way, which is '
+            'what the following formulas are for.'
+        ),
+    },
+    'kham-sia-sala': {
+        'background': (
+            'A determined robe must be with its owner at dawn. If not, it must be '
+            'forfeited before the offence can be cleared. The book explains the '
+            'rule in Thai, then gives the Pali.'
+        ),
+        'meaning': (
+            'The speaker names the fault, that the robe was apart from him '
+            "overnight without the monks' consent, then forfeits it to another "
+            'monk. Separation agreed by the community is no offence. A note gives '
+            'the wording for two or three robes at once.'
+        ),
+    },
+    'kham-khuen': {
+        'background': (
+            'The shortest formula in this run, completing the previous one: a '
+            'forfeited robe is handed over and then straight back.'
+        ),
+        'meaning': (
+            'I give this robe to the venerable one. The exchange leaves both monks '
+            'where they started: no property changes hands, but the fault is '
+            'acknowledged with the robe in hand, so it cannot be done vaguely.'
+        ),
+    },
+    'kham-wikap': {
+        'background': (
+            'Vikappa is shared ownership: an extra robe is put into joint names, so '
+            "it is no longer simply one monk's surplus. It deals with a robe that "
+            'would otherwise go wrong.'
+        ),
+        'meaning': (
+            'I assign this robe to you in shared ownership: one sentence, and the '
+            "cloth belongs to both. Because the other monk's claim is real, only he "
+            'can release it, using the formula on the same page.'
+        ),
+    },
+    'kham-thon': {
+        'background': (
+            'This undoes shared ownership. Since the claim is real, the person '
+            'holding it must release it, in words. It is printed in two forms, for '
+            'speaking to a junior or a senior monk.'
+        ),
+        'meaning': (
+            'This robe is my property; use it, give it away, or do with it as you '
+            'see fit. Asserting the claim first makes giving it up meaningful. '
+            'Printing both forms means neither monk has to work out the grammar of '
+            'seniority in the moment.'
+        ),
+    },
+    'kham-athitthan-khao-phansa': {
+        'background': (
+            'This one line, said three times, begins the three-month rains '
+            "residence, the most fixed period of the monastic year. A monk's "
+            'seniority is counted in rains.'
+        ),
+        'meaning': (
+            'In this monastery, for these three months, I enter upon the rains. It '
+            'fixes the place and the term and takes effect as it is said. The '
+            'commitment gives a monk an address for three months, and the next '
+            'formulas cover brief absences and the ending.'
+        ),
+    },
+    'kham-pawarana-ok-phansa': {
+        'background': (
+            'Pavāraṇā is an invitation, and what is invited is criticism. After '
+            'three months living closely together, each monk asks to be told what '
+            'the others noticed, in place of the usual recitation of the rules.'
+        ),
+        'meaning': (
+            'Each monk invites correction for anything seen, heard or suspected, '
+            'the last opening the door widest. He asks to be spoken to out of '
+            'compassion: being told is a kindness. Said three times by every monk '
+            'in turn; the words are short because the difficulty lies elsewhere.'
+        ),
+    },
+    'kham-sattaha': {
+        'background': (
+            'Sattāha means seven days. This allowance lets a monk leave the rains '
+            'residence briefly, completing the set with entering and ending the '
+            'rains.'
+        ),
+        'meaning': (
+            'I have business to do within seven days, so I must go, and I will '
+            'return within seven days. The leaving is stated as a necessity, and '
+            'the return as a fact: the residence continues, with a gap of known '
+            'length.'
+        ),
+    },
+    'kham-anumothana-kathin-303': {
+        'background': (
+            'This sentence is printed twice: here among the short formulas of the '
+            'monastic year, and later with the kathina ceremony itself. This '
+            'printing gives only the reply most monks will say.'
+        ),
+        'meaning': (
+            "The Sangha's kathina has been spread, in accordance with the Dhamma; "
+            'we rejoice in it. Two statements of fact, that it happened and '
+            'happened correctly, then one act of rejoicing. Here it serves as a '
+            'sentence to have ready at the right moment of the year.'
+        ),
+    },
+    'kham-la-sikkha': {
+        'background': (
+            'These two clauses end a monastic life. Disrobing is no disgrace in '
+            'this tradition and needs no permission, only to be said clearly to '
+            'someone who understands.'
+        ),
+        'meaning': (
+            'I renounce the training: not the Buddha, the Dhamma or the Sangha, '
+            'only the training. Remember me as a householder: a change of status, '
+            'not a request for forgiveness. Nothing is said about failure, and the '
+            'person may ordain again later.'
+        ),
+    },
+    'kham-sadaeng-ton-pen-ubasok': {
+        'background': (
+            'Upāsaka is a male lay follower, and this sentence makes someone one: '
+            'short, said once, and enough. It follows the words for leaving the '
+            'training; the two are opposite ends of the same doorway.'
+        ),
+        'meaning': (
+            'It declares refuge in the Buddha, though he passed away long ago, the '
+            'Dhamma and the Sangha of monks. The follower joins a teaching and a '
+            'community whose founder is gone. Said once before witnesses, it is the '
+            'only formality a lay follower needs for life.'
+        ),
+    },
+    'kitchawat-10-yang': {
+        'background': (
+            'These are the routine duties of monastic life, set out as a plain Thai '
+            'list with no Pali: closer to a checklist than a liturgy.'
+        ),
+        'meaning': (
+            'The ten mix the great and the small: attending the Uposatha and '
+            'almsround alongside sweeping the courtyard, caring for robes, shaving '
+            'and cutting nails. Two concern being answerable to others, probation '
+            'and studying under a teacher. A monk is told to learn all ten by '
+            'heart.'
+        ),
+    },
+    'kham-apalok-kathin-baep-2-rup': {
+        'background': (
+            'This is the kathina announcement shortened for a monastery with only '
+            'two monks, keeping only what must be said.'
+        ),
+        'meaning': (
+            'The first monk says whose gift it is and that the cloth is pure, as if '
+            'it had drifted down from the sky, and asks the Sangha to agree whom to '
+            "give it to; no 'sādhu' is needed. The second names his choice and why: "
+            'someone with the mindfulness and understanding to receive it.'
+        ),
+    },
+    'kham-apalok-kathin-baep-4-rup': {
+        'background': (
+            'Apalokana is an announcement to the assembly before a formal act, so '
+            'everyone knows what is being decided and why. It is in Thai rather '
+            'than Pali, for understanding. This fuller form is divided among four '
+            'monks.'
+        ),
+        'meaning': (
+            'The cloth is declared pure, as if it had drifted from the sky into the '
+            'Sangha, belonging to no one in particular, and the five benefits are '
+            'listed. Because the Buddha ruled that the kathina must be spread by '
+            'one person, a gift to all must go to one, chosen in a way nobody can '
+            'later object to.'
+        ),
+    },
+    'baep-kammavaca-suat-hai-pha-kathin': {
+        'background': (
+            'This is the formal act of the Sangha that assigns the yearly kathina '
+            'cloth, which donors cannot give to an individual directly. It is '
+            'procedure, not devotional writing.'
+        ),
+        'meaning': (
+            'The motion is put in fixed form: let the Sangha hear me; this kathina '
+            'cloth has come to the Sangha. The decision is taken by silence, '
+            'meaning no objection, and one monk records it: thus do I hold it. It '
+            'is probably the oldest meeting procedure still in use that most people '
+            'will ever hear.'
+        ),
+    },
+    'kham-athitthan-pha-kathin': {
+        'background': (
+            "After the Sangha's decision, the receiving monk determines the cloth "
+            'as one of his three robes. One formula is printed for each robe, each '
+            'said three times.'
+        ),
+        'meaning': (
+            'With this outer robe, or upper or inner robe, I spread the kathina. '
+            'The phrase keeps the old image of the frame cloth was stretched on to '
+            'be sewn. It completes a sequence from the donors, to the Sangha, to '
+            'one monk and one piece of cloth.'
+        ),
+    },
+    'kham-anumothana-kathin': {
+        'background': (
+            'These two lines are a call and response: the monk who received the '
+            'cloth speaks first, then everyone else. Anumodanā is rejoicing in '
+            "another's good deed, sharing in its good."
+        ),
+        'meaning': (
+            "The two halves are the same except for whom they address and 'rejoice' "
+            "becoming 'we rejoice'. Both confirm the kathina was spread in "
+            'accordance with the Dhamma, since a wrongly spread kathina brings none '
+            'of its benefits.'
+        ),
+    },
+    'phragathachinbanchorn': {
+        'background': (
+            'Two chants under this name are printed together in roman script. This '
+            'shorter one opens the longer verses that follow, and its tone is '
+            'unlike the protective chants around it.'
+        ),
+        'meaning': (
+            'It opens frankly: whoever wants a son gains a son; whoever wants '
+            'wealth gains wealth. The Pali of its second line is itself unclear. It '
+            'then runs names and epithets together and closes with homage to the '
+            'Buddha, typical of a chant used as a formula.'
+        ),
+    },
+    'gathajinabanjara': {
+        'background': (
+            "Jinapañjara is the Victor's cage, a structure built of holy beings "
+            'with the reciter inside. Probably the best known text in this book '
+            'outside the daily services, it is printed in roman script in the '
+            'appendix.'
+        ),
+        'meaning': (
+            'The Buddhas who conquered Māra arrive, the twenty-eight seated on the '
+            "reciter's head. The Dhamma and named disciples are then placed on the "
+            'eyes, shoulders, chest and limbs, a protector at each point of the '
+            'body. It ends in the present tense: guarded by the true Dhamma, I live '
+            "in the Victor's cage."
+        ),
+    },
+    'yod-phrakantraipidok': {
+        'background': (
+            "This is the roman-script printing of 'The Peak of the Tipiṭaka', in "
+            'the appendix. Its title claims the summit of the whole canon, and it '
+            'works by compression.'
+        ),
+        'meaning': (
+            "It takes the familiar recollections apart, giving each of the Buddha's "
+            'epithets its own line and its own act of refuge. It ends with heart '
+            'syllables set beside suffering, impermanence and not-self, from a Thai '
+            'esoteric tradition; the book prints it without comment.'
+        ),
+    },
+    'vipassit': {
+        'background': (
+            'One verse of nine words, the shortest chant in the book, printed in '
+            'the roman-script appendix under the title VIPASSIT.'
+        ),
+        'meaning': (
+            'May all suffering, all fear and all illness perish: the doctrinal, the '
+            'emotional and the bodily, the three things the whole protective '
+            'collection works on. It is what all the protective chanting comes to '
+            'once the stories and names are stripped away.'
+        ),
+    },
+    'mahasamayasutta-roman': {
+        'background': (
+            'This is the roman-script printing of the Discourse on the Great '
+            'Assembly in the appendix, and the longest chant in the book. It is a '
+            'catalogue of deities, named and placed one after another.'
+        ),
+        'meaning': (
+            'With the Buddha and five hundred arahants in the Great Wood at '
+            'Kapilavatthu, deities gather from ten world-systems. The long naming '
+            "builds a sense of scale that only chanting can give. When Māra's army "
+            'comes, it finds people free of lust and fear, and not a hair is '
+            'stirred.'
+        ),
+    },
+    'khemakhema-saranadipika': {
+        'background': (
+            "In the Buddha's time many believed mountains, forests, sacred trees "
+            'and shrines could protect them. The Buddha taught that such places may '
+            'comfort, but cannot bring lasting freedom from suffering.'
+        ),
+        'meaning': (
+            'The verses contrast these refuges with the Triple Gem. True refuge is '
+            'found by understanding the four noble truths and following the '
+            'eightfold path. They are chanted to renew confidence that lasting '
+            'safety comes from wisdom, conduct and mental cultivation, not from '
+            'places or objects.'
+        ),
+    },
+    'dhatupatikula-paccavekkhana': {
+        'background': (
+            'Monastic training requires the four requisites to be used with '
+            'reflection rather than appetite. This reflection analyses each '
+            'requisite into elements and then turns the same analysis on the person '
+            'using it. The same paragraph is repeated four times, once per '
+            'requisite.'
+        ),
+        'meaning': (
+            'The robe is merely elements arising from conditions, and so is its '
+            'user: not a being, not a soul, empty. The requisites are not repulsive '
+            'in themselves; contact with this decaying body makes them so. The '
+            'impurity lies not in the world but in the body that meets it.'
+        ),
+    },
 }
