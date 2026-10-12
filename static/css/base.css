@@ -103,10 +103,24 @@
             position: relative;
         }
         
+        /* ThaiBridge Spelling's own font: Noto Sans Mono, cut to the
+           spelling's letters and kept in static/fonts by
+           scripts/fetch_spelling_font.py. Roboto Mono, used here before, has
+           no ɛ ɔ ʉ ǎ at all, so those letters were borrowed from Consolas (or
+           whatever the phone had), mid-word, with the tone marks set badly.
+           One face: italic spelling is slanted from it by the browser. */
+        @font-face {
+            font-family: 'ThaiBridge Spelling';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('../fonts/thaibridge-spelling.woff2') format('woff2');
+        }
+
         /* Romanization text - FIXED WIDTH SOLUTION */
         .paiboon, .romanized, .paiboon-text, 
         [class*="paiboon"], [class*="romaniz"] {
-            font-family: 'Roboto Mono', 'Consolas', 'Monaco', monospace !important;
+            font-family: 'ThaiBridge Spelling', 'Roboto Mono', 'Consolas', 'Monaco', monospace !important;
             font-weight: 400 !important;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
