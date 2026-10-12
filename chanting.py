@@ -74715,6 +74715,15 @@ HOW_TO_USE = {
         'for those who chant it in Thai temples — switch them off if they are '
         'not for you.'
     ),
+    # Said ONCE, here, rather than in a box on every chant: most chants carry
+    # it, so repeating it 275 times turned a note into noise. Shown in the
+    # app's How to use panel and at the front of the printed book.
+    'english_note': (
+        'A note on the English. The book prints most chants in Pali only, '
+        'with no Thai or English translation. The English in this edition is '
+        "a working translation prepared for it. It is not the book's own, and "
+        'has not yet been checked by a teacher.'
+    ),
 }
 
 

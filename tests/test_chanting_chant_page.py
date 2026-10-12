@@ -157,3 +157,17 @@ def test_both_chant_routes_render_the_same_words(unlocked_client, route):
         route.format(chant['id'])).get_data(as_text=True)
 
     assert chant['verses'][0]['pali'] in served
+
+
+def test_the_note_on_the_english_is_said_once_on_the_front_page(unlocked_client):
+    """One note in the How to use panel, in place of a box on every chant."""
+    index = unlocked_client.get('/chanting').get_data(as_text=True)
+    assert 'panel-english-note' in index
+    assert 'has not yet been checked by a teacher' in index
+
+
+def test_a_chant_page_carries_no_note_of_its_own(unlocked_client):
+    chant = next(c for c in chanting.CHANTS if c.get('english_unverified'))
+    page = unlocked_client.get(f"/chanting/chant/{chant['id']}").get_data(as_text=True)
+    assert 'A note on this chant' not in page
+    assert 'working translation' not in page

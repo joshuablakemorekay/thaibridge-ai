@@ -1167,41 +1167,18 @@ class TestItAdaptsToWhateverThePagePrints:
         assert 'class="layer layer-thai"' not in page
         assert 'class="layer layer-paiboon"' not in page
 
-    def test_a_pali_only_chant_says_whose_english_it_is(self, monkeypatch):
-        """Not a disclaimer for its own sake — the book has nothing to check
-        that English against, and the reader should know which is which."""
+    def test_a_pali_only_chant_carries_no_note_of_its_own(self, monkeypatch):
+        """The note on unchecked English is said once, in the How to use
+        panel, not on every chant — 275 of 305 carried it, which turned a
+        note into noise. A page-view chant must not bring it back."""
         def pali_only(chant):
             for verse in chant['verses']:
                 verse['thai'] = ''
             chant['english_unverified'] = True
 
-        assert 'working translation made for this edition' in self.build(monkeypatch, pali_only)
-
-    def test_the_unverified_notice_shows_on_a_continuation_page_too(self, monkeypatch):
-        """It sat inside the starts_here branch until page 5 went live.
-
-        A reader landing mid-chant got our English translation with nothing
-        saying it was ours. A disclaimer that only appears on the page you did
-        not open is not a disclaimer.
-        """
-        import copy
-
-        import app as flask_app
-        import chanting as chanting_module
-
-        chant = copy.deepcopy(chanting_module.CHANTS[0])
-        chant['page_start'] = 60
-        chant['english_unverified'] = True
-        chant['verses'][2]['page'] = 61          # the chant runs onto page 61
-        monkeypatch.setattr(chanting_module, 'CHANTS', [chant])
-        monkeypatch.setattr(chanting_module, 'PAGE_BLOCKS', [])
-        client = flask_app.app.test_client()
-
-        opening = client.get('/chanting/page/60', follow_redirects=True).get_data(as_text=True)
-        carried_on = client.get('/chanting/page/61', follow_redirects=True).get_data(as_text=True)
-
-        assert 'working translation made for this edition' in opening
-        assert 'working translation made for this edition' in carried_on
+        page = self.build(monkeypatch, pali_only)
+        assert '<p class="chant-unverified-note">' not in page
+        assert 'working translation' not in page
 
     def test_a_chant_titled_only_in_pali_gets_no_empty_heading(self, monkeypatch):
         def pali_title(chant):

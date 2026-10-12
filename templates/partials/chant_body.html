@@ -16,18 +16,9 @@
                 {% endif %}
             </dl>
 
-            {# Some chants are printed in Pali only, with no Thai translation
-               beside them. Their English is a working translation made for this
-               edition, not the book's own words, and the reader is told so
-               rather than left to assume otherwise. #}
-            {% if chant.english_unverified %}
-            <p class="chant-unverified">
-                <strong>A note on this chant.</strong> The book prints this chant
-                in Pali only, with no Thai translation. The English here is a
-                working translation prepared for this edition — it is not the
-                book's own, and has not yet been checked by a teacher.
-            </p>
-            {% endif %}
+            {# The note on unchecked English used to sit here, on every chant
+               that needed it — 275 of 305. It is now said once, in the How to
+               use panel (HOW_TO_USE['english_note']). #}
 
             {# Some chants have only been set in part so far. Saying so here
                keeps a fragment from reading as the whole chant. The sentence

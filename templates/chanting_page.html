@@ -742,22 +742,9 @@
         <p class="page-continued">{{ chant.title_english or chant.title_thai }}, continued</p>
         {% endif %}
 
-        {# OUTSIDE the starts_here branch on purpose. Said plainly, on every
-           page the chant appears on: where the book prints Pali only, the
-           English below it was made for this app and has never been checked
-           against the book, because there is nothing in the book to check it
-           against.
-
-           It sat inside starts_here until page 5 went live and showed our
-           English with no notice at all — a reader landing mid-chant got the
-           translation without being told whose it was. A disclaimer that only
-           appears on the page you did not open is not a disclaimer. #}
-        {% if chant.english_unverified %}
-        <p class="chant-unverified-note">
-            The book prints this chant in Pali only. The English here is a
-            working translation made for this edition, not the book's.
-        </p>
-        {% endif %}
+        {# A note on unchecked English used to sit here on every chant that
+           needed it. It is now said once, in the How to use panel on the
+           chanting book's front page (HOW_TO_USE['english_note']). #}
 
         {# Wrapped so a prose chant can flow back into one justified block in
            book mode. A verse chant is unaffected by the wrapper. #}
