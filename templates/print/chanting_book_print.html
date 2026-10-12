@@ -18,10 +18,16 @@
 <title>{{ book.title_english }} — Volume {{ volume.number }}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
-{# 'ThaiBridge Spelling': Noto Serif italic holding every letter the spelling
-   uses, ɛ ɔ ʉ ə ŋ included. Fetched by the build script — see
-   spelling_font_css() there for why it needs a family of its own. #}
-<style>{{ spelling_font_css|safe }}</style>
+{# The app's own ThaiBridge Spelling font file (static/fonts), so the
+   spelling prints from exactly the font it is read in on screen. #}
+<style>
+    @font-face {
+        font-family: 'ThaiBridge Spelling';
+        font-style: normal;
+        font-weight: 400;
+        src: url('{{ spelling_font_url }}') format('woff2');
+    }
+</style>
 <style>
     @page {
         size: 148mm 210mm;   /* A5 */
@@ -47,12 +53,12 @@
     body {
         overflow-wrap: anywhere;
         margin: 0;
-        font-family: 'Noto Serif', 'Noto Serif Thai', 'Leelawadee UI', serif;
+        font-family: 'Noto Serif', 'Noto Serif Thai', 'Noto Serif', 'Leelawadee UI', serif;
         font-size: 9pt;
         line-height: 1.45;
         color: #111;
     }
-    .thai { font-family: 'Noto Serif Thai', 'Leelawadee UI', serif; }
+    .thai { font-family: 'Noto Serif Thai', 'Noto Serif', 'Leelawadee UI', serif; }
 
     /* ── Front matter ─────────────────────────────────────────────── */
     .front { page: front; break-after: page; }
@@ -159,16 +165,25 @@
     .verse .label { font-size: 7pt; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
 
     /* The five layers, told apart without colour. */
-    .l-pali       { font-family: 'Noto Serif Thai', 'Leelawadee UI', serif; font-size: 11pt; font-weight: 600; line-height: 1.55; }
+    .l-pali       { font-family: 'Noto Serif Thai', 'Noto Serif', 'Leelawadee UI', serif; font-size: 11pt; font-weight: 600; line-height: 1.55; }
     .l-pali_roman { font-style: italic; font-size: 9pt; }
-    .l-thai       { font-family: 'Noto Serif Thai', 'Leelawadee UI', serif; font-size: 9pt; line-height: 1.55; margin-top: 0.6mm !important; }
-    /* Italic serif, as the app sets it. */
-    .l-paiboon    { font-family: 'ThaiBridge Spelling', 'Noto Serif', serif; font-style: italic; font-size: 8.5pt; color: #333; }
-    .spelling     { font-family: 'ThaiBridge Spelling', 'Noto Serif', serif; }
+    .l-thai       { font-family: 'Noto Serif Thai', 'Noto Serif', 'Leelawadee UI', serif; font-size: 9pt; line-height: 1.55; margin-top: 0.6mm !important; }
+    /* As the app sets ThaiBridge Spelling (static/css/base.css): its own
+       fixed-width font, opened up with the same letter and word spacing,
+       italic as in the app's chanting book. A size smaller than the English because a
+       fixed-width letter is wider. */
+    .l-paiboon, .spelling {
+        font-family: 'ThaiBridge Spelling', monospace;
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        word-spacing: 0.3em;
+    }
+    .l-paiboon    { font-size: 7.5pt; color: #333; }
     .l-english    { font-size: 8.5pt; color: #222; margin-top: 0.6mm !important; }
 
     .verse-section, .verse-section-end {
-        font-family: 'Noto Serif Thai', 'Leelawadee UI', serif;
+        font-family: 'Noto Serif Thai', 'Noto Serif', 'Leelawadee UI', serif;
         font-size: 10pt;
         font-weight: 600;
         text-align: center;
@@ -270,7 +285,10 @@
         <span class="locator">{{ locator(chant.id) }}</span>
         <span class="title-thai thai">{{ chant.title_thai }}</span>
         {% if chant.title_pali %}<span class="title-pali">{{ chant.title_pali }}</span>
-        {% elif chant.title_roman %}<span class="title-pali spelling">{{ chant.title_roman }}</span>{% endif %}
+        {# title_roman is ThaiBridge Spelling for some chants and romanised
+           Pali for others. Pali's dotted and barred letters never occur in
+           the spelling, so a title without any is set as spelling. #}
+        {% elif chant.title_roman %}<span class="title-pali{% if not chant.title_roman|select('in', 'āīūṃṇṭḍṅñḷĀĪŪṂṆṬḌṄÑḶ')|list %} spelling{% endif %}">{{ chant.title_roman }}</span>{% endif %}
         {% if chant.title_english %}<span class="title-english">{{ chant.title_english }}{% if chant.english_unverified %}<span class="dagger">†</span>{% endif %}</span>{% endif %}
         <div class="meta">
             {% if chant.page_start %}Book page {{ chant.page_start }}{% endif %}

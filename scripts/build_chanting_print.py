@@ -33,8 +33,6 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import urllib.parse
-import urllib.request
 
 import fitz  # PyMuPDF
 from jinja2 import Environment, FileSystemLoader
@@ -122,52 +120,16 @@ def book_parts(volume):
     return [p for p in parts if p['chants']]
 
 
-def spelling_chars():
-    """Every character set in ThaiBridge Spelling: the spelling layer, the
-    chant titles given only in spelling (`title_roman`), and the sample line
-    on the 'How each verse is set' page."""
-    chars = set('kam bplae paa-sǎa tai')
-    for chant in chanting.CHANTS:
-        chars.update(chant.get('title_roman') or '')
-        for part in [chant.get('invitation'), chant.get('closing'), *chant['verses']]:
-            if part and part.get('paiboon'):
-                chars.update(part['paiboon'])
-    chars.discard('\n')
-    return ''.join(sorted(chars))
+# The app's own ThaiBridge Spelling font, so paper and screen draw the
+# spelling from one file. See scripts/fetch_spelling_font.py for why the
+# spelling has a font of its own.
+SPELLING_FONT = os.path.join(ROOT, 'static', 'fonts', 'thaibridge-spelling.woff2')
 
 
-# A modern browser's user agent, or Google Fonts answers with an old format.
-FONT_USER_AGENT = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
-                   '(KHTML, like Gecko) Chrome/155.0 Safari/537.36')
-
-
-def spelling_font_css():
-    """An @font-face for the ThaiBridge Spelling, as its own family.
-
-    The letters ɛ ɔ ʉ ə ŋ are not in the parts of Noto Serif that Google Fonts
-    sends by default, so Chrome borrowed them from Times or Arial, mid-word,
-    with the tone marks set badly. Asking for the font cut to exactly the
-    characters the spelling uses (`text=`) gets every one from the full font.
-    Google names that cut 'Noto Serif' too, and sharing a name with the main
-    Noto Serif muddled which face Chrome used for the Pali — so it is renamed
-    here to a family of its own.
-    """
-    url = ('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@1,400'
-           '&display=block&text=' + urllib.parse.quote(spelling_chars()))
-    request = urllib.request.Request(url, headers={'User-Agent': FONT_USER_AGENT})
-    try:
-        css = urllib.request.urlopen(request, timeout=30).read().decode('utf-8')
-    except OSError as error:
-        sys.exit(f'Could not fetch the spelling font from Google Fonts: {error}')
-    if "font-family: 'Noto Serif'" not in css:
-        sys.exit('Google Fonts answered with something unexpected for the spelling font.')
-    return css.replace("font-family: 'Noto Serif'", "font-family: 'ThaiBridge Spelling'")
-
-
-def render_html(template, volume, parts, contents_pages, proof, font_css):
+def render_html(template, volume, parts, contents_pages, proof):
     return template.render(
         volume=VOLUMES[volume],
-        spelling_font_css=font_css,
+        spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
         book=chanting.BOOK,
         how=chanting.HOW_TO_USE,
         sections=chanting.CHANT_SECTIONS,
@@ -223,8 +185,11 @@ BODY_SIZE = 8.5
 
 # Fonts Chrome falls back on when the chosen font lacks a letter. Finding one
 # in the PDF means a letter is printed in a different typeface from the rest
-# of its word — how ɛ ɔ ʉ ə first came out in the spelling layer.
-STAND_IN_FONTS = ('Arial', 'Times', 'Segoe', 'Calibri')
+# of its word — how ɛ ɔ ʉ ə first came out in the spelling layer. Roboto
+# Mono is listed because it has no ɛ ɔ ʉ ǎ: finding it means the spelling
+# font failed to load and Chrome fell back to the old one.
+STAND_IN_FONTS = ('Arial', 'Times', 'Segoe', 'Calibri', 'Consolas', 'Courier',
+                  'Lucida', 'Cambria', 'Leelawadee', 'RobotoMono')
 
 
 def check_fonts_and_scale(pdf_path):
@@ -237,9 +202,12 @@ def check_fonts_and_scale(pdf_path):
                     for span in line['spans']:
                         sizes[round(span['size'], 1)] += len(span['text'])
                         if any(name in span['font'] for name in STAND_IN_FONTS):
-                            stand_ins[span['text'].strip()] += 1
+                            line_text = ''.join(s['text'] for s in line['spans'])
+                            stand_ins[(span['text'].strip(), span['font'],
+                                       line_text[:50])] += 1
     if stand_ins:
-        sample = ', '.join(f'{t!r}' for t, _ in stand_ins.most_common(8))
+        sample = '\n  '.join(f'{t!r} in {font}, in "{context}"'
+                             for (t, font, context), _ in stand_ins.most_common(8))
         sys.exit(f'{os.path.basename(pdf_path)}: some letters were printed in a stand-in '
                  f'font, not the book\'s own: {sample}')
     commonest = sizes.most_common(1)[0][0]
@@ -249,14 +217,14 @@ def check_fonts_and_scale(pdf_path):
                  'too wide. Find the overflowing line before printing.')
 
 
-def build_volume(chrome, template, volume, out, proof, font_css):
+def build_volume(chrome, template, volume, out, proof):
     parts = book_parts(volume)
     chant_ids = [c['id'] for p in parts for c in p['chants']]
 
     with tempfile.TemporaryDirectory() as workdir:
         first = os.path.join(workdir, 'pass1.pdf')
         print(f'Volume {volume}, pass 1: laying out the book...', flush=True)
-        print_pdf(chrome, render_html(template, volume, parts, {}, proof, font_css), first, workdir)
+        print_pdf(chrome, render_html(template, volume, parts, {}, proof), first, workdir)
         pages, total1 = find_pages(first, chant_ids)
         check_fonts_and_scale(first)
 
@@ -266,7 +234,7 @@ def build_volume(chrome, template, volume, out, proof, font_css):
 
         print(f'Volume {volume}, pass 2: filling in the contents page numbers...', flush=True)
         numbers = {cid: str(n) for cid, n in pages.items()}
-        print_pdf(chrome, render_html(template, volume, parts, numbers, proof, font_css), out, workdir)
+        print_pdf(chrome, render_html(template, volume, parts, numbers, proof), out, workdir)
         check, total2 = find_pages(out, chant_ids)
 
     if check != pages or total1 != total2:
@@ -293,12 +261,11 @@ def main():
                       autoescape=True)
     template = env.get_template('print/chanting_book_print.html')
     os.makedirs(args.out_dir, exist_ok=True)
-    font_css = spelling_font_css()
 
     built = []
     for volume in ([args.volume] if args.volume else sorted(VOLUMES)):
         out = os.path.join(args.out_dir, f'chanting-book-a5-vol{volume}.pdf')
-        built += build_volume(chrome, template, volume, out, not args.final, font_css)
+        built += build_volume(chrome, template, volume, out, not args.final)
 
     # Every chant in exactly one volume — checked, because a chant dropped
     # between two books would be very easy never to notice on paper.
