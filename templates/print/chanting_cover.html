@@ -1,0 +1,138 @@
+<!doctype html>
+{# The printed book's cover: back, spine and front on ONE sheet, as Lulu
+   wants it for a paperback. Rendered by scripts/build_chanting_cover.py,
+   which works out the spine width from the interior's page count.
+
+   Layout, left to right: bleed | back | spine | front | bleed.
+   Lulu trims 0.125in (3.175mm) off every edge, so the background runs
+   into the bleed and all words sit at least 12.7mm (0.5in) inside the
+   trim. The interior is black and white; the cover is in the app's own
+   purple and gold, which costs nothing extra. #}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cover — {{ book.title_english }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
+<style>
+    @page { size: {{ '%.3f' % sheet_w }}mm {{ '%.3f' % sheet_h }}mm; margin: 0; }
+    :root {
+        --purple: #2D1B4E;      /* --deep-purple in the app */
+        --gold: #D4AF37;        /* --royal-gold */
+        --saffron: #FF9933;     /* --monk-saffron */
+        --cream: #FFF8DC;       /* --cream */
+    }
+    html, body {
+        margin: 0;
+        width: {{ '%.3f' % sheet_w }}mm;
+        height: {{ '%.3f' % sheet_h }}mm;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    body {
+        position: relative;
+        background: var(--purple);
+        color: var(--cream);
+        font-family: 'Noto Serif', 'Noto Serif Thai', serif;
+        overflow: hidden;
+    }
+    .thai { font-family: 'Noto Serif Thai', 'Noto Serif', serif; }
+    .panel { position: absolute; top: 0; height: 100%; box-sizing: border-box; }
+    .back  { left: 0; width: {{ '%.3f' % (bleed + trim_w) }}mm;
+             padding: {{ bleed + 18 }}mm 18mm {{ bleed + 18 }}mm {{ bleed + 18 }}mm; }
+    .spine { left: {{ '%.3f' % (bleed + trim_w) }}mm; width: {{ '%.3f' % spine }}mm;
+             background: var(--gold); color: var(--purple); }
+    .front { left: {{ '%.3f' % (bleed + trim_w + spine) }}mm; width: {{ '%.3f' % (trim_w + bleed) }}mm;
+             padding: {{ bleed + 18 }}mm {{ bleed + 18 }}mm {{ bleed + 18 }}mm 18mm;
+             text-align: center; }
+
+    /* A gold rule framing each face, inside the safe area. */
+    .frame { position: absolute; border: 0.8mm solid var(--gold); }
+    .back .frame  { inset: {{ bleed + 9 }}mm 9mm {{ bleed + 9 }}mm {{ bleed + 9 }}mm; }
+    .front .frame { inset: {{ bleed + 9 }}mm {{ bleed + 9 }}mm {{ bleed + 9 }}mm 9mm; }
+
+    /* Front */
+    .wheel { width: 52mm; height: 52mm; margin: 22mm auto 14mm; display: block; }
+    .t-thai { font-size: 30pt; font-weight: 600; color: var(--gold); line-height: 1.45; }
+    .t-english { font-size: 19pt; margin-top: 5mm; }
+    .t-rule { width: 40mm; height: 0.6mm; background: var(--saffron); margin: 11mm auto; }
+    .t-edition { font-size: 11.5pt; line-height: 1.6; }
+    .t-study { font-size: 13pt; font-style: italic; margin-top: 12mm; color: var(--gold); }
+    .t-name { position: absolute; left: 0; right: {{ bleed }}mm; bottom: {{ bleed + 26 }}mm;
+              font-size: 13pt; }
+    .t-name .label { display: block; font-size: 9.5pt; letter-spacing: 0.08em;
+                     text-transform: uppercase; color: var(--gold); margin-bottom: 2mm; }
+
+    /* Spine: reads top to bottom, as UK and US books do. */
+    .spine-text {
+        position: absolute; left: 50%; top: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        white-space: nowrap;
+        font-size: {{ spine_font }}pt; font-weight: 600;
+        display: flex; align-items: center; gap: 9mm;
+    }
+    .spine-text .sep { width: 2.2mm; height: 2.2mm; border-radius: 50%; background: var(--purple); }
+
+    /* Back */
+    .back h2 { font-size: 15pt; font-weight: 600; color: var(--gold); margin: 14mm 0 6mm; }
+    .back p { font-size: 11pt; line-height: 1.65; margin: 0 0 4.5mm; max-width: 150mm; }
+    .back .layers { margin: 2mm 0 6mm; padding: 0; list-style: none; font-size: 10.5pt; line-height: 1.8; }
+    .back .layers li::before { content: '•'; color: var(--saffron); margin-right: 3mm; }
+    .back .proof { position: absolute; left: {{ bleed + 18 }}mm; bottom: {{ bleed + 22 }}mm;
+                   border: 0.4mm solid var(--gold); padding: 2mm 4mm; font-size: 8.5pt;
+                   letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
+</style>
+</head>
+<body>
+
+<section class="panel back">
+    <div class="frame"></div>
+    <h2>Every chant, open to every reader</h2>
+    <p>All 305 chants of the Wat Mahathat United Kingdom chanting book,
+    set out for people who do not read Thai. Each verse is given in five
+    layers:</p>
+    <ul class="layers">
+        <li>the Pali, in Thai script, as it is chanted</li>
+        <li>the same Pali in the Latin alphabet</li>
+        <li>the Thai translation</li>
+        <li>the Thai in ThaiBridge Spelling, to read it aloud</li>
+        <li>an English translation</li>
+    </ul>
+    <p>Every chant also carries a short note on where it comes from, when it
+    is chanted, and what it means.</p>
+    <p>Prepared by Pra Joshua Vajira Panyo with ThaiBridge AI.</p>
+    {% if proof %}<div class="proof">Proof copy · {{ built_on }} · not for distribution</div>{% endif %}
+</section>
+
+<section class="panel spine">
+    <div class="spine-text">
+        <span>Chanting Book: Morning and Evening Service</span>
+        <span class="sep"></span>
+        <span>Pra Joshua Vajira Panyo</span>
+    </div>
+</section>
+
+<section class="panel front">
+    <div class="frame"></div>
+    {# A plain eight-spoked Dhamma wheel, drawn rather than borrowed. #}
+    <svg class="wheel" viewBox="-50 -50 100 100" aria-hidden="true">
+        <g fill="none" stroke="#D4AF37" stroke-width="3">
+            <circle r="44"/><circle r="38"/><circle r="9"/>
+            {% for i in range(8) %}
+            <line x1="0" y1="-9" x2="0" y2="-38" transform="rotate({{ i * 45 }})"/>
+            <circle cx="0" cy="-44" r="3.5" fill="#D4AF37" transform="rotate({{ i * 45 + 22.5 }})"/>
+            {% endfor %}
+        </g>
+    </svg>
+    <div class="t-thai thai">{{ book.title_thai }}</div>
+    <div class="t-english">{{ book.title_english }}</div>
+    <div class="t-rule"></div>
+    <div class="t-edition">
+        <span class="thai">{{ book.edition_thai }}</span><br>
+        {{ book.edition_english }}
+    </div>
+    <div class="t-study">Study edition — with romanisation,<br>translation and commentary</div>
+    <div class="t-name"><span class="label">Prepared by</span>Pra Joshua Vajira Panyo</div>
+</section>
+
+</body>
+</html>

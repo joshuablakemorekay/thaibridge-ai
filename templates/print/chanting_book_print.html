@@ -38,7 +38,7 @@
 <style>
     @page {
         size: 210mm 297mm;   /* A4 */
-        margin: 20mm 18mm 22mm 24mm;
+        margin: 20mm 16mm 22mm 30mm;
         @bottom-center {
             content: counter(page);
             font-family: 'Noto Serif', serif;
@@ -46,9 +46,11 @@
             color: #444;
         }
     }
-    /* Mirrored margins: the wider margin always sits on the spine side. */
-    @page :left  { margin-left: 18mm; margin-right: 24mm; }
-    @page :right { margin-left: 24mm; margin-right: 18mm; }
+    /* Mirrored margins: the wider margin always sits on the spine side.
+       30mm there, because Lulu asks 29mm (1.125in) for a 400-600 page
+       book so nothing is lost in the fold. */
+    @page :left  { margin-left: 16mm; margin-right: 30mm; }
+    @page :right { margin-left: 30mm; margin-right: 16mm; }
     @page :first { @bottom-center { content: none; } }
     @page front  { @bottom-center { content: none; } }
 
