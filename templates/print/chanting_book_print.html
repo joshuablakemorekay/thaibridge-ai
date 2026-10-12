@@ -87,6 +87,16 @@
     h1.front-heading + p { margin-top: 0; }
     .front h1.front-heading:not(:first-child) { margin-top: 9mm; }
     .front p { margin: 0 0 2.5mm; max-width: 140mm; }
+    .preface p { font-size: 10.5pt; line-height: 1.6; }
+    .credit-page {
+        page: front;
+        break-before: page;
+        text-align: center;
+        padding-top: 90mm;
+        font-size: 11pt;
+    }
+    .credit-page p { margin: 0 0 2.5mm; }
+    .credit-page .credit-name { font-size: 16pt; font-weight: 600; margin: 3mm 0 4mm; }
     .layer-key { margin: 3mm 0 0; padding: 0; list-style: none; }
     .layer-key li { margin: 0 0 2.5mm; }
     .layer-key .sample { display: block; }
@@ -225,6 +235,26 @@
     {% if proof %}<div class="t-proof">Proof copy · {{ built_on }} · not for distribution</div>{% endif %}
 </section>
 
+{# ── Preface ── Pra Joshua's own words, as he wrote them (only the
+   spelling was corrected). Not to be reworded or softened. #}
+<section class="front preface">
+    <h1 class="front-heading">Preface</h1>
+    <p>I noticed that people, myself included, as English speakers, were
+    frustrated during morning and evening chanting with the Thai monks, since
+    they more often than not read from a Thai-script-only chanting book. So
+    anyone who was not Thai could perhaps feel left out, because the fact is
+    that most people don't speak or understand Thai well enough, let alone
+    read it! Nor do they care to learn it, because frankly the English
+    language is universal and powerful enough.</p>
+    <p>So I decided to use my AI skills and tools on my laptop to create a
+    digital publication, a digital chanting book, as a feature in my
+    ThaiBridge AI language, culture and Buddhism learning web app, accessible
+    to all. The only way to be international is to speak English. English is
+    a very powerful language, and the other translations are relevant too,
+    making the book even more accessible and interesting. I value being
+    wholesome and inclusive.</p>
+</section>
+
 {# ── About this edition, and how each verse is set ── #}
 <section class="front">
     <h1 class="front-heading">About this edition</h1>
@@ -335,6 +365,14 @@
 </article>
 {% endfor %}
 {% endfor %}
+
+{# ── Credit, on the last page of the book ── #}
+<section class="credit-page">
+    <p>This study edition was prepared by</p>
+    <p class="credit-name">Pra Joshua Vajira Panyo</p>
+    <p>New English Monk</p>
+    <p>Second ordination: 1 July 2025</p>
+</section>
 
 </body>
 </html>
