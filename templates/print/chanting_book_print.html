@@ -1,0 +1,319 @@
+<!doctype html>
+{# The Digital Chanting Book laid out for PAPER — one A5 volume of the two,
+   its chants in book order, all five layers and the commentary.
+
+   Rendered by scripts/build_chanting_print.py, never by a Flask route, so it
+   is a standalone page: no base.html, no sidebar, no layer toggles. A printed
+   page cannot switch a layer off, so every layer is always shown and they are
+   told apart by type alone — the book is designed for black-and-white
+   printing, which costs a fraction of colour on every print-on-demand service.
+
+   `contents_pages` is empty on the first pass. The script renders twice: the
+   first pass finds which PDF page each chant landed on, the second fills those
+   numbers into the contents. The number column is a fixed width, so the
+   second pass paginates exactly like the first. #}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ book.title_english }} — Volume {{ volume.number }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400&family=Noto+Sans+Thai:wght@400;600&family=Noto+Serif:ital,wght@0,400;0,600;1,400&family=Noto+Serif+Thai:wght@400;600&display=block" rel="stylesheet">
+<style>
+    @page {
+        size: 148mm 210mm;   /* A5 */
+        margin: 16mm 14mm 18mm 18mm;
+        @bottom-center {
+            content: counter(page);
+            font-family: 'Noto Serif', serif;
+            font-size: 8pt;
+            color: #444;
+        }
+    }
+    /* Mirrored margins: the wider margin always sits on the spine side. */
+    @page :left  { margin-left: 14mm; margin-right: 18mm; }
+    @page :right { margin-left: 18mm; margin-right: 14mm; }
+    @page :first { @bottom-center { content: none; } }
+    @page front  { @bottom-center { content: none; } }
+
+    html { background: #fff; }
+    /* Anything wider than the page makes Chrome SHRINK EVERY PAGE to fit,
+       silently — one long Pali compound once took the whole of volume 1
+       down to 85% size. So a line too long to fit is broken instead, and
+       the build script checks the text size came out as set. */
+    body {
+        overflow-wrap: anywhere;
+        margin: 0;
+        font-family: 'Noto Serif', 'Noto Serif Thai', 'Leelawadee UI', serif;
+        font-size: 9pt;
+        line-height: 1.45;
+        color: #111;
+    }
+    .thai { font-family: 'Noto Serif Thai', 'Leelawadee UI', serif; }
+
+    /* ── Front matter ─────────────────────────────────────────────── */
+    .front { page: front; break-after: page; }
+    .title-page { text-align: center; padding-top: 30mm; }
+    .title-page .t-thai { font-size: 22pt; font-weight: 600; line-height: 1.5; }
+    .title-page .t-english { font-size: 14pt; margin-top: 4mm; }
+    .title-page .t-edition { font-size: 10pt; margin-top: 10mm; }
+    .title-page .t-volume { font-size: 12pt; font-weight: 600; margin-top: 12mm; }
+    .title-page .t-volume-title { font-size: 9.5pt; margin-top: 2mm; }
+    .title-page .t-volume-pages { font-size: 8.5pt; color: #444; }
+    .title-page .t-study { font-size: 11pt; font-style: italic; margin-top: 14mm; }
+    .title-page .t-proof {
+        display: inline-block;
+        margin-top: 22mm;
+        border: 1px solid #111;
+        padding: 2mm 4mm;
+        font-size: 8pt;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    h1.front-heading { font-size: 13pt; font-weight: 600; margin: 0 0 4mm; }
+    .front p { margin: 0 0 2.5mm; }
+    .layer-key { margin: 3mm 0 0; padding: 0; list-style: none; }
+    .layer-key li { margin: 0 0 2.5mm; }
+    .layer-key .sample { display: block; }
+
+    /* Contents */
+    .contents { break-after: page; }
+    .contents h1 { font-size: 13pt; font-weight: 600; margin: 0 0 4mm; }
+    .toc-section { font-weight: 600; margin: 3.5mm 0 1mm; break-after: avoid; }
+    .toc-entry {
+        display: flex;
+        align-items: baseline;
+        gap: 1.5mm;
+        font-size: 8pt;
+        margin: 0 0 0.6mm;
+        break-inside: avoid;
+    }
+    .toc-entry .toc-title { flex: 0 1 auto; }
+    .toc-entry .toc-title .thai { display: block; font-size: 8.5pt; }
+    .toc-entry .toc-dots { flex: 1 1 auto; border-bottom: 1px dotted #888; min-width: 4mm; }
+    .toc-entry .toc-page { flex: 0 0 7mm; text-align: right; font-variant-numeric: tabular-nums; }
+
+    /* ── Parts of the book ────────────────────────────────────────── */
+    .part-heading {
+        break-before: page;
+        text-align: center;
+        padding: 20mm 0 10mm;
+    }
+    .part-heading .thai { font-size: 16pt; font-weight: 600; display: block; }
+    .part-heading .en { font-size: 11pt; display: block; margin-top: 2mm; }
+
+    /* ── One chant ────────────────────────────────────────────────── */
+    .chant { margin: 0 0 8mm; }
+    .chant-head {
+        border-top: 1.5px solid #111;
+        padding-top: 2.5mm;
+        margin-bottom: 2.5mm;
+        break-after: avoid;
+        break-inside: avoid;
+    }
+    .chant-head .title-thai { font-size: 13pt; font-weight: 600; line-height: 1.45; display: block; }
+    .chant-head .title-pali { font-style: italic; display: block; }
+    .chant-head .title-english { display: block; }
+    .chant-head .meta { font-size: 7.5pt; color: #444; margin-top: 1mm; }
+    /* Invisible to a reader, found by the build script to number the
+       contents. Kept as real text because a PDF only remembers text. */
+    .locator { font-size: 1pt; color: #fff; line-height: 0; }
+
+    .commentary { font-size: 8.5pt; }
+    .commentary p { margin: 0 0 1.8mm; text-align: justify; hyphens: auto; }
+    .commentary .summary { font-style: italic; }
+    .commentary h3 {
+        font-size: 8pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin: 3mm 0 1mm;
+        break-after: avoid;
+    }
+
+    .the-chant-label {
+        font-size: 8pt;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        margin: 4mm 0 2mm;
+        border-bottom: 0.5px solid #888;
+        break-after: avoid;
+    }
+
+    .verse {
+        display: grid;
+        /* minmax(0, …) so one long unbroken line cannot widen the column. */
+        grid-template-columns: 6mm minmax(0, 1fr);
+        column-gap: 1.5mm;
+        margin: 0 0 2.4mm;
+        break-inside: avoid;
+    }
+    .verse .num { font-size: 7pt; color: #555; padding-top: 1.2mm; text-align: right; }
+    .verse .lines { grid-column: 2; }
+    .verse p { margin: 0; }
+    .verse.closing { margin-top: 3mm; }
+    .verse .label { font-size: 7pt; text-transform: uppercase; letter-spacing: 0.06em; color: #555; }
+
+    /* The five layers, told apart without colour. */
+    .l-pali       { font-family: 'Noto Serif Thai', 'Leelawadee UI', serif; font-size: 11pt; font-weight: 600; line-height: 1.55; }
+    .l-pali_roman { font-style: italic; font-size: 9pt; }
+    .l-thai       { font-family: 'Noto Serif Thai', 'Leelawadee UI', serif; font-size: 9pt; line-height: 1.55; margin-top: 0.6mm !important; }
+    .l-paiboon    { font-family: 'Noto Sans', 'Noto Sans Thai', sans-serif; font-size: 8pt; color: #333; }
+    .l-english    { font-size: 8.5pt; color: #222; margin-top: 0.6mm !important; }
+
+    .verse-section, .verse-section-end {
+        font-family: 'Noto Serif Thai', 'Leelawadee UI', serif;
+        font-size: 10pt;
+        font-weight: 600;
+        text-align: center;
+        margin: 3mm 0 2mm;
+        break-after: avoid;
+    }
+    .verse-section-end { break-after: auto; break-before: avoid; }
+    .verse-section-end.is-major { font-size: 11.5pt; }
+    .variant { font-size: 7.5pt; color: #333; margin-top: 0.6mm !important; }
+    .dagger { font-size: 0.8em; vertical-align: super; }
+</style>
+</head>
+<body>
+{% macro layers(v) %}
+    {% if v.pali %}<p class="l-pali">{{ v.pali }}</p>{% endif %}
+    {% if v.pali_roman %}<p class="l-pali_roman">{{ v.pali_roman }}</p>{% endif %}
+    {% if v.thai %}<p class="l-thai">{{ v.thai }}</p>{% endif %}
+    {% if v.paiboon %}<p class="l-paiboon">{{ v.paiboon }}</p>{% endif %}
+    {% if v.english %}<p class="l-english">{{ v.english }}</p>{% endif %}
+{% endmacro %}
+
+
+{# ── Title page ── #}
+<section class="front title-page">
+    <div class="t-thai thai">{{ book.title_thai }}</div>
+    <div class="t-english">{{ book.title_english }}</div>
+    <div class="t-edition">
+        <span class="thai">{{ book.edition_thai }}</span><br>
+        {{ book.edition_english }}
+    </div>
+    <div class="t-volume">Volume {{ volume.number }} of 3</div>
+    <div class="t-volume-title">{{ volume.title }}<br><span class="t-volume-pages">{{ volume.pages }}</span></div>
+    <div class="t-study">ThaiBridge AI study edition — with romanisation, translation and commentary</div>
+    {% if proof %}<div class="t-proof">Proof copy · {{ built_on }} · not for distribution</div>{% endif %}
+</section>
+
+{# ── About this edition ── #}
+<section class="front">
+    <h1 class="front-heading">About this edition</h1>
+    <p>This is a study edition of the chanting book of Wat Mahathat United
+    Kingdom. The Pali and Thai of every chant are transcribed from the printed
+    book, in the book's order. Around each chant, this edition adds romanised
+    Pali, the ThaiBridge Spelling of the Thai (based on Paiboon+), an English
+    translation, and a short commentary on where the chant comes from, when it
+    is chanted and what it means.</p>
+    <p>The edition is in three volumes, divided where the printed book
+    divides. Volume 1 holds book pages 1–76: the morning and evening services
+    and the chants appointed for the morning. Volume 2 holds pages 77–190, the
+    chants appointed for the evening. Volume 3 opens at page 191, where the
+    book sets out the services again with a Thai translation, and goes on to
+    its miscellaneous section and appendix. This is Volume {{ volume.number }}.</p>
+    <p><strong>A note on the English.</strong> Most chants are printed in the
+    book in Pali only. Where a chant's English title carries a dagger
+    (<span class="dagger">†</span>), its English is a working translation
+    prepared for this edition. It is not the book's own and has not yet been
+    checked by a teacher.</p>
+    <p>{{ how.no_thai_needed }}</p>
+</section>
+
+{# Its own page: sharing one with the notes above overflowed by a line. #}
+<section class="front">
+    <h1 class="front-heading">How each verse is set</h1>
+    <ul class="layer-key">
+        <li><span class="sample l-pali">ปาฬิ</span>Pali, in Thai script — what is chanted</li>
+        <li><span class="sample l-pali_roman">Pāḷi</span>The same Pali in the Latin alphabet</li>
+        <li><span class="sample l-thai">คำแปลภาษาไทย</span>The meaning in Thai, recited after the Pali in many temples</li>
+        <li><span class="sample l-paiboon">kam bplae paa-sǎa tai</span>The Thai in ThaiBridge Spelling, to read it aloud</li>
+        <li><span class="sample l-english">The meaning in English</span>The English translation</li>
+    </ul>
+</section>
+
+{# ── Contents ── #}
+<section class="contents">
+    <h1>Contents — Volume {{ volume.number }}</h1>
+    {% for part in parts %}
+    {% if part.heading %}<div class="toc-section">{% if part.heading.title %}<span class="thai">{{ part.heading.title }}</span> — {% endif %}{{ part.heading.title_english }}</div>{% endif %}
+    {% for chant in part.chants %}
+    <div class="toc-entry">
+        <span class="toc-title">{{ chant.title_english or chant.title_pali or chant.title_roman }}<span class="thai">{{ chant.title_thai }}</span></span>
+        <span class="toc-dots"></span>
+        <span class="toc-page">{{ contents_pages.get(chant.id, '000') }}</span>
+    </div>
+    {% endfor %}
+    {% endfor %}
+</section>
+
+{# ── The chants ── #}
+{% for part in parts %}
+{% if part.heading %}
+<div class="part-heading">
+    <span class="thai">{{ part.heading.title }}</span>
+    {% if part.heading.title_english %}<span class="en">{{ part.heading.title_english }}</span>{% endif %}
+</div>
+{% endif %}
+
+{% for chant in part.chants %}
+<article class="chant">
+    <header class="chant-head">
+        <span class="locator">{{ locator(chant.id) }}</span>
+        <span class="title-thai thai">{{ chant.title_thai }}</span>
+        {% if chant.title_pali %}<span class="title-pali">{{ chant.title_pali }}</span>
+        {% elif chant.title_roman %}<span class="title-pali">{{ chant.title_roman }}</span>{% endif %}
+        {% if chant.title_english %}<span class="title-english">{{ chant.title_english }}{% if chant.english_unverified %}<span class="dagger">†</span>{% endif %}</span>{% endif %}
+        <div class="meta">
+            {% if chant.page_start %}Book page {{ chant.page_start }}{% endif %}
+            {% if chant.source %} · <span class="thai">{{ chant.source }}</span>{% endif %}
+        </div>
+    </header>
+
+    <div class="commentary">
+        {% if chant.summary %}<p class="summary">{{ chant.summary }}</p>{% endif %}
+        {% if chant.when_chanted %}<h3>When it is chanted</h3><p>{{ chant.when_chanted }}</p>{% endif %}
+        {% for section in sections %}
+        {% set paragraphs = chant.get(section.key) %}
+        {% if paragraphs %}
+        <h3>{{ section.heading }}</h3>
+        {% for paragraph in paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <div class="the-chant-label">The chant</div>
+
+
+    {% if chant.invitation and chant.invitation.pali %}
+    <div class="verse"><span class="num"></span><div class="lines">
+        <span class="label">Invitation</span>
+        {{ layers(chant.invitation) }}
+    </div></div>
+    {% endif %}
+
+    {% for verse in chant.verses %}
+    {% if verse.section %}<div class="verse-section">{{ verse.section }}</div>{% endif %}
+    <div class="verse"><span class="num">{{ verse.number }}</span><div class="lines">
+        {{ layers(verse) }}
+        {% for variant in verse.variants %}
+        <p class="variant">{{ variant.marker }} <span class="thai">{{ variant.word }}</span> — the book's footnote gives another reading: <span class="thai">{{ variant.reading }}</span>{% if variant.reading_roman %} ({{ variant.reading_roman }}){% endif %}</p>
+        {% endfor %}
+    </div></div>
+    {% if verse.section_end %}<div class="verse-section-end">{{ verse.section_end }}</div>{% endif %}
+    {% if verse.section_end_major %}<div class="verse-section-end is-major">{{ verse.section_end_major }}</div>{% endif %}
+    {% endfor %}
+
+    {% if chant.closing and (chant.closing.pali or chant.closing.thai) %}
+    <div class="verse closing"><span class="num"></span><div class="lines">
+        {{ layers(chant.closing) }}
+    </div></div>
+    {% endif %}
+</article>
+{% endfor %}
+{% endfor %}
+
+</body>
+</html>

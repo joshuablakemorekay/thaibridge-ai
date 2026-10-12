@@ -27,3 +27,6 @@ _audit.py
 .env.backup*
 .env.bak
 .env.*.bak
+
+# Print-ready PDFs built by scripts/build_chanting_print.py
+_print/
