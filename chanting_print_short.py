@@ -2238,4 +2238,1038 @@ SHORT = {
             'vision of the four noble truths.'
         ),
     },
+    'dhammacakkappavattana-suttam': {
+        'background': (
+            'The book prints its source. This is the discourse the tradition dates '
+            'its beginning from, and everything else in the collection refers back '
+            'to it. It is tightly built: a rejection, a definition, a fourfold '
+            'analysis worked through three times, and a result.'
+        ),
+        'meaning': (
+            'It rejects two extremes, chasing sensual pleasure and self-torment, '
+            'for the middle way, the noble eightfold path. Each of the four noble '
+            'truths is known, acted on and completed, twelve steps in all, before '
+            "awakening is claimed. Koṇḍañña understands, and is renamed 'Koṇḍañña "
+            "Who Understood'."
+        ),
+    },
+    'bot-khat-chumnum-thewada-chet-tamnan': {
+        'background': (
+            'The Seven Tamnan is the shorter of the two great collections of '
+            'protective chants. Its opening is printed here again, because this '
+            'collection is chanted on its own.'
+        ),
+        'meaning': (
+            'It tells the monks to chant with loving-kindness and undistracted '
+            'minds, and invites devas from every world to come. They are asked not '
+            'for protection or favour but for their attention: this is the time to '
+            'hear the Dhamma.'
+        ),
+    },
+    'pubbabhaga-namakara-chet-tamnan': {
+        'background': (
+            'Another full printing of the preliminary salutation, set out in every '
+            'collection that uses it because each is chanted from its own pages.'
+        ),
+        'meaning': (
+            'Homage to the Blessed One, worthy and perfectly enlightened by '
+            'himself: no request and no doctrine. Here it is the first thing said '
+            'in front of the devas just invited, three times, marking a formal '
+            'beginning.'
+        ),
+    },
+    'sarana-gamana-patha-chet-tamnan': {
+        'background': (
+            'The going for refuge in the Seven Tamnan, set nine statements to nine '
+            'lines, as in the Twelve Tamnan.'
+        ),
+        'meaning': (
+            'I go to the Buddha, the Dhamma and the Sangha for refuge, three times '
+            'over, slowly. A protective chanting states where safety is sought '
+            'before it asks for anything.'
+        ),
+    },
+    'namakarasiddhi-gatha-chet-tamnan': {
+        'background': (
+            'The Seven Tamnan uses the same texts as the Twelve Tamnan, chosen and '
+            'shortened. These verses hold that the act of paying homage itself '
+            'brings something about.'
+        ),
+        'meaning': (
+            'In three parts, the verses describe and salute each of the Three '
+            'Jewels, beginning with the Buddha who freed others from delusion. Each '
+            "part ends 'may victory and success be yours': a blessing for the "
+            'hearer, not the reciter.'
+        ),
+    },
+    'namokara-atthaka-gatha-chet-tamnan': {
+        'background': (
+            'This is the Seven Tamnan printing of the eightfold homage, each line '
+            "beginning with 'homage'."
+        ),
+        'meaning': (
+            'It honours the Buddha, the Dhamma and the Sangha, then the Triple Gem '
+            'as a sacred form of words, the premise of protective chanting. It ends '
+            'by asking not for general safety but for strength in the task at hand.'
+        ),
+    },
+    'mangala-suttam-chet-tamnan': {
+        'background': (
+            'The book prints its source. This shorter printing of the discourse on '
+            "blessings drops the story frame and opens at the deity's question."
+        ),
+        'meaning': (
+            'Asked what the highest blessing is, the Buddha gives a list that '
+            'begins with avoiding fools and keeping wise company, and moves through '
+            'learning, skill, caring for parents, generosity and blameless action. '
+            'Those who live like this go safely everywhere: safety follows from '
+            'conduct.'
+        ),
+    },
+    'ratana-suttam-chet-tamnan': {
+        'background': (
+            'This is the Seven Tamnan printing of the Ratana Sutta, the clearest '
+            'example of how a protective chant works: a truth is stated, and '
+            'well-being asked on the strength of it.'
+        ),
+        'meaning': (
+            'It asks all beings present to listen, then praises each of the Three '
+            "Jewels as a jewel, ending each verse 'by this truth may there be "
+            "well-being'. It closes with the same beings it summoned, having given "
+            'them something true to hear.'
+        ),
+    },
+    'karaniyametta-suttam-chet-tamnan': {
+        'background': (
+            'This printing of the discourse on loving-kindness starts more than '
+            'halfway through the full text, at the verse on extending '
+            'loving-kindness to the whole world. The opening list of qualities is '
+            'left out.'
+        ),
+        'meaning': (
+            'Cultivate boundless loving-kindness for the whole world, above, below '
+            'and across, without hatred or enmity, leaving no one out. It ends as '
+            'the full version does, with the one who is virtuous and clear-sighted '
+            'coming no more to rebirth.'
+        ),
+    },
+    'khandha-parittam-chet-tamnan': {
+        'background': (
+            'This printing of the snake protection opens differently from the '
+            'fuller one: with a statement about measure rather than with the snake '
+            "families' names."
+        ),
+        'meaning': (
+            'The Buddha, the Dhamma and the Sangha are measureless; creeping things '
+            'are measurable. Loving-kindness is then declared, and safety is said '
+            'to follow from it, without command or force. It ends with homage to '
+            'the Buddha and the seven Buddhas of the past.'
+        ),
+    },
+    'dhajagga-parittam-chet-tamnan': {
+        'background': (
+            'The book marks this as the abridged form of the Banner Crest '
+            "protection and prints its source. It drops the story of Sakka's banner "
+            'and keeps the instruction.'
+        ),
+        'meaning': (
+            "It recites the Buddha's qualities and the promise: recollect me, and "
+            'whatever fear, terror or hair standing on end arises will go. The same '
+            "is said of the Dhamma and the Sangha. The detail about the body's "
+            'response, not courage, makes it credible.'
+        ),
+    },
+    'atanatiya-parittam-chet-tamnan': {
+        'background': (
+            'This is a much shorter printing of the Āṭānāṭiya protection; what '
+            "survives is the naming, which is the chant's method."
+        ),
+        'meaning': (
+            'The seven Buddhas of the past are named in order, each with his own '
+            'epithet, establishing protection by reciting who holds authority. It '
+            'ends with the present teacher: we revere the Buddha Gotama.'
+        ),
+    },
+    'angulimala-parittam-chet-tamnan': {
+        'background': (
+            'The shortest chant in the collection, the Aṅgulimāla protection said '
+            'once rather than three times. Its speaker had been a murderer before '
+            'he was ordained.'
+        ),
+        'meaning': (
+            'Since his noble birth, his ordination, Aṅgulimāla is not aware of '
+            'having intentionally killed any being. He dates his claim and vouches '
+            'only for what he knows. By that truth he wishes well-being to the '
+            'mother and her child.'
+        ),
+    },
+    'bojjhanga-parittam-chet-tamnan': {
+        'background': (
+            'The seven factors of awakening, already met as three discourses '
+            'chanted at sickbeds, are here compressed into a verse protection.'
+        ),
+        'meaning': (
+            'It names the seven factors, from mindfulness to equanimity, with the '
+            "refrain 'by this utterance of truth may you always be well'. It "
+            'recalls together how Mahākassapa, Mahāmoggallāna and the Buddha '
+            'himself rose from illness on hearing them.'
+        ),
+    },
+    'abhaya-parittam-chet-tamnan': {
+        'background': (
+            'Four lines said three times, by the power of the Buddha, the Dhamma '
+            'and the Sangha, to remove fear.'
+        ),
+        'meaning': (
+            'It names ill omens, an unwelcome bird call, a bad planet and a '
+            'disturbing dream, signs that frighten rather than real dangers. It '
+            'asks that they come to nothing: not argued with, just stripped of '
+            'their force.'
+        ),
+    },
+    'devata-uyyojana-gatha-chet-tamnan': {
+        'background': (
+            'The service opened by inviting the devas; these verses formally send '
+            'them away again.'
+        ),
+        'meaning': (
+            'It wishes that all who suffer, fear or grieve be free of it, shares '
+            'the merit with the devas, and wishes them a practice of their own. '
+            'This printing adds a final line: by the power of the arahants, I bind '
+            'a protection on every side.'
+        ),
+    },
+    'jaya-parittam-chet-tamnan': {
+        'background': (
+            'The last and longest protection in the Seven Tamnan gathers up the '
+            'closing material of the whole collection, so many lines will be '
+            'familiar.'
+        ),
+        'meaning': (
+            'As the Buddha fulfilled the perfections and won awakening, so may '
+            'victory be yours. A good day is made by good actions of body, speech '
+            'and mind, not found on a calendar. The collection ends with a plain '
+            'request that the misfortunes of those present be destroyed.'
+        ),
+    },
+    'bot-khat-mahasamaya-suttam': {
+        'background': (
+            'This introduction opens not with the gathering but with its cause: the '
+            'sight of a Buddha is rare, and rare the arising of a Teacher in a '
+            'blinded world.'
+        ),
+        'meaning': (
+            'Deities from ten world-systems came to the Great Wood at Kapilavatthu '
+            'to see the Buddha and his spotless Sangha. It is recited not for the '
+            "chanters' merit or protection, but to gladden the hosts of devas the "
+            'discourse describes.'
+        ),
+    },
+    'mahasamaya-suttam': {
+        'background': (
+            'The book prints its source. This is the longest chant in the '
+            'Thai-script half of the book, and it appears again in roman script in '
+            'the appendix. It is a catalogue of deities, named and placed one after '
+            'another.'
+        ),
+        'meaning': (
+            'With the Buddha and five hundred arahants among the Sakyans, deities '
+            'gather from ten world-systems. The long naming builds a sense of scale '
+            "no summary can, and only works when chanted. When Māra's army comes, "
+            'it finds people free of lust and fear, and not a hair is stirred.'
+        ),
+    },
+    'girimananda-suttam': {
+        'background': (
+            'Ānanda asks the Buddha to visit a gravely ill monk, Girimānanda, and '
+            'instead the Buddha sends a list of ten perceptions. It belongs with '
+            'the factors-of-awakening discourses, used the same way at sickbeds.'
+        ),
+        'meaning': (
+            'Each perception is practised alone in a quiet place: impermanence, '
+            "not-self, the body's unattractiveness, danger, dispassion, cessation "
+            'and mindfulness of breathing, among others. None mentions the illness. '
+            'Hearing them, it is possible the affliction may subside; Ānanda '
+            'recites them and the monk recovers.'
+        ),
+    },
+    'bot-khat-lokadhamma-suttam': {
+        'background': (
+            'This introduction defines its term rather than telling a story. The '
+            'worldly conditions are the eight things that happen to everybody, and '
+            'the discourse is about them.'
+        ),
+        'meaning': (
+            'As long as the world goes on, these conditions turn with it, pleasant '
+            'and unpleasant, pulling towards liking and aversion. The discourse is '
+            'taught so that we may know things as they are, not to make the eight '
+            'stop coming.'
+        ),
+    },
+    'lokadhamma-suttam': {
+        'background': (
+            'This is one of the most quoted discourses in lay teaching, because its '
+            'eight worldly conditions cover most of what people worry about. It '
+            'examines the difference between two people to whom the same eight '
+            'things happen.'
+        ),
+        'meaning': (
+            'The eight are four pairs: gain and loss, fame and obscurity, blame and '
+            'praise, pleasure and pain. Nobody escapes them. The ordinary person '
+            'does not reflect when they arise; the wise disciple sees that each is '
+            'impermanent and bound to change. The difference is recognising them '
+            'for what they are as they happen.'
+        ),
+    },
+    'gatha-jut-thian-chai-plae': {
+        'background': (
+            'From page 193 the book prints its chants a second time, with a Thai '
+            'translation under each Pali line. This is the first of those second '
+            'printings; the Pali is unchanged.'
+        ),
+        'meaning': (
+            'It honours the all-knowing Buddha, the supreme Dhamma and the Sangha '
+            'established on the path, and wishes that all dangers perish. The Thai '
+            'lets readers follow the meaning as they chant: the first half of the '
+            'book is for chanting, the second for understanding.'
+        ),
+    },
+    'kham-bucha-phra-ratanattaya-plae': {
+        'background': (
+            'This is the chant that opens the whole book, printed again with its '
+            'Thai translation. It begins the translated half.'
+        ),
+        'meaning': (
+            'It names the Three Jewels, makes the offering, and asks the Buddha, '
+            'long passed away, to accept it. The Thai often expands the Pali, '
+            "turning a title such as 'worthy' into a description, so readers can "
+            'follow the meaning, not just the sound.'
+        ),
+    },
+    'kham-namatsakan-phra-ratanattaya-plae': {
+        'background': (
+            'The three salutations to the Triple Gem, printed again with their '
+            'Thai, with the same instruction to bow together.'
+        ),
+        'meaning': (
+            'Each line states a quality of one of the Three Jewels, makes an act of '
+            'homage, and is followed by a shared bow. The Thai keeps the three '
+            'different verbs, to salute, to pay homage, to bow, which an English '
+            'translation easily blurs into one.'
+        ),
+    },
+    'pubbabhaga-namakara-plae': {
+        'background': (
+            'The preliminary salutation, printed for the first time with its Thai '
+            'translation, three times in full as always.'
+        ),
+        'meaning': (
+            'Homage to the Blessed One, worthy and perfectly enlightened by '
+            'himself. The Thai keeps the Buddha spoken of rather than spoken to. '
+            'For many readers it is the first time they see, in their own language, '
+            'what this lifelong sentence means.'
+        ),
+    },
+    'buddhabhithuti-plae': {
+        'background': (
+            'The praise of the Buddha, printed again with its Thai translation, set '
+            'as its own lines beneath the Pali.'
+        ),
+        'meaning': (
+            "It is one long sentence that opens with 'that Tathāgata' and is "
+            'completed only at the end, in offering and a bow. Between come his '
+            'qualities and his deeds as teacher. With the Thai beneath, a reader '
+            'can follow the sentence building and feel it land.'
+        ),
+    },
+    'dhammabhithuti-plae': {
+        'background': (
+            'The praise of the Dhamma, printed again with its Thai translation. It '
+            'is the shortest of the three praises.'
+        ),
+        'meaning': (
+            'Its six qualities describe what can be done with the teaching: well '
+            'proclaimed, visible here and now, timeless, inviting all to see, '
+            'leading onwards, and known by each person for themselves. The Thai '
+            'expands several single Pali words into clauses, which is exactly what '
+            'a learner needs.'
+        ),
+    },
+    'sanghabhithuti-plae': {
+        'background': (
+            'The praise of the Sangha, printed again with its Thai translation. It '
+            'needs its translation most, because the phrase defining the Sangha is '
+            'not obvious from the Pali alone.'
+        ),
+        'meaning': (
+            'It names four ways of practising well, then defines the Sangha as the '
+            'four pairs and eight kinds of noble ones, not simply monks who are '
+            'present. Then it gives the honours due, ending with the unexcelled '
+            'field of merit for the world: who they are, and what follows from it.'
+        ),
+    },
+    'ratanattayappanamagatha-plae': {
+        'background': (
+            'The verses of homage to the Triple Gem, printed again with their Thai '
+            'translation. As the first verses in metre in the translated half, '
+            'their rich imagery is harder to translate.'
+        ),
+        'meaning': (
+            'The Buddha is an ocean of compassion, the Dhamma a lamp showing the '
+            "way, the Sangha the finest field; each stanza ends 'I revere it with "
+            "devotion'. The last stanza dedicates the merit of this reverence to "
+            'clearing away obstacles.'
+        ),
+    },
+    'samvega-parikittana-patha-plae': {
+        'background': (
+            'The passage on spiritual urgency, printed again with its Thai '
+            'translation. Saṃvega is the jolt of seeing that life is serious and '
+            'time is short, the kind that starts a person moving.'
+        ),
+        'meaning': (
+            'It sets out the first noble truth, then repeats the five aggregates as '
+            'suffering, impermanent and not-self, slowly enough to sink in. It then '
+            'turns to the chanters, beset by birth, ageing and death, and to the '
+            'hope that an end to suffering can be found.'
+        ),
+    },
+    'buddha-jayamangala-gatha-plae': {
+        'background': (
+            'The eight verses of victory, printed again with their Thai '
+            'translation. The Thai title names the occasion too: the blessing '
+            'offered by the monks.'
+        ),
+        'meaning': (
+            'Eight adversaries, from Māra to a mistaken god, are each overcome by a '
+            'different quality, never by force: generosity, patience, '
+            'loving-kindness, gentleness, wisdom and knowledge. A ninth verse '
+            'commends recalling them daily, and with the Thai they become usable: '
+            'eight troubles and eight answers.'
+        ),
+    },
+    'tangkhanika-paccavekkhana-patho-plae': {
+        'background': (
+            'The reflection at the moment of use, printed again with its Thai '
+            'translation. It is made at the instant of using a requisite, not about '
+            'requisites in general.'
+        ),
+        'meaning': (
+            'Each reflection names its requisite and allows it only for its basic '
+            'purpose: the robe to ward off cold and heat, food to sustain the body. '
+            'With the Thai beneath, a reader can see the question being put in the '
+            'middle of the act, where it can be answered.'
+        ),
+    },
+    'dhatupatikula-paccavekkhana-plae': {
+        'background': (
+            'The reflection on elements and repulsiveness, printed again with its '
+            'Thai translation; the book prints it once without and once with a '
+            'translation.'
+        ),
+        'meaning': (
+            'The robe is merely elements, and so is its user: not a being, not a '
+            'soul, empty. The requisites are not repulsive in themselves but become '
+            'so on touching this body. It undercuts not food or clothing but the '
+            'sense of someone to whom pleasant things are happening.'
+        ),
+    },
+    'pattidana-gatha-plae': {
+        'background': (
+            'The verses for sharing merit, printed again with their Thai '
+            'translation. Merit is held not to be used up by sharing, so a service '
+            'ends by passing on what it made.'
+        ),
+        'meaning': (
+            'It gives the merit to the devas of the place, then widens step by step '
+            'to monks, lay supporters, towns, rulers and all living beings. It '
+            'closes with ordinary blessings: rain in season and rulers who care for '
+            'their people as parents care for a child.'
+        ),
+    },
+    'sabbapattidana-gatha-plae': {
+        'background': (
+            'Sabbapattidāna is giving merit to all. Where the previous verses begin '
+            'with the devas of one monastery, these begin with beings without end, '
+            'printed here with their Thai translation.'
+        ),
+        'meaning': (
+            'It shares merit with those dear and virtuous such as parents, seen or '
+            'unseen, and with the neutral and the hostile, and then every kind of '
+            'being in every realm. Those who know of it may rejoice; for those who '
+            'do not, may the devas carry the news.'
+        ),
+    },
+    'patthana-thapana-gatha-plae': {
+        'background': (
+            'This sets down an aspiration, printed with its Thai translation. '
+            'Unusually, it plans for the aspiration not being granted.'
+        ),
+        'meaning': (
+            'First: by this merit, may I quickly realise the supramundane states. '
+            'But if I must wander on, may I avoid the states that block progress, '
+            'keep the precepts and not cling to sense pleasures. If no Buddha '
+            'arises, may I awaken as a solitary Buddha. It works through every '
+            'contingency and refuses to end in nothing.'
+        ),
+    },
+    'khemakhema-saranadipika-plae': {
+        'background': (
+            'These verses contrast the safe with the unsafe and are among the most '
+            'quoted canonical lines on refuge. They are printed here with their '
+            'Thai translation.'
+        ),
+        'meaning': (
+            'Driven by fear, many take refuge in mountains, forests, parks and tree '
+            'shrines, but that refuge does not free them from suffering. Whoever '
+            'goes to the Buddha, Dhamma and Sangha for refuge sees the four noble '
+            'truths with wisdom: the true refuge is understanding.'
+        ),
+    },
+    'abhinha-paccavekkhana-plae': {
+        'background': (
+            'The five constant reflections, printed with their Thai translation. '
+            "This is the briefest of the book's three printings, with the formulas "
+            'but not the explanatory discourse.'
+        ),
+        'meaning': (
+            'I am subject to ageing, illness and death, the ordinary make-up of a '
+            'life. I will be parted from all I love, and must hold it knowing that. '
+            'Whatever I do, I will be its heir. Thus should we often reflect.'
+        ),
+    },
+    'dvattimsakara-patha': {
+        'background': (
+            'This is one of the oldest and most used reflections in the tradition: '
+            'the body framed as a bounded whole, its thirty-two parts listed, and '
+            'the frame repeated. Thai chanting books include the brain, which some '
+            'older versions omit.'
+        ),
+        'meaning': (
+            'This body, from the soles of the feet up and the crown down, bounded '
+            'by skin, is full of impure things. The parts are then listed plainly, '
+            'without adjectives: hair, nails, teeth, skin, flesh, bone, organs and '
+            'twelve fluids, ending with the brain. The opening sentence is '
+            'repeated, now with the list standing behind it.'
+        ),
+    },
+    'bharasutta-gatha': {
+        'background': (
+            'These verses close a short discourse on the burden, which defines the '
+            'burden, its bearer, taking it up and setting it down. The chanting '
+            'books print the verses without the prose. The Thai translation is '
+            'unusually conversational in places.'
+        ),
+        'meaning': (
+            'The five aggregates are the burden, the person its bearer; taking it '
+            'up is suffering, setting it down is happiness. The verses describe how '
+            'things appear without conceding a self. Whoever has set the heavy '
+            'burden down and uprooted craving takes up no other, free of hunger and '
+            'wholly at peace.'
+        ),
+    },
+    'tilokavijaya-pattidana': {
+        'background': (
+            'Pattidāna verses give away merit just gained. These are attributed to '
+            'a king victorious in the three worlds, though no source is printed. '
+            'The Thai translation is expansive rather than literal, as is common in '
+            'older Thai chanting books.'
+        ),
+        'meaning': (
+            'It gathers every good act of body, speech and mind, and shares the '
+            'merit with all beings, with or without perception. It asks the devas '
+            'to tell those who do not know of it, since sharing is completed by '
+            'being made known. It ends by asking the plainest good: may all beings '
+            'find agreeable food.'
+        ),
+    },
+    'sankhara-contemplation': {
+        'background': (
+            'These verses gather three teachings the Buddha returned to often: the '
+            'three characteristics, the certainty of death, and the body after '
+            'death, lying on the ground like discarded firewood. Thai temples set '
+            "them together so the reflection moves from a general truth to one's "
+            'own body.'
+        ),
+        'meaning': (
+            'It moves from all conditioned things, to the certainty of death, to '
+            'this body on this ground. It speaks in the first person, my life is '
+            'uncertain, my death is certain, because the point is that I will die. '
+            'Chanted daily rather than only at funerals, it aims not at gloom but '
+            'at urgency.'
+        ),
+    },
+    'abhinha-paccavekkhana': {
+        'background': (
+            'This is among the best known short reflections, for lay people and '
+            'monastics alike; its Thai subtitle says these are to be reflected on '
+            'often. The book prints masculine and feminine forms in brackets, so '
+            'each reciter speaks it honestly of themselves.'
+        ),
+        'meaning': (
+            'Ageing, sickness and death are not misfortunes that may come but the '
+            'ordinary nature of a life. I will be parted from all I love, and '
+            'parting is already part of having. What remains my own is my action: '
+            'whatever I do, good or bad, I will be its heir.'
+        ),
+    },
+    'kham-bucha-phra-ratanattaya-yen-plae': {
+        'background': (
+            'The words of offering to the Triple Gem for the evening, printed again '
+            'with their Thai translation. This is the fourth printing of the text '
+            'in the book, because each page must be usable on its own.'
+        ),
+        'meaning': (
+            'It names each of the Three Jewels, then admits the Buddha passed away '
+            'long ago and the gifts are poor, and offers anyway. It settles the '
+            'assembly, and its last line names who benefits: not the one receiving, '
+            'but us.'
+        ),
+    },
+    'kham-namatsakan-phra-ratanattaya-yen-plae': {
+        'background': (
+            'The three salutations to the Triple Gem for the evening, printed again '
+            'with their Thai translation, each followed by a shared bow.'
+        ),
+        'meaning': (
+            'Each line states a quality of one of the Three Jewels and then names '
+            'the act of homage. The Thai keeps the three different verbs apart: '
+            'saluting a person, revering what is honoured, and bowing. The words '
+            'exist to give each bow its reason.'
+        ),
+    },
+    'pubbabhaga-namakara-yen-plae': {
+        'background': (
+            'The preliminary salutation for the evening, printed again with its '
+            'Thai translation, three times in full as always.'
+        ),
+        'meaning': (
+            'Homage to the Blessed One, worthy and perfectly enlightened by '
+            'himself, spoken of rather than to. Said three times, it marks the '
+            'threshold from ordinary speech into chanting.'
+        ),
+    },
+    'buddhanussati-plae': {
+        'background': (
+            'The recollection of the Buddha, printed again with its Thai '
+            'translation and its own invitation line, which the earlier printing '
+            'lacks.'
+        ),
+        'meaning': (
+            "It introduces the Buddha's nine qualities as 'a good report that has "
+            "gone abroad', each on its own line, from worthy to blessed. Because "
+            'they come as a report, the reciter recollects rather than claims.'
+        ),
+    },
+    'buddhabhigiti-plae': {
+        'background': (
+            'The first of the three evening hymns, printed again with its Thai '
+            'translation. All three share the same words from the fifth verse on.'
+        ),
+        'meaning': (
+            'It praises the Buddha, who woke the good as the sun wakes the lotus, '
+            "then turns personal: 'I am the Buddha's servant… for me there is no "
+            "other refuge.' At a printed instruction everyone prostrates and, in a "
+            'lowered voice, asks pardon for the day.'
+        ),
+    },
+    'dhammanussati-plae': {
+        'background': (
+            'The recollection of the Dhamma, printed again with its Thai '
+            'translation, with each quality on its own line.'
+        ),
+        'meaning': (
+            'The six qualities describe what can be done with the teaching: well '
+            'proclaimed, visible here and now, timeless, inviting all to see, '
+            'leading onwards, and known by each person for themselves. No one '
+            'chanting speaks for the person beside them.'
+        ),
+    },
+    'dhammabhigiti-plae': {
+        'background': (
+            'The second evening hymn, printed again with its Thai translation; from '
+            'the fifth verse it matches the hymn to the Buddha.'
+        ),
+        'meaning': (
+            'The Dhamma holds up those who hold to it and dispels darkness. The '
+            'reciter calls themselves its servant and surrenders body and life to '
+            'it, then prostrates and asks pardon for any neglect of the Dhamma.'
+        ),
+    },
+    'sanghanussati-plae': {
+        'background': (
+            'The recollection of the Sangha, the third of the evening '
+            'recollections, printed again with its Thai translation.'
+        ),
+        'meaning': (
+            'It names four ways of practising well, and the Thai spells out what '
+            "'methodically' means: practising by the right method in order to know "
+            'the Dhamma. It then defines the Sangha as the noble ones and praises '
+            'them as the unexcelled field of merit.'
+        ),
+    },
+    'sanghabhigiti-plae': {
+        'background': (
+            'The third evening hymn, printed again with its Thai translation, '
+            'repeating the same template a third time with a new object.'
+        ),
+        'meaning': (
+            'It salutes the Sangha, born of the true Dhamma and wholly pure, and '
+            'the reciter calls themselves its servant with no other refuge. The '
+            'same complete devotion is offered to all three Jewels, ranked equally, '
+            'and it ends with prostration and a quiet request for pardon.'
+        ),
+    },
+    'atita-paccavekkhana-patha-plae': {
+        'background': (
+            'The reflection on requisites already used, printed again with its Thai '
+            'translation and a heading for each requisite. It exists because the '
+            'reflection at the moment of use is often not made.'
+        ),
+        'meaning': (
+            "Each section begins 'whatever I have used today without reflecting', "
+            'assuming the reflection was missed, then applies the basic purposes in '
+            'the past tense. It is a rule that expects to be forgotten and provides '
+            'for it.'
+        ),
+    },
+    'buddhamangala-gatha-plae': {
+        'background': (
+            "Printed here as 'homage to the arahants of the eight directions', a "
+            'plainer name for these verses, which build an arrangement rather than '
+            'a teaching.'
+        ),
+        'meaning': (
+            'The Buddha sits at the centre with eight disciples at the eight points '
+            'of the compass, each given only a direction, forming a complete '
+            'circle. All are present here, honoured by us, and by their power may '
+            'every blessing be ours.'
+        ),
+    },
+    'unhissavijaya-gatha': {
+        'background': (
+            "Uṇhissavijaya is 'the victory of the crown of the head'. These verses "
+            'belong to the protective tradition rather than the canon, are '
+            'addressed to a deity, and are often written out and carried.'
+        ),
+        'meaning': (
+            'It calls itself an unsurpassed teaching, to be taken up for all '
+            "beings' welfare. It wards off royal punishment, spirits, fire, wild "
+            'animals, snakes, poison and untimely death. Writing, honouring, '
+            'remembering, reciting or hearing it all count, which is why it has '
+            'long been carried on amulets and cloth.'
+        ),
+    },
+    'gathajinabanjara-thai': {
+        'background': (
+            "Jinapañjara is the Victor's cage, a protective structure built of holy "
+            'beings with the reciter inside. The book prints it twice; this '
+            'Thai-script printing adds an instruction to meditate.'
+        ),
+        'meaning': (
+            'It promises sons and wealth, then places the Buddhas, the Dhamma and '
+            "named disciples on each part of the reciter's body. It ends in the "
+            "present tense: guarded by the true Dhamma, I live in the Victor's "
+            'cage, describing a structure built during the chanting.'
+        ),
+    },
+    'uddissanadhitthana-gatha-plae': {
+        'background': (
+            'The verses of dedication and resolve, printed again with their Thai '
+            'translation.'
+        ),
+        'meaning': (
+            'The merit goes to teachers, parents and kin, the sun, moon and king, '
+            'gods and Māra, friends, the indifferent and the hostile. The speaker '
+            'resolves to cut off craving and clinging in every birth, and asks only '
+            'that Māra find no opening: room to keep working.'
+        ),
+    },
+    'yod-phrakantraipidok-thai': {
+        'background': (
+            'Its title claims to be the peak of the Tipiṭaka. The book prints it in '
+            'Thai script here and in roman script in the appendix, with no '
+            'translation in either.'
+        ),
+        'meaning': (
+            'It breaks the familiar recollections into single epithets, each '
+            'recollected and taken as refuge separately. It ends with heart '
+            'syllables set beside suffering, impermanence and not-self, from a Thai '
+            'esoteric tradition in which a syllable carries the whole of what it '
+            'abbreviates.'
+        ),
+    },
+    'vipassit-thai': {
+        'background': (
+            'At nine words this is the shortest chant in the book. It is printed '
+            'twice, in Thai script and in roman script, without translation.'
+        ),
+        'meaning': (
+            'May all suffering, all fear and all illness perish: the three things '
+            'the whole protective collection works on. It is a blessing short '
+            'enough to say in a doorway.'
+        ),
+    },
+    'kham-aradhana-sin-5-prokati': {
+        'background': (
+            'This is the commonest formula in Thai lay Buddhist life, said at the '
+            'start of almost every ceremony. What makes it the ordinary form is one '
+            'phrase: to keep each precept separately.'
+        ),
+        'meaning': (
+            'It asks for the five precepts together with the Three Refuges. Keeping '
+            'them separately means each stands alone: breaking one leaves the other '
+            'four intact. It is the arrangement most lay people live under, and the '
+            'special form printed beside it is the alternative.'
+        ),
+    },
+    'kham-aradhana-sin-5-phiset': {
+        'background': (
+            'Niccasīla is the constant virtue: the five precepts kept continuously, '
+            'not just for a ceremony. It differs from the ordinary request in one '
+            'phrase.'
+        ),
+        'meaning': (
+            "It asks for the five precepts 'complete in their five factors', taken "
+            'as one whole, so breaking one breaks the undertaking. The harder '
+            'commitment shows only in the words used, and the book prints both '
+            'forms side by side and lets the person choose.'
+        ),
+    },
+    'kham-aradhana-sin-8-prokati': {
+        'background': (
+            'This is the ordinary request for eight precepts, used when someone '
+            'wants them but is not keeping a formal observance day. It shares the '
+            "phrase 'to keep each one separately'."
+        ),
+        'meaning': (
+            'It differs from the ordinary five only in the number. Each precept '
+            'stands alone, so eating after noon breaks that rule but not the whole '
+            'undertaking. Set beside the Uposatha form, it shows two different '
+            'commitments that look identical from outside, decided only by the '
+            'words said at the start.'
+        ),
+    },
+    'kham-aradhana-sin-8-phiset': {
+        'background': (
+            'The last of four requests for precepts on these pages, in two pairs: '
+            'ordinary and special five, ordinary and special eight. The rules are '
+            'the same; what differs is how they are held.'
+        ),
+        'meaning': (
+            "It asks for the Uposatha 'complete in its eight factors', a single "
+            'undertaking that breaks if any one rule is broken. The words a person '
+            'uses decide what they have taken on, and the book prints all four so '
+            'this cannot be blurred by accident.'
+        ),
+    },
+    'kham-aradhana-suat-phra-paritta': {
+        'background': (
+            'Every running order in this book begins with a lay person requesting '
+            'the protective chants, and these are the words of that request: three '
+            'couplets that differ only in the danger named.'
+        ),
+        'meaning': (
+            'Each asks for misfortune to be warded off and every good fortune '
+            'gained, then names one thing to destroy: all suffering, all fear, all '
+            'illness. It ends with an instruction: chant the auspicious paritta. '
+            'The whole protective ritual begins with a lay person asking the monks '
+            'to start.'
+        ),
+    },
+    'kham-aradhana-sadaeng-tham': {
+        'background': (
+            'This is the most quoted request in Thai Buddhism: a sermon is asked '
+            'for, not offered. It recalls the request made after the awakening, '
+            'when the Buddha was inclined not to teach.'
+        ),
+        'meaning': (
+            'Brahmā Sahampati, hands joined, asked the Buddha to teach, because '
+            'there are beings with little dust in their eyes: not all would '
+            'understand, only some. He asked out of compassion. Every sermon is '
+            'requested in words that remember it might never have been given.'
+        ),
+    },
+    'kham-aradhana-sadaeng-tham-phisadan': {
+        'background': (
+            'This is the long form of the request for a teaching. It tells the '
+            'story the short form only alludes to, and ends by joining that story '
+            'to the present gathering.'
+        ),
+        'meaning': (
+            "After Brahmā's request, the Buddha, moved by compassion, looked on the "
+            'world with the eye of wisdom and decided to teach; everything in this '
+            'book depends on that moment. So this assembly has gathered to hear the '
+            'Dhamma, and asks the Sangha to teach and everyone to listen closely.'
+        ),
+    },
+    'kham-bangsukun-sop-rue-atthi': {
+        'background': (
+            'The paṃsukūla verse is chanted at every Thai funeral, holding the '
+            'cloth offered over the body. The book prints it under both Thai '
+            'monastic fraternities, one of the few places it names a difference of '
+            'school.'
+        ),
+        'meaning': (
+            'Impermanent, alas, are all formations, by nature arising and passing '
+            'away; having arisen, they cease. Nobody is named, and nothing is said '
+            'of where they have gone. The only consolation offered: their stilling '
+            'is happiness.'
+        ),
+    },
+    'kham-bangsukun-khon-pen': {
+        'background': (
+            'This follows the verse for the dead and is used for the living, at '
+            'ceremonies to extend life or turn misfortune, with the person lying '
+            'under the cloth as a body would.'
+        ),
+        'meaning': (
+            'Before long, alas, this body will lie on the earth, cast aside, '
+            'without consciousness, like a useless piece of firewood. Said over '
+            'someone hoping for a longer life, it names exactly what long life '
+            'postpones.'
+        ),
+    },
+    'kham-kho-khama-thot-phra-ratanatrai': {
+        'background': (
+            'This asks pardon of the Three Jewels in the same shape as the pardon '
+            'asked of a senior monk. It is the widest of the pardon formulas, '
+            "covering everything 'from birth onwards'."
+        ),
+        'meaning': (
+            'The speakers call themselves foolish, deluded and unskilful, and '
+            'confess any disrespect to the Buddha, Dhamma or Sangha by body, speech '
+            'or mind. They ask that it be accepted as a fault, for the sake of '
+            'restraint in future. What it produces is the honest statement itself.'
+        ),
+    },
+    'kham-kho-khama-thot-dae-phra-maha-thera': {
+        'background': (
+            'This is the fullest pardon formula, used towards the most senior '
+            "monks. It is printed with the elder's reply and blessing so the whole "
+            'exchange can be read as one.'
+        ),
+        'meaning': (
+            'The speakers call themselves foolish, deluded and unskilful, and blame '
+            'heedlessness or careless attention rather than malice. They ask the '
+            'elder to accept the fault as a fault, for the sake of future '
+            'restraint: not to excuse it, but to name it correctly.'
+        ),
+    },
+    'kham-rap-khama-thot-khong-phra-maha-thera': {
+        'background': (
+            "This is the elder's reply to the request for pardon, longer than the "
+            'request itself and following it clause by clause.'
+        ),
+        'meaning': (
+            'The elder agrees that a fault was committed and names it: you have '
+            'shown me disrespect. He then states the rule: whoever sees a fault as '
+            'a fault and makes amends according to the Dhamma, with restraint in '
+            "future, is forgiven. Pardon follows from the rule, not the elder's "
+            'mood, which is what makes it possible to ask.'
+        ),
+    },
+    'kham-anumothana-khong-phra-maha-thera': {
+        'background': (
+            'This is the third part of the exchange: having been apologised to and '
+            'given pardon, the elder gives his merit away to the people who wronged '
+            'him.'
+        ),
+        'meaning': (
+            'Whatever merit he has made by body, speech and mind, the same three '
+            'doors through which the offence came, he dedicates to them, that they '
+            'may rejoice and be happy, healthy and free from harm. The wronged '
+            'person handing everything to those who wronged him is the point of the '
+            'whole exchange.'
+        ),
+    },
+    'kham-kho-khama-thot-phra-therauthera': {
+        'background': (
+            'This is the shortest and most everyday pardon formula, printed with '
+            "the elder's reply and the junior monks' response."
+        ),
+        'meaning': (
+            'Pardon is asked for anything done through heedlessness, by body, '
+            'speech or mind. The elder replies: I forgive, and you should forgive '
+            'me too. Pardon is exchanged, not granted downward. A note explains how '
+            'to change the wording for one monk alone.'
+        ),
+    },
+    'gatha-jut-thian-chai': {
+        'background': (
+            'The victory candle is lit at the start of a great ceremony and burns '
+            'throughout, then is put out with its own chant at the end. The '
+            'lighting verse is four lines; the quenching verse is forty-one.'
+        ),
+        'meaning': (
+            'It names the all-knowing Buddha, the supreme Dhamma and the Sangha '
+            'established on the path, and asks that by their power all suffering, '
+            'misfortune and danger perish. Nothing is said about the candle: it '
+            'marks the start, briefly enough to say while holding a taper.'
+        ),
+    },
+    'gatha-dap-thian-chai': {
+        'background': (
+            'This closing chant is ten times longer than the lighting verse, '
+            'because it gathers up what was chanted during the ceremony, assembled '
+            'from protective chants found elsewhere in the book.'
+        ),
+        'meaning': (
+            'It opens with the refuge in each of the Three Jewels and a blessing of '
+            "victory after each, then recaps the ceremony's protective material. "
+            'Its last line makes the candle a simile: free of illness and enmity, '
+            'may you be quenched as this lamp is quenched. The ceremony ends by '
+            "wishing the goal, Nibbāna, the 'quenching'."
+        ),
+    },
+    'rabiap-suat-mon-ngan-phithi-mongkhon': {
+        'background': (
+            'The order of chanting for a birthday. It is usual to chant the '
+            'Discourse on Setting the Wheel of Dhamma Rolling, with the short Seven '
+            'Tamnan added at the end.'
+        ),
+        'meaning': (
+            'After the usual opening, the discourse of the first teaching is '
+            "chanted at length on the anniversary of a person's own beginning, "
+            'followed by the short Seven Tamnan and the familiar closing.'
+        ),
+    },
+    'rabiap-suat-mon-nai-ngan-phithi-mongkhon-uen': {
+        'background': (
+            'This short page answers one question: what is chanted at every '
+            'auspicious ceremony other than a birthday.'
+        ),
+        'meaning': (
+            'The usual practice is the Seven Tamnan alone, for house blessings, '
+            'weddings, new businesses and the rest. What varies is not the text but '
+            'the length: full, middling or short. One collection in three lengths '
+            'covers every occasion.'
+        ),
+    },
+    'rabiap-suat-chet-tamnan-yang-tem-thi': {
+        'background': (
+            'The Seven Tamnan is the shorter of the two great collections of '
+            'protective chants, and the book gives three running orders of '
+            'decreasing length. This is the full one.'
+        ),
+        'meaning': (
+            'A monk raises his fan and invites the devas; then the opening block of '
+            'homage, refuge and verses follows, shared by all three forms. The '
+            'fixed closing ends with the verse warding off bad planets and spirits. '
+            'Only the middle varies in length.'
+        ),
+    },
+    'rabiap-suat-chet-tamnan-yang-pan-klang': {
+        'background': (
+            'The middling form of the Seven Tamnan exists so a ceremony can fit an '
+            'evening. Its opening and closing match the full form.'
+        ),
+        'meaning': (
+            'It shortens by cutting within texts rather than dropping them, '
+            'keeping, for instance, the opening and ending of the Ratana Sutta. '
+            'Some, such as the discourse on loving-kindness, are chanted in full. '
+            'At a monastic occasion, the Aṅgulimāla verse about childbirth is '
+            'replaced by a different text.'
+        ),
+    },
 }
