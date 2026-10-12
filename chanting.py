@@ -2445,13 +2445,12 @@ CHANTS = [
             "The teaching is built around a numbered list, and the Pali makes "
             "the count explicit twice — once as a question, กะตะเม เอกาทะสะ, "
             "which eleven, and once in the summary that closes the teaching. "
-            "That structure makes the text unusually easy to verify: the "
-            "benefits should number exactly eleven, and in what you pasted "
-            "they do.",
+            "That structure makes the text unusually easy to check: the "
+            "benefits number exactly eleven.",
 
-            "As with the three preceding chants, no Thai rendering is "
-            "printed, so this entry stands at two of the five layers and the "
-            "English is my own off the Pali.",
+            "As with the three preceding chants, no Thai rendering is printed, "
+            "so the chant is given in Pali with an English translation made for "
+            "this edition.",
         ],
 
         'meaning': [
@@ -2833,8 +2832,8 @@ CHANTS = [
             "any stanza missing its refrain is a stanza with a line missing.",
 
             "As with the four preceding chants, no Thai rendering is printed, "
-            "so this entry stands at two of the five layers and the English "
-            "is my own off the Pali.",
+            "so the chant is given in Pali with an English translation made for "
+            "this edition.",
         ],
 
         'meaning': [
@@ -3232,10 +3231,9 @@ CHANTS = [
             "parts are chanted as a bare list, each with its Thai gloss "
             "beneath.",
 
-            "This completes the enumeration begun in the previous paste. The "
-            "list runs from the liver through the solid organs, then through "
-            "the twelve liquids, and ends with the brain in the skull — the "
-            "part that some older recensions omit, giving thirty-one, and "
+            "The list runs from the liver through the solid organs, then "
+            "through the twelve liquids, and ends with the brain in the skull — "
+            "the part that some older recensions omit, giving thirty-one, and "
             "that the Thai books consistently include.",
 
             "The chant then returns to its opening. The same four lines that "
@@ -3959,9 +3957,9 @@ CHANTS = [
             "points on the page. Both are recorded in the source field as the "
             "book gives them.",
 
-            "As with several preceding chants, no Thai rendering is printed, "
-            "so this entry stands at two of the five layers and the English is "
-            "my own off the Pali.",
+            "As with several preceding chants, no Thai rendering is printed, so "
+            "the chant is given in Pali with an English translation made for "
+            "this edition.",
         ],
 
         'meaning': [
@@ -4263,8 +4261,8 @@ CHANTS = [
 
             "The page prints the chant in two columns, both Pali, with each "
             "printed row forming one complete line of the metre. There is no "
-            "Thai translation on this page, so the entry stands at two of the "
-            "five layers and the English is my own off the Pali.",
+            "Thai translation on this page, so the chant is given in Pali with "
+            "an English translation made for this edition.",
         ],
 
         'meaning': [
@@ -4484,8 +4482,8 @@ CHANTS = [
             "pointing to the Saṃyutta, the Aṅguttara and the Udāna with a "
             "Vinaya parallel.",
 
-            "No Thai rendering is printed, so this entry stands at two of the "
-            "five layers and the English is my own off the Pali.",
+            "No Thai rendering is printed, so the chant is given in Pali with "
+            "an English translation made for this edition.",
         ],
 
         'meaning': [
@@ -5143,8 +5141,8 @@ CHANTS = [
             "the same name, and are followed there by a detailed exposition of "
             "what pursuing the past and hoping for the future consist in. The "
             "chanting books print the verses alone. No Thai rendering appears "
-            "on this page, so the entry stands at two of the five layers and "
-            "the English is my own off the Pali.",
+            "on this page, so the chant is given in Pali with an English "
+            "translation made for this edition.",
         ],
 
         'meaning': [
@@ -5362,10 +5360,9 @@ CHANTS = [
 
         'background': [
             "This is the first chant in the book, and the book prints three "
-            "headings above it — ระเบียบ, ทำวัตร - สวดมนต์, ทำวัตรเช้า — "
-            "which name the morning service as a whole rather than this "
-            "chant. They belong to the page rather than to the text and are "
-            "recorded in the page note.",
+            "headings above it — ระเบียบ, ทำวัตร - สวดมนต์, ทำวัตรเช้า — which "
+            "name the morning service as a whole rather than this chant. They "
+            "belong to the page rather than to this chant.",
 
             "บูชา, from the Pali pūjā, is honouring done by an act rather "
             "than by a feeling: something is brought and set down. The gifts "
@@ -5376,13 +5373,12 @@ CHANTS = [
             "canonical, but the arrangement into an offering formula is the "
             "work of the liturgy that built this service.",
 
-            "The book prints no Thai rendering here, so the chant stands at "
-            "two of the five layers: the Pali as it is chanted, and an "
-            "English translation written for this edition rather than taken "
-            "from the book. The page closes with an instruction to the "
-            "leader, who invites the assembly to make the offering and chant "
-            "the Namo; that instruction is a rubric and is kept in the page "
-            "note.",
+            "The book prints no Thai rendering here, so the chant stands at two "
+            "of the five layers: the Pali as it is chanted, and an English "
+            "translation written for this edition rather than taken from the "
+            "book. The page closes with an instruction to the leader, who "
+            "invites the assembly to make the offering and chant the Namo; that "
+            "instruction is a rubric, not part of the chant.",
         ],
 
         'meaning': [
@@ -5541,12 +5537,11 @@ CHANTS = [
             "the arrangement of them into three salutations short enough to "
             "bow after.",
 
-            "The bows are printed. Each line is followed by "
-            "(กราบพร้อมกัน), bow together, set on its own centred line — an "
-            "instruction to the chanters rather than words to be chanted, "
-            "and it is what gives this chant its shape: three statements, "
-            "three prostrations. It is recorded in this file as a rubric "
-            "rather than as a verse, since nobody says it aloud.",
+            "The bows are printed. Each line is followed by (กราบพร้อมกัน), bow "
+            "together, set on its own centred line — an instruction to the "
+            "chanters rather than words to be chanted, and it is what gives "
+            "this chant its shape: three statements, three prostrations. It is "
+            "an instruction rather than a verse, since nobody says it aloud.",
         ],
 
         'meaning': [
@@ -5786,10 +5781,9 @@ CHANTS = [
         ),
 
         'background': [
-            "The book prints no title above this chant. The name used here "
-            "is taken from the word ปุพพะภาคะนะมะการัง in the invitation on "
-            "the same page, and title_thai and title_pali are left empty "
-            "rather than invented.",
+            "The book prints no title above this chant. The name used here is "
+            "taken from the word ปุพพะภาคะนะมะการัง in the invitation on the "
+            "same page, rather than invented.",
 
             "It is also printed three times in full rather than marked as a "
             "repeat, and entered here the same way, with an instruction "
@@ -5902,11 +5896,10 @@ CHANTS = [
         ),
 
         'background': [
-            "The book prints no title above this chant. The name used here "
-            "is taken from the word พุทธาภิถุติง in its own invitation line "
-            "— หันทะ มะยัง พุทธาภิถุติง กะโรมะ เส, now let us give praise "
-            "to the Buddha — which the leader says to open it. title_thai "
-            "and title_pali are left empty rather than invented.",
+            "The book prints no title above this chant. The name used here is "
+            "taken from the word พุทธาภิถุติง in its own invitation line — "
+            "หันทะ มะยัง พุทธาภิถุติง กะโรมะ เส, now let us give praise to the "
+            "Buddha — which the leader says to open it.",
 
             "The material is not new. The string of epithets belongs to the "
             "standard recollection of the Buddha, and the passages about "
@@ -6063,10 +6056,9 @@ CHANTS = [
         ),
 
         'background': [
-            "The book prints no title above this chant. The name used here "
-            "is taken from the word ธัมมาภิถุติง in its own invitation "
-            "line, and title_thai and title_pali are left empty rather than "
-            "invented.",
+            "The book prints no title above this chant. The name used here is "
+            "taken from the word ธัมมาภิถุติง in its own invitation line, "
+            "rather than invented.",
 
             "It is the middle panel of a set of three, and the three are "
             "built to the same plan: โย โส, that one which, followed by "
@@ -6178,13 +6170,11 @@ CHANTS = [
         ),
 
         'background': [
-            "The book prints no title here either; the name is taken from "
-            "the word สังฆาภิถุติง in the invitation, and title_thai "
-            "and title_pali are left empty rather than invented. The chant "
-            "is followed by a fuller rubric than the two before it — bow "
-            "together, then all sit in the side-resting posture — which "
-            "marks the close of the whole opening movement rather than of "
-            "this chant alone.",
+            "The book prints no title here either; the name is taken from the "
+            "word สังฆาภิถุติง in the invitation. The chant is followed by a "
+            "fuller rubric than the two before it — bow together, then all sit "
+            "in the side-resting posture — which marks the close of the whole "
+            "opening movement rather than of this chant alone.",
 
             "สังโฆ here does not mean the monastic community in the "
             "ordinary sense. The fifth line defines it: the four pairs, the "
@@ -6593,10 +6583,9 @@ CHANTS = [
             "bring that about, which is unusual: most chants say what they "
             "are about rather than what they are for.",
 
-            "The passage shares its invitation with the verses before it — "
-            "one line on page 3 covers both — so the two are chanted as a "
-            "single unbroken stretch, and this chant's own invitation is "
-            "left empty in the file rather than duplicated.",
+            "The passage shares its invitation with the verses before it — one "
+            "line on page 3 covers both — so the two are chanted as a single "
+            "unbroken stretch.",
 
             "Much of the wording is canonical and will be recognised: the "
             "statement of the first noble truth, the list of the five "
@@ -7291,11 +7280,10 @@ CHANTS = [
             "has just made rather than by keeping it. Almost every formal "
             "chanting in this book closes with some form of this.",
 
-            "It is the last chant of the morning service, and the book says "
-            "so on the page: below the final verse it prints "
-            "จบพิธีทำวัตรเช้า, centred and bold. That line closes the "
-            "whole service rather than this chant, so it has no field here "
-            "and is kept in the page note.",
+            "It is the last chant of the morning service, and the book says so "
+            "on the page: below the final verse it prints จบพิธีทำวัตรเช้า, "
+            "centred and bold. That line closes the whole service rather than "
+            "this chant.",
 
             "The chant falls into two movements of different character, and "
             "the second begins at ฐาตุ จิรัง. No Thai rendering is "
@@ -8239,9 +8227,9 @@ CHANTS = [
             "refuge is taken, so nothing here is peculiar to the Uposatha "
             "except its position.",
 
-            "The homage is printed in full at the head, three times, and "
-            "each refuge is then said three times over. Nothing is "
-            "abbreviated, and the file follows the page.",
+            "The homage is printed in full at the head, three times, and each "
+            "refuge is then said three times over. Nothing is abbreviated, and "
+            "this edition follows the page.",
         ],
 
         'meaning': [
@@ -12599,8 +12587,8 @@ CHANTS = [
             "person here is the Buddha himself. The setting is the same "
             "Bamboo Grove at Rājagaha.",
 
-            "Alone of the three, this one carries a printed reference in the "
-            "book, which is kept verbatim in source_printed.",
+            "Alone of the three, this one carries a reference printed in the "
+            "book.",
         ],
 
         'meaning': [
@@ -13994,10 +13982,10 @@ CHANTS = [
             "direction, so that a proposition and its converse are both put "
             "to the test rather than one being assumed from the other.",
 
-            "A reference is printed on the page for it. The file's own check "
-            "on this page records that the citations here look shifted by "
-            "one against the texts they sit on, which is a question for the "
-            "book rather than for this edition.",
+            "A reference is printed on the page for it. The citations printed "
+            "on this page look shifted by one against the texts they sit "
+            "beside, which is a question for the book rather than for this "
+            "edition.",
         ],
 
         'meaning': [
@@ -15855,9 +15843,8 @@ CHANTS = [
             "the part of the teaching that is about living with others "
             "rather than about the mind.",
 
-            "Beneath the title the book prints a Thai line naming the "
-            "occasion the verses belong to, which is recorded in the file "
-            "with the chant.",
+            "Beneath the title the book prints a Thai line naming the occasion "
+            "the verses belong to.",
         ],
 
         'meaning': [
@@ -55750,7 +55737,8 @@ CHANTS = [
         ),
 
         'background': [
-            "The same chant that opens the whole book at page 1, printed again here with its Thai. The two printings differ in one small mark, which is recorded in the file's notes.",
+            "The same chant that opens the whole book at page 1, printed again "
+            "here with its Thai. The two printings differ in one small mark.",
 
             "It is the first chant of the translated half, so it is where a reader working through the second pass begins.",
         ],
@@ -56536,7 +56524,8 @@ CHANTS = [
         'background': [
             "The same chant printed at page 2 without a translation. This printing divides it into eighteen units against the earlier nine, because the Thai is set as its own units.",
 
-            "The file records that the two passes divide the same text differently, and that this is not a discrepancy to be reconciled.",
+            "The two printings divide the same text differently; that is a "
+            "difference of layout, not of text.",
         ],
 
         'meaning': [
@@ -58963,7 +58952,9 @@ CHANTS = [
         ),
 
         'background': [
-            "The same eight verses printed at page 44, here with their Thai. The book gives this printing no English title of its own — the entry carries a Thai title and a romanisation but no title_english — so the name used in this app is supplied.",
+            "The same eight verses printed at page 44, here with their Thai. "
+            "The book gives this printing no English title of its own, so the "
+            "name used in this app is supplied.",
 
             "Its Thai title names the occasion as well as the text: พุทธชัยมังคลคาถา (ถวายพรพระ), which is where these verses are actually heard.",
         ],
