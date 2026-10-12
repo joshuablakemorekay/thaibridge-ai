@@ -1,29 +1,31 @@
-"""Build the Digital Chanting Book as print-ready A5 PDFs, in three volumes.
+"""Build the Digital Chanting Book as one print-ready A4 PDF.
 
-    python scripts/build_chanting_print.py              # all three volumes, proof copies
-    python scripts/build_chanting_print.py --volume 2   # just one volume
-    python scripts/build_chanting_print.py --final      # no "proof" stamp
+    python scripts/build_chanting_print.py            # proof copy
+    python scripts/build_chanting_print.py --final    # no "proof" stamp
 
-Every chant in book order, with all five layers and the commentary, laid out
-by templates/print/chanting_book_print.html and turned into a PDF by the copy
-of Chrome already on this machine (headless, so no window opens). Nothing new
-to install: Chrome shapes Thai properly, which ReportLab does not — its
-stacked vowels and tone marks land in the wrong place.
+Every chant in book order, with all five layers and a short commentary, laid
+out by templates/print/chanting_book_print.html and turned into a PDF by the
+copy of Chrome already on this machine (headless, so no window opens).
+Nothing new to install: Chrome shapes Thai properly, which ReportLab does
+not — its stacked vowels and tone marks land in the wrong place.
 
-In one volume the book runs to over 1,100 A5 pages — too thick to hold while
-chanting and past what print-on-demand paperbacks allow. So it is printed as
-THREE volumes, each opening where one of the book's own parts opens
-(see VOLUMES).
+ONE A4 volume. The first layout was A5, which ran to over 1,100 pages and
+needed three volumes — too many, and too expensive to print. A4 with the
+verses in two columns holds the whole book in one.
+
+The commentary is the short version from chanting_print_short.py; the app
+keeps the full text. A chant with no short version yet is printed with its
+full text, and the script says how many those are.
 
 The contents page needs to know which PDF page each chant lands on, and that
-is only known once the PDF exists. So each volume is rendered TWICE: pass one
+is only known once the PDF exists. So the book is rendered TWICE: pass one
 with placeholder numbers, then PyMuPDF finds each chant's invisible locator
 text, then pass two with the real numbers. The page-number column is a fixed
 width in the CSS, so both passes paginate identically — and the script
 checks that rather than trusting it.
 
-Reads only chanting.py. It never imports app, so it never touches the live
-database.
+Reads only chanting.py and chanting_print_short.py. It never imports app, so
+it never touches the live database.
 """
 import argparse
 import collections
@@ -40,6 +42,7 @@ from jinja2 import Environment, FileSystemLoader
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 import chanting  # noqa: E402
+from chanting_print_short import SHORT  # noqa: E402
 
 CHROME_PATHS = [
     r'C:\Program Files\Google\Chrome\Application\chrome.exe',
@@ -47,36 +50,14 @@ CHROME_PATHS = [
     r'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe',
 ]
 
-# Where the book divides. Each volume opens where one of the book's own parts
-# opens, so a split never falls in the middle of one: page 77 begins the
-# chants appointed for the evening, page 191 is the divider that opens the
-# services again with translation. Chants with no book page cannot be placed
-# and go at the end of the last volume, under a heading that says so, rather
-# than being guessed into a part.
-VOLUMES = {
-    1: {'number': 1, 'first_page': 1,
-        'title': 'The morning and evening services, with the chants appointed for the morning',
-        'pages': 'book pages 1–76'},
-    2: {'number': 2, 'first_page': 77,
-        'title': 'The suttas, protection chants and verses appointed for the evening',
-        'pages': 'book pages 77–190'},
-    3: {'number': 3, 'first_page': 191,
-        'title': 'The services with translation, miscellaneous chants and appendix',
-        'pages': 'book pages 191–325'},
-}
-LAST_VOLUME = max(VOLUMES)
+# Chants with no book page cannot be placed, and go at the end under a
+# heading that says so rather than being guessed into a part.
 UNPLACED = {'title': '', 'title_english': 'Chants not yet placed on a page of the book'}
 
-
-def volume_of(chant):
-    page = chant.get('page_start')
-    if not isinstance(page, int):
-        return LAST_VOLUME
-    return max(n for n, v in VOLUMES.items() if page >= v['first_page'])
-
-
-def in_volume(chant, number):
-    return volume_of(chant) == number
+# The app's own ThaiBridge Spelling font, so paper and screen draw the
+# spelling from one file. See scripts/fetch_spelling_font.py for why the
+# spelling has a font of its own.
+SPELLING_FONT = os.path.join(ROOT, 'static', 'fonts', 'thaibridge-spelling.woff2')
 
 
 def locator(chant_id):
@@ -93,15 +74,14 @@ def find_chrome():
     sys.exit('Could not find Chrome or Edge to print the PDF with.')
 
 
-def book_parts(volume):
-    """One volume's chants in book order, grouped under the book's own part
-    headings.
+def book_parts():
+    """Every chant in book order, grouped under the book's own part headings.
 
     The part headings are the `section` rows of CONTENTS (ทำวัตรเช้า and the
     like), each with the book page it starts on. A chant belongs to the last
     part that starts at or before its own first page. Chants before the
     first part sit in a part with no heading; chants with no page at all
-    get the UNPLACED heading. Only the chants of `volume` are kept.
+    get the UNPLACED heading.
     """
     sections = sorted(
         (e for e in chanting.CONTENTS
@@ -115,24 +95,26 @@ def book_parts(volume):
             parts.append({'heading': upcoming.pop(0), 'chants': []})
         if not isinstance(page, int) and parts[-1]['heading'] is not UNPLACED:
             parts.append({'heading': UNPLACED, 'chants': []})
-        if in_volume(chant, volume):
-            parts[-1]['chants'].append(chant)
+        parts[-1]['chants'].append(chant)
     return [p for p in parts if p['chants']]
 
 
-# The app's own ThaiBridge Spelling font, so paper and screen draw the
-# spelling from one file. See scripts/fetch_spelling_font.py for why the
-# spelling has a font of its own.
-SPELLING_FONT = os.path.join(ROOT, 'static', 'fonts', 'thaibridge-spelling.woff2')
+def commentary(chant, key):
+    """The paragraphs to print for one commentary section of one chant:
+    the short version where there is one, otherwise the app's full text."""
+    short = SHORT.get(chant['id'], {}).get(key)
+    if short:
+        return [short]
+    return chant.get(key) or []
 
 
-def render_html(template, volume, parts, contents_pages, proof):
+def render_html(template, parts, contents_pages, proof):
     return template.render(
-        volume=VOLUMES[volume],
         spelling_font_url='file:///' + SPELLING_FONT.replace('\\', '/'),
         book=chanting.BOOK,
         how=chanting.HOW_TO_USE,
         sections=chanting.CHANT_SECTIONS,
+        commentary=commentary,
         parts=parts,
         contents_pages=contents_pages,
         locator=locator,
@@ -177,9 +159,9 @@ def find_pages(pdf_path, chant_ids):
 
 
 # The commentary and English are set in 8.5pt, so that is the commonest text
-# size in a correctly printed volume. If anything on any page is wider than
-# the page, Chrome shrinks EVERY page to fit and says nothing — volume 1 once
-# came out at 85% — and this is how that gets caught.
+# size in a correctly printed book. If anything on any page is wider than
+# the page, Chrome shrinks EVERY page to fit and says nothing — an A5 volume
+# once came out at 85% — and this is how that gets caught.
 BODY_SIZE = 8.5
 
 
@@ -209,7 +191,7 @@ def check_fonts_and_scale(pdf_path):
         sample = '\n  '.join(f'{t!r} in {font}, in "{context}"'
                              for (t, font, context), _ in stand_ins.most_common(8))
         sys.exit(f'{os.path.basename(pdf_path)}: some letters were printed in a stand-in '
-                 f'font, not the book\'s own: {sample}')
+                 f'font, not the book\'s own:\n  {sample}')
     commonest = sizes.most_common(1)[0][0]
     if abs(commonest - BODY_SIZE) > 0.1:
         sys.exit(f'{os.path.basename(pdf_path)}: body text came out at {commonest}pt, '
@@ -217,14 +199,33 @@ def check_fonts_and_scale(pdf_path):
                  'too wide. Find the overflowing line before printing.')
 
 
-def build_volume(chrome, template, volume, out, proof):
-    parts = book_parts(volume)
+def main():
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument('--final', action='store_true',
+                        help='leave off the "proof copy" stamp')
+    parser.add_argument('--out', default=os.path.join(ROOT, '_print', 'chanting-book-a4.pdf'))
+    args = parser.parse_args()
+
+    unknown = sorted(set(SHORT) - {c['id'] for c in chanting.CHANTS})
+    if unknown:
+        sys.exit(f'chanting_print_short.py has entries for chants that do not exist: {unknown[:5]}')
+
+    chrome = find_chrome()
+    env = Environment(loader=FileSystemLoader(os.path.join(ROOT, 'templates')),
+                      autoescape=True)
+    template = env.get_template('print/chanting_book_print.html')
+    os.makedirs(os.path.dirname(os.path.abspath(args.out)), exist_ok=True)
+    proof = not args.final
+
+    parts = book_parts()
     chant_ids = [c['id'] for p in parts for c in p['chants']]
+    if sorted(chant_ids) != sorted(c['id'] for c in chanting.CHANTS):
+        sys.exit('The book does not hold every chant exactly once.')
 
     with tempfile.TemporaryDirectory() as workdir:
         first = os.path.join(workdir, 'pass1.pdf')
-        print(f'Volume {volume}, pass 1: laying out the book...', flush=True)
-        print_pdf(chrome, render_html(template, volume, parts, {}, proof), first, workdir)
+        print('Pass 1: laying out the book...', flush=True)
+        print_pdf(chrome, render_html(template, parts, {}, proof), first, workdir)
         pages, total1 = find_pages(first, chant_ids)
         check_fonts_and_scale(first)
 
@@ -232,45 +233,24 @@ def build_volume(chrome, template, volume, out, proof):
         if missing:
             sys.exit(f'{len(missing)} chants were not found in the PDF, e.g. {missing[:5]}')
 
-        print(f'Volume {volume}, pass 2: filling in the contents page numbers...', flush=True)
+        print('Pass 2: filling in the contents page numbers...', flush=True)
         numbers = {cid: str(n) for cid, n in pages.items()}
-        print_pdf(chrome, render_html(template, volume, parts, numbers, proof), out, workdir)
-        check, total2 = find_pages(out, chant_ids)
+        print_pdf(chrome, render_html(template, parts, numbers, proof), args.out, workdir)
+        check, total2 = find_pages(args.out, chant_ids)
 
     if check != pages or total1 != total2:
         sys.exit('The second pass paginated differently from the first — '
                  'the contents numbers cannot be trusted. Nothing was fixed up.')
 
-    print(f'Done: volume {volume}, {total2} A5 pages, {len(chant_ids)} chants -> {out}')
+    print(f'Done: {total2} A4 pages, {len(chant_ids)} chants -> {args.out}')
+    long_left = sum(1 for cid in chant_ids
+                    if not all(SHORT.get(cid, {}).get(s['key']) for s in chanting.CHANT_SECTIONS
+                               if chanting.get_chant(cid).get(s['key'])))
+    if long_left:
+        print(f'  {long_left} chants still print their FULL commentary — '
+              'no short version in chanting_print_short.py yet.')
     if total2 % 2:
         print('  Note: odd page count; most printers add a blank page at the end.')
-    return chant_ids
-
-
-def main():
-    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument('--final', action='store_true',
-                        help='leave off the "proof copy" stamp')
-    parser.add_argument('--volume', type=int, choices=sorted(VOLUMES),
-                        help='build just this volume (default: all)')
-    parser.add_argument('--out-dir', default=os.path.join(ROOT, '_print'))
-    args = parser.parse_args()
-
-    chrome = find_chrome()
-    env = Environment(loader=FileSystemLoader(os.path.join(ROOT, 'templates')),
-                      autoescape=True)
-    template = env.get_template('print/chanting_book_print.html')
-    os.makedirs(args.out_dir, exist_ok=True)
-
-    built = []
-    for volume in ([args.volume] if args.volume else sorted(VOLUMES)):
-        out = os.path.join(args.out_dir, f'chanting-book-a5-vol{volume}.pdf')
-        built += build_volume(chrome, template, volume, out, not args.final)
-
-    # Every chant in exactly one volume — checked, because a chant dropped
-    # between two books would be very easy never to notice on paper.
-    if not args.volume and sorted(built) != sorted(c['id'] for c in chanting.CHANTS):
-        sys.exit('The volumes do not hold every chant exactly once.')
 
 
 if __name__ == '__main__':
