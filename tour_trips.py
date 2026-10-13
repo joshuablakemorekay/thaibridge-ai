@@ -136,7 +136,7 @@ TRIPS = [
             _scene(1, 'Still at the truck', 'Haggle, or not',
                    'Sixty baht. You can accept, or try for a little less. Neither is wrong.',
                    'What do you say?',
-                   [_c('ลดได้ไหม{q}', 'lót dâi mǎi {q}', 'Can you lower it?', 'good',
+                   [_c('ลดได้ไหม{q}', 'lót dâi mái {q}', 'Can you lower it?', 'good',
                        'He grins. ห้าสิบบาท (hâa-sìp bàat), "Fifty." Smiling while you '
                        'asked is what made that work.'),
                     _c('โอเค{s}', 'oo-kee {s}', 'OK.', 'good',
@@ -180,7 +180,7 @@ TRIPS = [
                    ('Walking round the chedi',
                     'Walk round it clockwise, keeping it on your right. When you sit, tuck '
                     'your feet away so they never point at a Buddha image.'),
-                   who='Thai visitor', thai='ถ่ายรูปให้ไหมคะ', paiboon='tàai-rûup hâi mǎi ká',
+                   who='Thai visitor', thai='ถ่ายรูปให้ไหมคะ', paiboon='tàai-rûup hâi mái ká',
                    english='Shall I take a photo for you?'),
             _scene(4, 'A khao soi stall in town', 'Lunch',
                    'Back down the mountain, you stop for ข้าวซอย (kâao-sɔɔi), Chiang Mai’s '
@@ -196,7 +196,7 @@ TRIPS = [
                    ('A new word: นิดหน่อย',
                     'นิดหน่อย (nít-nɔ̀i) means "a little". It is modest and polite, and it '
                     'goes with almost anything.'),
-                   who='Cook', thai='เผ็ดไหมคะ', paiboon='pèt mǎi ká', english='Spicy?'),
+                   who='Cook', thai='เผ็ดไหมคะ', paiboon='pèt mái ká', english='Spicy?'),
             _scene(4, 'Same stall, empty bowl', 'Time to pay',
                    'The bowl is empty. Tell the cook it was good, and ask to pay.',
                    'Pick what to say.',
@@ -253,7 +253,7 @@ TRIPS = [
                    ('Saying yes by repeating the verb',
                     'He asked ไปไหม, "going?". You answer ไป, "going", or ไม่ไป, "not going". '
                     'Two short sentences in a row is perfectly natural Thai.'),
-                   who='Driver', thai='ไปวัดร่องขุ่นไหมครับ', paiboon='bpai wát rɔ̂ɔŋ-kùn mǎi kráp',
+                   who='Driver', thai='ไปวัดร่องขุ่นไหมครับ', paiboon='bpai wát rɔ̂ɔŋ-kùn mái kráp',
                    english='Going to the White Temple?'),
             _scene(1, 'Wat Rong Khun', 'The White Temple',
                    'The artist Chalermchai Kositpipat began rebuilding this temple in 1997, '
@@ -300,7 +300,7 @@ TRIPS = [
                        'ตรงไป เลี้ยวขวาค่ะ (dtroŋ bpai, líao kwǎa kâ), "Straight on, then right."'),
                     _c('ห้องน้ำ{s}', 'hɔ̂ɔŋ-náam {s}', 'Toilet.', 'ok',
                        'She points the way. It works, though the full question is kinder.'),
-                    _c('มีห้องว่างไหม{q}', 'mii hɔ̂ɔŋ wâaŋ mǎi {q}', 'Do you have a free room?', 'miss',
+                    _c('มีห้องว่างไหม{q}', 'mii hɔ̂ɔŋ wâaŋ mái {q}', 'Do you have a free room?', 'miss',
                        'She looks puzzled. That is what you ask at a hotel, not a museum.')],
                    ('ห้องน้ำ: the water room',
                     'ห้องน้ำ (hɔ̂ɔŋ-náam) is literally "water room", and it means both bathroom '
@@ -321,7 +321,7 @@ TRIPS = [
                     'ประเทศ (bprà-têet) is "country". ไทย (tai) Thailand, ลาว (laao) Laos, '
                     'พม่า (pá-mâa) Myanmar. นั่น (nân) is "that", for something you can see '
                     'over there.'),
-                   who='Boatman', thai='นั่งเรือไหมครับ', paiboon='nâŋ rʉa mǎi kráp',
+                   who='Boatman', thai='นั่งเรือไหมครับ', paiboon='nâŋ rʉa mái kráp',
                    english='Want a boat ride?'),
         ],
     },
@@ -356,7 +356,7 @@ TRIPS = [
                    'called tâa. Wat Pho is near Tha Tien pier. A man selling tickets '
                    'looks your way.',
                    'Ask if this boat goes to Tha Tien.',
-                   [_c('ไปท่าเตียนไหม{q}', 'bpai tâa-tian mǎi {q}', 'Does it go to Tha Tien?', 'good',
+                   [_c('ไปท่าเตียนไหม{q}', 'bpai tâa-tian mái {q}', 'Does it go to Tha Tien?', 'good',
                        'ไปครับ (bpai kráp), "It goes." To say yes, Thai repeats the verb.'),
                     _c('ท่าเตียนอร่อย{s}', 'tâa-tian à-rɔ̀i {s}', 'Tha Tien is delicious.', 'miss',
                        'He tries not to laugh. A pier is not a dish.'),
@@ -364,7 +364,7 @@ TRIPS = [
                        'He waves at the road behind you. Wrong kind of transport.')],
                    ('Yes and no without "yes"',
                     'Thai often answers by repeating the verb: ไป "goes", ไม่ไป "doesn’t go". '
-                    'Turning a sentence into a question is just adding ไหม (mǎi) to the end.'),
+                    'Turning a sentence into a question is just adding ไหม (mái) to the end.'),
                    who='Ticket seller', thai='ไปไหนครับ', paiboon='bpai nǎi kráp',
                    english='Where are you going?'),
             _scene(1, 'Inside Wat Pho', 'The Reclining Buddha',
@@ -396,13 +396,13 @@ TRIPS = [
                    ('Doubled words',
                     'Saying a word twice softens it or spreads it out: เบาๆ (bao-bao) is '
                     '"gently", ช้าๆ (cháa-cháa) is "slowly". The ๆ mark means "say it again".'),
-                   who='Therapist', thai='เจ็บไหมคะ', paiboon='jèp mǎi ká', english='Does it hurt?'),
+                   who='Therapist', thai='เจ็บไหมคะ', paiboon='jèp mái ká', english='Does it hurt?'),
             _scene(3, 'Tha Tien cross-river ferry', 'Over to Wat Arun',
                    'A small ferry crosses the river to Wat Arun, the Temple of Dawn, its '
                    'towers covered in pieces of coloured china. On the far bank you want a '
                    'photo with the tower behind you.',
                    'Ask someone to take your photo.',
-                   [_c('ช่วยถ่ายรูปให้หน่อยได้ไหม{q}', 'chûai tàai-rûup hâi nɔ̀i dâi mǎi {q}',
+                   [_c('ช่วยถ่ายรูปให้หน่อยได้ไหม{q}', 'chûai tàai-rûup hâi nɔ̀i dâi mái {q}',
                        'Could you take a photo for me?', 'good',
                        'ได้ครับ (dâi kráp). He crouches low to fit the whole tower in.'),
                     _c('ถ่ายรูป{s}', 'tàai-rûup {s}', 'Take photo.', 'ok',
@@ -418,11 +418,11 @@ TRIPS = [
                    'selling everything in bulk. Hair clips, toys, fabric, phone cases. '
                    'You like a bag of keyrings.',
                    'Sampheng sells wholesale. Ask for a discount if you buy three.',
-                   [_c('ซื้อสามอัน ลดได้ไหม{q}', 'sʉ́ʉ sǎam an, lót dâi mǎi {q}',
+                   [_c('ซื้อสามอัน ลดได้ไหม{q}', 'sʉ́ʉ sǎam an, lót dâi mái {q}',
                        'If I buy three, can you lower the price?', 'good',
                        'She taps her calculator and shows you a better price. Buying more is '
                        'exactly how Sampheng works.'),
-                    _c('ลดได้ไหม{q}', 'lót dâi mǎi {q}', 'Can you lower the price?', 'ok',
+                    _c('ลดได้ไหม{q}', 'lót dâi mái {q}', 'Can you lower the price?', 'ok',
                        'She shakes her head for one, then holds up three fingers. Here the '
                        'discount comes from buying more.'),
                     _c('อร่อย{s}', 'à-rɔ̀i {s}', 'Delicious.', 'miss',
@@ -494,17 +494,17 @@ TRIPS = [
                    'The historical park is flat and the ruins are spread out. A shop '
                    'across the road has a row of old bicycles outside.',
                    'Ask if you can hire one.',
-                   [_c('เช่าจักรยานได้ไหม{q}', 'châo jàk-grà-yaan dâi mǎi {q}',
+                   [_c('เช่าจักรยานได้ไหม{q}', 'châo jàk-grà-yaan dâi mái {q}',
                        'Can I hire a bicycle?', 'good',
                        'ได้ครับ (dâi kráp). He pumps up the tyres for you.'),
-                    _c('ขายจักรยานไหม{q}', 'kǎai jàk-grà-yaan mǎi {q}',
+                    _c('ขายจักรยานไหม{q}', 'kǎai jàk-grà-yaan mái {q}',
                        'Do you sell bicycles?', 'ok',
                        'He blinks. ขาย is "sell". You only want it for the afternoon. '
                        'เช่า (châo) is "hire".'),
                     _c('จักรยานสวย{s}', 'jàk-grà-yaan sǔai {s}', 'Bicycle beautiful.', 'miss',
                        'He agrees it is a nice bike, and waits for the actual question.')],
                    ('ได้ไหม: can I?',
-                    'Put ได้ไหม (dâi mǎi) after almost anything to ask if it is allowed or '
+                    'Put ได้ไหม (dâi mái) after almost anything to ask if it is allowed or '
                     'possible. The answer is ได้ (dâi, "can") or ไม่ได้ (mâi dâi, "can’t").'),
                    who='Shop owner', thai='สวัสดีครับ', paiboon='sà-wàt-dii kráp',
                    english='Hello.'),
@@ -522,7 +522,7 @@ TRIPS = [
                    ('Hot, spicy, cold',
                     'ร้อน (rɔ́ɔn) is hot weather or hot water. เผ็ด (pèt) is hot food. '
                     'หนาว (nǎao) is cold weather, and เย็น (yen) is cool or cold to touch.'),
-                   who='Guard', thai='ร้อนไหมครับ', paiboon='rɔ́ɔn mǎi kráp',
+                   who='Guard', thai='ร้อนไหมครับ', paiboon='rɔ́ɔn mái kráp',
                    english='Are you hot?'),
             _scene(3, 'A som tam stall', 'Som tam',
                    'Isan is home to som tam, green papaya salad pounded in a clay mortar. '
@@ -538,7 +538,7 @@ TRIPS = [
                    ('ไม่…มาก: not very',
                     'ไม่เผ็ด is "not spicy". ไม่เผ็ดมาก is "not very spicy". That small '
                     'มาก makes a big difference at an Isan stall.'),
-                   who='Cook', thai='เผ็ดไหมคะ', paiboon='pèt mǎi ká', english='Spicy?'),
+                   who='Cook', thai='เผ็ดไหมคะ', paiboon='pèt mái ká', english='Spicy?'),
             _scene(4, 'The same stall', 'Sticky rice',
                    'In Isan, som tam comes with sticky rice in a little woven basket. You '
                    'eat it with your right hand. After the first mouthful the cook asks '
@@ -555,7 +555,7 @@ TRIPS = [
                     'Isan has its own language, close to Lao. แซ่บ (sɛ̂ɛp) is "delicious" '
                     'there, and Thais from every region know it. Use it in the northeast '
                     'and people will smile.'),
-                   who='Cook', thai='อร่อยไหมคะ', paiboon='à-rɔ̀i mǎi ká',
+                   who='Cook', thai='อร่อยไหมคะ', paiboon='à-rɔ̀i mái ká',
                    english='Is it good?'),
         ],
     },
@@ -618,7 +618,7 @@ TRIPS = [
             _scene(2, 'A guesthouse by the beach', 'Find a room',
                    'You have not booked. A guesthouse has a hand-painted sign by the road.',
                    'Ask if they have a room free.',
-                   [_c('มีห้องว่างไหม{q}', 'mii hɔ̂ɔŋ wâaŋ mǎi {q}', 'Do you have a free room?', 'good',
+                   [_c('มีห้องว่างไหม{q}', 'mii hɔ̂ɔŋ wâaŋ mái {q}', 'Do you have a free room?', 'good',
                        'มีค่ะ (mii kâ), "We have." She asks: ห้องแอร์หรือห้องพัดลม, "Air-con or fan?"'),
                     _c('ห้องสวย{s}', 'hɔ̂ɔŋ sǔai {s}', 'Room beautiful.', 'miss',
                        'She thanks you, but you still have not asked for one.'),
@@ -687,7 +687,7 @@ TRIPS = [
                    'Railay is cut off by limestone cliffs, so the only way in is by boat. '
                    'Longtail boats wait on the sand at Ao Nang.',
                    'Ask the boatman if he goes to Railay.',
-                   [_c('ไปไร่เลย์ไหม{q}', 'bpai râi-lee mǎi {q}', 'Do you go to Railay?', 'good',
+                   [_c('ไปไร่เลย์ไหม{q}', 'bpai râi-lee mái {q}', 'Do you go to Railay?', 'good',
                        'ไปครับ. He points to the board with the fare. Pay before you board.'),
                     _c('ไร่เลย์ที่ไหน{q}', 'râi-lee tîi-nǎi {q}', 'Where is Railay?', 'ok',
                        'He points round the headland. Right answer, but you wanted a ride.'),
@@ -702,7 +702,7 @@ TRIPS = [
                    'The boat pulls up in shallow water and the boatman cuts the engine. '
                    'There is no pier. He says something and points at your feet.',
                    'You did not catch it. Ask him to say it again.',
-                   [_c('พูดอีกทีได้ไหม{q}', 'pûut ìik tii dâi mǎi {q}', 'Could you say that again?', 'good',
+                   [_c('พูดอีกทีได้ไหม{q}', 'pûut ìik tii dâi mái {q}', 'Could you say that again?', 'good',
                        'He says it slower: ถอดรองเท้า (tɔ̀ɔt rɔɔŋ-táao), "take off your shoes." Good thing you asked.'),
                     _c('ไม่เข้าใจ{s}', 'mâi kâo-jai {s}', 'I don’t understand.', 'good',
                        'He mimes taking off his shoes. Honest, and it worked.'),
@@ -728,17 +728,17 @@ TRIPS = [
                    ('เจ็บ + body part',
                     'เจ็บ (jèp) is "hurt". Add the body part: เจ็บเท้า foot, เจ็บหัว head, '
                     'เจ็บท้อง stomach. For anything serious, โรงพยาบาล is a hospital.'),
-                   who='A climber', thai='เป็นอะไรไหมคะ', paiboon='bpen à-rai mǎi ká',
+                   who='A climber', thai='เป็นอะไรไหมคะ', paiboon='bpen à-rai mái ká',
                    english='Are you all right?'),
             _scene(3, 'A pharmacy on the walking street', 'The pharmacy',
                    'Thai pharmacists give a lot of everyday advice. You show her your foot.',
                    'Ask for something to clean the cut.',
-                   [_c('มียาล้างแผลไหม{q}', 'mii yaa láaŋ plɛ̌ɛ mǎi {q}',
+                   [_c('มียาล้างแผลไหม{q}', 'mii yaa láaŋ plɛ̌ɛ mái {q}',
                        'Do you have something to clean a wound?', 'good',
                        'มีค่ะ. She hands you antiseptic and plasters, and shows you how much to use.'),
                     _c('ยา{s}', 'yaa {s}', 'Medicine.', 'ok',
                        'Which one? She points at the foot to check. Name what it is for and she can help faster.'),
-                    _c('เผ็ดไหม{q}', 'pèt mǎi {q}', 'Is it spicy?', 'miss',
+                    _c('เผ็ดไหม{q}', 'pèt mái {q}', 'Is it spicy?', 'miss',
                        'She laughs. Antiseptic is many things, but not spicy.')],
                    ('Pharmacy words',
                     'ร้านขายยา (ráan kǎai yaa) is a pharmacy, literally "shop that sells '
@@ -752,10 +752,10 @@ TRIPS = [
                    'below. A boardwalk leads through the trees. After a while you wonder '
                    'how much further it is.',
                    'Ask a ranger if it is still far.',
-                   [_c('อีกไกลไหม{q}', 'ìik glai mǎi {q}', 'Is it much further?', 'good',
+                   [_c('อีกไกลไหม{q}', 'ìik glai mái {q}', 'Is it much further?', 'good',
                        'ไม่ไกลครับ (mâi glai kráp), "Not far." He points ahead. You can hear '
                        'people splashing.'),
-                    _c('อีกใกล้ไหม{q}', 'ìik glâi mǎi {q}', 'Is it much nearer?', 'ok',
+                    _c('อีกใกล้ไหม{q}', 'ìik glâi mái {q}', 'Is it much nearer?', 'ok',
                        'He works out what you meant. Near and far differ only by tone, so '
                        'it is an easy slip.'),
                     _c('เลี้ยวขวา{s}', 'líao kwǎa {s}', 'Turn right.', 'miss',
@@ -781,7 +781,7 @@ TRIPS = [
                     'สบาย (sà-baai) is comfortable, easy, relaxed. It is the สบาย in '
                     'สบายดีไหม, "how are you?". ใช่ (châi) means "that’s right", and '
                     'แต่ (dtɛ̀ɛ) means "but".'),
-                   who='Woman in the next pool', thai='ร้อนไหมคะ', paiboon='rɔ́ɔn mǎi ká',
+                   who='Woman in the next pool', thai='ร้อนไหมคะ', paiboon='rɔ́ɔn mái ká',
                    english='Is it hot?'),
         ],
     },
@@ -841,17 +841,17 @@ TRIPS = [
                     'กี่ (gìi) asks "how many", โมง (mooŋ) is the daytime hour. So กี่โมง is '
                     '"what time?". You saw กี่ already in กี่ชาม, "how many bowls?".'),
                    who='Man at the desk', thai='ไปเอราวัณใช่ไหมครับ',
-                   paiboon='bpai ee-raa-wan châi mǎi kráp',
+                   paiboon='bpai ee-raa-wan châi mái kráp',
                    english='Going to Erawan, right?'),
             _scene(2, 'Park entrance', 'Seven tiers',
                    'The falls climb up the hill in seven tiers, each with its own pool. '
                    'A ranger checks bags at the start of the trail.',
                    'Ask the ranger if you can swim.',
-                   [_c('ว่ายน้ำได้ไหม{q}', 'wâai-náam dâi mǎi {q}', 'Can I swim?', 'good',
+                   [_c('ว่ายน้ำได้ไหม{q}', 'wâai-náam dâi mái {q}', 'Can I swim?', 'good',
                        'ได้ครับ. He adds: in most of the pools, but watch the signs.'),
                     _c('ว่ายน้ำ{s}', 'wâai-náam {s}', 'Swim.', 'ok',
                        'He understands. ได้ไหม on the end would have made it a question.'),
-                    _c('ขายน้ำไหม{q}', 'kǎai náam mǎi {q}', 'Do you sell water?', 'miss',
+                    _c('ขายน้ำไหม{q}', 'kǎai náam mái {q}', 'Do you sell water?', 'miss',
                        'He points to the shop. Useful later, but not what you meant.')],
                    ('ว่ายน้ำ: swim',
                     'ว่าย (wâai) is the swimming movement and น้ำ (náam) is water. Thai builds '
@@ -871,7 +871,7 @@ TRIPS = [
                    ('A fun word',
                     'จั๊กจี้ (ják-gà-jîi) means "ticklish". It is one of those words Thai '
                     'people love hearing a foreigner say.'),
-                   who='Boy', thai='ปลาตอดเท้าใช่ไหม', paiboon='bplaa dtɔ̀ɔt táao châi mǎi',
+                   who='Boy', thai='ปลาตอดเท้าใช่ไหม', paiboon='bplaa dtɔ̀ɔt táao châi mái',
                    english='The fish are nibbling your feet, aren’t they?'),
             _scene(4, 'Back in town', 'The way back',
                    'It is dark when the bus drops you in town. You want the night market, '

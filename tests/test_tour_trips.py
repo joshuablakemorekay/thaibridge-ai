@@ -83,7 +83,7 @@ class TestPoliteEndings:
         """The ค่ะ / คะ split is the classic mistake; the trips teach it."""
         assert tour_trips.fill_particles('เท่าไหร่{q}', 'female') == 'เท่าไหร่คะ'
         assert tour_trips.fill_particles('ไม่เผ็ด{s}', 'female') == 'ไม่เผ็ดค่ะ'
-        assert tour_trips.fill_particles('lót dâi mǎi {q}', 'female', paiboon=True) == 'lót dâi mǎi ká'
+        assert tour_trips.fill_particles('lót dâi mái {q}', 'female', paiboon=True) == 'lót dâi mái ká'
 
     def test_a_man_uses_krap_for_both(self):
         assert tour_trips.fill_particles('เท่าไหร่{q}', 'male') == 'เท่าไหร่ครับ'

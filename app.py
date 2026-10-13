@@ -3991,8 +3991,9 @@ GRAMMAR = {
         {
             'name': 'Question Particles',
             'entries': [
-                {'thai': 'ไหม', 'paiboon': 'mǎi', 'english': 'yes/no question'},
-                {'thai': 'หรือ', 'paiboon': 'rʉ̌ʉ', 'english': 'or? / right?'},
+                {'thai': 'ไหม', 'paiboon': 'mái', 'english': 'yes/no question'},
+                {'thai': 'หรือ', 'paiboon': 'rʉ̌ʉ', 'english': 'or? / right? (written form)'},
+                {'thai': 'รึ', 'paiboon': 'rʉ́', 'english': 'or? — how หรือ is said in everyday questions (กินข้าวรึยัง)'},
                 {'thai': 'เหรอ', 'paiboon': 'rə̌ə', 'english': 'really? (informal)'},
             ]
         },
@@ -4085,7 +4086,7 @@ GRAMMAR = {
         {'pattern': 'I want to...', 'thai': 'อยาก...', 'paiboon': 'yàak...', 'example': 'ผมอยากกิน'},
         {'pattern': "I'm going to...", 'thai': 'จะไป...', 'paiboon': 'jà bpai...', 'example': 'ผมจะไปตลาด'},
         {'pattern': 'I like...', 'thai': 'ชอบ...', 'paiboon': 'chɔ̂ɔp...', 'example': 'ผมชอบอาหารไทย'},
-        {'pattern': 'Can you...?', 'thai': '...ได้ไหม', 'paiboon': '...dâi mǎi', 'example': 'พูดไทยได้ไหม'},
+        {'pattern': 'Can you...?', 'thai': '...ได้ไหม', 'paiboon': '...dâi mái', 'example': 'พูดไทยได้ไหม'},
         {'pattern': 'There is/are', 'thai': 'มี...', 'paiboon': 'mii...', 'example': 'มีคนสามคน'},
     ],
 }
@@ -4799,7 +4800,7 @@ LESSONS = [
                 {'thai': 'แพงไป', 'paiboon': 'pɛɛŋ bpai', 'english': 'Too expensive'},
             ],
             'long': [
-                {'thai': 'ลดราคาได้ไหมครับ', 'paiboon': 'lót raa-kaa dâi mǎi kráp', 'english': 'Can you reduce the price?'},
+                {'thai': 'ลดราคาได้ไหมครับ', 'paiboon': 'lót raa-kaa dâi mái kráp', 'english': 'Can you reduce the price?'},
             ]
         }
     },
@@ -4811,7 +4812,7 @@ LESSONS = [
         'objectives': ['Describe family', 'Use kinship terms'],
         'sentences': {
             'short': [
-                {'thai': 'มีพี่น้องไหม', 'paiboon': 'mii pîi-nɔ́ɔŋ mǎi', 'english': 'Do you have siblings?'},
+                {'thai': 'มีพี่น้องไหม', 'paiboon': 'mii pîi-nɔ́ɔŋ mái', 'english': 'Do you have siblings?'},
             ],
             'long': [
                 {'thai': 'ครอบครัวผมมีสี่คน', 'paiboon': 'krɔ̂ɔp-kruua pǒm mii sìi kon', 'english': 'My family has four people'},
@@ -4916,7 +4917,7 @@ LESSONS = [
         'objectives': ['Recognize consonant classes', 'Understand tone rules'],
         'sentences': {
             'short': [
-                {'thai': 'อ่านได้ไหม', 'paiboon': 'àan dâi mǎi', 'english': 'Can you read?'},
+                {'thai': 'อ่านได้ไหม', 'paiboon': 'àan dâi mái', 'english': 'Can you read?'},
             ],
             'long': [
                 {'thai': 'ภาษาไทยมีพยัญชนะสี่สิบสี่ตัว', 'paiboon': 'paa-sǎa tai mii pá-yan-chá-ná sìi-sìp-sìi dtuua', 'english': 'Thai has 44 consonants'},
@@ -6194,22 +6195,24 @@ SENTENCE_PATTERNS = {
     
     'question_patterns': {
         'title': 'Question Formation',
-        'explanation': 'Thai questions use particles ไหม (mǎi) for yes/no and question words for information.',
+        'explanation': 'Thai questions use particles ไหม (mái) for yes/no and question words for information. '
+                       'ไหม is written with a rising-tone spelling, but everyone says it short and high, '
+                       'like มั้ย — so that is how it is spelled here.',
         
         'yes_no': {
-            'name': 'Yes/No Questions: ไหม (mǎi)',
+            'name': 'Yes/No Questions: ไหม (mái)',
             'pattern': 'Statement + ไหม + particle',
             'examples': {
                 'male': [
                     {
                         'thai': 'คุณกินข้าวไหมครับ',
-                        'paiboon': 'kun gin kâao mǎi kráp',
+                        'paiboon': 'kun gin kâao mái kráp',
                         'english': 'Do you eat rice? / Have you eaten?',
                         'breakdown': 'คุณ (you) + กิน (eat) + ข้าว (rice) + ไหม (question) + ครับ (polite)'
                     },
                     {
                         'thai': 'คุณพูดไทยได้ไหมครับ',
-                        'paiboon': 'kun pûut tai dâi mǎi kráp',
+                        'paiboon': 'kun pûut tai dâi mái kráp',
                         'english': 'Can you speak Thai?',
                         'breakdown': 'คุณ (you) + พูด (speak) + ไทย (Thai) + ได้ (can) + ไหม (question) + ครับ (polite)'
                     }
@@ -6217,13 +6220,13 @@ SENTENCE_PATTERNS = {
                 'female': [
                     {
                         'thai': 'คุณกินข้าวไหมคะ',
-                        'paiboon': 'kun gin kâao mǎi ká',
+                        'paiboon': 'kun gin kâao mái ká',
                         'english': 'Do you eat rice? / Have you eaten?',
                         'breakdown': 'คุณ (you) + กิน (eat) + ข้าว (rice) + ไหม (question) + คะ (polite)'
                     },
                     {
                         'thai': 'คุณพูดไทยได้ไหมคะ',
-                        'paiboon': 'kun pûut tai dâi mǎi ká',
+                        'paiboon': 'kun pûut tai dâi mái ká',
                         'english': 'Can you speak Thai?',
                         'breakdown': 'คุณ (you) + พูด (speak) + ไทย (Thai) + ได้ (can) + ไหม (question) + คะ (polite)'
                     }
@@ -6305,24 +6308,24 @@ SENTENCE_PATTERNS = {
                        'answer ends in ค่ะ (kâ, falling tone).',
                 'examples': {
                     'male': [
-                        {'q': {'thai': 'ไปไหมครับ', 'paiboon': 'bpai mǎi kráp', 'english': 'Are you going? / Want to go?'},
+                        {'q': {'thai': 'ไปไหมครับ', 'paiboon': 'bpai mái kráp', 'english': 'Are you going? / Want to go?'},
                          'yes': {'thai': 'ไปครับ', 'paiboon': 'bpai kráp', 'english': 'Yes, I am. (go)'},
                          'no': {'thai': 'ไม่ไปครับ', 'paiboon': 'mâi bpai kráp', 'english': "No, I'm not. (not go)"}},
-                        {'q': {'thai': 'คุณพูดไทยได้ไหมครับ', 'paiboon': 'kun pûut tai dâi mǎi kráp', 'english': 'Can you speak Thai?'},
+                        {'q': {'thai': 'คุณพูดไทยได้ไหมครับ', 'paiboon': 'kun pûut tai dâi mái kráp', 'english': 'Can you speak Thai?'},
                          'yes': {'thai': 'ได้ครับ', 'paiboon': 'dâi kráp', 'english': 'Yes, I can. (can)'},
                          'no': {'thai': 'ไม่ได้ครับ', 'paiboon': 'mâi dâi kráp', 'english': "No, I can't. (not can)"}},
-                        {'q': {'thai': 'เผ็ดไหมครับ', 'paiboon': 'pèt mǎi kráp', 'english': 'Is it spicy?'},
+                        {'q': {'thai': 'เผ็ดไหมครับ', 'paiboon': 'pèt mái kráp', 'english': 'Is it spicy?'},
                          'yes': {'thai': 'เผ็ดครับ', 'paiboon': 'pèt kráp', 'english': "Yes, it is. (spicy)"},
                          'no': {'thai': 'ไม่เผ็ดครับ', 'paiboon': 'mâi pèt kráp', 'english': "No, it isn't. (not spicy)"}},
                     ],
                     'female': [
-                        {'q': {'thai': 'ไปไหมคะ', 'paiboon': 'bpai mǎi ká', 'english': 'Are you going? / Want to go?'},
+                        {'q': {'thai': 'ไปไหมคะ', 'paiboon': 'bpai mái ká', 'english': 'Are you going? / Want to go?'},
                          'yes': {'thai': 'ไปค่ะ', 'paiboon': 'bpai kâ', 'english': 'Yes, I am. (go)'},
                          'no': {'thai': 'ไม่ไปค่ะ', 'paiboon': 'mâi bpai kâ', 'english': "No, I'm not. (not go)"}},
-                        {'q': {'thai': 'คุณพูดไทยได้ไหมคะ', 'paiboon': 'kun pûut tai dâi mǎi ká', 'english': 'Can you speak Thai?'},
+                        {'q': {'thai': 'คุณพูดไทยได้ไหมคะ', 'paiboon': 'kun pûut tai dâi mái ká', 'english': 'Can you speak Thai?'},
                          'yes': {'thai': 'ได้ค่ะ', 'paiboon': 'dâi kâ', 'english': 'Yes, I can. (can)'},
                          'no': {'thai': 'ไม่ได้ค่ะ', 'paiboon': 'mâi dâi kâ', 'english': "No, I can't. (not can)"}},
-                        {'q': {'thai': 'เผ็ดไหมคะ', 'paiboon': 'pèt mǎi ká', 'english': 'Is it spicy?'},
+                        {'q': {'thai': 'เผ็ดไหมคะ', 'paiboon': 'pèt mái ká', 'english': 'Is it spicy?'},
                          'yes': {'thai': 'เผ็ดค่ะ', 'paiboon': 'pèt kâ', 'english': "Yes, it is. (spicy)"},
                          'no': {'thai': 'ไม่เผ็ดค่ะ', 'paiboon': 'mâi pèt kâ', 'english': "No, it isn't. (not spicy)"}},
                     ],
@@ -6337,12 +6340,12 @@ SENTENCE_PATTERNS = {
                        'is a classic learner mistake: say ไป.',
                 'examples': {
                     'male': [
-                        {'q': {'thai': 'นี่ของคุณใช่ไหมครับ', 'paiboon': 'nîi kɔ̌ɔŋ kun châi mǎi kráp', 'english': 'This is yours, right?'},
+                        {'q': {'thai': 'นี่ของคุณใช่ไหมครับ', 'paiboon': 'nîi kɔ̌ɔŋ kun châi mái kráp', 'english': 'This is yours, right?'},
                          'yes': {'thai': 'ใช่ครับ', 'paiboon': 'châi kráp', 'english': "Yes, that's right."},
                          'no': {'thai': 'ไม่ใช่ครับ', 'paiboon': 'mâi châi kráp', 'english': "No, it isn't."}},
                     ],
                     'female': [
-                        {'q': {'thai': 'นี่ของคุณใช่ไหมคะ', 'paiboon': 'nîi kɔ̌ɔŋ kun châi mǎi ká', 'english': 'This is yours, right?'},
+                        {'q': {'thai': 'นี่ของคุณใช่ไหมคะ', 'paiboon': 'nîi kɔ̌ɔŋ kun châi mái ká', 'english': 'This is yours, right?'},
                          'yes': {'thai': 'ใช่ค่ะ', 'paiboon': 'châi kâ', 'english': "Yes, that's right."},
                          'no': {'thai': 'ไม่ใช่ค่ะ', 'paiboon': 'mâi châi kâ', 'english': "No, it isn't."}},
                     ],
@@ -6351,24 +6354,24 @@ SENTENCE_PATTERNS = {
             {
                 'key': 'not_yet',
                 'name': 'Already or not yet: แล้ว / ยังไม่',
-                'pattern': '…แล้วหรือยัง  →  Verb + แล้ว / ยังไม่ + Verb',
+                'pattern': '…แล้วรึยัง  →  Verb + แล้ว / ยังไม่ + Verb',
                 'tip': 'A แล้ว question is never answered with plain ไม่. '
                        'If it hasn\'t happened, it hasn\'t happened YET — ยังไม่ '
                        '(yaŋ mâi). Just ยังครับ / ยังค่ะ on its own also works.',
                 'examples': {
                     'male': [
-                        {'q': {'thai': 'กินข้าวแล้วหรือยังครับ', 'paiboon': 'gin kâao lɛ́ɛo rʉ̌ʉ yaŋ kráp', 'english': 'Have you eaten yet?'},
+                        {'q': {'thai': 'กินข้าวแล้วรึยังครับ', 'paiboon': 'gin kâao lɛ́ɛo rʉ́ yaŋ kráp', 'english': 'Have you eaten yet?'},
                          'yes': {'thai': 'กินแล้วครับ', 'paiboon': 'gin lɛ́ɛo kráp', 'english': "Yes, I've eaten. (eat already)"},
                          'no': {'thai': 'ยังไม่ได้กินครับ', 'paiboon': 'yaŋ mâi dâi gin kráp', 'english': "Not yet. (still not eaten)"}},
-                        {'q': {'thai': 'ถึงแล้วหรือยังครับ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo rʉ̌ʉ yaŋ kráp', 'english': 'Have we arrived yet?'},
+                        {'q': {'thai': 'ถึงแล้วรึยังครับ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo rʉ́ yaŋ kráp', 'english': 'Have we arrived yet?'},
                          'yes': {'thai': 'ถึงแล้วครับ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo kráp', 'english': "Yes, we're here. (arrive already)"},
                          'no': {'thai': 'ยังไม่ถึงครับ', 'paiboon': 'yaŋ mâi tʉ̌ŋ kráp', 'english': "Not yet. (still not arrive)"}},
                     ],
                     'female': [
-                        {'q': {'thai': 'กินข้าวแล้วหรือยังคะ', 'paiboon': 'gin kâao lɛ́ɛo rʉ̌ʉ yaŋ ká', 'english': 'Have you eaten yet?'},
+                        {'q': {'thai': 'กินข้าวแล้วรึยังคะ', 'paiboon': 'gin kâao lɛ́ɛo rʉ́ yaŋ ká', 'english': 'Have you eaten yet?'},
                          'yes': {'thai': 'กินแล้วค่ะ', 'paiboon': 'gin lɛ́ɛo kâ', 'english': "Yes, I've eaten. (eat already)"},
                          'no': {'thai': 'ยังไม่ได้กินค่ะ', 'paiboon': 'yaŋ mâi dâi gin kâ', 'english': "Not yet. (still not eaten)"}},
-                        {'q': {'thai': 'ถึงแล้วหรือยังคะ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo rʉ̌ʉ yaŋ ká', 'english': 'Have we arrived yet?'},
+                        {'q': {'thai': 'ถึงแล้วรึยังคะ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo rʉ́ yaŋ ká', 'english': 'Have we arrived yet?'},
                          'yes': {'thai': 'ถึงแล้วค่ะ', 'paiboon': 'tʉ̌ŋ lɛ́ɛo kâ', 'english': "Yes, we're here. (arrive already)"},
                          'no': {'thai': 'ยังไม่ถึงค่ะ', 'paiboon': 'yaŋ mâi tʉ̌ŋ kâ', 'english': "Not yet. (still not arrive)"}},
                     ],
@@ -6382,12 +6385,12 @@ SENTENCE_PATTERNS = {
                        '= "didn\'t go". ไปไม่ได้ (bpai mâi dâi) = "can\'t go".',
                 'examples': {
                     'male': [
-                        {'q': {'thai': 'เมื่อวานไปทำงานไหมครับ', 'paiboon': 'mʉ̂a waan bpai tam ŋaan mǎi kráp', 'english': 'Did you go to work yesterday?'},
+                        {'q': {'thai': 'เมื่อวานไปทำงานไหมครับ', 'paiboon': 'mʉ̂a waan bpai tam ŋaan mái kráp', 'english': 'Did you go to work yesterday?'},
                          'yes': {'thai': 'ไปครับ', 'paiboon': 'bpai kráp', 'english': 'Yes, I did. (go)'},
                          'no': {'thai': 'ไม่ได้ไปครับ', 'paiboon': 'mâi dâi bpai kráp', 'english': "No, I didn't. (didn't go)"}},
                     ],
                     'female': [
-                        {'q': {'thai': 'เมื่อวานไปทำงานไหมคะ', 'paiboon': 'mʉ̂a waan bpai tam ŋaan mǎi ká', 'english': 'Did you go to work yesterday?'},
+                        {'q': {'thai': 'เมื่อวานไปทำงานไหมคะ', 'paiboon': 'mʉ̂a waan bpai tam ŋaan mái ká', 'english': 'Did you go to work yesterday?'},
                          'yes': {'thai': 'ไปค่ะ', 'paiboon': 'bpai kâ', 'english': 'Yes, I did. (go)'},
                          'no': {'thai': 'ไม่ได้ไปค่ะ', 'paiboon': 'mâi dâi bpai kâ', 'english': "No, I didn't. (didn't go)"}},
                     ],
@@ -6578,7 +6581,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'waiter',
                 'thai': 'เผ็ดไหมครับ',
-                'paiboon': 'pèt mǎi kráp',
+                'paiboon': 'pèt mái kráp',
                 'english': 'Spicy?',
                 'note': 'Asking about spice level'
             },
@@ -6699,7 +6702,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'customer_female',
                 'thai': 'แพงไปหน่อยค่ะ ลดได้ไหมคะ',
-                'paiboon': 'pɛɛŋ bpai nɔ̀ɔi kâ, lót dâi mǎi ká',
+                'paiboon': 'pɛɛŋ bpai nɔ̀ɔi kâ, lót dâi mái ká',
                 'english': "It's a bit expensive. Can you reduce the price?",
                 'note': 'Negotiating'
             },
@@ -6742,7 +6745,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'tourist_male',
                 'thai': 'ไกลไหมครับ',
-                'paiboon': 'glai mǎi kráp',
+                'paiboon': 'glai mái kráp',
                 'english': 'Is it far?',
                 'note': 'Asking about distance'
             },
@@ -6813,7 +6816,7 @@ CONVERSATIONS = {
             {
                 'speaker': 'friend2_female',
                 'thai': 'ไปกินด้วยกันไหมคะ',
-                'paiboon': 'bpai gin dûuai gan mǎi ká',
+                'paiboon': 'bpai gin dûuai gan mái ká',
                 'english': 'Want to eat together?',
                 'note': 'Invitation'
             },
@@ -6836,9 +6839,9 @@ CONVERSATIONS = {
         'dialogue': [
             {'speaker': 'passenger_male', 'thai': 'ไปสยามพารากอนครับ', 'paiboon': 'bpai sà-yǎam paa-raa-gɔɔn kráp', 'english': 'To Siam Paragon, please.', 'note': 'Stating the destination'},
             {'speaker': 'driver_male', 'thai': 'ได้ครับ เชิญขึ้นเลยครับ', 'paiboon': 'dâi kráp, chəən kʉ̂n ləəi kráp', 'english': 'Sure, please get in.', 'note': 'เชิญ = please (inviting)'},
-            {'speaker': 'passenger_male', 'thai': 'ใช้มิเตอร์ได้ไหมครับ', 'paiboon': 'chái mí-təə dâi mǎi kráp', 'english': 'Can you use the meter?', 'note': 'Helps get a fair fare'},
+            {'speaker': 'passenger_male', 'thai': 'ใช้มิเตอร์ได้ไหมครับ', 'paiboon': 'chái mí-təə dâi mái kráp', 'english': 'Can you use the meter?', 'note': 'Helps get a fair fare'},
             {'speaker': 'driver_male', 'thai': 'ได้ครับ รถติดนิดหน่อยนะครับ', 'paiboon': 'dâi kráp, rót tìt nít-nɔ̀i ná kráp', 'english': "Sure. There's a bit of traffic.", 'note': 'รถติด = traffic jam'},
-            {'speaker': 'passenger_male', 'thai': 'ไม่เป็นไรครับ จอดตรงนี้ได้ไหมครับ', 'paiboon': 'mâi bpen rai kráp, jɔ̀ɔt dtroŋ níi dâi mǎi kráp', 'english': "It's fine. Can you stop right here?", 'note': 'จอด = to stop/park'},
+            {'speaker': 'passenger_male', 'thai': 'ไม่เป็นไรครับ จอดตรงนี้ได้ไหมครับ', 'paiboon': 'mâi bpen rai kráp, jɔ̀ɔt dtroŋ níi dâi mái kráp', 'english': "It's fine. Can you stop right here?", 'note': 'จอด = to stop/park'},
             {'speaker': 'passenger_male', 'thai': 'เท่าไหร่ครับ', 'paiboon': 'tâo-rài kráp', 'english': 'How much is it?', 'note': ''},
             {'speaker': 'driver_male', 'thai': 'เก้าสิบบาทครับ', 'paiboon': 'gâo-sìp bàat kráp', 'english': 'Ninety baht.', 'note': ''}
         ]
@@ -6851,9 +6854,9 @@ CONVERSATIONS = {
         'dialogue': [
             {'speaker': 'customer_female', 'thai': 'อันนี้เท่าไหร่คะ', 'paiboon': 'an níi tâo-rài ká', 'english': 'How much is this one?', 'note': 'อันนี้ = this one'},
             {'speaker': 'vendor_male', 'thai': 'สองร้อยบาทครับ', 'paiboon': 'sɔ̌ɔŋ rɔ́ɔi bàat kráp', 'english': 'Two hundred baht.', 'note': ''},
-            {'speaker': 'customer_female', 'thai': 'แพงไปหน่อยค่ะ ลดได้ไหมคะ', 'paiboon': 'pɛɛŋ bpai nɔ̀ɔi kâ, lót dâi mǎi ká', 'english': "It's a bit expensive. Can you lower it?", 'note': 'ลด = to reduce the price'},
+            {'speaker': 'customer_female', 'thai': 'แพงไปหน่อยค่ะ ลดได้ไหมคะ', 'paiboon': 'pɛɛŋ bpai nɔ̀ɔi kâ, lót dâi mái ká', 'english': "It's a bit expensive. Can you lower it?", 'note': 'ลด = to reduce the price'},
             {'speaker': 'vendor_male', 'thai': 'ลดให้ห้าสิบ เหลือร้อยห้าสิบครับ', 'paiboon': 'lót hâi hâa-sìp, lʉ̌a rɔ́ɔi hâa-sìp kráp', 'english': "I'll take off fifty — a hundred and fifty.", 'note': 'เหลือ = leaving (remaining)'},
-            {'speaker': 'customer_female', 'thai': 'ร้อยยี่สิบได้ไหมคะ', 'paiboon': 'rɔ́ɔi yîi-sìp dâi mǎi ká', 'english': 'Could you do a hundred and twenty?', 'note': 'A counter-offer'},
+            {'speaker': 'customer_female', 'thai': 'ร้อยยี่สิบได้ไหมคะ', 'paiboon': 'rɔ́ɔi yîi-sìp dâi mái ká', 'english': 'Could you do a hundred and twenty?', 'note': 'A counter-offer'},
             {'speaker': 'vendor_male', 'thai': 'ได้ครับ เอาไปเลย', 'paiboon': 'dâi kráp, ao bpai ləəi', 'english': "Alright, it's yours.", 'note': 'Agreeing to the deal'}
         ]
     },
@@ -6863,11 +6866,11 @@ CONVERSATIONS = {
         'setting': 'Asking about temple etiquette before going in',
         'difficulty': 'beginner',
         'dialogue': [
-            {'speaker': 'visitor_female', 'thai': 'ขอโทษค่ะ ต้องถอดรองเท้าไหมคะ', 'paiboon': 'kɔ̌ɔ-tôot kâ, dtɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mǎi ká', 'english': 'Excuse me, do I need to take off my shoes?', 'note': 'ถอดรองเท้า = remove shoes'},
+            {'speaker': 'visitor_female', 'thai': 'ขอโทษค่ะ ต้องถอดรองเท้าไหมคะ', 'paiboon': 'kɔ̌ɔ-tôot kâ, dtɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mái ká', 'english': 'Excuse me, do I need to take off my shoes?', 'note': 'ถอดรองเท้า = remove shoes'},
             {'speaker': 'attendant_male', 'thai': 'ต้องถอดครับ ก่อนเข้าในโบสถ์', 'paiboon': 'dtɔ̂ŋ tɔ̀ɔt kráp, gɔ̀ɔn kâo nai bòot', 'english': 'Yes, before entering the ordination hall.', 'note': 'โบสถ์ = the ubosot (ordination hall)'},
-            {'speaker': 'visitor_female', 'thai': 'แต่งตัวแบบนี้เข้าได้ไหมคะ', 'paiboon': 'tɛ̀ŋ-tua bɛ̀ɛp níi kâo dâi mǎi ká', 'english': 'Is it ok to go in dressed like this?', 'note': 'Asking about the dress code'},
+            {'speaker': 'visitor_female', 'thai': 'แต่งตัวแบบนี้เข้าได้ไหมคะ', 'paiboon': 'tɛ̀ŋ-tua bɛ̀ɛp níi kâo dâi mái ká', 'english': 'Is it ok to go in dressed like this?', 'note': 'Asking about the dress code'},
             {'speaker': 'attendant_male', 'thai': 'ควรปิดไหล่กับหัวเข่าครับ', 'paiboon': 'kuan bpìt lài gàp hǔa-kào kráp', 'english': 'You should cover your shoulders and knees.', 'note': 'Temple dress etiquette'},
-            {'speaker': 'visitor_female', 'thai': 'ถ่ายรูปได้ไหมคะ', 'paiboon': 'tàai-rûup dâi mǎi ká', 'english': 'Can I take photos?', 'note': ''},
+            {'speaker': 'visitor_female', 'thai': 'ถ่ายรูปได้ไหมคะ', 'paiboon': 'tàai-rûup dâi mái ká', 'english': 'Can I take photos?', 'note': ''},
             {'speaker': 'attendant_male', 'thai': 'ได้ครับ แต่อย่าหันหลังให้พระพุทธรูป', 'paiboon': 'dâi kráp, tɛ̀ɛ yàa hǎn lǎŋ hâi prá-pút-tá-rûup', 'english': "Yes, but don't turn your back to the Buddha image.", 'note': 'Showing respect to the Buddha image'}
         ]
     },
@@ -6894,7 +6897,7 @@ CONVERSATIONS = {
             {'speaker': 'monk', 'thai': 'เจริญพร โยม', 'paiboon': 'jà-rəən pɔɔn, yoom', 'english': 'Blessings, layperson.', 'note': 'โยม = how a monk addresses a lay person'},
             {'speaker': 'layperson_male', 'thai': 'ผมอยากเริ่มนั่งสมาธิครับ ควรเริ่มยังไงดีครับ', 'paiboon': 'pǒm yàak rə̂əm nâŋ sà-maa-tí kráp, kuan rə̂əm yaŋ-ŋai dii kráp', 'english': 'I would like to start meditating. How should I begin?', 'note': 'นั่งสมาธิ = to meditate'},
             {'speaker': 'monk', 'thai': 'เริ่มจากลมหายใจ หายใจเข้าก็รู้ หายใจออกก็รู้', 'paiboon': 'rə̂əm jàak lom hǎai-jai, hǎai-jai kâo gɔ̂ɔ rúu, hǎai-jai ɔ̀ɔk gɔ̂ɔ rúu', 'english': 'Begin with the breath. Breathing in, know it; breathing out, know it.', 'note': 'Mindfulness of breathing (ānāpānasati)'},
-            {'speaker': 'layperson_male', 'thai': 'ต้องนั่งนานไหมครับ', 'paiboon': 'dtɔ̂ŋ nâŋ naan mǎi kráp', 'english': 'Do I need to sit for long?', 'note': 'Yes/no question'},
+            {'speaker': 'layperson_male', 'thai': 'ต้องนั่งนานไหมครับ', 'paiboon': 'dtɔ̂ŋ nâŋ naan mái kráp', 'english': 'Do I need to sit for long?', 'note': 'Yes/no question'},
             {'speaker': 'monk', 'thai': 'เริ่มจากสิบนาทีก่อน แล้วค่อยๆ เพิ่มขึ้น', 'paiboon': 'rə̂əm jàak sìp naa-tii gɔ̀ɔn, lɛ́ɛo kɔ̂i-kɔ̂i pə̂əm kʉ̂n', 'english': 'Start with ten minutes, then gradually increase.', 'note': 'ค่อยๆ = gradually'}
         ]
     }
@@ -6911,8 +6914,8 @@ CONVERSATIONAL_PHRASES = [
         'icon': '💬',
         'intro': "When you miss something, these keep you in the conversation instead of freezing up.",
         'phrases': [
-            {'thai': 'พูดอีกทีได้ไหมครับ', 'paiboon': 'pûut ìik tii dâi mǎi kráp', 'english': 'Could you say that again?'},
-            {'thai': 'พูดช้าๆ ได้ไหมครับ', 'paiboon': 'pûut cháa-cháa dâi mǎi kráp', 'english': 'Could you speak slowly?'},
+            {'thai': 'พูดอีกทีได้ไหมครับ', 'paiboon': 'pûut ìik tii dâi mái kráp', 'english': 'Could you say that again?'},
+            {'thai': 'พูดช้าๆ ได้ไหมครับ', 'paiboon': 'pûut cháa-cháa dâi mái kráp', 'english': 'Could you speak slowly?'},
             {'thai': 'ผมยังไม่เข้าใจครับ', 'paiboon': 'pǒm yaŋ mâi kâo-jai kráp', 'english': "I don't understand yet."},
             {'thai': 'อ๋อ เข้าใจแล้วครับ', 'paiboon': 'ɔ̌ɔ, kâo-jai lɛ́ɛo kráp', 'english': 'Oh, I understand now.'},
             {'thai': 'อันนี้ภาษาไทยพูดว่าอะไรครับ', 'paiboon': 'an níi paa-sǎa tai pûut wâa à-rai kráp', 'english': 'How do you say this in Thai?'},

@@ -37,7 +37,7 @@ ROMANISATION = {
     'ผม': 'pǒm', 'ดิฉัน': 'dì-chǎn', 'ครับ': 'kráp', 'ค่ะ': 'kâ', 'คะ': 'ká',
     'คุณ': 'kun', 'เขา': 'kǎo',
     'กำลัง': 'gam-laŋ', 'แล้ว': 'lɛ́ɛo', 'จะ': 'jà', 'ยัง': 'yaŋ',
-    'ไม่': 'mâi', 'ได้': 'dâi', 'ไหม': 'mǎi', 'หรือ': 'rʉ̌ʉ',
+    'ไม่': 'mâi', 'ได้': 'dâi', 'ไหม': 'mái', 'รึ': 'rʉ́',
     'กิน': 'gin', 'ข้าว': 'kâao', 'ทำงาน': 'tam ŋaan', 'เสร็จ': 'sèt',
     'อ่าน': 'àan', 'หนังสือ': 'nǎŋ-sʉ̌ʉ', 'เรียน': 'riian',
     'ภาษาไทย': 'paa-sǎa tai', 'ไป': 'bpai', 'มา': 'maa',
@@ -89,7 +89,7 @@ SENTENCES = [
     {'english': 'Can you speak Thai?', 'tiles': ['คุณ', 'พูด', 'ไทย', 'ได้', 'ไหม', '{q}'], 'topic': 'questions'},
     {'english': "What's your name?", 'tiles': ['คุณ', 'ชื่อ', 'อะไร', '{q}'], 'topic': 'questions'},
     {'english': 'Where are you going?', 'tiles': ['คุณ', 'ไป', 'ไหน', '{q}'], 'topic': 'questions'},
-    {'english': 'Have you eaten yet?', 'tiles': ['คุณ', 'กิน', 'ข้าว', 'แล้ว', 'หรือ', 'ยัง', '{q}'], 'topic': 'questions'},
+    {'english': 'Have you eaten yet?', 'tiles': ['คุณ', 'กิน', 'ข้าว', 'แล้ว', 'รึ', 'ยัง', '{q}'], 'topic': 'questions'},
 
     # ── Challenge: longer sentences that join ideas ──
     {'level': 'challenge', 'topic': 'แต่', 'english': "I want to go, but I don't have time.",

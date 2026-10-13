@@ -405,7 +405,7 @@ REGISTER_LEVELS = {
                 'thai': 'กินข้าวยัง',
                 'paiboon': 'gin kâao yaŋ',
                 'english': 'Eaten yet?',
-                'polite': 'ทานข้าวหรือยังครับ',
+                'polite': 'ทานข้าวรึยังครับ',
             },
             {
                 'thai': 'เออ',

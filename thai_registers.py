@@ -91,7 +91,7 @@ VARIANTS = {
     },
     'เผ็ดไหมครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'เผ็ดไหม', 'paiboon': 'pèt mǎi',
+        'casual': {'thai': 'เผ็ดไหม', 'paiboon': 'pèt mái',
                    'note': 'Just the particle off.'},
     },
     'ไม่เผ็ดค่ะ': {
@@ -182,7 +182,7 @@ VARIANTS = {
     },
     'แพงไปหน่อยค่ะ ลดได้ไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'แพงจัง ลดได้ไหม', 'paiboon': 'pɛɛŋ jaŋ, lót dâi mǎi'},
+        'casual': {'thai': 'แพงจัง ลดได้ไหม', 'paiboon': 'pɛɛŋ jaŋ, lót dâi mái'},
     },
     'ลดให้สองร้อยห้าสิบบาทครับ': {
         'neutral': {'thai': 'ลดให้สองร้อยห้าสิบครับ', 'paiboon': 'lót hâi sɔ̌ɔŋ rɔ́ɔi hâa-sìp kráp'},
@@ -211,7 +211,7 @@ VARIANTS = {
     },
     'ไกลไหมครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ไกลไหม', 'paiboon': 'glai mǎi'},
+        'casual': {'thai': 'ไกลไหม', 'paiboon': 'glai mái'},
     },
     'ไม่ไกลครับ เดินประมาณสิบนาทีครับ': {
         'neutral': {'thai': 'ไม่ไกลครับ เดินสิบนาทีครับ',
@@ -265,7 +265,7 @@ VARIANTS = {
     },
     'ไปกินด้วยกันไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ไปกินกันไหม', 'paiboon': 'bpai gin gan mǎi',
+        'casual': {'thai': 'ไปกินกันไหม', 'paiboon': 'bpai gin gan mái',
                    'note': 'ด้วย drops; กัน alone carries "together".'},
     },
     'ได้ครับ ไปกันเลยครับ': {
@@ -289,7 +289,7 @@ VARIANTS = {
     },
     'ใช้มิเตอร์ได้ไหมครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'ใช้มิเตอร์ได้ไหม', 'paiboon': 'chái mí-təə dâi mǎi'},
+        'casual': {'thai': 'ใช้มิเตอร์ได้ไหม', 'paiboon': 'chái mí-təə dâi mái'},
         'warn': 'You are asking a favour of a stranger here. Keep the particle.',
     },
     'ได้ครับ รถติดนิดหน่อยนะครับ': {
@@ -299,7 +299,7 @@ VARIANTS = {
     'ไม่เป็นไรครับ จอดตรงนี้ได้ไหมครับ': {
         'neutral': SAME,
         'casual': {'thai': 'ไม่เป็นไร จอดตรงนี้ได้ไหม',
-                   'paiboon': 'mâi bpen rai, jɔ̀ɔt troŋ níi dâi mǎi'},
+                   'paiboon': 'mâi bpen rai, jɔ̀ɔt troŋ níi dâi mái'},
     },
     'เท่าไหร่ครับ': {
         'neutral': SAME,
@@ -324,7 +324,7 @@ VARIANTS = {
     },
     'แพงไปหน่อยค่ะ ลดได้ไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'แพงจัง ลดหน่อยได้ไหม', 'paiboon': 'pɛɛŋ jaŋ, lót nɔ̀i dâi mǎi',
+        'casual': {'thai': 'แพงจัง ลดหน่อยได้ไหม', 'paiboon': 'pɛɛŋ jaŋ, lót nɔ̀i dâi mái',
                    'note': 'หน่อย keeps a casual request from sounding like a demand.'},
     },
     'ลดให้ห้าสิบ เหลือร้อยห้าสิบครับ': {
@@ -335,7 +335,7 @@ VARIANTS = {
     },
     'ร้อยยี่สิบได้ไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ร้อยยี่ได้ไหม', 'paiboon': 'rɔ́ɔi yîi dâi mǎi',
+        'casual': {'thai': 'ร้อยยี่ได้ไหม', 'paiboon': 'rɔ́ɔi yîi dâi mái',
                    'note': 'Same clipping again: ร้อยยี่ for 120.'},
     },
     'ได้ครับ เอาไปเลย': {
@@ -350,7 +350,7 @@ VARIANTS = {
     # ---------------------------------------------------------------
     'ขอโทษค่ะ ต้องถอดรองเท้าไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ต้องถอดรองเท้าไหม', 'paiboon': 'dtɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mǎi'},
+        'casual': {'thai': 'ต้องถอดรองเท้าไหม', 'paiboon': 'dtɔ̂ŋ tɔ̀ɔt rɔɔŋ-táao mái'},
         'warn': 'Fine asking the friend you came with. Not to the temple attendant.',
     },
     'ต้องถอดครับ ก่อนเข้าในโบสถ์': {
@@ -359,7 +359,7 @@ VARIANTS = {
     },
     'แต่งตัวแบบนี้เข้าได้ไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'แต่งแบบนี้เข้าได้ไหม', 'paiboon': 'dtɛ̀ŋ bɛ̀ɛp níi kâo dâi mǎi'},
+        'casual': {'thai': 'แต่งแบบนี้เข้าได้ไหม', 'paiboon': 'dtɛ̀ŋ bɛ̀ɛp níi kâo dâi mái'},
     },
     'ควรปิดไหล่กับหัวเข่าครับ': {
         'neutral': SAME,
@@ -367,7 +367,7 @@ VARIANTS = {
     },
     'ถ่ายรูปได้ไหมคะ': {
         'neutral': SAME,
-        'casual': {'thai': 'ถ่ายรูปได้ไหม', 'paiboon': 'tàai-rûup dâi mǎi'},
+        'casual': {'thai': 'ถ่ายรูปได้ไหม', 'paiboon': 'tàai-rûup dâi mái'},
     },
     'ได้ครับ แต่อย่าหันหลังให้พระพุทธรูป': {
         'neutral': SAME,
@@ -555,22 +555,22 @@ VARIANTS = {
     # Questions — yes/no
     # ---------------------------------------------------------------
     'คุณกินข้าวไหมครับ': {
-        'neutral': {'thai': 'กินข้าวไหมครับ', 'paiboon': 'gin kâao mǎi kráp'},
+        'neutral': {'thai': 'กินข้าวไหมครับ', 'paiboon': 'gin kâao mái kráp'},
         'casual': {'thai': 'กินข้าวยัง', 'paiboon': 'gin kâao yaŋ',
                    'note': 'The real greeting between friends — "eaten yet?" rather than '
                            '"do you eat?". Answer กินแล้ว or ยัง.'},
     },
     'คุณพูดไทยได้ไหมครับ': {
-        'neutral': {'thai': 'พูดไทยได้ไหมครับ', 'paiboon': 'pûut tai dâi mǎi kráp'},
-        'casual': {'thai': 'พูดไทยได้ไหม', 'paiboon': 'pûut tai dâi mǎi'},
+        'neutral': {'thai': 'พูดไทยได้ไหมครับ', 'paiboon': 'pûut tai dâi mái kráp'},
+        'casual': {'thai': 'พูดไทยได้ไหม', 'paiboon': 'pûut tai dâi mái'},
     },
     'คุณกินข้าวไหมคะ': {
-        'neutral': {'thai': 'กินข้าวไหมคะ', 'paiboon': 'gin kâao mǎi ká'},
+        'neutral': {'thai': 'กินข้าวไหมคะ', 'paiboon': 'gin kâao mái ká'},
         'casual': {'thai': 'กินข้าวยัง', 'paiboon': 'gin kâao yaŋ'},
     },
     'คุณพูดไทยได้ไหมคะ': {
-        'neutral': {'thai': 'พูดไทยได้ไหมคะ', 'paiboon': 'pûut tai dâi mǎi ká'},
-        'casual': {'thai': 'พูดไทยได้ไหม', 'paiboon': 'pûut tai dâi mǎi'},
+        'neutral': {'thai': 'พูดไทยได้ไหมคะ', 'paiboon': 'pûut tai dâi mái ká'},
+        'casual': {'thai': 'พูดไทยได้ไหม', 'paiboon': 'pûut tai dâi mái'},
     },
 
     # ---------------------------------------------------------------
@@ -609,7 +609,7 @@ VARIANTS = {
     # ---------------------------------------------------------------
     'พูดอีกทีได้ไหมครับ': {
         'neutral': SAME,
-        'casual': {'thai': 'พูดอีกทีได้ไหม', 'paiboon': 'pûut ìik tii dâi mǎi'},
+        'casual': {'thai': 'พูดอีกทีได้ไหม', 'paiboon': 'pûut ìik tii dâi mái'},
     },
     'พูดช้าๆ ได้ไหมครับ': {
         'neutral': SAME,
@@ -705,6 +705,11 @@ REGISTER_RULES_FOR_AI = """POLITENESS REGISTERS - CRITICAL - NEVER CONTRADICT TH
 - Casual: ครับ/ค่ะ dropped too (ข้าวผัดจานนึง). Friends, siblings, children only.
 - Casual goes sideways or down, NEVER up: not to strangers, staff, elders or in-laws.
 - To a parent-in-law or any elder: keep ครับ/ค่ะ on every sentence.
+- ดิฉัน (a woman's "I") is not wrong but too formal and hardly used. In conversation
+  women use their nickname, or พี่ (a bit older than the listener), น้อง (younger),
+  or ป้า (a lot older). Say this whenever you teach ดิฉัน.
+- Spell ไหม as it is said: mái (like มั้ย). In everyday questions หรือ is said รึ (rʉ́):
+  กินข้าวรึยัง. Keep หรือ (rʉ̌ʉ) for the written word "or".
 
 **Speaking to a monk is a VOCABULARY swap, not a rung. There is no casual form.**
 - ถวาย (tà-wǎai) = "give/offer" when the receiver is a MONK. ให้ (hâi) is for
