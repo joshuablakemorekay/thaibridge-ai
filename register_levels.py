@@ -435,7 +435,7 @@ REGISTER_LEVELS = {
             'examples': [
                 'ว่ะ (wâ) — rough sentence particle',
                 'เว้ย (wə́əi) — "oi!", calling someone',
-                'มั้ย for ไหม — clipped question particle',
+                'มั๊ย for ไหม — clipped question particle',
             ],
         },
         'warning': (

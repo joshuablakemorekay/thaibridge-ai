@@ -68,7 +68,7 @@ SPACES between separate words in multi-word phrases.
 
 SPECIAL CASES:
   QUESTION PARTICLES: write them as they are SAID, not as spelled.
-    ไหม (question) → mái  (said มั้ย)     หรือ in a question (…รึยัง, …รึเปล่า) is written รึ → rʉ́
+    มั๊ย / ไหม (question) → mái  (said มั๊ย)     หรือ in a question (…รึยัง, …รึเปล่า) is written รึ → rʉ́
   LOANWORDS: Thai loanwords from English still require correct Paiboon vowel
     length and tone marks based on how Thai speakers actually pronounce them.
     e.g. ไวน์ → wâin  (not wai)   ไมล์ → maai  (long vowel)

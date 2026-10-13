@@ -98,11 +98,11 @@ class TestPoliteEndings:
                 assert re.findall(r'\{[sq]\}', c['thai']) == re.findall(r'\{[sq]\}', c['paiboon']), c['thai']
 
     def test_questions_take_the_question_marker(self):
-        """A learner line ending in ไหม is a question, so it must be {q}."""
+        """A learner line ending in มั๊ย is a question, so it must be {q}."""
         for trip in tour_trips.TRIPS:
             for scene in trip['scenes']:
                 for c in scene['choices']:
-                    assert 'ไหม{s}' not in c['thai'], c['thai']
+                    assert 'มั๊ย{s}' not in c['thai'], c['thai']
 
 
 class TestAudio:
