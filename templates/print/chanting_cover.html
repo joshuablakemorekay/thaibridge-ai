@@ -39,8 +39,18 @@
     .panel { position: absolute; top: 0; height: 100%; box-sizing: border-box; }
     .back  { left: 0; width: {{ '%.3f' % (bleed + trim_w) }}mm;
              padding: {{ bleed + 18 }}mm 18mm {{ bleed + 18 }}mm {{ bleed + 18 }}mm; }
+    /* The spine is the same purple as the faces, not a gold block: Lulu's
+       trim can move the spine up to 3.18mm either way, and a gold block
+       would then show as a stray sliver on the front or back edge.
+       The two gold rules sit 5mm inside each fold, past that tolerance. */
     .spine { left: {{ '%.3f' % (bleed + trim_w) }}mm; width: {{ '%.3f' % spine }}mm;
-             background: var(--gold); color: var(--purple); }
+             background: var(--purple); color: var(--gold); }
+    .spine::before, .spine::after {
+        content: ''; position: absolute; top: {{ bleed + 12 }}mm; bottom: {{ bleed + 12 }}mm;
+        width: 0.6mm; background: var(--gold);
+    }
+    .spine::before { left: 5mm; }
+    .spine::after { right: 5mm; }
     .front { left: {{ '%.3f' % (bleed + trim_w + spine) }}mm; width: {{ '%.3f' % (trim_w + bleed) }}mm;
              padding: {{ bleed + 18 }}mm {{ bleed + 18 }}mm {{ bleed + 18 }}mm 18mm;
              text-align: center; }
@@ -70,7 +80,7 @@
         font-size: {{ spine_font }}pt; font-weight: 600;
         display: flex; align-items: center; gap: 9mm;
     }
-    .spine-text .sep { width: 2.2mm; height: 2.2mm; border-radius: 50%; background: var(--purple); }
+    .spine-text .sep { width: 2.2mm; height: 2.2mm; border-radius: 50%; background: var(--saffron); }
 
     /* Back */
     .back h2 { font-size: 15pt; font-weight: 600; color: var(--gold); margin: 14mm 0 6mm; }
