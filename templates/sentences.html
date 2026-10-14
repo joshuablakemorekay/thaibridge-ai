@@ -37,7 +37,7 @@
     padding: 0.55rem 1rem;
     border: 2px solid var(--lotus-pink);
     background: #fff;
-    color: var(--lotus-pink);
+    color: #c2185b;
     border-radius: 8px;
     font: 600 0.95rem inherit;
     font-family: inherit;
@@ -106,7 +106,7 @@
     font-family: inherit;
     cursor: pointer;
 }
-.sb-level.active { background: var(--saffron); color: #fff; }
+.sb-level.active { background: var(--saffron); color: var(--dark-text); }
 .sb-level-note { font-size: 0.9rem; color: #666; margin: 0.5rem 0 0; }
 /* Challenge: read the Thai, not the romanisation. It comes back on the reveal. */
 #sb-drill.challenge .sb-answer .sb-roman,
@@ -340,9 +340,9 @@
     <h3 style="margin-top: 0; color: var(--royal-purple);">
         👤 Examples for: 
         {% if gender == 'male' %}
-            <span style="color: #2196F3;">Male Speaker</span>
+            <span style="color: #1565c0;">Male Speaker</span>
         {% elif gender == 'female' %}
-            <span style="color: #E91E63;">Female Speaker</span>
+            <span style="color: #c2185b;">Female Speaker</span>
         {% else %}
             <span style="color: #9C27B0;">Both Genders (Comparison)</span>
         {% endif %}
@@ -353,7 +353,7 @@
 <!-- Aspect Markers -->
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="aspect-markers" style="color: var(--saffron); margin-top: 2rem;">📊 {{ patterns.aspect_markers.title }}</h2>
+        <h2 id="aspect-markers" style="color: var(--saffron-text); margin-top: 2rem;">📊 {{ patterns.aspect_markers.title }}</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -367,14 +367,14 @@
 
 <!-- Progressive -->
 <div class="card" style="border-left: 5px solid #4CAF50;">
-    <h3 style="color: #4CAF50;">{{ patterns.aspect_markers.progressive.name }}</h3>
+    <h3 style="color: #2e7d32;">{{ patterns.aspect_markers.progressive.name }}</h3>
     <div style="background: #f1f8e9; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
         <strong>Pattern:</strong> {{ patterns.aspect_markers.progressive.pattern }}<br>
         <strong>Usage:</strong> {{ patterns.aspect_markers.progressive.usage }}
     </div>
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+        <h4 style="color: #1565c0;">👨 Male Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.progressive.male if gender == 'male' or gender == 'neutral' %}
@@ -390,7 +390,7 @@
     {% endfor %}
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+        <h4 style="color: #c2185b; margin-top: 1.5rem;">👩 Female Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.progressive.female if gender == 'female' or gender == 'neutral' %}
@@ -408,14 +408,14 @@
 
 <!-- Completed -->
 <div class="card" style="border-left: 5px solid #FF9800;">
-    <h3 style="color: #FF9800;">{{ patterns.aspect_markers.completed.name }}</h3>
+    <h3 style="color: var(--saffron-text);">{{ patterns.aspect_markers.completed.name }}</h3>
     <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
         <strong>Pattern:</strong> {{ patterns.aspect_markers.completed.pattern }}<br>
         <strong>Usage:</strong> {{ patterns.aspect_markers.completed.usage }}
     </div>
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+        <h4 style="color: #1565c0;">👨 Male Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.completed.male if gender == 'male' or gender == 'neutral' %}
@@ -431,7 +431,7 @@
     {% endfor %}
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+        <h4 style="color: #c2185b; margin-top: 1.5rem;">👩 Female Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.completed.female if gender == 'female' or gender == 'neutral' %}
@@ -449,14 +449,14 @@
 
 <!-- Future -->
 <div class="card" style="border-left: 5px solid #2196F3;">
-    <h3 style="color: #2196F3;">{{ patterns.aspect_markers.future.name }}</h3>
+    <h3 style="color: #1565c0;">{{ patterns.aspect_markers.future.name }}</h3>
     <div style="background: #e3f2fd; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
         <strong>Pattern:</strong> {{ patterns.aspect_markers.future.pattern }}<br>
         <strong>Usage:</strong> {{ patterns.aspect_markers.future.usage }}
     </div>
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+        <h4 style="color: #1565c0;">👨 Male Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.future.male if gender == 'male' or gender == 'neutral' %}
@@ -472,7 +472,7 @@
     {% endfor %}
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+        <h4 style="color: #c2185b; margin-top: 1.5rem;">👩 Female Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.future.female if gender == 'female' or gender == 'neutral' %}
@@ -497,7 +497,7 @@
     </div>
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+        <h4 style="color: #1565c0;">👨 Male Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.combined.male if gender == 'male' or gender == 'neutral' %}
@@ -514,7 +514,7 @@
     {% endfor %}
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+        <h4 style="color: #c2185b; margin-top: 1.5rem;">👩 Female Examples:</h4>
     {% endif %}
     
     {% for ex in aspect_examples.combined.female if gender == 'female' or gender == 'neutral' %}
@@ -537,7 +537,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="questions" style="color: var(--temple-orange); margin-top: 2rem;">❓ {{ patterns.question_patterns.title }}</h2>
+        <h2 id="questions" style="color: var(--saffron-text); margin-top: 2rem;">❓ {{ patterns.question_patterns.title }}</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -547,13 +547,13 @@
 
 <!-- Yes/No Questions -->
 <div class="card" style="border-left: 5px solid #FF5722;">
-    <h3 style="color: #FF5722;">{{ patterns.question_patterns.yes_no.name }}</h3>
+    <h3 style="color: var(--saffron-text);">{{ patterns.question_patterns.yes_no.name }}</h3>
     <div style="background: #fbe9e7; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
         <strong>Pattern:</strong> {{ patterns.question_patterns.yes_no.pattern }}
     </div>
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+        <h4 style="color: #1565c0;">👨 Male Examples:</h4>
     {% endif %}
     
     {% for ex in question_examples.yes_no.male if gender == 'male' or gender == 'neutral' %}
@@ -569,7 +569,7 @@
     {% endfor %}
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+        <h4 style="color: #c2185b; margin-top: 1.5rem;">👩 Female Examples:</h4>
     {% endif %}
     
     {% for ex in question_examples.yes_no.female if gender == 'female' or gender == 'neutral' %}
@@ -593,7 +593,7 @@
     </div>
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #2196F3;">👨 Male Examples:</h4>
+        <h4 style="color: #1565c0;">👨 Male Examples:</h4>
     {% endif %}
     
     {% for ex in question_examples.wh_questions.male if gender == 'male' or gender == 'neutral' %}
@@ -610,7 +610,7 @@
     {% endfor %}
     
     {% if gender == 'neutral' %}
-        <h4 style="color: #E91E63; margin-top: 1.5rem;">👩 Female Examples:</h4>
+        <h4 style="color: #c2185b; margin-top: 1.5rem;">👩 Female Examples:</h4>
     {% endif %}
     
     {% for ex in question_examples.wh_questions.female if gender == 'female' or gender == 'neutral' %}
@@ -634,7 +634,7 @@
 <!-- Answering Questions -->
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="answering" style="color: var(--saffron); margin-top: 2rem;">💬 {{ patterns.answering.title }}</h2>
+        <h2 id="answering" style="color: var(--saffron-text); margin-top: 2rem;">💬 {{ patterns.answering.title }}</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -684,7 +684,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="verbs-practice" style="color: var(--rice-green); margin-top: 2rem;">🔄 {{ patterns.common_verbs.title }}</h2>
+        <h2 id="verbs-practice" style="color: #2e7d32; margin-top: 2rem;">🔄 {{ patterns.common_verbs.title }}</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -741,7 +741,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="joining" style="color: var(--saffron); margin-top: 2rem;">🔗 {{ patterns.joining.title }}</h2>
+        <h2 id="joining" style="color: var(--saffron-text); margin-top: 2rem;">🔗 {{ patterns.joining.title }}</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -783,7 +783,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="sentence-builder" style="color: var(--saffron); margin-top: 2rem;">🧩 Build the Sentence</h2>
+        <h2 id="sentence-builder" style="color: var(--saffron-text); margin-top: 2rem;">🧩 Build the Sentence</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -817,7 +817,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="conversations" style="color: var(--lotus-pink); margin-top: 2rem;">💭 Real-World Conversations</h2>
+        <h2 id="conversations" style="color: #c2185b; margin-top: 2rem;">💭 Real-World Conversations</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -827,7 +827,7 @@
 
 {% for conv_id, conv in conversations.items() %}
 <div class="card conv-card" style="border-left: 5px solid var(--lotus-pink);">
-    <h3 style="color: var(--lotus-pink);">{{ conv.title }}</h3>
+    <h3 style="color: #c2185b;">{{ conv.title }}</h3>
     <p style="color: #666; margin-bottom: 0.5rem;"><strong>Setting:</strong> {{ conv.setting }}</p>
     <p style="margin-bottom: 1rem;">
         <span style="background: {% if conv.difficulty == 'beginner' %}#4CAF50{% else %}#FF9800{% endif %}; color: white; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.9rem;">
@@ -873,7 +873,7 @@
 <!-- Conversational Glue Phrases -->
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 id="glue-phrases" style="color: var(--lotus-pink); margin-top: 2rem;">🗣️ Everyday Conversation Phrases</h2>
+        <h2 id="glue-phrases" style="color: #c2185b; margin-top: 2rem;">🗣️ Everyday Conversation Phrases</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -883,7 +883,7 @@
 
         {% for group in conversational_phrases %}
         <div class="card" style="border-left: 5px solid var(--lotus-pink);">
-            <h3 style="color: var(--lotus-pink);">{{ group.icon }} {{ group.title }}</h3>
+            <h3 style="color: #c2185b;">{{ group.icon }} {{ group.title }}</h3>
             <p style="color: #666; margin-bottom: 1rem;">{{ group.intro }}</p>
             {% for p in group.phrases %}
             <div style="padding: 0.9rem 1rem; border-radius: 8px; margin-bottom: 0.75rem; background: #faf7fb; display: flex; align-items: flex-start; gap: 0.75rem;">
@@ -903,7 +903,7 @@
 
 <div class="collapsible-section">
     <div class="section-header">
-        <h2 style="color: var(--saffron); margin-top: 2rem;">🎯 Practice Suggestions</h2>
+        <h2 style="color: var(--saffron-text); margin-top: 2rem;">🎯 Practice Suggestions</h2>
         <span class="section-toggle">▼</span>
     </div>
     <div class="section-content">
@@ -930,7 +930,7 @@
         </div>
         
         <div style="background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%); padding: 1.5rem; border-radius: 10px;">
-            <h4 style="color: var(--saffron);">🔄 Transformation Practice</h4>
+            <h4 style="color: var(--saffron-text);">🔄 Transformation Practice</h4>
             <ul style="margin-left: 1.5rem; line-height: 1.8;">
                 <li>Take a present tense sentence</li>
                 <li>Add กำลัง to make it progressive</li>

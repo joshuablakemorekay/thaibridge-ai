@@ -146,7 +146,9 @@
     }
     
     .message.user .message-content {
-        background: linear-gradient(135deg, var(--thai-sky), var(--mekong-blue));
+        /* Was sky blue → Mekong blue, but white text on the pale sky end was
+           barely readable (1.7:1). Both stops are now dark enough for 4.5:1+. */
+        background: linear-gradient(135deg, #3A75B0, #1565C0);
         color: white;
         border-bottom-right-radius: 5px;
     }
@@ -175,7 +177,7 @@
     
     .message-content .translation {
         font-style: italic;
-        color: var(--monsoon-grey);
+        color: #5a6573;
         font-size: 0.9rem;
         margin-top: 0.5rem;
     }
@@ -285,7 +287,7 @@
     
     .token-counter {
         font-size: 0.85rem;
-        color: var(--monsoon-grey);
+        color: #5a6573;
         background: white;
         padding: 0.5rem 1rem;
         border-radius: 15px;
@@ -301,7 +303,7 @@
     .welcome-message h2 {
         font-size: 1.8rem;
         margin-bottom: 1rem;
-        color: var(--royal-gold);
+        color: var(--gold-text);
         text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
     

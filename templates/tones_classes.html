@@ -139,7 +139,7 @@
     }
     .tone-chart thead th { background: var(--royal-purple); color: white; }
     .tone-chart .row-label { color: white; font-weight: 700; }
-    .tone-chart .dash { color: #bbb; }
+    .tone-chart .dash { color: #666; }
     .chart-wrap { overflow-x: auto; }
 
     /* ── Contrast pairs ── */
@@ -176,7 +176,7 @@
         font-weight: 700;
         margin: 1rem 0;
     }
-    .drill-question small { display: block; font-size: 1rem; color: #888; font-weight: 400; }
+    .drill-question small { display: block; font-size: 1rem; color: #666; font-weight: 400; }
     .drill-options { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
     .opt-btn {
         padding: 0.7rem 1.4rem;
@@ -209,7 +209,7 @@
         font-weight: 600;
         font-size: 0.85rem;
     }
-    .level-btn.active { background: var(--monk-saffron); color: white; }
+    .level-btn.active { background: var(--monk-saffron); color: var(--dark-text); }
 </style>
 {% endblock %}
 
@@ -296,7 +296,7 @@
         <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
             <span class="class-badge">{{ cls.label }}</span>
             <span class="class-thai">{{ cls.name }} · {{ cls.thai }}</span>{{ listen(cls.thai) }}
-            <span style="color: #888;">({{ cls.count }} letters)</span>
+            <span style="color: #666;">({{ cls.count }} letters)</span>
         </div>
         <p style="font-weight: 600; margin: 0.8rem 0 0.4rem;">{{ cls.headline }}</p>
         <p style="line-height: 1.7; color: #444;">{{ cls.tone_rules }}</p>
@@ -365,7 +365,7 @@
                     <td><strong>{{ p.sound }}</strong></td>
                     <td style="font-size: 1.6rem; color: var(--temple-red);">{{ p.high }}</td>
                     <td style="font-size: 1.6rem; color: var(--royal-purple);">{{ p.low }}</td>
-                    <td>Rising <span style="color:#999;">(high)</span> vs Mid <span style="color:#999;">(low)</span></td>
+                    <td>Rising <span style="color:#666;">(high)</span> vs Mid <span style="color:#666;">(low)</span></td>
                 </tr>
                 {% endfor %}
             </tbody>
