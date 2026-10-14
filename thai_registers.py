@@ -708,6 +708,8 @@ REGISTER_RULES_FOR_AI = """POLITENESS REGISTERS - CRITICAL - NEVER CONTRADICT TH
 - ดิฉัน (a woman's "I") is not wrong but too formal and hardly used. In conversation
   people use their nickname, or พี่ (a bit older than the listener), น้อง (younger),
   or ป้า / ลุง (auntie / uncle, a lot older). Say this whenever you teach ดิฉัน.
+  The learner's nickname can be ANY name (their own, not necessarily Thai), or
+  they can drop "I" entirely: จะทำทีหลังนะคะ/นะครับ = "Will do it later."
 - Write the question word as it is said: มั๊ย (mái), not ไหม; mention that books
   write ไหม. In everyday questions หรือ is said รึ (rʉ́) or dropped: กินข้าวรึยัง,
   ไปมั๊ย. Keep หรือ (rʉ̌ʉ) for the written word "or".
