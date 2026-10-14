@@ -119,6 +119,17 @@
         margin-left: 0.3rem;
     }
 
+    .tone-shape {
+        width: 1.4em;
+        height: 0.95em;
+        margin-right: 0.25em;
+        vertical-align: -0.1em;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+    }
+
     /* ── Tone chart ── */
     .tone-chart { width: 100%; border-collapse: collapse; margin: 1rem 0; }
     .tone-chart th, .tone-chart td {
@@ -181,6 +192,9 @@
     .opt-btn:disabled { cursor: default; }
     .opt-btn.correct { background: var(--bodhi-green); border-color: var(--bodhi-green); color: white; }
     .opt-btn.wrong { background: var(--temple-red); border-color: var(--temple-red); color: white; }
+    /* Marks as well as colour, so colour-blind learners can tell right from wrong. */
+    .opt-btn.correct::after { content: " ✓"; }
+    .opt-btn.wrong::after { content: " ✗"; }
     .drill-feedback { text-align: center; min-height: 1.6rem; margin: 1rem 0; font-weight: 600; }
     .drill-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; flex-wrap: wrap; gap: 0.5rem; }
     .drill-score { color: #666; font-weight: 600; }
@@ -206,6 +220,17 @@
    for the consonant letters, which reuse the Alphabet page's own recordings. #}
 {% macro listen_url(url) %}{% if url %}<button type="button" class="th-audio tc-listen" data-audio="{{ url }}" aria-label="Listen">🔊</button>{% endif %}{% endmacro %}
 {% macro listen(thai) %}{{ listen_url(thai_audio_url(thai)) }}{% endmacro %}
+{# A tiny pitch-shape line drawn before a tone name, so learners who can't hear
+   the tones yet can see them. Purely visual — the tone name beside it is the
+   real label, so screen readers skip the drawing. #}
+{% set tone_paths = {
+    'Mid': 'M2 8 L22 8',
+    'Low': 'M2 11 L22 13',
+    'Falling': 'M2 6 Q8 2 22 14',
+    'High': 'M2 5 Q14 5 22 2',
+    'Rising': 'M2 11 Q8 14 22 3',
+} %}
+{% macro tone_shape(name) %}{% if tone_paths.get(name) %}<svg class="tone-shape" viewBox="0 0 24 16" aria-hidden="true" focusable="false"><path d="{{ tone_paths[name] }}"/></svg>{% endif %}{% endmacro %}
 <h1>
     🔊 Tones &amp; Consonant Classes
     <span class="thai">วรรณยุกต์และอักษรสามหมู่</span>
@@ -243,12 +268,21 @@
         <p style="line-height: 1.8; font-size: 1.1rem;">{{ data.core_concept.shortcut }}</p>
     </div>
 
+    <div class="card" style="border-left: 6px solid var(--monk-saffron);">
+        <h3 style="margin-top: 0;">👂 Can't hear the tones yet?</h3>
+        <ul style="line-height: 1.8; padding-left: 1.2rem; margin-bottom: 0;">
+            {% for tip in data.core_concept.cant_hear %}
+            <li>{{ tip }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
     <h3>The 5 tones you are aiming for</h3>
     <div class="example-row">
         {% for t in data.reference_tones %}
         <div class="example-chip">
             <span class="e-thai">{{ t.example }}</span>
-            <span class="e-tone">{{ t.name }}</span>
+            <span class="e-tone">{{ tone_shape(t.name) }}{{ t.name }}</span>
             <div style="font-size: 0.8rem; color: #666; margin-top: 0.3rem;">{{ t.description }}</div>
         </div>
         {% endfor %}
@@ -283,7 +317,7 @@
             {% for ex in cls.examples %}
             <div class="example-chip">
                 <span class="e-thai">{{ ex.thai }}</span>{{ listen(ex.thai) }}
-                <span class="e-tone">{{ ex.tone }}</span>
+                <span class="e-tone">{{ tone_shape(ex.tone) }}{{ ex.tone }}</span>
                 <div style="font-size: 0.8rem; color: #666; margin-top: 0.3rem;">{{ ex.paiboon }} — {{ ex.english }}</div>
             </div>
             {% endfor %}
@@ -303,14 +337,14 @@
         <div class="pair-side">
             <span class="class-badge cls-high" style="background: var(--temple-red);">HIGH</span>
             <div class="p-thai" style="color: var(--temple-red);">{{ data.sound_pairs.demo.high.thai }}{{ listen(data.sound_pairs.demo.high.thai) }}</div>
-            <div>{{ data.sound_pairs.demo.high.paiboon }} · <span class="e-tone">{{ data.sound_pairs.demo.high.tone }}</span></div>
+            <div>{{ data.sound_pairs.demo.high.paiboon }} · <span class="e-tone">{{ tone_shape(data.sound_pairs.demo.high.tone) }}{{ data.sound_pairs.demo.high.tone }}</span></div>
             <div style="color: #666;">“{{ data.sound_pairs.demo.high.english }}”</div>
         </div>
         <div class="pair-vs">same “k” sound</div>
         <div class="pair-side">
             <span class="class-badge cls-low" style="background: var(--royal-purple);">LOW</span>
             <div class="p-thai">{{ data.sound_pairs.demo.low.thai }}{{ listen(data.sound_pairs.demo.low.thai) }}</div>
-            <div>{{ data.sound_pairs.demo.low.paiboon }} · <span class="e-tone">{{ data.sound_pairs.demo.low.tone }}</span></div>
+            <div>{{ data.sound_pairs.demo.low.paiboon }} · <span class="e-tone">{{ tone_shape(data.sound_pairs.demo.low.tone) }}{{ data.sound_pairs.demo.low.tone }}</span></div>
             <div style="color: #666;">“{{ data.sound_pairs.demo.low.english }}”</div>
         </div>
     </div>
@@ -373,7 +407,7 @@
                 <tr class="cls-{{ row.colour }}">
                     <td class="row-label" style="background: var(--cls);">{{ row.label }}</td>
                     {% for tone in row.tones %}
-                    <td>{% if tone == '–' %}<span class="dash">–</span>{% else %}{{ tone }}{% endif %}</td>
+                    <td>{% if tone == '–' %}<span class="dash">–</span>{% else %}{{ tone_shape(tone) }}{{ tone }}{% endif %}</td>
                     {% endfor %}
                 </tr>
                 {% endfor %}
@@ -413,13 +447,13 @@
     <div class="pair-card">
         <div class="pair-side">
             <div class="p-thai">{{ p.plain.thai }}{{ listen(p.plain.thai) }}</div>
-            <div>{{ p.plain.paiboon }} · <span class="e-tone">{{ p.plain.tone }}</span></div>
+            <div>{{ p.plain.paiboon }} · <span class="e-tone">{{ tone_shape(p.plain.tone) }}{{ p.plain.tone }}</span></div>
             <div style="color: #666;">“{{ p.plain.english }}”</div>
         </div>
         <div class="pair-vs">→ add ห →</div>
         <div class="pair-side" style="background: #fff3f3;">
             <div class="p-thai" style="color: var(--temple-red);">{{ p.led.thai }}{{ listen(p.led.thai) }}</div>
-            <div>{{ p.led.paiboon }} · <span class="e-tone">{{ p.led.tone }}</span></div>
+            <div>{{ p.led.paiboon }} · <span class="e-tone">{{ tone_shape(p.led.tone) }}{{ p.led.tone }}</span></div>
             <div style="color: #666;">“{{ p.led.english }}”</div>
         </div>
     </div>
@@ -431,14 +465,14 @@
     <div class="pair-card">
         <div class="pair-side">
             <div class="p-thai">{{ pair.a.thai }}{{ listen(pair.a.thai) }}</div>
-            <div>{{ pair.a.paiboon }} · <span class="e-tone">{{ pair.a.tone }}</span></div>
+            <div>{{ pair.a.paiboon }} · <span class="e-tone">{{ tone_shape(pair.a.tone) }}{{ pair.a.tone }}</span></div>
             <div style="font-size: 0.85rem; color: #666;">{{ pair.a.class }} · mark: {{ pair.a.mark }}</div>
             <div style="color: #666;">“{{ pair.a.english }}”</div>
         </div>
         <div class="pair-vs">vs</div>
         <div class="pair-side" style="background: #fff3f3;">
             <div class="p-thai" style="color: var(--temple-red);">{{ pair.b.thai }}{{ listen(pair.b.thai) }}</div>
-            <div>{{ pair.b.paiboon }} · <span class="e-tone">{{ pair.b.tone }}</span></div>
+            <div>{{ pair.b.paiboon }} · <span class="e-tone">{{ tone_shape(pair.b.tone) }}{{ pair.b.tone }}</span></div>
             <div style="font-size: 0.85rem; color: #666;">{{ pair.b.class }} · mark: {{ pair.b.mark }}</div>
             <div style="color: #666;">“{{ pair.b.english }}”</div>
         </div>

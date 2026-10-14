@@ -4112,6 +4112,13 @@ TONES_AND_CLASSES = {
         'formula': 'Consonant class  +  Live / Dead syllable  +  Tone mark  =  The tone you say',
         'live_dead': "A LIVE syllable ends in a long vowel or a sonorant sound (m, n, ng, y, w). A DEAD syllable ends in a short vowel or a hard stop sound (p, t, k). Live and dead syllables follow different tone rules.",
         'shortcut': "Teaching shortcut: you only need to memorise the 20 MID + HIGH consonants. Everything else (all 24 of them) is LOW class by elimination.",
+        'cant_hear': [
+            "Not hearing the difference yet is normal — almost every learner starts here, and most people who call themselves tone-deaf can learn to hear speech tones with practice.",
+            "You don't have to hear a tone to get it right. The spelling tells you: find the consonant class, check for a tone mark, and the chart gives you the tone. Read the word, then say the shape on purpose.",
+            "Each tone name on this page has a small line showing its pitch shape — flat, low, falling, high or rising. Watch the line while you listen.",
+            "Practise with pairs, not single words. Play two words one after the other (the pairs on the 'Leading ห & Pairs' tab) and listen only for which one goes up or down.",
+            "Context does a lot of work. Thai people understand learners with shaky tones far more often than you'd fear.",
+        ],
     },
 
     # Ordered MID → HIGH → LOW: mid is the most regular and is learned first.
