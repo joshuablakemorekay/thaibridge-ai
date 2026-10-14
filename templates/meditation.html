@@ -43,6 +43,7 @@
     .btn-samadhi   { background: linear-gradient(135deg, #1976D2, #42A5F5); color: white; }
     .btn-vipassana { background: linear-gradient(135deg, #E65100, #FFA726); color: white; }
     .btn-body-scan { background: linear-gradient(135deg, #2E7D32, #66BB6A); color: white; }
+    .btn-blessing  { background: linear-gradient(135deg, #8a6d1b, #D4AF37); color: white; }
     .btn-full      { background: linear-gradient(135deg, #4A148C, #9C27B0); color: white; }
 
     /* ── Timer Card ── */
@@ -253,6 +254,8 @@
         transition: all 0.3s ease;
     }
     .ambient-btn.active { border-color: var(--bodhi-green); background: #E8F5E9; color: #2E7D32; }
+    select.ambient-btn { appearance: auto; background: white; color: inherit; }
+    .music-note { color: #999; font-size: 0.8rem; margin-top: 0.25rem; }
 </style>
 {% endblock %}
 
@@ -296,6 +299,10 @@
 <div class="card" style="border-left-color: var(--royal-purple);">
     <h2 style="margin-top:0;">🪷 Start a Guided Session</h2>
     <div class="session-grid">
+        <button class="session-btn btn-blessing"  onclick="launchSession('blessing')">
+            🙏 On the Move
+            <span class="duration">2 min · Before giving blessings</span>
+        </button>
         <button class="session-btn btn-samadhi"   onclick="launchSession('samatha')">
             🌊 Samadhi
             <span class="duration">30 min · Concentration</span>
@@ -337,6 +344,7 @@
     <p class="phase-instruction" id="phaseInstruction">Select a session above or set a custom time below.</p>
 
     <div class="timer-presets" id="presetButtons">
+        <button onclick="setCustomTimer(2)">2 min</button>
         <button onclick="setCustomTimer(5)">5 min</button>
         <button onclick="setCustomTimer(10)">10 min</button>
         <button onclick="setCustomTimer(15)">15 min</button>
@@ -350,10 +358,15 @@
         <button class="btn btn-saffron" onclick="startTimer()" id="startBtn">▶ Start</button>
         <button class="btn btn-secondary" onclick="pauseTimer()" id="pauseBtn" disabled>⏸ Pause</button>
         <button class="btn" onclick="resetTimer()">↺ Reset</button>
-        <button class="ambient-btn" id="ambientBtn" onclick="toggleAmbient()">🔔 Bell only</button>
+        <select class="ambient-btn" id="musicSelect" onchange="setMusic(this.value)" aria-label="Background music">
+            <option value="off">🔔 Bell only</option>
+            <option value="tranquil">🎵 Tranquil music</option>
+            <option value="alpha">🎧 Alpha waves (headphones)</option>
+        </select>
     </div>
 
     <p style="color:#999; font-size:0.85rem; margin-top:0.5rem;">🔔 Bell sounds at phase transitions and session end</p>
+    <p class="music-note" id="musicNote" style="display:none;"></p>
 </div>
 
 <!-- ── Body Scan Progress (shown during body scan) ── -->
@@ -572,6 +585,18 @@
 <script>
 // ── Session Definitions ──────────────────────────────────────────────────
 const SESSIONS = {
+    // Two minutes, for when you are on the move - a moment of stillness before
+    // giving blessings. Phase durations are in minutes, so 0.5 = 30 seconds.
+    blessing: {
+        label: '🙏 On the Move — Before Giving Blessings',
+        totalMinutes: 2,
+        type: 'breathing',
+        phases: [
+            { name: '🌬️ Arriving',   duration: 0.5, instruction: 'Three slow breaths. Feel your feet on the ground. Let the hurry fall away.' },
+            { name: '🪷 Metta',      duration: 1,   instruction: '"May you be happy. May you be well. May you be free from suffering." Wish it for the people you are about to bless.' },
+            { name: '🙏 Blessing',   duration: 0.5, instruction: 'Rest the mind in goodwill. Carry this calm with you into the blessing.' },
+        ]
+    },
     samatha: {
         label: '🌊 Samadhi — Concentration',
         totalMinutes: 30,
@@ -628,7 +653,6 @@ let phaseSecondsLeft = 0;
 let sessionTotalSecs = 0;
 let sessionElapsed   = 0;
 let breathCycle      = null;
-let ambientOn        = false;
 let bodyScanStepIdx  = 0;
 
 // ── Breath Animation ─────────────────────────────────────────────────────
@@ -745,6 +769,7 @@ function startTimer() {
     }
 
     timerInterval = setInterval(tick, 1000);
+    startMusic();
 }
 
 function tick() {
@@ -793,6 +818,7 @@ function pauseTimer() {
     clearInterval(timerInterval);
     isRunning = false;
     stopBreathCycle();
+    stopMusic();
     document.getElementById('startBtn').disabled = false;
     document.getElementById('pauseBtn').disabled = true;
 }
@@ -836,6 +862,7 @@ function finishSession() {
     clearInterval(timerInterval);
     isRunning = false;
     stopBreathCycle();
+    stopMusic();
     remainingSeconds = 0;
     updateDisplay();
     document.getElementById('progressBar').style.width = '100%';
@@ -850,7 +877,7 @@ function finishSession() {
 // ── Bell ──────────────────────────────────────────────────────────────────
 function playBell(times = 1) {
     try {
-        const ctx  = new (window.AudioContext || window.webkitAudioContext)();
+        const ctx  = audioCtx();
         let delay  = 0;
         for (let i = 0; i < times; i++) {
             setTimeout(() => {
@@ -870,15 +897,135 @@ function playBell(times = 1) {
     } catch(e) { console.log('Audio unavailable'); }
 }
 
-// ── Ambient toggle (placeholder) ─────────────────────────────────────────
-function toggleAmbient() {
-    ambientOn = !ambientOn;
-    const btn = document.getElementById('ambientBtn');
-    btn.textContent = ambientOn ? '🔔 Bell + Ambient' : '🔔 Bell only';
-    btn.classList.toggle('active', ambientOn);
+// ── Background music ─────────────────────────────────────────────────────
+// Generated live by the browser, so there are no audio files to host and no
+// licence to check. "Tranquil" is a slow, swelling drone with an occasional
+// singing bowl. "Alpha" adds two tones 10 Hz apart, one per ear - the
+// alpha-wave style many meditators like. It needs headphones to work, and we
+// make no health claims for it.
+let _ctx = null;
+let musicMode = 'off';
+let music = null;          // { master, nodes, bowlTimer } while playing
+
+function audioCtx() {
+    if (!_ctx) _ctx = new (window.AudioContext || window.webkitAudioContext)();
+    if (_ctx.state === 'suspended') _ctx.resume();
+    return _ctx;
+}
+
+function setMusic(mode) {
+    musicMode = mode;
+    try { localStorage.setItem('meditationMusic', mode); } catch (e) {}
+    const sel = document.getElementById('musicSelect');
+    sel.classList.toggle('active', mode !== 'off');
+    const note = document.getElementById('musicNote');
+    note.style.display = mode === 'off' ? 'none' : 'block';
+    note.textContent = mode === 'alpha'
+        ? '🎧 Use headphones - each ear hears a slightly different tone. On iPhone, turn the silent switch off.'
+        : 'On iPhone, turn the silent switch off to hear the music.';
+    stopMusic();
+    if (isRunning) startMusic();
+}
+
+function startMusic() {
+    if (musicMode === 'off' || music) return;
+    try {
+        const ctx = audioCtx();
+        const master = ctx.createGain();
+        master.gain.setValueAtTime(0.0001, ctx.currentTime);
+        master.gain.exponentialRampToValueAtTime(0.35, ctx.currentTime + 4);   // fade in
+        master.connect(ctx.destination);
+
+        const soft = ctx.createBiquadFilter();
+        soft.type = 'lowpass';
+        soft.frequency.value = 900;
+        soft.connect(master);
+
+        const nodes = [];
+        // A open chord, low and quiet: A2, E3, A3, C#4
+        [110, 164.81, 220, 277.18].forEach((freq, i) => {
+            const osc = ctx.createOscillator();
+            osc.type = i === 0 ? 'triangle' : 'sine';
+            osc.frequency.value = freq;
+            const g = ctx.createGain();
+            g.gain.value = [0.30, 0.16, 0.12, 0.06][i];
+            // each voice swells slowly at its own pace, so the sound breathes
+            const lfo = ctx.createOscillator();
+            lfo.frequency.value = 0.05 + i * 0.023;
+            const depth = ctx.createGain();
+            depth.gain.value = g.gain.value * 0.6;
+            lfo.connect(depth).connect(g.gain);
+            osc.connect(g).connect(soft);
+            osc.start(); lfo.start();
+            nodes.push(osc, lfo);
+        });
+
+        if (musicMode === 'alpha' && ctx.createStereoPanner) {
+            [[200, -1], [210, 1]].forEach(([freq, pan]) => {
+                const osc = ctx.createOscillator();
+                osc.frequency.value = freq;
+                const g = ctx.createGain();
+                g.gain.value = 0.12;
+                const p = ctx.createStereoPanner();
+                p.pan.value = pan;
+                osc.connect(g).connect(p).connect(master);
+                osc.start();
+                nodes.push(osc);
+            });
+        }
+
+        music = { master, nodes, bowlTimer: null };
+        const nextBowl = () => {
+            music.bowlTimer = setTimeout(() => {
+                if (!music) return;
+                singingBowl(master);
+                nextBowl();
+            }, 20000 + Math.random() * 25000);
+        };
+        nextBowl();
+    } catch (e) { console.log('Audio unavailable'); }
+}
+
+function stopMusic() {
+    if (!music) return;
+    const { master, nodes, bowlTimer } = music;
+    music = null;
+    clearTimeout(bowlTimer);
+    try {
+        const now = _ctx.currentTime;
+        master.gain.cancelScheduledValues(now);
+        master.gain.setValueAtTime(master.gain.value, now);
+        master.gain.exponentialRampToValueAtTime(0.0001, now + 1.5);   // fade out
+        nodes.forEach(n => n.stop(now + 1.6));
+        setTimeout(() => master.disconnect(), 1800);
+    } catch (e) {}
+}
+
+// A struck bowl: a few out-of-tune partials that ring and fade slowly.
+function singingBowl(dest) {
+    const ctx = audioCtx();
+    const now = ctx.currentTime;
+    [[392, 0.18], [1052, 0.07], [1987, 0.03]].forEach(([freq, level]) => {
+        const osc = ctx.createOscillator();
+        osc.frequency.value = freq;
+        const g = ctx.createGain();
+        g.gain.setValueAtTime(0.0001, now);
+        g.gain.exponentialRampToValueAtTime(level, now + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, now + 9);
+        osc.connect(g).connect(dest);
+        osc.start(now);
+        osc.stop(now + 9.1);
+    });
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────
 updateDisplay();
+try {
+    const saved = localStorage.getItem('meditationMusic');
+    if (saved && saved !== 'off') {
+        document.getElementById('musicSelect').value = saved;
+        setMusic(saved);
+    }
+} catch (e) {}
 </script>
 {% endblock %}
