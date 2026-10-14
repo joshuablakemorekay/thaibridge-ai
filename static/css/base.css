@@ -1295,6 +1295,30 @@
     font-size: 1.1rem;
 }
 .sidebar-nav { display: flex; flex-direction: column; gap: 0.25rem; }
+/* The sidebar is a <nav>, so it also picks up the top bar's plain `nav` rule:
+   the dark purple background, sticky position, padding and gold border. That
+   left dark purple links on a dark purple panel. Undo all of it here. */
+.layout-sidebar nav.sidebar-nav {
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    border: 0;
+    position: static;
+    z-index: auto;
+}
+/* Same for the links: drop the top bar's dark text shadow and hover lift. */
+.layout-sidebar .sidebar-nav a {
+    text-shadow: none;
+    letter-spacing: normal;
+    transform: none;
+}
+.layout-sidebar .sidebar-nav a:hover {
+    border: 0;
+    border-left: 3px solid transparent;
+    box-shadow: none;
+    transform: none;
+}
+.layout-sidebar .sidebar-nav a.active:hover { border-left-color: var(--royal-gold); }
 .sidebar-nav a {
     display: block;
     padding: 0.6rem 0.9rem;
