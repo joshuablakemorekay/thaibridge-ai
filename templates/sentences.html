@@ -1087,6 +1087,7 @@
                     return;
                 }
                 box.className = 'sb-result ' + (res.correct ? 'right' : 'wrong');
+                if (window.ThaiSounds) ThaiSounds.result(res);
                 var head = document.createElement('div');
                 head.style.fontWeight = '600';
                 head.textContent = res.correct

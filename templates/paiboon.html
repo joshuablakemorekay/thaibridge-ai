@@ -74,6 +74,17 @@
         letter-spacing: 0.04em;
         color: #999;
     }
+
+    /* The (!) hard-stop mark: small and raised above the line, so it reads as
+       a note on the syllable rather than a letter of the spelling. */
+    .pb-stop {
+        font-size: 0.6em;
+        font-weight: bold;
+        vertical-align: 0.7em;
+        line-height: 0;
+        margin-left: 0.05em;
+        color: var(--temple-red);
+    }
 </style>
 {% endblock %}
 
@@ -166,6 +177,7 @@
         <a href="#tones" class="btn" style="margin: 0.25rem;">5 Tones</a>
         <a href="#consonants" class="btn" style="margin: 0.25rem;">Consonants</a>
         <a href="#vowels" class="btn" style="margin: 0.25rem;">Vowels</a>
+        <a href="#stress" class="btn" style="margin: 0.25rem;">Stress (- &amp; ~)</a>
         <a href="#tone-markers" class="btn" style="margin: 0.25rem;">Tone Markers</a>
     </p>
 </div>
@@ -240,6 +252,7 @@
         <li><strong>bp</strong> - Unaspirated, between English 'b' and 'p'. No puff of air.</li>
         <li><strong>ng</strong> - Can appear at the start of syllables (unusual for English speakers)</li>
         <li><strong>r</strong> - Rolled or trilled, often softened to 'l' in casual speech</li>
+        <li><strong>Final consonants</strong> - At the end of a syllable, Thai only has 8 sounds: <strong>k, t, p</strong> (cut short, not released), <strong>n, m, ŋ</strong>, and <strong>i/o</strong> from ย and ว. So ด, ต, ส, ช all end as <strong>t</strong>, and ล, ร end as <strong>n</strong>.</li>
     </ul>
 </div>
 
@@ -274,13 +287,17 @@
 <div class="card" style="background: #fffbf0; border-left-color: var(--saffron);">
     <h3>⚠️ Hard Stop on Short Vowels</h3>
     <p style="line-height: 1.8;">
-        When a word ends with a <strong>short vowel</strong>, there's a <strong>hard stop</strong> on the vowel, similar to a stressed syllable. For example:
+        When a syllable ends with a <strong>short vowel</strong>, there's a <strong>hard stop</strong> - the vowel is cut off sharply, like the break in "uh-oh". For example:
     </p>
     <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
-        <li><span class="paiboon">gɔ<strong>!</strong></span> - The vowel stops abruptly</li>
-        <li><span class="paiboon">a<strong>!</strong>-ray</span> (อะไร) - Hard stop on the first syllable</li>
-        <li><span class="paiboon">aa-dta<strong>!</strong>-maa</span> (อาตมา) - Hard stop on "dta"</li>
+        <li><span class="paiboon">gɔ̀<span class="pb-stop">!</span></span> (เกาะ, island) - The vowel stops abruptly</li>
+        <li><span class="paiboon">à<span class="pb-stop">!</span>-rai</span> (อะไร, what) - Hard stop on the first syllable</li>
+        <li><span class="paiboon">àat-dtà<span class="pb-stop">!</span>-maa</span> (อาตมา, a monk's word for "I") - Hard stop on "dtà"</li>
     </ul>
+    <p style="margin-top: 1rem; line-height: 1.8;">
+        In fast, natural speech a <strong>soft (~) syllable</strong> can lose its hard stop and flow into the
+        next one - see <a href="#stress">Stressed &amp; Soft Syllables</a> below.
+    </p>
     <p style="margin-top: 1rem; font-style: italic; color: #666;">
         Note: The (!) symbol is shown here for learning purposes - it's not part of standard ThaiBridge Spelling.
     </p>
@@ -295,8 +312,38 @@
         <li><span class="paiboon">u</span> (short) vs. <span class="paiboon">uu</span> (long)</li>
         <li><span class="paiboon">e</span> (short) vs. <span class="paiboon">ee</span> (long)</li>
         <li><span class="paiboon">o</span> (short) vs. <span class="paiboon">oo</span> (long)</li>
+        <li><span class="paiboon">ɛ</span> (short) vs. <span class="paiboon">ɛɛ</span> (long)</li>
+        <li><span class="paiboon">ɔ</span> (short) vs. <span class="paiboon">ɔɔ</span> (long)</li>
+        <li><span class="paiboon">ʉ</span> (short) vs. <span class="paiboon">ʉʉ</span> (long)</li>
         <li><span class="paiboon">ə</span> (short) vs. <span class="paiboon">əə</span> (long) - The schwa sound!</li>
     </ul>
+    <p style="margin-top: 1rem; color: #666;">
+        The combined vowels <span class="paiboon">ia</span>, <span class="paiboon">ʉa</span> and
+        <span class="paiboon">ua</span> are written the same whether short or long.
+    </p>
+</div>
+
+<!-- Stressed & soft syllables -->
+<div class="card" id="stress" style="border-left-color: var(--royal-purple);">
+    <h3>🎵 Stressed (-) &amp; Soft (~) Syllables</h3>
+    <p style="line-height: 1.8;">
+        The Paiboon+ system in the <em>Three-Way Dictionary</em> (Becker &amp; Pirazzi) shows stress between syllables:
+    </p>
+    <ul style="margin: 1rem 0 0 1.5rem; line-height: 2;">
+        <li>A syllable followed by <strong>-</strong> is <strong>stressed</strong> - said clearly, with its full tone.</li>
+        <li>A syllable followed by <strong>~</strong> is <strong>soft</strong> - said lightly; in natural speech its tone drifts to mid.</li>
+        <li>The <strong>last syllable</strong> of a word is <strong>always stressed</strong>.</li>
+        <li>The written tone mark <strong>stays</strong> on a soft syllable - the softening is heard, not spelled.</li>
+    </ul>
+    <p style="margin-top: 1rem;">
+        <span class="thai">มหาวิทยาลัย</span> <span class="paiboon">má<span style="color: var(--saffron);">~</span>hǎa-wít-tá<span style="color: var(--saffron);">~</span>yaa-lai</span> (university)
+        - "má" and "tá" are soft, the rest are stressed.
+    </p>
+    <p style="margin-top: 1rem; font-style: italic; color: #666;">
+        Across ThaiBridge's lessons every syllable is joined with a plain <strong>-</strong> to keep things simple,
+        so there it only separates syllables and doesn't mark stress. The <strong>~</strong> is taught here and on
+        <a href="/vowels_syllables">Vowels &amp; Syllables</a>.
+    </p>
 </div>
 
 <!-- Thai Tone Markers -->

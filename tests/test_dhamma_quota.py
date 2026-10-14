@@ -86,10 +86,20 @@ class TestThePoolsAreSeparate:
                     for _ in range(3)]
         assert outcomes == [True, True, False]
 
-    def test_the_tutor_allowance_was_not_reduced_to_pay_for_this(self):
+    def test_the_dhamma_pool_is_not_carved_out_of_the_tutor(self):
         """The Dhamma pool is added on top, not carved out. Nobody should lose
-        something so the site can keep a promise it had already made."""
-        assert appmod.FREE_AI_DAILY_LIMIT == 15
+        something so the site can keep a promise it had already made.
+
+        The tutor allowance itself was later cut from 15 to 5 for Free
+        (2026-10-14) on running cost alone; that is a pricing decision and has
+        nothing to do with the Dhamma, which keeps its own separate pool."""
+        assert appmod.AI_POOLS['tutor']['key'] != appmod.AI_POOLS['dhamma']['key']
+        assert appmod.FREE_AI_DAILY_LIMIT == 5
+        assert appmod.BASIC_AI_DAILY_LIMIT == 15
+
+    def test_thai_reader_gets_more_tutor_than_free_but_the_same_dhamma(self):
+        assert appmod.ai_pool_limit('tutor', 'basic') > appmod.ai_pool_limit('tutor', 'free')
+        assert appmod.ai_pool_limit('dhamma', 'basic') == appmod.ai_pool_limit('dhamma', 'free')
 
 
 class TestWhatTheLearnerIsTold:

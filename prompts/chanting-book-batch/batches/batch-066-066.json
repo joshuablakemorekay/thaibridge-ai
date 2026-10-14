@@ -55,7 +55,7 @@
       },
       "title_thai": "คำถวายดอกไม้ ธูป เทียน ในวันวิสาขบูชา",
       "title_pali": "",
-      "title_roman": "kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan wí-sǎa-kà-buu-chaa",
+      "title_roman": "kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan wí-sǎa-kà-buu-chaa",
       "title_english": "The Words for Offering Flowers, Incense and Candles on Visākha Pūjā Day",
       "page_start": 66,
       "layout": "prose",
@@ -446,7 +446,7 @@
         {
           "verse": null,
           "file": "IMG_0329.PNG",
-          "issue": "The title is THAI, not Pali, so title_pali is empty and title_roman carries the romanisation the book's own contents already prints for this line — kam tà-wǎai dɔ̀ɔk-máai tûup tiian nai wan wí-sǎa-kà-buu-chaa — rather than a fresh one, so a reader meets one spelling in the contents and on the page."
+          "issue": "The title is THAI, not Pali, so title_pali is empty and title_roman carries the romanisation the book's own contents already prints for this line — kam tà-wǎai dɔ̀ɔk-máai tûup tian nai wan wí-sǎa-kà-buu-chaa — rather than a fresh one, so a reader meets one spelling in the contents and on the page."
         }
       ]
     }

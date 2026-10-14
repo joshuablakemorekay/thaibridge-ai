@@ -53,6 +53,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import unicodedata
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COMMENTARY_KEYS = ('summary', 'when_chanted', 'source', 'background', 'meaning')
@@ -148,8 +149,53 @@ def strip_commentary(chants):
     return [{k: v for k, v in c.items() if k not in COMMENTARY_KEYS} for c in chants]
 
 
-def against(rev, chants):
-    """Non-commentary differences between `rev` and the chants given."""
+# Paiboon+ writes a long diphthong doubled (riian, tuua, rʉ̂ʉa); ThaiBridge
+# Spelling writes Paiboon's ia/ua/ʉa for both lengths. The book was converted
+# to the app's standard on 2026-10-14, after its baseline was taken.
+_LONG_DIPHTHONG = re.compile('([uiʉ])([̀́̂̌]?)\\1([̀́̂̌]?)a')
+
+
+def shorten_diphthongs(value):
+    """The 2026-10-14 spelling change, applied to any string inside `value`."""
+    if isinstance(value, str):
+        nfd = unicodedata.normalize('NFD', value)
+        out = _LONG_DIPHTHONG.sub(lambda m: m.group(1) + (m.group(2) or m.group(3)) + 'a', nfd)
+        return value if out == nfd else unicodedata.normalize('NFC', out)
+    if isinstance(value, dict):
+        return {k: shorten_diphthongs(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return type(value)(shorten_diphthongs(v) for v in value)
+    return value
+
+
+# Single-word corrections to the book's romanisation, made after the baseline.
+# ครีเมขละ: hyphens missing, and ขะ is high class + dead syllable = low tone.
+BOOK_CORRECTIONS = [
+    ('kriimeekálá', 'krii-mee-kà-lá'),       # 2026-10-14, page 203
+]
+
+
+def book_spelling_changes(value):
+    """Every deliberate romanisation change since the baseline, applied."""
+    value = shorten_diphthongs(value)
+    if isinstance(value, str):
+        for old, new in BOOK_CORRECTIONS:
+            value = value.replace(unicodedata.normalize('NFC', old),
+                                  unicodedata.normalize('NFC', new))
+        return value
+    if isinstance(value, dict):
+        return {k: book_spelling_changes(v) for k, v in value.items()}
+    if isinstance(value, (list, tuple)):
+        return type(value)(book_spelling_changes(v) for v in value)
+    return value
+
+
+def against(rev, chants, normalise=None):
+    """Non-commentary differences between `rev` and the chants given.
+
+    `normalise`, if given, is applied to both sides first, so a deliberate
+    book-wide change (a spelling rule) can be carried forward while the
+    comparison still catches anything else that moved."""
     try:
         blob = subprocess.check_output(['git', 'show', '%s:chanting.py' % rev],
                                        cwd=REPO, stderr=subprocess.STDOUT)
@@ -171,6 +217,8 @@ def against(rev, chants):
         os.unlink(path)
 
     new = strip_commentary(chants)
+    if normalise:
+        old, new = normalise(old), normalise(new)
     problems = []
     if len(old) != len(new):
         problems.append('chant count changed: %d -> %d' % (len(old), len(new)))

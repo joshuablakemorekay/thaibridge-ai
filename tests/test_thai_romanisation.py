@@ -226,7 +226,9 @@ NOT_ONE_WORD = {"ณ"}
 #                                     'uua' in its examples, and that has to be
 #                                     decided once for every word at a time.
 #   เสวย      sà-wəəi / sà-wə̌əi      — royal vocabulary, irregular tone.
-AWAITING_TEACHER_WORDS = {"ศรัทธา", "สวดมนต์", "ดวงอาทิตย์", "เสวย"}
+# สวดมนต์ and ดวงอาทิตย์ were held on question 8 (ua or uua). Settled
+# 2026-10-14 by Josh: the app keeps Paiboon's ua for both lengths.
+AWAITING_TEACHER_WORDS = {"ศรัทธา", "เสวย"}
 
 
 def readings_by_word():
